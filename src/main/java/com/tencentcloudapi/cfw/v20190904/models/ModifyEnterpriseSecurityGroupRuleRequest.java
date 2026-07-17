@@ -24,92 +24,115 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityGroupRuleRequest extends AbstractModel {
 
     /**
-    * 规则的uuid，可通过查询规则列表获取
+    * <p>规则的uuid，可通过查询规则列表获取</p>
     */
     @SerializedName("RuleUuid")
     @Expose
     private Long RuleUuid;
 
     /**
-    * 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
+    * <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
     */
     @SerializedName("ModifyType")
     @Expose
     private Long ModifyType;
 
     /**
-    * 编辑后的企业安全组规则数据；修改规则状态不用填该字段
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
     */
     @SerializedName("Data")
     @Expose
     private SecurityGroupRule Data;
 
     /**
-    * 0是关闭,1是开启
+    * <p>0是关闭,1是开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-     * Get 规则的uuid，可通过查询规则列表获取 
-     * @return RuleUuid 规则的uuid，可通过查询规则列表获取
+     * Get <p>规则的uuid，可通过查询规则列表获取</p> 
+     * @return RuleUuid <p>规则的uuid，可通过查询规则列表获取</p>
      */
     public Long getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 规则的uuid，可通过查询规则列表获取
-     * @param RuleUuid 规则的uuid，可通过查询规则列表获取
+     * Set <p>规则的uuid，可通过查询规则列表获取</p>
+     * @param RuleUuid <p>规则的uuid，可通过查询规则列表获取</p>
      */
     public void setRuleUuid(Long RuleUuid) {
         this.RuleUuid = RuleUuid;
     }
 
     /**
-     * Get 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态 
-     * @return ModifyType 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
+     * Get <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p> 
+     * @return ModifyType <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
      */
     public Long getModifyType() {
         return this.ModifyType;
     }
 
     /**
-     * Set 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
-     * @param ModifyType 修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态
+     * Set <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
+     * @param ModifyType <p>修改类型，0：修改规则内容；1：修改单条规则开关状态；2：修改所有规则开关状态</p>
      */
     public void setModifyType(Long ModifyType) {
         this.ModifyType = ModifyType;
     }
 
     /**
-     * Get 编辑后的企业安全组规则数据；修改规则状态不用填该字段 
-     * @return Data 编辑后的企业安全组规则数据；修改规则状态不用填该字段
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p> 
+     * @return Data <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
      */
     public SecurityGroupRule getData() {
         return this.Data;
     }
 
     /**
-     * Set 编辑后的企业安全组规则数据；修改规则状态不用填该字段
-     * @param Data 编辑后的企业安全组规则数据；修改规则状态不用填该字段
+     * Set <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
+     * @param Data <p>编辑后的企业安全组规则数据；修改规则状态不用填该字段</p>
      */
     public void setData(SecurityGroupRule Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 0是关闭,1是开启 
-     * @return Enable 0是关闭,1是开启
+     * Get <p>0是关闭,1是开启</p> 
+     * @return Enable <p>0是关闭,1是开启</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 0是关闭,1是开启
-     * @param Enable 0是关闭,1是开启
+     * Set <p>0是关闭,1是开启</p>
+     * @param Enable <p>0是关闭,1是开启</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
@@ -129,6 +152,9 @@ public class ModifyEnterpriseSecurityGroupRuleRequest extends AbstractModel {
         if (source.ModifyType != null) {
             this.ModifyType = new Long(source.ModifyType);
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.Data != null) {
             this.Data = new SecurityGroupRule(source.Data);
         }
@@ -144,6 +170,7 @@ public class ModifyEnterpriseSecurityGroupRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
         this.setParamSimple(map, prefix + "ModifyType", this.ModifyType);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
 

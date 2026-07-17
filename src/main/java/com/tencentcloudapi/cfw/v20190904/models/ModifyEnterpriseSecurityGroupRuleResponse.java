@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
-    * 状态值，0：编辑成功，非0：编辑失败
+    * <p>状态值，0：编辑成功，非0：编辑失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 编辑后新生成规则的Id
+    * <p>编辑后新生成规则的Id</p>
     */
     @SerializedName("NewRuleUuid")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 状态值，0：编辑成功，非0：编辑失败 
-     * @return Status 状态值，0：编辑成功，非0：编辑失败
+     * Get <p>状态值，0：编辑成功，非0：编辑失败</p> 
+     * @return Status <p>状态值，0：编辑成功，非0：编辑失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值，0：编辑成功，非0：编辑失败
-     * @param Status 状态值，0：编辑成功，非0：编辑失败
+     * Set <p>状态值，0：编辑成功，非0：编辑失败</p>
+     * @param Status <p>状态值，0：编辑成功，非0：编辑失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 编辑后新生成规则的Id 
-     * @return NewRuleUuid 编辑后新生成规则的Id
+     * Get <p>编辑后新生成规则的Id</p> 
+     * @return NewRuleUuid <p>编辑后新生成规则的Id</p>
      */
     public Long getNewRuleUuid() {
         return this.NewRuleUuid;
     }
 
     /**
-     * Set 编辑后新生成规则的Id
-     * @param NewRuleUuid 编辑后新生成规则的Id
+     * Set <p>编辑后新生成规则的Id</p>
+     * @param NewRuleUuid <p>编辑后新生成规则的Id</p>
      */
     public void setNewRuleUuid(Long NewRuleUuid) {
         this.NewRuleUuid = NewRuleUuid;

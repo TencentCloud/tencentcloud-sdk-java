@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VPCConfig extends AbstractModel {
 
     /**
-    * VPC子网ID列表
+    * <p>VPC子网ID列表</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 安全组ID列表
+    * <p>安全组ID列表</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get VPC子网ID列表 
-     * @return SubnetIds VPC子网ID列表
+     * Get <p>VPC子网ID列表</p> 
+     * @return SubnetIds <p>VPC子网ID列表</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set VPC子网ID列表
-     * @param SubnetIds VPC子网ID列表
+     * Set <p>VPC子网ID列表</p>
+     * @param SubnetIds <p>VPC子网ID列表</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 安全组ID列表 
-     * @return SecurityGroupIds 安全组ID列表
+     * Get <p>安全组ID列表</p> 
+     * @return SecurityGroupIds <p>安全组ID列表</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID列表
-     * @param SecurityGroupIds 安全组ID列表
+     * Set <p>安全组ID列表</p>
+     * @param SecurityGroupIds <p>安全组ID列表</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

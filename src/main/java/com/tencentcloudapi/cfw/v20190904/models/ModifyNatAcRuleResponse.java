@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyNatAcRuleResponse extends AbstractModel {
 
     /**
-    * 编辑成功后返回新策略ID列表
+    * <p>编辑成功后返回新策略ID列表</p>
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyNatAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 编辑成功后返回新策略ID列表 
-     * @return RuleUuid 编辑成功后返回新策略ID列表
+     * Get <p>编辑成功后返回新策略ID列表</p> 
+     * @return RuleUuid <p>编辑成功后返回新策略ID列表</p>
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 编辑成功后返回新策略ID列表
-     * @param RuleUuid 编辑成功后返回新策略ID列表
+     * Set <p>编辑成功后返回新策略ID列表</p>
+     * @param RuleUuid <p>编辑成功后返回新策略ID列表</p>
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

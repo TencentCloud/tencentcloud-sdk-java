@@ -24,480 +24,345 @@ import java.util.HashMap;
 public class DescribeDetailedSingleProbeDataRequest extends AbstractModel {
 
     /**
-    * 开始时间戳（毫秒级）
+    * <p>开始时间戳（毫秒级）</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private Long BeginTime;
 
     /**
-    * 结束时间戳（毫秒级）
+    * <p>结束时间戳（毫秒级）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
+    * <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
+    * <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * true表示升序
+    * <p>true表示升序</p>
     */
     @SerializedName("Ascending")
     @Expose
     private Boolean Ascending;
 
     /**
-    * 选中字段，如ProbeTime、TransferTime、TransferSize等。
+    * <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
     */
     @SerializedName("SelectedFields")
     @Expose
     private String [] SelectedFields;
 
     /**
-    * 起始取数位置
+    * <p>起始取数位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 取数数量
+    * <p>取数数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskID")
     @Expose
     private String [] TaskID;
 
     /**
-    * 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
+    * <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
     */
     @SerializedName("Operators")
     @Expose
     private String [] Operators;
 
     /**
-    * 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
+    * <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
     */
     @SerializedName("Districts")
     @Expose
     private String [] Districts;
 
     /**
-    * 错误类型
+    * <p>错误类型</p>
     */
     @SerializedName("ErrorTypes")
     @Expose
     private String [] ErrorTypes;
 
     /**
-    * 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
+    * <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
     */
     @SerializedName("City")
     @Expose
     private String [] City;
 
     /**
-    * es scroll查询id
+    * <p>es scroll查询id</p>
     */
     @SerializedName("ScrollID")
     @Expose
     private String ScrollID;
 
     /**
-    * 详情数据下载
+    * <p>详情数据下载</p>
     */
     @SerializedName("QueryFlag")
     @Expose
     private String QueryFlag;
 
     /**
-     * Get 开始时间戳（毫秒级） 
-     * @return BeginTime 开始时间戳（毫秒级）
+     * Get <p>开始时间戳（毫秒级）</p> 
+     * @return BeginTime <p>开始时间戳（毫秒级）</p>
      */
     public Long getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间戳（毫秒级）
-     * @param BeginTime 开始时间戳（毫秒级）
+     * Set <p>开始时间戳（毫秒级）</p>
+     * @param BeginTime <p>开始时间戳（毫秒级）</p>
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间戳（毫秒级） 
-     * @return EndTime 结束时间戳（毫秒级）
+     * Get <p>结束时间戳（毫秒级）</p> 
+     * @return EndTime <p>结束时间戳（毫秒级）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间戳（毫秒级）
-     * @param EndTime 结束时间戳（毫秒级）
+     * Set <p>结束时间戳（毫秒级）</p>
+     * @param EndTime <p>结束时间戳（毫秒级）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验 
-     * @return TaskType 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
+     * Get <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p> 
+     * @return TaskType <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
-     * @param TaskType 任务类型
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能
-AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_MediaStream：音视频体验
+     * Set <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+     * @param TaskType <p>任务类型<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段 
-     * @return SortField 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
+     * Get <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p> 
+     * @return SortField <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
-     * @param SortField 待排序字段
-可以填写 ProbeTime 拨测时间排序
-也可填写SelectedFields 中的选中字段
+     * Set <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
+     * @param SortField <p>待排序字段<br>可以填写 ProbeTime 拨测时间排序<br>也可填写SelectedFields 中的选中字段</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get true表示升序 
-     * @return Ascending true表示升序
+     * Get <p>true表示升序</p> 
+     * @return Ascending <p>true表示升序</p>
      */
     public Boolean getAscending() {
         return this.Ascending;
     }
 
     /**
-     * Set true表示升序
-     * @param Ascending true表示升序
+     * Set <p>true表示升序</p>
+     * @param Ascending <p>true表示升序</p>
      */
     public void setAscending(Boolean Ascending) {
         this.Ascending = Ascending;
     }
 
     /**
-     * Get 选中字段，如ProbeTime、TransferTime、TransferSize等。 
-     * @return SelectedFields 选中字段，如ProbeTime、TransferTime、TransferSize等。
+     * Get <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p> 
+     * @return SelectedFields <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
      */
     public String [] getSelectedFields() {
         return this.SelectedFields;
     }
 
     /**
-     * Set 选中字段，如ProbeTime、TransferTime、TransferSize等。
-     * @param SelectedFields 选中字段，如ProbeTime、TransferTime、TransferSize等。
+     * Set <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
+     * @param SelectedFields <p>选中字段，如ProbeTime、TransferTime、TransferSize等。</p>
      */
     public void setSelectedFields(String [] SelectedFields) {
         this.SelectedFields = SelectedFields;
     }
 
     /**
-     * Get 起始取数位置 
-     * @return Offset 起始取数位置
+     * Get <p>起始取数位置</p> 
+     * @return Offset <p>起始取数位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始取数位置
-     * @param Offset 起始取数位置
+     * Set <p>起始取数位置</p>
+     * @param Offset <p>起始取数位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 取数数量 
-     * @return Limit 取数数量
+     * Get <p>取数数量</p> 
+     * @return Limit <p>取数数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 取数数量
-     * @param Limit 取数数量
+     * Set <p>取数数量</p>
+     * @param Limit <p>取数数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskID 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskID <p>任务ID</p>
      */
     public String [] getTaskID() {
         return this.TaskID;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskID 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskID <p>任务ID</p>
      */
     public void setTaskID(String [] TaskID) {
         this.TaskID = TaskID;
     }
 
     /**
-     * Get 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通 
-     * @return Operators 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
+     * Get <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p> 
+     * @return Operators <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
      */
     public String [] getOperators() {
         return this.Operators;
     }
 
     /**
-     * Set 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
-     * @param Operators 拨测点运营商
-	
-这里实际按拨测结果中的运营商来填写即可
-
-电信：中国电信
-移动：中国移动
-联通：中国联通
+     * Set <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
+     * @param Operators <p>拨测点运营商</p><p>这里实际按拨测结果中的运营商来填写即可</p><p>电信：中国电信<br>移动：中国移动<br>联通：中国联通</p>
      */
     public void setOperators(String [] Operators) {
         this.Operators = Operators;
     }
 
     /**
-     * Get 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡 
-     * @return Districts 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
+     * Get <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p> 
+     * @return Districts <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
      */
     public String [] getDistricts() {
         return this.Districts;
     }
 
     /**
-     * Set 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
-     * @param Districts 拨测点地区
-	
-这里实际按拨测结果中的地区来填写即可
-
-国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海
-
-境外一般是国家名，如澳大利亚、新加坡
+     * Set <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
+     * @param Districts <p>拨测点地区</p><p>这里实际按拨测结果中的地区来填写即可</p><p>国内一般是省级单位，如广东、广西、中国香港；直辖市则填北京、上海</p><p>境外一般是国家名，如澳大利亚、新加坡</p>
      */
     public void setDistricts(String [] Districts) {
         this.Districts = Districts;
     }
 
     /**
-     * Get 错误类型 
-     * @return ErrorTypes 错误类型
+     * Get <p>错误类型</p> 
+     * @return ErrorTypes <p>错误类型</p>
      */
     public String [] getErrorTypes() {
         return this.ErrorTypes;
     }
 
     /**
-     * Set 错误类型
-     * @param ErrorTypes 错误类型
+     * Set <p>错误类型</p>
+     * @param ErrorTypes <p>错误类型</p>
      */
     public void setErrorTypes(String [] ErrorTypes) {
         this.ErrorTypes = ErrorTypes;
     }
 
     /**
-     * Get 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多 
-     * @return City 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
+     * Get <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p> 
+     * @return City <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
      */
     public String [] getCity() {
         return this.City;
     }
 
     /**
-     * Set 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
-     * @param City 城市
-这里实际按拨测结果中的城市来填写即可
-
-示例：
-
-深圳市
-武汉市
-首尔
-多伦多
+     * Set <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
+     * @param City <p>城市<br>这里实际按拨测结果中的城市来填写即可</p><p>示例：</p><p>深圳市<br>武汉市<br>首尔<br>多伦多</p>
      */
     public void setCity(String [] City) {
         this.City = City;
     }
 
     /**
-     * Get es scroll查询id 
-     * @return ScrollID es scroll查询id
+     * Get <p>es scroll查询id</p> 
+     * @return ScrollID <p>es scroll查询id</p>
      */
     public String getScrollID() {
         return this.ScrollID;
     }
 
     /**
-     * Set es scroll查询id
-     * @param ScrollID es scroll查询id
+     * Set <p>es scroll查询id</p>
+     * @param ScrollID <p>es scroll查询id</p>
      */
     public void setScrollID(String ScrollID) {
         this.ScrollID = ScrollID;
     }
 
     /**
-     * Get 详情数据下载 
-     * @return QueryFlag 详情数据下载
+     * Get <p>详情数据下载</p> 
+     * @return QueryFlag <p>详情数据下载</p>
      */
     public String getQueryFlag() {
         return this.QueryFlag;
     }
 
     /**
-     * Set 详情数据下载
-     * @param QueryFlag 详情数据下载
+     * Set <p>详情数据下载</p>
+     * @param QueryFlag <p>详情数据下载</p>
      */
     public void setQueryFlag(String QueryFlag) {
         this.QueryFlag = QueryFlag;

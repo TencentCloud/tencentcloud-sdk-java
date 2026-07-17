@@ -24,345 +24,345 @@ import java.util.HashMap;
 public class CreateClusterNodePoolRequest extends AbstractModel {
 
     /**
-    * cluster id
+    * <p>cluster id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+    * <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p>
     */
     @SerializedName("AutoScalingGroupPara")
     @Expose
     private String AutoScalingGroupPara;
 
     /**
-    * LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
+    * <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p>
     */
     @SerializedName("LaunchConfigurePara")
     @Expose
     private String LaunchConfigurePara;
 
     /**
-    * InstanceAdvancedSettings
+    * <p>InstanceAdvancedSettings</p>
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-    * 是否启用自动伸缩
+    * <p>是否启用自动伸缩</p>
     */
     @SerializedName("EnableAutoscale")
     @Expose
     private Boolean EnableAutoscale;
 
     /**
-    * 节点池名称
+    * <p>节点池名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Labels标签
+    * <p>Labels标签</p>
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * Taints互斥
+    * <p>Taints互斥</p>
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 节点Annotation 列表
+    * <p>节点Annotation 列表</p>
     */
     @SerializedName("Annotations")
     @Expose
     private AnnotationValue [] Annotations;
 
     /**
-    * 节点池纬度运行时类型及版本
+    * <p>节点池纬度运行时类型及版本</p>
     */
     @SerializedName("ContainerRuntime")
     @Expose
     private String ContainerRuntime;
 
     /**
-    * 运行时版本
+    * <p>运行时版本</p>
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-    * 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+    * <p>节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName</p>
     */
     @SerializedName("NodePoolOs")
     @Expose
     private String NodePoolOs;
 
     /**
-    * 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+    * <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
     */
     @SerializedName("OsCustomizeType")
     @Expose
     private String OsCustomizeType;
 
     /**
-    * 资源标签
+    * <p>资源标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 删除保护开关
+    * <p>删除保护开关</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get cluster id 
-     * @return ClusterId cluster id
+     * Get <p>cluster id</p> 
+     * @return ClusterId <p>cluster id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set cluster id
-     * @param ClusterId cluster id
+     * Set <p>cluster id</p>
+     * @param ClusterId <p>cluster id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440 
-     * @return AutoScalingGroupPara AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+     * Get <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p> 
+     * @return AutoScalingGroupPara <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p>
      */
     public String getAutoScalingGroupPara() {
         return this.AutoScalingGroupPara;
     }
 
     /**
-     * Set AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
-     * @param AutoScalingGroupPara AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+     * Set <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p>
+     * @param AutoScalingGroupPara <p>AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440</p>
      */
     public void setAutoScalingGroupPara(String AutoScalingGroupPara) {
         this.AutoScalingGroupPara = AutoScalingGroupPara;
     }
 
     /**
-     * Get LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447 
-     * @return LaunchConfigurePara LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
+     * Get <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p> 
+     * @return LaunchConfigurePara <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p>
      */
     public String getLaunchConfigurePara() {
         return this.LaunchConfigurePara;
     }
 
     /**
-     * Set LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
-     * @param LaunchConfigurePara LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
+     * Set <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p>
+     * @param LaunchConfigurePara <p>LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447</p>
      */
     public void setLaunchConfigurePara(String LaunchConfigurePara) {
         this.LaunchConfigurePara = LaunchConfigurePara;
     }
 
     /**
-     * Get InstanceAdvancedSettings 
-     * @return InstanceAdvancedSettings InstanceAdvancedSettings
+     * Get <p>InstanceAdvancedSettings</p> 
+     * @return InstanceAdvancedSettings <p>InstanceAdvancedSettings</p>
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set InstanceAdvancedSettings
-     * @param InstanceAdvancedSettings InstanceAdvancedSettings
+     * Set <p>InstanceAdvancedSettings</p>
+     * @param InstanceAdvancedSettings <p>InstanceAdvancedSettings</p>
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
     }
 
     /**
-     * Get 是否启用自动伸缩 
-     * @return EnableAutoscale 是否启用自动伸缩
+     * Get <p>是否启用自动伸缩</p> 
+     * @return EnableAutoscale <p>是否启用自动伸缩</p>
      */
     public Boolean getEnableAutoscale() {
         return this.EnableAutoscale;
     }
 
     /**
-     * Set 是否启用自动伸缩
-     * @param EnableAutoscale 是否启用自动伸缩
+     * Set <p>是否启用自动伸缩</p>
+     * @param EnableAutoscale <p>是否启用自动伸缩</p>
      */
     public void setEnableAutoscale(Boolean EnableAutoscale) {
         this.EnableAutoscale = EnableAutoscale;
     }
 
     /**
-     * Get 节点池名称 
-     * @return Name 节点池名称
+     * Get <p>节点池名称</p> 
+     * @return Name <p>节点池名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点池名称
-     * @param Name 节点池名称
+     * Set <p>节点池名称</p>
+     * @param Name <p>节点池名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Labels标签 
-     * @return Labels Labels标签
+     * Get <p>Labels标签</p> 
+     * @return Labels <p>Labels标签</p>
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set Labels标签
-     * @param Labels Labels标签
+     * Set <p>Labels标签</p>
+     * @param Labels <p>Labels标签</p>
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Taints互斥 
-     * @return Taints Taints互斥
+     * Get <p>Taints互斥</p> 
+     * @return Taints <p>Taints互斥</p>
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set Taints互斥
-     * @param Taints Taints互斥
+     * Set <p>Taints互斥</p>
+     * @param Taints <p>Taints互斥</p>
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 节点Annotation 列表 
-     * @return Annotations 节点Annotation 列表
+     * Get <p>节点Annotation 列表</p> 
+     * @return Annotations <p>节点Annotation 列表</p>
      */
     public AnnotationValue [] getAnnotations() {
         return this.Annotations;
     }
 
     /**
-     * Set 节点Annotation 列表
-     * @param Annotations 节点Annotation 列表
+     * Set <p>节点Annotation 列表</p>
+     * @param Annotations <p>节点Annotation 列表</p>
      */
     public void setAnnotations(AnnotationValue [] Annotations) {
         this.Annotations = Annotations;
     }
 
     /**
-     * Get 节点池纬度运行时类型及版本 
-     * @return ContainerRuntime 节点池纬度运行时类型及版本
+     * Get <p>节点池纬度运行时类型及版本</p> 
+     * @return ContainerRuntime <p>节点池纬度运行时类型及版本</p>
      */
     public String getContainerRuntime() {
         return this.ContainerRuntime;
     }
 
     /**
-     * Set 节点池纬度运行时类型及版本
-     * @param ContainerRuntime 节点池纬度运行时类型及版本
+     * Set <p>节点池纬度运行时类型及版本</p>
+     * @param ContainerRuntime <p>节点池纬度运行时类型及版本</p>
      */
     public void setContainerRuntime(String ContainerRuntime) {
         this.ContainerRuntime = ContainerRuntime;
     }
 
     /**
-     * Get 运行时版本 
-     * @return RuntimeVersion 运行时版本
+     * Get <p>运行时版本</p> 
+     * @return RuntimeVersion <p>运行时版本</p>
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 运行时版本
-     * @param RuntimeVersion 运行时版本
+     * Set <p>运行时版本</p>
+     * @param RuntimeVersion <p>运行时版本</p>
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * Get 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName 
-     * @return NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+     * Get <p>节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName</p> 
+     * @return NodePoolOs <p>节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName</p>
      */
     public String getNodePoolOs() {
         return this.NodePoolOs;
     }
 
     /**
-     * Set 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
-     * @param NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+     * Set <p>节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName</p>
+     * @param NodePoolOs <p>节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName</p>
      */
     public void setNodePoolOs(String NodePoolOs) {
         this.NodePoolOs = NodePoolOs;
     }
 
     /**
-     * Get 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值) 
-     * @return OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * Get <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p> 
+     * @return OsCustomizeType <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
     }
 
     /**
-     * Set 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-     * @param OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * Set <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
+     * @param OsCustomizeType <p>容器的镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
     }
 
     /**
-     * Get 资源标签 
-     * @return Tags 资源标签
+     * Get <p>资源标签</p> 
+     * @return Tags <p>资源标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 资源标签
-     * @param Tags 资源标签
+     * Set <p>资源标签</p>
+     * @param Tags <p>资源标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 删除保护开关 
-     * @return DeletionProtection 删除保护开关
+     * Get <p>删除保护开关</p> 
+     * @return DeletionProtection <p>删除保护开关</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关
-     * @param DeletionProtection 删除保护开关
+     * Set <p>删除保护开关</p>
+     * @param DeletionProtection <p>删除保护开关</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;

@@ -116,6 +116,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBEngines）用于获取DB引擎版本列表
+     * @param req DescribeDBEnginesRequest
+     * @return DescribeDBEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBEnginesResponse DescribeDBEngines(DescribeDBEnginesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBEngines", DescribeDBEnginesResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBInstanceDetail）提供查询实例详情功能
      * @param req DescribeDBInstanceDetailRequest
      * @return DescribeDBInstanceDetailResponse

@@ -151,6 +151,19 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *1. 按 `(IotAppID, OpenID)` 兜底创建 / 复用 app 端用户；
+2. 按 `(用户, FamilyName)` 兜底创建 / 复用默认家庭；
+3. 将设备直接绑定到该家庭（已绑同家庭视为成功，并继续异步下发 `bind_device` 消息）。
+     * @param req BindUserDeviceRequest
+     * @return BindUserDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindUserDeviceResponse BindUserDevice(BindUserDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindUserDevice", BindUserDeviceResponse.class);
+    }
+
+    /**
      *提供给用户异步调用设备行为的能力
      * @param req CallDeviceActionAsyncRequest
      * @return CallDeviceActionAsyncResponse
@@ -170,6 +183,51 @@ public class IotexplorerClient extends AbstractClient{
     public CallDeviceActionSyncResponse CallDeviceActionSync(CallDeviceActionSyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CallDeviceActionSync", CallDeviceActionSyncResponse.class);
+    }
+
+    /**
+     *平台向设备发起一次同步 RRPC（Reverse RPC）调用——下行下发请求，同步阻塞等待设备回包，超时未回则返回 Timeout。
+
+适用场景：
+
+默认模式：使用平台保留 topic $iotrrpc/down 和 $iotrrpc/up。
+自定义模式：业务自带下行 topic；Reply topic 可选 —— 不传时平台仅依赖 clientToken 关联上行 ack。
+
+
+
+## 设备侧实现指引
+
+### 默认模式
+
+1. 订阅 `$iotrrpc/down/{ProductId}/{DeviceName}/+`；
+2. 收到下行后，从 topic 末段解析 `{mid}`；
+3. 向 `$iotrrpc/up/{ProductId}/{DeviceName}/{mid}` 发送回包，**payload 任意字节**（推荐 JSON）。
+
+### 自定义模式
+
+1. 订阅业务 `Topic`；
+2. 解析 payload JSON，**保留 `clientToken` 字段**；
+3. 处理业务后，构造 envelope JSON：
+
+   ```json
+   {
+     "method": "rrpc_sync_reply",
+     "clientToken": "<原样回填>",
+     "payload": "<base64 of 业务字节>"
+   }
+   ```
+
+4. publish 到与平台 `ReplyTopic` 通配符匹配的具体 topic（推荐使用与下行同 topic）。
+
+> ⚠️ `clientToken` **必填且必须原样回填**，否则平台无法关联，调用方将收到 `Status=Timeout`。
+> ⚠️ `method` 必须为 `rrpc_sync_reply`，否则会直接 skip。
+     * @param req CallDeviceRRPCSyncRequest
+     * @return CallDeviceRRPCSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallDeviceRRPCSyncResponse CallDeviceRRPCSync(CallDeviceRRPCSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CallDeviceRRPCSync", CallDeviceRRPCSyncResponse.class);
     }
 
     /**
@@ -2475,6 +2533,19 @@ public class IotexplorerClient extends AbstractClient{
     public ResumeWeCallDeviceResponse ResumeWeCallDevice(ResumeWeCallDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumeWeCallDevice", ResumeWeCallDeviceResponse.class);
+    }
+
+    /**
+     *1. 按 `(IotAppID, OpenID)` 只读定位用户（不存在视为已解绑，幂等成功）；
+2. 按 `(用户, FamilyName)` 只读定位家庭（不存在视为已解绑，幂等成功）；
+3. 解除设备与该家庭的绑定关系，异步下发 `delete_device` 消息；解绑路径不校验设备存在性，允许设备已删除时清理残留绑定关系。
+     * @param req RevokeBindUserDeviceRequest
+     * @return RevokeBindUserDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeBindUserDeviceResponse RevokeBindUserDevice(RevokeBindUserDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokeBindUserDevice", RevokeBindUserDeviceResponse.class);
     }
 
     /**

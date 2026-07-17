@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class VODOutputStorage extends AbstractModel {
 
     /**
-    * 媒体处理生成的文件输出的目标 *Bucket ID*
+    * <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 媒体处理生成的文件输出的目标 Bucket 的园区
+    * <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 点播专业版应用Id
+    * <p>点播专业版应用Id</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get 媒体处理生成的文件输出的目标 *Bucket ID* 
-     * @return Bucket 媒体处理生成的文件输出的目标 *Bucket ID*
+     * Get <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p> 
+     * @return Bucket <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 媒体处理生成的文件输出的目标 *Bucket ID*
-     * @param Bucket 媒体处理生成的文件输出的目标 *Bucket ID*
+     * Set <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
+     * @param Bucket <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 媒体处理生成的文件输出的目标 Bucket 的园区 
-     * @return Region 媒体处理生成的文件输出的目标 Bucket 的园区
+     * Get <p>媒体处理生成的文件输出的目标 Bucket 的园区</p> 
+     * @return Region <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 媒体处理生成的文件输出的目标 Bucket 的园区
-     * @param Region 媒体处理生成的文件输出的目标 Bucket 的园区
+     * Set <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
+     * @param Region <p>媒体处理生成的文件输出的目标 Bucket 的园区</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 点播专业版应用Id 
-     * @return SubAppId 点播专业版应用Id
+     * Get <p>点播专业版应用Id</p> 
+     * @return SubAppId <p>点播专业版应用Id</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 点播专业版应用Id
-     * @param SubAppId 点播专业版应用Id
+     * Set <p>点播专业版应用Id</p>
+     * @param SubAppId <p>点播专业版应用Id</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

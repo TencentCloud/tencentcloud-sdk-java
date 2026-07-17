@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveNatAcRuleResponse extends AbstractModel {
 
     /**
-    * 删除成功后返回被删除策略的uuid列表
+    * <p>删除成功后返回被删除策略的uuid列表</p>
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveNatAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除成功后返回被删除策略的uuid列表 
-     * @return RuleUuid 删除成功后返回被删除策略的uuid列表
+     * Get <p>删除成功后返回被删除策略的uuid列表</p> 
+     * @return RuleUuid <p>删除成功后返回被删除策略的uuid列表</p>
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 删除成功后返回被删除策略的uuid列表
-     * @param RuleUuid 删除成功后返回被删除策略的uuid列表
+     * Set <p>删除成功后返回被删除策略的uuid列表</p>
+     * @param RuleUuid <p>删除成功后返回被删除策略的uuid列表</p>
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

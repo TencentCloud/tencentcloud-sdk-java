@@ -174,6 +174,9 @@ public enum CccErrorCode {
      /* 超出数量限制。 */
      LIMITEXCEEDED_OUTOFCOUNTLIMIT("LimitExceeded.OutOfCountLimit"),
      
+     /* 超过当前智能体的并发上限 */
+     LIMITEXCEEDED_OUTOFQUOTAMAXCOUNT("LimitExceeded.OutOfQuotaMaxCount"),
+     
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      

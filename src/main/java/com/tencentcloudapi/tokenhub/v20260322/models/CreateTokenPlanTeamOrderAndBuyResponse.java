@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTokenPlanTeamOrderAndBuyResponse extends AbstractModel {
 
     /**
-    * 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+    * <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
     */
     @SerializedName("BigOrderId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTokenPlanTeamOrderAndBuyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。 
-     * @return BigOrderId 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+     * Get <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p> 
+     * @return BigOrderId <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
      */
     public String getBigOrderId() {
         return this.BigOrderId;
     }
 
     /**
-     * Set 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
-     * @param BigOrderId 腾讯云订单 ID。用于关联一次购买操作下的所有子订单。
+     * Set <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
+     * @param BigOrderId <p>腾讯云订单 ID。用于关联一次购买操作下的所有子订单。</p>
      */
     public void setBigOrderId(String BigOrderId) {
         this.BigOrderId = BigOrderId;

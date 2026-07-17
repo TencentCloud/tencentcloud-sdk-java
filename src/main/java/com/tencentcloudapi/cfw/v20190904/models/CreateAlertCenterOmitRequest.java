@@ -24,74 +24,92 @@ import java.util.HashMap;
 public class CreateAlertCenterOmitRequest extends AbstractModel {
 
     /**
-    * 处置对象,ID列表，  IdLists和IpList二选一
+    * <p>处置对象,ID列表，  IdLists和IpList二选一</p>
     */
     @SerializedName("HandleIdList")
     @Expose
     private String [] HandleIdList;
 
     /**
-    * 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
+    * <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
     */
     @SerializedName("TableType")
     @Expose
     private String TableType;
 
     /**
-    * 处置对象,事件ID列表
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>处置对象,事件ID列表</p>
     */
     @SerializedName("HandleEventIdList")
     @Expose
     private String [] HandleEventIdList;
 
     /**
-     * Get 处置对象,ID列表，  IdLists和IpList二选一 
-     * @return HandleIdList 处置对象,ID列表，  IdLists和IpList二选一
+     * Get <p>处置对象,ID列表，  IdLists和IpList二选一</p> 
+     * @return HandleIdList <p>处置对象,ID列表，  IdLists和IpList二选一</p>
      */
     public String [] getHandleIdList() {
         return this.HandleIdList;
     }
 
     /**
-     * Set 处置对象,ID列表，  IdLists和IpList二选一
-     * @param HandleIdList 处置对象,ID列表，  IdLists和IpList二选一
+     * Set <p>处置对象,ID列表，  IdLists和IpList二选一</p>
+     * @param HandleIdList <p>处置对象,ID列表，  IdLists和IpList二选一</p>
      */
     public void setHandleIdList(String [] HandleIdList) {
         this.HandleIdList = HandleIdList;
     }
 
     /**
-     * Get 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表 
-     * @return TableType 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
+     * Get <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p> 
+     * @return TableType <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
      */
     public String getTableType() {
         return this.TableType;
     }
 
     /**
-     * Set 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
-     * @param TableType 忽略数据来源：
-AlertTable 告警中心  InterceptionTable拦截列表
+     * Set <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
+     * @param TableType <p>忽略数据来源：<br>AlertTable 告警中心  InterceptionTable拦截列表</p>
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;
     }
 
     /**
-     * Get 处置对象,事件ID列表 
-     * @return HandleEventIdList 处置对象,事件ID列表
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>处置对象,事件ID列表</p> 
+     * @return HandleEventIdList <p>处置对象,事件ID列表</p>
      */
     public String [] getHandleEventIdList() {
         return this.HandleEventIdList;
     }
 
     /**
-     * Set 处置对象,事件ID列表
-     * @param HandleEventIdList 处置对象,事件ID列表
+     * Set <p>处置对象,事件ID列表</p>
+     * @param HandleEventIdList <p>处置对象,事件ID列表</p>
      */
     public void setHandleEventIdList(String [] HandleEventIdList) {
         this.HandleEventIdList = HandleEventIdList;
@@ -114,6 +132,9 @@ AlertTable 告警中心  InterceptionTable拦截列表
         if (source.TableType != null) {
             this.TableType = new String(source.TableType);
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.HandleEventIdList != null) {
             this.HandleEventIdList = new String[source.HandleEventIdList.length];
             for (int i = 0; i < source.HandleEventIdList.length; i++) {
@@ -129,6 +150,7 @@ AlertTable 告警中心  InterceptionTable拦截列表
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "HandleIdList.", this.HandleIdList);
         this.setParamSimple(map, prefix + "TableType", this.TableType);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamArraySimple(map, prefix + "HandleEventIdList.", this.HandleEventIdList);
 
     }

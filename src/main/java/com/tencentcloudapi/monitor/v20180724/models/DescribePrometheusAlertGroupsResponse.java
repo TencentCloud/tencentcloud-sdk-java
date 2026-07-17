@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePrometheusAlertGroupsResponse extends AbstractModel {
 
     /**
-    * 告警分组信息
+    * <p>告警分组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertGroupSet")
@@ -32,7 +32,7 @@ public class DescribePrometheusAlertGroupsResponse extends AbstractModel {
     private PrometheusAlertGroupSet [] AlertGroupSet;
 
     /**
-    * 告警分组总数
+    * <p>告警分组总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -47,9 +47,9 @@ public class DescribePrometheusAlertGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警分组信息
+     * Get <p>告警分组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertGroupSet 告警分组信息
+     * @return AlertGroupSet <p>告警分组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusAlertGroupSet [] getAlertGroupSet() {
@@ -57,9 +57,9 @@ public class DescribePrometheusAlertGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 告警分组信息
+     * Set <p>告警分组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertGroupSet 告警分组信息
+     * @param AlertGroupSet <p>告警分组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertGroupSet(PrometheusAlertGroupSet [] AlertGroupSet) {
@@ -67,9 +67,9 @@ public class DescribePrometheusAlertGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get 告警分组总数
+     * Get <p>告警分组总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 告警分组总数
+     * @return TotalCount <p>告警分组总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -77,9 +77,9 @@ public class DescribePrometheusAlertGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 告警分组总数
+     * Set <p>告警分组总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 告警分组总数
+     * @param TotalCount <p>告警分组总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

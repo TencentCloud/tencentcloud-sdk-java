@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class CreateTokenPlanTeamOrderAndBuyRequest extends AbstractModel {
 
     /**
-    * 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+    * <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-    * 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
+    * <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * 购买时长。单位：月。必须大于 0。
+    * <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
+    * <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
     */
     @SerializedName("CreditOrToken")
     @Expose
     private Long CreditOrToken;
 
     /**
-    * 是否开启自动续费。默认不开启。
+    * <p>是否开启自动续费。默认不开启。</p>
     */
     @SerializedName("EnableAutoRenew")
     @Expose
     private Boolean EnableAutoRenew;
 
     /**
-     * Get 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。 
-     * @return ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+    * <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+    */
+    @SerializedName("TeamId")
+    @Expose
+    private String TeamId;
+
+    /**
+     * Get <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p> 
+     * @return ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
-     * @param ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+     * Set <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+     * @param ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符 
-     * @return TeamName 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
+     * Get <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p> 
+     * @return TeamName <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
-     * @param TeamName 套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符
+     * Set <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
+     * @param TeamName <p>套餐名称。只能包含中文、字母、数字、下划线、连字符，以中文或者字母开头，以中文或字母或数字结尾，2~50个字符</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get 购买时长。单位：月。必须大于 0。 
-     * @return TimeSpan 购买时长。单位：月。必须大于 0。
+     * Get <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p> 
+     * @return TimeSpan <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长。单位：月。必须大于 0。
-     * @param TimeSpan 购买时长。单位：月。必须大于 0。
+     * Set <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
+     * @param TimeSpan <p>购买时长。单位：月。必须大于 0，支持1个月～12个月。</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。 
-     * @return CreditOrToken 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
+     * Get <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p> 
+     * @return CreditOrToken <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
      */
     public Long getCreditOrToken() {
         return this.CreditOrToken;
     }
 
     /**
-     * Set 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
-     * @param CreditOrToken 购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。
+     * Set <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
+     * @param CreditOrToken <p>购买的套餐规格。套餐类型为专业套餐（enterprise），单位取值为积分；轻享套餐（enterprise-auto），单位取值为 tokens。</p>
      */
     public void setCreditOrToken(Long CreditOrToken) {
         this.CreditOrToken = CreditOrToken;
     }
 
     /**
-     * Get 是否开启自动续费。默认不开启。 
-     * @return EnableAutoRenew 是否开启自动续费。默认不开启。
+     * Get <p>是否开启自动续费。默认不开启。</p> 
+     * @return EnableAutoRenew <p>是否开启自动续费。默认不开启。</p>
      */
     public Boolean getEnableAutoRenew() {
         return this.EnableAutoRenew;
     }
 
     /**
-     * Set 是否开启自动续费。默认不开启。
-     * @param EnableAutoRenew 是否开启自动续费。默认不开启。
+     * Set <p>是否开启自动续费。默认不开启。</p>
+     * @param EnableAutoRenew <p>是否开启自动续费。默认不开启。</p>
      */
     public void setEnableAutoRenew(Boolean EnableAutoRenew) {
         this.EnableAutoRenew = EnableAutoRenew;
+    }
+
+    /**
+     * Get <p>已有套餐 ID（非空时走过期续费，空时走新购）</p> 
+     * @return TeamId <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+     */
+    public String getTeamId() {
+        return this.TeamId;
+    }
+
+    /**
+     * Set <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+     * @param TeamId <p>已有套餐 ID（非空时走过期续费，空时走新购）</p>
+     */
+    public void setTeamId(String TeamId) {
+        this.TeamId = TeamId;
     }
 
     public CreateTokenPlanTeamOrderAndBuyRequest() {
@@ -161,6 +184,9 @@ public class CreateTokenPlanTeamOrderAndBuyRequest extends AbstractModel {
         if (source.EnableAutoRenew != null) {
             this.EnableAutoRenew = new Boolean(source.EnableAutoRenew);
         }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class CreateTokenPlanTeamOrderAndBuyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "CreditOrToken", this.CreditOrToken);
         this.setParamSimple(map, prefix + "EnableAutoRenew", this.EnableAutoRenew);
+        this.setParamSimple(map, prefix + "TeamId", this.TeamId);
 
     }
 }

@@ -492,6 +492,39 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询当前租户防火墙聚合告警事件。Response.Data 内 total 表示聚合告警事件数；alerts[].occurrence_count 表示单个聚合告警事件的告警发生次数/命中次数。
+     * @param req DescribeCfwAlertsRequest
+     * @return DescribeCfwAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwAlertsResponse DescribeCfwAlerts(DescribeCfwAlertsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwAlerts", DescribeCfwAlertsResponse.class);
+    }
+
+    /**
+     *查询当前租户防火墙分析报告数据。按分析场景返回整组分析结果，结果在 Response.Data 的 JSON 字符串中。
+     * @param req DescribeCfwAnalysisDataRequest
+     * @return DescribeCfwAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwAnalysisDataResponse DescribeCfwAnalysisData(DescribeCfwAnalysisDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwAnalysisData", DescribeCfwAnalysisDataResponse.class);
+    }
+
+    /**
+     *查询当前租户防火墙纳管资产。默认查询主机资产；仅明确需要 VPC 或子网时传 AssetType。结果在 Response.Data 的 JSON 字符串中。
+     * @param req DescribeCfwAssetsRequest
+     * @return DescribeCfwAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwAssetsResponse DescribeCfwAssets(DescribeCfwAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwAssets", DescribeCfwAssetsResponse.class);
+    }
+
+    /**
      *查询防火墙弹性公网IP
      * @param req DescribeCfwEipsRequest
      * @return DescribeCfwEipsResponse
@@ -511,6 +544,72 @@ public class CfwClient extends AbstractClient{
     public DescribeCfwInsStatusResponse DescribeCfwInsStatus(DescribeCfwInsStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCfwInsStatus", DescribeCfwInsStatusResponse.class);
+    }
+
+    /**
+     *查询当前租户防火墙日志。分页只使用 Response.Data 内的 HasMore / NextToken。
+     * @param req DescribeCfwLogsRequest
+     * @return DescribeCfwLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwLogsResponse DescribeCfwLogs(DescribeCfwLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwLogs", DescribeCfwLogsResponse.class);
+    }
+
+    /**
+     *查询当前租户风险中心未处理风险概览。默认查询最近 7 天；自定义时间范围需同时传 StartTime 和 EndTime。结果在 Response.Data 的 JSON 字符串中。
+     * @param req DescribeCfwRiskOverviewRequest
+     * @return DescribeCfwRiskOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwRiskOverviewResponse DescribeCfwRiskOverview(DescribeCfwRiskOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwRiskOverview", DescribeCfwRiskOverviewResponse.class);
+    }
+
+    /**
+     *查询当前租户防火墙规则优化建议。只读分析，不修改规则；Action 名保持单数 RuleOptimization。结果在 Response.Data 的 JSON 字符串中。
+     * @param req DescribeCfwRuleOptimizationRequest
+     * @return DescribeCfwRuleOptimizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwRuleOptimizationResponse DescribeCfwRuleOptimization(DescribeCfwRuleOptimizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwRuleOptimization", DescribeCfwRuleOptimizationResponse.class);
+    }
+
+    /**
+     *查询当前租户防火墙规则配置。覆盖互联网边界、NAT、VPC、企业安全组，以及入侵防御 intrusion_prevention 的 blocklist、whitelist、isolate 三类有效列表。结果在 Response.Data 的 JSON 字符串中。
+     * @param req DescribeCfwRulesRequest
+     * @return DescribeCfwRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwRulesResponse DescribeCfwRules(DescribeCfwRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwRules", DescribeCfwRulesResponse.class);
+    }
+
+    /**
+     *查询状态监控场景。Op=describe_scene 用于发现可用场景、指标、视角和二级下拉 available_options；Op=fetch_scene 用于拉取具体场景快照，结果在 Response.Data 的 JSON 字符串中。
+     * @param req DescribeCfwStatusMonitorRequest
+     * @return DescribeCfwStatusMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwStatusMonitorResponse DescribeCfwStatusMonitor(DescribeCfwStatusMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwStatusMonitor", DescribeCfwStatusMonitorResponse.class);
+    }
+
+    /**
+     *查询当前租户防火墙防护开关总览。结果在 Response.Data 的 JSON 字符串中。本接口没有自定义业务入参，不支持过滤、排序或分页。
+     * @param req DescribeCfwSwitchesRequest
+     * @return DescribeCfwSwitchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwSwitchesResponse DescribeCfwSwitches(DescribeCfwSwitchesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwSwitches", DescribeCfwSwitchesResponse.class);
     }
 
     /**

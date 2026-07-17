@@ -31,6 +31,13 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     private SecurityGroupRule [] Data;
 
     /**
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
     * <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
     */
     @SerializedName("Type")
@@ -79,6 +86,22 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
      */
     public void setData(SecurityGroupRule [] Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
     }
 
     /**
@@ -175,6 +198,9 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
                 this.Data[i] = new SecurityGroupRule(source.Data[i]);
             }
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
@@ -198,6 +224,7 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "IsDelay", this.IsDelay);

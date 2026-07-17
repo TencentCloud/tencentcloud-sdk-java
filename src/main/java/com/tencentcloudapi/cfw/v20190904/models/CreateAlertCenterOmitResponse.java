@@ -24,29 +24,21 @@ import java.util.HashMap;
 public class CreateAlertCenterOmitResponse extends AbstractModel {
 
     /**
-    * 返回状态码：
-0 成功
-非0 失败
+    * <p>返回状态码：<br>0 成功<br>非0 失败</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * 返回信息：
-success 成功
-其他
+    * <p>返回信息：<br>success 成功<br>其他</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
+    * <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
     */
     @SerializedName("Status")
     @Expose
@@ -60,80 +52,48 @@ success 成功
     private String RequestId;
 
     /**
-     * Get 返回状态码：
-0 成功
-非0 失败 
-     * @return ReturnCode 返回状态码：
-0 成功
-非0 失败
+     * Get <p>返回状态码：<br>0 成功<br>非0 失败</p> 
+     * @return ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 返回状态码：
-0 成功
-非0 失败
-     * @param ReturnCode 返回状态码：
-0 成功
-非0 失败
+     * Set <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     * @param ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get 返回信息：
-success 成功
-其他 
-     * @return ReturnMsg 返回信息：
-success 成功
-其他
+     * Get <p>返回信息：<br>success 成功<br>其他</p> 
+     * @return ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 返回信息：
-success 成功
-其他
-     * @param ReturnMsg 返回信息：
-success 成功
-其他
+     * Set <p>返回信息：<br>success 成功<br>其他</p>
+     * @param ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他 
-     * @return Status 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
+     * Get <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p> 
+     * @return Status <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
-     * @param Status 处置状态码：
-0  处置成功
--1 通用错误，不用处理
--3 表示重复，需重新刷新列表
-其他
+     * Set <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
+     * @param Status <p>处置状态码：<br>0  处置成功<br>-1 通用错误，不用处理<br>-3 表示重复，需重新刷新列表<br>其他</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

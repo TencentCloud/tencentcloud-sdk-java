@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class RemoveVpcAcRuleRequest extends AbstractModel {
 
     /**
-    * 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+    * <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
     */
     @SerializedName("RuleUuids")
     @Expose
     private Long [] RuleUuids;
 
     /**
-    * 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private Long IpVersion;
 
     /**
-     * Get 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则 
-     * @return RuleUuids 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * Get <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p> 
+     * @return RuleUuids <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
      */
     public Long [] getRuleUuids() {
         return this.RuleUuids;
     }
 
     /**
-     * Set 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
-     * @param RuleUuids 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * Set <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+     * @param RuleUuids <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
      */
     public void setRuleUuids(Long [] RuleUuids) {
         this.RuleUuids = RuleUuids;
     }
 
     /**
-     * Get 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则 
-     * @return IpVersion 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p> 
+     * @return IpVersion <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
      */
     public Long getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
-     * @param IpVersion 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     * Set <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
+     * @param IpVersion <p>仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则</p>
      */
     public void setIpVersion(Long IpVersion) {
         this.IpVersion = IpVersion;
@@ -83,6 +106,9 @@ public class RemoveVpcAcRuleRequest extends AbstractModel {
                 this.RuleUuids[i] = new Long(source.RuleUuids[i]);
             }
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.IpVersion != null) {
             this.IpVersion = new Long(source.IpVersion);
         }
@@ -94,6 +120,7 @@ public class RemoveVpcAcRuleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RuleUuids.", this.RuleUuids);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }

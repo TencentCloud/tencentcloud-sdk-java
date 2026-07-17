@@ -139,7 +139,9 @@ public class CreateApmInstanceRequest extends AbstractModel {
     /**
      * Get 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃 
      * @return SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
+     * @deprecated
      */
+    @Deprecated
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
@@ -147,7 +149,9 @@ public class CreateApmInstanceRequest extends AbstractModel {
     /**
      * Set 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
      * @param SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;
     }

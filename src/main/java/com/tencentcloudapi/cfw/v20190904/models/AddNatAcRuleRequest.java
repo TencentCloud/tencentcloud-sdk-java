@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class AddNatAcRuleRequest extends AbstractModel {
 
     /**
-    * 需要添加的nat访问控制规则列表
+    * <p>需要添加的nat访问控制规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
     private CreateNatRuleItem [] Rules;
 
     /**
-    * 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-     * Get 需要添加的nat访问控制规则列表 
-     * @return Rules 需要添加的nat访问控制规则列表
+     * Get <p>需要添加的nat访问控制规则列表</p> 
+     * @return Rules <p>需要添加的nat访问控制规则列表</p>
      */
     public CreateNatRuleItem [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 需要添加的nat访问控制规则列表
-     * @param Rules 需要添加的nat访问控制规则列表
+     * Set <p>需要添加的nat访问控制规则列表</p>
+     * @param Rules <p>需要添加的nat访问控制规则列表</p>
      */
     public void setRules(CreateNatRuleItem [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则 
-     * @return From 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p> 
+     * @return From <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
-     * @param From 添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则
+     * Set <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
+     * @param From <p>添加规则的来源，一般不需要使用，值insert_rule 表示插入指定位置的规则；值batch_import 表示批量导入规则；为空时表示添加规则</p>
      */
     public void setFrom(String From) {
         this.From = From;
@@ -83,6 +106,9 @@ public class AddNatAcRuleRequest extends AbstractModel {
                 this.Rules[i] = new CreateNatRuleItem(source.Rules[i]);
             }
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.From != null) {
             this.From = new String(source.From);
         }
@@ -94,6 +120,7 @@ public class AddNatAcRuleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamSimple(map, prefix + "From", this.From);
 
     }

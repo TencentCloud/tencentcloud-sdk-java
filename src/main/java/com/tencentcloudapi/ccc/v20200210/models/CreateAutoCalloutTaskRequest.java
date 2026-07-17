@@ -171,6 +171,13 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private TriggerStrategyItem [] TriggerStrategy;
 
     /**
+    * <p>智能体并发限制</p>
+    */
+    @SerializedName("ConcurrencyLimit")
+    @Expose
+    private Long ConcurrencyLimit;
+
+    /**
      * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
      * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
@@ -506,6 +513,22 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.TriggerStrategy = TriggerStrategy;
     }
 
+    /**
+     * Get <p>智能体并发限制</p> 
+     * @return ConcurrencyLimit <p>智能体并发限制</p>
+     */
+    public Long getConcurrencyLimit() {
+        return this.ConcurrencyLimit;
+    }
+
+    /**
+     * Set <p>智能体并发限制</p>
+     * @param ConcurrencyLimit <p>智能体并发限制</p>
+     */
+    public void setConcurrencyLimit(Long ConcurrencyLimit) {
+        this.ConcurrencyLimit = ConcurrencyLimit;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -604,6 +627,9 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
                 this.TriggerStrategy[i] = new TriggerStrategyItem(source.TriggerStrategy[i]);
             }
         }
+        if (source.ConcurrencyLimit != null) {
+            this.ConcurrencyLimit = new Long(source.ConcurrencyLimit);
+        }
     }
 
 
@@ -632,6 +658,7 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RetryTags.", this.RetryTags);
         this.setParamArrayObj(map, prefix + "AvailableWorkTimeConfig.", this.AvailableWorkTimeConfig);
         this.setParamArrayObj(map, prefix + "TriggerStrategy.", this.TriggerStrategy);
+        this.setParamSimple(map, prefix + "ConcurrencyLimit", this.ConcurrencyLimit);
 
     }
 }

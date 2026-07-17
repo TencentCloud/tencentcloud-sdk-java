@@ -24,97 +24,115 @@ import java.util.HashMap;
 public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
 
     /**
-    * 是否删除全部
+    * <p>是否删除全部</p>
     */
     @SerializedName("DeleteAll")
     @Expose
     private Long DeleteAll;
 
     /**
-    * blocklist 封禁列表 whitelist 白名单列表
+    * <p>blocklist 封禁列表 whitelist 白名单列表</p>
     */
     @SerializedName("ShowType")
     @Expose
     private String ShowType;
 
     /**
-    * 规则列表
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
     private BanAndAllowRuleDel [] Rules;
 
     /**
-    * 封禁：1，放通：100，
-主要用于全部删除时区分列表类型
+    * <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-     * Get 是否删除全部 
-     * @return DeleteAll 是否删除全部
+     * Get <p>是否删除全部</p> 
+     * @return DeleteAll <p>是否删除全部</p>
      */
     public Long getDeleteAll() {
         return this.DeleteAll;
     }
 
     /**
-     * Set 是否删除全部
-     * @param DeleteAll 是否删除全部
+     * Set <p>是否删除全部</p>
+     * @param DeleteAll <p>是否删除全部</p>
      */
     public void setDeleteAll(Long DeleteAll) {
         this.DeleteAll = DeleteAll;
     }
 
     /**
-     * Get blocklist 封禁列表 whitelist 白名单列表 
-     * @return ShowType blocklist 封禁列表 whitelist 白名单列表
+     * Get <p>blocklist 封禁列表 whitelist 白名单列表</p> 
+     * @return ShowType <p>blocklist 封禁列表 whitelist 白名单列表</p>
      */
     public String getShowType() {
         return this.ShowType;
     }
 
     /**
-     * Set blocklist 封禁列表 whitelist 白名单列表
-     * @param ShowType blocklist 封禁列表 whitelist 白名单列表
+     * Set <p>blocklist 封禁列表 whitelist 白名单列表</p>
+     * @param ShowType <p>blocklist 封禁列表 whitelist 白名单列表</p>
      */
     public void setShowType(String ShowType) {
         this.ShowType = ShowType;
     }
 
     /**
-     * Get 规则列表 
-     * @return Rules 规则列表
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>规则列表</p> 
+     * @return Rules <p>规则列表</p>
      */
     public BanAndAllowRuleDel [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 规则列表
-     * @param Rules 规则列表
+     * Set <p>规则列表</p>
+     * @param Rules <p>规则列表</p>
      */
     public void setRules(BanAndAllowRuleDel [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 封禁：1，放通：100，
-主要用于全部删除时区分列表类型 
-     * @return RuleType 封禁：1，放通：100，
-主要用于全部删除时区分列表类型
+     * Get <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p> 
+     * @return RuleType <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 封禁：1，放通：100，
-主要用于全部删除时区分列表类型
-     * @param RuleType 封禁：1，放通：100，
-主要用于全部删除时区分列表类型
+     * Set <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
+     * @param RuleType <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
@@ -134,6 +152,9 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
         if (source.ShowType != null) {
             this.ShowType = new String(source.ShowType);
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.Rules != null) {
             this.Rules = new BanAndAllowRuleDel[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
@@ -152,6 +173,7 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
         this.setParamSimple(map, prefix + "ShowType", this.ShowType);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
 

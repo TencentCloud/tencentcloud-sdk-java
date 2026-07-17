@@ -59,7 +59,7 @@ public class ApmApplicationConfigView extends AbstractModel {
     private String ErrorCodeFilter;
 
     /**
-    * <p>应用诊断开关（已废弃）</p>
+    * <p>应用诊断开关</p>
     */
     @SerializedName("EventEnable")
     @Expose
@@ -143,14 +143,14 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Boolean AgentEnable;
 
     /**
-    * <p>组件列表开关（已废弃）</p>
+    * <p>组件列表开关</p>
     */
     @SerializedName("InstrumentList")
     @Expose
     private Instrument [] InstrumentList;
 
     /**
-    * <p>链路压缩开关（已废弃）</p>
+    * <p>链路压缩开关</p>
     */
     @SerializedName("TraceSquash")
     @Expose
@@ -461,16 +461,16 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get <p>应用诊断开关（已废弃）</p> 
-     * @return EventEnable <p>应用诊断开关（已废弃）</p>
+     * Get <p>应用诊断开关</p> 
+     * @return EventEnable <p>应用诊断开关</p>
      */
     public Boolean getEventEnable() {
         return this.EventEnable;
     }
 
     /**
-     * Set <p>应用诊断开关（已废弃）</p>
-     * @param EventEnable <p>应用诊断开关（已废弃）</p>
+     * Set <p>应用诊断开关</p>
+     * @param EventEnable <p>应用诊断开关</p>
      */
     public void setEventEnable(Boolean EventEnable) {
         this.EventEnable = EventEnable;
@@ -653,32 +653,32 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get <p>组件列表开关（已废弃）</p> 
-     * @return InstrumentList <p>组件列表开关（已废弃）</p>
+     * Get <p>组件列表开关</p> 
+     * @return InstrumentList <p>组件列表开关</p>
      */
     public Instrument [] getInstrumentList() {
         return this.InstrumentList;
     }
 
     /**
-     * Set <p>组件列表开关（已废弃）</p>
-     * @param InstrumentList <p>组件列表开关（已废弃）</p>
+     * Set <p>组件列表开关</p>
+     * @param InstrumentList <p>组件列表开关</p>
      */
     public void setInstrumentList(Instrument [] InstrumentList) {
         this.InstrumentList = InstrumentList;
     }
 
     /**
-     * Get <p>链路压缩开关（已废弃）</p> 
-     * @return TraceSquash <p>链路压缩开关（已废弃）</p>
+     * Get <p>链路压缩开关</p> 
+     * @return TraceSquash <p>链路压缩开关</p>
      */
     public Boolean getTraceSquash() {
         return this.TraceSquash;
     }
 
     /**
-     * Set <p>链路压缩开关（已废弃）</p>
-     * @param TraceSquash <p>链路压缩开关（已废弃）</p>
+     * Set <p>链路压缩开关</p>
+     * @param TraceSquash <p>链路压缩开关</p>
      */
     public void setTraceSquash(Boolean TraceSquash) {
         this.TraceSquash = TraceSquash;

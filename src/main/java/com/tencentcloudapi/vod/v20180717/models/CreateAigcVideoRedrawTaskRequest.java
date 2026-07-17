@@ -31,7 +31,7 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+    * <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
     */
     @SerializedName("FileInfo")
     @Expose
@@ -89,16 +89,16 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AIGC 视频转绘任务的输入视频的文件信息。</p> 
-     * @return FileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+     * Get <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p> 
+     * @return FileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
      */
     public AigcVideoRedrawTaskInputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
-     * @param FileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。</p>
+     * Set <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
+     * @param FileInfo <p>AIGC 视频转绘任务的输入视频的文件信息。输入视频时长需短于 90 秒，大小在2GB内。</p>
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;

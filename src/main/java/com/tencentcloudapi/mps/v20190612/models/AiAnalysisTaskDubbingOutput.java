@@ -52,6 +52,13 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
+    * <p>额外结果，目前包含字幕文件结果 Url</p>
+    */
+    @SerializedName("ExtraOutput")
+    @Expose
+    private String ExtraOutput;
+
+    /**
      * Get <p>译制视频路径。</p> 
      * @return VideoPath <p>译制视频路径。</p>
      */
@@ -115,6 +122,22 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         this.OutputStorage = OutputStorage;
     }
 
+    /**
+     * Get <p>额外结果，目前包含字幕文件结果 Url</p> 
+     * @return ExtraOutput <p>额外结果，目前包含字幕文件结果 Url</p>
+     */
+    public String getExtraOutput() {
+        return this.ExtraOutput;
+    }
+
+    /**
+     * Set <p>额外结果，目前包含字幕文件结果 Url</p>
+     * @param ExtraOutput <p>额外结果，目前包含字幕文件结果 Url</p>
+     */
+    public void setExtraOutput(String ExtraOutput) {
+        this.ExtraOutput = ExtraOutput;
+    }
+
     public AiAnalysisTaskDubbingOutput() {
     }
 
@@ -135,6 +158,9 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
+        if (source.ExtraOutput != null) {
+            this.ExtraOutput = new String(source.ExtraOutput);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "ExtraOutput", this.ExtraOutput);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveVpcAcRuleResponse extends AbstractModel {
 
     /**
-    * 删除成功后返回被删除策略的uuid列表
+    * <p>删除成功后返回被删除策略的uuid列表</p>
     */
     @SerializedName("RuleUuids")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveVpcAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除成功后返回被删除策略的uuid列表 
-     * @return RuleUuids 删除成功后返回被删除策略的uuid列表
+     * Get <p>删除成功后返回被删除策略的uuid列表</p> 
+     * @return RuleUuids <p>删除成功后返回被删除策略的uuid列表</p>
      */
     public Long [] getRuleUuids() {
         return this.RuleUuids;
     }
 
     /**
-     * Set 删除成功后返回被删除策略的uuid列表
-     * @param RuleUuids 删除成功后返回被删除策略的uuid列表
+     * Set <p>删除成功后返回被删除策略的uuid列表</p>
+     * @param RuleUuids <p>删除成功后返回被删除策略的uuid列表</p>
      */
     public void setRuleUuids(Long [] RuleUuids) {
         this.RuleUuids = RuleUuids;

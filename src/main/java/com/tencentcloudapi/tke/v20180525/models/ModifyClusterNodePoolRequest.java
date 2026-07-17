@@ -24,460 +24,460 @@ import java.util.HashMap;
 public class ModifyClusterNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点池ID
+    * <p>节点池ID</p>
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+    * <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 最大节点数
+    * <p>最大节点数</p>
     */
     @SerializedName("MaxNodesNum")
     @Expose
     private Long MaxNodesNum;
 
     /**
-    * 最小节点数
+    * <p>最小节点数</p>
     */
     @SerializedName("MinNodesNum")
     @Expose
     private Long MinNodesNum;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 污点
+    * <p>污点</p>
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 节点 Annotation 列表
+    * <p>节点 Annotation 列表</p>
     */
     @SerializedName("Annotations")
     @Expose
     private AnnotationValue [] Annotations;
 
     /**
-    * 是否开启伸缩
+    * <p>是否开启伸缩</p>
     */
     @SerializedName("EnableAutoscale")
     @Expose
     private Boolean EnableAutoscale;
 
     /**
-    * 操作系统名称
+    * <p>操作系统名称</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+    * <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
     */
     @SerializedName("OsCustomizeType")
     @Expose
     private String OsCustomizeType;
 
     /**
-    * GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+    * <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
     */
     @SerializedName("GPUArgs")
     @Expose
     private GPUArgs GPUArgs;
 
     /**
-    * base64编码后的自定义脚本
+    * <p>base64编码后的自定义脚本</p>
     */
     @SerializedName("UserScript")
     @Expose
     private String UserScript;
 
     /**
-    * 更新label和taint时忽略存量节点
+    * <p>更新label和taint时忽略存量节点</p>
     */
     @SerializedName("IgnoreExistedNode")
     @Expose
     private Boolean IgnoreExistedNode;
 
     /**
-    * 节点自定义参数
+    * <p>节点自定义参数</p>
     */
     @SerializedName("ExtraArgs")
     @Expose
     private InstanceExtraArgs ExtraArgs;
 
     /**
-    * 资源标签
+    * <p>资源标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+    * <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
     */
     @SerializedName("Unschedulable")
     @Expose
     private Long Unschedulable;
 
     /**
-    * 删除保护开关
+    * <p>删除保护开关</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * dockerd --graph 指定值, 默认为 /var/lib/docker
+    * <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
     */
     @SerializedName("DockerGraphPath")
     @Expose
     private String DockerGraphPath;
 
     /**
-    * base64编码后的自定义脚本
+    * <p>base64编码后的自定义脚本</p>
     */
     @SerializedName("PreStartUserScript")
     @Expose
     private String PreStartUserScript;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get <p>节点池ID</p> 
+     * @return NodePoolId <p>节点池ID</p>
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set <p>节点池ID</p>
+     * @param NodePoolId <p>节点池ID</p>
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾 
-     * @return Name 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+     * Get <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p> 
+     * @return Name <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
-     * @param Name 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+     * Set <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
+     * @param Name <p>名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 最大节点数 
-     * @return MaxNodesNum 最大节点数
+     * Get <p>最大节点数</p> 
+     * @return MaxNodesNum <p>最大节点数</p>
      */
     public Long getMaxNodesNum() {
         return this.MaxNodesNum;
     }
 
     /**
-     * Set 最大节点数
-     * @param MaxNodesNum 最大节点数
+     * Set <p>最大节点数</p>
+     * @param MaxNodesNum <p>最大节点数</p>
      */
     public void setMaxNodesNum(Long MaxNodesNum) {
         this.MaxNodesNum = MaxNodesNum;
     }
 
     /**
-     * Get 最小节点数 
-     * @return MinNodesNum 最小节点数
+     * Get <p>最小节点数</p> 
+     * @return MinNodesNum <p>最小节点数</p>
      */
     public Long getMinNodesNum() {
         return this.MinNodesNum;
     }
 
     /**
-     * Set 最小节点数
-     * @param MinNodesNum 最小节点数
+     * Set <p>最小节点数</p>
+     * @param MinNodesNum <p>最小节点数</p>
      */
     public void setMinNodesNum(Long MinNodesNum) {
         this.MinNodesNum = MinNodesNum;
     }
 
     /**
-     * Get 标签 
-     * @return Labels 标签
+     * Get <p>标签</p> 
+     * @return Labels <p>标签</p>
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 标签
-     * @param Labels 标签
+     * Set <p>标签</p>
+     * @param Labels <p>标签</p>
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 污点 
-     * @return Taints 污点
+     * Get <p>污点</p> 
+     * @return Taints <p>污点</p>
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 污点
-     * @param Taints 污点
+     * Set <p>污点</p>
+     * @param Taints <p>污点</p>
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 节点 Annotation 列表 
-     * @return Annotations 节点 Annotation 列表
+     * Get <p>节点 Annotation 列表</p> 
+     * @return Annotations <p>节点 Annotation 列表</p>
      */
     public AnnotationValue [] getAnnotations() {
         return this.Annotations;
     }
 
     /**
-     * Set 节点 Annotation 列表
-     * @param Annotations 节点 Annotation 列表
+     * Set <p>节点 Annotation 列表</p>
+     * @param Annotations <p>节点 Annotation 列表</p>
      */
     public void setAnnotations(AnnotationValue [] Annotations) {
         this.Annotations = Annotations;
     }
 
     /**
-     * Get 是否开启伸缩 
-     * @return EnableAutoscale 是否开启伸缩
+     * Get <p>是否开启伸缩</p> 
+     * @return EnableAutoscale <p>是否开启伸缩</p>
      */
     public Boolean getEnableAutoscale() {
         return this.EnableAutoscale;
     }
 
     /**
-     * Set 是否开启伸缩
-     * @param EnableAutoscale 是否开启伸缩
+     * Set <p>是否开启伸缩</p>
+     * @param EnableAutoscale <p>是否开启伸缩</p>
      */
     public void setEnableAutoscale(Boolean EnableAutoscale) {
         this.EnableAutoscale = EnableAutoscale;
     }
 
     /**
-     * Get 操作系统名称 
-     * @return OsName 操作系统名称
+     * Get <p>操作系统名称</p> 
+     * @return OsName <p>操作系统名称</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set 操作系统名称
-     * @param OsName 操作系统名称
+     * Set <p>操作系统名称</p>
+     * @param OsName <p>操作系统名称</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值) 
-     * @return OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * Get <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p> 
+     * @return OsCustomizeType <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
     }
 
     /**
-     * Set 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-     * @param OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * Set <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
+     * @param OsCustomizeType <p>镜像版本，&quot;DOCKER_CUSTOMIZE&quot;(容器定制版),&quot;GENERAL&quot;(普通版本，默认值)</p>
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
     }
 
     /**
-     * Get GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性 
-     * @return GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     * Get <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p> 
+     * @return GPUArgs <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
      */
     public GPUArgs getGPUArgs() {
         return this.GPUArgs;
     }
 
     /**
-     * Set GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
-     * @param GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     * Set <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
+     * @param GPUArgs <p>GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性</p>
      */
     public void setGPUArgs(GPUArgs GPUArgs) {
         this.GPUArgs = GPUArgs;
     }
 
     /**
-     * Get base64编码后的自定义脚本 
-     * @return UserScript base64编码后的自定义脚本
+     * Get <p>base64编码后的自定义脚本</p> 
+     * @return UserScript <p>base64编码后的自定义脚本</p>
      */
     public String getUserScript() {
         return this.UserScript;
     }
 
     /**
-     * Set base64编码后的自定义脚本
-     * @param UserScript base64编码后的自定义脚本
+     * Set <p>base64编码后的自定义脚本</p>
+     * @param UserScript <p>base64编码后的自定义脚本</p>
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;
     }
 
     /**
-     * Get 更新label和taint时忽略存量节点 
-     * @return IgnoreExistedNode 更新label和taint时忽略存量节点
+     * Get <p>更新label和taint时忽略存量节点</p> 
+     * @return IgnoreExistedNode <p>更新label和taint时忽略存量节点</p>
      */
     public Boolean getIgnoreExistedNode() {
         return this.IgnoreExistedNode;
     }
 
     /**
-     * Set 更新label和taint时忽略存量节点
-     * @param IgnoreExistedNode 更新label和taint时忽略存量节点
+     * Set <p>更新label和taint时忽略存量节点</p>
+     * @param IgnoreExistedNode <p>更新label和taint时忽略存量节点</p>
      */
     public void setIgnoreExistedNode(Boolean IgnoreExistedNode) {
         this.IgnoreExistedNode = IgnoreExistedNode;
     }
 
     /**
-     * Get 节点自定义参数 
-     * @return ExtraArgs 节点自定义参数
+     * Get <p>节点自定义参数</p> 
+     * @return ExtraArgs <p>节点自定义参数</p>
      */
     public InstanceExtraArgs getExtraArgs() {
         return this.ExtraArgs;
     }
 
     /**
-     * Set 节点自定义参数
-     * @param ExtraArgs 节点自定义参数
+     * Set <p>节点自定义参数</p>
+     * @param ExtraArgs <p>节点自定义参数</p>
      */
     public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;
     }
 
     /**
-     * Get 资源标签 
-     * @return Tags 资源标签
+     * Get <p>资源标签</p> 
+     * @return Tags <p>资源标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 资源标签
-     * @param Tags 资源标签
+     * Set <p>资源标签</p>
+     * @param Tags <p>资源标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度. 
-     * @return Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * Get <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p> 
+     * @return Unschedulable <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
      */
     public Long getUnschedulable() {
         return this.Unschedulable;
     }
 
     /**
-     * Set 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
-     * @param Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * Set <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
+     * @param Unschedulable <p>设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.</p>
      */
     public void setUnschedulable(Long Unschedulable) {
         this.Unschedulable = Unschedulable;
     }
 
     /**
-     * Get 删除保护开关 
-     * @return DeletionProtection 删除保护开关
+     * Get <p>删除保护开关</p> 
+     * @return DeletionProtection <p>删除保护开关</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关
-     * @param DeletionProtection 删除保护开关
+     * Set <p>删除保护开关</p>
+     * @param DeletionProtection <p>删除保护开关</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get dockerd --graph 指定值, 默认为 /var/lib/docker 
-     * @return DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+     * Get <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p> 
+     * @return DockerGraphPath <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
      */
     public String getDockerGraphPath() {
         return this.DockerGraphPath;
     }
 
     /**
-     * Set dockerd --graph 指定值, 默认为 /var/lib/docker
-     * @param DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+     * Set <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
+     * @param DockerGraphPath <p>dockerd --graph 指定值, 默认为 /var/lib/docker</p>
      */
     public void setDockerGraphPath(String DockerGraphPath) {
         this.DockerGraphPath = DockerGraphPath;
     }
 
     /**
-     * Get base64编码后的自定义脚本 
-     * @return PreStartUserScript base64编码后的自定义脚本
+     * Get <p>base64编码后的自定义脚本</p> 
+     * @return PreStartUserScript <p>base64编码后的自定义脚本</p>
      */
     public String getPreStartUserScript() {
         return this.PreStartUserScript;
     }
 
     /**
-     * Set base64编码后的自定义脚本
-     * @param PreStartUserScript base64编码后的自定义脚本
+     * Set <p>base64编码后的自定义脚本</p>
+     * @param PreStartUserScript <p>base64编码后的自定义脚本</p>
      */
     public void setPreStartUserScript(String PreStartUserScript) {
         this.PreStartUserScript = PreStartUserScript;

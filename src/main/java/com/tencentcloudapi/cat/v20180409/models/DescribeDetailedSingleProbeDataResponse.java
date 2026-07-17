@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDetailedSingleProbeDataResponse extends AbstractModel {
 
     /**
-    * 单次详情数据
+    * <p>单次详情数据</p>
     */
     @SerializedName("DataSet")
     @Expose
     private DetailedSingleDataDefine [] DataSet;
 
     /**
-    * 符合条件的数据总数
+    * <p>符合条件的数据总数</p>
     */
     @SerializedName("TotalNumber")
     @Expose
     private Long TotalNumber;
 
     /**
-    * es scroll查询的id
+    * <p>es scroll查询的id</p>
     */
     @SerializedName("ScrollID")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeDetailedSingleProbeDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 单次详情数据 
-     * @return DataSet 单次详情数据
+     * Get <p>单次详情数据</p> 
+     * @return DataSet <p>单次详情数据</p>
      */
     public DetailedSingleDataDefine [] getDataSet() {
         return this.DataSet;
     }
 
     /**
-     * Set 单次详情数据
-     * @param DataSet 单次详情数据
+     * Set <p>单次详情数据</p>
+     * @param DataSet <p>单次详情数据</p>
      */
     public void setDataSet(DetailedSingleDataDefine [] DataSet) {
         this.DataSet = DataSet;
     }
 
     /**
-     * Get 符合条件的数据总数 
-     * @return TotalNumber 符合条件的数据总数
+     * Get <p>符合条件的数据总数</p> 
+     * @return TotalNumber <p>符合条件的数据总数</p>
      */
     public Long getTotalNumber() {
         return this.TotalNumber;
     }
 
     /**
-     * Set 符合条件的数据总数
-     * @param TotalNumber 符合条件的数据总数
+     * Set <p>符合条件的数据总数</p>
+     * @param TotalNumber <p>符合条件的数据总数</p>
      */
     public void setTotalNumber(Long TotalNumber) {
         this.TotalNumber = TotalNumber;
     }
 
     /**
-     * Get es scroll查询的id 
-     * @return ScrollID es scroll查询的id
+     * Get <p>es scroll查询的id</p> 
+     * @return ScrollID <p>es scroll查询的id</p>
      */
     public String getScrollID() {
         return this.ScrollID;
     }
 
     /**
-     * Set es scroll查询的id
-     * @param ScrollID es scroll查询的id
+     * Set <p>es scroll查询的id</p>
+     * @param ScrollID <p>es scroll查询的id</p>
      */
     public void setScrollID(String ScrollID) {
         this.ScrollID = ScrollID;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddVpcAcRuleResponse extends AbstractModel {
 
     /**
-    * 创建成功后返回新策略ID列表
+    * <p>创建成功后返回新策略ID列表</p>
     */
     @SerializedName("RuleUuids")
     @Expose
@@ -38,16 +38,16 @@ public class AddVpcAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建成功后返回新策略ID列表 
-     * @return RuleUuids 创建成功后返回新策略ID列表
+     * Get <p>创建成功后返回新策略ID列表</p> 
+     * @return RuleUuids <p>创建成功后返回新策略ID列表</p>
      */
     public Long [] getRuleUuids() {
         return this.RuleUuids;
     }
 
     /**
-     * Set 创建成功后返回新策略ID列表
-     * @param RuleUuids 创建成功后返回新策略ID列表
+     * Set <p>创建成功后返回新策略ID列表</p>
+     * @param RuleUuids <p>创建成功后返回新策略ID列表</p>
      */
     public void setRuleUuids(Long [] RuleUuids) {
         this.RuleUuids = RuleUuids;

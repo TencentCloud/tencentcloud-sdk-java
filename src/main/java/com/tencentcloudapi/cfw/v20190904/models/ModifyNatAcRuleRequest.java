@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ModifyNatAcRuleRequest extends AbstractModel {
 
     /**
-    * 需要编辑的规则数组,基于Uuid唯一id来修改该规则
+    * <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
     */
     @SerializedName("Rules")
     @Expose
     private CreateNatRuleItem [] Rules;
 
     /**
-     * Get 需要编辑的规则数组,基于Uuid唯一id来修改该规则 
-     * @return Rules 需要编辑的规则数组,基于Uuid唯一id来修改该规则
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+     * Get <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p> 
+     * @return Rules <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
      */
     public CreateNatRuleItem [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 需要编辑的规则数组,基于Uuid唯一id来修改该规则
-     * @param Rules 需要编辑的规则数组,基于Uuid唯一id来修改该规则
+     * Set <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
+     * @param Rules <p>需要编辑的规则数组,基于Uuid唯一id来修改该规则</p>
      */
     public void setRules(CreateNatRuleItem [] Rules) {
         this.Rules = Rules;
+    }
+
+    /**
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
     }
 
     public ModifyNatAcRuleRequest() {
@@ -60,6 +83,9 @@ public class ModifyNatAcRuleRequest extends AbstractModel {
                 this.Rules[i] = new CreateNatRuleItem(source.Rules[i]);
             }
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class ModifyNatAcRuleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
 
     }
 }

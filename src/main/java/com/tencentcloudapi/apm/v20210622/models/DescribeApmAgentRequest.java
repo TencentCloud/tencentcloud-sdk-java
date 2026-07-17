@@ -125,7 +125,9 @@ public class DescribeApmAgentRequest extends AbstractModel {
     /**
      * Get 上报方式，已弃用 
      * @return ReportMethod 上报方式，已弃用
+     * @deprecated
      */
+    @Deprecated
     public String getReportMethod() {
         return this.ReportMethod;
     }
@@ -133,7 +135,9 @@ public class DescribeApmAgentRequest extends AbstractModel {
     /**
      * Set 上报方式，已弃用
      * @param ReportMethod 上报方式，已弃用
+     * @deprecated
      */
+    @Deprecated
     public void setReportMethod(String ReportMethod) {
         this.ReportMethod = ReportMethod;
     }

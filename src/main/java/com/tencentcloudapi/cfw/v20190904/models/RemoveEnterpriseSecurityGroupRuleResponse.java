@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
-    * 删除成功后返回被删除策略的uuid
+    * <p>删除成功后返回被删除策略的uuid</p>
     */
     @SerializedName("RuleUuid")
     @Expose
     private Long RuleUuid;
 
     /**
-    * 0代表成功，-1代表失败
+    * <p>0代表成功，-1代表失败</p>
     */
     @SerializedName("Status")
     @Expose
@@ -45,32 +45,32 @@ public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除成功后返回被删除策略的uuid 
-     * @return RuleUuid 删除成功后返回被删除策略的uuid
+     * Get <p>删除成功后返回被删除策略的uuid</p> 
+     * @return RuleUuid <p>删除成功后返回被删除策略的uuid</p>
      */
     public Long getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 删除成功后返回被删除策略的uuid
-     * @param RuleUuid 删除成功后返回被删除策略的uuid
+     * Set <p>删除成功后返回被删除策略的uuid</p>
+     * @param RuleUuid <p>删除成功后返回被删除策略的uuid</p>
      */
     public void setRuleUuid(Long RuleUuid) {
         this.RuleUuid = RuleUuid;
     }
 
     /**
-     * Get 0代表成功，-1代表失败 
-     * @return Status 0代表成功，-1代表失败
+     * Get <p>0代表成功，-1代表失败</p> 
+     * @return Status <p>0代表成功，-1代表失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0代表成功，-1代表失败
-     * @param Status 0代表成功，-1代表失败
+     * Set <p>0代表成功，-1代表失败</p>
+     * @param Status <p>0代表成功，-1代表失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

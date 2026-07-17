@@ -39,7 +39,7 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     private TopologyEdgeNew [] Edges;
 
     /**
-    * <p>拓扑图是否有修改</p>
+    * <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopologyModifyFlag")
@@ -106,9 +106,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>拓扑图是否有修改</p>
+     * Get <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopologyModifyFlag <p>拓扑图是否有修改</p>
+     * @return TopologyModifyFlag <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopologyModifyFlag() {
@@ -116,9 +116,9 @@ public class DescribeTopologyNewResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>拓扑图是否有修改</p>
+     * Set <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopologyModifyFlag <p>拓扑图是否有修改</p>
+     * @param TopologyModifyFlag <p>拓扑图是否有修改</p><p>枚举值：</p><ul><li>0： 拓扑图未修改</li><li>1： 拓扑图已修改</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopologyModifyFlag(Long TopologyModifyFlag) {

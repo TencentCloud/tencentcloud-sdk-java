@@ -24,69 +24,92 @@ import java.util.HashMap;
 public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
 
     /**
-    * 非自定义类型规则列表
+    * <p>非自定义类型规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
     private BanAndAllowRule [] Rules;
 
     /**
-    * RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+    * <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-    * 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
     */
     @SerializedName("CoverDuplicate")
     @Expose
     private Long CoverDuplicate;
 
     /**
-     * Get 非自定义类型规则列表 
-     * @return Rules 非自定义类型规则列表
+     * Get <p>非自定义类型规则列表</p> 
+     * @return Rules <p>非自定义类型规则列表</p>
      */
     public BanAndAllowRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 非自定义类型规则列表
-     * @param Rules 非自定义类型规则列表
+     * Set <p>非自定义类型规则列表</p>
+     * @param Rules <p>非自定义类型规则列表</p>
      */
     public void setRules(BanAndAllowRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则 
-     * @return RuleType RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * Get <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p> 
+     * @return RuleType <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
-     * @param RuleType RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * Set <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+     * @param RuleType <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据 
-     * @return CoverDuplicate 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p> 
+     * @return CoverDuplicate <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
      */
     public Long getCoverDuplicate() {
         return this.CoverDuplicate;
     }
 
     /**
-     * Set 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
-     * @param CoverDuplicate 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+     * Set <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
+     * @param CoverDuplicate <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
      */
     public void setCoverDuplicate(Long CoverDuplicate) {
         this.CoverDuplicate = CoverDuplicate;
@@ -109,6 +132,9 @@ public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
         if (source.RuleType != null) {
             this.RuleType = new Long(source.RuleType);
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.CoverDuplicate != null) {
             this.CoverDuplicate = new Long(source.CoverDuplicate);
         }
@@ -121,6 +147,7 @@ public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
 
     }

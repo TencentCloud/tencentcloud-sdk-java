@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyApmServiceRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("ServiceID")
     @Expose
     private String ServiceID;
 
     /**
-    * 应用描述
+    * <p>应用描述</p>
     */
     @SerializedName("ServiceDescription")
     @Expose
     private String ServiceDescription;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-     * Get 应用ID 
-     * @return ServiceID 应用ID
+     * Get <p>应用ID</p> 
+     * @return ServiceID <p>应用ID</p>
      */
     public String getServiceID() {
         return this.ServiceID;
     }
 
     /**
-     * Set 应用ID
-     * @param ServiceID 应用ID
+     * Set <p>应用ID</p>
+     * @param ServiceID <p>应用ID</p>
      */
     public void setServiceID(String ServiceID) {
         this.ServiceID = ServiceID;
     }
 
     /**
-     * Get 应用描述 
-     * @return ServiceDescription 应用描述
+     * Get <p>应用描述</p> 
+     * @return ServiceDescription <p>应用描述</p>
      */
     public String getServiceDescription() {
         return this.ServiceDescription;
     }
 
     /**
-     * Set 应用描述
-     * @param ServiceDescription 应用描述
+     * Set <p>应用描述</p>
+     * @param ServiceDescription <p>应用描述</p>
      */
     public void setServiceDescription(String ServiceDescription) {
         this.ServiceDescription = ServiceDescription;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;

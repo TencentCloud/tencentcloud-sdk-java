@@ -24,128 +24,141 @@ import java.util.HashMap;
 public class DescribePrometheusAlertGroupsRequest extends AbstractModel {
 
     /**
-    * Prometheus 实例 ID
+    * <p>Prometheus 实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 返回数量，默认为 20，最大值为 100
+    * <p>返回数量，默认为 20，最大值为 100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为 0
+    * <p>偏移量，默认为 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
+    * <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 告警分组名称。
-查询名称中包含给定字符串的告警分组
+    * <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-     * Get Prometheus 实例 ID 
-     * @return InstanceId Prometheus 实例 ID
+    * <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+    */
+    @SerializedName("Labels")
+    @Expose
+    private PrometheusRuleKV [] Labels;
+
+    /**
+     * Get <p>Prometheus 实例 ID</p> 
+     * @return InstanceId <p>Prometheus 实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID
-     * @param InstanceId Prometheus 实例 ID
+     * Set <p>Prometheus 实例 ID</p>
+     * @param InstanceId <p>Prometheus 实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 返回数量，默认为 20，最大值为 100 
-     * @return Limit 返回数量，默认为 20，最大值为 100
+     * Get <p>返回数量，默认为 20，最大值为 100</p> 
+     * @return Limit <p>返回数量，默认为 20，最大值为 100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 20，最大值为 100
-     * @param Limit 返回数量，默认为 20，最大值为 100
+     * Set <p>返回数量，默认为 20，最大值为 100</p>
+     * @param Limit <p>返回数量，默认为 20，最大值为 100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为 0 
-     * @return Offset 偏移量，默认为 0
+     * Get <p>偏移量，默认为 0</p> 
+     * @return Offset <p>偏移量，默认为 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为 0
-     * @param Offset 偏移量，默认为 0
+     * Set <p>偏移量，默认为 0</p>
+     * @param Offset <p>偏移量，默认为 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组 
-     * @return GroupId 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
+     * Get <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p> 
+     * @return GroupId <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
-     * @param GroupId 告警分组ID，形如alert-xxxx。
-查询给定ID的告警分组
+     * Set <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
+     * @param GroupId <p>告警分组ID，形如alert-xxxx。<br>查询给定ID的告警分组</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 告警分组名称。
-查询名称中包含给定字符串的告警分组 
-     * @return GroupName 告警分组名称。
-查询名称中包含给定字符串的告警分组
+     * Get <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p> 
+     * @return GroupName <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 告警分组名称。
-查询名称中包含给定字符串的告警分组
-     * @param GroupName 告警分组名称。
-查询名称中包含给定字符串的告警分组
+     * Set <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
+     * @param GroupName <p>告警分组名称。<br>查询名称中包含给定字符串的告警分组</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
+    }
+
+    /**
+     * Get <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p> 
+     * @return Labels <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+     */
+    public PrometheusRuleKV [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+     * @param Labels <p>通过自定义label查询告警规则：<br>返回包含符合过滤条件告警规则的整个分组</p><p>多个label过滤条件取交集</p>
+     */
+    public void setLabels(PrometheusRuleKV [] Labels) {
+        this.Labels = Labels;
     }
 
     public DescribePrometheusAlertGroupsRequest() {
@@ -171,6 +184,12 @@ public class DescribePrometheusAlertGroupsRequest extends AbstractModel {
         if (source.GroupName != null) {
             this.GroupName = new String(source.GroupName);
         }
+        if (source.Labels != null) {
+            this.Labels = new PrometheusRuleKV[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new PrometheusRuleKV(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -183,6 +202,7 @@ public class DescribePrometheusAlertGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
 
     }
 }

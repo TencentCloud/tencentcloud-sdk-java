@@ -24,242 +24,207 @@ import java.util.HashMap;
 public class UpgradeClusterInstancesRequest extends AbstractModel {
 
     /**
-    * 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+    * <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
+    * <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
+    * <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-    * 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
+    * <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
+    * <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
     */
     @SerializedName("ResetParam")
     @Expose
     private UpgradeNodeResetParam ResetParam;
 
     /**
-    * 是否忽略节点升级前检查，默认值 false
+    * <p>是否忽略节点升级前检查，默认值 false</p>
     */
     @SerializedName("SkipPreCheck")
     @Expose
     private Boolean SkipPreCheck;
 
     /**
-    * 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+    * <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
     */
     @SerializedName("MaxNotReadyPercent")
     @Expose
     private Float MaxNotReadyPercent;
 
     /**
-    * 是否升级节点运行时，默认false不升级
+    * <p>是否升级节点运行时，默认false不升级</p>
     */
     @SerializedName("UpgradeRunTime")
     @Expose
     private Boolean UpgradeRunTime;
 
     /**
-    * 支持多个节点并行升级，默认值为 1，最大并行数为15
+    * <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
     */
     @SerializedName("Concurrent")
     @Expose
     private Long Concurrent;
 
     /**
-     * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
-     * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * Get <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p> 
+     * @return ClusterId <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
-     * @param ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * Set <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
+     * @param ClusterId <p>集群ID（请登录 <a href="https://console.cloud.tencent.com/tke2">TKE 控制台</a> 获取集群 ID ）</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务 
-     * @return Operation create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
+     * Get <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p> 
+     * @return Operation <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
-     * @param Operation create 表示开始一次升级任务
-pause 表示停止任务
-resume表示继续任务
-abort表示终止任务
+     * Set <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
+     * @param Operation <p>create 表示开始一次升级任务<br>pause 表示停止任务<br>resume表示继续任务<br>abort表示终止任务</p>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级 
-     * @return UpgradeType 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
+     * Get <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p> 
+     * @return UpgradeType <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
-     * @param UpgradeType 升级类型，只有Operation是create需要设置
-reset 大版本重装升级
-hot 小版本热升级
-major 大版本原地升级
+     * Set <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
+     * @param UpgradeType <p>升级类型，只有Operation是create需要设置<br>reset 大版本重装升级<br>hot 小版本热升级<br>major 大版本原地升级</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
     }
 
     /**
-     * Get 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取 
-     * @return InstanceIds 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
+     * Get <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p> 
+     * @return InstanceIds <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
-     * @param InstanceIds 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
-](https://cloud.tencent.com/document/api/457/50366) 获取
+     * Set <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
+     * @param InstanceIds <p>需要升级的节点列表，可以通过控制台或 <a href="https://cloud.tencent.com/document/api/457/50366">查询待升级节点接口</a> 获取</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 当节点重新加入集群时候所使用的参数，参考添加已有节点接口 
-     * @return ResetParam 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
+     * Get <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p> 
+     * @return ResetParam <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
      */
     public UpgradeNodeResetParam getResetParam() {
         return this.ResetParam;
     }
 
     /**
-     * Set 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
-     * @param ResetParam 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
+     * Set <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
+     * @param ResetParam <p>当节点重新加入集群时候所使用的参数，参考添加已有节点接口</p>
      */
     public void setResetParam(UpgradeNodeResetParam ResetParam) {
         this.ResetParam = ResetParam;
     }
 
     /**
-     * Get 是否忽略节点升级前检查，默认值 false 
-     * @return SkipPreCheck 是否忽略节点升级前检查，默认值 false
+     * Get <p>是否忽略节点升级前检查，默认值 false</p> 
+     * @return SkipPreCheck <p>是否忽略节点升级前检查，默认值 false</p>
      */
     public Boolean getSkipPreCheck() {
         return this.SkipPreCheck;
     }
 
     /**
-     * Set 是否忽略节点升级前检查，默认值 false
-     * @param SkipPreCheck 是否忽略节点升级前检查，默认值 false
+     * Set <p>是否忽略节点升级前检查，默认值 false</p>
+     * @param SkipPreCheck <p>是否忽略节点升级前检查，默认值 false</p>
      */
     public void setSkipPreCheck(Boolean SkipPreCheck) {
         this.SkipPreCheck = SkipPreCheck;
     }
 
     /**
-     * Get 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验 
-     * @return MaxNotReadyPercent 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+     * Get <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p> 
+     * @return MaxNotReadyPercent <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
      */
     public Float getMaxNotReadyPercent() {
         return this.MaxNotReadyPercent;
     }
 
     /**
-     * Set 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
-     * @param MaxNotReadyPercent 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+     * Set <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
+     * @param MaxNotReadyPercent <p>最大可容忍的不可用Pod百分比，如果设置 0 表示不做校验</p><p>取值范围：[0, 100]</p><p>默认值：20</p>
      */
     public void setMaxNotReadyPercent(Float MaxNotReadyPercent) {
         this.MaxNotReadyPercent = MaxNotReadyPercent;
     }
 
     /**
-     * Get 是否升级节点运行时，默认false不升级 
-     * @return UpgradeRunTime 是否升级节点运行时，默认false不升级
+     * Get <p>是否升级节点运行时，默认false不升级</p> 
+     * @return UpgradeRunTime <p>是否升级节点运行时，默认false不升级</p>
      */
     public Boolean getUpgradeRunTime() {
         return this.UpgradeRunTime;
     }
 
     /**
-     * Set 是否升级节点运行时，默认false不升级
-     * @param UpgradeRunTime 是否升级节点运行时，默认false不升级
+     * Set <p>是否升级节点运行时，默认false不升级</p>
+     * @param UpgradeRunTime <p>是否升级节点运行时，默认false不升级</p>
      */
     public void setUpgradeRunTime(Boolean UpgradeRunTime) {
         this.UpgradeRunTime = UpgradeRunTime;
     }
 
     /**
-     * Get 支持多个节点并行升级，默认值为 1，最大并行数为15 
-     * @return Concurrent 支持多个节点并行升级，默认值为 1，最大并行数为15
+     * Get <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p> 
+     * @return Concurrent <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set 支持多个节点并行升级，默认值为 1，最大并行数为15
-     * @param Concurrent 支持多个节点并行升级，默认值为 1，最大并行数为15
+     * Set <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
+     * @param Concurrent <p>支持多个节点并行升级，默认值为 1，最大并行数为15</p>
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddAclRuleResponse extends AbstractModel {
 
     /**
-    * 创建成功后返回新策略ID列表
+    * <p>创建成功后返回新策略ID列表</p>
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class AddAclRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建成功后返回新策略ID列表 
-     * @return RuleUuid 创建成功后返回新策略ID列表
+     * Get <p>创建成功后返回新策略ID列表</p> 
+     * @return RuleUuid <p>创建成功后返回新策略ID列表</p>
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 创建成功后返回新策略ID列表
-     * @param RuleUuid 创建成功后返回新策略ID列表
+     * Set <p>创建成功后返回新策略ID列表</p>
+     * @param RuleUuid <p>创建成功后返回新策略ID列表</p>
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

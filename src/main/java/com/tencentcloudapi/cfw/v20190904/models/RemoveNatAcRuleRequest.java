@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class RemoveNatAcRuleRequest extends AbstractModel {
 
     /**
-    * 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+    * <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
     */
     @SerializedName("RuleUuid")
     @Expose
     private Long [] RuleUuid;
 
     /**
-    * 规则方向：1，入站；0，出站
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+    * <p>规则方向：1，入站；0，出站</p>
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-     * Get 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则 
-     * @return RuleUuid 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * Get <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p> 
+     * @return RuleUuid <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
-     * @param RuleUuid 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * Set <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
+     * @param RuleUuid <p>规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则</p>
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;
     }
 
     /**
-     * Get 规则方向：1，入站；0，出站 
-     * @return Direction 规则方向：1，入站；0，出站
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Get <p>规则方向：1，入站；0，出站</p> 
+     * @return Direction <p>规则方向：1，入站；0，出站</p>
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 规则方向：1，入站；0，出站
-     * @param Direction 规则方向：1，入站；0，出站
+     * Set <p>规则方向：1，入站；0，出站</p>
+     * @param Direction <p>规则方向：1，入站；0，出站</p>
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
@@ -83,6 +106,9 @@ public class RemoveNatAcRuleRequest extends AbstractModel {
                 this.RuleUuid[i] = new Long(source.RuleUuid[i]);
             }
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
         if (source.Direction != null) {
             this.Direction = new Long(source.Direction);
         }
@@ -94,6 +120,7 @@ public class RemoveNatAcRuleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RuleUuid.", this.RuleUuid);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }

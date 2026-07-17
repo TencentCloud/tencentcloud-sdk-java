@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ModifyExternalNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点池ID
+    * <p>节点池ID</p>
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 节点池名称
+    * <p>节点池名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 注册节点标签
+    * <p>注册节点标签</p>
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 注册节点污点
+    * <p>注册节点污点</p>
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 删除保护开关
+    * <p>删除保护开关</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+    * <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
     */
     @SerializedName("UserScript")
     @Expose
     private String UserScript;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get <p>节点池ID</p> 
+     * @return NodePoolId <p>节点池ID</p>
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set <p>节点池ID</p>
+     * @param NodePoolId <p>节点池ID</p>
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 节点池名称 
-     * @return Name 节点池名称
+     * Get <p>节点池名称</p> 
+     * @return Name <p>节点池名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点池名称
-     * @param Name 节点池名称
+     * Set <p>节点池名称</p>
+     * @param Name <p>节点池名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 注册节点标签 
-     * @return Labels 注册节点标签
+     * Get <p>注册节点标签</p> 
+     * @return Labels <p>注册节点标签</p>
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 注册节点标签
-     * @param Labels 注册节点标签
+     * Set <p>注册节点标签</p>
+     * @param Labels <p>注册节点标签</p>
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 注册节点污点 
-     * @return Taints 注册节点污点
+     * Get <p>注册节点污点</p> 
+     * @return Taints <p>注册节点污点</p>
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 注册节点污点
-     * @param Taints 注册节点污点
+     * Set <p>注册节点污点</p>
+     * @param Taints <p>注册节点污点</p>
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 删除保护开关 
-     * @return DeletionProtection 删除保护开关
+     * Get <p>删除保护开关</p> 
+     * @return DeletionProtection <p>删除保护开关</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关
-     * @param DeletionProtection 删除保护开关
+     * Set <p>删除保护开关</p>
+     * @param DeletionProtection <p>删除保护开关</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看 
-     * @return UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * Get <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p> 
+     * @return UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     public String getUserScript() {
         return this.UserScript;
     }
 
     /**
-     * Set base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
-     * @param UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * Set <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
+     * @param UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;

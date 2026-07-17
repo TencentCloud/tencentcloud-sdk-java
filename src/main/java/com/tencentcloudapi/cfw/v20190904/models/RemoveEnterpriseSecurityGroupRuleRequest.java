@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class RemoveEnterpriseSecurityGroupRuleRequest extends AbstractModel {
 
     /**
-    * 规则的uuid，可通过查询规则列表获取
+    * <p>规则的uuid，可通过查询规则列表获取</p>
     */
     @SerializedName("RuleUuid")
     @Expose
     private Long RuleUuid;
 
     /**
-    * 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+    * <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
     */
     @SerializedName("RemoveType")
     @Expose
     private Long RemoveType;
 
     /**
-     * Get 规则的uuid，可通过查询规则列表获取 
-     * @return RuleUuid 规则的uuid，可通过查询规则列表获取
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    */
+    @SerializedName("CfwAiAgentOperationSource")
+    @Expose
+    private String CfwAiAgentOperationSource;
+
+    /**
+     * Get <p>规则的uuid，可通过查询规则列表获取</p> 
+     * @return RuleUuid <p>规则的uuid，可通过查询规则列表获取</p>
      */
     public Long getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 规则的uuid，可通过查询规则列表获取
-     * @param RuleUuid 规则的uuid，可通过查询规则列表获取
+     * Set <p>规则的uuid，可通过查询规则列表获取</p>
+     * @param RuleUuid <p>规则的uuid，可通过查询规则列表获取</p>
      */
     public void setRuleUuid(Long RuleUuid) {
         this.RuleUuid = RuleUuid;
     }
 
     /**
-     * Get 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可 
-     * @return RemoveType 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+     * Get <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p> 
+     * @return RemoveType <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
      */
     public Long getRemoveType() {
         return this.RemoveType;
     }
 
     /**
-     * Set 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
-     * @param RemoveType 删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可
+     * Set <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
+     * @param RemoveType <p>删除类型，0是单条删除，RuleUuid填写删除规则id，1为全部删除，RuleUuid填0即可</p>
      */
     public void setRemoveType(Long RemoveType) {
         this.RemoveType = RemoveType;
+    }
+
+    /**
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public String getCfwAiAgentOperationSource() {
+        return this.CfwAiAgentOperationSource;
+    }
+
+    /**
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     */
+    public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
+        this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
     }
 
     public RemoveEnterpriseSecurityGroupRuleRequest() {
@@ -83,6 +106,9 @@ public class RemoveEnterpriseSecurityGroupRuleRequest extends AbstractModel {
         if (source.RemoveType != null) {
             this.RemoveType = new Long(source.RemoveType);
         }
+        if (source.CfwAiAgentOperationSource != null) {
+            this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class RemoveEnterpriseSecurityGroupRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
         this.setParamSimple(map, prefix + "RemoveType", this.RemoveType);
+        this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
 
     }
 }
