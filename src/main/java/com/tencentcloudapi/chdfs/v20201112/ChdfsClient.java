@@ -116,6 +116,17 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *创建回收站配置。
+     * @param req CreateTrashConfigRequest
+     * @return CreateTrashConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrashConfigResponse CreateTrashConfig(CreateTrashConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrashConfig", CreateTrashConfigResponse.class);
+    }
+
+    /**
      *删除权限组。
      * @param req DeleteAccessGroupRequest
      * @return DeleteAccessGroupResponse
@@ -168,6 +179,17 @@ public class ChdfsClient extends AbstractClient{
     public DeleteMountPointResponse DeleteMountPoint(DeleteMountPointRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMountPoint", DeleteMountPointResponse.class);
+    }
+
+    /**
+     *删除回收站配置。
+     * @param req DeleteTrashConfigRequest
+     * @return DeleteTrashConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrashConfigResponse DeleteTrashConfig(DeleteTrashConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrashConfig", DeleteTrashConfigResponse.class);
     }
 
     /**
@@ -281,6 +303,17 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *通过文件系统ID查看回收站配置。
+     * @param req DescribeTrashConfigRequest
+     * @return DescribeTrashConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrashConfigResponse DescribeTrashConfig(DescribeTrashConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrashConfig", DescribeTrashConfigResponse.class);
+    }
+
+    /**
      *给挂载点解绑多个权限组。
      * @param req DisassociateAccessGroupsRequest
      * @return DisassociateAccessGroupsResponse
@@ -355,6 +388,17 @@ public class ChdfsClient extends AbstractClient{
     public ModifyResourceTagsResponse ModifyResourceTags(ModifyResourceTagsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyResourceTags", ModifyResourceTagsResponse.class);
+    }
+
+    /**
+     *修改回收站配置，需要指定回收站路径，数据保留时间、和状态。
+     * @param req ModifyTrashConfigRequest
+     * @return ModifyTrashConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTrashConfigResponse ModifyTrashConfig(ModifyTrashConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTrashConfig", ModifyTrashConfigResponse.class);
     }
 
 }

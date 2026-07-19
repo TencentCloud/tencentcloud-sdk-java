@@ -227,6 +227,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建 AiGC 文档生成视频任务
+     * @param req CreateDocToVideoTaskRequest
+     * @return CreateDocToVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDocToVideoTaskResponse CreateDocToVideoTask(CreateDocToVideoTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDocToVideoTask", CreateDocToVideoTaskResponse.class);
+    }
+
+    /**
      *创建用户自定义雪碧图模板，数量上限：16。
      * @param req CreateImageSpriteTemplateRequest
      * @return CreateImageSpriteTemplateResponse
@@ -1844,6 +1855,17 @@ public class MpsClient extends AbstractClient{
     public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EditMedia", EditMediaResponse.class);
+    }
+
+    /**
+     *模型embedding 接口
+     * @param req EmbeddingDataRequest
+     * @return EmbeddingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public EmbeddingDataResponse EmbeddingData(EmbeddingDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EmbeddingData", EmbeddingDataResponse.class);
     }
 
     /**

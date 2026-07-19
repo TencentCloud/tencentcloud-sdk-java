@@ -59,6 +59,13 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
     private Boolean AddressSame;
 
     /**
+    * <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>
+    */
+    @SerializedName("BizLicenseSame")
+    @Expose
+    private Boolean BizLicenseSame;
+
+    /**
      * Get <p>对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul></p> 
      * @return UniformSocialCreditCodeSame <p>对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul></p>
      */
@@ -138,6 +145,22 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
         this.AddressSame = AddressSame;
     }
 
+    /**
+     * Get <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p> 
+     * @return BizLicenseSame <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>
+     */
+    public Boolean getBizLicenseSame() {
+        return this.BizLicenseSame;
+    }
+
+    /**
+     * Set <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>
+     * @param BizLicenseSame <p>对方打开链接认证时，公司营业执照是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在公司营业执照（BusinessLicense）不为空时有效</p>
+     */
+    public void setBizLicenseSame(Boolean BizLicenseSame) {
+        this.BizLicenseSame = BizLicenseSame;
+    }
+
     public OrganizationAuthorizationOptions() {
     }
 
@@ -161,6 +184,9 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
         if (source.AddressSame != null) {
             this.AddressSame = new Boolean(source.AddressSame);
         }
+        if (source.BizLicenseSame != null) {
+            this.BizLicenseSame = new Boolean(source.BizLicenseSame);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
         this.setParamSimple(map, prefix + "LegalNameSame", this.LegalNameSame);
         this.setParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
         this.setParamSimple(map, prefix + "AddressSame", this.AddressSame);
+        this.setParamSimple(map, prefix + "BizLicenseSame", this.BizLicenseSame);
 
     }
 }

@@ -430,6 +430,13 @@ public class InstanceInfo extends AbstractModel {
     private Boolean HttpsEnabled;
 
     /**
+    * <p>集群磁盘加密配置</p>
+    */
+    @SerializedName("DiskEncryptInfo")
+    @Expose
+    private DiskEncryptInfo DiskEncryptInfo;
+
+    /**
      * Get <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p> 
      * @return InstanceId <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
      */
@@ -1357,6 +1364,22 @@ public class InstanceInfo extends AbstractModel {
         this.HttpsEnabled = HttpsEnabled;
     }
 
+    /**
+     * Get <p>集群磁盘加密配置</p> 
+     * @return DiskEncryptInfo <p>集群磁盘加密配置</p>
+     */
+    public DiskEncryptInfo getDiskEncryptInfo() {
+        return this.DiskEncryptInfo;
+    }
+
+    /**
+     * Set <p>集群磁盘加密配置</p>
+     * @param DiskEncryptInfo <p>集群磁盘加密配置</p>
+     */
+    public void setDiskEncryptInfo(DiskEncryptInfo DiskEncryptInfo) {
+        this.DiskEncryptInfo = DiskEncryptInfo;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1548,6 +1571,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.HttpsEnabled != null) {
             this.HttpsEnabled = new Boolean(source.HttpsEnabled);
         }
+        if (source.DiskEncryptInfo != null) {
+            this.DiskEncryptInfo = new DiskEncryptInfo(source.DiskEncryptInfo);
+        }
     }
 
 
@@ -1613,6 +1639,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "EnableConfigKeyValue", this.EnableConfigKeyValue);
         this.setParamSimple(map, prefix + "HttpsEnabled", this.HttpsEnabled);
+        this.setParamObj(map, prefix + "DiskEncryptInfo.", this.DiskEncryptInfo);
 
     }
 }

@@ -2549,6 +2549,21 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *Owner 取消对指定用户的设备分享：
+1. 校验产品 ACL / 子产品禁止 / 设备真实存在；
+2. 只读定位 Owner（必须已存在），并校验 Owner 持有该设备；
+3. 只读定位被取消分享用户（不存在视为已取消，幂等成功）；
+4. 删除分享关系记录（不存在视为已取消，幂等成功）。
+     * @param req RevokeShareDeviceFromUserRequest
+     * @return RevokeShareDeviceFromUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeShareDeviceFromUserResponse RevokeShareDeviceFromUser(RevokeShareDeviceFromUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokeShareDeviceFromUser", RevokeShareDeviceFromUserResponse.class);
+    }
+
+    /**
      *搜索位置空间
      * @param req SearchPositionSpaceRequest
      * @return SearchPositionSpaceResponse
@@ -2579,6 +2594,21 @@ public class IotexplorerClient extends AbstractClient{
     public SearchTopicRuleResponse SearchTopicRule(SearchTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchTopicRule", SearchTopicRuleResponse.class);
+    }
+
+    /**
+     *Owner 将其名下的设备分享给指定 App 用户：
+1. 校验产品 ACL / 子产品禁止 / 设备真实存在；
+2. 只读定位 Owner（必须已存在），并校验 Owner 确实持有该设备；
+3. 兜底创建被分享用户（已存在则复用，昵称不覆盖）；
+4. 写入分享关系（重复分享幂等成功，不修改原 CreateTime）。
+     * @param req ShareDeviceToUserRequest
+     * @return ShareDeviceToUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ShareDeviceToUserResponse ShareDeviceToUser(ShareDeviceToUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ShareDeviceToUser", ShareDeviceToUserResponse.class);
     }
 
     /**
