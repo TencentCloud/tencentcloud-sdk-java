@@ -311,6 +311,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String ClusterType;
 
     /**
+    * <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+    */
+    @SerializedName("DiskEncryption")
+    @Expose
+    private String DiskEncryption;
+
+    /**
     * <p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
     */
     @SerializedName("DestroyProtect")
@@ -981,6 +988,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p> 
+     * @return DiskEncryption <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+     */
+    public String getDiskEncryption() {
+        return this.DiskEncryption;
+    }
+
+    /**
+     * Set <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+     * @param DiskEncryption <p>是否对磁盘进行加密。仅云盘版实例支持该功能。 指定为 &quot;on&quot; 表示开启加密， 否则不加密。 购买只读实例、灾备实例、新克隆实例时该参数自动和主实例保持一致。</p>
+     */
+    public void setDiskEncryption(String DiskEncryption) {
+        this.DiskEncryption = DiskEncryption;
+    }
+
+    /**
      * Get <p>开启或关闭实例销毁保护。on-开启，off-关闭</p> 
      * @return DestroyProtect <p>开启或关闭实例销毁保护。on-开启，off-关闭</p>
      */
@@ -1161,6 +1184,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
+        if (source.DiskEncryption != null) {
+            this.DiskEncryption = new String(source.DiskEncryption);
+        }
         if (source.DestroyProtect != null) {
             this.DestroyProtect = new String(source.DestroyProtect);
         }
@@ -1215,6 +1241,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
         this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
 

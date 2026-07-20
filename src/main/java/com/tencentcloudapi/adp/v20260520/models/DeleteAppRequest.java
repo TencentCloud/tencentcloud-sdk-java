@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteAppRequest extends AbstractModel {
 
     /**
-    * app_id
+    * <p>app_id</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get app_id 
-     * @return AppId app_id
+    * <p>删除原因(非必填,审批时展示)</p>
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
+     * Get <p>app_id</p> 
+     * @return AppId <p>app_id</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set app_id
-     * @param AppId app_id
+     * Set <p>app_id</p>
+     * @param AppId <p>app_id</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>删除原因(非必填,审批时展示)</p> 
+     * @return Reason <p>删除原因(非必填,审批时展示)</p>
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set <p>删除原因(非必填,审批时展示)</p>
+     * @param Reason <p>删除原因(非必填,审批时展示)</p>
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
     }
 
     public DeleteAppRequest() {
@@ -57,6 +80,9 @@ public class DeleteAppRequest extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteAppRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

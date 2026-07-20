@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateNatFwDnatRuleRequest extends AbstractModel {
 
     /**
-    * 0：cfw新增模式，1：cfw接入模式。
+    * <p>0：cfw新增模式，1：cfw接入模式。</p>
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 防火墙实例id，该字段必须传递。
+    * <p>防火墙实例id，该字段必须传递。</p>
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-    * 添加或删除操作的Dnat规则列表。
+    * <p>添加或删除操作的Dnat规则列表。</p>
     */
     @SerializedName("DnatRules")
     @Expose
     private CfwNatDnatRule [] DnatRules;
 
     /**
-     * Get 0：cfw新增模式，1：cfw接入模式。 
-     * @return Mode 0：cfw新增模式，1：cfw接入模式。
+     * Get <p>0：cfw新增模式，1：cfw接入模式。</p> 
+     * @return Mode <p>0：cfw新增模式，1：cfw接入模式。</p>
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 0：cfw新增模式，1：cfw接入模式。
-     * @param Mode 0：cfw新增模式，1：cfw接入模式。
+     * Set <p>0：cfw新增模式，1：cfw接入模式。</p>
+     * @param Mode <p>0：cfw新增模式，1：cfw接入模式。</p>
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 防火墙实例id，该字段必须传递。 
-     * @return CfwInstance 防火墙实例id，该字段必须传递。
+     * Get <p>防火墙实例id，该字段必须传递。</p> 
+     * @return CfwInstance <p>防火墙实例id，该字段必须传递。</p>
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id，该字段必须传递。
-     * @param CfwInstance 防火墙实例id，该字段必须传递。
+     * Set <p>防火墙实例id，该字段必须传递。</p>
+     * @param CfwInstance <p>防火墙实例id，该字段必须传递。</p>
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;
     }
 
     /**
-     * Get 添加或删除操作的Dnat规则列表。 
-     * @return DnatRules 添加或删除操作的Dnat规则列表。
+     * Get <p>添加或删除操作的Dnat规则列表。</p> 
+     * @return DnatRules <p>添加或删除操作的Dnat规则列表。</p>
      */
     public CfwNatDnatRule [] getDnatRules() {
         return this.DnatRules;
     }
 
     /**
-     * Set 添加或删除操作的Dnat规则列表。
-     * @param DnatRules 添加或删除操作的Dnat规则列表。
+     * Set <p>添加或删除操作的Dnat规则列表。</p>
+     * @param DnatRules <p>添加或删除操作的Dnat规则列表。</p>
      */
     public void setDnatRules(CfwNatDnatRule [] DnatRules) {
         this.DnatRules = DnatRules;

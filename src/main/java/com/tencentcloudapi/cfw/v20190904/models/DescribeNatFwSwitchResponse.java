@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNatFwSwitchResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -32,7 +32,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * NAT边界防火墙开关列表数据
+    * <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -40,7 +40,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private NatSwitchListData [] Data;
 
     /**
-    * 开关相关VPC列表
+    * <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcList")
@@ -48,7 +48,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private CommonIdName [] VpcList;
 
     /**
-    * 开关相关NAT列表
+    * <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatList")
@@ -56,7 +56,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private CommonIdName [] NatList;
 
     /**
-    * 开关相关ROUTE列表
+    * <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteList")
@@ -64,7 +64,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private CommonIdName [] RouteList;
 
     /**
-    * 开启开关个数
+    * <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnNum")
@@ -72,7 +72,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private Long OnNum;
 
     /**
-    * 关闭开关个数
+    * <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffNum")
@@ -80,7 +80,7 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private Long OffNum;
 
     /**
-    * 失败开关状态
+    * <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailData")
@@ -95,9 +95,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
+     * Get <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总数
+     * @return Total <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -105,9 +105,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 总数
+     * Set <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总数
+     * @param Total <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -115,9 +115,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get NAT边界防火墙开关列表数据
+     * Get <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data NAT边界防火墙开关列表数据
+     * @return Data <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NatSwitchListData [] getData() {
@@ -125,9 +125,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set NAT边界防火墙开关列表数据
+     * Set <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data NAT边界防火墙开关列表数据
+     * @param Data <p>NAT边界防火墙开关列表数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(NatSwitchListData [] Data) {
@@ -135,9 +135,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get 开关相关VPC列表
+     * Get <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcList 开关相关VPC列表
+     * @return VpcList <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonIdName [] getVpcList() {
@@ -145,9 +145,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 开关相关VPC列表
+     * Set <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcList 开关相关VPC列表
+     * @param VpcList <p>开关相关VPC列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcList(CommonIdName [] VpcList) {
@@ -155,9 +155,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get 开关相关NAT列表
+     * Get <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NatList 开关相关NAT列表
+     * @return NatList <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonIdName [] getNatList() {
@@ -165,9 +165,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 开关相关NAT列表
+     * Set <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NatList 开关相关NAT列表
+     * @param NatList <p>开关相关NAT列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatList(CommonIdName [] NatList) {
@@ -175,9 +175,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get 开关相关ROUTE列表
+     * Get <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RouteList 开关相关ROUTE列表
+     * @return RouteList <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonIdName [] getRouteList() {
@@ -185,9 +185,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 开关相关ROUTE列表
+     * Set <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RouteList 开关相关ROUTE列表
+     * @param RouteList <p>开关相关ROUTE列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteList(CommonIdName [] RouteList) {
@@ -195,9 +195,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get 开启开关个数
+     * Get <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OnNum 开启开关个数
+     * @return OnNum <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOnNum() {
@@ -205,9 +205,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 开启开关个数
+     * Set <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OnNum 开启开关个数
+     * @param OnNum <p>开启开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnNum(Long OnNum) {
@@ -215,9 +215,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get 关闭开关个数
+     * Get <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OffNum 关闭开关个数
+     * @return OffNum <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffNum() {
@@ -225,9 +225,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 关闭开关个数
+     * Set <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OffNum 关闭开关个数
+     * @param OffNum <p>关闭开关个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffNum(Long OffNum) {
@@ -235,9 +235,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Get 失败开关状态
+     * Get <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailData 失败开关状态
+     * @return FailData <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonIdNameStatus [] getFailData() {
@@ -245,9 +245,9 @@ public class DescribeNatFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 失败开关状态
+     * Set <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailData 失败开关状态
+     * @param FailData <p>失败开关状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailData(CommonIdNameStatus [] FailData) {

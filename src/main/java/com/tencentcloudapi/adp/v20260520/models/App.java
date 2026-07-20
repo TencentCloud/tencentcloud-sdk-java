@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class App extends AbstractModel {
 
     /**
-    * 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+    * <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuxiliaryInfo")
@@ -32,7 +32,7 @@ public class App extends AbstractModel {
     private AppAuxiliaryInfo AuxiliaryInfo;
 
     /**
-    * 配置
+    * <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
@@ -40,7 +40,7 @@ public class App extends AbstractModel {
     private AppConfig Config;
 
     /**
-    * 元数据
+    * <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
@@ -48,7 +48,7 @@ public class App extends AbstractModel {
     private AppMetadata Metadata;
 
     /**
-    * 应用密钥信息
+    * <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretInfo")
@@ -56,7 +56,7 @@ public class App extends AbstractModel {
     private AppSecretInfo SecretInfo;
 
     /**
-    * 分享链接信息(含访问控制)
+    * <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareUrlInfo")
@@ -64,7 +64,7 @@ public class App extends AbstractModel {
     private AppShareURLInfo ShareUrlInfo;
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -72,16 +72,24 @@ public class App extends AbstractModel {
     private AppStatusInfo Status;
 
     /**
-    * 应用引用的共享知识库列表
+    * <p>应用引用的共享知识库列表</p>
     */
     @SerializedName("SharedKbList")
     @Expose
     private AppSharedKbInfo [] SharedKbList;
 
     /**
-     * Get 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+    * <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CorpShareConfig")
+    @Expose
+    private CorpShareConfig CorpShareConfig;
+
+    /**
+     * Get <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuxiliaryInfo 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+     * @return AuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppAuxiliaryInfo getAuxiliaryInfo() {
@@ -89,9 +97,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Set 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+     * Set <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuxiliaryInfo 辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)
+     * @param AuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuxiliaryInfo(AppAuxiliaryInfo AuxiliaryInfo) {
@@ -99,9 +107,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get 配置
+     * Get <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Config 配置
+     * @return Config <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppConfig getConfig() {
@@ -109,9 +117,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Set 配置
+     * Set <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Config 配置
+     * @param Config <p>配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(AppConfig Config) {
@@ -119,9 +127,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get 元数据
+     * Get <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metadata 元数据
+     * @return Metadata <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppMetadata getMetadata() {
@@ -129,9 +137,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Set 元数据
+     * Set <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metadata 元数据
+     * @param Metadata <p>元数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(AppMetadata Metadata) {
@@ -139,9 +147,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get 应用密钥信息
+     * Get <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretInfo 应用密钥信息
+     * @return SecretInfo <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppSecretInfo getSecretInfo() {
@@ -149,9 +157,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Set 应用密钥信息
+     * Set <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretInfo 应用密钥信息
+     * @param SecretInfo <p>应用密钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretInfo(AppSecretInfo SecretInfo) {
@@ -159,9 +167,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get 分享链接信息(含访问控制)
+     * Get <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShareUrlInfo 分享链接信息(含访问控制)
+     * @return ShareUrlInfo <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppShareURLInfo getShareUrlInfo() {
@@ -169,9 +177,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Set 分享链接信息(含访问控制)
+     * Set <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShareUrlInfo 分享链接信息(含访问控制)
+     * @param ShareUrlInfo <p>分享链接信息(含访问控制)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareUrlInfo(AppShareURLInfo ShareUrlInfo) {
@@ -179,9 +187,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppStatusInfo getStatus() {
@@ -189,9 +197,9 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(AppStatusInfo Status) {
@@ -199,19 +207,39 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get 应用引用的共享知识库列表 
-     * @return SharedKbList 应用引用的共享知识库列表
+     * Get <p>应用引用的共享知识库列表</p> 
+     * @return SharedKbList <p>应用引用的共享知识库列表</p>
      */
     public AppSharedKbInfo [] getSharedKbList() {
         return this.SharedKbList;
     }
 
     /**
-     * Set 应用引用的共享知识库列表
-     * @param SharedKbList 应用引用的共享知识库列表
+     * Set <p>应用引用的共享知识库列表</p>
+     * @param SharedKbList <p>应用引用的共享知识库列表</p>
      */
     public void setSharedKbList(AppSharedKbInfo [] SharedKbList) {
         this.SharedKbList = SharedKbList;
+    }
+
+    /**
+     * Get <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CorpShareConfig getCorpShareConfig() {
+        return this.CorpShareConfig;
+    }
+
+    /**
+     * Set <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCorpShareConfig(CorpShareConfig CorpShareConfig) {
+        this.CorpShareConfig = CorpShareConfig;
     }
 
     public App() {
@@ -246,6 +274,9 @@ public class App extends AbstractModel {
                 this.SharedKbList[i] = new AppSharedKbInfo(source.SharedKbList[i]);
             }
         }
+        if (source.CorpShareConfig != null) {
+            this.CorpShareConfig = new CorpShareConfig(source.CorpShareConfig);
+        }
     }
 
 
@@ -260,6 +291,7 @@ public class App extends AbstractModel {
         this.setParamObj(map, prefix + "ShareUrlInfo.", this.ShareUrlInfo);
         this.setParamObj(map, prefix + "Status.", this.Status);
         this.setParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
+        this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
 
     }
 }

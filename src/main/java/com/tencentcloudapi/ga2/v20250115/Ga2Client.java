@@ -94,6 +94,28 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *创建访问控制策略
+     * @param req CreateGlobalAcceleratorAclPolicyRequest
+     * @return CreateGlobalAcceleratorAclPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalAcceleratorAclPolicyResponse CreateGlobalAcceleratorAclPolicy(CreateGlobalAcceleratorAclPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalAcceleratorAclPolicy", CreateGlobalAcceleratorAclPolicyResponse.class);
+    }
+
+    /**
+     *创建ACL规则
+     * @param req CreateGlobalAcceleratorAclRuleRequest
+     * @return CreateGlobalAcceleratorAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalAcceleratorAclRuleResponse CreateGlobalAcceleratorAclRule(CreateGlobalAcceleratorAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalAcceleratorAclRule", CreateGlobalAcceleratorAclRuleResponse.class);
+    }
+
+    /**
      *创建监听器
      * @param req CreateListenerRequest
      * @return CreateListenerResponse
@@ -168,6 +190,28 @@ public class Ga2Client extends AbstractClient{
     public DeleteGlobalAcceleratorResponse DeleteGlobalAccelerator(DeleteGlobalAcceleratorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGlobalAccelerator", DeleteGlobalAcceleratorResponse.class);
+    }
+
+    /**
+     *删除访问控制策略
+     * @param req DeleteGlobalAcceleratorAclPolicyRequest
+     * @return DeleteGlobalAcceleratorAclPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalAcceleratorAclPolicyResponse DeleteGlobalAcceleratorAclPolicy(DeleteGlobalAcceleratorAclPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlobalAcceleratorAclPolicy", DeleteGlobalAcceleratorAclPolicyResponse.class);
+    }
+
+    /**
+     *删除ACL规则
+     * @param req DeleteGlobalAcceleratorAclRuleRequest
+     * @return DeleteGlobalAcceleratorAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalAcceleratorAclRuleResponse DeleteGlobalAcceleratorAclRule(DeleteGlobalAcceleratorAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlobalAcceleratorAclRule", DeleteGlobalAcceleratorAclRuleResponse.class);
     }
 
     /**
@@ -344,6 +388,28 @@ public class Ga2Client extends AbstractClient{
     public ModifyGlobalAcceleratorResponse ModifyGlobalAccelerator(ModifyGlobalAcceleratorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGlobalAccelerator", ModifyGlobalAcceleratorResponse.class);
+    }
+
+    /**
+     *修改访问控制策略状态
+     * @param req ModifyGlobalAcceleratorAclPolicyRequest
+     * @return ModifyGlobalAcceleratorAclPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalAcceleratorAclPolicyResponse ModifyGlobalAcceleratorAclPolicy(ModifyGlobalAcceleratorAclPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalAcceleratorAclPolicy", ModifyGlobalAcceleratorAclPolicyResponse.class);
+    }
+
+    /**
+     *修改ACL规则
+     * @param req ModifyGlobalAcceleratorAclRuleRequest
+     * @return ModifyGlobalAcceleratorAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalAcceleratorAclRuleResponse ModifyGlobalAcceleratorAclRule(ModifyGlobalAcceleratorAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalAcceleratorAclRule", ModifyGlobalAcceleratorAclRuleResponse.class);
     }
 
     /**

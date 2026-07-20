@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeFwSyncStatusRequest extends AbstractModel {
 
     /**
-    * 查询的同步状态类型：Route,同步路由状态
+    * <p>查询的同步状态类型：Route,同步路由状态</p>
     */
     @SerializedName("SyncType")
     @Expose
     private String SyncType;
 
     /**
-     * Get 查询的同步状态类型：Route,同步路由状态 
-     * @return SyncType 查询的同步状态类型：Route,同步路由状态
+     * Get <p>查询的同步状态类型：Route,同步路由状态</p> 
+     * @return SyncType <p>查询的同步状态类型：Route,同步路由状态</p>
      */
     public String getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * Set 查询的同步状态类型：Route,同步路由状态
-     * @param SyncType 查询的同步状态类型：Route,同步路由状态
+     * Set <p>查询的同步状态类型：Route,同步路由状态</p>
+     * @param SyncType <p>查询的同步状态类型：Route,同步路由状态</p>
      */
     public void setSyncType(String SyncType) {
         this.SyncType = SyncType;

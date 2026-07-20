@@ -24,209 +24,184 @@ import java.util.HashMap;
 public class CreateVpcFwGroupRequest extends AbstractModel {
 
     /**
-    * VPC防火墙(组)名称
+    * <p>VPC防火墙(组)名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
+    * <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 防火墙(组)下的防火墙实例列表
+    * <p>防火墙(组)下的防火墙实例列表</p>
     */
     @SerializedName("VpcFwInstances")
     @Expose
     private VpcFwInstance [] VpcFwInstances;
 
     /**
-    * 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
+    * <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
     */
     @SerializedName("SwitchMode")
     @Expose
     private Long SwitchMode;
 
     /**
-    * auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
+    * <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
     */
     @SerializedName("FwVpcCidr")
     @Expose
     private String FwVpcCidr;
 
     /**
-    * 云联网id ，适用于云联网模式
+    * <p>云联网id ，适用于云联网模式</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 指定防火墙使用网段信息
+    * <p>指定防火墙使用网段信息</p>
     */
     @SerializedName("FwCidrInfo")
     @Expose
     private FwCidrInfo FwCidrInfo;
 
     /**
-    * 跨租户管理员模式  1管理员 2多账号
+    * <p>跨租户管理员模式  1管理员 2多账号</p>
     */
     @SerializedName("CrossUserMode")
     @Expose
     private String CrossUserMode;
 
     /**
-     * Get VPC防火墙(组)名称 
-     * @return Name VPC防火墙(组)名称
+     * Get <p>VPC防火墙(组)名称</p> 
+     * @return Name <p>VPC防火墙(组)名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set VPC防火墙(组)名称
-     * @param Name VPC防火墙(组)名称
+     * Set <p>VPC防火墙(组)名称</p>
+     * @param Name <p>VPC防火墙(组)名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式) 
-     * @return Mode 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
+     * Get <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p> 
+     * @return Mode <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-     * @param Mode 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
+     * Set <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
+     * @param Mode <p>模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)</p>
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 防火墙(组)下的防火墙实例列表 
-     * @return VpcFwInstances 防火墙(组)下的防火墙实例列表
+     * Get <p>防火墙(组)下的防火墙实例列表</p> 
+     * @return VpcFwInstances <p>防火墙(组)下的防火墙实例列表</p>
      */
     public VpcFwInstance [] getVpcFwInstances() {
         return this.VpcFwInstances;
     }
 
     /**
-     * Set 防火墙(组)下的防火墙实例列表
-     * @param VpcFwInstances 防火墙(组)下的防火墙实例列表
+     * Set <p>防火墙(组)下的防火墙实例列表</p>
+     * @param VpcFwInstances <p>防火墙(组)下的防火墙实例列表</p>
      */
     public void setVpcFwInstances(VpcFwInstance [] VpcFwInstances) {
         this.VpcFwInstances = VpcFwInstances;
     }
 
     /**
-     * Get 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由 
-     * @return SwitchMode 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
+     * Get <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p> 
+     * @return SwitchMode <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
      */
     public Long getSwitchMode() {
         return this.SwitchMode;
     }
 
     /**
-     * Set 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
-     * @param SwitchMode 防火墙实例的开关模式
-1: 单点互通
-2: 多点互通
-3: 全互通
-4: 自定义路由
+     * Set <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
+     * @param SwitchMode <p>防火墙实例的开关模式<br>1: 单点互通<br>2: 多点互通<br>3: 全互通<br>4: 自定义路由</p>
      */
     public void setSwitchMode(Long SwitchMode) {
         this.SwitchMode = SwitchMode;
     }
 
     /**
-     * Get auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段 
-     * @return FwVpcCidr auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
+     * Get <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p> 
+     * @return FwVpcCidr <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
      */
     public String getFwVpcCidr() {
         return this.FwVpcCidr;
     }
 
     /**
-     * Set auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
-     * @param FwVpcCidr auto 自动选择防火墙网段
-10.10.10.0/24 用户输入的防火墙网段
+     * Set <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
+     * @param FwVpcCidr <p>auto 自动选择防火墙网段<br>10.10.10.0/24 用户输入的防火墙网段</p>
      */
     public void setFwVpcCidr(String FwVpcCidr) {
         this.FwVpcCidr = FwVpcCidr;
     }
 
     /**
-     * Get 云联网id ，适用于云联网模式 
-     * @return CcnId 云联网id ，适用于云联网模式
+     * Get <p>云联网id ，适用于云联网模式</p> 
+     * @return CcnId <p>云联网id ，适用于云联网模式</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网id ，适用于云联网模式
-     * @param CcnId 云联网id ，适用于云联网模式
+     * Set <p>云联网id ，适用于云联网模式</p>
+     * @param CcnId <p>云联网id ，适用于云联网模式</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 指定防火墙使用网段信息 
-     * @return FwCidrInfo 指定防火墙使用网段信息
+     * Get <p>指定防火墙使用网段信息</p> 
+     * @return FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public FwCidrInfo getFwCidrInfo() {
         return this.FwCidrInfo;
     }
 
     /**
-     * Set 指定防火墙使用网段信息
-     * @param FwCidrInfo 指定防火墙使用网段信息
+     * Set <p>指定防火墙使用网段信息</p>
+     * @param FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
         this.FwCidrInfo = FwCidrInfo;
     }
 
     /**
-     * Get 跨租户管理员模式  1管理员 2多账号 
-     * @return CrossUserMode 跨租户管理员模式  1管理员 2多账号
+     * Get <p>跨租户管理员模式  1管理员 2多账号</p> 
+     * @return CrossUserMode <p>跨租户管理员模式  1管理员 2多账号</p>
      */
     public String getCrossUserMode() {
         return this.CrossUserMode;
     }
 
     /**
-     * Set 跨租户管理员模式  1管理员 2多账号
-     * @param CrossUserMode 跨租户管理员模式  1管理员 2多账号
+     * Set <p>跨租户管理员模式  1管理员 2多账号</p>
+     * @param CrossUserMode <p>跨租户管理员模式  1管理员 2多账号</p>
      */
     public void setCrossUserMode(String CrossUserMode) {
         this.CrossUserMode = CrossUserMode;

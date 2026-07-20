@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyClusterVpcFwSwitchRequest extends AbstractModel {
 
     /**
-    * 开关，0：关闭，1：开启
+    * <p>开关，0：关闭，1：开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 集群模式vpc间防火墙ccn开关信息
+    * <p>集群模式vpc间防火墙ccn开关信息</p>
     */
     @SerializedName("CcnSwitch")
     @Expose
     private CcnSwitchInfo [] CcnSwitch;
 
     /**
-     * Get 开关，0：关闭，1：开启 
-     * @return Enable 开关，0：关闭，1：开启
+     * Get <p>开关，0：关闭，1：开启</p> 
+     * @return Enable <p>开关，0：关闭，1：开启</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 开关，0：关闭，1：开启
-     * @param Enable 开关，0：关闭，1：开启
+     * Set <p>开关，0：关闭，1：开启</p>
+     * @param Enable <p>开关，0：关闭，1：开启</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 集群模式vpc间防火墙ccn开关信息 
-     * @return CcnSwitch 集群模式vpc间防火墙ccn开关信息
+     * Get <p>集群模式vpc间防火墙ccn开关信息</p> 
+     * @return CcnSwitch <p>集群模式vpc间防火墙ccn开关信息</p>
      */
     public CcnSwitchInfo [] getCcnSwitch() {
         return this.CcnSwitch;
     }
 
     /**
-     * Set 集群模式vpc间防火墙ccn开关信息
-     * @param CcnSwitch 集群模式vpc间防火墙ccn开关信息
+     * Set <p>集群模式vpc间防火墙ccn开关信息</p>
+     * @param CcnSwitch <p>集群模式vpc间防火墙ccn开关信息</p>
      */
     public void setCcnSwitch(CcnSwitchInfo [] CcnSwitch) {
         this.CcnSwitch = CcnSwitch;

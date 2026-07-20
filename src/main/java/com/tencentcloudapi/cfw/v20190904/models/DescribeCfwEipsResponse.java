@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCfwEipsResponse extends AbstractModel {
 
     /**
-    * 返回值信息
+    * <p>返回值信息</p>
     */
     @SerializedName("NatFwEipList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCfwEipsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回值信息 
-     * @return NatFwEipList 返回值信息
+     * Get <p>返回值信息</p> 
+     * @return NatFwEipList <p>返回值信息</p>
      */
     public NatFwEipsInfo [] getNatFwEipList() {
         return this.NatFwEipList;
     }
 
     /**
-     * Set 返回值信息
-     * @param NatFwEipList 返回值信息
+     * Set <p>返回值信息</p>
+     * @param NatFwEipList <p>返回值信息</p>
      */
     public void setNatFwEipList(NatFwEipsInfo [] NatFwEipList) {
         this.NatFwEipList = NatFwEipList;

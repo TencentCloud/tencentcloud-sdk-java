@@ -38,7 +38,7 @@ public class Voice extends AbstractModel {
     private Float Speed;
 
     /**
-    * <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
+    * <p>音量调节，默认1.0，10 为最大音量，建议保持默认值 1.0，区间：(0, 10]</p>
     */
     @SerializedName("Volume")
     @Expose
@@ -91,16 +91,16 @@ public class Voice extends AbstractModel {
     }
 
     /**
-     * Get <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p> 
-     * @return Volume <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
+     * Get <p>音量调节，默认1.0，10 为最大音量，建议保持默认值 1.0，区间：(0, 10]</p> 
+     * @return Volume <p>音量调节，默认1.0，10 为最大音量，建议保持默认值 1.0，区间：(0, 10]</p>
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
-     * @param Volume <p>音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0</p>
+     * Set <p>音量调节，默认1.0，10 为最大音量，建议保持默认值 1.0，区间：(0, 10]</p>
+     * @param Volume <p>音量调节，默认1.0，10 为最大音量，建议保持默认值 1.0，区间：(0, 10]</p>
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCcnInstanceRegionStatusRequest extends AbstractModel {
 
     /**
-    * 云联网ID
+    * <p>云联网ID</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 要查询引流网络部署状态的云联网关联的实例ID列表
+    * <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 引流路由方法 0:多路由表, 1:策略路由
+    * <p>引流路由方法 0:多路由表, 1:策略路由</p>
     */
     @SerializedName("RoutingMode")
     @Expose
     private Long RoutingMode;
 
     /**
-     * Get 云联网ID 
-     * @return CcnId 云联网ID
+     * Get <p>云联网ID</p> 
+     * @return CcnId <p>云联网ID</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网ID
-     * @param CcnId 云联网ID
+     * Set <p>云联网ID</p>
+     * @param CcnId <p>云联网ID</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 要查询引流网络部署状态的云联网关联的实例ID列表 
-     * @return InstanceIds 要查询引流网络部署状态的云联网关联的实例ID列表
+     * Get <p>要查询引流网络部署状态的云联网关联的实例ID列表</p> 
+     * @return InstanceIds <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 要查询引流网络部署状态的云联网关联的实例ID列表
-     * @param InstanceIds 要查询引流网络部署状态的云联网关联的实例ID列表
+     * Set <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
+     * @param InstanceIds <p>要查询引流网络部署状态的云联网关联的实例ID列表</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 引流路由方法 0:多路由表, 1:策略路由 
-     * @return RoutingMode 引流路由方法 0:多路由表, 1:策略路由
+     * Get <p>引流路由方法 0:多路由表, 1:策略路由</p> 
+     * @return RoutingMode <p>引流路由方法 0:多路由表, 1:策略路由</p>
      */
     public Long getRoutingMode() {
         return this.RoutingMode;
     }
 
     /**
-     * Set 引流路由方法 0:多路由表, 1:策略路由
-     * @param RoutingMode 引流路由方法 0:多路由表, 1:策略路由
+     * Set <p>引流路由方法 0:多路由表, 1:策略路由</p>
+     * @param RoutingMode <p>引流路由方法 0:多路由表, 1:策略路由</p>
      */
     public void setRoutingMode(Long RoutingMode) {
         this.RoutingMode = RoutingMode;

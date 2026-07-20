@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloseClusterNatFwSwitchRequest extends AbstractModel {
 
     /**
-    * NAT防火墙实例ID
+    * <p>NAT防火墙实例ID</p>
     */
     @SerializedName("NatInsId")
     @Expose
     private String NatInsId;
 
     /**
-    * 云联网实例ID
+    * <p>云联网实例ID</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-     * Get NAT防火墙实例ID 
-     * @return NatInsId NAT防火墙实例ID
+     * Get <p>NAT防火墙实例ID</p> 
+     * @return NatInsId <p>NAT防火墙实例ID</p>
      */
     public String getNatInsId() {
         return this.NatInsId;
     }
 
     /**
-     * Set NAT防火墙实例ID
-     * @param NatInsId NAT防火墙实例ID
+     * Set <p>NAT防火墙实例ID</p>
+     * @param NatInsId <p>NAT防火墙实例ID</p>
      */
     public void setNatInsId(String NatInsId) {
         this.NatInsId = NatInsId;
     }
 
     /**
-     * Get 云联网实例ID 
-     * @return CcnId 云联网实例ID
+     * Get <p>云联网实例ID</p> 
+     * @return CcnId <p>云联网实例ID</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网实例ID
-     * @param CcnId 云联网实例ID
+     * Set <p>云联网实例ID</p>
+     * @param CcnId <p>云联网实例ID</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;

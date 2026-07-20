@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCfwAnalysisDataResponse extends AbstractModel {
 
     /**
-    * <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
+    * 查询结果。Response.Data 是 UTF-8 JSON object 字符串，调用方需要二次 JSON 解析。status 取值为 success、partial 或 error。section 查询失败时，error 只返回固定安全摘要，不包含底层服务内部信息。示例仅展示一个代表性 section；实际返回包含当前场景全部未跳过的 section；summary 包含 total_findings、high_risk_count 和 data_coverage，metadata 包含 scenario、time_range、object 和 query_stats，query_stats 包含 total_queries、successful 和 failed。
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCfwAnalysisDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p> 
-     * @return Data <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
+     * Get 查询结果。Response.Data 是 UTF-8 JSON object 字符串，调用方需要二次 JSON 解析。status 取值为 success、partial 或 error。section 查询失败时，error 只返回固定安全摘要，不包含底层服务内部信息。示例仅展示一个代表性 section；实际返回包含当前场景全部未跳过的 section；summary 包含 total_findings、high_risk_count 和 data_coverage，metadata 包含 scenario、time_range、object 和 query_stats，query_stats 包含 total_queries、successful 和 failed。 
+     * @return Data 查询结果。Response.Data 是 UTF-8 JSON object 字符串，调用方需要二次 JSON 解析。status 取值为 success、partial 或 error。section 查询失败时，error 只返回固定安全摘要，不包含底层服务内部信息。示例仅展示一个代表性 section；实际返回包含当前场景全部未跳过的 section；summary 包含 total_findings、high_risk_count 和 data_coverage，metadata 包含 scenario、time_range、object 和 query_stats，query_stats 包含 total_queries、successful 和 failed。
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
-     * @param Data <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
+     * Set 查询结果。Response.Data 是 UTF-8 JSON object 字符串，调用方需要二次 JSON 解析。status 取值为 success、partial 或 error。section 查询失败时，error 只返回固定安全摘要，不包含底层服务内部信息。示例仅展示一个代表性 section；实际返回包含当前场景全部未跳过的 section；summary 包含 total_findings、high_risk_count 和 data_coverage，metadata 包含 scenario、time_range、object 和 query_stats，query_stats 包含 total_queries、successful 和 failed。
+     * @param Data 查询结果。Response.Data 是 UTF-8 JSON object 字符串，调用方需要二次 JSON 解析。status 取值为 success、partial 或 error。section 查询失败时，error 只返回固定安全摘要，不包含底层服务内部信息。示例仅展示一个代表性 section；实际返回包含当前场景全部未跳过的 section；summary 包含 total_findings、high_risk_count 和 data_coverage，metadata 包含 scenario、time_range、object 和 query_stats，query_stats 包含 total_queries、successful 和 failed。
      */
     public void setData(String Data) {
         this.Data = Data;

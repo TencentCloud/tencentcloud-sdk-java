@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SetNatFwEipRequest extends AbstractModel {
 
     /**
-    * bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
+    * <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-    * 防火墙实例id
+    * <p>防火墙实例id</p>
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-    * 当OperationType 为bind或unbind操作时，使用该字段。
+    * <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
     */
     @SerializedName("EipList")
     @Expose
     private String [] EipList;
 
     /**
-     * Get bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip 
-     * @return OperationType bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
+     * Get <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p> 
+     * @return OperationType <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
-     * @param OperationType bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip
+     * Set <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
+     * @param OperationType <p>bind：绑定eip；unbind：解绑eip；newAdd：新增防火墙弹性公网ip</p>
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInstance 防火墙实例id
+     * Get <p>防火墙实例id</p> 
+     * @return CfwInstance <p>防火墙实例id</p>
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInstance 防火墙实例id
+     * Set <p>防火墙实例id</p>
+     * @param CfwInstance <p>防火墙实例id</p>
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;
     }
 
     /**
-     * Get 当OperationType 为bind或unbind操作时，使用该字段。 
-     * @return EipList 当OperationType 为bind或unbind操作时，使用该字段。
+     * Get <p>当OperationType 为bind或unbind操作时，使用该字段。</p> 
+     * @return EipList <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
      */
     public String [] getEipList() {
         return this.EipList;
     }
 
     /**
-     * Set 当OperationType 为bind或unbind操作时，使用该字段。
-     * @param EipList 当OperationType 为bind或unbind操作时，使用该字段。
+     * Set <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
+     * @param EipList <p>当OperationType 为bind或unbind操作时，使用该字段。</p>
      */
     public void setEipList(String [] EipList) {
         this.EipList = EipList;

@@ -270,6 +270,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查看企业下的员工列表
+     * @param req DescribeAccountListRequest
+     * @return DescribeAccountListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountListResponse DescribeAccountList(DescribeAccountListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountList", DescribeAccountListResponse.class);
+    }
+
+    /**
      *查询 Agent 详情
      * @param req DescribeAgentDetailRequest
      * @return DescribeAgentDetailResponse
@@ -322,6 +333,28 @@ public class AdpClient extends AbstractClient{
     public DescribeAppSummaryListResponse DescribeAppSummaryList(DescribeAppSummaryListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAppSummaryList", DescribeAppSummaryListResponse.class);
+    }
+
+    /**
+     *查看操作日志列表
+     * @param req DescribeAuditLogListRequest
+     * @return DescribeAuditLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogListResponse DescribeAuditLogList(DescribeAuditLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogList", DescribeAuditLogListResponse.class);
+    }
+
+    /**
+     *获取审计日志元信息
+     * @param req DescribeAuditLogMetaRequest
+     * @return DescribeAuditLogMetaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogMetaResponse DescribeAuditLogMeta(DescribeAuditLogMetaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogMeta", DescribeAuditLogMetaResponse.class);
     }
 
     /**

@@ -32,6 +32,22 @@ public class ClawAgentConfig extends AbstractModel {
     private ClawAgentCustomConfig CustomConfig;
 
     /**
+    * Agent团队协作配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentTeamConfig")
+    @Expose
+    private ClawAgentAgentTeamConfig AgentTeamConfig;
+
+    /**
+    * 长期记忆配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LongMemoryConfig")
+    @Expose
+    private ClawAgentLongMemoryConfig LongMemoryConfig;
+
+    /**
      * Get 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomConfig 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
@@ -51,6 +67,46 @@ public class ClawAgentConfig extends AbstractModel {
         this.CustomConfig = CustomConfig;
     }
 
+    /**
+     * Get Agent团队协作配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentTeamConfig Agent团队协作配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClawAgentAgentTeamConfig getAgentTeamConfig() {
+        return this.AgentTeamConfig;
+    }
+
+    /**
+     * Set Agent团队协作配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentTeamConfig Agent团队协作配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentTeamConfig(ClawAgentAgentTeamConfig AgentTeamConfig) {
+        this.AgentTeamConfig = AgentTeamConfig;
+    }
+
+    /**
+     * Get 长期记忆配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LongMemoryConfig 长期记忆配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClawAgentLongMemoryConfig getLongMemoryConfig() {
+        return this.LongMemoryConfig;
+    }
+
+    /**
+     * Set 长期记忆配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LongMemoryConfig 长期记忆配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLongMemoryConfig(ClawAgentLongMemoryConfig LongMemoryConfig) {
+        this.LongMemoryConfig = LongMemoryConfig;
+    }
+
     public ClawAgentConfig() {
     }
 
@@ -62,6 +118,12 @@ public class ClawAgentConfig extends AbstractModel {
         if (source.CustomConfig != null) {
             this.CustomConfig = new ClawAgentCustomConfig(source.CustomConfig);
         }
+        if (source.AgentTeamConfig != null) {
+            this.AgentTeamConfig = new ClawAgentAgentTeamConfig(source.AgentTeamConfig);
+        }
+        if (source.LongMemoryConfig != null) {
+            this.LongMemoryConfig = new ClawAgentLongMemoryConfig(source.LongMemoryConfig);
+        }
     }
 
 
@@ -70,6 +132,8 @@ public class ClawAgentConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CustomConfig.", this.CustomConfig);
+        this.setParamObj(map, prefix + "AgentTeamConfig.", this.AgentTeamConfig);
+        this.setParamObj(map, prefix + "LongMemoryConfig.", this.LongMemoryConfig);
 
     }
 }

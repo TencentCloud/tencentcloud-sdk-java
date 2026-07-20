@@ -24,26 +24,21 @@ import java.util.HashMap;
 public class ModifyAssetSyncResponse extends AbstractModel {
 
     /**
-    * 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
+    * <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * success 成功
-其他失败
+    * <p>success 成功<br>其他失败</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 0 成功
-非0 失败
+    * <p>0 成功<br>非0 失败</p>
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -57,68 +52,48 @@ public class ModifyAssetSyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制 
-     * @return Status 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
+     * Get <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p> 
+     * @return Status <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
-     * @param Status 返回状态
-0 请求成功
-2 请求失败
-3 请求失败-频率限制
+     * Set <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
+     * @param Status <p>返回状态<br>0 请求成功<br>2 请求失败<br>3 请求失败-频率限制</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get success 成功
-其他失败 
-     * @return ReturnMsg success 成功
-其他失败
+     * Get <p>success 成功<br>其他失败</p> 
+     * @return ReturnMsg <p>success 成功<br>其他失败</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set success 成功
-其他失败
-     * @param ReturnMsg success 成功
-其他失败
+     * Set <p>success 成功<br>其他失败</p>
+     * @param ReturnMsg <p>success 成功<br>其他失败</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 0 成功
-非0 失败 
-     * @return ReturnCode 0 成功
-非0 失败
+     * Get <p>0 成功<br>非0 失败</p> 
+     * @return ReturnCode <p>0 成功<br>非0 失败</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 0 成功
-非0 失败
-     * @param ReturnCode 0 成功
-非0 失败
+     * Set <p>0 成功<br>非0 失败</p>
+     * @param ReturnCode <p>0 成功<br>非0 失败</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

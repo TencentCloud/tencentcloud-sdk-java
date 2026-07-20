@@ -270,6 +270,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *查询聊天支持模型信息
+     * @param req QueryModelsRequest
+     * @return QueryModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryModelsResponse QueryModels(QueryModelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryModels", QueryModelsResponse.class);
+    }
+
+    /**
      *查询场景列表
      * @param req QuerySceneListRequest
      * @return QuerySceneListResponse

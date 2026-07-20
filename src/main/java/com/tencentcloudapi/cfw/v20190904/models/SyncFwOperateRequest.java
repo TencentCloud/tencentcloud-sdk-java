@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SyncFwOperateRequest extends AbstractModel {
 
     /**
-    * 同步操作类型：Route，同步防火墙路由
+    * <p>同步操作类型：Route，同步防火墙路由</p>
     */
     @SerializedName("SyncType")
     @Expose
     private String SyncType;
 
     /**
-    * 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+    * <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-     * Get 同步操作类型：Route，同步防火墙路由 
-     * @return SyncType 同步操作类型：Route，同步防火墙路由
+     * Get <p>同步操作类型：Route，同步防火墙路由</p> 
+     * @return SyncType <p>同步操作类型：Route，同步防火墙路由</p>
      */
     public String getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * Set 同步操作类型：Route，同步防火墙路由
-     * @param SyncType 同步操作类型：Route，同步防火墙路由
+     * Set <p>同步操作类型：Route，同步防火墙路由</p>
+     * @param SyncType <p>同步操作类型：Route，同步防火墙路由</p>
      */
     public void setSyncType(String SyncType) {
         this.SyncType = SyncType;
     }
 
     /**
-     * Get 防火墙类型；nat,nat防火墙;ew,vpc间防火墙 
-     * @return FwType 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+     * Get <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p> 
+     * @return FwType <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
-     * @param FwType 防火墙类型；nat,nat防火墙;ew,vpc间防火墙
+     * Set <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
+     * @param FwType <p>防火墙类型；nat,nat防火墙;ew,vpc间防火墙</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;

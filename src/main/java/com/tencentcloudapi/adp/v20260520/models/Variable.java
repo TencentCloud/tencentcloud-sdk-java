@@ -24,164 +24,210 @@ import java.util.HashMap;
 public class Variable extends AbstractModel {
 
     /**
-    * 默认文件名称
+    * <p>默认文件名称</p>
     */
     @SerializedName("DefaultFileName")
     @Expose
     private String DefaultFileName;
 
     /**
-    * 默认值
+    * <p>默认值</p>
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 变量描述
+    * <p>变量描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数
+    * <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
     */
     @SerializedName("ModuleType")
     @Expose
     private Long ModuleType;
 
     /**
-    * 变量名称
+    * <p>变量名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 变量类型。枚举值: 1:字符串, 2:整数, 3:浮点数, 4:布尔值, 5:对象, 6:字符串数组, 7:整数数组, 8:浮点数数组, 9:布尔值数组, 10:对象数组, 11:文件, 12:文档, 13:图片, 14:音频, 15:视频, 16:文件数组, 17:文档数组, 18:图片数组, 19:音频数组, 20:视频数组, 21:数组的数组, 22:密钥/敏感信息, 99:空值
+    * <p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 变量ID
+    * <p>变量ID</p>
     */
     @SerializedName("VariableId")
     @Expose
     private String VariableId;
 
     /**
-     * Get 默认文件名称 
-     * @return DefaultFileName 默认文件名称
+    * <p>是否启用网络策略(仅环境变量生效)</p>
+    */
+    @SerializedName("EnableEndpoints")
+    @Expose
+    private Boolean EnableEndpoints;
+
+    /**
+    * <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
+    */
+    @SerializedName("EndpointList")
+    @Expose
+    private String [] EndpointList;
+
+    /**
+     * Get <p>默认文件名称</p> 
+     * @return DefaultFileName <p>默认文件名称</p>
      */
     public String getDefaultFileName() {
         return this.DefaultFileName;
     }
 
     /**
-     * Set 默认文件名称
-     * @param DefaultFileName 默认文件名称
+     * Set <p>默认文件名称</p>
+     * @param DefaultFileName <p>默认文件名称</p>
      */
     public void setDefaultFileName(String DefaultFileName) {
         this.DefaultFileName = DefaultFileName;
     }
 
     /**
-     * Get 默认值 
-     * @return DefaultValue 默认值
+     * Get <p>默认值</p> 
+     * @return DefaultValue <p>默认值</p>
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 默认值
-     * @param DefaultValue 默认值
+     * Set <p>默认值</p>
+     * @param DefaultValue <p>默认值</p>
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 变量描述 
-     * @return Description 变量描述
+     * Get <p>变量描述</p> 
+     * @return Description <p>变量描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 变量描述
-     * @param Description 变量描述
+     * Set <p>变量描述</p>
+     * @param Description <p>变量描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数 
-     * @return ModuleType 模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数
+     * Get <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p> 
+     * @return ModuleType <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
      */
     public Long getModuleType() {
         return this.ModuleType;
     }
 
     /**
-     * Set 模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数
-     * @param ModuleType 模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数
+     * Set <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+     * @param ModuleType <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
      */
     public void setModuleType(Long ModuleType) {
         this.ModuleType = ModuleType;
     }
 
     /**
-     * Get 变量名称 
-     * @return Name 变量名称
+     * Get <p>变量名称</p> 
+     * @return Name <p>变量名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 变量名称
-     * @param Name 变量名称
+     * Set <p>变量名称</p>
+     * @param Name <p>变量名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 变量类型。枚举值: 1:字符串, 2:整数, 3:浮点数, 4:布尔值, 5:对象, 6:字符串数组, 7:整数数组, 8:浮点数数组, 9:布尔值数组, 10:对象数组, 11:文件, 12:文档, 13:图片, 14:音频, 15:视频, 16:文件数组, 17:文档数组, 18:图片数组, 19:音频数组, 20:视频数组, 21:数组的数组, 22:密钥/敏感信息, 99:空值 
-     * @return Type 变量类型。枚举值: 1:字符串, 2:整数, 3:浮点数, 4:布尔值, 5:对象, 6:字符串数组, 7:整数数组, 8:浮点数数组, 9:布尔值数组, 10:对象数组, 11:文件, 12:文档, 13:图片, 14:音频, 15:视频, 16:文件数组, 17:文档数组, 18:图片数组, 19:音频数组, 20:视频数组, 21:数组的数组, 22:密钥/敏感信息, 99:空值
+     * Get <p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul> 
+     * @return Type <p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 变量类型。枚举值: 1:字符串, 2:整数, 3:浮点数, 4:布尔值, 5:对象, 6:字符串数组, 7:整数数组, 8:浮点数数组, 9:布尔值数组, 10:对象数组, 11:文件, 12:文档, 13:图片, 14:音频, 15:视频, 16:文件数组, 17:文档数组, 18:图片数组, 19:音频数组, 20:视频数组, 21:数组的数组, 22:密钥/敏感信息, 99:空值
-     * @param Type 变量类型。枚举值: 1:字符串, 2:整数, 3:浮点数, 4:布尔值, 5:对象, 6:字符串数组, 7:整数数组, 8:浮点数数组, 9:布尔值数组, 10:对象数组, 11:文件, 12:文档, 13:图片, 14:音频, 15:视频, 16:文件数组, 17:文档数组, 18:图片数组, 19:音频数组, 20:视频数组, 21:数组的数组, 22:密钥/敏感信息, 99:空值
+     * Set <p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul>
+     * @param Type <p>变量类型</p><p>枚举值：</p><ul><li>0： 字符串</li><li>1： 整数</li><li>2： 浮点数</li><li>3： 布尔值</li><li>4： 对象</li><li>5： 字符串数组</li><li>6： 整数数组</li><li>7： 浮点数数组</li><li>8： 布尔值数组</li><li>9： 对象数组</li><li>10： 文件</li><li>11： 文档</li><li>12： 图片</li><li>13： 音频</li><li>14： 视频</li><li>15： 文件数组</li><li>16： 文档数组</li><li>17： 图片数组</li><li>18： 音频数组</li><li>19： 视频数组</li><li>20： 数组的数组</li><li>21： 密钥</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 变量ID 
-     * @return VariableId 变量ID
+     * Get <p>变量ID</p> 
+     * @return VariableId <p>变量ID</p>
      */
     public String getVariableId() {
         return this.VariableId;
     }
 
     /**
-     * Set 变量ID
-     * @param VariableId 变量ID
+     * Set <p>变量ID</p>
+     * @param VariableId <p>变量ID</p>
      */
     public void setVariableId(String VariableId) {
         this.VariableId = VariableId;
+    }
+
+    /**
+     * Get <p>是否启用网络策略(仅环境变量生效)</p> 
+     * @return EnableEndpoints <p>是否启用网络策略(仅环境变量生效)</p>
+     */
+    public Boolean getEnableEndpoints() {
+        return this.EnableEndpoints;
+    }
+
+    /**
+     * Set <p>是否启用网络策略(仅环境变量生效)</p>
+     * @param EnableEndpoints <p>是否启用网络策略(仅环境变量生效)</p>
+     */
+    public void setEnableEndpoints(Boolean EnableEndpoints) {
+        this.EnableEndpoints = EnableEndpoints;
+    }
+
+    /**
+     * Get <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p> 
+     * @return EndpointList <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
+     */
+    public String [] getEndpointList() {
+        return this.EndpointList;
+    }
+
+    /**
+     * Set <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
+     * @param EndpointList <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
+     */
+    public void setEndpointList(String [] EndpointList) {
+        this.EndpointList = EndpointList;
     }
 
     public Variable() {
@@ -213,6 +259,15 @@ public class Variable extends AbstractModel {
         if (source.VariableId != null) {
             this.VariableId = new String(source.VariableId);
         }
+        if (source.EnableEndpoints != null) {
+            this.EnableEndpoints = new Boolean(source.EnableEndpoints);
+        }
+        if (source.EndpointList != null) {
+            this.EndpointList = new String[source.EndpointList.length];
+            for (int i = 0; i < source.EndpointList.length; i++) {
+                this.EndpointList[i] = new String(source.EndpointList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +282,8 @@ public class Variable extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "VariableId", this.VariableId);
+        this.setParamSimple(map, prefix + "EnableEndpoints", this.EnableEndpoints);
+        this.setParamArraySimple(map, prefix + "EndpointList.", this.EndpointList);
 
     }
 }

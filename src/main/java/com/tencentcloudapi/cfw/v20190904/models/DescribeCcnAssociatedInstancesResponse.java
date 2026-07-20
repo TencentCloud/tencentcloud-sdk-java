@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCcnAssociatedInstancesResponse extends AbstractModel {
 
     /**
-    * 实例总数
+    * <p>实例总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 云联网关联的实例信息
+    * <p>云联网关联的实例信息</p>
     */
     @SerializedName("CcnAssociatedInstances")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCcnAssociatedInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例总数 
-     * @return Total 实例总数
+     * Get <p>实例总数</p> 
+     * @return Total <p>实例总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 实例总数
-     * @param Total 实例总数
+     * Set <p>实例总数</p>
+     * @param Total <p>实例总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 云联网关联的实例信息 
-     * @return CcnAssociatedInstances 云联网关联的实例信息
+     * Get <p>云联网关联的实例信息</p> 
+     * @return CcnAssociatedInstances <p>云联网关联的实例信息</p>
      */
     public CcnAssociatedInstance [] getCcnAssociatedInstances() {
         return this.CcnAssociatedInstances;
     }
 
     /**
-     * Set 云联网关联的实例信息
-     * @param CcnAssociatedInstances 云联网关联的实例信息
+     * Set <p>云联网关联的实例信息</p>
+     * @param CcnAssociatedInstances <p>云联网关联的实例信息</p>
      */
     public void setCcnAssociatedInstances(CcnAssociatedInstance [] CcnAssociatedInstances) {
         this.CcnAssociatedInstances = CcnAssociatedInstances;

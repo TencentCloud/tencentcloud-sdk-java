@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class Rule extends AbstractModel {
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModTime")
     @Expose
     private String ModTime;
 
     /**
-    * 使能开关
+    * <p>使能开关</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 事件集ID
+    * <p>事件集ID</p>
     */
     @SerializedName("EventBusId")
     @Expose
     private String EventBusId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Target 简要信息
+    * <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
@@ -88,7 +88,7 @@ public class Rule extends AbstractModel {
     private TargetBrief [] Targets;
 
     /**
-    * rule设置的dlq规则. 可能为null
+    * <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadLetterConfig")
@@ -96,137 +96,137 @@ public class Rule extends AbstractModel {
     private DeadLetterConfig DeadLetterConfig;
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModTime <p>修改时间</p>
      */
     public String getModTime() {
         return this.ModTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModTime <p>修改时间</p>
      */
     public void setModTime(String ModTime) {
         this.ModTime = ModTime;
     }
 
     /**
-     * Get 使能开关 
-     * @return Enable 使能开关
+     * Get <p>使能开关</p> 
+     * @return Enable <p>使能开关</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 使能开关
-     * @param Enable 使能开关
+     * Set <p>使能开关</p>
+     * @param Enable <p>使能开关</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleId <p>规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleId <p>规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 创建时间 
-     * @return AddTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return AddTime <p>创建时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 创建时间
-     * @param AddTime 创建时间
+     * Set <p>创建时间</p>
+     * @param AddTime <p>创建时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 事件集ID 
-     * @return EventBusId 事件集ID
+     * Get <p>事件集ID</p> 
+     * @return EventBusId <p>事件集ID</p>
      */
     public String getEventBusId() {
         return this.EventBusId;
     }
 
     /**
-     * Set 事件集ID
-     * @param EventBusId 事件集ID
+     * Set <p>事件集ID</p>
+     * @param EventBusId <p>事件集ID</p>
      */
     public void setEventBusId(String EventBusId) {
         this.EventBusId = EventBusId;
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Target 简要信息
+     * Get <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Targets Target 简要信息
+     * @return Targets <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetBrief [] getTargets() {
@@ -234,9 +234,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set Target 简要信息
+     * Set <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Targets Target 简要信息
+     * @param Targets <p>Target 简要信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(TargetBrief [] Targets) {
@@ -244,9 +244,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get rule设置的dlq规则. 可能为null
+     * Get <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadLetterConfig rule设置的dlq规则. 可能为null
+     * @return DeadLetterConfig <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeadLetterConfig getDeadLetterConfig() {
@@ -254,9 +254,9 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Set rule设置的dlq规则. 可能为null
+     * Set <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadLetterConfig rule设置的dlq规则. 可能为null
+     * @param DeadLetterConfig <p>rule设置的dlq规则. 可能为null</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadLetterConfig(DeadLetterConfig DeadLetterConfig) {

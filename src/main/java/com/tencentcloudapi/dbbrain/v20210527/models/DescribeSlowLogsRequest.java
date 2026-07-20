@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class DescribeSlowLogsRequest extends AbstractModel {
 
     /**
-    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
+    * <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB for MySQL，&quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 实例id。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * sql模板的md5值
+    * <p>sql 模板的 md5 值，可通过 <a href="https://cloud.tencent.com/document/product/1130/57784">DescribeSlowLogTopSqls</a> 接口获取。</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 开始时间，如“2019-09-10 12:13:14”。
+    * <p>开始时间，如“2019-09-10 12:13:14”。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+    * <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询数目，默认为20，最大为100。
+    * <p>查询数目，默认为20，最大为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 数据库列表
+    * <p>数据库列表</p>
     */
     @SerializedName("DB")
     @Expose
     private String [] DB;
 
     /**
-    * 关键字
+    * <p>关键字</p>
     */
     @SerializedName("Key")
     @Expose
     private String [] Key;
 
     /**
-    * 用户
+    * <p>用户</p>
     */
     @SerializedName("User")
     @Expose
     private String [] User;
 
     /**
-    * IP
+    * <p>IP 来源</p>
     */
     @SerializedName("Ip")
     @Expose
     private String [] Ip;
 
     /**
-    * 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
+    * <p>耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素</p>
     */
     @SerializedName("Time")
     @Expose
     private Long [] Time;
 
     /**
-     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
+     * Get <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB for MySQL，&quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB for MySQL，&quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
+     * Set <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB for MySQL，&quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 CynosDB for MySQL，&quot;tdstore&quot; - 云数据库TDSQL Boundless，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 实例id。 
-     * @return InstanceId 实例id。
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id。
-     * @param InstanceId 实例id。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get sql模板的md5值 
-     * @return Md5 sql模板的md5值
+     * Get <p>sql 模板的 md5 值，可通过 <a href="https://cloud.tencent.com/document/product/1130/57784">DescribeSlowLogTopSqls</a> 接口获取。</p> 
+     * @return Md5 <p>sql 模板的 md5 值，可通过 <a href="https://cloud.tencent.com/document/product/1130/57784">DescribeSlowLogTopSqls</a> 接口获取。</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set sql模板的md5值
-     * @param Md5 sql模板的md5值
+     * Set <p>sql 模板的 md5 值，可通过 <a href="https://cloud.tencent.com/document/product/1130/57784">DescribeSlowLogTopSqls</a> 接口获取。</p>
+     * @param Md5 <p>sql 模板的 md5 值，可通过 <a href="https://cloud.tencent.com/document/product/1130/57784">DescribeSlowLogTopSqls</a> 接口获取。</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 开始时间，如“2019-09-10 12:13:14”。 
-     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * Get <p>开始时间，如“2019-09-10 12:13:14”。</p> 
+     * @return StartTime <p>开始时间，如“2019-09-10 12:13:14”。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如“2019-09-10 12:13:14”。
-     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * Set <p>开始时间，如“2019-09-10 12:13:14”。</p>
+     * @param StartTime <p>开始时间，如“2019-09-10 12:13:14”。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。 
-     * @return EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+     * Get <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p> 
+     * @return EndTime <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
-     * @param EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+     * Set <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
+     * @param EndTime <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询数目，默认为20，最大为100。 
-     * @return Limit 查询数目，默认为20，最大为100。
+     * Get <p>查询数目，默认为20，最大为100。</p> 
+     * @return Limit <p>查询数目，默认为20，最大为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数目，默认为20，最大为100。
-     * @param Limit 查询数目，默认为20，最大为100。
+     * Set <p>查询数目，默认为20，最大为100。</p>
+     * @param Limit <p>查询数目，默认为20，最大为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 数据库列表 
-     * @return DB 数据库列表
+     * Get <p>数据库列表</p> 
+     * @return DB <p>数据库列表</p>
      */
     public String [] getDB() {
         return this.DB;
     }
 
     /**
-     * Set 数据库列表
-     * @param DB 数据库列表
+     * Set <p>数据库列表</p>
+     * @param DB <p>数据库列表</p>
      */
     public void setDB(String [] DB) {
         this.DB = DB;
     }
 
     /**
-     * Get 关键字 
-     * @return Key 关键字
+     * Get <p>关键字</p> 
+     * @return Key <p>关键字</p>
      */
     public String [] getKey() {
         return this.Key;
     }
 
     /**
-     * Set 关键字
-     * @param Key 关键字
+     * Set <p>关键字</p>
+     * @param Key <p>关键字</p>
      */
     public void setKey(String [] Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 用户 
-     * @return User 用户
+     * Get <p>用户</p> 
+     * @return User <p>用户</p>
      */
     public String [] getUser() {
         return this.User;
     }
 
     /**
-     * Set 用户
-     * @param User 用户
+     * Set <p>用户</p>
+     * @param User <p>用户</p>
      */
     public void setUser(String [] User) {
         this.User = User;
     }
 
     /**
-     * Get IP 
-     * @return Ip IP
+     * Get <p>IP 来源</p> 
+     * @return Ip <p>IP 来源</p>
      */
     public String [] getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP
-     * @param Ip IP
+     * Set <p>IP 来源</p>
+     * @param Ip <p>IP 来源</p>
      */
     public void setIp(String [] Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素 
-     * @return Time 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
+     * Get <p>耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素</p> 
+     * @return Time <p>耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素</p>
      */
     public Long [] getTime() {
         return this.Time;
     }
 
     /**
-     * Set 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
-     * @param Time 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
+     * Set <p>耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素</p>
+     * @param Time <p>耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素</p>
      */
     public void setTime(Long [] Time) {
         this.Time = Time;

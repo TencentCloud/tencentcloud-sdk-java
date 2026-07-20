@@ -66,6 +66,20 @@ public class ModifyPluginRequest extends AbstractModel {
     private Tool [] ToolList;
 
     /**
+    * <p>登录用户主账号(集成商模式必填)</p>
+    */
+    @SerializedName("LoginUin")
+    @Expose
+    private String LoginUin;
+
+    /**
+    * <p>登录用户子账号(集成商模式必填)</p>
+    */
+    @SerializedName("LoginSubAccountUin")
+    @Expose
+    private String LoginSubAccountUin;
+
+    /**
      * Get <p>插件id</p> 
      * @return PluginId <p>插件id</p>
      */
@@ -161,6 +175,38 @@ public class ModifyPluginRequest extends AbstractModel {
         this.ToolList = ToolList;
     }
 
+    /**
+     * Get <p>登录用户主账号(集成商模式必填)</p> 
+     * @return LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public String getLoginUin() {
+        return this.LoginUin;
+    }
+
+    /**
+     * Set <p>登录用户主账号(集成商模式必填)</p>
+     * @param LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public void setLoginUin(String LoginUin) {
+        this.LoginUin = LoginUin;
+    }
+
+    /**
+     * Get <p>登录用户子账号(集成商模式必填)</p> 
+     * @return LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public String getLoginSubAccountUin() {
+        return this.LoginSubAccountUin;
+    }
+
+    /**
+     * Set <p>登录用户子账号(集成商模式必填)</p>
+     * @param LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public void setLoginSubAccountUin(String LoginSubAccountUin) {
+        this.LoginSubAccountUin = LoginSubAccountUin;
+    }
+
     public ModifyPluginRequest() {
     }
 
@@ -190,6 +236,12 @@ public class ModifyPluginRequest extends AbstractModel {
                 this.ToolList[i] = new Tool(source.ToolList[i]);
             }
         }
+        if (source.LoginUin != null) {
+            this.LoginUin = new String(source.LoginUin);
+        }
+        if (source.LoginSubAccountUin != null) {
+            this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class ModifyPluginRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
         this.setParamArrayObj(map, prefix + "ToolList.", this.ToolList);
+        this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
+        this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 
     }
 }

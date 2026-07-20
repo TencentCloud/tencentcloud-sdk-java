@@ -241,6 +241,13 @@ public class ClbObject extends AbstractModel {
     private Long WafAccessStatus;
 
     /**
+    * <p>备注</p>
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
      * Get <p>对象ID</p> 
      * @return ObjectId <p>对象ID</p>
      */
@@ -736,6 +743,22 @@ public class ClbObject extends AbstractModel {
         this.WafAccessStatus = WafAccessStatus;
     }
 
+    /**
+     * Get <p>备注</p> 
+     * @return Note <p>备注</p>
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set <p>备注</p>
+     * @param Note <p>备注</p>
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
+    }
+
     public ClbObject() {
     }
 
@@ -855,6 +878,9 @@ public class ClbObject extends AbstractModel {
         if (source.WafAccessStatus != null) {
             this.WafAccessStatus = new Long(source.WafAccessStatus);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
     }
 
 
@@ -893,6 +919,7 @@ public class ClbObject extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagInfos.", this.TagInfos);
         this.setParamArrayObj(map, prefix + "PreciseDomainDetails.", this.PreciseDomainDetails);
         this.setParamSimple(map, prefix + "WafAccessStatus", this.WafAccessStatus);
+        this.setParamSimple(map, prefix + "Note", this.Note);
 
     }
 }

@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class DescribeCfwStatusMonitorRequest extends AbstractModel {
 
     /**
-    * <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
+    * 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
     */
     @SerializedName("Op")
     @Expose
     private String Op;
 
     /**
-    * <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
+    * 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
     */
     @SerializedName("FirewallType")
     @Expose
     private String FirewallType;
 
     /**
-    * <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
+    * 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
     */
     @SerializedName("SelectionId")
     @Expose
     private String SelectionId;
 
     /**
-    * <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
+    * 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
     */
     @SerializedName("SelectionName")
     @Expose
     private String SelectionName;
 
     /**
-    * <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
+    * 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
     */
     @SerializedName("SelectionInstanceId")
     @Expose
     private String SelectionInstanceId;
 
     /**
-    * <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
+    * 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
+    * 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
     */
     @SerializedName("Perspective")
     @Expose
     private String Perspective;
 
     /**
-    * <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
+    * NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
     */
     @SerializedName("IpScope")
     @Expose
     private String IpScope;
 
     /**
-    * <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
+    * 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
     */
     @SerializedName("TimePreset")
     @Expose
     private String TimePreset;
 
     /**
-    * <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
+    * 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
+    * 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
+    * 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
+    * 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
+    * 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
     */
     @SerializedName("OverviewOnly")
     @Expose
     private Boolean OverviewOnly;
 
     /**
-    * <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
+    * 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
+    * 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * <p>排序方向。默认 desc；支持 asc、desc。</p>
+    * 排序方向。默认 desc；支持 asc、desc。
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-    * <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+    * 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
     */
     @SerializedName("Filters")
     @Expose
     private CfwStatusMonitorFilter [] Filters;
 
     /**
-     * Get <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p> 
-     * @return Op <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
+     * Get 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。 
+     * @return Op 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
      */
     public String getOp() {
         return this.Op;
     }
 
     /**
-     * Set <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
-     * @param Op <p>操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。</p>
+     * Set 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
+     * @param Op 操作类型。describe_scene 表示发现场景和二级下拉选项；fetch_scene 表示获取具体场景快照。必填。
      */
     public void setOp(String Op) {
         this.Op = Op;
     }
 
     /**
-     * Get <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p> 
-     * @return FirewallType <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
+     * Get 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。 
+     * @return FirewallType 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
      */
     public String getFirewallType() {
         return this.FirewallType;
     }
 
     /**
-     * Set <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
-     * @param FirewallType <p>防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。</p>
+     * Set 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
+     * @param FirewallType 防火墙场景类型。支持 internet_edge（互联网边界防火墙）、nat_cluster（NAT边界防火墙-集群）、nat_ha（NAT边界防火墙-主备）、vpc_cluster（VPC边界防火墙-集群）、vpc_ha（VPC边界防火墙-主备）。必填。
      */
     public void setFirewallType(String FirewallType) {
         this.FirewallType = FirewallType;
     }
 
     /**
-     * Get <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p> 
-     * @return SelectionId <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
+     * Get 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。 
+     * @return SelectionId 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
      */
     public String getSelectionId() {
         return this.SelectionId;
     }
 
     /**
-     * Set <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
-     * @param SelectionId <p>二级下拉选项 ID。fetch_scene 按需传入；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。</p>
+     * Set 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
+     * @param SelectionId 二级下拉选项 ID。fetch_scene 按需传入，值来自 describe_scene 返回的 selection.available_options[].id；internet_edge 为地域，NAT 为实例 ID，VPC 带宽场景为防火墙组 ID；vpc_cluster 的 connections 汇总场景会忽略该参数。
      */
     public void setSelectionId(String SelectionId) {
         this.SelectionId = SelectionId;
     }
 
     /**
-     * Get <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p> 
-     * @return SelectionName <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
+     * Get 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。 
+     * @return SelectionName 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
      */
     public String getSelectionName() {
         return this.SelectionName;
     }
 
     /**
-     * Set <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
-     * @param SelectionName <p>二级下拉显示名称。可替代 SelectionId 按名称匹配。</p>
+     * Set 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
+     * @param SelectionName 二级下拉显示名称。可替代 SelectionId 按名称匹配，值来自 describe_scene 返回的 selection.available_options[].name。
      */
     public void setSelectionName(String SelectionName) {
         this.SelectionName = SelectionName;
     }
 
     /**
-     * Get <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p> 
-     * @return SelectionInstanceId <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
+     * Get 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。 
+     * @return SelectionInstanceId 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
      */
     public String getSelectionInstanceId() {
         return this.SelectionInstanceId;
     }
 
     /**
-     * Set <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
-     * @param SelectionInstanceId <p>引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景。</p>
+     * Set 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
+     * @param SelectionInstanceId 引擎实例 ID。主要用于 vpc_ha 下一个防火墙组对应多个实例的场景，优先使用 describe_scene 返回的 selection.available_options[].instance_id；如只有 instance_ids，则从数组中选择一个字符串值。
      */
     public void setSelectionInstanceId(String SelectionInstanceId) {
         this.SelectionInstanceId = SelectionInstanceId;
     }
 
     /**
-     * Get <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p> 
-     * @return Metric <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
+     * Get 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。 
+     * @return Metric 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
-     * @param Metric <p>指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。</p>
+     * Set 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
+     * @param Metric 指标页签。fetch_scene 可传；不传时使用该场景默认值。支持 bandwidth、connections。
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p> 
-     * @return Perspective <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
+     * Get 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。 
+     * @return Perspective 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
      */
     public String getPerspective() {
         return this.Perspective;
     }
 
     /**
-     * Set <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
-     * @param Perspective <p>指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。</p>
+     * Set 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
+     * @param Perspective 指标下的视角。fetch_scene 可传；不传时使用该场景默认值。支持 ip、subnet、session、switch、vpc，实际可用组合以 describe_scene 返回为准。
      */
     public void setPerspective(String Perspective) {
         this.Perspective = Perspective;
     }
 
     /**
-     * Get <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p> 
-     * @return IpScope <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
+     * Get NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。 
+     * @return IpScope NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
      */
     public String getIpScope() {
         return this.IpScope;
     }
 
     /**
-     * Set <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
-     * @param IpScope <p>NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用。</p>
+     * Set NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
+     * @param IpScope NAT 主备连接数 IP 视角范围。external 表示外部 IP，asset 表示资产 IP；仅 nat_ha + connections + ip 使用，其他组合传入将返回 InvalidParameter。
      */
     public void setIpScope(String IpScope) {
         this.IpScope = IpScope;
     }
 
     /**
-     * Get <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p> 
-     * @return TimePreset <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
+     * Get 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。 
+     * @return TimePreset 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
      */
     public String getTimePreset() {
         return this.TimePreset;
     }
 
     /**
-     * Set <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
-     * @param TimePreset <p>预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。</p>
+     * Set 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
+     * @param TimePreset 预设时间范围。默认 24h；fetch_scene 使用。支持 5m、15m、30m、1h、6h、24h、3d、7d、30d、today、yesterday、day_before_yesterday、this_week、last_week、this_month。
      */
     public void setTimePreset(String TimePreset) {
         this.TimePreset = TimePreset;
     }
 
     /**
-     * Get <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p> 
-     * @return StartTime <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
+     * Get 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。 
+     * @return StartTime 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
-     * @param StartTime <p>自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。</p>
+     * Set 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
+     * @param StartTime 自定义开始时间。格式 YYYY-MM-DD HH:MM:SS；必须与 EndTime 同时传，最大跨度 30 天。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p> 
-     * @return EndTime <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
+     * Get 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。 
+     * @return EndTime 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
-     * @param EndTime <p>自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。</p>
+     * Set 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
+     * @param EndTime 自定义结束时间。格式 YYYY-MM-DD HH:MM:SS；必须与 StartTime 同时传，最大跨度 30 天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p> 
-     * @return Page <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
+     * Get 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。 
+     * @return Page 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
-     * @param Page <p>页码，从 1 开始。默认 1；fetch_scene 列表视角使用。</p>
+     * Set 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
+     * @param Page 页码，从 1 开始。默认 1；fetch_scene 列表视角使用。
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p> 
-     * @return Limit <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
+     * Get 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。 
+     * @return Limit 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
-     * @param Limit <p>每页条数。默认 10，最大 100；fetch_scene 列表视角使用。</p>
+     * Set 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
+     * @param Limit 每页条数。默认 10，取值 1 至 100；fetch_scene 列表视角使用。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p> 
-     * @return OverviewOnly <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
+     * Get 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。 
+     * @return OverviewOnly 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
      */
     public Boolean getOverviewOnly() {
         return this.OverviewOnly;
     }
 
     /**
-     * Set <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
-     * @param OverviewOnly <p>是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。</p>
+     * Set 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
+     * @param OverviewOnly 是否只获取概览数据。true 时 fetch_scene 只请求 overview，跳过 table/detail，适合只看场景快照汇总。
      */
     public void setOverviewOnly(Boolean OverviewOnly) {
         this.OverviewOnly = OverviewOnly;
     }
 
     /**
-     * Get <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p> 
-     * @return Offset <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
+     * Get 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。 
+     * @return Offset 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
-     * @param Offset <p>原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；必须大于等于 0 且不超过安全上限。</p>
+     * Set 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
+     * @param Offset 原始偏移量覆盖。可选，传入后覆盖 Page 计算结果；取值 0 至 10000。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p> 
-     * @return SortBy <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
+     * Get 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。 
+     * @return SortBy 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
-     * @param SortBy <p>排序字段。可选，只接受当前场景后端允许的安全字段。</p>
+     * Set 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
+     * @param SortBy 排序字段。可选。互联网边界 IP、NAT IP/子网视角支持 InputMax、OutputMax；VPC switch 视角支持 SwitchName；VPC ip/vpc 视角支持 FlowMax；其他组合不要传。
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get <p>排序方向。默认 desc；支持 asc、desc。</p> 
-     * @return SortOrder <p>排序方向。默认 desc；支持 asc、desc。</p>
+     * Get 排序方向。默认 desc；支持 asc、desc。 
+     * @return SortOrder 排序方向。默认 desc；支持 asc、desc。
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set <p>排序方向。默认 desc；支持 asc、desc。</p>
-     * @param SortOrder <p>排序方向。默认 desc；支持 asc、desc。</p>
+     * Set 排序方向。默认 desc；支持 asc、desc。
+     * @param SortOrder 排序方向。默认 desc；支持 asc、desc。
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;
     }
 
     /**
-     * Get <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p> 
-     * @return Filters <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+     * Get 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。 
+     * @return Filters 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
      */
     public CfwStatusMonitorFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
-     * @param Filters <p>过滤条件列表。可选，最多 5 个；是否支持以及字段名以具体 fetch_scene 场景为准。</p>
+     * Set 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
+     * @param Filters 过滤条件列表。保留字段；当前公开 fetch_scene 场景均不支持，调用方不要传。
      */
     public void setFilters(CfwStatusMonitorFilter [] Filters) {
         this.Filters = Filters;

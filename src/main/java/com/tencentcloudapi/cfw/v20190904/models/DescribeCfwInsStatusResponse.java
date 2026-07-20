@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCfwInsStatusResponse extends AbstractModel {
 
     /**
-    * 防火墙实例运行状态
+    * <p>防火墙实例运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwInsStatus")
@@ -32,7 +32,7 @@ public class DescribeCfwInsStatusResponse extends AbstractModel {
     private CfwInsStatus [] CfwInsStatus;
 
     /**
-    * 0
+    * <p>0</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeCfwInsStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防火墙实例运行状态
+     * Get <p>防火墙实例运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CfwInsStatus 防火墙实例运行状态
+     * @return CfwInsStatus <p>防火墙实例运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CfwInsStatus [] getCfwInsStatus() {
@@ -56,9 +56,9 @@ public class DescribeCfwInsStatusResponse extends AbstractModel {
     }
 
     /**
-     * Set 防火墙实例运行状态
+     * Set <p>防火墙实例运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CfwInsStatus 防火墙实例运行状态
+     * @param CfwInsStatus <p>防火墙实例运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwInsStatus(CfwInsStatus [] CfwInsStatus) {
@@ -66,16 +66,16 @@ public class DescribeCfwInsStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 0 
-     * @return TotalCount 0
+     * Get <p>0</p> 
+     * @return TotalCount <p>0</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 0
-     * @param TotalCount 0
+     * Set <p>0</p>
+     * @param TotalCount <p>0</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

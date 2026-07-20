@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class OpenClusterNatFwSwitchRequest extends AbstractModel {
 
     /**
-    * NAT CCN防火墙开关配置
+    * <p>NAT CCN防火墙开关配置</p>
     */
     @SerializedName("NatCcnSwitch")
     @Expose
     private NatCcnSwitchConfig NatCcnSwitch;
 
     /**
-     * Get NAT CCN防火墙开关配置 
-     * @return NatCcnSwitch NAT CCN防火墙开关配置
+     * Get <p>NAT CCN防火墙开关配置</p> 
+     * @return NatCcnSwitch <p>NAT CCN防火墙开关配置</p>
      */
     public NatCcnSwitchConfig getNatCcnSwitch() {
         return this.NatCcnSwitch;
     }
 
     /**
-     * Set NAT CCN防火墙开关配置
-     * @param NatCcnSwitch NAT CCN防火墙开关配置
+     * Set <p>NAT CCN防火墙开关配置</p>
+     * @param NatCcnSwitch <p>NAT CCN防火墙开关配置</p>
      */
     public void setNatCcnSwitch(NatCcnSwitchConfig NatCcnSwitch) {
         this.NatCcnSwitch = NatCcnSwitch;

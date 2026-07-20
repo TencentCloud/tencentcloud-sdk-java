@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class DeleteVpcFwGroupRequest extends AbstractModel {
 
     /**
-    * 防火墙(组)Id
+    * <p>防火墙(组)Id</p>
     */
     @SerializedName("FwGroupId")
     @Expose
     private String FwGroupId;
 
     /**
-    * 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
+    * <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
     */
     @SerializedName("DeleteFwGroup")
     @Expose
     private Long DeleteFwGroup;
 
     /**
-    * 待删除的防火墙实例数组
+    * <p>待删除的防火墙实例数组</p>
     */
     @SerializedName("VpcFwInsList")
     @Expose
     private String [] VpcFwInsList;
 
     /**
-     * Get 防火墙(组)Id 
-     * @return FwGroupId 防火墙(组)Id
+     * Get <p>防火墙(组)Id</p> 
+     * @return FwGroupId <p>防火墙(组)Id</p>
      */
     public String getFwGroupId() {
         return this.FwGroupId;
     }
 
     /**
-     * Set 防火墙(组)Id
-     * @param FwGroupId 防火墙(组)Id
+     * Set <p>防火墙(组)Id</p>
+     * @param FwGroupId <p>防火墙(组)Id</p>
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组) 
-     * @return DeleteFwGroup 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
+     * Get <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p> 
+     * @return DeleteFwGroup <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
      */
     public Long getDeleteFwGroup() {
         return this.DeleteFwGroup;
     }
 
     /**
-     * Set 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
-     * @param DeleteFwGroup 是否删除整个防火墙(组)
-0：不删除防火墙(组)，只删除单独实例
-1：删除整个防火墙(组)
+     * Set <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
+     * @param DeleteFwGroup <p>是否删除整个防火墙(组)<br>0：不删除防火墙(组)，只删除单独实例<br>1：删除整个防火墙(组)</p>
      */
     public void setDeleteFwGroup(Long DeleteFwGroup) {
         this.DeleteFwGroup = DeleteFwGroup;
     }
 
     /**
-     * Get 待删除的防火墙实例数组 
-     * @return VpcFwInsList 待删除的防火墙实例数组
+     * Get <p>待删除的防火墙实例数组</p> 
+     * @return VpcFwInsList <p>待删除的防火墙实例数组</p>
      */
     public String [] getVpcFwInsList() {
         return this.VpcFwInsList;
     }
 
     /**
-     * Set 待删除的防火墙实例数组
-     * @param VpcFwInsList 待删除的防火墙实例数组
+     * Set <p>待删除的防火墙实例数组</p>
+     * @param VpcFwInsList <p>待删除的防火墙实例数组</p>
      */
     public void setVpcFwInsList(String [] VpcFwInsList) {
         this.VpcFwInsList = VpcFwInsList;

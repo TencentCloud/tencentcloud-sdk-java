@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateReleaseResponse extends AbstractModel {
 
     /**
-    * need_approval
+    * <p>need_approval</p>
     */
     @SerializedName("NeedApproval")
     @Expose
     private Boolean NeedApproval;
 
     /**
-    * release_id
+    * <p>release_id</p>
     */
     @SerializedName("ReleaseId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateReleaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get need_approval 
-     * @return NeedApproval need_approval
+     * Get <p>need_approval</p> 
+     * @return NeedApproval <p>need_approval</p>
      */
     public Boolean getNeedApproval() {
         return this.NeedApproval;
     }
 
     /**
-     * Set need_approval
-     * @param NeedApproval need_approval
+     * Set <p>need_approval</p>
+     * @param NeedApproval <p>need_approval</p>
      */
     public void setNeedApproval(Boolean NeedApproval) {
         this.NeedApproval = NeedApproval;
     }
 
     /**
-     * Get release_id 
-     * @return ReleaseId release_id
+     * Get <p>release_id</p> 
+     * @return ReleaseId <p>release_id</p>
      */
     public String getReleaseId() {
         return this.ReleaseId;
     }
 
     /**
-     * Set release_id
-     * @param ReleaseId release_id
+     * Set <p>release_id</p>
+     * @param ReleaseId <p>release_id</p>
      */
     public void setReleaseId(String ReleaseId) {
         this.ReleaseId = ReleaseId;

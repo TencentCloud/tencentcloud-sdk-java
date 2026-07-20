@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyNatFwSwitchRequest extends AbstractModel {
 
     /**
-    * 开关，0：关闭，1：开启
+    * <p>开关，0：关闭，1：开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+    * <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
     */
     @SerializedName("CfwInsIdList")
     @Expose
     private String [] CfwInsIdList;
 
     /**
-    * 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+    * <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
     */
     @SerializedName("SubnetIdList")
     @Expose
     private String [] SubnetIdList;
 
     /**
-    * 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+    * <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
     */
     @SerializedName("RouteTableIdList")
     @Expose
     private String [] RouteTableIdList;
 
     /**
-     * Get 开关，0：关闭，1：开启 
-     * @return Enable 开关，0：关闭，1：开启
+     * Get <p>开关，0：关闭，1：开启</p> 
+     * @return Enable <p>开关，0：关闭，1：开启</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 开关，0：关闭，1：开启
-     * @param Enable 开关，0：关闭，1：开启
+     * Set <p>开关，0：关闭，1：开启</p>
+     * @param Enable <p>开关，0：关闭，1：开启</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。 
-     * @return CfwInsIdList 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * Get <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p> 
+     * @return CfwInsIdList <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public String [] getCfwInsIdList() {
         return this.CfwInsIdList;
     }
 
     /**
-     * Set 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
-     * @param CfwInsIdList 防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * Set <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+     * @param CfwInsIdList <p>防火墙实例id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public void setCfwInsIdList(String [] CfwInsIdList) {
         this.CfwInsIdList = CfwInsIdList;
     }
 
     /**
-     * Get 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。 
-     * @return SubnetIdList 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * Get <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p> 
+     * @return SubnetIdList <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public String [] getSubnetIdList() {
         return this.SubnetIdList;
     }
 
     /**
-     * Set 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
-     * @param SubnetIdList 子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * Set <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+     * @param SubnetIdList <p>子网id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public void setSubnetIdList(String [] SubnetIdList) {
         this.SubnetIdList = SubnetIdList;
     }
 
     /**
-     * Get 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。 
-     * @return RouteTableIdList 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * Get <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p> 
+     * @return RouteTableIdList <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public String [] getRouteTableIdList() {
         return this.RouteTableIdList;
     }
 
     /**
-     * Set 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
-     * @param RouteTableIdList 路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。
+     * Set <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
+     * @param RouteTableIdList <p>路由表id列表，其中CfwInsIdList，SubnetIdList和RouteTableIdList只能传递一种。</p>
      */
     public void setRouteTableIdList(String [] RouteTableIdList) {
         this.RouteTableIdList = RouteTableIdList;

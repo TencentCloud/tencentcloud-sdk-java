@@ -24,31 +24,32 @@ import java.util.HashMap;
 public class DescribeAssetSyncResponse extends AbstractModel {
 
     /**
-    * 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
+    * <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * success 成功
-其他失败
+    * <p>success 成功<br>其他失败</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 0 成功
-非0 失败
+    * <p>0 成功<br>非0 失败</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
+
+    /**
+    * <p>已有CVM数量</p>
+    */
+    @SerializedName("CVMCount")
+    @Expose
+    private Long CVMCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,75 +59,67 @@ public class DescribeAssetSyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败 
-     * @return Status 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
+     * Get <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p> 
+     * @return Status <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
-     * @param Status 返回状态
-1 更新中
-2 更新完成
-3 更新失败
-4 更新失败
+     * Set <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
+     * @param Status <p>返回状态<br>1 更新中<br>2 更新完成<br>3 更新失败<br>4 更新失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get success 成功
-其他失败 
-     * @return ReturnMsg success 成功
-其他失败
+     * Get <p>success 成功<br>其他失败</p> 
+     * @return ReturnMsg <p>success 成功<br>其他失败</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set success 成功
-其他失败
-     * @param ReturnMsg success 成功
-其他失败
+     * Set <p>success 成功<br>其他失败</p>
+     * @param ReturnMsg <p>success 成功<br>其他失败</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 0 成功
-非0 失败 
-     * @return ReturnCode 0 成功
-非0 失败
+     * Get <p>0 成功<br>非0 失败</p> 
+     * @return ReturnCode <p>0 成功<br>非0 失败</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 0 成功
-非0 失败
-     * @param ReturnCode 0 成功
-非0 失败
+     * Set <p>0 成功<br>非0 失败</p>
+     * @param ReturnCode <p>0 成功<br>非0 失败</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
+    }
+
+    /**
+     * Get <p>已有CVM数量</p> 
+     * @return CVMCount <p>已有CVM数量</p>
+     */
+    public Long getCVMCount() {
+        return this.CVMCount;
+    }
+
+    /**
+     * Set <p>已有CVM数量</p>
+     * @param CVMCount <p>已有CVM数量</p>
+     */
+    public void setCVMCount(Long CVMCount) {
+        this.CVMCount = CVMCount;
     }
 
     /**
@@ -162,6 +155,9 @@ public class DescribeAssetSyncResponse extends AbstractModel {
         if (source.ReturnCode != null) {
             this.ReturnCode = new Long(source.ReturnCode);
         }
+        if (source.CVMCount != null) {
+            this.CVMCount = new Long(source.CVMCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -175,6 +171,7 @@ public class DescribeAssetSyncResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+        this.setParamSimple(map, prefix + "CVMCount", this.CVMCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * 过滤条件名称
+    * 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class Filters extends AbstractModel {
     private String ExactMatch;
 
     /**
-     * Get 过滤条件名称 
-     * @return Name 过滤条件名称
+     * Get 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL） 
+     * @return Name 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 过滤条件名称
-     * @param Name 过滤条件名称
+     * Set 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
+     * @param Name 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
      */
     public void setName(String Name) {
         this.Name = Name;

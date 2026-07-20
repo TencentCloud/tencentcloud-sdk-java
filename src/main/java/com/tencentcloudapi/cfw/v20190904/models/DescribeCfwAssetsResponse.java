@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCfwAssetsResponse extends AbstractModel {
 
     /**
-    * 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+    * <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCfwAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。 
-     * @return Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+     * Get <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p> 
+     * @return Data <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
-     * @param Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+     * Set <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
+     * @param Data <p>查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。</p>
      */
     public void setData(String Data) {
         this.Data = Data;

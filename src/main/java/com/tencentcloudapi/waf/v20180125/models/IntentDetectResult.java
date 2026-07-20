@@ -31,6 +31,13 @@ public class IntentDetectResult extends AbstractModel {
     private Long IsUnSafe;
 
     /**
+    * <p>检出分类</p>
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get <p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul> 
      * @return IsUnSafe <p>是否恶意意图</p><p>枚举值：</p><ul><li>1： 恶意</li><li>0： 正常</li></ul>
      */
@@ -46,6 +53,22 @@ public class IntentDetectResult extends AbstractModel {
         this.IsUnSafe = IsUnSafe;
     }
 
+    /**
+     * Get <p>检出分类</p> 
+     * @return Category <p>检出分类</p>
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set <p>检出分类</p>
+     * @param Category <p>检出分类</p>
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public IntentDetectResult() {
     }
 
@@ -57,6 +80,9 @@ public class IntentDetectResult extends AbstractModel {
         if (source.IsUnSafe != null) {
             this.IsUnSafe = new Long(source.IsUnSafe);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class IntentDetectResult extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsUnSafe", this.IsUnSafe);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

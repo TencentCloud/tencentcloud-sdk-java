@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCcnVpcFwPolicyLimitResponse extends AbstractModel {
 
     /**
-    * 支持的引流策略数量（最外层总条数）
+    * <p>支持的引流策略数量（最外层总条数）</p>
     */
     @SerializedName("CcnPolicyInterconnectPairLenLimit")
     @Expose
     private Long CcnPolicyInterconnectPairLenLimit;
 
     /**
-    * 单条引流策略中单组的最大配置数量（内层单组总条数）
+    * <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
     */
     @SerializedName("CcnPolicyGroupLenLimit")
     @Expose
     private Long CcnPolicyGroupLenLimit;
 
     /**
-    * 接入的实例网段长度（网段数量）限制
+    * <p>接入的实例网段长度（网段数量）限制</p>
     */
     @SerializedName("CcnPolicyCidrLenLimit")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeCcnVpcFwPolicyLimitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持的引流策略数量（最外层总条数） 
-     * @return CcnPolicyInterconnectPairLenLimit 支持的引流策略数量（最外层总条数）
+     * Get <p>支持的引流策略数量（最外层总条数）</p> 
+     * @return CcnPolicyInterconnectPairLenLimit <p>支持的引流策略数量（最外层总条数）</p>
      */
     public Long getCcnPolicyInterconnectPairLenLimit() {
         return this.CcnPolicyInterconnectPairLenLimit;
     }
 
     /**
-     * Set 支持的引流策略数量（最外层总条数）
-     * @param CcnPolicyInterconnectPairLenLimit 支持的引流策略数量（最外层总条数）
+     * Set <p>支持的引流策略数量（最外层总条数）</p>
+     * @param CcnPolicyInterconnectPairLenLimit <p>支持的引流策略数量（最外层总条数）</p>
      */
     public void setCcnPolicyInterconnectPairLenLimit(Long CcnPolicyInterconnectPairLenLimit) {
         this.CcnPolicyInterconnectPairLenLimit = CcnPolicyInterconnectPairLenLimit;
     }
 
     /**
-     * Get 单条引流策略中单组的最大配置数量（内层单组总条数） 
-     * @return CcnPolicyGroupLenLimit 单条引流策略中单组的最大配置数量（内层单组总条数）
+     * Get <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p> 
+     * @return CcnPolicyGroupLenLimit <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
      */
     public Long getCcnPolicyGroupLenLimit() {
         return this.CcnPolicyGroupLenLimit;
     }
 
     /**
-     * Set 单条引流策略中单组的最大配置数量（内层单组总条数）
-     * @param CcnPolicyGroupLenLimit 单条引流策略中单组的最大配置数量（内层单组总条数）
+     * Set <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
+     * @param CcnPolicyGroupLenLimit <p>单条引流策略中单组的最大配置数量（内层单组总条数）</p>
      */
     public void setCcnPolicyGroupLenLimit(Long CcnPolicyGroupLenLimit) {
         this.CcnPolicyGroupLenLimit = CcnPolicyGroupLenLimit;
     }
 
     /**
-     * Get 接入的实例网段长度（网段数量）限制 
-     * @return CcnPolicyCidrLenLimit 接入的实例网段长度（网段数量）限制
+     * Get <p>接入的实例网段长度（网段数量）限制</p> 
+     * @return CcnPolicyCidrLenLimit <p>接入的实例网段长度（网段数量）限制</p>
      */
     public Long getCcnPolicyCidrLenLimit() {
         return this.CcnPolicyCidrLenLimit;
     }
 
     /**
-     * Set 接入的实例网段长度（网段数量）限制
-     * @param CcnPolicyCidrLenLimit 接入的实例网段长度（网段数量）限制
+     * Set <p>接入的实例网段长度（网段数量）限制</p>
+     * @param CcnPolicyCidrLenLimit <p>接入的实例网段长度（网段数量）限制</p>
      */
     public void setCcnPolicyCidrLenLimit(Long CcnPolicyCidrLenLimit) {
         this.CcnPolicyCidrLenLimit = CcnPolicyCidrLenLimit;

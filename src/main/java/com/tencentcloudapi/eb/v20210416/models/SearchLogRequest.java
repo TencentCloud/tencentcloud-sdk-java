@@ -52,7 +52,7 @@ public class SearchLogRequest extends AbstractModel {
     private Long Page;
 
     /**
-    * <p>每页数据大小</p>
+    * <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -66,14 +66,14 @@ public class SearchLogRequest extends AbstractModel {
     private LogFilter [] Filter;
 
     /**
-    * <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+    * <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
     */
     @SerializedName("OrderFields")
     @Expose
     private String [] OrderFields;
 
     /**
-    * <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+    * <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
     */
     @SerializedName("OrderBy")
     @Expose
@@ -144,16 +144,16 @@ public class SearchLogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>每页数据大小</p> 
-     * @return Limit <p>每页数据大小</p>
+     * Get <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p> 
+     * @return Limit <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>每页数据大小</p>
-     * @param Limit <p>每页数据大小</p>
+     * Set <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
+     * @param Limit <p>每页数据大小</p><p>取值范围：[1, 1000]</p><p>默认值：10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -176,32 +176,32 @@ public class SearchLogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p> 
-     * @return OrderFields <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+     * Get <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul> 
+     * @return OrderFields <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
      */
     public String [] getOrderFields() {
         return this.OrderFields;
     }
 
     /**
-     * Set <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
-     * @param OrderFields <p>事件查询结果排序，[&quot;timestamp&quot;,&quot;subject&quot;]</p>
+     * Set <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
+     * @param OrderFields <p>事件查询结果排序</p><p>枚举值：</p><ul><li>Timestamp： 事件触发时间</li><li>Source： 事件源</li><li>Type： 事件类型</li><li>RuleIds： 事件规则</li><li>Subject： 事件对象</li><li>Region： 事件地域</li><li>Status： 事件状态</li></ul>
      */
     public void setOrderFields(String [] OrderFields) {
         this.OrderFields = OrderFields;
     }
 
     /**
-     * Get <p>排序方式，asc 从旧到新，desc 从新到旧</p> 
-     * @return OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+     * Get <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p> 
+     * @return OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set <p>排序方式，asc 从旧到新，desc 从新到旧</p>
-     * @param OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p>
+     * Set <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
+     * @param OrderBy <p>排序方式，asc 从旧到新，desc 从新到旧</p><p>枚举值：</p><ul><li>asc： 从旧到新</li><li>desc： 从新到旧</li></ul><p>默认值：desc</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

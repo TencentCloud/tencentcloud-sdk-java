@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class ModifyNatInstanceResponse extends AbstractModel {
 
     /**
-    * 0 正常
--1 异常
+    * <p>0 正常<br>-1 异常</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * nat实例唯一ID
+    * <p>nat实例唯一ID</p>
     */
     @SerializedName("NatInstanceId")
     @Expose
@@ -46,36 +45,32 @@ public class ModifyNatInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0 正常
--1 异常 
-     * @return Status 0 正常
--1 异常
+     * Get <p>0 正常<br>-1 异常</p> 
+     * @return Status <p>0 正常<br>-1 异常</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0 正常
--1 异常
-     * @param Status 0 正常
--1 异常
+     * Set <p>0 正常<br>-1 异常</p>
+     * @param Status <p>0 正常<br>-1 异常</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get nat实例唯一ID 
-     * @return NatInstanceId nat实例唯一ID
+     * Get <p>nat实例唯一ID</p> 
+     * @return NatInstanceId <p>nat实例唯一ID</p>
      */
     public String getNatInstanceId() {
         return this.NatInstanceId;
     }
 
     /**
-     * Set nat实例唯一ID
-     * @param NatInstanceId nat实例唯一ID
+     * Set <p>nat实例唯一ID</p>
+     * @param NatInstanceId <p>nat实例唯一ID</p>
      */
     public void setNatInstanceId(String NatInstanceId) {
         this.NatInstanceId = NatInstanceId;

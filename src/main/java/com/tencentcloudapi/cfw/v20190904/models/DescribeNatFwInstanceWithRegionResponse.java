@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNatFwInstanceWithRegionResponse extends AbstractModel {
 
     /**
-    * 实例数组
+    * <p>实例数组</p>
     */
     @SerializedName("NatinsLst")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeNatFwInstanceWithRegionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例数组 
-     * @return NatinsLst 实例数组
+     * Get <p>实例数组</p> 
+     * @return NatinsLst <p>实例数组</p>
      */
     public NatFwInstance [] getNatinsLst() {
         return this.NatinsLst;
     }
 
     /**
-     * Set 实例数组
-     * @param NatinsLst 实例数组
+     * Set <p>实例数组</p>
+     * @param NatinsLst <p>实例数组</p>
      */
     public void setNatinsLst(NatFwInstance [] NatinsLst) {
         this.NatinsLst = NatinsLst;

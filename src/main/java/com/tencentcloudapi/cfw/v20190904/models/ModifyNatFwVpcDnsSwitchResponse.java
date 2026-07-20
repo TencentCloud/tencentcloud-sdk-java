@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyNatFwVpcDnsSwitchResponse extends AbstractModel {
 
     /**
-    * 修改成功
+    * <p>修改成功</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyNatFwVpcDnsSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改成功 
-     * @return ReturnMsg 修改成功
+     * Get <p>修改成功</p> 
+     * @return ReturnMsg <p>修改成功</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 修改成功
-     * @param ReturnMsg 修改成功
+     * Set <p>修改成功</p>
+     * @param ReturnMsg <p>修改成功</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

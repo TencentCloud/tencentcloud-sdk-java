@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SlowLogInfoItem extends AbstractModel {
 
     /**
-    * 慢日志开始时间
+    * 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("Timestamp")
     @Expose
@@ -87,16 +87,16 @@ public class SlowLogInfoItem extends AbstractModel {
     private Long RowsSent;
 
     /**
-     * Get 慢日志开始时间 
-     * @return Timestamp 慢日志开始时间
+     * Get 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 慢日志开始时间
-     * @param Timestamp 慢日志开始时间
+     * Set 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
+     * @param Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;

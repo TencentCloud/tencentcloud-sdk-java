@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyClusterFwBypassRequest extends AbstractModel {
 
     /**
-    * 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
+    * <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-    * 云联网实例ID
+    * <p>云联网实例ID</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
+    * <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * NAT防火墙实例ID，FwType为nat时必填
+    * <p>NAT防火墙实例ID，FwType为nat时必填</p>
     */
     @SerializedName("NatInsId")
     @Expose
     private String NatInsId;
 
     /**
-     * Get 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙 
-     * @return FwType 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
+     * Get <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p> 
+     * @return FwType <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
-     * @param FwType 防火墙类型，"VPC_FW"-VPC防火墙，"NAT_FW"-NAT防火墙
+     * Set <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
+     * @param FwType <p>防火墙类型，&quot;VPC_FW&quot;-VPC防火墙，&quot;NAT_FW&quot;-NAT防火墙</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 云联网实例ID 
-     * @return CcnId 云联网实例ID
+     * Get <p>云联网实例ID</p> 
+     * @return CcnId <p>云联网实例ID</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网实例ID
-     * @param CcnId 云联网实例ID
+     * Set <p>云联网实例ID</p>
+     * @param CcnId <p>云联网实例ID</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙） 
-     * @return Enable Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
+     * Get <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p> 
+     * @return Enable <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
-     * @param Enable Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）
+     * Set <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
+     * @param Enable <p>Bypass开关，true-开启Bypass（禁用正常下一跳，流量绕过防火墙），false-关闭Bypass（启用正常下一跳，流量经过防火墙）</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get NAT防火墙实例ID，FwType为nat时必填 
-     * @return NatInsId NAT防火墙实例ID，FwType为nat时必填
+     * Get <p>NAT防火墙实例ID，FwType为nat时必填</p> 
+     * @return NatInsId <p>NAT防火墙实例ID，FwType为nat时必填</p>
      */
     public String getNatInsId() {
         return this.NatInsId;
     }
 
     /**
-     * Set NAT防火墙实例ID，FwType为nat时必填
-     * @param NatInsId NAT防火墙实例ID，FwType为nat时必填
+     * Set <p>NAT防火墙实例ID，FwType为nat时必填</p>
+     * @param NatInsId <p>NAT防火墙实例ID，FwType为nat时必填</p>
      */
     public void setNatInsId(String NatInsId) {
         this.NatInsId = NatInsId;

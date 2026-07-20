@@ -1020,6 +1020,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeTasks）用于查询任务列表
+     * @param req DescribeMCPTaskRequest
+     * @return DescribeMCPTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMCPTaskResponse DescribeMCPTask(DescribeMCPTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMCPTask", DescribeMCPTaskResponse.class);
+    }
+
+    /**
+     *获取任务结果查询
+     * @param req DescribeMCPTaskResultRequest
+     * @return DescribeMCPTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMCPTaskResultResponse DescribeMCPTaskResult(DescribeMCPTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMCPTaskResult", DescribeMCPTaskResultResponse.class);
+    }
+
+    /**
      *根据资源组获取spark session列表
      * @param req DescribeNativeSparkSessionsRequest
      * @return DescribeNativeSparkSessionsResponse

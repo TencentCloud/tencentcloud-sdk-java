@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAppResponse extends AbstractModel {
 
     /**
-    * 应用详情
+    * <p>应用详情</p>
     */
     @SerializedName("App")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAppResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用详情 
-     * @return App 应用详情
+     * Get <p>应用详情</p> 
+     * @return App <p>应用详情</p>
      */
     public App getApp() {
         return this.App;
     }
 
     /**
-     * Set 应用详情
-     * @param App 应用详情
+     * Set <p>应用详情</p>
+     * @param App <p>应用详情</p>
      */
     public void setApp(App App) {
         this.App = App;

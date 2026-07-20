@@ -40,6 +40,7 @@ public class Plugin extends AbstractModel {
 
     /**
     * 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operation")
     @Expose
@@ -61,6 +62,7 @@ public class Plugin extends AbstractModel {
 
     /**
     * 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Profile")
     @Expose
@@ -68,6 +70,7 @@ public class Plugin extends AbstractModel {
 
     /**
     * 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statistics")
     @Expose
@@ -82,6 +85,7 @@ public class Plugin extends AbstractModel {
 
     /**
     * 工具列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ToolList")
     @Expose
@@ -96,6 +100,7 @@ public class Plugin extends AbstractModel {
 
     /**
     * 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserState")
     @Expose
@@ -138,8 +143,10 @@ public class Plugin extends AbstractModel {
     }
 
     /**
-     * Get 插件运营管理信息 
+     * Get 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Operation 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PluginOperation getOperation() {
         return this.Operation;
@@ -147,7 +154,9 @@ public class Plugin extends AbstractModel {
 
     /**
      * Set 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Operation 插件运营管理信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperation(PluginOperation Operation) {
         this.Operation = Operation;
@@ -186,8 +195,10 @@ public class Plugin extends AbstractModel {
     }
 
     /**
-     * Get 插件基础信息 
+     * Get 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Profile 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PluginProfile getProfile() {
         return this.Profile;
@@ -195,15 +206,19 @@ public class Plugin extends AbstractModel {
 
     /**
      * Set 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Profile 插件基础信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfile(PluginProfile Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get 插件统计信息 
+     * Get 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Statistics 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PluginStatistics getStatistics() {
         return this.Statistics;
@@ -211,7 +226,9 @@ public class Plugin extends AbstractModel {
 
     /**
      * Set 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Statistics 插件统计信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatistics(PluginStatistics Statistics) {
         this.Statistics = Statistics;
@@ -234,8 +251,10 @@ public class Plugin extends AbstractModel {
     }
 
     /**
-     * Get 工具列表 
+     * Get 工具列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ToolList 工具列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tool [] getToolList() {
         return this.ToolList;
@@ -243,7 +262,9 @@ public class Plugin extends AbstractModel {
 
     /**
      * Set 工具列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ToolList 工具列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToolList(Tool [] ToolList) {
         this.ToolList = ToolList;
@@ -266,8 +287,10 @@ public class Plugin extends AbstractModel {
     }
 
     /**
-     * Get 用户维度的插件状态信息 
+     * Get 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserState 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PluginUserState getUserState() {
         return this.UserState;
@@ -275,7 +298,9 @@ public class Plugin extends AbstractModel {
 
     /**
      * Set 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserState 用户维度的插件状态信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserState(PluginUserState UserState) {
         this.UserState = UserState;

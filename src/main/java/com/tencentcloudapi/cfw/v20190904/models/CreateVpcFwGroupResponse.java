@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVpcFwGroupResponse extends AbstractModel {
 
     /**
-    * 防火墙组ID
+    * <p>防火墙组ID</p>
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateVpcFwGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防火墙组ID 
-     * @return FwGroupId 防火墙组ID
+     * Get <p>防火墙组ID</p> 
+     * @return FwGroupId <p>防火墙组ID</p>
      */
     public String getFwGroupId() {
         return this.FwGroupId;
     }
 
     /**
-     * Set 防火墙组ID
-     * @param FwGroupId 防火墙组ID
+     * Set <p>防火墙组ID</p>
+     * @param FwGroupId <p>防火墙组ID</p>
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyNatInstanceRequest extends AbstractModel {
 
     /**
-    * NAT防火墙实例名称
+    * <p>NAT防火墙实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * NAT防火墙实例ID
+    * <p>NAT防火墙实例ID</p>
     */
     @SerializedName("NatInstanceId")
     @Expose
     private String NatInstanceId;
 
     /**
-     * Get NAT防火墙实例名称 
-     * @return InstanceName NAT防火墙实例名称
+     * Get <p>NAT防火墙实例名称</p> 
+     * @return InstanceName <p>NAT防火墙实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set NAT防火墙实例名称
-     * @param InstanceName NAT防火墙实例名称
+     * Set <p>NAT防火墙实例名称</p>
+     * @param InstanceName <p>NAT防火墙实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get NAT防火墙实例ID 
-     * @return NatInstanceId NAT防火墙实例ID
+     * Get <p>NAT防火墙实例ID</p> 
+     * @return NatInstanceId <p>NAT防火墙实例ID</p>
      */
     public String getNatInstanceId() {
         return this.NatInstanceId;
     }
 
     /**
-     * Set NAT防火墙实例ID
-     * @param NatInstanceId NAT防火墙实例ID
+     * Set <p>NAT防火墙实例ID</p>
+     * @param NatInstanceId <p>NAT防火墙实例ID</p>
      */
     public void setNatInstanceId(String NatInstanceId) {
         this.NatInstanceId = NatInstanceId;

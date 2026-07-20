@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyVpcFwGroupRequest extends AbstractModel {
 
     /**
-    * 编辑的防火墙(组)ID
+    * <p>编辑的防火墙(组)ID</p>
     */
     @SerializedName("FwGroupId")
     @Expose
     private String FwGroupId;
 
     /**
-    * 修改防火墙(组)名称
+    * <p>修改防火墙(组)名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 编辑的防火墙实例列表
+    * <p>编辑的防火墙实例列表</p>
     */
     @SerializedName("VpcFwInstances")
     @Expose
     private VpcFwInstance [] VpcFwInstances;
 
     /**
-    * 指定防火墙使用网段信息
+    * <p>指定防火墙使用网段信息</p>
     */
     @SerializedName("FwCidrInfo")
     @Expose
     private FwCidrInfo FwCidrInfo;
 
     /**
-     * Get 编辑的防火墙(组)ID 
-     * @return FwGroupId 编辑的防火墙(组)ID
+     * Get <p>编辑的防火墙(组)ID</p> 
+     * @return FwGroupId <p>编辑的防火墙(组)ID</p>
      */
     public String getFwGroupId() {
         return this.FwGroupId;
     }
 
     /**
-     * Set 编辑的防火墙(组)ID
-     * @param FwGroupId 编辑的防火墙(组)ID
+     * Set <p>编辑的防火墙(组)ID</p>
+     * @param FwGroupId <p>编辑的防火墙(组)ID</p>
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 修改防火墙(组)名称 
-     * @return Name 修改防火墙(组)名称
+     * Get <p>修改防火墙(组)名称</p> 
+     * @return Name <p>修改防火墙(组)名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 修改防火墙(组)名称
-     * @param Name 修改防火墙(组)名称
+     * Set <p>修改防火墙(组)名称</p>
+     * @param Name <p>修改防火墙(组)名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 编辑的防火墙实例列表 
-     * @return VpcFwInstances 编辑的防火墙实例列表
+     * Get <p>编辑的防火墙实例列表</p> 
+     * @return VpcFwInstances <p>编辑的防火墙实例列表</p>
      */
     public VpcFwInstance [] getVpcFwInstances() {
         return this.VpcFwInstances;
     }
 
     /**
-     * Set 编辑的防火墙实例列表
-     * @param VpcFwInstances 编辑的防火墙实例列表
+     * Set <p>编辑的防火墙实例列表</p>
+     * @param VpcFwInstances <p>编辑的防火墙实例列表</p>
      */
     public void setVpcFwInstances(VpcFwInstance [] VpcFwInstances) {
         this.VpcFwInstances = VpcFwInstances;
     }
 
     /**
-     * Get 指定防火墙使用网段信息 
-     * @return FwCidrInfo 指定防火墙使用网段信息
+     * Get <p>指定防火墙使用网段信息</p> 
+     * @return FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public FwCidrInfo getFwCidrInfo() {
         return this.FwCidrInfo;
     }
 
     /**
-     * Set 指定防火墙使用网段信息
-     * @param FwCidrInfo 指定防火墙使用网段信息
+     * Set <p>指定防火墙使用网段信息</p>
+     * @param FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
         this.FwCidrInfo = FwCidrInfo;

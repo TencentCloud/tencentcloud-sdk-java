@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyNatFwVpcDnsSwitchRequest extends AbstractModel {
 
     /**
-    * nat 防火墙 id
+    * <p>nat 防火墙 id</p>
     */
     @SerializedName("NatFwInsId")
     @Expose
     private String NatFwInsId;
 
     /**
-    * DNS 开关切换列表
+    * <p>DNS 开关切换列表</p>
     */
     @SerializedName("DnsVpcSwitchLst")
     @Expose
     private DnsVpcSwitch [] DnsVpcSwitchLst;
 
     /**
-     * Get nat 防火墙 id 
-     * @return NatFwInsId nat 防火墙 id
+     * Get <p>nat 防火墙 id</p> 
+     * @return NatFwInsId <p>nat 防火墙 id</p>
      */
     public String getNatFwInsId() {
         return this.NatFwInsId;
     }
 
     /**
-     * Set nat 防火墙 id
-     * @param NatFwInsId nat 防火墙 id
+     * Set <p>nat 防火墙 id</p>
+     * @param NatFwInsId <p>nat 防火墙 id</p>
      */
     public void setNatFwInsId(String NatFwInsId) {
         this.NatFwInsId = NatFwInsId;
     }
 
     /**
-     * Get DNS 开关切换列表 
-     * @return DnsVpcSwitchLst DNS 开关切换列表
+     * Get <p>DNS 开关切换列表</p> 
+     * @return DnsVpcSwitchLst <p>DNS 开关切换列表</p>
      */
     public DnsVpcSwitch [] getDnsVpcSwitchLst() {
         return this.DnsVpcSwitchLst;
     }
 
     /**
-     * Set DNS 开关切换列表
-     * @param DnsVpcSwitchLst DNS 开关切换列表
+     * Set <p>DNS 开关切换列表</p>
+     * @param DnsVpcSwitchLst <p>DNS 开关切换列表</p>
      */
     public void setDnsVpcSwitchLst(DnsVpcSwitch [] DnsVpcSwitchLst) {
         this.DnsVpcSwitchLst = DnsVpcSwitchLst;

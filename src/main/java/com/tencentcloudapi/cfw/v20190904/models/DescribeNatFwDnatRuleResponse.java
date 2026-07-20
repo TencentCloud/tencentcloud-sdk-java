@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeNatFwDnatRuleResponse extends AbstractModel {
 
     /**
-    * Dnat规则列表
+    * <p>Dnat规则列表</p>
     */
     @SerializedName("Data")
     @Expose
     private DescNatDnatRule [] Data;
 
     /**
-    * 列表总数
+    * <p>列表总数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeNatFwDnatRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Dnat规则列表 
-     * @return Data Dnat规则列表
+     * Get <p>Dnat规则列表</p> 
+     * @return Data <p>Dnat规则列表</p>
      */
     public DescNatDnatRule [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Dnat规则列表
-     * @param Data Dnat规则列表
+     * Set <p>Dnat规则列表</p>
+     * @param Data <p>Dnat规则列表</p>
      */
     public void setData(DescNatDnatRule [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 列表总数 
-     * @return Total 列表总数
+     * Get <p>列表总数</p> 
+     * @return Total <p>列表总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 列表总数
-     * @param Total 列表总数
+     * Set <p>列表总数</p>
+     * @param Total <p>列表总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

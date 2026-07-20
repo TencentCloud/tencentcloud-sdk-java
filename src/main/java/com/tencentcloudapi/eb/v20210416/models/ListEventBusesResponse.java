@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListEventBusesResponse extends AbstractModel {
 
     /**
-    * 事件集信息
+    * <p>事件集信息</p>
     */
     @SerializedName("EventBuses")
     @Expose
     private EventBus [] EventBuses;
 
     /**
-    * 事件集总数
+    * <p>事件集总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class ListEventBusesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件集信息 
-     * @return EventBuses 事件集信息
+     * Get <p>事件集信息</p> 
+     * @return EventBuses <p>事件集信息</p>
      */
     public EventBus [] getEventBuses() {
         return this.EventBuses;
     }
 
     /**
-     * Set 事件集信息
-     * @param EventBuses 事件集信息
+     * Set <p>事件集信息</p>
+     * @param EventBuses <p>事件集信息</p>
      */
     public void setEventBuses(EventBus [] EventBuses) {
         this.EventBuses = EventBuses;
     }
 
     /**
-     * Get 事件集总数 
-     * @return TotalCount 事件集总数
+     * Get <p>事件集总数</p> 
+     * @return TotalCount <p>事件集总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 事件集总数
-     * @param TotalCount 事件集总数
+     * Set <p>事件集总数</p>
+     * @param TotalCount <p>事件集总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

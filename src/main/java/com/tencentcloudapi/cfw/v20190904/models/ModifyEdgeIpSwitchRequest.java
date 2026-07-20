@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class ModifyEdgeIpSwitchRequest extends AbstractModel {
 
     /**
-    * 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
+    * <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 操作开关详情
+    * <p>操作开关详情</p>
     */
     @SerializedName("EdgeIpSwitchLst")
     @Expose
     private EdgeIpSwitch [] EdgeIpSwitchLst;
 
     /**
-    * 0 不自动选择子网
-1 自动选择子网创建私有连接
+    * <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
     */
     @SerializedName("AutoChooseSubnet")
     @Expose
     private Long AutoChooseSubnet;
 
     /**
-    * 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
+    * <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
     */
     @SerializedName("SwitchMode")
     @Expose
     private Long SwitchMode;
 
     /**
-     * Get 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式 
-     * @return Enable 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
+     * Get <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p> 
+     * @return Enable <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
-     * @param Enable 0 关闭开关
-1 打开开关
-2 不操作开关，此次切换模式
+     * Set <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
+     * @param Enable <p>0 关闭开关<br>1 打开开关<br>2 不操作开关，此次切换模式</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 操作开关详情 
-     * @return EdgeIpSwitchLst 操作开关详情
+     * Get <p>操作开关详情</p> 
+     * @return EdgeIpSwitchLst <p>操作开关详情</p>
      */
     public EdgeIpSwitch [] getEdgeIpSwitchLst() {
         return this.EdgeIpSwitchLst;
     }
 
     /**
-     * Set 操作开关详情
-     * @param EdgeIpSwitchLst 操作开关详情
+     * Set <p>操作开关详情</p>
+     * @param EdgeIpSwitchLst <p>操作开关详情</p>
      */
     public void setEdgeIpSwitchLst(EdgeIpSwitch [] EdgeIpSwitchLst) {
         this.EdgeIpSwitchLst = EdgeIpSwitchLst;
     }
 
     /**
-     * Get 0 不自动选择子网
-1 自动选择子网创建私有连接 
-     * @return AutoChooseSubnet 0 不自动选择子网
-1 自动选择子网创建私有连接
+     * Get <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p> 
+     * @return AutoChooseSubnet <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
      */
     public Long getAutoChooseSubnet() {
         return this.AutoChooseSubnet;
     }
 
     /**
-     * Set 0 不自动选择子网
-1 自动选择子网创建私有连接
-     * @param AutoChooseSubnet 0 不自动选择子网
-1 自动选择子网创建私有连接
+     * Set <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
+     * @param AutoChooseSubnet <p>0 不自动选择子网<br>1 自动选择子网创建私有连接</p>
      */
     public void setAutoChooseSubnet(Long AutoChooseSubnet) {
         this.AutoChooseSubnet = AutoChooseSubnet;
     }
 
     /**
-     * Get 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关 
-     * @return SwitchMode 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
+     * Get <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p> 
+     * @return SwitchMode <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
      */
     public Long getSwitchMode() {
         return this.SwitchMode;
     }
 
     /**
-     * Set 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
-     * @param SwitchMode 0 切换为旁路
-1 切换为串行
-2 不切换模式，此次操作开关
+     * Set <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
+     * @param SwitchMode <p>0 切换为旁路<br>1 切换为串行<br>2 不切换模式，此次操作开关</p>
      */
     public void setSwitchMode(Long SwitchMode) {
         this.SwitchMode = SwitchMode;

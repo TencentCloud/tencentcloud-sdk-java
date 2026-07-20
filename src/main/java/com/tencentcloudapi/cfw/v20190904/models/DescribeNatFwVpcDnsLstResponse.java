@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
 
     /**
-    * nat防火墙vpc dns 信息数组
+    * <p>nat防火墙vpc dns 信息数组</p>
     */
     @SerializedName("VpcDnsSwitchLst")
     @Expose
     private VpcDnsInfo [] VpcDnsSwitchLst;
 
     /**
-    * 返回参数 success成功 failed 失败
+    * <p>返回参数 success成功 failed 失败</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 开关总条数
+    * <p>开关总条数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get nat防火墙vpc dns 信息数组 
-     * @return VpcDnsSwitchLst nat防火墙vpc dns 信息数组
+     * Get <p>nat防火墙vpc dns 信息数组</p> 
+     * @return VpcDnsSwitchLst <p>nat防火墙vpc dns 信息数组</p>
      */
     public VpcDnsInfo [] getVpcDnsSwitchLst() {
         return this.VpcDnsSwitchLst;
     }
 
     /**
-     * Set nat防火墙vpc dns 信息数组
-     * @param VpcDnsSwitchLst nat防火墙vpc dns 信息数组
+     * Set <p>nat防火墙vpc dns 信息数组</p>
+     * @param VpcDnsSwitchLst <p>nat防火墙vpc dns 信息数组</p>
      */
     public void setVpcDnsSwitchLst(VpcDnsInfo [] VpcDnsSwitchLst) {
         this.VpcDnsSwitchLst = VpcDnsSwitchLst;
     }
 
     /**
-     * Get 返回参数 success成功 failed 失败 
-     * @return ReturnMsg 返回参数 success成功 failed 失败
+     * Get <p>返回参数 success成功 failed 失败</p> 
+     * @return ReturnMsg <p>返回参数 success成功 failed 失败</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 返回参数 success成功 failed 失败
-     * @param ReturnMsg 返回参数 success成功 failed 失败
+     * Set <p>返回参数 success成功 failed 失败</p>
+     * @param ReturnMsg <p>返回参数 success成功 failed 失败</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 开关总条数 
-     * @return Total 开关总条数
+     * Get <p>开关总条数</p> 
+     * @return Total <p>开关总条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 开关总条数
-     * @param Total 开关总条数
+     * Set <p>开关总条数</p>
+     * @param Total <p>开关总条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

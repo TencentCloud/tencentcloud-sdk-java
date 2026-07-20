@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeFwEdgeIpsRequest extends AbstractModel {
 
     /**
-    * 过滤条件组合
+    * <p>过滤条件组合</p>
     */
     @SerializedName("Filters")
     @Expose
     private CommonFilter [] Filters;
 
     /**
-    * 每页条数
+    * <p>每页条数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移值
+    * <p>偏移值</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 检索的起始时间，可不传
+    * <p>检索的起始时间，可不传</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 检索的截止时间，可不传
+    * <p>检索的截止时间，可不传</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+    * <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序所用到的字段
+    * <p>排序所用到的字段</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 过滤条件组合 
-     * @return Filters 过滤条件组合
+     * Get <p>过滤条件组合</p> 
+     * @return Filters <p>过滤条件组合</p>
      */
     public CommonFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件组合
-     * @param Filters 过滤条件组合
+     * Set <p>过滤条件组合</p>
+     * @param Filters <p>过滤条件组合</p>
      */
     public void setFilters(CommonFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 每页条数 
-     * @return Limit 每页条数
+     * Get <p>每页条数</p> 
+     * @return Limit <p>每页条数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数
-     * @param Limit 每页条数
+     * Set <p>每页条数</p>
+     * @param Limit <p>每页条数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移值 
-     * @return Offset 偏移值
+     * Get <p>偏移值</p> 
+     * @return Offset <p>偏移值</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移值
-     * @param Offset 偏移值
+     * Set <p>偏移值</p>
+     * @param Offset <p>偏移值</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 检索的起始时间，可不传 
-     * @return StartTime 检索的起始时间，可不传
+     * Get <p>检索的起始时间，可不传</p> 
+     * @return StartTime <p>检索的起始时间，可不传</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 检索的起始时间，可不传
-     * @param StartTime 检索的起始时间，可不传
+     * Set <p>检索的起始时间，可不传</p>
+     * @param StartTime <p>检索的起始时间，可不传</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 检索的截止时间，可不传 
-     * @return EndTime 检索的截止时间，可不传
+     * Get <p>检索的截止时间，可不传</p> 
+     * @return EndTime <p>检索的截止时间，可不传</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 检索的截止时间，可不传
-     * @param EndTime 检索的截止时间，可不传
+     * Set <p>检索的截止时间，可不传</p>
+     * @param EndTime <p>检索的截止时间，可不传</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值 
-     * @return Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Get <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p> 
+     * @return Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-     * @param Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Set <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
+     * @param Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序所用到的字段 
-     * @return By 排序所用到的字段
+     * Get <p>排序所用到的字段</p> 
+     * @return By <p>排序所用到的字段</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序所用到的字段
-     * @param By 排序所用到的字段
+     * Set <p>排序所用到的字段</p>
+     * @param By <p>排序所用到的字段</p>
      */
     public void setBy(String By) {
         this.By = By;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddBatchCustomRuleResponse extends AbstractModel {
 
     /**
-    * 操作成功
+    * <p>操作成功</p>
     */
     @SerializedName("Res")
     @Expose
@@ -38,16 +38,16 @@ public class AddBatchCustomRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作成功 
-     * @return Res 操作成功
+     * Get <p>操作成功</p> 
+     * @return Res <p>操作成功</p>
      */
     public String getRes() {
         return this.Res;
     }
 
     /**
-     * Set 操作成功
-     * @param Res 操作成功
+     * Set <p>操作成功</p>
+     * @param Res <p>操作成功</p>
      */
     public void setRes(String Res) {
         this.Res = Res;

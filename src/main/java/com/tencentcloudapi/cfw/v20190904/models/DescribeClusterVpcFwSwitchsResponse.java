@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 防火墙开关列表
+    * <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,7 +39,7 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     private ClusterSwitchDetail [] Data;
 
     /**
-    * 开关开启失败列表
+    * <p>开关开启失败列表</p>
     */
     @SerializedName("FailData")
     @Expose
@@ -53,25 +53,25 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get <p>总条数</p> 
+     * @return Total <p>总条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set <p>总条数</p>
+     * @param Total <p>总条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 防火墙开关列表
+     * Get <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 防火墙开关列表
+     * @return Data <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterSwitchDetail [] getData() {
@@ -79,9 +79,9 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     }
 
     /**
-     * Set 防火墙开关列表
+     * Set <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 防火墙开关列表
+     * @param Data <p>防火墙开关列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ClusterSwitchDetail [] Data) {
@@ -89,16 +89,16 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     }
 
     /**
-     * Get 开关开启失败列表 
-     * @return FailData 开关开启失败列表
+     * Get <p>开关开启失败列表</p> 
+     * @return FailData <p>开关开启失败列表</p>
      */
     public SwitchFailInfo [] getFailData() {
         return this.FailData;
     }
 
     /**
-     * Set 开关开启失败列表
-     * @param FailData 开关开启失败列表
+     * Set <p>开关开启失败列表</p>
+     * @param FailData <p>开关开启失败列表</p>
      */
     public void setFailData(SwitchFailInfo [] FailData) {
         this.FailData = FailData;

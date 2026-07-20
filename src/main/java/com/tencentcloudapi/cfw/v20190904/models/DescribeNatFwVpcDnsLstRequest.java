@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeNatFwVpcDnsLstRequest extends AbstractModel {
 
     /**
-    * natfw 防火墙实例id
+    * <p>natfw 防火墙实例id</p>
     */
     @SerializedName("NatFwInsId")
     @Expose
     private String NatFwInsId;
 
     /**
-    * natfw 过滤，以','分隔
+    * <p>natfw 过滤，以&#39;,&#39;分隔</p>
     */
     @SerializedName("NatInsIdFilter")
     @Expose
     private String NatInsIdFilter;
 
     /**
-    * 分页页数
+    * <p>分页页数</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页最多个数
+    * <p>每页最多个数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get natfw 防火墙实例id 
-     * @return NatFwInsId natfw 防火墙实例id
+     * Get <p>natfw 防火墙实例id</p> 
+     * @return NatFwInsId <p>natfw 防火墙实例id</p>
      */
     public String getNatFwInsId() {
         return this.NatFwInsId;
     }
 
     /**
-     * Set natfw 防火墙实例id
-     * @param NatFwInsId natfw 防火墙实例id
+     * Set <p>natfw 防火墙实例id</p>
+     * @param NatFwInsId <p>natfw 防火墙实例id</p>
      */
     public void setNatFwInsId(String NatFwInsId) {
         this.NatFwInsId = NatFwInsId;
     }
 
     /**
-     * Get natfw 过滤，以','分隔 
-     * @return NatInsIdFilter natfw 过滤，以','分隔
+     * Get <p>natfw 过滤，以&#39;,&#39;分隔</p> 
+     * @return NatInsIdFilter <p>natfw 过滤，以&#39;,&#39;分隔</p>
      */
     public String getNatInsIdFilter() {
         return this.NatInsIdFilter;
     }
 
     /**
-     * Set natfw 过滤，以','分隔
-     * @param NatInsIdFilter natfw 过滤，以','分隔
+     * Set <p>natfw 过滤，以&#39;,&#39;分隔</p>
+     * @param NatInsIdFilter <p>natfw 过滤，以&#39;,&#39;分隔</p>
      */
     public void setNatInsIdFilter(String NatInsIdFilter) {
         this.NatInsIdFilter = NatInsIdFilter;
     }
 
     /**
-     * Get 分页页数 
-     * @return Offset 分页页数
+     * Get <p>分页页数</p> 
+     * @return Offset <p>分页页数</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页页数
-     * @param Offset 分页页数
+     * Set <p>分页页数</p>
+     * @param Offset <p>分页页数</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页最多个数 
-     * @return Limit 每页最多个数
+     * Get <p>每页最多个数</p> 
+     * @return Limit <p>每页最多个数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页最多个数
-     * @param Limit 每页最多个数
+     * Set <p>每页最多个数</p>
+     * @param Limit <p>每页最多个数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

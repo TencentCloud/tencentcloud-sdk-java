@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteNatFwInstanceRequest extends AbstractModel {
 
     /**
-    * 防火墙实例id
+    * <p>防火墙实例id</p>
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInstance 防火墙实例id
+     * Get <p>防火墙实例id</p> 
+     * @return CfwInstance <p>防火墙实例id</p>
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInstance 防火墙实例id
+     * Set <p>防火墙实例id</p>
+     * @param CfwInstance <p>防火墙实例id</p>
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;

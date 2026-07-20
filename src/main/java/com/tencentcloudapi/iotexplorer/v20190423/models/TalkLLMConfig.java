@@ -59,7 +59,7 @@ public class TalkLLMConfig extends AbstractModel {
     private Long Timeout;
 
     /**
-    * <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+    * <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
     */
     @SerializedName("BaseUrl")
     @Expose
@@ -85,6 +85,13 @@ public class TalkLLMConfig extends AbstractModel {
     @SerializedName("ExtraBody")
     @Expose
     private String ExtraBody;
+
+    /**
+    * <p>ADP 平台配置</p>
+    */
+    @SerializedName("ADP")
+    @Expose
+    private ADPConfig ADP;
 
     /**
      * Get <p>LLM类型：default-平台默认；openai-OpenAI兼容模型</p> 
@@ -167,16 +174,16 @@ public class TalkLLMConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p> 
-     * @return BaseUrl <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+     * Get <p>OpenAI兼容模型的Base URL，Type=openai时必填</p> 
+     * @return BaseUrl <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
      */
     public String getBaseUrl() {
         return this.BaseUrl;
     }
 
     /**
-     * Set <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
-     * @param BaseUrl <p>OpenAI兼容模型Base URL，仅支持 80 和 443 端口，Type=openai时必填</p>
+     * Set <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
+     * @param BaseUrl <p>OpenAI兼容模型的Base URL，Type=openai时必填</p>
      */
     public void setBaseUrl(String BaseUrl) {
         this.BaseUrl = BaseUrl;
@@ -230,6 +237,22 @@ public class TalkLLMConfig extends AbstractModel {
         this.ExtraBody = ExtraBody;
     }
 
+    /**
+     * Get <p>ADP 平台配置</p> 
+     * @return ADP <p>ADP 平台配置</p>
+     */
+    public ADPConfig getADP() {
+        return this.ADP;
+    }
+
+    /**
+     * Set <p>ADP 平台配置</p>
+     * @param ADP <p>ADP 平台配置</p>
+     */
+    public void setADP(ADPConfig ADP) {
+        this.ADP = ADP;
+    }
+
     public TalkLLMConfig() {
     }
 
@@ -265,6 +288,9 @@ public class TalkLLMConfig extends AbstractModel {
         if (source.ExtraBody != null) {
             this.ExtraBody = new String(source.ExtraBody);
         }
+        if (source.ADP != null) {
+            this.ADP = new ADPConfig(source.ADP);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class TalkLLMConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "ApiKey", this.ApiKey);
         this.setParamSimple(map, prefix + "ExtraBody", this.ExtraBody);
+        this.setParamObj(map, prefix + "ADP.", this.ADP);
 
     }
 }

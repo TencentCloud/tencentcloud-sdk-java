@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyAppResponse extends AbstractModel {
 
     /**
-    * app_id
+    * <p>app_id</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 更新时间 (Unix时间戳,秒级)
+    * <p>更新时间 (Unix时间戳,秒级)</p>
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyAppResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get app_id 
-     * @return AppId app_id
+     * Get <p>app_id</p> 
+     * @return AppId <p>app_id</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set app_id
-     * @param AppId app_id
+     * Set <p>app_id</p>
+     * @param AppId <p>app_id</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 更新时间 (Unix时间戳,秒级) 
-     * @return UpdateTime 更新时间 (Unix时间戳,秒级)
+     * Get <p>更新时间 (Unix时间戳,秒级)</p> 
+     * @return UpdateTime <p>更新时间 (Unix时间戳,秒级)</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间 (Unix时间戳,秒级)
-     * @param UpdateTime 更新时间 (Unix时间戳,秒级)
+     * Set <p>更新时间 (Unix时间戳,秒级)</p>
+     * @param UpdateTime <p>更新时间 (Unix时间戳,秒级)</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

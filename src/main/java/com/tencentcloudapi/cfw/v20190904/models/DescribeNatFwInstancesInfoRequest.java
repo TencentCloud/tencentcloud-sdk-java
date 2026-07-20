@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeNatFwInstancesInfoRequest extends AbstractModel {
 
     /**
-    * 获取实例列表过滤字段
+    * <p>获取实例列表过滤字段</p>
     */
     @SerializedName("Filter")
     @Expose
     private NatFwFilter [] Filter;
 
     /**
-    * 第几页
+    * <p>第几页</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页长度
+    * <p>每页长度</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 获取实例列表过滤字段 
-     * @return Filter 获取实例列表过滤字段
+     * Get <p>获取实例列表过滤字段</p> 
+     * @return Filter <p>获取实例列表过滤字段</p>
      */
     public NatFwFilter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 获取实例列表过滤字段
-     * @param Filter 获取实例列表过滤字段
+     * Set <p>获取实例列表过滤字段</p>
+     * @param Filter <p>获取实例列表过滤字段</p>
      */
     public void setFilter(NatFwFilter [] Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 第几页 
-     * @return Offset 第几页
+     * Get <p>第几页</p> 
+     * @return Offset <p>第几页</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 第几页
-     * @param Offset 第几页
+     * Set <p>第几页</p>
+     * @param Offset <p>第几页</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页长度 
-     * @return Limit 每页长度
+     * Get <p>每页长度</p> 
+     * @return Limit <p>每页长度</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页长度
-     * @param Limit 每页长度
+     * Set <p>每页长度</p>
+     * @param Limit <p>每页长度</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

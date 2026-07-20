@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListConnectionsResponse extends AbstractModel {
 
     /**
-    * 连接器信息
+    * <p>连接器信息</p>
     */
     @SerializedName("Connections")
     @Expose
     private Connection [] Connections;
 
     /**
-    * 连接器总数
+    * <p>连接器总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class ListConnectionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 连接器信息 
-     * @return Connections 连接器信息
+     * Get <p>连接器信息</p> 
+     * @return Connections <p>连接器信息</p>
      */
     public Connection [] getConnections() {
         return this.Connections;
     }
 
     /**
-     * Set 连接器信息
-     * @param Connections 连接器信息
+     * Set <p>连接器信息</p>
+     * @param Connections <p>连接器信息</p>
      */
     public void setConnections(Connection [] Connections) {
         this.Connections = Connections;
     }
 
     /**
-     * Get 连接器总数 
-     * @return TotalCount 连接器总数
+     * Get <p>连接器总数</p> 
+     * @return TotalCount <p>连接器总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 连接器总数
-     * @param TotalCount 连接器总数
+     * Set <p>连接器总数</p>
+     * @param TotalCount <p>连接器总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

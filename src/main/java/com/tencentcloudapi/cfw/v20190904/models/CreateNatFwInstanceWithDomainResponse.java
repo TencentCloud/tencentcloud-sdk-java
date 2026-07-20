@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNatFwInstanceWithDomainResponse extends AbstractModel {
 
     /**
-    * nat实例信息
+    * <p>nat实例信息</p>
     */
     @SerializedName("CfwInsId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateNatFwInstanceWithDomainResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get nat实例信息 
-     * @return CfwInsId nat实例信息
+     * Get <p>nat实例信息</p> 
+     * @return CfwInsId <p>nat实例信息</p>
      */
     public String getCfwInsId() {
         return this.CfwInsId;
     }
 
     /**
-     * Set nat实例信息
-     * @param CfwInsId nat实例信息
+     * Set <p>nat实例信息</p>
+     * @param CfwInsId <p>nat实例信息</p>
      */
     public void setCfwInsId(String CfwInsId) {
         this.CfwInsId = CfwInsId;

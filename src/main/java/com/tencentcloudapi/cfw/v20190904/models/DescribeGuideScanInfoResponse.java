@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGuideScanInfoResponse extends AbstractModel {
 
     /**
-    * 扫描信息
+    * <p>扫描信息</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGuideScanInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 扫描信息 
-     * @return Data 扫描信息
+     * Get <p>扫描信息</p> 
+     * @return Data <p>扫描信息</p>
      */
     public ScanInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set 扫描信息
-     * @param Data 扫描信息
+     * Set <p>扫描信息</p>
+     * @param Data <p>扫描信息</p>
      */
     public void setData(ScanInfo Data) {
         this.Data = Data;

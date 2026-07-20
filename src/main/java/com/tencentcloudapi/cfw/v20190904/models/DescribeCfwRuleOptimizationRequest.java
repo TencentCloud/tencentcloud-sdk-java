@@ -24,69 +24,115 @@ import java.util.HashMap;
 public class DescribeCfwRuleOptimizationRequest extends AbstractModel {
 
     /**
-    * 长期零命中规则阈值天数。可选，必须为正整数，默认 180。
+    * <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+    */
+    @SerializedName("Dimensions")
+    @Expose
+    private String [] Dimensions;
+
+    /**
+    * <p>长期零命中规则阈值天数。可选，默认 180。</p>
     */
     @SerializedName("IdleDays")
     @Expose
     private Long IdleDays;
 
     /**
-    * 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
+    * <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
     */
     @SerializedName("IpAggMin")
     @Expose
     private Long IpAggMin;
 
     /**
-    * 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
+    * <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
     */
     @SerializedName("IocSample")
     @Expose
     private Long IocSample;
 
     /**
-     * Get 长期零命中规则阈值天数。可选，必须为正整数，默认 180。 
-     * @return IdleDays 长期零命中规则阈值天数。可选，必须为正整数，默认 180。
+     * Get <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p> 
+     * @return RuleType <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+     * @param RuleType <p>防火墙规则类型。必填。枚举：border 互联网边界；nat NAT 边界；vpc VPC 间；enterprise_sg 企业安全组。</p>
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p> 
+     * @return Dimensions <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+     */
+    public String [] getDimensions() {
+        return this.Dimensions;
+    }
+
+    /**
+     * Set <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+     * @param Dimensions <p>要执行的优化维度白名单。可选，例如 D1、D2、D8；不传默认执行全部支持维度。</p>
+     */
+    public void setDimensions(String [] Dimensions) {
+        this.Dimensions = Dimensions;
+    }
+
+    /**
+     * Get <p>长期零命中规则阈值天数。可选，默认 180。</p> 
+     * @return IdleDays <p>长期零命中规则阈值天数。可选，默认 180。</p>
      */
     public Long getIdleDays() {
         return this.IdleDays;
     }
 
     /**
-     * Set 长期零命中规则阈值天数。可选，必须为正整数，默认 180。
-     * @param IdleDays 长期零命中规则阈值天数。可选，必须为正整数，默认 180。
+     * Set <p>长期零命中规则阈值天数。可选，默认 180。</p>
+     * @param IdleDays <p>长期零命中规则阈值天数。可选，默认 180。</p>
      */
     public void setIdleDays(Long IdleDays) {
         this.IdleDays = IdleDays;
     }
 
     /**
-     * Get 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。 
-     * @return IpAggMin 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
+     * Get <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p> 
+     * @return IpAggMin <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
      */
     public Long getIpAggMin() {
         return this.IpAggMin;
     }
 
     /**
-     * Set 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
-     * @param IpAggMin 单 IP 离散过多聚合建议的最小数量。可选，最小为 2，默认 10。
+     * Set <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
+     * @param IpAggMin <p>单 IP 离散过多聚合建议的最小数量。可选，默认 10。</p>
      */
     public void setIpAggMin(Long IpAggMin) {
         this.IpAggMin = IpAggMin;
     }
 
     /**
-     * Get 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。 
-     * @return IocSample 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
+     * Get <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p> 
+     * @return IocSample <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
      */
     public Long getIocSample() {
         return this.IocSample;
     }
 
     /**
-     * Set 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
-     * @param IocSample 可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，必须为正整数，默认 50。
+     * Set <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
+     * @param IocSample <p>可迁移 IOC 建议中返回的样例 IOC 数量上限。可选，默认 50。</p>
      */
     public void setIocSample(Long IocSample) {
         this.IocSample = IocSample;
@@ -100,6 +146,15 @@ public class DescribeCfwRuleOptimizationRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCfwRuleOptimizationRequest(DescribeCfwRuleOptimizationRequest source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new String(source.Dimensions[i]);
+            }
+        }
         if (source.IdleDays != null) {
             this.IdleDays = new Long(source.IdleDays);
         }
@@ -116,6 +171,8 @@ public class DescribeCfwRuleOptimizationRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
         this.setParamSimple(map, prefix + "IdleDays", this.IdleDays);
         this.setParamSimple(map, prefix + "IpAggMin", this.IpAggMin);
         this.setParamSimple(map, prefix + "IocSample", this.IocSample);

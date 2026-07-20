@@ -49,7 +49,21 @@ public class CreatePluginRequest extends AbstractModel {
     */
     @SerializedName("ToolList")
     @Expose
-    private Tool ToolList;
+    private Tool [] ToolList;
+
+    /**
+    * <p>登录用户主账号(集成商模式必填)</p>
+    */
+    @SerializedName("LoginUin")
+    @Expose
+    private String LoginUin;
+
+    /**
+    * <p>登录用户子账号(集成商模式必填)</p>
+    */
+    @SerializedName("LoginSubAccountUin")
+    @Expose
+    private String LoginSubAccountUin;
 
     /**
      * Get <p>插件基础资料</p> 
@@ -103,7 +117,7 @@ public class CreatePluginRequest extends AbstractModel {
      * Get <p>插件的工具列表</p> 
      * @return ToolList <p>插件的工具列表</p>
      */
-    public Tool getToolList() {
+    public Tool [] getToolList() {
         return this.ToolList;
     }
 
@@ -111,8 +125,40 @@ public class CreatePluginRequest extends AbstractModel {
      * Set <p>插件的工具列表</p>
      * @param ToolList <p>插件的工具列表</p>
      */
-    public void setToolList(Tool ToolList) {
+    public void setToolList(Tool [] ToolList) {
         this.ToolList = ToolList;
+    }
+
+    /**
+     * Get <p>登录用户主账号(集成商模式必填)</p> 
+     * @return LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public String getLoginUin() {
+        return this.LoginUin;
+    }
+
+    /**
+     * Set <p>登录用户主账号(集成商模式必填)</p>
+     * @param LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public void setLoginUin(String LoginUin) {
+        this.LoginUin = LoginUin;
+    }
+
+    /**
+     * Get <p>登录用户子账号(集成商模式必填)</p> 
+     * @return LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public String getLoginSubAccountUin() {
+        return this.LoginSubAccountUin;
+    }
+
+    /**
+     * Set <p>登录用户子账号(集成商模式必填)</p>
+     * @param LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public void setLoginSubAccountUin(String LoginSubAccountUin) {
+        this.LoginSubAccountUin = LoginSubAccountUin;
     }
 
     public CreatePluginRequest() {
@@ -133,7 +179,16 @@ public class CreatePluginRequest extends AbstractModel {
             this.SpaceId = new String(source.SpaceId);
         }
         if (source.ToolList != null) {
-            this.ToolList = new Tool(source.ToolList);
+            this.ToolList = new Tool[source.ToolList.length];
+            for (int i = 0; i < source.ToolList.length; i++) {
+                this.ToolList[i] = new Tool(source.ToolList[i]);
+            }
+        }
+        if (source.LoginUin != null) {
+            this.LoginUin = new String(source.LoginUin);
+        }
+        if (source.LoginSubAccountUin != null) {
+            this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
         }
     }
 
@@ -145,7 +200,9 @@ public class CreatePluginRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Profile.", this.Profile);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
-        this.setParamObj(map, prefix + "ToolList.", this.ToolList);
+        this.setParamArrayObj(map, prefix + "ToolList.", this.ToolList);
+        this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
+        this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 
     }
 }

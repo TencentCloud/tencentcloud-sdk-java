@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class ModifyFwGroupSwitchRequest extends AbstractModel {
 
     /**
-    * 打开或关闭开关
-0：关闭开关
-1：打开开关
+    * <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 是否操作全部开关 0 不操作全部开关，1 操作全部开关
+    * <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
     */
     @SerializedName("AllSwitch")
     @Expose
     private Long AllSwitch;
 
     /**
-    * 开关列表
+    * <p>开关列表</p>
     */
     @SerializedName("SwitchList")
     @Expose
     private FwGroupSwitch [] SwitchList;
 
     /**
-     * Get 打开或关闭开关
-0：关闭开关
-1：打开开关 
-     * @return Enable 打开或关闭开关
-0：关闭开关
-1：打开开关
+     * Get <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p> 
+     * @return Enable <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 打开或关闭开关
-0：关闭开关
-1：打开开关
-     * @param Enable 打开或关闭开关
-0：关闭开关
-1：打开开关
+     * Set <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
+     * @param Enable <p>打开或关闭开关<br>0：关闭开关<br>1：打开开关</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 是否操作全部开关 0 不操作全部开关，1 操作全部开关 
-     * @return AllSwitch 是否操作全部开关 0 不操作全部开关，1 操作全部开关
+     * Get <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p> 
+     * @return AllSwitch <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
      */
     public Long getAllSwitch() {
         return this.AllSwitch;
     }
 
     /**
-     * Set 是否操作全部开关 0 不操作全部开关，1 操作全部开关
-     * @param AllSwitch 是否操作全部开关 0 不操作全部开关，1 操作全部开关
+     * Set <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
+     * @param AllSwitch <p>是否操作全部开关 0 不操作全部开关，1 操作全部开关</p>
      */
     public void setAllSwitch(Long AllSwitch) {
         this.AllSwitch = AllSwitch;
     }
 
     /**
-     * Get 开关列表 
-     * @return SwitchList 开关列表
+     * Get <p>开关列表</p> 
+     * @return SwitchList <p>开关列表</p>
      */
     public FwGroupSwitch [] getSwitchList() {
         return this.SwitchList;
     }
 
     /**
-     * Set 开关列表
-     * @param SwitchList 开关列表
+     * Set <p>开关列表</p>
+     * @param SwitchList <p>开关列表</p>
      */
     public void setSwitchList(FwGroupSwitch [] SwitchList) {
         this.SwitchList = SwitchList;

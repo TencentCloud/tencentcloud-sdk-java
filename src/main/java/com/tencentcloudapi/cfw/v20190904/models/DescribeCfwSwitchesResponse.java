@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCfwSwitchesResponse extends AbstractModel {
 
     /**
-    * 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+    * 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。border_firewall 返回公网 IP 总数、已防护数、未防护数、操作中数量和防护率；nat_firewall、vpc_firewall 按 cluster/ha 返回实例及子开关汇总；ndr 返回已开启开关数；ips 返回当前防护模式。
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCfwSwitchesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。 
-     * @return Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+     * Get 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。border_firewall 返回公网 IP 总数、已防护数、未防护数、操作中数量和防护率；nat_firewall、vpc_firewall 按 cluster/ha 返回实例及子开关汇总；ndr 返回已开启开关数；ips 返回当前防护模式。 
+     * @return Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。border_firewall 返回公网 IP 总数、已防护数、未防护数、操作中数量和防护率；nat_firewall、vpc_firewall 按 cluster/ha 返回实例及子开关汇总；ndr 返回已开启开关数；ips 返回当前防护模式。
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
-     * @param Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。
+     * Set 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。border_firewall 返回公网 IP 总数、已防护数、未防护数、操作中数量和防护率；nat_firewall、vpc_firewall 按 cluster/ha 返回实例及子开关汇总；ndr 返回已开启开关数；ips 返回当前防护模式。
+     * @param Data 查询结果。UTF-8 JSON object 字符串；调用方需解析 Response.Data。border_firewall 返回公网 IP 总数、已防护数、未防护数、操作中数量和防护率；nat_firewall、vpc_firewall 按 cluster/ha 返回实例及子开关汇总；ndr 返回已开启开关数；ips 返回当前防护模式。
      */
     public void setData(String Data) {
         this.Data = Data;

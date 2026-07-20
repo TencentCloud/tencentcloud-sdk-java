@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCcnVpcFwSwitchResponse extends AbstractModel {
 
     /**
-    * 互联对配置
+    * <p>互联对配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InterconnectPairs")
@@ -39,9 +39,9 @@ public class DescribeCcnVpcFwSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 互联对配置
+     * Get <p>互联对配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InterconnectPairs 互联对配置
+     * @return InterconnectPairs <p>互联对配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InterconnectPair [] getInterconnectPairs() {
@@ -49,9 +49,9 @@ public class DescribeCcnVpcFwSwitchResponse extends AbstractModel {
     }
 
     /**
-     * Set 互联对配置
+     * Set <p>互联对配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InterconnectPairs 互联对配置
+     * @param InterconnectPairs <p>互联对配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterconnectPairs(InterconnectPair [] InterconnectPairs) {

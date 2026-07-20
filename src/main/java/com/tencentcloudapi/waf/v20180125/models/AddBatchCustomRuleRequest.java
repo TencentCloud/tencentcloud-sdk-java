@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class AddBatchCustomRuleRequest extends AbstractModel {
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+    * <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 优先级
+    * <p>优先级</p>
     */
     @SerializedName("SortId")
     @Expose
     private Long SortId;
 
     /**
-    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+    * <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
     */
     @SerializedName("ActionType")
     @Expose
     private Long ActionType;
 
     /**
-    * 重定向地址
+    * <p>重定向地址</p>
     */
     @SerializedName("Redirect")
     @Expose
     private String Redirect;
 
     /**
-    * 加白模块
+    * <p>加白模块</p>
     */
     @SerializedName("Bypass")
     @Expose
     private String Bypass;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 事件Id
+    * <p>事件Id</p>
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 域名列表
+    * <p>域名列表</p>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 策略详情列表
+    * <p>策略详情列表</p>
     */
     @SerializedName("Strategies")
     @Expose
     private Strategy [] Strategies;
 
     /**
-    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+    * <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
     */
     @SerializedName("JobType")
     @Expose
     private String JobType;
 
     /**
-    * 定时任务配置
+    * <p>定时任务配置</p>
     */
     @SerializedName("JobDateTime")
     @Expose
     private JobDateTime JobDateTime;
 
     /**
-    * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+    * <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
     */
     @SerializedName("LogicalOp")
     @Expose
     private String LogicalOp;
 
     /**
-    * 页面ID
+    * <p>页面ID</p>
     */
     @SerializedName("PageId")
     @Expose
     private String PageId;
 
     /**
-    * 动作灰度比例
+    * <p>动作灰度比例</p>
     */
     @SerializedName("ActionRatio")
     @Expose
     private Long ActionRatio;
 
     /**
-     * Get 规则名称 
-     * @return Name 规则名称
+    * <p>绑定的防护组ID</p>
+    */
+    @SerializedName("GroupIds")
+    @Expose
+    private Long [] GroupIds;
+
+    /**
+     * Get <p>规则名称</p> 
+     * @return Name <p>规则名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 规则名称
-     * @param Name 规则名称
+     * Set <p>规则名称</p>
+     * @param Name <p>规则名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒） 
-     * @return ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+     * Get <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p> 
+     * @return ExpireTime <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
-     * @param ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+     * Set <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
+     * @param ExpireTime <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 优先级 
-     * @return SortId 优先级
+     * Get <p>优先级</p> 
+     * @return SortId <p>优先级</p>
      */
     public Long getSortId() {
         return this.SortId;
     }
 
     /**
-     * Set 优先级
-     * @param SortId 优先级
+     * Set <p>优先级</p>
+     * @param SortId <p>优先级</p>
      */
     public void setSortId(Long SortId) {
         this.SortId = SortId;
     }
 
     /**
-     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向 
-     * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * Get <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p> 
+     * @return ActionType <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
-     * @param ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * Set <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
+     * @param ActionType <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向</p>
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 重定向地址 
-     * @return Redirect 重定向地址
+     * Get <p>重定向地址</p> 
+     * @return Redirect <p>重定向地址</p>
      */
     public String getRedirect() {
         return this.Redirect;
     }
 
     /**
-     * Set 重定向地址
-     * @param Redirect 重定向地址
+     * Set <p>重定向地址</p>
+     * @param Redirect <p>重定向地址</p>
      */
     public void setRedirect(String Redirect) {
         this.Redirect = Redirect;
     }
 
     /**
-     * Get 加白模块 
-     * @return Bypass 加白模块
+     * Get <p>加白模块</p> 
+     * @return Bypass <p>加白模块</p>
      */
     public String getBypass() {
         return this.Bypass;
     }
 
     /**
-     * Set 加白模块
-     * @param Bypass 加白模块
+     * Set <p>加白模块</p>
+     * @param Bypass <p>加白模块</p>
      */
     public void setBypass(String Bypass) {
         this.Bypass = Bypass;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 事件Id 
-     * @return EventId 事件Id
+     * Get <p>事件Id</p> 
+     * @return EventId <p>事件Id</p>
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件Id
-     * @param EventId 事件Id
+     * Set <p>事件Id</p>
+     * @param EventId <p>事件Id</p>
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 域名列表 
-     * @return Domains 域名列表
+     * Get <p>域名列表</p> 
+     * @return Domains <p>域名列表</p>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 域名列表
-     * @param Domains 域名列表
+     * Set <p>域名列表</p>
+     * @param Domains <p>域名列表</p>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 策略详情列表 
-     * @return Strategies 策略详情列表
+     * Get <p>策略详情列表</p> 
+     * @return Strategies <p>策略详情列表</p>
      */
     public Strategy [] getStrategies() {
         return this.Strategies;
     }
 
     /**
-     * Set 策略详情列表
-     * @param Strategies 策略详情列表
+     * Set <p>策略详情列表</p>
+     * @param Strategies <p>策略详情列表</p>
      */
     public void setStrategies(Strategy [] Strategies) {
         this.Strategies = Strategies;
     }
 
     /**
-     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行 
-     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * Get <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p> 
+     * @return JobType <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
-     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * Set <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
+     * @param JobType <p>规则执行的方式，TimedJob为定时执行，CronJob为周期执行</p>
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
     }
 
     /**
-     * Get 定时任务配置 
-     * @return JobDateTime 定时任务配置
+     * Get <p>定时任务配置</p> 
+     * @return JobDateTime <p>定时任务配置</p>
      */
     public JobDateTime getJobDateTime() {
         return this.JobDateTime;
     }
 
     /**
-     * Set 定时任务配置
-     * @param JobDateTime 定时任务配置
+     * Set <p>定时任务配置</p>
+     * @param JobDateTime <p>定时任务配置</p>
      */
     public void setJobDateTime(JobDateTime JobDateTime) {
         this.JobDateTime = JobDateTime;
     }
 
     /**
-     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
-     * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * Get <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p> 
+     * @return LogicalOp <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
      */
     public String getLogicalOp() {
         return this.LogicalOp;
     }
 
     /**
-     * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
-     * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * Set <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
+     * @param LogicalOp <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
      */
     public void setLogicalOp(String LogicalOp) {
         this.LogicalOp = LogicalOp;
     }
 
     /**
-     * Get 页面ID 
-     * @return PageId 页面ID
+     * Get <p>页面ID</p> 
+     * @return PageId <p>页面ID</p>
      */
     public String getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 页面ID
-     * @param PageId 页面ID
+     * Set <p>页面ID</p>
+     * @param PageId <p>页面ID</p>
      */
     public void setPageId(String PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get 动作灰度比例 
-     * @return ActionRatio 动作灰度比例
+     * Get <p>动作灰度比例</p> 
+     * @return ActionRatio <p>动作灰度比例</p>
      */
     public Long getActionRatio() {
         return this.ActionRatio;
     }
 
     /**
-     * Set 动作灰度比例
-     * @param ActionRatio 动作灰度比例
+     * Set <p>动作灰度比例</p>
+     * @param ActionRatio <p>动作灰度比例</p>
      */
     public void setActionRatio(Long ActionRatio) {
         this.ActionRatio = ActionRatio;
+    }
+
+    /**
+     * Get <p>绑定的防护组ID</p> 
+     * @return GroupIds <p>绑定的防护组ID</p>
+     */
+    public Long [] getGroupIds() {
+        return this.GroupIds;
+    }
+
+    /**
+     * Set <p>绑定的防护组ID</p>
+     * @param GroupIds <p>绑定的防护组ID</p>
+     */
+    public void setGroupIds(Long [] GroupIds) {
+        this.GroupIds = GroupIds;
     }
 
     public AddBatchCustomRuleRequest() {
@@ -427,6 +450,12 @@ public class AddBatchCustomRuleRequest extends AbstractModel {
         if (source.ActionRatio != null) {
             this.ActionRatio = new Long(source.ActionRatio);
         }
+        if (source.GroupIds != null) {
+            this.GroupIds = new Long[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new Long(source.GroupIds[i]);
+            }
+        }
     }
 
 
@@ -449,6 +478,7 @@ public class AddBatchCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
 
     }
 }

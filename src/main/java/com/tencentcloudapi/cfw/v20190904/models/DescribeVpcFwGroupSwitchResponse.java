@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
 
     /**
-    * 开关列表
+    * <p>开关列表</p>
     */
     @SerializedName("SwitchList")
     @Expose
     private FwGroupSwitchShow [] SwitchList;
 
     /**
-    * 开关总个数
+    * <p>开关总个数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 开关列表 
-     * @return SwitchList 开关列表
+     * Get <p>开关列表</p> 
+     * @return SwitchList <p>开关列表</p>
      */
     public FwGroupSwitchShow [] getSwitchList() {
         return this.SwitchList;
     }
 
     /**
-     * Set 开关列表
-     * @param SwitchList 开关列表
+     * Set <p>开关列表</p>
+     * @param SwitchList <p>开关列表</p>
      */
     public void setSwitchList(FwGroupSwitchShow [] SwitchList) {
         this.SwitchList = SwitchList;
     }
 
     /**
-     * Get 开关总个数 
-     * @return Total 开关总个数
+     * Get <p>开关总个数</p> 
+     * @return Total <p>开关总个数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 开关总个数
-     * @param Total 开关总个数
+     * Set <p>开关总个数</p>
+     * @param Total <p>开关总个数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

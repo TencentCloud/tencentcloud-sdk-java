@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
-    * ip 开关列表
+    * <p>ip 开关列表</p>
     */
     @SerializedName("Data")
     @Expose
     private EdgeIpInfo [] Data;
 
     /**
-    * ip 开关列表个数
+    * <p>ip 开关列表个数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 地域列表
+    * <p>地域列表</p>
     */
     @SerializedName("RegionLst")
     @Expose
     private String [] RegionLst;
 
     /**
-    * 实例类型列表
+    * <p>实例类型列表</p>
     */
     @SerializedName("InstanceTypeLst")
     @Expose
     private String [] InstanceTypeLst;
 
     /**
-    * 串行模式开关个数
+    * <p>串行模式开关个数</p>
     */
     @SerializedName("SerilCount")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ip 开关列表 
-     * @return Data ip 开关列表
+     * Get <p>ip 开关列表</p> 
+     * @return Data <p>ip 开关列表</p>
      */
     public EdgeIpInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set ip 开关列表
-     * @param Data ip 开关列表
+     * Set <p>ip 开关列表</p>
+     * @param Data <p>ip 开关列表</p>
      */
     public void setData(EdgeIpInfo [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get ip 开关列表个数 
-     * @return Total ip 开关列表个数
+     * Get <p>ip 开关列表个数</p> 
+     * @return Total <p>ip 开关列表个数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set ip 开关列表个数
-     * @param Total ip 开关列表个数
+     * Set <p>ip 开关列表个数</p>
+     * @param Total <p>ip 开关列表个数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 地域列表 
-     * @return RegionLst 地域列表
+     * Get <p>地域列表</p> 
+     * @return RegionLst <p>地域列表</p>
      */
     public String [] getRegionLst() {
         return this.RegionLst;
     }
 
     /**
-     * Set 地域列表
-     * @param RegionLst 地域列表
+     * Set <p>地域列表</p>
+     * @param RegionLst <p>地域列表</p>
      */
     public void setRegionLst(String [] RegionLst) {
         this.RegionLst = RegionLst;
     }
 
     /**
-     * Get 实例类型列表 
-     * @return InstanceTypeLst 实例类型列表
+     * Get <p>实例类型列表</p> 
+     * @return InstanceTypeLst <p>实例类型列表</p>
      */
     public String [] getInstanceTypeLst() {
         return this.InstanceTypeLst;
     }
 
     /**
-     * Set 实例类型列表
-     * @param InstanceTypeLst 实例类型列表
+     * Set <p>实例类型列表</p>
+     * @param InstanceTypeLst <p>实例类型列表</p>
      */
     public void setInstanceTypeLst(String [] InstanceTypeLst) {
         this.InstanceTypeLst = InstanceTypeLst;
     }
 
     /**
-     * Get 串行模式开关个数 
-     * @return SerilCount 串行模式开关个数
+     * Get <p>串行模式开关个数</p> 
+     * @return SerilCount <p>串行模式开关个数</p>
      */
     public Long getSerilCount() {
         return this.SerilCount;
     }
 
     /**
-     * Set 串行模式开关个数
-     * @param SerilCount 串行模式开关个数
+     * Set <p>串行模式开关个数</p>
+     * @param SerilCount <p>串行模式开关个数</p>
      */
     public void setSerilCount(Long SerilCount) {
         this.SerilCount = SerilCount;

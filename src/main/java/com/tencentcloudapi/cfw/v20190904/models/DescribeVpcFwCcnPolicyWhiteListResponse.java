@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVpcFwCcnPolicyWhiteListResponse extends AbstractModel {
 
     /**
-    * 支持自动接入和策略路由的CCN列表
+    * <p>支持自动接入和策略路由的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportCcnPolicy")
@@ -32,7 +32,7 @@ public class DescribeVpcFwCcnPolicyWhiteListResponse extends AbstractModel {
     private String [] SupportCcnPolicy;
 
     /**
-    * 自动接入中支持自定义cidr的CCN列表
+    * <p>自动接入中支持自定义cidr的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportCcnPolicyCidr")
@@ -47,9 +47,9 @@ public class DescribeVpcFwCcnPolicyWhiteListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持自动接入和策略路由的CCN列表
+     * Get <p>支持自动接入和策略路由的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportCcnPolicy 支持自动接入和策略路由的CCN列表
+     * @return SupportCcnPolicy <p>支持自动接入和策略路由的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportCcnPolicy() {
@@ -57,9 +57,9 @@ public class DescribeVpcFwCcnPolicyWhiteListResponse extends AbstractModel {
     }
 
     /**
-     * Set 支持自动接入和策略路由的CCN列表
+     * Set <p>支持自动接入和策略路由的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportCcnPolicy 支持自动接入和策略路由的CCN列表
+     * @param SupportCcnPolicy <p>支持自动接入和策略路由的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportCcnPolicy(String [] SupportCcnPolicy) {
@@ -67,9 +67,9 @@ public class DescribeVpcFwCcnPolicyWhiteListResponse extends AbstractModel {
     }
 
     /**
-     * Get 自动接入中支持自定义cidr的CCN列表
+     * Get <p>自动接入中支持自定义cidr的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportCcnPolicyCidr 自动接入中支持自定义cidr的CCN列表
+     * @return SupportCcnPolicyCidr <p>自动接入中支持自定义cidr的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportCcnPolicyCidr() {
@@ -77,9 +77,9 @@ public class DescribeVpcFwCcnPolicyWhiteListResponse extends AbstractModel {
     }
 
     /**
-     * Set 自动接入中支持自定义cidr的CCN列表
+     * Set <p>自动接入中支持自定义cidr的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportCcnPolicyCidr 自动接入中支持自定义cidr的CCN列表
+     * @param SupportCcnPolicyCidr <p>自动接入中支持自定义cidr的CCN列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportCcnPolicyCidr(String [] SupportCcnPolicyCidr) {

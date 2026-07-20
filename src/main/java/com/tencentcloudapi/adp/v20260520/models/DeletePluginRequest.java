@@ -31,6 +31,20 @@ public class DeletePluginRequest extends AbstractModel {
     private String PluginId;
 
     /**
+    * <p>登录用户主账号(集成商模式必填)</p>
+    */
+    @SerializedName("LoginUin")
+    @Expose
+    private String LoginUin;
+
+    /**
+    * <p>登录用户子账号(集成商模式必填)</p>
+    */
+    @SerializedName("LoginSubAccountUin")
+    @Expose
+    private String LoginSubAccountUin;
+
+    /**
      * Get <p>插件id</p> 
      * @return PluginId <p>插件id</p>
      */
@@ -46,6 +60,38 @@ public class DeletePluginRequest extends AbstractModel {
         this.PluginId = PluginId;
     }
 
+    /**
+     * Get <p>登录用户主账号(集成商模式必填)</p> 
+     * @return LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public String getLoginUin() {
+        return this.LoginUin;
+    }
+
+    /**
+     * Set <p>登录用户主账号(集成商模式必填)</p>
+     * @param LoginUin <p>登录用户主账号(集成商模式必填)</p>
+     */
+    public void setLoginUin(String LoginUin) {
+        this.LoginUin = LoginUin;
+    }
+
+    /**
+     * Get <p>登录用户子账号(集成商模式必填)</p> 
+     * @return LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public String getLoginSubAccountUin() {
+        return this.LoginSubAccountUin;
+    }
+
+    /**
+     * Set <p>登录用户子账号(集成商模式必填)</p>
+     * @param LoginSubAccountUin <p>登录用户子账号(集成商模式必填)</p>
+     */
+    public void setLoginSubAccountUin(String LoginSubAccountUin) {
+        this.LoginSubAccountUin = LoginSubAccountUin;
+    }
+
     public DeletePluginRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DeletePluginRequest extends AbstractModel {
         if (source.PluginId != null) {
             this.PluginId = new String(source.PluginId);
         }
+        if (source.LoginUin != null) {
+            this.LoginUin = new String(source.LoginUin);
+        }
+        if (source.LoginSubAccountUin != null) {
+            this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DeletePluginRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);
+        this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
+        this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 
     }
 }

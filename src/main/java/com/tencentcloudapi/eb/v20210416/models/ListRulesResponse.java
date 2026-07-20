@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListRulesResponse extends AbstractModel {
 
     /**
-    * 事件规则信息
+    * <p>事件规则信息</p>
     */
     @SerializedName("Rules")
     @Expose
     private Rule [] Rules;
 
     /**
-    * 事件规则总数
+    * <p>事件规则总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class ListRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件规则信息 
-     * @return Rules 事件规则信息
+     * Get <p>事件规则信息</p> 
+     * @return Rules <p>事件规则信息</p>
      */
     public Rule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 事件规则信息
-     * @param Rules 事件规则信息
+     * Set <p>事件规则信息</p>
+     * @param Rules <p>事件规则信息</p>
      */
     public void setRules(Rule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 事件规则总数 
-     * @return TotalCount 事件规则总数
+     * Get <p>事件规则总数</p> 
+     * @return TotalCount <p>事件规则总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 事件规则总数
-     * @param TotalCount 事件规则总数
+     * Set <p>事件规则总数</p>
+     * @param TotalCount <p>事件规则总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

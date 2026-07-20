@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeFwSyncStatusResponse extends AbstractModel {
 
     /**
-    * 同步状态：1，同步中；0，同步完成
+    * <p>同步状态：1，同步中；0，同步完成</p>
     */
     @SerializedName("SyncStatus")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeFwSyncStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 同步状态：1，同步中；0，同步完成 
-     * @return SyncStatus 同步状态：1，同步中；0，同步完成
+     * Get <p>同步状态：1，同步中；0，同步完成</p> 
+     * @return SyncStatus <p>同步状态：1，同步中；0，同步完成</p>
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set 同步状态：1，同步中；0，同步完成
-     * @param SyncStatus 同步状态：1，同步中；0，同步完成
+     * Set <p>同步状态：1，同步中；0，同步完成</p>
+     * @param SyncStatus <p>同步状态：1，同步中；0，同步完成</p>
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;

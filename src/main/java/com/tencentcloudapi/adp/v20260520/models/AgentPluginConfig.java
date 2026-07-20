@@ -59,7 +59,7 @@ public class AgentPluginConfig extends AbstractModel {
     private Long AuthType;
 
     /**
-    * OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+    * <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
     */
     @SerializedName("OAuthConsent")
     @Expose
@@ -146,16 +146,16 @@ public class AgentPluginConfig extends AbstractModel {
     }
 
     /**
-     * Get OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效） 
-     * @return OAuthConsent OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+     * Get <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p> 
+     * @return OAuthConsent <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
      */
     public Long getOAuthConsent() {
         return this.OAuthConsent;
     }
 
     /**
-     * Set OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
-     * @param OAuthConsent OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）
+     * Set <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
+     * @param OAuthConsent <p>OAuth 授权同意模式；0-开发者授权；1-使用者授权（仅在auth_type=3时生效）</p>
      */
     public void setOAuthConsent(Long OAuthConsent) {
         this.OAuthConsent = OAuthConsent;

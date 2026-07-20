@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCcnInstanceRegionStatusResponse extends AbstractModel {
 
     /**
-    * 地域总数量
+    * <p>地域总数量</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 地域防火墙引流网络状态列表
+    * <p>地域防火墙引流网络状态列表</p>
     */
     @SerializedName("RegionFwStatus")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCcnInstanceRegionStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地域总数量 
-     * @return Total 地域总数量
+     * Get <p>地域总数量</p> 
+     * @return Total <p>地域总数量</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 地域总数量
-     * @param Total 地域总数量
+     * Set <p>地域总数量</p>
+     * @param Total <p>地域总数量</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 地域防火墙引流网络状态列表 
-     * @return RegionFwStatus 地域防火墙引流网络状态列表
+     * Get <p>地域防火墙引流网络状态列表</p> 
+     * @return RegionFwStatus <p>地域防火墙引流网络状态列表</p>
      */
     public RegionFwStatus [] getRegionFwStatus() {
         return this.RegionFwStatus;
     }
 
     /**
-     * Set 地域防火墙引流网络状态列表
-     * @param RegionFwStatus 地域防火墙引流网络状态列表
+     * Set <p>地域防火墙引流网络状态列表</p>
+     * @param RegionFwStatus <p>地域防火墙引流网络状态列表</p>
      */
     public void setRegionFwStatus(RegionFwStatus [] RegionFwStatus) {
         this.RegionFwStatus = RegionFwStatus;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyNatFwReSelectRequest extends AbstractModel {
 
     /**
-    * 模式 1：接入模式；0：新增模式
+    * <p>模式 1：接入模式；0：新增模式</p>
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 防火墙实例id
+    * <p>防火墙实例id</p>
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-    * 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
+    * <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
     */
     @SerializedName("NatGwList")
     @Expose
     private String [] NatGwList;
 
     /**
-    * 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+    * <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
     */
     @SerializedName("VpcList")
     @Expose
     private String [] VpcList;
 
     /**
-    * 指定防火墙使用网段信息
+    * <p>指定防火墙使用网段信息</p>
     */
     @SerializedName("FwCidrInfo")
     @Expose
     private FwCidrInfo FwCidrInfo;
 
     /**
-     * Get 模式 1：接入模式；0：新增模式 
-     * @return Mode 模式 1：接入模式；0：新增模式
+     * Get <p>模式 1：接入模式；0：新增模式</p> 
+     * @return Mode <p>模式 1：接入模式；0：新增模式</p>
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 模式 1：接入模式；0：新增模式
-     * @param Mode 模式 1：接入模式；0：新增模式
+     * Set <p>模式 1：接入模式；0：新增模式</p>
+     * @param Mode <p>模式 1：接入模式；0：新增模式</p>
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInstance 防火墙实例id
+     * Get <p>防火墙实例id</p> 
+     * @return CfwInstance <p>防火墙实例id</p>
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInstance 防火墙实例id
+     * Set <p>防火墙实例id</p>
+     * @param CfwInstance <p>防火墙实例id</p>
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;
     }
 
     /**
-     * Get 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。 
-     * @return NatGwList 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
+     * Get <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p> 
+     * @return NatGwList <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
      */
     public String [] getNatGwList() {
         return this.NatGwList;
     }
 
     /**
-     * Set 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
-     * @param NatGwList 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
+     * Set <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
+     * @param NatGwList <p>接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。</p>
      */
     public void setNatGwList(String [] NatGwList) {
         this.NatGwList = NatGwList;
     }
 
     /**
-     * Get 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。 
-     * @return VpcList 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+     * Get <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p> 
+     * @return VpcList <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
      */
     public String [] getVpcList() {
         return this.VpcList;
     }
 
     /**
-     * Set 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
-     * @param VpcList 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+     * Set <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
+     * @param VpcList <p>新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。</p>
      */
     public void setVpcList(String [] VpcList) {
         this.VpcList = VpcList;
     }
 
     /**
-     * Get 指定防火墙使用网段信息 
-     * @return FwCidrInfo 指定防火墙使用网段信息
+     * Get <p>指定防火墙使用网段信息</p> 
+     * @return FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public FwCidrInfo getFwCidrInfo() {
         return this.FwCidrInfo;
     }
 
     /**
-     * Set 指定防火墙使用网段信息
-     * @param FwCidrInfo 指定防火墙使用网段信息
+     * Set <p>指定防火墙使用网段信息</p>
+     * @param FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
         this.FwCidrInfo = FwCidrInfo;

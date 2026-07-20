@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSwitchErrorResponse extends AbstractModel {
 
     /**
-    * 错误信息列表
+    * <p>错误信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeSwitchErrorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误信息列表
+     * Get <p>错误信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 错误信息列表
+     * @return Data <p>错误信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchError [] getData() {
@@ -49,9 +49,9 @@ public class DescribeSwitchErrorResponse extends AbstractModel {
     }
 
     /**
-     * Set 错误信息列表
+     * Set <p>错误信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 错误信息列表
+     * @param Data <p>错误信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(SwitchError [] Data) {

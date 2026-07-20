@@ -24,141 +24,197 @@ import java.util.HashMap;
 public class ReleaseSummary extends AbstractModel {
 
     /**
-    * 创建时间 (Unix时间戳,秒级)
+    * <p>创建时间 (Unix时间戳,秒级)</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 发布描述
+    * <p>发布描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 发布ID
+    * <p>发布ID</p>
     */
     @SerializedName("ReleaseId")
     @Expose
     private String ReleaseId;
 
     /**
-    * 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+    * <p>发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 状态描述
+    * <p>状态描述</p>
     */
     @SerializedName("StatusDescription")
     @Expose
     private String StatusDescription;
 
     /**
-    * 发布渠道ID列表
+    * <p>应用分享访问控制</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppShareAccessControl")
+    @Expose
+    private AppShareAccessControl AppShareAccessControl;
+
+    /**
+    * <p>发布渠道ID列表</p>
     */
     @SerializedName("ChannelIdList")
     @Expose
     private String [] ChannelIdList;
 
     /**
-     * Get 创建时间 (Unix时间戳,秒级) 
-     * @return CreateTime 创建时间 (Unix时间戳,秒级)
+    * <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CorpShareConfig")
+    @Expose
+    private CorpShareConfig CorpShareConfig;
+
+    /**
+     * Get <p>创建时间 (Unix时间戳,秒级)</p> 
+     * @return CreateTime <p>创建时间 (Unix时间戳,秒级)</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间 (Unix时间戳,秒级)
-     * @param CreateTime 创建时间 (Unix时间戳,秒级)
+     * Set <p>创建时间 (Unix时间戳,秒级)</p>
+     * @param CreateTime <p>创建时间 (Unix时间戳,秒级)</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 发布描述 
-     * @return Description 发布描述
+     * Get <p>发布描述</p> 
+     * @return Description <p>发布描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 发布描述
-     * @param Description 发布描述
+     * Set <p>发布描述</p>
+     * @param Description <p>发布描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 发布ID 
-     * @return ReleaseId 发布ID
+     * Get <p>发布ID</p> 
+     * @return ReleaseId <p>发布ID</p>
      */
     public String getReleaseId() {
         return this.ReleaseId;
     }
 
     /**
-     * Set 发布ID
-     * @param ReleaseId 发布ID
+     * Set <p>发布ID</p>
+     * @param ReleaseId <p>发布ID</p>
      */
     public void setReleaseId(String ReleaseId) {
         this.ReleaseId = ReleaseId;
     }
 
     /**
-     * Get 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过 
-     * @return Status 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+     * Get <p>发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过</p> 
+     * @return Status <p>发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
-     * @param Status 发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过
+     * Set <p>发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过</p>
+     * @param Status <p>发布状态。枚举值: 1:待发布, 2:发布中, 3:发布成功, 4:发布失败, 5:审核中, 6:审核成功, 7:审核失败, 8:发布成功回调处理中, 9:发布暂停, 10:申诉审核中, 11:申诉审核通过, 12:申诉审核不通过</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态描述 
-     * @return StatusDescription 状态描述
+     * Get <p>状态描述</p> 
+     * @return StatusDescription <p>状态描述</p>
      */
     public String getStatusDescription() {
         return this.StatusDescription;
     }
 
     /**
-     * Set 状态描述
-     * @param StatusDescription 状态描述
+     * Set <p>状态描述</p>
+     * @param StatusDescription <p>状态描述</p>
      */
     public void setStatusDescription(String StatusDescription) {
         this.StatusDescription = StatusDescription;
     }
 
     /**
-     * Get 发布渠道ID列表 
-     * @return ChannelIdList 发布渠道ID列表
+     * Get <p>应用分享访问控制</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppShareAccessControl <p>应用分享访问控制</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AppShareAccessControl getAppShareAccessControl() {
+        return this.AppShareAccessControl;
+    }
+
+    /**
+     * Set <p>应用分享访问控制</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppShareAccessControl <p>应用分享访问控制</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppShareAccessControl(AppShareAccessControl AppShareAccessControl) {
+        this.AppShareAccessControl = AppShareAccessControl;
+    }
+
+    /**
+     * Get <p>发布渠道ID列表</p> 
+     * @return ChannelIdList <p>发布渠道ID列表</p>
      */
     public String [] getChannelIdList() {
         return this.ChannelIdList;
     }
 
     /**
-     * Set 发布渠道ID列表
-     * @param ChannelIdList 发布渠道ID列表
+     * Set <p>发布渠道ID列表</p>
+     * @param ChannelIdList <p>发布渠道ID列表</p>
      */
     public void setChannelIdList(String [] ChannelIdList) {
         this.ChannelIdList = ChannelIdList;
+    }
+
+    /**
+     * Get <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CorpShareConfig getCorpShareConfig() {
+        return this.CorpShareConfig;
+    }
+
+    /**
+     * Set <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCorpShareConfig(CorpShareConfig CorpShareConfig) {
+        this.CorpShareConfig = CorpShareConfig;
     }
 
     public ReleaseSummary() {
@@ -184,11 +240,17 @@ public class ReleaseSummary extends AbstractModel {
         if (source.StatusDescription != null) {
             this.StatusDescription = new String(source.StatusDescription);
         }
+        if (source.AppShareAccessControl != null) {
+            this.AppShareAccessControl = new AppShareAccessControl(source.AppShareAccessControl);
+        }
         if (source.ChannelIdList != null) {
             this.ChannelIdList = new String[source.ChannelIdList.length];
             for (int i = 0; i < source.ChannelIdList.length; i++) {
                 this.ChannelIdList[i] = new String(source.ChannelIdList[i]);
             }
+        }
+        if (source.CorpShareConfig != null) {
+            this.CorpShareConfig = new CorpShareConfig(source.CorpShareConfig);
         }
     }
 
@@ -202,7 +264,9 @@ public class ReleaseSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "ReleaseId", this.ReleaseId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDescription", this.StatusDescription);
+        this.setParamObj(map, prefix + "AppShareAccessControl.", this.AppShareAccessControl);
         this.setParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
+        this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
 
     }
 }

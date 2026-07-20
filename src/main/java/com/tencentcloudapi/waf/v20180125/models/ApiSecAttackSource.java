@@ -24,256 +24,325 @@ import java.util.HashMap;
 public class ApiSecAttackSource extends AbstractModel {
 
     /**
-    * 攻击来源ip
+    * <p>攻击来源ip</p>
     */
     @SerializedName("SrcIp")
     @Expose
     private String SrcIp;
 
     /**
-    * 威胁等级
+    * <p>威胁等级</p>
     */
     @SerializedName("EventLevel")
     @Expose
     private String EventLevel;
 
     /**
-    * BOT标签
+    * <p>BOT标签</p>
     */
     @SerializedName("BotLabel")
     @Expose
     private String BotLabel;
 
     /**
-    * 变更时间
+    * <p>变更时间</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * 地理位置
+    * <p>地理位置</p>
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 关联事件数量
+    * <p>关联事件数量</p>
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-    * 攻击数量
+    * <p>攻击数量</p>
     */
     @SerializedName("AttackCount")
     @Expose
     private Long AttackCount;
 
     /**
-    * 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+    * <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
     */
     @SerializedName("MissUserName")
     @Expose
     private String MissUserName;
 
     /**
-    * 当是水平越权和垂直越权时，返回此字段
+    * <p>当是水平越权和垂直越权时，返回此字段</p>
     */
     @SerializedName("AttackDetail")
     @Expose
     private String [] AttackDetail;
 
     /**
-    * 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+    * <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
     */
     @SerializedName("MissPassword")
     @Expose
     private String MissPassword;
 
     /**
-     * Get 攻击来源ip 
-     * @return SrcIp 攻击来源ip
+    * <p>事件描述</p>
+    */
+    @SerializedName("EventDescription")
+    @Expose
+    private String EventDescription;
+
+    /**
+    * <p>事件描述(英文)</p>
+    */
+    @SerializedName("EventDescriptionEng")
+    @Expose
+    private String EventDescriptionEng;
+
+    /**
+    * <p>攻击样本</p>
+    */
+    @SerializedName("Sample")
+    @Expose
+    private ApiEventSample Sample;
+
+    /**
+     * Get <p>攻击来源ip</p> 
+     * @return SrcIp <p>攻击来源ip</p>
      */
     public String getSrcIp() {
         return this.SrcIp;
     }
 
     /**
-     * Set 攻击来源ip
-     * @param SrcIp 攻击来源ip
+     * Set <p>攻击来源ip</p>
+     * @param SrcIp <p>攻击来源ip</p>
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get 威胁等级 
-     * @return EventLevel 威胁等级
+     * Get <p>威胁等级</p> 
+     * @return EventLevel <p>威胁等级</p>
      */
     public String getEventLevel() {
         return this.EventLevel;
     }
 
     /**
-     * Set 威胁等级
-     * @param EventLevel 威胁等级
+     * Set <p>威胁等级</p>
+     * @param EventLevel <p>威胁等级</p>
      */
     public void setEventLevel(String EventLevel) {
         this.EventLevel = EventLevel;
     }
 
     /**
-     * Get BOT标签 
-     * @return BotLabel BOT标签
+     * Get <p>BOT标签</p> 
+     * @return BotLabel <p>BOT标签</p>
      */
     public String getBotLabel() {
         return this.BotLabel;
     }
 
     /**
-     * Set BOT标签
-     * @param BotLabel BOT标签
+     * Set <p>BOT标签</p>
+     * @param BotLabel <p>BOT标签</p>
      */
     public void setBotLabel(String BotLabel) {
         this.BotLabel = BotLabel;
     }
 
     /**
-     * Get 变更时间 
-     * @return Timestamp 变更时间
+     * Get <p>变更时间</p> 
+     * @return Timestamp <p>变更时间</p>
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 变更时间
-     * @param Timestamp 变更时间
+     * Set <p>变更时间</p>
+     * @param Timestamp <p>变更时间</p>
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 地理位置 
-     * @return City 地理位置
+     * Get <p>地理位置</p> 
+     * @return City <p>地理位置</p>
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set 地理位置
-     * @param City 地理位置
+     * Set <p>地理位置</p>
+     * @param City <p>地理位置</p>
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 关联事件数量 
-     * @return EventCount 关联事件数量
+     * Get <p>关联事件数量</p> 
+     * @return EventCount <p>关联事件数量</p>
      */
     public Long getEventCount() {
         return this.EventCount;
     }
 
     /**
-     * Set 关联事件数量
-     * @param EventCount 关联事件数量
+     * Set <p>关联事件数量</p>
+     * @param EventCount <p>关联事件数量</p>
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get 攻击数量 
-     * @return AttackCount 攻击数量
+     * Get <p>攻击数量</p> 
+     * @return AttackCount <p>攻击数量</p>
      */
     public Long getAttackCount() {
         return this.AttackCount;
     }
 
     /**
-     * Set 攻击数量
-     * @param AttackCount 攻击数量
+     * Set <p>攻击数量</p>
+     * @param AttackCount <p>攻击数量</p>
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段 
-     * @return MissUserName 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * Get <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p> 
+     * @return MissUserName <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
      */
     public String getMissUserName() {
         return this.MissUserName;
     }
 
     /**
-     * Set 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
-     * @param MissUserName 缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * Set <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+     * @param MissUserName <p>缺失参数名，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
      */
     public void setMissUserName(String MissUserName) {
         this.MissUserName = MissUserName;
     }
 
     /**
-     * Get 当是水平越权和垂直越权时，返回此字段 
-     * @return AttackDetail 当是水平越权和垂直越权时，返回此字段
+     * Get <p>当是水平越权和垂直越权时，返回此字段</p> 
+     * @return AttackDetail <p>当是水平越权和垂直越权时，返回此字段</p>
      */
     public String [] getAttackDetail() {
         return this.AttackDetail;
     }
 
     /**
-     * Set 当是水平越权和垂直越权时，返回此字段
-     * @param AttackDetail 当是水平越权和垂直越权时，返回此字段
+     * Set <p>当是水平越权和垂直越权时，返回此字段</p>
+     * @param AttackDetail <p>当是水平越权和垂直越权时，返回此字段</p>
      */
     public void setAttackDetail(String [] AttackDetail) {
         this.AttackDetail = AttackDetail;
     }
 
     /**
-     * Get 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段 
-     * @return MissPassword 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * Get <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p> 
+     * @return MissPassword <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
      */
     public String getMissPassword() {
         return this.MissPassword;
     }
 
     /**
-     * Set 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
-     * @param MissPassword 缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段
+     * Set <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
+     * @param MissPassword <p>缺失密码参数，当事件类型是缺失参数名，缺失参数名和密码时，返回此字段</p>
      */
     public void setMissPassword(String MissPassword) {
         this.MissPassword = MissPassword;
+    }
+
+    /**
+     * Get <p>事件描述</p> 
+     * @return EventDescription <p>事件描述</p>
+     */
+    public String getEventDescription() {
+        return this.EventDescription;
+    }
+
+    /**
+     * Set <p>事件描述</p>
+     * @param EventDescription <p>事件描述</p>
+     */
+    public void setEventDescription(String EventDescription) {
+        this.EventDescription = EventDescription;
+    }
+
+    /**
+     * Get <p>事件描述(英文)</p> 
+     * @return EventDescriptionEng <p>事件描述(英文)</p>
+     */
+    public String getEventDescriptionEng() {
+        return this.EventDescriptionEng;
+    }
+
+    /**
+     * Set <p>事件描述(英文)</p>
+     * @param EventDescriptionEng <p>事件描述(英文)</p>
+     */
+    public void setEventDescriptionEng(String EventDescriptionEng) {
+        this.EventDescriptionEng = EventDescriptionEng;
+    }
+
+    /**
+     * Get <p>攻击样本</p> 
+     * @return Sample <p>攻击样本</p>
+     */
+    public ApiEventSample getSample() {
+        return this.Sample;
+    }
+
+    /**
+     * Set <p>攻击样本</p>
+     * @param Sample <p>攻击样本</p>
+     */
+    public void setSample(ApiEventSample Sample) {
+        this.Sample = Sample;
     }
 
     public ApiSecAttackSource() {
@@ -320,6 +389,15 @@ public class ApiSecAttackSource extends AbstractModel {
         if (source.MissPassword != null) {
             this.MissPassword = new String(source.MissPassword);
         }
+        if (source.EventDescription != null) {
+            this.EventDescription = new String(source.EventDescription);
+        }
+        if (source.EventDescriptionEng != null) {
+            this.EventDescriptionEng = new String(source.EventDescriptionEng);
+        }
+        if (source.Sample != null) {
+            this.Sample = new ApiEventSample(source.Sample);
+        }
     }
 
 
@@ -338,6 +416,9 @@ public class ApiSecAttackSource extends AbstractModel {
         this.setParamSimple(map, prefix + "MissUserName", this.MissUserName);
         this.setParamArraySimple(map, prefix + "AttackDetail.", this.AttackDetail);
         this.setParamSimple(map, prefix + "MissPassword", this.MissPassword);
+        this.setParamSimple(map, prefix + "EventDescription", this.EventDescription);
+        this.setParamSimple(map, prefix + "EventDescriptionEng", this.EventDescriptionEng);
+        this.setParamObj(map, prefix + "Sample.", this.Sample);
 
     }
 }

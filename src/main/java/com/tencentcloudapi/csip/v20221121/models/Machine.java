@@ -248,6 +248,27 @@ public class Machine extends AbstractModel {
     private Long CpuCoreCount;
 
     /**
+    * <p>是否支持迁移</p>
+    */
+    @SerializedName("MigrationRequired")
+    @Expose
+    private Boolean MigrationRequired;
+
+    /**
+    * <p>是否支持暴露面扫描</p>
+    */
+    @SerializedName("IsSupportXSPM")
+    @Expose
+    private Boolean IsSupportXSPM;
+
+    /**
+    * <p>是否能解绑</p>
+    */
+    @SerializedName("CanUnbind")
+    @Expose
+    private Boolean CanUnbind;
+
+    /**
      * Get <p>Agent状态，取值：ONLINE-在线，OFFLINE-离线，UNINSTALL-未安装</p> 
      * @return AgentStatus <p>Agent状态，取值：ONLINE-在线，OFFLINE-离线，UNINSTALL-未安装</p>
      */
@@ -759,6 +780,54 @@ public class Machine extends AbstractModel {
         this.CpuCoreCount = CpuCoreCount;
     }
 
+    /**
+     * Get <p>是否支持迁移</p> 
+     * @return MigrationRequired <p>是否支持迁移</p>
+     */
+    public Boolean getMigrationRequired() {
+        return this.MigrationRequired;
+    }
+
+    /**
+     * Set <p>是否支持迁移</p>
+     * @param MigrationRequired <p>是否支持迁移</p>
+     */
+    public void setMigrationRequired(Boolean MigrationRequired) {
+        this.MigrationRequired = MigrationRequired;
+    }
+
+    /**
+     * Get <p>是否支持暴露面扫描</p> 
+     * @return IsSupportXSPM <p>是否支持暴露面扫描</p>
+     */
+    public Boolean getIsSupportXSPM() {
+        return this.IsSupportXSPM;
+    }
+
+    /**
+     * Set <p>是否支持暴露面扫描</p>
+     * @param IsSupportXSPM <p>是否支持暴露面扫描</p>
+     */
+    public void setIsSupportXSPM(Boolean IsSupportXSPM) {
+        this.IsSupportXSPM = IsSupportXSPM;
+    }
+
+    /**
+     * Get <p>是否能解绑</p> 
+     * @return CanUnbind <p>是否能解绑</p>
+     */
+    public Boolean getCanUnbind() {
+        return this.CanUnbind;
+    }
+
+    /**
+     * Set <p>是否能解绑</p>
+     * @param CanUnbind <p>是否能解绑</p>
+     */
+    public void setCanUnbind(Boolean CanUnbind) {
+        this.CanUnbind = CanUnbind;
+    }
+
     public Machine() {
     }
 
@@ -872,6 +941,15 @@ public class Machine extends AbstractModel {
         if (source.CpuCoreCount != null) {
             this.CpuCoreCount = new Long(source.CpuCoreCount);
         }
+        if (source.MigrationRequired != null) {
+            this.MigrationRequired = new Boolean(source.MigrationRequired);
+        }
+        if (source.IsSupportXSPM != null) {
+            this.IsSupportXSPM = new Boolean(source.IsSupportXSPM);
+        }
+        if (source.CanUnbind != null) {
+            this.CanUnbind = new Boolean(source.CanUnbind);
+        }
     }
 
 
@@ -911,6 +989,9 @@ public class Machine extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerDefendStatus", this.ContainerDefendStatus);
         this.setParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
         this.setParamSimple(map, prefix + "CpuCoreCount", this.CpuCoreCount);
+        this.setParamSimple(map, prefix + "MigrationRequired", this.MigrationRequired);
+        this.setParamSimple(map, prefix + "IsSupportXSPM", this.IsSupportXSPM);
+        this.setParamSimple(map, prefix + "CanUnbind", this.CanUnbind);
 
     }
 }

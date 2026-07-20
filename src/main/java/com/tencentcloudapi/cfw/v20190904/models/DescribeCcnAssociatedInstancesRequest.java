@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCcnAssociatedInstancesRequest extends AbstractModel {
 
     /**
-    * 云联网ID
+    * <p>云联网ID</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-     * Get 云联网ID 
-     * @return CcnId 云联网ID
+     * Get <p>云联网ID</p> 
+     * @return CcnId <p>云联网ID</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网ID
-     * @param CcnId 云联网ID
+     * Set <p>云联网ID</p>
+     * @param CcnId <p>云联网ID</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;

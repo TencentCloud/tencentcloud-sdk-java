@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CfwStatusMonitorFilter extends AbstractModel {
 
     /**
-    * <p>过滤字段名。</p>
+    * 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     private String Name;
 
     /**
-    * <p>过滤值列表，最多 10 个。</p>
+    * 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
@@ -40,7 +40,7 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     private String [] Values;
 
     /**
-    * <p>操作符类型，可选；仅支持后端允许的类型。</p>
+    * 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorType")
@@ -48,9 +48,9 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     private Long OperatorType;
 
     /**
-     * Get <p>过滤字段名。</p>
+     * Get 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name <p>过滤字段名。</p>
+     * @return Name 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -58,9 +58,9 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     }
 
     /**
-     * Set <p>过滤字段名。</p>
+     * Set 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name <p>过滤字段名。</p>
+     * @param Name 过滤字段名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -68,9 +68,9 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     }
 
     /**
-     * Get <p>过滤值列表，最多 10 个。</p>
+     * Get 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Values <p>过滤值列表，最多 10 个。</p>
+     * @return Values 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
@@ -78,9 +78,9 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     }
 
     /**
-     * Set <p>过滤值列表，最多 10 个。</p>
+     * Set 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Values <p>过滤值列表，最多 10 个。</p>
+     * @param Values 过滤值列表，最多 10 个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
@@ -88,9 +88,9 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     }
 
     /**
-     * Get <p>操作符类型，可选；仅支持后端允许的类型。</p>
+     * Get 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorType <p>操作符类型，可选；仅支持后端允许的类型。</p>
+     * @return OperatorType 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperatorType() {
@@ -98,9 +98,9 @@ public class CfwStatusMonitorFilter extends AbstractModel {
     }
 
     /**
-     * Set <p>操作符类型，可选；仅支持后端允许的类型。</p>
+     * Set 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorType <p>操作符类型，可选；仅支持后端允许的类型。</p>
+     * @param OperatorType 操作符类型，可选；仅支持后端允许的类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorType(Long OperatorType) {

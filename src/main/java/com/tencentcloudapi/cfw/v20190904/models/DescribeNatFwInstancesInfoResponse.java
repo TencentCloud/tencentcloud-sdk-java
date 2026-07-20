@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
 
     /**
-    * 实例卡片信息数组
+    * <p>实例卡片信息数组</p>
     */
     @SerializedName("NatinsLst")
     @Expose
     private NatInstanceInfo [] NatinsLst;
 
     /**
-    * nat 防火墙个数
+    * <p>nat 防火墙个数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例卡片信息数组 
-     * @return NatinsLst 实例卡片信息数组
+     * Get <p>实例卡片信息数组</p> 
+     * @return NatinsLst <p>实例卡片信息数组</p>
      */
     public NatInstanceInfo [] getNatinsLst() {
         return this.NatinsLst;
     }
 
     /**
-     * Set 实例卡片信息数组
-     * @param NatinsLst 实例卡片信息数组
+     * Set <p>实例卡片信息数组</p>
+     * @param NatinsLst <p>实例卡片信息数组</p>
      */
     public void setNatinsLst(NatInstanceInfo [] NatinsLst) {
         this.NatinsLst = NatinsLst;
     }
 
     /**
-     * Get nat 防火墙个数 
-     * @return Total nat 防火墙个数
+     * Get <p>nat 防火墙个数</p> 
+     * @return Total <p>nat 防火墙个数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set nat 防火墙个数
-     * @param Total nat 防火墙个数
+     * Set <p>nat 防火墙个数</p>
+     * @param Total <p>nat 防火墙个数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

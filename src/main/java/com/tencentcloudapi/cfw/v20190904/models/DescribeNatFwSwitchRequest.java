@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeNatFwSwitchRequest extends AbstractModel {
 
     /**
-    * 偏移量，分页用
+    * <p>偏移量，分页用</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 条数，分页用
+    * <p>条数，分页用</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件组合
+    * <p>过滤条件组合</p>
     */
     @SerializedName("Filters")
     @Expose
     private CommonFilter [] Filters;
 
     /**
-    * desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+    * <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序所用到的字段
+    * <p>排序所用到的字段</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 偏移量，分页用 
-     * @return Offset 偏移量，分页用
+     * Get <p>偏移量，分页用</p> 
+     * @return Offset <p>偏移量，分页用</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，分页用
-     * @param Offset 偏移量，分页用
+     * Set <p>偏移量，分页用</p>
+     * @param Offset <p>偏移量，分页用</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 条数，分页用 
-     * @return Limit 条数，分页用
+     * Get <p>条数，分页用</p> 
+     * @return Limit <p>条数，分页用</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数，分页用
-     * @param Limit 条数，分页用
+     * Set <p>条数，分页用</p>
+     * @param Limit <p>条数，分页用</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件组合 
-     * @return Filters 过滤条件组合
+     * Get <p>过滤条件组合</p> 
+     * @return Filters <p>过滤条件组合</p>
      */
     public CommonFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件组合
-     * @param Filters 过滤条件组合
+     * Set <p>过滤条件组合</p>
+     * @param Filters <p>过滤条件组合</p>
      */
     public void setFilters(CommonFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值 
-     * @return Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Get <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p> 
+     * @return Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-     * @param Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Set <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
+     * @param Order <p>desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序所用到的字段 
-     * @return By 排序所用到的字段
+     * Get <p>排序所用到的字段</p> 
+     * @return By <p>排序所用到的字段</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序所用到的字段
-     * @param By 排序所用到的字段
+     * Set <p>排序所用到的字段</p>
+     * @param By <p>排序所用到的字段</p>
      */
     public void setBy(String By) {
         this.By = By;

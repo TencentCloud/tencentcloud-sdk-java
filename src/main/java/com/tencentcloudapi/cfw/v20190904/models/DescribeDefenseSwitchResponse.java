@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeDefenseSwitchResponse extends AbstractModel {
 
     /**
-    * 基础防御开关
+    * <p>基础防御开关</p>
     */
     @SerializedName("BasicRuleSwitch")
     @Expose
     private Long BasicRuleSwitch;
 
     /**
-    * 安全基线开关
+    * <p>安全基线开关</p>
     */
     @SerializedName("BaselineAllSwitch")
     @Expose
     private Long BaselineAllSwitch;
 
     /**
-    * 威胁情报开关
+    * <p>威胁情报开关</p>
     */
     @SerializedName("TiSwitch")
     @Expose
     private Long TiSwitch;
 
     /**
-    * 虚拟补丁开关
+    * <p>虚拟补丁开关</p>
     */
     @SerializedName("VirtualPatchSwitch")
     @Expose
     private Long VirtualPatchSwitch;
 
     /**
-    * 是否历史开启
+    * <p>是否历史开启</p>
     */
     @SerializedName("HistoryOpen")
     @Expose
     private Long HistoryOpen;
 
     /**
-    * 状态值，0：查询成功，非0：查询失败
+    * <p>状态值，0：查询成功，非0：查询失败</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * 状态信息，success：查询成功，fail：查询失败
+    * <p>状态信息，success：查询成功，fail：查询失败</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -80,112 +80,112 @@ public class DescribeDefenseSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基础防御开关 
-     * @return BasicRuleSwitch 基础防御开关
+     * Get <p>基础防御开关</p> 
+     * @return BasicRuleSwitch <p>基础防御开关</p>
      */
     public Long getBasicRuleSwitch() {
         return this.BasicRuleSwitch;
     }
 
     /**
-     * Set 基础防御开关
-     * @param BasicRuleSwitch 基础防御开关
+     * Set <p>基础防御开关</p>
+     * @param BasicRuleSwitch <p>基础防御开关</p>
      */
     public void setBasicRuleSwitch(Long BasicRuleSwitch) {
         this.BasicRuleSwitch = BasicRuleSwitch;
     }
 
     /**
-     * Get 安全基线开关 
-     * @return BaselineAllSwitch 安全基线开关
+     * Get <p>安全基线开关</p> 
+     * @return BaselineAllSwitch <p>安全基线开关</p>
      */
     public Long getBaselineAllSwitch() {
         return this.BaselineAllSwitch;
     }
 
     /**
-     * Set 安全基线开关
-     * @param BaselineAllSwitch 安全基线开关
+     * Set <p>安全基线开关</p>
+     * @param BaselineAllSwitch <p>安全基线开关</p>
      */
     public void setBaselineAllSwitch(Long BaselineAllSwitch) {
         this.BaselineAllSwitch = BaselineAllSwitch;
     }
 
     /**
-     * Get 威胁情报开关 
-     * @return TiSwitch 威胁情报开关
+     * Get <p>威胁情报开关</p> 
+     * @return TiSwitch <p>威胁情报开关</p>
      */
     public Long getTiSwitch() {
         return this.TiSwitch;
     }
 
     /**
-     * Set 威胁情报开关
-     * @param TiSwitch 威胁情报开关
+     * Set <p>威胁情报开关</p>
+     * @param TiSwitch <p>威胁情报开关</p>
      */
     public void setTiSwitch(Long TiSwitch) {
         this.TiSwitch = TiSwitch;
     }
 
     /**
-     * Get 虚拟补丁开关 
-     * @return VirtualPatchSwitch 虚拟补丁开关
+     * Get <p>虚拟补丁开关</p> 
+     * @return VirtualPatchSwitch <p>虚拟补丁开关</p>
      */
     public Long getVirtualPatchSwitch() {
         return this.VirtualPatchSwitch;
     }
 
     /**
-     * Set 虚拟补丁开关
-     * @param VirtualPatchSwitch 虚拟补丁开关
+     * Set <p>虚拟补丁开关</p>
+     * @param VirtualPatchSwitch <p>虚拟补丁开关</p>
      */
     public void setVirtualPatchSwitch(Long VirtualPatchSwitch) {
         this.VirtualPatchSwitch = VirtualPatchSwitch;
     }
 
     /**
-     * Get 是否历史开启 
-     * @return HistoryOpen 是否历史开启
+     * Get <p>是否历史开启</p> 
+     * @return HistoryOpen <p>是否历史开启</p>
      */
     public Long getHistoryOpen() {
         return this.HistoryOpen;
     }
 
     /**
-     * Set 是否历史开启
-     * @param HistoryOpen 是否历史开启
+     * Set <p>是否历史开启</p>
+     * @param HistoryOpen <p>是否历史开启</p>
      */
     public void setHistoryOpen(Long HistoryOpen) {
         this.HistoryOpen = HistoryOpen;
     }
 
     /**
-     * Get 状态值，0：查询成功，非0：查询失败 
-     * @return ReturnCode 状态值，0：查询成功，非0：查询失败
+     * Get <p>状态值，0：查询成功，非0：查询失败</p> 
+     * @return ReturnCode <p>状态值，0：查询成功，非0：查询失败</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 状态值，0：查询成功，非0：查询失败
-     * @param ReturnCode 状态值，0：查询成功，非0：查询失败
+     * Set <p>状态值，0：查询成功，非0：查询失败</p>
+     * @param ReturnCode <p>状态值，0：查询成功，非0：查询失败</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get 状态信息，success：查询成功，fail：查询失败 
-     * @return ReturnMsg 状态信息，success：查询成功，fail：查询失败
+     * Get <p>状态信息，success：查询成功，fail：查询失败</p> 
+     * @return ReturnMsg <p>状态信息，success：查询成功，fail：查询失败</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 状态信息，success：查询成功，fail：查询失败
-     * @param ReturnMsg 状态信息，success：查询成功，fail：查询失败
+     * Set <p>状态信息，success：查询成功，fail：查询失败</p>
+     * @param ReturnMsg <p>状态信息，success：查询成功，fail：查询失败</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

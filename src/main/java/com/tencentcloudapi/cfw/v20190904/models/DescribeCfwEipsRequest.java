@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCfwEipsRequest extends AbstractModel {
 
     /**
-    * 1：cfw接入模式，目前仅支持接入模式实例
+    * <p>1：cfw接入模式，目前仅支持接入模式实例</p>
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
+    * <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+    * <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
     */
     @SerializedName("CfwInstance")
     @Expose
     private String CfwInstance;
 
     /**
-     * Get 1：cfw接入模式，目前仅支持接入模式实例 
-     * @return Mode 1：cfw接入模式，目前仅支持接入模式实例
+     * Get <p>1：cfw接入模式，目前仅支持接入模式实例</p> 
+     * @return Mode <p>1：cfw接入模式，目前仅支持接入模式实例</p>
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 1：cfw接入模式，目前仅支持接入模式实例
-     * @param Mode 1：cfw接入模式，目前仅支持接入模式实例
+     * Set <p>1：cfw接入模式，目前仅支持接入模式实例</p>
+     * @param Mode <p>1：cfw接入模式，目前仅支持接入模式实例</p>
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip 
-     * @return NatGatewayId ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
+     * Get <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p> 
+     * @return NatGatewayId <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
-     * @param NatGatewayId ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip
+     * Set <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
+     * @param NatGatewayId <p>ALL：查询所有弹性公网ip; nat-xxxxx：接入模式场景指定网关的弹性公网ip</p>
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get 防火墙实例id，当前仅支持接入模式的实例，该字段必填 
-     * @return CfwInstance 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+     * Get <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p> 
+     * @return CfwInstance <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id，当前仅支持接入模式的实例，该字段必填
-     * @param CfwInstance 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+     * Set <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
+     * @param CfwInstance <p>防火墙实例id，当前仅支持接入模式的实例，该字段必填</p>
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;

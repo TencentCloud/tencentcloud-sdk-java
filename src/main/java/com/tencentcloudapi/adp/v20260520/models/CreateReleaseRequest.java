@@ -24,115 +24,161 @@ import java.util.HashMap;
 public class CreateReleaseRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 渠道ID列表
+    * <p>应用分享访问控制配置</p>
+    */
+    @SerializedName("AppShareAccessControl")
+    @Expose
+    private AppShareAccessControl AppShareAccessControl;
+
+    /**
+    * <p>渠道ID列表</p>
     */
     @SerializedName("ChannelIdList")
     @Expose
     private String [] ChannelIdList;
 
     /**
-    * 发布描述
+    * <p>企业共享配置</p>
+    */
+    @SerializedName("CorpShareConfig")
+    @Expose
+    private CorpShareConfig CorpShareConfig;
+
+    /**
+    * <p>发布描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
+    * <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
     */
     @SerializedName("IsDevToRelease")
     @Expose
     private Boolean IsDevToRelease;
 
     /**
-    * 是否同步发布为应用模板
+    * <p>是否同步发布为应用模板</p>
     */
     @SerializedName("IsPublishAsTemplate")
     @Expose
     private Boolean IsPublishAsTemplate;
 
     /**
-     * Get 应用ID 
-     * @return AppId 应用ID
+     * Get <p>应用ID</p> 
+     * @return AppId <p>应用ID</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppId 应用ID
+     * Set <p>应用ID</p>
+     * @param AppId <p>应用ID</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 渠道ID列表 
-     * @return ChannelIdList 渠道ID列表
+     * Get <p>应用分享访问控制配置</p> 
+     * @return AppShareAccessControl <p>应用分享访问控制配置</p>
+     */
+    public AppShareAccessControl getAppShareAccessControl() {
+        return this.AppShareAccessControl;
+    }
+
+    /**
+     * Set <p>应用分享访问控制配置</p>
+     * @param AppShareAccessControl <p>应用分享访问控制配置</p>
+     */
+    public void setAppShareAccessControl(AppShareAccessControl AppShareAccessControl) {
+        this.AppShareAccessControl = AppShareAccessControl;
+    }
+
+    /**
+     * Get <p>渠道ID列表</p> 
+     * @return ChannelIdList <p>渠道ID列表</p>
      */
     public String [] getChannelIdList() {
         return this.ChannelIdList;
     }
 
     /**
-     * Set 渠道ID列表
-     * @param ChannelIdList 渠道ID列表
+     * Set <p>渠道ID列表</p>
+     * @param ChannelIdList <p>渠道ID列表</p>
      */
     public void setChannelIdList(String [] ChannelIdList) {
         this.ChannelIdList = ChannelIdList;
     }
 
     /**
-     * Get 发布描述 
-     * @return Description 发布描述
+     * Get <p>企业共享配置</p> 
+     * @return CorpShareConfig <p>企业共享配置</p>
+     */
+    public CorpShareConfig getCorpShareConfig() {
+        return this.CorpShareConfig;
+    }
+
+    /**
+     * Set <p>企业共享配置</p>
+     * @param CorpShareConfig <p>企业共享配置</p>
+     */
+    public void setCorpShareConfig(CorpShareConfig CorpShareConfig) {
+        this.CorpShareConfig = CorpShareConfig;
+    }
+
+    /**
+     * Get <p>发布描述</p> 
+     * @return Description <p>发布描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 发布描述
-     * @param Description 发布描述
+     * Set <p>发布描述</p>
+     * @param Description <p>发布描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效" 
-     * @return IsDevToRelease 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
+     * Get <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p> 
+     * @return IsDevToRelease <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
      */
     public Boolean getIsDevToRelease() {
         return this.IsDevToRelease;
     }
 
     /**
-     * Set 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
-     * @param IsDevToRelease 将默认知识库中，仅调试生效的知识批量变更为"调试/发布都生效"
+     * Set <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
+     * @param IsDevToRelease <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
      */
     public void setIsDevToRelease(Boolean IsDevToRelease) {
         this.IsDevToRelease = IsDevToRelease;
     }
 
     /**
-     * Get 是否同步发布为应用模板 
-     * @return IsPublishAsTemplate 是否同步发布为应用模板
+     * Get <p>是否同步发布为应用模板</p> 
+     * @return IsPublishAsTemplate <p>是否同步发布为应用模板</p>
      */
     public Boolean getIsPublishAsTemplate() {
         return this.IsPublishAsTemplate;
     }
 
     /**
-     * Set 是否同步发布为应用模板
-     * @param IsPublishAsTemplate 是否同步发布为应用模板
+     * Set <p>是否同步发布为应用模板</p>
+     * @param IsPublishAsTemplate <p>是否同步发布为应用模板</p>
      */
     public void setIsPublishAsTemplate(Boolean IsPublishAsTemplate) {
         this.IsPublishAsTemplate = IsPublishAsTemplate;
@@ -149,11 +195,17 @@ public class CreateReleaseRequest extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.AppShareAccessControl != null) {
+            this.AppShareAccessControl = new AppShareAccessControl(source.AppShareAccessControl);
+        }
         if (source.ChannelIdList != null) {
             this.ChannelIdList = new String[source.ChannelIdList.length];
             for (int i = 0; i < source.ChannelIdList.length; i++) {
                 this.ChannelIdList[i] = new String(source.ChannelIdList[i]);
             }
+        }
+        if (source.CorpShareConfig != null) {
+            this.CorpShareConfig = new CorpShareConfig(source.CorpShareConfig);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -172,7 +224,9 @@ public class CreateReleaseRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamObj(map, prefix + "AppShareAccessControl.", this.AppShareAccessControl);
         this.setParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
+        this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsDevToRelease", this.IsDevToRelease);
         this.setParamSimple(map, prefix + "IsPublishAsTemplate", this.IsPublishAsTemplate);
