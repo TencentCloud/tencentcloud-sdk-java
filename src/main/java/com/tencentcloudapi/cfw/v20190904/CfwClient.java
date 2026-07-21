@@ -380,6 +380,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询ACL规则支持配置的地区
+     * @param req DescribeAclRegInfoRequest
+     * @return DescribeAclRegInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAclRegInfoResponse DescribeAclRegInfo(DescribeAclRegInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAclRegInfo", DescribeAclRegInfoResponse.class);
+    }
+
+    /**
      *查询互联网边界访问控制列表
      * @param req DescribeAclRuleRequest
      * @return DescribeAclRuleResponse

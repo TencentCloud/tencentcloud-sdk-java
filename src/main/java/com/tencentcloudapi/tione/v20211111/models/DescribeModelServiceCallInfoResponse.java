@@ -25,7 +25,6 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
     * 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceCallInfo")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
     * 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InferGatewayCallInfo")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
     * 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultNginxGatewayCallInfo")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
     * 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TJCallInfo")
     @Expose
@@ -79,10 +75,8 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务调用信息 
      * @return ServiceCallInfo 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceCallInfo getServiceCallInfo() {
         return this.ServiceCallInfo;
@@ -90,19 +84,15 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
      * Set 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceCallInfo 服务调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceCallInfo(ServiceCallInfo ServiceCallInfo) {
         this.ServiceCallInfo = ServiceCallInfo;
     }
 
     /**
-     * Get 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 升级网关调用信息 
      * @return InferGatewayCallInfo 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InferGatewayCallInfo getInferGatewayCallInfo() {
         return this.InferGatewayCallInfo;
@@ -110,19 +100,15 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
      * Set 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InferGatewayCallInfo 升级网关调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInferGatewayCallInfo(InferGatewayCallInfo InferGatewayCallInfo) {
         this.InferGatewayCallInfo = InferGatewayCallInfo;
     }
 
     /**
-     * Get 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认nginx网关的调用信息 
      * @return DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DefaultNginxGatewayCallInfo getDefaultNginxGatewayCallInfo() {
         return this.DefaultNginxGatewayCallInfo;
@@ -130,19 +116,15 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
      * Set 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultNginxGatewayCallInfo(DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo) {
         this.DefaultNginxGatewayCallInfo = DefaultNginxGatewayCallInfo;
     }
 
     /**
-     * Get 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 太极服务的调用信息 
      * @return TJCallInfo 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TJCallInfo getTJCallInfo() {
         return this.TJCallInfo;
@@ -150,9 +132,7 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
 
     /**
      * Set 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TJCallInfo 太极服务的调用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTJCallInfo(TJCallInfo TJCallInfo) {
         this.TJCallInfo = TJCallInfo;

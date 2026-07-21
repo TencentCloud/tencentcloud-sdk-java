@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class CreateNatFwInstanceRequest extends AbstractModel {
 
     /**
-    * 防火墙实例名称
+    * <p>防火墙实例名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 带宽
+    * <p>带宽</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 模式 1：接入模式；0：新增模式
+    * <p>模式 1：接入模式；0：新增模式</p>
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
+    * <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
     */
     @SerializedName("NewModeItems")
     @Expose
     private NewModeItems NewModeItems;
 
     /**
-    * 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
+    * <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
     */
     @SerializedName("NatGwList")
     @Expose
     private String [] NatGwList;
 
     /**
-    * 主可用区，为空则选择默认可用区
+    * <p>主可用区，为空则选择默认可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 备可用区，为空则选择默认可用区
+    * <p>备可用区，为空则选择默认可用区</p>
     */
     @SerializedName("ZoneBak")
     @Expose
     private String ZoneBak;
 
     /**
-    * 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+    * <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
     */
     @SerializedName("CrossAZone")
     @Expose
     private Long CrossAZone;
 
     /**
-    * 指定防火墙使用网段信息
+    * <p>指定防火墙使用网段信息</p>
     */
     @SerializedName("FwCidrInfo")
     @Expose
     private FwCidrInfo FwCidrInfo;
 
     /**
-     * Get 防火墙实例名称 
-     * @return Name 防火墙实例名称
+     * Get <p>防火墙实例名称</p> 
+     * @return Name <p>防火墙实例名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 防火墙实例名称
-     * @param Name 防火墙实例名称
+     * Set <p>防火墙实例名称</p>
+     * @param Name <p>防火墙实例名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 带宽 
-     * @return Width 带宽
+     * Get <p>带宽</p> 
+     * @return Width <p>带宽</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 带宽
-     * @param Width 带宽
+     * Set <p>带宽</p>
+     * @param Width <p>带宽</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 模式 1：接入模式；0：新增模式 
-     * @return Mode 模式 1：接入模式；0：新增模式
+     * Get <p>模式 1：接入模式；0：新增模式</p> 
+     * @return Mode <p>模式 1：接入模式；0：新增模式</p>
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 模式 1：接入模式；0：新增模式
-     * @param Mode 模式 1：接入模式；0：新增模式
+     * Set <p>模式 1：接入模式；0：新增模式</p>
+     * @param Mode <p>模式 1：接入模式；0：新增模式</p>
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。 
-     * @return NewModeItems 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
+     * Get <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p> 
+     * @return NewModeItems <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
      */
     public NewModeItems getNewModeItems() {
         return this.NewModeItems;
     }
 
     /**
-     * Set 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
-     * @param NewModeItems 新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。
+     * Set <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
+     * @param NewModeItems <p>新增模式传递参数，其中NewModeItems和NatgwList至少传递一种。</p>
      */
     public void setNewModeItems(NewModeItems NewModeItems) {
         this.NewModeItems = NewModeItems;
     }
 
     /**
-     * Get 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。 
-     * @return NatGwList 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
+     * Get <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p> 
+     * @return NatGwList <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
      */
     public String [] getNatGwList() {
         return this.NatGwList;
     }
 
     /**
-     * Set 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
-     * @param NatGwList 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
+     * Set <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
+     * @param NatGwList <p>接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。</p>
      */
     public void setNatGwList(String [] NatGwList) {
         this.NatGwList = NatGwList;
     }
 
     /**
-     * Get 主可用区，为空则选择默认可用区 
-     * @return Zone 主可用区，为空则选择默认可用区
+     * Get <p>主可用区，为空则选择默认可用区</p> 
+     * @return Zone <p>主可用区，为空则选择默认可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 主可用区，为空则选择默认可用区
-     * @param Zone 主可用区，为空则选择默认可用区
+     * Set <p>主可用区，为空则选择默认可用区</p>
+     * @param Zone <p>主可用区，为空则选择默认可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 备可用区，为空则选择默认可用区 
-     * @return ZoneBak 备可用区，为空则选择默认可用区
+     * Get <p>备可用区，为空则选择默认可用区</p> 
+     * @return ZoneBak <p>备可用区，为空则选择默认可用区</p>
      */
     public String getZoneBak() {
         return this.ZoneBak;
     }
 
     /**
-     * Set 备可用区，为空则选择默认可用区
-     * @param ZoneBak 备可用区，为空则选择默认可用区
+     * Set <p>备可用区，为空则选择默认可用区</p>
+     * @param ZoneBak <p>备可用区，为空则选择默认可用区</p>
      */
     public void setZoneBak(String ZoneBak) {
         this.ZoneBak = ZoneBak;
     }
 
     /**
-     * Get 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备 
-     * @return CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+     * Get <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p> 
+     * @return CrossAZone <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
      */
     public Long getCrossAZone() {
         return this.CrossAZone;
     }
 
     /**
-     * Set 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
-     * @param CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+     * Set <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
+     * @param CrossAZone <p>异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备</p>
      */
     public void setCrossAZone(Long CrossAZone) {
         this.CrossAZone = CrossAZone;
     }
 
     /**
-     * Get 指定防火墙使用网段信息 
-     * @return FwCidrInfo 指定防火墙使用网段信息
+     * Get <p>指定防火墙使用网段信息</p> 
+     * @return FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public FwCidrInfo getFwCidrInfo() {
         return this.FwCidrInfo;
     }
 
     /**
-     * Set 指定防火墙使用网段信息
-     * @param FwCidrInfo 指定防火墙使用网段信息
+     * Set <p>指定防火墙使用网段信息</p>
+     * @param FwCidrInfo <p>指定防火墙使用网段信息</p>
      */
     public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
         this.FwCidrInfo = FwCidrInfo;

@@ -73,6 +73,13 @@ public class PluginSummary extends AbstractModel {
     private PluginConfig Config;
 
     /**
+    * <p>工具信息</p>
+    */
+    @SerializedName("ToolList")
+    @Expose
+    private ToolSummary [] ToolList;
+
+    /**
      * Get <p>插件运营管理信息</p> 
      * @return Operation <p>插件运营管理信息</p>
      */
@@ -184,6 +191,22 @@ public class PluginSummary extends AbstractModel {
         this.Config = Config;
     }
 
+    /**
+     * Get <p>工具信息</p> 
+     * @return ToolList <p>工具信息</p>
+     */
+    public ToolSummary [] getToolList() {
+        return this.ToolList;
+    }
+
+    /**
+     * Set <p>工具信息</p>
+     * @param ToolList <p>工具信息</p>
+     */
+    public void setToolList(ToolSummary [] ToolList) {
+        this.ToolList = ToolList;
+    }
+
     public PluginSummary() {
     }
 
@@ -213,6 +236,12 @@ public class PluginSummary extends AbstractModel {
         if (source.Config != null) {
             this.Config = new PluginConfig(source.Config);
         }
+        if (source.ToolList != null) {
+            this.ToolList = new ToolSummary[source.ToolList.length];
+            for (int i = 0; i < source.ToolList.length; i++) {
+                this.ToolList[i] = new ToolSummary(source.ToolList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class PluginSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "UserState.", this.UserState);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamArrayObj(map, prefix + "ToolList.", this.ToolList);
 
     }
 }

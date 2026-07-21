@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyRunSyncAssetRequest extends AbstractModel {
 
     /**
-    * 0: 互联网防火墙开关，1：vpc 防火墙开关
+    * <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 0: 互联网防火墙开关，1：vpc 防火墙开关 
-     * @return Type 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * Get <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p> 
+     * @return Type <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 0: 互联网防火墙开关，1：vpc 防火墙开关
-     * @param Type 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * Set <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
+     * @param Type <p>0: 互联网防火墙开关，1：vpc 防火墙开关</p>
      */
     public void setType(Long Type) {
         this.Type = Type;

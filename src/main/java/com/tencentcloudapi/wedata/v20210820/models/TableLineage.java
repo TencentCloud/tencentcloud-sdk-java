@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class TableLineage extends AbstractModel {
 
     /**
-    * 数据源id
+    * <p>数据源id</p>
     */
     @SerializedName("DatasourceId")
     @Expose
     private String DatasourceId;
 
     /**
-    * 库名称
+    * <p>库名称</p>
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 表名称
+    * <p>表名称</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * catalog值
+    * <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
     */
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
 
     /**
-    * schema名称
+    * <p>schema名称</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 扩展参数
+    * <p>扩展参数</p>
     */
     @SerializedName("ExtParams")
     @Expose
     private ExtParam [] ExtParams;
 
     /**
-    * table类型 TABLE｜VIEW
+    * <p>table类型 TABLE｜VIEW</p>
     */
     @SerializedName("TableType")
     @Expose
     private String TableType;
 
     /**
-     * Get 数据源id 
-     * @return DatasourceId 数据源id
+     * Get <p>数据源id</p> 
+     * @return DatasourceId <p>数据源id</p>
      */
     public String getDatasourceId() {
         return this.DatasourceId;
     }
 
     /**
-     * Set 数据源id
-     * @param DatasourceId 数据源id
+     * Set <p>数据源id</p>
+     * @param DatasourceId <p>数据源id</p>
      */
     public void setDatasourceId(String DatasourceId) {
         this.DatasourceId = DatasourceId;
     }
 
     /**
-     * Get 库名称 
-     * @return DatabaseName 库名称
+     * Get <p>库名称</p> 
+     * @return DatabaseName <p>库名称</p>
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 库名称
-     * @param DatabaseName 库名称
+     * Set <p>库名称</p>
+     * @param DatabaseName <p>库名称</p>
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 表名称 
-     * @return TableName 表名称
+     * Get <p>表名称</p> 
+     * @return TableName <p>表名称</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 表名称
-     * @param TableName 表名称
+     * Set <p>表名称</p>
+     * @param TableName <p>表名称</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get catalog值 
-     * @return CatalogName catalog值
+     * Get <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p> 
+     * @return CatalogName <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
      */
     public String getCatalogName() {
         return this.CatalogName;
     }
 
     /**
-     * Set catalog值
-     * @param CatalogName catalog值
+     * Set <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
+     * @param CatalogName <p>catalog值,仅使用DLC且开启TcLake的支持,其他类型传空即可</p>
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
     }
 
     /**
-     * Get schema名称 
-     * @return SchemaName schema名称
+     * Get <p>schema名称</p> 
+     * @return SchemaName <p>schema名称</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set schema名称
-     * @param SchemaName schema名称
+     * Set <p>schema名称</p>
+     * @param SchemaName <p>schema名称</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 扩展参数 
-     * @return ExtParams 扩展参数
+     * Get <p>扩展参数</p> 
+     * @return ExtParams <p>扩展参数</p>
      */
     public ExtParam [] getExtParams() {
         return this.ExtParams;
     }
 
     /**
-     * Set 扩展参数
-     * @param ExtParams 扩展参数
+     * Set <p>扩展参数</p>
+     * @param ExtParams <p>扩展参数</p>
      */
     public void setExtParams(ExtParam [] ExtParams) {
         this.ExtParams = ExtParams;
     }
 
     /**
-     * Get table类型 TABLE｜VIEW 
-     * @return TableType table类型 TABLE｜VIEW
+     * Get <p>table类型 TABLE｜VIEW</p> 
+     * @return TableType <p>table类型 TABLE｜VIEW</p>
      */
     public String getTableType() {
         return this.TableType;
     }
 
     /**
-     * Set table类型 TABLE｜VIEW
-     * @param TableType table类型 TABLE｜VIEW
+     * Set <p>table类型 TABLE｜VIEW</p>
+     * @param TableType <p>table类型 TABLE｜VIEW</p>
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;

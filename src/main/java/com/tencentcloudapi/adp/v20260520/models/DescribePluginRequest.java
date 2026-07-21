@@ -45,6 +45,13 @@ public class DescribePluginRequest extends AbstractModel {
     private FieldMask FieldMask;
 
     /**
+    * <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+    */
+    @SerializedName("Module")
+    @Expose
+    private Long Module;
+
+    /**
      * Get <p>插件id</p> 
      * @return PluginId <p>插件id</p>
      */
@@ -92,6 +99,22 @@ public class DescribePluginRequest extends AbstractModel {
         this.FieldMask = FieldMask;
     }
 
+    /**
+     * Get <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul> 
+     * @return Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+     */
+    public Long getModule() {
+        return this.Module;
+    }
+
+    /**
+     * Set <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+     * @param Module <p>插件展示场景。不传或取 0 时不限定场景。</p><p>枚举值：</p><ul><li>0：不限定场景</li><li>1：Agent 模式</li><li>2：工作流</li><li>3：智能工作台</li></ul>
+     */
+    public void setModule(Long Module) {
+        this.Module = Module;
+    }
+
     public DescribePluginRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribePluginRequest extends AbstractModel {
         if (source.FieldMask != null) {
             this.FieldMask = new FieldMask(source.FieldMask);
         }
+        if (source.Module != null) {
+            this.Module = new Long(source.Module);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribePluginRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamObj(map, prefix + "FieldMask.", this.FieldMask);
+        this.setParamSimple(map, prefix + "Module", this.Module);
 
     }
 }

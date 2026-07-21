@@ -45,6 +45,13 @@ public class ModifyRemoteDiskAttributesRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
+    * <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private String AutoRenewFlag;
+
+    /**
      * Get <p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p> 
      * @return RemoteDiskIds <p>一个或多个待操作的单副本SSD硬盘ID。如果传入多个单副本SSD硬盘ID，只支持所有硬盘修改为同一属性。</p>
      */
@@ -92,6 +99,22 @@ public class ModifyRemoteDiskAttributesRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul> 
+     * @return AutoRenewFlag <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+     */
+    public String getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+     * @param AutoRenewFlag <p>云硬盘的自动续费标识</p><p>枚举值：</p><ul><li>NOTIFY_AND_AUTO_RENEW： 通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW： 通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW： 不通知过期不自动续费</li></ul>
+     */
+    public void setAutoRenewFlag(String AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
     public ModifyRemoteDiskAttributesRequest() {
     }
 
@@ -112,6 +135,9 @@ public class ModifyRemoteDiskAttributesRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new String(source.AutoRenewFlag);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifyRemoteDiskAttributesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RemoteDiskIds.", this.RemoteDiskIds);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

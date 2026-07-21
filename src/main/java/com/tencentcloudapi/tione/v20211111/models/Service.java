@@ -311,6 +311,13 @@ public class Service extends AbstractModel {
     private ResourceGroupInfo [] ExternalResourceGroups;
 
     /**
+    * <p>服务所属的项目 id,0表示默认空间</p>
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
     * <p>变更服务的子账户</p>
     */
     @SerializedName("Changer")
@@ -1037,6 +1044,22 @@ public class Service extends AbstractModel {
     }
 
     /**
+     * Get <p>服务所属的项目 id,0表示默认空间</p> 
+     * @return ProjectId <p>服务所属的项目 id,0表示默认空间</p>
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set <p>服务所属的项目 id,0表示默认空间</p>
+     * @param ProjectId <p>服务所属的项目 id,0表示默认空间</p>
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Get <p>变更服务的子账户</p> 
      * @return Changer <p>变更服务的子账户</p>
      */
@@ -1193,6 +1216,9 @@ public class Service extends AbstractModel {
                 this.ExternalResourceGroups[i] = new ResourceGroupInfo(source.ExternalResourceGroups[i]);
             }
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
         if (source.Changer != null) {
             this.Changer = new String(source.Changer);
         }
@@ -1243,6 +1269,7 @@ public class Service extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamObj(map, prefix + "SchedulingPolicy.", this.SchedulingPolicy);
         this.setParamArrayObj(map, prefix + "ExternalResourceGroups.", this.ExternalResourceGroups);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Changer", this.Changer);
         this.setParamSimple(map, prefix + "ChangerName", this.ChangerName);
 

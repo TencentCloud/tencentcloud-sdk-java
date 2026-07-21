@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNatFwInstanceResponse extends AbstractModel {
 
     /**
-    * 防火墙实例id
+    * <p>防火墙实例id</p>
     */
     @SerializedName("CfwInsId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateNatFwInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防火墙实例id 
-     * @return CfwInsId 防火墙实例id
+     * Get <p>防火墙实例id</p> 
+     * @return CfwInsId <p>防火墙实例id</p>
      */
     public String getCfwInsId() {
         return this.CfwInsId;
     }
 
     /**
-     * Set 防火墙实例id
-     * @param CfwInsId 防火墙实例id
+     * Set <p>防火墙实例id</p>
+     * @param CfwInsId <p>防火墙实例id</p>
      */
     public void setCfwInsId(String CfwInsId) {
         this.CfwInsId = CfwInsId;

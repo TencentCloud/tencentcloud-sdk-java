@@ -185,6 +185,13 @@ public class Snapshot extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
+    * <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+    */
+    @SerializedName("SnapshotMode")
+    @Expose
+    private String SnapshotMode;
+
+    /**
      * Get <p>快照所在的位置。</p> 
      * @return Placement <p>快照所在的位置。</p>
      */
@@ -552,6 +559,22 @@ public class Snapshot extends AbstractModel {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
+    /**
+     * Get <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul> 
+     * @return SnapshotMode <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+     */
+    public String getSnapshotMode() {
+        return this.SnapshotMode;
+    }
+
+    /**
+     * Set <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+     * @param SnapshotMode <p>快照模式。取值为 INSTANT_SNAPSHOT 表示极速快照，STANDARD_SNAPSHOT 表示普通快照。</p><p>枚举值：</p><ul><li>INSTANT_SNAPSHOT： 极速快照</li><li>STANDARD_SNAPSHOT： 普通快照</li></ul>
+     */
+    public void setSnapshotMode(String SnapshotMode) {
+        this.SnapshotMode = SnapshotMode;
+    }
+
     public Snapshot() {
     }
 
@@ -638,6 +661,9 @@ public class Snapshot extends AbstractModel {
         if (source.AutoSnapshotPolicyId != null) {
             this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
         }
+        if (source.SnapshotMode != null) {
+            this.SnapshotMode = new String(source.SnapshotMode);
+        }
     }
 
 
@@ -668,6 +694,7 @@ public class Snapshot extends AbstractModel {
         this.setParamSimple(map, prefix + "IsLocked", this.IsLocked);
         this.setParamSimple(map, prefix + "LatestModifyTime", this.LatestModifyTime);
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
 
     }
 }

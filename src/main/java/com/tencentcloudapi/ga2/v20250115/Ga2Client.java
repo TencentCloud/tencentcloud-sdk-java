@@ -94,6 +94,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *创建GA访问日志
+     * @param req CreateGlobalAcceleratorAccessLogRequest
+     * @return CreateGlobalAcceleratorAccessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalAcceleratorAccessLogResponse CreateGlobalAcceleratorAccessLog(CreateGlobalAcceleratorAccessLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalAcceleratorAccessLog", CreateGlobalAcceleratorAccessLogResponse.class);
+    }
+
+    /**
      *创建访问控制策略
      * @param req CreateGlobalAcceleratorAclPolicyRequest
      * @return CreateGlobalAcceleratorAclPolicyResponse
@@ -193,6 +204,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *删除GA日志任务
+     * @param req DeleteGlobalAcceleratorAccessLogRequest
+     * @return DeleteGlobalAcceleratorAccessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalAcceleratorAccessLogResponse DeleteGlobalAcceleratorAccessLog(DeleteGlobalAcceleratorAccessLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlobalAcceleratorAccessLog", DeleteGlobalAcceleratorAccessLogResponse.class);
+    }
+
+    /**
      *删除访问控制策略
      * @param req DeleteGlobalAcceleratorAclPolicyRequest
      * @return DeleteGlobalAcceleratorAclPolicyResponse
@@ -259,6 +281,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *查看访问日志上报参数
+     * @param req DescribeAccessLogParamRequest
+     * @return DescribeAccessLogParamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessLogParamResponse DescribeAccessLogParam(DescribeAccessLogParamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessLogParam", DescribeAccessLogParamResponse.class);
+    }
+
+    /**
      *查询跨境账单
      * @param req DescribeCrossBorderSettlementRequest
      * @return DescribeCrossBorderSettlementResponse
@@ -300,6 +333,39 @@ public class Ga2Client extends AbstractClient{
     public DescribeForwardingRuleResponse DescribeForwardingRule(DescribeForwardingRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeForwardingRule", DescribeForwardingRuleResponse.class);
+    }
+
+    /**
+     *查询日志任务
+     * @param req DescribeGlobalAcceleratorAccessLogRequest
+     * @return DescribeGlobalAcceleratorAccessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalAcceleratorAccessLogResponse DescribeGlobalAcceleratorAccessLog(DescribeGlobalAcceleratorAccessLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalAcceleratorAccessLog", DescribeGlobalAcceleratorAccessLogResponse.class);
+    }
+
+    /**
+     *查看访问控制策略
+     * @param req DescribeGlobalAcceleratorAclPoliciesRequest
+     * @return DescribeGlobalAcceleratorAclPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalAcceleratorAclPoliciesResponse DescribeGlobalAcceleratorAclPolicies(DescribeGlobalAcceleratorAclPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalAcceleratorAclPolicies", DescribeGlobalAcceleratorAclPoliciesResponse.class);
+    }
+
+    /**
+     *查看ACL规则
+     * @param req DescribeGlobalAcceleratorAclRulesRequest
+     * @return DescribeGlobalAcceleratorAclRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalAcceleratorAclRulesResponse DescribeGlobalAcceleratorAclRules(DescribeGlobalAcceleratorAclRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalAcceleratorAclRules", DescribeGlobalAcceleratorAclRulesResponse.class);
     }
 
     /**
@@ -347,6 +413,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *修改日志任务状态
+     * @param req ModifyAccessLogStatusRequest
+     * @return ModifyAccessLogStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessLogStatusResponse ModifyAccessLogStatus(ModifyAccessLogStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccessLogStatus", ModifyAccessLogStatusResponse.class);
+    }
+
+    /**
      *修改终端节点组。
      * @param req ModifyEndpointGroupRequest
      * @return ModifyEndpointGroupResponse
@@ -388,6 +465,17 @@ public class Ga2Client extends AbstractClient{
     public ModifyGlobalAcceleratorResponse ModifyGlobalAccelerator(ModifyGlobalAcceleratorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGlobalAccelerator", ModifyGlobalAcceleratorResponse.class);
+    }
+
+    /**
+     *修改GA访问日志
+     * @param req ModifyGlobalAcceleratorAccessLogRequest
+     * @return ModifyGlobalAcceleratorAccessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalAcceleratorAccessLogResponse ModifyGlobalAcceleratorAccessLog(ModifyGlobalAcceleratorAccessLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalAcceleratorAccessLog", ModifyGlobalAcceleratorAccessLogResponse.class);
     }
 
     /**

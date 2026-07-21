@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SqlGatewayItem extends AbstractModel {
 
     /**
-    * 唯一标识
+    * <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialId")
@@ -32,7 +32,7 @@ public class SqlGatewayItem extends AbstractModel {
     private String SerialId;
 
     /**
-    * Flink内核版本
+    * <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlinkVersion")
@@ -40,7 +40,7 @@ public class SqlGatewayItem extends AbstractModel {
     private String FlinkVersion;
 
     /**
-    * 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+    * <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -48,7 +48,7 @@ public class SqlGatewayItem extends AbstractModel {
     private Long Status;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorUin")
@@ -56,7 +56,7 @@ public class SqlGatewayItem extends AbstractModel {
     private String CreatorUin;
 
     /**
-    * 引用资源
+    * <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRefs")
@@ -64,7 +64,7 @@ public class SqlGatewayItem extends AbstractModel {
     private GatewayRefItem [] ResourceRefs;
 
     /**
-    * Cu规格
+    * <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CuSpec")
@@ -72,7 +72,7 @@ public class SqlGatewayItem extends AbstractModel {
     private Float CuSpec;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -80,7 +80,7 @@ public class SqlGatewayItem extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -88,7 +88,7 @@ public class SqlGatewayItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 配置参数
+    * <p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -96,30 +96,54 @@ public class SqlGatewayItem extends AbstractModel {
     private Property [] Properties;
 
     /**
-    * Cpu
+    * <p>Cpu</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
 
     /**
-    * Mem
+    * <p>Mem</p>
     */
     @SerializedName("Mem")
     @Expose
     private Float Mem;
 
     /**
-    * jdk版本
+    * <p>jdk版本</p>
     */
     @SerializedName("JdkVersion")
     @Expose
     private String JdkVersion;
 
     /**
-     * Get 唯一标识
+    * <p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionClusterId")
+    @Expose
+    private String SessionClusterId;
+
+    /**
+    * <p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PgUser")
+    @Expose
+    private String PgUser;
+
+    /**
+    * <p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Endpoints")
+    @Expose
+    private SqlGatewayEndpoint [] Endpoints;
+
+    /**
+     * Get <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SerialId 唯一标识
+     * @return SerialId <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialId() {
@@ -127,9 +151,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 唯一标识
+     * Set <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SerialId 唯一标识
+     * @param SerialId <p>唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialId(String SerialId) {
@@ -137,9 +161,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get Flink内核版本
+     * Get <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlinkVersion Flink内核版本
+     * @return FlinkVersion <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlinkVersion() {
@@ -147,9 +171,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set Flink内核版本
+     * Set <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlinkVersion Flink内核版本
+     * @param FlinkVersion <p>Flink内核版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlinkVersion(String FlinkVersion) {
@@ -157,9 +181,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+     * Get <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+     * @return Status <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -167,9 +191,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+     * Set <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中
+     * @param Status <p>状态，1.停止 2. 开启中 3. 开启 4. 开启失败 5. 停止中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -177,9 +201,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin 创建人
+     * @return CreatorUin <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorUin() {
@@ -187,9 +211,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin 创建人
+     * @param CreatorUin <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorUin(String CreatorUin) {
@@ -197,9 +221,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 引用资源
+     * Get <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceRefs 引用资源
+     * @return ResourceRefs <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatewayRefItem [] getResourceRefs() {
@@ -207,9 +231,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 引用资源
+     * Set <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceRefs 引用资源
+     * @param ResourceRefs <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRefs(GatewayRefItem [] ResourceRefs) {
@@ -217,9 +241,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get Cu规格
+     * Get <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CuSpec Cu规格
+     * @return CuSpec <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCuSpec() {
@@ -227,9 +251,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set Cu规格
+     * Set <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CuSpec Cu规格
+     * @param CuSpec <p>Cu规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCuSpec(Float CuSpec) {
@@ -237,9 +261,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -247,9 +271,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -257,9 +281,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -267,9 +291,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -277,9 +301,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get 配置参数
+     * Get <p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties 配置参数
+     * @return Properties <p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Property [] getProperties() {
@@ -287,9 +311,9 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Set 配置参数
+     * Set <p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties 配置参数
+     * @param Properties <p>配置参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(Property [] Properties) {
@@ -297,51 +321,111 @@ public class SqlGatewayItem extends AbstractModel {
     }
 
     /**
-     * Get Cpu 
-     * @return Cpu Cpu
+     * Get <p>Cpu</p> 
+     * @return Cpu <p>Cpu</p>
      */
     public Float getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Cpu
-     * @param Cpu Cpu
+     * Set <p>Cpu</p>
+     * @param Cpu <p>Cpu</p>
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Mem 
-     * @return Mem Mem
+     * Get <p>Mem</p> 
+     * @return Mem <p>Mem</p>
      */
     public Float getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Mem
-     * @param Mem Mem
+     * Set <p>Mem</p>
+     * @param Mem <p>Mem</p>
      */
     public void setMem(Float Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get jdk版本 
-     * @return JdkVersion jdk版本
+     * Get <p>jdk版本</p> 
+     * @return JdkVersion <p>jdk版本</p>
      */
     public String getJdkVersion() {
         return this.JdkVersion;
     }
 
     /**
-     * Set jdk版本
-     * @param JdkVersion jdk版本
+     * Set <p>jdk版本</p>
+     * @param JdkVersion <p>jdk版本</p>
      */
     public void setJdkVersion(String JdkVersion) {
         this.JdkVersion = JdkVersion;
+    }
+
+    /**
+     * Get <p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionClusterId <p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionClusterId() {
+        return this.SessionClusterId;
+    }
+
+    /**
+     * Set <p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionClusterId <p>session id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionClusterId(String SessionClusterId) {
+        this.SessionClusterId = SessionClusterId;
+    }
+
+    /**
+     * Get <p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PgUser <p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPgUser() {
+        return this.PgUser;
+    }
+
+    /**
+     * Set <p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PgUser <p>pg用户名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPgUser(String PgUser) {
+        this.PgUser = PgUser;
+    }
+
+    /**
+     * Get <p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Endpoints <p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SqlGatewayEndpoint [] getEndpoints() {
+        return this.Endpoints;
+    }
+
+    /**
+     * Set <p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Endpoints <p>协议</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndpoints(SqlGatewayEndpoint [] Endpoints) {
+        this.Endpoints = Endpoints;
     }
 
     public SqlGatewayItem() {
@@ -394,6 +478,18 @@ public class SqlGatewayItem extends AbstractModel {
         if (source.JdkVersion != null) {
             this.JdkVersion = new String(source.JdkVersion);
         }
+        if (source.SessionClusterId != null) {
+            this.SessionClusterId = new String(source.SessionClusterId);
+        }
+        if (source.PgUser != null) {
+            this.PgUser = new String(source.PgUser);
+        }
+        if (source.Endpoints != null) {
+            this.Endpoints = new SqlGatewayEndpoint[source.Endpoints.length];
+            for (int i = 0; i < source.Endpoints.length; i++) {
+                this.Endpoints[i] = new SqlGatewayEndpoint(source.Endpoints[i]);
+            }
+        }
     }
 
 
@@ -413,6 +509,9 @@ public class SqlGatewayItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Mem", this.Mem);
         this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
+        this.setParamSimple(map, prefix + "SessionClusterId", this.SessionClusterId);
+        this.setParamSimple(map, prefix + "PgUser", this.PgUser);
+        this.setParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);
 
     }
 }

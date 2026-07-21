@@ -59,6 +59,13 @@ public class SubtitleTransResultItem extends AbstractModel {
     private String SubtitleEmbedPath;
 
     /**
+    * <p>字幕文件FileId。</p>
+    */
+    @SerializedName("SubtitleFileId")
+    @Expose
+    private String SubtitleFileId;
+
+    /**
      * Get <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul> 
      * @return Status <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
      */
@@ -138,6 +145,22 @@ public class SubtitleTransResultItem extends AbstractModel {
         this.SubtitleEmbedPath = SubtitleEmbedPath;
     }
 
+    /**
+     * Get <p>字幕文件FileId。</p> 
+     * @return SubtitleFileId <p>字幕文件FileId。</p>
+     */
+    public String getSubtitleFileId() {
+        return this.SubtitleFileId;
+    }
+
+    /**
+     * Set <p>字幕文件FileId。</p>
+     * @param SubtitleFileId <p>字幕文件FileId。</p>
+     */
+    public void setSubtitleFileId(String SubtitleFileId) {
+        this.SubtitleFileId = SubtitleFileId;
+    }
+
     public SubtitleTransResultItem() {
     }
 
@@ -161,6 +184,9 @@ public class SubtitleTransResultItem extends AbstractModel {
         if (source.SubtitleEmbedPath != null) {
             this.SubtitleEmbedPath = new String(source.SubtitleEmbedPath);
         }
+        if (source.SubtitleFileId != null) {
+            this.SubtitleFileId = new String(source.SubtitleFileId);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class SubtitleTransResultItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TransDst", this.TransDst);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
+        this.setParamSimple(map, prefix + "SubtitleFileId", this.SubtitleFileId);
 
     }
 }

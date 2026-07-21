@@ -24,233 +24,279 @@ import java.util.HashMap;
 public class ForwardingRuleSet extends AbstractModel {
 
     /**
-    * 七层转发规则条件信息。
+    * <p>七层转发规则条件信息。</p>
     */
     @SerializedName("RuleCondition")
     @Expose
     private RuleCondition [] RuleCondition;
 
     /**
-    * 七层转发规则行为信息。
+    * <p>七层转发规则行为信息。</p>
     */
     @SerializedName("RuleAction")
     @Expose
     private RuleAction [] RuleAction;
 
     /**
-    * 是否开启回源Sni。
+    * <p>是否开启回源Sni。</p>
     */
     @SerializedName("EnableOriginSni")
     @Expose
     private Boolean EnableOriginSni;
 
     /**
-    * 回源Sni。
+    * <p>回源Sni。</p>
     */
     @SerializedName("OriginSni")
     @Expose
     private String OriginSni;
 
     /**
-    * 回源Herder信息。
+    * <p>回源Herder信息。</p>
     */
     @SerializedName("OriginHeaders")
     @Expose
     private OriginHeader [] OriginHeaders;
 
     /**
-    * 回源Host。
+    * <p>回源Host。</p>
     */
     @SerializedName("OriginHost")
     @Expose
     private String OriginHost;
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 七层转发策略ID。
+    * <p>七层转发策略ID。</p>
     */
     @SerializedName("ForwardingPolicyId")
     @Expose
     private String ForwardingPolicyId;
 
     /**
-    * 七层转发规则ID。
+    * <p>七层转发规则ID。</p>
     */
     @SerializedName("ForwardingRuleId")
     @Expose
     private String ForwardingRuleId;
 
     /**
-     * Get 七层转发规则条件信息。 
-     * @return RuleCondition 七层转发规则条件信息。
+    * <p>源站响应头</p>
+    */
+    @SerializedName("HideResponseHeaders")
+    @Expose
+    private HideResponseHeaders [] HideResponseHeaders;
+
+    /**
+    * <p>删除源站响应头</p>
+    */
+    @SerializedName("ResponseHeaders")
+    @Expose
+    private ResponseHeaders [] ResponseHeaders;
+
+    /**
+     * Get <p>七层转发规则条件信息。</p> 
+     * @return RuleCondition <p>七层转发规则条件信息。</p>
      */
     public RuleCondition [] getRuleCondition() {
         return this.RuleCondition;
     }
 
     /**
-     * Set 七层转发规则条件信息。
-     * @param RuleCondition 七层转发规则条件信息。
+     * Set <p>七层转发规则条件信息。</p>
+     * @param RuleCondition <p>七层转发规则条件信息。</p>
      */
     public void setRuleCondition(RuleCondition [] RuleCondition) {
         this.RuleCondition = RuleCondition;
     }
 
     /**
-     * Get 七层转发规则行为信息。 
-     * @return RuleAction 七层转发规则行为信息。
+     * Get <p>七层转发规则行为信息。</p> 
+     * @return RuleAction <p>七层转发规则行为信息。</p>
      */
     public RuleAction [] getRuleAction() {
         return this.RuleAction;
     }
 
     /**
-     * Set 七层转发规则行为信息。
-     * @param RuleAction 七层转发规则行为信息。
+     * Set <p>七层转发规则行为信息。</p>
+     * @param RuleAction <p>七层转发规则行为信息。</p>
      */
     public void setRuleAction(RuleAction [] RuleAction) {
         this.RuleAction = RuleAction;
     }
 
     /**
-     * Get 是否开启回源Sni。 
-     * @return EnableOriginSni 是否开启回源Sni。
+     * Get <p>是否开启回源Sni。</p> 
+     * @return EnableOriginSni <p>是否开启回源Sni。</p>
      */
     public Boolean getEnableOriginSni() {
         return this.EnableOriginSni;
     }
 
     /**
-     * Set 是否开启回源Sni。
-     * @param EnableOriginSni 是否开启回源Sni。
+     * Set <p>是否开启回源Sni。</p>
+     * @param EnableOriginSni <p>是否开启回源Sni。</p>
      */
     public void setEnableOriginSni(Boolean EnableOriginSni) {
         this.EnableOriginSni = EnableOriginSni;
     }
 
     /**
-     * Get 回源Sni。 
-     * @return OriginSni 回源Sni。
+     * Get <p>回源Sni。</p> 
+     * @return OriginSni <p>回源Sni。</p>
      */
     public String getOriginSni() {
         return this.OriginSni;
     }
 
     /**
-     * Set 回源Sni。
-     * @param OriginSni 回源Sni。
+     * Set <p>回源Sni。</p>
+     * @param OriginSni <p>回源Sni。</p>
      */
     public void setOriginSni(String OriginSni) {
         this.OriginSni = OriginSni;
     }
 
     /**
-     * Get 回源Herder信息。 
-     * @return OriginHeaders 回源Herder信息。
+     * Get <p>回源Herder信息。</p> 
+     * @return OriginHeaders <p>回源Herder信息。</p>
      */
     public OriginHeader [] getOriginHeaders() {
         return this.OriginHeaders;
     }
 
     /**
-     * Set 回源Herder信息。
-     * @param OriginHeaders 回源Herder信息。
+     * Set <p>回源Herder信息。</p>
+     * @param OriginHeaders <p>回源Herder信息。</p>
      */
     public void setOriginHeaders(OriginHeader [] OriginHeaders) {
         this.OriginHeaders = OriginHeaders;
     }
 
     /**
-     * Get 回源Host。 
-     * @return OriginHost 回源Host。
+     * Get <p>回源Host。</p> 
+     * @return OriginHost <p>回源Host。</p>
      */
     public String getOriginHost() {
         return this.OriginHost;
     }
 
     /**
-     * Set 回源Host。
-     * @param OriginHost 回源Host。
+     * Set <p>回源Host。</p>
+     * @param OriginHost <p>回源Host。</p>
      */
     public void setOriginHost(String OriginHost) {
         this.OriginHost = OriginHost;
     }
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 七层转发策略ID。 
-     * @return ForwardingPolicyId 七层转发策略ID。
+     * Get <p>七层转发策略ID。</p> 
+     * @return ForwardingPolicyId <p>七层转发策略ID。</p>
      */
     public String getForwardingPolicyId() {
         return this.ForwardingPolicyId;
     }
 
     /**
-     * Set 七层转发策略ID。
-     * @param ForwardingPolicyId 七层转发策略ID。
+     * Set <p>七层转发策略ID。</p>
+     * @param ForwardingPolicyId <p>七层转发策略ID。</p>
      */
     public void setForwardingPolicyId(String ForwardingPolicyId) {
         this.ForwardingPolicyId = ForwardingPolicyId;
     }
 
     /**
-     * Get 七层转发规则ID。 
-     * @return ForwardingRuleId 七层转发规则ID。
+     * Get <p>七层转发规则ID。</p> 
+     * @return ForwardingRuleId <p>七层转发规则ID。</p>
      */
     public String getForwardingRuleId() {
         return this.ForwardingRuleId;
     }
 
     /**
-     * Set 七层转发规则ID。
-     * @param ForwardingRuleId 七层转发规则ID。
+     * Set <p>七层转发规则ID。</p>
+     * @param ForwardingRuleId <p>七层转发规则ID。</p>
      */
     public void setForwardingRuleId(String ForwardingRuleId) {
         this.ForwardingRuleId = ForwardingRuleId;
+    }
+
+    /**
+     * Get <p>源站响应头</p> 
+     * @return HideResponseHeaders <p>源站响应头</p>
+     */
+    public HideResponseHeaders [] getHideResponseHeaders() {
+        return this.HideResponseHeaders;
+    }
+
+    /**
+     * Set <p>源站响应头</p>
+     * @param HideResponseHeaders <p>源站响应头</p>
+     */
+    public void setHideResponseHeaders(HideResponseHeaders [] HideResponseHeaders) {
+        this.HideResponseHeaders = HideResponseHeaders;
+    }
+
+    /**
+     * Get <p>删除源站响应头</p> 
+     * @return ResponseHeaders <p>删除源站响应头</p>
+     */
+    public ResponseHeaders [] getResponseHeaders() {
+        return this.ResponseHeaders;
+    }
+
+    /**
+     * Set <p>删除源站响应头</p>
+     * @param ResponseHeaders <p>删除源站响应头</p>
+     */
+    public void setResponseHeaders(ResponseHeaders [] ResponseHeaders) {
+        this.ResponseHeaders = ResponseHeaders;
     }
 
     public ForwardingRuleSet() {
@@ -300,6 +346,18 @@ public class ForwardingRuleSet extends AbstractModel {
         if (source.ForwardingRuleId != null) {
             this.ForwardingRuleId = new String(source.ForwardingRuleId);
         }
+        if (source.HideResponseHeaders != null) {
+            this.HideResponseHeaders = new HideResponseHeaders[source.HideResponseHeaders.length];
+            for (int i = 0; i < source.HideResponseHeaders.length; i++) {
+                this.HideResponseHeaders[i] = new HideResponseHeaders(source.HideResponseHeaders[i]);
+            }
+        }
+        if (source.ResponseHeaders != null) {
+            this.ResponseHeaders = new ResponseHeaders[source.ResponseHeaders.length];
+            for (int i = 0; i < source.ResponseHeaders.length; i++) {
+                this.ResponseHeaders[i] = new ResponseHeaders(source.ResponseHeaders[i]);
+            }
+        }
     }
 
 
@@ -317,6 +375,8 @@ public class ForwardingRuleSet extends AbstractModel {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "ForwardingPolicyId", this.ForwardingPolicyId);
         this.setParamSimple(map, prefix + "ForwardingRuleId", this.ForwardingRuleId);
+        this.setParamArrayObj(map, prefix + "HideResponseHeaders.", this.HideResponseHeaders);
+        this.setParamArrayObj(map, prefix + "ResponseHeaders.", this.ResponseHeaders);
 
     }
 }

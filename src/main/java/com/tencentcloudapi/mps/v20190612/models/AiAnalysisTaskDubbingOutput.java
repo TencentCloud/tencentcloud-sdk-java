@@ -59,6 +59,20 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
     private String ExtraOutput;
 
     /**
+    * <p>译制视频FileId。</p>
+    */
+    @SerializedName("VideoFileId")
+    @Expose
+    private String VideoFileId;
+
+    /**
+    * <p>标记文件FileId。</p>
+    */
+    @SerializedName("SpeakerFileId")
+    @Expose
+    private String SpeakerFileId;
+
+    /**
      * Get <p>译制视频路径。</p> 
      * @return VideoPath <p>译制视频路径。</p>
      */
@@ -138,6 +152,38 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         this.ExtraOutput = ExtraOutput;
     }
 
+    /**
+     * Get <p>译制视频FileId。</p> 
+     * @return VideoFileId <p>译制视频FileId。</p>
+     */
+    public String getVideoFileId() {
+        return this.VideoFileId;
+    }
+
+    /**
+     * Set <p>译制视频FileId。</p>
+     * @param VideoFileId <p>译制视频FileId。</p>
+     */
+    public void setVideoFileId(String VideoFileId) {
+        this.VideoFileId = VideoFileId;
+    }
+
+    /**
+     * Get <p>标记文件FileId。</p> 
+     * @return SpeakerFileId <p>标记文件FileId。</p>
+     */
+    public String getSpeakerFileId() {
+        return this.SpeakerFileId;
+    }
+
+    /**
+     * Set <p>标记文件FileId。</p>
+     * @param SpeakerFileId <p>标记文件FileId。</p>
+     */
+    public void setSpeakerFileId(String SpeakerFileId) {
+        this.SpeakerFileId = SpeakerFileId;
+    }
+
     public AiAnalysisTaskDubbingOutput() {
     }
 
@@ -161,6 +207,12 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         if (source.ExtraOutput != null) {
             this.ExtraOutput = new String(source.ExtraOutput);
         }
+        if (source.VideoFileId != null) {
+            this.VideoFileId = new String(source.VideoFileId);
+        }
+        if (source.SpeakerFileId != null) {
+            this.SpeakerFileId = new String(source.SpeakerFileId);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "ExtraOutput", this.ExtraOutput);
+        this.setParamSimple(map, prefix + "VideoFileId", this.VideoFileId);
+        this.setParamSimple(map, prefix + "SpeakerFileId", this.SpeakerFileId);
 
     }
 }

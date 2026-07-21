@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AssessEnvironmentRiskRsp extends AbstractModel {
 
     /**
-    * <p>环境风险分信息</p>
+    * <p>IP环境风险分信息</p>
     */
     @SerializedName("Score")
     @Expose
     private DataScore Score;
 
     /**
-    * <p>环境基础信息</p>
+    * <p>IP环境基础信息</p>
     */
     @SerializedName("Environment")
     @Expose
     private Environment Environment;
 
     /**
-     * Get <p>环境风险分信息</p> 
-     * @return Score <p>环境风险分信息</p>
+     * Get <p>IP环境风险分信息</p> 
+     * @return Score <p>IP环境风险分信息</p>
      */
     public DataScore getScore() {
         return this.Score;
     }
 
     /**
-     * Set <p>环境风险分信息</p>
-     * @param Score <p>环境风险分信息</p>
+     * Set <p>IP环境风险分信息</p>
+     * @param Score <p>IP环境风险分信息</p>
      */
     public void setScore(DataScore Score) {
         this.Score = Score;
     }
 
     /**
-     * Get <p>环境基础信息</p> 
-     * @return Environment <p>环境基础信息</p>
+     * Get <p>IP环境基础信息</p> 
+     * @return Environment <p>IP环境基础信息</p>
      */
     public Environment getEnvironment() {
         return this.Environment;
     }
 
     /**
-     * Set <p>环境基础信息</p>
-     * @param Environment <p>环境基础信息</p>
+     * Set <p>IP环境基础信息</p>
+     * @param Environment <p>IP环境基础信息</p>
      */
     public void setEnvironment(Environment Environment) {
         this.Environment = Environment;

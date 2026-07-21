@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeMCPTaskResponse extends AbstractModel {
 
     /**
+    * <p>任务详细信息</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private MCPTaskInfo TaskInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>任务详细信息</p> 
+     * @return TaskInfo <p>任务详细信息</p>
+     */
+    public MCPTaskInfo getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>任务详细信息</p>
+     * @param TaskInfo <p>任务详细信息</p>
+     */
+    public void setTaskInfo(MCPTaskInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeMCPTaskResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeMCPTaskResponse(DescribeMCPTaskResponse source) {
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new MCPTaskInfo(source.TaskInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeMCPTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

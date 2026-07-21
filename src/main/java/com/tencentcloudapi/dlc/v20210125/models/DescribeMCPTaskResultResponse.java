@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeMCPTaskResultResponse extends AbstractModel {
 
     /**
+    * <p>任务结果信息</p>
+    */
+    @SerializedName("TaskResult")
+    @Expose
+    private MCPTaskResultInfo TaskResult;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>任务结果信息</p> 
+     * @return TaskResult <p>任务结果信息</p>
+     */
+    public MCPTaskResultInfo getTaskResult() {
+        return this.TaskResult;
+    }
+
+    /**
+     * Set <p>任务结果信息</p>
+     * @param TaskResult <p>任务结果信息</p>
+     */
+    public void setTaskResult(MCPTaskResultInfo TaskResult) {
+        this.TaskResult = TaskResult;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeMCPTaskResultResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeMCPTaskResultResponse(DescribeMCPTaskResultResponse source) {
+        if (source.TaskResult != null) {
+            this.TaskResult = new MCPTaskResultInfo(source.TaskResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeMCPTaskResultResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "TaskResult.", this.TaskResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

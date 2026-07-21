@@ -87,6 +87,13 @@ public class AvatarScriptInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * <p>已完成状态的视频URL</p>
+    */
+    @SerializedName("MediaUrl")
+    @Expose
+    private String MediaUrl;
+
+    /**
      * Get <p>数字人直播间话术 ID。</p> 
      * @return ScriptId <p>数字人直播间话术 ID。</p>
      */
@@ -230,6 +237,22 @@ public class AvatarScriptInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get <p>已完成状态的视频URL</p> 
+     * @return MediaUrl <p>已完成状态的视频URL</p>
+     */
+    public String getMediaUrl() {
+        return this.MediaUrl;
+    }
+
+    /**
+     * Set <p>已完成状态的视频URL</p>
+     * @param MediaUrl <p>已完成状态的视频URL</p>
+     */
+    public void setMediaUrl(String MediaUrl) {
+        this.MediaUrl = MediaUrl;
+    }
+
     public AvatarScriptInfo() {
     }
 
@@ -265,6 +288,9 @@ public class AvatarScriptInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.MediaUrl != null) {
+            this.MediaUrl = new String(source.MediaUrl);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class AvatarScriptInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Position", this.Position);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
 
     }
 }

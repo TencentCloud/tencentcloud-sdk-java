@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyModelServiceResponse extends AbstractModel {
 
     /**
-    * 生成的模型服务
+    * <p>生成的模型服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
@@ -39,9 +39,9 @@ public class ModifyModelServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的模型服务
+     * Get <p>生成的模型服务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Service 生成的模型服务
+     * @return Service <p>生成的模型服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Service getService() {
@@ -49,9 +49,9 @@ public class ModifyModelServiceResponse extends AbstractModel {
     }
 
     /**
-     * Set 生成的模型服务
+     * Set <p>生成的模型服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Service 生成的模型服务
+     * @param Service <p>生成的模型服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(Service Service) {

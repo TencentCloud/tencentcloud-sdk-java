@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeMCPTaskRequest extends AbstractModel {
 
+    /**
+    * <p>任务 ID</p>
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * Get <p>任务 ID</p> 
+     * @return TaskId <p>任务 ID</p>
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set <p>任务 ID</p>
+     * @param TaskId <p>任务 ID</p>
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public DescribeMCPTaskRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeMCPTaskRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeMCPTaskRequest(DescribeMCPTaskRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeMCPTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

@@ -66,6 +66,14 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
     private ConversationMessage [] Messages;
 
     /**
+    * <p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResetInfo")
+    @Expose
+    private ConversationResetInfo ResetInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,7 +163,9 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
     /**
      * Get <p>消息列表</p> 
      * @return Messages <p>消息列表</p>
+     * @deprecated
      */
+    @Deprecated
     public ConversationMessage [] getMessages() {
         return this.Messages;
     }
@@ -163,9 +173,31 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
     /**
      * Set <p>消息列表</p>
      * @param Messages <p>消息列表</p>
+     * @deprecated
      */
+    @Deprecated
     public void setMessages(ConversationMessage [] Messages) {
         this.Messages = Messages;
+    }
+
+    /**
+     * Get <p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResetInfo <p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationResetInfo getResetInfo() {
+        return this.ResetInfo;
+    }
+
+    /**
+     * Set <p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResetInfo <p>最近一次重置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResetInfo(ConversationResetInfo ResetInfo) {
+        this.ResetInfo = ResetInfo;
     }
 
     /**
@@ -216,6 +248,9 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
                 this.Messages[i] = new ConversationMessage(source.Messages[i]);
             }
         }
+        if (source.ResetInfo != null) {
+            this.ResetInfo = new ConversationResetInfo(source.ResetInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -232,6 +267,7 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
         this.setParamArrayObj(map, prefix + "MessageList.", this.MessageList);
         this.setParamArrayObj(map, prefix + "Messages.", this.Messages);
+        this.setParamObj(map, prefix + "ResetInfo.", this.ResetInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

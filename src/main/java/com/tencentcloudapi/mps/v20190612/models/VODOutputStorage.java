@@ -38,11 +38,18 @@ public class VODOutputStorage extends AbstractModel {
     private String Region;
 
     /**
-    * <p>点播专业版应用Id</p>
+    * <p>点播应用Id</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+    * <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+    */
+    @SerializedName("VodBasic")
+    @Expose
+    private Long VodBasic;
 
     /**
      * Get <p>媒体处理生成的文件输出的目标 <em>Bucket ID</em></p> 
@@ -77,19 +84,35 @@ public class VODOutputStorage extends AbstractModel {
     }
 
     /**
-     * Get <p>点播专业版应用Id</p> 
-     * @return SubAppId <p>点播专业版应用Id</p>
+     * Get <p>点播应用Id</p> 
+     * @return SubAppId <p>点播应用Id</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>点播专业版应用Id</p>
-     * @param SubAppId <p>点播专业版应用Id</p>
+     * Set <p>点播应用Id</p>
+     * @param SubAppId <p>点播应用Id</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul> 
+     * @return VodBasic <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+     */
+    public Long getVodBasic() {
+        return this.VodBasic;
+    }
+
+    /**
+     * Set <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+     * @param VodBasic <p>任务输出是否使用VOD标准版。<br>注意：不填表示使用VOD专业版。</p><p>枚举值：</p><ul><li>0： 不使用VOD标准版</li><li>1： 使用VOD标准版</li></ul>
+     */
+    public void setVodBasic(Long VodBasic) {
+        this.VodBasic = VodBasic;
     }
 
     public VODOutputStorage() {
@@ -109,6 +132,9 @@ public class VODOutputStorage extends AbstractModel {
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.VodBasic != null) {
+            this.VodBasic = new Long(source.VodBasic);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class VODOutputStorage extends AbstractModel {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "VodBasic", this.VodBasic);
 
     }
 }

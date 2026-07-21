@@ -39,6 +39,28 @@ public class RceClient extends AbstractClient{
     }
 
     /**
+     *设备风险评估-高级版
+     * @param req AssessDeviceRiskPremiumProRequest
+     * @return AssessDeviceRiskPremiumProResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssessDeviceRiskPremiumProResponse AssessDeviceRiskPremiumPro(AssessDeviceRiskPremiumProRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssessDeviceRiskPremiumPro", AssessDeviceRiskPremiumProResponse.class);
+    }
+
+    /**
+     *设备风险评估-基础版
+     * @param req AssessDeviceRiskProRequest
+     * @return AssessDeviceRiskProResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssessDeviceRiskProResponse AssessDeviceRiskPro(AssessDeviceRiskProRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssessDeviceRiskPro", AssessDeviceRiskProResponse.class);
+    }
+
+    /**
      *环境风险评估
      * @param req AssessEnvironmentRiskRequest
      * @return AssessEnvironmentRiskResponse

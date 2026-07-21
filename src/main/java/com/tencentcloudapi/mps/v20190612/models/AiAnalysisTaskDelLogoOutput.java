@@ -76,6 +76,27 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String VoiceClonedMarkFile;
 
     /**
+    * <p>擦除后文件的FileId。</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * <p>基于画面提取的字幕文件FileId。</p>
+    */
+    @SerializedName("OriginSubtitleFileId")
+    @Expose
+    private String OriginSubtitleFileId;
+
+    /**
+    * <p>基于画面提取的字幕翻译文件FileId    。</p>
+    */
+    @SerializedName("TranslateSubtitleFileId")
+    @Expose
+    private String TranslateSubtitleFileId;
+
+    /**
      * Get <p>擦除后文件的路径。</p> 
      * @return Path <p>擦除后文件的路径。</p>
      */
@@ -199,6 +220,54 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.VoiceClonedMarkFile = VoiceClonedMarkFile;
     }
 
+    /**
+     * Get <p>擦除后文件的FileId。</p> 
+     * @return FileId <p>擦除后文件的FileId。</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>擦除后文件的FileId。</p>
+     * @param FileId <p>擦除后文件的FileId。</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get <p>基于画面提取的字幕文件FileId。</p> 
+     * @return OriginSubtitleFileId <p>基于画面提取的字幕文件FileId。</p>
+     */
+    public String getOriginSubtitleFileId() {
+        return this.OriginSubtitleFileId;
+    }
+
+    /**
+     * Set <p>基于画面提取的字幕文件FileId。</p>
+     * @param OriginSubtitleFileId <p>基于画面提取的字幕文件FileId。</p>
+     */
+    public void setOriginSubtitleFileId(String OriginSubtitleFileId) {
+        this.OriginSubtitleFileId = OriginSubtitleFileId;
+    }
+
+    /**
+     * Get <p>基于画面提取的字幕翻译文件FileId    。</p> 
+     * @return TranslateSubtitleFileId <p>基于画面提取的字幕翻译文件FileId    。</p>
+     */
+    public String getTranslateSubtitleFileId() {
+        return this.TranslateSubtitleFileId;
+    }
+
+    /**
+     * Set <p>基于画面提取的字幕翻译文件FileId    。</p>
+     * @param TranslateSubtitleFileId <p>基于画面提取的字幕翻译文件FileId    。</p>
+     */
+    public void setTranslateSubtitleFileId(String TranslateSubtitleFileId) {
+        this.TranslateSubtitleFileId = TranslateSubtitleFileId;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -228,6 +297,15 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         if (source.VoiceClonedMarkFile != null) {
             this.VoiceClonedMarkFile = new String(source.VoiceClonedMarkFile);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.OriginSubtitleFileId != null) {
+            this.OriginSubtitleFileId = new String(source.OriginSubtitleFileId);
+        }
+        if (source.TranslateSubtitleFileId != null) {
+            this.TranslateSubtitleFileId = new String(source.TranslateSubtitleFileId);
+        }
     }
 
 
@@ -242,6 +320,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
         this.setParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
         this.setParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "OriginSubtitleFileId", this.OriginSubtitleFileId);
+        this.setParamSimple(map, prefix + "TranslateSubtitleFileId", this.TranslateSubtitleFileId);
 
     }
 }

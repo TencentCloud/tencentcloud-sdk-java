@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRunSyncAssetResponse extends AbstractModel {
 
     /**
-    * 0：同步成功，1：资产更新中，2：后台同步调用失败
+    * <p>0：同步成功，1：资产更新中，2：后台同步调用失败</p>
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyRunSyncAssetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0：同步成功，1：资产更新中，2：后台同步调用失败 
-     * @return Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * Get <p>0：同步成功，1：资产更新中，2：后台同步调用失败</p> 
+     * @return Status <p>0：同步成功，1：资产更新中，2：后台同步调用失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0：同步成功，1：资产更新中，2：后台同步调用失败
-     * @param Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * Set <p>0：同步成功，1：资产更新中，2：后台同步调用失败</p>
+     * @param Status <p>0：同步成功，1：资产更新中，2：后台同步调用失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

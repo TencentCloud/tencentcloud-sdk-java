@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageProcessTaskOutput extends AbstractModel {
 
     /**
-    * 输出文件的路径。
+    * <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -32,7 +32,7 @@ public class ImageProcessTaskOutput extends AbstractModel {
     private String Path;
 
     /**
-    * 输出文件的存储位置。
+    * <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
@@ -40,23 +40,30 @@ public class ImageProcessTaskOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 输出文件的URL。
+    * <p>输出文件的URL。</p>
     */
     @SerializedName("SignedUrl")
     @Expose
     private String SignedUrl;
 
     /**
-    * 图生文任务的处理结果。
+    * <p>图生文任务的处理结果。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 输出文件的路径。
+    * <p>VOD标准版FileId</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+     * Get <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 输出文件的路径。
+     * @return Path <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -64,9 +71,9 @@ public class ImageProcessTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出文件的路径。
+     * Set <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 输出文件的路径。
+     * @param Path <p>输出文件的路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -74,9 +81,9 @@ public class ImageProcessTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出文件的存储位置。
+     * Get <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputStorage 输出文件的存储位置。
+     * @return OutputStorage <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -84,9 +91,9 @@ public class ImageProcessTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出文件的存储位置。
+     * Set <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputStorage 输出文件的存储位置。
+     * @param OutputStorage <p>输出文件的存储位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -94,35 +101,51 @@ public class ImageProcessTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出文件的URL。 
-     * @return SignedUrl 输出文件的URL。
+     * Get <p>输出文件的URL。</p> 
+     * @return SignedUrl <p>输出文件的URL。</p>
      */
     public String getSignedUrl() {
         return this.SignedUrl;
     }
 
     /**
-     * Set 输出文件的URL。
-     * @param SignedUrl 输出文件的URL。
+     * Set <p>输出文件的URL。</p>
+     * @param SignedUrl <p>输出文件的URL。</p>
      */
     public void setSignedUrl(String SignedUrl) {
         this.SignedUrl = SignedUrl;
     }
 
     /**
-     * Get 图生文任务的处理结果。 
-     * @return Content 图生文任务的处理结果。
+     * Get <p>图生文任务的处理结果。</p> 
+     * @return Content <p>图生文任务的处理结果。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 图生文任务的处理结果。
-     * @param Content 图生文任务的处理结果。
+     * Set <p>图生文任务的处理结果。</p>
+     * @param Content <p>图生文任务的处理结果。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get <p>VOD标准版FileId</p> 
+     * @return FileId <p>VOD标准版FileId</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>VOD标准版FileId</p>
+     * @param FileId <p>VOD标准版FileId</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     public ImageProcessTaskOutput() {
@@ -145,6 +168,9 @@ public class ImageProcessTaskOutput extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class ImageProcessTaskOutput extends AbstractModel {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "SignedUrl", this.SignedUrl);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }
