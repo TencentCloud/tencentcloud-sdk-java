@@ -259,7 +259,9 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
-     *基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
+     *不使用了
+
+基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
      * @param req DescribeDeviceDetailListRequest
      * @return DescribeDeviceDetailListResponse
      * @throws TencentCloudSDKException

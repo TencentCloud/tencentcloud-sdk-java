@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
-    * 封禁和放通对象
-    */
-    @SerializedName("Ioc")
-    @Expose
-    private String Ioc;
-
-    /**
-    * 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
+    * 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
     */
     @SerializedName("DirectionList")
     @Expose
     private String DirectionList;
 
     /**
-    * 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+    * 封禁或放通对象值。
+    */
+    @SerializedName("Ioc")
+    @Expose
+    private String Ioc;
+
+    /**
+    * 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-     * Get 封禁和放通对象 
-     * @return Ioc 封禁和放通对象
-     */
-    public String getIoc() {
-        return this.Ioc;
-    }
-
-    /**
-     * Set 封禁和放通对象
-     * @param Ioc 封禁和放通对象
-     */
-    public void setIoc(String Ioc) {
-        this.Ioc = Ioc;
-    }
-
-    /**
-     * Get 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效） 
-     * @return DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
+     * Get 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。 
+     * @return DirectionList 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
      */
     public String getDirectionList() {
         return this.DirectionList;
     }
 
     /**
-     * Set 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-     * @param DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
+     * Set 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
+     * @param DirectionList 规则适用方向，0 表示互联网出站，1 表示互联网入站，2 表示双向，3 表示东西向，4 表示情报误报反馈，5 表示内网访问源，6 表示内网访问目的；多个值以逗号分隔。
      */
     public void setDirectionList(String DirectionList) {
         this.DirectionList = DirectionList;
     }
 
     /**
-     * Get 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则 
-     * @return RuleType 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * Get 封禁或放通对象值。 
+     * @return Ioc 封禁或放通对象值。
+     */
+    public String getIoc() {
+        return this.Ioc;
+    }
+
+    /**
+     * Set 封禁或放通对象值。
+     * @param Ioc 封禁或放通对象值。
+     */
+    public void setIoc(String Ioc) {
+        this.Ioc = Ioc;
+    }
+
+    /**
+     * Get 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。 
+     * @return RuleType 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
-     * @param RuleType 规则类型
-RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * Set 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
+     * @param RuleType 规则类型标识。服务端定义的常用值为：1 封禁 IP，2 放通 IP，3 放通域名，4 威胁情报地址，5 资产实例，6 自定义策略，7 入侵防御规则，8 扩展 IP 规则，9 扩展自定义规则。
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
@@ -105,11 +100,11 @@ RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BanAndAllowRuleDel(BanAndAllowRuleDel source) {
-        if (source.Ioc != null) {
-            this.Ioc = new String(source.Ioc);
-        }
         if (source.DirectionList != null) {
             this.DirectionList = new String(source.DirectionList);
+        }
+        if (source.Ioc != null) {
+            this.Ioc = new String(source.Ioc);
         }
         if (source.RuleType != null) {
             this.RuleType = new Long(source.RuleType);
@@ -121,8 +116,8 @@ RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Ioc", this.Ioc);
         this.setParamSimple(map, prefix + "DirectionList", this.DirectionList);
+        this.setParamSimple(map, prefix + "Ioc", this.Ioc);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
 
     }

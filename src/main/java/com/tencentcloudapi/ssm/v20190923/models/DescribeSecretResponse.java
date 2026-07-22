@@ -171,6 +171,13 @@ public class DescribeSecretResponse extends AbstractModel {
     private String TargetUinString;
 
     /**
+    * <p>对应云产品的账号信息</p>
+    */
+    @SerializedName("AccountInfoList")
+    @Expose
+    private SecretAccountInfo [] AccountInfoList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -514,6 +521,22 @@ public class DescribeSecretResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>对应云产品的账号信息</p> 
+     * @return AccountInfoList <p>对应云产品的账号信息</p>
+     */
+    public SecretAccountInfo [] getAccountInfoList() {
+        return this.AccountInfoList;
+    }
+
+    /**
+     * Set <p>对应云产品的账号信息</p>
+     * @param AccountInfoList <p>对应云产品的账号信息</p>
+     */
+    public void setAccountInfoList(SecretAccountInfo [] AccountInfoList) {
+        this.AccountInfoList = AccountInfoList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -603,6 +626,12 @@ public class DescribeSecretResponse extends AbstractModel {
         if (source.TargetUinString != null) {
             this.TargetUinString = new String(source.TargetUinString);
         }
+        if (source.AccountInfoList != null) {
+            this.AccountInfoList = new SecretAccountInfo[source.AccountInfoList.length];
+            for (int i = 0; i < source.AccountInfoList.length; i++) {
+                this.AccountInfoList[i] = new SecretAccountInfo(source.AccountInfoList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -634,6 +663,7 @@ public class DescribeSecretResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptSwitching", this.EncryptSwitching);
         this.setParamSimple(map, prefix + "CreateUinString", this.CreateUinString);
         this.setParamSimple(map, prefix + "TargetUinString", this.TargetUinString);
+        this.setParamArrayObj(map, prefix + "AccountInfoList.", this.AccountInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

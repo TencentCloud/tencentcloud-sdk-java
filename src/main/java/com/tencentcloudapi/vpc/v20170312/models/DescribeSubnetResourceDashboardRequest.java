@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSubnetResourceDashboardRequest extends AbstractModel {
 
     /**
-    * Subnet实例ID，例如：subnet-f1xjkw1b。
+    * <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-     * Get Subnet实例ID，例如：subnet-f1xjkw1b。 
-     * @return SubnetIds Subnet实例ID，例如：subnet-f1xjkw1b。
+     * Get <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p> 
+     * @return SubnetIds <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set Subnet实例ID，例如：subnet-f1xjkw1b。
-     * @param SubnetIds Subnet实例ID，例如：subnet-f1xjkw1b。
+     * Set <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
+     * @param SubnetIds <p>Subnet实例ID，例如：subnet-f1xjkw1b。</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;

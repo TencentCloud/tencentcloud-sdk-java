@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVpcResourceDashboardResponse extends AbstractModel {
 
     /**
-    * 资源对象列表。
+    * <p>资源对象列表。</p>
     */
     @SerializedName("ResourceDashboardSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeVpcResourceDashboardResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源对象列表。 
-     * @return ResourceDashboardSet 资源对象列表。
+     * Get <p>资源对象列表。</p> 
+     * @return ResourceDashboardSet <p>资源对象列表。</p>
      */
     public ResourceDashboard [] getResourceDashboardSet() {
         return this.ResourceDashboardSet;
     }
 
     /**
-     * Set 资源对象列表。
-     * @param ResourceDashboardSet 资源对象列表。
+     * Set <p>资源对象列表。</p>
+     * @param ResourceDashboardSet <p>资源对象列表。</p>
      */
     public void setResourceDashboardSet(ResourceDashboard [] ResourceDashboardSet) {
         this.ResourceDashboardSet = ResourceDashboardSet;

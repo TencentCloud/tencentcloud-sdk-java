@@ -1050,6 +1050,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询AIGC场景任务接口
+     * @param req DescribeAigcTaskStatusRequest
+     * @return DescribeAigcTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcTaskStatusResponse DescribeAigcTaskStatus(DescribeAigcTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcTaskStatus", DescribeAigcTaskStatusResponse.class);
+    }
+
+    /**
      *调用该接口，用于查询AIGC生视频任务的进度以及获取生成结果。
      * @param req DescribeAigcVideoTaskRequest
      * @return DescribeAigcVideoTaskResponse
@@ -2295,6 +2306,8 @@ public class MpsClient extends AbstractClient{
 1. 格式转换；
 2. 图像增强；
 3. 图像擦除;
+4. 数字水印；
+5. 美颜滤镜；
      * @param req ProcessImageRequest
      * @return ProcessImageResponse
      * @throws TencentCloudSDKException

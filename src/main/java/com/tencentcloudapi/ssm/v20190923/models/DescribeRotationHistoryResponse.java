@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeRotationHistoryResponse extends AbstractModel {
 
     /**
-    * 版本号列表
+    * <p>版本号列表</p>
     */
     @SerializedName("VersionIDs")
     @Expose
     private String [] VersionIDs;
 
     /**
-    * 版本号个数，可以给用户展示的版本号个数上限为10个。
+    * <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * <p>凭据对应账号相关信息</p>
+    */
+    @SerializedName("AccountInfoList")
+    @Expose
+    private SecretAccountInfo [] AccountInfoList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class DescribeRotationHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本号列表 
-     * @return VersionIDs 版本号列表
+     * Get <p>版本号列表</p> 
+     * @return VersionIDs <p>版本号列表</p>
      */
     public String [] getVersionIDs() {
         return this.VersionIDs;
     }
 
     /**
-     * Set 版本号列表
-     * @param VersionIDs 版本号列表
+     * Set <p>版本号列表</p>
+     * @param VersionIDs <p>版本号列表</p>
      */
     public void setVersionIDs(String [] VersionIDs) {
         this.VersionIDs = VersionIDs;
     }
 
     /**
-     * Get 版本号个数，可以给用户展示的版本号个数上限为10个。 
-     * @return TotalCount 版本号个数，可以给用户展示的版本号个数上限为10个。
+     * Get <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p> 
+     * @return TotalCount <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 版本号个数，可以给用户展示的版本号个数上限为10个。
-     * @param TotalCount 版本号个数，可以给用户展示的版本号个数上限为10个。
+     * Set <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
+     * @param TotalCount <p>版本号个数，可以给用户展示的版本号个数上限为10个。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>凭据对应账号相关信息</p> 
+     * @return AccountInfoList <p>凭据对应账号相关信息</p>
+     */
+    public SecretAccountInfo [] getAccountInfoList() {
+        return this.AccountInfoList;
+    }
+
+    /**
+     * Set <p>凭据对应账号相关信息</p>
+     * @param AccountInfoList <p>凭据对应账号相关信息</p>
+     */
+    public void setAccountInfoList(SecretAccountInfo [] AccountInfoList) {
+        this.AccountInfoList = AccountInfoList;
     }
 
     /**
@@ -109,6 +132,12 @@ public class DescribeRotationHistoryResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.AccountInfoList != null) {
+            this.AccountInfoList = new SecretAccountInfo[source.AccountInfoList.length];
+            for (int i = 0; i < source.AccountInfoList.length; i++) {
+                this.AccountInfoList[i] = new SecretAccountInfo(source.AccountInfoList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +150,7 @@ public class DescribeRotationHistoryResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VersionIDs.", this.VersionIDs);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "AccountInfoList.", this.AccountInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

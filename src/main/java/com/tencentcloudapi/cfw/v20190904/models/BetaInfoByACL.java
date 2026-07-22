@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class BetaInfoByACL extends AbstractModel {
 
     /**
+    * 上次执行时间
+    */
+    @SerializedName("LastTime")
+    @Expose
+    private String LastTime;
+
+    /**
     * 任务id
     */
     @SerializedName("TaskId")
@@ -38,11 +45,20 @@ public class BetaInfoByACL extends AbstractModel {
     private String TaskName;
 
     /**
-    * 上次执行时间
-    */
-    @SerializedName("LastTime")
-    @Expose
-    private String LastTime;
+     * Get 上次执行时间 
+     * @return LastTime 上次执行时间
+     */
+    public String getLastTime() {
+        return this.LastTime;
+    }
+
+    /**
+     * Set 上次执行时间
+     * @param LastTime 上次执行时间
+     */
+    public void setLastTime(String LastTime) {
+        this.LastTime = LastTime;
+    }
 
     /**
      * Get 任务id 
@@ -76,22 +92,6 @@ public class BetaInfoByACL extends AbstractModel {
         this.TaskName = TaskName;
     }
 
-    /**
-     * Get 上次执行时间 
-     * @return LastTime 上次执行时间
-     */
-    public String getLastTime() {
-        return this.LastTime;
-    }
-
-    /**
-     * Set 上次执行时间
-     * @param LastTime 上次执行时间
-     */
-    public void setLastTime(String LastTime) {
-        this.LastTime = LastTime;
-    }
-
     public BetaInfoByACL() {
     }
 
@@ -100,14 +100,14 @@ public class BetaInfoByACL extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BetaInfoByACL(BetaInfoByACL source) {
+        if (source.LastTime != null) {
+            this.LastTime = new String(source.LastTime);
+        }
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
-        }
-        if (source.LastTime != null) {
-            this.LastTime = new String(source.LastTime);
         }
     }
 
@@ -116,9 +116,9 @@ public class BetaInfoByACL extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
-        this.setParamSimple(map, prefix + "LastTime", this.LastTime);
 
     }
 }

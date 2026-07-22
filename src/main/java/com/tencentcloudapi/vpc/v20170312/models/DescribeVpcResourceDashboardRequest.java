@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeVpcResourceDashboardRequest extends AbstractModel {
 
     /**
-    * Vpc实例ID，例如：vpc-f1xjkw1b。
+    * <p>Vpc实例ID，例如：vpc-f1xjkw1b。</p>
     */
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
 
     /**
-     * Get Vpc实例ID，例如：vpc-f1xjkw1b。 
-     * @return VpcIds Vpc实例ID，例如：vpc-f1xjkw1b。
+     * Get <p>Vpc实例ID，例如：vpc-f1xjkw1b。</p> 
+     * @return VpcIds <p>Vpc实例ID，例如：vpc-f1xjkw1b。</p>
      */
     public String [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set Vpc实例ID，例如：vpc-f1xjkw1b。
-     * @param VpcIds Vpc实例ID，例如：vpc-f1xjkw1b。
+     * Set <p>Vpc实例ID，例如：vpc-f1xjkw1b。</p>
+     * @param VpcIds <p>Vpc实例ID，例如：vpc-f1xjkw1b。</p>
      */
     public void setVpcIds(String [] VpcIds) {
         this.VpcIds = VpcIds;

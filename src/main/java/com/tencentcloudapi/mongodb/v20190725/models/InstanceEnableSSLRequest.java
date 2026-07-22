@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class InstanceEnableSSLRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
+    * <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。 
-     * @return Enable 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
+     * Get <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul> 
+     * @return Enable <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
-     * @param Enable 配置是否要开启SSL访问。
-- true：开启。
-- false：关闭。
+     * Set <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
+     * @param Enable <p>配置是否要开启SSL访问。</p><ul><li>true：开启。</li><li>false：关闭。</li></ul>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;

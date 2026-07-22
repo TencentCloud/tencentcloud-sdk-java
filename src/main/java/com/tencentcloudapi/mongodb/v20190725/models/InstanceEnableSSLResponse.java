@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class InstanceEnableSSLResponse extends AbstractModel {
 
     /**
-    * SSL开启状态。
-- 0：关闭。
-- 1：开启。
+    * <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -34,7 +32,7 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     private Long Status;
 
     /**
-    * 证书文件过期时间，格式为：2023-05-01 12:00:00。
+    * <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredTime")
@@ -42,7 +40,7 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     private String ExpiredTime;
 
     /**
-    * 证书文件的下载链接。
+    * <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertUrl")
@@ -50,7 +48,7 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     private String CertUrl;
 
     /**
-    * 流程id
+    * <p>流程id</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -64,13 +62,9 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get SSL开启状态。
-- 0：关闭。
-- 1：开启。
+     * Get <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status SSL开启状态。
-- 0：关闭。
-- 1：开启。
+     * @return Status <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -78,13 +72,9 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     }
 
     /**
-     * Set SSL开启状态。
-- 0：关闭。
-- 1：开启。
+     * Set <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status SSL开启状态。
-- 0：关闭。
-- 1：开启。
+     * @param Status <p>SSL开启状态。</p><ul><li>0：关闭。</li><li>1：开启。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -92,9 +82,9 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书文件过期时间，格式为：2023-05-01 12:00:00。
+     * Get <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpiredTime 证书文件过期时间，格式为：2023-05-01 12:00:00。
+     * @return ExpiredTime <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredTime() {
@@ -102,9 +92,9 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     }
 
     /**
-     * Set 证书文件过期时间，格式为：2023-05-01 12:00:00。
+     * Set <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpiredTime 证书文件过期时间，格式为：2023-05-01 12:00:00。
+     * @param ExpiredTime <p>证书文件过期时间，格式为：2023-05-01 12:00:00。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredTime(String ExpiredTime) {
@@ -112,9 +102,9 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书文件的下载链接。
+     * Get <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertUrl 证书文件的下载链接。
+     * @return CertUrl <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertUrl() {
@@ -122,9 +112,9 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     }
 
     /**
-     * Set 证书文件的下载链接。
+     * Set <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertUrl 证书文件的下载链接。
+     * @param CertUrl <p>证书文件的下载链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertUrl(String CertUrl) {
@@ -132,16 +122,16 @@ public class InstanceEnableSSLResponse extends AbstractModel {
     }
 
     /**
-     * Get 流程id 
-     * @return FlowId 流程id
+     * Get <p>流程id</p> 
+     * @return FlowId <p>流程id</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程id
-     * @param FlowId 流程id
+     * Set <p>流程id</p>
+     * @param FlowId <p>流程id</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -105,6 +105,17 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *创建路径保护规则。
+     * @param req CreatePathProtectionRuleRequest
+     * @return CreatePathProtectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePathProtectionRuleResponse CreatePathProtectionRule(CreatePathProtectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePathProtectionRule", CreatePathProtectionRuleResponse.class);
+    }
+
+    /**
      *批量创建回热任务，回热任务ID、状态和创建时间无需填写。
      * @param req CreateRestoreTasksRequest
      * @return CreateRestoreTasksResponse
@@ -179,6 +190,17 @@ public class ChdfsClient extends AbstractClient{
     public DeleteMountPointResponse DeleteMountPoint(DeleteMountPointRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMountPoint", DeleteMountPointResponse.class);
+    }
+
+    /**
+     *删除路径保护规则。
+     * @param req DeletePathProtectionRuleRequest
+     * @return DeletePathProtectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePathProtectionRuleResponse DeletePathProtectionRule(DeletePathProtectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePathProtectionRule", DeletePathProtectionRuleResponse.class);
     }
 
     /**
@@ -281,6 +303,17 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *通过文件系统ID查看路径保护规则列表。
+     * @param req DescribePathProtectionRulesRequest
+     * @return DescribePathProtectionRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePathProtectionRulesResponse DescribePathProtectionRules(DescribePathProtectionRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePathProtectionRules", DescribePathProtectionRulesResponse.class);
+    }
+
+    /**
      *通过文件系统ID查看资源标签列表。
      * @param req DescribeResourceTagsRequest
      * @return DescribeResourceTagsResponse
@@ -377,6 +410,17 @@ public class ChdfsClient extends AbstractClient{
     public ModifyMountPointResponse ModifyMountPoint(ModifyMountPointRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMountPoint", ModifyMountPointResponse.class);
+    }
+
+    /**
+     *修改路径保护规则属性，需要指定路径保护规则ID，支持修改规则名称、路径和状态。
+     * @param req ModifyPathProtectionRuleRequest
+     * @return ModifyPathProtectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPathProtectionRuleResponse ModifyPathProtectionRule(ModifyPathProtectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPathProtectionRule", ModifyPathProtectionRuleResponse.class);
     }
 
     /**

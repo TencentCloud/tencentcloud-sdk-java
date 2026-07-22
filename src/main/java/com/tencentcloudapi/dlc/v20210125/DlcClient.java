@@ -105,6 +105,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *修改表备注
+     * @param req AlterTableCommentRequest
+     * @return AlterTableCommentResponse
+     * @throws TencentCloudSDKException
+     */
+    public AlterTableCommentResponse AlterTableComment(AlterTableCommentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AlterTableComment", AlterTableCommentResponse.class);
+    }
+
+    /**
      *分配原生表表属性
      * @param req AssignMangedTablePropertiesRequest
      * @return AssignMangedTablePropertiesResponse
@@ -380,6 +391,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateMetaDatabase）用于创建元数据库
+     * @param req CreateMetaDatabaseRequest
+     * @return CreateMetaDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetaDatabaseResponse CreateMetaDatabase(CreateMetaDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetaDatabase", CreateMetaDatabaseResponse.class);
+    }
+
+    /**
      *本接口（CreateNotebookSession）用于创建交互式session（notebook）
      * @param req CreateNotebookSessionRequest
      * @return CreateNotebookSessionResponse
@@ -632,6 +654,17 @@ public class DlcClient extends AbstractClient{
     public DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(DeleteDataMaskStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataMaskStrategy", DeleteDataMaskStrategyResponse.class);
+    }
+
+    /**
+     *本接口（DeleteMetaDatabase）用于一键删除元数据库
+     * @param req DeleteMetaDatabaseRequest
+     * @return DeleteMetaDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMetaDatabaseResponse DeleteMetaDatabase(DeleteMetaDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMetaDatabase", DeleteMetaDatabaseResponse.class);
     }
 
     /**
@@ -918,6 +951,17 @@ public class DlcClient extends AbstractClient{
     public DescribeDataMaskStrategiesResponse DescribeDataMaskStrategies(DescribeDataMaskStrategiesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataMaskStrategies", DescribeDataMaskStrategiesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeDatabase）,查询数据库详细信息
+     * @param req DescribeDatabaseRequest
+     * @return DescribeDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseResponse DescribeDatabase(DescribeDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabase", DescribeDatabaseResponse.class);
     }
 
     /**
@@ -1666,6 +1710,17 @@ public class DlcClient extends AbstractClient{
     public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(GenerateCreateMangedTableSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GenerateCreateMangedTableSql", GenerateCreateMangedTableSqlResponse.class);
+    }
+
+    /**
+     *建表
+     * @param req GenerateInternalTableRequest
+     * @return GenerateInternalTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateInternalTableResponse GenerateInternalTable(GenerateInternalTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateInternalTable", GenerateInternalTableResponse.class);
     }
 
     /**

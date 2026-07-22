@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DeleteSecretResponse extends AbstractModel {
 
     /**
-    * 指定删除的凭据名称。
+    * <p>指定删除的凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 凭据删除的日期，unix时间戳。
+    * <p>凭据删除的日期，unix时间戳。</p>
     */
     @SerializedName("DeleteTime")
     @Expose
     private Long DeleteTime;
+
+    /**
+    * <p>异步删除任务 ID</p>
+    */
+    @SerializedName("FlowID")
+    @Expose
+    private Long FlowID;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class DeleteSecretResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指定删除的凭据名称。 
-     * @return SecretName 指定删除的凭据名称。
+     * Get <p>指定删除的凭据名称。</p> 
+     * @return SecretName <p>指定删除的凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 指定删除的凭据名称。
-     * @param SecretName 指定删除的凭据名称。
+     * Set <p>指定删除的凭据名称。</p>
+     * @param SecretName <p>指定删除的凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 凭据删除的日期，unix时间戳。 
-     * @return DeleteTime 凭据删除的日期，unix时间戳。
+     * Get <p>凭据删除的日期，unix时间戳。</p> 
+     * @return DeleteTime <p>凭据删除的日期，unix时间戳。</p>
      */
     public Long getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 凭据删除的日期，unix时间戳。
-     * @param DeleteTime 凭据删除的日期，unix时间戳。
+     * Set <p>凭据删除的日期，unix时间戳。</p>
+     * @param DeleteTime <p>凭据删除的日期，unix时间戳。</p>
      */
     public void setDeleteTime(Long DeleteTime) {
         this.DeleteTime = DeleteTime;
+    }
+
+    /**
+     * Get <p>异步删除任务 ID</p> 
+     * @return FlowID <p>异步删除任务 ID</p>
+     */
+    public Long getFlowID() {
+        return this.FlowID;
+    }
+
+    /**
+     * Set <p>异步删除任务 ID</p>
+     * @param FlowID <p>异步删除任务 ID</p>
+     */
+    public void setFlowID(Long FlowID) {
+        this.FlowID = FlowID;
     }
 
     /**
@@ -106,6 +129,9 @@ public class DeleteSecretResponse extends AbstractModel {
         if (source.DeleteTime != null) {
             this.DeleteTime = new Long(source.DeleteTime);
         }
+        if (source.FlowID != null) {
+            this.FlowID = new Long(source.FlowID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class DeleteSecretResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+        this.setParamSimple(map, prefix + "FlowID", this.FlowID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

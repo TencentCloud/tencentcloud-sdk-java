@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSubnetResourceDashboardResponse extends AbstractModel {
 
     /**
-    * 资源统计结果。
+    * <p>资源统计结果。</p>
     */
     @SerializedName("ResourceStatisticsSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSubnetResourceDashboardResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源统计结果。 
-     * @return ResourceStatisticsSet 资源统计结果。
+     * Get <p>资源统计结果。</p> 
+     * @return ResourceStatisticsSet <p>资源统计结果。</p>
      */
     public ResourceStatistics [] getResourceStatisticsSet() {
         return this.ResourceStatisticsSet;
     }
 
     /**
-     * Set 资源统计结果。
-     * @param ResourceStatisticsSet 资源统计结果。
+     * Set <p>资源统计结果。</p>
+     * @param ResourceStatisticsSet <p>资源统计结果。</p>
      */
     public void setResourceStatisticsSet(ResourceStatistics [] ResourceStatisticsSet) {
         this.ResourceStatisticsSet = ResourceStatisticsSet;
