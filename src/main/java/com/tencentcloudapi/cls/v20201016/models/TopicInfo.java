@@ -150,11 +150,18 @@ public class TopicInfo extends AbstractModel {
     private Long HotPeriod;
 
     /**
-    * <p>kms-cls服务秘钥id</p>
+    * <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
+
+    /**
+    * <p>用户自定义 KMS 密钥信息</p>
+    */
+    @SerializedName("CustomKmsInfo")
+    @Expose
+    private CustomKmsInfo CustomKmsInfo;
 
     /**
     * <p>主题类型。</p><ul><li>0: 日志主题 </li><li>1: 指标主题</li></ul>
@@ -508,19 +515,35 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>kms-cls服务秘钥id</p> 
-     * @return KeyId <p>kms-cls服务秘钥id</p>
+     * Get <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p> 
+     * @return KeyId <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set <p>kms-cls服务秘钥id</p>
-     * @param KeyId <p>kms-cls服务秘钥id</p>
+     * Set <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
+     * @param KeyId <p>kms-cls服务秘钥id</p><p>CustomKmsInfo为空时为系统默认密钥，CustomKmsInfo不为空时为用户自定义密钥</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
+    }
+
+    /**
+     * Get <p>用户自定义 KMS 密钥信息</p> 
+     * @return CustomKmsInfo <p>用户自定义 KMS 密钥信息</p>
+     */
+    public CustomKmsInfo getCustomKmsInfo() {
+        return this.CustomKmsInfo;
+    }
+
+    /**
+     * Set <p>用户自定义 KMS 密钥信息</p>
+     * @param CustomKmsInfo <p>用户自定义 KMS 密钥信息</p>
+     */
+    public void setCustomKmsInfo(CustomKmsInfo CustomKmsInfo) {
+        this.CustomKmsInfo = CustomKmsInfo;
     }
 
     /**
@@ -735,6 +758,9 @@ public class TopicInfo extends AbstractModel {
         if (source.KeyId != null) {
             this.KeyId = new String(source.KeyId);
         }
+        if (source.CustomKmsInfo != null) {
+            this.CustomKmsInfo = new CustomKmsInfo(source.CustomKmsInfo);
+        }
         if (source.BizType != null) {
             this.BizType = new Long(source.BizType);
         }
@@ -788,6 +814,7 @@ public class TopicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);

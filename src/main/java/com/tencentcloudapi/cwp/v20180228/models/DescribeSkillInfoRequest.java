@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSkillInfoRequest extends AbstractModel {
 
     /**
-    * 事件id
+    * <p>事件id</p>
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 事件id 
-     * @return Ids 事件id
+     * Get <p>事件id</p> 
+     * @return Ids <p>事件id</p>
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 事件id
-     * @param Ids 事件id
+     * Set <p>事件id</p>
+     * @param Ids <p>事件id</p>
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

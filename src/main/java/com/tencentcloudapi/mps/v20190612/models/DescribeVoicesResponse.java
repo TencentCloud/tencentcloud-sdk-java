@@ -38,6 +38,13 @@ public class DescribeVoicesResponse extends AbstractModel {
     private String Msg;
 
     /**
+    * <p>符合查询条件的音色总数</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * <p>可用音色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -82,6 +89,22 @@ public class DescribeVoicesResponse extends AbstractModel {
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
+    }
+
+    /**
+     * Get <p>符合查询条件的音色总数</p> 
+     * @return TotalCount <p>符合查询条件的音色总数</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>符合查询条件的音色总数</p>
+     * @param TotalCount <p>符合查询条件的音色总数</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -134,6 +157,9 @@ public class DescribeVoicesResponse extends AbstractModel {
         if (source.Msg != null) {
             this.Msg = new String(source.Msg);
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.Voices != null) {
             this.Voices = new VoiceInfo[source.Voices.length];
             for (int i = 0; i < source.Voices.length; i++) {
@@ -152,6 +178,7 @@ public class DescribeVoicesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Voices.", this.Voices);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

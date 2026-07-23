@@ -101,6 +101,13 @@ public class CreateTopicRequest extends AbstractModel {
     private Long Encryption;
 
     /**
+    * <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+    */
+    @SerializedName("CustomKmsInfo")
+    @Expose
+    private CustomKmsInfo CustomKmsInfo;
+
+    /**
     * <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
     */
     @SerializedName("BizType")
@@ -319,6 +326,22 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p> 
+     * @return CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+     */
+    public CustomKmsInfo getCustomKmsInfo() {
+        return this.CustomKmsInfo;
+    }
+
+    /**
+     * Set <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+     * @param CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时有效。</p>
+     */
+    public void setCustomKmsInfo(CustomKmsInfo CustomKmsInfo) {
+        this.CustomKmsInfo = CustomKmsInfo;
+    }
+
+    /**
      * Get <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul> 
      * @return BizType <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
      */
@@ -458,6 +481,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.Encryption != null) {
             this.Encryption = new Long(source.Encryption);
         }
+        if (source.CustomKmsInfo != null) {
+            this.CustomKmsInfo = new CustomKmsInfo(source.CustomKmsInfo);
+        }
         if (source.BizType != null) {
             this.BizType = new Long(source.BizType);
         }
@@ -494,6 +520,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);

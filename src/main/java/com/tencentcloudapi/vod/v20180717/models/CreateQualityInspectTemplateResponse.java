@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateQualityInspectTemplateResponse extends AbstractModel {
 
     /**
-    * 音画质检测模板 ID。
+    * <p>音画质检测模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateQualityInspectTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 音画质检测模板 ID。 
-     * @return Definition 音画质检测模板 ID。
+     * Get <p>音画质检测模板 ID。</p> 
+     * @return Definition <p>音画质检测模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 音画质检测模板 ID。
-     * @param Definition 音画质检测模板 ID。
+     * Set <p>音画质检测模板 ID。</p>
+     * @param Definition <p>音画质检测模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

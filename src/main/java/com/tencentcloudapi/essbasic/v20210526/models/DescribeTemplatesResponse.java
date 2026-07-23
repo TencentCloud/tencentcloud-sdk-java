@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeTemplatesResponse extends AbstractModel {
 
     /**
-    * 模板详情列表数据
+    * <p>模板详情列表数据</p>
     */
     @SerializedName("Templates")
     @Expose
     private TemplateInfo [] Templates;
 
     /**
-    * 查询到的模板总数
+    * <p>查询到的模板总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 每页返回的数据条数
+    * <p>每页返回的数据条数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+    * <p>偏移量:从 0 开始，最大20000。</p>
     */
     @SerializedName("Offset")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板详情列表数据 
-     * @return Templates 模板详情列表数据
+     * Get <p>模板详情列表数据</p> 
+     * @return Templates <p>模板详情列表数据</p>
      */
     public TemplateInfo [] getTemplates() {
         return this.Templates;
     }
 
     /**
-     * Set 模板详情列表数据
-     * @param Templates 模板详情列表数据
+     * Set <p>模板详情列表数据</p>
+     * @param Templates <p>模板详情列表数据</p>
      */
     public void setTemplates(TemplateInfo [] Templates) {
         this.Templates = Templates;
     }
 
     /**
-     * Get 查询到的模板总数 
-     * @return TotalCount 查询到的模板总数
+     * Get <p>查询到的模板总数</p> 
+     * @return TotalCount <p>查询到的模板总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的模板总数
-     * @param TotalCount 查询到的模板总数
+     * Set <p>查询到的模板总数</p>
+     * @param TotalCount <p>查询到的模板总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 每页返回的数据条数 
-     * @return Limit 每页返回的数据条数
+     * Get <p>每页返回的数据条数</p> 
+     * @return Limit <p>每页返回的数据条数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页返回的数据条数
-     * @param Limit 每页返回的数据条数
+     * Set <p>每页返回的数据条数</p>
+     * @param Limit <p>每页返回的数据条数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。 
-     * @return Offset 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+     * Get <p>偏移量:从 0 开始，最大20000。</p> 
+     * @return Offset <p>偏移量:从 0 开始，最大20000。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
-     * @param Offset 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+     * Set <p>偏移量:从 0 开始，最大20000。</p>
+     * @param Offset <p>偏移量:从 0 开始，最大20000。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

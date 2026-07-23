@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeChannelOrganizationsResponse extends AbstractModel {
 
     /**
-    * 满足查询条件的企业信息列表。
+    * <p>满足查询条件的企业信息列表。</p>
     */
     @SerializedName("ChannelOrganizationInfos")
     @Expose
     private ChannelOrganizationInfo [] ChannelOrganizationInfos;
 
     /**
-    * 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
+    * <p>偏移量:从 0 开始，最大20000。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定分页每页返回的数据条数，单页最大支持 200。
+    * <p>指定分页每页返回的数据条数，单页最大支持 200。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 满足查询条件的企业总数量。
+    * <p>满足查询条件的企业总数量。</p>
     */
     @SerializedName("Total")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeChannelOrganizationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 满足查询条件的企业信息列表。 
-     * @return ChannelOrganizationInfos 满足查询条件的企业信息列表。
+     * Get <p>满足查询条件的企业信息列表。</p> 
+     * @return ChannelOrganizationInfos <p>满足查询条件的企业信息列表。</p>
      */
     public ChannelOrganizationInfo [] getChannelOrganizationInfos() {
         return this.ChannelOrganizationInfos;
     }
 
     /**
-     * Set 满足查询条件的企业信息列表。
-     * @param ChannelOrganizationInfos 满足查询条件的企业信息列表。
+     * Set <p>满足查询条件的企业信息列表。</p>
+     * @param ChannelOrganizationInfos <p>满足查询条件的企业信息列表。</p>
      */
     public void setChannelOrganizationInfos(ChannelOrganizationInfo [] ChannelOrganizationInfos) {
         this.ChannelOrganizationInfos = ChannelOrganizationInfos;
     }
 
     /**
-     * Get 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。 
-     * @return Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
+     * Get <p>偏移量:从 0 开始，最大20000。</p> 
+     * @return Offset <p>偏移量:从 0 开始，最大20000。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-     * @param Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
+     * Set <p>偏移量:从 0 开始，最大20000。</p>
+     * @param Offset <p>偏移量:从 0 开始，最大20000。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，单页最大支持 200。 
-     * @return Limit 指定分页每页返回的数据条数，单页最大支持 200。
+     * Get <p>指定分页每页返回的数据条数，单页最大支持 200。</p> 
+     * @return Limit <p>指定分页每页返回的数据条数，单页最大支持 200。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定分页每页返回的数据条数，单页最大支持 200。
-     * @param Limit 指定分页每页返回的数据条数，单页最大支持 200。
+     * Set <p>指定分页每页返回的数据条数，单页最大支持 200。</p>
+     * @param Limit <p>指定分页每页返回的数据条数，单页最大支持 200。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 满足查询条件的企业总数量。 
-     * @return Total 满足查询条件的企业总数量。
+     * Get <p>满足查询条件的企业总数量。</p> 
+     * @return Total <p>满足查询条件的企业总数量。</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 满足查询条件的企业总数量。
-     * @param Total 满足查询条件的企业总数量。
+     * Set <p>满足查询条件的企业总数量。</p>
+     * @param Total <p>满足查询条件的企业总数量。</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

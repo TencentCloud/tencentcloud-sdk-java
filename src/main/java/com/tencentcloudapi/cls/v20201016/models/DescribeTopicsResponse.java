@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTopicsResponse extends AbstractModel {
 
     /**
-    * 主题列表
+    * <p>主题列表</p>
     */
     @SerializedName("Topics")
     @Expose
     private TopicInfo [] Topics;
 
     /**
-    * 总数目
+    * <p>总数目</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTopicsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主题列表 
-     * @return Topics 主题列表
+     * Get <p>主题列表</p> 
+     * @return Topics <p>主题列表</p>
      */
     public TopicInfo [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set 主题列表
-     * @param Topics 主题列表
+     * Set <p>主题列表</p>
+     * @param Topics <p>主题列表</p>
      */
     public void setTopics(TopicInfo [] Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get 总数目 
-     * @return TotalCount 总数目
+     * Get <p>总数目</p> 
+     * @return TotalCount <p>总数目</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数目
-     * @param TotalCount 总数目
+     * Set <p>总数目</p>
+     * @param TotalCount <p>总数目</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

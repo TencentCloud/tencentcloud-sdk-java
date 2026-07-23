@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRouteTablesResponse extends AbstractModel {
 
     /**
-    * 符合条件的实例数量。
+    * <p>符合条件的实例数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 路由表对象。
+    * <p>路由表对象。</p>
     */
     @SerializedName("RouteTableSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRouteTablesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get <p>符合条件的实例数量。</p> 
+     * @return TotalCount <p>符合条件的实例数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set <p>符合条件的实例数量。</p>
+     * @param TotalCount <p>符合条件的实例数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 路由表对象。 
-     * @return RouteTableSet 路由表对象。
+     * Get <p>路由表对象。</p> 
+     * @return RouteTableSet <p>路由表对象。</p>
      */
     public RouteTable [] getRouteTableSet() {
         return this.RouteTableSet;
     }
 
     /**
-     * Set 路由表对象。
-     * @param RouteTableSet 路由表对象。
+     * Set <p>路由表对象。</p>
+     * @param RouteTableSet <p>路由表对象。</p>
      */
     public void setRouteTableSet(RouteTable [] RouteTableSet) {
         this.RouteTableSet = RouteTableSet;

@@ -24,391 +24,391 @@ import java.util.HashMap;
 public class Subnet extends AbstractModel {
 
     /**
-    * `VPC`实例`ID`。
+    * <p><code>VPC</code>实例<code>ID</code>。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网实例`ID`，例如：subnet-bthucmmy。
+    * <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 子网名称。
+    * <p>子网名称。</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 子网的 `IPv4` `CIDR`。
+    * <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 是否默认子网。
+    * <p>是否默认子网。</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 是否开启广播。
+    * <p>是否开启广播。</p>
     */
     @SerializedName("EnableBroadcast")
     @Expose
     private Boolean EnableBroadcast;
 
     /**
-    * 可用区。
+    * <p>可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 路由表实例ID，例如：rtb-l2h8d7c2。
+    * <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 可用`IPv4`数。
+    * <p>可用<code>IPv4</code>数。</p>
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
     private Long AvailableIpAddressCount;
 
     /**
-    * 子网的 `IPv6` `CIDR`。
+    * <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-    * 关联`ACL`ID
+    * <p>关联<code>ACL</code>ID</p>
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * 是否为 `SNAT` 地址池子网。
+    * <p>是否为 <code>SNAT</code> 地址池子网。</p>
     */
     @SerializedName("IsRemoteVpcSnat")
     @Expose
     private Boolean IsRemoteVpcSnat;
 
     /**
-    * 子网`IPv4`总数。
+    * <p>子网<code>IPv4</code>总数。</p>
     */
     @SerializedName("TotalIpAddressCount")
     @Expose
     private Long TotalIpAddressCount;
 
     /**
-    * 标签键值对。
+    * <p>标签键值对。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * CDC实例ID。
+    * <p>CDC实例ID。</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * 是否是CDC所属子网。0:否 1:是
+    * <p>是否是CDC所属子网。0:否 1:是</p>
     */
     @SerializedName("IsCdcSubnet")
     @Expose
     private Long IsCdcSubnet;
 
     /**
-     * Get `VPC`实例`ID`。 
-     * @return VpcId `VPC`实例`ID`。
+     * Get <p><code>VPC</code>实例<code>ID</code>。</p> 
+     * @return VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。
-     * @param VpcId `VPC`实例`ID`。
+     * Set <p><code>VPC</code>实例<code>ID</code>。</p>
+     * @param VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网实例`ID`，例如：subnet-bthucmmy。 
-     * @return SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
+     * Get <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p> 
+     * @return SubnetId <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例`ID`，例如：subnet-bthucmmy。
-     * @param SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
+     * Set <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
+     * @param SubnetId <p>子网实例<code>ID</code>，例如：subnet-bthucmmy。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网名称。 
-     * @return SubnetName 子网名称。
+     * Get <p>子网名称。</p> 
+     * @return SubnetName <p>子网名称。</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称。
-     * @param SubnetName 子网名称。
+     * Set <p>子网名称。</p>
+     * @param SubnetName <p>子网名称。</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网的 `IPv4` `CIDR`。 
-     * @return CidrBlock 子网的 `IPv4` `CIDR`。
+     * Get <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p> 
+     * @return CidrBlock <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 子网的 `IPv4` `CIDR`。
-     * @param CidrBlock 子网的 `IPv4` `CIDR`。
+     * Set <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
+     * @param CidrBlock <p>子网的 <code>IPv4</code> <code>CIDR</code>。</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 是否默认子网。 
-     * @return IsDefault 是否默认子网。
+     * Get <p>是否默认子网。</p> 
+     * @return IsDefault <p>是否默认子网。</p>
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否默认子网。
-     * @param IsDefault 是否默认子网。
+     * Set <p>是否默认子网。</p>
+     * @param IsDefault <p>是否默认子网。</p>
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 是否开启广播。 
-     * @return EnableBroadcast 是否开启广播。
+     * Get <p>是否开启广播。</p> 
+     * @return EnableBroadcast <p>是否开启广播。</p>
      */
     public Boolean getEnableBroadcast() {
         return this.EnableBroadcast;
     }
 
     /**
-     * Set 是否开启广播。
-     * @param EnableBroadcast 是否开启广播。
+     * Set <p>是否开启广播。</p>
+     * @param EnableBroadcast <p>是否开启广播。</p>
      */
     public void setEnableBroadcast(Boolean EnableBroadcast) {
         this.EnableBroadcast = EnableBroadcast;
     }
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get <p>可用区。</p> 
+     * @return Zone <p>可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set <p>可用区。</p>
+     * @param Zone <p>可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 路由表实例ID，例如：rtb-l2h8d7c2。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
+     * Get <p>路由表实例ID，例如：rtb-l2h8d7c2。</p> 
+     * @return RouteTableId <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-l2h8d7c2。
-     * @param RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
+     * Set <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
+     * @param RouteTableId <p>路由表实例ID，例如：rtb-l2h8d7c2。</p>
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 可用`IPv4`数。 
-     * @return AvailableIpAddressCount 可用`IPv4`数。
+     * Get <p>可用<code>IPv4</code>数。</p> 
+     * @return AvailableIpAddressCount <p>可用<code>IPv4</code>数。</p>
      */
     public Long getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
     /**
-     * Set 可用`IPv4`数。
-     * @param AvailableIpAddressCount 可用`IPv4`数。
+     * Set <p>可用<code>IPv4</code>数。</p>
+     * @param AvailableIpAddressCount <p>可用<code>IPv4</code>数。</p>
      */
     public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
     }
 
     /**
-     * Get 子网的 `IPv6` `CIDR`。 
-     * @return Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     * Get <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p> 
+     * @return Ipv6CidrBlock <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set 子网的 `IPv6` `CIDR`。
-     * @param Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     * Set <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
+     * @param Ipv6CidrBlock <p>子网的 <code>IPv6</code> <code>CIDR</code>。</p>
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 关联`ACL`ID 
-     * @return NetworkAclId 关联`ACL`ID
+     * Get <p>关联<code>ACL</code>ID</p> 
+     * @return NetworkAclId <p>关联<code>ACL</code>ID</p>
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set 关联`ACL`ID
-     * @param NetworkAclId 关联`ACL`ID
+     * Set <p>关联<code>ACL</code>ID</p>
+     * @param NetworkAclId <p>关联<code>ACL</code>ID</p>
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get 是否为 `SNAT` 地址池子网。 
-     * @return IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     * Get <p>是否为 <code>SNAT</code> 地址池子网。</p> 
+     * @return IsRemoteVpcSnat <p>是否为 <code>SNAT</code> 地址池子网。</p>
      */
     public Boolean getIsRemoteVpcSnat() {
         return this.IsRemoteVpcSnat;
     }
 
     /**
-     * Set 是否为 `SNAT` 地址池子网。
-     * @param IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     * Set <p>是否为 <code>SNAT</code> 地址池子网。</p>
+     * @param IsRemoteVpcSnat <p>是否为 <code>SNAT</code> 地址池子网。</p>
      */
     public void setIsRemoteVpcSnat(Boolean IsRemoteVpcSnat) {
         this.IsRemoteVpcSnat = IsRemoteVpcSnat;
     }
 
     /**
-     * Get 子网`IPv4`总数。 
-     * @return TotalIpAddressCount 子网`IPv4`总数。
+     * Get <p>子网<code>IPv4</code>总数。</p> 
+     * @return TotalIpAddressCount <p>子网<code>IPv4</code>总数。</p>
      */
     public Long getTotalIpAddressCount() {
         return this.TotalIpAddressCount;
     }
 
     /**
-     * Set 子网`IPv4`总数。
-     * @param TotalIpAddressCount 子网`IPv4`总数。
+     * Set <p>子网<code>IPv4</code>总数。</p>
+     * @param TotalIpAddressCount <p>子网<code>IPv4</code>总数。</p>
      */
     public void setTotalIpAddressCount(Long TotalIpAddressCount) {
         this.TotalIpAddressCount = TotalIpAddressCount;
     }
 
     /**
-     * Get 标签键值对。 
-     * @return TagSet 标签键值对。
+     * Get <p>标签键值对。</p> 
+     * @return TagSet <p>标签键值对。</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对。
-     * @param TagSet 标签键值对。
+     * Set <p>标签键值对。</p>
+     * @param TagSet <p>标签键值对。</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get CDC实例ID。 
-     * @return CdcId CDC实例ID。
+     * Get <p>CDC实例ID。</p> 
+     * @return CdcId <p>CDC实例ID。</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC实例ID。
-     * @param CdcId CDC实例ID。
+     * Set <p>CDC实例ID。</p>
+     * @param CdcId <p>CDC实例ID。</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 是否是CDC所属子网。0:否 1:是 
-     * @return IsCdcSubnet 是否是CDC所属子网。0:否 1:是
+     * Get <p>是否是CDC所属子网。0:否 1:是</p> 
+     * @return IsCdcSubnet <p>是否是CDC所属子网。0:否 1:是</p>
      */
     public Long getIsCdcSubnet() {
         return this.IsCdcSubnet;
     }
 
     /**
-     * Set 是否是CDC所属子网。0:否 1:是
-     * @param IsCdcSubnet 是否是CDC所属子网。0:否 1:是
+     * Set <p>是否是CDC所属子网。0:否 1:是</p>
+     * @param IsCdcSubnet <p>是否是CDC所属子网。0:否 1:是</p>
      */
     public void setIsCdcSubnet(Long IsCdcSubnet) {
         this.IsCdcSubnet = IsCdcSubnet;

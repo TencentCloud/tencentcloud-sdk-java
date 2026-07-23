@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMcpServerResponse extends AbstractModel {
 
     /**
-    * mcp server ID
+    * <p>mcp server ID</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMcpServerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get mcp server ID 
-     * @return Data mcp server ID
+     * Get <p>mcp server ID</p> 
+     * @return Data <p>mcp server ID</p>
      */
     public ResultIDVO getData() {
         return this.Data;
     }
 
     /**
-     * Set mcp server ID
-     * @param Data mcp server ID
+     * Set <p>mcp server ID</p>
+     * @param Data <p>mcp server ID</p>
      */
     public void setData(ResultIDVO Data) {
         this.Data = Data;

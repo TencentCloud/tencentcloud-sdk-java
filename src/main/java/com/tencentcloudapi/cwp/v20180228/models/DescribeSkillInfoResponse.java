@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSkillInfoResponse extends AbstractModel {
 
     /**
-    * skill信息列表
+    * <p>skill信息列表</p>
     */
     @SerializedName("SkillInfoList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSkillInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get skill信息列表 
-     * @return SkillInfoList skill信息列表
+     * Get <p>skill信息列表</p> 
+     * @return SkillInfoList <p>skill信息列表</p>
      */
     public SkillInfo [] getSkillInfoList() {
         return this.SkillInfoList;
     }
 
     /**
-     * Set skill信息列表
-     * @param SkillInfoList skill信息列表
+     * Set <p>skill信息列表</p>
+     * @param SkillInfoList <p>skill信息列表</p>
      */
     public void setSkillInfoList(SkillInfo [] SkillInfoList) {
         this.SkillInfoList = SkillInfoList;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AssessEnvironmentRiskRequest extends AbstractModel {
 
     /**
-    * <p>客户端 IP 地址</p>
+    * <p>客户端 IP 地址（IPv4或IPv6）</p>
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-     * Get <p>客户端 IP 地址</p> 
-     * @return UserIp <p>客户端 IP 地址</p>
+     * Get <p>客户端 IP 地址（IPv4或IPv6）</p> 
+     * @return UserIp <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set <p>客户端 IP 地址</p>
-     * @param UserIp <p>客户端 IP 地址</p>
+     * Set <p>客户端 IP 地址（IPv4或IPv6）</p>
+     * @param UserIp <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

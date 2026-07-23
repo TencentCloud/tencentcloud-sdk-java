@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class Vpc extends AbstractModel {
 
     /**
-    * `VPC`名称。
+    * <p><code>VPC</code>名称。</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * `VPC`实例`ID`，例如：vpc-azd4dt1c。
+    * <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * `VPC`的`IPv4` `CIDR`。
+    * <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 是否默认`VPC`。
+    * <p>是否默认<code>VPC</code>。</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 是否开启组播。
+    * <p>是否开启组播。</p>
     */
     @SerializedName("EnableMulticast")
     @Expose
     private Boolean EnableMulticast;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * `DNS`列表。
+    * <p><code>DNS</code>列表。</p>
     */
     @SerializedName("DnsServerSet")
     @Expose
     private String [] DnsServerSet;
 
     /**
-    * `DHCP`域名选项值。
+    * <p><code>DHCP</code>域名选项值。</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * `DHCP`选项集`ID`。
+    * <p><code>DHCP</code>选项集<code>ID</code>。</p>
     */
     @SerializedName("DhcpOptionsId")
     @Expose
     private String DhcpOptionsId;
 
     /**
-    * 是否开启`DHCP`。
+    * <p>是否开启<code>DHCP</code>。</p>
     */
     @SerializedName("EnableDhcp")
     @Expose
     private Boolean EnableDhcp;
 
     /**
-    * `VPC`的`IPv6` `CIDR`。
+    * <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-    * 标签键值对
+    * <p>标签键值对</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * 辅助CIDR
+    * <p>辅助CIDR</p>
     */
     @SerializedName("AssistantCidrSet")
     @Expose
     private AssistantCidr [] AssistantCidrSet;
 
     /**
-    * vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+    * <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
     */
     @SerializedName("EnableRouteVpcPublish")
     @Expose
     private Boolean EnableRouteVpcPublish;
 
     /**
-    * 返回多运营商IPv6 Cidr Block
+    * <p>返回多运营商IPv6 Cidr Block</p>
     */
     @SerializedName("Ipv6CidrBlockSet")
     @Expose
     private ISPIPv6CidrBlock [] Ipv6CidrBlockSet;
 
     /**
-    * vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+    * <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
     */
     @SerializedName("EnableRouteVpcPublishIpv6")
     @Expose
     private Boolean EnableRouteVpcPublishIpv6;
 
     /**
-     * Get `VPC`名称。 
-     * @return VpcName `VPC`名称。
+     * Get <p><code>VPC</code>名称。</p> 
+     * @return VpcName <p><code>VPC</code>名称。</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set `VPC`名称。
-     * @param VpcName `VPC`名称。
+     * Set <p><code>VPC</code>名称。</p>
+     * @param VpcName <p><code>VPC</code>名称。</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get `VPC`实例`ID`，例如：vpc-azd4dt1c。 
-     * @return VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * Get <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p> 
+     * @return VpcId <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`，例如：vpc-azd4dt1c。
-     * @param VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * Set <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
+     * @param VpcId <p><code>VPC</code>实例<code>ID</code>，例如：vpc-azd4dt1c。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get `VPC`的`IPv4` `CIDR`。 
-     * @return CidrBlock `VPC`的`IPv4` `CIDR`。
+     * Get <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p> 
+     * @return CidrBlock <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set `VPC`的`IPv4` `CIDR`。
-     * @param CidrBlock `VPC`的`IPv4` `CIDR`。
+     * Set <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
+     * @param CidrBlock <p><code>VPC</code>的<code>IPv4</code> <code>CIDR</code>。</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 是否默认`VPC`。 
-     * @return IsDefault 是否默认`VPC`。
+     * Get <p>是否默认<code>VPC</code>。</p> 
+     * @return IsDefault <p>是否默认<code>VPC</code>。</p>
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否默认`VPC`。
-     * @param IsDefault 是否默认`VPC`。
+     * Set <p>是否默认<code>VPC</code>。</p>
+     * @param IsDefault <p>是否默认<code>VPC</code>。</p>
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 是否开启组播。 
-     * @return EnableMulticast 是否开启组播。
+     * Get <p>是否开启组播。</p> 
+     * @return EnableMulticast <p>是否开启组播。</p>
      */
     public Boolean getEnableMulticast() {
         return this.EnableMulticast;
     }
 
     /**
-     * Set 是否开启组播。
-     * @param EnableMulticast 是否开启组播。
+     * Set <p>是否开启组播。</p>
+     * @param EnableMulticast <p>是否开启组播。</p>
      */
     public void setEnableMulticast(Boolean EnableMulticast) {
         this.EnableMulticast = EnableMulticast;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get `DNS`列表。 
-     * @return DnsServerSet `DNS`列表。
+     * Get <p><code>DNS</code>列表。</p> 
+     * @return DnsServerSet <p><code>DNS</code>列表。</p>
      */
     public String [] getDnsServerSet() {
         return this.DnsServerSet;
     }
 
     /**
-     * Set `DNS`列表。
-     * @param DnsServerSet `DNS`列表。
+     * Set <p><code>DNS</code>列表。</p>
+     * @param DnsServerSet <p><code>DNS</code>列表。</p>
      */
     public void setDnsServerSet(String [] DnsServerSet) {
         this.DnsServerSet = DnsServerSet;
     }
 
     /**
-     * Get `DHCP`域名选项值。 
-     * @return DomainName `DHCP`域名选项值。
+     * Get <p><code>DHCP</code>域名选项值。</p> 
+     * @return DomainName <p><code>DHCP</code>域名选项值。</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set `DHCP`域名选项值。
-     * @param DomainName `DHCP`域名选项值。
+     * Set <p><code>DHCP</code>域名选项值。</p>
+     * @param DomainName <p><code>DHCP</code>域名选项值。</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get `DHCP`选项集`ID`。 
-     * @return DhcpOptionsId `DHCP`选项集`ID`。
+     * Get <p><code>DHCP</code>选项集<code>ID</code>。</p> 
+     * @return DhcpOptionsId <p><code>DHCP</code>选项集<code>ID</code>。</p>
      */
     public String getDhcpOptionsId() {
         return this.DhcpOptionsId;
     }
 
     /**
-     * Set `DHCP`选项集`ID`。
-     * @param DhcpOptionsId `DHCP`选项集`ID`。
+     * Set <p><code>DHCP</code>选项集<code>ID</code>。</p>
+     * @param DhcpOptionsId <p><code>DHCP</code>选项集<code>ID</code>。</p>
      */
     public void setDhcpOptionsId(String DhcpOptionsId) {
         this.DhcpOptionsId = DhcpOptionsId;
     }
 
     /**
-     * Get 是否开启`DHCP`。 
-     * @return EnableDhcp 是否开启`DHCP`。
+     * Get <p>是否开启<code>DHCP</code>。</p> 
+     * @return EnableDhcp <p>是否开启<code>DHCP</code>。</p>
      */
     public Boolean getEnableDhcp() {
         return this.EnableDhcp;
     }
 
     /**
-     * Set 是否开启`DHCP`。
-     * @param EnableDhcp 是否开启`DHCP`。
+     * Set <p>是否开启<code>DHCP</code>。</p>
+     * @param EnableDhcp <p>是否开启<code>DHCP</code>。</p>
      */
     public void setEnableDhcp(Boolean EnableDhcp) {
         this.EnableDhcp = EnableDhcp;
     }
 
     /**
-     * Get `VPC`的`IPv6` `CIDR`。 
-     * @return Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
+     * Get <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p> 
+     * @return Ipv6CidrBlock <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set `VPC`的`IPv6` `CIDR`。
-     * @param Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
+     * Set <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
+     * @param Ipv6CidrBlock <p><code>VPC</code>的<code>IPv6</code> <code>CIDR</code>。</p>
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 标签键值对 
-     * @return TagSet 标签键值对
+     * Get <p>标签键值对</p> 
+     * @return TagSet <p>标签键值对</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对
-     * @param TagSet 标签键值对
+     * Set <p>标签键值对</p>
+     * @param TagSet <p>标签键值对</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 辅助CIDR 
-     * @return AssistantCidrSet 辅助CIDR
+     * Get <p>辅助CIDR</p> 
+     * @return AssistantCidrSet <p>辅助CIDR</p>
      */
     public AssistantCidr [] getAssistantCidrSet() {
         return this.AssistantCidrSet;
     }
 
     /**
-     * Set 辅助CIDR
-     * @param AssistantCidrSet 辅助CIDR
+     * Set <p>辅助CIDR</p>
+     * @param AssistantCidrSet <p>辅助CIDR</p>
      */
     public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
         this.AssistantCidrSet = AssistantCidrSet;
     }
 
     /**
-     * Get vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单 
-     * @return EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * Get <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p> 
+     * @return EnableRouteVpcPublish <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
      */
     public Boolean getEnableRouteVpcPublish() {
         return this.EnableRouteVpcPublish;
     }
 
     /**
-     * Set vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
-     * @param EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * Set <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
+     * @param EnableRouteVpcPublish <p>vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单</p>
      */
     public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
         this.EnableRouteVpcPublish = EnableRouteVpcPublish;
     }
 
     /**
-     * Get 返回多运营商IPv6 Cidr Block 
-     * @return Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
+     * Get <p>返回多运营商IPv6 Cidr Block</p> 
+     * @return Ipv6CidrBlockSet <p>返回多运营商IPv6 Cidr Block</p>
      */
     public ISPIPv6CidrBlock [] getIpv6CidrBlockSet() {
         return this.Ipv6CidrBlockSet;
     }
 
     /**
-     * Set 返回多运营商IPv6 Cidr Block
-     * @param Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
+     * Set <p>返回多运营商IPv6 Cidr Block</p>
+     * @param Ipv6CidrBlockSet <p>返回多运营商IPv6 Cidr Block</p>
      */
     public void setIpv6CidrBlockSet(ISPIPv6CidrBlock [] Ipv6CidrBlockSet) {
         this.Ipv6CidrBlockSet = Ipv6CidrBlockSet;
     }
 
     /**
-     * Get vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。 
-     * @return EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * Get <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p> 
+     * @return EnableRouteVpcPublishIpv6 <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
      */
     public Boolean getEnableRouteVpcPublishIpv6() {
         return this.EnableRouteVpcPublishIpv6;
     }
 
     /**
-     * Set vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
-     * @param EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * Set <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
+     * @param EnableRouteVpcPublishIpv6 <p>vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。</p>
      */
     public void setEnableRouteVpcPublishIpv6(Boolean EnableRouteVpcPublishIpv6) {
         this.EnableRouteVpcPublishIpv6 = EnableRouteVpcPublishIpv6;

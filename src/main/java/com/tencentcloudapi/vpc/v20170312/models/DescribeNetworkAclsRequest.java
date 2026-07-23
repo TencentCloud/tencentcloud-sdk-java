@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class DescribeNetworkAclsRequest extends AbstractModel {
 
     /**
-    * 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+    * <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+    * <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
     */
     @SerializedName("NetworkAclIds")
     @Expose
     private String [] NetworkAclIds;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最小值为1，最大值为100。
+    * <p>返回数量，默认为20，最小值为1，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+    * <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 排序方法。顺序：ASC，倒序：DESC。
+    * <p>排序方法。顺序：ASC，倒序：DESC。</p>
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+     * Get <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li> 
+     * @return Filters <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
-     * @param Filters 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
-<li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
-<li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+     * Set <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+     * @param Filters <p>过滤条件，参数不支持同时指定NetworkAclIds和Filters。</p><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li><li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li><li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。 
-     * @return NetworkAclIds 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+     * Get <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p> 
+     * @return NetworkAclIds <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
      */
     public String [] getNetworkAclIds() {
         return this.NetworkAclIds;
     }
 
     /**
-     * Set 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
-     * @param NetworkAclIds 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+     * Set <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
+     * @param NetworkAclIds <p>网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。</p>
      */
     public void setNetworkAclIds(String [] NetworkAclIds) {
         this.NetworkAclIds = NetworkAclIds;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最小值为1，最大值为100。 
-     * @return Limit 返回数量，默认为20，最小值为1，最大值为100。
+     * Get <p>返回数量，默认为20，最小值为1，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最小值为1，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最小值为1，最大值为100。
-     * @param Limit 返回数量，默认为20，最小值为1，最大值为100。
+     * Set <p>返回数量，默认为20，最小值为1，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最小值为1，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime 
-     * @return OrderField 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+     * Get <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p> 
+     * @return OrderField <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
-     * @param OrderField 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+     * Set <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
+     * @param OrderField <p>排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime,ModifyTime</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 排序方法。顺序：ASC，倒序：DESC。 
-     * @return OrderDirection 排序方法。顺序：ASC，倒序：DESC。
+     * Get <p>排序方法。顺序：ASC，倒序：DESC。</p> 
+     * @return OrderDirection <p>排序方法。顺序：ASC，倒序：DESC。</p>
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方法。顺序：ASC，倒序：DESC。
-     * @param OrderDirection 排序方法。顺序：ASC，倒序：DESC。
+     * Set <p>排序方法。顺序：ASC，倒序：DESC。</p>
+     * @param OrderDirection <p>排序方法。顺序：ASC，倒序：DESC。</p>
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

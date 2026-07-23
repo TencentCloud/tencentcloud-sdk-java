@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVpcsResponse extends AbstractModel {
 
     /**
-    * 符合条件的对象数。
+    * <p>符合条件的对象数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * VPC对象。
+    * <p>VPC对象。</p>
     */
     @SerializedName("VpcSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVpcsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get <p>符合条件的对象数。</p> 
+     * @return TotalCount <p>符合条件的对象数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set <p>符合条件的对象数。</p>
+     * @param TotalCount <p>符合条件的对象数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get VPC对象。 
-     * @return VpcSet VPC对象。
+     * Get <p>VPC对象。</p> 
+     * @return VpcSet <p>VPC对象。</p>
      */
     public Vpc [] getVpcSet() {
         return this.VpcSet;
     }
 
     /**
-     * Set VPC对象。
-     * @param VpcSet VPC对象。
+     * Set <p>VPC对象。</p>
+     * @param VpcSet <p>VPC对象。</p>
      */
     public void setVpcSet(Vpc [] VpcSet) {
         this.VpcSet = VpcSet;

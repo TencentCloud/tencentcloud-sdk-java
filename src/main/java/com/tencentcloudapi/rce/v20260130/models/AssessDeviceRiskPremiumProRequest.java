@@ -31,7 +31,7 @@ public class AssessDeviceRiskPremiumProRequest extends AbstractModel {
     private String DeviceToken;
 
     /**
-    * <p>客户端 IP 地址</p>
+    * <p>客户端 IP 地址（IPv4或IPv6）</p>
     */
     @SerializedName("UserIp")
     @Expose
@@ -54,16 +54,16 @@ public class AssessDeviceRiskPremiumProRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>客户端 IP 地址</p> 
-     * @return UserIp <p>客户端 IP 地址</p>
+     * Get <p>客户端 IP 地址（IPv4或IPv6）</p> 
+     * @return UserIp <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set <p>客户端 IP 地址</p>
-     * @param UserIp <p>客户端 IP 地址</p>
+     * Set <p>客户端 IP 地址（IPv4或IPv6）</p>
+     * @param UserIp <p>客户端 IP 地址（IPv4或IPv6）</p>
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

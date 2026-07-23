@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateSparkAppTaskRequest extends AbstractModel {
 
     /**
-    * spark作业名
+    * <p>spark作业名</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * spark作业程序入参，以空格分隔；一般用于周期性调用使用
+    * <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
     */
     @SerializedName("CmdArgs")
     @Expose
     private String CmdArgs;
 
     /**
-    * 任务来源信息
+    * <p>任务来源信息</p>
     */
     @SerializedName("SourceInfo")
     @Expose
     private KVPair [] SourceInfo;
 
     /**
-     * Get spark作业名 
-     * @return JobName spark作业名
+     * Get <p>spark作业名</p> 
+     * @return JobName <p>spark作业名</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set spark作业名
-     * @param JobName spark作业名
+     * Set <p>spark作业名</p>
+     * @param JobName <p>spark作业名</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get spark作业程序入参，以空格分隔；一般用于周期性调用使用 
-     * @return CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
+     * Get <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p> 
+     * @return CmdArgs <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set spark作业程序入参，以空格分隔；一般用于周期性调用使用
-     * @param CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
+     * Set <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
+     * @param CmdArgs <p>spark作业程序入参，以空格分隔；一般用于周期性调用使用</p>
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;
     }
 
     /**
-     * Get 任务来源信息 
-     * @return SourceInfo 任务来源信息
+     * Get <p>任务来源信息</p> 
+     * @return SourceInfo <p>任务来源信息</p>
      */
     public KVPair [] getSourceInfo() {
         return this.SourceInfo;
     }
 
     /**
-     * Set 任务来源信息
-     * @param SourceInfo 任务来源信息
+     * Set <p>任务来源信息</p>
+     * @param SourceInfo <p>任务来源信息</p>
      */
     public void setSourceInfo(KVPair [] SourceInfo) {
         this.SourceInfo = SourceInfo;

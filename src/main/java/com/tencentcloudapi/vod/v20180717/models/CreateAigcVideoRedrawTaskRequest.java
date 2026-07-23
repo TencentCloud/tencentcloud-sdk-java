@@ -38,6 +38,13 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
+    * <p>AIGC 视频转绘任务参数信息。</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private AigcVideoRedrawTaskInfo TaskInfo;
+
+    /**
     * <p>AIGC 视频转绘任务的输出媒体文件配置。</p>
     */
     @SerializedName("OutputConfig")
@@ -102,6 +109,22 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
+    }
+
+    /**
+     * Get <p>AIGC 视频转绘任务参数信息。</p> 
+     * @return TaskInfo <p>AIGC 视频转绘任务参数信息。</p>
+     */
+    public AigcVideoRedrawTaskInfo getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>AIGC 视频转绘任务参数信息。</p>
+     * @param TaskInfo <p>AIGC 视频转绘任务参数信息。</p>
+     */
+    public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
     }
 
     /**
@@ -198,6 +221,9 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
         if (source.FileInfo != null) {
             this.FileInfo = new AigcVideoRedrawTaskInputFileInfo(source.FileInfo);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new AigcVideoRedrawTaskInfo(source.TaskInfo);
+        }
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcVideoRedrawOutputConfig(source.OutputConfig);
         }
@@ -222,6 +248,7 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "FileInfo.", this.FileInfo);
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

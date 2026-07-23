@@ -83,6 +83,28 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *发起 NAT CCN 集群模式防火墙预接入检查（仅支持自动接入模式）。入参与 OpenClusterNatFwSwitch 完全相同，传入相同的 NatCcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterNatCcnFwSwitchList 接口读取 CheckResult 获取各阶段的通过/失败状态。
+     * @param req CheckClusterNatFwPreAccessRequest
+     * @return CheckClusterNatFwPreAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckClusterNatFwPreAccessResponse CheckClusterNatFwPreAccess(CheckClusterNatFwPreAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckClusterNatFwPreAccess", CheckClusterNatFwPreAccessResponse.class);
+    }
+
+    /**
+     *发起 VPC 集群防火墙预接入检查（仅支持自动接入模式）。入参与 ModifyClusterVpcFwSwitch 完全相同，传入相同的 CcnSwitch 配置 JSON 即可发起检查。检查为异步执行：接口立即返回 CheckItems 检查项清单，前端轮询 DescribeClusterVpcFwSwitchs 接口读取 CheckResult 获取各阶段的通过/失败状态。
+     * @param req CheckClusterVpcFwPreAccessRequest
+     * @return CheckClusterVpcFwPreAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckClusterVpcFwPreAccessResponse CheckClusterVpcFwPreAccess(CheckClusterVpcFwPreAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckClusterVpcFwPreAccess", CheckClusterVpcFwPreAccessResponse.class);
+    }
+
+    /**
      *关闭NAT CCN集群模式防火墙开关
      * @param req CloseClusterNatFwSwitchRequest
      * @return CloseClusterNatFwSwitchResponse
@@ -457,6 +479,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *DescribeBlockList 告警中心阻断资产视图列表
+     * @param req DescribeBlockListRequest
+     * @return DescribeBlockListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlockListResponse DescribeBlockList(DescribeBlockListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlockList", DescribeBlockListResponse.class);
+    }
+
+    /**
      *DescribeBlockStaticList 告警中心柱形图
      * @param req DescribeBlockStaticListRequest
      * @return DescribeBlockStaticListResponse
@@ -723,6 +756,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *获取用户防火墙(组)的ID名称列表
+     * @param req DescribeFwGroupIdNamesRequest
+     * @return DescribeFwGroupIdNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFwGroupIdNamesResponse DescribeFwGroupIdNames(DescribeFwGroupIdNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFwGroupIdNames", DescribeFwGroupIdNamesResponse.class);
+    }
+
+    /**
      *获取租户所有VPC防火墙(组)及VPC防火墙实例卡片信息
      * @param req DescribeFwGroupInstanceInfoRequest
      * @return DescribeFwGroupInstanceInfoResponse
@@ -775,6 +819,17 @@ public class CfwClient extends AbstractClient{
     public DescribeIpsModeSwitchResponse DescribeIpsModeSwitch(DescribeIpsModeSwitchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIpsModeSwitch", DescribeIpsModeSwitchResponse.class);
+    }
+
+    /**
+     *IPS规则查询接口新
+     * @param req DescribeIpsRuleListNewRequest
+     * @return DescribeIpsRuleListNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpsRuleListNewResponse DescribeIpsRuleListNew(DescribeIpsRuleListNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpsRuleListNew", DescribeIpsRuleListNewResponse.class);
     }
 
     /**
@@ -932,6 +987,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询nat规则的配额和使用情况
+     * @param req DescribeNatRuleScopesRequest
+     * @return DescribeNatRuleScopesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatRuleScopesResponse DescribeNatRuleScopes(DescribeNatRuleScopesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatRuleScopes", DescribeNatRuleScopesResponse.class);
+    }
+
+    /**
      *获取日志离线导出任务列表
      * @param req DescribeOfflineExportTaskRequest
      * @return DescribeOfflineExportTaskResponse
@@ -995,6 +1061,17 @@ public class CfwClient extends AbstractClient{
     public DescribeSecurityGroupListResponse DescribeSecurityGroupList(DescribeSecurityGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSecurityGroupList", DescribeSecurityGroupListResponse.class);
+    }
+
+    /**
+     *查询地域配置信息-DescribeAllRegionList
+     * @param req DescribeSecurityGroupRegionListRequest
+     * @return DescribeSecurityGroupRegionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupRegionListResponse DescribeSecurityGroupRegionList(DescribeSecurityGroupRegionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityGroupRegionList", DescribeSecurityGroupRegionListResponse.class);
     }
 
     /**
@@ -1094,6 +1171,17 @@ public class CfwClient extends AbstractClient{
     public DescribeVpcAcRuleResponse DescribeVpcAcRule(DescribeVpcAcRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcAcRule", DescribeVpcAcRuleResponse.class);
+    }
+
+    /**
+     *查询内网间访问控制规则的生效范围
+     * @param req DescribeVpcAclEdgeRangeRequest
+     * @return DescribeVpcAclEdgeRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcAclEdgeRangeResponse DescribeVpcAclEdgeRange(DescribeVpcAclEdgeRangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVpcAclEdgeRange", DescribeVpcAclEdgeRangeResponse.class);
     }
 
     /**

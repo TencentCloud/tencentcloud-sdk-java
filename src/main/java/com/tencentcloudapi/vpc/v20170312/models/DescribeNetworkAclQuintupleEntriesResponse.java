@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel {
 
     /**
-    * 网络ACL条目列表（NetworkAclTuple5Entry）
+    * <p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
     */
     @SerializedName("NetworkAclQuintupleSet")
     @Expose
     private NetworkAclQuintupleEntry [] NetworkAclQuintupleSet;
 
     /**
-    * 符合条件的实例数量。
+    * <p>符合条件的实例数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 网络ACL条目列表（NetworkAclTuple5Entry） 
-     * @return NetworkAclQuintupleSet 网络ACL条目列表（NetworkAclTuple5Entry）
+     * Get <p>网络ACL条目列表（NetworkAclTuple5Entry）</p> 
+     * @return NetworkAclQuintupleSet <p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
      */
     public NetworkAclQuintupleEntry [] getNetworkAclQuintupleSet() {
         return this.NetworkAclQuintupleSet;
     }
 
     /**
-     * Set 网络ACL条目列表（NetworkAclTuple5Entry）
-     * @param NetworkAclQuintupleSet 网络ACL条目列表（NetworkAclTuple5Entry）
+     * Set <p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
+     * @param NetworkAclQuintupleSet <p>网络ACL条目列表（NetworkAclTuple5Entry）</p>
      */
     public void setNetworkAclQuintupleSet(NetworkAclQuintupleEntry [] NetworkAclQuintupleSet) {
         this.NetworkAclQuintupleSet = NetworkAclQuintupleSet;
     }
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get <p>符合条件的实例数量。</p> 
+     * @return TotalCount <p>符合条件的实例数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set <p>符合条件的实例数量。</p>
+     * @param TotalCount <p>符合条件的实例数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -358,6 +358,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *修改数据流动任务状态，目前支持任务暂停/恢复
+     * @param req ModifyDataRepositoryTaskStatusRequest
+     * @return ModifyDataRepositoryTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataRepositoryTaskStatusResponse ModifyDataRepositoryTaskStatus(ModifyDataRepositoryTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDataRepositoryTaskStatus", ModifyDataRepositoryTaskStatusResponse.class);
+    }
+
+    /**
      *客户端集群挂载存储集群
      * @param req MountMultipleStorageFileSystemRequest
      * @return MountMultipleStorageFileSystemResponse

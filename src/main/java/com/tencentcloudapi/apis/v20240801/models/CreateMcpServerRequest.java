@@ -24,555 +24,578 @@ import java.util.HashMap;
 public class CreateMcpServerRequest extends AbstractModel {
 
     /**
-    * 模式：proxy代理模式； wrap封装模式；
+    * <p>模式：proxy代理模式； wrap封装模式；</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 版本号：2024-11-05 2025-03-26
+    * <p>版本号：2024-11-05 2025-03-26</p>
     */
     @SerializedName("McpVersion")
     @Expose
     private String McpVersion;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 封装服务列表
+    * <p>封装服务列表</p>
     */
     @SerializedName("WrapServices")
     @Expose
     private String [] WrapServices;
 
     /**
-    * 负载方式，robin random consistentHash
+    * <p>负载方式，robin random consistentHash</p>
     */
     @SerializedName("TargetSelect")
     @Expose
     private String TargetSelect;
 
     /**
-    * 目标服务器
+    * <p>目标服务器</p>
     */
     @SerializedName("TargetHosts")
     @Expose
     private TargetHostDTO [] TargetHosts;
 
     /**
-    * 后端协议：http https
+    * <p>后端协议：http https</p>
     */
     @SerializedName("HttpProtocolType")
     @Expose
     private String HttpProtocolType;
 
     /**
-    * 证书检查
+    * <p>证书检查</p>
     */
     @SerializedName("CheckTargetCertsError")
     @Expose
     private Boolean CheckTargetCertsError;
 
     /**
-    * 目标路径
+    * <p>目标路径</p>
     */
     @SerializedName("TargetPath")
     @Expose
     private String TargetPath;
 
     /**
-    * 流量控制开启状态
+    * <p>流量控制开启状态</p>
     */
     @SerializedName("InvokeLimitConfigStatus")
     @Expose
     private Boolean InvokeLimitConfigStatus;
 
     /**
-    * 流量控制配置
+    * <p>流量控制配置</p>
     */
     @SerializedName("InvokeLimitConfig")
     @Expose
     private InvokeLimitConfigDTO InvokeLimitConfig;
 
     /**
-    * IP白名单开启状态
+    * <p>IP白名单开启状态</p>
     */
     @SerializedName("IpWhiteStatus")
     @Expose
     private Boolean IpWhiteStatus;
 
     /**
-    * IP白名单配置
+    * <p>IP白名单配置</p>
     */
     @SerializedName("IpWhiteConfig")
     @Expose
     private IpConfig IpWhiteConfig;
 
     /**
-    * IP黑名单开启状态
+    * <p>IP黑名单开启状态</p>
     */
     @SerializedName("IpBlackStatus")
     @Expose
     private Boolean IpBlackStatus;
 
     /**
-    * IP黑名单配置
+    * <p>IP黑名单配置</p>
     */
     @SerializedName("IpBlackConfig")
     @Expose
     private IpConfig IpBlackConfig;
 
     /**
-    * 自定义host
+    * <p>自定义host</p>
     */
     @SerializedName("CustomHttpHost")
     @Expose
     private String CustomHttpHost;
 
     /**
-    * Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host
+    * <p>Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host</p>
     */
     @SerializedName("HttpHostType")
     @Expose
     private String HttpHostType;
 
     /**
-    * 请求的超时时间
+    * <p>请求的超时时间</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 安全规则集
+    * <p>安全规则集</p>
     */
     @SerializedName("McpSecurityRules")
     @Expose
     private McpSecurityRule [] McpSecurityRules;
 
     /**
-    * 工具集配置（openapi时或许用的是）
+    * <p>工具集配置（openapi时或许用的是）</p>
     */
     @SerializedName("ToolConfigs")
     @Expose
     private ToolConfigDTO [] ToolConfigs;
 
     /**
-    * 封装的API分组ID
+    * <p>封装的API分组ID</p>
     */
     @SerializedName("WrapPaasID")
     @Expose
     private String WrapPaasID;
 
     /**
-    * 插件配置
+    * <p>插件配置</p>
     */
     @SerializedName("PluginConfigs")
     @Expose
     private PluginConfigDTO [] PluginConfigs;
 
     /**
-     * Get 模式：proxy代理模式； wrap封装模式； 
-     * @return Mode 模式：proxy代理模式； wrap封装模式；
+    * <p>是否忽略健康检查</p>
+    */
+    @SerializedName("IgnoreHealthCheck")
+    @Expose
+    private Boolean IgnoreHealthCheck;
+
+    /**
+     * Get <p>模式：proxy代理模式； wrap封装模式；</p> 
+     * @return Mode <p>模式：proxy代理模式； wrap封装模式；</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 模式：proxy代理模式； wrap封装模式；
-     * @param Mode 模式：proxy代理模式； wrap封装模式；
+     * Set <p>模式：proxy代理模式； wrap封装模式；</p>
+     * @param Mode <p>模式：proxy代理模式； wrap封装模式；</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 版本号：2024-11-05 2025-03-26 
-     * @return McpVersion 版本号：2024-11-05 2025-03-26
+     * Get <p>版本号：2024-11-05 2025-03-26</p> 
+     * @return McpVersion <p>版本号：2024-11-05 2025-03-26</p>
      */
     public String getMcpVersion() {
         return this.McpVersion;
     }
 
     /**
-     * Set 版本号：2024-11-05 2025-03-26
-     * @param McpVersion 版本号：2024-11-05 2025-03-26
+     * Set <p>版本号：2024-11-05 2025-03-26</p>
+     * @param McpVersion <p>版本号：2024-11-05 2025-03-26</p>
      */
     public void setMcpVersion(String McpVersion) {
         this.McpVersion = McpVersion;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 封装服务列表 
-     * @return WrapServices 封装服务列表
+     * Get <p>封装服务列表</p> 
+     * @return WrapServices <p>封装服务列表</p>
      */
     public String [] getWrapServices() {
         return this.WrapServices;
     }
 
     /**
-     * Set 封装服务列表
-     * @param WrapServices 封装服务列表
+     * Set <p>封装服务列表</p>
+     * @param WrapServices <p>封装服务列表</p>
      */
     public void setWrapServices(String [] WrapServices) {
         this.WrapServices = WrapServices;
     }
 
     /**
-     * Get 负载方式，robin random consistentHash 
-     * @return TargetSelect 负载方式，robin random consistentHash
+     * Get <p>负载方式，robin random consistentHash</p> 
+     * @return TargetSelect <p>负载方式，robin random consistentHash</p>
      */
     public String getTargetSelect() {
         return this.TargetSelect;
     }
 
     /**
-     * Set 负载方式，robin random consistentHash
-     * @param TargetSelect 负载方式，robin random consistentHash
+     * Set <p>负载方式，robin random consistentHash</p>
+     * @param TargetSelect <p>负载方式，robin random consistentHash</p>
      */
     public void setTargetSelect(String TargetSelect) {
         this.TargetSelect = TargetSelect;
     }
 
     /**
-     * Get 目标服务器 
-     * @return TargetHosts 目标服务器
+     * Get <p>目标服务器</p> 
+     * @return TargetHosts <p>目标服务器</p>
      */
     public TargetHostDTO [] getTargetHosts() {
         return this.TargetHosts;
     }
 
     /**
-     * Set 目标服务器
-     * @param TargetHosts 目标服务器
+     * Set <p>目标服务器</p>
+     * @param TargetHosts <p>目标服务器</p>
      */
     public void setTargetHosts(TargetHostDTO [] TargetHosts) {
         this.TargetHosts = TargetHosts;
     }
 
     /**
-     * Get 后端协议：http https 
-     * @return HttpProtocolType 后端协议：http https
+     * Get <p>后端协议：http https</p> 
+     * @return HttpProtocolType <p>后端协议：http https</p>
      */
     public String getHttpProtocolType() {
         return this.HttpProtocolType;
     }
 
     /**
-     * Set 后端协议：http https
-     * @param HttpProtocolType 后端协议：http https
+     * Set <p>后端协议：http https</p>
+     * @param HttpProtocolType <p>后端协议：http https</p>
      */
     public void setHttpProtocolType(String HttpProtocolType) {
         this.HttpProtocolType = HttpProtocolType;
     }
 
     /**
-     * Get 证书检查 
-     * @return CheckTargetCertsError 证书检查
+     * Get <p>证书检查</p> 
+     * @return CheckTargetCertsError <p>证书检查</p>
      */
     public Boolean getCheckTargetCertsError() {
         return this.CheckTargetCertsError;
     }
 
     /**
-     * Set 证书检查
-     * @param CheckTargetCertsError 证书检查
+     * Set <p>证书检查</p>
+     * @param CheckTargetCertsError <p>证书检查</p>
      */
     public void setCheckTargetCertsError(Boolean CheckTargetCertsError) {
         this.CheckTargetCertsError = CheckTargetCertsError;
     }
 
     /**
-     * Get 目标路径 
-     * @return TargetPath 目标路径
+     * Get <p>目标路径</p> 
+     * @return TargetPath <p>目标路径</p>
      */
     public String getTargetPath() {
         return this.TargetPath;
     }
 
     /**
-     * Set 目标路径
-     * @param TargetPath 目标路径
+     * Set <p>目标路径</p>
+     * @param TargetPath <p>目标路径</p>
      */
     public void setTargetPath(String TargetPath) {
         this.TargetPath = TargetPath;
     }
 
     /**
-     * Get 流量控制开启状态 
-     * @return InvokeLimitConfigStatus 流量控制开启状态
+     * Get <p>流量控制开启状态</p> 
+     * @return InvokeLimitConfigStatus <p>流量控制开启状态</p>
      */
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
 
     /**
-     * Set 流量控制开启状态
-     * @param InvokeLimitConfigStatus 流量控制开启状态
+     * Set <p>流量控制开启状态</p>
+     * @param InvokeLimitConfigStatus <p>流量控制开启状态</p>
      */
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
 
     /**
-     * Get 流量控制配置 
-     * @return InvokeLimitConfig 流量控制配置
+     * Get <p>流量控制配置</p> 
+     * @return InvokeLimitConfig <p>流量控制配置</p>
      */
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
 
     /**
-     * Set 流量控制配置
-     * @param InvokeLimitConfig 流量控制配置
+     * Set <p>流量控制配置</p>
+     * @param InvokeLimitConfig <p>流量控制配置</p>
      */
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }
 
     /**
-     * Get IP白名单开启状态 
-     * @return IpWhiteStatus IP白名单开启状态
+     * Get <p>IP白名单开启状态</p> 
+     * @return IpWhiteStatus <p>IP白名单开启状态</p>
      */
     public Boolean getIpWhiteStatus() {
         return this.IpWhiteStatus;
     }
 
     /**
-     * Set IP白名单开启状态
-     * @param IpWhiteStatus IP白名单开启状态
+     * Set <p>IP白名单开启状态</p>
+     * @param IpWhiteStatus <p>IP白名单开启状态</p>
      */
     public void setIpWhiteStatus(Boolean IpWhiteStatus) {
         this.IpWhiteStatus = IpWhiteStatus;
     }
 
     /**
-     * Get IP白名单配置 
-     * @return IpWhiteConfig IP白名单配置
+     * Get <p>IP白名单配置</p> 
+     * @return IpWhiteConfig <p>IP白名单配置</p>
      */
     public IpConfig getIpWhiteConfig() {
         return this.IpWhiteConfig;
     }
 
     /**
-     * Set IP白名单配置
-     * @param IpWhiteConfig IP白名单配置
+     * Set <p>IP白名单配置</p>
+     * @param IpWhiteConfig <p>IP白名单配置</p>
      */
     public void setIpWhiteConfig(IpConfig IpWhiteConfig) {
         this.IpWhiteConfig = IpWhiteConfig;
     }
 
     /**
-     * Get IP黑名单开启状态 
-     * @return IpBlackStatus IP黑名单开启状态
+     * Get <p>IP黑名单开启状态</p> 
+     * @return IpBlackStatus <p>IP黑名单开启状态</p>
      */
     public Boolean getIpBlackStatus() {
         return this.IpBlackStatus;
     }
 
     /**
-     * Set IP黑名单开启状态
-     * @param IpBlackStatus IP黑名单开启状态
+     * Set <p>IP黑名单开启状态</p>
+     * @param IpBlackStatus <p>IP黑名单开启状态</p>
      */
     public void setIpBlackStatus(Boolean IpBlackStatus) {
         this.IpBlackStatus = IpBlackStatus;
     }
 
     /**
-     * Get IP黑名单配置 
-     * @return IpBlackConfig IP黑名单配置
+     * Get <p>IP黑名单配置</p> 
+     * @return IpBlackConfig <p>IP黑名单配置</p>
      */
     public IpConfig getIpBlackConfig() {
         return this.IpBlackConfig;
     }
 
     /**
-     * Set IP黑名单配置
-     * @param IpBlackConfig IP黑名单配置
+     * Set <p>IP黑名单配置</p>
+     * @param IpBlackConfig <p>IP黑名单配置</p>
      */
     public void setIpBlackConfig(IpConfig IpBlackConfig) {
         this.IpBlackConfig = IpBlackConfig;
     }
 
     /**
-     * Get 自定义host 
-     * @return CustomHttpHost 自定义host
+     * Get <p>自定义host</p> 
+     * @return CustomHttpHost <p>自定义host</p>
      */
     public String getCustomHttpHost() {
         return this.CustomHttpHost;
     }
 
     /**
-     * Set 自定义host
-     * @param CustomHttpHost 自定义host
+     * Set <p>自定义host</p>
+     * @param CustomHttpHost <p>自定义host</p>
      */
     public void setCustomHttpHost(String CustomHttpHost) {
         this.CustomHttpHost = CustomHttpHost;
     }
 
     /**
-     * Get Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host 
-     * @return HttpHostType Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host
+     * Get <p>Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host</p> 
+     * @return HttpHostType <p>Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host</p>
      */
     public String getHttpHostType() {
         return this.HttpHostType;
     }
 
     /**
-     * Set Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host
-     * @param HttpHostType Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host
+     * Set <p>Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host</p>
+     * @param HttpHostType <p>Http 请求host类型：useRequestHost 保持源请求；host targetHost 修正为源站host；  customHost 自定义host</p>
      */
     public void setHttpHostType(String HttpHostType) {
         this.HttpHostType = HttpHostType;
     }
 
     /**
-     * Get 请求的超时时间 
-     * @return Timeout 请求的超时时间
+     * Get <p>请求的超时时间</p> 
+     * @return Timeout <p>请求的超时时间</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 请求的超时时间
-     * @param Timeout 请求的超时时间
+     * Set <p>请求的超时时间</p>
+     * @param Timeout <p>请求的超时时间</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 安全规则集 
-     * @return McpSecurityRules 安全规则集
+     * Get <p>安全规则集</p> 
+     * @return McpSecurityRules <p>安全规则集</p>
      */
     public McpSecurityRule [] getMcpSecurityRules() {
         return this.McpSecurityRules;
     }
 
     /**
-     * Set 安全规则集
-     * @param McpSecurityRules 安全规则集
+     * Set <p>安全规则集</p>
+     * @param McpSecurityRules <p>安全规则集</p>
      */
     public void setMcpSecurityRules(McpSecurityRule [] McpSecurityRules) {
         this.McpSecurityRules = McpSecurityRules;
     }
 
     /**
-     * Get 工具集配置（openapi时或许用的是） 
-     * @return ToolConfigs 工具集配置（openapi时或许用的是）
+     * Get <p>工具集配置（openapi时或许用的是）</p> 
+     * @return ToolConfigs <p>工具集配置（openapi时或许用的是）</p>
      */
     public ToolConfigDTO [] getToolConfigs() {
         return this.ToolConfigs;
     }
 
     /**
-     * Set 工具集配置（openapi时或许用的是）
-     * @param ToolConfigs 工具集配置（openapi时或许用的是）
+     * Set <p>工具集配置（openapi时或许用的是）</p>
+     * @param ToolConfigs <p>工具集配置（openapi时或许用的是）</p>
      */
     public void setToolConfigs(ToolConfigDTO [] ToolConfigs) {
         this.ToolConfigs = ToolConfigs;
     }
 
     /**
-     * Get 封装的API分组ID 
-     * @return WrapPaasID 封装的API分组ID
+     * Get <p>封装的API分组ID</p> 
+     * @return WrapPaasID <p>封装的API分组ID</p>
      */
     public String getWrapPaasID() {
         return this.WrapPaasID;
     }
 
     /**
-     * Set 封装的API分组ID
-     * @param WrapPaasID 封装的API分组ID
+     * Set <p>封装的API分组ID</p>
+     * @param WrapPaasID <p>封装的API分组ID</p>
      */
     public void setWrapPaasID(String WrapPaasID) {
         this.WrapPaasID = WrapPaasID;
     }
 
     /**
-     * Get 插件配置 
-     * @return PluginConfigs 插件配置
+     * Get <p>插件配置</p> 
+     * @return PluginConfigs <p>插件配置</p>
      */
     public PluginConfigDTO [] getPluginConfigs() {
         return this.PluginConfigs;
     }
 
     /**
-     * Set 插件配置
-     * @param PluginConfigs 插件配置
+     * Set <p>插件配置</p>
+     * @param PluginConfigs <p>插件配置</p>
      */
     public void setPluginConfigs(PluginConfigDTO [] PluginConfigs) {
         this.PluginConfigs = PluginConfigs;
+    }
+
+    /**
+     * Get <p>是否忽略健康检查</p> 
+     * @return IgnoreHealthCheck <p>是否忽略健康检查</p>
+     */
+    public Boolean getIgnoreHealthCheck() {
+        return this.IgnoreHealthCheck;
+    }
+
+    /**
+     * Set <p>是否忽略健康检查</p>
+     * @param IgnoreHealthCheck <p>是否忽略健康检查</p>
+     */
+    public void setIgnoreHealthCheck(Boolean IgnoreHealthCheck) {
+        this.IgnoreHealthCheck = IgnoreHealthCheck;
     }
 
     public CreateMcpServerRequest() {
@@ -670,6 +693,9 @@ public class CreateMcpServerRequest extends AbstractModel {
                 this.PluginConfigs[i] = new PluginConfigDTO(source.PluginConfigs[i]);
             }
         }
+        if (source.IgnoreHealthCheck != null) {
+            this.IgnoreHealthCheck = new Boolean(source.IgnoreHealthCheck);
+        }
     }
 
 
@@ -701,6 +727,7 @@ public class CreateMcpServerRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ToolConfigs.", this.ToolConfigs);
         this.setParamSimple(map, prefix + "WrapPaasID", this.WrapPaasID);
         this.setParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
+        this.setParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
 
     }
 }

@@ -24,127 +24,92 @@ import java.util.HashMap;
 public class DescribeNetworkAclQuintupleEntriesRequest extends AbstractModel {
 
     /**
-    * 网络ACL实例ID。形如：acl-12345678。
+    * <p>网络ACL实例ID。形如：acl-12345678。</p>
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最小值为1，最大值为100。
+    * <p>返回数量，默认为20，最小值为1，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件，参数不支持同时指定`NetworkAclId`和`Filters`。
-<li>protocol - String - 协议，形如：`TCP`。</li>
-<li>description - String - 描述。</li>
-<li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li>
-<li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li>
-<li>action - String - 动作，形如ACCEPT或DROP。</li>
-<li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li>
-<li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
+    * <p>过滤条件，参数不支持同时指定<code>NetworkAclId</code>和<code>Filters</code>。</p><li>protocol - String - 协议，形如：<code>TCP</code>。</li><li>description - String - 描述。</li><li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li><li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li><li>action - String - 动作，形如ACCEPT或DROP。</li><li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li><li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 网络ACL实例ID。形如：acl-12345678。 
-     * @return NetworkAclId 网络ACL实例ID。形如：acl-12345678。
+     * Get <p>网络ACL实例ID。形如：acl-12345678。</p> 
+     * @return NetworkAclId <p>网络ACL实例ID。形如：acl-12345678。</p>
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set 网络ACL实例ID。形如：acl-12345678。
-     * @param NetworkAclId 网络ACL实例ID。形如：acl-12345678。
+     * Set <p>网络ACL实例ID。形如：acl-12345678。</p>
+     * @param NetworkAclId <p>网络ACL实例ID。形如：acl-12345678。</p>
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最小值为1，最大值为100。 
-     * @return Limit 返回数量，默认为20，最小值为1，最大值为100。
+     * Get <p>返回数量，默认为20，最小值为1，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最小值为1，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最小值为1，最大值为100。
-     * @param Limit 返回数量，默认为20，最小值为1，最大值为100。
+     * Set <p>返回数量，默认为20，最小值为1，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最小值为1，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定`NetworkAclId`和`Filters`。
-<li>protocol - String - 协议，形如：`TCP`。</li>
-<li>description - String - 描述。</li>
-<li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li>
-<li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li>
-<li>action - String - 动作，形如ACCEPT或DROP。</li>
-<li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li>
-<li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定`NetworkAclId`和`Filters`。
-<li>protocol - String - 协议，形如：`TCP`。</li>
-<li>description - String - 描述。</li>
-<li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li>
-<li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li>
-<li>action - String - 动作，形如ACCEPT或DROP。</li>
-<li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li>
-<li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
+     * Get <p>过滤条件，参数不支持同时指定<code>NetworkAclId</code>和<code>Filters</code>。</p><li>protocol - String - 协议，形如：<code>TCP</code>。</li><li>description - String - 描述。</li><li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li><li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li><li>action - String - 动作，形如ACCEPT或DROP。</li><li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li><li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li> 
+     * @return Filters <p>过滤条件，参数不支持同时指定<code>NetworkAclId</code>和<code>Filters</code>。</p><li>protocol - String - 协议，形如：<code>TCP</code>。</li><li>description - String - 描述。</li><li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li><li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li><li>action - String - 动作，形如ACCEPT或DROP。</li><li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li><li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定`NetworkAclId`和`Filters`。
-<li>protocol - String - 协议，形如：`TCP`。</li>
-<li>description - String - 描述。</li>
-<li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li>
-<li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li>
-<li>action - String - 动作，形如ACCEPT或DROP。</li>
-<li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li>
-<li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
-     * @param Filters 过滤条件，参数不支持同时指定`NetworkAclId`和`Filters`。
-<li>protocol - String - 协议，形如：`TCP`。</li>
-<li>description - String - 描述。</li>
-<li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li>
-<li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li>
-<li>action - String - 动作，形如ACCEPT或DROP。</li>
-<li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li>
-<li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
+     * Set <p>过滤条件，参数不支持同时指定<code>NetworkAclId</code>和<code>Filters</code>。</p><li>protocol - String - 协议，形如：<code>TCP</code>。</li><li>description - String - 描述。</li><li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li><li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li><li>action - String - 动作，形如ACCEPT或DROP。</li><li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li><li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
+     * @param Filters <p>过滤条件，参数不支持同时指定<code>NetworkAclId</code>和<code>Filters</code>。</p><li>protocol - String - 协议，形如：<code>TCP</code>。</li><li>description - String - 描述。</li><li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li><li>source-cidr- String - 源CIDR， 形如：'192.168.0.0/24'。</li><li>action - String - 动作，形如ACCEPT或DROP。</li><li>network-acl-quintuple-entry-id - String - 五元组唯一ID，形如：'acli45-ahnu4rv5'。</li><li>network-acl-direction - String - 方向，形如：'INGRESS'或'EGRESS'。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -75,6 +75,9 @@ public enum ClsErrorCode {
      /* 查询语句解析错误。 */
      FAILEDOPERATION_SYNTAXERROR("FailedOperation.SyntaxError"),
      
+     /* 标签侧并发冲突 */
+     FAILEDOPERATION_TAGCONCURRENTCONFLICT("FailedOperation.TagConcurrentConflict"),
+     
      /* 请求标签服务限频。 */
      FAILEDOPERATION_TAGQPSLIMIT("FailedOperation.TagQpsLimit"),
      
@@ -346,7 +349,10 @@ public enum ClsErrorCode {
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
      /* billing topic不允许修改cos导入配置 */
-     UNSUPPORTEDOPERATION_MODIFYBILLINGCOSRECHARGENOSUPPORT("UnsupportedOperation.ModifyBillingCosRechargeNoSupport");
+     UNSUPPORTEDOPERATION_MODIFYBILLINGCOSRECHARGENOSUPPORT("UnsupportedOperation.ModifyBillingCosRechargeNoSupport"),
+     
+     /* 当前地域不支持 */
+     UNSUPPORTEDOPERATION_UNSUPPORTEDREGION("UnsupportedOperation.UnsupportedRegion");
      
     private String value;
     private ClsErrorCode (String value){

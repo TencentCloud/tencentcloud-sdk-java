@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeRumLogExportsV2Request extends AbstractModel {
 
     /**
-    * <p>Page size</p>
+    * <p>每页返回任务数</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * <p>Page number</p>
+    * <p>当前页码</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * <p>Project ID</p>
+    * <p>项目ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-     * Get <p>Page size</p> 
-     * @return PageSize <p>Page size</p>
+     * Get <p>每页返回任务数</p> 
+     * @return PageSize <p>每页返回任务数</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set <p>Page size</p>
-     * @param PageSize <p>Page size</p>
+     * Set <p>每页返回任务数</p>
+     * @param PageSize <p>每页返回任务数</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get <p>Page number</p> 
-     * @return PageNum <p>Page number</p>
+     * Get <p>当前页码</p> 
+     * @return PageNum <p>当前页码</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set <p>Page number</p>
-     * @param PageNum <p>Page number</p>
+     * Set <p>当前页码</p>
+     * @param PageNum <p>当前页码</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get <p>Project ID</p> 
-     * @return ID <p>Project ID</p>
+     * Get <p>项目ID</p> 
+     * @return ID <p>项目ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set <p>Project ID</p>
-     * @param ID <p>Project ID</p>
+     * Set <p>项目ID</p>
+     * @param ID <p>项目ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;

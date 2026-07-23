@@ -24,22 +24,21 @@ import java.util.HashMap;
 public class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel {
 
     /**
-    * 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
+    * <p>授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
+    * <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p>
     */
     @SerializedName("MiniAppPath")
     @Expose
     private String MiniAppPath;
 
     /**
-    * 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+    * <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -53,52 +52,48 @@ public class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。 
-     * @return Url 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
+     * Get <p>授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p> 
+     * @return Url <p>授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-     * @param Url 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
+     * Set <p>授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p>
+     * @param Url <p>授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
- 
-     * @return MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
+     * Get <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p> 
+     * @return MiniAppPath <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p>
      */
     public String getMiniAppPath() {
         return this.MiniAppPath;
     }
 
     /**
-     * Set 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
-     * @param MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
-
+     * Set <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p>
+     * @param MiniAppPath <p>从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径</p>
      */
     public void setMiniAppPath(String MiniAppPath) {
         this.MiniAppPath = MiniAppPath;
     }
 
     /**
-     * Get 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。 
-     * @return ExpireTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Get <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p> 
+     * @return ExpireTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
-     * @param ExpireTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
+     * Set <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
+     * @param ExpireTime <p>链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class RouteTable extends AbstractModel {
 
     /**
-    * VPC实例ID。
+    * <p>VPC实例ID。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 路由表名称。
+    * <p>路由表名称。</p>
     */
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
 
     /**
-    * 路由表关联关系。
+    * <p>路由表关联关系。</p>
     */
     @SerializedName("AssociationSet")
     @Expose
     private RouteTableAssociation [] AssociationSet;
 
     /**
-    * IPv4路由策略集合。
+    * <p>IPv4路由策略集合。</p>
     */
     @SerializedName("RouteSet")
     @Expose
     private Route [] RouteSet;
 
     /**
-    * 是否默认路由表。
+    * <p>是否默认路由表。</p>
     */
     @SerializedName("Main")
     @Expose
     private Boolean Main;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 标签键值对。
+    * <p>标签键值对。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * local路由是否发布云联网。
+    * <p>local路由是否发布云联网。</p>
     */
     @SerializedName("LocalCidrForCcn")
     @Expose
     private CidrForCcn [] LocalCidrForCcn;
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get <p>VPC实例ID。</p> 
+     * @return VpcId <p>VPC实例ID。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set <p>VPC实例ID。</p>
+     * @param VpcId <p>VPC实例ID。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get <p>路由表实例ID，例如：rtb-azd4dt1c。</p> 
+     * @return RouteTableId <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
+     * @param RouteTableId <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由表名称。 
-     * @return RouteTableName 路由表名称。
+     * Get <p>路由表名称。</p> 
+     * @return RouteTableName <p>路由表名称。</p>
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称。
-     * @param RouteTableName 路由表名称。
+     * Set <p>路由表名称。</p>
+     * @param RouteTableName <p>路由表名称。</p>
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;
     }
 
     /**
-     * Get 路由表关联关系。 
-     * @return AssociationSet 路由表关联关系。
+     * Get <p>路由表关联关系。</p> 
+     * @return AssociationSet <p>路由表关联关系。</p>
      */
     public RouteTableAssociation [] getAssociationSet() {
         return this.AssociationSet;
     }
 
     /**
-     * Set 路由表关联关系。
-     * @param AssociationSet 路由表关联关系。
+     * Set <p>路由表关联关系。</p>
+     * @param AssociationSet <p>路由表关联关系。</p>
      */
     public void setAssociationSet(RouteTableAssociation [] AssociationSet) {
         this.AssociationSet = AssociationSet;
     }
 
     /**
-     * Get IPv4路由策略集合。 
-     * @return RouteSet IPv4路由策略集合。
+     * Get <p>IPv4路由策略集合。</p> 
+     * @return RouteSet <p>IPv4路由策略集合。</p>
      */
     public Route [] getRouteSet() {
         return this.RouteSet;
     }
 
     /**
-     * Set IPv4路由策略集合。
-     * @param RouteSet IPv4路由策略集合。
+     * Set <p>IPv4路由策略集合。</p>
+     * @param RouteSet <p>IPv4路由策略集合。</p>
      */
     public void setRouteSet(Route [] RouteSet) {
         this.RouteSet = RouteSet;
     }
 
     /**
-     * Get 是否默认路由表。 
-     * @return Main 是否默认路由表。
+     * Get <p>是否默认路由表。</p> 
+     * @return Main <p>是否默认路由表。</p>
      */
     public Boolean getMain() {
         return this.Main;
     }
 
     /**
-     * Set 是否默认路由表。
-     * @param Main 是否默认路由表。
+     * Set <p>是否默认路由表。</p>
+     * @param Main <p>是否默认路由表。</p>
      */
     public void setMain(Boolean Main) {
         this.Main = Main;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 标签键值对。 
-     * @return TagSet 标签键值对。
+     * Get <p>标签键值对。</p> 
+     * @return TagSet <p>标签键值对。</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对。
-     * @param TagSet 标签键值对。
+     * Set <p>标签键值对。</p>
+     * @param TagSet <p>标签键值对。</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get local路由是否发布云联网。 
-     * @return LocalCidrForCcn local路由是否发布云联网。
+     * Get <p>local路由是否发布云联网。</p> 
+     * @return LocalCidrForCcn <p>local路由是否发布云联网。</p>
      */
     public CidrForCcn [] getLocalCidrForCcn() {
         return this.LocalCidrForCcn;
     }
 
     /**
-     * Set local路由是否发布云联网。
-     * @param LocalCidrForCcn local路由是否发布云联网。
+     * Set <p>local路由是否发布云联网。</p>
+     * @param LocalCidrForCcn <p>local路由是否发布云联网。</p>
      */
     public void setLocalCidrForCcn(CidrForCcn [] LocalCidrForCcn) {
         this.LocalCidrForCcn = LocalCidrForCcn;

@@ -24,404 +24,440 @@ import java.util.HashMap;
 public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
-    * 模板 ID。
+    * <p>模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+    * <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 模板名称。
+    * <p>模板名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模板描述。
+    * <p>模板描述。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 截帧间隔，单位为秒。
+    * <p>音画质检测的配置参数。</p>
     */
-    @SerializedName("ScreenshotInterval")
+    @SerializedName("Configs")
     @Expose
-    private Float ScreenshotInterval;
+    private QualityInspectConfig [] Configs;
 
     /**
-    * 视频画面抖动重影检测的控制参数。
+    * <p>音画质检测的抽检策略。</p>
     */
-    @SerializedName("JitterConfigure")
+    @SerializedName("Strategy")
     @Expose
-    private JitterConfigureInfo JitterConfigure;
+    private QualityInspectStrategy Strategy;
 
     /**
-    * 视频画面模糊检测的控制参数。
-    */
-    @SerializedName("BlurConfigure")
-    @Expose
-    private BlurConfigureInfo BlurConfigure;
-
-    /**
-    * 视频画面低光、过曝检测的控制参数。
-    */
-    @SerializedName("AbnormalLightingConfigure")
-    @Expose
-    private AbnormalLightingConfigureInfo AbnormalLightingConfigure;
-
-    /**
-    * 视频画面花屏检测的控制参数。
-    */
-    @SerializedName("CrashScreenConfigure")
-    @Expose
-    private CrashScreenConfigureInfo CrashScreenConfigure;
-
-    /**
-    * 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-    */
-    @SerializedName("BlackWhiteEdgeConfigure")
-    @Expose
-    private BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure;
-
-    /**
-    * 视频画面噪点检测的控制参数。
-    */
-    @SerializedName("NoiseConfigure")
-    @Expose
-    private NoiseConfigureInfo NoiseConfigure;
-
-    /**
-    * 视频画面马赛克检测的控制参数。
-    */
-    @SerializedName("MosaicConfigure")
-    @Expose
-    private MosaicConfigureInfo MosaicConfigure;
-
-    /**
-    * 视频画面二维码检测的控制参数。
-    */
-    @SerializedName("QRCodeConfigure")
-    @Expose
-    private QRCodeConfigureInfo QRCodeConfigure;
-
-    /**
-    * 视频画面质量评价的控制参数。
-    */
-    @SerializedName("QualityEvaluationConfigure")
-    @Expose
-    private QualityEvaluationConfigureInfo QualityEvaluationConfigure;
-
-    /**
-    * 音频（静音、低音、爆音）检测的控制参数。
-    */
-    @SerializedName("VoiceConfigure")
-    @Expose
-    private VoiceConfigureInfo VoiceConfigure;
-
-    /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 模板 ID。 
-     * @return Definition 模板 ID。
+    * <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+    */
+    @SerializedName("ScreenshotInterval")
+    @Expose
+    private Float ScreenshotInterval;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+    */
+    @SerializedName("JitterConfigure")
+    @Expose
+    private JitterConfigureInfo JitterConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+    */
+    @SerializedName("BlurConfigure")
+    @Expose
+    private BlurConfigureInfo BlurConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+    */
+    @SerializedName("AbnormalLightingConfigure")
+    @Expose
+    private AbnormalLightingConfigureInfo AbnormalLightingConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+    */
+    @SerializedName("CrashScreenConfigure")
+    @Expose
+    private CrashScreenConfigureInfo CrashScreenConfigure;
+
+    /**
+    * <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+    */
+    @SerializedName("BlackWhiteEdgeConfigure")
+    @Expose
+    private BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+    */
+    @SerializedName("NoiseConfigure")
+    @Expose
+    private NoiseConfigureInfo NoiseConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+    */
+    @SerializedName("MosaicConfigure")
+    @Expose
+    private MosaicConfigureInfo MosaicConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+    */
+    @SerializedName("QRCodeConfigure")
+    @Expose
+    private QRCodeConfigureInfo QRCodeConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+    */
+    @SerializedName("QualityEvaluationConfigure")
+    @Expose
+    private QualityEvaluationConfigureInfo QualityEvaluationConfigure;
+
+    /**
+    * <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
+    */
+    @SerializedName("VoiceConfigure")
+    @Expose
+    private VoiceConfigureInfo VoiceConfigure;
+
+    /**
+     * Get <p>模板 ID。</p> 
+     * @return Definition <p>模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 模板 ID。
-     * @param Definition 模板 ID。
+     * Set <p>模板 ID。</p>
+     * @param Definition <p>模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li> 
-     * @return Type 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Get <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li> 
+     * @return Type <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
-     * @param Type 模板类型，可选值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Set <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+     * @param Type <p>模板类型，可选值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 模板名称。 
-     * @return Name 模板名称。
+     * Get <p>模板名称。</p> 
+     * @return Name <p>模板名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称。
-     * @param Name 模板名称。
+     * Set <p>模板名称。</p>
+     * @param Name <p>模板名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模板描述。 
-     * @return Comment 模板描述。
+     * Get <p>模板描述。</p> 
+     * @return Comment <p>模板描述。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述。
-     * @param Comment 模板描述。
+     * Set <p>模板描述。</p>
+     * @param Comment <p>模板描述。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 截帧间隔，单位为秒。 
-     * @return ScreenshotInterval 截帧间隔，单位为秒。
+     * Get <p>音画质检测的配置参数。</p> 
+     * @return Configs <p>音画质检测的配置参数。</p>
      */
-    public Float getScreenshotInterval() {
-        return this.ScreenshotInterval;
+    public QualityInspectConfig [] getConfigs() {
+        return this.Configs;
     }
 
     /**
-     * Set 截帧间隔，单位为秒。
-     * @param ScreenshotInterval 截帧间隔，单位为秒。
+     * Set <p>音画质检测的配置参数。</p>
+     * @param Configs <p>音画质检测的配置参数。</p>
      */
-    public void setScreenshotInterval(Float ScreenshotInterval) {
-        this.ScreenshotInterval = ScreenshotInterval;
+    public void setConfigs(QualityInspectConfig [] Configs) {
+        this.Configs = Configs;
     }
 
     /**
-     * Get 视频画面抖动重影检测的控制参数。 
-     * @return JitterConfigure 视频画面抖动重影检测的控制参数。
+     * Get <p>音画质检测的抽检策略。</p> 
+     * @return Strategy <p>音画质检测的抽检策略。</p>
      */
-    public JitterConfigureInfo getJitterConfigure() {
-        return this.JitterConfigure;
+    public QualityInspectStrategy getStrategy() {
+        return this.Strategy;
     }
 
     /**
-     * Set 视频画面抖动重影检测的控制参数。
-     * @param JitterConfigure 视频画面抖动重影检测的控制参数。
+     * Set <p>音画质检测的抽检策略。</p>
+     * @param Strategy <p>音画质检测的抽检策略。</p>
      */
-    public void setJitterConfigure(JitterConfigureInfo JitterConfigure) {
-        this.JitterConfigure = JitterConfigure;
+    public void setStrategy(QualityInspectStrategy Strategy) {
+        this.Strategy = Strategy;
     }
 
     /**
-     * Get 视频画面模糊检测的控制参数。 
-     * @return BlurConfigure 视频画面模糊检测的控制参数。
-     */
-    public BlurConfigureInfo getBlurConfigure() {
-        return this.BlurConfigure;
-    }
-
-    /**
-     * Set 视频画面模糊检测的控制参数。
-     * @param BlurConfigure 视频画面模糊检测的控制参数。
-     */
-    public void setBlurConfigure(BlurConfigureInfo BlurConfigure) {
-        this.BlurConfigure = BlurConfigure;
-    }
-
-    /**
-     * Get 视频画面低光、过曝检测的控制参数。 
-     * @return AbnormalLightingConfigure 视频画面低光、过曝检测的控制参数。
-     */
-    public AbnormalLightingConfigureInfo getAbnormalLightingConfigure() {
-        return this.AbnormalLightingConfigure;
-    }
-
-    /**
-     * Set 视频画面低光、过曝检测的控制参数。
-     * @param AbnormalLightingConfigure 视频画面低光、过曝检测的控制参数。
-     */
-    public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo AbnormalLightingConfigure) {
-        this.AbnormalLightingConfigure = AbnormalLightingConfigure;
-    }
-
-    /**
-     * Get 视频画面花屏检测的控制参数。 
-     * @return CrashScreenConfigure 视频画面花屏检测的控制参数。
-     */
-    public CrashScreenConfigureInfo getCrashScreenConfigure() {
-        return this.CrashScreenConfigure;
-    }
-
-    /**
-     * Set 视频画面花屏检测的控制参数。
-     * @param CrashScreenConfigure 视频画面花屏检测的控制参数。
-     */
-    public void setCrashScreenConfigure(CrashScreenConfigureInfo CrashScreenConfigure) {
-        this.CrashScreenConfigure = CrashScreenConfigure;
-    }
-
-    /**
-     * Get 视频画面黑边、白边、黑屏、白屏检测的控制参数。 
-     * @return BlackWhiteEdgeConfigure 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-     */
-    public BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() {
-        return this.BlackWhiteEdgeConfigure;
-    }
-
-    /**
-     * Set 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-     * @param BlackWhiteEdgeConfigure 视频画面黑边、白边、黑屏、白屏检测的控制参数。
-     */
-    public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure) {
-        this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
-    }
-
-    /**
-     * Get 视频画面噪点检测的控制参数。 
-     * @return NoiseConfigure 视频画面噪点检测的控制参数。
-     */
-    public NoiseConfigureInfo getNoiseConfigure() {
-        return this.NoiseConfigure;
-    }
-
-    /**
-     * Set 视频画面噪点检测的控制参数。
-     * @param NoiseConfigure 视频画面噪点检测的控制参数。
-     */
-    public void setNoiseConfigure(NoiseConfigureInfo NoiseConfigure) {
-        this.NoiseConfigure = NoiseConfigure;
-    }
-
-    /**
-     * Get 视频画面马赛克检测的控制参数。 
-     * @return MosaicConfigure 视频画面马赛克检测的控制参数。
-     */
-    public MosaicConfigureInfo getMosaicConfigure() {
-        return this.MosaicConfigure;
-    }
-
-    /**
-     * Set 视频画面马赛克检测的控制参数。
-     * @param MosaicConfigure 视频画面马赛克检测的控制参数。
-     */
-    public void setMosaicConfigure(MosaicConfigureInfo MosaicConfigure) {
-        this.MosaicConfigure = MosaicConfigure;
-    }
-
-    /**
-     * Get 视频画面二维码检测的控制参数。 
-     * @return QRCodeConfigure 视频画面二维码检测的控制参数。
-     */
-    public QRCodeConfigureInfo getQRCodeConfigure() {
-        return this.QRCodeConfigure;
-    }
-
-    /**
-     * Set 视频画面二维码检测的控制参数。
-     * @param QRCodeConfigure 视频画面二维码检测的控制参数。
-     */
-    public void setQRCodeConfigure(QRCodeConfigureInfo QRCodeConfigure) {
-        this.QRCodeConfigure = QRCodeConfigure;
-    }
-
-    /**
-     * Get 视频画面质量评价的控制参数。 
-     * @return QualityEvaluationConfigure 视频画面质量评价的控制参数。
-     */
-    public QualityEvaluationConfigureInfo getQualityEvaluationConfigure() {
-        return this.QualityEvaluationConfigure;
-    }
-
-    /**
-     * Set 视频画面质量评价的控制参数。
-     * @param QualityEvaluationConfigure 视频画面质量评价的控制参数。
-     */
-    public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo QualityEvaluationConfigure) {
-        this.QualityEvaluationConfigure = QualityEvaluationConfigure;
-    }
-
-    /**
-     * Get 音频（静音、低音、爆音）检测的控制参数。 
-     * @return VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
-     */
-    public VoiceConfigureInfo getVoiceConfigure() {
-        return this.VoiceConfigure;
-    }
-
-    /**
-     * Set 音频（静音、低音、爆音）检测的控制参数。
-     * @param VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
-     */
-    public void setVoiceConfigure(VoiceConfigureInfo VoiceConfigure) {
-        this.VoiceConfigure = VoiceConfigure;
-    }
-
-    /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p> 
+     * @return ScreenshotInterval <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+     */
+    public Float getScreenshotInterval() {
+        return this.ScreenshotInterval;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+     * @param ScreenshotInterval <p>（不推荐，使用 Configs 替代）截帧间隔，单位为秒。</p>
+     */
+    public void setScreenshotInterval(Float ScreenshotInterval) {
+        this.ScreenshotInterval = ScreenshotInterval;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p> 
+     * @return JitterConfigure <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+     */
+    public JitterConfigureInfo getJitterConfigure() {
+        return this.JitterConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+     * @param JitterConfigure <p>（不推荐，使用 Configs 替代）视频画面抖动重影检测的控制参数。</p>
+     */
+    public void setJitterConfigure(JitterConfigureInfo JitterConfigure) {
+        this.JitterConfigure = JitterConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p> 
+     * @return BlurConfigure <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+     */
+    public BlurConfigureInfo getBlurConfigure() {
+        return this.BlurConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+     * @param BlurConfigure <p>（不推荐，使用 Configs 替代）视频画面模糊检测的控制参数。</p>
+     */
+    public void setBlurConfigure(BlurConfigureInfo BlurConfigure) {
+        this.BlurConfigure = BlurConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p> 
+     * @return AbnormalLightingConfigure <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+     */
+    public AbnormalLightingConfigureInfo getAbnormalLightingConfigure() {
+        return this.AbnormalLightingConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+     * @param AbnormalLightingConfigure <p>（不推荐，使用 Configs 替代）视频画面低光、过曝检测的控制参数。</p>
+     */
+    public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo AbnormalLightingConfigure) {
+        this.AbnormalLightingConfigure = AbnormalLightingConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p> 
+     * @return CrashScreenConfigure <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+     */
+    public CrashScreenConfigureInfo getCrashScreenConfigure() {
+        return this.CrashScreenConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+     * @param CrashScreenConfigure <p>（不推荐，使用 Configs 替代）视频画面花屏检测的控制参数。</p>
+     */
+    public void setCrashScreenConfigure(CrashScreenConfigureInfo CrashScreenConfigure) {
+        this.CrashScreenConfigure = CrashScreenConfigure;
+    }
+
+    /**
+     * Get <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p> 
+     * @return BlackWhiteEdgeConfigure <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+     */
+    public BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() {
+        return this.BlackWhiteEdgeConfigure;
+    }
+
+    /**
+     * Set <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+     * @param BlackWhiteEdgeConfigure <p>视频画面黑边、白边、黑屏、白屏检测的控制参数。</p>
+     */
+    public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure) {
+        this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p> 
+     * @return NoiseConfigure <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+     */
+    public NoiseConfigureInfo getNoiseConfigure() {
+        return this.NoiseConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+     * @param NoiseConfigure <p>（不推荐，使用 Configs 替代）视频画面噪点检测的控制参数。</p>
+     */
+    public void setNoiseConfigure(NoiseConfigureInfo NoiseConfigure) {
+        this.NoiseConfigure = NoiseConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p> 
+     * @return MosaicConfigure <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+     */
+    public MosaicConfigureInfo getMosaicConfigure() {
+        return this.MosaicConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+     * @param MosaicConfigure <p>（不推荐，使用 Configs 替代）视频画面马赛克检测的控制参数。</p>
+     */
+    public void setMosaicConfigure(MosaicConfigureInfo MosaicConfigure) {
+        this.MosaicConfigure = MosaicConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p> 
+     * @return QRCodeConfigure <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+     */
+    public QRCodeConfigureInfo getQRCodeConfigure() {
+        return this.QRCodeConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+     * @param QRCodeConfigure <p>（不推荐，使用 Configs 替代）视频画面二维码检测的控制参数。</p>
+     */
+    public void setQRCodeConfigure(QRCodeConfigureInfo QRCodeConfigure) {
+        this.QRCodeConfigure = QRCodeConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p> 
+     * @return QualityEvaluationConfigure <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+     */
+    public QualityEvaluationConfigureInfo getQualityEvaluationConfigure() {
+        return this.QualityEvaluationConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+     * @param QualityEvaluationConfigure <p>（不推荐，使用 Configs 替代）视频画面质量评价的控制参数。</p>
+     */
+    public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo QualityEvaluationConfigure) {
+        this.QualityEvaluationConfigure = QualityEvaluationConfigure;
+    }
+
+    /**
+     * Get <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p> 
+     * @return VoiceConfigure <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
+     */
+    public VoiceConfigureInfo getVoiceConfigure() {
+        return this.VoiceConfigure;
+    }
+
+    /**
+     * Set <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
+     * @param VoiceConfigure <p>（不推荐，使用 Configs 替代）音频（静音、低音、爆音）检测的控制参数。</p>
+     */
+    public void setVoiceConfigure(VoiceConfigureInfo VoiceConfigure) {
+        this.VoiceConfigure = VoiceConfigure;
     }
 
     public QualityInspectTemplateItem() {
@@ -443,6 +479,21 @@ public class QualityInspectTemplateItem extends AbstractModel {
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
+        }
+        if (source.Configs != null) {
+            this.Configs = new QualityInspectConfig[source.Configs.length];
+            for (int i = 0; i < source.Configs.length; i++) {
+                this.Configs[i] = new QualityInspectConfig(source.Configs[i]);
+            }
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityInspectStrategy(source.Strategy);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
         }
         if (source.ScreenshotInterval != null) {
             this.ScreenshotInterval = new Float(source.ScreenshotInterval);
@@ -477,12 +528,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
         if (source.VoiceConfigure != null) {
             this.VoiceConfigure = new VoiceConfigureInfo(source.VoiceConfigure);
         }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
-        }
-        if (source.UpdateTime != null) {
-            this.UpdateTime = new String(source.UpdateTime);
-        }
     }
 
 
@@ -494,6 +539,10 @@ public class QualityInspectTemplateItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamArrayObj(map, prefix + "Configs.", this.Configs);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
         this.setParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);
@@ -505,8 +554,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
         this.setParamObj(map, prefix + "QRCodeConfigure.", this.QRCodeConfigure);
         this.setParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
         this.setParamObj(map, prefix + "VoiceConfigure.", this.VoiceConfigure);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

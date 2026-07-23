@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeNetworkInterfacesResponse extends AbstractModel {
 
     /**
-    * 实例详细信息列表。
+    * <p>实例详细信息列表。</p>
     */
     @SerializedName("NetworkInterfaceSet")
     @Expose
     private NetworkInterface [] NetworkInterfaceSet;
 
     /**
-    * 符合条件的实例数量。
+    * <p>符合条件的实例数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeNetworkInterfacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例详细信息列表。 
-     * @return NetworkInterfaceSet 实例详细信息列表。
+     * Get <p>实例详细信息列表。</p> 
+     * @return NetworkInterfaceSet <p>实例详细信息列表。</p>
      */
     public NetworkInterface [] getNetworkInterfaceSet() {
         return this.NetworkInterfaceSet;
     }
 
     /**
-     * Set 实例详细信息列表。
-     * @param NetworkInterfaceSet 实例详细信息列表。
+     * Set <p>实例详细信息列表。</p>
+     * @param NetworkInterfaceSet <p>实例详细信息列表。</p>
      */
     public void setNetworkInterfaceSet(NetworkInterface [] NetworkInterfaceSet) {
         this.NetworkInterfaceSet = NetworkInterfaceSet;
     }
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get <p>符合条件的实例数量。</p> 
+     * @return TotalCount <p>符合条件的实例数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set <p>符合条件的实例数量。</p>
+     * @param TotalCount <p>符合条件的实例数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

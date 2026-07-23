@@ -24,225 +24,115 @@ import java.util.HashMap;
 public class DescribeRouteTablesRequest extends AbstractModel {
 
     /**
-    * 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>route-table-id - String - （过滤条件）路由表实例ID。</li>
-<li>route-table-name - String - （过滤条件）路由表名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - String - （过滤条件）是否主路由表。</li>
-<li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-<li>visible - String - （过滤条件）是否可见。</li>
-<li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
-目前我们支持的类型有：
-LOCAL: 本地路由
-CVM：公网网关类型的云服务器；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
-NORMAL_CVM：普通云服务器；
-EIP：云服务器的公网IP；
-CCN：云联网；
-LOCAL_GATEWAY：本地网关。
-GWLB_ENDPOINT：网关负载均衡终端节点。
-</li>
+    * <p>过滤条件，参数不支持同时指定RouteTableIds和Filters。</p><li>route-table-id - String - （过滤条件）路由表实例ID。</li><li>route-table-name - String - （过滤条件）路由表名称。</li><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li><li>association.main - String - （过滤条件）是否主路由表。</li><li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li><li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li><li>visible - String - （过滤条件）是否可见。</li><li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。目前我们支持的类型有：LOCAL: 本地路由CVM：公网网关类型的云服务器；VPN：VPN网关；DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；HAVIP：高可用虚拟IP；NAT：NAT网关; NORMAL_CVM：普通云服务器；EIP：云服务器的公网IP；CCN：云联网；LOCAL_GATEWAY：本地网关。GWLB_ENDPOINT：网关负载均衡终端节点。</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
     */
     @SerializedName("RouteTableIds")
     @Expose
     private String [] RouteTableIds;
 
     /**
-    * 偏移量。
+    * <p>偏移量。</p>
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-    * 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+    * <p>是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。</p>
     */
     @SerializedName("NeedRouterInfo")
     @Expose
     private Boolean NeedRouterInfo;
 
     /**
-     * Get 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>route-table-id - String - （过滤条件）路由表实例ID。</li>
-<li>route-table-name - String - （过滤条件）路由表名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - String - （过滤条件）是否主路由表。</li>
-<li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-<li>visible - String - （过滤条件）是否可见。</li>
-<li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
-目前我们支持的类型有：
-LOCAL: 本地路由
-CVM：公网网关类型的云服务器；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
-NORMAL_CVM：普通云服务器；
-EIP：云服务器的公网IP；
-CCN：云联网；
-LOCAL_GATEWAY：本地网关。
-GWLB_ENDPOINT：网关负载均衡终端节点。
-</li> 
-     * @return Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>route-table-id - String - （过滤条件）路由表实例ID。</li>
-<li>route-table-name - String - （过滤条件）路由表名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - String - （过滤条件）是否主路由表。</li>
-<li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-<li>visible - String - （过滤条件）是否可见。</li>
-<li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
-目前我们支持的类型有：
-LOCAL: 本地路由
-CVM：公网网关类型的云服务器；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
-NORMAL_CVM：普通云服务器；
-EIP：云服务器的公网IP；
-CCN：云联网；
-LOCAL_GATEWAY：本地网关。
-GWLB_ENDPOINT：网关负载均衡终端节点。
-</li>
+     * Get <p>过滤条件，参数不支持同时指定RouteTableIds和Filters。</p><li>route-table-id - String - （过滤条件）路由表实例ID。</li><li>route-table-name - String - （过滤条件）路由表名称。</li><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li><li>association.main - String - （过滤条件）是否主路由表。</li><li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li><li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li><li>visible - String - （过滤条件）是否可见。</li><li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。目前我们支持的类型有：LOCAL: 本地路由CVM：公网网关类型的云服务器；VPN：VPN网关；DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；HAVIP：高可用虚拟IP；NAT：NAT网关; NORMAL_CVM：普通云服务器；EIP：云服务器的公网IP；CCN：云联网；LOCAL_GATEWAY：本地网关。GWLB_ENDPOINT：网关负载均衡终端节点。</li> 
+     * @return Filters <p>过滤条件，参数不支持同时指定RouteTableIds和Filters。</p><li>route-table-id - String - （过滤条件）路由表实例ID。</li><li>route-table-name - String - （过滤条件）路由表名称。</li><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li><li>association.main - String - （过滤条件）是否主路由表。</li><li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li><li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li><li>visible - String - （过滤条件）是否可见。</li><li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。目前我们支持的类型有：LOCAL: 本地路由CVM：公网网关类型的云服务器；VPN：VPN网关；DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；HAVIP：高可用虚拟IP；NAT：NAT网关; NORMAL_CVM：普通云服务器；EIP：云服务器的公网IP；CCN：云联网；LOCAL_GATEWAY：本地网关。GWLB_ENDPOINT：网关负载均衡终端节点。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>route-table-id - String - （过滤条件）路由表实例ID。</li>
-<li>route-table-name - String - （过滤条件）路由表名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - String - （过滤条件）是否主路由表。</li>
-<li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-<li>visible - String - （过滤条件）是否可见。</li>
-<li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
-目前我们支持的类型有：
-LOCAL: 本地路由
-CVM：公网网关类型的云服务器；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
-NORMAL_CVM：普通云服务器；
-EIP：云服务器的公网IP；
-CCN：云联网；
-LOCAL_GATEWAY：本地网关。
-GWLB_ENDPOINT：网关负载均衡终端节点。
-</li>
-     * @param Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>route-table-id - String - （过滤条件）路由表实例ID。</li>
-<li>route-table-name - String - （过滤条件）路由表名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>association.main - String - （过滤条件）是否主路由表。</li>
-<li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-<li>visible - String - （过滤条件）是否可见。</li>
-<li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。
-目前我们支持的类型有：
-LOCAL: 本地路由
-CVM：公网网关类型的云服务器；
-VPN：VPN网关；
-DIRECTCONNECT：专线网关；
-PEERCONNECTION：对等连接；
-HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
-NORMAL_CVM：普通云服务器；
-EIP：云服务器的公网IP；
-CCN：云联网；
-LOCAL_GATEWAY：本地网关。
-GWLB_ENDPOINT：网关负载均衡终端节点。
-</li>
+     * Set <p>过滤条件，参数不支持同时指定RouteTableIds和Filters。</p><li>route-table-id - String - （过滤条件）路由表实例ID。</li><li>route-table-name - String - （过滤条件）路由表名称。</li><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li><li>association.main - String - （过滤条件）是否主路由表。</li><li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li><li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li><li>visible - String - （过滤条件）是否可见。</li><li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。目前我们支持的类型有：LOCAL: 本地路由CVM：公网网关类型的云服务器；VPN：VPN网关；DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；HAVIP：高可用虚拟IP；NAT：NAT网关; NORMAL_CVM：普通云服务器；EIP：云服务器的公网IP；CCN：云联网；LOCAL_GATEWAY：本地网关。GWLB_ENDPOINT：网关负载均衡终端节点。</li>
+     * @param Filters <p>过滤条件，参数不支持同时指定RouteTableIds和Filters。</p><li>route-table-id - String - （过滤条件）路由表实例ID。</li><li>route-table-name - String - （过滤条件）路由表名称。</li><li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li><li>association.main - String - （过滤条件）是否主路由表。</li><li>tag-key - String -是否必填：否 - （过滤条件）按照标签键进行过滤。</li><li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li><li>visible - String - （过滤条件）是否可见。</li><li>next-hop-type - String - 是否必填：否 - （过滤条件）按下一跳类型进行过滤。使用next-hop-type进行过滤时，必须同时携带route-table-id与vpc-id。目前我们支持的类型有：LOCAL: 本地路由CVM：公网网关类型的云服务器；VPN：VPN网关；DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；HAVIP：高可用虚拟IP；NAT：NAT网关; NORMAL_CVM：普通云服务器；EIP：云服务器的公网IP；CCN：云联网；LOCAL_GATEWAY：本地网关。GWLB_ENDPOINT：网关负载均衡终端节点。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get <p>路由表实例ID，例如：rtb-azd4dt1c。</p> 
+     * @return RouteTableIds <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
      */
     public String [] getRouteTableIds() {
         return this.RouteTableIds;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
+     * @param RouteTableIds <p>路由表实例ID，例如：rtb-azd4dt1c。</p>
      */
     public void setRouteTableIds(String [] RouteTableIds) {
         this.RouteTableIds = RouteTableIds;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get <p>偏移量。</p> 
+     * @return Offset <p>偏移量。</p>
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set <p>偏移量。</p>
+     * @param Offset <p>偏移量。</p>
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。 
-     * @return NeedRouterInfo 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+     * Get <p>是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。</p> 
+     * @return NeedRouterInfo <p>是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。</p>
      */
     public Boolean getNeedRouterInfo() {
         return this.NeedRouterInfo;
     }
 
     /**
-     * Set 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
-     * @param NeedRouterInfo 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+     * Set <p>是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。</p>
+     * @param NeedRouterInfo <p>是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。</p>
      */
     public void setNeedRouterInfo(Boolean NeedRouterInfo) {
         this.NeedRouterInfo = NeedRouterInfo;

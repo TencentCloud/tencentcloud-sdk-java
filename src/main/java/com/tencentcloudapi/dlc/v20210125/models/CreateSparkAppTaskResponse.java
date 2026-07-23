@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateSparkAppTaskResponse extends AbstractModel {
 
     /**
-    * 批Id
+    * <p>批Id</p>
     */
     @SerializedName("BatchId")
     @Expose
     private String BatchId;
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateSparkAppTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批Id 
-     * @return BatchId 批Id
+     * Get <p>批Id</p> 
+     * @return BatchId <p>批Id</p>
      */
     public String getBatchId() {
         return this.BatchId;
     }
 
     /**
-     * Set 批Id
-     * @param BatchId 批Id
+     * Set <p>批Id</p>
+     * @param BatchId <p>批Id</p>
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get <p>任务Id</p> 
+     * @return TaskId <p>任务Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set <p>任务Id</p>
+     * @param TaskId <p>任务Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

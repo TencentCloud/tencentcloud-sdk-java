@@ -24,115 +24,187 @@ import java.util.HashMap;
 public class QualityInspectTaskOutput extends AbstractModel {
 
     /**
-    * 媒体文件是否无音频轨，取值范围：
-<li>0：否，即有音频轨；</li>
-<li>1：是，即无音频轨。</li>
+    * <p>媒体文件是否无音频轨，取值范围：</p><li>0：否，即有音频轨；</li><li>1：是，即无音频轨。</li>
     */
     @SerializedName("NoAudio")
     @Expose
     private Long NoAudio;
 
     /**
-    * 媒体文件是否无视频轨，取值范围：
-<li>0：否，即有视频轨；</li>
-<li>1：是，即无视频轨。</li>
+    * <p>媒体文件是否无视频轨，取值范围：</p><li>0：否，即有视频轨；</li><li>1：是，即无视频轨。</li>
     */
     @SerializedName("NoVideo")
     @Expose
     private Long NoVideo;
 
     /**
-    * 视频画面质量评分，取值范围：[0, 100]。
+    * <p>视频画面质量评分，取值范围：[0, 100]。</p>
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
 
     /**
-    * 音画质检测出的异常项列表。
+    * <p>音画质检测出的异常项列表。</p>
     */
     @SerializedName("QualityInspectResultSet")
     @Expose
     private QualityInspectResultItem [] QualityInspectResultSet;
 
     /**
-     * Get 媒体文件是否无音频轨，取值范围：
-<li>0：否，即有音频轨；</li>
-<li>1：是，即无音频轨。</li> 
-     * @return NoAudio 媒体文件是否无音频轨，取值范围：
-<li>0：否，即有音频轨；</li>
-<li>1：是，即无音频轨。</li>
+    * <p>视频无参考质量评分，MOS分数。</p>
+    */
+    @SerializedName("QualityEvaluationMeanOpinionScore")
+    @Expose
+    private Float QualityEvaluationMeanOpinionScore;
+
+    /**
+    * <p>视频美学评分，范围：[0,100]。</p>
+    */
+    @SerializedName("AestheticEvaluationScore")
+    @Expose
+    private Long AestheticEvaluationScore;
+
+    /**
+    * <p>格式诊断检出异常项。</p>
+    */
+    @SerializedName("ContainerDiagnoseResultSet")
+    @Expose
+    private QualityInspectContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
+
+    /**
+    * <p>LLM 大模型 AIGC 质量检测结果。</p>
+    */
+    @SerializedName("LLMDetectionReport")
+    @Expose
+    private QualityInspectLLMDetectionReport LLMDetectionReport;
+
+    /**
+     * Get <p>媒体文件是否无音频轨，取值范围：</p><li>0：否，即有音频轨；</li><li>1：是，即无音频轨。</li> 
+     * @return NoAudio <p>媒体文件是否无音频轨，取值范围：</p><li>0：否，即有音频轨；</li><li>1：是，即无音频轨。</li>
      */
     public Long getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set 媒体文件是否无音频轨，取值范围：
-<li>0：否，即有音频轨；</li>
-<li>1：是，即无音频轨。</li>
-     * @param NoAudio 媒体文件是否无音频轨，取值范围：
-<li>0：否，即有音频轨；</li>
-<li>1：是，即无音频轨。</li>
+     * Set <p>媒体文件是否无音频轨，取值范围：</p><li>0：否，即有音频轨；</li><li>1：是，即无音频轨。</li>
+     * @param NoAudio <p>媒体文件是否无音频轨，取值范围：</p><li>0：否，即有音频轨；</li><li>1：是，即无音频轨。</li>
      */
     public void setNoAudio(Long NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get 媒体文件是否无视频轨，取值范围：
-<li>0：否，即有视频轨；</li>
-<li>1：是，即无视频轨。</li> 
-     * @return NoVideo 媒体文件是否无视频轨，取值范围：
-<li>0：否，即有视频轨；</li>
-<li>1：是，即无视频轨。</li>
+     * Get <p>媒体文件是否无视频轨，取值范围：</p><li>0：否，即有视频轨；</li><li>1：是，即无视频轨。</li> 
+     * @return NoVideo <p>媒体文件是否无视频轨，取值范围：</p><li>0：否，即有视频轨；</li><li>1：是，即无视频轨。</li>
      */
     public Long getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set 媒体文件是否无视频轨，取值范围：
-<li>0：否，即有视频轨；</li>
-<li>1：是，即无视频轨。</li>
-     * @param NoVideo 媒体文件是否无视频轨，取值范围：
-<li>0：否，即有视频轨；</li>
-<li>1：是，即无视频轨。</li>
+     * Set <p>媒体文件是否无视频轨，取值范围：</p><li>0：否，即有视频轨；</li><li>1：是，即无视频轨。</li>
+     * @param NoVideo <p>媒体文件是否无视频轨，取值范围：</p><li>0：否，即有视频轨；</li><li>1：是，即无视频轨。</li>
      */
     public void setNoVideo(Long NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get 视频画面质量评分，取值范围：[0, 100]。 
-     * @return QualityEvaluationScore 视频画面质量评分，取值范围：[0, 100]。
+     * Get <p>视频画面质量评分，取值范围：[0, 100]。</p> 
+     * @return QualityEvaluationScore <p>视频画面质量评分，取值范围：[0, 100]。</p>
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set 视频画面质量评分，取值范围：[0, 100]。
-     * @param QualityEvaluationScore 视频画面质量评分，取值范围：[0, 100]。
+     * Set <p>视频画面质量评分，取值范围：[0, 100]。</p>
+     * @param QualityEvaluationScore <p>视频画面质量评分，取值范围：[0, 100]。</p>
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get 音画质检测出的异常项列表。 
-     * @return QualityInspectResultSet 音画质检测出的异常项列表。
+     * Get <p>音画质检测出的异常项列表。</p> 
+     * @return QualityInspectResultSet <p>音画质检测出的异常项列表。</p>
      */
     public QualityInspectResultItem [] getQualityInspectResultSet() {
         return this.QualityInspectResultSet;
     }
 
     /**
-     * Set 音画质检测出的异常项列表。
-     * @param QualityInspectResultSet 音画质检测出的异常项列表。
+     * Set <p>音画质检测出的异常项列表。</p>
+     * @param QualityInspectResultSet <p>音画质检测出的异常项列表。</p>
      */
     public void setQualityInspectResultSet(QualityInspectResultItem [] QualityInspectResultSet) {
         this.QualityInspectResultSet = QualityInspectResultSet;
+    }
+
+    /**
+     * Get <p>视频无参考质量评分，MOS分数。</p> 
+     * @return QualityEvaluationMeanOpinionScore <p>视频无参考质量评分，MOS分数。</p>
+     */
+    public Float getQualityEvaluationMeanOpinionScore() {
+        return this.QualityEvaluationMeanOpinionScore;
+    }
+
+    /**
+     * Set <p>视频无参考质量评分，MOS分数。</p>
+     * @param QualityEvaluationMeanOpinionScore <p>视频无参考质量评分，MOS分数。</p>
+     */
+    public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
+        this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
+    }
+
+    /**
+     * Get <p>视频美学评分，范围：[0,100]。</p> 
+     * @return AestheticEvaluationScore <p>视频美学评分，范围：[0,100]。</p>
+     */
+    public Long getAestheticEvaluationScore() {
+        return this.AestheticEvaluationScore;
+    }
+
+    /**
+     * Set <p>视频美学评分，范围：[0,100]。</p>
+     * @param AestheticEvaluationScore <p>视频美学评分，范围：[0,100]。</p>
+     */
+    public void setAestheticEvaluationScore(Long AestheticEvaluationScore) {
+        this.AestheticEvaluationScore = AestheticEvaluationScore;
+    }
+
+    /**
+     * Get <p>格式诊断检出异常项。</p> 
+     * @return ContainerDiagnoseResultSet <p>格式诊断检出异常项。</p>
+     */
+    public QualityInspectContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
+        return this.ContainerDiagnoseResultSet;
+    }
+
+    /**
+     * Set <p>格式诊断检出异常项。</p>
+     * @param ContainerDiagnoseResultSet <p>格式诊断检出异常项。</p>
+     */
+    public void setContainerDiagnoseResultSet(QualityInspectContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
+        this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
+    }
+
+    /**
+     * Get <p>LLM 大模型 AIGC 质量检测结果。</p> 
+     * @return LLMDetectionReport <p>LLM 大模型 AIGC 质量检测结果。</p>
+     */
+    public QualityInspectLLMDetectionReport getLLMDetectionReport() {
+        return this.LLMDetectionReport;
+    }
+
+    /**
+     * Set <p>LLM 大模型 AIGC 质量检测结果。</p>
+     * @param LLMDetectionReport <p>LLM 大模型 AIGC 质量检测结果。</p>
+     */
+    public void setLLMDetectionReport(QualityInspectLLMDetectionReport LLMDetectionReport) {
+        this.LLMDetectionReport = LLMDetectionReport;
     }
 
     public QualityInspectTaskOutput() {
@@ -158,6 +230,21 @@ public class QualityInspectTaskOutput extends AbstractModel {
                 this.QualityInspectResultSet[i] = new QualityInspectResultItem(source.QualityInspectResultSet[i]);
             }
         }
+        if (source.QualityEvaluationMeanOpinionScore != null) {
+            this.QualityEvaluationMeanOpinionScore = new Float(source.QualityEvaluationMeanOpinionScore);
+        }
+        if (source.AestheticEvaluationScore != null) {
+            this.AestheticEvaluationScore = new Long(source.AestheticEvaluationScore);
+        }
+        if (source.ContainerDiagnoseResultSet != null) {
+            this.ContainerDiagnoseResultSet = new QualityInspectContainerDiagnoseResultItem[source.ContainerDiagnoseResultSet.length];
+            for (int i = 0; i < source.ContainerDiagnoseResultSet.length; i++) {
+                this.ContainerDiagnoseResultSet[i] = new QualityInspectContainerDiagnoseResultItem(source.ContainerDiagnoseResultSet[i]);
+            }
+        }
+        if (source.LLMDetectionReport != null) {
+            this.LLMDetectionReport = new QualityInspectLLMDetectionReport(source.LLMDetectionReport);
+        }
     }
 
 
@@ -169,6 +256,10 @@ public class QualityInspectTaskOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityInspectResultSet.", this.QualityInspectResultSet);
+        this.setParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+        this.setParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
+        this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
+        this.setParamObj(map, prefix + "LLMDetectionReport.", this.LLMDetectionReport);
 
     }
 }

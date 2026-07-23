@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class NetworkAcl extends AbstractModel {
 
     /**
-    * `VPC`实例`ID`。
+    * <p><code>VPC</code>实例<code>ID</code>。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 网络ACL实例`ID`。
+    * <p>网络ACL实例<code>ID</code>。</p>
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * 网络ACL名称，最大长度为60。
+    * <p>网络ACL名称，最大长度为60。</p>
     */
     @SerializedName("NetworkAclName")
     @Expose
     private String NetworkAclName;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 网络ACL关联的子网数组。
+    * <p>网络ACL关联的子网数组。</p>
     */
     @SerializedName("SubnetSet")
     @Expose
     private Subnet [] SubnetSet;
 
     /**
-    * 该参数仅对三元组ACL有效，网络ACl入站规则。
+    * <p>该参数仅对三元组ACL有效，网络ACl入站规则。</p>
     */
     @SerializedName("IngressEntries")
     @Expose
     private NetworkAclEntry [] IngressEntries;
 
     /**
-    * 该参数仅对三元组ACL有效，网络ACL出站规则。
+    * <p>该参数仅对三元组ACL有效，网络ACL出站规则。</p>
     */
     @SerializedName("EgressEntries")
     @Expose
     private NetworkAclEntry [] EgressEntries;
 
     /**
-    * 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+    * <p>网络ACL类型。三元组：&#39;TRIPLE&#39;   五元组：&#39;QUINTUPLE&#39;</p>
     */
     @SerializedName("NetworkAclType")
     @Expose
     private String NetworkAclType;
 
     /**
-    * 标签键值对
+    * <p>标签键值对</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-     * Get `VPC`实例`ID`。 
-     * @return VpcId `VPC`实例`ID`。
+     * Get <p><code>VPC</code>实例<code>ID</code>。</p> 
+     * @return VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。
-     * @param VpcId `VPC`实例`ID`。
+     * Set <p><code>VPC</code>实例<code>ID</code>。</p>
+     * @param VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 网络ACL实例`ID`。 
-     * @return NetworkAclId 网络ACL实例`ID`。
+     * Get <p>网络ACL实例<code>ID</code>。</p> 
+     * @return NetworkAclId <p>网络ACL实例<code>ID</code>。</p>
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set 网络ACL实例`ID`。
-     * @param NetworkAclId 网络ACL实例`ID`。
+     * Set <p>网络ACL实例<code>ID</code>。</p>
+     * @param NetworkAclId <p>网络ACL实例<code>ID</code>。</p>
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get 网络ACL名称，最大长度为60。 
-     * @return NetworkAclName 网络ACL名称，最大长度为60。
+     * Get <p>网络ACL名称，最大长度为60。</p> 
+     * @return NetworkAclName <p>网络ACL名称，最大长度为60。</p>
      */
     public String getNetworkAclName() {
         return this.NetworkAclName;
     }
 
     /**
-     * Set 网络ACL名称，最大长度为60。
-     * @param NetworkAclName 网络ACL名称，最大长度为60。
+     * Set <p>网络ACL名称，最大长度为60。</p>
+     * @param NetworkAclName <p>网络ACL名称，最大长度为60。</p>
      */
     public void setNetworkAclName(String NetworkAclName) {
         this.NetworkAclName = NetworkAclName;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 网络ACL关联的子网数组。 
-     * @return SubnetSet 网络ACL关联的子网数组。
+     * Get <p>网络ACL关联的子网数组。</p> 
+     * @return SubnetSet <p>网络ACL关联的子网数组。</p>
      */
     public Subnet [] getSubnetSet() {
         return this.SubnetSet;
     }
 
     /**
-     * Set 网络ACL关联的子网数组。
-     * @param SubnetSet 网络ACL关联的子网数组。
+     * Set <p>网络ACL关联的子网数组。</p>
+     * @param SubnetSet <p>网络ACL关联的子网数组。</p>
      */
     public void setSubnetSet(Subnet [] SubnetSet) {
         this.SubnetSet = SubnetSet;
     }
 
     /**
-     * Get 该参数仅对三元组ACL有效，网络ACl入站规则。 
-     * @return IngressEntries 该参数仅对三元组ACL有效，网络ACl入站规则。
+     * Get <p>该参数仅对三元组ACL有效，网络ACl入站规则。</p> 
+     * @return IngressEntries <p>该参数仅对三元组ACL有效，网络ACl入站规则。</p>
      */
     public NetworkAclEntry [] getIngressEntries() {
         return this.IngressEntries;
     }
 
     /**
-     * Set 该参数仅对三元组ACL有效，网络ACl入站规则。
-     * @param IngressEntries 该参数仅对三元组ACL有效，网络ACl入站规则。
+     * Set <p>该参数仅对三元组ACL有效，网络ACl入站规则。</p>
+     * @param IngressEntries <p>该参数仅对三元组ACL有效，网络ACl入站规则。</p>
      */
     public void setIngressEntries(NetworkAclEntry [] IngressEntries) {
         this.IngressEntries = IngressEntries;
     }
 
     /**
-     * Get 该参数仅对三元组ACL有效，网络ACL出站规则。 
-     * @return EgressEntries 该参数仅对三元组ACL有效，网络ACL出站规则。
+     * Get <p>该参数仅对三元组ACL有效，网络ACL出站规则。</p> 
+     * @return EgressEntries <p>该参数仅对三元组ACL有效，网络ACL出站规则。</p>
      */
     public NetworkAclEntry [] getEgressEntries() {
         return this.EgressEntries;
     }
 
     /**
-     * Set 该参数仅对三元组ACL有效，网络ACL出站规则。
-     * @param EgressEntries 该参数仅对三元组ACL有效，网络ACL出站规则。
+     * Set <p>该参数仅对三元组ACL有效，网络ACL出站规则。</p>
+     * @param EgressEntries <p>该参数仅对三元组ACL有效，网络ACL出站规则。</p>
      */
     public void setEgressEntries(NetworkAclEntry [] EgressEntries) {
         this.EgressEntries = EgressEntries;
     }
 
     /**
-     * Get 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE' 
-     * @return NetworkAclType 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     * Get <p>网络ACL类型。三元组：&#39;TRIPLE&#39;   五元组：&#39;QUINTUPLE&#39;</p> 
+     * @return NetworkAclType <p>网络ACL类型。三元组：&#39;TRIPLE&#39;   五元组：&#39;QUINTUPLE&#39;</p>
      */
     public String getNetworkAclType() {
         return this.NetworkAclType;
     }
 
     /**
-     * Set 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
-     * @param NetworkAclType 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     * Set <p>网络ACL类型。三元组：&#39;TRIPLE&#39;   五元组：&#39;QUINTUPLE&#39;</p>
+     * @param NetworkAclType <p>网络ACL类型。三元组：&#39;TRIPLE&#39;   五元组：&#39;QUINTUPLE&#39;</p>
      */
     public void setNetworkAclType(String NetworkAclType) {
         this.NetworkAclType = NetworkAclType;
     }
 
     /**
-     * Get 标签键值对 
-     * @return TagSet 标签键值对
+     * Get <p>标签键值对</p> 
+     * @return TagSet <p>标签键值对</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对
-     * @param TagSet 标签键值对
+     * Set <p>标签键值对</p>
+     * @param TagSet <p>标签键值对</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

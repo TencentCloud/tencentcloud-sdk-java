@@ -31,7 +31,7 @@ public class CreateListenerRequest extends AbstractModel {
     private String GlobalAcceleratorId;
 
     /**
-    * <p>名称，最大长度不能超过60个字节。</p>
+    * <p>名称，最大长度不能超过128个字符。</p>
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +45,7 @@ public class CreateListenerRequest extends AbstractModel {
     private PortRanges PortRanges;
 
     /**
-    * <p>描述信息，最大长度不能超过100个字节。</p>
+    * <p>描述信息，最大长度不能超过100个字符。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -152,16 +152,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>名称，最大长度不能超过60个字节。</p> 
-     * @return Name <p>名称，最大长度不能超过60个字节。</p>
+     * Get <p>名称，最大长度不能超过128个字符。</p> 
+     * @return Name <p>名称，最大长度不能超过128个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称，最大长度不能超过60个字节。</p>
-     * @param Name <p>名称，最大长度不能超过60个字节。</p>
+     * Set <p>名称，最大长度不能超过128个字符。</p>
+     * @param Name <p>名称，最大长度不能超过128个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -184,16 +184,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>描述信息，最大长度不能超过100个字节。</p> 
-     * @return Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * Get <p>描述信息，最大长度不能超过100个字符。</p> 
+     * @return Description <p>描述信息，最大长度不能超过100个字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>描述信息，最大长度不能超过100个字节。</p>
-     * @param Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * Set <p>描述信息，最大长度不能超过100个字符。</p>
+     * @param Description <p>描述信息，最大长度不能超过100个字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -129,6 +129,13 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long Encryption;
 
     /**
+    * <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+    */
+    @SerializedName("CustomKmsInfo")
+    @Expose
+    private CustomKmsInfo CustomKmsInfo;
+
+    /**
     * <p>开启记录公网来源ip和服务端接收时间</p>
     */
     @SerializedName("IsSourceFrom")
@@ -383,6 +390,22 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p> 
+     * @return CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+     */
+    public CustomKmsInfo getCustomKmsInfo() {
+        return this.CustomKmsInfo;
+    }
+
+    /**
+     * Set <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+     * @param CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）</p><p>当参数 Encryption为 1 时生效</p>
+     */
+    public void setCustomKmsInfo(CustomKmsInfo CustomKmsInfo) {
+        this.CustomKmsInfo = CustomKmsInfo;
+    }
+
+    /**
      * Get <p>开启记录公网来源ip和服务端接收时间</p> 
      * @return IsSourceFrom <p>开启记录公网来源ip和服务端接收时间</p>
      */
@@ -470,6 +493,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.Encryption != null) {
             this.Encryption = new Long(source.Encryption);
         }
+        if (source.CustomKmsInfo != null) {
+            this.CustomKmsInfo = new CustomKmsInfo(source.CustomKmsInfo);
+        }
         if (source.IsSourceFrom != null) {
             this.IsSourceFrom = new Boolean(source.IsSourceFrom);
         }
@@ -498,6 +524,7 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
         this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
 

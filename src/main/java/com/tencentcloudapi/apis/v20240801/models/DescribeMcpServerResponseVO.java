@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMcpServerResponseVO extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
@@ -32,7 +32,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String InstanceID;
 
     /**
-    * 名称
+    * <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -48,7 +48,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String Description;
 
     /**
-    * 标签ID数组
+    * <p>标签ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelIDs")
@@ -56,7 +56,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String [] LabelIDs;
 
     /**
-    * 目录ID数组
+    * <p>目录ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryIDs")
@@ -64,7 +64,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String [] CategoryIDs;
 
     /**
-    * 负载方式，robin random consistentHash
+    * <p>负载方式，robin random consistentHash</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetSelect")
@@ -72,7 +72,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String TargetSelect;
 
     /**
-    * 目标服务器
+    * <p>目标服务器</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetHosts")
@@ -80,7 +80,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private TargetHostDTO [] TargetHosts;
 
     /**
-    * 后端协议：http https
+    * <p>后端协议：http https</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpProtocolType")
@@ -88,7 +88,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String HttpProtocolType;
 
     /**
-    * 证书检查
+    * <p>证书检查</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckTargetCertsError")
@@ -96,7 +96,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Boolean CheckTargetCertsError;
 
     /**
-    * 目标路径
+    * <p>目标路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetPath")
@@ -104,7 +104,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String TargetPath;
 
     /**
-    * 流量控制状态
+    * <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeLimitConfigStatus")
@@ -112,7 +112,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Boolean InvokeLimitConfigStatus;
 
     /**
-    * 流量控制配置
+    * <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvokeLimitConfig")
@@ -120,7 +120,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private InvokeLimitConfigDTO InvokeLimitConfig;
 
     /**
-    * IP白名单开启状态
+    * <p>IP白名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpWhiteStatus")
@@ -128,7 +128,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Boolean IpWhiteStatus;
 
     /**
-    * IP白名单配置
+    * <p>IP白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpWhiteConfig")
@@ -136,7 +136,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private IpConfig IpWhiteConfig;
 
     /**
-    * IP黑名单开启状态
+    * <p>IP黑名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpBlackStatus")
@@ -144,7 +144,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Boolean IpBlackStatus;
 
     /**
-    * IP黑名单配置
+    * <p>IP黑名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpBlackConfig")
@@ -152,7 +152,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private IpConfig IpBlackConfig;
 
     /**
-    * mcp server ID
+    * <p>mcp server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
@@ -160,7 +160,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String ID;
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -168,7 +168,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String Status;
 
     /**
-    * 预览地址
+    * <p>预览地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -176,7 +176,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String Url;
 
     /**
-    * 应用
+    * <p>应用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("App")
@@ -184,7 +184,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private IDNameVO App;
 
     /**
-    * 目录
+    * <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalogs")
@@ -192,7 +192,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private IDNameVO [] Catalogs;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -200,7 +200,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private IDNameVO [] Labels;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -208,7 +208,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 最后修改时间
+    * <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
@@ -216,7 +216,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String LastUpdateTime;
 
     /**
-    * 用户appID
+    * <p>用户appID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
@@ -224,7 +224,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Long AppID;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
@@ -232,7 +232,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String Uin;
 
     /**
-    * 自定义host
+    * <p>自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomHttpHost")
@@ -240,7 +240,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String CustomHttpHost;
 
     /**
-    *  Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host
+    * <p>Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpHostType")
@@ -248,7 +248,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String HttpHostType;
 
     /**
-    * 请求的超时时间
+    * <p>请求的超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
@@ -256,21 +256,21 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Long Timeout;
 
     /**
-    * mcp server模式
+    * <p>mcp server模式</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * mcp version
+    * <p>mcp version</p>
     */
     @SerializedName("McpVersion")
     @Expose
     private String McpVersion;
 
     /**
-    * 封装模式下绑定的服务ID列表
+    * <p>封装模式下绑定的服务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WrapServices")
@@ -278,21 +278,21 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private String [] WrapServices;
 
     /**
-    * 工具数量
+    * <p>工具数量</p>
     */
     @SerializedName("ToolNum")
     @Expose
     private Long ToolNum;
 
     /**
-    * 安全规则集响应
+    * <p>安全规则集响应</p>
     */
     @SerializedName("McpSecurityRulesVO")
     @Expose
     private McpSecurityRulesVO [] McpSecurityRulesVO;
 
     /**
-    * 真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。
+    * <p>真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ToolConfigs")
@@ -300,42 +300,42 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private ToolConfigVO [] ToolConfigs;
 
     /**
-    * 访问URL
+    * <p>访问URL</p>
     */
     @SerializedName("UrlObj")
     @Expose
     private McpUrlObj UrlObj;
 
     /**
-    * 后端mcp服务是否正常
+    * <p>后端mcp服务是否正常</p>
     */
     @SerializedName("ToolMessage")
     @Expose
     private String ToolMessage;
 
     /**
-    * 后端mcp服务的工具列表
+    * <p>后端mcp服务的工具列表</p>
     */
     @SerializedName("Tools")
     @Expose
     private McpTool [] Tools;
 
     /**
-    * 封装的API分组ID
+    * <p>封装的API分组ID</p>
     */
     @SerializedName("WrapPaasID")
     @Expose
     private String WrapPaasID;
 
     /**
-    * 关联的agentApp数量
+    * <p>关联的agentApp数量</p>
     */
     @SerializedName("RelateAgentAppNum")
     @Expose
     private Long RelateAgentAppNum;
 
     /**
-    * 插件配置
+    * <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PluginConfigs")
@@ -343,9 +343,16 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private PluginConfigDTO [] PluginConfigs;
 
     /**
-     * Get 实例ID
+    * <p>是否忽略健康检查</p>
+    */
+    @SerializedName("IgnoreHealthCheck")
+    @Expose
+    private Boolean IgnoreHealthCheck;
+
+    /**
+     * Get <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceID 实例ID
+     * @return InstanceID <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
@@ -353,9 +360,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceID 实例ID
+     * @param InstanceID <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
@@ -363,9 +370,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 名称
+     * Get <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名称
+     * @return Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -373,9 +380,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 名称
+     * Set <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名称
+     * @param Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -383,9 +390,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -393,9 +400,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -403,9 +410,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 标签ID数组
+     * Get <p>标签ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelIDs 标签ID数组
+     * @return LabelIDs <p>标签ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabelIDs() {
@@ -413,9 +420,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 标签ID数组
+     * Set <p>标签ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelIDs 标签ID数组
+     * @param LabelIDs <p>标签ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelIDs(String [] LabelIDs) {
@@ -423,9 +430,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 目录ID数组
+     * Get <p>目录ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CategoryIDs 目录ID数组
+     * @return CategoryIDs <p>目录ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCategoryIDs() {
@@ -433,9 +440,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 目录ID数组
+     * Set <p>目录ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CategoryIDs 目录ID数组
+     * @param CategoryIDs <p>目录ID数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryIDs(String [] CategoryIDs) {
@@ -443,9 +450,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 负载方式，robin random consistentHash
+     * Get <p>负载方式，robin random consistentHash</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetSelect 负载方式，robin random consistentHash
+     * @return TargetSelect <p>负载方式，robin random consistentHash</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetSelect() {
@@ -453,9 +460,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 负载方式，robin random consistentHash
+     * Set <p>负载方式，robin random consistentHash</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetSelect 负载方式，robin random consistentHash
+     * @param TargetSelect <p>负载方式，robin random consistentHash</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetSelect(String TargetSelect) {
@@ -463,9 +470,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 目标服务器
+     * Get <p>目标服务器</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetHosts 目标服务器
+     * @return TargetHosts <p>目标服务器</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetHostDTO [] getTargetHosts() {
@@ -473,9 +480,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 目标服务器
+     * Set <p>目标服务器</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetHosts 目标服务器
+     * @param TargetHosts <p>目标服务器</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetHosts(TargetHostDTO [] TargetHosts) {
@@ -483,9 +490,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 后端协议：http https
+     * Get <p>后端协议：http https</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpProtocolType 后端协议：http https
+     * @return HttpProtocolType <p>后端协议：http https</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpProtocolType() {
@@ -493,9 +500,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 后端协议：http https
+     * Set <p>后端协议：http https</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpProtocolType 后端协议：http https
+     * @param HttpProtocolType <p>后端协议：http https</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpProtocolType(String HttpProtocolType) {
@@ -503,9 +510,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 证书检查
+     * Get <p>证书检查</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckTargetCertsError 证书检查
+     * @return CheckTargetCertsError <p>证书检查</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCheckTargetCertsError() {
@@ -513,9 +520,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 证书检查
+     * Set <p>证书检查</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckTargetCertsError 证书检查
+     * @param CheckTargetCertsError <p>证书检查</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckTargetCertsError(Boolean CheckTargetCertsError) {
@@ -523,9 +530,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 目标路径
+     * Get <p>目标路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetPath 目标路径
+     * @return TargetPath <p>目标路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetPath() {
@@ -533,9 +540,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 目标路径
+     * Set <p>目标路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetPath 目标路径
+     * @param TargetPath <p>目标路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetPath(String TargetPath) {
@@ -543,9 +550,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 流量控制状态
+     * Get <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InvokeLimitConfigStatus 流量控制状态
+     * @return InvokeLimitConfigStatus <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getInvokeLimitConfigStatus() {
@@ -553,9 +560,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 流量控制状态
+     * Set <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InvokeLimitConfigStatus 流量控制状态
+     * @param InvokeLimitConfigStatus <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
@@ -563,9 +570,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 流量控制配置
+     * Get <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InvokeLimitConfig 流量控制配置
+     * @return InvokeLimitConfig <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
@@ -573,9 +580,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 流量控制配置
+     * Set <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InvokeLimitConfig 流量控制配置
+     * @param InvokeLimitConfig <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
@@ -583,9 +590,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get IP白名单开启状态
+     * Get <p>IP白名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpWhiteStatus IP白名单开启状态
+     * @return IpWhiteStatus <p>IP白名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIpWhiteStatus() {
@@ -593,9 +600,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set IP白名单开启状态
+     * Set <p>IP白名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpWhiteStatus IP白名单开启状态
+     * @param IpWhiteStatus <p>IP白名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpWhiteStatus(Boolean IpWhiteStatus) {
@@ -603,9 +610,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get IP白名单配置
+     * Get <p>IP白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpWhiteConfig IP白名单配置
+     * @return IpWhiteConfig <p>IP白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpConfig getIpWhiteConfig() {
@@ -613,9 +620,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set IP白名单配置
+     * Set <p>IP白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpWhiteConfig IP白名单配置
+     * @param IpWhiteConfig <p>IP白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpWhiteConfig(IpConfig IpWhiteConfig) {
@@ -623,9 +630,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get IP黑名单开启状态
+     * Get <p>IP黑名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpBlackStatus IP黑名单开启状态
+     * @return IpBlackStatus <p>IP黑名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIpBlackStatus() {
@@ -633,9 +640,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set IP黑名单开启状态
+     * Set <p>IP黑名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpBlackStatus IP黑名单开启状态
+     * @param IpBlackStatus <p>IP黑名单开启状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpBlackStatus(Boolean IpBlackStatus) {
@@ -643,9 +650,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get IP黑名单配置
+     * Get <p>IP黑名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpBlackConfig IP黑名单配置
+     * @return IpBlackConfig <p>IP黑名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpConfig getIpBlackConfig() {
@@ -653,9 +660,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set IP黑名单配置
+     * Set <p>IP黑名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpBlackConfig IP黑名单配置
+     * @param IpBlackConfig <p>IP黑名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpBlackConfig(IpConfig IpBlackConfig) {
@@ -663,9 +670,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get mcp server ID
+     * Get <p>mcp server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ID mcp server ID
+     * @return ID <p>mcp server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
@@ -673,9 +680,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set mcp server ID
+     * Set <p>mcp server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ID mcp server ID
+     * @param ID <p>mcp server ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
@@ -683,9 +690,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -693,9 +700,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -703,9 +710,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 预览地址
+     * Get <p>预览地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 预览地址
+     * @return Url <p>预览地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -713,9 +720,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 预览地址
+     * Set <p>预览地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 预览地址
+     * @param Url <p>预览地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
@@ -723,9 +730,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 应用
+     * Get <p>应用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return App 应用
+     * @return App <p>应用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IDNameVO getApp() {
@@ -733,9 +740,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 应用
+     * Set <p>应用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param App 应用
+     * @param App <p>应用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApp(IDNameVO App) {
@@ -743,9 +750,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 目录
+     * Get <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Catalogs 目录
+     * @return Catalogs <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IDNameVO [] getCatalogs() {
@@ -753,9 +760,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 目录
+     * Set <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Catalogs 目录
+     * @param Catalogs <p>目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogs(IDNameVO [] Catalogs) {
@@ -763,9 +770,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 标签
+     * @return Labels <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IDNameVO [] getLabels() {
@@ -773,9 +780,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 标签
+     * @param Labels <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(IDNameVO [] Labels) {
@@ -783,9 +790,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -793,9 +800,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -803,9 +810,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 最后修改时间
+     * Get <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdateTime 最后修改时间
+     * @return LastUpdateTime <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdateTime() {
@@ -813,9 +820,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 最后修改时间
+     * Set <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdateTime 最后修改时间
+     * @param LastUpdateTime <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(String LastUpdateTime) {
@@ -823,9 +830,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 用户appID
+     * Get <p>用户appID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppID 用户appID
+     * @return AppID <p>用户appID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppID() {
@@ -833,9 +840,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 用户appID
+     * Set <p>用户appID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppID 用户appID
+     * @param AppID <p>用户appID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(Long AppID) {
@@ -843,9 +850,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 用户ID
+     * Get <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uin 用户ID
+     * @return Uin <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
@@ -853,9 +860,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 用户ID
+     * Set <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uin 用户ID
+     * @param Uin <p>用户ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
@@ -863,9 +870,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 自定义host
+     * Get <p>自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomHttpHost 自定义host
+     * @return CustomHttpHost <p>自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomHttpHost() {
@@ -873,9 +880,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 自定义host
+     * Set <p>自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomHttpHost 自定义host
+     * @param CustomHttpHost <p>自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomHttpHost(String CustomHttpHost) {
@@ -883,9 +890,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get  Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host
+     * Get <p>Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpHostType  Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host
+     * @return HttpHostType <p>Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpHostType() {
@@ -893,9 +900,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set  Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host
+     * Set <p>Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpHostType  Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host
+     * @param HttpHostType <p>Http 请求host类型 useRequestHost 保持源请求host targetHost 修正为源站host  customHost 自定义host</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpHostType(String HttpHostType) {
@@ -903,9 +910,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 请求的超时时间
+     * Get <p>请求的超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timeout 请求的超时时间
+     * @return Timeout <p>请求的超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeout() {
@@ -913,9 +920,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 请求的超时时间
+     * Set <p>请求的超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timeout 请求的超时时间
+     * @param Timeout <p>请求的超时时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Long Timeout) {
@@ -923,41 +930,41 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get mcp server模式 
-     * @return Mode mcp server模式
+     * Get <p>mcp server模式</p> 
+     * @return Mode <p>mcp server模式</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set mcp server模式
-     * @param Mode mcp server模式
+     * Set <p>mcp server模式</p>
+     * @param Mode <p>mcp server模式</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get mcp version 
-     * @return McpVersion mcp version
+     * Get <p>mcp version</p> 
+     * @return McpVersion <p>mcp version</p>
      */
     public String getMcpVersion() {
         return this.McpVersion;
     }
 
     /**
-     * Set mcp version
-     * @param McpVersion mcp version
+     * Set <p>mcp version</p>
+     * @param McpVersion <p>mcp version</p>
      */
     public void setMcpVersion(String McpVersion) {
         this.McpVersion = McpVersion;
     }
 
     /**
-     * Get 封装模式下绑定的服务ID列表
+     * Get <p>封装模式下绑定的服务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WrapServices 封装模式下绑定的服务ID列表
+     * @return WrapServices <p>封装模式下绑定的服务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getWrapServices() {
@@ -965,9 +972,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 封装模式下绑定的服务ID列表
+     * Set <p>封装模式下绑定的服务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WrapServices 封装模式下绑定的服务ID列表
+     * @param WrapServices <p>封装模式下绑定的服务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWrapServices(String [] WrapServices) {
@@ -975,41 +982,41 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 工具数量 
-     * @return ToolNum 工具数量
+     * Get <p>工具数量</p> 
+     * @return ToolNum <p>工具数量</p>
      */
     public Long getToolNum() {
         return this.ToolNum;
     }
 
     /**
-     * Set 工具数量
-     * @param ToolNum 工具数量
+     * Set <p>工具数量</p>
+     * @param ToolNum <p>工具数量</p>
      */
     public void setToolNum(Long ToolNum) {
         this.ToolNum = ToolNum;
     }
 
     /**
-     * Get 安全规则集响应 
-     * @return McpSecurityRulesVO 安全规则集响应
+     * Get <p>安全规则集响应</p> 
+     * @return McpSecurityRulesVO <p>安全规则集响应</p>
      */
     public McpSecurityRulesVO [] getMcpSecurityRulesVO() {
         return this.McpSecurityRulesVO;
     }
 
     /**
-     * Set 安全规则集响应
-     * @param McpSecurityRulesVO 安全规则集响应
+     * Set <p>安全规则集响应</p>
+     * @param McpSecurityRulesVO <p>安全规则集响应</p>
      */
     public void setMcpSecurityRulesVO(McpSecurityRulesVO [] McpSecurityRulesVO) {
         this.McpSecurityRulesVO = McpSecurityRulesVO;
     }
 
     /**
-     * Get 真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。
+     * Get <p>真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ToolConfigs 真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。
+     * @return ToolConfigs <p>真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ToolConfigVO [] getToolConfigs() {
@@ -1017,9 +1024,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。
+     * Set <p>真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ToolConfigs 真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。
+     * @param ToolConfigs <p>真实工具级别配置，实时拉取了tool/list做渲染的，如果tool/list不通，就拉不到。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToolConfigs(ToolConfigVO [] ToolConfigs) {
@@ -1027,89 +1034,89 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 访问URL 
-     * @return UrlObj 访问URL
+     * Get <p>访问URL</p> 
+     * @return UrlObj <p>访问URL</p>
      */
     public McpUrlObj getUrlObj() {
         return this.UrlObj;
     }
 
     /**
-     * Set 访问URL
-     * @param UrlObj 访问URL
+     * Set <p>访问URL</p>
+     * @param UrlObj <p>访问URL</p>
      */
     public void setUrlObj(McpUrlObj UrlObj) {
         this.UrlObj = UrlObj;
     }
 
     /**
-     * Get 后端mcp服务是否正常 
-     * @return ToolMessage 后端mcp服务是否正常
+     * Get <p>后端mcp服务是否正常</p> 
+     * @return ToolMessage <p>后端mcp服务是否正常</p>
      */
     public String getToolMessage() {
         return this.ToolMessage;
     }
 
     /**
-     * Set 后端mcp服务是否正常
-     * @param ToolMessage 后端mcp服务是否正常
+     * Set <p>后端mcp服务是否正常</p>
+     * @param ToolMessage <p>后端mcp服务是否正常</p>
      */
     public void setToolMessage(String ToolMessage) {
         this.ToolMessage = ToolMessage;
     }
 
     /**
-     * Get 后端mcp服务的工具列表 
-     * @return Tools 后端mcp服务的工具列表
+     * Get <p>后端mcp服务的工具列表</p> 
+     * @return Tools <p>后端mcp服务的工具列表</p>
      */
     public McpTool [] getTools() {
         return this.Tools;
     }
 
     /**
-     * Set 后端mcp服务的工具列表
-     * @param Tools 后端mcp服务的工具列表
+     * Set <p>后端mcp服务的工具列表</p>
+     * @param Tools <p>后端mcp服务的工具列表</p>
      */
     public void setTools(McpTool [] Tools) {
         this.Tools = Tools;
     }
 
     /**
-     * Get 封装的API分组ID 
-     * @return WrapPaasID 封装的API分组ID
+     * Get <p>封装的API分组ID</p> 
+     * @return WrapPaasID <p>封装的API分组ID</p>
      */
     public String getWrapPaasID() {
         return this.WrapPaasID;
     }
 
     /**
-     * Set 封装的API分组ID
-     * @param WrapPaasID 封装的API分组ID
+     * Set <p>封装的API分组ID</p>
+     * @param WrapPaasID <p>封装的API分组ID</p>
      */
     public void setWrapPaasID(String WrapPaasID) {
         this.WrapPaasID = WrapPaasID;
     }
 
     /**
-     * Get 关联的agentApp数量 
-     * @return RelateAgentAppNum 关联的agentApp数量
+     * Get <p>关联的agentApp数量</p> 
+     * @return RelateAgentAppNum <p>关联的agentApp数量</p>
      */
     public Long getRelateAgentAppNum() {
         return this.RelateAgentAppNum;
     }
 
     /**
-     * Set 关联的agentApp数量
-     * @param RelateAgentAppNum 关联的agentApp数量
+     * Set <p>关联的agentApp数量</p>
+     * @param RelateAgentAppNum <p>关联的agentApp数量</p>
      */
     public void setRelateAgentAppNum(Long RelateAgentAppNum) {
         this.RelateAgentAppNum = RelateAgentAppNum;
     }
 
     /**
-     * Get 插件配置
+     * Get <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PluginConfigs 插件配置
+     * @return PluginConfigs <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PluginConfigDTO [] getPluginConfigs() {
@@ -1117,13 +1124,29 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 插件配置
+     * Set <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PluginConfigs 插件配置
+     * @param PluginConfigs <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPluginConfigs(PluginConfigDTO [] PluginConfigs) {
         this.PluginConfigs = PluginConfigs;
+    }
+
+    /**
+     * Get <p>是否忽略健康检查</p> 
+     * @return IgnoreHealthCheck <p>是否忽略健康检查</p>
+     */
+    public Boolean getIgnoreHealthCheck() {
+        return this.IgnoreHealthCheck;
+    }
+
+    /**
+     * Set <p>是否忽略健康检查</p>
+     * @param IgnoreHealthCheck <p>是否忽略健康检查</p>
+     */
+    public void setIgnoreHealthCheck(Boolean IgnoreHealthCheck) {
+        this.IgnoreHealthCheck = IgnoreHealthCheck;
     }
 
     public DescribeMcpServerResponseVO() {
@@ -1287,6 +1310,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
                 this.PluginConfigs[i] = new PluginConfigDTO(source.PluginConfigs[i]);
             }
         }
+        if (source.IgnoreHealthCheck != null) {
+            this.IgnoreHealthCheck = new Boolean(source.IgnoreHealthCheck);
+        }
     }
 
 
@@ -1335,6 +1361,7 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "WrapPaasID", this.WrapPaasID);
         this.setParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
         this.setParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
+        this.setParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
 
     }
 }

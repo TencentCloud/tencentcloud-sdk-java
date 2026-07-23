@@ -82,6 +82,27 @@ public class UserGroupInfo extends AbstractModel {
     private String BudgetName;
 
     /**
+    * <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+    */
+    @SerializedName("PromptId")
+    @Expose
+    private String PromptId;
+
+    /**
+    * <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+    */
+    @SerializedName("PromptVersion")
+    @Expose
+    private String PromptVersion;
+
+    /**
+    * <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+    */
+    @SerializedName("PromptName")
+    @Expose
+    private String PromptName;
+
+    /**
     * <p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
     */
     @SerializedName("CreditUsageSet")
@@ -253,6 +274,54 @@ public class UserGroupInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p> 
+     * @return PromptId <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+     */
+    public String getPromptId() {
+        return this.PromptId;
+    }
+
+    /**
+     * Set <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+     * @param PromptId <p>关联的提示词 ID。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p><p>参数格式：pmt-1a2b3c4d</p>
+     */
+    public void setPromptId(String PromptId) {
+        this.PromptId = PromptId;
+    }
+
+    /**
+     * Get <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p> 
+     * @return PromptVersion <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     */
+    public String getPromptVersion() {
+        return this.PromptVersion;
+    }
+
+    /**
+     * Set <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     * @param PromptVersion <p>关联的提示词版本。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     */
+    public void setPromptVersion(String PromptVersion) {
+        this.PromptVersion = PromptVersion;
+    }
+
+    /**
+     * Get <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p> 
+     * @return PromptName <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     */
+    public String getPromptName() {
+        return this.PromptName;
+    }
+
+    /**
+     * Set <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     * @param PromptName <p>关联的提示词名称。</p><p>未关联时为空；「未分组」虚拟分组恒为空。</p>
+     */
+    public void setPromptName(String PromptName) {
+        this.PromptName = PromptName;
+    }
+
+    /**
      * Get <p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p> 
      * @return CreditUsageSet <p>用户组多刷新周期 Credit 使用情况。</p><p>无多周期预算时为空数组。</p>
      */
@@ -370,6 +439,15 @@ public class UserGroupInfo extends AbstractModel {
         if (source.BudgetName != null) {
             this.BudgetName = new String(source.BudgetName);
         }
+        if (source.PromptId != null) {
+            this.PromptId = new String(source.PromptId);
+        }
+        if (source.PromptVersion != null) {
+            this.PromptVersion = new String(source.PromptVersion);
+        }
+        if (source.PromptName != null) {
+            this.PromptName = new String(source.PromptName);
+        }
         if (source.CreditUsageSet != null) {
             this.CreditUsageSet = new CreditUsage[source.CreditUsageSet.length];
             for (int i = 0; i < source.CreditUsageSet.length; i++) {
@@ -406,6 +484,9 @@ public class UserGroupInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IntentRouters.", this.IntentRouters);
         this.setParamSimple(map, prefix + "BudgetId", this.BudgetId);
         this.setParamSimple(map, prefix + "BudgetName", this.BudgetName);
+        this.setParamSimple(map, prefix + "PromptId", this.PromptId);
+        this.setParamSimple(map, prefix + "PromptVersion", this.PromptVersion);
+        this.setParamSimple(map, prefix + "PromptName", this.PromptName);
         this.setParamArrayObj(map, prefix + "CreditUsageSet.", this.CreditUsageSet);
         this.setParamSimple(map, prefix + "KeyCount", this.KeyCount);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
