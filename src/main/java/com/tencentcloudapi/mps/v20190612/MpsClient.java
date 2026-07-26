@@ -106,6 +106,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
+     * @param req CloneViralRequest
+     * @return CloneViralResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneViralResponse CloneViral(CloneViralRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneViral", CloneViralResponse.class);
+    }
+
+    /**
      *创建用户自定义内容分析模板，数量上限：50。
      * @param req CreateAIAnalysisTemplateRequest
      * @return CreateAIAnalysisTemplateResponse
@@ -1124,6 +1135,17 @@ public class MpsClient extends AbstractClient{
     public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBlindWatermarkTemplates", DescribeBlindWatermarkTemplatesResponse.class);
+    }
+
+    /**
+     *查询爆款复刻任务结果
+     * @param req DescribeCloneViralTaskRequest
+     * @return DescribeCloneViralTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloneViralTaskResponse DescribeCloneViralTask(DescribeCloneViralTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloneViralTask", DescribeCloneViralTaskResponse.class);
     }
 
     /**

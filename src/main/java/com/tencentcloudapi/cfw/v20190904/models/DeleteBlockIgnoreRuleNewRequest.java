@@ -24,118 +24,118 @@ import java.util.HashMap;
 public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
 
     /**
-    * <p>是否删除全部</p>
+    * 删除模式，必传且只接受整数 0 或 1。0 表示按 Rules 中的 RuleType 与 Ioc 删除匹配记录；1 表示按 ShowType 清空对应列表，其中 blocklist 删除全部 RuleType=1 记录，whitelist 删除全部 RuleType>=2 记录，风险极高。
     */
     @SerializedName("DeleteAll")
     @Expose
     private Long DeleteAll;
 
     /**
-    * <p>blocklist 封禁列表 whitelist 白名单列表</p>
-    */
-    @SerializedName("ShowType")
-    @Expose
-    private String ShowType;
-
-    /**
-    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
     */
     @SerializedName("CfwAiAgentOperationSource")
     @Expose
     private String CfwAiAgentOperationSource;
 
     /**
-    * <p>规则列表</p>
-    */
-    @SerializedName("Rules")
-    @Expose
-    private BanAndAllowRuleDel [] Rules;
-
-    /**
-    * <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
+    * 可省略。当前处理逻辑不读取该顶层字段；传入值不参与精确删除或整表删除的目标选择。
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-     * Get <p>是否删除全部</p> 
-     * @return DeleteAll <p>是否删除全部</p>
+    * 待删除规则列表。DeleteAll=0 时必填，每项删除所有与 RuleType、Ioc 匹配的记录；DirectionList 不参与目标匹配，但 RuleType=1、2、3 时必须使用 DescribeBlockIgnoreList 返回的完整方向列表。同一请求混合 RuleType 时，引擎更新使用最后一项的 RuleType。DeleteAll=1 时省略。
+    */
+    @SerializedName("Rules")
+    @Expose
+    private BanAndAllowRuleDel [] Rules;
+
+    /**
+    * 列表类型，处理时必传且只接受 blocklist 或 whitelist。DeleteAll=1 时，blocklist 选择全部 RuleType=1 记录，whitelist 选择全部 RuleType>=2 记录；DeleteAll=0 时该字段仅校验取值，不限制 Rules 指定的删除目标。
+    */
+    @SerializedName("ShowType")
+    @Expose
+    private String ShowType;
+
+    /**
+     * Get 删除模式，必传且只接受整数 0 或 1。0 表示按 Rules 中的 RuleType 与 Ioc 删除匹配记录；1 表示按 ShowType 清空对应列表，其中 blocklist 删除全部 RuleType=1 记录，whitelist 删除全部 RuleType>=2 记录，风险极高。 
+     * @return DeleteAll 删除模式，必传且只接受整数 0 或 1。0 表示按 Rules 中的 RuleType 与 Ioc 删除匹配记录；1 表示按 ShowType 清空对应列表，其中 blocklist 删除全部 RuleType=1 记录，whitelist 删除全部 RuleType>=2 记录，风险极高。
      */
     public Long getDeleteAll() {
         return this.DeleteAll;
     }
 
     /**
-     * Set <p>是否删除全部</p>
-     * @param DeleteAll <p>是否删除全部</p>
+     * Set 删除模式，必传且只接受整数 0 或 1。0 表示按 Rules 中的 RuleType 与 Ioc 删除匹配记录；1 表示按 ShowType 清空对应列表，其中 blocklist 删除全部 RuleType=1 记录，whitelist 删除全部 RuleType>=2 记录，风险极高。
+     * @param DeleteAll 删除模式，必传且只接受整数 0 或 1。0 表示按 Rules 中的 RuleType 与 Ioc 删除匹配记录；1 表示按 ShowType 清空对应列表，其中 blocklist 删除全部 RuleType=1 记录，whitelist 删除全部 RuleType>=2 记录，风险极高。
      */
     public void setDeleteAll(Long DeleteAll) {
         this.DeleteAll = DeleteAll;
     }
 
     /**
-     * Get <p>blocklist 封禁列表 whitelist 白名单列表</p> 
-     * @return ShowType <p>blocklist 封禁列表 whitelist 白名单列表</p>
-     */
-    public String getShowType() {
-        return this.ShowType;
-    }
-
-    /**
-     * Set <p>blocklist 封禁列表 whitelist 白名单列表</p>
-     * @param ShowType <p>blocklist 封禁列表 whitelist 白名单列表</p>
-     */
-    public void setShowType(String ShowType) {
-        this.ShowType = ShowType;
-    }
-
-    /**
-     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
-     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
      */
     public String getCfwAiAgentOperationSource() {
         return this.CfwAiAgentOperationSource;
     }
 
     /**
-     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
-     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
      */
     public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
         this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
     }
 
     /**
-     * Get <p>规则列表</p> 
-     * @return Rules <p>规则列表</p>
-     */
-    public BanAndAllowRuleDel [] getRules() {
-        return this.Rules;
-    }
-
-    /**
-     * Set <p>规则列表</p>
-     * @param Rules <p>规则列表</p>
-     */
-    public void setRules(BanAndAllowRuleDel [] Rules) {
-        this.Rules = Rules;
-    }
-
-    /**
-     * Get <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p> 
-     * @return RuleType <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
+     * Get 可省略。当前处理逻辑不读取该顶层字段；传入值不参与精确删除或整表删除的目标选择。 
+     * @return RuleType 可省略。当前处理逻辑不读取该顶层字段；传入值不参与精确删除或整表删除的目标选择。
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
-     * @param RuleType <p>封禁：1，放通：100，<br>主要用于全部删除时区分列表类型</p>
+     * Set 可省略。当前处理逻辑不读取该顶层字段；传入值不参与精确删除或整表删除的目标选择。
+     * @param RuleType 可省略。当前处理逻辑不读取该顶层字段；传入值不参与精确删除或整表删除的目标选择。
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
+    }
+
+    /**
+     * Get 待删除规则列表。DeleteAll=0 时必填，每项删除所有与 RuleType、Ioc 匹配的记录；DirectionList 不参与目标匹配，但 RuleType=1、2、3 时必须使用 DescribeBlockIgnoreList 返回的完整方向列表。同一请求混合 RuleType 时，引擎更新使用最后一项的 RuleType。DeleteAll=1 时省略。 
+     * @return Rules 待删除规则列表。DeleteAll=0 时必填，每项删除所有与 RuleType、Ioc 匹配的记录；DirectionList 不参与目标匹配，但 RuleType=1、2、3 时必须使用 DescribeBlockIgnoreList 返回的完整方向列表。同一请求混合 RuleType 时，引擎更新使用最后一项的 RuleType。DeleteAll=1 时省略。
+     */
+    public BanAndAllowRuleDel [] getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 待删除规则列表。DeleteAll=0 时必填，每项删除所有与 RuleType、Ioc 匹配的记录；DirectionList 不参与目标匹配，但 RuleType=1、2、3 时必须使用 DescribeBlockIgnoreList 返回的完整方向列表。同一请求混合 RuleType 时，引擎更新使用最后一项的 RuleType。DeleteAll=1 时省略。
+     * @param Rules 待删除规则列表。DeleteAll=0 时必填，每项删除所有与 RuleType、Ioc 匹配的记录；DirectionList 不参与目标匹配，但 RuleType=1、2、3 时必须使用 DescribeBlockIgnoreList 返回的完整方向列表。同一请求混合 RuleType 时，引擎更新使用最后一项的 RuleType。DeleteAll=1 时省略。
+     */
+    public void setRules(BanAndAllowRuleDel [] Rules) {
+        this.Rules = Rules;
+    }
+
+    /**
+     * Get 列表类型，处理时必传且只接受 blocklist 或 whitelist。DeleteAll=1 时，blocklist 选择全部 RuleType=1 记录，whitelist 选择全部 RuleType>=2 记录；DeleteAll=0 时该字段仅校验取值，不限制 Rules 指定的删除目标。 
+     * @return ShowType 列表类型，处理时必传且只接受 blocklist 或 whitelist。DeleteAll=1 时，blocklist 选择全部 RuleType=1 记录，whitelist 选择全部 RuleType>=2 记录；DeleteAll=0 时该字段仅校验取值，不限制 Rules 指定的删除目标。
+     */
+    public String getShowType() {
+        return this.ShowType;
+    }
+
+    /**
+     * Set 列表类型，处理时必传且只接受 blocklist 或 whitelist。DeleteAll=1 时，blocklist 选择全部 RuleType=1 记录，whitelist 选择全部 RuleType>=2 记录；DeleteAll=0 时该字段仅校验取值，不限制 Rules 指定的删除目标。
+     * @param ShowType 列表类型，处理时必传且只接受 blocklist 或 whitelist。DeleteAll=1 时，blocklist 选择全部 RuleType=1 记录，whitelist 选择全部 RuleType>=2 记录；DeleteAll=0 时该字段仅校验取值，不限制 Rules 指定的删除目标。
+     */
+    public void setShowType(String ShowType) {
+        this.ShowType = ShowType;
     }
 
     public DeleteBlockIgnoreRuleNewRequest() {
@@ -149,11 +149,11 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
         if (source.DeleteAll != null) {
             this.DeleteAll = new Long(source.DeleteAll);
         }
-        if (source.ShowType != null) {
-            this.ShowType = new String(source.ShowType);
-        }
         if (source.CfwAiAgentOperationSource != null) {
             this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new Long(source.RuleType);
         }
         if (source.Rules != null) {
             this.Rules = new BanAndAllowRuleDel[source.Rules.length];
@@ -161,8 +161,8 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
                 this.Rules[i] = new BanAndAllowRuleDel(source.Rules[i]);
             }
         }
-        if (source.RuleType != null) {
-            this.RuleType = new Long(source.RuleType);
+        if (source.ShowType != null) {
+            this.ShowType = new String(source.ShowType);
         }
     }
 
@@ -172,10 +172,10 @@ public class DeleteBlockIgnoreRuleNewRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
-        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
         this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
-        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
 
     }
 }

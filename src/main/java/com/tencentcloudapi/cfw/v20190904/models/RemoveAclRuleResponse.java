@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveAclRuleResponse extends AbstractModel {
 
     /**
-    * <p>删除成功后返回被删除策略的uuid列表</p>
+    * 回显请求中的规则 ID 列表；全量删除返回 [-1]。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveAclRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>删除成功后返回被删除策略的uuid列表</p> 
-     * @return RuleUuid <p>删除成功后返回被删除策略的uuid列表</p>
+     * Get 回显请求中的规则 ID 列表；全量删除返回 [-1]。 
+     * @return RuleUuid 回显请求中的规则 ID 列表；全量删除返回 [-1]。
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set <p>删除成功后返回被删除策略的uuid列表</p>
-     * @param RuleUuid <p>删除成功后返回被删除策略的uuid列表</p>
+     * Set 回显请求中的规则 ID 列表；全量删除返回 [-1]。
+     * @param RuleUuid 回显请求中的规则 ID 列表；全量删除返回 [-1]。
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

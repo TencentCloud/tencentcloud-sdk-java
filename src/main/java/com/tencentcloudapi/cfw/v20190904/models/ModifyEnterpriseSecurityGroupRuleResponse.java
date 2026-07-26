@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
-    * <p>状态值，0：编辑成功，非0：编辑失败</p>
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * <p>编辑后新生成规则的Id</p>
+    * ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
     */
     @SerializedName("NewRuleUuid")
     @Expose
     private Long NewRuleUuid;
+
+    /**
+    * 处理状态：0 表示成功。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>状态值，0：编辑成功，非0：编辑失败</p> 
-     * @return Status <p>状态值，0：编辑成功，非0：编辑失败</p>
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set <p>状态值，0：编辑成功，非0：编辑失败</p>
-     * @param Status <p>状态值，0：编辑成功，非0：编辑失败</p>
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get <p>编辑后新生成规则的Id</p> 
-     * @return NewRuleUuid <p>编辑后新生成规则的Id</p>
+     * Get ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。 
+     * @return NewRuleUuid ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
      */
     public Long getNewRuleUuid() {
         return this.NewRuleUuid;
     }
 
     /**
-     * Set <p>编辑后新生成规则的Id</p>
-     * @param NewRuleUuid <p>编辑后新生成规则的Id</p>
+     * Set ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+     * @param NewRuleUuid ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
      */
     public void setNewRuleUuid(Long NewRuleUuid) {
         this.NewRuleUuid = NewRuleUuid;
+    }
+
+    /**
+     * Get 处理状态：0 表示成功。 
+     * @return Status 处理状态：0 表示成功。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 处理状态：0 表示成功。
+     * @param Status 处理状态：0 表示成功。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
@@ -100,11 +100,11 @@ public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyEnterpriseSecurityGroupRuleResponse(ModifyEnterpriseSecurityGroupRuleResponse source) {
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
         if (source.NewRuleUuid != null) {
             this.NewRuleUuid = new Long(source.NewRuleUuid);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +116,8 @@ public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "NewRuleUuid", this.NewRuleUuid);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

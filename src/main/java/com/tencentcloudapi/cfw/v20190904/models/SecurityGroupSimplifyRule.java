@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SecurityGroupSimplifyRule extends AbstractModel {
 
     /**
-    * 写入规则的描述。
+    * 规则描述。
     */
     @SerializedName("Description")
     @Expose
@@ -51,7 +51,7 @@ region：地域(ap-gaungzhou)
     private String Protocol;
 
     /**
-    * 服务端写入后生成或采用的规则数据库 ID。
+    * 规则 ID。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -65,7 +65,7 @@ region：地域(ap-gaungzhou)
     private String Scope;
 
     /**
-    * 服务端写入后的实际规则顺序。
+    * 写入后的实际规则顺序。
     */
     @SerializedName("Sequence")
     @Expose
@@ -85,16 +85,16 @@ region：地域(ap-gaungzhou)
     private String SourceContent;
 
     /**
-     * Get 写入规则的描述。 
-     * @return Description 写入规则的描述。
+     * Get 规则描述。 
+     * @return Description 规则描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 写入规则的描述。
-     * @param Description 写入规则的描述。
+     * Set 规则描述。
+     * @param Description 规则描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -157,16 +157,16 @@ region：地域(ap-gaungzhou)
     }
 
     /**
-     * Get 服务端写入后生成或采用的规则数据库 ID。 
-     * @return RuleUuid 服务端写入后生成或采用的规则数据库 ID。
+     * Get 规则 ID。 
+     * @return RuleUuid 规则 ID。
      */
     public Long getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 服务端写入后生成或采用的规则数据库 ID。
-     * @param RuleUuid 服务端写入后生成或采用的规则数据库 ID。
+     * Set 规则 ID。
+     * @param RuleUuid 规则 ID。
      */
     public void setRuleUuid(Long RuleUuid) {
         this.RuleUuid = RuleUuid;
@@ -189,16 +189,16 @@ region：地域(ap-gaungzhou)
     }
 
     /**
-     * Get 服务端写入后的实际规则顺序。 
-     * @return Sequence 服务端写入后的实际规则顺序。
+     * Get 写入后的实际规则顺序。 
+     * @return Sequence 写入后的实际规则顺序。
      */
     public Long getSequence() {
         return this.Sequence;
     }
 
     /**
-     * Set 服务端写入后的实际规则顺序。
-     * @param Sequence 服务端写入后的实际规则顺序。
+     * Set 写入后的实际规则顺序。
+     * @param Sequence 写入后的实际规则顺序。
      */
     public void setSequence(Long Sequence) {
         this.Sequence = Sequence;

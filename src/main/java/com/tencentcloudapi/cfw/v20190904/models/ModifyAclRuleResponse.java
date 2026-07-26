@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAclRuleResponse extends AbstractModel {
 
     /**
-    * <p>编辑成功后返回新策略ID列表</p>
+    * 修改后的规则 ID 列表，成功时包含请求规则的 Uuid。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyAclRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>编辑成功后返回新策略ID列表</p> 
-     * @return RuleUuid <p>编辑成功后返回新策略ID列表</p>
+     * Get 修改后的规则 ID 列表，成功时包含请求规则的 Uuid。 
+     * @return RuleUuid 修改后的规则 ID 列表，成功时包含请求规则的 Uuid。
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set <p>编辑成功后返回新策略ID列表</p>
-     * @param RuleUuid <p>编辑成功后返回新策略ID列表</p>
+     * Set 修改后的规则 ID 列表，成功时包含请求规则的 Uuid。
+     * @param RuleUuid 修改后的规则 ID 列表，成功时包含请求规则的 Uuid。
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

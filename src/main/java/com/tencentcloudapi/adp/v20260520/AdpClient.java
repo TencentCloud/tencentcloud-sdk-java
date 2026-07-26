@@ -83,6 +83,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *CreateAppTrigger
+     * @param req CreateAppTriggerRequest
+     * @return CreateAppTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAppTriggerResponse CreateAppTrigger(CreateAppTriggerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAppTrigger", CreateAppTriggerResponse.class);
+    }
+
+    /**
      *新建会话
      * @param req CreateConversationRequest
      * @return CreateConversationResponse
@@ -149,6 +160,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *CreateTimerTask
+     * @param req CreateTimerTaskRequest
+     * @return CreateTimerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTimerTaskResponse CreateTimerTask(CreateTimerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTimerTask", CreateTimerTaskResponse.class);
+    }
+
+    /**
      *创建参数变量
      * @param req CreateVariableRequest
      * @return CreateVariableResponse
@@ -204,6 +226,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *DeleteAppTrigger
+     * @param req DeleteAppTriggerRequest
+     * @return DeleteAppTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAppTriggerResponse DeleteAppTrigger(DeleteAppTriggerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAppTrigger", DeleteAppTriggerResponse.class);
+    }
+
+    /**
      *删除会话
      * @param req DeleteConversationRequest
      * @return DeleteConversationResponse
@@ -256,6 +289,17 @@ public class AdpClient extends AbstractClient{
     public DeleteSpaceResponse DeleteSpace(DeleteSpaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSpace", DeleteSpaceResponse.class);
+    }
+
+    /**
+     *DeleteTimerTask
+     * @param req DeleteTimerTaskRequest
+     * @return DeleteTimerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTimerTaskResponse DeleteTimerTask(DeleteTimerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTimerTask", DeleteTimerTaskResponse.class);
     }
 
     /**
@@ -333,6 +377,50 @@ public class AdpClient extends AbstractClient{
     public DescribeAppSummaryListResponse DescribeAppSummaryList(DescribeAppSummaryListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAppSummaryList", DescribeAppSummaryListResponse.class);
+    }
+
+    /**
+     *DescribeAppTrigger
+     * @param req DescribeAppTriggerRequest
+     * @return DescribeAppTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppTriggerResponse DescribeAppTrigger(DescribeAppTriggerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAppTrigger", DescribeAppTriggerResponse.class);
+    }
+
+    /**
+     *DescribeAppTriggerInstance
+     * @param req DescribeAppTriggerInstanceRequest
+     * @return DescribeAppTriggerInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppTriggerInstanceResponse DescribeAppTriggerInstance(DescribeAppTriggerInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAppTriggerInstance", DescribeAppTriggerInstanceResponse.class);
+    }
+
+    /**
+     *DescribeAppTriggerRunLogList
+     * @param req DescribeAppTriggerRunLogListRequest
+     * @return DescribeAppTriggerRunLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppTriggerRunLogListResponse DescribeAppTriggerRunLogList(DescribeAppTriggerRunLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAppTriggerRunLogList", DescribeAppTriggerRunLogListResponse.class);
+    }
+
+    /**
+     *DescribeAppTriggerSummaryList
+     * @param req DescribeAppTriggerSummaryListRequest
+     * @return DescribeAppTriggerSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppTriggerSummaryListResponse DescribeAppTriggerSummaryList(DescribeAppTriggerSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAppTriggerSummaryList", DescribeAppTriggerSummaryListResponse.class);
     }
 
     /**
@@ -523,6 +611,39 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *DescribeTimerTask
+     * @param req DescribeTimerTaskRequest
+     * @return DescribeTimerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimerTaskResponse DescribeTimerTask(DescribeTimerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimerTask", DescribeTimerTaskResponse.class);
+    }
+
+    /**
+     *查询定时任务执行记录列表
+     * @param req DescribeTimerTaskRunLogListRequest
+     * @return DescribeTimerTaskRunLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimerTaskRunLogListResponse DescribeTimerTaskRunLogList(DescribeTimerTaskRunLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimerTaskRunLogList", DescribeTimerTaskRunLogListResponse.class);
+    }
+
+    /**
+     *查询定时任务列表
+     * @param req DescribeTimerTaskSummaryListRequest
+     * @return DescribeTimerTaskSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimerTaskSummaryListResponse DescribeTimerTaskSummaryList(DescribeTimerTaskSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimerTaskSummaryList", DescribeTimerTaskSummaryListResponse.class);
+    }
+
+    /**
      *获取参数变量
      * @param req DescribeVariableRequest
      * @return DescribeVariableResponse
@@ -567,6 +688,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *MarkAppTriggerRunLogRead
+     * @param req MarkAppTriggerRunLogReadRequest
+     * @return MarkAppTriggerRunLogReadResponse
+     * @throws TencentCloudSDKException
+     */
+    public MarkAppTriggerRunLogReadResponse MarkAppTriggerRunLogRead(MarkAppTriggerRunLogReadRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MarkAppTriggerRunLogRead", MarkAppTriggerRunLogReadResponse.class);
+    }
+
+    /**
+     *MarkTimerTaskRunLogRead
+     * @param req MarkTimerTaskRunLogReadRequest
+     * @return MarkTimerTaskRunLogReadResponse
+     * @throws TencentCloudSDKException
+     */
+    public MarkTimerTaskRunLogReadResponse MarkTimerTaskRunLogRead(MarkTimerTaskRunLogReadRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MarkTimerTaskRunLogRead", MarkTimerTaskRunLogReadResponse.class);
+    }
+
+    /**
      *修改Agent配置信息
      * @param req ModifyAgentRequest
      * @return ModifyAgentResponse
@@ -586,6 +729,17 @@ public class AdpClient extends AbstractClient{
     public ModifyAppResponse ModifyApp(ModifyAppRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApp", ModifyAppResponse.class);
+    }
+
+    /**
+     *ModifyAppTrigger
+     * @param req ModifyAppTriggerRequest
+     * @return ModifyAppTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAppTriggerResponse ModifyAppTrigger(ModifyAppTriggerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAppTrigger", ModifyAppTriggerResponse.class);
     }
 
     /**
@@ -633,6 +787,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *ModifyTimerTask
+     * @param req ModifyTimerTaskRequest
+     * @return ModifyTimerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTimerTaskResponse ModifyTimerTask(ModifyTimerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTimerTask", ModifyTimerTaskResponse.class);
+    }
+
+    /**
      *更新参数变量
      * @param req ModifyVariableRequest
      * @return ModifyVariableResponse
@@ -641,6 +806,28 @@ public class AdpClient extends AbstractClient{
     public ModifyVariableResponse ModifyVariable(ModifyVariableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyVariable", ModifyVariableResponse.class);
+    }
+
+    /**
+     *PauseAppTrigger
+     * @param req PauseAppTriggerRequest
+     * @return PauseAppTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseAppTriggerResponse PauseAppTrigger(PauseAppTriggerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseAppTrigger", PauseAppTriggerResponse.class);
+    }
+
+    /**
+     *PauseTimerTask
+     * @param req PauseTimerTaskRequest
+     * @return PauseTimerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseTimerTaskResponse PauseTimerTask(PauseTimerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseTimerTask", PauseTimerTaskResponse.class);
     }
 
     /**
@@ -666,6 +853,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *ResumeAppTrigger
+     * @param req ResumeAppTriggerRequest
+     * @return ResumeAppTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeAppTriggerResponse ResumeAppTrigger(ResumeAppTriggerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeAppTrigger", ResumeAppTriggerResponse.class);
+    }
+
+    /**
+     *ResumeTimerTask
+     * @param req ResumeTimerTaskRequest
+     * @return ResumeTimerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeTimerTaskResponse ResumeTimerTask(ResumeTimerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeTimerTask", ResumeTimerTaskResponse.class);
+    }
+
+    /**
      *重试发布(发布暂停之后再次重新发布)
      * @param req RetryReleaseRequest
      * @return RetryReleaseResponse
@@ -685,6 +894,28 @@ public class AdpClient extends AbstractClient{
     public RollbackReleaseResponse RollbackRelease(RollbackReleaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RollbackRelease", RollbackReleaseResponse.class);
+    }
+
+    /**
+     *RunAppTriggerNow
+     * @param req RunAppTriggerNowRequest
+     * @return RunAppTriggerNowResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunAppTriggerNowResponse RunAppTriggerNow(RunAppTriggerNowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunAppTriggerNow", RunAppTriggerNowResponse.class);
+    }
+
+    /**
+     *RunTimerTaskNow
+     * @param req RunTimerTaskNowRequest
+     * @return RunTimerTaskNowResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunTimerTaskNowResponse RunTimerTaskNow(RunTimerTaskNowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunTimerTaskNow", RunTimerTaskNowResponse.class);
     }
 
     /**

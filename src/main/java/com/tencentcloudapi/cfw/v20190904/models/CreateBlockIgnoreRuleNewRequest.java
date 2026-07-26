@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
 
     /**
-    * <p>非自定义类型规则列表</p>
-    */
-    @SerializedName("Rules")
-    @Expose
-    private BanAndAllowRule [] Rules;
-
-    /**
-    * <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+    * 规则类型：1 IP 封禁，2 IP 放通，3 域名放通，4 情报放通，5 资产放通，6 自定义放通。
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+    * 待新增规则列表；可为空，空数组返回成功且不新增规则。
+    */
+    @SerializedName("Rules")
+    @Expose
+    private BanAndAllowRule [] Rules;
+
+    /**
+    * <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
     */
     @SerializedName("CfwAiAgentOperationSource")
     @Expose
     private String CfwAiAgentOperationSource;
 
     /**
-    * <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
+    * 互斥列表冲突处理，仅 RuleType=1 或 2 生效。0 表示保留已有互斥规则并跳过冲突新增项；1 表示保留新增项并删除同 IP、同方向的互斥规则；省略时不处理互斥冲突。填写本字段时，同一请求内相同 Ioc 会合并为一项，DirectionList 按输入顺序合并，时间和备注采用首次出现项的值。已有同类型、同 Ioc 规则的方向会与本次方向合并，其它字段按本次请求更新。
     */
     @SerializedName("CoverDuplicate")
     @Expose
     private Long CoverDuplicate;
 
     /**
-     * Get <p>非自定义类型规则列表</p> 
-     * @return Rules <p>非自定义类型规则列表</p>
-     */
-    public BanAndAllowRule [] getRules() {
-        return this.Rules;
-    }
-
-    /**
-     * Set <p>非自定义类型规则列表</p>
-     * @param Rules <p>非自定义类型规则列表</p>
-     */
-    public void setRules(BanAndAllowRule [] Rules) {
-        this.Rules = Rules;
-    }
-
-    /**
-     * Get <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p> 
-     * @return RuleType <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+     * Get 规则类型：1 IP 封禁，2 IP 放通，3 域名放通，4 情报放通，5 资产放通，6 自定义放通。 
+     * @return RuleType 规则类型：1 IP 封禁，2 IP 放通，3 域名放通，4 情报放通，5 资产放通，6 自定义放通。
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
-     * @param RuleType <p>RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+     * Set 规则类型：1 IP 封禁，2 IP 放通，3 域名放通，4 情报放通，5 资产放通，6 自定义放通。
+     * @param RuleType 规则类型：1 IP 封禁，2 IP 放通，3 域名放通，4 情报放通，5 资产放通，6 自定义放通。
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul> 
-     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * Get 待新增规则列表；可为空，空数组返回成功且不新增规则。 
+     * @return Rules 待新增规则列表；可为空，空数组返回成功且不新增规则。
+     */
+    public BanAndAllowRule [] getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 待新增规则列表；可为空，空数组返回成功且不新增规则。
+     * @param Rules 待新增规则列表；可为空，空数组返回成功且不新增规则。
+     */
+    public void setRules(BanAndAllowRule [] Rules) {
+        this.Rules = Rules;
+    }
+
+    /**
+     * Get <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。 
+     * @return CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
      */
     public String getCfwAiAgentOperationSource() {
         return this.CfwAiAgentOperationSource;
     }
 
     /**
-     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
-     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>
+     * Set <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
+     * @param CfwAiAgentOperationSource <p>AI操作来源</p><p>枚举值：</p><ul><li>console： 控制台来源值</li><li>wechat： 微信</li></ul>。
      */
     public void setCfwAiAgentOperationSource(String CfwAiAgentOperationSource) {
         this.CfwAiAgentOperationSource = CfwAiAgentOperationSource;
     }
 
     /**
-     * Get <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p> 
-     * @return CoverDuplicate <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
+     * Get 互斥列表冲突处理，仅 RuleType=1 或 2 生效。0 表示保留已有互斥规则并跳过冲突新增项；1 表示保留新增项并删除同 IP、同方向的互斥规则；省略时不处理互斥冲突。填写本字段时，同一请求内相同 Ioc 会合并为一项，DirectionList 按输入顺序合并，时间和备注采用首次出现项的值。已有同类型、同 Ioc 规则的方向会与本次方向合并，其它字段按本次请求更新。 
+     * @return CoverDuplicate 互斥列表冲突处理，仅 RuleType=1 或 2 生效。0 表示保留已有互斥规则并跳过冲突新增项；1 表示保留新增项并删除同 IP、同方向的互斥规则；省略时不处理互斥冲突。填写本字段时，同一请求内相同 Ioc 会合并为一项，DirectionList 按输入顺序合并，时间和备注采用首次出现项的值。已有同类型、同 Ioc 规则的方向会与本次方向合并，其它字段按本次请求更新。
      */
     public Long getCoverDuplicate() {
         return this.CoverDuplicate;
     }
 
     /**
-     * Set <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
-     * @param CoverDuplicate <p>删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据</p>
+     * Set 互斥列表冲突处理，仅 RuleType=1 或 2 生效。0 表示保留已有互斥规则并跳过冲突新增项；1 表示保留新增项并删除同 IP、同方向的互斥规则；省略时不处理互斥冲突。填写本字段时，同一请求内相同 Ioc 会合并为一项，DirectionList 按输入顺序合并，时间和备注采用首次出现项的值。已有同类型、同 Ioc 规则的方向会与本次方向合并，其它字段按本次请求更新。
+     * @param CoverDuplicate 互斥列表冲突处理，仅 RuleType=1 或 2 生效。0 表示保留已有互斥规则并跳过冲突新增项；1 表示保留新增项并删除同 IP、同方向的互斥规则；省略时不处理互斥冲突。填写本字段时，同一请求内相同 Ioc 会合并为一项，DirectionList 按输入顺序合并，时间和备注采用首次出现项的值。已有同类型、同 Ioc 规则的方向会与本次方向合并，其它字段按本次请求更新。
      */
     public void setCoverDuplicate(Long CoverDuplicate) {
         this.CoverDuplicate = CoverDuplicate;
@@ -123,14 +123,14 @@ public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBlockIgnoreRuleNewRequest(CreateBlockIgnoreRuleNewRequest source) {
+        if (source.RuleType != null) {
+            this.RuleType = new Long(source.RuleType);
+        }
         if (source.Rules != null) {
             this.Rules = new BanAndAllowRule[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
                 this.Rules[i] = new BanAndAllowRule(source.Rules[i]);
             }
-        }
-        if (source.RuleType != null) {
-            this.RuleType = new Long(source.RuleType);
         }
         if (source.CfwAiAgentOperationSource != null) {
             this.CfwAiAgentOperationSource = new String(source.CfwAiAgentOperationSource);
@@ -145,8 +145,8 @@ public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "CfwAiAgentOperationSource", this.CfwAiAgentOperationSource);
         this.setParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
 

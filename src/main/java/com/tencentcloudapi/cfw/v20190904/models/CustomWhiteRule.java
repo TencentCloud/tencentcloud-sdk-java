@@ -31,7 +31,7 @@ public class CustomWhiteRule extends AbstractModel {
     private String DstIP;
 
     /**
-    * 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+    * 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
     */
     @SerializedName("IdsRuleId")
     @Expose
@@ -68,16 +68,16 @@ public class CustomWhiteRule extends AbstractModel {
     }
 
     /**
-     * Get 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。 
-     * @return IdsRuleId 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+     * Get 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。 
+     * @return IdsRuleId 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
      */
     public String getIdsRuleId() {
         return this.IdsRuleId;
     }
 
     /**
-     * Set 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
-     * @param IdsRuleId 自定义规则关联的入侵防御规则 ID；必须是可转换为整数且在入侵防御规则模板中存在的 ID。
+     * Set 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
+     * @param IdsRuleId 自定义规则关联的入侵防御规则 ID。调用 DescribeIpsRuleListNew，传目标规则的查询条件，仅使用 Data[].RuleID；该值必须可转换为整数且对应现有入侵防御规则。
      */
     public void setIdsRuleId(String IdsRuleId) {
         this.IdsRuleId = IdsRuleId;

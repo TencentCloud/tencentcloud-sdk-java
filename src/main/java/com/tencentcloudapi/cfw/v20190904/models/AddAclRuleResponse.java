@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddAclRuleResponse extends AbstractModel {
 
     /**
-    * 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
+    * 新增规则的 ID 列表，顺序与 Rules 一致。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class AddAclRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。 
-     * @return RuleUuid 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
+     * Get 新增规则的 ID 列表，顺序与 Rules 一致。 
+     * @return RuleUuid 新增规则的 ID 列表，顺序与 Rules 一致。
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
-     * @param RuleUuid 数据库插入成功后返回的新规则数值 ID 列表，顺序与已插入的 Rules 顺序一致；不表示异步规则下发已经完成。
+     * Set 新增规则的 ID 列表，顺序与 Rules 一致。
+     * @param RuleUuid 新增规则的 ID 列表，顺序与 Rules 一致。
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

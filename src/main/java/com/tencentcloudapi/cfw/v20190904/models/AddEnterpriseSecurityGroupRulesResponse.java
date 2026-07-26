@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
 
     /**
-    * <p>状态值，0：添加成功，非0：添加失败</p>
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * <p>添加成功的规则详情</p>
+    * 新增规则的摘要列表。
     */
     @SerializedName("Rules")
     @Expose
     private SecurityGroupSimplifyRule [] Rules;
+
+    /**
+    * 处理状态：0 表示成功。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>状态值，0：添加成功，非0：添加失败</p> 
-     * @return Status <p>状态值，0：添加成功，非0：添加失败</p>
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set <p>状态值，0：添加成功，非0：添加失败</p>
-     * @param Status <p>状态值，0：添加成功，非0：添加失败</p>
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get <p>添加成功的规则详情</p> 
-     * @return Rules <p>添加成功的规则详情</p>
+     * Get 新增规则的摘要列表。 
+     * @return Rules 新增规则的摘要列表。
      */
     public SecurityGroupSimplifyRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set <p>添加成功的规则详情</p>
-     * @param Rules <p>添加成功的规则详情</p>
+     * Set 新增规则的摘要列表。
+     * @param Rules 新增规则的摘要列表。
      */
     public void setRules(SecurityGroupSimplifyRule [] Rules) {
         this.Rules = Rules;
+    }
+
+    /**
+     * Get 处理状态：0 表示成功。 
+     * @return Status 处理状态：0 表示成功。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 处理状态：0 表示成功。
+     * @param Status 处理状态：0 表示成功。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
@@ -100,14 +100,14 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddEnterpriseSecurityGroupRulesResponse(AddEnterpriseSecurityGroupRulesResponse source) {
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
         if (source.Rules != null) {
             this.Rules = new SecurityGroupSimplifyRule[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
                 this.Rules[i] = new SecurityGroupSimplifyRule(source.Rules[i]);
             }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +119,8 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

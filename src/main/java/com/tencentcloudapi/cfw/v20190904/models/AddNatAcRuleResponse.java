@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddNatAcRuleResponse extends AbstractModel {
 
     /**
-    * <p>创建成功后返回新策略ID列表</p>
+    * 新增规则的 ID 列表，顺序与 Rules 一致。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -38,16 +38,16 @@ public class AddNatAcRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>创建成功后返回新策略ID列表</p> 
-     * @return RuleUuid <p>创建成功后返回新策略ID列表</p>
+     * Get 新增规则的 ID 列表，顺序与 Rules 一致。 
+     * @return RuleUuid 新增规则的 ID 列表，顺序与 Rules 一致。
      */
     public Long [] getRuleUuid() {
         return this.RuleUuid;
     }
 
     /**
-     * Set <p>创建成功后返回新策略ID列表</p>
-     * @param RuleUuid <p>创建成功后返回新策略ID列表</p>
+     * Set 新增规则的 ID 列表，顺序与 Rules 一致。
+     * @param RuleUuid 新增规则的 ID 列表，顺序与 Rules 一致。
      */
     public void setRuleUuid(Long [] RuleUuid) {
         this.RuleUuid = RuleUuid;

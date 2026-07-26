@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateAlertCenterOmitResponse extends AbstractModel {
 
     /**
-    * <p>Cloud API 处理返回码。0 表示 Action 处理函数未返回顶层错误，-1 表示入口参数校验或路由处理失败。忽略记录的数据库处理结果由 Status 表示；ReturnCode=0 不代表一定有记录被更新。</p>
+    * 请求返回码，0 表示请求已执行；忽略结果见 Status。
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * <p>Cloud API 处理信息。Action 处理函数未返回顶层错误时为 success；入口参数校验或路由处理失败时为 failed，并同时返回 Error。</p>
+    * 与 ReturnCode 对应的结果信息，成功时为 success。
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * <p>忽略处理状态。0 表示目标表更新语句执行时未返回数据库错误，但接口不检查受影响行数，因此不保证有记录命中；-1 表示参数归一化后无有效目标或下游处理失败；-3 表示下游报告重复记录错误。应结合 ReturnCode 判断入口校验是否通过。</p>
+    * 忽略处理状态，0 表示成功，非 0 表示未成功。
     */
     @SerializedName("Status")
     @Expose
@@ -52,48 +52,48 @@ public class CreateAlertCenterOmitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Cloud API 处理返回码。0 表示 Action 处理函数未返回顶层错误，-1 表示入口参数校验或路由处理失败。忽略记录的数据库处理结果由 Status 表示；ReturnCode=0 不代表一定有记录被更新。</p> 
-     * @return ReturnCode <p>Cloud API 处理返回码。0 表示 Action 处理函数未返回顶层错误，-1 表示入口参数校验或路由处理失败。忽略记录的数据库处理结果由 Status 表示；ReturnCode=0 不代表一定有记录被更新。</p>
+     * Get 请求返回码，0 表示请求已执行；忽略结果见 Status。 
+     * @return ReturnCode 请求返回码，0 表示请求已执行；忽略结果见 Status。
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set <p>Cloud API 处理返回码。0 表示 Action 处理函数未返回顶层错误，-1 表示入口参数校验或路由处理失败。忽略记录的数据库处理结果由 Status 表示；ReturnCode=0 不代表一定有记录被更新。</p>
-     * @param ReturnCode <p>Cloud API 处理返回码。0 表示 Action 处理函数未返回顶层错误，-1 表示入口参数校验或路由处理失败。忽略记录的数据库处理结果由 Status 表示；ReturnCode=0 不代表一定有记录被更新。</p>
+     * Set 请求返回码，0 表示请求已执行；忽略结果见 Status。
+     * @param ReturnCode 请求返回码，0 表示请求已执行；忽略结果见 Status。
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get <p>Cloud API 处理信息。Action 处理函数未返回顶层错误时为 success；入口参数校验或路由处理失败时为 failed，并同时返回 Error。</p> 
-     * @return ReturnMsg <p>Cloud API 处理信息。Action 处理函数未返回顶层错误时为 success；入口参数校验或路由处理失败时为 failed，并同时返回 Error。</p>
+     * Get 与 ReturnCode 对应的结果信息，成功时为 success。 
+     * @return ReturnMsg 与 ReturnCode 对应的结果信息，成功时为 success。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set <p>Cloud API 处理信息。Action 处理函数未返回顶层错误时为 success；入口参数校验或路由处理失败时为 failed，并同时返回 Error。</p>
-     * @param ReturnMsg <p>Cloud API 处理信息。Action 处理函数未返回顶层错误时为 success；入口参数校验或路由处理失败时为 failed，并同时返回 Error。</p>
+     * Set 与 ReturnCode 对应的结果信息，成功时为 success。
+     * @param ReturnMsg 与 ReturnCode 对应的结果信息，成功时为 success。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get <p>忽略处理状态。0 表示目标表更新语句执行时未返回数据库错误，但接口不检查受影响行数，因此不保证有记录命中；-1 表示参数归一化后无有效目标或下游处理失败；-3 表示下游报告重复记录错误。应结合 ReturnCode 判断入口校验是否通过。</p> 
-     * @return Status <p>忽略处理状态。0 表示目标表更新语句执行时未返回数据库错误，但接口不检查受影响行数，因此不保证有记录命中；-1 表示参数归一化后无有效目标或下游处理失败；-3 表示下游报告重复记录错误。应结合 ReturnCode 判断入口校验是否通过。</p>
+     * Get 忽略处理状态，0 表示成功，非 0 表示未成功。 
+     * @return Status 忽略处理状态，0 表示成功，非 0 表示未成功。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>忽略处理状态。0 表示目标表更新语句执行时未返回数据库错误，但接口不检查受影响行数，因此不保证有记录命中；-1 表示参数归一化后无有效目标或下游处理失败；-3 表示下游报告重复记录错误。应结合 ReturnCode 判断入口校验是否通过。</p>
-     * @param Status <p>忽略处理状态。0 表示目标表更新语句执行时未返回数据库错误，但接口不检查受影响行数，因此不保证有记录命中；-1 表示参数归一化后无有效目标或下游处理失败；-3 表示下游报告重复记录错误。应结合 ReturnCode 判断入口校验是否通过。</p>
+     * Set 忽略处理状态，0 表示成功，非 0 表示未成功。
+     * @param Status 忽略处理状态，0 表示成功，非 0 表示未成功。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

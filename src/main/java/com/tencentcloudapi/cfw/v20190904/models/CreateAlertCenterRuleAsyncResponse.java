@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateAlertCenterRuleAsyncResponse extends AbstractModel {
 
     /**
-    * <p>返回状态码：<br>0 成功<br>非0 失败</p>
+    * 请求返回码，0 表示已进入异步处理；处理进度见 Status。
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * <p>返回信息：<br>success 成功<br>其他</p>
+    * 与 ReturnCode 对应的结果信息，成功时为 success。
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+    * 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
     */
     @SerializedName("Status")
     @Expose
@@ -52,48 +52,48 @@ public class CreateAlertCenterRuleAsyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>返回状态码：<br>0 成功<br>非0 失败</p> 
-     * @return ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     * Get 请求返回码，0 表示已进入异步处理；处理进度见 Status。 
+     * @return ReturnCode 请求返回码，0 表示已进入异步处理；处理进度见 Status。
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set <p>返回状态码：<br>0 成功<br>非0 失败</p>
-     * @param ReturnCode <p>返回状态码：<br>0 成功<br>非0 失败</p>
+     * Set 请求返回码，0 表示已进入异步处理；处理进度见 Status。
+     * @param ReturnCode 请求返回码，0 表示已进入异步处理；处理进度见 Status。
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get <p>返回信息：<br>success 成功<br>其他</p> 
-     * @return ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
+     * Get 与 ReturnCode 对应的结果信息，成功时为 success。 
+     * @return ReturnMsg 与 ReturnCode 对应的结果信息，成功时为 success。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set <p>返回信息：<br>success 成功<br>其他</p>
-     * @param ReturnMsg <p>返回信息：<br>success 成功<br>其他</p>
+     * Set 与 ReturnCode 对应的结果信息，成功时为 success。
+     * @param ReturnMsg 与 ReturnCode 对应的结果信息，成功时为 success。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p> 
-     * @return Status <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+     * Get 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。 
+     * @return Status 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
-     * @param Status <p>处置状态码：0  处置成功 1处置中  -1 通用错误，不用处理-3 表示重复，需重新刷新列表其他</p>
+     * Set 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
+     * @param Status 异步处理状态：1 表示处理中，使用完全相同的请求参数继续查询；修改参数会发起新的操作。0 表示处理结束，处置结果通过对应查询接口获取。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

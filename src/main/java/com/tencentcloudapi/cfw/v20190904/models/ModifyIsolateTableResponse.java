@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyIsolateTableResponse extends AbstractModel {
 
     /**
-    * <p>0 成功  非0失败</p>
+    * 处理返回码：0 表示成功。
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * <p>success 成功 其他失败</p>
+    * 处理结果信息，成功时为 success。
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyIsolateTableResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>0 成功  非0失败</p> 
-     * @return ReturnCode <p>0 成功  非0失败</p>
+     * Get 处理返回码：0 表示成功。 
+     * @return ReturnCode 处理返回码：0 表示成功。
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set <p>0 成功  非0失败</p>
-     * @param ReturnCode <p>0 成功  非0失败</p>
+     * Set 处理返回码：0 表示成功。
+     * @param ReturnCode 处理返回码：0 表示成功。
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get <p>success 成功 其他失败</p> 
-     * @return ReturnMsg <p>success 成功 其他失败</p>
+     * Get 处理结果信息，成功时为 success。 
+     * @return ReturnMsg 处理结果信息，成功时为 success。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set <p>success 成功 其他失败</p>
-     * @param ReturnMsg <p>success 成功 其他失败</p>
+     * Set 处理结果信息，成功时为 success。
+     * @param ReturnMsg 处理结果信息，成功时为 success。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
