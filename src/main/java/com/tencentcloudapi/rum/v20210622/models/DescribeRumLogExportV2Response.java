@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRumLogExportV2Response extends AbstractModel {
 
     /**
-    * Query result in JSON string format
+    * <p>日志导出任务TaskId</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRumLogExportV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Query result in JSON string format 
-     * @return Result Query result in JSON string format
+     * Get <p>日志导出任务TaskId</p> 
+     * @return Result <p>日志导出任务TaskId</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Query result in JSON string format
-     * @param Result Query result in JSON string format
+     * Set <p>日志导出任务TaskId</p>
+     * @param Result <p>日志导出任务TaskId</p>
      */
     public void setResult(String Result) {
         this.Result = Result;

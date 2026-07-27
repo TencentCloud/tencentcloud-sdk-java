@@ -346,6 +346,13 @@ public class CreateModelServiceRequest extends AbstractModel {
     private GatewayConfig GatewayConfig;
 
     /**
+    * <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+    */
+    @SerializedName("ResourceSupplyAttribute")
+    @Expose
+    private ResourceSupplyAttribute ResourceSupplyAttribute;
+
+    /**
      * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
      * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
@@ -1081,6 +1088,22 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.GatewayConfig = GatewayConfig;
     }
 
+    /**
+     * Get <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p> 
+     * @return ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+     */
+    public ResourceSupplyAttribute getResourceSupplyAttribute() {
+        return this.ResourceSupplyAttribute;
+    }
+
+    /**
+     * Set <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+     * @param ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+     */
+    public void setResourceSupplyAttribute(ResourceSupplyAttribute ResourceSupplyAttribute) {
+        this.ResourceSupplyAttribute = ResourceSupplyAttribute;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1242,6 +1265,9 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.GatewayConfig != null) {
             this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
         }
+        if (source.ResourceSupplyAttribute != null) {
+            this.ResourceSupplyAttribute = new ResourceSupplyAttribute(source.ResourceSupplyAttribute);
+        }
     }
 
 
@@ -1295,6 +1321,7 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
         this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+        this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
 
     }
 }

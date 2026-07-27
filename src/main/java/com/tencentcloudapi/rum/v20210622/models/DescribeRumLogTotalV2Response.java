@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRumLogTotalV2Response extends AbstractModel {
 
     /**
-    * 日志总量
+    * <p>日志总量</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRumLogTotalV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志总量 
-     * @return Result 日志总量
+     * Get <p>日志总量</p> 
+     * @return Result <p>日志总量</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 日志总量
-     * @param Result 日志总量
+     * Set <p>日志总量</p>
+     * @param Result <p>日志总量</p>
      */
     public void setResult(String Result) {
         this.Result = Result;

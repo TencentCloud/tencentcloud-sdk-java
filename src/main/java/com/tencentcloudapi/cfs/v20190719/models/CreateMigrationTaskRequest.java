@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class CreateMigrationTaskRequest extends AbstractModel {
 
     /**
-    * 迁移任务名称
+    * <p>迁移任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+    * <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
     */
     @SerializedName("MigrationType")
     @Expose
     private Long MigrationType;
 
     /**
-    * 迁移模式，默认为0。0: 全量迁移
+    * <p>迁移模式，默认为0。0: 全量迁移</p>
     */
     @SerializedName("MigrationMode")
     @Expose
     private Long MigrationMode;
 
     /**
-    * 数据源账号的 SecretId
+    * <p>数据源账号的 SecretId</p>
     */
     @SerializedName("SrcSecretId")
     @Expose
     private String SrcSecretId;
 
     /**
-    * 数据源账号的 SecretKey
+    * <p>数据源账号的 SecretKey</p>
     */
     @SerializedName("SrcSecretKey")
     @Expose
     private String SrcSecretKey;
 
     /**
-    * 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+    * <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 文件系统路径
+    * <p>文件系统路径</p>
     */
     @SerializedName("FsPath")
     @Expose
     private String FsPath;
 
     /**
-    * 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+    * <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
     */
     @SerializedName("CoverType")
     @Expose
     private Long CoverType;
 
     /**
-    * 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+    * <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
     */
     @SerializedName("SrcService")
     @Expose
     private String SrcService;
 
     /**
-    * 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+    * <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 数据源桶地域
+    * <p>数据源桶地域</p>
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+    * <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
     */
     @SerializedName("BucketAddress")
     @Expose
     private String BucketAddress;
 
     /**
-    * 清单地址，迁移方式为清单迁移时必填
+    * <p>清单地址，迁移方式为清单迁移时必填</p>
     */
     @SerializedName("ListAddress")
     @Expose
     private String ListAddress;
 
     /**
-    * 目标文件系统名称
+    * <p>目标文件系统名称</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * 源桶路径，默认为 /
+    * <p>源桶路径，默认为 /</p>
     */
     @SerializedName("BucketPath")
     @Expose
     private String BucketPath;
 
     /**
-    * 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+    * <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-     * Get 迁移任务名称 
-     * @return TaskName 迁移任务名称
+     * Get <p>迁移任务名称</p> 
+     * @return TaskName <p>迁移任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 迁移任务名称
-     * @param TaskName 迁移任务名称
+     * Set <p>迁移任务名称</p>
+     * @param TaskName <p>迁移任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移 
-     * @return MigrationType 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+     * Get <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p> 
+     * @return MigrationType <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
      */
     public Long getMigrationType() {
         return this.MigrationType;
     }
 
     /**
-     * Set 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
-     * @param MigrationType 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+     * Set <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
+     * @param MigrationType <p>迁移方式标志位，默认为0。0：桶迁移；1：清单迁移</p>
      */
     public void setMigrationType(Long MigrationType) {
         this.MigrationType = MigrationType;
     }
 
     /**
-     * Get 迁移模式，默认为0。0: 全量迁移 
-     * @return MigrationMode 迁移模式，默认为0。0: 全量迁移
+     * Get <p>迁移模式，默认为0。0: 全量迁移</p> 
+     * @return MigrationMode <p>迁移模式，默认为0。0: 全量迁移</p>
      */
     public Long getMigrationMode() {
         return this.MigrationMode;
     }
 
     /**
-     * Set 迁移模式，默认为0。0: 全量迁移
-     * @param MigrationMode 迁移模式，默认为0。0: 全量迁移
+     * Set <p>迁移模式，默认为0。0: 全量迁移</p>
+     * @param MigrationMode <p>迁移模式，默认为0。0: 全量迁移</p>
      */
     public void setMigrationMode(Long MigrationMode) {
         this.MigrationMode = MigrationMode;
     }
 
     /**
-     * Get 数据源账号的 SecretId 
-     * @return SrcSecretId 数据源账号的 SecretId
+     * Get <p>数据源账号的 SecretId</p> 
+     * @return SrcSecretId <p>数据源账号的 SecretId</p>
      */
     public String getSrcSecretId() {
         return this.SrcSecretId;
     }
 
     /**
-     * Set 数据源账号的 SecretId
-     * @param SrcSecretId 数据源账号的 SecretId
+     * Set <p>数据源账号的 SecretId</p>
+     * @param SrcSecretId <p>数据源账号的 SecretId</p>
      */
     public void setSrcSecretId(String SrcSecretId) {
         this.SrcSecretId = SrcSecretId;
     }
 
     /**
-     * Get 数据源账号的 SecretKey 
-     * @return SrcSecretKey 数据源账号的 SecretKey
+     * Get <p>数据源账号的 SecretKey</p> 
+     * @return SrcSecretKey <p>数据源账号的 SecretKey</p>
      */
     public String getSrcSecretKey() {
         return this.SrcSecretKey;
     }
 
     /**
-     * Set 数据源账号的 SecretKey
-     * @param SrcSecretKey 数据源账号的 SecretKey
+     * Set <p>数据源账号的 SecretKey</p>
+     * @param SrcSecretKey <p>数据源账号的 SecretKey</p>
      */
     public void setSrcSecretKey(String SrcSecretKey) {
         this.SrcSecretKey = SrcSecretKey;
     }
 
     /**
-     * Get 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取 
-     * @return FileSystemId 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * Get <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p> 
+     * @return FileSystemId <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
-     * @param FileSystemId 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * Set <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+     * @param FileSystemId <p>文件系统实例 ID，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 文件系统路径 
-     * @return FsPath 文件系统路径
+     * Get <p>文件系统路径</p> 
+     * @return FsPath <p>文件系统路径</p>
      */
     public String getFsPath() {
         return this.FsPath;
     }
 
     /**
-     * Set 文件系统路径
-     * @param FsPath 文件系统路径
+     * Set <p>文件系统路径</p>
+     * @param FsPath <p>文件系统路径</p>
      */
     public void setFsPath(String FsPath) {
         this.FsPath = FsPath;
     }
 
     /**
-     * Get 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖 
-     * @return CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+     * Get <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p> 
+     * @return CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      */
     public Long getCoverType() {
         return this.CoverType;
     }
 
     /**
-     * Set 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
-     * @param CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+     * Set <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+     * @param CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      */
     public void setCoverType(Long CoverType) {
         this.CoverType = CoverType;
     }
 
     /**
-     * Get 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS 
-     * @return SrcService 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+     * Get <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul> 
+     * @return SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
      */
     public String getSrcService() {
         return this.SrcService;
     }
 
     /**
-     * Set 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
-     * @param SrcService 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+     * Set <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+     * @param SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
      */
     public void setSrcService(String SrcService) {
         this.SrcService = SrcService;
     }
 
     /**
-     * Get 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数 
-     * @return BucketName 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * Get <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p> 
+     * @return BucketName <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
-     * @param BucketName 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * Set <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+     * @param BucketName <p>数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 数据源桶地域 
-     * @return BucketRegion 数据源桶地域
+     * Get <p>数据源桶地域</p> 
+     * @return BucketRegion <p>数据源桶地域</p>
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set 数据源桶地域
-     * @param BucketRegion 数据源桶地域
+     * Set <p>数据源桶地域</p>
+     * @param BucketRegion <p>数据源桶地域</p>
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数 
-     * @return BucketAddress 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * Get <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p> 
+     * @return BucketAddress <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
      */
     public String getBucketAddress() {
         return this.BucketAddress;
     }
 
     /**
-     * Set 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
-     * @param BucketAddress 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * Set <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
+     * @param BucketAddress <p>数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数</p>
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
     }
 
     /**
-     * Get 清单地址，迁移方式为清单迁移时必填 
-     * @return ListAddress 清单地址，迁移方式为清单迁移时必填
+     * Get <p>清单地址，迁移方式为清单迁移时必填</p> 
+     * @return ListAddress <p>清单地址，迁移方式为清单迁移时必填</p>
      */
     public String getListAddress() {
         return this.ListAddress;
     }
 
     /**
-     * Set 清单地址，迁移方式为清单迁移时必填
-     * @param ListAddress 清单地址，迁移方式为清单迁移时必填
+     * Set <p>清单地址，迁移方式为清单迁移时必填</p>
+     * @param ListAddress <p>清单地址，迁移方式为清单迁移时必填</p>
      */
     public void setListAddress(String ListAddress) {
         this.ListAddress = ListAddress;
     }
 
     /**
-     * Get 目标文件系统名称 
-     * @return FsName 目标文件系统名称
+     * Get <p>目标文件系统名称</p> 
+     * @return FsName <p>目标文件系统名称</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set 目标文件系统名称
-     * @param FsName 目标文件系统名称
+     * Set <p>目标文件系统名称</p>
+     * @param FsName <p>目标文件系统名称</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get 源桶路径，默认为 / 
-     * @return BucketPath 源桶路径，默认为 /
+     * Get <p>源桶路径，默认为 /</p> 
+     * @return BucketPath <p>源桶路径，默认为 /</p>
      */
     public String getBucketPath() {
         return this.BucketPath;
     }
 
     /**
-     * Set 源桶路径，默认为 /
-     * @param BucketPath 源桶路径，默认为 /
+     * Set <p>源桶路径，默认为 /</p>
+     * @param BucketPath <p>源桶路径，默认为 /</p>
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;
     }
 
     /**
-     * Get 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0 
-     * @return Direction 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+     * Get <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p> 
+     * @return Direction <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
-     * @param Direction 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+     * Set <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
+     * @param Direction <p>迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0</p>
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;

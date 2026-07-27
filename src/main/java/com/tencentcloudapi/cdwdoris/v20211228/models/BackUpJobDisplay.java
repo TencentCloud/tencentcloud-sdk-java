@@ -24,693 +24,785 @@ import java.util.HashMap;
 public class BackUpJobDisplay extends AbstractModel {
 
     /**
-    * 备份实例id
+    * <p>备份实例id</p>
     */
     @SerializedName("JobId")
     @Expose
     private Long JobId;
 
     /**
-    * 备份实例名
+    * <p>备份实例名</p>
     */
     @SerializedName("Snapshot")
     @Expose
     private String Snapshot;
 
     /**
-    * 备份数据量
+    * <p>备份数据量</p>
     */
     @SerializedName("BackUpSize")
     @Expose
     private Long BackUpSize;
 
     /**
-    * 备份单副本数据量
+    * <p>备份单副本数据量</p>
     */
     @SerializedName("BackUpSingleSize")
     @Expose
     private Long BackUpSingleSize;
 
     /**
-    * 实例创建时间
+    * <p>实例创建时间</p>
     */
     @SerializedName("BackUpTime")
     @Expose
     private String BackUpTime;
 
     /**
-    * 实例过期时间
+    * <p>实例过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("JobStatus")
     @Expose
     private String JobStatus;
 
     /**
-    * 0为默认。1时是对远端的doris进行备份，不周期，一次性
+    * <p>0为默认。1时是对远端的doris进行备份，不周期，一次性</p>
     */
     @SerializedName("BackupType")
     @Expose
     private Long BackupType;
 
     /**
-    * 0为默认。1时是立即备份。2时是迁移
+    * <p>0为默认。1时是立即备份。2时是迁移</p>
     */
     @SerializedName("BackupTimeType")
     @Expose
     private Long BackupTimeType;
 
     /**
-    * 远端doris的连接信息
+    * <p>远端doris的连接信息</p>
     */
     @SerializedName("DorisSourceInfo")
     @Expose
     private DorisSourceInfo DorisSourceInfo;
 
     /**
-    * 实例状态对应的数值
+    * <p>实例状态对应的数值</p>
     */
     @SerializedName("JobStatusNum")
     @Expose
     private Long JobStatusNum;
 
     /**
-    * 备份实例中关于cos的信息	
+    * <p>备份实例中关于cos的信息</p>
     */
     @SerializedName("BackupCosInfo")
     @Expose
     private BackupCosInfo BackupCosInfo;
 
     /**
-    * 是否使用的自定义桶
+    * <p>是否使用的自定义桶</p>
     */
     @SerializedName("IsUserDefineBucket")
     @Expose
     private Boolean IsUserDefineBucket;
 
     /**
-    * 错误原因
+    * <p>错误原因</p>
     */
     @SerializedName("ErrorReason")
     @Expose
     private String ErrorReason;
 
     /**
-    * 快照保留策略
+    * <p>快照保留策略</p>
     */
     @SerializedName("SnapshotRemainPolicy")
     @Expose
     private SnapshotRemainPolicy SnapshotRemainPolicy;
 
     /**
-    * 隔离次数
+    * <p>隔离次数</p>
     */
     @SerializedName("IsolationCount")
     @Expose
     private Long IsolationCount;
 
     /**
-    * 是否开启安全锁
+    * <p>是否开启安全锁</p>
     */
     @SerializedName("EnableSecurityLock")
     @Expose
     private Long EnableSecurityLock;
 
     /**
-    * 宽限期天数
+    * <p>宽限期天数</p>
     */
     @SerializedName("GracePeriod")
     @Expose
     private Long GracePeriod;
 
     /**
-    * 宽限期开始时间
+    * <p>宽限期开始时间</p>
     */
     @SerializedName("GraceStartTime")
     @Expose
     private String GraceStartTime;
 
     /**
-    * 是否在宽限期内
+    * <p>是否在宽限期内</p>
     */
     @SerializedName("IsWithinGracePeriod")
     @Expose
     private Boolean IsWithinGracePeriod;
 
     /**
-    * 是否使用托管桶
+    * <p>是否使用托管桶</p>
     */
     @SerializedName("UseManagedBucket")
     @Expose
     private Boolean UseManagedBucket;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 实例状态描述
+    * <p>实例状态描述</p>
     */
     @SerializedName("InstanceStatusDesc")
     @Expose
     private String InstanceStatusDesc;
 
     /**
-    * 备份远程桶地域
+    * <p>备份远程桶地域</p>
     */
     @SerializedName("DataRemoteRegion")
     @Expose
     private String DataRemoteRegion;
 
     /**
-    * 桶加密状态信息
+    * <p>桶加密状态信息</p>
     */
     @SerializedName("BucketEncryption")
     @Expose
     private BucketEncryptionInfo BucketEncryption;
 
     /**
-    * 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+    * <p>备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled</p>
     */
     @SerializedName("Encryption")
     @Expose
     private String Encryption;
 
     /**
-    * 是否开通加密存储：0-未开通，1-已开通
+    * <p>是否开通加密存储：0-未开通，1-已开通</p>
     */
     @SerializedName("EncryptionEnabled")
     @Expose
     private Boolean EncryptionEnabled;
 
     /**
-    * 任务调度id
+    * <p>任务调度id</p>
     */
     @SerializedName("ScheduleId")
     @Expose
     private Long ScheduleId;
 
     /**
-     * Get 备份实例id 
-     * @return JobId 备份实例id
+    * <p>总任务数（库数）</p>
+    */
+    @SerializedName("TotalTasks")
+    @Expose
+    private Long TotalTasks;
+
+    /**
+    * <p>已完成任务数</p>
+    */
+    @SerializedName("CompletedTasks")
+    @Expose
+    private Long CompletedTasks;
+
+    /**
+    * <p>失败任务数</p>
+    */
+    @SerializedName("FailedTasks")
+    @Expose
+    private Long FailedTasks;
+
+    /**
+    * <p>备份进度描述，如 3/5</p>
+    */
+    @SerializedName("BackupProgress")
+    @Expose
+    private String BackupProgress;
+
+    /**
+     * Get <p>备份实例id</p> 
+     * @return JobId <p>备份实例id</p>
      */
     public Long getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 备份实例id
-     * @param JobId 备份实例id
+     * Set <p>备份实例id</p>
+     * @param JobId <p>备份实例id</p>
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 备份实例名 
-     * @return Snapshot 备份实例名
+     * Get <p>备份实例名</p> 
+     * @return Snapshot <p>备份实例名</p>
      */
     public String getSnapshot() {
         return this.Snapshot;
     }
 
     /**
-     * Set 备份实例名
-     * @param Snapshot 备份实例名
+     * Set <p>备份实例名</p>
+     * @param Snapshot <p>备份实例名</p>
      */
     public void setSnapshot(String Snapshot) {
         this.Snapshot = Snapshot;
     }
 
     /**
-     * Get 备份数据量 
-     * @return BackUpSize 备份数据量
+     * Get <p>备份数据量</p> 
+     * @return BackUpSize <p>备份数据量</p>
      */
     public Long getBackUpSize() {
         return this.BackUpSize;
     }
 
     /**
-     * Set 备份数据量
-     * @param BackUpSize 备份数据量
+     * Set <p>备份数据量</p>
+     * @param BackUpSize <p>备份数据量</p>
      */
     public void setBackUpSize(Long BackUpSize) {
         this.BackUpSize = BackUpSize;
     }
 
     /**
-     * Get 备份单副本数据量 
-     * @return BackUpSingleSize 备份单副本数据量
+     * Get <p>备份单副本数据量</p> 
+     * @return BackUpSingleSize <p>备份单副本数据量</p>
      */
     public Long getBackUpSingleSize() {
         return this.BackUpSingleSize;
     }
 
     /**
-     * Set 备份单副本数据量
-     * @param BackUpSingleSize 备份单副本数据量
+     * Set <p>备份单副本数据量</p>
+     * @param BackUpSingleSize <p>备份单副本数据量</p>
      */
     public void setBackUpSingleSize(Long BackUpSingleSize) {
         this.BackUpSingleSize = BackUpSingleSize;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return BackUpTime 实例创建时间
+     * Get <p>实例创建时间</p> 
+     * @return BackUpTime <p>实例创建时间</p>
      */
     public String getBackUpTime() {
         return this.BackUpTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param BackUpTime 实例创建时间
+     * Set <p>实例创建时间</p>
+     * @param BackUpTime <p>实例创建时间</p>
      */
     public void setBackUpTime(String BackUpTime) {
         this.BackUpTime = BackUpTime;
     }
 
     /**
-     * Get 实例过期时间 
-     * @return ExpireTime 实例过期时间
+     * Get <p>实例过期时间</p> 
+     * @return ExpireTime <p>实例过期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例过期时间
-     * @param ExpireTime 实例过期时间
+     * Set <p>实例过期时间</p>
+     * @param ExpireTime <p>实例过期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 实例状态 
-     * @return JobStatus 实例状态
+     * Get <p>实例状态</p> 
+     * @return JobStatus <p>实例状态</p>
      */
     public String getJobStatus() {
         return this.JobStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param JobStatus 实例状态
+     * Set <p>实例状态</p>
+     * @param JobStatus <p>实例状态</p>
      */
     public void setJobStatus(String JobStatus) {
         this.JobStatus = JobStatus;
     }
 
     /**
-     * Get 0为默认。1时是对远端的doris进行备份，不周期，一次性 
-     * @return BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
+     * Get <p>0为默认。1时是对远端的doris进行备份，不周期，一次性</p> 
+     * @return BackupType <p>0为默认。1时是对远端的doris进行备份，不周期，一次性</p>
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 0为默认。1时是对远端的doris进行备份，不周期，一次性
-     * @param BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
+     * Set <p>0为默认。1时是对远端的doris进行备份，不周期，一次性</p>
+     * @param BackupType <p>0为默认。1时是对远端的doris进行备份，不周期，一次性</p>
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 0为默认。1时是立即备份。2时是迁移 
-     * @return BackupTimeType 0为默认。1时是立即备份。2时是迁移
+     * Get <p>0为默认。1时是立即备份。2时是迁移</p> 
+     * @return BackupTimeType <p>0为默认。1时是立即备份。2时是迁移</p>
      */
     public Long getBackupTimeType() {
         return this.BackupTimeType;
     }
 
     /**
-     * Set 0为默认。1时是立即备份。2时是迁移
-     * @param BackupTimeType 0为默认。1时是立即备份。2时是迁移
+     * Set <p>0为默认。1时是立即备份。2时是迁移</p>
+     * @param BackupTimeType <p>0为默认。1时是立即备份。2时是迁移</p>
      */
     public void setBackupTimeType(Long BackupTimeType) {
         this.BackupTimeType = BackupTimeType;
     }
 
     /**
-     * Get 远端doris的连接信息 
-     * @return DorisSourceInfo 远端doris的连接信息
+     * Get <p>远端doris的连接信息</p> 
+     * @return DorisSourceInfo <p>远端doris的连接信息</p>
      */
     public DorisSourceInfo getDorisSourceInfo() {
         return this.DorisSourceInfo;
     }
 
     /**
-     * Set 远端doris的连接信息
-     * @param DorisSourceInfo 远端doris的连接信息
+     * Set <p>远端doris的连接信息</p>
+     * @param DorisSourceInfo <p>远端doris的连接信息</p>
      */
     public void setDorisSourceInfo(DorisSourceInfo DorisSourceInfo) {
         this.DorisSourceInfo = DorisSourceInfo;
     }
 
     /**
-     * Get 实例状态对应的数值 
-     * @return JobStatusNum 实例状态对应的数值
+     * Get <p>实例状态对应的数值</p> 
+     * @return JobStatusNum <p>实例状态对应的数值</p>
      */
     public Long getJobStatusNum() {
         return this.JobStatusNum;
     }
 
     /**
-     * Set 实例状态对应的数值
-     * @param JobStatusNum 实例状态对应的数值
+     * Set <p>实例状态对应的数值</p>
+     * @param JobStatusNum <p>实例状态对应的数值</p>
      */
     public void setJobStatusNum(Long JobStatusNum) {
         this.JobStatusNum = JobStatusNum;
     }
 
     /**
-     * Get 备份实例中关于cos的信息	 
-     * @return BackupCosInfo 备份实例中关于cos的信息	
+     * Get <p>备份实例中关于cos的信息</p> 
+     * @return BackupCosInfo <p>备份实例中关于cos的信息</p>
      */
     public BackupCosInfo getBackupCosInfo() {
         return this.BackupCosInfo;
     }
 
     /**
-     * Set 备份实例中关于cos的信息	
-     * @param BackupCosInfo 备份实例中关于cos的信息	
+     * Set <p>备份实例中关于cos的信息</p>
+     * @param BackupCosInfo <p>备份实例中关于cos的信息</p>
      */
     public void setBackupCosInfo(BackupCosInfo BackupCosInfo) {
         this.BackupCosInfo = BackupCosInfo;
     }
 
     /**
-     * Get 是否使用的自定义桶 
-     * @return IsUserDefineBucket 是否使用的自定义桶
+     * Get <p>是否使用的自定义桶</p> 
+     * @return IsUserDefineBucket <p>是否使用的自定义桶</p>
      */
     public Boolean getIsUserDefineBucket() {
         return this.IsUserDefineBucket;
     }
 
     /**
-     * Set 是否使用的自定义桶
-     * @param IsUserDefineBucket 是否使用的自定义桶
+     * Set <p>是否使用的自定义桶</p>
+     * @param IsUserDefineBucket <p>是否使用的自定义桶</p>
      */
     public void setIsUserDefineBucket(Boolean IsUserDefineBucket) {
         this.IsUserDefineBucket = IsUserDefineBucket;
     }
 
     /**
-     * Get 错误原因 
-     * @return ErrorReason 错误原因
+     * Get <p>错误原因</p> 
+     * @return ErrorReason <p>错误原因</p>
      */
     public String getErrorReason() {
         return this.ErrorReason;
     }
 
     /**
-     * Set 错误原因
-     * @param ErrorReason 错误原因
+     * Set <p>错误原因</p>
+     * @param ErrorReason <p>错误原因</p>
      */
     public void setErrorReason(String ErrorReason) {
         this.ErrorReason = ErrorReason;
     }
 
     /**
-     * Get 快照保留策略 
-     * @return SnapshotRemainPolicy 快照保留策略
+     * Get <p>快照保留策略</p> 
+     * @return SnapshotRemainPolicy <p>快照保留策略</p>
      */
     public SnapshotRemainPolicy getSnapshotRemainPolicy() {
         return this.SnapshotRemainPolicy;
     }
 
     /**
-     * Set 快照保留策略
-     * @param SnapshotRemainPolicy 快照保留策略
+     * Set <p>快照保留策略</p>
+     * @param SnapshotRemainPolicy <p>快照保留策略</p>
      */
     public void setSnapshotRemainPolicy(SnapshotRemainPolicy SnapshotRemainPolicy) {
         this.SnapshotRemainPolicy = SnapshotRemainPolicy;
     }
 
     /**
-     * Get 隔离次数 
-     * @return IsolationCount 隔离次数
+     * Get <p>隔离次数</p> 
+     * @return IsolationCount <p>隔离次数</p>
      */
     public Long getIsolationCount() {
         return this.IsolationCount;
     }
 
     /**
-     * Set 隔离次数
-     * @param IsolationCount 隔离次数
+     * Set <p>隔离次数</p>
+     * @param IsolationCount <p>隔离次数</p>
      */
     public void setIsolationCount(Long IsolationCount) {
         this.IsolationCount = IsolationCount;
     }
 
     /**
-     * Get 是否开启安全锁 
-     * @return EnableSecurityLock 是否开启安全锁
+     * Get <p>是否开启安全锁</p> 
+     * @return EnableSecurityLock <p>是否开启安全锁</p>
      */
     public Long getEnableSecurityLock() {
         return this.EnableSecurityLock;
     }
 
     /**
-     * Set 是否开启安全锁
-     * @param EnableSecurityLock 是否开启安全锁
+     * Set <p>是否开启安全锁</p>
+     * @param EnableSecurityLock <p>是否开启安全锁</p>
      */
     public void setEnableSecurityLock(Long EnableSecurityLock) {
         this.EnableSecurityLock = EnableSecurityLock;
     }
 
     /**
-     * Get 宽限期天数 
-     * @return GracePeriod 宽限期天数
+     * Get <p>宽限期天数</p> 
+     * @return GracePeriod <p>宽限期天数</p>
      */
     public Long getGracePeriod() {
         return this.GracePeriod;
     }
 
     /**
-     * Set 宽限期天数
-     * @param GracePeriod 宽限期天数
+     * Set <p>宽限期天数</p>
+     * @param GracePeriod <p>宽限期天数</p>
      */
     public void setGracePeriod(Long GracePeriod) {
         this.GracePeriod = GracePeriod;
     }
 
     /**
-     * Get 宽限期开始时间 
-     * @return GraceStartTime 宽限期开始时间
+     * Get <p>宽限期开始时间</p> 
+     * @return GraceStartTime <p>宽限期开始时间</p>
      */
     public String getGraceStartTime() {
         return this.GraceStartTime;
     }
 
     /**
-     * Set 宽限期开始时间
-     * @param GraceStartTime 宽限期开始时间
+     * Set <p>宽限期开始时间</p>
+     * @param GraceStartTime <p>宽限期开始时间</p>
      */
     public void setGraceStartTime(String GraceStartTime) {
         this.GraceStartTime = GraceStartTime;
     }
 
     /**
-     * Get 是否在宽限期内 
-     * @return IsWithinGracePeriod 是否在宽限期内
+     * Get <p>是否在宽限期内</p> 
+     * @return IsWithinGracePeriod <p>是否在宽限期内</p>
      */
     public Boolean getIsWithinGracePeriod() {
         return this.IsWithinGracePeriod;
     }
 
     /**
-     * Set 是否在宽限期内
-     * @param IsWithinGracePeriod 是否在宽限期内
+     * Set <p>是否在宽限期内</p>
+     * @param IsWithinGracePeriod <p>是否在宽限期内</p>
      */
     public void setIsWithinGracePeriod(Boolean IsWithinGracePeriod) {
         this.IsWithinGracePeriod = IsWithinGracePeriod;
     }
 
     /**
-     * Get 是否使用托管桶 
-     * @return UseManagedBucket 是否使用托管桶
+     * Get <p>是否使用托管桶</p> 
+     * @return UseManagedBucket <p>是否使用托管桶</p>
      */
     public Boolean getUseManagedBucket() {
         return this.UseManagedBucket;
     }
 
     /**
-     * Set 是否使用托管桶
-     * @param UseManagedBucket 是否使用托管桶
+     * Set <p>是否使用托管桶</p>
+     * @param UseManagedBucket <p>是否使用托管桶</p>
      */
     public void setUseManagedBucket(Boolean UseManagedBucket) {
         this.UseManagedBucket = UseManagedBucket;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例状态 
-     * @return InstanceStatus 实例状态
+     * Get <p>实例状态</p> 
+     * @return InstanceStatus <p>实例状态</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param InstanceStatus 实例状态
+     * Set <p>实例状态</p>
+     * @param InstanceStatus <p>实例状态</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 实例状态描述 
-     * @return InstanceStatusDesc 实例状态描述
+     * Get <p>实例状态描述</p> 
+     * @return InstanceStatusDesc <p>实例状态描述</p>
      */
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
 
     /**
-     * Set 实例状态描述
-     * @param InstanceStatusDesc 实例状态描述
+     * Set <p>实例状态描述</p>
+     * @param InstanceStatusDesc <p>实例状态描述</p>
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
     }
 
     /**
-     * Get 备份远程桶地域 
-     * @return DataRemoteRegion 备份远程桶地域
+     * Get <p>备份远程桶地域</p> 
+     * @return DataRemoteRegion <p>备份远程桶地域</p>
      */
     public String getDataRemoteRegion() {
         return this.DataRemoteRegion;
     }
 
     /**
-     * Set 备份远程桶地域
-     * @param DataRemoteRegion 备份远程桶地域
+     * Set <p>备份远程桶地域</p>
+     * @param DataRemoteRegion <p>备份远程桶地域</p>
      */
     public void setDataRemoteRegion(String DataRemoteRegion) {
         this.DataRemoteRegion = DataRemoteRegion;
     }
 
     /**
-     * Get 桶加密状态信息 
-     * @return BucketEncryption 桶加密状态信息
+     * Get <p>桶加密状态信息</p> 
+     * @return BucketEncryption <p>桶加密状态信息</p>
      */
     public BucketEncryptionInfo getBucketEncryption() {
         return this.BucketEncryption;
     }
 
     /**
-     * Set 桶加密状态信息
-     * @param BucketEncryption 桶加密状态信息
+     * Set <p>桶加密状态信息</p>
+     * @param BucketEncryption <p>桶加密状态信息</p>
      */
     public void setBucketEncryption(BucketEncryptionInfo BucketEncryption) {
         this.BucketEncryption = BucketEncryption;
     }
 
     /**
-     * Get 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled 
-     * @return Encryption 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     * Get <p>备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled</p> 
+     * @return Encryption <p>备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled</p>
      */
     public String getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
-     * @param Encryption 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     * Set <p>备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled</p>
+     * @param Encryption <p>备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled</p>
      */
     public void setEncryption(String Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get 是否开通加密存储：0-未开通，1-已开通 
-     * @return EncryptionEnabled 是否开通加密存储：0-未开通，1-已开通
+     * Get <p>是否开通加密存储：0-未开通，1-已开通</p> 
+     * @return EncryptionEnabled <p>是否开通加密存储：0-未开通，1-已开通</p>
      */
     public Boolean getEncryptionEnabled() {
         return this.EncryptionEnabled;
     }
 
     /**
-     * Set 是否开通加密存储：0-未开通，1-已开通
-     * @param EncryptionEnabled 是否开通加密存储：0-未开通，1-已开通
+     * Set <p>是否开通加密存储：0-未开通，1-已开通</p>
+     * @param EncryptionEnabled <p>是否开通加密存储：0-未开通，1-已开通</p>
      */
     public void setEncryptionEnabled(Boolean EncryptionEnabled) {
         this.EncryptionEnabled = EncryptionEnabled;
     }
 
     /**
-     * Get 任务调度id 
-     * @return ScheduleId 任务调度id
+     * Get <p>任务调度id</p> 
+     * @return ScheduleId <p>任务调度id</p>
      */
     public Long getScheduleId() {
         return this.ScheduleId;
     }
 
     /**
-     * Set 任务调度id
-     * @param ScheduleId 任务调度id
+     * Set <p>任务调度id</p>
+     * @param ScheduleId <p>任务调度id</p>
      */
     public void setScheduleId(Long ScheduleId) {
         this.ScheduleId = ScheduleId;
+    }
+
+    /**
+     * Get <p>总任务数（库数）</p> 
+     * @return TotalTasks <p>总任务数（库数）</p>
+     */
+    public Long getTotalTasks() {
+        return this.TotalTasks;
+    }
+
+    /**
+     * Set <p>总任务数（库数）</p>
+     * @param TotalTasks <p>总任务数（库数）</p>
+     */
+    public void setTotalTasks(Long TotalTasks) {
+        this.TotalTasks = TotalTasks;
+    }
+
+    /**
+     * Get <p>已完成任务数</p> 
+     * @return CompletedTasks <p>已完成任务数</p>
+     */
+    public Long getCompletedTasks() {
+        return this.CompletedTasks;
+    }
+
+    /**
+     * Set <p>已完成任务数</p>
+     * @param CompletedTasks <p>已完成任务数</p>
+     */
+    public void setCompletedTasks(Long CompletedTasks) {
+        this.CompletedTasks = CompletedTasks;
+    }
+
+    /**
+     * Get <p>失败任务数</p> 
+     * @return FailedTasks <p>失败任务数</p>
+     */
+    public Long getFailedTasks() {
+        return this.FailedTasks;
+    }
+
+    /**
+     * Set <p>失败任务数</p>
+     * @param FailedTasks <p>失败任务数</p>
+     */
+    public void setFailedTasks(Long FailedTasks) {
+        this.FailedTasks = FailedTasks;
+    }
+
+    /**
+     * Get <p>备份进度描述，如 3/5</p> 
+     * @return BackupProgress <p>备份进度描述，如 3/5</p>
+     */
+    public String getBackupProgress() {
+        return this.BackupProgress;
+    }
+
+    /**
+     * Set <p>备份进度描述，如 3/5</p>
+     * @param BackupProgress <p>备份进度描述，如 3/5</p>
+     */
+    public void setBackupProgress(String BackupProgress) {
+        this.BackupProgress = BackupProgress;
     }
 
     public BackUpJobDisplay() {
@@ -811,6 +903,18 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.ScheduleId != null) {
             this.ScheduleId = new Long(source.ScheduleId);
         }
+        if (source.TotalTasks != null) {
+            this.TotalTasks = new Long(source.TotalTasks);
+        }
+        if (source.CompletedTasks != null) {
+            this.CompletedTasks = new Long(source.CompletedTasks);
+        }
+        if (source.FailedTasks != null) {
+            this.FailedTasks = new Long(source.FailedTasks);
+        }
+        if (source.BackupProgress != null) {
+            this.BackupProgress = new String(source.BackupProgress);
+        }
     }
 
 
@@ -848,6 +952,10 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "EncryptionEnabled", this.EncryptionEnabled);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+        this.setParamSimple(map, prefix + "TotalTasks", this.TotalTasks);
+        this.setParamSimple(map, prefix + "CompletedTasks", this.CompletedTasks);
+        this.setParamSimple(map, prefix + "FailedTasks", this.FailedTasks);
+        this.setParamSimple(map, prefix + "BackupProgress", this.BackupProgress);
 
     }
 }

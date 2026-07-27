@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateHTTPServiceRouteResponse extends AbstractModel {
 
     /**
+    * <p>归属权校验不通过返回信息，根据校验信息配置dns或者文件验证，可通过VerifyHTTPServiceRoute接口验证归属权是否通过</p>
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerificationInfo OwnershipVerification;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>归属权校验不通过返回信息，根据校验信息配置dns或者文件验证，可通过VerifyHTTPServiceRoute接口验证归属权是否通过</p> 
+     * @return OwnershipVerification <p>归属权校验不通过返回信息，根据校验信息配置dns或者文件验证，可通过VerifyHTTPServiceRoute接口验证归属权是否通过</p>
+     */
+    public OwnershipVerificationInfo getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set <p>归属权校验不通过返回信息，根据校验信息配置dns或者文件验证，可通过VerifyHTTPServiceRoute接口验证归属权是否通过</p>
+     * @param OwnershipVerification <p>归属权校验不通过返回信息，根据校验信息配置dns或者文件验证，可通过VerifyHTTPServiceRoute接口验证归属权是否通过</p>
+     */
+    public void setOwnershipVerification(OwnershipVerificationInfo OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateHTTPServiceRouteResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateHTTPServiceRouteResponse(CreateHTTPServiceRouteResponse source) {
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerificationInfo(source.OwnershipVerification);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateHTTPServiceRouteResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -73,6 +73,13 @@ public class ApproverOption extends AbstractModel {
     private String ApproverMobileMode;
 
     /**
+    * <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+    */
+    @SerializedName("ForbidModifySealInfos")
+    @Expose
+    private Boolean ForbidModifySealInfos;
+
+    /**
      * Get <p>签署方是否可以拒签</p><ul><li> **false** : ( 默认)可以拒签</li><li> **true** :不可以拒签</li></ul> 
      * @return NoRefuse <p>签署方是否可以拒签</p><ul><li> **false** : ( 默认)可以拒签</li><li> **true** :不可以拒签</li></ul>
      */
@@ -184,6 +191,22 @@ public class ApproverOption extends AbstractModel {
         this.ApproverMobileMode = ApproverMobileMode;
     }
 
+    /**
+     * Get <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p> 
+     * @return ForbidModifySealInfos <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+     */
+    public Boolean getForbidModifySealInfos() {
+        return this.ForbidModifySealInfos;
+    }
+
+    /**
+     * Set <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+     * @param ForbidModifySealInfos <p>在嵌入式文件发起下,若合同是通过文件,当签署人控件指定了印章类型（或印章Id）,在嵌入页面上是否能修改</p>
+     */
+    public void setForbidModifySealInfos(Boolean ForbidModifySealInfos) {
+        this.ForbidModifySealInfos = ForbidModifySealInfos;
+    }
+
     public ApproverOption() {
     }
 
@@ -213,6 +236,9 @@ public class ApproverOption extends AbstractModel {
         if (source.ApproverMobileMode != null) {
             this.ApproverMobileMode = new String(source.ApproverMobileMode);
         }
+        if (source.ForbidModifySealInfos != null) {
+            this.ForbidModifySealInfos = new Boolean(source.ForbidModifySealInfos);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ApproverOption extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
         this.setParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
         this.setParamSimple(map, prefix + "ApproverMobileMode", this.ApproverMobileMode);
+        this.setParamSimple(map, prefix + "ForbidModifySealInfos", this.ForbidModifySealInfos);
 
     }
 }

@@ -468,6 +468,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建tdlc spark作业
+     * @param req CreateSparkAppForTDLCRequest
+     * @return CreateSparkAppForTDLCResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSparkAppForTDLCResponse CreateSparkAppForTDLC(CreateSparkAppForTDLCRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSparkAppForTDLC", CreateSparkAppForTDLCResponse.class);
+    }
+
+    /**
      *启动Spark作业
      * @param req CreateSparkAppTaskRequest
      * @return CreateSparkAppTaskResponse
@@ -1061,6 +1072,17 @@ public class DlcClient extends AbstractClient{
     public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(DescribeLakeFsTaskResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLakeFsTaskResult", DescribeLakeFsTaskResultResponse.class);
+    }
+
+    /**
+     *获取账户子账户信息
+     * @param req DescribeMCPSubUinRequest
+     * @return DescribeMCPSubUinResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMCPSubUinResponse DescribeMCPSubUin(DescribeMCPSubUinRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMCPSubUin", DescribeMCPSubUinResponse.class);
     }
 
     /**
@@ -1853,6 +1875,17 @@ public class DlcClient extends AbstractClient{
     public ModifySparkAppBatchResponse ModifySparkAppBatch(ModifySparkAppBatchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySparkAppBatch", ModifySparkAppBatchResponse.class);
+    }
+
+    /**
+     *更新tdlc spark作业
+     * @param req ModifySparkAppForTDLCRequest
+     * @return ModifySparkAppForTDLCResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySparkAppForTDLCResponse ModifySparkAppForTDLC(ModifySparkAppForTDLCRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySparkAppForTDLC", ModifySparkAppForTDLCResponse.class);
     }
 
     /**

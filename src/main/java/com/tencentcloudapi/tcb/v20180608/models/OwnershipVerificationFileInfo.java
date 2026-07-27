@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHTTPServiceRouteRequest extends AbstractModel {
+public class OwnershipVerificationFileInfo extends AbstractModel {
 
     /**
-    * <p>环境ID</p>
+    * <p>归属权校验文件路径</p>
     */
-    @SerializedName("EnvId")
+    @SerializedName("Path")
     @Expose
-    private String EnvId;
+    private String Path;
 
     /**
-    * <p>域名路由信息</p>
+    * <p>归属权校验文件内容</p>
     */
-    @SerializedName("Domain")
+    @SerializedName("Content")
     @Expose
-    private HTTPServiceDomainParam Domain;
+    private String Content;
 
     /**
-     * Get <p>环境ID</p> 
-     * @return EnvId <p>环境ID</p>
+     * Get <p>归属权校验文件路径</p> 
+     * @return Path <p>归属权校验文件路径</p>
      */
-    public String getEnvId() {
-        return this.EnvId;
+    public String getPath() {
+        return this.Path;
     }
 
     /**
-     * Set <p>环境ID</p>
-     * @param EnvId <p>环境ID</p>
+     * Set <p>归属权校验文件路径</p>
+     * @param Path <p>归属权校验文件路径</p>
      */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
+    public void setPath(String Path) {
+        this.Path = Path;
     }
 
     /**
-     * Get <p>域名路由信息</p> 
-     * @return Domain <p>域名路由信息</p>
+     * Get <p>归属权校验文件内容</p> 
+     * @return Content <p>归属权校验文件内容</p>
      */
-    public HTTPServiceDomainParam getDomain() {
-        return this.Domain;
+    public String getContent() {
+        return this.Content;
     }
 
     /**
-     * Set <p>域名路由信息</p>
-     * @param Domain <p>域名路由信息</p>
+     * Set <p>归属权校验文件内容</p>
+     * @param Content <p>归属权校验文件内容</p>
      */
-    public void setDomain(HTTPServiceDomainParam Domain) {
-        this.Domain = Domain;
+    public void setContent(String Content) {
+        this.Content = Content;
     }
 
-    public CreateHTTPServiceRouteRequest() {
+    public OwnershipVerificationFileInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateHTTPServiceRouteRequest(CreateHTTPServiceRouteRequest source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
+    public OwnershipVerificationFileInfo(OwnershipVerificationFileInfo source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
         }
-        if (source.Domain != null) {
-            this.Domain = new HTTPServiceDomainParam(source.Domain);
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
         }
     }
 
@@ -90,8 +90,8 @@ public class CreateHTTPServiceRouteRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamObj(map, prefix + "Domain.", this.Domain);
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "Content", this.Content);
 
     }
 }

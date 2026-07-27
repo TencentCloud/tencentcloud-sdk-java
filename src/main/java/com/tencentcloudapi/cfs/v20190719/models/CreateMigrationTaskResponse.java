@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMigrationTaskResponse extends AbstractModel {
 
     /**
-    * 迁移任务 ID
+    * <p>迁移任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMigrationTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 迁移任务 ID 
-     * @return TaskId 迁移任务 ID
+     * Get <p>迁移任务 ID</p> 
+     * @return TaskId <p>迁移任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 迁移任务 ID
-     * @param TaskId 迁移任务 ID
+     * Set <p>迁移任务 ID</p>
+     * @param TaskId <p>迁移任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

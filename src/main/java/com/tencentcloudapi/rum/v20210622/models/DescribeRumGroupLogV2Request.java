@@ -31,7 +31,7 @@ public class DescribeRumGroupLogV2Request extends AbstractModel {
     private String OrderBy;
 
     /**
-    * <p>开始时间（必填）</p>
+    * <p>查询日志开始时间（必填）</p>
     */
     @SerializedName("StartTime")
     @Expose
@@ -45,14 +45,14 @@ public class DescribeRumGroupLogV2Request extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>过滤条件</p>
+    * <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * <p>结束时间（必填）</p>
+    * <p>查询日志结束时间（必填）</p>
     */
     @SerializedName("EndTime")
     @Expose
@@ -96,16 +96,16 @@ public class DescribeRumGroupLogV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>开始时间（必填）</p> 
-     * @return StartTime <p>开始时间（必填）</p>
+     * Get <p>查询日志开始时间（必填）</p> 
+     * @return StartTime <p>查询日志开始时间（必填）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>开始时间（必填）</p>
-     * @param StartTime <p>开始时间（必填）</p>
+     * Set <p>查询日志开始时间（必填）</p>
+     * @param StartTime <p>查询日志开始时间（必填）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -128,32 +128,32 @@ public class DescribeRumGroupLogV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>过滤条件</p> 
-     * @return Filter <p>过滤条件</p>
+     * Get <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p> 
+     * @return Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set <p>过滤条件</p>
-     * @param Filter <p>过滤条件</p>
+     * Set <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get <p>结束时间（必填）</p> 
-     * @return EndTime <p>结束时间（必填）</p>
+     * Get <p>查询日志结束时间（必填）</p> 
+     * @return EndTime <p>查询日志结束时间（必填）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>结束时间（必填）</p>
-     * @param EndTime <p>结束时间（必填）</p>
+     * Set <p>查询日志结束时间（必填）</p>
+     * @param EndTime <p>查询日志结束时间（必填）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -24,601 +24,624 @@ import java.util.HashMap;
 public class MigrationTaskInfo extends AbstractModel {
 
     /**
-    * 迁移任务名称
+    * <p>迁移任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 迁移任务id
+    * <p>迁移任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+    * <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
     */
     @SerializedName("MigrationType")
     @Expose
     private Long MigrationType;
 
     /**
-    * 迁移模式，默认为0。0: 全量迁移
+    * <p>迁移模式，默认为0。0: 全量迁移</p>
     */
     @SerializedName("MigrationMode")
     @Expose
     private Long MigrationMode;
 
     /**
-    * 数据源桶名称
+    * <p>数据源桶名称</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 数据源桶地域
+    * <p>数据源桶地域</p>
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * 数据源桶地址
+    * <p>数据源桶地址</p>
     */
     @SerializedName("BucketAddress")
     @Expose
     private String BucketAddress;
 
     /**
-    * 清单地址
+    * <p>清单地址</p>
     */
     @SerializedName("ListAddress")
     @Expose
     private String ListAddress;
 
     /**
-    * 文件系统实例名称
+    * <p>文件系统实例名称</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * 文件系统实例Id
+    * <p>文件系统实例Id</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 文件系统路径
+    * <p>文件系统路径</p>
     */
     @SerializedName("FsPath")
     @Expose
     private String FsPath;
 
     /**
-    * 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+    * <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
     */
     @SerializedName("CoverType")
     @Expose
     private Long CoverType;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 完成/终止时间
+    * <p>完成/终止时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+    * <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 文件数量
+    * <p>文件数量</p>
     */
     @SerializedName("FileTotalCount")
     @Expose
     private Long FileTotalCount;
 
     /**
-    * 已迁移文件数量
+    * <p>已迁移文件数量</p>
     */
     @SerializedName("FileMigratedCount")
     @Expose
     private Long FileMigratedCount;
 
     /**
-    * 迁移失败文件数量
+    * <p>迁移失败文件数量</p>
     */
     @SerializedName("FileFailedCount")
     @Expose
     private Long FileFailedCount;
 
     /**
-    * 文件容量，单位Byte
+    * <p>文件容量，单位Byte</p>
     */
     @SerializedName("FileTotalSize")
     @Expose
     private Long FileTotalSize;
 
     /**
-    * 已迁移文件容量，单位Byte
+    * <p>已迁移文件容量，单位Byte</p>
     */
     @SerializedName("FileMigratedSize")
     @Expose
     private Long FileMigratedSize;
 
     /**
-    * 迁移失败文件容量，单位Byte
+    * <p>迁移失败文件容量，单位Byte</p>
     */
     @SerializedName("FileFailedSize")
     @Expose
     private Long FileFailedSize;
 
     /**
-    * 全部清单
+    * <p>全部清单</p>
     */
     @SerializedName("FileTotalList")
     @Expose
     private String FileTotalList;
 
     /**
-    * 已完成文件清单
+    * <p>已完成文件清单</p>
     */
     @SerializedName("FileCompletedList")
     @Expose
     private String FileCompletedList;
 
     /**
-    * 失败文件清单
+    * <p>失败文件清单</p>
     */
     @SerializedName("FileFailedList")
     @Expose
     private String FileFailedList;
 
     /**
-    * 源桶路径
+    * <p>源桶路径</p>
     */
     @SerializedName("BucketPath")
     @Expose
     private String BucketPath;
 
     /**
-    * 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+    * <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-     * Get 迁移任务名称 
-     * @return TaskName 迁移任务名称
+    * <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+    */
+    @SerializedName("SrcService")
+    @Expose
+    private String SrcService;
+
+    /**
+     * Get <p>迁移任务名称</p> 
+     * @return TaskName <p>迁移任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 迁移任务名称
-     * @param TaskName 迁移任务名称
+     * Set <p>迁移任务名称</p>
+     * @param TaskName <p>迁移任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 迁移任务id 
-     * @return TaskId 迁移任务id
+     * Get <p>迁移任务id</p> 
+     * @return TaskId <p>迁移任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 迁移任务id
-     * @param TaskId 迁移任务id
+     * Set <p>迁移任务id</p>
+     * @param TaskId <p>迁移任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移 
-     * @return MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * Get <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p> 
+     * @return MigrationType <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
      */
     public Long getMigrationType() {
         return this.MigrationType;
     }
 
     /**
-     * Set 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
-     * @param MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * Set <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
+     * @param MigrationType <p>迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移</p>
      */
     public void setMigrationType(Long MigrationType) {
         this.MigrationType = MigrationType;
     }
 
     /**
-     * Get 迁移模式，默认为0。0: 全量迁移 
-     * @return MigrationMode 迁移模式，默认为0。0: 全量迁移
+     * Get <p>迁移模式，默认为0。0: 全量迁移</p> 
+     * @return MigrationMode <p>迁移模式，默认为0。0: 全量迁移</p>
      */
     public Long getMigrationMode() {
         return this.MigrationMode;
     }
 
     /**
-     * Set 迁移模式，默认为0。0: 全量迁移
-     * @param MigrationMode 迁移模式，默认为0。0: 全量迁移
+     * Set <p>迁移模式，默认为0。0: 全量迁移</p>
+     * @param MigrationMode <p>迁移模式，默认为0。0: 全量迁移</p>
      */
     public void setMigrationMode(Long MigrationMode) {
         this.MigrationMode = MigrationMode;
     }
 
     /**
-     * Get 数据源桶名称 
-     * @return BucketName 数据源桶名称
+     * Get <p>数据源桶名称</p> 
+     * @return BucketName <p>数据源桶名称</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 数据源桶名称
-     * @param BucketName 数据源桶名称
+     * Set <p>数据源桶名称</p>
+     * @param BucketName <p>数据源桶名称</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 数据源桶地域 
-     * @return BucketRegion 数据源桶地域
+     * Get <p>数据源桶地域</p> 
+     * @return BucketRegion <p>数据源桶地域</p>
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set 数据源桶地域
-     * @param BucketRegion 数据源桶地域
+     * Set <p>数据源桶地域</p>
+     * @param BucketRegion <p>数据源桶地域</p>
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 数据源桶地址 
-     * @return BucketAddress 数据源桶地址
+     * Get <p>数据源桶地址</p> 
+     * @return BucketAddress <p>数据源桶地址</p>
      */
     public String getBucketAddress() {
         return this.BucketAddress;
     }
 
     /**
-     * Set 数据源桶地址
-     * @param BucketAddress 数据源桶地址
+     * Set <p>数据源桶地址</p>
+     * @param BucketAddress <p>数据源桶地址</p>
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
     }
 
     /**
-     * Get 清单地址 
-     * @return ListAddress 清单地址
+     * Get <p>清单地址</p> 
+     * @return ListAddress <p>清单地址</p>
      */
     public String getListAddress() {
         return this.ListAddress;
     }
 
     /**
-     * Set 清单地址
-     * @param ListAddress 清单地址
+     * Set <p>清单地址</p>
+     * @param ListAddress <p>清单地址</p>
      */
     public void setListAddress(String ListAddress) {
         this.ListAddress = ListAddress;
     }
 
     /**
-     * Get 文件系统实例名称 
-     * @return FsName 文件系统实例名称
+     * Get <p>文件系统实例名称</p> 
+     * @return FsName <p>文件系统实例名称</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set 文件系统实例名称
-     * @param FsName 文件系统实例名称
+     * Set <p>文件系统实例名称</p>
+     * @param FsName <p>文件系统实例名称</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get 文件系统实例Id 
-     * @return FileSystemId 文件系统实例Id
+     * Get <p>文件系统实例Id</p> 
+     * @return FileSystemId <p>文件系统实例Id</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统实例Id
-     * @param FileSystemId 文件系统实例Id
+     * Set <p>文件系统实例Id</p>
+     * @param FileSystemId <p>文件系统实例Id</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 文件系统路径 
-     * @return FsPath 文件系统路径
+     * Get <p>文件系统路径</p> 
+     * @return FsPath <p>文件系统路径</p>
      */
     public String getFsPath() {
         return this.FsPath;
     }
 
     /**
-     * Set 文件系统路径
-     * @param FsPath 文件系统路径
+     * Set <p>文件系统路径</p>
+     * @param FsPath <p>文件系统路径</p>
      */
     public void setFsPath(String FsPath) {
         this.FsPath = FsPath;
     }
 
     /**
-     * Get 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖 
-     * @return CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+     * Get <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p> 
+     * @return CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      */
     public Long getCoverType() {
         return this.CoverType;
     }
 
     /**
-     * Set 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
-     * @param CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
+     * Set <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
+     * @param CoverType <p>同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖</p>
      */
     public void setCoverType(Long CoverType) {
         this.CoverType = CoverType;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 完成/终止时间 
-     * @return EndTime 完成/终止时间
+     * Get <p>完成/终止时间</p> 
+     * @return EndTime <p>完成/终止时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 完成/终止时间
-     * @param EndTime 完成/终止时间
+     * Set <p>完成/终止时间</p>
+     * @param EndTime <p>完成/终止时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中 
-     * @return Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+     * Get <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p> 
+     * @return Status <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
-     * @param Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+     * Set <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
+     * @param Status <p>迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 文件数量 
-     * @return FileTotalCount 文件数量
+     * Get <p>文件数量</p> 
+     * @return FileTotalCount <p>文件数量</p>
      */
     public Long getFileTotalCount() {
         return this.FileTotalCount;
     }
 
     /**
-     * Set 文件数量
-     * @param FileTotalCount 文件数量
+     * Set <p>文件数量</p>
+     * @param FileTotalCount <p>文件数量</p>
      */
     public void setFileTotalCount(Long FileTotalCount) {
         this.FileTotalCount = FileTotalCount;
     }
 
     /**
-     * Get 已迁移文件数量 
-     * @return FileMigratedCount 已迁移文件数量
+     * Get <p>已迁移文件数量</p> 
+     * @return FileMigratedCount <p>已迁移文件数量</p>
      */
     public Long getFileMigratedCount() {
         return this.FileMigratedCount;
     }
 
     /**
-     * Set 已迁移文件数量
-     * @param FileMigratedCount 已迁移文件数量
+     * Set <p>已迁移文件数量</p>
+     * @param FileMigratedCount <p>已迁移文件数量</p>
      */
     public void setFileMigratedCount(Long FileMigratedCount) {
         this.FileMigratedCount = FileMigratedCount;
     }
 
     /**
-     * Get 迁移失败文件数量 
-     * @return FileFailedCount 迁移失败文件数量
+     * Get <p>迁移失败文件数量</p> 
+     * @return FileFailedCount <p>迁移失败文件数量</p>
      */
     public Long getFileFailedCount() {
         return this.FileFailedCount;
     }
 
     /**
-     * Set 迁移失败文件数量
-     * @param FileFailedCount 迁移失败文件数量
+     * Set <p>迁移失败文件数量</p>
+     * @param FileFailedCount <p>迁移失败文件数量</p>
      */
     public void setFileFailedCount(Long FileFailedCount) {
         this.FileFailedCount = FileFailedCount;
     }
 
     /**
-     * Get 文件容量，单位Byte 
-     * @return FileTotalSize 文件容量，单位Byte
+     * Get <p>文件容量，单位Byte</p> 
+     * @return FileTotalSize <p>文件容量，单位Byte</p>
      */
     public Long getFileTotalSize() {
         return this.FileTotalSize;
     }
 
     /**
-     * Set 文件容量，单位Byte
-     * @param FileTotalSize 文件容量，单位Byte
+     * Set <p>文件容量，单位Byte</p>
+     * @param FileTotalSize <p>文件容量，单位Byte</p>
      */
     public void setFileTotalSize(Long FileTotalSize) {
         this.FileTotalSize = FileTotalSize;
     }
 
     /**
-     * Get 已迁移文件容量，单位Byte 
-     * @return FileMigratedSize 已迁移文件容量，单位Byte
+     * Get <p>已迁移文件容量，单位Byte</p> 
+     * @return FileMigratedSize <p>已迁移文件容量，单位Byte</p>
      */
     public Long getFileMigratedSize() {
         return this.FileMigratedSize;
     }
 
     /**
-     * Set 已迁移文件容量，单位Byte
-     * @param FileMigratedSize 已迁移文件容量，单位Byte
+     * Set <p>已迁移文件容量，单位Byte</p>
+     * @param FileMigratedSize <p>已迁移文件容量，单位Byte</p>
      */
     public void setFileMigratedSize(Long FileMigratedSize) {
         this.FileMigratedSize = FileMigratedSize;
     }
 
     /**
-     * Get 迁移失败文件容量，单位Byte 
-     * @return FileFailedSize 迁移失败文件容量，单位Byte
+     * Get <p>迁移失败文件容量，单位Byte</p> 
+     * @return FileFailedSize <p>迁移失败文件容量，单位Byte</p>
      */
     public Long getFileFailedSize() {
         return this.FileFailedSize;
     }
 
     /**
-     * Set 迁移失败文件容量，单位Byte
-     * @param FileFailedSize 迁移失败文件容量，单位Byte
+     * Set <p>迁移失败文件容量，单位Byte</p>
+     * @param FileFailedSize <p>迁移失败文件容量，单位Byte</p>
      */
     public void setFileFailedSize(Long FileFailedSize) {
         this.FileFailedSize = FileFailedSize;
     }
 
     /**
-     * Get 全部清单 
-     * @return FileTotalList 全部清单
+     * Get <p>全部清单</p> 
+     * @return FileTotalList <p>全部清单</p>
      */
     public String getFileTotalList() {
         return this.FileTotalList;
     }
 
     /**
-     * Set 全部清单
-     * @param FileTotalList 全部清单
+     * Set <p>全部清单</p>
+     * @param FileTotalList <p>全部清单</p>
      */
     public void setFileTotalList(String FileTotalList) {
         this.FileTotalList = FileTotalList;
     }
 
     /**
-     * Get 已完成文件清单 
-     * @return FileCompletedList 已完成文件清单
+     * Get <p>已完成文件清单</p> 
+     * @return FileCompletedList <p>已完成文件清单</p>
      */
     public String getFileCompletedList() {
         return this.FileCompletedList;
     }
 
     /**
-     * Set 已完成文件清单
-     * @param FileCompletedList 已完成文件清单
+     * Set <p>已完成文件清单</p>
+     * @param FileCompletedList <p>已完成文件清单</p>
      */
     public void setFileCompletedList(String FileCompletedList) {
         this.FileCompletedList = FileCompletedList;
     }
 
     /**
-     * Get 失败文件清单 
-     * @return FileFailedList 失败文件清单
+     * Get <p>失败文件清单</p> 
+     * @return FileFailedList <p>失败文件清单</p>
      */
     public String getFileFailedList() {
         return this.FileFailedList;
     }
 
     /**
-     * Set 失败文件清单
-     * @param FileFailedList 失败文件清单
+     * Set <p>失败文件清单</p>
+     * @param FileFailedList <p>失败文件清单</p>
      */
     public void setFileFailedList(String FileFailedList) {
         this.FileFailedList = FileFailedList;
     }
 
     /**
-     * Get 源桶路径 
-     * @return BucketPath 源桶路径
+     * Get <p>源桶路径</p> 
+     * @return BucketPath <p>源桶路径</p>
      */
     public String getBucketPath() {
         return this.BucketPath;
     }
 
     /**
-     * Set 源桶路径
-     * @param BucketPath 源桶路径
+     * Set <p>源桶路径</p>
+     * @param BucketPath <p>源桶路径</p>
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;
     }
 
     /**
-     * Get 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0 
-     * @return Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * Get <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p> 
+     * @return Direction <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
-     * @param Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * Set <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
+     * @param Direction <p>迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0</p>
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
+    }
+
+    /**
+     * Get <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul> 
+     * @return SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+     */
+    public String getSrcService() {
+        return this.SrcService;
+    }
+
+    /**
+     * Set <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+     * @param SrcService <p>数据源服务商</p><p>枚举值：</p><ul><li>COS： 腾讯云COS</li><li>OSS： 阿里云OSS</li><li>OBS： 华为云OBS</li><li>BOS： 百度云BOS</li><li>TOS： 火山引擎TOS</li></ul>
+     */
+    public void setSrcService(String SrcService) {
+        this.SrcService = SrcService;
     }
 
     public MigrationTaskInfo() {
@@ -707,6 +730,9 @@ public class MigrationTaskInfo extends AbstractModel {
         if (source.Direction != null) {
             this.Direction = new Long(source.Direction);
         }
+        if (source.SrcService != null) {
+            this.SrcService = new String(source.SrcService);
+        }
     }
 
 
@@ -740,6 +766,7 @@ public class MigrationTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileFailedList", this.FileFailedList);
         this.setParamSimple(map, prefix + "BucketPath", this.BucketPath);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
+        this.setParamSimple(map, prefix + "SrcService", this.SrcService);
 
     }
 }

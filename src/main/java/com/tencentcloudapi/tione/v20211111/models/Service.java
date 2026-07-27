@@ -332,6 +332,14 @@ public class Service extends AbstractModel {
     private String ChangerName;
 
     /**
+    * <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceSupplyAttribute")
+    @Expose
+    private ResourceSupplyAttribute ResourceSupplyAttribute;
+
+    /**
      * Get <p>服务组id</p> 
      * @return ServiceGroupId <p>服务组id</p>
      */
@@ -1091,6 +1099,26 @@ public class Service extends AbstractModel {
         this.ChangerName = ChangerName;
     }
 
+    /**
+     * Get <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceSupplyAttribute getResourceSupplyAttribute() {
+        return this.ResourceSupplyAttribute;
+    }
+
+    /**
+     * Set <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceSupplyAttribute <p>资源供应属性(潮汐/竞价等供应模式);空表示常规按量后付费</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceSupplyAttribute(ResourceSupplyAttribute ResourceSupplyAttribute) {
+        this.ResourceSupplyAttribute = ResourceSupplyAttribute;
+    }
+
     public Service() {
     }
 
@@ -1225,6 +1253,9 @@ public class Service extends AbstractModel {
         if (source.ChangerName != null) {
             this.ChangerName = new String(source.ChangerName);
         }
+        if (source.ResourceSupplyAttribute != null) {
+            this.ResourceSupplyAttribute = new ResourceSupplyAttribute(source.ResourceSupplyAttribute);
+        }
     }
 
 
@@ -1272,6 +1303,7 @@ public class Service extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Changer", this.Changer);
         this.setParamSimple(map, prefix + "ChangerName", this.ChangerName);
+        this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
 
     }
 }

@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class FieldWriteConfig extends AbstractModel {
 
     /**
-    * 1:开启 0:不开启
+    * <p>1:开启 0:不开启</p>
     */
     @SerializedName("EnableHeaders")
     @Expose
     private Long EnableHeaders;
 
     /**
-    * 1:开启 0:不开启
+    * <p>1:开启 0:不开启</p>
     */
     @SerializedName("EnableBody")
     @Expose
     private Long EnableBody;
 
     /**
-    * 1:开启 0:不开启
+    * <p>1:开启 0:不开启</p>
     */
     @SerializedName("EnableBot")
     @Expose
     private Long EnableBot;
 
     /**
-    * 响应方向body
-1:开启 0:不开启
+    * <p>响应方向body<br>1:开启 0:不开启</p>
     */
     @SerializedName("EnableResponse")
     @Expose
     private Long EnableResponse;
 
     /**
-     * Get 1:开启 0:不开启 
-     * @return EnableHeaders 1:开启 0:不开启
+     * Get <p>1:开启 0:不开启</p> 
+     * @return EnableHeaders <p>1:开启 0:不开启</p>
      */
     public Long getEnableHeaders() {
         return this.EnableHeaders;
     }
 
     /**
-     * Set 1:开启 0:不开启
-     * @param EnableHeaders 1:开启 0:不开启
+     * Set <p>1:开启 0:不开启</p>
+     * @param EnableHeaders <p>1:开启 0:不开启</p>
      */
     public void setEnableHeaders(Long EnableHeaders) {
         this.EnableHeaders = EnableHeaders;
     }
 
     /**
-     * Get 1:开启 0:不开启 
-     * @return EnableBody 1:开启 0:不开启
+     * Get <p>1:开启 0:不开启</p> 
+     * @return EnableBody <p>1:开启 0:不开启</p>
      */
     public Long getEnableBody() {
         return this.EnableBody;
     }
 
     /**
-     * Set 1:开启 0:不开启
-     * @param EnableBody 1:开启 0:不开启
+     * Set <p>1:开启 0:不开启</p>
+     * @param EnableBody <p>1:开启 0:不开启</p>
      */
     public void setEnableBody(Long EnableBody) {
         this.EnableBody = EnableBody;
     }
 
     /**
-     * Get 1:开启 0:不开启 
-     * @return EnableBot 1:开启 0:不开启
+     * Get <p>1:开启 0:不开启</p> 
+     * @return EnableBot <p>1:开启 0:不开启</p>
      */
     public Long getEnableBot() {
         return this.EnableBot;
     }
 
     /**
-     * Set 1:开启 0:不开启
-     * @param EnableBot 1:开启 0:不开启
+     * Set <p>1:开启 0:不开启</p>
+     * @param EnableBot <p>1:开启 0:不开启</p>
      */
     public void setEnableBot(Long EnableBot) {
         this.EnableBot = EnableBot;
     }
 
     /**
-     * Get 响应方向body
-1:开启 0:不开启 
-     * @return EnableResponse 响应方向body
-1:开启 0:不开启
+     * Get <p>响应方向body<br>1:开启 0:不开启</p> 
+     * @return EnableResponse <p>响应方向body<br>1:开启 0:不开启</p>
      */
     public Long getEnableResponse() {
         return this.EnableResponse;
     }
 
     /**
-     * Set 响应方向body
-1:开启 0:不开启
-     * @param EnableResponse 响应方向body
-1:开启 0:不开启
+     * Set <p>响应方向body<br>1:开启 0:不开启</p>
+     * @param EnableResponse <p>响应方向body<br>1:开启 0:不开启</p>
      */
     public void setEnableResponse(Long EnableResponse) {
         this.EnableResponse = EnableResponse;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRumLogDetailsV2Response extends AbstractModel {
 
     /**
-    * 日志明细
+    * <p>日志明细</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRumLogDetailsV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志明细 
-     * @return Result 日志明细
+     * Get <p>日志明细</p> 
+     * @return Result <p>日志明细</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 日志明细
-     * @param Result 日志明细
+     * Set <p>日志明细</p>
+     * @param Result <p>日志明细</p>
      */
     public void setResult(String Result) {
         this.Result = Result;

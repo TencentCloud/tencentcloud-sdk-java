@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeRumLogExportV2Request extends AbstractModel {
 
     /**
-    * Export name
+    * <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Start time
+    * <p>查询日志开始时间(必填)</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query statement
+    * <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * End time
+    * <p>查询日志结束时间(必填)</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Project ID
+    * <p>项目ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * c字段
+    * <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-     * Get Export name 
-     * @return Name Export name
+     * Get <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p> 
+     * @return Name <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Export name
-     * @param Name Export name
+     * Set <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
+     * @param Name <p>Name（string，必填）：导出任务名称标识，需要在使用API创建导出任务时填写。此字段为后续能力扩展预留，不在查询结果中返回。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get <p>查询日志开始时间(必填)</p> 
+     * @return StartTime <p>查询日志开始时间(必填)</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set <p>查询日志开始时间(必填)</p>
+     * @param StartTime <p>查询日志开始时间(必填)</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query statement 
-     * @return Filter Query statement
+     * Get <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p> 
+     * @return Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Query statement
-     * @param Filter Query statement
+     * Set <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get <p>查询日志结束时间(必填)</p> 
+     * @return EndTime <p>查询日志结束时间(必填)</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set <p>查询日志结束时间(必填)</p>
+     * @param EndTime <p>查询日志结束时间(必填)</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Project ID 
-     * @return ID Project ID
+     * Get <p>项目ID</p> 
+     * @return ID <p>项目ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Project ID
-     * @param ID Project ID
+     * Set <p>项目ID</p>
+     * @param ID <p>项目ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get c字段 
-     * @return Fields c字段
+     * Get <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul> 
+     * @return Fields <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set c字段
-     * @param Fields c字段
+     * Set <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
+     * @param Fields <p>注意：这个字段必选，不能为空！选择要导出哪些字段的参数，对应日志的列，可查看文档：https://cloud.tencent.com/document/product/248/87223</p><p>枚举值：</p><ul><li>level： 日志类型</li><li>url： URL</li><li>ip： 用户终端IP</li><li>version： 版本</li></ul>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;

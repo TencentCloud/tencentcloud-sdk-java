@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeRumLogTotalV2Request extends AbstractModel {
 
     /**
-    * 排序方式 desc asc
+    * <p>排序方式 desc asc</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 开始时间（必填）格式为时间戳 毫秒
+    * <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 单次查询返回的原始日志条数，最大值为100（必填）
+    * <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询的相关参数
+    * <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 结束时间（必填）格式为时间戳 毫秒
+    * <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 项目ID（必填）
+    * <p>项目ID（必填）</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 上次查询的最后一个日志的时间戳
+    * <p>上次查询的最后一个日志的时间戳</p>
     */
     @SerializedName("LastTime")
     @Expose
     private Long LastTime;
 
     /**
-    * 上次查询的最后一个日志的rowId
+    * <p>上次查询的最后一个日志的rowId</p>
     */
     @SerializedName("LastRowId")
     @Expose
     private Long LastRowId;
 
     /**
-     * Get 排序方式 desc asc 
-     * @return OrderBy 排序方式 desc asc
+     * Get <p>排序方式 desc asc</p> 
+     * @return OrderBy <p>排序方式 desc asc</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序方式 desc asc
-     * @param OrderBy 排序方式 desc asc
+     * Set <p>排序方式 desc asc</p>
+     * @param OrderBy <p>排序方式 desc asc</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 开始时间（必填）格式为时间戳 毫秒 
-     * @return StartTime 开始时间（必填）格式为时间戳 毫秒
+     * Get <p>查询日志开始时间（必填）格式为时间戳 毫秒</p> 
+     * @return StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）格式为时间戳 毫秒
-     * @param StartTime 开始时间（必填）格式为时间戳 毫秒
+     * Set <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+     * @param StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 单次查询返回的原始日志条数，最大值为100（必填） 
-     * @return Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Get <p>单次查询返回的原始日志条数，最大值为100（必填）</p> 
+     * @return Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Set <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询的相关参数 
-     * @return Filter 查询的相关参数
+     * Get <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p> 
+     * @return Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 查询的相关参数
-     * @param Filter 查询的相关参数
+     * Set <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 结束时间（必填）格式为时间戳 毫秒 
-     * @return EndTime 结束时间（必填）格式为时间戳 毫秒
+     * Get <p>查询日志结束时间（必填）格式为时间戳 毫秒</p> 
+     * @return EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）格式为时间戳 毫秒
-     * @param EndTime 结束时间（必填）格式为时间戳 毫秒
+     * Set <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+     * @param EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID（必填） 
-     * @return ID 项目ID（必填）
+     * Get <p>项目ID（必填）</p> 
+     * @return ID <p>项目ID（必填）</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID（必填）
-     * @param ID 项目ID（必填）
+     * Set <p>项目ID（必填）</p>
+     * @param ID <p>项目ID（必填）</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 上次查询的最后一个日志的时间戳 
-     * @return LastTime 上次查询的最后一个日志的时间戳
+     * Get <p>上次查询的最后一个日志的时间戳</p> 
+     * @return LastTime <p>上次查询的最后一个日志的时间戳</p>
      */
     public Long getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set 上次查询的最后一个日志的时间戳
-     * @param LastTime 上次查询的最后一个日志的时间戳
+     * Set <p>上次查询的最后一个日志的时间戳</p>
+     * @param LastTime <p>上次查询的最后一个日志的时间戳</p>
      */
     public void setLastTime(Long LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get 上次查询的最后一个日志的rowId 
-     * @return LastRowId 上次查询的最后一个日志的rowId
+     * Get <p>上次查询的最后一个日志的rowId</p> 
+     * @return LastRowId <p>上次查询的最后一个日志的rowId</p>
      */
     public Long getLastRowId() {
         return this.LastRowId;
     }
 
     /**
-     * Set 上次查询的最后一个日志的rowId
-     * @param LastRowId 上次查询的最后一个日志的rowId
+     * Set <p>上次查询的最后一个日志的rowId</p>
+     * @param LastRowId <p>上次查询的最后一个日志的rowId</p>
      */
     public void setLastRowId(Long LastRowId) {
         this.LastRowId = LastRowId;

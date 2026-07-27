@@ -24,396 +24,391 @@ import java.util.HashMap;
 public class BackupScheduleInfo extends AbstractModel {
 
     /**
-    * 迁移类型：
-1-远端集群迁移；2-COS迁移
+    * <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
     */
     @SerializedName("BackupType")
     @Expose
     private Long BackupType;
 
     /**
-    * 当前任务现存实例数
+    * <p>当前任务现存实例数</p>
     */
     @SerializedName("ExistCount")
     @Expose
     private Long ExistCount;
 
     /**
-    * cos信息
+    * <p>cos信息</p>
     */
     @SerializedName("CosSourceInfo")
     @Expose
     private String CosSourceInfo;
 
     /**
-    * doris信息
+    * <p>doris信息</p>
     */
     @SerializedName("DorisSourceInfo")
     @Expose
     private String DorisSourceInfo;
 
     /**
-    * 恢复类型
+    * <p>恢复类型</p>
     */
     @SerializedName("RestoreType")
     @Expose
     private Long RestoreType;
 
     /**
-    * 快照保留策略
+    * <p>快照保留策略</p>
     */
     @SerializedName("SnapshotRemainPolicy")
     @Expose
     private SnapshotRemainPolicy SnapshotRemainPolicy;
 
     /**
-    * 远程备份地域
+    * <p>远程备份地域</p>
     */
     @SerializedName("DataRemoteRegion")
     @Expose
     private String DataRemoteRegion;
 
     /**
-    * 是否在宽限期内
+    * <p>是否在宽限期内</p>
     */
     @SerializedName("IsWithinGracePeriod")
     @Expose
     private Boolean IsWithinGracePeriod;
 
     /**
-    * 宽限期（天数）
+    * <p>宽限期（天数）</p>
     */
     @SerializedName("GracePeriod")
     @Expose
     private Long GracePeriod;
 
     /**
-    * 宽限开始时间
+    * <p>宽限开始时间</p>
     */
     @SerializedName("GraceStartTime")
     @Expose
     private String GraceStartTime;
 
     /**
-    * 托管桶类型：standard-标准，多可用区-MAZ
+    * <p>托管桶类型：standard-标准，多可用区-MAZ</p>
     */
     @SerializedName("BucketType")
     @Expose
     private String BucketType;
 
     /**
-    * 是否开启安全锁：0-未开启，1-已开启
+    * <p>是否开启安全锁：0-未开启，1-已开启</p>
     */
     @SerializedName("EnableSecurityLock")
     @Expose
     private Long EnableSecurityLock;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 实例状态描述
+    * <p>实例状态描述</p>
     */
     @SerializedName("InstanceStatusDesc")
     @Expose
     private String InstanceStatusDesc;
 
     /**
-    * 桶加密状态信息
+    * <p>桶加密状态信息</p>
     */
     @SerializedName("BucketEncryption")
     @Expose
     private BucketEncryptionInfo BucketEncryption;
 
     /**
-     * Get 迁移类型：
-1-远端集群迁移；2-COS迁移 
-     * @return BackupType 迁移类型：
-1-远端集群迁移；2-COS迁移
+     * Get <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p> 
+     * @return BackupType <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 迁移类型：
-1-远端集群迁移；2-COS迁移
-     * @param BackupType 迁移类型：
-1-远端集群迁移；2-COS迁移
+     * Set <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
+     * @param BackupType <p>迁移类型：<br>1-远端集群迁移；2-COS迁移</p>
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 当前任务现存实例数 
-     * @return ExistCount 当前任务现存实例数
+     * Get <p>当前任务现存实例数</p> 
+     * @return ExistCount <p>当前任务现存实例数</p>
      */
     public Long getExistCount() {
         return this.ExistCount;
     }
 
     /**
-     * Set 当前任务现存实例数
-     * @param ExistCount 当前任务现存实例数
+     * Set <p>当前任务现存实例数</p>
+     * @param ExistCount <p>当前任务现存实例数</p>
      */
     public void setExistCount(Long ExistCount) {
         this.ExistCount = ExistCount;
     }
 
     /**
-     * Get cos信息 
-     * @return CosSourceInfo cos信息
+     * Get <p>cos信息</p> 
+     * @return CosSourceInfo <p>cos信息</p>
      */
     public String getCosSourceInfo() {
         return this.CosSourceInfo;
     }
 
     /**
-     * Set cos信息
-     * @param CosSourceInfo cos信息
+     * Set <p>cos信息</p>
+     * @param CosSourceInfo <p>cos信息</p>
      */
     public void setCosSourceInfo(String CosSourceInfo) {
         this.CosSourceInfo = CosSourceInfo;
     }
 
     /**
-     * Get doris信息 
-     * @return DorisSourceInfo doris信息
+     * Get <p>doris信息</p> 
+     * @return DorisSourceInfo <p>doris信息</p>
      */
     public String getDorisSourceInfo() {
         return this.DorisSourceInfo;
     }
 
     /**
-     * Set doris信息
-     * @param DorisSourceInfo doris信息
+     * Set <p>doris信息</p>
+     * @param DorisSourceInfo <p>doris信息</p>
      */
     public void setDorisSourceInfo(String DorisSourceInfo) {
         this.DorisSourceInfo = DorisSourceInfo;
     }
 
     /**
-     * Get 恢复类型 
-     * @return RestoreType 恢复类型
+     * Get <p>恢复类型</p> 
+     * @return RestoreType <p>恢复类型</p>
      */
     public Long getRestoreType() {
         return this.RestoreType;
     }
 
     /**
-     * Set 恢复类型
-     * @param RestoreType 恢复类型
+     * Set <p>恢复类型</p>
+     * @param RestoreType <p>恢复类型</p>
      */
     public void setRestoreType(Long RestoreType) {
         this.RestoreType = RestoreType;
     }
 
     /**
-     * Get 快照保留策略 
-     * @return SnapshotRemainPolicy 快照保留策略
+     * Get <p>快照保留策略</p> 
+     * @return SnapshotRemainPolicy <p>快照保留策略</p>
      */
     public SnapshotRemainPolicy getSnapshotRemainPolicy() {
         return this.SnapshotRemainPolicy;
     }
 
     /**
-     * Set 快照保留策略
-     * @param SnapshotRemainPolicy 快照保留策略
+     * Set <p>快照保留策略</p>
+     * @param SnapshotRemainPolicy <p>快照保留策略</p>
      */
     public void setSnapshotRemainPolicy(SnapshotRemainPolicy SnapshotRemainPolicy) {
         this.SnapshotRemainPolicy = SnapshotRemainPolicy;
     }
 
     /**
-     * Get 远程备份地域 
-     * @return DataRemoteRegion 远程备份地域
+     * Get <p>远程备份地域</p> 
+     * @return DataRemoteRegion <p>远程备份地域</p>
      */
     public String getDataRemoteRegion() {
         return this.DataRemoteRegion;
     }
 
     /**
-     * Set 远程备份地域
-     * @param DataRemoteRegion 远程备份地域
+     * Set <p>远程备份地域</p>
+     * @param DataRemoteRegion <p>远程备份地域</p>
      */
     public void setDataRemoteRegion(String DataRemoteRegion) {
         this.DataRemoteRegion = DataRemoteRegion;
     }
 
     /**
-     * Get 是否在宽限期内 
-     * @return IsWithinGracePeriod 是否在宽限期内
+     * Get <p>是否在宽限期内</p> 
+     * @return IsWithinGracePeriod <p>是否在宽限期内</p>
      */
     public Boolean getIsWithinGracePeriod() {
         return this.IsWithinGracePeriod;
     }
 
     /**
-     * Set 是否在宽限期内
-     * @param IsWithinGracePeriod 是否在宽限期内
+     * Set <p>是否在宽限期内</p>
+     * @param IsWithinGracePeriod <p>是否在宽限期内</p>
      */
     public void setIsWithinGracePeriod(Boolean IsWithinGracePeriod) {
         this.IsWithinGracePeriod = IsWithinGracePeriod;
     }
 
     /**
-     * Get 宽限期（天数） 
-     * @return GracePeriod 宽限期（天数）
+     * Get <p>宽限期（天数）</p> 
+     * @return GracePeriod <p>宽限期（天数）</p>
      */
     public Long getGracePeriod() {
         return this.GracePeriod;
     }
 
     /**
-     * Set 宽限期（天数）
-     * @param GracePeriod 宽限期（天数）
+     * Set <p>宽限期（天数）</p>
+     * @param GracePeriod <p>宽限期（天数）</p>
      */
     public void setGracePeriod(Long GracePeriod) {
         this.GracePeriod = GracePeriod;
     }
 
     /**
-     * Get 宽限开始时间 
-     * @return GraceStartTime 宽限开始时间
+     * Get <p>宽限开始时间</p> 
+     * @return GraceStartTime <p>宽限开始时间</p>
      */
     public String getGraceStartTime() {
         return this.GraceStartTime;
     }
 
     /**
-     * Set 宽限开始时间
-     * @param GraceStartTime 宽限开始时间
+     * Set <p>宽限开始时间</p>
+     * @param GraceStartTime <p>宽限开始时间</p>
      */
     public void setGraceStartTime(String GraceStartTime) {
         this.GraceStartTime = GraceStartTime;
     }
 
     /**
-     * Get 托管桶类型：standard-标准，多可用区-MAZ 
-     * @return BucketType 托管桶类型：standard-标准，多可用区-MAZ
+     * Get <p>托管桶类型：standard-标准，多可用区-MAZ</p> 
+     * @return BucketType <p>托管桶类型：standard-标准，多可用区-MAZ</p>
      */
     public String getBucketType() {
         return this.BucketType;
     }
 
     /**
-     * Set 托管桶类型：standard-标准，多可用区-MAZ
-     * @param BucketType 托管桶类型：standard-标准，多可用区-MAZ
+     * Set <p>托管桶类型：standard-标准，多可用区-MAZ</p>
+     * @param BucketType <p>托管桶类型：standard-标准，多可用区-MAZ</p>
      */
     public void setBucketType(String BucketType) {
         this.BucketType = BucketType;
     }
 
     /**
-     * Get 是否开启安全锁：0-未开启，1-已开启 
-     * @return EnableSecurityLock 是否开启安全锁：0-未开启，1-已开启
+     * Get <p>是否开启安全锁：0-未开启，1-已开启</p> 
+     * @return EnableSecurityLock <p>是否开启安全锁：0-未开启，1-已开启</p>
      */
     public Long getEnableSecurityLock() {
         return this.EnableSecurityLock;
     }
 
     /**
-     * Set 是否开启安全锁：0-未开启，1-已开启
-     * @param EnableSecurityLock 是否开启安全锁：0-未开启，1-已开启
+     * Set <p>是否开启安全锁：0-未开启，1-已开启</p>
+     * @param EnableSecurityLock <p>是否开启安全锁：0-未开启，1-已开启</p>
      */
     public void setEnableSecurityLock(Long EnableSecurityLock) {
         this.EnableSecurityLock = EnableSecurityLock;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get <p>实例名</p> 
+     * @return InstanceName <p>实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set <p>实例名</p>
+     * @param InstanceName <p>实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例状态 
-     * @return InstanceStatus 实例状态
+     * Get <p>实例状态</p> 
+     * @return InstanceStatus <p>实例状态</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param InstanceStatus 实例状态
+     * Set <p>实例状态</p>
+     * @param InstanceStatus <p>实例状态</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 实例状态描述 
-     * @return InstanceStatusDesc 实例状态描述
+     * Get <p>实例状态描述</p> 
+     * @return InstanceStatusDesc <p>实例状态描述</p>
      */
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
 
     /**
-     * Set 实例状态描述
-     * @param InstanceStatusDesc 实例状态描述
+     * Set <p>实例状态描述</p>
+     * @param InstanceStatusDesc <p>实例状态描述</p>
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
     }
 
     /**
-     * Get 桶加密状态信息 
-     * @return BucketEncryption 桶加密状态信息
+     * Get <p>桶加密状态信息</p> 
+     * @return BucketEncryption <p>桶加密状态信息</p>
      */
     public BucketEncryptionInfo getBucketEncryption() {
         return this.BucketEncryption;
     }
 
     /**
-     * Set 桶加密状态信息
-     * @param BucketEncryption 桶加密状态信息
+     * Set <p>桶加密状态信息</p>
+     * @param BucketEncryption <p>桶加密状态信息</p>
      */
     public void setBucketEncryption(BucketEncryptionInfo BucketEncryption) {
         this.BucketEncryption = BucketEncryption;

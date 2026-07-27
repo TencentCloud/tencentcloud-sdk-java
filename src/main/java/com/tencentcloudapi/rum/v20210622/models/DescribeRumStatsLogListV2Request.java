@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeRumStatsLogListV2Request extends AbstractModel {
 
     /**
-    * 开始时间（必填）
+    * <p>查询日志开始时间（必填）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 单次查询返回的原始日志条数，最大值为100（必填）
+    * <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件
+    * <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 结束时间（必填）
+    * <p>查询日志结束时间（必填）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 项目ID（必填）
+    * <p>项目ID（必填）</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-     * Get 开始时间（必填） 
-     * @return StartTime 开始时间（必填）
+     * Get <p>查询日志开始时间（必填）</p> 
+     * @return StartTime <p>查询日志开始时间（必填）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）
-     * @param StartTime 开始时间（必填）
+     * Set <p>查询日志开始时间（必填）</p>
+     * @param StartTime <p>查询日志开始时间（必填）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 单次查询返回的原始日志条数，最大值为100（必填） 
-     * @return Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Get <p>单次查询返回的原始日志条数，最大值为100（必填）</p> 
+     * @return Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Set <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filter 过滤条件
+     * Get <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p> 
+     * @return Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filter 过滤条件
+     * Set <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
+     * @param Filter <p>过滤条件，其中key与运算符(Operator)对应可选字段枚举值与示例查看文档：https://cloud.tencent.com/document/product/248/87223</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 结束时间（必填） 
-     * @return EndTime 结束时间（必填）
+     * Get <p>查询日志结束时间（必填）</p> 
+     * @return EndTime <p>查询日志结束时间（必填）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）
-     * @param EndTime 结束时间（必填）
+     * Set <p>查询日志结束时间（必填）</p>
+     * @param EndTime <p>查询日志结束时间（必填）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID（必填） 
-     * @return ID 项目ID（必填）
+     * Get <p>项目ID（必填）</p> 
+     * @return ID <p>项目ID（必填）</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID（必填）
-     * @param ID 项目ID（必填）
+     * Set <p>项目ID（必填）</p>
+     * @param ID <p>项目ID（必填）</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
