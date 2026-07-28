@@ -38,7 +38,7 @@ public class DataDisk extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * <p>磁盘名称</p>
+    * <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
     */
     @SerializedName("DiskName")
     @Expose
@@ -77,16 +77,16 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get <p>磁盘名称</p> 
-     * @return DiskName <p>磁盘名称</p>
+     * Get <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p> 
+     * @return DiskName <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
      */
     public String getDiskName() {
         return this.DiskName;
     }
 
     /**
-     * Set <p>磁盘名称</p>
-     * @param DiskName <p>磁盘名称</p>
+     * Set <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
+     * @param DiskName <p>磁盘名称</p><p>DataDisk 作为输入参数时，DiskName 无效。</p>
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

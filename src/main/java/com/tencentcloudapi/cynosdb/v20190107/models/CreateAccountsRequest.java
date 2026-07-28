@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateAccountsRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 新账户列表
+    * <p>新账户列表</p>
     */
     @SerializedName("Accounts")
     @Expose
     private NewAccount [] Accounts;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 新账户列表 
-     * @return Accounts 新账户列表
+     * Get <p>新账户列表</p> 
+     * @return Accounts <p>新账户列表</p>
      */
     public NewAccount [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 新账户列表
-     * @param Accounts 新账户列表
+     * Set <p>新账户列表</p>
+     * @param Accounts <p>新账户列表</p>
      */
     public void setAccounts(NewAccount [] Accounts) {
         this.Accounts = Accounts;

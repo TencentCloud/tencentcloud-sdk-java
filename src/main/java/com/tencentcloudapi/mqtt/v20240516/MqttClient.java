@@ -402,6 +402,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *跨集群灾备场景下查询设备证书同步记录
+     * @param req DescribeDeviceCertificateBackupHistoryRequest
+     * @return DescribeDeviceCertificateBackupHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCertificateBackupHistoryResponse DescribeDeviceCertificateBackupHistory(DescribeDeviceCertificateBackupHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCertificateBackupHistory", DescribeDeviceCertificateBackupHistoryResponse.class);
+    }
+
+    /**
      *分页查询设备证书
      * @param req DescribeDeviceCertificatesRequest
      * @return DescribeDeviceCertificatesResponse
@@ -432,6 +443,17 @@ public class MqttClient extends AbstractClient{
     public DescribeDeviceIdentityResponse DescribeDeviceIdentity(DescribeDeviceIdentityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeviceIdentity", DescribeDeviceIdentityResponse.class);
+    }
+
+    /**
+     *跨集群容灾场景下查询设备标识同步记录
+     * @param req DescribeDeviceIdentityBackupHistoryRequest
+     * @return DescribeDeviceIdentityBackupHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceIdentityBackupHistoryResponse DescribeDeviceIdentityBackupHistory(DescribeDeviceIdentityBackupHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceIdentityBackupHistory", DescribeDeviceIdentityBackupHistoryResponse.class);
     }
 
     /**
@@ -629,6 +651,17 @@ public class MqttClient extends AbstractClient{
     public DescribeUserListResponse DescribeUserList(DescribeUserListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserList", DescribeUserListResponse.class);
+    }
+
+    /**
+     *遗嘱消息查询
+     * @param req DescribeWillMessageRequest
+     * @return DescribeWillMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWillMessageResponse DescribeWillMessage(DescribeWillMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWillMessage", DescribeWillMessageResponse.class);
     }
 
     /**

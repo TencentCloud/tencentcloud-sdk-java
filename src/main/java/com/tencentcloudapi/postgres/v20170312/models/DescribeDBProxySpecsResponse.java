@@ -1,0 +1,158 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.postgres.v20170312.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeDBProxySpecsResponse extends AbstractModel {
+
+    /**
+    * <p>规格列表</p>
+    */
+    @SerializedName("SpecSet")
+    @Expose
+    private ProxySpecItem [] SpecSet;
+
+    /**
+    * <p>该实例是否支持开通 Proxy（仅传 DBInstanceId 时返回）</p>
+    */
+    @SerializedName("SupportProxy")
+    @Expose
+    private Boolean SupportProxy;
+
+    /**
+    * <p>可部署可用区列表（仅传 DBInstanceId 时返回）</p>
+    */
+    @SerializedName("AvailableZones")
+    @Expose
+    private String [] AvailableZones;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get <p>规格列表</p> 
+     * @return SpecSet <p>规格列表</p>
+     */
+    public ProxySpecItem [] getSpecSet() {
+        return this.SpecSet;
+    }
+
+    /**
+     * Set <p>规格列表</p>
+     * @param SpecSet <p>规格列表</p>
+     */
+    public void setSpecSet(ProxySpecItem [] SpecSet) {
+        this.SpecSet = SpecSet;
+    }
+
+    /**
+     * Get <p>该实例是否支持开通 Proxy（仅传 DBInstanceId 时返回）</p> 
+     * @return SupportProxy <p>该实例是否支持开通 Proxy（仅传 DBInstanceId 时返回）</p>
+     */
+    public Boolean getSupportProxy() {
+        return this.SupportProxy;
+    }
+
+    /**
+     * Set <p>该实例是否支持开通 Proxy（仅传 DBInstanceId 时返回）</p>
+     * @param SupportProxy <p>该实例是否支持开通 Proxy（仅传 DBInstanceId 时返回）</p>
+     */
+    public void setSupportProxy(Boolean SupportProxy) {
+        this.SupportProxy = SupportProxy;
+    }
+
+    /**
+     * Get <p>可部署可用区列表（仅传 DBInstanceId 时返回）</p> 
+     * @return AvailableZones <p>可部署可用区列表（仅传 DBInstanceId 时返回）</p>
+     */
+    public String [] getAvailableZones() {
+        return this.AvailableZones;
+    }
+
+    /**
+     * Set <p>可部署可用区列表（仅传 DBInstanceId 时返回）</p>
+     * @param AvailableZones <p>可部署可用区列表（仅传 DBInstanceId 时返回）</p>
+     */
+    public void setAvailableZones(String [] AvailableZones) {
+        this.AvailableZones = AvailableZones;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeDBProxySpecsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDBProxySpecsResponse(DescribeDBProxySpecsResponse source) {
+        if (source.SpecSet != null) {
+            this.SpecSet = new ProxySpecItem[source.SpecSet.length];
+            for (int i = 0; i < source.SpecSet.length; i++) {
+                this.SpecSet[i] = new ProxySpecItem(source.SpecSet[i]);
+            }
+        }
+        if (source.SupportProxy != null) {
+            this.SupportProxy = new Boolean(source.SupportProxy);
+        }
+        if (source.AvailableZones != null) {
+            this.AvailableZones = new String[source.AvailableZones.length];
+            for (int i = 0; i < source.AvailableZones.length; i++) {
+                this.AvailableZones[i] = new String(source.AvailableZones[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "SpecSet.", this.SpecSet);
+        this.setParamSimple(map, prefix + "SupportProxy", this.SupportProxy);
+        this.setParamArraySimple(map, prefix + "AvailableZones.", this.AvailableZones);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

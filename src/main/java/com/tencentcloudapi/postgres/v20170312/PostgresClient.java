@@ -149,6 +149,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateDBProxy）用于为指定的 PostgreSQL 实例创建数据库代理（Proxy）。走计费下单流程，下单成功后异步发起 Proxy 创建任务，同步返回订单号 DealName 与 Proxy 实例 ID ProxyGroupId。当前仅支持后付费按量计费。
+     * @param req CreateDBProxyRequest
+     * @return CreateDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBProxyResponse CreateDBProxy(CreateDBProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDBProxy", CreateDBProxyResponse.class);
+    }
+
+    /**
      *此接口用于创建数据库，需指定数据库名及所有者。
      * @param req CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -560,6 +571,28 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBProxy）用于查询指定 PostgreSQL 实例下的数据库代理（Proxy）信息，包含 Proxy 节点列表与接入地址列表。可选传入 ProxyGroupId 精确查询某一 Proxy；不传则返回该实例下的全部 Proxy。
+     * @param req DescribeDBProxyRequest
+     * @return DescribeDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBProxyResponse DescribeDBProxy(DescribeDBProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBProxy", DescribeDBProxyResponse.class);
+    }
+
+    /**
+     *查询代理可售规格
+     * @param req DescribeDBProxySpecsRequest
+     * @return DescribeDBProxySpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBProxySpecsResponse DescribeDBProxySpecs(DescribeDBProxySpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBProxySpecs", DescribeDBProxySpecsResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBVersions）用于查询支持的数据库版本。
      * @param req DescribeDBVersionsRequest
      * @return DescribeDBVersionsResponse
@@ -789,6 +822,17 @@ public class PostgresClient extends AbstractClient{
     public DestroyDBInstanceResponse DestroyDBInstance(DestroyDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroyDBInstance", DestroyDBInstanceResponse.class);
+    }
+
+    /**
+     *本接口（DestroyDBProxy）用于销毁指定的数据库代理（Proxy）。接口仅返回 RequestId，销毁动作由计费回调异步触发 ProxyDestroy 任务，内部统一完成「隔离 + 销毁」全部步骤（释放 VIP、解绑安全组、回收资源、上报计费等），用户无需先调用隔离接口。
+     * @param req DestroyDBProxyRequest
+     * @return DestroyDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyDBProxyResponse DestroyDBProxy(DestroyDBProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyDBProxy", DestroyDBProxyResponse.class);
     }
 
     /**
@@ -1047,6 +1091,28 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBProxy）用于修改数据库代理（Proxy）。支持两种模式：①仅修改 Description 时同步生效，不下单，DealName 为空；②变更 Proxy 节点规格或数量（ProxyNodeCustom）时走计费下单流程，异步触发变配任务，返回 DealName。可通过 SwitchTag 控制变配执行时机。
+     * @param req ModifyDBProxyRequest
+     * @return ModifyDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBProxyResponse ModifyDBProxy(ModifyDBProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBProxy", ModifyDBProxyResponse.class);
+    }
+
+    /**
+     *修改代理地址配置
+     * @param req ModifyDBProxyAddressRequest
+     * @return ModifyDBProxyAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBProxyAddressResponse ModifyDBProxyAddress(ModifyDBProxyAddressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBProxyAddress", ModifyDBProxyAddressResponse.class);
+    }
+
+    /**
      *修改数据库所有者
      * @param req ModifyDatabaseOwnerRequest
      * @return ModifyDatabaseOwnerResponse
@@ -1165,6 +1231,17 @@ public class PostgresClient extends AbstractClient{
     public RefreshAccountPasswordResponse RefreshAccountPassword(RefreshAccountPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RefreshAccountPassword", RefreshAccountPasswordResponse.class);
+    }
+
+    /**
+     *本接口（ReloadBalanceDBProxyNode）用于重新均衡数据库代理节点
+     * @param req ReloadBalanceDBProxyNodeRequest
+     * @return ReloadBalanceDBProxyNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReloadBalanceDBProxyNodeResponse ReloadBalanceDBProxyNode(ReloadBalanceDBProxyNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReloadBalanceDBProxyNode", ReloadBalanceDBProxyNodeResponse.class);
     }
 
     /**

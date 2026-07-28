@@ -424,7 +424,10 @@ public enum CynosdbErrorCode {
      UNAUTHORIZEDOPERATION_NOTREALNAMEACCOUNT("UnauthorizedOperation.NotRealNameAccount"),
      
      /* CAM鉴权不通过。 */
-     UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied");
+     UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
+     
+     /* 授权失败或已取消授权 */
+     UNAUTHORIZEDOPERATION_ROLEUNAUTHORIZED("UnauthorizedOperation.RoleUnauthorized");
      
     private String value;
     private CynosdbErrorCode (String value){

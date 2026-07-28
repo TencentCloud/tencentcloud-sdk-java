@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LogIdentity extends AbstractModel {
 
     /**
-    * 单条日志的ID
+    * <p>单条日志的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class LogIdentity extends AbstractModel {
     private String Id;
 
     /**
-    * 单条日志的内容
+    * <p>单条日志的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -40,7 +40,7 @@ public class LogIdentity extends AbstractModel {
     private String Message;
 
     /**
-    * 这条日志对应的Pod名称
+    * <p>这条日志对应的Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodName")
@@ -48,7 +48,7 @@ public class LogIdentity extends AbstractModel {
     private String PodName;
 
     /**
-    * 日志的时间戳（RFC3339格式的时间字符串）
+    * <p>日志的时间戳（RFC3339格式的时间字符串）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -56,9 +56,23 @@ public class LogIdentity extends AbstractModel {
     private String Timestamp;
 
     /**
-     * Get 单条日志的ID
+    * <p>日志上报请求包的ID</p>
+    */
+    @SerializedName("PkgId")
+    @Expose
+    private String PkgId;
+
+    /**
+    * <p>请求包内日志的ID</p>
+    */
+    @SerializedName("PkgLogId")
+    @Expose
+    private String PkgLogId;
+
+    /**
+     * Get <p>单条日志的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 单条日志的ID
+     * @return Id <p>单条日志的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -66,9 +80,9 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Set 单条日志的ID
+     * Set <p>单条日志的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 单条日志的ID
+     * @param Id <p>单条日志的ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -76,9 +90,9 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Get 单条日志的内容
+     * Get <p>单条日志的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 单条日志的内容
+     * @return Message <p>单条日志的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -86,9 +100,9 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Set 单条日志的内容
+     * Set <p>单条日志的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 单条日志的内容
+     * @param Message <p>单条日志的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -96,9 +110,9 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Get 这条日志对应的Pod名称
+     * Get <p>这条日志对应的Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodName 这条日志对应的Pod名称
+     * @return PodName <p>这条日志对应的Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodName() {
@@ -106,9 +120,9 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Set 这条日志对应的Pod名称
+     * Set <p>这条日志对应的Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodName 这条日志对应的Pod名称
+     * @param PodName <p>这条日志对应的Pod名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodName(String PodName) {
@@ -116,9 +130,9 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Get 日志的时间戳（RFC3339格式的时间字符串）
+     * Get <p>日志的时间戳（RFC3339格式的时间字符串）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp 日志的时间戳（RFC3339格式的时间字符串）
+     * @return Timestamp <p>日志的时间戳（RFC3339格式的时间字符串）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestamp() {
@@ -126,13 +140,45 @@ public class LogIdentity extends AbstractModel {
     }
 
     /**
-     * Set 日志的时间戳（RFC3339格式的时间字符串）
+     * Set <p>日志的时间戳（RFC3339格式的时间字符串）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp 日志的时间戳（RFC3339格式的时间字符串）
+     * @param Timestamp <p>日志的时间戳（RFC3339格式的时间字符串）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
+    }
+
+    /**
+     * Get <p>日志上报请求包的ID</p> 
+     * @return PkgId <p>日志上报请求包的ID</p>
+     */
+    public String getPkgId() {
+        return this.PkgId;
+    }
+
+    /**
+     * Set <p>日志上报请求包的ID</p>
+     * @param PkgId <p>日志上报请求包的ID</p>
+     */
+    public void setPkgId(String PkgId) {
+        this.PkgId = PkgId;
+    }
+
+    /**
+     * Get <p>请求包内日志的ID</p> 
+     * @return PkgLogId <p>请求包内日志的ID</p>
+     */
+    public String getPkgLogId() {
+        return this.PkgLogId;
+    }
+
+    /**
+     * Set <p>请求包内日志的ID</p>
+     * @param PkgLogId <p>请求包内日志的ID</p>
+     */
+    public void setPkgLogId(String PkgLogId) {
+        this.PkgLogId = PkgLogId;
     }
 
     public LogIdentity() {
@@ -155,6 +201,12 @@ public class LogIdentity extends AbstractModel {
         if (source.Timestamp != null) {
             this.Timestamp = new String(source.Timestamp);
         }
+        if (source.PkgId != null) {
+            this.PkgId = new String(source.PkgId);
+        }
+        if (source.PkgLogId != null) {
+            this.PkgLogId = new String(source.PkgLogId);
+        }
     }
 
 
@@ -166,6 +218,8 @@ public class LogIdentity extends AbstractModel {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "PkgId", this.PkgId);
+        this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
 
     }
 }

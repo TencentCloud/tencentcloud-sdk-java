@@ -137,6 +137,19 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *启动一路直播流审核。服务端异步拉流、定频截帧、音频切片、送审，通过回调返回结果。一次一个任务（一路流）。您可以通过此接口实现如下目标：
+●指定内容参数（LiveModerationParams）来指定内容理解需要的详细参数。
+●指定存储参数（LiveModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）
+     * @param req CreateLiveStreamModerationRequest
+     * @return CreateLiveStreamModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveStreamModerationResponse CreateLiveStreamModeration(CreateLiveStreamModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveStreamModeration", CreateLiveStreamModerationResponse.class);
+    }
+
+    /**
      *如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
      * @param req CreatePictureRequest
      * @return CreatePictureResponse
@@ -200,6 +213,17 @@ public class TrtcClient extends AbstractClient{
     public DeleteCloudTranscriptionResponse DeleteCloudTranscription(DeleteCloudTranscriptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudTranscription", DeleteCloudTranscriptionResponse.class);
+    }
+
+    /**
+     *成功开启直播流AI 内容理解任务后，可以使用此接口来停止进行内容识别。
+     * @param req DeleteLiveStreamModerationRequest
+     * @return DeleteLiveStreamModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveStreamModerationResponse DeleteLiveStreamModeration(DeleteLiveStreamModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveStreamModeration", DeleteLiveStreamModerationResponse.class);
     }
 
     /**
@@ -316,6 +340,17 @@ public class TrtcClient extends AbstractClient{
     public DescribeCloudTranscriptionResponse DescribeCloudTranscription(DescribeCloudTranscriptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudTranscription", DescribeCloudTranscriptionResponse.class);
+    }
+
+    /**
+     *成功开启直播流AI 内容理解任务后，可以使用此接口来查询AI 内容理解任务状态，仅在任务进行时有效，任务退出后查询将会返回错误。
+     * @param req DescribeLiveStreamModerationRequest
+     * @return DescribeLiveStreamModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamModerationResponse DescribeLiveStreamModeration(DescribeLiveStreamModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveStreamModeration", DescribeLiveStreamModerationResponse.class);
     }
 
     /**

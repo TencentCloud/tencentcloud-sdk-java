@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDeviceSDPAnswerResponse extends AbstractModel {
 
     /**
-    * SDP应答
+    * <p>SDP应答</p>
     */
     @SerializedName("SDPAnswer")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDeviceSDPAnswerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get SDP应答 
-     * @return SDPAnswer SDP应答
+     * Get <p>SDP应答</p> 
+     * @return SDPAnswer <p>SDP应答</p>
      */
     public String getSDPAnswer() {
         return this.SDPAnswer;
     }
 
     /**
-     * Set SDP应答
-     * @param SDPAnswer SDP应答
+     * Set <p>SDP应答</p>
+     * @param SDPAnswer <p>SDP应答</p>
      */
     public void setSDPAnswer(String SDPAnswer) {
         this.SDPAnswer = SDPAnswer;

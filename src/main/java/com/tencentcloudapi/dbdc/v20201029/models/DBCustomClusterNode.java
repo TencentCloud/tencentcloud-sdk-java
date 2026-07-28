@@ -73,6 +73,22 @@ public class DBCustomClusterNode extends AbstractModel {
     private String NodeType;
 
     /**
+    * <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkMode")
+    @Expose
+    private String NetworkMode;
+
+    /**
+    * <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EniIP")
+    @Expose
+    private String EniIP;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -184,6 +200,46 @@ public class DBCustomClusterNode extends AbstractModel {
         this.NodeType = NodeType;
     }
 
+    /**
+     * Get <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkMode() {
+        return this.NetworkMode;
+    }
+
+    /**
+     * Set <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkMode(String NetworkMode) {
+        this.NetworkMode = NetworkMode;
+    }
+
+    /**
+     * Get <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EniIP <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEniIP() {
+        return this.EniIP;
+    }
+
+    /**
+     * Set <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EniIP <p>当选择网络模式为三层网络联通模式时，此处的IP地址则为用户可访问的地址。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEniIP(String EniIP) {
+        this.EniIP = EniIP;
+    }
+
     public DBCustomClusterNode() {
     }
 
@@ -213,6 +269,12 @@ public class DBCustomClusterNode extends AbstractModel {
         if (source.NodeType != null) {
             this.NodeType = new String(source.NodeType);
         }
+        if (source.NetworkMode != null) {
+            this.NetworkMode = new String(source.NetworkMode);
+        }
+        if (source.EniIP != null) {
+            this.EniIP = new String(source.EniIP);
+        }
     }
 
 
@@ -227,6 +289,8 @@ public class DBCustomClusterNode extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+        this.setParamSimple(map, prefix + "EniIP", this.EniIP);
 
     }
 }

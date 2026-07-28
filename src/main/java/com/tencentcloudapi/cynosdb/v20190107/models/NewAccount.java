@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class NewAccount extends AbstractModel {
 
     /**
-    * 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+    * <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 主机(%或ipv4地址)
+    * <p>主机(%或ipv4地址)</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 密码，密码长度范围为8到64个字符
+    * <p>密码，密码长度范围为8到64个字符</p>
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * 是否开启密码轮转(0:关闭;1:开启)
+    * <p>是否开启密码轮转(0:关闭;1:开启)</p>
     */
     @SerializedName("PasswordRotation")
     @Expose
     private Long PasswordRotation;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 用户最大连接数，不能大于10240
+    * <p>用户最大连接数，不能大于10240</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-     * Get 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30 
-     * @return AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+     * Get <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p> 
+     * @return AccountName <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
-     * @param AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+     * Set <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
+     * @param AccountName <p>账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 主机(%或ipv4地址) 
-     * @return Host 主机(%或ipv4地址)
+     * Get <p>主机(%或ipv4地址)</p> 
+     * @return Host <p>主机(%或ipv4地址)</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 主机(%或ipv4地址)
-     * @param Host 主机(%或ipv4地址)
+     * Set <p>主机(%或ipv4地址)</p>
+     * @param Host <p>主机(%或ipv4地址)</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 密码，密码长度范围为8到64个字符 
-     * @return AccountPassword 密码，密码长度范围为8到64个字符
+     * Get <p>密码，密码长度范围为8到64个字符</p> 
+     * @return AccountPassword <p>密码，密码长度范围为8到64个字符</p>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 密码，密码长度范围为8到64个字符
-     * @param AccountPassword 密码，密码长度范围为8到64个字符
+     * Set <p>密码，密码长度范围为8到64个字符</p>
+     * @param AccountPassword <p>密码，密码长度范围为8到64个字符</p>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get 是否开启密码轮转(0:关闭;1:开启) 
-     * @return PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
+     * Get <p>是否开启密码轮转(0:关闭;1:开启)</p> 
+     * @return PasswordRotation <p>是否开启密码轮转(0:关闭;1:开启)</p>
      */
     public Long getPasswordRotation() {
         return this.PasswordRotation;
     }
 
     /**
-     * Set 是否开启密码轮转(0:关闭;1:开启)
-     * @param PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
+     * Set <p>是否开启密码轮转(0:关闭;1:开启)</p>
+     * @param PasswordRotation <p>是否开启密码轮转(0:关闭;1:开启)</p>
      */
     public void setPasswordRotation(Long PasswordRotation) {
         this.PasswordRotation = PasswordRotation;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 用户最大连接数，不能大于10240 
-     * @return MaxUserConnections 用户最大连接数，不能大于10240
+     * Get <p>用户最大连接数，不能大于10240</p> 
+     * @return MaxUserConnections <p>用户最大连接数，不能大于10240</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 用户最大连接数，不能大于10240
-     * @param MaxUserConnections 用户最大连接数，不能大于10240
+     * Set <p>用户最大连接数，不能大于10240</p>
+     * @param MaxUserConnections <p>用户最大连接数，不能大于10240</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

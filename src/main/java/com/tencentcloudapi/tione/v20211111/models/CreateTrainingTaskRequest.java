@@ -213,6 +213,20 @@ public class CreateTrainingTaskRequest extends AbstractModel {
     private EnvVar [] Envs;
 
     /**
+    * <p>训练诊断工具配置</p>
+    */
+    @SerializedName("TrainToolConfig")
+    @Expose
+    private TrainToolConfig TrainToolConfig;
+
+    /**
+    * <p>资源供应属性</p>
+    */
+    @SerializedName("ResourceSupplyAttribute")
+    @Expose
+    private ResourceSupplyAttribute ResourceSupplyAttribute;
+
+    /**
      * Get <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p> 
      * @return Name <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
@@ -644,6 +658,38 @@ public class CreateTrainingTaskRequest extends AbstractModel {
         this.Envs = Envs;
     }
 
+    /**
+     * Get <p>训练诊断工具配置</p> 
+     * @return TrainToolConfig <p>训练诊断工具配置</p>
+     */
+    public TrainToolConfig getTrainToolConfig() {
+        return this.TrainToolConfig;
+    }
+
+    /**
+     * Set <p>训练诊断工具配置</p>
+     * @param TrainToolConfig <p>训练诊断工具配置</p>
+     */
+    public void setTrainToolConfig(TrainToolConfig TrainToolConfig) {
+        this.TrainToolConfig = TrainToolConfig;
+    }
+
+    /**
+     * Get <p>资源供应属性</p> 
+     * @return ResourceSupplyAttribute <p>资源供应属性</p>
+     */
+    public ResourceSupplyAttribute getResourceSupplyAttribute() {
+        return this.ResourceSupplyAttribute;
+    }
+
+    /**
+     * Set <p>资源供应属性</p>
+     * @param ResourceSupplyAttribute <p>资源供应属性</p>
+     */
+    public void setResourceSupplyAttribute(ResourceSupplyAttribute ResourceSupplyAttribute) {
+        this.ResourceSupplyAttribute = ResourceSupplyAttribute;
+    }
+
     public CreateTrainingTaskRequest() {
     }
 
@@ -748,6 +794,12 @@ public class CreateTrainingTaskRequest extends AbstractModel {
                 this.Envs[i] = new EnvVar(source.Envs[i]);
             }
         }
+        if (source.TrainToolConfig != null) {
+            this.TrainToolConfig = new TrainToolConfig(source.TrainToolConfig);
+        }
+        if (source.ResourceSupplyAttribute != null) {
+            this.ResourceSupplyAttribute = new ResourceSupplyAttribute(source.ResourceSupplyAttribute);
+        }
     }
 
 
@@ -782,6 +834,8 @@ public class CreateTrainingTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
         this.setParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
+        this.setParamObj(map, prefix + "TrainToolConfig.", this.TrainToolConfig);
+        this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
 
     }
 }

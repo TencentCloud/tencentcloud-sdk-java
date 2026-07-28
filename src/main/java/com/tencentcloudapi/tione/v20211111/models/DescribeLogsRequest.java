@@ -108,6 +108,13 @@ public class DescribeLogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+    */
+    @SerializedName("LogStream")
+    @Expose
+    private String LogStream;
+
+    /**
      * Get <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul> 
      * @return Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      */
@@ -299,6 +306,22 @@ public class DescribeLogsRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p> 
+     * @return LogStream <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+     */
+    public String getLogStream() {
+        return this.LogStream;
+    }
+
+    /**
+     * Set <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+     * @param LogStream <p>日志类别</p><p>枚举值：</p><ul><li>stdout： stdout</li><li>stderr： stderr</li></ul><p>默认值：&quot;&quot;</p>
+     */
+    public void setLogStream(String LogStream) {
+        this.LogStream = LogStream;
+    }
+
     public DescribeLogsRequest() {
     }
 
@@ -346,6 +369,9 @@ public class DescribeLogsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.LogStream != null) {
+            this.LogStream = new String(source.LogStream);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class DescribeLogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "LogStream", this.LogStream);
 
     }
 }

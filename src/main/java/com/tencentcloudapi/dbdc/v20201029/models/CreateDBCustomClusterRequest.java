@@ -31,7 +31,7 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
     private ContainerNetwork ContainerNetwork;
 
     /**
-    * <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+    * <p>集群名称</p><p>入参限制：最长128个字符。</p>
     */
     @SerializedName("ClusterName")
     @Expose
@@ -66,6 +66,13 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get <p>容器网络，在此集群的所有 POD 与此网络连通</p> 
      * @return ContainerNetwork <p>容器网络，在此集群的所有 POD 与此网络连通</p>
      */
@@ -82,16 +89,16 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p> 
-     * @return ClusterName <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+     * Get <p>集群名称</p><p>入参限制：最长128个字符。</p> 
+     * @return ClusterName <p>集群名称</p><p>入参限制：最长128个字符。</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
-     * @param ClusterName <p>集群名称</p><p>入参限制：最长128个字符，只能为中文，英文，下划线。</p>
+     * Set <p>集群名称</p><p>入参限制：最长128个字符。</p>
+     * @param ClusterName <p>集群名称</p><p>入参限制：最长128个字符。</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
@@ -161,6 +168,22 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p> 
+     * @return DryRun <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+     * @param DryRun <p>试运行开关，true 时只执行参数校验，不发起创建流程，默认 false</p>
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public CreateDBCustomClusterRequest() {
     }
 
@@ -190,6 +213,9 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

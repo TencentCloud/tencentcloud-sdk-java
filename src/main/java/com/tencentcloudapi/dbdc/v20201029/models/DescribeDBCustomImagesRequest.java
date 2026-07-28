@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeDBCustomImagesRequest extends AbstractModel {
 
     /**
+    * <p>支持镜像过滤的选项</p><p>取值参考：</p><ul><li>image-id,按镜像 ID 过滤    </li><li>os-type,按操作系统类型过滤(linux / windows)</li><li>image-type，按镜像类型过滤（PUBLIC_IMAGE（公共镜像）/ PRIVATE_IMAGE（私有镜像））</li><li>architecture，按架构过滤（x86_64 / arm64）</li></ul>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * <p>偏移量</p><p>默认值：0</p>
     */
     @SerializedName("Offset")
@@ -36,6 +43,22 @@ public class DescribeDBCustomImagesRequest extends AbstractModel {
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+     * Get <p>支持镜像过滤的选项</p><p>取值参考：</p><ul><li>image-id,按镜像 ID 过滤    </li><li>os-type,按操作系统类型过滤(linux / windows)</li><li>image-type，按镜像类型过滤（PUBLIC_IMAGE（公共镜像）/ PRIVATE_IMAGE（私有镜像））</li><li>architecture，按架构过滤（x86_64 / arm64）</li></ul> 
+     * @return Filters <p>支持镜像过滤的选项</p><p>取值参考：</p><ul><li>image-id,按镜像 ID 过滤    </li><li>os-type,按操作系统类型过滤(linux / windows)</li><li>image-type，按镜像类型过滤（PUBLIC_IMAGE（公共镜像）/ PRIVATE_IMAGE（私有镜像））</li><li>architecture，按架构过滤（x86_64 / arm64）</li></ul>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>支持镜像过滤的选项</p><p>取值参考：</p><ul><li>image-id,按镜像 ID 过滤    </li><li>os-type,按操作系统类型过滤(linux / windows)</li><li>image-type，按镜像类型过滤（PUBLIC_IMAGE（公共镜像）/ PRIVATE_IMAGE（私有镜像））</li><li>architecture，按架构过滤（x86_64 / arm64）</li></ul>
+     * @param Filters <p>支持镜像过滤的选项</p><p>取值参考：</p><ul><li>image-id,按镜像 ID 过滤    </li><li>os-type,按操作系统类型过滤(linux / windows)</li><li>image-type，按镜像类型过滤（PUBLIC_IMAGE（公共镜像）/ PRIVATE_IMAGE（私有镜像））</li><li>architecture，按架构过滤（x86_64 / arm64）</li></ul>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
 
     /**
      * Get <p>偏移量</p><p>默认值：0</p> 
@@ -77,6 +100,12 @@ public class DescribeDBCustomImagesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDBCustomImagesRequest(DescribeDBCustomImagesRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -90,6 +119,7 @@ public class DescribeDBCustomImagesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

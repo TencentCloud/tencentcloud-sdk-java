@@ -24,239 +24,230 @@ import java.util.HashMap;
 public class ClientAttester extends AbstractModel {
 
     /**
-    * 认证选项 ID。
+    * <p>认证选项 ID。</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 认证选项名称。
+    * <p>认证选项名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 认证规则类型。仅出参返回，取值有：
-<li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
-<li>CUSTOM: 用户自定义规则。</li>
+    * <p>认证规则类型。仅出参返回，取值有：</p><li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li><li>CUSTOM: 用户自定义规则。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 认证方法。取值有：
-<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
-<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
+    * <p>认证方法。取值有：</p><li>TC-RCE: 使用风险识别 RCE 进行认证；</li><li>TC-CAPTCHA: 使用天御验证码进行认证；</li><li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
     */
     @SerializedName("AttesterSource")
     @Expose
     private String AttesterSource;
 
     /**
-    * 认证有效时间。默认为 60s，支持的单位有：
-<li>s：秒，取值范围 60～43200；</li>
-<li>m：分，取值范围 1～720；</li>
-<li>h：小时，取值范围 1～12。</li>
+    * <p>认证有效时间。默认为 60s，支持的单位有：</p><li>s：秒，取值范围 60～43200；</li><li>m：分，取值范围 1～720；</li><li>h：小时，取值范围 1～12。</li>
     */
     @SerializedName("AttesterDuration")
     @Expose
     private String AttesterDuration;
 
     /**
-    * TC-RCE 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
+    * <p>是否开启认证结果使用限制。 </p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
+    */
+    @SerializedName("UsageLimit")
+    @Expose
+    private String UsageLimit;
+
+    /**
+    * <p>认证结果最大使用次数。当 UsageLimit 为 on 时，此字段必填。</p><p>取值范围：[1, 100000]</p>
+    */
+    @SerializedName("MaxUsageCount")
+    @Expose
+    private Long MaxUsageCount;
+
+    /**
+    * <p>TC-RCE 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
     */
     @SerializedName("TCRCEOption")
     @Expose
     private TCRCEOption TCRCEOption;
 
     /**
-    * TC-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
+    * <p>TC-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
     */
     @SerializedName("TCCaptchaOption")
     @Expose
     private TCCaptchaOption TCCaptchaOption;
 
     /**
-    * TC-EO-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+    * <p>TC-EO-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
     */
     @SerializedName("TCEOCaptchaOption")
     @Expose
     private TCEOCaptchaOption TCEOCaptchaOption;
 
     /**
-     * Get 认证选项 ID。 
-     * @return Id 认证选项 ID。
+     * Get <p>认证选项 ID。</p> 
+     * @return Id <p>认证选项 ID。</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 认证选项 ID。
-     * @param Id 认证选项 ID。
+     * Set <p>认证选项 ID。</p>
+     * @param Id <p>认证选项 ID。</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 认证选项名称。 
-     * @return Name 认证选项名称。
+     * Get <p>认证选项名称。</p> 
+     * @return Name <p>认证选项名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 认证选项名称。
-     * @param Name 认证选项名称。
+     * Set <p>认证选项名称。</p>
+     * @param Name <p>认证选项名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 认证规则类型。仅出参返回，取值有：
-<li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
-<li>CUSTOM: 用户自定义规则。</li> 
-     * @return Type 认证规则类型。仅出参返回，取值有：
-<li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
-<li>CUSTOM: 用户自定义规则。</li>
+     * Get <p>认证规则类型。仅出参返回，取值有：</p><li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li><li>CUSTOM: 用户自定义规则。</li> 
+     * @return Type <p>认证规则类型。仅出参返回，取值有：</p><li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li><li>CUSTOM: 用户自定义规则。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 认证规则类型。仅出参返回，取值有：
-<li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
-<li>CUSTOM: 用户自定义规则。</li>
-     * @param Type 认证规则类型。仅出参返回，取值有：
-<li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
-<li>CUSTOM: 用户自定义规则。</li>
+     * Set <p>认证规则类型。仅出参返回，取值有：</p><li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li><li>CUSTOM: 用户自定义规则。</li>
+     * @param Type <p>认证规则类型。仅出参返回，取值有：</p><li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li><li>CUSTOM: 用户自定义规则。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 认证方法。取值有：
-<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
-<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li> 
-     * @return AttesterSource 认证方法。取值有：
-<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
-<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
+     * Get <p>认证方法。取值有：</p><li>TC-RCE: 使用风险识别 RCE 进行认证；</li><li>TC-CAPTCHA: 使用天御验证码进行认证；</li><li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li> 
+     * @return AttesterSource <p>认证方法。取值有：</p><li>TC-RCE: 使用风险识别 RCE 进行认证；</li><li>TC-CAPTCHA: 使用天御验证码进行认证；</li><li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      */
     public String getAttesterSource() {
         return this.AttesterSource;
     }
 
     /**
-     * Set 认证方法。取值有：
-<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
-<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
-     * @param AttesterSource 认证方法。取值有：
-<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
-<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
+     * Set <p>认证方法。取值有：</p><li>TC-RCE: 使用风险识别 RCE 进行认证；</li><li>TC-CAPTCHA: 使用天御验证码进行认证；</li><li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
+     * @param AttesterSource <p>认证方法。取值有：</p><li>TC-RCE: 使用风险识别 RCE 进行认证；</li><li>TC-CAPTCHA: 使用天御验证码进行认证；</li><li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      */
     public void setAttesterSource(String AttesterSource) {
         this.AttesterSource = AttesterSource;
     }
 
     /**
-     * Get 认证有效时间。默认为 60s，支持的单位有：
-<li>s：秒，取值范围 60～43200；</li>
-<li>m：分，取值范围 1～720；</li>
-<li>h：小时，取值范围 1～12。</li> 
-     * @return AttesterDuration 认证有效时间。默认为 60s，支持的单位有：
-<li>s：秒，取值范围 60～43200；</li>
-<li>m：分，取值范围 1～720；</li>
-<li>h：小时，取值范围 1～12。</li>
+     * Get <p>认证有效时间。默认为 60s，支持的单位有：</p><li>s：秒，取值范围 60～43200；</li><li>m：分，取值范围 1～720；</li><li>h：小时，取值范围 1～12。</li> 
+     * @return AttesterDuration <p>认证有效时间。默认为 60s，支持的单位有：</p><li>s：秒，取值范围 60～43200；</li><li>m：分，取值范围 1～720；</li><li>h：小时，取值范围 1～12。</li>
      */
     public String getAttesterDuration() {
         return this.AttesterDuration;
     }
 
     /**
-     * Set 认证有效时间。默认为 60s，支持的单位有：
-<li>s：秒，取值范围 60～43200；</li>
-<li>m：分，取值范围 1～720；</li>
-<li>h：小时，取值范围 1～12。</li>
-     * @param AttesterDuration 认证有效时间。默认为 60s，支持的单位有：
-<li>s：秒，取值范围 60～43200；</li>
-<li>m：分，取值范围 1～720；</li>
-<li>h：小时，取值范围 1～12。</li>
+     * Set <p>认证有效时间。默认为 60s，支持的单位有：</p><li>s：秒，取值范围 60～43200；</li><li>m：分，取值范围 1～720；</li><li>h：小时，取值范围 1～12。</li>
+     * @param AttesterDuration <p>认证有效时间。默认为 60s，支持的单位有：</p><li>s：秒，取值范围 60～43200；</li><li>m：分，取值范围 1～720；</li><li>h：小时，取值范围 1～12。</li>
      */
     public void setAttesterDuration(String AttesterDuration) {
         this.AttesterDuration = AttesterDuration;
     }
 
     /**
-     * Get TC-RCE 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li> 
-     * @return TCRCEOption TC-RCE 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
+     * Get <p>是否开启认证结果使用限制。 </p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p> 
+     * @return UsageLimit <p>是否开启认证结果使用限制。 </p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
+     */
+    public String getUsageLimit() {
+        return this.UsageLimit;
+    }
+
+    /**
+     * Set <p>是否开启认证结果使用限制。 </p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
+     * @param UsageLimit <p>是否开启认证结果使用限制。 </p><p>枚举值：</p><ul><li>on： 开启</li><li>off： 关闭</li></ul><p>默认值：off</p>
+     */
+    public void setUsageLimit(String UsageLimit) {
+        this.UsageLimit = UsageLimit;
+    }
+
+    /**
+     * Get <p>认证结果最大使用次数。当 UsageLimit 为 on 时，此字段必填。</p><p>取值范围：[1, 100000]</p> 
+     * @return MaxUsageCount <p>认证结果最大使用次数。当 UsageLimit 为 on 时，此字段必填。</p><p>取值范围：[1, 100000]</p>
+     */
+    public Long getMaxUsageCount() {
+        return this.MaxUsageCount;
+    }
+
+    /**
+     * Set <p>认证结果最大使用次数。当 UsageLimit 为 on 时，此字段必填。</p><p>取值范围：[1, 100000]</p>
+     * @param MaxUsageCount <p>认证结果最大使用次数。当 UsageLimit 为 on 时，此字段必填。</p><p>取值范围：[1, 100000]</p>
+     */
+    public void setMaxUsageCount(Long MaxUsageCount) {
+        this.MaxUsageCount = MaxUsageCount;
+    }
+
+    /**
+     * Get <p>TC-RCE 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li> 
+     * @return TCRCEOption <p>TC-RCE 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
      */
     public TCRCEOption getTCRCEOption() {
         return this.TCRCEOption;
     }
 
     /**
-     * Set TC-RCE 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
-     * @param TCRCEOption TC-RCE 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
+     * Set <p>TC-RCE 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
+     * @param TCRCEOption <p>TC-RCE 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-RCE 时，此字段必填。</li>
      */
     public void setTCRCEOption(TCRCEOption TCRCEOption) {
         this.TCRCEOption = TCRCEOption;
     }
 
     /**
-     * Get TC-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li> 
-     * @return TCCaptchaOption TC-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
+     * Get <p>TC-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li> 
+     * @return TCCaptchaOption <p>TC-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
      */
     public TCCaptchaOption getTCCaptchaOption() {
         return this.TCCaptchaOption;
     }
 
     /**
-     * Set TC-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
-     * @param TCCaptchaOption TC-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
+     * Set <p>TC-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
+     * @param TCCaptchaOption <p>TC-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-CAPTCHA 时，此字段必填。</li>
      */
     public void setTCCaptchaOption(TCCaptchaOption TCCaptchaOption) {
         this.TCCaptchaOption = TCCaptchaOption;
     }
 
     /**
-     * Get TC-EO-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li> 
-     * @return TCEOCaptchaOption TC-EO-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     * Get <p>TC-EO-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li> 
+     * @return TCEOCaptchaOption <p>TC-EO-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
      */
     public TCEOCaptchaOption getTCEOCaptchaOption() {
         return this.TCEOCaptchaOption;
     }
 
     /**
-     * Set TC-EO-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
-     * @param TCEOCaptchaOption TC-EO-CAPTCHA 认证的配置信息。
-<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     * Set <p>TC-EO-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     * @param TCEOCaptchaOption <p>TC-EO-CAPTCHA 认证的配置信息。</p><li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
      */
     public void setTCEOCaptchaOption(TCEOCaptchaOption TCEOCaptchaOption) {
         this.TCEOCaptchaOption = TCEOCaptchaOption;
@@ -285,6 +276,12 @@ public class ClientAttester extends AbstractModel {
         if (source.AttesterDuration != null) {
             this.AttesterDuration = new String(source.AttesterDuration);
         }
+        if (source.UsageLimit != null) {
+            this.UsageLimit = new String(source.UsageLimit);
+        }
+        if (source.MaxUsageCount != null) {
+            this.MaxUsageCount = new Long(source.MaxUsageCount);
+        }
         if (source.TCRCEOption != null) {
             this.TCRCEOption = new TCRCEOption(source.TCRCEOption);
         }
@@ -306,6 +303,8 @@ public class ClientAttester extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "AttesterSource", this.AttesterSource);
         this.setParamSimple(map, prefix + "AttesterDuration", this.AttesterDuration);
+        this.setParamSimple(map, prefix + "UsageLimit", this.UsageLimit);
+        this.setParamSimple(map, prefix + "MaxUsageCount", this.MaxUsageCount);
         this.setParamObj(map, prefix + "TCRCEOption.", this.TCRCEOption);
         this.setParamObj(map, prefix + "TCCaptchaOption.", this.TCCaptchaOption);
         this.setParamObj(map, prefix + "TCEOCaptchaOption.", this.TCEOCaptchaOption);

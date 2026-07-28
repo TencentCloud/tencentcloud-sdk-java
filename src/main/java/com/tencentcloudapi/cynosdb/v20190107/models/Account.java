@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * 数据库账号名
+    * <p>数据库账号名</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 主机
+    * <p>主机</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 数据库账号描述
+    * <p>数据库账号描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 用户最大连接数
+    * <p>用户最大连接数</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-    * 是否开启密码轮转(0:关闭;1:开启)
+    * <p>是否开启密码轮转(0:关闭;1:开启)</p>
     */
     @SerializedName("PasswordRotation")
     @Expose
     private Long PasswordRotation;
 
     /**
-     * Get 数据库账号名 
-     * @return AccountName 数据库账号名
+     * Get <p>数据库账号名</p> 
+     * @return AccountName <p>数据库账号名</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 数据库账号名
-     * @param AccountName 数据库账号名
+     * Set <p>数据库账号名</p>
+     * @param AccountName <p>数据库账号名</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 主机 
-     * @return Host 主机
+     * Get <p>主机</p> 
+     * @return Host <p>主机</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 主机
-     * @param Host 主机
+     * Set <p>主机</p>
+     * @param Host <p>主机</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 数据库账号描述 
-     * @return Description 数据库账号描述
+     * Get <p>数据库账号描述</p> 
+     * @return Description <p>数据库账号描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 数据库账号描述
-     * @param Description 数据库账号描述
+     * Set <p>数据库账号描述</p>
+     * @param Description <p>数据库账号描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 用户最大连接数 
-     * @return MaxUserConnections 用户最大连接数
+     * Get <p>用户最大连接数</p> 
+     * @return MaxUserConnections <p>用户最大连接数</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 用户最大连接数
-     * @param MaxUserConnections 用户最大连接数
+     * Set <p>用户最大连接数</p>
+     * @param MaxUserConnections <p>用户最大连接数</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;
     }
 
     /**
-     * Get 是否开启密码轮转(0:关闭;1:开启) 
-     * @return PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
+     * Get <p>是否开启密码轮转(0:关闭;1:开启)</p> 
+     * @return PasswordRotation <p>是否开启密码轮转(0:关闭;1:开启)</p>
      */
     public Long getPasswordRotation() {
         return this.PasswordRotation;
     }
 
     /**
-     * Set 是否开启密码轮转(0:关闭;1:开启)
-     * @param PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
+     * Set <p>是否开启密码轮转(0:关闭;1:开启)</p>
+     * @param PasswordRotation <p>是否开启密码轮转(0:关闭;1:开启)</p>
      */
     public void setPasswordRotation(Long PasswordRotation) {
         this.PasswordRotation = PasswordRotation;

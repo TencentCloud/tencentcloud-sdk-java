@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAccountsRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 账号数组，包含account和host
+    * <p>账号数组，包含account和host</p>
     */
     @SerializedName("Accounts")
     @Expose
     private InputAccount [] Accounts;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 账号数组，包含account和host 
-     * @return Accounts 账号数组，包含account和host
+     * Get <p>账号数组，包含account和host</p> 
+     * @return Accounts <p>账号数组，包含account和host</p>
      */
     public InputAccount [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 账号数组，包含account和host
-     * @param Accounts 账号数组，包含account和host
+     * Set <p>账号数组，包含account和host</p>
+     * @param Accounts <p>账号数组，包含account和host</p>
      */
     public void setAccounts(InputAccount [] Accounts) {
         this.Accounts = Accounts;

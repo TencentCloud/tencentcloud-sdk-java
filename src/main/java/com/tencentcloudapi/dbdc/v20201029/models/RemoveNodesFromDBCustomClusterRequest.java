@@ -38,6 +38,13 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
     private String [] NodeIds;
 
     /**
+    * <p>节点的登录参数</p>
+    */
+    @SerializedName("LoginSettings")
+    @Expose
+    private LoginSettings LoginSettings;
+
+    /**
      * Get <p>DB Custom 集群ID</p> 
      * @return ClusterId <p>DB Custom 集群ID</p>
      */
@@ -69,6 +76,22 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
         this.NodeIds = NodeIds;
     }
 
+    /**
+     * Get <p>节点的登录参数</p> 
+     * @return LoginSettings <p>节点的登录参数</p>
+     */
+    public LoginSettings getLoginSettings() {
+        return this.LoginSettings;
+    }
+
+    /**
+     * Set <p>节点的登录参数</p>
+     * @param LoginSettings <p>节点的登录参数</p>
+     */
+    public void setLoginSettings(LoginSettings LoginSettings) {
+        this.LoginSettings = LoginSettings;
+    }
+
     public RemoveNodesFromDBCustomClusterRequest() {
     }
 
@@ -86,6 +109,9 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
                 this.NodeIds[i] = new String(source.NodeIds[i]);
             }
         }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
+        this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
 
     }
 }

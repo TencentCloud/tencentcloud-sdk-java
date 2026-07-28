@@ -1337,6 +1337,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *按执行资源组查询任务调度与运行实例数量统计
+     * @param req DescribeInstancesByExecutorsRequest
+     * @return DescribeInstancesByExecutorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesByExecutorsResponse DescribeInstancesByExecutors(DescribeInstancesByExecutorsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesByExecutors", DescribeInstancesByExecutorsResponse.class);
+    }
+
+    /**
      *查询集成节点
      * @param req DescribeIntegrationNodeRequest
      * @return DescribeIntegrationNodeResponse

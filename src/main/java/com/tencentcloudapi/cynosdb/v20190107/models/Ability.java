@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class Ability extends AbstractModel {
 
     /**
-    * 是否支持从可用区
+    * <p>是否支持从可用区</p>
     */
     @SerializedName("IsSupportSlaveZone")
     @Expose
     private String IsSupportSlaveZone;
 
     /**
-    * 不支持从可用区的原因
+    * <p>不支持从可用区的原因</p>
     */
     @SerializedName("NonsupportSlaveZoneReason")
     @Expose
     private String NonsupportSlaveZoneReason;
 
     /**
-    * 是否支持RO实例
+    * <p>是否支持RO实例</p>
     */
     @SerializedName("IsSupportRo")
     @Expose
     private String IsSupportRo;
 
     /**
-    * 不支持RO实例的原因
+    * <p>不支持RO实例的原因</p>
     */
     @SerializedName("NonsupportRoReason")
     @Expose
     private String NonsupportRoReason;
 
     /**
-    * 是否支持手动发起快照备份
+    * <p>是否支持手动发起快照备份</p>
     */
     @SerializedName("IsSupportManualSnapshot")
     @Expose
     private String IsSupportManualSnapshot;
 
     /**
-    * 是否支持透明数据加密
+    * <p>是否支持透明数据加密</p>
     */
     @SerializedName("IsSupportTransparentDataEncryption")
     @Expose
     private String IsSupportTransparentDataEncryption;
 
     /**
-    * 不支持透明数据加密原因
+    * <p>不支持透明数据加密原因</p>
     */
     @SerializedName("NoSupportTransparentDataEncryptionReason")
     @Expose
     private String NoSupportTransparentDataEncryptionReason;
 
     /**
-    * 是否支持手动发起逻辑备份
+    * <p>是否支持手动发起逻辑备份</p>
     */
     @SerializedName("IsSupportManualLogic")
     @Expose
     private String IsSupportManualLogic;
 
     /**
-    * 是否支持开启全局加密
+    * <p>是否支持开启全局加密</p>
     */
     @SerializedName("IsSupportGlobalEncryption")
     @Expose
     private String IsSupportGlobalEncryption;
 
     /**
-    * 不支持全局加密的原因
+    * <p>不支持全局加密的原因</p>
     */
     @SerializedName("NoSupportGlobalEncryptionReason")
     @Expose
     private String NoSupportGlobalEncryptionReason;
 
     /**
-    * 不支持透明加密原因状态码
+    * <p>不支持透明加密原因状态码</p>
     */
     @SerializedName("NoSupportTransparentDataEncryptionReasonCode")
     @Expose
     private String NoSupportTransparentDataEncryptionReasonCode;
 
     /**
-    * 不支持全局加密原因状态码
+    * <p>不支持全局加密原因状态码</p>
     */
     @SerializedName("NoSupportGlobalEncryptionReasonCode")
     @Expose
     private String NoSupportGlobalEncryptionReasonCode;
 
     /**
-     * Get 是否支持从可用区 
-     * @return IsSupportSlaveZone 是否支持从可用区
+     * Get <p>是否支持从可用区</p> 
+     * @return IsSupportSlaveZone <p>是否支持从可用区</p>
      */
     public String getIsSupportSlaveZone() {
         return this.IsSupportSlaveZone;
     }
 
     /**
-     * Set 是否支持从可用区
-     * @param IsSupportSlaveZone 是否支持从可用区
+     * Set <p>是否支持从可用区</p>
+     * @param IsSupportSlaveZone <p>是否支持从可用区</p>
      */
     public void setIsSupportSlaveZone(String IsSupportSlaveZone) {
         this.IsSupportSlaveZone = IsSupportSlaveZone;
     }
 
     /**
-     * Get 不支持从可用区的原因 
-     * @return NonsupportSlaveZoneReason 不支持从可用区的原因
+     * Get <p>不支持从可用区的原因</p> 
+     * @return NonsupportSlaveZoneReason <p>不支持从可用区的原因</p>
      */
     public String getNonsupportSlaveZoneReason() {
         return this.NonsupportSlaveZoneReason;
     }
 
     /**
-     * Set 不支持从可用区的原因
-     * @param NonsupportSlaveZoneReason 不支持从可用区的原因
+     * Set <p>不支持从可用区的原因</p>
+     * @param NonsupportSlaveZoneReason <p>不支持从可用区的原因</p>
      */
     public void setNonsupportSlaveZoneReason(String NonsupportSlaveZoneReason) {
         this.NonsupportSlaveZoneReason = NonsupportSlaveZoneReason;
     }
 
     /**
-     * Get 是否支持RO实例 
-     * @return IsSupportRo 是否支持RO实例
+     * Get <p>是否支持RO实例</p> 
+     * @return IsSupportRo <p>是否支持RO实例</p>
      */
     public String getIsSupportRo() {
         return this.IsSupportRo;
     }
 
     /**
-     * Set 是否支持RO实例
-     * @param IsSupportRo 是否支持RO实例
+     * Set <p>是否支持RO实例</p>
+     * @param IsSupportRo <p>是否支持RO实例</p>
      */
     public void setIsSupportRo(String IsSupportRo) {
         this.IsSupportRo = IsSupportRo;
     }
 
     /**
-     * Get 不支持RO实例的原因 
-     * @return NonsupportRoReason 不支持RO实例的原因
+     * Get <p>不支持RO实例的原因</p> 
+     * @return NonsupportRoReason <p>不支持RO实例的原因</p>
      */
     public String getNonsupportRoReason() {
         return this.NonsupportRoReason;
     }
 
     /**
-     * Set 不支持RO实例的原因
-     * @param NonsupportRoReason 不支持RO实例的原因
+     * Set <p>不支持RO实例的原因</p>
+     * @param NonsupportRoReason <p>不支持RO实例的原因</p>
      */
     public void setNonsupportRoReason(String NonsupportRoReason) {
         this.NonsupportRoReason = NonsupportRoReason;
     }
 
     /**
-     * Get 是否支持手动发起快照备份 
-     * @return IsSupportManualSnapshot 是否支持手动发起快照备份
+     * Get <p>是否支持手动发起快照备份</p> 
+     * @return IsSupportManualSnapshot <p>是否支持手动发起快照备份</p>
      */
     public String getIsSupportManualSnapshot() {
         return this.IsSupportManualSnapshot;
     }
 
     /**
-     * Set 是否支持手动发起快照备份
-     * @param IsSupportManualSnapshot 是否支持手动发起快照备份
+     * Set <p>是否支持手动发起快照备份</p>
+     * @param IsSupportManualSnapshot <p>是否支持手动发起快照备份</p>
      */
     public void setIsSupportManualSnapshot(String IsSupportManualSnapshot) {
         this.IsSupportManualSnapshot = IsSupportManualSnapshot;
     }
 
     /**
-     * Get 是否支持透明数据加密 
-     * @return IsSupportTransparentDataEncryption 是否支持透明数据加密
+     * Get <p>是否支持透明数据加密</p> 
+     * @return IsSupportTransparentDataEncryption <p>是否支持透明数据加密</p>
      */
     public String getIsSupportTransparentDataEncryption() {
         return this.IsSupportTransparentDataEncryption;
     }
 
     /**
-     * Set 是否支持透明数据加密
-     * @param IsSupportTransparentDataEncryption 是否支持透明数据加密
+     * Set <p>是否支持透明数据加密</p>
+     * @param IsSupportTransparentDataEncryption <p>是否支持透明数据加密</p>
      */
     public void setIsSupportTransparentDataEncryption(String IsSupportTransparentDataEncryption) {
         this.IsSupportTransparentDataEncryption = IsSupportTransparentDataEncryption;
     }
 
     /**
-     * Get 不支持透明数据加密原因 
-     * @return NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
+     * Get <p>不支持透明数据加密原因</p> 
+     * @return NoSupportTransparentDataEncryptionReason <p>不支持透明数据加密原因</p>
      */
     public String getNoSupportTransparentDataEncryptionReason() {
         return this.NoSupportTransparentDataEncryptionReason;
     }
 
     /**
-     * Set 不支持透明数据加密原因
-     * @param NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
+     * Set <p>不支持透明数据加密原因</p>
+     * @param NoSupportTransparentDataEncryptionReason <p>不支持透明数据加密原因</p>
      */
     public void setNoSupportTransparentDataEncryptionReason(String NoSupportTransparentDataEncryptionReason) {
         this.NoSupportTransparentDataEncryptionReason = NoSupportTransparentDataEncryptionReason;
     }
 
     /**
-     * Get 是否支持手动发起逻辑备份 
-     * @return IsSupportManualLogic 是否支持手动发起逻辑备份
+     * Get <p>是否支持手动发起逻辑备份</p> 
+     * @return IsSupportManualLogic <p>是否支持手动发起逻辑备份</p>
      */
     public String getIsSupportManualLogic() {
         return this.IsSupportManualLogic;
     }
 
     /**
-     * Set 是否支持手动发起逻辑备份
-     * @param IsSupportManualLogic 是否支持手动发起逻辑备份
+     * Set <p>是否支持手动发起逻辑备份</p>
+     * @param IsSupportManualLogic <p>是否支持手动发起逻辑备份</p>
      */
     public void setIsSupportManualLogic(String IsSupportManualLogic) {
         this.IsSupportManualLogic = IsSupportManualLogic;
     }
 
     /**
-     * Get 是否支持开启全局加密 
-     * @return IsSupportGlobalEncryption 是否支持开启全局加密
+     * Get <p>是否支持开启全局加密</p> 
+     * @return IsSupportGlobalEncryption <p>是否支持开启全局加密</p>
      */
     public String getIsSupportGlobalEncryption() {
         return this.IsSupportGlobalEncryption;
     }
 
     /**
-     * Set 是否支持开启全局加密
-     * @param IsSupportGlobalEncryption 是否支持开启全局加密
+     * Set <p>是否支持开启全局加密</p>
+     * @param IsSupportGlobalEncryption <p>是否支持开启全局加密</p>
      */
     public void setIsSupportGlobalEncryption(String IsSupportGlobalEncryption) {
         this.IsSupportGlobalEncryption = IsSupportGlobalEncryption;
     }
 
     /**
-     * Get 不支持全局加密的原因 
-     * @return NoSupportGlobalEncryptionReason 不支持全局加密的原因
+     * Get <p>不支持全局加密的原因</p> 
+     * @return NoSupportGlobalEncryptionReason <p>不支持全局加密的原因</p>
      */
     public String getNoSupportGlobalEncryptionReason() {
         return this.NoSupportGlobalEncryptionReason;
     }
 
     /**
-     * Set 不支持全局加密的原因
-     * @param NoSupportGlobalEncryptionReason 不支持全局加密的原因
+     * Set <p>不支持全局加密的原因</p>
+     * @param NoSupportGlobalEncryptionReason <p>不支持全局加密的原因</p>
      */
     public void setNoSupportGlobalEncryptionReason(String NoSupportGlobalEncryptionReason) {
         this.NoSupportGlobalEncryptionReason = NoSupportGlobalEncryptionReason;
     }
 
     /**
-     * Get 不支持透明加密原因状态码 
-     * @return NoSupportTransparentDataEncryptionReasonCode 不支持透明加密原因状态码
+     * Get <p>不支持透明加密原因状态码</p> 
+     * @return NoSupportTransparentDataEncryptionReasonCode <p>不支持透明加密原因状态码</p>
      */
     public String getNoSupportTransparentDataEncryptionReasonCode() {
         return this.NoSupportTransparentDataEncryptionReasonCode;
     }
 
     /**
-     * Set 不支持透明加密原因状态码
-     * @param NoSupportTransparentDataEncryptionReasonCode 不支持透明加密原因状态码
+     * Set <p>不支持透明加密原因状态码</p>
+     * @param NoSupportTransparentDataEncryptionReasonCode <p>不支持透明加密原因状态码</p>
      */
     public void setNoSupportTransparentDataEncryptionReasonCode(String NoSupportTransparentDataEncryptionReasonCode) {
         this.NoSupportTransparentDataEncryptionReasonCode = NoSupportTransparentDataEncryptionReasonCode;
     }
 
     /**
-     * Get 不支持全局加密原因状态码 
-     * @return NoSupportGlobalEncryptionReasonCode 不支持全局加密原因状态码
+     * Get <p>不支持全局加密原因状态码</p> 
+     * @return NoSupportGlobalEncryptionReasonCode <p>不支持全局加密原因状态码</p>
      */
     public String getNoSupportGlobalEncryptionReasonCode() {
         return this.NoSupportGlobalEncryptionReasonCode;
     }
 
     /**
-     * Set 不支持全局加密原因状态码
-     * @param NoSupportGlobalEncryptionReasonCode 不支持全局加密原因状态码
+     * Set <p>不支持全局加密原因状态码</p>
+     * @param NoSupportGlobalEncryptionReasonCode <p>不支持全局加密原因状态码</p>
      */
     public void setNoSupportGlobalEncryptionReasonCode(String NoSupportGlobalEncryptionReasonCode) {
         this.NoSupportGlobalEncryptionReasonCode = NoSupportGlobalEncryptionReasonCode;

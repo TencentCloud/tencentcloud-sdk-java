@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ManifestInfo extends AbstractModel {
 
     /**
-    * 单位秒。
+    * <p>单位秒。</p>
     */
     @SerializedName("Windows")
     @Expose
     private Long Windows;
 
     /**
-    * 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+    * <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
     */
     @SerializedName("AdMarkupType")
     @Expose
     private String AdMarkupType;
 
     /**
-     * Get 单位秒。 
-     * @return Windows 单位秒。
+     * Get <p>单位秒。</p> 
+     * @return Windows <p>单位秒。</p>
      */
     public Long getWindows() {
         return this.Windows;
     }
 
     /**
-     * Set 单位秒。
-     * @param Windows 单位秒。
+     * Set <p>单位秒。</p>
+     * @param Windows <p>单位秒。</p>
      */
     public void setWindows(Long Windows) {
         this.Windows = Windows;
     }
 
     /**
-     * Get 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。 
-     * @return AdMarkupType 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+     * Get <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p> 
+     * @return AdMarkupType <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
      */
     public String getAdMarkupType() {
         return this.AdMarkupType;
     }
 
     /**
-     * Set 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
-     * @param AdMarkupType 打到output广告标签的格式，可选Date Range和Enhanced SCTE-35。
+     * Set <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
+     * @param AdMarkupType <p>打到output广告标签的格式，可选Date Range、Enhanced SCTE-35和Standard SCTE-35。</p>
      */
     public void setAdMarkupType(String AdMarkupType) {
         this.AdMarkupType = AdMarkupType;

@@ -24,463 +24,509 @@ import java.util.HashMap;
 public class RiskProcessEvent extends AbstractModel {
 
     /**
-    * 事件ID
+    * <p>事件ID</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 主机名称
+    * <p>主机名称</p>
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * 主机IP
+    * <p>主机IP</p>
     */
     @SerializedName("HostIp")
     @Expose
     private String HostIp;
 
     /**
-    * 外网IP
+    * <p>外网IP</p>
     */
     @SerializedName("WanIp")
     @Expose
     private String WanIp;
 
     /**
-    * 进程ID
+    * <p>进程ID</p>
     */
     @SerializedName("ProcessId")
     @Expose
     private Long ProcessId;
 
     /**
-    * 文件路径
+    * <p>文件路径</p>
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * 执行命令
+    * <p>执行命令</p>
     */
     @SerializedName("CmdLine")
     @Expose
     private String CmdLine;
 
     /**
-    * 进程启动时间
+    * <p>进程启动时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 最近检测时间
+    * <p>最近检测时间</p>
     */
     @SerializedName("DetectTime")
     @Expose
     private String DetectTime;
 
     /**
-    * 病毒名称
+    * <p>病毒名称</p>
     */
     @SerializedName("VirusName")
     @Expose
     private String VirusName;
 
     /**
-    * 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
+    * <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
     */
     @SerializedName("CheckPlatform")
     @Expose
     private String [] CheckPlatform;
 
     /**
-    * 病毒标签
+    * <p>病毒标签</p>
     */
     @SerializedName("VirusTags")
     @Expose
     private String [] VirusTags;
 
     /**
-    * 威胁描述
+    * <p>威胁描述</p>
     */
     @SerializedName("ThreatDesc")
     @Expose
     private String ThreatDesc;
 
     /**
-    * 建议方案
+    * <p>建议方案</p>
     */
     @SerializedName("SuggestSolution")
     @Expose
     private String SuggestSolution;
 
     /**
-    * 参考链接
+    * <p>参考链接</p>
     */
     @SerializedName("ReferenceLink")
     @Expose
     private String ReferenceLink;
 
     /**
-    * 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
+    * <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
     */
     @SerializedName("HandleStatus")
     @Expose
     private Long HandleStatus;
 
     /**
-    * 主机在线状态
+    * <p>主机在线状态</p>
     */
     @SerializedName("OnlineStatus")
     @Expose
     private Long OnlineStatus;
 
     /**
-    * 附加信息
+    * <p>附加信息</p>
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * 主机uuid
+    * <p>主机uuid</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 首次检出方式 0扫描;1实时监控
+    * <p>首次检出方式 0扫描;1实时监控</p>
     */
     @SerializedName("FirstDetectionMethod")
     @Expose
     private Long FirstDetectionMethod;
 
     /**
-     * Get 事件ID 
-     * @return EventId 事件ID
+    * <p>quuid</p>
+    */
+    @SerializedName("QUUID")
+    @Expose
+    private String QUUID;
+
+    /**
+    * <p>进程md5</p>
+    */
+    @SerializedName("ExeMd5")
+    @Expose
+    private String ExeMd5;
+
+    /**
+     * Get <p>事件ID</p> 
+     * @return EventId <p>事件ID</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件ID
-     * @param EventId 事件ID
+     * Set <p>事件ID</p>
+     * @param EventId <p>事件ID</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 主机名称 
-     * @return HostName 主机名称
+     * Get <p>主机名称</p> 
+     * @return HostName <p>主机名称</p>
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 主机名称
-     * @param HostName 主机名称
+     * Set <p>主机名称</p>
+     * @param HostName <p>主机名称</p>
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机IP 
-     * @return HostIp 主机IP
+     * Get <p>主机IP</p> 
+     * @return HostIp <p>主机IP</p>
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set 主机IP
-     * @param HostIp 主机IP
+     * Set <p>主机IP</p>
+     * @param HostIp <p>主机IP</p>
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 外网IP 
-     * @return WanIp 外网IP
+     * Get <p>外网IP</p> 
+     * @return WanIp <p>外网IP</p>
      */
     public String getWanIp() {
         return this.WanIp;
     }
 
     /**
-     * Set 外网IP
-     * @param WanIp 外网IP
+     * Set <p>外网IP</p>
+     * @param WanIp <p>外网IP</p>
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get 进程ID 
-     * @return ProcessId 进程ID
+     * Get <p>进程ID</p> 
+     * @return ProcessId <p>进程ID</p>
      */
     public Long getProcessId() {
         return this.ProcessId;
     }
 
     /**
-     * Set 进程ID
-     * @param ProcessId 进程ID
+     * Set <p>进程ID</p>
+     * @param ProcessId <p>进程ID</p>
      */
     public void setProcessId(Long ProcessId) {
         this.ProcessId = ProcessId;
     }
 
     /**
-     * Get 文件路径 
-     * @return FilePath 文件路径
+     * Get <p>文件路径</p> 
+     * @return FilePath <p>文件路径</p>
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set 文件路径
-     * @param FilePath 文件路径
+     * Set <p>文件路径</p>
+     * @param FilePath <p>文件路径</p>
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get 执行命令 
-     * @return CmdLine 执行命令
+     * Get <p>执行命令</p> 
+     * @return CmdLine <p>执行命令</p>
      */
     public String getCmdLine() {
         return this.CmdLine;
     }
 
     /**
-     * Set 执行命令
-     * @param CmdLine 执行命令
+     * Set <p>执行命令</p>
+     * @param CmdLine <p>执行命令</p>
      */
     public void setCmdLine(String CmdLine) {
         this.CmdLine = CmdLine;
     }
 
     /**
-     * Get 进程启动时间 
-     * @return StartTime 进程启动时间
+     * Get <p>进程启动时间</p> 
+     * @return StartTime <p>进程启动时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 进程启动时间
-     * @param StartTime 进程启动时间
+     * Set <p>进程启动时间</p>
+     * @param StartTime <p>进程启动时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 最近检测时间 
-     * @return DetectTime 最近检测时间
+     * Get <p>最近检测时间</p> 
+     * @return DetectTime <p>最近检测时间</p>
      */
     public String getDetectTime() {
         return this.DetectTime;
     }
 
     /**
-     * Set 最近检测时间
-     * @param DetectTime 最近检测时间
+     * Set <p>最近检测时间</p>
+     * @param DetectTime <p>最近检测时间</p>
      */
     public void setDetectTime(String DetectTime) {
         this.DetectTime = DetectTime;
     }
 
     /**
-     * Get 病毒名称 
-     * @return VirusName 病毒名称
+     * Get <p>病毒名称</p> 
+     * @return VirusName <p>病毒名称</p>
      */
     public String getVirusName() {
         return this.VirusName;
     }
 
     /**
-     * Set 病毒名称
-     * @param VirusName 病毒名称
+     * Set <p>病毒名称</p>
+     * @param VirusName <p>病毒名称</p>
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报] 
-     * @return CheckPlatform 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
+     * Get <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p> 
+     * @return CheckPlatform <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
      */
     public String [] getCheckPlatform() {
         return this.CheckPlatform;
     }
 
     /**
-     * Set 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
-     * @param CheckPlatform 木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]
+     * Set <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
+     * @param CheckPlatform <p>木马检测平台 [1:云查杀引擎|2:TAV|3:binaryAi|4:异常行为|5:威胁情报]</p>
      */
     public void setCheckPlatform(String [] CheckPlatform) {
         this.CheckPlatform = CheckPlatform;
     }
 
     /**
-     * Get 病毒标签 
-     * @return VirusTags 病毒标签
+     * Get <p>病毒标签</p> 
+     * @return VirusTags <p>病毒标签</p>
      */
     public String [] getVirusTags() {
         return this.VirusTags;
     }
 
     /**
-     * Set 病毒标签
-     * @param VirusTags 病毒标签
+     * Set <p>病毒标签</p>
+     * @param VirusTags <p>病毒标签</p>
      */
     public void setVirusTags(String [] VirusTags) {
         this.VirusTags = VirusTags;
     }
 
     /**
-     * Get 威胁描述 
-     * @return ThreatDesc 威胁描述
+     * Get <p>威胁描述</p> 
+     * @return ThreatDesc <p>威胁描述</p>
      */
     public String getThreatDesc() {
         return this.ThreatDesc;
     }
 
     /**
-     * Set 威胁描述
-     * @param ThreatDesc 威胁描述
+     * Set <p>威胁描述</p>
+     * @param ThreatDesc <p>威胁描述</p>
      */
     public void setThreatDesc(String ThreatDesc) {
         this.ThreatDesc = ThreatDesc;
     }
 
     /**
-     * Get 建议方案 
-     * @return SuggestSolution 建议方案
+     * Get <p>建议方案</p> 
+     * @return SuggestSolution <p>建议方案</p>
      */
     public String getSuggestSolution() {
         return this.SuggestSolution;
     }
 
     /**
-     * Set 建议方案
-     * @param SuggestSolution 建议方案
+     * Set <p>建议方案</p>
+     * @param SuggestSolution <p>建议方案</p>
      */
     public void setSuggestSolution(String SuggestSolution) {
         this.SuggestSolution = SuggestSolution;
     }
 
     /**
-     * Get 参考链接 
-     * @return ReferenceLink 参考链接
+     * Get <p>参考链接</p> 
+     * @return ReferenceLink <p>参考链接</p>
      */
     public String getReferenceLink() {
         return this.ReferenceLink;
     }
 
     /**
-     * Set 参考链接
-     * @param ReferenceLink 参考链接
+     * Set <p>参考链接</p>
+     * @param ReferenceLink <p>参考链接</p>
      */
     public void setReferenceLink(String ReferenceLink) {
         this.ReferenceLink = ReferenceLink;
     }
 
     /**
-     * Get 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略] 
-     * @return HandleStatus 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
+     * Get <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p> 
+     * @return HandleStatus <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
      */
     public Long getHandleStatus() {
         return this.HandleStatus;
     }
 
     /**
-     * Set 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
-     * @param HandleStatus 处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]
+     * Set <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
+     * @param HandleStatus <p>处理状态[0待处理;1已处理;2查杀中;3已查杀;4已退出;5忽略]</p>
      */
     public void setHandleStatus(Long HandleStatus) {
         this.HandleStatus = HandleStatus;
     }
 
     /**
-     * Get 主机在线状态 
-     * @return OnlineStatus 主机在线状态
+     * Get <p>主机在线状态</p> 
+     * @return OnlineStatus <p>主机在线状态</p>
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set 主机在线状态
-     * @param OnlineStatus 主机在线状态
+     * Set <p>主机在线状态</p>
+     * @param OnlineStatus <p>主机在线状态</p>
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get 附加信息 
-     * @return MachineExtraInfo 附加信息
+     * Get <p>附加信息</p> 
+     * @return MachineExtraInfo <p>附加信息</p>
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set 附加信息
-     * @param MachineExtraInfo 附加信息
+     * Set <p>附加信息</p>
+     * @param MachineExtraInfo <p>附加信息</p>
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 主机uuid 
-     * @return Uuid 主机uuid
+     * Get <p>主机uuid</p> 
+     * @return Uuid <p>主机uuid</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机uuid
-     * @param Uuid 主机uuid
+     * Set <p>主机uuid</p>
+     * @param Uuid <p>主机uuid</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 首次检出方式 0扫描;1实时监控 
-     * @return FirstDetectionMethod 首次检出方式 0扫描;1实时监控
+     * Get <p>首次检出方式 0扫描;1实时监控</p> 
+     * @return FirstDetectionMethod <p>首次检出方式 0扫描;1实时监控</p>
      */
     public Long getFirstDetectionMethod() {
         return this.FirstDetectionMethod;
     }
 
     /**
-     * Set 首次检出方式 0扫描;1实时监控
-     * @param FirstDetectionMethod 首次检出方式 0扫描;1实时监控
+     * Set <p>首次检出方式 0扫描;1实时监控</p>
+     * @param FirstDetectionMethod <p>首次检出方式 0扫描;1实时监控</p>
      */
     public void setFirstDetectionMethod(Long FirstDetectionMethod) {
         this.FirstDetectionMethod = FirstDetectionMethod;
+    }
+
+    /**
+     * Get <p>quuid</p> 
+     * @return QUUID <p>quuid</p>
+     */
+    public String getQUUID() {
+        return this.QUUID;
+    }
+
+    /**
+     * Set <p>quuid</p>
+     * @param QUUID <p>quuid</p>
+     */
+    public void setQUUID(String QUUID) {
+        this.QUUID = QUUID;
+    }
+
+    /**
+     * Get <p>进程md5</p> 
+     * @return ExeMd5 <p>进程md5</p>
+     */
+    public String getExeMd5() {
+        return this.ExeMd5;
+    }
+
+    /**
+     * Set <p>进程md5</p>
+     * @param ExeMd5 <p>进程md5</p>
+     */
+    public void setExeMd5(String ExeMd5) {
+        this.ExeMd5 = ExeMd5;
     }
 
     public RiskProcessEvent() {
@@ -557,6 +603,12 @@ public class RiskProcessEvent extends AbstractModel {
         if (source.FirstDetectionMethod != null) {
             this.FirstDetectionMethod = new Long(source.FirstDetectionMethod);
         }
+        if (source.QUUID != null) {
+            this.QUUID = new String(source.QUUID);
+        }
+        if (source.ExeMd5 != null) {
+            this.ExeMd5 = new String(source.ExeMd5);
+        }
     }
 
 
@@ -584,6 +636,8 @@ public class RiskProcessEvent extends AbstractModel {
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "FirstDetectionMethod", this.FirstDetectionMethod);
+        this.setParamSimple(map, prefix + "QUUID", this.QUUID);
+        this.setParamSimple(map, prefix + "ExeMd5", this.ExeMd5);
 
     }
 }

@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class CreateDeviceSDPAnswerRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * SDP提议
+    * <p>SDP提议</p>
     */
     @SerializedName("SDPOffer")
     @Expose
     private String SDPOffer;
 
     /**
-    * 客户自定义拉流标识
+    * <p>客户自定义拉流标识</p>
     */
     @SerializedName("RequesterTag")
     @Expose
     private String RequesterTag;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+    * <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("EnableSubPub")
+    @Expose
+    private Long EnableSubPub;
+
+    /**
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get SDP提议 
-     * @return SDPOffer SDP提议
+     * Get <p>SDP提议</p> 
+     * @return SDPOffer <p>SDP提议</p>
      */
     public String getSDPOffer() {
         return this.SDPOffer;
     }
 
     /**
-     * Set SDP提议
-     * @param SDPOffer SDP提议
+     * Set <p>SDP提议</p>
+     * @param SDPOffer <p>SDP提议</p>
      */
     public void setSDPOffer(String SDPOffer) {
         this.SDPOffer = SDPOffer;
     }
 
     /**
-     * Get 客户自定义拉流标识 
-     * @return RequesterTag 客户自定义拉流标识
+     * Get <p>客户自定义拉流标识</p> 
+     * @return RequesterTag <p>客户自定义拉流标识</p>
      */
     public String getRequesterTag() {
         return this.RequesterTag;
     }
 
     /**
-     * Set 客户自定义拉流标识
-     * @param RequesterTag 客户自定义拉流标识
+     * Set <p>客户自定义拉流标识</p>
+     * @param RequesterTag <p>客户自定义拉流标识</p>
      */
     public void setRequesterTag(String RequesterTag) {
         this.RequesterTag = RequesterTag;
+    }
+
+    /**
+     * Get <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p> 
+     * @return EnableSubPub <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+     */
+    public Long getEnableSubPub() {
+        return this.EnableSubPub;
+    }
+
+    /**
+     * Set <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+     * @param EnableSubPub <p>默认值：0，如果需要webrtc推流拉流在同一个SDP中，需要值为1，常用于单PC模式</p><p>枚举值：</p><ul><li>0： 默认值，传统多pc推流模式</li><li>1： 单pc模式，如果需要webrtc单pc推拉流，采用此模式，此模式下注意SDP需要包含推拉流全部信息</li></ul><p>默认值：0</p>
+     */
+    public void setEnableSubPub(Long EnableSubPub) {
+        this.EnableSubPub = EnableSubPub;
     }
 
     public CreateDeviceSDPAnswerRequest() {
@@ -135,6 +158,9 @@ public class CreateDeviceSDPAnswerRequest extends AbstractModel {
         if (source.RequesterTag != null) {
             this.RequesterTag = new String(source.RequesterTag);
         }
+        if (source.EnableSubPub != null) {
+            this.EnableSubPub = new Long(source.EnableSubPub);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateDeviceSDPAnswerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "SDPOffer", this.SDPOffer);
         this.setParamSimple(map, prefix + "RequesterTag", this.RequesterTag);
+        this.setParamSimple(map, prefix + "EnableSubPub", this.EnableSubPub);
 
     }
 }

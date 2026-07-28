@@ -52,6 +52,13 @@ public class DBCustomImage extends AbstractModel {
     private String Architecture;
 
     /**
+    * <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+    */
+    @SerializedName("OsType")
+    @Expose
+    private String OsType;
+
+    /**
      * Get <p>镜像ID</p> 
      * @return ImageId <p>镜像ID</p>
      */
@@ -115,6 +122,22 @@ public class DBCustomImage extends AbstractModel {
         this.Architecture = Architecture;
     }
 
+    /**
+     * Get <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul> 
+     * @return OsType <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+     */
+    public String getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+     * @param OsType <p>操作系统类型</p><p>枚举值：</p><ul><li>windows： windows</li><li>linux： linux</li></ul>
+     */
+    public void setOsType(String OsType) {
+        this.OsType = OsType;
+    }
+
     public DBCustomImage() {
     }
 
@@ -135,6 +158,9 @@ public class DBCustomImage extends AbstractModel {
         if (source.Architecture != null) {
             this.Architecture = new String(source.Architecture);
         }
+        if (source.OsType != null) {
+            this.OsType = new String(source.OsType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DBCustomImage extends AbstractModel {
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
 
     }
 }

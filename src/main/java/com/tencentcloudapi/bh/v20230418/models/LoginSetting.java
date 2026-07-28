@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class LoginSetting extends AbstractModel {
 
     /**
-    * 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
+    * <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * 连续密码错误次数，超过锁定账号，3-5
+    * <p>连续密码错误次数，超过锁定账号，3-5</p>
     */
     @SerializedName("LockThreshold")
     @Expose
     private Long LockThreshold;
 
     /**
-    * 账号锁定时长，10分钟，20分钟，30分钟
+    * <p>账号锁定时长，10分钟，20分钟，30分钟</p>
     */
     @SerializedName("LockTime")
     @Expose
     private Long LockTime;
 
     /**
-    * 用户多少天不活跃，账号自动锁定
+    * <p>用户多少天不活跃，账号自动锁定</p>
     */
     @SerializedName("InactiveUserLock")
     @Expose
     private Long InactiveUserLock;
 
     /**
-     * Get 登录会话超时，10分钟，20分钟，30分钟，默认20分钟 
-     * @return TimeOut 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
+    * <p>运维账号单点登录开关：0-关闭，1-开启</p>
+    */
+    @SerializedName("EnableSingleLogin")
+    @Expose
+    private Long EnableSingleLogin;
+
+    /**
+     * Get <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p> 
+     * @return TimeOut <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
-     * @param TimeOut 登录会话超时，10分钟，20分钟，30分钟，默认20分钟
+     * Set <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
+     * @param TimeOut <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get 连续密码错误次数，超过锁定账号，3-5 
-     * @return LockThreshold 连续密码错误次数，超过锁定账号，3-5
+     * Get <p>连续密码错误次数，超过锁定账号，3-5</p> 
+     * @return LockThreshold <p>连续密码错误次数，超过锁定账号，3-5</p>
      */
     public Long getLockThreshold() {
         return this.LockThreshold;
     }
 
     /**
-     * Set 连续密码错误次数，超过锁定账号，3-5
-     * @param LockThreshold 连续密码错误次数，超过锁定账号，3-5
+     * Set <p>连续密码错误次数，超过锁定账号，3-5</p>
+     * @param LockThreshold <p>连续密码错误次数，超过锁定账号，3-5</p>
      */
     public void setLockThreshold(Long LockThreshold) {
         this.LockThreshold = LockThreshold;
     }
 
     /**
-     * Get 账号锁定时长，10分钟，20分钟，30分钟 
-     * @return LockTime 账号锁定时长，10分钟，20分钟，30分钟
+     * Get <p>账号锁定时长，10分钟，20分钟，30分钟</p> 
+     * @return LockTime <p>账号锁定时长，10分钟，20分钟，30分钟</p>
      */
     public Long getLockTime() {
         return this.LockTime;
     }
 
     /**
-     * Set 账号锁定时长，10分钟，20分钟，30分钟
-     * @param LockTime 账号锁定时长，10分钟，20分钟，30分钟
+     * Set <p>账号锁定时长，10分钟，20分钟，30分钟</p>
+     * @param LockTime <p>账号锁定时长，10分钟，20分钟，30分钟</p>
      */
     public void setLockTime(Long LockTime) {
         this.LockTime = LockTime;
     }
 
     /**
-     * Get 用户多少天不活跃，账号自动锁定 
-     * @return InactiveUserLock 用户多少天不活跃，账号自动锁定
+     * Get <p>用户多少天不活跃，账号自动锁定</p> 
+     * @return InactiveUserLock <p>用户多少天不活跃，账号自动锁定</p>
      */
     public Long getInactiveUserLock() {
         return this.InactiveUserLock;
     }
 
     /**
-     * Set 用户多少天不活跃，账号自动锁定
-     * @param InactiveUserLock 用户多少天不活跃，账号自动锁定
+     * Set <p>用户多少天不活跃，账号自动锁定</p>
+     * @param InactiveUserLock <p>用户多少天不活跃，账号自动锁定</p>
      */
     public void setInactiveUserLock(Long InactiveUserLock) {
         this.InactiveUserLock = InactiveUserLock;
+    }
+
+    /**
+     * Get <p>运维账号单点登录开关：0-关闭，1-开启</p> 
+     * @return EnableSingleLogin <p>运维账号单点登录开关：0-关闭，1-开启</p>
+     */
+    public Long getEnableSingleLogin() {
+        return this.EnableSingleLogin;
+    }
+
+    /**
+     * Set <p>运维账号单点登录开关：0-关闭，1-开启</p>
+     * @param EnableSingleLogin <p>运维账号单点登录开关：0-关闭，1-开启</p>
+     */
+    public void setEnableSingleLogin(Long EnableSingleLogin) {
+        this.EnableSingleLogin = EnableSingleLogin;
     }
 
     public LoginSetting() {
@@ -135,6 +158,9 @@ public class LoginSetting extends AbstractModel {
         if (source.InactiveUserLock != null) {
             this.InactiveUserLock = new Long(source.InactiveUserLock);
         }
+        if (source.EnableSingleLogin != null) {
+            this.EnableSingleLogin = new Long(source.EnableSingleLogin);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class LoginSetting extends AbstractModel {
         this.setParamSimple(map, prefix + "LockThreshold", this.LockThreshold);
         this.setParamSimple(map, prefix + "LockTime", this.LockTime);
         this.setParamSimple(map, prefix + "InactiveUserLock", this.InactiveUserLock);
+        this.setParamSimple(map, prefix + "EnableSingleLogin", this.EnableSingleLogin);
 
     }
 }

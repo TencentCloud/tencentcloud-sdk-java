@@ -202,6 +202,20 @@ public class DBCustomNode extends AbstractModel {
     private String HostIp;
 
     /**
+    * <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+    */
+    @SerializedName("NetworkMode")
+    @Expose
+    private String NetworkMode;
+
+    /**
+    * <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+    */
+    @SerializedName("EniIP")
+    @Expose
+    private String EniIP;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -613,6 +627,38 @@ public class DBCustomNode extends AbstractModel {
         this.HostIp = HostIp;
     }
 
+    /**
+     * Get <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul> 
+     * @return NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+     */
+    public String getNetworkMode() {
+        return this.NetworkMode;
+    }
+
+    /**
+     * Set <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+     * @param NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>NetworkModePrivateLink： 四层 SSH 服务联通模式</li><li>NetworkModeCrossTenantENI：  三层双网卡访问方式</li></ul>
+     */
+    public void setNetworkMode(String NetworkMode) {
+        this.NetworkMode = NetworkMode;
+    }
+
+    /**
+     * Get <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p> 
+     * @return EniIP <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+     */
+    public String getEniIP() {
+        return this.EniIP;
+    }
+
+    /**
+     * Set <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+     * @param EniIP <p>当选择NetworkModeCrossTenantENI模式时，节点的访问IP地址</p>
+     */
+    public void setEniIP(String EniIP) {
+        this.EniIP = EniIP;
+    }
+
     public DBCustomNode() {
     }
 
@@ -702,6 +748,12 @@ public class DBCustomNode extends AbstractModel {
         if (source.HostIp != null) {
             this.HostIp = new String(source.HostIp);
         }
+        if (source.NetworkMode != null) {
+            this.NetworkMode = new String(source.NetworkMode);
+        }
+        if (source.EniIP != null) {
+            this.EniIP = new String(source.EniIP);
+        }
     }
 
 
@@ -734,6 +786,8 @@ public class DBCustomNode extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchId", this.SwitchId);
         this.setParamSimple(map, prefix + "RackId", this.RackId);
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
+        this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+        this.setParamSimple(map, prefix + "EniIP", this.EniIP);
 
     }
 }
