@@ -76,6 +76,20 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String VoiceClonedMarkFile;
 
     /**
+    * <p>仅做擦除的视频结果路径</p>
+    */
+    @SerializedName("ErasedVideoPath")
+    @Expose
+    private String ErasedVideoPath;
+
+    /**
+    * <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
+    */
+    @SerializedName("DubbingEditInfoUrl")
+    @Expose
+    private String DubbingEditInfoUrl;
+
+    /**
     * <p>擦除后文件的FileId。</p>
     */
     @SerializedName("FileId")
@@ -221,6 +235,38 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
+     * Get <p>仅做擦除的视频结果路径</p> 
+     * @return ErasedVideoPath <p>仅做擦除的视频结果路径</p>
+     */
+    public String getErasedVideoPath() {
+        return this.ErasedVideoPath;
+    }
+
+    /**
+     * Set <p>仅做擦除的视频结果路径</p>
+     * @param ErasedVideoPath <p>仅做擦除的视频结果路径</p>
+     */
+    public void setErasedVideoPath(String ErasedVideoPath) {
+        this.ErasedVideoPath = ErasedVideoPath;
+    }
+
+    /**
+     * Get <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p> 
+     * @return DubbingEditInfoUrl <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
+     */
+    public String getDubbingEditInfoUrl() {
+        return this.DubbingEditInfoUrl;
+    }
+
+    /**
+     * Set <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
+     * @param DubbingEditInfoUrl <p>音色克隆编辑信息</p><p>用于音色克隆二次修改的编辑信息</p>
+     */
+    public void setDubbingEditInfoUrl(String DubbingEditInfoUrl) {
+        this.DubbingEditInfoUrl = DubbingEditInfoUrl;
+    }
+
+    /**
      * Get <p>擦除后文件的FileId。</p> 
      * @return FileId <p>擦除后文件的FileId。</p>
      */
@@ -297,6 +343,12 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         if (source.VoiceClonedMarkFile != null) {
             this.VoiceClonedMarkFile = new String(source.VoiceClonedMarkFile);
         }
+        if (source.ErasedVideoPath != null) {
+            this.ErasedVideoPath = new String(source.ErasedVideoPath);
+        }
+        if (source.DubbingEditInfoUrl != null) {
+            this.DubbingEditInfoUrl = new String(source.DubbingEditInfoUrl);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
@@ -320,6 +372,8 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
         this.setParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
         this.setParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
+        this.setParamSimple(map, prefix + "ErasedVideoPath", this.ErasedVideoPath);
+        this.setParamSimple(map, prefix + "DubbingEditInfoUrl", this.DubbingEditInfoUrl);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "OriginSubtitleFileId", this.OriginSubtitleFileId);
         this.setParamSimple(map, prefix + "TranslateSubtitleFileId", this.TranslateSubtitleFileId);
