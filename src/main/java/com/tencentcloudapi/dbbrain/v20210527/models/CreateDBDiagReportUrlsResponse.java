@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBasicModerationResponse extends AbstractModel {
+public class CreateDBDiagReportUrlsResponse extends AbstractModel {
 
     /**
-    * 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
+    * <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TaskId")
+    @SerializedName("TotalCount")
     @Expose
-    private String TaskId;
+    private Long TotalCount;
+
+    /**
+    * <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Items")
+    @Expose
+    private DiagReportUrlItem [] Items;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +47,43 @@ public class CreateBasicModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数 
-     * @return TaskId 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
+     * Get <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
-     * @param TaskId 审核服务分配的任务ID。任务ID是对一次审核任务生命周期过程的唯一标识，结束任务时会失去意义。任务ID需要业务保存下来，作为下次针对这个任务操作的参数
+     * Set <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount <p>URL条目总数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiagReportUrlItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items <p>报告URL信息列表。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(DiagReportUrlItem [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -69,16 +102,22 @@ public class CreateBasicModerationResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateBasicModerationResponse() {
+    public CreateDBDiagReportUrlsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBasicModerationResponse(CreateBasicModerationResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public CreateDBDiagReportUrlsResponse(CreateDBDiagReportUrlsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new DiagReportUrlItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new DiagReportUrlItem(source.Items[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +129,8 @@ public class CreateBasicModerationResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

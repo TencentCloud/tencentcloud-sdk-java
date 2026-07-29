@@ -381,6 +381,13 @@ public class DeviceDetail extends AbstractModel {
     private String RemarkName;
 
     /**
+    * <p>BiosUUID（启动盘标识符）</p>
+    */
+    @SerializedName("BiosUuid")
+    @Expose
+    private String BiosUuid;
+
+    /**
      * Get <p>设备ID</p> 
      * @return Id <p>设备ID</p>
      */
@@ -1196,6 +1203,22 @@ public class DeviceDetail extends AbstractModel {
         this.RemarkName = RemarkName;
     }
 
+    /**
+     * Get <p>BiosUUID（启动盘标识符）</p> 
+     * @return BiosUuid <p>BiosUUID（启动盘标识符）</p>
+     */
+    public String getBiosUuid() {
+        return this.BiosUuid;
+    }
+
+    /**
+     * Set <p>BiosUUID（启动盘标识符）</p>
+     * @param BiosUuid <p>BiosUUID（启动盘标识符）</p>
+     */
+    public void setBiosUuid(String BiosUuid) {
+        this.BiosUuid = BiosUuid;
+    }
+
     public DeviceDetail() {
     }
 
@@ -1360,6 +1383,9 @@ public class DeviceDetail extends AbstractModel {
         if (source.RemarkName != null) {
             this.RemarkName = new String(source.RemarkName);
         }
+        if (source.BiosUuid != null) {
+            this.BiosUuid = new String(source.BiosUuid);
+        }
     }
 
 
@@ -1418,6 +1444,7 @@ public class DeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ScreenRecordingPermission", this.ScreenRecordingPermission);
         this.setParamSimple(map, prefix + "DiskAccessPermission", this.DiskAccessPermission);
         this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
+        this.setParamSimple(map, prefix + "BiosUuid", this.BiosUuid);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteBasicModerationResponse extends AbstractModel {
+public class DeleteCloudAppVersionResponse extends AbstractModel {
 
     /**
-    * 审核任务的唯一Id。
+    * 是否删除成功
     */
-    @SerializedName("TaskId")
+    @SerializedName("Result")
     @Expose
-    private String TaskId;
+    private Boolean Result;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class DeleteBasicModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 审核任务的唯一Id。 
-     * @return TaskId 审核任务的唯一Id。
+     * Get 是否删除成功 
+     * @return Result 是否删除成功
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 审核任务的唯一Id。
-     * @param TaskId 审核任务的唯一Id。
+     * Set 是否删除成功
+     * @param Result 是否删除成功
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
     /**
@@ -69,16 +69,16 @@ public class DeleteBasicModerationResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DeleteBasicModerationResponse() {
+    public DeleteCloudAppVersionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteBasicModerationResponse(DeleteBasicModerationResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DeleteCloudAppVersionResponse(DeleteCloudAppVersionResponse source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class DeleteBasicModerationResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

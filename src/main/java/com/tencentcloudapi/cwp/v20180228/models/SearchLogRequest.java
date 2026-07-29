@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class SearchLogRequest extends AbstractModel {
 
     /**
-    * 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+    * <p>要检索分析的日志的起始时间，Unix时间戳（毫秒）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+    * <p>要检索分析的日志的结束时间，Unix时间戳（毫秒）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
+    * <p>检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508</p>
     */
     @SerializedName("QueryString")
     @Expose
     private String QueryString;
 
     /**
-    * 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+    * <p>表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+    * <p>原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc</p>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
+    * <p>透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时</p>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-     * Get 要检索分析的日志的起始时间，Unix时间戳（毫秒） 
-     * @return StartTime 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+     * Get <p>要检索分析的日志的起始时间，Unix时间戳（毫秒）</p> 
+     * @return StartTime <p>要检索分析的日志的起始时间，Unix时间戳（毫秒）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 要检索分析的日志的起始时间，Unix时间戳（毫秒）
-     * @param StartTime 要检索分析的日志的起始时间，Unix时间戳（毫秒）
+     * Set <p>要检索分析的日志的起始时间，Unix时间戳（毫秒）</p>
+     * @param StartTime <p>要检索分析的日志的起始时间，Unix时间戳（毫秒）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 要检索分析的日志的结束时间，Unix时间戳（毫秒） 
-     * @return EndTime 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+     * Get <p>要检索分析的日志的结束时间，Unix时间戳（毫秒）</p> 
+     * @return EndTime <p>要检索分析的日志的结束时间，Unix时间戳（毫秒）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 要检索分析的日志的结束时间，Unix时间戳（毫秒）
-     * @param EndTime 要检索分析的日志的结束时间，Unix时间戳（毫秒）
+     * Set <p>要检索分析的日志的结束时间，Unix时间戳（毫秒）</p>
+     * @param EndTime <p>要检索分析的日志的结束时间，Unix时间戳（毫秒）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508 
-     * @return QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
+     * Get <p>检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508</p> 
+     * @return QueryString <p>检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508</p>
      */
     public String getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
-     * @param QueryString 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
+     * Set <p>检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508</p>
+     * @param QueryString <p>检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508</p>
      */
     public void setQueryString(String QueryString) {
         this.QueryString = QueryString;
     }
 
     /**
-     * Get 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数 
-     * @return Count 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * Get <p>表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数</p> 
+     * @return Count <p>表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
-     * @param Count 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * Set <p>表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数</p>
+     * @param Count <p>表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc 
-     * @return Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * Get <p>原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc</p> 
+     * @return Sort <p>原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc</p>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-     * @param Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * Set <p>原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc</p>
+     * @param Sort <p>原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc</p>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时 
-     * @return Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
+     * Get <p>透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时</p> 
+     * @return Context <p>透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时</p>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
-     * @param Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
+     * Set <p>透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时</p>
+     * @param Context <p>透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时</p>
      */
     public void setContext(String Context) {
         this.Context = Context;

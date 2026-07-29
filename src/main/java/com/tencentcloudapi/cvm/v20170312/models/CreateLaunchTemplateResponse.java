@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLaunchTemplateResponse extends AbstractModel {
 
     /**
-    * 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。
+    * <p>当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板<code>ID</code>。</p>
     */
     @SerializedName("LaunchTemplateId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLaunchTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。 
-     * @return LaunchTemplateId 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。
+     * Get <p>当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板<code>ID</code>。</p> 
+     * @return LaunchTemplateId <p>当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板<code>ID</code>。</p>
      */
     public String getLaunchTemplateId() {
         return this.LaunchTemplateId;
     }
 
     /**
-     * Set 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。
-     * @param LaunchTemplateId 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。
+     * Set <p>当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板<code>ID</code>。</p>
+     * @param LaunchTemplateId <p>当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板<code>ID</code>。</p>
      */
     public void setLaunchTemplateId(String LaunchTemplateId) {
         this.LaunchTemplateId = LaunchTemplateId;

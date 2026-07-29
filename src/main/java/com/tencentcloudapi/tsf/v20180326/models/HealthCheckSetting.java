@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HealthCheckSetting extends AbstractModel {
 
     /**
-    * 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+    * <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
@@ -32,7 +32,7 @@ public class HealthCheckSetting extends AbstractModel {
     private String ActionType;
 
     /**
-    * 容器延时启动健康检查的时间，单位秒。
+    * <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialDelaySeconds")
@@ -40,7 +40,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long InitialDelaySeconds;
 
     /**
-    * 每次健康检查响应的最大超时时间，单位秒。
+    * <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeoutSeconds")
@@ -48,7 +48,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long TimeoutSeconds;
 
     /**
-    * 进行健康检查的时间间隔，单位秒。
+    * <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodSeconds")
@@ -56,7 +56,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long PeriodSeconds;
 
     /**
-    * 表示后端容器从失败到成功的连续健康检查成功次数。
+    * <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessThreshold")
@@ -64,7 +64,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long SuccessThreshold;
 
     /**
-    * 表示后端容器从成功到失败的连续健康检查成功次数。
+    * <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureThreshold")
@@ -72,7 +72,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long FailureThreshold;
 
     /**
-    * HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+    * <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scheme")
@@ -80,7 +80,7 @@ public class HealthCheckSetting extends AbstractModel {
     private String Scheme;
 
     /**
-    * 健康检查端口，范围 1~65535 。
+    * <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
@@ -88,7 +88,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long Port;
 
     /**
-    * HTTP 健康检查接口的请求路径。
+    * <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -96,7 +96,7 @@ public class HealthCheckSetting extends AbstractModel {
     private String Path;
 
     /**
-    * 执行命令检查方式，执行的命令。
+    * <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Command")
@@ -104,7 +104,7 @@ public class HealthCheckSetting extends AbstractModel {
     private String [] Command;
 
     /**
-    * TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+    * <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -112,9 +112,9 @@ public class HealthCheckSetting extends AbstractModel {
     private String Type;
 
     /**
-     * Get 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+     * Get <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActionType 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+     * @return ActionType <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
@@ -122,9 +122,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+     * Set <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActionType 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
+     * @param ActionType <p>健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
@@ -132,9 +132,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 容器延时启动健康检查的时间，单位秒。
+     * Get <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InitialDelaySeconds 容器延时启动健康检查的时间，单位秒。
+     * @return InitialDelaySeconds <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInitialDelaySeconds() {
@@ -142,9 +142,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 容器延时启动健康检查的时间，单位秒。
+     * Set <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InitialDelaySeconds 容器延时启动健康检查的时间，单位秒。
+     * @param InitialDelaySeconds <p>容器延时启动健康检查的时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitialDelaySeconds(Long InitialDelaySeconds) {
@@ -152,9 +152,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 每次健康检查响应的最大超时时间，单位秒。
+     * Get <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeoutSeconds 每次健康检查响应的最大超时时间，单位秒。
+     * @return TimeoutSeconds <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeoutSeconds() {
@@ -162,9 +162,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 每次健康检查响应的最大超时时间，单位秒。
+     * Set <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeoutSeconds 每次健康检查响应的最大超时时间，单位秒。
+     * @param TimeoutSeconds <p>每次健康检查响应的最大超时时间，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeoutSeconds(Long TimeoutSeconds) {
@@ -172,9 +172,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 进行健康检查的时间间隔，单位秒。
+     * Get <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeriodSeconds 进行健康检查的时间间隔，单位秒。
+     * @return PeriodSeconds <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriodSeconds() {
@@ -182,9 +182,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 进行健康检查的时间间隔，单位秒。
+     * Set <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeriodSeconds 进行健康检查的时间间隔，单位秒。
+     * @param PeriodSeconds <p>进行健康检查的时间间隔，单位秒。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodSeconds(Long PeriodSeconds) {
@@ -192,9 +192,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 表示后端容器从失败到成功的连续健康检查成功次数。
+     * Get <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccessThreshold 表示后端容器从失败到成功的连续健康检查成功次数。
+     * @return SuccessThreshold <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessThreshold() {
@@ -202,9 +202,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 表示后端容器从失败到成功的连续健康检查成功次数。
+     * Set <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccessThreshold 表示后端容器从失败到成功的连续健康检查成功次数。
+     * @param SuccessThreshold <p>表示后端容器从失败到成功的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessThreshold(Long SuccessThreshold) {
@@ -212,9 +212,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 表示后端容器从成功到失败的连续健康检查成功次数。
+     * Get <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailureThreshold 表示后端容器从成功到失败的连续健康检查成功次数。
+     * @return FailureThreshold <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailureThreshold() {
@@ -222,9 +222,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 表示后端容器从成功到失败的连续健康检查成功次数。
+     * Set <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailureThreshold 表示后端容器从成功到失败的连续健康检查成功次数。
+     * @param FailureThreshold <p>表示后端容器从成功到失败的连续健康检查成功次数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureThreshold(Long FailureThreshold) {
@@ -232,9 +232,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+     * Get <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scheme HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+     * @return Scheme <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheme() {
@@ -242,9 +242,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+     * Set <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scheme HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。
+     * @param Scheme <p>HTTP 健康检查方法使用的检查协议。支持HTTP、HTTPS。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheme(String Scheme) {
@@ -252,9 +252,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 健康检查端口，范围 1~65535 。
+     * Get <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Port 健康检查端口，范围 1~65535 。
+     * @return Port <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
@@ -262,9 +262,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 健康检查端口，范围 1~65535 。
+     * Set <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Port 健康检查端口，范围 1~65535 。
+     * @param Port <p>健康检查端口，范围 1~65535 。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
@@ -272,9 +272,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get HTTP 健康检查接口的请求路径。
+     * Get <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path HTTP 健康检查接口的请求路径。
+     * @return Path <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -282,9 +282,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set HTTP 健康检查接口的请求路径。
+     * Set <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path HTTP 健康检查接口的请求路径。
+     * @param Path <p>HTTP 健康检查接口的请求路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -292,9 +292,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 执行命令检查方式，执行的命令。
+     * Get <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Command 执行命令检查方式，执行的命令。
+     * @return Command <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCommand() {
@@ -302,9 +302,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 执行命令检查方式，执行的命令。
+     * Set <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Command 执行命令检查方式，执行的命令。
+     * @param Command <p>执行命令检查方式，执行的命令。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommand(String [] Command) {
@@ -312,9 +312,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+     * Get <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+     * @return Type <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -322,9 +322,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+     * Set <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+     * @param Type <p>TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

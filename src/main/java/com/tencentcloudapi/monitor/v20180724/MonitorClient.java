@@ -668,6 +668,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查询通知模板中配置的发送用户信息
+     * @param req DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest
+     * @return DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID(DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID", DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse.class);
+    }
+
+    /**
      *查询通知模板列表
      * @param req DescribeAlarmNoticesRequest
      * @return DescribeAlarmNoticesResponse

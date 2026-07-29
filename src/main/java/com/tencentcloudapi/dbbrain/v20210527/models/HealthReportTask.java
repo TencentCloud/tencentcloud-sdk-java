@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class HealthReportTask extends AbstractModel {
 
     /**
-    * 异步任务请求 ID。
+    * <p>异步任务请求 ID。</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
     private Long AsyncRequestId;
 
     /**
-    * 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
+    * <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 任务完成进度，单位%。
+    * <p>任务完成进度，单位%。</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * 任务创建时间。
+    * <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 任务开始执行时间。
+    * <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务完成执行时间。
+    * <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 任务所属实例的基础信息。
+    * <p>任务所属实例的基础信息。</p>
     */
     @SerializedName("InstanceInfo")
     @Expose
     private InstanceBasicInfo InstanceInfo;
 
     /**
-    * 健康报告中的健康信息。
+    * <p>健康报告中的健康信息。</p>
     */
     @SerializedName("HealthStatus")
     @Expose
     private HealthStatus HealthStatus;
 
     /**
-     * Get 异步任务请求 ID。 
-     * @return AsyncRequestId 异步任务请求 ID。
+    * <p>任务所属实例的标签信息</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+     * Get <p>异步任务请求 ID。</p> 
+     * @return AsyncRequestId <p>异步任务请求 ID。</p>
      */
     public Long getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务请求 ID。
-     * @param AsyncRequestId 异步任务请求 ID。
+     * Set <p>异步任务请求 ID。</p>
+     * @param AsyncRequestId <p>异步任务请求 ID。</p>
      */
     public void setAsyncRequestId(Long AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
     }
 
     /**
-     * Get 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。 
-     * @return Source 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
+     * Get <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p> 
+     * @return Source <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
-     * @param Source 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 定时生成；"MANUAL" - 手动触发。
+     * Set <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
+     * @param Source <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 定时生成；&quot;MANUAL&quot; - 手动触发。</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 任务完成进度，单位%。 
-     * @return Progress 任务完成进度，单位%。
+     * Get <p>任务完成进度，单位%。</p> 
+     * @return Progress <p>任务完成进度，单位%。</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 任务完成进度，单位%。
-     * @param Progress 任务完成进度，单位%。
+     * Set <p>任务完成进度，单位%。</p>
+     * @param Progress <p>任务完成进度，单位%。</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 任务创建时间。 
-     * @return CreateTime 任务创建时间。
+     * Get <p>任务创建时间，如“2025-09-30 12:13:14”。</p> 
+     * @return CreateTime <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间。
-     * @param CreateTime 任务创建时间。
+     * Set <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
+     * @param CreateTime <p>任务创建时间，如“2025-09-30 12:13:14”。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 任务开始执行时间。 
-     * @return StartTime 任务开始执行时间。
+     * Get <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p> 
+     * @return StartTime <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始执行时间。
-     * @param StartTime 任务开始执行时间。
+     * Set <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
+     * @param StartTime <p>任务开始执行时间，如“2025-09-30 13:13:14”。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务完成执行时间。 
-     * @return EndTime 任务完成执行时间。
+     * Get <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p> 
+     * @return EndTime <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务完成执行时间。
-     * @param EndTime 任务完成执行时间。
+     * Set <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
+     * @param EndTime <p>任务完成执行时间，如“2025-09-30 14:13:14”。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 任务所属实例的基础信息。 
-     * @return InstanceInfo 任务所属实例的基础信息。
+     * Get <p>任务所属实例的基础信息。</p> 
+     * @return InstanceInfo <p>任务所属实例的基础信息。</p>
      */
     public InstanceBasicInfo getInstanceInfo() {
         return this.InstanceInfo;
     }
 
     /**
-     * Set 任务所属实例的基础信息。
-     * @param InstanceInfo 任务所属实例的基础信息。
+     * Set <p>任务所属实例的基础信息。</p>
+     * @param InstanceInfo <p>任务所属实例的基础信息。</p>
      */
     public void setInstanceInfo(InstanceBasicInfo InstanceInfo) {
         this.InstanceInfo = InstanceInfo;
     }
 
     /**
-     * Get 健康报告中的健康信息。 
-     * @return HealthStatus 健康报告中的健康信息。
+     * Get <p>健康报告中的健康信息。</p> 
+     * @return HealthStatus <p>健康报告中的健康信息。</p>
      */
     public HealthStatus getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set 健康报告中的健康信息。
-     * @param HealthStatus 健康报告中的健康信息。
+     * Set <p>健康报告中的健康信息。</p>
+     * @param HealthStatus <p>健康报告中的健康信息。</p>
      */
     public void setHealthStatus(HealthStatus HealthStatus) {
         this.HealthStatus = HealthStatus;
+    }
+
+    /**
+     * Get <p>任务所属实例的标签信息</p> 
+     * @return Tags <p>任务所属实例的标签信息</p>
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>任务所属实例的标签信息</p>
+     * @param Tags <p>任务所属实例的标签信息</p>
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     public HealthReportTask() {
@@ -239,6 +262,12 @@ public class HealthReportTask extends AbstractModel {
         if (source.HealthStatus != null) {
             this.HealthStatus = new HealthStatus(source.HealthStatus);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class HealthReportTask extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
         this.setParamObj(map, prefix + "HealthStatus.", this.HealthStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

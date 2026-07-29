@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class UploadUpdateCertificateInstanceRequest extends AbstractModel {
 
     /**
-    * 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+    * <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-    * 需要部署的资源类型，参数值可选（小写）：clb
+    * <p>需要部署的资源类型，参数值可选（小写）：clb</p>
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * 公钥证书
+    * <p>公钥证书</p>
     */
     @SerializedName("CertificatePublicKey")
     @Expose
     private String CertificatePublicKey;
 
     /**
-    * 私钥证书
+    * <p>私钥证书</p>
     */
     @SerializedName("CertificatePrivateKey")
     @Expose
     private String CertificatePrivateKey;
 
     /**
-    * 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+    * <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
     */
     @SerializedName("ResourceTypesRegions")
     @Expose
     private ResourceTypeRegions [] ResourceTypesRegions;
 
     /**
-     * Get 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新 
-     * @return OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+    * <p>证书ID</p>
+    */
+    @SerializedName("CertificateId")
+    @Expose
+    private String CertificateId;
+
+    /**
+     * Get <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p> 
+     * @return OldCertificateId <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
-     * @param OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+     * Set <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
+     * @param OldCertificateId <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;
     }
 
     /**
-     * Get 需要部署的资源类型，参数值可选（小写）：clb 
-     * @return ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb
+     * Get <p>需要部署的资源类型，参数值可选（小写）：clb</p> 
+     * @return ResourceTypes <p>需要部署的资源类型，参数值可选（小写）：clb</p>
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set 需要部署的资源类型，参数值可选（小写）：clb
-     * @param ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb
+     * Set <p>需要部署的资源类型，参数值可选（小写）：clb</p>
+     * @param ResourceTypes <p>需要部署的资源类型，参数值可选（小写）：clb</p>
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get 公钥证书 
-     * @return CertificatePublicKey 公钥证书
+     * Get <p>公钥证书</p> 
+     * @return CertificatePublicKey <p>公钥证书</p>
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set 公钥证书
-     * @param CertificatePublicKey 公钥证书
+     * Set <p>公钥证书</p>
+     * @param CertificatePublicKey <p>公钥证书</p>
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
     }
 
     /**
-     * Get 私钥证书 
-     * @return CertificatePrivateKey 私钥证书
+     * Get <p>私钥证书</p> 
+     * @return CertificatePrivateKey <p>私钥证书</p>
      */
     public String getCertificatePrivateKey() {
         return this.CertificatePrivateKey;
     }
 
     /**
-     * Set 私钥证书
-     * @param CertificatePrivateKey 私钥证书
+     * Set <p>私钥证书</p>
+     * @param CertificatePrivateKey <p>私钥证书</p>
      */
     public void setCertificatePrivateKey(String CertificatePrivateKey) {
         this.CertificatePrivateKey = CertificatePrivateKey;
     }
 
     /**
-     * Get 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb 
-     * @return ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+     * Get <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p> 
+     * @return ResourceTypesRegions <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
      */
     public ResourceTypeRegions [] getResourceTypesRegions() {
         return this.ResourceTypesRegions;
     }
 
     /**
-     * Set 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
-     * @param ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb
+     * Set <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
+     * @param ResourceTypesRegions <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb</p>
      */
     public void setResourceTypesRegions(ResourceTypeRegions [] ResourceTypesRegions) {
         this.ResourceTypesRegions = ResourceTypesRegions;
+    }
+
+    /**
+     * Get <p>证书ID</p> 
+     * @return CertificateId <p>证书ID</p>
+     */
+    public String getCertificateId() {
+        return this.CertificateId;
+    }
+
+    /**
+     * Set <p>证书ID</p>
+     * @param CertificateId <p>证书ID</p>
+     */
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
     }
 
     public UploadUpdateCertificateInstanceRequest() {
@@ -167,6 +190,9 @@ public class UploadUpdateCertificateInstanceRequest extends AbstractModel {
                 this.ResourceTypesRegions[i] = new ResourceTypeRegions(source.ResourceTypesRegions[i]);
             }
         }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
     }
 
 
@@ -179,6 +205,7 @@ public class UploadUpdateCertificateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CertificatePublicKey", this.CertificatePublicKey);
         this.setParamSimple(map, prefix + "CertificatePrivateKey", this.CertificatePrivateKey);
         this.setParamArrayObj(map, prefix + "ResourceTypesRegions.", this.ResourceTypesRegions);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
 
     }
 }

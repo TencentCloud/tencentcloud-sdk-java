@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBDiagReportTasksResponse extends AbstractModel {
 
     /**
-    * 任务总数目。
+    * <p>任务总数目。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 任务列表。
+    * <p>任务列表。</p>
     */
     @SerializedName("Tasks")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBDiagReportTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务总数目。 
-     * @return TotalCount 任务总数目。
+     * Get <p>任务总数目。</p> 
+     * @return TotalCount <p>任务总数目。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 任务总数目。
-     * @param TotalCount 任务总数目。
+     * Set <p>任务总数目。</p>
+     * @param TotalCount <p>任务总数目。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 任务列表。 
-     * @return Tasks 任务列表。
+     * Get <p>任务列表。</p> 
+     * @return Tasks <p>任务列表。</p>
      */
     public HealthReportTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 任务列表。
-     * @param Tasks 任务列表。
+     * Set <p>任务列表。</p>
+     * @param Tasks <p>任务列表。</p>
      */
     public void setTasks(HealthReportTask [] Tasks) {
         this.Tasks = Tasks;

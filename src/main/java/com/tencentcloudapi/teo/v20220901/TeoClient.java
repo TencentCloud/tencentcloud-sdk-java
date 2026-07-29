@@ -1211,6 +1211,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *获取使用 IP 分组的策略配置。
+     * @param req DescribeIPGroupReferencesRequest
+     * @return DescribeIPGroupReferencesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPGroupReferencesResponse DescribeIPGroupReferences(DescribeIPGroupReferencesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPGroupReferences", DescribeIPGroupReferencesResponse.class);
+    }
+
+    /**
      *该接口可用于查询 IP 是否为 EdgeOne IP。
      * @param req DescribeIPRegionRequest
      * @return DescribeIPRegionResponse

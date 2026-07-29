@@ -171,6 +171,20 @@ public class GetServiceStatusResponse extends AbstractModel {
     private RegionQps [] RegionsQps;
 
     /**
+    * <p>资源的地域信息</p>
+    */
+    @SerializedName("ResourceZone")
+    @Expose
+    private Long ResourceZone;
+
+    /**
+    * <p>资源的地域可用区信息</p>
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private Long ResourceRegion;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -514,6 +528,38 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>资源的地域信息</p> 
+     * @return ResourceZone <p>资源的地域信息</p>
+     */
+    public Long getResourceZone() {
+        return this.ResourceZone;
+    }
+
+    /**
+     * Set <p>资源的地域信息</p>
+     * @param ResourceZone <p>资源的地域信息</p>
+     */
+    public void setResourceZone(Long ResourceZone) {
+        this.ResourceZone = ResourceZone;
+    }
+
+    /**
+     * Get <p>资源的地域可用区信息</p> 
+     * @return ResourceRegion <p>资源的地域可用区信息</p>
+     */
+    public Long getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set <p>资源的地域可用区信息</p>
+     * @param ResourceRegion <p>资源的地域可用区信息</p>
+     */
+    public void setResourceRegion(Long ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -609,6 +655,12 @@ public class GetServiceStatusResponse extends AbstractModel {
                 this.RegionsQps[i] = new RegionQps(source.RegionsQps[i]);
             }
         }
+        if (source.ResourceZone != null) {
+            this.ResourceZone = new Long(source.ResourceZone);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new Long(source.ResourceRegion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -640,6 +692,8 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
         this.setParamSimple(map, prefix + "QpsTotalLimit", this.QpsTotalLimit);
         this.setParamArrayObj(map, prefix + "RegionsQps.", this.RegionsQps);
+        this.setParamSimple(map, prefix + "ResourceZone", this.ResourceZone);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

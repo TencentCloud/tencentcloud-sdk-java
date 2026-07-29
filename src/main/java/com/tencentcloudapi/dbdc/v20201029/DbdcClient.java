@@ -105,6 +105,28 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeDBCustomClusterNodeConfig）用于查询 DB Custom 集群内节点的配置信息。
+     * @param req DescribeDBCustomClusterNodeConfigRequest
+     * @return DescribeDBCustomClusterNodeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomClusterNodeConfigResponse DescribeDBCustomClusterNodeConfig(DescribeDBCustomClusterNodeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomClusterNodeConfig", DescribeDBCustomClusterNodeConfigResponse.class);
+    }
+
+    /**
+     *该接口（DescribeDBCustomClusterNodeResources）用于查询 DB Custom 集群内节点的资源信息。
+     * @param req DescribeDBCustomClusterNodeResourcesRequest
+     * @return DescribeDBCustomClusterNodeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomClusterNodeResourcesResponse DescribeDBCustomClusterNodeResources(DescribeDBCustomClusterNodeResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomClusterNodeResources", DescribeDBCustomClusterNodeResourcesResponse.class);
+    }
+
+    /**
      *该接口（DescribeDBCustomClusterNodes）用于查询 DB Custom 集群中的节点列表。
      * @param req DescribeDBCustomClusterNodesRequest
      * @return DescribeDBCustomClusterNodesResponse
@@ -113,6 +135,17 @@ public class DbdcClient extends AbstractClient{
     public DescribeDBCustomClusterNodesResponse DescribeDBCustomClusterNodes(DescribeDBCustomClusterNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBCustomClusterNodes", DescribeDBCustomClusterNodesResponse.class);
+    }
+
+    /**
+     *该接口（DescribeDBCustomClusterResources）用于查询 DB Custom 集群的资源信息。
+     * @param req DescribeDBCustomClusterResourcesRequest
+     * @return DescribeDBCustomClusterResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomClusterResourcesResponse DescribeDBCustomClusterResources(DescribeDBCustomClusterResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomClusterResources", DescribeDBCustomClusterResourcesResponse.class);
     }
 
     /**
@@ -138,6 +171,28 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeDBCustomNodeSecurityGroups）用于查询 DB Custom 节点安全组信息。
+     * @param req DescribeDBCustomNodeSecurityGroupsRequest
+     * @return DescribeDBCustomNodeSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomNodeSecurityGroupsResponse DescribeDBCustomNodeSecurityGroups(DescribeDBCustomNodeSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomNodeSecurityGroups", DescribeDBCustomNodeSecurityGroupsResponse.class);
+    }
+
+    /**
+     *该接口(DescribeDBCustomNodeTypes) 用于查询 DB Custom 节点支持的机型信息。
+     * @param req DescribeDBCustomNodeTypesRequest
+     * @return DescribeDBCustomNodeTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomNodeTypesResponse DescribeDBCustomNodeTypes(DescribeDBCustomNodeTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomNodeTypes", DescribeDBCustomNodeTypesResponse.class);
+    }
+
+    /**
      *该接口（DescribeDBCustomNodes）用于查询 DB Custom 节点列表。
      * @param req DescribeDBCustomNodesRequest
      * @return DescribeDBCustomNodesResponse
@@ -149,6 +204,17 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口(DescribeDBCustomRegions) 用于查询 DB Custom 支持的地域列表。
+     * @param req DescribeDBCustomRegionsRequest
+     * @return DescribeDBCustomRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomRegionsResponse DescribeDBCustomRegions(DescribeDBCustomRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomRegions", DescribeDBCustomRegionsResponse.class);
+    }
+
+    /**
      *该接口（DescribeDBCustomTaskStatus）用于查询 DB Custom 任务的状态。
      * @param req DescribeDBCustomTaskStatusRequest
      * @return DescribeDBCustomTaskStatusResponse
@@ -157,6 +223,17 @@ public class DbdcClient extends AbstractClient{
     public DescribeDBCustomTaskStatusResponse DescribeDBCustomTaskStatus(DescribeDBCustomTaskStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBCustomTaskStatus", DescribeDBCustomTaskStatusResponse.class);
+    }
+
+    /**
+     *该接口(DescribeDBCustomZones) 用于查询指定地域的 DB Custom 可用区列表。
+     * @param req DescribeDBCustomZonesRequest
+     * @return DescribeDBCustomZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomZonesResponse DescribeDBCustomZones(DescribeDBCustomZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomZones", DescribeDBCustomZonesResponse.class);
     }
 
     /**
@@ -248,6 +325,17 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
+     * @param req ModifyDBCustomClusterNodeConfigRequest
+     * @return ModifyDBCustomClusterNodeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomClusterNodeConfigResponse ModifyDBCustomClusterNodeConfig(ModifyDBCustomClusterNodeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomClusterNodeConfig", ModifyDBCustomClusterNodeConfigResponse.class);
+    }
+
+    /**
      *该接口（ModifyDBCustomClusterTags）用于修改 DB Custom 集群绑定的标签。
      * @param req ModifyDBCustomClusterTagsRequest
      * @return ModifyDBCustomClusterTagsResponse
@@ -256,6 +344,17 @@ public class DbdcClient extends AbstractClient{
     public ModifyDBCustomClusterTagsResponse ModifyDBCustomClusterTags(ModifyDBCustomClusterTagsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBCustomClusterTags", ModifyDBCustomClusterTagsResponse.class);
+    }
+
+    /**
+     *该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
+     * @param req ModifyDBCustomNodeSecurityGroupsRequest
+     * @return ModifyDBCustomNodeSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomNodeSecurityGroupsResponse ModifyDBCustomNodeSecurityGroups(ModifyDBCustomNodeSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomNodeSecurityGroups", ModifyDBCustomNodeSecurityGroupsResponse.class);
     }
 
     /**

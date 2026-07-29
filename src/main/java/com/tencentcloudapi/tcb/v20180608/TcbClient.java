@@ -164,6 +164,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *创建云应用
+     * @param req CreateCloudAppRequest
+     * @return CreateCloudAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudAppResponse CreateCloudApp(CreateCloudAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudApp", CreateCloudAppResponse.class);
+    }
+
+    /**
      *创建自定义登录密钥。在指定云开发环境下生成一对 RSA 1024 位非对称密钥对，系统仅存储公钥，私钥仅在创建时返回一次且不可恢复，请妥善保存。创建新密钥后，该环境下原有未设置过期时间的旧密钥将被自动标记为 2 小时后过期，请确保客户端及时更新密钥配置。
 返回的 KeyID 和 PrivateKey 需与环境 ID 一起组装为 JSON 配置文件，供客户端 Admin SDK 初始化时使用，文件格式如下：
 {
@@ -341,6 +352,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *删除云应用服务
+     * @param req DeleteCloudAppRequest
+     * @return DeleteCloudAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudAppResponse DeleteCloudApp(DeleteCloudAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudApp", DeleteCloudAppResponse.class);
+    }
+
+    /**
+     *删除云应用服务版本
+     * @param req DeleteCloudAppVersionRequest
+     * @return DeleteCloudAppVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudAppVersionResponse DeleteCloudAppVersion(DeleteCloudAppVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudAppVersion", DeleteCloudAppVersionResponse.class);
+    }
+
+    /**
      *本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
      * @param req DeleteHTTPServiceRouteRequest
      * @return DeleteHTTPServiceRouteResponse
@@ -475,6 +508,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取云应用cos信息
+     * @param req DescribeCloudAppCosInfoRequest
+     * @return DescribeCloudAppCosInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudAppCosInfoResponse DescribeCloudAppCosInfo(DescribeCloudAppCosInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudAppCosInfo", DescribeCloudAppCosInfoResponse.class);
+    }
+
+    /**
+     *查询应用服务信息
+     * @param req DescribeCloudAppInfoRequest
+     * @return DescribeCloudAppInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudAppInfoResponse DescribeCloudAppInfo(DescribeCloudAppInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudAppInfo", DescribeCloudAppInfoResponse.class);
+    }
+
+    /**
      *查询云应用服务列表信息
      * @param req DescribeCloudAppListRequest
      * @return DescribeCloudAppListResponse
@@ -483,6 +538,28 @@ public class TcbClient extends AbstractClient{
     public DescribeCloudAppListResponse DescribeCloudAppList(DescribeCloudAppListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudAppList", DescribeCloudAppListResponse.class);
+    }
+
+    /**
+     *查询云应用服务版本信息
+     * @param req DescribeCloudAppVersionRequest
+     * @return DescribeCloudAppVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudAppVersionResponse DescribeCloudAppVersion(DescribeCloudAppVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudAppVersion", DescribeCloudAppVersionResponse.class);
+    }
+
+    /**
+     *查询云应用服务版本列表信息
+     * @param req DescribeCloudAppVersionListRequest
+     * @return DescribeCloudAppVersionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudAppVersionListResponse DescribeCloudAppVersionList(DescribeCloudAppVersionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudAppVersionList", DescribeCloudAppVersionListResponse.class);
     }
 
     /**

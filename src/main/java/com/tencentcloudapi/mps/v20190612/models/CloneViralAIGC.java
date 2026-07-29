@@ -45,7 +45,7 @@ public class CloneViralAIGC extends AbstractModel {
     private String Resolution;
 
     /**
-    * <p>模型等级。flagship（VS2.0，默认）、standard（Kling3.0-Omni）</p>
+    * <p>模型等级。flagship（默认）、standard</p>
     */
     @SerializedName("ModelTier")
     @Expose
@@ -100,16 +100,16 @@ public class CloneViralAIGC extends AbstractModel {
     }
 
     /**
-     * Get <p>模型等级。flagship（VS2.0，默认）、standard（Kling3.0-Omni）</p> 
-     * @return ModelTier <p>模型等级。flagship（VS2.0，默认）、standard（Kling3.0-Omni）</p>
+     * Get <p>模型等级。flagship（默认）、standard</p> 
+     * @return ModelTier <p>模型等级。flagship（默认）、standard</p>
      */
     public String getModelTier() {
         return this.ModelTier;
     }
 
     /**
-     * Set <p>模型等级。flagship（VS2.0，默认）、standard（Kling3.0-Omni）</p>
-     * @param ModelTier <p>模型等级。flagship（VS2.0，默认）、standard（Kling3.0-Omni）</p>
+     * Set <p>模型等级。flagship（默认）、standard</p>
+     * @param ModelTier <p>模型等级。flagship（默认）、standard</p>
      */
     public void setModelTier(String ModelTier) {
         this.ModelTier = ModelTier;

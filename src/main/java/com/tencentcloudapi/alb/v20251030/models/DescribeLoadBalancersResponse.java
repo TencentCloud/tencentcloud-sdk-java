@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class DescribeLoadBalancersResponse extends AbstractModel {
 
     /**
-    * 应用型负载均衡实例列表。
+    * <p>应用型负载均衡实例列表。</p>
     */
     @SerializedName("LoadBalancers")
     @Expose
     private LoadBalancer [] LoadBalancers;
 
     /**
-    * 分批次查询时每次显示的条目数。
-
-
+    * <p>分批次查询时每次显示的条目数。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
+    * <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 列表条目数。
+    * <p>列表条目数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -63,80 +59,64 @@ public class DescribeLoadBalancersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用型负载均衡实例列表。 
-     * @return LoadBalancers 应用型负载均衡实例列表。
+     * Get <p>应用型负载均衡实例列表。</p> 
+     * @return LoadBalancers <p>应用型负载均衡实例列表。</p>
      */
     public LoadBalancer [] getLoadBalancers() {
         return this.LoadBalancers;
     }
 
     /**
-     * Set 应用型负载均衡实例列表。
-     * @param LoadBalancers 应用型负载均衡实例列表。
+     * Set <p>应用型负载均衡实例列表。</p>
+     * @param LoadBalancers <p>应用型负载均衡实例列表。</p>
      */
     public void setLoadBalancers(LoadBalancer [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;
     }
 
     /**
-     * Get 分批次查询时每次显示的条目数。
-
- 
-     * @return MaxResults 分批次查询时每次显示的条目数。
-
-
+     * Get <p>分批次查询时每次显示的条目数。</p> 
+     * @return MaxResults <p>分批次查询时每次显示的条目数。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 分批次查询时每次显示的条目数。
-
-
-     * @param MaxResults 分批次查询时每次显示的条目数。
-
-
+     * Set <p>分批次查询时每次显示的条目数。</p>
+     * @param MaxResults <p>分批次查询时每次显示的条目数。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。 
-     * @return NextToken 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
+     * Get <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul> 
+     * @return NextToken <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
-     * @param NextToken 是否拥有下一次查询的令牌（Token）。取值：
-- 如果**NextToken**为空表示没有下一次查询。
-- 如果**NextToken**有返回值，该取值表示下一次查询开始的令牌。
+     * Set <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
+     * @param NextToken <p>是否拥有下一次查询的令牌（Token）。取值：</p><ul><li>如果<strong>NextToken</strong>为空表示没有下一次查询。</li><li>如果<strong>NextToken</strong>有返回值，该取值表示下一次查询开始的令牌。</li></ul>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 列表条目数。 
-     * @return TotalCount 列表条目数。
+     * Get <p>列表条目数。</p> 
+     * @return TotalCount <p>列表条目数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 列表条目数。
-     * @param TotalCount 列表条目数。
+     * Set <p>列表条目数。</p>
+     * @param TotalCount <p>列表条目数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

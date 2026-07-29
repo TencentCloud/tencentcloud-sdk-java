@@ -2025,6 +2025,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（UpgradeRoGroup）用于只读组升级为纯网络转发模式。
+     * @param req UpgradeRoGroupRequest
+     * @return UpgradeRoGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeRoGroupResponse UpgradeRoGroup(UpgradeRoGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeRoGroup", UpgradeRoGroupResponse.class);
+    }
+
+    /**
      *本接口(VerifyRootAccount)用于校验云数据库实例的 ROOT 账号是否有足够的权限进行授权操作。
      * @param req VerifyRootAccountRequest
      * @return VerifyRootAccountResponse

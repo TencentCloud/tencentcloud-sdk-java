@@ -24,555 +24,578 @@ import java.util.HashMap;
 public class DataKeyMetadata extends AbstractModel {
 
     /**
-    * DataKey的全局唯一标识
+    * <p>DataKey的全局唯一标识</p>
     */
     @SerializedName("DataKeyId")
     @Expose
     private String DataKeyId;
 
     /**
-    * CMK的全局唯一标识
+    * <p>CMK的全局唯一标识</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * CMK的名称
+    * <p>CMK的名称</p>
     */
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
 
     /**
-    * 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
+    * <p>作为密钥更容易辨识，更容易被人看懂的数据密钥名称</p>
     */
     @SerializedName("DataKeyName")
     @Expose
     private String DataKeyName;
 
     /**
-    * 数据密钥的长度,单位字节
+    * <p>数据密钥的长度,单位字节</p>
     */
     @SerializedName("NumberOfBytes")
     @Expose
     private Long NumberOfBytes;
 
     /**
-    * 密钥创建时间
+    * <p>密钥创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * DataKey的描述
+    * <p>DataKey的描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * DataKey的状态， 取值为：Enabled | Disabled | PendingDelete
+    * <p>DataKey的状态， 取值为：Enabled | Disabled | PendingDelete</p>
     */
     @SerializedName("KeyState")
     @Expose
     private String KeyState;
 
     /**
-    * 创建者
+    * <p>创建者</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private Long CreatorUin;
 
     /**
-    * 数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+    * <p>数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * 计划删除的时间
+    * <p>计划删除的时间</p>
     */
     @SerializedName("DeletionDate")
     @Expose
     private Long DeletionDate;
 
     /**
-    * DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+    * <p>DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+    * <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
 
     /**
-    * 资源ID，格式：creatorUin/$creatorUin/$dataKeyId
+    * <p>资源ID，格式：creatorUin/$creatorUin/$dataKeyId</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 密钥是否是主副本。0:主本，1:同步副本。
+    * <p>密钥是否是主副本。0:主本，1:同步副本。</p>
     */
     @SerializedName("IsSyncReplica")
     @Expose
     private Long IsSyncReplica;
 
     /**
-    * 同步的原始地域
+    * <p>同步的原始地域</p>
     */
     @SerializedName("SourceRegion")
     @Expose
     private String SourceRegion;
 
     /**
-    * 密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。
+    * <p>密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。</p>
     */
     @SerializedName("SyncStatus")
     @Expose
     private Long SyncStatus;
 
     /**
-    * 同步的结果描述
+    * <p>同步的结果描述</p>
     */
     @SerializedName("SyncMessages")
     @Expose
     private String SyncMessages;
 
     /**
-    * 同步的开始时间
+    * <p>同步的开始时间</p>
     */
     @SerializedName("SyncStartTime")
     @Expose
     private Long SyncStartTime;
 
     /**
-    * 同步的结束时间
+    * <p>同步的结束时间</p>
     */
     @SerializedName("SyncEndTime")
     @Expose
     private Long SyncEndTime;
 
     /**
-    * 同步的原始集群，如果为空，是公有云公共集群
+    * <p>同步的原始集群，如果为空，是公有云公共集群</p>
     */
     @SerializedName("SourceHsmClusterId")
     @Expose
     private String SourceHsmClusterId;
 
     /**
-    * 成员账号appId
+    * <p>成员账号appId</p>
     */
     @SerializedName("AccountAppId")
     @Expose
     private Long AccountAppId;
 
     /**
-    * 成员账号uin
+    * <p>成员账号uin</p>
     */
     @SerializedName("AccountUin")
     @Expose
     private Long AccountUin;
 
     /**
-    * 成员账号名称
+    * <p>成员账号名称</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-     * Get DataKey的全局唯一标识 
-     * @return DataKeyId DataKey的全局唯一标识
+    * <p>创建者UIN</p>
+    */
+    @SerializedName("CreatorUinString")
+    @Expose
+    private String CreatorUinString;
+
+    /**
+     * Get <p>DataKey的全局唯一标识</p> 
+     * @return DataKeyId <p>DataKey的全局唯一标识</p>
      */
     public String getDataKeyId() {
         return this.DataKeyId;
     }
 
     /**
-     * Set DataKey的全局唯一标识
-     * @param DataKeyId DataKey的全局唯一标识
+     * Set <p>DataKey的全局唯一标识</p>
+     * @param DataKeyId <p>DataKey的全局唯一标识</p>
      */
     public void setDataKeyId(String DataKeyId) {
         this.DataKeyId = DataKeyId;
     }
 
     /**
-     * Get CMK的全局唯一标识 
-     * @return KeyId CMK的全局唯一标识
+     * Get <p>CMK的全局唯一标识</p> 
+     * @return KeyId <p>CMK的全局唯一标识</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set CMK的全局唯一标识
-     * @param KeyId CMK的全局唯一标识
+     * Set <p>CMK的全局唯一标识</p>
+     * @param KeyId <p>CMK的全局唯一标识</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get CMK的名称 
-     * @return KeyName CMK的名称
+     * Get <p>CMK的名称</p> 
+     * @return KeyName <p>CMK的名称</p>
      */
     public String getKeyName() {
         return this.KeyName;
     }
 
     /**
-     * Set CMK的名称
-     * @param KeyName CMK的名称
+     * Set <p>CMK的名称</p>
+     * @param KeyName <p>CMK的名称</p>
      */
     public void setKeyName(String KeyName) {
         this.KeyName = KeyName;
     }
 
     /**
-     * Get 作为密钥更容易辨识，更容易被人看懂的数据密钥名称 
-     * @return DataKeyName 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
+     * Get <p>作为密钥更容易辨识，更容易被人看懂的数据密钥名称</p> 
+     * @return DataKeyName <p>作为密钥更容易辨识，更容易被人看懂的数据密钥名称</p>
      */
     public String getDataKeyName() {
         return this.DataKeyName;
     }
 
     /**
-     * Set 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
-     * @param DataKeyName 作为密钥更容易辨识，更容易被人看懂的数据密钥名称
+     * Set <p>作为密钥更容易辨识，更容易被人看懂的数据密钥名称</p>
+     * @param DataKeyName <p>作为密钥更容易辨识，更容易被人看懂的数据密钥名称</p>
      */
     public void setDataKeyName(String DataKeyName) {
         this.DataKeyName = DataKeyName;
     }
 
     /**
-     * Get 数据密钥的长度,单位字节 
-     * @return NumberOfBytes 数据密钥的长度,单位字节
+     * Get <p>数据密钥的长度,单位字节</p> 
+     * @return NumberOfBytes <p>数据密钥的长度,单位字节</p>
      */
     public Long getNumberOfBytes() {
         return this.NumberOfBytes;
     }
 
     /**
-     * Set 数据密钥的长度,单位字节
-     * @param NumberOfBytes 数据密钥的长度,单位字节
+     * Set <p>数据密钥的长度,单位字节</p>
+     * @param NumberOfBytes <p>数据密钥的长度,单位字节</p>
      */
     public void setNumberOfBytes(Long NumberOfBytes) {
         this.NumberOfBytes = NumberOfBytes;
     }
 
     /**
-     * Get 密钥创建时间 
-     * @return CreateTime 密钥创建时间
+     * Get <p>密钥创建时间</p> 
+     * @return CreateTime <p>密钥创建时间</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 密钥创建时间
-     * @param CreateTime 密钥创建时间
+     * Set <p>密钥创建时间</p>
+     * @param CreateTime <p>密钥创建时间</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get DataKey的描述 
-     * @return Description DataKey的描述
+     * Get <p>DataKey的描述</p> 
+     * @return Description <p>DataKey的描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set DataKey的描述
-     * @param Description DataKey的描述
+     * Set <p>DataKey的描述</p>
+     * @param Description <p>DataKey的描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get DataKey的状态， 取值为：Enabled | Disabled | PendingDelete 
-     * @return KeyState DataKey的状态， 取值为：Enabled | Disabled | PendingDelete
+     * Get <p>DataKey的状态， 取值为：Enabled | Disabled | PendingDelete</p> 
+     * @return KeyState <p>DataKey的状态， 取值为：Enabled | Disabled | PendingDelete</p>
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set DataKey的状态， 取值为：Enabled | Disabled | PendingDelete
-     * @param KeyState DataKey的状态， 取值为：Enabled | Disabled | PendingDelete
+     * Set <p>DataKey的状态， 取值为：Enabled | Disabled | PendingDelete</p>
+     * @param KeyState <p>DataKey的状态， 取值为：Enabled | Disabled | PendingDelete</p>
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get 创建者 
-     * @return CreatorUin 创建者
+     * Get <p>创建者</p> 
+     * @return CreatorUin <p>创建者</p>
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 创建者
-     * @param CreatorUin 创建者
+     * Set <p>创建者</p>
+     * @param CreatorUin <p>创建者</p>
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get 数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名 
-     * @return Owner 数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+     * Get <p>数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p> 
+     * @return Owner <p>数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
-     * @param Owner 数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+     * Set <p>数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
+     * @param Owner <p>数据密钥的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名</p>
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 计划删除的时间 
-     * @return DeletionDate 计划删除的时间
+     * Get <p>计划删除的时间</p> 
+     * @return DeletionDate <p>计划删除的时间</p>
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
     }
 
     /**
-     * Set 计划删除的时间
-     * @param DeletionDate 计划删除的时间
+     * Set <p>计划删除的时间</p>
+     * @param DeletionDate <p>计划删除的时间</p>
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;
     }
 
     /**
-     * Get DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL 
-     * @return Origin DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+     * Get <p>DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p> 
+     * @return Origin <p>DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-     * @param Origin DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+     * Set <p>DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
+     * @param Origin <p>DataKey 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL</p>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效） 
-     * @return HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * Get <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p> 
+     * @return HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-     * @param HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * Set <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
+     * @param HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
     }
 
     /**
-     * Get 资源ID，格式：creatorUin/$creatorUin/$dataKeyId 
-     * @return ResourceId 资源ID，格式：creatorUin/$creatorUin/$dataKeyId
+     * Get <p>资源ID，格式：creatorUin/$creatorUin/$dataKeyId</p> 
+     * @return ResourceId <p>资源ID，格式：creatorUin/$creatorUin/$dataKeyId</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，格式：creatorUin/$creatorUin/$dataKeyId
-     * @param ResourceId 资源ID，格式：creatorUin/$creatorUin/$dataKeyId
+     * Set <p>资源ID，格式：creatorUin/$creatorUin/$dataKeyId</p>
+     * @param ResourceId <p>资源ID，格式：creatorUin/$creatorUin/$dataKeyId</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 密钥是否是主副本。0:主本，1:同步副本。 
-     * @return IsSyncReplica 密钥是否是主副本。0:主本，1:同步副本。
+     * Get <p>密钥是否是主副本。0:主本，1:同步副本。</p> 
+     * @return IsSyncReplica <p>密钥是否是主副本。0:主本，1:同步副本。</p>
      */
     public Long getIsSyncReplica() {
         return this.IsSyncReplica;
     }
 
     /**
-     * Set 密钥是否是主副本。0:主本，1:同步副本。
-     * @param IsSyncReplica 密钥是否是主副本。0:主本，1:同步副本。
+     * Set <p>密钥是否是主副本。0:主本，1:同步副本。</p>
+     * @param IsSyncReplica <p>密钥是否是主副本。0:主本，1:同步副本。</p>
      */
     public void setIsSyncReplica(Long IsSyncReplica) {
         this.IsSyncReplica = IsSyncReplica;
     }
 
     /**
-     * Get 同步的原始地域 
-     * @return SourceRegion 同步的原始地域
+     * Get <p>同步的原始地域</p> 
+     * @return SourceRegion <p>同步的原始地域</p>
      */
     public String getSourceRegion() {
         return this.SourceRegion;
     }
 
     /**
-     * Set 同步的原始地域
-     * @param SourceRegion 同步的原始地域
+     * Set <p>同步的原始地域</p>
+     * @param SourceRegion <p>同步的原始地域</p>
      */
     public void setSourceRegion(String SourceRegion) {
         this.SourceRegion = SourceRegion;
     }
 
     /**
-     * Get 密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。 
-     * @return SyncStatus 密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。
+     * Get <p>密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。</p> 
+     * @return SyncStatus <p>密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。</p>
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set 密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。
-     * @param SyncStatus 密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。
+     * Set <p>密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。</p>
+     * @param SyncStatus <p>密钥同步的状态，0:未同步，1:同步成功，2:同步失败，3:同步中。</p>
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;
     }
 
     /**
-     * Get 同步的结果描述 
-     * @return SyncMessages 同步的结果描述
+     * Get <p>同步的结果描述</p> 
+     * @return SyncMessages <p>同步的结果描述</p>
      */
     public String getSyncMessages() {
         return this.SyncMessages;
     }
 
     /**
-     * Set 同步的结果描述
-     * @param SyncMessages 同步的结果描述
+     * Set <p>同步的结果描述</p>
+     * @param SyncMessages <p>同步的结果描述</p>
      */
     public void setSyncMessages(String SyncMessages) {
         this.SyncMessages = SyncMessages;
     }
 
     /**
-     * Get 同步的开始时间 
-     * @return SyncStartTime 同步的开始时间
+     * Get <p>同步的开始时间</p> 
+     * @return SyncStartTime <p>同步的开始时间</p>
      */
     public Long getSyncStartTime() {
         return this.SyncStartTime;
     }
 
     /**
-     * Set 同步的开始时间
-     * @param SyncStartTime 同步的开始时间
+     * Set <p>同步的开始时间</p>
+     * @param SyncStartTime <p>同步的开始时间</p>
      */
     public void setSyncStartTime(Long SyncStartTime) {
         this.SyncStartTime = SyncStartTime;
     }
 
     /**
-     * Get 同步的结束时间 
-     * @return SyncEndTime 同步的结束时间
+     * Get <p>同步的结束时间</p> 
+     * @return SyncEndTime <p>同步的结束时间</p>
      */
     public Long getSyncEndTime() {
         return this.SyncEndTime;
     }
 
     /**
-     * Set 同步的结束时间
-     * @param SyncEndTime 同步的结束时间
+     * Set <p>同步的结束时间</p>
+     * @param SyncEndTime <p>同步的结束时间</p>
      */
     public void setSyncEndTime(Long SyncEndTime) {
         this.SyncEndTime = SyncEndTime;
     }
 
     /**
-     * Get 同步的原始集群，如果为空，是公有云公共集群 
-     * @return SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     * Get <p>同步的原始集群，如果为空，是公有云公共集群</p> 
+     * @return SourceHsmClusterId <p>同步的原始集群，如果为空，是公有云公共集群</p>
      */
     public String getSourceHsmClusterId() {
         return this.SourceHsmClusterId;
     }
 
     /**
-     * Set 同步的原始集群，如果为空，是公有云公共集群
-     * @param SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     * Set <p>同步的原始集群，如果为空，是公有云公共集群</p>
+     * @param SourceHsmClusterId <p>同步的原始集群，如果为空，是公有云公共集群</p>
      */
     public void setSourceHsmClusterId(String SourceHsmClusterId) {
         this.SourceHsmClusterId = SourceHsmClusterId;
     }
 
     /**
-     * Get 成员账号appId 
-     * @return AccountAppId 成员账号appId
+     * Get <p>成员账号appId</p> 
+     * @return AccountAppId <p>成员账号appId</p>
      */
     public Long getAccountAppId() {
         return this.AccountAppId;
     }
 
     /**
-     * Set 成员账号appId
-     * @param AccountAppId 成员账号appId
+     * Set <p>成员账号appId</p>
+     * @param AccountAppId <p>成员账号appId</p>
      */
     public void setAccountAppId(Long AccountAppId) {
         this.AccountAppId = AccountAppId;
     }
 
     /**
-     * Get 成员账号uin 
-     * @return AccountUin 成员账号uin
+     * Get <p>成员账号uin</p> 
+     * @return AccountUin <p>成员账号uin</p>
      */
     public Long getAccountUin() {
         return this.AccountUin;
     }
 
     /**
-     * Set 成员账号uin
-     * @param AccountUin 成员账号uin
+     * Set <p>成员账号uin</p>
+     * @param AccountUin <p>成员账号uin</p>
      */
     public void setAccountUin(Long AccountUin) {
         this.AccountUin = AccountUin;
     }
 
     /**
-     * Get 成员账号名称 
-     * @return AccountName 成员账号名称
+     * Get <p>成员账号名称</p> 
+     * @return AccountName <p>成员账号名称</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 成员账号名称
-     * @param AccountName 成员账号名称
+     * Set <p>成员账号名称</p>
+     * @param AccountName <p>成员账号名称</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
+    }
+
+    /**
+     * Get <p>创建者UIN</p> 
+     * @return CreatorUinString <p>创建者UIN</p>
+     */
+    public String getCreatorUinString() {
+        return this.CreatorUinString;
+    }
+
+    /**
+     * Set <p>创建者UIN</p>
+     * @param CreatorUinString <p>创建者UIN</p>
+     */
+    public void setCreatorUinString(String CreatorUinString) {
+        this.CreatorUinString = CreatorUinString;
     }
 
     public DataKeyMetadata() {
@@ -655,6 +678,9 @@ public class DataKeyMetadata extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.CreatorUinString != null) {
+            this.CreatorUinString = new String(source.CreatorUinString);
+        }
     }
 
 
@@ -686,6 +712,7 @@ public class DataKeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
         this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "CreatorUinString", this.CreatorUinString);
 
     }
 }

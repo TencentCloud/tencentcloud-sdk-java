@@ -138,6 +138,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *批量创建健康报告的PDF下载链接，支持一次获取多个报告的下载地址。
+     * @param req CreateDBDiagReportUrlsRequest
+     * @return CreateDBDiagReportUrlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBDiagReportUrlsResponse CreateDBDiagReportUrls(CreateDBDiagReportUrlsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDBDiagReportUrls", CreateDBDiagReportUrlsResponse.class);
+    }
+
+    /**
      *对实例的某个诊断项设置忽略或取消忽略状态。
      * @param req CreateIgnoreDiagRecordRequest
      * @return CreateIgnoreDiagRecordResponse
@@ -454,6 +465,17 @@ public class DbbrainClient extends AbstractClient{
     public DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasks(DescribeDBDiagReportTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBDiagReportTasks", DescribeDBDiagReportTasksResponse.class);
+    }
+
+    /**
+     *根据实例ID列表查询数据库实例基本信息，支持跨产品查询（MySQL、CynosDB、MariaDB、DCDB、MongoDB、PostgreSQL、Redis、TDStore等）。不支持分页，通过InstanceIds限制查询数量（最多100条）。
+     * @param req DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstances", DescribeDBInstancesResponse.class);
     }
 
     /**

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditStorageParams extends AbstractModel {
+public class Variable extends AbstractModel {
 
     /**
-    * 腾讯云对象存储COS以及第三方云存储的账号信息
+    * 变量的名称
     */
-    @SerializedName("CloudAuditStorage")
+    @SerializedName("Key")
     @Expose
-    private CloudAuditStorage CloudAuditStorage;
+    private String Key;
 
     /**
-     * Get 腾讯云对象存储COS以及第三方云存储的账号信息 
-     * @return CloudAuditStorage 腾讯云对象存储COS以及第三方云存储的账号信息
+    * 变量的值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 变量的名称 
+     * @return Key 变量的名称
      */
-    public CloudAuditStorage getCloudAuditStorage() {
-        return this.CloudAuditStorage;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 腾讯云对象存储COS以及第三方云存储的账号信息
-     * @param CloudAuditStorage 腾讯云对象存储COS以及第三方云存储的账号信息
+     * Set 变量的名称
+     * @param Key 变量的名称
      */
-    public void setCloudAuditStorage(CloudAuditStorage CloudAuditStorage) {
-        this.CloudAuditStorage = CloudAuditStorage;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public AuditStorageParams() {
+    /**
+     * Get 变量的值 
+     * @return Value 变量的值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 变量的值
+     * @param Value 变量的值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public Variable() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuditStorageParams(AuditStorageParams source) {
-        if (source.CloudAuditStorage != null) {
-            this.CloudAuditStorage = new CloudAuditStorage(source.CloudAuditStorage);
+    public Variable(Variable source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -64,7 +90,8 @@ public class AuditStorageParams extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "CloudAuditStorage.", this.CloudAuditStorage);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

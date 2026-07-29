@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel {
 
     /**
-    * 匹配检索条件的原始日志的数量
+    * <p>匹配检索条件的原始日志的数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+    * <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+    * <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * 返回的是否为统计分析（即SQL）结果
+    * <p>返回的是否为统计分析（即SQL）结果</p>
     */
     @SerializedName("Analysis")
     @Expose
     private Boolean Analysis;
 
     /**
-    * 匹配检索条件的原始日志
+    * <p>匹配检索条件的原始日志</p>
     */
     @SerializedName("Data")
     @Expose
@@ -66,80 +66,80 @@ public class SearchLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 匹配检索条件的原始日志的数量 
-     * @return Count 匹配检索条件的原始日志的数量
+     * Get <p>匹配检索条件的原始日志的数量</p> 
+     * @return Count <p>匹配检索条件的原始日志的数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 匹配检索条件的原始日志的数量
-     * @param Count 匹配检索条件的原始日志的数量
+     * Set <p>匹配检索条件的原始日志的数量</p>
+     * @param Count <p>匹配检索条件的原始日志的数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时 
-     * @return Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * Get <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p> 
+     * @return Context <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-     * @param Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * Set <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
+     * @param Context <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时</p>
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志 
-     * @return ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+     * Get <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p> 
+     * @return ListOver <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-     * @param ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+     * Set <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
+     * @param ListOver <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志</p>
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 返回的是否为统计分析（即SQL）结果 
-     * @return Analysis 返回的是否为统计分析（即SQL）结果
+     * Get <p>返回的是否为统计分析（即SQL）结果</p> 
+     * @return Analysis <p>返回的是否为统计分析（即SQL）结果</p>
      */
     public Boolean getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set 返回的是否为统计分析（即SQL）结果
-     * @param Analysis 返回的是否为统计分析（即SQL）结果
+     * Set <p>返回的是否为统计分析（即SQL）结果</p>
+     * @param Analysis <p>返回的是否为统计分析（即SQL）结果</p>
      */
     public void setAnalysis(Boolean Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get 匹配检索条件的原始日志 
-     * @return Data 匹配检索条件的原始日志
+     * Get <p>匹配检索条件的原始日志</p> 
+     * @return Data <p>匹配检索条件的原始日志</p>
      */
     public LogInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 匹配检索条件的原始日志
-     * @param Data 匹配检索条件的原始日志
+     * Set <p>匹配检索条件的原始日志</p>
+     * @param Data <p>匹配检索条件的原始日志</p>
      */
     public void setData(LogInfo [] Data) {
         this.Data = Data;

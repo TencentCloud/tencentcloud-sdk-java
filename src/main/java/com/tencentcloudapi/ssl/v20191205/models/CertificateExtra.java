@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CertificateExtra extends AbstractModel {
 
     /**
-    * 证书可配置域名数量。
+    * <p>证书可配置域名数量。</p>
     */
     @SerializedName("DomainNumber")
     @Expose
     private String DomainNumber;
 
     /**
-    * 续费原证书 ID。
+    * <p>续费原证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginCertificateId")
@@ -39,7 +39,7 @@ public class CertificateExtra extends AbstractModel {
     private String OriginCertificateId;
 
     /**
-    * 重颁发证书原始 ID。
+    * <p>重颁发证书原始 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplacedBy")
@@ -47,7 +47,7 @@ public class CertificateExtra extends AbstractModel {
     private String ReplacedBy;
 
     /**
-    * 重颁发证书ID。
+    * <p>重颁发证书ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplacedFor")
@@ -55,7 +55,7 @@ public class CertificateExtra extends AbstractModel {
     private String ReplacedFor;
 
     /**
-    * 续费证书 ID。
+    * <p>续费证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewOrder")
@@ -63,39 +63,53 @@ public class CertificateExtra extends AbstractModel {
     private String RenewOrder;
 
     /**
-    * 是否是国密证书
+    * <p>是否是国密证书</p>
     */
     @SerializedName("SMCert")
     @Expose
     private Long SMCert;
 
     /**
-    * 公司类型，取值：1（个人）；2（公司）
+    * <p>公司类型，取值：1（个人）；2（公司）</p>
     */
     @SerializedName("CompanyType")
     @Expose
     private Long CompanyType;
 
     /**
-     * Get 证书可配置域名数量。 
-     * @return DomainNumber 证书可配置域名数量。
+    * <p>下一张订阅服务续期证书ID</p>
+    */
+    @SerializedName("ServiceRenewCertificateId")
+    @Expose
+    private String ServiceRenewCertificateId;
+
+    /**
+    * <p>上一张订阅服务来源证书ID</p>
+    */
+    @SerializedName("ServiceOriginCertificateId")
+    @Expose
+    private String ServiceOriginCertificateId;
+
+    /**
+     * Get <p>证书可配置域名数量。</p> 
+     * @return DomainNumber <p>证书可配置域名数量。</p>
      */
     public String getDomainNumber() {
         return this.DomainNumber;
     }
 
     /**
-     * Set 证书可配置域名数量。
-     * @param DomainNumber 证书可配置域名数量。
+     * Set <p>证书可配置域名数量。</p>
+     * @param DomainNumber <p>证书可配置域名数量。</p>
      */
     public void setDomainNumber(String DomainNumber) {
         this.DomainNumber = DomainNumber;
     }
 
     /**
-     * Get 续费原证书 ID。
+     * Get <p>续费原证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginCertificateId 续费原证书 ID。
+     * @return OriginCertificateId <p>续费原证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginCertificateId() {
@@ -103,9 +117,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Set 续费原证书 ID。
+     * Set <p>续费原证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCertificateId 续费原证书 ID。
+     * @param OriginCertificateId <p>续费原证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginCertificateId(String OriginCertificateId) {
@@ -113,9 +127,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Get 重颁发证书原始 ID。
+     * Get <p>重颁发证书原始 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplacedBy 重颁发证书原始 ID。
+     * @return ReplacedBy <p>重颁发证书原始 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplacedBy() {
@@ -123,9 +137,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Set 重颁发证书原始 ID。
+     * Set <p>重颁发证书原始 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplacedBy 重颁发证书原始 ID。
+     * @param ReplacedBy <p>重颁发证书原始 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplacedBy(String ReplacedBy) {
@@ -133,9 +147,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Get 重颁发证书ID。
+     * Get <p>重颁发证书ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplacedFor 重颁发证书ID。
+     * @return ReplacedFor <p>重颁发证书ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplacedFor() {
@@ -143,9 +157,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Set 重颁发证书ID。
+     * Set <p>重颁发证书ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplacedFor 重颁发证书ID。
+     * @param ReplacedFor <p>重颁发证书ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplacedFor(String ReplacedFor) {
@@ -153,9 +167,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Get 续费证书 ID。
+     * Get <p>续费证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewOrder 续费证书 ID。
+     * @return RenewOrder <p>续费证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewOrder() {
@@ -163,9 +177,9 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Set 续费证书 ID。
+     * Set <p>续费证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewOrder 续费证书 ID。
+     * @param RenewOrder <p>续费证书 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewOrder(String RenewOrder) {
@@ -173,35 +187,67 @@ public class CertificateExtra extends AbstractModel {
     }
 
     /**
-     * Get 是否是国密证书 
-     * @return SMCert 是否是国密证书
+     * Get <p>是否是国密证书</p> 
+     * @return SMCert <p>是否是国密证书</p>
      */
     public Long getSMCert() {
         return this.SMCert;
     }
 
     /**
-     * Set 是否是国密证书
-     * @param SMCert 是否是国密证书
+     * Set <p>是否是国密证书</p>
+     * @param SMCert <p>是否是国密证书</p>
      */
     public void setSMCert(Long SMCert) {
         this.SMCert = SMCert;
     }
 
     /**
-     * Get 公司类型，取值：1（个人）；2（公司） 
-     * @return CompanyType 公司类型，取值：1（个人）；2（公司）
+     * Get <p>公司类型，取值：1（个人）；2（公司）</p> 
+     * @return CompanyType <p>公司类型，取值：1（个人）；2（公司）</p>
      */
     public Long getCompanyType() {
         return this.CompanyType;
     }
 
     /**
-     * Set 公司类型，取值：1（个人）；2（公司）
-     * @param CompanyType 公司类型，取值：1（个人）；2（公司）
+     * Set <p>公司类型，取值：1（个人）；2（公司）</p>
+     * @param CompanyType <p>公司类型，取值：1（个人）；2（公司）</p>
      */
     public void setCompanyType(Long CompanyType) {
         this.CompanyType = CompanyType;
+    }
+
+    /**
+     * Get <p>下一张订阅服务续期证书ID</p> 
+     * @return ServiceRenewCertificateId <p>下一张订阅服务续期证书ID</p>
+     */
+    public String getServiceRenewCertificateId() {
+        return this.ServiceRenewCertificateId;
+    }
+
+    /**
+     * Set <p>下一张订阅服务续期证书ID</p>
+     * @param ServiceRenewCertificateId <p>下一张订阅服务续期证书ID</p>
+     */
+    public void setServiceRenewCertificateId(String ServiceRenewCertificateId) {
+        this.ServiceRenewCertificateId = ServiceRenewCertificateId;
+    }
+
+    /**
+     * Get <p>上一张订阅服务来源证书ID</p> 
+     * @return ServiceOriginCertificateId <p>上一张订阅服务来源证书ID</p>
+     */
+    public String getServiceOriginCertificateId() {
+        return this.ServiceOriginCertificateId;
+    }
+
+    /**
+     * Set <p>上一张订阅服务来源证书ID</p>
+     * @param ServiceOriginCertificateId <p>上一张订阅服务来源证书ID</p>
+     */
+    public void setServiceOriginCertificateId(String ServiceOriginCertificateId) {
+        this.ServiceOriginCertificateId = ServiceOriginCertificateId;
     }
 
     public CertificateExtra() {
@@ -233,6 +279,12 @@ public class CertificateExtra extends AbstractModel {
         if (source.CompanyType != null) {
             this.CompanyType = new Long(source.CompanyType);
         }
+        if (source.ServiceRenewCertificateId != null) {
+            this.ServiceRenewCertificateId = new String(source.ServiceRenewCertificateId);
+        }
+        if (source.ServiceOriginCertificateId != null) {
+            this.ServiceOriginCertificateId = new String(source.ServiceOriginCertificateId);
+        }
     }
 
 
@@ -247,6 +299,8 @@ public class CertificateExtra extends AbstractModel {
         this.setParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
         this.setParamSimple(map, prefix + "SMCert", this.SMCert);
         this.setParamSimple(map, prefix + "CompanyType", this.CompanyType);
+        this.setParamSimple(map, prefix + "ServiceRenewCertificateId", this.ServiceRenewCertificateId);
+        this.setParamSimple(map, prefix + "ServiceOriginCertificateId", this.ServiceOriginCertificateId);
 
     }
 }

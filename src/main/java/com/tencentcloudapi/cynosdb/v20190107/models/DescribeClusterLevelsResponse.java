@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeClusterLevelsResponse extends AbstractModel {
 
     /**
-    * 集群类型列表
+    * <p>集群类型列表</p>
     */
     @SerializedName("LevelList")
     @Expose
     private String [] LevelList;
+
+    /**
+    * <p>专区列表</p>
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeClusterLevelsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群类型列表 
-     * @return LevelList 集群类型列表
+     * Get <p>集群类型列表</p> 
+     * @return LevelList <p>集群类型列表</p>
      */
     public String [] getLevelList() {
         return this.LevelList;
     }
 
     /**
-     * Set 集群类型列表
-     * @param LevelList 集群类型列表
+     * Set <p>集群类型列表</p>
+     * @param LevelList <p>集群类型列表</p>
      */
     public void setLevelList(String [] LevelList) {
         this.LevelList = LevelList;
+    }
+
+    /**
+     * Get <p>专区列表</p> 
+     * @return Zones <p>专区列表</p>
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set <p>专区列表</p>
+     * @param Zones <p>专区列表</p>
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeClusterLevelsResponse extends AbstractModel {
                 this.LevelList[i] = new String(source.LevelList[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeClusterLevelsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LevelList.", this.LevelList);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

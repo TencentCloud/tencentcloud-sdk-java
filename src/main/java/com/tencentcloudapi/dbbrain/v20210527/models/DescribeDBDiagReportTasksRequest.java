@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class DescribeDBDiagReportTasksRequest extends AbstractModel {
 
     /**
-    * 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+    * <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+    * <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 实例ID数组，用于筛选指定实例的任务列表。
+    * <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
+    * <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
     */
     @SerializedName("Sources")
     @Expose
     private String [] Sources;
 
     /**
-    * 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
+    * <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
     */
     @SerializedName("HealthLevels")
     @Expose
     private String HealthLevels;
 
     /**
-    * 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
+    * <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
     */
     @SerializedName("TaskStatuses")
     @Expose
     private String TaskStatuses;
 
     /**
-    * 偏移量，默认0。
+    * <p>偏移量，默认0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认20，最大值为100。
+    * <p>返回数量，默认20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+    * <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。 
-     * @return StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+    * <p>根据任务所属实例的标签信息进行过滤</p>
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilterGroup [] TagFilters;
+
+    /**
+     * Get <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p> 
+     * @return StartTime <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Set <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+     * @param StartTime <p>第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。 
-     * @return EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Get <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p> 
+     * @return EndTime <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Set <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
+     * @param EndTime <p>最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 实例ID数组，用于筛选指定实例的任务列表。 
-     * @return InstanceIds 实例ID数组，用于筛选指定实例的任务列表。
+     * Get <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceIds <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID数组，用于筛选指定实例的任务列表。
-     * @param InstanceIds 实例ID数组，用于筛选指定实例的任务列表。
+     * Set <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceIds <p>实例ID数组，用于筛选指定实例的任务列表。。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。 
-     * @return Sources 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
+     * Get <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p> 
+     * @return Sources <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
      */
     public String [] getSources() {
         return this.Sources;
     }
 
     /**
-     * Set 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
-     * @param Sources 任务的触发来源，支持的取值包括："DAILY_INSPECTION" - 实例巡检；"SCHEDULED" - 计划任务；"MANUAL" - 手动触发。
+     * Set <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
+     * @param Sources <p>任务的触发来源，支持的取值包括：&quot;DAILY_INSPECTION&quot; - 实例巡检；&quot;SCHEDULED&quot; - 计划任务；&quot;MANUAL&quot; - 手动触发。</p>
      */
     public void setSources(String [] Sources) {
         this.Sources = Sources;
     }
 
     /**
-     * Get 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。 
-     * @return HealthLevels 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
+     * Get <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p> 
+     * @return HealthLevels <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
      */
     public String getHealthLevels() {
         return this.HealthLevels;
     }
 
     /**
-     * Set 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
-     * @param HealthLevels 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
+     * Set <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
+     * @param HealthLevels <p>报告的健康等级，支持的取值包括：&quot;HEALTH&quot; - 健康；&quot;SUB_HEALTH&quot; - 亚健康；&quot;RISK&quot; - 危险；&quot;HIGH_RISK&quot; - 高危。</p>
      */
     public void setHealthLevels(String HealthLevels) {
         this.HealthLevels = HealthLevels;
     }
 
     /**
-     * Get 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。 
-     * @return TaskStatuses 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
+     * Get <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p> 
+     * @return TaskStatuses <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
      */
     public String getTaskStatuses() {
         return this.TaskStatuses;
     }
 
     /**
-     * Set 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
-     * @param TaskStatuses 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
+     * Set <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
+     * @param TaskStatuses <p>任务的状态，支持的取值包括：&quot;created&quot; - 新建；&quot;chosen&quot; - 待执行； &quot;running&quot; - 执行中；&quot;failed&quot; - 失败；&quot;finished&quot; - 已完成。</p>
      */
     public void setTaskStatuses(String TaskStatuses) {
         this.TaskStatuses = TaskStatuses;
     }
 
     /**
-     * Get 偏移量，默认0。 
-     * @return Offset 偏移量，默认0。
+     * Get <p>偏移量，默认0。</p> 
+     * @return Offset <p>偏移量，默认0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认0。
-     * @param Offset 偏移量，默认0。
+     * Set <p>偏移量，默认0。</p>
+     * @param Offset <p>偏移量，默认0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认20，最大值为100。 
-     * @return Limit 返回数量，默认20，最大值为100。
+     * Get <p>返回数量，默认20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认20，最大值为100。
-     * @param Limit 返回数量，默认20，最大值为100。
+     * Set <p>返回数量，默认20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * Get <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * Set <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
+    }
+
+    /**
+     * Get <p>根据任务所属实例的标签信息进行过滤</p> 
+     * @return TagFilters <p>根据任务所属实例的标签信息进行过滤</p>
+     */
+    public TagFilterGroup [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set <p>根据任务所属实例的标签信息进行过滤</p>
+     * @param TagFilters <p>根据任务所属实例的标签信息进行过滤</p>
+     */
+    public void setTagFilters(TagFilterGroup [] TagFilters) {
+        this.TagFilters = TagFilters;
     }
 
     public DescribeDBDiagReportTasksRequest() {
@@ -271,6 +294,12 @@ public class DescribeDBDiagReportTasksRequest extends AbstractModel {
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilterGroup[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilterGroup(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -287,6 +316,7 @@ public class DescribeDBDiagReportTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }
