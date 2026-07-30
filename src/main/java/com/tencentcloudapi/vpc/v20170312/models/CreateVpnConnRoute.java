@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class CreateVpnConnRoute extends AbstractModel {
 
     /**
-    * 目的端IDC网段
+    * <p>目的端IDC网段</p>
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
 
     /**
-    * 优先级；可选值0，100。
+    * <p>优先级；可选值0，100。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get 目的端IDC网段 
-     * @return DestinationCidrBlock 目的端IDC网段
+    * <p>路由备注；可选值</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get <p>目的端IDC网段</p> 
+     * @return DestinationCidrBlock <p>目的端IDC网段</p>
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * Set 目的端IDC网段
-     * @param DestinationCidrBlock 目的端IDC网段
+     * Set <p>目的端IDC网段</p>
+     * @param DestinationCidrBlock <p>目的端IDC网段</p>
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get 优先级；可选值0，100。 
-     * @return Priority 优先级；可选值0，100。
+     * Get <p>优先级；可选值0，100。</p> 
+     * @return Priority <p>优先级；可选值0，100。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 优先级；可选值0，100。
-     * @param Priority 优先级；可选值0，100。
+     * Set <p>优先级；可选值0，100。</p>
+     * @param Priority <p>优先级；可选值0，100。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
+    }
+
+    /**
+     * Get <p>路由备注；可选值</p> 
+     * @return Description <p>路由备注；可选值</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>路由备注；可选值</p>
+     * @param Description <p>路由备注；可选值</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public CreateVpnConnRoute() {
@@ -83,6 +106,9 @@ public class CreateVpnConnRoute extends AbstractModel {
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateVpnConnRoute extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

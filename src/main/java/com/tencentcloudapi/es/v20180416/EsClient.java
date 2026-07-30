@@ -894,6 +894,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *更新ES集群实例的Kibana、cerebro公网开关
+     * @param req UpdateInstancePublicAccessRequest
+     * @return UpdateInstancePublicAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateInstancePublicAccessResponse UpdateInstancePublicAccess(UpdateInstancePublicAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateInstancePublicAccess", UpdateInstancePublicAccessResponse.class);
+    }
+
+    /**
      *更新ES集群IP溯源状态
      * @param req UpdateIpTraceStatusRequest
      * @return UpdateIpTraceStatusResponse

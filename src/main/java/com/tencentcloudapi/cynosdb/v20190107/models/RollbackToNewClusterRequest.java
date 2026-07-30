@@ -227,6 +227,27 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private Boolean FromSaveBackup;
 
     /**
+    * <p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+    */
+    @SerializedName("SyncWay")
+    @Expose
+    private String SyncWay;
+
+    /**
+    * <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
+    * <p>备可用区</p>
+    */
+    @SerializedName("SlaveZone")
+    @Expose
+    private String SlaveZone;
+
+    /**
      * Get <p>可用区</p> 
      * @return Zone <p>可用区</p>
      */
@@ -690,6 +711,54 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         this.FromSaveBackup = FromSaveBackup;
     }
 
+    /**
+     * Get <p>同步方式。可选值：async、semisync、sync，默认异步。</p> 
+     * @return SyncWay <p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+     */
+    public String getSyncWay() {
+        return this.SyncWay;
+    }
+
+    /**
+     * Set <p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+     * @param SyncWay <p>同步方式。可选值：async、semisync、sync，默认异步。</p>
+     */
+    public void setSyncWay(String SyncWay) {
+        this.SyncWay = SyncWay;
+    }
+
+    /**
+     * Get <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p> 
+     * @return SemiSyncTimeout <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+     * @param SemiSyncTimeout <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
+    /**
+     * Get <p>备可用区</p> 
+     * @return SlaveZone <p>备可用区</p>
+     */
+    public String getSlaveZone() {
+        return this.SlaveZone;
+    }
+
+    /**
+     * Set <p>备可用区</p>
+     * @param SlaveZone <p>备可用区</p>
+     */
+    public void setSlaveZone(String SlaveZone) {
+        this.SlaveZone = SlaveZone;
+    }
+
     public RollbackToNewClusterRequest() {
     }
 
@@ -809,6 +878,15 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         if (source.FromSaveBackup != null) {
             this.FromSaveBackup = new Boolean(source.FromSaveBackup);
         }
+        if (source.SyncWay != null) {
+            this.SyncWay = new String(source.SyncWay);
+        }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String(source.SlaveZone);
+        }
     }
 
 
@@ -845,6 +923,9 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
+        this.setParamSimple(map, prefix + "SyncWay", this.SyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
+        this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
 
     }
 }

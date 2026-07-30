@@ -357,6 +357,17 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBlueprintBundles)用于查询镜像所对应的套餐。当前仅支持查询镜像类型为游戏专区的镜像ID。
+     * @param req DescribeBlueprintBundlesRequest
+     * @return DescribeBlueprintBundlesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlueprintBundlesResponse DescribeBlueprintBundles(DescribeBlueprintBundlesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlueprintBundles", DescribeBlueprintBundlesResponse.class);
+    }
+
+    /**
      *本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
      * @param req DescribeBlueprintInstancesRequest
      * @return DescribeBlueprintInstancesResponse

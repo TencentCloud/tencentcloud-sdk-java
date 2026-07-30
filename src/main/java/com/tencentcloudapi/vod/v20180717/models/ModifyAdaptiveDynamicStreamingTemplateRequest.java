@@ -24,255 +24,233 @@ import java.util.HashMap;
 public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel {
 
     /**
-    * 自适应转码模板唯一标识。
+    * <p>自适应转码模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 模板名称，长度限制：64 个字符。
+    * <p>模板名称，长度限制：64 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 自适应转码格式，取值范围：
-<li>HLS；</li>
-<li>MPEG-DASH。</li>
+    * <p>自适应转码格式，取值范围：</p><li>HLS；</li><li>MPEG-DASH。</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+    * <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
     */
     @SerializedName("DisableHigherVideoBitrate")
     @Expose
     private Long DisableHigherVideoBitrate;
 
     /**
-    * 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+    * <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
     */
     @SerializedName("DisableHigherVideoResolution")
     @Expose
     private Long DisableHigherVideoResolution;
 
     /**
-    * 自适应转码输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+    * <p>自适应转码输入流参数信息，最多输入10路流。<br>注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。</p>
     */
     @SerializedName("StreamInfos")
     @Expose
     private AdaptiveStreamTemplate [] StreamInfos;
 
     /**
-    * 模板描述信息，长度限制：256 个字符。
+    * <p>模板描述信息，长度限制：256 个字符。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 切片类型，当 Format 为 HLS 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
+    * <p>分片类型，可选值：<br>ts: HLS，内部映射为ts-segment</p><p>mp4: HLS/DASH，HLS情况下内部映射为mp4-mp4-segment，DASH情况下内部映射为mp4-mp4-byterange</p><p>ts-segment：HLS+TS 切片</p><p>ts-byterange：HLS+TS byte range</p><p>mp4-segment：HLS+MP4 切片</p><p>mp4-byterange：HLS+MP4 byte range</p><p>ts-packed-audio：HLS+TS+Packed Audio 切片</p><p>mp4-packed-audio：HLS+MP4+Packed Audio 切片</p><p>ts-ts-segment：HLS+TS+TS 切片</p><p>ts-ts-byterange：HLS+TS+TS byte range</p><p>mp4-mp4-segment：HLS+MP4+MP4 切片</p><p>mp4-mp4-byterange：HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange：HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange：HLS+MP4+Packed Audio byte range<br> 默认值：ts-segment 注：自适应码流的分片格式以此字段为准。DASH格式下SegmentType只能为mp4-mp4-byterange。</p><p>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange Widevine+FairPlay: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</p>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get 自适应转码模板唯一标识。 
-     * @return Definition 自适应转码模板唯一标识。
+    * <p>切片平均时长。</p><p>取值范围：[1, 10]</p><p>单位：秒</p>
+    */
+    @SerializedName("SegmentDuration")
+    @Expose
+    private Long SegmentDuration;
+
+    /**
+     * Get <p>自适应转码模板唯一标识。</p> 
+     * @return Definition <p>自适应转码模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 自适应转码模板唯一标识。
-     * @param Definition 自适应转码模板唯一标识。
+     * Set <p>自适应转码模板唯一标识。</p>
+     * @param Definition <p>自适应转码模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 模板名称，长度限制：64 个字符。 
-     * @return Name 模板名称，长度限制：64 个字符。
+     * Get <p>模板名称，长度限制：64 个字符。</p> 
+     * @return Name <p>模板名称，长度限制：64 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称，长度限制：64 个字符。
-     * @param Name 模板名称，长度限制：64 个字符。
+     * Set <p>模板名称，长度限制：64 个字符。</p>
+     * @param Name <p>模板名称，长度限制：64 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 自适应转码格式，取值范围：
-<li>HLS；</li>
-<li>MPEG-DASH。</li> 
-     * @return Format 自适应转码格式，取值范围：
-<li>HLS；</li>
-<li>MPEG-DASH。</li>
+     * Get <p>自适应转码格式，取值范围：</p><li>HLS；</li><li>MPEG-DASH。</li> 
+     * @return Format <p>自适应转码格式，取值范围：</p><li>HLS；</li><li>MPEG-DASH。</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 自适应转码格式，取值范围：
-<li>HLS；</li>
-<li>MPEG-DASH。</li>
-     * @param Format 自适应转码格式，取值范围：
-<li>HLS；</li>
-<li>MPEG-DASH。</li>
+     * Set <p>自适应转码格式，取值范围：</p><li>HLS；</li><li>MPEG-DASH。</li>
+     * @param Format <p>自适应转码格式，取值范围：</p><li>HLS；</li><li>MPEG-DASH。</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li> 
-     * @return DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Get <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li> 
+     * @return DisableHigherVideoBitrate <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public Long getDisableHigherVideoBitrate() {
         return this.DisableHigherVideoBitrate;
     }
 
     /**
-     * Set 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Set <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param DisableHigherVideoBitrate <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public void setDisableHigherVideoBitrate(Long DisableHigherVideoBitrate) {
         this.DisableHigherVideoBitrate = DisableHigherVideoBitrate;
     }
 
     /**
-     * Get 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li> 
-     * @return DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Get <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li> 
+     * @return DisableHigherVideoResolution <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public Long getDisableHigherVideoResolution() {
         return this.DisableHigherVideoResolution;
     }
 
     /**
-     * Set 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Set <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param DisableHigherVideoResolution <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public void setDisableHigherVideoResolution(Long DisableHigherVideoResolution) {
         this.DisableHigherVideoResolution = DisableHigherVideoResolution;
     }
 
     /**
-     * Get 自适应转码输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。 
-     * @return StreamInfos 自适应转码输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+     * Get <p>自适应转码输入流参数信息，最多输入10路流。<br>注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。</p> 
+     * @return StreamInfos <p>自适应转码输入流参数信息，最多输入10路流。<br>注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。</p>
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set 自适应转码输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
-     * @param StreamInfos 自适应转码输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+     * Set <p>自适应转码输入流参数信息，最多输入10路流。<br>注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。</p>
+     * @param StreamInfos <p>自适应转码输入流参数信息，最多输入10路流。<br>注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。</p>
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get 模板描述信息，长度限制：256 个字符。 
-     * @return Comment 模板描述信息，长度限制：256 个字符。
+     * Get <p>模板描述信息，长度限制：256 个字符。</p> 
+     * @return Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述信息，长度限制：256 个字符。
-     * @param Comment 模板描述信息，长度限制：256 个字符。
+     * Set <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 切片类型，当 Format 为 HLS 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li> 
-     * @return SegmentType 切片类型，当 Format 为 HLS 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
+     * Get <p>分片类型，可选值：<br>ts: HLS，内部映射为ts-segment</p><p>mp4: HLS/DASH，HLS情况下内部映射为mp4-mp4-segment，DASH情况下内部映射为mp4-mp4-byterange</p><p>ts-segment：HLS+TS 切片</p><p>ts-byterange：HLS+TS byte range</p><p>mp4-segment：HLS+MP4 切片</p><p>mp4-byterange：HLS+MP4 byte range</p><p>ts-packed-audio：HLS+TS+Packed Audio 切片</p><p>mp4-packed-audio：HLS+MP4+Packed Audio 切片</p><p>ts-ts-segment：HLS+TS+TS 切片</p><p>ts-ts-byterange：HLS+TS+TS byte range</p><p>mp4-mp4-segment：HLS+MP4+MP4 切片</p><p>mp4-mp4-byterange：HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange：HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange：HLS+MP4+Packed Audio byte range<br> 默认值：ts-segment 注：自适应码流的分片格式以此字段为准。DASH格式下SegmentType只能为mp4-mp4-byterange。</p><p>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange Widevine+FairPlay: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</p> 
+     * @return SegmentType <p>分片类型，可选值：<br>ts: HLS，内部映射为ts-segment</p><p>mp4: HLS/DASH，HLS情况下内部映射为mp4-mp4-segment，DASH情况下内部映射为mp4-mp4-byterange</p><p>ts-segment：HLS+TS 切片</p><p>ts-byterange：HLS+TS byte range</p><p>mp4-segment：HLS+MP4 切片</p><p>mp4-byterange：HLS+MP4 byte range</p><p>ts-packed-audio：HLS+TS+Packed Audio 切片</p><p>mp4-packed-audio：HLS+MP4+Packed Audio 切片</p><p>ts-ts-segment：HLS+TS+TS 切片</p><p>ts-ts-byterange：HLS+TS+TS byte range</p><p>mp4-mp4-segment：HLS+MP4+MP4 切片</p><p>mp4-mp4-byterange：HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange：HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange：HLS+MP4+Packed Audio byte range<br> 默认值：ts-segment 注：自适应码流的分片格式以此字段为准。DASH格式下SegmentType只能为mp4-mp4-byterange。</p><p>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange Widevine+FairPlay: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</p>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set 切片类型，当 Format 为 HLS 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
-     * @param SegmentType 切片类型，当 Format 为 HLS 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
+     * Set <p>分片类型，可选值：<br>ts: HLS，内部映射为ts-segment</p><p>mp4: HLS/DASH，HLS情况下内部映射为mp4-mp4-segment，DASH情况下内部映射为mp4-mp4-byterange</p><p>ts-segment：HLS+TS 切片</p><p>ts-byterange：HLS+TS byte range</p><p>mp4-segment：HLS+MP4 切片</p><p>mp4-byterange：HLS+MP4 byte range</p><p>ts-packed-audio：HLS+TS+Packed Audio 切片</p><p>mp4-packed-audio：HLS+MP4+Packed Audio 切片</p><p>ts-ts-segment：HLS+TS+TS 切片</p><p>ts-ts-byterange：HLS+TS+TS byte range</p><p>mp4-mp4-segment：HLS+MP4+MP4 切片</p><p>mp4-mp4-byterange：HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange：HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange：HLS+MP4+Packed Audio byte range<br> 默认值：ts-segment 注：自适应码流的分片格式以此字段为准。DASH格式下SegmentType只能为mp4-mp4-byterange。</p><p>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange Widevine+FairPlay: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</p>
+     * @param SegmentType <p>分片类型，可选值：<br>ts: HLS，内部映射为ts-segment</p><p>mp4: HLS/DASH，HLS情况下内部映射为mp4-mp4-segment，DASH情况下内部映射为mp4-mp4-byterange</p><p>ts-segment：HLS+TS 切片</p><p>ts-byterange：HLS+TS byte range</p><p>mp4-segment：HLS+MP4 切片</p><p>mp4-byterange：HLS+MP4 byte range</p><p>ts-packed-audio：HLS+TS+Packed Audio 切片</p><p>mp4-packed-audio：HLS+MP4+Packed Audio 切片</p><p>ts-ts-segment：HLS+TS+TS 切片</p><p>ts-ts-byterange：HLS+TS+TS byte range</p><p>mp4-mp4-segment：HLS+MP4+MP4 切片</p><p>mp4-mp4-byterange：HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange：HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange：HLS+MP4+Packed Audio byte range<br> 默认值：ts-segment 注：自适应码流的分片格式以此字段为准。DASH格式下SegmentType只能为mp4-mp4-byterange。</p><p>FairPlay：只能用于HLS，切片格式只能是mp4或mp4-mp4-segment Widevine：可以用于HLS和DASH，HLS下切片格式只能是mp4或mp4-mp4-segment，DASH下切片格式只能是mp4或mp4-mp4-byterange Widevine+FairPlay: 只能用于HLS，切片格式只能是mp4或mp4-mp4-segment</p>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get <p>切片平均时长。</p><p>取值范围：[1, 10]</p><p>单位：秒</p> 
+     * @return SegmentDuration <p>切片平均时长。</p><p>取值范围：[1, 10]</p><p>单位：秒</p>
+     */
+    public Long getSegmentDuration() {
+        return this.SegmentDuration;
+    }
+
+    /**
+     * Set <p>切片平均时长。</p><p>取值范围：[1, 10]</p><p>单位：秒</p>
+     * @param SegmentDuration <p>切片平均时长。</p><p>取值范围：[1, 10]</p><p>单位：秒</p>
+     */
+    public void setSegmentDuration(Long SegmentDuration) {
+        this.SegmentDuration = SegmentDuration;
     }
 
     public ModifyAdaptiveDynamicStreamingTemplateRequest() {
@@ -313,6 +291,9 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
+        if (source.SegmentDuration != null) {
+            this.SegmentDuration = new Long(source.SegmentDuration);
+        }
     }
 
 
@@ -329,6 +310,7 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
 
     }
 }

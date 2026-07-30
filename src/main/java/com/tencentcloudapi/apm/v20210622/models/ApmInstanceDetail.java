@@ -423,6 +423,13 @@ public class ApmInstanceDetail extends AbstractModel {
     private String LogSpanIdKey;
 
     /**
+    * <p>是否禁用 AI 能力</p><p>单位：无</p>
+    */
+    @SerializedName("DisableAiAbility")
+    @Expose
+    private Long DisableAiAbility;
+
+    /**
      * Get <p>业务系统 ID</p> 
      * @return InstanceId <p>业务系统 ID</p>
      */
@@ -1334,6 +1341,22 @@ public class ApmInstanceDetail extends AbstractModel {
         this.LogSpanIdKey = LogSpanIdKey;
     }
 
+    /**
+     * Get <p>是否禁用 AI 能力</p><p>单位：无</p> 
+     * @return DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
+     */
+    public Long getDisableAiAbility() {
+        return this.DisableAiAbility;
+    }
+
+    /**
+     * Set <p>是否禁用 AI 能力</p><p>单位：无</p>
+     * @param DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
+     */
+    public void setDisableAiAbility(Long DisableAiAbility) {
+        this.DisableAiAbility = DisableAiAbility;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1519,6 +1542,9 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.LogSpanIdKey != null) {
             this.LogSpanIdKey = new String(source.LogSpanIdKey);
         }
+        if (source.DisableAiAbility != null) {
+            this.DisableAiAbility = new Long(source.DisableAiAbility);
+        }
     }
 
 
@@ -1583,6 +1609,7 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
         this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+        this.setParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
 
     }
 }

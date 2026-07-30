@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddLiveWatermarkResponse extends AbstractModel {
 
     /**
-    * 水印ID。
+    * <p>水印ID。</p>
     */
     @SerializedName("WatermarkId")
     @Expose
@@ -38,16 +38,16 @@ public class AddLiveWatermarkResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 水印ID。 
-     * @return WatermarkId 水印ID。
+     * Get <p>水印ID。</p> 
+     * @return WatermarkId <p>水印ID。</p>
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
     }
 
     /**
-     * Set 水印ID。
-     * @param WatermarkId 水印ID。
+     * Set <p>水印ID。</p>
+     * @param WatermarkId <p>水印ID。</p>
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;

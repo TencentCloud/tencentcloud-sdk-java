@@ -325,25 +325,32 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private String LogSpanIdKey;
 
     /**
-    * <p>是否开启探针头采样</p>
+    * <p>是否开启探针头采样</p><p>（受限）</p>
     */
     @SerializedName("EnableHeadSampler")
     @Expose
     private Boolean EnableHeadSampler;
 
     /**
-    * <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+    * <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
     */
     @SerializedName("HeadSamplerType")
     @Expose
     private String HeadSamplerType;
 
     /**
-    * <p>头采采样率</p><p>取值范围：[0, 100]</p>
+    * <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
     */
     @SerializedName("HeadSamplerArg")
     @Expose
     private Long HeadSamplerArg;
+
+    /**
+    * <p>是否禁用 AI 能力</p><p>单位：无</p>
+    */
+    @SerializedName("DisableAiAbility")
+    @Expose
+    private Long DisableAiAbility;
 
     /**
      * Get <p>业务系统 ID</p> 
@@ -1034,51 +1041,67 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启探针头采样</p> 
-     * @return EnableHeadSampler <p>是否开启探针头采样</p>
+     * Get <p>是否开启探针头采样</p><p>（受限）</p> 
+     * @return EnableHeadSampler <p>是否开启探针头采样</p><p>（受限）</p>
      */
     public Boolean getEnableHeadSampler() {
         return this.EnableHeadSampler;
     }
 
     /**
-     * Set <p>是否开启探针头采样</p>
-     * @param EnableHeadSampler <p>是否开启探针头采样</p>
+     * Set <p>是否开启探针头采样</p><p>（受限）</p>
+     * @param EnableHeadSampler <p>是否开启探针头采样</p><p>（受限）</p>
      */
     public void setEnableHeadSampler(Boolean EnableHeadSampler) {
         this.EnableHeadSampler = EnableHeadSampler;
     }
 
     /**
-     * Get <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul> 
-     * @return HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+     * Get <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p> 
+     * @return HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
      */
     public String getHeadSamplerType() {
         return this.HeadSamplerType;
     }
 
     /**
-     * Set <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
-     * @param HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul>
+     * Set <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
+     * @param HeadSamplerType <p>头采类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 默认</li></ul><p>（受限）</p>
      */
     public void setHeadSamplerType(String HeadSamplerType) {
         this.HeadSamplerType = HeadSamplerType;
     }
 
     /**
-     * Get <p>头采采样率</p><p>取值范围：[0, 100]</p> 
-     * @return HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p>
+     * Get <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p> 
+     * @return HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
      */
     public Long getHeadSamplerArg() {
         return this.HeadSamplerArg;
     }
 
     /**
-     * Set <p>头采采样率</p><p>取值范围：[0, 100]</p>
-     * @param HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p>
+     * Set <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
+     * @param HeadSamplerArg <p>头采采样率</p><p>取值范围：[0, 100]</p><p>（受限）</p>
      */
     public void setHeadSamplerArg(Long HeadSamplerArg) {
         this.HeadSamplerArg = HeadSamplerArg;
+    }
+
+    /**
+     * Get <p>是否禁用 AI 能力</p><p>单位：无</p> 
+     * @return DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
+     */
+    public Long getDisableAiAbility() {
+        return this.DisableAiAbility;
+    }
+
+    /**
+     * Set <p>是否禁用 AI 能力</p><p>单位：无</p>
+     * @param DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
+     */
+    public void setDisableAiAbility(Long DisableAiAbility) {
+        this.DisableAiAbility = DisableAiAbility;
     }
 
     public ModifyApmInstanceRequest() {
@@ -1233,6 +1256,9 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.HeadSamplerArg != null) {
             this.HeadSamplerArg = new Long(source.HeadSamplerArg);
         }
+        if (source.DisableAiAbility != null) {
+            this.DisableAiAbility = new Long(source.DisableAiAbility);
+        }
     }
 
 
@@ -1286,6 +1312,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
         this.setParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
         this.setParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
+        this.setParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
 
     }
 }

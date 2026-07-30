@@ -66,7 +66,7 @@ public class PolicyRule extends AbstractModel {
     private String AddressModule;
 
     /**
-    * <p>规则 ID</p>
+    * <p>安全组 ID</p>
     */
     @SerializedName("Id")
     @Expose
@@ -176,16 +176,16 @@ public class PolicyRule extends AbstractModel {
     }
 
     /**
-     * Get <p>规则 ID</p> 
-     * @return Id <p>规则 ID</p>
+     * Get <p>安全组 ID</p> 
+     * @return Id <p>安全组 ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>规则 ID</p>
-     * @param Id <p>规则 ID</p>
+     * Set <p>安全组 ID</p>
+     * @param Id <p>安全组 ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;

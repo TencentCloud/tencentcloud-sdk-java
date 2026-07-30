@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
+    * 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class Filters extends AbstractModel {
     private String ExactMatch;
 
     /**
-     * Get 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL） 
-     * @return Name 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
+     * Get 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配） 
+     * @return Name 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
-     * @param Name 过滤条件名称。取值：TaskID（任务ID，精确匹配）、TaskStatus（任务状态，Values: INIT/SCANNING/SUCCESS/FAILED）、TaskType（任务类型，Values: PERIODIC/MANUAL）
+     * Set 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
+     * @param Name 过滤条件名称。取值：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊匹配）、IP（IP地址，模糊匹配）、Tag（资产标签，模糊匹配）
      */
     public void setName(String Name) {
         this.Name = Name;

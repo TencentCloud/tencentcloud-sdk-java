@@ -508,6 +508,7 @@ public class LiveClient extends AbstractClient{
 
     /**
      *创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
+创建规则后生效时间为10分钟，规则仅对推流时间晚于配置生效时间的流有效，对正在直播的流不生效。
      * @param req CreateLiveWatermarkRuleRequest
      * @return CreateLiveWatermarkRuleResponse
      * @throws TencentCloudSDKException
@@ -2103,6 +2104,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 
     /**
      *直播上行路数查询。
+数据延迟3小时左右。
      * @param req DescribeUploadStreamNumsRequest
      * @return DescribeUploadStreamNumsResponse
      * @throws TencentCloudSDKException

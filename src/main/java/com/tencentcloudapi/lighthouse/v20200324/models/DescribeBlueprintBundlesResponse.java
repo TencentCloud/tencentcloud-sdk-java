@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVpnGatewayResponse extends AbstractModel {
+public class DescribeBlueprintBundlesResponse extends AbstractModel {
 
     /**
-    * <p>VPN网关对象</p>
+    * 镜像套餐详细信息列表。 
     */
-    @SerializedName("VpnGateway")
+    @SerializedName("BlueprintBundleSet")
     @Expose
-    private VpnGateway VpnGateway;
+    private BlueprintBundle [] BlueprintBundleSet;
+
+    /**
+    * 符合要求的套餐总数，用于分页展示。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateVpnGatewayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>VPN网关对象</p> 
-     * @return VpnGateway <p>VPN网关对象</p>
+     * Get 镜像套餐详细信息列表。  
+     * @return BlueprintBundleSet 镜像套餐详细信息列表。 
      */
-    public VpnGateway getVpnGateway() {
-        return this.VpnGateway;
+    public BlueprintBundle [] getBlueprintBundleSet() {
+        return this.BlueprintBundleSet;
     }
 
     /**
-     * Set <p>VPN网关对象</p>
-     * @param VpnGateway <p>VPN网关对象</p>
+     * Set 镜像套餐详细信息列表。 
+     * @param BlueprintBundleSet 镜像套餐详细信息列表。 
      */
-    public void setVpnGateway(VpnGateway VpnGateway) {
-        this.VpnGateway = VpnGateway;
+    public void setBlueprintBundleSet(BlueprintBundle [] BlueprintBundleSet) {
+        this.BlueprintBundleSet = BlueprintBundleSet;
+    }
+
+    /**
+     * Get 符合要求的套餐总数，用于分页展示。 
+     * @return TotalCount 符合要求的套餐总数，用于分页展示。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合要求的套餐总数，用于分页展示。
+     * @param TotalCount 符合要求的套餐总数，用于分页展示。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -69,16 +92,22 @@ public class CreateVpnGatewayResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateVpnGatewayResponse() {
+    public DescribeBlueprintBundlesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateVpnGatewayResponse(CreateVpnGatewayResponse source) {
-        if (source.VpnGateway != null) {
-            this.VpnGateway = new VpnGateway(source.VpnGateway);
+    public DescribeBlueprintBundlesResponse(DescribeBlueprintBundlesResponse source) {
+        if (source.BlueprintBundleSet != null) {
+            this.BlueprintBundleSet = new BlueprintBundle[source.BlueprintBundleSet.length];
+            for (int i = 0; i < source.BlueprintBundleSet.length; i++) {
+                this.BlueprintBundleSet[i] = new BlueprintBundle(source.BlueprintBundleSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class CreateVpnGatewayResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "VpnGateway.", this.VpnGateway);
+        this.setParamArrayObj(map, prefix + "BlueprintBundleSet.", this.BlueprintBundleSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

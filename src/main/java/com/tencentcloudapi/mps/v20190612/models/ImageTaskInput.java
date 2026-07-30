@@ -91,6 +91,27 @@ public class ImageTaskInput extends AbstractModel {
     private CreateImageConfig CreateImageConfig;
 
     /**
+    * <p>Ai抠图配置</p>
+    */
+    @SerializedName("AiCutoutConfig")
+    @Expose
+    private AiCutoutConfig AiCutoutConfig;
+
+    /**
+    * <p>Ai扩图配置</p>
+    */
+    @SerializedName("AiExpansionConfig")
+    @Expose
+    private AiExpansionConfig AiExpansionConfig;
+
+    /**
+    * <p>Ai分镜拆解配置</p>
+    */
+    @SerializedName("AiStoryboardConfig")
+    @Expose
+    private AiStoryboardConfig AiStoryboardConfig;
+
+    /**
      * Get <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig <p>图片编码配置。</p>
@@ -250,6 +271,54 @@ public class ImageTaskInput extends AbstractModel {
         this.CreateImageConfig = CreateImageConfig;
     }
 
+    /**
+     * Get <p>Ai抠图配置</p> 
+     * @return AiCutoutConfig <p>Ai抠图配置</p>
+     */
+    public AiCutoutConfig getAiCutoutConfig() {
+        return this.AiCutoutConfig;
+    }
+
+    /**
+     * Set <p>Ai抠图配置</p>
+     * @param AiCutoutConfig <p>Ai抠图配置</p>
+     */
+    public void setAiCutoutConfig(AiCutoutConfig AiCutoutConfig) {
+        this.AiCutoutConfig = AiCutoutConfig;
+    }
+
+    /**
+     * Get <p>Ai扩图配置</p> 
+     * @return AiExpansionConfig <p>Ai扩图配置</p>
+     */
+    public AiExpansionConfig getAiExpansionConfig() {
+        return this.AiExpansionConfig;
+    }
+
+    /**
+     * Set <p>Ai扩图配置</p>
+     * @param AiExpansionConfig <p>Ai扩图配置</p>
+     */
+    public void setAiExpansionConfig(AiExpansionConfig AiExpansionConfig) {
+        this.AiExpansionConfig = AiExpansionConfig;
+    }
+
+    /**
+     * Get <p>Ai分镜拆解配置</p> 
+     * @return AiStoryboardConfig <p>Ai分镜拆解配置</p>
+     */
+    public AiStoryboardConfig getAiStoryboardConfig() {
+        return this.AiStoryboardConfig;
+    }
+
+    /**
+     * Set <p>Ai分镜拆解配置</p>
+     * @param AiStoryboardConfig <p>Ai分镜拆解配置</p>
+     */
+    public void setAiStoryboardConfig(AiStoryboardConfig AiStoryboardConfig) {
+        this.AiStoryboardConfig = AiStoryboardConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -285,6 +354,15 @@ public class ImageTaskInput extends AbstractModel {
         if (source.CreateImageConfig != null) {
             this.CreateImageConfig = new CreateImageConfig(source.CreateImageConfig);
         }
+        if (source.AiCutoutConfig != null) {
+            this.AiCutoutConfig = new AiCutoutConfig(source.AiCutoutConfig);
+        }
+        if (source.AiExpansionConfig != null) {
+            this.AiExpansionConfig = new AiExpansionConfig(source.AiExpansionConfig);
+        }
+        if (source.AiStoryboardConfig != null) {
+            this.AiStoryboardConfig = new AiStoryboardConfig(source.AiStoryboardConfig);
+        }
     }
 
 
@@ -301,6 +379,9 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
         this.setParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
         this.setParamObj(map, prefix + "CreateImageConfig.", this.CreateImageConfig);
+        this.setParamObj(map, prefix + "AiCutoutConfig.", this.AiCutoutConfig);
+        this.setParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
+        this.setParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVpnGatewayResponse extends AbstractModel {
+public class UpdateInstancePublicAccessResponse extends AbstractModel {
 
     /**
-    * <p>VPN网关对象</p>
+    * 订单号
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("VpnGateway")
+    @SerializedName("DealName")
     @Expose
-    private VpnGateway VpnGateway;
+    private String DealName;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +39,23 @@ public class CreateVpnGatewayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>VPN网关对象</p> 
-     * @return VpnGateway <p>VPN网关对象</p>
+     * Get 订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealName 订单号
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public VpnGateway getVpnGateway() {
-        return this.VpnGateway;
+    public String getDealName() {
+        return this.DealName;
     }
 
     /**
-     * Set <p>VPN网关对象</p>
-     * @param VpnGateway <p>VPN网关对象</p>
+     * Set 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealName 订单号
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setVpnGateway(VpnGateway VpnGateway) {
-        this.VpnGateway = VpnGateway;
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
@@ -69,16 +74,16 @@ public class CreateVpnGatewayResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateVpnGatewayResponse() {
+    public UpdateInstancePublicAccessResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateVpnGatewayResponse(CreateVpnGatewayResponse source) {
-        if (source.VpnGateway != null) {
-            this.VpnGateway = new VpnGateway(source.VpnGateway);
+    public UpdateInstancePublicAccessResponse(UpdateInstancePublicAccessResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +95,7 @@ public class CreateVpnGatewayResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "VpnGateway.", this.VpnGateway);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

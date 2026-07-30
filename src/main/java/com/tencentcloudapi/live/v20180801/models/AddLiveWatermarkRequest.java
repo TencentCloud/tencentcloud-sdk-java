@@ -24,199 +24,184 @@ import java.util.HashMap;
 public class AddLiveWatermarkRequest extends AbstractModel {
 
     /**
-    * 水印图片 URL。
-URL中禁止包含的字符：
- ;(){}$>`#"\'|
+    * <p>水印图片 URL。<br>URL中禁止包含的字符：<br> ;(){}$&gt;`#&quot;'|</p>
     */
     @SerializedName("PictureUrl")
     @Expose
     private String PictureUrl;
 
     /**
-    * 水印名称。
-最长30字节。
+    * <p>水印名称。<br>最长30字节。</p>
     */
     @SerializedName("WatermarkName")
     @Expose
     private String WatermarkName;
 
     /**
-    * 显示位置，X轴偏移，单位是百分比，默认 0。
+    * <p>显示位置，X轴偏移，单位是百分比，默认 0。</p>
     */
     @SerializedName("XPosition")
     @Expose
     private Long XPosition;
 
     /**
-    * 显示位置，Y轴偏移，单位是百分比，默认 0。
+    * <p>显示位置，Y轴偏移，单位是百分比，默认 0。</p>
     */
     @SerializedName("YPosition")
     @Expose
     private Long YPosition;
 
     /**
-    * 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
+    * <p>水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+    * <p>水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 背景水印宽度。默认宽度1920。
+    * <p>背景水印宽度。默认宽度1920。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
     */
     @SerializedName("BackgroundWidth")
     @Expose
     private Long BackgroundWidth;
 
     /**
-    * 背景水印高度。默认高度1080。
+    * <p>背景水印高度。默认高度1080。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
     */
     @SerializedName("BackgroundHeight")
     @Expose
     private Long BackgroundHeight;
 
     /**
-     * Get 水印图片 URL。
-URL中禁止包含的字符：
- ;(){}$>`#"\'| 
-     * @return PictureUrl 水印图片 URL。
-URL中禁止包含的字符：
- ;(){}$>`#"\'|
+     * Get <p>水印图片 URL。<br>URL中禁止包含的字符：<br> ;(){}$&gt;`#&quot;'|</p> 
+     * @return PictureUrl <p>水印图片 URL。<br>URL中禁止包含的字符：<br> ;(){}$&gt;`#&quot;'|</p>
      */
     public String getPictureUrl() {
         return this.PictureUrl;
     }
 
     /**
-     * Set 水印图片 URL。
-URL中禁止包含的字符：
- ;(){}$>`#"\'|
-     * @param PictureUrl 水印图片 URL。
-URL中禁止包含的字符：
- ;(){}$>`#"\'|
+     * Set <p>水印图片 URL。<br>URL中禁止包含的字符：<br> ;(){}$&gt;`#&quot;'|</p>
+     * @param PictureUrl <p>水印图片 URL。<br>URL中禁止包含的字符：<br> ;(){}$&gt;`#&quot;'|</p>
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;
     }
 
     /**
-     * Get 水印名称。
-最长30字节。 
-     * @return WatermarkName 水印名称。
-最长30字节。
+     * Get <p>水印名称。<br>最长30字节。</p> 
+     * @return WatermarkName <p>水印名称。<br>最长30字节。</p>
      */
     public String getWatermarkName() {
         return this.WatermarkName;
     }
 
     /**
-     * Set 水印名称。
-最长30字节。
-     * @param WatermarkName 水印名称。
-最长30字节。
+     * Set <p>水印名称。<br>最长30字节。</p>
+     * @param WatermarkName <p>水印名称。<br>最长30字节。</p>
      */
     public void setWatermarkName(String WatermarkName) {
         this.WatermarkName = WatermarkName;
     }
 
     /**
-     * Get 显示位置，X轴偏移，单位是百分比，默认 0。 
-     * @return XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
+     * Get <p>显示位置，X轴偏移，单位是百分比，默认 0。</p> 
+     * @return XPosition <p>显示位置，X轴偏移，单位是百分比，默认 0。</p>
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set 显示位置，X轴偏移，单位是百分比，默认 0。
-     * @param XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
+     * Set <p>显示位置，X轴偏移，单位是百分比，默认 0。</p>
+     * @param XPosition <p>显示位置，X轴偏移，单位是百分比，默认 0。</p>
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
     /**
-     * Get 显示位置，Y轴偏移，单位是百分比，默认 0。 
-     * @return YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
+     * Get <p>显示位置，Y轴偏移，单位是百分比，默认 0。</p> 
+     * @return YPosition <p>显示位置，Y轴偏移，单位是百分比，默认 0。</p>
      */
     public Long getYPosition() {
         return this.YPosition;
     }
 
     /**
-     * Set 显示位置，Y轴偏移，单位是百分比，默认 0。
-     * @param YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
+     * Set <p>显示位置，Y轴偏移，单位是百分比，默认 0。</p>
+     * @param YPosition <p>显示位置，Y轴偏移，单位是百分比，默认 0。</p>
      */
     public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
     }
 
     /**
-     * Get 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。 
-     * @return Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
+     * Get <p>水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。</p> 
+     * @return Width <p>水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
-     * @param Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
+     * Set <p>水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。</p>
+     * @param Width <p>水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。 
-     * @return Height 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * Get <p>水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。</p> 
+     * @return Height <p>水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
-     * @param Height 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * Set <p>水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。</p>
+     * @param Height <p>水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 背景水印宽度。默认宽度1920。 
-     * @return BackgroundWidth 背景水印宽度。默认宽度1920。
+     * Get <p>背景水印宽度。默认宽度1920。</p><p>取值范围：[360, 4096]</p><p>单位：px</p> 
+     * @return BackgroundWidth <p>背景水印宽度。默认宽度1920。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
      */
     public Long getBackgroundWidth() {
         return this.BackgroundWidth;
     }
 
     /**
-     * Set 背景水印宽度。默认宽度1920。
-     * @param BackgroundWidth 背景水印宽度。默认宽度1920。
+     * Set <p>背景水印宽度。默认宽度1920。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
+     * @param BackgroundWidth <p>背景水印宽度。默认宽度1920。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
      */
     public void setBackgroundWidth(Long BackgroundWidth) {
         this.BackgroundWidth = BackgroundWidth;
     }
 
     /**
-     * Get 背景水印高度。默认高度1080。 
-     * @return BackgroundHeight 背景水印高度。默认高度1080。
+     * Get <p>背景水印高度。默认高度1080。</p><p>取值范围：[360, 4096]</p><p>单位：px</p> 
+     * @return BackgroundHeight <p>背景水印高度。默认高度1080。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
      */
     public Long getBackgroundHeight() {
         return this.BackgroundHeight;
     }
 
     /**
-     * Set 背景水印高度。默认高度1080。
-     * @param BackgroundHeight 背景水印高度。默认高度1080。
+     * Set <p>背景水印高度。默认高度1080。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
+     * @param BackgroundHeight <p>背景水印高度。默认高度1080。</p><p>取值范围：[360, 4096]</p><p>单位：px</p>
      */
     public void setBackgroundHeight(Long BackgroundHeight) {
         this.BackgroundHeight = BackgroundHeight;

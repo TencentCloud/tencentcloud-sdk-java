@@ -24,322 +24,345 @@ import java.util.HashMap;
 public class TokenPlanListItem extends AbstractModel {
 
     /**
-    * 套餐 ID。
+    * <p>套餐 ID。</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
+    * <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-    * 套餐名称。最大 128 字符。
+    * <p>套餐名称。最大 128 字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 账号 APP ID。
+    * <p>账号 APP ID。</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 主账号 UIN。
+    * <p>主账号 UIN。</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 套餐状态。取值：enable（启用）、disable（停用）。
+    * <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
+    * <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
     */
     @SerializedName("StopReason")
     @Expose
     private String StopReason;
 
     /**
-    * 可创建 API Key 上限。
+    * <p>可创建 API Key 上限。</p>
     */
     @SerializedName("ApiKeyMax")
     @Expose
     private Long ApiKeyMax;
 
     /**
-    * 云计费预付费资源包 ID。
+    * <p>当前已创建的 APIKey 数量</p>
+    */
+    @SerializedName("ApiKeyCount")
+    @Expose
+    private Long ApiKeyCount;
+
+    /**
+    * <p>云计费预付费资源包 ID。</p>
     */
     @SerializedName("PrepayResourceID")
     @Expose
     private String PrepayResourceID;
 
     /**
-    * 创建人。若为子账号创建的套餐，则该值为子账号UIN。
+    * <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 更新时间。
+    * <p>更新时间。</p>
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-    * 套餐包基本信息。
+    * <p>套餐包基本信息。</p>
     */
     @SerializedName("PackageInfo")
     @Expose
     private TokenPlanPackageInfo PackageInfo;
 
     /**
-    * 是否开启自动续费。取值：0（未开启），1（开启）
+    * <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-     * Get 套餐 ID。 
-     * @return TeamId 套餐 ID。
+     * Get <p>套餐 ID。</p> 
+     * @return TeamId <p>套餐 ID。</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set 套餐 ID。
-     * @param TeamId 套餐 ID。
+     * Set <p>套餐 ID。</p>
+     * @param TeamId <p>套餐 ID。</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐） 
-     * @return ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
+     * Get <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p> 
+     * @return ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
-     * @param ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）
+     * Set <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
+     * @param ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）</p>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 套餐名称。最大 128 字符。 
-     * @return Name 套餐名称。最大 128 字符。
+     * Get <p>套餐名称。最大 128 字符。</p> 
+     * @return Name <p>套餐名称。最大 128 字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 套餐名称。最大 128 字符。
-     * @param Name 套餐名称。最大 128 字符。
+     * Set <p>套餐名称。最大 128 字符。</p>
+     * @param Name <p>套餐名称。最大 128 字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 账号 APP ID。 
-     * @return AppId 账号 APP ID。
+     * Get <p>账号 APP ID。</p> 
+     * @return AppId <p>账号 APP ID。</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 账号 APP ID。
-     * @param AppId 账号 APP ID。
+     * Set <p>账号 APP ID。</p>
+     * @param AppId <p>账号 APP ID。</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主账号 UIN。 
-     * @return Uin 主账号 UIN。
+     * Get <p>主账号 UIN。</p> 
+     * @return Uin <p>主账号 UIN。</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 主账号 UIN。
-     * @param Uin 主账号 UIN。
+     * Set <p>主账号 UIN。</p>
+     * @param Uin <p>主账号 UIN。</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 套餐状态。取值：enable（启用）、disable（停用）。 
-     * @return Status 套餐状态。取值：enable（启用）、disable（停用）。
+     * Get <p>套餐状态。取值：enable（启用）、disable（停用）。</p> 
+     * @return Status <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 套餐状态。取值：enable（启用）、disable（停用）。
-     * @param Status 套餐状态。取值：enable（启用）、disable（停用）。
+     * Set <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
+     * @param Status <p>套餐状态。取值：enable（启用）、disable（停用）。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁） 
-     * @return StopReason 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
+     * Get <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p> 
+     * @return StopReason <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
      */
     public String getStopReason() {
         return this.StopReason;
     }
 
     /**
-     * Set 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
-     * @param StopReason 套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）
+     * Set <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
+     * @param StopReason <p>套餐关停原因。取值：NORMAL（正常）、ISOLATED（隔离/欠费）、FROZEN（冻结）、EXHAUSTED（额度耗尽）、DESTROYED（已销毁）</p>
      */
     public void setStopReason(String StopReason) {
         this.StopReason = StopReason;
     }
 
     /**
-     * Get 可创建 API Key 上限。 
-     * @return ApiKeyMax 可创建 API Key 上限。
+     * Get <p>可创建 API Key 上限。</p> 
+     * @return ApiKeyMax <p>可创建 API Key 上限。</p>
      */
     public Long getApiKeyMax() {
         return this.ApiKeyMax;
     }
 
     /**
-     * Set 可创建 API Key 上限。
-     * @param ApiKeyMax 可创建 API Key 上限。
+     * Set <p>可创建 API Key 上限。</p>
+     * @param ApiKeyMax <p>可创建 API Key 上限。</p>
      */
     public void setApiKeyMax(Long ApiKeyMax) {
         this.ApiKeyMax = ApiKeyMax;
     }
 
     /**
-     * Get 云计费预付费资源包 ID。 
-     * @return PrepayResourceID 云计费预付费资源包 ID。
+     * Get <p>当前已创建的 APIKey 数量</p> 
+     * @return ApiKeyCount <p>当前已创建的 APIKey 数量</p>
+     */
+    public Long getApiKeyCount() {
+        return this.ApiKeyCount;
+    }
+
+    /**
+     * Set <p>当前已创建的 APIKey 数量</p>
+     * @param ApiKeyCount <p>当前已创建的 APIKey 数量</p>
+     */
+    public void setApiKeyCount(Long ApiKeyCount) {
+        this.ApiKeyCount = ApiKeyCount;
+    }
+
+    /**
+     * Get <p>云计费预付费资源包 ID。</p> 
+     * @return PrepayResourceID <p>云计费预付费资源包 ID。</p>
      */
     public String getPrepayResourceID() {
         return this.PrepayResourceID;
     }
 
     /**
-     * Set 云计费预付费资源包 ID。
-     * @param PrepayResourceID 云计费预付费资源包 ID。
+     * Set <p>云计费预付费资源包 ID。</p>
+     * @param PrepayResourceID <p>云计费预付费资源包 ID。</p>
      */
     public void setPrepayResourceID(String PrepayResourceID) {
         this.PrepayResourceID = PrepayResourceID;
     }
 
     /**
-     * Get 创建人。若为子账号创建的套餐，则该值为子账号UIN。 
-     * @return Creator 创建人。若为子账号创建的套餐，则该值为子账号UIN。
+     * Get <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p> 
+     * @return Creator <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建人。若为子账号创建的套餐，则该值为子账号UIN。
-     * @param Creator 创建人。若为子账号创建的套餐，则该值为子账号UIN。
+     * Set <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
+     * @param Creator <p>创建人。若为子账号创建的套餐，则该值为子账号UIN。</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedAt 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedAt <p>创建时间。</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedAt 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedAt <p>创建时间。</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间。 
-     * @return UpdatedAt 更新时间。
+     * Get <p>更新时间。</p> 
+     * @return UpdatedAt <p>更新时间。</p>
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
     }
 
     /**
-     * Set 更新时间。
-     * @param UpdatedAt 更新时间。
+     * Set <p>更新时间。</p>
+     * @param UpdatedAt <p>更新时间。</p>
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 套餐包基本信息。 
-     * @return PackageInfo 套餐包基本信息。
+     * Get <p>套餐包基本信息。</p> 
+     * @return PackageInfo <p>套餐包基本信息。</p>
      */
     public TokenPlanPackageInfo getPackageInfo() {
         return this.PackageInfo;
     }
 
     /**
-     * Set 套餐包基本信息。
-     * @param PackageInfo 套餐包基本信息。
+     * Set <p>套餐包基本信息。</p>
+     * @param PackageInfo <p>套餐包基本信息。</p>
      */
     public void setPackageInfo(TokenPlanPackageInfo PackageInfo) {
         this.PackageInfo = PackageInfo;
     }
 
     /**
-     * Get 是否开启自动续费。取值：0（未开启），1（开启） 
-     * @return AutoRenewFlag 是否开启自动续费。取值：0（未开启），1（开启）
+     * Get <p>是否开启自动续费。取值：0（未开启），1（开启）</p> 
+     * @return AutoRenewFlag <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 是否开启自动续费。取值：0（未开启），1（开启）
-     * @param AutoRenewFlag 是否开启自动续费。取值：0（未开启），1（开启）
+     * Set <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
+     * @param AutoRenewFlag <p>是否开启自动续费。取值：0（未开启），1（开启）</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -377,6 +400,9 @@ public class TokenPlanListItem extends AbstractModel {
         if (source.ApiKeyMax != null) {
             this.ApiKeyMax = new Long(source.ApiKeyMax);
         }
+        if (source.ApiKeyCount != null) {
+            this.ApiKeyCount = new Long(source.ApiKeyCount);
+        }
         if (source.PrepayResourceID != null) {
             this.PrepayResourceID = new String(source.PrepayResourceID);
         }
@@ -410,6 +436,7 @@ public class TokenPlanListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);
         this.setParamSimple(map, prefix + "ApiKeyMax", this.ApiKeyMax);
+        this.setParamSimple(map, prefix + "ApiKeyCount", this.ApiKeyCount);
         this.setParamSimple(map, prefix + "PrepayResourceID", this.PrepayResourceID);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);

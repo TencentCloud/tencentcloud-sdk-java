@@ -59,6 +59,20 @@ public class MemoryPlusInfo extends AbstractModel {
     private String Region;
 
     /**
+    * <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
     * <p>记忆条数</p>
     */
     @SerializedName("MemoryUsage")
@@ -78,6 +92,13 @@ public class MemoryPlusInfo extends AbstractModel {
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
+
+    /**
+    * <p>版本号</p>
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
 
     /**
     * <p>创建时间</p>
@@ -188,6 +209,38 @@ public class MemoryPlusInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul> 
+     * @return PayMode <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+     * @param PayMode <p>计费模式</p><p>枚举值：</p><ul><li>-1： 免费版</li><li>0： 按量付费</li><li>1： 包年包月</li></ul>
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul> 
+     * @return AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     * @param AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
+    /**
      * Get <p>记忆条数</p> 
      * @return MemoryUsage <p>记忆条数</p>
      */
@@ -233,6 +286,22 @@ public class MemoryPlusInfo extends AbstractModel {
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get <p>版本号</p> 
+     * @return Version <p>版本号</p>
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set <p>版本号</p>
+     * @param Version <p>版本号</p>
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     /**
@@ -322,6 +391,12 @@ public class MemoryPlusInfo extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
         if (source.MemoryUsage != null) {
             this.MemoryUsage = new Long(source.MemoryUsage);
         }
@@ -333,6 +408,9 @@ public class MemoryPlusInfo extends AbstractModel {
             for (int i = 0; i < source.ResourceTags.length; i++) {
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
         }
         if (source.CreatedAt != null) {
             this.CreatedAt = new String(source.CreatedAt);
@@ -358,9 +436,12 @@ public class MemoryPlusInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         this.setParamSimple(map, prefix + "CreditUsage", this.CreditUsage);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "IsolatedAt", this.IsolatedAt);
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);

@@ -94,14 +94,14 @@ public class IKEOptionsSpecification extends AbstractModel {
     private String DhGroupName;
 
     /**
-    * <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
+    * <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
     */
     @SerializedName("IKESaLifetimeSeconds")
     @Expose
     private Long IKESaLifetimeSeconds;
 
     /**
-    * <p>IKE版本</p>
+    * <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
     */
     @SerializedName("IKEVersion")
     @Expose
@@ -268,32 +268,32 @@ public class IKEOptionsSpecification extends AbstractModel {
     }
 
     /**
-     * Get <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p> 
-     * @return IKESaLifetimeSeconds <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
+     * Get <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p> 
+     * @return IKESaLifetimeSeconds <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
      */
     public Long getIKESaLifetimeSeconds() {
         return this.IKESaLifetimeSeconds;
     }
 
     /**
-     * Set <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
-     * @param IKESaLifetimeSeconds <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800</p>
+     * Set <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
+     * @param IKESaLifetimeSeconds <p>IKE SA Lifetime，单位：秒，设置IKE SA的生存周期</p><p>取值范围：[60, 604800]</p><p>默认值：86400</p>
      */
     public void setIKESaLifetimeSeconds(Long IKESaLifetimeSeconds) {
         this.IKESaLifetimeSeconds = IKESaLifetimeSeconds;
     }
 
     /**
-     * Get <p>IKE版本</p> 
-     * @return IKEVersion <p>IKE版本</p>
+     * Get <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p> 
+     * @return IKEVersion <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
      */
     public String getIKEVersion() {
         return this.IKEVersion;
     }
 
     /**
-     * Set <p>IKE版本</p>
-     * @param IKEVersion <p>IKE版本</p>
+     * Set <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
+     * @param IKEVersion <p>IKE版本</p><p>枚举值：</p><ul><li>IKEV1： IKEV1版本</li><li>IKEV2： IKEV2版本</li></ul><p>默认值：IKEV1</p>
      */
     public void setIKEVersion(String IKEVersion) {
         this.IKEVersion = IKEVersion;

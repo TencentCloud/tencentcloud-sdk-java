@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
-    * <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+    * <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+    * <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntegrityAlgorith")
@@ -67,25 +67,25 @@ public class IPSECOptionsSpecification extends AbstractModel {
     private String IntegrityAlgorithm;
 
     /**
-     * Get <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p> 
-     * @return EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+     * Get <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p> 
+     * @return EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
-     * @param EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;， 默认为AES-CBC-128</p>
+     * Set <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
+     * @param EncryptAlgorithm <p>加密算法，可选值：&#39;3DES-CBC&#39;, &#39;AES-CBC-128&#39;, &#39;AES-CBC-192&#39;, &#39;AES-CBC-256&#39;, &#39;DES-CBC&#39;, &#39;SM4&#39;, &#39;NULL&#39;</p><p>默认值：AES-CBC-128</p>
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+     * Get <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+     * @return IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -95,9 +95,9 @@ public class IPSECOptionsSpecification extends AbstractModel {
     }
 
     /**
-     * Set <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+     * Set <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;，&#39;SHA-256&#39; 默认为</p>
+     * @param IntegrityAlgorith <p>认证算法：可选值：&#39;MD5&#39;, &#39;SHA1&#39;, &#39;SHA-256&#39;, &#39;SHA-512&#39;, &#39;SHA-384&#39;, &#39;SM3&#39;</p><p>默认值：SHA1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
