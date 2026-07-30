@@ -68,6 +68,19 @@ public class ClientProfile {
     private String backupEndpoint;
 
     /**
+     * Whether to enable region-level domain failover. When true (default), the
+     * SDK automatically retries against backup TLDs (e.g. tencentcloudapi.com.cn /
+     * tencentcloudapi.cn) on DNS / TLS / network reachability failures of the
+     * primary domain. Custom apigw endpoints, region-pinned hosts, and any host
+     * the SDK does not recognise are passed through unchanged.
+     *
+     * <p>This field also controls the legacy single-fallback "backup endpoint"
+     * mode (see {@link #setBackupEndpoint}); both schemes are gated by the same
+     * switch.
+     */
+    private boolean enableDomainFailover = true;
+
+    /**
      * Constructor to initialize ClientProfile with a specific signing method and HTTP profile.
      * If the signing method is null or empty, it defaults to "TC3-HMAC-SHA256".
      *
@@ -210,5 +223,21 @@ public class ClientProfile {
      */
     public void setBackupEndpoint(String backupEndpoint) {
         this.backupEndpoint = backupEndpoint;
+    }
+
+    /**
+     * @return true if region-level domain failover is enabled (default), false otherwise.
+     */
+    public boolean isEnableDomainFailover() {
+        return this.enableDomainFailover;
+    }
+
+    /**
+     * Enable or disable region-level domain failover. See {@link #enableDomainFailover}.
+     *
+     * @param enabled true to enable (default), false to disable.
+     */
+    public void setEnableDomainFailover(boolean enabled) {
+        this.enableDomainFailover = enabled;
     }
 }
