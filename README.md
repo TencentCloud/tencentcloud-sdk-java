@@ -2,7 +2,7 @@
 欢迎使用腾讯云开发者工具套件（SDK）3.0，SDK3.0是云 API3.0 平台的配套工具。
 为方便 JAVA 开发者调试和接入腾讯云产品 API，这里向您介绍适用于 Java 的腾讯云开发工具包，并提供首次使用开发工具包的简单示例。让您快速获取腾讯云 Java SDK 并开始调用。
 # 依赖环境
-1. 依赖环境：JDK 7 版本及以上。
+1. 依赖环境：JDK 8 版本及以上。
 2. 从 腾讯云控制台 开通相应产品。
 3. 获取 SecretID、SecretKey 以及调用地址（endpoint），endpoint 一般形式为\*.tencentcloudapi.com，如CVM 的调用地址为 cvm.tencentcloudapi.com，具体参考各产品说明。
 
@@ -545,6 +545,29 @@ cpf.getHttpProfile().setHttpClient(...);
 ## 版本升级
 
 请注意，从 3.0.x 版本升级到 3.1.x 版本有兼容性问题，对于 Integer 字段的使用修改为了 Long 类型，需要重新编译项目。
+
+## OkHttp 升级
+
+为规避 OkHttp 3.x 版本存在的安全风险，从版本 3.2.0 起，OkHttp 依赖由 3.12.13 升级至 4.12.0。
+
+### 回退至 OkHttp 3.12.13
+
+若升级后与项目存在冲突，可在应用 `pom.xml` 中显式声明以下依赖进行回退。依据 Maven “路径最近优先”的依赖仲裁规则，应用声明的版本将覆盖 SDK 传递引入的 4.12.0：
+
+```xml
+<dependency>
+  <groupId>com.squareup.okhttp3</groupId>
+  <artifactId>okhttp</artifactId>
+  <version>3.12.13</version>
+</dependency>
+<dependency>
+  <groupId>com.squareup.okhttp3</groupId>
+  <artifactId>logging-interceptor</artifactId>
+  <version>3.12.13</version>
+</dependency>
+```
+
+> **注意**：回退操作将重新引入旧版 OkHttp 已修复的安全风险，仅可用于故障应急与问题定位，问题排除后应尽快恢复使用 OkHttp 4。
 
 ## 证书问题
 

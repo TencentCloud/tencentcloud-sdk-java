@@ -25,6 +25,7 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.net.Proxy;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class HttpConnection {
@@ -46,6 +47,10 @@ public class HttpConnection {
 
     public void addInterceptors(Interceptor interceptor) {
         this.client = this.client.newBuilder().addInterceptor(interceptor).build();
+    }
+
+    public List<Interceptor> getInterceptors() {
+        return this.client.interceptors();
     }
 
     public void setProxy(Proxy proxy) {

@@ -24,9 +24,9 @@ public class ProfileCredentialsProvider implements CredentialsProvider {
         } else {
             throw new TencentCloudSDKException("Not found file");
         }
-        try {
+        try (FileReader reader = new FileReader(fileName)) {
             ini = new INIConfiguration();
-            ini.read(new FileReader(fileName));
+            ini.read(reader);
         } catch (IOException | ConfigurationException e) {
             throw new TencentCloudSDKException("IOException or ConfigurationException");
         }

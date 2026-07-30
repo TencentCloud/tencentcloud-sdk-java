@@ -31,6 +31,7 @@ import okhttp3.Headers.Builder;
 import javax.crypto.Mac;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import java.io.ByteArrayOutputStream;
@@ -55,7 +56,7 @@ import java.util.*;
 public abstract class AbstractClient {
 
     public static final int HTTP_RSP_OK = 200;
-    public static final String SDK_VERSION = "SDK_JAVA_3.1.1516";
+    public static final String SDK_VERSION = "SDK_JAVA_3.1.1354";
     public Gson gson;
 
     // User's security credentials (SecretId, SecretKey, Token).
@@ -87,9 +88,6 @@ public abstract class AbstractClient {
 
     // Handles HTTP connections.
     private HttpConnection httpConnection;
-
-    // Circuit breaker for handling region failures.
-    private CircuitBreaker regionBreaker;
 
     /**
      * Constructor for AbstractClient with default client profile.
@@ -136,7 +134,9 @@ public abstract class AbstractClient {
         this.httpConnection.addInterceptors(this.log);
         this.trySetProxy(this.httpConnection);
         this.trySetSSLSocketFactory(this.httpConnection);
-        this.trySetRegionBreaker();
+        if (this.profile.isEnableDomainFailover()) {
+            this.httpConnection.addInterceptors(new EndpointFailoverInterceptor(this));
+        }
         this.trySetHostnameVerifier(this.httpConnection);
         this.trySetHttpClient();
         warmup();
@@ -207,14 +207,35 @@ public abstract class AbstractClient {
      */
     public String call(String action, String jsonPayload) throws TencentCloudSDKException {
         Credential credSnapshot = this.credential.getSnapshot();
-        HashMap<String, String> headers = this.getHeaders(credSnapshot);
-        headers.put("X-TC-Action", action);
-        headers.put("Content-Type", "application/json; charset=utf-8");
         byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
-        String authorization = this.getAuthorization(headers, requestPayload, credSnapshot);
-        headers.put("Authorization", authorization);
-        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
-        return this.getResponseBody(url, headers, requestPayload);
+        String endpoint = this.getEndpoint();
+        String protocol = this.profile.getHttpProfile().getProtocol();
+        String url = protocol + endpoint + this.path;
+        String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
+        if (null != apigwEndpoint) {
+            url = protocol + apigwEndpoint;
+        }
+        Headers.Builder callerHeaders = new Headers.Builder();
+        RequestBuilder rb = RequestBuilder.create()
+                .fromClient(this)
+                .withSignMethod(ClientProfile.SIGN_TC3_256)
+                .withURL(HttpUrl.parse(url))
+                .withHost(null != apigwEndpoint ? apigwEndpoint : endpoint)
+                .withMethod(HttpProfile.REQ_POST)
+                .withContentTypeJson()
+                .withPayload(requestPayload)
+                .withHeaders(callerHeaders.build())
+                .withAction(action)
+                .withVersion(this.apiVersion)
+                .withRegion(this.region)
+                .withRequestClient(SDK_VERSION);
+        Response resp;
+        try {
+            resp = this.httpConnection.doRequest(rb.build());
+        } catch (IOException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage(), e);
+        }
+        return parseResponseBody(resp);
     }
 
     /**
@@ -229,19 +250,45 @@ public abstract class AbstractClient {
      */
     public String callOctetStream(String action, HashMap<String, String> headers, byte[] body)
             throws TencentCloudSDKException {
-        Credential credSnapshot = this.credential.getSnapshot();
-        headers.putAll(this.getHeaders(credSnapshot));
-        headers.put("X-TC-Action", action);
-        headers.put("Content-Type", "application/octet-stream; charset=utf-8");
-        String authorization = this.getAuthorization(headers, body, credSnapshot);
-        headers.put("Authorization", authorization);
-        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
-        return this.getResponseBody(url, headers, body);
+        String endpoint = this.getEndpoint();
+        String protocol = this.profile.getHttpProfile().getProtocol();
+        String url = protocol + endpoint + this.path;
+        String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
+        if (null != apigwEndpoint) {
+            url = protocol + apigwEndpoint;
+        }
+        Headers.Builder callerHeaders = new Headers.Builder();
+        if (headers != null) {
+            for (Map.Entry<String, String> entry : headers.entrySet()) {
+                callerHeaders.add(entry.getKey(), entry.getValue());
+            }
+        }
+        RequestBuilder rb = RequestBuilder.create()
+                .fromClient(this)
+                .withSignMethod(ClientProfile.SIGN_TC3_256)
+                .withURL(HttpUrl.parse(url))
+                .withHost(null != apigwEndpoint ? apigwEndpoint : endpoint)
+                .withMethod(HttpProfile.REQ_POST)
+                .withContentTypeOctetStream()
+                .withPayload(body)
+                .withHeaders(callerHeaders.build())
+                .withAction(action)
+                .withVersion(this.apiVersion)
+                .withRegion(this.region)
+                .withRequestClient(SDK_VERSION);
+        Response resp;
+        try {
+            resp = this.httpConnection.doRequest(rb.build());
+        } catch (IOException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage(), e);
+        }
+        return parseResponseBody(resp);
     }
 
     /**
      * Generates common HTTP headers for Tencent Cloud API requests.
      *
+     * @param credSnapshot Atomic snapshot of the credential to read from.
      * @return A HashMap containing the headers.
      */
     private HashMap<String, String> getHeaders(Credential credSnapshot) {
@@ -389,6 +436,39 @@ public abstract class AbstractClient {
         return respbody;
     }
 
+    private String parseResponseBody(Response resp) throws TencentCloudSDKException {
+        if (resp.code() != AbstractClient.HTTP_RSP_OK) {
+            String msg = "response code is " + resp.code() + ", not 200";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, "", "ServerSideError");
+        }
+        String respbody = null;
+        try {
+            respbody = resp.body().string();
+        } catch (IOException e) {
+            String msg =
+                    "Cannot transfer response body to string, because Content-Length is too large, or Content-Length " +
+                            "and stream length disagree.";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+        JsonResponseModel<JsonResponseErrModel> errResp = null;
+        try {
+            Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
+            }.getType();
+            errResp = gson.fromJson(respbody, errType);
+        } catch (JsonSyntaxException e) {
+            String msg = "json is not a valid representation for an object of type";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+        if (errResp.response.error != null) {
+            throw new TencentCloudSDKException(
+                    errResp.response.error.message, errResp.response.requestId, errResp.response.error.code);
+        }
+        return respbody;
+    }
+
     private void trySetProxy(HttpConnection conn) {
         String host = this.profile.getHttpProfile().getProxyHost();
         int port = this.profile.getHttpProfile().getProxyPort();
@@ -400,7 +480,8 @@ public abstract class AbstractClient {
         conn.setProxy(proxy);
 
         final String username = this.profile.getHttpProfile().getProxyUsername();
-        final String password = this.profile.getHttpProfile().getProxyPassword();
+        String configuredPassword = this.profile.getHttpProfile().getProxyPassword();
+        final String password = configuredPassword == null ? "" : configuredPassword;
         if (username == null || username.isEmpty()) {
             return;
         }
@@ -437,13 +518,6 @@ public abstract class AbstractClient {
         }
     }
 
-    private void trySetRegionBreaker() {
-        String ep = profile.getBackupEndpoint();
-        if (ep != null && !ep.isEmpty()) {
-            this.regionBreaker = new CircuitBreaker();
-        }
-    }
-
     private void trySetHttpClient() {
         Object httpClient = profile.getHttpProfile().getHttpClient();
         if (httpClient != null) {
@@ -453,7 +527,6 @@ public abstract class AbstractClient {
 
     /**
      * Executes an API request and returns the raw string response.
-     * Handles circuit breaking for region failover.
      *
      * @param request    The request object containing API parameters.
      * @param actionName The name of the API action to be called.
@@ -463,31 +536,15 @@ public abstract class AbstractClient {
     protected String internalRequest(AbstractModel request, String actionName)
             throws TencentCloudSDKException {
 
-        CircuitBreaker.Token breakerToken = null;
-        // Attempt to acquire a token from the circuit breaker.
-        // If the circuit is open, use the backup endpoint.
-        if (regionBreaker != null) {
-            breakerToken = regionBreaker.allow();
-            if (!breakerToken.allowed) {
-                endpoint = service + "." + profile.getBackupEndpoint();
-            }
-        }
-
         Response okRsp;
         try {
-            // Execute the raw API request.
             okRsp = internalRequestRaw(request, actionName);
         } catch (IOException e) {
-            // Network failure: report to circuit breaker and throw exception.
-            if (breakerToken != null) {
-                breakerToken.report(false);
-            }
             throw new TencentCloudSDKException("", e);
         }
 
         String strResp;
         try {
-            // Extract the response body as a string.
             strResp = okRsp.body().string();
         } catch (IOException e) {
             String msg = "Cannot transfer response body to string, because Content-Length is too large, or " +
@@ -498,29 +555,16 @@ public abstract class AbstractClient {
 
         JsonResponseModel<JsonResponseErrModel> errResp;
         try {
-            // Deserialize the response to check for errors.
             Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
             }.getType();
             errResp = gson.fromJson(strResp, errType);
         } catch (JsonSyntaxException e) {
-            // Invalid JSON response: log and throw exception.
             String msg = "json is not a valid representation for an object of type";
             log.info(msg);
             throw new TencentCloudSDKException(msg, e);
         }
 
-        // Check for API errors in the response.
         if (errResp.response.error != null) {
-            if (breakerToken != null) {
-                // Report the success/failure of the request to the circuit breaker.
-                JsonResponseErrModel error = errResp.response;
-                // Consider a region "OK" if we get a valid requestId and no InternalError.
-                boolean regionOk = error.requestId != null
-                        && !error.requestId.isEmpty()
-                        && error.error.code != null
-                        && !error.error.code.equals("InternalError");
-                breakerToken.report(regionOk);
-            }
             throw new TencentCloudSDKException(
                     errResp.response.error.message,
                     errResp.response.requestId,
@@ -532,7 +576,6 @@ public abstract class AbstractClient {
 
     /**
      * Executes an API request and returns the deserialized response object.
-     * Handles circuit breaking for region failover.
      *
      * @param request    The request object containing API parameters.
      * @param actionName The name of the API action to be called.
@@ -543,27 +586,13 @@ public abstract class AbstractClient {
      */
     protected <T> T internalRequest(AbstractModel request, String actionName, Class<T> typeOfT)
             throws TencentCloudSDKException {
-        CircuitBreaker.Token breakerToken = null;
-        // Attempt to acquire a token from the circuit breaker.
-        // If the circuit is open, use the backup endpoint.
-        if (regionBreaker != null) {
-            breakerToken = regionBreaker.allow();
-            if (!breakerToken.allowed) {
-                endpoint = service + "." + profile.getBackupEndpoint();
-            }
-        }
-
         try {
             Response resp = internalRequestRaw(request, actionName);
             if (Objects.equals(resp.header("Content-Type"), "text/event-stream")) {
-                return processResponseSSE(resp, typeOfT, breakerToken);
+                return processResponseSSE(resp, typeOfT);
             }
-            return processResponseJson(resp, typeOfT, breakerToken);
+            return processResponseJson(resp, typeOfT);
         } catch (IOException e) {
-            // Network failure: report to circuit breaker and throw exception.
-            if (breakerToken != null) {
-                breakerToken.report(false);
-            }
             throw new TencentCloudSDKException("", e);
         }
     }
@@ -571,39 +600,48 @@ public abstract class AbstractClient {
     /**
      * Processes a Server-Sent Events (SSE) response.
      *
-     * @param resp         The raw HTTP response.
-     * @param typeOfT      The class of the response model.
-     * @param breakerToken The circuit breaker token.
-     * @param <T>          The type of the response model.
+     * @param resp    The raw HTTP response.
+     * @param typeOfT The class of the response model.
+     * @param <T>     The type of the response model.
      * @return The SSE response model.
      * @throws TencentCloudSDKException If an error occurs during processing.
      */
-    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT) throws TencentCloudSDKException {
         SSEResponseModel responseModel;
         try {
-            // Create a new instance of the response model.
             responseModel = (SSEResponseModel) typeOfT.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             throw new TencentCloudSDKException("", e);
         }
-        // Set request ID and circuit breaker token in the response model.
         responseModel.setRequestId(resp.header("X-TC-RequestId"));
-        responseModel.setToken(breakerToken);
         responseModel.setResponse(resp);
         return (T) responseModel;
     }
 
     /**
+     * Legacy three-arg overload. The {@code breakerToken} is ignored — region
+     * failover is now handled by {@link EndpointFailoverInterceptor} at the HTTP
+     * layer, not via a per-call CircuitBreaker token. Kept so subclasses or
+     * external callers compiled against earlier SDK versions still link.
+     *
+     * @deprecated Use {@link #processResponseSSE(Response, Class)} instead.
+     */
+    @Deprecated
+    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken)
+            throws TencentCloudSDKException {
+        return processResponseSSE(resp, typeOfT);
+    }
+
+    /**
      * Processes a JSON response.
      *
-     * @param resp         The raw HTTP response.
-     * @param typeOfT      The class of the response object to deserialize to.
-     * @param breakerToken The circuit breaker token.
-     * @param <T>          The type of the response object.
+     * @param resp    The raw HTTP response.
+     * @param typeOfT The class of the response object to deserialize to.
+     * @param <T>     The type of the response object.
      * @return The deserialized response object.
      * @throws TencentCloudSDKException If an error occurs during processing.
      */
-    protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+    protected <T> T processResponseJson(Response resp, Class<T> typeOfT) throws TencentCloudSDKException {
         String body;
         try {
             body = resp.body().string();
@@ -625,27 +663,29 @@ public abstract class AbstractClient {
             throw new TencentCloudSDKException(msg, e);
         }
 
-        // Check for API errors in the response.
         if (errResp.response.error != null) {
-            if (breakerToken != null) {
-                // Report the success/failure of the request to the circuit breaker.
-                JsonResponseErrModel error = errResp.response;
-                // Consider a region "OK" if we get a valid requestId and no InternalError.
-                boolean regionOk = error.requestId != null
-                        && !error.requestId.isEmpty()
-                        && error.error.code != null
-                        && !error.error.code.equals("InternalError");
-                breakerToken.report(regionOk);
-            }
             throw new TencentCloudSDKException(
                     errResp.response.error.message,
                     errResp.response.requestId,
                     errResp.response.error.code);
         }
 
-        // Deserialize the successful response into the desired object type.
         Type type = TypeToken.getParameterized(JsonResponseModel.class, typeOfT).getType();
         return ((JsonResponseModel<T>) gson.fromJson(body, type)).response;
+    }
+
+    /**
+     * Legacy three-arg overload. The {@code breakerToken} is ignored — region
+     * failover is now handled by {@link EndpointFailoverInterceptor} at the HTTP
+     * layer, not via a per-call CircuitBreaker token. Kept so subclasses or
+     * external callers compiled against earlier SDK versions still link.
+     *
+     * @deprecated Use {@link #processResponseJson(Response, Class)} instead.
+     */
+    @Deprecated
+    protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken)
+            throws TencentCloudSDKException {
+        return processResponseJson(resp, typeOfT);
     }
 
     /**
@@ -713,9 +753,6 @@ public abstract class AbstractClient {
      */
     private Response doRequest(String endpoint, AbstractModel request, String action)
             throws TencentCloudSDKException, IOException {
-        HashMap<String, String> param = new HashMap<String, String>();
-        request.toMap(param, "");
-        String strParam = this.formatRequestData(action, param);
         String reqMethod = this.profile.getHttpProfile().getReqMethod();
         String protocol = this.profile.getHttpProfile().getProtocol();
         String url = protocol + endpoint + this.path;
@@ -723,13 +760,27 @@ public abstract class AbstractClient {
         if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
         }
-        if (reqMethod.equals(HttpProfile.REQ_GET)) {
-            return this.httpConnection.getRequest(url + "?" + strParam);
-        } else if (reqMethod.equals(HttpProfile.REQ_POST)) {
-            return this.httpConnection.postRequest(url, strParam);
-        } else {
-            throw new TencentCloudSDKException("Method only support (GET, POST)");
+        Headers.Builder callerHeaders = new Headers.Builder();
+        if (null != request.GetHeader()) {
+            for (Map.Entry<String, String> entry : request.GetHeader().entrySet()) {
+                callerHeaders.add(entry.getKey(), entry.getValue());
+            }
         }
+        RequestBuilder rb = RequestBuilder.create()
+                .fromClient(this)
+                .withSignMethod(this.profile.getSignMethod())
+                .withURL(HttpUrl.parse(url))
+                .withHost(endpoint)
+                .withMethod(reqMethod)
+                .withContentTypeForm()
+                .withPayload(request)
+                .withHeaders(callerHeaders.build())
+                .withAction(action)
+                .withVersion(this.apiVersion)
+                .withRegion(this.region)
+                .withRequestClient(SDK_VERSION)
+                .withNonce(Math.abs(new SecureRandom().nextInt()));
+        return this.httpConnection.doRequest(rb.build());
     }
 
     /**
@@ -771,6 +822,34 @@ public abstract class AbstractClient {
             // okhttp always set charset even we don't specify it,
             // to ensure signature be correct, we have to set it here as well.
             contentType = "application/json; charset=utf-8";
+        }
+        if (binaryParams.length == 0) {
+            String protocol = this.profile.getHttpProfile().getProtocol();
+            String url = protocol + endpoint + this.path;
+            String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
+            if (null != apigwEndpoint) {
+                url = protocol + apigwEndpoint;
+            }
+            Headers.Builder callerHeaders = new Headers.Builder();
+            if (null != request.GetHeader()) {
+                for (Map.Entry<String, String> entry : request.GetHeader().entrySet()) {
+                    callerHeaders.add(entry.getKey(), entry.getValue());
+                }
+            }
+            RequestBuilder rb = RequestBuilder.create()
+                    .fromClient(this)
+                    .withSignMethod(request.getSkipSign() ? "SKIP" : ClientProfile.SIGN_TC3_256)
+                    .withURL(HttpUrl.parse(url))
+                    .withHost(endpoint)
+                    .withMethod(httpRequestMethod)
+                    .withContentType(contentType)
+                    .withPayload(request)
+                    .withHeaders(callerHeaders.build())
+                    .withAction(action)
+                    .withVersion(this.apiVersion)
+                    .withRegion(this.region)
+                    .withRequestClient(SDK_VERSION);
+            return this.httpConnection.doRequest(rb.build());
         }
         // Construct the canonical request for signature calculation.
         String canonicalUri = "/";
@@ -864,16 +943,33 @@ public abstract class AbstractClient {
         String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
         if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
-            hb.set("Host", apigwEndpoint);
         }
-        Headers headers = hb.build();
-        if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
-            return this.httpConnection.getRequest(url + "?" + canonicalQueryString, headers);
-        } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
-            return this.httpConnection.postRequest(url, requestPayload, headers);
-        } else {
-            throw new TencentCloudSDKException("Method only support GET, POST");
+        // Tag the outgoing multipart request with a RequestBuilder so failover
+        // can re-sign for an alternate host. Multipart body is treated as
+        // octet-stream for re-signing purposes (raw bytes, content-type preserved
+        // via the Content-Type header).
+        Headers.Builder callerHeaders = new Headers.Builder();
+        if (null != request.GetHeader()) {
+            for (Map.Entry<String, String> entry : request.GetHeader().entrySet()) {
+                callerHeaders.add(entry.getKey(), entry.getValue());
+            }
         }
+        RequestBuilder rb = RequestBuilder.create()
+                .fromClient(this)
+                .withSignMethod(request.getSkipSign() ? "SKIP" : ClientProfile.SIGN_TC3_256)
+                .withURL(HttpUrl.parse(url))
+                .withHost(null != apigwEndpoint ? apigwEndpoint : endpoint)
+                .withMethod(httpRequestMethod)
+                .withContentTypeOctetStream()
+                .withPayload(requestPayload)
+                .withHeaders(callerHeaders.build())
+                .withAction(action)
+                .withVersion(this.apiVersion)
+                .withRegion(this.region)
+                .withRequestClient(SDK_VERSION);
+        Request.Builder overrideBuilder = rb.build().newBuilder()
+                .header("Content-Type", contentType);
+        return this.httpConnection.doRequest(overrideBuilder.build());
     }
 
     /**
@@ -1055,6 +1151,10 @@ public abstract class AbstractClient {
         }
     }
 
+    String getServiceNameForFailover() {
+        return this.service;
+    }
+
     /**
      * 请注意购买类接口谨慎调用，可能导致多次购买
      * 仅幂等接口推荐使用
@@ -1094,11 +1194,39 @@ public abstract class AbstractClient {
         return null;
     }
 
+    /**
+     * Returns the circuit breaker previously set by
+     * {@link #setRegionBreaker(CircuitBreaker)}.
+     *
+     * @return The circuit breaker, or null if none was set.
+     */
     public CircuitBreaker getRegionBreaker() {
-        return regionBreaker;
+        EndpointFailoverInterceptor interceptor = getFailoverInterceptor();
+        return interceptor != null ? interceptor.getRegionBreaker() : null;
     }
 
+    /**
+     * Sets the circuit breaker to use for endpoint failover. The breaker's
+     * settings (maxFailNum, maxFailPercentage, windowIntervalMs, timeoutMs)
+     * are copied and applied to all per-host breakers created by the
+     * {@link EndpointFailoverInterceptor}.
+     *
+     * @param regionBreaker The circuit breaker whose settings will be used for failover.
+     */
     public void setRegionBreaker(CircuitBreaker regionBreaker) {
-        this.regionBreaker = regionBreaker;
+        EndpointFailoverInterceptor interceptor = getFailoverInterceptor();
+        if (interceptor != null) {
+            interceptor.setRegionBreaker(regionBreaker);
+        }
     }
+
+    private EndpointFailoverInterceptor getFailoverInterceptor() {
+        for (okhttp3.Interceptor i : this.httpConnection.getInterceptors()) {
+            if (i instanceof EndpointFailoverInterceptor) {
+                return (EndpointFailoverInterceptor) i;
+            }
+        }
+        return null;
+    }
+
 }
