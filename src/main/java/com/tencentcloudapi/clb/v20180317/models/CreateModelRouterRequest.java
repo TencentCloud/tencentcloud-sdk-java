@@ -38,7 +38,7 @@ public class CreateModelRouterRequest extends AbstractModel {
     private String BudgetId;
 
     /**
-    * <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
+    * <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
     */
     @SerializedName("CertId")
     @Expose
@@ -49,7 +49,7 @@ public class CreateModelRouterRequest extends AbstractModel {
     */
     @SerializedName("ClusterInfo")
     @Expose
-    private ClusterInfo ClusterInfo;
+    private ClusterInfoInput ClusterInfo;
 
     /**
     * <p>模型路由实例名称</p><p>默认值：-</p>
@@ -115,6 +115,20 @@ public class CreateModelRouterRequest extends AbstractModel {
     private String VpcId;
 
     /**
+    * <p>模型路由实例计费信息</p>
+    */
+    @SerializedName("ModelRouterBillingConfig")
+    @Expose
+    private ModelRouterBillingConfigInput ModelRouterBillingConfig;
+
+    /**
+    * <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul> 
      * @return ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      */
@@ -147,16 +161,16 @@ public class CreateModelRouterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p> 
-     * @return CertId <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
+     * Get <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p> 
+     * @return CertId <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
-     * @param CertId <p>证书ID</p><p>入参限制：当Schema为HTTPS时，该参数必传</p>
+     * Set <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
+     * @param CertId <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -166,7 +180,7 @@ public class CreateModelRouterRequest extends AbstractModel {
      * Get <p>集群信息</p> 
      * @return ClusterInfo <p>集群信息</p>
      */
-    public ClusterInfo getClusterInfo() {
+    public ClusterInfoInput getClusterInfo() {
         return this.ClusterInfo;
     }
 
@@ -174,7 +188,7 @@ public class CreateModelRouterRequest extends AbstractModel {
      * Set <p>集群信息</p>
      * @param ClusterInfo <p>集群信息</p>
      */
-    public void setClusterInfo(ClusterInfo ClusterInfo) {
+    public void setClusterInfo(ClusterInfoInput ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
     }
 
@@ -322,6 +336,38 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get <p>模型路由实例计费信息</p> 
+     * @return ModelRouterBillingConfig <p>模型路由实例计费信息</p>
+     */
+    public ModelRouterBillingConfigInput getModelRouterBillingConfig() {
+        return this.ModelRouterBillingConfig;
+    }
+
+    /**
+     * Set <p>模型路由实例计费信息</p>
+     * @param ModelRouterBillingConfig <p>模型路由实例计费信息</p>
+     */
+    public void setModelRouterBillingConfig(ModelRouterBillingConfigInput ModelRouterBillingConfig) {
+        this.ModelRouterBillingConfig = ModelRouterBillingConfig;
+    }
+
+    /**
+     * Get <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p> 
+     * @return ClientToken <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     * @param ClientToken <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public CreateModelRouterRequest() {
     }
 
@@ -340,7 +386,7 @@ public class CreateModelRouterRequest extends AbstractModel {
             this.CertId = new String(source.CertId);
         }
         if (source.ClusterInfo != null) {
-            this.ClusterInfo = new ClusterInfo(source.ClusterInfo);
+            this.ClusterInfo = new ClusterInfoInput(source.ClusterInfo);
         }
         if (source.ModelRouterName != null) {
             this.ModelRouterName = new String(source.ModelRouterName);
@@ -372,6 +418,12 @@ public class CreateModelRouterRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.ModelRouterBillingConfig != null) {
+            this.ModelRouterBillingConfig = new ModelRouterBillingConfigInput(source.ModelRouterBillingConfig);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -392,6 +444,8 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamObj(map, prefix + "ModelRouterBillingConfig.", this.ModelRouterBillingConfig);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

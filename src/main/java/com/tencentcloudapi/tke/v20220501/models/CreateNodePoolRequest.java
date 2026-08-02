@@ -94,6 +94,13 @@ public class CreateNodePoolRequest extends AbstractModel {
     private Annotation [] Annotations;
 
     /**
+    * <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+    */
+    @SerializedName("SkipValidateOptions")
+    @Expose
+    private String [] SkipValidateOptions;
+
+    /**
      * Get <p>集群 ID</p> 
      * @return ClusterId <p>集群 ID</p>
      */
@@ -253,6 +260,22 @@ public class CreateNodePoolRequest extends AbstractModel {
         this.Annotations = Annotations;
     }
 
+    /**
+     * Get <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p> 
+     * @return SkipValidateOptions <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+     */
+    public String [] getSkipValidateOptions() {
+        return this.SkipValidateOptions;
+    }
+
+    /**
+     * Set <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+     * @param SkipValidateOptions <p>跳过校验选项，支持 &quot;VpcDnsCheck&quot;</p>
+     */
+    public void setSkipValidateOptions(String [] SkipValidateOptions) {
+        this.SkipValidateOptions = SkipValidateOptions;
+    }
+
     public CreateNodePoolRequest() {
     }
 
@@ -303,6 +326,12 @@ public class CreateNodePoolRequest extends AbstractModel {
                 this.Annotations[i] = new Annotation(source.Annotations[i]);
             }
         }
+        if (source.SkipValidateOptions != null) {
+            this.SkipValidateOptions = new String[source.SkipValidateOptions.length];
+            for (int i = 0; i < source.SkipValidateOptions.length; i++) {
+                this.SkipValidateOptions[i] = new String(source.SkipValidateOptions[i]);
+            }
+        }
     }
 
 
@@ -320,6 +349,7 @@ public class CreateNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamObj(map, prefix + "Native.", this.Native);
         this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
+        this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
 
     }
 }

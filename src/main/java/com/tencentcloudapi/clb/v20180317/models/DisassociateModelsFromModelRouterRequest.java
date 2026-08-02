@@ -35,7 +35,7 @@ public class DisassociateModelsFromModelRouterRequest extends AbstractModel {
     */
     @SerializedName("Models")
     @Expose
-    private ModelRouterModel [] Models;
+    private ModelRouterModelToDisassociate [] Models;
 
     /**
      * Get <p>模型路由实例ID</p> 
@@ -57,7 +57,7 @@ public class DisassociateModelsFromModelRouterRequest extends AbstractModel {
      * Get <p>需要解除关联的模型信息</p> 
      * @return Models <p>需要解除关联的模型信息</p>
      */
-    public ModelRouterModel [] getModels() {
+    public ModelRouterModelToDisassociate [] getModels() {
         return this.Models;
     }
 
@@ -65,7 +65,7 @@ public class DisassociateModelsFromModelRouterRequest extends AbstractModel {
      * Set <p>需要解除关联的模型信息</p>
      * @param Models <p>需要解除关联的模型信息</p>
      */
-    public void setModels(ModelRouterModel [] Models) {
+    public void setModels(ModelRouterModelToDisassociate [] Models) {
         this.Models = Models;
     }
 
@@ -81,9 +81,9 @@ public class DisassociateModelsFromModelRouterRequest extends AbstractModel {
             this.ModelRouterId = new String(source.ModelRouterId);
         }
         if (source.Models != null) {
-            this.Models = new ModelRouterModel[source.Models.length];
+            this.Models = new ModelRouterModelToDisassociate[source.Models.length];
             for (int i = 0; i < source.Models.length; i++) {
-                this.Models[i] = new ModelRouterModel(source.Models[i]);
+                this.Models[i] = new ModelRouterModelToDisassociate(source.Models[i]);
             }
         }
     }

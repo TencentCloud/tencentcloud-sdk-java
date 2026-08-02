@@ -31,6 +31,13 @@ public class Coefficient extends AbstractModel {
     private Float InputCachedCoefficient;
 
     /**
+    * <p>缓存创建积分系数</p>
+    */
+    @SerializedName("InputCacheCreationCoefficient")
+    @Expose
+    private Float InputCacheCreationCoefficient;
+
+    /**
     * <p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
     */
     @SerializedName("InputCoefficient")
@@ -58,6 +65,22 @@ public class Coefficient extends AbstractModel {
      */
     public void setInputCachedCoefficient(Float InputCachedCoefficient) {
         this.InputCachedCoefficient = InputCachedCoefficient;
+    }
+
+    /**
+     * Get <p>缓存创建积分系数</p> 
+     * @return InputCacheCreationCoefficient <p>缓存创建积分系数</p>
+     */
+    public Float getInputCacheCreationCoefficient() {
+        return this.InputCacheCreationCoefficient;
+    }
+
+    /**
+     * Set <p>缓存创建积分系数</p>
+     * @param InputCacheCreationCoefficient <p>缓存创建积分系数</p>
+     */
+    public void setInputCacheCreationCoefficient(Float InputCacheCreationCoefficient) {
+        this.InputCacheCreationCoefficient = InputCacheCreationCoefficient;
     }
 
     /**
@@ -103,6 +126,9 @@ public class Coefficient extends AbstractModel {
         if (source.InputCachedCoefficient != null) {
             this.InputCachedCoefficient = new Float(source.InputCachedCoefficient);
         }
+        if (source.InputCacheCreationCoefficient != null) {
+            this.InputCacheCreationCoefficient = new Float(source.InputCacheCreationCoefficient);
+        }
         if (source.InputCoefficient != null) {
             this.InputCoefficient = new Float(source.InputCoefficient);
         }
@@ -117,6 +143,7 @@ public class Coefficient extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputCachedCoefficient", this.InputCachedCoefficient);
+        this.setParamSimple(map, prefix + "InputCacheCreationCoefficient", this.InputCacheCreationCoefficient);
         this.setParamSimple(map, prefix + "InputCoefficient", this.InputCoefficient);
         this.setParamSimple(map, prefix + "OutputCoefficient", this.OutputCoefficient);
 

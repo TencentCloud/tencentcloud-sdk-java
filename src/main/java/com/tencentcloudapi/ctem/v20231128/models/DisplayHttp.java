@@ -172,6 +172,13 @@ public class DisplayHttp extends AbstractModel {
     private Long AggregationCount;
 
     /**
+    * <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+    */
+    @SerializedName("AvailabilityTag")
+    @Expose
+    private String AvailabilityTag;
+
+    /**
      * Get <p>主键ID</p> 
      * @return Id <p>主键ID</p>
      */
@@ -511,6 +518,22 @@ public class DisplayHttp extends AbstractModel {
         this.AggregationCount = AggregationCount;
     }
 
+    /**
+     * Get <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p> 
+     * @return AvailabilityTag <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+     */
+    public String getAvailabilityTag() {
+        return this.AvailabilityTag;
+    }
+
+    /**
+     * Set <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+     * @param AvailabilityTag <p>可用性标签：解析已失效/端口连接超时/网站请求超时/服务错误（5xx）/高延迟（非宕机）</p>
+     */
+    public void setAvailabilityTag(String AvailabilityTag) {
+        this.AvailabilityTag = AvailabilityTag;
+    }
+
     public DisplayHttp() {
     }
 
@@ -582,6 +605,9 @@ public class DisplayHttp extends AbstractModel {
         if (source.AggregationCount != null) {
             this.AggregationCount = new Long(source.AggregationCount);
         }
+        if (source.AvailabilityTag != null) {
+            this.AvailabilityTag = new String(source.AvailabilityTag);
+        }
     }
 
 
@@ -610,6 +636,7 @@ public class DisplayHttp extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseTime", this.ResponseTime);
         this.setParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
         this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
+        this.setParamSimple(map, prefix + "AvailabilityTag", this.AvailabilityTag);
 
     }
 }

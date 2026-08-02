@@ -87,6 +87,13 @@ public class MPSSmartEraseSubtitleConfig extends AbstractModel {
     private MPSEraseTimeArea [] CustomAreas;
 
     /**
+    * <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
     * <p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
     */
     @SerializedName("UseOriginalPos")
@@ -245,6 +252,22 @@ public class MPSSmartEraseSubtitleConfig extends AbstractModel {
     }
 
     /**
+     * Get <p>字幕压制模板id，只有开启OCR翻译时可以填写</p> 
+     * @return SubtitleEmbedId <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+     * @param SubtitleEmbedId <p>字幕压制模板id，只有开启OCR翻译时可以填写</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
+    }
+
+    /**
      * Get <p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p> 
      * @return UseOriginalPos <p>压制配置，默认开启1, 把字幕压制回原字幕位置。只有开启OCR翻译时可以填写，取0时表示不开启压回原位</p>
      */
@@ -317,6 +340,9 @@ public class MPSSmartEraseSubtitleConfig extends AbstractModel {
                 this.CustomAreas[i] = new MPSEraseTimeArea(source.CustomAreas[i]);
             }
         }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
         if (source.UseOriginalPos != null) {
             this.UseOriginalPos = new Long(source.UseOriginalPos);
         }
@@ -339,6 +365,7 @@ public class MPSSmartEraseSubtitleConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TransDstLang", this.TransDstLang);
         this.setParamArrayObj(map, prefix + "AutoAreas.", this.AutoAreas);
         this.setParamArrayObj(map, prefix + "CustomAreas.", this.CustomAreas);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
         this.setParamSimple(map, prefix + "UseOriginalPos", this.UseOriginalPos);
         this.setParamSimple(map, prefix + "UseOriginalSize", this.UseOriginalSize);
 

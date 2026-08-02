@@ -24,386 +24,417 @@ import java.util.HashMap;
 public class ModifyMediaInfoRequest extends AbstractModel {
 
     /**
-    * 媒体文件唯一标识。
+    * <p>媒体文件唯一标识。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 媒体文件名称，最长 64 个字符。
+    * <p>媒体文件名称，最长 64 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 媒体文件描述，最长 128 个字符。
+    * <p>媒体文件描述，最长 128 个字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 媒体文件分类 ID。
+    * <p>媒体文件分类 ID。</p>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。
+    * <p>媒体文件过期时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 视频封面图片文件（如 jpeg, png 等）进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。
+    * <p>视频封面图片文件（如 jpeg, png 等）进行 <a href="https://tools.ietf.org/html/rfc4648">Base64</a> 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。</p>
     */
     @SerializedName("CoverData")
     @Expose
     private String CoverData;
 
     /**
-    * 新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+    * <p>新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
     */
     @SerializedName("AddKeyFrameDescs")
     @Expose
     private MediaKeyFrameDescItem [] AddKeyFrameDescs;
 
     /**
-    * 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+    * <p>要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
     */
     @SerializedName("DeleteKeyFrameDescs")
     @Expose
     private Float [] DeleteKeyFrameDescs;
 
     /**
-    * 取值 1 表示清空视频打点信息，其他值无意义。
-同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
+    * <p>取值 1 表示清空视频打点信息，其他值无意义。<br>同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。</p>
     */
     @SerializedName("ClearKeyFrameDescs")
     @Expose
     private Long ClearKeyFrameDescs;
 
     /**
-    * 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+    * <p>新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
     */
     @SerializedName("AddTags")
     @Expose
     private String [] AddTags;
 
     /**
-    * 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+    * <p>要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
     */
     @SerializedName("DeleteTags")
     @Expose
     private String [] DeleteTags;
 
     /**
-    * 取值 1 表示清空媒体文件所有标签，其他值无意义。
-同一个请求里，ClearTags 与 AddTags 不能同时出现。
+    * <p>取值 1 表示清空媒体文件所有标签，其他值无意义。<br>同一个请求里，ClearTags 与 AddTags 不能同时出现。</p>
     */
     @SerializedName("ClearTags")
     @Expose
     private Long ClearTags;
 
     /**
-    * 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+    * <p>新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
     */
     @SerializedName("AddSubtitles")
     @Expose
     private MediaSubtitleInput [] AddSubtitles;
 
     /**
-    * 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+    * <p>待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
     */
     @SerializedName("DeleteSubtitleIds")
     @Expose
     private String [] DeleteSubtitleIds;
 
     /**
-    * 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
-同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+    * <p>取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。<br>同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。</p>
     */
     @SerializedName("ClearSubtitles")
     @Expose
     private Long ClearSubtitles;
 
     /**
-     * Get 媒体文件唯一标识。 
-     * @return FileId 媒体文件唯一标识。
+    * <p>待出库的知识库ID。</p>
+    */
+    @SerializedName("DeleteKnowledgeBases")
+    @Expose
+    private String [] DeleteKnowledgeBases;
+
+    /**
+    * <p>取值 1 表示从所有知识库中移除此媒体文件，其他值无意义。</p><p><br>同一个请求里，ClearKnowledgeBases 与 DeleteKnowledgeBases 不能同时出现。<p></p></p>
+    */
+    @SerializedName("ClearKnowledgeBases")
+    @Expose
+    private Long ClearKnowledgeBases;
+
+    /**
+     * Get <p>媒体文件唯一标识。</p> 
+     * @return FileId <p>媒体文件唯一标识。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件唯一标识。
-     * @param FileId 媒体文件唯一标识。
+     * Set <p>媒体文件唯一标识。</p>
+     * @param FileId <p>媒体文件唯一标识。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 媒体文件名称，最长 64 个字符。 
-     * @return Name 媒体文件名称，最长 64 个字符。
+     * Get <p>媒体文件名称，最长 64 个字符。</p> 
+     * @return Name <p>媒体文件名称，最长 64 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 媒体文件名称，最长 64 个字符。
-     * @param Name 媒体文件名称，最长 64 个字符。
+     * Set <p>媒体文件名称，最长 64 个字符。</p>
+     * @param Name <p>媒体文件名称，最长 64 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 媒体文件描述，最长 128 个字符。 
-     * @return Description 媒体文件描述，最长 128 个字符。
+     * Get <p>媒体文件描述，最长 128 个字符。</p> 
+     * @return Description <p>媒体文件描述，最长 128 个字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 媒体文件描述，最长 128 个字符。
-     * @param Description 媒体文件描述，最长 128 个字符。
+     * Set <p>媒体文件描述，最长 128 个字符。</p>
+     * @param Description <p>媒体文件描述，最长 128 个字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 媒体文件分类 ID。 
-     * @return ClassId 媒体文件分类 ID。
+     * Get <p>媒体文件分类 ID。</p> 
+     * @return ClassId <p>媒体文件分类 ID。</p>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 媒体文件分类 ID。
-     * @param ClassId 媒体文件分类 ID。
+     * Set <p>媒体文件分类 ID。</p>
+     * @param ClassId <p>媒体文件分类 ID。</p>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。 
-     * @return ExpireTime 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。
+     * Get <p>媒体文件过期时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。</p> 
+     * @return ExpireTime <p>媒体文件过期时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。
-     * @param ExpireTime 媒体文件过期时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。
+     * Set <p>媒体文件过期时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。</p>
+     * @param ExpireTime <p>媒体文件过期时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 视频封面图片文件（如 jpeg, png 等）进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。 
-     * @return CoverData 视频封面图片文件（如 jpeg, png 等）进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。
+     * Get <p>视频封面图片文件（如 jpeg, png 等）进行 <a href="https://tools.ietf.org/html/rfc4648">Base64</a> 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。</p> 
+     * @return CoverData <p>视频封面图片文件（如 jpeg, png 等）进行 <a href="https://tools.ietf.org/html/rfc4648">Base64</a> 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。</p>
      */
     public String getCoverData() {
         return this.CoverData;
     }
 
     /**
-     * Set 视频封面图片文件（如 jpeg, png 等）进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。
-     * @param CoverData 视频封面图片文件（如 jpeg, png 等）进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。
+     * Set <p>视频封面图片文件（如 jpeg, png 等）进行 <a href="https://tools.ietf.org/html/rfc4648">Base64</a> 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。</p>
+     * @param CoverData <p>视频封面图片文件（如 jpeg, png 等）进行 <a href="https://tools.ietf.org/html/rfc4648">Base64</a> 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式。</p>
      */
     public void setCoverData(String CoverData) {
         this.CoverData = CoverData;
     }
 
     /**
-     * Get 新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。 
-     * @return AddKeyFrameDescs 新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+     * Get <p>新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p> 
+     * @return AddKeyFrameDescs <p>新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
      */
     public MediaKeyFrameDescItem [] getAddKeyFrameDescs() {
         return this.AddKeyFrameDescs;
     }
 
     /**
-     * Set 新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
-     * @param AddKeyFrameDescs 新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+     * Set <p>新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
+     * @param AddKeyFrameDescs <p>新增的一组视频打点信息，如果某个偏移时间已存在打点，则会进行覆盖操作，单个媒体文件最多 100 个打点信息。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
      */
     public void setAddKeyFrameDescs(MediaKeyFrameDescItem [] AddKeyFrameDescs) {
         this.AddKeyFrameDescs = AddKeyFrameDescs;
     }
 
     /**
-     * Get 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。 
-     * @return DeleteKeyFrameDescs 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+     * Get <p>要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p> 
+     * @return DeleteKeyFrameDescs <p>要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
      */
     public Float [] getDeleteKeyFrameDescs() {
         return this.DeleteKeyFrameDescs;
     }
 
     /**
-     * Set 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
-     * @param DeleteKeyFrameDescs 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
+     * Set <p>要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
+     * @param DeleteKeyFrameDescs <p>要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。</p>
      */
     public void setDeleteKeyFrameDescs(Float [] DeleteKeyFrameDescs) {
         this.DeleteKeyFrameDescs = DeleteKeyFrameDescs;
     }
 
     /**
-     * Get 取值 1 表示清空视频打点信息，其他值无意义。
-同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。 
-     * @return ClearKeyFrameDescs 取值 1 表示清空视频打点信息，其他值无意义。
-同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
+     * Get <p>取值 1 表示清空视频打点信息，其他值无意义。<br>同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。</p> 
+     * @return ClearKeyFrameDescs <p>取值 1 表示清空视频打点信息，其他值无意义。<br>同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。</p>
      */
     public Long getClearKeyFrameDescs() {
         return this.ClearKeyFrameDescs;
     }
 
     /**
-     * Set 取值 1 表示清空视频打点信息，其他值无意义。
-同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
-     * @param ClearKeyFrameDescs 取值 1 表示清空视频打点信息，其他值无意义。
-同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
+     * Set <p>取值 1 表示清空视频打点信息，其他值无意义。<br>同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。</p>
+     * @param ClearKeyFrameDescs <p>取值 1 表示清空视频打点信息，其他值无意义。<br>同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。</p>
      */
     public void setClearKeyFrameDescs(Long ClearKeyFrameDescs) {
         this.ClearKeyFrameDescs = ClearKeyFrameDescs;
     }
 
     /**
-     * Get 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。 
-     * @return AddTags 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+     * Get <p>新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p> 
+     * @return AddTags <p>新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
      */
     public String [] getAddTags() {
         return this.AddTags;
     }
 
     /**
-     * Set 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
-     * @param AddTags 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+     * Set <p>新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
+     * @param AddTags <p>新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
      */
     public void setAddTags(String [] AddTags) {
         this.AddTags = AddTags;
     }
 
     /**
-     * Get 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。 
-     * @return DeleteTags 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+     * Get <p>要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p> 
+     * @return DeleteTags <p>要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
      */
     public String [] getDeleteTags() {
         return this.DeleteTags;
     }
 
     /**
-     * Set 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
-     * @param DeleteTags 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+     * Set <p>要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
+     * @param DeleteTags <p>要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。</p>
      */
     public void setDeleteTags(String [] DeleteTags) {
         this.DeleteTags = DeleteTags;
     }
 
     /**
-     * Get 取值 1 表示清空媒体文件所有标签，其他值无意义。
-同一个请求里，ClearTags 与 AddTags 不能同时出现。 
-     * @return ClearTags 取值 1 表示清空媒体文件所有标签，其他值无意义。
-同一个请求里，ClearTags 与 AddTags 不能同时出现。
+     * Get <p>取值 1 表示清空媒体文件所有标签，其他值无意义。<br>同一个请求里，ClearTags 与 AddTags 不能同时出现。</p> 
+     * @return ClearTags <p>取值 1 表示清空媒体文件所有标签，其他值无意义。<br>同一个请求里，ClearTags 与 AddTags 不能同时出现。</p>
      */
     public Long getClearTags() {
         return this.ClearTags;
     }
 
     /**
-     * Set 取值 1 表示清空媒体文件所有标签，其他值无意义。
-同一个请求里，ClearTags 与 AddTags 不能同时出现。
-     * @param ClearTags 取值 1 表示清空媒体文件所有标签，其他值无意义。
-同一个请求里，ClearTags 与 AddTags 不能同时出现。
+     * Set <p>取值 1 表示清空媒体文件所有标签，其他值无意义。<br>同一个请求里，ClearTags 与 AddTags 不能同时出现。</p>
+     * @param ClearTags <p>取值 1 表示清空媒体文件所有标签，其他值无意义。<br>同一个请求里，ClearTags 与 AddTags 不能同时出现。</p>
      */
     public void setClearTags(Long ClearTags) {
         this.ClearTags = ClearTags;
     }
 
     /**
-     * Get 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。 
-     * @return AddSubtitles 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * Get <p>新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p> 
+     * @return AddSubtitles <p>新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
      */
     public MediaSubtitleInput [] getAddSubtitles() {
         return this.AddSubtitles;
     }
 
     /**
-     * Set 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
-     * @param AddSubtitles 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * Set <p>新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
+     * @param AddSubtitles <p>新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
      */
     public void setAddSubtitles(MediaSubtitleInput [] AddSubtitles) {
         this.AddSubtitles = AddSubtitles;
     }
 
     /**
-     * Get 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。 
-     * @return DeleteSubtitleIds 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * Get <p>待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p> 
+     * @return DeleteSubtitleIds <p>待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
      */
     public String [] getDeleteSubtitleIds() {
         return this.DeleteSubtitleIds;
     }
 
     /**
-     * Set 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
-     * @param DeleteSubtitleIds 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * Set <p>待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
+     * @param DeleteSubtitleIds <p>待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。</p>
      */
     public void setDeleteSubtitleIds(String [] DeleteSubtitleIds) {
         this.DeleteSubtitleIds = DeleteSubtitleIds;
     }
 
     /**
-     * Get 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
-同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。 
-     * @return ClearSubtitles 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
-同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+     * Get <p>取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。<br>同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。</p> 
+     * @return ClearSubtitles <p>取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。<br>同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。</p>
      */
     public Long getClearSubtitles() {
         return this.ClearSubtitles;
     }
 
     /**
-     * Set 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
-同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
-     * @param ClearSubtitles 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
-同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+     * Set <p>取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。<br>同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。</p>
+     * @param ClearSubtitles <p>取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。<br>同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。</p>
      */
     public void setClearSubtitles(Long ClearSubtitles) {
         this.ClearSubtitles = ClearSubtitles;
+    }
+
+    /**
+     * Get <p>待出库的知识库ID。</p> 
+     * @return DeleteKnowledgeBases <p>待出库的知识库ID。</p>
+     */
+    public String [] getDeleteKnowledgeBases() {
+        return this.DeleteKnowledgeBases;
+    }
+
+    /**
+     * Set <p>待出库的知识库ID。</p>
+     * @param DeleteKnowledgeBases <p>待出库的知识库ID。</p>
+     */
+    public void setDeleteKnowledgeBases(String [] DeleteKnowledgeBases) {
+        this.DeleteKnowledgeBases = DeleteKnowledgeBases;
+    }
+
+    /**
+     * Get <p>取值 1 表示从所有知识库中移除此媒体文件，其他值无意义。</p><p><br>同一个请求里，ClearKnowledgeBases 与 DeleteKnowledgeBases 不能同时出现。<p></p></p> 
+     * @return ClearKnowledgeBases <p>取值 1 表示从所有知识库中移除此媒体文件，其他值无意义。</p><p><br>同一个请求里，ClearKnowledgeBases 与 DeleteKnowledgeBases 不能同时出现。<p></p></p>
+     */
+    public Long getClearKnowledgeBases() {
+        return this.ClearKnowledgeBases;
+    }
+
+    /**
+     * Set <p>取值 1 表示从所有知识库中移除此媒体文件，其他值无意义。</p><p><br>同一个请求里，ClearKnowledgeBases 与 DeleteKnowledgeBases 不能同时出现。<p></p></p>
+     * @param ClearKnowledgeBases <p>取值 1 表示从所有知识库中移除此媒体文件，其他值无意义。</p><p><br>同一个请求里，ClearKnowledgeBases 与 DeleteKnowledgeBases 不能同时出现。<p></p></p>
+     */
+    public void setClearKnowledgeBases(Long ClearKnowledgeBases) {
+        this.ClearKnowledgeBases = ClearKnowledgeBases;
     }
 
     public ModifyMediaInfoRequest() {
@@ -480,6 +511,15 @@ public class ModifyMediaInfoRequest extends AbstractModel {
         if (source.ClearSubtitles != null) {
             this.ClearSubtitles = new Long(source.ClearSubtitles);
         }
+        if (source.DeleteKnowledgeBases != null) {
+            this.DeleteKnowledgeBases = new String[source.DeleteKnowledgeBases.length];
+            for (int i = 0; i < source.DeleteKnowledgeBases.length; i++) {
+                this.DeleteKnowledgeBases[i] = new String(source.DeleteKnowledgeBases[i]);
+            }
+        }
+        if (source.ClearKnowledgeBases != null) {
+            this.ClearKnowledgeBases = new Long(source.ClearKnowledgeBases);
+        }
     }
 
 
@@ -503,6 +543,8 @@ public class ModifyMediaInfoRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
         this.setParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
         this.setParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
+        this.setParamArraySimple(map, prefix + "DeleteKnowledgeBases.", this.DeleteKnowledgeBases);
+        this.setParamSimple(map, prefix + "ClearKnowledgeBases", this.ClearKnowledgeBases);
 
     }
 }

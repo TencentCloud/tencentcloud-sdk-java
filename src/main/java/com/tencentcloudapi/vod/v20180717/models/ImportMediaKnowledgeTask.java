@@ -24,92 +24,138 @@ import java.util.HashMap;
 public class ImportMediaKnowledgeTask extends AbstractModel {
 
     /**
-    * 任务 ID。
+    * <p>任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+    * <p>媒体文件 ID</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * <p>导入知识库任务的输入。</p>
+    */
+    @SerializedName("Input")
+    @Expose
+    private ImportMediaKnowledgeTaskInput Input;
+
+    /**
+    * <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码，0 表示成功，其他值表示失败
+    * <p>错误码，0 表示成功，其他值表示失败</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误信息。
+    * <p>错误信息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 任务 ID。 
-     * @return TaskId 任务 ID。
+     * Get <p>任务 ID。</p> 
+     * @return TaskId <p>任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID。
-     * @param TaskId 任务 ID。
+     * Set <p>任务 ID。</p>
+     * @param TaskId <p>任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li> 
-     * @return Status 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * Get <p>媒体文件 ID</p> 
+     * @return FileId <p>媒体文件 ID</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>媒体文件 ID</p>
+     * @param FileId <p>媒体文件 ID</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get <p>导入知识库任务的输入。</p> 
+     * @return Input <p>导入知识库任务的输入。</p>
+     */
+    public ImportMediaKnowledgeTaskInput getInput() {
+        return this.Input;
+    }
+
+    /**
+     * Set <p>导入知识库任务的输入。</p>
+     * @param Input <p>导入知识库任务的输入。</p>
+     */
+    public void setInput(ImportMediaKnowledgeTaskInput Input) {
+        this.Input = Input;
+    }
+
+    /**
+     * Get <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p> 
+     * @return Status <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
-     * @param Status 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * Set <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+     * @param Status <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码，0 表示成功，其他值表示失败 
-     * @return ErrCode 错误码，0 表示成功，其他值表示失败
+     * Get <p>错误码，0 表示成功，其他值表示失败</p> 
+     * @return ErrCode <p>错误码，0 表示成功，其他值表示失败</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 错误码，0 表示成功，其他值表示失败
-     * @param ErrCode 错误码，0 表示成功，其他值表示失败
+     * Set <p>错误码，0 表示成功，其他值表示失败</p>
+     * @param ErrCode <p>错误码，0 表示成功，其他值表示失败</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。 
-     * @return Message 错误信息。
+     * Get <p>错误信息。</p> 
+     * @return Message <p>错误信息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息。
-     * @param Message 错误信息。
+     * Set <p>错误信息。</p>
+     * @param Message <p>错误信息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -125,6 +171,12 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
     public ImportMediaKnowledgeTask(ImportMediaKnowledgeTask source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Input != null) {
+            this.Input = new ImportMediaKnowledgeTaskInput(source.Input);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -143,6 +195,8 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);

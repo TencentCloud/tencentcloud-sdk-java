@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RouterSettingWithFallBack extends AbstractModel {
 
     /**
-    * <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+    * <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossModelGroupRoutingStrategy")
@@ -48,9 +48,25 @@ public class RouterSettingWithFallBack extends AbstractModel {
     private String RoutingStrategy;
 
     /**
-     * Get <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+    * <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumRetries")
+    @Expose
+    private Long NumRetries;
+
+    /**
+    * <p>L2模型组内路由调度算法参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RoutingStrategyArgs")
+    @Expose
+    private RoutingStrategyArgs RoutingStrategyArgs;
+
+    /**
+     * Get <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+     * @return CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrossModelGroupRoutingStrategy() {
@@ -58,9 +74,9 @@ public class RouterSettingWithFallBack extends AbstractModel {
     }
 
     /**
-     * Set <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+     * Set <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LowestCost： 最低积分路由</li></ul>
+     * @param CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossModelGroupRoutingStrategy(String CrossModelGroupRoutingStrategy) {
@@ -107,6 +123,46 @@ public class RouterSettingWithFallBack extends AbstractModel {
         this.RoutingStrategy = RoutingStrategy;
     }
 
+    /**
+     * Get <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumRetries <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumRetries() {
+        return this.NumRetries;
+    }
+
+    /**
+     * Set <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumRetries <p>CMR实例级别请求组内重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumRetries(Long NumRetries) {
+        this.NumRetries = NumRetries;
+    }
+
+    /**
+     * Get <p>L2模型组内路由调度算法参数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RoutingStrategyArgs <p>L2模型组内路由调度算法参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RoutingStrategyArgs getRoutingStrategyArgs() {
+        return this.RoutingStrategyArgs;
+    }
+
+    /**
+     * Set <p>L2模型组内路由调度算法参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RoutingStrategyArgs <p>L2模型组内路由调度算法参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRoutingStrategyArgs(RoutingStrategyArgs RoutingStrategyArgs) {
+        this.RoutingStrategyArgs = RoutingStrategyArgs;
+    }
+
     public RouterSettingWithFallBack() {
     }
 
@@ -124,6 +180,12 @@ public class RouterSettingWithFallBack extends AbstractModel {
         if (source.RoutingStrategy != null) {
             this.RoutingStrategy = new String(source.RoutingStrategy);
         }
+        if (source.NumRetries != null) {
+            this.NumRetries = new Long(source.NumRetries);
+        }
+        if (source.RoutingStrategyArgs != null) {
+            this.RoutingStrategyArgs = new RoutingStrategyArgs(source.RoutingStrategyArgs);
+        }
     }
 
 
@@ -134,6 +196,8 @@ public class RouterSettingWithFallBack extends AbstractModel {
         this.setParamSimple(map, prefix + "CrossModelGroupRoutingStrategy", this.CrossModelGroupRoutingStrategy);
         this.setParamObj(map, prefix + "FallBack.", this.FallBack);
         this.setParamSimple(map, prefix + "RoutingStrategy", this.RoutingStrategy);
+        this.setParamSimple(map, prefix + "NumRetries", this.NumRetries);
+        this.setParamObj(map, prefix + "RoutingStrategyArgs.", this.RoutingStrategyArgs);
 
     }
 }

@@ -24,289 +24,325 @@ import java.util.HashMap;
 public class MountInfo extends AbstractModel {
 
     /**
-    * 文件系统 ID
+    * <p>文件系统 ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 挂载点 ID
+    * <p>挂载点 ID</p>
     */
     @SerializedName("MountTargetId")
     @Expose
     private String MountTargetId;
 
     /**
-    * 挂载点 IP
+    * <p>挂载点 IP</p>
     */
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
 
     /**
-    * 挂载根目录
+    * <p>挂载根目录</p>
     */
     @SerializedName("FSID")
     @Expose
     private String FSID;
 
     /**
-    * 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
+    * <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * 网络类型，包括VPC,CCN
+    * <p>网络类型，包括VPC,CCN</p>
     */
     @SerializedName("NetworkInterface")
     @Expose
     private String NetworkInterface;
 
     /**
-    * 私有网络 ID
+    * <p>私有网络 ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络名称
+    * <p>私有网络名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 子网 Id
+    * <p>子网 Id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * CFS Turbo使用的云联网ID
+    * <p>CFS Turbo使用的云联网ID</p>
     */
     @SerializedName("CcnID")
     @Expose
     private String CcnID;
 
     /**
-    * 云联网中CFS Turbo使用的网段
+    * <p>云联网中CFS Turbo使用的网段</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+    * <p>占用用户ip列表</p>
+    */
+    @SerializedName("ServerList")
+    @Expose
+    private String [] ServerList;
+
+    /**
+    * <p>是否占用超过200个ip</p>
+    */
+    @SerializedName("ServerListTruncated")
+    @Expose
+    private Boolean ServerListTruncated;
+
+    /**
+     * Get <p>文件系统 ID</p> 
+     * @return FileSystemId <p>文件系统 ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set <p>文件系统 ID</p>
+     * @param FileSystemId <p>文件系统 ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 挂载点 ID 
-     * @return MountTargetId 挂载点 ID
+     * Get <p>挂载点 ID</p> 
+     * @return MountTargetId <p>挂载点 ID</p>
      */
     public String getMountTargetId() {
         return this.MountTargetId;
     }
 
     /**
-     * Set 挂载点 ID
-     * @param MountTargetId 挂载点 ID
+     * Set <p>挂载点 ID</p>
+     * @param MountTargetId <p>挂载点 ID</p>
      */
     public void setMountTargetId(String MountTargetId) {
         this.MountTargetId = MountTargetId;
     }
 
     /**
-     * Get 挂载点 IP 
-     * @return IpAddress 挂载点 IP
+     * Get <p>挂载点 IP</p> 
+     * @return IpAddress <p>挂载点 IP</p>
      */
     public String getIpAddress() {
         return this.IpAddress;
     }
 
     /**
-     * Set 挂载点 IP
-     * @param IpAddress 挂载点 IP
+     * Set <p>挂载点 IP</p>
+     * @param IpAddress <p>挂载点 IP</p>
      */
     public void setIpAddress(String IpAddress) {
         this.IpAddress = IpAddress;
     }
 
     /**
-     * Get 挂载根目录 
-     * @return FSID 挂载根目录
+     * Get <p>挂载根目录</p> 
+     * @return FSID <p>挂载根目录</p>
      */
     public String getFSID() {
         return this.FSID;
     }
 
     /**
-     * Set 挂载根目录
-     * @param FSID 挂载根目录
+     * Set <p>挂载根目录</p>
+     * @param FSID <p>挂载根目录</p>
      */
     public void setFSID(String FSID) {
         this.FSID = FSID;
     }
 
     /**
-     * Get 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败 
-     * @return LifeCycleState 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
+     * Get <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p> 
+     * @return LifeCycleState <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
-     * @param LifeCycleState 挂载点状态，包括creating：创建中；available：运行中；
-deleting：删除中；
-create_failed： 创建失败
+     * Set <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
+     * @param LifeCycleState <p>挂载点状态，包括creating：创建中；available：运行中；<br>deleting：删除中；<br>create_failed： 创建失败</p>
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get 网络类型，包括VPC,CCN 
-     * @return NetworkInterface 网络类型，包括VPC,CCN
+     * Get <p>网络类型，包括VPC,CCN</p> 
+     * @return NetworkInterface <p>网络类型，包括VPC,CCN</p>
      */
     public String getNetworkInterface() {
         return this.NetworkInterface;
     }
 
     /**
-     * Set 网络类型，包括VPC,CCN
-     * @param NetworkInterface 网络类型，包括VPC,CCN
+     * Set <p>网络类型，包括VPC,CCN</p>
+     * @param NetworkInterface <p>网络类型，包括VPC,CCN</p>
      */
     public void setNetworkInterface(String NetworkInterface) {
         this.NetworkInterface = NetworkInterface;
     }
 
     /**
-     * Get 私有网络 ID 
-     * @return VpcId 私有网络 ID
+     * Get <p>私有网络 ID</p> 
+     * @return VpcId <p>私有网络 ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络 ID
-     * @param VpcId 私有网络 ID
+     * Set <p>私有网络 ID</p>
+     * @param VpcId <p>私有网络 ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络名称 
-     * @return VpcName 私有网络名称
+     * Get <p>私有网络名称</p> 
+     * @return VpcName <p>私有网络名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 私有网络名称
-     * @param VpcName 私有网络名称
+     * Set <p>私有网络名称</p>
+     * @param VpcName <p>私有网络名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 子网 Id 
-     * @return SubnetId 子网 Id
+     * Get <p>子网 Id</p> 
+     * @return SubnetId <p>子网 Id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 Id
-     * @param SubnetId 子网 Id
+     * Set <p>子网 Id</p>
+     * @param SubnetId <p>子网 Id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubnetName 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubnetName <p>子网名称</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称
-     * @param SubnetName 子网名称
+     * Set <p>子网名称</p>
+     * @param SubnetName <p>子网名称</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get CFS Turbo使用的云联网ID 
-     * @return CcnID CFS Turbo使用的云联网ID
+     * Get <p>CFS Turbo使用的云联网ID</p> 
+     * @return CcnID <p>CFS Turbo使用的云联网ID</p>
      */
     public String getCcnID() {
         return this.CcnID;
     }
 
     /**
-     * Set CFS Turbo使用的云联网ID
-     * @param CcnID CFS Turbo使用的云联网ID
+     * Set <p>CFS Turbo使用的云联网ID</p>
+     * @param CcnID <p>CFS Turbo使用的云联网ID</p>
      */
     public void setCcnID(String CcnID) {
         this.CcnID = CcnID;
     }
 
     /**
-     * Get 云联网中CFS Turbo使用的网段 
-     * @return CidrBlock 云联网中CFS Turbo使用的网段
+     * Get <p>云联网中CFS Turbo使用的网段</p> 
+     * @return CidrBlock <p>云联网中CFS Turbo使用的网段</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 云联网中CFS Turbo使用的网段
-     * @param CidrBlock 云联网中CFS Turbo使用的网段
+     * Set <p>云联网中CFS Turbo使用的网段</p>
+     * @param CidrBlock <p>云联网中CFS Turbo使用的网段</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
+    }
+
+    /**
+     * Get <p>占用用户ip列表</p> 
+     * @return ServerList <p>占用用户ip列表</p>
+     */
+    public String [] getServerList() {
+        return this.ServerList;
+    }
+
+    /**
+     * Set <p>占用用户ip列表</p>
+     * @param ServerList <p>占用用户ip列表</p>
+     */
+    public void setServerList(String [] ServerList) {
+        this.ServerList = ServerList;
+    }
+
+    /**
+     * Get <p>是否占用超过200个ip</p> 
+     * @return ServerListTruncated <p>是否占用超过200个ip</p>
+     */
+    public Boolean getServerListTruncated() {
+        return this.ServerListTruncated;
+    }
+
+    /**
+     * Set <p>是否占用超过200个ip</p>
+     * @param ServerListTruncated <p>是否占用超过200个ip</p>
+     */
+    public void setServerListTruncated(Boolean ServerListTruncated) {
+        this.ServerListTruncated = ServerListTruncated;
     }
 
     public MountInfo() {
@@ -353,6 +389,15 @@ create_failed： 创建失败
         if (source.CidrBlock != null) {
             this.CidrBlock = new String(source.CidrBlock);
         }
+        if (source.ServerList != null) {
+            this.ServerList = new String[source.ServerList.length];
+            for (int i = 0; i < source.ServerList.length; i++) {
+                this.ServerList[i] = new String(source.ServerList[i]);
+            }
+        }
+        if (source.ServerListTruncated != null) {
+            this.ServerListTruncated = new Boolean(source.ServerListTruncated);
+        }
     }
 
 
@@ -372,6 +417,8 @@ create_failed： 创建失败
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
         this.setParamSimple(map, prefix + "CcnID", this.CcnID);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+        this.setParamArraySimple(map, prefix + "ServerList.", this.ServerList);
+        this.setParamSimple(map, prefix + "ServerListTruncated", this.ServerListTruncated);
 
     }
 }

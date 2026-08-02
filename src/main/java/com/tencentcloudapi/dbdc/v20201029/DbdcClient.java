@@ -347,6 +347,17 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
+     * @param req ModifyDBCustomNodeAttributesRequest
+     * @return ModifyDBCustomNodeAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomNodeAttributesResponse ModifyDBCustomNodeAttributes(ModifyDBCustomNodeAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomNodeAttributes", ModifyDBCustomNodeAttributesResponse.class);
+    }
+
+    /**
      *该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
      * @param req ModifyDBCustomNodeSecurityGroupsRequest
      * @return ModifyDBCustomNodeSecurityGroupsResponse

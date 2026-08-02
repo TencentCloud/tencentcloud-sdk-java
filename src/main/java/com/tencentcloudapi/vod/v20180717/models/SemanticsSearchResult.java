@@ -24,92 +24,115 @@ import java.util.HashMap;
 public class SemanticsSearchResult extends AbstractModel {
 
     /**
-    * 媒体文件唯一标识 ID。
+    * <p>媒体文件唯一标识 ID。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
+    * <p>智能媒资为当前片段生成的标题</p>
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * 视频片段的开始时间，单位：秒
+    * <p>视频片段的开始时间，单位：秒</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 视频片段的结束时间，单位：秒
+    * <p>视频片段的结束时间，单位：秒</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get 媒体文件唯一标识 ID。 
-     * @return FileId 媒体文件唯一标识 ID。
+     * Get <p>媒体文件唯一标识 ID。</p> 
+     * @return FileId <p>媒体文件唯一标识 ID。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件唯一标识 ID。
-     * @param FileId 媒体文件唯一标识 ID。
+     * Set <p>媒体文件唯一标识 ID。</p>
+     * @param FileId <p>媒体文件唯一标识 ID。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1] 
-     * @return Score 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
+     * Get <p>智能媒资为当前片段生成的标题</p> 
+     * @return Title <p>智能媒资为当前片段生成的标题</p>
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set <p>智能媒资为当前片段生成的标题</p>
+     * @param Title <p>智能媒资为当前片段生成的标题</p>
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p> 
+     * @return Score <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
-     * @param Score 视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]
+     * Set <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
+     * @param Score <p>视频在本次检索中的得分，得分越高和检索值越相似，取值范围[0,1]</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 视频片段的开始时间，单位：秒 
-     * @return StartTimeOffset 视频片段的开始时间，单位：秒
+     * Get <p>视频片段的开始时间，单位：秒</p> 
+     * @return StartTimeOffset <p>视频片段的开始时间，单位：秒</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 视频片段的开始时间，单位：秒
-     * @param StartTimeOffset 视频片段的开始时间，单位：秒
+     * Set <p>视频片段的开始时间，单位：秒</p>
+     * @param StartTimeOffset <p>视频片段的开始时间，单位：秒</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 视频片段的结束时间，单位：秒 
-     * @return EndTimeOffset 视频片段的结束时间，单位：秒
+     * Get <p>视频片段的结束时间，单位：秒</p> 
+     * @return EndTimeOffset <p>视频片段的结束时间，单位：秒</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 视频片段的结束时间，单位：秒
-     * @param EndTimeOffset 视频片段的结束时间，单位：秒
+     * Set <p>视频片段的结束时间，单位：秒</p>
+     * @param EndTimeOffset <p>视频片段的结束时间，单位：秒</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -125,6 +148,9 @@ public class SemanticsSearchResult extends AbstractModel {
     public SemanticsSearchResult(SemanticsSearchResult source) {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
         }
         if (source.Score != null) {
             this.Score = new Float(source.Score);
@@ -143,6 +169,7 @@ public class SemanticsSearchResult extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);

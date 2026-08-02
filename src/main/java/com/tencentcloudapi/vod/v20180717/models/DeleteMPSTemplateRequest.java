@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class DeleteMPSTemplateRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
+    * <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * MPS 任务模板唯一标识。
+    * <p>MPS 任务模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li> 
-     * @return TemplateType 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
+     * Get <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li> 
+     * @return TemplateType <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
-     * @param TemplateType 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li>
-<li>AIAnalysis: 创建智能分析模板。</li>
-<li>SmartSubtitle: 创建智能字幕模板。</li>
-<li>SmartErase: 创建智能擦除模板。</li>
+     * Set <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
+     * @param TemplateType <p>需要删除的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 字幕压制模板。</li>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get MPS 任务模板唯一标识。 
-     * @return Definition MPS 任务模板唯一标识。
+     * Get <p>MPS 任务模板唯一标识。</p> 
+     * @return Definition <p>MPS 任务模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set MPS 任务模板唯一标识。
-     * @param Definition MPS 任务模板唯一标识。
+     * Set <p>MPS 任务模板唯一标识。</p>
+     * @param Definition <p>MPS 任务模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

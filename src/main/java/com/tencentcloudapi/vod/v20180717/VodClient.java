@@ -427,6 +427,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建知识库。用于为智能媒资功能创建一个新的知识库，每个用户最多可创建的20个知识库。
+     * @param req CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKnowledgeBaseResponse CreateKnowledgeBase(CreateKnowledgeBaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateKnowledgeBase", CreateKnowledgeBaseResponse.class);
+    }
+
+    /**
      *创建大模型解析模板
      * @param req CreateLLMComprehendTemplateRequest
      * @return CreateLLMComprehendTemplateResponse
@@ -843,6 +854,18 @@ public class VodClient extends AbstractClient{
     public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplate", DeleteJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *删除知识库。
+调用接口后，知识库会处于“删除中”状态，并在后台执行删除操作。
+     * @param req DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteKnowledgeBaseResponse DeleteKnowledgeBase(DeleteKnowledgeBaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteKnowledgeBase", DeleteKnowledgeBaseResponse.class);
     }
 
     /**
@@ -1488,6 +1511,17 @@ public class VodClient extends AbstractClient{
     public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
+     *查询知识库列表。返回指定用户下的所有知识库信息。
+     * @param req DescribeKnowledgeBasesRequest
+     * @return DescribeKnowledgeBasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKnowledgeBasesResponse DescribeKnowledgeBases(DescribeKnowledgeBasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKnowledgeBases", DescribeKnowledgeBasesResponse.class);
     }
 
     /**
@@ -2227,6 +2261,17 @@ public class VodClient extends AbstractClient{
     public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyJustInTimeTranscodeTemplate", ModifyJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *修改知识库。可以修改知识库的名称和/或描述。至少需要提供 Name 或 Description 中的一个字段。
+     * @param req ModifyKnowledgeBaseRequest
+     * @return ModifyKnowledgeBaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKnowledgeBaseResponse ModifyKnowledgeBase(ModifyKnowledgeBaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyKnowledgeBase", ModifyKnowledgeBaseResponse.class);
     }
 
     /**

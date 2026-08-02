@@ -50,6 +50,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *检查实例变配操作是否可以发起
+     * @param req CheckUpdateInstanceRequest
+     * @return CheckUpdateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckUpdateInstanceResponse CheckUpdateInstance(CheckUpdateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckUpdateInstance", CheckUpdateInstanceResponse.class);
+    }
+
+    /**
      *新建自动备份快照策略
      * @param req CreateAutoBackUpStrategyRequest
      * @return CreateAutoBackUpStrategyResponse
@@ -686,6 +697,17 @@ public class EsClient extends AbstractClient{
     public ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(ModifyAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAutoBackUpStrategy", ModifyAutoBackUpStrategyResponse.class);
+    }
+
+    /**
+     *修改自动扩盘参数
+     * @param req ModifyAutoScaleDiskInfoRequest
+     * @return ModifyAutoScaleDiskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoScaleDiskInfoResponse ModifyAutoScaleDiskInfo(ModifyAutoScaleDiskInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoScaleDiskInfo", ModifyAutoScaleDiskInfoResponse.class);
     }
 
     /**

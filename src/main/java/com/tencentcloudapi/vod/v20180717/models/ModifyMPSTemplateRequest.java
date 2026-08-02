@@ -31,7 +31,7 @@ public class ModifyMPSTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+    * <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
     */
     @SerializedName("TemplateType")
     @Expose
@@ -66,6 +66,13 @@ public class ModifyMPSTemplateRequest extends AbstractModel {
     private MPSSmartEraseTemplateForUpdate SmartEraseTemplate;
 
     /**
+    * <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
+    */
+    @SerializedName("EmbedSubtitleTemplate")
+    @Expose
+    private MPSEmbedSubtitleTemplateForUpdate EmbedSubtitleTemplate;
+
+    /**
      * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p> 
      * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
@@ -82,16 +89,16 @@ public class ModifyMPSTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul> 
-     * @return TemplateType <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+     * Get <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul> 
+     * @return TemplateType <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
-     * @param TemplateType <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li></ul>
+     * Set <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
+     * @param TemplateType <p>需要修改的 MPS 模板的类型。</p><p>枚举值：</p><ul><li>AIAnalysis： 智能分析模板</li><li>SmartSubtitle： 智能字幕模板</li><li>SmartErase： 智能擦除模板</li><li>EmbedSubtitle： 字幕压制模板</li></ul>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
@@ -161,6 +168,22 @@ public class ModifyMPSTemplateRequest extends AbstractModel {
         this.SmartEraseTemplate = SmartEraseTemplate;
     }
 
+    /**
+     * Get <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p> 
+     * @return EmbedSubtitleTemplate <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
+     */
+    public MPSEmbedSubtitleTemplateForUpdate getEmbedSubtitleTemplate() {
+        return this.EmbedSubtitleTemplate;
+    }
+
+    /**
+     * Set <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
+     * @param EmbedSubtitleTemplate <p>字幕压制模板参数，MPSModifyTemplateParams为空时有效。</p>
+     */
+    public void setEmbedSubtitleTemplate(MPSEmbedSubtitleTemplateForUpdate EmbedSubtitleTemplate) {
+        this.EmbedSubtitleTemplate = EmbedSubtitleTemplate;
+    }
+
     public ModifyMPSTemplateRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ModifyMPSTemplateRequest extends AbstractModel {
         if (source.SmartEraseTemplate != null) {
             this.SmartEraseTemplate = new MPSSmartEraseTemplateForUpdate(source.SmartEraseTemplate);
         }
+        if (source.EmbedSubtitleTemplate != null) {
+            this.EmbedSubtitleTemplate = new MPSEmbedSubtitleTemplateForUpdate(source.EmbedSubtitleTemplate);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyMPSTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AIAnalysisTemplate.", this.AIAnalysisTemplate);
         this.setParamObj(map, prefix + "SmartSubtitleTemplate.", this.SmartSubtitleTemplate);
         this.setParamObj(map, prefix + "SmartEraseTemplate.", this.SmartEraseTemplate);
+        this.setParamObj(map, prefix + "EmbedSubtitleTemplate.", this.EmbedSubtitleTemplate);
 
     }
 }

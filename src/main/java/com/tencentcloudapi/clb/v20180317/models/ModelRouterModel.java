@@ -45,11 +45,25 @@ public class ModelRouterModel extends AbstractModel {
     private String Type;
 
     /**
-    * <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+    * <p>BYOK实例ID</p>
     */
     @SerializedName("ServiceProviderId")
     @Expose
     private String ServiceProviderId;
+
+    /**
+    * <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+    */
+    @SerializedName("Order")
+    @Expose
+    private Long Order;
+
+    /**
+    * <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
 
     /**
      * Get <p>模型名称</p> 
@@ -100,19 +114,51 @@ public class ModelRouterModel extends AbstractModel {
     }
 
     /**
-     * Get <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p> 
-     * @return ServiceProviderId <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+     * Get <p>BYOK实例ID</p> 
+     * @return ServiceProviderId <p>BYOK实例ID</p>
      */
     public String getServiceProviderId() {
         return this.ServiceProviderId;
     }
 
     /**
-     * Set <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
-     * @param ServiceProviderId <p>服务商/模型 ID（byok_model.model_id，形如 model-xxxxxxxx；Platform 类型不传）</p>
+     * Set <p>BYOK实例ID</p>
+     * @param ServiceProviderId <p>BYOK实例ID</p>
      */
     public void setServiceProviderId(String ServiceProviderId) {
         this.ServiceProviderId = ServiceProviderId;
+    }
+
+    /**
+     * Get <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p> 
+     * @return Order <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+     * @param Order <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p> 
+     * @return Weight <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+     * @param Weight <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
     }
 
     public ModelRouterModel() {
@@ -135,6 +181,12 @@ public class ModelRouterModel extends AbstractModel {
         if (source.ServiceProviderId != null) {
             this.ServiceProviderId = new String(source.ServiceProviderId);
         }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class ModelRouterModel extends AbstractModel {
         this.setParamSimple(map, prefix + "Provider", this.Provider);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

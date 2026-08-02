@@ -181,6 +181,20 @@ public class ModelRouterDetail extends AbstractModel {
     private String VpcId;
 
     /**
+    * <p>带宽</p><p>单位：Mbps</p>
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * <p>弹性公网IP的ID</p>
+    */
+    @SerializedName("EipAddressId")
+    @Expose
+    private String EipAddressId;
+
+    /**
      * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -544,6 +558,38 @@ public class ModelRouterDetail extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get <p>带宽</p><p>单位：Mbps</p> 
+     * @return Bandwidth <p>带宽</p><p>单位：Mbps</p>
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set <p>带宽</p><p>单位：Mbps</p>
+     * @param Bandwidth <p>带宽</p><p>单位：Mbps</p>
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get <p>弹性公网IP的ID</p> 
+     * @return EipAddressId <p>弹性公网IP的ID</p>
+     */
+    public String getEipAddressId() {
+        return this.EipAddressId;
+    }
+
+    /**
+     * Set <p>弹性公网IP的ID</p>
+     * @param EipAddressId <p>弹性公网IP的ID</p>
+     */
+    public void setEipAddressId(String EipAddressId) {
+        this.EipAddressId = EipAddressId;
+    }
+
     public ModelRouterDetail() {
     }
 
@@ -630,6 +676,12 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.EipAddressId != null) {
+            this.EipAddressId = new String(source.EipAddressId);
+        }
     }
 
 
@@ -659,6 +711,8 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "TradeStatus", this.TradeStatus);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
 
     }
 }

@@ -101,6 +101,13 @@ public class CreateTWeTalkAgentRequest extends AbstractModel {
     private String Metadata;
 
     /**
+    * <p>回调配置</p>
+    */
+    @SerializedName("EventCallbackConfig")
+    @Expose
+    private TalkEventCallbackConfig EventCallbackConfig;
+
+    /**
      * Get <p>语音识别配置</p> 
      * @return STTConfig <p>语音识别配置</p>
      */
@@ -276,6 +283,22 @@ public class CreateTWeTalkAgentRequest extends AbstractModel {
         this.Metadata = Metadata;
     }
 
+    /**
+     * Get <p>回调配置</p> 
+     * @return EventCallbackConfig <p>回调配置</p>
+     */
+    public TalkEventCallbackConfig getEventCallbackConfig() {
+        return this.EventCallbackConfig;
+    }
+
+    /**
+     * Set <p>回调配置</p>
+     * @param EventCallbackConfig <p>回调配置</p>
+     */
+    public void setEventCallbackConfig(TalkEventCallbackConfig EventCallbackConfig) {
+        this.EventCallbackConfig = EventCallbackConfig;
+    }
+
     public CreateTWeTalkAgentRequest() {
     }
 
@@ -323,6 +346,9 @@ public class CreateTWeTalkAgentRequest extends AbstractModel {
         if (source.Metadata != null) {
             this.Metadata = new String(source.Metadata);
         }
+        if (source.EventCallbackConfig != null) {
+            this.EventCallbackConfig = new TalkEventCallbackConfig(source.EventCallbackConfig);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class CreateTWeTalkAgentRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "IOTTools.", this.IOTTools);
         this.setParamArrayObj(map, prefix + "WebhookTools.", this.WebhookTools);
         this.setParamSimple(map, prefix + "Metadata", this.Metadata);
+        this.setParamObj(map, prefix + "EventCallbackConfig.", this.EventCallbackConfig);
 
     }
 }

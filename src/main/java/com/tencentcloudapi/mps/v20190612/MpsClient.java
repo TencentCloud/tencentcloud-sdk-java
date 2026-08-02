@@ -117,6 +117,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *同步接口，使用该接口从参考音频克隆一个音色
+     * @param req CloneVoiceRequest
+     * @return CloneVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneVoiceResponse CloneVoice(CloneVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneVoice", CloneVoiceResponse.class);
+    }
+
+    /**
      *创建用户自定义内容分析模板，数量上限：50。
      * @param req CreateAIAnalysisTemplateRequest
      * @return CreateAIAnalysisTemplateResponse
@@ -158,6 +169,17 @@ public class MpsClient extends AbstractClient{
     public CreateAiDramaTaskResponse CreateAiDramaTask(CreateAiDramaTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAiDramaTask", CreateAiDramaTaskResponse.class);
+    }
+
+    /**
+     *创建ai视频裂变任务
+     * @param req CreateAiFissionTaskRequest
+     * @return CreateAiFissionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAiFissionTaskResponse CreateAiFissionTask(CreateAiFissionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAiFissionTask", CreateAiFissionTaskResponse.class);
     }
 
     /**
@@ -2478,6 +2500,17 @@ public class MpsClient extends AbstractClient{
     public SyncDubbingResponse SyncDubbing(SyncDubbingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SyncDubbing", SyncDubbingResponse.class);
+    }
+
+    /**
+     *同步语音合成，根据输入文本和指定音色生成语音
+     * @param req TextToSpeechRequest
+     * @return TextToSpeechResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechResponse TextToSpeech(TextToSpeechRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeech", TextToSpeechResponse.class);
     }
 
     /**

@@ -59,6 +59,13 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
     private RouterSettingWithFallBack RouterSetting;
 
     /**
+    * <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
      * Get <p>模型路由ID</p> 
      * @return ModelRouterId <p>模型路由ID</p>
      */
@@ -138,6 +145,22 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.RouterSetting = RouterSetting;
     }
 
+    /**
+     * Get <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p> 
+     * @return Bandwidth <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     * @param Bandwidth <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
     public ModifyModelRouterAttributesRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         if (source.RouterSetting != null) {
             this.RouterSetting = new RouterSettingWithFallBack(source.RouterSetting);
         }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelRouterName", this.ModelRouterName);
         this.setParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
         this.setParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 
     }
 }

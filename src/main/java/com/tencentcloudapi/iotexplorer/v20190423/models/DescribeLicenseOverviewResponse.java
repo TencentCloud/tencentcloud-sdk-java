@@ -24,11 +24,39 @@ import java.util.HashMap;
 public class DescribeLicenseOverviewResponse extends AbstractModel {
 
     /**
+    * <p>实例概览</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private LicenseOverview [] Data;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>实例概览</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data <p>实例概览</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LicenseOverview [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set <p>实例概览</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data <p>实例概览</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(LicenseOverview [] Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +82,12 @@ public class DescribeLicenseOverviewResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLicenseOverviewResponse(DescribeLicenseOverviewResponse source) {
+        if (source.Data != null) {
+            this.Data = new LicenseOverview[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new LicenseOverview(source.Data[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +98,7 @@ public class DescribeLicenseOverviewResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

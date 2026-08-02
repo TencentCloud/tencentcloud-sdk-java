@@ -129,6 +129,13 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     private Boolean DeletionProtection;
 
     /**
+    * <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
+    */
+    @SerializedName("SkipValidateOptions")
+    @Expose
+    private String [] SkipValidateOptions;
+
+    /**
      * Get <p>cluster id</p> 
      * @return ClusterId <p>cluster id</p>
      */
@@ -368,6 +375,22 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p> 
+     * @return SkipValidateOptions <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
+     */
+    public String [] getSkipValidateOptions() {
+        return this.SkipValidateOptions;
+    }
+
+    /**
+     * Set <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
+     * @param SkipValidateOptions <p>跳过校验选项，目前支持 &quot;VpcDnsCheck&quot;</p>
+     */
+    public void setSkipValidateOptions(String [] SkipValidateOptions) {
+        this.SkipValidateOptions = SkipValidateOptions;
+    }
+
     public CreateClusterNodePoolRequest() {
     }
 
@@ -433,6 +456,12 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.SkipValidateOptions != null) {
+            this.SkipValidateOptions = new String[source.SkipValidateOptions.length];
+            for (int i = 0; i < source.SkipValidateOptions.length; i++) {
+                this.SkipValidateOptions[i] = new String(source.SkipValidateOptions[i]);
+            }
+        }
     }
 
 
@@ -455,6 +484,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
 
     }
 }

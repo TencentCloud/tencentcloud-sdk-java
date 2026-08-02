@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMPSTemplatesResponse extends AbstractModel {
 
     /**
-    * 符合过滤条件的记录总数。
+    * <p>符合过滤条件的记录总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * MPS 任务模板详情列表。
+    * <p>MPS 任务模板详情列表。</p>
     */
     @SerializedName("MPSTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMPSTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合过滤条件的记录总数。 
-     * @return TotalCount 符合过滤条件的记录总数。
+     * Get <p>符合过滤条件的记录总数。</p> 
+     * @return TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合过滤条件的记录总数。
-     * @param TotalCount 符合过滤条件的记录总数。
+     * Set <p>符合过滤条件的记录总数。</p>
+     * @param TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get MPS 任务模板详情列表。 
-     * @return MPSTemplateSet MPS 任务模板详情列表。
+     * Get <p>MPS 任务模板详情列表。</p> 
+     * @return MPSTemplateSet <p>MPS 任务模板详情列表。</p>
      */
     public MPSTemplate [] getMPSTemplateSet() {
         return this.MPSTemplateSet;
     }
 
     /**
-     * Set MPS 任务模板详情列表。
-     * @param MPSTemplateSet MPS 任务模板详情列表。
+     * Set <p>MPS 任务模板详情列表。</p>
+     * @param MPSTemplateSet <p>MPS 任务模板详情列表。</p>
      */
     public void setMPSTemplateSet(MPSTemplate [] MPSTemplateSet) {
         this.MPSTemplateSet = MPSTemplateSet;

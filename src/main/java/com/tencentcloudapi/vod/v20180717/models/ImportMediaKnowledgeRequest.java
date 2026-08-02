@@ -24,90 +24,107 @@ import java.util.HashMap;
 public class ImportMediaKnowledgeRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+    * <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 大模型理解模板的唯一标识
+    * <p>大模型理解模板的唯一标识</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 需要导入知识库任务类型，可选值有：
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+    * <p>知识库ID列表，留空时将使用默认知识库</p>
+    */
+    @SerializedName("KnowledgeBaseIds")
+    @Expose
+    private String [] KnowledgeBaseIds;
+
+    /**
+    * <p>需要导入知识库任务类型，可选值有：</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
     */
     @SerializedName("ImportTasks")
     @Expose
     private String [] ImportTasks;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。 
-     * @return FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * Get <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p> 
+     * @return FileId <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
-     * @param FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * Set <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
+     * @param FileId <p>媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 大模型理解模板的唯一标识 
-     * @return Definition 大模型理解模板的唯一标识
+     * Get <p>大模型理解模板的唯一标识</p> 
+     * @return Definition <p>大模型理解模板的唯一标识</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 大模型理解模板的唯一标识
-     * @param Definition 大模型理解模板的唯一标识
+     * Set <p>大模型理解模板的唯一标识</p>
+     * @param Definition <p>大模型理解模板的唯一标识</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 需要导入知识库任务类型，可选值有：
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask 
-     * @return ImportTasks 需要导入知识库任务类型，可选值有：
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+     * Get <p>知识库ID列表，留空时将使用默认知识库</p> 
+     * @return KnowledgeBaseIds <p>知识库ID列表，留空时将使用默认知识库</p>
+     */
+    public String [] getKnowledgeBaseIds() {
+        return this.KnowledgeBaseIds;
+    }
+
+    /**
+     * Set <p>知识库ID列表，留空时将使用默认知识库</p>
+     * @param KnowledgeBaseIds <p>知识库ID列表，留空时将使用默认知识库</p>
+     */
+    public void setKnowledgeBaseIds(String [] KnowledgeBaseIds) {
+        this.KnowledgeBaseIds = KnowledgeBaseIds;
+    }
+
+    /**
+     * Get <p>需要导入知识库任务类型，可选值有：</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul> 
+     * @return ImportTasks <p>需要导入知识库任务类型，可选值有：</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -116,12 +133,8 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
     }
 
     /**
-     * Set 需要导入知识库任务类型，可选值有：
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
-     * @param ImportTasks 需要导入知识库任务类型，可选值有：
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+     * Set <p>需要导入知识库任务类型，可选值有：</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param ImportTasks <p>需要导入知识库任务类型，可选值有：</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -146,6 +159,12 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.KnowledgeBaseIds != null) {
+            this.KnowledgeBaseIds = new String[source.KnowledgeBaseIds.length];
+            for (int i = 0; i < source.KnowledgeBaseIds.length; i++) {
+                this.KnowledgeBaseIds[i] = new String(source.KnowledgeBaseIds[i]);
+            }
+        }
         if (source.ImportTasks != null) {
             this.ImportTasks = new String[source.ImportTasks.length];
             for (int i = 0; i < source.ImportTasks.length; i++) {
@@ -162,6 +181,7 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArraySimple(map, prefix + "KnowledgeBaseIds.", this.KnowledgeBaseIds);
         this.setParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
 
     }

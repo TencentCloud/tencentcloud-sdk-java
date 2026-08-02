@@ -31,7 +31,7 @@ public class CreateMPSTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li>
+    * <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 创建字幕压制模板。</li>
     */
     @SerializedName("TemplateType")
     @Expose
@@ -66,6 +66,13 @@ public class CreateMPSTemplateRequest extends AbstractModel {
     private MPSSmartEraseTemplate SmartEraseTemplate;
 
     /**
+    * <p>字幕压制模板参数，MPSCreateTemplateParams为空时有效。</p>
+    */
+    @SerializedName("EmbedSubtitleTemplate")
+    @Expose
+    private MPSEmbedSubtitleTemplate EmbedSubtitleTemplate;
+
+    /**
      * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p> 
      * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
@@ -82,16 +89,16 @@ public class CreateMPSTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li> 
-     * @return TemplateType <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li>
+     * Get <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 创建字幕压制模板。</li> 
+     * @return TemplateType <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 创建字幕压制模板。</li>
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li>
-     * @param TemplateType <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li>
+     * Set <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 创建字幕压制模板。</li>
+     * @param TemplateType <p>需要创建的 MPS 模板的类型。取值：</p><li>AIAnalysis: 创建智能分析模板。</li><li>SmartSubtitle: 创建智能字幕模板。</li><li>SmartErase: 创建智能擦除模板。</li><li>EmbedSubtitle: 创建字幕压制模板。</li>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
@@ -161,6 +168,22 @@ public class CreateMPSTemplateRequest extends AbstractModel {
         this.SmartEraseTemplate = SmartEraseTemplate;
     }
 
+    /**
+     * Get <p>字幕压制模板参数，MPSCreateTemplateParams为空时有效。</p> 
+     * @return EmbedSubtitleTemplate <p>字幕压制模板参数，MPSCreateTemplateParams为空时有效。</p>
+     */
+    public MPSEmbedSubtitleTemplate getEmbedSubtitleTemplate() {
+        return this.EmbedSubtitleTemplate;
+    }
+
+    /**
+     * Set <p>字幕压制模板参数，MPSCreateTemplateParams为空时有效。</p>
+     * @param EmbedSubtitleTemplate <p>字幕压制模板参数，MPSCreateTemplateParams为空时有效。</p>
+     */
+    public void setEmbedSubtitleTemplate(MPSEmbedSubtitleTemplate EmbedSubtitleTemplate) {
+        this.EmbedSubtitleTemplate = EmbedSubtitleTemplate;
+    }
+
     public CreateMPSTemplateRequest() {
     }
 
@@ -187,6 +210,9 @@ public class CreateMPSTemplateRequest extends AbstractModel {
         if (source.SmartEraseTemplate != null) {
             this.SmartEraseTemplate = new MPSSmartEraseTemplate(source.SmartEraseTemplate);
         }
+        if (source.EmbedSubtitleTemplate != null) {
+            this.EmbedSubtitleTemplate = new MPSEmbedSubtitleTemplate(source.EmbedSubtitleTemplate);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateMPSTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AIAnalysisTemplate.", this.AIAnalysisTemplate);
         this.setParamObj(map, prefix + "SmartSubtitleTemplate.", this.SmartSubtitleTemplate);
         this.setParamObj(map, prefix + "SmartEraseTemplate.", this.SmartEraseTemplate);
+        this.setParamObj(map, prefix + "EmbedSubtitleTemplate.", this.EmbedSubtitleTemplate);
 
     }
 }

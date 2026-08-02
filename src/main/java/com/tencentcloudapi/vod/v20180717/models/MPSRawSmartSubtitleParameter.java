@@ -73,6 +73,34 @@ public class MPSRawSmartSubtitleParameter extends AbstractModel {
     private Long ProcessType;
 
     /**
+    * <p>字幕OCR提取框选区域配置</p>
+    */
+    @SerializedName("SelectingSubtitleAreasConfig")
+    @Expose
+    private MPSSelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
+
+    /**
+    * <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
+    * <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+    */
+    @SerializedName("SpeakerMode")
+    @Expose
+    private Long SpeakerMode;
+
+    /**
+    * <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+    */
+    @SerializedName("SpeakerLabel")
+    @Expose
+    private Long SpeakerLabel;
+
+    /**
      * Get <p>智能字幕字幕语言类型。</p><p>枚举值：</p><ul><li>0： 源语言</li><li>1： 翻译语言</li><li>2： 源语言+翻译语言</li></ul><p>当TranslateSwitch为OFF时仅支持取0当TranslateSwitch为ON时仅支持取1或2</p> 
      * @return SubtitleType <p>智能字幕字幕语言类型。</p><p>枚举值：</p><ul><li>0： 源语言</li><li>1： 翻译语言</li><li>2： 源语言+翻译语言</li></ul><p>当TranslateSwitch为OFF时仅支持取0当TranslateSwitch为ON时仅支持取1或2</p>
      */
@@ -184,6 +212,70 @@ public class MPSRawSmartSubtitleParameter extends AbstractModel {
         this.ProcessType = ProcessType;
     }
 
+    /**
+     * Get <p>字幕OCR提取框选区域配置</p> 
+     * @return SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置</p>
+     */
+    public MPSSelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
+        return this.SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Set <p>字幕OCR提取框选区域配置</p>
+     * @param SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置</p>
+     */
+    public void setSelectingSubtitleAreasConfig(MPSSelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
+        this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Get <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p> 
+     * @return SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+     * @param SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
+    }
+
+    /**
+     * Get <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p> 
+     * @return SpeakerMode <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     */
+    public Long getSpeakerMode() {
+        return this.SpeakerMode;
+    }
+
+    /**
+     * Set <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     * @param SpeakerMode <p>说话人识别模式，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别；<br>默认值：0</p>
+     */
+    public void setSpeakerMode(Long SpeakerMode) {
+        this.SpeakerMode = SpeakerMode;
+    }
+
+    /**
+     * Get <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p> 
+     * @return SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     */
+    public Long getSpeakerLabel() {
+        return this.SpeakerLabel;
+    }
+
+    /**
+     * Set <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     * @param SpeakerLabel <p>说话人识别输出到字幕文件，可选值：<br>0：表示不输出到字幕文件；<br>1：表示输出到vtt字幕文件<br>注意：使用此参数SpeakerMode的值不能为0；<br>默认值：0</p>
+     */
+    public void setSpeakerLabel(Long SpeakerLabel) {
+        this.SpeakerLabel = SpeakerLabel;
+    }
+
     public MPSRawSmartSubtitleParameter() {
     }
 
@@ -213,6 +305,18 @@ public class MPSRawSmartSubtitleParameter extends AbstractModel {
         if (source.ProcessType != null) {
             this.ProcessType = new Long(source.ProcessType);
         }
+        if (source.SelectingSubtitleAreasConfig != null) {
+            this.SelectingSubtitleAreasConfig = new MPSSelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
+        }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
+        if (source.SpeakerMode != null) {
+            this.SpeakerMode = new Long(source.SpeakerMode);
+        }
+        if (source.SpeakerLabel != null) {
+            this.SpeakerLabel = new Long(source.SpeakerLabel);
+        }
     }
 
 
@@ -227,6 +331,10 @@ public class MPSRawSmartSubtitleParameter extends AbstractModel {
         this.setParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
+        this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+        this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 
     }
 }

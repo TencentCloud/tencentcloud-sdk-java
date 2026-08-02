@@ -45,6 +45,13 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
+    * <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
     */
     @SerializedName("Level")
@@ -132,6 +139,22 @@ public class LLMComprehendTemplateItem extends AbstractModel {
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
+    }
+
+    /**
+     * Get <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul> 
+     * @return Type <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+     * @param Type <p>模板类型</p><p>枚举值：</p><ul><li>Preset： 系统预置模板</li><li>Custom： 用户自定义模板</li></ul>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -247,6 +270,9 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Level != null) {
             this.Level = new String(source.Level);
         }
@@ -275,6 +301,7 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamObj(map, prefix + "Asr.", this.Asr);

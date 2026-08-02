@@ -52,7 +52,7 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * <p>分段摘要解析配置</p>
+    * <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
     */
     @SerializedName("Summary")
     @Expose
@@ -137,16 +137,16 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>分段摘要解析配置</p> 
-     * @return Summary <p>分段摘要解析配置</p>
+     * Get <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p> 
+     * @return Summary <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set <p>分段摘要解析配置</p>
-     * @param Summary <p>分段摘要解析配置</p>
+     * Set <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
+     * @param Summary <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;

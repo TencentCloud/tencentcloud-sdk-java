@@ -24,394 +24,417 @@ import java.util.HashMap;
 public class TalkAgentInfo extends AbstractModel {
 
     /**
-    * 主账号UIN
+    * <p>主账号UIN</p>
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * 账号AppId
+    * <p>账号AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 智能体ID
+    * <p>智能体ID</p>
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 智能体名称
+    * <p>智能体名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 智能体描述
+    * <p>智能体描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 语音识别配置
+    * <p>语音识别配置</p>
     */
     @SerializedName("STTConfig")
     @Expose
     private TalkSTTConfig STTConfig;
 
     /**
-    * 大模型配置
+    * <p>大模型配置</p>
     */
     @SerializedName("LLMConfig")
     @Expose
     private TalkLLMConfig LLMConfig;
 
     /**
-    * 语音合成配置
+    * <p>语音合成配置</p>
     */
     @SerializedName("TTSConfig")
     @Expose
     private TalkTTSConfig TTSConfig;
 
     /**
-    * 对话行为配置
+    * <p>对话行为配置</p>
     */
     @SerializedName("ConversationConfig")
     @Expose
     private TalkConversationConfig ConversationConfig;
 
     /**
-    * 长期记忆配置
+    * <p>长期记忆配置</p>
     */
     @SerializedName("MemoryConfig")
     @Expose
     private TalkMemoryConfig MemoryConfig;
 
     /**
-    * IoT 工具列表
+    * <p>IoT 工具列表</p>
     */
     @SerializedName("IOTTools")
     @Expose
     private TalkIOTTool [] IOTTools;
 
     /**
-    * Webhook 工具列表
+    * <p>Webhook 工具列表</p>
     */
     @SerializedName("WebhookTools")
     @Expose
     private TalkWebhookTool [] WebhookTools;
 
     /**
-    * 元信息JSON object 字符串
+    * <p>元信息JSON object 字符串</p>
     */
     @SerializedName("Metadata")
     @Expose
     private String Metadata;
 
     /**
-    * 绑定关系列表
+    * <p>绑定关系列表</p>
     */
     @SerializedName("Bindings")
     @Expose
     private TalkAgentBinding [] Bindings;
 
     /**
-    * 创建时间，Unix 秒
+    * <p>创建时间，Unix 秒</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 更新时间，Unix 秒
+    * <p>更新时间，Unix 秒</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get 主账号UIN 
-     * @return Uin 主账号UIN
+    * <p>事件回调配置</p>
+    */
+    @SerializedName("EventCallbackConfig")
+    @Expose
+    private TalkEventCallbackConfig EventCallbackConfig;
+
+    /**
+     * Get <p>主账号UIN</p> 
+     * @return Uin <p>主账号UIN</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 主账号UIN
-     * @param Uin 主账号UIN
+     * Set <p>主账号UIN</p>
+     * @param Uin <p>主账号UIN</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 账号AppId 
-     * @return AppId 账号AppId
+     * Get <p>账号AppId</p> 
+     * @return AppId <p>账号AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 账号AppId
-     * @param AppId 账号AppId
+     * Set <p>账号AppId</p>
+     * @param AppId <p>账号AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceId <p>实例 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceId <p>实例 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 智能体ID 
-     * @return AgentId 智能体ID
+     * Get <p>智能体ID</p> 
+     * @return AgentId <p>智能体ID</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set 智能体ID
-     * @param AgentId 智能体ID
+     * Set <p>智能体ID</p>
+     * @param AgentId <p>智能体ID</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 智能体名称 
-     * @return Name 智能体名称
+     * Get <p>智能体名称</p> 
+     * @return Name <p>智能体名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 智能体名称
-     * @param Name 智能体名称
+     * Set <p>智能体名称</p>
+     * @param Name <p>智能体名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 智能体描述 
-     * @return Description 智能体描述
+     * Get <p>智能体描述</p> 
+     * @return Description <p>智能体描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 智能体描述
-     * @param Description 智能体描述
+     * Set <p>智能体描述</p>
+     * @param Description <p>智能体描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 语音识别配置 
-     * @return STTConfig 语音识别配置
+     * Get <p>语音识别配置</p> 
+     * @return STTConfig <p>语音识别配置</p>
      */
     public TalkSTTConfig getSTTConfig() {
         return this.STTConfig;
     }
 
     /**
-     * Set 语音识别配置
-     * @param STTConfig 语音识别配置
+     * Set <p>语音识别配置</p>
+     * @param STTConfig <p>语音识别配置</p>
      */
     public void setSTTConfig(TalkSTTConfig STTConfig) {
         this.STTConfig = STTConfig;
     }
 
     /**
-     * Get 大模型配置 
-     * @return LLMConfig 大模型配置
+     * Get <p>大模型配置</p> 
+     * @return LLMConfig <p>大模型配置</p>
      */
     public TalkLLMConfig getLLMConfig() {
         return this.LLMConfig;
     }
 
     /**
-     * Set 大模型配置
-     * @param LLMConfig 大模型配置
+     * Set <p>大模型配置</p>
+     * @param LLMConfig <p>大模型配置</p>
      */
     public void setLLMConfig(TalkLLMConfig LLMConfig) {
         this.LLMConfig = LLMConfig;
     }
 
     /**
-     * Get 语音合成配置 
-     * @return TTSConfig 语音合成配置
+     * Get <p>语音合成配置</p> 
+     * @return TTSConfig <p>语音合成配置</p>
      */
     public TalkTTSConfig getTTSConfig() {
         return this.TTSConfig;
     }
 
     /**
-     * Set 语音合成配置
-     * @param TTSConfig 语音合成配置
+     * Set <p>语音合成配置</p>
+     * @param TTSConfig <p>语音合成配置</p>
      */
     public void setTTSConfig(TalkTTSConfig TTSConfig) {
         this.TTSConfig = TTSConfig;
     }
 
     /**
-     * Get 对话行为配置 
-     * @return ConversationConfig 对话行为配置
+     * Get <p>对话行为配置</p> 
+     * @return ConversationConfig <p>对话行为配置</p>
      */
     public TalkConversationConfig getConversationConfig() {
         return this.ConversationConfig;
     }
 
     /**
-     * Set 对话行为配置
-     * @param ConversationConfig 对话行为配置
+     * Set <p>对话行为配置</p>
+     * @param ConversationConfig <p>对话行为配置</p>
      */
     public void setConversationConfig(TalkConversationConfig ConversationConfig) {
         this.ConversationConfig = ConversationConfig;
     }
 
     /**
-     * Get 长期记忆配置 
-     * @return MemoryConfig 长期记忆配置
+     * Get <p>长期记忆配置</p> 
+     * @return MemoryConfig <p>长期记忆配置</p>
      */
     public TalkMemoryConfig getMemoryConfig() {
         return this.MemoryConfig;
     }
 
     /**
-     * Set 长期记忆配置
-     * @param MemoryConfig 长期记忆配置
+     * Set <p>长期记忆配置</p>
+     * @param MemoryConfig <p>长期记忆配置</p>
      */
     public void setMemoryConfig(TalkMemoryConfig MemoryConfig) {
         this.MemoryConfig = MemoryConfig;
     }
 
     /**
-     * Get IoT 工具列表 
-     * @return IOTTools IoT 工具列表
+     * Get <p>IoT 工具列表</p> 
+     * @return IOTTools <p>IoT 工具列表</p>
      */
     public TalkIOTTool [] getIOTTools() {
         return this.IOTTools;
     }
 
     /**
-     * Set IoT 工具列表
-     * @param IOTTools IoT 工具列表
+     * Set <p>IoT 工具列表</p>
+     * @param IOTTools <p>IoT 工具列表</p>
      */
     public void setIOTTools(TalkIOTTool [] IOTTools) {
         this.IOTTools = IOTTools;
     }
 
     /**
-     * Get Webhook 工具列表 
-     * @return WebhookTools Webhook 工具列表
+     * Get <p>Webhook 工具列表</p> 
+     * @return WebhookTools <p>Webhook 工具列表</p>
      */
     public TalkWebhookTool [] getWebhookTools() {
         return this.WebhookTools;
     }
 
     /**
-     * Set Webhook 工具列表
-     * @param WebhookTools Webhook 工具列表
+     * Set <p>Webhook 工具列表</p>
+     * @param WebhookTools <p>Webhook 工具列表</p>
      */
     public void setWebhookTools(TalkWebhookTool [] WebhookTools) {
         this.WebhookTools = WebhookTools;
     }
 
     /**
-     * Get 元信息JSON object 字符串 
-     * @return Metadata 元信息JSON object 字符串
+     * Get <p>元信息JSON object 字符串</p> 
+     * @return Metadata <p>元信息JSON object 字符串</p>
      */
     public String getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set 元信息JSON object 字符串
-     * @param Metadata 元信息JSON object 字符串
+     * Set <p>元信息JSON object 字符串</p>
+     * @param Metadata <p>元信息JSON object 字符串</p>
      */
     public void setMetadata(String Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 绑定关系列表 
-     * @return Bindings 绑定关系列表
+     * Get <p>绑定关系列表</p> 
+     * @return Bindings <p>绑定关系列表</p>
      */
     public TalkAgentBinding [] getBindings() {
         return this.Bindings;
     }
 
     /**
-     * Set 绑定关系列表
-     * @param Bindings 绑定关系列表
+     * Set <p>绑定关系列表</p>
+     * @param Bindings <p>绑定关系列表</p>
      */
     public void setBindings(TalkAgentBinding [] Bindings) {
         this.Bindings = Bindings;
     }
 
     /**
-     * Get 创建时间，Unix 秒 
-     * @return CreateTime 创建时间，Unix 秒
+     * Get <p>创建时间，Unix 秒</p> 
+     * @return CreateTime <p>创建时间，Unix 秒</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，Unix 秒
-     * @param CreateTime 创建时间，Unix 秒
+     * Set <p>创建时间，Unix 秒</p>
+     * @param CreateTime <p>创建时间，Unix 秒</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间，Unix 秒 
-     * @return UpdateTime 更新时间，Unix 秒
+     * Get <p>更新时间，Unix 秒</p> 
+     * @return UpdateTime <p>更新时间，Unix 秒</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间，Unix 秒
-     * @param UpdateTime 更新时间，Unix 秒
+     * Set <p>更新时间，Unix 秒</p>
+     * @param UpdateTime <p>更新时间，Unix 秒</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>事件回调配置</p> 
+     * @return EventCallbackConfig <p>事件回调配置</p>
+     */
+    public TalkEventCallbackConfig getEventCallbackConfig() {
+        return this.EventCallbackConfig;
+    }
+
+    /**
+     * Set <p>事件回调配置</p>
+     * @param EventCallbackConfig <p>事件回调配置</p>
+     */
+    public void setEventCallbackConfig(TalkEventCallbackConfig EventCallbackConfig) {
+        this.EventCallbackConfig = EventCallbackConfig;
     }
 
     public TalkAgentInfo() {
@@ -482,6 +505,9 @@ public class TalkAgentInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.EventCallbackConfig != null) {
+            this.EventCallbackConfig = new TalkEventCallbackConfig(source.EventCallbackConfig);
+        }
     }
 
 
@@ -506,6 +532,7 @@ public class TalkAgentInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Bindings.", this.Bindings);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamObj(map, prefix + "EventCallbackConfig.", this.EventCallbackConfig);
 
     }
 }

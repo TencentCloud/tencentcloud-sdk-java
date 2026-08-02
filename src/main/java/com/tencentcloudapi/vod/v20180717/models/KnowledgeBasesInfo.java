@@ -38,6 +38,13 @@ public class KnowledgeBasesInfo extends AbstractModel {
     private KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos;
 
     /**
+    * <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+    */
+    @SerializedName("KnowledgeBaseDetails")
+    @Expose
+    private KnowledgeBaseDetail [] KnowledgeBaseDetails;
+
+    /**
      * Get <p>当前媒资当导入的知识库列表</p> 
      * @return Bases <p>当前媒资当导入的知识库列表</p>
      */
@@ -69,6 +76,22 @@ public class KnowledgeBasesInfo extends AbstractModel {
         this.KnowledgeAnalysisInfos = KnowledgeAnalysisInfos;
     }
 
+    /**
+     * Get <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p> 
+     * @return KnowledgeBaseDetails <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+     */
+    public KnowledgeBaseDetail [] getKnowledgeBaseDetails() {
+        return this.KnowledgeBaseDetails;
+    }
+
+    /**
+     * Set <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+     * @param KnowledgeBaseDetails <p>当前媒资当导入的知识库列表，以及使用的解析模板等详细信息</p>
+     */
+    public void setKnowledgeBaseDetails(KnowledgeBaseDetail [] KnowledgeBaseDetails) {
+        this.KnowledgeBaseDetails = KnowledgeBaseDetails;
+    }
+
     public KnowledgeBasesInfo() {
     }
 
@@ -89,6 +112,12 @@ public class KnowledgeBasesInfo extends AbstractModel {
                 this.KnowledgeAnalysisInfos[i] = new KnowledgeAnalysisInfo(source.KnowledgeAnalysisInfos[i]);
             }
         }
+        if (source.KnowledgeBaseDetails != null) {
+            this.KnowledgeBaseDetails = new KnowledgeBaseDetail[source.KnowledgeBaseDetails.length];
+            for (int i = 0; i < source.KnowledgeBaseDetails.length; i++) {
+                this.KnowledgeBaseDetails[i] = new KnowledgeBaseDetail(source.KnowledgeBaseDetails[i]);
+            }
+        }
     }
 
 
@@ -98,6 +127,7 @@ public class KnowledgeBasesInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Bases.", this.Bases);
         this.setParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
+        this.setParamArrayObj(map, prefix + "KnowledgeBaseDetails.", this.KnowledgeBaseDetails);
 
     }
 }

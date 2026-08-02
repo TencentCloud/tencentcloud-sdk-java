@@ -38,6 +38,13 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     private String Text;
 
     /**
+    * <p>知识库ID，留空时将使用默认知识库</p>
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
     * <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
     */
     @SerializedName("Limit")
@@ -102,6 +109,22 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
      */
     public void setText(String Text) {
         this.Text = Text;
+    }
+
+    /**
+     * Get <p>知识库ID，留空时将使用默认知识库</p> 
+     * @return KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库</p>
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set <p>知识库ID，留空时将使用默认知识库</p>
+     * @param KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库</p>
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
     }
 
     /**
@@ -198,6 +221,9 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -234,6 +260,7 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);

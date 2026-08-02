@@ -24,181 +24,161 @@ import java.util.HashMap;
 public class TargetGroupHealthCheck extends AbstractModel {
 
     /**
-    * 是否开启健康检查。
+    * <p>是否开启健康检查。</p>
     */
     @SerializedName("HealthSwitch")
     @Expose
     private Boolean HealthSwitch;
 
     /**
-    * 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
+    * <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 健康检查端口，探测协议为tcp时，该参数必填。
-
+    * <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
+    * <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
+    * <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
     */
     @SerializedName("IntervalTime")
     @Expose
     private Long IntervalTime;
 
     /**
-    * 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+    * <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
     */
     @SerializedName("HealthNum")
     @Expose
     private Long HealthNum;
 
     /**
-    * 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+    * <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
     */
     @SerializedName("UnHealthNum")
     @Expose
     private Long UnHealthNum;
 
     /**
-     * Get 是否开启健康检查。 
-     * @return HealthSwitch 是否开启健康检查。
+     * Get <p>是否开启健康检查。</p> 
+     * @return HealthSwitch <p>是否开启健康检查。</p>
      */
     public Boolean getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * Set 是否开启健康检查。
-     * @param HealthSwitch 是否开启健康检查。
+     * Set <p>是否开启健康检查。</p>
+     * @param HealthSwitch <p>是否开启健康检查。</p>
      */
     public void setHealthSwitch(Boolean HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
     /**
-     * Get 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查 
-     * @return Protocol 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
+     * Get <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul> 
+     * @return Protocol <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
-     * @param Protocol 健康检查使用的协议。支持PING和TCP两种方式，默认为PING。
-
-- icmp: 使用PING的方式进行健康检查
-- tcp: 使用TCP连接的方式进行健康检查
+     * Set <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
+     * @param Protocol <p>健康检查使用的协议。支持PING和TCP两种方式，默认为PING。</p><ul><li>icmp: 使用PING的方式进行健康检查</li><li>tcp: 使用TCP连接的方式进行健康检查</li></ul>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 健康检查端口，探测协议为tcp时，该参数必填。
- 
-     * @return Port 健康检查端口，探测协议为tcp时，该参数必填。
-
+     * Get <p>健康检查端口，探测协议为tcp时，该参数必填。</p> 
+     * @return Port <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 健康检查端口，探测协议为tcp时，该参数必填。
-
-     * @param Port 健康检查端口，探测协议为tcp时，该参数必填。
-
+     * Set <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
+     * @param Port <p>健康检查端口，探测协议为tcp时，该参数必填。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。 
-     * @return Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
+     * Get <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p> 
+     * @return Timeout <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
-     * @param Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
+     * Set <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
+     * @param Timeout <p>健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。 
-     * @return IntervalTime 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
+     * Get <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p> 
+     * @return IntervalTime <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
     /**
-     * Set 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
-     * @param IntervalTime 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
+     * Set <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
+     * @param IntervalTime <p>检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。</p>
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。 
-     * @return HealthNum 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * Get <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p> 
+     * @return HealthNum <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     public Long getHealthNum() {
         return this.HealthNum;
     }
 
     /**
-     * Set 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
-     * @param HealthNum 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * Set <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
+     * @param HealthNum <p>检测健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
     /**
-     * Get 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。 
-     * @return UnHealthNum 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * Get <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p> 
+     * @return UnHealthNum <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     public Long getUnHealthNum() {
         return this.UnHealthNum;
     }
 
     /**
-     * Set 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
-     * @param UnHealthNum 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * Set <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
+     * @param UnHealthNum <p>检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。</p>
      */
     public void setUnHealthNum(Long UnHealthNum) {
         this.UnHealthNum = UnHealthNum;

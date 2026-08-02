@@ -38,6 +38,13 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
     private Long [] Definitions;
 
     /**
+    * <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+    */
+    @SerializedName("Sort")
+    @Expose
+    private SortBy Sort;
+
+    /**
     * <p>分页偏移量，默认值：0。</p>
     */
     @SerializedName("Offset")
@@ -81,6 +88,22 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
+    }
+
+    /**
+     * Get <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p> 
+     * @return Sort <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+     */
+    public SortBy getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+     * @param Sort <p>排序方式。<br>Sort.Field 可选 Definition、CreateTime、UpdateTime。</p>
+     */
+    public void setSort(SortBy Sort) {
+        this.Sort = Sort;
     }
 
     /**
@@ -132,6 +155,9 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
                 this.Definitions[i] = new Long(source.Definitions[i]);
             }
         }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -147,6 +173,7 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

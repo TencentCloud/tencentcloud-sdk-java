@@ -24,30 +24,28 @@ import java.util.HashMap;
 public class ProcedureTemplate extends AbstractModel {
 
     /**
-    * 任务流名字。
+    * <p>任务流名字。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 任务流模板类型，取值范围：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+    * <p>任务流模板类型，取值范围：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 模板描述信息，长度限制：256 个字符。
+    * <p>模板描述信息，长度限制：256 个字符。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 视频处理类型任务参数。
+    * <p>视频处理类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaProcessTask")
@@ -55,8 +53,7 @@ public class ProcedureTemplate extends AbstractModel {
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 智能审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+    * <p>AI 智能审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiContentReviewTask")
@@ -64,7 +61,7 @@ public class ProcedureTemplate extends AbstractModel {
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * AI 智能内容分析类型任务参数。
+    * <p>AI 智能内容分析类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiAnalysisTask")
@@ -72,14 +69,14 @@ public class ProcedureTemplate extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * AI 内容识别类型任务参数。
+    * <p>AI 内容识别类型任务参数。</p>
     */
     @SerializedName("AiRecognitionTaskSet")
     @Expose
     private AiRecognitionTaskInput [] AiRecognitionTaskSet;
 
     /**
-    * 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+    * <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiRecognitionTask")
@@ -87,7 +84,7 @@ public class ProcedureTemplate extends AbstractModel {
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 微信小程序发布任务参数。
+    * <p>微信小程序发布任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniProgramPublishTask")
@@ -95,7 +92,7 @@ public class ProcedureTemplate extends AbstractModel {
     private WechatMiniProgramPublishTaskInput MiniProgramPublishTask;
 
     /**
-    * 音视频审核类型任务参数。
+    * <p>音视频审核类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReviewAudioVideoTask")
@@ -103,79 +100,78 @@ public class ProcedureTemplate extends AbstractModel {
     private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>导入智能媒资知识库任务参数。</p>
+    */
+    @SerializedName("ImportMediaKnowledgeTaskSet")
+    @Expose
+    private ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet;
+
+    /**
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 任务流名字。 
-     * @return Name 任务流名字。
+     * Get <p>任务流名字。</p> 
+     * @return Name <p>任务流名字。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务流名字。
-     * @param Name 任务流名字。
+     * Set <p>任务流名字。</p>
+     * @param Name <p>任务流名字。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 任务流模板类型，取值范围：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li> 
-     * @return Type 任务流模板类型，取值范围：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+     * Get <p>任务流模板类型，取值范围：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li> 
+     * @return Type <p>任务流模板类型，取值范围：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务流模板类型，取值范围：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
-     * @param Type 任务流模板类型，取值范围：
-<li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+     * Set <p>任务流模板类型，取值范围：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
+     * @param Type <p>任务流模板类型，取值范围：</p><li>Preset：系统预置任务流模板；</li><li>Custom：用户自定义任务流模板。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 模板描述信息，长度限制：256 个字符。 
-     * @return Comment 模板描述信息，长度限制：256 个字符。
+     * Get <p>模板描述信息，长度限制：256 个字符。</p> 
+     * @return Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述信息，长度限制：256 个字符。
-     * @param Comment 模板描述信息，长度限制：256 个字符。
+     * Set <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 视频处理类型任务参数。
+     * Get <p>视频处理类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaProcessTask 视频处理类型任务参数。
+     * @return MediaProcessTask <p>视频处理类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
@@ -183,9 +179,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Set 视频处理类型任务参数。
+     * Set <p>视频处理类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTask 视频处理类型任务参数。
+     * @param MediaProcessTask <p>视频处理类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
@@ -193,11 +189,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get AI 智能审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * Get <p>AI 智能审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiContentReviewTask AI 智能审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * @return AiContentReviewTask <p>AI 智能审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -205,11 +199,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Set AI 智能审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * Set <p>AI 智能审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiContentReviewTask AI 智能审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * @param AiContentReviewTask <p>AI 智能审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -217,9 +209,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get AI 智能内容分析类型任务参数。
+     * Get <p>AI 智能内容分析类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiAnalysisTask AI 智能内容分析类型任务参数。
+     * @return AiAnalysisTask <p>AI 智能内容分析类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
@@ -227,9 +219,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Set AI 智能内容分析类型任务参数。
+     * Set <p>AI 智能内容分析类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTask AI 智能内容分析类型任务参数。
+     * @param AiAnalysisTask <p>AI 智能内容分析类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
@@ -237,25 +229,25 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get AI 内容识别类型任务参数。 
-     * @return AiRecognitionTaskSet AI 内容识别类型任务参数。
+     * Get <p>AI 内容识别类型任务参数。</p> 
+     * @return AiRecognitionTaskSet <p>AI 内容识别类型任务参数。</p>
      */
     public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
         return this.AiRecognitionTaskSet;
     }
 
     /**
-     * Set AI 内容识别类型任务参数。
-     * @param AiRecognitionTaskSet AI 内容识别类型任务参数。
+     * Set <p>AI 内容识别类型任务参数。</p>
+     * @param AiRecognitionTaskSet <p>AI 内容识别类型任务参数。</p>
      */
     public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
         this.AiRecognitionTaskSet = AiRecognitionTaskSet;
     }
 
     /**
-     * Get 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * Get <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * @return AiRecognitionTask <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -265,9 +257,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Set 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * Set <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * @param AiRecognitionTask <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -277,9 +269,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get 微信小程序发布任务参数。
+     * Get <p>微信小程序发布任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MiniProgramPublishTask 微信小程序发布任务参数。
+     * @return MiniProgramPublishTask <p>微信小程序发布任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() {
@@ -287,9 +279,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Set 微信小程序发布任务参数。
+     * Set <p>微信小程序发布任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MiniProgramPublishTask 微信小程序发布任务参数。
+     * @param MiniProgramPublishTask <p>微信小程序发布任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput MiniProgramPublishTask) {
@@ -297,9 +289,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核类型任务参数。
+     * Get <p>音视频审核类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReviewAudioVideoTask 音视频审核类型任务参数。
+     * @return ReviewAudioVideoTask <p>音视频审核类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
@@ -307,9 +299,9 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Set 音视频审核类型任务参数。
+     * Set <p>音视频审核类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReviewAudioVideoTask 音视频审核类型任务参数。
+     * @param ReviewAudioVideoTask <p>音视频审核类型任务参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
@@ -317,32 +309,48 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>导入智能媒资知识库任务参数。</p> 
+     * @return ImportMediaKnowledgeTaskSet <p>导入智能媒资知识库任务参数。</p>
+     */
+    public ImportMediaKnowledgeTaskInput [] getImportMediaKnowledgeTaskSet() {
+        return this.ImportMediaKnowledgeTaskSet;
+    }
+
+    /**
+     * Set <p>导入智能媒资知识库任务参数。</p>
+     * @param ImportMediaKnowledgeTaskSet <p>导入智能媒资知识库任务参数。</p>
+     */
+    public void setImportMediaKnowledgeTaskSet(ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet) {
+        this.ImportMediaKnowledgeTaskSet = ImportMediaKnowledgeTaskSet;
+    }
+
+    /**
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -389,6 +397,12 @@ public class ProcedureTemplate extends AbstractModel {
         if (source.ReviewAudioVideoTask != null) {
             this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
         }
+        if (source.ImportMediaKnowledgeTaskSet != null) {
+            this.ImportMediaKnowledgeTaskSet = new ImportMediaKnowledgeTaskInput[source.ImportMediaKnowledgeTaskSet.length];
+            for (int i = 0; i < source.ImportMediaKnowledgeTaskSet.length; i++) {
+                this.ImportMediaKnowledgeTaskSet[i] = new ImportMediaKnowledgeTaskInput(source.ImportMediaKnowledgeTaskSet[i]);
+            }
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -412,6 +426,7 @@ public class ProcedureTemplate extends AbstractModel {
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
+        this.setParamArrayObj(map, prefix + "ImportMediaKnowledgeTaskSet.", this.ImportMediaKnowledgeTaskSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

@@ -24,188 +24,190 @@ import java.util.HashMap;
 public class ResetProcedureTemplateRequest extends AbstractModel {
 
     /**
-    * 任务流名字
+    * <p>任务流名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 模板描述信息，长度限制：256 个字符。
+    * <p>模板描述信息，长度限制：256 个字符。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 视频处理类型任务参数。
+    * <p>视频处理类型任务参数。</p>
     */
     @SerializedName("MediaProcessTask")
     @Expose
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 智能内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+    * <p>AI 智能内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * AI 智能内容分析类型任务参数。
+    * <p>AI 智能内容分析类型任务参数。</p>
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * AI 内容识别类型任务参数。
+    * <p>AI 内容识别类型任务参数。</p>
     */
     @SerializedName("AiRecognitionTaskSet")
     @Expose
     private AiRecognitionTaskInput [] AiRecognitionTaskSet;
 
     /**
-    * 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+    * <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 音视频审核类型任务参数。
+    * <p>音视频审核类型任务参数。</p>
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
     private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
-     * Get 任务流名字 
-     * @return Name 任务流名字
+    * <p>导入智能媒资知识库任务参数。</p>
+    */
+    @SerializedName("ImportMediaKnowledgeTaskSet")
+    @Expose
+    private ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet;
+
+    /**
+     * Get <p>任务流名字</p> 
+     * @return Name <p>任务流名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务流名字
-     * @param Name 任务流名字
+     * Set <p>任务流名字</p>
+     * @param Name <p>任务流名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 模板描述信息，长度限制：256 个字符。 
-     * @return Comment 模板描述信息，长度限制：256 个字符。
+     * Get <p>模板描述信息，长度限制：256 个字符。</p> 
+     * @return Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述信息，长度限制：256 个字符。
-     * @param Comment 模板描述信息，长度限制：256 个字符。
+     * Set <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 视频处理类型任务参数。 
-     * @return MediaProcessTask 视频处理类型任务参数。
+     * Get <p>视频处理类型任务参数。</p> 
+     * @return MediaProcessTask <p>视频处理类型任务参数。</p>
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set 视频处理类型任务参数。
-     * @param MediaProcessTask 视频处理类型任务参数。
+     * Set <p>视频处理类型任务参数。</p>
+     * @param MediaProcessTask <p>视频处理类型任务参数。</p>
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
     }
 
     /**
-     * Get AI 智能内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font>  
-     * @return AiContentReviewTask AI 智能内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * Get <p>AI 智能内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p> 
+     * @return AiContentReviewTask <p>AI 智能内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set AI 智能内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
-     * @param AiContentReviewTask AI 智能内容审核类型任务参数 \*。
-<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * Set <p>AI 智能内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * @param AiContentReviewTask <p>AI 智能内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get AI 智能内容分析类型任务参数。 
-     * @return AiAnalysisTask AI 智能内容分析类型任务参数。
+     * Get <p>AI 智能内容分析类型任务参数。</p> 
+     * @return AiAnalysisTask <p>AI 智能内容分析类型任务参数。</p>
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set AI 智能内容分析类型任务参数。
-     * @param AiAnalysisTask AI 智能内容分析类型任务参数。
+     * Set <p>AI 智能内容分析类型任务参数。</p>
+     * @param AiAnalysisTask <p>AI 智能内容分析类型任务参数。</p>
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get AI 内容识别类型任务参数。 
-     * @return AiRecognitionTaskSet AI 内容识别类型任务参数。
+     * Get <p>AI 内容识别类型任务参数。</p> 
+     * @return AiRecognitionTaskSet <p>AI 内容识别类型任务参数。</p>
      */
     public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
         return this.AiRecognitionTaskSet;
     }
 
     /**
-     * Set AI 内容识别类型任务参数。
-     * @param AiRecognitionTaskSet AI 内容识别类型任务参数。
+     * Set <p>AI 内容识别类型任务参数。</p>
+     * @param AiRecognitionTaskSet <p>AI 内容识别类型任务参数。</p>
      */
     public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
         this.AiRecognitionTaskSet = AiRecognitionTaskSet;
     }
 
     /**
-     * Get 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。 
-     * @return AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * Get <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p> 
+     * @return AiRecognitionTask <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
      * @deprecated
      */
     @Deprecated
@@ -214,8 +216,8 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
-     * @param AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+     * Set <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
+     * @param AiRecognitionTask <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>
      * @deprecated
      */
     @Deprecated
@@ -224,19 +226,35 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核类型任务参数。 
-     * @return ReviewAudioVideoTask 音视频审核类型任务参数。
+     * Get <p>音视频审核类型任务参数。</p> 
+     * @return ReviewAudioVideoTask <p>音视频审核类型任务参数。</p>
      */
     public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
         return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set 音视频审核类型任务参数。
-     * @param ReviewAudioVideoTask 音视频审核类型任务参数。
+     * Set <p>音视频审核类型任务参数。</p>
+     * @param ReviewAudioVideoTask <p>音视频审核类型任务参数。</p>
      */
     public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;
+    }
+
+    /**
+     * Get <p>导入智能媒资知识库任务参数。</p> 
+     * @return ImportMediaKnowledgeTaskSet <p>导入智能媒资知识库任务参数。</p>
+     */
+    public ImportMediaKnowledgeTaskInput [] getImportMediaKnowledgeTaskSet() {
+        return this.ImportMediaKnowledgeTaskSet;
+    }
+
+    /**
+     * Set <p>导入智能媒资知识库任务参数。</p>
+     * @param ImportMediaKnowledgeTaskSet <p>导入智能媒资知识库任务参数。</p>
+     */
+    public void setImportMediaKnowledgeTaskSet(ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet) {
+        this.ImportMediaKnowledgeTaskSet = ImportMediaKnowledgeTaskSet;
     }
 
     public ResetProcedureTemplateRequest() {
@@ -277,6 +295,12 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
         if (source.ReviewAudioVideoTask != null) {
             this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
         }
+        if (source.ImportMediaKnowledgeTaskSet != null) {
+            this.ImportMediaKnowledgeTaskSet = new ImportMediaKnowledgeTaskInput[source.ImportMediaKnowledgeTaskSet.length];
+            for (int i = 0; i < source.ImportMediaKnowledgeTaskSet.length; i++) {
+                this.ImportMediaKnowledgeTaskSet[i] = new ImportMediaKnowledgeTaskInput(source.ImportMediaKnowledgeTaskSet[i]);
+            }
+        }
     }
 
 
@@ -293,6 +317,7 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
+        this.setParamArrayObj(map, prefix + "ImportMediaKnowledgeTaskSet.", this.ImportMediaKnowledgeTaskSet);
 
     }
 }

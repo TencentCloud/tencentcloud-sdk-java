@@ -94,6 +94,13 @@ public class MPSSmartSubtitleTemplateForUpdate extends AbstractModel {
     private MPSSelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
+    * <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
     * <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
     */
     @SerializedName("SpeakerMode")
@@ -268,6 +275,22 @@ public class MPSSmartSubtitleTemplateForUpdate extends AbstractModel {
     }
 
     /**
+     * Get <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p> 
+     * @return SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+     * @param SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写。开启多个翻译语言时，不允许填写。</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
+    }
+
+    /**
      * Get <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p> 
      * @return SpeakerMode <p>说话人识别开关，可选值：<br>0：表示不开启说话人识别；<br>1：表示开启说话人识别。</p>
      */
@@ -337,6 +360,9 @@ public class MPSSmartSubtitleTemplateForUpdate extends AbstractModel {
         if (source.SelectingSubtitleAreasConfig != null) {
             this.SelectingSubtitleAreasConfig = new MPSSelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
         }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
         if (source.SpeakerMode != null) {
             this.SpeakerMode = new Long(source.SpeakerMode);
         }
@@ -360,6 +386,7 @@ public class MPSSmartSubtitleTemplateForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
         this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
         this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 

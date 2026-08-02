@@ -66,6 +66,27 @@ public class ServiceProvider extends AbstractModel {
     private String ServiceProviderName;
 
     /**
+    * <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+    */
+    @SerializedName("Order")
+    @Expose
+    private Long Order;
+
+    /**
+    * <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
+    * <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+    */
+    @SerializedName("AssociationStatus")
+    @Expose
+    private String AssociationStatus;
+
+    /**
      * Get <p>BYOK类型</p> 
      * @return AccessType <p>BYOK类型</p>
      */
@@ -161,6 +182,54 @@ public class ServiceProvider extends AbstractModel {
         this.ServiceProviderName = ServiceProviderName;
     }
 
+    /**
+     * Get <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p> 
+     * @return Order <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+     * @param Order <p>绑定的指定模型组内BYOK实例的调度优先级</p><p>取值范围[0,2]，优先级随数值增大而降低。</p>
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p> 
+     * @return Weight <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+     * @param Weight <p>绑定的指定模型组Order相同层级内BYOK实例的调度权重</p>
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul> 
+     * @return AssociationStatus <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+     */
+    public String getAssociationStatus() {
+        return this.AssociationStatus;
+    }
+
+    /**
+     * Set <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+     * @param AssociationStatus <p>CMR实例-BYOK实例的模型调度绑定关系状态</p><p>枚举值：</p><ul><li>Configuring： 变配中</li><li>ConfigureFailed： 变配失败</li><li>Deleting： 删除中</li><li>Provisioning： 创建中</li><li>Active： 正常可用</li><li>ProvisionFailed： 创建失败</li><li>DeletionFailed： 删除失败</li></ul>
+     */
+    public void setAssociationStatus(String AssociationStatus) {
+        this.AssociationStatus = AssociationStatus;
+    }
+
     public ServiceProvider() {
     }
 
@@ -190,6 +259,15 @@ public class ServiceProvider extends AbstractModel {
         if (source.ServiceProviderName != null) {
             this.ServiceProviderName = new String(source.ServiceProviderName);
         }
+        if (source.Order != null) {
+            this.Order = new Long(source.Order);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.AssociationStatus != null) {
+            this.AssociationStatus = new String(source.AssociationStatus);
+        }
     }
 
 
@@ -203,6 +281,9 @@ public class ServiceProvider extends AbstractModel {
         this.setParamSimple(map, prefix + "Provider", this.Provider);
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
         this.setParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "AssociationStatus", this.AssociationStatus);
 
     }
 }

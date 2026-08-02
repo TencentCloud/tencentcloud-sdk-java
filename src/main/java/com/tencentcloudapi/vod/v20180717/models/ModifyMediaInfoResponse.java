@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class ModifyMediaInfoResponse extends AbstractModel {
 
     /**
-    * 新的视频封面 URL。
-* 注意：仅当请求携带 CoverData 时此返回值有效。 *
+    * <p>新的视频封面 URL。</p><ul><li>注意：仅当请求携带 CoverData 时此返回值有效。 *</li></ul>
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * 新增的字幕信息。
+    * <p>新增的字幕信息。</p>
     */
     @SerializedName("AddedSubtitleSet")
     @Expose
@@ -46,36 +45,32 @@ public class ModifyMediaInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新的视频封面 URL。
-* 注意：仅当请求携带 CoverData 时此返回值有效。 * 
-     * @return CoverUrl 新的视频封面 URL。
-* 注意：仅当请求携带 CoverData 时此返回值有效。 *
+     * Get <p>新的视频封面 URL。</p><ul><li>注意：仅当请求携带 CoverData 时此返回值有效。 *</li></ul> 
+     * @return CoverUrl <p>新的视频封面 URL。</p><ul><li>注意：仅当请求携带 CoverData 时此返回值有效。 *</li></ul>
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 新的视频封面 URL。
-* 注意：仅当请求携带 CoverData 时此返回值有效。 *
-     * @param CoverUrl 新的视频封面 URL。
-* 注意：仅当请求携带 CoverData 时此返回值有效。 *
+     * Set <p>新的视频封面 URL。</p><ul><li>注意：仅当请求携带 CoverData 时此返回值有效。 *</li></ul>
+     * @param CoverUrl <p>新的视频封面 URL。</p><ul><li>注意：仅当请求携带 CoverData 时此返回值有效。 *</li></ul>
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get 新增的字幕信息。 
-     * @return AddedSubtitleSet 新增的字幕信息。
+     * Get <p>新增的字幕信息。</p> 
+     * @return AddedSubtitleSet <p>新增的字幕信息。</p>
      */
     public MediaSubtitleItem [] getAddedSubtitleSet() {
         return this.AddedSubtitleSet;
     }
 
     /**
-     * Set 新增的字幕信息。
-     * @param AddedSubtitleSet 新增的字幕信息。
+     * Set <p>新增的字幕信息。</p>
+     * @param AddedSubtitleSet <p>新增的字幕信息。</p>
      */
     public void setAddedSubtitleSet(MediaSubtitleItem [] AddedSubtitleSet) {
         this.AddedSubtitleSet = AddedSubtitleSet;

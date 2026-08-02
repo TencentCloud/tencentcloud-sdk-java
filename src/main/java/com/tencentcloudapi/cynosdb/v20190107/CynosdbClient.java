@@ -2591,6 +2591,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（TransferClusterPrepayToPostpay）用于将预付费集群转为后付费集群
+     * @param req TransferClusterPrepayToPostpayRequest
+     * @return TransferClusterPrepayToPostpayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferClusterPrepayToPostpayResponse TransferClusterPrepayToPostpay(TransferClusterPrepayToPostpayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferClusterPrepayToPostpay", TransferClusterPrepayToPostpayResponse.class);
+    }
+
+    /**
      *本接口（TransferClusterZone）用于发起跨可用区迁移。
      * @param req TransferClusterZoneRequest
      * @return TransferClusterZoneResponse
@@ -2599,6 +2610,17 @@ public class CynosdbClient extends AbstractClient{
     public TransferClusterZoneResponse TransferClusterZone(TransferClusterZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TransferClusterZone", TransferClusterZoneResponse.class);
+    }
+
+    /**
+     *本接口（TransferStoragePrepayToPostpay）用于将预付费存储转为后付费存储
+     * @param req TransferStoragePrepayToPostpayRequest
+     * @return TransferStoragePrepayToPostpayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferStoragePrepayToPostpayResponse TransferStoragePrepayToPostpay(TransferStoragePrepayToPostpayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferStoragePrepayToPostpay", TransferStoragePrepayToPostpayResponse.class);
     }
 
     /**

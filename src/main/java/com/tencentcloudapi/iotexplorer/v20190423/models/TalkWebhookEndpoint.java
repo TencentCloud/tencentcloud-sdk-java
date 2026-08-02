@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TalkWebhookEndpoint extends AbstractModel {
 
     /**
-    * <p>Webhook地址，仅支持 80 和 443 端口</p>
+    * <p>Webhook地址</p>
     */
     @SerializedName("Url")
     @Expose
@@ -38,16 +38,16 @@ public class TalkWebhookEndpoint extends AbstractModel {
     private Long Timeout;
 
     /**
-     * Get <p>Webhook地址，仅支持 80 和 443 端口</p> 
-     * @return Url <p>Webhook地址，仅支持 80 和 443 端口</p>
+     * Get <p>Webhook地址</p> 
+     * @return Url <p>Webhook地址</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Webhook地址，仅支持 80 和 443 端口</p>
-     * @param Url <p>Webhook地址，仅支持 80 和 443 端口</p>
+     * Set <p>Webhook地址</p>
+     * @param Url <p>Webhook地址</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
