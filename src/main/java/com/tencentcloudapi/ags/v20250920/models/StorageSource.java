@@ -45,6 +45,13 @@ public class StorageSource extends AbstractModel {
     private CfsStorageSource Cfs;
 
     /**
+    * <p>AgentBucket 存储配置</p>
+    */
+    @SerializedName("AgentBucket")
+    @Expose
+    private AgentBucketStorageSource AgentBucket;
+
+    /**
      * Get <p>对象存储桶配置</p> 
      * @return Cos <p>对象存储桶配置</p>
      */
@@ -92,6 +99,22 @@ public class StorageSource extends AbstractModel {
         this.Cfs = Cfs;
     }
 
+    /**
+     * Get <p>AgentBucket 存储配置</p> 
+     * @return AgentBucket <p>AgentBucket 存储配置</p>
+     */
+    public AgentBucketStorageSource getAgentBucket() {
+        return this.AgentBucket;
+    }
+
+    /**
+     * Set <p>AgentBucket 存储配置</p>
+     * @param AgentBucket <p>AgentBucket 存储配置</p>
+     */
+    public void setAgentBucket(AgentBucketStorageSource AgentBucket) {
+        this.AgentBucket = AgentBucket;
+    }
+
     public StorageSource() {
     }
 
@@ -109,6 +132,9 @@ public class StorageSource extends AbstractModel {
         if (source.Cfs != null) {
             this.Cfs = new CfsStorageSource(source.Cfs);
         }
+        if (source.AgentBucket != null) {
+            this.AgentBucket = new AgentBucketStorageSource(source.AgentBucket);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class StorageSource extends AbstractModel {
         this.setParamObj(map, prefix + "Cos.", this.Cos);
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamObj(map, prefix + "Cfs.", this.Cfs);
+        this.setParamObj(map, prefix + "AgentBucket.", this.AgentBucket);
 
     }
 }

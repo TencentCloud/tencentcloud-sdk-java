@@ -52,6 +52,13 @@ public class CreateAppTriggerRequest extends AbstractModel {
     private TimerPushConfig PushConfig;
 
     /**
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
     * <p>触发器配置</p>
     */
     @SerializedName("TriggerConfig")
@@ -71,6 +78,13 @@ public class CreateAppTriggerRequest extends AbstractModel {
     @SerializedName("TriggerType")
     @Expose
     private Long TriggerType;
+
+    /**
+    * <p>访客ID</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
 
     /**
      * Get <p>应用ID</p> 
@@ -137,6 +151,22 @@ public class CreateAppTriggerRequest extends AbstractModel {
     }
 
     /**
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table> 
+     * @return Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     * @param Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
      * Get <p>触发器配置</p> 
      * @return TriggerConfig <p>触发器配置</p>
      */
@@ -184,6 +214,22 @@ public class CreateAppTriggerRequest extends AbstractModel {
         this.TriggerType = TriggerType;
     }
 
+    /**
+     * Get <p>访客ID</p> 
+     * @return UserId <p>访客ID</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>访客ID</p>
+     * @param UserId <p>访客ID</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public CreateAppTriggerRequest() {
     }
 
@@ -204,6 +250,9 @@ public class CreateAppTriggerRequest extends AbstractModel {
         if (source.PushConfig != null) {
             this.PushConfig = new TimerPushConfig(source.PushConfig);
         }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
         if (source.TriggerConfig != null) {
             this.TriggerConfig = new TriggerConfig(source.TriggerConfig);
         }
@@ -212,6 +261,9 @@ public class CreateAppTriggerRequest extends AbstractModel {
         }
         if (source.TriggerType != null) {
             this.TriggerType = new Long(source.TriggerType);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
         }
     }
 
@@ -224,9 +276,11 @@ public class CreateAppTriggerRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ExecuteConfig.", this.ExecuteConfig);
         this.setParamSimple(map, prefix + "ExecuteType", this.ExecuteType);
         this.setParamObj(map, prefix + "PushConfig.", this.PushConfig);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamObj(map, prefix + "TriggerConfig.", this.TriggerConfig);
         this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

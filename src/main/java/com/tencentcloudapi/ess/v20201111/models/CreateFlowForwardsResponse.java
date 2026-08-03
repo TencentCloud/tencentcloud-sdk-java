@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateFlowForwardsResponse extends AbstractModel {
 
     /**
-    * 失败的合同id以及错误详情
+    * <p>失败的合同id以及错误详情</p>
     */
     @SerializedName("FailedFlows")
     @Expose
     private FlowForwardResult [] FailedFlows;
 
     /**
-    * 成功的合同id
+    * <p>成功的合同id</p>
     */
     @SerializedName("SuccessFlows")
     @Expose
@@ -45,32 +45,32 @@ public class CreateFlowForwardsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 失败的合同id以及错误详情 
-     * @return FailedFlows 失败的合同id以及错误详情
+     * Get <p>失败的合同id以及错误详情</p> 
+     * @return FailedFlows <p>失败的合同id以及错误详情</p>
      */
     public FlowForwardResult [] getFailedFlows() {
         return this.FailedFlows;
     }
 
     /**
-     * Set 失败的合同id以及错误详情
-     * @param FailedFlows 失败的合同id以及错误详情
+     * Set <p>失败的合同id以及错误详情</p>
+     * @param FailedFlows <p>失败的合同id以及错误详情</p>
      */
     public void setFailedFlows(FlowForwardResult [] FailedFlows) {
         this.FailedFlows = FailedFlows;
     }
 
     /**
-     * Get 成功的合同id 
-     * @return SuccessFlows 成功的合同id
+     * Get <p>成功的合同id</p> 
+     * @return SuccessFlows <p>成功的合同id</p>
      */
     public String [] getSuccessFlows() {
         return this.SuccessFlows;
     }
 
     /**
-     * Set 成功的合同id
-     * @param SuccessFlows 成功的合同id
+     * Set <p>成功的合同id</p>
+     * @param SuccessFlows <p>成功的合同id</p>
      */
     public void setSuccessFlows(String [] SuccessFlows) {
         this.SuccessFlows = SuccessFlows;

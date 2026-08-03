@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AppTriggerWebhookConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>触发器webhook参数配置</p>
     */
     @SerializedName("ParamSchemaConfig")
     @Expose
     private AppTriggerWebhookParamSchemaConfig ParamSchemaConfig;
 
     /**
-    * 
+    * <p>webhook的key</p>
     */
     @SerializedName("WebhookKey")
     @Expose
     private String WebhookKey;
 
     /**
-    * 
+    * <p>webhook的密钥</p>
     */
     @SerializedName("WebhookToken")
     @Expose
     private String WebhookToken;
 
     /**
-    * 
+    * <p>webhook的地址</p>
     */
     @SerializedName("WebhookUrl")
     @Expose
     private String WebhookUrl;
 
     /**
-     * Get  
-     * @return ParamSchemaConfig 
+     * Get <p>触发器webhook参数配置</p> 
+     * @return ParamSchemaConfig <p>触发器webhook参数配置</p>
      */
     public AppTriggerWebhookParamSchemaConfig getParamSchemaConfig() {
         return this.ParamSchemaConfig;
     }
 
     /**
-     * Set 
-     * @param ParamSchemaConfig 
+     * Set <p>触发器webhook参数配置</p>
+     * @param ParamSchemaConfig <p>触发器webhook参数配置</p>
      */
     public void setParamSchemaConfig(AppTriggerWebhookParamSchemaConfig ParamSchemaConfig) {
         this.ParamSchemaConfig = ParamSchemaConfig;
     }
 
     /**
-     * Get  
-     * @return WebhookKey 
+     * Get <p>webhook的key</p> 
+     * @return WebhookKey <p>webhook的key</p>
      */
     public String getWebhookKey() {
         return this.WebhookKey;
     }
 
     /**
-     * Set 
-     * @param WebhookKey 
+     * Set <p>webhook的key</p>
+     * @param WebhookKey <p>webhook的key</p>
      */
     public void setWebhookKey(String WebhookKey) {
         this.WebhookKey = WebhookKey;
     }
 
     /**
-     * Get  
-     * @return WebhookToken 
+     * Get <p>webhook的密钥</p> 
+     * @return WebhookToken <p>webhook的密钥</p>
      */
     public String getWebhookToken() {
         return this.WebhookToken;
     }
 
     /**
-     * Set 
-     * @param WebhookToken 
+     * Set <p>webhook的密钥</p>
+     * @param WebhookToken <p>webhook的密钥</p>
      */
     public void setWebhookToken(String WebhookToken) {
         this.WebhookToken = WebhookToken;
     }
 
     /**
-     * Get  
-     * @return WebhookUrl 
+     * Get <p>webhook的地址</p> 
+     * @return WebhookUrl <p>webhook的地址</p>
      */
     public String getWebhookUrl() {
         return this.WebhookUrl;
     }
 
     /**
-     * Set 
-     * @param WebhookUrl 
+     * Set <p>webhook的地址</p>
+     * @param WebhookUrl <p>webhook的地址</p>
      */
     public void setWebhookUrl(String WebhookUrl) {
         this.WebhookUrl = WebhookUrl;

@@ -59,6 +59,20 @@ public class DescribeAppTriggerSummaryListRequest extends AbstractModel {
     private String Query;
 
     /**
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
+    * <p>访客ID</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get <p>应用ID</p> 
      * @return AppId <p>应用ID</p>
      */
@@ -138,6 +152,38 @@ public class DescribeAppTriggerSummaryListRequest extends AbstractModel {
         this.Query = Query;
     }
 
+    /**
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table> 
+     * @return Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     * @param Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
+     * Get <p>访客ID</p> 
+     * @return UserId <p>访客ID</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>访客ID</p>
+     * @param UserId <p>访客ID</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public DescribeAppTriggerSummaryListRequest() {
     }
 
@@ -164,6 +210,12 @@ public class DescribeAppTriggerSummaryListRequest extends AbstractModel {
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class DescribeAppTriggerSummaryListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

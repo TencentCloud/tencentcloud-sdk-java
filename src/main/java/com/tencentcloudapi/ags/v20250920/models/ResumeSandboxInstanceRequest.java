@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ResumeSandboxInstanceRequest extends AbstractModel {
 
     /**
-    * 沙箱实例ID
+    * <p>沙箱实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 沙箱实例ID 
-     * @return InstanceId 沙箱实例ID
+    * <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private String Timeout;
+
+    /**
+     * Get <p>沙箱实例ID</p> 
+     * @return InstanceId <p>沙箱实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 沙箱实例ID
-     * @param InstanceId 沙箱实例ID
+     * Set <p>沙箱实例ID</p>
+     * @param InstanceId <p>沙箱实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p> 
+     * @return Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+     */
+    public String getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+     * @param Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+     */
+    public void setTimeout(String Timeout) {
+        this.Timeout = Timeout;
     }
 
     public ResumeSandboxInstanceRequest() {
@@ -57,6 +80,9 @@ public class ResumeSandboxInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Timeout != null) {
+            this.Timeout = new String(source.Timeout);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ResumeSandboxInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

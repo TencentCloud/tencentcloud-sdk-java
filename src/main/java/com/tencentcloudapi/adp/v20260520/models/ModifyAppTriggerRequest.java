@@ -31,6 +31,13 @@ public class ModifyAppTriggerRequest extends AbstractModel {
     private String AppId;
 
     /**
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
     * <p>触发器信息</p>
     */
     @SerializedName("Trigger")
@@ -52,6 +59,13 @@ public class ModifyAppTriggerRequest extends AbstractModel {
     private FieldMask UpdateMask;
 
     /**
+    * <p>访客ID</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get <p>应用ID</p> 
      * @return AppId <p>应用ID</p>
      */
@@ -65,6 +79,22 @@ public class ModifyAppTriggerRequest extends AbstractModel {
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table> 
+     * @return Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     * @param Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
     }
 
     /**
@@ -115,6 +145,22 @@ public class ModifyAppTriggerRequest extends AbstractModel {
         this.UpdateMask = UpdateMask;
     }
 
+    /**
+     * Get <p>访客ID</p> 
+     * @return UserId <p>访客ID</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>访客ID</p>
+     * @param UserId <p>访客ID</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public ModifyAppTriggerRequest() {
     }
 
@@ -126,6 +172,9 @@ public class ModifyAppTriggerRequest extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
         if (source.Trigger != null) {
             this.Trigger = new AppTrigger(source.Trigger);
         }
@@ -135,6 +184,9 @@ public class ModifyAppTriggerRequest extends AbstractModel {
         if (source.UpdateMask != null) {
             this.UpdateMask = new FieldMask(source.UpdateMask);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -143,9 +195,11 @@ public class ModifyAppTriggerRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamSimple(map, prefix + "TriggerId", this.TriggerId);
         this.setParamObj(map, prefix + "UpdateMask.", this.UpdateMask);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

@@ -31,11 +31,11 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private String GatewayId;
 
     /**
-    * <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+    * <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
     */
-    @SerializedName("SecretType")
+    @SerializedName("GenerateType")
     @Expose
-    private String SecretType;
+    private String GenerateType;
 
     /**
     * <p>密钥名称，2-60 字符。</p>
@@ -45,13 +45,6 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private String Name;
 
     /**
-    * <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System：系统自动生成</li><li>Custom：用户自定义（需传 SecretValue）</li><li>KMS：使用 KMS 密钥（需传 KmsKeyName 与 KmsKeyVersion）</li></ul>
-    */
-    @SerializedName("GenerateType")
-    @Expose
-    private String GenerateType;
-
-    /**
     * <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
     */
     @SerializedName("ResourceType")
@@ -59,25 +52,11 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private String ResourceType;
 
     /**
-    * <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+    * <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
     */
-    @SerializedName("KmsKeyName")
+    @SerializedName("SecretType")
     @Expose
-    private String KmsKeyName;
-
-    /**
-    * <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
-    */
-    @SerializedName("KmsKeyVersion")
-    @Expose
-    private String KmsKeyVersion;
-
-    /**
-    * <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
-    */
-    @SerializedName("SecretValue")
-    @Expose
-    private String SecretValue;
+    private String SecretType;
 
     /**
     * <p>密钥描述。最长 200 字符。</p>
@@ -94,7 +73,21 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private AIGWJWTCredentialConfig JWTCredentialConfig;
 
     /**
-    * <p>Oauth2凭证配置</p>
+    * <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+    */
+    @SerializedName("KmsKeyName")
+    @Expose
+    private String KmsKeyName;
+
+    /**
+    * <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+    */
+    @SerializedName("KmsKeyVersion")
+    @Expose
+    private String KmsKeyVersion;
+
+    /**
+    * <p>OAuth2.0凭证配置</p>
     */
     @SerializedName("OAuthCredentialConfig")
     @Expose
@@ -106,6 +99,20 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     @SerializedName("OIDCCredentialConfig")
     @Expose
     private AIGWOIDCCredentialConfig OIDCCredentialConfig;
+
+    /**
+    * <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+    */
+    @SerializedName("Provider")
+    @Expose
+    private String Provider;
+
+    /**
+    * <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+    */
+    @SerializedName("SecretValue")
+    @Expose
+    private String SecretValue;
 
     /**
      * Get <p>实例 ID</p> 
@@ -121,38 +128,6 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
-    }
-
-    /**
-     * Get <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul> 
-     * @return SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
-     */
-    public String getSecretType() {
-        return this.SecretType;
-    }
-
-    /**
-     * Set <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
-     * @param SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
-     */
-    public void setSecretType(String SecretType) {
-        this.SecretType = SecretType;
-    }
-
-    /**
-     * Get <p>密钥名称，2-60 字符。</p> 
-     * @return Name <p>密钥名称，2-60 字符。</p>
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set <p>密钥名称，2-60 字符。</p>
-     * @param Name <p>密钥名称，2-60 字符。</p>
-     */
-    public void setName(String Name) {
-        this.Name = Name;
     }
 
     /**
@@ -172,6 +147,22 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>密钥名称，2-60 字符。</p> 
+     * @return Name <p>密钥名称，2-60 字符。</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>密钥名称，2-60 字符。</p>
+     * @param Name <p>密钥名称，2-60 字符。</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
      * Get <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul> 
      * @return ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
@@ -188,51 +179,19 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>KMS 密钥名称。GenerateType=KMS 时必填。</p> 
-     * @return KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     * Get <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul> 
+     * @return SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
      */
-    public String getKmsKeyName() {
-        return this.KmsKeyName;
+    public String getSecretType() {
+        return this.SecretType;
     }
 
     /**
-     * Set <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
-     * @param KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     * Set <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
+     * @param SecretType <p>密钥协议类型。</p><p>枚举值：</p><ul><li>ApiKey</li><li>Basic</li><li>Hmac</li><li>OAuth2</li><li>JWT</li></ul>
      */
-    public void setKmsKeyName(String KmsKeyName) {
-        this.KmsKeyName = KmsKeyName;
-    }
-
-    /**
-     * Get <p>KMS 密钥版本。GenerateType=KMS 时必填。</p> 
-     * @return KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
-     */
-    public String getKmsKeyVersion() {
-        return this.KmsKeyVersion;
-    }
-
-    /**
-     * Set <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
-     * @param KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
-     */
-    public void setKmsKeyVersion(String KmsKeyVersion) {
-        this.KmsKeyVersion = KmsKeyVersion;
-    }
-
-    /**
-     * Get <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p> 
-     * @return SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
-     */
-    public String getSecretValue() {
-        return this.SecretValue;
-    }
-
-    /**
-     * Set <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
-     * @param SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
-     */
-    public void setSecretValue(String SecretValue) {
-        this.SecretValue = SecretValue;
+    public void setSecretType(String SecretType) {
+        this.SecretType = SecretType;
     }
 
     /**
@@ -268,16 +227,48 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Oauth2凭证配置</p> 
-     * @return OAuthCredentialConfig <p>Oauth2凭证配置</p>
+     * Get <p>KMS 密钥名称。GenerateType=KMS 时必填。</p> 
+     * @return KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     */
+    public String getKmsKeyName() {
+        return this.KmsKeyName;
+    }
+
+    /**
+     * Set <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     * @param KmsKeyName <p>KMS 密钥名称。GenerateType=KMS 时必填。</p>
+     */
+    public void setKmsKeyName(String KmsKeyName) {
+        this.KmsKeyName = KmsKeyName;
+    }
+
+    /**
+     * Get <p>KMS 密钥版本。GenerateType=KMS 时必填。</p> 
+     * @return KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+     */
+    public String getKmsKeyVersion() {
+        return this.KmsKeyVersion;
+    }
+
+    /**
+     * Set <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+     * @param KmsKeyVersion <p>KMS 密钥版本。GenerateType=KMS 时必填。</p>
+     */
+    public void setKmsKeyVersion(String KmsKeyVersion) {
+        this.KmsKeyVersion = KmsKeyVersion;
+    }
+
+    /**
+     * Get <p>OAuth2.0凭证配置</p> 
+     * @return OAuthCredentialConfig <p>OAuth2.0凭证配置</p>
      */
     public AIGWOAuthCredentialConfig getOAuthCredentialConfig() {
         return this.OAuthCredentialConfig;
     }
 
     /**
-     * Set <p>Oauth2凭证配置</p>
-     * @param OAuthCredentialConfig <p>Oauth2凭证配置</p>
+     * Set <p>OAuth2.0凭证配置</p>
+     * @param OAuthCredentialConfig <p>OAuth2.0凭证配置</p>
      */
     public void setOAuthCredentialConfig(AIGWOAuthCredentialConfig OAuthCredentialConfig) {
         this.OAuthCredentialConfig = OAuthCredentialConfig;
@@ -299,6 +290,38 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         this.OIDCCredentialConfig = OIDCCredentialConfig;
     }
 
+    /**
+     * Get <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul> 
+     * @return Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     */
+    public String getProvider() {
+        return this.Provider;
+    }
+
+    /**
+     * Set <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     * @param Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
+     */
+    public void setProvider(String Provider) {
+        this.Provider = Provider;
+    }
+
+    /**
+     * Get <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p> 
+     * @return SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+     */
+    public String getSecretValue() {
+        return this.SecretValue;
+    }
+
+    /**
+     * Set <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+     * @param SecretValue <p>密钥值，长度 8-256。GenerateType=Custom 时必填。</p>
+     */
+    public void setSecretValue(String SecretValue) {
+        this.SecretValue = SecretValue;
+    }
+
     public CreateCloudNativeAPIGatewaySecretKeyRequest() {
     }
 
@@ -310,26 +333,17 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         if (source.GatewayId != null) {
             this.GatewayId = new String(source.GatewayId);
         }
-        if (source.SecretType != null) {
-            this.SecretType = new String(source.SecretType);
+        if (source.GenerateType != null) {
+            this.GenerateType = new String(source.GenerateType);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.GenerateType != null) {
-            this.GenerateType = new String(source.GenerateType);
-        }
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
-        if (source.KmsKeyName != null) {
-            this.KmsKeyName = new String(source.KmsKeyName);
-        }
-        if (source.KmsKeyVersion != null) {
-            this.KmsKeyVersion = new String(source.KmsKeyVersion);
-        }
-        if (source.SecretValue != null) {
-            this.SecretValue = new String(source.SecretValue);
+        if (source.SecretType != null) {
+            this.SecretType = new String(source.SecretType);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -337,11 +351,23 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         if (source.JWTCredentialConfig != null) {
             this.JWTCredentialConfig = new AIGWJWTCredentialConfig(source.JWTCredentialConfig);
         }
+        if (source.KmsKeyName != null) {
+            this.KmsKeyName = new String(source.KmsKeyName);
+        }
+        if (source.KmsKeyVersion != null) {
+            this.KmsKeyVersion = new String(source.KmsKeyVersion);
+        }
         if (source.OAuthCredentialConfig != null) {
             this.OAuthCredentialConfig = new AIGWOAuthCredentialConfig(source.OAuthCredentialConfig);
         }
         if (source.OIDCCredentialConfig != null) {
             this.OIDCCredentialConfig = new AIGWOIDCCredentialConfig(source.OIDCCredentialConfig);
+        }
+        if (source.Provider != null) {
+            this.Provider = new String(source.Provider);
+        }
+        if (source.SecretValue != null) {
+            this.SecretValue = new String(source.SecretValue);
         }
     }
 
@@ -351,17 +377,18 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
-        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
-        this.setParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
-        this.setParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
-        this.setParamSimple(map, prefix + "SecretValue", this.SecretValue);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+        this.setParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
+        this.setParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
         this.setParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
         this.setParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+        this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamSimple(map, prefix + "SecretValue", this.SecretValue);
 
     }
 }

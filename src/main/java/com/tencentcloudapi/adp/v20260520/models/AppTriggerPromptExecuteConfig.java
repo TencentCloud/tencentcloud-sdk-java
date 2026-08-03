@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AppTriggerPromptExecuteConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>触发器执行提示词</p>
     */
     @SerializedName("ExecutePrompt")
     @Expose
     private String ExecutePrompt;
 
     /**
-    * 
+    * <p>api参数绑定</p>
     */
     @SerializedName("ParamBindingsApi")
     @Expose
     private AppTriggerParamBindingConfig ParamBindingsApi;
 
     /**
-     * Get  
-     * @return ExecutePrompt 
+     * Get <p>触发器执行提示词</p> 
+     * @return ExecutePrompt <p>触发器执行提示词</p>
      */
     public String getExecutePrompt() {
         return this.ExecutePrompt;
     }
 
     /**
-     * Set 
-     * @param ExecutePrompt 
+     * Set <p>触发器执行提示词</p>
+     * @param ExecutePrompt <p>触发器执行提示词</p>
      */
     public void setExecutePrompt(String ExecutePrompt) {
         this.ExecutePrompt = ExecutePrompt;
     }
 
     /**
-     * Get  
-     * @return ParamBindingsApi 
+     * Get <p>api参数绑定</p> 
+     * @return ParamBindingsApi <p>api参数绑定</p>
      */
     public AppTriggerParamBindingConfig getParamBindingsApi() {
         return this.ParamBindingsApi;
     }
 
     /**
-     * Set 
-     * @param ParamBindingsApi 
+     * Set <p>api参数绑定</p>
+     * @param ParamBindingsApi <p>api参数绑定</p>
      */
     public void setParamBindingsApi(AppTriggerParamBindingConfig ParamBindingsApi) {
         this.ParamBindingsApi = ParamBindingsApi;

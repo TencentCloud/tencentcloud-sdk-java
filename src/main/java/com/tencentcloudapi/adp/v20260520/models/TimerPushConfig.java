@@ -24,157 +24,92 @@ import java.util.HashMap;
 public class TimerPushConfig extends AbstractModel {
 
     /**
-    * 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
+    * <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
     */
     @SerializedName("PushChannel")
     @Expose
     private Long PushChannel;
 
     /**
-    * 推送会话ID
+    * <p>推送会话ID</p>
     */
     @SerializedName("PushTargetId")
     @Expose
     private String PushTargetId;
 
     /**
-    * 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
+    * <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
     */
     @SerializedName("PushTargetType")
     @Expose
     private Long PushTargetType;
 
     /**
-    * 
+    * <p>推送webhook的url</p>
     */
     @SerializedName("PushWebhookUrl")
     @Expose
     private String PushWebhookUrl;
 
     /**
-     * Get 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 | 
-     * @return PushChannel 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
+     * Get <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p> 
+     * @return PushChannel <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
      */
     public Long getPushChannel() {
         return this.PushChannel;
     }
 
     /**
-     * Set 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
-     * @param PushChannel 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 不推送 |
-| 2 | 微信公众号 |
-| 3 | 企业微信 AI 机器人 |
+     * Set <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
+     * @param PushChannel <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 不推送 |<br>| 2 | 微信公众号 |<br>| 3 | 企业微信 AI 机器人 |</p>
      */
     public void setPushChannel(Long PushChannel) {
         this.PushChannel = PushChannel;
     }
 
     /**
-     * Get 推送会话ID 
-     * @return PushTargetId 推送会话ID
+     * Get <p>推送会话ID</p> 
+     * @return PushTargetId <p>推送会话ID</p>
      */
     public String getPushTargetId() {
         return this.PushTargetId;
     }
 
     /**
-     * Set 推送会话ID
-     * @param PushTargetId 推送会话ID
+     * Set <p>推送会话ID</p>
+     * @param PushTargetId <p>推送会话ID</p>
      */
     public void setPushTargetId(String PushTargetId) {
         this.PushTargetId = PushTargetId;
     }
 
     /**
-     * Get 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) | 
-     * @return PushTargetType 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
+     * Get <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p> 
+     * @return PushTargetType <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
      */
     public Long getPushTargetType() {
         return this.PushTargetType;
     }
 
     /**
-     * Set 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
-     * @param PushTargetType 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 |  |
-| 1 | 用户 (微信公众号 openid) |
-| 2 | 群聊 (企微机器人 chat_id) |
+     * Set <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
+     * @param PushTargetType <p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 |  |<br>| 1 | 用户 (微信公众号 openid) |<br>| 2 | 群聊 (企微机器人 chat_id) |</p>
      */
     public void setPushTargetType(Long PushTargetType) {
         this.PushTargetType = PushTargetType;
     }
 
     /**
-     * Get  
-     * @return PushWebhookUrl 
+     * Get <p>推送webhook的url</p> 
+     * @return PushWebhookUrl <p>推送webhook的url</p>
      */
     public String getPushWebhookUrl() {
         return this.PushWebhookUrl;
     }
 
     /**
-     * Set 
-     * @param PushWebhookUrl 
+     * Set <p>推送webhook的url</p>
+     * @param PushWebhookUrl <p>推送webhook的url</p>
      */
     public void setPushWebhookUrl(String PushWebhookUrl) {
         this.PushWebhookUrl = PushWebhookUrl;

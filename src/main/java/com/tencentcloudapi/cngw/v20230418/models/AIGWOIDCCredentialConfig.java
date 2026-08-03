@@ -31,7 +31,7 @@ public class AIGWOIDCCredentialConfig extends AbstractModel {
     private String ClientId;
 
     /**
-    * <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+    * <p>IdP 注册的 client_secret</p>
     */
     @SerializedName("ClientSecret")
     @Expose
@@ -68,16 +68,16 @@ public class AIGWOIDCCredentialConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p> 
-     * @return ClientSecret <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+     * Get <p>IdP 注册的 client_secret</p> 
+     * @return ClientSecret <p>IdP 注册的 client_secret</p>
      */
     public String getClientSecret() {
         return this.ClientSecret;
     }
 
     /**
-     * Set <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
-     * @param ClientSecret <p>客户端密钥</p><p>参数格式：IdP 注册的 client_secret</p>
+     * Set <p>IdP 注册的 client_secret</p>
+     * @param ClientSecret <p>IdP 注册的 client_secret</p>
      */
     public void setClientSecret(String ClientSecret) {
         this.ClientSecret = ClientSecret;

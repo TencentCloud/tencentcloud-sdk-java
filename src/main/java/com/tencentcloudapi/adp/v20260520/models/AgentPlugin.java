@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AgentPlugin extends AbstractModel {
 
     /**
-    * 插件基本配置
+    * <p>插件基本配置</p>
     */
     @SerializedName("Config")
     @Expose
     private AgentPluginConfig Config;
 
     /**
-    * 插件名称
+    * <p>插件名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 插件图标url
+    * <p>插件图标url</p>
     */
     @SerializedName("IconUrl")
     @Expose
     private String IconUrl;
 
     /**
-    * 插件描述
+    * <p>插件描述</p>
     */
     @SerializedName("Description")
     @Expose
@@ -73,64 +73,64 @@ public class AgentPlugin extends AbstractModel {
     private Long AuthConfigStatus;
 
     /**
-     * Get 插件基本配置 
-     * @return Config 插件基本配置
+     * Get <p>插件基本配置</p> 
+     * @return Config <p>插件基本配置</p>
      */
     public AgentPluginConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 插件基本配置
-     * @param Config 插件基本配置
+     * Set <p>插件基本配置</p>
+     * @param Config <p>插件基本配置</p>
      */
     public void setConfig(AgentPluginConfig Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 插件名称 
-     * @return Name 插件名称
+     * Get <p>插件名称</p> 
+     * @return Name <p>插件名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 插件名称
-     * @param Name 插件名称
+     * Set <p>插件名称</p>
+     * @param Name <p>插件名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 插件图标url 
-     * @return IconUrl 插件图标url
+     * Get <p>插件图标url</p> 
+     * @return IconUrl <p>插件图标url</p>
      */
     public String getIconUrl() {
         return this.IconUrl;
     }
 
     /**
-     * Set 插件图标url
-     * @param IconUrl 插件图标url
+     * Set <p>插件图标url</p>
+     * @param IconUrl <p>插件图标url</p>
      */
     public void setIconUrl(String IconUrl) {
         this.IconUrl = IconUrl;
     }
 
     /**
-     * Get 插件描述 
-     * @return Description 插件描述
+     * Get <p>插件描述</p> 
+     * @return Description <p>插件描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 插件描述
-     * @param Description 插件描述
+     * Set <p>插件描述</p>
+     * @param Description <p>插件描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

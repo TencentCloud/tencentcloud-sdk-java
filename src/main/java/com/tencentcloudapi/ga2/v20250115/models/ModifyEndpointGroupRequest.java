@@ -52,7 +52,7 @@ public class ModifyEndpointGroupRequest extends AbstractModel {
     private EndpointConfigurations [] EndpointConfigurations;
 
     /**
-    * <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+    * <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
     */
     @SerializedName("Name")
     @Expose
@@ -256,16 +256,16 @@ public class ModifyEndpointGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p> 
-     * @return Name <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+     * Get <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p> 
+     * @return Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
-     * @param Name <p>名称。</p><p>入参限制：最大长度不能超过128个字节。</p><p>以大小写字母或中文开头。</p>
+     * Set <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+     * @param Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public void setName(String Name) {
         this.Name = Name;

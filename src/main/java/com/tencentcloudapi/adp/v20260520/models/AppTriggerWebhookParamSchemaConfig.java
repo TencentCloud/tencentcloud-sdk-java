@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AppTriggerWebhookParamSchemaConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>触发器API参数列表</p>
     */
     @SerializedName("SchemaList")
     @Expose
     private AppTriggerParamSchema [] SchemaList;
 
     /**
-     * Get  
-     * @return SchemaList 
+     * Get <p>触发器API参数列表</p> 
+     * @return SchemaList <p>触发器API参数列表</p>
      */
     public AppTriggerParamSchema [] getSchemaList() {
         return this.SchemaList;
     }
 
     /**
-     * Set 
-     * @param SchemaList 
+     * Set <p>触发器API参数列表</p>
+     * @param SchemaList <p>触发器API参数列表</p>
      */
     public void setSchemaList(AppTriggerParamSchema [] SchemaList) {
         this.SchemaList = SchemaList;

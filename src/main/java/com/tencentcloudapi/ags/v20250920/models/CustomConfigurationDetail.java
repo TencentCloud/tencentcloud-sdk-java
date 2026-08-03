@@ -31,7 +31,7 @@ public class CustomConfigurationDetail extends AbstractModel {
     private String Image;
 
     /**
-    * <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
+    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code>。</p><p>枚举值：</p><ul><li>enterprise： TCR 企业容器镜像服务</li><li>personal： CCR 个人容器镜像服务</li></ul>
     */
     @SerializedName("ImageRegistryType")
     @Expose
@@ -110,16 +110,16 @@ public class CustomConfigurationDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p> 
-     * @return ImageRegistryType <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
+     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code>。</p><p>枚举值：</p><ul><li>enterprise： TCR 企业容器镜像服务</li><li>personal： CCR 个人容器镜像服务</li></ul> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code>。</p><p>枚举值：</p><ul><li>enterprise： TCR 企业容器镜像服务</li><li>personal： CCR 个人容器镜像服务</li></ul>
      */
     public String getImageRegistryType() {
         return this.ImageRegistryType;
     }
 
     /**
-     * Set <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
-     * @param ImageRegistryType <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
+     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code>。</p><p>枚举值：</p><ul><li>enterprise： TCR 企业容器镜像服务</li><li>personal： CCR 个人容器镜像服务</li></ul>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code>。</p><p>枚举值：</p><ul><li>enterprise： TCR 企业容器镜像服务</li><li>personal： CCR 个人容器镜像服务</li></ul>
      */
     public void setImageRegistryType(String ImageRegistryType) {
         this.ImageRegistryType = ImageRegistryType;

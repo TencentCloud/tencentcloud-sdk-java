@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel {
 
     /**
-    * 时间点截图模板唯一标识。
+    * <p>时间点截图模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 时间点截图模板唯一标识。 
-     * @return Definition 时间点截图模板唯一标识。
+     * Get <p>时间点截图模板唯一标识。</p> 
+     * @return Definition <p>时间点截图模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 时间点截图模板唯一标识。
-     * @param Definition 时间点截图模板唯一标识。
+     * Set <p>时间点截图模板唯一标识。</p>
+     * @param Definition <p>时间点截图模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

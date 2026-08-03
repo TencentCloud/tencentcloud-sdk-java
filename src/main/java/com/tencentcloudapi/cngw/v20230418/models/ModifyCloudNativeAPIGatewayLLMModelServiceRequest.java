@@ -192,6 +192,34 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private Long KeyRotationPeriodDays;
 
     /**
+    * <p>来源服务 ID。</p>
+    */
+    @SerializedName("SourceId")
+    @Expose
+    private String SourceId;
+
+    /**
+    * <p>命名空间。</p>
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * <p>服务名称。</p>
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
+    * <p>协议类型，如 OpenAI、Custom。</p>
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -575,6 +603,70 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.KeyRotationPeriodDays = KeyRotationPeriodDays;
     }
 
+    /**
+     * Get <p>来源服务 ID。</p> 
+     * @return SourceId <p>来源服务 ID。</p>
+     */
+    public String getSourceId() {
+        return this.SourceId;
+    }
+
+    /**
+     * Set <p>来源服务 ID。</p>
+     * @param SourceId <p>来源服务 ID。</p>
+     */
+    public void setSourceId(String SourceId) {
+        this.SourceId = SourceId;
+    }
+
+    /**
+     * Get <p>命名空间。</p> 
+     * @return Namespace <p>命名空间。</p>
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set <p>命名空间。</p>
+     * @param Namespace <p>命名空间。</p>
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get <p>服务名称。</p> 
+     * @return ServiceName <p>服务名称。</p>
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set <p>服务名称。</p>
+     * @param ServiceName <p>服务名称。</p>
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
+    /**
+     * Get <p>协议类型，如 OpenAI、Custom。</p> 
+     * @return Protocol <p>协议类型，如 OpenAI、Custom。</p>
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set <p>协议类型，如 OpenAI、Custom。</p>
+     * @param Protocol <p>协议类型，如 OpenAI、Custom。</p>
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -664,6 +756,18 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.KeyRotationPeriodDays != null) {
             this.KeyRotationPeriodDays = new Long(source.KeyRotationPeriodDays);
         }
+        if (source.SourceId != null) {
+            this.SourceId = new String(source.SourceId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -695,6 +799,10 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
         this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
         this.setParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
+        this.setParamSimple(map, prefix + "SourceId", this.SourceId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

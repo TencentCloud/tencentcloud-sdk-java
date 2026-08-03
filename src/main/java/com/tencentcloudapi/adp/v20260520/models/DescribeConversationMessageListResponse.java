@@ -74,6 +74,14 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
     private ConversationResetInfo ResetInfo;
 
     /**
+    * <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordSummaryList")
+    @Expose
+    private ConversationRecordSummary [] RecordSummaryList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -201,6 +209,26 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordSummaryList <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationRecordSummary [] getRecordSummaryList() {
+        return this.RecordSummaryList;
+    }
+
+    /**
+     * Set <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordSummaryList <p>单次对话记录统计列表，与 message_list 通过 record_id / related_record_id 关联</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordSummaryList(ConversationRecordSummary [] RecordSummaryList) {
+        this.RecordSummaryList = RecordSummaryList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -251,6 +279,12 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
         if (source.ResetInfo != null) {
             this.ResetInfo = new ConversationResetInfo(source.ResetInfo);
         }
+        if (source.RecordSummaryList != null) {
+            this.RecordSummaryList = new ConversationRecordSummary[source.RecordSummaryList.length];
+            for (int i = 0; i < source.RecordSummaryList.length; i++) {
+                this.RecordSummaryList[i] = new ConversationRecordSummary(source.RecordSummaryList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -268,6 +302,7 @@ public class DescribeConversationMessageListResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MessageList.", this.MessageList);
         this.setParamArrayObj(map, prefix + "Messages.", this.Messages);
         this.setParamObj(map, prefix + "ResetInfo.", this.ResetInfo);
+        this.setParamArrayObj(map, prefix + "RecordSummaryList.", this.RecordSummaryList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

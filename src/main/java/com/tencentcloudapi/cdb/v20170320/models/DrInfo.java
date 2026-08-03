@@ -24,186 +24,161 @@ import java.util.HashMap;
 public class DrInfo extends AbstractModel {
 
     /**
-    * 灾备实例状态
+    * <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 可用区信息
+    * <p>可用区信息</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
+    * <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
     */
     @SerializedName("SyncStatus")
     @Expose
     private Long SyncStatus;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-     * Get 灾备实例状态 
-     * @return Status 灾备实例状态
+     * Get <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul> 
+     * @return Status <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 灾备实例状态
-     * @param Status 灾备实例状态
+     * Set <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
+     * @param Status <p>灾备实例状态</p><p>枚举值：</p><ul><li>0： 创建中</li><li>1： 运行中</li><li>4： 正在进行隔离操作</li><li>5： 已隔离</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 可用区信息 
-     * @return Zone 可用区信息
+     * Get <p>可用区信息</p> 
+     * @return Zone <p>可用区信息</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区信息
-     * @param Zone 可用区信息
+     * Set <p>可用区信息</p>
+     * @param Zone <p>可用区信息</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get <p>地域信息</p> 
+     * @return Region <p>地域信息</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set <p>地域信息</p>
+     * @param Region <p>地域信息</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。 
-     * @return SyncStatus 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
+     * Get <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p> 
+     * @return SyncStatus <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
-     * @param SyncStatus 实例同步状态。可能的返回值为：
-0 - 灾备未同步；
-1 - 灾备同步中；
-2 - 灾备同步成功；
-3 - 灾备同步失败；
-4 - 灾备同步修复中。
+     * Set <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
+     * @param SyncStatus <p>实例同步状态。可能的返回值为：<br>0 - 灾备未同步；<br>1 - 灾备同步中；<br>2 - 灾备同步成功；<br>3 - 灾备同步失败；<br>4 - 灾备同步修复中。</p>
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;

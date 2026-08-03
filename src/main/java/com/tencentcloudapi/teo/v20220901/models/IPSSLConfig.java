@@ -24,7 +24,15 @@ import java.util.HashMap;
 public class IPSSLConfig extends AbstractModel {
 
     /**
-    * IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。
+    * <p>IP SSL 关联域名所属站点ID。如果Status值为 unbound 时，该字段为空值。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * <p>IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedDomain")
@@ -32,20 +40,36 @@ public class IPSSLConfig extends AbstractModel {
     private String AssociatedDomain;
 
     /**
-    * 关联状态， 取值如下：
-<li>bound：IP SSL配置已绑定</li>
-<li>binding：IP SSL配置绑定中</li>
-<li>unbinding：IP SSL配置解绑中</li>
-<li>unbound：IP SSL配置未绑定</li>
+    * <p>关联状态， 取值如下：</p><li>bound：IP SSL配置已绑定</li><li>binding：IP SSL配置绑定中</li><li>unbinding：IP SSL配置解绑中</li><li>unbound：IP SSL配置未绑定</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。
+     * Get <p>IP SSL 关联域名所属站点ID。如果Status值为 unbound 时，该字段为空值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssociatedDomain IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。
+     * @return ZoneId <p>IP SSL 关联域名所属站点ID。如果Status值为 unbound 时，该字段为空值。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set <p>IP SSL 关联域名所属站点ID。如果Status值为 unbound 时，该字段为空值。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId <p>IP SSL 关联域名所属站点ID。如果Status值为 unbound 时，该字段为空值。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get <p>IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociatedDomain <p>IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssociatedDomain() {
@@ -53,9 +77,9 @@ public class IPSSLConfig extends AbstractModel {
     }
 
     /**
-     * Set IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。
+     * Set <p>IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssociatedDomain IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。
+     * @param AssociatedDomain <p>IP SSL关联的域名。如果Status值为 unbound 时，该字段为空值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedDomain(String AssociatedDomain) {
@@ -63,32 +87,16 @@ public class IPSSLConfig extends AbstractModel {
     }
 
     /**
-     * Get 关联状态， 取值如下：
-<li>bound：IP SSL配置已绑定</li>
-<li>binding：IP SSL配置绑定中</li>
-<li>unbinding：IP SSL配置解绑中</li>
-<li>unbound：IP SSL配置未绑定</li> 
-     * @return Status 关联状态， 取值如下：
-<li>bound：IP SSL配置已绑定</li>
-<li>binding：IP SSL配置绑定中</li>
-<li>unbinding：IP SSL配置解绑中</li>
-<li>unbound：IP SSL配置未绑定</li>
+     * Get <p>关联状态， 取值如下：</p><li>bound：IP SSL配置已绑定</li><li>binding：IP SSL配置绑定中</li><li>unbinding：IP SSL配置解绑中</li><li>unbound：IP SSL配置未绑定</li> 
+     * @return Status <p>关联状态， 取值如下：</p><li>bound：IP SSL配置已绑定</li><li>binding：IP SSL配置绑定中</li><li>unbinding：IP SSL配置解绑中</li><li>unbound：IP SSL配置未绑定</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 关联状态， 取值如下：
-<li>bound：IP SSL配置已绑定</li>
-<li>binding：IP SSL配置绑定中</li>
-<li>unbinding：IP SSL配置解绑中</li>
-<li>unbound：IP SSL配置未绑定</li>
-     * @param Status 关联状态， 取值如下：
-<li>bound：IP SSL配置已绑定</li>
-<li>binding：IP SSL配置绑定中</li>
-<li>unbinding：IP SSL配置解绑中</li>
-<li>unbound：IP SSL配置未绑定</li>
+     * Set <p>关联状态， 取值如下：</p><li>bound：IP SSL配置已绑定</li><li>binding：IP SSL配置绑定中</li><li>unbinding：IP SSL配置解绑中</li><li>unbound：IP SSL配置未绑定</li>
+     * @param Status <p>关联状态， 取值如下：</p><li>bound：IP SSL配置已绑定</li><li>binding：IP SSL配置绑定中</li><li>unbinding：IP SSL配置解绑中</li><li>unbound：IP SSL配置未绑定</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -102,6 +110,9 @@ public class IPSSLConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public IPSSLConfig(IPSSLConfig source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.AssociatedDomain != null) {
             this.AssociatedDomain = new String(source.AssociatedDomain);
         }
@@ -115,6 +126,7 @@ public class IPSSLConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "AssociatedDomain", this.AssociatedDomain);
         this.setParamSimple(map, prefix + "Status", this.Status);
 

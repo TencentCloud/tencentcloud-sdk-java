@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLaunchTemplateVersionResponse extends AbstractModel {
 
     /**
-    * 新创建的实例启动模板版本号。
+    * <p>新创建的实例启动模板版本号。</p>
     */
     @SerializedName("LaunchTemplateVersionNumber")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLaunchTemplateVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新创建的实例启动模板版本号。 
-     * @return LaunchTemplateVersionNumber 新创建的实例启动模板版本号。
+     * Get <p>新创建的实例启动模板版本号。</p> 
+     * @return LaunchTemplateVersionNumber <p>新创建的实例启动模板版本号。</p>
      */
     public Long getLaunchTemplateVersionNumber() {
         return this.LaunchTemplateVersionNumber;
     }
 
     /**
-     * Set 新创建的实例启动模板版本号。
-     * @param LaunchTemplateVersionNumber 新创建的实例启动模板版本号。
+     * Set <p>新创建的实例启动模板版本号。</p>
+     * @param LaunchTemplateVersionNumber <p>新创建的实例启动模板版本号。</p>
      */
     public void setLaunchTemplateVersionNumber(Long LaunchTemplateVersionNumber) {
         this.LaunchTemplateVersionNumber = LaunchTemplateVersionNumber;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AppTriggerScheduleStatus extends AbstractModel {
 
     /**
-    * 
+    * <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
     */
     @SerializedName("LastFireTime")
     @Expose
     private String LastFireTime;
 
     /**
-    * 
+    * <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
     */
     @SerializedName("NextFireTime")
     @Expose
     private String NextFireTime;
 
     /**
-    * 
+    * <p>触发方式</p>
     */
     @SerializedName("PolicySummary")
     @Expose
     private String PolicySummary;
 
     /**
-     * Get  
-     * @return LastFireTime 
+     * Get <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p> 
+     * @return LastFireTime <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
      */
     public String getLastFireTime() {
         return this.LastFireTime;
     }
 
     /**
-     * Set 
-     * @param LastFireTime 
+     * Set <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+     * @param LastFireTime <p>最近一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
      */
     public void setLastFireTime(String LastFireTime) {
         this.LastFireTime = LastFireTime;
     }
 
     /**
-     * Get  
-     * @return NextFireTime 
+     * Get <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p> 
+     * @return NextFireTime <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
      */
     public String getNextFireTime() {
         return this.NextFireTime;
     }
 
     /**
-     * Set 
-     * @param NextFireTime 
+     * Set <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
+     * @param NextFireTime <p>下一次触发时间</p><p>参数格式：格式为YYYY-MM-DD hh:mm:ss</p>
      */
     public void setNextFireTime(String NextFireTime) {
         this.NextFireTime = NextFireTime;
     }
 
     /**
-     * Get  
-     * @return PolicySummary 
+     * Get <p>触发方式</p> 
+     * @return PolicySummary <p>触发方式</p>
      */
     public String getPolicySummary() {
         return this.PolicySummary;
     }
 
     /**
-     * Set 
-     * @param PolicySummary 
+     * Set <p>触发方式</p>
+     * @param PolicySummary <p>触发方式</p>
      */
     public void setPolicySummary(String PolicySummary) {
         this.PolicySummary = PolicySummary;

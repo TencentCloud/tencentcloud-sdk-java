@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteDatasetResponse extends AbstractModel {
 
     /**
-    * 删除的datasetId
+    * <p>删除的datasetId</p>
     */
     @SerializedName("DatasetId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteDatasetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除的datasetId 
-     * @return DatasetId 删除的datasetId
+     * Get <p>删除的datasetId</p> 
+     * @return DatasetId <p>删除的datasetId</p>
      */
     public String getDatasetId() {
         return this.DatasetId;
     }
 
     /**
-     * Set 删除的datasetId
-     * @param DatasetId 删除的datasetId
+     * Set <p>删除的datasetId</p>
+     * @param DatasetId <p>删除的datasetId</p>
      */
     public void setDatasetId(String DatasetId) {
         this.DatasetId = DatasetId;

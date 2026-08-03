@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UpdateL3CidrRequest extends AbstractModel {
 
     /**
-    * 互通规则ID
+    * <p>互通规则ID</p>
     */
     @SerializedName("L3ConnId")
     @Expose
     private String L3ConnId;
 
     /**
-    * 互通规则CIDR
+    * <p>互通规则CIDR</p>
     */
     @SerializedName("Cidr1")
     @Expose
     private String Cidr1;
 
     /**
-    * 互通设备ID
+    * <p>互通设备ID</p>
     */
     @SerializedName("DeviceId1")
     @Expose
     private String DeviceId1;
 
     /**
-    * 互通设备ID
+    * <p>互通设备ID</p>
     */
     @SerializedName("DeviceId2")
     @Expose
     private String DeviceId2;
 
     /**
-    * 互通规则CIDR
+    * <p>互通规则CIDR</p>
     */
     @SerializedName("Cidr2")
     @Expose
     private String Cidr2;
 
     /**
-     * Get 互通规则ID 
-     * @return L3ConnId 互通规则ID
+     * Get <p>互通规则ID</p> 
+     * @return L3ConnId <p>互通规则ID</p>
      */
     public String getL3ConnId() {
         return this.L3ConnId;
     }
 
     /**
-     * Set 互通规则ID
-     * @param L3ConnId 互通规则ID
+     * Set <p>互通规则ID</p>
+     * @param L3ConnId <p>互通规则ID</p>
      */
     public void setL3ConnId(String L3ConnId) {
         this.L3ConnId = L3ConnId;
     }
 
     /**
-     * Get 互通规则CIDR 
-     * @return Cidr1 互通规则CIDR
+     * Get <p>互通规则CIDR</p> 
+     * @return Cidr1 <p>互通规则CIDR</p>
      */
     public String getCidr1() {
         return this.Cidr1;
     }
 
     /**
-     * Set 互通规则CIDR
-     * @param Cidr1 互通规则CIDR
+     * Set <p>互通规则CIDR</p>
+     * @param Cidr1 <p>互通规则CIDR</p>
      */
     public void setCidr1(String Cidr1) {
         this.Cidr1 = Cidr1;
     }
 
     /**
-     * Get 互通设备ID 
-     * @return DeviceId1 互通设备ID
+     * Get <p>互通设备ID</p> 
+     * @return DeviceId1 <p>互通设备ID</p>
      */
     public String getDeviceId1() {
         return this.DeviceId1;
     }
 
     /**
-     * Set 互通设备ID
-     * @param DeviceId1 互通设备ID
+     * Set <p>互通设备ID</p>
+     * @param DeviceId1 <p>互通设备ID</p>
      */
     public void setDeviceId1(String DeviceId1) {
         this.DeviceId1 = DeviceId1;
     }
 
     /**
-     * Get 互通设备ID 
-     * @return DeviceId2 互通设备ID
+     * Get <p>互通设备ID</p> 
+     * @return DeviceId2 <p>互通设备ID</p>
      */
     public String getDeviceId2() {
         return this.DeviceId2;
     }
 
     /**
-     * Set 互通设备ID
-     * @param DeviceId2 互通设备ID
+     * Set <p>互通设备ID</p>
+     * @param DeviceId2 <p>互通设备ID</p>
      */
     public void setDeviceId2(String DeviceId2) {
         this.DeviceId2 = DeviceId2;
     }
 
     /**
-     * Get 互通规则CIDR 
-     * @return Cidr2 互通规则CIDR
+     * Get <p>互通规则CIDR</p> 
+     * @return Cidr2 <p>互通规则CIDR</p>
      */
     public String getCidr2() {
         return this.Cidr2;
     }
 
     /**
-     * Set 互通规则CIDR
-     * @param Cidr2 互通规则CIDR
+     * Set <p>互通规则CIDR</p>
+     * @param Cidr2 <p>互通规则CIDR</p>
      */
     public void setCidr2(String Cidr2) {
         this.Cidr2 = Cidr2;

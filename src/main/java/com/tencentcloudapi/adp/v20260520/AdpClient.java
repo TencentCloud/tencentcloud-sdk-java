@@ -160,17 +160,6 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *CreateTimerTask
-     * @param req CreateTimerTaskRequest
-     * @return CreateTimerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTimerTaskResponse CreateTimerTask(CreateTimerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTimerTask", CreateTimerTaskResponse.class);
-    }
-
-    /**
      *创建参数变量
      * @param req CreateVariableRequest
      * @return CreateVariableResponse
@@ -289,17 +278,6 @@ public class AdpClient extends AbstractClient{
     public DeleteSpaceResponse DeleteSpace(DeleteSpaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSpace", DeleteSpaceResponse.class);
-    }
-
-    /**
-     *DeleteTimerTask
-     * @param req DeleteTimerTaskRequest
-     * @return DeleteTimerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTimerTaskResponse DeleteTimerTask(DeleteTimerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTimerTask", DeleteTimerTaskResponse.class);
     }
 
     /**
@@ -611,39 +589,6 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *DescribeTimerTask
-     * @param req DescribeTimerTaskRequest
-     * @return DescribeTimerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTimerTaskResponse DescribeTimerTask(DescribeTimerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTimerTask", DescribeTimerTaskResponse.class);
-    }
-
-    /**
-     *查询定时任务执行记录列表
-     * @param req DescribeTimerTaskRunLogListRequest
-     * @return DescribeTimerTaskRunLogListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTimerTaskRunLogListResponse DescribeTimerTaskRunLogList(DescribeTimerTaskRunLogListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTimerTaskRunLogList", DescribeTimerTaskRunLogListResponse.class);
-    }
-
-    /**
-     *查询定时任务列表
-     * @param req DescribeTimerTaskSummaryListRequest
-     * @return DescribeTimerTaskSummaryListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTimerTaskSummaryListResponse DescribeTimerTaskSummaryList(DescribeTimerTaskSummaryListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTimerTaskSummaryList", DescribeTimerTaskSummaryListResponse.class);
-    }
-
-    /**
      *获取参数变量
      * @param req DescribeVariableRequest
      * @return DescribeVariableResponse
@@ -685,28 +630,6 @@ public class AdpClient extends AbstractClient{
     public FavoriteSkillResponse FavoriteSkill(FavoriteSkillRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "FavoriteSkill", FavoriteSkillResponse.class);
-    }
-
-    /**
-     *MarkAppTriggerRunLogRead
-     * @param req MarkAppTriggerRunLogReadRequest
-     * @return MarkAppTriggerRunLogReadResponse
-     * @throws TencentCloudSDKException
-     */
-    public MarkAppTriggerRunLogReadResponse MarkAppTriggerRunLogRead(MarkAppTriggerRunLogReadRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "MarkAppTriggerRunLogRead", MarkAppTriggerRunLogReadResponse.class);
-    }
-
-    /**
-     *MarkTimerTaskRunLogRead
-     * @param req MarkTimerTaskRunLogReadRequest
-     * @return MarkTimerTaskRunLogReadResponse
-     * @throws TencentCloudSDKException
-     */
-    public MarkTimerTaskRunLogReadResponse MarkTimerTaskRunLogRead(MarkTimerTaskRunLogReadRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "MarkTimerTaskRunLogRead", MarkTimerTaskRunLogReadResponse.class);
     }
 
     /**
@@ -787,17 +710,6 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *ModifyTimerTask
-     * @param req ModifyTimerTaskRequest
-     * @return ModifyTimerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTimerTaskResponse ModifyTimerTask(ModifyTimerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTimerTask", ModifyTimerTaskResponse.class);
-    }
-
-    /**
      *更新参数变量
      * @param req ModifyVariableRequest
      * @return ModifyVariableResponse
@@ -820,17 +732,6 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *PauseTimerTask
-     * @param req PauseTimerTaskRequest
-     * @return PauseTimerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public PauseTimerTaskResponse PauseTimerTask(PauseTimerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "PauseTimerTask", PauseTimerTaskResponse.class);
-    }
-
-    /**
      *上架skill
      * @param req ReleaseSkillRequest
      * @return ReleaseSkillResponse
@@ -843,6 +744,7 @@ public class AdpClient extends AbstractClient{
 
     /**
      *重置会话
+注意：当前Claw模式应用会话不支持重置
      * @param req ResetConversationRequest
      * @return ResetConversationResponse
      * @throws TencentCloudSDKException
@@ -861,17 +763,6 @@ public class AdpClient extends AbstractClient{
     public ResumeAppTriggerResponse ResumeAppTrigger(ResumeAppTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumeAppTrigger", ResumeAppTriggerResponse.class);
-    }
-
-    /**
-     *ResumeTimerTask
-     * @param req ResumeTimerTaskRequest
-     * @return ResumeTimerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ResumeTimerTaskResponse ResumeTimerTask(ResumeTimerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ResumeTimerTask", ResumeTimerTaskResponse.class);
     }
 
     /**
@@ -905,17 +796,6 @@ public class AdpClient extends AbstractClient{
     public RunAppTriggerNowResponse RunAppTriggerNow(RunAppTriggerNowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunAppTriggerNow", RunAppTriggerNowResponse.class);
-    }
-
-    /**
-     *RunTimerTaskNow
-     * @param req RunTimerTaskNowRequest
-     * @return RunTimerTaskNowResponse
-     * @throws TencentCloudSDKException
-     */
-    public RunTimerTaskNowResponse RunTimerTaskNow(RunTimerTaskNowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RunTimerTaskNow", RunTimerTaskNowResponse.class);
     }
 
     /**

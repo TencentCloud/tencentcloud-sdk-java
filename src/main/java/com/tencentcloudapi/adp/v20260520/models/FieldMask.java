@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class FieldMask extends AbstractModel {
 
     /**
-    * 字段路径列表
+    * <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
     */
     @SerializedName("Paths")
     @Expose
     private String [] Paths;
 
     /**
-     * Get 字段路径列表 
-     * @return Paths 字段路径列表
+     * Get <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p> 
+     * @return Paths <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
      */
     public String [] getPaths() {
         return this.Paths;
     }
 
     /**
-     * Set 字段路径列表
-     * @param Paths 字段路径列表
+     * Set <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
+     * @param Paths <p>参数名称</p><p>参数格式：需要获取的指定字段路径</p>
      */
     public void setPaths(String [] Paths) {
         this.Paths = Paths;

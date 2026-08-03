@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AppTriggerWebhookStatus extends AbstractModel {
 
     /**
-    * 
+    * <p>推送Webbook地址</p>
     */
     @SerializedName("WebhookUrl")
     @Expose
     private String WebhookUrl;
 
     /**
-     * Get  
-     * @return WebhookUrl 
+     * Get <p>推送Webbook地址</p> 
+     * @return WebhookUrl <p>推送Webbook地址</p>
      */
     public String getWebhookUrl() {
         return this.WebhookUrl;
     }
 
     /**
-     * Set 
-     * @param WebhookUrl 
+     * Set <p>推送Webbook地址</p>
+     * @param WebhookUrl <p>推送Webbook地址</p>
      */
     public void setWebhookUrl(String WebhookUrl) {
         this.WebhookUrl = WebhookUrl;

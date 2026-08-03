@@ -38,7 +38,7 @@ public class ModifyListenerRequest extends AbstractModel {
     private String ListenerId;
 
     /**
-    * <p>名称，最大长度不能超过60个字节。</p>
+    * <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
     */
     @SerializedName("Name")
     @Expose
@@ -101,14 +101,14 @@ public class ModifyListenerRequest extends AbstractModel {
     private String CipherPolicyId;
 
     /**
-    * <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+    * <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p>
     */
     @SerializedName("ServerCertificates")
     @Expose
     private String [] ServerCertificates;
 
     /**
-    * <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+    * <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
     */
     @SerializedName("ClientCaCertificates")
     @Expose
@@ -154,16 +154,16 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>名称，最大长度不能超过60个字节。</p> 
-     * @return Name <p>名称，最大长度不能超过60个字节。</p>
+     * Get <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p> 
+     * @return Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称，最大长度不能超过60个字节。</p>
-     * @param Name <p>名称，最大长度不能超过60个字节。</p>
+     * Set <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+     * @param Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -298,32 +298,32 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p> 
-     * @return ServerCertificates <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * Get <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p> 
+     * @return ServerCertificates <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public String [] getServerCertificates() {
         return this.ServerCertificates;
     }
 
     /**
-     * Set <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
-     * @param ServerCertificates <p>服务器证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * Set <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p>
+     * @param ServerCertificates <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>HTTPS监听器才支持此参数修改。</p>
      */
     public void setServerCertificates(String [] ServerCertificates) {
         this.ServerCertificates = ServerCertificates;
     }
 
     /**
-     * Get <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p> 
-     * @return ClientCaCertificates <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+     * Get <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p> 
+     * @return ClientCaCertificates <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
      */
     public String [] getClientCaCertificates() {
         return this.ClientCaCertificates;
     }
 
     /**
-     * Set <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
-     * @param ClientCaCertificates <p>客户端证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+     * Set <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
+     * @param ClientCaCertificates <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>HTTPS监听器才支持此参数修改，并且开启双向认证。</p>
      */
     public void setClientCaCertificates(String [] ClientCaCertificates) {
         this.ClientCaCertificates = ClientCaCertificates;

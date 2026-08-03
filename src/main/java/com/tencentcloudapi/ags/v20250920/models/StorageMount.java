@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class StorageMount extends AbstractModel {
 
     /**
-    * 存储挂载配置名称
+    * <p>存储挂载配置名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 存储配置
+    * <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageSource")
     @Expose
     private StorageSource StorageSource;
 
     /**
-    * 沙箱实例本地挂载路径
+    * <p>沙箱实例本地挂载路径</p>
     */
     @SerializedName("MountPath")
     @Expose
     private String MountPath;
 
     /**
-    * 存储挂载读写权限配置，默认为false
+    * <p>存储挂载读写权限配置，默认为false</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-     * Get 存储挂载配置名称 
-     * @return Name 存储挂载配置名称
+     * Get <p>存储挂载配置名称</p> 
+     * @return Name <p>存储挂载配置名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 存储挂载配置名称
-     * @param Name 存储挂载配置名称
+     * Set <p>存储挂载配置名称</p>
+     * @param Name <p>存储挂载配置名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 存储配置 
-     * @return StorageSource 存储配置
+     * Get <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageSource <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageSource getStorageSource() {
         return this.StorageSource;
     }
 
     /**
-     * Set 存储配置
-     * @param StorageSource 存储配置
+     * Set <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageSource <p>存储配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageSource(StorageSource StorageSource) {
         this.StorageSource = StorageSource;
     }
 
     /**
-     * Get 沙箱实例本地挂载路径 
-     * @return MountPath 沙箱实例本地挂载路径
+     * Get <p>沙箱实例本地挂载路径</p> 
+     * @return MountPath <p>沙箱实例本地挂载路径</p>
      */
     public String getMountPath() {
         return this.MountPath;
     }
 
     /**
-     * Set 沙箱实例本地挂载路径
-     * @param MountPath 沙箱实例本地挂载路径
+     * Set <p>沙箱实例本地挂载路径</p>
+     * @param MountPath <p>沙箱实例本地挂载路径</p>
      */
     public void setMountPath(String MountPath) {
         this.MountPath = MountPath;
     }
 
     /**
-     * Get 存储挂载读写权限配置，默认为false 
-     * @return ReadOnly 存储挂载读写权限配置，默认为false
+     * Get <p>存储挂载读写权限配置，默认为false</p> 
+     * @return ReadOnly <p>存储挂载读写权限配置，默认为false</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 存储挂载读写权限配置，默认为false
-     * @param ReadOnly 存储挂载读写权限配置，默认为false
+     * Set <p>存储挂载读写权限配置，默认为false</p>
+     * @param ReadOnly <p>存储挂载读写权限配置，默认为false</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;

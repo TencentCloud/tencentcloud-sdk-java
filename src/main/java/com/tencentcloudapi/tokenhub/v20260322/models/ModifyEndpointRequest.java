@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyEndpointRequest extends AbstractModel {
 
     /**
-    * 自动调整配额
+    * <p>自动调整配额</p>
     */
     @SerializedName("AutoAdjustQuota")
     @Expose
     private Long AutoAdjustQuota;
 
     /**
-     * Get 自动调整配额 
-     * @return AutoAdjustQuota 自动调整配额
+     * Get <p>自动调整配额</p> 
+     * @return AutoAdjustQuota <p>自动调整配额</p>
      */
     public Long getAutoAdjustQuota() {
         return this.AutoAdjustQuota;
     }
 
     /**
-     * Set 自动调整配额
-     * @param AutoAdjustQuota 自动调整配额
+     * Set <p>自动调整配额</p>
+     * @param AutoAdjustQuota <p>自动调整配额</p>
      */
     public void setAutoAdjustQuota(Long AutoAdjustQuota) {
         this.AutoAdjustQuota = AutoAdjustQuota;

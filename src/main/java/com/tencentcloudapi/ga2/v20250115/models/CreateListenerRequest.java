@@ -31,7 +31,7 @@ public class CreateListenerRequest extends AbstractModel {
     private String GlobalAcceleratorId;
 
     /**
-    * <p>名称，最大长度不能超过128个字符。</p>
+    * <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
     */
     @SerializedName("Name")
     @Expose
@@ -80,7 +80,7 @@ public class CreateListenerRequest extends AbstractModel {
     private String GetRealIpType;
 
     /**
-    * <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+    * <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul><p>仅支持4层监听器 ，7层不支持修改</p>
     */
     @SerializedName("ClientAffinity")
     @Expose
@@ -115,14 +115,14 @@ public class CreateListenerRequest extends AbstractModel {
     private String CipherPolicyId;
 
     /**
-    * <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+    * <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
     */
     @SerializedName("ServerCertificates")
     @Expose
     private String [] ServerCertificates;
 
     /**
-    * <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
+    * <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
     */
     @SerializedName("ClientCaCertificates")
     @Expose
@@ -152,16 +152,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>名称，最大长度不能超过128个字符。</p> 
-     * @return Name <p>名称，最大长度不能超过128个字符。</p>
+     * Get <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p> 
+     * @return Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称，最大长度不能超过128个字符。</p>
-     * @param Name <p>名称，最大长度不能超过128个字符。</p>
+     * Set <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+     * @param Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -264,16 +264,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul> 
-     * @return ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+     * Get <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul><p>仅支持4层监听器 ，7层不支持修改</p> 
+     * @return ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul><p>仅支持4层监听器 ，7层不支持修改</p>
      */
     public String getClientAffinity() {
         return this.ClientAffinity;
     }
 
     /**
-     * Set <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
-     * @param ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul>
+     * Set <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul><p>仅支持4层监听器 ，7层不支持修改</p>
+     * @param ClientAffinity <p>是否开启会话保持。支持配置&#39;Open&#39;, &#39;Close&#39;。</p><p>枚举值：</p><ul><li>Open： 开启。</li><li>Close： 关闭。</li></ul><p>仅支持4层监听器 ，7层不支持修改</p>
      */
     public void setClientAffinity(String ClientAffinity) {
         this.ClientAffinity = ClientAffinity;
@@ -344,32 +344,32 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p> 
-     * @return ServerCertificates <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+     * Get <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p> 
+     * @return ServerCertificates <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
      */
     public String [] getServerCertificates() {
         return this.ServerCertificates;
     }
 
     /**
-     * Set <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
-     * @param ServerCertificates <p>服务器证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+     * Set <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
+     * @param ServerCertificates <p>服务器证书。</p><p>入参限制：当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。</p><p>当是HTTPS监听器时，此字段必传。</p>
      */
     public void setServerCertificates(String [] ServerCertificates) {
         this.ServerCertificates = ServerCertificates;
     }
 
     /**
-     * Get <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p> 
-     * @return ClientCaCertificates <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
+     * Get <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p> 
+     * @return ClientCaCertificates <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
      */
     public String [] getClientCaCertificates() {
         return this.ClientCaCertificates;
     }
 
     /**
-     * Set <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
-     * @param ClientCaCertificates <p>客户端证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
+     * Set <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
+     * @param ClientCaCertificates <p>客户端证书。</p><p>入参限制：1、当前仅支持传入一本证书；如果要使用多本证书，使用证书接口CreateListenerAdditionalCert来加其他证书。2、证书必须为CA证书。</p><p>当时HTTPS监听器且开启双向认证时，此字段必传。</p>
      */
     public void setClientCaCertificates(String [] ClientCaCertificates) {
         this.ClientCaCertificates = ClientCaCertificates;

@@ -24,43 +24,35 @@ import java.util.HashMap;
 public class AccelerationDomain extends AbstractModel {
 
     /**
-    * 站点 ID。
+    * <p>站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 加速域名名称。
+    * <p>加速域名名称。</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
+    * <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
     */
     @SerializedName("DomainStatus")
     @Expose
     private String DomainStatus;
 
     /**
-    * CNAME 地址。
+    * <p>CNAME 地址。</p>
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+    * <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPv6Status")
@@ -68,9 +60,7 @@ public class AccelerationDomain extends AbstractModel {
     private String IPv6Status;
 
     /**
-    * 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+    * <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentificationStatus")
@@ -78,7 +68,7 @@ public class AccelerationDomain extends AbstractModel {
     private String IdentificationStatus;
 
     /**
-    * 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+    * <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnershipVerification")
@@ -86,7 +76,7 @@ public class AccelerationDomain extends AbstractModel {
     private OwnershipVerification OwnershipVerification;
 
     /**
-    * 源站信息。
+    * <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginDetail")
@@ -94,10 +84,7 @@ public class AccelerationDomain extends AbstractModel {
     private OriginDetail OriginDetail;
 
     /**
-    * 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+    * <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginProtocol")
@@ -105,7 +92,7 @@ public class AccelerationDomain extends AbstractModel {
     private String OriginProtocol;
 
     /**
-    * HTTP 回源端口。
+    * <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpOriginPort")
@@ -113,7 +100,7 @@ public class AccelerationDomain extends AbstractModel {
     private Long HttpOriginPort;
 
     /**
-    * HTTPS 回源端口。
+    * <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsOriginPort")
@@ -121,7 +108,7 @@ public class AccelerationDomain extends AbstractModel {
     private Long HttpsOriginPort;
 
     /**
-    * 加速域名证书信息。
+    * <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Certificate")
@@ -129,113 +116,87 @@ public class AccelerationDomain extends AbstractModel {
     private AccelerationDomainCertificate Certificate;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * 修改时间。
+    * <p>修改时间。</p>
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 加速域名名称。 
-     * @return DomainName 加速域名名称。
+     * Get <p>加速域名名称。</p> 
+     * @return DomainName <p>加速域名名称。</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 加速域名名称。
-     * @param DomainName 加速域名名称。
+     * Set <p>加速域名名称。</p>
+     * @param DomainName <p>加速域名名称。</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li> 
-     * @return DomainStatus 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
+     * Get <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul> 
+     * @return DomainStatus <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
      */
     public String getDomainStatus() {
         return this.DomainStatus;
     }
 
     /**
-     * Set 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
-     * @param DomainStatus 加速域名状态，取值有：
-<li>online：已生效；</li>
-<li>process：部署中；</li>
-<li>offline：已停用；</li>
-<li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点。</li>
+     * Set <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
+     * @param DomainStatus <p>加速域名状态</p><p>枚举值：</p><ul><li>online： 已生效</li><li>process： 部署中</li><li>offline： 已停用</li><li>init： 未生效，待激活站点</li></ul>
      */
     public void setDomainStatus(String DomainStatus) {
         this.DomainStatus = DomainStatus;
     }
 
     /**
-     * Get CNAME 地址。 
-     * @return Cname CNAME 地址。
+     * Get <p>CNAME 地址。</p> 
+     * @return Cname <p>CNAME 地址。</p>
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set CNAME 地址。
-     * @param Cname CNAME 地址。
+     * Set <p>CNAME 地址。</p>
+     * @param Cname <p>CNAME 地址。</p>
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * Get <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IPv6Status IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * @return IPv6Status <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPv6Status() {
@@ -243,15 +204,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * Set <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IPv6Status IPv6 状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * @param IPv6Status <p>IPv6 状态，取值有：</p><li>follow：遵循站点IPv6配置；</li><li>on：开启状态；</li><li>off：关闭状态。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPv6Status(String IPv6Status) {
@@ -259,13 +214,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+     * Get <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdentificationStatus 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+     * @return IdentificationStatus <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentificationStatus() {
@@ -273,13 +224,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+     * Set <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdentificationStatus 加速域名归属权验证状态，取值有： 
-<li>pending：待验证；</li>
-<li>finished：已完成验证。</li>	
+     * @param IdentificationStatus <p>加速域名归属权验证状态，取值有： </p><li>pending：待验证；</li><li>finished：已完成验证。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentificationStatus(String IdentificationStatus) {
@@ -287,9 +234,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+     * Get <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnershipVerification 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+     * @return OwnershipVerification <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OwnershipVerification getOwnershipVerification() {
@@ -297,9 +244,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+     * Set <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnershipVerification 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+     * @param OwnershipVerification <p>加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
@@ -307,9 +254,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 源站信息。
+     * Get <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginDetail 源站信息。
+     * @return OriginDetail <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginDetail getOriginDetail() {
@@ -317,9 +264,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set 源站信息。
+     * Set <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginDetail 源站信息。
+     * @param OriginDetail <p>源站信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginDetail(OriginDetail OriginDetail) {
@@ -327,15 +274,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+     * Get <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginProtocol 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+     * @return OriginProtocol <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginProtocol() {
@@ -343,15 +284,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+     * Set <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginProtocol 回源协议，取值有：
-<li>FOLLOW：协议跟随；</li>
-<li>HTTP：HTTP协议回源；</li>
-<li>HTTPS：HTTPS协议回源。</li>
+     * @param OriginProtocol <p>回源协议，取值有：</p><li>FOLLOW：协议跟随；</li><li>HTTP：HTTP协议回源；</li><li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginProtocol(String OriginProtocol) {
@@ -359,9 +294,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get HTTP 回源端口。
+     * Get <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpOriginPort HTTP 回源端口。
+     * @return HttpOriginPort <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttpOriginPort() {
@@ -369,9 +304,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set HTTP 回源端口。
+     * Set <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpOriginPort HTTP 回源端口。
+     * @param HttpOriginPort <p>HTTP 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
@@ -379,9 +314,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get HTTPS 回源端口。
+     * Get <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpsOriginPort HTTPS 回源端口。
+     * @return HttpsOriginPort <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttpsOriginPort() {
@@ -389,9 +324,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set HTTPS 回源端口。
+     * Set <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsOriginPort HTTPS 回源端口。
+     * @param HttpsOriginPort <p>HTTPS 回源端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
@@ -399,9 +334,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 加速域名证书信息。
+     * Get <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Certificate 加速域名证书信息。
+     * @return Certificate <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccelerationDomainCertificate getCertificate() {
@@ -409,9 +344,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set 加速域名证书信息。
+     * Set <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Certificate 加速域名证书信息。
+     * @param Certificate <p>加速域名证书信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificate(AccelerationDomainCertificate Certificate) {
@@ -419,32 +354,32 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedOn 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedOn <p>创建时间。</p>
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedOn 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedOn <p>创建时间。</p>
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 修改时间。 
-     * @return ModifiedOn 修改时间。
+     * Get <p>修改时间。</p> 
+     * @return ModifiedOn <p>修改时间。</p>
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set 修改时间。
-     * @param ModifiedOn 修改时间。
+     * Set <p>修改时间。</p>
+     * @param ModifiedOn <p>修改时间。</p>
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;

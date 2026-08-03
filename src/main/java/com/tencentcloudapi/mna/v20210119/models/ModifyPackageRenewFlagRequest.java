@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyPackageRenewFlagRequest extends AbstractModel {
 
     /**
-    * 流量包的唯一资源ID
+    * <p>流量包的唯一资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 自动续费标识。true代表自动续费，false代表不自动续费
+    * <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Boolean RenewFlag;
 
     /**
-     * Get 流量包的唯一资源ID 
-     * @return ResourceId 流量包的唯一资源ID
+     * Get <p>流量包的唯一资源ID</p> 
+     * @return ResourceId <p>流量包的唯一资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 流量包的唯一资源ID
-     * @param ResourceId 流量包的唯一资源ID
+     * Set <p>流量包的唯一资源ID</p>
+     * @param ResourceId <p>流量包的唯一资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 自动续费标识。true代表自动续费，false代表不自动续费 
-     * @return RenewFlag 自动续费标识。true代表自动续费，false代表不自动续费
+     * Get <p>自动续费标识。true代表自动续费，false代表不自动续费</p> 
+     * @return RenewFlag <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识。true代表自动续费，false代表不自动续费
-     * @param RenewFlag 自动续费标识。true代表自动续费，false代表不自动续费
+     * Set <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
+     * @param RenewFlag <p>自动续费标识。true代表自动续费，false代表不自动续费</p>
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;

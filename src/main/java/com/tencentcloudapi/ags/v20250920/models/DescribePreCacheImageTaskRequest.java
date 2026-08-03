@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribePreCacheImageTaskRequest extends AbstractModel {
 
     /**
-    * 镜像地址
+    * <p>镜像地址</p>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 镜像 Digest
+    * <p>镜像 Digest</p>
     */
     @SerializedName("ImageDigest")
     @Expose
     private String ImageDigest;
 
     /**
-    * 镜像仓库类型：`enterprise`、`personal`。
+    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
     */
     @SerializedName("ImageRegistryType")
     @Expose
     private String ImageRegistryType;
 
     /**
-     * Get 镜像地址 
-     * @return Image 镜像地址
+     * Get <p>镜像地址</p> 
+     * @return Image <p>镜像地址</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 镜像地址
-     * @param Image 镜像地址
+     * Set <p>镜像地址</p>
+     * @param Image <p>镜像地址</p>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 镜像 Digest 
-     * @return ImageDigest 镜像 Digest
+     * Get <p>镜像 Digest</p> 
+     * @return ImageDigest <p>镜像 Digest</p>
      */
     public String getImageDigest() {
         return this.ImageDigest;
     }
 
     /**
-     * Set 镜像 Digest
-     * @param ImageDigest 镜像 Digest
+     * Set <p>镜像 Digest</p>
+     * @param ImageDigest <p>镜像 Digest</p>
      */
     public void setImageDigest(String ImageDigest) {
         this.ImageDigest = ImageDigest;
     }
 
     /**
-     * Get 镜像仓库类型：`enterprise`、`personal`。 
-     * @return ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public String getImageRegistryType() {
         return this.ImageRegistryType;
     }
 
     /**
-     * Set 镜像仓库类型：`enterprise`、`personal`。
-     * @param ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public void setImageRegistryType(String ImageRegistryType) {
         this.ImageRegistryType = ImageRegistryType;

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class AIGWJWTCredentialConfig extends AbstractModel {
 
     /**
-    * <p>JWT 消费者标识，iss claim</p>
-    */
-    @SerializedName("Key")
-    @Expose
-    private String Key;
-
-    /**
     * <p>签名算法，取值：HS256 HS384 HS512 RS256 RS384 RS512 ES256 ES384 ES512</p>
     */
     @SerializedName("Algorithm")
@@ -38,11 +31,11 @@ public class AIGWJWTCredentialConfig extends AbstractModel {
     private String Algorithm;
 
     /**
-    * <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+    * <p>JWT 消费者标识，iss claim</p>
     */
-    @SerializedName("Secret")
+    @SerializedName("Key")
     @Expose
-    private String Secret;
+    private String Key;
 
     /**
     * <p>RS/ES PEM 格式公钥，仅 Algorithm 为 RS256/RS384/RS512/ES256/ES384/ES512 时必填；HS* 时留空</p>
@@ -52,20 +45,11 @@ public class AIGWJWTCredentialConfig extends AbstractModel {
     private String RSAPublicKey;
 
     /**
-     * Get <p>JWT 消费者标识，iss claim</p> 
-     * @return Key <p>JWT 消费者标识，iss claim</p>
-     */
-    public String getKey() {
-        return this.Key;
-    }
-
-    /**
-     * Set <p>JWT 消费者标识，iss claim</p>
-     * @param Key <p>JWT 消费者标识，iss claim</p>
-     */
-    public void setKey(String Key) {
-        this.Key = Key;
-    }
+    * <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+    */
+    @SerializedName("Secret")
+    @Expose
+    private String Secret;
 
     /**
      * Get <p>签名算法，取值：HS256 HS384 HS512 RS256 RS384 RS512 ES256 ES384 ES512</p> 
@@ -84,19 +68,19 @@ public class AIGWJWTCredentialConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p> 
-     * @return Secret <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     * Get <p>JWT 消费者标识，iss claim</p> 
+     * @return Key <p>JWT 消费者标识，iss claim</p>
      */
-    public String getSecret() {
-        return this.Secret;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
-     * @param Secret <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     * Set <p>JWT 消费者标识，iss claim</p>
+     * @param Key <p>JWT 消费者标识，iss claim</p>
      */
-    public void setSecret(String Secret) {
-        this.Secret = Secret;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
@@ -115,6 +99,22 @@ public class AIGWJWTCredentialConfig extends AbstractModel {
         this.RSAPublicKey = RSAPublicKey;
     }
 
+    /**
+     * Get <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p> 
+     * @return Secret <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     */
+    public String getSecret() {
+        return this.Secret;
+    }
+
+    /**
+     * Set <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     * @param Secret <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     */
+    public void setSecret(String Secret) {
+        this.Secret = Secret;
+    }
+
     public AIGWJWTCredentialConfig() {
     }
 
@@ -123,17 +123,17 @@ public class AIGWJWTCredentialConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AIGWJWTCredentialConfig(AIGWJWTCredentialConfig source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
-        }
         if (source.Algorithm != null) {
             this.Algorithm = new String(source.Algorithm);
         }
-        if (source.Secret != null) {
-            this.Secret = new String(source.Secret);
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
         if (source.RSAPublicKey != null) {
             this.RSAPublicKey = new String(source.RSAPublicKey);
+        }
+        if (source.Secret != null) {
+            this.Secret = new String(source.Secret);
         }
     }
 
@@ -142,10 +142,10 @@ public class AIGWJWTCredentialConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
-        this.setParamSimple(map, prefix + "Secret", this.Secret);
+        this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "RSAPublicKey", this.RSAPublicKey);
+        this.setParamSimple(map, prefix + "Secret", this.Secret);
 
     }
 }

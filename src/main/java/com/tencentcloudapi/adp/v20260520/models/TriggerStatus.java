@@ -31,6 +31,20 @@ public class TriggerStatus extends AbstractModel {
     private AppTriggerScheduleStatus ScheduledStatus;
 
     /**
+    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
+    * <p>访客id</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
     * <p>Webhook状态</p>
     */
     @SerializedName("WebhookStatus")
@@ -51,6 +65,38 @@ public class TriggerStatus extends AbstractModel {
      */
     public void setScheduledStatus(AppTriggerScheduleStatus ScheduledStatus) {
         this.ScheduledStatus = ScheduledStatus;
+    }
+
+    /**
+     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table> 
+     * @return Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     * @param Scope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_SCOPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_SCOPE_APP</td><td>1</td><td>B 端管理员</td></tr><tr><td>APP_TRIGGER_SCOPE_USER</td><td>2</td><td>C 端访客</td></tr></tbody></table>
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
+     * Get <p>访客id</p> 
+     * @return UserId <p>访客id</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>访客id</p>
+     * @param UserId <p>访客id</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
     /**
@@ -80,6 +126,12 @@ public class TriggerStatus extends AbstractModel {
         if (source.ScheduledStatus != null) {
             this.ScheduledStatus = new AppTriggerScheduleStatus(source.ScheduledStatus);
         }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
         if (source.WebhookStatus != null) {
             this.WebhookStatus = new AppTriggerWebhookStatus(source.WebhookStatus);
         }
@@ -91,6 +143,8 @@ public class TriggerStatus extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ScheduledStatus.", this.ScheduledStatus);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamObj(map, prefix + "WebhookStatus.", this.WebhookStatus);
 
     }

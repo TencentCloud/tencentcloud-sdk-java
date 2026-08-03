@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateL3SwitchRequest extends AbstractModel {
 
     /**
-    * 互通规则ID
+    * <p>互通规则ID</p>
     */
     @SerializedName("L3ConnId")
     @Expose
     private String L3ConnId;
 
     /**
-    * 互通规则开关
+    * <p>互通规则开关</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-     * Get 互通规则ID 
-     * @return L3ConnId 互通规则ID
+     * Get <p>互通规则ID</p> 
+     * @return L3ConnId <p>互通规则ID</p>
      */
     public String getL3ConnId() {
         return this.L3ConnId;
     }
 
     /**
-     * Set 互通规则ID
-     * @param L3ConnId 互通规则ID
+     * Set <p>互通规则ID</p>
+     * @param L3ConnId <p>互通规则ID</p>
      */
     public void setL3ConnId(String L3ConnId) {
         this.L3ConnId = L3ConnId;
     }
 
     /**
-     * Get 互通规则开关 
-     * @return Enable 互通规则开关
+     * Get <p>互通规则开关</p> 
+     * @return Enable <p>互通规则开关</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 互通规则开关
-     * @param Enable 互通规则开关
+     * Set <p>互通规则开关</p>
+     * @param Enable <p>互通规则开关</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;

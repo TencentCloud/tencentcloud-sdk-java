@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGlobalAcceleratorRequest extends AbstractModel {
 
     /**
-    * <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+    * <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
     */
     @SerializedName("Name")
     @Expose
@@ -38,7 +38,7 @@ public class CreateGlobalAcceleratorRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * <p>描述信息，最大长度不能超过100个字节。</p>
+    * <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
     */
     @SerializedName("Description")
     @Expose
@@ -66,16 +66,16 @@ public class CreateGlobalAcceleratorRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p> 
-     * @return Name <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+     * Get <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p> 
+     * @return Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
-     * @param Name <p>名称，最大长度不能超过128个字节，不能为空。</p><p>参数格式：满足正则 ^[a-zA-Z\u4e00-\u9fa5]（首字符是英文字母或汉字），并且不满足正则 ^[\d._-]*$（整串不能只由数字/./_/-组成）。</p>
+     * Set <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
+     * @param Name <p>名称。</p><p>参数格式：以字母或中文开头，长度 2–128 个字符，支持字母、数字、中文、. - _</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -98,16 +98,16 @@ public class CreateGlobalAcceleratorRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>描述信息，最大长度不能超过100个字节。</p> 
-     * @return Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * Get <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p> 
+     * @return Description <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>描述信息，最大长度不能超过100个字节。</p>
-     * @param Description <p>描述信息，最大长度不能超过100个字节。</p>
+     * Set <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
+     * @param Description <p>描述信息。</p><p>参数格式：最大长度不超过100 个字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

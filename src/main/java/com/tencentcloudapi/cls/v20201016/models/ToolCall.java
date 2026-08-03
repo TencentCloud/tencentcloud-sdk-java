@@ -52,6 +52,13 @@ public class ToolCall extends AbstractModel {
     private Long Index;
 
     /**
+    * <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+    */
+    @SerializedName("ThoughtSignature")
+    @Expose
+    private String ThoughtSignature;
+
+    /**
      * Get <p>工具调用id</p> 
      * @return Id <p>工具调用id</p>
      */
@@ -115,6 +122,22 @@ public class ToolCall extends AbstractModel {
         this.Index = Index;
     }
 
+    /**
+     * Get <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p> 
+     * @return ThoughtSignature <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+     */
+    public String getThoughtSignature() {
+        return this.ThoughtSignature;
+    }
+
+    /**
+     * Set <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+     * @param ThoughtSignature <p>模型返回的思考签名，执行工具后需在后续请求中原样回传</p>
+     */
+    public void setThoughtSignature(String ThoughtSignature) {
+        this.ThoughtSignature = ThoughtSignature;
+    }
+
     public ToolCall() {
     }
 
@@ -135,6 +158,9 @@ public class ToolCall extends AbstractModel {
         if (source.Index != null) {
             this.Index = new Long(source.Index);
         }
+        if (source.ThoughtSignature != null) {
+            this.ThoughtSignature = new String(source.ThoughtSignature);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ToolCall extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Function.", this.Function);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "ThoughtSignature", this.ThoughtSignature);
 
     }
 }

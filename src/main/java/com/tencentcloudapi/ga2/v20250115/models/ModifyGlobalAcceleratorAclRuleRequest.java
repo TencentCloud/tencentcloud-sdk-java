@@ -45,7 +45,7 @@ public class ModifyGlobalAcceleratorAclRuleRequest extends AbstractModel {
     private String GlobalAcceleratorAclRuleId;
 
     /**
-    * <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+    * <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
     */
     @SerializedName("Protocol")
     @Expose
@@ -128,16 +128,16 @@ public class ModifyGlobalAcceleratorAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p> 
-     * @return Protocol <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+     * Get <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p> 
+     * @return Protocol <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
-     * @param Protocol <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;, &#39;ALL&#39;。</p>
+     * Set <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
+     * @param Protocol <p>协议。</p><p>入参限制：支持选择&#39;TCP&#39;, &#39;UDP&#39;。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

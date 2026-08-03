@@ -38,13 +38,6 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     private String ImageRegistryType;
 
     /**
-    * <p>预热超时时长</p>
-    */
-    @SerializedName("TimeoutMinutes")
-    @Expose
-    private Long TimeoutMinutes;
-
-    /**
      * Get <p>镜像地址</p> 
      * @return Image <p>镜像地址</p>
      */
@@ -76,22 +69,6 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         this.ImageRegistryType = ImageRegistryType;
     }
 
-    /**
-     * Get <p>预热超时时长</p> 
-     * @return TimeoutMinutes <p>预热超时时长</p>
-     */
-    public Long getTimeoutMinutes() {
-        return this.TimeoutMinutes;
-    }
-
-    /**
-     * Set <p>预热超时时长</p>
-     * @param TimeoutMinutes <p>预热超时时长</p>
-     */
-    public void setTimeoutMinutes(Long TimeoutMinutes) {
-        this.TimeoutMinutes = TimeoutMinutes;
-    }
-
     public CreatePreCacheImageTaskRequest() {
     }
 
@@ -106,9 +83,6 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         if (source.ImageRegistryType != null) {
             this.ImageRegistryType = new String(source.ImageRegistryType);
         }
-        if (source.TimeoutMinutes != null) {
-            this.TimeoutMinutes = new Long(source.TimeoutMinutes);
-        }
     }
 
 
@@ -118,7 +92,6 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
-        this.setParamSimple(map, prefix + "TimeoutMinutes", this.TimeoutMinutes);
 
     }
 }

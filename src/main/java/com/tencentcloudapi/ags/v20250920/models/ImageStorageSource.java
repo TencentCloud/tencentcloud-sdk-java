@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ImageStorageSource extends AbstractModel {
 
     /**
-    * 镜像地址
+    * <p>镜像地址</p>
     */
     @SerializedName("Reference")
     @Expose
     private String Reference;
 
     /**
-    * 镜像仓库类型：`enterprise`、`personal`。
+    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
     */
     @SerializedName("ImageRegistryType")
     @Expose
     private String ImageRegistryType;
 
     /**
-    * 镜像内部的路径
+    * <p>镜像内部的路径</p>
     */
     @SerializedName("SubPath")
     @Expose
     private String SubPath;
 
     /**
-    * 镜像 Digest，请求时无需传入
+    * <p>镜像 Digest，请求时无需传入</p>
     */
     @SerializedName("Digest")
     @Expose
     private String Digest;
 
     /**
-     * Get 镜像地址 
-     * @return Reference 镜像地址
+     * Get <p>镜像地址</p> 
+     * @return Reference <p>镜像地址</p>
      */
     public String getReference() {
         return this.Reference;
     }
 
     /**
-     * Set 镜像地址
-     * @param Reference 镜像地址
+     * Set <p>镜像地址</p>
+     * @param Reference <p>镜像地址</p>
      */
     public void setReference(String Reference) {
         this.Reference = Reference;
     }
 
     /**
-     * Get 镜像仓库类型：`enterprise`、`personal`。 
-     * @return ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public String getImageRegistryType() {
         return this.ImageRegistryType;
     }
 
     /**
-     * Set 镜像仓库类型：`enterprise`、`personal`。
-     * @param ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public void setImageRegistryType(String ImageRegistryType) {
         this.ImageRegistryType = ImageRegistryType;
     }
 
     /**
-     * Get 镜像内部的路径 
-     * @return SubPath 镜像内部的路径
+     * Get <p>镜像内部的路径</p> 
+     * @return SubPath <p>镜像内部的路径</p>
      */
     public String getSubPath() {
         return this.SubPath;
     }
 
     /**
-     * Set 镜像内部的路径
-     * @param SubPath 镜像内部的路径
+     * Set <p>镜像内部的路径</p>
+     * @param SubPath <p>镜像内部的路径</p>
      */
     public void setSubPath(String SubPath) {
         this.SubPath = SubPath;
     }
 
     /**
-     * Get 镜像 Digest，请求时无需传入 
-     * @return Digest 镜像 Digest，请求时无需传入
+     * Get <p>镜像 Digest，请求时无需传入</p> 
+     * @return Digest <p>镜像 Digest，请求时无需传入</p>
      */
     public String getDigest() {
         return this.Digest;
     }
 
     /**
-     * Set 镜像 Digest，请求时无需传入
-     * @param Digest 镜像 Digest，请求时无需传入
+     * Set <p>镜像 Digest，请求时无需传入</p>
+     * @param Digest <p>镜像 Digest，请求时无需传入</p>
      */
     public void setDigest(String Digest) {
         this.Digest = Digest;

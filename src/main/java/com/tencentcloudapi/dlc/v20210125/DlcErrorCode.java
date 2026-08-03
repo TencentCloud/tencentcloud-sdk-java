@@ -27,6 +27,9 @@ public enum DlcErrorCode {
      /* 绑定的标签数量超出限制。 */
      FAILEDOPERATION_BINDTOOMANYTAGS("FailedOperation.BindTooManyTags"),
      
+     /* 集群组不存在 */
+     FAILEDOPERATION_CLUSTERGROUPNOTFOUND("FailedOperation.ClusterGroupNotFound"),
+     
      /* 创建引擎失败。 */
      FAILEDOPERATION_CREATEDATAENGINEFAILED("FailedOperation.CreateDataEngineFailed"),
      
@@ -38,6 +41,15 @@ public enum DlcErrorCode {
      
      /* 重复的标签键。 */
      FAILEDOPERATION_DUPLICATETAGKEY("FailedOperation.DuplicateTagKey"),
+     
+     /* 案例服务请求失败 */
+     FAILEDOPERATION_EXAMPLE("FailedOperation.Example"),
+     
+     /* 案例不存在 */
+     FAILEDOPERATION_EXAMPLENOTFOUND("FailedOperation.ExampleNotFound"),
+     
+     /* 外部服务异常 */
+     FAILEDOPERATION_EXTERNALSERVICE("FailedOperation.ExternalService"),
      
      /* 扣费失败。 */
      FAILEDOPERATION_FEEDEDUCTIONFAILED("FailedOperation.FeeDeductionFailed"),
@@ -78,6 +90,21 @@ public enum DlcErrorCode {
      /* Invalid NetworkConnectionType */
      FAILEDOPERATION_INVALIDNETWORKCONNECTIONTYPE("FailedOperation.InvalidNetworkConnectionType"),
      
+     /* 数据实验室正处于过渡状态：数据实验室正在状态转换中（启动中/停止中/删除中），请稍后重试 */
+     FAILEDOPERATION_LABINTRANSITION("FailedOperation.LabInTransition"),
+     
+     /* 数据实验室不存在：数据实验室不存在，请检查数据实验室标识 */
+     FAILEDOPERATION_LABNOTFOUND("FailedOperation.LabNotFound"),
+     
+     /* 实验室未运行 */
+     FAILEDOPERATION_LABNOTRUNNING("FailedOperation.LabNotRunning"),
+     
+     /* 数据实验室当前状态不允许修改：仅在停止或异常状态下可修改配置，请先停止数据实验室后重试 */
+     FAILEDOPERATION_LABNOTUPDATABLE("FailedOperation.LabNotUpdatable"),
+     
+     /* 数据实验室正在运行中：数据实验室正在运行中，请稍后重试 */
+     FAILEDOPERATION_LABRUNNING("FailedOperation.LabRunning"),
+     
      /* 元数据错误，请重试，或者提交工单联系我们 */
      FAILEDOPERATION_METASTOREERROR("FailedOperation.MetastoreError"),
      
@@ -101,6 +128,9 @@ public enum DlcErrorCode {
      
      /* 采购数量超过限制。 */
      FAILEDOPERATION_NUMBEREXCEEDLIMIT("FailedOperation.NumberExceedLimit"),
+     
+     /* 其他异常：服务遇到未知问题，请稍后再试。 */
+     FAILEDOPERATION_OTHEREXCEPTION("FailedOperation.OtherException"),
      
      /* 参数校验失败。 */
      FAILEDOPERATION_PARAMETERVALIDATIONFAILED("FailedOperation.ParameterValidationFailed"),
@@ -489,6 +519,9 @@ public enum DlcErrorCode {
      /* 权限类型冲突。 */
      INVALIDPARAMETER_POLICYTYPECONFLICT("InvalidParameter.PolicyTypeConflict"),
      
+     /* 参数错误：资源规格组不存在 */
+     INVALIDPARAMETER_RESOURCESPECNOTFOUND("InvalidParameter.ResourceSpecNotFound"),
+     
      /* SQL脚本Base64解析失败 */
      INVALIDPARAMETER_SQLBASE64DECODEFAIL("InvalidParameter.SQLBase64DecodeFail"),
      
@@ -551,6 +584,9 @@ public enum DlcErrorCode {
      
      /* Vpc cidr重叠。 */
      INVALIDPARAMETER_VPCCIDROVERLAP("InvalidParameter.VpcCidrOverlap"),
+     
+     /* 无效参数组合 */
+     INVALIDPARAMETERCOMBINATION("InvalidParameterCombination"),
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),

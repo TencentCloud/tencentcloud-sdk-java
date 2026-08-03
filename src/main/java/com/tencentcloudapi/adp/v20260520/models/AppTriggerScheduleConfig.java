@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AppTriggerScheduleConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>触发器定时配置</p>
     */
     @SerializedName("Schedule")
     @Expose
     private TimerScheduleConfig Schedule;
 
     /**
-     * Get  
-     * @return Schedule 
+     * Get <p>触发器定时配置</p> 
+     * @return Schedule <p>触发器定时配置</p>
      */
     public TimerScheduleConfig getSchedule() {
         return this.Schedule;
     }
 
     /**
-     * Set 
-     * @param Schedule 
+     * Set <p>触发器定时配置</p>
+     * @param Schedule <p>触发器定时配置</p>
      */
     public void setSchedule(TimerScheduleConfig Schedule) {
         this.Schedule = Schedule;

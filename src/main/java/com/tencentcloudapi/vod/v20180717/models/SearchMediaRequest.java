@@ -248,6 +248,13 @@ public class SearchMediaRequest extends AbstractModel {
     private String [] StreamPaths;
 
     /**
+    * <p>知识库ID，匹配集合中任意元素。</p>
+    */
+    @SerializedName("KnowledgeBases")
+    @Expose
+    private String [] KnowledgeBases;
+
+    /**
      * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
      * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
@@ -759,6 +766,22 @@ public class SearchMediaRequest extends AbstractModel {
         this.StreamPaths = StreamPaths;
     }
 
+    /**
+     * Get <p>知识库ID，匹配集合中任意元素。</p> 
+     * @return KnowledgeBases <p>知识库ID，匹配集合中任意元素。</p>
+     */
+    public String [] getKnowledgeBases() {
+        return this.KnowledgeBases;
+    }
+
+    /**
+     * Set <p>知识库ID，匹配集合中任意元素。</p>
+     * @param KnowledgeBases <p>知识库ID，匹配集合中任意元素。</p>
+     */
+    public void setKnowledgeBases(String [] KnowledgeBases) {
+        this.KnowledgeBases = KnowledgeBases;
+    }
+
     public SearchMediaRequest() {
     }
 
@@ -923,6 +946,12 @@ public class SearchMediaRequest extends AbstractModel {
                 this.StreamPaths[i] = new String(source.StreamPaths[i]);
             }
         }
+        if (source.KnowledgeBases != null) {
+            this.KnowledgeBases = new String[source.KnowledgeBases.length];
+            for (int i = 0; i < source.KnowledgeBases.length; i++) {
+                this.KnowledgeBases[i] = new String(source.KnowledgeBases[i]);
+            }
+        }
     }
 
 
@@ -962,6 +991,7 @@ public class SearchMediaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamArraySimple(map, prefix + "StreamDomains.", this.StreamDomains);
         this.setParamArraySimple(map, prefix + "StreamPaths.", this.StreamPaths);
+        this.setParamArraySimple(map, prefix + "KnowledgeBases.", this.KnowledgeBases);
 
     }
 }

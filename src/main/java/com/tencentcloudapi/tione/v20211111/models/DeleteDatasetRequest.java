@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DeleteDatasetRequest extends AbstractModel {
 
     /**
-    * 数据集id
+    * <p>数据集id</p>
     */
     @SerializedName("DatasetId")
     @Expose
     private String DatasetId;
 
     /**
-    * 是否删除cos标签文件
+    * <p>是否删除cos标签文件</p>
     */
     @SerializedName("DeleteLabelEnable")
     @Expose
     private Boolean DeleteLabelEnable;
 
     /**
-     * Get 数据集id 
-     * @return DatasetId 数据集id
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+     * Get <p>数据集id</p> 
+     * @return DatasetId <p>数据集id</p>
      */
     public String getDatasetId() {
         return this.DatasetId;
     }
 
     /**
-     * Set 数据集id
-     * @param DatasetId 数据集id
+     * Set <p>数据集id</p>
+     * @param DatasetId <p>数据集id</p>
      */
     public void setDatasetId(String DatasetId) {
         this.DatasetId = DatasetId;
     }
 
     /**
-     * Get 是否删除cos标签文件 
-     * @return DeleteLabelEnable 是否删除cos标签文件
+     * Get <p>是否删除cos标签文件</p> 
+     * @return DeleteLabelEnable <p>是否删除cos标签文件</p>
      */
     public Boolean getDeleteLabelEnable() {
         return this.DeleteLabelEnable;
     }
 
     /**
-     * Set 是否删除cos标签文件
-     * @param DeleteLabelEnable 是否删除cos标签文件
+     * Set <p>是否删除cos标签文件</p>
+     * @param DeleteLabelEnable <p>是否删除cos标签文件</p>
      */
     public void setDeleteLabelEnable(Boolean DeleteLabelEnable) {
         this.DeleteLabelEnable = DeleteLabelEnable;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     public DeleteDatasetRequest() {
@@ -83,6 +106,9 @@ public class DeleteDatasetRequest extends AbstractModel {
         if (source.DeleteLabelEnable != null) {
             this.DeleteLabelEnable = new Boolean(source.DeleteLabelEnable);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteDatasetRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DatasetId", this.DatasetId);
         this.setParamSimple(map, prefix + "DeleteLabelEnable", this.DeleteLabelEnable);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

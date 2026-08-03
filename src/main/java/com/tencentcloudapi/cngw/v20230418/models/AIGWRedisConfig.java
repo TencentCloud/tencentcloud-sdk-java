@@ -52,6 +52,20 @@ public class AIGWRedisConfig extends AbstractModel {
     private String Password;
 
     /**
+    * <p>Redis配置ID</p>
+    */
+    @SerializedName("RedisConfigId")
+    @Expose
+    private String RedisConfigId;
+
+    /**
+    * <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get <p>Host</p> 
      * @return Host <p>Host</p>
      */
@@ -115,6 +129,38 @@ public class AIGWRedisConfig extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get <p>Redis配置ID</p> 
+     * @return RedisConfigId <p>Redis配置ID</p>
+     */
+    public String getRedisConfigId() {
+        return this.RedisConfigId;
+    }
+
+    /**
+     * Set <p>Redis配置ID</p>
+     * @param RedisConfigId <p>Redis配置ID</p>
+     */
+    public void setRedisConfigId(String RedisConfigId) {
+        this.RedisConfigId = RedisConfigId;
+    }
+
+    /**
+     * Get <p>Redis部署类型，如standalone（单机）、cluster（集群）</p> 
+     * @return Type <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+     * @param Type <p>Redis部署类型，如standalone（单机）、cluster（集群）</p>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public AIGWRedisConfig() {
     }
 
@@ -135,6 +181,12 @@ public class AIGWRedisConfig extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.RedisConfigId != null) {
+            this.RedisConfigId = new String(source.RedisConfigId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class AIGWRedisConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "RedisConfigId", this.RedisConfigId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

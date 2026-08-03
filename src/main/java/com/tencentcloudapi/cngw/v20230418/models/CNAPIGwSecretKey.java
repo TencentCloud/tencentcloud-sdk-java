@@ -24,32 +24,34 @@ import java.util.HashMap;
 public class CNAPIGwSecretKey extends AbstractModel {
 
     /**
-    * <p>密钥id</p>
+    * <p>绑定数</p>
     */
-    @SerializedName("SecretKeyId")
+    @SerializedName("BindCount")
     @Expose
-    private String SecretKeyId;
+    private Long BindCount;
 
     /**
-    * <p>密钥名字</p>
+    * <p>是否可以绑定</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Name")
+    @SerializedName("CanBind")
     @Expose
-    private String Name;
+    private Boolean CanBind;
 
     /**
-    * <p>密钥协议类型。</p>
+    * <p>创建时间</p>
     */
-    @SerializedName("SecretType")
+    @SerializedName("CreateTime")
     @Expose
-    private String SecretType;
+    private String CreateTime;
 
     /**
-    * <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+    * <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Status")
+    @SerializedName("Description")
     @Expose
-    private String Status;
+    private String Description;
 
     /**
     * <p>密钥生成方式。</p><p>枚举值：</p><ul><li>System： 系统自动生成</li><li>Custom： 用户自定义</li><li>KMS： 使用 KMS 密钥</li></ul>
@@ -59,11 +61,11 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String GenerateType;
 
     /**
-    * <p>密钥明文</p>
+    * <p>JWT凭证配置</p>
     */
-    @SerializedName("SecretValue")
+    @SerializedName("JWTCredentialConfig")
     @Expose
-    private String SecretValue;
+    private AIGWJWTCredentialConfig JWTCredentialConfig;
 
     /**
     * <p>KMS凭证名字</p>
@@ -82,29 +84,6 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String KmsKeyVersion;
 
     /**
-    * <p>描述</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
-    * <p>是否可以绑定</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CanBind")
-    @Expose
-    private Boolean CanBind;
-
-    /**
-    * <p>创建时间</p>
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private String CreateTime;
-
-    /**
     * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
@@ -112,28 +91,14 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String ModifyTime;
 
     /**
-    * <p>绑定数</p>
+    * <p>密钥名字</p>
     */
-    @SerializedName("BindCount")
+    @SerializedName("Name")
     @Expose
-    private Long BindCount;
+    private String Name;
 
     /**
-    * <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
-    */
-    @SerializedName("ResourceType")
-    @Expose
-    private String ResourceType;
-
-    /**
-    * <p>JWT凭证配置</p>
-    */
-    @SerializedName("JWTCredentialConfig")
-    @Expose
-    private AIGWJWTCredentialConfig JWTCredentialConfig;
-
-    /**
-    * <p>OAuth2凭证配置</p>
+    * <p>OAuth凭证配置</p>
     */
     @SerializedName("OAuthCredentialConfig")
     @Expose
@@ -147,74 +112,117 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private AIGWOIDCCredentialConfig OIDCCredentialConfig;
 
     /**
-    * <p>Agent 密钥类型</p>
+    * <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-     * Get <p>密钥id</p> 
-     * @return SecretKeyId <p>密钥id</p>
+    * <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * <p>密钥id</p>
+    */
+    @SerializedName("SecretKeyId")
+    @Expose
+    private String SecretKeyId;
+
+    /**
+    * <p>密钥协议类型。</p>
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private String SecretType;
+
+    /**
+    * <p>密钥明文</p>
+    */
+    @SerializedName("SecretValue")
+    @Expose
+    private String SecretValue;
+
+    /**
+    * <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+     * Get <p>绑定数</p> 
+     * @return BindCount <p>绑定数</p>
      */
-    public String getSecretKeyId() {
-        return this.SecretKeyId;
+    public Long getBindCount() {
+        return this.BindCount;
     }
 
     /**
-     * Set <p>密钥id</p>
-     * @param SecretKeyId <p>密钥id</p>
+     * Set <p>绑定数</p>
+     * @param BindCount <p>绑定数</p>
      */
-    public void setSecretKeyId(String SecretKeyId) {
-        this.SecretKeyId = SecretKeyId;
+    public void setBindCount(Long BindCount) {
+        this.BindCount = BindCount;
     }
 
     /**
-     * Get <p>密钥名字</p> 
-     * @return Name <p>密钥名字</p>
+     * Get <p>是否可以绑定</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanBind <p>是否可以绑定</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getName() {
-        return this.Name;
+    public Boolean getCanBind() {
+        return this.CanBind;
     }
 
     /**
-     * Set <p>密钥名字</p>
-     * @param Name <p>密钥名字</p>
+     * Set <p>是否可以绑定</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanBind <p>是否可以绑定</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setCanBind(Boolean CanBind) {
+        this.CanBind = CanBind;
     }
 
     /**
-     * Get <p>密钥协议类型。</p> 
-     * @return SecretType <p>密钥协议类型。</p>
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
-    public String getSecretType() {
-        return this.SecretType;
+    public String getCreateTime() {
+        return this.CreateTime;
     }
 
     /**
-     * Set <p>密钥协议类型。</p>
-     * @param SecretType <p>密钥协议类型。</p>
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
-    public void setSecretType(String SecretType) {
-        this.SecretType = SecretType;
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul> 
-     * @return Status <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+     * Get <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getStatus() {
-        return this.Status;
+    public String getDescription() {
+        return this.Description;
     }
 
     /**
-     * Set <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
-     * @param Status <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+     * Set <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -234,19 +242,19 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get <p>密钥明文</p> 
-     * @return SecretValue <p>密钥明文</p>
+     * Get <p>JWT凭证配置</p> 
+     * @return JWTCredentialConfig <p>JWT凭证配置</p>
      */
-    public String getSecretValue() {
-        return this.SecretValue;
+    public AIGWJWTCredentialConfig getJWTCredentialConfig() {
+        return this.JWTCredentialConfig;
     }
 
     /**
-     * Set <p>密钥明文</p>
-     * @param SecretValue <p>密钥明文</p>
+     * Set <p>JWT凭证配置</p>
+     * @param JWTCredentialConfig <p>JWT凭证配置</p>
      */
-    public void setSecretValue(String SecretValue) {
-        this.SecretValue = SecretValue;
+    public void setJWTCredentialConfig(AIGWJWTCredentialConfig JWTCredentialConfig) {
+        this.JWTCredentialConfig = JWTCredentialConfig;
     }
 
     /**
@@ -290,62 +298,6 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get <p>描述</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description <p>描述</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set <p>描述</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description <p>描述</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
-     * Get <p>是否可以绑定</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CanBind <p>是否可以绑定</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Boolean getCanBind() {
-        return this.CanBind;
-    }
-
-    /**
-     * Set <p>是否可以绑定</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CanBind <p>是否可以绑定</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCanBind(Boolean CanBind) {
-        this.CanBind = CanBind;
-    }
-
-    /**
-     * Get <p>创建时间</p> 
-     * @return CreateTime <p>创建时间</p>
-     */
-    public String getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set <p>创建时间</p>
-     * @param CreateTime <p>创建时间</p>
-     */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
-    }
-
-    /**
      * Get <p>修改时间</p> 
      * @return ModifyTime <p>修改时间</p>
      */
@@ -362,64 +314,32 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get <p>绑定数</p> 
-     * @return BindCount <p>绑定数</p>
+     * Get <p>密钥名字</p> 
+     * @return Name <p>密钥名字</p>
      */
-    public Long getBindCount() {
-        return this.BindCount;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set <p>绑定数</p>
-     * @param BindCount <p>绑定数</p>
+     * Set <p>密钥名字</p>
+     * @param Name <p>密钥名字</p>
      */
-    public void setBindCount(Long BindCount) {
-        this.BindCount = BindCount;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul> 
-     * @return ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
-     */
-    public String getResourceType() {
-        return this.ResourceType;
-    }
-
-    /**
-     * Set <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
-     * @param ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
-     */
-    public void setResourceType(String ResourceType) {
-        this.ResourceType = ResourceType;
-    }
-
-    /**
-     * Get <p>JWT凭证配置</p> 
-     * @return JWTCredentialConfig <p>JWT凭证配置</p>
-     */
-    public AIGWJWTCredentialConfig getJWTCredentialConfig() {
-        return this.JWTCredentialConfig;
-    }
-
-    /**
-     * Set <p>JWT凭证配置</p>
-     * @param JWTCredentialConfig <p>JWT凭证配置</p>
-     */
-    public void setJWTCredentialConfig(AIGWJWTCredentialConfig JWTCredentialConfig) {
-        this.JWTCredentialConfig = JWTCredentialConfig;
-    }
-
-    /**
-     * Get <p>OAuth2凭证配置</p> 
-     * @return OAuthCredentialConfig <p>OAuth2凭证配置</p>
+     * Get <p>OAuth凭证配置</p> 
+     * @return OAuthCredentialConfig <p>OAuth凭证配置</p>
      */
     public AIGWOAuthCredentialConfig getOAuthCredentialConfig() {
         return this.OAuthCredentialConfig;
     }
 
     /**
-     * Set <p>OAuth2凭证配置</p>
-     * @param OAuthCredentialConfig <p>OAuth2凭证配置</p>
+     * Set <p>OAuth凭证配置</p>
+     * @param OAuthCredentialConfig <p>OAuth凭证配置</p>
      */
     public void setOAuthCredentialConfig(AIGWOAuthCredentialConfig OAuthCredentialConfig) {
         this.OAuthCredentialConfig = OAuthCredentialConfig;
@@ -442,19 +362,99 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get <p>Agent 密钥类型</p> 
-     * @return Provider <p>Agent 密钥类型</p>
+     * Get <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul> 
+     * @return Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>Agent 密钥类型</p>
-     * @param Provider <p>Agent 密钥类型</p>
+     * Set <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     * @param Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
+    }
+
+    /**
+     * Get <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul> 
+     * @return ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+     * @param ResourceType <p>密钥归属资源类型。</p><p>枚举值：</p><ul><li>Consumer： 消费者</li><li>ModelService： 模型服务</li></ul>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get <p>密钥id</p> 
+     * @return SecretKeyId <p>密钥id</p>
+     */
+    public String getSecretKeyId() {
+        return this.SecretKeyId;
+    }
+
+    /**
+     * Set <p>密钥id</p>
+     * @param SecretKeyId <p>密钥id</p>
+     */
+    public void setSecretKeyId(String SecretKeyId) {
+        this.SecretKeyId = SecretKeyId;
+    }
+
+    /**
+     * Get <p>密钥协议类型。</p> 
+     * @return SecretType <p>密钥协议类型。</p>
+     */
+    public String getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set <p>密钥协议类型。</p>
+     * @param SecretType <p>密钥协议类型。</p>
+     */
+    public void setSecretType(String SecretType) {
+        this.SecretType = SecretType;
+    }
+
+    /**
+     * Get <p>密钥明文</p> 
+     * @return SecretValue <p>密钥明文</p>
+     */
+    public String getSecretValue() {
+        return this.SecretValue;
+    }
+
+    /**
+     * Set <p>密钥明文</p>
+     * @param SecretValue <p>密钥明文</p>
+     */
+    public void setSecretValue(String SecretValue) {
+        this.SecretValue = SecretValue;
+    }
+
+    /**
+     * Get <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul> 
+     * @return Status <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+     * @param Status <p>状态。</p><p>枚举值：</p><ul><li>Enable： 启用</li><li>Disable： 禁用</li></ul>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     public CNAPIGwSecretKey() {
@@ -465,32 +465,8 @@ public class CNAPIGwSecretKey extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CNAPIGwSecretKey(CNAPIGwSecretKey source) {
-        if (source.SecretKeyId != null) {
-            this.SecretKeyId = new String(source.SecretKeyId);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.SecretType != null) {
-            this.SecretType = new String(source.SecretType);
-        }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
-        if (source.GenerateType != null) {
-            this.GenerateType = new String(source.GenerateType);
-        }
-        if (source.SecretValue != null) {
-            this.SecretValue = new String(source.SecretValue);
-        }
-        if (source.KmsKeyName != null) {
-            this.KmsKeyName = new String(source.KmsKeyName);
-        }
-        if (source.KmsKeyVersion != null) {
-            this.KmsKeyVersion = new String(source.KmsKeyVersion);
-        }
-        if (source.Description != null) {
-            this.Description = new String(source.Description);
+        if (source.BindCount != null) {
+            this.BindCount = new Long(source.BindCount);
         }
         if (source.CanBind != null) {
             this.CanBind = new Boolean(source.CanBind);
@@ -498,17 +474,26 @@ public class CNAPIGwSecretKey extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
-        if (source.ModifyTime != null) {
-            this.ModifyTime = new String(source.ModifyTime);
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
-        if (source.BindCount != null) {
-            this.BindCount = new Long(source.BindCount);
-        }
-        if (source.ResourceType != null) {
-            this.ResourceType = new String(source.ResourceType);
+        if (source.GenerateType != null) {
+            this.GenerateType = new String(source.GenerateType);
         }
         if (source.JWTCredentialConfig != null) {
             this.JWTCredentialConfig = new AIGWJWTCredentialConfig(source.JWTCredentialConfig);
+        }
+        if (source.KmsKeyName != null) {
+            this.KmsKeyName = new String(source.KmsKeyName);
+        }
+        if (source.KmsKeyVersion != null) {
+            this.KmsKeyVersion = new String(source.KmsKeyVersion);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.OAuthCredentialConfig != null) {
             this.OAuthCredentialConfig = new AIGWOAuthCredentialConfig(source.OAuthCredentialConfig);
@@ -519,6 +504,21 @@ public class CNAPIGwSecretKey extends AbstractModel {
         if (source.Provider != null) {
             this.Provider = new String(source.Provider);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.SecretKeyId != null) {
+            this.SecretKeyId = new String(source.SecretKeyId);
+        }
+        if (source.SecretType != null) {
+            this.SecretType = new String(source.SecretType);
+        }
+        if (source.SecretValue != null) {
+            this.SecretValue = new String(source.SecretValue);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -526,24 +526,24 @@ public class CNAPIGwSecretKey extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
-        this.setParamSimple(map, prefix + "SecretValue", this.SecretValue);
-        this.setParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
-        this.setParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
-        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "BindCount", this.BindCount);
         this.setParamSimple(map, prefix + "CanBind", this.CanBind);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
-        this.setParamSimple(map, prefix + "BindCount", this.BindCount);
-        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
         this.setParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
+        this.setParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
+        this.setParamSimple(map, prefix + "KmsKeyVersion", this.KmsKeyVersion);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
         this.setParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
+        this.setParamSimple(map, prefix + "SecretValue", this.SecretValue);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

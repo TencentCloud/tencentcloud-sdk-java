@@ -204,6 +204,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *根据任务ID取消正在运行的Ray任务
+     * @param req CancelRayJobRequest
+     * @return CancelRayJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelRayJobResponse CancelRayJob(CancelRayJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelRayJob", CancelRayJobResponse.class);
+    }
+
+    /**
      *本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
      * @param req CancelSparkSessionBatchSQLRequest
      * @return CancelSparkSessionBatchSQLResponse
@@ -281,6 +292,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *复制一份已有的作业配置
+     * @param req CopyJobSpecRequest
+     * @return CopyJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyJobSpecResponse CopyJobSpec(CopyJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyJobSpec", CopyJobSpecResponse.class);
+    }
+
+    /**
      *此接口（CreateCHDFSBindingProduct）用于创建元数据加速桶和产品绑定关系
      * @param req CreateCHDFSBindingProductRequest
      * @return CreateCHDFSBindingProductResponse
@@ -289,6 +311,17 @@ public class DlcClient extends AbstractClient{
     public CreateCHDFSBindingProductResponse CreateCHDFSBindingProduct(CreateCHDFSBindingProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCHDFSBindingProduct", CreateCHDFSBindingProductResponse.class);
+    }
+
+    /**
+     *创建集群组
+     * @param req CreateClusterGroupRequest
+     * @return CreateClusterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterGroupResponse CreateClusterGroup(CreateClusterGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateClusterGroup", CreateClusterGroupResponse.class);
     }
 
     /**
@@ -391,6 +424,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建作业配置
+     * @param req CreateJobSpecRequest
+     * @return CreateJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJobSpecResponse CreateJobSpec(CreateJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJobSpec", CreateJobSpecResponse.class);
+    }
+
+    /**
+     *创建实验室
+     * @param req CreateLabRequest
+     * @return CreateLabResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLabResponse CreateLab(CreateLabRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLab", CreateLabResponse.class);
+    }
+
+    /**
      *本接口（CreateMetaDatabase）用于创建元数据库
      * @param req CreateMetaDatabaseRequest
      * @return CreateMetaDatabaseResponse
@@ -432,6 +487,28 @@ public class DlcClient extends AbstractClient{
     public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(CreateNotebookSessionStatementSupportBatchSQLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateNotebookSessionStatementSupportBatchSQL", CreateNotebookSessionStatementSupportBatchSQLResponse.class);
+    }
+
+    /**
+     *创建集群
+     * @param req CreateRayClusterRequest
+     * @return CreateRayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRayClusterResponse CreateRayCluster(CreateRayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRayCluster", CreateRayClusterResponse.class);
+    }
+
+    /**
+     *创建资源配置模板
+     * @param req CreateResourceConfigRequest
+     * @return CreateResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceConfigResponse CreateResourceConfig(CreateResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateResourceConfig", CreateResourceConfigResponse.class);
     }
 
     /**
@@ -646,6 +723,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除集群组
+     * @param req DeleteClusterGroupRequest
+     * @return DeleteClusterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterGroupResponse DeleteClusterGroup(DeleteClusterGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterGroup", DeleteClusterGroupResponse.class);
+    }
+
+    /**
      *删除数据引擎
      * @param req DeleteDataEngineRequest
      * @return DeleteDataEngineResponse
@@ -665,6 +753,28 @@ public class DlcClient extends AbstractClient{
     public DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(DeleteDataMaskStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataMaskStrategy", DeleteDataMaskStrategyResponse.class);
+    }
+
+    /**
+     *根据配置ID删除作业配置
+     * @param req DeleteJobSpecRequest
+     * @return DeleteJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJobSpecResponse DeleteJobSpec(DeleteJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJobSpec", DeleteJobSpecResponse.class);
+    }
+
+    /**
+     *删除数据实验室
+     * @param req DeleteLabRequest
+     * @return DeleteLabResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLabResponse DeleteLab(DeleteLabRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLab", DeleteLabResponse.class);
     }
 
     /**
@@ -698,6 +808,39 @@ public class DlcClient extends AbstractClient{
     public DeleteNotebookSessionResponse DeleteNotebookSession(DeleteNotebookSessionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNotebookSession", DeleteNotebookSessionResponse.class);
+    }
+
+    /**
+     *删除集群
+     * @param req DeleteRayClusterRequest
+     * @return DeleteRayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRayClusterResponse DeleteRayCluster(DeleteRayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRayCluster", DeleteRayClusterResponse.class);
+    }
+
+    /**
+     *根据任务ID删除Ray任务
+     * @param req DeleteRayJobRequest
+     * @return DeleteRayJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRayJobResponse DeleteRayJob(DeleteRayJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRayJob", DeleteRayJobResponse.class);
+    }
+
+    /**
+     *删除资源配置模板
+     * @param req DeleteResourceConfigRequest
+     * @return DeleteResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceConfigResponse DeleteResourceConfig(DeleteResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteResourceConfig", DeleteResourceConfigResponse.class);
     }
 
     /**
@@ -808,6 +951,28 @@ public class DlcClient extends AbstractClient{
     public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(DescribeAdvancedStoreLocationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdvancedStoreLocation", DescribeAdvancedStoreLocationResponse.class);
+    }
+
+    /**
+     *根据集群组 ID 获取集群组详情。支持通过 IncludeDeleted 参数控制是否返回已软删除的记录（用于悬挂 cluster 回显场景）。
+     * @param req DescribeClusterGroupRequest
+     * @return DescribeClusterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterGroupResponse DescribeClusterGroup(DescribeClusterGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterGroup", DescribeClusterGroupResponse.class);
+    }
+
+    /**
+     *计算组关联 cluster 使用情况响应
+     * @param req DescribeClusterGroupClustersRequest
+     * @return DescribeClusterGroupClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterGroupClustersResponse DescribeClusterGroupClusters(DescribeClusterGroupClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterGroupClusters", DescribeClusterGroupClustersResponse.class);
     }
 
     /**
@@ -1746,6 +1911,105 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *根据 exampleId 获取单个案例详情
+     * @param req GetExampleDetailRequest
+     * @return GetExampleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetExampleDetailResponse GetExampleDetail(GetExampleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetExampleDetail", GetExampleDetailResponse.class);
+    }
+
+    /**
+     *根据配置ID获取作业配置详情
+     * @param req GetJobSpecRequest
+     * @return GetJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetJobSpecResponse GetJobSpec(GetJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetJobSpec", GetJobSpecResponse.class);
+    }
+
+    /**
+     *获取实验室详情
+     * @param req GetLabDetailRequest
+     * @return GetLabDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabDetailResponse GetLabDetail(GetLabDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabDetail", GetLabDetailResponse.class);
+    }
+
+    /**
+     *获取实验室的事件流（基于 K8s Event + CLS 日志）
+     * @param req GetLabEventRequest
+     * @return GetLabEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabEventResponse GetLabEvent(GetLabEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabEvent", GetLabEventResponse.class);
+    }
+
+    /**
+     *获取实验室的状态变更历史记录
+     * @param req GetLabHistoryRequest
+     * @return GetLabHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabHistoryResponse GetLabHistory(GetLabHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabHistory", GetLabHistoryResponse.class);
+    }
+
+    /**
+     *获取数据实验室Pod的YAML内容
+     * @param req GetLabPodYamlRequest
+     * @return GetLabPodYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabPodYamlResponse GetLabPodYaml(GetLabPodYamlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabPodYaml", GetLabPodYamlResponse.class);
+    }
+
+    /**
+     *获取数据实验室的Pod列表
+     * @param req GetLabPodsRequest
+     * @return GetLabPodsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabPodsResponse GetLabPods(GetLabPodsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabPods", GetLabPodsResponse.class);
+    }
+
+    /**
+     *获取实验室ide访问地址
+     * @param req GetLabServiceUrlsRequest
+     * @return GetLabServiceUrlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabServiceUrlsResponse GetLabServiceUrls(GetLabServiceUrlsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabServiceUrls", GetLabServiceUrlsResponse.class);
+    }
+
+    /**
+     *获取数据实验室对应的RayCluster YAML内容
+     * @param req GetLabYamlRequest
+     * @return GetLabYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLabYamlResponse GetLabYaml(GetLabYamlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLabYaml", GetLabYamlResponse.class);
+    }
+
+    /**
      *GetOptimizerPolicy
      * @param req GetOptimizerPolicyRequest
      * @return GetOptimizerPolicyResponse
@@ -1754,6 +2018,160 @@ public class DlcClient extends AbstractClient{
     public GetOptimizerPolicyResponse GetOptimizerPolicy(GetOptimizerPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetOptimizerPolicy", GetOptimizerPolicyResponse.class);
+    }
+
+    /**
+     *获取Ray集群详情请求
+     * @param req GetRayClusterRequest
+     * @return GetRayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayClusterResponse GetRayCluster(GetRayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayCluster", GetRayClusterResponse.class);
+    }
+
+    /**
+     *获取Ray集群的事件流（基于 K8s Event + CLS 日志）
+     * @param req GetRayClusterEventRequest
+     * @return GetRayClusterEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayClusterEventResponse GetRayClusterEvent(GetRayClusterEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayClusterEvent", GetRayClusterEventResponse.class);
+    }
+
+    /**
+     *获取集群状态历史
+     * @param req GetRayClusterHistoryRequest
+     * @return GetRayClusterHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayClusterHistoryResponse GetRayClusterHistory(GetRayClusterHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayClusterHistory", GetRayClusterHistoryResponse.class);
+    }
+
+    /**
+     *获取集群Pod的YAML内容
+     * @param req GetRayClusterPodYamlRequest
+     * @return GetRayClusterPodYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayClusterPodYamlResponse GetRayClusterPodYaml(GetRayClusterPodYamlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayClusterPodYaml", GetRayClusterPodYamlResponse.class);
+    }
+
+    /**
+     *获取集群的Pod列表
+     * @param req GetRayClusterPodsRequest
+     * @return GetRayClusterPodsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayClusterPodsResponse GetRayClusterPods(GetRayClusterPodsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayClusterPods", GetRayClusterPodsResponse.class);
+    }
+
+    /**
+     *获取RayCluster的YAML内容
+     * @param req GetRayClusterYamlRequest
+     * @return GetRayClusterYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayClusterYamlResponse GetRayClusterYaml(GetRayClusterYamlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayClusterYaml", GetRayClusterYamlResponse.class);
+    }
+
+    /**
+     *根据任务ID获取Ray任务详情
+     * @param req GetRayJobRequest
+     * @return GetRayJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobResponse GetRayJob(GetRayJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJob", GetRayJobResponse.class);
+    }
+
+    /**
+     *通过 ResourceManager 调用 CLS SearchLog API 查询作业相关日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
+     * @param req GetRayJobEventRequest
+     * @return GetRayJobEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobEventResponse GetRayJobEvent(GetRayJobEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJobEvent", GetRayJobEventResponse.class);
+    }
+
+    /**
+     *获取作业事件日志
+     * @param req GetRayJobEventLogRequest
+     * @return GetRayJobEventLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobEventLogResponse GetRayJobEventLog(GetRayJobEventLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJobEventLog", GetRayJobEventLogResponse.class);
+    }
+
+    /**
+     *根据任务ID获取Ray任务的历史执行记录
+     * @param req GetRayJobHistoryRequest
+     * @return GetRayJobHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobHistoryResponse GetRayJobHistory(GetRayJobHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJobHistory", GetRayJobHistoryResponse.class);
+    }
+
+    /**
+     *获取Pod的YAML内容
+     * @param req GetRayJobPodYamlRequest
+     * @return GetRayJobPodYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobPodYamlResponse GetRayJobPodYaml(GetRayJobPodYamlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJobPodYaml", GetRayJobPodYamlResponse.class);
+    }
+
+    /**
+     *获取作业的Pod列表
+     * @param req GetRayJobPodsRequest
+     * @return GetRayJobPodsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobPodsResponse GetRayJobPods(GetRayJobPodsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJobPods", GetRayJobPodsResponse.class);
+    }
+
+    /**
+     *获取RayJob的YAML内容
+     * @param req GetRayJobYamlRequest
+     * @return GetRayJobYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayJobYamlResponse GetRayJobYaml(GetRayJobYamlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayJobYaml", GetRayJobYamlResponse.class);
+    }
+
+    /**
+     *获取资源配置模板详情
+     * @param req GetResourceConfigRequest
+     * @return GetResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetResourceConfigResponse GetResourceConfig(GetResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetResourceConfig", GetResourceConfigResponse.class);
     }
 
     /**
@@ -1787,6 +2205,138 @@ public class DlcClient extends AbstractClient{
     public LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroups(LaunchStandardEngineResourceGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "LaunchStandardEngineResourceGroups", LaunchStandardEngineResourceGroupsResponse.class);
+    }
+
+    /**
+     *列出所有集群组
+     * @param req ListClusterGroupsRequest
+     * @return ListClusterGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListClusterGroupsResponse ListClusterGroups(ListClusterGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListClusterGroups", ListClusterGroupsResponse.class);
+    }
+
+    /**
+     *获取所有案例分类
+     * @param req ListExampleCategoriesRequest
+     * @return ListExampleCategoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListExampleCategoriesResponse ListExampleCategories(ListExampleCategoriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListExampleCategories", ListExampleCategoriesResponse.class);
+    }
+
+    /**
+     *获取所有案例分类
+     * @param req ListExampleDifficultiesRequest
+     * @return ListExampleDifficultiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListExampleDifficultiesResponse ListExampleDifficulties(ListExampleDifficultiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListExampleDifficulties", ListExampleDifficultiesResponse.class);
+    }
+
+    /**
+     *返回标签去重列表，按出现频次从高到低排序。
+     * @param req ListExampleTagsRequest
+     * @return ListExampleTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListExampleTagsResponse ListExampleTags(ListExampleTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListExampleTags", ListExampleTagsResponse.class);
+    }
+
+    /**
+     *案例列表
+     * @param req ListExamplesRequest
+     * @return ListExamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListExamplesResponse ListExamples(ListExamplesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListExamples", ListExamplesResponse.class);
+    }
+
+    /**
+     *分页查询作业配置列表
+     * @param req ListJobSpecsRequest
+     * @return ListJobSpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListJobSpecsResponse ListJobSpecs(ListJobSpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListJobSpecs", ListJobSpecsResponse.class);
+    }
+
+    /**
+     *分页查询某作业配置下产生的所有作业实例
+     * @param req ListJobsBySpecRequest
+     * @return ListJobsBySpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListJobsBySpecResponse ListJobsBySpec(ListJobsBySpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListJobsBySpec", ListJobsBySpecResponse.class);
+    }
+
+    /**
+     *列出实验室列表
+     * @param req ListLabsRequest
+     * @return ListLabsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLabsResponse ListLabs(ListLabsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListLabs", ListLabsResponse.class);
+    }
+
+    /**
+     *查询指定 Ray 集群下提交的所有作业，分页返回。底层委托给 ListRayJobs，强制注入 ClusterId 作为过滤条件。
+     * @param req ListRayClusterJobsRequest
+     * @return ListRayClusterJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRayClusterJobsResponse ListRayClusterJobs(ListRayClusterJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRayClusterJobs", ListRayClusterJobsResponse.class);
+    }
+
+    /**
+     *列出所有集群
+     * @param req ListRayClustersRequest
+     * @return ListRayClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRayClustersResponse ListRayClusters(ListRayClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRayClusters", ListRayClustersResponse.class);
+    }
+
+    /**
+     *根据集群ID列出所有Ray任务
+     * @param req ListRayJobsRequest
+     * @return ListRayJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRayJobsResponse ListRayJobs(ListRayJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRayJobs", ListRayJobsResponse.class);
+    }
+
+    /**
+     *列出所有资源配置模板
+     * @param req ListResourceConfigsRequest
+     * @return ListResourceConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListResourceConfigsResponse ListResourceConfigs(ListResourceConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListResourceConfigs", ListResourceConfigsResponse.class);
     }
 
     /**
@@ -1834,6 +2384,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *修改集群的调度优先级（1-9，数字越大优先级越高）
+     * @param req ModifyClusterPriorityRequest
+     * @return ModifyClusterPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterPriorityResponse ModifyClusterPriority(ModifyClusterPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterPriority", ModifyClusterPriorityResponse.class);
+    }
+
+    /**
      *修改引擎描述信息
      * @param req ModifyDataEngineDescriptionRequest
      * @return ModifyDataEngineDescriptionResponse
@@ -1853,6 +2414,17 @@ public class DlcClient extends AbstractClient{
     public ModifyGovernEventRuleResponse ModifyGovernEventRule(ModifyGovernEventRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGovernEventRule", ModifyGovernEventRuleResponse.class);
+    }
+
+    /**
+     *修改实验室的调度优先级（1-9，数字越大优先级越高）
+     * @param req ModifyLabPriorityRequest
+     * @return ModifyLabPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLabPriorityResponse ModifyLabPriority(ModifyLabPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLabPriority", ModifyLabPriorityResponse.class);
     }
 
     /**
@@ -2032,6 +2604,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *基于指定作业配置提交一次作业实例
+     * @param req RunJobSpecRequest
+     * @return RunJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunJobSpecResponse RunJobSpec(RunJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunJobSpec", RunJobSpecResponse.class);
+    }
+
+    /**
      *设置优化策略的接口
      * @param req SetOptimizerPolicyRequest
      * @return SetOptimizerPolicyResponse
@@ -2040,6 +2623,50 @@ public class DlcClient extends AbstractClient{
     public SetOptimizerPolicyResponse SetOptimizerPolicy(SetOptimizerPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetOptimizerPolicy", SetOptimizerPolicyResponse.class);
+    }
+
+    /**
+     *启动实验室
+     * @param req StartLabRequest
+     * @return StartLabResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLabResponse StartLab(StartLabRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartLab", StartLabResponse.class);
+    }
+
+    /**
+     *启动集群
+     * @param req StartRayClusterRequest
+     * @return StartRayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartRayClusterResponse StartRayCluster(StartRayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartRayCluster", StartRayClusterResponse.class);
+    }
+
+    /**
+     *停止实验室
+     * @param req StopLabRequest
+     * @return StopLabResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLabResponse StopLab(StopLabRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLab", StopLabResponse.class);
+    }
+
+    /**
+     *停止集群
+     * @param req StopRayClusterRequest
+     * @return StopRayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRayClusterResponse StopRayCluster(StopRayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopRayCluster", StopRayClusterResponse.class);
     }
 
     /**
@@ -2109,6 +2736,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *更新集群组
+     * @param req UpdateClusterGroupRequest
+     * @return UpdateClusterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClusterGroupResponse UpdateClusterGroup(UpdateClusterGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateClusterGroup", UpdateClusterGroupResponse.class);
+    }
+
+    /**
      *本接口用于更新数据引擎配置
      * @param req UpdateDataEngineRequest
      * @return UpdateDataEngineResponse
@@ -2153,6 +2791,39 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *更新已有作业配置的字段
+     * @param req UpdateJobSpecRequest
+     * @return UpdateJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateJobSpecResponse UpdateJobSpec(UpdateJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateJobSpec", UpdateJobSpecResponse.class);
+    }
+
+    /**
+     *修改作业配置的调度优先级（1-9，数字越大优先级越高）
+     * @param req UpdateJobSpecPriorityRequest
+     * @return UpdateJobSpecPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateJobSpecPriorityResponse UpdateJobSpecPriority(UpdateJobSpecPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateJobSpecPriority", UpdateJobSpecPriorityResponse.class);
+    }
+
+    /**
+     *更新实验室配置：仅在 CREATED / STOPPED / FAILED 终态可用；变更落 MySQL，下次 Start 按新 spec 创建 K8s 资源
+     * @param req UpdateLabRequest
+     * @return UpdateLabResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLabResponse UpdateLab(UpdateLabRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateLab", UpdateLabResponse.class);
+    }
+
+    /**
      *更新网络配置
      * @param req UpdateNetworkConnectionRequest
      * @return UpdateNetworkConnectionResponse
@@ -2161,6 +2832,39 @@ public class DlcClient extends AbstractClient{
     public UpdateNetworkConnectionResponse UpdateNetworkConnection(UpdateNetworkConnectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateNetworkConnection", UpdateNetworkConnectionResponse.class);
+    }
+
+    /**
+     *更新集群配置：仅在 CREATED / STOPPED / FAILED 终态可用；变更落 MySQL，下次 Start 按新 spec 创建 K8s 资源
+     * @param req UpdateRayClusterRequest
+     * @return UpdateRayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRayClusterResponse UpdateRayCluster(UpdateRayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateRayCluster", UpdateRayClusterResponse.class);
+    }
+
+    /**
+     *更新处于 SUBMITTED/PENDING 状态的作业的优先级。仅 SUBMITTED/PENDING 状态的作业允许调整优先级。内部通过调用 Neutrino 的 UpdateJobConfig 接口更新 ENVIRONMENT 配置中的 priority 字段。
+     * @param req UpdateRayJobPriorityRequest
+     * @return UpdateRayJobPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRayJobPriorityResponse UpdateRayJobPriority(UpdateRayJobPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateRayJobPriority", UpdateRayJobPriorityResponse.class);
+    }
+
+    /**
+     *更新资源配置模板
+     * @param req UpdateResourceConfigRequest
+     * @return UpdateResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateResourceConfigResponse UpdateResourceConfig(UpdateResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateResourceConfig", UpdateResourceConfigResponse.class);
     }
 
     /**

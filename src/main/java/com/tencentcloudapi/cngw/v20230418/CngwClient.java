@@ -259,7 +259,7 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
-     *查询 LLM 模型 API 列表。
+     *查询指定网关实例下的所有 LLM 模型 API 列表。支持按名称关键词模糊搜索、按过滤器筛选，以及分页查询。用于绑定场景时，可通过 ConsumerGroupId 和 UseToBind 参数筛选可绑定的模型 API。
      * @param req DescribeCloudNativeAPIGatewayLLMModelAPIsRequest
      * @return DescribeCloudNativeAPIGatewayLLMModelAPIsResponse
      * @throws TencentCloudSDKException
@@ -388,6 +388,17 @@ public class CngwClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewayMCPToolListResponse DescribeCloudNativeAPIGatewayMCPToolList(DescribeCloudNativeAPIGatewayMCPToolListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPToolList", DescribeCloudNativeAPIGatewayMCPToolListResponse.class);
+    }
+
+    /**
+     *从OpenAPI文件中解析出可导入的MCP tools
+     * @param req DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest
+     * @return DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse DescribeCloudNativeAPIGatewayMCPToolsFromFile(DescribeCloudNativeAPIGatewayMCPToolsFromFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPToolsFromFile", DescribeCloudNativeAPIGatewayMCPToolsFromFileResponse.class);
     }
 
     /**
@@ -575,6 +586,17 @@ public class CngwClient extends AbstractClient{
     public UnbindCloudNativeAPIGatewaySecretKeyResponse UnbindCloudNativeAPIGatewaySecretKey(UnbindCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindCloudNativeAPIGatewaySecretKey", UnbindCloudNativeAPIGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *批量导入从OpenAPI文件中解析的MCP Tools
+     * @param req UpdateCloudNativeAPIGatewayMCPToolsRequest
+     * @return UpdateCloudNativeAPIGatewayMCPToolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCloudNativeAPIGatewayMCPToolsResponse UpdateCloudNativeAPIGatewayMCPTools(UpdateCloudNativeAPIGatewayMCPToolsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCloudNativeAPIGatewayMCPTools", UpdateCloudNativeAPIGatewayMCPToolsResponse.class);
     }
 
 }

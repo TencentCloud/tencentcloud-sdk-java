@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribePreCacheImageTaskResponse extends AbstractModel {
 
     /**
-    * 镜像地址
+    * <p>镜像地址</p>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 镜像 Digest
+    * <p>镜像 Digest</p>
     */
     @SerializedName("ImageDigest")
     @Expose
     private String ImageDigest;
 
     /**
-    * 镜像仓库类型：`enterprise`、`personal`。
+    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
     */
     @SerializedName("ImageRegistryType")
     @Expose
     private String ImageRegistryType;
 
     /**
-    * 镜像预热状态
+    * <p>镜像预热状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 镜像预热状态描述
+    * <p>镜像预热状态描述</p>
     */
     @SerializedName("Message")
     @Expose
@@ -66,80 +66,80 @@ public class DescribePreCacheImageTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像地址 
-     * @return Image 镜像地址
+     * Get <p>镜像地址</p> 
+     * @return Image <p>镜像地址</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 镜像地址
-     * @param Image 镜像地址
+     * Set <p>镜像地址</p>
+     * @param Image <p>镜像地址</p>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 镜像 Digest 
-     * @return ImageDigest 镜像 Digest
+     * Get <p>镜像 Digest</p> 
+     * @return ImageDigest <p>镜像 Digest</p>
      */
     public String getImageDigest() {
         return this.ImageDigest;
     }
 
     /**
-     * Set 镜像 Digest
-     * @param ImageDigest 镜像 Digest
+     * Set <p>镜像 Digest</p>
+     * @param ImageDigest <p>镜像 Digest</p>
      */
     public void setImageDigest(String ImageDigest) {
         this.ImageDigest = ImageDigest;
     }
 
     /**
-     * Get 镜像仓库类型：`enterprise`、`personal`。 
-     * @return ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public String getImageRegistryType() {
         return this.ImageRegistryType;
     }
 
     /**
-     * Set 镜像仓库类型：`enterprise`、`personal`。
-     * @param ImageRegistryType 镜像仓库类型：`enterprise`、`personal`。
+     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      */
     public void setImageRegistryType(String ImageRegistryType) {
         this.ImageRegistryType = ImageRegistryType;
     }
 
     /**
-     * Get 镜像预热状态 
-     * @return Status 镜像预热状态
+     * Get <p>镜像预热状态</p> 
+     * @return Status <p>镜像预热状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 镜像预热状态
-     * @param Status 镜像预热状态
+     * Set <p>镜像预热状态</p>
+     * @param Status <p>镜像预热状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 镜像预热状态描述 
-     * @return Message 镜像预热状态描述
+     * Get <p>镜像预热状态描述</p> 
+     * @return Message <p>镜像预热状态描述</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 镜像预热状态描述
-     * @param Message 镜像预热状态描述
+     * Set <p>镜像预热状态描述</p>
+     * @param Message <p>镜像预热状态描述</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;

@@ -73,6 +73,13 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
     private Boolean UseToBind;
 
     /**
+    * <p>消费者 ID（以 consumer- 开头）。</p>
+    */
+    @SerializedName("ConsumerId")
+    @Expose
+    private String ConsumerId;
+
+    /**
      * Get 网关 id。 
      * @return GatewayId 网关 id。
      */
@@ -184,6 +191,22 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
         this.UseToBind = UseToBind;
     }
 
+    /**
+     * Get <p>消费者 ID（以 consumer- 开头）。</p> 
+     * @return ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
+     */
+    public String getConsumerId() {
+        return this.ConsumerId;
+    }
+
+    /**
+     * Set <p>消费者 ID（以 consumer- 开头）。</p>
+     * @param ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
+     */
+    public void setConsumerId(String ConsumerId) {
+        this.ConsumerId = ConsumerId;
+    }
+
     public DescribeCloudNativeAPIGatewayLLMModelAPIsRequest() {
     }
 
@@ -216,6 +239,9 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
         if (source.UseToBind != null) {
             this.UseToBind = new Boolean(source.UseToBind);
         }
+        if (source.ConsumerId != null) {
+            this.ConsumerId = new String(source.ConsumerId);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "ConsumerGroupId", this.ConsumerGroupId);
         this.setParamSimple(map, prefix + "UseToBind", this.UseToBind);
+        this.setParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
 
     }
 }

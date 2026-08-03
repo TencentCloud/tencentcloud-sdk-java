@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AppTriggerParamBindingConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>绑定参数列表</p>
     */
     @SerializedName("ParamList")
     @Expose
     private AppTriggerParamBinding [] ParamList;
 
     /**
-     * Get  
-     * @return ParamList 
+     * Get <p>绑定参数列表</p> 
+     * @return ParamList <p>绑定参数列表</p>
      */
     public AppTriggerParamBinding [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set 
-     * @param ParamList 
+     * Set <p>绑定参数列表</p>
+     * @param ParamList <p>绑定参数列表</p>
      */
     public void setParamList(AppTriggerParamBinding [] ParamList) {
         this.ParamList = ParamList;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSampleSnapshotTemplateResponse extends AbstractModel {
 
     /**
-    * 采样截图模板唯一标识。
+    * <p>采样截图模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSampleSnapshotTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 采样截图模板唯一标识。 
-     * @return Definition 采样截图模板唯一标识。
+     * Get <p>采样截图模板唯一标识。</p> 
+     * @return Definition <p>采样截图模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 采样截图模板唯一标识。
-     * @param Definition 采样截图模板唯一标识。
+     * Set <p>采样截图模板唯一标识。</p>
+     * @param Definition <p>采样截图模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -115,7 +115,7 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     private CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute;
 
     /**
-    * <p>无</p>
+    * <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
     */
     @SerializedName("MatchHeaders")
     @Expose
@@ -379,16 +379,16 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     }
 
     /**
-     * Get <p>无</p> 
-     * @return MatchHeaders <p>无</p>
+     * Get <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p> 
+     * @return MatchHeaders <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      */
     public AIGWKVMatch [] getMatchHeaders() {
         return this.MatchHeaders;
     }
 
     /**
-     * Set <p>无</p>
-     * @param MatchHeaders <p>无</p>
+     * Set <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
+     * @param MatchHeaders <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      */
     public void setMatchHeaders(AIGWKVMatch [] MatchHeaders) {
         this.MatchHeaders = MatchHeaders;

@@ -31,6 +31,13 @@ public class PauseSandboxInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Boolean Memory;
+
+    /**
      * Get <p>沙箱实例ID</p> 
      * @return InstanceId <p>沙箱实例ID</p>
      */
@@ -46,6 +53,22 @@ public class PauseSandboxInstanceRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p> 
+     * @return Memory <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
+     */
+    public Boolean getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
+     * @param Memory <p>可选。带内存暂停，恢复后保留进程和内存状态。true=带内存；false=仅磁盘；不传=系统默认（当前默认 true，带内存）。</p>
+     */
+    public void setMemory(Boolean Memory) {
+        this.Memory = Memory;
+    }
+
     public PauseSandboxInstanceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class PauseSandboxInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Memory != null) {
+            this.Memory = new Boolean(source.Memory);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class PauseSandboxInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
 
     }
 }

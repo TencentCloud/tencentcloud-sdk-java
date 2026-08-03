@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquiryPriceRunInstancesResponse extends AbstractModel {
 
     /**
-    * 该参数表示对应配置实例的价格。
+    * <p>该参数表示对应配置实例的价格。</p>
     */
     @SerializedName("Price")
     @Expose
@@ -38,16 +38,16 @@ public class InquiryPriceRunInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该参数表示对应配置实例的价格。 
-     * @return Price 该参数表示对应配置实例的价格。
+     * Get <p>该参数表示对应配置实例的价格。</p> 
+     * @return Price <p>该参数表示对应配置实例的价格。</p>
      */
     public Price getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 该参数表示对应配置实例的价格。
-     * @param Price 该参数表示对应配置实例的价格。
+     * Set <p>该参数表示对应配置实例的价格。</p>
+     * @param Price <p>该参数表示对应配置实例的价格。</p>
      */
     public void setPrice(Price Price) {
         this.Price = Price;
