@@ -24,465 +24,464 @@ import java.util.HashMap;
 public class CreateVpnConnectionRequest extends AbstractModel {
 
     /**
-    * VPN网关实例ID。
+    * <p>VPN网关实例ID。</p>
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
+    * <p>对端网关ID。例如：cgw-2wqq41m9，可通过<a href="https://cloud.tencent.com/document/product/215/17516">DescribeCustomerGateways</a>接口查询对端网关。</p>
     */
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
 
     /**
-    * 通道名称，可任意命名，但不得超过60个字符。
+    * <p>通道名称，可任意命名，但不得超过60个字符。</p>
     */
     @SerializedName("VpnConnectionName")
     @Expose
     private String VpnConnectionName;
 
     /**
-    * 预共享密钥。
+    * <p>预共享密钥。</p>
     */
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
 
     /**
-    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-CCN VPN 形的通道 可以不传VPCID
+    * <p>VPC实例ID。VPC类型网关可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取，CCN类型网关传空值即可。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+    * <p>SPD策略组，例如：{&quot;10.0.0.5/24&quot;:[&quot;172.123.10.5/16&quot;]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。</p>
     */
     @SerializedName("SecurityPolicyDatabases")
     @Expose
     private SecurityPolicyDatabase [] SecurityPolicyDatabases;
 
     /**
-    * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+    * <p>IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议</p>
     */
     @SerializedName("IKEOptionsSpecification")
     @Expose
     private IKEOptionsSpecification IKEOptionsSpecification;
 
     /**
-    * IPSec配置，腾讯云提供IPSec安全会话设置
+    * <p>IPSec配置，腾讯云提供IPSec安全会话设置</p>
     */
     @SerializedName("IPSECOptionsSpecification")
     @Expose
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    * <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 是否支持隧道内健康检查，默认为False。
+    * <p>是否支持隧道内健康检查，默认为False。</p>
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+    * <p>健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
     */
     @SerializedName("HealthCheckLocalIp")
     @Expose
     private String HealthCheckLocalIp;
 
     /**
-    * 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
+    * <p>健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
     */
     @SerializedName("HealthCheckRemoteIp")
     @Expose
     private String HealthCheckRemoteIp;
 
     /**
-    * 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+    * <p>通道类型, 例如:[&quot;STATIC&quot;, &quot;StaticRoute&quot;, &quot;Policy&quot;, &quot;Bgp&quot;]</p><p>枚举值：</p><ul><li>StaticRoute： 目的路由类型</li><li>Policy： SPD策略类型</li><li>Bgp： BGP类型</li></ul><p>默认值：STATIC</p>
     */
     @SerializedName("RouteType")
     @Expose
     private String RouteType;
 
     /**
-    * 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+    * <p>协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）</p>
     */
     @SerializedName("NegotiationType")
     @Expose
     private String NegotiationType;
 
     /**
-    * DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+    * <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
     */
     @SerializedName("DpdEnable")
     @Expose
     private Long DpdEnable;
 
     /**
-    * DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+    * <p>DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒</p>
     */
     @SerializedName("DpdTimeout")
     @Expose
     private String DpdTimeout;
 
     /**
-    * DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+    * <p>DPD超时后的动作。</p><p>入参限制：dpdEnable为1（开启）时有效。</p><p>枚举值：</p><ul><li>clear： 断开</li><li>restart： 重试</li></ul><p>默认值：restart</p>
     */
     @SerializedName("DpdAction")
     @Expose
     private String DpdAction;
 
     /**
-    * 创建通道路由信息。
+    * <p>创建通道路由信息。</p>
     */
     @SerializedName("Route")
     @Expose
     private CreateVpnConnRoute Route;
 
     /**
-    * BGP配置。
+    * <p>BGP配置。</p>
     */
     @SerializedName("BgpConfig")
     @Expose
     private BgpConfig BgpConfig;
 
     /**
-    * 健康检查NQA配置。
+    * <p>健康检查NQA配置。</p>
     */
     @SerializedName("HealthCheckConfig")
     @Expose
     private HealthCheckConfig HealthCheckConfig;
 
     /**
-     * Get VPN网关实例ID。 
-     * @return VpnGatewayId VPN网关实例ID。
+     * Get <p>VPN网关实例ID。</p> 
+     * @return VpnGatewayId <p>VPN网关实例ID。</p>
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID。
-     * @param VpnGatewayId VPN网关实例ID。
+     * Set <p>VPN网关实例ID。</p>
+     * @param VpnGatewayId <p>VPN网关实例ID。</p>
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。 
-     * @return CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
+     * Get <p>对端网关ID。例如：cgw-2wqq41m9，可通过<a href="https://cloud.tencent.com/document/product/215/17516">DescribeCustomerGateways</a>接口查询对端网关。</p> 
+     * @return CustomerGatewayId <p>对端网关ID。例如：cgw-2wqq41m9，可通过<a href="https://cloud.tencent.com/document/product/215/17516">DescribeCustomerGateways</a>接口查询对端网关。</p>
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
-     * @param CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
+     * Set <p>对端网关ID。例如：cgw-2wqq41m9，可通过<a href="https://cloud.tencent.com/document/product/215/17516">DescribeCustomerGateways</a>接口查询对端网关。</p>
+     * @param CustomerGatewayId <p>对端网关ID。例如：cgw-2wqq41m9，可通过<a href="https://cloud.tencent.com/document/product/215/17516">DescribeCustomerGateways</a>接口查询对端网关。</p>
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
     /**
-     * Get 通道名称，可任意命名，但不得超过60个字符。 
-     * @return VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
+     * Get <p>通道名称，可任意命名，但不得超过60个字符。</p> 
+     * @return VpnConnectionName <p>通道名称，可任意命名，但不得超过60个字符。</p>
      */
     public String getVpnConnectionName() {
         return this.VpnConnectionName;
     }
 
     /**
-     * Set 通道名称，可任意命名，但不得超过60个字符。
-     * @param VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
+     * Set <p>通道名称，可任意命名，但不得超过60个字符。</p>
+     * @param VpnConnectionName <p>通道名称，可任意命名，但不得超过60个字符。</p>
      */
     public void setVpnConnectionName(String VpnConnectionName) {
         this.VpnConnectionName = VpnConnectionName;
     }
 
     /**
-     * Get 预共享密钥。 
-     * @return PreShareKey 预共享密钥。
+     * Get <p>预共享密钥。</p> 
+     * @return PreShareKey <p>预共享密钥。</p>
      */
     public String getPreShareKey() {
         return this.PreShareKey;
     }
 
     /**
-     * Set 预共享密钥。
-     * @param PreShareKey 预共享密钥。
+     * Set <p>预共享密钥。</p>
+     * @param PreShareKey <p>预共享密钥。</p>
      */
     public void setPreShareKey(String PreShareKey) {
         this.PreShareKey = PreShareKey;
     }
 
     /**
-     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-CCN VPN 形的通道 可以不传VPCID 
-     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-CCN VPN 形的通道 可以不传VPCID
+     * Get <p>VPC实例ID。VPC类型网关可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取，CCN类型网关传空值即可。</p> 
+     * @return VpcId <p>VPC实例ID。VPC类型网关可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取，CCN类型网关传空值即可。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-CCN VPN 形的通道 可以不传VPCID
-     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-CCN VPN 形的通道 可以不传VPCID
+     * Set <p>VPC实例ID。VPC类型网关可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取，CCN类型网关传空值即可。</p>
+     * @param VpcId <p>VPC实例ID。VPC类型网关可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取，CCN类型网关传空值即可。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。 
-     * @return SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Get <p>SPD策略组，例如：{&quot;10.0.0.5/24&quot;:[&quot;172.123.10.5/16&quot;]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。</p> 
+     * @return SecurityPolicyDatabases <p>SPD策略组，例如：{&quot;10.0.0.5/24&quot;:[&quot;172.123.10.5/16&quot;]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。</p>
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabases() {
         return this.SecurityPolicyDatabases;
     }
 
     /**
-     * Set SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
-     * @param SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Set <p>SPD策略组，例如：{&quot;10.0.0.5/24&quot;:[&quot;172.123.10.5/16&quot;]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。</p>
+     * @param SecurityPolicyDatabases <p>SPD策略组，例如：{&quot;10.0.0.5/24&quot;:[&quot;172.123.10.5/16&quot;]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。</p>
      */
     public void setSecurityPolicyDatabases(SecurityPolicyDatabase [] SecurityPolicyDatabases) {
         this.SecurityPolicyDatabases = SecurityPolicyDatabases;
     }
 
     /**
-     * Get IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议 
-     * @return IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+     * Get <p>IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议</p> 
+     * @return IKEOptionsSpecification <p>IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议</p>
      */
     public IKEOptionsSpecification getIKEOptionsSpecification() {
         return this.IKEOptionsSpecification;
     }
 
     /**
-     * Set IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
-     * @param IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+     * Set <p>IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议</p>
+     * @param IKEOptionsSpecification <p>IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议</p>
      */
     public void setIKEOptionsSpecification(IKEOptionsSpecification IKEOptionsSpecification) {
         this.IKEOptionsSpecification = IKEOptionsSpecification;
     }
 
     /**
-     * Get IPSec配置，腾讯云提供IPSec安全会话设置 
-     * @return IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
+     * Get <p>IPSec配置，腾讯云提供IPSec安全会话设置</p> 
+     * @return IPSECOptionsSpecification <p>IPSec配置，腾讯云提供IPSec安全会话设置</p>
      */
     public IPSECOptionsSpecification getIPSECOptionsSpecification() {
         return this.IPSECOptionsSpecification;
     }
 
     /**
-     * Set IPSec配置，腾讯云提供IPSec安全会话设置
-     * @param IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
+     * Set <p>IPSec配置，腾讯云提供IPSec安全会话设置</p>
+     * @param IPSECOptionsSpecification <p>IPSec配置，腾讯云提供IPSec安全会话设置</p>
      */
     public void setIPSECOptionsSpecification(IPSECOptionsSpecification IPSECOptionsSpecification) {
         this.IPSECOptionsSpecification = IPSECOptionsSpecification;
     }
 
     /**
-     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
-     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Get <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]</p> 
+     * @return Tags <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Set <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]</p>
+     * @param Tags <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否支持隧道内健康检查，默认为False。 
-     * @return EnableHealthCheck 是否支持隧道内健康检查，默认为False。
+     * Get <p>是否支持隧道内健康检查，默认为False。</p> 
+     * @return EnableHealthCheck <p>是否支持隧道内健康检查，默认为False。</p>
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否支持隧道内健康检查，默认为False。
-     * @param EnableHealthCheck 是否支持隧道内健康检查，默认为False。
+     * Set <p>是否支持隧道内健康检查，默认为False。</p>
+     * @param EnableHealthCheck <p>是否支持隧道内健康检查，默认为False。</p>
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。 
-     * @return HealthCheckLocalIp 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * Get <p>健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。</p> 
+     * @return HealthCheckLocalIp <p>健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
      */
     public String getHealthCheckLocalIp() {
         return this.HealthCheckLocalIp;
     }
 
     /**
-     * Set 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
-     * @param HealthCheckLocalIp 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * Set <p>健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
+     * @param HealthCheckLocalIp <p>健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
      */
     public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
         this.HealthCheckLocalIp = HealthCheckLocalIp;
     }
 
     /**
-     * Get 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。 
-     * @return HealthCheckRemoteIp 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * Get <p>健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。</p> 
+     * @return HealthCheckRemoteIp <p>健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
      */
     public String getHealthCheckRemoteIp() {
         return this.HealthCheckRemoteIp;
     }
 
     /**
-     * Set 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
-     * @param HealthCheckRemoteIp 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * Set <p>健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
+     * @param HealthCheckRemoteIp <p>健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。</p>
      */
     public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;
     }
 
     /**
-     * Get 通道类型, 例如:["STATIC", "StaticRoute", "Policy"] 
-     * @return RouteType 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+     * Get <p>通道类型, 例如:[&quot;STATIC&quot;, &quot;StaticRoute&quot;, &quot;Policy&quot;, &quot;Bgp&quot;]</p><p>枚举值：</p><ul><li>StaticRoute： 目的路由类型</li><li>Policy： SPD策略类型</li><li>Bgp： BGP类型</li></ul><p>默认值：STATIC</p> 
+     * @return RouteType <p>通道类型, 例如:[&quot;STATIC&quot;, &quot;StaticRoute&quot;, &quot;Policy&quot;, &quot;Bgp&quot;]</p><p>枚举值：</p><ul><li>StaticRoute： 目的路由类型</li><li>Policy： SPD策略类型</li><li>Bgp： BGP类型</li></ul><p>默认值：STATIC</p>
      */
     public String getRouteType() {
         return this.RouteType;
     }
 
     /**
-     * Set 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
-     * @param RouteType 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+     * Set <p>通道类型, 例如:[&quot;STATIC&quot;, &quot;StaticRoute&quot;, &quot;Policy&quot;, &quot;Bgp&quot;]</p><p>枚举值：</p><ul><li>StaticRoute： 目的路由类型</li><li>Policy： SPD策略类型</li><li>Bgp： BGP类型</li></ul><p>默认值：STATIC</p>
+     * @param RouteType <p>通道类型, 例如:[&quot;STATIC&quot;, &quot;StaticRoute&quot;, &quot;Policy&quot;, &quot;Bgp&quot;]</p><p>枚举值：</p><ul><li>StaticRoute： 目的路由类型</li><li>Policy： SPD策略类型</li><li>Bgp： BGP类型</li></ul><p>默认值：STATIC</p>
      */
     public void setRouteType(String RouteType) {
         this.RouteType = RouteType;
     }
 
     /**
-     * Get 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商） 
-     * @return NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     * Get <p>协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）</p> 
+     * @return NegotiationType <p>协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）</p>
      */
     public String getNegotiationType() {
         return this.NegotiationType;
     }
 
     /**
-     * Set 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
-     * @param NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     * Set <p>协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）</p>
+     * @param NegotiationType <p>协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）</p>
      */
     public void setNegotiationType(String NegotiationType) {
         this.NegotiationType = NegotiationType;
     }
 
     /**
-     * Get DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启） 
-     * @return DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * Get <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p> 
+     * @return DpdEnable <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
      */
     public Long getDpdEnable() {
         return this.DpdEnable;
     }
 
     /**
-     * Set DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-     * @param DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * Set <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
+     * @param DpdEnable <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
      */
     public void setDpdEnable(Long DpdEnable) {
         this.DpdEnable = DpdEnable;
     }
 
     /**
-     * Get DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒 
-     * @return DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     * Get <p>DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒</p> 
+     * @return DpdTimeout <p>DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒</p>
      */
     public String getDpdTimeout() {
         return this.DpdTimeout;
     }
 
     /**
-     * Set DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
-     * @param DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     * Set <p>DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒</p>
+     * @param DpdTimeout <p>DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒</p>
      */
     public void setDpdTimeout(String DpdTimeout) {
         this.DpdTimeout = DpdTimeout;
     }
 
     /**
-     * Get DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试） 
-     * @return DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * Get <p>DPD超时后的动作。</p><p>入参限制：dpdEnable为1（开启）时有效。</p><p>枚举值：</p><ul><li>clear： 断开</li><li>restart： 重试</li></ul><p>默认值：restart</p> 
+     * @return DpdAction <p>DPD超时后的动作。</p><p>入参限制：dpdEnable为1（开启）时有效。</p><p>枚举值：</p><ul><li>clear： 断开</li><li>restart： 重试</li></ul><p>默认值：restart</p>
      */
     public String getDpdAction() {
         return this.DpdAction;
     }
 
     /**
-     * Set DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-     * @param DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * Set <p>DPD超时后的动作。</p><p>入参限制：dpdEnable为1（开启）时有效。</p><p>枚举值：</p><ul><li>clear： 断开</li><li>restart： 重试</li></ul><p>默认值：restart</p>
+     * @param DpdAction <p>DPD超时后的动作。</p><p>入参限制：dpdEnable为1（开启）时有效。</p><p>枚举值：</p><ul><li>clear： 断开</li><li>restart： 重试</li></ul><p>默认值：restart</p>
      */
     public void setDpdAction(String DpdAction) {
         this.DpdAction = DpdAction;
     }
 
     /**
-     * Get 创建通道路由信息。 
-     * @return Route 创建通道路由信息。
+     * Get <p>创建通道路由信息。</p> 
+     * @return Route <p>创建通道路由信息。</p>
+     * @deprecated
      */
+    @Deprecated
     public CreateVpnConnRoute getRoute() {
         return this.Route;
     }
 
     /**
-     * Set 创建通道路由信息。
-     * @param Route 创建通道路由信息。
+     * Set <p>创建通道路由信息。</p>
+     * @param Route <p>创建通道路由信息。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setRoute(CreateVpnConnRoute Route) {
         this.Route = Route;
     }
 
     /**
-     * Get BGP配置。 
-     * @return BgpConfig BGP配置。
+     * Get <p>BGP配置。</p> 
+     * @return BgpConfig <p>BGP配置。</p>
      */
     public BgpConfig getBgpConfig() {
         return this.BgpConfig;
     }
 
     /**
-     * Set BGP配置。
-     * @param BgpConfig BGP配置。
+     * Set <p>BGP配置。</p>
+     * @param BgpConfig <p>BGP配置。</p>
      */
     public void setBgpConfig(BgpConfig BgpConfig) {
         this.BgpConfig = BgpConfig;
     }
 
     /**
-     * Get 健康检查NQA配置。 
-     * @return HealthCheckConfig 健康检查NQA配置。
+     * Get <p>健康检查NQA配置。</p> 
+     * @return HealthCheckConfig <p>健康检查NQA配置。</p>
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.HealthCheckConfig;
     }
 
     /**
-     * Set 健康检查NQA配置。
-     * @param HealthCheckConfig 健康检查NQA配置。
+     * Set <p>健康检查NQA配置。</p>
+     * @param HealthCheckConfig <p>健康检查NQA配置。</p>
      */
     public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
         this.HealthCheckConfig = HealthCheckConfig;

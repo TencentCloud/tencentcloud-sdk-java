@@ -111,6 +111,13 @@ public class DescribeDBCustomClusterDetailResponse extends AbstractModel {
     private ContainerNetwork ContainerNetwork;
 
     /**
+    * <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -322,6 +329,22 @@ public class DescribeDBCustomClusterDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul> 
+     * @return DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     * @param DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -384,6 +407,9 @@ public class DescribeDBCustomClusterDetailResponse extends AbstractModel {
         if (source.ContainerNetwork != null) {
             this.ContainerNetwork = new ContainerNetwork(source.ContainerNetwork);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -406,6 +432,7 @@ public class DescribeDBCustomClusterDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ApiServerNetwork.", this.ApiServerNetwork);
         this.setParamObj(map, prefix + "ContainerNetwork.", this.ContainerNetwork);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

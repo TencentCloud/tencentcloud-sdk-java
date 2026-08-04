@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreatePrepareFlowGroupResponse extends AbstractModel {
 
     /**
-    * 合同(流程)组的合同组Id
+    * <p>合同(流程)组的合同组Id</p>
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 嵌入式合同组发起链接
+    * <p>嵌入式合同组发起链接</p>
     */
     @SerializedName("PrepareUrl")
     @Expose
@@ -45,32 +45,32 @@ public class CreatePrepareFlowGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同(流程)组的合同组Id 
-     * @return FlowGroupId 合同(流程)组的合同组Id
+     * Get <p>合同(流程)组的合同组Id</p> 
+     * @return FlowGroupId <p>合同(流程)组的合同组Id</p>
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同(流程)组的合同组Id
-     * @param FlowGroupId 合同(流程)组的合同组Id
+     * Set <p>合同(流程)组的合同组Id</p>
+     * @param FlowGroupId <p>合同(流程)组的合同组Id</p>
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 嵌入式合同组发起链接 
-     * @return PrepareUrl 嵌入式合同组发起链接
+     * Get <p>嵌入式合同组发起链接</p> 
+     * @return PrepareUrl <p>嵌入式合同组发起链接</p>
      */
     public String getPrepareUrl() {
         return this.PrepareUrl;
     }
 
     /**
-     * Set 嵌入式合同组发起链接
-     * @param PrepareUrl 嵌入式合同组发起链接
+     * Set <p>嵌入式合同组发起链接</p>
+     * @param PrepareUrl <p>嵌入式合同组发起链接</p>
      */
     public void setPrepareUrl(String PrepareUrl) {
         this.PrepareUrl = PrepareUrl;

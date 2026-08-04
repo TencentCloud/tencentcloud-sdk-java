@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Objects extends AbstractModel {
 
     /**
-    * 同步对象类型 Partial(部分对象)
+    * <p>同步对象类型 Partial(部分对象)</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 同步对象，当 Mode 为 Partial 时，不为空
+    * <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Databases")
@@ -39,39 +39,46 @@ public class Objects extends AbstractModel {
     private Database [] Databases;
 
     /**
-    * 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
+    * <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
     */
     @SerializedName("AdvancedObjects")
     @Expose
     private String [] AdvancedObjects;
 
     /**
-    * 库/表/视图级 DML/DDL 白名单
+    * <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+    */
+    @SerializedName("OnlineDDL")
+    @Expose
+    private OnlineDDL OnlineDDL;
+
+    /**
+    * <p>库/表/视图级 DML/DDL 白名单</p>
     */
     @SerializedName("DatabasesOpFilter")
     @Expose
     private DBOpFilter [] DatabasesOpFilter;
 
     /**
-     * Get 同步对象类型 Partial(部分对象) 
-     * @return Mode 同步对象类型 Partial(部分对象)
+     * Get <p>同步对象类型 Partial(部分对象)</p> 
+     * @return Mode <p>同步对象类型 Partial(部分对象)</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 同步对象类型 Partial(部分对象)
-     * @param Mode 同步对象类型 Partial(部分对象)
+     * Set <p>同步对象类型 Partial(部分对象)</p>
+     * @param Mode <p>同步对象类型 Partial(部分对象)</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 同步对象，当 Mode 为 Partial 时，不为空
+     * Get <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Databases 同步对象，当 Mode 为 Partial 时，不为空
+     * @return Databases <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Database [] getDatabases() {
@@ -79,9 +86,9 @@ public class Objects extends AbstractModel {
     }
 
     /**
-     * Set 同步对象，当 Mode 为 Partial 时，不为空
+     * Set <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Databases 同步对象，当 Mode 为 Partial 时，不为空
+     * @param Databases <p>同步对象，当 Mode 为 Partial 时，不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabases(Database [] Databases) {
@@ -89,32 +96,48 @@ public class Objects extends AbstractModel {
     }
 
     /**
-     * Get 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full 
-     * @return AdvancedObjects 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
+     * Get <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p> 
+     * @return AdvancedObjects <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
      */
     public String [] getAdvancedObjects() {
         return this.AdvancedObjects;
     }
 
     /**
-     * Set 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
-     * @param AdvancedObjects 高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
+     * Set <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
+     * @param AdvancedObjects <p>高级对象类型，如function、procedure。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型。当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full</p>
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {
         this.AdvancedObjects = AdvancedObjects;
     }
 
     /**
-     * Get 库/表/视图级 DML/DDL 白名单 
-     * @return DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
+     * Get <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p> 
+     * @return OnlineDDL <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+     */
+    public OnlineDDL getOnlineDDL() {
+        return this.OnlineDDL;
+    }
+
+    /**
+     * Set <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+     * @param OnlineDDL <p>此字段已废弃。对于临时表的同步应该使用Objects.Databases[n].Tables[n].TmpTables传入。</p>
+     */
+    public void setOnlineDDL(OnlineDDL OnlineDDL) {
+        this.OnlineDDL = OnlineDDL;
+    }
+
+    /**
+     * Get <p>库/表/视图级 DML/DDL 白名单</p> 
+     * @return DatabasesOpFilter <p>库/表/视图级 DML/DDL 白名单</p>
      */
     public DBOpFilter [] getDatabasesOpFilter() {
         return this.DatabasesOpFilter;
     }
 
     /**
-     * Set 库/表/视图级 DML/DDL 白名单
-     * @param DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
+     * Set <p>库/表/视图级 DML/DDL 白名单</p>
+     * @param DatabasesOpFilter <p>库/表/视图级 DML/DDL 白名单</p>
      */
     public void setDatabasesOpFilter(DBOpFilter [] DatabasesOpFilter) {
         this.DatabasesOpFilter = DatabasesOpFilter;
@@ -143,6 +166,9 @@ public class Objects extends AbstractModel {
                 this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
             }
         }
+        if (source.OnlineDDL != null) {
+            this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
+        }
         if (source.DatabasesOpFilter != null) {
             this.DatabasesOpFilter = new DBOpFilter[source.DatabasesOpFilter.length];
             for (int i = 0; i < source.DatabasesOpFilter.length; i++) {
@@ -159,6 +185,7 @@ public class Objects extends AbstractModel {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
+        this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
         this.setParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
 
     }

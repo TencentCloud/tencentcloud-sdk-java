@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDspmLogListRequest extends AbstractModel {
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
@@ -206,7 +206,7 @@ public class DescribeDspmLogListRequest extends AbstractModel {
     private Long RowNumMax;
 
     /**
-    * 数据库类型
+    * 数据库类型, 支持的值：cdb，mariadb
     */
     @SerializedName("DbTypes")
     @Expose
@@ -269,16 +269,16 @@ public class DescribeDspmLogListRequest extends AbstractModel {
     private String ClientMac;
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
@@ -685,16 +685,16 @@ public class DescribeDspmLogListRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库类型 
-     * @return DbTypes 数据库类型
+     * Get 数据库类型, 支持的值：cdb，mariadb 
+     * @return DbTypes 数据库类型, 支持的值：cdb，mariadb
      */
     public String [] getDbTypes() {
         return this.DbTypes;
     }
 
     /**
-     * Set 数据库类型
-     * @param DbTypes 数据库类型
+     * Set 数据库类型, 支持的值：cdb，mariadb
+     * @param DbTypes 数据库类型, 支持的值：cdb，mariadb
      */
     public void setDbTypes(String [] DbTypes) {
         this.DbTypes = DbTypes;

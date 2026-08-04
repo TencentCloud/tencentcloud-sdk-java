@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class DspmWhitelistStrategy extends AbstractModel {
 
     /**
-    * 白名单策略id
+    * <p>白名单策略id</p>
     */
     @SerializedName("WhitelistStrategyId")
     @Expose
     private String WhitelistStrategyId;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 白名单策略名
+    * <p>白名单策略名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyCategory")
     @Expose
     private String StrategyCategory;
 
     /**
-    * 策略规则
+    * <p>策略规则</p>
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 资产id
+    * <p>资产id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 账号
+    * <p>账号</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * 主机
+    * <p>主机</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 策略规则内容描述
+    * <p>策略规则内容描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 白名单类型。risk-风险白名单；alarm-告警白名单。
+    * <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * 资产所属账号app id
+    * <p>资产所属账号app id</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 账号昵称
+    * <p>账号昵称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 资产所属账号uin
+    * <p>资产所属账号uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-     * Get 白名单策略id 
-     * @return WhitelistStrategyId 白名单策略id
+    * <p>白名单类型</p>
+    */
+    @SerializedName("WhitelistType")
+    @Expose
+    private String WhitelistType;
+
+    /**
+     * Get <p>白名单策略id</p> 
+     * @return WhitelistStrategyId <p>白名单策略id</p>
      */
     public String getWhitelistStrategyId() {
         return this.WhitelistStrategyId;
     }
 
     /**
-     * Set 白名单策略id
-     * @param WhitelistStrategyId 白名单策略id
+     * Set <p>白名单策略id</p>
+     * @param WhitelistStrategyId <p>白名单策略id</p>
      */
     public void setWhitelistStrategyId(String WhitelistStrategyId) {
         this.WhitelistStrategyId = WhitelistStrategyId;
     }
 
     /**
-     * Get 策略类型 
-     * @return StrategyType 策略类型
+     * Get <p>策略类型</p> 
+     * @return StrategyType <p>策略类型</p>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyType 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyType <p>策略类型</p>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 白名单策略名 
-     * @return Name 白名单策略名
+     * Get <p>白名单策略名</p> 
+     * @return Name <p>白名单策略名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 白名单策略名
-     * @param Name 白名单策略名
+     * Set <p>白名单策略名</p>
+     * @param Name <p>白名单策略名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 策略类型 
-     * @return StrategyCategory 策略类型
+     * Get <p>策略类型</p> 
+     * @return StrategyCategory <p>策略类型</p>
      */
     public String getStrategyCategory() {
         return this.StrategyCategory;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyCategory 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyCategory <p>策略类型</p>
      */
     public void setStrategyCategory(String StrategyCategory) {
         this.StrategyCategory = StrategyCategory;
     }
 
     /**
-     * Get 策略规则 
-     * @return Rule 策略规则
+     * Get <p>策略规则</p> 
+     * @return Rule <p>策略规则</p>
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 策略规则
-     * @param Rule 策略规则
+     * Set <p>策略规则</p>
+     * @param Rule <p>策略规则</p>
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 资产id 
-     * @return AssetId 资产id
+     * Get <p>资产id</p> 
+     * @return AssetId <p>资产id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产id
-     * @param AssetId 资产id
+     * Set <p>资产id</p>
+     * @param AssetId <p>资产id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 账号 
-     * @return Account 账号
+     * Get <p>账号</p> 
+     * @return Account <p>账号</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 账号
-     * @param Account 账号
+     * Set <p>账号</p>
+     * @param Account <p>账号</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 主机 
-     * @return Host 主机
+     * Get <p>主机</p> 
+     * @return Host <p>主机</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 主机
-     * @param Host 主机
+     * Set <p>主机</p>
+     * @param Host <p>主机</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 策略规则内容描述 
-     * @return Description 策略规则内容描述
+     * Get <p>策略规则内容描述</p> 
+     * @return Description <p>策略规则内容描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 策略规则内容描述
-     * @param Description 策略规则内容描述
+     * Set <p>策略规则内容描述</p>
+     * @param Description <p>策略规则内容描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 白名单类型。risk-风险白名单；alarm-告警白名单。 
-     * @return RiskType 白名单类型。risk-风险白名单；alarm-告警白名单。
+     * Get <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p> 
+     * @return RiskType <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set 白名单类型。risk-风险白名单；alarm-告警白名单。
-     * @param RiskType 白名单类型。risk-风险白名单；alarm-告警白名单。
+     * Set <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
+     * @param RiskType <p>白名单类型。risk-风险白名单；alarm-告警白名单。</p>
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 资产所属账号app id 
-     * @return AppId 资产所属账号app id
+     * Get <p>资产所属账号app id</p> 
+     * @return AppId <p>资产所属账号app id</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 资产所属账号app id
-     * @param AppId 资产所属账号app id
+     * Set <p>资产所属账号app id</p>
+     * @param AppId <p>资产所属账号app id</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号昵称 
-     * @return NickName 账号昵称
+     * Get <p>账号昵称</p> 
+     * @return NickName <p>账号昵称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 账号昵称
-     * @param NickName 账号昵称
+     * Set <p>账号昵称</p>
+     * @param NickName <p>账号昵称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 资产所属账号uin 
-     * @return Uin 资产所属账号uin
+     * Get <p>资产所属账号uin</p> 
+     * @return Uin <p>资产所属账号uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 资产所属账号uin
-     * @param Uin 资产所属账号uin
+     * Set <p>资产所属账号uin</p>
+     * @param Uin <p>资产所属账号uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get <p>白名单类型</p> 
+     * @return WhitelistType <p>白名单类型</p>
+     */
+    public String getWhitelistType() {
+        return this.WhitelistType;
+    }
+
+    /**
+     * Set <p>白名单类型</p>
+     * @param WhitelistType <p>白名单类型</p>
+     */
+    public void setWhitelistType(String WhitelistType) {
+        this.WhitelistType = WhitelistType;
     }
 
     public DspmWhitelistStrategy() {
@@ -421,6 +444,9 @@ public class DspmWhitelistStrategy extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.WhitelistType != null) {
+            this.WhitelistType = new String(source.WhitelistType);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class DspmWhitelistStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "WhitelistType", this.WhitelistType);
 
     }
 }

@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowGroupResponse extends AbstractModel {
 
     /**
-    * 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+    * <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 嵌入式发起链接
+    * <p>嵌入式发起链接</p>
     */
     @SerializedName("PrepareUrl")
     @Expose
@@ -46,36 +45,32 @@ public class ChannelCreatePrepareFlowGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。 
-     * @return FlowGroupId 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * Get <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p> 
+     * @return FlowGroupId <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
-     * @param FlowGroupId 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * Set <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
+     * @param FlowGroupId <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 嵌入式发起链接 
-     * @return PrepareUrl 嵌入式发起链接
+     * Get <p>嵌入式发起链接</p> 
+     * @return PrepareUrl <p>嵌入式发起链接</p>
      */
     public String getPrepareUrl() {
         return this.PrepareUrl;
     }
 
     /**
-     * Set 嵌入式发起链接
-     * @param PrepareUrl 嵌入式发起链接
+     * Set <p>嵌入式发起链接</p>
+     * @param PrepareUrl <p>嵌入式发起链接</p>
      */
     public void setPrepareUrl(String PrepareUrl) {
         this.PrepareUrl = PrepareUrl;

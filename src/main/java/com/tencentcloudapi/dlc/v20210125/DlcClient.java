@@ -292,6 +292,39 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *变配校验：判断用户的目标配置是否可以执行变配。校验逻辑：对于缩容场景（目标值 < 当前值），检查 default 队列的 min 值是否足够承受缩容差值。
+     * @param req CheckModifyPartitionRequest
+     * @return CheckModifyPartitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckModifyPartitionResponse CheckModifyPartition(CheckModifyPartitionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckModifyPartition", CheckModifyPartitionResponse.class);
+    }
+
+    /**
+     *资源队列名称合法性检测：校验队列名称是否合法，包括非空校验、格式校验（以小写字母开头，只允许小写字母、数字和连字符，长度1~11）和同分区下重名校验。
+     * @param req CheckQueueNameRequest
+     * @return CheckQueueNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckQueueNameResponse CheckQueueName(CheckQueueNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckQueueName", CheckQueueNameResponse.class);
+    }
+
+    /**
+     *校验资源名称合法性
+     * @param req CheckResourceNameRequest
+     * @return CheckResourceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckResourceNameResponse CheckResourceName(CheckResourceNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckResourceName", CheckResourceNameResponse.class);
+    }
+
+    /**
      *复制一份已有的作业配置
      * @param req CopyJobSpecRequest
      * @return CopyJobSpecResponse
@@ -413,6 +446,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建推理模型（模型上传）
+     * @param req CreateInferenceModelRequest
+     * @return CreateInferenceModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInferenceModelResponse CreateInferenceModel(CreateInferenceModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInferenceModel", CreateInferenceModelResponse.class);
+    }
+
+    /**
      *创建托管存储内表（该接口已废弃）
      * @param req CreateInternalTableRequest
      * @return CreateInternalTableResponse
@@ -487,6 +531,28 @@ public class DlcClient extends AbstractClient{
     public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(CreateNotebookSessionStatementSupportBatchSQLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateNotebookSessionStatementSupportBatchSQL", CreateNotebookSessionStatementSupportBatchSQLResponse.class);
+    }
+
+    /**
+     *新增资源包
+     * @param req CreatePartitionRequest
+     * @return CreatePartitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePartitionResponse CreatePartition(CreatePartitionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePartition", CreatePartitionResponse.class);
+    }
+
+    /**
+     *新增资源队列：在指定分区下创建一个新的资源队列，支持设置队列名称、描述、资源规格列表和队列类型。
+     * @param req CreatePartitionQueueRequest
+     * @return CreatePartitionQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePartitionQueueResponse CreatePartitionQueue(CreatePartitionQueueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePartitionQueue", CreatePartitionQueueResponse.class);
     }
 
     /**
@@ -808,6 +874,17 @@ public class DlcClient extends AbstractClient{
     public DeleteNotebookSessionResponse DeleteNotebookSession(DeleteNotebookSessionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNotebookSession", DeleteNotebookSessionResponse.class);
+    }
+
+    /**
+     *删除资源队列
+     * @param req DeletePartitionQueueRequest
+     * @return DeletePartitionQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePartitionQueueResponse DeletePartitionQueue(DeletePartitionQueueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePartitionQueue", DeletePartitionQueueResponse.class);
     }
 
     /**
@@ -1196,6 +1273,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *分页查询指定分区的流程详情列表，包含每个流程的基本信息和活动列表
+     * @param req DescribeFlowDetailListRequest
+     * @return DescribeFlowDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowDetailListResponse DescribeFlowDetailList(DescribeFlowDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlowDetailList", DescribeFlowDetailListResponse.class);
+    }
+
+    /**
+     *查询指定分区的流程列表
+     * @param req DescribeFlowListRequest
+     * @return DescribeFlowListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowListResponse DescribeFlowList(DescribeFlowListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlowList", DescribeFlowListResponse.class);
+    }
+
+    /**
      *本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
      * @param req DescribeForbiddenTableProRequest
      * @return DescribeForbiddenTableProResponse
@@ -1372,6 +1471,39 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *获取指定资源分区详情
+     * @param req DescribePartitionDetailRequest
+     * @return DescribePartitionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePartitionDetailResponse DescribePartitionDetail(DescribePartitionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePartitionDetail", DescribePartitionDetailResponse.class);
+    }
+
+    /**
+     *查询指定分区的所有队列列表
+     * @param req DescribePartitionQueuesRequest
+     * @return DescribePartitionQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePartitionQueuesResponse DescribePartitionQueues(DescribePartitionQueuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePartitionQueues", DescribePartitionQueuesResponse.class);
+    }
+
+    /**
+     *获取分区列表信息
+     * @param req DescribePartitionsRequest
+     * @return DescribePartitionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePartitionsResponse DescribePartitions(DescribePartitionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePartitions", DescribePartitionsResponse.class);
+    }
+
+    /**
      *本接口根据资源组ID查询资源组CU使用情况
      * @param req DescribeResourceGroupUsageInfoRequest
      * @return DescribeResourceGroupUsageInfoResponse
@@ -1391,6 +1523,28 @@ public class DlcClient extends AbstractClient{
     public DescribeResultDownloadResponse DescribeResultDownload(DescribeResultDownloadRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeResultDownload", DescribeResultDownloadResponse.class);
+    }
+
+    /**
+     *查询可售卖的地域列表，仅返回状态为AVAILABLE的地域
+     * @param req DescribeSaleRegionsRequest
+     * @return DescribeSaleRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSaleRegionsResponse DescribeSaleRegions(DescribeSaleRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSaleRegions", DescribeSaleRegionsResponse.class);
+    }
+
+    /**
+     *查询当前地域可售卖的资源规格和最大配额
+     * @param req DescribeSaleResourceInfoRequest
+     * @return DescribeSaleResourceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSaleResourceInfoResponse DescribeSaleResourceInfo(DescribeSaleResourceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSaleResourceInfo", DescribeSaleResourceInfoResponse.class);
     }
 
     /**
@@ -1922,6 +2076,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *获取单个模型详情
+     * @param req GetInferenceModelRequest
+     * @return GetInferenceModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInferenceModelResponse GetInferenceModel(GetInferenceModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetInferenceModel", GetInferenceModelResponse.class);
+    }
+
+    /**
      *根据配置ID获取作业配置详情
      * @param req GetJobSpecRequest
      * @return GetJobSpecResponse
@@ -2263,6 +2428,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *列出推理模型（支持关键词过滤 + 分页）
+     * @param req ListInferenceModelsRequest
+     * @return ListInferenceModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListInferenceModelsResponse ListInferenceModels(ListInferenceModelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListInferenceModels", ListInferenceModelsResponse.class);
+    }
+
+    /**
      *分页查询作业配置列表
      * @param req ListJobSpecsRequest
      * @return ListJobSpecsResponse
@@ -2425,6 +2601,28 @@ public class DlcClient extends AbstractClient{
     public ModifyLabPriorityResponse ModifyLabPriority(ModifyLabPriorityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLabPriority", ModifyLabPriorityResponse.class);
+    }
+
+    /**
+     *修改分区描述
+     * @param req ModifyPartitionDescriptionRequest
+     * @return ModifyPartitionDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPartitionDescriptionResponse ModifyPartitionDescription(ModifyPartitionDescriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPartitionDescription", ModifyPartitionDescriptionResponse.class);
+    }
+
+    /**
+     *编辑资源队列：根据队列ID修改指定资源队列的名称、描述、资源规格列表和队列类型等信息。
+     * @param req ModifyPartitionQueueRequest
+     * @return ModifyPartitionQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPartitionQueueResponse ModifyPartitionQueue(ModifyPartitionQueueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPartitionQueue", ModifyPartitionQueueResponse.class);
     }
 
     /**
@@ -2788,6 +2986,17 @@ public class DlcClient extends AbstractClient{
     public UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfo(UpdateEngineResourceGroupNetworkConfigInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateEngineResourceGroupNetworkConfigInfo", UpdateEngineResourceGroupNetworkConfigInfoResponse.class);
+    }
+
+    /**
+     *更新推理模型（编辑标签、描述、参数量）
+     * @param req UpdateInferenceModelRequest
+     * @return UpdateInferenceModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateInferenceModelResponse UpdateInferenceModel(UpdateInferenceModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateInferenceModel", UpdateInferenceModelResponse.class);
     }
 
     /**

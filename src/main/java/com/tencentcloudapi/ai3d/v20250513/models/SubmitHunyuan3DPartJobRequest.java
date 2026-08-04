@@ -45,11 +45,18 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     private String PartSegmentationInfo;
 
     /**
-    * <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+    * <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
     */
     @SerializedName("EnableStagedGeneration")
     @Expose
     private Boolean EnableStagedGeneration;
+
+    /**
+    * <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+    */
+    @SerializedName("EnablePostProcess")
+    @Expose
+    private Boolean EnablePostProcess;
 
     /**
      * Get <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p> 
@@ -100,19 +107,35 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p> 
-     * @return EnableStagedGeneration <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     * Get <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p> 
+     * @return EnableStagedGeneration <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
      */
     public Boolean getEnableStagedGeneration() {
         return this.EnableStagedGeneration;
     }
 
     /**
-     * Set <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
-     * @param EnableStagedGeneration <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     * Set <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * @param EnableStagedGeneration <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
      */
     public void setEnableStagedGeneration(Boolean EnableStagedGeneration) {
         this.EnableStagedGeneration = EnableStagedGeneration;
+    }
+
+    /**
+     * Get <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p> 
+     * @return EnablePostProcess <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     */
+    public Boolean getEnablePostProcess() {
+        return this.EnablePostProcess;
+    }
+
+    /**
+     * Set <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     * @param EnablePostProcess <p>是否开启后处理，开启后将只输出一个模型链接，默认关闭。 （开启此接口后，需额外增加20积分）</p>
+     */
+    public void setEnablePostProcess(Boolean EnablePostProcess) {
+        this.EnablePostProcess = EnablePostProcess;
     }
 
     public SubmitHunyuan3DPartJobRequest() {
@@ -135,6 +158,9 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
         if (source.EnableStagedGeneration != null) {
             this.EnableStagedGeneration = new Boolean(source.EnableStagedGeneration);
         }
+        if (source.EnablePostProcess != null) {
+            this.EnablePostProcess = new Boolean(source.EnablePostProcess);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
         this.setParamSimple(map, prefix + "EnableStagedGeneration", this.EnableStagedGeneration);
+        this.setParamSimple(map, prefix + "EnablePostProcess", this.EnablePostProcess);
 
     }
 }

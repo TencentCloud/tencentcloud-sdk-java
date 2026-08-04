@@ -95,6 +95,13 @@ public class DBCustomCluster extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get <p>集群ID</p> 
      * @return ClusterId <p>集群ID</p>
      */
@@ -258,6 +265,22 @@ public class DBCustomCluster extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul> 
+     * @return DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     * @param DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public DBCustomCluster() {
     }
 
@@ -299,6 +322,9 @@ public class DBCustomCluster extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -316,6 +342,7 @@ public class DBCustomCluster extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

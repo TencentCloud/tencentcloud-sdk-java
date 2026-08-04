@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CreateDspmWhitelistStrategyRequest extends AbstractModel {
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * 白名单
+    * <p>白名单</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 规则
+    * <p>规则</p>
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-    * 资产id
+    * <p>资产id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 账号
+    * <p>账号</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * 主机
+    * <p>主机</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 风险id
+    * <p>风险id</p>
     */
     @SerializedName("RiskId")
     @Expose
     private String RiskId;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 策略类型 
-     * @return StrategyType 策略类型
+    * <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+    */
+    @SerializedName("WhitelistType")
+    @Expose
+    private String WhitelistType;
+
+    /**
+     * Get <p>策略类型</p> 
+     * @return StrategyType <p>策略类型</p>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyType 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyType <p>策略类型</p>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 白名单 
-     * @return Name 白名单
+     * Get <p>白名单</p> 
+     * @return Name <p>白名单</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 白名单
-     * @param Name 白名单
+     * Set <p>白名单</p>
+     * @param Name <p>白名单</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则 
-     * @return Rule 规则
+     * Get <p>规则</p> 
+     * @return Rule <p>规则</p>
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 规则
-     * @param Rule 规则
+     * Set <p>规则</p>
+     * @param Rule <p>规则</p>
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 资产id 
-     * @return AssetId 资产id
+     * Get <p>资产id</p> 
+     * @return AssetId <p>资产id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产id
-     * @param AssetId 资产id
+     * Set <p>资产id</p>
+     * @param AssetId <p>资产id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 账号 
-     * @return Account 账号
+     * Get <p>账号</p> 
+     * @return Account <p>账号</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 账号
-     * @param Account 账号
+     * Set <p>账号</p>
+     * @param Account <p>账号</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 主机 
-     * @return Host 主机
+     * Get <p>主机</p> 
+     * @return Host <p>主机</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 主机
-     * @param Host 主机
+     * Set <p>主机</p>
+     * @param Host <p>主机</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 风险id 
-     * @return RiskId 风险id
+     * Get <p>风险id</p> 
+     * @return RiskId <p>风险id</p>
      */
     public String getRiskId() {
         return this.RiskId;
     }
 
     /**
-     * Set 风险id
-     * @param RiskId 风险id
+     * Set <p>风险id</p>
+     * @param RiskId <p>风险id</p>
      */
     public void setRiskId(String RiskId) {
         this.RiskId = RiskId;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul> 
+     * @return WhitelistType <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+     */
+    public String getWhitelistType() {
+        return this.WhitelistType;
+    }
+
+    /**
+     * Set <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+     * @param WhitelistType <p>白名单的类型</p><p>枚举值：</p><ul><li>static_risk： 静态配置扫描的白名单规则</li><li>audit： 审计白名单规则</li><li>ueba： ueba相关的白名单规则</li></ul>
+     */
+    public void setWhitelistType(String WhitelistType) {
+        this.WhitelistType = WhitelistType;
     }
 
     public CreateDspmWhitelistStrategyRequest() {
@@ -268,6 +291,9 @@ public class CreateDspmWhitelistStrategyRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.WhitelistType != null) {
+            this.WhitelistType = new String(source.WhitelistType);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateDspmWhitelistStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "RiskId", this.RiskId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "WhitelistType", this.WhitelistType);
 
     }
 }

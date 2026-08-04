@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVpnConnectionResponse extends AbstractModel {
 
     /**
-    * 通道实例对象。
+    * <p>通道实例对象。</p>
     */
     @SerializedName("VpnConnection")
     @Expose
@@ -38,16 +38,16 @@ public class CreateVpnConnectionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道实例对象。 
-     * @return VpnConnection 通道实例对象。
+     * Get <p>通道实例对象。</p> 
+     * @return VpnConnection <p>通道实例对象。</p>
      */
     public VpnConnection getVpnConnection() {
         return this.VpnConnection;
     }
 
     /**
-     * Set 通道实例对象。
-     * @param VpnConnection 通道实例对象。
+     * Set <p>通道实例对象。</p>
+     * @param VpnConnection <p>通道实例对象。</p>
      */
     public void setVpnConnection(VpnConnection VpnConnection) {
         this.VpnConnection = VpnConnection;

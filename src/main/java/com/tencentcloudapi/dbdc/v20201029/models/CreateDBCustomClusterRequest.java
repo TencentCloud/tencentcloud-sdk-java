@@ -73,6 +73,13 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
+    * <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get <p>容器网络，在此集群的所有 POD 与此网络连通</p> 
      * @return ContainerNetwork <p>容器网络，在此集群的所有 POD 与此网络连通</p>
      */
@@ -184,6 +191,22 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p> 
+     * @return DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
+     * @param DeletionProtection <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul><p>默认值：true</p>
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public CreateDBCustomClusterRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateDBCustomClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

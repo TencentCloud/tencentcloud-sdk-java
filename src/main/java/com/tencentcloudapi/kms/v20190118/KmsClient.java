@@ -689,6 +689,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *对指定的CMK（用户主密钥）执行立即轮转操作。可以通过调用DescribeKey，返回上次轮转时间和下次轮转时间，判断是否轮转成功。
+     * @param req RotateKeyRequest
+     * @return RotateKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public RotateKeyResponse RotateKey(RotateKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RotateKey", RotateKeyResponse.class);
+    }
+
+    /**
      *计划删除数据密钥
      * @param req ScheduleDataKeyDeletionRequest
      * @return ScheduleDataKeyDeletionResponse

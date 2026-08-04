@@ -122,7 +122,7 @@ public class AuditLogInfo extends AbstractModel {
     private Long EffectRow;
 
     /**
-    * 执行时间
+    * 执行时间,单位：毫秒
     */
     @SerializedName("ExecTime")
     @Expose
@@ -535,16 +535,16 @@ public class AuditLogInfo extends AbstractModel {
     }
 
     /**
-     * Get 执行时间 
-     * @return ExecTime 执行时间
+     * Get 执行时间,单位：毫秒 
+     * @return ExecTime 执行时间,单位：毫秒
      */
     public Long getExecTime() {
         return this.ExecTime;
     }
 
     /**
-     * Set 执行时间
-     * @param ExecTime 执行时间
+     * Set 执行时间,单位：毫秒
+     * @param ExecTime 执行时间,单位：毫秒
      */
     public void setExecTime(Long ExecTime) {
         this.ExecTime = ExecTime;

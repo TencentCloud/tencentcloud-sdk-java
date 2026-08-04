@@ -24,325 +24,399 @@ import java.util.HashMap;
 public class DspmRiskStrategy extends AbstractModel {
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 策略名
+    * <p>策略名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyCategory")
     @Expose
     private String StrategyCategory;
 
     /**
-    * 是否启用。0-禁用 1-启用
+    * <p>是否启用。0-禁用 1-启用</p>
     */
     @SerializedName("IsEnabled")
     @Expose
     private Long IsEnabled;
 
     /**
-    * 风险等级。
+    * <p>风险等级。</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 策略规则
+    * <p>策略规则</p>
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 策略内容
+    * <p>策略内容</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 命中次数
+    * <p>命中次数</p>
     */
     @SerializedName("HitCount")
     @Expose
     private Long HitCount;
 
     /**
-    * 风险类型。risk-风险；alarm-告警。
+    * <p>风险类型。risk-风险；alarm-告警。</p>
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * 资产所属账号app id
+    * <p>资产所属账号app id</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 账号昵称
+    * <p>账号昵称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 资产所属账号uin
+    * <p>资产所属账号uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 策略id
+    * <p>策略id</p>
     */
     @SerializedName("StrategyId")
     @Expose
     private Long StrategyId;
 
     /**
-     * Get 策略类型 
-     * @return StrategyType 策略类型
+    * <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleSource")
+    @Expose
+    private String RuleSource;
+
+    /**
+    * <p>支持的资产类型</p>
+    */
+    @SerializedName("AssetTypes")
+    @Expose
+    private String [] AssetTypes;
+
+    /**
+    * <p>风险描述</p>
+    */
+    @SerializedName("RiskDescription")
+    @Expose
+    private String RiskDescription;
+
+    /**
+     * Get <p>策略类型</p> 
+     * @return StrategyType <p>策略类型</p>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyType 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyType <p>策略类型</p>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 策略名 
-     * @return Name 策略名
+     * Get <p>策略名</p> 
+     * @return Name <p>策略名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略名
-     * @param Name 策略名
+     * Set <p>策略名</p>
+     * @param Name <p>策略名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 策略类型 
-     * @return StrategyCategory 策略类型
+     * Get <p>策略类型</p> 
+     * @return StrategyCategory <p>策略类型</p>
      */
     public String getStrategyCategory() {
         return this.StrategyCategory;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyCategory 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyCategory <p>策略类型</p>
      */
     public void setStrategyCategory(String StrategyCategory) {
         this.StrategyCategory = StrategyCategory;
     }
 
     /**
-     * Get 是否启用。0-禁用 1-启用 
-     * @return IsEnabled 是否启用。0-禁用 1-启用
+     * Get <p>是否启用。0-禁用 1-启用</p> 
+     * @return IsEnabled <p>是否启用。0-禁用 1-启用</p>
      */
     public Long getIsEnabled() {
         return this.IsEnabled;
     }
 
     /**
-     * Set 是否启用。0-禁用 1-启用
-     * @param IsEnabled 是否启用。0-禁用 1-启用
+     * Set <p>是否启用。0-禁用 1-启用</p>
+     * @param IsEnabled <p>是否启用。0-禁用 1-启用</p>
      */
     public void setIsEnabled(Long IsEnabled) {
         this.IsEnabled = IsEnabled;
     }
 
     /**
-     * Get 风险等级。 
-     * @return RiskLevel 风险等级。
+     * Get <p>风险等级。</p> 
+     * @return RiskLevel <p>风险等级。</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级。
-     * @param RiskLevel 风险等级。
+     * Set <p>风险等级。</p>
+     * @param RiskLevel <p>风险等级。</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 策略规则 
-     * @return Rule 策略规则
+     * Get <p>策略规则</p> 
+     * @return Rule <p>策略规则</p>
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 策略规则
-     * @param Rule 策略规则
+     * Set <p>策略规则</p>
+     * @param Rule <p>策略规则</p>
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 策略内容 
-     * @return Description 策略内容
+     * Get <p>策略内容</p> 
+     * @return Description <p>策略内容</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 策略内容
-     * @param Description 策略内容
+     * Set <p>策略内容</p>
+     * @param Description <p>策略内容</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 命中次数 
-     * @return HitCount 命中次数
+     * Get <p>命中次数</p> 
+     * @return HitCount <p>命中次数</p>
      */
     public Long getHitCount() {
         return this.HitCount;
     }
 
     /**
-     * Set 命中次数
-     * @param HitCount 命中次数
+     * Set <p>命中次数</p>
+     * @param HitCount <p>命中次数</p>
      */
     public void setHitCount(Long HitCount) {
         this.HitCount = HitCount;
     }
 
     /**
-     * Get 风险类型。risk-风险；alarm-告警。 
-     * @return RiskType 风险类型。risk-风险；alarm-告警。
+     * Get <p>风险类型。risk-风险；alarm-告警。</p> 
+     * @return RiskType <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set 风险类型。risk-风险；alarm-告警。
-     * @param RiskType 风险类型。risk-风险；alarm-告警。
+     * Set <p>风险类型。risk-风险；alarm-告警。</p>
+     * @param RiskType <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 资产所属账号app id 
-     * @return AppId 资产所属账号app id
+     * Get <p>资产所属账号app id</p> 
+     * @return AppId <p>资产所属账号app id</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 资产所属账号app id
-     * @param AppId 资产所属账号app id
+     * Set <p>资产所属账号app id</p>
+     * @param AppId <p>资产所属账号app id</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号昵称 
-     * @return NickName 账号昵称
+     * Get <p>账号昵称</p> 
+     * @return NickName <p>账号昵称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 账号昵称
-     * @param NickName 账号昵称
+     * Set <p>账号昵称</p>
+     * @param NickName <p>账号昵称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 资产所属账号uin 
-     * @return Uin 资产所属账号uin
+     * Get <p>资产所属账号uin</p> 
+     * @return Uin <p>资产所属账号uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 资产所属账号uin
-     * @param Uin 资产所属账号uin
+     * Set <p>资产所属账号uin</p>
+     * @param Uin <p>资产所属账号uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 策略id 
-     * @return StrategyId 策略id
+     * Get <p>策略id</p> 
+     * @return StrategyId <p>策略id</p>
      */
     public Long getStrategyId() {
         return this.StrategyId;
     }
 
     /**
-     * Set 策略id
-     * @param StrategyId 策略id
+     * Set <p>策略id</p>
+     * @param StrategyId <p>策略id</p>
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
+    }
+
+    /**
+     * Get <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleSource <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleSource() {
+        return this.RuleSource;
+    }
+
+    /**
+     * Set <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleSource <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleSource(String RuleSource) {
+        this.RuleSource = RuleSource;
+    }
+
+    /**
+     * Get <p>支持的资产类型</p> 
+     * @return AssetTypes <p>支持的资产类型</p>
+     */
+    public String [] getAssetTypes() {
+        return this.AssetTypes;
+    }
+
+    /**
+     * Set <p>支持的资产类型</p>
+     * @param AssetTypes <p>支持的资产类型</p>
+     */
+    public void setAssetTypes(String [] AssetTypes) {
+        this.AssetTypes = AssetTypes;
+    }
+
+    /**
+     * Get <p>风险描述</p> 
+     * @return RiskDescription <p>风险描述</p>
+     */
+    public String getRiskDescription() {
+        return this.RiskDescription;
+    }
+
+    /**
+     * Set <p>风险描述</p>
+     * @param RiskDescription <p>风险描述</p>
+     */
+    public void setRiskDescription(String RiskDescription) {
+        this.RiskDescription = RiskDescription;
     }
 
     public DspmRiskStrategy() {
@@ -395,6 +469,18 @@ public class DspmRiskStrategy extends AbstractModel {
         if (source.StrategyId != null) {
             this.StrategyId = new Long(source.StrategyId);
         }
+        if (source.RuleSource != null) {
+            this.RuleSource = new String(source.RuleSource);
+        }
+        if (source.AssetTypes != null) {
+            this.AssetTypes = new String[source.AssetTypes.length];
+            for (int i = 0; i < source.AssetTypes.length; i++) {
+                this.AssetTypes[i] = new String(source.AssetTypes[i]);
+            }
+        }
+        if (source.RiskDescription != null) {
+            this.RiskDescription = new String(source.RiskDescription);
+        }
     }
 
 
@@ -416,6 +502,9 @@ public class DspmRiskStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
+        this.setParamSimple(map, prefix + "RuleSource", this.RuleSource);
+        this.setParamArraySimple(map, prefix + "AssetTypes.", this.AssetTypes);
+        this.setParamSimple(map, prefix + "RiskDescription", this.RiskDescription);
 
     }
 }

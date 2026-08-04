@@ -24,141 +24,210 @@ import java.util.HashMap;
 public class ModifyDspmRiskStrategyRequest extends AbstractModel {
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * 风险策略类型
+    * <p>风险策略类型</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 是否启用
+    * <p>是否启用</p>
     */
     @SerializedName("IsEnabled")
     @Expose
     private Long IsEnabled;
 
     /**
-    * 策略内容，如：{     ThresholdValue: "100" }
+    * <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-    * 可选值：Info/Low/Medium/High
+    * <p>可选值：Info/Low/Medium/High</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 策略id
+    * <p>策略id</p>
     */
     @SerializedName("StrategyId")
     @Expose
     private Long [] StrategyId;
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+    * <p>策略名</p>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>策略描述</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * <p>支持的数据库类型</p>
+    */
+    @SerializedName("DbTypes")
+    @Expose
+    private String DbTypes;
+
+    /**
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 风险策略类型 
-     * @return StrategyType 风险策略类型
+     * Get <p>风险策略类型</p> 
+     * @return StrategyType <p>风险策略类型</p>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 风险策略类型
-     * @param StrategyType 风险策略类型
+     * Set <p>风险策略类型</p>
+     * @param StrategyType <p>风险策略类型</p>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 是否启用 
-     * @return IsEnabled 是否启用
+     * Get <p>是否启用</p> 
+     * @return IsEnabled <p>是否启用</p>
      */
     public Long getIsEnabled() {
         return this.IsEnabled;
     }
 
     /**
-     * Set 是否启用
-     * @param IsEnabled 是否启用
+     * Set <p>是否启用</p>
+     * @param IsEnabled <p>是否启用</p>
      */
     public void setIsEnabled(Long IsEnabled) {
         this.IsEnabled = IsEnabled;
     }
 
     /**
-     * Get 策略内容，如：{     ThresholdValue: "100" } 
-     * @return Rule 策略内容，如：{     ThresholdValue: "100" }
+     * Get <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p> 
+     * @return Rule <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 策略内容，如：{     ThresholdValue: "100" }
-     * @param Rule 策略内容，如：{     ThresholdValue: "100" }
+     * Set <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
+     * @param Rule <p>策略内容，如：{     ThresholdValue: &quot;100&quot; }</p>
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 可选值：Info/Low/Medium/High 
-     * @return RiskLevel 可选值：Info/Low/Medium/High
+     * Get <p>可选值：Info/Low/Medium/High</p> 
+     * @return RiskLevel <p>可选值：Info/Low/Medium/High</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 可选值：Info/Low/Medium/High
-     * @param RiskLevel 可选值：Info/Low/Medium/High
+     * Set <p>可选值：Info/Low/Medium/High</p>
+     * @param RiskLevel <p>可选值：Info/Low/Medium/High</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 策略id 
-     * @return StrategyId 策略id
+     * Get <p>策略id</p> 
+     * @return StrategyId <p>策略id</p>
      */
     public Long [] getStrategyId() {
         return this.StrategyId;
     }
 
     /**
-     * Set 策略id
-     * @param StrategyId 策略id
+     * Set <p>策略id</p>
+     * @param StrategyId <p>策略id</p>
      */
     public void setStrategyId(Long [] StrategyId) {
         this.StrategyId = StrategyId;
+    }
+
+    /**
+     * Get <p>策略名</p> 
+     * @return Name <p>策略名</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>策略名</p>
+     * @param Name <p>策略名</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>策略描述</p> 
+     * @return Description <p>策略描述</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>策略描述</p>
+     * @param Description <p>策略描述</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get <p>支持的数据库类型</p> 
+     * @return DbTypes <p>支持的数据库类型</p>
+     */
+    public String getDbTypes() {
+        return this.DbTypes;
+    }
+
+    /**
+     * Set <p>支持的数据库类型</p>
+     * @param DbTypes <p>支持的数据库类型</p>
+     */
+    public void setDbTypes(String DbTypes) {
+        this.DbTypes = DbTypes;
     }
 
     public ModifyDspmRiskStrategyRequest() {
@@ -193,6 +262,15 @@ public class ModifyDspmRiskStrategyRequest extends AbstractModel {
                 this.StrategyId[i] = new Long(source.StrategyId[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.DbTypes != null) {
+            this.DbTypes = new String(source.DbTypes);
+        }
     }
 
 
@@ -206,6 +284,9 @@ public class ModifyDspmRiskStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Rule", this.Rule);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArraySimple(map, prefix + "StrategyId.", this.StrategyId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "DbTypes", this.DbTypes);
 
     }
 }

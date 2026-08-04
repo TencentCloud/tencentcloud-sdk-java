@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDspmWhitelistStrategyResponse extends AbstractModel {
 
     /**
-    * 白名单id
+    * <p>白名单id</p>
     */
     @SerializedName("WhitelistStrategyId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDspmWhitelistStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 白名单id 
-     * @return WhitelistStrategyId 白名单id
+     * Get <p>白名单id</p> 
+     * @return WhitelistStrategyId <p>白名单id</p>
      */
     public String getWhitelistStrategyId() {
         return this.WhitelistStrategyId;
     }
 
     /**
-     * Set 白名单id
-     * @param WhitelistStrategyId 白名单id
+     * Set <p>白名单id</p>
+     * @param WhitelistStrategyId <p>白名单id</p>
      */
     public void setWhitelistStrategyId(String WhitelistStrategyId) {
         this.WhitelistStrategyId = WhitelistStrategyId;

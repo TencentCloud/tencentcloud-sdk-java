@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class WorkOrderData extends AbstractModel {
 
     /**
-    * 工单号
+    * <p>工单号</p>
     */
     @SerializedName("WorkOrderId")
     @Expose
     private String WorkOrderId;
 
     /**
-    * 服务类型，一个服务可能会产生多个工单
+    * <p>服务类型，一个服务可能会产生多个工单</p>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 工单类型
+    * <p>工单类型</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * 工单状态
+    * <p>工单状态</p>
     */
     @SerializedName("OrderStatus")
     @Expose
     private String OrderStatus;
 
     /**
-    * 工单创建人
+    * <p>工单创建人</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 工单创建时间
+    * <p>工单创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 工单完成时间
+    * <p>工单完成时间</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 工单关联的dcops单号
+    * <p>工单关联的dcops单号</p>
     */
     @SerializedName("TicketId")
     @Expose
     private String TicketId;
 
     /**
-     * Get 工单号 
-     * @return WorkOrderId 工单号
+    * <p>SLA</p>
+    */
+    @SerializedName("SLAInfo")
+    @Expose
+    private SLAInfo SLAInfo;
+
+    /**
+     * Get <p>工单号</p> 
+     * @return WorkOrderId <p>工单号</p>
      */
     public String getWorkOrderId() {
         return this.WorkOrderId;
     }
 
     /**
-     * Set 工单号
-     * @param WorkOrderId 工单号
+     * Set <p>工单号</p>
+     * @param WorkOrderId <p>工单号</p>
      */
     public void setWorkOrderId(String WorkOrderId) {
         this.WorkOrderId = WorkOrderId;
     }
 
     /**
-     * Get 服务类型，一个服务可能会产生多个工单 
-     * @return ServiceType 服务类型，一个服务可能会产生多个工单
+     * Get <p>服务类型，一个服务可能会产生多个工单</p> 
+     * @return ServiceType <p>服务类型，一个服务可能会产生多个工单</p>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 服务类型，一个服务可能会产生多个工单
-     * @param ServiceType 服务类型，一个服务可能会产生多个工单
+     * Set <p>服务类型，一个服务可能会产生多个工单</p>
+     * @param ServiceType <p>服务类型，一个服务可能会产生多个工单</p>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 工单类型 
-     * @return OrderType 工单类型
+     * Get <p>工单类型</p> 
+     * @return OrderType <p>工单类型</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 工单类型
-     * @param OrderType 工单类型
+     * Set <p>工单类型</p>
+     * @param OrderType <p>工单类型</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 工单状态 
-     * @return OrderStatus 工单状态
+     * Get <p>工单状态</p> 
+     * @return OrderStatus <p>工单状态</p>
      */
     public String getOrderStatus() {
         return this.OrderStatus;
     }
 
     /**
-     * Set 工单状态
-     * @param OrderStatus 工单状态
+     * Set <p>工单状态</p>
+     * @param OrderStatus <p>工单状态</p>
      */
     public void setOrderStatus(String OrderStatus) {
         this.OrderStatus = OrderStatus;
     }
 
     /**
-     * Get 工单创建人 
-     * @return Creator 工单创建人
+     * Get <p>工单创建人</p> 
+     * @return Creator <p>工单创建人</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 工单创建人
-     * @param Creator 工单创建人
+     * Set <p>工单创建人</p>
+     * @param Creator <p>工单创建人</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 工单创建时间 
-     * @return CreateTime 工单创建时间
+     * Get <p>工单创建时间</p> 
+     * @return CreateTime <p>工单创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 工单创建时间
-     * @param CreateTime 工单创建时间
+     * Set <p>工单创建时间</p>
+     * @param CreateTime <p>工单创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 工单完成时间 
-     * @return FinishTime 工单完成时间
+     * Get <p>工单完成时间</p> 
+     * @return FinishTime <p>工单完成时间</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 工单完成时间
-     * @param FinishTime 工单完成时间
+     * Set <p>工单完成时间</p>
+     * @param FinishTime <p>工单完成时间</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 工单关联的dcops单号 
-     * @return TicketId 工单关联的dcops单号
+     * Get <p>工单关联的dcops单号</p> 
+     * @return TicketId <p>工单关联的dcops单号</p>
      */
     public String getTicketId() {
         return this.TicketId;
     }
 
     /**
-     * Set 工单关联的dcops单号
-     * @param TicketId 工单关联的dcops单号
+     * Set <p>工单关联的dcops单号</p>
+     * @param TicketId <p>工单关联的dcops单号</p>
      */
     public void setTicketId(String TicketId) {
         this.TicketId = TicketId;
+    }
+
+    /**
+     * Get <p>SLA</p> 
+     * @return SLAInfo <p>SLA</p>
+     */
+    public SLAInfo getSLAInfo() {
+        return this.SLAInfo;
+    }
+
+    /**
+     * Set <p>SLA</p>
+     * @param SLAInfo <p>SLA</p>
+     */
+    public void setSLAInfo(SLAInfo SLAInfo) {
+        this.SLAInfo = SLAInfo;
     }
 
     public WorkOrderData() {
@@ -239,6 +262,9 @@ public class WorkOrderData extends AbstractModel {
         if (source.TicketId != null) {
             this.TicketId = new String(source.TicketId);
         }
+        if (source.SLAInfo != null) {
+            this.SLAInfo = new SLAInfo(source.SLAInfo);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class WorkOrderData extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "TicketId", this.TicketId);
+        this.setParamObj(map, prefix + "SLAInfo.", this.SLAInfo);
 
     }
 }

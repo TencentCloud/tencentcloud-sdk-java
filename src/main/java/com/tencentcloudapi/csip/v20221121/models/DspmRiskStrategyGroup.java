@@ -24,164 +24,192 @@ import java.util.HashMap;
 public class DspmRiskStrategyGroup extends AbstractModel {
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 策略名
+    * <p>策略名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyCategory")
     @Expose
     private String StrategyCategory;
 
     /**
-    * 是否启用。0-禁用 1-启用
+    * <p>是否启用。0-禁用 1-启用</p>
     */
     @SerializedName("IsEnabled")
     @Expose
     private Long IsEnabled;
 
     /**
-    * 命中次数
+    * <p>命中次数</p>
     */
     @SerializedName("HitCount")
     @Expose
     private Long HitCount;
 
     /**
-    * 风险类型。risk-风险；alarm-告警。
+    * <p>风险类型。risk-风险；alarm-告警。</p>
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * 策略列表
+    * <p>策略列表</p>
     */
     @SerializedName("StrategyList")
     @Expose
     private DspmRiskStrategy [] StrategyList;
 
     /**
-     * Get 策略类型 
-     * @return StrategyType 策略类型
+    * <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleSource")
+    @Expose
+    private String RuleSource;
+
+    /**
+     * Get <p>策略类型</p> 
+     * @return StrategyType <p>策略类型</p>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyType 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyType <p>策略类型</p>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 策略名 
-     * @return Name 策略名
+     * Get <p>策略名</p> 
+     * @return Name <p>策略名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略名
-     * @param Name 策略名
+     * Set <p>策略名</p>
+     * @param Name <p>策略名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 策略类型 
-     * @return StrategyCategory 策略类型
+     * Get <p>策略类型</p> 
+     * @return StrategyCategory <p>策略类型</p>
      */
     public String getStrategyCategory() {
         return this.StrategyCategory;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyCategory 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyCategory <p>策略类型</p>
      */
     public void setStrategyCategory(String StrategyCategory) {
         this.StrategyCategory = StrategyCategory;
     }
 
     /**
-     * Get 是否启用。0-禁用 1-启用 
-     * @return IsEnabled 是否启用。0-禁用 1-启用
+     * Get <p>是否启用。0-禁用 1-启用</p> 
+     * @return IsEnabled <p>是否启用。0-禁用 1-启用</p>
      */
     public Long getIsEnabled() {
         return this.IsEnabled;
     }
 
     /**
-     * Set 是否启用。0-禁用 1-启用
-     * @param IsEnabled 是否启用。0-禁用 1-启用
+     * Set <p>是否启用。0-禁用 1-启用</p>
+     * @param IsEnabled <p>是否启用。0-禁用 1-启用</p>
      */
     public void setIsEnabled(Long IsEnabled) {
         this.IsEnabled = IsEnabled;
     }
 
     /**
-     * Get 命中次数 
-     * @return HitCount 命中次数
+     * Get <p>命中次数</p> 
+     * @return HitCount <p>命中次数</p>
      */
     public Long getHitCount() {
         return this.HitCount;
     }
 
     /**
-     * Set 命中次数
-     * @param HitCount 命中次数
+     * Set <p>命中次数</p>
+     * @param HitCount <p>命中次数</p>
      */
     public void setHitCount(Long HitCount) {
         this.HitCount = HitCount;
     }
 
     /**
-     * Get 风险类型。risk-风险；alarm-告警。 
-     * @return RiskType 风险类型。risk-风险；alarm-告警。
+     * Get <p>风险类型。risk-风险；alarm-告警。</p> 
+     * @return RiskType <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set 风险类型。risk-风险；alarm-告警。
-     * @param RiskType 风险类型。risk-风险；alarm-告警。
+     * Set <p>风险类型。risk-风险；alarm-告警。</p>
+     * @param RiskType <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 策略列表 
-     * @return StrategyList 策略列表
+     * Get <p>策略列表</p> 
+     * @return StrategyList <p>策略列表</p>
      */
     public DspmRiskStrategy [] getStrategyList() {
         return this.StrategyList;
     }
 
     /**
-     * Set 策略列表
-     * @param StrategyList 策略列表
+     * Set <p>策略列表</p>
+     * @param StrategyList <p>策略列表</p>
      */
     public void setStrategyList(DspmRiskStrategy [] StrategyList) {
         this.StrategyList = StrategyList;
+    }
+
+    /**
+     * Get <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleSource <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleSource() {
+        return this.RuleSource;
+    }
+
+    /**
+     * Set <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleSource <p>规则来源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleSource(String RuleSource) {
+        this.RuleSource = RuleSource;
     }
 
     public DspmRiskStrategyGroup() {
@@ -216,6 +244,9 @@ public class DspmRiskStrategyGroup extends AbstractModel {
                 this.StrategyList[i] = new DspmRiskStrategy(source.StrategyList[i]);
             }
         }
+        if (source.RuleSource != null) {
+            this.RuleSource = new String(source.RuleSource);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class DspmRiskStrategyGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "HitCount", this.HitCount);
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
         this.setParamArrayObj(map, prefix + "StrategyList.", this.StrategyList);
+        this.setParamSimple(map, prefix + "RuleSource", this.RuleSource);
 
     }
 }

@@ -94,6 +94,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *创建封禁规则
+     * @param req CreateBlockRuleRequest
+     * @return CreateBlockRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlockRuleResponse CreateBlockRule(CreateBlockRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBlockRule", CreateBlockRuleResponse.class);
+    }
+
+    /**
      *创建一机一密设备签名
      * @param req CreateDeviceIdentityRequest
      * @return CreateDeviceIdentityResponse
@@ -237,6 +248,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *删除封禁规则
+     * @param req DeleteBlockRuleRequest
+     * @return DeleteBlockRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlockRuleResponse DeleteBlockRule(DeleteBlockRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBlockRule", DeleteBlockRuleResponse.class);
+    }
+
+    /**
      *删除Ca证书
      * @param req DeleteCaCertificateRequest
      * @return DeleteCaCertificateResponse
@@ -355,6 +377,17 @@ public class MqttClient extends AbstractClient{
     public DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(DescribeAuthorizationPoliciesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuthorizationPolicies", DescribeAuthorizationPoliciesResponse.class);
+    }
+
+    /**
+     *封禁规则列表
+     * @param req DescribeBlockRuleListRequest
+     * @return DescribeBlockRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlockRuleListResponse DescribeBlockRuleList(DescribeBlockRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlockRuleList", DescribeBlockRuleListResponse.class);
     }
 
     /**
@@ -684,6 +717,17 @@ public class MqttClient extends AbstractClient{
     public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(ModifyAuthorizationPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuthorizationPolicy", ModifyAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *修改封禁规则
+     * @param req ModifyBlockRuleRequest
+     * @return ModifyBlockRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlockRuleResponse ModifyBlockRule(ModifyBlockRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBlockRule", ModifyBlockRuleResponse.class);
     }
 
     /**

@@ -24,151 +24,187 @@ import java.util.HashMap;
 public class CreatePrepareFlowGroupRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+    * <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
     */
     @SerializedName("FlowGroupName")
     @Expose
     private String FlowGroupName;
 
     /**
-    * 合同（流程）组的子合同信息，支持2-50个子合同
+    * <p>合同（流程）组的子合同信息，支持2-50个子合同</p>
     */
     @SerializedName("FlowGroupInfos")
     @Expose
     private FlowGroupInfo [] FlowGroupInfos;
 
     /**
-    * 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
+    * <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
     */
     @SerializedName("ResourceType")
     @Expose
     private Long ResourceType;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+    * <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
     */
     @SerializedName("FlowGroupOptions")
     @Expose
     private FlowGroupOptions FlowGroupOptions;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>合同组类型，发起合同组后会应用到所有子合同</p>
+    */
+    @SerializedName("FlowGroupType")
+    @Expose
+    private String FlowGroupType;
+
+    /**
+    * <p>合同组过期时间，发起合同组后会应用到所有子合同</p>
+    */
+    @SerializedName("FlowGroupDeadline")
+    @Expose
+    private Long FlowGroupDeadline;
+
+    /**
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
-     * @return FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * Get <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p> 
+     * @return FlowGroupName <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
      */
     public String getFlowGroupName() {
         return this.FlowGroupName;
     }
 
     /**
-     * Set 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-     * @param FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * Set <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
+     * @param FlowGroupName <p>合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。</p>
      */
     public void setFlowGroupName(String FlowGroupName) {
         this.FlowGroupName = FlowGroupName;
     }
 
     /**
-     * Get 合同（流程）组的子合同信息，支持2-50个子合同 
-     * @return FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
+     * Get <p>合同（流程）组的子合同信息，支持2-50个子合同</p> 
+     * @return FlowGroupInfos <p>合同（流程）组的子合同信息，支持2-50个子合同</p>
      */
     public FlowGroupInfo [] getFlowGroupInfos() {
         return this.FlowGroupInfos;
     }
 
     /**
-     * Set 合同（流程）组的子合同信息，支持2-50个子合同
-     * @param FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
+     * Set <p>合同（流程）组的子合同信息，支持2-50个子合同</p>
+     * @param FlowGroupInfos <p>合同（流程）组的子合同信息，支持2-50个子合同</p>
      */
     public void setFlowGroupInfos(FlowGroupInfo [] FlowGroupInfos) {
         this.FlowGroupInfos = FlowGroupInfos;
     }
 
     /**
-     * Get 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul> 
-     * @return ResourceType 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
+     * Get <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p> 
+     * @return ResourceType <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
-     * @param ResourceType 资源类型，取值有： <ul><li> **1**：模板</li> <li> **2**：文件</li></ul>
+     * Set <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
+     * @param ResourceType <p>资源类型，取值有： <ul><li> <strong>1</strong>：模板</li> <li> <strong>2</strong>：文件</li></ul></p>
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批 
-     * @return FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     * Get <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p> 
+     * @return FlowGroupOptions <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
      */
     public FlowGroupOptions getFlowGroupOptions() {
         return this.FlowGroupOptions;
     }
 
     /**
-     * Set 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
-     * @param FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     * Set <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
+     * @param FlowGroupOptions <p>合同组发起控制参数，例如FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批</p>
      */
     public void setFlowGroupOptions(FlowGroupOptions FlowGroupOptions) {
         this.FlowGroupOptions = FlowGroupOptions;
+    }
+
+    /**
+     * Get <p>合同组类型，发起合同组后会应用到所有子合同</p> 
+     * @return FlowGroupType <p>合同组类型，发起合同组后会应用到所有子合同</p>
+     */
+    public String getFlowGroupType() {
+        return this.FlowGroupType;
+    }
+
+    /**
+     * Set <p>合同组类型，发起合同组后会应用到所有子合同</p>
+     * @param FlowGroupType <p>合同组类型，发起合同组后会应用到所有子合同</p>
+     */
+    public void setFlowGroupType(String FlowGroupType) {
+        this.FlowGroupType = FlowGroupType;
+    }
+
+    /**
+     * Get <p>合同组过期时间，发起合同组后会应用到所有子合同</p> 
+     * @return FlowGroupDeadline <p>合同组过期时间，发起合同组后会应用到所有子合同</p>
+     */
+    public Long getFlowGroupDeadline() {
+        return this.FlowGroupDeadline;
+    }
+
+    /**
+     * Set <p>合同组过期时间，发起合同组后会应用到所有子合同</p>
+     * @param FlowGroupDeadline <p>合同组过期时间，发起合同组后会应用到所有子合同</p>
+     */
+    public void setFlowGroupDeadline(Long FlowGroupDeadline) {
+        this.FlowGroupDeadline = FlowGroupDeadline;
     }
 
     public CreatePrepareFlowGroupRequest() {
@@ -200,6 +236,12 @@ public class CreatePrepareFlowGroupRequest extends AbstractModel {
         if (source.FlowGroupOptions != null) {
             this.FlowGroupOptions = new FlowGroupOptions(source.FlowGroupOptions);
         }
+        if (source.FlowGroupType != null) {
+            this.FlowGroupType = new String(source.FlowGroupType);
+        }
+        if (source.FlowGroupDeadline != null) {
+            this.FlowGroupDeadline = new Long(source.FlowGroupDeadline);
+        }
     }
 
 
@@ -213,6 +255,8 @@ public class CreatePrepareFlowGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
+        this.setParamSimple(map, prefix + "FlowGroupType", this.FlowGroupType);
+        this.setParamSimple(map, prefix + "FlowGroupDeadline", this.FlowGroupDeadline);
 
     }
 }

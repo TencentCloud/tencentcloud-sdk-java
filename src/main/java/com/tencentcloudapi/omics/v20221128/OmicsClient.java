@@ -72,6 +72,17 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *删除环境缓存。
+     * @param req DeleteEnvironmentCacheRequest
+     * @return DeleteEnvironmentCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEnvironmentCacheResponse DeleteEnvironmentCache(DeleteEnvironmentCacheRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEnvironmentCache", DeleteEnvironmentCacheResponse.class);
+    }
+
+    /**
      *删除缓存卷。
      * @param req DeleteVolumeRequest
      * @return DeleteVolumeResponse

@@ -52,11 +52,18 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
     private File3D [] ResultFile3Ds;
 
     /**
-    * <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+    * <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
     */
     @SerializedName("PartSegmentationInfo")
     @Expose
     private String PartSegmentationInfo;
+
+    /**
+    * <p>PartSegmentationInfo 下载地址</p>
+    */
+    @SerializedName("PartSegmentationInfoUrl")
+    @Expose
+    private String PartSegmentationInfoUrl;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -130,19 +137,35 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p> 
-     * @return PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * Get <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p> 
+     * @return PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
      */
     public String getPartSegmentationInfo() {
         return this.PartSegmentationInfo;
     }
 
     /**
-     * Set <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
-     * @param PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * Set <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
+     * @param PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p><p>该参数废弃， 超过 9MB 不返回， 请使用 PartSegmentationInfoUrl 下载</p>
      */
     public void setPartSegmentationInfo(String PartSegmentationInfo) {
         this.PartSegmentationInfo = PartSegmentationInfo;
+    }
+
+    /**
+     * Get <p>PartSegmentationInfo 下载地址</p> 
+     * @return PartSegmentationInfoUrl <p>PartSegmentationInfo 下载地址</p>
+     */
+    public String getPartSegmentationInfoUrl() {
+        return this.PartSegmentationInfoUrl;
+    }
+
+    /**
+     * Set <p>PartSegmentationInfo 下载地址</p>
+     * @param PartSegmentationInfoUrl <p>PartSegmentationInfo 下载地址</p>
+     */
+    public void setPartSegmentationInfoUrl(String PartSegmentationInfoUrl) {
+        this.PartSegmentationInfoUrl = PartSegmentationInfoUrl;
     }
 
     /**
@@ -187,6 +210,9 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
         if (source.PartSegmentationInfo != null) {
             this.PartSegmentationInfo = new String(source.PartSegmentationInfo);
         }
+        if (source.PartSegmentationInfoUrl != null) {
+            this.PartSegmentationInfoUrl = new String(source.PartSegmentationInfoUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +228,7 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamArrayObj(map, prefix + "ResultFile3Ds.", this.ResultFile3Ds);
         this.setParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
+        this.setParamSimple(map, prefix + "PartSegmentationInfoUrl", this.PartSegmentationInfoUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

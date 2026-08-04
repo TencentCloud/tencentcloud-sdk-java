@@ -24,60 +24,74 @@ import java.util.HashMap;
 public class DescribeDeviceWorkOrderDetailResponse extends AbstractModel {
 
     /**
-    * 工单ID
+    * <p>工单ID</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 服务类型
+    * <p>服务类型</p>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 工单类型
+    * <p>工单类型</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * 工单状态
+    * <p>工单状态</p>
     */
     @SerializedName("OrderStatus")
     @Expose
     private String OrderStatus;
 
     /**
-    * 工单流程状态
+    * <p>工单流程状态</p>
     */
     @SerializedName("StepSet")
     @Expose
     private OrderStep [] StepSet;
 
     /**
-    * 工单设备信息
+    * <p>工单设备信息</p>
     */
     @SerializedName("DeviceSet")
     @Expose
     private DeviceHistory [] DeviceSet;
 
     /**
-    * 工单的入参信息
+    * <p>工单的入参信息</p>
     */
     @SerializedName("BaseInfo")
     @Expose
     private DeviceOrderBaseInfo BaseInfo;
 
     /**
-    * 工单的拒绝原因，工单状态为reject的时候返回
+    * <p>工单的拒绝原因，工单状态为reject的时候返回</p>
     */
     @SerializedName("RejectReason")
     @Expose
     private String RejectReason;
+
+    /**
+    * <p>工单 SLA 信息</p>
+    */
+    @SerializedName("SLAInfo")
+    @Expose
+    private SLAInfo SLAInfo;
+
+    /**
+    * <p>前序未完成的工单号</p>
+    */
+    @SerializedName("PreOrderSet")
+    @Expose
+    private String [] PreOrderSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -87,131 +101,163 @@ public class DescribeDeviceWorkOrderDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工单ID 
-     * @return OrderId 工单ID
+     * Get <p>工单ID</p> 
+     * @return OrderId <p>工单ID</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 工单ID
-     * @param OrderId 工单ID
+     * Set <p>工单ID</p>
+     * @param OrderId <p>工单ID</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 服务类型 
-     * @return ServiceType 服务类型
+     * Get <p>服务类型</p> 
+     * @return ServiceType <p>服务类型</p>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 服务类型
-     * @param ServiceType 服务类型
+     * Set <p>服务类型</p>
+     * @param ServiceType <p>服务类型</p>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 工单类型 
-     * @return OrderType 工单类型
+     * Get <p>工单类型</p> 
+     * @return OrderType <p>工单类型</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 工单类型
-     * @param OrderType 工单类型
+     * Set <p>工单类型</p>
+     * @param OrderType <p>工单类型</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 工单状态 
-     * @return OrderStatus 工单状态
+     * Get <p>工单状态</p> 
+     * @return OrderStatus <p>工单状态</p>
      */
     public String getOrderStatus() {
         return this.OrderStatus;
     }
 
     /**
-     * Set 工单状态
-     * @param OrderStatus 工单状态
+     * Set <p>工单状态</p>
+     * @param OrderStatus <p>工单状态</p>
      */
     public void setOrderStatus(String OrderStatus) {
         this.OrderStatus = OrderStatus;
     }
 
     /**
-     * Get 工单流程状态 
-     * @return StepSet 工单流程状态
+     * Get <p>工单流程状态</p> 
+     * @return StepSet <p>工单流程状态</p>
      */
     public OrderStep [] getStepSet() {
         return this.StepSet;
     }
 
     /**
-     * Set 工单流程状态
-     * @param StepSet 工单流程状态
+     * Set <p>工单流程状态</p>
+     * @param StepSet <p>工单流程状态</p>
      */
     public void setStepSet(OrderStep [] StepSet) {
         this.StepSet = StepSet;
     }
 
     /**
-     * Get 工单设备信息 
-     * @return DeviceSet 工单设备信息
+     * Get <p>工单设备信息</p> 
+     * @return DeviceSet <p>工单设备信息</p>
      */
     public DeviceHistory [] getDeviceSet() {
         return this.DeviceSet;
     }
 
     /**
-     * Set 工单设备信息
-     * @param DeviceSet 工单设备信息
+     * Set <p>工单设备信息</p>
+     * @param DeviceSet <p>工单设备信息</p>
      */
     public void setDeviceSet(DeviceHistory [] DeviceSet) {
         this.DeviceSet = DeviceSet;
     }
 
     /**
-     * Get 工单的入参信息 
-     * @return BaseInfo 工单的入参信息
+     * Get <p>工单的入参信息</p> 
+     * @return BaseInfo <p>工单的入参信息</p>
      */
     public DeviceOrderBaseInfo getBaseInfo() {
         return this.BaseInfo;
     }
 
     /**
-     * Set 工单的入参信息
-     * @param BaseInfo 工单的入参信息
+     * Set <p>工单的入参信息</p>
+     * @param BaseInfo <p>工单的入参信息</p>
      */
     public void setBaseInfo(DeviceOrderBaseInfo BaseInfo) {
         this.BaseInfo = BaseInfo;
     }
 
     /**
-     * Get 工单的拒绝原因，工单状态为reject的时候返回 
-     * @return RejectReason 工单的拒绝原因，工单状态为reject的时候返回
+     * Get <p>工单的拒绝原因，工单状态为reject的时候返回</p> 
+     * @return RejectReason <p>工单的拒绝原因，工单状态为reject的时候返回</p>
      */
     public String getRejectReason() {
         return this.RejectReason;
     }
 
     /**
-     * Set 工单的拒绝原因，工单状态为reject的时候返回
-     * @param RejectReason 工单的拒绝原因，工单状态为reject的时候返回
+     * Set <p>工单的拒绝原因，工单状态为reject的时候返回</p>
+     * @param RejectReason <p>工单的拒绝原因，工单状态为reject的时候返回</p>
      */
     public void setRejectReason(String RejectReason) {
         this.RejectReason = RejectReason;
+    }
+
+    /**
+     * Get <p>工单 SLA 信息</p> 
+     * @return SLAInfo <p>工单 SLA 信息</p>
+     */
+    public SLAInfo getSLAInfo() {
+        return this.SLAInfo;
+    }
+
+    /**
+     * Set <p>工单 SLA 信息</p>
+     * @param SLAInfo <p>工单 SLA 信息</p>
+     */
+    public void setSLAInfo(SLAInfo SLAInfo) {
+        this.SLAInfo = SLAInfo;
+    }
+
+    /**
+     * Get <p>前序未完成的工单号</p> 
+     * @return PreOrderSet <p>前序未完成的工单号</p>
+     */
+    public String [] getPreOrderSet() {
+        return this.PreOrderSet;
+    }
+
+    /**
+     * Set <p>前序未完成的工单号</p>
+     * @param PreOrderSet <p>前序未完成的工单号</p>
+     */
+    public void setPreOrderSet(String [] PreOrderSet) {
+        this.PreOrderSet = PreOrderSet;
     }
 
     /**
@@ -268,6 +314,15 @@ public class DescribeDeviceWorkOrderDetailResponse extends AbstractModel {
         if (source.RejectReason != null) {
             this.RejectReason = new String(source.RejectReason);
         }
+        if (source.SLAInfo != null) {
+            this.SLAInfo = new SLAInfo(source.SLAInfo);
+        }
+        if (source.PreOrderSet != null) {
+            this.PreOrderSet = new String[source.PreOrderSet.length];
+            for (int i = 0; i < source.PreOrderSet.length; i++) {
+                this.PreOrderSet[i] = new String(source.PreOrderSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -286,6 +341,8 @@ public class DescribeDeviceWorkOrderDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DeviceSet.", this.DeviceSet);
         this.setParamObj(map, prefix + "BaseInfo.", this.BaseInfo);
         this.setParamSimple(map, prefix + "RejectReason", this.RejectReason);
+        this.setParamObj(map, prefix + "SLAInfo.", this.SLAInfo);
+        this.setParamArraySimple(map, prefix + "PreOrderSet.", this.PreOrderSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

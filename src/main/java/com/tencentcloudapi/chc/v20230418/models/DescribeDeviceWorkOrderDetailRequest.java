@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDeviceWorkOrderDetailRequest extends AbstractModel {
 
     /**
-    * 工单ID
+    * <p>工单ID</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-     * Get 工单ID 
-     * @return OrderId 工单ID
+     * Get <p>工单ID</p> 
+     * @return OrderId <p>工单ID</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 工单ID
-     * @param OrderId 工单ID
+     * Set <p>工单ID</p>
+     * @param OrderId <p>工单ID</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
