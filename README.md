@@ -558,12 +558,12 @@ cpf.getHttpProfile().setHttpClient(...);
 <dependency>
   <groupId>com.squareup.okhttp3</groupId>
   <artifactId>okhttp</artifactId>
-  <version>3.12.13</version>
+  <version>3.2.0</version>
 </dependency>
 <dependency>
   <groupId>com.squareup.okhttp3</groupId>
   <artifactId>logging-interceptor</artifactId>
-  <version>3.12.13</version>
+  <version>3.2.0</version>
 </dependency>
 ```
 
