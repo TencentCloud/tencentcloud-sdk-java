@@ -400,7 +400,8 @@ public abstract class AbstractClient {
         conn.setProxy(proxy);
 
         final String username = this.profile.getHttpProfile().getProxyUsername();
-        final String password = this.profile.getHttpProfile().getProxyPassword();
+        String configuredPassword = this.profile.getHttpProfile().getProxyPassword();
+        final String password = configuredPassword == null ? "" : configuredPassword;
         if (username == null || username.isEmpty()) {
             return;
         }
