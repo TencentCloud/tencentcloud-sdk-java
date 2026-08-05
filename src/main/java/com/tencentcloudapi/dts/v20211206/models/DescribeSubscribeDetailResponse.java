@@ -24,189 +24,189 @@ import java.util.HashMap;
 public class DescribeSubscribeDetailResponse extends AbstractModel {
 
     /**
-    * 数据订阅的ID，形如subs-b6x64o31tm
+    * <p>数据订阅的ID，形如subs-b6x64o31tm</p>
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-    * 数据订阅实例的名称
+    * <p>数据订阅实例的名称</p>
     */
     @SerializedName("SubscribeName")
     @Expose
     private String SubscribeName;
 
     /**
-    * 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+    * <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
+    * <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
+    * <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
+    * <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
+    * <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
     */
     @SerializedName("SubsStatus")
     @Expose
     private String SubsStatus;
 
     /**
-    * 修改时间，时间格式如：Y-m-d h:m:s
+    * <p>修改时间。</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 创建时间，时间格式如：Y-m-d h:m:s
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+    * <p>隔离时间。</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+    * <p>包年包月任务的到期时间。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+    * <p>下线时间。</p>
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-    * 付费方式，可能值为：0-包年包月，1-按量计费
+    * <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+    * <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 任务所在地域
+    * <p>任务所在地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Kafka topic
+    * <p>Kafka topic</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * Kafka服务Broker地址
+    * <p>Kafka服务Broker地址</p>
     */
     @SerializedName("Broker")
     @Expose
     private String Broker;
 
     /**
-    * 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+    * <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
     */
     @SerializedName("SubscribeMode")
     @Expose
     private String SubscribeMode;
 
     /**
-    * 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
+    * <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 订阅的数据库表信息
+    * <p>订阅的数据库表信息</p>
     */
     @SerializedName("SubscribeObjects")
     @Expose
     private SubscribeObject [] SubscribeObjects;
 
     /**
-    * kafka配置信息
+    * <p>kafka配置信息</p>
     */
     @SerializedName("KafkaConfig")
     @Expose
     private SubscribeKafkaConfig KafkaConfig;
 
     /**
-    * 订阅内置kafka的版本信息
+    * <p>订阅内置kafka的版本信息</p>
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+    * <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
     */
     @SerializedName("AccessType")
     @Expose
     private String AccessType;
 
     /**
-    * 接入类型信息
+    * <p>接入类型信息</p>
     */
     @SerializedName("Endpoints")
     @Expose
     private EndpointItem [] Endpoints;
 
     /**
-    * mongo输出聚合设置
+    * <p>mongo输出聚合设置</p>
     */
     @SerializedName("PipelineInfo")
     @Expose
     private PipelineInfo [] PipelineInfo;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-    * 订阅任务报错信息
+    * <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
@@ -214,37 +214,35 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
     private SubsErr [] Errors;
 
     /**
-    * 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+    * <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
     */
     @SerializedName("ExtraAttr")
     @Expose
     private KeyValuePairOption [] ExtraAttr;
 
     /**
-    * 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+    * <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
     */
     @SerializedName("SubscribeVersion")
     @Expose
     private String SubscribeVersion;
 
     /**
-    * 消费端地址所在vpc
+    * <p>消费端地址所在vpc</p>
     */
     @SerializedName("ConsumerVpcId")
     @Expose
     private String ConsumerVpcId;
 
     /**
-    * 消费端地址所在子网
+    * <p>消费端地址所在子网</p>
     */
     @SerializedName("ConsumerSubnetId")
     @Expose
     private String ConsumerSubnetId;
 
     /**
-    * 订阅实例规格
+    * <p>订阅实例规格</p>
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -258,425 +256,425 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     private String RequestId;
 
     /**
-     * Get 数据订阅的ID，形如subs-b6x64o31tm 
-     * @return SubscribeId 数据订阅的ID，形如subs-b6x64o31tm
+     * Get <p>数据订阅的ID，形如subs-b6x64o31tm</p> 
+     * @return SubscribeId <p>数据订阅的ID，形如subs-b6x64o31tm</p>
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 数据订阅的ID，形如subs-b6x64o31tm
-     * @param SubscribeId 数据订阅的ID，形如subs-b6x64o31tm
+     * Set <p>数据订阅的ID，形如subs-b6x64o31tm</p>
+     * @param SubscribeId <p>数据订阅的ID，形如subs-b6x64o31tm</p>
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
     }
 
     /**
-     * Get 数据订阅实例的名称 
-     * @return SubscribeName 数据订阅实例的名称
+     * Get <p>数据订阅实例的名称</p> 
+     * @return SubscribeName <p>数据订阅实例的名称</p>
      */
     public String getSubscribeName() {
         return this.SubscribeName;
     }
 
     /**
-     * Set 数据订阅实例的名称
-     * @param SubscribeName 数据订阅实例的名称
+     * Set <p>数据订阅实例的名称</p>
+     * @param SubscribeName <p>数据订阅实例的名称</p>
      */
     public void setSubscribeName(String SubscribeName) {
         this.SubscribeName = SubscribeName;
     }
 
     /**
-     * Get 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版) 
-     * @return Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+     * Get <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p> 
+     * @return Product <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
-     * @param Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
+     * Set <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
+     * @param Product <p>订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 订阅的云数据库实例ID，只有订阅云数据库该值才有意义 
-     * @return InstanceId 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
+     * Get <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p> 
+     * @return InstanceId <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
-     * @param InstanceId 订阅的云数据库实例ID，只有订阅云数据库该值才有意义
+     * Set <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
+     * @param InstanceId <p>订阅的云数据库实例ID，只有订阅云数据库该值才有意义</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline 
-     * @return InstanceStatus 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
+     * Get <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p> 
+     * @return InstanceStatus <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
-     * @param InstanceStatus 订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline
+     * Set <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
+     * @param InstanceStatus <p>订阅的云数据库实例状态，只有订阅云数据库该值才有意义。可能值为：running, isolated, offline</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng 
-     * @return Status 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
+     * Get <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p> 
+     * @return Status <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
-     * @param Status 订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng
+     * Set <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
+     * @param Status <p>订阅任务计费状态，可能值为：正常normal, 隔离中isolating, 已隔离isolated, 下线中offlining, 按量转包年包月中 post2PrePayIng</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error 
-     * @return SubsStatus 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
+     * Get <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p> 
+     * @return SubsStatus <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
      */
     public String getSubsStatus() {
         return this.SubsStatus;
     }
 
     /**
-     * Set 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
-     * @param SubsStatus 订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error
+     * Set <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
+     * @param SubsStatus <p>订阅任务状态，可能值为：未启动notStarted, 校验中checking, 校验不通过checkNotPass, 校验通过checkPass, 启动中starting, 运行中running, 异常出错error</p>
      */
     public void setSubsStatus(String SubsStatus) {
         this.SubsStatus = SubsStatus;
     }
 
     /**
-     * Get 修改时间，时间格式如：Y-m-d h:m:s 
-     * @return ModifyTime 修改时间，时间格式如：Y-m-d h:m:s
+     * Get <p>修改时间。</p> 
+     * @return ModifyTime <p>修改时间。</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间，时间格式如：Y-m-d h:m:s
-     * @param ModifyTime 修改时间，时间格式如：Y-m-d h:m:s
+     * Set <p>修改时间。</p>
+     * @param ModifyTime <p>修改时间。</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间，时间格式如：Y-m-d h:m:s 
-     * @return CreateTime 创建时间，时间格式如：Y-m-d h:m:s
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，时间格式如：Y-m-d h:m:s
-     * @param CreateTime 创建时间，时间格式如：Y-m-d h:m:s
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
-     * @return IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Get <p>隔离时间。</p> 
+     * @return IsolateTime <p>隔离时间。</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Set <p>隔离时间。</p>
+     * @param IsolateTime <p>隔离时间。</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
-     * @return ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Get <p>包年包月任务的到期时间。</p> 
+     * @return ExpireTime <p>包年包月任务的到期时间。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Set <p>包年包月任务的到期时间。</p>
+     * @param ExpireTime <p>包年包月任务的到期时间。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
-     * @return OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Get <p>下线时间。</p> 
+     * @return OfflineTime <p>下线时间。</p>
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Set <p>下线时间。</p>
+     * @param OfflineTime <p>下线时间。</p>
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 付费方式，可能值为：0-包年包月，1-按量计费 
-     * @return PayType 付费方式，可能值为：0-包年包月，1-按量计费
+     * Get <p>付费方式，可能值为：0-包年包月，1-按量计费</p> 
+     * @return PayType <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 付费方式，可能值为：0-包年包月，1-按量计费
-     * @param PayType 付费方式，可能值为：0-包年包月，1-按量计费
+     * Set <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
+     * @param PayType <p>付费方式，可能值为：0-包年包月，1-按量计费</p>
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费 
-     * @return AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+     * Get <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p> 
+     * @return AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-     * @param AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+     * Set <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+     * @param AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 任务所在地域 
-     * @return Region 任务所在地域
+     * Get <p>任务所在地域</p> 
+     * @return Region <p>任务所在地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 任务所在地域
-     * @param Region 任务所在地域
+     * Set <p>任务所在地域</p>
+     * @param Region <p>任务所在地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Kafka topic 
-     * @return Topic Kafka topic
+     * Get <p>Kafka topic</p> 
+     * @return Topic <p>Kafka topic</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Kafka topic
-     * @param Topic Kafka topic
+     * Set <p>Kafka topic</p>
+     * @param Topic <p>Kafka topic</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Kafka服务Broker地址 
-     * @return Broker Kafka服务Broker地址
+     * Get <p>Kafka服务Broker地址</p> 
+     * @return Broker <p>Kafka服务Broker地址</p>
      */
     public String getBroker() {
         return this.Broker;
     }
 
     /**
-     * Set Kafka服务Broker地址
-     * @param Broker Kafka服务Broker地址
+     * Set <p>Kafka服务Broker地址</p>
+     * @param Broker <p>Kafka服务Broker地址</p>
      */
     public void setBroker(String Broker) {
         this.Broker = Broker;
     }
 
     /**
-     * Get 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合 
-     * @return SubscribeMode 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+     * Get <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p> 
+     * @return SubscribeMode <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
      */
     public String getSubscribeMode() {
         return this.SubscribeMode;
     }
 
     /**
-     * Set 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-     * @param SubscribeMode 数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+     * Set <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+     * @param SubscribeMode <p>数据订阅的类型，当 Product 不为 mongodb 时，可能值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 Product 为 mongodb 时，可能值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
      */
     public void setSubscribeMode(String SubscribeMode) {
         this.SubscribeMode = SubscribeMode;
     }
 
     /**
-     * Get 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档 
-     * @return Protocol 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
+     * Get <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p> 
+     * @return Protocol <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
-     * @param Protocol 订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档
+     * Set <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
+     * @param Protocol <p>订阅数据格式。如果为空则用的默认格式: mysql\cynosdbmysql\mariadb\percona\tdsqlpercona\tdpg是protobuf，mongo是json。当 DatabaseType 为 mysql和cynosdbmysql 时有三种可选协议：protobuf\avro\json。数据格式详情参考官网的消费demo文档</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 订阅的数据库表信息 
-     * @return SubscribeObjects 订阅的数据库表信息
+     * Get <p>订阅的数据库表信息</p> 
+     * @return SubscribeObjects <p>订阅的数据库表信息</p>
      */
     public SubscribeObject [] getSubscribeObjects() {
         return this.SubscribeObjects;
     }
 
     /**
-     * Set 订阅的数据库表信息
-     * @param SubscribeObjects 订阅的数据库表信息
+     * Set <p>订阅的数据库表信息</p>
+     * @param SubscribeObjects <p>订阅的数据库表信息</p>
      */
     public void setSubscribeObjects(SubscribeObject [] SubscribeObjects) {
         this.SubscribeObjects = SubscribeObjects;
     }
 
     /**
-     * Get kafka配置信息 
-     * @return KafkaConfig kafka配置信息
+     * Get <p>kafka配置信息</p> 
+     * @return KafkaConfig <p>kafka配置信息</p>
      */
     public SubscribeKafkaConfig getKafkaConfig() {
         return this.KafkaConfig;
     }
 
     /**
-     * Set kafka配置信息
-     * @param KafkaConfig kafka配置信息
+     * Set <p>kafka配置信息</p>
+     * @param KafkaConfig <p>kafka配置信息</p>
      */
     public void setKafkaConfig(SubscribeKafkaConfig KafkaConfig) {
         this.KafkaConfig = KafkaConfig;
     }
 
     /**
-     * Get 订阅内置kafka的版本信息 
-     * @return KafkaVersion 订阅内置kafka的版本信息
+     * Get <p>订阅内置kafka的版本信息</p> 
+     * @return KafkaVersion <p>订阅内置kafka的版本信息</p>
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set 订阅内置kafka的版本信息
-     * @param KafkaVersion 订阅内置kafka的版本信息
+     * Set <p>订阅内置kafka的版本信息</p>
+     * @param KafkaVersion <p>订阅内置kafka的版本信息</p>
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力 
-     * @return AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+     * Get <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p> 
+     * @return AccessType <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-     * @param AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+     * Set <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+     * @param AccessType <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 接入类型信息 
-     * @return Endpoints 接入类型信息
+     * Get <p>接入类型信息</p> 
+     * @return Endpoints <p>接入类型信息</p>
      */
     public EndpointItem [] getEndpoints() {
         return this.Endpoints;
     }
 
     /**
-     * Set 接入类型信息
-     * @param Endpoints 接入类型信息
+     * Set <p>接入类型信息</p>
+     * @param Endpoints <p>接入类型信息</p>
      */
     public void setEndpoints(EndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;
     }
 
     /**
-     * Get mongo输出聚合设置 
-     * @return PipelineInfo mongo输出聚合设置
+     * Get <p>mongo输出聚合设置</p> 
+     * @return PipelineInfo <p>mongo输出聚合设置</p>
      */
     public PipelineInfo [] getPipelineInfo() {
         return this.PipelineInfo;
     }
 
     /**
-     * Set mongo输出聚合设置
-     * @param PipelineInfo mongo输出聚合设置
+     * Set <p>mongo输出聚合设置</p>
+     * @param PipelineInfo <p>mongo输出聚合设置</p>
      */
     public void setPipelineInfo(PipelineInfo [] PipelineInfo) {
         this.PipelineInfo = PipelineInfo;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 订阅任务报错信息
+     * Get <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Errors 订阅任务报错信息
+     * @return Errors <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubsErr [] getErrors() {
@@ -684,9 +682,9 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
-     * Set 订阅任务报错信息
+     * Set <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Errors 订阅任务报错信息
+     * @param Errors <p>订阅任务报错信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(SubsErr [] Errors) {
@@ -694,88 +692,80 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
-     * Get 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。 
-     * @return ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+     * Get <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p> 
+     * @return ExtraAttr <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
      */
     public KeyValuePairOption [] getExtraAttr() {
         return this.ExtraAttr;
     }
 
     /**
-     * Set 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
-     * @param ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+     * Set <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
+     * @param ExtraAttr <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。</p>
      */
     public void setExtraAttr(KeyValuePairOption [] ExtraAttr) {
         this.ExtraAttr = ExtraAttr;
     }
 
     /**
-     * Get 数据订阅版本, 当前支持kafka和kafkaPro（专业版） 
-     * @return SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * Get <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p> 
+     * @return SubscribeVersion <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
      */
     public String getSubscribeVersion() {
         return this.SubscribeVersion;
     }
 
     /**
-     * Set 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
-     * @param SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * Set <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+     * @param SubscribeVersion <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
      */
     public void setSubscribeVersion(String SubscribeVersion) {
         this.SubscribeVersion = SubscribeVersion;
     }
 
     /**
-     * Get 消费端地址所在vpc 
-     * @return ConsumerVpcId 消费端地址所在vpc
+     * Get <p>消费端地址所在vpc</p> 
+     * @return ConsumerVpcId <p>消费端地址所在vpc</p>
      */
     public String getConsumerVpcId() {
         return this.ConsumerVpcId;
     }
 
     /**
-     * Set 消费端地址所在vpc
-     * @param ConsumerVpcId 消费端地址所在vpc
+     * Set <p>消费端地址所在vpc</p>
+     * @param ConsumerVpcId <p>消费端地址所在vpc</p>
      */
     public void setConsumerVpcId(String ConsumerVpcId) {
         this.ConsumerVpcId = ConsumerVpcId;
     }
 
     /**
-     * Get 消费端地址所在子网 
-     * @return ConsumerSubnetId 消费端地址所在子网
+     * Get <p>消费端地址所在子网</p> 
+     * @return ConsumerSubnetId <p>消费端地址所在子网</p>
      */
     public String getConsumerSubnetId() {
         return this.ConsumerSubnetId;
     }
 
     /**
-     * Set 消费端地址所在子网
-     * @param ConsumerSubnetId 消费端地址所在子网
+     * Set <p>消费端地址所在子网</p>
+     * @param ConsumerSubnetId <p>消费端地址所在子网</p>
      */
     public void setConsumerSubnetId(String ConsumerSubnetId) {
         this.ConsumerSubnetId = ConsumerSubnetId;
     }
 
     /**
-     * Get 订阅实例规格 
-     * @return InstanceClass 订阅实例规格
+     * Get <p>订阅实例规格</p> 
+     * @return InstanceClass <p>订阅实例规格</p>
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 订阅实例规格
-     * @param InstanceClass 订阅实例规格
+     * Set <p>订阅实例规格</p>
+     * @param InstanceClass <p>订阅实例规格</p>
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;

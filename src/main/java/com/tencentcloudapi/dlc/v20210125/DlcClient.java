@@ -457,6 +457,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建推理服务（含默认部署）
+     * @param req CreateInferenceServiceRequest
+     * @return CreateInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInferenceServiceResponse CreateInferenceService(CreateInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInferenceService", CreateInferenceServiceResponse.class);
+    }
+
+    /**
      *创建托管存储内表（该接口已废弃）
      * @param req CreateInternalTableRequest
      * @return CreateInternalTableResponse
@@ -498,6 +509,17 @@ public class DlcClient extends AbstractClient{
     public CreateMetaDatabaseResponse CreateMetaDatabase(CreateMetaDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMetaDatabase", CreateMetaDatabaseResponse.class);
+    }
+
+    /**
+     *创建模型新版本
+     * @param req CreateModelVersionRequest
+     * @return CreateModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelVersionResponse CreateModelVersion(CreateModelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModelVersion", CreateModelVersionResponse.class);
     }
 
     /**
@@ -2087,6 +2109,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *获取单个推理服务详情
+     * @param req GetInferenceServiceRequest
+     * @return GetInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInferenceServiceResponse GetInferenceService(GetInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetInferenceService", GetInferenceServiceResponse.class);
+    }
+
+    /**
      *根据配置ID获取作业配置详情
      * @param req GetJobSpecRequest
      * @return GetJobSpecResponse
@@ -2172,6 +2205,39 @@ public class DlcClient extends AbstractClient{
     public GetLabYamlResponse GetLabYaml(GetLabYamlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetLabYaml", GetLabYamlResponse.class);
+    }
+
+    /**
+     *获取模型 config.json 配置（默认最新版本）
+     * @param req GetModelConfigRequest
+     * @return GetModelConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetModelConfigResponse GetModelConfig(GetModelConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetModelConfig", GetModelConfigResponse.class);
+    }
+
+    /**
+     *获取模型文件树（默认最新版本）
+     * @param req GetModelFilesRequest
+     * @return GetModelFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetModelFilesResponse GetModelFiles(GetModelFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetModelFiles", GetModelFilesResponse.class);
+    }
+
+    /**
+     *获取模型 README 信息（默认最新版本）
+     * @param req GetModelReadmeRequest
+     * @return GetModelReadmeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetModelReadmeResponse GetModelReadme(GetModelReadmeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetModelReadme", GetModelReadmeResponse.class);
     }
 
     /**
@@ -2428,6 +2494,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *列出推理引擎
+     * @param req ListInferenceEnginesRequest
+     * @return ListInferenceEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListInferenceEnginesResponse ListInferenceEngines(ListInferenceEnginesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListInferenceEngines", ListInferenceEnginesResponse.class);
+    }
+
+    /**
      *列出推理模型（支持关键词过滤 + 分页）
      * @param req ListInferenceModelsRequest
      * @return ListInferenceModelsResponse
@@ -2436,6 +2513,17 @@ public class DlcClient extends AbstractClient{
     public ListInferenceModelsResponse ListInferenceModels(ListInferenceModelsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListInferenceModels", ListInferenceModelsResponse.class);
+    }
+
+    /**
+     *列出推理服务（支持关键词和状态过滤 + 分页）
+     * @param req ListInferenceServicesRequest
+     * @return ListInferenceServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListInferenceServicesResponse ListInferenceServices(ListInferenceServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListInferenceServices", ListInferenceServicesResponse.class);
     }
 
     /**
@@ -2469,6 +2557,17 @@ public class DlcClient extends AbstractClient{
     public ListLabsResponse ListLabs(ListLabsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListLabs", ListLabsResponse.class);
+    }
+
+    /**
+     *列出模型所有版本
+     * @param req ListModelVersionsRequest
+     * @return ListModelVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListModelVersionsResponse ListModelVersions(ListModelVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListModelVersions", ListModelVersionsResponse.class);
     }
 
     /**
@@ -2703,6 +2802,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *返回指定时间范围内所有推理服务的聚合 KPI 值。
+     * @param req QueryDashboardOverviewRequest
+     * @return QueryDashboardOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryDashboardOverviewResponse QueryDashboardOverview(QueryDashboardOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryDashboardOverview", QueryDashboardOverviewResponse.class);
+    }
+
+    /**
+     *查询监控大盘服务列表
+     * @param req QueryDashboardServiceListRequest
+     * @return QueryDashboardServiceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryDashboardServiceListResponse QueryDashboardServiceList(QueryDashboardServiceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryDashboardServiceList", QueryDashboardServiceListResponse.class);
+    }
+
+    /**
      *本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
      * @param req QueryInternalTableWarehouseRequest
      * @return QueryInternalTableWarehouseResponse
@@ -2711,6 +2832,17 @@ public class DlcClient extends AbstractClient{
     public QueryInternalTableWarehouseResponse QueryInternalTableWarehouse(QueryInternalTableWarehouseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryInternalTableWarehouse", QueryInternalTableWarehouseResponse.class);
+    }
+
+    /**
+     *查询监控概览数据（瞬时值）
+     * @param req QueryMonitorOverviewRequest
+     * @return QueryMonitorOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMonitorOverviewResponse QueryMonitorOverview(QueryMonitorOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryMonitorOverview", QueryMonitorOverviewResponse.class);
     }
 
     /**
@@ -2780,6 +2912,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *重启推理服务（操作所有部署）。
+     * @param req RestartInferenceServiceRequest
+     * @return RestartInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartInferenceServiceResponse RestartInferenceService(RestartInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartInferenceService", RestartInferenceServiceResponse.class);
+    }
+
+    /**
      *撤销DLC Catalog访问权限
      * @param req RevokeDLCCatalogAccessRequest
      * @return RevokeDLCCatalogAccessResponse
@@ -2843,6 +2986,17 @@ public class DlcClient extends AbstractClient{
     public StartRayClusterResponse StartRayCluster(StartRayClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartRayCluster", StartRayClusterResponse.class);
+    }
+
+    /**
+     *停止推理服务（操作所有部署）。
+     * @param req StopInferenceServiceRequest
+     * @return StopInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopInferenceServiceResponse StopInferenceService(StopInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopInferenceService", StopInferenceServiceResponse.class);
     }
 
     /**

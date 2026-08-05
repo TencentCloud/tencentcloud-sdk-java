@@ -270,6 +270,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *实例限流规则相关接口
+     * @param req CreateThrottleRuleRequest
+     * @return CreateThrottleRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateThrottleRuleResponse CreateThrottleRule(CreateThrottleRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateThrottleRule", CreateThrottleRuleResponse.class);
+    }
+
+    /**
      *创建最高权限的token
      * @param req CreateTokenRequest
      * @return CreateTokenResponse
@@ -432,6 +443,17 @@ public class CkafkaClient extends AbstractClient{
     public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRouteTriggerTime", DeleteRouteTriggerTimeResponse.class);
+    }
+
+    /**
+     *删除实例限流规则
+     * @param req DeleteThrottleRuleRequest
+     * @return DeleteThrottleRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteThrottleRuleResponse DeleteThrottleRule(DeleteThrottleRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteThrottleRule", DeleteThrottleRuleResponse.class);
     }
 
     /**
@@ -743,6 +765,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *获取实例限流规则列表
+     * @param req DescribeThrottleRulesRequest
+     * @return DescribeThrottleRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeThrottleRulesResponse DescribeThrottleRules(DescribeThrottleRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeThrottleRules", DescribeThrottleRulesResponse.class);
+    }
+
+    /**
      *接口请求域名：https://ckafka.tencentcloudapi.com
 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
      * @param req DescribeTopicRequest
@@ -1038,6 +1071,17 @@ public class CkafkaClient extends AbstractClient{
     public ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(ModifyRoutineMaintenanceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRoutineMaintenanceTask", ModifyRoutineMaintenanceTaskResponse.class);
+    }
+
+    /**
+     *修改限流规则接口
+     * @param req ModifyThrottleRuleRequest
+     * @return ModifyThrottleRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyThrottleRuleResponse ModifyThrottleRule(ModifyThrottleRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyThrottleRule", ModifyThrottleRuleResponse.class);
     }
 
     /**

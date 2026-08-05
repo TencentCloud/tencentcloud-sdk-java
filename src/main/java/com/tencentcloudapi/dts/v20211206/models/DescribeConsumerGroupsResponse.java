@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeConsumerGroupsResponse extends AbstractModel {
 
     /**
-    * 指定实例下的消费者组总数
+    * <p>指定实例下的消费者组总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 消费者组列表
+    * <p>消费者组列表</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeConsumerGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指定实例下的消费者组总数 
-     * @return TotalCount 指定实例下的消费者组总数
+     * Get <p>指定实例下的消费者组总数</p> 
+     * @return TotalCount <p>指定实例下的消费者组总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 指定实例下的消费者组总数
-     * @param TotalCount 指定实例下的消费者组总数
+     * Set <p>指定实例下的消费者组总数</p>
+     * @param TotalCount <p>指定实例下的消费者组总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 消费者组列表 
-     * @return Items 消费者组列表
+     * Get <p>消费者组列表</p> 
+     * @return Items <p>消费者组列表</p>
      */
     public GroupInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 消费者组列表
-     * @param Items 消费者组列表
+     * Set <p>消费者组列表</p>
+     * @param Items <p>消费者组列表</p>
      */
     public void setItems(GroupInfo [] Items) {
         this.Items = Items;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeConsumerGroupsRequest extends AbstractModel {
 
     /**
-    * 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+    * <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-    * 返回记录的起始偏移量。默认0
+    * <p>返回记录的起始偏移量。默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单次返回的记录数量。默认10
+    * <p>单次返回的记录数量。默认10</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。 
-     * @return SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * Get <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p> 
+     * @return SubscribeId <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
-     * @param SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * Set <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+     * @param SubscribeId <p>订阅实例id，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
     }
 
     /**
-     * Get 返回记录的起始偏移量。默认0 
-     * @return Offset 返回记录的起始偏移量。默认0
+     * Get <p>返回记录的起始偏移量。默认0</p> 
+     * @return Offset <p>返回记录的起始偏移量。默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回记录的起始偏移量。默认0
-     * @param Offset 返回记录的起始偏移量。默认0
+     * Set <p>返回记录的起始偏移量。默认0</p>
+     * @param Offset <p>返回记录的起始偏移量。默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单次返回的记录数量。默认10 
-     * @return Limit 单次返回的记录数量。默认10
+     * Get <p>单次返回的记录数量。默认10</p> 
+     * @return Limit <p>单次返回的记录数量。默认10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次返回的记录数量。默认10
-     * @param Limit 单次返回的记录数量。默认10
+     * Set <p>单次返回的记录数量。默认10</p>
+     * @param Limit <p>单次返回的记录数量。默认10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

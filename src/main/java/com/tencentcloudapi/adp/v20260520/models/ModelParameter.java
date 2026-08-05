@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModelParameter extends AbstractModel {
 
     /**
-    * 默认值
+    * <p>默认值</p>
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 可选值列表
+    * <p>可选值列表</p>
     */
     @SerializedName("EnumValueList")
     @Expose
     private String [] EnumValueList;
 
     /**
-    * 最大值（仅数值类型有效）
+    * <p>最大值（仅数值类型有效）</p>
     */
     @SerializedName("MaxValue")
     @Expose
     private Float MaxValue;
 
     /**
-    * 最小值（仅数值类型有效）
+    * <p>最小值（仅数值类型有效）</p>
     */
     @SerializedName("MinValue")
     @Expose
     private Float MinValue;
 
     /**
-    * 超参名称
+    * <p>超参名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 超参类型。1-浮点数, 2-整数, 3-字符串
+    * <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 默认值 
-     * @return DefaultValue 默认值
+     * Get <p>默认值</p> 
+     * @return DefaultValue <p>默认值</p>
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 默认值
-     * @param DefaultValue 默认值
+     * Set <p>默认值</p>
+     * @param DefaultValue <p>默认值</p>
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 可选值列表 
-     * @return EnumValueList 可选值列表
+     * Get <p>可选值列表</p> 
+     * @return EnumValueList <p>可选值列表</p>
      */
     public String [] getEnumValueList() {
         return this.EnumValueList;
     }
 
     /**
-     * Set 可选值列表
-     * @param EnumValueList 可选值列表
+     * Set <p>可选值列表</p>
+     * @param EnumValueList <p>可选值列表</p>
      */
     public void setEnumValueList(String [] EnumValueList) {
         this.EnumValueList = EnumValueList;
     }
 
     /**
-     * Get 最大值（仅数值类型有效） 
-     * @return MaxValue 最大值（仅数值类型有效）
+     * Get <p>最大值（仅数值类型有效）</p> 
+     * @return MaxValue <p>最大值（仅数值类型有效）</p>
      */
     public Float getMaxValue() {
         return this.MaxValue;
     }
 
     /**
-     * Set 最大值（仅数值类型有效）
-     * @param MaxValue 最大值（仅数值类型有效）
+     * Set <p>最大值（仅数值类型有效）</p>
+     * @param MaxValue <p>最大值（仅数值类型有效）</p>
      */
     public void setMaxValue(Float MaxValue) {
         this.MaxValue = MaxValue;
     }
 
     /**
-     * Get 最小值（仅数值类型有效） 
-     * @return MinValue 最小值（仅数值类型有效）
+     * Get <p>最小值（仅数值类型有效）</p> 
+     * @return MinValue <p>最小值（仅数值类型有效）</p>
      */
     public Float getMinValue() {
         return this.MinValue;
     }
 
     /**
-     * Set 最小值（仅数值类型有效）
-     * @param MinValue 最小值（仅数值类型有效）
+     * Set <p>最小值（仅数值类型有效）</p>
+     * @param MinValue <p>最小值（仅数值类型有效）</p>
      */
     public void setMinValue(Float MinValue) {
         this.MinValue = MinValue;
     }
 
     /**
-     * Get 超参名称 
-     * @return Name 超参名称
+     * Get <p>超参名称</p> 
+     * @return Name <p>超参名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 超参名称
-     * @param Name 超参名称
+     * Set <p>超参名称</p>
+     * @param Name <p>超参名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 超参类型。1-浮点数, 2-整数, 3-字符串 
-     * @return Type 超参类型。1-浮点数, 2-整数, 3-字符串
+     * Get <p>超参类型。1-浮点数, 2-整数, 3-字符串</p> 
+     * @return Type <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 超参类型。1-浮点数, 2-整数, 3-字符串
-     * @param Type 超参类型。1-浮点数, 2-整数, 3-字符串
+     * Set <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
+     * @param Type <p>超参类型。1-浮点数, 2-整数, 3-字符串</p>
      */
     public void setType(Long Type) {
         this.Type = Type;

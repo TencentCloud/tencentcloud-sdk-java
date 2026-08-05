@@ -87,7 +87,7 @@ public class Model extends AbstractModel {
     private String Provider;
 
     /**
-    * <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+    * <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -148,6 +148,13 @@ public class Model extends AbstractModel {
     @SerializedName("OfflineAt")
     @Expose
     private String OfflineAt;
+
+    /**
+    * <p>停止新购时间</p>
+    */
+    @SerializedName("DiscontinuedAt")
+    @Expose
+    private String DiscontinuedAt;
 
     /**
      * Get <p>模型名称</p> 
@@ -294,16 +301,16 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Get <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul> 
-     * @return Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+     * Get <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul> 
+     * @return Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
-     * @param Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li></ul>
+     * Set <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
+     * @param Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -437,6 +444,22 @@ public class Model extends AbstractModel {
         this.OfflineAt = OfflineAt;
     }
 
+    /**
+     * Get <p>停止新购时间</p> 
+     * @return DiscontinuedAt <p>停止新购时间</p>
+     */
+    public String getDiscontinuedAt() {
+        return this.DiscontinuedAt;
+    }
+
+    /**
+     * Set <p>停止新购时间</p>
+     * @param DiscontinuedAt <p>停止新购时间</p>
+     */
+    public void setDiscontinuedAt(String DiscontinuedAt) {
+        this.DiscontinuedAt = DiscontinuedAt;
+    }
+
     public Model() {
     }
 
@@ -505,6 +528,9 @@ public class Model extends AbstractModel {
         if (source.OfflineAt != null) {
             this.OfflineAt = new String(source.OfflineAt);
         }
+        if (source.DiscontinuedAt != null) {
+            this.DiscontinuedAt = new String(source.DiscontinuedAt);
+        }
     }
 
 
@@ -530,6 +556,7 @@ public class Model extends AbstractModel {
         this.setParamObj(map, prefix + "ModelAccessInfo.", this.ModelAccessInfo);
         this.setParamObj(map, prefix + "FreeTrialInfo.", this.FreeTrialInfo);
         this.setParamSimple(map, prefix + "OfflineAt", this.OfflineAt);
+        this.setParamSimple(map, prefix + "DiscontinuedAt", this.DiscontinuedAt);
 
     }
 }

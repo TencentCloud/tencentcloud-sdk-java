@@ -48,6 +48,13 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
     private String AccountName;
 
     /**
+    * 
+    */
+    @SerializedName("BackendJobId")
+    @Expose
+    private String BackendJobId;
+
+    /**
      * Get 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
  
      * @return SubscribeId 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
@@ -107,6 +114,22 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
         this.AccountName = AccountName;
     }
 
+    /**
+     * Get  
+     * @return BackendJobId 
+     */
+    public String getBackendJobId() {
+        return this.BackendJobId;
+    }
+
+    /**
+     * Set 
+     * @param BackendJobId 
+     */
+    public void setBackendJobId(String BackendJobId) {
+        this.BackendJobId = BackendJobId;
+    }
+
     public DeleteConsumerGroupRequest() {
     }
 
@@ -124,6 +147,9 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.BackendJobId != null) {
+            this.BackendJobId = new String(source.BackendJobId);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "BackendJobId", this.BackendJobId);
 
     }
 }

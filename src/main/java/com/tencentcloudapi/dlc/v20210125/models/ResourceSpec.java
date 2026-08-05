@@ -39,7 +39,7 @@ public class ResourceSpec extends AbstractModel {
     private String InstanceType;
 
     /**
-    * <p>四层计费项</p>
+    * <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
     */
     @SerializedName("BillingItem")
     @Expose
@@ -60,7 +60,7 @@ public class ResourceSpec extends AbstractModel {
     private String Spec;
 
     /**
-    * <p>GPU类型，仅GU有值</p>
+    * <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuType")
@@ -111,16 +111,16 @@ public class ResourceSpec extends AbstractModel {
     }
 
     /**
-     * Get <p>四层计费项</p> 
-     * @return BillingItem <p>四层计费项</p>
+     * Get <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p> 
+     * @return BillingItem <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
      */
     public String getBillingItem() {
         return this.BillingItem;
     }
 
     /**
-     * Set <p>四层计费项</p>
-     * @param BillingItem <p>四层计费项</p>
+     * Set <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
+     * @param BillingItem <p>四层计费项</p><p>枚举值：</p><ul><li>sv_dlc_standard_cu_standard_cu： 标准型cpu，最小单位32</li><li>sv_dlc_high_memory_cu_high_memory_cu： 高内存型cpu，最小单位32</li><li>sv_dlc_gn7_gn75xlarge80： T4，最小单位1</li><li>sv_dlc_gn10xp_gn10xp2xlarge40： V100，最小单位1</li></ul><p>若您想要了解更多的计费规格和产品细节，欢迎联系我们。</p>
      */
     public void setBillingItem(String BillingItem) {
         this.BillingItem = BillingItem;
@@ -159,9 +159,9 @@ public class ResourceSpec extends AbstractModel {
     }
 
     /**
-     * Get <p>GPU类型，仅GU有值</p>
+     * Get <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GpuType <p>GPU类型，仅GU有值</p>
+     * @return GpuType <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpuType() {
@@ -169,9 +169,9 @@ public class ResourceSpec extends AbstractModel {
     }
 
     /**
-     * Set <p>GPU类型，仅GU有值</p>
+     * Set <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GpuType <p>GPU类型，仅GU有值</p>
+     * @param GpuType <p>GPU类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuType(String GpuType) {

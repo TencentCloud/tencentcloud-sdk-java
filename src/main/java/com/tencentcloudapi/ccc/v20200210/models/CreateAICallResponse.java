@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAICallResponse extends AbstractModel {
 
     /**
-    * 新创建的会话 ID
+    * <p>新创建的会话 ID</p>
     */
     @SerializedName("SessionId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAICallResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新创建的会话 ID 
-     * @return SessionId 新创建的会话 ID
+     * Get <p>新创建的会话 ID</p> 
+     * @return SessionId <p>新创建的会话 ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 新创建的会话 ID
-     * @param SessionId 新创建的会话 ID
+     * Set <p>新创建的会话 ID</p>
+     * @param SessionId <p>新创建的会话 ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

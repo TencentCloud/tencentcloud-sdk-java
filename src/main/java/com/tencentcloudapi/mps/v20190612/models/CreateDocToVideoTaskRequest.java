@@ -38,6 +38,13 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
     private DocToVideoCosInfo CosInfo;
 
     /**
+    * <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get <p>AIGC文档生成视频的输入信息</p> 
      * @return Input <p>AIGC文档生成视频的输入信息</p>
      */
@@ -69,6 +76,22 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
         this.CosInfo = CosInfo;
     }
 
+    /**
+     * Get <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p> 
+     * @return ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     * @param ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public CreateDocToVideoTaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
         if (source.CosInfo != null) {
             this.CosInfo = new DocToVideoCosInfo(source.CosInfo);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "CosInfo.", this.CosInfo);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

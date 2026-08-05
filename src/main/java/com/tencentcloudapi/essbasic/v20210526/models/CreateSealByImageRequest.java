@@ -80,6 +80,13 @@ public class CreateSealByImageRequest extends AbstractModel {
     private String SealStyle;
 
     /**
+    * <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+    */
+    @SerializedName("SubSealType")
+    @Expose
+    private String SubSealType;
+
+    /**
     * <p>印章尺寸，格式为 宽_高（单位：mm，整数），用于签署时按物理尺寸将印章加盖到PDF。<br>取值范围：<br> • 图片上传印章（Image 或 FileToken 非空时生效）：支持自定义尺寸，宽、高均为 10-100 的整数（即 1cm-10cm），宽高比（宽/高）需在 0.1-10 之间。<br>• 系统生成印章（未传 Image 与 FileToken）：仅支持与SealStyle 匹配的固定枚举值：<br>  - 圆形印章（SealStyle=cycle）：38_38 / 40_40 / 42_42 / 45_45 / 50_50 / 58_58<br>  - 椭圆印章（SealStyle=ellipse）：40_30 / 45_30<br>字段依赖关系：<br> • 与 SealStyle关联：仅系统生成印章场景下 SealStyle 生效，此时 SealSize 需与 SealStyle对应的枚举匹配；图片上传印章场景 SealStyle 会被忽略，SealSize支持自定义。<br> • 与 SealType 关联：公章/合同章仅支持圆形枚举，财务/人事/其它章支持圆形或椭圆枚举。<br>• 与 Image / FileToken 关联：SealSize 是加盖到 PDF的物理尺寸，与上传图片的像素分辨率无绑定，图片会按 SealSize 缩放渲染；建议上传图片的宽高比与 SealSize 保持一致，避免拉伸形变。</p>
     */
     @SerializedName("SealSize")
@@ -240,6 +247,22 @@ public class CreateSealByImageRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p> 
+     * @return SubSealType <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+     */
+    public String getSubSealType() {
+        return this.SubSealType;
+    }
+
+    /**
+     * Set <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+     * @param SubSealType <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+     */
+    public void setSubSealType(String SubSealType) {
+        this.SubSealType = SubSealType;
+    }
+
+    /**
      * Get <p>印章尺寸，格式为 宽_高（单位：mm，整数），用于签署时按物理尺寸将印章加盖到PDF。<br>取值范围：<br> • 图片上传印章（Image 或 FileToken 非空时生效）：支持自定义尺寸，宽、高均为 10-100 的整数（即 1cm-10cm），宽高比（宽/高）需在 0.1-10 之间。<br>• 系统生成印章（未传 Image 与 FileToken）：仅支持与SealStyle 匹配的固定枚举值：<br>  - 圆形印章（SealStyle=cycle）：38_38 / 40_40 / 42_42 / 45_45 / 50_50 / 58_58<br>  - 椭圆印章（SealStyle=ellipse）：40_30 / 45_30<br>字段依赖关系：<br> • 与 SealStyle关联：仅系统生成印章场景下 SealStyle 生效，此时 SealSize 需与 SealStyle对应的枚举匹配；图片上传印章场景 SealStyle 会被忽略，SealSize支持自定义。<br> • 与 SealType 关联：公章/合同章仅支持圆形枚举，财务/人事/其它章支持圆形或椭圆枚举。<br>• 与 Image / FileToken 关联：SealSize 是加盖到 PDF的物理尺寸，与上传图片的像素分辨率无绑定，图片会按 SealSize 缩放渲染；建议上传图片的宽高比与 SealSize 保持一致，避免拉伸形变。</p> 
      * @return SealSize <p>印章尺寸，格式为 宽_高（单位：mm，整数），用于签署时按物理尺寸将印章加盖到PDF。<br>取值范围：<br> • 图片上传印章（Image 或 FileToken 非空时生效）：支持自定义尺寸，宽、高均为 10-100 的整数（即 1cm-10cm），宽高比（宽/高）需在 0.1-10 之间。<br>• 系统生成印章（未传 Image 与 FileToken）：仅支持与SealStyle 匹配的固定枚举值：<br>  - 圆形印章（SealStyle=cycle）：38_38 / 40_40 / 42_42 / 45_45 / 50_50 / 58_58<br>  - 椭圆印章（SealStyle=ellipse）：40_30 / 45_30<br>字段依赖关系：<br> • 与 SealStyle关联：仅系统生成印章场景下 SealStyle 生效，此时 SealSize 需与 SealStyle对应的枚举匹配；图片上传印章场景 SealStyle 会被忽略，SealSize支持自定义。<br> • 与 SealType 关联：公章/合同章仅支持圆形枚举，财务/人事/其它章支持圆形或椭圆枚举。<br>• 与 Image / FileToken 关联：SealSize 是加盖到 PDF的物理尺寸，与上传图片的像素分辨率无绑定，图片会按 SealSize 缩放渲染；建议上传图片的宽高比与 SealSize 保持一致，避免拉伸形变。</p>
      */
@@ -335,6 +358,9 @@ public class CreateSealByImageRequest extends AbstractModel {
         if (source.SealStyle != null) {
             this.SealStyle = new String(source.SealStyle);
         }
+        if (source.SubSealType != null) {
+            this.SubSealType = new String(source.SubSealType);
+        }
         if (source.SealSize != null) {
             this.SealSize = new String(source.SealSize);
         }
@@ -365,6 +391,7 @@ public class CreateSealByImageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SealType", this.SealType);
         this.setParamSimple(map, prefix + "SealHorizontalText", this.SealHorizontalText);
         this.setParamSimple(map, prefix + "SealStyle", this.SealStyle);
+        this.setParamSimple(map, prefix + "SubSealType", this.SubSealType);
         this.setParamSimple(map, prefix + "SealSize", this.SealSize);
         this.setParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
         this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);

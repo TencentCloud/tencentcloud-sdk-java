@@ -216,6 +216,14 @@ public class DBCustomNode extends AbstractModel {
     private String EniIP;
 
     /**
+    * <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -659,6 +667,26 @@ public class DBCustomNode extends AbstractModel {
         this.EniIP = EniIP;
     }
 
+    /**
+     * Get <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupIds <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupIds <p>节点绑定的安全组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public DBCustomNode() {
     }
 
@@ -754,6 +782,12 @@ public class DBCustomNode extends AbstractModel {
         if (source.EniIP != null) {
             this.EniIP = new String(source.EniIP);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -788,6 +822,7 @@ public class DBCustomNode extends AbstractModel {
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
         this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
         this.setParamSimple(map, prefix + "EniIP", this.EniIP);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

@@ -813,6 +813,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *修改日志信息
+     * @param req DeleteLogRequest
+     * @return DeleteLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogResponse DeleteLog(DeleteLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLog", DeleteLogResponse.class);
+    }
+
+    /**
      *本接口用于删除日志集。
      * @param req DeleteLogsetRequest
      * @return DeleteLogsetResponse
@@ -1989,6 +2000,17 @@ API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
     public ModifyKafkaRechargeResponse ModifyKafkaRecharge(ModifyKafkaRechargeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyKafkaRecharge", ModifyKafkaRechargeResponse.class);
+    }
+
+    /**
+     *修改日志信息
+     * @param req ModifyLogRequest
+     * @return ModifyLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogResponse ModifyLog(ModifyLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLog", ModifyLogResponse.class);
     }
 
     /**

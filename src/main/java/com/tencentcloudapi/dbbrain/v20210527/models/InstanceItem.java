@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class InstanceItem extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
+    * <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 地域英文ID。
+    * <p>地域英文ID。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 集群ID，仅集群类产品返回。
+    * <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -53,7 +53,7 @@ public class InstanceItem extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 引擎版本。
+    * <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineVersion")
@@ -61,7 +61,7 @@ public class InstanceItem extends AbstractModel {
     private String EngineVersion;
 
     /**
-    * 实例状态，1表示运行中。
+    * <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -69,7 +69,7 @@ public class InstanceItem extends AbstractModel {
     private Long Status;
 
     /**
-    * 实例创建时间。
+    * <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -77,7 +77,7 @@ public class InstanceItem extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 实例到期时间。
+    * <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineTime")
@@ -85,57 +85,57 @@ public class InstanceItem extends AbstractModel {
     private String DeadlineTime;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。 
-     * @return Product 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
+     * Get <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p> 
+     * @return Product <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
-     * @param Product 数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。
+     * Set <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
+     * @param Product <p>数据库类型，如 mysql、cynosdb、mariadb、dcdb、mongodb、postgres、redis、dbbrain-mysql、tdstore。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 地域英文ID。 
-     * @return Region 地域英文ID。
+     * Get <p>地域英文ID。</p> 
+     * @return Region <p>地域英文ID。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域英文ID。
-     * @param Region 地域英文ID。
+     * Set <p>地域英文ID。</p>
+     * @param Region <p>地域英文ID。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 集群ID，仅集群类产品返回。
+     * Get <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 集群ID，仅集群类产品返回。
+     * @return ClusterId <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -143,9 +143,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Set 集群ID，仅集群类产品返回。
+     * Set <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 集群ID，仅集群类产品返回。
+     * @param ClusterId <p>集群ID，仅集群类产品返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -153,9 +153,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Get 引擎版本。
+     * Get <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineVersion 引擎版本。
+     * @return EngineVersion <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineVersion() {
@@ -163,9 +163,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Set 引擎版本。
+     * Set <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineVersion 引擎版本。
+     * @param EngineVersion <p>引擎版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineVersion(String EngineVersion) {
@@ -173,9 +173,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Get 实例状态，1表示运行中。
+     * Get <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 实例状态，1表示运行中。
+     * @return Status <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -183,9 +183,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Set 实例状态，1表示运行中。
+     * Set <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 实例状态，1表示运行中。
+     * @param Status <p>实例状态，1表示运行中。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -193,9 +193,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Get 实例创建时间。
+     * Get <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 实例创建时间。
+     * @return CreateTime <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -203,9 +203,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Set 实例创建时间。
+     * Set <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 实例创建时间。
+     * @param CreateTime <p>实例创建时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -213,9 +213,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Get 实例到期时间。
+     * Get <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadlineTime 实例到期时间。
+     * @return DeadlineTime <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadlineTime() {
@@ -223,9 +223,9 @@ public class InstanceItem extends AbstractModel {
     }
 
     /**
-     * Set 实例到期时间。
+     * Set <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadlineTime 实例到期时间。
+     * @param DeadlineTime <p>实例到期时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineTime(String DeadlineTime) {

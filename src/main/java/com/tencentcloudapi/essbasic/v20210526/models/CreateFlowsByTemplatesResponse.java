@@ -24,51 +24,42 @@ import java.util.HashMap;
 public class CreateFlowsByTemplatesResponse extends AbstractModel {
 
     /**
-    * 生成的合同流程ID数组，合同流程ID为32位字符串。
-建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
-
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+    * <p>生成的合同流程ID数组，合同流程ID为32位字符串。<br>建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击产看FlowId在控制台上的位置</a></p>
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
+    * <p>第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应</p>
     */
     @SerializedName("CustomerData")
     @Expose
     private String [] CustomerData;
 
     /**
-    * 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+    * <p>创建消息，对应多个合同ID，<br>成功为“”,创建失败则对应失败消息</p>
     */
     @SerializedName("ErrorMessages")
     @Expose
     private String [] ErrorMessages;
 
     /**
-    * 合同预览链接URL数组。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
-](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
+    * <p>合同预览链接URL数组。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL<br>如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过<a href="https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取或使用返回的TaskInfo中的TaskId通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi">查询转换任务状态</a>接口查询得到</p>
     */
     @SerializedName("PreviewUrls")
     @Expose
     private String [] PreviewUrls;
 
     /**
-    * 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+    * <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；</p>
     */
     @SerializedName("TaskInfos")
     @Expose
     private TaskInfo [] TaskInfos;
 
     /**
-    * 签署方信息，如角色ID、角色名称等
+    * <p>签署方信息，如角色ID、角色名称等</p>
     */
     @SerializedName("FlowApprovers")
     @Expose
@@ -82,132 +73,96 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的合同流程ID数组，合同流程ID为32位字符串。
-建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
-
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png) 
-     * @return FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
-建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
-
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+     * Get <p>生成的合同流程ID数组，合同流程ID为32位字符串。<br>建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击产看FlowId在控制台上的位置</a></p> 
+     * @return FlowIds <p>生成的合同流程ID数组，合同流程ID为32位字符串。<br>建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击产看FlowId在控制台上的位置</a></p>
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 生成的合同流程ID数组，合同流程ID为32位字符串。
-建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
-
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-     * @param FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
-建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
-
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+     * Set <p>生成的合同流程ID数组，合同流程ID为32位字符串。<br>建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击产看FlowId在控制台上的位置</a></p>
+     * @param FlowIds <p>生成的合同流程ID数组，合同流程ID为32位字符串。<br>建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击产看FlowId在控制台上的位置</a></p>
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应 
-     * @return CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
+     * Get <p>第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应</p> 
+     * @return CustomerData <p>第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应</p>
      */
     public String [] getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
-     * @param CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
+     * Set <p>第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应</p>
+     * @param CustomerData <p>第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应</p>
      */
     public void setCustomerData(String [] CustomerData) {
         this.CustomerData = CustomerData;
     }
 
     /**
-     * Get 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息 
-     * @return ErrorMessages 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+     * Get <p>创建消息，对应多个合同ID，<br>成功为“”,创建失败则对应失败消息</p> 
+     * @return ErrorMessages <p>创建消息，对应多个合同ID，<br>成功为“”,创建失败则对应失败消息</p>
      */
     public String [] getErrorMessages() {
         return this.ErrorMessages;
     }
 
     /**
-     * Set 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
-     * @param ErrorMessages 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+     * Set <p>创建消息，对应多个合同ID，<br>成功为“”,创建失败则对应失败消息</p>
+     * @param ErrorMessages <p>创建消息，对应多个合同ID，<br>成功为“”,创建失败则对应失败消息</p>
      */
     public void setErrorMessages(String [] ErrorMessages) {
         this.ErrorMessages = ErrorMessages;
     }
 
     /**
-     * Get 合同预览链接URL数组。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
-](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到 
-     * @return PreviewUrls 合同预览链接URL数组。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
-](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
+     * Get <p>合同预览链接URL数组。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL<br>如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过<a href="https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取或使用返回的TaskInfo中的TaskId通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi">查询转换任务状态</a>接口查询得到</p> 
+     * @return PreviewUrls <p>合同预览链接URL数组。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL<br>如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过<a href="https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取或使用返回的TaskInfo中的TaskId通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi">查询转换任务状态</a>接口查询得到</p>
      */
     public String [] getPreviewUrls() {
         return this.PreviewUrls;
     }
 
     /**
-     * Set 合同预览链接URL数组。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
-](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
-     * @param PreviewUrls 合同预览链接URL数组。
-
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过[合同文档合成完成回调](https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取或使用返回的TaskInfo中的TaskId通过[查询转换任务状态
-](https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi)接口查询得到
+     * Set <p>合同预览链接URL数组。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL<br>如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过<a href="https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取或使用返回的TaskInfo中的TaskId通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi">查询转换任务状态</a>接口查询得到</p>
+     * @param PreviewUrls <p>合同预览链接URL数组。</p><p>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL<br>如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过<a href="https://qian.tencent.com/developers/partner/callback_types_contracts_sign#%E5%8D%81%E4%B8%80-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取或使用返回的TaskInfo中的TaskId通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi">查询转换任务状态</a>接口查询得到</p>
      */
     public void setPreviewUrls(String [] PreviewUrls) {
         this.PreviewUrls = PreviewUrls;
     }
 
     /**
-     * Get 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情； 
-     * @return TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * Get <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；</p> 
+     * @return TaskInfos <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；</p>
      */
     public TaskInfo [] getTaskInfos() {
         return this.TaskInfos;
     }
 
     /**
-     * Set 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
-     * @param TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * Set <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；</p>
+     * @param TaskInfos <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；</p>
      */
     public void setTaskInfos(TaskInfo [] TaskInfos) {
         this.TaskInfos = TaskInfos;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等 
-     * @return FlowApprovers 签署方信息，如角色ID、角色名称等
+     * Get <p>签署方信息，如角色ID、角色名称等</p> 
+     * @return FlowApprovers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public FlowApproverItem [] getFlowApprovers() {
         return this.FlowApprovers;
     }
 
     /**
-     * Set 签署方信息，如角色ID、角色名称等
-     * @param FlowApprovers 签署方信息，如角色ID、角色名称等
+     * Set <p>签署方信息，如角色ID、角色名称等</p>
+     * @param FlowApprovers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public void setFlowApprovers(FlowApproverItem [] FlowApprovers) {
         this.FlowApprovers = FlowApprovers;

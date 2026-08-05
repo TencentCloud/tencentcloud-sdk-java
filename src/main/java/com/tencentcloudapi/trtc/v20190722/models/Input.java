@@ -38,6 +38,13 @@ public class Input extends AbstractModel {
     private String Format;
 
     /**
+    * <p>声网拉流进房参数</p>
+    */
+    @SerializedName("AgoraParam")
+    @Expose
+    private AgoraParam AgoraParam;
+
+    /**
      * Get <p>直播拉流地址</p><p>入参限制：字符长度小于2048</p> 
      * @return Url <p>直播拉流地址</p><p>入参限制：字符长度小于2048</p>
      */
@@ -69,6 +76,22 @@ public class Input extends AbstractModel {
         this.Format = Format;
     }
 
+    /**
+     * Get <p>声网拉流进房参数</p> 
+     * @return AgoraParam <p>声网拉流进房参数</p>
+     */
+    public AgoraParam getAgoraParam() {
+        return this.AgoraParam;
+    }
+
+    /**
+     * Set <p>声网拉流进房参数</p>
+     * @param AgoraParam <p>声网拉流进房参数</p>
+     */
+    public void setAgoraParam(AgoraParam AgoraParam) {
+        this.AgoraParam = AgoraParam;
+    }
+
     public Input() {
     }
 
@@ -83,6 +106,9 @@ public class Input extends AbstractModel {
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.AgoraParam != null) {
+            this.AgoraParam = new AgoraParam(source.AgoraParam);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class Input extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamObj(map, prefix + "AgoraParam.", this.AgoraParam);
 
     }
 }

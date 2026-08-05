@@ -24,27 +24,21 @@ import java.util.HashMap;
 public class CreateDocumentResponse extends AbstractModel {
 
     /**
-    * 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
+    * <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
     */
     @SerializedName("DocumentId")
     @Expose
     private String DocumentId;
 
     /**
-    * 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
+    * <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
     */
     @SerializedName("PreviewFileUrl")
     @Expose
     private String PreviewFileUrl;
 
     /**
-    * 签署方信息，如角色ID、角色名称等
+    * <p>签署方信息，如角色ID、角色名称等</p>
     */
     @SerializedName("Approvers")
     @Expose
@@ -58,72 +52,48 @@ public class CreateDocumentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节 
-     * @return DocumentId 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
+     * Get <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p> 
+     * @return DocumentId <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
      */
     public String getDocumentId() {
         return this.DocumentId;
     }
 
     /**
-     * Set 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
-     * @param DocumentId 合同流程的底层电子文档ID，为32位字符串。
-
-注:
-后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
+     * Set <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
+     * @param DocumentId <p>合同流程的底层电子文档ID，为32位字符串。</p><p>注:<br>后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow">发起签署流程</a>，合同才能进入签署环节</p>
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;
     }
 
     /**
-     * Get 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。 
-     * @return PreviewFileUrl 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
+     * Get <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p> 
+     * @return PreviewFileUrl <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
      */
     public String getPreviewFileUrl() {
         return this.PreviewFileUrl;
     }
 
     /**
-     * Set 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
-     * @param PreviewFileUrl 合同预览链接URL。
-
-注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
-`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83)获取。
+     * Set <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
+     * @param PreviewFileUrl <p>合同预览链接URL。</p><p>注: <code>1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</code><br>`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容,完整的预览链接需通过<a href="https://qian.tencent.com/developers/company/callback_types_contracts_sign/#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83">合同文档合成完成回调</a>获取。</p>
      */
     public void setPreviewFileUrl(String PreviewFileUrl) {
         this.PreviewFileUrl = PreviewFileUrl;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等 
-     * @return Approvers 签署方信息，如角色ID、角色名称等
+     * Get <p>签署方信息，如角色ID、角色名称等</p> 
+     * @return Approvers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 签署方信息，如角色ID、角色名称等
-     * @param Approvers 签署方信息，如角色ID、角色名称等
+     * Set <p>签署方信息，如角色ID、角色名称等</p>
+     * @param Approvers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;

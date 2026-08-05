@@ -59,6 +59,13 @@ public class CreateSealRequest extends AbstractModel {
     private String SealType;
 
     /**
+    * <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+    */
+    @SerializedName("SubSealType")
+    @Expose
+    private String SubSealType;
+
+    /**
     * <p>电子印章图片文件名称，1-50个中文字符。</p>
     */
     @SerializedName("FileName")
@@ -234,6 +241,22 @@ public class CreateSealRequest extends AbstractModel {
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
+    }
+
+    /**
+     * Get <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p> 
+     * @return SubSealType <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+     */
+    public String getSubSealType() {
+        return this.SubSealType;
+    }
+
+    /**
+     * Set <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+     * @param SubSealType <p>  印章其他子类型。仅当 <code>SealType=OTHER</code> 且 <code>GenerateSource=SealGenerateSourceSystem</code> 时生效（ <font color="red">不支持图片上传方式创建子类型印章</font>）。<br> <b>注1：</b>调用时请勿传入 <code>SealHorizontalText</code> 字段，系统将自动使用子印章类型名称填充该字段。<br>  <b>注2：</b>本字段为白名单受控功能。如需使用，请联系客服开通并获取支持的子类型枚举值。</p>
+     */
+    public void setSubSealType(String SubSealType) {
+        this.SubSealType = SubSealType;
     }
 
     /**
@@ -483,6 +506,9 @@ public class CreateSealRequest extends AbstractModel {
         if (source.SealType != null) {
             this.SealType = new String(source.SealType);
         }
+        if (source.SubSealType != null) {
+            this.SubSealType = new String(source.SubSealType);
+        }
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
@@ -540,6 +566,7 @@ public class CreateSealRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         this.setParamSimple(map, prefix + "SealType", this.SealType);
+        this.setParamSimple(map, prefix + "SubSealType", this.SubSealType);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Width", this.Width);

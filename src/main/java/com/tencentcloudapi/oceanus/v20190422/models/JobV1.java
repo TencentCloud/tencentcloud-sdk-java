@@ -403,6 +403,27 @@ public class JobV1 extends AbstractModel {
     private Long NewStateCOSBucketType;
 
     /**
+    * <p>健康分数</p>
+    */
+    @SerializedName("HealthScore")
+    @Expose
+    private Long HealthScore;
+
+    /**
+    * <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+    */
+    @SerializedName("LastDiagnoseTime")
+    @Expose
+    private String LastDiagnoseTime;
+
+    /**
+    * <p>负责人Uin</p>
+    */
+    @SerializedName("ManagerUin")
+    @Expose
+    private String ManagerUin;
+
+    /**
      * Get <p>作业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId <p>作业ID</p>
@@ -1342,6 +1363,54 @@ public class JobV1 extends AbstractModel {
         this.NewStateCOSBucketType = NewStateCOSBucketType;
     }
 
+    /**
+     * Get <p>健康分数</p> 
+     * @return HealthScore <p>健康分数</p>
+     */
+    public Long getHealthScore() {
+        return this.HealthScore;
+    }
+
+    /**
+     * Set <p>健康分数</p>
+     * @param HealthScore <p>健康分数</p>
+     */
+    public void setHealthScore(Long HealthScore) {
+        this.HealthScore = HealthScore;
+    }
+
+    /**
+     * Get <p>最新诊断时间</p><p>参数格式：RFC3339</p> 
+     * @return LastDiagnoseTime <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+     */
+    public String getLastDiagnoseTime() {
+        return this.LastDiagnoseTime;
+    }
+
+    /**
+     * Set <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+     * @param LastDiagnoseTime <p>最新诊断时间</p><p>参数格式：RFC3339</p>
+     */
+    public void setLastDiagnoseTime(String LastDiagnoseTime) {
+        this.LastDiagnoseTime = LastDiagnoseTime;
+    }
+
+    /**
+     * Get <p>负责人Uin</p> 
+     * @return ManagerUin <p>负责人Uin</p>
+     */
+    public String getManagerUin() {
+        return this.ManagerUin;
+    }
+
+    /**
+     * Set <p>负责人Uin</p>
+     * @param ManagerUin <p>负责人Uin</p>
+     */
+    public void setManagerUin(String ManagerUin) {
+        this.ManagerUin = ManagerUin;
+    }
+
     public JobV1() {
     }
 
@@ -1497,6 +1566,15 @@ public class JobV1 extends AbstractModel {
         if (source.NewStateCOSBucketType != null) {
             this.NewStateCOSBucketType = new Long(source.NewStateCOSBucketType);
         }
+        if (source.HealthScore != null) {
+            this.HealthScore = new Long(source.HealthScore);
+        }
+        if (source.LastDiagnoseTime != null) {
+            this.LastDiagnoseTime = new String(source.LastDiagnoseTime);
+        }
+        if (source.ManagerUin != null) {
+            this.ManagerUin = new String(source.ManagerUin);
+        }
     }
 
 
@@ -1552,6 +1630,9 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "NewStateCOSBucket", this.NewStateCOSBucket);
         this.setParamSimple(map, prefix + "StateCOSBucketType", this.StateCOSBucketType);
         this.setParamSimple(map, prefix + "NewStateCOSBucketType", this.NewStateCOSBucketType);
+        this.setParamSimple(map, prefix + "HealthScore", this.HealthScore);
+        this.setParamSimple(map, prefix + "LastDiagnoseTime", this.LastDiagnoseTime);
+        this.setParamSimple(map, prefix + "ManagerUin", this.ManagerUin);
 
     }
 }

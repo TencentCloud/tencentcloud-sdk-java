@@ -192,6 +192,13 @@ public class CloneInstancesRequest extends AbstractModel {
     private Boolean SSLBindPrivateIPv4;
 
     /**
+    * <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+    */
+    @SerializedName("ProductVersion")
+    @Expose
+    private String ProductVersion;
+
+    /**
      * Get <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p> 
      * @return InstanceId <p>指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
@@ -575,6 +582,22 @@ public class CloneInstancesRequest extends AbstractModel {
         this.SSLBindPrivateIPv4 = SSLBindPrivateIPv4;
     }
 
+    /**
+     * Get <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p> 
+     * @return ProductVersion <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+     */
+    public String getProductVersion() {
+        return this.ProductVersion;
+    }
+
+    /**
+     * Set <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+     * @param ProductVersion <p>指实例类型</p><p>枚举值：</p><ul><li>local： 通用 I 型</li><li>localv2： 通用 II 型</li></ul><p>不传则默认和原实例类型保持一致</p>
+     */
+    public void setProductVersion(String ProductVersion) {
+        this.ProductVersion = ProductVersion;
+    }
+
     public CloneInstancesRequest() {
     }
 
@@ -667,6 +690,9 @@ public class CloneInstancesRequest extends AbstractModel {
         if (source.SSLBindPrivateIPv4 != null) {
             this.SSLBindPrivateIPv4 = new Boolean(source.SSLBindPrivateIPv4);
         }
+        if (source.ProductVersion != null) {
+            this.ProductVersion = new String(source.ProductVersion);
+        }
     }
 
 
@@ -698,6 +724,7 @@ public class CloneInstancesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
         this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
         this.setParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
+        this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
 
     }
 }

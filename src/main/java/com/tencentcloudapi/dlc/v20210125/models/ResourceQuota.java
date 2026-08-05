@@ -31,7 +31,7 @@ public class ResourceQuota extends AbstractModel {
     private ResourceSpec ResourceSpec;
 
     /**
-    * <p>配额数量</p>
+    * <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
     */
     @SerializedName("Quota")
     @Expose
@@ -54,16 +54,16 @@ public class ResourceQuota extends AbstractModel {
     }
 
     /**
-     * Get <p>配额数量</p> 
-     * @return Quota <p>配额数量</p>
+     * Get <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p> 
+     * @return Quota <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
      */
     public Long getQuota() {
         return this.Quota;
     }
 
     /**
-     * Set <p>配额数量</p>
-     * @param Quota <p>配额数量</p>
+     * Set <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
+     * @param Quota <p>配额数量</p><p>请注意，CPU类型计费项为32的整数倍，GPU类型计费项为1的整数倍。</p>
      */
     public void setQuota(Long Quota) {
         this.Quota = Quota;

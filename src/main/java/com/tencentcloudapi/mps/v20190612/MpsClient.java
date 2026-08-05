@@ -260,7 +260,8 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *创建 AiGC 文档生成视频任务
+     *创建 AIGC 文档生成视频任务
+（使用 DescribeAigcTaskStatus 接口进行任务查询）
      * @param req CreateDocToVideoTaskRequest
      * @return CreateDocToVideoTaskResponse
      * @throws TencentCloudSDKException

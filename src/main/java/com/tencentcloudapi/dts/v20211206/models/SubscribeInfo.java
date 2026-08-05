@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class SubscribeInfo extends AbstractModel {
 
     /**
-    * 数据订阅的实例ID
+    * <p>数据订阅的实例ID</p>
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-    * 数据订阅实例的名称
+    * <p>数据订阅实例的名称</p>
     */
     @SerializedName("SubscribeName")
     @Expose
     private String SubscribeName;
 
     /**
-    * 订阅实例发送数据的kafka topic
+    * <p>订阅实例发送数据的kafka topic</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+    * <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
+    * <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
+    * <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
+    * <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+    * <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
     */
     @SerializedName("SubsStatus")
     @Expose
     private String SubsStatus;
 
     /**
-    * 上次修改时间，时间格式如：Y-m-d h:m:s
+    * <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 创建时间，时间格式如：Y-m-d h:m:s
+    * <p>创建时间，时间格式如：Y-m-d h:m:s</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+    * <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+    * <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+    * <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-    * 计费方式，0 - 包年包月，1 - 按量计费
+    * <p>计费方式，0 - 包年包月，1 - 按量计费</p>
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+    * <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 数据订阅实例所属地域
+    * <p>数据订阅实例所属地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
+    * <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
     */
     @SerializedName("AccessType")
     @Expose
     private String AccessType;
 
     /**
-    * 数据库节点信息
+    * <p>数据库节点信息</p>
     */
     @SerializedName("Endpoints")
     @Expose
     private EndpointItem [] Endpoints;
 
     /**
-    * 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+    * <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
     */
     @SerializedName("SubscribeVersion")
     @Expose
     private String SubscribeVersion;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -165,7 +165,7 @@ public class SubscribeInfo extends AbstractModel {
     private TagItem [] Tags;
 
     /**
-    * 任务报错信息，如果有的话。
+    * <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
@@ -173,320 +173,327 @@ public class SubscribeInfo extends AbstractModel {
     private SubsErr [] Errors;
 
     /**
-    * 订阅实例规格
+    * <p>订阅实例规格</p>
     */
     @SerializedName("InstanceClass")
     @Expose
     private String InstanceClass;
 
     /**
-     * Get 数据订阅的实例ID 
-     * @return SubscribeId 数据订阅的实例ID
+    * <p>新版订阅消费端路由阶段</p>
+    */
+    @SerializedName("ConsumerRoutePhase")
+    @Expose
+    private String ConsumerRoutePhase;
+
+    /**
+     * Get <p>数据订阅的实例ID</p> 
+     * @return SubscribeId <p>数据订阅的实例ID</p>
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 数据订阅的实例ID
-     * @param SubscribeId 数据订阅的实例ID
+     * Set <p>数据订阅的实例ID</p>
+     * @param SubscribeId <p>数据订阅的实例ID</p>
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
     }
 
     /**
-     * Get 数据订阅实例的名称 
-     * @return SubscribeName 数据订阅实例的名称
+     * Get <p>数据订阅实例的名称</p> 
+     * @return SubscribeName <p>数据订阅实例的名称</p>
      */
     public String getSubscribeName() {
         return this.SubscribeName;
     }
 
     /**
-     * Set 数据订阅实例的名称
-     * @param SubscribeName 数据订阅实例的名称
+     * Set <p>数据订阅实例的名称</p>
+     * @param SubscribeName <p>数据订阅实例的名称</p>
      */
     public void setSubscribeName(String SubscribeName) {
         this.SubscribeName = SubscribeName;
     }
 
     /**
-     * Get 订阅实例发送数据的kafka topic 
-     * @return Topic 订阅实例发送数据的kafka topic
+     * Get <p>订阅实例发送数据的kafka topic</p> 
+     * @return Topic <p>订阅实例发送数据的kafka topic</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 订阅实例发送数据的kafka topic
-     * @param Topic 订阅实例发送数据的kafka topic
+     * Set <p>订阅实例发送数据的kafka topic</p>
+     * @param Topic <p>订阅实例发送数据的kafka topic</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql) 
-     * @return Product 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+     * Get <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p> 
+     * @return Product <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
-     * @param Product 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+     * Set <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
+     * @param Product <p>订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。 
-     * @return InstanceId 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
+     * Get <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p> 
+     * @return InstanceId <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
-     * @param InstanceId 订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。
+     * Set <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
+     * @param InstanceId <p>订阅的数据库实例ID（如果订阅的是云数据库）如果实例不是腾讯云上的，此值为空。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空 
-     * @return InstanceStatus 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
+     * Get <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p> 
+     * @return InstanceStatus <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
-     * @param InstanceStatus 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
+     * Set <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
+     * @param InstanceStatus <p>云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng 
-     * @return Status 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
+     * Get <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p> 
+     * @return Status <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
-     * @param Status 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
+     * Set <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
+     * @param Status <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error 
-     * @return SubsStatus 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+     * Get <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p> 
+     * @return SubsStatus <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
      */
     public String getSubsStatus() {
         return this.SubsStatus;
     }
 
     /**
-     * Set 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
-     * @param SubsStatus 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+     * Set <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
+     * @param SubsStatus <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
      */
     public void setSubsStatus(String SubsStatus) {
         this.SubsStatus = SubsStatus;
     }
 
     /**
-     * Get 上次修改时间，时间格式如：Y-m-d h:m:s 
-     * @return ModifyTime 上次修改时间，时间格式如：Y-m-d h:m:s
+     * Get <p>上次修改时间，时间格式如：Y-m-d h:m:s</p> 
+     * @return ModifyTime <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 上次修改时间，时间格式如：Y-m-d h:m:s
-     * @param ModifyTime 上次修改时间，时间格式如：Y-m-d h:m:s
+     * Set <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
+     * @param ModifyTime <p>上次修改时间，时间格式如：Y-m-d h:m:s</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间，时间格式如：Y-m-d h:m:s 
-     * @return CreateTime 创建时间，时间格式如：Y-m-d h:m:s
+     * Get <p>创建时间，时间格式如：Y-m-d h:m:s</p> 
+     * @return CreateTime <p>创建时间，时间格式如：Y-m-d h:m:s</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，时间格式如：Y-m-d h:m:s
-     * @param CreateTime 创建时间，时间格式如：Y-m-d h:m:s
+     * Set <p>创建时间，时间格式如：Y-m-d h:m:s</p>
+     * @param CreateTime <p>创建时间，时间格式如：Y-m-d h:m:s</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
-     * @return IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Get <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p> 
+     * @return IsolateTime <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param IsolateTime 隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Set <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+     * @param IsolateTime <p>隔离时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
-     * @return ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Get <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p> 
+     * @return ExpireTime <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param ExpireTime 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Set <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+     * @param ExpireTime <p>包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00 
-     * @return OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Get <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p> 
+     * @return OfflineTime <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
-     * @param OfflineTime 下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
+     * Set <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
+     * @param OfflineTime <p>下线时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00</p>
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 计费方式，0 - 包年包月，1 - 按量计费 
-     * @return PayType 计费方式，0 - 包年包月，1 - 按量计费
+     * Get <p>计费方式，0 - 包年包月，1 - 按量计费</p> 
+     * @return PayType <p>计费方式，0 - 包年包月，1 - 按量计费</p>
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 计费方式，0 - 包年包月，1 - 按量计费
-     * @param PayType 计费方式，0 - 包年包月，1 - 按量计费
+     * Set <p>计费方式，0 - 包年包月，1 - 按量计费</p>
+     * @param PayType <p>计费方式，0 - 包年包月，1 - 按量计费</p>
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费 
-     * @return AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+     * Get <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p> 
+     * @return AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
-     * @param AutoRenewFlag 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
+     * Set <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
+     * @param AutoRenewFlag <p>自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 数据订阅实例所属地域 
-     * @return Region 数据订阅实例所属地域
+     * Get <p>数据订阅实例所属地域</p> 
+     * @return Region <p>数据订阅实例所属地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 数据订阅实例所属地域
-     * @param Region 数据订阅实例所属地域
+     * Set <p>数据订阅实例所属地域</p>
+     * @param Region <p>数据订阅实例所属地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc) 
-     * @return AccessType 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
+     * Get <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p> 
+     * @return AccessType <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
-     * @param AccessType 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
+     * Set <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
+     * @param AccessType <p>接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)</p>
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 数据库节点信息 
-     * @return Endpoints 数据库节点信息
+     * Get <p>数据库节点信息</p> 
+     * @return Endpoints <p>数据库节点信息</p>
      */
     public EndpointItem [] getEndpoints() {
         return this.Endpoints;
     }
 
     /**
-     * Set 数据库节点信息
-     * @param Endpoints 数据库节点信息
+     * Set <p>数据库节点信息</p>
+     * @param Endpoints <p>数据库节点信息</p>
      */
     public void setEndpoints(EndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;
     }
 
     /**
-     * Get 数据订阅版本, 当前支持kafka和kafkaPro（专业版） 
-     * @return SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * Get <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p> 
+     * @return SubscribeVersion <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
      */
     public String getSubscribeVersion() {
         return this.SubscribeVersion;
     }
 
     /**
-     * Set 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
-     * @param SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * Set <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
+     * @param SubscribeVersion <p>数据订阅版本, 当前支持kafka和kafkaPro（专业版）</p>
      */
     public void setSubscribeVersion(String SubscribeVersion) {
         this.SubscribeVersion = SubscribeVersion;
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签
+     * @return Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagItem [] getTags() {
@@ -494,9 +501,9 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签
+     * @param Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagItem [] Tags) {
@@ -504,9 +511,9 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务报错信息，如果有的话。
+     * Get <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Errors 任务报错信息，如果有的话。
+     * @return Errors <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubsErr [] getErrors() {
@@ -514,9 +521,9 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务报错信息，如果有的话。
+     * Set <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Errors 任务报错信息，如果有的话。
+     * @param Errors <p>任务报错信息，如果有的话。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(SubsErr [] Errors) {
@@ -524,19 +531,35 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 订阅实例规格 
-     * @return InstanceClass 订阅实例规格
+     * Get <p>订阅实例规格</p> 
+     * @return InstanceClass <p>订阅实例规格</p>
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 订阅实例规格
-     * @param InstanceClass 订阅实例规格
+     * Set <p>订阅实例规格</p>
+     * @param InstanceClass <p>订阅实例规格</p>
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
+    }
+
+    /**
+     * Get <p>新版订阅消费端路由阶段</p> 
+     * @return ConsumerRoutePhase <p>新版订阅消费端路由阶段</p>
+     */
+    public String getConsumerRoutePhase() {
+        return this.ConsumerRoutePhase;
+    }
+
+    /**
+     * Set <p>新版订阅消费端路由阶段</p>
+     * @param ConsumerRoutePhase <p>新版订阅消费端路由阶段</p>
+     */
+    public void setConsumerRoutePhase(String ConsumerRoutePhase) {
+        this.ConsumerRoutePhase = ConsumerRoutePhase;
     }
 
     public SubscribeInfo() {
@@ -622,6 +645,9 @@ public class SubscribeInfo extends AbstractModel {
         if (source.InstanceClass != null) {
             this.InstanceClass = new String(source.InstanceClass);
         }
+        if (source.ConsumerRoutePhase != null) {
+            this.ConsumerRoutePhase = new String(source.ConsumerRoutePhase);
+        }
     }
 
 
@@ -651,6 +677,7 @@ public class SubscribeInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
+        this.setParamSimple(map, prefix + "ConsumerRoutePhase", this.ConsumerRoutePhase);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSubscribeDetailRequest extends AbstractModel {
 
     /**
-    * 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+    * <p>订阅实例ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-     * Get 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。 
-     * @return SubscribeId 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * Get <p>订阅实例ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p> 
+     * @return SubscribeId <p>订阅实例ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
-     * @param SubscribeId 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * Set <p>订阅实例ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
+     * @param SubscribeId <p>订阅实例ID，可通过<a href="https://cloud.tencent.com/document/product/571/102943">DescribeSubscribeJobs</a>接口获取。</p>
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;

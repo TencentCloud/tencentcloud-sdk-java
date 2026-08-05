@@ -177,6 +177,9 @@ public enum ClbErrorCode {
      /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
+     /* Budget只支持企业型实例 */
+     UNSUPPORTEDOPERATION_BUDGETONLYSUPPORTSENTERPRISE("UnsupportedOperation.BudgetOnlySupportsEnterprise"),
+     
      /* UnsupportedOperation.InvalidModelRouterStatus */
      UNSUPPORTEDOPERATION_INVALIDMODELROUTERSTATUS("UnsupportedOperation.InvalidModelRouterStatus"),
      

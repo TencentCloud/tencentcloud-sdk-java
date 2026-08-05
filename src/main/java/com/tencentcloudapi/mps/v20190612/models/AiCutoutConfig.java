@@ -45,6 +45,13 @@ public class AiCutoutConfig extends AbstractModel {
     private PatternConfig PatternConfig;
 
     /**
+    * <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
      * Get <p>能力配置开关，可选值：  ON：开启； OFF：关闭。 默认值：ON。</p> 
      * @return Switch <p>能力配置开关，可选值：  ON：开启； OFF：关闭。 默认值：ON。</p>
      */
@@ -92,6 +99,22 @@ public class AiCutoutConfig extends AbstractModel {
         this.PatternConfig = PatternConfig;
     }
 
+    /**
+     * Get <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul> 
+     * @return Model <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+     * @param Model <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度最快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li></ul>
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
     public AiCutoutConfig() {
     }
 
@@ -109,6 +132,9 @@ public class AiCutoutConfig extends AbstractModel {
         if (source.PatternConfig != null) {
             this.PatternConfig = new PatternConfig(source.PatternConfig);
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class AiCutoutConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "PatternConfig.", this.PatternConfig);
+        this.setParamSimple(map, prefix + "Model", this.Model);
 
     }
 }

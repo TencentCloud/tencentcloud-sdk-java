@@ -24,259 +24,184 @@ import java.util.HashMap;
 public class DescribeOrganizationSealsRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。
+    * <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。
+    * <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询授权用户信息类型，取值如下：
-
-<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+    * <p>查询授权用户信息类型，取值如下：</p><ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
     */
     @SerializedName("InfoType")
     @Expose
     private Long InfoType;
 
     /**
-    * 印章id，是否查询特定的印章（没有输入返回所有）
+    * <p>印章id，是否查询特定的印章（没有输入返回所有）</p>
     */
     @SerializedName("SealId")
     @Expose
     private String SealId;
 
     /**
-    * 印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> </ul>
+    * <p>印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> <li><strong>OTHER_xx</strong>其他印章子类型</li> </ul><br>注:  <code>1.为空时查询所有类型的印章。</code><br>注:  <code>2.OTHER_XX该类型为其他印章子类型，如需使用，请联系对接客服申请开通。具体可传入的子类型值，需在申请开通后由客服提供。</code></p>
     */
     @SerializedName("SealTypes")
     @Expose
     private String [] SealTypes;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 需查询的印章状态列表。
-<ul>
-<li>空：（默认）仅查询启用状态的印章；</li>
-<li><strong>ALL</strong>：查询所有状态的印章；</li>
-<li><strong>CHECKING</strong>：查询待审核的印章；</li>
-<li><strong>SUCCESS</strong>：查询启用状态的印章；</li>
-<li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li>
-<li><strong>DISABLE</strong>：查询已停用的印章；</li>
-<li><strong>STOPPED</strong>：查询已终止的印章；</li>
-<li><strong>VOID</strong>：查询已作废的印章；</li>
-<li><strong>INVALID</strong>：查询已失效的印章。</li>
-</ul>
+    * <p>需查询的印章状态列表。</p><ul><li>空：（默认）仅查询启用状态的印章；</li><li><strong>ALL</strong>：查询所有状态的印章；</li><li><strong>CHECKING</strong>：查询待审核的印章；</li><li><strong>SUCCESS</strong>：查询启用状态的印章；</li><li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li><li><strong>DISABLE</strong>：查询已停用的印章；</li><li><strong>STOPPED</strong>：查询已终止的印章；</li><li><strong>VOID</strong>：查询已作废的印章；</li><li><strong>INVALID</strong>：查询已失效的印章。</li></ul>
     */
     @SerializedName("SealStatuses")
     @Expose
     private String [] SealStatuses;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。 
-     * @return Limit 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。
+     * Get <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。</p> 
+     * @return Limit <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。
-     * @param Limit 指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。
+     * Set <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。</p>
+     * @param Limit <p>指定分页每页返回的数据条数，如果不传默认为 20，单页最大支持 200。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。 
-     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。
+     * Get <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。</p> 
+     * @return Offset <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。
-     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。
+     * Set <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。</p>
+     * @param Offset <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0，最大 20000。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询授权用户信息类型，取值如下：
-
-<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul> 
-     * @return InfoType 查询授权用户信息类型，取值如下：
-
-<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+     * Get <p>查询授权用户信息类型，取值如下：</p><ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul> 
+     * @return InfoType <p>查询授权用户信息类型，取值如下：</p><ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
      */
     public Long getInfoType() {
         return this.InfoType;
     }
 
     /**
-     * Set 查询授权用户信息类型，取值如下：
-
-<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
-     * @param InfoType 查询授权用户信息类型，取值如下：
-
-<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+     * Set <p>查询授权用户信息类型，取值如下：</p><ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+     * @param InfoType <p>查询授权用户信息类型，取值如下：</p><ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
      */
     public void setInfoType(Long InfoType) {
         this.InfoType = InfoType;
     }
 
     /**
-     * Get 印章id，是否查询特定的印章（没有输入返回所有） 
-     * @return SealId 印章id，是否查询特定的印章（没有输入返回所有）
+     * Get <p>印章id，是否查询特定的印章（没有输入返回所有）</p> 
+     * @return SealId <p>印章id，是否查询特定的印章（没有输入返回所有）</p>
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 印章id，是否查询特定的印章（没有输入返回所有）
-     * @param SealId 印章id，是否查询特定的印章（没有输入返回所有）
+     * Set <p>印章id，是否查询特定的印章（没有输入返回所有）</p>
+     * @param SealId <p>印章id，是否查询特定的印章（没有输入返回所有）</p>
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
     }
 
     /**
-     * Get 印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> </ul> 
-     * @return SealTypes 印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> </ul>
+     * Get <p>印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> <li><strong>OTHER_xx</strong>其他印章子类型</li> </ul><br>注:  <code>1.为空时查询所有类型的印章。</code><br>注:  <code>2.OTHER_XX该类型为其他印章子类型，如需使用，请联系对接客服申请开通。具体可传入的子类型值，需在申请开通后由客服提供。</code></p> 
+     * @return SealTypes <p>印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> <li><strong>OTHER_xx</strong>其他印章子类型</li> </ul><br>注:  <code>1.为空时查询所有类型的印章。</code><br>注:  <code>2.OTHER_XX该类型为其他印章子类型，如需使用，请联系对接客服申请开通。具体可传入的子类型值，需在申请开通后由客服提供。</code></p>
      */
     public String [] getSealTypes() {
         return this.SealTypes;
     }
 
     /**
-     * Set 印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> </ul>
-     * @param SealTypes 印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> </ul>
+     * Set <p>印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> <li><strong>OTHER_xx</strong>其他印章子类型</li> </ul><br>注:  <code>1.为空时查询所有类型的印章。</code><br>注:  <code>2.OTHER_XX该类型为其他印章子类型，如需使用，请联系对接客服申请开通。具体可传入的子类型值，需在申请开通后由客服提供。</code></p>
+     * @param SealTypes <p>印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 目前支持以下几种：<ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>FINANCE</strong>：财务专用章；</li> <li><strong>PERSONNEL</strong>：人事专用章；</li><li><strong>INVOICE</strong>：发票专用章；</li><li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> <li><strong>EMPLOYEE_QUALIFICATION_SEAL</strong>：员工执业章。</li><li><strong>OTHER</strong>其他类型印章</li> <li><strong>OTHER_xx</strong>其他印章子类型</li> </ul><br>注:  <code>1.为空时查询所有类型的印章。</code><br>注:  <code>2.OTHER_XX该类型为其他印章子类型，如需使用，请联系对接客服申请开通。具体可传入的子类型值，需在申请开通后由客服提供。</code></p>
      */
     public void setSealTypes(String [] SealTypes) {
         this.SealTypes = SealTypes;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 需查询的印章状态列表。
-<ul>
-<li>空：（默认）仅查询启用状态的印章；</li>
-<li><strong>ALL</strong>：查询所有状态的印章；</li>
-<li><strong>CHECKING</strong>：查询待审核的印章；</li>
-<li><strong>SUCCESS</strong>：查询启用状态的印章；</li>
-<li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li>
-<li><strong>DISABLE</strong>：查询已停用的印章；</li>
-<li><strong>STOPPED</strong>：查询已终止的印章；</li>
-<li><strong>VOID</strong>：查询已作废的印章；</li>
-<li><strong>INVALID</strong>：查询已失效的印章。</li>
-</ul> 
-     * @return SealStatuses 需查询的印章状态列表。
-<ul>
-<li>空：（默认）仅查询启用状态的印章；</li>
-<li><strong>ALL</strong>：查询所有状态的印章；</li>
-<li><strong>CHECKING</strong>：查询待审核的印章；</li>
-<li><strong>SUCCESS</strong>：查询启用状态的印章；</li>
-<li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li>
-<li><strong>DISABLE</strong>：查询已停用的印章；</li>
-<li><strong>STOPPED</strong>：查询已终止的印章；</li>
-<li><strong>VOID</strong>：查询已作废的印章；</li>
-<li><strong>INVALID</strong>：查询已失效的印章。</li>
-</ul>
+     * Get <p>需查询的印章状态列表。</p><ul><li>空：（默认）仅查询启用状态的印章；</li><li><strong>ALL</strong>：查询所有状态的印章；</li><li><strong>CHECKING</strong>：查询待审核的印章；</li><li><strong>SUCCESS</strong>：查询启用状态的印章；</li><li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li><li><strong>DISABLE</strong>：查询已停用的印章；</li><li><strong>STOPPED</strong>：查询已终止的印章；</li><li><strong>VOID</strong>：查询已作废的印章；</li><li><strong>INVALID</strong>：查询已失效的印章。</li></ul> 
+     * @return SealStatuses <p>需查询的印章状态列表。</p><ul><li>空：（默认）仅查询启用状态的印章；</li><li><strong>ALL</strong>：查询所有状态的印章；</li><li><strong>CHECKING</strong>：查询待审核的印章；</li><li><strong>SUCCESS</strong>：查询启用状态的印章；</li><li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li><li><strong>DISABLE</strong>：查询已停用的印章；</li><li><strong>STOPPED</strong>：查询已终止的印章；</li><li><strong>VOID</strong>：查询已作废的印章；</li><li><strong>INVALID</strong>：查询已失效的印章。</li></ul>
      */
     public String [] getSealStatuses() {
         return this.SealStatuses;
     }
 
     /**
-     * Set 需查询的印章状态列表。
-<ul>
-<li>空：（默认）仅查询启用状态的印章；</li>
-<li><strong>ALL</strong>：查询所有状态的印章；</li>
-<li><strong>CHECKING</strong>：查询待审核的印章；</li>
-<li><strong>SUCCESS</strong>：查询启用状态的印章；</li>
-<li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li>
-<li><strong>DISABLE</strong>：查询已停用的印章；</li>
-<li><strong>STOPPED</strong>：查询已终止的印章；</li>
-<li><strong>VOID</strong>：查询已作废的印章；</li>
-<li><strong>INVALID</strong>：查询已失效的印章。</li>
-</ul>
-     * @param SealStatuses 需查询的印章状态列表。
-<ul>
-<li>空：（默认）仅查询启用状态的印章；</li>
-<li><strong>ALL</strong>：查询所有状态的印章；</li>
-<li><strong>CHECKING</strong>：查询待审核的印章；</li>
-<li><strong>SUCCESS</strong>：查询启用状态的印章；</li>
-<li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li>
-<li><strong>DISABLE</strong>：查询已停用的印章；</li>
-<li><strong>STOPPED</strong>：查询已终止的印章；</li>
-<li><strong>VOID</strong>：查询已作废的印章；</li>
-<li><strong>INVALID</strong>：查询已失效的印章。</li>
-</ul>
+     * Set <p>需查询的印章状态列表。</p><ul><li>空：（默认）仅查询启用状态的印章；</li><li><strong>ALL</strong>：查询所有状态的印章；</li><li><strong>CHECKING</strong>：查询待审核的印章；</li><li><strong>SUCCESS</strong>：查询启用状态的印章；</li><li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li><li><strong>DISABLE</strong>：查询已停用的印章；</li><li><strong>STOPPED</strong>：查询已终止的印章；</li><li><strong>VOID</strong>：查询已作废的印章；</li><li><strong>INVALID</strong>：查询已失效的印章。</li></ul>
+     * @param SealStatuses <p>需查询的印章状态列表。</p><ul><li>空：（默认）仅查询启用状态的印章；</li><li><strong>ALL</strong>：查询所有状态的印章；</li><li><strong>CHECKING</strong>：查询待审核的印章；</li><li><strong>SUCCESS</strong>：查询启用状态的印章；</li><li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li><li><strong>DISABLE</strong>：查询已停用的印章；</li><li><strong>STOPPED</strong>：查询已终止的印章；</li><li><strong>VOID</strong>：查询已作废的印章；</li><li><strong>INVALID</strong>：查询已失效的印章。</li></ul>
      */
     public void setSealStatuses(String [] SealStatuses) {
         this.SealStatuses = SealStatuses;
