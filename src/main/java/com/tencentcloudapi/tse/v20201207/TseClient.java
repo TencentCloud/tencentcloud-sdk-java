@@ -743,6 +743,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询云原生网关服务和路由列表
+     * @param req DescribeCNGWServicesWithRoutesRequest
+     * @return DescribeCNGWServicesWithRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutes(DescribeCNGWServicesWithRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCNGWServicesWithRoutes", DescribeCNGWServicesWithRoutesResponse.class);
+    }
+
+    /**
      *获取云原生API网关实例信息
      * @param req DescribeCloudNativeAPIGatewayRequest
      * @return DescribeCloudNativeAPIGatewayResponse

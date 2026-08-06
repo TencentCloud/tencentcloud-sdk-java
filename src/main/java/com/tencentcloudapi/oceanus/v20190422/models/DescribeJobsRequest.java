@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeJobsRequest extends AbstractModel {
 
     /**
-    * 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
+    * <p>按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。</p>
     */
     @SerializedName("JobIds")
     @Expose
     private String [] JobIds;
 
     /**
-    * 过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。
+    * <p>过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页大小，默认为20，最大值为100
+    * <p>分页大小，默认为20，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-    * 查询额外的作业信息,例如 JobEventInfo	
+    * <p>查询额外的作业信息,例如 JobEventInfo</p>
     */
     @SerializedName("ExtraResult")
     @Expose
     private String [] ExtraResult;
 
     /**
-    * 查询引用connector
+    * <p>查询引用connector</p>
     */
     @SerializedName("ConnectorOptions")
     @Expose
     private String ConnectorOptions;
 
     /**
-     * Get 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。 
-     * @return JobIds 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
+     * Get <p>按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。</p> 
+     * @return JobIds <p>按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。</p>
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
-     * @param JobIds 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
+     * Set <p>按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。</p>
+     * @param JobIds <p>按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。</p>
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;
     }
 
     /**
-     * Get 过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。 
-     * @return Filters 过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。
+     * Get <p>过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。</p> 
+     * @return Filters <p>过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。
-     * @param Filters 过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。
+     * Set <p>过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。</p>
+     * @param Filters <p>过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页大小，默认为20，最大值为100 
-     * @return Limit 分页大小，默认为20，最大值为100
+     * Get <p>分页大小，默认为20，最大值为100</p> 
+     * @return Limit <p>分页大小，默认为20，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认为20，最大值为100
-     * @param Limit 分页大小，默认为20，最大值为100
+     * Set <p>分页大小，默认为20，最大值为100</p>
+     * @param Limit <p>分页大小，默认为20，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;
     }
 
     /**
-     * Get 查询额外的作业信息,例如 JobEventInfo	 
-     * @return ExtraResult 查询额外的作业信息,例如 JobEventInfo	
+     * Get <p>查询额外的作业信息,例如 JobEventInfo</p> 
+     * @return ExtraResult <p>查询额外的作业信息,例如 JobEventInfo</p>
      */
     public String [] getExtraResult() {
         return this.ExtraResult;
     }
 
     /**
-     * Set 查询额外的作业信息,例如 JobEventInfo	
-     * @param ExtraResult 查询额外的作业信息,例如 JobEventInfo	
+     * Set <p>查询额外的作业信息,例如 JobEventInfo</p>
+     * @param ExtraResult <p>查询额外的作业信息,例如 JobEventInfo</p>
      */
     public void setExtraResult(String [] ExtraResult) {
         this.ExtraResult = ExtraResult;
     }
 
     /**
-     * Get 查询引用connector 
-     * @return ConnectorOptions 查询引用connector
+     * Get <p>查询引用connector</p> 
+     * @return ConnectorOptions <p>查询引用connector</p>
      */
     public String getConnectorOptions() {
         return this.ConnectorOptions;
     }
 
     /**
-     * Set 查询引用connector
-     * @param ConnectorOptions 查询引用connector
+     * Set <p>查询引用connector</p>
+     * @param ConnectorOptions <p>查询引用connector</p>
      */
     public void setConnectorOptions(String ConnectorOptions) {
         this.ConnectorOptions = ConnectorOptions;

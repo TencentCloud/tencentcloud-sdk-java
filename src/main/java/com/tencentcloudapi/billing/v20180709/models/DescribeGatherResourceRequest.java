@@ -52,7 +52,7 @@ public class DescribeGatherResourceRequest extends AbstractModel {
     private String TreeNodeUniqKey;
 
     /**
-    * <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+    * <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
     */
     @SerializedName("GatherType")
     @Expose
@@ -221,16 +221,16 @@ public class DescribeGatherResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p> 
-     * @return GatherType <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+     * Get <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul> 
+     * @return GatherType <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
      */
     public String getGatherType() {
         return this.GatherType;
     }
 
     /**
-     * Set <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
-     * @param GatherType <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p>
+     * Set <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
+     * @param GatherType <p>资源目录类别，枚举值如下：<br>all - 全部<br>none - 未归集</p><p>枚举值：</p><ul><li>all： 全部</li><li>none： 未归集</li><li>allocation： 已公摊资源</li><li>gather： 已归集资源</li></ul>
      */
     public void setGatherType(String GatherType) {
         this.GatherType = GatherType;

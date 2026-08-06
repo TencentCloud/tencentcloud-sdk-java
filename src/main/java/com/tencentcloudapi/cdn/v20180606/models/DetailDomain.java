@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DetailDomain extends AbstractModel {
 
     /**
-    * 域名 ID
+    * <p>域名 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 腾讯云账号ID
+    * <p>腾讯云账号ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 加速域名
+    * <p>加速域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名对应的 CNAME 地址
+    * <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cname")
@@ -53,59 +53,49 @@ public class DetailDomain extends AbstractModel {
     private String Cname;
 
     /**
-    * 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
+    * <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 项目 ID，可前往腾讯云项目管理页面查看
+    * <p>项目 ID，可前往腾讯云项目管理页面查看</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
+    * <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 域名创建时间
+    * <p>域名创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 域名更新时间
+    * <p>域名更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 源站配置
+    * <p>源站配置</p>
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * IP 黑白名单配置
+    * <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpFilter")
@@ -113,7 +103,7 @@ dynamic:  动态加速
     private IpFilter IpFilter;
 
     /**
-    * IP 访问限频配置
+    * <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpFreqLimit")
@@ -121,7 +111,7 @@ dynamic:  动态加速
     private IpFreqLimit IpFreqLimit;
 
     /**
-    * 状态码缓存配置
+    * <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCodeCache")
@@ -129,7 +119,7 @@ dynamic:  动态加速
     private StatusCodeCache StatusCodeCache;
 
     /**
-    * 智能压缩配置
+    * <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compression")
@@ -137,7 +127,7 @@ dynamic:  动态加速
     private Compression Compression;
 
     /**
-    * 带宽封顶配置
+    * <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthAlert")
@@ -145,7 +135,7 @@ dynamic:  动态加速
     private BandwidthAlert BandwidthAlert;
 
     /**
-    * Range 回源配置
+    * <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RangeOriginPull")
@@ -153,7 +143,7 @@ dynamic:  动态加速
     private RangeOriginPull RangeOriginPull;
 
     /**
-    * 301/302 回源自动跟随配置
+    * <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowRedirect")
@@ -161,7 +151,7 @@ dynamic:  动态加速
     private FollowRedirect FollowRedirect;
 
     /**
-    * 自定义错误页面配置
+    * <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPage")
@@ -169,7 +159,7 @@ dynamic:  动态加速
     private ErrorPage ErrorPage;
 
     /**
-    * 自定义请求头部配置
+    * <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestHeader")
@@ -177,7 +167,7 @@ dynamic:  动态加速
     private RequestHeader RequestHeader;
 
     /**
-    * 自定义响应头部配置
+    * <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseHeader")
@@ -185,7 +175,7 @@ dynamic:  动态加速
     private ResponseHeader ResponseHeader;
 
     /**
-    * 单链接下行限速配置
+    * <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownstreamCapping")
@@ -193,7 +183,7 @@ dynamic:  动态加速
     private DownstreamCapping DownstreamCapping;
 
     /**
-    * 带参/不带参缓存配置
+    * <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheKey")
@@ -201,7 +191,7 @@ dynamic:  动态加速
     private CacheKey CacheKey;
 
     /**
-    * 源站头部缓存配置
+    * <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseHeaderCache")
@@ -209,7 +199,7 @@ dynamic:  动态加速
     private ResponseHeaderCache ResponseHeaderCache;
 
     /**
-    * 视频拖拽配置
+    * <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoSeek")
@@ -217,7 +207,7 @@ dynamic:  动态加速
     private VideoSeek VideoSeek;
 
     /**
-    * 节点缓存过期规则配置
+    * <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cache")
@@ -225,7 +215,7 @@ dynamic:  动态加速
     private Cache Cache;
 
     /**
-    * 跨国链路优化配置（功能灰度中，敬请期待）
+    * <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginPullOptimization")
@@ -233,7 +223,7 @@ dynamic:  动态加速
     private OriginPullOptimization OriginPullOptimization;
 
     /**
-    * Https 加速相关配置
+    * <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Https")
@@ -241,7 +231,7 @@ dynamic:  动态加速
     private Https Https;
 
     /**
-    * 时间戳防盗链配置
+    * <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Authentication")
@@ -249,7 +239,7 @@ dynamic:  动态加速
     private Authentication Authentication;
 
     /**
-    * SEO 优化配置
+    * <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seo")
@@ -257,16 +247,7 @@ dynamic:  动态加速
     private Seo Seo;
 
     /**
-    * 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+    * <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disable")
@@ -274,7 +255,7 @@ readonly：域名存在特殊配置，被锁定
     private String Disable;
 
     /**
-    * 访问协议强制跳转配置
+    * <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForceRedirect")
@@ -282,7 +263,7 @@ readonly：域名存在特殊配置，被锁定
     private ForceRedirect ForceRedirect;
 
     /**
-    * Referer 防盗链配置
+    * <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Referer")
@@ -290,7 +271,7 @@ readonly：域名存在特殊配置，被锁定
     private Referer Referer;
 
     /**
-    * 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+    * <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxAge")
@@ -298,7 +279,7 @@ readonly：域名存在特殊配置，被锁定
     private MaxAge MaxAge;
 
     /**
-    * Ipv6 回源配置（功能灰度中，敬请期待）
+    * <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6")
@@ -306,7 +287,7 @@ readonly：域名存在特殊配置，被锁定
     private Ipv6 Ipv6;
 
     /**
-    * 是否兼容旧版本配置（内部兼容性字段）
+    * <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compatibility")
@@ -314,7 +295,7 @@ readonly：域名存在特殊配置，被锁定
     private Compatibility Compatibility;
 
     /**
-    * 区域特殊配置
+    * <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecificConfig")
@@ -322,10 +303,7 @@ readonly：域名存在特殊配置，被锁定
     private SpecificConfig SpecificConfig;
 
     /**
-    * 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+    * <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Area")
@@ -333,11 +311,7 @@ global：全球加速
     private String Area;
 
     /**
-    * 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+    * <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Readonly")
@@ -345,7 +319,7 @@ global：全球锁定
     private String Readonly;
 
     /**
-    * 回源超时配置
+    * <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginPullTimeout")
@@ -353,7 +327,7 @@ global：全球锁定
     private OriginPullTimeout OriginPullTimeout;
 
     /**
-    * 回源S3鉴权配置
+    * <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AwsPrivateAccess")
@@ -361,7 +335,7 @@ global：全球锁定
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * Scdn配置
+    * <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityConfig")
@@ -369,7 +343,7 @@ global：全球锁定
     private SecurityConfig SecurityConfig;
 
     /**
-    * ImageOptimization配置
+    * <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageOptimization")
@@ -377,7 +351,7 @@ global：全球锁定
     private ImageOptimization ImageOptimization;
 
     /**
-    * UA黑白名单配置
+    * <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAgentFilter")
@@ -385,7 +359,7 @@ global：全球锁定
     private UserAgentFilter UserAgentFilter;
 
     /**
-    * 访问控制
+    * <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessControl")
@@ -393,9 +367,7 @@ global：全球锁定
     private AccessControl AccessControl;
 
     /**
-    * 是否支持高级配置项
-on：支持
-off：不支持
+    * <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Advance")
@@ -403,7 +375,7 @@ off：不支持
     private String Advance;
 
     /**
-    * URL重定向配置
+    * <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlRedirect")
@@ -411,7 +383,7 @@ off：不支持
     private UrlRedirect UrlRedirect;
 
     /**
-    * 访问端口配置
+    * <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPort")
@@ -419,7 +391,7 @@ off：不支持
     private Long [] AccessPort;
 
     /**
-    * 标签配置
+    * <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -427,7 +399,7 @@ off：不支持
     private Tag [] Tag;
 
     /**
-    * 时间戳防盗链高级配置，白名单功能
+    * <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedAuthentication")
@@ -435,7 +407,7 @@ off：不支持
     private AdvancedAuthentication AdvancedAuthentication;
 
     /**
-    * 回源鉴权高级配置，白名单功能
+    * <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginAuthentication")
@@ -443,7 +415,7 @@ off：不支持
     private OriginAuthentication OriginAuthentication;
 
     /**
-    * Ipv6访问配置
+    * <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6Access")
@@ -451,7 +423,7 @@ off：不支持
     private Ipv6Access Ipv6Access;
 
     /**
-    * 高级配置集合
+    * <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvanceSet")
@@ -459,7 +431,7 @@ off：不支持
     private AdvanceConfig [] AdvanceSet;
 
     /**
-    * 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+    * <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineCache")
@@ -467,7 +439,7 @@ off：不支持
     private OfflineCache OfflineCache;
 
     /**
-    * 合并回源（白名单功能）
+    * <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginCombine")
@@ -475,7 +447,7 @@ off：不支持
     private OriginCombine OriginCombine;
 
     /**
-    * POST上传配置项
+    * <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostMaxSize")
@@ -483,7 +455,7 @@ off：不支持
     private PostSize PostMaxSize;
 
     /**
-    * Quic配置
+    * <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quic")
@@ -491,7 +463,7 @@ off：不支持
     private Quic Quic;
 
     /**
-    * 回源OSS私有鉴权
+    * <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OssPrivateAccess")
@@ -499,7 +471,7 @@ off：不支持
     private OssPrivateAccess OssPrivateAccess;
 
     /**
-    * WebSocket配置
+    * <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebSocket")
@@ -507,7 +479,7 @@ off：不支持
     private WebSocket WebSocket;
 
     /**
-    * 远程鉴权配置
+    * <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteAuthentication")
@@ -515,7 +487,7 @@ off：不支持
     private RemoteAuthentication RemoteAuthentication;
 
     /**
-    * 共享CNAME配置（白名单功能）
+    * <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareCname")
@@ -523,7 +495,7 @@ off：不支持
     private ShareCname ShareCname;
 
     /**
-    * 规则引擎
+    * <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleEngine")
@@ -531,7 +503,7 @@ off：不支持
     private RuleEngine RuleEngine;
 
     /**
-    * 主域名
+    * <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentHost")
@@ -539,7 +511,7 @@ off：不支持
     private String ParentHost;
 
     /**
-    * 华为云对象存储回源鉴权
+    * <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HwPrivateAccess")
@@ -547,7 +519,7 @@ off：不支持
     private HwPrivateAccess HwPrivateAccess;
 
     /**
-    * 七牛云对象存储回源鉴权
+    * <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QnPrivateAccess")
@@ -555,7 +527,7 @@ off：不支持
     private QnPrivateAccess QnPrivateAccess;
 
     /**
-    * HTTPS服务，缺省时默认开启
+    * <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsBilling")
@@ -563,7 +535,7 @@ off：不支持
     private HttpsBilling HttpsBilling;
 
     /**
-    * 其他厂商对象存储回源鉴权
+    * <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OthersPrivateAccess")
@@ -571,7 +543,7 @@ off：不支持
     private OthersPrivateAccess OthersPrivateAccess;
 
     /**
-    * 参数黑名单
+    * <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamFilter")
@@ -579,71 +551,71 @@ off：不支持
     private ParamFilter ParamFilter;
 
     /**
-    * 流量一键防盗刷配置
+    * <p>流量一键防盗刷配置</p>
     */
     @SerializedName("AutoGuard")
     @Expose
     private AutoGuard AutoGuard;
 
     /**
-    * 区域访问控制配置
+    * <p>区域访问控制配置</p>
     */
     @SerializedName("GeoBlocker")
     @Expose
     private GeoBlocker GeoBlocker;
 
     /**
-     * Get 域名 ID 
-     * @return ResourceId 域名 ID
+     * Get <p>域名 ID</p> 
+     * @return ResourceId <p>域名 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 域名 ID
-     * @param ResourceId 域名 ID
+     * Set <p>域名 ID</p>
+     * @param ResourceId <p>域名 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 腾讯云账号ID 
-     * @return AppId 腾讯云账号ID
+     * Get <p>腾讯云账号ID</p> 
+     * @return AppId <p>腾讯云账号ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 腾讯云账号ID
-     * @param AppId 腾讯云账号ID
+     * Set <p>腾讯云账号ID</p>
+     * @param AppId <p>腾讯云账号ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 加速域名 
-     * @return Domain 加速域名
+     * Get <p>加速域名</p> 
+     * @return Domain <p>加速域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 加速域名
-     * @param Domain 加速域名
+     * Set <p>加速域名</p>
+     * @param Domain <p>加速域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名对应的 CNAME 地址
+     * Get <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cname 域名对应的 CNAME 地址
+     * @return Cname <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCname() {
@@ -651,9 +623,9 @@ off：不支持
     }
 
     /**
-     * Set 域名对应的 CNAME 地址
+     * Set <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cname 域名对应的 CNAME 地址
+     * @param Cname <p>域名对应的 CNAME 地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCname(String Cname) {
@@ -661,145 +633,105 @@ off：不支持
     }
 
     /**
-     * Get 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭 
-     * @return Status 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
+     * Get <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p> 
+     * @return Status <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
-     * @param Status 加速服务状态
-rejected：域名审核未通过，域名备案过期/被注销导致
-processing：部署中
-closing：关闭中
-online：已启动
-offline：已关闭
+     * Set <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
+     * @param Status <p>加速服务状态<br>rejected：域名审核未通过，域名备案过期/被注销导致<br>processing：部署中<br>closing：关闭中<br>online：已启动<br>offline：已关闭</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 项目 ID，可前往腾讯云项目管理页面查看 
-     * @return ProjectId 项目 ID，可前往腾讯云项目管理页面查看
+     * Get <p>项目 ID，可前往腾讯云项目管理页面查看</p> 
+     * @return ProjectId <p>项目 ID，可前往腾讯云项目管理页面查看</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID，可前往腾讯云项目管理页面查看
-     * @param ProjectId 项目 ID，可前往腾讯云项目管理页面查看
+     * Set <p>项目 ID，可前往腾讯云项目管理页面查看</p>
+     * @param ProjectId <p>项目 ID，可前往腾讯云项目管理页面查看</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速 
-     * @return ServiceType 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
+     * Get <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p> 
+     * @return ServiceType <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
-     * @param ServiceType 加速域名业务类型
-web：网页小文件
-download：下载大文件
-media：音视频点播
-hybrid:  动静加速
-dynamic:  动态加速
+     * Set <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
+     * @param ServiceType <p>加速域名业务类型<br>web：网页小文件<br>download：下载大文件<br>media：音视频点播<br>hybrid:  动静加速<br>dynamic:  动态加速</p>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 域名创建时间 
-     * @return CreateTime 域名创建时间
+     * Get <p>域名创建时间</p> 
+     * @return CreateTime <p>域名创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 域名创建时间
-     * @param CreateTime 域名创建时间
+     * Set <p>域名创建时间</p>
+     * @param CreateTime <p>域名创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 域名更新时间 
-     * @return UpdateTime 域名更新时间
+     * Get <p>域名更新时间</p> 
+     * @return UpdateTime <p>域名更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 域名更新时间
-     * @param UpdateTime 域名更新时间
+     * Set <p>域名更新时间</p>
+     * @param UpdateTime <p>域名更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 源站配置 
-     * @return Origin 源站配置
+     * Get <p>源站配置</p> 
+     * @return Origin <p>源站配置</p>
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set 源站配置
-     * @param Origin 源站配置
+     * Set <p>源站配置</p>
+     * @param Origin <p>源站配置</p>
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get IP 黑白名单配置
+     * Get <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpFilter IP 黑白名单配置
+     * @return IpFilter <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpFilter getIpFilter() {
@@ -807,9 +739,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set IP 黑白名单配置
+     * Set <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpFilter IP 黑白名单配置
+     * @param IpFilter <p>IP 黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpFilter(IpFilter IpFilter) {
@@ -817,9 +749,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get IP 访问限频配置
+     * Get <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpFreqLimit IP 访问限频配置
+     * @return IpFreqLimit <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpFreqLimit getIpFreqLimit() {
@@ -827,9 +759,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set IP 访问限频配置
+     * Set <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpFreqLimit IP 访问限频配置
+     * @param IpFreqLimit <p>IP 访问限频配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpFreqLimit(IpFreqLimit IpFreqLimit) {
@@ -837,9 +769,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 状态码缓存配置
+     * Get <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusCodeCache 状态码缓存配置
+     * @return StatusCodeCache <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatusCodeCache getStatusCodeCache() {
@@ -847,9 +779,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 状态码缓存配置
+     * Set <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusCodeCache 状态码缓存配置
+     * @param StatusCodeCache <p>状态码缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCodeCache(StatusCodeCache StatusCodeCache) {
@@ -857,9 +789,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 智能压缩配置
+     * Get <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Compression 智能压缩配置
+     * @return Compression <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Compression getCompression() {
@@ -867,9 +799,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 智能压缩配置
+     * Set <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compression 智能压缩配置
+     * @param Compression <p>智能压缩配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompression(Compression Compression) {
@@ -877,9 +809,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 带宽封顶配置
+     * Get <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthAlert 带宽封顶配置
+     * @return BandwidthAlert <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BandwidthAlert getBandwidthAlert() {
@@ -887,9 +819,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 带宽封顶配置
+     * Set <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthAlert 带宽封顶配置
+     * @param BandwidthAlert <p>带宽封顶配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthAlert(BandwidthAlert BandwidthAlert) {
@@ -897,9 +829,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get Range 回源配置
+     * Get <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RangeOriginPull Range 回源配置
+     * @return RangeOriginPull <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RangeOriginPull getRangeOriginPull() {
@@ -907,9 +839,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set Range 回源配置
+     * Set <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RangeOriginPull Range 回源配置
+     * @param RangeOriginPull <p>Range 回源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRangeOriginPull(RangeOriginPull RangeOriginPull) {
@@ -917,9 +849,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 301/302 回源自动跟随配置
+     * Get <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FollowRedirect 301/302 回源自动跟随配置
+     * @return FollowRedirect <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FollowRedirect getFollowRedirect() {
@@ -927,9 +859,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 301/302 回源自动跟随配置
+     * Set <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FollowRedirect 301/302 回源自动跟随配置
+     * @param FollowRedirect <p>301/302 回源自动跟随配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowRedirect(FollowRedirect FollowRedirect) {
@@ -937,9 +869,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 自定义错误页面配置
+     * Get <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorPage 自定义错误页面配置
+     * @return ErrorPage <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorPage getErrorPage() {
@@ -947,9 +879,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 自定义错误页面配置
+     * Set <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorPage 自定义错误页面配置
+     * @param ErrorPage <p>自定义错误页面配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPage(ErrorPage ErrorPage) {
@@ -957,9 +889,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 自定义请求头部配置
+     * Get <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestHeader 自定义请求头部配置
+     * @return RequestHeader <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RequestHeader getRequestHeader() {
@@ -967,9 +899,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 自定义请求头部配置
+     * Set <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestHeader 自定义请求头部配置
+     * @param RequestHeader <p>自定义请求头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
@@ -977,9 +909,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 自定义响应头部配置
+     * Get <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseHeader 自定义响应头部配置
+     * @return ResponseHeader <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseHeader getResponseHeader() {
@@ -987,9 +919,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 自定义响应头部配置
+     * Set <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseHeader 自定义响应头部配置
+     * @param ResponseHeader <p>自定义响应头部配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseHeader(ResponseHeader ResponseHeader) {
@@ -997,9 +929,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 单链接下行限速配置
+     * Get <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownstreamCapping 单链接下行限速配置
+     * @return DownstreamCapping <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DownstreamCapping getDownstreamCapping() {
@@ -1007,9 +939,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 单链接下行限速配置
+     * Set <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownstreamCapping 单链接下行限速配置
+     * @param DownstreamCapping <p>单链接下行限速配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownstreamCapping(DownstreamCapping DownstreamCapping) {
@@ -1017,9 +949,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 带参/不带参缓存配置
+     * Get <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheKey 带参/不带参缓存配置
+     * @return CacheKey <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheKey getCacheKey() {
@@ -1027,9 +959,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 带参/不带参缓存配置
+     * Set <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheKey 带参/不带参缓存配置
+     * @param CacheKey <p>带参/不带参缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheKey(CacheKey CacheKey) {
@@ -1037,9 +969,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 源站头部缓存配置
+     * Get <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseHeaderCache 源站头部缓存配置
+     * @return ResponseHeaderCache <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseHeaderCache getResponseHeaderCache() {
@@ -1047,9 +979,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 源站头部缓存配置
+     * Set <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseHeaderCache 源站头部缓存配置
+     * @param ResponseHeaderCache <p>源站头部缓存配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseHeaderCache(ResponseHeaderCache ResponseHeaderCache) {
@@ -1057,9 +989,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 视频拖拽配置
+     * Get <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoSeek 视频拖拽配置
+     * @return VideoSeek <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoSeek getVideoSeek() {
@@ -1067,9 +999,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 视频拖拽配置
+     * Set <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoSeek 视频拖拽配置
+     * @param VideoSeek <p>视频拖拽配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoSeek(VideoSeek VideoSeek) {
@@ -1077,9 +1009,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 节点缓存过期规则配置
+     * Get <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cache 节点缓存过期规则配置
+     * @return Cache <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Cache getCache() {
@@ -1087,9 +1019,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 节点缓存过期规则配置
+     * Set <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cache 节点缓存过期规则配置
+     * @param Cache <p>节点缓存过期规则配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCache(Cache Cache) {
@@ -1097,9 +1029,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 跨国链路优化配置（功能灰度中，敬请期待）
+     * Get <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginPullOptimization 跨国链路优化配置（功能灰度中，敬请期待）
+     * @return OriginPullOptimization <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginPullOptimization getOriginPullOptimization() {
@@ -1107,9 +1039,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 跨国链路优化配置（功能灰度中，敬请期待）
+     * Set <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullOptimization 跨国链路优化配置（功能灰度中，敬请期待）
+     * @param OriginPullOptimization <p>跨国链路优化配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginPullOptimization(OriginPullOptimization OriginPullOptimization) {
@@ -1117,9 +1049,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get Https 加速相关配置
+     * Get <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Https Https 加速相关配置
+     * @return Https <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Https getHttps() {
@@ -1127,9 +1059,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set Https 加速相关配置
+     * Set <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Https Https 加速相关配置
+     * @param Https <p>Https 加速相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttps(Https Https) {
@@ -1137,9 +1069,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 时间戳防盗链配置
+     * Get <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Authentication 时间戳防盗链配置
+     * @return Authentication <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Authentication getAuthentication() {
@@ -1147,9 +1079,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set 时间戳防盗链配置
+     * Set <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Authentication 时间戳防盗链配置
+     * @param Authentication <p>时间戳防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthentication(Authentication Authentication) {
@@ -1157,9 +1089,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get SEO 优化配置
+     * Get <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Seo SEO 优化配置
+     * @return Seo <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Seo getSeo() {
@@ -1167,9 +1099,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Set SEO 优化配置
+     * Set <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Seo SEO 优化配置
+     * @param Seo <p>SEO 优化配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeo(Seo Seo) {
@@ -1177,27 +1109,9 @@ dynamic:  动态加速
     }
 
     /**
-     * Get 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+     * Get <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Disable 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+     * @return Disable <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisable() {
@@ -1205,27 +1119,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+     * Set <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Disable 域名封禁状态
-normal：正常状态
-overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
-malicious：域名出现恶意行为，强制关闭加速服务
-ddos：域名被大规模 DDoS 攻击，关闭加速服务
-ddos_risk: 域名存在ddos攻击风险
-idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
-unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
-capping：触发配置的带宽阈值上限
-readonly：域名存在特殊配置，被锁定
+     * @param Disable <p>域名封禁状态<br>normal：正常状态<br>overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务<br>malicious：域名出现恶意行为，强制关闭加速服务<br>ddos：域名被大规模 DDoS 攻击，关闭加速服务<br>ddos_risk: 域名存在ddos攻击风险<br>idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务<br>unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务<br>capping：触发配置的带宽阈值上限<br>readonly：域名存在特殊配置，被锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisable(String Disable) {
@@ -1233,9 +1129,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get 访问协议强制跳转配置
+     * Get <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForceRedirect 访问协议强制跳转配置
+     * @return ForceRedirect <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ForceRedirect getForceRedirect() {
@@ -1243,9 +1139,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set 访问协议强制跳转配置
+     * Set <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceRedirect 访问协议强制跳转配置
+     * @param ForceRedirect <p>访问协议强制跳转配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
@@ -1253,9 +1149,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get Referer 防盗链配置
+     * Get <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Referer Referer 防盗链配置
+     * @return Referer <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Referer getReferer() {
@@ -1263,9 +1159,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set Referer 防盗链配置
+     * Set <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Referer Referer 防盗链配置
+     * @param Referer <p>Referer 防盗链配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferer(Referer Referer) {
@@ -1273,9 +1169,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+     * Get <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+     * @return MaxAge <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MaxAge getMaxAge() {
@@ -1283,9 +1179,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+     * Set <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
+     * @param MaxAge <p>浏览器缓存过期规则配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxAge(MaxAge MaxAge) {
@@ -1293,9 +1189,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get Ipv6 回源配置（功能灰度中，敬请期待）
+     * Get <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
+     * @return Ipv6 <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ipv6 getIpv6() {
@@ -1303,9 +1199,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set Ipv6 回源配置（功能灰度中，敬请期待）
+     * Set <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
+     * @param Ipv6 <p>Ipv6 回源配置（功能灰度中，敬请期待）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6(Ipv6 Ipv6) {
@@ -1313,9 +1209,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get 是否兼容旧版本配置（内部兼容性字段）
+     * Get <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Compatibility 是否兼容旧版本配置（内部兼容性字段）
+     * @return Compatibility <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Compatibility getCompatibility() {
@@ -1323,9 +1219,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set 是否兼容旧版本配置（内部兼容性字段）
+     * Set <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compatibility 是否兼容旧版本配置（内部兼容性字段）
+     * @param Compatibility <p>是否兼容旧版本配置（内部兼容性字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompatibility(Compatibility Compatibility) {
@@ -1333,9 +1229,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get 区域特殊配置
+     * Get <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecificConfig 区域特殊配置
+     * @return SpecificConfig <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpecificConfig getSpecificConfig() {
@@ -1343,9 +1239,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set 区域特殊配置
+     * Set <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecificConfig 区域特殊配置
+     * @param SpecificConfig <p>区域特殊配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecificConfig(SpecificConfig SpecificConfig) {
@@ -1353,15 +1249,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+     * Get <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Area 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+     * @return Area <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArea() {
@@ -1369,15 +1259,9 @@ global：全球加速
     }
 
     /**
-     * Set 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+     * Set <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Area 加速区域
-mainland：中国境内加速
-overseas：中国境外加速
-global：全球加速
+     * @param Area <p>加速区域<br>mainland：中国境内加速<br>overseas：中国境外加速<br>global：全球加速</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArea(String Area) {
@@ -1385,17 +1269,9 @@ global：全球加速
     }
 
     /**
-     * Get 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+     * Get <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Readonly 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+     * @return Readonly <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadonly() {
@@ -1403,17 +1279,9 @@ global：全球锁定
     }
 
     /**
-     * Set 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+     * Set <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Readonly 域名锁定状态
-normal：未锁定
-mainland：中国境内锁定
-overseas：中国境外锁定
-global：全球锁定
+     * @param Readonly <p>域名锁定状态<br>normal：未锁定<br>mainland：中国境内锁定<br>overseas：中国境外锁定<br>global：全球锁定</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadonly(String Readonly) {
@@ -1421,9 +1289,9 @@ global：全球锁定
     }
 
     /**
-     * Get 回源超时配置
+     * Get <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginPullTimeout 回源超时配置
+     * @return OriginPullTimeout <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginPullTimeout getOriginPullTimeout() {
@@ -1431,9 +1299,9 @@ global：全球锁定
     }
 
     /**
-     * Set 回源超时配置
+     * Set <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullTimeout 回源超时配置
+     * @param OriginPullTimeout <p>回源超时配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginPullTimeout(OriginPullTimeout OriginPullTimeout) {
@@ -1441,9 +1309,9 @@ global：全球锁定
     }
 
     /**
-     * Get 回源S3鉴权配置
+     * Get <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AwsPrivateAccess 回源S3鉴权配置
+     * @return AwsPrivateAccess <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
@@ -1451,9 +1319,9 @@ global：全球锁定
     }
 
     /**
-     * Set 回源S3鉴权配置
+     * Set <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AwsPrivateAccess 回源S3鉴权配置
+     * @param AwsPrivateAccess <p>回源S3鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
@@ -1461,9 +1329,9 @@ global：全球锁定
     }
 
     /**
-     * Get Scdn配置
+     * Get <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityConfig Scdn配置
+     * @return SecurityConfig <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityConfig getSecurityConfig() {
@@ -1471,9 +1339,9 @@ global：全球锁定
     }
 
     /**
-     * Set Scdn配置
+     * Set <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityConfig Scdn配置
+     * @param SecurityConfig <p>Scdn配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
@@ -1481,9 +1349,9 @@ global：全球锁定
     }
 
     /**
-     * Get ImageOptimization配置
+     * Get <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageOptimization ImageOptimization配置
+     * @return ImageOptimization <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageOptimization getImageOptimization() {
@@ -1491,9 +1359,9 @@ global：全球锁定
     }
 
     /**
-     * Set ImageOptimization配置
+     * Set <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageOptimization ImageOptimization配置
+     * @param ImageOptimization <p>ImageOptimization配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageOptimization(ImageOptimization ImageOptimization) {
@@ -1501,9 +1369,9 @@ global：全球锁定
     }
 
     /**
-     * Get UA黑白名单配置
+     * Get <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserAgentFilter UA黑白名单配置
+     * @return UserAgentFilter <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserAgentFilter getUserAgentFilter() {
@@ -1511,9 +1379,9 @@ global：全球锁定
     }
 
     /**
-     * Set UA黑白名单配置
+     * Set <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserAgentFilter UA黑白名单配置
+     * @param UserAgentFilter <p>UA黑白名单配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
@@ -1521,9 +1389,9 @@ global：全球锁定
     }
 
     /**
-     * Get 访问控制
+     * Get <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessControl 访问控制
+     * @return AccessControl <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessControl getAccessControl() {
@@ -1531,9 +1399,9 @@ global：全球锁定
     }
 
     /**
-     * Set 访问控制
+     * Set <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessControl 访问控制
+     * @param AccessControl <p>访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessControl(AccessControl AccessControl) {
@@ -1541,13 +1409,9 @@ global：全球锁定
     }
 
     /**
-     * Get 是否支持高级配置项
-on：支持
-off：不支持
+     * Get <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Advance 是否支持高级配置项
-on：支持
-off：不支持
+     * @return Advance <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdvance() {
@@ -1555,13 +1419,9 @@ off：不支持
     }
 
     /**
-     * Set 是否支持高级配置项
-on：支持
-off：不支持
+     * Set <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Advance 是否支持高级配置项
-on：支持
-off：不支持
+     * @param Advance <p>是否支持高级配置项<br>on：支持<br>off：不支持</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvance(String Advance) {
@@ -1569,9 +1429,9 @@ off：不支持
     }
 
     /**
-     * Get URL重定向配置
+     * Get <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UrlRedirect URL重定向配置
+     * @return UrlRedirect <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UrlRedirect getUrlRedirect() {
@@ -1579,9 +1439,9 @@ off：不支持
     }
 
     /**
-     * Set URL重定向配置
+     * Set <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UrlRedirect URL重定向配置
+     * @param UrlRedirect <p>URL重定向配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlRedirect(UrlRedirect UrlRedirect) {
@@ -1589,9 +1449,9 @@ off：不支持
     }
 
     /**
-     * Get 访问端口配置
+     * Get <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessPort 访问端口配置
+     * @return AccessPort <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getAccessPort() {
@@ -1599,9 +1459,9 @@ off：不支持
     }
 
     /**
-     * Set 访问端口配置
+     * Set <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessPort 访问端口配置
+     * @param AccessPort <p>访问端口配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPort(Long [] AccessPort) {
@@ -1609,9 +1469,9 @@ off：不支持
     }
 
     /**
-     * Get 标签配置
+     * Get <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag 标签配置
+     * @return Tag <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
@@ -1619,9 +1479,9 @@ off：不支持
     }
 
     /**
-     * Set 标签配置
+     * Set <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag 标签配置
+     * @param Tag <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
@@ -1629,9 +1489,9 @@ off：不支持
     }
 
     /**
-     * Get 时间戳防盗链高级配置，白名单功能
+     * Get <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+     * @return AdvancedAuthentication <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdvancedAuthentication getAdvancedAuthentication() {
@@ -1639,9 +1499,9 @@ off：不支持
     }
 
     /**
-     * Set 时间戳防盗链高级配置，白名单功能
+     * Set <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+     * @param AdvancedAuthentication <p>时间戳防盗链高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedAuthentication(AdvancedAuthentication AdvancedAuthentication) {
@@ -1649,9 +1509,9 @@ off：不支持
     }
 
     /**
-     * Get 回源鉴权高级配置，白名单功能
+     * Get <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginAuthentication 回源鉴权高级配置，白名单功能
+     * @return OriginAuthentication <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginAuthentication getOriginAuthentication() {
@@ -1659,9 +1519,9 @@ off：不支持
     }
 
     /**
-     * Set 回源鉴权高级配置，白名单功能
+     * Set <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginAuthentication 回源鉴权高级配置，白名单功能
+     * @param OriginAuthentication <p>回源鉴权高级配置，白名单功能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginAuthentication(OriginAuthentication OriginAuthentication) {
@@ -1669,9 +1529,9 @@ off：不支持
     }
 
     /**
-     * Get Ipv6访问配置
+     * Get <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ipv6Access Ipv6访问配置
+     * @return Ipv6Access <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ipv6Access getIpv6Access() {
@@ -1679,9 +1539,9 @@ off：不支持
     }
 
     /**
-     * Set Ipv6访问配置
+     * Set <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6Access Ipv6访问配置
+     * @param Ipv6Access <p>Ipv6访问配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6Access(Ipv6Access Ipv6Access) {
@@ -1689,9 +1549,9 @@ off：不支持
     }
 
     /**
-     * Get 高级配置集合
+     * Get <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvanceSet 高级配置集合
+     * @return AdvanceSet <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdvanceConfig [] getAdvanceSet() {
@@ -1699,9 +1559,9 @@ off：不支持
     }
 
     /**
-     * Set 高级配置集合
+     * Set <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvanceSet 高级配置集合
+     * @param AdvanceSet <p>高级配置集合</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvanceSet(AdvanceConfig [] AdvanceSet) {
@@ -1709,9 +1569,9 @@ off：不支持
     }
 
     /**
-     * Get 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+     * Get <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OfflineCache 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+     * @return OfflineCache <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OfflineCache getOfflineCache() {
@@ -1719,9 +1579,9 @@ off：不支持
     }
 
     /**
-     * Set 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+     * Set <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineCache 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
+     * @param OfflineCache <p>离线缓存（功能灰度中，尚未全量，请等待后续全量发布）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
@@ -1729,9 +1589,9 @@ off：不支持
     }
 
     /**
-     * Get 合并回源（白名单功能）
+     * Get <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginCombine 合并回源（白名单功能）
+     * @return OriginCombine <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginCombine getOriginCombine() {
@@ -1739,9 +1599,9 @@ off：不支持
     }
 
     /**
-     * Set 合并回源（白名单功能）
+     * Set <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCombine 合并回源（白名单功能）
+     * @param OriginCombine <p>合并回源（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginCombine(OriginCombine OriginCombine) {
@@ -1749,9 +1609,9 @@ off：不支持
     }
 
     /**
-     * Get POST上传配置项
+     * Get <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostMaxSize POST上传配置项
+     * @return PostMaxSize <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostSize getPostMaxSize() {
@@ -1759,9 +1619,9 @@ off：不支持
     }
 
     /**
-     * Set POST上传配置项
+     * Set <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostMaxSize POST上传配置项
+     * @param PostMaxSize <p>POST上传配置项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostMaxSize(PostSize PostMaxSize) {
@@ -1769,9 +1629,9 @@ off：不支持
     }
 
     /**
-     * Get Quic配置
+     * Get <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Quic Quic配置
+     * @return Quic <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Quic getQuic() {
@@ -1779,9 +1639,9 @@ off：不支持
     }
 
     /**
-     * Set Quic配置
+     * Set <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Quic Quic配置
+     * @param Quic <p>Quic配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuic(Quic Quic) {
@@ -1789,9 +1649,9 @@ off：不支持
     }
 
     /**
-     * Get 回源OSS私有鉴权
+     * Get <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OssPrivateAccess 回源OSS私有鉴权
+     * @return OssPrivateAccess <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OssPrivateAccess getOssPrivateAccess() {
@@ -1799,9 +1659,9 @@ off：不支持
     }
 
     /**
-     * Set 回源OSS私有鉴权
+     * Set <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OssPrivateAccess 回源OSS私有鉴权
+     * @param OssPrivateAccess <p>回源OSS私有鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
@@ -1809,9 +1669,9 @@ off：不支持
     }
 
     /**
-     * Get WebSocket配置
+     * Get <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebSocket WebSocket配置
+     * @return WebSocket <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebSocket getWebSocket() {
@@ -1819,9 +1679,9 @@ off：不支持
     }
 
     /**
-     * Set WebSocket配置
+     * Set <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebSocket WebSocket配置
+     * @param WebSocket <p>WebSocket配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebSocket(WebSocket WebSocket) {
@@ -1829,9 +1689,9 @@ off：不支持
     }
 
     /**
-     * Get 远程鉴权配置
+     * Get <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoteAuthentication 远程鉴权配置
+     * @return RemoteAuthentication <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RemoteAuthentication getRemoteAuthentication() {
@@ -1839,9 +1699,9 @@ off：不支持
     }
 
     /**
-     * Set 远程鉴权配置
+     * Set <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteAuthentication 远程鉴权配置
+     * @param RemoteAuthentication <p>远程鉴权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteAuthentication(RemoteAuthentication RemoteAuthentication) {
@@ -1849,9 +1709,9 @@ off：不支持
     }
 
     /**
-     * Get 共享CNAME配置（白名单功能）
+     * Get <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShareCname 共享CNAME配置（白名单功能）
+     * @return ShareCname <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ShareCname getShareCname() {
@@ -1859,9 +1719,9 @@ off：不支持
     }
 
     /**
-     * Set 共享CNAME配置（白名单功能）
+     * Set <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShareCname 共享CNAME配置（白名单功能）
+     * @param ShareCname <p>共享CNAME配置（白名单功能）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareCname(ShareCname ShareCname) {
@@ -1869,9 +1729,9 @@ off：不支持
     }
 
     /**
-     * Get 规则引擎
+     * Get <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleEngine 规则引擎
+     * @return RuleEngine <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleEngine getRuleEngine() {
@@ -1879,9 +1739,9 @@ off：不支持
     }
 
     /**
-     * Set 规则引擎
+     * Set <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleEngine 规则引擎
+     * @param RuleEngine <p>规则引擎</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleEngine(RuleEngine RuleEngine) {
@@ -1889,9 +1749,9 @@ off：不支持
     }
 
     /**
-     * Get 主域名
+     * Get <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentHost 主域名
+     * @return ParentHost <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentHost() {
@@ -1899,9 +1759,9 @@ off：不支持
     }
 
     /**
-     * Set 主域名
+     * Set <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentHost 主域名
+     * @param ParentHost <p>主域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentHost(String ParentHost) {
@@ -1909,9 +1769,9 @@ off：不支持
     }
 
     /**
-     * Get 华为云对象存储回源鉴权
+     * Get <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HwPrivateAccess 华为云对象存储回源鉴权
+     * @return HwPrivateAccess <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HwPrivateAccess getHwPrivateAccess() {
@@ -1919,9 +1779,9 @@ off：不支持
     }
 
     /**
-     * Set 华为云对象存储回源鉴权
+     * Set <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HwPrivateAccess 华为云对象存储回源鉴权
+     * @param HwPrivateAccess <p>华为云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
@@ -1929,9 +1789,9 @@ off：不支持
     }
 
     /**
-     * Get 七牛云对象存储回源鉴权
+     * Get <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QnPrivateAccess 七牛云对象存储回源鉴权
+     * @return QnPrivateAccess <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QnPrivateAccess getQnPrivateAccess() {
@@ -1939,9 +1799,9 @@ off：不支持
     }
 
     /**
-     * Set 七牛云对象存储回源鉴权
+     * Set <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QnPrivateAccess 七牛云对象存储回源鉴权
+     * @param QnPrivateAccess <p>七牛云对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
@@ -1949,9 +1809,9 @@ off：不支持
     }
 
     /**
-     * Get HTTPS服务，缺省时默认开启
+     * Get <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpsBilling HTTPS服务，缺省时默认开启
+     * @return HttpsBilling <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HttpsBilling getHttpsBilling() {
@@ -1959,9 +1819,9 @@ off：不支持
     }
 
     /**
-     * Set HTTPS服务，缺省时默认开启
+     * Set <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsBilling HTTPS服务，缺省时默认开启
+     * @param HttpsBilling <p>HTTPS服务，缺省时默认开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsBilling(HttpsBilling HttpsBilling) {
@@ -1969,9 +1829,9 @@ off：不支持
     }
 
     /**
-     * Get 其他厂商对象存储回源鉴权
+     * Get <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OthersPrivateAccess 其他厂商对象存储回源鉴权
+     * @return OthersPrivateAccess <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OthersPrivateAccess getOthersPrivateAccess() {
@@ -1979,9 +1839,9 @@ off：不支持
     }
 
     /**
-     * Set 其他厂商对象存储回源鉴权
+     * Set <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OthersPrivateAccess 其他厂商对象存储回源鉴权
+     * @param OthersPrivateAccess <p>其他厂商对象存储回源鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthersPrivateAccess(OthersPrivateAccess OthersPrivateAccess) {
@@ -1989,9 +1849,9 @@ off：不支持
     }
 
     /**
-     * Get 参数黑名单
+     * Get <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamFilter 参数黑名单
+     * @return ParamFilter <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamFilter getParamFilter() {
@@ -1999,9 +1859,9 @@ off：不支持
     }
 
     /**
-     * Set 参数黑名单
+     * Set <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamFilter 参数黑名单
+     * @param ParamFilter <p>参数黑名单</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamFilter(ParamFilter ParamFilter) {
@@ -2009,32 +1869,32 @@ off：不支持
     }
 
     /**
-     * Get 流量一键防盗刷配置 
-     * @return AutoGuard 流量一键防盗刷配置
+     * Get <p>流量一键防盗刷配置</p> 
+     * @return AutoGuard <p>流量一键防盗刷配置</p>
      */
     public AutoGuard getAutoGuard() {
         return this.AutoGuard;
     }
 
     /**
-     * Set 流量一键防盗刷配置
-     * @param AutoGuard 流量一键防盗刷配置
+     * Set <p>流量一键防盗刷配置</p>
+     * @param AutoGuard <p>流量一键防盗刷配置</p>
      */
     public void setAutoGuard(AutoGuard AutoGuard) {
         this.AutoGuard = AutoGuard;
     }
 
     /**
-     * Get 区域访问控制配置 
-     * @return GeoBlocker 区域访问控制配置
+     * Get <p>区域访问控制配置</p> 
+     * @return GeoBlocker <p>区域访问控制配置</p>
      */
     public GeoBlocker getGeoBlocker() {
         return this.GeoBlocker;
     }
 
     /**
-     * Set 区域访问控制配置
-     * @param GeoBlocker 区域访问控制配置
+     * Set <p>区域访问控制配置</p>
+     * @param GeoBlocker <p>区域访问控制配置</p>
      */
     public void setGeoBlocker(GeoBlocker GeoBlocker) {
         this.GeoBlocker = GeoBlocker;

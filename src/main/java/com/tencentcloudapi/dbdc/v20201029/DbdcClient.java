@@ -325,6 +325,17 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyDBCustomClusterAttributes）用于修改 DB Custom 集群的属性。
+     * @param req ModifyDBCustomClusterAttributesRequest
+     * @return ModifyDBCustomClusterAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomClusterAttributesResponse ModifyDBCustomClusterAttributes(ModifyDBCustomClusterAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomClusterAttributes", ModifyDBCustomClusterAttributesResponse.class);
+    }
+
+    /**
      *该接口（ModifyDBCustomClusterNodeConfig）用于修改 DB Custom 集群中节点的配置。
      * @param req ModifyDBCustomClusterNodeConfigRequest
      * @return ModifyDBCustomClusterNodeConfigResponse

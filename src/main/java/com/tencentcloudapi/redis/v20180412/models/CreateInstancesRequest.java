@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel {
 
     /**
-    * <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+    * <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
     */
     @SerializedName("TypeId")
     @Expose
@@ -213,16 +213,44 @@ public class CreateInstancesRequest extends AbstractModel {
     private Boolean EncryptPassword;
 
     /**
-     * Get <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul> 
-     * @return TypeId <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+    * <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+    */
+    @SerializedName("PasswordPolicy")
+    @Expose
+    private PasswordPolicy PasswordPolicy;
+
+    /**
+    * <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+    */
+    @SerializedName("EnableSSL")
+    @Expose
+    private Boolean EnableSSL;
+
+    /**
+    * <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+    */
+    @SerializedName("SSLBindPrivateIPv4")
+    @Expose
+    private Boolean SSLBindPrivateIPv4;
+
+    /**
+    * <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+    */
+    @SerializedName("ConnectionMode")
+    @Expose
+    private Long ConnectionMode;
+
+    /**
+     * Get <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul> 
+     * @return TypeId <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
-     * @param TypeId <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+     * Set <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
+     * @param TypeId <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>19：Valkey 8.0 内存版（标准架构）。</li><li>20：Valkey 8.0 内存版（集群架构）。</li><li>21：Valkey 9.0 内存版（标准架构）。</li><li>22：Valkey 9.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。<br><strong>说明</strong>：CKV 版本当前有存量用户使用，暂时保留。</li></ul>
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -644,6 +672,70 @@ public class CreateInstancesRequest extends AbstractModel {
         this.EncryptPassword = EncryptPassword;
     }
 
+    /**
+     * Get <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p> 
+     * @return PasswordPolicy <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+     */
+    public PasswordPolicy getPasswordPolicy() {
+        return this.PasswordPolicy;
+    }
+
+    /**
+     * Set <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+     * @param PasswordPolicy <p>实例级密码复杂度策略。未传入或 Enabled=false 时，视为不启用策略，按系统默认规则校验。</p>
+     */
+    public void setPasswordPolicy(PasswordPolicy PasswordPolicy) {
+        this.PasswordPolicy = PasswordPolicy;
+    }
+
+    /**
+     * Get <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul> 
+     * @return EnableSSL <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+     */
+    public Boolean getEnableSSL() {
+        return this.EnableSSL;
+    }
+
+    /**
+     * Set <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+     * @param EnableSSL <p>是否开启 SSL 加密传输。</p><ul><li>true：开启。</li><li>false：关闭（默认值）。</li></ul>
+     */
+    public void setEnableSSL(Boolean EnableSSL) {
+        this.EnableSSL = EnableSSL;
+    }
+
+    /**
+     * Get <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul> 
+     * @return SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+     */
+    public Boolean getSSLBindPrivateIPv4() {
+        return this.SSLBindPrivateIPv4;
+    }
+
+    /**
+     * Set <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+     * @param SSLBindPrivateIPv4 <p>开启 SSL 时，是否将实例的内网 IPv4 地址写入证书的域名别名（SAN）中。仅在 EnableSSL 为 true 时生效。</p><ul><li>true：允许使用内网 IP 进行 SSL 证书校验。</li><li>false：不添加证书的 SAN 扩展信息。</li></ul>
+     */
+    public void setSSLBindPrivateIPv4(Boolean SSLBindPrivateIPv4) {
+        this.SSLBindPrivateIPv4 = SSLBindPrivateIPv4;
+    }
+
+    /**
+     * Get <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul> 
+     * @return ConnectionMode <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+     */
+    public Long getConnectionMode() {
+        return this.ConnectionMode;
+    }
+
+    /**
+     * Set <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+     * @param ConnectionMode <p>实例连接访问模式。</p><ul><li>0：代理模式（Proxy Mode，默认值）。</li><li>1：直连模式（Direct Connect Mode）。</li></ul>
+     */
+    public void setConnectionMode(Long ConnectionMode) {
+        this.ConnectionMode = ConnectionMode;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -745,6 +837,18 @@ public class CreateInstancesRequest extends AbstractModel {
         if (source.EncryptPassword != null) {
             this.EncryptPassword = new Boolean(source.EncryptPassword);
         }
+        if (source.PasswordPolicy != null) {
+            this.PasswordPolicy = new PasswordPolicy(source.PasswordPolicy);
+        }
+        if (source.EnableSSL != null) {
+            this.EnableSSL = new Boolean(source.EnableSSL);
+        }
+        if (source.SSLBindPrivateIPv4 != null) {
+            this.SSLBindPrivateIPv4 = new Boolean(source.SSLBindPrivateIPv4);
+        }
+        if (source.ConnectionMode != null) {
+            this.ConnectionMode = new Long(source.ConnectionMode);
+        }
     }
 
 
@@ -779,6 +883,10 @@ public class CreateInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
         this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+        this.setParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
+        this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+        this.setParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
+        this.setParamSimple(map, prefix + "ConnectionMode", this.ConnectionMode);
 
     }
 }

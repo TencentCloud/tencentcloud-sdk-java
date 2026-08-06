@@ -472,6 +472,13 @@ public class DeployContainerApplicationRequest extends AbstractModel {
     private String [] ImagePullSecretList;
 
     /**
+    * <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+    */
+    @SerializedName("MeshSidecarVersion")
+    @Expose
+    private String MeshSidecarVersion;
+
+    /**
      * Get <p>应用ID</p> 
      * @return ApplicationId <p>应用ID</p>
      */
@@ -1495,6 +1502,22 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.ImagePullSecretList = ImagePullSecretList;
     }
 
+    /**
+     * Get <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul> 
+     * @return MeshSidecarVersion <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+     */
+    public String getMeshSidecarVersion() {
+        return this.MeshSidecarVersion;
+    }
+
+    /**
+     * Set <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+     * @param MeshSidecarVersion <p>用于区分使用sidecar的版本是稳定版还是发行版</p><p>枚举值：</p><ul><li>stable： sidecar稳定版</li><li>release： sidecar发行版</li></ul>
+     */
+    public void setMeshSidecarVersion(String MeshSidecarVersion) {
+        this.MeshSidecarVersion = MeshSidecarVersion;
+    }
+
     public DeployContainerApplicationRequest() {
     }
 
@@ -1722,6 +1745,9 @@ public class DeployContainerApplicationRequest extends AbstractModel {
                 this.ImagePullSecretList[i] = new String(source.ImagePullSecretList[i]);
             }
         }
+        if (source.MeshSidecarVersion != null) {
+            this.MeshSidecarVersion = new String(source.MeshSidecarVersion);
+        }
     }
 
 
@@ -1793,6 +1819,7 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
         this.setParamSimple(map, prefix + "DoNotStart", this.DoNotStart);
         this.setParamArraySimple(map, prefix + "ImagePullSecretList.", this.ImagePullSecretList);
+        this.setParamSimple(map, prefix + "MeshSidecarVersion", this.MeshSidecarVersion);
 
     }
 }

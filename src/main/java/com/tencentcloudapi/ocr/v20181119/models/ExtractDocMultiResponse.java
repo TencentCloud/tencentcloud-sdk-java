@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ExtractDocMultiResponse extends AbstractModel {
 
     /**
-    * 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
+    * <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 配置结构化文本信息
+    * <p>配置结构化文本信息</p>
     */
     @SerializedName("StructuralList")
     @Expose
     private GroupInfo [] StructuralList;
 
     /**
-    * 还原文本信息
+    * <p>还原文本信息</p>
     */
     @SerializedName("WordList")
     @Expose
     private WordItem [] WordList;
 
     /**
-    * 样本识别字段数
+    * <p>样本识别字段数</p>
     */
     @SerializedName("TokenNum")
     @Expose
@@ -59,64 +59,64 @@ public class ExtractDocMultiResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负 
-     * @return Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
+     * Get <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p> 
+     * @return Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
-     * @param Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
+     * Set <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
+     * @param Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 配置结构化文本信息 
-     * @return StructuralList 配置结构化文本信息
+     * Get <p>配置结构化文本信息</p> 
+     * @return StructuralList <p>配置结构化文本信息</p>
      */
     public GroupInfo [] getStructuralList() {
         return this.StructuralList;
     }
 
     /**
-     * Set 配置结构化文本信息
-     * @param StructuralList 配置结构化文本信息
+     * Set <p>配置结构化文本信息</p>
+     * @param StructuralList <p>配置结构化文本信息</p>
      */
     public void setStructuralList(GroupInfo [] StructuralList) {
         this.StructuralList = StructuralList;
     }
 
     /**
-     * Get 还原文本信息 
-     * @return WordList 还原文本信息
+     * Get <p>还原文本信息</p> 
+     * @return WordList <p>还原文本信息</p>
      */
     public WordItem [] getWordList() {
         return this.WordList;
     }
 
     /**
-     * Set 还原文本信息
-     * @param WordList 还原文本信息
+     * Set <p>还原文本信息</p>
+     * @param WordList <p>还原文本信息</p>
      */
     public void setWordList(WordItem [] WordList) {
         this.WordList = WordList;
     }
 
     /**
-     * Get 样本识别字段数 
-     * @return TokenNum 样本识别字段数
+     * Get <p>样本识别字段数</p> 
+     * @return TokenNum <p>样本识别字段数</p>
      */
     public Long getTokenNum() {
         return this.TokenNum;
     }
 
     /**
-     * Set 样本识别字段数
-     * @param TokenNum 样本识别字段数
+     * Set <p>样本识别字段数</p>
+     * @param TokenNum <p>样本识别字段数</p>
      */
     public void setTokenNum(Long TokenNum) {
         this.TokenNum = TokenNum;

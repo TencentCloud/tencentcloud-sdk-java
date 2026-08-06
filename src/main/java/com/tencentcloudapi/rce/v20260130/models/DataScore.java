@@ -38,6 +38,14 @@ public class DataScore extends AbstractModel {
     private RiskLabel [] RiskLabels;
 
     /**
+    * <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskScore")
+    @Expose
+    private Long RiskScore;
+
+    /**
      * Get <p>风险等级</p> 
      * @return RiskLevel <p>风险等级</p>
      */
@@ -69,6 +77,26 @@ public class DataScore extends AbstractModel {
         this.RiskLabels = RiskLabels;
     }
 
+    /**
+     * Get <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskScore <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRiskScore() {
+        return this.RiskScore;
+    }
+
+    /**
+     * Set <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskScore <p>综合风险分数。</p><p>取值范围：[1, 1000]</p><p>数值越大，风险越大。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskScore(Long RiskScore) {
+        this.RiskScore = RiskScore;
+    }
+
     public DataScore() {
     }
 
@@ -86,6 +114,9 @@ public class DataScore extends AbstractModel {
                 this.RiskLabels[i] = new RiskLabel(source.RiskLabels[i]);
             }
         }
+        if (source.RiskScore != null) {
+            this.RiskScore = new Long(source.RiskScore);
+        }
     }
 
 
@@ -95,6 +126,7 @@ public class DataScore extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArrayObj(map, prefix + "RiskLabels.", this.RiskLabels);
+        this.setParamSimple(map, prefix + "RiskScore", this.RiskScore);
 
     }
 }

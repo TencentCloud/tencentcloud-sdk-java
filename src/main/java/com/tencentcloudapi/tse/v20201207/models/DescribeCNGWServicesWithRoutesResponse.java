@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FlightInvoiceOCRResponse extends AbstractModel {
+public class DescribeCNGWServicesWithRoutesResponse extends AbstractModel {
 
     /**
-    * 机票行程单识别结果，具体内容请点击左侧链接。
+    * <p>无</p>
     */
-    @SerializedName("FlightInvoiceInfos")
+    @SerializedName("Result")
     @Expose
-    private FlightInvoiceInfo [] FlightInvoiceInfos;
+    private KongServiceWithRoutes Result;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class FlightInvoiceOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 机票行程单识别结果，具体内容请点击左侧链接。 
-     * @return FlightInvoiceInfos 机票行程单识别结果，具体内容请点击左侧链接。
+     * Get <p>无</p> 
+     * @return Result <p>无</p>
      */
-    public FlightInvoiceInfo [] getFlightInvoiceInfos() {
-        return this.FlightInvoiceInfos;
+    public KongServiceWithRoutes getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 机票行程单识别结果，具体内容请点击左侧链接。
-     * @param FlightInvoiceInfos 机票行程单识别结果，具体内容请点击左侧链接。
+     * Set <p>无</p>
+     * @param Result <p>无</p>
      */
-    public void setFlightInvoiceInfos(FlightInvoiceInfo [] FlightInvoiceInfos) {
-        this.FlightInvoiceInfos = FlightInvoiceInfos;
+    public void setResult(KongServiceWithRoutes Result) {
+        this.Result = Result;
     }
 
     /**
@@ -69,19 +69,16 @@ public class FlightInvoiceOCRResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public FlightInvoiceOCRResponse() {
+    public DescribeCNGWServicesWithRoutesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public FlightInvoiceOCRResponse(FlightInvoiceOCRResponse source) {
-        if (source.FlightInvoiceInfos != null) {
-            this.FlightInvoiceInfos = new FlightInvoiceInfo[source.FlightInvoiceInfos.length];
-            for (int i = 0; i < source.FlightInvoiceInfos.length; i++) {
-                this.FlightInvoiceInfos[i] = new FlightInvoiceInfo(source.FlightInvoiceInfos[i]);
-            }
+    public DescribeCNGWServicesWithRoutesResponse(DescribeCNGWServicesWithRoutesResponse source) {
+        if (source.Result != null) {
+            this.Result = new KongServiceWithRoutes(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +90,7 @@ public class FlightInvoiceOCRResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FlightInvoiceInfos.", this.FlightInvoiceInfos);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

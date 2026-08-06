@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayRoutesResponse extends AbstractModel {
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewayRoutesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return Result 无
+     * Get <p>无</p> 
+     * @return Result <p>无</p>
      */
     public KongServiceRouteList getResult() {
         return this.Result;
     }
 
     /**
-     * Set 无
-     * @param Result 无
+     * Set <p>无</p>
+     * @param Result <p>无</p>
      */
     public void setResult(KongServiceRouteList Result) {
         this.Result = Result;

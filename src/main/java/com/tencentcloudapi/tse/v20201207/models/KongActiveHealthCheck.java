@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class KongActiveHealthCheck extends AbstractModel {
 
     /**
-    * 主动健康检查健康探测间隔，单位：秒，0表示不开启
+    * <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
     */
     @SerializedName("HealthyInterval")
     @Expose
     private Long HealthyInterval;
 
     /**
-    * 主动健康检查异常探测间隔，单位：秒，0表示不开启
+    * <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
     */
     @SerializedName("UnHealthyInterval")
     @Expose
     private Long UnHealthyInterval;
 
     /**
-    * 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
+    * <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
     */
     @SerializedName("HttpPath")
     @Expose
     private String HttpPath;
 
     /**
-    * GET HTTP 请求的超时时间，单位：秒。默认 60。
+    * <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Float Timeout;
 
     /**
-     * Get 主动健康检查健康探测间隔，单位：秒，0表示不开启 
-     * @return HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
+    * <p>Host头</p>
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
+     * Get <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p> 
+     * @return HealthyInterval <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
      */
     public Long getHealthyInterval() {
         return this.HealthyInterval;
     }
 
     /**
-     * Set 主动健康检查健康探测间隔，单位：秒，0表示不开启
-     * @param HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
+     * Set <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
+     * @param HealthyInterval <p>主动健康检查健康探测间隔，单位：秒，0表示不开启</p>
      */
     public void setHealthyInterval(Long HealthyInterval) {
         this.HealthyInterval = HealthyInterval;
     }
 
     /**
-     * Get 主动健康检查异常探测间隔，单位：秒，0表示不开启 
-     * @return UnHealthyInterval 主动健康检查异常探测间隔，单位：秒，0表示不开启
+     * Get <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p> 
+     * @return UnHealthyInterval <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
      */
     public Long getUnHealthyInterval() {
         return this.UnHealthyInterval;
     }
 
     /**
-     * Set 主动健康检查异常探测间隔，单位：秒，0表示不开启
-     * @param UnHealthyInterval 主动健康检查异常探测间隔，单位：秒，0表示不开启
+     * Set <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
+     * @param UnHealthyInterval <p>主动健康检查异常探测间隔，单位：秒，0表示不开启</p>
      */
     public void setUnHealthyInterval(Long UnHealthyInterval) {
         this.UnHealthyInterval = UnHealthyInterval;
     }
 
     /**
-     * Get 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。 
-     * @return HttpPath 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
+     * Get <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p> 
+     * @return HttpPath <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
      */
     public String getHttpPath() {
         return this.HttpPath;
     }
 
     /**
-     * Set 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-     * @param HttpPath 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
+     * Set <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
+     * @param HttpPath <p>在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。</p>
      */
     public void setHttpPath(String HttpPath) {
         this.HttpPath = HttpPath;
     }
 
     /**
-     * Get GET HTTP 请求的超时时间，单位：秒。默认 60。 
-     * @return Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
+     * Get <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p> 
+     * @return Timeout <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
      */
     public Float getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set GET HTTP 请求的超时时间，单位：秒。默认 60。
-     * @param Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
+     * Set <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
+     * @param Timeout <p>GET HTTP 请求的超时时间，单位：秒。默认 60。</p>
      */
     public void setTimeout(Float Timeout) {
         this.Timeout = Timeout;
+    }
+
+    /**
+     * Get <p>Host头</p> 
+     * @return HostHeader <p>Host头</p>
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set <p>Host头</p>
+     * @param HostHeader <p>Host头</p>
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
     }
 
     public KongActiveHealthCheck() {
@@ -135,6 +158,9 @@ public class KongActiveHealthCheck extends AbstractModel {
         if (source.Timeout != null) {
             this.Timeout = new Float(source.Timeout);
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class KongActiveHealthCheck extends AbstractModel {
         this.setParamSimple(map, prefix + "UnHealthyInterval", this.UnHealthyInterval);
         this.setParamSimple(map, prefix + "HttpPath", this.HttpPath);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }
 }

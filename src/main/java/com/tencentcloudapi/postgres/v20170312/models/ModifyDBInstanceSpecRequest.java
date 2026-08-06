@@ -24,268 +24,256 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>实例ID，形如：postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 修改后的实例内存大小，单位GiB。
+    * <p>修改后的实例内存大小，单位GB。</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
+    * <p>修改后的实例磁盘大小，单位GB。该参数的设置步长为10。</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+    * <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 代金券ID列表，目前仅支持指定一张代金券。
+    * <p>代金券ID列表，目前仅支持指定一张代金券。</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * 活动ID。
+    * <p>活动ID。</p>
     */
     @SerializedName("ActivityId")
     @Expose
     private Long ActivityId;
 
     /**
-    * 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 </li>
-<li>1：指定时间切换</li>
-<li>2：维护时间窗口内</li>切换
-默认值：0 
+    * <p>指定实例配置完成变更后的切换时间。</p><li>0：立即切换 </li><li>1：指定时间切换</li><li>2：维护时间窗口内</li>切换默认值：0
     */
     @SerializedName("SwitchTag")
     @Expose
     private Long SwitchTag;
 
     /**
-    * 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+    * <p>切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。</p>
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+    * <p>切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。</p>
     */
     @SerializedName("SwitchEndTime")
     @Expose
     private String SwitchEndTime;
 
     /**
-    * 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+    * <p>修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GB，则不传入Cpu时，Cpu默认为1。</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>变配时同步修改的参数列表</p>
+    */
+    @SerializedName("SyncModifyParams")
+    @Expose
+    private ParamEntry [] SyncModifyParams;
+
+    /**
+     * Get <p>实例ID，形如：postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例ID，形如：postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>实例ID，形如：postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例ID，形如：postgres-6bwgamo3。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 修改后的实例内存大小，单位GiB。 
-     * @return Memory 修改后的实例内存大小，单位GiB。
+     * Get <p>修改后的实例内存大小，单位GB。</p> 
+     * @return Memory <p>修改后的实例内存大小，单位GB。</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 修改后的实例内存大小，单位GiB。
-     * @param Memory 修改后的实例内存大小，单位GiB。
+     * Set <p>修改后的实例内存大小，单位GB。</p>
+     * @param Memory <p>修改后的实例内存大小，单位GB。</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。 
-     * @return Storage 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
+     * Get <p>修改后的实例磁盘大小，单位GB。该参数的设置步长为10。</p> 
+     * @return Storage <p>修改后的实例磁盘大小，单位GB。该参数的设置步长为10。</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
-     * @param Storage 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
+     * Set <p>修改后的实例磁盘大小，单位GB。该参数的设置步长为10。</p>
+     * @param Storage <p>修改后的实例磁盘大小，单位GB。该参数的设置步长为10。</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0 
-     * @return AutoVoucher 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Get <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0 
+     * @return AutoVoucher <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
-     * @param AutoVoucher 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Set <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
+     * @param AutoVoucher <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 代金券ID列表，目前仅支持指定一张代金券。 
-     * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * Get <p>代金券ID列表，目前仅支持指定一张代金券。</p> 
+     * @return VoucherIds <p>代金券ID列表，目前仅支持指定一张代金券。</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 代金券ID列表，目前仅支持指定一张代金券。
-     * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * Set <p>代金券ID列表，目前仅支持指定一张代金券。</p>
+     * @param VoucherIds <p>代金券ID列表，目前仅支持指定一张代金券。</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get 活动ID。 
-     * @return ActivityId 活动ID。
+     * Get <p>活动ID。</p> 
+     * @return ActivityId <p>活动ID。</p>
      */
     public Long getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set 活动ID。
-     * @param ActivityId 活动ID。
+     * Set <p>活动ID。</p>
+     * @param ActivityId <p>活动ID。</p>
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 </li>
-<li>1：指定时间切换</li>
-<li>2：维护时间窗口内</li>切换
-默认值：0  
-     * @return SwitchTag 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 </li>
-<li>1：指定时间切换</li>
-<li>2：维护时间窗口内</li>切换
-默认值：0 
+     * Get <p>指定实例配置完成变更后的切换时间。</p><li>0：立即切换 </li><li>1：指定时间切换</li><li>2：维护时间窗口内</li>切换默认值：0 
+     * @return SwitchTag <p>指定实例配置完成变更后的切换时间。</p><li>0：立即切换 </li><li>1：指定时间切换</li><li>2：维护时间窗口内</li>切换默认值：0
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 </li>
-<li>1：指定时间切换</li>
-<li>2：维护时间窗口内</li>切换
-默认值：0 
-     * @param SwitchTag 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 </li>
-<li>1：指定时间切换</li>
-<li>2：维护时间窗口内</li>切换
-默认值：0 
+     * Set <p>指定实例配置完成变更后的切换时间。</p><li>0：立即切换 </li><li>1：指定时间切换</li><li>2：维护时间窗口内</li>切换默认值：0
+     * @param SwitchTag <p>指定实例配置完成变更后的切换时间。</p><li>0：立即切换 </li><li>1：指定时间切换</li><li>2：维护时间窗口内</li>切换默认值：0
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
     }
 
     /**
-     * Get 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。 
-     * @return SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+     * Get <p>切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。</p> 
+     * @return SwitchStartTime <p>切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。</p>
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
-     * @param SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+     * Set <p>切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。</p>
+     * @param SwitchStartTime <p>切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。</p>
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。 
-     * @return SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+     * Get <p>切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。</p> 
+     * @return SwitchEndTime <p>切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。</p>
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
-     * @param SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+     * Set <p>切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。</p>
+     * @param SwitchEndTime <p>切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。</p>
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;
     }
 
     /**
-     * Get 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。 
-     * @return Cpu 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+     * Get <p>修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GB，则不传入Cpu时，Cpu默认为1。</p> 
+     * @return Cpu <p>修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GB，则不传入Cpu时，Cpu默认为1。</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
-     * @param Cpu 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+     * Set <p>修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GB，则不传入Cpu时，Cpu默认为1。</p>
+     * @param Cpu <p>修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GB，则不传入Cpu时，Cpu默认为1。</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
+    }
+
+    /**
+     * Get <p>变配时同步修改的参数列表</p> 
+     * @return SyncModifyParams <p>变配时同步修改的参数列表</p>
+     */
+    public ParamEntry [] getSyncModifyParams() {
+        return this.SyncModifyParams;
+    }
+
+    /**
+     * Set <p>变配时同步修改的参数列表</p>
+     * @param SyncModifyParams <p>变配时同步修改的参数列表</p>
+     */
+    public void setSyncModifyParams(ParamEntry [] SyncModifyParams) {
+        this.SyncModifyParams = SyncModifyParams;
     }
 
     public ModifyDBInstanceSpecRequest() {
@@ -329,6 +317,12 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         if (source.Cpu != null) {
             this.Cpu = new Long(source.Cpu);
         }
+        if (source.SyncModifyParams != null) {
+            this.SyncModifyParams = new ParamEntry[source.SyncModifyParams.length];
+            for (int i = 0; i < source.SyncModifyParams.length; i++) {
+                this.SyncModifyParams[i] = new ParamEntry(source.SyncModifyParams[i]);
+            }
+        }
     }
 
 
@@ -346,6 +340,7 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamArrayObj(map, prefix + "SyncModifyParams.", this.SyncModifyParams);
 
     }
 }

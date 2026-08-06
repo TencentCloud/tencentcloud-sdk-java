@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeClustersResponse extends AbstractModel {
 
     /**
-    * 集群总数
+    * <p>集群总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 集群列表
+    * <p>集群列表</p>
     */
     @SerializedName("ClusterSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeClustersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群总数 
-     * @return TotalCount 集群总数
+     * Get <p>集群总数</p> 
+     * @return TotalCount <p>集群总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 集群总数
-     * @param TotalCount 集群总数
+     * Set <p>集群总数</p>
+     * @param TotalCount <p>集群总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 集群列表 
-     * @return ClusterSet 集群列表
+     * Get <p>集群列表</p> 
+     * @return ClusterSet <p>集群列表</p>
      */
     public Cluster [] getClusterSet() {
         return this.ClusterSet;
     }
 
     /**
-     * Set 集群列表
-     * @param ClusterSet 集群列表
+     * Set <p>集群列表</p>
+     * @param ClusterSet <p>集群列表</p>
      */
     public void setClusterSet(Cluster [] ClusterSet) {
         this.ClusterSet = ClusterSet;

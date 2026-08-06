@@ -574,6 +574,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询构建日志
+     * @param req DescribeCloudBaseRunBuildLogRequest
+     * @return DescribeCloudBaseRunBuildLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunBuildLogResponse DescribeCloudBaseRunBuildLog(DescribeCloudBaseRunBuildLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudBaseRunBuildLog", DescribeCloudBaseRunBuildLogResponse.class);
+    }
+
+    /**
      *查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
      * @param req DescribeCloudBaseRunServerVersionRequest
      * @return DescribeCloudBaseRunServerVersionResponse

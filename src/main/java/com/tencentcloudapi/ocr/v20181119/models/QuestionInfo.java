@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class QuestionInfo extends AbstractModel {
 
     /**
-    * 旋转角度
+    * <p>旋转角度</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 预处理后图片高度
+    * <p>预处理后图片高度</p><p>单位：px</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 预处理后图片宽度
+    * <p>预处理后图片宽度</p><p>单位：px</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 文档元素
+    * <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultList")
@@ -53,78 +53,78 @@ public class QuestionInfo extends AbstractModel {
     private ResultList [] ResultList;
 
     /**
-    * 输入图片高度
+    * <p>输入图片高度</p><p>单位：px</p>
     */
     @SerializedName("OrgHeight")
     @Expose
     private Long OrgHeight;
 
     /**
-    * 输入图片宽度
+    * <p>输入图片宽度</p><p>单位：px</p>
     */
     @SerializedName("OrgWidth")
     @Expose
     private Long OrgWidth;
 
     /**
-    * 预处理后的图片base64编码
+    * <p>预处理后的图片base64编码</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-     * Get 旋转角度 
-     * @return Angle 旋转角度
+     * Get <p>旋转角度</p> 
+     * @return Angle <p>旋转角度</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 旋转角度
-     * @param Angle 旋转角度
+     * Set <p>旋转角度</p>
+     * @param Angle <p>旋转角度</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 预处理后图片高度 
-     * @return Height 预处理后图片高度
+     * Get <p>预处理后图片高度</p><p>单位：px</p> 
+     * @return Height <p>预处理后图片高度</p><p>单位：px</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 预处理后图片高度
-     * @param Height 预处理后图片高度
+     * Set <p>预处理后图片高度</p><p>单位：px</p>
+     * @param Height <p>预处理后图片高度</p><p>单位：px</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 预处理后图片宽度 
-     * @return Width 预处理后图片宽度
+     * Get <p>预处理后图片宽度</p><p>单位：px</p> 
+     * @return Width <p>预处理后图片宽度</p><p>单位：px</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 预处理后图片宽度
-     * @param Width 预处理后图片宽度
+     * Set <p>预处理后图片宽度</p><p>单位：px</p>
+     * @param Width <p>预处理后图片宽度</p><p>单位：px</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 文档元素
+     * Get <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultList 文档元素
+     * @return ResultList <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResultList [] getResultList() {
@@ -132,9 +132,9 @@ public class QuestionInfo extends AbstractModel {
     }
 
     /**
-     * Set 文档元素
+     * Set <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultList 文档元素
+     * @param ResultList <p>文档元素</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultList(ResultList [] ResultList) {
@@ -142,48 +142,48 @@ public class QuestionInfo extends AbstractModel {
     }
 
     /**
-     * Get 输入图片高度 
-     * @return OrgHeight 输入图片高度
+     * Get <p>输入图片高度</p><p>单位：px</p> 
+     * @return OrgHeight <p>输入图片高度</p><p>单位：px</p>
      */
     public Long getOrgHeight() {
         return this.OrgHeight;
     }
 
     /**
-     * Set 输入图片高度
-     * @param OrgHeight 输入图片高度
+     * Set <p>输入图片高度</p><p>单位：px</p>
+     * @param OrgHeight <p>输入图片高度</p><p>单位：px</p>
      */
     public void setOrgHeight(Long OrgHeight) {
         this.OrgHeight = OrgHeight;
     }
 
     /**
-     * Get 输入图片宽度 
-     * @return OrgWidth 输入图片宽度
+     * Get <p>输入图片宽度</p><p>单位：px</p> 
+     * @return OrgWidth <p>输入图片宽度</p><p>单位：px</p>
      */
     public Long getOrgWidth() {
         return this.OrgWidth;
     }
 
     /**
-     * Set 输入图片宽度
-     * @param OrgWidth 输入图片宽度
+     * Set <p>输入图片宽度</p><p>单位：px</p>
+     * @param OrgWidth <p>输入图片宽度</p><p>单位：px</p>
      */
     public void setOrgWidth(Long OrgWidth) {
         this.OrgWidth = OrgWidth;
     }
 
     /**
-     * Get 预处理后的图片base64编码 
-     * @return ImageBase64 预处理后的图片base64编码
+     * Get <p>预处理后的图片base64编码</p> 
+     * @return ImageBase64 <p>预处理后的图片base64编码</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 预处理后的图片base64编码
-     * @param ImageBase64 预处理后的图片base64编码
+     * Set <p>预处理后的图片base64编码</p>
+     * @param ImageBase64 <p>预处理后的图片base64编码</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;

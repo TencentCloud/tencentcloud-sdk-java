@@ -59,6 +59,13 @@ public class MultimodalDocParseRequest extends AbstractModel {
     private String PageRange;
 
     /**
+    * <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
      * Get <p>文件的 Url 地址，支持FileType参数对应的文件格式及大小。文件下载时间不超过3秒。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p> 
      * @return FileUrl <p>文件的 Url 地址，支持FileType参数对应的文件格式及大小。文件下载时间不超过3秒。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
@@ -138,6 +145,22 @@ public class MultimodalDocParseRequest extends AbstractModel {
         this.PageRange = PageRange;
     }
 
+    /**
+     * Get <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p> 
+     * @return TaskType <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+     * @param TaskType <p>任务类型</p><p>枚举值：</p><ul><li>0： 文档解析</li><li>1： 图片OCR识别</li><li>2： 切片文字识别</li><li>3： 切片表格识别</li><li>4： 切片代码识别</li></ul><p>默认值：0</p>
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public MultimodalDocParseRequest() {
     }
 
@@ -161,6 +184,9 @@ public class MultimodalDocParseRequest extends AbstractModel {
         if (source.PageRange != null) {
             this.PageRange = new String(source.PageRange);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class MultimodalDocParseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultType", this.ResultType);
         this.setParamSimple(map, prefix + "EnableSubImg", this.EnableSubImg);
         this.setParamSimple(map, prefix + "PageRange", this.PageRange);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.cngw.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextFormula extends AbstractModel {
+public class ListFilter extends AbstractModel {
 
     /**
-    * 识别出的文本行内容
+    * 过滤字段
     */
-    @SerializedName("DetectedText")
+    @SerializedName("Key")
     @Expose
-    private String DetectedText;
+    private String Key;
 
     /**
-     * Get 识别出的文本行内容 
-     * @return DetectedText 识别出的文本行内容
+    * 过滤值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 过滤字段 
+     * @return Key 过滤字段
      */
-    public String getDetectedText() {
-        return this.DetectedText;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 识别出的文本行内容
-     * @param DetectedText 识别出的文本行内容
+     * Set 过滤字段
+     * @param Key 过滤字段
      */
-    public void setDetectedText(String DetectedText) {
-        this.DetectedText = DetectedText;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public TextFormula() {
+    /**
+     * Get 过滤值 
+     * @return Value 过滤值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 过滤值
+     * @param Value 过滤值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public ListFilter() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextFormula(TextFormula source) {
-        if (source.DetectedText != null) {
-            this.DetectedText = new String(source.DetectedText);
+    public ListFilter(ListFilter source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -64,7 +90,8 @@ public class TextFormula extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

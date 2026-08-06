@@ -94,6 +94,20 @@ public class Device extends AbstractModel {
     private String SdkBuildVersion;
 
     /**
+    * <p>验签token，验签功能启用请联系我们。</p>
+    */
+    @SerializedName("SignToken")
+    @Expose
+    private String SignToken;
+
+    /**
+    * <p>token生成时间戳，毫秒级。</p>
+    */
+    @SerializedName("TokenTime")
+    @Expose
+    private String TokenTime;
+
+    /**
      * Get <p>设备ID</p> 
      * @return DeviceId <p>设备ID</p>
      */
@@ -253,6 +267,38 @@ public class Device extends AbstractModel {
         this.SdkBuildVersion = SdkBuildVersion;
     }
 
+    /**
+     * Get <p>验签token，验签功能启用请联系我们。</p> 
+     * @return SignToken <p>验签token，验签功能启用请联系我们。</p>
+     */
+    public String getSignToken() {
+        return this.SignToken;
+    }
+
+    /**
+     * Set <p>验签token，验签功能启用请联系我们。</p>
+     * @param SignToken <p>验签token，验签功能启用请联系我们。</p>
+     */
+    public void setSignToken(String SignToken) {
+        this.SignToken = SignToken;
+    }
+
+    /**
+     * Get <p>token生成时间戳，毫秒级。</p> 
+     * @return TokenTime <p>token生成时间戳，毫秒级。</p>
+     */
+    public String getTokenTime() {
+        return this.TokenTime;
+    }
+
+    /**
+     * Set <p>token生成时间戳，毫秒级。</p>
+     * @param TokenTime <p>token生成时间戳，毫秒级。</p>
+     */
+    public void setTokenTime(String TokenTime) {
+        this.TokenTime = TokenTime;
+    }
+
     public Device() {
     }
 
@@ -291,6 +337,12 @@ public class Device extends AbstractModel {
         if (source.SdkBuildVersion != null) {
             this.SdkBuildVersion = new String(source.SdkBuildVersion);
         }
+        if (source.SignToken != null) {
+            this.SignToken = new String(source.SignToken);
+        }
+        if (source.TokenTime != null) {
+            this.TokenTime = new String(source.TokenTime);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "SystemVersion", this.SystemVersion);
         this.setParamSimple(map, prefix + "SdkBuildVersion", this.SdkBuildVersion);
+        this.setParamSimple(map, prefix + "SignToken", this.SignToken);
+        this.setParamSimple(map, prefix + "TokenTime", this.TokenTime);
 
     }
 }

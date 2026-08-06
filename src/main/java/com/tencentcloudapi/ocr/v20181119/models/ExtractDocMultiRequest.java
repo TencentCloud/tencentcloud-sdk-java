@@ -24,396 +24,302 @@ import java.util.HashMap;
 public class ExtractDocMultiRequest extends AbstractModel {
 
     /**
-    * 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+    * <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+    * <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为前3页。
+    * <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别。</p>
     */
     @SerializedName("PdfPageNumber")
     @Expose
     private Long PdfPageNumber;
 
     /**
-    * 自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=["姓名","性别"]
+    * <p>自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=[&quot;姓名&quot;,&quot;性别&quot;]</p>
     */
     @SerializedName("ItemNames")
     @Expose
     private String [] ItemNames;
 
     /**
-    * true：仅输出自定义字段
-false：输出默认字段+自定义字段
-默认true
+    * <p>true：仅输出自定义字段<br>false：输出默认字段+自定义字段<br>默认true</p>
     */
     @SerializedName("ItemNamesShowMode")
     @Expose
     private Boolean ItemNamesShowMode;
 
     /**
-    * 是否开启全文字段识别
+    * <p>是否开启全文字段识别</p>
     */
     @SerializedName("ReturnFullText")
     @Expose
     private Boolean ReturnFullText;
 
     /**
-    * 配置id支持：
-General -- 通用场景 
-InvoiceEng -- 国际invoice模板 
-WayBillEng --海运订单模板
-CustomsDeclaration -- 进出口报关单
-WeightNote -- 磅单
-MedicalMeter -- 血压仪表识别
-BillOfLading -- 海运提单
-EntrustmentBook -- 海运托书
-Statement -- 对账单识别模板
-BookingConfirmation -- 配舱通知书识别模板
-AirWayBill -- 航空运单识别模板
-Table -- 表格模板
-SteelLabel -- 实物标签识别模板
-CarInsurance -- 车辆保险单识别模板
-MultiRealEstateCertificate -- 房产材料识别模板
-MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 中国香港水电煤单识别模板
-OverseasCheques -- 海外支票
-RegistrationCertificate -- 备案证
-​GridPhoto -- 电网系统照片
-​SignaturePage -- 签署页
-​SalesDeliveryNote -- 销售发货单
-
-
-
+    * <p>配置id支持：<br>General -- 通用场景<br>InvoiceEng -- 国际invoice模板<br>WayBillEng --海运订单模板<br>CustomsDeclaration -- 进出口报关单<br>WeightNote -- 磅单<br>MedicalMeter -- 血压仪表识别<br>BillOfLading -- 海运提单<br>EntrustmentBook -- 海运托书<br>Statement -- 对账单识别模板<br>BookingConfirmation -- 配舱通知书识别模板<br>AirWayBill -- 航空运单识别模板<br>Table -- 表格模板<br>SteelLabel -- 实物标签识别模板<br>CarInsurance -- 车辆保险单识别模板<br>MultiRealEstateCertificate -- 房产材料识别模板<br>MultiRealEstateMaterial -- 房产证明识别模板<br>HongKongUtilityBill -- 中国香港水电煤单识别模板<br>OverseasCheques -- 海外支票<br>RegistrationCertificate -- 备案证<br>u200bGridPhoto -- 电网系统照片<br>u200bSignaturePage -- 签署页<br>u200bSalesDeliveryNote -- 销售发货单</p>
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 是否开启全文字段坐标值的识别
+    * <p>是否开启全文字段坐标值的识别</p>
     */
     @SerializedName("EnableCoord")
     @Expose
     private Boolean EnableCoord;
 
     /**
-    * 是否开启父子key识别，默认是
+    * <p>是否开启父子key识别，默认是</p>
     */
     @SerializedName("OutputParentKey")
     @Expose
     private Boolean OutputParentKey;
 
     /**
-    * 模板的单个属性配置
+    * <p>模板的单个属性配置</p>
     */
     @SerializedName("ConfigAdvanced")
     @Expose
     private ConfigAdvanced ConfigAdvanced;
 
     /**
-    * cn时，添加的key为中文  
-en时，添加的key为英语
+    * <p>cn时，添加的key为中文<br>en时，添加的key为英语</p>
     */
     @SerializedName("OutputLanguage")
     @Expose
     private String OutputLanguage;
 
     /**
-     * Get 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
-     * @return ImageUrl 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+    * <p>自定义抽取需要的字段名称、字段类型、字段提示词</p>
+    */
+    @SerializedName("NewItemNames")
+    @Expose
+    private ItemNames [] NewItemNames;
+
+    /**
+    * <p>文档抽取（多模态）识别服务所用的算法模型版本<br>-目前入参支持“1.0”和“2.0“两个输入。</p><ul><li>2026年7月20日开始，默认为“2.0”，之前使用过本接口的账号若未填写本参数默认为“1.0”。</li><li>2026年7月20日后开通服务的账号仅支持输入“2.0”。</li><li>不同算法模型版本对应的文档抽取识别算法不同，新版本的整体效果会优于旧版本，建议使用“2.0”版本。<br>示例值：2.0</li></ul>
+    */
+    @SerializedName("MultiModelVersion")
+    @Expose
+    private String MultiModelVersion;
+
+    /**
+     * Get <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p> 
+     * @return ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param ImageUrl 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Set <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
+     * @param ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageBase64 图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * Get <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
+     * @return ImageBase64 <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageBase64 图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * Set <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+     * @param ImageBase64 <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为前3页。 
-     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为前3页。
+     * Get <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别。</p> 
+     * @return PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别。</p>
      */
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
 
     /**
-     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为前3页。
-     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为前3页。
+     * Set <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别。</p>
+     * @param PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别。</p>
      */
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;
     }
 
     /**
-     * Get 自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=["姓名","性别"] 
-     * @return ItemNames 自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=["姓名","性别"]
+     * Get <p>自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=[&quot;姓名&quot;,&quot;性别&quot;]</p> 
+     * @return ItemNames <p>自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=[&quot;姓名&quot;,&quot;性别&quot;]</p>
      */
     public String [] getItemNames() {
         return this.ItemNames;
     }
 
     /**
-     * Set 自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=["姓名","性别"]
-     * @param ItemNames 自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=["姓名","性别"]
+     * Set <p>自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=[&quot;姓名&quot;,&quot;性别&quot;]</p>
+     * @param ItemNames <p>自定义结构化功能需返回的字段名称，例：若客户想新增返回姓名、性别两个字段的识别结果，则输入ItemNames=[&quot;姓名&quot;,&quot;性别&quot;]</p>
      */
     public void setItemNames(String [] ItemNames) {
         this.ItemNames = ItemNames;
     }
 
     /**
-     * Get true：仅输出自定义字段
-false：输出默认字段+自定义字段
-默认true 
-     * @return ItemNamesShowMode true：仅输出自定义字段
-false：输出默认字段+自定义字段
-默认true
+     * Get <p>true：仅输出自定义字段<br>false：输出默认字段+自定义字段<br>默认true</p> 
+     * @return ItemNamesShowMode <p>true：仅输出自定义字段<br>false：输出默认字段+自定义字段<br>默认true</p>
      */
     public Boolean getItemNamesShowMode() {
         return this.ItemNamesShowMode;
     }
 
     /**
-     * Set true：仅输出自定义字段
-false：输出默认字段+自定义字段
-默认true
-     * @param ItemNamesShowMode true：仅输出自定义字段
-false：输出默认字段+自定义字段
-默认true
+     * Set <p>true：仅输出自定义字段<br>false：输出默认字段+自定义字段<br>默认true</p>
+     * @param ItemNamesShowMode <p>true：仅输出自定义字段<br>false：输出默认字段+自定义字段<br>默认true</p>
      */
     public void setItemNamesShowMode(Boolean ItemNamesShowMode) {
         this.ItemNamesShowMode = ItemNamesShowMode;
     }
 
     /**
-     * Get 是否开启全文字段识别 
-     * @return ReturnFullText 是否开启全文字段识别
+     * Get <p>是否开启全文字段识别</p> 
+     * @return ReturnFullText <p>是否开启全文字段识别</p>
      */
     public Boolean getReturnFullText() {
         return this.ReturnFullText;
     }
 
     /**
-     * Set 是否开启全文字段识别
-     * @param ReturnFullText 是否开启全文字段识别
+     * Set <p>是否开启全文字段识别</p>
+     * @param ReturnFullText <p>是否开启全文字段识别</p>
      */
     public void setReturnFullText(Boolean ReturnFullText) {
         this.ReturnFullText = ReturnFullText;
     }
 
     /**
-     * Get 配置id支持：
-General -- 通用场景 
-InvoiceEng -- 国际invoice模板 
-WayBillEng --海运订单模板
-CustomsDeclaration -- 进出口报关单
-WeightNote -- 磅单
-MedicalMeter -- 血压仪表识别
-BillOfLading -- 海运提单
-EntrustmentBook -- 海运托书
-Statement -- 对账单识别模板
-BookingConfirmation -- 配舱通知书识别模板
-AirWayBill -- 航空运单识别模板
-Table -- 表格模板
-SteelLabel -- 实物标签识别模板
-CarInsurance -- 车辆保险单识别模板
-MultiRealEstateCertificate -- 房产材料识别模板
-MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 中国香港水电煤单识别模板
-OverseasCheques -- 海外支票
-RegistrationCertificate -- 备案证
-​GridPhoto -- 电网系统照片
-​SignaturePage -- 签署页
-​SalesDeliveryNote -- 销售发货单
-
-
- 
-     * @return ConfigId 配置id支持：
-General -- 通用场景 
-InvoiceEng -- 国际invoice模板 
-WayBillEng --海运订单模板
-CustomsDeclaration -- 进出口报关单
-WeightNote -- 磅单
-MedicalMeter -- 血压仪表识别
-BillOfLading -- 海运提单
-EntrustmentBook -- 海运托书
-Statement -- 对账单识别模板
-BookingConfirmation -- 配舱通知书识别模板
-AirWayBill -- 航空运单识别模板
-Table -- 表格模板
-SteelLabel -- 实物标签识别模板
-CarInsurance -- 车辆保险单识别模板
-MultiRealEstateCertificate -- 房产材料识别模板
-MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 中国香港水电煤单识别模板
-OverseasCheques -- 海外支票
-RegistrationCertificate -- 备案证
-​GridPhoto -- 电网系统照片
-​SignaturePage -- 签署页
-​SalesDeliveryNote -- 销售发货单
-
-
-
+     * Get <p>配置id支持：<br>General -- 通用场景<br>InvoiceEng -- 国际invoice模板<br>WayBillEng --海运订单模板<br>CustomsDeclaration -- 进出口报关单<br>WeightNote -- 磅单<br>MedicalMeter -- 血压仪表识别<br>BillOfLading -- 海运提单<br>EntrustmentBook -- 海运托书<br>Statement -- 对账单识别模板<br>BookingConfirmation -- 配舱通知书识别模板<br>AirWayBill -- 航空运单识别模板<br>Table -- 表格模板<br>SteelLabel -- 实物标签识别模板<br>CarInsurance -- 车辆保险单识别模板<br>MultiRealEstateCertificate -- 房产材料识别模板<br>MultiRealEstateMaterial -- 房产证明识别模板<br>HongKongUtilityBill -- 中国香港水电煤单识别模板<br>OverseasCheques -- 海外支票<br>RegistrationCertificate -- 备案证<br>u200bGridPhoto -- 电网系统照片<br>u200bSignaturePage -- 签署页<br>u200bSalesDeliveryNote -- 销售发货单</p> 
+     * @return ConfigId <p>配置id支持：<br>General -- 通用场景<br>InvoiceEng -- 国际invoice模板<br>WayBillEng --海运订单模板<br>CustomsDeclaration -- 进出口报关单<br>WeightNote -- 磅单<br>MedicalMeter -- 血压仪表识别<br>BillOfLading -- 海运提单<br>EntrustmentBook -- 海运托书<br>Statement -- 对账单识别模板<br>BookingConfirmation -- 配舱通知书识别模板<br>AirWayBill -- 航空运单识别模板<br>Table -- 表格模板<br>SteelLabel -- 实物标签识别模板<br>CarInsurance -- 车辆保险单识别模板<br>MultiRealEstateCertificate -- 房产材料识别模板<br>MultiRealEstateMaterial -- 房产证明识别模板<br>HongKongUtilityBill -- 中国香港水电煤单识别模板<br>OverseasCheques -- 海外支票<br>RegistrationCertificate -- 备案证<br>u200bGridPhoto -- 电网系统照片<br>u200bSignaturePage -- 签署页<br>u200bSalesDeliveryNote -- 销售发货单</p>
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置id支持：
-General -- 通用场景 
-InvoiceEng -- 国际invoice模板 
-WayBillEng --海运订单模板
-CustomsDeclaration -- 进出口报关单
-WeightNote -- 磅单
-MedicalMeter -- 血压仪表识别
-BillOfLading -- 海运提单
-EntrustmentBook -- 海运托书
-Statement -- 对账单识别模板
-BookingConfirmation -- 配舱通知书识别模板
-AirWayBill -- 航空运单识别模板
-Table -- 表格模板
-SteelLabel -- 实物标签识别模板
-CarInsurance -- 车辆保险单识别模板
-MultiRealEstateCertificate -- 房产材料识别模板
-MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 中国香港水电煤单识别模板
-OverseasCheques -- 海外支票
-RegistrationCertificate -- 备案证
-​GridPhoto -- 电网系统照片
-​SignaturePage -- 签署页
-​SalesDeliveryNote -- 销售发货单
-
-
-
-     * @param ConfigId 配置id支持：
-General -- 通用场景 
-InvoiceEng -- 国际invoice模板 
-WayBillEng --海运订单模板
-CustomsDeclaration -- 进出口报关单
-WeightNote -- 磅单
-MedicalMeter -- 血压仪表识别
-BillOfLading -- 海运提单
-EntrustmentBook -- 海运托书
-Statement -- 对账单识别模板
-BookingConfirmation -- 配舱通知书识别模板
-AirWayBill -- 航空运单识别模板
-Table -- 表格模板
-SteelLabel -- 实物标签识别模板
-CarInsurance -- 车辆保险单识别模板
-MultiRealEstateCertificate -- 房产材料识别模板
-MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 中国香港水电煤单识别模板
-OverseasCheques -- 海外支票
-RegistrationCertificate -- 备案证
-​GridPhoto -- 电网系统照片
-​SignaturePage -- 签署页
-​SalesDeliveryNote -- 销售发货单
-
-
-
+     * Set <p>配置id支持：<br>General -- 通用场景<br>InvoiceEng -- 国际invoice模板<br>WayBillEng --海运订单模板<br>CustomsDeclaration -- 进出口报关单<br>WeightNote -- 磅单<br>MedicalMeter -- 血压仪表识别<br>BillOfLading -- 海运提单<br>EntrustmentBook -- 海运托书<br>Statement -- 对账单识别模板<br>BookingConfirmation -- 配舱通知书识别模板<br>AirWayBill -- 航空运单识别模板<br>Table -- 表格模板<br>SteelLabel -- 实物标签识别模板<br>CarInsurance -- 车辆保险单识别模板<br>MultiRealEstateCertificate -- 房产材料识别模板<br>MultiRealEstateMaterial -- 房产证明识别模板<br>HongKongUtilityBill -- 中国香港水电煤单识别模板<br>OverseasCheques -- 海外支票<br>RegistrationCertificate -- 备案证<br>u200bGridPhoto -- 电网系统照片<br>u200bSignaturePage -- 签署页<br>u200bSalesDeliveryNote -- 销售发货单</p>
+     * @param ConfigId <p>配置id支持：<br>General -- 通用场景<br>InvoiceEng -- 国际invoice模板<br>WayBillEng --海运订单模板<br>CustomsDeclaration -- 进出口报关单<br>WeightNote -- 磅单<br>MedicalMeter -- 血压仪表识别<br>BillOfLading -- 海运提单<br>EntrustmentBook -- 海运托书<br>Statement -- 对账单识别模板<br>BookingConfirmation -- 配舱通知书识别模板<br>AirWayBill -- 航空运单识别模板<br>Table -- 表格模板<br>SteelLabel -- 实物标签识别模板<br>CarInsurance -- 车辆保险单识别模板<br>MultiRealEstateCertificate -- 房产材料识别模板<br>MultiRealEstateMaterial -- 房产证明识别模板<br>HongKongUtilityBill -- 中国香港水电煤单识别模板<br>OverseasCheques -- 海外支票<br>RegistrationCertificate -- 备案证<br>u200bGridPhoto -- 电网系统照片<br>u200bSignaturePage -- 签署页<br>u200bSalesDeliveryNote -- 销售发货单</p>
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 是否开启全文字段坐标值的识别 
-     * @return EnableCoord 是否开启全文字段坐标值的识别
+     * Get <p>是否开启全文字段坐标值的识别</p> 
+     * @return EnableCoord <p>是否开启全文字段坐标值的识别</p>
      */
     public Boolean getEnableCoord() {
         return this.EnableCoord;
     }
 
     /**
-     * Set 是否开启全文字段坐标值的识别
-     * @param EnableCoord 是否开启全文字段坐标值的识别
+     * Set <p>是否开启全文字段坐标值的识别</p>
+     * @param EnableCoord <p>是否开启全文字段坐标值的识别</p>
      */
     public void setEnableCoord(Boolean EnableCoord) {
         this.EnableCoord = EnableCoord;
     }
 
     /**
-     * Get 是否开启父子key识别，默认是 
-     * @return OutputParentKey 是否开启父子key识别，默认是
+     * Get <p>是否开启父子key识别，默认是</p> 
+     * @return OutputParentKey <p>是否开启父子key识别，默认是</p>
      */
     public Boolean getOutputParentKey() {
         return this.OutputParentKey;
     }
 
     /**
-     * Set 是否开启父子key识别，默认是
-     * @param OutputParentKey 是否开启父子key识别，默认是
+     * Set <p>是否开启父子key识别，默认是</p>
+     * @param OutputParentKey <p>是否开启父子key识别，默认是</p>
      */
     public void setOutputParentKey(Boolean OutputParentKey) {
         this.OutputParentKey = OutputParentKey;
     }
 
     /**
-     * Get 模板的单个属性配置 
-     * @return ConfigAdvanced 模板的单个属性配置
+     * Get <p>模板的单个属性配置</p> 
+     * @return ConfigAdvanced <p>模板的单个属性配置</p>
      */
     public ConfigAdvanced getConfigAdvanced() {
         return this.ConfigAdvanced;
     }
 
     /**
-     * Set 模板的单个属性配置
-     * @param ConfigAdvanced 模板的单个属性配置
+     * Set <p>模板的单个属性配置</p>
+     * @param ConfigAdvanced <p>模板的单个属性配置</p>
      */
     public void setConfigAdvanced(ConfigAdvanced ConfigAdvanced) {
         this.ConfigAdvanced = ConfigAdvanced;
     }
 
     /**
-     * Get cn时，添加的key为中文  
-en时，添加的key为英语 
-     * @return OutputLanguage cn时，添加的key为中文  
-en时，添加的key为英语
+     * Get <p>cn时，添加的key为中文<br>en时，添加的key为英语</p> 
+     * @return OutputLanguage <p>cn时，添加的key为中文<br>en时，添加的key为英语</p>
      */
     public String getOutputLanguage() {
         return this.OutputLanguage;
     }
 
     /**
-     * Set cn时，添加的key为中文  
-en时，添加的key为英语
-     * @param OutputLanguage cn时，添加的key为中文  
-en时，添加的key为英语
+     * Set <p>cn时，添加的key为中文<br>en时，添加的key为英语</p>
+     * @param OutputLanguage <p>cn时，添加的key为中文<br>en时，添加的key为英语</p>
      */
     public void setOutputLanguage(String OutputLanguage) {
         this.OutputLanguage = OutputLanguage;
+    }
+
+    /**
+     * Get <p>自定义抽取需要的字段名称、字段类型、字段提示词</p> 
+     * @return NewItemNames <p>自定义抽取需要的字段名称、字段类型、字段提示词</p>
+     */
+    public ItemNames [] getNewItemNames() {
+        return this.NewItemNames;
+    }
+
+    /**
+     * Set <p>自定义抽取需要的字段名称、字段类型、字段提示词</p>
+     * @param NewItemNames <p>自定义抽取需要的字段名称、字段类型、字段提示词</p>
+     */
+    public void setNewItemNames(ItemNames [] NewItemNames) {
+        this.NewItemNames = NewItemNames;
+    }
+
+    /**
+     * Get <p>文档抽取（多模态）识别服务所用的算法模型版本<br>-目前入参支持“1.0”和“2.0“两个输入。</p><ul><li>2026年7月20日开始，默认为“2.0”，之前使用过本接口的账号若未填写本参数默认为“1.0”。</li><li>2026年7月20日后开通服务的账号仅支持输入“2.0”。</li><li>不同算法模型版本对应的文档抽取识别算法不同，新版本的整体效果会优于旧版本，建议使用“2.0”版本。<br>示例值：2.0</li></ul> 
+     * @return MultiModelVersion <p>文档抽取（多模态）识别服务所用的算法模型版本<br>-目前入参支持“1.0”和“2.0“两个输入。</p><ul><li>2026年7月20日开始，默认为“2.0”，之前使用过本接口的账号若未填写本参数默认为“1.0”。</li><li>2026年7月20日后开通服务的账号仅支持输入“2.0”。</li><li>不同算法模型版本对应的文档抽取识别算法不同，新版本的整体效果会优于旧版本，建议使用“2.0”版本。<br>示例值：2.0</li></ul>
+     */
+    public String getMultiModelVersion() {
+        return this.MultiModelVersion;
+    }
+
+    /**
+     * Set <p>文档抽取（多模态）识别服务所用的算法模型版本<br>-目前入参支持“1.0”和“2.0“两个输入。</p><ul><li>2026年7月20日开始，默认为“2.0”，之前使用过本接口的账号若未填写本参数默认为“1.0”。</li><li>2026年7月20日后开通服务的账号仅支持输入“2.0”。</li><li>不同算法模型版本对应的文档抽取识别算法不同，新版本的整体效果会优于旧版本，建议使用“2.0”版本。<br>示例值：2.0</li></ul>
+     * @param MultiModelVersion <p>文档抽取（多模态）识别服务所用的算法模型版本<br>-目前入参支持“1.0”和“2.0“两个输入。</p><ul><li>2026年7月20日开始，默认为“2.0”，之前使用过本接口的账号若未填写本参数默认为“1.0”。</li><li>2026年7月20日后开通服务的账号仅支持输入“2.0”。</li><li>不同算法模型版本对应的文档抽取识别算法不同，新版本的整体效果会优于旧版本，建议使用“2.0”版本。<br>示例值：2.0</li></ul>
+     */
+    public void setMultiModelVersion(String MultiModelVersion) {
+        this.MultiModelVersion = MultiModelVersion;
     }
 
     public ExtractDocMultiRequest() {
@@ -460,6 +366,15 @@ en时，添加的key为英语
         if (source.OutputLanguage != null) {
             this.OutputLanguage = new String(source.OutputLanguage);
         }
+        if (source.NewItemNames != null) {
+            this.NewItemNames = new ItemNames[source.NewItemNames.length];
+            for (int i = 0; i < source.NewItemNames.length; i++) {
+                this.NewItemNames[i] = new ItemNames(source.NewItemNames[i]);
+            }
+        }
+        if (source.MultiModelVersion != null) {
+            this.MultiModelVersion = new String(source.MultiModelVersion);
+        }
     }
 
 
@@ -478,6 +393,8 @@ en时，添加的key为英语
         this.setParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
         this.setParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
         this.setParamSimple(map, prefix + "OutputLanguage", this.OutputLanguage);
+        this.setParamArrayObj(map, prefix + "NewItemNames.", this.NewItemNames);
+        this.setParamSimple(map, prefix + "MultiModelVersion", this.MultiModelVersion);
 
     }
 }

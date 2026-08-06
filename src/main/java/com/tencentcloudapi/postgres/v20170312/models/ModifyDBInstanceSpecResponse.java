@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecResponse extends AbstractModel {
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * 冻结流水号。
+    * <p>冻结流水号。</p>
     */
     @SerializedName("BillId")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyDBInstanceSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号。 
-     * @return DealName 订单号。
+     * Get <p>订单号。</p> 
+     * @return DealName <p>订单号。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单号。
-     * @param DealName 订单号。
+     * Set <p>订单号。</p>
+     * @param DealName <p>订单号。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 冻结流水号。 
-     * @return BillId 冻结流水号。
+     * Get <p>冻结流水号。</p> 
+     * @return BillId <p>冻结流水号。</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 冻结流水号。
-     * @param BillId 冻结流水号。
+     * Set <p>冻结流水号。</p>
+     * @param BillId <p>冻结流水号。</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;

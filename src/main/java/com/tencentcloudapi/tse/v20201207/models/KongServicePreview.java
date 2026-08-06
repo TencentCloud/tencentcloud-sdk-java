@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class KongServicePreview extends AbstractModel {
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 服务名字
+    * <p>服务名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 后端配置
+    * <p>后端配置</p>
     */
     @SerializedName("UpstreamInfo")
     @Expose
     private KongUpstreamInfo UpstreamInfo;
 
     /**
-    * 后端类型
+    * <p>后端类型</p>
     */
     @SerializedName("UpstreamType")
     @Expose
     private String UpstreamType;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 是否可编辑
+    * <p>是否可编辑</p>
     */
     @SerializedName("Editable")
     @Expose
     private Boolean Editable;
 
     /**
-    * 请求路径
+    * <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -81,121 +81,121 @@ public class KongServicePreview extends AbstractModel {
     private String Path;
 
     /**
-     * Get 服务ID 
-     * @return ID 服务ID
+     * Get <p>服务ID</p> 
+     * @return ID <p>服务ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 服务ID
-     * @param ID 服务ID
+     * Set <p>服务ID</p>
+     * @param ID <p>服务ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 服务名字 
-     * @return Name 服务名字
+     * Get <p>服务名字</p> 
+     * @return Name <p>服务名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 服务名字
-     * @param Name 服务名字
+     * Set <p>服务名字</p>
+     * @param Name <p>服务名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 后端配置 
-     * @return UpstreamInfo 后端配置
+     * Get <p>后端配置</p> 
+     * @return UpstreamInfo <p>后端配置</p>
      */
     public KongUpstreamInfo getUpstreamInfo() {
         return this.UpstreamInfo;
     }
 
     /**
-     * Set 后端配置
-     * @param UpstreamInfo 后端配置
+     * Set <p>后端配置</p>
+     * @param UpstreamInfo <p>后端配置</p>
      */
     public void setUpstreamInfo(KongUpstreamInfo UpstreamInfo) {
         this.UpstreamInfo = UpstreamInfo;
     }
 
     /**
-     * Get 后端类型 
-     * @return UpstreamType 后端类型
+     * Get <p>后端类型</p> 
+     * @return UpstreamType <p>后端类型</p>
      */
     public String getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set 后端类型
-     * @param UpstreamType 后端类型
+     * Set <p>后端类型</p>
+     * @param UpstreamType <p>后端类型</p>
      */
     public void setUpstreamType(String UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 是否可编辑 
-     * @return Editable 是否可编辑
+     * Get <p>是否可编辑</p> 
+     * @return Editable <p>是否可编辑</p>
      */
     public Boolean getEditable() {
         return this.Editable;
     }
 
     /**
-     * Set 是否可编辑
-     * @param Editable 是否可编辑
+     * Set <p>是否可编辑</p>
+     * @param Editable <p>是否可编辑</p>
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 请求路径
+     * Get <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 请求路径
+     * @return Path <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -203,9 +203,9 @@ public class KongServicePreview extends AbstractModel {
     }
 
     /**
-     * Set 请求路径
+     * Set <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 请求路径
+     * @param Path <p>请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {

@@ -45,6 +45,13 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     private String QuestionCount;
 
     /**
+    * <p>客户图片url</p>
+    */
+    @SerializedName("OriginalImageUrl")
+    @Expose
+    private String OriginalImageUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>客户图片url</p> 
+     * @return OriginalImageUrl <p>客户图片url</p>
+     */
+    public String getOriginalImageUrl() {
+        return this.OriginalImageUrl;
+    }
+
+    /**
+     * Set <p>客户图片url</p>
+     * @param OriginalImageUrl <p>客户图片url</p>
+     */
+    public void setOriginalImageUrl(String OriginalImageUrl) {
+        this.OriginalImageUrl = OriginalImageUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -135,6 +158,9 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
         if (source.QuestionCount != null) {
             this.QuestionCount = new String(source.QuestionCount);
         }
+        if (source.OriginalImageUrl != null) {
+            this.OriginalImageUrl = new String(source.OriginalImageUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
         this.setParamSimple(map, prefix + "QuestionCount", this.QuestionCount);
+        this.setParamSimple(map, prefix + "OriginalImageUrl", this.OriginalImageUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

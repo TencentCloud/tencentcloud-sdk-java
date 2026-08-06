@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class KibanaView extends AbstractModel {
 
     /**
-    * Kibana节点IP
+    * <p>Kibana节点IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 节点总磁盘大小
+    * <p>节点总磁盘大小</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 磁盘使用率
+    * <p>磁盘使用率</p>
     */
     @SerializedName("DiskUsage")
     @Expose
     private Float DiskUsage;
 
     /**
-    * 节点内存大小
+    * <p>节点内存大小</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 内存使用率
+    * <p>内存使用率</p>
     */
     @SerializedName("MemUsage")
     @Expose
     private Float MemUsage;
 
     /**
-    * 节点cpu个数
+    * <p>节点cpu个数</p>
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * cpu使用率
+    * <p>cpu使用率</p>
     */
     @SerializedName("CpuUsage")
     @Expose
     private Float CpuUsage;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * ts-0noqayxu-az6-hot-03222010-0
+    * <p>ts-0noqayxu-az6-hot-03222010-0</p>
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-     * Get Kibana节点IP 
-     * @return Ip Kibana节点IP
+    * <p>客户侧Ip信息</p>
+    */
+    @SerializedName("UserIp")
+    @Expose
+    private String UserIp;
+
+    /**
+     * Get <p>Kibana节点IP</p> 
+     * @return Ip <p>Kibana节点IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Kibana节点IP
-     * @param Ip Kibana节点IP
+     * Set <p>Kibana节点IP</p>
+     * @param Ip <p>Kibana节点IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 节点总磁盘大小 
-     * @return DiskSize 节点总磁盘大小
+     * Get <p>节点总磁盘大小</p> 
+     * @return DiskSize <p>节点总磁盘大小</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 节点总磁盘大小
-     * @param DiskSize 节点总磁盘大小
+     * Set <p>节点总磁盘大小</p>
+     * @param DiskSize <p>节点总磁盘大小</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 磁盘使用率 
-     * @return DiskUsage 磁盘使用率
+     * Get <p>磁盘使用率</p> 
+     * @return DiskUsage <p>磁盘使用率</p>
      */
     public Float getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 磁盘使用率
-     * @param DiskUsage 磁盘使用率
+     * Set <p>磁盘使用率</p>
+     * @param DiskUsage <p>磁盘使用率</p>
      */
     public void setDiskUsage(Float DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get 节点内存大小 
-     * @return MemSize 节点内存大小
+     * Get <p>节点内存大小</p> 
+     * @return MemSize <p>节点内存大小</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 节点内存大小
-     * @param MemSize 节点内存大小
+     * Set <p>节点内存大小</p>
+     * @param MemSize <p>节点内存大小</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 内存使用率 
-     * @return MemUsage 内存使用率
+     * Get <p>内存使用率</p> 
+     * @return MemUsage <p>内存使用率</p>
      */
     public Float getMemUsage() {
         return this.MemUsage;
     }
 
     /**
-     * Set 内存使用率
-     * @param MemUsage 内存使用率
+     * Set <p>内存使用率</p>
+     * @param MemUsage <p>内存使用率</p>
      */
     public void setMemUsage(Float MemUsage) {
         this.MemUsage = MemUsage;
     }
 
     /**
-     * Get 节点cpu个数 
-     * @return CpuNum 节点cpu个数
+     * Get <p>节点cpu个数</p> 
+     * @return CpuNum <p>节点cpu个数</p>
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set 节点cpu个数
-     * @param CpuNum 节点cpu个数
+     * Set <p>节点cpu个数</p>
+     * @param CpuNum <p>节点cpu个数</p>
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get cpu使用率 
-     * @return CpuUsage cpu使用率
+     * Get <p>cpu使用率</p> 
+     * @return CpuUsage <p>cpu使用率</p>
      */
     public Float getCpuUsage() {
         return this.CpuUsage;
     }
 
     /**
-     * Set cpu使用率
-     * @param CpuUsage cpu使用率
+     * Set <p>cpu使用率</p>
+     * @param CpuUsage <p>cpu使用率</p>
      */
     public void setCpuUsage(Float CpuUsage) {
         this.CpuUsage = CpuUsage;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get ts-0noqayxu-az6-hot-03222010-0 
-     * @return NodeId ts-0noqayxu-az6-hot-03222010-0
+     * Get <p>ts-0noqayxu-az6-hot-03222010-0</p> 
+     * @return NodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set ts-0noqayxu-az6-hot-03222010-0
-     * @param NodeId ts-0noqayxu-az6-hot-03222010-0
+     * Set <p>ts-0noqayxu-az6-hot-03222010-0</p>
+     * @param NodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
+    }
+
+    /**
+     * Get <p>客户侧Ip信息</p> 
+     * @return UserIp <p>客户侧Ip信息</p>
+     */
+    public String getUserIp() {
+        return this.UserIp;
+    }
+
+    /**
+     * Set <p>客户侧Ip信息</p>
+     * @param UserIp <p>客户侧Ip信息</p>
+     */
+    public void setUserIp(String UserIp) {
+        this.UserIp = UserIp;
     }
 
     public KibanaView() {
@@ -265,6 +288,9 @@ public class KibanaView extends AbstractModel {
         if (source.NodeId != null) {
             this.NodeId = new String(source.NodeId);
         }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class KibanaView extends AbstractModel {
         this.setParamSimple(map, prefix + "CpuUsage", this.CpuUsage);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "UserIp", this.UserIp);
 
     }
 }

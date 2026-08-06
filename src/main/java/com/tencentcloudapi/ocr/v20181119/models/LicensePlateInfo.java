@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class LicensePlateInfo extends AbstractModel {
 
     /**
-    * 识别出的车牌号码。
+    * <p>识别出的车牌号码。</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 置信度，0 - 100 之间。
+    * <p>置信度，0 - 100 之间。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * 文本行在原图片中的像素坐标框。
+    * <p>文本行在原图片中的像素坐标框。</p>
     */
     @SerializedName("Rect")
     @Expose
     private Rect Rect;
 
     /**
-    * 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+    * <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
     */
     @SerializedName("Color")
     @Expose
     private String Color;
 
     /**
-    * 车牌类别， 如： 实体车牌、非实体车牌
+    * <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
     */
     @SerializedName("LicensePlateCategory")
     @Expose
     private String LicensePlateCategory;
 
     /**
-     * Get 识别出的车牌号码。 
-     * @return Number 识别出的车牌号码。
+     * Get <p>识别出的车牌号码。</p> 
+     * @return Number <p>识别出的车牌号码。</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 识别出的车牌号码。
-     * @param Number 识别出的车牌号码。
+     * Set <p>识别出的车牌号码。</p>
+     * @param Number <p>识别出的车牌号码。</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 置信度，0 - 100 之间。 
-     * @return Confidence 置信度，0 - 100 之间。
+     * Get <p>置信度，0 - 100 之间。</p> 
+     * @return Confidence <p>置信度，0 - 100 之间。</p>
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 置信度，0 - 100 之间。
-     * @param Confidence 置信度，0 - 100 之间。
+     * Set <p>置信度，0 - 100 之间。</p>
+     * @param Confidence <p>置信度，0 - 100 之间。</p>
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 文本行在原图片中的像素坐标框。 
-     * @return Rect 文本行在原图片中的像素坐标框。
+     * Get <p>文本行在原图片中的像素坐标框。</p> 
+     * @return Rect <p>文本行在原图片中的像素坐标框。</p>
      */
     public Rect getRect() {
         return this.Rect;
     }
 
     /**
-     * Set 文本行在原图片中的像素坐标框。
-     * @param Rect 文本行在原图片中的像素坐标框。
+     * Set <p>文本行在原图片中的像素坐标框。</p>
+     * @param Rect <p>文本行在原图片中的像素坐标框。</p>
      */
     public void setRect(Rect Rect) {
         this.Rect = Rect;
     }
 
     /**
-     * Get 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。 
-     * @return Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * Get <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p> 
+     * @return Color <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
-     * @param Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * Set <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
+     * @param Color <p>识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。</p>
      */
     public void setColor(String Color) {
         this.Color = Color;
     }
 
     /**
-     * Get 车牌类别， 如： 实体车牌、非实体车牌 
-     * @return LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌
+     * Get <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p> 
+     * @return LicensePlateCategory <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
      */
     public String getLicensePlateCategory() {
         return this.LicensePlateCategory;
     }
 
     /**
-     * Set 车牌类别， 如： 实体车牌、非实体车牌
-     * @param LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌
+     * Set <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
+     * @param LicensePlateCategory <p>车牌类别， 如： 标准实体车牌、非标准实体车牌、临牌、喷漆车牌</p>
      */
     public void setLicensePlateCategory(String LicensePlateCategory) {
         this.LicensePlateCategory = LicensePlateCategory;

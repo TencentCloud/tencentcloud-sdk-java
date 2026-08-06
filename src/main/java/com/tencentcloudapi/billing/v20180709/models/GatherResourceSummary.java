@@ -24,262 +24,259 @@ import java.util.HashMap;
 public class GatherResourceSummary extends AbstractModel {
 
     /**
-    * 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+    * <p>支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 使用者 UIN：实际使用资源的账号 ID
+    * <p>使用者 UIN：实际使用资源的账号 ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
+    * <p>操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）</p>
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * 实例类型编码
+    * <p>实例类型编码</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
+    * <p>实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”</p>
     */
     @SerializedName("InstanceTypeName")
     @Expose
     private String InstanceTypeName;
 
     /**
-    * 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+    * <p>资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
+    * <p>实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 分账单元唯一标识
+    * <p>分账单元唯一标识</p>
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
     private String TreeNodeUniqKey;
 
     /**
-    * 分账单元名称
+    * <p>分账单元名称</p>
     */
     @SerializedName("TreeNodeUniqKeyName")
     @Expose
     private String TreeNodeUniqKeyName;
 
     /**
-    * 资源命中公摊规则ID
+    * <p>资源命中公摊规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 资源命中公摊规则名称
+    * <p>资源命中公摊规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 产品编码
+    * <p>产品编码</p>
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 产品名称：用户所采购的各类云产品
+    * <p>产品名称：用户所采购的各类云产品</p>
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 组件名称编码
+    * <p>组件名称编码</p>
     */
     @SerializedName("ItemCode")
     @Expose
     private String ItemCode;
 
     /**
-    * 组件名称：用户购买的产品或服务，所包含的具体组件
+    * <p>组件名称：用户购买的产品或服务，所包含的具体组件</p>
     */
     @SerializedName("ItemCodeName")
     @Expose
     private String ItemCodeName;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 地域名称：资源所属地域
+    * <p>地域名称：资源所属地域</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 分账标签：资源绑定的标签
+    * <p>分账标签：资源绑定的标签</p>
     */
     @SerializedName("Tag")
     @Expose
     private BillTag [] Tag;
 
     /**
-    * 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
+    * <p>优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率</p>
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * 现金账户支出(元)：通过现金账户支付的金额
+    * <p>现金账户支出(元)：通过现金账户支付的金额</p>
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
+    * <p>代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额</p>
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 赠送账户支出(元)：使用赠送金支付的金额
+    * <p>赠送账户支出(元)：使用赠送金支付的金额</p>
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 分成账户支出(元)：通过分成金账户支付的金额
+    * <p>分成账户支出(元)：通过分成金账户支付的金额</p>
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * 费用归集类型：费用来源类型，分摊、归集、未分配
-0 - 分摊
-1 - 归集
--1 - 未分配
+    * <p>费用归集类型：费用来源类型，分摊、归集、未分配<br>0 - 分摊<br>1 - 归集<br>-1 - 未分配</p>
     */
     @SerializedName("AllocationType")
     @Expose
     private Long AllocationType;
 
     /**
-    * 当前归属单元信息
+    * <p>当前归属单元信息</p>
     */
     @SerializedName("BelongTreeNodeUniqKey")
     @Expose
     private AllocationTreeNode BelongTreeNodeUniqKey;
 
     /**
-    * 当前资源命中公摊规则信息
+    * <p>当前资源命中公摊规则信息</p>
     */
     @SerializedName("BelongRule")
     @Expose
     private AllocationRule BelongRule;
 
     /**
-    * 其它归属单元信息
+    * <p>其它归属单元信息</p>
     */
     @SerializedName("OtherTreeNodeUniqKeys")
     @Expose
     private AllocationTreeNode [] OtherTreeNodeUniqKeys;
 
     /**
-    * 其他命中规则信息
+    * <p>其他命中规则信息</p>
     */
     @SerializedName("OtherRules")
     @Expose
     private AllocationRule [] OtherRules;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+    * <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 子产品编码
+    * <p>子产品编码</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 子产品名称：用户采购的具体产品细分类型
+    * <p>子产品名称：用户采购的具体产品细分类型</p>
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式编码
+    * <p>计费模式编码</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 计费模式：资源的计费模式，区分为包年包月和按量计费
+    * <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 交易类型编码
+    * <p>交易类型编码</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 交易类型：明细交易类型
+    * <p>交易类型：明细交易类型</p>
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+    * <p>分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SplitItemId")
@@ -287,7 +284,7 @@ public class GatherResourceSummary extends AbstractModel {
     private String SplitItemId;
 
     /**
-    * 分拆项名称：涉及分拆产品的分拆后的分拆项
+    * <p>分拆项名称：涉及分拆产品的分拆后的分拆项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SplitItemName")
@@ -295,597 +292,592 @@ public class GatherResourceSummary extends AbstractModel {
     private String SplitItemName;
 
     /**
-     * Get 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
-     * @return PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+    * <p>归集方式</p><p>枚举值：</p><ul><li>0： 未归集</li><li>1： 自动命中</li><li>2： 手动分配待生效</li><li>3： 手动分配已生效</li></ul>
+    */
+    @SerializedName("EffectiveMode")
+    @Expose
+    private String EffectiveMode;
+
+    /**
+     * Get <p>支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p> 
+     * @return PayerUin <p>支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-     * @param PayerUin 支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * Set <p>支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
+     * @param PayerUin <p>支付者 UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者 UIN：实际使用资源的账号 ID 
-     * @return OwnerUin 使用者 UIN：实际使用资源的账号 ID
+     * Get <p>使用者 UIN：实际使用资源的账号 ID</p> 
+     * @return OwnerUin <p>使用者 UIN：实际使用资源的账号 ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 使用者 UIN：实际使用资源的账号 ID
-     * @param OwnerUin 使用者 UIN：实际使用资源的账号 ID
+     * Set <p>使用者 UIN：实际使用资源的账号 ID</p>
+     * @param OwnerUin <p>使用者 UIN：实际使用资源的账号 ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID） 
-     * @return OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
+     * Get <p>操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）</p> 
+     * @return OperateUin <p>操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）</p>
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
-     * @param OperateUin 操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）
+     * Set <p>操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）</p>
+     * @param OperateUin <p>操作者 UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的ID或者角色 ID）</p>
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 实例类型编码 
-     * @return InstanceType 实例类型编码
+     * Get <p>实例类型编码</p> 
+     * @return InstanceType <p>实例类型编码</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型编码
-     * @param InstanceType 实例类型编码
+     * Set <p>实例类型编码</p>
+     * @param InstanceType <p>实例类型编码</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-” 
-     * @return InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
+     * Get <p>实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”</p> 
+     * @return InstanceTypeName <p>实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”</p>
      */
     public String getInstanceTypeName() {
         return this.InstanceTypeName;
     }
 
     /**
-     * Set 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
-     * @param InstanceTypeName 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”
+     * Set <p>实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”</p>
+     * @param InstanceTypeName <p>实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。常规实例默认展示“-”</p>
      */
     public void setInstanceTypeName(String InstanceTypeName) {
         this.InstanceTypeName = InstanceTypeName;
     }
 
     /**
-     * Get 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名 
-     * @return ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+     * Get <p>资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p> 
+     * @return ResourceId <p>资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
-     * @param ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+     * Set <p>资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
+     * @param ResourceId <p>资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名 
-     * @return ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
+     * Get <p>实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名</p> 
+     * @return ResourceName <p>实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
-     * @param ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
+     * Set <p>实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名</p>
+     * @param ResourceName <p>实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 分账单元唯一标识 
-     * @return TreeNodeUniqKey 分账单元唯一标识
+     * Get <p>分账单元唯一标识</p> 
+     * @return TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
     }
 
     /**
-     * Set 分账单元唯一标识
-     * @param TreeNodeUniqKey 分账单元唯一标识
+     * Set <p>分账单元唯一标识</p>
+     * @param TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 分账单元名称 
-     * @return TreeNodeUniqKeyName 分账单元名称
+     * Get <p>分账单元名称</p> 
+     * @return TreeNodeUniqKeyName <p>分账单元名称</p>
      */
     public String getTreeNodeUniqKeyName() {
         return this.TreeNodeUniqKeyName;
     }
 
     /**
-     * Set 分账单元名称
-     * @param TreeNodeUniqKeyName 分账单元名称
+     * Set <p>分账单元名称</p>
+     * @param TreeNodeUniqKeyName <p>分账单元名称</p>
      */
     public void setTreeNodeUniqKeyName(String TreeNodeUniqKeyName) {
         this.TreeNodeUniqKeyName = TreeNodeUniqKeyName;
     }
 
     /**
-     * Get 资源命中公摊规则ID 
-     * @return RuleId 资源命中公摊规则ID
+     * Get <p>资源命中公摊规则ID</p> 
+     * @return RuleId <p>资源命中公摊规则ID</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 资源命中公摊规则ID
-     * @param RuleId 资源命中公摊规则ID
+     * Set <p>资源命中公摊规则ID</p>
+     * @param RuleId <p>资源命中公摊规则ID</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 资源命中公摊规则名称 
-     * @return RuleName 资源命中公摊规则名称
+     * Get <p>资源命中公摊规则名称</p> 
+     * @return RuleName <p>资源命中公摊规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 资源命中公摊规则名称
-     * @param RuleName 资源命中公摊规则名称
+     * Set <p>资源命中公摊规则名称</p>
+     * @param RuleName <p>资源命中公摊规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 产品编码 
-     * @return BusinessCode 产品编码
+     * Get <p>产品编码</p> 
+     * @return BusinessCode <p>产品编码</p>
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品编码
-     * @param BusinessCode 产品编码
+     * Set <p>产品编码</p>
+     * @param BusinessCode <p>产品编码</p>
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 产品名称：用户所采购的各类云产品 
-     * @return BusinessCodeName 产品名称：用户所采购的各类云产品
+     * Get <p>产品名称：用户所采购的各类云产品</p> 
+     * @return BusinessCodeName <p>产品名称：用户所采购的各类云产品</p>
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称：用户所采购的各类云产品
-     * @param BusinessCodeName 产品名称：用户所采购的各类云产品
+     * Set <p>产品名称：用户所采购的各类云产品</p>
+     * @param BusinessCodeName <p>产品名称：用户所采购的各类云产品</p>
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 组件名称编码 
-     * @return ItemCode 组件名称编码
+     * Get <p>组件名称编码</p> 
+     * @return ItemCode <p>组件名称编码</p>
      */
     public String getItemCode() {
         return this.ItemCode;
     }
 
     /**
-     * Set 组件名称编码
-     * @param ItemCode 组件名称编码
+     * Set <p>组件名称编码</p>
+     * @param ItemCode <p>组件名称编码</p>
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get 组件名称：用户购买的产品或服务，所包含的具体组件 
-     * @return ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
+     * Get <p>组件名称：用户购买的产品或服务，所包含的具体组件</p> 
+     * @return ItemCodeName <p>组件名称：用户购买的产品或服务，所包含的具体组件</p>
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
     }
 
     /**
-     * Set 组件名称：用户购买的产品或服务，所包含的具体组件
-     * @param ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
+     * Set <p>组件名称：用户购买的产品或服务，所包含的具体组件</p>
+     * @param ItemCodeName <p>组件名称：用户购买的产品或服务，所包含的具体组件</p>
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称：资源所属地域 
-     * @return RegionName 地域名称：资源所属地域
+     * Get <p>地域名称：资源所属地域</p> 
+     * @return RegionName <p>地域名称：资源所属地域</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名称：资源所属地域
-     * @param RegionName 地域名称：资源所属地域
+     * Set <p>地域名称：资源所属地域</p>
+     * @param RegionName <p>地域名称：资源所属地域</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 分账标签：资源绑定的标签 
-     * @return Tag 分账标签：资源绑定的标签
+     * Get <p>分账标签：资源绑定的标签</p> 
+     * @return Tag <p>分账标签：资源绑定的标签</p>
      */
     public BillTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 分账标签：资源绑定的标签
-     * @param Tag 分账标签：资源绑定的标签
+     * Set <p>分账标签：资源绑定的标签</p>
+     * @param Tag <p>分账标签：资源绑定的标签</p>
      */
     public void setTag(BillTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率 
-     * @return RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
+     * Get <p>优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率</p> 
+     * @return RealTotalCost <p>优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率</p>
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
-     * @param RealTotalCost 优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
+     * Set <p>优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率</p>
+     * @param RealTotalCost <p>优惠后总价：优惠后总价 =（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率</p>
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 现金账户支出(元)：通过现金账户支付的金额 
-     * @return CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
+     * Get <p>现金账户支出(元)：通过现金账户支付的金额</p> 
+     * @return CashPayAmount <p>现金账户支出(元)：通过现金账户支付的金额</p>
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金账户支出(元)：通过现金账户支付的金额
-     * @param CashPayAmount 现金账户支出(元)：通过现金账户支付的金额
+     * Set <p>现金账户支出(元)：通过现金账户支付的金额</p>
+     * @param CashPayAmount <p>现金账户支出(元)：通过现金账户支付的金额</p>
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额 
-     * @return VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
+     * Get <p>代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额</p> 
+     * @return VoucherPayAmount <p>代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额</p>
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
-     * @param VoucherPayAmount 代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额
+     * Set <p>代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额</p>
+     * @param VoucherPayAmount <p>代金券支出(元)：使用各类优惠券（如代金券、现金券等）支付的金额</p>
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 赠送账户支出(元)：使用赠送金支付的金额 
-     * @return IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
+     * Get <p>赠送账户支出(元)：使用赠送金支付的金额</p> 
+     * @return IncentivePayAmount <p>赠送账户支出(元)：使用赠送金支付的金额</p>
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送账户支出(元)：使用赠送金支付的金额
-     * @param IncentivePayAmount 赠送账户支出(元)：使用赠送金支付的金额
+     * Set <p>赠送账户支出(元)：使用赠送金支付的金额</p>
+     * @param IncentivePayAmount <p>赠送账户支出(元)：使用赠送金支付的金额</p>
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 分成账户支出(元)：通过分成金账户支付的金额 
-     * @return TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
+     * Get <p>分成账户支出(元)：通过分成金账户支付的金额</p> 
+     * @return TransferPayAmount <p>分成账户支出(元)：通过分成金账户支付的金额</p>
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set 分成账户支出(元)：通过分成金账户支付的金额
-     * @param TransferPayAmount 分成账户支出(元)：通过分成金账户支付的金额
+     * Set <p>分成账户支出(元)：通过分成金账户支付的金额</p>
+     * @param TransferPayAmount <p>分成账户支出(元)：通过分成金账户支付的金额</p>
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get 费用归集类型：费用来源类型，分摊、归集、未分配
-0 - 分摊
-1 - 归集
--1 - 未分配 
-     * @return AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
-0 - 分摊
-1 - 归集
--1 - 未分配
+     * Get <p>费用归集类型：费用来源类型，分摊、归集、未分配<br>0 - 分摊<br>1 - 归集<br>-1 - 未分配</p> 
+     * @return AllocationType <p>费用归集类型：费用来源类型，分摊、归集、未分配<br>0 - 分摊<br>1 - 归集<br>-1 - 未分配</p>
      */
     public Long getAllocationType() {
         return this.AllocationType;
     }
 
     /**
-     * Set 费用归集类型：费用来源类型，分摊、归集、未分配
-0 - 分摊
-1 - 归集
--1 - 未分配
-     * @param AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
-0 - 分摊
-1 - 归集
--1 - 未分配
+     * Set <p>费用归集类型：费用来源类型，分摊、归集、未分配<br>0 - 分摊<br>1 - 归集<br>-1 - 未分配</p>
+     * @param AllocationType <p>费用归集类型：费用来源类型，分摊、归集、未分配<br>0 - 分摊<br>1 - 归集<br>-1 - 未分配</p>
      */
     public void setAllocationType(Long AllocationType) {
         this.AllocationType = AllocationType;
     }
 
     /**
-     * Get 当前归属单元信息 
-     * @return BelongTreeNodeUniqKey 当前归属单元信息
+     * Get <p>当前归属单元信息</p> 
+     * @return BelongTreeNodeUniqKey <p>当前归属单元信息</p>
      */
     public AllocationTreeNode getBelongTreeNodeUniqKey() {
         return this.BelongTreeNodeUniqKey;
     }
 
     /**
-     * Set 当前归属单元信息
-     * @param BelongTreeNodeUniqKey 当前归属单元信息
+     * Set <p>当前归属单元信息</p>
+     * @param BelongTreeNodeUniqKey <p>当前归属单元信息</p>
      */
     public void setBelongTreeNodeUniqKey(AllocationTreeNode BelongTreeNodeUniqKey) {
         this.BelongTreeNodeUniqKey = BelongTreeNodeUniqKey;
     }
 
     /**
-     * Get 当前资源命中公摊规则信息 
-     * @return BelongRule 当前资源命中公摊规则信息
+     * Get <p>当前资源命中公摊规则信息</p> 
+     * @return BelongRule <p>当前资源命中公摊规则信息</p>
      */
     public AllocationRule getBelongRule() {
         return this.BelongRule;
     }
 
     /**
-     * Set 当前资源命中公摊规则信息
-     * @param BelongRule 当前资源命中公摊规则信息
+     * Set <p>当前资源命中公摊规则信息</p>
+     * @param BelongRule <p>当前资源命中公摊规则信息</p>
      */
     public void setBelongRule(AllocationRule BelongRule) {
         this.BelongRule = BelongRule;
     }
 
     /**
-     * Get 其它归属单元信息 
-     * @return OtherTreeNodeUniqKeys 其它归属单元信息
+     * Get <p>其它归属单元信息</p> 
+     * @return OtherTreeNodeUniqKeys <p>其它归属单元信息</p>
      */
     public AllocationTreeNode [] getOtherTreeNodeUniqKeys() {
         return this.OtherTreeNodeUniqKeys;
     }
 
     /**
-     * Set 其它归属单元信息
-     * @param OtherTreeNodeUniqKeys 其它归属单元信息
+     * Set <p>其它归属单元信息</p>
+     * @param OtherTreeNodeUniqKeys <p>其它归属单元信息</p>
      */
     public void setOtherTreeNodeUniqKeys(AllocationTreeNode [] OtherTreeNodeUniqKeys) {
         this.OtherTreeNodeUniqKeys = OtherTreeNodeUniqKeys;
     }
 
     /**
-     * Get 其他命中规则信息 
-     * @return OtherRules 其他命中规则信息
+     * Get <p>其他命中规则信息</p> 
+     * @return OtherRules <p>其他命中规则信息</p>
      */
     public AllocationRule [] getOtherRules() {
         return this.OtherRules;
     }
 
     /**
-     * Set 其他命中规则信息
-     * @param OtherRules 其他命中规则信息
+     * Set <p>其他命中规则信息</p>
+     * @param OtherRules <p>其他命中规则信息</p>
      */
     public void setOtherRules(AllocationRule [] OtherRules) {
         this.OtherRules = OtherRules;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目 
-     * @return ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * Get <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p> 
+     * @return ProjectName <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
-     * @param ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * Set <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
+     * @param ProjectName <p>项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 子产品编码 
-     * @return ProductCode 子产品编码
+     * Get <p>子产品编码</p> 
+     * @return ProductCode <p>子产品编码</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 子产品编码
-     * @param ProductCode 子产品编码
+     * Set <p>子产品编码</p>
+     * @param ProductCode <p>子产品编码</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品名称：用户采购的具体产品细分类型 
-     * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型
+     * Get <p>子产品名称：用户采购的具体产品细分类型</p> 
+     * @return ProductCodeName <p>子产品名称：用户采购的具体产品细分类型</p>
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品名称：用户采购的具体产品细分类型
-     * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型
+     * Set <p>子产品名称：用户采购的具体产品细分类型</p>
+     * @param ProductCodeName <p>子产品名称：用户采购的具体产品细分类型</p>
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 计费模式编码 
-     * @return PayMode 计费模式编码
+     * Get <p>计费模式编码</p> 
+     * @return PayMode <p>计费模式编码</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式编码
-     * @param PayMode 计费模式编码
+     * Set <p>计费模式编码</p>
+     * @param PayMode <p>计费模式编码</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费 
-     * @return PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * Get <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p> 
+     * @return PayModeName <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 计费模式：资源的计费模式，区分为包年包月和按量计费
-     * @param PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * Set <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
+     * @param PayModeName <p>计费模式：资源的计费模式，区分为包年包月和按量计费</p>
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 交易类型编码 
-     * @return ActionType 交易类型编码
+     * Get <p>交易类型编码</p> 
+     * @return ActionType <p>交易类型编码</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 交易类型编码
-     * @param ActionType 交易类型编码
+     * Set <p>交易类型编码</p>
+     * @param ActionType <p>交易类型编码</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 交易类型：明细交易类型 
-     * @return ActionTypeName 交易类型：明细交易类型
+     * Get <p>交易类型：明细交易类型</p> 
+     * @return ActionTypeName <p>交易类型：明细交易类型</p>
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set 交易类型：明细交易类型
-     * @param ActionTypeName 交易类型：明细交易类型
+     * Set <p>交易类型：明细交易类型</p>
+     * @param ActionTypeName <p>交易类型：明细交易类型</p>
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+     * Get <p>分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SplitItemId 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+     * @return SplitItemId <p>分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -895,9 +887,9 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Set 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+     * Set <p>分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SplitItemId 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
+     * @param SplitItemId <p>分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -907,9 +899,9 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get 分拆项名称：涉及分拆产品的分拆后的分拆项
+     * Get <p>分拆项名称：涉及分拆产品的分拆后的分拆项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SplitItemName 分拆项名称：涉及分拆产品的分拆后的分拆项
+     * @return SplitItemName <p>分拆项名称：涉及分拆产品的分拆后的分拆项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -919,15 +911,31 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Set 分拆项名称：涉及分拆产品的分拆后的分拆项
+     * Set <p>分拆项名称：涉及分拆产品的分拆后的分拆项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SplitItemName 分拆项名称：涉及分拆产品的分拆后的分拆项
+     * @param SplitItemName <p>分拆项名称：涉及分拆产品的分拆后的分拆项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
     public void setSplitItemName(String SplitItemName) {
         this.SplitItemName = SplitItemName;
+    }
+
+    /**
+     * Get <p>归集方式</p><p>枚举值：</p><ul><li>0： 未归集</li><li>1： 自动命中</li><li>2： 手动分配待生效</li><li>3： 手动分配已生效</li></ul> 
+     * @return EffectiveMode <p>归集方式</p><p>枚举值：</p><ul><li>0： 未归集</li><li>1： 自动命中</li><li>2： 手动分配待生效</li><li>3： 手动分配已生效</li></ul>
+     */
+    public String getEffectiveMode() {
+        return this.EffectiveMode;
+    }
+
+    /**
+     * Set <p>归集方式</p><p>枚举值：</p><ul><li>0： 未归集</li><li>1： 自动命中</li><li>2： 手动分配待生效</li><li>3： 手动分配已生效</li></ul>
+     * @param EffectiveMode <p>归集方式</p><p>枚举值：</p><ul><li>0： 未归集</li><li>1： 自动命中</li><li>2： 手动分配待生效</li><li>3： 手动分配已生效</li></ul>
+     */
+    public void setEffectiveMode(String EffectiveMode) {
+        this.EffectiveMode = EffectiveMode;
     }
 
     public GatherResourceSummary() {
@@ -1061,6 +1069,9 @@ public class GatherResourceSummary extends AbstractModel {
         if (source.SplitItemName != null) {
             this.SplitItemName = new String(source.SplitItemName);
         }
+        if (source.EffectiveMode != null) {
+            this.EffectiveMode = new String(source.EffectiveMode);
+        }
     }
 
 
@@ -1106,6 +1117,7 @@ public class GatherResourceSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "ActionTypeName", this.ActionTypeName);
         this.setParamSimple(map, prefix + "SplitItemId", this.SplitItemId);
         this.setParamSimple(map, prefix + "SplitItemName", this.SplitItemName);
+        this.setParamSimple(map, prefix + "EffectiveMode", this.EffectiveMode);
 
     }
 }

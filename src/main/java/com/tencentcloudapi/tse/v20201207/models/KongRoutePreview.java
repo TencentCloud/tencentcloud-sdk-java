@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class KongRoutePreview extends AbstractModel {
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 服务名字
+    * <p>服务名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 无
+    * <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Methods")
@@ -46,7 +46,7 @@ public class KongRoutePreview extends AbstractModel {
     private String [] Methods;
 
     /**
-    * 无
+    * <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paths")
@@ -54,7 +54,7 @@ public class KongRoutePreview extends AbstractModel {
     private String [] Paths;
 
     /**
-    * 无
+    * <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hosts")
@@ -62,42 +62,42 @@ public class KongRoutePreview extends AbstractModel {
     private String [] Hosts;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("Protocols")
     @Expose
     private String [] Protocols;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("PreserveHost")
     @Expose
     private Boolean PreserveHost;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("HttpsRedirectStatusCode")
     @Expose
     private Long HttpsRedirectStatusCode;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("StripPath")
     @Expose
     private Boolean StripPath;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 是否开启了强制HTTPS
+    * <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForceHttps")
@@ -105,97 +105,104 @@ public class KongRoutePreview extends AbstractModel {
     private Boolean ForceHttps;
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
     */
     @SerializedName("ServiceID")
     @Expose
     private String ServiceID;
 
     /**
-    * 目的端口
+    * <p>目的端口</p>
     */
     @SerializedName("DestinationPorts")
     @Expose
     private Long [] DestinationPorts;
 
     /**
-    * 路由的Headers
+    * <p>路由的Headers</p>
     */
     @SerializedName("Headers")
     @Expose
     private KVMapping [] Headers;
 
     /**
-    * 是否缓存请求body，默认true
+    * <p>是否缓存请求body，默认true</p>
     */
     @SerializedName("RequestBuffering")
     @Expose
     private Boolean RequestBuffering;
 
     /**
-    * 是否缓存响应body，默认true
+    * <p>是否缓存响应body，默认true</p>
     */
     @SerializedName("ResponseBuffering")
     @Expose
     private Boolean ResponseBuffering;
 
     /**
-    * 正则优先级
+    * <p>正则优先级</p>
     */
     @SerializedName("RegexPriority")
     @Expose
     private Long RegexPriority;
 
     /**
-    * querystring参数
+    * <p>querystring参数</p>
     */
     @SerializedName("QueryStringParameters")
     @Expose
     private KVMapping [] QueryStringParameters;
 
     /**
-     * Get 服务ID 
-     * @return ID 服务ID
+    * <p>路由来源</p>
+    */
+    @SerializedName("RouteSource")
+    @Expose
+    private String RouteSource;
+
+    /**
+     * Get <p>服务ID</p> 
+     * @return ID <p>服务ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 服务ID
-     * @param ID 服务ID
+     * Set <p>服务ID</p>
+     * @param ID <p>服务ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 服务名字 
-     * @return Name 服务名字
+     * Get <p>服务名字</p> 
+     * @return Name <p>服务名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 服务名字
-     * @param Name 服务名字
+     * Set <p>服务名字</p>
+     * @param Name <p>服务名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 无
+     * Get <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Methods 无
+     * @return Methods <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMethods() {
@@ -203,9 +210,9 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Methods 无
+     * @param Methods <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethods(String [] Methods) {
@@ -213,9 +220,9 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Paths 无
+     * @return Paths <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPaths() {
@@ -223,9 +230,9 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Paths 无
+     * @param Paths <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaths(String [] Paths) {
@@ -233,9 +240,9 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Hosts 无
+     * @return Hosts <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHosts() {
@@ -243,9 +250,9 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Hosts 无
+     * @param Hosts <p>无</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHosts(String [] Hosts) {
@@ -253,89 +260,89 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return Protocols 无
+     * Get <p>无</p> 
+     * @return Protocols <p>无</p>
      */
     public String [] getProtocols() {
         return this.Protocols;
     }
 
     /**
-     * Set 无
-     * @param Protocols 无
+     * Set <p>无</p>
+     * @param Protocols <p>无</p>
      */
     public void setProtocols(String [] Protocols) {
         this.Protocols = Protocols;
     }
 
     /**
-     * Get 无 
-     * @return PreserveHost 无
+     * Get <p>无</p> 
+     * @return PreserveHost <p>无</p>
      */
     public Boolean getPreserveHost() {
         return this.PreserveHost;
     }
 
     /**
-     * Set 无
-     * @param PreserveHost 无
+     * Set <p>无</p>
+     * @param PreserveHost <p>无</p>
      */
     public void setPreserveHost(Boolean PreserveHost) {
         this.PreserveHost = PreserveHost;
     }
 
     /**
-     * Get 无 
-     * @return HttpsRedirectStatusCode 无
+     * Get <p>无</p> 
+     * @return HttpsRedirectStatusCode <p>无</p>
      */
     public Long getHttpsRedirectStatusCode() {
         return this.HttpsRedirectStatusCode;
     }
 
     /**
-     * Set 无
-     * @param HttpsRedirectStatusCode 无
+     * Set <p>无</p>
+     * @param HttpsRedirectStatusCode <p>无</p>
      */
     public void setHttpsRedirectStatusCode(Long HttpsRedirectStatusCode) {
         this.HttpsRedirectStatusCode = HttpsRedirectStatusCode;
     }
 
     /**
-     * Get 无 
-     * @return StripPath 无
+     * Get <p>无</p> 
+     * @return StripPath <p>无</p>
      */
     public Boolean getStripPath() {
         return this.StripPath;
     }
 
     /**
-     * Set 无
-     * @param StripPath 无
+     * Set <p>无</p>
+     * @param StripPath <p>无</p>
      */
     public void setStripPath(Boolean StripPath) {
         this.StripPath = StripPath;
     }
 
     /**
-     * Get 无 
-     * @return CreatedTime 无
+     * Get <p>无</p> 
+     * @return CreatedTime <p>无</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 无
-     * @param CreatedTime 无
+     * Set <p>无</p>
+     * @param CreatedTime <p>无</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 是否开启了强制HTTPS
+     * Get <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForceHttps 是否开启了强制HTTPS
+     * @return ForceHttps <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -345,9 +352,9 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Set 是否开启了强制HTTPS
+     * Set <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceHttps 是否开启了强制HTTPS
+     * @param ForceHttps <p>是否开启了强制HTTPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -357,131 +364,147 @@ public class KongRoutePreview extends AbstractModel {
     }
 
     /**
-     * Get 服务名 
-     * @return ServiceName 服务名
+     * Get <p>服务名</p> 
+     * @return ServiceName <p>服务名</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名
-     * @param ServiceName 服务名
+     * Set <p>服务名</p>
+     * @param ServiceName <p>服务名</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 服务ID 
-     * @return ServiceID 服务ID
+     * Get <p>服务ID</p> 
+     * @return ServiceID <p>服务ID</p>
      */
     public String getServiceID() {
         return this.ServiceID;
     }
 
     /**
-     * Set 服务ID
-     * @param ServiceID 服务ID
+     * Set <p>服务ID</p>
+     * @param ServiceID <p>服务ID</p>
      */
     public void setServiceID(String ServiceID) {
         this.ServiceID = ServiceID;
     }
 
     /**
-     * Get 目的端口 
-     * @return DestinationPorts 目的端口
+     * Get <p>目的端口</p> 
+     * @return DestinationPorts <p>目的端口</p>
      */
     public Long [] getDestinationPorts() {
         return this.DestinationPorts;
     }
 
     /**
-     * Set 目的端口
-     * @param DestinationPorts 目的端口
+     * Set <p>目的端口</p>
+     * @param DestinationPorts <p>目的端口</p>
      */
     public void setDestinationPorts(Long [] DestinationPorts) {
         this.DestinationPorts = DestinationPorts;
     }
 
     /**
-     * Get 路由的Headers 
-     * @return Headers 路由的Headers
+     * Get <p>路由的Headers</p> 
+     * @return Headers <p>路由的Headers</p>
      */
     public KVMapping [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set 路由的Headers
-     * @param Headers 路由的Headers
+     * Set <p>路由的Headers</p>
+     * @param Headers <p>路由的Headers</p>
      */
     public void setHeaders(KVMapping [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get 是否缓存请求body，默认true 
-     * @return RequestBuffering 是否缓存请求body，默认true
+     * Get <p>是否缓存请求body，默认true</p> 
+     * @return RequestBuffering <p>是否缓存请求body，默认true</p>
      */
     public Boolean getRequestBuffering() {
         return this.RequestBuffering;
     }
 
     /**
-     * Set 是否缓存请求body，默认true
-     * @param RequestBuffering 是否缓存请求body，默认true
+     * Set <p>是否缓存请求body，默认true</p>
+     * @param RequestBuffering <p>是否缓存请求body，默认true</p>
      */
     public void setRequestBuffering(Boolean RequestBuffering) {
         this.RequestBuffering = RequestBuffering;
     }
 
     /**
-     * Get 是否缓存响应body，默认true 
-     * @return ResponseBuffering 是否缓存响应body，默认true
+     * Get <p>是否缓存响应body，默认true</p> 
+     * @return ResponseBuffering <p>是否缓存响应body，默认true</p>
      */
     public Boolean getResponseBuffering() {
         return this.ResponseBuffering;
     }
 
     /**
-     * Set 是否缓存响应body，默认true
-     * @param ResponseBuffering 是否缓存响应body，默认true
+     * Set <p>是否缓存响应body，默认true</p>
+     * @param ResponseBuffering <p>是否缓存响应body，默认true</p>
      */
     public void setResponseBuffering(Boolean ResponseBuffering) {
         this.ResponseBuffering = ResponseBuffering;
     }
 
     /**
-     * Get 正则优先级 
-     * @return RegexPriority 正则优先级
+     * Get <p>正则优先级</p> 
+     * @return RegexPriority <p>正则优先级</p>
      */
     public Long getRegexPriority() {
         return this.RegexPriority;
     }
 
     /**
-     * Set 正则优先级
-     * @param RegexPriority 正则优先级
+     * Set <p>正则优先级</p>
+     * @param RegexPriority <p>正则优先级</p>
      */
     public void setRegexPriority(Long RegexPriority) {
         this.RegexPriority = RegexPriority;
     }
 
     /**
-     * Get querystring参数 
-     * @return QueryStringParameters querystring参数
+     * Get <p>querystring参数</p> 
+     * @return QueryStringParameters <p>querystring参数</p>
      */
     public KVMapping [] getQueryStringParameters() {
         return this.QueryStringParameters;
     }
 
     /**
-     * Set querystring参数
-     * @param QueryStringParameters querystring参数
+     * Set <p>querystring参数</p>
+     * @param QueryStringParameters <p>querystring参数</p>
      */
     public void setQueryStringParameters(KVMapping [] QueryStringParameters) {
         this.QueryStringParameters = QueryStringParameters;
+    }
+
+    /**
+     * Get <p>路由来源</p> 
+     * @return RouteSource <p>路由来源</p>
+     */
+    public String getRouteSource() {
+        return this.RouteSource;
+    }
+
+    /**
+     * Set <p>路由来源</p>
+     * @param RouteSource <p>路由来源</p>
+     */
+    public void setRouteSource(String RouteSource) {
+        this.RouteSource = RouteSource;
     }
 
     public KongRoutePreview() {
@@ -570,6 +593,9 @@ public class KongRoutePreview extends AbstractModel {
                 this.QueryStringParameters[i] = new KVMapping(source.QueryStringParameters[i]);
             }
         }
+        if (source.RouteSource != null) {
+            this.RouteSource = new String(source.RouteSource);
+        }
     }
 
 
@@ -596,6 +622,7 @@ public class KongRoutePreview extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
         this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
         this.setParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
+        this.setParamSimple(map, prefix + "RouteSource", this.RouteSource);
 
     }
 }

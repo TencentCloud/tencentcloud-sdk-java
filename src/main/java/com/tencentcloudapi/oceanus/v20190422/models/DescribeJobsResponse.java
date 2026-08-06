@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeJobsResponse extends AbstractModel {
 
     /**
-    * 作业总数
+    * <p>作业总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 作业列表
+    * <p>作业列表</p>
     */
     @SerializedName("JobSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 作业总数 
-     * @return TotalCount 作业总数
+     * Get <p>作业总数</p> 
+     * @return TotalCount <p>作业总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 作业总数
-     * @param TotalCount 作业总数
+     * Set <p>作业总数</p>
+     * @param TotalCount <p>作业总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 作业列表 
-     * @return JobSet 作业列表
+     * Get <p>作业列表</p> 
+     * @return JobSet <p>作业列表</p>
      */
     public JobV1 [] getJobSet() {
         return this.JobSet;
     }
 
     /**
-     * Set 作业列表
-     * @param JobSet 作业列表
+     * Set <p>作业列表</p>
+     * @param JobSet <p>作业列表</p>
      */
     public void setJobSet(JobV1 [] JobSet) {
         this.JobSet = JobSet;

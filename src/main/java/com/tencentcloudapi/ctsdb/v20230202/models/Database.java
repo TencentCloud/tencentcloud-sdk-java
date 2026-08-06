@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Database extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterID")
@@ -32,7 +32,7 @@ public class Database extends AbstractModel {
     private String ClusterID;
 
     /**
-    * 数据库名
+    * <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class Database extends AbstractModel {
     private String Name;
 
     /**
-    * 降冷时间（天）
+    * <p>降冷时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoolDownInDays")
@@ -48,7 +48,7 @@ public class Database extends AbstractModel {
     private Long CoolDownInDays;
 
     /**
-    * 数据保留时间（天）
+    * <p>数据保留时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionInDays")
@@ -56,7 +56,7 @@ public class Database extends AbstractModel {
     private Long RetentionInDays;
 
     /**
-    * 备注
+    * <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -64,7 +64,7 @@ public class Database extends AbstractModel {
     private String Remark;
 
     /**
-    * 状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作
+    * <p>状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -72,7 +72,7 @@ public class Database extends AbstractModel {
     private Long Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -80,7 +80,7 @@ public class Database extends AbstractModel {
     private String CreatedAt;
 
     /**
-    * 最后修改时间
+    * <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -88,9 +88,17 @@ public class Database extends AbstractModel {
     private String UpdatedAt;
 
     /**
-     * Get 实例ID
+    * <p>降冷开启时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CoolDownTime")
+    @Expose
+    private String CoolDownTime;
+
+    /**
+     * Get <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterID 实例ID
+     * @return ClusterID <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterID() {
@@ -98,9 +106,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterID 实例ID
+     * @param ClusterID <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterID(String ClusterID) {
@@ -108,9 +116,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 数据库名
+     * Get <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 数据库名
+     * @return Name <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -118,9 +126,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 数据库名
+     * Set <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 数据库名
+     * @param Name <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -128,9 +136,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 降冷时间（天）
+     * Get <p>降冷时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CoolDownInDays 降冷时间（天）
+     * @return CoolDownInDays <p>降冷时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCoolDownInDays() {
@@ -138,9 +146,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 降冷时间（天）
+     * Set <p>降冷时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CoolDownInDays 降冷时间（天）
+     * @param CoolDownInDays <p>降冷时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoolDownInDays(Long CoolDownInDays) {
@@ -148,9 +156,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 数据保留时间（天）
+     * Get <p>数据保留时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetentionInDays 数据保留时间（天）
+     * @return RetentionInDays <p>数据保留时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionInDays() {
@@ -158,9 +166,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 数据保留时间（天）
+     * Set <p>数据保留时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetentionInDays 数据保留时间（天）
+     * @param RetentionInDays <p>数据保留时间（天）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionInDays(Long RetentionInDays) {
@@ -168,9 +176,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 备注
+     * Get <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注
+     * @return Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -178,9 +186,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 备注
+     * Set <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注
+     * @param Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -188,9 +196,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作
+     * Get <p>状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作
+     * @return Status <p>状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -198,9 +206,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作
+     * Set <p>状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作
+     * @param Status <p>状态：0: 资源初始化中， 1: 资源创建中， 2: 正常状态， 3: 资源删除中， 4: 资源已删除， 5: 资源禁用中， 6: 资源已禁用， 7: 资源异常，需要人工操作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -208,9 +216,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 创建时间
+     * @return CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -218,9 +226,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 创建时间
+     * @param CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -228,9 +236,9 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Get 最后修改时间
+     * Get <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 最后修改时间
+     * @return UpdatedAt <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -238,13 +246,33 @@ public class Database extends AbstractModel {
     }
 
     /**
-     * Set 最后修改时间
+     * Set <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 最后修改时间
+     * @param UpdatedAt <p>最后修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
+    }
+
+    /**
+     * Get <p>降冷开启时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CoolDownTime <p>降冷开启时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCoolDownTime() {
+        return this.CoolDownTime;
+    }
+
+    /**
+     * Set <p>降冷开启时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CoolDownTime <p>降冷开启时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoolDownTime(String CoolDownTime) {
+        this.CoolDownTime = CoolDownTime;
     }
 
     public Database() {
@@ -279,6 +307,9 @@ public class Database extends AbstractModel {
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.CoolDownTime != null) {
+            this.CoolDownTime = new String(source.CoolDownTime);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class Database extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "CoolDownTime", this.CoolDownTime);
 
     }
 }

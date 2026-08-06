@@ -24,141 +24,233 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
 
     /**
-    * 网关ID
+    * <p>网关ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 翻页单页查询限制数量[0,1000], 默认值0
+    * <p>翻页单页查询限制数量[0,1000], 默认值0</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 翻页单页偏移量，默认值0
+    * <p>翻页单页偏移量，默认值0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 服务的名字，精确匹配
+    * <p>服务的名字，精确匹配</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 路由的名字，精确匹配
+    * <p>路由的名字，精确匹配</p>
     */
     @SerializedName("RouteName")
     @Expose
     private String RouteName;
 
     /**
-    * 过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol
+    * <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p>
     */
     @SerializedName("Filters")
     @Expose
     private ListFilter [] Filters;
 
     /**
-     * Get 网关ID 
-     * @return GatewayId 网关ID
+    * <p>路由类型</p>
+    */
+    @SerializedName("RouteTypes")
+    @Expose
+    private String [] RouteTypes;
+
+    /**
+    * <p>是否将灰度规则可能带来的路由排在原始路由前</p>
+    */
+    @SerializedName("GrayRoutesFirst")
+    @Expose
+    private Boolean GrayRoutesFirst;
+
+    /**
+    * <p>排序字段</p>
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private String OrderType;
+
+    /**
+     * Get <p>网关ID</p> 
+     * @return GatewayId <p>网关ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关ID
-     * @param GatewayId 网关ID
+     * Set <p>网关ID</p>
+     * @param GatewayId <p>网关ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 翻页单页查询限制数量[0,1000], 默认值0 
-     * @return Limit 翻页单页查询限制数量[0,1000], 默认值0
+     * Get <p>翻页单页查询限制数量[0,1000], 默认值0</p> 
+     * @return Limit <p>翻页单页查询限制数量[0,1000], 默认值0</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 翻页单页查询限制数量[0,1000], 默认值0
-     * @param Limit 翻页单页查询限制数量[0,1000], 默认值0
+     * Set <p>翻页单页查询限制数量[0,1000], 默认值0</p>
+     * @param Limit <p>翻页单页查询限制数量[0,1000], 默认值0</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 翻页单页偏移量，默认值0 
-     * @return Offset 翻页单页偏移量，默认值0
+     * Get <p>翻页单页偏移量，默认值0</p> 
+     * @return Offset <p>翻页单页偏移量，默认值0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页单页偏移量，默认值0
-     * @param Offset 翻页单页偏移量，默认值0
+     * Set <p>翻页单页偏移量，默认值0</p>
+     * @param Offset <p>翻页单页偏移量，默认值0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 服务的名字，精确匹配 
-     * @return ServiceName 服务的名字，精确匹配
+     * Get <p>服务的名字，精确匹配</p> 
+     * @return ServiceName <p>服务的名字，精确匹配</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务的名字，精确匹配
-     * @param ServiceName 服务的名字，精确匹配
+     * Set <p>服务的名字，精确匹配</p>
+     * @param ServiceName <p>服务的名字，精确匹配</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 路由的名字，精确匹配 
-     * @return RouteName 路由的名字，精确匹配
+     * Get <p>路由的名字，精确匹配</p> 
+     * @return RouteName <p>路由的名字，精确匹配</p>
      */
     public String getRouteName() {
         return this.RouteName;
     }
 
     /**
-     * Set 路由的名字，精确匹配
-     * @param RouteName 路由的名字，精确匹配
+     * Set <p>路由的名字，精确匹配</p>
+     * @param RouteName <p>路由的名字，精确匹配</p>
      */
     public void setRouteName(String RouteName) {
         this.RouteName = RouteName;
     }
 
     /**
-     * Get 过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol 
-     * @return Filters 过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol
+     * Get <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p> 
+     * @return Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p>
      */
     public ListFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol
-     * @param Filters 过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol
+     * Set <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p>
+     * @param Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p>
      */
     public void setFilters(ListFilter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>路由类型</p> 
+     * @return RouteTypes <p>路由类型</p>
+     */
+    public String [] getRouteTypes() {
+        return this.RouteTypes;
+    }
+
+    /**
+     * Set <p>路由类型</p>
+     * @param RouteTypes <p>路由类型</p>
+     */
+    public void setRouteTypes(String [] RouteTypes) {
+        this.RouteTypes = RouteTypes;
+    }
+
+    /**
+     * Get <p>是否将灰度规则可能带来的路由排在原始路由前</p> 
+     * @return GrayRoutesFirst <p>是否将灰度规则可能带来的路由排在原始路由前</p>
+     */
+    public Boolean getGrayRoutesFirst() {
+        return this.GrayRoutesFirst;
+    }
+
+    /**
+     * Set <p>是否将灰度规则可能带来的路由排在原始路由前</p>
+     * @param GrayRoutesFirst <p>是否将灰度规则可能带来的路由排在原始路由前</p>
+     */
+    public void setGrayRoutesFirst(Boolean GrayRoutesFirst) {
+        this.GrayRoutesFirst = GrayRoutesFirst;
+    }
+
+    /**
+     * Get <p>排序字段</p> 
+     * @return OrderField <p>排序字段</p>
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set <p>排序字段</p>
+     * @param OrderField <p>排序字段</p>
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul> 
+     * @return OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public String getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     * @param OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public void setOrderType(String OrderType) {
+        this.OrderType = OrderType;
     }
 
     public DescribeCloudNativeAPIGatewayRoutesRequest() {
@@ -190,6 +282,21 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
                 this.Filters[i] = new ListFilter(source.Filters[i]);
             }
         }
+        if (source.RouteTypes != null) {
+            this.RouteTypes = new String[source.RouteTypes.length];
+            for (int i = 0; i < source.RouteTypes.length; i++) {
+                this.RouteTypes[i] = new String(source.RouteTypes[i]);
+            }
+        }
+        if (source.GrayRoutesFirst != null) {
+            this.GrayRoutesFirst = new Boolean(source.GrayRoutesFirst);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new String(source.OrderType);
+        }
     }
 
 
@@ -203,6 +310,10 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "RouteName", this.RouteName);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "RouteTypes.", this.RouteTypes);
+        this.setParamSimple(map, prefix + "GrayRoutesFirst", this.GrayRoutesFirst);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
 
     }
 }

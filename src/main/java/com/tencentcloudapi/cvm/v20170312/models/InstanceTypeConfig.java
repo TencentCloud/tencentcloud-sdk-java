@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class InstanceTypeConfig extends AbstractModel {
 
     /**
-    * 可用区。
+    * <p>可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例机型。
+    * <p>实例机型。</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例机型系列。
+    * <p>实例机型系列。</p>
     */
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
 
     /**
-    * GPU核数，单位：核。
+    * <p>GPU核数，单位：核。</p>
     */
     @SerializedName("GPU")
     @Expose
     private Long GPU;
 
     /**
-    * CPU核数，单位：核。
+    * <p>CPU核数，单位：核。</p>
     */
     @SerializedName("CPU")
     @Expose
     private Long CPU;
 
     /**
-    * 内存容量，单位：`GiB`。
+    * <p>内存容量，单位：<code>GiB</code>。</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * FPGA核数，单位：核。
+    * <p>FPGA核数，单位：核。</p>
     */
     @SerializedName("FPGA")
     @Expose
     private Long FPGA;
 
     /**
-    * 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+    * <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
     */
     @SerializedName("GpuCount")
     @Expose
     private Float GpuCount;
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+    * <p>实例GPU类型</p>
+    */
+    @SerializedName("GpuType")
+    @Expose
+    private String GpuType;
+
+    /**
+    * <p>实例GPU单块显存,单位：GiB。</p>
+    */
+    @SerializedName("GpuMemory")
+    @Expose
+    private Float GpuMemory;
+
+    /**
+     * Get <p>可用区。</p> 
+     * @return Zone <p>可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set <p>可用区。</p>
+     * @param Zone <p>可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例机型。 
-     * @return InstanceType 实例机型。
+     * Get <p>实例机型。</p> 
+     * @return InstanceType <p>实例机型。</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例机型。
-     * @param InstanceType 实例机型。
+     * Set <p>实例机型。</p>
+     * @param InstanceType <p>实例机型。</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例机型系列。 
-     * @return InstanceFamily 实例机型系列。
+     * Get <p>实例机型系列。</p> 
+     * @return InstanceFamily <p>实例机型系列。</p>
      */
     public String getInstanceFamily() {
         return this.InstanceFamily;
     }
 
     /**
-     * Set 实例机型系列。
-     * @param InstanceFamily 实例机型系列。
+     * Set <p>实例机型系列。</p>
+     * @param InstanceFamily <p>实例机型系列。</p>
      */
     public void setInstanceFamily(String InstanceFamily) {
         this.InstanceFamily = InstanceFamily;
     }
 
     /**
-     * Get GPU核数，单位：核。 
-     * @return GPU GPU核数，单位：核。
+     * Get <p>GPU核数，单位：核。</p> 
+     * @return GPU <p>GPU核数，单位：核。</p>
      */
     public Long getGPU() {
         return this.GPU;
     }
 
     /**
-     * Set GPU核数，单位：核。
-     * @param GPU GPU核数，单位：核。
+     * Set <p>GPU核数，单位：核。</p>
+     * @param GPU <p>GPU核数，单位：核。</p>
      */
     public void setGPU(Long GPU) {
         this.GPU = GPU;
     }
 
     /**
-     * Get CPU核数，单位：核。 
-     * @return CPU CPU核数，单位：核。
+     * Get <p>CPU核数，单位：核。</p> 
+     * @return CPU <p>CPU核数，单位：核。</p>
      */
     public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set CPU核数，单位：核。
-     * @param CPU CPU核数，单位：核。
+     * Set <p>CPU核数，单位：核。</p>
+     * @param CPU <p>CPU核数，单位：核。</p>
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 内存容量，单位：`GiB`。 
-     * @return Memory 内存容量，单位：`GiB`。
+     * Get <p>内存容量，单位：<code>GiB</code>。</p> 
+     * @return Memory <p>内存容量，单位：<code>GiB</code>。</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存容量，单位：`GiB`。
-     * @param Memory 内存容量，单位：`GiB`。
+     * Set <p>内存容量，单位：<code>GiB</code>。</p>
+     * @param Memory <p>内存容量，单位：<code>GiB</code>。</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get FPGA核数，单位：核。 
-     * @return FPGA FPGA核数，单位：核。
+     * Get <p>FPGA核数，单位：核。</p> 
+     * @return FPGA <p>FPGA核数，单位：核。</p>
      */
     public Long getFPGA() {
         return this.FPGA;
     }
 
     /**
-     * Set FPGA核数，单位：核。
-     * @param FPGA FPGA核数，单位：核。
+     * Set <p>FPGA核数，单位：核。</p>
+     * @param FPGA <p>FPGA核数，单位：核。</p>
      */
     public void setFPGA(Long FPGA) {
         this.FPGA = FPGA;
     }
 
     /**
-     * Get 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。 
-     * @return GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     * Get <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p> 
+     * @return GpuCount <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
      */
     public Float getGpuCount() {
         return this.GpuCount;
     }
 
     /**
-     * Set 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
-     * @param GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     * Set <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
+     * @param GpuCount <p>实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。</p>
      */
     public void setGpuCount(Float GpuCount) {
         this.GpuCount = GpuCount;
+    }
+
+    /**
+     * Get <p>实例GPU类型</p> 
+     * @return GpuType <p>实例GPU类型</p>
+     */
+    public String getGpuType() {
+        return this.GpuType;
+    }
+
+    /**
+     * Set <p>实例GPU类型</p>
+     * @param GpuType <p>实例GPU类型</p>
+     */
+    public void setGpuType(String GpuType) {
+        this.GpuType = GpuType;
+    }
+
+    /**
+     * Get <p>实例GPU单块显存,单位：GiB。</p> 
+     * @return GpuMemory <p>实例GPU单块显存,单位：GiB。</p>
+     */
+    public Float getGpuMemory() {
+        return this.GpuMemory;
+    }
+
+    /**
+     * Set <p>实例GPU单块显存,单位：GiB。</p>
+     * @param GpuMemory <p>实例GPU单块显存,单位：GiB。</p>
+     */
+    public void setGpuMemory(Float GpuMemory) {
+        this.GpuMemory = GpuMemory;
     }
 
     public InstanceTypeConfig() {
@@ -239,6 +285,12 @@ public class InstanceTypeConfig extends AbstractModel {
         if (source.GpuCount != null) {
             this.GpuCount = new Float(source.GpuCount);
         }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.GpuMemory != null) {
+            this.GpuMemory = new Float(source.GpuMemory);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class InstanceTypeConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "FPGA", this.FPGA);
         this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
+        this.setParamSimple(map, prefix + "GpuType", this.GpuType);
+        this.setParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
 
     }
 }

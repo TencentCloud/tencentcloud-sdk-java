@@ -391,6 +391,17 @@ public class ConfigClient extends AbstractClient{
     }
 
     /**
+     *账号组查询配置规则资源评估结果列表
+     * @param req ListAggregateConfigRuleResourceEvaluationResultsRequest
+     * @return ListAggregateConfigRuleResourceEvaluationResultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAggregateConfigRuleResourceEvaluationResultsResponse ListAggregateConfigRuleResourceEvaluationResults(ListAggregateConfigRuleResourceEvaluationResultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAggregateConfigRuleResourceEvaluationResults", ListAggregateConfigRuleResourceEvaluationResultsResponse.class);
+    }
+
+    /**
      *账号组获取规则列表
      * @param req ListAggregateConfigRulesRequest
      * @return ListAggregateConfigRulesResponse
@@ -454,6 +465,17 @@ public class ConfigClient extends AbstractClient{
     public ListConfigRuleEvaluationResultsResponse ListConfigRuleEvaluationResults(ListConfigRuleEvaluationResultsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListConfigRuleEvaluationResults", ListConfigRuleEvaluationResultsResponse.class);
+    }
+
+    /**
+     *查询配置规则资源评估结果列表
+     * @param req ListConfigRuleResourceEvaluationResultsRequest
+     * @return ListConfigRuleResourceEvaluationResultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListConfigRuleResourceEvaluationResultsResponse ListConfigRuleResourceEvaluationResults(ListConfigRuleResourceEvaluationResultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListConfigRuleResourceEvaluationResults", ListConfigRuleResourceEvaluationResultsResponse.class);
     }
 
     /**

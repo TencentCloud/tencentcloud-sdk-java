@@ -226,6 +226,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *查询云原生网关服务和路由列表
+     * @param req DescribeCNGWServicesWithRoutesRequest
+     * @return DescribeCNGWServicesWithRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutes(DescribeCNGWServicesWithRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCNGWServicesWithRoutes", DescribeCNGWServicesWithRoutesResponse.class);
+    }
+
+    /**
      *查询云原生消费者详情
      * @param req DescribeCloudNativeAPIGatewayConsumerRequest
      * @return DescribeCloudNativeAPIGatewayConsumerResponse

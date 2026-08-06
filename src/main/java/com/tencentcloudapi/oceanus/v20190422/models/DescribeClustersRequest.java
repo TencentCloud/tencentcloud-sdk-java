@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class DescribeClustersRequest extends AbstractModel {
 
     /**
-    * 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
+    * <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-    * 偏移量，默认 0
+    * <p>偏移量，默认 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 请求的集群数量，默认 20，最大值 100
+    * <p>请求的集群数量，默认 20，最大值 100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
+    * <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
+    * <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100 
-     * @return ClusterIds 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
+     * Get <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p> 
+     * @return ClusterIds <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
-     * @param ClusterIds 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100
+     * Set <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
+     * @param ClusterIds <p>按照一个或者多个集群 ID 查询，每次请求的集群上限为 100</p>
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
     }
 
     /**
-     * Get 偏移量，默认 0 
-     * @return Offset 偏移量，默认 0
+     * Get <p>偏移量，默认 0</p> 
+     * @return Offset <p>偏移量，默认 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认 0
-     * @param Offset 偏移量，默认 0
+     * Set <p>偏移量，默认 0</p>
+     * @param Offset <p>偏移量，默认 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 请求的集群数量，默认 20，最大值 100 
-     * @return Limit 请求的集群数量，默认 20，最大值 100
+     * Get <p>请求的集群数量，默认 20，最大值 100</p> 
+     * @return Limit <p>请求的集群数量，默认 20，最大值 100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求的集群数量，默认 20，最大值 100
-     * @param Limit 请求的集群数量，默认 20，最大值 100
+     * Set <p>请求的集群数量，默认 20，最大值 100</p>
+     * @param Limit <p>请求的集群数量，默认 20，最大值 100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序 
-     * @return OrderType 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
+     * Get <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p> 
+     * @return OrderType <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
-     * @param OrderType 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
+     * Set <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
+     * @param OrderType <p>集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序</p>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-     
-     * @return Filters 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
+     * Get <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul> 
+     * @return Filters <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
-     * @param Filters 过滤规则
-    
-- Name
-    按照集群的名字进行模糊查询。例如：测试
-    类型： String
-    必选： 否
-    
+     * Set <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
+     * @param Filters <p>过滤规则</p><ul><li>Name<br>  按照集群的名字进行模糊查询。例如：测试<br>  类型： String<br>  必选： 否</li></ul>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;

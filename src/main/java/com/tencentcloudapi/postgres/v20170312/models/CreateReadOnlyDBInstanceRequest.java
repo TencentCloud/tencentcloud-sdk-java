@@ -129,7 +129,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private String ReadOnlyGroupId;
 
     /**
-    * <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+    * <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
     */
     @SerializedName("TagList")
     @Expose
@@ -176,6 +176,13 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
+
+    /**
+    * <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p> 
@@ -418,16 +425,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p> 
-     * @return TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     * Get <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p> 
+     * @return TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
-     * @param TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     * Set <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
+     * @param TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p><p>当前字段未完整支持多个tag形式，不推荐使用，建议使用新字段Tags</p>
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;
@@ -533,6 +540,22 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p> 
+     * @return Tags <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     * @param Tags <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateReadOnlyDBInstanceRequest() {
     }
 
@@ -613,6 +636,12 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -642,6 +671,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

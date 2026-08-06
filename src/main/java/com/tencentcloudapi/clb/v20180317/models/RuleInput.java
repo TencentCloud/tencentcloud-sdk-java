@@ -24,373 +24,368 @@ import java.util.HashMap;
 public class RuleInput extends AbstractModel {
 
     /**
-    * 转发规则的路径。长度限制为：1~200。
+    * <p>转发规则的路径。长度限制为：1~200。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+    * <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
+    * <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
+    * <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
     */
     @SerializedName("HealthCheck")
     @Expose
     private HealthCheck HealthCheck;
 
     /**
-    * 证书信息；此参数和MultiCertInfo不能同时传入。
+    * <p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
     */
     @SerializedName("Certificate")
     @Expose
     private CertificateInput Certificate;
 
     /**
-    * 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+    * <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
+    * <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
     */
     @SerializedName("ForwardType")
     @Expose
     private String ForwardType;
 
     /**
-    * 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+    * <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
     */
     @SerializedName("DefaultServer")
     @Expose
     private Boolean DefaultServer;
 
     /**
-    * 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+    * <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
     */
     @SerializedName("Http2")
     @Expose
     private Boolean Http2;
 
     /**
-    * 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+    * <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+    * <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
+    * <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
     */
     @SerializedName("TrpcFunc")
     @Expose
     private String TrpcFunc;
 
     /**
-    * 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+    * <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
     */
     @SerializedName("Quic")
     @Expose
     private Boolean Quic;
 
     /**
-    * 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+    * <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+    * <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
     */
     @SerializedName("MultiCertInfo")
     @Expose
     private MultiCertInfo MultiCertInfo;
 
     /**
-    * 自定义cookie名
+    * <p>自定义cookie名</p>
     */
     @SerializedName("CookieName")
     @Expose
     private String CookieName;
 
     /**
-     * Get 转发规则的路径。长度限制为：1~200。 
-     * @return Url 转发规则的路径。长度限制为：1~200。
+     * Get <p>转发规则的路径。长度限制为：1~200。</p> 
+     * @return Url <p>转发规则的路径。长度限制为：1~200。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 转发规则的路径。长度限制为：1~200。
-     * @param Url 转发规则的路径。长度限制为：1~200。
+     * Set <p>转发规则的路径。长度限制为：1~200。</p>
+     * @param Url <p>转发规则的路径。长度限制为：1~200。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。 
-     * @return Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * Get <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p> 
+     * @return Domain <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
-     * @param Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * Set <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+     * @param Domain <p>转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。 
-     * @return SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
+     * Get <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p> 
+     * @return SessionExpireTime <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
-     * @param SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
+     * Set <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
+     * @param SessionExpireTime <p>会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。</p>
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097) 
-     * @return HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     * Get <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p> 
+     * @return HealthCheck <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
-     * @param HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     * Set <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
+     * @param HealthCheck <p>健康检查信息。详情请参见：<a href="https://cloud.tencent.com/document/product/214/6097">健康检查</a></p>
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 证书信息；此参数和MultiCertInfo不能同时传入。 
-     * @return Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
+     * Get <p>证书信息；此参数和MultiCertInfo不能同时传入。</p> 
+     * @return Certificate <p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书信息；此参数和MultiCertInfo不能同时传入。
-     * @param Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
+     * Set <p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
+     * @param Certificate <p>证书信息；此参数和MultiCertInfo不能同时传入。</p>
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。 
-     * @return Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * Get <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p> 
+     * @return Scheduler <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
-     * @param Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * Set <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
+     * @param Scheduler <p>规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH<br>分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。</p>
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。 
-     * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
+     * Get <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p> 
+     * @return ForwardType <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
-     * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。
+     * Set <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
+     * @param ForwardType <p>负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/GRPCS/TRPC，TRPC暂未对外开放，默认HTTP。</p>
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
     }
 
     /**
-     * Get 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。 
-     * @return DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * Get <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p> 
+     * @return DefaultServer <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
      */
     public Boolean getDefaultServer() {
         return this.DefaultServer;
     }
 
     /**
-     * Set 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
-     * @param DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * Set <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
+     * @param DefaultServer <p>是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。</p>
      */
     public void setDefaultServer(Boolean DefaultServer) {
         this.DefaultServer = DefaultServer;
     }
 
     /**
-     * Get 是否开启Http2，注意，只有HTTPS域名才能开启Http2。 
-     * @return Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * Get <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p> 
+     * @return Http2 <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
      */
     public Boolean getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
-     * @param Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * Set <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
+     * @param Http2 <p>是否开启Http2，注意，只有HTTPS域名才能开启Http2。</p>
      */
     public void setHttp2(Boolean Http2) {
         this.Http2 = Http2;
     }
 
     /**
-     * Get 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组 
-     * @return TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * Get <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul> 
+     * @return TargetType <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
-     * @param TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * Set <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
+     * @param TargetType <p>后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组</p><p>枚举值：</p><ul><li>NODE： 绑定普通节点</li><li>TARGETGROUP： 绑定目标组 v1</li><li>TARGETGROUP-V2： 绑定目标组 v2</li></ul>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。 
-     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+     * Get <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p> 
+     * @return TrpcCallee <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
-     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+     * Set <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
+     * @param TrpcCallee <p>TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。</p>
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放 
-     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
+     * Get <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p> 
+     * @return TrpcFunc <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
-     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
+     * Set <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
+     * @param TrpcFunc <p>TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放</p>
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;
     }
 
     /**
-     * Get 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC 
-     * @return Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     * Get <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p> 
+     * @return Quic <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
      */
     public Boolean getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
-     * @param Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     * Set <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
+     * @param Quic <p>是否开启QUIC，注意，只有HTTPS域名才能开启QUIC</p>
      */
     public void setQuic(Boolean Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。 
-     * @return Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * Get <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p> 
+     * @return Domains <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
-     * @param Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     * Set <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
+     * @param Domains <p>转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。</p>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。 
-     * @return MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     * Get <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p> 
+     * @return MultiCertInfo <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
      */
     public MultiCertInfo getMultiCertInfo() {
         return this.MultiCertInfo;
     }
 
     /**
-     * Set 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
-     * @param MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。
+     * Set <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
+     * @param MultiCertInfo <p>证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。</p>
      */
     public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
         this.MultiCertInfo = MultiCertInfo;
     }
 
     /**
-     * Get 自定义cookie名 
-     * @return CookieName 自定义cookie名
+     * Get <p>自定义cookie名</p> 
+     * @return CookieName <p>自定义cookie名</p>
      */
     public String getCookieName() {
         return this.CookieName;
     }
 
     /**
-     * Set 自定义cookie名
-     * @param CookieName 自定义cookie名
+     * Set <p>自定义cookie名</p>
+     * @param CookieName <p>自定义cookie名</p>
      */
     public void setCookieName(String CookieName) {
         this.CookieName = CookieName;

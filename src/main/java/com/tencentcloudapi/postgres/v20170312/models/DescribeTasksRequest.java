@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
+    * <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 按照数据库实例ID进行查询。
+    * <p>按照数据库实例ID进行查询。</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
+    * <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
     */
     @SerializedName("MinStartTime")
     @Expose
     private String MinStartTime;
 
     /**
-    * 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
+    * <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
     */
     @SerializedName("MaxStartTime")
     @Expose
     private String MaxStartTime;
 
     /**
-    * 每页显示数量，取值范围为1-100，默认为返回20条。
+    * <p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 数据偏移量，从0开始。
+    * <p>数据偏移量，从0开始。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序字段，支持StartTime,EndTime，默认为StartTime。
+    * <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，包括升序：asc，降序：desc，默认为desc。
+    * <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。 
-     * @return TaskId 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
+     * Get <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p> 
+     * @return TaskId <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
-     * @param TaskId 按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。
+     * Set <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
+     * @param TaskId <p>按照任务ID进行查询。其余云API中返回的FlowId和TaskId等价。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 按照数据库实例ID进行查询。 
-     * @return DBInstanceId 按照数据库实例ID进行查询。
+     * Get <p>按照数据库实例ID进行查询。</p> 
+     * @return DBInstanceId <p>按照数据库实例ID进行查询。</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 按照数据库实例ID进行查询。
-     * @param DBInstanceId 按照数据库实例ID进行查询。
+     * Set <p>按照数据库实例ID进行查询。</p>
+     * @param DBInstanceId <p>按照数据库实例ID进行查询。</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。 
-     * @return MinStartTime 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
+     * Get <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p> 
+     * @return MinStartTime <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
      */
     public String getMinStartTime() {
         return this.MinStartTime;
     }
 
     /**
-     * Set 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
-     * @param MinStartTime 任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。
+     * Set <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
+     * @param MinStartTime <p>任务的最早开始时间，形如2024-08-23 00:00:00,默认只展示180天内的数据。</p>
      */
     public void setMinStartTime(String MinStartTime) {
         this.MinStartTime = MinStartTime;
     }
 
     /**
-     * Get 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。 
-     * @return MaxStartTime 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
+     * Get <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p> 
+     * @return MaxStartTime <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
      */
     public String getMaxStartTime() {
         return this.MaxStartTime;
     }
 
     /**
-     * Set 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
-     * @param MaxStartTime 任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。
+     * Set <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
+     * @param MaxStartTime <p>任务的最晚开始时间，形如2024-08-23 00:00:00，默认为当前时间。</p>
      */
     public void setMaxStartTime(String MaxStartTime) {
         this.MaxStartTime = MaxStartTime;
     }
 
     /**
-     * Get 每页显示数量，取值范围为1-100，默认为返回20条。 
-     * @return Limit 每页显示数量，取值范围为1-100，默认为返回20条。
+     * Get <p>每页显示数量，取值范围为1-100，默认为返回20条。</p> 
+     * @return Limit <p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页显示数量，取值范围为1-100，默认为返回20条。
-     * @param Limit 每页显示数量，取值范围为1-100，默认为返回20条。
+     * Set <p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
+     * @param Limit <p>每页显示数量，取值范围为1-100，默认为返回20条。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 数据偏移量，从0开始。 
-     * @return Offset 数据偏移量，从0开始。
+     * Get <p>数据偏移量，从0开始。</p> 
+     * @return Offset <p>数据偏移量，从0开始。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，从0开始。
-     * @param Offset 数据偏移量，从0开始。
+     * Set <p>数据偏移量，从0开始。</p>
+     * @param Offset <p>数据偏移量，从0开始。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序字段，支持StartTime,EndTime，默认为StartTime。 
-     * @return OrderBy 排序字段，支持StartTime,EndTime，默认为StartTime。
+     * Get <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p> 
+     * @return OrderBy <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，支持StartTime,EndTime，默认为StartTime。
-     * @param OrderBy 排序字段，支持StartTime,EndTime，默认为StartTime。
+     * Set <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
+     * @param OrderBy <p>排序字段，支持StartTime,EndTime，默认为StartTime。</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，包括升序：asc，降序：desc，默认为desc。 
-     * @return OrderByType 排序方式，包括升序：asc，降序：desc，默认为desc。
+     * Get <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p> 
+     * @return OrderByType <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，包括升序：asc，降序：desc，默认为desc。
-     * @param OrderByType 排序方式，包括升序：asc，降序：desc，默认为desc。
+     * Set <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
+     * @param OrderByType <p>排序方式，包括升序：asc，降序：desc，默认为desc。</p>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

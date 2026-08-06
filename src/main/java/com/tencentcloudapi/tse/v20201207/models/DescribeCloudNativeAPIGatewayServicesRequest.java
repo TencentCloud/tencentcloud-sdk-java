@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayServicesRequest extends AbstractModel {
 
     /**
-    * 网关ID
+    * <p>网关ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 列表数量
+    * <p>列表数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 列表 offset
+    * <p>列表 offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+    * <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
     */
     @SerializedName("Filters")
     @Expose
     private ListFilter [] Filters;
 
     /**
-     * Get 网关ID 
-     * @return GatewayId 网关ID
+    * <p>排序字段</p>
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private String OrderType;
+
+    /**
+     * Get <p>网关ID</p> 
+     * @return GatewayId <p>网关ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关ID
-     * @param GatewayId 网关ID
+     * Set <p>网关ID</p>
+     * @param GatewayId <p>网关ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 列表数量 
-     * @return Limit 列表数量
+     * Get <p>列表数量</p> 
+     * @return Limit <p>列表数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 列表数量
-     * @param Limit 列表数量
+     * Set <p>列表数量</p>
+     * @param Limit <p>列表数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 列表 offset 
-     * @return Offset 列表 offset
+     * Get <p>列表 offset</p> 
+     * @return Offset <p>列表 offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 列表 offset
-     * @param Offset 列表 offset
+     * Set <p>列表 offset</p>
+     * @param Offset <p>列表 offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType 
-     * @return Filters 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+     * Get <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p> 
+     * @return Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
      */
     public ListFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
-     * @param Filters 过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType
+     * Set <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
+     * @param Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 name,upstreamType</p>
      */
     public void setFilters(ListFilter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>排序字段</p> 
+     * @return OrderField <p>排序字段</p>
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set <p>排序字段</p>
+     * @param OrderField <p>排序字段</p>
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul> 
+     * @return OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public String getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     * @param OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public void setOrderType(String OrderType) {
+        this.OrderType = OrderType;
     }
 
     public DescribeCloudNativeAPIGatewayServicesRequest() {
@@ -138,6 +184,12 @@ public class DescribeCloudNativeAPIGatewayServicesRequest extends AbstractModel 
                 this.Filters[i] = new ListFilter(source.Filters[i]);
             }
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new String(source.OrderType);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class DescribeCloudNativeAPIGatewayServicesRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
 
     }
 }

@@ -38,6 +38,34 @@ public class AigcVideoTaskUsage extends AbstractModel {
     private Long ThoughtTokens;
 
     /**
+    * <p>输入图片数目。</p>
+    */
+    @SerializedName("InputImageCount")
+    @Expose
+    private Long InputImageCount;
+
+    /**
+    * <p>输入视频的时长。</p><p>单位：秒。</p>
+    */
+    @SerializedName("InputSeconds")
+    @Expose
+    private Long InputSeconds;
+
+    /**
+    * <p>输出视频时长。</p><p>单位：秒。</p>
+    */
+    @SerializedName("OutputSeconds")
+    @Expose
+    private Long OutputSeconds;
+
+    /**
+    * <p>输入输出总时长。</p><p>默认值：秒。</p>
+    */
+    @SerializedName("TotalSeconds")
+    @Expose
+    private Long TotalSeconds;
+
+    /**
      * Get <p>输入 Token 数目。</p> 
      * @return InputTokens <p>输入 Token 数目。</p>
      */
@@ -69,6 +97,70 @@ public class AigcVideoTaskUsage extends AbstractModel {
         this.ThoughtTokens = ThoughtTokens;
     }
 
+    /**
+     * Get <p>输入图片数目。</p> 
+     * @return InputImageCount <p>输入图片数目。</p>
+     */
+    public Long getInputImageCount() {
+        return this.InputImageCount;
+    }
+
+    /**
+     * Set <p>输入图片数目。</p>
+     * @param InputImageCount <p>输入图片数目。</p>
+     */
+    public void setInputImageCount(Long InputImageCount) {
+        this.InputImageCount = InputImageCount;
+    }
+
+    /**
+     * Get <p>输入视频的时长。</p><p>单位：秒。</p> 
+     * @return InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p>
+     */
+    public Long getInputSeconds() {
+        return this.InputSeconds;
+    }
+
+    /**
+     * Set <p>输入视频的时长。</p><p>单位：秒。</p>
+     * @param InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p>
+     */
+    public void setInputSeconds(Long InputSeconds) {
+        this.InputSeconds = InputSeconds;
+    }
+
+    /**
+     * Get <p>输出视频时长。</p><p>单位：秒。</p> 
+     * @return OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p>
+     */
+    public Long getOutputSeconds() {
+        return this.OutputSeconds;
+    }
+
+    /**
+     * Set <p>输出视频时长。</p><p>单位：秒。</p>
+     * @param OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p>
+     */
+    public void setOutputSeconds(Long OutputSeconds) {
+        this.OutputSeconds = OutputSeconds;
+    }
+
+    /**
+     * Get <p>输入输出总时长。</p><p>默认值：秒。</p> 
+     * @return TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p>
+     */
+    public Long getTotalSeconds() {
+        return this.TotalSeconds;
+    }
+
+    /**
+     * Set <p>输入输出总时长。</p><p>默认值：秒。</p>
+     * @param TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p>
+     */
+    public void setTotalSeconds(Long TotalSeconds) {
+        this.TotalSeconds = TotalSeconds;
+    }
+
     public AigcVideoTaskUsage() {
     }
 
@@ -83,6 +175,18 @@ public class AigcVideoTaskUsage extends AbstractModel {
         if (source.ThoughtTokens != null) {
             this.ThoughtTokens = new Long(source.ThoughtTokens);
         }
+        if (source.InputImageCount != null) {
+            this.InputImageCount = new Long(source.InputImageCount);
+        }
+        if (source.InputSeconds != null) {
+            this.InputSeconds = new Long(source.InputSeconds);
+        }
+        if (source.OutputSeconds != null) {
+            this.OutputSeconds = new Long(source.OutputSeconds);
+        }
+        if (source.TotalSeconds != null) {
+            this.TotalSeconds = new Long(source.TotalSeconds);
+        }
     }
 
 
@@ -92,6 +196,10 @@ public class AigcVideoTaskUsage extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputTokens", this.InputTokens);
         this.setParamSimple(map, prefix + "ThoughtTokens", this.ThoughtTokens);
+        this.setParamSimple(map, prefix + "InputImageCount", this.InputImageCount);
+        this.setParamSimple(map, prefix + "InputSeconds", this.InputSeconds);
+        this.setParamSimple(map, prefix + "OutputSeconds", this.OutputSeconds);
+        this.setParamSimple(map, prefix + "TotalSeconds", this.TotalSeconds);
 
     }
 }
