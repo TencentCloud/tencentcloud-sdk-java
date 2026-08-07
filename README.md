@@ -19,25 +19,43 @@
 ### 安装指定产品 SDK（推荐）
 例如：安装指定产品包
 ```bash
-<dependency>
+<dependencies>
+  <dependency>
     <groupId>com.tencentcloudapi</groupId>
     <artifactId>tencentcloud-sdk-java-指定产品包名</artifactId>
     <!-- 如 CVM 产品包：tencentcloud-sdk-java-cvm -->
     <!-- 请到 maven 官网查询 sdk 的所有版本，例如 cvm 的产品包链接为 https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java-cvm/versions -->
     <version>3.1.1000</version>
-</dependency>
+  </dependency>
+
+  <dependency>
+    <!-- cvm 依赖 common 公共库，显式指定 common 库版本以避免第三方库间接引入非预期的 common 库版本 -->
+    <groupId>com.tencentcloudapi</groupId>
+    <artifactId>tencentcloud-sdk-java-common</artifactId>
+    <version>3.1.1000</version>
+  </dependency>
+</dependencies>
 ```
 具体产品的包名缩写请参考 [products.md](./products.md) 中的包名字段。
 
 ### 安装全产品 SDK
 ```bash
-<dependency>
+<dependencies>
+  <dependency>
     <groupId>com.tencentcloudapi</groupId>
     <artifactId>tencentcloud-sdk-java</artifactId>
     <!-- go to https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java/versions and get the latest version. -->
     <!-- 请到 https://central.sonatype.com/artifact/com.tencentcloudapi/tencentcloud-sdk-java/versions 查询所有版本，最新版本如下 -->
     <version>3.1.1000</version>
-</dependency>
+  </dependency>
+
+  <dependency>
+    <!-- sdk 依赖 common 公共库，显式指定 common 库版本以避免第三方库间接引入非预期的 common 库版本 -->
+    <groupId>com.tencentcloudapi</groupId>
+    <artifactId>tencentcloud-sdk-java-common</artifactId>
+    <version>3.1.1000</version>
+  </dependency>
+</dependencies>
 ```
 全产品 SDK 包含了所有云产品的调用代码，体积偏大，对体积敏感的场景，推荐安装指定产品 SDK。
 
