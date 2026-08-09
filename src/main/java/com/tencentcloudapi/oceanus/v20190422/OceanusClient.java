@@ -116,6 +116,28 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *创建元数据库
+     * @param req CreateMetaDatabaseRequest
+     * @return CreateMetaDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetaDatabaseResponse CreateMetaDatabase(CreateMetaDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetaDatabase", CreateMetaDatabaseResponse.class);
+    }
+
+    /**
+     *创建元数据表
+     * @param req CreateMetaTableRequest
+     * @return CreateMetaTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetaTableResponse CreateMetaTable(CreateMetaTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetaTable", CreateMetaTableResponse.class);
+    }
+
+    /**
      *创建Oceanus集群
      * @param req CreateOceanusClusterRequest
      * @return CreateOceanusClusterResponse
@@ -506,6 +528,17 @@ public class OceanusClient extends AbstractClient{
     public ModifyJobResponse ModifyJob(ModifyJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyJob", ModifyJobResponse.class);
+    }
+
+    /**
+     *修改元数据表
+     * @param req ModifyMetaTableRequest
+     * @return ModifyMetaTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMetaTableResponse ModifyMetaTable(ModifyMetaTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMetaTable", ModifyMetaTableResponse.class);
     }
 
     /**

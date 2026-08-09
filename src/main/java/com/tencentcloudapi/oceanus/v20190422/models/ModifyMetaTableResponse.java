@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.billing.v20180709.models;
+package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDealsByCondResponse extends AbstractModel {
-
-    /**
-    * <p>订单列表</p>
-    */
-    @SerializedName("Deals")
-    @Expose
-    private Deal [] Deals;
-
-    /**
-    * <p>订单总数</p>
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class ModifyMetaTableResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeDealsByCondResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>订单列表</p> 
-     * @return Deals <p>订单列表</p>
-     */
-    public Deal [] getDeals() {
-        return this.Deals;
-    }
-
-    /**
-     * Set <p>订单列表</p>
-     * @param Deals <p>订单列表</p>
-     */
-    public void setDeals(Deal [] Deals) {
-        this.Deals = Deals;
-    }
-
-    /**
-     * Get <p>订单总数</p> 
-     * @return TotalCount <p>订单总数</p>
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set <p>订单总数</p>
-     * @param TotalCount <p>订单总数</p>
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,23 +46,14 @@ public class DescribeDealsByCondResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeDealsByCondResponse() {
+    public ModifyMetaTableResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDealsByCondResponse(DescribeDealsByCondResponse source) {
-        if (source.Deals != null) {
-            this.Deals = new Deal[source.Deals.length];
-            for (int i = 0; i < source.Deals.length; i++) {
-                this.Deals[i] = new Deal(source.Deals[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public ModifyMetaTableResponse(ModifyMetaTableResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +64,6 @@ public class DescribeDealsByCondResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Deals.", this.Deals);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

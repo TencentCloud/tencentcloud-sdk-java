@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RunSqlGatewayStatementResponse extends AbstractModel {
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
@@ -32,14 +32,14 @@ public class RunSqlGatewayStatementResponse extends AbstractModel {
     private String [] ErrorMessage;
 
     /**
-    * 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+    * <p>会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 返回执行id，可以根据该执行id和会话id获取执行结果
+    * <p>返回执行id，可以根据该执行id和会话id获取执行结果</p>
     */
     @SerializedName("OperationHandleId")
     @Expose
@@ -53,9 +53,9 @@ public class RunSqlGatewayStatementResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误信息
+     * Get <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMessage 错误信息
+     * @return ErrorMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getErrorMessage() {
@@ -63,9 +63,9 @@ public class RunSqlGatewayStatementResponse extends AbstractModel {
     }
 
     /**
-     * Set 错误信息
+     * Set <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMessage 错误信息
+     * @param ErrorMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String [] ErrorMessage) {
@@ -73,32 +73,32 @@ public class RunSqlGatewayStatementResponse extends AbstractModel {
     }
 
     /**
-     * Get 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致 
-     * @return SessionId 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+     * Get <p>会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致</p> 
+     * @return SessionId <p>会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
-     * @param SessionId 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+     * Set <p>会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致</p>
+     * @param SessionId <p>会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 返回执行id，可以根据该执行id和会话id获取执行结果 
-     * @return OperationHandleId 返回执行id，可以根据该执行id和会话id获取执行结果
+     * Get <p>返回执行id，可以根据该执行id和会话id获取执行结果</p> 
+     * @return OperationHandleId <p>返回执行id，可以根据该执行id和会话id获取执行结果</p>
      */
     public String getOperationHandleId() {
         return this.OperationHandleId;
     }
 
     /**
-     * Set 返回执行id，可以根据该执行id和会话id获取执行结果
-     * @param OperationHandleId 返回执行id，可以根据该执行id和会话id获取执行结果
+     * Set <p>返回执行id，可以根据该执行id和会话id获取执行结果</p>
+     * @param OperationHandleId <p>返回执行id，可以根据该执行id和会话id获取执行结果</p>
      */
     public void setOperationHandleId(String OperationHandleId) {
         this.OperationHandleId = OperationHandleId;

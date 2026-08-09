@@ -31,6 +31,14 @@ public class Decision extends AbstractModel {
     private String DecisionResult;
 
     /**
+    * <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Disposition")
+    @Expose
+    private String Disposition;
+
+    /**
      * Get <p>决策结果</p><ul><li>pass：通过</li><li>review：复审</li><li>reject：拒绝</li></ul> 
      * @return DecisionResult <p>决策结果</p><ul><li>pass：通过</li><li>review：复审</li><li>reject：拒绝</li></ul>
      */
@@ -46,6 +54,26 @@ public class Decision extends AbstractModel {
         this.DecisionResult = DecisionResult;
     }
 
+    /**
+     * Get <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Disposition <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisposition() {
+        return this.Disposition;
+    }
+
+    /**
+     * Set <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Disposition <p>命中策略后的决策动作，可在控制台配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisposition(String Disposition) {
+        this.Disposition = Disposition;
+    }
+
     public Decision() {
     }
 
@@ -57,6 +85,9 @@ public class Decision extends AbstractModel {
         if (source.DecisionResult != null) {
             this.DecisionResult = new String(source.DecisionResult);
         }
+        if (source.Disposition != null) {
+            this.Disposition = new String(source.Disposition);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class Decision extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DecisionResult", this.DecisionResult);
+        this.setParamSimple(map, prefix + "Disposition", this.Disposition);
 
     }
 }

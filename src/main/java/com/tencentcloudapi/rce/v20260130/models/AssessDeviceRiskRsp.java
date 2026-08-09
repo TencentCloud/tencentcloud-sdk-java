@@ -38,6 +38,14 @@ public class AssessDeviceRiskRsp extends AbstractModel {
     private Device Device;
 
     /**
+    * <p>IP环境基础信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Environment")
+    @Expose
+    private Environment Environment;
+
+    /**
      * Get <p>设备风险分信息</p> 
      * @return Score <p>设备风险分信息</p>
      */
@@ -69,6 +77,26 @@ public class AssessDeviceRiskRsp extends AbstractModel {
         this.Device = Device;
     }
 
+    /**
+     * Get <p>IP环境基础信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Environment <p>IP环境基础信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Environment getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set <p>IP环境基础信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Environment <p>IP环境基础信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvironment(Environment Environment) {
+        this.Environment = Environment;
+    }
+
     public AssessDeviceRiskRsp() {
     }
 
@@ -83,6 +111,9 @@ public class AssessDeviceRiskRsp extends AbstractModel {
         if (source.Device != null) {
             this.Device = new Device(source.Device);
         }
+        if (source.Environment != null) {
+            this.Environment = new Environment(source.Environment);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class AssessDeviceRiskRsp extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Score.", this.Score);
         this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamObj(map, prefix + "Environment.", this.Environment);
 
     }
 }
