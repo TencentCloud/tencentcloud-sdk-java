@@ -39,6 +39,39 @@ public class CdsClient extends AbstractClient{
     }
 
     /**
+     *下载报表PDF
+     * @param req CreateReportPdfRequest
+     * @return CreateReportPdfResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReportPdfResponse CreateReportPdf(CreateReportPdfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateReportPdf", CreateReportPdfResponse.class);
+    }
+
+    /**
+     *新建报表任务
+     * @param req CreateTimerReportRequest
+     * @return CreateTimerReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTimerReportResponse CreateTimerReport(CreateTimerReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTimerReport", CreateTimerReportResponse.class);
+    }
+
+    /**
+     *查询资产列表
+     * @param req DescribeAssetsListRequest
+     * @return DescribeAssetsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetsListResponse DescribeAssetsList(DescribeAssetsListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetsList", DescribeAssetsListResponse.class);
+    }
+
+    /**
      *本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
      * @param req DescribeDbauditInstanceTypeRequest
      * @return DescribeDbauditInstanceTypeResponse
@@ -69,6 +102,28 @@ public class CdsClient extends AbstractClient{
     public DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegions(DescribeDbauditUsedRegionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDbauditUsedRegions", DescribeDbauditUsedRegionsResponse.class);
+    }
+
+    /**
+     *查询报表列表
+     * @param req DescribeReportListRequest
+     * @return DescribeReportListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportListResponse DescribeReportList(DescribeReportListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReportList", DescribeReportListResponse.class);
+    }
+
+    /**
+     *查询报表任务列表
+     * @param req DescribeReportMissionListRequest
+     * @return DescribeReportMissionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportMissionListResponse DescribeReportMissionList(DescribeReportMissionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReportMissionList", DescribeReportMissionListResponse.class);
     }
 
     /**

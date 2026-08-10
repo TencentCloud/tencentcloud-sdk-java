@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeTelCdrResponse extends AbstractModel {
 
     /**
-    * 话单记录总数
+    * <p>话单记录总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 话单记录
+    * <p>话单记录</p>
     */
     @SerializedName("TelCdrs")
     @Expose
     private TelCdrInfo [] TelCdrs;
 
     /**
-    * 话单记录
+    * <p>话单记录</p>
     */
     @SerializedName("TelCdrList")
     @Expose
@@ -52,24 +52,24 @@ public class DescribeTelCdrResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 话单记录总数 
-     * @return TotalCount 话单记录总数
+     * Get <p>话单记录总数</p> 
+     * @return TotalCount <p>话单记录总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 话单记录总数
-     * @param TotalCount 话单记录总数
+     * Set <p>话单记录总数</p>
+     * @param TotalCount <p>话单记录总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 话单记录 
-     * @return TelCdrs 话单记录
+     * Get <p>话单记录</p> 
+     * @return TelCdrs <p>话单记录</p>
      * @deprecated
      */
     @Deprecated
@@ -78,8 +78,8 @@ public class DescribeTelCdrResponse extends AbstractModel {
     }
 
     /**
-     * Set 话单记录
-     * @param TelCdrs 话单记录
+     * Set <p>话单记录</p>
+     * @param TelCdrs <p>话单记录</p>
      * @deprecated
      */
     @Deprecated
@@ -88,16 +88,16 @@ public class DescribeTelCdrResponse extends AbstractModel {
     }
 
     /**
-     * Get 话单记录 
-     * @return TelCdrList 话单记录
+     * Get <p>话单记录</p> 
+     * @return TelCdrList <p>话单记录</p>
      */
     public TelCdrInfo [] getTelCdrList() {
         return this.TelCdrList;
     }
 
     /**
-     * Set 话单记录
-     * @param TelCdrList 话单记录
+     * Set <p>话单记录</p>
+     * @param TelCdrList <p>话单记录</p>
      */
     public void setTelCdrList(TelCdrInfo [] TelCdrList) {
         this.TelCdrList = TelCdrList;

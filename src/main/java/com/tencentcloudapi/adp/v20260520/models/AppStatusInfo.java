@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AppStatusInfo extends AbstractModel {
 
     /**
-    * 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
+    * <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 状态描述
+    * <p>状态描述</p>
     */
     @SerializedName("StatusDescription")
     @Expose
     private String StatusDescription;
 
     /**
-     * Get 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用 
-     * @return Status 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
+     * Get <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul> 
+     * @return Status <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
-     * @param Status 应用状态 (OFFLINE:未上线, RUNNING:运行中, DISABLED:停用)。枚举值: 1:未上线, 2:运行中, 3:停用
+     * Set <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
+     * @param Status <p>应用状态</p><p>枚举值：</p><ul><li>1： 未上线</li><li>2： 运行中</li><li>3： 停用</li><li>4： 导入中</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态描述 
-     * @return StatusDescription 状态描述
+     * Get <p>状态描述</p> 
+     * @return StatusDescription <p>状态描述</p>
      */
     public String getStatusDescription() {
         return this.StatusDescription;
     }
 
     /**
-     * Set 状态描述
-     * @param StatusDescription 状态描述
+     * Set <p>状态描述</p>
+     * @param StatusDescription <p>状态描述</p>
      */
     public void setStatusDescription(String StatusDescription) {
         this.StatusDescription = StatusDescription;

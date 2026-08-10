@@ -305,6 +305,30 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private String RawCustomModelProtocolConfig;
 
     /**
+    * <p>路由策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteStrategy")
+    @Expose
+    private String RouteStrategy;
+
+    /**
+    * <p>token长度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TokenLengthRoute")
+    @Expose
+    private TokenLengthRouteDTO [] TokenLengthRoute;
+
+    /**
+    * <p>任务复杂度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskComplexityRoute")
+    @Expose
+    private TaskComplexityRouteDTO TaskComplexityRoute;
+
+    /**
      * Get <p>腾讯云AppID</p> 
      * @return AppID <p>腾讯云AppID</p>
      */
@@ -972,6 +996,66 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.RawCustomModelProtocolConfig = RawCustomModelProtocolConfig;
     }
 
+    /**
+     * Get <p>路由策略</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteStrategy <p>路由策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRouteStrategy() {
+        return this.RouteStrategy;
+    }
+
+    /**
+     * Set <p>路由策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteStrategy <p>路由策略</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteStrategy(String RouteStrategy) {
+        this.RouteStrategy = RouteStrategy;
+    }
+
+    /**
+     * Get <p>token长度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenLengthRoute <p>token长度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TokenLengthRouteDTO [] getTokenLengthRoute() {
+        return this.TokenLengthRoute;
+    }
+
+    /**
+     * Set <p>token长度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenLengthRoute <p>token长度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokenLengthRoute(TokenLengthRouteDTO [] TokenLengthRoute) {
+        this.TokenLengthRoute = TokenLengthRoute;
+    }
+
+    /**
+     * Get <p>任务复杂度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskComplexityRoute <p>任务复杂度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskComplexityRouteDTO getTaskComplexityRoute() {
+        return this.TaskComplexityRoute;
+    }
+
+    /**
+     * Set <p>任务复杂度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskComplexityRoute <p>任务复杂度路由配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskComplexityRoute(TaskComplexityRouteDTO TaskComplexityRoute) {
+        this.TaskComplexityRoute = TaskComplexityRoute;
+    }
+
     public DescribeModelServiceResponseVO() {
     }
 
@@ -1112,6 +1196,18 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         if (source.RawCustomModelProtocolConfig != null) {
             this.RawCustomModelProtocolConfig = new String(source.RawCustomModelProtocolConfig);
         }
+        if (source.RouteStrategy != null) {
+            this.RouteStrategy = new String(source.RouteStrategy);
+        }
+        if (source.TokenLengthRoute != null) {
+            this.TokenLengthRoute = new TokenLengthRouteDTO[source.TokenLengthRoute.length];
+            for (int i = 0; i < source.TokenLengthRoute.length; i++) {
+                this.TokenLengthRoute[i] = new TokenLengthRouteDTO(source.TokenLengthRoute[i]);
+            }
+        }
+        if (source.TaskComplexityRoute != null) {
+            this.TaskComplexityRoute = new TaskComplexityRouteDTO(source.TaskComplexityRoute);
+        }
     }
 
 
@@ -1157,6 +1253,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
         this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
         this.setParamSimple(map, prefix + "RawCustomModelProtocolConfig", this.RawCustomModelProtocolConfig);
+        this.setParamSimple(map, prefix + "RouteStrategy", this.RouteStrategy);
+        this.setParamArrayObj(map, prefix + "TokenLengthRoute.", this.TokenLengthRoute);
+        this.setParamObj(map, prefix + "TaskComplexityRoute.", this.TaskComplexityRoute);
 
     }
 }

@@ -1583,6 +1583,28 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyInstanceChargeType)用于将实例的计费模式从包年包月改为按量计费。
+     * @param req ModifyInstanceChargeTypeRequest
+     * @return ModifyInstanceChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(ModifyInstanceChargeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceChargeType", ModifyInstanceChargeTypeResponse.class);
+    }
+
+    /**
+     *该接口（ModifyInstanceDestroyProtect）用于修改实例销毁保护状态。
+     * @param req ModifyInstanceDestroyProtectRequest
+     * @return ModifyInstanceDestroyProtectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceDestroyProtectResponse ModifyInstanceDestroyProtect(ModifyInstanceDestroyProtectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceDestroyProtect", ModifyInstanceDestroyProtectResponse.class);
+    }
+
+    /**
      *本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
      * @param req ModifyInstanceParamRequest
      * @return ModifyInstanceParamResponse

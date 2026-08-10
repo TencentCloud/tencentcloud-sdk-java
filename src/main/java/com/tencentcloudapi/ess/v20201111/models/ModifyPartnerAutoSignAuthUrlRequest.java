@@ -66,6 +66,13 @@ public class ModifyPartnerAutoSignAuthUrlRequest extends AbstractModel {
     private String [] SealTypes;
 
     /**
+    * <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式 </li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul>
+    */
+    @SerializedName("LimitAuthType")
+    @Expose
+    private Long LimitAuthType;
+
+    /**
      * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
      * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
@@ -161,6 +168,22 @@ public class ModifyPartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.SealTypes = SealTypes;
     }
 
+    /**
+     * Get <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式 </li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul> 
+     * @return LimitAuthType <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式 </li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul>
+     */
+    public Long getLimitAuthType() {
+        return this.LimitAuthType;
+    }
+
+    /**
+     * Set <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式 </li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul>
+     * @param LimitAuthType <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式 </li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul>
+     */
+    public void setLimitAuthType(Long LimitAuthType) {
+        this.LimitAuthType = LimitAuthType;
+    }
+
     public ModifyPartnerAutoSignAuthUrlRequest() {
     }
 
@@ -190,6 +213,9 @@ public class ModifyPartnerAutoSignAuthUrlRequest extends AbstractModel {
                 this.SealTypes[i] = new String(source.SealTypes[i]);
             }
         }
+        if (source.LimitAuthType != null) {
+            this.LimitAuthType = new Long(source.LimitAuthType);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class ModifyPartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
         this.setParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
         this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+        this.setParamSimple(map, prefix + "LimitAuthType", this.LimitAuthType);
 
     }
 }

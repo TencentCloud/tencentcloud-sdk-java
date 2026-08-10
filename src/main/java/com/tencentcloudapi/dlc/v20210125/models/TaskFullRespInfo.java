@@ -549,6 +549,13 @@ public class TaskFullRespInfo extends AbstractModel {
     private Long QueueTime;
 
     /**
+    * <p>资源组类型</p>
+    */
+    @SerializedName("ResourceGroupType")
+    @Expose
+    private String ResourceGroupType;
+
+    /**
      * Get <p>任务所属Database的名称。</p> 
      * @return DatabaseName <p>任务所属Database的名称。</p>
      */
@@ -1796,6 +1803,22 @@ public class TaskFullRespInfo extends AbstractModel {
         this.QueueTime = QueueTime;
     }
 
+    /**
+     * Get <p>资源组类型</p> 
+     * @return ResourceGroupType <p>资源组类型</p>
+     */
+    public String getResourceGroupType() {
+        return this.ResourceGroupType;
+    }
+
+    /**
+     * Set <p>资源组类型</p>
+     * @param ResourceGroupType <p>资源组类型</p>
+     */
+    public void setResourceGroupType(String ResourceGroupType) {
+        this.ResourceGroupType = ResourceGroupType;
+    }
+
     public TaskFullRespInfo() {
     }
 
@@ -2017,6 +2040,9 @@ public class TaskFullRespInfo extends AbstractModel {
         if (source.QueueTime != null) {
             this.QueueTime = new Long(source.QueueTime);
         }
+        if (source.ResourceGroupType != null) {
+            this.ResourceGroupType = new String(source.ResourceGroupType);
+        }
     }
 
 
@@ -2095,6 +2121,7 @@ public class TaskFullRespInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ShuffleWriteBytesSum", this.ShuffleWriteBytesSum);
         this.setParamSimple(map, prefix + "ActiveCore", this.ActiveCore);
         this.setParamSimple(map, prefix + "QueueTime", this.QueueTime);
+        this.setParamSimple(map, prefix + "ResourceGroupType", this.ResourceGroupType);
 
     }
 }

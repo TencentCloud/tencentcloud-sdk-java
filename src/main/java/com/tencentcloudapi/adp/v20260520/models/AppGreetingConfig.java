@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AppGreetingConfig extends AbstractModel {
 
     /**
-    * 欢迎语内容
+    * <p>欢迎语内容</p>
     */
     @SerializedName("Greeting")
     @Expose
     private String Greeting;
 
     /**
-    * 开场问题列表
+    * <p>开场问题列表</p>
     */
     @SerializedName("OpeningQuestionList")
     @Expose
     private String [] OpeningQuestionList;
 
     /**
-     * Get 欢迎语内容 
-     * @return Greeting 欢迎语内容
+     * Get <p>欢迎语内容</p> 
+     * @return Greeting <p>欢迎语内容</p>
      */
     public String getGreeting() {
         return this.Greeting;
     }
 
     /**
-     * Set 欢迎语内容
-     * @param Greeting 欢迎语内容
+     * Set <p>欢迎语内容</p>
+     * @param Greeting <p>欢迎语内容</p>
      */
     public void setGreeting(String Greeting) {
         this.Greeting = Greeting;
     }
 
     /**
-     * Get 开场问题列表 
-     * @return OpeningQuestionList 开场问题列表
+     * Get <p>开场问题列表</p> 
+     * @return OpeningQuestionList <p>开场问题列表</p>
      */
     public String [] getOpeningQuestionList() {
         return this.OpeningQuestionList;
     }
 
     /**
-     * Set 开场问题列表
-     * @param OpeningQuestionList 开场问题列表
+     * Set <p>开场问题列表</p>
+     * @param OpeningQuestionList <p>开场问题列表</p>
      */
     public void setOpeningQuestionList(String [] OpeningQuestionList) {
         this.OpeningQuestionList = OpeningQuestionList;

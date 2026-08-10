@@ -61,6 +61,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *添加漏洞白名单
+     * @param req AddVulWhitelistRequest
+     * @return AddVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVulWhitelistResponse AddVulWhitelist(AddVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddVulWhitelist", AddVulWhitelistResponse.class);
+    }
+
+    /**
      *检测AK 异步任务
      * @param req CreateAccessKeyCheckTaskRequest
      * @return CreateAccessKeyCheckTaskResponse
@@ -336,6 +347,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建主机列漏洞表导出任务
+     * @param req CreateHostVulExportJobRequest
+     * @return CreateHostVulExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHostVulExportJobResponse CreateHostVulExportJob(CreateHostVulExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHostVulExportJob", CreateHostVulExportJobResponse.class);
+    }
+
+    /**
      *创建IaC检测接入Token
      * @param req CreateIaCAccessTokenRequest
      * @return CreateIaCAccessTokenResponse
@@ -388,6 +410,61 @@ public class CsipClient extends AbstractClient{
     public CreateSkillScanResponse CreateSkillScan(CreateSkillScanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSkillScan", CreateSkillScanResponse.class);
+    }
+
+    /**
+     *对修复失败的漏洞修复任务进行重试，仅针对原任务中修复失败的主机重新下发修复指令。仅当任务状态为部分修复失败或全部修复失败时允许重试。
+     * @param req CreateVulFixRetryTaskRequest
+     * @return CreateVulFixRetryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulFixRetryTaskResponse CreateVulFixRetryTask(CreateVulFixRetryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulFixRetryTask", CreateVulFixRetryTaskResponse.class);
+    }
+
+    /**
+     *用户手动提交漏洞修复任务，指定需要修复的漏洞和目标主机，系统创建修复任务并下发执行。支持指定修复超时时间、是否创建快照等选项。通过FixItems数组精确控制每个漏洞/KB补丁修复哪些主机。
+     * @param req CreateVulFixTaskRequest
+     * @return CreateVulFixTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulFixTaskResponse CreateVulFixTask(CreateVulFixTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulFixTask", CreateVulFixTaskResponse.class);
+    }
+
+    /**
+     *创建已修复漏洞列表的导出任务。支持与 DescribeVulFixedList 相同的过滤条件，导出通过异步任务实现，返回 JobID 后前端轮询查询导出任务状态。导出字段包含漏洞ID、漏洞名称、漏洞等级、VPR评级、漏洞类型、CVE编号、主机名称、实例ID、关联组件&路径、修复时间。
+     * @param req CreateVulFixedExportJobRequest
+     * @return CreateVulFixedExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulFixedExportJobResponse CreateVulFixedExportJob(CreateVulFixedExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulFixedExportJob", CreateVulFixedExportJobResponse.class);
+    }
+
+    /**
+     *创建漏洞重新扫描
+     * @param req CreateVulReScanRequest
+     * @return CreateVulReScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulReScanResponse CreateVulReScan(CreateVulReScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulReScan", CreateVulReScanResponse.class);
+    }
+
+    /**
+     *创建漏洞扫描（一键扫描）
+     * @param req CreateVulScanManualRequest
+     * @return CreateVulScanManualResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulScanManualResponse CreateVulScanManual(CreateVulScanManualRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulScanManual", CreateVulScanManualResponse.class);
     }
 
     /**
@@ -597,6 +674,17 @@ public class CsipClient extends AbstractClient{
     public DeleteRiskScanTaskResponse DeleteRiskScanTask(DeleteRiskScanTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRiskScanTask", DeleteRiskScanTaskResponse.class);
+    }
+
+    /**
+     *删除漏洞白名单
+     * @param req DeleteVulWhitelistRequest
+     * @return DeleteVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVulWhitelistResponse DeleteVulWhitelist(DeleteVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVulWhitelist", DeleteVulWhitelistResponse.class);
     }
 
     /**
@@ -1953,6 +2041,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取主机kb风险列表
+     * @param req DescribeHostKBRiskListRequest
+     * @return DescribeHostKBRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostKBRiskListResponse DescribeHostKBRiskList(DescribeHostKBRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostKBRiskList", DescribeHostKBRiskListResponse.class);
+    }
+
+    /**
+     *获取主机漏洞VPR信息
+     * @param req DescribeHostVulItemVPRInfoRequest
+     * @return DescribeHostVulItemVPRInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfo(DescribeHostVulItemVPRInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulItemVPRInfo", DescribeHostVulItemVPRInfoResponse.class);
+    }
+
+    /**
+     *获取主机漏洞概览
+     * @param req DescribeHostVulOverviewRequest
+     * @return DescribeHostVulOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulOverviewResponse DescribeHostVulOverview(DescribeHostVulOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulOverview", DescribeHostVulOverviewResponse.class);
+    }
+
+    /**
+     *获取主机漏洞风险列表
+     * @param req DescribeHostVulRiskListRequest
+     * @return DescribeHostVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulRiskListResponse DescribeHostVulRiskList(DescribeHostVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulRiskList", DescribeHostVulRiskListResponse.class);
+    }
+
+    /**
      *获取IaC检测文件列表
      * @param req DescribeIaCFileListRequest
      * @return DescribeIaCFileListResponse
@@ -2016,6 +2148,28 @@ public class CsipClient extends AbstractClient{
     public DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(DescribeIpInvokeRecordDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIpInvokeRecordDetail", DescribeIpInvokeRecordDetailResponse.class);
+    }
+
+    /**
+     *根据用户输入的 KB 内部 ID 查询单个 Windows KB 补丁的详情信息，返回 KB 基本信息、发布时间、是否需要重启，以及该 KB 关联的漏洞列表。
+     * @param req DescribeKBDetailRequest
+     * @return DescribeKBDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKBDetailResponse DescribeKBDetail(DescribeKBDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKBDetail", DescribeKBDetailResponse.class);
+    }
+
+    /**
+     *查询指定KB补丁可以更新的主机列表。用于Windows系统补丁修复场景，在用户提交KB补丁更新任务前，查询哪些主机缺少该补丁且支持自动更新。
+     * @param req DescribeKBUpdatableMachineListRequest
+     * @return DescribeKBUpdatableMachineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKBUpdatableMachineListResponse DescribeKBUpdatableMachineList(DescribeKBUpdatableMachineListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKBUpdatableMachineList", DescribeKBUpdatableMachineListResponse.class);
     }
 
     /**
@@ -2547,6 +2701,116 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取漏洞组件关联主机
+     * @param req DescribeVulComponentRelateHostRequest
+     * @return DescribeVulComponentRelateHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHost(DescribeVulComponentRelateHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulComponentRelateHost", DescribeVulComponentRelateHostResponse.class);
+    }
+
+    /**
+     *查询指定漏洞修复任务的详情信息，包含每台主机的修复状态、快照状态等明细数据，支持分页和筛选。
+     * @param req DescribeVulFixTaskDetailRequest
+     * @return DescribeVulFixTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetail(DescribeVulFixTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixTaskDetail", DescribeVulFixTaskDetailResponse.class);
+    }
+
+    /**
+     *分页查询漏洞修复任务记录列表，支持按修复状态、时间范围等条件筛选，展示每个修复任务的概要信息。
+     * @param req DescribeVulFixTaskListRequest
+     * @return DescribeVulFixTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixTaskListResponse DescribeVulFixTaskList(DescribeVulFixTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixTaskList", DescribeVulFixTaskListResponse.class);
+    }
+
+    /**
+     *查询指定漏洞可以被修复的主机列表。在用户提交修复任务前，需要先查询哪些主机支持自动修复，为用户选择修复目标提供数据支持。
+     * @param req DescribeVulFixableMachineListRequest
+     * @return DescribeVulFixableMachineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixableMachineListResponse DescribeVulFixableMachineList(DescribeVulFixableMachineListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixableMachineList", DescribeVulFixableMachineListResponse.class);
+    }
+
+    /**
+     *查询某个已修复漏洞在指定主机上的修复详情，包含漏洞基本信息、修复主机信息以及关联组件&路径的详细列表（组件名称、命中版本、关联路径、修复命令）。
+     * @param req DescribeVulFixedHostDetailRequest
+     * @return DescribeVulFixedHostDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixedHostDetailResponse DescribeVulFixedHostDetail(DescribeVulFixedHostDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixedHostDetail", DescribeVulFixedHostDetailResponse.class);
+    }
+
+    /**
+     *查询已被修复的漏洞列表，展示修复成功的漏洞信息及修复情况统计，帮助用户了解修复成效。
+     * @param req DescribeVulFixedListRequest
+     * @return DescribeVulFixedListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixedListResponse DescribeVulFixedList(DescribeVulFixedListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixedList", DescribeVulFixedListResponse.class);
+    }
+
+    /**
+     *获取漏洞主机关联组件
+     * @param req DescribeVulHostRelateComponentRequest
+     * @return DescribeVulHostRelateComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulHostRelateComponentResponse DescribeVulHostRelateComponent(DescribeVulHostRelateComponentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulHostRelateComponent", DescribeVulHostRelateComponentResponse.class);
+    }
+
+    /**
+     *获取漏洞忽略列表
+     * @param req DescribeVulIgnoreRuleListRequest
+     * @return DescribeVulIgnoreRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulIgnoreRuleListResponse DescribeVulIgnoreRuleList(DescribeVulIgnoreRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulIgnoreRuleList", DescribeVulIgnoreRuleListResponse.class);
+    }
+
+    /**
+     *获取漏洞列表
+     * @param req DescribeVulItemListRequest
+     * @return DescribeVulItemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulItemListResponse DescribeVulItemList(DescribeVulItemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulItemList", DescribeVulItemListResponse.class);
+    }
+
+    /**
+     *获取漏洞标签列表
+     * @param req DescribeVulLabelListRequest
+     * @return DescribeVulLabelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulLabelListResponse DescribeVulLabelList(DescribeVulLabelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulLabelList", DescribeVulLabelListResponse.class);
+    }
+
+    /**
      *查询云边界分析-暴露路径下主机节点的漏洞列表
      * @param req DescribeVulRiskListRequest
      * @return DescribeVulRiskListResponse
@@ -2555,6 +2819,61 @@ public class CsipClient extends AbstractClient{
     public DescribeVulRiskListResponse DescribeVulRiskList(DescribeVulRiskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVulRiskList", DescribeVulRiskListResponse.class);
+    }
+
+    /**
+     *获取漏洞关联组件
+     * @param req DescribeVulRiskRelateComponentRequest
+     * @return DescribeVulRiskRelateComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRiskRelateComponentResponse DescribeVulRiskRelateComponent(DescribeVulRiskRelateComponentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRiskRelateComponent", DescribeVulRiskRelateComponentResponse.class);
+    }
+
+    /**
+     *获取漏洞或KB关联的主机
+     * @param req DescribeVulRiskRelateHostRequest
+     * @return DescribeVulRiskRelateHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRiskRelateHostResponse DescribeVulRiskRelateHost(DescribeVulRiskRelateHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRiskRelateHost", DescribeVulRiskRelateHostResponse.class);
+    }
+
+    /**
+     *获取漏洞扫描（周期扫描）
+     * @param req DescribeVulScanPeriodicRequest
+     * @return DescribeVulScanPeriodicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulScanPeriodicResponse DescribeVulScanPeriodic(DescribeVulScanPeriodicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulScanPeriodic", DescribeVulScanPeriodicResponse.class);
+    }
+
+    /**
+     *获取扫描漏洞任务详情
+     * @param req DescribeVulScanTaskDetailRequest
+     * @return DescribeVulScanTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulScanTaskDetailResponse DescribeVulScanTaskDetail(DescribeVulScanTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulScanTaskDetail", DescribeVulScanTaskDetailResponse.class);
+    }
+
+    /**
+     *获取漏洞扫描任务记录
+     * @param req DescribeVulScanTaskListRequest
+     * @return DescribeVulScanTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulScanTaskListResponse DescribeVulScanTaskList(DescribeVulScanTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulScanTaskList", DescribeVulScanTaskListResponse.class);
     }
 
     /**
@@ -3064,6 +3383,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改漏洞扫描（周期扫描）
+     * @param req ModifyVulScanPeriodicRequest
+     * @return ModifyVulScanPeriodicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVulScanPeriodicResponse ModifyVulScanPeriodic(ModifyVulScanPeriodicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVulScanPeriodic", ModifyVulScanPeriodicResponse.class);
+    }
+
+    /**
+     *修改漏洞白名单配置
+     * @param req ModifyVulWhitelistConfigRequest
+     * @return ModifyVulWhitelistConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfig(ModifyVulWhitelistConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVulWhitelistConfig", ModifyVulWhitelistConfigResponse.class);
+    }
+
+    /**
+     *修改漏洞白名单开关
+     * @param req ModifyVulWhitelistSwitchRequest
+     * @return ModifyVulWhitelistSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitch(ModifyVulWhitelistSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVulWhitelistSwitch", ModifyVulWhitelistSwitchResponse.class);
+    }
+
+    /**
      *重置Dspm资产账号密码
      * @param req ResetDspmAssetAccountPasswordRequest
      * @return ResetDspmAssetAccountPasswordResponse
@@ -3116,6 +3468,17 @@ public class CsipClient extends AbstractClient{
     public StopRiskCenterTaskResponse StopRiskCenterTask(StopRiskCenterTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRiskCenterTask", StopRiskCenterTaskResponse.class);
+    }
+
+    /**
+     *停止漏洞扫描（任务扫描）
+     * @param req StopVulScanTaskRequest
+     * @return StopVulScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopVulScanTaskResponse StopVulScanTask(StopVulScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopVulScanTask", StopVulScanTaskResponse.class);
     }
 
     /**

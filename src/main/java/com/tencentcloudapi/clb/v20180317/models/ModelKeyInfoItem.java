@@ -112,7 +112,7 @@ public class ModelKeyInfoItem extends AbstractModel {
     private String ServiceProviderName;
 
     /**
-    * <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+    * <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -147,6 +147,13 @@ public class ModelKeyInfoItem extends AbstractModel {
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
+
+    /**
+    * <p>健康检查配置</p>
+    */
+    @SerializedName("HealthCheckConfig")
+    @Expose
+    private ServiceProviderHealthCheckConfigOutput HealthCheckConfig;
 
     /**
      * Get <p>接入类型</p> 
@@ -357,16 +364,16 @@ public class ModelKeyInfoItem extends AbstractModel {
     }
 
     /**
-     * Get <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul> 
-     * @return Status <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+     * Get <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul> 
+     * @return Status <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
-     * @param Status <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li><li>Deleting： 删除中</li><li>ProvisionFailed： 创建失败</li><li>ConfigureFailed： 变配失败</li><li>DeletionFailed： 删除失败</li><li>Disabled： 已禁用</li></ul>
+     * Set <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
+     * @param Status <p>模型状态</p><p>枚举值：</p><ul><li>Active： 运行中</li><li>Provisioning： 创建中</li><li>Configuring： 变配中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -444,6 +451,22 @@ public class ModelKeyInfoItem extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get <p>健康检查配置</p> 
+     * @return HealthCheckConfig <p>健康检查配置</p>
+     */
+    public ServiceProviderHealthCheckConfigOutput getHealthCheckConfig() {
+        return this.HealthCheckConfig;
+    }
+
+    /**
+     * Set <p>健康检查配置</p>
+     * @param HealthCheckConfig <p>健康检查配置</p>
+     */
+    public void setHealthCheckConfig(ServiceProviderHealthCheckConfigOutput HealthCheckConfig) {
+        this.HealthCheckConfig = HealthCheckConfig;
+    }
+
     public ModelKeyInfoItem() {
     }
 
@@ -515,6 +538,9 @@ public class ModelKeyInfoItem extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.HealthCheckConfig != null) {
+            this.HealthCheckConfig = new ServiceProviderHealthCheckConfigOutput(source.HealthCheckConfig);
+        }
     }
 
 
@@ -539,6 +565,7 @@ public class ModelKeyInfoItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
 
     }
 }

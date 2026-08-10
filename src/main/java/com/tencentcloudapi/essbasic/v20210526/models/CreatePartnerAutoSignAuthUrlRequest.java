@@ -80,6 +80,13 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     private String [] AuthorizedOrganizationNames;
 
     /**
+    * <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("LimitAuthType")
+    @Expose
+    private Long LimitAuthType;
+
+    /**
      * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证 
      * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
@@ -215,6 +222,22 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.AuthorizedOrganizationNames = AuthorizedOrganizationNames;
     }
 
+    /**
+     * Get <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p> 
+     * @return LimitAuthType <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+     */
+    public Long getLimitAuthType() {
+        return this.LimitAuthType;
+    }
+
+    /**
+     * Set <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+     * @param LimitAuthType <p>限制授权方式</p><p>枚举值：</p><ul><li>0： 默认，授权页面展示全部授权方式</li><li>1： 仅按印章类型授权</li><li>2： 仅按印章id授权</li></ul><p>默认值：0</p>
+     */
+    public void setLimitAuthType(Long LimitAuthType) {
+        this.LimitAuthType = LimitAuthType;
+    }
+
     public CreatePartnerAutoSignAuthUrlRequest() {
     }
 
@@ -256,6 +279,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
                 this.AuthorizedOrganizationNames[i] = new String(source.AuthorizedOrganizationNames[i]);
             }
         }
+        if (source.LimitAuthType != null) {
+            this.LimitAuthType = new Long(source.LimitAuthType);
+        }
     }
 
 
@@ -271,6 +297,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
         this.setParamArraySimple(map, prefix + "AuthorizedOrganizationIds.", this.AuthorizedOrganizationIds);
         this.setParamArraySimple(map, prefix + "AuthorizedOrganizationNames.", this.AuthorizedOrganizationNames);
+        this.setParamSimple(map, prefix + "LimitAuthType", this.LimitAuthType);
 
     }
 }

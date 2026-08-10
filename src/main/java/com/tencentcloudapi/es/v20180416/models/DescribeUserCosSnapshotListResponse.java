@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeUserCosSnapshotListResponse extends AbstractModel {
 
     /**
-    * cos 快照信息列表
+    * <p>cos 快照信息列表</p>
     */
     @SerializedName("CosSnapshotInfoList")
     @Expose
     private CosSnapShotInfo [] CosSnapshotInfoList;
 
     /**
-    * cos 快照数量
+    * <p>cos 快照数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeUserCosSnapshotListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get cos 快照信息列表 
-     * @return CosSnapshotInfoList cos 快照信息列表
+     * Get <p>cos 快照信息列表</p> 
+     * @return CosSnapshotInfoList <p>cos 快照信息列表</p>
      */
     public CosSnapShotInfo [] getCosSnapshotInfoList() {
         return this.CosSnapshotInfoList;
     }
 
     /**
-     * Set cos 快照信息列表
-     * @param CosSnapshotInfoList cos 快照信息列表
+     * Set <p>cos 快照信息列表</p>
+     * @param CosSnapshotInfoList <p>cos 快照信息列表</p>
      */
     public void setCosSnapshotInfoList(CosSnapShotInfo [] CosSnapshotInfoList) {
         this.CosSnapshotInfoList = CosSnapshotInfoList;
     }
 
     /**
-     * Get cos 快照数量 
-     * @return TotalCount cos 快照数量
+     * Get <p>cos 快照数量</p> 
+     * @return TotalCount <p>cos 快照数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set cos 快照数量
-     * @param TotalCount cos 快照数量
+     * Set <p>cos 快照数量</p>
+     * @param TotalCount <p>cos 快照数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

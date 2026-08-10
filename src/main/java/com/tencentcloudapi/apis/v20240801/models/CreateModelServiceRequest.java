@@ -220,6 +220,27 @@ public class CreateModelServiceRequest extends AbstractModel {
     private String RawCustomModelProtocolConfig;
 
     /**
+    * <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+    */
+    @SerializedName("RouteStrategy")
+    @Expose
+    private String RouteStrategy;
+
+    /**
+    * <p>token长度路由策略</p>
+    */
+    @SerializedName("TokenLengthRoute")
+    @Expose
+    private TokenLengthRouteDTO [] TokenLengthRoute;
+
+    /**
+    * <p>任务复杂度路由策略</p>
+    */
+    @SerializedName("TaskComplexityRoute")
+    @Expose
+    private TaskComplexityRouteDTO TaskComplexityRoute;
+
+    /**
      * Get <p>实例</p> 
      * @return InstanceID <p>实例</p>
      */
@@ -667,6 +688,54 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.RawCustomModelProtocolConfig = RawCustomModelProtocolConfig;
     }
 
+    /**
+     * Get <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul> 
+     * @return RouteStrategy <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+     */
+    public String getRouteStrategy() {
+        return this.RouteStrategy;
+    }
+
+    /**
+     * Set <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+     * @param RouteStrategy <p>路由策略</p><p>枚举值：</p><ul><li>weight： 权重</li><li>taskComplexity： 任务复杂度</li><li>tokenLength： token长度</li></ul>
+     */
+    public void setRouteStrategy(String RouteStrategy) {
+        this.RouteStrategy = RouteStrategy;
+    }
+
+    /**
+     * Get <p>token长度路由策略</p> 
+     * @return TokenLengthRoute <p>token长度路由策略</p>
+     */
+    public TokenLengthRouteDTO [] getTokenLengthRoute() {
+        return this.TokenLengthRoute;
+    }
+
+    /**
+     * Set <p>token长度路由策略</p>
+     * @param TokenLengthRoute <p>token长度路由策略</p>
+     */
+    public void setTokenLengthRoute(TokenLengthRouteDTO [] TokenLengthRoute) {
+        this.TokenLengthRoute = TokenLengthRoute;
+    }
+
+    /**
+     * Get <p>任务复杂度路由策略</p> 
+     * @return TaskComplexityRoute <p>任务复杂度路由策略</p>
+     */
+    public TaskComplexityRouteDTO getTaskComplexityRoute() {
+        return this.TaskComplexityRoute;
+    }
+
+    /**
+     * Set <p>任务复杂度路由策略</p>
+     * @param TaskComplexityRoute <p>任务复杂度路由策略</p>
+     */
+    public void setTaskComplexityRoute(TaskComplexityRouteDTO TaskComplexityRoute) {
+        this.TaskComplexityRoute = TaskComplexityRoute;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -774,6 +843,18 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.RawCustomModelProtocolConfig != null) {
             this.RawCustomModelProtocolConfig = new String(source.RawCustomModelProtocolConfig);
         }
+        if (source.RouteStrategy != null) {
+            this.RouteStrategy = new String(source.RouteStrategy);
+        }
+        if (source.TokenLengthRoute != null) {
+            this.TokenLengthRoute = new TokenLengthRouteDTO[source.TokenLengthRoute.length];
+            for (int i = 0; i < source.TokenLengthRoute.length; i++) {
+                this.TokenLengthRoute[i] = new TokenLengthRouteDTO(source.TokenLengthRoute[i]);
+            }
+        }
+        if (source.TaskComplexityRoute != null) {
+            this.TaskComplexityRoute = new TaskComplexityRouteDTO(source.TaskComplexityRoute);
+        }
     }
 
 
@@ -809,6 +890,9 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FallbackModels.", this.FallbackModels);
         this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
         this.setParamSimple(map, prefix + "RawCustomModelProtocolConfig", this.RawCustomModelProtocolConfig);
+        this.setParamSimple(map, prefix + "RouteStrategy", this.RouteStrategy);
+        this.setParamArrayObj(map, prefix + "TokenLengthRoute.", this.TokenLengthRoute);
+        this.setParamObj(map, prefix + "TaskComplexityRoute.", this.TaskComplexityRoute);
 
     }
 }

@@ -38,6 +38,13 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     private String AsyncRequestId;
 
     /**
+    * <p>任务列表的任务ID</p>
+    */
+    @SerializedName("JobId")
+    @Expose
+    private Long JobId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>任务列表的任务ID</p> 
+     * @return JobId <p>任务列表的任务ID</p>
+     */
+    public Long getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set <p>任务列表的任务ID</p>
+     * @param JobId <p>任务列表的任务ID</p>
+     */
+    public void setJobId(Long JobId) {
+        this.JobId = JobId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
         if (source.AsyncRequestId != null) {
             this.AsyncRequestId = new String(source.AsyncRequestId);
         }
+        if (source.JobId != null) {
+            this.JobId = new Long(source.JobId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
         this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

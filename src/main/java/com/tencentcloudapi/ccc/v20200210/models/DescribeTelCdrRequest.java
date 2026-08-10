@@ -24,158 +24,158 @@ import java.util.HashMap;
 public class DescribeTelCdrRequest extends AbstractModel {
 
     /**
-    * 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+    * <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
     */
     @SerializedName("StartTimeStamp")
     @Expose
     private Long StartTimeStamp;
 
     /**
-    * 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+    * <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
     */
     @SerializedName("EndTimeStamp")
     @Expose
     private Long EndTimeStamp;
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 分页尺寸（必填），上限 100
+    * <p>分页尺寸（必填），上限 100</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 分页页码（必填），从 0 开始
+    * <p>分页页码（必填），从 0 开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 实例 ID（废弃）
+    * <p>实例 ID（废弃）</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private Long InstanceId;
 
     /**
-    * 返回数据条数，上限（废弃）
+    * <p>返回数据条数，上限（废弃）</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移（废弃）
+    * <p>偏移（废弃）</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 按手机号筛选
+    * <p>按手机号筛选</p>
     */
     @SerializedName("Phones")
     @Expose
     private String [] Phones;
 
     /**
-    * 按SessionId筛选
+    * <p>按SessionId筛选</p>
     */
     @SerializedName("SessionIds")
     @Expose
     private String [] SessionIds;
 
     /**
-     * Get 起始时间戳，Unix 秒级时间戳，最大支持近180天。 
-     * @return StartTimeStamp 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+     * Get <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p> 
+     * @return StartTimeStamp <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
     }
 
     /**
-     * Set 起始时间戳，Unix 秒级时间戳，最大支持近180天。
-     * @param StartTimeStamp 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+     * Set <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
+     * @param StartTimeStamp <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。 
-     * @return EndTimeStamp 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+     * Get <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p> 
+     * @return EndTimeStamp <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
     }
 
     /**
-     * Set 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
-     * @param EndTimeStamp 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+     * Set <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
+     * @param EndTimeStamp <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;
     }
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 分页尺寸（必填），上限 100 
-     * @return PageSize 分页尺寸（必填），上限 100
+     * Get <p>分页尺寸（必填），上限 100</p> 
+     * @return PageSize <p>分页尺寸（必填），上限 100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页尺寸（必填），上限 100
-     * @param PageSize 分页尺寸（必填），上限 100
+     * Set <p>分页尺寸（必填），上限 100</p>
+     * @param PageSize <p>分页尺寸（必填），上限 100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 分页页码（必填），从 0 开始 
-     * @return PageNumber 分页页码（必填），从 0 开始
+     * Get <p>分页页码（必填），从 0 开始</p> 
+     * @return PageNumber <p>分页页码（必填），从 0 开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页码（必填），从 0 开始
-     * @param PageNumber 分页页码（必填），从 0 开始
+     * Set <p>分页页码（必填），从 0 开始</p>
+     * @param PageNumber <p>分页页码（必填），从 0 开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 实例 ID（废弃） 
-     * @return InstanceId 实例 ID（废弃）
+     * Get <p>实例 ID（废弃）</p> 
+     * @return InstanceId <p>实例 ID（废弃）</p>
      * @deprecated
      */
     @Deprecated
@@ -184,8 +184,8 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例 ID（废弃）
-     * @param InstanceId 实例 ID（废弃）
+     * Set <p>实例 ID（废弃）</p>
+     * @param InstanceId <p>实例 ID（废弃）</p>
      * @deprecated
      */
     @Deprecated
@@ -194,64 +194,72 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数据条数，上限（废弃） 
-     * @return Limit 返回数据条数，上限（废弃）
+     * Get <p>返回数据条数，上限（废弃）</p> 
+     * @return Limit <p>返回数据条数，上限（废弃）</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数据条数，上限（废弃）
-     * @param Limit 返回数据条数，上限（废弃）
+     * Set <p>返回数据条数，上限（废弃）</p>
+     * @param Limit <p>返回数据条数，上限（废弃）</p>
+     * @deprecated
      */
+    @Deprecated
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移（废弃） 
-     * @return Offset 偏移（废弃）
+     * Get <p>偏移（废弃）</p> 
+     * @return Offset <p>偏移（废弃）</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移（废弃）
-     * @param Offset 偏移（废弃）
+     * Set <p>偏移（废弃）</p>
+     * @param Offset <p>偏移（废弃）</p>
+     * @deprecated
      */
+    @Deprecated
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 按手机号筛选 
-     * @return Phones 按手机号筛选
+     * Get <p>按手机号筛选</p> 
+     * @return Phones <p>按手机号筛选</p>
      */
     public String [] getPhones() {
         return this.Phones;
     }
 
     /**
-     * Set 按手机号筛选
-     * @param Phones 按手机号筛选
+     * Set <p>按手机号筛选</p>
+     * @param Phones <p>按手机号筛选</p>
      */
     public void setPhones(String [] Phones) {
         this.Phones = Phones;
     }
 
     /**
-     * Get 按SessionId筛选 
-     * @return SessionIds 按SessionId筛选
+     * Get <p>按SessionId筛选</p> 
+     * @return SessionIds <p>按SessionId筛选</p>
      */
     public String [] getSessionIds() {
         return this.SessionIds;
     }
 
     /**
-     * Set 按SessionId筛选
-     * @param SessionIds 按SessionId筛选
+     * Set <p>按SessionId筛选</p>
+     * @param SessionIds <p>按SessionId筛选</p>
      */
     public void setSessionIds(String [] SessionIds) {
         this.SessionIds = SessionIds;

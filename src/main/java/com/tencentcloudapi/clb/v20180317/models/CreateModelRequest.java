@@ -115,6 +115,13 @@ public class CreateModelRequest extends AbstractModel {
     private Boolean VerifySSL;
 
     /**
+    * <p>健康检查配置</p>
+    */
+    @SerializedName("HealthCheckConfig")
+    @Expose
+    private ServiceProviderHealthCheckConfigInput HealthCheckConfig;
+
+    /**
      * Get <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p> 
      * @return AccessType <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p>
      */
@@ -322,6 +329,22 @@ public class CreateModelRequest extends AbstractModel {
         this.VerifySSL = VerifySSL;
     }
 
+    /**
+     * Get <p>健康检查配置</p> 
+     * @return HealthCheckConfig <p>健康检查配置</p>
+     */
+    public ServiceProviderHealthCheckConfigInput getHealthCheckConfig() {
+        return this.HealthCheckConfig;
+    }
+
+    /**
+     * Set <p>健康检查配置</p>
+     * @param HealthCheckConfig <p>健康检查配置</p>
+     */
+    public void setHealthCheckConfig(ServiceProviderHealthCheckConfigInput HealthCheckConfig) {
+        this.HealthCheckConfig = HealthCheckConfig;
+    }
+
     public CreateModelRequest() {
     }
 
@@ -378,6 +401,9 @@ public class CreateModelRequest extends AbstractModel {
         if (source.VerifySSL != null) {
             this.VerifySSL = new Boolean(source.VerifySSL);
         }
+        if (source.HealthCheckConfig != null) {
+            this.HealthCheckConfig = new ServiceProviderHealthCheckConfigInput(source.HealthCheckConfig);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class CreateModelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
+        this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
 
     }
 }

@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeUserCosSnapshotListRequest extends AbstractModel {
 
     /**
-    * cos桶名
+    * <p>cos桶名</p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * bucket 桶下的备份路径
+    * <p>bucket 桶下的备份路径</p>
     */
     @SerializedName("BasePath")
     @Expose
     private String BasePath;
 
     /**
-    * 云上集群迁移集群名
+    * <p>云上集群迁移集群名</p>
     */
     @SerializedName("ClusterInstanceId")
     @Expose
     private String ClusterInstanceId;
 
     /**
-     * Get cos桶名 
-     * @return CosBucket cos桶名
+    * <p>es 集群仓库</p>
+    */
+    @SerializedName("PaasEsRepository")
+    @Expose
+    private String PaasEsRepository;
+
+    /**
+     * Get <p>cos桶名</p> 
+     * @return CosBucket <p>cos桶名</p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set cos桶名
-     * @param CosBucket cos桶名
+     * Set <p>cos桶名</p>
+     * @param CosBucket <p>cos桶名</p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get bucket 桶下的备份路径 
-     * @return BasePath bucket 桶下的备份路径
+     * Get <p>bucket 桶下的备份路径</p> 
+     * @return BasePath <p>bucket 桶下的备份路径</p>
      */
     public String getBasePath() {
         return this.BasePath;
     }
 
     /**
-     * Set bucket 桶下的备份路径
-     * @param BasePath bucket 桶下的备份路径
+     * Set <p>bucket 桶下的备份路径</p>
+     * @param BasePath <p>bucket 桶下的备份路径</p>
      */
     public void setBasePath(String BasePath) {
         this.BasePath = BasePath;
     }
 
     /**
-     * Get 云上集群迁移集群名 
-     * @return ClusterInstanceId 云上集群迁移集群名
+     * Get <p>云上集群迁移集群名</p> 
+     * @return ClusterInstanceId <p>云上集群迁移集群名</p>
      */
     public String getClusterInstanceId() {
         return this.ClusterInstanceId;
     }
 
     /**
-     * Set 云上集群迁移集群名
-     * @param ClusterInstanceId 云上集群迁移集群名
+     * Set <p>云上集群迁移集群名</p>
+     * @param ClusterInstanceId <p>云上集群迁移集群名</p>
      */
     public void setClusterInstanceId(String ClusterInstanceId) {
         this.ClusterInstanceId = ClusterInstanceId;
+    }
+
+    /**
+     * Get <p>es 集群仓库</p> 
+     * @return PaasEsRepository <p>es 集群仓库</p>
+     */
+    public String getPaasEsRepository() {
+        return this.PaasEsRepository;
+    }
+
+    /**
+     * Set <p>es 集群仓库</p>
+     * @param PaasEsRepository <p>es 集群仓库</p>
+     */
+    public void setPaasEsRepository(String PaasEsRepository) {
+        this.PaasEsRepository = PaasEsRepository;
     }
 
     public DescribeUserCosSnapshotListRequest() {
@@ -109,6 +132,9 @@ public class DescribeUserCosSnapshotListRequest extends AbstractModel {
         if (source.ClusterInstanceId != null) {
             this.ClusterInstanceId = new String(source.ClusterInstanceId);
         }
+        if (source.PaasEsRepository != null) {
+            this.PaasEsRepository = new String(source.PaasEsRepository);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeUserCosSnapshotListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
         this.setParamSimple(map, prefix + "ClusterInstanceId", this.ClusterInstanceId);
+        this.setParamSimple(map, prefix + "PaasEsRepository", this.PaasEsRepository);
 
     }
 }

@@ -24,72 +24,128 @@ import java.util.HashMap;
 public class AgentCredentialContentDTO extends AbstractModel {
 
     /**
-    * 如果认证类型为sts时，该项必填
+    * <p>如果认证类型为sts时，该项必填</p>
     */
     @SerializedName("STSSystem")
     @Expose
     private String STSSystem;
 
     /**
-    * 如果认证类型为sts时，该项必填
+    * <p>如果认证类型为sts时，该项必填</p>
     */
     @SerializedName("STSService")
     @Expose
     private String STSService;
 
     /**
-    * 如果认证类型为reqKey时，该项必填
+    * <p>如果认证类型为reqKey时，该项必填</p>
     */
     @SerializedName("Headers")
     @Expose
     private AgentCredentialContentHeaderDTO [] Headers;
 
     /**
-     * Get 如果认证类型为sts时，该项必填 
-     * @return STSSystem 如果认证类型为sts时，该项必填
+    * <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiKeys")
+    @Expose
+    private AgentCredentialApiKeyDTO [] ApiKeys;
+
+    /**
+    * <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FaultTolerance")
+    @Expose
+    private FaultToleranceDTO FaultTolerance;
+
+    /**
+     * Get <p>如果认证类型为sts时，该项必填</p> 
+     * @return STSSystem <p>如果认证类型为sts时，该项必填</p>
      */
     public String getSTSSystem() {
         return this.STSSystem;
     }
 
     /**
-     * Set 如果认证类型为sts时，该项必填
-     * @param STSSystem 如果认证类型为sts时，该项必填
+     * Set <p>如果认证类型为sts时，该项必填</p>
+     * @param STSSystem <p>如果认证类型为sts时，该项必填</p>
      */
     public void setSTSSystem(String STSSystem) {
         this.STSSystem = STSSystem;
     }
 
     /**
-     * Get 如果认证类型为sts时，该项必填 
-     * @return STSService 如果认证类型为sts时，该项必填
+     * Get <p>如果认证类型为sts时，该项必填</p> 
+     * @return STSService <p>如果认证类型为sts时，该项必填</p>
      */
     public String getSTSService() {
         return this.STSService;
     }
 
     /**
-     * Set 如果认证类型为sts时，该项必填
-     * @param STSService 如果认证类型为sts时，该项必填
+     * Set <p>如果认证类型为sts时，该项必填</p>
+     * @param STSService <p>如果认证类型为sts时，该项必填</p>
      */
     public void setSTSService(String STSService) {
         this.STSService = STSService;
     }
 
     /**
-     * Get 如果认证类型为reqKey时，该项必填 
-     * @return Headers 如果认证类型为reqKey时，该项必填
+     * Get <p>如果认证类型为reqKey时，该项必填</p> 
+     * @return Headers <p>如果认证类型为reqKey时，该项必填</p>
      */
     public AgentCredentialContentHeaderDTO [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set 如果认证类型为reqKey时，该项必填
-     * @param Headers 如果认证类型为reqKey时，该项必填
+     * Set <p>如果认证类型为reqKey时，该项必填</p>
+     * @param Headers <p>如果认证类型为reqKey时，该项必填</p>
      */
     public void setHeaders(AgentCredentialContentHeaderDTO [] Headers) {
         this.Headers = Headers;
+    }
+
+    /**
+     * Get <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiKeys <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AgentCredentialApiKeyDTO [] getApiKeys() {
+        return this.ApiKeys;
+    }
+
+    /**
+     * Set <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiKeys <p>如果认证类型为apiKey时，该项必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiKeys(AgentCredentialApiKeyDTO [] ApiKeys) {
+        this.ApiKeys = ApiKeys;
+    }
+
+    /**
+     * Get <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FaultTolerance <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FaultToleranceDTO getFaultTolerance() {
+        return this.FaultTolerance;
+    }
+
+    /**
+     * Set <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FaultTolerance <p>容错策略，仅Type为apiKey时支持</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFaultTolerance(FaultToleranceDTO FaultTolerance) {
+        this.FaultTolerance = FaultTolerance;
     }
 
     public AgentCredentialContentDTO() {
@@ -112,6 +168,15 @@ public class AgentCredentialContentDTO extends AbstractModel {
                 this.Headers[i] = new AgentCredentialContentHeaderDTO(source.Headers[i]);
             }
         }
+        if (source.ApiKeys != null) {
+            this.ApiKeys = new AgentCredentialApiKeyDTO[source.ApiKeys.length];
+            for (int i = 0; i < source.ApiKeys.length; i++) {
+                this.ApiKeys[i] = new AgentCredentialApiKeyDTO(source.ApiKeys[i]);
+            }
+        }
+        if (source.FaultTolerance != null) {
+            this.FaultTolerance = new FaultToleranceDTO(source.FaultTolerance);
+        }
     }
 
 
@@ -122,6 +187,8 @@ public class AgentCredentialContentDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "STSSystem", this.STSSystem);
         this.setParamSimple(map, prefix + "STSService", this.STSService);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamArrayObj(map, prefix + "ApiKeys.", this.ApiKeys);
+        this.setParamObj(map, prefix + "FaultTolerance.", this.FaultTolerance);
 
     }
 }

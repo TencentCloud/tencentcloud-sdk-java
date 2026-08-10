@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PrivateLinkInfo extends AbstractModel {
 
     /**
-    * 私有连接所在的VPCID
+    * <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -32,7 +32,7 @@ public class PrivateLinkInfo extends AbstractModel {
     private String VpcId;
 
     /**
-    * 私有连接所在的子网ID
+    * <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -40,7 +40,7 @@ public class PrivateLinkInfo extends AbstractModel {
     private String SubnetId;
 
     /**
-    * HTTP内网调用地址
+    * <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerHttpAddr")
@@ -48,7 +48,7 @@ public class PrivateLinkInfo extends AbstractModel {
     private String [] InnerHttpAddr;
 
     /**
-    * HTTPS内网调用地址
+    * <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerHttpsAddr")
@@ -56,7 +56,7 @@ public class PrivateLinkInfo extends AbstractModel {
     private String [] InnerHttpsAddr;
 
     /**
-    * 私有连接状态
+    * <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -64,16 +64,37 @@ public class PrivateLinkInfo extends AbstractModel {
     private String State;
 
     /**
-    * grpc内网调用地址
+    * <p>grpc内网调用地址</p>
     */
     @SerializedName("InnerGrpcAddr")
     @Expose
     private String [] InnerGrpcAddr;
 
     /**
-     * Get 私有连接所在的VPCID
+    * <p>创建者 UIN</p>
+    */
+    @SerializedName("CreatedBy")
+    @Expose
+    private String CreatedBy;
+
+    /**
+    * <p>创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>子用户名称</p>
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
+     * Get <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId 私有连接所在的VPCID
+     * @return VpcId <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -81,9 +102,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Set 私有连接所在的VPCID
+     * Set <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId 私有连接所在的VPCID
+     * @param VpcId <p>私有连接所在的VPCID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -91,9 +112,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Get 私有连接所在的子网ID
+     * Get <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 私有连接所在的子网ID
+     * @return SubnetId <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -101,9 +122,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Set 私有连接所在的子网ID
+     * Set <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 私有连接所在的子网ID
+     * @param SubnetId <p>私有连接所在的子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -111,9 +132,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Get HTTP内网调用地址
+     * Get <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerHttpAddr HTTP内网调用地址
+     * @return InnerHttpAddr <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInnerHttpAddr() {
@@ -121,9 +142,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Set HTTP内网调用地址
+     * Set <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerHttpAddr HTTP内网调用地址
+     * @param InnerHttpAddr <p>HTTP内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerHttpAddr(String [] InnerHttpAddr) {
@@ -131,9 +152,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Get HTTPS内网调用地址
+     * Get <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerHttpsAddr HTTPS内网调用地址
+     * @return InnerHttpsAddr <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInnerHttpsAddr() {
@@ -141,9 +162,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Set HTTPS内网调用地址
+     * Set <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerHttpsAddr HTTPS内网调用地址
+     * @param InnerHttpsAddr <p>HTTPS内网调用地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerHttpsAddr(String [] InnerHttpsAddr) {
@@ -151,9 +172,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Get 私有连接状态
+     * Get <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 私有连接状态
+     * @return State <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
@@ -161,9 +182,9 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Set 私有连接状态
+     * Set <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 私有连接状态
+     * @param State <p>私有连接状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
@@ -171,19 +192,67 @@ public class PrivateLinkInfo extends AbstractModel {
     }
 
     /**
-     * Get grpc内网调用地址 
-     * @return InnerGrpcAddr grpc内网调用地址
+     * Get <p>grpc内网调用地址</p> 
+     * @return InnerGrpcAddr <p>grpc内网调用地址</p>
      */
     public String [] getInnerGrpcAddr() {
         return this.InnerGrpcAddr;
     }
 
     /**
-     * Set grpc内网调用地址
-     * @param InnerGrpcAddr grpc内网调用地址
+     * Set <p>grpc内网调用地址</p>
+     * @param InnerGrpcAddr <p>grpc内网调用地址</p>
      */
     public void setInnerGrpcAddr(String [] InnerGrpcAddr) {
         this.InnerGrpcAddr = InnerGrpcAddr;
+    }
+
+    /**
+     * Get <p>创建者 UIN</p> 
+     * @return CreatedBy <p>创建者 UIN</p>
+     */
+    public String getCreatedBy() {
+        return this.CreatedBy;
+    }
+
+    /**
+     * Set <p>创建者 UIN</p>
+     * @param CreatedBy <p>创建者 UIN</p>
+     */
+    public void setCreatedBy(String CreatedBy) {
+        this.CreatedBy = CreatedBy;
+    }
+
+    /**
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>子用户名称</p> 
+     * @return SubUinName <p>子用户名称</p>
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set <p>子用户名称</p>
+     * @param SubUinName <p>子用户名称</p>
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
     }
 
     public PrivateLinkInfo() {
@@ -221,6 +290,15 @@ public class PrivateLinkInfo extends AbstractModel {
                 this.InnerGrpcAddr[i] = new String(source.InnerGrpcAddr[i]);
             }
         }
+        if (source.CreatedBy != null) {
+            this.CreatedBy = new String(source.CreatedBy);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
     }
 
 
@@ -234,6 +312,9 @@ public class PrivateLinkInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InnerHttpsAddr.", this.InnerHttpsAddr);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamArraySimple(map, prefix + "InnerGrpcAddr.", this.InnerGrpcAddr);
+        this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
 
     }
 }
