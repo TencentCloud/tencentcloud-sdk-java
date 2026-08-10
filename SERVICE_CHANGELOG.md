@@ -1,4 +1,4 @@
-# Release 3.2.5
+# Release 3.2.6
 
 ## 流计算 Oceanus(oceanus) 版本：2019-04-22
 
