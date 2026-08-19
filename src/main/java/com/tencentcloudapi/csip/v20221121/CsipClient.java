@@ -72,6 +72,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *取消已永久忽略的EDR多行为告警，从AI-Link永久忽略白名单移除对应主机+规则记录，并将告警状态恢复为待处理（PENDING）
+     * @param req CancelEdrAlertIgnoreRequest
+     * @return CancelEdrAlertIgnoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelEdrAlertIgnoreResponse CancelEdrAlertIgnore(CancelEdrAlertIgnoreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelEdrAlertIgnore", CancelEdrAlertIgnoreResponse.class);
+    }
+
+    /**
      *检测AK 异步任务
      * @param req CreateAccessKeyCheckTaskRequest
      * @return CreateAccessKeyCheckTaskResponse
@@ -91,6 +102,17 @@ public class CsipClient extends AbstractClient{
     public CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(CreateAccessKeySyncTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAccessKeySyncTask", CreateAccessKeySyncTaskResponse.class);
+    }
+
+    /**
+     *CSIP 手动扫描创建接口
+     * @param req CreateCSIPManualMalwareScanRequest
+     * @return CreateCSIPManualMalwareScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCSIPManualMalwareScanResponse CreateCSIPManualMalwareScan(CreateCSIPManualMalwareScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCSIPManualMalwareScan", CreateCSIPManualMalwareScanResponse.class);
     }
 
     /**
@@ -347,6 +369,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *点击开始扫描后触发，支持多账号、多资产类型。同时选主机和容器集群时拆分为两个独立任务（主机+容器）。
+     * @param req CreateEDRManualScanRequest
+     * @return CreateEDRManualScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEDRManualScanResponse CreateEDRManualScan(CreateEDRManualScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEDRManualScan", CreateEDRManualScanResponse.class);
+    }
+
+    /**
+     *创建EDR告警导出任务
+     * @param req CreateEdrAlertExportJobRequest
+     * @return CreateEdrAlertExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdrAlertExportJobResponse CreateEdrAlertExportJob(CreateEdrAlertExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEdrAlertExportJob", CreateEdrAlertExportJobResponse.class);
+    }
+
+    /**
      *创建主机列漏洞表导出任务
      * @param req CreateHostVulExportJobRequest
      * @return CreateHostVulExportJobResponse
@@ -465,6 +509,17 @@ public class CsipClient extends AbstractClient{
     public CreateVulScanManualResponse CreateVulScanManual(CreateVulScanManualRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateVulScanManual", CreateVulScanManualResponse.class);
+    }
+
+    /**
+     *CSIP 手动扫描任务删除接口
+     * @param req DeleteCSIPMalwareScanTaskRequest
+     * @return DeleteCSIPMalwareScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCSIPMalwareScanTaskResponse DeleteCSIPMalwareScanTask(DeleteCSIPMalwareScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCSIPMalwareScanTask", DeleteCSIPMalwareScanTaskResponse.class);
     }
 
     /**
@@ -641,6 +696,28 @@ public class CsipClient extends AbstractClient{
     public DeleteDspmWhitelistStrategyResponse DeleteDspmWhitelistStrategy(DeleteDspmWhitelistStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDspmWhitelistStrategy", DeleteDspmWhitelistStrategyResponse.class);
+    }
+
+    /**
+     *删除EDR策略
+     * @param req DeleteEDRRulesRequest
+     * @return DeleteEDRRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEDRRulesResponse DeleteEDRRules(DeleteEDRRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEDRRules", DeleteEDRRulesResponse.class);
+    }
+
+    /**
+     *删除已终止的扫描任务（物理删除主表及明细表）。只允许删除终态任务，只有创建者可操作。
+     * @param req DeleteEDRScanTaskRequest
+     * @return DeleteEDRScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEDRScanTaskResponse DeleteEDRScanTask(DeleteEDRScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEDRScanTask", DeleteEDRScanTaskResponse.class);
     }
 
     /**
@@ -905,6 +982,28 @@ public class CsipClient extends AbstractClient{
     public DescribeCLSLogListV3Response DescribeCLSLogListV3(DescribeCLSLogListV3Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCLSLogListV3", DescribeCLSLogListV3Response.class);
+    }
+
+    /**
+     *CSIP 扫描任务主机详情接口
+     * @param req DescribeCSIPMalwareScanTaskDetailRequest
+     * @return DescribeCSIPMalwareScanTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSIPMalwareScanTaskDetailResponse DescribeCSIPMalwareScanTaskDetail(DescribeCSIPMalwareScanTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSIPMalwareScanTaskDetail", DescribeCSIPMalwareScanTaskDetailResponse.class);
+    }
+
+    /**
+     *CSIP 手动扫描进度查询接口
+     * @param req DescribeCSIPMalwareScanTaskProgressRequest
+     * @return DescribeCSIPMalwareScanTaskProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSIPMalwareScanTaskProgressResponse DescribeCSIPMalwareScanTaskProgress(DescribeCSIPMalwareScanTaskProgressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSIPMalwareScanTaskProgress", DescribeCSIPMalwareScanTaskProgressResponse.class);
     }
 
     /**
@@ -1964,6 +2063,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询扫描任务列表。Filter.Filters支持Name：Keyword(模糊OperatorType=9)、ScanType(MANUAL/CYCLE)、TaskType(HOST/CONTAINER)、Status(WAIT/SCANNING/FINISHED/FAILED/CANCELED)、AppId(账号)。
+     * @param req DescribeEDRScanRecordListRequest
+     * @return DescribeEDRScanRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEDRScanRecordListResponse DescribeEDRScanRecordList(DescribeEDRScanRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEDRScanRecordList", DescribeEDRScanRecordListResponse.class);
+    }
+
+    /**
+     *查询扫描任务详情。Filter.Filters支持Name：Status（资产扫描状态，OperatorType=7 IN匹配，取值WAIT/SCANNING/FINISHED/FAILED）。
+     * @param req DescribeEDRScanTaskDetailRequest
+     * @return DescribeEDRScanTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEDRScanTaskDetailResponse DescribeEDRScanTaskDetail(DescribeEDRScanTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEDRScanTaskDetail", DescribeEDRScanTaskDetailResponse.class);
+    }
+
+    /**
+     *获取EDR告警数量统计，供资产模块调用。根据传入的MemberId和InstanceIDs，查询EDR告警表并返回告警记录条数信息。当InstanceIDs为空时返回汇总统计，非空时按InstanceIDs粒度分别返回统计。
+     * @param req DescribeEdrAlertCountForAssetRequest
+     * @return DescribeEdrAlertCountForAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrAlertCountForAssetResponse DescribeEdrAlertCountForAsset(DescribeEdrAlertCountForAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrAlertCountForAsset", DescribeEdrAlertCountForAssetResponse.class);
+    }
+
+    /**
+     *容器场景告警数量统计
+     * @param req DescribeEdrAlertCountForContainerRequest
+     * @return DescribeEdrAlertCountForContainerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrAlertCountForContainerResponse DescribeEdrAlertCountForContainer(DescribeEdrAlertCountForContainerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrAlertCountForContainer", DescribeEdrAlertCountForContainerResponse.class);
+    }
+
+    /**
      *获取EDR告警详情，包含告警内容JSON、资产富化、情报富化等完整信息
      * @param req DescribeEdrAlertInfoRequest
      * @return DescribeEdrAlertInfoResponse
@@ -1983,6 +2126,50 @@ public class CsipClient extends AbstractClient{
     public DescribeEdrAlertListResponse DescribeEdrAlertList(DescribeEdrAlertListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEdrAlertList", DescribeEdrAlertListResponse.class);
+    }
+
+    /**
+     *EDR告警多攻击阶段查询
+     * @param req DescribeEdrAlertMultiAttackStagesRequest
+     * @return DescribeEdrAlertMultiAttackStagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrAlertMultiAttackStagesResponse DescribeEdrAlertMultiAttackStages(DescribeEdrAlertMultiAttackStagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrAlertMultiAttackStages", DescribeEdrAlertMultiAttackStagesResponse.class);
+    }
+
+    /**
+     *获取EDR告警统计
+     * @param req DescribeEdrAlertSummaryRequest
+     * @return DescribeEdrAlertSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrAlertSummaryResponse DescribeEdrAlertSummary(DescribeEdrAlertSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrAlertSummary", DescribeEdrAlertSummaryResponse.class);
+    }
+
+    /**
+     *获取EDR导出下载链接
+     * @param req DescribeEdrExportJobDownloadURLRequest
+     * @return DescribeEdrExportJobDownloadURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrExportJobDownloadURLResponse DescribeEdrExportJobDownloadURL(DescribeEdrExportJobDownloadURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrExportJobDownloadURL", DescribeEdrExportJobDownloadURLResponse.class);
+    }
+
+    /**
+     *导出EDR任务列表
+     * @param req DescribeEdrExportJobListRequest
+     * @return DescribeEdrExportJobListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrExportJobListResponse DescribeEdrExportJobList(DescribeEdrExportJobListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrExportJobList", DescribeEdrExportJobListResponse.class);
     }
 
     /**
@@ -2217,6 +2404,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询网络攻击检测开关及资产范围配置
+     * @param req DescribeNetAttackSettingRequest
+     * @return DescribeNetAttackSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetAttackSettingResponse DescribeNetAttackSetting(DescribeNetAttackSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNetAttackSetting", DescribeNetAttackSettingResponse.class);
+    }
+
+    /**
      *获取通知资产范围配置
      * @param req DescribeNotifyAssetConfigRequest
      * @return DescribeNotifyAssetConfigResponse
@@ -2313,6 +2511,17 @@ public class CsipClient extends AbstractClient{
     public DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(DescribeRepositoryImageAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRepositoryImageAssets", DescribeRepositoryImageAssetsResponse.class);
+    }
+
+    /**
+     *查询反弹Shell内网告警与资产范围配置
+     * @param req DescribeReverseShellSystemPolicyConfigRequest
+     * @return DescribeReverseShellSystemPolicyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfig(DescribeReverseShellSystemPolicyConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellSystemPolicyConfig", DescribeReverseShellSystemPolicyConfigResponse.class);
     }
 
     /**
@@ -2899,6 +3108,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *导出CSIP扫描任务主机详情为Excel文件，异步生成后通过DescribeExportMachines查询下载地址
+     * @param req ExportCSIPMalwareScanTaskDetailRequest
+     * @return ExportCSIPMalwareScanTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportCSIPMalwareScanTaskDetailResponse ExportCSIPMalwareScanTaskDetail(ExportCSIPMalwareScanTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportCSIPMalwareScanTaskDetail", ExportCSIPMalwareScanTaskDetailResponse.class);
+    }
+
+    /**
+     *导出EDR策略列表
+     * @param req ExportEDRRulesRequest
+     * @return ExportEDRRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportEDRRulesResponse ExportEDRRules(ExportEDRRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportEDRRules", ExportEDRRulesResponse.class);
+    }
+
+    /**
      *修改AI-Link智链引擎配置
      * @param req ModifyAILinkSettingRequest
      * @return ModifyAILinkSettingResponse
@@ -3262,6 +3493,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改EDR策略开关状态
+     * @param req ModifyEDRRuleStatusRequest
+     * @return ModifyEDRRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEDRRuleStatusResponse ModifyEDRRuleStatus(ModifyEDRRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEDRRuleStatus", ModifyEDRRuleStatusResponse.class);
+    }
+
+    /**
+     *批量修改EDR策略动作
+     * @param req ModifyEDRRulesActionRequest
+     * @return ModifyEDRRulesActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEDRRulesActionResponse ModifyEDRRulesAction(ModifyEDRRulesActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEDRRulesAction", ModifyEDRRulesActionResponse.class);
+    }
+
+    /**
+     *EDR告警隔离和恢复
+     * @param req ModifyEdrAlertIsolationRequest
+     * @return ModifyEdrAlertIsolationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEdrAlertIsolationResponse ModifyEdrAlertIsolation(ModifyEdrAlertIsolationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEdrAlertIsolation", ModifyEdrAlertIsolationResponse.class);
+    }
+
+    /**
      *永久忽略EDR多行为告警，将告警对应的主机+规则加入AI-Link永久忽略白名单，后续同类告警将自动丢弃
      * @param req ModifyEdrAlertPermanentIgnoreRequest
      * @return ModifyEdrAlertPermanentIgnoreResponse
@@ -3270,6 +3534,17 @@ public class CsipClient extends AbstractClient{
     public ModifyEdrAlertPermanentIgnoreResponse ModifyEdrAlertPermanentIgnore(ModifyEdrAlertPermanentIgnoreRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyEdrAlertPermanentIgnore", ModifyEdrAlertPermanentIgnoreResponse.class);
+    }
+
+    /**
+     *EDR告警状态处置
+     * @param req ModifyEdrAlertStatusRequest
+     * @return ModifyEdrAlertStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEdrAlertStatusResponse ModifyEdrAlertStatus(ModifyEdrAlertStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEdrAlertStatus", ModifyEdrAlertStatusResponse.class);
     }
 
     /**
@@ -3292,6 +3567,17 @@ public class CsipClient extends AbstractClient{
     public ModifyMachineRemarkResponse ModifyMachineRemark(ModifyMachineRemarkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMachineRemark", ModifyMachineRemarkResponse.class);
+    }
+
+    /**
+     *修改网络攻击检测开关及资产范围配置
+     * @param req ModifyNetAttackSettingRequest
+     * @return ModifyNetAttackSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetAttackSettingResponse ModifyNetAttackSetting(ModifyNetAttackSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNetAttackSetting", ModifyNetAttackSettingResponse.class);
     }
 
     /**
@@ -3347,6 +3633,17 @@ public class CsipClient extends AbstractClient{
     public ModifyPolicyStatusResponse ModifyPolicyStatus(ModifyPolicyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPolicyStatus", ModifyPolicyStatusResponse.class);
+    }
+
+    /**
+     *修改反弹Shell内网告警与资产范围配置
+     * @param req ModifyReverseShellSystemPolicyConfigRequest
+     * @return ModifyReverseShellSystemPolicyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReverseShellSystemPolicyConfigResponse ModifyReverseShellSystemPolicyConfig(ModifyReverseShellSystemPolicyConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReverseShellSystemPolicyConfig", ModifyReverseShellSystemPolicyConfigResponse.class);
     }
 
     /**
@@ -3449,6 +3746,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *CSIP 手动扫描任务删除接口
+     * @param req ScanCSIPTaskAgainRequest
+     * @return ScanCSIPTaskAgainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanCSIPTaskAgainResponse ScanCSIPTaskAgain(ScanCSIPTaskAgainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScanCSIPTaskAgain", ScanCSIPTaskAgainResponse.class);
+    }
+
+    /**
+     *基于原任务配置新建扫描任务。AssetId为空时从TaskId获取全部资产信息；AssetId非空时仅含该单资产。
+     * @param req ScanEDRTaskAgainRequest
+     * @return ScanEDRTaskAgainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanEDRTaskAgainResponse ScanEDRTaskAgain(ScanEDRTaskAgainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScanEDRTaskAgain", ScanEDRTaskAgainResponse.class);
+    }
+
+    /**
      *发送Dspm资产访问验证码
      * @param req SendDspmAssetLoginSmsCodeRequest
      * @return SendDspmAssetLoginSmsCodeResponse
@@ -3457,6 +3776,28 @@ public class CsipClient extends AbstractClient{
     public SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCode(SendDspmAssetLoginSmsCodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendDspmAssetLoginSmsCode", SendDspmAssetLoginSmsCodeResponse.class);
+    }
+
+    /**
+     *CSIP 手动扫描停止接口
+     * @param req StopCSIPManualMalwareScanRequest
+     * @return StopCSIPManualMalwareScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCSIPManualMalwareScanResponse StopCSIPManualMalwareScan(StopCSIPManualMalwareScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopCSIPManualMalwareScan", StopCSIPManualMalwareScanResponse.class);
+    }
+
+    /**
+     *停止或取消扫描任务。SCANNING状态调RPC停止，WAIT状态直接改库取消。只有任务创建者可操作。
+     * @param req StopEDRScanTaskRequest
+     * @return StopEDRScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopEDRScanTaskResponse StopEDRScanTask(StopEDRScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopEDRScanTask", StopEDRScanTaskResponse.class);
     }
 
     /**

@@ -24,301 +24,299 @@ import java.util.HashMap;
 public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
-    * 站点 ID。
+    * <p>站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 实时日志投递任务 ID。
+    * <p>实时日志投递任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。
+    * <p>实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 实时日志投递任务的状态，取值有：
-<li>enabled: 启用；</li>
-<li>disabled: 停用。</li>不填保持原有配置。
+    * <p>实时日志投递任务的状态，取值有：</p><li>enabled: 启用；</li><li>disabled: 停用。</li>不填保持原有配置。
     */
     @SerializedName("DeliveryStatus")
     @Expose
     private String DeliveryStatus;
 
     /**
-    * 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：
-<li>七层域名：domain.example.com；</li>
-<li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。
+    * <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：</p><li>七层域名：domain.example.com；</li><li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。<p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/80690">DescribeApplicationProxies</a></p>
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * 投递的预设字段列表。不填保持原有配置。
+    * <p>投递的预设字段列表。不填保持原有配置。</p><p>取值参考：DescribeLogFields</p>
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。不填保持原有配置。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
+    * <p>投递的自定义日志字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，详见 <a href="">自定义日志字段表达式</a>。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段，允许配置的自定义字段个数有配额限制，如遇配额不足请 <a href="https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE">联系我们</a> 。</p>
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * 日志投递的过滤条件。不填表示投递全量日志。
+    * <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+    */
+    @SerializedName("CustomExpressionFields")
+    @Expose
+    private CustomExpressionField [] CustomExpressionFields;
+
+    /**
+    * <p>日志投递的过滤条件。不填表示投递全量日志。</p>
     */
     @SerializedName("DeliveryConditions")
     @Expose
     private DeliveryCondition [] DeliveryConditions;
 
     /**
-    * 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
+    * <p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。</p>
     */
     @SerializedName("Sample")
     @Expose
     private Long Sample;
 
     /**
-    * 日志投递的输出格式。不填保持原有配置。
-特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+    * <p>日志投递的输出格式，使用详情见 <a href="https://cloud.tencent.com/document/product/1552/110448">自定义日志输出格式</a>。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。</p>
     */
     @SerializedName("LogFormat")
     @Expose
     private LogFormat LogFormat;
 
     /**
-    * 自定义 HTTP 服务的配置信息，不填保持原有配置。 
+    * <p>自定义 HTTP 服务的配置信息，不填保持原有配置。</p>
     */
     @SerializedName("CustomEndpoint")
     @Expose
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * AWS S3 兼容存储桶的配置信息，不填保持原有配置。
+    * <p>AWS S3 兼容存储桶的配置信息，不填保持原有配置。</p>
     */
     @SerializedName("S3")
     @Expose
     private S3 S3;
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实时日志投递任务 ID。 
-     * @return TaskId 实时日志投递任务 ID。
+     * Get <p>实时日志投递任务 ID。</p> 
+     * @return TaskId <p>实时日志投递任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 实时日志投递任务 ID。
-     * @param TaskId 实时日志投递任务 ID。
+     * Set <p>实时日志投递任务 ID。</p>
+     * @param TaskId <p>实时日志投递任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。 
-     * @return TaskName 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。
+     * Get <p>实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。</p> 
+     * @return TaskName <p>实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。
-     * @param TaskName 实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。
+     * Set <p>实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。</p>
+     * @param TaskName <p>实时日志投递任务的名称，格式为数字、英文、-和_组合，最多 200 个字符。不填保持原有配置。</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 实时日志投递任务的状态，取值有：
-<li>enabled: 启用；</li>
-<li>disabled: 停用。</li>不填保持原有配置。 
-     * @return DeliveryStatus 实时日志投递任务的状态，取值有：
-<li>enabled: 启用；</li>
-<li>disabled: 停用。</li>不填保持原有配置。
+     * Get <p>实时日志投递任务的状态，取值有：</p><li>enabled: 启用；</li><li>disabled: 停用。</li>不填保持原有配置。 
+     * @return DeliveryStatus <p>实时日志投递任务的状态，取值有：</p><li>enabled: 启用；</li><li>disabled: 停用。</li>不填保持原有配置。
      */
     public String getDeliveryStatus() {
         return this.DeliveryStatus;
     }
 
     /**
-     * Set 实时日志投递任务的状态，取值有：
-<li>enabled: 启用；</li>
-<li>disabled: 停用。</li>不填保持原有配置。
-     * @param DeliveryStatus 实时日志投递任务的状态，取值有：
-<li>enabled: 启用；</li>
-<li>disabled: 停用。</li>不填保持原有配置。
+     * Set <p>实时日志投递任务的状态，取值有：</p><li>enabled: 启用；</li><li>disabled: 停用。</li>不填保持原有配置。
+     * @param DeliveryStatus <p>实时日志投递任务的状态，取值有：</p><li>enabled: 启用；</li><li>disabled: 停用。</li>不填保持原有配置。
      */
     public void setDeliveryStatus(String DeliveryStatus) {
         this.DeliveryStatus = DeliveryStatus;
     }
 
     /**
-     * Get 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：
-<li>七层域名：domain.example.com；</li>
-<li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。 
-     * @return EntityList 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：
-<li>七层域名：domain.example.com；</li>
-<li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。
+     * Get <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：</p><li>七层域名：domain.example.com；</li><li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。<p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/80690">DescribeApplicationProxies</a></p> 
+     * @return EntityList <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：</p><li>七层域名：domain.example.com；</li><li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。<p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/80690">DescribeApplicationProxies</a></p>
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：
-<li>七层域名：domain.example.com；</li>
-<li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。
-     * @param EntityList 实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：
-<li>七层域名：domain.example.com；</li>
-<li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。
+     * Set <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：</p><li>七层域名：domain.example.com；</li><li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。<p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/80690">DescribeApplicationProxies</a></p>
+     * @param EntityList <p>实时日志投递任务对应的实体（七层域名或者四层代理实例）列表。取值示例如下：</p><li>七层域名：domain.example.com；</li><li>四层代理实例：sid-2s69eb5wcms7。</li>不填保持原有配置。<p>取值参考：<a href="https://cloud.tencent.com/document/api/1552/80690">DescribeApplicationProxies</a></p>
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get 投递的预设字段列表。不填保持原有配置。 
-     * @return Fields 投递的预设字段列表。不填保持原有配置。
+     * Get <p>投递的预设字段列表。不填保持原有配置。</p><p>取值参考：DescribeLogFields</p> 
+     * @return Fields <p>投递的预设字段列表。不填保持原有配置。</p><p>取值参考：DescribeLogFields</p>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set 投递的预设字段列表。不填保持原有配置。
-     * @param Fields 投递的预设字段列表。不填保持原有配置。
+     * Set <p>投递的预设字段列表。不填保持原有配置。</p><p>取值参考：DescribeLogFields</p>
+     * @param Fields <p>投递的预设字段列表。不填保持原有配置。</p><p>取值参考：DescribeLogFields</p>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。不填保持原有配置。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。 
-     * @return CustomFields 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。不填保持原有配置。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
+     * Get <p>投递的自定义日志字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，详见 <a href="">自定义日志字段表达式</a>。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段，允许配置的自定义字段个数有配额限制，如遇配额不足请 <a href="https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE">联系我们</a> 。</p> 
+     * @return CustomFields <p>投递的自定义日志字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，详见 <a href="">自定义日志字段表达式</a>。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段，允许配置的自定义字段个数有配额限制，如遇配额不足请 <a href="https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE">联系我们</a> 。</p>
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。不填保持原有配置。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
-     * @param CustomFields 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。不填保持原有配置。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
+     * Set <p>投递的自定义日志字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，详见 <a href="">自定义日志字段表达式</a>。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段，允许配置的自定义字段个数有配额限制，如遇配额不足请 <a href="https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE">联系我们</a> 。</p>
+     * @param CustomFields <p>投递的自定义日志字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，详见 <a href="">自定义日志字段表达式</a>。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段，允许配置的自定义字段个数有配额限制，如遇配额不足请 <a href="https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE">联系我们</a> 。</p>
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get 日志投递的过滤条件。不填表示投递全量日志。 
-     * @return DeliveryConditions 日志投递的过滤条件。不填表示投递全量日志。
+     * Get <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p> 
+     * @return CustomExpressionFields <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     */
+    public CustomExpressionField [] getCustomExpressionFields() {
+        return this.CustomExpressionFields;
+    }
+
+    /**
+     * Set <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     * @param CustomExpressionFields <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     */
+    public void setCustomExpressionFields(CustomExpressionField [] CustomExpressionFields) {
+        this.CustomExpressionFields = CustomExpressionFields;
+    }
+
+    /**
+     * Get <p>日志投递的过滤条件。不填表示投递全量日志。</p> 
+     * @return DeliveryConditions <p>日志投递的过滤条件。不填表示投递全量日志。</p>
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set 日志投递的过滤条件。不填表示投递全量日志。
-     * @param DeliveryConditions 日志投递的过滤条件。不填表示投递全量日志。
+     * Set <p>日志投递的过滤条件。不填表示投递全量日志。</p>
+     * @param DeliveryConditions <p>日志投递的过滤条件。不填表示投递全量日志。</p>
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
     }
 
     /**
-     * Get 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。 
-     * @return Sample 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
+     * Get <p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。</p> 
+     * @return Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。</p>
      */
     public Long getSample() {
         return this.Sample;
     }
 
     /**
-     * Set 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
-     * @param Sample 采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。
+     * Set <p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。</p>
+     * @param Sample <p>采样比例，采用千分制，取值范围为1-1000，例如：填写 605 表示采样比例为 60.5%。不填保持原有配置。</p>
      */
     public void setSample(Long Sample) {
         this.Sample = Sample;
     }
 
     /**
-     * Get 日志投递的输出格式。不填保持原有配置。
-特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
-     * @return LogFormat 日志投递的输出格式。不填保持原有配置。
-特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * Get <p>日志投递的输出格式，使用详情见 <a href="https://cloud.tencent.com/document/product/1552/110448">自定义日志输出格式</a>。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。</p> 
+     * @return LogFormat <p>日志投递的输出格式，使用详情见 <a href="https://cloud.tencent.com/document/product/1552/110448">自定义日志输出格式</a>。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。</p>
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set 日志投递的输出格式。不填保持原有配置。
-特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
-     * @param LogFormat 日志投递的输出格式。不填保持原有配置。
-特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * Set <p>日志投递的输出格式，使用详情见 <a href="https://cloud.tencent.com/document/product/1552/110448">自定义日志输出格式</a>。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。</p>
+     * @param LogFormat <p>日志投递的输出格式，使用详情见 <a href="https://cloud.tencent.com/document/product/1552/110448">自定义日志输出格式</a>。不填表示为默认格式，默认格式逻辑如下：<ul><li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li><li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li></ul>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。</p>
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
     }
 
     /**
-     * Get 自定义 HTTP 服务的配置信息，不填保持原有配置。  
-     * @return CustomEndpoint 自定义 HTTP 服务的配置信息，不填保持原有配置。 
+     * Get <p>自定义 HTTP 服务的配置信息，不填保持原有配置。</p> 
+     * @return CustomEndpoint <p>自定义 HTTP 服务的配置信息，不填保持原有配置。</p>
      */
     public CustomEndpoint getCustomEndpoint() {
         return this.CustomEndpoint;
     }
 
     /**
-     * Set 自定义 HTTP 服务的配置信息，不填保持原有配置。 
-     * @param CustomEndpoint 自定义 HTTP 服务的配置信息，不填保持原有配置。 
+     * Set <p>自定义 HTTP 服务的配置信息，不填保持原有配置。</p>
+     * @param CustomEndpoint <p>自定义 HTTP 服务的配置信息，不填保持原有配置。</p>
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
         this.CustomEndpoint = CustomEndpoint;
     }
 
     /**
-     * Get AWS S3 兼容存储桶的配置信息，不填保持原有配置。 
-     * @return S3 AWS S3 兼容存储桶的配置信息，不填保持原有配置。
+     * Get <p>AWS S3 兼容存储桶的配置信息，不填保持原有配置。</p> 
+     * @return S3 <p>AWS S3 兼容存储桶的配置信息，不填保持原有配置。</p>
      */
     public S3 getS3() {
         return this.S3;
     }
 
     /**
-     * Set AWS S3 兼容存储桶的配置信息，不填保持原有配置。
-     * @param S3 AWS S3 兼容存储桶的配置信息，不填保持原有配置。
+     * Set <p>AWS S3 兼容存储桶的配置信息，不填保持原有配置。</p>
+     * @param S3 <p>AWS S3 兼容存储桶的配置信息，不填保持原有配置。</p>
      */
     public void setS3(S3 S3) {
         this.S3 = S3;
@@ -362,6 +360,12 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
                 this.CustomFields[i] = new CustomField(source.CustomFields[i]);
             }
         }
+        if (source.CustomExpressionFields != null) {
+            this.CustomExpressionFields = new CustomExpressionField[source.CustomExpressionFields.length];
+            for (int i = 0; i < source.CustomExpressionFields.length; i++) {
+                this.CustomExpressionFields[i] = new CustomExpressionField(source.CustomExpressionFields[i]);
+            }
+        }
         if (source.DeliveryConditions != null) {
             this.DeliveryConditions = new DeliveryCondition[source.DeliveryConditions.length];
             for (int i = 0; i < source.DeliveryConditions.length; i++) {
@@ -394,6 +398,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "EntityList.", this.EntityList);
         this.setParamArraySimple(map, prefix + "Fields.", this.Fields);
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
+        this.setParamArrayObj(map, prefix + "CustomExpressionFields.", this.CustomExpressionFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
         this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);

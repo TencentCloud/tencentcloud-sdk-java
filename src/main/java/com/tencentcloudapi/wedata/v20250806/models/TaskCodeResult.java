@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskCodeResult extends AbstractModel {
 
     /**
-    * 代码内容
+    * <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeInfo")
@@ -32,7 +32,7 @@ public class TaskCodeResult extends AbstractModel {
     private String CodeInfo;
 
     /**
-    * 代码文件大小，单位KB
+    * <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeFileSize")
@@ -40,9 +40,9 @@ public class TaskCodeResult extends AbstractModel {
     private String CodeFileSize;
 
     /**
-     * Get 代码内容
+     * Get <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeInfo 代码内容
+     * @return CodeInfo <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeInfo() {
@@ -50,9 +50,9 @@ public class TaskCodeResult extends AbstractModel {
     }
 
     /**
-     * Set 代码内容
+     * Set <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeInfo 代码内容
+     * @param CodeInfo <p>base64编码的代码内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeInfo(String CodeInfo) {
@@ -60,9 +60,9 @@ public class TaskCodeResult extends AbstractModel {
     }
 
     /**
-     * Get 代码文件大小，单位KB
+     * Get <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeFileSize 代码文件大小，单位KB
+     * @return CodeFileSize <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeFileSize() {
@@ -70,9 +70,9 @@ public class TaskCodeResult extends AbstractModel {
     }
 
     /**
-     * Set 代码文件大小，单位KB
+     * Set <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeFileSize 代码文件大小，单位KB
+     * @param CodeFileSize <p>代码文件大小，单位KB</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeFileSize(String CodeFileSize) {

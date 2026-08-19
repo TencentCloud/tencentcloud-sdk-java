@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class SwitchCasterToEmergencyRequest extends AbstractModel {
 
     /**
-    * 导播台ID。
+    * <p>导播台ID。</p>
     */
     @SerializedName("CasterId")
     @Expose
     private Long CasterId;
 
     /**
-     * Get 导播台ID。 
-     * @return CasterId 导播台ID。
+    * <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+    */
+    @SerializedName("FromBeginning")
+    @Expose
+    private Boolean FromBeginning;
+
+    /**
+     * Get <p>导播台ID。</p> 
+     * @return CasterId <p>导播台ID。</p>
      */
     public Long getCasterId() {
         return this.CasterId;
     }
 
     /**
-     * Set 导播台ID。
-     * @param CasterId 导播台ID。
+     * Set <p>导播台ID。</p>
+     * @param CasterId <p>导播台ID。</p>
      */
     public void setCasterId(Long CasterId) {
         this.CasterId = CasterId;
+    }
+
+    /**
+     * Get <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p> 
+     * @return FromBeginning <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+     */
+    public Boolean getFromBeginning() {
+        return this.FromBeginning;
+    }
+
+    /**
+     * Set <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+     * @param FromBeginning <p>是否启用从头开始播放功能，仅对单点播输入源生效</p><p>默认值：false</p>
+     */
+    public void setFromBeginning(Boolean FromBeginning) {
+        this.FromBeginning = FromBeginning;
     }
 
     public SwitchCasterToEmergencyRequest() {
@@ -57,6 +80,9 @@ public class SwitchCasterToEmergencyRequest extends AbstractModel {
         if (source.CasterId != null) {
             this.CasterId = new Long(source.CasterId);
         }
+        if (source.FromBeginning != null) {
+            this.FromBeginning = new Boolean(source.FromBeginning);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class SwitchCasterToEmergencyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CasterId", this.CasterId);
+        this.setParamSimple(map, prefix + "FromBeginning", this.FromBeginning);
 
     }
 }

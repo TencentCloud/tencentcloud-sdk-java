@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSyncCompareTasksResponse extends AbstractModel {
 
     /**
-    * 数量
+    * <p>数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -32,7 +32,7 @@ public class DescribeSyncCompareTasksResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 一致性校验任务列表
+    * <p>一致性校验任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -47,9 +47,9 @@ public class DescribeSyncCompareTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数量
+     * Get <p>数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 数量
+     * @return TotalCount <p>数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -57,9 +57,9 @@ public class DescribeSyncCompareTasksResponse extends AbstractModel {
     }
 
     /**
-     * Set 数量
+     * Set <p>数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 数量
+     * @param TotalCount <p>数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -67,9 +67,9 @@ public class DescribeSyncCompareTasksResponse extends AbstractModel {
     }
 
     /**
-     * Get 一致性校验任务列表
+     * Get <p>一致性校验任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 一致性校验任务列表
+     * @return Items <p>一致性校验任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareTaskItem [] getItems() {
@@ -77,9 +77,9 @@ public class DescribeSyncCompareTasksResponse extends AbstractModel {
     }
 
     /**
-     * Set 一致性校验任务列表
+     * Set <p>一致性校验任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 一致性校验任务列表
+     * @param Items <p>一致性校验任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(CompareTaskItem [] Items) {

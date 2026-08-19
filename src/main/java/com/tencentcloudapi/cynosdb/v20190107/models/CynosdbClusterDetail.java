@@ -45,7 +45,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String Region;
 
     /**
-    * <p>可用区</p>
+    * <p>集群主可用区</p>
     */
     @SerializedName("Zone")
     @Expose
@@ -255,7 +255,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private ObjectTask [] Tasks;
 
     /**
-    * <p>主可用区</p>
+    * <p>读写实例当前所在可用区</p>
     */
     @SerializedName("MasterZone")
     @Expose
@@ -430,6 +430,13 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Boolean IsOpenTDE;
 
     /**
+    * <p>实例当前所在可用区</p>
+    */
+    @SerializedName("RealZone")
+    @Expose
+    private String RealZone;
+
+    /**
      * Get <p>集群ID</p> 
      * @return ClusterId <p>集群ID</p>
      */
@@ -478,16 +485,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>可用区</p> 
-     * @return Zone <p>可用区</p>
+     * Get <p>集群主可用区</p> 
+     * @return Zone <p>集群主可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>可用区</p>
-     * @param Zone <p>可用区</p>
+     * Set <p>集群主可用区</p>
+     * @param Zone <p>集群主可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -958,16 +965,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>主可用区</p> 
-     * @return MasterZone <p>主可用区</p>
+     * Get <p>读写实例当前所在可用区</p> 
+     * @return MasterZone <p>读写实例当前所在可用区</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set <p>主可用区</p>
-     * @param MasterZone <p>主可用区</p>
+     * Set <p>读写实例当前所在可用区</p>
+     * @param MasterZone <p>读写实例当前所在可用区</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
@@ -1357,6 +1364,22 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.IsOpenTDE = IsOpenTDE;
     }
 
+    /**
+     * Get <p>实例当前所在可用区</p> 
+     * @return RealZone <p>实例当前所在可用区</p>
+     */
+    public String getRealZone() {
+        return this.RealZone;
+    }
+
+    /**
+     * Set <p>实例当前所在可用区</p>
+     * @param RealZone <p>实例当前所在可用区</p>
+     */
+    public void setRealZone(String RealZone) {
+        this.RealZone = RealZone;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1560,6 +1583,9 @@ public class CynosdbClusterDetail extends AbstractModel {
         if (source.IsOpenTDE != null) {
             this.IsOpenTDE = new Boolean(source.IsOpenTDE);
         }
+        if (source.RealZone != null) {
+            this.RealZone = new String(source.RealZone);
+        }
     }
 
 
@@ -1625,6 +1651,7 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
+        this.setParamSimple(map, prefix + "RealZone", this.RealZone);
 
     }
 }

@@ -24,118 +24,191 @@ import java.util.HashMap;
 public class EnableIntranetAccessRequest extends AbstractModel {
 
     /**
-    * 堡垒机实例id
+    * <p>堡垒机实例id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 开通内网访问的vpc id
+    * <p>开通内网访问的vpc id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * vpc的网段
+    * <p>vpc名称</p>
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
+    * <p>vpc地域</p>
+    */
+    @SerializedName("VpcRegion")
+    @Expose
+    private String VpcRegion;
+
+    /**
+    * <p>vpc的网段</p>
     */
     @SerializedName("VpcCidrBlock")
     @Expose
     private String VpcCidrBlock;
 
     /**
-    * 开通内网访问的subnet id
+    * <p>开通内网访问的subnet id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 内网ip的自定义域名，可为空
+    * <p>内网ip的自定义域名，可为空</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-     * Get 堡垒机实例id 
-     * @return ResourceId 堡垒机实例id
+    * <p>开通内网的子网信息</p>
+    */
+    @SerializedName("IntranetSubnets")
+    @Expose
+    private ParamInitResourceSubnet [] IntranetSubnets;
+
+    /**
+     * Get <p>堡垒机实例id</p> 
+     * @return ResourceId <p>堡垒机实例id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 堡垒机实例id
-     * @param ResourceId 堡垒机实例id
+     * Set <p>堡垒机实例id</p>
+     * @param ResourceId <p>堡垒机实例id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 开通内网访问的vpc id 
-     * @return VpcId 开通内网访问的vpc id
+     * Get <p>开通内网访问的vpc id</p> 
+     * @return VpcId <p>开通内网访问的vpc id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 开通内网访问的vpc id
-     * @param VpcId 开通内网访问的vpc id
+     * Set <p>开通内网访问的vpc id</p>
+     * @param VpcId <p>开通内网访问的vpc id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc的网段 
-     * @return VpcCidrBlock vpc的网段
+     * Get <p>vpc名称</p> 
+     * @return VpcName <p>vpc名称</p>
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set <p>vpc名称</p>
+     * @param VpcName <p>vpc名称</p>
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
+     * Get <p>vpc地域</p> 
+     * @return VpcRegion <p>vpc地域</p>
+     */
+    public String getVpcRegion() {
+        return this.VpcRegion;
+    }
+
+    /**
+     * Set <p>vpc地域</p>
+     * @param VpcRegion <p>vpc地域</p>
+     */
+    public void setVpcRegion(String VpcRegion) {
+        this.VpcRegion = VpcRegion;
+    }
+
+    /**
+     * Get <p>vpc的网段</p> 
+     * @return VpcCidrBlock <p>vpc的网段</p>
      */
     public String getVpcCidrBlock() {
         return this.VpcCidrBlock;
     }
 
     /**
-     * Set vpc的网段
-     * @param VpcCidrBlock vpc的网段
+     * Set <p>vpc的网段</p>
+     * @param VpcCidrBlock <p>vpc的网段</p>
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
     }
 
     /**
-     * Get 开通内网访问的subnet id 
-     * @return SubnetId 开通内网访问的subnet id
+     * Get <p>开通内网访问的subnet id</p> 
+     * @return SubnetId <p>开通内网访问的subnet id</p>
+     * @deprecated
      */
+    @Deprecated
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 开通内网访问的subnet id
-     * @param SubnetId 开通内网访问的subnet id
+     * Set <p>开通内网访问的subnet id</p>
+     * @param SubnetId <p>开通内网访问的subnet id</p>
+     * @deprecated
      */
+    @Deprecated
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 内网ip的自定义域名，可为空 
-     * @return DomainName 内网ip的自定义域名，可为空
+     * Get <p>内网ip的自定义域名，可为空</p> 
+     * @return DomainName <p>内网ip的自定义域名，可为空</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 内网ip的自定义域名，可为空
-     * @param DomainName 内网ip的自定义域名，可为空
+     * Set <p>内网ip的自定义域名，可为空</p>
+     * @param DomainName <p>内网ip的自定义域名，可为空</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
+    }
+
+    /**
+     * Get <p>开通内网的子网信息</p> 
+     * @return IntranetSubnets <p>开通内网的子网信息</p>
+     */
+    public ParamInitResourceSubnet [] getIntranetSubnets() {
+        return this.IntranetSubnets;
+    }
+
+    /**
+     * Set <p>开通内网的子网信息</p>
+     * @param IntranetSubnets <p>开通内网的子网信息</p>
+     */
+    public void setIntranetSubnets(ParamInitResourceSubnet [] IntranetSubnets) {
+        this.IntranetSubnets = IntranetSubnets;
     }
 
     public EnableIntranetAccessRequest() {
@@ -152,6 +225,12 @@ public class EnableIntranetAccessRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.VpcRegion != null) {
+            this.VpcRegion = new String(source.VpcRegion);
+        }
         if (source.VpcCidrBlock != null) {
             this.VpcCidrBlock = new String(source.VpcCidrBlock);
         }
@@ -160,6 +239,12 @@ public class EnableIntranetAccessRequest extends AbstractModel {
         }
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
+        }
+        if (source.IntranetSubnets != null) {
+            this.IntranetSubnets = new ParamInitResourceSubnet[source.IntranetSubnets.length];
+            for (int i = 0; i < source.IntranetSubnets.length; i++) {
+                this.IntranetSubnets[i] = new ParamInitResourceSubnet(source.IntranetSubnets[i]);
+            }
         }
     }
 
@@ -170,9 +255,12 @@ public class EnableIntranetAccessRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamArrayObj(map, prefix + "IntranetSubnets.", this.IntranetSubnets);
 
     }
 }

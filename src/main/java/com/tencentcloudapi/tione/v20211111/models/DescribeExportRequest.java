@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeExportRequest extends AbstractModel {
 
     /**
-    * 日志下载任务的ID
+    * <p>日志下载任务的ID</p>
     */
     @SerializedName("ExportId")
     @Expose
     private String ExportId;
 
     /**
-     * Get 日志下载任务的ID 
-     * @return ExportId 日志下载任务的ID
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+     * Get <p>日志下载任务的ID</p> 
+     * @return ExportId <p>日志下载任务的ID</p>
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set 日志下载任务的ID
-     * @param ExportId 日志下载任务的ID
+     * Set <p>日志下载任务的ID</p>
+     * @param ExportId <p>日志下载任务的ID</p>
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     public DescribeExportRequest() {
@@ -57,6 +80,9 @@ public class DescribeExportRequest extends AbstractModel {
         if (source.ExportId != null) {
             this.ExportId = new String(source.ExportId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeExportRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExportId", this.ExportId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

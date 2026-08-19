@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class DescribeCompareTasksRequest extends AbstractModel {
 
     /**
-    * 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
-
+    * <p>迁移任务 Id，可通过 <a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a> 接口获取。</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 分页设置，表示每页显示多少条任务，默认为 20
+    * <p>分页设置，表示每页显示多少条任务，默认为 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量
+    * <p>分页偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 校验任务 ID
+    * <p>校验任务 ID</p>
     */
     @SerializedName("CompareTaskId")
     @Expose
     private String CompareTaskId;
 
     /**
-    * 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+    * <p>任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-     * Get 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
- 
-     * @return JobId 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
-
+     * Get <p>迁移任务 Id，可通过 <a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a> 接口获取。</p> 
+     * @return JobId <p>迁移任务 Id，可通过 <a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a> 接口获取。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
-
-     * @param JobId 迁移任务 Id，可通过 [DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084) 接口获取。
-
+     * Set <p>迁移任务 Id，可通过 <a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a> 接口获取。</p>
+     * @param JobId <p>迁移任务 Id，可通过 <a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a> 接口获取。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 分页设置，表示每页显示多少条任务，默认为 20 
-     * @return Limit 分页设置，表示每页显示多少条任务，默认为 20
+     * Get <p>分页设置，表示每页显示多少条任务，默认为 20</p> 
+     * @return Limit <p>分页设置，表示每页显示多少条任务，默认为 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页设置，表示每页显示多少条任务，默认为 20
-     * @param Limit 分页设置，表示每页显示多少条任务，默认为 20
+     * Set <p>分页设置，表示每页显示多少条任务，默认为 20</p>
+     * @param Limit <p>分页设置，表示每页显示多少条任务，默认为 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量 
-     * @return Offset 分页偏移量
+     * Get <p>分页偏移量</p> 
+     * @return Offset <p>分页偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量
-     * @param Offset 分页偏移量
+     * Set <p>分页偏移量</p>
+     * @param Offset <p>分页偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 校验任务 ID 
-     * @return CompareTaskId 校验任务 ID
+     * Get <p>校验任务 ID</p> 
+     * @return CompareTaskId <p>校验任务 ID</p>
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
     }
 
     /**
-     * Set 校验任务 ID
-     * @param CompareTaskId 校验任务 ID
+     * Set <p>校验任务 ID</p>
+     * @param CompareTaskId <p>校验任务 ID</p>
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止 
-     * @return Status 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     * Get <p>任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p> 
+     * @return Status <p>任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-     * @param Status 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     * Set <p>任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
+     * @param Status <p>任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
      */
     public void setStatus(String [] Status) {
         this.Status = Status;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TriggerWorkflowInfo extends AbstractModel {
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -32,7 +32,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -40,7 +40,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 负责人ID
+    * <p>负责人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
@@ -48,7 +48,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String OwnerUin;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -56,7 +56,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 最新修改时间
+    * <p>最新修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
@@ -64,7 +64,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String ModifyTime;
 
     /**
-    * 最后更新人ID
+    * <p>最后更新人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUserUin")
@@ -72,7 +72,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String UpdateUserUin;
 
     /**
-    * 工作流描述
+    * <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowDesc")
@@ -80,7 +80,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String WorkflowDesc;
 
     /**
-    * 创建人ID
+    * <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserUin")
@@ -88,9 +88,17 @@ public class TriggerWorkflowInfo extends AbstractModel {
     private String CreateUserUin;
 
     /**
-     * Get 工作流ID
+    * <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -98,9 +106,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -108,9 +116,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -118,9 +126,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -128,9 +136,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 负责人ID
+     * Get <p>负责人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUin 负责人ID
+     * @return OwnerUin <p>负责人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
@@ -138,9 +146,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 负责人ID
+     * Set <p>负责人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUin 负责人ID
+     * @param OwnerUin <p>负责人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
@@ -148,9 +156,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -158,9 +166,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -168,9 +176,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 最新修改时间
+     * Get <p>最新修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyTime 最新修改时间
+     * @return ModifyTime <p>最新修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
@@ -178,9 +186,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 最新修改时间
+     * Set <p>最新修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyTime 最新修改时间
+     * @param ModifyTime <p>最新修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
@@ -188,9 +196,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 最后更新人ID
+     * Get <p>最后更新人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUserUin 最后更新人ID
+     * @return UpdateUserUin <p>最后更新人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUserUin() {
@@ -198,9 +206,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 最后更新人ID
+     * Set <p>最后更新人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUserUin 最后更新人ID
+     * @param UpdateUserUin <p>最后更新人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUserUin(String UpdateUserUin) {
@@ -208,9 +216,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作流描述
+     * Get <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowDesc 工作流描述
+     * @return WorkflowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowDesc() {
@@ -218,9 +226,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作流描述
+     * Set <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowDesc 工作流描述
+     * @param WorkflowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowDesc(String WorkflowDesc) {
@@ -228,9 +236,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建人ID
+     * Get <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserUin 创建人ID
+     * @return CreateUserUin <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserUin() {
@@ -238,13 +246,33 @@ public class TriggerWorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建人ID
+     * Set <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserUin 创建人ID
+     * @param CreateUserUin <p>创建人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserUin(String CreateUserUin) {
         this.CreateUserUin = CreateUserUin;
+    }
+
+    /**
+     * Get <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
     }
 
     public TriggerWorkflowInfo() {
@@ -279,6 +307,9 @@ public class TriggerWorkflowInfo extends AbstractModel {
         if (source.CreateUserUin != null) {
             this.CreateUserUin = new String(source.CreateUserUin);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class TriggerWorkflowInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateUserUin", this.UpdateUserUin);
         this.setParamSimple(map, prefix + "WorkflowDesc", this.WorkflowDesc);
         this.setParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
 
     }
 }

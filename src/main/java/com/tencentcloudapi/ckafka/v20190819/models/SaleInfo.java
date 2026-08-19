@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SaleInfo extends AbstractModel {
 
     /**
-    * 手动设置的flag标志，true表示售罄，false表示可售。
+    * <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
     */
     @SerializedName("Flag")
     @Expose
     private Boolean Flag;
 
     /**
-    * ckafka版本号(1.1.1/2.4.2/0.10.2)
+    * <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 专业版、标准版标志
+    * <p>专业版、标准版标志</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 售罄标志：true售罄
+    * <p>售罄标志：true售罄</p>
     */
     @SerializedName("SoldOut")
     @Expose
     private Boolean SoldOut;
 
     /**
-     * Get 手动设置的flag标志，true表示售罄，false表示可售。 
-     * @return Flag 手动设置的flag标志，true表示售罄，false表示可售。
+     * Get <p>手动设置的flag标志，true表示售罄，false表示可售。</p> 
+     * @return Flag <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 手动设置的flag标志，true表示售罄，false表示可售。
-     * @param Flag 手动设置的flag标志，true表示售罄，false表示可售。
+     * Set <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
+     * @param Flag <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get ckafka版本号(1.1.1/2.4.2/0.10.2) 
-     * @return Version ckafka版本号(1.1.1/2.4.2/0.10.2)
+     * Get <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p> 
+     * @return Version <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set ckafka版本号(1.1.1/2.4.2/0.10.2)
-     * @param Version ckafka版本号(1.1.1/2.4.2/0.10.2)
+     * Set <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+     * @param Version <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 专业版、标准版标志 
-     * @return Platform 专业版、标准版标志
+     * Get <p>专业版、标准版标志</p> 
+     * @return Platform <p>专业版、标准版标志</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 专业版、标准版标志
-     * @param Platform 专业版、标准版标志
+     * Set <p>专业版、标准版标志</p>
+     * @param Platform <p>专业版、标准版标志</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 售罄标志：true售罄 
-     * @return SoldOut 售罄标志：true售罄
+     * Get <p>售罄标志：true售罄</p> 
+     * @return SoldOut <p>售罄标志：true售罄</p>
      */
     public Boolean getSoldOut() {
         return this.SoldOut;
     }
 
     /**
-     * Set 售罄标志：true售罄
-     * @param SoldOut 售罄标志：true售罄
+     * Set <p>售罄标志：true售罄</p>
+     * @param SoldOut <p>售罄标志：true售罄</p>
      */
     public void setSoldOut(Boolean SoldOut) {
         this.SoldOut = SoldOut;

@@ -87,6 +87,13 @@ public class ListSecretsRequest extends AbstractModel {
     private Long EncryptType;
 
     /**
+    * <p>云产品实例 ID</p>
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
      * Get <p>查询列表的起始位置，以0开始，不设置默认为0。</p> 
      * @return Offset <p>查询列表的起始位置，以0开始，不设置默认为0。</p>
      */
@@ -230,6 +237,22 @@ public class ListSecretsRequest extends AbstractModel {
         this.EncryptType = EncryptType;
     }
 
+    /**
+     * Get <p>云产品实例 ID</p> 
+     * @return InstanceID <p>云产品实例 ID</p>
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set <p>云产品实例 ID</p>
+     * @param InstanceID <p>云产品实例 ID</p>
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
     public ListSecretsRequest() {
     }
 
@@ -268,6 +291,9 @@ public class ListSecretsRequest extends AbstractModel {
         if (source.EncryptType != null) {
             this.EncryptType = new Long(source.EncryptType);
         }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class ListSecretsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
 
     }
 }

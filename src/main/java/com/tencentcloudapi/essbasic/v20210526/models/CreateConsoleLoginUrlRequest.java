@@ -129,7 +129,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private Boolean AutoActive;
 
     /**
-    * <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+    * <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
     */
     @SerializedName("BusinessLicense")
     @Expose
@@ -190,6 +190,13 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     @SerializedName("ProxyOrganizationIdCardType")
     @Expose
     private String ProxyOrganizationIdCardType;
+
+    /**
+    * <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+    */
+    @SerializedName("BusinessLicenseId")
+    @Expose
+    private String BusinessLicenseId;
 
     /**
      * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容<br>此接口下面信息必填。</p><ul><li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li></ul>注:<code>1. 企业激活时， 此时的Agent.ProxyOrganizationOpenId将会是企业激活后企业的唯一标识，建议开发者保存企业ProxyOrganizationOpenId，后续各项接口调用皆需要此参数。</code><code>2. 员工认证时， 此时的Agent.ProxyOperator.OpenId将会是员工认证加入企业后的唯一标识，建议开发者保存此员工的OpenId，后续各项接口调用皆需要此参数。</code><code>3. 同渠道应用(Agent.AppId)下，企业唯一标识ProxyOrganizationOpenId需要保持唯一，员工唯一标识OpenId也要保持唯一 (而不是企业下唯一)。</code> 
@@ -432,16 +439,16 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p> 
-     * @return BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+     * Get <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p> 
+     * @return BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
      */
     public String getBusinessLicense() {
         return this.BusinessLicense;
     }
 
     /**
-     * Set <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
-     * @param BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。</p>
+     * Set <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
+     * @param BusinessLicense <p>营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。<br>和BusinessLicenseId二选一即可</p>
      */
     public void setBusinessLicense(String BusinessLicense) {
         this.BusinessLicense = BusinessLicense;
@@ -579,6 +586,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.ProxyOrganizationIdCardType = ProxyOrganizationIdCardType;
     }
 
+    /**
+     * Get <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p> 
+     * @return BusinessLicenseId <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+     */
+    public String getBusinessLicenseId() {
+        return this.BusinessLicenseId;
+    }
+
+    /**
+     * Set <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+     * @param BusinessLicenseId <p>营业执照正面照（支持PNG或JPG格式）的FileId（通过UploadFiles获取），且文件大小不得超过8MB。<br>和BusinessLicense二选一即可</p>
+     */
+    public void setBusinessLicenseId(String BusinessLicenseId) {
+        this.BusinessLicenseId = BusinessLicenseId;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -668,6 +691,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.ProxyOrganizationIdCardType != null) {
             this.ProxyOrganizationIdCardType = new String(source.ProxyOrganizationIdCardType);
         }
+        if (source.BusinessLicenseId != null) {
+            this.BusinessLicenseId = new String(source.BusinessLicenseId);
+        }
     }
 
 
@@ -699,6 +725,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
         this.setParamSimple(map, prefix + "ProxyOrganizationIdCardType", this.ProxyOrganizationIdCardType);
+        this.setParamSimple(map, prefix + "BusinessLicenseId", this.BusinessLicenseId);
 
     }
 }

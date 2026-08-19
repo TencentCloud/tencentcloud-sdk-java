@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateReportPdfResponse extends AbstractModel {
 
     /**
-    * 下载地址
+    * <p>下载地址</p>
     */
     @SerializedName("Url")
     @Expose
@@ -38,16 +38,16 @@ public class CreateReportPdfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载地址 
-     * @return Url 下载地址
+     * Get <p>下载地址</p> 
+     * @return Url <p>下载地址</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 下载地址
-     * @param Url 下载地址
+     * Set <p>下载地址</p>
+     * @param Url <p>下载地址</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -177,6 +177,41 @@ public class ExtractRuleInfo extends AbstractModel {
     private String RawLogKey;
 
     /**
+    * <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+    */
+    @SerializedName("Units")
+    @Expose
+    private String [] Units;
+
+    /**
+    * <p>是否采集内核日志</p><p>默认值：true</p>
+    */
+    @SerializedName("IncludeKernel")
+    @Expose
+    private Boolean IncludeKernel;
+
+    /**
+    * <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+    */
+    @SerializedName("UseJournalTime")
+    @Expose
+    private Boolean UseJournalTime;
+
+    /**
+    * <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+    */
+    @SerializedName("KeysDelimiter")
+    @Expose
+    private String [] KeysDelimiter;
+
+    /**
+    * <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+    */
+    @SerializedName("KeysFlag")
+    @Expose
+    private Long [] KeysFlag;
+
+    /**
      * Get <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p> 
      * @return TimeKey <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p>
      */
@@ -536,6 +571,86 @@ public class ExtractRuleInfo extends AbstractModel {
         this.RawLogKey = RawLogKey;
     }
 
+    /**
+     * Get <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p> 
+     * @return Units <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+     */
+    public String [] getUnits() {
+        return this.Units;
+    }
+
+    /**
+     * Set <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+     * @param Units <p>采集范围。空数组表示采集全部Unit，非空数组表示采集指定Unit</p>
+     */
+    public void setUnits(String [] Units) {
+        this.Units = Units;
+    }
+
+    /**
+     * Get <p>是否采集内核日志</p><p>默认值：true</p> 
+     * @return IncludeKernel <p>是否采集内核日志</p><p>默认值：true</p>
+     */
+    public Boolean getIncludeKernel() {
+        return this.IncludeKernel;
+    }
+
+    /**
+     * Set <p>是否采集内核日志</p><p>默认值：true</p>
+     * @param IncludeKernel <p>是否采集内核日志</p><p>默认值：true</p>
+     */
+    public void setIncludeKernel(Boolean IncludeKernel) {
+        this.IncludeKernel = IncludeKernel;
+    }
+
+    /**
+     * Get <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p> 
+     * @return UseJournalTime <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+     */
+    public Boolean getUseJournalTime() {
+        return this.UseJournalTime;
+    }
+
+    /**
+     * Set <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+     * @param UseJournalTime <p>是否使用journal原始时间。true ：用 journal 原始时间；false： 用采集时间 </p><p>默认值：false</p>
+     */
+    public void setUseJournalTime(Boolean UseJournalTime) {
+        this.UseJournalTime = UseJournalTime;
+    }
+
+    /**
+     * Get <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p> 
+     * @return KeysDelimiter <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+     */
+    public String [] getKeysDelimiter() {
+        return this.KeysDelimiter;
+    }
+
+    /**
+     * Set <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+     * @param KeysDelimiter <p>字段间分隔符数组（长度 = keys.length），每个元素是前一字段结尾到当前字段开头的分隔串</p>
+     */
+    public void setKeysDelimiter(String [] KeysDelimiter) {
+        this.KeysDelimiter = KeysDelimiter;
+    }
+
+    /**
+     * Get <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p> 
+     * @return KeysFlag <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+     */
+    public Long [] getKeysFlag() {
+        return this.KeysFlag;
+    }
+
+    /**
+     * Set <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+     * @param KeysFlag <p>字段标志位数组（长度 = keys.length），<code>0</code> = 普通字段，<code>1</code> = 包含子字段需二次拆分</p>
+     */
+    public void setKeysFlag(Long [] KeysFlag) {
+        this.KeysFlag = KeysFlag;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -622,6 +737,30 @@ public class ExtractRuleInfo extends AbstractModel {
         if (source.RawLogKey != null) {
             this.RawLogKey = new String(source.RawLogKey);
         }
+        if (source.Units != null) {
+            this.Units = new String[source.Units.length];
+            for (int i = 0; i < source.Units.length; i++) {
+                this.Units[i] = new String(source.Units[i]);
+            }
+        }
+        if (source.IncludeKernel != null) {
+            this.IncludeKernel = new Boolean(source.IncludeKernel);
+        }
+        if (source.UseJournalTime != null) {
+            this.UseJournalTime = new Boolean(source.UseJournalTime);
+        }
+        if (source.KeysDelimiter != null) {
+            this.KeysDelimiter = new String[source.KeysDelimiter.length];
+            for (int i = 0; i < source.KeysDelimiter.length; i++) {
+                this.KeysDelimiter[i] = new String(source.KeysDelimiter[i]);
+            }
+        }
+        if (source.KeysFlag != null) {
+            this.KeysFlag = new Long[source.KeysFlag.length];
+            for (int i = 0; i < source.KeysFlag.length; i++) {
+                this.KeysFlag[i] = new Long(source.KeysFlag[i]);
+            }
+        }
     }
 
 
@@ -650,6 +789,11 @@ public class ExtractRuleInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
         this.setParamArrayObj(map, prefix + "AdvanceFilterRules.", this.AdvanceFilterRules);
         this.setParamSimple(map, prefix + "RawLogKey", this.RawLogKey);
+        this.setParamArraySimple(map, prefix + "Units.", this.Units);
+        this.setParamSimple(map, prefix + "IncludeKernel", this.IncludeKernel);
+        this.setParamSimple(map, prefix + "UseJournalTime", this.UseJournalTime);
+        this.setParamArraySimple(map, prefix + "KeysDelimiter.", this.KeysDelimiter);
+        this.setParamArraySimple(map, prefix + "KeysFlag.", this.KeysFlag);
 
     }
 }

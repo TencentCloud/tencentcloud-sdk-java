@@ -59,6 +59,20 @@ public class CreateModelVersionRequest extends AbstractModel {
     private Boolean UseCustomStorage;
 
     /**
+    * <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+    */
+    @SerializedName("GooseFSConfig")
+    @Expose
+    private GooseFSConfig GooseFSConfig;
+
+    /**
+    * <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get <p>模型UID</p> 
      * @return ModelUid <p>模型UID</p>
      */
@@ -138,6 +152,38 @@ public class CreateModelVersionRequest extends AbstractModel {
         this.UseCustomStorage = UseCustomStorage;
     }
 
+    /**
+     * Get <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p> 
+     * @return GooseFSConfig <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+     */
+    public GooseFSConfig getGooseFSConfig() {
+        return this.GooseFSConfig;
+    }
+
+    /**
+     * Set <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+     * @param GooseFSConfig <p>创建模型时，模型从goosfe里面选取，则需要传递该参数</p>
+     */
+    public void setGooseFSConfig(GooseFSConfig GooseFSConfig) {
+        this.GooseFSConfig = GooseFSConfig;
+    }
+
+    /**
+     * Get <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p> 
+     * @return StorageType <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+     * @param StorageType <p>模型上传路径类型</p><p>枚举值：</p><ul><li>LOCAL： 本地上传</li><li>CFS： CFS上传</li><li>COS： COS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul><p>选择cos、cfs、cfstrubo则必须要传storageuri，选择local时不能传递goosefsconfig</p>
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public CreateModelVersionRequest() {
     }
 
@@ -161,6 +207,12 @@ public class CreateModelVersionRequest extends AbstractModel {
         if (source.UseCustomStorage != null) {
             this.UseCustomStorage = new Boolean(source.UseCustomStorage);
         }
+        if (source.GooseFSConfig != null) {
+            this.GooseFSConfig = new GooseFSConfig(source.GooseFSConfig);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class CreateModelVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "StorageUri", this.StorageUri);
         this.setParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
+        this.setParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

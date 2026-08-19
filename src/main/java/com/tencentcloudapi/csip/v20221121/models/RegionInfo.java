@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class RegionInfo extends AbstractModel {
 
     /**
-    * <p>地域</p>
+    * 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * <p>地域编码</p>
-    */
-    @SerializedName("RegionCode")
-    @Expose
-    private String RegionCode;
-
-    /**
-    * <p>地域ID</p>
-    */
-    @SerializedName("RegionId")
-    @Expose
-    private Long RegionId;
-
-    /**
-    * <p>地域名称</p>
+    * 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * <p>地域英文名称</p>
+    * 地域数字 ID。
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
+    * 地域简码，如 gz、sh、bj。
+    */
+    @SerializedName("RegionCode")
+    @Expose
+    private String RegionCode;
+
+    /**
+    * 地域英文名。
     */
     @SerializedName("RegionNameEn")
     @Expose
     private String RegionNameEn;
 
     /**
-     * Get <p>地域</p> 
-     * @return Region <p>地域</p>
+     * Get 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。 
+     * @return Region 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>地域</p>
-     * @param Region <p>地域</p>
+     * Set 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
+     * @param Region 地域标志，如 ap-guangzhou、ap-shanghai、ap-beijing。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get <p>地域编码</p> 
-     * @return RegionCode <p>地域编码</p>
-     */
-    public String getRegionCode() {
-        return this.RegionCode;
-    }
-
-    /**
-     * Set <p>地域编码</p>
-     * @param RegionCode <p>地域编码</p>
-     */
-    public void setRegionCode(String RegionCode) {
-        this.RegionCode = RegionCode;
-    }
-
-    /**
-     * Get <p>地域ID</p> 
-     * @return RegionId <p>地域ID</p>
-     */
-    public Long getRegionId() {
-        return this.RegionId;
-    }
-
-    /**
-     * Set <p>地域ID</p>
-     * @param RegionId <p>地域ID</p>
-     */
-    public void setRegionId(Long RegionId) {
-        this.RegionId = RegionId;
-    }
-
-    /**
-     * Get <p>地域名称</p> 
-     * @return RegionName <p>地域名称</p>
+     * Get 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。 
+     * @return RegionName 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set <p>地域名称</p>
-     * @param RegionName <p>地域名称</p>
+     * Set 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
+     * @param RegionName 地域中文名，如华南地区（广州）、华东地区（上海）、华北地区（北京）。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get <p>地域英文名称</p> 
-     * @return RegionNameEn <p>地域英文名称</p>
+     * Get 地域数字 ID。 
+     * @return RegionId 地域数字 ID。
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域数字 ID。
+     * @param RegionId 地域数字 ID。
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
+     * Get 地域简码，如 gz、sh、bj。 
+     * @return RegionCode 地域简码，如 gz、sh、bj。
+     */
+    public String getRegionCode() {
+        return this.RegionCode;
+    }
+
+    /**
+     * Set 地域简码，如 gz、sh、bj。
+     * @param RegionCode 地域简码，如 gz、sh、bj。
+     */
+    public void setRegionCode(String RegionCode) {
+        this.RegionCode = RegionCode;
+    }
+
+    /**
+     * Get 地域英文名。 
+     * @return RegionNameEn 地域英文名。
      */
     public String getRegionNameEn() {
         return this.RegionNameEn;
     }
 
     /**
-     * Set <p>地域英文名称</p>
-     * @param RegionNameEn <p>地域英文名称</p>
+     * Set 地域英文名。
+     * @param RegionNameEn 地域英文名。
      */
     public void setRegionNameEn(String RegionNameEn) {
         this.RegionNameEn = RegionNameEn;
@@ -149,14 +149,14 @@ public class RegionInfo extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
-        if (source.RegionCode != null) {
-            this.RegionCode = new String(source.RegionCode);
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
         }
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
-        if (source.RegionName != null) {
-            this.RegionName = new String(source.RegionName);
+        if (source.RegionCode != null) {
+            this.RegionCode = new String(source.RegionCode);
         }
         if (source.RegionNameEn != null) {
             this.RegionNameEn = new String(source.RegionNameEn);
@@ -169,9 +169,9 @@ public class RegionInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
-        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
         this.setParamSimple(map, prefix + "RegionNameEn", this.RegionNameEn);
 
     }

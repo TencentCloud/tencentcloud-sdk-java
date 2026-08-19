@@ -115,6 +115,13 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
     private String TriggerMode;
 
     /**
+    * <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
      * Get <p>项目ID</p> 
      * @return ProjectId <p>项目ID</p>
      */
@@ -322,6 +329,22 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         this.TriggerMode = TriggerMode;
     }
 
+    /**
+     * Get <p>运行账号ID,未传时默认使用当前登录用户ID</p> 
+     * @return ExecuteUserUin <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+     * @param ExecuteUserUin <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
+    }
+
     public CreateTriggerWorkflowRequest() {
     }
 
@@ -378,6 +401,9 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         if (source.TriggerMode != null) {
             this.TriggerMode = new String(source.TriggerMode);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
 
     }
 }

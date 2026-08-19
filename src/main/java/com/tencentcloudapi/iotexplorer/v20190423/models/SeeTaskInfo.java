@@ -24,423 +24,371 @@ import java.util.HashMap;
 public class SeeTaskInfo extends AbstractModel {
 
     /**
-    * 任务 ID
+    * <p>任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+    * <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 任务元数据
+    * <p>任务元数据</p>
     */
     @SerializedName("Metadata")
     @Expose
     private SeeTaskMetadata Metadata;
 
     /**
-    * 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+    * <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
     */
     @SerializedName("ServiceCategory")
     @Expose
     private String ServiceCategory;
 
     /**
-    * 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
+    * <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
+    * <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
     */
     @SerializedName("ServiceTier")
     @Expose
     private String ServiceTier;
 
     /**
-    * 视觉理解结果（适用于视频理解、图片理解）
+    * <p>视觉理解结果（适用于视频理解、图片理解）</p>
     */
     @SerializedName("ComprehensionResult")
     @Expose
     private SeeComprehensionResult ComprehensionResult;
 
     /**
-    * 视频语义浓缩结果（适用于视频语义浓缩）
+    * <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
     */
     @SerializedName("CompHighlightResult")
     @Expose
     private SeeCompHighlightResult CompHighlightResult;
 
     /**
-    * 标签持续检测结果
+    * <p>标签持续检测结果</p>
     */
     @SerializedName("DetectContinuousResult")
     @Expose
     private SeeDetectContinuousResult DetectContinuousResult;
 
     /**
-    * 完成该任务所消耗的基础能力额度
+    * <p>完成该任务所消耗的基础能力额度</p>
     */
     @SerializedName("CostBasic")
     @Expose
     private Long CostBasic;
 
     /**
-    * 完成该任务所消耗的高级能力额度
+    * <p>完成该任务所消耗的高级能力额度</p>
     */
     @SerializedName("CostAdvanced")
     @Expose
     private Long CostAdvanced;
 
     /**
-    * 输出文件名列表
+    * <p>输出文件名列表</p>
     */
     @SerializedName("Files")
     @Expose
     private String [] Files;
 
     /**
-    * 输出文件详情列表
+    * <p>输出文件详情列表</p>
     */
     @SerializedName("FilesInfo")
     @Expose
     private CloudStorageAIServiceTaskFileInfo [] FilesInfo;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 最后更新时间
+    * <p>最后更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+    * <p>直传 COS 的对象 URI</p>
+    */
+    @SerializedName("COSURI")
+    @Expose
+    private String COSURI;
+
+    /**
+     * Get <p>任务 ID</p> 
+     * @return TaskId <p>任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set <p>任务 ID</p>
+     * @param TaskId <p>任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中 
-     * @return Status 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+     * Get <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul> 
+     * @return Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
-     * @param Status 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+     * Set <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+     * @param Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务元数据 
-     * @return Metadata 任务元数据
+     * Get <p>任务元数据</p> 
+     * @return Metadata <p>任务元数据</p>
      */
     public SeeTaskMetadata getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set 任务元数据
-     * @param Metadata 任务元数据
+     * Set <p>任务元数据</p>
+     * @param Metadata <p>任务元数据</p>
      */
     public void setMetadata(SeeTaskMetadata Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩 
-     * @return ServiceCategory 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+     * Get <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul> 
+     * @return ServiceCategory <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
 
     /**
-     * Set 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
-     * @param ServiceCategory 算法类目。可能取值：
-
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+     * Set <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param ServiceCategory <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
     }
 
     /**
-     * Get 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩 
-     * @return ServiceType 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
+     * Get <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul> 
+     * @return ServiceType <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
-     * @param ServiceType 算法类型。可能取值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `COMP_HIGHLIGHT`：视频浓缩
+     * Set <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param ServiceType <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解） 
-     * @return ServiceTier 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * Get <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul> 
+     * @return ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      */
     public String getServiceTier() {
         return this.ServiceTier;
     }
 
     /**
-     * Set 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
-     * @param ServiceTier 套餐规格。可能取值：
-
-- `POSTPAID`：后付费（适用于视频理解、图片理解）
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * Set <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * @param ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>POSTPAID</code>：后付费（适用于视频理解、图片理解）</li><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      */
     public void setServiceTier(String ServiceTier) {
         this.ServiceTier = ServiceTier;
     }
 
     /**
-     * Get 视觉理解结果（适用于视频理解、图片理解） 
-     * @return ComprehensionResult 视觉理解结果（适用于视频理解、图片理解）
+     * Get <p>视觉理解结果（适用于视频理解、图片理解）</p> 
+     * @return ComprehensionResult <p>视觉理解结果（适用于视频理解、图片理解）</p>
      */
     public SeeComprehensionResult getComprehensionResult() {
         return this.ComprehensionResult;
     }
 
     /**
-     * Set 视觉理解结果（适用于视频理解、图片理解）
-     * @param ComprehensionResult 视觉理解结果（适用于视频理解、图片理解）
+     * Set <p>视觉理解结果（适用于视频理解、图片理解）</p>
+     * @param ComprehensionResult <p>视觉理解结果（适用于视频理解、图片理解）</p>
      */
     public void setComprehensionResult(SeeComprehensionResult ComprehensionResult) {
         this.ComprehensionResult = ComprehensionResult;
     }
 
     /**
-     * Get 视频语义浓缩结果（适用于视频语义浓缩） 
-     * @return CompHighlightResult 视频语义浓缩结果（适用于视频语义浓缩）
+     * Get <p>视频语义浓缩结果（适用于视频语义浓缩）</p> 
+     * @return CompHighlightResult <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
      */
     public SeeCompHighlightResult getCompHighlightResult() {
         return this.CompHighlightResult;
     }
 
     /**
-     * Set 视频语义浓缩结果（适用于视频语义浓缩）
-     * @param CompHighlightResult 视频语义浓缩结果（适用于视频语义浓缩）
+     * Set <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
+     * @param CompHighlightResult <p>视频语义浓缩结果（适用于视频语义浓缩）</p>
      */
     public void setCompHighlightResult(SeeCompHighlightResult CompHighlightResult) {
         this.CompHighlightResult = CompHighlightResult;
     }
 
     /**
-     * Get 标签持续检测结果 
-     * @return DetectContinuousResult 标签持续检测结果
+     * Get <p>标签持续检测结果</p> 
+     * @return DetectContinuousResult <p>标签持续检测结果</p>
      */
     public SeeDetectContinuousResult getDetectContinuousResult() {
         return this.DetectContinuousResult;
     }
 
     /**
-     * Set 标签持续检测结果
-     * @param DetectContinuousResult 标签持续检测结果
+     * Set <p>标签持续检测结果</p>
+     * @param DetectContinuousResult <p>标签持续检测结果</p>
      */
     public void setDetectContinuousResult(SeeDetectContinuousResult DetectContinuousResult) {
         this.DetectContinuousResult = DetectContinuousResult;
     }
 
     /**
-     * Get 完成该任务所消耗的基础能力额度 
-     * @return CostBasic 完成该任务所消耗的基础能力额度
+     * Get <p>完成该任务所消耗的基础能力额度</p> 
+     * @return CostBasic <p>完成该任务所消耗的基础能力额度</p>
      */
     public Long getCostBasic() {
         return this.CostBasic;
     }
 
     /**
-     * Set 完成该任务所消耗的基础能力额度
-     * @param CostBasic 完成该任务所消耗的基础能力额度
+     * Set <p>完成该任务所消耗的基础能力额度</p>
+     * @param CostBasic <p>完成该任务所消耗的基础能力额度</p>
      */
     public void setCostBasic(Long CostBasic) {
         this.CostBasic = CostBasic;
     }
 
     /**
-     * Get 完成该任务所消耗的高级能力额度 
-     * @return CostAdvanced 完成该任务所消耗的高级能力额度
+     * Get <p>完成该任务所消耗的高级能力额度</p> 
+     * @return CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      */
     public Long getCostAdvanced() {
         return this.CostAdvanced;
     }
 
     /**
-     * Set 完成该任务所消耗的高级能力额度
-     * @param CostAdvanced 完成该任务所消耗的高级能力额度
+     * Set <p>完成该任务所消耗的高级能力额度</p>
+     * @param CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      */
     public void setCostAdvanced(Long CostAdvanced) {
         this.CostAdvanced = CostAdvanced;
     }
 
     /**
-     * Get 输出文件名列表 
-     * @return Files 输出文件名列表
+     * Get <p>输出文件名列表</p> 
+     * @return Files <p>输出文件名列表</p>
      */
     public String [] getFiles() {
         return this.Files;
     }
 
     /**
-     * Set 输出文件名列表
-     * @param Files 输出文件名列表
+     * Set <p>输出文件名列表</p>
+     * @param Files <p>输出文件名列表</p>
      */
     public void setFiles(String [] Files) {
         this.Files = Files;
     }
 
     /**
-     * Get 输出文件详情列表 
-     * @return FilesInfo 输出文件详情列表
+     * Get <p>输出文件详情列表</p> 
+     * @return FilesInfo <p>输出文件详情列表</p>
      */
     public CloudStorageAIServiceTaskFileInfo [] getFilesInfo() {
         return this.FilesInfo;
     }
 
     /**
-     * Set 输出文件详情列表
-     * @param FilesInfo 输出文件详情列表
+     * Set <p>输出文件详情列表</p>
+     * @param FilesInfo <p>输出文件详情列表</p>
      */
     public void setFilesInfo(CloudStorageAIServiceTaskFileInfo [] FilesInfo) {
         this.FilesInfo = FilesInfo;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后更新时间 
-     * @return UpdateTime 最后更新时间
+     * Get <p>最后更新时间</p> 
+     * @return UpdateTime <p>最后更新时间</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最后更新时间
-     * @param UpdateTime 最后更新时间
+     * Set <p>最后更新时间</p>
+     * @param UpdateTime <p>最后更新时间</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>直传 COS 的对象 URI</p> 
+     * @return COSURI <p>直传 COS 的对象 URI</p>
+     */
+    public String getCOSURI() {
+        return this.COSURI;
+    }
+
+    /**
+     * Set <p>直传 COS 的对象 URI</p>
+     * @param COSURI <p>直传 COS 的对象 URI</p>
+     */
+    public void setCOSURI(String COSURI) {
+        this.COSURI = COSURI;
     }
 
     public SeeTaskInfo() {
@@ -502,6 +450,9 @@ public class SeeTaskInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.COSURI != null) {
+            this.COSURI = new String(source.COSURI);
+        }
     }
 
 
@@ -524,6 +475,7 @@ public class SeeTaskInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FilesInfo.", this.FilesInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "COSURI", this.COSURI);
 
     }
 }

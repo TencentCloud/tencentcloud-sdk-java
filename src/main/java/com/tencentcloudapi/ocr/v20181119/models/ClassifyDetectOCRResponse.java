@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ClassifyDetectOCRResponse extends AbstractModel {
 
     /**
-    * 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
+    * <p>智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回&quot;其它&quot;</p>
     */
     @SerializedName("ClassifyDetectInfos")
     @Expose
@@ -38,16 +38,16 @@ public class ClassifyDetectOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它" 
-     * @return ClassifyDetectInfos 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
+     * Get <p>智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回&quot;其它&quot;</p> 
+     * @return ClassifyDetectInfos <p>智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回&quot;其它&quot;</p>
      */
     public ClassifyDetectInfo [] getClassifyDetectInfos() {
         return this.ClassifyDetectInfos;
     }
 
     /**
-     * Set 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
-     * @param ClassifyDetectInfos 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
+     * Set <p>智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回&quot;其它&quot;</p>
+     * @param ClassifyDetectInfos <p>智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回&quot;其它&quot;</p>
      */
     public void setClassifyDetectInfos(ClassifyDetectInfo [] ClassifyDetectInfos) {
         this.ClassifyDetectInfos = ClassifyDetectInfos;

@@ -47,6 +47,14 @@ public class ResourceSaleInfo extends AbstractModel {
     private Long MaxSpec;
 
     /**
+    * <p>库存情况，对当前地域该计费项实时可新增数量的分级预估。取值复用 BcpConstants 库存状态常量：</p><ul><li>EnoughStock：余量充足</li><li>NormalStock：余量正常</li><li>UnderStock：余量紧张</li><li>WithoutStock：无库存</li></ul><p>该值为底层提供的预估值，不代表保证可发货量，仅用于展示库存概况。当请求 Region 与资源池地域不一致、cold-start 缓存未 ready、或该计费项在快照中缺失时返回 null。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusCategory")
+    @Expose
+    private String StatusCategory;
+
+    /**
      * Get <p>可售卖资源规格</p> 
      * @return ResourceSpec <p>可售卖资源规格</p>
      */
@@ -102,6 +110,26 @@ public class ResourceSaleInfo extends AbstractModel {
         this.MaxSpec = MaxSpec;
     }
 
+    /**
+     * Get <p>库存情况，对当前地域该计费项实时可新增数量的分级预估。取值复用 BcpConstants 库存状态常量：</p><ul><li>EnoughStock：余量充足</li><li>NormalStock：余量正常</li><li>UnderStock：余量紧张</li><li>WithoutStock：无库存</li></ul><p>该值为底层提供的预估值，不代表保证可发货量，仅用于展示库存概况。当请求 Region 与资源池地域不一致、cold-start 缓存未 ready、或该计费项在快照中缺失时返回 null。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusCategory <p>库存情况，对当前地域该计费项实时可新增数量的分级预估。取值复用 BcpConstants 库存状态常量：</p><ul><li>EnoughStock：余量充足</li><li>NormalStock：余量正常</li><li>UnderStock：余量紧张</li><li>WithoutStock：无库存</li></ul><p>该值为底层提供的预估值，不代表保证可发货量，仅用于展示库存概况。当请求 Region 与资源池地域不一致、cold-start 缓存未 ready、或该计费项在快照中缺失时返回 null。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatusCategory() {
+        return this.StatusCategory;
+    }
+
+    /**
+     * Set <p>库存情况，对当前地域该计费项实时可新增数量的分级预估。取值复用 BcpConstants 库存状态常量：</p><ul><li>EnoughStock：余量充足</li><li>NormalStock：余量正常</li><li>UnderStock：余量紧张</li><li>WithoutStock：无库存</li></ul><p>该值为底层提供的预估值，不代表保证可发货量，仅用于展示库存概况。当请求 Region 与资源池地域不一致、cold-start 缓存未 ready、或该计费项在快照中缺失时返回 null。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusCategory <p>库存情况，对当前地域该计费项实时可新增数量的分级预估。取值复用 BcpConstants 库存状态常量：</p><ul><li>EnoughStock：余量充足</li><li>NormalStock：余量正常</li><li>UnderStock：余量紧张</li><li>WithoutStock：无库存</li></ul><p>该值为底层提供的预估值，不代表保证可发货量，仅用于展示库存概况。当请求 Region 与资源池地域不一致、cold-start 缓存未 ready、或该计费项在快照中缺失时返回 null。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusCategory(String StatusCategory) {
+        this.StatusCategory = StatusCategory;
+    }
+
     public ResourceSaleInfo() {
     }
 
@@ -119,6 +147,9 @@ public class ResourceSaleInfo extends AbstractModel {
         if (source.MaxSpec != null) {
             this.MaxSpec = new Long(source.MaxSpec);
         }
+        if (source.StatusCategory != null) {
+            this.StatusCategory = new String(source.StatusCategory);
+        }
     }
 
 
@@ -129,6 +160,7 @@ public class ResourceSaleInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamSimple(map, prefix + "Step", this.Step);
         this.setParamSimple(map, prefix + "MaxSpec", this.MaxSpec);
+        this.setParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
 
     }
 }

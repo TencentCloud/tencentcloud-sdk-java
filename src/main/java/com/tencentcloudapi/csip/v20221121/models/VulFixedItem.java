@@ -24,316 +24,279 @@ import java.util.HashMap;
 public class VulFixedItem extends AbstractModel {
 
     /**
-    * 漏洞ID
+    * <p>漏洞ID</p>
     */
     @SerializedName("VulId")
     @Expose
     private Long VulId;
 
     /**
-    * 漏洞名称
+    * <p>漏洞名称</p>
     */
     @SerializedName("VulName")
     @Expose
     private String VulName;
 
     /**
-    * 漏洞等级
-枚举值：
-LOW：低危
-MEDIUM：中危
-HIGH：高危
-CRITICAL：严重
+    * <p>漏洞等级<br>枚举值：<br>LOW：低危<br>MEDIUM：中危<br>HIGH：高危<br>CRITICAL：严重</p>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致
+    * <p>VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致</p>
     */
     @SerializedName("VRPRatingInfo")
     @Expose
     private VPRRatingInfo VRPRatingInfo;
 
     /**
-    * 漏洞类型
-枚举值：
-LINUX：Linux软件漏洞
-WINDOWS：Windows系统补丁漏洞
-WEB_CMS：Web-CMS漏洞
-APPLICATION：应用漏洞
-EMERGENCY：应急漏洞
+    * <p>漏洞类型<br>枚举值：<br>LINUX：Linux软件漏洞<br>WINDOWS：Windows系统补丁漏洞<br>WEB_CMS：Web-CMS漏洞<br>APPLICATION：应用漏洞<br>EMERGENCY：应急漏洞</p>
     */
     @SerializedName("VulCategory")
     @Expose
     private String VulCategory;
 
     /**
-    * CVE编号
+    * <p>CVE编号</p>
     */
     @SerializedName("CveId")
     @Expose
     private String CveId;
 
     /**
-    * 修复主机名称
+    * <p>修复主机名称</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * 修复主机实例ID
+    * <p>修复主机实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联组件&路径数量
+    * <p>关联组件&amp;路径数量</p>
     */
     @SerializedName("ComponentCount")
     @Expose
     private Long ComponentCount;
 
     /**
-    * 关联组件&路径列表
+    * <p>关联组件&amp;路径列表</p>
     */
     @SerializedName("Components")
     @Expose
     private String [] Components;
 
     /**
-    * 最近一次修复时间
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+    * <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
     */
     @SerializedName("LatestFixTime")
     @Expose
     private String LatestFixTime;
 
     /**
-     * Get 漏洞ID 
-     * @return VulId 漏洞ID
+    * <p>VPR评级依据</p>
+    */
+    @SerializedName("VPRExplainInfo")
+    @Expose
+    private VPRExplainInfo VPRExplainInfo;
+
+    /**
+     * Get <p>漏洞ID</p> 
+     * @return VulId <p>漏洞ID</p>
      */
     public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * Set 漏洞ID
-     * @param VulId 漏洞ID
+     * Set <p>漏洞ID</p>
+     * @param VulId <p>漏洞ID</p>
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get 漏洞名称 
-     * @return VulName 漏洞名称
+     * Get <p>漏洞名称</p> 
+     * @return VulName <p>漏洞名称</p>
      */
     public String getVulName() {
         return this.VulName;
     }
 
     /**
-     * Set 漏洞名称
-     * @param VulName 漏洞名称
+     * Set <p>漏洞名称</p>
+     * @param VulName <p>漏洞名称</p>
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get 漏洞等级
-枚举值：
-LOW：低危
-MEDIUM：中危
-HIGH：高危
-CRITICAL：严重 
-     * @return Level 漏洞等级
-枚举值：
-LOW：低危
-MEDIUM：中危
-HIGH：高危
-CRITICAL：严重
+     * Get <p>漏洞等级<br>枚举值：<br>LOW：低危<br>MEDIUM：中危<br>HIGH：高危<br>CRITICAL：严重</p> 
+     * @return Level <p>漏洞等级<br>枚举值：<br>LOW：低危<br>MEDIUM：中危<br>HIGH：高危<br>CRITICAL：严重</p>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 漏洞等级
-枚举值：
-LOW：低危
-MEDIUM：中危
-HIGH：高危
-CRITICAL：严重
-     * @param Level 漏洞等级
-枚举值：
-LOW：低危
-MEDIUM：中危
-HIGH：高危
-CRITICAL：严重
+     * Set <p>漏洞等级<br>枚举值：<br>LOW：低危<br>MEDIUM：中危<br>HIGH：高危<br>CRITICAL：严重</p>
+     * @param Level <p>漏洞等级<br>枚举值：<br>LOW：低危<br>MEDIUM：中危<br>HIGH：高危<br>CRITICAL：严重</p>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致 
-     * @return VRPRatingInfo VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致
+     * Get <p>VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致</p> 
+     * @return VRPRatingInfo <p>VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致</p>
      */
     public VPRRatingInfo getVRPRatingInfo() {
         return this.VRPRatingInfo;
     }
 
     /**
-     * Set VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致
-     * @param VRPRatingInfo VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致
+     * Set <p>VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致</p>
+     * @param VRPRatingInfo <p>VPR 评级信息（包含评级结果、说明和分阶段评分），与 DescribeHostVulRiskList 一致</p>
      */
     public void setVRPRatingInfo(VPRRatingInfo VRPRatingInfo) {
         this.VRPRatingInfo = VRPRatingInfo;
     }
 
     /**
-     * Get 漏洞类型
-枚举值：
-LINUX：Linux软件漏洞
-WINDOWS：Windows系统补丁漏洞
-WEB_CMS：Web-CMS漏洞
-APPLICATION：应用漏洞
-EMERGENCY：应急漏洞 
-     * @return VulCategory 漏洞类型
-枚举值：
-LINUX：Linux软件漏洞
-WINDOWS：Windows系统补丁漏洞
-WEB_CMS：Web-CMS漏洞
-APPLICATION：应用漏洞
-EMERGENCY：应急漏洞
+     * Get <p>漏洞类型<br>枚举值：<br>LINUX：Linux软件漏洞<br>WINDOWS：Windows系统补丁漏洞<br>WEB_CMS：Web-CMS漏洞<br>APPLICATION：应用漏洞<br>EMERGENCY：应急漏洞</p> 
+     * @return VulCategory <p>漏洞类型<br>枚举值：<br>LINUX：Linux软件漏洞<br>WINDOWS：Windows系统补丁漏洞<br>WEB_CMS：Web-CMS漏洞<br>APPLICATION：应用漏洞<br>EMERGENCY：应急漏洞</p>
      */
     public String getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set 漏洞类型
-枚举值：
-LINUX：Linux软件漏洞
-WINDOWS：Windows系统补丁漏洞
-WEB_CMS：Web-CMS漏洞
-APPLICATION：应用漏洞
-EMERGENCY：应急漏洞
-     * @param VulCategory 漏洞类型
-枚举值：
-LINUX：Linux软件漏洞
-WINDOWS：Windows系统补丁漏洞
-WEB_CMS：Web-CMS漏洞
-APPLICATION：应用漏洞
-EMERGENCY：应急漏洞
+     * Set <p>漏洞类型<br>枚举值：<br>LINUX：Linux软件漏洞<br>WINDOWS：Windows系统补丁漏洞<br>WEB_CMS：Web-CMS漏洞<br>APPLICATION：应用漏洞<br>EMERGENCY：应急漏洞</p>
+     * @param VulCategory <p>漏洞类型<br>枚举值：<br>LINUX：Linux软件漏洞<br>WINDOWS：Windows系统补丁漏洞<br>WEB_CMS：Web-CMS漏洞<br>APPLICATION：应用漏洞<br>EMERGENCY：应急漏洞</p>
      */
     public void setVulCategory(String VulCategory) {
         this.VulCategory = VulCategory;
     }
 
     /**
-     * Get CVE编号 
-     * @return CveId CVE编号
+     * Get <p>CVE编号</p> 
+     * @return CveId <p>CVE编号</p>
      */
     public String getCveId() {
         return this.CveId;
     }
 
     /**
-     * Set CVE编号
-     * @param CveId CVE编号
+     * Set <p>CVE编号</p>
+     * @param CveId <p>CVE编号</p>
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get 修复主机名称 
-     * @return MachineName 修复主机名称
+     * Get <p>修复主机名称</p> 
+     * @return MachineName <p>修复主机名称</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set 修复主机名称
-     * @param MachineName 修复主机名称
+     * Set <p>修复主机名称</p>
+     * @param MachineName <p>修复主机名称</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 修复主机实例ID 
-     * @return InstanceId 修复主机实例ID
+     * Get <p>修复主机实例ID</p> 
+     * @return InstanceId <p>修复主机实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 修复主机实例ID
-     * @param InstanceId 修复主机实例ID
+     * Set <p>修复主机实例ID</p>
+     * @param InstanceId <p>修复主机实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 关联组件&路径数量 
-     * @return ComponentCount 关联组件&路径数量
+     * Get <p>关联组件&amp;路径数量</p> 
+     * @return ComponentCount <p>关联组件&amp;路径数量</p>
      */
     public Long getComponentCount() {
         return this.ComponentCount;
     }
 
     /**
-     * Set 关联组件&路径数量
-     * @param ComponentCount 关联组件&路径数量
+     * Set <p>关联组件&amp;路径数量</p>
+     * @param ComponentCount <p>关联组件&amp;路径数量</p>
      */
     public void setComponentCount(Long ComponentCount) {
         this.ComponentCount = ComponentCount;
     }
 
     /**
-     * Get 关联组件&路径列表 
-     * @return Components 关联组件&路径列表
+     * Get <p>关联组件&amp;路径列表</p> 
+     * @return Components <p>关联组件&amp;路径列表</p>
      */
     public String [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 关联组件&路径列表
-     * @param Components 关联组件&路径列表
+     * Set <p>关联组件&amp;路径列表</p>
+     * @param Components <p>关联组件&amp;路径列表</p>
      */
     public void setComponents(String [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 最近一次修复时间
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式） 
-     * @return LatestFixTime 最近一次修复时间
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Get <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p> 
+     * @return LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public String getLatestFixTime() {
         return this.LatestFixTime;
     }
 
     /**
-     * Set 最近一次修复时间
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
-     * @param LatestFixTime 最近一次修复时间
-参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * Set <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @param LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public void setLatestFixTime(String LatestFixTime) {
         this.LatestFixTime = LatestFixTime;
+    }
+
+    /**
+     * Get <p>VPR评级依据</p> 
+     * @return VPRExplainInfo <p>VPR评级依据</p>
+     */
+    public VPRExplainInfo getVPRExplainInfo() {
+        return this.VPRExplainInfo;
+    }
+
+    /**
+     * Set <p>VPR评级依据</p>
+     * @param VPRExplainInfo <p>VPR评级依据</p>
+     */
+    public void setVPRExplainInfo(VPRExplainInfo VPRExplainInfo) {
+        this.VPRExplainInfo = VPRExplainInfo;
     }
 
     public VulFixedItem() {
@@ -380,6 +343,9 @@ EMERGENCY：应急漏洞
         if (source.LatestFixTime != null) {
             this.LatestFixTime = new String(source.LatestFixTime);
         }
+        if (source.VPRExplainInfo != null) {
+            this.VPRExplainInfo = new VPRExplainInfo(source.VPRExplainInfo);
+        }
     }
 
 
@@ -398,6 +364,7 @@ EMERGENCY：应急漏洞
         this.setParamSimple(map, prefix + "ComponentCount", this.ComponentCount);
         this.setParamArraySimple(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+        this.setParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
 
     }
 }

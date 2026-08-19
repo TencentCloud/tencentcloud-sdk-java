@@ -129,6 +129,34 @@ public class FileInfo extends AbstractModel {
     private String [] Capabilities;
 
     /**
+    * <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+    */
+    @SerializedName("EnableGraphBuild")
+    @Expose
+    private Long EnableGraphBuild;
+
+    /**
+    * <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+    */
+    @SerializedName("EnableTreeBuild")
+    @Expose
+    private Long EnableTreeBuild;
+
+    /**
+    * <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+    */
+    @SerializedName("GraphBuildStatus")
+    @Expose
+    private Long GraphBuildStatus;
+
+    /**
+    * <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+    */
+    @SerializedName("TreeBuildStatus")
+    @Expose
+    private Long TreeBuildStatus;
+
+    /**
      * Get <p>文件名称</p> 
      * @return FileName <p>文件名称</p>
      */
@@ -368,6 +396,70 @@ public class FileInfo extends AbstractModel {
         this.Capabilities = Capabilities;
     }
 
+    /**
+     * Get <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p> 
+     * @return EnableGraphBuild <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+     */
+    public Long getEnableGraphBuild() {
+        return this.EnableGraphBuild;
+    }
+
+    /**
+     * Set <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+     * @param EnableGraphBuild <p>0:关闭 1:开启图谱构建（入库时构建图谱），默认0</p>
+     */
+    public void setEnableGraphBuild(Long EnableGraphBuild) {
+        this.EnableGraphBuild = EnableGraphBuild;
+    }
+
+    /**
+     * Get <p>0:关闭 1:开启树构建（入库时构建树），默认0</p> 
+     * @return EnableTreeBuild <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+     */
+    public Long getEnableTreeBuild() {
+        return this.EnableTreeBuild;
+    }
+
+    /**
+     * Set <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+     * @param EnableTreeBuild <p>0:关闭 1:开启树构建（入库时构建树），默认0</p>
+     */
+    public void setEnableTreeBuild(Long EnableTreeBuild) {
+        this.EnableTreeBuild = EnableTreeBuild;
+    }
+
+    /**
+     * Get <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p> 
+     * @return GraphBuildStatus <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     */
+    public Long getGraphBuildStatus() {
+        return this.GraphBuildStatus;
+    }
+
+    /**
+     * Set <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     * @param GraphBuildStatus <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     */
+    public void setGraphBuildStatus(Long GraphBuildStatus) {
+        this.GraphBuildStatus = GraphBuildStatus;
+    }
+
+    /**
+     * Get <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p> 
+     * @return TreeBuildStatus <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     */
+    public Long getTreeBuildStatus() {
+        return this.TreeBuildStatus;
+    }
+
+    /**
+     * Set <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     * @param TreeBuildStatus <p>图谱构建状态：null=未启用图谱; 0=待入库; 1=入库中; 2=入库成功; -1=入库失败（仅 EnableGraphBuild=1 时有意义）</p>
+     */
+    public void setTreeBuildStatus(Long TreeBuildStatus) {
+        this.TreeBuildStatus = TreeBuildStatus;
+    }
+
     public FileInfo() {
     }
 
@@ -424,6 +516,18 @@ public class FileInfo extends AbstractModel {
                 this.Capabilities[i] = new String(source.Capabilities[i]);
             }
         }
+        if (source.EnableGraphBuild != null) {
+            this.EnableGraphBuild = new Long(source.EnableGraphBuild);
+        }
+        if (source.EnableTreeBuild != null) {
+            this.EnableTreeBuild = new Long(source.EnableTreeBuild);
+        }
+        if (source.GraphBuildStatus != null) {
+            this.GraphBuildStatus = new Long(source.GraphBuildStatus);
+        }
+        if (source.TreeBuildStatus != null) {
+            this.TreeBuildStatus = new Long(source.TreeBuildStatus);
+        }
     }
 
 
@@ -446,6 +550,10 @@ public class FileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DocumentSummary", this.DocumentSummary);
         this.setParamSimple(map, prefix + "WebUrl", this.WebUrl);
         this.setParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
+        this.setParamSimple(map, prefix + "EnableGraphBuild", this.EnableGraphBuild);
+        this.setParamSimple(map, prefix + "EnableTreeBuild", this.EnableTreeBuild);
+        this.setParamSimple(map, prefix + "GraphBuildStatus", this.GraphBuildStatus);
+        this.setParamSimple(map, prefix + "TreeBuildStatus", this.TreeBuildStatus);
 
     }
 }

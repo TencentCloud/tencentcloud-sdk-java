@@ -24,838 +24,864 @@ import java.util.HashMap;
 public class DspmDbAsset extends AbstractModel {
 
     /**
-    * 资产实例Id
+    * <p>资产实例Id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 资产类型
+    * <p>资产类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    *  资产名
+    * <p>资产名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 账号数
+    * <p>账号数</p>
     */
     @SerializedName("AccountCount")
     @Expose
     private Long AccountCount;
 
     /**
-    * 公网访问地址，如果有多个，使用';'分割
+    * <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 内网访问地址，如果有多个，使用';'分割
+    * <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * 广域网域名地址，如果有多个，使用';'分割
+    * <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 资产所在vpc的vpcid
+    * <p>资产所在vpc的vpcid</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 资产所在vpc的vpc名
+    * <p>资产所在vpc的vpc名</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 资产所在vpc子网的subnetid
+    * <p>资产所在vpc子网的subnetid</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 资产所在vpc子网名
+    * <p>资产所在vpc子网名</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 管理者信息。
+    * <p>管理者信息。</p>
     */
     @SerializedName("Manager")
     @Expose
     private DspmUinUser [] Manager;
 
     /**
-    * 是否绑定身份。0-未绑定 1-已绑定
+    * <p>是否绑定身份。0-未绑定 1-已绑定</p>
     */
     @SerializedName("BindIdentify")
     @Expose
     private Long BindIdentify;
 
     /**
-    * 是否管理员
+    * <p>是否管理员</p>
     */
     @SerializedName("IsManager")
     @Expose
     private Long IsManager;
 
     /**
-    * 风险统计信息
+    * <p>风险统计信息</p>
     */
     @SerializedName("RiskCount")
     @Expose
     private DspmRiskCount RiskCount;
 
     /**
-    * 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
+    * <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
     */
     @SerializedName("SafetyAdvice")
     @Expose
     private String SafetyAdvice;
 
     /**
-    * 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
+    * <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
     */
     @SerializedName("LogDeliveryStatus")
     @Expose
     private Long LogDeliveryStatus;
 
     /**
-    * 是否支持日志投递。0-不支持 1-支持
+    * <p>是否支持日志投递。0-不支持 1-支持</p>
     */
     @SerializedName("LogDeliverySupported")
     @Expose
     private Long LogDeliverySupported;
 
     /**
-    * 数据扫描信息
+    * <p>数据扫描信息</p>
     */
     @SerializedName("DataScanInfo")
     @Expose
     private DspmAssetDataScanDetail DataScanInfo;
 
     /**
-    * 资产所属账号app id
+    * <p>资产所属账号app id</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 账号昵称
+    * <p>账号昵称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 资产所属账号uin
+    * <p>资产所属账号uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
+    * <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
     */
     @SerializedName("SecurityAnalyseStatus")
     @Expose
     private Long SecurityAnalyseStatus;
 
     /**
-    * 当前实例的总日志数
+    * <p>当前实例的总日志数</p>
     */
     @SerializedName("TotalAuditLogs")
     @Expose
     private Long TotalAuditLogs;
 
     /**
-    * 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
+    * <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
     */
     @SerializedName("LogDeliveryDisableReason")
     @Expose
     private String LogDeliveryDisableReason;
 
     /**
-    * 在线日志的起始时间戳，精确到秒
+    * <p>在线日志的起始时间戳，精确到秒</p>
     */
     @SerializedName("OldestOnlineLogTimestamp")
     @Expose
     private Long OldestOnlineLogTimestamp;
 
     /**
-    * 在线日志的最新时间戳，精确到秒
+    * <p>在线日志的最新时间戳，精确到秒</p>
     */
     @SerializedName("NewestOnlineLogTimestamp")
     @Expose
     private Long NewestOnlineLogTimestamp;
 
     /**
-    * 操作错误信息
+    * <p>操作错误信息</p>
     */
     @SerializedName("OperationErrorMsg")
     @Expose
     private String OperationErrorMsg;
 
     /**
-    * 是否支持账号操作。0 不支持；1 支持
+    * <p>是否支持账号操作。0 不支持；1 支持</p>
     */
     @SerializedName("AccountOptSupported")
     @Expose
     private Long AccountOptSupported;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+    * <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * 是否支持敏感数据识别。0 不支持；1 支持
+    * <p>是否支持敏感数据识别。0 不支持；1 支持</p>
     */
     @SerializedName("IdentifyScanSupported")
     @Expose
     private Long IdentifyScanSupported;
 
     /**
-     * Get 资产实例Id 
-     * @return AssetId 资产实例Id
+    * <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+     * Get <p>资产实例Id</p> 
+     * @return AssetId <p>资产实例Id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产实例Id
-     * @param AssetId 资产实例Id
+     * Set <p>资产实例Id</p>
+     * @param AssetId <p>资产实例Id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 资产类型 
-     * @return AssetType 资产类型
+     * Get <p>资产类型</p> 
+     * @return AssetType <p>资产类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类型
-     * @param AssetType 资产类型
+     * Set <p>资产类型</p>
+     * @param AssetType <p>资产类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get  资产名 
-     * @return Name  资产名
+     * Get <p>资产名</p> 
+     * @return Name <p>资产名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set  资产名
-     * @param Name  资产名
+     * Set <p>资产名</p>
+     * @param Name <p>资产名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 账号数 
-     * @return AccountCount 账号数
+     * Get <p>账号数</p> 
+     * @return AccountCount <p>账号数</p>
      */
     public Long getAccountCount() {
         return this.AccountCount;
     }
 
     /**
-     * Set 账号数
-     * @param AccountCount 账号数
+     * Set <p>账号数</p>
+     * @param AccountCount <p>账号数</p>
      */
     public void setAccountCount(Long AccountCount) {
         this.AccountCount = AccountCount;
     }
 
     /**
-     * Get 公网访问地址，如果有多个，使用';'分割 
-     * @return PublicIp 公网访问地址，如果有多个，使用';'分割
+     * Get <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p> 
+     * @return PublicIp <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 公网访问地址，如果有多个，使用';'分割
-     * @param PublicIp 公网访问地址，如果有多个，使用';'分割
+     * Set <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+     * @param PublicIp <p>公网访问地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网访问地址，如果有多个，使用';'分割 
-     * @return PrivateIp 内网访问地址，如果有多个，使用';'分割
+     * Get <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p> 
+     * @return PrivateIp <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 内网访问地址，如果有多个，使用';'分割
-     * @param PrivateIp 内网访问地址，如果有多个，使用';'分割
+     * Set <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
+     * @param PrivateIp <p>内网访问地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 广域网域名地址，如果有多个，使用';'分割 
-     * @return WanDomain 广域网域名地址，如果有多个，使用';'分割
+     * Get <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p> 
+     * @return WanDomain <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set 广域网域名地址，如果有多个，使用';'分割
-     * @param WanDomain 广域网域名地址，如果有多个，使用';'分割
+     * Set <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
+     * @param WanDomain <p>广域网域名地址，如果有多个，使用&#39;;&#39;分割</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 资产所在vpc的vpcid 
-     * @return VpcId 资产所在vpc的vpcid
+     * Get <p>资产所在vpc的vpcid</p> 
+     * @return VpcId <p>资产所在vpc的vpcid</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 资产所在vpc的vpcid
-     * @param VpcId 资产所在vpc的vpcid
+     * Set <p>资产所在vpc的vpcid</p>
+     * @param VpcId <p>资产所在vpc的vpcid</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 资产所在vpc的vpc名 
-     * @return VpcName 资产所在vpc的vpc名
+     * Get <p>资产所在vpc的vpc名</p> 
+     * @return VpcName <p>资产所在vpc的vpc名</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 资产所在vpc的vpc名
-     * @param VpcName 资产所在vpc的vpc名
+     * Set <p>资产所在vpc的vpc名</p>
+     * @param VpcName <p>资产所在vpc的vpc名</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 资产所在vpc子网的subnetid 
-     * @return SubnetId 资产所在vpc子网的subnetid
+     * Get <p>资产所在vpc子网的subnetid</p> 
+     * @return SubnetId <p>资产所在vpc子网的subnetid</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 资产所在vpc子网的subnetid
-     * @param SubnetId 资产所在vpc子网的subnetid
+     * Set <p>资产所在vpc子网的subnetid</p>
+     * @param SubnetId <p>资产所在vpc子网的subnetid</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 资产所在vpc子网名 
-     * @return SubnetName 资产所在vpc子网名
+     * Get <p>资产所在vpc子网名</p> 
+     * @return SubnetName <p>资产所在vpc子网名</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 资产所在vpc子网名
-     * @param SubnetName 资产所在vpc子网名
+     * Set <p>资产所在vpc子网名</p>
+     * @param SubnetName <p>资产所在vpc子网名</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 实例状态 
-     * @return Status 实例状态
+     * Get <p>实例状态</p> 
+     * @return Status <p>实例状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-     * @param Status 实例状态
+     * Set <p>实例状态</p>
+     * @param Status <p>实例状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 管理者信息。 
-     * @return Manager 管理者信息。
+     * Get <p>管理者信息。</p> 
+     * @return Manager <p>管理者信息。</p>
      */
     public DspmUinUser [] getManager() {
         return this.Manager;
     }
 
     /**
-     * Set 管理者信息。
-     * @param Manager 管理者信息。
+     * Set <p>管理者信息。</p>
+     * @param Manager <p>管理者信息。</p>
      */
     public void setManager(DspmUinUser [] Manager) {
         this.Manager = Manager;
     }
 
     /**
-     * Get 是否绑定身份。0-未绑定 1-已绑定 
-     * @return BindIdentify 是否绑定身份。0-未绑定 1-已绑定
+     * Get <p>是否绑定身份。0-未绑定 1-已绑定</p> 
+     * @return BindIdentify <p>是否绑定身份。0-未绑定 1-已绑定</p>
      */
     public Long getBindIdentify() {
         return this.BindIdentify;
     }
 
     /**
-     * Set 是否绑定身份。0-未绑定 1-已绑定
-     * @param BindIdentify 是否绑定身份。0-未绑定 1-已绑定
+     * Set <p>是否绑定身份。0-未绑定 1-已绑定</p>
+     * @param BindIdentify <p>是否绑定身份。0-未绑定 1-已绑定</p>
      */
     public void setBindIdentify(Long BindIdentify) {
         this.BindIdentify = BindIdentify;
     }
 
     /**
-     * Get 是否管理员 
-     * @return IsManager 是否管理员
+     * Get <p>是否管理员</p> 
+     * @return IsManager <p>是否管理员</p>
      */
     public Long getIsManager() {
         return this.IsManager;
     }
 
     /**
-     * Set 是否管理员
-     * @param IsManager 是否管理员
+     * Set <p>是否管理员</p>
+     * @param IsManager <p>是否管理员</p>
      */
     public void setIsManager(Long IsManager) {
         this.IsManager = IsManager;
     }
 
     /**
-     * Get 风险统计信息 
-     * @return RiskCount 风险统计信息
+     * Get <p>风险统计信息</p> 
+     * @return RiskCount <p>风险统计信息</p>
      */
     public DspmRiskCount getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set 风险统计信息
-     * @param RiskCount 风险统计信息
+     * Set <p>风险统计信息</p>
+     * @param RiskCount <p>风险统计信息</p>
      */
     public void setRiskCount(DspmRiskCount RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
- 
-     * @return SafetyAdvice 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
+     * Get <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p> 
+     * @return SafetyAdvice <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
      */
     public String getSafetyAdvice() {
         return this.SafetyAdvice;
     }
 
     /**
-     * Set 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
-     * @param SafetyAdvice 安全建议。
-Resolve 立即解决
-Reinforcement 加固
-None 暂无异常
-
+     * Set <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
+     * @param SafetyAdvice <p>安全建议。<br>Resolve 立即解决<br>Reinforcement 加固<br>None 暂无异常</p>
      */
     public void setSafetyAdvice(String SafetyAdvice) {
         this.SafetyAdvice = SafetyAdvice;
     }
 
     /**
-     * Get 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中 
-     * @return LogDeliveryStatus 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
+     * Get <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p> 
+     * @return LogDeliveryStatus <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
      */
     public Long getLogDeliveryStatus() {
         return this.LogDeliveryStatus;
     }
 
     /**
-     * Set 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
-     * @param LogDeliveryStatus 日志投递状态。
-0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中
+     * Set <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
+     * @param LogDeliveryStatus <p>日志投递状态。<br>0-投递关闭 1-投递打开 2-投递开通中 3-投递关闭中</p>
      */
     public void setLogDeliveryStatus(Long LogDeliveryStatus) {
         this.LogDeliveryStatus = LogDeliveryStatus;
     }
 
     /**
-     * Get 是否支持日志投递。0-不支持 1-支持 
-     * @return LogDeliverySupported 是否支持日志投递。0-不支持 1-支持
+     * Get <p>是否支持日志投递。0-不支持 1-支持</p> 
+     * @return LogDeliverySupported <p>是否支持日志投递。0-不支持 1-支持</p>
      */
     public Long getLogDeliverySupported() {
         return this.LogDeliverySupported;
     }
 
     /**
-     * Set 是否支持日志投递。0-不支持 1-支持
-     * @param LogDeliverySupported 是否支持日志投递。0-不支持 1-支持
+     * Set <p>是否支持日志投递。0-不支持 1-支持</p>
+     * @param LogDeliverySupported <p>是否支持日志投递。0-不支持 1-支持</p>
      */
     public void setLogDeliverySupported(Long LogDeliverySupported) {
         this.LogDeliverySupported = LogDeliverySupported;
     }
 
     /**
-     * Get 数据扫描信息 
-     * @return DataScanInfo 数据扫描信息
+     * Get <p>数据扫描信息</p> 
+     * @return DataScanInfo <p>数据扫描信息</p>
      */
     public DspmAssetDataScanDetail getDataScanInfo() {
         return this.DataScanInfo;
     }
 
     /**
-     * Set 数据扫描信息
-     * @param DataScanInfo 数据扫描信息
+     * Set <p>数据扫描信息</p>
+     * @param DataScanInfo <p>数据扫描信息</p>
      */
     public void setDataScanInfo(DspmAssetDataScanDetail DataScanInfo) {
         this.DataScanInfo = DataScanInfo;
     }
 
     /**
-     * Get 资产所属账号app id 
-     * @return AppId 资产所属账号app id
+     * Get <p>资产所属账号app id</p> 
+     * @return AppId <p>资产所属账号app id</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 资产所属账号app id
-     * @param AppId 资产所属账号app id
+     * Set <p>资产所属账号app id</p>
+     * @param AppId <p>资产所属账号app id</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号昵称 
-     * @return NickName 账号昵称
+     * Get <p>账号昵称</p> 
+     * @return NickName <p>账号昵称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 账号昵称
-     * @param NickName 账号昵称
+     * Set <p>账号昵称</p>
+     * @param NickName <p>账号昵称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 资产所属账号uin 
-     * @return Uin 资产所属账号uin
+     * Get <p>资产所属账号uin</p> 
+     * @return Uin <p>资产所属账号uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 资产所属账号uin
-     * @param Uin 资产所属账号uin
+     * Set <p>资产所属账号uin</p>
+     * @param Uin <p>资产所属账号uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
- 
-     * @return SecurityAnalyseStatus 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
+     * Get <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p> 
+     * @return SecurityAnalyseStatus <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
      */
     public Long getSecurityAnalyseStatus() {
         return this.SecurityAnalyseStatus;
     }
 
     /**
-     * Set 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
-     * @param SecurityAnalyseStatus 安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）
-
+     * Set <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
+     * @param SecurityAnalyseStatus <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
      */
     public void setSecurityAnalyseStatus(Long SecurityAnalyseStatus) {
         this.SecurityAnalyseStatus = SecurityAnalyseStatus;
     }
 
     /**
-     * Get 当前实例的总日志数 
-     * @return TotalAuditLogs 当前实例的总日志数
+     * Get <p>当前实例的总日志数</p> 
+     * @return TotalAuditLogs <p>当前实例的总日志数</p>
      */
     public Long getTotalAuditLogs() {
         return this.TotalAuditLogs;
     }
 
     /**
-     * Set 当前实例的总日志数
-     * @param TotalAuditLogs 当前实例的总日志数
+     * Set <p>当前实例的总日志数</p>
+     * @param TotalAuditLogs <p>当前实例的总日志数</p>
      */
     public void setTotalAuditLogs(Long TotalAuditLogs) {
         this.TotalAuditLogs = TotalAuditLogs;
     }
 
     /**
-     * Get 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists 
-     * @return LogDeliveryDisableReason 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
+     * Get <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p> 
+     * @return LogDeliveryDisableReason <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
      */
     public String getLogDeliveryDisableReason() {
         return this.LogDeliveryDisableReason;
     }
 
     /**
-     * Set 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
-     * @param LogDeliveryDisableReason 日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists
+     * Set <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
+     * @param LogDeliveryDisableReason <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
      */
     public void setLogDeliveryDisableReason(String LogDeliveryDisableReason) {
         this.LogDeliveryDisableReason = LogDeliveryDisableReason;
     }
 
     /**
-     * Get 在线日志的起始时间戳，精确到秒 
-     * @return OldestOnlineLogTimestamp 在线日志的起始时间戳，精确到秒
+     * Get <p>在线日志的起始时间戳，精确到秒</p> 
+     * @return OldestOnlineLogTimestamp <p>在线日志的起始时间戳，精确到秒</p>
      */
     public Long getOldestOnlineLogTimestamp() {
         return this.OldestOnlineLogTimestamp;
     }
 
     /**
-     * Set 在线日志的起始时间戳，精确到秒
-     * @param OldestOnlineLogTimestamp 在线日志的起始时间戳，精确到秒
+     * Set <p>在线日志的起始时间戳，精确到秒</p>
+     * @param OldestOnlineLogTimestamp <p>在线日志的起始时间戳，精确到秒</p>
      */
     public void setOldestOnlineLogTimestamp(Long OldestOnlineLogTimestamp) {
         this.OldestOnlineLogTimestamp = OldestOnlineLogTimestamp;
     }
 
     /**
-     * Get 在线日志的最新时间戳，精确到秒 
-     * @return NewestOnlineLogTimestamp 在线日志的最新时间戳，精确到秒
+     * Get <p>在线日志的最新时间戳，精确到秒</p> 
+     * @return NewestOnlineLogTimestamp <p>在线日志的最新时间戳，精确到秒</p>
      */
     public Long getNewestOnlineLogTimestamp() {
         return this.NewestOnlineLogTimestamp;
     }
 
     /**
-     * Set 在线日志的最新时间戳，精确到秒
-     * @param NewestOnlineLogTimestamp 在线日志的最新时间戳，精确到秒
+     * Set <p>在线日志的最新时间戳，精确到秒</p>
+     * @param NewestOnlineLogTimestamp <p>在线日志的最新时间戳，精确到秒</p>
      */
     public void setNewestOnlineLogTimestamp(Long NewestOnlineLogTimestamp) {
         this.NewestOnlineLogTimestamp = NewestOnlineLogTimestamp;
     }
 
     /**
-     * Get 操作错误信息 
-     * @return OperationErrorMsg 操作错误信息
+     * Get <p>操作错误信息</p> 
+     * @return OperationErrorMsg <p>操作错误信息</p>
      */
     public String getOperationErrorMsg() {
         return this.OperationErrorMsg;
     }
 
     /**
-     * Set 操作错误信息
-     * @param OperationErrorMsg 操作错误信息
+     * Set <p>操作错误信息</p>
+     * @param OperationErrorMsg <p>操作错误信息</p>
      */
     public void setOperationErrorMsg(String OperationErrorMsg) {
         this.OperationErrorMsg = OperationErrorMsg;
     }
 
     /**
-     * Get 是否支持账号操作。0 不支持；1 支持 
-     * @return AccountOptSupported 是否支持账号操作。0 不支持；1 支持
+     * Get <p>是否支持账号操作。0 不支持；1 支持</p> 
+     * @return AccountOptSupported <p>是否支持账号操作。0 不支持；1 支持</p>
      */
     public Long getAccountOptSupported() {
         return this.AccountOptSupported;
     }
 
     /**
-     * Set 是否支持账号操作。0 不支持；1 支持
-     * @param AccountOptSupported 是否支持账号操作。0 不支持；1 支持
+     * Set <p>是否支持账号操作。0 不支持；1 支持</p>
+     * @param AccountOptSupported <p>是否支持账号操作。0 不支持；1 支持</p>
      */
     public void setAccountOptSupported(Long AccountOptSupported) {
         this.AccountOptSupported = AccountOptSupported;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0 
-     * @return ClusterType 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     * Get <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p> 
+     * @return ClusterType <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
-     * @param ClusterType 集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0
+     * Set <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
+     * @param ClusterType <p>集群类型（MongoDB），与云接口 DescribeDBInstances 的 ClusterType 一致：0-副本集 1-分片；非 MongoDB 资产固定 0</p>
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 是否支持敏感数据识别。0 不支持；1 支持 
-     * @return IdentifyScanSupported 是否支持敏感数据识别。0 不支持；1 支持
+     * Get <p>是否支持敏感数据识别。0 不支持；1 支持</p> 
+     * @return IdentifyScanSupported <p>是否支持敏感数据识别。0 不支持；1 支持</p>
      */
     public Long getIdentifyScanSupported() {
         return this.IdentifyScanSupported;
     }
 
     /**
-     * Set 是否支持敏感数据识别。0 不支持；1 支持
-     * @param IdentifyScanSupported 是否支持敏感数据识别。0 不支持；1 支持
+     * Set <p>是否支持敏感数据识别。0 不支持；1 支持</p>
+     * @param IdentifyScanSupported <p>是否支持敏感数据识别。0 不支持；1 支持</p>
      */
     public void setIdentifyScanSupported(Long IdentifyScanSupported) {
         this.IdentifyScanSupported = IdentifyScanSupported;
+    }
+
+    /**
+     * Get <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterName <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterName <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
     }
 
     public DspmDbAsset() {
@@ -974,6 +1000,12 @@ None 暂无异常
         if (source.IdentifyScanSupported != null) {
             this.IdentifyScanSupported = new Long(source.IdentifyScanSupported);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -1016,6 +1048,8 @@ None 暂无异常
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "IdentifyScanSupported", this.IdentifyScanSupported);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

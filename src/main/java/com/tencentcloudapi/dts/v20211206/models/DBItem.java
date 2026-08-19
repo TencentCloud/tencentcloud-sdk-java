@@ -24,460 +24,460 @@ import java.util.HashMap;
 public class DBItem extends AbstractModel {
 
     /**
-    * 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
+    * <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 迁移或同步后的库名，默认与源库相同
+    * <p>迁移或同步后的库名，默认与源库相同</p>
     */
     @SerializedName("NewDbName")
     @Expose
     private String NewDbName;
 
     /**
-    * 迁移或同步的 schema
+    * <p>迁移或同步的 schema</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 迁移或同步后的 schema name
+    * <p>迁移或同步后的 schema name</p>
     */
     @SerializedName("NewSchemaName")
     @Expose
     private String NewSchemaName;
 
     /**
-    * DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
+    * <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
     */
     @SerializedName("DBMode")
     @Expose
     private String DBMode;
 
     /**
-    * schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
+    * <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
     */
     @SerializedName("SchemaMode")
     @Expose
     private String SchemaMode;
 
     /**
-    * 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
+    * <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
     */
     @SerializedName("TableMode")
     @Expose
     private String TableMode;
 
     /**
-    * 表图对象集合，当 TableMode 为 partial 时，此项需要填写
+    * <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
     */
     @SerializedName("Tables")
     @Expose
     private TableItem [] Tables;
 
     /**
-    * 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+    * <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
     */
     @SerializedName("ViewMode")
     @Expose
     private String ViewMode;
 
     /**
-    * 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
+    * <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
     */
     @SerializedName("Views")
     @Expose
     private ViewItem [] Views;
 
     /**
-    * postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
+    * <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
     */
     @SerializedName("RoleMode")
     @Expose
     private String RoleMode;
 
     /**
-    * postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
+    * <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
     */
     @SerializedName("Roles")
     @Expose
     private RoleItem [] Roles;
 
     /**
-    * 选择要同步的模式，partial为部分，all为整选
+    * <p>选择要同步的模式，partial为部分，all为整选</p>
     */
     @SerializedName("FunctionMode")
     @Expose
     private String FunctionMode;
 
     /**
-    * 选择要同步的模式，partial为部分，all为整选
+    * <p>选择要同步的模式，partial为部分，all为整选</p>
     */
     @SerializedName("TriggerMode")
     @Expose
     private String TriggerMode;
 
     /**
-    * 选择要同步的模式，partial为部分，all为整选
+    * <p>选择要同步的模式，partial为部分，all为整选</p>
     */
     @SerializedName("EventMode")
     @Expose
     private String EventMode;
 
     /**
-    * 选择要同步的模式，partial为部分，all为整选
+    * <p>选择要同步的模式，partial为部分，all为整选</p>
     */
     @SerializedName("ProcedureMode")
     @Expose
     private String ProcedureMode;
 
     /**
-    * FunctionMode取值为partial时需要填写
+    * <p>FunctionMode取值为partial时需要填写</p>
     */
     @SerializedName("Functions")
     @Expose
     private String [] Functions;
 
     /**
-    * ProcedureMode取值为partial时需要填写
+    * <p>ProcedureMode取值为partial时需要填写</p>
     */
     @SerializedName("Procedures")
     @Expose
     private String [] Procedures;
 
     /**
-    * EventMode取值为partial时需要填写
+    * <p>EventMode取值为partial时需要填写</p>
     */
     @SerializedName("Events")
     @Expose
     private String [] Events;
 
     /**
-    * TriggerMode取值为partial时需要填写
+    * <p>TriggerMode取值为partial时需要填写</p>
     */
     @SerializedName("Triggers")
     @Expose
     private String [] Triggers;
 
     /**
-     * Get 需要迁移或同步的库名，当ObjectMode为partial时，此项必填 
-     * @return DbName 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
+     * Get <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p> 
+     * @return DbName <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
-     * @param DbName 需要迁移或同步的库名，当ObjectMode为partial时，此项必填
+     * Set <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
+     * @param DbName <p>需要迁移或同步的库名，当ObjectMode为partial时，此项必填</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 迁移或同步后的库名，默认与源库相同 
-     * @return NewDbName 迁移或同步后的库名，默认与源库相同
+     * Get <p>迁移或同步后的库名，默认与源库相同</p> 
+     * @return NewDbName <p>迁移或同步后的库名，默认与源库相同</p>
      */
     public String getNewDbName() {
         return this.NewDbName;
     }
 
     /**
-     * Set 迁移或同步后的库名，默认与源库相同
-     * @param NewDbName 迁移或同步后的库名，默认与源库相同
+     * Set <p>迁移或同步后的库名，默认与源库相同</p>
+     * @param NewDbName <p>迁移或同步后的库名，默认与源库相同</p>
      */
     public void setNewDbName(String NewDbName) {
         this.NewDbName = NewDbName;
     }
 
     /**
-     * Get 迁移或同步的 schema 
-     * @return SchemaName 迁移或同步的 schema
+     * Get <p>迁移或同步的 schema</p> 
+     * @return SchemaName <p>迁移或同步的 schema</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set 迁移或同步的 schema
-     * @param SchemaName 迁移或同步的 schema
+     * Set <p>迁移或同步的 schema</p>
+     * @param SchemaName <p>迁移或同步的 schema</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 迁移或同步后的 schema name 
-     * @return NewSchemaName 迁移或同步后的 schema name
+     * Get <p>迁移或同步后的 schema name</p> 
+     * @return NewSchemaName <p>迁移或同步后的 schema name</p>
      */
     public String getNewSchemaName() {
         return this.NewSchemaName;
     }
 
     /**
-     * Set 迁移或同步后的 schema name
-     * @param NewSchemaName 迁移或同步后的 schema name
+     * Set <p>迁移或同步后的 schema name</p>
+     * @param NewSchemaName <p>迁移或同步后的 schema name</p>
      */
     public void setNewSchemaName(String NewSchemaName) {
         this.NewSchemaName = NewSchemaName;
     }
 
     /**
-     * Get DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填 
-     * @return DBMode DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
+     * Get <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p> 
+     * @return DBMode <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
      */
     public String getDBMode() {
         return this.DBMode;
     }
 
     /**
-     * Set DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
-     * @param DBMode DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填
+     * Set <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
+     * @param DBMode <p>DB选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当ObjectMode为partial时，此项必填</p>
      */
     public void setDBMode(String DBMode) {
         this.DBMode = DBMode;
     }
 
     /**
-     * Get schema选择模式: all(为当前对象下的所有对象)，partial(部分对象) 
-     * @return SchemaMode schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
+     * Get <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p> 
+     * @return SchemaMode <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
      */
     public String getSchemaMode() {
         return this.SchemaMode;
     }
 
     /**
-     * Set schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
-     * @param SchemaMode schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)
+     * Set <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
+     * @param SchemaMode <p>schema选择模式: all(为当前对象下的所有对象)，partial(部分对象)</p>
      */
     public void setSchemaMode(String SchemaMode) {
         this.SchemaMode = SchemaMode;
     }
 
     /**
-     * Get 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填 
-     * @return TableMode 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
+     * Get <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p> 
+     * @return TableMode <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
      */
     public String getTableMode() {
         return this.TableMode;
     }
 
     /**
-     * Set 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
-     * @param TableMode 表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填
+     * Set <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
+     * @param TableMode <p>表选择模式: all(为当前对象下的所有对象)，partial(部分对象)，当DBMode为partial时此项必填</p>
      */
     public void setTableMode(String TableMode) {
         this.TableMode = TableMode;
     }
 
     /**
-     * Get 表图对象集合，当 TableMode 为 partial 时，此项需要填写 
-     * @return Tables 表图对象集合，当 TableMode 为 partial 时，此项需要填写
+     * Get <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p> 
+     * @return Tables <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
      */
     public TableItem [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set 表图对象集合，当 TableMode 为 partial 时，此项需要填写
-     * @param Tables 表图对象集合，当 TableMode 为 partial 时，此项需要填写
+     * Set <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
+     * @param Tables <p>表图对象集合，当 TableMode 为 partial 时，此项需要填写</p>
      */
     public void setTables(TableItem [] Tables) {
         this.Tables = Tables;
     }
 
     /**
-     * Get 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象 
-     * @return ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * Get <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p> 
+     * @return ViewMode <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
      */
     public String getViewMode() {
         return this.ViewMode;
     }
 
     /**
-     * Set 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
-     * @param ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * Set <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
+     * @param ViewMode <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象</p>
      */
     public void setViewMode(String ViewMode) {
         this.ViewMode = ViewMode;
     }
 
     /**
-     * Get 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写 
-     * @return Views 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
+     * Get <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p> 
+     * @return Views <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
      */
     public ViewItem [] getViews() {
         return this.Views;
     }
 
     /**
-     * Set 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
-     * @param Views 视图对象集合，当 ViewMode 为 partial 时， 此项需要填写
+     * Set <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
+     * @param Views <p>视图对象集合，当 ViewMode 为 partial 时， 此项需要填写</p>
      */
     public void setViews(ViewItem [] Views) {
         this.Views = Views;
     }
 
     /**
-     * Get postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象 
-     * @return RoleMode postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
+     * Get <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p> 
+     * @return RoleMode <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
      */
     public String getRoleMode() {
         return this.RoleMode;
     }
 
     /**
-     * Set postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
-     * @param RoleMode postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象
+     * Set <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
+     * @param RoleMode <p>postgresql独有参数，角色选择模式: all 为当前对象下的所有角色对象,partial 为部分角色对象</p>
      */
     public void setRoleMode(String RoleMode) {
         this.RoleMode = RoleMode;
     }
 
     /**
-     * Get postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写 
-     * @return Roles postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
+     * Get <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p> 
+     * @return Roles <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
      */
     public RoleItem [] getRoles() {
         return this.Roles;
     }
 
     /**
-     * Set postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
-     * @param Roles postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写
+     * Set <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
+     * @param Roles <p>postgresql独有参数，当 RoleMode 为 partial 时， 此项需要填写</p>
      */
     public void setRoles(RoleItem [] Roles) {
         this.Roles = Roles;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选 
-     * @return FunctionMode 选择要同步的模式，partial为部分，all为整选
+     * Get <p>选择要同步的模式，partial为部分，all为整选</p> 
+     * @return FunctionMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public String getFunctionMode() {
         return this.FunctionMode;
     }
 
     /**
-     * Set 选择要同步的模式，partial为部分，all为整选
-     * @param FunctionMode 选择要同步的模式，partial为部分，all为整选
+     * Set <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param FunctionMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public void setFunctionMode(String FunctionMode) {
         this.FunctionMode = FunctionMode;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选 
-     * @return TriggerMode 选择要同步的模式，partial为部分，all为整选
+     * Get <p>选择要同步的模式，partial为部分，all为整选</p> 
+     * @return TriggerMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public String getTriggerMode() {
         return this.TriggerMode;
     }
 
     /**
-     * Set 选择要同步的模式，partial为部分，all为整选
-     * @param TriggerMode 选择要同步的模式，partial为部分，all为整选
+     * Set <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param TriggerMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public void setTriggerMode(String TriggerMode) {
         this.TriggerMode = TriggerMode;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选 
-     * @return EventMode 选择要同步的模式，partial为部分，all为整选
+     * Get <p>选择要同步的模式，partial为部分，all为整选</p> 
+     * @return EventMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public String getEventMode() {
         return this.EventMode;
     }
 
     /**
-     * Set 选择要同步的模式，partial为部分，all为整选
-     * @param EventMode 选择要同步的模式，partial为部分，all为整选
+     * Set <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param EventMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public void setEventMode(String EventMode) {
         this.EventMode = EventMode;
     }
 
     /**
-     * Get 选择要同步的模式，partial为部分，all为整选 
-     * @return ProcedureMode 选择要同步的模式，partial为部分，all为整选
+     * Get <p>选择要同步的模式，partial为部分，all为整选</p> 
+     * @return ProcedureMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public String getProcedureMode() {
         return this.ProcedureMode;
     }
 
     /**
-     * Set 选择要同步的模式，partial为部分，all为整选
-     * @param ProcedureMode 选择要同步的模式，partial为部分，all为整选
+     * Set <p>选择要同步的模式，partial为部分，all为整选</p>
+     * @param ProcedureMode <p>选择要同步的模式，partial为部分，all为整选</p>
      */
     public void setProcedureMode(String ProcedureMode) {
         this.ProcedureMode = ProcedureMode;
     }
 
     /**
-     * Get FunctionMode取值为partial时需要填写 
-     * @return Functions FunctionMode取值为partial时需要填写
+     * Get <p>FunctionMode取值为partial时需要填写</p> 
+     * @return Functions <p>FunctionMode取值为partial时需要填写</p>
      */
     public String [] getFunctions() {
         return this.Functions;
     }
 
     /**
-     * Set FunctionMode取值为partial时需要填写
-     * @param Functions FunctionMode取值为partial时需要填写
+     * Set <p>FunctionMode取值为partial时需要填写</p>
+     * @param Functions <p>FunctionMode取值为partial时需要填写</p>
      */
     public void setFunctions(String [] Functions) {
         this.Functions = Functions;
     }
 
     /**
-     * Get ProcedureMode取值为partial时需要填写 
-     * @return Procedures ProcedureMode取值为partial时需要填写
+     * Get <p>ProcedureMode取值为partial时需要填写</p> 
+     * @return Procedures <p>ProcedureMode取值为partial时需要填写</p>
      */
     public String [] getProcedures() {
         return this.Procedures;
     }
 
     /**
-     * Set ProcedureMode取值为partial时需要填写
-     * @param Procedures ProcedureMode取值为partial时需要填写
+     * Set <p>ProcedureMode取值为partial时需要填写</p>
+     * @param Procedures <p>ProcedureMode取值为partial时需要填写</p>
      */
     public void setProcedures(String [] Procedures) {
         this.Procedures = Procedures;
     }
 
     /**
-     * Get EventMode取值为partial时需要填写 
-     * @return Events EventMode取值为partial时需要填写
+     * Get <p>EventMode取值为partial时需要填写</p> 
+     * @return Events <p>EventMode取值为partial时需要填写</p>
      */
     public String [] getEvents() {
         return this.Events;
     }
 
     /**
-     * Set EventMode取值为partial时需要填写
-     * @param Events EventMode取值为partial时需要填写
+     * Set <p>EventMode取值为partial时需要填写</p>
+     * @param Events <p>EventMode取值为partial时需要填写</p>
      */
     public void setEvents(String [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get TriggerMode取值为partial时需要填写 
-     * @return Triggers TriggerMode取值为partial时需要填写
+     * Get <p>TriggerMode取值为partial时需要填写</p> 
+     * @return Triggers <p>TriggerMode取值为partial时需要填写</p>
      */
     public String [] getTriggers() {
         return this.Triggers;
     }
 
     /**
-     * Set TriggerMode取值为partial时需要填写
-     * @param Triggers TriggerMode取值为partial时需要填写
+     * Set <p>TriggerMode取值为partial时需要填写</p>
+     * @param Triggers <p>TriggerMode取值为partial时需要填写</p>
      */
     public void setTriggers(String [] Triggers) {
         this.Triggers = Triggers;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetUserQuotaResponse extends AbstractModel {
 
     /**
-    * UID/GID信息
+    * <p>UID/GID信息</p>
     */
     @SerializedName("UserId")
     @Expose
@@ -38,16 +38,16 @@ public class SetUserQuotaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get UID/GID信息 
-     * @return UserId UID/GID信息
+     * Get <p>UID/GID信息</p> 
+     * @return UserId <p>UID/GID信息</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set UID/GID信息
-     * @param UserId UID/GID信息
+     * Set <p>UID/GID信息</p>
+     * @param UserId <p>UID/GID信息</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

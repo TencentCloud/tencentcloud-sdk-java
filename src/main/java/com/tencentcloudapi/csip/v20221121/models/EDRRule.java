@@ -255,6 +255,34 @@ public class EDRRule extends AbstractModel {
     private String [] ExcludeInstanceIDs;
 
     /**
+    * <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+    */
+    @SerializedName("ClusterIDs")
+    @Expose
+    private String [] ClusterIDs;
+
+    /**
+    * <p>排除集群ID列表（空返回 []）</p>
+    */
+    @SerializedName("ExcludeClusterIDs")
+    @Expose
+    private String [] ExcludeClusterIDs;
+
+    /**
+    * <p>容器条件匹配</p>
+    */
+    @SerializedName("ConditionMatches")
+    @Expose
+    private ConditionMatch [] ConditionMatches;
+
+    /**
+    * <p>安全中心标签</p>
+    */
+    @SerializedName("TagItems")
+    @Expose
+    private EDRRuleTagItem [] TagItems;
+
+    /**
      * Get <p>策略ID</p> 
      * @return RuleID <p>策略ID</p>
      */
@@ -782,6 +810,70 @@ public class EDRRule extends AbstractModel {
         this.ExcludeInstanceIDs = ExcludeInstanceIDs;
     }
 
+    /**
+     * Get <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p> 
+     * @return ClusterIDs <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+     */
+    public String [] getClusterIDs() {
+        return this.ClusterIDs;
+    }
+
+    /**
+     * Set <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+     * @param ClusterIDs <p>生效集群ID列表（TCSSScope=0 时有值；空返回 []）</p>
+     */
+    public void setClusterIDs(String [] ClusterIDs) {
+        this.ClusterIDs = ClusterIDs;
+    }
+
+    /**
+     * Get <p>排除集群ID列表（空返回 []）</p> 
+     * @return ExcludeClusterIDs <p>排除集群ID列表（空返回 []）</p>
+     */
+    public String [] getExcludeClusterIDs() {
+        return this.ExcludeClusterIDs;
+    }
+
+    /**
+     * Set <p>排除集群ID列表（空返回 []）</p>
+     * @param ExcludeClusterIDs <p>排除集群ID列表（空返回 []）</p>
+     */
+    public void setExcludeClusterIDs(String [] ExcludeClusterIDs) {
+        this.ExcludeClusterIDs = ExcludeClusterIDs;
+    }
+
+    /**
+     * Get <p>容器条件匹配</p> 
+     * @return ConditionMatches <p>容器条件匹配</p>
+     */
+    public ConditionMatch [] getConditionMatches() {
+        return this.ConditionMatches;
+    }
+
+    /**
+     * Set <p>容器条件匹配</p>
+     * @param ConditionMatches <p>容器条件匹配</p>
+     */
+    public void setConditionMatches(ConditionMatch [] ConditionMatches) {
+        this.ConditionMatches = ConditionMatches;
+    }
+
+    /**
+     * Get <p>安全中心标签</p> 
+     * @return TagItems <p>安全中心标签</p>
+     */
+    public EDRRuleTagItem [] getTagItems() {
+        return this.TagItems;
+    }
+
+    /**
+     * Set <p>安全中心标签</p>
+     * @param TagItems <p>安全中心标签</p>
+     */
+    public void setTagItems(EDRRuleTagItem [] TagItems) {
+        this.TagItems = TagItems;
+    }
+
     public EDRRule() {
     }
 
@@ -925,6 +1017,30 @@ public class EDRRule extends AbstractModel {
                 this.ExcludeInstanceIDs[i] = new String(source.ExcludeInstanceIDs[i]);
             }
         }
+        if (source.ClusterIDs != null) {
+            this.ClusterIDs = new String[source.ClusterIDs.length];
+            for (int i = 0; i < source.ClusterIDs.length; i++) {
+                this.ClusterIDs[i] = new String(source.ClusterIDs[i]);
+            }
+        }
+        if (source.ExcludeClusterIDs != null) {
+            this.ExcludeClusterIDs = new String[source.ExcludeClusterIDs.length];
+            for (int i = 0; i < source.ExcludeClusterIDs.length; i++) {
+                this.ExcludeClusterIDs[i] = new String(source.ExcludeClusterIDs[i]);
+            }
+        }
+        if (source.ConditionMatches != null) {
+            this.ConditionMatches = new ConditionMatch[source.ConditionMatches.length];
+            for (int i = 0; i < source.ConditionMatches.length; i++) {
+                this.ConditionMatches[i] = new ConditionMatch(source.ConditionMatches[i]);
+            }
+        }
+        if (source.TagItems != null) {
+            this.TagItems = new EDRRuleTagItem[source.TagItems.length];
+            for (int i = 0; i < source.TagItems.length; i++) {
+                this.TagItems[i] = new EDRRuleTagItem(source.TagItems[i]);
+            }
+        }
     }
 
 
@@ -965,6 +1081,10 @@ public class EDRRule extends AbstractModel {
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamArraySimple(map, prefix + "InstanceIDs.", this.InstanceIDs);
         this.setParamArraySimple(map, prefix + "ExcludeInstanceIDs.", this.ExcludeInstanceIDs);
+        this.setParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
+        this.setParamArraySimple(map, prefix + "ExcludeClusterIDs.", this.ExcludeClusterIDs);
+        this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
+        this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
 
     }
 }

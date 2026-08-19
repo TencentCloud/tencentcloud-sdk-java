@@ -94,6 +94,13 @@ public class NoticeContentTmplItem extends AbstractModel {
     private SlackRobotNoticeTmplMatcher [] SlackRobot;
 
     /**
+    * <p>Teams 工作流渠道</p>
+    */
+    @SerializedName("TeamsWorkflowRobot")
+    @Expose
+    private TeamsWorkflowRobotNoticeTmplMatcher [] TeamsWorkflowRobot;
+
+    /**
      * Get <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QCloudYehe <p>官网通知渠道配置</p>
@@ -265,6 +272,22 @@ public class NoticeContentTmplItem extends AbstractModel {
         this.SlackRobot = SlackRobot;
     }
 
+    /**
+     * Get <p>Teams 工作流渠道</p> 
+     * @return TeamsWorkflowRobot <p>Teams 工作流渠道</p>
+     */
+    public TeamsWorkflowRobotNoticeTmplMatcher [] getTeamsWorkflowRobot() {
+        return this.TeamsWorkflowRobot;
+    }
+
+    /**
+     * Set <p>Teams 工作流渠道</p>
+     * @param TeamsWorkflowRobot <p>Teams 工作流渠道</p>
+     */
+    public void setTeamsWorkflowRobot(TeamsWorkflowRobotNoticeTmplMatcher [] TeamsWorkflowRobot) {
+        this.TeamsWorkflowRobot = TeamsWorkflowRobot;
+    }
+
     public NoticeContentTmplItem() {
     }
 
@@ -327,6 +350,12 @@ public class NoticeContentTmplItem extends AbstractModel {
                 this.SlackRobot[i] = new SlackRobotNoticeTmplMatcher(source.SlackRobot[i]);
             }
         }
+        if (source.TeamsWorkflowRobot != null) {
+            this.TeamsWorkflowRobot = new TeamsWorkflowRobotNoticeTmplMatcher[source.TeamsWorkflowRobot.length];
+            for (int i = 0; i < source.TeamsWorkflowRobot.length; i++) {
+                this.TeamsWorkflowRobot[i] = new TeamsWorkflowRobotNoticeTmplMatcher(source.TeamsWorkflowRobot[i]);
+            }
+        }
     }
 
 
@@ -343,6 +372,7 @@ public class NoticeContentTmplItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PagerDutyRobot.", this.PagerDutyRobot);
         this.setParamArrayObj(map, prefix + "GoogleChatRobot.", this.GoogleChatRobot);
         this.setParamArrayObj(map, prefix + "SlackRobot.", this.SlackRobot);
+        this.setParamArrayObj(map, prefix + "TeamsWorkflowRobot.", this.TeamsWorkflowRobot);
 
     }
 }

@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class UpdateAsrKeyWordLibRequest extends AbstractModel {
 
     /**
-    * 关键词表ID
+    * <p>关键词表ID</p>
     */
     @SerializedName("KeyWordLibId")
     @Expose
     private String KeyWordLibId;
 
     /**
-    * 词表名称，长度在1-20之间
-仅限中英文数字-_
+    * <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
+    * <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
     */
     @SerializedName("KeyWordFile")
     @Expose
     private String KeyWordFile;
 
     /**
-     * Get 关键词表ID 
-     * @return KeyWordLibId 关键词表ID
+     * Get <p>关键词表ID</p> 
+     * @return KeyWordLibId <p>关键词表ID</p>
      */
     public String getKeyWordLibId() {
         return this.KeyWordLibId;
     }
 
     /**
-     * Set 关键词表ID
-     * @param KeyWordLibId 关键词表ID
+     * Set <p>关键词表ID</p>
+     * @param KeyWordLibId <p>关键词表ID</p>
      */
     public void setKeyWordLibId(String KeyWordLibId) {
         this.KeyWordLibId = KeyWordLibId;
     }
 
     /**
-     * Get 词表名称，长度在1-20之间
-仅限中英文数字-_ 
-     * @return Name 词表名称，长度在1-20之间
-仅限中英文数字-_
+     * Get <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p> 
+     * @return Name <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 词表名称，长度在1-20之间
-仅限中英文数字-_
-     * @param Name 词表名称，长度在1-20之间
-仅限中英文数字-_
+     * Set <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
+     * @param Name <p>词表名称，长度在1-20之间<br>仅限中英文数字-_</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称 
-     * @return KeyWordFile - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
+     * Get <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul> 
+     * @return KeyWordFile <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
      */
     public String getKeyWordFile() {
         return this.KeyWordFile;
     }
 
     /**
-     * Set - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
-     * @param KeyWordFile - 词文件（纯文本文件）以行分隔 ，进行二进制base64编码
-- 格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 
-- 每个词最多5个汉字或15个字符，单个词库最多不超过100个词
-- 此参数为空则只更新词表名称
+     * Set <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
+     * @param KeyWordFile <ul><li>词文件（纯文本文件）以行分隔 ，进行二进制base64编码</li><li>格式要求：TXT 每行只有一个词，不满足格式则报错无法上传 </li><li>每个词最多5个汉字或15个字符，单个词库最多不超过100个词</li><li>此参数为空则只更新词表名称</li></ul>
      */
     public void setKeyWordFile(String KeyWordFile) {
         this.KeyWordFile = KeyWordFile;

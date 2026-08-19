@@ -59,6 +59,13 @@ public class CloneVoiceResponse extends AbstractModel {
     private String AudioUrl;
 
     /**
+    * <p>扩展信息，json字符串</p>
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class CloneVoiceResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>扩展信息，json字符串</p> 
+     * @return ExtInfo <p>扩展信息，json字符串</p>
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set <p>扩展信息，json字符串</p>
+     * @param ExtInfo <p>扩展信息，json字符串</p>
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +207,9 @@ public class CloneVoiceResponse extends AbstractModel {
         if (source.AudioUrl != null) {
             this.AudioUrl = new String(source.AudioUrl);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +225,7 @@ public class CloneVoiceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamSimple(map, prefix + "AudioData", this.AudioData);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

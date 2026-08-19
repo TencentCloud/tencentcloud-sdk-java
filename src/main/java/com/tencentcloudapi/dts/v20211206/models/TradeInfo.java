@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class TradeInfo extends AbstractModel {
 
     /**
-    * 交易订单号
+    * <p>交易订单号</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * 上一次交易订单号
+    * <p>上一次交易订单号</p>
     */
     @SerializedName("LastDealName")
     @Expose
     private String LastDealName;
 
     /**
-    * 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
+    * <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
     */
     @SerializedName("InstanceClass")
     @Expose
     private String InstanceClass;
 
     /**
-    * 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
+    * <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
     */
     @SerializedName("TradeStatus")
     @Expose
     private String TradeStatus;
 
     /**
-    * 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
+    * <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
+    * <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-    * 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
+    * <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 下线原因
+    * <p>下线原因</p>
     */
     @SerializedName("OfflineReason")
     @Expose
     private String OfflineReason;
 
     /**
-    * 隔离原因
+    * <p>隔离原因</p>
     */
     @SerializedName("IsolateReason")
     @Expose
     private String IsolateReason;
 
     /**
-    * 付费类型，包括：postpay(后付费)、prepay(预付费)
+    * <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
     */
     @SerializedName("PayType")
     @Expose
     private String PayType;
 
     /**
-    * 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+    * <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
     */
     @SerializedName("BillingType")
     @Expose
     private String BillingType;
 
     /**
-     * Get 交易订单号 
-     * @return DealName 交易订单号
+     * Get <p>交易订单号</p> 
+     * @return DealName <p>交易订单号</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 交易订单号
-     * @param DealName 交易订单号
+     * Set <p>交易订单号</p>
+     * @param DealName <p>交易订单号</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 上一次交易订单号 
-     * @return LastDealName 上一次交易订单号
+     * Get <p>上一次交易订单号</p> 
+     * @return LastDealName <p>上一次交易订单号</p>
      */
     public String getLastDealName() {
         return this.LastDealName;
     }
 
     /**
-     * Set 上一次交易订单号
-     * @param LastDealName 上一次交易订单号
+     * Set <p>上一次交易订单号</p>
+     * @param LastDealName <p>上一次交易订单号</p>
      */
     public void setLastDealName(String LastDealName) {
         this.LastDealName = LastDealName;
     }
 
     /**
-     * Get 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等 
-     * @return InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
+     * Get <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p> 
+     * @return InstanceClass <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-     * @param InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
+     * Set <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
+     * @param InstanceClass <p>实例规格，包括：micro、small、medium、large、xlarge、2xlarge等</p>
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
     }
 
     /**
-     * Get 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费) 
-     * @return TradeStatus 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
+     * Get <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p> 
+     * @return TradeStatus <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
      */
     public String getTradeStatus() {
         return this.TradeStatus;
     }
 
     /**
-     * Set 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-     * @param TradeStatus 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
+     * Set <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
+     * @param TradeStatus <p>计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)</p>
      */
     public void setTradeStatus(String TradeStatus) {
         this.TradeStatus = TradeStatus;
     }
 
     /**
-     * Get 到期时间，格式为"yyyy-mm-dd hh:mm:ss" 
-     * @return ExpireTime 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * Get <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return ExpireTime <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-     * @param ExpireTime 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * Set <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param ExpireTime <p>到期时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 下线时间，格式为"yyyy-mm-dd hh:mm:ss" 
-     * @return OfflineTime 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * Get <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return OfflineTime <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-     * @param OfflineTime 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * Set <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param OfflineTime <p>下线时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 隔离时间，格式为"yyyy-mm-dd hh:mm:ss" 
-     * @return IsolateTime 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * Get <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return IsolateTime <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-     * @param IsolateTime 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
+     * Set <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param IsolateTime <p>隔离时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 下线原因 
-     * @return OfflineReason 下线原因
+     * Get <p>下线原因</p> 
+     * @return OfflineReason <p>下线原因</p>
      */
     public String getOfflineReason() {
         return this.OfflineReason;
     }
 
     /**
-     * Set 下线原因
-     * @param OfflineReason 下线原因
+     * Set <p>下线原因</p>
+     * @param OfflineReason <p>下线原因</p>
      */
     public void setOfflineReason(String OfflineReason) {
         this.OfflineReason = OfflineReason;
     }
 
     /**
-     * Get 隔离原因 
-     * @return IsolateReason 隔离原因
+     * Get <p>隔离原因</p> 
+     * @return IsolateReason <p>隔离原因</p>
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set 隔离原因
-     * @param IsolateReason 隔离原因
+     * Set <p>隔离原因</p>
+     * @param IsolateReason <p>隔离原因</p>
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;
     }
 
     /**
-     * Get 付费类型，包括：postpay(后付费)、prepay(预付费) 
-     * @return PayType 付费类型，包括：postpay(后付费)、prepay(预付费)
+     * Get <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p> 
+     * @return PayType <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
      */
     public String getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 付费类型，包括：postpay(后付费)、prepay(预付费)
-     * @param PayType 付费类型，包括：postpay(后付费)、prepay(预付费)
+     * Set <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
+     * @param PayType <p>付费类型，包括：postpay(后付费)、prepay(预付费)</p>
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中) 
-     * @return BillingType 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+     * Get <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p> 
+     * @return BillingType <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
      */
     public String getBillingType() {
         return this.BillingType;
     }
 
     /**
-     * Set 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-     * @param BillingType 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
+     * Set <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
+     * @param BillingType <p>任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)</p>
      */
     public void setBillingType(String BillingType) {
         this.BillingType = BillingType;

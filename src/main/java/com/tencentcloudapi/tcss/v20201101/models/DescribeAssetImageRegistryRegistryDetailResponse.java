@@ -101,7 +101,7 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private RegistryConnDetectResult [] ConnDetectDetail;
 
     /**
-    * <p>tcr情况下instance_id</p>
+    * <p>TCR实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
@@ -319,16 +319,16 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get <p>tcr情况下instance_id</p> 
-     * @return InstanceID <p>tcr情况下instance_id</p>
+     * Get <p>TCR实例ID</p> 
+     * @return InstanceID <p>TCR实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set <p>tcr情况下instance_id</p>
-     * @param InstanceID <p>tcr情况下instance_id</p>
+     * Set <p>TCR实例ID</p>
+     * @param InstanceID <p>TCR实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

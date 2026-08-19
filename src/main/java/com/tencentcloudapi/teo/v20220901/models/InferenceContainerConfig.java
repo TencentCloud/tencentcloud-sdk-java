@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InferenceContainerConfig extends AbstractModel {
 
     /**
-    * 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
+    * <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
     */
     @SerializedName("ImageType")
     @Expose
     private String ImageType;
 
     /**
-    * TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+    * <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TcrRepositoryConfig")
@@ -39,39 +39,39 @@ public class InferenceContainerConfig extends AbstractModel {
     private InferenceTCRRepositoryConfig TcrRepositoryConfig;
 
     /**
-    * 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
+    * <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
     */
     @SerializedName("StartupCommand")
     @Expose
     private String StartupCommand;
 
     /**
-    * 容器运行时的环境变量。最多支持 10 个变量。
+    * <p>容器运行时的环境变量。最多支持 10 个变量。</p>
     */
     @SerializedName("EnvironmentVariables")
     @Expose
     private InferenceEnvironmentVariable [] EnvironmentVariables;
 
     /**
-     * Get 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li> 
-     * @return ImageType 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
+     * Get <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p> 
+     * @return ImageType <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
      */
     public String getImageType() {
         return this.ImageType;
     }
 
     /**
-     * Set 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
-     * @param ImageType 镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li>
+     * Set <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
+     * @param ImageType <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
      */
     public void setImageType(String ImageType) {
         this.ImageType = ImageType;
     }
 
     /**
-     * Get TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+     * Get <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TcrRepositoryConfig TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+     * @return TcrRepositoryConfig <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InferenceTCRRepositoryConfig getTcrRepositoryConfig() {
@@ -79,9 +79,9 @@ public class InferenceContainerConfig extends AbstractModel {
     }
 
     /**
-     * Set TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+     * Set <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TcrRepositoryConfig TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。
+     * @param TcrRepositoryConfig <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTcrRepositoryConfig(InferenceTCRRepositoryConfig TcrRepositoryConfig) {
@@ -89,32 +89,32 @@ public class InferenceContainerConfig extends AbstractModel {
     }
 
     /**
-     * Get 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。 
-     * @return StartupCommand 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
+     * Get <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p> 
+     * @return StartupCommand <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
      */
     public String getStartupCommand() {
         return this.StartupCommand;
     }
 
     /**
-     * Set 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
-     * @param StartupCommand 容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。
+     * Set <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
+     * @param StartupCommand <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
      */
     public void setStartupCommand(String StartupCommand) {
         this.StartupCommand = StartupCommand;
     }
 
     /**
-     * Get 容器运行时的环境变量。最多支持 10 个变量。 
-     * @return EnvironmentVariables 容器运行时的环境变量。最多支持 10 个变量。
+     * Get <p>容器运行时的环境变量。最多支持 10 个变量。</p> 
+     * @return EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
      */
     public InferenceEnvironmentVariable [] getEnvironmentVariables() {
         return this.EnvironmentVariables;
     }
 
     /**
-     * Set 容器运行时的环境变量。最多支持 10 个变量。
-     * @param EnvironmentVariables 容器运行时的环境变量。最多支持 10 个变量。
+     * Set <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * @param EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
      */
     public void setEnvironmentVariables(InferenceEnvironmentVariable [] EnvironmentVariables) {
         this.EnvironmentVariables = EnvironmentVariables;

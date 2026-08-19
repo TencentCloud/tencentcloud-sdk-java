@@ -24,463 +24,486 @@ import java.util.HashMap;
 public class EsParam extends AbstractModel {
 
     /**
-    * Es实例资源Id
+    * <p>Es实例资源Id</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * Es的连接port
+    * <p>Es的连接port</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Es用户名
+    * <p>Es用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Es密码
+    * <p>Es密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 是否为自建集群
+    * <p>是否为自建集群</p>
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-    * 实例vip
+    * <p>实例vip</p>
     */
     @SerializedName("ServiceVip")
     @Expose
     private String ServiceVip;
 
     /**
-    * 实例的vpcId
+    * <p>实例的vpcId</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Es是否抛弃解析失败的消息
+    * <p>Es是否抛弃解析失败的消息</p>
     */
     @SerializedName("DropInvalidMessage")
     @Expose
     private Boolean DropInvalidMessage;
 
     /**
-    * Es自定义index名称
+    * <p>Es自定义index名称</p>
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * Es自定义日期后缀
+    * <p>Es自定义日期后缀</p>
     */
     @SerializedName("DateFormat")
     @Expose
     private String DateFormat;
 
     /**
-    * 非json格式数据的自定义key
+    * <p>非json格式数据的自定义key</p>
     */
     @SerializedName("ContentKey")
     @Expose
     private String ContentKey;
 
     /**
-    * Es是否抛弃非json格式的消息
+    * <p>Es是否抛弃非json格式的消息</p>
     */
     @SerializedName("DropInvalidJsonMessage")
     @Expose
     private Boolean DropInvalidJsonMessage;
 
     /**
-    * 转储到Es中的文档ID取值字段名
+    * <p>转储到Es中的文档ID取值字段名</p>
     */
     @SerializedName("DocumentIdField")
     @Expose
     private String DocumentIdField;
 
     /**
-    * Es自定义index名称的类型，STRING，JSONPATH，默认为STRING
+    * <p>Es自定义index名称的类型，STRING，JSONPATH，默认为STRING</p>
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+    * <p>当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效</p>
     */
     @SerializedName("DropCls")
     @Expose
     private DropCls DropCls;
 
     /**
-    * 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
+    * <p>转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键</p>
     */
     @SerializedName("DatabasePrimaryKey")
     @Expose
     private String DatabasePrimaryKey;
 
     /**
-    * 死信队列
+    * <p>死信队列</p>
     */
     @SerializedName("DropDlq")
     @Expose
     private FailureParam DropDlq;
 
     /**
-    * 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+    * <p>使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配</p>
     */
     @SerializedName("RecordMappingList")
     @Expose
     private EsRecordMapping [] RecordMappingList;
 
     /**
-    * 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+    * <p>消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射</p>
     */
     @SerializedName("DateField")
     @Expose
     private String DateField;
 
     /**
-    * 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+    * <p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p>
     */
     @SerializedName("RecordMappingMode")
     @Expose
     private String RecordMappingMode;
 
     /**
-     * Get Es实例资源Id 
-     * @return Resource Es实例资源Id
+    * <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+     * Get <p>Es实例资源Id</p> 
+     * @return Resource <p>Es实例资源Id</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set Es实例资源Id
-     * @param Resource Es实例资源Id
+     * Set <p>Es实例资源Id</p>
+     * @param Resource <p>Es实例资源Id</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Es的连接port 
-     * @return Port Es的连接port
+     * Get <p>Es的连接port</p> 
+     * @return Port <p>Es的连接port</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Es的连接port
-     * @param Port Es的连接port
+     * Set <p>Es的连接port</p>
+     * @param Port <p>Es的连接port</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Es用户名 
-     * @return UserName Es用户名
+     * Get <p>Es用户名</p> 
+     * @return UserName <p>Es用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Es用户名
-     * @param UserName Es用户名
+     * Set <p>Es用户名</p>
+     * @param UserName <p>Es用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Es密码 
-     * @return Password Es密码
+     * Get <p>Es密码</p> 
+     * @return Password <p>Es密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Es密码
-     * @param Password Es密码
+     * Set <p>Es密码</p>
+     * @param Password <p>Es密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 是否为自建集群 
-     * @return SelfBuilt 是否为自建集群
+     * Get <p>是否为自建集群</p> 
+     * @return SelfBuilt <p>是否为自建集群</p>
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
     }
 
     /**
-     * Set 是否为自建集群
-     * @param SelfBuilt 是否为自建集群
+     * Set <p>是否为自建集群</p>
+     * @param SelfBuilt <p>是否为自建集群</p>
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get 实例vip 
-     * @return ServiceVip 实例vip
+     * Get <p>实例vip</p> 
+     * @return ServiceVip <p>实例vip</p>
      */
     public String getServiceVip() {
         return this.ServiceVip;
     }
 
     /**
-     * Set 实例vip
-     * @param ServiceVip 实例vip
+     * Set <p>实例vip</p>
+     * @param ServiceVip <p>实例vip</p>
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get 实例的vpcId 
-     * @return UniqVpcId 实例的vpcId
+     * Get <p>实例的vpcId</p> 
+     * @return UniqVpcId <p>实例的vpcId</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 实例的vpcId
-     * @param UniqVpcId 实例的vpcId
+     * Set <p>实例的vpcId</p>
+     * @param UniqVpcId <p>实例的vpcId</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Es是否抛弃解析失败的消息 
-     * @return DropInvalidMessage Es是否抛弃解析失败的消息
+     * Get <p>Es是否抛弃解析失败的消息</p> 
+     * @return DropInvalidMessage <p>Es是否抛弃解析失败的消息</p>
      */
     public Boolean getDropInvalidMessage() {
         return this.DropInvalidMessage;
     }
 
     /**
-     * Set Es是否抛弃解析失败的消息
-     * @param DropInvalidMessage Es是否抛弃解析失败的消息
+     * Set <p>Es是否抛弃解析失败的消息</p>
+     * @param DropInvalidMessage <p>Es是否抛弃解析失败的消息</p>
      */
     public void setDropInvalidMessage(Boolean DropInvalidMessage) {
         this.DropInvalidMessage = DropInvalidMessage;
     }
 
     /**
-     * Get Es自定义index名称 
-     * @return Index Es自定义index名称
+     * Get <p>Es自定义index名称</p> 
+     * @return Index <p>Es自定义index名称</p>
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Es自定义index名称
-     * @param Index Es自定义index名称
+     * Set <p>Es自定义index名称</p>
+     * @param Index <p>Es自定义index名称</p>
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Es自定义日期后缀 
-     * @return DateFormat Es自定义日期后缀
+     * Get <p>Es自定义日期后缀</p> 
+     * @return DateFormat <p>Es自定义日期后缀</p>
      */
     public String getDateFormat() {
         return this.DateFormat;
     }
 
     /**
-     * Set Es自定义日期后缀
-     * @param DateFormat Es自定义日期后缀
+     * Set <p>Es自定义日期后缀</p>
+     * @param DateFormat <p>Es自定义日期后缀</p>
      */
     public void setDateFormat(String DateFormat) {
         this.DateFormat = DateFormat;
     }
 
     /**
-     * Get 非json格式数据的自定义key 
-     * @return ContentKey 非json格式数据的自定义key
+     * Get <p>非json格式数据的自定义key</p> 
+     * @return ContentKey <p>非json格式数据的自定义key</p>
      */
     public String getContentKey() {
         return this.ContentKey;
     }
 
     /**
-     * Set 非json格式数据的自定义key
-     * @param ContentKey 非json格式数据的自定义key
+     * Set <p>非json格式数据的自定义key</p>
+     * @param ContentKey <p>非json格式数据的自定义key</p>
      */
     public void setContentKey(String ContentKey) {
         this.ContentKey = ContentKey;
     }
 
     /**
-     * Get Es是否抛弃非json格式的消息 
-     * @return DropInvalidJsonMessage Es是否抛弃非json格式的消息
+     * Get <p>Es是否抛弃非json格式的消息</p> 
+     * @return DropInvalidJsonMessage <p>Es是否抛弃非json格式的消息</p>
      */
     public Boolean getDropInvalidJsonMessage() {
         return this.DropInvalidJsonMessage;
     }
 
     /**
-     * Set Es是否抛弃非json格式的消息
-     * @param DropInvalidJsonMessage Es是否抛弃非json格式的消息
+     * Set <p>Es是否抛弃非json格式的消息</p>
+     * @param DropInvalidJsonMessage <p>Es是否抛弃非json格式的消息</p>
      */
     public void setDropInvalidJsonMessage(Boolean DropInvalidJsonMessage) {
         this.DropInvalidJsonMessage = DropInvalidJsonMessage;
     }
 
     /**
-     * Get 转储到Es中的文档ID取值字段名 
-     * @return DocumentIdField 转储到Es中的文档ID取值字段名
+     * Get <p>转储到Es中的文档ID取值字段名</p> 
+     * @return DocumentIdField <p>转储到Es中的文档ID取值字段名</p>
      */
     public String getDocumentIdField() {
         return this.DocumentIdField;
     }
 
     /**
-     * Set 转储到Es中的文档ID取值字段名
-     * @param DocumentIdField 转储到Es中的文档ID取值字段名
+     * Set <p>转储到Es中的文档ID取值字段名</p>
+     * @param DocumentIdField <p>转储到Es中的文档ID取值字段名</p>
      */
     public void setDocumentIdField(String DocumentIdField) {
         this.DocumentIdField = DocumentIdField;
     }
 
     /**
-     * Get Es自定义index名称的类型，STRING，JSONPATH，默认为STRING 
-     * @return IndexType Es自定义index名称的类型，STRING，JSONPATH，默认为STRING
+     * Get <p>Es自定义index名称的类型，STRING，JSONPATH，默认为STRING</p> 
+     * @return IndexType <p>Es自定义index名称的类型，STRING，JSONPATH，默认为STRING</p>
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set Es自定义index名称的类型，STRING，JSONPATH，默认为STRING
-     * @param IndexType Es自定义index名称的类型，STRING，JSONPATH，默认为STRING
+     * Set <p>Es自定义index名称的类型，STRING，JSONPATH，默认为STRING</p>
+     * @param IndexType <p>Es自定义index名称的类型，STRING，JSONPATH，默认为STRING</p>
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效 
-     * @return DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     * Get <p>当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效</p> 
+     * @return DropCls <p>当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效</p>
      */
     public DropCls getDropCls() {
         return this.DropCls;
     }
 
     /**
-     * Set 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
-     * @param DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     * Set <p>当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效</p>
+     * @param DropCls <p>当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效</p>
      */
     public void setDropCls(DropCls DropCls) {
         this.DropCls = DropCls;
     }
 
     /**
-     * Get 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键 
-     * @return DatabasePrimaryKey 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
+     * Get <p>转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键</p> 
+     * @return DatabasePrimaryKey <p>转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键</p>
      */
     public String getDatabasePrimaryKey() {
         return this.DatabasePrimaryKey;
     }
 
     /**
-     * Set 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
-     * @param DatabasePrimaryKey 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
+     * Set <p>转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键</p>
+     * @param DatabasePrimaryKey <p>转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键</p>
      */
     public void setDatabasePrimaryKey(String DatabasePrimaryKey) {
         this.DatabasePrimaryKey = DatabasePrimaryKey;
     }
 
     /**
-     * Get 死信队列 
-     * @return DropDlq 死信队列
+     * Get <p>死信队列</p> 
+     * @return DropDlq <p>死信队列</p>
      */
     public FailureParam getDropDlq() {
         return this.DropDlq;
     }
 
     /**
-     * Set 死信队列
-     * @param DropDlq 死信队列
+     * Set <p>死信队列</p>
+     * @param DropDlq <p>死信队列</p>
      */
     public void setDropDlq(FailureParam DropDlq) {
         this.DropDlq = DropDlq;
     }
 
     /**
-     * Get 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配 
-     * @return RecordMappingList 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     * Get <p>使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配</p> 
+     * @return RecordMappingList <p>使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配</p>
      */
     public EsRecordMapping [] getRecordMappingList() {
         return this.RecordMappingList;
     }
 
     /**
-     * Set 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
-     * @param RecordMappingList 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     * Set <p>使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配</p>
+     * @param RecordMappingList <p>使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配</p>
      */
     public void setRecordMappingList(EsRecordMapping [] RecordMappingList) {
         this.RecordMappingList = RecordMappingList;
     }
 
     /**
-     * Get 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射 
-     * @return DateField 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     * Get <p>消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射</p> 
+     * @return DateField <p>消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射</p>
      */
     public String getDateField() {
         return this.DateField;
     }
 
     /**
-     * Set 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
-     * @param DateField 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     * Set <p>消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射</p>
+     * @param DateField <p>消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射</p>
      */
     public void setDateField(String DateField) {
         this.DateField = DateField;
     }
 
     /**
-     * Get 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引 
-     * @return RecordMappingMode 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+     * Get <p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p> 
+     * @return RecordMappingMode <p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p>
      */
     public String getRecordMappingMode() {
         return this.RecordMappingMode;
     }
 
     /**
-     * Set 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
-     * @param RecordMappingMode 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+     * Set <p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p>
+     * @param RecordMappingMode <p>用来区分当前索引映射，属于新建索引还是存量索引。&quot;EXIST_MAPPING&quot;：从存量索引中选择；&quot;NEW_MAPPING&quot;：新建索引</p>
      */
     public void setRecordMappingMode(String RecordMappingMode) {
         this.RecordMappingMode = RecordMappingMode;
+    }
+
+    /**
+     * Get <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul> 
+     * @return Protocol <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     * @param Protocol <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
     }
 
     public EsParam() {
@@ -554,6 +577,9 @@ public class EsParam extends AbstractModel {
         if (source.RecordMappingMode != null) {
             this.RecordMappingMode = new String(source.RecordMappingMode);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -581,6 +607,7 @@ public class EsParam extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RecordMappingList.", this.RecordMappingList);
         this.setParamSimple(map, prefix + "DateField", this.DateField);
         this.setParamSimple(map, prefix + "RecordMappingMode", this.RecordMappingMode);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

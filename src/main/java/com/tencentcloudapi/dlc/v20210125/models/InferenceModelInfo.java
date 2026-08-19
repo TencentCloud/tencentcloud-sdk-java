@@ -206,6 +206,14 @@ public class InferenceModelInfo extends AbstractModel {
     private String SubAccountUin;
 
     /**
+    * <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get <p>Model ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelId <p>Model ID</p>
@@ -657,6 +665,26 @@ public class InferenceModelInfo extends AbstractModel {
         this.SubAccountUin = SubAccountUin;
     }
 
+    /**
+     * Get <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public InferenceModelInfo() {
     }
 
@@ -743,6 +771,12 @@ public class InferenceModelInfo extends AbstractModel {
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -773,6 +807,7 @@ public class InferenceModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

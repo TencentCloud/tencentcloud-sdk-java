@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSyncJobsResponse extends AbstractModel {
 
     /**
-    * 任务数目
+    * <p>任务数目</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 任务详情数组
+    * <p>任务详情数组</p>
     */
     @SerializedName("JobList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSyncJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务数目 
-     * @return TotalCount 任务数目
+     * Get <p>任务数目</p> 
+     * @return TotalCount <p>任务数目</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 任务数目
-     * @param TotalCount 任务数目
+     * Set <p>任务数目</p>
+     * @param TotalCount <p>任务数目</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 任务详情数组 
-     * @return JobList 任务详情数组
+     * Get <p>任务详情数组</p> 
+     * @return JobList <p>任务详情数组</p>
      */
     public SyncJobInfo [] getJobList() {
         return this.JobList;
     }
 
     /**
-     * Set 任务详情数组
-     * @param JobList 任务详情数组
+     * Set <p>任务详情数组</p>
+     * @param JobList <p>任务详情数组</p>
      */
     public void setJobList(SyncJobInfo [] JobList) {
         this.JobList = JobList;

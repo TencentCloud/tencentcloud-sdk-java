@@ -38,7 +38,7 @@ public class NodeInfo extends AbstractModel {
     private String NodeType;
 
     /**
-    * <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+    * <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
     */
     @SerializedName("Type")
     @Expose
@@ -161,16 +161,16 @@ public class NodeInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData 
-     * @return Type <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+     * Get <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul> 
+     * @return Type <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
-     * @param Type <p>节点类型<li>hotData: 热数据节点</li></p><li>warmData: 冷数据节点</li><li>dedicatedMaster: 专用主节点</li>默认值为hotData
+     * Set <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
+     * @param Type <p>节点类型</p><p>枚举值：</p><ul><li>hotData： 热数据节点</li><li>warmData： 冷数据节点</li><li>dedicatedMaster： 专用主节点</li><li>dedicatedCoordinating： 专用协调节点</li><li>dedicatedMl： 专用机器学习节点</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;

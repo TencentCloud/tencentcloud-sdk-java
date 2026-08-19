@@ -213,6 +213,41 @@ public class ModifyEDRRuleRequest extends AbstractModel {
     private InstanceIDWithAppIdItem [] ExcludeInstanceIDsWithAppId;
 
     /**
+    * <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+    */
+    @SerializedName("TagIDs")
+    @Expose
+    private String [] TagIDs;
+
+    /**
+    * <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+    */
+    @SerializedName("ClusterIDsWithAppId")
+    @Expose
+    private ClusterIDWithAppIdItem [] ClusterIDsWithAppId;
+
+    /**
+    * <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+    */
+    @SerializedName("ExcludeClusterIDsWithAppId")
+    @Expose
+    private ClusterIDWithAppIdItem [] ExcludeClusterIDsWithAppId;
+
+    /**
+    * <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+    */
+    @SerializedName("ImageIDsWithAppId")
+    @Expose
+    private ImageIDWithAppIdItem [] ImageIDsWithAppId;
+
+    /**
+    * <p>容器条件匹配</p>
+    */
+    @SerializedName("ConditionMatches")
+    @Expose
+    private ConditionMatch [] ConditionMatches;
+
+    /**
      * Get <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p> 
      * @return RuleType <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      */
@@ -644,6 +679,86 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.ExcludeInstanceIDsWithAppId = ExcludeInstanceIDsWithAppId;
     }
 
+    /**
+     * Get <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p> 
+     * @return TagIDs <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+     */
+    public String [] getTagIDs() {
+        return this.TagIDs;
+    }
+
+    /**
+     * Set <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+     * @param TagIDs <p>安全中心标签ID列表（主机资产范围「按标签选择」，仅对主机生效）；上限 100（超限截断）。标签来源接口 DescribeAssetTagTree</p>
+     */
+    public void setTagIDs(String [] TagIDs) {
+        this.TagIDs = TagIDs;
+    }
+
+    /**
+     * Get <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p> 
+     * @return ClusterIDsWithAppId <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public ClusterIDWithAppIdItem [] getClusterIDsWithAppId() {
+        return this.ClusterIDsWithAppId;
+    }
+
+    /**
+     * Set <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+     * @param ClusterIDsWithAppId <p>指定生效集群列表（每项含 AppId + ClusterID，TCSSScope=0 时使用）。入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public void setClusterIDsWithAppId(ClusterIDWithAppIdItem [] ClusterIDsWithAppId) {
+        this.ClusterIDsWithAppId = ClusterIDsWithAppId;
+    }
+
+    /**
+     * Get <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p> 
+     * @return ExcludeClusterIDsWithAppId <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public ClusterIDWithAppIdItem [] getExcludeClusterIDsWithAppId() {
+        return this.ExcludeClusterIDsWithAppId;
+    }
+
+    /**
+     * Set <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     * @param ExcludeClusterIDsWithAppId <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public void setExcludeClusterIDsWithAppId(ClusterIDWithAppIdItem [] ExcludeClusterIDsWithAppId) {
+        this.ExcludeClusterIDsWithAppId = ExcludeClusterIDsWithAppId;
+    }
+
+    /**
+     * Get <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p> 
+     * @return ImageIDsWithAppId <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public ImageIDWithAppIdItem [] getImageIDsWithAppId() {
+        return this.ImageIDsWithAppId;
+    }
+
+    /**
+     * Set <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     * @param ImageIDsWithAppId <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
+     */
+    public void setImageIDsWithAppId(ImageIDWithAppIdItem [] ImageIDsWithAppId) {
+        this.ImageIDsWithAppId = ImageIDsWithAppId;
+    }
+
+    /**
+     * Get <p>容器条件匹配</p> 
+     * @return ConditionMatches <p>容器条件匹配</p>
+     */
+    public ConditionMatch [] getConditionMatches() {
+        return this.ConditionMatches;
+    }
+
+    /**
+     * Set <p>容器条件匹配</p>
+     * @param ConditionMatches <p>容器条件匹配</p>
+     */
+    public void setConditionMatches(ConditionMatch [] ConditionMatches) {
+        this.ConditionMatches = ConditionMatches;
+    }
+
     public ModifyEDRRuleRequest() {
     }
 
@@ -766,6 +881,36 @@ public class ModifyEDRRuleRequest extends AbstractModel {
                 this.ExcludeInstanceIDsWithAppId[i] = new InstanceIDWithAppIdItem(source.ExcludeInstanceIDsWithAppId[i]);
             }
         }
+        if (source.TagIDs != null) {
+            this.TagIDs = new String[source.TagIDs.length];
+            for (int i = 0; i < source.TagIDs.length; i++) {
+                this.TagIDs[i] = new String(source.TagIDs[i]);
+            }
+        }
+        if (source.ClusterIDsWithAppId != null) {
+            this.ClusterIDsWithAppId = new ClusterIDWithAppIdItem[source.ClusterIDsWithAppId.length];
+            for (int i = 0; i < source.ClusterIDsWithAppId.length; i++) {
+                this.ClusterIDsWithAppId[i] = new ClusterIDWithAppIdItem(source.ClusterIDsWithAppId[i]);
+            }
+        }
+        if (source.ExcludeClusterIDsWithAppId != null) {
+            this.ExcludeClusterIDsWithAppId = new ClusterIDWithAppIdItem[source.ExcludeClusterIDsWithAppId.length];
+            for (int i = 0; i < source.ExcludeClusterIDsWithAppId.length; i++) {
+                this.ExcludeClusterIDsWithAppId[i] = new ClusterIDWithAppIdItem(source.ExcludeClusterIDsWithAppId[i]);
+            }
+        }
+        if (source.ImageIDsWithAppId != null) {
+            this.ImageIDsWithAppId = new ImageIDWithAppIdItem[source.ImageIDsWithAppId.length];
+            for (int i = 0; i < source.ImageIDsWithAppId.length; i++) {
+                this.ImageIDsWithAppId[i] = new ImageIDWithAppIdItem(source.ImageIDsWithAppId[i]);
+            }
+        }
+        if (source.ConditionMatches != null) {
+            this.ConditionMatches = new ConditionMatch[source.ConditionMatches.length];
+            for (int i = 0; i < source.ConditionMatches.length; i++) {
+                this.ConditionMatches[i] = new ConditionMatch(source.ConditionMatches[i]);
+            }
+        }
     }
 
 
@@ -800,6 +945,11 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Target.", this.Target);
         this.setParamArrayObj(map, prefix + "InstanceIDsWithAppId.", this.InstanceIDsWithAppId);
         this.setParamArrayObj(map, prefix + "ExcludeInstanceIDsWithAppId.", this.ExcludeInstanceIDsWithAppId);
+        this.setParamArraySimple(map, prefix + "TagIDs.", this.TagIDs);
+        this.setParamArrayObj(map, prefix + "ClusterIDsWithAppId.", this.ClusterIDsWithAppId);
+        this.setParamArrayObj(map, prefix + "ExcludeClusterIDsWithAppId.", this.ExcludeClusterIDsWithAppId);
+        this.setParamArrayObj(map, prefix + "ImageIDsWithAppId.", this.ImageIDsWithAppId);
+        this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
 
     }
 }

@@ -59,6 +59,13 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     private InferenceResourceConfig ResourceConfig;
 
     /**
+    * <p>推理服务亲和性配置。</p>
+    */
+    @SerializedName("AffinityConfig")
+    @Expose
+    private InferenceAffinityConfig AffinityConfig;
+
+    /**
     * <p>推理服务的请求路径列表。最多支持 20 个路径。</p>
     */
     @SerializedName("RequestPaths")
@@ -153,6 +160,22 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>推理服务亲和性配置。</p> 
+     * @return AffinityConfig <p>推理服务亲和性配置。</p>
+     */
+    public InferenceAffinityConfig getAffinityConfig() {
+        return this.AffinityConfig;
+    }
+
+    /**
+     * Set <p>推理服务亲和性配置。</p>
+     * @param AffinityConfig <p>推理服务亲和性配置。</p>
+     */
+    public void setAffinityConfig(InferenceAffinityConfig AffinityConfig) {
+        this.AffinityConfig = AffinityConfig;
+    }
+
+    /**
      * Get <p>推理服务的请求路径列表。最多支持 20 个路径。</p> 
      * @return RequestPaths <p>推理服务的请求路径列表。最多支持 20 个路径。</p>
      */
@@ -210,6 +233,9 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new InferenceResourceConfig(source.ResourceConfig);
         }
+        if (source.AffinityConfig != null) {
+            this.AffinityConfig = new InferenceAffinityConfig(source.AffinityConfig);
+        }
         if (source.RequestPaths != null) {
             this.RequestPaths = new String[source.RequestPaths.length];
             for (int i = 0; i < source.RequestPaths.length; i++) {
@@ -231,6 +257,7 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ListenPort", this.ListenPort);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
         this.setParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
         this.setParamSimple(map, prefix + "Description", this.Description);
 

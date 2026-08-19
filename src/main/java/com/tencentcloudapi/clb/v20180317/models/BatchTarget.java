@@ -24,166 +24,161 @@ import java.util.HashMap;
 public class BatchTarget extends AbstractModel {
 
     /**
-    * 监听器 ID。
+    * <p>监听器 ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 绑定端口。
+    * <p>绑定端口。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 子机 ID。表示绑定主网卡主 IP。
+    * <p>子机 ID。表示绑定主网卡主 IP。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
-注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+    * <p>绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。</p>
     */
     @SerializedName("EniIp")
     @Expose
     private String EniIp;
 
     /**
-    * 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+    * <p>子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 七层规则 ID。7层负载均衡该参数必填
+    * <p>七层规则 ID。7层负载均衡该参数必填</p>
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 标签。
+    * <p>标签。</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-     * Get 监听器 ID。 
-     * @return ListenerId 监听器 ID。
+     * Get <p>监听器 ID。</p> 
+     * @return ListenerId <p>监听器 ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器 ID。
-     * @param ListenerId 监听器 ID。
+     * Set <p>监听器 ID。</p>
+     * @param ListenerId <p>监听器 ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 绑定端口。 
-     * @return Port 绑定端口。
+     * Get <p>绑定端口。</p> 
+     * @return Port <p>绑定端口。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 绑定端口。
-     * @param Port 绑定端口。
+     * Set <p>绑定端口。</p>
+     * @param Port <p>绑定端口。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 子机 ID。表示绑定主网卡主 IP。 
-     * @return InstanceId 子机 ID。表示绑定主网卡主 IP。
+     * Get <p>子机 ID。表示绑定主网卡主 IP。</p> 
+     * @return InstanceId <p>子机 ID。表示绑定主网卡主 IP。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 子机 ID。表示绑定主网卡主 IP。
-     * @param InstanceId 子机 ID。表示绑定主网卡主 IP。
+     * Set <p>子机 ID。表示绑定主网卡主 IP。</p>
+     * @param InstanceId <p>子机 ID。表示绑定主网卡主 IP。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
-注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。 
-     * @return EniIp 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
-注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+     * Get <p>绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。</p> 
+     * @return EniIp <p>绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。</p>
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
-注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
-     * @param EniIp 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
-注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+     * Set <p>绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。</p>
+     * @param EniIp <p>绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。</p>
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。 
-     * @return Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * Get <p>子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。</p> 
+     * @return Weight <p>子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-     * @param Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * Set <p>子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。</p>
+     * @param Weight <p>子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 七层规则 ID。7层负载均衡该参数必填 
-     * @return LocationId 七层规则 ID。7层负载均衡该参数必填
+     * Get <p>七层规则 ID。7层负载均衡该参数必填</p> 
+     * @return LocationId <p>七层规则 ID。7层负载均衡该参数必填</p>
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 七层规则 ID。7层负载均衡该参数必填
-     * @param LocationId 七层规则 ID。7层负载均衡该参数必填
+     * Set <p>七层规则 ID。7层负载均衡该参数必填</p>
+     * @param LocationId <p>七层规则 ID。7层负载均衡该参数必填</p>
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get 标签。 
-     * @return Tag 标签。
+     * Get <p>标签。</p> 
+     * @return Tag <p>标签。</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签。
-     * @param Tag 标签。
+     * Set <p>标签。</p>
+     * @param Tag <p>标签。</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

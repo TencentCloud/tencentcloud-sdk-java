@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TopicParam extends AbstractModel {
 
     /**
-    * 单独售卖Topic的Topic名称
+    * <p>单独售卖Topic的Topic名称</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+    * <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetType")
@@ -39,7 +39,7 @@ public class TopicParam extends AbstractModel {
     private String OffsetType;
 
     /**
-    * Offset类型为timestamp时必传，传时间戳，精确到秒
+    * <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -47,53 +47,53 @@ public class TopicParam extends AbstractModel {
     private Long StartTime;
 
     /**
-    * Topic的TopicId【出参】
+    * <p>Topic的TopicId【出参】</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+    * <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
     */
     @SerializedName("CompressionType")
     @Expose
     private String CompressionType;
 
     /**
-    * 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+    * <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
     */
     @SerializedName("UseAutoCreateTopic")
     @Expose
     private Boolean UseAutoCreateTopic;
 
     /**
-    * 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+    * <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
     */
     @SerializedName("MsgMultiple")
     @Expose
     private Long MsgMultiple;
 
     /**
-     * Get 单独售卖Topic的Topic名称 
-     * @return Resource 单独售卖Topic的Topic名称
+     * Get <p>单独售卖Topic的Topic名称</p> 
+     * @return Resource <p>单独售卖Topic的Topic名称</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 单独售卖Topic的Topic名称
-     * @param Resource 单独售卖Topic的Topic名称
+     * Set <p>单独售卖Topic的Topic名称</p>
+     * @param Resource <p>单独售卖Topic的Topic名称</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * Get <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @return OffsetType <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOffsetType() {
@@ -101,9 +101,9 @@ public class TopicParam extends AbstractModel {
     }
 
     /**
-     * Set Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * Set <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @param OffsetType <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetType(String OffsetType) {
@@ -111,9 +111,9 @@ public class TopicParam extends AbstractModel {
     }
 
     /**
-     * Get Offset类型为timestamp时必传，传时间戳，精确到秒
+     * Get <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @return StartTime <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
@@ -121,9 +121,9 @@ public class TopicParam extends AbstractModel {
     }
 
     /**
-     * Set Offset类型为timestamp时必传，传时间戳，精确到秒
+     * Set <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @param StartTime <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
@@ -131,64 +131,64 @@ public class TopicParam extends AbstractModel {
     }
 
     /**
-     * Get Topic的TopicId【出参】 
-     * @return TopicId Topic的TopicId【出参】
+     * Get <p>Topic的TopicId【出参】</p> 
+     * @return TopicId <p>Topic的TopicId【出参】</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Topic的TopicId【出参】
-     * @param TopicId Topic的TopicId【出参】
+     * Set <p>Topic的TopicId【出参】</p>
+     * @param TopicId <p>Topic的TopicId【出参】</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。 
-     * @return CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+     * Get <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p> 
+     * @return CompressionType <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
      */
     public String getCompressionType() {
         return this.CompressionType;
     }
 
     /**
-     * Set 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
-     * @param CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+     * Set <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
+     * @param CompressionType <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，可选择&quot;gzip&quot;, &quot;snappy&quot;, &quot;lz4&quot;中的一个进行填写。</p>
      */
     public void setCompressionType(String CompressionType) {
         this.CompressionType = CompressionType;
     }
 
     /**
-     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务） 
-     * @return UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+     * Get <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p> 
+     * @return UseAutoCreateTopic <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
      */
     public Boolean getUseAutoCreateTopic() {
         return this.UseAutoCreateTopic;
     }
 
     /**
-     * Set 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
-     * @param UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+     * Set <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
+     * @param UseAutoCreateTopic <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）</p>
      */
     public void setUseAutoCreateTopic(Boolean UseAutoCreateTopic) {
         this.UseAutoCreateTopic = UseAutoCreateTopic;
     }
 
     /**
-     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用) 
-     * @return MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * Get <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p> 
+     * @return MsgMultiple <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     public Long getMsgMultiple() {
         return this.MsgMultiple;
     }
 
     /**
-     * Set 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-     * @param MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * Set <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
+     * @param MsgMultiple <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     public void setMsgMultiple(Long MsgMultiple) {
         this.MsgMultiple = MsgMultiple;

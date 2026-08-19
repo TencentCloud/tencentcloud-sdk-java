@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeJobsOverviewResponse extends AbstractModel {
 
     /**
-    * 作业任务数量
+    * <p>作业任务数量</p>
     */
     @SerializedName("JobTotal")
     @Expose
     private Long JobTotal;
 
     /**
-    * 排队中的作业任务数量
+    * <p>排队中的作业任务数量</p>
     */
     @SerializedName("QueuingJobTotal")
     @Expose
     private Long QueuingJobTotal;
 
     /**
-    * 运行中的作业数量
+    * <p>运行中的作业数量</p>
     */
     @SerializedName("RunningJobTotal")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeJobsOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 作业任务数量 
-     * @return JobTotal 作业任务数量
+     * Get <p>作业任务数量</p> 
+     * @return JobTotal <p>作业任务数量</p>
      */
     public Long getJobTotal() {
         return this.JobTotal;
     }
 
     /**
-     * Set 作业任务数量
-     * @param JobTotal 作业任务数量
+     * Set <p>作业任务数量</p>
+     * @param JobTotal <p>作业任务数量</p>
      */
     public void setJobTotal(Long JobTotal) {
         this.JobTotal = JobTotal;
     }
 
     /**
-     * Get 排队中的作业任务数量 
-     * @return QueuingJobTotal 排队中的作业任务数量
+     * Get <p>排队中的作业任务数量</p> 
+     * @return QueuingJobTotal <p>排队中的作业任务数量</p>
      */
     public Long getQueuingJobTotal() {
         return this.QueuingJobTotal;
     }
 
     /**
-     * Set 排队中的作业任务数量
-     * @param QueuingJobTotal 排队中的作业任务数量
+     * Set <p>排队中的作业任务数量</p>
+     * @param QueuingJobTotal <p>排队中的作业任务数量</p>
      */
     public void setQueuingJobTotal(Long QueuingJobTotal) {
         this.QueuingJobTotal = QueuingJobTotal;
     }
 
     /**
-     * Get 运行中的作业数量 
-     * @return RunningJobTotal 运行中的作业数量
+     * Get <p>运行中的作业数量</p> 
+     * @return RunningJobTotal <p>运行中的作业数量</p>
      */
     public Long getRunningJobTotal() {
         return this.RunningJobTotal;
     }
 
     /**
-     * Set 运行中的作业数量
-     * @param RunningJobTotal 运行中的作业数量
+     * Set <p>运行中的作业数量</p>
+     * @param RunningJobTotal <p>运行中的作业数量</p>
      */
     public void setRunningJobTotal(Long RunningJobTotal) {
         this.RunningJobTotal = RunningJobTotal;

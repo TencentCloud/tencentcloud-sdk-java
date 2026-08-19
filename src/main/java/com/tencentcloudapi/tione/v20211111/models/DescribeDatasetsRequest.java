@@ -24,217 +24,230 @@ import java.util.HashMap;
 public class DescribeDatasetsRequest extends AbstractModel {
 
     /**
-    * 数据集id列表
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>数据集id列表</p>
     */
     @SerializedName("DatasetIds")
     @Expose
     private String [] DatasetIds;
 
     /**
-    * 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
+    * <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 标签过滤条件
+    * <p>标签过滤条件</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 排序值，支持Asc或Desc，默认Desc
+    * <p>排序值，支持Asc或Desc，默认Desc</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段，支持CreateTime或UpdateTime，默认CreateTime
+    * <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 偏移值
+    * <p>偏移值</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数据个数，默认20，最大支持200
+    * <p>返回数据个数，默认20，最大支持200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+    * <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
     */
     @SerializedName("CFSChecking")
     @Expose
     private Boolean CFSChecking;
 
     /**
-    * 是否返回CFS详情。
+    * <p>是否返回CFS详情。</p>
     */
     @SerializedName("CFSDetail")
     @Expose
     private Boolean CFSDetail;
 
     /**
-     * Get 数据集id列表 
-     * @return DatasetIds 数据集id列表
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>数据集id列表</p> 
+     * @return DatasetIds <p>数据集id列表</p>
      */
     public String [] getDatasetIds() {
         return this.DatasetIds;
     }
 
     /**
-     * Set 数据集id列表
-     * @param DatasetIds 数据集id列表
+     * Set <p>数据集id列表</p>
+     * @param DatasetIds <p>数据集id列表</p>
      */
     public void setDatasetIds(String [] DatasetIds) {
         this.DatasetIds = DatasetIds;
     }
 
     /**
-     * Get 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC 
-     * @return Filters 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
+     * Get <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p> 
+     * @return Filters <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
-     * @param Filters 数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String
-DatasetName，数据集名称
-DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
+     * Set <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
+     * @param Filters <p>数据集查询过滤条件，多个Filter之间的关系为逻辑与（AND）关系，过滤字段Filter.Name，类型为String<br>DatasetName，数据集名称<br>DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 标签过滤条件 
-     * @return TagFilters 标签过滤条件
+     * Get <p>标签过滤条件</p> 
+     * @return TagFilters <p>标签过滤条件</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤条件
-     * @param TagFilters 标签过滤条件
+     * Set <p>标签过滤条件</p>
+     * @param TagFilters <p>标签过滤条件</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 排序值，支持Asc或Desc，默认Desc 
-     * @return Order 排序值，支持Asc或Desc，默认Desc
+     * Get <p>排序值，支持Asc或Desc，默认Desc</p> 
+     * @return Order <p>排序值，支持Asc或Desc，默认Desc</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序值，支持Asc或Desc，默认Desc
-     * @param Order 排序值，支持Asc或Desc，默认Desc
+     * Set <p>排序值，支持Asc或Desc，默认Desc</p>
+     * @param Order <p>排序值，支持Asc或Desc，默认Desc</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段，支持CreateTime或UpdateTime，默认CreateTime 
-     * @return OrderField 排序字段，支持CreateTime或UpdateTime，默认CreateTime
+     * Get <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p> 
+     * @return OrderField <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段，支持CreateTime或UpdateTime，默认CreateTime
-     * @param OrderField 排序字段，支持CreateTime或UpdateTime，默认CreateTime
+     * Set <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
+     * @param OrderField <p>排序字段，支持CreateTime或UpdateTime，默认CreateTime</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 偏移值 
-     * @return Offset 偏移值
+     * Get <p>偏移值</p> 
+     * @return Offset <p>偏移值</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移值
-     * @param Offset 偏移值
+     * Set <p>偏移值</p>
+     * @param Offset <p>偏移值</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数据个数，默认20，最大支持200 
-     * @return Limit 返回数据个数，默认20，最大支持200
+     * Get <p>返回数据个数，默认20，最大支持200</p> 
+     * @return Limit <p>返回数据个数，默认20，最大支持200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数据个数，默认20，最大支持200
-     * @param Limit 返回数据个数，默认20，最大支持200
+     * Set <p>返回数据个数，默认20，最大支持200</p>
+     * @param Limit <p>返回数据个数，默认20，最大支持200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。 
-     * @return CFSChecking 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     * Get <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p> 
+     * @return CFSChecking <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
      */
     public Boolean getCFSChecking() {
         return this.CFSChecking;
     }
 
     /**
-     * Set 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
-     * @param CFSChecking 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     * Set <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
+     * @param CFSChecking <p>是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。</p>
      */
     public void setCFSChecking(Boolean CFSChecking) {
         this.CFSChecking = CFSChecking;
     }
 
     /**
-     * Get 是否返回CFS详情。 
-     * @return CFSDetail 是否返回CFS详情。
+     * Get <p>是否返回CFS详情。</p> 
+     * @return CFSDetail <p>是否返回CFS详情。</p>
      */
     public Boolean getCFSDetail() {
         return this.CFSDetail;
     }
 
     /**
-     * Set 是否返回CFS详情。
-     * @param CFSDetail 是否返回CFS详情。
+     * Set <p>是否返回CFS详情。</p>
+     * @param CFSDetail <p>是否返回CFS详情。</p>
      */
     public void setCFSDetail(Boolean CFSDetail) {
         this.CFSDetail = CFSDetail;
@@ -248,6 +261,9 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDatasetsRequest(DescribeDatasetsRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.DatasetIds != null) {
             this.DatasetIds = new String[source.DatasetIds.length];
             for (int i = 0; i < source.DatasetIds.length; i++) {
@@ -291,6 +307,7 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamArraySimple(map, prefix + "DatasetIds.", this.DatasetIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);

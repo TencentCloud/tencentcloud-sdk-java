@@ -24,380 +24,345 @@ import java.util.HashMap;
 public class DataFlowInfo extends AbstractModel {
 
     /**
-    * 数据流动管理 ID
+    * <p>数据流动管理 ID</p>
     */
     @SerializedName("DataFlowId")
     @Expose
     private String DataFlowId;
 
     /**
-    * 数据流动名称
+    * <p>数据流动名称</p>
     */
     @SerializedName("DataFlowName")
     @Expose
     private String DataFlowName;
 
     /**
-    * 源端数据类型
+    * <p>源端数据类型</p>
     */
     @SerializedName("SourceStorageType")
     @Expose
     private String SourceStorageType;
 
     /**
-    * 源端存储地址
+    * <p>源端存储地址</p>
     */
     @SerializedName("SourceStorageAddress")
     @Expose
     private String SourceStorageAddress;
 
     /**
-    * 源端路径
+    * <p>源端路径</p>
     */
     @SerializedName("SourcePath")
     @Expose
     private String SourcePath;
 
     /**
-    * 目录路径
+    * <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
     */
     @SerializedName("TargetPath")
     @Expose
     private String TargetPath;
 
     /**
-    * available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
+    * <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 文件系统 ID
+    * <p>文件系统 ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 0：不开启自动更新
-
-1：开启自动更新
+    * <p>0：不开启自动更新</p><p>1：开启自动更新</p>
     */
     @SerializedName("AutoRefresh")
     @Expose
     private Long AutoRefresh;
 
     /**
-    * KafkaConsumer 消费时使用的Topic参数
+    * <p>KafkaConsumer 消费时使用的Topic参数</p>
     */
     @SerializedName("UserKafkaTopic")
     @Expose
     private String UserKafkaTopic;
 
     /**
-    * 服务地址
+    * <p>服务地址</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Kafka消费用户名
+    * <p>Kafka消费用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
+    * <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
     */
     @SerializedName("AutoRefreshStatus")
     @Expose
     private String AutoRefreshStatus;
 
     /**
-    * 自动刷新开启时间
+    * <p>自动刷新开启时间</p>
     */
     @SerializedName("AutoRefreshTime")
     @Expose
     private String AutoRefreshTime;
 
     /**
-     * Get 数据流动管理 ID 
-     * @return DataFlowId 数据流动管理 ID
+     * Get <p>数据流动管理 ID</p> 
+     * @return DataFlowId <p>数据流动管理 ID</p>
      */
     public String getDataFlowId() {
         return this.DataFlowId;
     }
 
     /**
-     * Set 数据流动管理 ID
-     * @param DataFlowId 数据流动管理 ID
+     * Set <p>数据流动管理 ID</p>
+     * @param DataFlowId <p>数据流动管理 ID</p>
      */
     public void setDataFlowId(String DataFlowId) {
         this.DataFlowId = DataFlowId;
     }
 
     /**
-     * Get 数据流动名称 
-     * @return DataFlowName 数据流动名称
+     * Get <p>数据流动名称</p> 
+     * @return DataFlowName <p>数据流动名称</p>
      */
     public String getDataFlowName() {
         return this.DataFlowName;
     }
 
     /**
-     * Set 数据流动名称
-     * @param DataFlowName 数据流动名称
+     * Set <p>数据流动名称</p>
+     * @param DataFlowName <p>数据流动名称</p>
      */
     public void setDataFlowName(String DataFlowName) {
         this.DataFlowName = DataFlowName;
     }
 
     /**
-     * Get 源端数据类型 
-     * @return SourceStorageType 源端数据类型
+     * Get <p>源端数据类型</p> 
+     * @return SourceStorageType <p>源端数据类型</p>
      */
     public String getSourceStorageType() {
         return this.SourceStorageType;
     }
 
     /**
-     * Set 源端数据类型
-     * @param SourceStorageType 源端数据类型
+     * Set <p>源端数据类型</p>
+     * @param SourceStorageType <p>源端数据类型</p>
      */
     public void setSourceStorageType(String SourceStorageType) {
         this.SourceStorageType = SourceStorageType;
     }
 
     /**
-     * Get 源端存储地址 
-     * @return SourceStorageAddress 源端存储地址
+     * Get <p>源端存储地址</p> 
+     * @return SourceStorageAddress <p>源端存储地址</p>
      */
     public String getSourceStorageAddress() {
         return this.SourceStorageAddress;
     }
 
     /**
-     * Set 源端存储地址
-     * @param SourceStorageAddress 源端存储地址
+     * Set <p>源端存储地址</p>
+     * @param SourceStorageAddress <p>源端存储地址</p>
      */
     public void setSourceStorageAddress(String SourceStorageAddress) {
         this.SourceStorageAddress = SourceStorageAddress;
     }
 
     /**
-     * Get 源端路径 
-     * @return SourcePath 源端路径
+     * Get <p>源端路径</p> 
+     * @return SourcePath <p>源端路径</p>
      */
     public String getSourcePath() {
         return this.SourcePath;
     }
 
     /**
-     * Set 源端路径
-     * @param SourcePath 源端路径
+     * Set <p>源端路径</p>
+     * @param SourcePath <p>源端路径</p>
      */
     public void setSourcePath(String SourcePath) {
         this.SourcePath = SourcePath;
     }
 
     /**
-     * Get 目录路径 
-     * @return TargetPath 目录路径
+     * Get <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul> 
+     * @return TargetPath <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public String getTargetPath() {
         return this.TargetPath;
     }
 
     /**
-     * Set 目录路径
-     * @param TargetPath 目录路径
+     * Set <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+     * @param TargetPath <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public void setTargetPath(String TargetPath) {
         this.TargetPath = TargetPath;
     }
 
     /**
-     * Get available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中 
-     * @return Status available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
+     * Get <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p> 
+     * @return Status <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
-     * @param Status available：已生效
-pending：配置中
-unavailable：失效
-deleting：删除中
+     * Set <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
+     * @param Status <p>available：已生效<br>pending：配置中<br>unavailable：失效<br>deleting：删除中</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreationTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreationTime <p>创建时间</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreationTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreationTime <p>创建时间</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get <p>文件系统 ID</p> 
+     * @return FileSystemId <p>文件系统 ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set <p>文件系统 ID</p>
+     * @param FileSystemId <p>文件系统 ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 0：不开启自动更新
-
-1：开启自动更新 
-     * @return AutoRefresh 0：不开启自动更新
-
-1：开启自动更新
+     * Get <p>0：不开启自动更新</p><p>1：开启自动更新</p> 
+     * @return AutoRefresh <p>0：不开启自动更新</p><p>1：开启自动更新</p>
      */
     public Long getAutoRefresh() {
         return this.AutoRefresh;
     }
 
     /**
-     * Set 0：不开启自动更新
-
-1：开启自动更新
-     * @param AutoRefresh 0：不开启自动更新
-
-1：开启自动更新
+     * Set <p>0：不开启自动更新</p><p>1：开启自动更新</p>
+     * @param AutoRefresh <p>0：不开启自动更新</p><p>1：开启自动更新</p>
      */
     public void setAutoRefresh(Long AutoRefresh) {
         this.AutoRefresh = AutoRefresh;
     }
 
     /**
-     * Get KafkaConsumer 消费时使用的Topic参数 
-     * @return UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     * Get <p>KafkaConsumer 消费时使用的Topic参数</p> 
+     * @return UserKafkaTopic <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public String getUserKafkaTopic() {
         return this.UserKafkaTopic;
     }
 
     /**
-     * Set KafkaConsumer 消费时使用的Topic参数
-     * @param UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     * Set <p>KafkaConsumer 消费时使用的Topic参数</p>
+     * @param UserKafkaTopic <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public void setUserKafkaTopic(String UserKafkaTopic) {
         this.UserKafkaTopic = UserKafkaTopic;
     }
 
     /**
-     * Get 服务地址 
-     * @return ServerAddr 服务地址
+     * Get <p>服务地址</p> 
+     * @return ServerAddr <p>服务地址</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址
-     * @param ServerAddr 服务地址
+     * Set <p>服务地址</p>
+     * @param ServerAddr <p>服务地址</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Kafka消费用户名 
-     * @return UserName Kafka消费用户名
+     * Get <p>Kafka消费用户名</p> 
+     * @return UserName <p>Kafka消费用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Kafka消费用户名
-     * @param UserName Kafka消费用户名
+     * Set <p>Kafka消费用户名</p>
+     * @param UserName <p>Kafka消费用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效 
-     * @return AutoRefreshStatus 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
+     * Get <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p> 
+     * @return AutoRefreshStatus <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
      */
     public String getAutoRefreshStatus() {
         return this.AutoRefreshStatus;
     }
 
     /**
-     * Set 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
-     * @param AutoRefreshStatus 自动刷新的状态，available：已生效
-pending：配置中
-unavailable：失效
+     * Set <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
+     * @param AutoRefreshStatus <p>自动刷新的状态，available：已生效<br>pending：配置中<br>unavailable：失效</p>
      */
     public void setAutoRefreshStatus(String AutoRefreshStatus) {
         this.AutoRefreshStatus = AutoRefreshStatus;
     }
 
     /**
-     * Get 自动刷新开启时间 
-     * @return AutoRefreshTime 自动刷新开启时间
+     * Get <p>自动刷新开启时间</p> 
+     * @return AutoRefreshTime <p>自动刷新开启时间</p>
      */
     public String getAutoRefreshTime() {
         return this.AutoRefreshTime;
     }
 
     /**
-     * Set 自动刷新开启时间
-     * @param AutoRefreshTime 自动刷新开启时间
+     * Set <p>自动刷新开启时间</p>
+     * @param AutoRefreshTime <p>自动刷新开启时间</p>
      */
     public void setAutoRefreshTime(String AutoRefreshTime) {
         this.AutoRefreshTime = AutoRefreshTime;

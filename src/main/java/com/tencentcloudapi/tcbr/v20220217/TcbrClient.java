@@ -248,6 +248,17 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *更新配置并使用最新镜像发布
+     * @param req SubmitServerConfigChangeDiffRequest
+     * @return SubmitServerConfigChangeDiffResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitServerConfigChangeDiffResponse SubmitServerConfigChangeDiff(SubmitServerConfigChangeDiffRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitServerConfigChangeDiff", SubmitServerConfigChangeDiffResponse.class);
+    }
+
+    /**
      *回滚版本
      * @param req SubmitServerRollbackRequest
      * @return SubmitServerRollbackResponse

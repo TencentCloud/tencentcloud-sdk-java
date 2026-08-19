@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListTWeSeeTasksResponse extends AbstractModel {
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
     */
     @SerializedName("Tasks")
     @Expose
     private SeeTaskInfo [] Tasks;
 
     /**
-    * 任务数量
+    * <p>任务数量</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class ListTWeSeeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务列表 
-     * @return Tasks 任务列表
+     * Get <p>任务列表</p> 
+     * @return Tasks <p>任务列表</p>
      */
     public SeeTaskInfo [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 任务列表
-     * @param Tasks 任务列表
+     * Set <p>任务列表</p>
+     * @param Tasks <p>任务列表</p>
      */
     public void setTasks(SeeTaskInfo [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 任务数量 
-     * @return Total 任务数量
+     * Get <p>任务数量</p> 
+     * @return Total <p>任务数量</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 任务数量
-     * @param Total 任务数量
+     * Set <p>任务数量</p>
+     * @param Total <p>任务数量</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

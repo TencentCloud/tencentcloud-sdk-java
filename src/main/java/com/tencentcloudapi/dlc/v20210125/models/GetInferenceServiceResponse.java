@@ -221,6 +221,27 @@ public class GetInferenceServiceResponse extends AbstractModel {
     private String ResourceConfig;
 
     /**
+    * <p>部署模式</p>
+    */
+    @SerializedName("DeploymentMode")
+    @Expose
+    private String DeploymentMode;
+
+    /**
+    * <p>是否为自定义代码部署</p>
+    */
+    @SerializedName("IsCustom")
+    @Expose
+    private Boolean IsCustom;
+
+    /**
+    * <p>系统标签列表（TagKey-TagValue）</p>
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -716,6 +737,54 @@ public class GetInferenceServiceResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>部署模式</p> 
+     * @return DeploymentMode <p>部署模式</p>
+     */
+    public String getDeploymentMode() {
+        return this.DeploymentMode;
+    }
+
+    /**
+     * Set <p>部署模式</p>
+     * @param DeploymentMode <p>部署模式</p>
+     */
+    public void setDeploymentMode(String DeploymentMode) {
+        this.DeploymentMode = DeploymentMode;
+    }
+
+    /**
+     * Get <p>是否为自定义代码部署</p> 
+     * @return IsCustom <p>是否为自定义代码部署</p>
+     */
+    public Boolean getIsCustom() {
+        return this.IsCustom;
+    }
+
+    /**
+     * Set <p>是否为自定义代码部署</p>
+     * @param IsCustom <p>是否为自定义代码部署</p>
+     */
+    public void setIsCustom(Boolean IsCustom) {
+        this.IsCustom = IsCustom;
+    }
+
+    /**
+     * Get <p>系统标签列表（TagKey-TagValue）</p> 
+     * @return ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>系统标签列表（TagKey-TagValue）</p>
+     * @param ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -817,6 +886,18 @@ public class GetInferenceServiceResponse extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new String(source.ResourceConfig);
         }
+        if (source.DeploymentMode != null) {
+            this.DeploymentMode = new String(source.DeploymentMode);
+        }
+        if (source.IsCustom != null) {
+            this.IsCustom = new Boolean(source.IsCustom);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -852,6 +933,9 @@ public class GetInferenceServiceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamObj(map, prefix + "CpuResourceSummary.", this.CpuResourceSummary);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
+        this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+        this.setParamSimple(map, prefix + "IsCustom", this.IsCustom);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

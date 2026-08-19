@@ -24,145 +24,115 @@ import java.util.HashMap;
 public class EraseArea extends AbstractModel {
 
     /**
-    * 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
+    * <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
     */
     @SerializedName("LeftTopX")
     @Expose
     private Float LeftTopX;
 
     /**
-    * 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
+    * <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
     */
     @SerializedName("LeftTopY")
     @Expose
     private Float LeftTopY;
 
     /**
-    * 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
+    * <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
     */
     @SerializedName("RightBottomX")
     @Expose
     private Float RightBottomX;
 
     /**
-    * 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
+    * <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
     */
     @SerializedName("RightBottomY")
     @Expose
     private Float RightBottomY;
 
     /**
-    * 坐标单位
-- 1 百分比
-- 2 像素值
+    * <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
     */
     @SerializedName("Unit")
     @Expose
     private Long Unit;
 
     /**
-     * Get 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。 
-     * @return LeftTopX 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
+     * Get <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p> 
+     * @return LeftTopX <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
      */
     public Float getLeftTopX() {
         return this.LeftTopX;
     }
 
     /**
-     * Set 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
-     * @param LeftTopX 区域左上角X坐标。
-如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。
+     * Set <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
+     * @param LeftTopX <p>区域左上角X坐标。<br>如当Unit取1即使用百分比单位时，0.05表示区域左上角离整个画面左上角的横向距离为画面宽度的5%。</p>
      */
     public void setLeftTopX(Float LeftTopX) {
         this.LeftTopX = LeftTopX;
     }
 
     /**
-     * Get 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。 
-     * @return LeftTopY 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
+     * Get <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p> 
+     * @return LeftTopY <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
      */
     public Float getLeftTopY() {
         return this.LeftTopY;
     }
 
     /**
-     * Set 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
-     * @param LeftTopY 区域左上角Y坐标。
-如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。
+     * Set <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
+     * @param LeftTopY <p>区域左上角Y坐标。<br>如当Unit取1即使用百分比单位时，0.1表示区域左上角离整个画面左上角的纵向距离为画面高度的10%。</p>
      */
     public void setLeftTopY(Float LeftTopY) {
         this.LeftTopY = LeftTopY;
     }
 
     /**
-     * Get 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。 
-     * @return RightBottomX 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
+     * Get <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p> 
+     * @return RightBottomX <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
      */
     public Float getRightBottomX() {
         return this.RightBottomX;
     }
 
     /**
-     * Set 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
-     * @param RightBottomX 区域右下角X坐标。
-如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。
+     * Set <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
+     * @param RightBottomX <p>区域右下角X坐标。<br>如当Unit取1即使用百分比单位时，0.75表示区域右下角离整个画面左上角的横向距离为画面宽度的75%。</p>
      */
     public void setRightBottomX(Float RightBottomX) {
         this.RightBottomX = RightBottomX;
     }
 
     /**
-     * Get 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。 
-     * @return RightBottomY 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
+     * Get <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p> 
+     * @return RightBottomY <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
      */
     public Float getRightBottomY() {
         return this.RightBottomY;
     }
 
     /**
-     * Set 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
-     * @param RightBottomY 区域右下角Y坐标。
-如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。
+     * Set <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
+     * @param RightBottomY <p>区域右下角Y坐标。<br>如当Unit取1即使用百分比单位时，0.9表示区域右下角离整个画面左上角的纵向距离为画面高度的90%。</p>
      */
     public void setRightBottomY(Float RightBottomY) {
         this.RightBottomY = RightBottomY;
     }
 
     /**
-     * Get 坐标单位
-- 1 百分比
-- 2 像素值 
-     * @return Unit 坐标单位
-- 1 百分比
-- 2 像素值
+     * Get <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul> 
+     * @return Unit <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
      */
     public Long getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 坐标单位
-- 1 百分比
-- 2 像素值
-     * @param Unit 坐标单位
-- 1 百分比
-- 2 像素值
+     * Set <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
+     * @param Unit <p>坐标单位</p><ul><li>1 百分比</li><li>2 像素值</li></ul>
      */
     public void setUnit(Long Unit) {
         this.Unit = Unit;

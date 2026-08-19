@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class OrderField extends AbstractModel {
 
     /**
-    * 排序字段名称
+    * <p>排序字段名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 排序方向：ASC|DESC
+    * <p>排序方向：ASC|DESC</p>
     */
     @SerializedName("Direction")
     @Expose
     private String Direction;
 
     /**
-     * Get 排序字段名称 
-     * @return Name 排序字段名称
+     * Get <p>排序字段名称</p> 
+     * @return Name <p>排序字段名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 排序字段名称
-     * @param Name 排序字段名称
+     * Set <p>排序字段名称</p>
+     * @param Name <p>排序字段名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 排序方向：ASC|DESC 
-     * @return Direction 排序方向：ASC|DESC
+     * Get <p>排序方向：ASC|DESC</p> 
+     * @return Direction <p>排序方向：ASC|DESC</p>
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 排序方向：ASC|DESC
-     * @param Direction 排序方向：ASC|DESC
+     * Set <p>排序方向：ASC|DESC</p>
+     * @param Direction <p>排序方向：ASC|DESC</p>
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

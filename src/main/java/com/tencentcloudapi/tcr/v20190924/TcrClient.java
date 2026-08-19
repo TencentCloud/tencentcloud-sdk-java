@@ -1262,6 +1262,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *修改实例同步规则
+     * @param req ModifyReplicationRequest
+     * @return ModifyReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReplicationResponse ModifyReplication(ModifyReplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReplication", ModifyReplicationResponse.class);
+    }
+
+    /**
      *更新镜像仓库信息，可修改仓库描述信息
      * @param req ModifyRepositoryRequest
      * @return ModifyRepositoryResponse

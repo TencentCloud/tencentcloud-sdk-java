@@ -24,92 +24,120 @@ import java.util.HashMap;
 public class AppAdvancedConf extends AbstractModel {
 
     /**
-    * 是否开启上下文改写
+    * <p>是否开启上下文改写</p>
     */
     @SerializedName("EnableContextRewrite")
     @Expose
     private Boolean EnableContextRewrite;
 
     /**
-    * 是否开启图文检索
+    * <p>是否开启图文检索</p>
     */
     @SerializedName("EnableImageTextRetrieval")
     @Expose
     private Boolean EnableImageTextRetrieval;
 
     /**
-    * 回复灵活度
+    * <p>回复灵活度</p>
     */
     @SerializedName("ReplyFlexibility")
     @Expose
     private Long ReplyFlexibility;
 
     /**
-    * 意图达成优先级
+    * <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DialogCustomConfig")
+    @Expose
+    private DialogCustomConfig DialogCustomConfig;
+
+    /**
+    * <p>意图达成优先级</p>
     */
     @SerializedName("IntentAchievement")
     @Expose
     private IntentAchievementInfo [] IntentAchievement;
 
     /**
-     * Get 是否开启上下文改写 
-     * @return EnableContextRewrite 是否开启上下文改写
+     * Get <p>是否开启上下文改写</p> 
+     * @return EnableContextRewrite <p>是否开启上下文改写</p>
      */
     public Boolean getEnableContextRewrite() {
         return this.EnableContextRewrite;
     }
 
     /**
-     * Set 是否开启上下文改写
-     * @param EnableContextRewrite 是否开启上下文改写
+     * Set <p>是否开启上下文改写</p>
+     * @param EnableContextRewrite <p>是否开启上下文改写</p>
      */
     public void setEnableContextRewrite(Boolean EnableContextRewrite) {
         this.EnableContextRewrite = EnableContextRewrite;
     }
 
     /**
-     * Get 是否开启图文检索 
-     * @return EnableImageTextRetrieval 是否开启图文检索
+     * Get <p>是否开启图文检索</p> 
+     * @return EnableImageTextRetrieval <p>是否开启图文检索</p>
      */
     public Boolean getEnableImageTextRetrieval() {
         return this.EnableImageTextRetrieval;
     }
 
     /**
-     * Set 是否开启图文检索
-     * @param EnableImageTextRetrieval 是否开启图文检索
+     * Set <p>是否开启图文检索</p>
+     * @param EnableImageTextRetrieval <p>是否开启图文检索</p>
      */
     public void setEnableImageTextRetrieval(Boolean EnableImageTextRetrieval) {
         this.EnableImageTextRetrieval = EnableImageTextRetrieval;
     }
 
     /**
-     * Get 回复灵活度 
-     * @return ReplyFlexibility 回复灵活度
+     * Get <p>回复灵活度</p> 
+     * @return ReplyFlexibility <p>回复灵活度</p>
      */
     public Long getReplyFlexibility() {
         return this.ReplyFlexibility;
     }
 
     /**
-     * Set 回复灵活度
-     * @param ReplyFlexibility 回复灵活度
+     * Set <p>回复灵活度</p>
+     * @param ReplyFlexibility <p>回复灵活度</p>
      */
     public void setReplyFlexibility(Long ReplyFlexibility) {
         this.ReplyFlexibility = ReplyFlexibility;
     }
 
     /**
-     * Get 意图达成优先级 
-     * @return IntentAchievement 意图达成优先级
+     * Get <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DialogCustomConfig <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DialogCustomConfig getDialogCustomConfig() {
+        return this.DialogCustomConfig;
+    }
+
+    /**
+     * Set <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DialogCustomConfig <p>对话端自定义配置(所有模式共用,允许对话中动态修改配置)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDialogCustomConfig(DialogCustomConfig DialogCustomConfig) {
+        this.DialogCustomConfig = DialogCustomConfig;
+    }
+
+    /**
+     * Get <p>意图达成优先级</p> 
+     * @return IntentAchievement <p>意图达成优先级</p>
      */
     public IntentAchievementInfo [] getIntentAchievement() {
         return this.IntentAchievement;
     }
 
     /**
-     * Set 意图达成优先级
-     * @param IntentAchievement 意图达成优先级
+     * Set <p>意图达成优先级</p>
+     * @param IntentAchievement <p>意图达成优先级</p>
      */
     public void setIntentAchievement(IntentAchievementInfo [] IntentAchievement) {
         this.IntentAchievement = IntentAchievement;
@@ -132,6 +160,9 @@ public class AppAdvancedConf extends AbstractModel {
         if (source.ReplyFlexibility != null) {
             this.ReplyFlexibility = new Long(source.ReplyFlexibility);
         }
+        if (source.DialogCustomConfig != null) {
+            this.DialogCustomConfig = new DialogCustomConfig(source.DialogCustomConfig);
+        }
         if (source.IntentAchievement != null) {
             this.IntentAchievement = new IntentAchievementInfo[source.IntentAchievement.length];
             for (int i = 0; i < source.IntentAchievement.length; i++) {
@@ -148,6 +179,7 @@ public class AppAdvancedConf extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableContextRewrite", this.EnableContextRewrite);
         this.setParamSimple(map, prefix + "EnableImageTextRetrieval", this.EnableImageTextRetrieval);
         this.setParamSimple(map, prefix + "ReplyFlexibility", this.ReplyFlexibility);
+        this.setParamObj(map, prefix + "DialogCustomConfig.", this.DialogCustomConfig);
         this.setParamArrayObj(map, prefix + "IntentAchievement.", this.IntentAchievement);
 
     }

@@ -136,6 +136,13 @@ public class ModifyConnectResourceRequest extends AbstractModel {
     private MqttConnectParam MqttConnectParam;
 
     /**
+    * <p>Iceberg配置，Type为ICEBERG时必填</p>
+    */
+    @SerializedName("IcebergConnectParam")
+    @Expose
+    private IcebergConnectParam IcebergConnectParam;
+
+    /**
      * Get <p>连接源的Id</p> 
      * @return ResourceId <p>连接源的Id</p>
      */
@@ -391,6 +398,22 @@ public class ModifyConnectResourceRequest extends AbstractModel {
         this.MqttConnectParam = MqttConnectParam;
     }
 
+    /**
+     * Get <p>Iceberg配置，Type为ICEBERG时必填</p> 
+     * @return IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时必填</p>
+     */
+    public IcebergConnectParam getIcebergConnectParam() {
+        return this.IcebergConnectParam;
+    }
+
+    /**
+     * Set <p>Iceberg配置，Type为ICEBERG时必填</p>
+     * @param IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时必填</p>
+     */
+    public void setIcebergConnectParam(IcebergConnectParam IcebergConnectParam) {
+        this.IcebergConnectParam = IcebergConnectParam;
+    }
+
     public ModifyConnectResourceRequest() {
     }
 
@@ -447,6 +470,9 @@ public class ModifyConnectResourceRequest extends AbstractModel {
         if (source.MqttConnectParam != null) {
             this.MqttConnectParam = new MqttConnectParam(source.MqttConnectParam);
         }
+        if (source.IcebergConnectParam != null) {
+            this.IcebergConnectParam = new IcebergConnectParam(source.IcebergConnectParam);
+        }
     }
 
 
@@ -470,6 +496,7 @@ public class ModifyConnectResourceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
         this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
         this.setParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+        this.setParamObj(map, prefix + "IcebergConnectParam.", this.IcebergConnectParam);
 
     }
 }

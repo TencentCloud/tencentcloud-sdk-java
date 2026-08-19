@@ -1084,6 +1084,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询AIGC任务列表详细信息
+     * @param req DescribeAigcTaskListRequest
+     * @return DescribeAigcTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcTaskListResponse DescribeAigcTaskList(DescribeAigcTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcTaskList", DescribeAigcTaskListResponse.class);
+    }
+
+    /**
      *查询AIGC场景任务接口
      * @param req DescribeAigcTaskStatusRequest
      * @return DescribeAigcTaskStatusResponse

@@ -24,216 +24,161 @@ import java.util.HashMap;
 public class DescribeJobMonitorDataRequest extends AbstractModel {
 
     /**
-    * 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+    * <p>作业ID；JobId详见<a href="https://cloud.tencent.com/document/product/599/15909">作业列表</a></p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 作业的Task名称，详见[作业详情](https://cloud.tencent.com/document/product/599/15904)。
+    * <p>作业的Task名称，详见<a href="https://cloud.tencent.com/document/product/599/15904">作业详情</a>。</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 作业任务实例的序号，详见[任务详情](https://cloud.tencent.com/document/product/599/15905)
+    * <p>作业任务实例的序号，详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a></p>
     */
     @SerializedName("TaskInstanceIndex")
     @Expose
     private Long TaskInstanceIndex;
 
     /**
-    * 支持查询的指标；当前支持查询的任务指标；
-
-- CpuUsage：cpu利用率，单位：%
-- MemUsage：内存利用率，单位：%
-- LanOuttraffic：内网出带宽，单位：Bytes/s
-- LanIntraffic：内网入带宽，单位：Bytes/s
-- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
-- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
+    * <p>支持查询的指标；当前支持查询的任务指标；</p><ul><li>CpuUsage：cpu利用率，单位：%</li><li>MemUsage：内存利用率，单位：%</li><li>LanOuttraffic：内网出带宽，单位：Bytes/s</li><li>LanIntraffic：内网入带宽，单位：Bytes/s</li><li>MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%</li><li>TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用</li></ul>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。
+    * <p>查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。
+    * <p>查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 查询指标的扩展参数；当前只支持TargetDiskUsage;
-
-- TargetDiskUsage
-    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
-    样例：[{"Name":"diskname", "Value":"vdb"}]
+    * <p>查询指标的扩展参数；当前只支持TargetDiskUsage;</p><ul><li>TargetDiskUsage<br>  -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。<br>  样例：[{&quot;Name&quot;:&quot;diskname&quot;, &quot;Value&quot;:&quot;vdb&quot;}]</li></ul>
     */
     @SerializedName("Dimensions")
     @Expose
     private Dimension [] Dimensions;
 
     /**
-     * Get 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909) 
-     * @return JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+     * Get <p>作业ID；JobId详见<a href="https://cloud.tencent.com/document/product/599/15909">作业列表</a></p> 
+     * @return JobId <p>作业ID；JobId详见<a href="https://cloud.tencent.com/document/product/599/15909">作业列表</a></p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
-     * @param JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+     * Set <p>作业ID；JobId详见<a href="https://cloud.tencent.com/document/product/599/15909">作业列表</a></p>
+     * @param JobId <p>作业ID；JobId详见<a href="https://cloud.tencent.com/document/product/599/15909">作业列表</a></p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 作业的Task名称，详见[作业详情](https://cloud.tencent.com/document/product/599/15904)。 
-     * @return TaskName 作业的Task名称，详见[作业详情](https://cloud.tencent.com/document/product/599/15904)。
+     * Get <p>作业的Task名称，详见<a href="https://cloud.tencent.com/document/product/599/15904">作业详情</a>。</p> 
+     * @return TaskName <p>作业的Task名称，详见<a href="https://cloud.tencent.com/document/product/599/15904">作业详情</a>。</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 作业的Task名称，详见[作业详情](https://cloud.tencent.com/document/product/599/15904)。
-     * @param TaskName 作业的Task名称，详见[作业详情](https://cloud.tencent.com/document/product/599/15904)。
+     * Set <p>作业的Task名称，详见<a href="https://cloud.tencent.com/document/product/599/15904">作业详情</a>。</p>
+     * @param TaskName <p>作业的Task名称，详见<a href="https://cloud.tencent.com/document/product/599/15904">作业详情</a>。</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 作业任务实例的序号，详见[任务详情](https://cloud.tencent.com/document/product/599/15905) 
-     * @return TaskInstanceIndex 作业任务实例的序号，详见[任务详情](https://cloud.tencent.com/document/product/599/15905)
+     * Get <p>作业任务实例的序号，详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a></p> 
+     * @return TaskInstanceIndex <p>作业任务实例的序号，详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a></p>
      */
     public Long getTaskInstanceIndex() {
         return this.TaskInstanceIndex;
     }
 
     /**
-     * Set 作业任务实例的序号，详见[任务详情](https://cloud.tencent.com/document/product/599/15905)
-     * @param TaskInstanceIndex 作业任务实例的序号，详见[任务详情](https://cloud.tencent.com/document/product/599/15905)
+     * Set <p>作业任务实例的序号，详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a></p>
+     * @param TaskInstanceIndex <p>作业任务实例的序号，详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a></p>
      */
     public void setTaskInstanceIndex(Long TaskInstanceIndex) {
         this.TaskInstanceIndex = TaskInstanceIndex;
     }
 
     /**
-     * Get 支持查询的指标；当前支持查询的任务指标；
-
-- CpuUsage：cpu利用率，单位：%
-- MemUsage：内存利用率，单位：%
-- LanOuttraffic：内网出带宽，单位：Bytes/s
-- LanIntraffic：内网入带宽，单位：Bytes/s
-- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
-- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用 
-     * @return MetricName 支持查询的指标；当前支持查询的任务指标；
-
-- CpuUsage：cpu利用率，单位：%
-- MemUsage：内存利用率，单位：%
-- LanOuttraffic：内网出带宽，单位：Bytes/s
-- LanIntraffic：内网入带宽，单位：Bytes/s
-- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
-- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
+     * Get <p>支持查询的指标；当前支持查询的任务指标；</p><ul><li>CpuUsage：cpu利用率，单位：%</li><li>MemUsage：内存利用率，单位：%</li><li>LanOuttraffic：内网出带宽，单位：Bytes/s</li><li>LanIntraffic：内网入带宽，单位：Bytes/s</li><li>MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%</li><li>TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用</li></ul> 
+     * @return MetricName <p>支持查询的指标；当前支持查询的任务指标；</p><ul><li>CpuUsage：cpu利用率，单位：%</li><li>MemUsage：内存利用率，单位：%</li><li>LanOuttraffic：内网出带宽，单位：Bytes/s</li><li>LanIntraffic：内网入带宽，单位：Bytes/s</li><li>MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%</li><li>TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用</li></ul>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 支持查询的指标；当前支持查询的任务指标；
-
-- CpuUsage：cpu利用率，单位：%
-- MemUsage：内存利用率，单位：%
-- LanOuttraffic：内网出带宽，单位：Bytes/s
-- LanIntraffic：内网入带宽，单位：Bytes/s
-- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
-- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
-     * @param MetricName 支持查询的指标；当前支持查询的任务指标；
-
-- CpuUsage：cpu利用率，单位：%
-- MemUsage：内存利用率，单位：%
-- LanOuttraffic：内网出带宽，单位：Bytes/s
-- LanIntraffic：内网入带宽，单位：Bytes/s
-- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
-- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
+     * Set <p>支持查询的指标；当前支持查询的任务指标；</p><ul><li>CpuUsage：cpu利用率，单位：%</li><li>MemUsage：内存利用率，单位：%</li><li>LanOuttraffic：内网出带宽，单位：Bytes/s</li><li>LanIntraffic：内网入带宽，单位：Bytes/s</li><li>MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%</li><li>TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用</li></ul>
+     * @param MetricName <p>支持查询的指标；当前支持查询的任务指标；</p><ul><li>CpuUsage：cpu利用率，单位：%</li><li>MemUsage：内存利用率，单位：%</li><li>LanOuttraffic：内网出带宽，单位：Bytes/s</li><li>LanIntraffic：内网入带宽，单位：Bytes/s</li><li>MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%</li><li>TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用</li></ul>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。 
-     * @return StartTime 查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。
+     * Get <p>查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。</p> 
+     * @return StartTime <p>查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。
-     * @param StartTime 查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。
+     * Set <p>查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。</p>
+     * @param StartTime <p>查询任务实例的起始时间；如果未传入查询起始时间或传入的时间小于任务实例的创建时间（任务实例创建时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），会自动将查询时间调整到任务实例的创建时间。传入时间格式只支持零时区格式。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。 
-     * @return EndTime 查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。
+     * Get <p>查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。</p> 
+     * @return EndTime <p>查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。
-     * @param EndTime 查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见[任务详情](https://cloud.tencent.com/document/product/599/15905)），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。
+     * Set <p>查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。</p>
+     * @param EndTime <p>查询任务实例的终止时间；如果未传入查询终止时间或传入的时间大于任务实例的终止时间（任务实例终止时间详见<a href="https://cloud.tencent.com/document/product/599/15905">任务详情</a>），并且任务实例已经结束，会自动将查询终止时间调整到任务实例的终止时间；如果任务实例未结束，会自动将查询终止时间调整到当前时间。传入时间格式只支持零时区格式。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 查询指标的扩展参数；当前只支持TargetDiskUsage;
-
-- TargetDiskUsage
-    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
-    样例：[{"Name":"diskname", "Value":"vdb"}] 
-     * @return Dimensions 查询指标的扩展参数；当前只支持TargetDiskUsage;
-
-- TargetDiskUsage
-    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
-    样例：[{"Name":"diskname", "Value":"vdb"}]
+     * Get <p>查询指标的扩展参数；当前只支持TargetDiskUsage;</p><ul><li>TargetDiskUsage<br>  -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。<br>  样例：[{&quot;Name&quot;:&quot;diskname&quot;, &quot;Value&quot;:&quot;vdb&quot;}]</li></ul> 
+     * @return Dimensions <p>查询指标的扩展参数；当前只支持TargetDiskUsage;</p><ul><li>TargetDiskUsage<br>  -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。<br>  样例：[{&quot;Name&quot;:&quot;diskname&quot;, &quot;Value&quot;:&quot;vdb&quot;}]</li></ul>
      */
     public Dimension [] getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 查询指标的扩展参数；当前只支持TargetDiskUsage;
-
-- TargetDiskUsage
-    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
-    样例：[{"Name":"diskname", "Value":"vdb"}]
-     * @param Dimensions 查询指标的扩展参数；当前只支持TargetDiskUsage;
-
-- TargetDiskUsage
-    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
-    样例：[{"Name":"diskname", "Value":"vdb"}]
+     * Set <p>查询指标的扩展参数；当前只支持TargetDiskUsage;</p><ul><li>TargetDiskUsage<br>  -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。<br>  样例：[{&quot;Name&quot;:&quot;diskname&quot;, &quot;Value&quot;:&quot;vdb&quot;}]</li></ul>
+     * @param Dimensions <p>查询指标的扩展参数；当前只支持TargetDiskUsage;</p><ul><li>TargetDiskUsage<br>  -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。<br>  样例：[{&quot;Name&quot;:&quot;diskname&quot;, &quot;Value&quot;:&quot;vdb&quot;}]</li></ul>
      */
     public void setDimensions(Dimension [] Dimensions) {
         this.Dimensions = Dimensions;

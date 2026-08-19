@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TriggerTaskRunBrief extends AbstractModel {
 
     /**
-    * 任务运行ID
+    * <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionId")
@@ -32,7 +32,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecutionId;
 
     /**
-    * 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING
+    * <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionState")
@@ -40,7 +40,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecutionState;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -48,7 +48,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -56,7 +56,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流运行ID
+    * <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowExecutionId")
@@ -64,7 +64,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String WorkflowExecutionId;
 
     /**
-    * 任务 ID
+    * <p>任务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -72,7 +72,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -80,7 +80,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TaskType;
 
     /**
-    * 任务版本
+    * <p>任务版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskVersionId")
@@ -88,7 +88,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TaskVersionId;
 
     /**
-    * 触发类型
+    * <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
@@ -96,7 +96,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TriggerType;
 
     /**
-    * 等待时长，单位秒
+    * <p>等待时长，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaitTime")
@@ -104,7 +104,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String WaitTime;
 
     /**
-    * 所属资源组
+    * <p>所属资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
@@ -112,7 +112,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ResourceGroup;
 
     /**
-    * 错误码
+    * <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorCode")
@@ -120,7 +120,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ErrorCode;
 
     /**
-    * 运行账号
+    * <p>运行账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteUserUin")
@@ -128,7 +128,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecuteUserUin;
 
     /**
-    * 创建人 ID
+    * <p>创建人 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreaterUin")
@@ -136,7 +136,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String CreaterUin;
 
     /**
-    * 执行平台执行 ID
+    * <p>执行平台执行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -144,7 +144,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String JobId;
 
     /**
-    * 创建时间戳
+    * <p>创建时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -152,7 +152,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 计划调度时间
+    * <p>计划调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTime")
@@ -160,7 +160,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ScheduleTime;
 
     /**
-    * 更新时间戳
+    * <p>更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -168,7 +168,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 依赖任务完成时间
+    * <p>依赖任务完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependenceFinishedTime")
@@ -176,7 +176,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String DependenceFinishedTime;
 
     /**
-    * 任务下发执行平台时间
+    * <p>任务下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueStartTime")
@@ -184,7 +184,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String QueueStartTime;
 
     /**
-    * 开始等待资源时间
+    * <p>开始等待资源时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingStartTime")
@@ -192,7 +192,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String PendingStartTime;
 
     /**
-    * 运行开始时间
+    * <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -200,7 +200,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecutionStartTime;
 
     /**
-    * 运行结束时间
+    * <p>运行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEndTime")
@@ -208,7 +208,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecutionEndTime;
 
     /**
-    * 排队时间
+    * <p>排队时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueueCostTime")
@@ -216,7 +216,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String QueueCostTime;
 
     /**
-    * 运行时间
+    * <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionTime")
@@ -224,7 +224,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecutionTime;
 
     /**
-    * 总花费时间
+    * <p>总花费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllCostTime")
@@ -232,7 +232,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String AllCostTime;
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeZone")
@@ -240,7 +240,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TimeZone;
 
     /**
-    * 依赖上游任务 ID 列表
+    * <p>依赖上游任务 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependOnList")
@@ -248,7 +248,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String [] DependOnList;
 
     /**
-    * 运行参数
+    * <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunParams")
@@ -256,7 +256,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String RunParams;
 
     /**
-    * 任务扩展信息，包含脚本路径
+    * <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeExtensions")
@@ -264,7 +264,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TaskTypeExtensions;
 
     /**
-    * 重试次数，为 0 则表示首次运行
+    * <p>重试次数，为 0 则表示首次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryTimes")
@@ -272,7 +272,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Long RetryTimes;
 
     /**
-    * 左侧坐标
+    * <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftCoordinate")
@@ -280,7 +280,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Float LeftCoordinate;
 
     /**
-    * 顶部坐标
+    * <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopCoordinate")
@@ -288,7 +288,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Float TopCoordinate;
 
     /**
-    * 资源组 ID
+    * <p>资源组 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -296,7 +296,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 错误码描述
+    * <p>错误码描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorCodeStr")
@@ -304,7 +304,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ErrorCodeStr;
 
     /**
-    * 创建人 UIN
+    * <p>创建人 UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUin")
@@ -312,7 +312,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String CreateUin;
 
     /**
-    * 下发执行平台时间
+    * <p>下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IssueTime")
@@ -320,7 +320,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String IssueTime;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -328,7 +328,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TaskName;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -336,7 +336,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 运行人名称
+    * <p>运行人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteUserName")
@@ -344,7 +344,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecuteUserName;
 
     /**
-    * 重跑次数
+    * <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RerunTimes")
@@ -352,7 +352,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Long RerunTimes;
 
     /**
-    * 是否是最新一次运行
+    * <p>是否是最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLatestExecution")
@@ -360,7 +360,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Boolean IsLatestExecution;
 
     /**
-    * 任务运行状态
+    * <p>任务运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskExecutionState")
@@ -368,7 +368,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String TaskExecutionState;
 
     /**
-    * 周期类型
+    * <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -376,7 +376,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String CycleType;
 
     /**
-    * 责任人名称
+    * <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserNameInCharge")
@@ -384,7 +384,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String UserNameInCharge;
 
     /**
-    * 责任人id
+    * <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserUinInCharge")
@@ -392,7 +392,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String UserUinInCharge;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -400,7 +400,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timezone")
@@ -408,7 +408,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String Timezone;
 
     /**
-    * 文件夹id
+    * <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -416,7 +416,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名称
+    * <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -424,7 +424,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String FolderName;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -432,7 +432,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 任务类型id
+    * <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -440,7 +440,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 工作流运行参数
+    * <p>工作流运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowParams")
@@ -448,7 +448,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String WorkflowParams;
 
     /**
-    * 是否支持重跑
+    * <p>是否支持重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportRerun")
@@ -456,7 +456,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private Boolean SupportRerun;
 
     /**
-    * 工作流运行状态
+    * <p>工作流运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowExecutionState")
@@ -464,7 +464,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String WorkflowExecutionState;
 
     /**
-    * 任务执行结果
+    * <p>任务执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionResult")
@@ -472,7 +472,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ExecutionResult;
 
     /**
-    * 依赖策略
+    * <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyTriggerPolicy")
@@ -480,9 +480,25 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String DependencyTriggerPolicy;
 
     /**
-     * Get 任务运行ID
+    * <p>关联实体是否存在，true表示任务/工作流等实体存在，false表示实体已被删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssociatedEntityExist")
+    @Expose
+    private Boolean AssociatedEntityExist;
+
+    /**
+    * <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleRunType")
+    @Expose
+    private String ScheduleRunType;
+
+    /**
+     * Get <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionId 任务运行ID
+     * @return ExecutionId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionId() {
@@ -490,9 +506,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务运行ID
+     * Set <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionId 任务运行ID
+     * @param ExecutionId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionId(String ExecutionId) {
@@ -500,9 +516,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING
+     * Get <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionState 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING
+     * @return ExecutionState <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionState() {
@@ -510,9 +526,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING
+     * Set <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionState 执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING
+     * @param ExecutionState <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionState(String ExecutionState) {
@@ -520,9 +536,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -530,9 +546,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -540,9 +556,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流ID
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -550,9 +566,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -560,9 +576,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流运行ID
+     * Get <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowExecutionId 工作流运行ID
+     * @return WorkflowExecutionId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowExecutionId() {
@@ -570,9 +586,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流运行ID
+     * Set <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowExecutionId 工作流运行ID
+     * @param WorkflowExecutionId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowExecutionId(String WorkflowExecutionId) {
@@ -580,9 +596,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务 ID
+     * Get <p>任务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务 ID
+     * @return TaskId <p>任务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -590,9 +606,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务 ID
+     * Set <p>任务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务 ID
+     * @param TaskId <p>任务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -600,9 +616,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -610,9 +626,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -620,9 +636,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务版本
+     * Get <p>任务版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskVersionId 任务版本
+     * @return TaskVersionId <p>任务版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskVersionId() {
@@ -630,9 +646,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务版本
+     * Set <p>任务版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskVersionId 任务版本
+     * @param TaskVersionId <p>任务版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskVersionId(String TaskVersionId) {
@@ -640,9 +656,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 触发类型
+     * Get <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerType 触发类型
+     * @return TriggerType <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerType() {
@@ -650,9 +666,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 触发类型
+     * Set <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerType 触发类型
+     * @param TriggerType <p>触发类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(String TriggerType) {
@@ -660,9 +676,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 等待时长，单位秒
+     * Get <p>等待时长，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitTime 等待时长，单位秒
+     * @return WaitTime <p>等待时长，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWaitTime() {
@@ -670,9 +686,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 等待时长，单位秒
+     * Set <p>等待时长，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitTime 等待时长，单位秒
+     * @param WaitTime <p>等待时长，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaitTime(String WaitTime) {
@@ -680,9 +696,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 所属资源组
+     * Get <p>所属资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroup 所属资源组
+     * @return ResourceGroup <p>所属资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroup() {
@@ -690,9 +706,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 所属资源组
+     * Set <p>所属资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroup 所属资源组
+     * @param ResourceGroup <p>所属资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(String ResourceGroup) {
@@ -700,9 +716,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 错误码
+     * Get <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorCode 错误码
+     * @return ErrorCode <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorCode() {
@@ -710,9 +726,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 错误码
+     * Set <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorCode 错误码
+     * @param ErrorCode <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorCode(String ErrorCode) {
@@ -720,9 +736,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行账号
+     * Get <p>运行账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecuteUserUin 运行账号
+     * @return ExecuteUserUin <p>运行账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteUserUin() {
@@ -730,9 +746,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行账号
+     * Set <p>运行账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecuteUserUin 运行账号
+     * @param ExecuteUserUin <p>运行账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteUserUin(String ExecuteUserUin) {
@@ -740,9 +756,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 创建人 ID
+     * Get <p>创建人 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreaterUin 创建人 ID
+     * @return CreaterUin <p>创建人 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreaterUin() {
@@ -750,9 +766,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 创建人 ID
+     * Set <p>创建人 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreaterUin 创建人 ID
+     * @param CreaterUin <p>创建人 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreaterUin(String CreaterUin) {
@@ -760,9 +776,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 执行平台执行 ID
+     * Get <p>执行平台执行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 执行平台执行 ID
+     * @return JobId <p>执行平台执行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
@@ -770,9 +786,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 执行平台执行 ID
+     * Set <p>执行平台执行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 执行平台执行 ID
+     * @param JobId <p>执行平台执行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
@@ -780,9 +796,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 创建时间戳
+     * Get <p>创建时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间戳
+     * @return CreateTime <p>创建时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -790,9 +806,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 创建时间戳
+     * Set <p>创建时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间戳
+     * @param CreateTime <p>创建时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -800,9 +816,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 计划调度时间
+     * Get <p>计划调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTime 计划调度时间
+     * @return ScheduleTime <p>计划调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTime() {
@@ -810,9 +826,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 计划调度时间
+     * Set <p>计划调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTime 计划调度时间
+     * @param ScheduleTime <p>计划调度时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTime(String ScheduleTime) {
@@ -820,9 +836,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 更新时间戳
+     * Get <p>更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间戳
+     * @return UpdateTime <p>更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -830,9 +846,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 更新时间戳
+     * Set <p>更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间戳
+     * @param UpdateTime <p>更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -840,9 +856,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 依赖任务完成时间
+     * Get <p>依赖任务完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependenceFinishedTime 依赖任务完成时间
+     * @return DependenceFinishedTime <p>依赖任务完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependenceFinishedTime() {
@@ -850,9 +866,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 依赖任务完成时间
+     * Set <p>依赖任务完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependenceFinishedTime 依赖任务完成时间
+     * @param DependenceFinishedTime <p>依赖任务完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependenceFinishedTime(String DependenceFinishedTime) {
@@ -860,9 +876,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务下发执行平台时间
+     * Get <p>任务下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueueStartTime 任务下发执行平台时间
+     * @return QueueStartTime <p>任务下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueStartTime() {
@@ -870,9 +886,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务下发执行平台时间
+     * Set <p>任务下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueueStartTime 任务下发执行平台时间
+     * @param QueueStartTime <p>任务下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueStartTime(String QueueStartTime) {
@@ -880,9 +896,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 开始等待资源时间
+     * Get <p>开始等待资源时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PendingStartTime 开始等待资源时间
+     * @return PendingStartTime <p>开始等待资源时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPendingStartTime() {
@@ -890,9 +906,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 开始等待资源时间
+     * Set <p>开始等待资源时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PendingStartTime 开始等待资源时间
+     * @param PendingStartTime <p>开始等待资源时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingStartTime(String PendingStartTime) {
@@ -900,9 +916,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行开始时间
+     * Get <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 运行开始时间
+     * @return ExecutionStartTime <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -910,9 +926,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行开始时间
+     * Set <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 运行开始时间
+     * @param ExecutionStartTime <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -920,9 +936,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行结束时间
+     * Get <p>运行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionEndTime 运行结束时间
+     * @return ExecutionEndTime <p>运行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEndTime() {
@@ -930,9 +946,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行结束时间
+     * Set <p>运行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionEndTime 运行结束时间
+     * @param ExecutionEndTime <p>运行结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
@@ -940,9 +956,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 排队时间
+     * Get <p>排队时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueueCostTime 排队时间
+     * @return QueueCostTime <p>排队时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueueCostTime() {
@@ -950,9 +966,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 排队时间
+     * Set <p>排队时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueueCostTime 排队时间
+     * @param QueueCostTime <p>排队时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueueCostTime(String QueueCostTime) {
@@ -960,9 +976,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行时间
+     * Get <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTime 运行时间
+     * @return ExecutionTime <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionTime() {
@@ -970,9 +986,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行时间
+     * Set <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTime 运行时间
+     * @param ExecutionTime <p>运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionTime(String ExecutionTime) {
@@ -980,9 +996,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 总花费时间
+     * Get <p>总花费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllCostTime 总花费时间
+     * @return AllCostTime <p>总花费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAllCostTime() {
@@ -990,9 +1006,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 总花费时间
+     * Set <p>总花费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllCostTime 总花费时间
+     * @param AllCostTime <p>总花费时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllCostTime(String AllCostTime) {
@@ -1000,9 +1016,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 时区
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeZone 时区
+     * @return TimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeZone() {
@@ -1010,9 +1026,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeZone 时区
+     * @param TimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeZone(String TimeZone) {
@@ -1020,9 +1036,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 依赖上游任务 ID 列表
+     * Get <p>依赖上游任务 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependOnList 依赖上游任务 ID 列表
+     * @return DependOnList <p>依赖上游任务 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDependOnList() {
@@ -1030,9 +1046,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 依赖上游任务 ID 列表
+     * Set <p>依赖上游任务 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependOnList 依赖上游任务 ID 列表
+     * @param DependOnList <p>依赖上游任务 ID 列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependOnList(String [] DependOnList) {
@@ -1040,9 +1056,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行参数
+     * Get <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunParams 运行参数
+     * @return RunParams <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunParams() {
@@ -1050,9 +1066,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行参数
+     * Set <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunParams 运行参数
+     * @param RunParams <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunParams(String RunParams) {
@@ -1060,9 +1076,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务扩展信息，包含脚本路径
+     * Get <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeExtensions 任务扩展信息，包含脚本路径
+     * @return TaskTypeExtensions <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeExtensions() {
@@ -1070,9 +1086,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务扩展信息，包含脚本路径
+     * Set <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeExtensions 任务扩展信息，包含脚本路径
+     * @param TaskTypeExtensions <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeExtensions(String TaskTypeExtensions) {
@@ -1080,9 +1096,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 重试次数，为 0 则表示首次运行
+     * Get <p>重试次数，为 0 则表示首次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryTimes 重试次数，为 0 则表示首次运行
+     * @return RetryTimes <p>重试次数，为 0 则表示首次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryTimes() {
@@ -1090,9 +1106,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 重试次数，为 0 则表示首次运行
+     * Set <p>重试次数，为 0 则表示首次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryTimes 重试次数，为 0 则表示首次运行
+     * @param RetryTimes <p>重试次数，为 0 则表示首次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryTimes(Long RetryTimes) {
@@ -1100,9 +1116,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 左侧坐标
+     * Get <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LeftCoordinate 左侧坐标
+     * @return LeftCoordinate <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLeftCoordinate() {
@@ -1110,9 +1126,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 左侧坐标
+     * Set <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LeftCoordinate 左侧坐标
+     * @param LeftCoordinate <p>左侧坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftCoordinate(Float LeftCoordinate) {
@@ -1120,9 +1136,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 顶部坐标
+     * Get <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopCoordinate 顶部坐标
+     * @return TopCoordinate <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopCoordinate() {
@@ -1130,9 +1146,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 顶部坐标
+     * Set <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopCoordinate 顶部坐标
+     * @param TopCoordinate <p>顶部坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopCoordinate(Float TopCoordinate) {
@@ -1140,9 +1156,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 资源组 ID
+     * Get <p>资源组 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 资源组 ID
+     * @return ResourceGroupId <p>资源组 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -1150,9 +1166,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 资源组 ID
+     * Set <p>资源组 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 资源组 ID
+     * @param ResourceGroupId <p>资源组 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -1160,9 +1176,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 错误码描述
+     * Get <p>错误码描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorCodeStr 错误码描述
+     * @return ErrorCodeStr <p>错误码描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorCodeStr() {
@@ -1170,9 +1186,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 错误码描述
+     * Set <p>错误码描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorCodeStr 错误码描述
+     * @param ErrorCodeStr <p>错误码描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorCodeStr(String ErrorCodeStr) {
@@ -1180,9 +1196,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 创建人 UIN
+     * Get <p>创建人 UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUin 创建人 UIN
+     * @return CreateUin <p>创建人 UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUin() {
@@ -1190,9 +1206,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 创建人 UIN
+     * Set <p>创建人 UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUin 创建人 UIN
+     * @param CreateUin <p>创建人 UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUin(String CreateUin) {
@@ -1200,9 +1216,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 下发执行平台时间
+     * Get <p>下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IssueTime 下发执行平台时间
+     * @return IssueTime <p>下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIssueTime() {
@@ -1210,9 +1226,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 下发执行平台时间
+     * Set <p>下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IssueTime 下发执行平台时间
+     * @param IssueTime <p>下发执行平台时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIssueTime(String IssueTime) {
@@ -1220,9 +1236,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -1230,9 +1246,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -1240,9 +1256,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -1250,9 +1266,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -1260,9 +1276,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行人名称
+     * Get <p>运行人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecuteUserName 运行人名称
+     * @return ExecuteUserName <p>运行人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteUserName() {
@@ -1270,9 +1286,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行人名称
+     * Set <p>运行人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecuteUserName 运行人名称
+     * @param ExecuteUserName <p>运行人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteUserName(String ExecuteUserName) {
@@ -1280,9 +1296,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 重跑次数
+     * Get <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RerunTimes 重跑次数
+     * @return RerunTimes <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRerunTimes() {
@@ -1290,9 +1306,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 重跑次数
+     * Set <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RerunTimes 重跑次数
+     * @param RerunTimes <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRerunTimes(Long RerunTimes) {
@@ -1300,9 +1316,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 是否是最新一次运行
+     * Get <p>是否是最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLatestExecution 是否是最新一次运行
+     * @return IsLatestExecution <p>是否是最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsLatestExecution() {
@@ -1310,9 +1326,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 是否是最新一次运行
+     * Set <p>是否是最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLatestExecution 是否是最新一次运行
+     * @param IsLatestExecution <p>是否是最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLatestExecution(Boolean IsLatestExecution) {
@@ -1320,9 +1336,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务运行状态
+     * Get <p>任务运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskExecutionState 任务运行状态
+     * @return TaskExecutionState <p>任务运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskExecutionState() {
@@ -1330,9 +1346,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务运行状态
+     * Set <p>任务运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskExecutionState 任务运行状态
+     * @param TaskExecutionState <p>任务运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskExecutionState(String TaskExecutionState) {
@@ -1340,9 +1356,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 周期类型
+     * Get <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型
+     * @return CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -1350,9 +1366,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 周期类型
+     * Set <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型
+     * @param CycleType <p>周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -1360,9 +1376,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 责任人名称
+     * Get <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserNameInCharge 责任人名称
+     * @return UserNameInCharge <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserNameInCharge() {
@@ -1370,9 +1386,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 责任人名称
+     * Set <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserNameInCharge 责任人名称
+     * @param UserNameInCharge <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserNameInCharge(String UserNameInCharge) {
@@ -1380,9 +1396,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 责任人id
+     * Get <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserUinInCharge 责任人id
+     * @return UserUinInCharge <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserUinInCharge() {
@@ -1390,9 +1406,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 责任人id
+     * Set <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserUinInCharge 责任人id
+     * @param UserUinInCharge <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserUinInCharge(String UserUinInCharge) {
@@ -1400,9 +1416,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 资源组名称
+     * Get <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 资源组名称
+     * @return ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -1410,9 +1426,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 资源组名称
+     * Set <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 资源组名称
+     * @param ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -1420,9 +1436,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 时区
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timezone 时区
+     * @return Timezone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimezone() {
@@ -1430,9 +1446,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timezone 时区
+     * @param Timezone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimezone(String Timezone) {
@@ -1440,9 +1456,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 文件夹id
+     * Get <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹id
+     * @return FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -1450,9 +1466,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 文件夹id
+     * Set <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹id
+     * @param FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -1460,9 +1476,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 文件夹名称
+     * Get <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名称
+     * @return FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -1470,9 +1486,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 文件夹名称
+     * Set <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名称
+     * @param FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -1480,9 +1496,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -1490,9 +1506,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -1500,9 +1516,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务类型id
+     * Get <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 任务类型id
+     * @return TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -1510,9 +1526,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务类型id
+     * Set <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 任务类型id
+     * @param TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -1520,9 +1536,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流运行参数
+     * Get <p>工作流运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowParams 工作流运行参数
+     * @return WorkflowParams <p>工作流运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowParams() {
@@ -1530,9 +1546,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流运行参数
+     * Set <p>工作流运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowParams 工作流运行参数
+     * @param WorkflowParams <p>工作流运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowParams(String WorkflowParams) {
@@ -1540,9 +1556,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 是否支持重跑
+     * Get <p>是否支持重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportRerun 是否支持重跑
+     * @return SupportRerun <p>是否支持重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportRerun() {
@@ -1550,9 +1566,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 是否支持重跑
+     * Set <p>是否支持重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportRerun 是否支持重跑
+     * @param SupportRerun <p>是否支持重跑</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportRerun(Boolean SupportRerun) {
@@ -1560,9 +1576,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流运行状态
+     * Get <p>工作流运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowExecutionState 工作流运行状态
+     * @return WorkflowExecutionState <p>工作流运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowExecutionState() {
@@ -1570,9 +1586,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流运行状态
+     * Set <p>工作流运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowExecutionState 工作流运行状态
+     * @param WorkflowExecutionState <p>工作流运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowExecutionState(String WorkflowExecutionState) {
@@ -1580,9 +1596,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务执行结果
+     * Get <p>任务执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionResult 任务执行结果
+     * @return ExecutionResult <p>任务执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionResult() {
@@ -1590,9 +1606,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务执行结果
+     * Set <p>任务执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionResult 任务执行结果
+     * @param ExecutionResult <p>任务执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionResult(String ExecutionResult) {
@@ -1600,9 +1616,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Get 依赖策略
+     * Get <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyTriggerPolicy 依赖策略
+     * @return DependencyTriggerPolicy <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyTriggerPolicy() {
@@ -1610,13 +1626,53 @@ public class TriggerTaskRunBrief extends AbstractModel {
     }
 
     /**
-     * Set 依赖策略
+     * Set <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyTriggerPolicy 依赖策略
+     * @param DependencyTriggerPolicy <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
         this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>关联实体是否存在，true表示任务/工作流等实体存在，false表示实体已被删除</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociatedEntityExist <p>关联实体是否存在，true表示任务/工作流等实体存在，false表示实体已被删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAssociatedEntityExist() {
+        return this.AssociatedEntityExist;
+    }
+
+    /**
+     * Set <p>关联实体是否存在，true表示任务/工作流等实体存在，false表示实体已被删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssociatedEntityExist <p>关联实体是否存在，true表示任务/工作流等实体存在，false表示实体已被删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssociatedEntityExist(Boolean AssociatedEntityExist) {
+        this.AssociatedEntityExist = AssociatedEntityExist;
+    }
+
+    /**
+     * Get <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleRunType <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleRunType() {
+        return this.ScheduleRunType;
+    }
+
+    /**
+     * Set <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleRunType <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleRunType(String ScheduleRunType) {
+        this.ScheduleRunType = ScheduleRunType;
     }
 
     public TriggerTaskRunBrief() {
@@ -1801,6 +1857,12 @@ public class TriggerTaskRunBrief extends AbstractModel {
         if (source.DependencyTriggerPolicy != null) {
             this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
         }
+        if (source.AssociatedEntityExist != null) {
+            this.AssociatedEntityExist = new Boolean(source.AssociatedEntityExist);
+        }
+        if (source.ScheduleRunType != null) {
+            this.ScheduleRunType = new String(source.ScheduleRunType);
+        }
     }
 
 
@@ -1865,6 +1927,8 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowExecutionState", this.WorkflowExecutionState);
         this.setParamSimple(map, prefix + "ExecutionResult", this.ExecutionResult);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "AssociatedEntityExist", this.AssociatedEntityExist);
+        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
 
     }
 }

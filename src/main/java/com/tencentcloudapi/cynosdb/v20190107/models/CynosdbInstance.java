@@ -80,7 +80,7 @@ public class CynosdbInstance extends AbstractModel {
     private String Region;
 
     /**
-    * <p>可用区</p>
+    * <p>集群主可用区</p>
     */
     @SerializedName("Zone")
     @Expose
@@ -361,7 +361,7 @@ public class CynosdbInstance extends AbstractModel {
     private Tag [] ResourceTags;
 
     /**
-    * <p>主可用区</p>
+    * <p>读写实例当前所在可用区</p>
     */
     @SerializedName("MasterZone")
     @Expose
@@ -438,6 +438,13 @@ public class CynosdbInstance extends AbstractModel {
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
+
+    /**
+    * <p>实例当前所在可用区</p>
+    */
+    @SerializedName("RealZone")
+    @Expose
+    private String RealZone;
 
     /**
      * Get <p>用户Uin</p> 
@@ -568,16 +575,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>可用区</p> 
-     * @return Zone <p>可用区</p>
+     * Get <p>集群主可用区</p> 
+     * @return Zone <p>集群主可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>可用区</p>
-     * @param Zone <p>可用区</p>
+     * Set <p>集群主可用区</p>
+     * @param Zone <p>集群主可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -1212,16 +1219,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>主可用区</p> 
-     * @return MasterZone <p>主可用区</p>
+     * Get <p>读写实例当前所在可用区</p> 
+     * @return MasterZone <p>读写实例当前所在可用区</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set <p>主可用区</p>
-     * @param MasterZone <p>主可用区</p>
+     * Set <p>读写实例当前所在可用区</p>
+     * @param MasterZone <p>读写实例当前所在可用区</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
@@ -1393,6 +1400,22 @@ public class CynosdbInstance extends AbstractModel {
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
+    }
+
+    /**
+     * Get <p>实例当前所在可用区</p> 
+     * @return RealZone <p>实例当前所在可用区</p>
+     */
+    public String getRealZone() {
+        return this.RealZone;
+    }
+
+    /**
+     * Set <p>实例当前所在可用区</p>
+     * @param RealZone <p>实例当前所在可用区</p>
+     */
+    public void setRealZone(String RealZone) {
+        this.RealZone = RealZone;
     }
 
     public CynosdbInstance() {
@@ -1598,6 +1621,9 @@ public class CynosdbInstance extends AbstractModel {
         if (source.GdnId != null) {
             this.GdnId = new String(source.GdnId);
         }
+        if (source.RealZone != null) {
+            this.RealZone = new String(source.RealZone);
+        }
     }
 
 
@@ -1664,6 +1690,7 @@ public class CynosdbInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamSimple(map, prefix + "RealZone", this.RealZone);
 
     }
 }

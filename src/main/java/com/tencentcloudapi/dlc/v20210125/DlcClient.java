@@ -1559,7 +1559,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *查询当前地域可售卖的资源规格和最大配额
+     *查询当前地域可售卖的资源规格、最大配额，以及库存情况。StatusCategory 与 DescribePartitionAvailableQuota 数据同源，将实时可新增数量映射为库存分级；当请求 Region 与资源池实际部署地域不一致，或服务 cold-start 快照尚未就绪时，StatusCategory 为 null。
      * @param req DescribeSaleResourceInfoRequest
      * @return DescribeSaleResourceInfoResponse
      * @throws TencentCloudSDKException
@@ -2491,6 +2491,17 @@ public class DlcClient extends AbstractClient{
     public ListExamplesResponse ListExamples(ListExamplesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListExamples", ListExamplesResponse.class);
+    }
+
+    /**
+     *列出所有镜像
+     * @param req ListImagesRequest
+     * @return ListImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListImagesResponse ListImages(ListImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListImages", ListImagesResponse.class);
     }
 
     /**

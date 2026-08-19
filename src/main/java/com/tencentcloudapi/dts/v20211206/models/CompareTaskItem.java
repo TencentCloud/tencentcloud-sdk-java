@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class CompareTaskItem extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 对比任务 Id
+    * <p>对比任务 Id</p>
     */
     @SerializedName("CompareTaskId")
     @Expose
     private String CompareTaskId;
 
     /**
-    * 对比任务名称
+    * <p>对比任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+    * <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 对比任务配置
+    * <p>对比任务配置</p>
     */
     @SerializedName("Config")
     @Expose
     private CompareObject Config;
 
     /**
-    * 对比任务校验详情
+    * <p>对比任务校验详情</p>
     */
     @SerializedName("CheckProcess")
     @Expose
     private ProcessProgress CheckProcess;
 
     /**
-    * 对比任务运行详情
+    * <p>对比任务运行详情</p>
     */
     @SerializedName("CompareProcess")
     @Expose
     private ProcessProgress CompareProcess;
 
     /**
-    * 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
+    * <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
     */
     @SerializedName("Conclusion")
     @Expose
     private String Conclusion;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 任务启动时间
+    * <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("StartedAt")
     @Expose
     private String StartedAt;
 
     /**
-    * 对比结束时间
+    * <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("FinishedAt")
     @Expose
     private String FinishedAt;
 
     /**
-    * 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+    * <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * 对比配置信息
+    * <p>对比配置信息</p>
     */
     @SerializedName("Options")
     @Expose
     private CompareOptions Options;
 
     /**
-    * 一致性校验提示信息
+    * <p>一致性校验提示信息</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 任务id 
-     * @return JobId 任务id
+     * Get <p>任务id</p> 
+     * @return JobId <p>任务id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务id
-     * @param JobId 任务id
+     * Set <p>任务id</p>
+     * @param JobId <p>任务id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 对比任务 Id 
-     * @return CompareTaskId 对比任务 Id
+     * Get <p>对比任务 Id</p> 
+     * @return CompareTaskId <p>对比任务 Id</p>
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
     }
 
     /**
-     * Set 对比任务 Id
-     * @param CompareTaskId 对比任务 Id
+     * Set <p>对比任务 Id</p>
+     * @param CompareTaskId <p>对比任务 Id</p>
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 对比任务名称 
-     * @return TaskName 对比任务名称
+     * Get <p>对比任务名称</p> 
+     * @return TaskName <p>对比任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 对比任务名称
-     * @param TaskName 对比任务名称
+     * Set <p>对比任务名称</p>
+     * @param TaskName <p>对比任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止 
-     * @return Status 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     * Get <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p> 
+     * @return Status <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
-     * @param Status 对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     * Set <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
+     * @param Status <p>对比任务状态, 可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 对比任务配置 
-     * @return Config 对比任务配置
+     * Get <p>对比任务配置</p> 
+     * @return Config <p>对比任务配置</p>
      */
     public CompareObject getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 对比任务配置
-     * @param Config 对比任务配置
+     * Set <p>对比任务配置</p>
+     * @param Config <p>对比任务配置</p>
      */
     public void setConfig(CompareObject Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 对比任务校验详情 
-     * @return CheckProcess 对比任务校验详情
+     * Get <p>对比任务校验详情</p> 
+     * @return CheckProcess <p>对比任务校验详情</p>
      */
     public ProcessProgress getCheckProcess() {
         return this.CheckProcess;
     }
 
     /**
-     * Set 对比任务校验详情
-     * @param CheckProcess 对比任务校验详情
+     * Set <p>对比任务校验详情</p>
+     * @param CheckProcess <p>对比任务校验详情</p>
      */
     public void setCheckProcess(ProcessProgress CheckProcess) {
         this.CheckProcess = CheckProcess;
     }
 
     /**
-     * Get 对比任务运行详情 
-     * @return CompareProcess 对比任务运行详情
+     * Get <p>对比任务运行详情</p> 
+     * @return CompareProcess <p>对比任务运行详情</p>
      */
     public ProcessProgress getCompareProcess() {
         return this.CompareProcess;
     }
 
     /**
-     * Set 对比任务运行详情
-     * @param CompareProcess 对比任务运行详情
+     * Set <p>对比任务运行详情</p>
+     * @param CompareProcess <p>对比任务运行详情</p>
      */
     public void setCompareProcess(ProcessProgress CompareProcess) {
         this.CompareProcess = CompareProcess;
     }
 
     /**
-     * Get 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过 
-     * @return Conclusion 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
+     * Get <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p> 
+     * @return Conclusion <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
      */
     public String getConclusion() {
         return this.Conclusion;
     }
 
     /**
-     * Set 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
-     * @param Conclusion 对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过
+     * Set <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
+     * @param Conclusion <p>对比结果, 可能的值：same - 一致；different - 不一致；skipAll - 跳过</p>
      */
     public void setConclusion(String Conclusion) {
         this.Conclusion = Conclusion;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreatedAt 任务创建时间
+     * Get <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return CreatedAt <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreatedAt 任务创建时间
+     * Set <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param CreatedAt <p>任务创建时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 任务启动时间 
-     * @return StartedAt 任务启动时间
+     * Get <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return StartedAt <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getStartedAt() {
         return this.StartedAt;
     }
 
     /**
-     * Set 任务启动时间
-     * @param StartedAt 任务启动时间
+     * Set <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param StartedAt <p>任务启动时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setStartedAt(String StartedAt) {
         this.StartedAt = StartedAt;
     }
 
     /**
-     * Get 对比结束时间 
-     * @return FinishedAt 对比结束时间
+     * Get <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return FinishedAt <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getFinishedAt() {
         return this.FinishedAt;
     }
 
     /**
-     * Set 对比结束时间
-     * @param FinishedAt 对比结束时间
+     * Set <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param FinishedAt <p>对比结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;
     }
 
     /**
-     * Get 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比) 
-     * @return Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * Get <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p> 
+     * @return Method <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
-     * @param Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * Set <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
+     * @param Method <p>对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)</p>
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 对比配置信息 
-     * @return Options 对比配置信息
+     * Get <p>对比配置信息</p> 
+     * @return Options <p>对比配置信息</p>
      */
     public CompareOptions getOptions() {
         return this.Options;
     }
 
     /**
-     * Set 对比配置信息
-     * @param Options 对比配置信息
+     * Set <p>对比配置信息</p>
+     * @param Options <p>对比配置信息</p>
      */
     public void setOptions(CompareOptions Options) {
         this.Options = Options;
     }
 
     /**
-     * Get 一致性校验提示信息 
-     * @return Message 一致性校验提示信息
+     * Get <p>一致性校验提示信息</p> 
+     * @return Message <p>一致性校验提示信息</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 一致性校验提示信息
-     * @param Message 一致性校验提示信息
+     * Set <p>一致性校验提示信息</p>
+     * @param Message <p>一致性校验提示信息</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;

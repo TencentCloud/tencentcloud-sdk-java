@@ -31,6 +31,13 @@ public class ResourceSupplyAttribute extends AbstractModel {
     private String SupplyType;
 
     /**
+    * <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get <p>资源供应类型。TIDE:潮汐;SPOT:竞价;空:常规按量后付费</p> 
      * @return SupplyType <p>资源供应类型。TIDE:潮汐;SPOT:竞价;空:常规按量后付费</p>
      */
@@ -46,6 +53,22 @@ public class ResourceSupplyAttribute extends AbstractModel {
         this.SupplyType = SupplyType;
     }
 
+    /**
+     * Get <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p> 
+     * @return ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
+     * @param ClusterType <p>集群类型</p><p>枚举值：</p><ul><li>DEFAULT： 默认集群</li><li>THIRD： 第三方集群</li></ul><p>默认值：DEFAULT</p>
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public ResourceSupplyAttribute() {
     }
 
@@ -57,6 +80,9 @@ public class ResourceSupplyAttribute extends AbstractModel {
         if (source.SupplyType != null) {
             this.SupplyType = new String(source.SupplyType);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ResourceSupplyAttribute extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SupplyType", this.SupplyType);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

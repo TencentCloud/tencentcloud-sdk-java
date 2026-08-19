@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSaleResourceInfoResponse extends AbstractModel {
 
     /**
-    * 可售卖资源规格列表
+    * 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
     */
     @SerializedName("SaleResourceInfoList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSaleResourceInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可售卖资源规格列表 
-     * @return SaleResourceInfoList 可售卖资源规格列表
+     * Get 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况 
+     * @return SaleResourceInfoList 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
      */
     public ResourceSaleInfo [] getSaleResourceInfoList() {
         return this.SaleResourceInfoList;
     }
 
     /**
-     * Set 可售卖资源规格列表
-     * @param SaleResourceInfoList 可售卖资源规格列表
+     * Set 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
+     * @param SaleResourceInfoList 可售卖资源规格列表，包含规格、步长、单账户上限、以及库存情况
      */
     public void setSaleResourceInfoList(ResourceSaleInfo [] SaleResourceInfoList) {
         this.SaleResourceInfoList = SaleResourceInfoList;

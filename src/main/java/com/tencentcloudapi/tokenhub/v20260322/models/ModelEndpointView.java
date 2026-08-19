@@ -45,6 +45,13 @@ public class ModelEndpointView extends AbstractModel {
     private String ModelId;
 
     /**
+    * <p>模型id别名列表</p>
+    */
+    @SerializedName("ExtraModelIds")
+    @Expose
+    private String [] ExtraModelIds;
+
+    /**
     * <p>模型名称。</p>
     */
     @SerializedName("ModelName")
@@ -57,6 +64,13 @@ public class ModelEndpointView extends AbstractModel {
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+    */
+    @SerializedName("ModelStatus")
+    @Expose
+    private String ModelStatus;
 
     /**
     * <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
@@ -156,6 +170,22 @@ public class ModelEndpointView extends AbstractModel {
     }
 
     /**
+     * Get <p>模型id别名列表</p> 
+     * @return ExtraModelIds <p>模型id别名列表</p>
+     */
+    public String [] getExtraModelIds() {
+        return this.ExtraModelIds;
+    }
+
+    /**
+     * Set <p>模型id别名列表</p>
+     * @param ExtraModelIds <p>模型id别名列表</p>
+     */
+    public void setExtraModelIds(String [] ExtraModelIds) {
+        this.ExtraModelIds = ExtraModelIds;
+    }
+
+    /**
      * Get <p>模型名称。</p> 
      * @return ModelName <p>模型名称。</p>
      */
@@ -185,6 +215,22 @@ public class ModelEndpointView extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul> 
+     * @return ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+     */
+    public String getModelStatus() {
+        return this.ModelStatus;
+    }
+
+    /**
+     * Set <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+     * @param ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+     */
+    public void setModelStatus(String ModelStatus) {
+        this.ModelStatus = ModelStatus;
     }
 
     /**
@@ -316,11 +362,20 @@ public class ModelEndpointView extends AbstractModel {
         if (source.ModelId != null) {
             this.ModelId = new String(source.ModelId);
         }
+        if (source.ExtraModelIds != null) {
+            this.ExtraModelIds = new String[source.ExtraModelIds.length];
+            for (int i = 0; i < source.ExtraModelIds.length; i++) {
+                this.ExtraModelIds[i] = new String(source.ExtraModelIds[i]);
+            }
+        }
         if (source.ModelName != null) {
             this.ModelName = new String(source.ModelName);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.ModelStatus != null) {
+            this.ModelStatus = new String(source.ModelStatus);
         }
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
@@ -353,8 +408,10 @@ public class ModelEndpointView extends AbstractModel {
         this.setParamSimple(map, prefix + "EndpointId", this.EndpointId);
         this.setParamSimple(map, prefix + "EndpointName", this.EndpointName);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
+        this.setParamArraySimple(map, prefix + "ExtraModelIds.", this.ExtraModelIds);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "PaymentEnabled", this.PaymentEnabled);

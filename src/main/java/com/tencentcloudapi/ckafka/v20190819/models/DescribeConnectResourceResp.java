@@ -184,11 +184,25 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private MqttConnectParam MqttConnectParam;
 
     /**
+    * <p>Iceberg配置，Type为ICEBERG时返回</p>
+    */
+    @SerializedName("IcebergConnectParam")
+    @Expose
+    private IcebergConnectParam IcebergConnectParam;
+
+    /**
     * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * <p>iceberg数据库和表信息</p>
+    */
+    @SerializedName("IcebergDatabases")
+    @Expose
+    private IcebergDatabaseInfo [] IcebergDatabases;
 
     /**
      * Get <p>连接源的Id</p> 
@@ -579,6 +593,22 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
+     * Get <p>Iceberg配置，Type为ICEBERG时返回</p> 
+     * @return IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
+     */
+    public IcebergConnectParam getIcebergConnectParam() {
+        return this.IcebergConnectParam;
+    }
+
+    /**
+     * Set <p>Iceberg配置，Type为ICEBERG时返回</p>
+     * @param IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
+     */
+    public void setIcebergConnectParam(IcebergConnectParam IcebergConnectParam) {
+        this.IcebergConnectParam = IcebergConnectParam;
+    }
+
+    /**
      * Get <p>标签列表</p> 
      * @return Tags <p>标签列表</p>
      */
@@ -592,6 +622,22 @@ public class DescribeConnectResourceResp extends AbstractModel {
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>iceberg数据库和表信息</p> 
+     * @return IcebergDatabases <p>iceberg数据库和表信息</p>
+     */
+    public IcebergDatabaseInfo [] getIcebergDatabases() {
+        return this.IcebergDatabases;
+    }
+
+    /**
+     * Set <p>iceberg数据库和表信息</p>
+     * @param IcebergDatabases <p>iceberg数据库和表信息</p>
+     */
+    public void setIcebergDatabases(IcebergDatabaseInfo [] IcebergDatabases) {
+        this.IcebergDatabases = IcebergDatabases;
     }
 
     public DescribeConnectResourceResp() {
@@ -668,10 +714,19 @@ public class DescribeConnectResourceResp extends AbstractModel {
         if (source.MqttConnectParam != null) {
             this.MqttConnectParam = new MqttConnectParam(source.MqttConnectParam);
         }
+        if (source.IcebergConnectParam != null) {
+            this.IcebergConnectParam = new IcebergConnectParam(source.IcebergConnectParam);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.IcebergDatabases != null) {
+            this.IcebergDatabases = new IcebergDatabaseInfo[source.IcebergDatabases.length];
+            for (int i = 0; i < source.IcebergDatabases.length; i++) {
+                this.IcebergDatabases[i] = new IcebergDatabaseInfo(source.IcebergDatabases[i]);
             }
         }
     }
@@ -702,7 +757,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
         this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
         this.setParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+        this.setParamObj(map, prefix + "IcebergConnectParam.", this.IcebergConnectParam);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "IcebergDatabases.", this.IcebergDatabases);
 
     }
 }

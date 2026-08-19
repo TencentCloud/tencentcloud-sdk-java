@@ -30,11 +30,32 @@ public enum CsipErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* InvalidParameter.DateRange */
+     INVALIDPARAMETER_DATERANGE("InvalidParameter.DateRange"),
+     
      /* Decrypt error */
      INVALIDPARAMETER_DECRYPTERROR("InvalidParameter.DecryptError"),
      
+     /* InvalidParameter.IllegalRequest */
+     INVALIDPARAMETER_ILLEGALREQUEST("InvalidParameter.IllegalRequest"),
+     
+     /* InvalidParameter.InvalidFormat */
+     INVALIDPARAMETER_INVALIDFORMAT("InvalidParameter.InvalidFormat"),
+     
+     /* InvalidParameter.MissingParameter */
+     INVALIDPARAMETER_MISSINGPARAMETER("InvalidParameter.MissingParameter"),
+     
+     /* InvalidParameter.ParsingError */
+     INVALIDPARAMETER_PARSINGERROR("InvalidParameter.ParsingError"),
+     
+     /* InvalidParameter.RegexRuleError */
+     INVALIDPARAMETER_REGEXRULEERROR("InvalidParameter.RegexRuleError"),
+     
      /* InvalidParameter.ResourceId */
      INVALIDPARAMETER_RESOURCEID("InvalidParameter.ResourceId"),
+     
+     /* InvalidParameter.ReverShellKeyFieldAllEmpty */
+     INVALIDPARAMETER_REVERSHELLKEYFIELDALLEMPTY("InvalidParameter.ReverShellKeyFieldAllEmpty"),
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
@@ -44,6 +65,9 @@ public enum CsipErrorCode {
      
      /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
+     
+     /* LimitExceeded.AreaQuota */
+     LIMITEXCEEDED_AREAQUOTA("LimitExceeded.AreaQuota"),
      
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),

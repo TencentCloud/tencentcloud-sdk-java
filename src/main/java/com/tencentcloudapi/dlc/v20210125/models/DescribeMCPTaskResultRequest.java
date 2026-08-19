@@ -31,6 +31,13 @@ public class DescribeMCPTaskResultRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * <p>下一次请求数据</p>
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
+
+    /**
      * Get <p>任务ID</p> 
      * @return TaskId <p>任务ID</p>
      */
@@ -46,6 +53,22 @@ public class DescribeMCPTaskResultRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get <p>下一次请求数据</p> 
+     * @return NextToken <p>下一次请求数据</p>
+     */
+    public String getNextToken() {
+        return this.NextToken;
+    }
+
+    /**
+     * Set <p>下一次请求数据</p>
+     * @param NextToken <p>下一次请求数据</p>
+     */
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
+    }
+
     public DescribeMCPTaskResultRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeMCPTaskResultRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeMCPTaskResultRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 
     }
 }

@@ -136,6 +136,13 @@ public class RoGroup extends AbstractModel {
     private Long DelayReplicationTime;
 
     /**
+    * <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+    */
+    @SerializedName("RoGroupType")
+    @Expose
+    private String RoGroupType;
+
+    /**
      * Get <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p> 
      * @return RoGroupMode <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
      */
@@ -391,6 +398,22 @@ public class RoGroup extends AbstractModel {
         this.DelayReplicationTime = DelayReplicationTime;
     }
 
+    /**
+     * Get <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p> 
+     * @return RoGroupType <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+     */
+    public String getRoGroupType() {
+        return this.RoGroupType;
+    }
+
+    /**
+     * Set <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+     * @param RoGroupType <p>只读组类型。</p><p>枚举值：</p><ul><li>normal： 普通RO组</li><li>direct： 纯网络转发模式</li><li>default： 默认RO组</li></ul><p>默认值：normal</p>
+     */
+    public void setRoGroupType(String RoGroupType) {
+        this.RoGroupType = RoGroupType;
+    }
+
     public RoGroup() {
     }
 
@@ -450,6 +473,9 @@ public class RoGroup extends AbstractModel {
         if (source.DelayReplicationTime != null) {
             this.DelayReplicationTime = new Long(source.DelayReplicationTime);
         }
+        if (source.RoGroupType != null) {
+            this.RoGroupType = new String(source.RoGroupType);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class RoGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "RoGroupRegion", this.RoGroupRegion);
         this.setParamSimple(map, prefix + "RoGroupZone", this.RoGroupZone);
         this.setParamSimple(map, prefix + "DelayReplicationTime", this.DelayReplicationTime);
+        this.setParamSimple(map, prefix + "RoGroupType", this.RoGroupType);
 
     }
 }

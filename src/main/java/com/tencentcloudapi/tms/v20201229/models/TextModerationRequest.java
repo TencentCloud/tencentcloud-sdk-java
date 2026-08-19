@@ -80,6 +80,13 @@ public class TextModerationRequest extends AbstractModel {
     private String SessionId;
 
     /**
+    * <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
+    */
+    @SerializedName("BizTag")
+    @Expose
+    private String BizTag;
+
+    /**
      * Get <p>待检测的文本内容，需为UTF-8编码并以Base64格式传入。</p> 
      * @return Content <p>待检测的文本内容，需为UTF-8编码并以Base64格式传入。</p>
      */
@@ -207,6 +214,22 @@ public class TextModerationRequest extends AbstractModel {
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p> 
+     * @return BizTag <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
+     */
+    public String getBizTag() {
+        return this.BizTag;
+    }
+
+    /**
+     * Set <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
+     * @param BizTag <p>该参数是送审客户的自定义参数，可用于标记客户的一些内部信息方便做审核明细取数筛选，没有特殊需求客户可不填写</p>
+     */
+    public void setBizTag(String BizTag) {
+        this.BizTag = BizTag;
+    }
+
     public TextModerationRequest() {
     }
 
@@ -239,6 +262,9 @@ public class TextModerationRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.BizTag != null) {
+            this.BizTag = new String(source.BizTag);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class TextModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "BizTag", this.BizTag);
 
     }
 }

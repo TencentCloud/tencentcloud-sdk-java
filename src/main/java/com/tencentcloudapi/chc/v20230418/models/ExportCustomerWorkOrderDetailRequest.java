@@ -24,72 +24,72 @@ import java.util.HashMap;
 public class ExportCustomerWorkOrderDetailRequest extends AbstractModel {
 
     /**
-    * 服务工单类型
-    */
-    @SerializedName("WorkOrderType")
-    @Expose
-    private String [] WorkOrderType;
-
-    /**
-    * 要导出的工单的起始时间
+    * <p>要导出的工单的起始时间</p>
     */
     @SerializedName("BeginDateTime")
     @Expose
     private String BeginDateTime;
 
     /**
-    * 要导出的工单的结束时间
+    * <p>要导出的工单的结束时间</p>
     */
     @SerializedName("EndDateTime")
     @Expose
     private String EndDateTime;
 
     /**
-     * Get 服务工单类型 
-     * @return WorkOrderType 服务工单类型
-     */
-    public String [] getWorkOrderType() {
-        return this.WorkOrderType;
-    }
+    * <p>服务工单类型</p>
+    */
+    @SerializedName("WorkOrderType")
+    @Expose
+    private String [] WorkOrderType;
 
     /**
-     * Set 服务工单类型
-     * @param WorkOrderType 服务工单类型
-     */
-    public void setWorkOrderType(String [] WorkOrderType) {
-        this.WorkOrderType = WorkOrderType;
-    }
-
-    /**
-     * Get 要导出的工单的起始时间 
-     * @return BeginDateTime 要导出的工单的起始时间
+     * Get <p>要导出的工单的起始时间</p> 
+     * @return BeginDateTime <p>要导出的工单的起始时间</p>
      */
     public String getBeginDateTime() {
         return this.BeginDateTime;
     }
 
     /**
-     * Set 要导出的工单的起始时间
-     * @param BeginDateTime 要导出的工单的起始时间
+     * Set <p>要导出的工单的起始时间</p>
+     * @param BeginDateTime <p>要导出的工单的起始时间</p>
      */
     public void setBeginDateTime(String BeginDateTime) {
         this.BeginDateTime = BeginDateTime;
     }
 
     /**
-     * Get 要导出的工单的结束时间 
-     * @return EndDateTime 要导出的工单的结束时间
+     * Get <p>要导出的工单的结束时间</p> 
+     * @return EndDateTime <p>要导出的工单的结束时间</p>
      */
     public String getEndDateTime() {
         return this.EndDateTime;
     }
 
     /**
-     * Set 要导出的工单的结束时间
-     * @param EndDateTime 要导出的工单的结束时间
+     * Set <p>要导出的工单的结束时间</p>
+     * @param EndDateTime <p>要导出的工单的结束时间</p>
      */
     public void setEndDateTime(String EndDateTime) {
         this.EndDateTime = EndDateTime;
+    }
+
+    /**
+     * Get <p>服务工单类型</p> 
+     * @return WorkOrderType <p>服务工单类型</p>
+     */
+    public String [] getWorkOrderType() {
+        return this.WorkOrderType;
+    }
+
+    /**
+     * Set <p>服务工单类型</p>
+     * @param WorkOrderType <p>服务工单类型</p>
+     */
+    public void setWorkOrderType(String [] WorkOrderType) {
+        this.WorkOrderType = WorkOrderType;
     }
 
     public ExportCustomerWorkOrderDetailRequest() {
@@ -100,17 +100,17 @@ public class ExportCustomerWorkOrderDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ExportCustomerWorkOrderDetailRequest(ExportCustomerWorkOrderDetailRequest source) {
-        if (source.WorkOrderType != null) {
-            this.WorkOrderType = new String[source.WorkOrderType.length];
-            for (int i = 0; i < source.WorkOrderType.length; i++) {
-                this.WorkOrderType[i] = new String(source.WorkOrderType[i]);
-            }
-        }
         if (source.BeginDateTime != null) {
             this.BeginDateTime = new String(source.BeginDateTime);
         }
         if (source.EndDateTime != null) {
             this.EndDateTime = new String(source.EndDateTime);
+        }
+        if (source.WorkOrderType != null) {
+            this.WorkOrderType = new String[source.WorkOrderType.length];
+            for (int i = 0; i < source.WorkOrderType.length; i++) {
+                this.WorkOrderType[i] = new String(source.WorkOrderType[i]);
+            }
         }
     }
 
@@ -119,9 +119,9 @@ public class ExportCustomerWorkOrderDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "WorkOrderType.", this.WorkOrderType);
         this.setParamSimple(map, prefix + "BeginDateTime", this.BeginDateTime);
         this.setParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
+        this.setParamArraySimple(map, prefix + "WorkOrderType.", this.WorkOrderType);
 
     }
 }

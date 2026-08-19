@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAsrKeyWordLibResponse extends AbstractModel {
 
     /**
-    * 词表ID数据
+    * <p>词表ID数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAsrKeyWordLibResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 词表ID数据 
-     * @return Data 词表ID数据
+     * Get <p>词表ID数据</p> 
+     * @return Data <p>词表ID数据</p>
      */
     public KeyWordLibIdData getData() {
         return this.Data;
     }
 
     /**
-     * Set 词表ID数据
-     * @param Data 词表ID数据
+     * Set <p>词表ID数据</p>
+     * @param Data <p>词表ID数据</p>
      */
     public void setData(KeyWordLibIdData Data) {
         this.Data = Data;

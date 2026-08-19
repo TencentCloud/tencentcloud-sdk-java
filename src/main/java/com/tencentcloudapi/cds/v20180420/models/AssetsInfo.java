@@ -311,13 +311,6 @@ public class AssetsInfo extends AbstractModel {
     private Boolean IsNewCloudAudit;
 
     /**
-    * <p>审计功能支持说明</p>
-    */
-    @SerializedName("AuditCapability")
-    @Expose
-    private AuditCapability [] AuditCapability;
-
-    /**
     * <p>1</p><p>取值范围：[0, 1]</p>
     */
     @SerializedName("TrafficMirrorOn")
@@ -337,6 +330,13 @@ public class AssetsInfo extends AbstractModel {
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
+
+    /**
+    * <p>该资产所在的资产组</p>
+    */
+    @SerializedName("AssetGroups")
+    @Expose
+    private IdWithName [] AssetGroups;
 
     /**
      * Get <p>创建时间</p> 
@@ -995,22 +995,6 @@ public class AssetsInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>审计功能支持说明</p> 
-     * @return AuditCapability <p>审计功能支持说明</p>
-     */
-    public AuditCapability [] getAuditCapability() {
-        return this.AuditCapability;
-    }
-
-    /**
-     * Set <p>审计功能支持说明</p>
-     * @param AuditCapability <p>审计功能支持说明</p>
-     */
-    public void setAuditCapability(AuditCapability [] AuditCapability) {
-        this.AuditCapability = AuditCapability;
-    }
-
-    /**
      * Get <p>1</p><p>取值范围：[0, 1]</p> 
      * @return TrafficMirrorOn <p>1</p><p>取值范围：[0, 1]</p>
      */
@@ -1056,6 +1040,22 @@ public class AssetsInfo extends AbstractModel {
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
+    }
+
+    /**
+     * Get <p>该资产所在的资产组</p> 
+     * @return AssetGroups <p>该资产所在的资产组</p>
+     */
+    public IdWithName [] getAssetGroups() {
+        return this.AssetGroups;
+    }
+
+    /**
+     * Set <p>该资产所在的资产组</p>
+     * @param AssetGroups <p>该资产所在的资产组</p>
+     */
+    public void setAssetGroups(IdWithName [] AssetGroups) {
+        this.AssetGroups = AssetGroups;
     }
 
     public AssetsInfo() {
@@ -1195,12 +1195,6 @@ public class AssetsInfo extends AbstractModel {
         if (source.IsNewCloudAudit != null) {
             this.IsNewCloudAudit = new Boolean(source.IsNewCloudAudit);
         }
-        if (source.AuditCapability != null) {
-            this.AuditCapability = new AuditCapability[source.AuditCapability.length];
-            for (int i = 0; i < source.AuditCapability.length; i++) {
-                this.AuditCapability[i] = new AuditCapability(source.AuditCapability[i]);
-            }
-        }
         if (source.TrafficMirrorOn != null) {
             this.TrafficMirrorOn = new Long(source.TrafficMirrorOn);
         }
@@ -1209,6 +1203,12 @@ public class AssetsInfo extends AbstractModel {
         }
         if (source.InstanceGroupId != null) {
             this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
+        if (source.AssetGroups != null) {
+            this.AssetGroups = new IdWithName[source.AssetGroups.length];
+            for (int i = 0; i < source.AssetGroups.length; i++) {
+                this.AssetGroups[i] = new IdWithName(source.AssetGroups[i]);
+            }
         }
     }
 
@@ -1258,10 +1258,10 @@ public class AssetsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "AssetGroupId", this.AssetGroupId);
         this.setParamSimple(map, prefix + "IsNewCloudAudit", this.IsNewCloudAudit);
-        this.setParamArrayObj(map, prefix + "AuditCapability.", this.AuditCapability);
         this.setParamSimple(map, prefix + "TrafficMirrorOn", this.TrafficMirrorOn);
         this.setParamSimple(map, prefix + "AuditScope", this.AuditScope);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+        this.setParamArrayObj(map, prefix + "AssetGroups.", this.AssetGroups);
 
     }
 }

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifySyncRateLimitRequest extends AbstractModel {
 
     /**
-    * 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+    * <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 同步任务全量导出线程数、有效值为 1-16
+    * <p>同步任务全量导出线程数、有效值为 1-16</p>
     */
     @SerializedName("DumpThread")
     @Expose
     private Long DumpThread;
 
     /**
-    * 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+    * <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
     */
     @SerializedName("DumpRps")
     @Expose
     private Long DumpRps;
 
     /**
-    * 同步任务全量导入线程数、有效值为 1-16
+    * <p>同步任务全量导入线程数、有效值为 1-16</p>
     */
     @SerializedName("LoadThread")
     @Expose
     private Long LoadThread;
 
     /**
-    * 同步任务增量导入线程数、有效值为 1-128
+    * <p>同步任务增量导入线程数、有效值为 1-128</p>
     */
     @SerializedName("SinkerThread")
     @Expose
     private Long SinkerThread;
 
     /**
-    * 同步任务全量导入的Rps
+    * <p>同步任务全量导入的Rps</p>
     */
     @SerializedName("LoadRps")
     @Expose
     private Long LoadRps;
 
     /**
-     * Get 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。 
-     * @return JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * Get <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p> 
+     * @return JobId <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-     * @param JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * Set <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+     * @param JobId <p>同步任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 同步任务全量导出线程数、有效值为 1-16 
-     * @return DumpThread 同步任务全量导出线程数、有效值为 1-16
+     * Get <p>同步任务全量导出线程数、有效值为 1-16</p> 
+     * @return DumpThread <p>同步任务全量导出线程数、有效值为 1-16</p>
      */
     public Long getDumpThread() {
         return this.DumpThread;
     }
 
     /**
-     * Set 同步任务全量导出线程数、有效值为 1-16
-     * @param DumpThread 同步任务全量导出线程数、有效值为 1-16
+     * Set <p>同步任务全量导出线程数、有效值为 1-16</p>
+     * @param DumpThread <p>同步任务全量导出线程数、有效值为 1-16</p>
      */
     public void setDumpThread(Long DumpThread) {
         this.DumpThread = DumpThread;
     }
 
     /**
-     * Get 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000 
-     * @return DumpRps 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+     * Get <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p> 
+     * @return DumpRps <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
      */
     public Long getDumpRps() {
         return this.DumpRps;
     }
 
     /**
-     * Set 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
-     * @param DumpRps 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+     * Set <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
+     * @param DumpRps <p>同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000</p>
      */
     public void setDumpRps(Long DumpRps) {
         this.DumpRps = DumpRps;
     }
 
     /**
-     * Get 同步任务全量导入线程数、有效值为 1-16 
-     * @return LoadThread 同步任务全量导入线程数、有效值为 1-16
+     * Get <p>同步任务全量导入线程数、有效值为 1-16</p> 
+     * @return LoadThread <p>同步任务全量导入线程数、有效值为 1-16</p>
      */
     public Long getLoadThread() {
         return this.LoadThread;
     }
 
     /**
-     * Set 同步任务全量导入线程数、有效值为 1-16
-     * @param LoadThread 同步任务全量导入线程数、有效值为 1-16
+     * Set <p>同步任务全量导入线程数、有效值为 1-16</p>
+     * @param LoadThread <p>同步任务全量导入线程数、有效值为 1-16</p>
      */
     public void setLoadThread(Long LoadThread) {
         this.LoadThread = LoadThread;
     }
 
     /**
-     * Get 同步任务增量导入线程数、有效值为 1-128 
-     * @return SinkerThread 同步任务增量导入线程数、有效值为 1-128
+     * Get <p>同步任务增量导入线程数、有效值为 1-128</p> 
+     * @return SinkerThread <p>同步任务增量导入线程数、有效值为 1-128</p>
      */
     public Long getSinkerThread() {
         return this.SinkerThread;
     }
 
     /**
-     * Set 同步任务增量导入线程数、有效值为 1-128
-     * @param SinkerThread 同步任务增量导入线程数、有效值为 1-128
+     * Set <p>同步任务增量导入线程数、有效值为 1-128</p>
+     * @param SinkerThread <p>同步任务增量导入线程数、有效值为 1-128</p>
      */
     public void setSinkerThread(Long SinkerThread) {
         this.SinkerThread = SinkerThread;
     }
 
     /**
-     * Get 同步任务全量导入的Rps 
-     * @return LoadRps 同步任务全量导入的Rps
+     * Get <p>同步任务全量导入的Rps</p> 
+     * @return LoadRps <p>同步任务全量导入的Rps</p>
      */
     public Long getLoadRps() {
         return this.LoadRps;
     }
 
     /**
-     * Set 同步任务全量导入的Rps
-     * @param LoadRps 同步任务全量导入的Rps
+     * Set <p>同步任务全量导入的Rps</p>
+     * @param LoadRps <p>同步任务全量导入的Rps</p>
      */
     public void setLoadRps(Long LoadRps) {
         this.LoadRps = LoadRps;

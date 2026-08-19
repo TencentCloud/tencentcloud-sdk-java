@@ -24,601 +24,680 @@ import java.util.HashMap;
 public class DspmRisk extends AbstractModel {
 
     /**
-    * 风险id
+    * <p>风险id</p>
     */
     @SerializedName("RiskId")
     @Expose
     private String RiskId;
 
     /**
-    * 风险名称
+    * <p>风险名称</p>
     */
     @SerializedName("RiskName")
     @Expose
     private String RiskName;
 
     /**
-    * 风险英文名称
+    * <p>风险英文名称</p>
     */
     @SerializedName("RiskNameEn")
     @Expose
     private String RiskNameEn;
 
     /**
-    * 策略类型
+    * <p>策略类型</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 策略类别
+    * <p>策略类别</p>
     */
     @SerializedName("StrategyCategory")
     @Expose
     private String StrategyCategory;
 
     /**
-    * 风险等级
+    * <p>风险等级</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 资产实例Id
+    * <p>资产实例Id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 资产类型
+    * <p>资产类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * 资产名
+    * <p>资产名</p>
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("AssetRegion")
     @Expose
     private String AssetRegion;
 
     /**
-    * 资产账号
+    * <p>资产账号</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * 主机地址
+    * <p>主机地址</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 账号类型
+    * <p>账号类型</p>
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * 风险检出时间
+    * <p>风险检出时间</p>
     */
     @SerializedName("DetectTime")
     @Expose
     private String DetectTime;
 
     /**
-    * 处理状态 0-未处理 1-已处置 2-已忽略
+    * <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 身份id
+    * <p>身份id</p>
     */
     @SerializedName("IdentifyId")
     @Expose
     private String IdentifyId;
 
     /**
-    * 所属云账号uin用户
+    * <p>所属云账号uin用户</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private DspmUinUser OwnerUin;
 
     /**
-    * 所属个人用户信息
+    * <p>所属个人用户信息</p>
     */
     @SerializedName("Person")
     @Expose
     private DspmPersonUser Person;
 
     /**
-    * 风险数据。
+    * <p>风险数据。</p>
     */
     @SerializedName("RiskData")
     @Expose
     private String RiskData;
 
     /**
-    * 是否资产管理员
+    * <p>是否资产管理员</p>
     */
     @SerializedName("IsAssetManager")
     @Expose
     private Long IsAssetManager;
 
     /**
-    * 数据起始时间
+    * <p>数据起始时间</p>
     */
     @SerializedName("DataBeginTime")
     @Expose
     private String DataBeginTime;
 
     /**
-    * 数据结束时间
+    * <p>数据结束时间</p>
     */
     @SerializedName("DataEndTime")
     @Expose
     private String DataEndTime;
 
     /**
-    * 风险类型。risk-风险；alarm-告警。
+    * <p>风险类型。risk-风险；alarm-告警。</p>
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * 资产所属账号app id
+    * <p>资产所属账号app id</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 账号昵称
+    * <p>账号昵称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 资产所属账号uin
+    * <p>资产所属账号uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-     * Get 风险id 
-     * @return RiskId 风险id
+    * <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
+    * <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+     * Get <p>风险id</p> 
+     * @return RiskId <p>风险id</p>
      */
     public String getRiskId() {
         return this.RiskId;
     }
 
     /**
-     * Set 风险id
-     * @param RiskId 风险id
+     * Set <p>风险id</p>
+     * @param RiskId <p>风险id</p>
      */
     public void setRiskId(String RiskId) {
         this.RiskId = RiskId;
     }
 
     /**
-     * Get 风险名称 
-     * @return RiskName 风险名称
+     * Get <p>风险名称</p> 
+     * @return RiskName <p>风险名称</p>
      */
     public String getRiskName() {
         return this.RiskName;
     }
 
     /**
-     * Set 风险名称
-     * @param RiskName 风险名称
+     * Set <p>风险名称</p>
+     * @param RiskName <p>风险名称</p>
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get 风险英文名称 
-     * @return RiskNameEn 风险英文名称
+     * Get <p>风险英文名称</p> 
+     * @return RiskNameEn <p>风险英文名称</p>
      */
     public String getRiskNameEn() {
         return this.RiskNameEn;
     }
 
     /**
-     * Set 风险英文名称
-     * @param RiskNameEn 风险英文名称
+     * Set <p>风险英文名称</p>
+     * @param RiskNameEn <p>风险英文名称</p>
      */
     public void setRiskNameEn(String RiskNameEn) {
         this.RiskNameEn = RiskNameEn;
     }
 
     /**
-     * Get 策略类型 
-     * @return StrategyType 策略类型
+     * Get <p>策略类型</p> 
+     * @return StrategyType <p>策略类型</p>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyType 策略类型
+     * Set <p>策略类型</p>
+     * @param StrategyType <p>策略类型</p>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 策略类别 
-     * @return StrategyCategory 策略类别
+     * Get <p>策略类别</p> 
+     * @return StrategyCategory <p>策略类别</p>
      */
     public String getStrategyCategory() {
         return this.StrategyCategory;
     }
 
     /**
-     * Set 策略类别
-     * @param StrategyCategory 策略类别
+     * Set <p>策略类别</p>
+     * @param StrategyCategory <p>策略类别</p>
      */
     public void setStrategyCategory(String StrategyCategory) {
         this.StrategyCategory = StrategyCategory;
     }
 
     /**
-     * Get 风险等级 
-     * @return RiskLevel 风险等级
+     * Get <p>风险等级</p> 
+     * @return RiskLevel <p>风险等级</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-     * @param RiskLevel 风险等级
+     * Set <p>风险等级</p>
+     * @param RiskLevel <p>风险等级</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 资产实例Id 
-     * @return AssetId 资产实例Id
+     * Get <p>资产实例Id</p> 
+     * @return AssetId <p>资产实例Id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产实例Id
-     * @param AssetId 资产实例Id
+     * Set <p>资产实例Id</p>
+     * @param AssetId <p>资产实例Id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 资产类型 
-     * @return AssetType 资产类型
+     * Get <p>资产类型</p> 
+     * @return AssetType <p>资产类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类型
-     * @param AssetType 资产类型
+     * Set <p>资产类型</p>
+     * @param AssetType <p>资产类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 资产名 
-     * @return AssetName 资产名
+     * Get <p>资产名</p> 
+     * @return AssetName <p>资产名</p>
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set 资产名
-     * @param AssetName 资产名
+     * Set <p>资产名</p>
+     * @param AssetName <p>资产名</p>
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 地域 
-     * @return AssetRegion 地域
+     * Get <p>地域</p> 
+     * @return AssetRegion <p>地域</p>
      */
     public String getAssetRegion() {
         return this.AssetRegion;
     }
 
     /**
-     * Set 地域
-     * @param AssetRegion 地域
+     * Set <p>地域</p>
+     * @param AssetRegion <p>地域</p>
      */
     public void setAssetRegion(String AssetRegion) {
         this.AssetRegion = AssetRegion;
     }
 
     /**
-     * Get 资产账号 
-     * @return Account 资产账号
+     * Get <p>资产账号</p> 
+     * @return Account <p>资产账号</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 资产账号
-     * @param Account 资产账号
+     * Set <p>资产账号</p>
+     * @param Account <p>资产账号</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 主机地址 
-     * @return Host 主机地址
+     * Get <p>主机地址</p> 
+     * @return Host <p>主机地址</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 主机地址
-     * @param Host 主机地址
+     * Set <p>主机地址</p>
+     * @param Host <p>主机地址</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 账号类型 
-     * @return AccountType 账号类型
+     * Get <p>账号类型</p> 
+     * @return AccountType <p>账号类型</p>
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 账号类型
-     * @param AccountType 账号类型
+     * Set <p>账号类型</p>
+     * @param AccountType <p>账号类型</p>
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get 风险检出时间 
-     * @return DetectTime 风险检出时间
+     * Get <p>风险检出时间</p> 
+     * @return DetectTime <p>风险检出时间</p>
      */
     public String getDetectTime() {
         return this.DetectTime;
     }
 
     /**
-     * Set 风险检出时间
-     * @param DetectTime 风险检出时间
+     * Set <p>风险检出时间</p>
+     * @param DetectTime <p>风险检出时间</p>
      */
     public void setDetectTime(String DetectTime) {
         this.DetectTime = DetectTime;
     }
 
     /**
-     * Get 处理状态 0-未处理 1-已处置 2-已忽略 
-     * @return Status 处理状态 0-未处理 1-已处置 2-已忽略
+     * Get <p>处理状态 0-未处理 1-已处置 2-已忽略</p> 
+     * @return Status <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态 0-未处理 1-已处置 2-已忽略
-     * @param Status 处理状态 0-未处理 1-已处置 2-已忽略
+     * Set <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
+     * @param Status <p>处理状态 0-未处理 1-已处置 2-已忽略</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 身份id 
-     * @return IdentifyId 身份id
+     * Get <p>身份id</p> 
+     * @return IdentifyId <p>身份id</p>
      */
     public String getIdentifyId() {
         return this.IdentifyId;
     }
 
     /**
-     * Set 身份id
-     * @param IdentifyId 身份id
+     * Set <p>身份id</p>
+     * @param IdentifyId <p>身份id</p>
      */
     public void setIdentifyId(String IdentifyId) {
         this.IdentifyId = IdentifyId;
     }
 
     /**
-     * Get 所属云账号uin用户 
-     * @return OwnerUin 所属云账号uin用户
+     * Get <p>所属云账号uin用户</p> 
+     * @return OwnerUin <p>所属云账号uin用户</p>
      */
     public DspmUinUser getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 所属云账号uin用户
-     * @param OwnerUin 所属云账号uin用户
+     * Set <p>所属云账号uin用户</p>
+     * @param OwnerUin <p>所属云账号uin用户</p>
      */
     public void setOwnerUin(DspmUinUser OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 所属个人用户信息 
-     * @return Person 所属个人用户信息
+     * Get <p>所属个人用户信息</p> 
+     * @return Person <p>所属个人用户信息</p>
      */
     public DspmPersonUser getPerson() {
         return this.Person;
     }
 
     /**
-     * Set 所属个人用户信息
-     * @param Person 所属个人用户信息
+     * Set <p>所属个人用户信息</p>
+     * @param Person <p>所属个人用户信息</p>
      */
     public void setPerson(DspmPersonUser Person) {
         this.Person = Person;
     }
 
     /**
-     * Get 风险数据。 
-     * @return RiskData 风险数据。
+     * Get <p>风险数据。</p> 
+     * @return RiskData <p>风险数据。</p>
      */
     public String getRiskData() {
         return this.RiskData;
     }
 
     /**
-     * Set 风险数据。
-     * @param RiskData 风险数据。
+     * Set <p>风险数据。</p>
+     * @param RiskData <p>风险数据。</p>
      */
     public void setRiskData(String RiskData) {
         this.RiskData = RiskData;
     }
 
     /**
-     * Get 是否资产管理员 
-     * @return IsAssetManager 是否资产管理员
+     * Get <p>是否资产管理员</p> 
+     * @return IsAssetManager <p>是否资产管理员</p>
      */
     public Long getIsAssetManager() {
         return this.IsAssetManager;
     }
 
     /**
-     * Set 是否资产管理员
-     * @param IsAssetManager 是否资产管理员
+     * Set <p>是否资产管理员</p>
+     * @param IsAssetManager <p>是否资产管理员</p>
      */
     public void setIsAssetManager(Long IsAssetManager) {
         this.IsAssetManager = IsAssetManager;
     }
 
     /**
-     * Get 数据起始时间 
-     * @return DataBeginTime 数据起始时间
+     * Get <p>数据起始时间</p> 
+     * @return DataBeginTime <p>数据起始时间</p>
      */
     public String getDataBeginTime() {
         return this.DataBeginTime;
     }
 
     /**
-     * Set 数据起始时间
-     * @param DataBeginTime 数据起始时间
+     * Set <p>数据起始时间</p>
+     * @param DataBeginTime <p>数据起始时间</p>
      */
     public void setDataBeginTime(String DataBeginTime) {
         this.DataBeginTime = DataBeginTime;
     }
 
     /**
-     * Get 数据结束时间 
-     * @return DataEndTime 数据结束时间
+     * Get <p>数据结束时间</p> 
+     * @return DataEndTime <p>数据结束时间</p>
      */
     public String getDataEndTime() {
         return this.DataEndTime;
     }
 
     /**
-     * Set 数据结束时间
-     * @param DataEndTime 数据结束时间
+     * Set <p>数据结束时间</p>
+     * @param DataEndTime <p>数据结束时间</p>
      */
     public void setDataEndTime(String DataEndTime) {
         this.DataEndTime = DataEndTime;
     }
 
     /**
-     * Get 风险类型。risk-风险；alarm-告警。 
-     * @return RiskType 风险类型。risk-风险；alarm-告警。
+     * Get <p>风险类型。risk-风险；alarm-告警。</p> 
+     * @return RiskType <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set 风险类型。risk-风险；alarm-告警。
-     * @param RiskType 风险类型。risk-风险；alarm-告警。
+     * Set <p>风险类型。risk-风险；alarm-告警。</p>
+     * @param RiskType <p>风险类型。risk-风险；alarm-告警。</p>
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 资产所属账号app id 
-     * @return AppId 资产所属账号app id
+     * Get <p>资产所属账号app id</p> 
+     * @return AppId <p>资产所属账号app id</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 资产所属账号app id
-     * @param AppId 资产所属账号app id
+     * Set <p>资产所属账号app id</p>
+     * @param AppId <p>资产所属账号app id</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号昵称 
-     * @return NickName 账号昵称
+     * Get <p>账号昵称</p> 
+     * @return NickName <p>账号昵称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 账号昵称
-     * @param NickName 账号昵称
+     * Set <p>账号昵称</p>
+     * @param NickName <p>账号昵称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 资产所属账号uin 
-     * @return Uin 资产所属账号uin
+     * Get <p>资产所属账号uin</p> 
+     * @return Uin <p>资产所属账号uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 资产所属账号uin
-     * @param Uin 资产所属账号uin
+     * Set <p>资产所属账号uin</p>
+     * @param Uin <p>资产所属账号uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p> 
+     * @return ClusterType <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+     * @param ClusterType <p>MongoDb的集群类型，非 MongoDB 资产固定 0</p><p>枚举值：</p><ul><li>0： 副本集</li><li>1： 分片</li></ul><p>默认值：0</p>
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId <p>集群ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterName <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterName <p>集群名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
     }
 
     public DspmRisk() {
@@ -707,6 +786,15 @@ public class DspmRisk extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -740,6 +828,9 @@ public class DspmRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

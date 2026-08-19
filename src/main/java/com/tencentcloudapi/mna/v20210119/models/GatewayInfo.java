@@ -59,6 +59,41 @@ public class GatewayInfo extends AbstractModel {
     private Long InstanceSize;
 
     /**
+    * <p>网关内网IP。</p>
+    */
+    @SerializedName("GatewayIp")
+    @Expose
+    private String GatewayIp;
+
+    /**
+    * <p>用户名。</p>
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
+    * <p>网关接入token。</p>
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+    * <p>网关注册URL。</p>
+    */
+    @SerializedName("RegisterCenterUrl")
+    @Expose
+    private String RegisterCenterUrl;
+
+    /**
+    * <p>网关上报URL。</p>
+    */
+    @SerializedName("TelemetryUrl")
+    @Expose
+    private String TelemetryUrl;
+
+    /**
      * Get <p>网关ID</p> 
      * @return GatewayId <p>网关ID</p>
      */
@@ -138,6 +173,86 @@ public class GatewayInfo extends AbstractModel {
         this.InstanceSize = InstanceSize;
     }
 
+    /**
+     * Get <p>网关内网IP。</p> 
+     * @return GatewayIp <p>网关内网IP。</p>
+     */
+    public String getGatewayIp() {
+        return this.GatewayIp;
+    }
+
+    /**
+     * Set <p>网关内网IP。</p>
+     * @param GatewayIp <p>网关内网IP。</p>
+     */
+    public void setGatewayIp(String GatewayIp) {
+        this.GatewayIp = GatewayIp;
+    }
+
+    /**
+     * Get <p>用户名。</p> 
+     * @return Username <p>用户名。</p>
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set <p>用户名。</p>
+     * @param Username <p>用户名。</p>
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    /**
+     * Get <p>网关接入token。</p> 
+     * @return Token <p>网关接入token。</p>
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set <p>网关接入token。</p>
+     * @param Token <p>网关接入token。</p>
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
+    /**
+     * Get <p>网关注册URL。</p> 
+     * @return RegisterCenterUrl <p>网关注册URL。</p>
+     */
+    public String getRegisterCenterUrl() {
+        return this.RegisterCenterUrl;
+    }
+
+    /**
+     * Set <p>网关注册URL。</p>
+     * @param RegisterCenterUrl <p>网关注册URL。</p>
+     */
+    public void setRegisterCenterUrl(String RegisterCenterUrl) {
+        this.RegisterCenterUrl = RegisterCenterUrl;
+    }
+
+    /**
+     * Get <p>网关上报URL。</p> 
+     * @return TelemetryUrl <p>网关上报URL。</p>
+     */
+    public String getTelemetryUrl() {
+        return this.TelemetryUrl;
+    }
+
+    /**
+     * Set <p>网关上报URL。</p>
+     * @param TelemetryUrl <p>网关上报URL。</p>
+     */
+    public void setTelemetryUrl(String TelemetryUrl) {
+        this.TelemetryUrl = TelemetryUrl;
+    }
+
     public GatewayInfo() {
     }
 
@@ -161,6 +276,21 @@ public class GatewayInfo extends AbstractModel {
         if (source.InstanceSize != null) {
             this.InstanceSize = new Long(source.InstanceSize);
         }
+        if (source.GatewayIp != null) {
+            this.GatewayIp = new String(source.GatewayIp);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.RegisterCenterUrl != null) {
+            this.RegisterCenterUrl = new String(source.RegisterCenterUrl);
+        }
+        if (source.TelemetryUrl != null) {
+            this.TelemetryUrl = new String(source.TelemetryUrl);
+        }
     }
 
 
@@ -173,6 +303,11 @@ public class GatewayInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "InstanceSize", this.InstanceSize);
+        this.setParamSimple(map, prefix + "GatewayIp", this.GatewayIp);
+        this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "RegisterCenterUrl", this.RegisterCenterUrl);
+        this.setParamSimple(map, prefix + "TelemetryUrl", this.TelemetryUrl);
 
     }
 }

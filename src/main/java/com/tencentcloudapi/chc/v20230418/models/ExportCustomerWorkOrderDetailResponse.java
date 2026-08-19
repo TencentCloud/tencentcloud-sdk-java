@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportCustomerWorkOrderDetailResponse extends AbstractModel {
 
     /**
-    * 返回下载地址
+    * <p>返回下载地址</p>
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -38,16 +38,16 @@ public class ExportCustomerWorkOrderDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回下载地址 
-     * @return DownloadUrl 返回下载地址
+     * Get <p>返回下载地址</p> 
+     * @return DownloadUrl <p>返回下载地址</p>
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 返回下载地址
-     * @param DownloadUrl 返回下载地址
+     * Set <p>返回下载地址</p>
+     * @param DownloadUrl <p>返回下载地址</p>
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

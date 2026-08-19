@@ -38,6 +38,13 @@ public class Model extends AbstractModel {
     private String ModelId;
 
     /**
+    * <p>模型id别名列表</p>
+    */
+    @SerializedName("ExtraModelIds")
+    @Expose
+    private String [] ExtraModelIds;
+
+    /**
     * <p>模型显示名称。</p>
     */
     @SerializedName("DisplayName")
@@ -186,6 +193,22 @@ public class Model extends AbstractModel {
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
+    }
+
+    /**
+     * Get <p>模型id别名列表</p> 
+     * @return ExtraModelIds <p>模型id别名列表</p>
+     */
+    public String [] getExtraModelIds() {
+        return this.ExtraModelIds;
+    }
+
+    /**
+     * Set <p>模型id别名列表</p>
+     * @param ExtraModelIds <p>模型id别名列表</p>
+     */
+    public void setExtraModelIds(String [] ExtraModelIds) {
+        this.ExtraModelIds = ExtraModelIds;
     }
 
     /**
@@ -474,6 +497,12 @@ public class Model extends AbstractModel {
         if (source.ModelId != null) {
             this.ModelId = new String(source.ModelId);
         }
+        if (source.ExtraModelIds != null) {
+            this.ExtraModelIds = new String[source.ExtraModelIds.length];
+            for (int i = 0; i < source.ExtraModelIds.length; i++) {
+                this.ExtraModelIds[i] = new String(source.ExtraModelIds[i]);
+            }
+        }
         if (source.DisplayName != null) {
             this.DisplayName = new String(source.DisplayName);
         }
@@ -540,6 +569,7 @@ public class Model extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
+        this.setParamArraySimple(map, prefix + "ExtraModelIds.", this.ExtraModelIds);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Summary", this.Summary);

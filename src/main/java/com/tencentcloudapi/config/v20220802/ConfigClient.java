@@ -171,6 +171,17 @@ public class ConfigClient extends AbstractClient{
     }
 
     /**
+     *删除账号组
+     * @param req DeleteAggregatorsRequest
+     * @return DeleteAggregatorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAggregatorsResponse DeleteAggregators(DeleteAggregatorsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAggregators", DeleteAggregatorsResponse.class);
+    }
+
+    /**
      *删除告警规则
      * @param req DeleteAlarmPolicyRequest
      * @return DeleteAlarmPolicyResponse
@@ -674,6 +685,17 @@ public class ConfigClient extends AbstractClient{
     public UpdateAggregateConfigRuleResponse UpdateAggregateConfigRule(UpdateAggregateConfigRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAggregateConfigRule", UpdateAggregateConfigRuleResponse.class);
+    }
+
+    /**
+     *编辑账号组
+     * @param req UpdateAggregatorRequest
+     * @return UpdateAggregatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAggregatorResponse UpdateAggregator(UpdateAggregatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAggregator", UpdateAggregatorResponse.class);
     }
 
     /**

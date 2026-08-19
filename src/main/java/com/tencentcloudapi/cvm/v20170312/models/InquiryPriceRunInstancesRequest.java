@@ -178,6 +178,13 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     private LaunchTemplate LaunchTemplate;
 
     /**
+    * <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterfaces [] NetworkInterfaces;
+
+    /**
      * Get <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。<br> <b>注：如果您不指定LaunchTemplate参数，则Placement为必选参数。若同时传递Placement和LaunchTemplate，则默认覆盖LaunchTemplate中对应的Placement的值。</b></p> 
      * @return Placement <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。<br> <b>注：如果您不指定LaunchTemplate参数，则Placement为必选参数。若同时传递Placement和LaunchTemplate，则默认覆盖LaunchTemplate中对应的Placement的值。</b></p>
      */
@@ -529,6 +536,22 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.LaunchTemplate = LaunchTemplate;
     }
 
+    /**
+     * Get <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p> 
+     * @return NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public NetworkInterfaces [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     * @param NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public void setNetworkInterfaces(NetworkInterfaces [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
+    }
+
     public InquiryPriceRunInstancesRequest() {
     }
 
@@ -612,6 +635,12 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         if (source.LaunchTemplate != null) {
             this.LaunchTemplate = new LaunchTemplate(source.LaunchTemplate);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterfaces[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterfaces(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -641,6 +670,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

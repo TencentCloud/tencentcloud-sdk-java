@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeAgentConfigsRequest extends AbstractModel {
 
     /**
-    * agent的版本号
+    * <p>agent的版本号</p>
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
 
     /**
-    * agent的IP地址
+    * <p>agent的IP地址</p>
     */
     @SerializedName("AgentIp")
     @Expose
     private String AgentIp;
 
     /**
-    * 机器组标签列表
+    * <p>机器组标签列表</p>
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * agent的instance id
+    * <p>agent的instance id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get agent的版本号 
-     * @return AgentVersion agent的版本号
+     * Get <p>agent的版本号</p> 
+     * @return AgentVersion <p>agent的版本号</p>
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set agent的版本号
-     * @param AgentVersion agent的版本号
+     * Set <p>agent的版本号</p>
+     * @param AgentVersion <p>agent的版本号</p>
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
     }
 
     /**
-     * Get agent的IP地址 
-     * @return AgentIp agent的IP地址
+     * Get <p>agent的IP地址</p> 
+     * @return AgentIp <p>agent的IP地址</p>
      */
     public String getAgentIp() {
         return this.AgentIp;
     }
 
     /**
-     * Set agent的IP地址
-     * @param AgentIp agent的IP地址
+     * Set <p>agent的IP地址</p>
+     * @param AgentIp <p>agent的IP地址</p>
      */
     public void setAgentIp(String AgentIp) {
         this.AgentIp = AgentIp;
     }
 
     /**
-     * Get 机器组标签列表 
-     * @return Labels 机器组标签列表
+     * Get <p>机器组标签列表</p> 
+     * @return Labels <p>机器组标签列表</p>
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 机器组标签列表
-     * @param Labels 机器组标签列表
+     * Set <p>机器组标签列表</p>
+     * @param Labels <p>机器组标签列表</p>
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get agent的instance id 
-     * @return InstanceId agent的instance id
+     * Get <p>agent的instance id</p> 
+     * @return InstanceId <p>agent的instance id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set agent的instance id
-     * @param InstanceId agent的instance id
+     * Set <p>agent的instance id</p>
+     * @param InstanceId <p>agent的instance id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTableContentPreviewResponse extends AbstractModel {
 
     /**
-    * 表的列名列表
+    * <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnNames")
@@ -32,7 +32,7 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     private String [] ColumnNames;
 
     /**
-    * 表的行数据列表
+    * <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableRecordSet")
@@ -40,7 +40,7 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     private TableRecord [] TableRecordSet;
 
     /**
-    * 异步预览任务ID
+    * <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -48,7 +48,7 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     private String TaskId;
 
     /**
-    * 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+    * <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncState")
@@ -63,9 +63,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 表的列名列表
+     * Get <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColumnNames 表的列名列表
+     * @return ColumnNames <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getColumnNames() {
@@ -73,9 +73,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Set 表的列名列表
+     * Set <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColumnNames 表的列名列表
+     * @param ColumnNames <p>表的列名列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnNames(String [] ColumnNames) {
@@ -83,9 +83,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Get 表的行数据列表
+     * Get <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableRecordSet 表的行数据列表
+     * @return TableRecordSet <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TableRecord [] getTableRecordSet() {
@@ -93,9 +93,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Set 表的行数据列表
+     * Set <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableRecordSet 表的行数据列表
+     * @param TableRecordSet <p>表的行数据列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableRecordSet(TableRecord [] TableRecordSet) {
@@ -103,9 +103,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步预览任务ID
+     * Get <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 异步预览任务ID
+     * @return TaskId <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -113,9 +113,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Set 异步预览任务ID
+     * Set <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 异步预览任务ID
+     * @param TaskId <p>异步预览任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -123,9 +123,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+     * Get <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncState 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+     * @return AsyncState <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncState() {
@@ -133,9 +133,9 @@ public class DescribeTableContentPreviewResponse extends AbstractModel {
     }
 
     /**
-     * Set 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+     * Set <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncState 异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功
+     * @param AsyncState <p>异步预览结果状态: 0 初始化， 1 执行中， 2 执行成功</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncState(Long AsyncState) {

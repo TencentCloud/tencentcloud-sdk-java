@@ -21,6 +21,9 @@ public enum CvmErrorCode {
      /* 自带许可镜像暂时不支持共享。 */
      FAILEDOPERATION_BYOLIMAGESHAREFAILED("FailedOperation.BYOLImageShareFailed"),
      
+     /* 实例解绑密钥失败 */
+     FAILEDOPERATION_DISASSOCIATEKEYPAIRFAILED("FailedOperation.DisassociateKeyPairFailed"),
+     
      /* 未找到指定的容灾组 */
      FAILEDOPERATION_DISASTERRECOVERGROUPNOTFOUND("FailedOperation.DisasterRecoverGroupNotFound"),
      

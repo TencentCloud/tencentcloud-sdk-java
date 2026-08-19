@@ -24,99 +24,69 @@ import java.util.HashMap;
 public class CreateLogsetRequest extends AbstractModel {
 
     /**
-    * 日志集名字。
-
-- 最大支持255个字符。不支持`|`字符。
+    * <p>日志集名字。</p><ul><li>最大支持255个字符。不支持<code>|</code>字符。</li></ul>
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
+    * <p>标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
+    * <p>日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get 日志集名字。
-
-- 最大支持255个字符。不支持`|`字符。 
-     * @return LogsetName 日志集名字。
-
-- 最大支持255个字符。不支持`|`字符。
+     * Get <p>日志集名字。</p><ul><li>最大支持255个字符。不支持<code>|</code>字符。</li></ul> 
+     * @return LogsetName <p>日志集名字。</p><ul><li>最大支持255个字符。不支持<code>|</code>字符。</li></ul>
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 日志集名字。
-
-- 最大支持255个字符。不支持`|`字符。
-     * @param LogsetName 日志集名字。
-
-- 最大支持255个字符。不支持`|`字符。
+     * Set <p>日志集名字。</p><ul><li>最大支持255个字符。不支持<code>|</code>字符。</li></ul>
+     * @param LogsetName <p>日志集名字。</p><ul><li>最大支持255个字符。不支持<code>|</code>字符。</li></ul>
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对 
-     * @return Tags 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
+     * Get <p>标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对</p> 
+     * @return Tags <p>标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
-     * @param Tags 标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对
+     * Set <p>标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对</p>
+     * @param Tags <p>标签描述列表。最大支持10个标签键值对，并且不能有重复的键值对</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一 
-     * @return LogsetId 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
+     * Get <p>日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul> 
+     * @return LogsetId <p>日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
-     * @param LogsetId 日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
-
-- 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。
-- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
-- 如果指定该字段，需保证全地域唯一
+     * Set <p>日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
+     * @param LogsetId <p>日志集ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符。</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

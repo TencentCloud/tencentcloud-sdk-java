@@ -73,7 +73,7 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     private String RunMode;
 
     /**
-    * <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+    * <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
     */
     @SerializedName("ExpectRunTime")
     @Expose
@@ -129,7 +129,7 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     private String DstNodeType;
 
     /**
-    * <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+    * <p>同步任务选项</p>
     */
     @SerializedName("Options")
     @Expose
@@ -255,16 +255,16 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p> 
-     * @return ExpectRunTime <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * Get <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p> 
+     * @return ExpectRunTime <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
      */
     public String getExpectRunTime() {
         return this.ExpectRunTime;
     }
 
     /**
-     * Set <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
-     * @param ExpectRunTime <p>期待启动时间，当RunMode取值为Timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * Set <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
+     * @param ExpectRunTime <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>Timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时按 RFC 3339 传入（如 <code>2026-04-23T20:21:35+08:00</code>），否则按 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）传入</p>
      */
     public void setExpectRunTime(String ExpectRunTime) {
         this.ExpectRunTime = ExpectRunTime;
@@ -383,16 +383,16 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p> 
-     * @return Options <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+     * Get <p>同步任务选项</p> 
+     * @return Options <p>同步任务选项</p>
      */
     public Options getOptions() {
         return this.Options;
     }
 
     /**
-     * Set <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
-     * @param Options <p>同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速</p>
+     * Set <p>同步任务选项</p>
+     * @param Options <p>同步任务选项</p>
      */
     public void setOptions(Options Options) {
         this.Options = Options;

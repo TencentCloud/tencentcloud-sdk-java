@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DifferenceItem extends AbstractModel {
 
     /**
-    * 数据库名
+    * <p>数据库名</p>
     */
     @SerializedName("Db")
     @Expose
     private String Db;
 
     /**
-    * schema
+    * <p>schema</p>
     */
     @SerializedName("Schema")
     @Expose
     private String Schema;
 
     /**
-    * 表名
+    * <p>表名</p>
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-    * 分块号
+    * <p>分块号</p>
     */
     @SerializedName("Chunk")
     @Expose
     private Long Chunk;
 
     /**
-    * 源库数值
+    * <p>源库数值</p>
     */
     @SerializedName("SrcItem")
     @Expose
     private String SrcItem;
 
     /**
-    * 目标库数值
+    * <p>目标库数值</p>
     */
     @SerializedName("DstItem")
     @Expose
     private String DstItem;
 
     /**
-    * 索引名称
+    * <p>索引名称</p>
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * 索引下边界
+    * <p>索引下边界</p>
     */
     @SerializedName("LowerBoundary")
     @Expose
     private String LowerBoundary;
 
     /**
-    * 索引上边界
+    * <p>索引上边界</p>
     */
     @SerializedName("UpperBoundary")
     @Expose
     private String UpperBoundary;
 
     /**
-    * 对比消耗时间,单位为 ms
+    * <p>对比消耗时间,单位为 ms</p>
     */
     @SerializedName("CostTime")
     @Expose
     private Float CostTime;
 
     /**
-    * 完成时间
+    * <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("FinishedAt")
     @Expose
     private String FinishedAt;
 
     /**
-     * Get 数据库名 
-     * @return Db 数据库名
+     * Get <p>数据库名</p> 
+     * @return Db <p>数据库名</p>
      */
     public String getDb() {
         return this.Db;
     }
 
     /**
-     * Set 数据库名
-     * @param Db 数据库名
+     * Set <p>数据库名</p>
+     * @param Db <p>数据库名</p>
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get schema 
-     * @return Schema schema
+     * Get <p>schema</p> 
+     * @return Schema <p>schema</p>
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set schema
-     * @param Schema schema
+     * Set <p>schema</p>
+     * @param Schema <p>schema</p>
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get 表名 
-     * @return Table 表名
+     * Get <p>表名</p> 
+     * @return Table <p>表名</p>
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set 表名
-     * @param Table 表名
+     * Set <p>表名</p>
+     * @param Table <p>表名</p>
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 分块号 
-     * @return Chunk 分块号
+     * Get <p>分块号</p> 
+     * @return Chunk <p>分块号</p>
      */
     public Long getChunk() {
         return this.Chunk;
     }
 
     /**
-     * Set 分块号
-     * @param Chunk 分块号
+     * Set <p>分块号</p>
+     * @param Chunk <p>分块号</p>
      */
     public void setChunk(Long Chunk) {
         this.Chunk = Chunk;
     }
 
     /**
-     * Get 源库数值 
-     * @return SrcItem 源库数值
+     * Get <p>源库数值</p> 
+     * @return SrcItem <p>源库数值</p>
      */
     public String getSrcItem() {
         return this.SrcItem;
     }
 
     /**
-     * Set 源库数值
-     * @param SrcItem 源库数值
+     * Set <p>源库数值</p>
+     * @param SrcItem <p>源库数值</p>
      */
     public void setSrcItem(String SrcItem) {
         this.SrcItem = SrcItem;
     }
 
     /**
-     * Get 目标库数值 
-     * @return DstItem 目标库数值
+     * Get <p>目标库数值</p> 
+     * @return DstItem <p>目标库数值</p>
      */
     public String getDstItem() {
         return this.DstItem;
     }
 
     /**
-     * Set 目标库数值
-     * @param DstItem 目标库数值
+     * Set <p>目标库数值</p>
+     * @param DstItem <p>目标库数值</p>
      */
     public void setDstItem(String DstItem) {
         this.DstItem = DstItem;
     }
 
     /**
-     * Get 索引名称 
-     * @return IndexName 索引名称
+     * Get <p>索引名称</p> 
+     * @return IndexName <p>索引名称</p>
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set 索引名称
-     * @param IndexName 索引名称
+     * Set <p>索引名称</p>
+     * @param IndexName <p>索引名称</p>
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get 索引下边界 
-     * @return LowerBoundary 索引下边界
+     * Get <p>索引下边界</p> 
+     * @return LowerBoundary <p>索引下边界</p>
      */
     public String getLowerBoundary() {
         return this.LowerBoundary;
     }
 
     /**
-     * Set 索引下边界
-     * @param LowerBoundary 索引下边界
+     * Set <p>索引下边界</p>
+     * @param LowerBoundary <p>索引下边界</p>
      */
     public void setLowerBoundary(String LowerBoundary) {
         this.LowerBoundary = LowerBoundary;
     }
 
     /**
-     * Get 索引上边界 
-     * @return UpperBoundary 索引上边界
+     * Get <p>索引上边界</p> 
+     * @return UpperBoundary <p>索引上边界</p>
      */
     public String getUpperBoundary() {
         return this.UpperBoundary;
     }
 
     /**
-     * Set 索引上边界
-     * @param UpperBoundary 索引上边界
+     * Set <p>索引上边界</p>
+     * @param UpperBoundary <p>索引上边界</p>
      */
     public void setUpperBoundary(String UpperBoundary) {
         this.UpperBoundary = UpperBoundary;
     }
 
     /**
-     * Get 对比消耗时间,单位为 ms 
-     * @return CostTime 对比消耗时间,单位为 ms
+     * Get <p>对比消耗时间,单位为 ms</p> 
+     * @return CostTime <p>对比消耗时间,单位为 ms</p>
      */
     public Float getCostTime() {
         return this.CostTime;
     }
 
     /**
-     * Set 对比消耗时间,单位为 ms
-     * @param CostTime 对比消耗时间,单位为 ms
+     * Set <p>对比消耗时间,单位为 ms</p>
+     * @param CostTime <p>对比消耗时间,单位为 ms</p>
      */
     public void setCostTime(Float CostTime) {
         this.CostTime = CostTime;
     }
 
     /**
-     * Get 完成时间 
-     * @return FinishedAt 完成时间
+     * Get <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return FinishedAt <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getFinishedAt() {
         return this.FinishedAt;
     }
 
     /**
-     * Set 完成时间
-     * @param FinishedAt 完成时间
+     * Set <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param FinishedAt <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;

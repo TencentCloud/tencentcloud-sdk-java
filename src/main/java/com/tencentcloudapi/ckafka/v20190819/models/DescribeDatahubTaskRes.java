@@ -166,6 +166,13 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     private Boolean AutoExpandFlag;
 
     /**
+    * <p>不影响任务执行的警告信息</p>
+    */
+    @SerializedName("WarnMessage")
+    @Expose
+    private String WarnMessage;
+
+    /**
      * Get <p>任务ID</p> 
      * @return TaskId <p>任务ID</p>
      */
@@ -493,6 +500,22 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         this.AutoExpandFlag = AutoExpandFlag;
     }
 
+    /**
+     * Get <p>不影响任务执行的警告信息</p> 
+     * @return WarnMessage <p>不影响任务执行的警告信息</p>
+     */
+    public String getWarnMessage() {
+        return this.WarnMessage;
+    }
+
+    /**
+     * Set <p>不影响任务执行的警告信息</p>
+     * @param WarnMessage <p>不影响任务执行的警告信息</p>
+     */
+    public void setWarnMessage(String WarnMessage) {
+        this.WarnMessage = WarnMessage;
+    }
+
     public DescribeDatahubTaskRes() {
     }
 
@@ -567,6 +590,9 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         if (source.AutoExpandFlag != null) {
             this.AutoExpandFlag = new Boolean(source.AutoExpandFlag);
         }
+        if (source.WarnMessage != null) {
+            this.WarnMessage = new String(source.WarnMessage);
+        }
     }
 
 
@@ -594,6 +620,7 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskMax", this.TaskMax);
         this.setParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
         this.setParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
+        this.setParamSimple(map, prefix + "WarnMessage", this.WarnMessage);
 
     }
 }

@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class ServiceDetail extends AbstractModel {
 
     /**
-    * 服务id
+    * <p>服务id</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 服务状态
+    * <p>服务状态</p>
     */
     @SerializedName("ServiceState")
     @Expose
     private String ServiceState;
 
     /**
-    * 运行中的副本数
+    * <p>运行中的副本数</p>
     */
     @SerializedName("RunningReplicas")
     @Expose
     private Long RunningReplicas;
 
     /**
-    * 期望的副本总数
+    * <p>期望的副本总数</p>
     */
     @SerializedName("TotalReplicas")
     @Expose
     private Long TotalReplicas;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 算力套餐详情
+    * <p>算力套餐详情</p>
     */
     @SerializedName("ComputeSet")
     @Expose
     private ComputeDetail [] ComputeSet;
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 服务部署信息
+    * <p>服务部署信息</p>
     */
     @SerializedName("DeploymentConfigs")
     @Expose
     private DeploymentConfig [] DeploymentConfigs;
 
     /**
-    * 服务超参数配置
+    * <p>服务超参数配置</p>
     */
     @SerializedName("HyperParam")
     @Expose
     private HyperParam HyperParam;
 
     /**
-    * 
+    * <p>安全类型</p>
     */
     @SerializedName("SecurityType")
     @Expose
     private String SecurityType;
 
     /**
-    * 
+    * <p>角色算力配置列表</p>
     */
     @SerializedName("RoleComputeSet")
     @Expose
     private ComputeDetail [] RoleComputeSet;
 
     /**
-    * 
+    * <p>目标副本数</p>
     */
     @SerializedName("TargetReplicas")
     @Expose
     private Long TargetReplicas;
 
     /**
-    * 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+    * <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 到期时间(包月)，按量为空
+    * <p>到期时间(包月)，按量为空</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 自动续费标识(包月)
+    * <p>自动续费标识(包月)</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 受限状态(如欠费隔离)
+    * <p>受限状态(如欠费隔离)</p>
     */
     @SerializedName("RestrictState")
     @Expose
     private String RestrictState;
 
     /**
-    * 是否自定义部署：1是 0否
+    * <p>是否自定义部署：1是 0否</p>
     */
     @SerializedName("IsCustomDeploy")
     @Expose
     private Long IsCustomDeploy;
 
     /**
-     * Get 服务id 
-     * @return ServiceId 服务id
+     * Get <p>服务id</p> 
+     * @return ServiceId <p>服务id</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务id
-     * @param ServiceId 服务id
+     * Set <p>服务id</p>
+     * @param ServiceId <p>服务id</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 服务名称 
-     * @return ServiceName 服务名称
+     * Get <p>服务名称</p> 
+     * @return ServiceName <p>服务名称</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名称
-     * @param ServiceName 服务名称
+     * Set <p>服务名称</p>
+     * @param ServiceName <p>服务名称</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 服务状态 
-     * @return ServiceState 服务状态
+     * Get <p>服务状态</p> 
+     * @return ServiceState <p>服务状态</p>
      */
     public String getServiceState() {
         return this.ServiceState;
     }
 
     /**
-     * Set 服务状态
-     * @param ServiceState 服务状态
+     * Set <p>服务状态</p>
+     * @param ServiceState <p>服务状态</p>
      */
     public void setServiceState(String ServiceState) {
         this.ServiceState = ServiceState;
     }
 
     /**
-     * Get 运行中的副本数 
-     * @return RunningReplicas 运行中的副本数
+     * Get <p>运行中的副本数</p> 
+     * @return RunningReplicas <p>运行中的副本数</p>
      */
     public Long getRunningReplicas() {
         return this.RunningReplicas;
     }
 
     /**
-     * Set 运行中的副本数
-     * @param RunningReplicas 运行中的副本数
+     * Set <p>运行中的副本数</p>
+     * @param RunningReplicas <p>运行中的副本数</p>
      */
     public void setRunningReplicas(Long RunningReplicas) {
         this.RunningReplicas = RunningReplicas;
     }
 
     /**
-     * Get 期望的副本总数 
-     * @return TotalReplicas 期望的副本总数
+     * Get <p>期望的副本总数</p> 
+     * @return TotalReplicas <p>期望的副本总数</p>
      */
     public Long getTotalReplicas() {
         return this.TotalReplicas;
     }
 
     /**
-     * Set 期望的副本总数
-     * @param TotalReplicas 期望的副本总数
+     * Set <p>期望的副本总数</p>
+     * @param TotalReplicas <p>期望的副本总数</p>
      */
     public void setTotalReplicas(Long TotalReplicas) {
         this.TotalReplicas = TotalReplicas;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 算力套餐详情 
-     * @return ComputeSet 算力套餐详情
+     * Get <p>算力套餐详情</p> 
+     * @return ComputeSet <p>算力套餐详情</p>
      */
     public ComputeDetail [] getComputeSet() {
         return this.ComputeSet;
     }
 
     /**
-     * Set 算力套餐详情
-     * @param ComputeSet 算力套餐详情
+     * Set <p>算力套餐详情</p>
+     * @param ComputeSet <p>算力套餐详情</p>
      */
     public void setComputeSet(ComputeDetail [] ComputeSet) {
         this.ComputeSet = ComputeSet;
     }
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get <p>模型名称</p> 
+     * @return ModelName <p>模型名称</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set <p>模型名称</p>
+     * @param ModelName <p>模型名称</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 服务部署信息 
-     * @return DeploymentConfigs 服务部署信息
+     * Get <p>服务部署信息</p> 
+     * @return DeploymentConfigs <p>服务部署信息</p>
      */
     public DeploymentConfig [] getDeploymentConfigs() {
         return this.DeploymentConfigs;
     }
 
     /**
-     * Set 服务部署信息
-     * @param DeploymentConfigs 服务部署信息
+     * Set <p>服务部署信息</p>
+     * @param DeploymentConfigs <p>服务部署信息</p>
      */
     public void setDeploymentConfigs(DeploymentConfig [] DeploymentConfigs) {
         this.DeploymentConfigs = DeploymentConfigs;
     }
 
     /**
-     * Get 服务超参数配置 
-     * @return HyperParam 服务超参数配置
+     * Get <p>服务超参数配置</p> 
+     * @return HyperParam <p>服务超参数配置</p>
      */
     public HyperParam getHyperParam() {
         return this.HyperParam;
     }
 
     /**
-     * Set 服务超参数配置
-     * @param HyperParam 服务超参数配置
+     * Set <p>服务超参数配置</p>
+     * @param HyperParam <p>服务超参数配置</p>
      */
     public void setHyperParam(HyperParam HyperParam) {
         this.HyperParam = HyperParam;
     }
 
     /**
-     * Get  
-     * @return SecurityType 
+     * Get <p>安全类型</p> 
+     * @return SecurityType <p>安全类型</p>
      */
     public String getSecurityType() {
         return this.SecurityType;
     }
 
     /**
-     * Set 
-     * @param SecurityType 
+     * Set <p>安全类型</p>
+     * @param SecurityType <p>安全类型</p>
      */
     public void setSecurityType(String SecurityType) {
         this.SecurityType = SecurityType;
     }
 
     /**
-     * Get  
-     * @return RoleComputeSet 
+     * Get <p>角色算力配置列表</p> 
+     * @return RoleComputeSet <p>角色算力配置列表</p>
      */
     public ComputeDetail [] getRoleComputeSet() {
         return this.RoleComputeSet;
     }
 
     /**
-     * Set 
-     * @param RoleComputeSet 
+     * Set <p>角色算力配置列表</p>
+     * @param RoleComputeSet <p>角色算力配置列表</p>
      */
     public void setRoleComputeSet(ComputeDetail [] RoleComputeSet) {
         this.RoleComputeSet = RoleComputeSet;
     }
 
     /**
-     * Get  
-     * @return TargetReplicas 
+     * Get <p>目标副本数</p> 
+     * @return TargetReplicas <p>目标副本数</p>
      */
     public Long getTargetReplicas() {
         return this.TargetReplicas;
     }
 
     /**
-     * Set 
-     * @param TargetReplicas 
+     * Set <p>目标副本数</p>
+     * @param TargetReplicas <p>目标副本数</p>
      */
     public void setTargetReplicas(Long TargetReplicas) {
         this.TargetReplicas = TargetReplicas;
     }
 
     /**
-     * Get 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月) 
-     * @return ChargeType 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     * Get <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p> 
+     * @return ChargeType <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
-     * @param ChargeType 计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)
+     * Set <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
+     * @param ChargeType <p>计费类型：POSTPAID_BY_HOUR(按量)/PREPAID_BY_MONTH(包月)</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 到期时间(包月)，按量为空 
-     * @return ExpireTime 到期时间(包月)，按量为空
+     * Get <p>到期时间(包月)，按量为空</p> 
+     * @return ExpireTime <p>到期时间(包月)，按量为空</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 到期时间(包月)，按量为空
-     * @param ExpireTime 到期时间(包月)，按量为空
+     * Set <p>到期时间(包月)，按量为空</p>
+     * @param ExpireTime <p>到期时间(包月)，按量为空</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 自动续费标识(包月) 
-     * @return RenewFlag 自动续费标识(包月)
+     * Get <p>自动续费标识(包月)</p> 
+     * @return RenewFlag <p>自动续费标识(包月)</p>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标识(包月)
-     * @param RenewFlag 自动续费标识(包月)
+     * Set <p>自动续费标识(包月)</p>
+     * @param RenewFlag <p>自动续费标识(包月)</p>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 受限状态(如欠费隔离) 
-     * @return RestrictState 受限状态(如欠费隔离)
+     * Get <p>受限状态(如欠费隔离)</p> 
+     * @return RestrictState <p>受限状态(如欠费隔离)</p>
      */
     public String getRestrictState() {
         return this.RestrictState;
     }
 
     /**
-     * Set 受限状态(如欠费隔离)
-     * @param RestrictState 受限状态(如欠费隔离)
+     * Set <p>受限状态(如欠费隔离)</p>
+     * @param RestrictState <p>受限状态(如欠费隔离)</p>
      */
     public void setRestrictState(String RestrictState) {
         this.RestrictState = RestrictState;
     }
 
     /**
-     * Get 是否自定义部署：1是 0否 
-     * @return IsCustomDeploy 是否自定义部署：1是 0否
+     * Get <p>是否自定义部署：1是 0否</p> 
+     * @return IsCustomDeploy <p>是否自定义部署：1是 0否</p>
      */
     public Long getIsCustomDeploy() {
         return this.IsCustomDeploy;
     }
 
     /**
-     * Set 是否自定义部署：1是 0否
-     * @param IsCustomDeploy 是否自定义部署：1是 0否
+     * Set <p>是否自定义部署：1是 0否</p>
+     * @param IsCustomDeploy <p>是否自定义部署：1是 0否</p>
      */
     public void setIsCustomDeploy(Long IsCustomDeploy) {
         this.IsCustomDeploy = IsCustomDeploy;

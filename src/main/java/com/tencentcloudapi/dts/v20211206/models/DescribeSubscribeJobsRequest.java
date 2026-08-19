@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class DescribeSubscribeJobsRequest extends AbstractModel {
 
     /**
-    * 订阅 ID 筛选，精确匹配
+    * <p>订阅 ID 筛选，精确匹配</p>
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-    * 订阅 ID 筛选，精确匹配
+    * <p>订阅 ID 筛选，精确匹配</p>
     */
     @SerializedName("SubscribeIds")
     @Expose
     private String [] SubscribeIds;
 
     /**
-    * 订阅名称，前缀模糊匹配
+    * <p>订阅名称，前缀模糊匹配</p>
     */
     @SerializedName("SubscribeName")
     @Expose
     private String SubscribeName;
 
     /**
-    * 订阅的云上数据库实例的 ID，精确匹配
+    * <p>订阅的云上数据库实例的 ID，精确匹配</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 订阅的topicName
+    * <p>订阅的topicName</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 计费模式筛选，可能的值：0-包年包月，1-按量计费
+    * <p>计费模式筛选，可能的值：0-包年包月，1-按量计费</p>
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+    * <p>订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng
+    * <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng</p>
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+    * <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
     */
     @SerializedName("SubsStatus")
     @Expose
     private String [] SubsStatus;
 
     /**
-    * 返回记录的起始偏移量。默认0
+    * <p>返回记录的起始偏移量。默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单次返回的记录数量。默认20，最大100
+    * <p>单次返回的记录数量。默认20，最大100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+    * <p>排序方向，可选的值为&quot;DESC&quot;和&quot;ASC&quot;，默认为&quot;DESC&quot;，按创建时间逆序排序</p>
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * tag 过滤条件，多个 TagFilter 之间关系为且
+    * <p>tag 过滤条件，多个 TagFilter 之间关系为且</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-     * Get 订阅 ID 筛选，精确匹配 
-     * @return SubscribeId 订阅 ID 筛选，精确匹配
+     * Get <p>订阅 ID 筛选，精确匹配</p> 
+     * @return SubscribeId <p>订阅 ID 筛选，精确匹配</p>
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 订阅 ID 筛选，精确匹配
-     * @param SubscribeId 订阅 ID 筛选，精确匹配
+     * Set <p>订阅 ID 筛选，精确匹配</p>
+     * @param SubscribeId <p>订阅 ID 筛选，精确匹配</p>
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
     }
 
     /**
-     * Get 订阅 ID 筛选，精确匹配 
-     * @return SubscribeIds 订阅 ID 筛选，精确匹配
+     * Get <p>订阅 ID 筛选，精确匹配</p> 
+     * @return SubscribeIds <p>订阅 ID 筛选，精确匹配</p>
      */
     public String [] getSubscribeIds() {
         return this.SubscribeIds;
     }
 
     /**
-     * Set 订阅 ID 筛选，精确匹配
-     * @param SubscribeIds 订阅 ID 筛选，精确匹配
+     * Set <p>订阅 ID 筛选，精确匹配</p>
+     * @param SubscribeIds <p>订阅 ID 筛选，精确匹配</p>
      */
     public void setSubscribeIds(String [] SubscribeIds) {
         this.SubscribeIds = SubscribeIds;
     }
 
     /**
-     * Get 订阅名称，前缀模糊匹配 
-     * @return SubscribeName 订阅名称，前缀模糊匹配
+     * Get <p>订阅名称，前缀模糊匹配</p> 
+     * @return SubscribeName <p>订阅名称，前缀模糊匹配</p>
      */
     public String getSubscribeName() {
         return this.SubscribeName;
     }
 
     /**
-     * Set 订阅名称，前缀模糊匹配
-     * @param SubscribeName 订阅名称，前缀模糊匹配
+     * Set <p>订阅名称，前缀模糊匹配</p>
+     * @param SubscribeName <p>订阅名称，前缀模糊匹配</p>
      */
     public void setSubscribeName(String SubscribeName) {
         this.SubscribeName = SubscribeName;
     }
 
     /**
-     * Get 订阅的云上数据库实例的 ID，精确匹配 
-     * @return InstanceId 订阅的云上数据库实例的 ID，精确匹配
+     * Get <p>订阅的云上数据库实例的 ID，精确匹配</p> 
+     * @return InstanceId <p>订阅的云上数据库实例的 ID，精确匹配</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 订阅的云上数据库实例的 ID，精确匹配
-     * @param InstanceId 订阅的云上数据库实例的 ID，精确匹配
+     * Set <p>订阅的云上数据库实例的 ID，精确匹配</p>
+     * @param InstanceId <p>订阅的云上数据库实例的 ID，精确匹配</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订阅的topicName 
-     * @return Topic 订阅的topicName
+     * Get <p>订阅的topicName</p> 
+     * @return Topic <p>订阅的topicName</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 订阅的topicName
-     * @param Topic 订阅的topicName
+     * Set <p>订阅的topicName</p>
+     * @param Topic <p>订阅的topicName</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 计费模式筛选，可能的值：0-包年包月，1-按量计费 
-     * @return PayType 计费模式筛选，可能的值：0-包年包月，1-按量计费
+     * Get <p>计费模式筛选，可能的值：0-包年包月，1-按量计费</p> 
+     * @return PayType <p>计费模式筛选，可能的值：0-包年包月，1-按量计费</p>
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 计费模式筛选，可能的值：0-包年包月，1-按量计费
-     * @param PayType 计费模式筛选，可能的值：0-包年包月，1-按量计费
+     * Set <p>计费模式筛选，可能的值：0-包年包月，1-按量计费</p>
+     * @param PayType <p>计费模式筛选，可能的值：0-包年包月，1-按量计费</p>
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql) 
-     * @return Product 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+     * Get <p>订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p> 
+     * @return Product <p>订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
-     * @param Product 订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
+     * Set <p>订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
+     * @param Product <p>订阅的数据库产品，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng 
-     * @return Status 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng
+     * Get <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng</p> 
+     * @return Status <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng</p>
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng
-     * @param Status 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng
+     * Set <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng</p>
+     * @param Status <p>数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining，按量转包年包月中 post2PrePayIng</p>
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error 
-     * @return SubsStatus 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+     * Get <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p> 
+     * @return SubsStatus <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
      */
     public String [] getSubsStatus() {
         return this.SubsStatus;
     }
 
     /**
-     * Set 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
-     * @param SubsStatus 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
+     * Set <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
+     * @param SubsStatus <p>数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error</p>
      */
     public void setSubsStatus(String [] SubsStatus) {
         this.SubsStatus = SubsStatus;
     }
 
     /**
-     * Get 返回记录的起始偏移量。默认0 
-     * @return Offset 返回记录的起始偏移量。默认0
+     * Get <p>返回记录的起始偏移量。默认0</p> 
+     * @return Offset <p>返回记录的起始偏移量。默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回记录的起始偏移量。默认0
-     * @param Offset 返回记录的起始偏移量。默认0
+     * Set <p>返回记录的起始偏移量。默认0</p>
+     * @param Offset <p>返回记录的起始偏移量。默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单次返回的记录数量。默认20，最大100 
-     * @return Limit 单次返回的记录数量。默认20，最大100
+     * Get <p>单次返回的记录数量。默认20，最大100</p> 
+     * @return Limit <p>单次返回的记录数量。默认20，最大100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次返回的记录数量。默认20，最大100
-     * @param Limit 单次返回的记录数量。默认20，最大100
+     * Set <p>单次返回的记录数量。默认20，最大100</p>
+     * @param Limit <p>单次返回的记录数量。默认20，最大100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序 
-     * @return OrderDirection 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+     * Get <p>排序方向，可选的值为&quot;DESC&quot;和&quot;ASC&quot;，默认为&quot;DESC&quot;，按创建时间逆序排序</p> 
+     * @return OrderDirection <p>排序方向，可选的值为&quot;DESC&quot;和&quot;ASC&quot;，默认为&quot;DESC&quot;，按创建时间逆序排序</p>
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
-     * @param OrderDirection 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+     * Set <p>排序方向，可选的值为&quot;DESC&quot;和&quot;ASC&quot;，默认为&quot;DESC&quot;，按创建时间逆序排序</p>
+     * @param OrderDirection <p>排序方向，可选的值为&quot;DESC&quot;和&quot;ASC&quot;，默认为&quot;DESC&quot;，按创建时间逆序排序</p>
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get tag 过滤条件，多个 TagFilter 之间关系为且 
-     * @return TagFilters tag 过滤条件，多个 TagFilter 之间关系为且
+     * Get <p>tag 过滤条件，多个 TagFilter 之间关系为且</p> 
+     * @return TagFilters <p>tag 过滤条件，多个 TagFilter 之间关系为且</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set tag 过滤条件，多个 TagFilter 之间关系为且
-     * @param TagFilters tag 过滤条件，多个 TagFilter 之间关系为且
+     * Set <p>tag 过滤条件，多个 TagFilter 之间关系为且</p>
+     * @param TagFilters <p>tag 过滤条件，多个 TagFilter 之间关系为且</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;

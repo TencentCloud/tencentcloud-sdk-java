@@ -24,74 +24,77 @@ import java.util.HashMap;
 public class AlarmNotice extends AbstractModel {
 
     /**
-    * 告警通知渠道组名称。
+    * <p>告警通知渠道组名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 告警通知渠道组绑定的标签信息。
+    * <p>告警通知渠道组绑定的标签信息。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
+    * <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 告警通知模板接收者信息。
+    * <p>告警通知模板接收者信息。</p>
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * 告警通知模板回调信息。
+    * <p>告警通知模板回调信息。</p>
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-    * 告警通知模板ID。
+    * <p>告警通知模板ID。</p>
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * 通知规则。
+    * <p>通知规则。</p>
     */
     @SerializedName("NoticeRules")
     @Expose
     private NoticeRule [] NoticeRules;
 
     /**
-    * 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
+    * <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
     */
     @SerializedName("AlarmShieldStatus")
     @Expose
     private Long AlarmShieldStatus;
 
     /**
-    * 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+    * <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+    */
+    @SerializedName("SecureDetailStatus")
+    @Expose
+    private Long SecureDetailStatus;
+
+    /**
+    * <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
     */
     @SerializedName("JumpDomain")
     @Expose
     private String JumpDomain;
 
     /**
-    * 投递相关信息。
+    * <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmNoticeDeliverConfig")
@@ -99,50 +102,35 @@ public class AlarmNotice extends AbstractModel {
     private AlarmNoticeDeliverConfig AlarmNoticeDeliverConfig;
 
     /**
-    * 创建时间。格式： YYYY-MM-DD HH:MM:SS
+    * <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+    * <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
+    * <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
     */
     @SerializedName("DeliverStatus")
     @Expose
     private Long DeliverStatus;
 
     /**
-    * 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
+    * <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
     */
     @SerializedName("DeliverFlag")
     @Expose
     private Long DeliverFlag;
 
     /**
-    * 通知渠道组配置的告警屏蔽统计状态数量信息。
+    * <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmShieldCount")
@@ -150,178 +138,176 @@ public class AlarmNotice extends AbstractModel {
     private AlarmShieldCount AlarmShieldCount;
 
     /**
-    * 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+    * <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
     */
     @SerializedName("CallbackPrioritize")
     @Expose
     private Boolean CallbackPrioritize;
 
     /**
-     * Get 告警通知渠道组名称。 
-     * @return Name 告警通知渠道组名称。
+     * Get <p>告警通知渠道组名称。</p> 
+     * @return Name <p>告警通知渠道组名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警通知渠道组名称。
-     * @param Name 告警通知渠道组名称。
+     * Set <p>告警通知渠道组名称。</p>
+     * @param Name <p>告警通知渠道组名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 告警通知渠道组绑定的标签信息。 
-     * @return Tags 告警通知渠道组绑定的标签信息。
+     * Get <p>告警通知渠道组绑定的标签信息。</p> 
+     * @return Tags <p>告警通知渠道组绑定的标签信息。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 告警通知渠道组绑定的标签信息。
-     * @param Tags 告警通知渠道组绑定的标签信息。
+     * Set <p>告警通知渠道组绑定的标签信息。</p>
+     * @param Tags <p>告警通知渠道组绑定的标签信息。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li> 
-     * @return Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
+     * Get <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p> 
+     * @return Type <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
-     * @param Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发</li>
-<br><li> Recovery - 告警恢复</li>
-<br><li> All - 告警触发和告警恢复</li>
+     * Set <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
+     * @param Type <p>告警模板的类型。可选值：<br><br><li> Trigger - 告警触发</li><br><br><li> Recovery - 告警恢复</li><br><br><li> All - 告警触发和告警恢复</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警通知模板接收者信息。 
-     * @return NoticeReceivers 告警通知模板接收者信息。
+     * Get <p>告警通知模板接收者信息。</p> 
+     * @return NoticeReceivers <p>告警通知模板接收者信息。</p>
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set 告警通知模板接收者信息。
-     * @param NoticeReceivers 告警通知模板接收者信息。
+     * Set <p>告警通知模板接收者信息。</p>
+     * @param NoticeReceivers <p>告警通知模板接收者信息。</p>
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 告警通知模板回调信息。 
-     * @return WebCallbacks 告警通知模板回调信息。
+     * Get <p>告警通知模板回调信息。</p> 
+     * @return WebCallbacks <p>告警通知模板回调信息。</p>
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set 告警通知模板回调信息。
-     * @param WebCallbacks 告警通知模板回调信息。
+     * Set <p>告警通知模板回调信息。</p>
+     * @param WebCallbacks <p>告警通知模板回调信息。</p>
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get 告警通知模板ID。 
-     * @return AlarmNoticeId 告警通知模板ID。
+     * Get <p>告警通知模板ID。</p> 
+     * @return AlarmNoticeId <p>告警通知模板ID。</p>
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 告警通知模板ID。
-     * @param AlarmNoticeId 告警通知模板ID。
+     * Set <p>告警通知模板ID。</p>
+     * @param AlarmNoticeId <p>告警通知模板ID。</p>
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get 通知规则。 
-     * @return NoticeRules 通知规则。
+     * Get <p>通知规则。</p> 
+     * @return NoticeRules <p>通知规则。</p>
      */
     public NoticeRule [] getNoticeRules() {
         return this.NoticeRules;
     }
 
     /**
-     * Set 通知规则。
-     * @param NoticeRules 通知规则。
+     * Set <p>通知规则。</p>
+     * @param NoticeRules <p>通知规则。</p>
      */
     public void setNoticeRules(NoticeRule [] NoticeRules) {
         this.NoticeRules = NoticeRules;
     }
 
     /**
-     * Get 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启） 
-     * @return AlarmShieldStatus 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
+     * Get <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p> 
+     * @return AlarmShieldStatus <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
      */
     public Long getAlarmShieldStatus() {
         return this.AlarmShieldStatus;
     }
 
     /**
-     * Set 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
-     * @param AlarmShieldStatus 免登录操作告警开关。
-参数值： 1：关闭 2：开启（默认开启）
+     * Set <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
+     * @param AlarmShieldStatus <p>免登录操作告警开关。<br>参数值： 1：关闭 2：开启（默认开启）</p>
      */
     public void setAlarmShieldStatus(Long AlarmShieldStatus) {
         this.AlarmShieldStatus = AlarmShieldStatus;
     }
 
     /**
-     * Get 调用链接域名。http:// 或者 https:// 开头，不能/结尾 
-     * @return JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     * Get <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul> 
+     * @return SecureDetailStatus <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public Long getSecureDetailStatus() {
+        return this.SecureDetailStatus;
+    }
+
+    /**
+     * Set <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     * @param SecureDetailStatus <p>告警详情需要安全认证登录开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public void setSecureDetailStatus(Long SecureDetailStatus) {
+        this.SecureDetailStatus = SecureDetailStatus;
+    }
+
+    /**
+     * Get <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p> 
+     * @return JumpDomain <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public String getJumpDomain() {
         return this.JumpDomain;
     }
 
     /**
-     * Set 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-     * @param JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     * Set <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
+     * @param JumpDomain <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public void setJumpDomain(String JumpDomain) {
         this.JumpDomain = JumpDomain;
     }
 
     /**
-     * Get 投递相关信息。
+     * Get <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmNoticeDeliverConfig 投递相关信息。
+     * @return AlarmNoticeDeliverConfig <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmNoticeDeliverConfig getAlarmNoticeDeliverConfig() {
@@ -329,9 +315,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 投递相关信息。
+     * Set <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmNoticeDeliverConfig 投递相关信息。
+     * @param AlarmNoticeDeliverConfig <p>投递相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmNoticeDeliverConfig(AlarmNoticeDeliverConfig AlarmNoticeDeliverConfig) {
@@ -339,133 +325,73 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。格式： YYYY-MM-DD HH:MM:SS 
-     * @return CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * Get <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p> 
+     * @return CreateTime <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * Set <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param CreateTime <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近更新时间。格式： YYYY-MM-DD HH:MM:SS 
-     * @return UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * Get <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p> 
+     * @return UpdateTime <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * Set <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param UpdateTime <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
- 
-     * @return DeliverStatus 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
+     * Get <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p> 
+     * @return DeliverStatus <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
      */
     public Long getDeliverStatus() {
         return this.DeliverStatus;
     }
 
     /**
-     * Set 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
-     * @param DeliverStatus 投递日志开关。
-
-参数值：
-
-1：关闭
-
-2：开启 
-
+     * Set <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
+     * @param DeliverStatus <p>投递日志开关。</p><p>参数值：</p><p>1：关闭</p><p>2：开启</p>
      */
     public void setDeliverStatus(Long DeliverStatus) {
         this.DeliverStatus = DeliverStatus;
     }
 
     /**
-     * Get 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常 
-     * @return DeliverFlag 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
+     * Get <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p> 
+     * @return DeliverFlag <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
      */
     public Long getDeliverFlag() {
         return this.DeliverFlag;
     }
 
     /**
-     * Set 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
-     * @param DeliverFlag 投递日志标识。
-
-参数值：
-
-1：未启用
-
-2：已启用
-
-3：投递异常
+     * Set <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
+     * @param DeliverFlag <p>投递日志标识。</p><p>参数值：</p><p>1：未启用</p><p>2：已启用</p><p>3：投递异常</p>
      */
     public void setDeliverFlag(Long DeliverFlag) {
         this.DeliverFlag = DeliverFlag;
     }
 
     /**
-     * Get 通知渠道组配置的告警屏蔽统计状态数量信息。
+     * Get <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+     * @return AlarmShieldCount <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmShieldCount getAlarmShieldCount() {
@@ -473,9 +399,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 通知渠道组配置的告警屏蔽统计状态数量信息。
+     * Set <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+     * @param AlarmShieldCount <p>通知渠道组配置的告警屏蔽统计状态数量信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmShieldCount(AlarmShieldCount AlarmShieldCount) {
@@ -483,24 +409,16 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。 
-     * @return CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * Get <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul> 
+     * @return CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public Boolean getCallbackPrioritize() {
         return this.CallbackPrioritize;
     }
 
     /**
-     * Set 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
-     * @param CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * Set <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
+     * @param CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public void setCallbackPrioritize(Boolean CallbackPrioritize) {
         this.CallbackPrioritize = CallbackPrioritize;
@@ -550,6 +468,9 @@ public class AlarmNotice extends AbstractModel {
         if (source.AlarmShieldStatus != null) {
             this.AlarmShieldStatus = new Long(source.AlarmShieldStatus);
         }
+        if (source.SecureDetailStatus != null) {
+            this.SecureDetailStatus = new Long(source.SecureDetailStatus);
+        }
         if (source.JumpDomain != null) {
             this.JumpDomain = new String(source.JumpDomain);
         }
@@ -589,6 +510,7 @@ public class AlarmNotice extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
         this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
         this.setParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+        this.setParamSimple(map, prefix + "SecureDetailStatus", this.SecureDetailStatus);
         this.setParamSimple(map, prefix + "JumpDomain", this.JumpDomain);
         this.setParamObj(map, prefix + "AlarmNoticeDeliverConfig.", this.AlarmNoticeDeliverConfig);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateConfigResponse extends AbstractModel {
 
     /**
-    * 采集配置ID
+    * <p>采集配置ID</p>
     */
     @SerializedName("ConfigId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 采集配置ID 
-     * @return ConfigId 采集配置ID
+     * Get <p>采集配置ID</p> 
+     * @return ConfigId <p>采集配置ID</p>
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 采集配置ID
-     * @param ConfigId 采集配置ID
+     * Set <p>采集配置ID</p>
+     * @param ConfigId <p>采集配置ID</p>
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

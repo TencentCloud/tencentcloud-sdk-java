@@ -270,6 +270,17 @@ public class TokenhubClient extends AbstractClient{
     }
 
     /**
+     *查询指定模型的 TPM 和 QPM 配额上限。
+     * @param req DescribeModelQuotaRequest
+     * @return DescribeModelQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelQuotaResponse DescribeModelQuota(DescribeModelQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelQuota", DescribeModelQuotaResponse.class);
+    }
+
+    /**
      *查询 TokenPlan 套餐详情。
 
 返回套餐基本信息及额度中心主额度包余量。

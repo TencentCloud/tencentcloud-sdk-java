@@ -95,6 +95,20 @@ public class KnowledgeTaskConfig extends AbstractModel {
     private Long EnableExtractDb;
 
     /**
+    * <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+    */
+    @SerializedName("EnableGraphBuild")
+    @Expose
+    private Long EnableGraphBuild;
+
+    /**
+    * <p>0:关闭 1:开启树构建（入库时），默认0</p>
+    */
+    @SerializedName("EnableTreeBuild")
+    @Expose
+    private Long EnableTreeBuild;
+
+    /**
      * Get <p>切片类型  0:自定义切片，1：智能切片</p> 
      * @return ChunkType <p>切片类型  0:自定义切片，1：智能切片</p>
      */
@@ -258,6 +272,38 @@ public class KnowledgeTaskConfig extends AbstractModel {
         this.EnableExtractDb = EnableExtractDb;
     }
 
+    /**
+     * Get <p>0:关闭 1:开启图谱构建（入库时），默认0</p> 
+     * @return EnableGraphBuild <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+     */
+    public Long getEnableGraphBuild() {
+        return this.EnableGraphBuild;
+    }
+
+    /**
+     * Set <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+     * @param EnableGraphBuild <p>0:关闭 1:开启图谱构建（入库时），默认0</p>
+     */
+    public void setEnableGraphBuild(Long EnableGraphBuild) {
+        this.EnableGraphBuild = EnableGraphBuild;
+    }
+
+    /**
+     * Get <p>0:关闭 1:开启树构建（入库时），默认0</p> 
+     * @return EnableTreeBuild <p>0:关闭 1:开启树构建（入库时），默认0</p>
+     */
+    public Long getEnableTreeBuild() {
+        return this.EnableTreeBuild;
+    }
+
+    /**
+     * Set <p>0:关闭 1:开启树构建（入库时），默认0</p>
+     * @param EnableTreeBuild <p>0:关闭 1:开启树构建（入库时），默认0</p>
+     */
+    public void setEnableTreeBuild(Long EnableTreeBuild) {
+        this.EnableTreeBuild = EnableTreeBuild;
+    }
+
     public KnowledgeTaskConfig() {
     }
 
@@ -305,6 +351,12 @@ public class KnowledgeTaskConfig extends AbstractModel {
         if (source.EnableExtractDb != null) {
             this.EnableExtractDb = new Long(source.EnableExtractDb);
         }
+        if (source.EnableGraphBuild != null) {
+            this.EnableGraphBuild = new Long(source.EnableGraphBuild);
+        }
+        if (source.EnableTreeBuild != null) {
+            this.EnableTreeBuild = new Long(source.EnableTreeBuild);
+        }
     }
 
 
@@ -322,6 +374,8 @@ public class KnowledgeTaskConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "GenParaSummary", this.GenParaSummary);
         this.setParamSimple(map, prefix + "EnableImageUnderstanding", this.EnableImageUnderstanding);
         this.setParamSimple(map, prefix + "EnableExtractDb", this.EnableExtractDb);
+        this.setParamSimple(map, prefix + "EnableGraphBuild", this.EnableGraphBuild);
+        this.setParamSimple(map, prefix + "EnableTreeBuild", this.EnableTreeBuild);
 
     }
 }

@@ -87,6 +87,27 @@ public class CustomerClusterAttr extends AbstractModel {
     private ClusterMountAttr [] ClusterMountSet;
 
     /**
+    * 
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 
+    */
+    @SerializedName("MountStorageNum")
+    @Expose
+    private Long MountStorageNum;
+
+    /**
+    * 
+    */
+    @SerializedName("StorageFileSystemId")
+    @Expose
+    private String StorageFileSystemId;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -230,6 +251,54 @@ public class CustomerClusterAttr extends AbstractModel {
         this.ClusterMountSet = ClusterMountSet;
     }
 
+    /**
+     * Get  
+     * @return Zone 
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 
+     * @param Zone 
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get  
+     * @return MountStorageNum 
+     */
+    public Long getMountStorageNum() {
+        return this.MountStorageNum;
+    }
+
+    /**
+     * Set 
+     * @param MountStorageNum 
+     */
+    public void setMountStorageNum(Long MountStorageNum) {
+        this.MountStorageNum = MountStorageNum;
+    }
+
+    /**
+     * Get  
+     * @return StorageFileSystemId 
+     */
+    public String getStorageFileSystemId() {
+        return this.StorageFileSystemId;
+    }
+
+    /**
+     * Set 
+     * @param StorageFileSystemId 
+     */
+    public void setStorageFileSystemId(String StorageFileSystemId) {
+        this.StorageFileSystemId = StorageFileSystemId;
+    }
+
     public CustomerClusterAttr() {
     }
 
@@ -271,6 +340,15 @@ public class CustomerClusterAttr extends AbstractModel {
                 this.ClusterMountSet[i] = new ClusterMountAttr(source.ClusterMountSet[i]);
             }
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.MountStorageNum != null) {
+            this.MountStorageNum = new Long(source.MountStorageNum);
+        }
+        if (source.StorageFileSystemId != null) {
+            this.StorageFileSystemId = new String(source.StorageFileSystemId);
+        }
     }
 
 
@@ -287,6 +365,9 @@ public class CustomerClusterAttr extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ManagerNodes.", this.ManagerNodes);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "ClusterMountSet.", this.ClusterMountSet);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "MountStorageNum", this.MountStorageNum);
+        this.setParamSimple(map, prefix + "StorageFileSystemId", this.StorageFileSystemId);
 
     }
 }

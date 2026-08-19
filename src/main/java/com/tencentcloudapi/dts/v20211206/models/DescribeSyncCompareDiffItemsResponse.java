@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSyncCompareDiffItemsResponse extends AbstractModel {
 
     /**
-    * 查询结果的数量
+    * <p>查询结果的数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 查询结果详情
+    * <p>查询结果详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -46,25 +46,25 @@ public class DescribeSyncCompareDiffItemsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询结果的数量 
-     * @return TotalCount 查询结果的数量
+     * Get <p>查询结果的数量</p> 
+     * @return TotalCount <p>查询结果的数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询结果的数量
-     * @param TotalCount 查询结果的数量
+     * Set <p>查询结果的数量</p>
+     * @param TotalCount <p>查询结果的数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 查询结果详情
+     * Get <p>查询结果详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 查询结果详情
+     * @return Items <p>查询结果详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiffChunkItem [] getItems() {
@@ -72,9 +72,9 @@ public class DescribeSyncCompareDiffItemsResponse extends AbstractModel {
     }
 
     /**
-     * Set 查询结果详情
+     * Set <p>查询结果详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 查询结果详情
+     * @param Items <p>查询结果详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DiffChunkItem [] Items) {

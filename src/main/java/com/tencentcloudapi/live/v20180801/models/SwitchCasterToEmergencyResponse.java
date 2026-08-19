@@ -24,10 +24,7 @@ import java.util.HashMap;
 public class SwitchCasterToEmergencyResponse extends AbstractModel {
 
     /**
-    * 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
+    * <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
     */
     @SerializedName("EmergencyStatus")
     @Expose
@@ -41,28 +38,16 @@ public class SwitchCasterToEmergencyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现 
-     * @return EmergencyStatus 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
+     * Get <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol> 
+     * @return EmergencyStatus <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
      */
     public Long getEmergencyStatus() {
         return this.EmergencyStatus;
     }
 
     /**
-     * Set 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
-     * @param EmergencyStatus 备播状态，范围[0,1,2]
-0. 正常直播状态
-1. 备播状态
-2. 备播切换正常直播中，在配置了延播时长时出现
+     * Set <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
+     * @param EmergencyStatus <p>备播状态，范围[0,1,2]</p><ol start="0"><li>正常直播状态</li><li>备播状态</li><li>备播切换正常直播中，在配置了延播时长时出现</li></ol>
      */
     public void setEmergencyStatus(Long EmergencyStatus) {
         this.EmergencyStatus = EmergencyStatus;

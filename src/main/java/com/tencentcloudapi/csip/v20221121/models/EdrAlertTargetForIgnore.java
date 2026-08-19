@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class EdrAlertTargetForIgnore extends AbstractModel {
 
     /**
-    * <p>告警主键ID</p>
+    * 告警主键ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * <p>告警所属账号ID（跨账号，前端必传）</p>
+    * 告警所属账号ID（跨账号，前端必传）
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * <p>告警唯一标识</p>
+    * 告警唯一标识
     */
     @SerializedName("AlertId")
     @Expose
     private String AlertId;
 
     /**
-    * <p>主机UUID（可选）</p>
+    * 主机UUID（可选）
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * <p>实例ID（可选，用于白名单写入）</p>
+    * 实例ID（可选，用于白名单删除）
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get <p>告警主键ID</p> 
-     * @return Id <p>告警主键ID</p>
+     * Get 告警主键ID 
+     * @return Id 告警主键ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>告警主键ID</p>
-     * @param Id <p>告警主键ID</p>
+     * Set 告警主键ID
+     * @param Id 告警主键ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get <p>告警所属账号ID（跨账号，前端必传）</p> 
-     * @return AppId <p>告警所属账号ID（跨账号，前端必传）</p>
+     * Get 告警所属账号ID（跨账号，前端必传） 
+     * @return AppId 告警所属账号ID（跨账号，前端必传）
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>告警所属账号ID（跨账号，前端必传）</p>
-     * @param AppId <p>告警所属账号ID（跨账号，前端必传）</p>
+     * Set 告警所属账号ID（跨账号，前端必传）
+     * @param AppId 告警所属账号ID（跨账号，前端必传）
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>告警唯一标识</p> 
-     * @return AlertId <p>告警唯一标识</p>
+     * Get 告警唯一标识 
+     * @return AlertId 告警唯一标识
      */
     public String getAlertId() {
         return this.AlertId;
     }
 
     /**
-     * Set <p>告警唯一标识</p>
-     * @param AlertId <p>告警唯一标识</p>
+     * Set 告警唯一标识
+     * @param AlertId 告警唯一标识
      */
     public void setAlertId(String AlertId) {
         this.AlertId = AlertId;
     }
 
     /**
-     * Get <p>主机UUID（可选）</p> 
-     * @return Quuid <p>主机UUID（可选）</p>
+     * Get 主机UUID（可选） 
+     * @return Quuid 主机UUID（可选）
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set <p>主机UUID（可选）</p>
-     * @param Quuid <p>主机UUID（可选）</p>
+     * Set 主机UUID（可选）
+     * @param Quuid 主机UUID（可选）
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get <p>实例ID（可选，用于白名单写入）</p> 
-     * @return InstanceId <p>实例ID（可选，用于白名单写入）</p>
+     * Get 实例ID（可选，用于白名单删除） 
+     * @return InstanceId 实例ID（可选，用于白名单删除）
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set <p>实例ID（可选，用于白名单写入）</p>
-     * @param InstanceId <p>实例ID（可选，用于白名单写入）</p>
+     * Set 实例ID（可选，用于白名单删除）
+     * @param InstanceId 实例ID（可选，用于白名单删除）
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

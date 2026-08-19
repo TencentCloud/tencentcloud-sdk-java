@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateReportPdfRequest extends AbstractModel {
 
     /**
-    * 报表 Id
+    * <p>报表 Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 报表 Id 
-     * @return Id 报表 Id
+     * Get <p>报表 Id</p> 
+     * @return Id <p>报表 Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 报表 Id
-     * @param Id 报表 Id
+     * Set <p>报表 Id</p>
+     * @param Id <p>报表 Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

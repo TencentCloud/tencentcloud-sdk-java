@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class CompareTableResult extends AbstractModel {
 
     /**
-    * 库名
+    * <p>库名</p>
     */
     @SerializedName("Db")
     @Expose
     private String Db;
 
     /**
-    * schema名
+    * <p>schema名</p>
     */
     @SerializedName("Schema")
     @Expose
     private String Schema;
 
     /**
-    * 表名
+    * <p>表名</p>
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-    * 校验结果
+    * <p>校验结果</p>
     */
     @SerializedName("Conclusion")
     @Expose
     private String Conclusion;
 
     /**
-    * 校验状态。仅全量阶段有意义
+    * <p>校验状态。仅全量阶段有意义</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 校验进度。仅全量阶段有意义
+    * <p>校验进度。仅全量阶段有意义</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * 不一致行数
+    * <p>不一致行数</p>
     */
     @SerializedName("RowCount")
     @Expose
     private Long RowCount;
 
     /**
-    * 该表开始校验的时间
+    * <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("StartedAt")
     @Expose
     private String StartedAt;
 
     /**
-    * 该表校验结束的时间
+    * <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("FinishedAt")
     @Expose
     private String FinishedAt;
 
     /**
-    * 预计该表校验结束的时间
+    * <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("ExpectedAt")
     @Expose
     private String ExpectedAt;
 
     /**
-    * 源端行数，如果是行数校验此值有意义
+    * <p>源端行数，如果是行数校验此值有意义</p>
     */
     @SerializedName("SrcItem")
     @Expose
     private String SrcItem;
 
     /**
-    * 目标端行数，如果是行数校验此值有意义
+    * <p>目标端行数，如果是行数校验此值有意义</p>
     */
     @SerializedName("DstItem")
     @Expose
     private String DstItem;
 
     /**
-     * Get 库名 
-     * @return Db 库名
+     * Get <p>库名</p> 
+     * @return Db <p>库名</p>
      */
     public String getDb() {
         return this.Db;
     }
 
     /**
-     * Set 库名
-     * @param Db 库名
+     * Set <p>库名</p>
+     * @param Db <p>库名</p>
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get schema名 
-     * @return Schema schema名
+     * Get <p>schema名</p> 
+     * @return Schema <p>schema名</p>
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set schema名
-     * @param Schema schema名
+     * Set <p>schema名</p>
+     * @param Schema <p>schema名</p>
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get 表名 
-     * @return Table 表名
+     * Get <p>表名</p> 
+     * @return Table <p>表名</p>
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set 表名
-     * @param Table 表名
+     * Set <p>表名</p>
+     * @param Table <p>表名</p>
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 校验结果 
-     * @return Conclusion 校验结果
+     * Get <p>校验结果</p> 
+     * @return Conclusion <p>校验结果</p>
      */
     public String getConclusion() {
         return this.Conclusion;
     }
 
     /**
-     * Set 校验结果
-     * @param Conclusion 校验结果
+     * Set <p>校验结果</p>
+     * @param Conclusion <p>校验结果</p>
      */
     public void setConclusion(String Conclusion) {
         this.Conclusion = Conclusion;
     }
 
     /**
-     * Get 校验状态。仅全量阶段有意义 
-     * @return Status 校验状态。仅全量阶段有意义
+     * Get <p>校验状态。仅全量阶段有意义</p> 
+     * @return Status <p>校验状态。仅全量阶段有意义</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 校验状态。仅全量阶段有意义
-     * @param Status 校验状态。仅全量阶段有意义
+     * Set <p>校验状态。仅全量阶段有意义</p>
+     * @param Status <p>校验状态。仅全量阶段有意义</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 校验进度。仅全量阶段有意义 
-     * @return Progress 校验进度。仅全量阶段有意义
+     * Get <p>校验进度。仅全量阶段有意义</p> 
+     * @return Progress <p>校验进度。仅全量阶段有意义</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 校验进度。仅全量阶段有意义
-     * @param Progress 校验进度。仅全量阶段有意义
+     * Set <p>校验进度。仅全量阶段有意义</p>
+     * @param Progress <p>校验进度。仅全量阶段有意义</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 不一致行数 
-     * @return RowCount 不一致行数
+     * Get <p>不一致行数</p> 
+     * @return RowCount <p>不一致行数</p>
      */
     public Long getRowCount() {
         return this.RowCount;
     }
 
     /**
-     * Set 不一致行数
-     * @param RowCount 不一致行数
+     * Set <p>不一致行数</p>
+     * @param RowCount <p>不一致行数</p>
      */
     public void setRowCount(Long RowCount) {
         this.RowCount = RowCount;
     }
 
     /**
-     * Get 该表开始校验的时间 
-     * @return StartedAt 该表开始校验的时间
+     * Get <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return StartedAt <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getStartedAt() {
         return this.StartedAt;
     }
 
     /**
-     * Set 该表开始校验的时间
-     * @param StartedAt 该表开始校验的时间
+     * Set <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param StartedAt <p>该表开始校验的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setStartedAt(String StartedAt) {
         this.StartedAt = StartedAt;
     }
 
     /**
-     * Get 该表校验结束的时间 
-     * @return FinishedAt 该表校验结束的时间
+     * Get <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return FinishedAt <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getFinishedAt() {
         return this.FinishedAt;
     }
 
     /**
-     * Set 该表校验结束的时间
-     * @param FinishedAt 该表校验结束的时间
+     * Set <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param FinishedAt <p>该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;
     }
 
     /**
-     * Get 预计该表校验结束的时间 
-     * @return ExpectedAt 预计该表校验结束的时间
+     * Get <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return ExpectedAt <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getExpectedAt() {
         return this.ExpectedAt;
     }
 
     /**
-     * Set 预计该表校验结束的时间
-     * @param ExpectedAt 预计该表校验结束的时间
+     * Set <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param ExpectedAt <p>预计该表校验结束的时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setExpectedAt(String ExpectedAt) {
         this.ExpectedAt = ExpectedAt;
     }
 
     /**
-     * Get 源端行数，如果是行数校验此值有意义 
-     * @return SrcItem 源端行数，如果是行数校验此值有意义
+     * Get <p>源端行数，如果是行数校验此值有意义</p> 
+     * @return SrcItem <p>源端行数，如果是行数校验此值有意义</p>
      */
     public String getSrcItem() {
         return this.SrcItem;
     }
 
     /**
-     * Set 源端行数，如果是行数校验此值有意义
-     * @param SrcItem 源端行数，如果是行数校验此值有意义
+     * Set <p>源端行数，如果是行数校验此值有意义</p>
+     * @param SrcItem <p>源端行数，如果是行数校验此值有意义</p>
      */
     public void setSrcItem(String SrcItem) {
         this.SrcItem = SrcItem;
     }
 
     /**
-     * Get 目标端行数，如果是行数校验此值有意义 
-     * @return DstItem 目标端行数，如果是行数校验此值有意义
+     * Get <p>目标端行数，如果是行数校验此值有意义</p> 
+     * @return DstItem <p>目标端行数，如果是行数校验此值有意义</p>
      */
     public String getDstItem() {
         return this.DstItem;
     }
 
     /**
-     * Set 目标端行数，如果是行数校验此值有意义
-     * @param DstItem 目标端行数，如果是行数校验此值有意义
+     * Set <p>目标端行数，如果是行数校验此值有意义</p>
+     * @param DstItem <p>目标端行数，如果是行数校验此值有意义</p>
      */
     public void setDstItem(String DstItem) {
         this.DstItem = DstItem;

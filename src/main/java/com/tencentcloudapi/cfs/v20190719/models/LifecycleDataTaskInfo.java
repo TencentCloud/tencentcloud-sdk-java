@@ -157,7 +157,7 @@ public class LifecycleDataTaskInfo extends AbstractModel {
     private Boolean IsOverwrite;
 
     /**
-    * <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+    * <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
     */
     @SerializedName("ListPath")
     @Expose
@@ -468,16 +468,16 @@ public class LifecycleDataTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p> 
-     * @return ListPath <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     * Get <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul> 
+     * @return ListPath <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
      */
     public String getListPath() {
         return this.ListPath;
     }
 
     /**
-     * Set <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
-     * @param ListPath <p>【新增】数据清单文件路径，清单文件内每行一条待处理文件的完整路径。与 TaskPath 二选一。路径必须以 /cfs 开头，且必须为 CFS 文件系统内已存在的文件。示例值：/cfs/lists/archive_list.txt</p>
+     * Set <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
+     * @param ListPath <p>数据清单文件路径，清单文件内每行为待处理文件的完整路径。所有路径（包括清单文件路径、清单文件内每行表示的待处理文件的路径）必须以 /cfs 开头，指向CFS文件系统内已存在的文件，与 TaskPath 参数二选一填写。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/lists/archive_list.txt</li><li>若挂载的是CFS子目录 /subdir，清单文件位于挂载路径下的 lists/archive_list.txt，则入参值为 /cfs/subdir/lists/archive_list.txt</li></ul>
      */
     public void setListPath(String ListPath) {
         this.ListPath = ListPath;

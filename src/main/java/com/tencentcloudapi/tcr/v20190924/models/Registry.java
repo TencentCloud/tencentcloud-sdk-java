@@ -87,7 +87,7 @@ public class Registry extends AbstractModel {
     private Boolean EnableAnonymous;
 
     /**
-    * <p>Token有效时间</p>
+    * <p>Token有效时间，单位：小时</p>
     */
     @SerializedName("TokenValidTime")
     @Expose
@@ -302,16 +302,16 @@ public class Registry extends AbstractModel {
     }
 
     /**
-     * Get <p>Token有效时间</p> 
-     * @return TokenValidTime <p>Token有效时间</p>
+     * Get <p>Token有效时间，单位：小时</p> 
+     * @return TokenValidTime <p>Token有效时间，单位：小时</p>
      */
     public Long getTokenValidTime() {
         return this.TokenValidTime;
     }
 
     /**
-     * Set <p>Token有效时间</p>
-     * @param TokenValidTime <p>Token有效时间</p>
+     * Set <p>Token有效时间，单位：小时</p>
+     * @param TokenValidTime <p>Token有效时间，单位：小时</p>
      */
     public void setTokenValidTime(Long TokenValidTime) {
         this.TokenValidTime = TokenValidTime;

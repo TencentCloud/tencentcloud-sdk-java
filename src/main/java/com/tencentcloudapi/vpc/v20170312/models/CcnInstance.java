@@ -24,158 +24,138 @@ import java.util.HashMap;
 public class CcnInstance extends AbstractModel {
 
     /**
-    * 关联实例ID。
+    * <p>关联实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联实例ID所属大区，例如：ap-guangzhou。
+    * <p>关联实例ID所属大区，例如：ap-guangzhou。</p>
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
+    * <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 实例关联的路由表ID。
+    * <p>实例关联的路由表ID。</p>
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 实例付费方式
+    * <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get 关联实例ID。 
-     * @return InstanceId 关联实例ID。
+     * Get <p>关联实例ID。</p> 
+     * @return InstanceId <p>关联实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 关联实例ID。
-     * @param InstanceId 关联实例ID。
+     * Set <p>关联实例ID。</p>
+     * @param InstanceId <p>关联实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 关联实例ID所属大区，例如：ap-guangzhou。 
-     * @return InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
+     * Get <p>关联实例ID所属大区，例如：ap-guangzhou。</p> 
+     * @return InstanceRegion <p>关联实例ID所属大区，例如：ap-guangzhou。</p>
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 关联实例ID所属大区，例如：ap-guangzhou。
-     * @param InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
+     * Set <p>关联实例ID所属大区，例如：ap-guangzhou。</p>
+     * @param InstanceRegion <p>关联实例ID所属大区，例如：ap-guangzhou。</p>
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li> 
-     * @return InstanceType 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
+     * Get <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li> 
+     * @return InstanceType <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
-     * @param InstanceType 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-<li>`VPNGW`：VPNGW类型</li>
+     * Set <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
+     * @param InstanceType <p>关联实例类型，可选值：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li><li><code>VPNGW</code>：VPNGW类型</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 备注 
-     * @return Description 备注
+     * Get <p>备注</p> 
+     * @return Description <p>备注</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 备注
-     * @param Description 备注
+     * Set <p>备注</p>
+     * @param Description <p>备注</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 实例关联的路由表ID。 
-     * @return RouteTableId 实例关联的路由表ID。
+     * Get <p>实例关联的路由表ID。</p> 
+     * @return RouteTableId <p>实例关联的路由表ID。</p>
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 实例关联的路由表ID。
-     * @param RouteTableId 实例关联的路由表ID。
+     * Set <p>实例关联的路由表ID。</p>
+     * @param RouteTableId <p>实例关联的路由表ID。</p>
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 实例付费方式 
-     * @return OrderType 实例付费方式
+     * Get <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul> 
+     * @return OrderType <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 实例付费方式
-     * @param OrderType 实例付费方式
+     * Set <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
+     * @param OrderType <p>实例付费方式</p><p>枚举值：</p><ul><li>PayByCcnOwner： CCN所在账号付费</li><li>PayByInstanceOwner： 关联实例所在账号付费</li></ul>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

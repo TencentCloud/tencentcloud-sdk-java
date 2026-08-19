@@ -509,6 +509,20 @@ public class ApmAppConfig extends AbstractModel {
     private Long HeadSamplerArg;
 
     /**
+    * <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+    */
+    @SerializedName("CrossAccountStatus")
+    @Expose
+    private Long CrossAccountStatus;
+
+    /**
+    * <p>跨账号关联ID</p>
+    */
+    @SerializedName("CrossAccountPeerId")
+    @Expose
+    private String CrossAccountPeerId;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceKey <p>实例ID</p>
      */
@@ -1656,6 +1670,38 @@ public class ApmAppConfig extends AbstractModel {
         this.HeadSamplerArg = HeadSamplerArg;
     }
 
+    /**
+     * Get <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul> 
+     * @return CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public Long getCrossAccountStatus() {
+        return this.CrossAccountStatus;
+    }
+
+    /**
+     * Set <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     * @param CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public void setCrossAccountStatus(Long CrossAccountStatus) {
+        this.CrossAccountStatus = CrossAccountStatus;
+    }
+
+    /**
+     * Get <p>跨账号关联ID</p> 
+     * @return CrossAccountPeerId <p>跨账号关联ID</p>
+     */
+    public String getCrossAccountPeerId() {
+        return this.CrossAccountPeerId;
+    }
+
+    /**
+     * Set <p>跨账号关联ID</p>
+     * @param CrossAccountPeerId <p>跨账号关联ID</p>
+     */
+    public void setCrossAccountPeerId(String CrossAccountPeerId) {
+        this.CrossAccountPeerId = CrossAccountPeerId;
+    }
+
     public ApmAppConfig() {
     }
 
@@ -1868,6 +1914,12 @@ public class ApmAppConfig extends AbstractModel {
         if (source.HeadSamplerArg != null) {
             this.HeadSamplerArg = new Long(source.HeadSamplerArg);
         }
+        if (source.CrossAccountStatus != null) {
+            this.CrossAccountStatus = new Long(source.CrossAccountStatus);
+        }
+        if (source.CrossAccountPeerId != null) {
+            this.CrossAccountPeerId = new String(source.CrossAccountPeerId);
+        }
     }
 
 
@@ -1941,6 +1993,8 @@ public class ApmAppConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
         this.setParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
         this.setParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
+        this.setParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
+        this.setParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
 
     }
 }

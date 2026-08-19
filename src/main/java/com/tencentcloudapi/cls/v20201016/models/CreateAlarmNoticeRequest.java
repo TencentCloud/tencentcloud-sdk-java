@@ -24,323 +24,276 @@ import java.util.HashMap;
 public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 通知渠道组名称。最大支持255个字节。 不支持 '|'。
+    * <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+    * <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
+    * <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
+    * <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
+    * <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-    * 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
+    * <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
     */
     @SerializedName("NoticeRules")
     @Expose
     private NoticeRule [] NoticeRules;
 
     /**
-    * 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+    * <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
     */
     @SerializedName("JumpDomain")
     @Expose
     private String JumpDomain;
 
     /**
-    * 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
+    * <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
     */
     @SerializedName("DeliverStatus")
     @Expose
     private Long DeliverStatus;
 
     /**
-    * 投递日志配置参数。当DeliverStatus开启时，必填。
+    * <p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
     */
     @SerializedName("DeliverConfig")
     @Expose
     private DeliverConfig DeliverConfig;
 
     /**
-    * 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
+    * <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
     */
     @SerializedName("AlarmShieldStatus")
     @Expose
     private Long AlarmShieldStatus;
 
     /**
-    * 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+    * <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+    */
+    @SerializedName("SecureDetailStatus")
+    @Expose
+    private Long SecureDetailStatus;
+
+    /**
+    * <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
     */
     @SerializedName("CallbackPrioritize")
     @Expose
     private Boolean CallbackPrioritize;
 
     /**
-     * Get 通知渠道组名称。最大支持255个字节。 不支持 '|'。 
-     * @return Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
+     * Get <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p> 
+     * @return Name <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 通知渠道组名称。最大支持255个字节。 不支持 '|'。
-     * @param Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
+     * Set <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
+     * @param Name <p>通知渠道组名称。最大支持255个字节。 不支持 &#39;|&#39;。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。 
-     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+     * Get <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p> 
+     * @return Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
-     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+     * Set <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
+     * @param Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复 
-     * @return Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
+     * Get <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul> 
+     * @return Type <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
-     * @param Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-需要发送通知的告警类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
+     * Set <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
+     * @param Type <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>需要发送通知的告警类型。可选值：</p><ul><li>Trigger - 告警触发</li><li>Recovery - 告警恢复</li><li>All - 告警触发和告警恢复</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。 
-     * @return NoticeReceivers 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
+     * Get <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p> 
+     * @return NoticeReceivers <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
-     * @param NoticeReceivers 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知接收对象。
+     * Set <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
+     * @param NoticeReceivers <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知接收对象。</p>
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。 
-     * @return WebCallbacks 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
+     * Get <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p> 
+     * @return WebCallbacks <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
-     * @param WebCallbacks 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
-接口回调信息（包括企业微信、钉钉、飞书）。
+     * Set <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
+     * @param WebCallbacks <p>【简易模式】（简易模式/告警模式二选一，分别配置相应参数）<br>接口回调信息（包括企业微信、钉钉、飞书）。</p>
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。 
-     * @return NoticeRules 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
+     * Get <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p> 
+     * @return NoticeRules <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
      */
     public NoticeRule [] getNoticeRules() {
         return this.NoticeRules;
     }
 
     /**
-     * Set 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
-     * @param NoticeRules 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
-通知规则。
+     * Set <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
+     * @param NoticeRules <p>【高级模式】（简易模式/告警模式二选一，分别配置相应参数）<br>通知规则。</p>
      */
     public void setNoticeRules(NoticeRule [] NoticeRules) {
         this.NoticeRules = NoticeRules;
     }
 
     /**
-     * Get 查询数据链接。http:// 或者 https:// 开头，不能/结尾 
-     * @return JumpDomain 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+     * Get <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p> 
+     * @return JumpDomain <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public String getJumpDomain() {
         return this.JumpDomain;
     }
 
     /**
-     * Set 查询数据链接。http:// 或者 https:// 开头，不能/结尾
-     * @param JumpDomain 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+     * Set <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
+     * @param JumpDomain <p>查询数据链接。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public void setJumpDomain(String JumpDomain) {
         this.JumpDomain = JumpDomain;
     }
 
     /**
-     * Get 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。 
-     * @return DeliverStatus 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
+     * Get <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p> 
+     * @return DeliverStatus <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
      */
     public Long getDeliverStatus() {
         return this.DeliverStatus;
     }
 
     /**
-     * Set 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
-     * @param DeliverStatus 投递日志开关。可取值如下：
-1：关闭（默认值）；
-2：开启 
-投递日志开关开启时， DeliverConfig参数必填。
+     * Set <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
+     * @param DeliverStatus <p>投递日志开关。可取值如下：<br>1：关闭（默认值）；<br>2：开启<br>投递日志开关开启时， DeliverConfig参数必填。</p>
      */
     public void setDeliverStatus(Long DeliverStatus) {
         this.DeliverStatus = DeliverStatus;
     }
 
     /**
-     * Get 投递日志配置参数。当DeliverStatus开启时，必填。 
-     * @return DeliverConfig 投递日志配置参数。当DeliverStatus开启时，必填。
+     * Get <p>投递日志配置参数。当DeliverStatus开启时，必填。</p> 
+     * @return DeliverConfig <p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
      */
     public DeliverConfig getDeliverConfig() {
         return this.DeliverConfig;
     }
 
     /**
-     * Set 投递日志配置参数。当DeliverStatus开启时，必填。
-     * @param DeliverConfig 投递日志配置参数。当DeliverStatus开启时，必填。
+     * Set <p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
+     * @param DeliverConfig <p>投递日志配置参数。当DeliverStatus开启时，必填。</p>
      */
     public void setDeliverConfig(DeliverConfig DeliverConfig) {
         this.DeliverConfig = DeliverConfig;
     }
 
     /**
-     * Get 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值） 
-     * @return AlarmShieldStatus 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
+     * Get <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul> 
+     * @return AlarmShieldStatus <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
      */
     public Long getAlarmShieldStatus() {
         return this.AlarmShieldStatus;
     }
 
     /**
-     * Set 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
-     * @param AlarmShieldStatus 免登录操作告警开关。可取值如下：
--      1：关闭
--      2：开启（默认值）
+     * Set <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
+     * @param AlarmShieldStatus <p>免登录操作告警开关。可取值如下：</p><ul><li>1：关闭</li><li>2：开启（默认值）</li></ul>
      */
     public void setAlarmShieldStatus(Long AlarmShieldStatus) {
         this.AlarmShieldStatus = AlarmShieldStatus;
     }
 
     /**
-     * Get 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。 
-     * @return CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * Get <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul> 
+     * @return SecureDetailStatus <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public Long getSecureDetailStatus() {
+        return this.SecureDetailStatus;
+    }
+
+    /**
+     * Set <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     * @param SecureDetailStatus <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public void setSecureDetailStatus(Long SecureDetailStatus) {
+        this.SecureDetailStatus = SecureDetailStatus;
+    }
+
+    /**
+     * Get <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul> 
+     * @return CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public Boolean getCallbackPrioritize() {
         return this.CallbackPrioritize;
     }
 
     /**
-     * Set 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
-     * @param CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * Set <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
+     * @param CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public void setCallbackPrioritize(Boolean CallbackPrioritize) {
         this.CallbackPrioritize = CallbackPrioritize;
@@ -396,6 +349,9 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         if (source.AlarmShieldStatus != null) {
             this.AlarmShieldStatus = new Long(source.AlarmShieldStatus);
         }
+        if (source.SecureDetailStatus != null) {
+            this.SecureDetailStatus = new Long(source.SecureDetailStatus);
+        }
         if (source.CallbackPrioritize != null) {
             this.CallbackPrioritize = new Boolean(source.CallbackPrioritize);
         }
@@ -416,6 +372,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
         this.setParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
         this.setParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+        this.setParamSimple(map, prefix + "SecureDetailStatus", this.SecureDetailStatus);
         this.setParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
 
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCompareTasksResponse extends AbstractModel {
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 一致性校验列表
+    * <p>一致性校验列表</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCompareTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数量 
-     * @return TotalCount 数量
+     * Get <p>数量</p> 
+     * @return TotalCount <p>数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数量
-     * @param TotalCount 数量
+     * Set <p>数量</p>
+     * @param TotalCount <p>数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 一致性校验列表 
-     * @return Items 一致性校验列表
+     * Get <p>一致性校验列表</p> 
+     * @return Items <p>一致性校验列表</p>
      */
     public CompareTaskItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 一致性校验列表
-     * @param Items 一致性校验列表
+     * Set <p>一致性校验列表</p>
+     * @param Items <p>一致性校验列表</p>
      */
     public void setItems(CompareTaskItem [] Items) {
         this.Items = Items;

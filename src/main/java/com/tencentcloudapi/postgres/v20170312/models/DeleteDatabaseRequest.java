@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DeleteDatabaseRequest extends AbstractModel {
 
+    /**
+    * <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+    */
+    @SerializedName("DBInstanceId")
+    @Expose
+    private String DBInstanceId;
+
+    /**
+    * <p>数据库名称</p>
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+     * Get <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
+     * Set <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     */
+    public void setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+    }
+
+    /**
+     * Get <p>数据库名称</p> 
+     * @return DatabaseName <p>数据库名称</p>
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set <p>数据库名称</p>
+     * @param DatabaseName <p>数据库名称</p>
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
     public DeleteDatabaseRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DeleteDatabaseRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteDatabaseRequest(DeleteDatabaseRequest source) {
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DeleteDatabaseRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
 
     }
 }

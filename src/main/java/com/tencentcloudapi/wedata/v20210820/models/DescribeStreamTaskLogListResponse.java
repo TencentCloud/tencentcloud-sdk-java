@@ -40,6 +40,13 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     private LogContentInfo [] LogContentList;
 
     /**
+    * <p>滚动查询游标</p>
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -87,6 +94,22 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>滚动查询游标</p> 
+     * @return Context <p>滚动查询游标</p>
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set <p>滚动查询游标</p>
+     * @param Context <p>滚动查询游标</p>
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -119,6 +142,9 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
                 this.LogContentList[i] = new LogContentInfo(source.LogContentList[i]);
             }
         }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -131,6 +157,7 @@ public class DescribeStreamTaskLogListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamArrayObj(map, prefix + "LogContentList.", this.LogContentList);
+        this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

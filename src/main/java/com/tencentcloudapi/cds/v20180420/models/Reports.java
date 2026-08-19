@@ -130,7 +130,6 @@ public class Reports extends AbstractModel {
 
     /**
     * 报表模板
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -138,7 +137,6 @@ public class Reports extends AbstractModel {
 
     /**
     * 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetsList")
     @Expose
@@ -146,7 +144,6 @@ public class Reports extends AbstractModel {
 
     /**
     * 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CntDay")
     @Expose
@@ -393,10 +390,8 @@ public class Reports extends AbstractModel {
     }
 
     /**
-     * Get 报表模板
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报表模板 
      * @return TemplateId 报表模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -404,19 +399,15 @@ public class Reports extends AbstractModel {
 
     /**
      * Set 报表模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 报表模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 包含资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含资产 
      * @return AssetsList 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetsInfo [] getAssetsList() {
         return this.AssetsList;
@@ -424,19 +415,15 @@ public class Reports extends AbstractModel {
 
     /**
      * Set 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetsList 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetsList(AssetsInfo [] AssetsList) {
         this.AssetsList = AssetsList;
     }
 
     /**
-     * Get 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0 
      * @return CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCntDay() {
         return this.CntDay;
@@ -444,9 +431,7 @@ public class Reports extends AbstractModel {
 
     /**
      * Set 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCntDay(Long CntDay) {
         this.CntDay = CntDay;

@@ -24,230 +24,253 @@ import java.util.HashMap;
 public class ListTriggerWorkflowsRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 请求的数据页数。默认值为1，取值大于等于1
+    * <p>请求的数据页数。默认值为1，取值大于等于1</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
+    * <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 搜索关键词
+    * <p>搜索关键词</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 工作流所属文件夹
+    * <p>工作流所属文件夹</p>
     */
     @SerializedName("ParentFolderPath")
     @Expose
     private String ParentFolderPath;
 
     /**
-    * bundleId项
+    * <p>bundleId项</p>
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * 负责人ID
+    * <p>负责人ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 创建人ID
+    * <p>创建人ID</p>
     */
     @SerializedName("CreateUserUin")
     @Expose
     private String CreateUserUin;
 
     /**
-    * 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+    * <p>运行账号ID</p>
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
+    * <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String [] ModifyTime;
 
     /**
-    * 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+    * <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String [] CreateTime;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 请求的数据页数。默认值为1，取值大于等于1 
-     * @return PageNumber 请求的数据页数。默认值为1，取值大于等于1
+     * Get <p>请求的数据页数。默认值为1，取值大于等于1</p> 
+     * @return PageNumber <p>请求的数据页数。默认值为1，取值大于等于1</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 请求的数据页数。默认值为1，取值大于等于1
-     * @param PageNumber 请求的数据页数。默认值为1，取值大于等于1
+     * Set <p>请求的数据页数。默认值为1，取值大于等于1</p>
+     * @param PageNumber <p>请求的数据页数。默认值为1，取值大于等于1</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200 
-     * @return PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
+     * Get <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p> 
+     * @return PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
-     * @param PageSize 每页显示的数据条数。默认值为10 ，最小值为10，最大值为200
+     * Set <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
+     * @param PageSize <p>每页显示的数据条数。默认值为10 ，最小值为10，最大值为200</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 搜索关键词 
-     * @return Keyword 搜索关键词
+     * Get <p>搜索关键词</p> 
+     * @return Keyword <p>搜索关键词</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 搜索关键词
-     * @param Keyword 搜索关键词
+     * Set <p>搜索关键词</p>
+     * @param Keyword <p>搜索关键词</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 工作流所属文件夹 
-     * @return ParentFolderPath 工作流所属文件夹
+     * Get <p>工作流所属文件夹</p> 
+     * @return ParentFolderPath <p>工作流所属文件夹</p>
      */
     public String getParentFolderPath() {
         return this.ParentFolderPath;
     }
 
     /**
-     * Set 工作流所属文件夹
-     * @param ParentFolderPath 工作流所属文件夹
+     * Set <p>工作流所属文件夹</p>
+     * @param ParentFolderPath <p>工作流所属文件夹</p>
      */
     public void setParentFolderPath(String ParentFolderPath) {
         this.ParentFolderPath = ParentFolderPath;
     }
 
     /**
-     * Get bundleId项 
-     * @return BundleId bundleId项
+     * Get <p>bundleId项</p> 
+     * @return BundleId <p>bundleId项</p>
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set bundleId项
-     * @param BundleId bundleId项
+     * Set <p>bundleId项</p>
+     * @param BundleId <p>bundleId项</p>
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get 负责人ID 
-     * @return OwnerUin 负责人ID
+     * Get <p>负责人ID</p> 
+     * @return OwnerUin <p>负责人ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 负责人ID
-     * @param OwnerUin 负责人ID
+     * Set <p>负责人ID</p>
+     * @param OwnerUin <p>负责人ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 创建人ID 
-     * @return CreateUserUin 创建人ID
+     * Get <p>创建人ID</p> 
+     * @return CreateUserUin <p>创建人ID</p>
      */
     public String getCreateUserUin() {
         return this.CreateUserUin;
     }
 
     /**
-     * Set 创建人ID
-     * @param CreateUserUin 创建人ID
+     * Set <p>创建人ID</p>
+     * @param CreateUserUin <p>创建人ID</p>
      */
     public void setCreateUserUin(String CreateUserUin) {
         this.CreateUserUin = CreateUserUin;
     }
 
     /**
-     * Get 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间 
-     * @return ModifyTime 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * Get <p>运行账号ID</p> 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+     * @param ExecuteUserUin <p>运行账号ID</p>
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
+    }
+
+    /**
+     * Get <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p> 
+     * @return ModifyTime <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public String [] getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
-     * @param ModifyTime 修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * Set <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+     * @param ModifyTime <p>修改时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public void setModifyTime(String [] ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间 
-     * @return CreateTime 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * Get <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p> 
+     * @return CreateTime <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public String [] getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
-     * @param CreateTime 创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间
+     * Set <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
+     * @param CreateTime <p>创建时间区间 yyyy-MM-dd HH:mm:ss，需要在数组填入两个时间</p>
      */
     public void setCreateTime(String [] CreateTime) {
         this.CreateTime = CreateTime;
@@ -285,6 +308,9 @@ public class ListTriggerWorkflowsRequest extends AbstractModel {
         if (source.CreateUserUin != null) {
             this.CreateUserUin = new String(source.CreateUserUin);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
         if (source.ModifyTime != null) {
             this.ModifyTime = new String[source.ModifyTime.length];
             for (int i = 0; i < source.ModifyTime.length; i++) {
@@ -312,6 +338,7 @@ public class ListTriggerWorkflowsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         this.setParamArraySimple(map, prefix + "ModifyTime.", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "CreateTime.", this.CreateTime);
 

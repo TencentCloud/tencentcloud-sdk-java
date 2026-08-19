@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteLogRequest extends AbstractModel {
 
     /**
-    * <p>日志主题id</p>
+    * <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
     */
     @SerializedName("TopicId")
     @Expose
@@ -52,16 +52,16 @@ public class DeleteLogRequest extends AbstractModel {
     private String QueryString;
 
     /**
-     * Get <p>日志主题id</p> 
-     * @return TopicId <p>日志主题id</p>
+     * Get <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p> 
+     * @return TopicId <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set <p>日志主题id</p>
-     * @param TopicId <p>日志主题id</p>
+     * Set <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
+     * @param TopicId <p>日志主题id</p><p>仅在创建日志主题时，开启了日志修改/删除开关的主题，支持日志修改/删除。该功能暂时仅面向白名单内客户使用。</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

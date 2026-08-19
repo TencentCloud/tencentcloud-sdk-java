@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DiffChunkItem extends AbstractModel {
 
     /**
-    * 数据库名
+    * <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBName")
@@ -32,14 +32,14 @@ public class DiffChunkItem extends AbstractModel {
     private String DBName;
 
     /**
-    * schema名
+    * <p>schema名</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 数据表名
+    * <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
@@ -47,7 +47,7 @@ public class DiffChunkItem extends AbstractModel {
     private String TableName;
 
     /**
-    * 分块号
+    * <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChunkId")
@@ -55,7 +55,7 @@ public class DiffChunkItem extends AbstractModel {
     private Long ChunkId;
 
     /**
-    * 数据标识符，比如主键信息等
+    * <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
@@ -63,7 +63,7 @@ public class DiffChunkItem extends AbstractModel {
     private String Identifier;
 
     /**
-    * 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+    * <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiffType")
@@ -71,7 +71,7 @@ public class DiffChunkItem extends AbstractModel {
     private String DiffType;
 
     /**
-    * 表结构信息
+    * <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaInfo")
@@ -79,7 +79,7 @@ public class DiffChunkItem extends AbstractModel {
     private String [] SchemaInfo;
 
     /**
-    * 源端数据
+    * <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcItem")
@@ -87,7 +87,7 @@ public class DiffChunkItem extends AbstractModel {
     private String [] SrcItem;
 
     /**
-    * 目标端数据
+    * <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstItem")
@@ -95,7 +95,7 @@ public class DiffChunkItem extends AbstractModel {
     private String [] DstItem;
 
     /**
-    * 完成时间
+    * <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedAt")
@@ -103,9 +103,9 @@ public class DiffChunkItem extends AbstractModel {
     private String FinishedAt;
 
     /**
-     * Get 数据库名
+     * Get <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DBName 数据库名
+     * @return DBName <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBName() {
@@ -113,9 +113,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 数据库名
+     * Set <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DBName 数据库名
+     * @param DBName <p>数据库名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBName(String DBName) {
@@ -123,25 +123,25 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get schema名 
-     * @return SchemaName schema名
+     * Get <p>schema名</p> 
+     * @return SchemaName <p>schema名</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set schema名
-     * @param SchemaName schema名
+     * Set <p>schema名</p>
+     * @param SchemaName <p>schema名</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 数据表名
+     * Get <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 数据表名
+     * @return TableName <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
@@ -149,9 +149,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 数据表名
+     * Set <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 数据表名
+     * @param TableName <p>数据表名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
@@ -159,9 +159,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 分块号
+     * Get <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChunkId 分块号
+     * @return ChunkId <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChunkId() {
@@ -169,9 +169,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 分块号
+     * Set <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChunkId 分块号
+     * @param ChunkId <p>分块号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChunkId(Long ChunkId) {
@@ -179,9 +179,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 数据标识符，比如主键信息等
+     * Get <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Identifier 数据标识符，比如主键信息等
+     * @return Identifier <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
@@ -189,9 +189,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 数据标识符，比如主键信息等
+     * Set <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Identifier 数据标识符，比如主键信息等
+     * @param Identifier <p>数据标识符，比如主键信息等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
@@ -199,9 +199,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+     * Get <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiffType 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+     * @return DiffType <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiffType() {
@@ -209,9 +209,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+     * Set <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiffType 不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失
+     * @param DiffType <p>不一致类型，可能的取值为：data - 两边数据不一致；srcLack - 源缺失；dstLack - 目标缺失</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiffType(String DiffType) {
@@ -219,9 +219,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 表结构信息
+     * Get <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaInfo 表结构信息
+     * @return SchemaInfo <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSchemaInfo() {
@@ -229,9 +229,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 表结构信息
+     * Set <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaInfo 表结构信息
+     * @param SchemaInfo <p>表结构信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaInfo(String [] SchemaInfo) {
@@ -239,9 +239,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 源端数据
+     * Get <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SrcItem 源端数据
+     * @return SrcItem <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSrcItem() {
@@ -249,9 +249,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 源端数据
+     * Set <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SrcItem 源端数据
+     * @param SrcItem <p>源端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcItem(String [] SrcItem) {
@@ -259,9 +259,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 目标端数据
+     * Get <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DstItem 目标端数据
+     * @return DstItem <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDstItem() {
@@ -269,9 +269,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 目标端数据
+     * Set <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DstItem 目标端数据
+     * @param DstItem <p>目标端数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstItem(String [] DstItem) {
@@ -279,9 +279,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Get 完成时间
+     * Get <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinishedAt 完成时间
+     * @return FinishedAt <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedAt() {
@@ -289,9 +289,9 @@ public class DiffChunkItem extends AbstractModel {
     }
 
     /**
-     * Set 完成时间
+     * Set <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinishedAt 完成时间
+     * @param FinishedAt <p>完成时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedAt(String FinishedAt) {

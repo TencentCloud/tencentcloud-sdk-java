@@ -299,6 +299,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *查询按量计费工作空间转换为包年包月的价格。不会创建订单或变更资源。
+     * @param req InquirePriceModifyWorkspacesChargeTypeRequest
+     * @return InquirePriceModifyWorkspacesChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyWorkspacesChargeTypeResponse InquirePriceModifyWorkspacesChargeType(InquirePriceModifyWorkspacesChargeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceModifyWorkspacesChargeType", InquirePriceModifyWorkspacesChargeTypeResponse.class);
+    }
+
+    /**
      *修改集群删除保护状态
      * @param req ModifyClusterDeletionProtectionRequest
      * @return ModifyClusterDeletionProtectionResponse
@@ -340,6 +351,17 @@ public class ThpcClient extends AbstractClient{
     public ModifyWorkspacesAttributeResponse ModifyWorkspacesAttribute(ModifyWorkspacesAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyWorkspacesAttribute", ModifyWorkspacesAttributeResponse.class);
+    }
+
+    /**
+     *正式提交按量计费工作空间转包年包月订单。仅支持 ONLINE 且计费模式为 POSTPAID_BY_HOUR 的工作空间。
+     * @param req ModifyWorkspacesChargeTypeRequest
+     * @return ModifyWorkspacesChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkspacesChargeTypeResponse ModifyWorkspacesChargeType(ModifyWorkspacesChargeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWorkspacesChargeType", ModifyWorkspacesChargeTypeResponse.class);
     }
 
     /**

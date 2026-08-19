@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class DescribeCostSummaryByResourceRequest extends AbstractModel {
 
     /**
-    * 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+    * <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+    * <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 每次获取数据量，最大值为100
+    * <p>每次获取数据量，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量,默认从0开始
+    * <p>偏移量,默认从0开始</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询账单数据的用户UIN
+    * <p>查询账单数据的用户UIN</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 是否需要返回记录数量，0不需要，1需要，默认不需要
+    * <p>是否需要返回记录数量，0不需要，1需要，默认不需要</p>
     */
     @SerializedName("NeedRecordNum")
     @Expose
     private Long NeedRecordNum;
 
     /**
-    * 是否需要返回过滤条件，0不需要，1需要，默认不需要
+    * <p>是否需要返回过滤条件，0不需要，1需要，默认不需要</p>
     */
     @SerializedName("NeedConditionValue")
     @Expose
     private Long NeedConditionValue;
 
     /**
-    * 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
+    * <p>过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）</p>
     */
     @SerializedName("Conditions")
     @Expose
     private Conditions Conditions;
 
     /**
-     * Get 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
-     * @return BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+    * <p>分账标签键，用户自定义</p>
+    */
+    @SerializedName("TagKey")
+    @Expose
+    private String TagKey;
+
+    /**
+    * <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录</p>
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
+     * Get <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p> 
+     * @return BeginTime <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * Set <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
+     * @param BeginTime <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
-     * @return EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * Get <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p> 
+     * @return EndTime <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * Set <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
+     * @param EndTime <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 每次获取数据量，最大值为100 
-     * @return Limit 每次获取数据量，最大值为100
+     * Get <p>每次获取数据量，最大值为100</p> 
+     * @return Limit <p>每次获取数据量，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每次获取数据量，最大值为100
-     * @param Limit 每次获取数据量，最大值为100
+     * Set <p>每次获取数据量，最大值为100</p>
+     * @param Limit <p>每次获取数据量，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量,默认从0开始 
-     * @return Offset 偏移量,默认从0开始
+     * Get <p>偏移量,默认从0开始</p> 
+     * @return Offset <p>偏移量,默认从0开始</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量,默认从0开始
-     * @param Offset 偏移量,默认从0开始
+     * Set <p>偏移量,默认从0开始</p>
+     * @param Offset <p>偏移量,默认从0开始</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询账单数据的用户UIN 
-     * @return PayerUin 查询账单数据的用户UIN
+     * Get <p>查询账单数据的用户UIN</p> 
+     * @return PayerUin <p>查询账单数据的用户UIN</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 查询账单数据的用户UIN
-     * @param PayerUin 查询账单数据的用户UIN
+     * Set <p>查询账单数据的用户UIN</p>
+     * @param PayerUin <p>查询账单数据的用户UIN</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 是否需要返回记录数量，0不需要，1需要，默认不需要 
-     * @return NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
+     * Get <p>是否需要返回记录数量，0不需要，1需要，默认不需要</p> 
+     * @return NeedRecordNum <p>是否需要返回记录数量，0不需要，1需要，默认不需要</p>
      */
     public Long getNeedRecordNum() {
         return this.NeedRecordNum;
     }
 
     /**
-     * Set 是否需要返回记录数量，0不需要，1需要，默认不需要
-     * @param NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
+     * Set <p>是否需要返回记录数量，0不需要，1需要，默认不需要</p>
+     * @param NeedRecordNum <p>是否需要返回记录数量，0不需要，1需要，默认不需要</p>
      */
     public void setNeedRecordNum(Long NeedRecordNum) {
         this.NeedRecordNum = NeedRecordNum;
     }
 
     /**
-     * Get 是否需要返回过滤条件，0不需要，1需要，默认不需要 
-     * @return NeedConditionValue 是否需要返回过滤条件，0不需要，1需要，默认不需要
+     * Get <p>是否需要返回过滤条件，0不需要，1需要，默认不需要</p> 
+     * @return NeedConditionValue <p>是否需要返回过滤条件，0不需要，1需要，默认不需要</p>
      */
     public Long getNeedConditionValue() {
         return this.NeedConditionValue;
     }
 
     /**
-     * Set 是否需要返回过滤条件，0不需要，1需要，默认不需要
-     * @param NeedConditionValue 是否需要返回过滤条件，0不需要，1需要，默认不需要
+     * Set <p>是否需要返回过滤条件，0不需要，1需要，默认不需要</p>
+     * @param NeedConditionValue <p>是否需要返回过滤条件，0不需要，1需要，默认不需要</p>
      */
     public void setNeedConditionValue(Long NeedConditionValue) {
         this.NeedConditionValue = NeedConditionValue;
     }
 
     /**
-     * Get 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc） 
-     * @return Conditions 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
+     * Get <p>过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）</p> 
+     * @return Conditions <p>过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）</p>
      */
     public Conditions getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
-     * @param Conditions 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
+     * Set <p>过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）</p>
+     * @param Conditions <p>过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）</p>
      */
     public void setConditions(Conditions Conditions) {
         this.Conditions = Conditions;
+    }
+
+    /**
+     * Get <p>分账标签键，用户自定义</p> 
+     * @return TagKey <p>分账标签键，用户自定义</p>
+     */
+    public String getTagKey() {
+        return this.TagKey;
+    }
+
+    /**
+     * Set <p>分账标签键，用户自定义</p>
+     * @param TagKey <p>分账标签键，用户自定义</p>
+     */
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
+    }
+
+    /**
+     * Get <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录</p> 
+     * @return TagValue <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录</p>
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录</p>
+     * @param TagValue <p>分账标签值，该参数为空表示该标签键下未设置标签值的记录</p>
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
     }
 
     public DescribeCostSummaryByResourceRequest() {
@@ -239,6 +285,12 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel {
         if (source.Conditions != null) {
             this.Conditions = new Conditions(source.Conditions);
         }
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
         this.setParamSimple(map, prefix + "NeedConditionValue", this.NeedConditionValue);
         this.setParamObj(map, prefix + "Conditions.", this.Conditions);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

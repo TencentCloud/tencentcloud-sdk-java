@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeOrganizationMembersAuthPolicyRequest extends AbstractModel {
 
     /**
-    * 偏移量。取值是limit的整数倍。默认值 : 0。
+    * <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目。取值范围：1~50。默认值：10。
+    * <p>限制数目。取值范围：1~50。默认值：10。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 成员uin。
+    * <p>成员uin。</p>
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * 集团管理员子账号uin。
+    * <p>集团管理员子账号uin。</p>
     */
     @SerializedName("OrgSubAccountUin")
     @Expose
     private Long OrgSubAccountUin;
 
     /**
-    * 成员访问策略Id。
+    * <p>成员访问策略Id。</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-     * Get 偏移量。取值是limit的整数倍。默认值 : 0。 
-     * @return Offset 偏移量。取值是limit的整数倍。默认值 : 0。
+     * Get <p>偏移量。取值是limit的整数倍。默认值 : 0。</p> 
+     * @return Offset <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。取值是limit的整数倍。默认值 : 0。
-     * @param Offset 偏移量。取值是limit的整数倍。默认值 : 0。
+     * Set <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
+     * @param Offset <p>偏移量。取值是limit的整数倍。默认值 : 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目。取值范围：1~50。默认值：10。 
-     * @return Limit 限制数目。取值范围：1~50。默认值：10。
+     * Get <p>限制数目。取值范围：1~50。默认值：10。</p> 
+     * @return Limit <p>限制数目。取值范围：1~50。默认值：10。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目。取值范围：1~50。默认值：10。
-     * @param Limit 限制数目。取值范围：1~50。默认值：10。
+     * Set <p>限制数目。取值范围：1~50。默认值：10。</p>
+     * @param Limit <p>限制数目。取值范围：1~50。默认值：10。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 成员uin。 
-     * @return MemberUin 成员uin。
+     * Get <p>成员uin。</p> 
+     * @return MemberUin <p>成员uin。</p>
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 成员uin。
-     * @param MemberUin 成员uin。
+     * Set <p>成员uin。</p>
+     * @param MemberUin <p>成员uin。</p>
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 集团管理员子账号uin。 
-     * @return OrgSubAccountUin 集团管理员子账号uin。
+     * Get <p>集团管理员子账号uin。</p> 
+     * @return OrgSubAccountUin <p>集团管理员子账号uin。</p>
      */
     public Long getOrgSubAccountUin() {
         return this.OrgSubAccountUin;
     }
 
     /**
-     * Set 集团管理员子账号uin。
-     * @param OrgSubAccountUin 集团管理员子账号uin。
+     * Set <p>集团管理员子账号uin。</p>
+     * @param OrgSubAccountUin <p>集团管理员子账号uin。</p>
      */
     public void setOrgSubAccountUin(Long OrgSubAccountUin) {
         this.OrgSubAccountUin = OrgSubAccountUin;
     }
 
     /**
-     * Get 成员访问策略Id。 
-     * @return PolicyId 成员访问策略Id。
+     * Get <p>成员访问策略Id。</p> 
+     * @return PolicyId <p>成员访问策略Id。</p>
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 成员访问策略Id。
-     * @param PolicyId 成员访问策略Id。
+     * Set <p>成员访问策略Id。</p>
+     * @param PolicyId <p>成员访问策略Id。</p>
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

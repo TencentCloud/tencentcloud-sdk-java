@@ -129,6 +129,13 @@ public class EdrAlertItem extends AbstractModel {
     private String AlertSource;
 
     /**
+    * <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
     * <p>镜像ID</p>
     */
     @SerializedName("ImageId")
@@ -211,6 +218,27 @@ public class EdrAlertItem extends AbstractModel {
     @SerializedName("RaspOpen")
     @Expose
     private Boolean RaspOpen;
+
+    /**
+    * <p>容器名称</p>
+    */
+    @SerializedName("ContainerName")
+    @Expose
+    private String ContainerName;
+
+    /**
+    * <p>容器镜像名称</p>
+    */
+    @SerializedName("ImageName")
+    @Expose
+    private String ImageName;
+
+    /**
+    * <p>集群名称</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
 
     /**
      * Get <p>告警表id</p> 
@@ -453,6 +481,22 @@ public class EdrAlertItem extends AbstractModel {
     }
 
     /**
+     * Get <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p> 
+     * @return MachineType <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+     * @param MachineType <p>机器类型（列表接口专有；不限于容器告警，主机告警同样返回）。按 Quuid 富化自 machines.machine_type，原始枚举值原样透传、不做 i18n 翻译，前端自行映射展示。取值如 CVM / LH / Other / EKS-NATIVE 等；查不到对应机器信息时降级为空串 ""（与 InstanceName / PublicIp / PrivateIp 等资产富化字段降级行为一致）。告警详情接口（DescribeEdrAlertInfo）不返回此字段</p>
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
      * Get <p>镜像ID</p> 
      * @return ImageId <p>镜像ID</p>
      */
@@ -644,6 +688,54 @@ public class EdrAlertItem extends AbstractModel {
         this.RaspOpen = RaspOpen;
     }
 
+    /**
+     * Get <p>容器名称</p> 
+     * @return ContainerName <p>容器名称</p>
+     */
+    public String getContainerName() {
+        return this.ContainerName;
+    }
+
+    /**
+     * Set <p>容器名称</p>
+     * @param ContainerName <p>容器名称</p>
+     */
+    public void setContainerName(String ContainerName) {
+        this.ContainerName = ContainerName;
+    }
+
+    /**
+     * Get <p>容器镜像名称</p> 
+     * @return ImageName <p>容器镜像名称</p>
+     */
+    public String getImageName() {
+        return this.ImageName;
+    }
+
+    /**
+     * Set <p>容器镜像名称</p>
+     * @param ImageName <p>容器镜像名称</p>
+     */
+    public void setImageName(String ImageName) {
+        this.ImageName = ImageName;
+    }
+
+    /**
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public EdrAlertItem() {
     }
 
@@ -697,6 +789,9 @@ public class EdrAlertItem extends AbstractModel {
         if (source.AlertSource != null) {
             this.AlertSource = new String(source.AlertSource);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
@@ -733,6 +828,15 @@ public class EdrAlertItem extends AbstractModel {
         if (source.RaspOpen != null) {
             this.RaspOpen = new Boolean(source.RaspOpen);
         }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -755,6 +859,7 @@ public class EdrAlertItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
         this.setParamSimple(map, prefix + "AlertSource", this.AlertSource);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ContainerId", this.ContainerId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
@@ -767,6 +872,9 @@ public class EdrAlertItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         this.setParamSimple(map, prefix + "RaspOpen", this.RaspOpen);
+        this.setParamSimple(map, prefix + "ContainerName", this.ContainerName);
+        this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

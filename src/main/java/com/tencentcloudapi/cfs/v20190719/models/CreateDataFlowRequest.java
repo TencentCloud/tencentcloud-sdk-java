@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class CreateDataFlowRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+    * <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 源端数据类型；包含S3_COS，S3_L5 
+    * <p>源端数据类型；包含S3_COS，S3_L5</p>
     */
     @SerializedName("SourceStorageType")
     @Expose
     private String SourceStorageType;
 
     /**
-    * 源端存储地址
+    * <p>源端存储地址</p>
     */
     @SerializedName("SourceStorageAddress")
     @Expose
     private String SourceStorageAddress;
 
     /**
-    * 源端路径
+    * <p>源端路径</p>
     */
     @SerializedName("SourcePath")
     @Expose
     private String SourcePath;
 
     /**
-    * 文件系统内目标路径
+    * <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
     */
     @SerializedName("TargetPath")
     @Expose
     private String TargetPath;
 
     /**
-    * 密钥 ID
+    * <p>密钥 ID</p>
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * 密钥 key
+    * <p>密钥 key</p>
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
+    * <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
     */
     @SerializedName("DataFlowName")
     @Expose
     private String DataFlowName;
 
     /**
-    *  0：不开启自动更新  1：开启自动更新
+    * <p>0：不开启自动更新  1：开启自动更新</p>
     */
     @SerializedName("AutoRefresh")
     @Expose
     private Long AutoRefresh;
 
     /**
-    * KafkaConsumer 消费时使用的Topic参数
+    * <p>KafkaConsumer 消费时使用的Topic参数</p>
     */
     @SerializedName("UserKafkaTopic")
     @Expose
     private String UserKafkaTopic;
 
     /**
-    * 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+    * <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Kafka消费用户名.示例值：name
+    * <p>Kafka消费用户名.示例值：name</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+    * <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取 
-     * @return FileSystemId 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * Get <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p> 
+     * @return FileSystemId <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
-     * @param FileSystemId 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * Set <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
+     * @param FileSystemId <p>文件系统 ID ，通过查询文件系统 <a href="https://cloud.tencent.com/document/product/582/38170">DescribeCfsFileSystems</a> 获取</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 源端数据类型；包含S3_COS，S3_L5  
-     * @return SourceStorageType 源端数据类型；包含S3_COS，S3_L5 
+     * Get <p>源端数据类型；包含S3_COS，S3_L5</p> 
+     * @return SourceStorageType <p>源端数据类型；包含S3_COS，S3_L5</p>
      */
     public String getSourceStorageType() {
         return this.SourceStorageType;
     }
 
     /**
-     * Set 源端数据类型；包含S3_COS，S3_L5 
-     * @param SourceStorageType 源端数据类型；包含S3_COS，S3_L5 
+     * Set <p>源端数据类型；包含S3_COS，S3_L5</p>
+     * @param SourceStorageType <p>源端数据类型；包含S3_COS，S3_L5</p>
      */
     public void setSourceStorageType(String SourceStorageType) {
         this.SourceStorageType = SourceStorageType;
     }
 
     /**
-     * Get 源端存储地址 
-     * @return SourceStorageAddress 源端存储地址
+     * Get <p>源端存储地址</p> 
+     * @return SourceStorageAddress <p>源端存储地址</p>
      */
     public String getSourceStorageAddress() {
         return this.SourceStorageAddress;
     }
 
     /**
-     * Set 源端存储地址
-     * @param SourceStorageAddress 源端存储地址
+     * Set <p>源端存储地址</p>
+     * @param SourceStorageAddress <p>源端存储地址</p>
      */
     public void setSourceStorageAddress(String SourceStorageAddress) {
         this.SourceStorageAddress = SourceStorageAddress;
     }
 
     /**
-     * Get 源端路径 
-     * @return SourcePath 源端路径
+     * Get <p>源端路径</p> 
+     * @return SourcePath <p>源端路径</p>
      */
     public String getSourcePath() {
         return this.SourcePath;
     }
 
     /**
-     * Set 源端路径
-     * @param SourcePath 源端路径
+     * Set <p>源端路径</p>
+     * @param SourcePath <p>源端路径</p>
      */
     public void setSourcePath(String SourcePath) {
         this.SourcePath = SourcePath;
     }
 
     /**
-     * Get 文件系统内目标路径 
-     * @return TargetPath 文件系统内目标路径
+     * Get <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul> 
+     * @return TargetPath <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public String getTargetPath() {
         return this.TargetPath;
     }
 
     /**
-     * Set 文件系统内目标路径
-     * @param TargetPath 文件系统内目标路径
+     * Set <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
+     * @param TargetPath <p>设置数据流动时指定的文件系统内目标路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需将对象存储上的源端目录与挂载路径下的 test1/test2 建立映射关系，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public void setTargetPath(String TargetPath) {
         this.TargetPath = TargetPath;
     }
 
     /**
-     * Get 密钥 ID 
-     * @return SecretId 密钥 ID
+     * Get <p>密钥 ID</p> 
+     * @return SecretId <p>密钥 ID</p>
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set 密钥 ID
-     * @param SecretId 密钥 ID
+     * Set <p>密钥 ID</p>
+     * @param SecretId <p>密钥 ID</p>
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get 密钥 key 
-     * @return SecretKey 密钥 key
+     * Get <p>密钥 key</p> 
+     * @return SecretKey <p>密钥 key</p>
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 密钥 key
-     * @param SecretKey 密钥 key
+     * Set <p>密钥 key</p>
+     * @param SecretKey <p>密钥 key</p>
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get 数据流动名称；支持不超过64字符长度，支持中文、数字、_、- 
-     * @return DataFlowName 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
+     * Get <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p> 
+     * @return DataFlowName <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
      */
     public String getDataFlowName() {
         return this.DataFlowName;
     }
 
     /**
-     * Set 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
-     * @param DataFlowName 数据流动名称；支持不超过64字符长度，支持中文、数字、_、-
+     * Set <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
+     * @param DataFlowName <p>数据流动名称；支持不超过64字符长度，支持中文、数字、_、-</p>
      */
     public void setDataFlowName(String DataFlowName) {
         this.DataFlowName = DataFlowName;
     }
 
     /**
-     * Get  0：不开启自动更新  1：开启自动更新 
-     * @return AutoRefresh  0：不开启自动更新  1：开启自动更新
+     * Get <p>0：不开启自动更新  1：开启自动更新</p> 
+     * @return AutoRefresh <p>0：不开启自动更新  1：开启自动更新</p>
      */
     public Long getAutoRefresh() {
         return this.AutoRefresh;
     }
 
     /**
-     * Set  0：不开启自动更新  1：开启自动更新
-     * @param AutoRefresh  0：不开启自动更新  1：开启自动更新
+     * Set <p>0：不开启自动更新  1：开启自动更新</p>
+     * @param AutoRefresh <p>0：不开启自动更新  1：开启自动更新</p>
      */
     public void setAutoRefresh(Long AutoRefresh) {
         this.AutoRefresh = AutoRefresh;
     }
 
     /**
-     * Get KafkaConsumer 消费时使用的Topic参数 
-     * @return UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     * Get <p>KafkaConsumer 消费时使用的Topic参数</p> 
+     * @return UserKafkaTopic <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public String getUserKafkaTopic() {
         return this.UserKafkaTopic;
     }
 
     /**
-     * Set KafkaConsumer 消费时使用的Topic参数
-     * @param UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     * Set <p>KafkaConsumer 消费时使用的Topic参数</p>
+     * @param UserKafkaTopic <p>KafkaConsumer 消费时使用的Topic参数</p>
      */
     public void setUserKafkaTopic(String UserKafkaTopic) {
         this.UserKafkaTopic = UserKafkaTopic;
     }
 
     /**
-     * Get 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095 
-     * @return ServerAddr 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     * Get <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p> 
+     * @return ServerAddr <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
-     * @param ServerAddr 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     * Set <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+     * @param ServerAddr <p>服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Kafka消费用户名.示例值：name 
-     * @return UserName Kafka消费用户名.示例值：name
+     * Get <p>Kafka消费用户名.示例值：name</p> 
+     * @return UserName <p>Kafka消费用户名.示例值：name</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Kafka消费用户名.示例值：name
-     * @param UserName Kafka消费用户名.示例值：name
+     * Set <p>Kafka消费用户名.示例值：name</p>
+     * @param UserName <p>Kafka消费用户名.示例值：name</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Kafka消费用户密码。默认${SecretId}#${SecretKey}。 
-     * @return Password Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     * Get <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p> 
+     * @return Password <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Kafka消费用户密码。默认${SecretId}#${SecretKey}。
-     * @param Password Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     * Set <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
+     * @param Password <p>Kafka消费用户密码。默认${SecretId}#${SecretKey}。</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;

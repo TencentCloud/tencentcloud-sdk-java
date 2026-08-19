@@ -150,6 +150,34 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     private String [] ApiKeyIds;
 
     /**
+    * <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+    */
+    @SerializedName("AdvancedOptions")
+    @Expose
+    private String AdvancedOptions;
+
+    /**
+    * <p>系统标签列表（TagKey-TagValue）</p>
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
+    * <p>自定义RayServe提交</p>
+    */
+    @SerializedName("IsCustom")
+    @Expose
+    private Boolean IsCustom;
+
+    /**
+    * <p>python runtime env</p>
+    */
+    @SerializedName("RuntimeEnv")
+    @Expose
+    private String RuntimeEnv;
+
+    /**
      * Get <p>推理服务名称</p> 
      * @return Name <p>推理服务名称</p>
      */
@@ -437,6 +465,70 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.ApiKeyIds = ApiKeyIds;
     }
 
+    /**
+     * Get <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p> 
+     * @return AdvancedOptions <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+     */
+    public String getAdvancedOptions() {
+        return this.AdvancedOptions;
+    }
+
+    /**
+     * Set <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+     * @param AdvancedOptions <p>AdvancedOptions 高级参数 JSON 字符串（可选），扁平 KV 结构，作用于 K8s RayService CR YAML 字段级</p>
+     */
+    public void setAdvancedOptions(String AdvancedOptions) {
+        this.AdvancedOptions = AdvancedOptions;
+    }
+
+    /**
+     * Get <p>系统标签列表（TagKey-TagValue）</p> 
+     * @return ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>系统标签列表（TagKey-TagValue）</p>
+     * @param ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get <p>自定义RayServe提交</p> 
+     * @return IsCustom <p>自定义RayServe提交</p>
+     */
+    public Boolean getIsCustom() {
+        return this.IsCustom;
+    }
+
+    /**
+     * Set <p>自定义RayServe提交</p>
+     * @param IsCustom <p>自定义RayServe提交</p>
+     */
+    public void setIsCustom(Boolean IsCustom) {
+        this.IsCustom = IsCustom;
+    }
+
+    /**
+     * Get <p>python runtime env</p> 
+     * @return RuntimeEnv <p>python runtime env</p>
+     */
+    public String getRuntimeEnv() {
+        return this.RuntimeEnv;
+    }
+
+    /**
+     * Set <p>python runtime env</p>
+     * @param RuntimeEnv <p>python runtime env</p>
+     */
+    public void setRuntimeEnv(String RuntimeEnv) {
+        this.RuntimeEnv = RuntimeEnv;
+    }
+
     public CreateInferenceServiceRequest() {
     }
 
@@ -502,6 +594,21 @@ public class CreateInferenceServiceRequest extends AbstractModel {
                 this.ApiKeyIds[i] = new String(source.ApiKeyIds[i]);
             }
         }
+        if (source.AdvancedOptions != null) {
+            this.AdvancedOptions = new String(source.AdvancedOptions);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
+        if (source.IsCustom != null) {
+            this.IsCustom = new Boolean(source.IsCustom);
+        }
+        if (source.RuntimeEnv != null) {
+            this.RuntimeEnv = new String(source.RuntimeEnv);
+        }
     }
 
 
@@ -527,6 +634,10 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
         this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamArraySimple(map, prefix + "ApiKeyIds.", this.ApiKeyIds);
+        this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "IsCustom", this.IsCustom);
+        this.setParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
 
     }
 }

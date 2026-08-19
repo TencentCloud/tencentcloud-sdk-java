@@ -59,6 +59,27 @@ public class ModelChargingItem extends AbstractModel {
     private String PeakPrice;
 
     /**
+    * <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+    */
+    @SerializedName("Specification")
+    @Expose
+    private String Specification;
+
+    /**
+    * <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+    */
+    @SerializedName("Usage")
+    @Expose
+    private String Usage;
+
+    /**
+    * <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+    */
+    @SerializedName("ReferencePrice")
+    @Expose
+    private String ReferencePrice;
+
+    /**
      * Get <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p> 
      * @return PriceName <p>价格维度标识。取值：Input（输入）、Output（输出）、Cache（缓存命中）、Thinking（思考）、BatchInput（批量输入）、BatchOutput（批量输出）、BatchCache（批量缓存命中）、ImageInput（输入图片）、ImageOutput（输出图片）、Search（搜索调用）。</p>
      */
@@ -138,6 +159,54 @@ public class ModelChargingItem extends AbstractModel {
         this.PeakPrice = PeakPrice;
     }
 
+    /**
+     * Get <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p> 
+     * @return Specification <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+     */
+    public String getSpecification() {
+        return this.Specification;
+    }
+
+    /**
+     * Set <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+     * @param Specification <p>规格描述，例如视觉/语音类模型有值（如 有参考视频 540P、图生视频 首帧 720P、动作控制 1080P、有声-未指定音色），其他模型为空。</p>
+     */
+    public void setSpecification(String Specification) {
+        this.Specification = Specification;
+    }
+
+    /**
+     * Get <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p> 
+     * @return Usage <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+     */
+    public String getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+     * @param Usage <p>Token 用量描述，例如视觉/语音类模型有值（如 第1秒 62,500 Tokens，后续每秒 15,625 Tokens），其他模型为空。</p>
+     */
+    public void setUsage(String Usage) {
+        this.Usage = Usage;
+    }
+
+    /**
+     * Get <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p> 
+     * @return ReferencePrice <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+     */
+    public String getReferencePrice() {
+        return this.ReferencePrice;
+    }
+
+    /**
+     * Set <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+     * @param ReferencePrice <p>参考费用/预估费用描述，例如视觉/语音类模型有值（如 第1秒 0.625 元，后续每秒 0.15625 元），其他模型为空。</p>
+     */
+    public void setReferencePrice(String ReferencePrice) {
+        this.ReferencePrice = ReferencePrice;
+    }
+
     public ModelChargingItem() {
     }
 
@@ -161,6 +230,15 @@ public class ModelChargingItem extends AbstractModel {
         if (source.PeakPrice != null) {
             this.PeakPrice = new String(source.PeakPrice);
         }
+        if (source.Specification != null) {
+            this.Specification = new String(source.Specification);
+        }
+        if (source.Usage != null) {
+            this.Usage = new String(source.Usage);
+        }
+        if (source.ReferencePrice != null) {
+            this.ReferencePrice = new String(source.ReferencePrice);
+        }
     }
 
 
@@ -173,6 +251,9 @@ public class ModelChargingItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
         this.setParamSimple(map, prefix + "PeakPrice", this.PeakPrice);
+        this.setParamSimple(map, prefix + "Specification", this.Specification);
+        this.setParamSimple(map, prefix + "Usage", this.Usage);
+        this.setParamSimple(map, prefix + "ReferencePrice", this.ReferencePrice);
 
     }
 }

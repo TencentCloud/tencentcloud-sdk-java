@@ -128,6 +128,14 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String TriggerMode;
 
     /**
+    * <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
      * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowName <p>工作流名称</p>
@@ -387,6 +395,26 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.TriggerMode = TriggerMode;
     }
 
+    /**
+     * Get <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
+    }
+
     public TriggerWorkflowDetail() {
     }
 
@@ -443,6 +471,9 @@ public class TriggerWorkflowDetail extends AbstractModel {
         if (source.TriggerMode != null) {
             this.TriggerMode = new String(source.TriggerMode);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
     }
 
 
@@ -463,6 +494,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
         this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
 
     }
 }

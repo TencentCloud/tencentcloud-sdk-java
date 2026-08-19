@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DatasourceConnectionConfig extends AbstractModel {
 
     /**
-    * Mysql数据源连接的属性
+    * <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mysql")
@@ -32,7 +32,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private MysqlInfo Mysql;
 
     /**
-    * Hive数据源连接的属性
+    * <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hive")
@@ -40,7 +40,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private HiveInfo Hive;
 
     /**
-    * Kafka数据源连接的属性
+    * <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kafka")
@@ -48,7 +48,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private KafkaInfo Kafka;
 
     /**
-    * 其他数据源连接的属性
+    * <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherDatasourceConnection")
@@ -56,7 +56,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private OtherDatasourceConnection OtherDatasourceConnection;
 
     /**
-    * PostgreSQL数据源连接的属性
+    * <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostgreSql")
@@ -64,7 +64,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private DataSourceInfo PostgreSql;
 
     /**
-    * SQLServer数据源连接的属性
+    * <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlServer")
@@ -72,7 +72,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private DataSourceInfo SqlServer;
 
     /**
-    * ClickHouse数据源连接的属性
+    * <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClickHouse")
@@ -80,7 +80,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private DataSourceInfo ClickHouse;
 
     /**
-    * Elasticsearch数据源连接的属性
+    * <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Elasticsearch")
@@ -88,7 +88,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private ElasticsearchInfo Elasticsearch;
 
     /**
-    * TDSQL-PostgreSQL数据源连接的属性
+    * <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TDSQLPostgreSql")
@@ -96,7 +96,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private DataSourceInfo TDSQLPostgreSql;
 
     /**
-    * Doris数据源连接的属性
+    * <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TCHouseD")
@@ -104,23 +104,30 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private TCHouseD TCHouseD;
 
     /**
-    * TccHive数据目录连接信息
+    * <p>TccHive数据目录连接信息</p>
     */
     @SerializedName("TccHive")
     @Expose
     private TccHive TccHive;
 
     /**
-    * MongoDB 数据源
+    * <p>MongoDB 数据源</p>
     */
     @SerializedName("MongoDB")
     @Expose
     private DataSourceInfo MongoDB;
 
     /**
-     * Get Mysql数据源连接的属性
+    * <p>TCHouseP数据源</p>
+    */
+    @SerializedName("TCHouseP")
+    @Expose
+    private TCHousePInfo TCHouseP;
+
+    /**
+     * Get <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mysql Mysql数据源连接的属性
+     * @return Mysql <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MysqlInfo getMysql() {
@@ -128,9 +135,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set Mysql数据源连接的属性
+     * Set <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mysql Mysql数据源连接的属性
+     * @param Mysql <p>Mysql数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMysql(MysqlInfo Mysql) {
@@ -138,9 +145,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get Hive数据源连接的属性
+     * Get <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Hive Hive数据源连接的属性
+     * @return Hive <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HiveInfo getHive() {
@@ -148,9 +155,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set Hive数据源连接的属性
+     * Set <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Hive Hive数据源连接的属性
+     * @param Hive <p>Hive数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHive(HiveInfo Hive) {
@@ -158,9 +165,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get Kafka数据源连接的属性
+     * Get <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Kafka Kafka数据源连接的属性
+     * @return Kafka <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KafkaInfo getKafka() {
@@ -168,9 +175,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set Kafka数据源连接的属性
+     * Set <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Kafka Kafka数据源连接的属性
+     * @param Kafka <p>Kafka数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafka(KafkaInfo Kafka) {
@@ -178,9 +185,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get 其他数据源连接的属性
+     * Get <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OtherDatasourceConnection 其他数据源连接的属性
+     * @return OtherDatasourceConnection <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtherDatasourceConnection getOtherDatasourceConnection() {
@@ -188,9 +195,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set 其他数据源连接的属性
+     * Set <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OtherDatasourceConnection 其他数据源连接的属性
+     * @param OtherDatasourceConnection <p>其他数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherDatasourceConnection(OtherDatasourceConnection OtherDatasourceConnection) {
@@ -198,9 +205,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get PostgreSQL数据源连接的属性
+     * Get <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostgreSql PostgreSQL数据源连接的属性
+     * @return PostgreSql <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSourceInfo getPostgreSql() {
@@ -208,9 +215,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set PostgreSQL数据源连接的属性
+     * Set <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostgreSql PostgreSQL数据源连接的属性
+     * @param PostgreSql <p>PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostgreSql(DataSourceInfo PostgreSql) {
@@ -218,9 +225,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get SQLServer数据源连接的属性
+     * Get <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SqlServer SQLServer数据源连接的属性
+     * @return SqlServer <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSourceInfo getSqlServer() {
@@ -228,9 +235,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set SQLServer数据源连接的属性
+     * Set <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SqlServer SQLServer数据源连接的属性
+     * @param SqlServer <p>SQLServer数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlServer(DataSourceInfo SqlServer) {
@@ -238,9 +245,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get ClickHouse数据源连接的属性
+     * Get <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClickHouse ClickHouse数据源连接的属性
+     * @return ClickHouse <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSourceInfo getClickHouse() {
@@ -248,9 +255,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set ClickHouse数据源连接的属性
+     * Set <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClickHouse ClickHouse数据源连接的属性
+     * @param ClickHouse <p>ClickHouse数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClickHouse(DataSourceInfo ClickHouse) {
@@ -258,9 +265,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get Elasticsearch数据源连接的属性
+     * Get <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Elasticsearch Elasticsearch数据源连接的属性
+     * @return Elasticsearch <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElasticsearchInfo getElasticsearch() {
@@ -268,9 +275,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set Elasticsearch数据源连接的属性
+     * Set <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Elasticsearch Elasticsearch数据源连接的属性
+     * @param Elasticsearch <p>Elasticsearch数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticsearch(ElasticsearchInfo Elasticsearch) {
@@ -278,9 +285,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get TDSQL-PostgreSQL数据源连接的属性
+     * Get <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TDSQLPostgreSql TDSQL-PostgreSQL数据源连接的属性
+     * @return TDSQLPostgreSql <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSourceInfo getTDSQLPostgreSql() {
@@ -288,9 +295,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set TDSQL-PostgreSQL数据源连接的属性
+     * Set <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TDSQLPostgreSql TDSQL-PostgreSQL数据源连接的属性
+     * @param TDSQLPostgreSql <p>TDSQL-PostgreSQL数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTDSQLPostgreSql(DataSourceInfo TDSQLPostgreSql) {
@@ -298,9 +305,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get Doris数据源连接的属性
+     * Get <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TCHouseD Doris数据源连接的属性
+     * @return TCHouseD <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TCHouseD getTCHouseD() {
@@ -308,9 +315,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Set Doris数据源连接的属性
+     * Set <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TCHouseD Doris数据源连接的属性
+     * @param TCHouseD <p>Doris数据源连接的属性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTCHouseD(TCHouseD TCHouseD) {
@@ -318,35 +325,51 @@ public class DatasourceConnectionConfig extends AbstractModel {
     }
 
     /**
-     * Get TccHive数据目录连接信息 
-     * @return TccHive TccHive数据目录连接信息
+     * Get <p>TccHive数据目录连接信息</p> 
+     * @return TccHive <p>TccHive数据目录连接信息</p>
      */
     public TccHive getTccHive() {
         return this.TccHive;
     }
 
     /**
-     * Set TccHive数据目录连接信息
-     * @param TccHive TccHive数据目录连接信息
+     * Set <p>TccHive数据目录连接信息</p>
+     * @param TccHive <p>TccHive数据目录连接信息</p>
      */
     public void setTccHive(TccHive TccHive) {
         this.TccHive = TccHive;
     }
 
     /**
-     * Get MongoDB 数据源 
-     * @return MongoDB MongoDB 数据源
+     * Get <p>MongoDB 数据源</p> 
+     * @return MongoDB <p>MongoDB 数据源</p>
      */
     public DataSourceInfo getMongoDB() {
         return this.MongoDB;
     }
 
     /**
-     * Set MongoDB 数据源
-     * @param MongoDB MongoDB 数据源
+     * Set <p>MongoDB 数据源</p>
+     * @param MongoDB <p>MongoDB 数据源</p>
      */
     public void setMongoDB(DataSourceInfo MongoDB) {
         this.MongoDB = MongoDB;
+    }
+
+    /**
+     * Get <p>TCHouseP数据源</p> 
+     * @return TCHouseP <p>TCHouseP数据源</p>
+     */
+    public TCHousePInfo getTCHouseP() {
+        return this.TCHouseP;
+    }
+
+    /**
+     * Set <p>TCHouseP数据源</p>
+     * @param TCHouseP <p>TCHouseP数据源</p>
+     */
+    public void setTCHouseP(TCHousePInfo TCHouseP) {
+        this.TCHouseP = TCHouseP;
     }
 
     public DatasourceConnectionConfig() {
@@ -393,6 +416,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
         if (source.MongoDB != null) {
             this.MongoDB = new DataSourceInfo(source.MongoDB);
         }
+        if (source.TCHouseP != null) {
+            this.TCHouseP = new TCHousePInfo(source.TCHouseP);
+        }
     }
 
 
@@ -412,6 +438,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.setParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
         this.setParamObj(map, prefix + "TccHive.", this.TccHive);
         this.setParamObj(map, prefix + "MongoDB.", this.MongoDB);
+        this.setParamObj(map, prefix + "TCHouseP.", this.TCHouseP);
 
     }
 }

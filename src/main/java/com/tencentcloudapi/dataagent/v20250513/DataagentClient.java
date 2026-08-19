@@ -50,17 +50,6 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
-     *新增场景
-     * @param req AddSceneRequest
-     * @return AddSceneResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddSceneResponse AddScene(AddSceneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AddScene", AddSceneResponse.class);
-    }
-
-    /**
      *追加文件
      * @param req AppendKnowledgeTaskRequest
      * @return AppendKnowledgeTaskResponse
@@ -113,17 +102,6 @@ public class DataagentClient extends AbstractClient{
     public DeleteDataAgentSessionResponse DeleteDataAgentSession(DeleteDataAgentSessionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataAgentSession", DeleteDataAgentSessionResponse.class);
-    }
-
-    /**
-     *删除场景
-     * @param req DeleteSceneRequest
-     * @return DeleteSceneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteSceneResponse DeleteScene(DeleteSceneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteScene", DeleteSceneResponse.class);
     }
 
     /**
@@ -281,17 +259,6 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
-     *查询场景列表
-     * @param req QuerySceneListRequest
-     * @return QuerySceneListResponse
-     * @throws TencentCloudSDKException
-     */
-    public QuerySceneListResponse QuerySceneList(QuerySceneListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "QuerySceneList", QuerySceneListResponse.class);
-    }
-
-    /**
      *查询对象权限
      * @param req QueryUserAuthorityRequest
      * @return QueryUserAuthorityResponse
@@ -311,17 +278,6 @@ public class DataagentClient extends AbstractClient{
     public StopChatAIResponse StopChatAI(StopChatAIRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopChatAI", StopChatAIResponse.class);
-    }
-
-    /**
-     *更新场景
-     * @param req UpdateSceneRequest
-     * @return UpdateSceneResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateSceneResponse UpdateScene(UpdateSceneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateScene", UpdateSceneResponse.class);
     }
 
     /**

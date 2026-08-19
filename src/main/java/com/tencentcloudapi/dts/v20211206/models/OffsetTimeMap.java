@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class OffsetTimeMap extends AbstractModel {
 
     /**
-    * kafka分区编号
+    * <p>kafka分区编号</p>
     */
     @SerializedName("PartitionNo")
     @Expose
     private Long PartitionNo;
 
     /**
-    * kafka offset
+    * <p>kafka offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get kafka分区编号 
-     * @return PartitionNo kafka分区编号
+     * Get <p>kafka分区编号</p> 
+     * @return PartitionNo <p>kafka分区编号</p>
      */
     public Long getPartitionNo() {
         return this.PartitionNo;
     }
 
     /**
-     * Set kafka分区编号
-     * @param PartitionNo kafka分区编号
+     * Set <p>kafka分区编号</p>
+     * @param PartitionNo <p>kafka分区编号</p>
      */
     public void setPartitionNo(Long PartitionNo) {
         this.PartitionNo = PartitionNo;
     }
 
     /**
-     * Get kafka offset 
-     * @return Offset kafka offset
+     * Get <p>kafka offset</p> 
+     * @return Offset <p>kafka offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set kafka offset
-     * @param Offset kafka offset
+     * Set <p>kafka offset</p>
+     * @param Offset <p>kafka offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

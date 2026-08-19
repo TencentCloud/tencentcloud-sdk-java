@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class CompareObjectItem extends AbstractModel {
 
     /**
-    * 数据库名
+    * <p>数据库名</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
+    * <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * schema名称
+    * <p>schema名称</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
+    * <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
     */
     @SerializedName("TableMode")
     @Expose
     private String TableMode;
 
     /**
-    * 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
+    * <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
     */
     @SerializedName("Tables")
     @Expose
     private CompareTableItem [] Tables;
 
     /**
-    * 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
+    * <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
     */
     @SerializedName("ViewMode")
     @Expose
     private String ViewMode;
 
     /**
-    * 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+    * <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Views")
@@ -74,105 +74,105 @@ public class CompareObjectItem extends AbstractModel {
     private CompareViewItem [] Views;
 
     /**
-     * Get 数据库名 
-     * @return DbName 数据库名
+     * Get <p>数据库名</p> 
+     * @return DbName <p>数据库名</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名
-     * @param DbName 数据库名
+     * Set <p>数据库名</p>
+     * @param DbName <p>数据库名</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象 
-     * @return DbMode 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
+     * Get <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p> 
+     * @return DbMode <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
-     * @param DbMode 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
+     * Set <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
+     * @param DbMode <p>数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get schema名称 
-     * @return SchemaName schema名称
+     * Get <p>schema名称</p> 
+     * @return SchemaName <p>schema名称</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set schema名称
-     * @param SchemaName schema名称
+     * Set <p>schema名称</p>
+     * @param SchemaName <p>schema名称</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象 
-     * @return TableMode 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
+     * Get <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p> 
+     * @return TableMode <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
      */
     public String getTableMode() {
         return this.TableMode;
     }
 
     /**
-     * Set 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
-     * @param TableMode 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
+     * Set <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
+     * @param TableMode <p>表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象</p>
      */
     public void setTableMode(String TableMode) {
         this.TableMode = TableMode;
     }
 
     /**
-     * Get 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写 
-     * @return Tables 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
+     * Get <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p> 
+     * @return Tables <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
      */
     public CompareTableItem [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
-     * @param Tables 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
+     * Set <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
+     * @param Tables <p>用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写</p>
      */
     public void setTables(CompareTableItem [] Tables) {
         this.Tables = Tables;
     }
 
     /**
-     * Get 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用) 
-     * @return ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
+     * Get <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p> 
+     * @return ViewMode <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
      */
     public String getViewMode() {
         return this.ViewMode;
     }
 
     /**
-     * Set 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
-     * @param ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
+     * Set <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
+     * @param ViewMode <p>视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)</p>
      */
     public void setViewMode(String ViewMode) {
         this.ViewMode = ViewMode;
     }
 
     /**
-     * Get 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+     * Get <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+     * @return Views <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareViewItem [] getViews() {
@@ -180,9 +180,9 @@ public class CompareObjectItem extends AbstractModel {
     }
 
     /**
-     * Set 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+     * Set <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
+     * @param Views <p>用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViews(CompareViewItem [] Views) {

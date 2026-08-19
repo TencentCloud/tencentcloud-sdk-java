@@ -24,39 +24,28 @@ import java.util.HashMap;
 public class Activity extends AbstractModel {
 
     /**
-    * 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
+    * <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
     */
     @SerializedName("ActivityType")
     @Expose
     private String ActivityType;
 
     /**
-    * 后驱节点索引数组
+    * <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+    */
+    @SerializedName("PredriveIndex")
+    @Expose
+    private Long [] PredriveIndex;
+
+    /**
+    * <p>后驱节点索引数组</p>
     */
     @SerializedName("ReardriveIndex")
     @Expose
     private Long [] ReardriveIndex;
 
     /**
-    * 原子任务参数
+    * <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityPara")
@@ -64,113 +53,57 @@ public class Activity extends AbstractModel {
     private ActivityPara ActivityPara;
 
     /**
-     * Get 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
- 
-     * @return ActivityType 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
+     * Get <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li> 
+     * @return ActivityType <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
      */
     public String getActivityType() {
         return this.ActivityType;
     }
 
     /**
-     * Set 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
-     * @param ActivityType 原子任务类型：
-<li>input: 起始节点</li>
-<li>output：终止节点</li>
-<li>action-trans：转码</li>
-<li>action-samplesnapshot：采样截图</li>
-<li>action-AIAnalysis: 分析</li>
-<li>action-AIRecognition：识别</li>
-<li>action-aiReview：审核</li>
-<li>action-animated-graphics：转动图</li>
-<li>action-image-sprite：雪碧图</li>
-<li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li>
-<li>action-AIQualityControl：媒体质检</li>
-<li>action-SmartSubtitles：智能字幕</li>
-<li>action-exec-rules：判断规则</li>
-<li>action-SmartErase：智能擦除</li>
-
-
-
+     * Set <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
+     * @param ActivityType <p>原子任务类型：</p><li>input: 起始节点</li><li>output：终止节点</li><li>action-trans：转码</li><li>action-samplesnapshot：采样截图</li><li>action-AIAnalysis: 分析</li><li>action-AIRecognition：识别</li><li>action-aiReview：审核</li><li>action-animated-graphics：转动图</li><li>action-image-sprite：雪碧图</li><li>action-snapshotByTimeOffset: 时间点截图</li><li>action-adaptive-substream：自适应码流</li><li>action-AIQualityControl：媒体质检</li><li>action-SmartSubtitles：智能字幕</li><li>action-exec-rules：判断规则</li><li>action-SmartErase：智能擦除</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get 后驱节点索引数组 
-     * @return ReardriveIndex 后驱节点索引数组
+     * Get <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p> 
+     * @return PredriveIndex <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+     */
+    public Long [] getPredriveIndex() {
+        return this.PredriveIndex;
+    }
+
+    /**
+     * Set <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+     * @param PredriveIndex <p>前驱节点索引数组。<br>注意：创建和修改编排时，该参数无效，由服务端自动生成。</p>
+     */
+    public void setPredriveIndex(Long [] PredriveIndex) {
+        this.PredriveIndex = PredriveIndex;
+    }
+
+    /**
+     * Get <p>后驱节点索引数组</p> 
+     * @return ReardriveIndex <p>后驱节点索引数组</p>
      */
     public Long [] getReardriveIndex() {
         return this.ReardriveIndex;
     }
 
     /**
-     * Set 后驱节点索引数组
-     * @param ReardriveIndex 后驱节点索引数组
+     * Set <p>后驱节点索引数组</p>
+     * @param ReardriveIndex <p>后驱节点索引数组</p>
      */
     public void setReardriveIndex(Long [] ReardriveIndex) {
         this.ReardriveIndex = ReardriveIndex;
     }
 
     /**
-     * Get 原子任务参数
+     * Get <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActivityPara 原子任务参数
+     * @return ActivityPara <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ActivityPara getActivityPara() {
@@ -178,9 +111,9 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Set 原子任务参数
+     * Set <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActivityPara 原子任务参数
+     * @param ActivityPara <p>原子任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityPara(ActivityPara ActivityPara) {
@@ -197,6 +130,12 @@ public class Activity extends AbstractModel {
     public Activity(Activity source) {
         if (source.ActivityType != null) {
             this.ActivityType = new String(source.ActivityType);
+        }
+        if (source.PredriveIndex != null) {
+            this.PredriveIndex = new Long[source.PredriveIndex.length];
+            for (int i = 0; i < source.PredriveIndex.length; i++) {
+                this.PredriveIndex[i] = new Long(source.PredriveIndex[i]);
+            }
         }
         if (source.ReardriveIndex != null) {
             this.ReardriveIndex = new Long[source.ReardriveIndex.length];
@@ -215,6 +154,7 @@ public class Activity extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ActivityType", this.ActivityType);
+        this.setParamArraySimple(map, prefix + "PredriveIndex.", this.PredriveIndex);
         this.setParamArraySimple(map, prefix + "ReardriveIndex.", this.ReardriveIndex);
         this.setParamObj(map, prefix + "ActivityPara.", this.ActivityPara);
 

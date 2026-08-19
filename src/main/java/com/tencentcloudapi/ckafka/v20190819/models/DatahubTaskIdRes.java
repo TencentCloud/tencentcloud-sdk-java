@@ -24,26 +24,54 @@ import java.util.HashMap;
 public class DatahubTaskIdRes extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+    * <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatahubId")
+    @Expose
+    private String DatahubId;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatahubId <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatahubId() {
+        return this.DatahubId;
+    }
+
+    /**
+     * Set <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatahubId <p>DatahubId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatahubId(String DatahubId) {
+        this.DatahubId = DatahubId;
     }
 
     public DatahubTaskIdRes() {
@@ -57,6 +85,9 @@ public class DatahubTaskIdRes extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.DatahubId != null) {
+            this.DatahubId = new String(source.DatahubId);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class DatahubTaskIdRes extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "DatahubId", this.DatahubId);
 
     }
 }

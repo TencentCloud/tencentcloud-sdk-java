@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeServiceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 业务ID
+    * <p>业务ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 业务ID 
-     * @return ID 业务ID
+     * Get <p>业务ID</p> 
+     * @return ID <p>业务ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 业务ID
-     * @param ID 业务ID
+     * Set <p>业务ID</p>
+     * @param ID <p>业务ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;

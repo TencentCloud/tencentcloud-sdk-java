@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class CompareAbstractInfo extends AbstractModel {
 
     /**
-    * 校验配置参数
+    * <p>校验配置参数</p>
     */
     @SerializedName("Options")
     @Expose
     private CompareOptions Options;
 
     /**
-    * 一致性校验对比对象
+    * <p>一致性校验对比对象</p>
     */
     @SerializedName("Objects")
     @Expose
     private CompareObject Objects;
 
     /**
-    * 对比结论: same,different
+    * <p>对比结论: same,different</p>
     */
     @SerializedName("Conclusion")
     @Expose
     private String Conclusion;
 
     /**
-    * 任务状态: success,failed
+    * <p>任务状态: success,failed</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 总的表数量
+    * <p>总的表数量</p>
     */
     @SerializedName("TotalTables")
     @Expose
     private Long TotalTables;
 
     /**
-    * 已校验的表数量
+    * <p>已校验的表数量</p>
     */
     @SerializedName("CheckedTables")
     @Expose
     private Long CheckedTables;
 
     /**
-    * 不一致的表数量
+    * <p>不一致的表数量</p>
     */
     @SerializedName("DifferentTables")
     @Expose
     private Long DifferentTables;
 
     /**
-    * 跳过校验的表数量
+    * <p>跳过校验的表数量</p>
     */
     @SerializedName("SkippedTables")
     @Expose
     private Long SkippedTables;
 
     /**
-    * 预估表总数
+    * <p>预估表总数</p>
     */
     @SerializedName("NearlyTableCount")
     @Expose
     private Long NearlyTableCount;
 
     /**
-    * 不一致的数据行数量
+    * <p>不一致的数据行数量</p>
     */
     @SerializedName("DifferentRows")
     @Expose
     private Long DifferentRows;
 
     /**
-    * 源库行数，当对比类型为**行数对比**时此项有意义
+    * <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
     */
     @SerializedName("SrcSampleRows")
     @Expose
     private Long SrcSampleRows;
 
     /**
-    * 目标库行数，当对比类型为**行数对比**时此项有意义
+    * <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
     */
     @SerializedName("DstSampleRows")
     @Expose
     private Long DstSampleRows;
 
     /**
-    * 开始时间
+    * <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("StartedAt")
     @Expose
     private String StartedAt;
 
     /**
-    * 结束时间
+    * <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("FinishedAt")
     @Expose
     private String FinishedAt;
 
     /**
-     * Get 校验配置参数 
-     * @return Options 校验配置参数
+     * Get <p>校验配置参数</p> 
+     * @return Options <p>校验配置参数</p>
      */
     public CompareOptions getOptions() {
         return this.Options;
     }
 
     /**
-     * Set 校验配置参数
-     * @param Options 校验配置参数
+     * Set <p>校验配置参数</p>
+     * @param Options <p>校验配置参数</p>
      */
     public void setOptions(CompareOptions Options) {
         this.Options = Options;
     }
 
     /**
-     * Get 一致性校验对比对象 
-     * @return Objects 一致性校验对比对象
+     * Get <p>一致性校验对比对象</p> 
+     * @return Objects <p>一致性校验对比对象</p>
      */
     public CompareObject getObjects() {
         return this.Objects;
     }
 
     /**
-     * Set 一致性校验对比对象
-     * @param Objects 一致性校验对比对象
+     * Set <p>一致性校验对比对象</p>
+     * @param Objects <p>一致性校验对比对象</p>
      */
     public void setObjects(CompareObject Objects) {
         this.Objects = Objects;
     }
 
     /**
-     * Get 对比结论: same,different 
-     * @return Conclusion 对比结论: same,different
+     * Get <p>对比结论: same,different</p> 
+     * @return Conclusion <p>对比结论: same,different</p>
      */
     public String getConclusion() {
         return this.Conclusion;
     }
 
     /**
-     * Set 对比结论: same,different
-     * @param Conclusion 对比结论: same,different
+     * Set <p>对比结论: same,different</p>
+     * @param Conclusion <p>对比结论: same,different</p>
      */
     public void setConclusion(String Conclusion) {
         this.Conclusion = Conclusion;
     }
 
     /**
-     * Get 任务状态: success,failed 
-     * @return Status 任务状态: success,failed
+     * Get <p>任务状态: success,failed</p> 
+     * @return Status <p>任务状态: success,failed</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态: success,failed
-     * @param Status 任务状态: success,failed
+     * Set <p>任务状态: success,failed</p>
+     * @param Status <p>任务状态: success,failed</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 总的表数量 
-     * @return TotalTables 总的表数量
+     * Get <p>总的表数量</p> 
+     * @return TotalTables <p>总的表数量</p>
      */
     public Long getTotalTables() {
         return this.TotalTables;
     }
 
     /**
-     * Set 总的表数量
-     * @param TotalTables 总的表数量
+     * Set <p>总的表数量</p>
+     * @param TotalTables <p>总的表数量</p>
      */
     public void setTotalTables(Long TotalTables) {
         this.TotalTables = TotalTables;
     }
 
     /**
-     * Get 已校验的表数量 
-     * @return CheckedTables 已校验的表数量
+     * Get <p>已校验的表数量</p> 
+     * @return CheckedTables <p>已校验的表数量</p>
      */
     public Long getCheckedTables() {
         return this.CheckedTables;
     }
 
     /**
-     * Set 已校验的表数量
-     * @param CheckedTables 已校验的表数量
+     * Set <p>已校验的表数量</p>
+     * @param CheckedTables <p>已校验的表数量</p>
      */
     public void setCheckedTables(Long CheckedTables) {
         this.CheckedTables = CheckedTables;
     }
 
     /**
-     * Get 不一致的表数量 
-     * @return DifferentTables 不一致的表数量
+     * Get <p>不一致的表数量</p> 
+     * @return DifferentTables <p>不一致的表数量</p>
      */
     public Long getDifferentTables() {
         return this.DifferentTables;
     }
 
     /**
-     * Set 不一致的表数量
-     * @param DifferentTables 不一致的表数量
+     * Set <p>不一致的表数量</p>
+     * @param DifferentTables <p>不一致的表数量</p>
      */
     public void setDifferentTables(Long DifferentTables) {
         this.DifferentTables = DifferentTables;
     }
 
     /**
-     * Get 跳过校验的表数量 
-     * @return SkippedTables 跳过校验的表数量
+     * Get <p>跳过校验的表数量</p> 
+     * @return SkippedTables <p>跳过校验的表数量</p>
      */
     public Long getSkippedTables() {
         return this.SkippedTables;
     }
 
     /**
-     * Set 跳过校验的表数量
-     * @param SkippedTables 跳过校验的表数量
+     * Set <p>跳过校验的表数量</p>
+     * @param SkippedTables <p>跳过校验的表数量</p>
      */
     public void setSkippedTables(Long SkippedTables) {
         this.SkippedTables = SkippedTables;
     }
 
     /**
-     * Get 预估表总数 
-     * @return NearlyTableCount 预估表总数
+     * Get <p>预估表总数</p> 
+     * @return NearlyTableCount <p>预估表总数</p>
      */
     public Long getNearlyTableCount() {
         return this.NearlyTableCount;
     }
 
     /**
-     * Set 预估表总数
-     * @param NearlyTableCount 预估表总数
+     * Set <p>预估表总数</p>
+     * @param NearlyTableCount <p>预估表总数</p>
      */
     public void setNearlyTableCount(Long NearlyTableCount) {
         this.NearlyTableCount = NearlyTableCount;
     }
 
     /**
-     * Get 不一致的数据行数量 
-     * @return DifferentRows 不一致的数据行数量
+     * Get <p>不一致的数据行数量</p> 
+     * @return DifferentRows <p>不一致的数据行数量</p>
      */
     public Long getDifferentRows() {
         return this.DifferentRows;
     }
 
     /**
-     * Set 不一致的数据行数量
-     * @param DifferentRows 不一致的数据行数量
+     * Set <p>不一致的数据行数量</p>
+     * @param DifferentRows <p>不一致的数据行数量</p>
      */
     public void setDifferentRows(Long DifferentRows) {
         this.DifferentRows = DifferentRows;
     }
 
     /**
-     * Get 源库行数，当对比类型为**行数对比**时此项有意义 
-     * @return SrcSampleRows 源库行数，当对比类型为**行数对比**时此项有意义
+     * Get <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p> 
+     * @return SrcSampleRows <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
      */
     public Long getSrcSampleRows() {
         return this.SrcSampleRows;
     }
 
     /**
-     * Set 源库行数，当对比类型为**行数对比**时此项有意义
-     * @param SrcSampleRows 源库行数，当对比类型为**行数对比**时此项有意义
+     * Set <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+     * @param SrcSampleRows <p>源库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
      */
     public void setSrcSampleRows(Long SrcSampleRows) {
         this.SrcSampleRows = SrcSampleRows;
     }
 
     /**
-     * Get 目标库行数，当对比类型为**行数对比**时此项有意义 
-     * @return DstSampleRows 目标库行数，当对比类型为**行数对比**时此项有意义
+     * Get <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p> 
+     * @return DstSampleRows <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
      */
     public Long getDstSampleRows() {
         return this.DstSampleRows;
     }
 
     /**
-     * Set 目标库行数，当对比类型为**行数对比**时此项有意义
-     * @param DstSampleRows 目标库行数，当对比类型为**行数对比**时此项有意义
+     * Set <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
+     * @param DstSampleRows <p>目标库行数，当对比类型为<strong>行数对比</strong>时此项有意义</p>
      */
     public void setDstSampleRows(Long DstSampleRows) {
         this.DstSampleRows = DstSampleRows;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartedAt 开始时间
+     * Get <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return StartedAt <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getStartedAt() {
         return this.StartedAt;
     }
 
     /**
-     * Set 开始时间
-     * @param StartedAt 开始时间
+     * Set <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param StartedAt <p>开始时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setStartedAt(String StartedAt) {
         this.StartedAt = StartedAt;
     }
 
     /**
-     * Get 结束时间 
-     * @return FinishedAt 结束时间
+     * Get <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return FinishedAt <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getFinishedAt() {
         return this.FinishedAt;
     }
 
     /**
-     * Set 结束时间
-     * @param FinishedAt 结束时间
+     * Set <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param FinishedAt <p>结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setFinishedAt(String FinishedAt) {
         this.FinishedAt = FinishedAt;

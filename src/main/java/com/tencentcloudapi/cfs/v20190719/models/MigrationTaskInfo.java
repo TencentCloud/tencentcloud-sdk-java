@@ -94,7 +94,7 @@ public class MigrationTaskInfo extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * <p>文件系统路径</p>
+    * <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
     */
     @SerializedName("FsPath")
     @Expose
@@ -373,16 +373,16 @@ public class MigrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>文件系统路径</p> 
-     * @return FsPath <p>文件系统路径</p>
+     * Get <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p> 
+     * @return FsPath <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
      */
     public String getFsPath() {
         return this.FsPath;
     }
 
     /**
-     * Set <p>文件系统路径</p>
-     * @param FsPath <p>文件系统路径</p>
+     * Set <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
+     * @param FsPath <p>文件系统内目录路径，不涉及实际挂载子目录/根目录，无需以/cfs/作为前缀</p>
      */
     public void setFsPath(String FsPath) {
         this.FsPath = FsPath;

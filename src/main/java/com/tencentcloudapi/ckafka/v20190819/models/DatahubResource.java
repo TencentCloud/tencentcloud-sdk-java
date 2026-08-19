@@ -24,43 +24,14 @@ import java.util.HashMap;
 public class DatahubResource extends AbstractModel {
 
     /**
-    * 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
+    * <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * ckafka配置，Type为KAFKA时必填
+    * <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaParam")
@@ -68,7 +39,7 @@ SCF
     private KafkaParam KafkaParam;
 
     /**
-    * EB配置，Type为EB时必填
+    * <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventBusParam")
@@ -76,7 +47,7 @@ SCF
     private EventBusParam EventBusParam;
 
     /**
-    * MongoDB配置，Type为MONGODB时必填
+    * <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoDBParam")
@@ -84,7 +55,7 @@ SCF
     private MongoDBParam MongoDBParam;
 
     /**
-    * Es配置，Type为ES时必填
+    * <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsParam")
@@ -92,7 +63,7 @@ SCF
     private EsParam EsParam;
 
     /**
-    * Tdw配置，Type为TDW时必填
+    * <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TdwParam")
@@ -100,7 +71,7 @@ SCF
     private TdwParam TdwParam;
 
     /**
-    * Dts配置，Type为DTS时必填
+    * <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DtsParam")
@@ -108,7 +79,7 @@ SCF
     private DtsParam DtsParam;
 
     /**
-    * ClickHouse配置，Type为CLICKHOUSE时必填
+    * <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClickHouseParam")
@@ -116,7 +87,7 @@ SCF
     private ClickHouseParam ClickHouseParam;
 
     /**
-    * Cls配置，Type为CLS时必填
+    * <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClsParam")
@@ -124,7 +95,7 @@ SCF
     private ClsParam ClsParam;
 
     /**
-    * Cos配置，Type为COS时必填
+    * <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosParam")
@@ -132,7 +103,7 @@ SCF
     private CosParam CosParam;
 
     /**
-    * MySQL配置，Type为MYSQL时必填
+    * <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MySQLParam")
@@ -140,7 +111,7 @@ SCF
     private MySQLParam MySQLParam;
 
     /**
-    * PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+    * <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostgreSQLParam")
@@ -148,7 +119,7 @@ SCF
     private PostgreSQLParam PostgreSQLParam;
 
     /**
-    * Topic配置，Type为Topic时必填
+    * <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicParam")
@@ -156,7 +127,7 @@ SCF
     private TopicParam TopicParam;
 
     /**
-    * MariaDB配置，Type为MARIADB时必填
+    * <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MariaDBParam")
@@ -164,7 +135,7 @@ SCF
     private MariaDBParam MariaDBParam;
 
     /**
-    * SQLServer配置，Type为SQLSERVER时必填
+    * <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SQLServerParam")
@@ -172,7 +143,7 @@ SCF
     private SQLServerParam SQLServerParam;
 
     /**
-    * Ctsdb配置，Type为CTSDB时必填
+    * <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CtsdbParam")
@@ -180,7 +151,7 @@ SCF
     private CtsdbParam CtsdbParam;
 
     /**
-    * Scf配置，Type为SCF时必填
+    * <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScfParam")
@@ -188,7 +159,7 @@ SCF
     private ScfParam ScfParam;
 
     /**
-    * MQTT配置，Type为 MQTT 时必填
+    * <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MqttParam")
@@ -196,141 +167,32 @@ SCF
     private MqttParam MqttParam;
 
     /**
-     * Get 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
+    * <p>IceBerg配置</p>
+    */
+    @SerializedName("IcebergParam")
+    @Expose
+    private IcebergParam IcebergParam;
 
- 
-     * @return Type 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
+    /**
+     * Get <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p> 
+     * @return Type <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
-     * @param Type 资源类型  type类型如下: 
-KAFKA,
-EB_ES,
-EB_COS,
-EB_CLS,
-EB_,
-MONGODB,
-HTTP,
-TDW,
-ES,
-CLICKHOUSE,
-DTS,
-CLS,
-COS,
-TOPIC,
-MYSQL,
-MQTT,
-MYSQL_DATA,
-DORIS,
-POSTGRESQL,
-TDSQL_C_POSTGRESQL,
-TDSQL_POSTGRESQL,
-WAREHOUSE_POSTGRESQL,
-TDSQL_C_MYSQL,
-MARIADB,
-SQLSERVER,
-CTSDB,
-SCF
-
-
+     * Set <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
+     * @param Type <p>资源类型  type类型如下:<br>KAFKA,<br>EB_ES,<br>EB_COS,<br>EB_CLS,<br>EB_,<br>MONGODB,<br>HTTP,<br>TDW,<br>ES,<br>CLICKHOUSE,<br>DTS,<br>CLS,<br>COS,<br>TOPIC,<br>MYSQL,<br>MQTT,<br>MYSQL_DATA,<br>DORIS,<br>POSTGRESQL,<br>TDSQL_C_POSTGRESQL,<br>TDSQL_POSTGRESQL,<br>WAREHOUSE_POSTGRESQL,<br>TDSQL_C_MYSQL,<br>MARIADB,<br>SQLSERVER,<br>CTSDB,<br>SCF</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get ckafka配置，Type为KAFKA时必填
+     * Get <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KafkaParam ckafka配置，Type为KAFKA时必填
+     * @return KafkaParam <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KafkaParam getKafkaParam() {
@@ -338,9 +200,9 @@ SCF
     }
 
     /**
-     * Set ckafka配置，Type为KAFKA时必填
+     * Set <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaParam ckafka配置，Type为KAFKA时必填
+     * @param KafkaParam <p>ckafka配置，Type为KAFKA时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaParam(KafkaParam KafkaParam) {
@@ -348,9 +210,9 @@ SCF
     }
 
     /**
-     * Get EB配置，Type为EB时必填
+     * Get <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventBusParam EB配置，Type为EB时必填
+     * @return EventBusParam <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventBusParam getEventBusParam() {
@@ -358,9 +220,9 @@ SCF
     }
 
     /**
-     * Set EB配置，Type为EB时必填
+     * Set <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventBusParam EB配置，Type为EB时必填
+     * @param EventBusParam <p>EB配置，Type为EB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventBusParam(EventBusParam EventBusParam) {
@@ -368,9 +230,9 @@ SCF
     }
 
     /**
-     * Get MongoDB配置，Type为MONGODB时必填
+     * Get <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MongoDBParam MongoDB配置，Type为MONGODB时必填
+     * @return MongoDBParam <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBParam getMongoDBParam() {
@@ -378,9 +240,9 @@ SCF
     }
 
     /**
-     * Set MongoDB配置，Type为MONGODB时必填
+     * Set <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MongoDBParam MongoDB配置，Type为MONGODB时必填
+     * @param MongoDBParam <p>MongoDB配置，Type为MONGODB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoDBParam(MongoDBParam MongoDBParam) {
@@ -388,9 +250,9 @@ SCF
     }
 
     /**
-     * Get Es配置，Type为ES时必填
+     * Get <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsParam Es配置，Type为ES时必填
+     * @return EsParam <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EsParam getEsParam() {
@@ -398,9 +260,9 @@ SCF
     }
 
     /**
-     * Set Es配置，Type为ES时必填
+     * Set <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsParam Es配置，Type为ES时必填
+     * @param EsParam <p>Es配置，Type为ES时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsParam(EsParam EsParam) {
@@ -408,9 +270,9 @@ SCF
     }
 
     /**
-     * Get Tdw配置，Type为TDW时必填
+     * Get <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TdwParam Tdw配置，Type为TDW时必填
+     * @return TdwParam <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TdwParam getTdwParam() {
@@ -418,9 +280,9 @@ SCF
     }
 
     /**
-     * Set Tdw配置，Type为TDW时必填
+     * Set <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TdwParam Tdw配置，Type为TDW时必填
+     * @param TdwParam <p>Tdw配置，Type为TDW时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTdwParam(TdwParam TdwParam) {
@@ -428,9 +290,9 @@ SCF
     }
 
     /**
-     * Get Dts配置，Type为DTS时必填
+     * Get <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DtsParam Dts配置，Type为DTS时必填
+     * @return DtsParam <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DtsParam getDtsParam() {
@@ -438,9 +300,9 @@ SCF
     }
 
     /**
-     * Set Dts配置，Type为DTS时必填
+     * Set <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DtsParam Dts配置，Type为DTS时必填
+     * @param DtsParam <p>Dts配置，Type为DTS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDtsParam(DtsParam DtsParam) {
@@ -448,9 +310,9 @@ SCF
     }
 
     /**
-     * Get ClickHouse配置，Type为CLICKHOUSE时必填
+     * Get <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClickHouseParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * @return ClickHouseParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClickHouseParam getClickHouseParam() {
@@ -458,9 +320,9 @@ SCF
     }
 
     /**
-     * Set ClickHouse配置，Type为CLICKHOUSE时必填
+     * Set <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClickHouseParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * @param ClickHouseParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClickHouseParam(ClickHouseParam ClickHouseParam) {
@@ -468,9 +330,9 @@ SCF
     }
 
     /**
-     * Get Cls配置，Type为CLS时必填
+     * Get <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClsParam Cls配置，Type为CLS时必填
+     * @return ClsParam <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClsParam getClsParam() {
@@ -478,9 +340,9 @@ SCF
     }
 
     /**
-     * Set Cls配置，Type为CLS时必填
+     * Set <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClsParam Cls配置，Type为CLS时必填
+     * @param ClsParam <p>Cls配置，Type为CLS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClsParam(ClsParam ClsParam) {
@@ -488,9 +350,9 @@ SCF
     }
 
     /**
-     * Get Cos配置，Type为COS时必填
+     * Get <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosParam Cos配置，Type为COS时必填
+     * @return CosParam <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosParam getCosParam() {
@@ -498,9 +360,9 @@ SCF
     }
 
     /**
-     * Set Cos配置，Type为COS时必填
+     * Set <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosParam Cos配置，Type为COS时必填
+     * @param CosParam <p>Cos配置，Type为COS时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosParam(CosParam CosParam) {
@@ -508,9 +370,9 @@ SCF
     }
 
     /**
-     * Get MySQL配置，Type为MYSQL时必填
+     * Get <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MySQLParam MySQL配置，Type为MYSQL时必填
+     * @return MySQLParam <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MySQLParam getMySQLParam() {
@@ -518,9 +380,9 @@ SCF
     }
 
     /**
-     * Set MySQL配置，Type为MYSQL时必填
+     * Set <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MySQLParam MySQL配置，Type为MYSQL时必填
+     * @param MySQLParam <p>MySQL配置，Type为MYSQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMySQLParam(MySQLParam MySQLParam) {
@@ -528,9 +390,9 @@ SCF
     }
 
     /**
-     * Get PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * Get <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostgreSQLParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @return PostgreSQLParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostgreSQLParam getPostgreSQLParam() {
@@ -538,9 +400,9 @@ SCF
     }
 
     /**
-     * Set PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * Set <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostgreSQLParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * @param PostgreSQLParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostgreSQLParam(PostgreSQLParam PostgreSQLParam) {
@@ -548,9 +410,9 @@ SCF
     }
 
     /**
-     * Get Topic配置，Type为Topic时必填
+     * Get <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicParam Topic配置，Type为Topic时必填
+     * @return TopicParam <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicParam getTopicParam() {
@@ -558,9 +420,9 @@ SCF
     }
 
     /**
-     * Set Topic配置，Type为Topic时必填
+     * Set <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicParam Topic配置，Type为Topic时必填
+     * @param TopicParam <p>Topic配置，Type为Topic时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicParam(TopicParam TopicParam) {
@@ -568,9 +430,9 @@ SCF
     }
 
     /**
-     * Get MariaDB配置，Type为MARIADB时必填
+     * Get <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MariaDBParam MariaDB配置，Type为MARIADB时必填
+     * @return MariaDBParam <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MariaDBParam getMariaDBParam() {
@@ -578,9 +440,9 @@ SCF
     }
 
     /**
-     * Set MariaDB配置，Type为MARIADB时必填
+     * Set <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MariaDBParam MariaDB配置，Type为MARIADB时必填
+     * @param MariaDBParam <p>MariaDB配置，Type为MARIADB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMariaDBParam(MariaDBParam MariaDBParam) {
@@ -588,9 +450,9 @@ SCF
     }
 
     /**
-     * Get SQLServer配置，Type为SQLSERVER时必填
+     * Get <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SQLServerParam SQLServer配置，Type为SQLSERVER时必填
+     * @return SQLServerParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SQLServerParam getSQLServerParam() {
@@ -598,9 +460,9 @@ SCF
     }
 
     /**
-     * Set SQLServer配置，Type为SQLSERVER时必填
+     * Set <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SQLServerParam SQLServer配置，Type为SQLSERVER时必填
+     * @param SQLServerParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSQLServerParam(SQLServerParam SQLServerParam) {
@@ -608,9 +470,9 @@ SCF
     }
 
     /**
-     * Get Ctsdb配置，Type为CTSDB时必填
+     * Get <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CtsdbParam Ctsdb配置，Type为CTSDB时必填
+     * @return CtsdbParam <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CtsdbParam getCtsdbParam() {
@@ -618,9 +480,9 @@ SCF
     }
 
     /**
-     * Set Ctsdb配置，Type为CTSDB时必填
+     * Set <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CtsdbParam Ctsdb配置，Type为CTSDB时必填
+     * @param CtsdbParam <p>Ctsdb配置，Type为CTSDB时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCtsdbParam(CtsdbParam CtsdbParam) {
@@ -628,9 +490,9 @@ SCF
     }
 
     /**
-     * Get Scf配置，Type为SCF时必填
+     * Get <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScfParam Scf配置，Type为SCF时必填
+     * @return ScfParam <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScfParam getScfParam() {
@@ -638,9 +500,9 @@ SCF
     }
 
     /**
-     * Set Scf配置，Type为SCF时必填
+     * Set <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScfParam Scf配置，Type为SCF时必填
+     * @param ScfParam <p>Scf配置，Type为SCF时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScfParam(ScfParam ScfParam) {
@@ -648,9 +510,9 @@ SCF
     }
 
     /**
-     * Get MQTT配置，Type为 MQTT 时必填
+     * Get <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MqttParam MQTT配置，Type为 MQTT 时必填
+     * @return MqttParam <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MqttParam getMqttParam() {
@@ -658,13 +520,29 @@ SCF
     }
 
     /**
-     * Set MQTT配置，Type为 MQTT 时必填
+     * Set <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MqttParam MQTT配置，Type为 MQTT 时必填
+     * @param MqttParam <p>MQTT配置，Type为 MQTT 时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMqttParam(MqttParam MqttParam) {
         this.MqttParam = MqttParam;
+    }
+
+    /**
+     * Get <p>IceBerg配置</p> 
+     * @return IcebergParam <p>IceBerg配置</p>
+     */
+    public IcebergParam getIcebergParam() {
+        return this.IcebergParam;
+    }
+
+    /**
+     * Set <p>IceBerg配置</p>
+     * @param IcebergParam <p>IceBerg配置</p>
+     */
+    public void setIcebergParam(IcebergParam IcebergParam) {
+        this.IcebergParam = IcebergParam;
     }
 
     public DatahubResource() {
@@ -729,6 +607,9 @@ SCF
         if (source.MqttParam != null) {
             this.MqttParam = new MqttParam(source.MqttParam);
         }
+        if (source.IcebergParam != null) {
+            this.IcebergParam = new IcebergParam(source.IcebergParam);
+        }
     }
 
 
@@ -754,6 +635,7 @@ SCF
         this.setParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
         this.setParamObj(map, prefix + "ScfParam.", this.ScfParam);
         this.setParamObj(map, prefix + "MqttParam.", this.MqttParam);
+        this.setParamObj(map, prefix + "IcebergParam.", this.IcebergParam);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDatasetsResponse extends AbstractModel {
 
     /**
-    * 数据集总量（名称维度）
+    * <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -32,7 +32,7 @@ public class DescribeDatasetsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 数据集按照数据集名称聚合的分组
+    * <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasetGroups")
@@ -40,7 +40,7 @@ public class DescribeDatasetsResponse extends AbstractModel {
     private DatasetGroup [] DatasetGroups;
 
     /**
-    * 数据集ID总量
+    * <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasetIdNums")
@@ -48,7 +48,7 @@ public class DescribeDatasetsResponse extends AbstractModel {
     private Long DatasetIdNums;
 
     /**
-    * 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+    * <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
     */
     @SerializedName("CFSNotReady")
     @Expose
@@ -62,9 +62,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据集总量（名称维度）
+     * Get <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 数据集总量（名称维度）
+     * @return TotalCount <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -72,9 +72,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据集总量（名称维度）
+     * Set <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 数据集总量（名称维度）
+     * @param TotalCount <p>数据集总量（名称维度）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -82,9 +82,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据集按照数据集名称聚合的分组
+     * Get <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasetGroups 数据集按照数据集名称聚合的分组
+     * @return DatasetGroups <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatasetGroup [] getDatasetGroups() {
@@ -92,9 +92,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据集按照数据集名称聚合的分组
+     * Set <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasetGroups 数据集按照数据集名称聚合的分组
+     * @param DatasetGroups <p>数据集按照数据集名称聚合的分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasetGroups(DatasetGroup [] DatasetGroups) {
@@ -102,9 +102,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据集ID总量
+     * Get <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasetIdNums 数据集ID总量
+     * @return DatasetIdNums <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatasetIdNums() {
@@ -112,9 +112,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据集ID总量
+     * Set <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasetIdNums 数据集ID总量
+     * @param DatasetIdNums <p>数据集ID总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasetIdNums(Long DatasetIdNums) {
@@ -122,16 +122,16 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
-     * Get 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。 
-     * @return CFSNotReady 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     * Get <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p> 
+     * @return CFSNotReady <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
      */
     public Boolean getCFSNotReady() {
         return this.CFSNotReady;
     }
 
     /**
-     * Set 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
-     * @param CFSNotReady 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     * Set <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
+     * @param CFSNotReady <p>若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。</p>
      */
     public void setCFSNotReady(Boolean CFSNotReady) {
         this.CFSNotReady = CFSNotReady;

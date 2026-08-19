@@ -24,326 +24,279 @@ import java.util.HashMap;
 public class ListTWeSeeTasksRequest extends AbstractModel {
 
     /**
-    * 产品 ID
+    * <p>产品 ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+    * <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
     */
     @SerializedName("ServiceCategory")
     @Expose
     private String ServiceCategory;
 
     /**
-    * 分页拉取数量
+    * <p>分页拉取数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页拉取偏移
+    * <p>分页拉取偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
+    * <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
     */
     @SerializedName("ServiceTypes")
     @Expose
     private String [] ServiceTypes;
 
     /**
-    * 通道 ID
+    * <p>通道 ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private Long ChannelId;
 
     /**
-    * 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+    * <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
     */
     @SerializedName("StartTimeMs")
     @Expose
     private Long StartTimeMs;
 
     /**
-    * 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+    * <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
     */
     @SerializedName("EndTimeMs")
     @Expose
     private Long EndTimeMs;
 
     /**
-    * 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
+    * <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+    * <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
     */
     @SerializedName("FileURLExpireTime")
     @Expose
     private Long FileURLExpireTime;
 
     /**
-     * Get 产品 ID 
-     * @return ProductId 产品 ID
+    * <p>任务结果过滤条件</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private VisionRecognitionTaskFilter [] Filters;
+
+    /**
+     * Get <p>产品 ID</p> 
+     * @return ProductId <p>产品 ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品 ID
-     * @param ProductId 产品 ID
+     * Set <p>产品 ID</p>
+     * @param ProductId <p>产品 ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩 
-     * @return ServiceCategory 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+     * Get <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul> 
+     * @return ServiceCategory <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
 
     /**
-     * Set 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
-     * @param ServiceCategory 算法类目。可选值：
-- `COMPREHENSION`：视觉理解
-- `HIGHLIGHT`：视频浓缩
+     * Set <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param ServiceCategory <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
     }
 
     /**
-     * Get 分页拉取数量 
-     * @return Limit 分页拉取数量
+     * Get <p>分页拉取数量</p> 
+     * @return Limit <p>分页拉取数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页拉取数量
-     * @param Limit 分页拉取数量
+     * Set <p>分页拉取数量</p>
+     * @param Limit <p>分页拉取数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页拉取偏移 
-     * @return Offset 分页拉取偏移
+     * Get <p>分页拉取偏移</p> 
+     * @return Offset <p>分页拉取偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页拉取偏移
-     * @param Offset 分页拉取偏移
+     * Set <p>分页拉取偏移</p>
+     * @param Offset <p>分页拉取偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩 
-     * @return ServiceTypes 算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
+     * Get <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul> 
+     * @return ServiceTypes <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public String [] getServiceTypes() {
         return this.ServiceTypes;
     }
 
     /**
-     * Set 算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
-     * @param ServiceTypes 算法类型。
-
-当 ServiceCategory 为 `COMPREHENSION` 时，可选值包括：
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-- `CONT_PERSON_MOTIONLESS`：静姿检测
-
-当 ServiceCategory 为 `HIGHLIGHT` 时，可选值包括：
-- `COMP_HIGHLIGHT`：视频浓缩
+     * Set <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * @param ServiceTypes <p>算法类型。</p><p>当 ServiceCategory 为 <code>COMPREHENSION</code> 时，可选值包括：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>CONT_PERSON_MOTIONLESS</code>：静姿检测</li></ul><p>当 ServiceCategory 为 <code>HIGHLIGHT</code> 时，可选值包括：</p><ul><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
      */
     public void setServiceTypes(String [] ServiceTypes) {
         this.ServiceTypes = ServiceTypes;
     }
 
     /**
-     * Get 通道 ID 
-     * @return ChannelId 通道 ID
+     * Get <p>通道 ID</p> 
+     * @return ChannelId <p>通道 ID</p>
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道 ID
-     * @param ChannelId 通道 ID
+     * Set <p>通道 ID</p>
+     * @param ChannelId <p>通道 ID</p>
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。 
-     * @return StartTimeMs 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+     * Get <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p> 
+     * @return StartTimeMs <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      */
     public Long getStartTimeMs() {
         return this.StartTimeMs;
     }
 
     /**
-     * Set 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
-     * @param StartTimeMs 查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+     * Set <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+     * @param StartTimeMs <p>查询任务时间范围的起始时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      */
     public void setStartTimeMs(Long StartTimeMs) {
         this.StartTimeMs = StartTimeMs;
     }
 
     /**
-     * Get 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。 
-     * @return EndTimeMs 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+     * Get <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p> 
+     * @return EndTimeMs <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      */
     public Long getEndTimeMs() {
         return this.EndTimeMs;
     }
 
     /**
-     * Set 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
-     * @param EndTimeMs 查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。
+     * Set <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
+     * @param EndTimeMs <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      */
     public void setEndTimeMs(Long EndTimeMs) {
         this.EndTimeMs = EndTimeMs;
     }
 
     /**
-     * Get 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果 
-     * @return Status 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
+     * Get <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul> 
+     * @return Status <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-     * @param Status 要查询的任务的状态条件。不传则不按照状态过滤，可选值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
+     * Set <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
+     * @param Status <p>要查询的任务的状态条件。不传则不按照状态过滤，可选值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL 
-     * @return FileURLExpireTime 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     * Get <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p> 
+     * @return FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
      */
     public Long getFileURLExpireTime() {
         return this.FileURLExpireTime;
     }
 
     /**
-     * Set 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
-     * @param FileURLExpireTime 下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL
+     * Set <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
+     * @param FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
      */
     public void setFileURLExpireTime(Long FileURLExpireTime) {
         this.FileURLExpireTime = FileURLExpireTime;
+    }
+
+    /**
+     * Get <p>任务结果过滤条件</p> 
+     * @return Filters <p>任务结果过滤条件</p>
+     */
+    public VisionRecognitionTaskFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>任务结果过滤条件</p>
+     * @param Filters <p>任务结果过滤条件</p>
+     */
+    public void setFilters(VisionRecognitionTaskFilter [] Filters) {
+        this.Filters = Filters;
     }
 
     public ListTWeSeeTasksRequest() {
@@ -390,6 +343,12 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
         if (source.FileURLExpireTime != null) {
             this.FileURLExpireTime = new Long(source.FileURLExpireTime);
         }
+        if (source.Filters != null) {
+            this.Filters = new VisionRecognitionTaskFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new VisionRecognitionTaskFilter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -408,6 +367,7 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

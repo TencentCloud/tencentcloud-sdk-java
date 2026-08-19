@@ -24,376 +24,299 @@ import java.util.HashMap;
 public class ModifyAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+    * <p>通知渠道组ID。-通过<a href="https://cloud.tencent.com/document/api/614/56462">获取通知渠道组列表</a>获取通知渠道组ID</p>
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
+    * <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 通知渠道组名称。
+    * <p>通知渠道组名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 通知类型。可选值：
-<li> Trigger - 告警触发</li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
+    * <p>通知类型。可选值：</p><li> Trigger - 告警触发</li><li> Recovery - 告警恢复</li><li> All - 告警触发和告警恢复</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 通知接收对象。
+    * <p>通知接收对象。</p>
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * 接口回调信息（包括企业微信等）。
+    * <p>接口回调信息（包括企业微信等）。</p>
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-    * 通知规则。
-
-注意: 
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
-- 传其中一组数据，则另一组数据置空。
+    * <p>通知规则。</p><p>注意: </p><ul><li>Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。</li><li>传其中一组数据，则另一组数据置空。</li></ul>
     */
     @SerializedName("NoticeRules")
     @Expose
     private NoticeRule [] NoticeRules;
 
     /**
-    * 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+    * <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
     */
     @SerializedName("JumpDomain")
     @Expose
     private String JumpDomain;
 
     /**
-    * 投递日志开关。
-
-参数值：
-1：关闭；
-
-2：开启 
-
+    * <p>投递日志开关。</p><p>参数值：<br>1：关闭；</p><p>2：开启</p>
     */
     @SerializedName("DeliverStatus")
     @Expose
     private Long DeliverStatus;
 
     /**
-    * 投递日志配置。
+    * <p>投递日志配置。</p>
     */
     @SerializedName("DeliverConfig")
     @Expose
     private DeliverConfig DeliverConfig;
 
     /**
-    * 免登录操作告警开关。
-
-参数值： 
-        1：关闭
-        2：开启（默认开启）
+    * <p>免登录操作告警开关。</p><p>参数值：<br>        1：关闭<br>        2：开启（默认开启）</p>
     */
     @SerializedName("AlarmShieldStatus")
     @Expose
     private Long AlarmShieldStatus;
 
     /**
-    * 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+    * <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+    */
+    @SerializedName("SecureDetailStatus")
+    @Expose
+    private Long SecureDetailStatus;
+
+    /**
+    * <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
     */
     @SerializedName("CallbackPrioritize")
     @Expose
     private Boolean CallbackPrioritize;
 
     /**
-     * Get 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID 
-     * @return AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+     * Get <p>通知渠道组ID。-通过<a href="https://cloud.tencent.com/document/api/614/56462">获取通知渠道组列表</a>获取通知渠道组ID</p> 
+     * @return AlarmNoticeId <p>通知渠道组ID。-通过<a href="https://cloud.tencent.com/document/api/614/56462">获取通知渠道组列表</a>获取通知渠道组ID</p>
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
-     * @param AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+     * Set <p>通知渠道组ID。-通过<a href="https://cloud.tencent.com/document/api/614/56462">获取通知渠道组列表</a>获取通知渠道组ID</p>
+     * @param AlarmNoticeId <p>通知渠道组ID。-通过<a href="https://cloud.tencent.com/document/api/614/56462">获取通知渠道组列表</a>获取通知渠道组ID</p>
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。 
-     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Get <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。</p> 
+     * @return Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Set <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+     * @param Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 通知渠道组名称。 
-     * @return Name 通知渠道组名称。
+     * Get <p>通知渠道组名称。</p> 
+     * @return Name <p>通知渠道组名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 通知渠道组名称。
-     * @param Name 通知渠道组名称。
+     * Set <p>通知渠道组名称。</p>
+     * @param Name <p>通知渠道组名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 通知类型。可选值：
-<li> Trigger - 告警触发</li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li> 
-     * @return Type 通知类型。可选值：
-<li> Trigger - 告警触发</li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
+     * Get <p>通知类型。可选值：</p><li> Trigger - 告警触发</li><li> Recovery - 告警恢复</li><li> All - 告警触发和告警恢复</li> 
+     * @return Type <p>通知类型。可选值：</p><li> Trigger - 告警触发</li><li> Recovery - 告警恢复</li><li> All - 告警触发和告警恢复</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 通知类型。可选值：
-<li> Trigger - 告警触发</li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
-     * @param Type 通知类型。可选值：
-<li> Trigger - 告警触发</li>
-<li> Recovery - 告警恢复</li>
-<li> All - 告警触发和告警恢复</li>
+     * Set <p>通知类型。可选值：</p><li> Trigger - 告警触发</li><li> Recovery - 告警恢复</li><li> All - 告警触发和告警恢复</li>
+     * @param Type <p>通知类型。可选值：</p><li> Trigger - 告警触发</li><li> Recovery - 告警恢复</li><li> All - 告警触发和告警恢复</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 通知接收对象。 
-     * @return NoticeReceivers 通知接收对象。
+     * Get <p>通知接收对象。</p> 
+     * @return NoticeReceivers <p>通知接收对象。</p>
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set 通知接收对象。
-     * @param NoticeReceivers 通知接收对象。
+     * Set <p>通知接收对象。</p>
+     * @param NoticeReceivers <p>通知接收对象。</p>
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 接口回调信息（包括企业微信等）。 
-     * @return WebCallbacks 接口回调信息（包括企业微信等）。
+     * Get <p>接口回调信息（包括企业微信等）。</p> 
+     * @return WebCallbacks <p>接口回调信息（包括企业微信等）。</p>
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set 接口回调信息（包括企业微信等）。
-     * @param WebCallbacks 接口回调信息（包括企业微信等）。
+     * Set <p>接口回调信息（包括企业微信等）。</p>
+     * @param WebCallbacks <p>接口回调信息（包括企业微信等）。</p>
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get 通知规则。
-
-注意: 
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
-- 传其中一组数据，则另一组数据置空。 
-     * @return NoticeRules 通知规则。
-
-注意: 
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
-- 传其中一组数据，则另一组数据置空。
+     * Get <p>通知规则。</p><p>注意: </p><ul><li>Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。</li><li>传其中一组数据，则另一组数据置空。</li></ul> 
+     * @return NoticeRules <p>通知规则。</p><p>注意: </p><ul><li>Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。</li><li>传其中一组数据，则另一组数据置空。</li></ul>
      */
     public NoticeRule [] getNoticeRules() {
         return this.NoticeRules;
     }
 
     /**
-     * Set 通知规则。
-
-注意: 
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
-- 传其中一组数据，则另一组数据置空。
-     * @param NoticeRules 通知规则。
-
-注意: 
-
-- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
-- 传其中一组数据，则另一组数据置空。
+     * Set <p>通知规则。</p><p>注意: </p><ul><li>Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。</li><li>传其中一组数据，则另一组数据置空。</li></ul>
+     * @param NoticeRules <p>通知规则。</p><p>注意: </p><ul><li>Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。</li><li>传其中一组数据，则另一组数据置空。</li></ul>
      */
     public void setNoticeRules(NoticeRule [] NoticeRules) {
         this.NoticeRules = NoticeRules;
     }
 
     /**
-     * Get 调用链接域名。http:// 或者 https:// 开头，不能/结尾 
-     * @return JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     * Get <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p> 
+     * @return JumpDomain <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public String getJumpDomain() {
         return this.JumpDomain;
     }
 
     /**
-     * Set 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-     * @param JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     * Set <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
+     * @param JumpDomain <p>调用链接域名。http:// 或者 https:// 开头，不能/结尾</p>
      */
     public void setJumpDomain(String JumpDomain) {
         this.JumpDomain = JumpDomain;
     }
 
     /**
-     * Get 投递日志开关。
-
-参数值：
-1：关闭；
-
-2：开启 
- 
-     * @return DeliverStatus 投递日志开关。
-
-参数值：
-1：关闭；
-
-2：开启 
-
+     * Get <p>投递日志开关。</p><p>参数值：<br>1：关闭；</p><p>2：开启</p> 
+     * @return DeliverStatus <p>投递日志开关。</p><p>参数值：<br>1：关闭；</p><p>2：开启</p>
      */
     public Long getDeliverStatus() {
         return this.DeliverStatus;
     }
 
     /**
-     * Set 投递日志开关。
-
-参数值：
-1：关闭；
-
-2：开启 
-
-     * @param DeliverStatus 投递日志开关。
-
-参数值：
-1：关闭；
-
-2：开启 
-
+     * Set <p>投递日志开关。</p><p>参数值：<br>1：关闭；</p><p>2：开启</p>
+     * @param DeliverStatus <p>投递日志开关。</p><p>参数值：<br>1：关闭；</p><p>2：开启</p>
      */
     public void setDeliverStatus(Long DeliverStatus) {
         this.DeliverStatus = DeliverStatus;
     }
 
     /**
-     * Get 投递日志配置。 
-     * @return DeliverConfig 投递日志配置。
+     * Get <p>投递日志配置。</p> 
+     * @return DeliverConfig <p>投递日志配置。</p>
      */
     public DeliverConfig getDeliverConfig() {
         return this.DeliverConfig;
     }
 
     /**
-     * Set 投递日志配置。
-     * @param DeliverConfig 投递日志配置。
+     * Set <p>投递日志配置。</p>
+     * @param DeliverConfig <p>投递日志配置。</p>
      */
     public void setDeliverConfig(DeliverConfig DeliverConfig) {
         this.DeliverConfig = DeliverConfig;
     }
 
     /**
-     * Get 免登录操作告警开关。
-
-参数值： 
-        1：关闭
-        2：开启（默认开启） 
-     * @return AlarmShieldStatus 免登录操作告警开关。
-
-参数值： 
-        1：关闭
-        2：开启（默认开启）
+     * Get <p>免登录操作告警开关。</p><p>参数值：<br>        1：关闭<br>        2：开启（默认开启）</p> 
+     * @return AlarmShieldStatus <p>免登录操作告警开关。</p><p>参数值：<br>        1：关闭<br>        2：开启（默认开启）</p>
      */
     public Long getAlarmShieldStatus() {
         return this.AlarmShieldStatus;
     }
 
     /**
-     * Set 免登录操作告警开关。
-
-参数值： 
-        1：关闭
-        2：开启（默认开启）
-     * @param AlarmShieldStatus 免登录操作告警开关。
-
-参数值： 
-        1：关闭
-        2：开启（默认开启）
+     * Set <p>免登录操作告警开关。</p><p>参数值：<br>        1：关闭<br>        2：开启（默认开启）</p>
+     * @param AlarmShieldStatus <p>免登录操作告警开关。</p><p>参数值：<br>        1：关闭<br>        2：开启（默认开启）</p>
      */
     public void setAlarmShieldStatus(Long AlarmShieldStatus) {
         this.AlarmShieldStatus = AlarmShieldStatus;
     }
 
     /**
-     * Get 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。 
-     * @return CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * Get <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul> 
+     * @return SecureDetailStatus <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public Long getSecureDetailStatus() {
+        return this.SecureDetailStatus;
+    }
+
+    /**
+     * Set <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     * @param SecureDetailStatus <p>告警详情安全认证跳转开关，未传时默认&quot;关闭&quot;</p><p>枚举值：</p><ul><li>1： 关闭（默认值）</li><li>2： 开启</li></ul>
+     */
+    public void setSecureDetailStatus(Long SecureDetailStatus) {
+        this.SecureDetailStatus = SecureDetailStatus;
+    }
+
+    /**
+     * Get <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul> 
+     * @return CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public Boolean getCallbackPrioritize() {
         return this.CallbackPrioritize;
     }
 
     /**
-     * Set 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
-     * @param CallbackPrioritize 统一设定自定义回调参数。
--  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
--  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * Set <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
+     * @param CallbackPrioritize <p>统一设定自定义回调参数。</p><ul><li>true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。</li><li>false:优先使用告警策略中单独配置的请求头及请求内容。</li></ul>
      */
     public void setCallbackPrioritize(Boolean CallbackPrioritize) {
         this.CallbackPrioritize = CallbackPrioritize;
@@ -452,6 +375,9 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
         if (source.AlarmShieldStatus != null) {
             this.AlarmShieldStatus = new Long(source.AlarmShieldStatus);
         }
+        if (source.SecureDetailStatus != null) {
+            this.SecureDetailStatus = new Long(source.SecureDetailStatus);
+        }
         if (source.CallbackPrioritize != null) {
             this.CallbackPrioritize = new Boolean(source.CallbackPrioritize);
         }
@@ -473,6 +399,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
         this.setParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
         this.setParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+        this.setParamSimple(map, prefix + "SecureDetailStatus", this.SecureDetailStatus);
         this.setParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
 
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
 
     /**
-    * 风险面列表
+    * <p>风险面列表</p>
     */
     @SerializedName("RiskSideItmeList")
     @Expose
     private Note [] RiskSideItmeList;
 
     /**
-    * 风险面列表
+    * <p>风险面列表</p>
     */
     @SerializedName("RiskSideItemList")
     @Expose
@@ -45,8 +45,8 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 风险面列表 
-     * @return RiskSideItmeList 风险面列表
+     * Get <p>风险面列表</p> 
+     * @return RiskSideItmeList <p>风险面列表</p>
      * @deprecated
      */
     @Deprecated
@@ -55,8 +55,8 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
     }
 
     /**
-     * Set 风险面列表
-     * @param RiskSideItmeList 风险面列表
+     * Set <p>风险面列表</p>
+     * @param RiskSideItmeList <p>风险面列表</p>
      * @deprecated
      */
     @Deprecated
@@ -65,16 +65,16 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
     }
 
     /**
-     * Get 风险面列表 
-     * @return RiskSideItemList 风险面列表
+     * Get <p>风险面列表</p> 
+     * @return RiskSideItemList <p>风险面列表</p>
      */
     public Note [] getRiskSideItemList() {
         return this.RiskSideItemList;
     }
 
     /**
-     * Set 风险面列表
-     * @param RiskSideItemList 风险面列表
+     * Set <p>风险面列表</p>
+     * @param RiskSideItemList <p>风险面列表</p>
      */
     public void setRiskSideItemList(Note [] RiskSideItemList) {
         this.RiskSideItemList = RiskSideItemList;

@@ -24,917 +24,455 @@ import java.util.HashMap;
 public class CreateFlowOption extends AbstractModel {
 
     /**
-    * 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
+    * <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p>
     */
     @SerializedName("CanEditFlow")
     @Expose
     private Boolean CanEditFlow;
 
     /**
-    * 是否允许编辑模板控件
-<br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息（默认值）
-<br/>
+    * <p>是否允许编辑模板控件<br><br>true:允许编辑模板控件信息<br><br>false:不允许编辑模板控件信息（默认值）<br><br></p>
     */
     @SerializedName("CanEditFormField")
     @Expose
     private Boolean CanEditFormField;
 
     /**
-    * 发起页面隐藏合同名称展示
-<br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示（默认值）
-<br/>
+    * <p>发起页面隐藏合同名称展示<br><br>true:发起页面隐藏合同名称展示<br><br>false:发起页面不隐藏合同名称展示（默认值）<br><br></p>
     */
     @SerializedName("HideShowFlowName")
     @Expose
     private Boolean HideShowFlowName;
 
     /**
-    * 发起页面隐藏合同类型展示
-<br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示（默认值）
-<br/>
-
+    * <p>发起页面隐藏合同类型展示<br><br>true:发起页面隐藏合同类型展示<br><br>false:发起页面不隐藏合同类型展示（默认值）<br><br></p>
     */
     @SerializedName("HideShowFlowType")
     @Expose
     private Boolean HideShowFlowType;
 
     /**
-    * 发起页面隐藏合同截止日期展示
-<br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示（默认值）
-<br/>
+    * <p>发起页面隐藏合同截止日期展示<br><br>true:发起页面隐藏合同截止日期展示<br><br>false:发起页面不隐藏合同截止日期展示（默认值）<br><br></p>
     */
     @SerializedName("HideShowDeadline")
     @Expose
     private Boolean HideShowDeadline;
 
     /**
-    * 发起页面允许跳过添加签署人环节
-<br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节（默认值）
-<br/>
-
+    * <p>发起页面允许跳过添加签署人环节<br><br>true:发起页面允许跳过添加签署人环节<br><br>false:发起页面不允许跳过添加签署人环节（默认值）<br><br></p>
     */
     @SerializedName("CanSkipAddApprover")
     @Expose
     private Boolean CanSkipAddApprover;
 
     /**
-    * 文件发起页面跳过文件上传步骤
-<br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤（默认值）
-<br/>
+    * <p>文件发起页面跳过文件上传步骤<br><br>true:文件发起页面跳过文件上传步骤<br><br>false:文件发起页面不跳过文件上传步骤（默认值）<br><br></p>
     */
     @SerializedName("SkipUploadFile")
     @Expose
     private Boolean SkipUploadFile;
 
     /**
-    * 禁止编辑填写控件
-<br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件（默认值）
-<br/>
+    * <p>禁止编辑填写控件<br><br>true:禁止编辑填写控件<br><br>false:允许编辑填写控件（默认值）<br><br></p>
     */
     @SerializedName("ForbidEditFillComponent")
     @Expose
     private Boolean ForbidEditFillComponent;
 
     /**
-    * 定制化发起合同弹窗的描述信息，描述信息最长500字符
-
+    * <p>定制化发起合同弹窗的描述信息，描述信息最长500字符</p>
     */
     @SerializedName("CustomCreateFlowDescription")
     @Expose
     private String CustomCreateFlowDescription;
 
     /**
-    *  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
-
+    * <p>禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”</p>
     */
     @SerializedName("ForbidAddApprover")
     @Expose
     private Boolean ForbidAddApprover;
 
     /**
-    * 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
-
-注意：如果设置参数为  true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+    * <p>是否可以编辑签署人包括新增，修改，删除 </p><ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul><p>注意：如果设置参数为  true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空</p>
     */
     @SerializedName("ForbidEditApprover")
     @Expose
     private Boolean ForbidEditApprover;
 
     /**
-    *   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
-
+    * <p>禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板</p>
     */
     @SerializedName("ForbidEditFlowProperties")
     @Expose
     private Boolean ForbidEditFlowProperties;
 
     /**
-    * 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
+    * <p>在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
     */
     @SerializedName("HideComponentTypes")
     @Expose
     private String [] HideComponentTypes;
 
     /**
-    * 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
+    * <p>在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
     */
     @SerializedName("ShowComponentTypes")
     @Expose
     private String [] ShowComponentTypes;
 
     /**
-    * 发起流程的可嵌入页面结果页配置
+    * <p>发起流程的可嵌入页面结果页配置</p>
     */
     @SerializedName("ResultPageConfig")
     @Expose
     private CreateResultPageConfig [] ResultPageConfig;
 
     /**
-    * 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
- - 签署控件 是否默认展示日期.
+    * <p>签署控件的配置信息，用在嵌入式发起的页面配置，包括 </p><ul><li>签署控件 是否默认展示日期.</li></ul>
     */
     @SerializedName("SignComponentConfig")
     @Expose
     private SignComponentConfig SignComponentConfig;
 
     /**
-    * 是否禁止编辑（展示）水印控件属性
-<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+    * <p>是否禁止编辑（展示）水印控件属性</p><ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
     */
     @SerializedName("ForbidEditWatermark")
     @Expose
     private Boolean ForbidEditWatermark;
 
     /**
-    * 隐藏操作指引: 具体的控件类型如下
-
-<ul><li>1 : 操作指引入口</li>
-<li>2 : 操作文档</li>
-<li>3 : 操作视频</li>
-</ul>
-注：仅对新版页面生效
+    * <p>隐藏操作指引: 具体的控件类型如下</p><ul><li>1 : 操作指引入口</li><li>2 : 操作文档</li><li>3 : 操作视频</li></ul>注：仅对新版页面生效
     */
     @SerializedName("HideOperationInstructions")
     @Expose
     private Long [] HideOperationInstructions;
 
     /**
-    * 隐藏操作步骤: 具体的控件类型如下
-
-<ul><li>1 : 选择文件及签署方</li>
-<li>2 : 补充文件内容</li>
-<li>4 : 发起前合同信息与设置确认</li>
-</ul>
-注：仅对新版页面生效
+    * <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
     */
     @SerializedName("HideOperationSteps")
     @Expose
     private Long [] HideOperationSteps;
 
     /**
-    * 本企业简称，注：仅对新版页面生效
+    * <p>本企业简称，注：仅对新版页面生效</p>
     */
     @SerializedName("SelfName")
     @Expose
     private String SelfName;
 
     /**
-    * 发起后签署码隐藏，默认false，注：仅对新版页面生效
+    * <p>发起后签署码隐藏，默认false，注：仅对新版页面生效</p>
     */
     @SerializedName("HideSignCodeAfterStart")
     @Expose
     private Boolean HideSignCodeAfterStart;
 
     /**
-    * 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+    * <p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p>
     */
     @SerializedName("PreviewAfterStart")
     @Expose
     private Boolean PreviewAfterStart;
 
     /**
-    * 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+    * <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
     */
     @SerializedName("SignAfterStart")
     @Expose
     private Boolean SignAfterStart;
 
     /**
-    * 发起过程中是否保存草稿
+    * <p>发起过程中是否保存草稿</p>
     */
     @SerializedName("NeedFlowDraft")
     @Expose
     private Boolean NeedFlowDraft;
 
     /**
-     * Get 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/> 
-     * @return CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
+    * <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("CcInfoVisibility")
+    @Expose
+    private Long CcInfoVisibility;
+
+    /**
+     * Get <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p> 
+     * @return CanEditFlow <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p>
      */
     public Boolean getCanEditFlow() {
         return this.CanEditFlow;
     }
 
     /**
-     * Set 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
-     * @param CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
+     * Set <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p>
+     * @param CanEditFlow <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p>
      */
     public void setCanEditFlow(Boolean CanEditFlow) {
         this.CanEditFlow = CanEditFlow;
     }
 
     /**
-     * Get 是否允许编辑模板控件
-<br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息（默认值）
-<br/> 
-     * @return CanEditFormField 是否允许编辑模板控件
-<br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息（默认值）
-<br/>
+     * Get <p>是否允许编辑模板控件<br><br>true:允许编辑模板控件信息<br><br>false:不允许编辑模板控件信息（默认值）<br><br></p> 
+     * @return CanEditFormField <p>是否允许编辑模板控件<br><br>true:允许编辑模板控件信息<br><br>false:不允许编辑模板控件信息（默认值）<br><br></p>
      */
     public Boolean getCanEditFormField() {
         return this.CanEditFormField;
     }
 
     /**
-     * Set 是否允许编辑模板控件
-<br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息（默认值）
-<br/>
-     * @param CanEditFormField 是否允许编辑模板控件
-<br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息（默认值）
-<br/>
+     * Set <p>是否允许编辑模板控件<br><br>true:允许编辑模板控件信息<br><br>false:不允许编辑模板控件信息（默认值）<br><br></p>
+     * @param CanEditFormField <p>是否允许编辑模板控件<br><br>true:允许编辑模板控件信息<br><br>false:不允许编辑模板控件信息（默认值）<br><br></p>
      */
     public void setCanEditFormField(Boolean CanEditFormField) {
         this.CanEditFormField = CanEditFormField;
     }
 
     /**
-     * Get 发起页面隐藏合同名称展示
-<br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示（默认值）
-<br/> 
-     * @return HideShowFlowName 发起页面隐藏合同名称展示
-<br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示（默认值）
-<br/>
+     * Get <p>发起页面隐藏合同名称展示<br><br>true:发起页面隐藏合同名称展示<br><br>false:发起页面不隐藏合同名称展示（默认值）<br><br></p> 
+     * @return HideShowFlowName <p>发起页面隐藏合同名称展示<br><br>true:发起页面隐藏合同名称展示<br><br>false:发起页面不隐藏合同名称展示（默认值）<br><br></p>
      */
     public Boolean getHideShowFlowName() {
         return this.HideShowFlowName;
     }
 
     /**
-     * Set 发起页面隐藏合同名称展示
-<br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示（默认值）
-<br/>
-     * @param HideShowFlowName 发起页面隐藏合同名称展示
-<br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示（默认值）
-<br/>
+     * Set <p>发起页面隐藏合同名称展示<br><br>true:发起页面隐藏合同名称展示<br><br>false:发起页面不隐藏合同名称展示（默认值）<br><br></p>
+     * @param HideShowFlowName <p>发起页面隐藏合同名称展示<br><br>true:发起页面隐藏合同名称展示<br><br>false:发起页面不隐藏合同名称展示（默认值）<br><br></p>
      */
     public void setHideShowFlowName(Boolean HideShowFlowName) {
         this.HideShowFlowName = HideShowFlowName;
     }
 
     /**
-     * Get 发起页面隐藏合同类型展示
-<br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示（默认值）
-<br/>
- 
-     * @return HideShowFlowType 发起页面隐藏合同类型展示
-<br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示（默认值）
-<br/>
-
+     * Get <p>发起页面隐藏合同类型展示<br><br>true:发起页面隐藏合同类型展示<br><br>false:发起页面不隐藏合同类型展示（默认值）<br><br></p> 
+     * @return HideShowFlowType <p>发起页面隐藏合同类型展示<br><br>true:发起页面隐藏合同类型展示<br><br>false:发起页面不隐藏合同类型展示（默认值）<br><br></p>
      */
     public Boolean getHideShowFlowType() {
         return this.HideShowFlowType;
     }
 
     /**
-     * Set 发起页面隐藏合同类型展示
-<br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示（默认值）
-<br/>
-
-     * @param HideShowFlowType 发起页面隐藏合同类型展示
-<br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示（默认值）
-<br/>
-
+     * Set <p>发起页面隐藏合同类型展示<br><br>true:发起页面隐藏合同类型展示<br><br>false:发起页面不隐藏合同类型展示（默认值）<br><br></p>
+     * @param HideShowFlowType <p>发起页面隐藏合同类型展示<br><br>true:发起页面隐藏合同类型展示<br><br>false:发起页面不隐藏合同类型展示（默认值）<br><br></p>
      */
     public void setHideShowFlowType(Boolean HideShowFlowType) {
         this.HideShowFlowType = HideShowFlowType;
     }
 
     /**
-     * Get 发起页面隐藏合同截止日期展示
-<br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示（默认值）
-<br/> 
-     * @return HideShowDeadline 发起页面隐藏合同截止日期展示
-<br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示（默认值）
-<br/>
+     * Get <p>发起页面隐藏合同截止日期展示<br><br>true:发起页面隐藏合同截止日期展示<br><br>false:发起页面不隐藏合同截止日期展示（默认值）<br><br></p> 
+     * @return HideShowDeadline <p>发起页面隐藏合同截止日期展示<br><br>true:发起页面隐藏合同截止日期展示<br><br>false:发起页面不隐藏合同截止日期展示（默认值）<br><br></p>
      */
     public Boolean getHideShowDeadline() {
         return this.HideShowDeadline;
     }
 
     /**
-     * Set 发起页面隐藏合同截止日期展示
-<br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示（默认值）
-<br/>
-     * @param HideShowDeadline 发起页面隐藏合同截止日期展示
-<br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示（默认值）
-<br/>
+     * Set <p>发起页面隐藏合同截止日期展示<br><br>true:发起页面隐藏合同截止日期展示<br><br>false:发起页面不隐藏合同截止日期展示（默认值）<br><br></p>
+     * @param HideShowDeadline <p>发起页面隐藏合同截止日期展示<br><br>true:发起页面隐藏合同截止日期展示<br><br>false:发起页面不隐藏合同截止日期展示（默认值）<br><br></p>
      */
     public void setHideShowDeadline(Boolean HideShowDeadline) {
         this.HideShowDeadline = HideShowDeadline;
     }
 
     /**
-     * Get 发起页面允许跳过添加签署人环节
-<br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节（默认值）
-<br/>
- 
-     * @return CanSkipAddApprover 发起页面允许跳过添加签署人环节
-<br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节（默认值）
-<br/>
-
+     * Get <p>发起页面允许跳过添加签署人环节<br><br>true:发起页面允许跳过添加签署人环节<br><br>false:发起页面不允许跳过添加签署人环节（默认值）<br><br></p> 
+     * @return CanSkipAddApprover <p>发起页面允许跳过添加签署人环节<br><br>true:发起页面允许跳过添加签署人环节<br><br>false:发起页面不允许跳过添加签署人环节（默认值）<br><br></p>
      */
     public Boolean getCanSkipAddApprover() {
         return this.CanSkipAddApprover;
     }
 
     /**
-     * Set 发起页面允许跳过添加签署人环节
-<br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节（默认值）
-<br/>
-
-     * @param CanSkipAddApprover 发起页面允许跳过添加签署人环节
-<br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节（默认值）
-<br/>
-
+     * Set <p>发起页面允许跳过添加签署人环节<br><br>true:发起页面允许跳过添加签署人环节<br><br>false:发起页面不允许跳过添加签署人环节（默认值）<br><br></p>
+     * @param CanSkipAddApprover <p>发起页面允许跳过添加签署人环节<br><br>true:发起页面允许跳过添加签署人环节<br><br>false:发起页面不允许跳过添加签署人环节（默认值）<br><br></p>
      */
     public void setCanSkipAddApprover(Boolean CanSkipAddApprover) {
         this.CanSkipAddApprover = CanSkipAddApprover;
     }
 
     /**
-     * Get 文件发起页面跳过文件上传步骤
-<br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤（默认值）
-<br/> 
-     * @return SkipUploadFile 文件发起页面跳过文件上传步骤
-<br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤（默认值）
-<br/>
+     * Get <p>文件发起页面跳过文件上传步骤<br><br>true:文件发起页面跳过文件上传步骤<br><br>false:文件发起页面不跳过文件上传步骤（默认值）<br><br></p> 
+     * @return SkipUploadFile <p>文件发起页面跳过文件上传步骤<br><br>true:文件发起页面跳过文件上传步骤<br><br>false:文件发起页面不跳过文件上传步骤（默认值）<br><br></p>
      */
     public Boolean getSkipUploadFile() {
         return this.SkipUploadFile;
     }
 
     /**
-     * Set 文件发起页面跳过文件上传步骤
-<br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤（默认值）
-<br/>
-     * @param SkipUploadFile 文件发起页面跳过文件上传步骤
-<br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤（默认值）
-<br/>
+     * Set <p>文件发起页面跳过文件上传步骤<br><br>true:文件发起页面跳过文件上传步骤<br><br>false:文件发起页面不跳过文件上传步骤（默认值）<br><br></p>
+     * @param SkipUploadFile <p>文件发起页面跳过文件上传步骤<br><br>true:文件发起页面跳过文件上传步骤<br><br>false:文件发起页面不跳过文件上传步骤（默认值）<br><br></p>
      */
     public void setSkipUploadFile(Boolean SkipUploadFile) {
         this.SkipUploadFile = SkipUploadFile;
     }
 
     /**
-     * Get 禁止编辑填写控件
-<br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件（默认值）
-<br/> 
-     * @return ForbidEditFillComponent 禁止编辑填写控件
-<br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件（默认值）
-<br/>
+     * Get <p>禁止编辑填写控件<br><br>true:禁止编辑填写控件<br><br>false:允许编辑填写控件（默认值）<br><br></p> 
+     * @return ForbidEditFillComponent <p>禁止编辑填写控件<br><br>true:禁止编辑填写控件<br><br>false:允许编辑填写控件（默认值）<br><br></p>
      */
     public Boolean getForbidEditFillComponent() {
         return this.ForbidEditFillComponent;
     }
 
     /**
-     * Set 禁止编辑填写控件
-<br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件（默认值）
-<br/>
-     * @param ForbidEditFillComponent 禁止编辑填写控件
-<br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件（默认值）
-<br/>
+     * Set <p>禁止编辑填写控件<br><br>true:禁止编辑填写控件<br><br>false:允许编辑填写控件（默认值）<br><br></p>
+     * @param ForbidEditFillComponent <p>禁止编辑填写控件<br><br>true:禁止编辑填写控件<br><br>false:允许编辑填写控件（默认值）<br><br></p>
      */
     public void setForbidEditFillComponent(Boolean ForbidEditFillComponent) {
         this.ForbidEditFillComponent = ForbidEditFillComponent;
     }
 
     /**
-     * Get 定制化发起合同弹窗的描述信息，描述信息最长500字符
- 
-     * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500字符
-
+     * Get <p>定制化发起合同弹窗的描述信息，描述信息最长500字符</p> 
+     * @return CustomCreateFlowDescription <p>定制化发起合同弹窗的描述信息，描述信息最长500字符</p>
      */
     public String getCustomCreateFlowDescription() {
         return this.CustomCreateFlowDescription;
     }
 
     /**
-     * Set 定制化发起合同弹窗的描述信息，描述信息最长500字符
-
-     * @param CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500字符
-
+     * Set <p>定制化发起合同弹窗的描述信息，描述信息最长500字符</p>
+     * @param CustomCreateFlowDescription <p>定制化发起合同弹窗的描述信息，描述信息最长500字符</p>
      */
     public void setCustomCreateFlowDescription(String CustomCreateFlowDescription) {
         this.CustomCreateFlowDescription = CustomCreateFlowDescription;
     }
 
     /**
-     * Get  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
- 
-     * @return ForbidAddApprover  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
-
+     * Get <p>禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”</p> 
+     * @return ForbidAddApprover <p>禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”</p>
      */
     public Boolean getForbidAddApprover() {
         return this.ForbidAddApprover;
     }
 
     /**
-     * Set  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
-
-     * @param ForbidAddApprover  禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
-
+     * Set <p>禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”</p>
+     * @param ForbidAddApprover <p>禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”</p>
      */
     public void setForbidAddApprover(Boolean ForbidAddApprover) {
         this.ForbidAddApprover = ForbidAddApprover;
     }
 
     /**
-     * Get 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
-
-注意：如果设置参数为  true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空 
-     * @return ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
-
-注意：如果设置参数为  true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     * Get <p>是否可以编辑签署人包括新增，修改，删除 </p><ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul><p>注意：如果设置参数为  true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空</p> 
+     * @return ForbidEditApprover <p>是否可以编辑签署人包括新增，修改，删除 </p><ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul><p>注意：如果设置参数为  true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空</p>
      */
     public Boolean getForbidEditApprover() {
         return this.ForbidEditApprover;
     }
 
     /**
-     * Set 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
-
-注意：如果设置参数为  true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
-     * @param ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
-<ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
-
-注意：如果设置参数为  true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+     * Set <p>是否可以编辑签署人包括新增，修改，删除 </p><ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul><p>注意：如果设置参数为  true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空</p>
+     * @param ForbidEditApprover <p>是否可以编辑签署人包括新增，修改，删除 </p><ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul><p>注意：如果设置参数为  true， 则 参数签署人 <a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">FlowApproverList</a> 不能为空</p>
      */
     public void setForbidEditApprover(Boolean ForbidEditApprover) {
         this.ForbidEditApprover = ForbidEditApprover;
     }
 
     /**
-     * Get   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
- 
-     * @return ForbidEditFlowProperties   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
-
+     * Get <p>禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板</p> 
+     * @return ForbidEditFlowProperties <p>禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板</p>
      */
     public Boolean getForbidEditFlowProperties() {
         return this.ForbidEditFlowProperties;
     }
 
     /**
-     * Set   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
-
-     * @param ForbidEditFlowProperties   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
-
+     * Set <p>禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板</p>
+     * @param ForbidEditFlowProperties <p>禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板</p>
      */
     public void setForbidEditFlowProperties(Boolean ForbidEditFlowProperties) {
         this.ForbidEditFlowProperties = ForbidEditFlowProperties;
     }
 
     /**
-     * Get 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul> 
-     * @return HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
+     * Get <p>在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul> 
+     * @return HideComponentTypes <p>在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
      */
     public String [] getHideComponentTypes() {
         return this.HideComponentTypes;
     }
 
     /**
-     * Set 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
-     * @param HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
+     * Set <p>在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
+     * @param HideComponentTypes <p>在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
      */
     public void setHideComponentTypes(String [] HideComponentTypes) {
         this.HideComponentTypes = HideComponentTypes;
     }
 
     /**
-     * Get 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul> 
-     * @return ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
+     * Get <p>在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul> 
+     * @return ShowComponentTypes <p>在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
      */
     public String [] getShowComponentTypes() {
         return this.ShowComponentTypes;
     }
 
     /**
-     * Set 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
-     * @param ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
-<font color='red'>空数组代表未指定</font>），具体的控件类型如下
-<ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
-<li>SIGN_SEAL : 企业印章</li>
-<li>SIGN_PAGING_SEAL : 骑缝章</li>
-<li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
-<li>SIGN_APPROVE : 签批</li>
-<li>SIGN_OPINION : 签署意见</li>
-<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
-<li>BUSI-FULL-NAME  : 企业全称</li>
-<li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
-<li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
-<li>PERSONAL-NAME : 签署人姓名</li>
-<li>PERSONAL-MOBILE : 签署人手机号</li>
-<li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
-<li>PERSONAL-IDCARD : 签署人证件号</li>
-<li>TEXT : 单行文本</li>
-<li>MULTI_LINE_TEXT : 多行文本</li>
-<li>CHECK_BOX : 勾选框</li>
-<li>SELECTOR : 选择器</li>
-<li>DIGIT : 数字</li>
-<li>DATE : 日期</li>
-<li>FILL_IMAGE : 图片</li>
-<li>ATTACHMENT : 附件</li>
-<li>EMAIL : 邮箱</li>
-<li>LOCATION : 地址</li>
-<li>EDUCATION : 学历</li>
-<li>GENDER : 性别</li>
-<li>DISTRICT : 省市区</li></ul>
+     * Set <p>在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
+     * @param ShowComponentTypes <p>在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注:<br><font color="red">空数组代表未指定</font>），具体的控件类型如下</p><ul><li>SIGN_SIGNATURE : 个人签名/印章</li><li>SIGN_SEAL : 企业印章</li><li>SIGN_PAGING_SEAL : 骑缝章</li><li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li><li>SIGN_APPROVE : 签批</li><li>SIGN_OPINION : 签署意见</li><li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li><li>BUSI-FULL-NAME  : 企业全称</li><li>BUSI-CREDIT-CODE : 统一社会信用代码</li><li>BUSI-LEGAL-NAME : 法人/经营者姓名</li><li>PERSONAL-NAME : 签署人姓名</li><li>PERSONAL-MOBILE : 签署人手机号</li><li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li><li>PERSONAL-IDCARD : 签署人证件号</li><li>TEXT : 单行文本</li><li>MULTI_LINE_TEXT : 多行文本</li><li>CHECK_BOX : 勾选框</li><li>SELECTOR : 选择器</li><li>DIGIT : 数字</li><li>DATE : 日期</li><li>FILL_IMAGE : 图片</li><li>ATTACHMENT : 附件</li><li>EMAIL : 邮箱</li><li>LOCATION : 地址</li><li>EDUCATION : 学历</li><li>GENDER : 性别</li><li>DISTRICT : 省市区</li></ul>
      */
     public void setShowComponentTypes(String [] ShowComponentTypes) {
         this.ShowComponentTypes = ShowComponentTypes;
     }
 
     /**
-     * Get 发起流程的可嵌入页面结果页配置 
-     * @return ResultPageConfig 发起流程的可嵌入页面结果页配置
+     * Get <p>发起流程的可嵌入页面结果页配置</p> 
+     * @return ResultPageConfig <p>发起流程的可嵌入页面结果页配置</p>
      */
     public CreateResultPageConfig [] getResultPageConfig() {
         return this.ResultPageConfig;
     }
 
     /**
-     * Set 发起流程的可嵌入页面结果页配置
-     * @param ResultPageConfig 发起流程的可嵌入页面结果页配置
+     * Set <p>发起流程的可嵌入页面结果页配置</p>
+     * @param ResultPageConfig <p>发起流程的可嵌入页面结果页配置</p>
      */
     public void setResultPageConfig(CreateResultPageConfig [] ResultPageConfig) {
         this.ResultPageConfig = ResultPageConfig;
     }
 
     /**
-     * Get 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
- - 签署控件 是否默认展示日期. 
-     * @return SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
- - 签署控件 是否默认展示日期.
+     * Get <p>签署控件的配置信息，用在嵌入式发起的页面配置，包括 </p><ul><li>签署控件 是否默认展示日期.</li></ul> 
+     * @return SignComponentConfig <p>签署控件的配置信息，用在嵌入式发起的页面配置，包括 </p><ul><li>签署控件 是否默认展示日期.</li></ul>
      */
     public SignComponentConfig getSignComponentConfig() {
         return this.SignComponentConfig;
     }
 
     /**
-     * Set 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
- - 签署控件 是否默认展示日期.
-     * @param SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
- - 签署控件 是否默认展示日期.
+     * Set <p>签署控件的配置信息，用在嵌入式发起的页面配置，包括 </p><ul><li>签署控件 是否默认展示日期.</li></ul>
+     * @param SignComponentConfig <p>签署控件的配置信息，用在嵌入式发起的页面配置，包括 </p><ul><li>签署控件 是否默认展示日期.</li></ul>
      */
     public void setSignComponentConfig(SignComponentConfig SignComponentConfig) {
         this.SignComponentConfig = SignComponentConfig;
     }
 
     /**
-     * Get 是否禁止编辑（展示）水印控件属性
-<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul> 
-     * @return ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
-<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * Get <p>是否禁止编辑（展示）水印控件属性</p><ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul> 
+     * @return ForbidEditWatermark <p>是否禁止编辑（展示）水印控件属性</p><ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     public Boolean getForbidEditWatermark() {
         return this.ForbidEditWatermark;
     }
 
     /**
-     * Set 是否禁止编辑（展示）水印控件属性
-<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
-     * @param ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
-<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * Set <p>是否禁止编辑（展示）水印控件属性</p><ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param ForbidEditWatermark <p>是否禁止编辑（展示）水印控件属性</p><ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     public void setForbidEditWatermark(Boolean ForbidEditWatermark) {
         this.ForbidEditWatermark = ForbidEditWatermark;
     }
 
     /**
-     * Get 隐藏操作指引: 具体的控件类型如下
-
-<ul><li>1 : 操作指引入口</li>
-<li>2 : 操作文档</li>
-<li>3 : 操作视频</li>
-</ul>
-注：仅对新版页面生效 
-     * @return HideOperationInstructions 隐藏操作指引: 具体的控件类型如下
-
-<ul><li>1 : 操作指引入口</li>
-<li>2 : 操作文档</li>
-<li>3 : 操作视频</li>
-</ul>
-注：仅对新版页面生效
+     * Get <p>隐藏操作指引: 具体的控件类型如下</p><ul><li>1 : 操作指引入口</li><li>2 : 操作文档</li><li>3 : 操作视频</li></ul>注：仅对新版页面生效 
+     * @return HideOperationInstructions <p>隐藏操作指引: 具体的控件类型如下</p><ul><li>1 : 操作指引入口</li><li>2 : 操作文档</li><li>3 : 操作视频</li></ul>注：仅对新版页面生效
      * @deprecated
      */
     @Deprecated
@@ -943,20 +481,8 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Set 隐藏操作指引: 具体的控件类型如下
-
-<ul><li>1 : 操作指引入口</li>
-<li>2 : 操作文档</li>
-<li>3 : 操作视频</li>
-</ul>
-注：仅对新版页面生效
-     * @param HideOperationInstructions 隐藏操作指引: 具体的控件类型如下
-
-<ul><li>1 : 操作指引入口</li>
-<li>2 : 操作文档</li>
-<li>3 : 操作视频</li>
-</ul>
-注：仅对新版页面生效
+     * Set <p>隐藏操作指引: 具体的控件类型如下</p><ul><li>1 : 操作指引入口</li><li>2 : 操作文档</li><li>3 : 操作视频</li></ul>注：仅对新版页面生效
+     * @param HideOperationInstructions <p>隐藏操作指引: 具体的控件类型如下</p><ul><li>1 : 操作指引入口</li><li>2 : 操作文档</li><li>3 : 操作视频</li></ul>注：仅对新版页面生效
      * @deprecated
      */
     @Deprecated
@@ -965,123 +491,115 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get 隐藏操作步骤: 具体的控件类型如下
-
-<ul><li>1 : 选择文件及签署方</li>
-<li>2 : 补充文件内容</li>
-<li>4 : 发起前合同信息与设置确认</li>
-</ul>
-注：仅对新版页面生效 
-     * @return HideOperationSteps 隐藏操作步骤: 具体的控件类型如下
-
-<ul><li>1 : 选择文件及签署方</li>
-<li>2 : 补充文件内容</li>
-<li>4 : 发起前合同信息与设置确认</li>
-</ul>
-注：仅对新版页面生效
+     * Get <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效 
+     * @return HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
      */
     public Long [] getHideOperationSteps() {
         return this.HideOperationSteps;
     }
 
     /**
-     * Set 隐藏操作步骤: 具体的控件类型如下
-
-<ul><li>1 : 选择文件及签署方</li>
-<li>2 : 补充文件内容</li>
-<li>4 : 发起前合同信息与设置确认</li>
-</ul>
-注：仅对新版页面生效
-     * @param HideOperationSteps 隐藏操作步骤: 具体的控件类型如下
-
-<ul><li>1 : 选择文件及签署方</li>
-<li>2 : 补充文件内容</li>
-<li>4 : 发起前合同信息与设置确认</li>
-</ul>
-注：仅对新版页面生效
+     * Set <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     * @param HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
      */
     public void setHideOperationSteps(Long [] HideOperationSteps) {
         this.HideOperationSteps = HideOperationSteps;
     }
 
     /**
-     * Get 本企业简称，注：仅对新版页面生效 
-     * @return SelfName 本企业简称，注：仅对新版页面生效
+     * Get <p>本企业简称，注：仅对新版页面生效</p> 
+     * @return SelfName <p>本企业简称，注：仅对新版页面生效</p>
      */
     public String getSelfName() {
         return this.SelfName;
     }
 
     /**
-     * Set 本企业简称，注：仅对新版页面生效
-     * @param SelfName 本企业简称，注：仅对新版页面生效
+     * Set <p>本企业简称，注：仅对新版页面生效</p>
+     * @param SelfName <p>本企业简称，注：仅对新版页面生效</p>
      */
     public void setSelfName(String SelfName) {
         this.SelfName = SelfName;
     }
 
     /**
-     * Get 发起后签署码隐藏，默认false，注：仅对新版页面生效 
-     * @return HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     * Get <p>发起后签署码隐藏，默认false，注：仅对新版页面生效</p> 
+     * @return HideSignCodeAfterStart <p>发起后签署码隐藏，默认false，注：仅对新版页面生效</p>
      */
     public Boolean getHideSignCodeAfterStart() {
         return this.HideSignCodeAfterStart;
     }
 
     /**
-     * Set 发起后签署码隐藏，默认false，注：仅对新版页面生效
-     * @param HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     * Set <p>发起后签署码隐藏，默认false，注：仅对新版页面生效</p>
+     * @param HideSignCodeAfterStart <p>发起后签署码隐藏，默认false，注：仅对新版页面生效</p>
      */
     public void setHideSignCodeAfterStart(Boolean HideSignCodeAfterStart) {
         this.HideSignCodeAfterStart = HideSignCodeAfterStart;
     }
 
     /**
-     * Get 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	 
-     * @return PreviewAfterStart 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+     * Get <p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p> 
+     * @return PreviewAfterStart <p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p>
      */
     public Boolean getPreviewAfterStart() {
         return this.PreviewAfterStart;
     }
 
     /**
-     * Set 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
-     * @param PreviewAfterStart 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+     * Set <p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p>
+     * @param PreviewAfterStart <p>发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul></p>
      */
     public void setPreviewAfterStart(Boolean PreviewAfterStart) {
         this.PreviewAfterStart = PreviewAfterStart;
     }
 
     /**
-     * Get 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	 
-     * @return SignAfterStart 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+     * Get <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p> 
+     * @return SignAfterStart <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
      */
     public Boolean getSignAfterStart() {
         return this.SignAfterStart;
     }
 
     /**
-     * Set 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
-     * @param SignAfterStart 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+     * Set <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
+     * @param SignAfterStart <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
      */
     public void setSignAfterStart(Boolean SignAfterStart) {
         this.SignAfterStart = SignAfterStart;
     }
 
     /**
-     * Get 发起过程中是否保存草稿 
-     * @return NeedFlowDraft 发起过程中是否保存草稿
+     * Get <p>发起过程中是否保存草稿</p> 
+     * @return NeedFlowDraft <p>发起过程中是否保存草稿</p>
      */
     public Boolean getNeedFlowDraft() {
         return this.NeedFlowDraft;
     }
 
     /**
-     * Set 发起过程中是否保存草稿
-     * @param NeedFlowDraft 发起过程中是否保存草稿
+     * Set <p>发起过程中是否保存草稿</p>
+     * @param NeedFlowDraft <p>发起过程中是否保存草稿</p>
      */
     public void setNeedFlowDraft(Boolean NeedFlowDraft) {
         this.NeedFlowDraft = NeedFlowDraft;
+    }
+
+    /**
+     * Get <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p> 
+     * @return CcInfoVisibility <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
+     */
+    public Long getCcInfoVisibility() {
+        return this.CcInfoVisibility;
+    }
+
+    /**
+     * Set <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
+     * @param CcInfoVisibility <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
+     */
+    public void setCcInfoVisibility(Long CcInfoVisibility) {
+        this.CcInfoVisibility = CcInfoVisibility;
     }
 
     public CreateFlowOption() {
@@ -1179,6 +697,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.NeedFlowDraft != null) {
             this.NeedFlowDraft = new Boolean(source.NeedFlowDraft);
         }
+        if (source.CcInfoVisibility != null) {
+            this.CcInfoVisibility = new Long(source.CcInfoVisibility);
+        }
     }
 
 
@@ -1210,6 +731,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
         this.setParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
         this.setParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
+        this.setParamSimple(map, prefix + "CcInfoVisibility", this.CcInfoVisibility);
 
     }
 }

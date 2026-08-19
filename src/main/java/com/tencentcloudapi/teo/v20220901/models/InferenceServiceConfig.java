@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class InferenceServiceConfig extends AbstractModel {
 
     /**
-    * 模型服务需要监听的端口。
+    * <p>模型服务需要监听的端口。</p>
     */
     @SerializedName("ListenPort")
     @Expose
     private Long ListenPort;
 
     /**
-    * 推理服务的请求路径列表。
+    * <p>推理服务的请求路径列表。</p>
     */
     @SerializedName("RequestPaths")
     @Expose
     private String [] RequestPaths;
 
     /**
-    * 推理服务的容器配置。
+    * <p>推理服务的容器配置。</p>
     */
     @SerializedName("Containers")
     @Expose
     private InferenceContainerConfig [] Containers;
 
     /**
-    * 推理服务的资源配置。
+    * <p>推理服务的资源配置。</p>
     */
     @SerializedName("ResourceConfig")
     @Expose
     private InferenceResourceConfig ResourceConfig;
 
     /**
-     * Get 模型服务需要监听的端口。 
-     * @return ListenPort 模型服务需要监听的端口。
+    * <p>推理服务亲和性配置。</p>
+    */
+    @SerializedName("AffinityConfig")
+    @Expose
+    private InferenceAffinityConfig AffinityConfig;
+
+    /**
+     * Get <p>模型服务需要监听的端口。</p> 
+     * @return ListenPort <p>模型服务需要监听的端口。</p>
      */
     public Long getListenPort() {
         return this.ListenPort;
     }
 
     /**
-     * Set 模型服务需要监听的端口。
-     * @param ListenPort 模型服务需要监听的端口。
+     * Set <p>模型服务需要监听的端口。</p>
+     * @param ListenPort <p>模型服务需要监听的端口。</p>
      */
     public void setListenPort(Long ListenPort) {
         this.ListenPort = ListenPort;
     }
 
     /**
-     * Get 推理服务的请求路径列表。 
-     * @return RequestPaths 推理服务的请求路径列表。
+     * Get <p>推理服务的请求路径列表。</p> 
+     * @return RequestPaths <p>推理服务的请求路径列表。</p>
      */
     public String [] getRequestPaths() {
         return this.RequestPaths;
     }
 
     /**
-     * Set 推理服务的请求路径列表。
-     * @param RequestPaths 推理服务的请求路径列表。
+     * Set <p>推理服务的请求路径列表。</p>
+     * @param RequestPaths <p>推理服务的请求路径列表。</p>
      */
     public void setRequestPaths(String [] RequestPaths) {
         this.RequestPaths = RequestPaths;
     }
 
     /**
-     * Get 推理服务的容器配置。 
-     * @return Containers 推理服务的容器配置。
+     * Get <p>推理服务的容器配置。</p> 
+     * @return Containers <p>推理服务的容器配置。</p>
      */
     public InferenceContainerConfig [] getContainers() {
         return this.Containers;
     }
 
     /**
-     * Set 推理服务的容器配置。
-     * @param Containers 推理服务的容器配置。
+     * Set <p>推理服务的容器配置。</p>
+     * @param Containers <p>推理服务的容器配置。</p>
      */
     public void setContainers(InferenceContainerConfig [] Containers) {
         this.Containers = Containers;
     }
 
     /**
-     * Get 推理服务的资源配置。 
-     * @return ResourceConfig 推理服务的资源配置。
+     * Get <p>推理服务的资源配置。</p> 
+     * @return ResourceConfig <p>推理服务的资源配置。</p>
      */
     public InferenceResourceConfig getResourceConfig() {
         return this.ResourceConfig;
     }
 
     /**
-     * Set 推理服务的资源配置。
-     * @param ResourceConfig 推理服务的资源配置。
+     * Set <p>推理服务的资源配置。</p>
+     * @param ResourceConfig <p>推理服务的资源配置。</p>
      */
     public void setResourceConfig(InferenceResourceConfig ResourceConfig) {
         this.ResourceConfig = ResourceConfig;
+    }
+
+    /**
+     * Get <p>推理服务亲和性配置。</p> 
+     * @return AffinityConfig <p>推理服务亲和性配置。</p>
+     */
+    public InferenceAffinityConfig getAffinityConfig() {
+        return this.AffinityConfig;
+    }
+
+    /**
+     * Set <p>推理服务亲和性配置。</p>
+     * @param AffinityConfig <p>推理服务亲和性配置。</p>
+     */
+    public void setAffinityConfig(InferenceAffinityConfig AffinityConfig) {
+        this.AffinityConfig = AffinityConfig;
     }
 
     public InferenceServiceConfig() {
@@ -141,6 +164,9 @@ public class InferenceServiceConfig extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new InferenceResourceConfig(source.ResourceConfig);
         }
+        if (source.AffinityConfig != null) {
+            this.AffinityConfig = new InferenceAffinityConfig(source.AffinityConfig);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class InferenceServiceConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
 
     }
 }

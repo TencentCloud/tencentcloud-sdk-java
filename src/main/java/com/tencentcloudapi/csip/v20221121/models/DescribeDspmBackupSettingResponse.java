@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeDspmBackupSettingResponse extends AbstractModel {
 
     /**
-    * 备份日志保留时长
+    * <p>备份日志保留时长</p>
     */
     @SerializedName("BackupLogSaveTime")
     @Expose
     private Long BackupLogSaveTime;
 
     /**
-    * 恢复日志保留时长
+    * <p>恢复日志保留时长</p>
     */
     @SerializedName("RestoreLogSaveTime")
     @Expose
     private Long RestoreLogSaveTime;
 
     /**
-    * 日志最大生命周期限制
+    * <p>日志最大生命周期限制</p>
     */
     @SerializedName("LogMaxSaveTime")
     @Expose
     private Long LogMaxSaveTime;
 
     /**
-    * 在线日志最大天数限制
+    * <p>在线日志最大天数限制</p>
     */
     @SerializedName("OnlineLogMaxSaveTime")
     @Expose
     private Long OnlineLogMaxSaveTime;
 
     /**
-    * 最大在线日志条数，单位是：个
+    * <p>最大在线日志条数，单位是：个</p>
     */
     @SerializedName("MaxOnlineLogCount")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeDspmBackupSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份日志保留时长 
-     * @return BackupLogSaveTime 备份日志保留时长
+     * Get <p>备份日志保留时长</p> 
+     * @return BackupLogSaveTime <p>备份日志保留时长</p>
      */
     public Long getBackupLogSaveTime() {
         return this.BackupLogSaveTime;
     }
 
     /**
-     * Set 备份日志保留时长
-     * @param BackupLogSaveTime 备份日志保留时长
+     * Set <p>备份日志保留时长</p>
+     * @param BackupLogSaveTime <p>备份日志保留时长</p>
      */
     public void setBackupLogSaveTime(Long BackupLogSaveTime) {
         this.BackupLogSaveTime = BackupLogSaveTime;
     }
 
     /**
-     * Get 恢复日志保留时长 
-     * @return RestoreLogSaveTime 恢复日志保留时长
+     * Get <p>恢复日志保留时长</p> 
+     * @return RestoreLogSaveTime <p>恢复日志保留时长</p>
      */
     public Long getRestoreLogSaveTime() {
         return this.RestoreLogSaveTime;
     }
 
     /**
-     * Set 恢复日志保留时长
-     * @param RestoreLogSaveTime 恢复日志保留时长
+     * Set <p>恢复日志保留时长</p>
+     * @param RestoreLogSaveTime <p>恢复日志保留时长</p>
      */
     public void setRestoreLogSaveTime(Long RestoreLogSaveTime) {
         this.RestoreLogSaveTime = RestoreLogSaveTime;
     }
 
     /**
-     * Get 日志最大生命周期限制 
-     * @return LogMaxSaveTime 日志最大生命周期限制
+     * Get <p>日志最大生命周期限制</p> 
+     * @return LogMaxSaveTime <p>日志最大生命周期限制</p>
      */
     public Long getLogMaxSaveTime() {
         return this.LogMaxSaveTime;
     }
 
     /**
-     * Set 日志最大生命周期限制
-     * @param LogMaxSaveTime 日志最大生命周期限制
+     * Set <p>日志最大生命周期限制</p>
+     * @param LogMaxSaveTime <p>日志最大生命周期限制</p>
      */
     public void setLogMaxSaveTime(Long LogMaxSaveTime) {
         this.LogMaxSaveTime = LogMaxSaveTime;
     }
 
     /**
-     * Get 在线日志最大天数限制 
-     * @return OnlineLogMaxSaveTime 在线日志最大天数限制
+     * Get <p>在线日志最大天数限制</p> 
+     * @return OnlineLogMaxSaveTime <p>在线日志最大天数限制</p>
      */
     public Long getOnlineLogMaxSaveTime() {
         return this.OnlineLogMaxSaveTime;
     }
 
     /**
-     * Set 在线日志最大天数限制
-     * @param OnlineLogMaxSaveTime 在线日志最大天数限制
+     * Set <p>在线日志最大天数限制</p>
+     * @param OnlineLogMaxSaveTime <p>在线日志最大天数限制</p>
      */
     public void setOnlineLogMaxSaveTime(Long OnlineLogMaxSaveTime) {
         this.OnlineLogMaxSaveTime = OnlineLogMaxSaveTime;
     }
 
     /**
-     * Get 最大在线日志条数，单位是：个 
-     * @return MaxOnlineLogCount 最大在线日志条数，单位是：个
+     * Get <p>最大在线日志条数，单位是：个</p> 
+     * @return MaxOnlineLogCount <p>最大在线日志条数，单位是：个</p>
      */
     public Long getMaxOnlineLogCount() {
         return this.MaxOnlineLogCount;
     }
 
     /**
-     * Set 最大在线日志条数，单位是：个
-     * @param MaxOnlineLogCount 最大在线日志条数，单位是：个
+     * Set <p>最大在线日志条数，单位是：个</p>
+     * @param MaxOnlineLogCount <p>最大在线日志条数，单位是：个</p>
      */
     public void setMaxOnlineLogCount(Long MaxOnlineLogCount) {
         this.MaxOnlineLogCount = MaxOnlineLogCount;

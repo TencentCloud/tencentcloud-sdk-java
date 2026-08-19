@@ -52,7 +52,7 @@ public class DetailResults extends AbstractModel {
     private Long Score;
 
     /**
-    * <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
+    * <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p><p>枚举值：</p><ul><li>1： 黑白库</li><li>2： 自定义关键词库</li></ul>
     */
     @SerializedName("LibType")
     @Expose
@@ -93,6 +93,14 @@ public class DetailResults extends AbstractModel {
     @SerializedName("HitInfos")
     @Expose
     private HitInfo [] HitInfos;
+
+    /**
+    * <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HitSnippetInfos")
+    @Expose
+    private HitSnippetInfo [] HitSnippetInfos;
 
     /**
      * Get <p>该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：<strong>Normal</strong>：正常，<strong>Porn</strong>：色情，<strong>Abuse</strong>：谩骂，<strong>Ad</strong>：广告；以及其他令人反感、不安全或不适宜的内容类型。</p> 
@@ -159,16 +167,16 @@ public class DetailResults extends AbstractModel {
     }
 
     /**
-     * Get <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p> 
-     * @return LibType <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
+     * Get <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p><p>枚举值：</p><ul><li>1： 黑白库</li><li>2： 自定义关键词库</li></ul> 
+     * @return LibType <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p><p>枚举值：</p><ul><li>1： 黑白库</li><li>2： 自定义关键词库</li></ul>
      */
     public Long getLibType() {
         return this.LibType;
     }
 
     /**
-     * Set <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
-     * @param LibType <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p>
+     * Set <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p><p>枚举值：</p><ul><li>1： 黑白库</li><li>2： 自定义关键词库</li></ul>
+     * @param LibType <p>该字段用于返回自定义关键词对应的词库类型，取值为<strong>1</strong>（黑白库）和<strong>2</strong>（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。</p><p>枚举值：</p><ul><li>1： 黑白库</li><li>2： 自定义关键词库</li></ul>
      */
     public void setLibType(Long LibType) {
         this.LibType = LibType;
@@ -258,6 +266,26 @@ public class DetailResults extends AbstractModel {
         this.HitInfos = HitInfos;
     }
 
+    /**
+     * Get <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HitSnippetInfos <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HitSnippetInfo [] getHitSnippetInfos() {
+        return this.HitSnippetInfos;
+    }
+
+    /**
+     * Set <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HitSnippetInfos <p>该字段用于标记导致本次审核命中标签的原文内容位置信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHitSnippetInfos(HitSnippetInfo [] HitSnippetInfos) {
+        this.HitSnippetInfos = HitSnippetInfos;
+    }
+
     public DetailResults() {
     }
 
@@ -305,6 +333,12 @@ public class DetailResults extends AbstractModel {
                 this.HitInfos[i] = new HitInfo(source.HitInfos[i]);
             }
         }
+        if (source.HitSnippetInfos != null) {
+            this.HitSnippetInfos = new HitSnippetInfo[source.HitSnippetInfos.length];
+            for (int i = 0; i < source.HitSnippetInfos.length; i++) {
+                this.HitSnippetInfos[i] = new HitSnippetInfo(source.HitSnippetInfos[i]);
+            }
+        }
     }
 
 
@@ -322,6 +356,7 @@ public class DetailResults extends AbstractModel {
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
+        this.setParamArrayObj(map, prefix + "HitSnippetInfos.", this.HitSnippetInfos);
 
     }
 }

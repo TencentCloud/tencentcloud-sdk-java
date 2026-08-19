@@ -195,6 +195,13 @@ public class ModelRouterDetail extends AbstractModel {
     private String EipAddressId;
 
     /**
+    * <p>计费信息</p>
+    */
+    @SerializedName("BillingConfig")
+    @Expose
+    private ModelRouterBillingConfigOutput BillingConfig;
+
+    /**
      * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -590,6 +597,22 @@ public class ModelRouterDetail extends AbstractModel {
         this.EipAddressId = EipAddressId;
     }
 
+    /**
+     * Get <p>计费信息</p> 
+     * @return BillingConfig <p>计费信息</p>
+     */
+    public ModelRouterBillingConfigOutput getBillingConfig() {
+        return this.BillingConfig;
+    }
+
+    /**
+     * Set <p>计费信息</p>
+     * @param BillingConfig <p>计费信息</p>
+     */
+    public void setBillingConfig(ModelRouterBillingConfigOutput BillingConfig) {
+        this.BillingConfig = BillingConfig;
+    }
+
     public ModelRouterDetail() {
     }
 
@@ -682,6 +705,9 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.EipAddressId != null) {
             this.EipAddressId = new String(source.EipAddressId);
         }
+        if (source.BillingConfig != null) {
+            this.BillingConfig = new ModelRouterBillingConfigOutput(source.BillingConfig);
+        }
     }
 
 
@@ -713,6 +739,7 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+        this.setParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
 
     }
 }

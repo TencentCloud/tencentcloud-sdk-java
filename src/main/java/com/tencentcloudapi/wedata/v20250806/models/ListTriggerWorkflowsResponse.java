@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListTriggerWorkflowsResponse extends AbstractModel {
 
     /**
-    * 查询工作流分页信息
+    * <p>查询工作流分页信息</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ListTriggerWorkflowsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询工作流分页信息 
-     * @return Data 查询工作流分页信息
+     * Get <p>查询工作流分页信息</p> 
+     * @return Data <p>查询工作流分页信息</p>
      */
     public ListTriggerWorkflowInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set 查询工作流分页信息
-     * @param Data 查询工作流分页信息
+     * Set <p>查询工作流分页信息</p>
+     * @param Data <p>查询工作流分页信息</p>
      */
     public void setData(ListTriggerWorkflowInfo Data) {
         this.Data = Data;

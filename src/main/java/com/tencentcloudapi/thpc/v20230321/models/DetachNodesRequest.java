@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DetachNodesRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群中的节点id
+    * <p>集群中的节点id</p>
     */
     @SerializedName("NodeIds")
     @Expose
     private String [] NodeIds;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群中的节点id 
-     * @return NodeIds 集群中的节点id
+     * Get <p>集群中的节点id</p> 
+     * @return NodeIds <p>集群中的节点id</p>
      */
     public String [] getNodeIds() {
         return this.NodeIds;
     }
 
     /**
-     * Set 集群中的节点id
-     * @param NodeIds 集群中的节点id
+     * Set <p>集群中的节点id</p>
+     * @param NodeIds <p>集群中的节点id</p>
      */
     public void setNodeIds(String [] NodeIds) {
         this.NodeIds = NodeIds;

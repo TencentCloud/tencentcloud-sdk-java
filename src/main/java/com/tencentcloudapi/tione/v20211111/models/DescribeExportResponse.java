@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeExportResponse extends AbstractModel {
 
     /**
-    * 日志下载任务的ID
+    * <p>日志下载任务的ID</p>
     */
     @SerializedName("ExportId")
     @Expose
     private String ExportId;
 
     /**
-    * 日志下载文件名
+    * <p>日志下载文件名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+    * <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
     */
     @SerializedName("CosPath")
     @Expose
     private String CosPath;
 
     /**
-    * 下载任务创建时间
+    * <p>下载任务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 日志文件大小
+    * <p>日志文件大小</p>
     */
     @SerializedName("FileSize")
     @Expose
     private String FileSize;
 
     /**
-    * 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+    * <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
     */
     @SerializedName("Status")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志下载任务的ID 
-     * @return ExportId 日志下载任务的ID
+     * Get <p>日志下载任务的ID</p> 
+     * @return ExportId <p>日志下载任务的ID</p>
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set 日志下载任务的ID
-     * @param ExportId 日志下载任务的ID
+     * Set <p>日志下载任务的ID</p>
+     * @param ExportId <p>日志下载任务的ID</p>
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;
     }
 
     /**
-     * Get 日志下载文件名 
-     * @return FileName 日志下载文件名
+     * Get <p>日志下载文件名</p> 
+     * @return FileName <p>日志下载文件名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 日志下载文件名
-     * @param FileName 日志下载文件名
+     * Set <p>日志下载文件名</p>
+     * @param FileName <p>日志下载文件名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 日志导出路径,有效期一个小时，请尽快使用该路径下载。 
-     * @return CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * Get <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p> 
+     * @return CosPath <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
      */
     public String getCosPath() {
         return this.CosPath;
     }
 
     /**
-     * Set 日志导出路径,有效期一个小时，请尽快使用该路径下载。
-     * @param CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * Set <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
+     * @param CosPath <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;
     }
 
     /**
-     * Get 下载任务创建时间 
-     * @return CreateTime 下载任务创建时间
+     * Get <p>下载任务创建时间</p> 
+     * @return CreateTime <p>下载任务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 下载任务创建时间
-     * @param CreateTime 下载任务创建时间
+     * Set <p>下载任务创建时间</p>
+     * @param CreateTime <p>下载任务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 日志文件大小 
-     * @return FileSize 日志文件大小
+     * Get <p>日志文件大小</p> 
+     * @return FileSize <p>日志文件大小</p>
      */
     public String getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 日志文件大小
-     * @param FileSize 日志文件大小
+     * Set <p>日志文件大小</p>
+     * @param FileSize <p>日志文件大小</p>
      */
     public void setFileSize(String FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中 
-     * @return Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+     * Get <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p> 
+     * @return Status <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
-     * @param Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+     * Set <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
+     * @param Status <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

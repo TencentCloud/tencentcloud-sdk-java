@@ -360,6 +360,76 @@ public class EdrAlertDetail extends AbstractModel {
     private String NetSvcPs;
 
     /**
+    * <p>容器名称</p>
+    */
+    @SerializedName("ContainerName")
+    @Expose
+    private String ContainerName;
+
+    /**
+    * <p>容器镜像名称</p>
+    */
+    @SerializedName("ImageName")
+    @Expose
+    private String ImageName;
+
+    /**
+    * <p>集群名称</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+    */
+    @SerializedName("RunStatus")
+    @Expose
+    private String RunStatus;
+
+    /**
+    * <p>POD 名称</p>
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * <p>POD IP</p>
+    */
+    @SerializedName("PodIp")
+    @Expose
+    private String PodIp;
+
+    /**
+    * <p>命名空间</p>
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * <p>POD 负载类型</p>
+    */
+    @SerializedName("PodWorkloadType")
+    @Expose
+    private String PodWorkloadType;
+
+    /**
+    * <p>集群 ca 证书 md5</p>
+    */
+    @SerializedName("ClusterCaMD5")
+    @Expose
+    private String ClusterCaMD5;
+
+    /**
+    * <p>POD 唯一 id</p>
+    */
+    @SerializedName("PodUniqueId")
+    @Expose
+    private String PodUniqueId;
+
+    /**
      * Get <p>主键ID</p> 
      * @return Id <p>主键ID</p>
      */
@@ -1127,6 +1197,166 @@ public class EdrAlertDetail extends AbstractModel {
         this.NetSvcPs = NetSvcPs;
     }
 
+    /**
+     * Get <p>容器名称</p> 
+     * @return ContainerName <p>容器名称</p>
+     */
+    public String getContainerName() {
+        return this.ContainerName;
+    }
+
+    /**
+     * Set <p>容器名称</p>
+     * @param ContainerName <p>容器名称</p>
+     */
+    public void setContainerName(String ContainerName) {
+        this.ContainerName = ContainerName;
+    }
+
+    /**
+     * Get <p>容器镜像名称</p> 
+     * @return ImageName <p>容器镜像名称</p>
+     */
+    public String getImageName() {
+        return this.ImageName;
+    }
+
+    /**
+     * Set <p>容器镜像名称</p>
+     * @param ImageName <p>容器镜像名称</p>
+     */
+    public void setImageName(String ImageName) {
+        this.ImageName = ImageName;
+    }
+
+    /**
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul> 
+     * @return RunStatus <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+     */
+    public String getRunStatus() {
+        return this.RunStatus;
+    }
+
+    /**
+     * Set <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+     * @param RunStatus <p>容器运行状态（原始枚举 RUNNING/PAUSED/STOPPED…，前端自行映射）</p><p>枚举值：</p><ul><li>RUNNING： 运行</li><li>PAUSED： 暂停</li><li>STOPPED： 停止</li><li>CREATED： 已经创建</li><li>DESTROYED： 已销毁</li><li>RESTARTING： 重启中</li><li>REMOVING： 迁移中</li><li>DEAD： DEAD</li><li>UNKNOWN： 未知</li></ul>
+     */
+    public void setRunStatus(String RunStatus) {
+        this.RunStatus = RunStatus;
+    }
+
+    /**
+     * Get <p>POD 名称</p> 
+     * @return PodName <p>POD 名称</p>
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set <p>POD 名称</p>
+     * @param PodName <p>POD 名称</p>
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get <p>POD IP</p> 
+     * @return PodIp <p>POD IP</p>
+     */
+    public String getPodIp() {
+        return this.PodIp;
+    }
+
+    /**
+     * Set <p>POD IP</p>
+     * @param PodIp <p>POD IP</p>
+     */
+    public void setPodIp(String PodIp) {
+        this.PodIp = PodIp;
+    }
+
+    /**
+     * Get <p>命名空间</p> 
+     * @return Namespace <p>命名空间</p>
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set <p>命名空间</p>
+     * @param Namespace <p>命名空间</p>
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get <p>POD 负载类型</p> 
+     * @return PodWorkloadType <p>POD 负载类型</p>
+     */
+    public String getPodWorkloadType() {
+        return this.PodWorkloadType;
+    }
+
+    /**
+     * Set <p>POD 负载类型</p>
+     * @param PodWorkloadType <p>POD 负载类型</p>
+     */
+    public void setPodWorkloadType(String PodWorkloadType) {
+        this.PodWorkloadType = PodWorkloadType;
+    }
+
+    /**
+     * Get <p>集群 ca 证书 md5</p> 
+     * @return ClusterCaMD5 <p>集群 ca 证书 md5</p>
+     */
+    public String getClusterCaMD5() {
+        return this.ClusterCaMD5;
+    }
+
+    /**
+     * Set <p>集群 ca 证书 md5</p>
+     * @param ClusterCaMD5 <p>集群 ca 证书 md5</p>
+     */
+    public void setClusterCaMD5(String ClusterCaMD5) {
+        this.ClusterCaMD5 = ClusterCaMD5;
+    }
+
+    /**
+     * Get <p>POD 唯一 id</p> 
+     * @return PodUniqueId <p>POD 唯一 id</p>
+     */
+    public String getPodUniqueId() {
+        return this.PodUniqueId;
+    }
+
+    /**
+     * Set <p>POD 唯一 id</p>
+     * @param PodUniqueId <p>POD 唯一 id</p>
+     */
+    public void setPodUniqueId(String PodUniqueId) {
+        this.PodUniqueId = PodUniqueId;
+    }
+
     public EdrAlertDetail() {
     }
 
@@ -1285,6 +1515,36 @@ public class EdrAlertDetail extends AbstractModel {
         if (source.NetSvcPs != null) {
             this.NetSvcPs = new String(source.NetSvcPs);
         }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.RunStatus != null) {
+            this.RunStatus = new String(source.RunStatus);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodIp != null) {
+            this.PodIp = new String(source.PodIp);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.PodWorkloadType != null) {
+            this.PodWorkloadType = new String(source.PodWorkloadType);
+        }
+        if (source.ClusterCaMD5 != null) {
+            this.ClusterCaMD5 = new String(source.ClusterCaMD5);
+        }
+        if (source.PodUniqueId != null) {
+            this.PodUniqueId = new String(source.PodUniqueId);
+        }
     }
 
 
@@ -1340,6 +1600,16 @@ public class EdrAlertDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "VirusFamily", this.VirusFamily);
         this.setParamSimple(map, prefix + "NetResponsePayload", this.NetResponsePayload);
         this.setParamSimple(map, prefix + "NetSvcPs", this.NetSvcPs);
+        this.setParamSimple(map, prefix + "ContainerName", this.ContainerName);
+        this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "RunStatus", this.RunStatus);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodIp", this.PodIp);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "PodWorkloadType", this.PodWorkloadType);
+        this.setParamSimple(map, prefix + "ClusterCaMD5", this.ClusterCaMD5);
+        this.setParamSimple(map, prefix + "PodUniqueId", this.PodUniqueId);
 
     }
 }

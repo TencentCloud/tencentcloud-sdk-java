@@ -80,7 +80,7 @@ public class CreateModelRouterRequest extends AbstractModel {
     private RateLimitConfigForModelRouter RateLimitConfig;
 
     /**
-    * <p>路由配置</p>
+    * <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
     */
     @SerializedName("RouterSetting")
     @Expose
@@ -127,6 +127,20 @@ public class CreateModelRouterRequest extends AbstractModel {
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * <p>弹性公网IP的ID</p>
+    */
+    @SerializedName("EipAddressId")
+    @Expose
+    private String EipAddressId;
+
+    /**
+    * <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
 
     /**
      * Get <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul> 
@@ -257,16 +271,16 @@ public class CreateModelRouterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>路由配置</p> 
-     * @return RouterSetting <p>路由配置</p>
+     * Get <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p> 
+     * @return RouterSetting <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
      */
     public RouterSettingWithoutFallBack getRouterSetting() {
         return this.RouterSetting;
     }
 
     /**
-     * Set <p>路由配置</p>
-     * @param RouterSetting <p>路由配置</p>
+     * Set <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
+     * @param RouterSetting <p>路由配置</p><p>新创建实例时，默认会开启粘连路由</p>
      */
     public void setRouterSetting(RouterSettingWithoutFallBack RouterSetting) {
         this.RouterSetting = RouterSetting;
@@ -368,6 +382,38 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get <p>弹性公网IP的ID</p> 
+     * @return EipAddressId <p>弹性公网IP的ID</p>
+     */
+    public String getEipAddressId() {
+        return this.EipAddressId;
+    }
+
+    /**
+     * Set <p>弹性公网IP的ID</p>
+     * @param EipAddressId <p>弹性公网IP的ID</p>
+     */
+    public void setEipAddressId(String EipAddressId) {
+        this.EipAddressId = EipAddressId;
+    }
+
+    /**
+     * Get <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p> 
+     * @return Bandwidth <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     * @param Bandwidth <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
     public CreateModelRouterRequest() {
     }
 
@@ -424,6 +470,12 @@ public class CreateModelRouterRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.EipAddressId != null) {
+            this.EipAddressId = new String(source.EipAddressId);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
     }
 
 
@@ -446,6 +498,8 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamObj(map, prefix + "ModelRouterBillingConfig.", this.ModelRouterBillingConfig);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 
     }
 }

@@ -108,11 +108,18 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
     private String SchedulerStatus;
 
     /**
-    * <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+    * <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
     */
     @SerializedName("TriggerMode")
     @Expose
     private String TriggerMode;
+
+    /**
+    * <p>运行账号ID</p>
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
 
     /**
      * Get <p>项目ID</p> 
@@ -307,19 +314,35 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul> 
-     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * Get <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul> 
+     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
      */
     public String getTriggerMode() {
         return this.TriggerMode;
     }
 
     /**
-     * Set <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
-     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * Set <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
      */
     public void setTriggerMode(String TriggerMode) {
         this.TriggerMode = TriggerMode;
+    }
+
+    /**
+     * Get <p>运行账号ID</p> 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+     * @param ExecuteUserUin <p>运行账号ID</p>
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
     }
 
     public UpdateTriggerWorkflowRequest() {
@@ -378,6 +401,9 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
         if (source.TriggerMode != null) {
             this.TriggerMode = new String(source.TriggerMode);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class UpdateTriggerWorkflowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TriggerTaskBrief extends AbstractModel {
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -32,7 +32,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -40,7 +40,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 工作流id
+    * <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -48,7 +48,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -56,7 +56,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -64,7 +64,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -72,7 +72,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String TaskName;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -80,7 +80,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String TaskType;
 
     /**
-    * 责任人user UIN
+    * <p>责任人user UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserUinInCharge")
@@ -88,7 +88,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String UserUinInCharge;
 
     /**
-    * 责任人名称
+    * <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserNameInCharge")
@@ -96,7 +96,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String UserNameInCharge;
 
     /**
-    * 文件夹ID
+    * <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -104,7 +104,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名称
+    * <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -112,7 +112,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String FolderName;
 
     /**
-    * 任务类型ID
+    * <p>任务类型ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -120,7 +120,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionState")
@@ -128,7 +128,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String ExecutionState;
 
     /**
-    * 运行开始时间
+    * <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -136,7 +136,7 @@ public class TriggerTaskBrief extends AbstractModel {
     private String ExecutionStartTime;
 
     /**
-    * 依赖策略
+    * <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyTriggerPolicy")
@@ -144,9 +144,17 @@ public class TriggerTaskBrief extends AbstractModel {
     private String DependencyTriggerPolicy;
 
     /**
-     * Get 项目id
+    * <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -154,9 +162,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -164,9 +172,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -174,9 +182,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -184,9 +192,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流id
+     * Get <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流id
+     * @return WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -194,9 +202,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流id
+     * Set <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流id
+     * @param WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -204,9 +212,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -214,9 +222,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -224,9 +232,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务id
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -234,9 +242,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -244,9 +252,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -254,9 +262,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -264,9 +272,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -274,9 +282,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -284,9 +292,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 责任人user UIN
+     * Get <p>责任人user UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserUinInCharge 责任人user UIN
+     * @return UserUinInCharge <p>责任人user UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserUinInCharge() {
@@ -294,9 +302,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 责任人user UIN
+     * Set <p>责任人user UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserUinInCharge 责任人user UIN
+     * @param UserUinInCharge <p>责任人user UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserUinInCharge(String UserUinInCharge) {
@@ -304,9 +312,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 责任人名称
+     * Get <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserNameInCharge 责任人名称
+     * @return UserNameInCharge <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserNameInCharge() {
@@ -314,9 +322,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 责任人名称
+     * Set <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserNameInCharge 责任人名称
+     * @param UserNameInCharge <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserNameInCharge(String UserNameInCharge) {
@@ -324,9 +332,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 文件夹ID
+     * Get <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹ID
+     * @return FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -334,9 +342,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 文件夹ID
+     * Set <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹ID
+     * @param FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -344,9 +352,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 文件夹名称
+     * Get <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名称
+     * @return FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -354,9 +362,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 文件夹名称
+     * Set <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名称
+     * @param FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -364,9 +372,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务类型ID
+     * Get <p>任务类型ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 任务类型ID
+     * @return TaskTypeId <p>任务类型ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -374,9 +382,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务类型ID
+     * Set <p>任务类型ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 任务类型ID
+     * @param TaskTypeId <p>任务类型ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -384,9 +392,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务状态
+     * Get <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionState 任务状态
+     * @return ExecutionState <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionState() {
@@ -394,9 +402,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务状态
+     * Set <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionState 任务状态
+     * @param ExecutionState <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionState(String ExecutionState) {
@@ -404,9 +412,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 运行开始时间
+     * Get <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 运行开始时间
+     * @return ExecutionStartTime <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -414,9 +422,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 运行开始时间
+     * Set <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 运行开始时间
+     * @param ExecutionStartTime <p>运行开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -424,9 +432,9 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Get 依赖策略
+     * Get <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyTriggerPolicy 依赖策略
+     * @return DependencyTriggerPolicy <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyTriggerPolicy() {
@@ -434,13 +442,33 @@ public class TriggerTaskBrief extends AbstractModel {
     }
 
     /**
-     * Set 依赖策略
+     * Set <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyTriggerPolicy 依赖策略
+     * @param DependencyTriggerPolicy <p>依赖策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
         this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
     }
 
     public TriggerTaskBrief() {
@@ -496,6 +524,9 @@ public class TriggerTaskBrief extends AbstractModel {
         if (source.DependencyTriggerPolicy != null) {
             this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
     }
 
 
@@ -518,6 +549,7 @@ public class TriggerTaskBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
 
     }
 }

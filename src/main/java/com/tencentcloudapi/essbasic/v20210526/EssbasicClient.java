@@ -197,7 +197,6 @@ public class EssbasicClient extends AbstractClient{
 4. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，**不支持微信小程序嵌入**。
 跳转到小程序的实现，参考微信官方文档(分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式)，如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
 6. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。
-7. H5签署现在仅支持中国大陆身份证和中国港澳台居民居住证。
      * @param req ChannelCreateBatchQuickSignUrlRequest
      * @return ChannelCreateBatchQuickSignUrlResponse
      * @throws TencentCloudSDKException
@@ -266,7 +265,7 @@ public class EssbasicClient extends AbstractClient{
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
 适用场景2：已经上传了一个jpg图片文件，希望将该图片文件转换成pdf文件后发起合同<br />
 转换文件是一个耗时操作，若想查看转换任务是否完成，可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">查询转换任务状态</a>接口获取任务状态。<br />
-<font color="red">此接口于 2026 年 12月 31 日下线</font>，请使用新接口: <a href="https://qian.tencent.com/developers/partnerApis/files/CreateFileConvertTask" target="_blank">查询文件转换任务状态（CreateFileConvertTask）</a><br />
+<font color="red">此接口于 2026 年 12月 31 日下线</font>，请使用新接口: <a href="https://qian.tencent.com/developers/partnerApis/files/CreateFileConvertTask" target="_blank">新建文件转换任务（CreateFileConvertTask）</a><br />
 注: 
 1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
@@ -595,7 +594,6 @@ public class EssbasicClient extends AbstractClient{
 2. 该接口返回的签署链接适用于APP集成的场景，支持在支付宝、APP打开、浏览器直接打开，**不支持微信小程序嵌入**。配置方式请参考：<a href="https://qian.tencent.com/developers/company/openqianh5/">跳转电子签H5</a>。
    如需跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
 3. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。
-4. H5签署现在**仅支持中国大陆身份证、中国港澳台居民居住证**。
      * @param req ChannelCreateFlowSignUrlRequest
      * @return ChannelCreateFlowSignUrlResponse
      * @throws TencentCloudSDKException
@@ -2076,7 +2074,7 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 ##  变更审核流程
 
 接口在处理变更时，会先进行工商三要素（企业名称、法人姓名、统一社会信用代码）核验，流程分为以下两条路径：
-<img src="https://qcloudimg.tencent-cloud.cn/raw/123767975de1754bd30b24617661ea65.png" width="380" >
+<img src="https://qcloudimg.tencent-cloud.cn/raw/6976bc5589fa4835d4a5d5d1d6e0d9ef.png" width="380" >
 
 ### 触发人工审核（收录流程）的具体场景：
 
@@ -2253,7 +2251,7 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 如果是其他类型可以配合<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelCreateConvertTaskApi" target="_blank">创建文件转换任务</a>接口转换成PDF文件
 
 注: 
-1. 图片类型(png/jpg/jpeg)限制大小为5M以下, PDF/word/excel等其他格式限制大小为60M以下
+1. 图片类型(png/jpg/jpeg)限制大小为8M以下, PDF/word/excel等其他格式限制大小为60M以下
 2. <font color='red'>此接口调用时需要单独设置Domain请求域名 </font>,  联调开发环境为 <font color='red'>file.test.ess.tencent.cn</font>，正式环境需要设置为<font color='red'>file.ess.tencent.cn</font>，代码示例
 ```
 HttpProfile httpProfile = new HttpProfile();

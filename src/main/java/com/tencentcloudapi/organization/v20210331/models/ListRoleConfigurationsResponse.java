@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ListRoleConfigurationsResponse extends AbstractModel {
 
     /**
-    * 符合请求参数条件的数据总条数。
+    * <p>符合请求参数条件的数据总条数。</p>
     */
     @SerializedName("TotalCounts")
     @Expose
     private Long TotalCounts;
 
     /**
-    * 每页的最大数据条数。
+    * <p>每页的最大数据条数。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * 返回结果是否被截断。取值：  true：已截断。 false：未截断。
+    * <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
     */
     @SerializedName("IsTruncated")
     @Expose
     private Boolean IsTruncated;
 
     /**
-    * 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
+    * <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 权限配置列表。
+    * <p>权限配置列表。</p>
     */
     @SerializedName("RoleConfigurations")
     @Expose
@@ -66,80 +66,80 @@ public class ListRoleConfigurationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合请求参数条件的数据总条数。 
-     * @return TotalCounts 符合请求参数条件的数据总条数。
+     * Get <p>符合请求参数条件的数据总条数。</p> 
+     * @return TotalCounts <p>符合请求参数条件的数据总条数。</p>
      */
     public Long getTotalCounts() {
         return this.TotalCounts;
     }
 
     /**
-     * Set 符合请求参数条件的数据总条数。
-     * @param TotalCounts 符合请求参数条件的数据总条数。
+     * Set <p>符合请求参数条件的数据总条数。</p>
+     * @param TotalCounts <p>符合请求参数条件的数据总条数。</p>
      */
     public void setTotalCounts(Long TotalCounts) {
         this.TotalCounts = TotalCounts;
     }
 
     /**
-     * Get 每页的最大数据条数。 
-     * @return MaxResults 每页的最大数据条数。
+     * Get <p>每页的最大数据条数。</p> 
+     * @return MaxResults <p>每页的最大数据条数。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 每页的最大数据条数。
-     * @param MaxResults 每页的最大数据条数。
+     * Set <p>每页的最大数据条数。</p>
+     * @param MaxResults <p>每页的最大数据条数。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get 返回结果是否被截断。取值：  true：已截断。 false：未截断。 
-     * @return IsTruncated 返回结果是否被截断。取值：  true：已截断。 false：未截断。
+     * Get <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p> 
+     * @return IsTruncated <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
      */
     public Boolean getIsTruncated() {
         return this.IsTruncated;
     }
 
     /**
-     * Set 返回结果是否被截断。取值：  true：已截断。 false：未截断。
-     * @param IsTruncated 返回结果是否被截断。取值：  true：已截断。 false：未截断。
+     * Set <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
+     * @param IsTruncated <p>返回结果是否被截断。取值：  true：已截断。 false：未截断。</p>
      */
     public void setIsTruncated(Boolean IsTruncated) {
         this.IsTruncated = IsTruncated;
     }
 
     /**
-     * Get 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。 
-     * @return NextToken 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
+     * Get <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p> 
+     * @return NextToken <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
-     * @param NextToken 查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。
+     * Set <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
+     * @param NextToken <p>查询返回结果下一页的令牌。  说明 只有IsTruncated为true时，才显示该参数。</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 权限配置列表。 
-     * @return RoleConfigurations 权限配置列表。
+     * Get <p>权限配置列表。</p> 
+     * @return RoleConfigurations <p>权限配置列表。</p>
      */
     public RoleConfiguration [] getRoleConfigurations() {
         return this.RoleConfigurations;
     }
 
     /**
-     * Set 权限配置列表。
-     * @param RoleConfigurations 权限配置列表。
+     * Set <p>权限配置列表。</p>
+     * @param RoleConfigurations <p>权限配置列表。</p>
      */
     public void setRoleConfigurations(RoleConfiguration [] RoleConfigurations) {
         this.RoleConfigurations = RoleConfigurations;

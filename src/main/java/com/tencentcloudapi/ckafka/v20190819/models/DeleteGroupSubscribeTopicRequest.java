@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteGroupSubscribeTopicRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费分组名称
+    * <p>消费分组名称</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 主题名
+    * <p>主题名</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p> 
+     * @return InstanceId <p>ckafka集群实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p>
+     * @param InstanceId <p>ckafka集群实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费分组名称 
-     * @return Group 消费分组名称
+     * Get <p>消费分组名称</p> 
+     * @return Group <p>消费分组名称</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 消费分组名称
-     * @param Group 消费分组名称
+     * Set <p>消费分组名称</p>
+     * @param Group <p>消费分组名称</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 主题名 
-     * @return Topic 主题名
+     * Get <p>主题名</p> 
+     * @return Topic <p>主题名</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名
-     * @param Topic 主题名
+     * Set <p>主题名</p>
+     * @param Topic <p>主题名</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

@@ -38,14 +38,14 @@ public class ItemCoord extends AbstractModel {
     private Long Y;
 
     /**
-    * <p>宽width。</p>
+    * <p>宽width。</p><p>单位：px</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * <p>高height。</p>
+    * <p>高height。</p><p>单位：px</p>
     */
     @SerializedName("Height")
     @Expose
@@ -84,32 +84,32 @@ public class ItemCoord extends AbstractModel {
     }
 
     /**
-     * Get <p>宽width。</p> 
-     * @return Width <p>宽width。</p>
+     * Get <p>宽width。</p><p>单位：px</p> 
+     * @return Width <p>宽width。</p><p>单位：px</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set <p>宽width。</p>
-     * @param Width <p>宽width。</p>
+     * Set <p>宽width。</p><p>单位：px</p>
+     * @param Width <p>宽width。</p><p>单位：px</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get <p>高height。</p> 
-     * @return Height <p>高height。</p>
+     * Get <p>高height。</p><p>单位：px</p> 
+     * @return Height <p>高height。</p><p>单位：px</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>高height。</p>
-     * @param Height <p>高height。</p>
+     * Set <p>高height。</p><p>单位：px</p>
+     * @param Height <p>高height。</p><p>单位：px</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

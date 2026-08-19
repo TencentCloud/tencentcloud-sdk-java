@@ -32,7 +32,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TplName")
     @Expose
@@ -40,7 +39,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 报表类型 1:单次报表 2:周期报表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportType")
     @Expose
@@ -48,7 +46,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 报告说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -56,7 +53,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 报表模板 1:综合分析报告 2:等保合规报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -64,7 +60,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetsList")
     @Expose
@@ -72,7 +67,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextStartTime")
     @Expose
@@ -80,7 +74,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 任务状态 1:生成中 2:待生成3:已生成4:生成失败5:已暂停
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MissionStatus")
     @Expose
@@ -88,7 +81,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 任务状态说明 仅生成中和生成失败有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MissionStatusMessage")
     @Expose
@@ -96,7 +88,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 已生成报表数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportCount")
     @Expose
@@ -104,7 +95,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 任务起停 1:关闭 2:开启 仅周期报表有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MissionStart")
     @Expose
@@ -112,7 +102,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 统计周期 1:24小时 7:近一周 30:近30天 90:近90天 180:
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CntDay")
     @Expose
@@ -120,7 +109,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 重复周期 1:每天 2:每周 3:每月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CntCycle")
     @Expose
@@ -128,7 +116,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 执行日期 重复周期为天：无意义 周：星期几 1-7  月每月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CntTime")
     @Expose
@@ -136,7 +123,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 执行时间 格式15:04 到分钟
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CntDate")
     @Expose
@@ -144,7 +130,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * 创建者 0:内置 其余存放用户(uin)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Receivers")
     @Expose
@@ -152,7 +137,6 @@ public class ReportMission extends AbstractModel {
 
     /**
     * Notification  int  1关闭 2开启 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Notification")
     @Expose
@@ -175,10 +159,8 @@ public class ReportMission extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return TplName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTplName() {
         return this.TplName;
@@ -186,19 +168,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TplName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTplName(String TplName) {
         this.TplName = TplName;
     }
 
     /**
-     * Get 报表类型 1:单次报表 2:周期报表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报表类型 1:单次报表 2:周期报表 
      * @return ReportType 报表类型 1:单次报表 2:周期报表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportType() {
         return this.ReportType;
@@ -206,19 +184,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 报表类型 1:单次报表 2:周期报表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportType 报表类型 1:单次报表 2:周期报表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 报告说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告说明 
      * @return Remark 报告说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -226,19 +200,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 报告说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 报告说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 报表模板 1:综合分析报告 2:等保合规报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报表模板 1:综合分析报告 2:等保合规报告 
      * @return TemplateId 报表模板 1:综合分析报告 2:等保合规报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -246,19 +216,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 报表模板 1:综合分析报告 2:等保合规报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 报表模板 1:综合分析报告 2:等保合规报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 包含资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含资产 
      * @return AssetsList 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetsInfo [] getAssetsList() {
         return this.AssetsList;
@@ -266,19 +232,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetsList 包含资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetsList(AssetsInfo [] AssetsList) {
         this.AssetsList = AssetsList;
     }
 
     /**
-     * Get 下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下次启动时间 
      * @return NextStartTime 下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNextStartTime() {
         return this.NextStartTime;
@@ -286,19 +248,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextStartTime 下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextStartTime(Long NextStartTime) {
         this.NextStartTime = NextStartTime;
     }
 
     /**
-     * Get 任务状态 1:生成中 2:待生成3:已生成4:生成失败5:已暂停
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态 1:生成中 2:待生成3:已生成4:生成失败5:已暂停 
      * @return MissionStatus 任务状态 1:生成中 2:待生成3:已生成4:生成失败5:已暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMissionStatus() {
         return this.MissionStatus;
@@ -306,19 +264,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 任务状态 1:生成中 2:待生成3:已生成4:生成失败5:已暂停
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MissionStatus 任务状态 1:生成中 2:待生成3:已生成4:生成失败5:已暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMissionStatus(Long MissionStatus) {
         this.MissionStatus = MissionStatus;
     }
 
     /**
-     * Get 任务状态说明 仅生成中和生成失败有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态说明 仅生成中和生成失败有效 
      * @return MissionStatusMessage 任务状态说明 仅生成中和生成失败有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMissionStatusMessage() {
         return this.MissionStatusMessage;
@@ -326,19 +280,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 任务状态说明 仅生成中和生成失败有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MissionStatusMessage 任务状态说明 仅生成中和生成失败有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMissionStatusMessage(String MissionStatusMessage) {
         this.MissionStatusMessage = MissionStatusMessage;
     }
 
     /**
-     * Get 已生成报表数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已生成报表数 
      * @return ReportCount 已生成报表数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportCount() {
         return this.ReportCount;
@@ -346,19 +296,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 已生成报表数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportCount 已生成报表数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportCount(Long ReportCount) {
         this.ReportCount = ReportCount;
     }
 
     /**
-     * Get 任务起停 1:关闭 2:开启 仅周期报表有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务起停 1:关闭 2:开启 仅周期报表有效 
      * @return MissionStart 任务起停 1:关闭 2:开启 仅周期报表有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMissionStart() {
         return this.MissionStart;
@@ -366,19 +312,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 任务起停 1:关闭 2:开启 仅周期报表有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MissionStart 任务起停 1:关闭 2:开启 仅周期报表有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMissionStart(Long MissionStart) {
         this.MissionStart = MissionStart;
     }
 
     /**
-     * Get 统计周期 1:24小时 7:近一周 30:近30天 90:近90天 180:
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计周期 1:24小时 7:近一周 30:近30天 90:近90天 180: 
      * @return CntDay 统计周期 1:24小时 7:近一周 30:近30天 90:近90天 180:
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCntDay() {
         return this.CntDay;
@@ -386,19 +328,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 统计周期 1:24小时 7:近一周 30:近30天 90:近90天 180:
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CntDay 统计周期 1:24小时 7:近一周 30:近30天 90:近90天 180:
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCntDay(Long CntDay) {
         this.CntDay = CntDay;
     }
 
     /**
-     * Get 重复周期 1:每天 2:每周 3:每月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重复周期 1:每天 2:每周 3:每月 
      * @return CntCycle 重复周期 1:每天 2:每周 3:每月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCntCycle() {
         return this.CntCycle;
@@ -406,19 +344,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 重复周期 1:每天 2:每周 3:每月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CntCycle 重复周期 1:每天 2:每周 3:每月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCntCycle(Long CntCycle) {
         this.CntCycle = CntCycle;
     }
 
     /**
-     * Get 执行日期 重复周期为天：无意义 周：星期几 1-7  月每月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行日期 重复周期为天：无意义 周：星期几 1-7  月每月 
      * @return CntTime 执行日期 重复周期为天：无意义 周：星期几 1-7  月每月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCntTime() {
         return this.CntTime;
@@ -426,19 +360,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 执行日期 重复周期为天：无意义 周：星期几 1-7  月每月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CntTime 执行日期 重复周期为天：无意义 周：星期几 1-7  月每月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCntTime(Long CntTime) {
         this.CntTime = CntTime;
     }
 
     /**
-     * Get 执行时间 格式15:04 到分钟
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行时间 格式15:04 到分钟 
      * @return CntDate 执行时间 格式15:04 到分钟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCntDate() {
         return this.CntDate;
@@ -446,19 +376,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 执行时间 格式15:04 到分钟
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CntDate 执行时间 格式15:04 到分钟
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCntDate(String CntDate) {
         this.CntDate = CntDate;
     }
 
     /**
-     * Get 创建者 0:内置 其余存放用户(uin)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者 0:内置 其余存放用户(uin) 
      * @return Receivers 创建者 0:内置 其余存放用户(uin)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReceivers() {
         return this.Receivers;
@@ -466,19 +392,15 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set 创建者 0:内置 其余存放用户(uin)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Receivers 创建者 0:内置 其余存放用户(uin)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceivers(String Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get Notification  int  1关闭 2开启 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Notification  int  1关闭 2开启 不变更为0 
      * @return Notification Notification  int  1关闭 2开启 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotification() {
         return this.Notification;
@@ -486,9 +408,7 @@ public class ReportMission extends AbstractModel {
 
     /**
      * Set Notification  int  1关闭 2开启 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Notification Notification  int  1关闭 2开启 不变更为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotification(Long Notification) {
         this.Notification = Notification;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSubscribeJobsResponse extends AbstractModel {
 
     /**
-    * 符合查询条件的实例总数
+    * <p>符合查询条件的实例总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 数据订阅实例的信息列表
+    * <p>数据订阅实例的信息列表</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSubscribeJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合查询条件的实例总数 
-     * @return TotalCount 符合查询条件的实例总数
+     * Get <p>符合查询条件的实例总数</p> 
+     * @return TotalCount <p>符合查询条件的实例总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的实例总数
-     * @param TotalCount 符合查询条件的实例总数
+     * Set <p>符合查询条件的实例总数</p>
+     * @param TotalCount <p>符合查询条件的实例总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据订阅实例的信息列表 
-     * @return Items 数据订阅实例的信息列表
+     * Get <p>数据订阅实例的信息列表</p> 
+     * @return Items <p>数据订阅实例的信息列表</p>
      */
     public SubscribeInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 数据订阅实例的信息列表
-     * @param Items 数据订阅实例的信息列表
+     * Set <p>数据订阅实例的信息列表</p>
+     * @param Items <p>数据订阅实例的信息列表</p>
      */
     public void setItems(SubscribeInfo [] Items) {
         this.Items = Items;

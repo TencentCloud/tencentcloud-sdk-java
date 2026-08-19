@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DeleteTableConfigRequest extends AbstractModel {
 
     /**
-    * 作业ID
+    * <p>作业ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 调试作业ID
+    * <p>调试作业ID</p>
     */
     @SerializedName("DebugId")
     @Expose
     private Long DebugId;
 
     /**
-    * 表名
+    * <p>表名</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get <p>作业ID</p> 
+     * @return JobId <p>作业ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set <p>作业ID</p>
+     * @param JobId <p>作业ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 调试作业ID 
-     * @return DebugId 调试作业ID
+     * Get <p>调试作业ID</p> 
+     * @return DebugId <p>调试作业ID</p>
      */
     public Long getDebugId() {
         return this.DebugId;
     }
 
     /**
-     * Set 调试作业ID
-     * @param DebugId 调试作业ID
+     * Set <p>调试作业ID</p>
+     * @param DebugId <p>调试作业ID</p>
      */
     public void setDebugId(Long DebugId) {
         this.DebugId = DebugId;
     }
 
     /**
-     * Get 表名 
-     * @return TableName 表名
+     * Get <p>表名</p> 
+     * @return TableName <p>表名</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 表名
-     * @param TableName 表名
+     * Set <p>表名</p>
+     * @param TableName <p>表名</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;

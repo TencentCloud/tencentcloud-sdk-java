@@ -165,6 +165,13 @@ public class CreateInferenceModelResponse extends AbstractModel {
     private String SubAccountUin;
 
     /**
+    * <p>系统标签列表（TagKey-TagValue）</p>
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -496,6 +503,22 @@ public class CreateInferenceModelResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>系统标签列表（TagKey-TagValue）</p> 
+     * @return ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>系统标签列表（TagKey-TagValue）</p>
+     * @param ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -585,6 +608,12 @@ public class CreateInferenceModelResponse extends AbstractModel {
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -615,6 +644,7 @@ public class CreateInferenceModelResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

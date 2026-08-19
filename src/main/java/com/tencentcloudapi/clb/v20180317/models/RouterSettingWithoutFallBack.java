@@ -52,6 +52,13 @@ public class RouterSettingWithoutFallBack extends AbstractModel {
     private Long NumRetries;
 
     /**
+    * <p>粘连路由配置参数</p>
+    */
+    @SerializedName("StickyConfig")
+    @Expose
+    private StickyConfig StickyConfig;
+
+    /**
      * Get <p>路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul> 
      * @return RoutingStrategy <p>路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
      */
@@ -115,6 +122,22 @@ public class RouterSettingWithoutFallBack extends AbstractModel {
         this.NumRetries = NumRetries;
     }
 
+    /**
+     * Get <p>粘连路由配置参数</p> 
+     * @return StickyConfig <p>粘连路由配置参数</p>
+     */
+    public StickyConfig getStickyConfig() {
+        return this.StickyConfig;
+    }
+
+    /**
+     * Set <p>粘连路由配置参数</p>
+     * @param StickyConfig <p>粘连路由配置参数</p>
+     */
+    public void setStickyConfig(StickyConfig StickyConfig) {
+        this.StickyConfig = StickyConfig;
+    }
+
     public RouterSettingWithoutFallBack() {
     }
 
@@ -135,6 +158,9 @@ public class RouterSettingWithoutFallBack extends AbstractModel {
         if (source.NumRetries != null) {
             this.NumRetries = new Long(source.NumRetries);
         }
+        if (source.StickyConfig != null) {
+            this.StickyConfig = new StickyConfig(source.StickyConfig);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class RouterSettingWithoutFallBack extends AbstractModel {
         this.setParamSimple(map, prefix + "CrossModelGroupRoutingStrategy", this.CrossModelGroupRoutingStrategy);
         this.setParamObj(map, prefix + "RoutingStrategyArgs.", this.RoutingStrategyArgs);
         this.setParamSimple(map, prefix + "NumRetries", this.NumRetries);
+        this.setParamObj(map, prefix + "StickyConfig.", this.StickyConfig);
 
     }
 }

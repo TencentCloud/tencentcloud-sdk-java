@@ -369,6 +369,13 @@ public class JobConfig extends AbstractModel {
     private String LogCOSBucket;
 
     /**
+    * <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+    */
+    @SerializedName("IsLocked")
+    @Expose
+    private Long IsLocked;
+
+    /**
      * Get <p>作业Id</p> 
      * @return JobId <p>作业Id</p>
      */
@@ -1220,6 +1227,22 @@ public class JobConfig extends AbstractModel {
         this.LogCOSBucket = LogCOSBucket;
     }
 
+    /**
+     * Get <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p> 
+     * @return IsLocked <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+     */
+    public Long getIsLocked() {
+        return this.IsLocked;
+    }
+
+    /**
+     * Set <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+     * @param IsLocked <p>是否支持滚动删除，0，手动删除，1，自动滚动删除</p>
+     */
+    public void setIsLocked(Long IsLocked) {
+        this.IsLocked = IsLocked;
+    }
+
     public JobConfig() {
     }
 
@@ -1369,6 +1392,9 @@ public class JobConfig extends AbstractModel {
         if (source.LogCOSBucket != null) {
             this.LogCOSBucket = new String(source.LogCOSBucket);
         }
+        if (source.IsLocked != null) {
+            this.IsLocked = new Long(source.IsLocked);
+        }
     }
 
 
@@ -1420,6 +1446,7 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
         this.setParamSimple(map, prefix + "StateCOSBucket", this.StateCOSBucket);
         this.setParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
+        this.setParamSimple(map, prefix + "IsLocked", this.IsLocked);
 
     }
 }

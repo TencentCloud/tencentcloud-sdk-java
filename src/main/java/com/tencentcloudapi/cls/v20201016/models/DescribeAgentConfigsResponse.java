@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAgentConfigsResponse extends AbstractModel {
 
     /**
-    * 采集配置
+    * <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogConfigs")
@@ -32,7 +32,7 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     private LogConfigInfo [] LogConfigs;
 
     /**
-    * 服务日志的配置信息
+    * <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceLogConfigs")
@@ -40,7 +40,7 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     private ServiceLogConfigInfo [] ServiceLogConfigs;
 
     /**
-    * 弃用
+    * <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastVersion")
@@ -48,7 +48,7 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     private String LastVersion;
 
     /**
-    * 弃用
+    * <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedUpdate")
@@ -56,7 +56,7 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     private Boolean NeedUpdate;
 
     /**
-    * 弃用
+    * <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URL")
@@ -64,7 +64,7 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     private String URL;
 
     /**
-    * 弃用
+    * <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMd5")
@@ -79,9 +79,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 采集配置
+     * Get <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogConfigs 采集配置
+     * @return LogConfigs <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogConfigInfo [] getLogConfigs() {
@@ -89,9 +89,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Set 采集配置
+     * Set <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogConfigs 采集配置
+     * @param LogConfigs <p>采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogConfigs(LogConfigInfo [] LogConfigs) {
@@ -99,9 +99,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Get 服务日志的配置信息
+     * Get <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceLogConfigs 服务日志的配置信息
+     * @return ServiceLogConfigs <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceLogConfigInfo [] getServiceLogConfigs() {
@@ -109,9 +109,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Set 服务日志的配置信息
+     * Set <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLogConfigs 服务日志的配置信息
+     * @param ServiceLogConfigs <p>服务日志的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceLogConfigs(ServiceLogConfigInfo [] ServiceLogConfigs) {
@@ -119,9 +119,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Get 弃用
+     * Get <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastVersion 弃用
+     * @return LastVersion <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastVersion() {
@@ -129,9 +129,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Set 弃用
+     * Set <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastVersion 弃用
+     * @param LastVersion <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastVersion(String LastVersion) {
@@ -139,9 +139,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Get 弃用
+     * Get <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NeedUpdate 弃用
+     * @return NeedUpdate <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNeedUpdate() {
@@ -149,9 +149,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Set 弃用
+     * Set <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NeedUpdate 弃用
+     * @param NeedUpdate <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeedUpdate(Boolean NeedUpdate) {
@@ -159,9 +159,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Get 弃用
+     * Get <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return URL 弃用
+     * @return URL <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getURL() {
@@ -169,9 +169,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Set 弃用
+     * Set <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param URL 弃用
+     * @param URL <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURL(String URL) {
@@ -179,9 +179,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Get 弃用
+     * Get <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileMd5 弃用
+     * @return FileMd5 <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMd5() {
@@ -189,9 +189,9 @@ public class DescribeAgentConfigsResponse extends AbstractModel {
     }
 
     /**
-     * Set 弃用
+     * Set <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileMd5 弃用
+     * @param FileMd5 <p>弃用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMd5(String FileMd5) {

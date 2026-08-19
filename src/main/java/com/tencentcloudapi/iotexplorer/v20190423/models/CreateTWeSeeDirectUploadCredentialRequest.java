@@ -101,6 +101,13 @@ public class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel {
     private String UploadMethod;
 
     /**
+    * <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+    */
+    @SerializedName("UploadTarget")
+    @Expose
+    private String UploadTarget;
+
+    /**
      * Get <p>产品 ID</p><p>非 IoT 设备可传 <code>default</code></p> 
      * @return ProductId <p>产品 ID</p><p>非 IoT 设备可传 <code>default</code></p>
      */
@@ -276,6 +283,22 @@ public class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel {
         this.UploadMethod = UploadMethod;
     }
 
+    /**
+     * Get <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p> 
+     * @return UploadTarget <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+     */
+    public String getUploadTarget() {
+        return this.UploadTarget;
+    }
+
+    /**
+     * Set <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+     * @param UploadTarget <p>上传目标</p><p>枚举值：</p><ul><li>session： 一次性上传会话（默认，通过入参传递 ComprehensionConfig 等上传参数）</li><li>stream： 上传到指定设备（加载对应设备的 ComprehensionConfig 等配置）</li></ul><p>默认值：session</p>
+     */
+    public void setUploadTarget(String UploadTarget) {
+        this.UploadTarget = UploadTarget;
+    }
+
     public CreateTWeSeeDirectUploadCredentialRequest() {
     }
 
@@ -317,6 +340,9 @@ public class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel {
         if (source.UploadMethod != null) {
             this.UploadMethod = new String(source.UploadMethod);
         }
+        if (source.UploadTarget != null) {
+            this.UploadTarget = new String(source.UploadTarget);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class CreateTWeSeeDirectUploadCredentialRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxInvokeCount", this.MaxInvokeCount);
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         this.setParamSimple(map, prefix + "UploadMethod", this.UploadMethod);
+        this.setParamSimple(map, prefix + "UploadTarget", this.UploadTarget);
 
     }
 }

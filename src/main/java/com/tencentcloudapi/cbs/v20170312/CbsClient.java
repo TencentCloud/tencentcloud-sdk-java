@@ -291,6 +291,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *查询云服务器独享集群云硬盘统计信息。
+     * @param req DescribeDedicatedClusterDiskStatisticsRequest
+     * @return DescribeDedicatedClusterDiskStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDedicatedClusterDiskStatisticsResponse DescribeDedicatedClusterDiskStatistics(DescribeDedicatedClusterDiskStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDedicatedClusterDiskStatistics", DescribeDedicatedClusterDiskStatisticsResponse.class);
+    }
+
+    /**
      *本接口（DescribeDiskAssociatedAutoSnapshotPolicy）用于查询云盘绑定的定期快照策略。
      * @param req DescribeDiskAssociatedAutoSnapshotPolicyRequest
      * @return DescribeDiskAssociatedAutoSnapshotPolicyResponse

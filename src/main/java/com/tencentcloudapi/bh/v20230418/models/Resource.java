@@ -24,1383 +24,1479 @@ import java.util.HashMap;
 public class Resource extends AbstractModel {
 
     /**
-    * 服务实例ID，如bh-saas-s3ed4r5e
+    * <p>服务实例ID，如bh-saas-s3ed4r5e</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 地域编码
+    * <p>地域编码</p>
     */
     @SerializedName("ApCode")
     @Expose
     private String ApCode;
 
     /**
-    * 服务实例规格信息
+    * <p>服务实例规格信息</p>
     */
     @SerializedName("SvArgs")
     @Expose
     private String SvArgs;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 服务规格对应的资产数
+    * <p>服务规格对应的资产数</p>
     */
     @SerializedName("Nodes")
     @Expose
     private Long Nodes;
 
     /**
-    * 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+    * <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+    * <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 服务实例名，如T-Sec-堡垒机（SaaS型）
+    * <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 定价模型ID
+    * <p>定价模型ID</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * 资源创建时间
+    * <p>资源创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 商品码, p_cds_dasb
+    * <p>商品码, p_cds_dasb</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 子商品码, sp_cds_dasb_bh_saas
+    * <p>子商品码, sp_cds_dasb_bh_saas</p>
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 是否过期，true-过期，false-未过期
+    * <p>是否过期，true-过期，false-未过期</p>
     */
     @SerializedName("Expired")
     @Expose
     private Boolean Expired;
 
     /**
-    * 是否开通，true-开通，false-未开通
+    * <p>是否开通，true-开通，false-未开通</p>
     */
     @SerializedName("Deployed")
     @Expose
     private Boolean Deployed;
 
     /**
-    * 开通服务的 VPC 名称
+    * <p>开通服务的 VPC 名称</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 开通服务的 VPC 对应的网段
+    * <p>开通服务的 VPC 对应的网段</p>
     */
     @SerializedName("VpcCidrBlock")
     @Expose
     private String VpcCidrBlock;
 
     /**
-    * 开通服务的子网ID
+    * <p>开通服务的子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 开通服务的子网名称
+    * <p>开通服务的子网名称</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 开通服务的子网网段
+    * <p>开通服务的子网网段</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 外部IP
+    * <p>外部IP</p>
     */
     @SerializedName("PublicIpSet")
     @Expose
     private String [] PublicIpSet;
 
     /**
-    * 内部IP
+    * <p>内部IP</p>
     */
     @SerializedName("PrivateIpSet")
     @Expose
     private String [] PrivateIpSet;
 
     /**
-    * 服务开通的高级功能列表，如:[DB]
+    * <p>服务开通的高级功能列表，如:[DB]</p>
     */
     @SerializedName("ModuleSet")
     @Expose
     private String [] ModuleSet;
 
     /**
-    * 已使用的授权点数
+    * <p>已使用的授权点数</p>
     */
     @SerializedName("UsedNodes")
     @Expose
     private Long UsedNodes;
 
     /**
-    * 扩展点数
+    * <p>扩展点数</p>
     */
     @SerializedName("ExtendPoints")
     @Expose
     private Long ExtendPoints;
 
     /**
-    * 带宽扩展包个数(4M)
+    * <p>带宽扩展包个数(4M)</p>
     */
     @SerializedName("PackageBandwidth")
     @Expose
     private Long PackageBandwidth;
 
     /**
-    * 授权点数扩展包个数(50点)
+    * <p>授权点数扩展包个数(50点)</p>
     */
     @SerializedName("PackageNode")
     @Expose
     private Long PackageNode;
 
     /**
-    * 日志投递规格信息
+    * <p>日志投递规格信息</p>
     */
     @SerializedName("LogDeliveryArgs")
     @Expose
     private String LogDeliveryArgs;
 
     /**
-    * 堡垒机资源LB	
+    * <p>堡垒机资源LB</p>
     */
     @SerializedName("ClbSet")
     @Expose
     private Clb [] ClbSet;
 
     /**
-    * 网络域个数
+    * <p>网络域个数</p>
     */
     @SerializedName("DomainCount")
     @Expose
     private Long DomainCount;
 
     /**
-    * 已经使用的网络域个数
+    * <p>已经使用的网络域个数</p>
     */
     @SerializedName("UsedDomainCount")
     @Expose
     private Long UsedDomainCount;
 
     /**
-    * 0 非试用版，1 试用版
+    * <p>开启的网络域个数（不包含默认网络域）</p>
+    */
+    @SerializedName("EnabledDomainCount")
+    @Expose
+    private Long EnabledDomainCount;
+
+    /**
+    * <p>0 非试用版，1 试用版</p>
     */
     @SerializedName("Trial")
     @Expose
     private Long Trial;
 
     /**
-    * 日志投递规格信息
+    * <p>日志投递规格信息</p>
     */
     @SerializedName("LogDelivery")
     @Expose
     private String LogDelivery;
 
     /**
-    * cdc集群id
+    * <p>cdc集群id</p>
     */
     @SerializedName("CdcClusterId")
     @Expose
     private String CdcClusterId;
 
     /**
-    * 部署模式 默认0 0-cvm 1-tke
+    * <p>部署模式 默认0 0-cvm 1-tke</p>
     */
     @SerializedName("DeployModel")
     @Expose
     private Long DeployModel;
 
     /**
-    * 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+    * <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
     */
     @SerializedName("IntranetAccess")
     @Expose
     private Long IntranetAccess;
 
     /**
-    * 内网访问的ip
+    * <p>内网访问的ip</p>
     */
     @SerializedName("IntranetPrivateIpSet")
     @Expose
     private String [] IntranetPrivateIpSet;
 
     /**
-    * 开通内网访问的vpc
+    * <p>开通内网访问的vpc</p>
     */
     @SerializedName("IntranetVpcId")
     @Expose
     private String IntranetVpcId;
 
     /**
-    * 开通内网访问的subnetId
+    * <p>开通内网访问的subnetId</p>
     */
     @SerializedName("IntranetSubnetId")
     @Expose
     private String IntranetSubnetId;
 
     /**
-    * 开通内网访问vpc的网段
+    * <p>开通内网访问的子网集合</p>
+    */
+    @SerializedName("IntranetSubnetIdSet")
+    @Expose
+    private String [] IntranetSubnetIdSet;
+
+    /**
+    * <p>开通内网访问vpc的网段</p>
     */
     @SerializedName("IntranetVpcCidr")
     @Expose
     private String IntranetVpcCidr;
 
     /**
-    * 堡垒机内网ip自定义域名
+    * <p>堡垒机内网ip自定义域名</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 是否共享clb，true-共享clb，false-独享clb
+    * <p>是否共享clb，true-共享clb，false-独享clb</p>
     */
     @SerializedName("ShareClb")
     @Expose
     private Boolean ShareClb;
 
     /**
-    * 共享clb id
+    * <p>共享clb id</p>
     */
     @SerializedName("OpenClbId")
     @Expose
     private String OpenClbId;
 
     /**
-    * 运营商信息
+    * <p>运营商信息</p>
     */
     @SerializedName("LbVipIsp")
     @Expose
     private String LbVipIsp;
 
     /**
-    * linux资产命令行运维端口
+    * <p>linux资产命令行运维端口</p>
     */
     @SerializedName("TUICmdPort")
     @Expose
     private Long TUICmdPort;
 
     /**
-    * linux资产直连端口
+    * <p>linux资产直连端口</p>
     */
     @SerializedName("TUIDirectPort")
     @Expose
     private Long TUIDirectPort;
 
     /**
-    * 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+    * <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
     */
     @SerializedName("WebAccess")
     @Expose
     private Long WebAccess;
 
     /**
-    * 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+    * <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
     */
     @SerializedName("ClientAccess")
     @Expose
     private Long ClientAccess;
 
     /**
-    * 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+    * <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
     */
     @SerializedName("ExternalAccess")
     @Expose
     private Long ExternalAccess;
 
     /**
-    * 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+    * <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
     */
     @SerializedName("IOAResource")
     @Expose
     private Long IOAResource;
 
     /**
-    * 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+    * <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
     */
     @SerializedName("PackageIOAUserCount")
     @Expose
     private Long PackageIOAUserCount;
 
     /**
-    *  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+    * <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
     */
     @SerializedName("PackageIOABandwidth")
     @Expose
     private Long PackageIOABandwidth;
 
     /**
-    * 堡垒机实例对应的零信任实例id
+    * <p>堡垒机实例对应的零信任实例id</p>
     */
     @SerializedName("IOAResourceId")
     @Expose
     private String IOAResourceId;
 
     /**
-    * 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+    * <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
     */
     @SerializedName("ResourceEdition")
     @Expose
     private String ResourceEdition;
 
     /**
-    * 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+    * <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 计费时长
+    * <p>计费时长</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 计费模式 0后付费，1预付费
+    * <p>计费模式 0后付费，1预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 计费侧地域
+    * <p>计费侧地域</p>
     */
     @SerializedName("BillingRegion")
     @Expose
     private String BillingRegion;
 
     /**
-    * 计费侧可用区
+    * <p>计费侧可用区</p>
     */
     @SerializedName("BillingZone")
     @Expose
     private String BillingZone;
 
     /**
-     * Get 服务实例ID，如bh-saas-s3ed4r5e 
-     * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
+    * <p>部署的cvm个数</p>
+    */
+    @SerializedName("DeployCvmCount")
+    @Expose
+    private Long DeployCvmCount;
+
+    /**
+    * <p>堡垒机实例的可用区信息</p>
+    */
+    @SerializedName("ResourceZoneSet")
+    @Expose
+    private ResourceDeployZone [] ResourceZoneSet;
+
+    /**
+     * Get <p>服务实例ID，如bh-saas-s3ed4r5e</p> 
+     * @return ResourceId <p>服务实例ID，如bh-saas-s3ed4r5e</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 服务实例ID，如bh-saas-s3ed4r5e
-     * @param ResourceId 服务实例ID，如bh-saas-s3ed4r5e
+     * Set <p>服务实例ID，如bh-saas-s3ed4r5e</p>
+     * @param ResourceId <p>服务实例ID，如bh-saas-s3ed4r5e</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 地域编码 
-     * @return ApCode 地域编码
+     * Get <p>地域编码</p> 
+     * @return ApCode <p>地域编码</p>
      */
     public String getApCode() {
         return this.ApCode;
     }
 
     /**
-     * Set 地域编码
-     * @param ApCode 地域编码
+     * Set <p>地域编码</p>
+     * @param ApCode <p>地域编码</p>
      */
     public void setApCode(String ApCode) {
         this.ApCode = ApCode;
     }
 
     /**
-     * Get 服务实例规格信息 
-     * @return SvArgs 服务实例规格信息
+     * Get <p>服务实例规格信息</p> 
+     * @return SvArgs <p>服务实例规格信息</p>
      */
     public String getSvArgs() {
         return this.SvArgs;
     }
 
     /**
-     * Set 服务实例规格信息
-     * @param SvArgs 服务实例规格信息
+     * Set <p>服务实例规格信息</p>
+     * @param SvArgs <p>服务实例规格信息</p>
      */
     public void setSvArgs(String SvArgs) {
         this.SvArgs = SvArgs;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC ID</p> 
+     * @return VpcId <p>VPC ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC ID</p>
+     * @param VpcId <p>VPC ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 服务规格对应的资产数 
-     * @return Nodes 服务规格对应的资产数
+     * Get <p>服务规格对应的资产数</p> 
+     * @return Nodes <p>服务规格对应的资产数</p>
      */
     public Long getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 服务规格对应的资产数
-     * @param Nodes 服务规格对应的资产数
+     * Set <p>服务规格对应的资产数</p>
+     * @param Nodes <p>服务规格对应的资产数</p>
      */
     public void setNodes(Long Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费 
-     * @return RenewFlag 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+     * Get <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p> 
+     * @return RenewFlag <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
-     * @param RenewFlag 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+     * Set <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
+     * @param RenewFlag <p>自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中 
-     * @return Status 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+     * Get <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p> 
+     * @return Status <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
-     * @param Status 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+     * Set <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
+     * @param Status <p>资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 服务实例名，如T-Sec-堡垒机（SaaS型） 
-     * @return ResourceName 服务实例名，如T-Sec-堡垒机（SaaS型）
+     * Get <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p> 
+     * @return ResourceName <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 服务实例名，如T-Sec-堡垒机（SaaS型）
-     * @param ResourceName 服务实例名，如T-Sec-堡垒机（SaaS型）
+     * Set <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
+     * @param ResourceName <p>服务实例名，如T-Sec-堡垒机（SaaS型）</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 定价模型ID 
-     * @return Pid 定价模型ID
+     * Get <p>定价模型ID</p> 
+     * @return Pid <p>定价模型ID</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 定价模型ID
-     * @param Pid 定价模型ID
+     * Set <p>定价模型ID</p>
+     * @param Pid <p>定价模型ID</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 资源创建时间 
-     * @return CreateTime 资源创建时间
+     * Get <p>资源创建时间</p> 
+     * @return CreateTime <p>资源创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 资源创建时间
-     * @param CreateTime 资源创建时间
+     * Set <p>资源创建时间</p>
+     * @param CreateTime <p>资源创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 商品码, p_cds_dasb 
-     * @return ProductCode 商品码, p_cds_dasb
+     * Get <p>商品码, p_cds_dasb</p> 
+     * @return ProductCode <p>商品码, p_cds_dasb</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 商品码, p_cds_dasb
-     * @param ProductCode 商品码, p_cds_dasb
+     * Set <p>商品码, p_cds_dasb</p>
+     * @param ProductCode <p>商品码, p_cds_dasb</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子商品码, sp_cds_dasb_bh_saas 
-     * @return SubProductCode 子商品码, sp_cds_dasb_bh_saas
+     * Get <p>子商品码, sp_cds_dasb_bh_saas</p> 
+     * @return SubProductCode <p>子商品码, sp_cds_dasb_bh_saas</p>
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set 子商品码, sp_cds_dasb_bh_saas
-     * @param SubProductCode 子商品码, sp_cds_dasb_bh_saas
+     * Set <p>子商品码, sp_cds_dasb_bh_saas</p>
+     * @param SubProductCode <p>子商品码, sp_cds_dasb_bh_saas</p>
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 是否过期，true-过期，false-未过期 
-     * @return Expired 是否过期，true-过期，false-未过期
+     * Get <p>是否过期，true-过期，false-未过期</p> 
+     * @return Expired <p>是否过期，true-过期，false-未过期</p>
      */
     public Boolean getExpired() {
         return this.Expired;
     }
 
     /**
-     * Set 是否过期，true-过期，false-未过期
-     * @param Expired 是否过期，true-过期，false-未过期
+     * Set <p>是否过期，true-过期，false-未过期</p>
+     * @param Expired <p>是否过期，true-过期，false-未过期</p>
      */
     public void setExpired(Boolean Expired) {
         this.Expired = Expired;
     }
 
     /**
-     * Get 是否开通，true-开通，false-未开通 
-     * @return Deployed 是否开通，true-开通，false-未开通
+     * Get <p>是否开通，true-开通，false-未开通</p> 
+     * @return Deployed <p>是否开通，true-开通，false-未开通</p>
      */
     public Boolean getDeployed() {
         return this.Deployed;
     }
 
     /**
-     * Set 是否开通，true-开通，false-未开通
-     * @param Deployed 是否开通，true-开通，false-未开通
+     * Set <p>是否开通，true-开通，false-未开通</p>
+     * @param Deployed <p>是否开通，true-开通，false-未开通</p>
      */
     public void setDeployed(Boolean Deployed) {
         this.Deployed = Deployed;
     }
 
     /**
-     * Get 开通服务的 VPC 名称 
-     * @return VpcName 开通服务的 VPC 名称
+     * Get <p>开通服务的 VPC 名称</p> 
+     * @return VpcName <p>开通服务的 VPC 名称</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 开通服务的 VPC 名称
-     * @param VpcName 开通服务的 VPC 名称
+     * Set <p>开通服务的 VPC 名称</p>
+     * @param VpcName <p>开通服务的 VPC 名称</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 开通服务的 VPC 对应的网段 
-     * @return VpcCidrBlock 开通服务的 VPC 对应的网段
+     * Get <p>开通服务的 VPC 对应的网段</p> 
+     * @return VpcCidrBlock <p>开通服务的 VPC 对应的网段</p>
      */
     public String getVpcCidrBlock() {
         return this.VpcCidrBlock;
     }
 
     /**
-     * Set 开通服务的 VPC 对应的网段
-     * @param VpcCidrBlock 开通服务的 VPC 对应的网段
+     * Set <p>开通服务的 VPC 对应的网段</p>
+     * @param VpcCidrBlock <p>开通服务的 VPC 对应的网段</p>
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
     }
 
     /**
-     * Get 开通服务的子网ID 
-     * @return SubnetId 开通服务的子网ID
+     * Get <p>开通服务的子网ID</p> 
+     * @return SubnetId <p>开通服务的子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 开通服务的子网ID
-     * @param SubnetId 开通服务的子网ID
+     * Set <p>开通服务的子网ID</p>
+     * @param SubnetId <p>开通服务的子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 开通服务的子网名称 
-     * @return SubnetName 开通服务的子网名称
+     * Get <p>开通服务的子网名称</p> 
+     * @return SubnetName <p>开通服务的子网名称</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 开通服务的子网名称
-     * @param SubnetName 开通服务的子网名称
+     * Set <p>开通服务的子网名称</p>
+     * @param SubnetName <p>开通服务的子网名称</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 开通服务的子网网段 
-     * @return CidrBlock 开通服务的子网网段
+     * Get <p>开通服务的子网网段</p> 
+     * @return CidrBlock <p>开通服务的子网网段</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 开通服务的子网网段
-     * @param CidrBlock 开通服务的子网网段
+     * Set <p>开通服务的子网网段</p>
+     * @param CidrBlock <p>开通服务的子网网段</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 外部IP 
-     * @return PublicIpSet 外部IP
+     * Get <p>外部IP</p> 
+     * @return PublicIpSet <p>外部IP</p>
      */
     public String [] getPublicIpSet() {
         return this.PublicIpSet;
     }
 
     /**
-     * Set 外部IP
-     * @param PublicIpSet 外部IP
+     * Set <p>外部IP</p>
+     * @param PublicIpSet <p>外部IP</p>
      */
     public void setPublicIpSet(String [] PublicIpSet) {
         this.PublicIpSet = PublicIpSet;
     }
 
     /**
-     * Get 内部IP 
-     * @return PrivateIpSet 内部IP
+     * Get <p>内部IP</p> 
+     * @return PrivateIpSet <p>内部IP</p>
      */
     public String [] getPrivateIpSet() {
         return this.PrivateIpSet;
     }
 
     /**
-     * Set 内部IP
-     * @param PrivateIpSet 内部IP
+     * Set <p>内部IP</p>
+     * @param PrivateIpSet <p>内部IP</p>
      */
     public void setPrivateIpSet(String [] PrivateIpSet) {
         this.PrivateIpSet = PrivateIpSet;
     }
 
     /**
-     * Get 服务开通的高级功能列表，如:[DB] 
-     * @return ModuleSet 服务开通的高级功能列表，如:[DB]
+     * Get <p>服务开通的高级功能列表，如:[DB]</p> 
+     * @return ModuleSet <p>服务开通的高级功能列表，如:[DB]</p>
      */
     public String [] getModuleSet() {
         return this.ModuleSet;
     }
 
     /**
-     * Set 服务开通的高级功能列表，如:[DB]
-     * @param ModuleSet 服务开通的高级功能列表，如:[DB]
+     * Set <p>服务开通的高级功能列表，如:[DB]</p>
+     * @param ModuleSet <p>服务开通的高级功能列表，如:[DB]</p>
      */
     public void setModuleSet(String [] ModuleSet) {
         this.ModuleSet = ModuleSet;
     }
 
     /**
-     * Get 已使用的授权点数 
-     * @return UsedNodes 已使用的授权点数
+     * Get <p>已使用的授权点数</p> 
+     * @return UsedNodes <p>已使用的授权点数</p>
      */
     public Long getUsedNodes() {
         return this.UsedNodes;
     }
 
     /**
-     * Set 已使用的授权点数
-     * @param UsedNodes 已使用的授权点数
+     * Set <p>已使用的授权点数</p>
+     * @param UsedNodes <p>已使用的授权点数</p>
      */
     public void setUsedNodes(Long UsedNodes) {
         this.UsedNodes = UsedNodes;
     }
 
     /**
-     * Get 扩展点数 
-     * @return ExtendPoints 扩展点数
+     * Get <p>扩展点数</p> 
+     * @return ExtendPoints <p>扩展点数</p>
      */
     public Long getExtendPoints() {
         return this.ExtendPoints;
     }
 
     /**
-     * Set 扩展点数
-     * @param ExtendPoints 扩展点数
+     * Set <p>扩展点数</p>
+     * @param ExtendPoints <p>扩展点数</p>
      */
     public void setExtendPoints(Long ExtendPoints) {
         this.ExtendPoints = ExtendPoints;
     }
 
     /**
-     * Get 带宽扩展包个数(4M) 
-     * @return PackageBandwidth 带宽扩展包个数(4M)
+     * Get <p>带宽扩展包个数(4M)</p> 
+     * @return PackageBandwidth <p>带宽扩展包个数(4M)</p>
      */
     public Long getPackageBandwidth() {
         return this.PackageBandwidth;
     }
 
     /**
-     * Set 带宽扩展包个数(4M)
-     * @param PackageBandwidth 带宽扩展包个数(4M)
+     * Set <p>带宽扩展包个数(4M)</p>
+     * @param PackageBandwidth <p>带宽扩展包个数(4M)</p>
      */
     public void setPackageBandwidth(Long PackageBandwidth) {
         this.PackageBandwidth = PackageBandwidth;
     }
 
     /**
-     * Get 授权点数扩展包个数(50点) 
-     * @return PackageNode 授权点数扩展包个数(50点)
+     * Get <p>授权点数扩展包个数(50点)</p> 
+     * @return PackageNode <p>授权点数扩展包个数(50点)</p>
      */
     public Long getPackageNode() {
         return this.PackageNode;
     }
 
     /**
-     * Set 授权点数扩展包个数(50点)
-     * @param PackageNode 授权点数扩展包个数(50点)
+     * Set <p>授权点数扩展包个数(50点)</p>
+     * @param PackageNode <p>授权点数扩展包个数(50点)</p>
      */
     public void setPackageNode(Long PackageNode) {
         this.PackageNode = PackageNode;
     }
 
     /**
-     * Get 日志投递规格信息 
-     * @return LogDeliveryArgs 日志投递规格信息
+     * Get <p>日志投递规格信息</p> 
+     * @return LogDeliveryArgs <p>日志投递规格信息</p>
      */
     public String getLogDeliveryArgs() {
         return this.LogDeliveryArgs;
     }
 
     /**
-     * Set 日志投递规格信息
-     * @param LogDeliveryArgs 日志投递规格信息
+     * Set <p>日志投递规格信息</p>
+     * @param LogDeliveryArgs <p>日志投递规格信息</p>
      */
     public void setLogDeliveryArgs(String LogDeliveryArgs) {
         this.LogDeliveryArgs = LogDeliveryArgs;
     }
 
     /**
-     * Get 堡垒机资源LB	 
-     * @return ClbSet 堡垒机资源LB	
+     * Get <p>堡垒机资源LB</p> 
+     * @return ClbSet <p>堡垒机资源LB</p>
      */
     public Clb [] getClbSet() {
         return this.ClbSet;
     }
 
     /**
-     * Set 堡垒机资源LB	
-     * @param ClbSet 堡垒机资源LB	
+     * Set <p>堡垒机资源LB</p>
+     * @param ClbSet <p>堡垒机资源LB</p>
      */
     public void setClbSet(Clb [] ClbSet) {
         this.ClbSet = ClbSet;
     }
 
     /**
-     * Get 网络域个数 
-     * @return DomainCount 网络域个数
+     * Get <p>网络域个数</p> 
+     * @return DomainCount <p>网络域个数</p>
      */
     public Long getDomainCount() {
         return this.DomainCount;
     }
 
     /**
-     * Set 网络域个数
-     * @param DomainCount 网络域个数
+     * Set <p>网络域个数</p>
+     * @param DomainCount <p>网络域个数</p>
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;
     }
 
     /**
-     * Get 已经使用的网络域个数 
-     * @return UsedDomainCount 已经使用的网络域个数
+     * Get <p>已经使用的网络域个数</p> 
+     * @return UsedDomainCount <p>已经使用的网络域个数</p>
      */
     public Long getUsedDomainCount() {
         return this.UsedDomainCount;
     }
 
     /**
-     * Set 已经使用的网络域个数
-     * @param UsedDomainCount 已经使用的网络域个数
+     * Set <p>已经使用的网络域个数</p>
+     * @param UsedDomainCount <p>已经使用的网络域个数</p>
      */
     public void setUsedDomainCount(Long UsedDomainCount) {
         this.UsedDomainCount = UsedDomainCount;
     }
 
     /**
-     * Get 0 非试用版，1 试用版 
-     * @return Trial 0 非试用版，1 试用版
+     * Get <p>开启的网络域个数（不包含默认网络域）</p> 
+     * @return EnabledDomainCount <p>开启的网络域个数（不包含默认网络域）</p>
+     */
+    public Long getEnabledDomainCount() {
+        return this.EnabledDomainCount;
+    }
+
+    /**
+     * Set <p>开启的网络域个数（不包含默认网络域）</p>
+     * @param EnabledDomainCount <p>开启的网络域个数（不包含默认网络域）</p>
+     */
+    public void setEnabledDomainCount(Long EnabledDomainCount) {
+        this.EnabledDomainCount = EnabledDomainCount;
+    }
+
+    /**
+     * Get <p>0 非试用版，1 试用版</p> 
+     * @return Trial <p>0 非试用版，1 试用版</p>
      */
     public Long getTrial() {
         return this.Trial;
     }
 
     /**
-     * Set 0 非试用版，1 试用版
-     * @param Trial 0 非试用版，1 试用版
+     * Set <p>0 非试用版，1 试用版</p>
+     * @param Trial <p>0 非试用版，1 试用版</p>
      */
     public void setTrial(Long Trial) {
         this.Trial = Trial;
     }
 
     /**
-     * Get 日志投递规格信息 
-     * @return LogDelivery 日志投递规格信息
+     * Get <p>日志投递规格信息</p> 
+     * @return LogDelivery <p>日志投递规格信息</p>
      */
     public String getLogDelivery() {
         return this.LogDelivery;
     }
 
     /**
-     * Set 日志投递规格信息
-     * @param LogDelivery 日志投递规格信息
+     * Set <p>日志投递规格信息</p>
+     * @param LogDelivery <p>日志投递规格信息</p>
      */
     public void setLogDelivery(String LogDelivery) {
         this.LogDelivery = LogDelivery;
     }
 
     /**
-     * Get cdc集群id 
-     * @return CdcClusterId cdc集群id
+     * Get <p>cdc集群id</p> 
+     * @return CdcClusterId <p>cdc集群id</p>
      */
     public String getCdcClusterId() {
         return this.CdcClusterId;
     }
 
     /**
-     * Set cdc集群id
-     * @param CdcClusterId cdc集群id
+     * Set <p>cdc集群id</p>
+     * @param CdcClusterId <p>cdc集群id</p>
      */
     public void setCdcClusterId(String CdcClusterId) {
         this.CdcClusterId = CdcClusterId;
     }
 
     /**
-     * Get 部署模式 默认0 0-cvm 1-tke 
-     * @return DeployModel 部署模式 默认0 0-cvm 1-tke
+     * Get <p>部署模式 默认0 0-cvm 1-tke</p> 
+     * @return DeployModel <p>部署模式 默认0 0-cvm 1-tke</p>
      */
     public Long getDeployModel() {
         return this.DeployModel;
     }
 
     /**
-     * Set 部署模式 默认0 0-cvm 1-tke
-     * @param DeployModel 部署模式 默认0 0-cvm 1-tke
+     * Set <p>部署模式 默认0 0-cvm 1-tke</p>
+     * @param DeployModel <p>部署模式 默认0 0-cvm 1-tke</p>
      */
     public void setDeployModel(Long DeployModel) {
         this.DeployModel = DeployModel;
     }
 
     /**
-     * Get 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中 
-     * @return IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+     * Get <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p> 
+     * @return IntranetAccess <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
      */
     public Long getIntranetAccess() {
         return this.IntranetAccess;
     }
 
     /**
-     * Set 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
-     * @param IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+     * Set <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
+     * @param IntranetAccess <p>0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中</p>
      */
     public void setIntranetAccess(Long IntranetAccess) {
         this.IntranetAccess = IntranetAccess;
     }
 
     /**
-     * Get 内网访问的ip 
-     * @return IntranetPrivateIpSet 内网访问的ip
+     * Get <p>内网访问的ip</p> 
+     * @return IntranetPrivateIpSet <p>内网访问的ip</p>
      */
     public String [] getIntranetPrivateIpSet() {
         return this.IntranetPrivateIpSet;
     }
 
     /**
-     * Set 内网访问的ip
-     * @param IntranetPrivateIpSet 内网访问的ip
+     * Set <p>内网访问的ip</p>
+     * @param IntranetPrivateIpSet <p>内网访问的ip</p>
      */
     public void setIntranetPrivateIpSet(String [] IntranetPrivateIpSet) {
         this.IntranetPrivateIpSet = IntranetPrivateIpSet;
     }
 
     /**
-     * Get 开通内网访问的vpc 
-     * @return IntranetVpcId 开通内网访问的vpc
+     * Get <p>开通内网访问的vpc</p> 
+     * @return IntranetVpcId <p>开通内网访问的vpc</p>
      */
     public String getIntranetVpcId() {
         return this.IntranetVpcId;
     }
 
     /**
-     * Set 开通内网访问的vpc
-     * @param IntranetVpcId 开通内网访问的vpc
+     * Set <p>开通内网访问的vpc</p>
+     * @param IntranetVpcId <p>开通内网访问的vpc</p>
      */
     public void setIntranetVpcId(String IntranetVpcId) {
         this.IntranetVpcId = IntranetVpcId;
     }
 
     /**
-     * Get 开通内网访问的subnetId 
-     * @return IntranetSubnetId 开通内网访问的subnetId
+     * Get <p>开通内网访问的subnetId</p> 
+     * @return IntranetSubnetId <p>开通内网访问的subnetId</p>
+     * @deprecated
      */
+    @Deprecated
     public String getIntranetSubnetId() {
         return this.IntranetSubnetId;
     }
 
     /**
-     * Set 开通内网访问的subnetId
-     * @param IntranetSubnetId 开通内网访问的subnetId
+     * Set <p>开通内网访问的subnetId</p>
+     * @param IntranetSubnetId <p>开通内网访问的subnetId</p>
+     * @deprecated
      */
+    @Deprecated
     public void setIntranetSubnetId(String IntranetSubnetId) {
         this.IntranetSubnetId = IntranetSubnetId;
     }
 
     /**
-     * Get 开通内网访问vpc的网段 
-     * @return IntranetVpcCidr 开通内网访问vpc的网段
+     * Get <p>开通内网访问的子网集合</p> 
+     * @return IntranetSubnetIdSet <p>开通内网访问的子网集合</p>
+     */
+    public String [] getIntranetSubnetIdSet() {
+        return this.IntranetSubnetIdSet;
+    }
+
+    /**
+     * Set <p>开通内网访问的子网集合</p>
+     * @param IntranetSubnetIdSet <p>开通内网访问的子网集合</p>
+     */
+    public void setIntranetSubnetIdSet(String [] IntranetSubnetIdSet) {
+        this.IntranetSubnetIdSet = IntranetSubnetIdSet;
+    }
+
+    /**
+     * Get <p>开通内网访问vpc的网段</p> 
+     * @return IntranetVpcCidr <p>开通内网访问vpc的网段</p>
      */
     public String getIntranetVpcCidr() {
         return this.IntranetVpcCidr;
     }
 
     /**
-     * Set 开通内网访问vpc的网段
-     * @param IntranetVpcCidr 开通内网访问vpc的网段
+     * Set <p>开通内网访问vpc的网段</p>
+     * @param IntranetVpcCidr <p>开通内网访问vpc的网段</p>
      */
     public void setIntranetVpcCidr(String IntranetVpcCidr) {
         this.IntranetVpcCidr = IntranetVpcCidr;
     }
 
     /**
-     * Get 堡垒机内网ip自定义域名 
-     * @return DomainName 堡垒机内网ip自定义域名
+     * Get <p>堡垒机内网ip自定义域名</p> 
+     * @return DomainName <p>堡垒机内网ip自定义域名</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 堡垒机内网ip自定义域名
-     * @param DomainName 堡垒机内网ip自定义域名
+     * Set <p>堡垒机内网ip自定义域名</p>
+     * @param DomainName <p>堡垒机内网ip自定义域名</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 是否共享clb，true-共享clb，false-独享clb 
-     * @return ShareClb 是否共享clb，true-共享clb，false-独享clb
+     * Get <p>是否共享clb，true-共享clb，false-独享clb</p> 
+     * @return ShareClb <p>是否共享clb，true-共享clb，false-独享clb</p>
      */
     public Boolean getShareClb() {
         return this.ShareClb;
     }
 
     /**
-     * Set 是否共享clb，true-共享clb，false-独享clb
-     * @param ShareClb 是否共享clb，true-共享clb，false-独享clb
+     * Set <p>是否共享clb，true-共享clb，false-独享clb</p>
+     * @param ShareClb <p>是否共享clb，true-共享clb，false-独享clb</p>
      */
     public void setShareClb(Boolean ShareClb) {
         this.ShareClb = ShareClb;
     }
 
     /**
-     * Get 共享clb id 
-     * @return OpenClbId 共享clb id
+     * Get <p>共享clb id</p> 
+     * @return OpenClbId <p>共享clb id</p>
      */
     public String getOpenClbId() {
         return this.OpenClbId;
     }
 
     /**
-     * Set 共享clb id
-     * @param OpenClbId 共享clb id
+     * Set <p>共享clb id</p>
+     * @param OpenClbId <p>共享clb id</p>
      */
     public void setOpenClbId(String OpenClbId) {
         this.OpenClbId = OpenClbId;
     }
 
     /**
-     * Get 运营商信息 
-     * @return LbVipIsp 运营商信息
+     * Get <p>运营商信息</p> 
+     * @return LbVipIsp <p>运营商信息</p>
      */
     public String getLbVipIsp() {
         return this.LbVipIsp;
     }
 
     /**
-     * Set 运营商信息
-     * @param LbVipIsp 运营商信息
+     * Set <p>运营商信息</p>
+     * @param LbVipIsp <p>运营商信息</p>
      */
     public void setLbVipIsp(String LbVipIsp) {
         this.LbVipIsp = LbVipIsp;
     }
 
     /**
-     * Get linux资产命令行运维端口 
-     * @return TUICmdPort linux资产命令行运维端口
+     * Get <p>linux资产命令行运维端口</p> 
+     * @return TUICmdPort <p>linux资产命令行运维端口</p>
      */
     public Long getTUICmdPort() {
         return this.TUICmdPort;
     }
 
     /**
-     * Set linux资产命令行运维端口
-     * @param TUICmdPort linux资产命令行运维端口
+     * Set <p>linux资产命令行运维端口</p>
+     * @param TUICmdPort <p>linux资产命令行运维端口</p>
      */
     public void setTUICmdPort(Long TUICmdPort) {
         this.TUICmdPort = TUICmdPort;
     }
 
     /**
-     * Get linux资产直连端口 
-     * @return TUIDirectPort linux资产直连端口
+     * Get <p>linux资产直连端口</p> 
+     * @return TUIDirectPort <p>linux资产直连端口</p>
      */
     public Long getTUIDirectPort() {
         return this.TUIDirectPort;
     }
 
     /**
-     * Set linux资产直连端口
-     * @param TUIDirectPort linux资产直连端口
+     * Set <p>linux资产直连端口</p>
+     * @param TUIDirectPort <p>linux资产直连端口</p>
      */
     public void setTUIDirectPort(Long TUIDirectPort) {
         this.TUIDirectPort = TUIDirectPort;
     }
 
     /**
-     * Get 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中 
-     * @return WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     * Get <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p> 
+     * @return WebAccess <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
      */
     public Long getWebAccess() {
         return this.WebAccess;
     }
 
     /**
-     * Set 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
-     * @param WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     * Set <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
+     * @param WebAccess <p>1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中</p>
      */
     public void setWebAccess(Long WebAccess) {
         this.WebAccess = WebAccess;
     }
 
     /**
-     * Get 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中 
-     * @return ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     * Get <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p> 
+     * @return ClientAccess <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
      */
     public Long getClientAccess() {
         return this.ClientAccess;
     }
 
     /**
-     * Set 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
-     * @param ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     * Set <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
+     * @param ClientAccess <p>1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中</p>
      */
     public void setClientAccess(Long ClientAccess) {
         this.ClientAccess = ClientAccess;
     }
 
     /**
-     * Get 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中 
-     * @return ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     * Get <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p> 
+     * @return ExternalAccess <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
      */
     public Long getExternalAccess() {
         return this.ExternalAccess;
     }
 
     /**
-     * Set 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
-     * @param ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     * Set <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
+     * @param ExternalAccess <p>1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中</p>
      */
     public void setExternalAccess(Long ExternalAccess) {
         this.ExternalAccess = ExternalAccess;
     }
 
     /**
-     * Get 0默认值。0-免费版（试用版）ioa，1-付费版ioa 
-     * @return IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     * Get <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p> 
+     * @return IOAResource <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
      */
     public Long getIOAResource() {
         return this.IOAResource;
     }
 
     /**
-     * Set 0默认值。0-免费版（试用版）ioa，1-付费版ioa
-     * @param IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     * Set <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
+     * @param IOAResource <p>0默认值。0-免费版（试用版）ioa，1-付费版ioa</p>
      */
     public void setIOAResource(Long IOAResource) {
         this.IOAResource = IOAResource;
     }
 
     /**
-     * Get 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数 
-     * @return PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     * Get <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p> 
+     * @return PackageIOAUserCount <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
      */
     public Long getPackageIOAUserCount() {
         return this.PackageIOAUserCount;
     }
 
     /**
-     * Set 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
-     * @param PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     * Set <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
+     * @param PackageIOAUserCount <p>零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数</p>
      */
     public void setPackageIOAUserCount(Long PackageIOAUserCount) {
         this.PackageIOAUserCount = PackageIOAUserCount;
     }
 
     /**
-     * Get  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽 
-     * @return PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     * Get <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p> 
+     * @return PackageIOABandwidth <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
      */
     public Long getPackageIOABandwidth() {
         return this.PackageIOABandwidth;
     }
 
     /**
-     * Set  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
-     * @param PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     * Set <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
+     * @param PackageIOABandwidth <p>零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽</p>
      */
     public void setPackageIOABandwidth(Long PackageIOABandwidth) {
         this.PackageIOABandwidth = PackageIOABandwidth;
     }
 
     /**
-     * Get 堡垒机实例对应的零信任实例id 
-     * @return IOAResourceId 堡垒机实例对应的零信任实例id
+     * Get <p>堡垒机实例对应的零信任实例id</p> 
+     * @return IOAResourceId <p>堡垒机实例对应的零信任实例id</p>
      */
     public String getIOAResourceId() {
         return this.IOAResourceId;
     }
 
     /**
-     * Set 堡垒机实例对应的零信任实例id
-     * @param IOAResourceId 堡垒机实例对应的零信任实例id
+     * Set <p>堡垒机实例对应的零信任实例id</p>
+     * @param IOAResourceId <p>堡垒机实例对应的零信任实例id</p>
      */
     public void setIOAResourceId(String IOAResourceId) {
         this.IOAResourceId = IOAResourceId;
     }
 
     /**
-     * Get 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm 
-     * @return ResourceEdition 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     * Get <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p> 
+     * @return ResourceEdition <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
      */
     public String getResourceEdition() {
         return this.ResourceEdition;
     }
 
     /**
-     * Set 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
-     * @param ResourceEdition 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     * Set <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
+     * @param ResourceEdition <p>资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm</p>
      */
     public void setResourceEdition(String ResourceEdition) {
         this.ResourceEdition = ResourceEdition;
     }
 
     /**
-     * Get 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p 
-     * @return TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     * Get <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p> 
+     * @return TimeUnit <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
-     * @param TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     * Set <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
+     * @param TimeUnit <p>计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 计费时长 
-     * @return TimeSpan 计费时长
+     * Get <p>计费时长</p> 
+     * @return TimeSpan <p>计费时长</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 计费时长
-     * @param TimeSpan 计费时长
+     * Set <p>计费时长</p>
+     * @param TimeSpan <p>计费时长</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 计费模式 0后付费，1预付费 
-     * @return PayMode 计费模式 0后付费，1预付费
+     * Get <p>计费模式 0后付费，1预付费</p> 
+     * @return PayMode <p>计费模式 0后付费，1预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式 0后付费，1预付费
-     * @param PayMode 计费模式 0后付费，1预付费
+     * Set <p>计费模式 0后付费，1预付费</p>
+     * @param PayMode <p>计费模式 0后付费，1预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 计费侧地域 
-     * @return BillingRegion 计费侧地域
+     * Get <p>计费侧地域</p> 
+     * @return BillingRegion <p>计费侧地域</p>
      */
     public String getBillingRegion() {
         return this.BillingRegion;
     }
 
     /**
-     * Set 计费侧地域
-     * @param BillingRegion 计费侧地域
+     * Set <p>计费侧地域</p>
+     * @param BillingRegion <p>计费侧地域</p>
      */
     public void setBillingRegion(String BillingRegion) {
         this.BillingRegion = BillingRegion;
     }
 
     /**
-     * Get 计费侧可用区 
-     * @return BillingZone 计费侧可用区
+     * Get <p>计费侧可用区</p> 
+     * @return BillingZone <p>计费侧可用区</p>
      */
     public String getBillingZone() {
         return this.BillingZone;
     }
 
     /**
-     * Set 计费侧可用区
-     * @param BillingZone 计费侧可用区
+     * Set <p>计费侧可用区</p>
+     * @param BillingZone <p>计费侧可用区</p>
      */
     public void setBillingZone(String BillingZone) {
         this.BillingZone = BillingZone;
+    }
+
+    /**
+     * Get <p>部署的cvm个数</p> 
+     * @return DeployCvmCount <p>部署的cvm个数</p>
+     */
+    public Long getDeployCvmCount() {
+        return this.DeployCvmCount;
+    }
+
+    /**
+     * Set <p>部署的cvm个数</p>
+     * @param DeployCvmCount <p>部署的cvm个数</p>
+     */
+    public void setDeployCvmCount(Long DeployCvmCount) {
+        this.DeployCvmCount = DeployCvmCount;
+    }
+
+    /**
+     * Get <p>堡垒机实例的可用区信息</p> 
+     * @return ResourceZoneSet <p>堡垒机实例的可用区信息</p>
+     */
+    public ResourceDeployZone [] getResourceZoneSet() {
+        return this.ResourceZoneSet;
+    }
+
+    /**
+     * Set <p>堡垒机实例的可用区信息</p>
+     * @param ResourceZoneSet <p>堡垒机实例的可用区信息</p>
+     */
+    public void setResourceZoneSet(ResourceDeployZone [] ResourceZoneSet) {
+        this.ResourceZoneSet = ResourceZoneSet;
     }
 
     public Resource() {
@@ -1519,6 +1615,9 @@ public class Resource extends AbstractModel {
         if (source.UsedDomainCount != null) {
             this.UsedDomainCount = new Long(source.UsedDomainCount);
         }
+        if (source.EnabledDomainCount != null) {
+            this.EnabledDomainCount = new Long(source.EnabledDomainCount);
+        }
         if (source.Trial != null) {
             this.Trial = new Long(source.Trial);
         }
@@ -1545,6 +1644,12 @@ public class Resource extends AbstractModel {
         }
         if (source.IntranetSubnetId != null) {
             this.IntranetSubnetId = new String(source.IntranetSubnetId);
+        }
+        if (source.IntranetSubnetIdSet != null) {
+            this.IntranetSubnetIdSet = new String[source.IntranetSubnetIdSet.length];
+            for (int i = 0; i < source.IntranetSubnetIdSet.length; i++) {
+                this.IntranetSubnetIdSet[i] = new String(source.IntranetSubnetIdSet[i]);
+            }
         }
         if (source.IntranetVpcCidr != null) {
             this.IntranetVpcCidr = new String(source.IntranetVpcCidr);
@@ -1606,6 +1711,15 @@ public class Resource extends AbstractModel {
         if (source.BillingZone != null) {
             this.BillingZone = new String(source.BillingZone);
         }
+        if (source.DeployCvmCount != null) {
+            this.DeployCvmCount = new Long(source.DeployCvmCount);
+        }
+        if (source.ResourceZoneSet != null) {
+            this.ResourceZoneSet = new ResourceDeployZone[source.ResourceZoneSet.length];
+            for (int i = 0; i < source.ResourceZoneSet.length; i++) {
+                this.ResourceZoneSet[i] = new ResourceDeployZone(source.ResourceZoneSet[i]);
+            }
+        }
     }
 
 
@@ -1645,6 +1759,7 @@ public class Resource extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
         this.setParamSimple(map, prefix + "DomainCount", this.DomainCount);
         this.setParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
+        this.setParamSimple(map, prefix + "EnabledDomainCount", this.EnabledDomainCount);
         this.setParamSimple(map, prefix + "Trial", this.Trial);
         this.setParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
         this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
@@ -1653,6 +1768,7 @@ public class Resource extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
         this.setParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
         this.setParamSimple(map, prefix + "IntranetSubnetId", this.IntranetSubnetId);
+        this.setParamArraySimple(map, prefix + "IntranetSubnetIdSet.", this.IntranetSubnetIdSet);
         this.setParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "ShareClb", this.ShareClb);
@@ -1673,6 +1789,8 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "BillingRegion", this.BillingRegion);
         this.setParamSimple(map, prefix + "BillingZone", this.BillingZone);
+        this.setParamSimple(map, prefix + "DeployCvmCount", this.DeployCvmCount);
+        this.setParamArrayObj(map, prefix + "ResourceZoneSet.", this.ResourceZoneSet);
 
     }
 }

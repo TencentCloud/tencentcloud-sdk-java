@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDspmRestoreLogTaskRequest extends AbstractModel {
 
     /**
-    * 备份日志Id
+    * <p>备份日志Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-     * Get 备份日志Id 
-     * @return Id 备份日志Id
+     * Get <p>备份日志Id</p> 
+     * @return Id <p>备份日志Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 备份日志Id
-     * @param Id 备份日志Id
+     * Set <p>备份日志Id</p>
+     * @param Id <p>备份日志Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;

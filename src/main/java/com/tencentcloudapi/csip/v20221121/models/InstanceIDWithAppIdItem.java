@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InstanceIDWithAppIdItem extends AbstractModel {
 
     /**
-    * <p>APPID</p>
+    * 机器所属AppId
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * <p>实例ID</p>
+    * 机器实例ID
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get <p>APPID</p> 
-     * @return AppId <p>APPID</p>
+     * Get 机器所属AppId 
+     * @return AppId 机器所属AppId
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>APPID</p>
-     * @param AppId <p>APPID</p>
+     * Set 机器所属AppId
+     * @param AppId 机器所属AppId
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>实例ID</p> 
-     * @return InstanceID <p>实例ID</p>
+     * Get 机器实例ID 
+     * @return InstanceID 机器实例ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set <p>实例ID</p>
-     * @param InstanceID <p>实例ID</p>
+     * Set 机器实例ID
+     * @param InstanceID 机器实例ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

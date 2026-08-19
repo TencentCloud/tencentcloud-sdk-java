@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class HTTPServiceRoute extends AbstractModel {
 
     /**
-    * 路径
+    * <p>路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 路径重写
+    * <p>路径重写规则</p>
     */
     @SerializedName("PathRewrite")
     @Expose
     private HTTPServicePathRewrite PathRewrite;
 
     /**
-    * 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+    * <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
     */
     @SerializedName("UpstreamResourceType")
     @Expose
     private String UpstreamResourceType;
 
     /**
-    * 上游服务名
+    * <p>上游服务名</p>
     */
     @SerializedName("UpstreamResourceName")
     @Expose
     private String UpstreamResourceName;
 
     /**
-    * 是否开启安全域名
+    * <p>是否开启安全域名</p>
     */
     @SerializedName("EnableSafeDomain")
     @Expose
     private Boolean EnableSafeDomain;
 
     /**
-    * 是否开启身份认证
+    * <p>是否开启身份认证</p>
     */
     @SerializedName("EnableAuth")
     @Expose
     private Boolean EnableAuth;
 
     /**
-    * 是否开启路径透传
+    * <p>是否开启路径透传</p>
     */
     @SerializedName("EnablePathTransmission")
     @Expose
     private Boolean EnablePathTransmission;
 
     /**
-    * QPS限频策略
+    * <p>QPS限频策略</p>
     */
     @SerializedName("QPSPolicy")
     @Expose
     private HTTPServiceRouteQPSPolicy QPSPolicy;
 
     /**
-    * 是否开启路由
+    * <p>是否开启路由</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 扩展字段，内部包含headers处理等
+    * <p>扩展字段，内部包含headers处理等</p>
     */
     @SerializedName("Extension")
     @Expose
     private HTTPServiceExtension Extension;
 
     /**
-    * 路由创建时间
+    * <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 路由更新时间
+    * <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 路径 
-     * @return Path 路径
+     * Get <p>路径</p> 
+     * @return Path <p>路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 路径
-     * @param Path 路径
+     * Set <p>路径</p>
+     * @param Path <p>路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 路径重写 
-     * @return PathRewrite 路径重写
+     * Get <p>路径重写规则</p> 
+     * @return PathRewrite <p>路径重写规则</p>
      */
     public HTTPServicePathRewrite getPathRewrite() {
         return this.PathRewrite;
     }
 
     /**
-     * Set 路径重写
-     * @param PathRewrite 路径重写
+     * Set <p>路径重写规则</p>
+     * @param PathRewrite <p>路径重写规则</p>
      */
     public void setPathRewrite(HTTPServicePathRewrite PathRewrite) {
         this.PathRewrite = PathRewrite;
     }
 
     /**
-     * Get 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse 
-     * @return UpstreamResourceType 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+     * Get <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p> 
+     * @return UpstreamResourceType <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
      */
     public String getUpstreamResourceType() {
         return this.UpstreamResourceType;
     }
 
     /**
-     * Set 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
-     * @param UpstreamResourceType 上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse
+     * Set <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
+     * @param UpstreamResourceType <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
      */
     public void setUpstreamResourceType(String UpstreamResourceType) {
         this.UpstreamResourceType = UpstreamResourceType;
     }
 
     /**
-     * Get 上游服务名 
-     * @return UpstreamResourceName 上游服务名
+     * Get <p>上游服务名</p> 
+     * @return UpstreamResourceName <p>上游服务名</p>
      */
     public String getUpstreamResourceName() {
         return this.UpstreamResourceName;
     }
 
     /**
-     * Set 上游服务名
-     * @param UpstreamResourceName 上游服务名
+     * Set <p>上游服务名</p>
+     * @param UpstreamResourceName <p>上游服务名</p>
      */
     public void setUpstreamResourceName(String UpstreamResourceName) {
         this.UpstreamResourceName = UpstreamResourceName;
     }
 
     /**
-     * Get 是否开启安全域名 
-     * @return EnableSafeDomain 是否开启安全域名
+     * Get <p>是否开启安全域名</p> 
+     * @return EnableSafeDomain <p>是否开启安全域名</p>
      */
     public Boolean getEnableSafeDomain() {
         return this.EnableSafeDomain;
     }
 
     /**
-     * Set 是否开启安全域名
-     * @param EnableSafeDomain 是否开启安全域名
+     * Set <p>是否开启安全域名</p>
+     * @param EnableSafeDomain <p>是否开启安全域名</p>
      */
     public void setEnableSafeDomain(Boolean EnableSafeDomain) {
         this.EnableSafeDomain = EnableSafeDomain;
     }
 
     /**
-     * Get 是否开启身份认证 
-     * @return EnableAuth 是否开启身份认证
+     * Get <p>是否开启身份认证</p> 
+     * @return EnableAuth <p>是否开启身份认证</p>
      */
     public Boolean getEnableAuth() {
         return this.EnableAuth;
     }
 
     /**
-     * Set 是否开启身份认证
-     * @param EnableAuth 是否开启身份认证
+     * Set <p>是否开启身份认证</p>
+     * @param EnableAuth <p>是否开启身份认证</p>
      */
     public void setEnableAuth(Boolean EnableAuth) {
         this.EnableAuth = EnableAuth;
     }
 
     /**
-     * Get 是否开启路径透传 
-     * @return EnablePathTransmission 是否开启路径透传
+     * Get <p>是否开启路径透传</p> 
+     * @return EnablePathTransmission <p>是否开启路径透传</p>
      */
     public Boolean getEnablePathTransmission() {
         return this.EnablePathTransmission;
     }
 
     /**
-     * Set 是否开启路径透传
-     * @param EnablePathTransmission 是否开启路径透传
+     * Set <p>是否开启路径透传</p>
+     * @param EnablePathTransmission <p>是否开启路径透传</p>
      */
     public void setEnablePathTransmission(Boolean EnablePathTransmission) {
         this.EnablePathTransmission = EnablePathTransmission;
     }
 
     /**
-     * Get QPS限频策略 
-     * @return QPSPolicy QPS限频策略
+     * Get <p>QPS限频策略</p> 
+     * @return QPSPolicy <p>QPS限频策略</p>
      */
     public HTTPServiceRouteQPSPolicy getQPSPolicy() {
         return this.QPSPolicy;
     }
 
     /**
-     * Set QPS限频策略
-     * @param QPSPolicy QPS限频策略
+     * Set <p>QPS限频策略</p>
+     * @param QPSPolicy <p>QPS限频策略</p>
      */
     public void setQPSPolicy(HTTPServiceRouteQPSPolicy QPSPolicy) {
         this.QPSPolicy = QPSPolicy;
     }
 
     /**
-     * Get 是否开启路由 
-     * @return Enable 是否开启路由
+     * Get <p>是否开启路由</p> 
+     * @return Enable <p>是否开启路由</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启路由
-     * @param Enable 是否开启路由
+     * Set <p>是否开启路由</p>
+     * @param Enable <p>是否开启路由</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 扩展字段，内部包含headers处理等 
-     * @return Extension 扩展字段，内部包含headers处理等
+     * Get <p>扩展字段，内部包含headers处理等</p> 
+     * @return Extension <p>扩展字段，内部包含headers处理等</p>
      */
     public HTTPServiceExtension getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set 扩展字段，内部包含headers处理等
-     * @param Extension 扩展字段，内部包含headers处理等
+     * Set <p>扩展字段，内部包含headers处理等</p>
+     * @param Extension <p>扩展字段，内部包含headers处理等</p>
      */
     public void setExtension(HTTPServiceExtension Extension) {
         this.Extension = Extension;
     }
 
     /**
-     * Get 路由创建时间 
-     * @return CreateTime 路由创建时间
+     * Get <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p> 
+     * @return CreateTime <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 路由创建时间
-     * @param CreateTime 路由创建时间
+     * Set <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+     * @param CreateTime <p>路由创建时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 路由更新时间 
-     * @return UpdateTime 路由更新时间
+     * Get <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p> 
+     * @return UpdateTime <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 路由更新时间
-     * @param UpdateTime 路由更新时间
+     * Set <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
+     * @param UpdateTime <p>路由更新时间，格式  YYYY-MM-DDTHH:mm:ss±HH:mm，时区为 UTC+8</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -59,6 +59,13 @@ public class UpdateInferenceModelRequest extends AbstractModel {
     private String [] Tags;
 
     /**
+    * <p>系统标签列表（TagKey-TagValue）</p>
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get <p>推理模型UID</p> 
      * @return ModelUid <p>推理模型UID</p>
      */
@@ -138,6 +145,22 @@ public class UpdateInferenceModelRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>系统标签列表（TagKey-TagValue）</p> 
+     * @return ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>系统标签列表（TagKey-TagValue）</p>
+     * @param ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public UpdateInferenceModelRequest() {
     }
 
@@ -164,6 +187,12 @@ public class UpdateInferenceModelRequest extends AbstractModel {
                 this.Tags[i] = new String(source.Tags[i]);
             }
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -176,6 +205,7 @@ public class UpdateInferenceModelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ParameterSize", this.ParameterSize);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

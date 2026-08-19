@@ -31,7 +31,7 @@ public class CorpShareConfig extends AbstractModel {
     private Boolean Enabled;
 
     /**
-    * <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+    * <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
     */
     @SerializedName("ShareScope")
     @Expose
@@ -43,6 +43,13 @@ public class CorpShareConfig extends AbstractModel {
     @SerializedName("TagIdList")
     @Expose
     private String [] TagIdList;
+
+    /**
+    * <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+    */
+    @SerializedName("ShareScopeList")
+    @Expose
+    private Identity [] ShareScopeList;
 
     /**
      * Get <p>企业共享开关</p> 
@@ -61,16 +68,16 @@ public class CorpShareConfig extends AbstractModel {
     }
 
     /**
-     * Get <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table> 
-     * @return ShareScope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+     * Get <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p> 
+     * @return ShareScope <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
      */
     public Long getShareScope() {
         return this.ShareScope;
     }
 
     /**
-     * Set <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
-     * @param ShareScope <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr></tbody></table>
+     * Set <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
+     * @param ShareScope <p>共享范围类型，1：企业全员，2：指定账户，3：指定空间</p>
      */
     public void setShareScope(Long ShareScope) {
         this.ShareScope = ShareScope;
@@ -90,6 +97,22 @@ public class CorpShareConfig extends AbstractModel {
      */
     public void setTagIdList(String [] TagIdList) {
         this.TagIdList = TagIdList;
+    }
+
+    /**
+     * Get <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p> 
+     * @return ShareScopeList <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+     */
+    public Identity [] getShareScopeList() {
+        return this.ShareScopeList;
+    }
+
+    /**
+     * Set <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+     * @param ShareScopeList <p>共享范围信息(用户时StrId为uin,Name为用户名称;空间时StrId为空间ID,Name为空间名称)</p>
+     */
+    public void setShareScopeList(Identity [] ShareScopeList) {
+        this.ShareScopeList = ShareScopeList;
     }
 
     public CorpShareConfig() {
@@ -112,6 +135,12 @@ public class CorpShareConfig extends AbstractModel {
                 this.TagIdList[i] = new String(source.TagIdList[i]);
             }
         }
+        if (source.ShareScopeList != null) {
+            this.ShareScopeList = new Identity[source.ShareScopeList.length];
+            for (int i = 0; i < source.ShareScopeList.length; i++) {
+                this.ShareScopeList[i] = new Identity(source.ShareScopeList[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class CorpShareConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "ShareScope", this.ShareScope);
         this.setParamArraySimple(map, prefix + "TagIdList.", this.TagIdList);
+        this.setParamArrayObj(map, prefix + "ShareScopeList.", this.ShareScopeList);
 
     }
 }

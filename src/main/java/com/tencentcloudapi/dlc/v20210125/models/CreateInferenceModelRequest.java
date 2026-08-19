@@ -101,6 +101,27 @@ public class CreateInferenceModelRequest extends AbstractModel {
     private String ModelUid;
 
     /**
+    * <p>系统标签列表（TagKey-TagValue）</p>
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
+    * <p>模型文件来源于goosefs</p>
+    */
+    @SerializedName("GooseFSConfig")
+    @Expose
+    private GooseFSConfig GooseFSConfig;
+
+    /**
+    * <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get <p>模型名称（最长 256）</p> 
      * @return Name <p>模型名称（最长 256）</p>
      */
@@ -276,6 +297,54 @@ public class CreateInferenceModelRequest extends AbstractModel {
         this.ModelUid = ModelUid;
     }
 
+    /**
+     * Get <p>系统标签列表（TagKey-TagValue）</p> 
+     * @return ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set <p>系统标签列表（TagKey-TagValue）</p>
+     * @param ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get <p>模型文件来源于goosefs</p> 
+     * @return GooseFSConfig <p>模型文件来源于goosefs</p>
+     */
+    public GooseFSConfig getGooseFSConfig() {
+        return this.GooseFSConfig;
+    }
+
+    /**
+     * Set <p>模型文件来源于goosefs</p>
+     * @param GooseFSConfig <p>模型文件来源于goosefs</p>
+     */
+    public void setGooseFSConfig(GooseFSConfig GooseFSConfig) {
+        this.GooseFSConfig = GooseFSConfig;
+    }
+
+    /**
+     * Get <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul> 
+     * @return StorageType <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+     * @param StorageType <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public CreateInferenceModelRequest() {
     }
 
@@ -323,6 +392,18 @@ public class CreateInferenceModelRequest extends AbstractModel {
         if (source.ModelUid != null) {
             this.ModelUid = new String(source.ModelUid);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
+        if (source.GooseFSConfig != null) {
+            this.GooseFSConfig = new GooseFSConfig(source.GooseFSConfig);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -341,6 +422,9 @@ public class CreateInferenceModelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
         this.setParamArraySimple(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "ModelUid", this.ModelUid);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

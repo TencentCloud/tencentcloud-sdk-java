@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOffsetByTimeResponse extends AbstractModel {
 
     /**
-    * 时间与Offset的对应
+    * <p>时间与Offset的对应</p>
     */
     @SerializedName("Items")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeOffsetByTimeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 时间与Offset的对应 
-     * @return Items 时间与Offset的对应
+     * Get <p>时间与Offset的对应</p> 
+     * @return Items <p>时间与Offset的对应</p>
      */
     public OffsetTimeMap [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 时间与Offset的对应
-     * @param Items 时间与Offset的对应
+     * Set <p>时间与Offset的对应</p>
+     * @param Items <p>时间与Offset的对应</p>
      */
     public void setItems(OffsetTimeMap [] Items) {
         this.Items = Items;

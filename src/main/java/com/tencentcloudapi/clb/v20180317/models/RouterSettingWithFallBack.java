@@ -64,6 +64,13 @@ public class RouterSettingWithFallBack extends AbstractModel {
     private RoutingStrategyArgs RoutingStrategyArgs;
 
     /**
+    * <p>粘连配置参数</p>
+    */
+    @SerializedName("StickyConfig")
+    @Expose
+    private StickyConfig StickyConfig;
+
+    /**
      * Get <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CrossModelGroupRoutingStrategy <p>模型间路由策略。</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
@@ -163,6 +170,22 @@ public class RouterSettingWithFallBack extends AbstractModel {
         this.RoutingStrategyArgs = RoutingStrategyArgs;
     }
 
+    /**
+     * Get <p>粘连配置参数</p> 
+     * @return StickyConfig <p>粘连配置参数</p>
+     */
+    public StickyConfig getStickyConfig() {
+        return this.StickyConfig;
+    }
+
+    /**
+     * Set <p>粘连配置参数</p>
+     * @param StickyConfig <p>粘连配置参数</p>
+     */
+    public void setStickyConfig(StickyConfig StickyConfig) {
+        this.StickyConfig = StickyConfig;
+    }
+
     public RouterSettingWithFallBack() {
     }
 
@@ -186,6 +209,9 @@ public class RouterSettingWithFallBack extends AbstractModel {
         if (source.RoutingStrategyArgs != null) {
             this.RoutingStrategyArgs = new RoutingStrategyArgs(source.RoutingStrategyArgs);
         }
+        if (source.StickyConfig != null) {
+            this.StickyConfig = new StickyConfig(source.StickyConfig);
+        }
     }
 
 
@@ -198,6 +224,7 @@ public class RouterSettingWithFallBack extends AbstractModel {
         this.setParamSimple(map, prefix + "RoutingStrategy", this.RoutingStrategy);
         this.setParamSimple(map, prefix + "NumRetries", this.NumRetries);
         this.setParamObj(map, prefix + "RoutingStrategyArgs.", this.RoutingStrategyArgs);
+        this.setParamObj(map, prefix + "StickyConfig.", this.StickyConfig);
 
     }
 }

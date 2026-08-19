@@ -24,201 +24,184 @@ import java.util.HashMap;
 public class LogFormat extends AbstractModel {
 
     /**
-    * 日志投递的预设输出格式类型，取值有：
-<li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li>
-<li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li>
+    * <p>日志输出格式，取值有：</p><ul><li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li><li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li><li>template：使用用户自定义输出模板，单条日志中支持按照自定义模板进行自定义排版和拼接，需配合 RecordTemplate 字段使用。</li></ul>
     */
     @SerializedName("FormatType")
     @Expose
     private String FormatType;
 
     /**
-    * 在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。
+    * <p>在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。</p>
     */
     @SerializedName("BatchPrefix")
     @Expose
     private String BatchPrefix;
 
     /**
-    * 在每个日志投递批次后附加的字符串。
+    * <p>在每个日志投递批次后附加的字符串。</p>
     */
     @SerializedName("BatchSuffix")
     @Expose
     private String BatchSuffix;
 
     /**
-    * 在每条日志记录之前添加的字符串。
+    * <p>单条日志前缀，在每条日志记录之前添加的字符串。</p>
     */
     @SerializedName("RecordPrefix")
     @Expose
     private String RecordPrefix;
 
     /**
-    * 在每条日志记录后附加的字符串。
+    * <p>单条日志后缀，在每条日志记录后附加的字符串。</p>
     */
     @SerializedName("RecordSuffix")
     @Expose
     private String RecordSuffix;
 
     /**
-    * 插入日志记录之间作为分隔符的字符串，取值有：
-<li>\n：换行符；</li>
-<li>\t：制表符；</li>
-<li>，：半角逗号。</li>
+    * <p>日志分隔符，插入日志记录之间作为分隔的字符串，取值有：</p><ul><li>\n：换行符；</li><li>\t：制表符；</li><li>，：半角逗号。</li></ul>
     */
     @SerializedName("RecordDelimiter")
     @Expose
     private String RecordDelimiter;
 
     /**
-    * 单条日志记录内，插入字段之间作为分隔符的字符串，取值有：
-<li>\t：制表符；</li>
-<li>，：半角逗号；</li>
-<li>;：半角分号。</li>
+    * <p>日志模板，单条日志的输出模板，长度限制 4KB，仅当 FormatType = template 生效。支持对配置的推送字段按照模板进行自定义排版和拼接。</p>
+    */
+    @SerializedName("RecordTemplate")
+    @Expose
+    private String RecordTemplate;
+
+    /**
+    * <p>字段分隔符，单条日志记录内，插入字段之间作为分隔符的字符串，仅当 FormatType = csv 生效。取值有：<ul><li>\t：制表符；</li><li>，：半角逗号；</li><li>;：半角分号。</li></ul></p>
     */
     @SerializedName("FieldDelimiter")
     @Expose
     private String FieldDelimiter;
 
     /**
-     * Get 日志投递的预设输出格式类型，取值有：
-<li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li>
-<li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li> 
-     * @return FormatType 日志投递的预设输出格式类型，取值有：
-<li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li>
-<li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li>
+     * Get <p>日志输出格式，取值有：</p><ul><li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li><li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li><li>template：使用用户自定义输出模板，单条日志中支持按照自定义模板进行自定义排版和拼接，需配合 RecordTemplate 字段使用。</li></ul> 
+     * @return FormatType <p>日志输出格式，取值有：</p><ul><li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li><li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li><li>template：使用用户自定义输出模板，单条日志中支持按照自定义模板进行自定义排版和拼接，需配合 RecordTemplate 字段使用。</li></ul>
      */
     public String getFormatType() {
         return this.FormatType;
     }
 
     /**
-     * Set 日志投递的预设输出格式类型，取值有：
-<li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li>
-<li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li>
-     * @param FormatType 日志投递的预设输出格式类型，取值有：
-<li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li>
-<li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li>
+     * Set <p>日志输出格式，取值有：</p><ul><li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li><li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li><li>template：使用用户自定义输出模板，单条日志中支持按照自定义模板进行自定义排版和拼接，需配合 RecordTemplate 字段使用。</li></ul>
+     * @param FormatType <p>日志输出格式，取值有：</p><ul><li>json：使用预设日志输出格式 JSON Lines，单条日志中的字段以键值对方式呈现；</li><li>csv：使用预设日志输出格式 csv，单条日志中仅呈现字段值，不呈现字段名称。</li><li>template：使用用户自定义输出模板，单条日志中支持按照自定义模板进行自定义排版和拼接，需配合 RecordTemplate 字段使用。</li></ul>
      */
     public void setFormatType(String FormatType) {
         this.FormatType = FormatType;
     }
 
     /**
-     * Get 在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。 
-     * @return BatchPrefix 在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。
+     * Get <p>在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。</p> 
+     * @return BatchPrefix <p>在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。</p>
      */
     public String getBatchPrefix() {
         return this.BatchPrefix;
     }
 
     /**
-     * Set 在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。
-     * @param BatchPrefix 在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。
+     * Set <p>在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。</p>
+     * @param BatchPrefix <p>在每个日志投递批次之前添加的字符串。每个日志投递批次可能包含多条日志记录。</p>
      */
     public void setBatchPrefix(String BatchPrefix) {
         this.BatchPrefix = BatchPrefix;
     }
 
     /**
-     * Get 在每个日志投递批次后附加的字符串。 
-     * @return BatchSuffix 在每个日志投递批次后附加的字符串。
+     * Get <p>在每个日志投递批次后附加的字符串。</p> 
+     * @return BatchSuffix <p>在每个日志投递批次后附加的字符串。</p>
      */
     public String getBatchSuffix() {
         return this.BatchSuffix;
     }
 
     /**
-     * Set 在每个日志投递批次后附加的字符串。
-     * @param BatchSuffix 在每个日志投递批次后附加的字符串。
+     * Set <p>在每个日志投递批次后附加的字符串。</p>
+     * @param BatchSuffix <p>在每个日志投递批次后附加的字符串。</p>
      */
     public void setBatchSuffix(String BatchSuffix) {
         this.BatchSuffix = BatchSuffix;
     }
 
     /**
-     * Get 在每条日志记录之前添加的字符串。 
-     * @return RecordPrefix 在每条日志记录之前添加的字符串。
+     * Get <p>单条日志前缀，在每条日志记录之前添加的字符串。</p> 
+     * @return RecordPrefix <p>单条日志前缀，在每条日志记录之前添加的字符串。</p>
      */
     public String getRecordPrefix() {
         return this.RecordPrefix;
     }
 
     /**
-     * Set 在每条日志记录之前添加的字符串。
-     * @param RecordPrefix 在每条日志记录之前添加的字符串。
+     * Set <p>单条日志前缀，在每条日志记录之前添加的字符串。</p>
+     * @param RecordPrefix <p>单条日志前缀，在每条日志记录之前添加的字符串。</p>
      */
     public void setRecordPrefix(String RecordPrefix) {
         this.RecordPrefix = RecordPrefix;
     }
 
     /**
-     * Get 在每条日志记录后附加的字符串。 
-     * @return RecordSuffix 在每条日志记录后附加的字符串。
+     * Get <p>单条日志后缀，在每条日志记录后附加的字符串。</p> 
+     * @return RecordSuffix <p>单条日志后缀，在每条日志记录后附加的字符串。</p>
      */
     public String getRecordSuffix() {
         return this.RecordSuffix;
     }
 
     /**
-     * Set 在每条日志记录后附加的字符串。
-     * @param RecordSuffix 在每条日志记录后附加的字符串。
+     * Set <p>单条日志后缀，在每条日志记录后附加的字符串。</p>
+     * @param RecordSuffix <p>单条日志后缀，在每条日志记录后附加的字符串。</p>
      */
     public void setRecordSuffix(String RecordSuffix) {
         this.RecordSuffix = RecordSuffix;
     }
 
     /**
-     * Get 插入日志记录之间作为分隔符的字符串，取值有：
-<li>\n：换行符；</li>
-<li>\t：制表符；</li>
-<li>，：半角逗号。</li> 
-     * @return RecordDelimiter 插入日志记录之间作为分隔符的字符串，取值有：
-<li>\n：换行符；</li>
-<li>\t：制表符；</li>
-<li>，：半角逗号。</li>
+     * Get <p>日志分隔符，插入日志记录之间作为分隔的字符串，取值有：</p><ul><li>\n：换行符；</li><li>\t：制表符；</li><li>，：半角逗号。</li></ul> 
+     * @return RecordDelimiter <p>日志分隔符，插入日志记录之间作为分隔的字符串，取值有：</p><ul><li>\n：换行符；</li><li>\t：制表符；</li><li>，：半角逗号。</li></ul>
      */
     public String getRecordDelimiter() {
         return this.RecordDelimiter;
     }
 
     /**
-     * Set 插入日志记录之间作为分隔符的字符串，取值有：
-<li>\n：换行符；</li>
-<li>\t：制表符；</li>
-<li>，：半角逗号。</li>
-     * @param RecordDelimiter 插入日志记录之间作为分隔符的字符串，取值有：
-<li>\n：换行符；</li>
-<li>\t：制表符；</li>
-<li>，：半角逗号。</li>
+     * Set <p>日志分隔符，插入日志记录之间作为分隔的字符串，取值有：</p><ul><li>\n：换行符；</li><li>\t：制表符；</li><li>，：半角逗号。</li></ul>
+     * @param RecordDelimiter <p>日志分隔符，插入日志记录之间作为分隔的字符串，取值有：</p><ul><li>\n：换行符；</li><li>\t：制表符；</li><li>，：半角逗号。</li></ul>
      */
     public void setRecordDelimiter(String RecordDelimiter) {
         this.RecordDelimiter = RecordDelimiter;
     }
 
     /**
-     * Get 单条日志记录内，插入字段之间作为分隔符的字符串，取值有：
-<li>\t：制表符；</li>
-<li>，：半角逗号；</li>
-<li>;：半角分号。</li> 
-     * @return FieldDelimiter 单条日志记录内，插入字段之间作为分隔符的字符串，取值有：
-<li>\t：制表符；</li>
-<li>，：半角逗号；</li>
-<li>;：半角分号。</li>
+     * Get <p>日志模板，单条日志的输出模板，长度限制 4KB，仅当 FormatType = template 生效。支持对配置的推送字段按照模板进行自定义排版和拼接。</p> 
+     * @return RecordTemplate <p>日志模板，单条日志的输出模板，长度限制 4KB，仅当 FormatType = template 生效。支持对配置的推送字段按照模板进行自定义排版和拼接。</p>
+     */
+    public String getRecordTemplate() {
+        return this.RecordTemplate;
+    }
+
+    /**
+     * Set <p>日志模板，单条日志的输出模板，长度限制 4KB，仅当 FormatType = template 生效。支持对配置的推送字段按照模板进行自定义排版和拼接。</p>
+     * @param RecordTemplate <p>日志模板，单条日志的输出模板，长度限制 4KB，仅当 FormatType = template 生效。支持对配置的推送字段按照模板进行自定义排版和拼接。</p>
+     */
+    public void setRecordTemplate(String RecordTemplate) {
+        this.RecordTemplate = RecordTemplate;
+    }
+
+    /**
+     * Get <p>字段分隔符，单条日志记录内，插入字段之间作为分隔符的字符串，仅当 FormatType = csv 生效。取值有：<ul><li>\t：制表符；</li><li>，：半角逗号；</li><li>;：半角分号。</li></ul></p> 
+     * @return FieldDelimiter <p>字段分隔符，单条日志记录内，插入字段之间作为分隔符的字符串，仅当 FormatType = csv 生效。取值有：<ul><li>\t：制表符；</li><li>，：半角逗号；</li><li>;：半角分号。</li></ul></p>
      */
     public String getFieldDelimiter() {
         return this.FieldDelimiter;
     }
 
     /**
-     * Set 单条日志记录内，插入字段之间作为分隔符的字符串，取值有：
-<li>\t：制表符；</li>
-<li>，：半角逗号；</li>
-<li>;：半角分号。</li>
-     * @param FieldDelimiter 单条日志记录内，插入字段之间作为分隔符的字符串，取值有：
-<li>\t：制表符；</li>
-<li>，：半角逗号；</li>
-<li>;：半角分号。</li>
+     * Set <p>字段分隔符，单条日志记录内，插入字段之间作为分隔符的字符串，仅当 FormatType = csv 生效。取值有：<ul><li>\t：制表符；</li><li>，：半角逗号；</li><li>;：半角分号。</li></ul></p>
+     * @param FieldDelimiter <p>字段分隔符，单条日志记录内，插入字段之间作为分隔符的字符串，仅当 FormatType = csv 生效。取值有：<ul><li>\t：制表符；</li><li>，：半角逗号；</li><li>;：半角分号。</li></ul></p>
      */
     public void setFieldDelimiter(String FieldDelimiter) {
         this.FieldDelimiter = FieldDelimiter;
@@ -250,6 +233,9 @@ public class LogFormat extends AbstractModel {
         if (source.RecordDelimiter != null) {
             this.RecordDelimiter = new String(source.RecordDelimiter);
         }
+        if (source.RecordTemplate != null) {
+            this.RecordTemplate = new String(source.RecordTemplate);
+        }
         if (source.FieldDelimiter != null) {
             this.FieldDelimiter = new String(source.FieldDelimiter);
         }
@@ -266,6 +252,7 @@ public class LogFormat extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordPrefix", this.RecordPrefix);
         this.setParamSimple(map, prefix + "RecordSuffix", this.RecordSuffix);
         this.setParamSimple(map, prefix + "RecordDelimiter", this.RecordDelimiter);
+        this.setParamSimple(map, prefix + "RecordTemplate", this.RecordTemplate);
         this.setParamSimple(map, prefix + "FieldDelimiter", this.FieldDelimiter);
 
     }

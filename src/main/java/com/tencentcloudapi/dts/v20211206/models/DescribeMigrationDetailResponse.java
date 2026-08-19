@@ -24,156 +24,154 @@ import java.util.HashMap;
 public class DescribeMigrationDetailResponse extends AbstractModel {
 
     /**
-    * 数据迁移任务ID
+    * <p>数据迁移任务ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 数据迁移任务名称
+    * <p>数据迁移任务名称</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
+    * <p>任务创建(提交)时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
+    * <p>任务更新时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
+    * <p>任务开始执行时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
+    * <p>任务执行结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 迁移任务简要错误信息
+    * <p>迁移任务简要错误信息</p>
     */
     @SerializedName("BriefMsg")
     @Expose
     private String BriefMsg;
 
     /**
-    * 任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
+    * <p>任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、<br>pausing(暂停中)、<br>manualPaused(已暂停)</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 任务操作信息
+    * <p>任务操作信息</p>
     */
     @SerializedName("Action")
     @Expose
     private MigrateAction Action;
 
     /**
-    * 迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息
+    * <p>迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息</p>
     */
     @SerializedName("StepInfo")
     @Expose
     private MigrateDetailInfo StepInfo;
 
     /**
-    * 源实例信息
+    * <p>源实例信息</p>
     */
     @SerializedName("SrcInfo")
     @Expose
     private DBEndpointInfo SrcInfo;
 
     /**
-    * 目标端信息
+    * <p>目标端信息</p>
     */
     @SerializedName("DstInfo")
     @Expose
     private DBEndpointInfo DstInfo;
 
     /**
-    * 数据一致性校验结果
+    * <p>数据一致性校验结果</p>
     */
     @SerializedName("CompareTask")
     @Expose
     private CompareTaskInfo CompareTask;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-    * 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+    * <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
     */
     @SerializedName("RunMode")
     @Expose
     private String RunMode;
 
     /**
-    * 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+    * <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
     */
     @SerializedName("ExpectRunTime")
     @Expose
     private String ExpectRunTime;
 
     /**
-    * 迁移选项，描述任务如何执行迁移等一系列配置信息
+    * <p>迁移选项，描述任务如何执行迁移等一系列配置信息</p>
     */
     @SerializedName("MigrateOption")
     @Expose
     private MigrateOption MigrateOption;
 
     /**
-    * 校验任务运行详情
+    * <p>校验任务运行详情</p>
     */
     @SerializedName("CheckStepInfo")
     @Expose
     private CheckStepInfo CheckStepInfo;
 
     /**
-    * 描述计费相关的信息
+    * <p>描述计费相关的信息</p>
     */
     @SerializedName("TradeInfo")
     @Expose
     private TradeInfo TradeInfo;
 
     /**
-    * 任务错误信息
+    * <p>任务错误信息</p>
     */
     @SerializedName("ErrorInfo")
     @Expose
     private ErrorInfoItem [] ErrorInfo;
 
     /**
-    * 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+    * <p>全量导出可重入标识：enum::&quot;yes&quot;/&quot;no&quot;。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传</p>
     */
     @SerializedName("DumperResumeCtrl")
     @Expose
     private String DumperResumeCtrl;
 
     /**
-    * 任务的限速信息
+    * <p>任务的限速信息</p>
     */
     @SerializedName("RateLimitOption")
     @Expose
@@ -187,360 +185,352 @@ manualPaused(已暂停)
     private String RequestId;
 
     /**
-     * Get 数据迁移任务ID 
-     * @return JobId 数据迁移任务ID
+     * Get <p>数据迁移任务ID</p> 
+     * @return JobId <p>数据迁移任务ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 数据迁移任务ID
-     * @param JobId 数据迁移任务ID
+     * Set <p>数据迁移任务ID</p>
+     * @param JobId <p>数据迁移任务ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 数据迁移任务名称 
-     * @return JobName 数据迁移任务名称
+     * Get <p>数据迁移任务名称</p> 
+     * @return JobName <p>数据迁移任务名称</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 数据迁移任务名称
-     * @param JobName 数据迁移任务名称
+     * Set <p>数据迁移任务名称</p>
+     * @param JobName <p>数据迁移任务名称</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss 
-     * @return CreateTime 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Get <p>任务创建(提交)时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return CreateTime <p>任务创建(提交)时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
-     * @param CreateTime 任务创建(提交)时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Set <p>任务创建(提交)时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param CreateTime <p>任务创建(提交)时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss 
-     * @return UpdateTime 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Get <p>任务更新时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return UpdateTime <p>任务更新时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
-     * @param UpdateTime 任务更新时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Set <p>任务更新时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param UpdateTime <p>任务更新时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss 
-     * @return StartTime 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Get <p>任务开始执行时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return StartTime <p>任务开始执行时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
-     * @param StartTime 任务开始执行时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Set <p>任务开始执行时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param StartTime <p>任务开始执行时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss 
-     * @return EndTime 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Get <p>任务执行结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return EndTime <p>任务执行结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
-     * @param EndTime 任务执行结束时间，格式为 yyyy-mm-dd hh:mm:ss
+     * Set <p>任务执行结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param EndTime <p>任务执行结束时间。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 迁移任务简要错误信息 
-     * @return BriefMsg 迁移任务简要错误信息
+     * Get <p>迁移任务简要错误信息</p> 
+     * @return BriefMsg <p>迁移任务简要错误信息</p>
      */
     public String getBriefMsg() {
         return this.BriefMsg;
     }
 
     /**
-     * Set 迁移任务简要错误信息
-     * @param BriefMsg 迁移任务简要错误信息
+     * Set <p>迁移任务简要错误信息</p>
+     * @param BriefMsg <p>迁移任务简要错误信息</p>
      */
     public void setBriefMsg(String BriefMsg) {
         this.BriefMsg = BriefMsg;
     }
 
     /**
-     * Get 任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停) 
-     * @return Status 任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
+     * Get <p>任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、<br>pausing(暂停中)、<br>manualPaused(已暂停)</p> 
+     * @return Status <p>任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、<br>pausing(暂停中)、<br>manualPaused(已暂停)</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
-     * @param Status 任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、
-pausing(暂停中)、
-manualPaused(已暂停)
+     * Set <p>任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、<br>pausing(暂停中)、<br>manualPaused(已暂停)</p>
+     * @param Status <p>任务状态，取值为：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)、<br>pausing(暂停中)、<br>manualPaused(已暂停)</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务操作信息 
-     * @return Action 任务操作信息
+     * Get <p>任务操作信息</p> 
+     * @return Action <p>任务操作信息</p>
      */
     public MigrateAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set 任务操作信息
-     * @param Action 任务操作信息
+     * Set <p>任务操作信息</p>
+     * @param Action <p>任务操作信息</p>
      */
     public void setAction(MigrateAction Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息 
-     * @return StepInfo 迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息
+     * Get <p>迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息</p> 
+     * @return StepInfo <p>迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息</p>
      */
     public MigrateDetailInfo getStepInfo() {
         return this.StepInfo;
     }
 
     /**
-     * Set 迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息
-     * @param StepInfo 迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息
+     * Set <p>迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息</p>
+     * @param StepInfo <p>迁移执行过程信息，在校验阶段显示校验过程步骤信息，在迁移阶段会显示迁移步骤信息</p>
      */
     public void setStepInfo(MigrateDetailInfo StepInfo) {
         this.StepInfo = StepInfo;
     }
 
     /**
-     * Get 源实例信息 
-     * @return SrcInfo 源实例信息
+     * Get <p>源实例信息</p> 
+     * @return SrcInfo <p>源实例信息</p>
      */
     public DBEndpointInfo getSrcInfo() {
         return this.SrcInfo;
     }
 
     /**
-     * Set 源实例信息
-     * @param SrcInfo 源实例信息
+     * Set <p>源实例信息</p>
+     * @param SrcInfo <p>源实例信息</p>
      */
     public void setSrcInfo(DBEndpointInfo SrcInfo) {
         this.SrcInfo = SrcInfo;
     }
 
     /**
-     * Get 目标端信息 
-     * @return DstInfo 目标端信息
+     * Get <p>目标端信息</p> 
+     * @return DstInfo <p>目标端信息</p>
      */
     public DBEndpointInfo getDstInfo() {
         return this.DstInfo;
     }
 
     /**
-     * Set 目标端信息
-     * @param DstInfo 目标端信息
+     * Set <p>目标端信息</p>
+     * @param DstInfo <p>目标端信息</p>
      */
     public void setDstInfo(DBEndpointInfo DstInfo) {
         this.DstInfo = DstInfo;
     }
 
     /**
-     * Get 数据一致性校验结果 
-     * @return CompareTask 数据一致性校验结果
+     * Get <p>数据一致性校验结果</p> 
+     * @return CompareTask <p>数据一致性校验结果</p>
      */
     public CompareTaskInfo getCompareTask() {
         return this.CompareTask;
     }
 
     /**
-     * Set 数据一致性校验结果
-     * @param CompareTask 数据一致性校验结果
+     * Set <p>数据一致性校验结果</p>
+     * @param CompareTask <p>数据一致性校验结果</p>
      */
     public void setCompareTask(CompareTaskInfo CompareTask) {
         this.CompareTask = CompareTask;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tags 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息
-     * @param Tags 标签信息
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行) 
-     * @return RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+     * Get <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p> 
+     * @return RunMode <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
      */
     public String getRunMode() {
         return this.RunMode;
     }
 
     /**
-     * Set 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
-     * @param RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+     * Set <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
+     * @param RunMode <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
      */
     public void setRunMode(String RunMode) {
         this.RunMode = RunMode;
     }
 
     /**
-     * Get 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05" 
-     * @return ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+     * Get <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p> 
+     * @return ExpectRunTime <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public String getExpectRunTime() {
         return this.ExpectRunTime;
     }
 
     /**
-     * Set 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
-     * @param ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+     * Set <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
+     * @param ExpectRunTime <p>期待启动时间，当 <code>RunMode</code> 取值为 <code>timed</code> 时此值必填。当 <code>DateTimeISOFormat=true</code> 时返回 RFC 3339 格式（如 <code>2026-04-23T20:21:35+08:00</code>），否则返回 <code>yyyy-mm-dd hh:mm:ss</code>（北京时间）</p>
      */
     public void setExpectRunTime(String ExpectRunTime) {
         this.ExpectRunTime = ExpectRunTime;
     }
 
     /**
-     * Get 迁移选项，描述任务如何执行迁移等一系列配置信息 
-     * @return MigrateOption 迁移选项，描述任务如何执行迁移等一系列配置信息
+     * Get <p>迁移选项，描述任务如何执行迁移等一系列配置信息</p> 
+     * @return MigrateOption <p>迁移选项，描述任务如何执行迁移等一系列配置信息</p>
      */
     public MigrateOption getMigrateOption() {
         return this.MigrateOption;
     }
 
     /**
-     * Set 迁移选项，描述任务如何执行迁移等一系列配置信息
-     * @param MigrateOption 迁移选项，描述任务如何执行迁移等一系列配置信息
+     * Set <p>迁移选项，描述任务如何执行迁移等一系列配置信息</p>
+     * @param MigrateOption <p>迁移选项，描述任务如何执行迁移等一系列配置信息</p>
      */
     public void setMigrateOption(MigrateOption MigrateOption) {
         this.MigrateOption = MigrateOption;
     }
 
     /**
-     * Get 校验任务运行详情 
-     * @return CheckStepInfo 校验任务运行详情
+     * Get <p>校验任务运行详情</p> 
+     * @return CheckStepInfo <p>校验任务运行详情</p>
      */
     public CheckStepInfo getCheckStepInfo() {
         return this.CheckStepInfo;
     }
 
     /**
-     * Set 校验任务运行详情
-     * @param CheckStepInfo 校验任务运行详情
+     * Set <p>校验任务运行详情</p>
+     * @param CheckStepInfo <p>校验任务运行详情</p>
      */
     public void setCheckStepInfo(CheckStepInfo CheckStepInfo) {
         this.CheckStepInfo = CheckStepInfo;
     }
 
     /**
-     * Get 描述计费相关的信息 
-     * @return TradeInfo 描述计费相关的信息
+     * Get <p>描述计费相关的信息</p> 
+     * @return TradeInfo <p>描述计费相关的信息</p>
      */
     public TradeInfo getTradeInfo() {
         return this.TradeInfo;
     }
 
     /**
-     * Set 描述计费相关的信息
-     * @param TradeInfo 描述计费相关的信息
+     * Set <p>描述计费相关的信息</p>
+     * @param TradeInfo <p>描述计费相关的信息</p>
      */
     public void setTradeInfo(TradeInfo TradeInfo) {
         this.TradeInfo = TradeInfo;
     }
 
     /**
-     * Get 任务错误信息 
-     * @return ErrorInfo 任务错误信息
+     * Get <p>任务错误信息</p> 
+     * @return ErrorInfo <p>任务错误信息</p>
      */
     public ErrorInfoItem [] getErrorInfo() {
         return this.ErrorInfo;
     }
 
     /**
-     * Set 任务错误信息
-     * @param ErrorInfo 任务错误信息
+     * Set <p>任务错误信息</p>
+     * @param ErrorInfo <p>任务错误信息</p>
      */
     public void setErrorInfo(ErrorInfoItem [] ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
     }
 
     /**
-     * Get 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传 
-     * @return DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     * Get <p>全量导出可重入标识：enum::&quot;yes&quot;/&quot;no&quot;。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传</p> 
+     * @return DumperResumeCtrl <p>全量导出可重入标识：enum::&quot;yes&quot;/&quot;no&quot;。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传</p>
      */
     public String getDumperResumeCtrl() {
         return this.DumperResumeCtrl;
     }
 
     /**
-     * Set 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
-     * @param DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     * Set <p>全量导出可重入标识：enum::&quot;yes&quot;/&quot;no&quot;。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传</p>
+     * @param DumperResumeCtrl <p>全量导出可重入标识：enum::&quot;yes&quot;/&quot;no&quot;。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传</p>
      */
     public void setDumperResumeCtrl(String DumperResumeCtrl) {
         this.DumperResumeCtrl = DumperResumeCtrl;
     }
 
     /**
-     * Get 任务的限速信息 
-     * @return RateLimitOption 任务的限速信息
+     * Get <p>任务的限速信息</p> 
+     * @return RateLimitOption <p>任务的限速信息</p>
      */
     public RateLimitOption getRateLimitOption() {
         return this.RateLimitOption;
     }
 
     /**
-     * Set 任务的限速信息
-     * @param RateLimitOption 任务的限速信息
+     * Set <p>任务的限速信息</p>
+     * @param RateLimitOption <p>任务的限速信息</p>
      */
     public void setRateLimitOption(RateLimitOption RateLimitOption) {
         this.RateLimitOption = RateLimitOption;

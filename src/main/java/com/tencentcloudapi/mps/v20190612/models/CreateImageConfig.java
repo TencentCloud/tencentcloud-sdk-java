@@ -52,6 +52,13 @@ public class CreateImageConfig extends AbstractModel {
     private String AspectRatio;
 
     /**
+    * <p>附加参数。</p>
+    */
+    @SerializedName("AdditionalParameters")
+    @Expose
+    private String AdditionalParameters;
+
+    /**
      * Get <p>生图模型</p><p>枚举值：</p><ul><li>WAND-create-1.0-lite： 轻量生图模型</li><li>WAND-create-1.0-flash： 质量-速度平衡生图模型</li><li>WAND-create-1.0-pro： 高质量生图模型</li></ul> 
      * @return Model <p>生图模型</p><p>枚举值：</p><ul><li>WAND-create-1.0-lite： 轻量生图模型</li><li>WAND-create-1.0-flash： 质量-速度平衡生图模型</li><li>WAND-create-1.0-pro： 高质量生图模型</li></ul>
      */
@@ -115,6 +122,22 @@ public class CreateImageConfig extends AbstractModel {
         this.AspectRatio = AspectRatio;
     }
 
+    /**
+     * Get <p>附加参数。</p> 
+     * @return AdditionalParameters <p>附加参数。</p>
+     */
+    public String getAdditionalParameters() {
+        return this.AdditionalParameters;
+    }
+
+    /**
+     * Set <p>附加参数。</p>
+     * @param AdditionalParameters <p>附加参数。</p>
+     */
+    public void setAdditionalParameters(String AdditionalParameters) {
+        this.AdditionalParameters = AdditionalParameters;
+    }
+
     public CreateImageConfig() {
     }
 
@@ -135,6 +158,9 @@ public class CreateImageConfig extends AbstractModel {
         if (source.AspectRatio != null) {
             this.AspectRatio = new String(source.AspectRatio);
         }
+        if (source.AdditionalParameters != null) {
+            this.AdditionalParameters = new String(source.AdditionalParameters);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateImageConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+        this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
 
     }
 }

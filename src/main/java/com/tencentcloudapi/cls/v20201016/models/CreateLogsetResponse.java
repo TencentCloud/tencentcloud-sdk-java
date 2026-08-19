@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLogsetResponse extends AbstractModel {
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLogsetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return LogsetId <p>日志集ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param LogsetId <p>日志集ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

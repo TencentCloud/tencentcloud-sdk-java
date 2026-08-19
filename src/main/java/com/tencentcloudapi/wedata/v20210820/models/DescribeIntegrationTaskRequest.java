@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeIntegrationTaskRequest extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+    * <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 提交版本号
+    * <p>提交版本号</p>
     */
     @SerializedName("InstanceVersion")
     @Expose
     private Long InstanceVersion;
 
     /**
-    * 额外参数
+    * <p>额外参数</p>
     */
     @SerializedName("ExtConfig")
     @Expose
     private RecordField [] ExtConfig;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型 
-     * @return TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+     * Get <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p> 
+     * @return TaskType <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
-     * @param TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+     * Set <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
+     * @param TaskType <p>任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 提交版本号 
-     * @return InstanceVersion 提交版本号
+     * Get <p>提交版本号</p> 
+     * @return InstanceVersion <p>提交版本号</p>
      */
     public Long getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set 提交版本号
-     * @param InstanceVersion 提交版本号
+     * Set <p>提交版本号</p>
+     * @param InstanceVersion <p>提交版本号</p>
      */
     public void setInstanceVersion(Long InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 额外参数 
-     * @return ExtConfig 额外参数
+     * Get <p>额外参数</p> 
+     * @return ExtConfig <p>额外参数</p>
      */
     public RecordField [] getExtConfig() {
         return this.ExtConfig;
     }
 
     /**
-     * Set 额外参数
-     * @param ExtConfig 额外参数
+     * Set <p>额外参数</p>
+     * @param ExtConfig <p>额外参数</p>
      */
     public void setExtConfig(RecordField [] ExtConfig) {
         this.ExtConfig = ExtConfig;

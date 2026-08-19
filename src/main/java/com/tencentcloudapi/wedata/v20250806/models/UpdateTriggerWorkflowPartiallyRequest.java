@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class UpdateTriggerWorkflowPartiallyRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * 责任人ID
+    * <p>责任人ID</p>
     */
     @SerializedName("NewSetting")
     @Expose
     private UpdateTriggerWorkflowPartially NewSetting;
 
     /**
-    * 删除字段内容，采用属性路径的形式标识，删除的值以":"分割，多个值以","分割
- // 删除调度参数中 ParamKey 为 aa,bb 的属性 "WorkflowParams:aa,bb"
- // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置"TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0" 
-// 删除spark sql通用参数 "GeneralTaskParams: SPARK_SQL" 
-
+    * <p>删除字段内容，采用属性路径的形式标识，删除的值以&quot;:&quot;分割，多个值以&quot;,&quot;分割<br> // 删除调度参数中 ParamKey 为 aa,bb 的属性 &quot;WorkflowParams:aa,bb&quot;<br> // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置&quot;TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0&quot;<br>// 删除spark sql通用参数 &quot;GeneralTaskParams: SPARK_SQL&quot;</p>
     */
     @SerializedName("FieldToRemoveList")
     @Expose
     private String [] FieldToRemoveList;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 工作流ID 
-     * @return WorkflowId 工作流ID
+     * Get <p>工作流ID</p> 
+     * @return WorkflowId <p>工作流ID</p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 工作流ID
-     * @param WorkflowId 工作流ID
+     * Set <p>工作流ID</p>
+     * @param WorkflowId <p>工作流ID</p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get 责任人ID 
-     * @return NewSetting 责任人ID
+     * Get <p>责任人ID</p> 
+     * @return NewSetting <p>责任人ID</p>
      */
     public UpdateTriggerWorkflowPartially getNewSetting() {
         return this.NewSetting;
     }
 
     /**
-     * Set 责任人ID
-     * @param NewSetting 责任人ID
+     * Set <p>责任人ID</p>
+     * @param NewSetting <p>责任人ID</p>
      */
     public void setNewSetting(UpdateTriggerWorkflowPartially NewSetting) {
         this.NewSetting = NewSetting;
     }
 
     /**
-     * Get 删除字段内容，采用属性路径的形式标识，删除的值以":"分割，多个值以","分割
- // 删除调度参数中 ParamKey 为 aa,bb 的属性 "WorkflowParams:aa,bb"
- // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置"TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0" 
-// 删除spark sql通用参数 "GeneralTaskParams: SPARK_SQL" 
- 
-     * @return FieldToRemoveList 删除字段内容，采用属性路径的形式标识，删除的值以":"分割，多个值以","分割
- // 删除调度参数中 ParamKey 为 aa,bb 的属性 "WorkflowParams:aa,bb"
- // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置"TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0" 
-// 删除spark sql通用参数 "GeneralTaskParams: SPARK_SQL" 
-
+     * Get <p>删除字段内容，采用属性路径的形式标识，删除的值以&quot;:&quot;分割，多个值以&quot;,&quot;分割<br> // 删除调度参数中 ParamKey 为 aa,bb 的属性 &quot;WorkflowParams:aa,bb&quot;<br> // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置&quot;TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0&quot;<br>// 删除spark sql通用参数 &quot;GeneralTaskParams: SPARK_SQL&quot;</p> 
+     * @return FieldToRemoveList <p>删除字段内容，采用属性路径的形式标识，删除的值以&quot;:&quot;分割，多个值以&quot;,&quot;分割<br> // 删除调度参数中 ParamKey 为 aa,bb 的属性 &quot;WorkflowParams:aa,bb&quot;<br> // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置&quot;TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0&quot;<br>// 删除spark sql通用参数 &quot;GeneralTaskParams: SPARK_SQL&quot;</p>
      */
     public String [] getFieldToRemoveList() {
         return this.FieldToRemoveList;
     }
 
     /**
-     * Set 删除字段内容，采用属性路径的形式标识，删除的值以":"分割，多个值以","分割
- // 删除调度参数中 ParamKey 为 aa,bb 的属性 "WorkflowParams:aa,bb"
- // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置"TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0" 
-// 删除spark sql通用参数 "GeneralTaskParams: SPARK_SQL" 
-
-     * @param FieldToRemoveList 删除字段内容，采用属性路径的形式标识，删除的值以":"分割，多个值以","分割
- // 删除调度参数中 ParamKey 为 aa,bb 的属性 "WorkflowParams:aa,bb"
- // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置"TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0" 
-// 删除spark sql通用参数 "GeneralTaskParams: SPARK_SQL" 
-
+     * Set <p>删除字段内容，采用属性路径的形式标识，删除的值以&quot;:&quot;分割，多个值以&quot;,&quot;分割<br> // 删除调度参数中 ParamKey 为 aa,bb 的属性 &quot;WorkflowParams:aa,bb&quot;<br> // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置&quot;TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0&quot;<br>// 删除spark sql通用参数 &quot;GeneralTaskParams: SPARK_SQL&quot;</p>
+     * @param FieldToRemoveList <p>删除字段内容，采用属性路径的形式标识，删除的值以&quot;:&quot;分割，多个值以&quot;,&quot;分割<br> // 删除调度参数中 ParamKey 为 aa,bb 的属性 &quot;WorkflowParams:aa,bb&quot;<br> // 删除配置的 TriggerId 为 da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0 的调度配置&quot;TriggerWorkflowSchedulerConfigurations :da46d950-d5ca-4cfb-a5a9-f3c2eeea1bf0&quot;<br>// 删除spark sql通用参数 &quot;GeneralTaskParams: SPARK_SQL&quot;</p>
      */
     public void setFieldToRemoveList(String [] FieldToRemoveList) {
         this.FieldToRemoveList = FieldToRemoveList;

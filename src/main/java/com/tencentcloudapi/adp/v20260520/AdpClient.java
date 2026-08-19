@@ -424,6 +424,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查询并发超限明细，包含QPM/TPM超限与专属并发超限记录，返回超限发生时间、空间、应用、模型及请求内容
+     * @param req DescribeConcurrencyLimitDetailListRequest
+     * @return DescribeConcurrencyLimitDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailList(DescribeConcurrencyLimitDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConcurrencyLimitDetailList", DescribeConcurrencyLimitDetailListResponse.class);
+    }
+
+    /**
+     *查询资源消耗明细，包含计费相关字段（消耗类型、消耗目标、消耗场景、套餐包及PU消耗等）
+     * @param req DescribeConsumptionDetailListRequest
+     * @return DescribeConsumptionDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumptionDetailListResponse DescribeConsumptionDetailList(DescribeConsumptionDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumptionDetailList", DescribeConsumptionDetailListResponse.class);
+    }
+
+    /**
      *查看会话信息
      * @param req DescribeConversationRequest
      * @return DescribeConversationResponse
@@ -465,6 +487,17 @@ public class AdpClient extends AbstractClient{
     public DescribeLatestReleaseResponse DescribeLatestRelease(DescribeLatestReleaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLatestRelease", DescribeLatestReleaseResponse.class);
+    }
+
+    /**
+     *查询看板总览KPI卡片数据，通过resource_type区分资源看板与业务看板域，返回各域KPI指标列表
+     * @param req DescribeMetricOverviewListRequest
+     * @return DescribeMetricOverviewListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricOverviewListResponse DescribeMetricOverviewList(DescribeMetricOverviewListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricOverviewList", DescribeMetricOverviewListResponse.class);
     }
 
     /**
@@ -586,6 +619,28 @@ public class AdpClient extends AbstractClient{
     public DescribeSystemVariableListResponse DescribeSystemVariableList(DescribeSystemVariableListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSystemVariableList", DescribeSystemVariableListResponse.class);
+    }
+
+    /**
+     *查询资源调用时序明细，支持模型和插件两类资源，按时间顺序返回每条调用记录的详细信息
+     * @param req DescribeUsageDetailListRequest
+     * @return DescribeUsageDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsageDetailListResponse DescribeUsageDetailList(DescribeUsageDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUsageDetailList", DescribeUsageDetailListResponse.class);
+    }
+
+    /**
+     *查询资源用量聚合明细，支持模型、插件、平台三类资源，按空间/应用维度聚合展示调用次数、Token消耗等指标
+     * @param req DescribeUsageSummaryListRequest
+     * @return DescribeUsageSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsageSummaryListResponse DescribeUsageSummaryList(DescribeUsageSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUsageSummaryList", DescribeUsageSummaryListResponse.class);
     }
 
     /**

@@ -80,6 +80,13 @@ public class ClientNodeAttribute extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 
+    */
+    @SerializedName("MountPoints")
+    @Expose
+    private MountPointEntry [] MountPoints;
+
+    /**
      * Get <p>客户端节点IP</p> 
      * @return ClientNodeIp <p>客户端节点IP</p>
      */
@@ -207,6 +214,22 @@ public class ClientNodeAttribute extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get  
+     * @return MountPoints 
+     */
+    public MountPointEntry [] getMountPoints() {
+        return this.MountPoints;
+    }
+
+    /**
+     * Set 
+     * @param MountPoints 
+     */
+    public void setMountPoints(MountPointEntry [] MountPoints) {
+        this.MountPoints = MountPoints;
+    }
+
     public ClientNodeAttribute() {
     }
 
@@ -239,6 +262,12 @@ public class ClientNodeAttribute extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.MountPoints != null) {
+            this.MountPoints = new MountPointEntry[source.MountPoints.length];
+            for (int i = 0; i < source.MountPoints.length; i++) {
+                this.MountPoints[i] = new MountPointEntry(source.MountPoints[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class ClientNodeAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "MountPoint", this.MountPoint);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "MountPoints.", this.MountPoints);
 
     }
 }

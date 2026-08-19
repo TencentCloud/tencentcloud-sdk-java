@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowTriggerConfig extends AbstractModel {
 
     /**
-    * <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+    * <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMode")
@@ -104,22 +104,6 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String FileArrivalPath;
 
     /**
-    * <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TriggerMinimumIntervalSecond")
-    @Expose
-    private Long TriggerMinimumIntervalSecond;
-
-    /**
-    * <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TriggerWaitTimeSecond")
-    @Expose
-    private Long TriggerWaitTimeSecond;
-
-    /**
     * <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -128,9 +112,41 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private String SchedulerStatus;
 
     /**
-     * Get <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+    * <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileNamePattern")
+    @Expose
+    private String FileNamePattern;
+
+    /**
+    * <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Recursive")
+    @Expose
+    private Long Recursive;
+
+    /**
+    * <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerMinimumIntervalSecond")
+    @Expose
+    private Long TriggerMinimumIntervalSecond;
+
+    /**
+    * <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerWaitTimeSecond")
+    @Expose
+    private Long TriggerWaitTimeSecond;
+
+    /**
+     * Get <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @return TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerMode() {
@@ -138,9 +154,9 @@ public class WorkflowTriggerConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * Set <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN（暂不支持）</li><li>文件到达：FILE_ARRIVAL（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * @param TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMode(String TriggerMode) {
@@ -328,46 +344,6 @@ public class WorkflowTriggerConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTriggerMinimumIntervalSecond() {
-        return this.TriggerMinimumIntervalSecond;
-    }
-
-    /**
-     * Set <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTriggerMinimumIntervalSecond(Long TriggerMinimumIntervalSecond) {
-        this.TriggerMinimumIntervalSecond = TriggerMinimumIntervalSecond;
-    }
-
-    /**
-     * Get <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTriggerWaitTimeSecond() {
-        return this.TriggerWaitTimeSecond;
-    }
-
-    /**
-     * Set <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间（单位：秒）</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTriggerWaitTimeSecond(Long TriggerWaitTimeSecond) {
-        this.TriggerWaitTimeSecond = TriggerWaitTimeSecond;
-    }
-
-    /**
      * Get <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。外部的TriggerStatus优先级大于当前值</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
@@ -385,6 +361,86 @@ public class WorkflowTriggerConfig extends AbstractModel {
      */
     public void setSchedulerStatus(String SchedulerStatus) {
         this.SchedulerStatus = SchedulerStatus;
+    }
+
+    /**
+     * Get <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileNamePattern <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileNamePattern() {
+        return this.FileNamePattern;
+    }
+
+    /**
+     * Set <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileNamePattern <p>文件到达模式下 文件匹配规则</p><p>入参限制：文件名匹配仅支持文件名和 *，不能包含路径分隔符 /</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileNamePattern(String FileNamePattern) {
+        this.FileNamePattern = FileNamePattern;
+    }
+
+    /**
+     * Get <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Recursive <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecursive() {
+        return this.Recursive;
+    }
+
+    /**
+     * Set <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Recursive <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecursive(Long Recursive) {
+        this.Recursive = Recursive;
+    }
+
+    /**
+     * Get <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTriggerMinimumIntervalSecond() {
+        return this.TriggerMinimumIntervalSecond;
+    }
+
+    /**
+     * Set <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerMinimumIntervalSecond(Long TriggerMinimumIntervalSecond) {
+        this.TriggerMinimumIntervalSecond = TriggerMinimumIntervalSecond;
+    }
+
+    /**
+     * Get <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTriggerWaitTimeSecond() {
+        return this.TriggerWaitTimeSecond;
+    }
+
+    /**
+     * Set <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerWaitTimeSecond(Long TriggerWaitTimeSecond) {
+        this.TriggerWaitTimeSecond = TriggerWaitTimeSecond;
     }
 
     public WorkflowTriggerConfig() {
@@ -425,14 +481,20 @@ public class WorkflowTriggerConfig extends AbstractModel {
         if (source.FileArrivalPath != null) {
             this.FileArrivalPath = new String(source.FileArrivalPath);
         }
+        if (source.SchedulerStatus != null) {
+            this.SchedulerStatus = new String(source.SchedulerStatus);
+        }
+        if (source.FileNamePattern != null) {
+            this.FileNamePattern = new String(source.FileNamePattern);
+        }
+        if (source.Recursive != null) {
+            this.Recursive = new Long(source.Recursive);
+        }
         if (source.TriggerMinimumIntervalSecond != null) {
             this.TriggerMinimumIntervalSecond = new Long(source.TriggerMinimumIntervalSecond);
         }
         if (source.TriggerWaitTimeSecond != null) {
             this.TriggerWaitTimeSecond = new Long(source.TriggerWaitTimeSecond);
-        }
-        if (source.SchedulerStatus != null) {
-            this.SchedulerStatus = new String(source.SchedulerStatus);
         }
     }
 
@@ -451,9 +513,11 @@ public class WorkflowTriggerConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "CrontabExpression", this.CrontabExpression);
         this.setParamSimple(map, prefix + "TriggerId", this.TriggerId);
         this.setParamSimple(map, prefix + "FileArrivalPath", this.FileArrivalPath);
+        this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
+        this.setParamSimple(map, prefix + "FileNamePattern", this.FileNamePattern);
+        this.setParamSimple(map, prefix + "Recursive", this.Recursive);
         this.setParamSimple(map, prefix + "TriggerMinimumIntervalSecond", this.TriggerMinimumIntervalSecond);
         this.setParamSimple(map, prefix + "TriggerWaitTimeSecond", this.TriggerWaitTimeSecond);
-        this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
 
     }
 }

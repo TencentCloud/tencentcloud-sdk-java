@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class ModifyProjectRequest extends AbstractModel {
 
     /**
-    * 目标修改的项目ID
+    * <p>目标修改的项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 项目显示名称，可以为中文名,需要租户范围内唯一
+    * <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * true/false则修改，不带该参数不修改。
+    * <p>true/false则修改，不带该参数不修改。</p>
     */
     @SerializedName("TaskSubmitApproval")
     @Expose
     private Boolean TaskSubmitApproval;
 
     /**
-    * 资源池信息
+    * <p>资源池信息</p>
     */
     @SerializedName("ResourcePoolInfo")
     @Expose
     private ResourcePoolInfo ResourcePoolInfo;
 
     /**
-    * 项目管理员
+    * <p>项目管理员</p>
     */
     @SerializedName("ProjectManagers")
     @Expose
     private String [] ProjectManagers;
 
     /**
-    * 调度任务严格模式
+    * <p>调度任务严格模式</p>
     */
     @SerializedName("TaskStrictMode")
     @Expose
     private Boolean TaskStrictMode;
 
     /**
-    * 以后新增选项可以直接通过前端的json格式写入去实现
+    * <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
     */
     @SerializedName("ExtraOptions")
     @Expose
     private String ExtraOptions;
 
     /**
-    * 项目类型，SIMPLE：简单模式 STANDARD：标准模式
+    * <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 项目负责人
+    * <p>项目负责人</p>
     */
     @SerializedName("ProjectOwner")
     @Expose
     private String [] ProjectOwner;
 
     /**
-    * 更新类型
+    * <p>更新类型</p>
     */
     @SerializedName("ModifyType")
     @Expose
     private String ModifyType;
 
     /**
-     * Get 目标修改的项目ID 
-     * @return ProjectId 目标修改的项目ID
+     * Get <p>目标修改的项目ID</p> 
+     * @return ProjectId <p>目标修改的项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 目标修改的项目ID
-     * @param ProjectId 目标修改的项目ID
+     * Set <p>目标修改的项目ID</p>
+     * @param ProjectId <p>目标修改的项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目显示名称，可以为中文名,需要租户范围内唯一 
-     * @return DisplayName 项目显示名称，可以为中文名,需要租户范围内唯一
+     * Get <p>项目显示名称，可以为中文名,需要租户范围内唯一</p> 
+     * @return DisplayName <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 项目显示名称，可以为中文名,需要租户范围内唯一
-     * @param DisplayName 项目显示名称，可以为中文名,需要租户范围内唯一
+     * Set <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
+     * @param DisplayName <p>项目显示名称，可以为中文名,需要租户范围内唯一</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 备注 
-     * @return Description 备注
+     * Get <p>备注</p> 
+     * @return Description <p>备注</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 备注
-     * @param Description 备注
+     * Set <p>备注</p>
+     * @param Description <p>备注</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get true/false则修改，不带该参数不修改。 
-     * @return TaskSubmitApproval true/false则修改，不带该参数不修改。
+     * Get <p>true/false则修改，不带该参数不修改。</p> 
+     * @return TaskSubmitApproval <p>true/false则修改，不带该参数不修改。</p>
      */
     public Boolean getTaskSubmitApproval() {
         return this.TaskSubmitApproval;
     }
 
     /**
-     * Set true/false则修改，不带该参数不修改。
-     * @param TaskSubmitApproval true/false则修改，不带该参数不修改。
+     * Set <p>true/false则修改，不带该参数不修改。</p>
+     * @param TaskSubmitApproval <p>true/false则修改，不带该参数不修改。</p>
      */
     public void setTaskSubmitApproval(Boolean TaskSubmitApproval) {
         this.TaskSubmitApproval = TaskSubmitApproval;
     }
 
     /**
-     * Get 资源池信息 
-     * @return ResourcePoolInfo 资源池信息
+     * Get <p>资源池信息</p> 
+     * @return ResourcePoolInfo <p>资源池信息</p>
      */
     public ResourcePoolInfo getResourcePoolInfo() {
         return this.ResourcePoolInfo;
     }
 
     /**
-     * Set 资源池信息
-     * @param ResourcePoolInfo 资源池信息
+     * Set <p>资源池信息</p>
+     * @param ResourcePoolInfo <p>资源池信息</p>
      */
     public void setResourcePoolInfo(ResourcePoolInfo ResourcePoolInfo) {
         this.ResourcePoolInfo = ResourcePoolInfo;
     }
 
     /**
-     * Get 项目管理员 
-     * @return ProjectManagers 项目管理员
+     * Get <p>项目管理员</p> 
+     * @return ProjectManagers <p>项目管理员</p>
      */
     public String [] getProjectManagers() {
         return this.ProjectManagers;
     }
 
     /**
-     * Set 项目管理员
-     * @param ProjectManagers 项目管理员
+     * Set <p>项目管理员</p>
+     * @param ProjectManagers <p>项目管理员</p>
      */
     public void setProjectManagers(String [] ProjectManagers) {
         this.ProjectManagers = ProjectManagers;
     }
 
     /**
-     * Get 调度任务严格模式 
-     * @return TaskStrictMode 调度任务严格模式
+     * Get <p>调度任务严格模式</p> 
+     * @return TaskStrictMode <p>调度任务严格模式</p>
      */
     public Boolean getTaskStrictMode() {
         return this.TaskStrictMode;
     }
 
     /**
-     * Set 调度任务严格模式
-     * @param TaskStrictMode 调度任务严格模式
+     * Set <p>调度任务严格模式</p>
+     * @param TaskStrictMode <p>调度任务严格模式</p>
      */
     public void setTaskStrictMode(Boolean TaskStrictMode) {
         this.TaskStrictMode = TaskStrictMode;
     }
 
     /**
-     * Get 以后新增选项可以直接通过前端的json格式写入去实现 
-     * @return ExtraOptions 以后新增选项可以直接通过前端的json格式写入去实现
+     * Get <p>以后新增选项可以直接通过前端的json格式写入去实现</p> 
+     * @return ExtraOptions <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
      */
     public String getExtraOptions() {
         return this.ExtraOptions;
     }
 
     /**
-     * Set 以后新增选项可以直接通过前端的json格式写入去实现
-     * @param ExtraOptions 以后新增选项可以直接通过前端的json格式写入去实现
+     * Set <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
+     * @param ExtraOptions <p>以后新增选项可以直接通过前端的json格式写入去实现</p>
      */
     public void setExtraOptions(String ExtraOptions) {
         this.ExtraOptions = ExtraOptions;
     }
 
     /**
-     * Get 项目类型，SIMPLE：简单模式 STANDARD：标准模式 
-     * @return Model 项目类型，SIMPLE：简单模式 STANDARD：标准模式
+     * Get <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p> 
+     * @return Model <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 项目类型，SIMPLE：简单模式 STANDARD：标准模式
-     * @param Model 项目类型，SIMPLE：简单模式 STANDARD：标准模式
+     * Set <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
+     * @param Model <p>项目类型，SIMPLE：简单模式 STANDARD：标准模式</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 项目负责人 
-     * @return ProjectOwner 项目负责人
+     * Get <p>项目负责人</p> 
+     * @return ProjectOwner <p>项目负责人</p>
      */
     public String [] getProjectOwner() {
         return this.ProjectOwner;
     }
 
     /**
-     * Set 项目负责人
-     * @param ProjectOwner 项目负责人
+     * Set <p>项目负责人</p>
+     * @param ProjectOwner <p>项目负责人</p>
      */
     public void setProjectOwner(String [] ProjectOwner) {
         this.ProjectOwner = ProjectOwner;
     }
 
     /**
-     * Get 更新类型 
-     * @return ModifyType 更新类型
+     * Get <p>更新类型</p> 
+     * @return ModifyType <p>更新类型</p>
      */
     public String getModifyType() {
         return this.ModifyType;
     }
 
     /**
-     * Set 更新类型
-     * @param ModifyType 更新类型
+     * Set <p>更新类型</p>
+     * @param ModifyType <p>更新类型</p>
      */
     public void setModifyType(String ModifyType) {
         this.ModifyType = ModifyType;

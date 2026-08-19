@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListRoleConfigurationsRequest extends AbstractModel {
 
     /**
-    * 空间 ID。
+    * <p>空间 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+    * <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+    * <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * 过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = "test"，表示查询名称或描述里包含 test 的权限配置。
+    * <p>过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = &quot;test&quot;，表示查询名称或描述里包含 test 的权限配置。</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。
+    * <p>检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。</p>
     */
     @SerializedName("FilterTargets")
     @Expose
     private Long [] FilterTargets;
 
     /**
-    * 授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置
+    * <p>授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置</p>
     */
     @SerializedName("PrincipalId")
     @Expose
     private String PrincipalId;
 
     /**
-     * Get 空间 ID。 
-     * @return ZoneId 空间 ID。
+     * Get <p>空间 ID。</p> 
+     * @return ZoneId <p>空间 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 空间 ID。
-     * @param ZoneId 空间 ID。
+     * Set <p>空间 ID。</p>
+     * @param ZoneId <p>空间 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。 
-     * @return NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+     * Get <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p> 
+     * @return NextToken <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
-     * @param NextToken 查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。
+     * Set <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
+     * @param NextToken <p>查询返回结果下一页的令牌。首次调用 API 不需要NextToken。  当您首次调用 API 时，如果返回数据总条数超过MaxResults限制，数据会被截断，只返回MaxResults条数据，同时，返回参数IsTruncated为true，返回一个NextToken。您可以使用上一次返回的NextToken继续调用 API，其他请求参数保持不变，查询被截断的数据。您可以按此方法多次查询，直到IsTruncated为false，表示全部数据查询完毕。</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 每页的最大数据条数。  取值范围：1~100。  默认值：10。 
-     * @return MaxResults 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+     * Get <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p> 
+     * @return MaxResults <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 每页的最大数据条数。  取值范围：1~100。  默认值：10。
-     * @param MaxResults 每页的最大数据条数。  取值范围：1~100。  默认值：10。
+     * Set <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
+     * @param MaxResults <p>每页的最大数据条数。  取值范围：1~100。  默认值：10。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get 过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = "test"，表示查询名称或描述里包含 test 的权限配置。 
-     * @return Filter 过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = "test"，表示查询名称或描述里包含 test 的权限配置。
+     * Get <p>过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = &quot;test&quot;，表示查询名称或描述里包含 test 的权限配置。</p> 
+     * @return Filter <p>过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = &quot;test&quot;，表示查询名称或描述里包含 test 的权限配置。</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = "test"，表示查询名称或描述里包含 test 的权限配置。
-     * @param Filter 过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = "test"，表示查询名称或描述里包含 test 的权限配置。
+     * Set <p>过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = &quot;test&quot;，表示查询名称或描述里包含 test 的权限配置。</p>
+     * @param Filter <p>过滤文本。不区分大小写。目前，支持 RoleConfigurationName和Description. 示例：Filter = &quot;test&quot;，表示查询名称或描述里包含 test 的权限配置。</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。 
-     * @return FilterTargets 检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。
+     * Get <p>检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。</p> 
+     * @return FilterTargets <p>检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。</p>
      */
     public Long [] getFilterTargets() {
         return this.FilterTargets;
     }
 
     /**
-     * Set 检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。
-     * @param FilterTargets 检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。
+     * Set <p>检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。</p>
+     * @param FilterTargets <p>检索成员账号是否配置过权限，如果配置过返回IsSelected: true, 否则返回false。</p>
      */
     public void setFilterTargets(Long [] FilterTargets) {
         this.FilterTargets = FilterTargets;
     }
 
     /**
-     * Get 授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置 
-     * @return PrincipalId 授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置
+     * Get <p>授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置</p> 
+     * @return PrincipalId <p>授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置</p>
      */
     public String getPrincipalId() {
         return this.PrincipalId;
     }
 
     /**
-     * Set 授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置
-     * @param PrincipalId 授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置
+     * Set <p>授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置</p>
+     * @param PrincipalId <p>授权的用户UserId或者用户组的GroupId，必须和入参数FilterTargets一起设置</p>
      */
     public void setPrincipalId(String PrincipalId) {
         this.PrincipalId = PrincipalId;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeCompareDiffItemsRequest extends AbstractModel {
 
     /**
-    * 迁移任务 Id
+    * <p>迁移任务 Id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 校验任务 Id
+    * <p>校验任务 Id</p>
     */
     @SerializedName("CompareTaskId")
     @Expose
     private String CompareTaskId;
 
     /**
-    * 数据库名
+    * <p>数据库名</p>
     */
     @SerializedName("DBName")
     @Expose
     private String DBName;
 
     /**
-    * schema名
+    * <p>schema名</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 数据表名
+    * <p>数据表名</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * 数据分块号
+    * <p>数据分块号</p>
     */
     @SerializedName("ChunkId")
     @Expose
     private Long ChunkId;
 
     /**
-    * 分页条件，查询结果返回条数
+    * <p>分页条件，查询结果返回条数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页条件，查询的起始位置
+    * <p>分页条件，查询的起始位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 迁移任务 Id 
-     * @return JobId 迁移任务 Id
+     * Get <p>迁移任务 Id</p> 
+     * @return JobId <p>迁移任务 Id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id
-     * @param JobId 迁移任务 Id
+     * Set <p>迁移任务 Id</p>
+     * @param JobId <p>迁移任务 Id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 校验任务 Id 
-     * @return CompareTaskId 校验任务 Id
+     * Get <p>校验任务 Id</p> 
+     * @return CompareTaskId <p>校验任务 Id</p>
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
     }
 
     /**
-     * Set 校验任务 Id
-     * @param CompareTaskId 校验任务 Id
+     * Set <p>校验任务 Id</p>
+     * @param CompareTaskId <p>校验任务 Id</p>
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 数据库名 
-     * @return DBName 数据库名
+     * Get <p>数据库名</p> 
+     * @return DBName <p>数据库名</p>
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set 数据库名
-     * @param DBName 数据库名
+     * Set <p>数据库名</p>
+     * @param DBName <p>数据库名</p>
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;
     }
 
     /**
-     * Get schema名 
-     * @return SchemaName schema名
+     * Get <p>schema名</p> 
+     * @return SchemaName <p>schema名</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set schema名
-     * @param SchemaName schema名
+     * Set <p>schema名</p>
+     * @param SchemaName <p>schema名</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 数据表名 
-     * @return TableName 数据表名
+     * Get <p>数据表名</p> 
+     * @return TableName <p>数据表名</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 数据表名
-     * @param TableName 数据表名
+     * Set <p>数据表名</p>
+     * @param TableName <p>数据表名</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 数据分块号 
-     * @return ChunkId 数据分块号
+     * Get <p>数据分块号</p> 
+     * @return ChunkId <p>数据分块号</p>
      */
     public Long getChunkId() {
         return this.ChunkId;
     }
 
     /**
-     * Set 数据分块号
-     * @param ChunkId 数据分块号
+     * Set <p>数据分块号</p>
+     * @param ChunkId <p>数据分块号</p>
      */
     public void setChunkId(Long ChunkId) {
         this.ChunkId = ChunkId;
     }
 
     /**
-     * Get 分页条件，查询结果返回条数 
-     * @return Limit 分页条件，查询结果返回条数
+     * Get <p>分页条件，查询结果返回条数</p> 
+     * @return Limit <p>分页条件，查询结果返回条数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页条件，查询结果返回条数
-     * @param Limit 分页条件，查询结果返回条数
+     * Set <p>分页条件，查询结果返回条数</p>
+     * @param Limit <p>分页条件，查询结果返回条数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页条件，查询的起始位置 
-     * @return Offset 分页条件，查询的起始位置
+     * Get <p>分页条件，查询的起始位置</p> 
+     * @return Offset <p>分页条件，查询的起始位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页条件，查询的起始位置
-     * @param Offset 分页条件，查询的起始位置
+     * Set <p>分页条件，查询的起始位置</p>
+     * @param Offset <p>分页条件，查询的起始位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -66,6 +66,13 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
     private InferenceResourceConfigForModify ResourceConfig;
 
     /**
+    * <p>推理服务亲和性配置</p>
+    */
+    @SerializedName("AffinityConfig")
+    @Expose
+    private InferenceAffinityConfig AffinityConfig;
+
+    /**
     * <p>描述信息。长度限制不超过 60 个字符。</p>
     */
     @SerializedName("Description")
@@ -169,6 +176,22 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>推理服务亲和性配置</p> 
+     * @return AffinityConfig <p>推理服务亲和性配置</p>
+     */
+    public InferenceAffinityConfig getAffinityConfig() {
+        return this.AffinityConfig;
+    }
+
+    /**
+     * Set <p>推理服务亲和性配置</p>
+     * @param AffinityConfig <p>推理服务亲和性配置</p>
+     */
+    public void setAffinityConfig(InferenceAffinityConfig AffinityConfig) {
+        this.AffinityConfig = AffinityConfig;
+    }
+
+    /**
      * Get <p>描述信息。长度限制不超过 60 个字符。</p> 
      * @return Description <p>描述信息。长度限制不超过 60 个字符。</p>
      */
@@ -216,6 +239,9 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new InferenceResourceConfigForModify(source.ResourceConfig);
         }
+        if (source.AffinityConfig != null) {
+            this.AffinityConfig = new InferenceAffinityConfig(source.AffinityConfig);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -232,6 +258,7 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

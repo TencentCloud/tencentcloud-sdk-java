@@ -71,4 +71,26 @@ public class RceClient extends AbstractClient{
         return this.internalRequest(req, "AssessEnvironmentRisk", AssessEnvironmentRiskResponse.class);
     }
 
+    /**
+     *事件风险评估
+     * @param req AssessRiskRequest
+     * @return AssessRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssessRiskResponse AssessRisk(AssessRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssessRisk", AssessRiskResponse.class);
+    }
+
+    /**
+     *事件信息上报
+     * @param req ReportEventRequest
+     * @return ReportEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportEventResponse ReportEvent(ReportEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportEvent", ReportEventResponse.class);
+    }
+
 }

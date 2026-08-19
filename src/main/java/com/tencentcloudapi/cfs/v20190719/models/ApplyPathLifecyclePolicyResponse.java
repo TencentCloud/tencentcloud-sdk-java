@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyPathLifecyclePolicyResponse extends AbstractModel {
 
     /**
-    * 有规则冲突时返回的已有冲突规则信息
+    * <p>有规则冲突时返回的已有冲突规则信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckResults")
@@ -39,9 +39,9 @@ public class ApplyPathLifecyclePolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 有规则冲突时返回的已有冲突规则信息
+     * Get <p>有规则冲突时返回的已有冲突规则信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckResults 有规则冲突时返回的已有冲突规则信息
+     * @return CheckResults <p>有规则冲突时返回的已有冲突规则信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CheckResult [] getCheckResults() {
@@ -49,9 +49,9 @@ public class ApplyPathLifecyclePolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 有规则冲突时返回的已有冲突规则信息
+     * Set <p>有规则冲突时返回的已有冲突规则信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckResults 有规则冲突时返回的已有冲突规则信息
+     * @param CheckResults <p>有规则冲突时返回的已有冲突规则信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckResults(CheckResult [] CheckResults) {

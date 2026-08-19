@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class ClawAgentConfig extends AbstractModel {
 
     /**
-    * 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CustomConfig")
-    @Expose
-    private ClawAgentCustomConfig CustomConfig;
-
-    /**
     * Agent团队协作配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -46,26 +38,6 @@ public class ClawAgentConfig extends AbstractModel {
     @SerializedName("LongMemoryConfig")
     @Expose
     private ClawAgentLongMemoryConfig LongMemoryConfig;
-
-    /**
-     * Get 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomConfig 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ClawAgentCustomConfig getCustomConfig() {
-        return this.CustomConfig;
-    }
-
-    /**
-     * Set 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomConfig 调用方自定义配置(控制C端用户在对话时可动态传入哪些自定义配置)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCustomConfig(ClawAgentCustomConfig CustomConfig) {
-        this.CustomConfig = CustomConfig;
-    }
 
     /**
      * Get Agent团队协作配置
@@ -115,9 +87,6 @@ public class ClawAgentConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ClawAgentConfig(ClawAgentConfig source) {
-        if (source.CustomConfig != null) {
-            this.CustomConfig = new ClawAgentCustomConfig(source.CustomConfig);
-        }
         if (source.AgentTeamConfig != null) {
             this.AgentTeamConfig = new ClawAgentAgentTeamConfig(source.AgentTeamConfig);
         }
@@ -131,7 +100,6 @@ public class ClawAgentConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "CustomConfig.", this.CustomConfig);
         this.setParamObj(map, prefix + "AgentTeamConfig.", this.AgentTeamConfig);
         this.setParamObj(map, prefix + "LongMemoryConfig.", this.LongMemoryConfig);
 

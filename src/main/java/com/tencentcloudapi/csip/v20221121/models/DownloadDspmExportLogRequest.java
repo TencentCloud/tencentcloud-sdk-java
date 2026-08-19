@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DownloadDspmExportLogRequest extends AbstractModel {
 
     /**
-    * 集团账号的成员id
+    * <p>集团账号的成员id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * 要下载的导出任务ID
+    * <p>要下载的导出任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 集团账号的成员id 
-     * @return MemberId 集团账号的成员id
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 集团账号的成员id
-     * @param MemberId 集团账号的成员id
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 要下载的导出任务ID 
-     * @return TaskId 要下载的导出任务ID
+     * Get <p>要下载的导出任务ID</p> 
+     * @return TaskId <p>要下载的导出任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 要下载的导出任务ID
-     * @param TaskId 要下载的导出任务ID
+     * Set <p>要下载的导出任务ID</p>
+     * @param TaskId <p>要下载的导出任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

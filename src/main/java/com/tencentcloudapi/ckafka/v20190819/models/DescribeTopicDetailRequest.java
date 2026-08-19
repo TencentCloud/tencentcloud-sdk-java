@@ -80,6 +80,13 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * <p>搜索topic时是否忽略大小写敏感</p>
+    */
+    @SerializedName("SearchWordIgnoreCaseFlag")
+    @Expose
+    private Boolean SearchWordIgnoreCaseFlag;
+
+    /**
      * Get <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p> 
      * @return InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
@@ -207,6 +214,22 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get <p>搜索topic时是否忽略大小写敏感</p> 
+     * @return SearchWordIgnoreCaseFlag <p>搜索topic时是否忽略大小写敏感</p>
+     */
+    public Boolean getSearchWordIgnoreCaseFlag() {
+        return this.SearchWordIgnoreCaseFlag;
+    }
+
+    /**
+     * Set <p>搜索topic时是否忽略大小写敏感</p>
+     * @param SearchWordIgnoreCaseFlag <p>搜索topic时是否忽略大小写敏感</p>
+     */
+    public void setSearchWordIgnoreCaseFlag(Boolean SearchWordIgnoreCaseFlag) {
+        this.SearchWordIgnoreCaseFlag = SearchWordIgnoreCaseFlag;
+    }
+
     public DescribeTopicDetailRequest() {
     }
 
@@ -242,6 +265,9 @@ public class DescribeTopicDetailRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.SearchWordIgnoreCaseFlag != null) {
+            this.SearchWordIgnoreCaseFlag = new Boolean(source.SearchWordIgnoreCaseFlag);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "SearchWordIgnoreCaseFlag", this.SearchWordIgnoreCaseFlag);
 
     }
 }

@@ -171,6 +171,13 @@ public class ClbObject extends AbstractModel {
     private Long ApiStatus;
 
     /**
+    * <p>LLMWAF开关</p>
+    */
+    @SerializedName("LLMStatus")
+    @Expose
+    private Long LLMStatus;
+
+    /**
     * <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
     */
     @SerializedName("ObjectFlowMode")
@@ -584,6 +591,22 @@ public class ClbObject extends AbstractModel {
     }
 
     /**
+     * Get <p>LLMWAF开关</p> 
+     * @return LLMStatus <p>LLMWAF开关</p>
+     */
+    public Long getLLMStatus() {
+        return this.LLMStatus;
+    }
+
+    /**
+     * Set <p>LLMWAF开关</p>
+     * @param LLMStatus <p>LLMWAF开关</p>
+     */
+    public void setLLMStatus(Long LLMStatus) {
+        this.LLMStatus = LLMStatus;
+    }
+
+    /**
      * Get <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p> 
      * @return ObjectFlowMode <p>对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式</p>
      */
@@ -842,6 +865,9 @@ public class ClbObject extends AbstractModel {
         if (source.ApiStatus != null) {
             this.ApiStatus = new Long(source.ApiStatus);
         }
+        if (source.LLMStatus != null) {
+            this.LLMStatus = new Long(source.LLMStatus);
+        }
         if (source.ObjectFlowMode != null) {
             this.ObjectFlowMode = new Long(source.ObjectFlowMode);
         }
@@ -909,6 +935,7 @@ public class ClbObject extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         this.setParamSimple(map, prefix + "BotStatus", this.BotStatus);
         this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+        this.setParamSimple(map, prefix + "LLMStatus", this.LLMStatus);
         this.setParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeDSPAAssessmentRiskSideListRequest extends AbstractModel {
 
     /**
-    * DSPA实例ID
+    * <p>DSPA实例ID</p>
     */
     @SerializedName("DspaId")
     @Expose
     private String DspaId;
 
     /**
-    * 评估模板id
+    * <p>评估模板id</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get DSPA实例ID 
-     * @return DspaId DSPA实例ID
+     * Get <p>DSPA实例ID</p> 
+     * @return DspaId <p>DSPA实例ID</p>
      */
     public String getDspaId() {
         return this.DspaId;
     }
 
     /**
-     * Set DSPA实例ID
-     * @param DspaId DSPA实例ID
+     * Set <p>DSPA实例ID</p>
+     * @param DspaId <p>DSPA实例ID</p>
      */
     public void setDspaId(String DspaId) {
         this.DspaId = DspaId;
     }
 
     /**
-     * Get 评估模板id 
-     * @return TemplateId 评估模板id
+     * Get <p>评估模板id</p> 
+     * @return TemplateId <p>评估模板id</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模板id
-     * @param TemplateId 评估模板id
+     * Set <p>评估模板id</p>
+     * @param TemplateId <p>评估模板id</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

@@ -607,7 +607,7 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
+     *设置文件系统配额，提供UID/GID的配额设置的接口（仅指定版本的Turbo实例能使用，若调用失败请提交工单与我们联系）
      * @param req SetUserQuotaRequest
      * @return SetUserQuotaResponse
      * @throws TencentCloudSDKException

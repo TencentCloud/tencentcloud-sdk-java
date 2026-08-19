@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCostDetailResponse extends AbstractModel {
 
     /**
-    * 消耗明细
+    * <p>消耗明细</p>
     */
     @SerializedName("DetailSet")
     @Expose
     private CostDetail [] DetailSet;
 
     /**
-    * 记录数
+    * <p>记录数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -46,25 +46,25 @@ public class DescribeCostDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消耗明细 
-     * @return DetailSet 消耗明细
+     * Get <p>消耗明细</p> 
+     * @return DetailSet <p>消耗明细</p>
      */
     public CostDetail [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set 消耗明细
-     * @param DetailSet 消耗明细
+     * Set <p>消耗明细</p>
+     * @param DetailSet <p>消耗明细</p>
      */
     public void setDetailSet(CostDetail [] DetailSet) {
         this.DetailSet = DetailSet;
     }
 
     /**
-     * Get 记录数
+     * Get <p>记录数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 记录数
+     * @return Total <p>记录数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -72,9 +72,9 @@ public class DescribeCostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 记录数
+     * Set <p>记录数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 记录数
+     * @param Total <p>记录数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {

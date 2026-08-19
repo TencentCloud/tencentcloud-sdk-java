@@ -39,6 +39,20 @@ public class GetSecretValueRequest extends AbstractModel {
     private String VersionId;
 
     /**
+    * 
+    */
+    @SerializedName("EncryptionPublicKey")
+    @Expose
+    private String EncryptionPublicKey;
+
+    /**
+    * 
+    */
+    @SerializedName("EncryptionAlgorithm")
+    @Expose
+    private String EncryptionAlgorithm;
+
+    /**
      * Get 指定凭据的名称。 
      * @return SecretName 指定凭据的名称。
      */
@@ -74,6 +88,38 @@ public class GetSecretValueRequest extends AbstractModel {
         this.VersionId = VersionId;
     }
 
+    /**
+     * Get  
+     * @return EncryptionPublicKey 
+     */
+    public String getEncryptionPublicKey() {
+        return this.EncryptionPublicKey;
+    }
+
+    /**
+     * Set 
+     * @param EncryptionPublicKey 
+     */
+    public void setEncryptionPublicKey(String EncryptionPublicKey) {
+        this.EncryptionPublicKey = EncryptionPublicKey;
+    }
+
+    /**
+     * Get  
+     * @return EncryptionAlgorithm 
+     */
+    public String getEncryptionAlgorithm() {
+        return this.EncryptionAlgorithm;
+    }
+
+    /**
+     * Set 
+     * @param EncryptionAlgorithm 
+     */
+    public void setEncryptionAlgorithm(String EncryptionAlgorithm) {
+        this.EncryptionAlgorithm = EncryptionAlgorithm;
+    }
+
     public GetSecretValueRequest() {
     }
 
@@ -88,6 +134,12 @@ public class GetSecretValueRequest extends AbstractModel {
         if (source.VersionId != null) {
             this.VersionId = new String(source.VersionId);
         }
+        if (source.EncryptionPublicKey != null) {
+            this.EncryptionPublicKey = new String(source.EncryptionPublicKey);
+        }
+        if (source.EncryptionAlgorithm != null) {
+            this.EncryptionAlgorithm = new String(source.EncryptionAlgorithm);
+        }
     }
 
 
@@ -97,6 +149,8 @@ public class GetSecretValueRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
+        this.setParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
 
     }
 }

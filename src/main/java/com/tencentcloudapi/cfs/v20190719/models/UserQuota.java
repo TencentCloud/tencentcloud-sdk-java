@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class UserQuota extends AbstractModel {
 
     /**
-    * 指定配额类型，包括Uid、Gid、Dir
+    * <p>指定配额类型，包括Uid、Gid、Dir</p>
     */
     @SerializedName("UserType")
     @Expose
     private String UserType;
 
     /**
-    * UID/GID信息
+    * <p>UID/GID信息</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 容量硬限制，单位GiB
+    * <p>容量硬限制，单位GiB</p>
     */
     @SerializedName("CapacityHardLimit")
     @Expose
     private Long CapacityHardLimit;
 
     /**
-    * 文件硬限制，单位个
+    * <p>文件硬限制，单位个</p>
     */
     @SerializedName("FileHardLimit")
     @Expose
     private Long FileHardLimit;
 
     /**
-    * 文件系统ID
+    * <p>文件系统ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 容量使用，单位GiB
+    * <p>容量使用，单位GiB</p>
     */
     @SerializedName("CapacityUsed")
     @Expose
     private Long CapacityUsed;
 
     /**
-    * 文件使用个数，单位个
+    * <p>文件使用个数，单位个</p>
     */
     @SerializedName("FileUsed")
     @Expose
     private Long FileUsed;
 
     /**
-    * 目录配额的目录绝对路径
+    * <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DirectoryPath")
@@ -81,128 +81,128 @@ public class UserQuota extends AbstractModel {
     private String DirectoryPath;
 
     /**
-    * 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
+    * <p>配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 指定配额类型，包括Uid、Gid、Dir 
-     * @return UserType 指定配额类型，包括Uid、Gid、Dir
+     * Get <p>指定配额类型，包括Uid、Gid、Dir</p> 
+     * @return UserType <p>指定配额类型，包括Uid、Gid、Dir</p>
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 指定配额类型，包括Uid、Gid、Dir
-     * @param UserType 指定配额类型，包括Uid、Gid、Dir
+     * Set <p>指定配额类型，包括Uid、Gid、Dir</p>
+     * @param UserType <p>指定配额类型，包括Uid、Gid、Dir</p>
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get UID/GID信息 
-     * @return UserId UID/GID信息
+     * Get <p>UID/GID信息</p> 
+     * @return UserId <p>UID/GID信息</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set UID/GID信息
-     * @param UserId UID/GID信息
+     * Set <p>UID/GID信息</p>
+     * @param UserId <p>UID/GID信息</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 容量硬限制，单位GiB 
-     * @return CapacityHardLimit 容量硬限制，单位GiB
+     * Get <p>容量硬限制，单位GiB</p> 
+     * @return CapacityHardLimit <p>容量硬限制，单位GiB</p>
      */
     public Long getCapacityHardLimit() {
         return this.CapacityHardLimit;
     }
 
     /**
-     * Set 容量硬限制，单位GiB
-     * @param CapacityHardLimit 容量硬限制，单位GiB
+     * Set <p>容量硬限制，单位GiB</p>
+     * @param CapacityHardLimit <p>容量硬限制，单位GiB</p>
      */
     public void setCapacityHardLimit(Long CapacityHardLimit) {
         this.CapacityHardLimit = CapacityHardLimit;
     }
 
     /**
-     * Get 文件硬限制，单位个 
-     * @return FileHardLimit 文件硬限制，单位个
+     * Get <p>文件硬限制，单位个</p> 
+     * @return FileHardLimit <p>文件硬限制，单位个</p>
      */
     public Long getFileHardLimit() {
         return this.FileHardLimit;
     }
 
     /**
-     * Set 文件硬限制，单位个
-     * @param FileHardLimit 文件硬限制，单位个
+     * Set <p>文件硬限制，单位个</p>
+     * @param FileHardLimit <p>文件硬限制，单位个</p>
      */
     public void setFileHardLimit(Long FileHardLimit) {
         this.FileHardLimit = FileHardLimit;
     }
 
     /**
-     * Get 文件系统ID 
-     * @return FileSystemId 文件系统ID
+     * Get <p>文件系统ID</p> 
+     * @return FileSystemId <p>文件系统ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID
-     * @param FileSystemId 文件系统ID
+     * Set <p>文件系统ID</p>
+     * @param FileSystemId <p>文件系统ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 容量使用，单位GiB 
-     * @return CapacityUsed 容量使用，单位GiB
+     * Get <p>容量使用，单位GiB</p> 
+     * @return CapacityUsed <p>容量使用，单位GiB</p>
      */
     public Long getCapacityUsed() {
         return this.CapacityUsed;
     }
 
     /**
-     * Set 容量使用，单位GiB
-     * @param CapacityUsed 容量使用，单位GiB
+     * Set <p>容量使用，单位GiB</p>
+     * @param CapacityUsed <p>容量使用，单位GiB</p>
      */
     public void setCapacityUsed(Long CapacityUsed) {
         this.CapacityUsed = CapacityUsed;
     }
 
     /**
-     * Get 文件使用个数，单位个 
-     * @return FileUsed 文件使用个数，单位个
+     * Get <p>文件使用个数，单位个</p> 
+     * @return FileUsed <p>文件使用个数，单位个</p>
      */
     public Long getFileUsed() {
         return this.FileUsed;
     }
 
     /**
-     * Set 文件使用个数，单位个
-     * @param FileUsed 文件使用个数，单位个
+     * Set <p>文件使用个数，单位个</p>
+     * @param FileUsed <p>文件使用个数，单位个</p>
      */
     public void setFileUsed(Long FileUsed) {
         this.FileUsed = FileUsed;
     }
 
     /**
-     * Get 目录配额的目录绝对路径
+     * Get <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DirectoryPath 目录配额的目录绝对路径
+     * @return DirectoryPath <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDirectoryPath() {
@@ -210,9 +210,9 @@ public class UserQuota extends AbstractModel {
     }
 
     /**
-     * Set 目录配额的目录绝对路径
+     * Set <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DirectoryPath 目录配额的目录绝对路径
+     * @param DirectoryPath <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirectoryPath(String DirectoryPath) {
@@ -220,16 +220,16 @@ public class UserQuota extends AbstractModel {
     }
 
     /**
-     * Get 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败 
-     * @return Status 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
+     * Get <p>配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败</p> 
+     * @return Status <p>配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-     * @param Status 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
+     * Set <p>配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败</p>
+     * @param Status <p>配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -437,25 +437,39 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
     private Boolean UseDefaultFuseConfig;
 
     /**
-    * <p>是否开启探针头采样</p>
+    * <p>是否开启探针头采样</p><p>（受限）</p>
     */
     @SerializedName("EnableHeadSampler")
     @Expose
     private Boolean EnableHeadSampler;
 
     /**
-    * <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+    * <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
     */
     @SerializedName("HeadSamplerType")
     @Expose
     private String HeadSamplerType;
 
     /**
-    * <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+    * <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
     */
     @SerializedName("HeadSamplerArg")
     @Expose
     private Long HeadSamplerArg;
+
+    /**
+    * <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+    */
+    @SerializedName("CrossAccountStatus")
+    @Expose
+    private Long CrossAccountStatus;
+
+    /**
+    * <p>跨账号关联ID</p>
+    */
+    @SerializedName("CrossAccountPeerId")
+    @Expose
+    private String CrossAccountPeerId;
 
     /**
      * Get <p>业务系统 ID</p> 
@@ -1402,51 +1416,83 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启探针头采样</p> 
-     * @return EnableHeadSampler <p>是否开启探针头采样</p>
+     * Get <p>是否开启探针头采样</p><p>（受限）</p> 
+     * @return EnableHeadSampler <p>是否开启探针头采样</p><p>（受限）</p>
      */
     public Boolean getEnableHeadSampler() {
         return this.EnableHeadSampler;
     }
 
     /**
-     * Set <p>是否开启探针头采样</p>
-     * @param EnableHeadSampler <p>是否开启探针头采样</p>
+     * Set <p>是否开启探针头采样</p><p>（受限）</p>
+     * @param EnableHeadSampler <p>是否开启探针头采样</p><p>（受限）</p>
      */
     public void setEnableHeadSampler(Boolean EnableHeadSampler) {
         this.EnableHeadSampler = EnableHeadSampler;
     }
 
     /**
-     * Get <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul> 
-     * @return HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     * Get <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p> 
+     * @return HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
      */
     public String getHeadSamplerType() {
         return this.HeadSamplerType;
     }
 
     /**
-     * Set <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
-     * @param HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul>
+     * Set <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
+     * @param HeadSamplerType <p>头采样类型</p><p>枚举值：</p><ul><li>parentbased_traceidratio： 跟随parent</li></ul><p>（受限）</p>
      */
     public void setHeadSamplerType(String HeadSamplerType) {
         this.HeadSamplerType = HeadSamplerType;
     }
 
     /**
-     * Get <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p> 
-     * @return HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     * Get <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p> 
+     * @return HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
      */
     public Long getHeadSamplerArg() {
         return this.HeadSamplerArg;
     }
 
     /**
-     * Set <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
-     * @param HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p>
+     * Set <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
+     * @param HeadSamplerArg <p>采样率</p><p>取值范围：[0, 100]</p><p>默认值：100</p><p>（受限）</p>
      */
     public void setHeadSamplerArg(Long HeadSamplerArg) {
         this.HeadSamplerArg = HeadSamplerArg;
+    }
+
+    /**
+     * Get <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul> 
+     * @return CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public Long getCrossAccountStatus() {
+        return this.CrossAccountStatus;
+    }
+
+    /**
+     * Set <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     * @param CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
+     */
+    public void setCrossAccountStatus(Long CrossAccountStatus) {
+        this.CrossAccountStatus = CrossAccountStatus;
+    }
+
+    /**
+     * Get <p>跨账号关联ID</p> 
+     * @return CrossAccountPeerId <p>跨账号关联ID</p>
+     */
+    public String getCrossAccountPeerId() {
+        return this.CrossAccountPeerId;
+    }
+
+    /**
+     * Set <p>跨账号关联ID</p>
+     * @param CrossAccountPeerId <p>跨账号关联ID</p>
+     */
+    public void setCrossAccountPeerId(String CrossAccountPeerId) {
+        this.CrossAccountPeerId = CrossAccountPeerId;
     }
 
     public ModifyApmApplicationConfigRequest() {
@@ -1649,6 +1695,12 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         if (source.HeadSamplerArg != null) {
             this.HeadSamplerArg = new Long(source.HeadSamplerArg);
         }
+        if (source.CrossAccountStatus != null) {
+            this.CrossAccountStatus = new Long(source.CrossAccountStatus);
+        }
+        if (source.CrossAccountPeerId != null) {
+            this.CrossAccountPeerId = new String(source.CrossAccountPeerId);
+        }
     }
 
 
@@ -1718,6 +1770,8 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableHeadSampler", this.EnableHeadSampler);
         this.setParamSimple(map, prefix + "HeadSamplerType", this.HeadSamplerType);
         this.setParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
+        this.setParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
+        this.setParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
 
     }
 }

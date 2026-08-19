@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class SetUserQuotaRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
+    * <p>文件系统 ID,通过<a href="https://cloud.tencent.com/document/api/582/38170">查询文件系统列表</a>获取</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
+    * <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p>
     */
     @SerializedName("UserType")
     @Expose
     private String UserType;
 
     /**
-    * UID/GID信息
+    * <p>UID/GID信息</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 容量硬限制，单位GiB。设置范围10-10000000。
+    * <p>容量硬限制，单位GiB。设置范围10-10000000。</p>
     */
     @SerializedName("CapacityHardLimit")
     @Expose
     private Long CapacityHardLimit;
 
     /**
-    * 文件硬限制，单位个。设置范围1000-100000000
+    * <p>文件硬限制，单位个。设置范围1000-100000000</p>
     */
     @SerializedName("FileHardLimit")
     @Expose
     private Long FileHardLimit;
 
     /**
-    * 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+    * <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
     */
     @SerializedName("DirectoryPath")
     @Expose
     private String DirectoryPath;
 
     /**
-     * Get 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取 
-     * @return FileSystemId 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
+     * Get <p>文件系统 ID,通过<a href="https://cloud.tencent.com/document/api/582/38170">查询文件系统列表</a>获取</p> 
+     * @return FileSystemId <p>文件系统 ID,通过<a href="https://cloud.tencent.com/document/api/582/38170">查询文件系统列表</a>获取</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
-     * @param FileSystemId 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
+     * Set <p>文件系统 ID,通过<a href="https://cloud.tencent.com/document/api/582/38170">查询文件系统列表</a>获取</p>
+     * @param FileSystemId <p>文件系统 ID,通过<a href="https://cloud.tencent.com/document/api/582/38170">查询文件系统列表</a>获取</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额 
-     * @return UserType 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
+     * Get <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p> 
+     * @return UserType <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p>
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
-     * @param UserType 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
+     * Set <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p>
+     * @param UserType <p>指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额</p>
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get UID/GID信息 
-     * @return UserId UID/GID信息
+     * Get <p>UID/GID信息</p> 
+     * @return UserId <p>UID/GID信息</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set UID/GID信息
-     * @param UserId UID/GID信息
+     * Set <p>UID/GID信息</p>
+     * @param UserId <p>UID/GID信息</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 容量硬限制，单位GiB。设置范围10-10000000。 
-     * @return CapacityHardLimit 容量硬限制，单位GiB。设置范围10-10000000。
+     * Get <p>容量硬限制，单位GiB。设置范围10-10000000。</p> 
+     * @return CapacityHardLimit <p>容量硬限制，单位GiB。设置范围10-10000000。</p>
      */
     public Long getCapacityHardLimit() {
         return this.CapacityHardLimit;
     }
 
     /**
-     * Set 容量硬限制，单位GiB。设置范围10-10000000。
-     * @param CapacityHardLimit 容量硬限制，单位GiB。设置范围10-10000000。
+     * Set <p>容量硬限制，单位GiB。设置范围10-10000000。</p>
+     * @param CapacityHardLimit <p>容量硬限制，单位GiB。设置范围10-10000000。</p>
      */
     public void setCapacityHardLimit(Long CapacityHardLimit) {
         this.CapacityHardLimit = CapacityHardLimit;
     }
 
     /**
-     * Get 文件硬限制，单位个。设置范围1000-100000000 
-     * @return FileHardLimit 文件硬限制，单位个。设置范围1000-100000000
+     * Get <p>文件硬限制，单位个。设置范围1000-100000000</p> 
+     * @return FileHardLimit <p>文件硬限制，单位个。设置范围1000-100000000</p>
      */
     public Long getFileHardLimit() {
         return this.FileHardLimit;
     }
 
     /**
-     * Set 文件硬限制，单位个。设置范围1000-100000000
-     * @param FileHardLimit 文件硬限制，单位个。设置范围1000-100000000
+     * Set <p>文件硬限制，单位个。设置范围1000-100000000</p>
+     * @param FileHardLimit <p>文件硬限制，单位个。设置范围1000-100000000</p>
      */
     public void setFileHardLimit(Long FileHardLimit) {
         this.FileHardLimit = FileHardLimit;
     }
 
     /**
-     * Get 需设置目录配额的目录绝对路径，不同目录不可存在包含关系 
-     * @return DirectoryPath 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+     * Get <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul> 
+     * @return DirectoryPath <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public String getDirectoryPath() {
         return this.DirectoryPath;
     }
 
     /**
-     * Set 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
-     * @param DirectoryPath 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+     * Set <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
+     * @param DirectoryPath <p>需设置配额的目录路径，必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。不同目录之间不可存在包含关系。<br>示例：</p><ul><li>若挂载的是CFS根目录 /，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需对挂载路径下的 test1/test2 设置配额，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public void setDirectoryPath(String DirectoryPath) {
         this.DirectoryPath = DirectoryPath;

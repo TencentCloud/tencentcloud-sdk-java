@@ -80,6 +80,13 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private CustomField [] CustomFields;
 
     /**
+    * <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+    */
+    @SerializedName("CustomExpressionFields")
+    @Expose
+    private CustomExpressionField [] CustomExpressionFields;
+
+    /**
     * <p>日志投递的过滤条件，不填表示投递全量日志。</p>
     */
     @SerializedName("DeliveryConditions")
@@ -250,6 +257,22 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p> 
+     * @return CustomExpressionFields <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     */
+    public CustomExpressionField [] getCustomExpressionFields() {
+        return this.CustomExpressionFields;
+    }
+
+    /**
+     * Set <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     * @param CustomExpressionFields <p>投递的自定义表达式字段列表，可以通过自定义日志推送字段名称和取值表达式，实现个性化的实时日志内容推送，使用详情见 [自定义日志字段表达式]()。<br>仅七层访问日志（LogType= l7-access-logs 或 domain）支持添加自定义字段。<br>允许配置的自定义字段个数有配额限制，如遇配额不足请 [联系我们](https://cloud.tencent.com/online-service?from=sales&amp;source=PRESALE) 。<br>**注意**：若 CustomExpressionFields 中存在命名 与 Fields 和 CustomFields 中同名的字段，以  CustomExpressionFields 中的取值为准。</p>
+     */
+    public void setCustomExpressionFields(CustomExpressionField [] CustomExpressionFields) {
+        this.CustomExpressionFields = CustomExpressionFields;
+    }
+
+    /**
      * Get <p>日志投递的过滤条件，不填表示投递全量日志。</p> 
      * @return DeliveryConditions <p>日志投递的过滤条件，不填表示投递全量日志。</p>
      */
@@ -386,6 +409,12 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
                 this.CustomFields[i] = new CustomField(source.CustomFields[i]);
             }
         }
+        if (source.CustomExpressionFields != null) {
+            this.CustomExpressionFields = new CustomExpressionField[source.CustomExpressionFields.length];
+            for (int i = 0; i < source.CustomExpressionFields.length; i++) {
+                this.CustomExpressionFields[i] = new CustomExpressionField(source.CustomExpressionFields[i]);
+            }
+        }
         if (source.DeliveryConditions != null) {
             this.DeliveryConditions = new DeliveryCondition[source.DeliveryConditions.length];
             for (int i = 0; i < source.DeliveryConditions.length; i++) {
@@ -422,6 +451,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "EntityList.", this.EntityList);
         this.setParamArraySimple(map, prefix + "Fields.", this.Fields);
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
+        this.setParamArrayObj(map, prefix + "CustomExpressionFields.", this.CustomExpressionFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
         this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);

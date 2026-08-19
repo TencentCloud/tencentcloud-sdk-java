@@ -255,6 +255,13 @@ public class RunInstancesRequest extends AbstractModel {
     private Boolean EnableJumboFrame;
 
     /**
+    * <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterfaces [] NetworkInterfaces;
+
+    /**
      * Get <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li><br>默认值：POSTPAID_BY_HOUR。</p> 
      * @return InstanceChargeType <p>实例<a href="https://cloud.tencent.com/document/product/213/2180">计费类型</a>。<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li><br>默认值：POSTPAID_BY_HOUR。</p>
      */
@@ -782,6 +789,22 @@ public class RunInstancesRequest extends AbstractModel {
         this.EnableJumboFrame = EnableJumboFrame;
     }
 
+    /**
+     * Get <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p> 
+     * @return NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public NetworkInterfaces [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     * @param NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public void setNetworkInterfaces(NetworkInterfaces [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
+    }
+
     public RunInstancesRequest() {
     }
 
@@ -904,6 +927,12 @@ public class RunInstancesRequest extends AbstractModel {
         if (source.EnableJumboFrame != null) {
             this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterfaces[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterfaces(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -944,6 +973,7 @@ public class RunInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowDsDTO extends AbstractModel {
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -32,7 +32,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Owner")
@@ -40,7 +40,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String Owner;
 
     /**
-    * 责任人ID
+    * <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerId")
@@ -48,7 +48,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String OwnerId;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -56,7 +56,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识
+    * <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIdent")
@@ -64,7 +64,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -72,7 +72,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 工作流描述
+    * <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowDesc")
@@ -80,7 +80,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String WorkflowDesc;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -88,7 +88,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 文件夹ID
+    * <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -96,7 +96,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String FolderId;
 
     /**
-    * SparkSQL参数
+    * <p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkParams")
@@ -104,7 +104,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String SparkParams;
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -112,7 +112,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private TaskDsDTO [] Tasks;
 
     /**
-    * 任务链接列表
+    * <p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Links")
@@ -120,7 +120,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private TaskLinkDsDTO [] Links;
 
     /**
-    * 参数列表
+    * <p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Params")
@@ -128,10 +128,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private ParameterTaskDsDto [] Params;
 
     /**
-    * 工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+    * <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowType")
@@ -139,7 +136,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String WorkflowType;
 
     /**
-    * 最近更新人名称
+    * <p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUser")
@@ -147,7 +144,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String UpdateUser;
 
     /**
-    * 最近更新人id
+    * <p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUserId")
@@ -155,7 +152,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String UpdateUserId;
 
     /**
-    * BundleId CI/CD工程生成的bundle唯一标识	
+    * <p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleId")
@@ -163,7 +160,7 @@ public class WorkflowDsDTO extends AbstractModel {
     private String BundleId;
 
     /**
-    * BundleId信息
+    * <p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleInfo")
@@ -171,9 +168,25 @@ public class WorkflowDsDTO extends AbstractModel {
     private String BundleInfo;
 
     /**
-     * Get 工作流ID
+    * <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
+    * <p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecuteUserName")
+    @Expose
+    private String ExecuteUserName;
+
+    /**
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -181,9 +194,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -191,9 +204,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Owner 责任人
+     * @return Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwner() {
@@ -201,9 +214,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Owner 责任人
+     * @param Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwner(String Owner) {
@@ -211,9 +224,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 责任人ID
+     * Get <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerId 责任人ID
+     * @return OwnerId <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerId() {
@@ -221,9 +234,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 责任人ID
+     * Set <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerId 责任人ID
+     * @param OwnerId <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerId(String OwnerId) {
@@ -231,9 +244,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 项目ID
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -241,9 +254,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -251,9 +264,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 项目标识
+     * Get <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIdent 项目标识
+     * @return ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIdent() {
@@ -261,9 +274,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 项目标识
+     * Set <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIdent 项目标识
+     * @param ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIdent(String ProjectIdent) {
@@ -271,9 +284,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -281,9 +294,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -291,9 +304,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 工作流描述
+     * Get <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowDesc 工作流描述
+     * @return WorkflowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowDesc() {
@@ -301,9 +314,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 工作流描述
+     * Set <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowDesc 工作流描述
+     * @param WorkflowDesc <p>工作流描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowDesc(String WorkflowDesc) {
@@ -311,9 +324,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -321,9 +334,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -331,9 +344,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 文件夹ID
+     * Get <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹ID
+     * @return FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -341,9 +354,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 文件夹ID
+     * Set <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹ID
+     * @param FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -351,9 +364,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get SparkSQL参数
+     * Get <p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SparkParams SparkSQL参数
+     * @return SparkParams <p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkParams() {
@@ -361,9 +374,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set SparkSQL参数
+     * Set <p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SparkParams SparkSQL参数
+     * @param SparkParams <p>SparkSQL参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkParams(String SparkParams) {
@@ -371,9 +384,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 任务列表
+     * Get <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 任务列表
+     * @return Tasks <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskDsDTO [] getTasks() {
@@ -381,9 +394,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 任务列表
+     * Set <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 任务列表
+     * @param Tasks <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(TaskDsDTO [] Tasks) {
@@ -391,9 +404,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 任务链接列表
+     * Get <p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Links 任务链接列表
+     * @return Links <p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLinkDsDTO [] getLinks() {
@@ -401,9 +414,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 任务链接列表
+     * Set <p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Links 任务链接列表
+     * @param Links <p>任务链接列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinks(TaskLinkDsDTO [] Links) {
@@ -411,9 +424,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 参数列表
+     * Get <p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Params 参数列表
+     * @return Params <p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParameterTaskDsDto [] getParams() {
@@ -421,9 +434,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 参数列表
+     * Set <p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Params 参数列表
+     * @param Params <p>参数列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParams(ParameterTaskDsDto [] Params) {
@@ -431,15 +444,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+     * Get <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowType 工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+     * @return WorkflowType <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowType() {
@@ -447,15 +454,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+     * Set <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowType 工作流类型, 取值示例
-
-- cycle 周期工作流
-- manual 手动工作流
+     * @param WorkflowType <p>工作流类型, 取值示例</p><ul><li>cycle 周期工作流</li><li>manual 手动工作流</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowType(String WorkflowType) {
@@ -463,9 +464,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 最近更新人名称
+     * Get <p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUser 最近更新人名称
+     * @return UpdateUser <p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUser() {
@@ -473,9 +474,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 最近更新人名称
+     * Set <p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUser 最近更新人名称
+     * @param UpdateUser <p>最近更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUser(String UpdateUser) {
@@ -483,9 +484,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 最近更新人id
+     * Get <p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUserId 最近更新人id
+     * @return UpdateUserId <p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUserId() {
@@ -493,9 +494,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 最近更新人id
+     * Set <p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUserId 最近更新人id
+     * @param UpdateUserId <p>最近更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUserId(String UpdateUserId) {
@@ -503,9 +504,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get BundleId CI/CD工程生成的bundle唯一标识	
+     * Get <p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleId BundleId CI/CD工程生成的bundle唯一标识	
+     * @return BundleId <p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleId() {
@@ -513,9 +514,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set BundleId CI/CD工程生成的bundle唯一标识	
+     * Set <p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleId BundleId CI/CD工程生成的bundle唯一标识	
+     * @param BundleId <p>BundleId CI/CD工程生成的bundle唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleId(String BundleId) {
@@ -523,9 +524,9 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Get BundleId信息
+     * Get <p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleInfo BundleId信息
+     * @return BundleInfo <p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleInfo() {
@@ -533,13 +534,53 @@ public class WorkflowDsDTO extends AbstractModel {
     }
 
     /**
-     * Set BundleId信息
+     * Set <p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleInfo BundleId信息
+     * @param BundleInfo <p>BundleId信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleInfo(String BundleInfo) {
         this.BundleInfo = BundleInfo;
+    }
+
+    /**
+     * Get <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
+    }
+
+    /**
+     * Get <p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecuteUserName <p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecuteUserName() {
+        return this.ExecuteUserName;
+    }
+
+    /**
+     * Set <p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecuteUserName <p>运行账号名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecuteUserName(String ExecuteUserName) {
+        this.ExecuteUserName = ExecuteUserName;
     }
 
     public WorkflowDsDTO() {
@@ -613,6 +654,12 @@ public class WorkflowDsDTO extends AbstractModel {
         if (source.BundleInfo != null) {
             this.BundleInfo = new String(source.BundleInfo);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
+        if (source.ExecuteUserName != null) {
+            this.ExecuteUserName = new String(source.ExecuteUserName);
+        }
     }
 
 
@@ -638,6 +685,8 @@ public class WorkflowDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+        this.setParamSimple(map, prefix + "ExecuteUserName", this.ExecuteUserName);
 
     }
 }

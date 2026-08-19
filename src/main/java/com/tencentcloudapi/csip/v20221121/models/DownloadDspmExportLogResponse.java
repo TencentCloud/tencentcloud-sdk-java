@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DownloadDspmExportLogResponse extends AbstractModel {
 
     /**
-    * 下载URL
+    * <p>下载URL</p>
     */
     @SerializedName("Url")
     @Expose
@@ -38,16 +38,16 @@ public class DownloadDspmExportLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载URL 
-     * @return Url 下载URL
+     * Get <p>下载URL</p> 
+     * @return Url <p>下载URL</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 下载URL
-     * @param Url 下载URL
+     * Set <p>下载URL</p>
+     * @param Url <p>下载URL</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationMembersAuthPolicyResponse extends AbstractModel {
 
     /**
-    * 访问授权策略列表。
+    * <p>访问授权策略列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -32,7 +32,7 @@ public class DescribeOrganizationMembersAuthPolicyResponse extends AbstractModel
     private OrgMembersAuthPolicy [] Items;
 
     /**
-    * 总数目。
+    * <p>总数目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -47,9 +47,9 @@ public class DescribeOrganizationMembersAuthPolicyResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 访问授权策略列表。
+     * Get <p>访问授权策略列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 访问授权策略列表。
+     * @return Items <p>访问授权策略列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrgMembersAuthPolicy [] getItems() {
@@ -57,9 +57,9 @@ public class DescribeOrganizationMembersAuthPolicyResponse extends AbstractModel
     }
 
     /**
-     * Set 访问授权策略列表。
+     * Set <p>访问授权策略列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 访问授权策略列表。
+     * @param Items <p>访问授权策略列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(OrgMembersAuthPolicy [] Items) {
@@ -67,9 +67,9 @@ public class DescribeOrganizationMembersAuthPolicyResponse extends AbstractModel
     }
 
     /**
-     * Get 总数目。
+     * Get <p>总数目。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总数目。
+     * @return Total <p>总数目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -77,9 +77,9 @@ public class DescribeOrganizationMembersAuthPolicyResponse extends AbstractModel
     }
 
     /**
-     * Set 总数目。
+     * Set <p>总数目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总数目。
+     * @param Total <p>总数目。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {

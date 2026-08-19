@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CFSConfig extends AbstractModel {
 
     /**
-    * cfs的实例的ID
+    * <p>cfs的实例的ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 存储的路径
+    * <p>存储的路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+    * <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountType")
@@ -46,7 +46,7 @@ public class CFSConfig extends AbstractModel {
     private String MountType;
 
     /**
-    * 协议 1: NFS, 2: TURBO
+    * <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -54,41 +54,48 @@ public class CFSConfig extends AbstractModel {
     private String Protocol;
 
     /**
-     * Get cfs的实例的ID 
-     * @return Id cfs的实例的ID
+    * <p>是否平台预置存储</p>
+    */
+    @SerializedName("IsPresetStorage")
+    @Expose
+    private Boolean IsPresetStorage;
+
+    /**
+     * Get <p>cfs的实例的ID</p> 
+     * @return Id <p>cfs的实例的ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set cfs的实例的ID
-     * @param Id cfs的实例的ID
+     * Set <p>cfs的实例的ID</p>
+     * @param Id <p>cfs的实例的ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 存储的路径 
-     * @return Path 存储的路径
+     * Get <p>存储的路径</p> 
+     * @return Path <p>存储的路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 存储的路径
-     * @param Path 存储的路径
+     * Set <p>存储的路径</p>
+     * @param Path <p>存储的路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+     * Get <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountType cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+     * @return MountType <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountType() {
@@ -96,9 +103,9 @@ public class CFSConfig extends AbstractModel {
     }
 
     /**
-     * Set cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+     * Set <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountType cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+     * @param MountType <p>cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountType(String MountType) {
@@ -106,9 +113,9 @@ public class CFSConfig extends AbstractModel {
     }
 
     /**
-     * Get 协议 1: NFS, 2: TURBO
+     * Get <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 协议 1: NFS, 2: TURBO
+     * @return Protocol <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -116,13 +123,29 @@ public class CFSConfig extends AbstractModel {
     }
 
     /**
-     * Set 协议 1: NFS, 2: TURBO
+     * Set <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 协议 1: NFS, 2: TURBO
+     * @param Protocol <p>协议 1: NFS, 2: TURBO</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
+    }
+
+    /**
+     * Get <p>是否平台预置存储</p> 
+     * @return IsPresetStorage <p>是否平台预置存储</p>
+     */
+    public Boolean getIsPresetStorage() {
+        return this.IsPresetStorage;
+    }
+
+    /**
+     * Set <p>是否平台预置存储</p>
+     * @param IsPresetStorage <p>是否平台预置存储</p>
+     */
+    public void setIsPresetStorage(Boolean IsPresetStorage) {
+        this.IsPresetStorage = IsPresetStorage;
     }
 
     public CFSConfig() {
@@ -145,6 +168,9 @@ public class CFSConfig extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.IsPresetStorage != null) {
+            this.IsPresetStorage = new Boolean(source.IsPresetStorage);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class CFSConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "MountType", this.MountType);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "IsPresetStorage", this.IsPresetStorage);
 
     }
 }

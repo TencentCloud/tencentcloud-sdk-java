@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ApplyPathLifecyclePolicyRequest extends AbstractModel {
 
     /**
-    * 生命周期管理策略ID
+    * <p>生命周期管理策略ID</p>
     */
     @SerializedName("LifecyclePolicyID")
     @Expose
     private String LifecyclePolicyID;
 
     /**
-    * 生命周期管理策略关联目录的绝对路径列表
+    * <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
     */
     @SerializedName("Paths")
     @Expose
     private PathInfo [] Paths;
 
     /**
-     * Get 生命周期管理策略ID 
-     * @return LifecyclePolicyID 生命周期管理策略ID
+     * Get <p>生命周期管理策略ID</p> 
+     * @return LifecyclePolicyID <p>生命周期管理策略ID</p>
      */
     public String getLifecyclePolicyID() {
         return this.LifecyclePolicyID;
     }
 
     /**
-     * Set 生命周期管理策略ID
-     * @param LifecyclePolicyID 生命周期管理策略ID
+     * Set <p>生命周期管理策略ID</p>
+     * @param LifecyclePolicyID <p>生命周期管理策略ID</p>
      */
     public void setLifecyclePolicyID(String LifecyclePolicyID) {
         this.LifecyclePolicyID = LifecyclePolicyID;
     }
 
     /**
-     * Get 生命周期管理策略关联目录的绝对路径列表 
-     * @return Paths 生命周期管理策略关联目录的绝对路径列表
+     * Get <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul> 
+     * @return Paths <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public PathInfo [] getPaths() {
         return this.Paths;
     }
 
     /**
-     * Set 生命周期管理策略关联目录的绝对路径列表
-     * @param Paths 生命周期管理策略关联目录的绝对路径列表
+     * Set <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
+     * @param Paths <p>生命周期管理策略所关联的目录路径列表，每个路径必须以 /cfs/ 开头，代表文件存储实例内部的逻辑路径，而非本地挂载点路径。</p><p>示例：</p><ul><li>若挂载的是CFS根目录 /，需关联挂载路径下的 test1/test2，则入参值为 /cfs/test1/test2</li><li>若挂载的是CFS子目录 /subdir，需关联挂载路径下的 test1/test2，则入参值为 /cfs/subdir/test1/test2</li></ul>
      */
     public void setPaths(PathInfo [] Paths) {
         this.Paths = Paths;

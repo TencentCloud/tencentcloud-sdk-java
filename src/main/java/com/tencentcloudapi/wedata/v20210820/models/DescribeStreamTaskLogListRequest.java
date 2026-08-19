@@ -101,6 +101,13 @@ public class DescribeStreamTaskLogListRequest extends AbstractModel {
     private String JobType;
 
     /**
+    * <p>滚动查询游标</p>
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
+
+    /**
      * Get <p>项目ID</p> 
      * @return ProjectId <p>项目ID</p>
      */
@@ -276,6 +283,22 @@ public class DescribeStreamTaskLogListRequest extends AbstractModel {
         this.JobType = JobType;
     }
 
+    /**
+     * Get <p>滚动查询游标</p> 
+     * @return Context <p>滚动查询游标</p>
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set <p>滚动查询游标</p>
+     * @param Context <p>滚动查询游标</p>
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
+    }
+
     public DescribeStreamTaskLogListRequest() {
     }
 
@@ -317,6 +340,9 @@ public class DescribeStreamTaskLogListRequest extends AbstractModel {
         if (source.JobType != null) {
             this.JobType = new String(source.JobType);
         }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class DescribeStreamTaskLogListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningOrderId", this.RunningOrderId);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamSimple(map, prefix + "Context", this.Context);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TriggerWorkflowBrief extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -32,7 +32,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 工作ID
+    * <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -40,7 +40,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -48,7 +48,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 任务数量
+    * <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCount")
@@ -56,7 +56,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private Long TaskCount;
 
     /**
-    * 文件夹ID
+    * <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -64,7 +64,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名称
+    * <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -72,7 +72,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String FolderName;
 
     /**
-    * 调度配置
+    * <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowTriggerConfig")
@@ -80,7 +80,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private WorkflowTriggerConfig WorkflowTriggerConfig;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserNameInCharge")
@@ -88,7 +88,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String UserNameInCharge;
 
     /**
-    * 责任人ID
+    * <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserUinInCharge")
@@ -96,16 +96,24 @@ public class TriggerWorkflowBrief extends AbstractModel {
     private String UserUinInCharge;
 
     /**
-    * 工作流参数
+    * <p>工作流参数</p>
     */
     @SerializedName("WorkflowParams")
     @Expose
     private String WorkflowParams;
 
     /**
-     * Get 项目ID
+    * <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecuteUserUin")
+    @Expose
+    private String ExecuteUserUin;
+
+    /**
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -113,9 +121,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -123,9 +131,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作ID
+     * Get <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作ID
+     * @return WorkflowId <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -133,9 +141,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作ID
+     * Set <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作ID
+     * @param WorkflowId <p>工作ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -143,9 +151,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -153,9 +161,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -163,9 +171,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务数量
+     * Get <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskCount 任务数量
+     * @return TaskCount <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCount() {
@@ -173,9 +181,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务数量
+     * Set <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskCount 任务数量
+     * @param TaskCount <p>任务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCount(Long TaskCount) {
@@ -183,9 +191,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 文件夹ID
+     * Get <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹ID
+     * @return FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -193,9 +201,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 文件夹ID
+     * Set <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹ID
+     * @param FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -203,9 +211,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 文件夹名称
+     * Get <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名称
+     * @return FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -213,9 +221,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 文件夹名称
+     * Set <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名称
+     * @param FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -223,9 +231,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 调度配置
+     * Get <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowTriggerConfig 调度配置
+     * @return WorkflowTriggerConfig <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowTriggerConfig getWorkflowTriggerConfig() {
@@ -233,9 +241,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 调度配置
+     * Set <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTriggerConfig 调度配置
+     * @param WorkflowTriggerConfig <p>调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowTriggerConfig(WorkflowTriggerConfig WorkflowTriggerConfig) {
@@ -243,9 +251,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserNameInCharge 责任人
+     * @return UserNameInCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserNameInCharge() {
@@ -253,9 +261,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserNameInCharge 责任人
+     * @param UserNameInCharge <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserNameInCharge(String UserNameInCharge) {
@@ -263,9 +271,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 责任人ID
+     * Get <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserUinInCharge 责任人ID
+     * @return UserUinInCharge <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserUinInCharge() {
@@ -273,9 +281,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set 责任人ID
+     * Set <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserUinInCharge 责任人ID
+     * @param UserUinInCharge <p>责任人ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserUinInCharge(String UserUinInCharge) {
@@ -283,19 +291,39 @@ public class TriggerWorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get 工作流参数 
-     * @return WorkflowParams 工作流参数
+     * Get <p>工作流参数</p> 
+     * @return WorkflowParams <p>工作流参数</p>
      */
     public String getWorkflowParams() {
         return this.WorkflowParams;
     }
 
     /**
-     * Set 工作流参数
-     * @param WorkflowParams 工作流参数
+     * Set <p>工作流参数</p>
+     * @param WorkflowParams <p>工作流参数</p>
      */
     public void setWorkflowParams(String WorkflowParams) {
         this.WorkflowParams = WorkflowParams;
+    }
+
+    /**
+     * Get <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecuteUserUin() {
+        return this.ExecuteUserUin;
+    }
+
+    /**
+     * Set <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecuteUserUin(String ExecuteUserUin) {
+        this.ExecuteUserUin = ExecuteUserUin;
     }
 
     public TriggerWorkflowBrief() {
@@ -336,6 +364,9 @@ public class TriggerWorkflowBrief extends AbstractModel {
         if (source.WorkflowParams != null) {
             this.WorkflowParams = new String(source.WorkflowParams);
         }
+        if (source.ExecuteUserUin != null) {
+            this.ExecuteUserUin = new String(source.ExecuteUserUin);
+        }
     }
 
 
@@ -353,6 +384,7 @@ public class TriggerWorkflowBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "UserNameInCharge", this.UserNameInCharge);
         this.setParamSimple(map, prefix + "UserUinInCharge", this.UserUinInCharge);
         this.setParamSimple(map, prefix + "WorkflowParams", this.WorkflowParams);
+        this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
 
     }
 }

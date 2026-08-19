@@ -304,6 +304,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String DiskType;
 
     /**
+    * <p>CDC集群ID，非CDC场景无需指定该入参</p>
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
     * <p>集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群</p>
     */
     @SerializedName("ClusterType")
@@ -972,6 +979,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>CDC集群ID，非CDC场景无需指定该入参</p> 
+     * @return CdcId <p>CDC集群ID，非CDC场景无需指定该入参</p>
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set <p>CDC集群ID，非CDC场景无需指定该入参</p>
+     * @param CdcId <p>CDC集群ID，非CDC场景无需指定该入参</p>
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Get <p>集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群</p> 
      * @return ClusterType <p>集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群</p>
      */
@@ -1181,6 +1204,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
@@ -1240,6 +1266,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataProtectVolume", this.DataProtectVolume);
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);

@@ -197,6 +197,13 @@ public class DescribeConnectResource extends AbstractModel {
     private MqttConnectParam MqttConnectParam;
 
     /**
+    * <p>Iceberg配置，Type为ICEBERG时返回</p>
+    */
+    @SerializedName("IcebergConnectParam")
+    @Expose
+    private IcebergConnectParam IcebergConnectParam;
+
+    /**
     * <p>标签列表</p>
     */
     @SerializedName("Tags")
@@ -620,6 +627,22 @@ public class DescribeConnectResource extends AbstractModel {
     }
 
     /**
+     * Get <p>Iceberg配置，Type为ICEBERG时返回</p> 
+     * @return IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
+     */
+    public IcebergConnectParam getIcebergConnectParam() {
+        return this.IcebergConnectParam;
+    }
+
+    /**
+     * Set <p>Iceberg配置，Type为ICEBERG时返回</p>
+     * @param IcebergConnectParam <p>Iceberg配置，Type为ICEBERG时返回</p>
+     */
+    public void setIcebergConnectParam(IcebergConnectParam IcebergConnectParam) {
+        this.IcebergConnectParam = IcebergConnectParam;
+    }
+
+    /**
      * Get <p>标签列表</p> 
      * @return Tags <p>标签列表</p>
      */
@@ -715,6 +738,9 @@ public class DescribeConnectResource extends AbstractModel {
         if (source.MqttConnectParam != null) {
             this.MqttConnectParam = new MqttConnectParam(source.MqttConnectParam);
         }
+        if (source.IcebergConnectParam != null) {
+            this.IcebergConnectParam = new IcebergConnectParam(source.IcebergConnectParam);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -751,6 +777,7 @@ public class DescribeConnectResource extends AbstractModel {
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
         this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
         this.setParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+        this.setParamObj(map, prefix + "IcebergConnectParam.", this.IcebergConnectParam);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

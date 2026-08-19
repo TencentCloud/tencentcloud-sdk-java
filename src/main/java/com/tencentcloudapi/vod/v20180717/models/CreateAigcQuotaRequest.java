@@ -38,14 +38,14 @@ public class CreateAigcQuotaRequest extends AbstractModel {
     private String QuotaType;
 
     /**
-    * <p>任务的配额数</p><p>单位：</p><ul><li>当QuotaLimit=Image时，单位为张</li><li>当QuotaLimit=Video时，单位为秒</li><li>当QuotaLimit=Text时，单位为token</li></ul>
+    * <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
     */
     @SerializedName("QuotaLimit")
     @Expose
     private Long QuotaLimit;
 
     /**
-    * <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+    * <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
     */
     @SerializedName("ApiToken")
     @Expose
@@ -84,32 +84,32 @@ public class CreateAigcQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>任务的配额数</p><p>单位：</p><ul><li>当QuotaLimit=Image时，单位为张</li><li>当QuotaLimit=Video时，单位为秒</li><li>当QuotaLimit=Text时，单位为token</li></ul> 
-     * @return QuotaLimit <p>任务的配额数</p><p>单位：</p><ul><li>当QuotaLimit=Image时，单位为张</li><li>当QuotaLimit=Video时，单位为秒</li><li>当QuotaLimit=Text时，单位为token</li></ul>
+     * Get <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p> 
+     * @return QuotaLimit <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
      */
     public Long getQuotaLimit() {
         return this.QuotaLimit;
     }
 
     /**
-     * Set <p>任务的配额数</p><p>单位：</p><ul><li>当QuotaLimit=Image时，单位为张</li><li>当QuotaLimit=Video时，单位为秒</li><li>当QuotaLimit=Text时，单位为token</li></ul>
-     * @param QuotaLimit <p>任务的配额数</p><p>单位：</p><ul><li>当QuotaLimit=Image时，单位为张</li><li>当QuotaLimit=Video时，单位为秒</li><li>当QuotaLimit=Text时，单位为token</li></ul>
+     * Set <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
+     * @param QuotaLimit <p>任务的配额数</p><p>单位：- 当QuotaType=Image时，单位为张- 当QuotaType=Video时，单位为秒- 当QuotaType=Text时，单位为token</p>
      */
     public void setQuotaLimit(Long QuotaLimit) {
         this.QuotaLimit = QuotaLimit;
     }
 
     /**
-     * Get <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p> 
-     * @return ApiToken <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+     * Get <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p> 
+     * @return ApiToken <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
-     * @param ApiToken <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+     * Set <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
+     * @param ApiToken <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;

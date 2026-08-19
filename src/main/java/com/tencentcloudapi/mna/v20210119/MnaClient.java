@@ -61,6 +61,19 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *创建客户自有网关集群。
+
+用于承载客户侧的自有网关实例，创建成功后返回集群 ID。
+     * @param req AddCustomerGatewayClusterRequest
+     * @return AddCustomerGatewayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCustomerGatewayClusterResponse AddCustomerGatewayCluster(AddCustomerGatewayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCustomerGatewayCluster", AddCustomerGatewayClusterResponse.class);
+    }
+
+    /**
      *新建设备记录
      * @param req AddDeviceRequest
      * @return AddDeviceResponse
@@ -69,6 +82,19 @@ public class MnaClient extends AbstractClient{
     public AddDeviceResponse AddDevice(AddDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddDevice", AddDeviceResponse.class);
+    }
+
+    /**
+     *向指定的客户自有网关集群注册一个网关实例。
+
+注册成功后返回网关实例 ID、鉴权 Token 及 Agent 相关地址信息，用于后续网关 Agent 上报。
+     * @param req AddGatewayRequest
+     * @return AddGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddGatewayResponse AddGateway(AddGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddGateway", AddGatewayResponse.class);
     }
 
     /**
@@ -127,6 +153,19 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *删除客户自有网关集群。
+
+删除指定的客户自有网关集群，操作不可逆。调用接口后，若通过 GetCustomerGatewayClusterList 接口查询不到对应集群，则表示删除成功。
+     * @param req DeleteCustomerGatewayClusterRequest
+     * @return DeleteCustomerGatewayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomerGatewayClusterResponse DeleteCustomerGatewayCluster(DeleteCustomerGatewayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomerGatewayCluster", DeleteCustomerGatewayClusterResponse.class);
+    }
+
+    /**
      *删除设备信息
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
@@ -135,6 +174,19 @@ public class MnaClient extends AbstractClient{
     public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDevice", DeleteDeviceResponse.class);
+    }
+
+    /**
+     *从指定集群下删除一个客户自有网关实例。
+
+删除后，通过 GetCustomerGatewayClusterList 查询不到对应实例，则表示删除成功。
+     * @param req DeleteGatewayRequest
+     * @return DeleteGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGatewayResponse DeleteGateway(DeleteGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGateway", DeleteGatewayResponse.class);
     }
 
     /**
@@ -157,6 +209,17 @@ public class MnaClient extends AbstractClient{
     public DeleteL3ConnResponse DeleteL3Conn(DeleteL3ConnRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteL3Conn", DeleteL3ConnResponse.class);
+    }
+
+    /**
+     *此接口用来查询接入点列表。
+     * @param req DescribeAccessPointListRequest
+     * @return DescribeAccessPointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessPointListResponse DescribeAccessPointList(DescribeAccessPointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessPointList", DescribeAccessPointListResponse.class);
     }
 
     /**
@@ -201,6 +264,19 @@ public class MnaClient extends AbstractClient{
     public GetApplicationResponse GetApplication(GetApplicationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetApplication", GetApplicationResponse.class);
+    }
+
+    /**
+     *查询客户自有网关集群列表。
+
+支持按集群名称关键字过滤，使用 Offset/Limit 分页返回集群及其下网关实例信息。
+     * @param req GetCustomerGatewayClusterListRequest
+     * @return GetCustomerGatewayClusterListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCustomerGatewayClusterListResponse GetCustomerGatewayClusterList(GetCustomerGatewayClusterListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetCustomerGatewayClusterList", GetCustomerGatewayClusterListResponse.class);
     }
 
     /**
@@ -501,6 +577,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *修改设备接入网关类型。
+     * @param req ModifyDeviceAccessScopeRequest
+     * @return ModifyDeviceAccessScopeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceAccessScopeResponse ModifyDeviceAccessScope(ModifyDeviceAccessScopeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceAccessScope", ModifyDeviceAccessScopeResponse.class);
+    }
+
+    /**
      *可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
      * @param req ModifyPackageRenewFlagRequest
      * @return ModifyPackageRenewFlagResponse
@@ -575,6 +662,19 @@ public class MnaClient extends AbstractClient{
     public UpdateApplicationKeyResponse UpdateApplicationKey(UpdateApplicationKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateApplicationKey", UpdateApplicationKeyResponse.class);
+    }
+
+    /**
+     *更新客户自有网关集群配置。
+
+目前仅支持修改集群的公网访问 IP。
+     * @param req UpdateCustomerGatewayClusterRequest
+     * @return UpdateCustomerGatewayClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCustomerGatewayClusterResponse UpdateCustomerGatewayCluster(UpdateCustomerGatewayClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCustomerGatewayCluster", UpdateCustomerGatewayClusterResponse.class);
     }
 
     /**

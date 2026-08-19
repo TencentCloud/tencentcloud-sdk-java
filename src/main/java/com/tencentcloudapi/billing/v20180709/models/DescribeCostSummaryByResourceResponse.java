@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCostSummaryByResourceResponse extends AbstractModel {
 
     /**
-    * 数据是否准备好，0未准备好，1准备好
+    * <p>数据是否准备好，0未准备好，1准备好</p>
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * 消耗详情
+    * <p>消耗详情</p>
     */
     @SerializedName("Total")
     @Expose
     private ConsumptionSummaryTotal Total;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionValue")
@@ -46,7 +46,7 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     private ConsumptionResourceSummaryConditionValue ConditionValue;
 
     /**
-    * 记录数量
+    * <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordNum")
@@ -54,7 +54,7 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     private Long RecordNum;
 
     /**
-    * 资源消耗详情
+    * <p>资源消耗详情</p>
     */
     @SerializedName("Data")
     @Expose
@@ -68,41 +68,41 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据是否准备好，0未准备好，1准备好 
-     * @return Ready 数据是否准备好，0未准备好，1准备好
+     * Get <p>数据是否准备好，0未准备好，1准备好</p> 
+     * @return Ready <p>数据是否准备好，0未准备好，1准备好</p>
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set 数据是否准备好，0未准备好，1准备好
-     * @param Ready 数据是否准备好，0未准备好，1准备好
+     * Set <p>数据是否准备好，0未准备好，1准备好</p>
+     * @param Ready <p>数据是否准备好，0未准备好，1准备好</p>
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get 消耗详情 
-     * @return Total 消耗详情
+     * Get <p>消耗详情</p> 
+     * @return Total <p>消耗详情</p>
      */
     public ConsumptionSummaryTotal getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 消耗详情
-     * @param Total 消耗详情
+     * Set <p>消耗详情</p>
+     * @param Total <p>消耗详情</p>
      */
     public void setTotal(ConsumptionSummaryTotal Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 过滤条件
+     * Get <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConditionValue 过滤条件
+     * @return ConditionValue <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumptionResourceSummaryConditionValue getConditionValue() {
@@ -110,9 +110,9 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     }
 
     /**
-     * Set 过滤条件
+     * Set <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConditionValue 过滤条件
+     * @param ConditionValue <p>过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionValue(ConsumptionResourceSummaryConditionValue ConditionValue) {
@@ -120,9 +120,9 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     }
 
     /**
-     * Get 记录数量
+     * Get <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordNum 记录数量
+     * @return RecordNum <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordNum() {
@@ -130,9 +130,9 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     }
 
     /**
-     * Set 记录数量
+     * Set <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordNum 记录数量
+     * @param RecordNum <p>记录数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordNum(Long RecordNum) {
@@ -140,16 +140,16 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源消耗详情 
-     * @return Data 资源消耗详情
+     * Get <p>资源消耗详情</p> 
+     * @return Data <p>资源消耗详情</p>
      */
     public ConsumptionResourceSummaryDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 资源消耗详情
-     * @param Data 资源消耗详情
+     * Set <p>资源消耗详情</p>
+     * @param Data <p>资源消耗详情</p>
      */
     public void setData(ConsumptionResourceSummaryDataItem [] Data) {
         this.Data = Data;

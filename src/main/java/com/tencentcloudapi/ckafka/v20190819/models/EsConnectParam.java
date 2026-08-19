@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class EsConnectParam extends AbstractModel {
 
     /**
-    * Es的连接port
+    * <p>Es的连接port</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Es连接源的用户名
+    * <p>Es连接源的用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Es连接源的密码
+    * <p>Es连接源的密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Es连接源的实例资源
+    * <p>Es连接源的实例资源</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * Es连接源是否为自建集群
+    * <p>Es连接源是否为自建集群</p>
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-    * Es连接源的实例vip，当为腾讯云实例时，必填
+    * <p>Es连接源的实例vip，当为腾讯云实例时，必填</p>
     */
     @SerializedName("ServiceVip")
     @Expose
     private String ServiceVip;
 
     /**
-    * Es连接源的vpcId，当为腾讯云实例时，必填
+    * <p>Es连接源的vpcId，当为腾讯云实例时，必填</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 是否更新到关联的Datahub任务
+    * <p>是否更新到关联的Datahub任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
@@ -81,121 +81,149 @@ public class EsConnectParam extends AbstractModel {
     private Boolean IsUpdate;
 
     /**
-     * Get Es的连接port 
-     * @return Port Es的连接port
+    * <p>es类型</p><p>枚举值：</p><ul><li>CLUSTER： 普通集群es</li><li>SERVERLESS： serverless形态es</li></ul>
+    */
+    @SerializedName("EsType")
+    @Expose
+    private String EsType;
+
+    /**
+    * <p>es版本</p><p>默认值：7.14.2</p>
+    */
+    @SerializedName("EsVersion")
+    @Expose
+    private String EsVersion;
+
+    /**
+    * <p>endpointUrl，es的serverless版本的访问入口地址</p>
+    */
+    @SerializedName("EndpointUrl")
+    @Expose
+    private String EndpointUrl;
+
+    /**
+    * <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+     * Get <p>Es的连接port</p> 
+     * @return Port <p>Es的连接port</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Es的连接port
-     * @param Port Es的连接port
+     * Set <p>Es的连接port</p>
+     * @param Port <p>Es的连接port</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Es连接源的用户名 
-     * @return UserName Es连接源的用户名
+     * Get <p>Es连接源的用户名</p> 
+     * @return UserName <p>Es连接源的用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Es连接源的用户名
-     * @param UserName Es连接源的用户名
+     * Set <p>Es连接源的用户名</p>
+     * @param UserName <p>Es连接源的用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Es连接源的密码 
-     * @return Password Es连接源的密码
+     * Get <p>Es连接源的密码</p> 
+     * @return Password <p>Es连接源的密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Es连接源的密码
-     * @param Password Es连接源的密码
+     * Set <p>Es连接源的密码</p>
+     * @param Password <p>Es连接源的密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Es连接源的实例资源 
-     * @return Resource Es连接源的实例资源
+     * Get <p>Es连接源的实例资源</p> 
+     * @return Resource <p>Es连接源的实例资源</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set Es连接源的实例资源
-     * @param Resource Es连接源的实例资源
+     * Set <p>Es连接源的实例资源</p>
+     * @param Resource <p>Es连接源的实例资源</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Es连接源是否为自建集群 
-     * @return SelfBuilt Es连接源是否为自建集群
+     * Get <p>Es连接源是否为自建集群</p> 
+     * @return SelfBuilt <p>Es连接源是否为自建集群</p>
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
     }
 
     /**
-     * Set Es连接源是否为自建集群
-     * @param SelfBuilt Es连接源是否为自建集群
+     * Set <p>Es连接源是否为自建集群</p>
+     * @param SelfBuilt <p>Es连接源是否为自建集群</p>
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get Es连接源的实例vip，当为腾讯云实例时，必填 
-     * @return ServiceVip Es连接源的实例vip，当为腾讯云实例时，必填
+     * Get <p>Es连接源的实例vip，当为腾讯云实例时，必填</p> 
+     * @return ServiceVip <p>Es连接源的实例vip，当为腾讯云实例时，必填</p>
      */
     public String getServiceVip() {
         return this.ServiceVip;
     }
 
     /**
-     * Set Es连接源的实例vip，当为腾讯云实例时，必填
-     * @param ServiceVip Es连接源的实例vip，当为腾讯云实例时，必填
+     * Set <p>Es连接源的实例vip，当为腾讯云实例时，必填</p>
+     * @param ServiceVip <p>Es连接源的实例vip，当为腾讯云实例时，必填</p>
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get Es连接源的vpcId，当为腾讯云实例时，必填 
-     * @return UniqVpcId Es连接源的vpcId，当为腾讯云实例时，必填
+     * Get <p>Es连接源的vpcId，当为腾讯云实例时，必填</p> 
+     * @return UniqVpcId <p>Es连接源的vpcId，当为腾讯云实例时，必填</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set Es连接源的vpcId，当为腾讯云实例时，必填
-     * @param UniqVpcId Es连接源的vpcId，当为腾讯云实例时，必填
+     * Set <p>Es连接源的vpcId，当为腾讯云实例时，必填</p>
+     * @param UniqVpcId <p>Es连接源的vpcId，当为腾讯云实例时，必填</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否更新到关联的Datahub任务
+     * Get <p>是否更新到关联的Datahub任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsUpdate 是否更新到关联的Datahub任务
+     * @return IsUpdate <p>是否更新到关联的Datahub任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
@@ -203,13 +231,77 @@ public class EsConnectParam extends AbstractModel {
     }
 
     /**
-     * Set 是否更新到关联的Datahub任务
+     * Set <p>是否更新到关联的Datahub任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsUpdate 是否更新到关联的Datahub任务
+     * @param IsUpdate <p>是否更新到关联的Datahub任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;
+    }
+
+    /**
+     * Get <p>es类型</p><p>枚举值：</p><ul><li>CLUSTER： 普通集群es</li><li>SERVERLESS： serverless形态es</li></ul> 
+     * @return EsType <p>es类型</p><p>枚举值：</p><ul><li>CLUSTER： 普通集群es</li><li>SERVERLESS： serverless形态es</li></ul>
+     */
+    public String getEsType() {
+        return this.EsType;
+    }
+
+    /**
+     * Set <p>es类型</p><p>枚举值：</p><ul><li>CLUSTER： 普通集群es</li><li>SERVERLESS： serverless形态es</li></ul>
+     * @param EsType <p>es类型</p><p>枚举值：</p><ul><li>CLUSTER： 普通集群es</li><li>SERVERLESS： serverless形态es</li></ul>
+     */
+    public void setEsType(String EsType) {
+        this.EsType = EsType;
+    }
+
+    /**
+     * Get <p>es版本</p><p>默认值：7.14.2</p> 
+     * @return EsVersion <p>es版本</p><p>默认值：7.14.2</p>
+     */
+    public String getEsVersion() {
+        return this.EsVersion;
+    }
+
+    /**
+     * Set <p>es版本</p><p>默认值：7.14.2</p>
+     * @param EsVersion <p>es版本</p><p>默认值：7.14.2</p>
+     */
+    public void setEsVersion(String EsVersion) {
+        this.EsVersion = EsVersion;
+    }
+
+    /**
+     * Get <p>endpointUrl，es的serverless版本的访问入口地址</p> 
+     * @return EndpointUrl <p>endpointUrl，es的serverless版本的访问入口地址</p>
+     */
+    public String getEndpointUrl() {
+        return this.EndpointUrl;
+    }
+
+    /**
+     * Set <p>endpointUrl，es的serverless版本的访问入口地址</p>
+     * @param EndpointUrl <p>endpointUrl，es的serverless版本的访问入口地址</p>
+     */
+    public void setEndpointUrl(String EndpointUrl) {
+        this.EndpointUrl = EndpointUrl;
+    }
+
+    /**
+     * Get <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul> 
+     * @return Protocol <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     * @param Protocol <p>集群版 ES 连接协议，默认http协议</p><p>枚举值：</p><ul><li>http： http协议</li><li>https： https协议</li></ul>
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
     }
 
     public EsConnectParam() {
@@ -244,6 +336,18 @@ public class EsConnectParam extends AbstractModel {
         if (source.IsUpdate != null) {
             this.IsUpdate = new Boolean(source.IsUpdate);
         }
+        if (source.EsType != null) {
+            this.EsType = new String(source.EsType);
+        }
+        if (source.EsVersion != null) {
+            this.EsVersion = new String(source.EsVersion);
+        }
+        if (source.EndpointUrl != null) {
+            this.EndpointUrl = new String(source.EndpointUrl);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -259,6 +363,10 @@ public class EsConnectParam extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
+        this.setParamSimple(map, prefix + "EsType", this.EsType);
+        this.setParamSimple(map, prefix + "EsVersion", this.EsVersion);
+        this.setParamSimple(map, prefix + "EndpointUrl", this.EndpointUrl);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

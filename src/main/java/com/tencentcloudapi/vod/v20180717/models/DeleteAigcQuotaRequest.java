@@ -38,7 +38,7 @@ public class DeleteAigcQuotaRequest extends AbstractModel {
     private String QuotaType;
 
     /**
-    * <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+    * <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
     */
     @SerializedName("ApiToken")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteAigcQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p> 
-     * @return ApiToken <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+     * Get <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p> 
+     * @return ApiToken <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
-     * @param ApiToken <p>仅当QuotaLimit=Text时有效，用于选择需要进行配额限制ApiToken</p>
+     * Set <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
+     * @param ApiToken <p>仅当QuotaType=Text时有效，用于选择需要进行配额限制ApiToken</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;

@@ -241,6 +241,13 @@ public class CreateLaunchTemplateVersionRequest extends AbstractModel {
     private String TemplateDataModifyAction;
 
     /**
+    * <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterfaces [] NetworkInterfaces;
+
+    /**
      * Get <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。</p> 
      * @return Placement <p>实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。</p>
      */
@@ -736,6 +743,22 @@ public class CreateLaunchTemplateVersionRequest extends AbstractModel {
         this.TemplateDataModifyAction = TemplateDataModifyAction;
     }
 
+    /**
+     * Get <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p> 
+     * @return NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public NetworkInterfaces [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     * @param NetworkInterfaces <p>多网卡参数信息。 此功能仅部分地区灰度开放，如需使用<a href="https://console.cloud.tencent.com/workorder/category">请提交工单咨询</a></p>
+     */
+    public void setNetworkInterfaces(NetworkInterfaces [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
+    }
+
     public CreateLaunchTemplateVersionRequest() {
     }
 
@@ -849,6 +872,12 @@ public class CreateLaunchTemplateVersionRequest extends AbstractModel {
         if (source.TemplateDataModifyAction != null) {
             this.TemplateDataModifyAction = new String(source.TemplateDataModifyAction);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterfaces[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterfaces(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -887,6 +916,7 @@ public class CreateLaunchTemplateVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }
