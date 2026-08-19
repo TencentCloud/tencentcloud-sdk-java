@@ -45,7 +45,7 @@ public class AigcVideoTask extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+    * <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数值错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li><li>InvalidParameter： 非法参数。</li><li>InvalidParameter.MediaFormat： 无效的媒体格式。</li><li>ContentModerationFailed： 内容审核未通过。</li><li>ResourceInsufficient： 资源不足。</li><li>ModelGenerateFailed： 模型生成失败。</li><li>ResourceNotFound： 资源不存在。</li><li>OperationCanceled： 操作已取消。</li><li>TaskTimeout： 任务超时。</li></ul>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -142,16 +142,16 @@ public class AigcVideoTask extends AbstractModel {
     }
 
     /**
-     * Get <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul> 
-     * @return ErrCodeExt <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     * Get <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数值错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li><li>InvalidParameter： 非法参数。</li><li>InvalidParameter.MediaFormat： 无效的媒体格式。</li><li>ContentModerationFailed： 内容审核未通过。</li><li>ResourceInsufficient： 资源不足。</li><li>ModelGenerateFailed： 模型生成失败。</li><li>ResourceNotFound： 资源不存在。</li><li>OperationCanceled： 操作已取消。</li><li>TaskTimeout： 任务超时。</li></ul> 
+     * @return ErrCodeExt <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数值错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li><li>InvalidParameter： 非法参数。</li><li>InvalidParameter.MediaFormat： 无效的媒体格式。</li><li>ContentModerationFailed： 内容审核未通过。</li><li>ResourceInsufficient： 资源不足。</li><li>ModelGenerateFailed： 模型生成失败。</li><li>ResourceNotFound： 资源不存在。</li><li>OperationCanceled： 操作已取消。</li><li>TaskTimeout： 任务超时。</li></ul>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
-     * @param ErrCodeExt <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     * Set <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数值错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li><li>InvalidParameter： 非法参数。</li><li>InvalidParameter.MediaFormat： 无效的媒体格式。</li><li>ContentModerationFailed： 内容审核未通过。</li><li>ResourceInsufficient： 资源不足。</li><li>ModelGenerateFailed： 模型生成失败。</li><li>ResourceNotFound： 资源不存在。</li><li>OperationCanceled： 操作已取消。</li><li>TaskTimeout： 任务超时。</li></ul>
+     * @param ErrCodeExt <p>扩展错误码。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数值错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li><li>InvalidParameter： 非法参数。</li><li>InvalidParameter.MediaFormat： 无效的媒体格式。</li><li>ContentModerationFailed： 内容审核未通过。</li><li>ResourceInsufficient： 资源不足。</li><li>ModelGenerateFailed： 模型生成失败。</li><li>ResourceNotFound： 资源不存在。</li><li>OperationCanceled： 操作已取消。</li><li>TaskTimeout： 任务超时。</li></ul>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;

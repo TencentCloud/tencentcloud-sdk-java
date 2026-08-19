@@ -437,6 +437,20 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String RealZone;
 
     /**
+    * <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+    */
+    @SerializedName("StorageOverUse")
+    @Expose
+    private String StorageOverUse;
+
+    /**
+    * <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+    */
+    @SerializedName("StorageAutoExpand")
+    @Expose
+    private String StorageAutoExpand;
+
+    /**
      * Get <p>集群ID</p> 
      * @return ClusterId <p>集群ID</p>
      */
@@ -1380,6 +1394,38 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.RealZone = RealZone;
     }
 
+    /**
+     * Get <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p> 
+     * @return StorageOverUse <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+     */
+    public String getStorageOverUse() {
+        return this.StorageOverUse;
+    }
+
+    /**
+     * Set <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+     * @param StorageOverUse <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
+     */
+    public void setStorageOverUse(String StorageOverUse) {
+        this.StorageOverUse = StorageOverUse;
+    }
+
+    /**
+     * Get <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p> 
+     * @return StorageAutoExpand <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+     */
+    public String getStorageAutoExpand() {
+        return this.StorageAutoExpand;
+    }
+
+    /**
+     * Set <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+     * @param StorageAutoExpand <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+     */
+    public void setStorageAutoExpand(String StorageAutoExpand) {
+        this.StorageAutoExpand = StorageAutoExpand;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1586,6 +1632,12 @@ public class CynosdbClusterDetail extends AbstractModel {
         if (source.RealZone != null) {
             this.RealZone = new String(source.RealZone);
         }
+        if (source.StorageOverUse != null) {
+            this.StorageOverUse = new String(source.StorageOverUse);
+        }
+        if (source.StorageAutoExpand != null) {
+            this.StorageAutoExpand = new String(source.StorageAutoExpand);
+        }
     }
 
 
@@ -1652,6 +1704,8 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
         this.setParamSimple(map, prefix + "RealZone", this.RealZone);
+        this.setParamSimple(map, prefix + "StorageOverUse", this.StorageOverUse);
+        this.setParamSimple(map, prefix + "StorageAutoExpand", this.StorageAutoExpand);
 
     }
 }

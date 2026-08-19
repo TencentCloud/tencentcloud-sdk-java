@@ -39,6 +39,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *绑定路由安全组
+     * @param req AssociateRoutesSecurityGroupRequest
+     * @return AssociateRoutesSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateRoutesSecurityGroupResponse AssociateRoutesSecurityGroup(AssociateRoutesSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateRoutesSecurityGroup", AssociateRoutesSecurityGroupResponse.class);
+    }
+
+    /**
      *给实例授权token
      * @param req AuthorizeTokenRequest
      * @return AuthorizeTokenResponse
@@ -876,6 +887,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *解绑路由安全组
+     * @param req DisassociateRoutesSecurityGroupRequest
+     * @return DisassociateRoutesSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateRoutesSecurityGroupResponse DisassociateRoutesSecurityGroup(DisassociateRoutesSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateRoutesSecurityGroup", DisassociateRoutesSecurityGroupResponse.class);
+    }
+
+    /**
      *根据指定offset位置的消息
      * @param req FetchDatahubMessageByOffsetRequest
      * @return FetchDatahubMessageByOffsetResponse
@@ -1060,6 +1082,17 @@ public class CkafkaClient extends AbstractClient{
     public ModifyPasswordResponse ModifyPassword(ModifyPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPassword", ModifyPasswordResponse.class);
+    }
+
+    /**
+     *修改路由安全组关联
+     * @param req ModifyRouteSecurityGroupsRequest
+     * @return ModifyRouteSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRouteSecurityGroupsResponse ModifyRouteSecurityGroups(ModifyRouteSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRouteSecurityGroups", ModifyRouteSecurityGroupsResponse.class);
     }
 
     /**

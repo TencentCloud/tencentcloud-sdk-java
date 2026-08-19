@@ -59,6 +59,20 @@ public class AigcAudioTaskInput extends AbstractModel {
     private String NegativePrompt;
 
     /**
+    * <p>参考音频信息</p>
+    */
+    @SerializedName("AudioInfos")
+    @Expose
+    private AigcAudioReferenceAudioInfo [] AudioInfos;
+
+    /**
+    * <p>参考视频信息</p>
+    */
+    @SerializedName("VideoInfos")
+    @Expose
+    private AigcAudioReferenceVideoInfo [] VideoInfos;
+
+    /**
     * <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
     */
     @SerializedName("EnhancePrompt")
@@ -160,6 +174,38 @@ public class AigcAudioTaskInput extends AbstractModel {
     }
 
     /**
+     * Get <p>参考音频信息</p> 
+     * @return AudioInfos <p>参考音频信息</p>
+     */
+    public AigcAudioReferenceAudioInfo [] getAudioInfos() {
+        return this.AudioInfos;
+    }
+
+    /**
+     * Set <p>参考音频信息</p>
+     * @param AudioInfos <p>参考音频信息</p>
+     */
+    public void setAudioInfos(AigcAudioReferenceAudioInfo [] AudioInfos) {
+        this.AudioInfos = AudioInfos;
+    }
+
+    /**
+     * Get <p>参考视频信息</p> 
+     * @return VideoInfos <p>参考视频信息</p>
+     */
+    public AigcAudioReferenceVideoInfo [] getVideoInfos() {
+        return this.VideoInfos;
+    }
+
+    /**
+     * Set <p>参考视频信息</p>
+     * @param VideoInfos <p>参考视频信息</p>
+     */
+    public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
+        this.VideoInfos = VideoInfos;
+    }
+
+    /**
      * Get <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p> 
      * @return EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
@@ -230,6 +276,18 @@ public class AigcAudioTaskInput extends AbstractModel {
         if (source.NegativePrompt != null) {
             this.NegativePrompt = new String(source.NegativePrompt);
         }
+        if (source.AudioInfos != null) {
+            this.AudioInfos = new AigcAudioReferenceAudioInfo[source.AudioInfos.length];
+            for (int i = 0; i < source.AudioInfos.length; i++) {
+                this.AudioInfos[i] = new AigcAudioReferenceAudioInfo(source.AudioInfos[i]);
+            }
+        }
+        if (source.VideoInfos != null) {
+            this.VideoInfos = new AigcAudioReferenceVideoInfo[source.VideoInfos.length];
+            for (int i = 0; i < source.VideoInfos.length; i++) {
+                this.VideoInfos[i] = new AigcAudioReferenceVideoInfo(source.VideoInfos[i]);
+            }
+        }
         if (source.EnhancePrompt != null) {
             this.EnhancePrompt = new Boolean(source.EnhancePrompt);
         }
@@ -251,6 +309,8 @@ public class AigcAudioTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+        this.setParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
+        this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);

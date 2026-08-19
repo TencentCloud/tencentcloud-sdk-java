@@ -94,6 +94,13 @@ public class CreateAgentInstanceRequest extends AbstractModel {
     private String Description;
 
     /**
+    * <p>企业版是否使用平台大账号模式发货</p>
+    */
+    @SerializedName("UsePlatformAccount")
+    @Expose
+    private Boolean UsePlatformAccount;
+
+    /**
      * Get <p>智能体ID</p> 
      * @return AgentId <p>智能体ID</p>
      */
@@ -253,6 +260,22 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>企业版是否使用平台大账号模式发货</p> 
+     * @return UsePlatformAccount <p>企业版是否使用平台大账号模式发货</p>
+     */
+    public Boolean getUsePlatformAccount() {
+        return this.UsePlatformAccount;
+    }
+
+    /**
+     * Set <p>企业版是否使用平台大账号模式发货</p>
+     * @param UsePlatformAccount <p>企业版是否使用平台大账号模式发货</p>
+     */
+    public void setUsePlatformAccount(Boolean UsePlatformAccount) {
+        this.UsePlatformAccount = UsePlatformAccount;
+    }
+
     public CreateAgentInstanceRequest() {
     }
 
@@ -300,6 +323,9 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.UsePlatformAccount != null) {
+            this.UsePlatformAccount = new Boolean(source.UsePlatformAccount);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Skills.", this.Skills);
         this.setParamSimple(map, prefix + "SoulId", this.SoulId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "UsePlatformAccount", this.UsePlatformAccount);
 
     }
 }

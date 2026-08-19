@@ -119,6 +119,13 @@ public class ImageTaskInput extends AbstractModel {
     private UnderstandImageConfig UnderstandImageConfig;
 
     /**
+    * <p>图片质量评估配置</p>
+    */
+    @SerializedName("ImageQualityConfig")
+    @Expose
+    private ImageQualityConfig ImageQualityConfig;
+
+    /**
      * Get <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig <p>图片编码配置。</p>
@@ -342,6 +349,22 @@ public class ImageTaskInput extends AbstractModel {
         this.UnderstandImageConfig = UnderstandImageConfig;
     }
 
+    /**
+     * Get <p>图片质量评估配置</p> 
+     * @return ImageQualityConfig <p>图片质量评估配置</p>
+     */
+    public ImageQualityConfig getImageQualityConfig() {
+        return this.ImageQualityConfig;
+    }
+
+    /**
+     * Set <p>图片质量评估配置</p>
+     * @param ImageQualityConfig <p>图片质量评估配置</p>
+     */
+    public void setImageQualityConfig(ImageQualityConfig ImageQualityConfig) {
+        this.ImageQualityConfig = ImageQualityConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -389,6 +412,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.UnderstandImageConfig != null) {
             this.UnderstandImageConfig = new UnderstandImageConfig(source.UnderstandImageConfig);
         }
+        if (source.ImageQualityConfig != null) {
+            this.ImageQualityConfig = new ImageQualityConfig(source.ImageQualityConfig);
+        }
     }
 
 
@@ -409,6 +435,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
         this.setParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
         this.setParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
+        this.setParamObj(map, prefix + "ImageQualityConfig.", this.ImageQualityConfig);
 
     }
 }

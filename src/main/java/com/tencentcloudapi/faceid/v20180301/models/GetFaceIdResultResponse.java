@@ -24,46 +24,42 @@ import java.util.HashMap;
 public class GetFaceIdResultResponse extends AbstractModel {
 
     /**
-    * 身份证。
+    * <p>身份证。</p>
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名。
+    * <p>姓名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
+    * <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 业务核验描述。
+    * <p>业务核验描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
+    * <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
     */
     @SerializedName("Similarity")
     @Expose
     private Float Similarity;
 
     /**
-    * 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+    * <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoBase64")
@@ -71,8 +67,7 @@ public class GetFaceIdResultResponse extends AbstractModel {
     private String VideoBase64;
 
     /**
-    * 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+    * <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrameBase64")
@@ -80,7 +75,7 @@ public class GetFaceIdResultResponse extends AbstractModel {
     private String BestFrameBase64;
 
     /**
-    * 获取token时透传的信息。
+    * <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -88,11 +83,7 @@ public class GetFaceIdResultResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+    * <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceInfoTag")
@@ -100,10 +91,7 @@ null-无设备风险。
     private String DeviceInfoTag;
 
     /**
-    * 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+    * <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskInfoTag")
@@ -111,23 +99,7 @@ null-无设备风险。
     private String RiskInfoTag;
 
     /**
-    * plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+    * <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivenessInfoTag")
@@ -135,14 +107,7 @@ null-无。
     private String LivenessInfoTag;
 
     /**
-    * plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+    * <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceInfoLevel")
@@ -150,7 +115,7 @@ null - 未获取到风险等级。
     private String DeviceInfoLevel;
 
     /**
-    * 敏感数据加密信息。
+    * <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encryption")
@@ -158,12 +123,19 @@ null - 未获取到风险等级。
     private Encryption Encryption;
 
     /**
-    * 加密后的数据。
+    * <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptedBody")
     @Expose
     private String EncryptedBody;
+
+    /**
+    * <p>用户核验的身份证人像页base64</p>
+    */
+    @SerializedName("IdCardFrontBase64")
+    @Expose
+    private String IdCardFrontBase64;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -173,103 +145,89 @@ null - 未获取到风险等级。
     private String RequestId;
 
     /**
-     * Get 身份证。 
-     * @return IdCard 身份证。
+     * Get <p>身份证。</p> 
+     * @return IdCard <p>身份证。</p>
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份证。
-     * @param IdCard 身份证。
+     * Set <p>身份证。</p>
+     * @param IdCard <p>身份证。</p>
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名。 
-     * @return Name 姓名。
+     * Get <p>姓名。</p> 
+     * @return Name <p>姓名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名。
-     * @param Name 姓名。
+     * Set <p>姓名。</p>
+     * @param Name <p>姓名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。 
-     * @return Result 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
+     * Get <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul> 
+     * @return Result <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
-     * @param Result 业务核验结果。
-- 参考：https://cloud.tencent.com/document/product/1007/47912。
+     * Set <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
+     * @param Result <p>业务核验结果。</p><ul><li>参考：https://cloud.tencent.com/document/product/1007/47912。</li></ul>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 业务核验描述。 
-     * @return Description 业务核验描述。
+     * Get <p>业务核验描述。</p> 
+     * @return Description <p>业务核验描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务核验描述。
-     * @param Description 业务核验描述。
+     * Set <p>业务核验描述。</p>
+     * @param Description <p>业务核验描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。 
-     * @return Similarity 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
+     * Get <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul> 
+     * @return Similarity <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
      */
     public Float getSimilarity() {
         return this.Similarity;
     }
 
     /**
-     * Set 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
-     * @param Similarity 相似度。
-- 取值：0-100。
-- 数值越大相似度越高。
+     * Set <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
+     * @param Similarity <p>相似度。</p><ul><li>取值：0-100。</li><li>数值越大相似度越高。</li></ul>
      */
     public void setSimilarity(Float Similarity) {
         this.Similarity = Similarity;
     }
 
     /**
-     * Get 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * Get <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoBase64 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @return VideoBase64 <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoBase64() {
@@ -277,11 +235,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Set 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * Set <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoBase64 用户核验的视频base64。
-- 如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @param VideoBase64 <p>用户核验的视频base64。</p><ul><li>如果选择了使用cos，返回完整cos地址，如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoBase64(String VideoBase64) {
@@ -289,11 +245,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Get 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * Get <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BestFrameBase64 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @return BestFrameBase64 <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBestFrameBase64() {
@@ -301,11 +255,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Set 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * Set <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BestFrameBase64 用户核验视频的截帧base64。
-- 如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。
+     * @param BestFrameBase64 <p>用户核验视频的截帧base64。</p><ul><li>如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrameBase64(String BestFrameBase64) {
@@ -313,9 +265,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Get 获取token时透传的信息。
+     * Get <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 获取token时透传的信息。
+     * @return Extra <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -323,9 +275,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Set 获取token时透传的信息。
+     * Set <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 获取token时透传的信息。
+     * @param Extra <p>获取token时透传的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
@@ -333,17 +285,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Get plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+     * Get <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceInfoTag plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+     * @return DeviceInfoTag <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceInfoTag() {
@@ -351,17 +295,9 @@ null-无设备风险。
     }
 
     /**
-     * Set plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+     * Set <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceInfoTag plus版：描述当前请求所在设备的风险标签。
-- 详情如下：
-06-疑似黑产设备。
-null-无设备风险。
-- 增强版：此字段不生效，默认为null。
+     * @param DeviceInfoTag <p>plus版：描述当前请求所在设备的风险标签。</p><ul><li>详情如下：<br>01-设备疑似被Root/设备疑似越狱。<br>02-设备疑似被注入。<br>03-设备疑似为模拟器。<br>04-设备疑似存在风险操作。<br>05-摄像头疑似被劫持。<br>06-疑似黑产设备。<br>null-无设备风险。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceInfoTag(String DeviceInfoTag) {
@@ -369,15 +305,9 @@ null-无设备风险。
     }
 
     /**
-     * Get 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+     * Get <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskInfoTag 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+     * @return RiskInfoTag <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskInfoTag() {
@@ -385,15 +315,9 @@ null-无设备风险。
     }
 
     /**
-     * Set 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+     * Set <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskInfoTag 行为风险标签。
-- 仅错误码返回1007（设备疑似被劫持）时返回风险标签。
-- 标签说明：
-02：攻击风险
+     * @param RiskInfoTag <p>行为风险标签。</p><ul><li>仅错误码返回1007（设备疑似被劫持）时返回风险标签。</li><li>标签说明：<br>02：攻击风险</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskInfoTag(String RiskInfoTag) {
@@ -401,41 +325,9 @@ null-无设备风险。
     }
 
     /**
-     * Get plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+     * Get <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LivenessInfoTag plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+     * @return LivenessInfoTag <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLivenessInfoTag() {
@@ -443,41 +335,9 @@ null-无。
     }
 
     /**
-     * Set plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+     * Set <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LivenessInfoTag plus版：描述当前请求活体阶段被拒绝的详细原因。
-- 详情如下：
-01-用户全程闭眼。
-02-用户未完成指定动作。
-03-疑似翻拍攻击。
-04-疑似合成图片。
-05-疑似合成视频。
-06-疑似合成动作。
-07-疑似黑产模板。
-08-疑似存在水印。
-09-反光校验未通过。
-10-最佳帧校验未通过。
-11-人脸质量过差。
-12-人脸距离不匹配。
-13-疑似对抗样本攻击。
-null-无。
-- 增强版：此字段不生效，默认为null。
+     * @param LivenessInfoTag <p>plus版：描述当前请求活体阶段被拒绝的详细原因。</p><ul><li>详情如下：<br>01-用户全程闭眼。<br>02-用户未完成指定动作。<br>03-疑似翻拍攻击。<br>04-疑似合成图片。<br>05-疑似合成视频。<br>06-疑似合成动作。<br>07-疑似黑产模板。<br>08-疑似存在水印。<br>09-反光校验未通过。<br>10-最佳帧校验未通过。<br>11-人脸质量过差。<br>12-人脸距离不匹配。<br>13-疑似对抗样本攻击。<br>null-无。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivenessInfoTag(String LivenessInfoTag) {
@@ -485,23 +345,9 @@ null-无。
     }
 
     /**
-     * Get plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+     * Get <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceInfoLevel plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+     * @return DeviceInfoLevel <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceInfoLevel() {
@@ -509,23 +355,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Set plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+     * Set <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceInfoLevel plus版：描述当前请求所在设备的风险等级，共4级。
-- 详情如下：
-1 - 安全。
-2 - 低风险。
-3 - 中风险。
-4 - 高危。
-null - 未获取到风险等级。
-- 增强版：此字段不生效，默认为null。
+     * @param DeviceInfoLevel <p>plus版：描述当前请求所在设备的风险等级，共4级。</p><ul><li>详情如下：<br>1 - 安全。<br>2 - 低风险。<br>3 - 中风险。<br>4 - 高危。<br>null - 未获取到风险等级。</li><li>增强版：此字段不生效，默认为null。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceInfoLevel(String DeviceInfoLevel) {
@@ -533,9 +365,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Get 敏感数据加密信息。
+     * Get <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Encryption 敏感数据加密信息。
+     * @return Encryption <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Encryption getEncryption() {
@@ -543,9 +375,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Set 敏感数据加密信息。
+     * Set <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Encryption 敏感数据加密信息。
+     * @param Encryption <p>敏感数据加密信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryption(Encryption Encryption) {
@@ -553,9 +385,9 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Get 加密后的数据。
+     * Get <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EncryptedBody 加密后的数据。
+     * @return EncryptedBody <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptedBody() {
@@ -563,13 +395,29 @@ null - 未获取到风险等级。
     }
 
     /**
-     * Set 加密后的数据。
+     * Set <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EncryptedBody 加密后的数据。
+     * @param EncryptedBody <p>加密后的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptedBody(String EncryptedBody) {
         this.EncryptedBody = EncryptedBody;
+    }
+
+    /**
+     * Get <p>用户核验的身份证人像页base64</p> 
+     * @return IdCardFrontBase64 <p>用户核验的身份证人像页base64</p>
+     */
+    public String getIdCardFrontBase64() {
+        return this.IdCardFrontBase64;
+    }
+
+    /**
+     * Set <p>用户核验的身份证人像页base64</p>
+     * @param IdCardFrontBase64 <p>用户核验的身份证人像页base64</p>
+     */
+    public void setIdCardFrontBase64(String IdCardFrontBase64) {
+        this.IdCardFrontBase64 = IdCardFrontBase64;
     }
 
     /**
@@ -638,6 +486,9 @@ null - 未获取到风险等级。
         if (source.EncryptedBody != null) {
             this.EncryptedBody = new String(source.EncryptedBody);
         }
+        if (source.IdCardFrontBase64 != null) {
+            this.IdCardFrontBase64 = new String(source.IdCardFrontBase64);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -662,6 +513,7 @@ null - 未获取到风险等级。
         this.setParamSimple(map, prefix + "DeviceInfoLevel", this.DeviceInfoLevel);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
+        this.setParamSimple(map, prefix + "IdCardFrontBase64", this.IdCardFrontBase64);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

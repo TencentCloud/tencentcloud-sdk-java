@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitMarkEssayAgentJobResponse extends AbstractModel {
 
     /**
-    * 任务唯一ID。由服务端生成。 示例值：1334797167793684480
+    * <p>任务唯一ID。由服务端生成。 示例值：1334797167793684480</p>
     */
     @SerializedName("JobIds")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitMarkEssayAgentJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务唯一ID。由服务端生成。 示例值：1334797167793684480 
-     * @return JobIds 任务唯一ID。由服务端生成。 示例值：1334797167793684480
+     * Get <p>任务唯一ID。由服务端生成。 示例值：1334797167793684480</p> 
+     * @return JobIds <p>任务唯一ID。由服务端生成。 示例值：1334797167793684480</p>
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 任务唯一ID。由服务端生成。 示例值：1334797167793684480
-     * @param JobIds 任务唯一ID。由服务端生成。 示例值：1334797167793684480
+     * Set <p>任务唯一ID。由服务端生成。 示例值：1334797167793684480</p>
+     * @param JobIds <p>任务唯一ID。由服务端生成。 示例值：1334797167793684480</p>
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;

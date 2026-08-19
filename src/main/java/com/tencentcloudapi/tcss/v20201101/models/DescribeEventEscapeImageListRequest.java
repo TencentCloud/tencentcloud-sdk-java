@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class DescribeEventEscapeImageListRequest extends AbstractModel {
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
+    * <p>需要返回的数量，默认为10，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
+    * <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
     */
     @SerializedName("Filters")
     @Expose
     private RunTimeFilters [] Filters;
 
     /**
-    * 升序降序,asc desc
+    * <p>升序降序,asc desc</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段
+    * <p>排序字段</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
+     * Get <p>需要返回的数量，默认为10，最大值为100</p> 
+     * @return Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
+     * Set <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称 
-     * @return Filters 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
+     * Get <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p> 
+     * @return Filters <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
-     * @param Filters 过滤参数:
-EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)
-Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)
-ImageID: 镜像id
-ImageName:镜像名称
+     * Set <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
+     * @param Filters <p>过滤参数:<br>EventType: 事件类型(MOUNT_SENSITIVE_PTAH:敏感路径挂载 PRIVILEGE_CONTAINER_START:特权容器)<br>Status: 事件状态(EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略)<br>ImageID: 镜像id<br>ImageName:镜像名称</p>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 升序降序,asc desc 
-     * @return Order 升序降序,asc desc
+     * Get <p>升序降序,asc desc</p> 
+     * @return Order <p>升序降序,asc desc</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 升序降序,asc desc
-     * @param Order 升序降序,asc desc
+     * Set <p>升序降序,asc desc</p>
+     * @param Order <p>升序降序,asc desc</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get <p>排序字段</p> 
+     * @return By <p>排序字段</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set <p>排序字段</p>
+     * @param By <p>排序字段</p>
      */
     public void setBy(String By) {
         this.By = By;

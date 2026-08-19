@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDesignTaskResponse extends AbstractModel {
 
     /**
-    * <p>错误码，成功时返回0</p>
+    * <p>错误码，成功时返回0，处理中返回100</p>
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>错误码，成功时返回0</p> 
-     * @return ErrorCode <p>错误码，成功时返回0</p>
+     * Get <p>错误码，成功时返回0，处理中返回100</p> 
+     * @return ErrorCode <p>错误码，成功时返回0，处理中返回100</p>
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set <p>错误码，成功时返回0</p>
-     * @param ErrorCode <p>错误码，成功时返回0</p>
+     * Set <p>错误码，成功时返回0，处理中返回100</p>
+     * @param ErrorCode <p>错误码，成功时返回0，处理中返回100</p>
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;

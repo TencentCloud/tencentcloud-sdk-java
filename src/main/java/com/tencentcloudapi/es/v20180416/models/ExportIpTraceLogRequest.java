@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class ExportIpTraceLogRequest extends AbstractModel {
 
     /**
-    * ES集群ID
+    * <p>ES集群ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 起始偏移量
+    * <p>起始偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 数据条数
+    * <p>数据条数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 访问IP
+    * <p>访问IP</p>
     */
     @SerializedName("RemoteIp")
     @Expose
     private String [] RemoteIp;
 
     /**
-    * Request/Response 请求/返回, 非必填
+    * <p>Request/Response 请求/返回, 非必填</p>
     */
     @SerializedName("TraceType")
     @Expose
     private String [] TraceType;
 
     /**
-    * Public/Private 公网访问/内网访问, 非必填
+    * <p>Public/Private 公网访问/内网访问, 非必填</p>
     */
     @SerializedName("NetType")
     @Expose
     private String [] NetType;
 
     /**
-    * POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
+    * <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
     */
     @SerializedName("ReqTypeOrRspStatus")
     @Expose
     private String [] ReqTypeOrRspStatus;
 
     /**
-    * 关键字模糊查询，支持Lucene Query String
+    * <p>关键字模糊查询，支持Lucene Query String</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * uri搜索
+    * <p>uri搜索</p>
     */
     @SerializedName("Uri")
     @Expose
     private String Uri;
 
     /**
-    * 集群节点IP
+    * <p>集群节点IP</p>
     */
     @SerializedName("NodeIp")
     @Expose
     private String [] NodeIp;
 
     /**
-     * Get ES集群ID 
-     * @return InstanceId ES集群ID
+     * Get <p>ES集群ID</p> 
+     * @return InstanceId <p>ES集群ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES集群ID
-     * @param InstanceId ES集群ID
+     * Set <p>ES集群ID</p>
+     * @param InstanceId <p>ES集群ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 起始偏移量 
-     * @return Offset 起始偏移量
+     * Get <p>起始偏移量</p> 
+     * @return Offset <p>起始偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始偏移量
-     * @param Offset 起始偏移量
+     * Set <p>起始偏移量</p>
+     * @param Offset <p>起始偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 数据条数 
-     * @return Limit 数据条数
+     * Get <p>数据条数</p> 
+     * @return Limit <p>数据条数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数据条数
-     * @param Limit 数据条数
+     * Set <p>数据条数</p>
+     * @param Limit <p>数据条数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 访问IP 
-     * @return RemoteIp 访问IP
+     * Get <p>访问IP</p> 
+     * @return RemoteIp <p>访问IP</p>
      */
     public String [] getRemoteIp() {
         return this.RemoteIp;
     }
 
     /**
-     * Set 访问IP
-     * @param RemoteIp 访问IP
+     * Set <p>访问IP</p>
+     * @param RemoteIp <p>访问IP</p>
      */
     public void setRemoteIp(String [] RemoteIp) {
         this.RemoteIp = RemoteIp;
     }
 
     /**
-     * Get Request/Response 请求/返回, 非必填 
-     * @return TraceType Request/Response 请求/返回, 非必填
+     * Get <p>Request/Response 请求/返回, 非必填</p> 
+     * @return TraceType <p>Request/Response 请求/返回, 非必填</p>
      */
     public String [] getTraceType() {
         return this.TraceType;
     }
 
     /**
-     * Set Request/Response 请求/返回, 非必填
-     * @param TraceType Request/Response 请求/返回, 非必填
+     * Set <p>Request/Response 请求/返回, 非必填</p>
+     * @param TraceType <p>Request/Response 请求/返回, 非必填</p>
      */
     public void setTraceType(String [] TraceType) {
         this.TraceType = TraceType;
     }
 
     /**
-     * Get Public/Private 公网访问/内网访问, 非必填 
-     * @return NetType Public/Private 公网访问/内网访问, 非必填
+     * Get <p>Public/Private 公网访问/内网访问, 非必填</p> 
+     * @return NetType <p>Public/Private 公网访问/内网访问, 非必填</p>
      */
     public String [] getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Public/Private 公网访问/内网访问, 非必填
-     * @param NetType Public/Private 公网访问/内网访问, 非必填
+     * Set <p>Public/Private 公网访问/内网访问, 非必填</p>
+     * @param NetType <p>Public/Private 公网访问/内网访问, 非必填</p>
      */
     public void setNetType(String [] NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填 
-     * @return ReqTypeOrRspStatus POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
+     * Get <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p> 
+     * @return ReqTypeOrRspStatus <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
      */
     public String [] getReqTypeOrRspStatus() {
         return this.ReqTypeOrRspStatus;
     }
 
     /**
-     * Set POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
-     * @param ReqTypeOrRspStatus POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填
+     * Set <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
+     * @param ReqTypeOrRspStatus <p>POST/GET/PUT/DELETE/HEAD/OPTIONS/PATCH/CONNECT/TRACE/CONNECT等, 非必填</p>
      */
     public void setReqTypeOrRspStatus(String [] ReqTypeOrRspStatus) {
         this.ReqTypeOrRspStatus = ReqTypeOrRspStatus;
     }
 
     /**
-     * Get 关键字模糊查询，支持Lucene Query String 
-     * @return SearchKey 关键字模糊查询，支持Lucene Query String
+     * Get <p>关键字模糊查询，支持Lucene Query String</p> 
+     * @return SearchKey <p>关键字模糊查询，支持Lucene Query String</p>
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 关键字模糊查询，支持Lucene Query String
-     * @param SearchKey 关键字模糊查询，支持Lucene Query String
+     * Set <p>关键字模糊查询，支持Lucene Query String</p>
+     * @param SearchKey <p>关键字模糊查询，支持Lucene Query String</p>
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get uri搜索 
-     * @return Uri uri搜索
+     * Get <p>uri搜索</p> 
+     * @return Uri <p>uri搜索</p>
      */
     public String getUri() {
         return this.Uri;
     }
 
     /**
-     * Set uri搜索
-     * @param Uri uri搜索
+     * Set <p>uri搜索</p>
+     * @param Uri <p>uri搜索</p>
      */
     public void setUri(String Uri) {
         this.Uri = Uri;
     }
 
     /**
-     * Get 集群节点IP 
-     * @return NodeIp 集群节点IP
+     * Get <p>集群节点IP</p> 
+     * @return NodeIp <p>集群节点IP</p>
      */
     public String [] getNodeIp() {
         return this.NodeIp;
     }
 
     /**
-     * Set 集群节点IP
-     * @param NodeIp 集群节点IP
+     * Set <p>集群节点IP</p>
+     * @param NodeIp <p>集群节点IP</p>
      */
     public void setNodeIp(String [] NodeIp) {
         this.NodeIp = NodeIp;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UpdateIpTraceStatusRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID。该字段为必填字段。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * IP溯源配置开关
+    * <p>IP溯源配置开关。该字段为必填字段。</p>
     */
     @SerializedName("OpenIpTrace")
     @Expose
     private Boolean OpenIpTrace;
 
     /**
-    * IP溯源开启持续时间，单位：秒
+    * <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
     */
     @SerializedName("DurationTime")
     @Expose
     private Long DurationTime;
 
     /**
-    * IP溯源配置
+    * <p>IP溯源配置。该字段为必填字段。</p>
     */
     @SerializedName("IpTraceConfig")
     @Expose
     private IpTraceConfig IpTraceConfig;
 
     /**
-    * 是否过滤kibana节点IP
+    * <p>是否过滤kibana节点IP。</p>
     */
     @SerializedName("FilterKibanaIp")
     @Expose
     private Boolean FilterKibanaIp;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get <p>集群ID。该字段为必填字段。</p> 
+     * @return InstanceId <p>集群ID。该字段为必填字段。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set <p>集群ID。该字段为必填字段。</p>
+     * @param InstanceId <p>集群ID。该字段为必填字段。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get IP溯源配置开关 
-     * @return OpenIpTrace IP溯源配置开关
+     * Get <p>IP溯源配置开关。该字段为必填字段。</p> 
+     * @return OpenIpTrace <p>IP溯源配置开关。该字段为必填字段。</p>
      */
     public Boolean getOpenIpTrace() {
         return this.OpenIpTrace;
     }
 
     /**
-     * Set IP溯源配置开关
-     * @param OpenIpTrace IP溯源配置开关
+     * Set <p>IP溯源配置开关。该字段为必填字段。</p>
+     * @param OpenIpTrace <p>IP溯源配置开关。该字段为必填字段。</p>
      */
     public void setOpenIpTrace(Boolean OpenIpTrace) {
         this.OpenIpTrace = OpenIpTrace;
     }
 
     /**
-     * Get IP溯源开启持续时间，单位：秒 
-     * @return DurationTime IP溯源开启持续时间，单位：秒
+     * Get <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p> 
+     * @return DurationTime <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
      */
     public Long getDurationTime() {
         return this.DurationTime;
     }
 
     /**
-     * Set IP溯源开启持续时间，单位：秒
-     * @param DurationTime IP溯源开启持续时间，单位：秒
+     * Set <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
+     * @param DurationTime <p>IP溯源开启持续时间，单位：秒。该字段为必填字段。</p>
      */
     public void setDurationTime(Long DurationTime) {
         this.DurationTime = DurationTime;
     }
 
     /**
-     * Get IP溯源配置 
-     * @return IpTraceConfig IP溯源配置
+     * Get <p>IP溯源配置。该字段为必填字段。</p> 
+     * @return IpTraceConfig <p>IP溯源配置。该字段为必填字段。</p>
      */
     public IpTraceConfig getIpTraceConfig() {
         return this.IpTraceConfig;
     }
 
     /**
-     * Set IP溯源配置
-     * @param IpTraceConfig IP溯源配置
+     * Set <p>IP溯源配置。该字段为必填字段。</p>
+     * @param IpTraceConfig <p>IP溯源配置。该字段为必填字段。</p>
      */
     public void setIpTraceConfig(IpTraceConfig IpTraceConfig) {
         this.IpTraceConfig = IpTraceConfig;
     }
 
     /**
-     * Get 是否过滤kibana节点IP 
-     * @return FilterKibanaIp 是否过滤kibana节点IP
+     * Get <p>是否过滤kibana节点IP。</p> 
+     * @return FilterKibanaIp <p>是否过滤kibana节点IP。</p>
      */
     public Boolean getFilterKibanaIp() {
         return this.FilterKibanaIp;
     }
 
     /**
-     * Set 是否过滤kibana节点IP
-     * @param FilterKibanaIp 是否过滤kibana节点IP
+     * Set <p>是否过滤kibana节点IP。</p>
+     * @param FilterKibanaIp <p>是否过滤kibana节点IP。</p>
      */
     public void setFilterKibanaIp(Boolean FilterKibanaIp) {
         this.FilterKibanaIp = FilterKibanaIp;

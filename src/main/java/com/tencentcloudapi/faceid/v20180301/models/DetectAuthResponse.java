@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DetectAuthResponse extends AbstractModel {
 
     /**
-    * 用于发起核身流程的URL，仅微信H5场景使用。
+    * <p>用于发起核身流程的URL，仅微信H5场景使用。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
+    * <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
     */
     @SerializedName("BizToken")
     @Expose
@@ -47,40 +45,32 @@ public class DetectAuthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用于发起核身流程的URL，仅微信H5场景使用。 
-     * @return Url 用于发起核身流程的URL，仅微信H5场景使用。
+     * Get <p>用于发起核身流程的URL，仅微信H5场景使用。</p> 
+     * @return Url <p>用于发起核身流程的URL，仅微信H5场景使用。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 用于发起核身流程的URL，仅微信H5场景使用。
-     * @param Url 用于发起核身流程的URL，仅微信H5场景使用。
+     * Set <p>用于发起核身流程的URL，仅微信H5场景使用。</p>
+     * @param Url <p>用于发起核身流程的URL，仅微信H5场景使用。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。 
-     * @return BizToken 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
+     * Get <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul> 
+     * @return BizToken <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * Set 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
-     * @param BizToken 一次核验流程的唯一标识。
-- 有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。
-- 完成人脸核验后，需根据此标识调用[获取实名核身结果信息增强版](https://cloud.tencent.com/document/api/1007/41957)获取用户最终验证结果信息。
+     * Set <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
+     * @param BizToken <p>一次核验流程的唯一标识。</p><ul><li>有效时间为7,200秒，超过有效期再进行人脸核验会报错，请在有效期内进行核验。</li><li>完成人脸核验后，需根据此标识调用<a href="https://cloud.tencent.com/document/api/1007/41957">获取实名核身结果信息增强版</a>获取用户最终验证结果信息。</li></ul>
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;

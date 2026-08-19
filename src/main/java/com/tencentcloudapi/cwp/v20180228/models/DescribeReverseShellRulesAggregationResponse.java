@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeReverseShellRulesAggregationResponse extends AbstractModel {
 
     /**
-    * 列表内容
+    * <p>列表内容</p>
     */
     @SerializedName("List")
     @Expose
     private ReverseShellRuleAggregation [] List;
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeReverseShellRulesAggregationResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 列表内容 
-     * @return List 列表内容
+     * Get <p>列表内容</p> 
+     * @return List <p>列表内容</p>
      */
     public ReverseShellRuleAggregation [] getList() {
         return this.List;
     }
 
     /**
-     * Set 列表内容
-     * @param List 列表内容
+     * Set <p>列表内容</p>
+     * @param List <p>列表内容</p>
      */
     public void setList(ReverseShellRuleAggregation [] List) {
         this.List = List;
     }
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -24,69 +24,92 @@ import java.util.HashMap;
 public class CreateModelServiceAuthTokenRequest extends AbstractModel {
 
     /**
-    * 服务组 id
+    * <p>服务组 id</p>
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-    * token 名称
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>token 名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description 描述
+    * <p>Description 描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 服务组 id 
-     * @return ServiceGroupId 服务组 id
+     * Get <p>服务组 id</p> 
+     * @return ServiceGroupId <p>服务组 id</p>
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 服务组 id
-     * @param ServiceGroupId 服务组 id
+     * Set <p>服务组 id</p>
+     * @param ServiceGroupId <p>服务组 id</p>
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
     }
 
     /**
-     * Get token 名称 
-     * @return Name token 名称
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>token 名称</p> 
+     * @return Name <p>token 名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set token 名称
-     * @param Name token 名称
+     * Set <p>token 名称</p>
+     * @param Name <p>token 名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description 描述 
-     * @return Description Description 描述
+     * Get <p>Description 描述</p> 
+     * @return Description <p>Description 描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description 描述
-     * @param Description Description 描述
+     * Set <p>Description 描述</p>
+     * @param Description <p>Description 描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -103,6 +126,9 @@ public class CreateModelServiceAuthTokenRequest extends AbstractModel {
         if (source.ServiceGroupId != null) {
             this.ServiceGroupId = new String(source.ServiceGroupId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -117,6 +143,7 @@ public class CreateModelServiceAuthTokenRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
 

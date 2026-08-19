@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class GetFaceIdTokenResponse extends AbstractModel {
 
     /**
-    * token值。- 有效期 10分钟。- 只能完成1次核身。
+    * <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
     */
     @SerializedName("FaceIdToken")
     @Expose
     private String FaceIdToken;
+
+    /**
+    * <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+    */
+    @SerializedName("ClientConfig")
+    @Expose
+    private String ClientConfig;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class GetFaceIdTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get token值。- 有效期 10分钟。- 只能完成1次核身。 
-     * @return FaceIdToken token值。- 有效期 10分钟。- 只能完成1次核身。
+     * Get <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p> 
+     * @return FaceIdToken <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
      */
     public String getFaceIdToken() {
         return this.FaceIdToken;
     }
 
     /**
-     * Set token值。- 有效期 10分钟。- 只能完成1次核身。
-     * @param FaceIdToken token值。- 有效期 10分钟。- 只能完成1次核身。
+     * Set <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
+     * @param FaceIdToken <p>token值。- 有效期 10分钟。- 只能完成1次核身。</p>
      */
     public void setFaceIdToken(String FaceIdToken) {
         this.FaceIdToken = FaceIdToken;
+    }
+
+    /**
+     * Get <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p> 
+     * @return ClientConfig <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+     */
+    public String getClientConfig() {
+        return this.ClientConfig;
+    }
+
+    /**
+     * Set <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+     * @param ClientConfig <p>客户端配置信息，SDK将使用该配置进行后续操作。请将返回值原样传递给客户端SDK。</p>
+     */
+    public void setClientConfig(String ClientConfig) {
+        this.ClientConfig = ClientConfig;
     }
 
     /**
@@ -80,6 +103,9 @@ public class GetFaceIdTokenResponse extends AbstractModel {
         if (source.FaceIdToken != null) {
             this.FaceIdToken = new String(source.FaceIdToken);
         }
+        if (source.ClientConfig != null) {
+            this.ClientConfig = new String(source.ClientConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class GetFaceIdTokenResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceIdToken", this.FaceIdToken);
+        this.setParamSimple(map, prefix + "ClientConfig", this.ClientConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

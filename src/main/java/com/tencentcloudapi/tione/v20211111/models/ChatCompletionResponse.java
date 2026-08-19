@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ChatCompletionResponse extends AbstractModel {
 
     /**
-    * 对话的模型服务组ID
+    * <p>对话的模型服务组ID</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 本次问答的答案。
+    * <p>本次问答的答案。</p>
     */
     @SerializedName("Choices")
     @Expose
     private Choice [] Choices;
 
     /**
-    * 会话Id。
+    * <p>会话Id。</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * token统计
+    * <p>token统计</p>
     */
     @SerializedName("Usage")
     @Expose
@@ -59,64 +59,64 @@ public class ChatCompletionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 对话的模型服务组ID 
-     * @return Model 对话的模型服务组ID
+     * Get <p>对话的模型服务组ID</p> 
+     * @return Model <p>对话的模型服务组ID</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 对话的模型服务组ID
-     * @param Model 对话的模型服务组ID
+     * Set <p>对话的模型服务组ID</p>
+     * @param Model <p>对话的模型服务组ID</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 本次问答的答案。 
-     * @return Choices 本次问答的答案。
+     * Get <p>本次问答的答案。</p> 
+     * @return Choices <p>本次问答的答案。</p>
      */
     public Choice [] getChoices() {
         return this.Choices;
     }
 
     /**
-     * Set 本次问答的答案。
-     * @param Choices 本次问答的答案。
+     * Set <p>本次问答的答案。</p>
+     * @param Choices <p>本次问答的答案。</p>
      */
     public void setChoices(Choice [] Choices) {
         this.Choices = Choices;
     }
 
     /**
-     * Get 会话Id。 
-     * @return Id 会话Id。
+     * Get <p>会话Id。</p> 
+     * @return Id <p>会话Id。</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 会话Id。
-     * @param Id 会话Id。
+     * Set <p>会话Id。</p>
+     * @param Id <p>会话Id。</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get token统计 
-     * @return Usage token统计
+     * Get <p>token统计</p> 
+     * @return Usage <p>token统计</p>
      */
     public Usage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set token统计
-     * @param Usage token统计
+     * Set <p>token统计</p>
+     * @param Usage <p>token统计</p>
      */
     public void setUsage(Usage Usage) {
         this.Usage = Usage;

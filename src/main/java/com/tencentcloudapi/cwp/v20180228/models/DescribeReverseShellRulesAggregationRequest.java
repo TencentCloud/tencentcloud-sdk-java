@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class DescribeReverseShellRulesAggregationRequest extends AbstractModel {
 
     /**
-    * 返回数量，默认为10，最大值为100。
+    * <p>返回数量，默认为10，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+    * <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
+    * <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 排序升序还是倒序，DESC有ASC、
+    * <p>排序升序还是倒序，DESC有ASC、</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 返回数量，默认为10，最大值为100。 
-     * @return Limit 返回数量，默认为10，最大值为100。
+     * Get <p>返回数量，默认为10，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为10，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为10，最大值为100。
-     * @param Limit 返回数量，默认为10，最大值为100。
+     * Set <p>返回数量，默认为10，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为10，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li> 
-     * @return Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+     * Get <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li> 
+     * @return Filters <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
-     * @param Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+     * Set <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
+     * @param Filters <p>过滤条件。</p><li>Keywords - String - 是否必填：否 - 关键字(进程名称)</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序 
-     * @return By 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
+     * Get <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p> 
+     * @return By <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
-     * @param By 排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序
+     * Set <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
+     * @param By <p>排序字段，目前有：CreateTime、ModifyTime，默认按照ModifyTime排序</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get 排序升序还是倒序，DESC有ASC、 
-     * @return Order 排序升序还是倒序，DESC有ASC、
+     * Get <p>排序升序还是倒序，DESC有ASC、</p> 
+     * @return Order <p>排序升序还是倒序，DESC有ASC、</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序升序还是倒序，DESC有ASC、
-     * @param Order 排序升序还是倒序，DESC有ASC、
+     * Set <p>排序升序还是倒序，DESC有ASC、</p>
+     * @param Order <p>排序升序还是倒序，DESC有ASC、</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;

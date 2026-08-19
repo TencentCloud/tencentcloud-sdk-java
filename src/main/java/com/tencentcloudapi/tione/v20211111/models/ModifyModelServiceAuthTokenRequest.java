@@ -24,69 +24,92 @@ import java.util.HashMap;
 public class ModifyModelServiceAuthTokenRequest extends AbstractModel {
 
     /**
-    * 服务组 id
+    * <p>服务组 id</p>
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-    * 是否需要重置，如果为 true，重置 token 值
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>是否需要重置，如果为 true，重置 token 值</p>
     */
     @SerializedName("NeedReset")
     @Expose
     private Boolean NeedReset;
 
     /**
-    * AuthToken 数据
+    * <p>AuthToken 数据</p>
     */
     @SerializedName("AuthToken")
     @Expose
     private AuthToken AuthToken;
 
     /**
-     * Get 服务组 id 
-     * @return ServiceGroupId 服务组 id
+     * Get <p>服务组 id</p> 
+     * @return ServiceGroupId <p>服务组 id</p>
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 服务组 id
-     * @param ServiceGroupId 服务组 id
+     * Set <p>服务组 id</p>
+     * @param ServiceGroupId <p>服务组 id</p>
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
     }
 
     /**
-     * Get 是否需要重置，如果为 true，重置 token 值 
-     * @return NeedReset 是否需要重置，如果为 true，重置 token 值
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>是否需要重置，如果为 true，重置 token 值</p> 
+     * @return NeedReset <p>是否需要重置，如果为 true，重置 token 值</p>
      */
     public Boolean getNeedReset() {
         return this.NeedReset;
     }
 
     /**
-     * Set 是否需要重置，如果为 true，重置 token 值
-     * @param NeedReset 是否需要重置，如果为 true，重置 token 值
+     * Set <p>是否需要重置，如果为 true，重置 token 值</p>
+     * @param NeedReset <p>是否需要重置，如果为 true，重置 token 值</p>
      */
     public void setNeedReset(Boolean NeedReset) {
         this.NeedReset = NeedReset;
     }
 
     /**
-     * Get AuthToken 数据 
-     * @return AuthToken AuthToken 数据
+     * Get <p>AuthToken 数据</p> 
+     * @return AuthToken <p>AuthToken 数据</p>
      */
     public AuthToken getAuthToken() {
         return this.AuthToken;
     }
 
     /**
-     * Set AuthToken 数据
-     * @param AuthToken AuthToken 数据
+     * Set <p>AuthToken 数据</p>
+     * @param AuthToken <p>AuthToken 数据</p>
      */
     public void setAuthToken(AuthToken AuthToken) {
         this.AuthToken = AuthToken;
@@ -103,6 +126,9 @@ public class ModifyModelServiceAuthTokenRequest extends AbstractModel {
         if (source.ServiceGroupId != null) {
             this.ServiceGroupId = new String(source.ServiceGroupId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.NeedReset != null) {
             this.NeedReset = new Boolean(source.NeedReset);
         }
@@ -117,6 +143,7 @@ public class ModifyModelServiceAuthTokenRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "NeedReset", this.NeedReset);
         this.setParamObj(map, prefix + "AuthToken.", this.AuthToken);
 

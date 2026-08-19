@@ -164,6 +164,27 @@ public class AgentInstance extends AbstractModel {
     private CreatingProgress CreatingProgress;
 
     /**
+    * <p>实例关联的角色名称</p>
+    */
+    @SerializedName("RoleName")
+    @Expose
+    private String RoleName;
+
+    /**
+    * <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
+    * <p>商业化资源归属</p>
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
      * Get <p>智能体实例ID</p> 
      * @return InstanceId <p>智能体实例ID</p>
      */
@@ -483,6 +504,54 @@ public class AgentInstance extends AbstractModel {
         this.CreatingProgress = CreatingProgress;
     }
 
+    /**
+     * Get <p>实例关联的角色名称</p> 
+     * @return RoleName <p>实例关联的角色名称</p>
+     */
+    public String getRoleName() {
+        return this.RoleName;
+    }
+
+    /**
+     * Set <p>实例关联的角色名称</p>
+     * @param RoleName <p>实例关联的角色名称</p>
+     */
+    public void setRoleName(String RoleName) {
+        this.RoleName = RoleName;
+    }
+
+    /**
+     * Get <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p> 
+     * @return OfflineTime <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * Set <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+     * @param OfflineTime <p>实例下线时间</p><p>参数格式：2026-08-12 17:02:43</p>
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
+    }
+
+    /**
+     * Get <p>商业化资源归属</p> 
+     * @return ProductName <p>商业化资源归属</p>
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set <p>商业化资源归属</p>
+     * @param ProductName <p>商业化资源归属</p>
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
     public AgentInstance() {
     }
 
@@ -563,6 +632,15 @@ public class AgentInstance extends AbstractModel {
         if (source.CreatingProgress != null) {
             this.CreatingProgress = new CreatingProgress(source.CreatingProgress);
         }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
+        if (source.OfflineTime != null) {
+            this.OfflineTime = new String(source.OfflineTime);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -590,6 +668,9 @@ public class AgentInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "LastActiveTime", this.LastActiveTime);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "CreatingProgress.", this.CreatingProgress);
+        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

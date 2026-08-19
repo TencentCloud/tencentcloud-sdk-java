@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEventEscapeImageListResponse extends AbstractModel {
 
     /**
-    * 风险容器镜像列表
+    * <p>风险容器镜像列表</p>
     */
     @SerializedName("List")
     @Expose
     private EventEscapeImageInfo [] List;
 
     /**
-    * 事件总数量
+    * <p>事件总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEventEscapeImageListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 风险容器镜像列表 
-     * @return List 风险容器镜像列表
+     * Get <p>风险容器镜像列表</p> 
+     * @return List <p>风险容器镜像列表</p>
      */
     public EventEscapeImageInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set 风险容器镜像列表
-     * @param List 风险容器镜像列表
+     * Set <p>风险容器镜像列表</p>
+     * @param List <p>风险容器镜像列表</p>
      */
     public void setList(EventEscapeImageInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get 事件总数量 
-     * @return TotalCount 事件总数量
+     * Get <p>事件总数量</p> 
+     * @return TotalCount <p>事件总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 事件总数量
-     * @param TotalCount 事件总数量
+     * Set <p>事件总数量</p>
+     * @param TotalCount <p>事件总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

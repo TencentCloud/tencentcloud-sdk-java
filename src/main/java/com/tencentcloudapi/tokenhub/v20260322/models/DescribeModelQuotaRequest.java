@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeModelQuotaRequest extends AbstractModel {
 
+    /**
+    * <p>模型 ID。可通过 DescribeModelList 获取。</p>
+    */
+    @SerializedName("ModelId")
+    @Expose
+    private String ModelId;
+
+    /**
+     * Get <p>模型 ID。可通过 DescribeModelList 获取。</p> 
+     * @return ModelId <p>模型 ID。可通过 DescribeModelList 获取。</p>
+     */
+    public String getModelId() {
+        return this.ModelId;
+    }
+
+    /**
+     * Set <p>模型 ID。可通过 DescribeModelList 获取。</p>
+     * @param ModelId <p>模型 ID。可通过 DescribeModelList 获取。</p>
+     */
+    public void setModelId(String ModelId) {
+        this.ModelId = ModelId;
+    }
+
     public DescribeModelQuotaRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeModelQuotaRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeModelQuotaRequest(DescribeModelQuotaRequest source) {
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeModelQuotaRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ModelId", this.ModelId);
 
     }
 }

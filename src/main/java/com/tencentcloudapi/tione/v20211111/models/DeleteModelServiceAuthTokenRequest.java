@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class DeleteModelServiceAuthTokenRequest extends AbstractModel {
 
     /**
-    * 服务组 id
+    * <p>服务组 id</p>
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-    * token 值
+    * <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>token 值</p>
     */
     @SerializedName("AuthTokenValue")
     @Expose
     private String AuthTokenValue;
 
     /**
-     * Get 服务组 id 
-     * @return ServiceGroupId 服务组 id
+     * Get <p>服务组 id</p> 
+     * @return ServiceGroupId <p>服务组 id</p>
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 服务组 id
-     * @param ServiceGroupId 服务组 id
+     * Set <p>服务组 id</p>
+     * @param ServiceGroupId <p>服务组 id</p>
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
     }
 
     /**
-     * Get token 值 
-     * @return AuthTokenValue token 值
+     * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>token 值</p> 
+     * @return AuthTokenValue <p>token 值</p>
      */
     public String getAuthTokenValue() {
         return this.AuthTokenValue;
     }
 
     /**
-     * Set token 值
-     * @param AuthTokenValue token 值
+     * Set <p>token 值</p>
+     * @param AuthTokenValue <p>token 值</p>
      */
     public void setAuthTokenValue(String AuthTokenValue) {
         this.AuthTokenValue = AuthTokenValue;
@@ -80,6 +103,9 @@ public class DeleteModelServiceAuthTokenRequest extends AbstractModel {
         if (source.ServiceGroupId != null) {
             this.ServiceGroupId = new String(source.ServiceGroupId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.AuthTokenValue != null) {
             this.AuthTokenValue = new String(source.AuthTokenValue);
         }
@@ -91,6 +117,7 @@ public class DeleteModelServiceAuthTokenRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "AuthTokenValue", this.AuthTokenValue);
 
     }

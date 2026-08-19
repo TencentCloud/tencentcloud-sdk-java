@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportIpTraceLogResponse extends AbstractModel {
 
     /**
-    * IP时间列表
+    * <p>IP时间列表</p>
     */
     @SerializedName("IpTraceList")
     @Expose
@@ -38,16 +38,16 @@ public class ExportIpTraceLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get IP时间列表 
-     * @return IpTraceList IP时间列表
+     * Get <p>IP时间列表</p> 
+     * @return IpTraceList <p>IP时间列表</p>
      */
     public IpTimePair [] getIpTraceList() {
         return this.IpTraceList;
     }
 
     /**
-     * Set IP时间列表
-     * @param IpTraceList IP时间列表
+     * Set <p>IP时间列表</p>
+     * @param IpTraceList <p>IP时间列表</p>
      */
     public void setIpTraceList(IpTimePair [] IpTraceList) {
         this.IpTraceList = IpTraceList;

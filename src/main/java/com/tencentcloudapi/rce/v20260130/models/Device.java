@@ -108,6 +108,13 @@ public class Device extends AbstractModel {
     private String TokenTime;
 
     /**
+    * <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+    */
+    @SerializedName("PrivacyBrowser")
+    @Expose
+    private String PrivacyBrowser;
+
+    /**
      * Get <p>设备ID</p> 
      * @return DeviceId <p>设备ID</p>
      */
@@ -299,6 +306,22 @@ public class Device extends AbstractModel {
         this.TokenTime = TokenTime;
     }
 
+    /**
+     * Get <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p> 
+     * @return PrivacyBrowser <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+     */
+    public String getPrivacyBrowser() {
+        return this.PrivacyBrowser;
+    }
+
+    /**
+     * Set <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+     * @param PrivacyBrowser <p>隐私浏览器类型，当检测到隐私浏览器时返回，仅H5。</p>
+     */
+    public void setPrivacyBrowser(String PrivacyBrowser) {
+        this.PrivacyBrowser = PrivacyBrowser;
+    }
+
     public Device() {
     }
 
@@ -343,6 +366,9 @@ public class Device extends AbstractModel {
         if (source.TokenTime != null) {
             this.TokenTime = new String(source.TokenTime);
         }
+        if (source.PrivacyBrowser != null) {
+            this.PrivacyBrowser = new String(source.PrivacyBrowser);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkBuildVersion", this.SdkBuildVersion);
         this.setParamSimple(map, prefix + "SignToken", this.SignToken);
         this.setParamSimple(map, prefix + "TokenTime", this.TokenTime);
+        this.setParamSimple(map, prefix + "PrivacyBrowser", this.PrivacyBrowser);
 
     }
 }

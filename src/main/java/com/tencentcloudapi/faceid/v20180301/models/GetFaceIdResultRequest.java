@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class GetFaceIdResultRequest extends AbstractModel {
 
     /**
-    * SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
+    * <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
     */
     @SerializedName("FaceIdToken")
     @Expose
     private String FaceIdToken;
 
     /**
-    * 是否需要拉取视频。
-- 默认false：不需要。
+    * <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
     */
     @SerializedName("IsNeedVideo")
     @Expose
     private Boolean IsNeedVideo;
 
     /**
-    * 是否需要拉取截帧。
-- 默认false：不需要。
+    * <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
     */
     @SerializedName("IsNeedBestFrame")
     @Expose
     private Boolean IsNeedBestFrame;
 
     /**
-    * 是否对回包整体进行加密。
+    * <p>是否对回包整体进行加密。</p>
     */
     @SerializedName("IsEncryptResponse")
     @Expose
     private Boolean IsEncryptResponse;
 
     /**
-    * 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
+    * <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。 
-     * @return FaceIdToken SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
+     * Get <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul> 
+     * @return FaceIdToken <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
      */
     public String getFaceIdToken() {
         return this.FaceIdToken;
     }
 
     /**
-     * Set SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
-     * @param FaceIdToken SDK人脸核身流程的标识。
-- 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
+     * Set <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
+     * @param FaceIdToken <p>SDK人脸核身流程的标识。</p><ul><li>调用<a href="https://cloud.tencent.com/document/product/1007/49198">GetFaceIdToken</a>接口时生成。</li></ul>
      */
     public void setFaceIdToken(String FaceIdToken) {
         this.FaceIdToken = FaceIdToken;
     }
 
     /**
-     * Get 是否需要拉取视频。
-- 默认false：不需要。 
-     * @return IsNeedVideo 是否需要拉取视频。
-- 默认false：不需要。
+     * Get <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul> 
+     * @return IsNeedVideo <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
      */
     public Boolean getIsNeedVideo() {
         return this.IsNeedVideo;
     }
 
     /**
-     * Set 是否需要拉取视频。
-- 默认false：不需要。
-     * @param IsNeedVideo 是否需要拉取视频。
-- 默认false：不需要。
+     * Set <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
+     * @param IsNeedVideo <p>是否需要拉取视频。</p><ul><li>默认false：不需要。</li></ul>
      */
     public void setIsNeedVideo(Boolean IsNeedVideo) {
         this.IsNeedVideo = IsNeedVideo;
     }
 
     /**
-     * Get 是否需要拉取截帧。
-- 默认false：不需要。 
-     * @return IsNeedBestFrame 是否需要拉取截帧。
-- 默认false：不需要。
+     * Get <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul> 
+     * @return IsNeedBestFrame <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
      */
     public Boolean getIsNeedBestFrame() {
         return this.IsNeedBestFrame;
     }
 
     /**
-     * Set 是否需要拉取截帧。
-- 默认false：不需要。
-     * @param IsNeedBestFrame 是否需要拉取截帧。
-- 默认false：不需要。
+     * Set <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
+     * @param IsNeedBestFrame <p>是否需要拉取截帧。</p><ul><li>默认false：不需要。</li></ul>
      */
     public void setIsNeedBestFrame(Boolean IsNeedBestFrame) {
         this.IsNeedBestFrame = IsNeedBestFrame;
     }
 
     /**
-     * Get 是否对回包整体进行加密。 
-     * @return IsEncryptResponse 是否对回包整体进行加密。
+     * Get <p>是否对回包整体进行加密。</p> 
+     * @return IsEncryptResponse <p>是否对回包整体进行加密。</p>
      */
     public Boolean getIsEncryptResponse() {
         return this.IsEncryptResponse;
     }
 
     /**
-     * Set 是否对回包整体进行加密。
-     * @param IsEncryptResponse 是否对回包整体进行加密。
+     * Set <p>是否对回包整体进行加密。</p>
+     * @param IsEncryptResponse <p>是否对回包整体进行加密。</p>
      */
     public void setIsEncryptResponse(Boolean IsEncryptResponse) {
         this.IsEncryptResponse = IsEncryptResponse;
     }
 
     /**
-     * Get 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。 
-     * @return Encryption 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
+     * Get <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p> 
+     * @return Encryption <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
-     * @param Encryption 是否需要对返回中的敏感信息进行加密。  
-只需指定加密算法Algorithm即可，其余字段传入默认值。
+     * Set <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
+     * @param Encryption <p>是否需要对返回中的敏感信息进行加密。<br>只需指定加密算法Algorithm即可，其余字段传入默认值。</p>
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

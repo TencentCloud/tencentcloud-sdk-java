@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class QueryIpTraceLogResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * IP溯源日志列表
+    * <p>IP溯源日志列表</p>
     */
     @SerializedName("IpTraceLogList")
     @Expose
@@ -45,32 +45,32 @@ public class QueryIpTraceLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get IP溯源日志列表 
-     * @return IpTraceLogList IP溯源日志列表
+     * Get <p>IP溯源日志列表</p> 
+     * @return IpTraceLogList <p>IP溯源日志列表</p>
      */
     public IpTraceLogEntry [] getIpTraceLogList() {
         return this.IpTraceLogList;
     }
 
     /**
-     * Set IP溯源日志列表
-     * @param IpTraceLogList IP溯源日志列表
+     * Set <p>IP溯源日志列表</p>
+     * @param IpTraceLogList <p>IP溯源日志列表</p>
      */
     public void setIpTraceLogList(IpTraceLogEntry [] IpTraceLogList) {
         this.IpTraceLogList = IpTraceLogList;

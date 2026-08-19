@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class GetIpTraceStatusResponse extends AbstractModel {
 
     /**
-    * 是否开启IP溯源
+    * <p>是否开启IP溯源</p>
     */
     @SerializedName("OpenIpTrace")
     @Expose
     private Boolean OpenIpTrace;
 
     /**
-    * IP溯源开启持续时间，单位：秒
+    * <p>IP溯源开启持续时间，单位：秒</p>
     */
     @SerializedName("DurationTime")
     @Expose
     private Long DurationTime;
 
     /**
-    * IP溯源配置
+    * <p>IP溯源配置</p>
     */
     @SerializedName("IpTraceConfig")
     @Expose
     private IpTraceConfig IpTraceConfig;
 
     /**
-    * 上次执行时间
+    * <p>上次执行时间</p>
     */
     @SerializedName("LastStartTime")
     @Expose
     private String LastStartTime;
 
     /**
-    * 上次关闭时间
+    * <p>上次关闭时间</p>
     */
     @SerializedName("LastEndTime")
     @Expose
     private String LastEndTime;
 
     /**
-    * 是否过滤Kibana节点IP
+    * <p>是否过滤Kibana节点IP</p>
     */
     @SerializedName("FilterKibanaIp")
     @Expose
@@ -73,96 +73,96 @@ public class GetIpTraceStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否开启IP溯源 
-     * @return OpenIpTrace 是否开启IP溯源
+     * Get <p>是否开启IP溯源</p> 
+     * @return OpenIpTrace <p>是否开启IP溯源</p>
      */
     public Boolean getOpenIpTrace() {
         return this.OpenIpTrace;
     }
 
     /**
-     * Set 是否开启IP溯源
-     * @param OpenIpTrace 是否开启IP溯源
+     * Set <p>是否开启IP溯源</p>
+     * @param OpenIpTrace <p>是否开启IP溯源</p>
      */
     public void setOpenIpTrace(Boolean OpenIpTrace) {
         this.OpenIpTrace = OpenIpTrace;
     }
 
     /**
-     * Get IP溯源开启持续时间，单位：秒 
-     * @return DurationTime IP溯源开启持续时间，单位：秒
+     * Get <p>IP溯源开启持续时间，单位：秒</p> 
+     * @return DurationTime <p>IP溯源开启持续时间，单位：秒</p>
      */
     public Long getDurationTime() {
         return this.DurationTime;
     }
 
     /**
-     * Set IP溯源开启持续时间，单位：秒
-     * @param DurationTime IP溯源开启持续时间，单位：秒
+     * Set <p>IP溯源开启持续时间，单位：秒</p>
+     * @param DurationTime <p>IP溯源开启持续时间，单位：秒</p>
      */
     public void setDurationTime(Long DurationTime) {
         this.DurationTime = DurationTime;
     }
 
     /**
-     * Get IP溯源配置 
-     * @return IpTraceConfig IP溯源配置
+     * Get <p>IP溯源配置</p> 
+     * @return IpTraceConfig <p>IP溯源配置</p>
      */
     public IpTraceConfig getIpTraceConfig() {
         return this.IpTraceConfig;
     }
 
     /**
-     * Set IP溯源配置
-     * @param IpTraceConfig IP溯源配置
+     * Set <p>IP溯源配置</p>
+     * @param IpTraceConfig <p>IP溯源配置</p>
      */
     public void setIpTraceConfig(IpTraceConfig IpTraceConfig) {
         this.IpTraceConfig = IpTraceConfig;
     }
 
     /**
-     * Get 上次执行时间 
-     * @return LastStartTime 上次执行时间
+     * Get <p>上次执行时间</p> 
+     * @return LastStartTime <p>上次执行时间</p>
      */
     public String getLastStartTime() {
         return this.LastStartTime;
     }
 
     /**
-     * Set 上次执行时间
-     * @param LastStartTime 上次执行时间
+     * Set <p>上次执行时间</p>
+     * @param LastStartTime <p>上次执行时间</p>
      */
     public void setLastStartTime(String LastStartTime) {
         this.LastStartTime = LastStartTime;
     }
 
     /**
-     * Get 上次关闭时间 
-     * @return LastEndTime 上次关闭时间
+     * Get <p>上次关闭时间</p> 
+     * @return LastEndTime <p>上次关闭时间</p>
      */
     public String getLastEndTime() {
         return this.LastEndTime;
     }
 
     /**
-     * Set 上次关闭时间
-     * @param LastEndTime 上次关闭时间
+     * Set <p>上次关闭时间</p>
+     * @param LastEndTime <p>上次关闭时间</p>
      */
     public void setLastEndTime(String LastEndTime) {
         this.LastEndTime = LastEndTime;
     }
 
     /**
-     * Get 是否过滤Kibana节点IP 
-     * @return FilterKibanaIp 是否过滤Kibana节点IP
+     * Get <p>是否过滤Kibana节点IP</p> 
+     * @return FilterKibanaIp <p>是否过滤Kibana节点IP</p>
      */
     public Boolean getFilterKibanaIp() {
         return this.FilterKibanaIp;
     }
 
     /**
-     * Set 是否过滤Kibana节点IP
-     * @param FilterKibanaIp 是否过滤Kibana节点IP
+     * Set <p>是否过滤Kibana节点IP</p>
+     * @param FilterKibanaIp <p>是否过滤Kibana节点IP</p>
      */
     public void setFilterKibanaIp(Boolean FilterKibanaIp) {
         this.FilterKibanaIp = FilterKibanaIp;
