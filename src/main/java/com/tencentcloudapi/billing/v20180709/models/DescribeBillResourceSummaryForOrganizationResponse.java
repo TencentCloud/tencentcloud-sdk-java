@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillResourceSummaryForOrganizationResponse extends AbstractModel {
 
     /**
-    * 资源汇总列表
+    * <p>资源汇总列表</p>
     */
     @SerializedName("ResourceSummarySet")
     @Expose
     private BillDistributionResourceSummary [] ResourceSummarySet;
 
     /**
-    * 资源汇总列表总数，入参NeedRecordNum为0时不返回
+    * <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -46,25 +46,25 @@ public class DescribeBillResourceSummaryForOrganizationResponse extends Abstract
     private String RequestId;
 
     /**
-     * Get 资源汇总列表 
-     * @return ResourceSummarySet 资源汇总列表
+     * Get <p>资源汇总列表</p> 
+     * @return ResourceSummarySet <p>资源汇总列表</p>
      */
     public BillDistributionResourceSummary [] getResourceSummarySet() {
         return this.ResourceSummarySet;
     }
 
     /**
-     * Set 资源汇总列表
-     * @param ResourceSummarySet 资源汇总列表
+     * Set <p>资源汇总列表</p>
+     * @param ResourceSummarySet <p>资源汇总列表</p>
      */
     public void setResourceSummarySet(BillDistributionResourceSummary [] ResourceSummarySet) {
         this.ResourceSummarySet = ResourceSummarySet;
     }
 
     /**
-     * Get 资源汇总列表总数，入参NeedRecordNum为0时不返回
+     * Get <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 资源汇总列表总数，入参NeedRecordNum为0时不返回
+     * @return Total <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -72,9 +72,9 @@ public class DescribeBillResourceSummaryForOrganizationResponse extends Abstract
     }
 
     /**
-     * Set 资源汇总列表总数，入参NeedRecordNum为0时不返回
+     * Set <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 资源汇总列表总数，入参NeedRecordNum为0时不返回
+     * @param Total <p>资源汇总列表总数，入参NeedRecordNum为0时不返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {

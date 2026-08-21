@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVRSTaskStatusResponse extends AbstractModel {
 
     /**
-    * 声音复刻任务结果
+    * <p>声音复刻任务结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeVRSTaskStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 声音复刻任务结果 
-     * @return Data 声音复刻任务结果
+     * Get <p>声音复刻任务结果</p> 
+     * @return Data <p>声音复刻任务结果</p>
      */
     public DescribeVRSTaskStatusRespData getData() {
         return this.Data;
     }
 
     /**
-     * Set 声音复刻任务结果
-     * @param Data 声音复刻任务结果
+     * Set <p>声音复刻任务结果</p>
+     * @param Data <p>声音复刻任务结果</p>
      */
     public void setData(DescribeVRSTaskStatusRespData Data) {
         this.Data = Data;

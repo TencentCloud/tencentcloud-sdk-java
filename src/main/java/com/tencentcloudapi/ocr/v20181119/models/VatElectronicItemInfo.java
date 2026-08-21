@@ -24,486 +24,532 @@ import java.util.HashMap;
 public class VatElectronicItemInfo extends AbstractModel {
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("Quantity")
     @Expose
     private String Quantity;
 
     /**
-    * 规格型号
+    * <p>规格型号</p>
     */
     @SerializedName("Specification")
     @Expose
     private String Specification;
 
     /**
-    * 单价
+    * <p>单价</p>
     */
     @SerializedName("Price")
     @Expose
     private String Price;
 
     /**
-    * 金额
+    * <p>金额</p>
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-    * 税率
+    * <p>税率</p>
     */
     @SerializedName("TaxRate")
     @Expose
     private String TaxRate;
 
     /**
-    * 税额
+    * <p>税额</p>
     */
     @SerializedName("Tax")
     @Expose
     private String Tax;
 
     /**
-    * 单位
+    * <p>单位</p>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 运输工具类型
+    * <p>运输工具类型</p>
     */
     @SerializedName("VehicleType")
     @Expose
     private String VehicleType;
 
     /**
-    * 运输工具牌号
+    * <p>运输工具牌号</p>
     */
     @SerializedName("VehicleBrand")
     @Expose
     private String VehicleBrand;
 
     /**
-    * 起始地
+    * <p>起始地</p>
     */
     @SerializedName("DeparturePlace")
     @Expose
     private String DeparturePlace;
 
     /**
-    * 到达地
+    * <p>到达地</p>
     */
     @SerializedName("ArrivalPlace")
     @Expose
     private String ArrivalPlace;
 
     /**
-    * 运输货物名称，仅货物运输服务发票返回
+    * <p>运输货物名称，仅货物运输服务发票返回</p>
     */
     @SerializedName("TransportItemsName")
     @Expose
     private String TransportItemsName;
 
     /**
-    * 建筑服务发生地，仅建筑发票返回
+    * <p>建筑服务发生地，仅建筑发票返回</p>
     */
     @SerializedName("PlaceOfBuildingService")
     @Expose
     private String PlaceOfBuildingService;
 
     /**
-    * 建筑项目名称，仅建筑发票返回
+    * <p>建筑项目名称，仅建筑发票返回</p>
     */
     @SerializedName("BuildingName")
     @Expose
     private String BuildingName;
 
     /**
-    * 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
+    * <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
     */
     @SerializedName("EstateNumber")
     @Expose
     private String EstateNumber;
 
     /**
-    * 面积单位，仅不动产经营租赁服务发票返回
+    * <p>面积单位，仅不动产经营租赁服务发票返回</p>
     */
     @SerializedName("AreaUnit")
     @Expose
     private String AreaUnit;
 
     /**
-    * 出行人，仅旅客运输服务发票返回
+    * <p>出行人，仅旅客运输服务发票返回</p>
     */
     @SerializedName("Traveler")
     @Expose
     private String Traveler;
 
     /**
-    * 有效身份证件号，仅旅客运输服务发票返回
+    * <p>有效身份证件号，仅旅客运输服务发票返回</p>
     */
     @SerializedName("TravelerID")
     @Expose
     private String TravelerID;
 
     /**
-    * 出行日期，仅旅客运输服务发票返回
+    * <p>出行日期，仅旅客运输服务发票返回</p>
     */
     @SerializedName("TravelDate")
     @Expose
     private String TravelDate;
 
     /**
-    * 等级，仅旅客运输服务发票返回
+    * <p>等级，仅旅客运输服务发票返回</p>
     */
     @SerializedName("TravelLevel")
     @Expose
     private String TravelLevel;
 
     /**
-     * Get 项目名称 
-     * @return Name 项目名称
+    * <p>通行日期起</p>
+    */
+    @SerializedName("DateStart")
+    @Expose
+    private String DateStart;
+
+    /**
+    * <p>通行日期止</p>
+    */
+    @SerializedName("DateEnd")
+    @Expose
+    private String DateEnd;
+
+    /**
+     * Get <p>项目名称</p> 
+     * @return Name <p>项目名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 项目名称
-     * @param Name 项目名称
+     * Set <p>项目名称</p>
+     * @param Name <p>项目名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数量 
-     * @return Quantity 数量
+     * Get <p>数量</p> 
+     * @return Quantity <p>数量</p>
      */
     public String getQuantity() {
         return this.Quantity;
     }
 
     /**
-     * Set 数量
-     * @param Quantity 数量
+     * Set <p>数量</p>
+     * @param Quantity <p>数量</p>
      */
     public void setQuantity(String Quantity) {
         this.Quantity = Quantity;
     }
 
     /**
-     * Get 规格型号 
-     * @return Specification 规格型号
+     * Get <p>规格型号</p> 
+     * @return Specification <p>规格型号</p>
      */
     public String getSpecification() {
         return this.Specification;
     }
 
     /**
-     * Set 规格型号
-     * @param Specification 规格型号
+     * Set <p>规格型号</p>
+     * @param Specification <p>规格型号</p>
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get 单价 
-     * @return Price 单价
+     * Get <p>单价</p> 
+     * @return Price <p>单价</p>
      */
     public String getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 单价
-     * @param Price 单价
+     * Set <p>单价</p>
+     * @param Price <p>单价</p>
      */
     public void setPrice(String Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 金额 
-     * @return Total 金额
+     * Get <p>金额</p> 
+     * @return Total <p>金额</p>
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 金额
-     * @param Total 金额
+     * Set <p>金额</p>
+     * @param Total <p>金额</p>
      */
     public void setTotal(String Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 税率 
-     * @return TaxRate 税率
+     * Get <p>税率</p> 
+     * @return TaxRate <p>税率</p>
      */
     public String getTaxRate() {
         return this.TaxRate;
     }
 
     /**
-     * Set 税率
-     * @param TaxRate 税率
+     * Set <p>税率</p>
+     * @param TaxRate <p>税率</p>
      */
     public void setTaxRate(String TaxRate) {
         this.TaxRate = TaxRate;
     }
 
     /**
-     * Get 税额 
-     * @return Tax 税额
+     * Get <p>税额</p> 
+     * @return Tax <p>税额</p>
      */
     public String getTax() {
         return this.Tax;
     }
 
     /**
-     * Set 税额
-     * @param Tax 税额
+     * Set <p>税额</p>
+     * @param Tax <p>税额</p>
      */
     public void setTax(String Tax) {
         this.Tax = Tax;
     }
 
     /**
-     * Get 单位 
-     * @return Unit 单位
+     * Get <p>单位</p> 
+     * @return Unit <p>单位</p>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 单位
-     * @param Unit 单位
+     * Set <p>单位</p>
+     * @param Unit <p>单位</p>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 运输工具类型 
-     * @return VehicleType 运输工具类型
+     * Get <p>运输工具类型</p> 
+     * @return VehicleType <p>运输工具类型</p>
      */
     public String getVehicleType() {
         return this.VehicleType;
     }
 
     /**
-     * Set 运输工具类型
-     * @param VehicleType 运输工具类型
+     * Set <p>运输工具类型</p>
+     * @param VehicleType <p>运输工具类型</p>
      */
     public void setVehicleType(String VehicleType) {
         this.VehicleType = VehicleType;
     }
 
     /**
-     * Get 运输工具牌号 
-     * @return VehicleBrand 运输工具牌号
+     * Get <p>运输工具牌号</p> 
+     * @return VehicleBrand <p>运输工具牌号</p>
      */
     public String getVehicleBrand() {
         return this.VehicleBrand;
     }
 
     /**
-     * Set 运输工具牌号
-     * @param VehicleBrand 运输工具牌号
+     * Set <p>运输工具牌号</p>
+     * @param VehicleBrand <p>运输工具牌号</p>
      */
     public void setVehicleBrand(String VehicleBrand) {
         this.VehicleBrand = VehicleBrand;
     }
 
     /**
-     * Get 起始地 
-     * @return DeparturePlace 起始地
+     * Get <p>起始地</p> 
+     * @return DeparturePlace <p>起始地</p>
      */
     public String getDeparturePlace() {
         return this.DeparturePlace;
     }
 
     /**
-     * Set 起始地
-     * @param DeparturePlace 起始地
+     * Set <p>起始地</p>
+     * @param DeparturePlace <p>起始地</p>
      */
     public void setDeparturePlace(String DeparturePlace) {
         this.DeparturePlace = DeparturePlace;
     }
 
     /**
-     * Get 到达地 
-     * @return ArrivalPlace 到达地
+     * Get <p>到达地</p> 
+     * @return ArrivalPlace <p>到达地</p>
      */
     public String getArrivalPlace() {
         return this.ArrivalPlace;
     }
 
     /**
-     * Set 到达地
-     * @param ArrivalPlace 到达地
+     * Set <p>到达地</p>
+     * @param ArrivalPlace <p>到达地</p>
      */
     public void setArrivalPlace(String ArrivalPlace) {
         this.ArrivalPlace = ArrivalPlace;
     }
 
     /**
-     * Get 运输货物名称，仅货物运输服务发票返回 
-     * @return TransportItemsName 运输货物名称，仅货物运输服务发票返回
+     * Get <p>运输货物名称，仅货物运输服务发票返回</p> 
+     * @return TransportItemsName <p>运输货物名称，仅货物运输服务发票返回</p>
      */
     public String getTransportItemsName() {
         return this.TransportItemsName;
     }
 
     /**
-     * Set 运输货物名称，仅货物运输服务发票返回
-     * @param TransportItemsName 运输货物名称，仅货物运输服务发票返回
+     * Set <p>运输货物名称，仅货物运输服务发票返回</p>
+     * @param TransportItemsName <p>运输货物名称，仅货物运输服务发票返回</p>
      */
     public void setTransportItemsName(String TransportItemsName) {
         this.TransportItemsName = TransportItemsName;
     }
 
     /**
-     * Get 建筑服务发生地，仅建筑发票返回 
-     * @return PlaceOfBuildingService 建筑服务发生地，仅建筑发票返回
+     * Get <p>建筑服务发生地，仅建筑发票返回</p> 
+     * @return PlaceOfBuildingService <p>建筑服务发生地，仅建筑发票返回</p>
      */
     public String getPlaceOfBuildingService() {
         return this.PlaceOfBuildingService;
     }
 
     /**
-     * Set 建筑服务发生地，仅建筑发票返回
-     * @param PlaceOfBuildingService 建筑服务发生地，仅建筑发票返回
+     * Set <p>建筑服务发生地，仅建筑发票返回</p>
+     * @param PlaceOfBuildingService <p>建筑服务发生地，仅建筑发票返回</p>
      */
     public void setPlaceOfBuildingService(String PlaceOfBuildingService) {
         this.PlaceOfBuildingService = PlaceOfBuildingService;
     }
 
     /**
-     * Get 建筑项目名称，仅建筑发票返回 
-     * @return BuildingName 建筑项目名称，仅建筑发票返回
+     * Get <p>建筑项目名称，仅建筑发票返回</p> 
+     * @return BuildingName <p>建筑项目名称，仅建筑发票返回</p>
      */
     public String getBuildingName() {
         return this.BuildingName;
     }
 
     /**
-     * Set 建筑项目名称，仅建筑发票返回
-     * @param BuildingName 建筑项目名称，仅建筑发票返回
+     * Set <p>建筑项目名称，仅建筑发票返回</p>
+     * @param BuildingName <p>建筑项目名称，仅建筑发票返回</p>
      */
     public void setBuildingName(String BuildingName) {
         this.BuildingName = BuildingName;
     }
 
     /**
-     * Get 产权证书/不动产权证号，仅不动产经营租赁服务发票返回 
-     * @return EstateNumber 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
+     * Get <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p> 
+     * @return EstateNumber <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
      */
     public String getEstateNumber() {
         return this.EstateNumber;
     }
 
     /**
-     * Set 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
-     * @param EstateNumber 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
+     * Set <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
+     * @param EstateNumber <p>产权证书/不动产权证号，仅不动产经营租赁服务发票返回</p>
      */
     public void setEstateNumber(String EstateNumber) {
         this.EstateNumber = EstateNumber;
     }
 
     /**
-     * Get 面积单位，仅不动产经营租赁服务发票返回 
-     * @return AreaUnit 面积单位，仅不动产经营租赁服务发票返回
+     * Get <p>面积单位，仅不动产经营租赁服务发票返回</p> 
+     * @return AreaUnit <p>面积单位，仅不动产经营租赁服务发票返回</p>
      */
     public String getAreaUnit() {
         return this.AreaUnit;
     }
 
     /**
-     * Set 面积单位，仅不动产经营租赁服务发票返回
-     * @param AreaUnit 面积单位，仅不动产经营租赁服务发票返回
+     * Set <p>面积单位，仅不动产经营租赁服务发票返回</p>
+     * @param AreaUnit <p>面积单位，仅不动产经营租赁服务发票返回</p>
      */
     public void setAreaUnit(String AreaUnit) {
         this.AreaUnit = AreaUnit;
     }
 
     /**
-     * Get 出行人，仅旅客运输服务发票返回 
-     * @return Traveler 出行人，仅旅客运输服务发票返回
+     * Get <p>出行人，仅旅客运输服务发票返回</p> 
+     * @return Traveler <p>出行人，仅旅客运输服务发票返回</p>
      */
     public String getTraveler() {
         return this.Traveler;
     }
 
     /**
-     * Set 出行人，仅旅客运输服务发票返回
-     * @param Traveler 出行人，仅旅客运输服务发票返回
+     * Set <p>出行人，仅旅客运输服务发票返回</p>
+     * @param Traveler <p>出行人，仅旅客运输服务发票返回</p>
      */
     public void setTraveler(String Traveler) {
         this.Traveler = Traveler;
     }
 
     /**
-     * Get 有效身份证件号，仅旅客运输服务发票返回 
-     * @return TravelerID 有效身份证件号，仅旅客运输服务发票返回
+     * Get <p>有效身份证件号，仅旅客运输服务发票返回</p> 
+     * @return TravelerID <p>有效身份证件号，仅旅客运输服务发票返回</p>
      */
     public String getTravelerID() {
         return this.TravelerID;
     }
 
     /**
-     * Set 有效身份证件号，仅旅客运输服务发票返回
-     * @param TravelerID 有效身份证件号，仅旅客运输服务发票返回
+     * Set <p>有效身份证件号，仅旅客运输服务发票返回</p>
+     * @param TravelerID <p>有效身份证件号，仅旅客运输服务发票返回</p>
      */
     public void setTravelerID(String TravelerID) {
         this.TravelerID = TravelerID;
     }
 
     /**
-     * Get 出行日期，仅旅客运输服务发票返回 
-     * @return TravelDate 出行日期，仅旅客运输服务发票返回
+     * Get <p>出行日期，仅旅客运输服务发票返回</p> 
+     * @return TravelDate <p>出行日期，仅旅客运输服务发票返回</p>
      */
     public String getTravelDate() {
         return this.TravelDate;
     }
 
     /**
-     * Set 出行日期，仅旅客运输服务发票返回
-     * @param TravelDate 出行日期，仅旅客运输服务发票返回
+     * Set <p>出行日期，仅旅客运输服务发票返回</p>
+     * @param TravelDate <p>出行日期，仅旅客运输服务发票返回</p>
      */
     public void setTravelDate(String TravelDate) {
         this.TravelDate = TravelDate;
     }
 
     /**
-     * Get 等级，仅旅客运输服务发票返回 
-     * @return TravelLevel 等级，仅旅客运输服务发票返回
+     * Get <p>等级，仅旅客运输服务发票返回</p> 
+     * @return TravelLevel <p>等级，仅旅客运输服务发票返回</p>
      */
     public String getTravelLevel() {
         return this.TravelLevel;
     }
 
     /**
-     * Set 等级，仅旅客运输服务发票返回
-     * @param TravelLevel 等级，仅旅客运输服务发票返回
+     * Set <p>等级，仅旅客运输服务发票返回</p>
+     * @param TravelLevel <p>等级，仅旅客运输服务发票返回</p>
      */
     public void setTravelLevel(String TravelLevel) {
         this.TravelLevel = TravelLevel;
+    }
+
+    /**
+     * Get <p>通行日期起</p> 
+     * @return DateStart <p>通行日期起</p>
+     */
+    public String getDateStart() {
+        return this.DateStart;
+    }
+
+    /**
+     * Set <p>通行日期起</p>
+     * @param DateStart <p>通行日期起</p>
+     */
+    public void setDateStart(String DateStart) {
+        this.DateStart = DateStart;
+    }
+
+    /**
+     * Get <p>通行日期止</p> 
+     * @return DateEnd <p>通行日期止</p>
+     */
+    public String getDateEnd() {
+        return this.DateEnd;
+    }
+
+    /**
+     * Set <p>通行日期止</p>
+     * @param DateEnd <p>通行日期止</p>
+     */
+    public void setDateEnd(String DateEnd) {
+        this.DateEnd = DateEnd;
     }
 
     public VatElectronicItemInfo() {
@@ -577,6 +623,12 @@ public class VatElectronicItemInfo extends AbstractModel {
         if (source.TravelLevel != null) {
             this.TravelLevel = new String(source.TravelLevel);
         }
+        if (source.DateStart != null) {
+            this.DateStart = new String(source.DateStart);
+        }
+        if (source.DateEnd != null) {
+            this.DateEnd = new String(source.DateEnd);
+        }
     }
 
 
@@ -605,6 +657,8 @@ public class VatElectronicItemInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TravelerID", this.TravelerID);
         this.setParamSimple(map, prefix + "TravelDate", this.TravelDate);
         this.setParamSimple(map, prefix + "TravelLevel", this.TravelLevel);
+        this.setParamSimple(map, prefix + "DateStart", this.DateStart);
+        this.setParamSimple(map, prefix + "DateEnd", this.DateEnd);
 
     }
 }

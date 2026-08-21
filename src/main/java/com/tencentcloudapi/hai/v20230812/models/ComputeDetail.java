@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ComputeDetail extends AbstractModel {
 
     /**
-    * 算力套餐ID
+    * <p>算力套餐ID</p>
     */
     @SerializedName("BundleType")
     @Expose
     private String BundleType;
 
     /**
-    * 节点数量
+    * <p>节点数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 显卡数量
+    * <p>显卡数量</p>
     */
     @SerializedName("GPUCount")
     @Expose
     private String GPUCount;
 
     /**
-    * 显存
+    * <p>显存</p>
     */
     @SerializedName("GPUMemory")
     @Expose
     private String GPUMemory;
 
     /**
-    * 算力
+    * <p>算力</p>
     */
     @SerializedName("GPUPerformance")
     @Expose
     private String GPUPerformance;
 
     /**
-    * CPU核数
+    * <p>CPU核数</p>
     */
     @SerializedName("CPU")
     @Expose
     private String CPU;
 
     /**
-    * 内存
+    * <p>内存</p>
     */
     @SerializedName("Memory")
     @Expose
     private String Memory;
 
     /**
-    * 该套餐是否支持包年包月
+    * <p>该套餐是否支持包年包月</p>
     */
     @SerializedName("PrepaidEnable")
     @Expose
     private Boolean PrepaidEnable;
 
     /**
-    * 该套餐是否支持按量计费
+    * <p>该套餐是否支持按量计费</p>
     */
     @SerializedName("PostpaidEnable")
     @Expose
     private Boolean PostpaidEnable;
 
     /**
-     * Get 算力套餐ID 
-     * @return BundleType 算力套餐ID
+     * Get <p>算力套餐ID</p> 
+     * @return BundleType <p>算力套餐ID</p>
      */
     public String getBundleType() {
         return this.BundleType;
     }
 
     /**
-     * Set 算力套餐ID
-     * @param BundleType 算力套餐ID
+     * Set <p>算力套餐ID</p>
+     * @param BundleType <p>算力套餐ID</p>
      */
     public void setBundleType(String BundleType) {
         this.BundleType = BundleType;
     }
 
     /**
-     * Get 节点数量 
-     * @return Count 节点数量
+     * Get <p>节点数量</p> 
+     * @return Count <p>节点数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 节点数量
-     * @param Count 节点数量
+     * Set <p>节点数量</p>
+     * @param Count <p>节点数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 显卡数量 
-     * @return GPUCount 显卡数量
+     * Get <p>显卡数量</p> 
+     * @return GPUCount <p>显卡数量</p>
      */
     public String getGPUCount() {
         return this.GPUCount;
     }
 
     /**
-     * Set 显卡数量
-     * @param GPUCount 显卡数量
+     * Set <p>显卡数量</p>
+     * @param GPUCount <p>显卡数量</p>
      */
     public void setGPUCount(String GPUCount) {
         this.GPUCount = GPUCount;
     }
 
     /**
-     * Get 显存 
-     * @return GPUMemory 显存
+     * Get <p>显存</p> 
+     * @return GPUMemory <p>显存</p>
      */
     public String getGPUMemory() {
         return this.GPUMemory;
     }
 
     /**
-     * Set 显存
-     * @param GPUMemory 显存
+     * Set <p>显存</p>
+     * @param GPUMemory <p>显存</p>
      */
     public void setGPUMemory(String GPUMemory) {
         this.GPUMemory = GPUMemory;
     }
 
     /**
-     * Get 算力 
-     * @return GPUPerformance 算力
+     * Get <p>算力</p> 
+     * @return GPUPerformance <p>算力</p>
      */
     public String getGPUPerformance() {
         return this.GPUPerformance;
     }
 
     /**
-     * Set 算力
-     * @param GPUPerformance 算力
+     * Set <p>算力</p>
+     * @param GPUPerformance <p>算力</p>
      */
     public void setGPUPerformance(String GPUPerformance) {
         this.GPUPerformance = GPUPerformance;
     }
 
     /**
-     * Get CPU核数 
-     * @return CPU CPU核数
+     * Get <p>CPU核数</p> 
+     * @return CPU <p>CPU核数</p>
      */
     public String getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set CPU核数
-     * @param CPU CPU核数
+     * Set <p>CPU核数</p>
+     * @param CPU <p>CPU核数</p>
      */
     public void setCPU(String CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 内存 
-     * @return Memory 内存
+     * Get <p>内存</p> 
+     * @return Memory <p>内存</p>
      */
     public String getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存
-     * @param Memory 内存
+     * Set <p>内存</p>
+     * @param Memory <p>内存</p>
      */
     public void setMemory(String Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 该套餐是否支持包年包月 
-     * @return PrepaidEnable 该套餐是否支持包年包月
+     * Get <p>该套餐是否支持包年包月</p> 
+     * @return PrepaidEnable <p>该套餐是否支持包年包月</p>
      */
     public Boolean getPrepaidEnable() {
         return this.PrepaidEnable;
     }
 
     /**
-     * Set 该套餐是否支持包年包月
-     * @param PrepaidEnable 该套餐是否支持包年包月
+     * Set <p>该套餐是否支持包年包月</p>
+     * @param PrepaidEnable <p>该套餐是否支持包年包月</p>
      */
     public void setPrepaidEnable(Boolean PrepaidEnable) {
         this.PrepaidEnable = PrepaidEnable;
     }
 
     /**
-     * Get 该套餐是否支持按量计费 
-     * @return PostpaidEnable 该套餐是否支持按量计费
+     * Get <p>该套餐是否支持按量计费</p> 
+     * @return PostpaidEnable <p>该套餐是否支持按量计费</p>
      */
     public Boolean getPostpaidEnable() {
         return this.PostpaidEnable;
     }
 
     /**
-     * Set 该套餐是否支持按量计费
-     * @param PostpaidEnable 该套餐是否支持按量计费
+     * Set <p>该套餐是否支持按量计费</p>
+     * @param PostpaidEnable <p>该套餐是否支持按量计费</p>
      */
     public void setPostpaidEnable(Boolean PostpaidEnable) {
         this.PostpaidEnable = PostpaidEnable;

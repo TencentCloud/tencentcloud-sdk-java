@@ -157,7 +157,7 @@ public class TopSqlTpl extends AbstractModel {
     */
     @SerializedName("IoWaitTimeMin")
     @Expose
-    private Long IoWaitTimeMin;
+    private Float IoWaitTimeMin;
 
     /**
     * <p>最大执行时间，单位秒</p>
@@ -613,7 +613,7 @@ public class TopSqlTpl extends AbstractModel {
      * @return IoWaitTimeMin <p>最小io等待时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getIoWaitTimeMin() {
+    public Float getIoWaitTimeMin() {
         return this.IoWaitTimeMin;
     }
 
@@ -623,7 +623,7 @@ public class TopSqlTpl extends AbstractModel {
      * @param IoWaitTimeMin <p>最小io等待时间，单位秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIoWaitTimeMin(Long IoWaitTimeMin) {
+    public void setIoWaitTimeMin(Float IoWaitTimeMin) {
         this.IoWaitTimeMin = IoWaitTimeMin;
     }
 
@@ -992,7 +992,7 @@ public class TopSqlTpl extends AbstractModel {
             this.CpuTimeMax = new Float(source.CpuTimeMax);
         }
         if (source.IoWaitTimeMin != null) {
-            this.IoWaitTimeMin = new Long(source.IoWaitTimeMin);
+            this.IoWaitTimeMin = new Float(source.IoWaitTimeMin);
         }
         if (source.LatencyMax != null) {
             this.LatencyMax = new Float(source.LatencyMax);

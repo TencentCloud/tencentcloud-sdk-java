@@ -45,6 +45,13 @@ public class DescribeServicesRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * <p>实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>CREATING： 创建中</li><li>CREATE_FAILED： 部署失败</li><li>DELETING： 删除中</li><li>UPDATING： 更新中</li><li>RESTARTING： 重启中</li><li>ISOLATING： 隔离中</li><li>ARREARS： 欠费中</li><li>RESTORING： 冲正恢复中</li></ul>
+    */
+    @SerializedName("States")
+    @Expose
+    private String [] States;
+
+    /**
      * Get <p>服务列表</p> 
      * @return ServiceIds <p>服务列表</p>
      */
@@ -92,6 +99,22 @@ public class DescribeServicesRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get <p>实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>CREATING： 创建中</li><li>CREATE_FAILED： 部署失败</li><li>DELETING： 删除中</li><li>UPDATING： 更新中</li><li>RESTARTING： 重启中</li><li>ISOLATING： 隔离中</li><li>ARREARS： 欠费中</li><li>RESTORING： 冲正恢复中</li></ul> 
+     * @return States <p>实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>CREATING： 创建中</li><li>CREATE_FAILED： 部署失败</li><li>DELETING： 删除中</li><li>UPDATING： 更新中</li><li>RESTARTING： 重启中</li><li>ISOLATING： 隔离中</li><li>ARREARS： 欠费中</li><li>RESTORING： 冲正恢复中</li></ul>
+     */
+    public String [] getStates() {
+        return this.States;
+    }
+
+    /**
+     * Set <p>实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>CREATING： 创建中</li><li>CREATE_FAILED： 部署失败</li><li>DELETING： 删除中</li><li>UPDATING： 更新中</li><li>RESTARTING： 重启中</li><li>ISOLATING： 隔离中</li><li>ARREARS： 欠费中</li><li>RESTORING： 冲正恢复中</li></ul>
+     * @param States <p>实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>CREATING： 创建中</li><li>CREATE_FAILED： 部署失败</li><li>DELETING： 删除中</li><li>UPDATING： 更新中</li><li>RESTARTING： 重启中</li><li>ISOLATING： 隔离中</li><li>ARREARS： 欠费中</li><li>RESTORING： 冲正恢复中</li></ul>
+     */
+    public void setStates(String [] States) {
+        this.States = States;
+    }
+
     public DescribeServicesRequest() {
     }
 
@@ -112,6 +135,12 @@ public class DescribeServicesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.States != null) {
+            this.States = new String[source.States.length];
+            for (int i = 0; i < source.States.length; i++) {
+                this.States[i] = new String(source.States[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class DescribeServicesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ServiceIds.", this.ServiceIds);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArraySimple(map, prefix + "States.", this.States);
 
     }
 }

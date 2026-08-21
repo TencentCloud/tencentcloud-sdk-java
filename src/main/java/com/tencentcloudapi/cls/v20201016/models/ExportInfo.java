@@ -129,6 +129,13 @@ public class ExportInfo extends AbstractModel {
     private String [] DerivedFields;
 
     /**
+    * <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+    */
+    @SerializedName("CreateTimestamp")
+    @Expose
+    private Long CreateTimestamp;
+
+    /**
      * Get <p>日志主题ID</p> 
      * @return TopicId <p>日志主题ID</p>
      */
@@ -368,6 +375,22 @@ public class ExportInfo extends AbstractModel {
         this.DerivedFields = DerivedFields;
     }
 
+    /**
+     * Get <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p> 
+     * @return CreateTimestamp <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+     */
+    public Long getCreateTimestamp() {
+        return this.CreateTimestamp;
+    }
+
+    /**
+     * Set <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+     * @param CreateTimestamp <p>日志导出创建时间，毫秒时间戳</p><p>单位：ms</p>
+     */
+    public void setCreateTimestamp(Long CreateTimestamp) {
+        this.CreateTimestamp = CreateTimestamp;
+    }
+
     public ExportInfo() {
     }
 
@@ -424,6 +447,9 @@ public class ExportInfo extends AbstractModel {
                 this.DerivedFields[i] = new String(source.DerivedFields[i]);
             }
         }
+        if (source.CreateTimestamp != null) {
+            this.CreateTimestamp = new Long(source.CreateTimestamp);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class ExportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         this.setParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
+        this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
 
     }
 }

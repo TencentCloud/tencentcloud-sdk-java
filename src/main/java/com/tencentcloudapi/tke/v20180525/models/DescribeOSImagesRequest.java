@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeOSImagesRequest extends AbstractModel {
 
+    /**
+    * <p>镜像拉取接口增加过滤字段</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get <p>镜像拉取接口增加过滤字段</p> 
+     * @return Filters <p>镜像拉取接口增加过滤字段</p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>镜像拉取接口增加过滤字段</p>
+     * @param Filters <p>镜像拉取接口增加过滤字段</p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeOSImagesRequest() {
     }
 
@@ -31,6 +54,12 @@ public class DescribeOSImagesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeOSImagesRequest(DescribeOSImagesRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class DescribeOSImagesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

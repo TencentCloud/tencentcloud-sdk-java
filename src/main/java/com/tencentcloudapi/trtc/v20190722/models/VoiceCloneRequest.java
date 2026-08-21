@@ -73,6 +73,13 @@ public class VoiceCloneRequest extends AbstractModel {
     private String Language;
 
     /**
+    * <p>拓展参数</p>
+    */
+    @SerializedName("ExtraParams")
+    @Expose
+    private String ExtraParams;
+
+    /**
      * Get <p>TRTC的SdkAppId</p> 
      * @return SdkAppId <p>TRTC的SdkAppId</p>
      */
@@ -188,6 +195,22 @@ public class VoiceCloneRequest extends AbstractModel {
         this.Language = Language;
     }
 
+    /**
+     * Get <p>拓展参数</p> 
+     * @return ExtraParams <p>拓展参数</p>
+     */
+    public String getExtraParams() {
+        return this.ExtraParams;
+    }
+
+    /**
+     * Set <p>拓展参数</p>
+     * @param ExtraParams <p>拓展参数</p>
+     */
+    public void setExtraParams(String ExtraParams) {
+        this.ExtraParams = ExtraParams;
+    }
+
     public VoiceCloneRequest() {
     }
 
@@ -217,6 +240,9 @@ public class VoiceCloneRequest extends AbstractModel {
         if (source.Language != null) {
             this.Language = new String(source.Language);
         }
+        if (source.ExtraParams != null) {
+            this.ExtraParams = new String(source.ExtraParams);
+        }
     }
 
 
@@ -231,6 +257,7 @@ public class VoiceCloneRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PromptText", this.PromptText);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
 
     }
 }

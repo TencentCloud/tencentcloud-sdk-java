@@ -24,198 +24,189 @@ import java.util.HashMap;
 public class FileSystemInfo extends AbstractModel {
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 用户自定义名称
+    * <p>用户自定义名称</p>
     */
     @SerializedName("CreationToken")
     @Expose
     private String CreationToken;
 
     /**
-    * 文件系统 ID
+    * <p>文件系统 ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
+    * <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * 文件系统已使用容量。单位：Byte
+    * <p>文件系统已使用容量。单位：Byte</p>
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * 文件系统空间限制。单位:GiB
+    * <p>文件系统空间限制。单位:GiB</p>
     */
     @SerializedName("SizeLimit")
     @Expose
     private Long SizeLimit;
 
     /**
-    * 区域 ID
+    * <p>区域 ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 区域名称
+    * <p>区域名称</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 文件系统协议类型, 支持 NFS,CIFS,TURBO
+    * <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+    * <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 文件系统绑定的预付费存储包
+    * <p>文件系统绑定的预付费存储包</p>
     */
     @SerializedName("StorageResourcePkg")
     @Expose
     private String StorageResourcePkg;
 
     /**
-    * 文件系统绑定的预付费带宽包（暂未支持）
+    * <p>文件系统绑定的预付费带宽包（暂未支持）</p>
     */
     @SerializedName("BandwidthResourcePkg")
     @Expose
     private String BandwidthResourcePkg;
 
     /**
-    * 文件系统绑定权限组信息
+    * <p>文件系统绑定权限组信息</p>
     */
     @SerializedName("PGroup")
     @Expose
     private PGroup PGroup;
 
     /**
-    * 用户自定义名称
+    * <p>用户自定义名称</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * 文件系统是否加密,true：代表加密，false：非加密
+    * <p>文件系统是否加密,true：代表加密，false：非加密</p>
     */
     @SerializedName("Encrypted")
     @Expose
     private Boolean Encrypted;
 
     /**
-    * 加密所使用的密钥，可以为密钥的 ID 或者 ARN
+    * <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
+    * <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
     */
     @SerializedName("BandwidthLimit")
     @Expose
     private Float BandwidthLimit;
 
     /**
-    * 文件系统关联的快照策略
+    * <p>文件系统关联的快照策略</p>
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * 文件系统处理快照状态,snapping：快照中，normal：正常状态
+    * <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
     */
     @SerializedName("SnapStatus")
     @Expose
     private String SnapStatus;
 
     /**
-    * 文件系统容量规格上限
-单位:GiB
+    * <p>文件系统容量规格上限<br>单位:GiB</p>
     */
     @SerializedName("Capacity")
     @Expose
     private Long Capacity;
 
     /**
-    * 文件系统标签列表
+    * <p>文件系统标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
+    * <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
     */
     @SerializedName("TieringState")
     @Expose
     private String TieringState;
 
     /**
-    * 分层存储详情
+    * <p>分层存储详情</p>
     */
     @SerializedName("TieringDetail")
     @Expose
     private TieringDetailInfo TieringDetail;
 
     /**
-    * 文件系统自动扩容策略
+    * <p>文件系统自动扩容策略</p>
     */
     @SerializedName("AutoScaleUpRule")
     @Expose
     private AutoScaleUpRule AutoScaleUpRule;
 
     /**
-    * 文件系统版本
+    * <p>文件系统版本</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 额外性能信息
+    * <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExstraPerformanceInfo")
@@ -223,469 +214,439 @@ Available:可用
     private ExstraPerformanceInfo [] ExstraPerformanceInfo;
 
     /**
-    * basic：标准版元数据类型
-enhanced：增项版元数据类型
+    * <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
     */
     @SerializedName("MetaType")
     @Expose
     private String MetaType;
 
     /**
-     * Get 创建时间 
-     * @return CreationTime 创建时间
+    * <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+    */
+    @SerializedName("Scenario")
+    @Expose
+    private String Scenario;
+
+    /**
+     * Get <p>创建时间</p> 
+     * @return CreationTime <p>创建时间</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreationTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreationTime <p>创建时间</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 用户自定义名称 
-     * @return CreationToken 用户自定义名称
+     * Get <p>用户自定义名称</p> 
+     * @return CreationToken <p>用户自定义名称</p>
      */
     public String getCreationToken() {
         return this.CreationToken;
     }
 
     /**
-     * Set 用户自定义名称
-     * @param CreationToken 用户自定义名称
+     * Set <p>用户自定义名称</p>
+     * @param CreationToken <p>用户自定义名称</p>
      */
     public void setCreationToken(String CreationToken) {
         this.CreationToken = CreationToken;
     }
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get <p>文件系统 ID</p> 
+     * @return FileSystemId <p>文件系统 ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set <p>文件系统 ID</p>
+     * @param FileSystemId <p>文件系统 ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中 
-     * @return LifeCycleState 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
+     * Get <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul> 
+     * @return LifeCycleState <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
-     * @param LifeCycleState 文件系统状态。取值范围：
-- creating:创建中
-- mounting:挂载中
-- create_failed:创建失败
-- available:可使用
-- unserviced:停服中
-- upgrading:升级中
+     * Set <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
+     * @param LifeCycleState <p>文件系统状态。取值范围：</p><ul><li>creating:创建中</li><li>mounting:挂载中</li><li>create_failed:创建失败</li><li>available:可使用</li><li>unserviced:停服中</li><li>upgrading:升级中</li></ul>
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get 文件系统已使用容量。单位：Byte 
-     * @return SizeByte 文件系统已使用容量。单位：Byte
+     * Get <p>文件系统已使用容量。单位：Byte</p> 
+     * @return SizeByte <p>文件系统已使用容量。单位：Byte</p>
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set 文件系统已使用容量。单位：Byte
-     * @param SizeByte 文件系统已使用容量。单位：Byte
+     * Set <p>文件系统已使用容量。单位：Byte</p>
+     * @param SizeByte <p>文件系统已使用容量。单位：Byte</p>
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get 文件系统空间限制。单位:GiB 
-     * @return SizeLimit 文件系统空间限制。单位:GiB
+     * Get <p>文件系统空间限制。单位:GiB</p> 
+     * @return SizeLimit <p>文件系统空间限制。单位:GiB</p>
      */
     public Long getSizeLimit() {
         return this.SizeLimit;
     }
 
     /**
-     * Set 文件系统空间限制。单位:GiB
-     * @param SizeLimit 文件系统空间限制。单位:GiB
+     * Set <p>文件系统空间限制。单位:GiB</p>
+     * @param SizeLimit <p>文件系统空间限制。单位:GiB</p>
      */
     public void setSizeLimit(Long SizeLimit) {
         this.SizeLimit = SizeLimit;
     }
 
     /**
-     * Get 区域 ID 
-     * @return ZoneId 区域 ID
+     * Get <p>区域 ID</p> 
+     * @return ZoneId <p>区域 ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域 ID
-     * @param ZoneId 区域 ID
+     * Set <p>区域 ID</p>
+     * @param ZoneId <p>区域 ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 区域名称 
-     * @return Zone 区域名称
+     * Get <p>区域名称</p> 
+     * @return Zone <p>区域名称</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 区域名称
-     * @param Zone 区域名称
+     * Set <p>区域名称</p>
+     * @param Zone <p>区域名称</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 文件系统协议类型, 支持 NFS,CIFS,TURBO 
-     * @return Protocol 文件系统协议类型, 支持 NFS,CIFS,TURBO
+     * Get <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p> 
+     * @return Protocol <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 文件系统协议类型, 支持 NFS,CIFS,TURBO
-     * @param Protocol 文件系统协议类型, 支持 NFS,CIFS,TURBO
+     * Set <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
+     * @param Protocol <p>文件系统协议类型, 支持 NFS,CIFS,TURBO</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型 
-     * @return StorageType 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+     * Get <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p> 
+     * @return StorageType <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
-     * @param StorageType 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+     * Set <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
+     * @param StorageType <p>存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 文件系统绑定的预付费存储包 
-     * @return StorageResourcePkg 文件系统绑定的预付费存储包
+     * Get <p>文件系统绑定的预付费存储包</p> 
+     * @return StorageResourcePkg <p>文件系统绑定的预付费存储包</p>
      */
     public String getStorageResourcePkg() {
         return this.StorageResourcePkg;
     }
 
     /**
-     * Set 文件系统绑定的预付费存储包
-     * @param StorageResourcePkg 文件系统绑定的预付费存储包
+     * Set <p>文件系统绑定的预付费存储包</p>
+     * @param StorageResourcePkg <p>文件系统绑定的预付费存储包</p>
      */
     public void setStorageResourcePkg(String StorageResourcePkg) {
         this.StorageResourcePkg = StorageResourcePkg;
     }
 
     /**
-     * Get 文件系统绑定的预付费带宽包（暂未支持） 
-     * @return BandwidthResourcePkg 文件系统绑定的预付费带宽包（暂未支持）
+     * Get <p>文件系统绑定的预付费带宽包（暂未支持）</p> 
+     * @return BandwidthResourcePkg <p>文件系统绑定的预付费带宽包（暂未支持）</p>
      */
     public String getBandwidthResourcePkg() {
         return this.BandwidthResourcePkg;
     }
 
     /**
-     * Set 文件系统绑定的预付费带宽包（暂未支持）
-     * @param BandwidthResourcePkg 文件系统绑定的预付费带宽包（暂未支持）
+     * Set <p>文件系统绑定的预付费带宽包（暂未支持）</p>
+     * @param BandwidthResourcePkg <p>文件系统绑定的预付费带宽包（暂未支持）</p>
      */
     public void setBandwidthResourcePkg(String BandwidthResourcePkg) {
         this.BandwidthResourcePkg = BandwidthResourcePkg;
     }
 
     /**
-     * Get 文件系统绑定权限组信息 
-     * @return PGroup 文件系统绑定权限组信息
+     * Get <p>文件系统绑定权限组信息</p> 
+     * @return PGroup <p>文件系统绑定权限组信息</p>
      */
     public PGroup getPGroup() {
         return this.PGroup;
     }
 
     /**
-     * Set 文件系统绑定权限组信息
-     * @param PGroup 文件系统绑定权限组信息
+     * Set <p>文件系统绑定权限组信息</p>
+     * @param PGroup <p>文件系统绑定权限组信息</p>
      */
     public void setPGroup(PGroup PGroup) {
         this.PGroup = PGroup;
     }
 
     /**
-     * Get 用户自定义名称 
-     * @return FsName 用户自定义名称
+     * Get <p>用户自定义名称</p> 
+     * @return FsName <p>用户自定义名称</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set 用户自定义名称
-     * @param FsName 用户自定义名称
+     * Set <p>用户自定义名称</p>
+     * @param FsName <p>用户自定义名称</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get 文件系统是否加密,true：代表加密，false：非加密 
-     * @return Encrypted 文件系统是否加密,true：代表加密，false：非加密
+     * Get <p>文件系统是否加密,true：代表加密，false：非加密</p> 
+     * @return Encrypted <p>文件系统是否加密,true：代表加密，false：非加密</p>
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set 文件系统是否加密,true：代表加密，false：非加密
-     * @param Encrypted 文件系统是否加密,true：代表加密，false：非加密
+     * Set <p>文件系统是否加密,true：代表加密，false：非加密</p>
+     * @param Encrypted <p>文件系统是否加密,true：代表加密，false：非加密</p>
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;
     }
 
     /**
-     * Get 加密所使用的密钥，可以为密钥的 ID 或者 ARN 
-     * @return KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
+     * Get <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p> 
+     * @return KmsKeyId <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set 加密所使用的密钥，可以为密钥的 ID 或者 ARN
-     * @param KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
+     * Set <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
+     * @param KmsKeyId <p>加密所使用的密钥，可以为密钥的 ID 或者 ARN</p>
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get 应用ID 
-     * @return AppId 应用ID
+     * Get <p>应用ID</p> 
+     * @return AppId <p>应用ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppId 应用ID
+     * Set <p>应用ID</p>
+     * @param AppId <p>应用ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s 
-     * @return BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
+     * Get <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p> 
+     * @return BandwidthLimit <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
      */
     public Float getBandwidthLimit() {
         return this.BandwidthLimit;
     }
 
     /**
-     * Set 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
-     * @param BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
+     * Set <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
+     * @param BandwidthLimit <p>文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s</p>
      */
     public void setBandwidthLimit(Float BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;
     }
 
     /**
-     * Get 文件系统关联的快照策略 
-     * @return AutoSnapshotPolicyId 文件系统关联的快照策略
+     * Get <p>文件系统关联的快照策略</p> 
+     * @return AutoSnapshotPolicyId <p>文件系统关联的快照策略</p>
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 文件系统关联的快照策略
-     * @param AutoSnapshotPolicyId 文件系统关联的快照策略
+     * Set <p>文件系统关联的快照策略</p>
+     * @param AutoSnapshotPolicyId <p>文件系统关联的快照策略</p>
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get 文件系统处理快照状态,snapping：快照中，normal：正常状态 
-     * @return SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
+     * Get <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p> 
+     * @return SnapStatus <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
      */
     public String getSnapStatus() {
         return this.SnapStatus;
     }
 
     /**
-     * Set 文件系统处理快照状态,snapping：快照中，normal：正常状态
-     * @param SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
+     * Set <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
+     * @param SnapStatus <p>文件系统处理快照状态,snapping：快照中，normal：正常状态</p>
      */
     public void setSnapStatus(String SnapStatus) {
         this.SnapStatus = SnapStatus;
     }
 
     /**
-     * Get 文件系统容量规格上限
-单位:GiB 
-     * @return Capacity 文件系统容量规格上限
-单位:GiB
+     * Get <p>文件系统容量规格上限<br>单位:GiB</p> 
+     * @return Capacity <p>文件系统容量规格上限<br>单位:GiB</p>
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set 文件系统容量规格上限
-单位:GiB
-     * @param Capacity 文件系统容量规格上限
-单位:GiB
+     * Set <p>文件系统容量规格上限<br>单位:GiB</p>
+     * @param Capacity <p>文件系统容量规格上限<br>单位:GiB</p>
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
     }
 
     /**
-     * Get 文件系统标签列表 
-     * @return Tags 文件系统标签列表
+     * Get <p>文件系统标签列表</p> 
+     * @return Tags <p>文件系统标签列表</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 文件系统标签列表
-     * @param Tags 文件系统标签列表
+     * Set <p>文件系统标签列表</p>
+     * @param Tags <p>文件系统标签列表</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用 
-     * @return TieringState 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
+     * Get <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p> 
+     * @return TieringState <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
      */
     public String getTieringState() {
         return this.TieringState;
     }
 
     /**
-     * Set 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
-     * @param TieringState 文件系统生命周期管理状态
-NotAvailable：不可用
-Available:可用
+     * Set <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
+     * @param TieringState <p>文件系统生命周期管理状态<br>NotAvailable：不可用<br>Available:可用</p>
      */
     public void setTieringState(String TieringState) {
         this.TieringState = TieringState;
     }
 
     /**
-     * Get 分层存储详情 
-     * @return TieringDetail 分层存储详情
+     * Get <p>分层存储详情</p> 
+     * @return TieringDetail <p>分层存储详情</p>
      */
     public TieringDetailInfo getTieringDetail() {
         return this.TieringDetail;
     }
 
     /**
-     * Set 分层存储详情
-     * @param TieringDetail 分层存储详情
+     * Set <p>分层存储详情</p>
+     * @param TieringDetail <p>分层存储详情</p>
      */
     public void setTieringDetail(TieringDetailInfo TieringDetail) {
         this.TieringDetail = TieringDetail;
     }
 
     /**
-     * Get 文件系统自动扩容策略 
-     * @return AutoScaleUpRule 文件系统自动扩容策略
+     * Get <p>文件系统自动扩容策略</p> 
+     * @return AutoScaleUpRule <p>文件系统自动扩容策略</p>
      */
     public AutoScaleUpRule getAutoScaleUpRule() {
         return this.AutoScaleUpRule;
     }
 
     /**
-     * Set 文件系统自动扩容策略
-     * @param AutoScaleUpRule 文件系统自动扩容策略
+     * Set <p>文件系统自动扩容策略</p>
+     * @param AutoScaleUpRule <p>文件系统自动扩容策略</p>
      */
     public void setAutoScaleUpRule(AutoScaleUpRule AutoScaleUpRule) {
         this.AutoScaleUpRule = AutoScaleUpRule;
     }
 
     /**
-     * Get 文件系统版本 
-     * @return Version 文件系统版本
+     * Get <p>文件系统版本</p> 
+     * @return Version <p>文件系统版本</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 文件系统版本
-     * @param Version 文件系统版本
+     * Set <p>文件系统版本</p>
+     * @param Version <p>文件系统版本</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 额外性能信息
+     * Get <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExstraPerformanceInfo 额外性能信息
+     * @return ExstraPerformanceInfo <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExstraPerformanceInfo [] getExstraPerformanceInfo() {
@@ -693,9 +654,9 @@ Available:可用
     }
 
     /**
-     * Set 额外性能信息
+     * Set <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExstraPerformanceInfo 额外性能信息
+     * @param ExstraPerformanceInfo <p>额外性能信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExstraPerformanceInfo(ExstraPerformanceInfo [] ExstraPerformanceInfo) {
@@ -703,23 +664,35 @@ Available:可用
     }
 
     /**
-     * Get basic：标准版元数据类型
-enhanced：增项版元数据类型 
-     * @return MetaType basic：标准版元数据类型
-enhanced：增项版元数据类型
+     * Get <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p> 
+     * @return MetaType <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
      */
     public String getMetaType() {
         return this.MetaType;
     }
 
     /**
-     * Set basic：标准版元数据类型
-enhanced：增项版元数据类型
-     * @param MetaType basic：标准版元数据类型
-enhanced：增项版元数据类型
+     * Set <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
+     * @param MetaType <p>basic：标准版元数据类型<br>enhanced：增项版元数据类型</p>
      */
     public void setMetaType(String MetaType) {
         this.MetaType = MetaType;
+    }
+
+    /**
+     * Get <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul> 
+     * @return Scenario <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+     */
+    public String getScenario() {
+        return this.Scenario;
+    }
+
+    /**
+     * Set <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+     * @param Scenario <p>业务场景。</p><p>枚举值：</p><ul><li>AgentSandbox： 创建 AgentCFS</li></ul>
+     */
+    public void setScenario(String Scenario) {
+        this.Scenario = Scenario;
     }
 
     public FileSystemInfo() {
@@ -820,6 +793,9 @@ enhanced：增项版元数据类型
         if (source.MetaType != null) {
             this.MetaType = new String(source.MetaType);
         }
+        if (source.Scenario != null) {
+            this.Scenario = new String(source.Scenario);
+        }
     }
 
 
@@ -855,6 +831,7 @@ enhanced：增项版元数据类型
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "Scenario", this.Scenario);
 
     }
 }

@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class TranscriptionParam extends AbstractModel {
 
     /**
-    * 转录服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+    * <p>转录服务在TRTC房间使用的<a href="https://cloud.tencent.com/document/product/647/46351#userid">UserId</a>，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+    * <p>转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
     */
     @SerializedName("UserSig")
     @Expose
     private String UserSig;
 
     /**
-    * 转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。
-使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。
+    * <p>转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。<br>使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。</p>
     */
     @SerializedName("SubscribeList")
     @Expose
     private TranscriptionUserInfoParams [] SubscribeList;
 
     /**
-    * 转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。
-同一个用户同时在黑白名单时，以黑名单为主。
+    * <p>转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。<br>同一个用户同时在黑白名单时，以黑名单为主。</p>
     */
     @SerializedName("UnSubscribeList")
     @Expose
     private TranscriptionUserInfoParams [] UnSubscribeList;
 
     /**
-    * 所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+    * <p>所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。</p>
     */
     @SerializedName("MaxIdleTime")
     @Expose
     private Long MaxIdleTime;
 
     /**
-    * 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
-不填默认为0，表示不开启自定义数据。
+    * <p>自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。<br>不填默认为0，表示不开启自定义数据。</p>
     */
     @SerializedName("SendCustomMode")
     @Expose
     private Long SendCustomMode;
 
     /**
-     * Get 转录服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。 
-     * @return UserId 转录服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+     * Get <p>转录服务在TRTC房间使用的<a href="https://cloud.tencent.com/document/product/647/46351#userid">UserId</a>，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p> 
+     * @return UserId <p>转录服务在TRTC房间使用的<a href="https://cloud.tencent.com/document/product/647/46351#userid">UserId</a>，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 转录服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
-     * @param UserId 转录服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+     * Set <p>转录服务在TRTC房间使用的<a href="https://cloud.tencent.com/document/product/647/46351#userid">UserId</a>，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
+     * @param UserId <p>转录服务在TRTC房间使用的<a href="https://cloud.tencent.com/document/product/647/46351#userid">UserId</a>，注意这个userId不能与其他TRTC或者转录服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。 
-     * @return UserSig 转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * Get <p>转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p> 
+     * @return UserSig <p>转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
      */
     public String getUserSig() {
         return this.UserSig;
     }
 
     /**
-     * Set 转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-     * @param UserSig 转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * Set <p>转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
+     * @param UserSig <p>转录服务加入TRTC房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算<a href="https://cloud.tencent.com/document/product/647/45910#UserSig">UserSig</a>的方案。</p>
      */
     public void setUserSig(String UserSig) {
         this.UserSig = UserSig;
     }
 
     /**
-     * Get 转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。
-使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。 
-     * @return SubscribeList 转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。
-使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。
+     * Get <p>转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。<br>使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。</p> 
+     * @return SubscribeList <p>转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。<br>使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。</p>
      */
     public TranscriptionUserInfoParams [] getSubscribeList() {
         return this.SubscribeList;
     }
 
     /**
-     * Set 转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。
-使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。
-     * @param SubscribeList 转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。
-使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。
+     * Set <p>转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。<br>使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。</p>
+     * @param SubscribeList <p>转录用户白名单，开始服务时，为空或不填表示转录所有主播音频，填具体值表示转录指定主播音频。<br>使用黑白名单时，同一个用户同时在黑白名单时，以黑名单为主。</p>
      */
     public void setSubscribeList(TranscriptionUserInfoParams [] SubscribeList) {
         this.SubscribeList = SubscribeList;
     }
 
     /**
-     * Get 转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。
-同一个用户同时在黑白名单时，以黑名单为主。 
-     * @return UnSubscribeList 转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。
-同一个用户同时在黑白名单时，以黑名单为主。
+     * Get <p>转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。<br>同一个用户同时在黑白名单时，以黑名单为主。</p> 
+     * @return UnSubscribeList <p>转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。<br>同一个用户同时在黑白名单时，以黑名单为主。</p>
      */
     public TranscriptionUserInfoParams [] getUnSubscribeList() {
         return this.UnSubscribeList;
     }
 
     /**
-     * Set 转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。
-同一个用户同时在黑白名单时，以黑名单为主。
-     * @param UnSubscribeList 转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。
-同一个用户同时在黑白名单时，以黑名单为主。
+     * Set <p>转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。<br>同一个用户同时在黑白名单时，以黑名单为主。</p>
+     * @param UnSubscribeList <p>转录用户黑名单，为空或不填表示无黑名单，填具体值表示不转录指定主播音频。<br>同一个用户同时在黑白名单时，以黑名单为主。</p>
      */
     public void setUnSubscribeList(TranscriptionUserInfoParams [] UnSubscribeList) {
         this.UnSubscribeList = UnSubscribeList;
     }
 
     /**
-     * Get 所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。 
-     * @return MaxIdleTime 所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+     * Get <p>所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。</p> 
+     * @return MaxIdleTime <p>所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。</p>
      */
     public Long getMaxIdleTime() {
         return this.MaxIdleTime;
     }
 
     /**
-     * Set 所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
-     * @param MaxIdleTime 所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
+     * Set <p>所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。</p>
+     * @param MaxIdleTime <p>所有参与转录的主播持续离开TRTC房间或切换成观众超过MaxIdleTime的时长，自动停止转录任务，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。</p>
      */
     public void setMaxIdleTime(Long MaxIdleTime) {
         this.MaxIdleTime = MaxIdleTime;
     }
 
     /**
-     * Get 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
-不填默认为0，表示不开启自定义数据。 
-     * @return SendCustomMode 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
-不填默认为0，表示不开启自定义数据。
+     * Get <p>自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。<br>不填默认为0，表示不开启自定义数据。</p> 
+     * @return SendCustomMode <p>自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。<br>不填默认为0，表示不开启自定义数据。</p>
      */
     public Long getSendCustomMode() {
         return this.SendCustomMode;
     }
 
     /**
-     * Set 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
-不填默认为0，表示不开启自定义数据。
-     * @param SendCustomMode 自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。
-不填默认为0，表示不开启自定义数据。
+     * Set <p>自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。<br>不填默认为0，表示不开启自定义数据。</p>
+     * @param SendCustomMode <p>自定义数据模式： 0表示不开启自定义数据，1表示开启自定义数据。<br>不填默认为0，表示不开启自定义数据。</p>
      */
     public void setSendCustomMode(Long SendCustomMode) {
         this.SendCustomMode = SendCustomMode;

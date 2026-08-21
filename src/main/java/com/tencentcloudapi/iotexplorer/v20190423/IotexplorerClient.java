@@ -770,6 +770,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
+     * @param req DeleteTWeSeeTasksByConditionRequest
+     * @return DeleteTWeSeeTasksByConditionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByCondition(DeleteTWeSeeTasksByConditionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTWeSeeTasksByCondition", DeleteTWeSeeTasksByConditionResponse.class);
+    }
+
+    /**
      *用于删除TWeTalk智能体。
      * @param req DeleteTWeTalkAIBotRequest
      * @return DeleteTWeTalkAIBotResponse

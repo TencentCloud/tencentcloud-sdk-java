@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class AndroidApp extends AbstractModel {
 
     /**
-    * 安卓应用 Id
+    * <p>安卓应用 Id</p>
     */
     @SerializedName("AndroidAppId")
     @Expose
     private String AndroidAppId;
 
     /**
-    * 安卓应用名称
+    * <p>安卓应用名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 安卓应用状态（上架、下架）
+    * <p>安卓应用状态（上架、下架）</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 安卓应用版本列表
+    * <p>安卓应用版本列表</p>
     */
     @SerializedName("AndroidAppVersionInfo")
     @Expose
     private AndroidAppVersionInfo [] AndroidAppVersionInfo;
 
     /**
-    * 安卓应用创建时间
+    * <p>安卓应用创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 用户 Id
+    * <p>用户 Id</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+    * <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
     */
     @SerializedName("AppMode")
     @Expose
     private String AppMode;
 
     /**
-    * 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+    * <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
     */
     @SerializedName("UpdateState")
     @Expose
     private String UpdateState;
 
     /**
-    * 安卓应用包名
+    * <p>安卓应用包名</p>
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-     * Get 安卓应用 Id 
-     * @return AndroidAppId 安卓应用 Id
+     * Get <p>安卓应用 Id</p> 
+     * @return AndroidAppId <p>安卓应用 Id</p>
      */
     public String getAndroidAppId() {
         return this.AndroidAppId;
     }
 
     /**
-     * Set 安卓应用 Id
-     * @param AndroidAppId 安卓应用 Id
+     * Set <p>安卓应用 Id</p>
+     * @param AndroidAppId <p>安卓应用 Id</p>
      */
     public void setAndroidAppId(String AndroidAppId) {
         this.AndroidAppId = AndroidAppId;
     }
 
     /**
-     * Get 安卓应用名称 
-     * @return Name 安卓应用名称
+     * Get <p>安卓应用名称</p> 
+     * @return Name <p>安卓应用名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 安卓应用名称
-     * @param Name 安卓应用名称
+     * Set <p>安卓应用名称</p>
+     * @param Name <p>安卓应用名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 安卓应用状态（上架、下架） 
-     * @return State 安卓应用状态（上架、下架）
+     * Get <p>安卓应用状态（上架、下架）</p> 
+     * @return State <p>安卓应用状态（上架、下架）</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 安卓应用状态（上架、下架）
-     * @param State 安卓应用状态（上架、下架）
+     * Set <p>安卓应用状态（上架、下架）</p>
+     * @param State <p>安卓应用状态（上架、下架）</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 安卓应用版本列表 
-     * @return AndroidAppVersionInfo 安卓应用版本列表
+     * Get <p>安卓应用版本列表</p> 
+     * @return AndroidAppVersionInfo <p>安卓应用版本列表</p>
      */
     public AndroidAppVersionInfo [] getAndroidAppVersionInfo() {
         return this.AndroidAppVersionInfo;
     }
 
     /**
-     * Set 安卓应用版本列表
-     * @param AndroidAppVersionInfo 安卓应用版本列表
+     * Set <p>安卓应用版本列表</p>
+     * @param AndroidAppVersionInfo <p>安卓应用版本列表</p>
      */
     public void setAndroidAppVersionInfo(AndroidAppVersionInfo [] AndroidAppVersionInfo) {
         this.AndroidAppVersionInfo = AndroidAppVersionInfo;
     }
 
     /**
-     * Get 安卓应用创建时间 
-     * @return CreateTime 安卓应用创建时间
+     * Get <p>安卓应用创建时间</p> 
+     * @return CreateTime <p>安卓应用创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 安卓应用创建时间
-     * @param CreateTime 安卓应用创建时间
+     * Set <p>安卓应用创建时间</p>
+     * @param CreateTime <p>安卓应用创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 用户 Id 
-     * @return UserId 用户 Id
+     * Get <p>用户 Id</p> 
+     * @return UserId <p>用户 Id</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户 Id
-     * @param UserId 用户 Id
+     * Set <p>用户 Id</p>
+     * @param UserId <p>用户 Id</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式） 
-     * @return AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     * Get <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p> 
+     * @return AppMode <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
      */
     public String getAppMode() {
         return this.AppMode;
     }
 
     /**
-     * Set 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
-     * @param AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     * Set <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
+     * @param AppMode <p>应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）</p>
      */
     public void setAppMode(String AppMode) {
         this.AppMode = AppMode;
     }
 
     /**
-     * Get 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态 
-     * @return UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+     * Get <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p> 
+     * @return UpdateState <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
      */
     public String getUpdateState() {
         return this.UpdateState;
     }
 
     /**
-     * Set 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
-     * @param UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态
+     * Set <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
+     * @param UpdateState <p>应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、PACKAGE_NAME_MISMATCH 包名不匹配、VERSION_ALREADY_EXISTS 版本已存在、APP_PARSE_FAIL app 解析失败、APP_EXISTS_SECURITY_RISK app 存在安全风险、NORMAL 默认状态</p>
      */
     public void setUpdateState(String UpdateState) {
         this.UpdateState = UpdateState;
     }
 
     /**
-     * Get 安卓应用包名 
-     * @return PackageName 安卓应用包名
+     * Get <p>安卓应用包名</p> 
+     * @return PackageName <p>安卓应用包名</p>
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set 安卓应用包名
-     * @param PackageName 安卓应用包名
+     * Set <p>安卓应用包名</p>
+     * @param PackageName <p>安卓应用包名</p>
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;

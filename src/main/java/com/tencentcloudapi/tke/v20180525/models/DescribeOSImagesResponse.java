@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeOSImagesResponse extends AbstractModel {
 
     /**
-    * 镜像信息列表
+    * <p>镜像信息列表</p>
     */
     @SerializedName("OSImageSeriesSet")
     @Expose
     private OSImage [] OSImageSeriesSet;
 
     /**
-    * 镜像数量
+    * <p>镜像数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeOSImagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 镜像信息列表 
-     * @return OSImageSeriesSet 镜像信息列表
+     * Get <p>镜像信息列表</p> 
+     * @return OSImageSeriesSet <p>镜像信息列表</p>
      */
     public OSImage [] getOSImageSeriesSet() {
         return this.OSImageSeriesSet;
     }
 
     /**
-     * Set 镜像信息列表
-     * @param OSImageSeriesSet 镜像信息列表
+     * Set <p>镜像信息列表</p>
+     * @param OSImageSeriesSet <p>镜像信息列表</p>
      */
     public void setOSImageSeriesSet(OSImage [] OSImageSeriesSet) {
         this.OSImageSeriesSet = OSImageSeriesSet;
     }
 
     /**
-     * Get 镜像数量 
-     * @return TotalCount 镜像数量
+     * Get <p>镜像数量</p> 
+     * @return TotalCount <p>镜像数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 镜像数量
-     * @param TotalCount 镜像数量
+     * Set <p>镜像数量</p>
+     * @param TotalCount <p>镜像数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

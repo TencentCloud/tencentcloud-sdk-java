@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UninstallAndroidInstancesAppRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("AndroidInstanceIds")
     @Expose
     private String [] AndroidInstanceIds;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("AndroidAppId")
     @Expose
     private String AndroidAppId;
 
     /**
-    * 包名
+    * <p>包名</p>
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-     * Get 实例ID 
-     * @return AndroidInstanceIds 实例ID
+     * Get <p>实例ID</p> 
+     * @return AndroidInstanceIds <p>实例ID</p>
      */
     public String [] getAndroidInstanceIds() {
         return this.AndroidInstanceIds;
     }
 
     /**
-     * Set 实例ID
-     * @param AndroidInstanceIds 实例ID
+     * Set <p>实例ID</p>
+     * @param AndroidInstanceIds <p>实例ID</p>
      */
     public void setAndroidInstanceIds(String [] AndroidInstanceIds) {
         this.AndroidInstanceIds = AndroidInstanceIds;
     }
 
     /**
-     * Get 应用ID 
-     * @return AndroidAppId 应用ID
+     * Get <p>应用ID</p> 
+     * @return AndroidAppId <p>应用ID</p>
      */
     public String getAndroidAppId() {
         return this.AndroidAppId;
     }
 
     /**
-     * Set 应用ID
-     * @param AndroidAppId 应用ID
+     * Set <p>应用ID</p>
+     * @param AndroidAppId <p>应用ID</p>
      */
     public void setAndroidAppId(String AndroidAppId) {
         this.AndroidAppId = AndroidAppId;
     }
 
     /**
-     * Get 包名 
-     * @return PackageName 包名
+     * Get <p>包名</p> 
+     * @return PackageName <p>包名</p>
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set 包名
-     * @param PackageName 包名
+     * Set <p>包名</p>
+     * @param PackageName <p>包名</p>
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;

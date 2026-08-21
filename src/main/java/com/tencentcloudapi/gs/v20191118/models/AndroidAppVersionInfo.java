@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class AndroidAppVersionInfo extends AbstractModel {
 
     /**
-    * 安卓应用版本
+    * <p>安卓应用版本</p>
     */
     @SerializedName("AndroidAppVersion")
     @Expose
     private String AndroidAppVersion;
 
     /**
-    * 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
+    * <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 安卓应用版本创建时间
+    * <p>安卓应用版本创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    * <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    * <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
     */
     @SerializedName("UninstallCommand")
     @Expose
     private String UninstallCommand;
 
     /**
-    * 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+    * <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
     */
     @SerializedName("CleanupMode")
     @Expose
     private String CleanupMode;
 
     /**
-    * 安卓应用版本名称（版本描述、备注）
+    * <p>安卓应用版本名称（版本描述、备注）</p>
     */
     @SerializedName("AndroidAppVersionName")
     @Expose
     private String AndroidAppVersionName;
 
     /**
-    * 安卓应用启动页
+    * <p>安卓应用启动页</p>
     */
     @SerializedName("Activity")
     @Expose
     private String Activity;
 
     /**
-    * 应用版本号（Version Name）
+    * <p>应用版本号（Version Name）</p>
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-    * 应用包 MD5
+    * <p>应用包 MD5</p>
     */
     @SerializedName("MD5")
     @Expose
     private String MD5;
 
     /**
-    * 应用包文件大小（字节）
+    * <p>应用包文件大小（字节）</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 安卓应用包名
+    * <p>安卓应用包名</p>
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-     * Get 安卓应用版本 
-     * @return AndroidAppVersion 安卓应用版本
+     * Get <p>安卓应用版本</p> 
+     * @return AndroidAppVersion <p>安卓应用版本</p>
      */
     public String getAndroidAppVersion() {
         return this.AndroidAppVersion;
     }
 
     /**
-     * Set 安卓应用版本
-     * @param AndroidAppVersion 安卓应用版本
+     * Set <p>安卓应用版本</p>
+     * @param AndroidAppVersion <p>安卓应用版本</p>
      */
     public void setAndroidAppVersion(String AndroidAppVersion) {
         this.AndroidAppVersion = AndroidAppVersion;
     }
 
     /**
-     * Get 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功 
-     * @return State 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
+     * Get <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p> 
+     * @return State <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
-     * @param State 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
+     * Set <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
+     * @param State <p>安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 安卓应用版本创建时间 
-     * @return CreateTime 安卓应用版本创建时间
+     * Get <p>安卓应用版本创建时间</p> 
+     * @return CreateTime <p>安卓应用版本创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 安卓应用版本创建时间
-     * @param CreateTime 安卓应用版本创建时间
+     * Set <p>安卓应用版本创建时间</p>
+     * @param CreateTime <p>安卓应用版本创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
-     * @return Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Get <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p> 
+     * @return Command <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
-     * @param Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Set <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+     * @param Command <p>shell 安装命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
-     * @return UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Get <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p> 
+     * @return UninstallCommand <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
      */
     public String getUninstallCommand() {
         return this.UninstallCommand;
     }
 
     /**
-     * Set shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
-     * @param UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Set <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
+     * @param UninstallCommand <p>shell 卸载命令（支持多条命令执行，通过 &amp;&amp; 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）</p>
      */
     public void setUninstallCommand(String UninstallCommand) {
         this.UninstallCommand = UninstallCommand;
     }
 
     /**
-     * Get 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。 
-     * @return CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     * Get <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p> 
+     * @return CleanupMode <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
      */
     public String getCleanupMode() {
         return this.CleanupMode;
     }
 
     /**
-     * Set 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
-     * @param CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     * Set <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
+     * @param CleanupMode <p>应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。</p>
      */
     public void setCleanupMode(String CleanupMode) {
         this.CleanupMode = CleanupMode;
     }
 
     /**
-     * Get 安卓应用版本名称（版本描述、备注） 
-     * @return AndroidAppVersionName 安卓应用版本名称（版本描述、备注）
+     * Get <p>安卓应用版本名称（版本描述、备注）</p> 
+     * @return AndroidAppVersionName <p>安卓应用版本名称（版本描述、备注）</p>
      */
     public String getAndroidAppVersionName() {
         return this.AndroidAppVersionName;
     }
 
     /**
-     * Set 安卓应用版本名称（版本描述、备注）
-     * @param AndroidAppVersionName 安卓应用版本名称（版本描述、备注）
+     * Set <p>安卓应用版本名称（版本描述、备注）</p>
+     * @param AndroidAppVersionName <p>安卓应用版本名称（版本描述、备注）</p>
      */
     public void setAndroidAppVersionName(String AndroidAppVersionName) {
         this.AndroidAppVersionName = AndroidAppVersionName;
     }
 
     /**
-     * Get 安卓应用启动页 
-     * @return Activity 安卓应用启动页
+     * Get <p>安卓应用启动页</p> 
+     * @return Activity <p>安卓应用启动页</p>
      */
     public String getActivity() {
         return this.Activity;
     }
 
     /**
-     * Set 安卓应用启动页
-     * @param Activity 安卓应用启动页
+     * Set <p>安卓应用启动页</p>
+     * @param Activity <p>安卓应用启动页</p>
      */
     public void setActivity(String Activity) {
         this.Activity = Activity;
     }
 
     /**
-     * Get 应用版本号（Version Name） 
-     * @return VersionName 应用版本号（Version Name）
+     * Get <p>应用版本号（Version Name）</p> 
+     * @return VersionName <p>应用版本号（Version Name）</p>
      */
     public String getVersionName() {
         return this.VersionName;
     }
 
     /**
-     * Set 应用版本号（Version Name）
-     * @param VersionName 应用版本号（Version Name）
+     * Set <p>应用版本号（Version Name）</p>
+     * @param VersionName <p>应用版本号（Version Name）</p>
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 应用包 MD5 
-     * @return MD5 应用包 MD5
+     * Get <p>应用包 MD5</p> 
+     * @return MD5 <p>应用包 MD5</p>
      */
     public String getMD5() {
         return this.MD5;
     }
 
     /**
-     * Set 应用包 MD5
-     * @param MD5 应用包 MD5
+     * Set <p>应用包 MD5</p>
+     * @param MD5 <p>应用包 MD5</p>
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;
     }
 
     /**
-     * Get 应用包文件大小（字节） 
-     * @return FileSize 应用包文件大小（字节）
+     * Get <p>应用包文件大小（字节）</p> 
+     * @return FileSize <p>应用包文件大小（字节）</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 应用包文件大小（字节）
-     * @param FileSize 应用包文件大小（字节）
+     * Set <p>应用包文件大小（字节）</p>
+     * @param FileSize <p>应用包文件大小（字节）</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 安卓应用包名 
-     * @return PackageName 安卓应用包名
+     * Get <p>安卓应用包名</p> 
+     * @return PackageName <p>安卓应用包名</p>
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set 安卓应用包名
-     * @param PackageName 安卓应用包名
+     * Set <p>安卓应用包名</p>
+     * @param PackageName <p>安卓应用包名</p>
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;

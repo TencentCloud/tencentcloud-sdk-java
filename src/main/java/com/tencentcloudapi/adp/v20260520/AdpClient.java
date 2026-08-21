@@ -105,6 +105,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
+     * @param req CreateMsgRecordCategoryRequest
+     * @return CreateMsgRecordCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMsgRecordCategoryResponse CreateMsgRecordCategory(CreateMsgRecordCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMsgRecordCategory", CreateMsgRecordCategoryResponse.class);
+    }
+
+    /**
      *获取插件详情
      * @param req CreatePluginRequest
      * @return CreatePluginResponse
@@ -234,6 +245,17 @@ public class AdpClient extends AbstractClient{
     public DeleteConversationResponse DeleteConversation(DeleteConversationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConversation", DeleteConversationResponse.class);
+    }
+
+    /**
+     *删除指定的消息记录分类
+     * @param req DeleteMsgRecordCategoryRequest
+     * @return DeleteMsgRecordCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMsgRecordCategoryResponse DeleteMsgRecordCategory(DeleteMsgRecordCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMsgRecordCategory", DeleteMsgRecordCategoryResponse.class);
     }
 
     /**
@@ -512,6 +534,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查询应用的消息记录分类树，返回分类及子分类、各分类下记录数量与操作权限
+     * @param req DescribeMsgRecordCategoryListRequest
+     * @return DescribeMsgRecordCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMsgRecordCategoryListResponse DescribeMsgRecordCategoryList(DescribeMsgRecordCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMsgRecordCategoryList", DescribeMsgRecordCategoryListResponse.class);
+    }
+
+    /**
+     *查询应用的对话消息记录列表，支持按渠道类型、反馈类型、意图、调用结果等条件过滤，并支持游标分页与按创建时间排序
+     * @param req DescribeMsgRecordListRequest
+     * @return DescribeMsgRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMsgRecordListResponse DescribeMsgRecordList(DescribeMsgRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMsgRecordList", DescribeMsgRecordListResponse.class);
+    }
+
+    /**
      *获取插件详情
      * @param req DescribePluginRequest
      * @return DescribePluginResponse
@@ -729,6 +773,17 @@ public class AdpClient extends AbstractClient{
     public ModifyConversationResponse ModifyConversation(ModifyConversationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyConversation", ModifyConversationResponse.class);
+    }
+
+    /**
+     *修改指定消息记录分类的名称
+     * @param req ModifyMsgRecordCategoryRequest
+     * @return ModifyMsgRecordCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMsgRecordCategoryResponse ModifyMsgRecordCategory(ModifyMsgRecordCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMsgRecordCategory", ModifyMsgRecordCategoryResponse.class);
     }
 
     /**

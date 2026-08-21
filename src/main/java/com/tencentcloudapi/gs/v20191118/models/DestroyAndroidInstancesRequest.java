@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DestroyAndroidInstancesRequest extends AbstractModel {
 
     /**
-    * 安卓实例 ID 列表
+    * <p>安卓实例 ID 列表</p>
     */
     @SerializedName("AndroidInstanceIds")
     @Expose
     private String [] AndroidInstanceIds;
 
     /**
-     * Get 安卓实例 ID 列表 
-     * @return AndroidInstanceIds 安卓实例 ID 列表
+     * Get <p>安卓实例 ID 列表</p> 
+     * @return AndroidInstanceIds <p>安卓实例 ID 列表</p>
      */
     public String [] getAndroidInstanceIds() {
         return this.AndroidInstanceIds;
     }
 
     /**
-     * Set 安卓实例 ID 列表
-     * @param AndroidInstanceIds 安卓实例 ID 列表
+     * Set <p>安卓实例 ID 列表</p>
+     * @param AndroidInstanceIds <p>安卓实例 ID 列表</p>
      */
     public void setAndroidInstanceIds(String [] AndroidInstanceIds) {
         this.AndroidInstanceIds = AndroidInstanceIds;

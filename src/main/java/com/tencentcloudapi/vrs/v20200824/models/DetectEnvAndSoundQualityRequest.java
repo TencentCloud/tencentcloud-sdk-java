@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class DetectEnvAndSoundQualityRequest extends AbstractModel {
 
     /**
-    * 标注文本信息 ID
+    * <p>标注文本信息 ID</p>
     */
     @SerializedName("TextId")
     @Expose
     private String TextId;
 
     /**
-    * 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
+    * <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
     */
     @SerializedName("AudioData")
     @Expose
     private String AudioData;
 
     /**
-    * 1:环境检测 2:音质检测
+    * <p>1:环境检测 2:音质检测</p>
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * 音频格式，音频类型(wav,mp3,aac,m4a)
+    * <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
+    * <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 复刻类型。5 - 一句话声音复刻。
+    * <p>复刻类型。5 - 一句话声音复刻。</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-     * Get 标注文本信息 ID 
-     * @return TextId 标注文本信息 ID
+     * Get <p>标注文本信息 ID</p> 
+     * @return TextId <p>标注文本信息 ID</p>
      */
     public String getTextId() {
         return this.TextId;
     }
 
     /**
-     * Set 标注文本信息 ID
-     * @param TextId 标注文本信息 ID
+     * Set <p>标注文本信息 ID</p>
+     * @param TextId <p>标注文本信息 ID</p>
      */
     public void setTextId(String TextId) {
         this.TextId = TextId;
     }
 
     /**
-     * Get 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。 
-     * @return AudioData 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
+     * Get <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p> 
+     * @return AudioData <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
      */
     public String getAudioData() {
         return this.AudioData;
     }
 
     /**
-     * Set 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
-     * @param AudioData 语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open("input.aac", mode="rb").read()), encoding='utf-8') )。
+     * Set <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
+     * @param AudioData <p>语音数据 要使用base64编码(采用python语言时注意读取文件时需要转成base64字符串编码，例如：str(base64.b64encode(open(&quot;input.aac&quot;, mode=&quot;rb&quot;).read()), encoding=&#39;utf-8&#39;) )。</p>
      */
     public void setAudioData(String AudioData) {
         this.AudioData = AudioData;
     }
 
     /**
-     * Get 1:环境检测 2:音质检测 
-     * @return TypeId 1:环境检测 2:音质检测
+     * Get <p>1:环境检测 2:音质检测</p> 
+     * @return TypeId <p>1:环境检测 2:音质检测</p>
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set 1:环境检测 2:音质检测
-     * @param TypeId 1:环境检测 2:音质检测
+     * Set <p>1:环境检测 2:音质检测</p>
+     * @param TypeId <p>1:环境检测 2:音质检测</p>
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get 音频格式，音频类型(wav,mp3,aac,m4a) 
-     * @return Codec 音频格式，音频类型(wav,mp3,aac,m4a)
+     * Get <p>音频格式，音频类型(wav,mp3,aac,m4a)</p> 
+     * @return Codec <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 音频格式，音频类型(wav,mp3,aac,m4a)
-     * @param Codec 音频格式，音频类型(wav,mp3,aac,m4a)
+     * Set <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+     * @param Codec <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。 
-     * @return SampleRate 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
+     * Get <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p> 
+     * @return SampleRate <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
-     * @param SampleRate 音频采样率。
-16000：16k（默认）；
-24000：24k（仅一句话声音复刻支持）；
-48000：48k（仅一句话声音复刻支持）。
+     * Set <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
+     * @param SampleRate <p>音频采样率。<br>16000：16k（默认）；<br>24000：24k（仅一句话声音复刻支持）；<br>48000：48k（仅一句话声音复刻支持）。</p>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 复刻类型。5 - 一句话声音复刻。 
-     * @return TaskType 复刻类型。5 - 一句话声音复刻。
+     * Get <p>复刻类型。5 - 一句话声音复刻。</p> 
+     * @return TaskType <p>复刻类型。5 - 一句话声音复刻。</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 复刻类型。5 - 一句话声音复刻。
-     * @param TaskType 复刻类型。5 - 一句话声音复刻。
+     * Set <p>复刻类型。5 - 一句话声音复刻。</p>
+     * @param TaskType <p>复刻类型。5 - 一句话声音复刻。</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

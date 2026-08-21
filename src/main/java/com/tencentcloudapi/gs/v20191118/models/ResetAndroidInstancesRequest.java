@@ -24,94 +24,69 @@ import java.util.HashMap;
 public class ResetAndroidInstancesRequest extends AbstractModel {
 
     /**
-    * 实例ID列表
+    * <p>实例ID列表</p>
     */
     @SerializedName("AndroidInstanceIds")
     @Expose
     private String [] AndroidInstanceIds;
 
     /**
-    * 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
+    * <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
     */
     @SerializedName("AndroidInstanceImageId")
     @Expose
     private String AndroidInstanceImageId;
 
     /**
-    * 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
+    * <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-     * Get 实例ID列表 
-     * @return AndroidInstanceIds 实例ID列表
+     * Get <p>实例ID列表</p> 
+     * @return AndroidInstanceIds <p>实例ID列表</p>
      */
     public String [] getAndroidInstanceIds() {
         return this.AndroidInstanceIds;
     }
 
     /**
-     * Set 实例ID列表
-     * @param AndroidInstanceIds 实例ID列表
+     * Set <p>实例ID列表</p>
+     * @param AndroidInstanceIds <p>实例ID列表</p>
      */
     public void setAndroidInstanceIds(String [] AndroidInstanceIds) {
         this.AndroidInstanceIds = AndroidInstanceIds;
     }
 
     /**
-     * Get 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。 
-     * @return AndroidInstanceImageId 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
+     * Get <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p> 
+     * @return AndroidInstanceImageId <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
      */
     public String getAndroidInstanceImageId() {
         return this.AndroidInstanceImageId;
     }
 
     /**
-     * Set 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
-     * @param AndroidInstanceImageId 指定有效的镜像 ID。
-默认取值：默认使用当前镜像。
+     * Set <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
+     * @param AndroidInstanceImageId <p>指定有效的镜像 ID。<br>默认取值：默认使用当前镜像。</p>
      */
     public void setAndroidInstanceImageId(String AndroidInstanceImageId) {
         this.AndroidInstanceImageId = AndroidInstanceImageId;
     }
 
     /**
-     * Get 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据 
-     * @return Mode 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
+     * Get <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p> 
+     * @return Mode <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
-     * @param Mode 重置模式。在 AndroidInstanceImageId 不为空时才生效。
-
-CleanData：默认选项，清理系统属性和用户数据
-KeepSystemProperties：只保留系统属性
-KeepData: 保留系统属性和用户数据
+     * Set <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
+     * @param Mode <p>重置模式。在 AndroidInstanceImageId 不为空时才生效。</p><p>CleanData：默认选项，清理系统属性和用户数据<br>KeepSystemProperties：只保留系统属性<br>KeepData: 保留系统属性和用户数据</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAndroidInstanceImagesRequest extends AbstractModel {
 
     /**
-    * 镜像 ID 列表
+    * <p>镜像 ID 列表</p>
     */
     @SerializedName("AndroidInstanceImageIds")
     @Expose
     private String [] AndroidInstanceImageIds;
 
     /**
-     * Get 镜像 ID 列表 
-     * @return AndroidInstanceImageIds 镜像 ID 列表
+     * Get <p>镜像 ID 列表</p> 
+     * @return AndroidInstanceImageIds <p>镜像 ID 列表</p>
      */
     public String [] getAndroidInstanceImageIds() {
         return this.AndroidInstanceImageIds;
     }
 
     /**
-     * Set 镜像 ID 列表
-     * @param AndroidInstanceImageIds 镜像 ID 列表
+     * Set <p>镜像 ID 列表</p>
+     * @param AndroidInstanceImageIds <p>镜像 ID 列表</p>
      */
     public void setAndroidInstanceImageIds(String [] AndroidInstanceImageIds) {
         this.AndroidInstanceImageIds = AndroidInstanceImageIds;

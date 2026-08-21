@@ -38,6 +38,13 @@ public class UnderstandImageConfig extends AbstractModel {
     private String Prompt;
 
     /**
+    * <p>图片理解模型参数，类型为 JSON 字符串。</p>
+    */
+    @SerializedName("Parameters")
+    @Expose
+    private String Parameters;
+
+    /**
      * Get <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul> 
      * @return Model <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
      */
@@ -69,6 +76,22 @@ public class UnderstandImageConfig extends AbstractModel {
         this.Prompt = Prompt;
     }
 
+    /**
+     * Get <p>图片理解模型参数，类型为 JSON 字符串。</p> 
+     * @return Parameters <p>图片理解模型参数，类型为 JSON 字符串。</p>
+     */
+    public String getParameters() {
+        return this.Parameters;
+    }
+
+    /**
+     * Set <p>图片理解模型参数，类型为 JSON 字符串。</p>
+     * @param Parameters <p>图片理解模型参数，类型为 JSON 字符串。</p>
+     */
+    public void setParameters(String Parameters) {
+        this.Parameters = Parameters;
+    }
+
     public UnderstandImageConfig() {
     }
 
@@ -83,6 +106,9 @@ public class UnderstandImageConfig extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UnderstandImageConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "Parameters", this.Parameters);
 
     }
 }

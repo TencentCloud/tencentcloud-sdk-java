@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeAndroidAppsRequest extends AbstractModel {
 
     /**
-    * 分页偏移
+    * <p>分页偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页数量
+    * <p>每页数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 应用ID数组
+    * <p>应用ID数组</p>
     */
     @SerializedName("AndroidAppIds")
     @Expose
     private String [] AndroidAppIds;
 
     /**
-    * 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+    * <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 分页偏移 
-     * @return Offset 分页偏移
+     * Get <p>分页偏移</p> 
+     * @return Offset <p>分页偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移
-     * @param Offset 分页偏移
+     * Set <p>分页偏移</p>
+     * @param Offset <p>分页偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页数量 
-     * @return Limit 每页数量
+     * Get <p>每页数量</p> 
+     * @return Limit <p>每页数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量
-     * @param Limit 每页数量
+     * Set <p>每页数量</p>
+     * @param Limit <p>每页数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 应用ID数组 
-     * @return AndroidAppIds 应用ID数组
+     * Get <p>应用ID数组</p> 
+     * @return AndroidAppIds <p>应用ID数组</p>
      */
     public String [] getAndroidAppIds() {
         return this.AndroidAppIds;
     }
 
     /**
-     * Set 应用ID数组
-     * @param AndroidAppIds 应用ID数组
+     * Set <p>应用ID数组</p>
+     * @param AndroidAppIds <p>应用ID数组</p>
      */
     public void setAndroidAppIds(String [] AndroidAppIds) {
         this.AndroidAppIds = AndroidAppIds;
     }
 
     /**
-     * Get 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。 
-     * @return Filters 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+     * Get <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p> 
+     * @return Filters <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
-     * @param Filters 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+     * Set <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
+     * @param Filters <p>过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

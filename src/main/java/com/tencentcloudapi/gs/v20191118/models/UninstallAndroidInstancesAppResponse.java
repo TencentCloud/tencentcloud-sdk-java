@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UninstallAndroidInstancesAppResponse extends AbstractModel {
 
     /**
-    * 任务集合
+    * <p>任务集合</p>
     */
     @SerializedName("TaskSet")
     @Expose
@@ -38,16 +38,16 @@ public class UninstallAndroidInstancesAppResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务集合 
-     * @return TaskSet 任务集合
+     * Get <p>任务集合</p> 
+     * @return TaskSet <p>任务集合</p>
      */
     public AndroidInstanceTask [] getTaskSet() {
         return this.TaskSet;
     }
 
     /**
-     * Set 任务集合
-     * @param TaskSet 任务集合
+     * Set <p>任务集合</p>
+     * @param TaskSet <p>任务集合</p>
      */
     public void setTaskSet(AndroidInstanceTask [] TaskSet) {
         this.TaskSet = TaskSet;

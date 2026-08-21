@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGrafanaInstanceResponse extends AbstractModel {
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateGrafanaInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例名 
-     * @return InstanceId 实例名
+     * Get <p>实例名</p> 
+     * @return InstanceId <p>实例名</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceId 实例名
+     * Set <p>实例名</p>
+     * @param InstanceId <p>实例名</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

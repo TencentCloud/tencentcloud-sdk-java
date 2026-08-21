@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
 
     /**
-    * 详情列表
+    * <p>详情列表</p>
     */
     @SerializedName("DetailSet")
     @Expose
     private DistributionBillDetail [] DetailSet;
 
     /**
-    * 总记录数，24小时缓存一次，可能比实际总记录数少
+    * <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -39,7 +39,7 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+    * <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
     */
     @SerializedName("Context")
     @Expose
@@ -53,25 +53,25 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详情列表 
-     * @return DetailSet 详情列表
+     * Get <p>详情列表</p> 
+     * @return DetailSet <p>详情列表</p>
      */
     public DistributionBillDetail [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set 详情列表
-     * @param DetailSet 详情列表
+     * Set <p>详情列表</p>
+     * @param DetailSet <p>详情列表</p>
      */
     public void setDetailSet(DistributionBillDetail [] DetailSet) {
         this.DetailSet = DetailSet;
     }
 
     /**
-     * Get 总记录数，24小时缓存一次，可能比实际总记录数少
+     * Get <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总记录数，24小时缓存一次，可能比实际总记录数少
+     * @return Total <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -79,9 +79,9 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
     }
 
     /**
-     * Set 总记录数，24小时缓存一次，可能比实际总记录数少
+     * Set <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总记录数，24小时缓存一次，可能比实际总记录数少
+     * @param Total <p>总记录数，24小时缓存一次，可能比实际总记录数少</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -89,16 +89,16 @@ public class DescribeBillDetailForOrganizationResponse extends AbstractModel {
     }
 
     /**
-     * Get 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度 
-     * @return Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+     * Get <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p> 
+     * @return Context <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
-     * @param Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+     * Set <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
+     * @param Context <p>本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度</p>
      */
     public void setContext(String Context) {
         this.Context = Context;

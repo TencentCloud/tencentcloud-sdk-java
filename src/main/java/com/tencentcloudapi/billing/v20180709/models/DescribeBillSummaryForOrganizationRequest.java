@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeBillSummaryForOrganizationRequest extends AbstractModel {
 
     /**
-    * 账单月份，格式为2023-04
+    * <p>账单月份，格式为2023-04</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 账单维度类型，枚举值如下：business、project、region、payMode、tag
+    * <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * 标签键，GroupType=tag获取标签维度账单时传
+    * <p>标签键，GroupType=tag获取标签维度账单时传</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String [] TagKey;
 
     /**
-     * Get 账单月份，格式为2023-04 
-     * @return Month 账单月份，格式为2023-04
+     * Get <p>账单月份，格式为2023-04</p> 
+     * @return Month <p>账单月份，格式为2023-04</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 账单月份，格式为2023-04
-     * @param Month 账单月份，格式为2023-04
+     * Set <p>账单月份，格式为2023-04</p>
+     * @param Month <p>账单月份，格式为2023-04</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 账单维度类型，枚举值如下：business、project、region、payMode、tag 
-     * @return GroupType 账单维度类型，枚举值如下：business、project、region、payMode、tag
+     * Get <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p> 
+     * @return GroupType <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 账单维度类型，枚举值如下：business、project、region、payMode、tag
-     * @param GroupType 账单维度类型，枚举值如下：business、project、region、payMode、tag
+     * Set <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
+     * @param GroupType <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get 标签键，GroupType=tag获取标签维度账单时传 
-     * @return TagKey 标签键，GroupType=tag获取标签维度账单时传
+     * Get <p>标签键，GroupType=tag获取标签维度账单时传</p> 
+     * @return TagKey <p>标签键，GroupType=tag获取标签维度账单时传</p>
      */
     public String [] getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签键，GroupType=tag获取标签维度账单时传
-     * @param TagKey 标签键，GroupType=tag获取标签维度账单时传
+     * Set <p>标签键，GroupType=tag获取标签维度账单时传</p>
+     * @param TagKey <p>标签键，GroupType=tag获取标签维度账单时传</p>
      */
     public void setTagKey(String [] TagKey) {
         this.TagKey = TagKey;

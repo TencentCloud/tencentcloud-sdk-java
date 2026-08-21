@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAndroidAppsResponse extends AbstractModel {
 
     /**
-    * 安卓应用列表
+    * <p>安卓应用列表</p>
     */
     @SerializedName("Apps")
     @Expose
     private AndroidApp [] Apps;
 
     /**
-    * 安卓应用列表长度
+    * <p>安卓应用列表长度</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAndroidAppsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安卓应用列表 
-     * @return Apps 安卓应用列表
+     * Get <p>安卓应用列表</p> 
+     * @return Apps <p>安卓应用列表</p>
      */
     public AndroidApp [] getApps() {
         return this.Apps;
     }
 
     /**
-     * Set 安卓应用列表
-     * @param Apps 安卓应用列表
+     * Set <p>安卓应用列表</p>
+     * @param Apps <p>安卓应用列表</p>
      */
     public void setApps(AndroidApp [] Apps) {
         this.Apps = Apps;
     }
 
     /**
-     * Get 安卓应用列表长度 
-     * @return TotalCount 安卓应用列表长度
+     * Get <p>安卓应用列表长度</p> 
+     * @return TotalCount <p>安卓应用列表长度</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 安卓应用列表长度
-     * @param TotalCount 安卓应用列表长度
+     * Set <p>安卓应用列表长度</p>
+     * @param TotalCount <p>安卓应用列表长度</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

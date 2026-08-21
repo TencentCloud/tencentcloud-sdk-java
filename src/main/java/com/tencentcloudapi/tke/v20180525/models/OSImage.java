@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class OSImage extends AbstractModel {
 
     /**
-    * os聚合名称
+    * <p>os聚合名称</p>
     */
     @SerializedName("SeriesName")
     @Expose
     private String SeriesName;
 
     /**
-    * os别名
+    * <p>os别名</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * os名称
+    * <p>os名称</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
+    * <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
     */
     @SerializedName("OsCustomizeType")
     @Expose
     private String OsCustomizeType;
 
     /**
-    * os是否下线(online表示在线,offline表示下线)
+    * <p>os是否下线(online表示在线,offline表示下线)</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 镜像id
+    * <p>镜像id</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-     * Get os聚合名称 
-     * @return SeriesName os聚合名称
+    * <p>架构</p>
+    */
+    @SerializedName("Arch")
+    @Expose
+    private String Arch;
+
+    /**
+     * Get <p>os聚合名称</p> 
+     * @return SeriesName <p>os聚合名称</p>
      */
     public String getSeriesName() {
         return this.SeriesName;
     }
 
     /**
-     * Set os聚合名称
-     * @param SeriesName os聚合名称
+     * Set <p>os聚合名称</p>
+     * @param SeriesName <p>os聚合名称</p>
      */
     public void setSeriesName(String SeriesName) {
         this.SeriesName = SeriesName;
     }
 
     /**
-     * Get os别名 
-     * @return Alias os别名
+     * Get <p>os别名</p> 
+     * @return Alias <p>os别名</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set os别名
-     * @param Alias os别名
+     * Set <p>os别名</p>
+     * @param Alias <p>os别名</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get os名称 
-     * @return OsName os名称
+     * Get <p>os名称</p> 
+     * @return OsName <p>os名称</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set os名称
-     * @param OsName os名称
+     * Set <p>os名称</p>
+     * @param OsName <p>os名称</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL) 
-     * @return OsCustomizeType 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
+     * Get <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p> 
+     * @return OsCustomizeType <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
     }
 
     /**
-     * Set 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
-     * @param OsCustomizeType 操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)
+     * Set <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
+     * @param OsCustomizeType <p>操作系统类型(分为定制和非定制，取值分别为:DOCKER_CUSTOMIZE、GENERAL)</p>
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
     }
 
     /**
-     * Get os是否下线(online表示在线,offline表示下线) 
-     * @return Status os是否下线(online表示在线,offline表示下线)
+     * Get <p>os是否下线(online表示在线,offline表示下线)</p> 
+     * @return Status <p>os是否下线(online表示在线,offline表示下线)</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set os是否下线(online表示在线,offline表示下线)
-     * @param Status os是否下线(online表示在线,offline表示下线)
+     * Set <p>os是否下线(online表示在线,offline表示下线)</p>
+     * @param Status <p>os是否下线(online表示在线,offline表示下线)</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 镜像id 
-     * @return ImageId 镜像id
+     * Get <p>镜像id</p> 
+     * @return ImageId <p>镜像id</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像id
-     * @param ImageId 镜像id
+     * Set <p>镜像id</p>
+     * @param ImageId <p>镜像id</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
+    }
+
+    /**
+     * Get <p>架构</p> 
+     * @return Arch <p>架构</p>
+     */
+    public String getArch() {
+        return this.Arch;
+    }
+
+    /**
+     * Set <p>架构</p>
+     * @param Arch <p>架构</p>
+     */
+    public void setArch(String Arch) {
+        this.Arch = Arch;
     }
 
     public OSImage() {
@@ -187,6 +210,9 @@ public class OSImage extends AbstractModel {
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
+        if (source.Arch != null) {
+            this.Arch = new String(source.Arch);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class OSImage extends AbstractModel {
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "Arch", this.Arch);
 
     }
 }

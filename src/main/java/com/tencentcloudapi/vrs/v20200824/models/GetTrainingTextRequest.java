@@ -24,99 +24,69 @@ import java.util.HashMap;
 public class GetTrainingTextRequest extends AbstractModel {
 
     /**
-    * 复刻类型。
-5 - 一句话声音复刻。
+    * <p>复刻类型。<br>5 - 一句话声音复刻。</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
-0 - 通用场景（默认）； 
-1 - 聊天场景； 
-2 - 阅读场景； 
-3 - 资讯播报场景。
+    * <p>音色场景。（仅支持一句话声音复刻，其余复刻类型不生效）<br>0 - 通用场景（默认）；<br>1 - 聊天场景；<br>2 - 阅读场景；<br>3 - 资讯播报场景。</p>
     */
     @SerializedName("Domain")
     @Expose
     private Long Domain;
 
     /**
-    * 文本语种。（仅支持一句话声音复刻，其余复刻类型不生效） 
-1 - 中文（默认）。
+    * <p>文本语种。（仅支持一句话声音复刻，其余复刻类型不生效）<br>1 - 中文（默认）。</p>
     */
     @SerializedName("TextLanguage")
     @Expose
     private Long TextLanguage;
 
     /**
-     * Get 复刻类型。
-5 - 一句话声音复刻。 
-     * @return TaskType 复刻类型。
-5 - 一句话声音复刻。
+     * Get <p>复刻类型。<br>5 - 一句话声音复刻。</p> 
+     * @return TaskType <p>复刻类型。<br>5 - 一句话声音复刻。</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 复刻类型。
-5 - 一句话声音复刻。
-     * @param TaskType 复刻类型。
-5 - 一句话声音复刻。
+     * Set <p>复刻类型。<br>5 - 一句话声音复刻。</p>
+     * @param TaskType <p>复刻类型。<br>5 - 一句话声音复刻。</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
-0 - 通用场景（默认）； 
-1 - 聊天场景； 
-2 - 阅读场景； 
-3 - 资讯播报场景。 
-     * @return Domain 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
-0 - 通用场景（默认）； 
-1 - 聊天场景； 
-2 - 阅读场景； 
-3 - 资讯播报场景。
+     * Get <p>音色场景。（仅支持一句话声音复刻，其余复刻类型不生效）<br>0 - 通用场景（默认）；<br>1 - 聊天场景；<br>2 - 阅读场景；<br>3 - 资讯播报场景。</p> 
+     * @return Domain <p>音色场景。（仅支持一句话声音复刻，其余复刻类型不生效）<br>0 - 通用场景（默认）；<br>1 - 聊天场景；<br>2 - 阅读场景；<br>3 - 资讯播报场景。</p>
      */
     public Long getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
-0 - 通用场景（默认）； 
-1 - 聊天场景； 
-2 - 阅读场景； 
-3 - 资讯播报场景。
-     * @param Domain 音色场景。（仅支持一句话声音复刻，其余复刻类型不生效） 
-0 - 通用场景（默认）； 
-1 - 聊天场景； 
-2 - 阅读场景； 
-3 - 资讯播报场景。
+     * Set <p>音色场景。（仅支持一句话声音复刻，其余复刻类型不生效）<br>0 - 通用场景（默认）；<br>1 - 聊天场景；<br>2 - 阅读场景；<br>3 - 资讯播报场景。</p>
+     * @param Domain <p>音色场景。（仅支持一句话声音复刻，其余复刻类型不生效）<br>0 - 通用场景（默认）；<br>1 - 聊天场景；<br>2 - 阅读场景；<br>3 - 资讯播报场景。</p>
      */
     public void setDomain(Long Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 文本语种。（仅支持一句话声音复刻，其余复刻类型不生效） 
-1 - 中文（默认）。 
-     * @return TextLanguage 文本语种。（仅支持一句话声音复刻，其余复刻类型不生效） 
-1 - 中文（默认）。
+     * Get <p>文本语种。（仅支持一句话声音复刻，其余复刻类型不生效）<br>1 - 中文（默认）。</p> 
+     * @return TextLanguage <p>文本语种。（仅支持一句话声音复刻，其余复刻类型不生效）<br>1 - 中文（默认）。</p>
      */
     public Long getTextLanguage() {
         return this.TextLanguage;
     }
 
     /**
-     * Set 文本语种。（仅支持一句话声音复刻，其余复刻类型不生效） 
-1 - 中文（默认）。
-     * @param TextLanguage 文本语种。（仅支持一句话声音复刻，其余复刻类型不生效） 
-1 - 中文（默认）。
+     * Set <p>文本语种。（仅支持一句话声音复刻，其余复刻类型不生效）<br>1 - 中文（默认）。</p>
+     * @param TextLanguage <p>文本语种。（仅支持一句话声音复刻，其余复刻类型不生效）<br>1 - 中文（默认）。</p>
      */
     public void setTextLanguage(Long TextLanguage) {
         this.TextLanguage = TextLanguage;

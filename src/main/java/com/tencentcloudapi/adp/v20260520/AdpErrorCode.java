@@ -7,7 +7,10 @@ public enum AdpErrorCode {
      INTERNALERROR("InternalError"),
      
      /* 参数错误。 */
-     INVALIDPARAMETER("InvalidParameter");
+     INVALIDPARAMETER("InvalidParameter"),
+     
+     /* 资源不存在。 */
+     RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;
     private AdpErrorCode (String value){

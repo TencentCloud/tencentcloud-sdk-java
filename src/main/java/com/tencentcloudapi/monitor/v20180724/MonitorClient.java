@@ -910,6 +910,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *列出 Grafana 版本
+     * @param req DescribeGrafanaVersionsRequest
+     * @return DescribeGrafanaVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaVersionsResponse DescribeGrafanaVersions(DescribeGrafanaVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGrafanaVersions", DescribeGrafanaVersionsResponse.class);
+    }
+
+    /**
      *列出 Grafana 白名单
      * @param req DescribeGrafanaWhiteListRequest
      * @return DescribeGrafanaWhiteListResponse

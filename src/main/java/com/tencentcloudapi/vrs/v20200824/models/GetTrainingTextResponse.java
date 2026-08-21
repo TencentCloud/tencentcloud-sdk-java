@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetTrainingTextResponse extends AbstractModel {
 
     /**
-    * 文本列表
+    * <p>文本列表</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class GetTrainingTextResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文本列表 
-     * @return Data 文本列表
+     * Get <p>文本列表</p> 
+     * @return Data <p>文本列表</p>
      */
     public TrainingTexts getData() {
         return this.Data;
     }
 
     /**
-     * Set 文本列表
-     * @param Data 文本列表
+     * Set <p>文本列表</p>
+     * @param Data <p>文本列表</p>
      */
     public void setData(TrainingTexts Data) {
         this.Data = Data;

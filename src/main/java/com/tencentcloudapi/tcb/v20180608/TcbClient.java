@@ -74,6 +74,19 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *绑定自定义CLS日志主题
+
+**绑定自定义 CLS 日志主题需调用腾讯云 CLS「[DescribeTopics](https://cloud.tencent.com/document/api/614/56454)」接口，按传入的 `Region` 拉取用户日志主题列表，仅筛选 `AssumerName` 为空的自有主题，并将其 `LogsetId`、`TopicId` 分别回填为绑定参数 `ClsLogsetId`、`ClsTopicId`（地域取请求参数 `Region` 作为 `ClsRegion`）。**
+     * @param req BindClsRequest
+     * @return BindClsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindClsResponse BindCls(BindClsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindCls", BindClsResponse.class);
+    }
+
+    /**
      *为云存储绑定外部云存储源。
 将一个用户自有的 COS桶 作为外部存储源绑定到指定云开发环境的云存储。绑定后，该环境的云存储文件操作将指向此桶，通过 BasePath 路径前缀实现与其他环境的数据隔离。
 每个环境仅允许绑定 1 个外部云存储源。

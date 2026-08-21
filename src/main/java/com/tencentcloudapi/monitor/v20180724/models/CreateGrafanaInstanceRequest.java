@@ -24,166 +24,184 @@ import java.util.HashMap;
 public class CreateGrafanaInstanceRequest extends AbstractModel {
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * VPC ID (私有网络 ID)
+    * <p>VPC ID (私有网络 ID)</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
-注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
+    * <p>子网 ID 数组(VPC ID下的子网 ID，只取第一个)。<br>注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 是否启用外网
+    * <p>是否启用外网</p>
     */
     @SerializedName("EnableInternet")
     @Expose
     private Boolean EnableInternet;
 
     /**
-    * Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
+    * <p>Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)</p>
     */
     @SerializedName("GrafanaInitPassword")
     @Expose
     private String GrafanaInitPassword;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("TagSpecification")
     @Expose
     private PrometheusTag [] TagSpecification;
 
     /**
-    * 是否自动选择代金券，默认为 false
+    * <p>自定义版本，可用版本从 DescribeGrafanaVersions 接口获取</p>
+    */
+    @SerializedName("DockerImage")
+    @Expose
+    private String DockerImage;
+
+    /**
+    * <p>是否自动选择代金券，默认为 false</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get <p>实例名</p> 
+     * @return InstanceName <p>实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set <p>实例名</p>
+     * @param InstanceName <p>实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get VPC ID (私有网络 ID) 
-     * @return VpcId VPC ID (私有网络 ID)
+     * Get <p>VPC ID (私有网络 ID)</p> 
+     * @return VpcId <p>VPC ID (私有网络 ID)</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID (私有网络 ID)
-     * @param VpcId VPC ID (私有网络 ID)
+     * Set <p>VPC ID (私有网络 ID)</p>
+     * @param VpcId <p>VPC ID (私有网络 ID)</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
-注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区） 
-     * @return SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
-注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
+     * Get <p>子网 ID 数组(VPC ID下的子网 ID，只取第一个)。<br>注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）</p> 
+     * @return SubnetIds <p>子网 ID 数组(VPC ID下的子网 ID，只取第一个)。<br>注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
-注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
-     * @param SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
-注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
+     * Set <p>子网 ID 数组(VPC ID下的子网 ID，只取第一个)。<br>注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）</p>
+     * @param SubnetIds <p>子网 ID 数组(VPC ID下的子网 ID，只取第一个)。<br>注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 是否启用外网 
-     * @return EnableInternet 是否启用外网
+     * Get <p>是否启用外网</p> 
+     * @return EnableInternet <p>是否启用外网</p>
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
     }
 
     /**
-     * Set 是否启用外网
-     * @param EnableInternet 是否启用外网
+     * Set <p>是否启用外网</p>
+     * @param EnableInternet <p>是否启用外网</p>
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;
     }
 
     /**
-     * Get Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知) 
-     * @return GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
+     * Get <p>Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)</p> 
+     * @return GrafanaInitPassword <p>Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)</p>
      */
     public String getGrafanaInitPassword() {
         return this.GrafanaInitPassword;
     }
 
     /**
-     * Set Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
-     * @param GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
+     * Set <p>Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)</p>
+     * @param GrafanaInitPassword <p>Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)</p>
      */
     public void setGrafanaInitPassword(String GrafanaInitPassword) {
         this.GrafanaInitPassword = GrafanaInitPassword;
     }
 
     /**
-     * Get 标签 
-     * @return TagSpecification 标签
+     * Get <p>标签</p> 
+     * @return TagSpecification <p>标签</p>
      */
     public PrometheusTag [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 标签
-     * @param TagSpecification 标签
+     * Set <p>标签</p>
+     * @param TagSpecification <p>标签</p>
      */
     public void setTagSpecification(PrometheusTag [] TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get 是否自动选择代金券，默认为 false 
-     * @return AutoVoucher 是否自动选择代金券，默认为 false
+     * Get <p>自定义版本，可用版本从 DescribeGrafanaVersions 接口获取</p> 
+     * @return DockerImage <p>自定义版本，可用版本从 DescribeGrafanaVersions 接口获取</p>
+     */
+    public String getDockerImage() {
+        return this.DockerImage;
+    }
+
+    /**
+     * Set <p>自定义版本，可用版本从 DescribeGrafanaVersions 接口获取</p>
+     * @param DockerImage <p>自定义版本，可用版本从 DescribeGrafanaVersions 接口获取</p>
+     */
+    public void setDockerImage(String DockerImage) {
+        this.DockerImage = DockerImage;
+    }
+
+    /**
+     * Get <p>是否自动选择代金券，默认为 false</p> 
+     * @return AutoVoucher <p>是否自动选择代金券，默认为 false</p>
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券，默认为 false
-     * @param AutoVoucher 是否自动选择代金券，默认为 false
+     * Set <p>是否自动选择代金券，默认为 false</p>
+     * @param AutoVoucher <p>是否自动选择代金券，默认为 false</p>
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -221,6 +239,9 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
                 this.TagSpecification[i] = new PrometheusTag(source.TagSpecification[i]);
             }
         }
+        if (source.DockerImage != null) {
+            this.DockerImage = new String(source.DockerImage);
+        }
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Boolean(source.AutoVoucher);
         }
@@ -237,6 +258,7 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
         this.setParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "DockerImage", this.DockerImage);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
 
     }

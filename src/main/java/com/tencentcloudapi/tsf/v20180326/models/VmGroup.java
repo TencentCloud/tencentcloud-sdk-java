@@ -176,7 +176,7 @@ public class VmGroup extends AbstractModel {
     private String ApplicationType;
 
     /**
-    * <p>部署组资源类型</p>
+    * <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
     */
     @SerializedName("GroupResourceType")
     @Expose
@@ -356,6 +356,209 @@ public class VmGroup extends AbstractModel {
     @SerializedName("LivenessAutoRestart")
     @Expose
     private Boolean LivenessAutoRestart;
+
+    /**
+    * <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+    */
+    @SerializedName("MeshSidecarVersion")
+    @Expose
+    private String MeshSidecarVersion;
+
+    /**
+    * <p>业务日志配置 ID 列表</p>
+    */
+    @SerializedName("BusinessLogConfigIdList")
+    @Expose
+    private String BusinessLogConfigIdList;
+
+    /**
+    * <p>业务系统 ID</p>
+    */
+    @SerializedName("BusinessLogDeliveryConfigIdList")
+    @Expose
+    private String BusinessLogDeliveryConfigIdList;
+
+    /**
+    * <p>String型普通说明场景</p>
+    */
+    @SerializedName("BusinessSystemId")
+    @Expose
+    private String BusinessSystemId;
+
+    /**
+    * <p>业务系统名称</p>
+    */
+    @SerializedName("BusinessSystemName")
+    @Expose
+    private String BusinessSystemName;
+
+    /**
+    * <p>CLS 机器组 ID</p>
+    */
+    @SerializedName("ClsMachineGroupId")
+    @Expose
+    private String ClsMachineGroupId;
+
+    /**
+    * <p>是否开启服务治理</p>
+    */
+    @SerializedName("EnableGovernance")
+    @Expose
+    private Boolean EnableGovernance;
+
+    /**
+    * <p>是否开启可观测</p>
+    */
+    @SerializedName("EnableTelemetry")
+    @Expose
+    private Boolean EnableTelemetry;
+
+    /**
+    * <p>是否开启 OT Agent</p>
+    */
+    @SerializedName("EnableTelemetryAgent")
+    @Expose
+    private Boolean EnableTelemetryAgent;
+
+    /**
+    * <p>是否开启单元化</p>
+    */
+    @SerializedName("EnabledUnit")
+    @Expose
+    private Boolean EnabledUnit;
+
+    /**
+    * <p>独享注册中心/配置中心实例列表</p>
+    */
+    @SerializedName("ExclusiveInstances")
+    @Expose
+    private ExclusiveInstance [] ExclusiveInstances;
+
+    /**
+    * <p>框架接入类型</p>
+    */
+    @SerializedName("FrameworkType")
+    @Expose
+    private String FrameworkType;
+
+    /**
+    * <p>服务治理实例模式</p>
+    */
+    @SerializedName("GovernanceType")
+    @Expose
+    private String GovernanceType;
+
+    /**
+    * <p>部署组关联实例 ID 列表</p>
+    */
+    @SerializedName("InstanceIdList")
+    @Expose
+    private String [] InstanceIdList;
+
+    /**
+    * <p>部署组是否处于停止状态</p>
+    */
+    @SerializedName("IsStop")
+    @Expose
+    private String IsStop;
+
+    /**
+    * <p>K8s 命名空间名称</p>
+    */
+    @SerializedName("K8sNamespaceName")
+    @Expose
+    private String K8sNamespaceName;
+
+    /**
+    * <p>请求语言</p>
+    */
+    @SerializedName("Language")
+    @Expose
+    private String Language;
+
+    /**
+    * <p>微服务子类型</p>
+    */
+    @SerializedName("MicroserviceSubType")
+    @Expose
+    private String MicroserviceSubType;
+
+    /**
+    * <p>非侵入接入子类型</p>
+    */
+    @SerializedName("NonInvasiveType")
+    @Expose
+    private String NonInvasiveType;
+
+    /**
+    * <p>预停止脚本内容</p>
+    */
+    @SerializedName("PreStopScript")
+    @Expose
+    private String PreStopScript;
+
+    /**
+    * <p>实际使用的 K8s 命名空间名称</p>
+    */
+    @SerializedName("RealNamespaceName")
+    @Expose
+    private String RealNamespaceName;
+
+    /**
+    * <p>Mesh 服务端口与健康检查配置列表</p>
+    */
+    @SerializedName("ServiceConfigList")
+    @Expose
+    private ServiceConfig [] ServiceConfigList;
+
+    /**
+    * <p>服务治理配置聚合对象</p>
+    */
+    @SerializedName("ServiceGovernanceConfig")
+    @Expose
+    private ServiceGovernanceConfig ServiceGovernanceConfig;
+
+    /**
+    * <p>部署组标签列表</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * <p>Tapm OT Agent 版本</p>
+    */
+    @SerializedName("TapmOtAgentVersion")
+    @Expose
+    private String TapmOtAgentVersion;
+
+    /**
+    * <p>单元环境类型</p>
+    */
+    @SerializedName("UnitEnvType")
+    @Expose
+    private String UnitEnvType;
+
+    /**
+    * <p>单元 ID</p>
+    */
+    @SerializedName("UnitId")
+    @Expose
+    private String UnitId;
+
+    /**
+    * <p>单元类型</p>
+    */
+    @SerializedName("UnitName")
+    @Expose
+    private String UnitName;
+
+    /**
+    * <p>部署组资源类型</p>
+    */
+    @SerializedName("UnitType")
+    @Expose
+    private String UnitType;
 
     /**
      * Get <p>部署组ID</p> 
@@ -714,16 +917,16 @@ public class VmGroup extends AbstractModel {
     }
 
     /**
-     * Get <p>部署组资源类型</p> 
-     * @return GroupResourceType <p>部署组资源类型</p>
+     * Get <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul> 
+     * @return GroupResourceType <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
     }
 
     /**
-     * Set <p>部署组资源类型</p>
-     * @param GroupResourceType <p>部署组资源类型</p>
+     * Set <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
+     * @param GroupResourceType <p>部署组资源类型</p><p>枚举值：</p><ul><li>GW： 网关</li><li>DEF： 普通业务部署组</li><li>SVL： Serverless</li></ul>
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
@@ -1141,6 +1344,470 @@ public class VmGroup extends AbstractModel {
         this.LivenessAutoRestart = LivenessAutoRestart;
     }
 
+    /**
+     * Get <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul> 
+     * @return MeshSidecarVersion <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+     */
+    public String getMeshSidecarVersion() {
+        return this.MeshSidecarVersion;
+    }
+
+    /**
+     * Set <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+     * @param MeshSidecarVersion <p>Mesh Sidecar 数据面版本通道</p><p>枚举值：</p><ul><li>stable： 稳定版</li><li>release： 最新版</li></ul>
+     */
+    public void setMeshSidecarVersion(String MeshSidecarVersion) {
+        this.MeshSidecarVersion = MeshSidecarVersion;
+    }
+
+    /**
+     * Get <p>业务日志配置 ID 列表</p> 
+     * @return BusinessLogConfigIdList <p>业务日志配置 ID 列表</p>
+     */
+    public String getBusinessLogConfigIdList() {
+        return this.BusinessLogConfigIdList;
+    }
+
+    /**
+     * Set <p>业务日志配置 ID 列表</p>
+     * @param BusinessLogConfigIdList <p>业务日志配置 ID 列表</p>
+     */
+    public void setBusinessLogConfigIdList(String BusinessLogConfigIdList) {
+        this.BusinessLogConfigIdList = BusinessLogConfigIdList;
+    }
+
+    /**
+     * Get <p>业务系统 ID</p> 
+     * @return BusinessLogDeliveryConfigIdList <p>业务系统 ID</p>
+     */
+    public String getBusinessLogDeliveryConfigIdList() {
+        return this.BusinessLogDeliveryConfigIdList;
+    }
+
+    /**
+     * Set <p>业务系统 ID</p>
+     * @param BusinessLogDeliveryConfigIdList <p>业务系统 ID</p>
+     */
+    public void setBusinessLogDeliveryConfigIdList(String BusinessLogDeliveryConfigIdList) {
+        this.BusinessLogDeliveryConfigIdList = BusinessLogDeliveryConfigIdList;
+    }
+
+    /**
+     * Get <p>String型普通说明场景</p> 
+     * @return BusinessSystemId <p>String型普通说明场景</p>
+     */
+    public String getBusinessSystemId() {
+        return this.BusinessSystemId;
+    }
+
+    /**
+     * Set <p>String型普通说明场景</p>
+     * @param BusinessSystemId <p>String型普通说明场景</p>
+     */
+    public void setBusinessSystemId(String BusinessSystemId) {
+        this.BusinessSystemId = BusinessSystemId;
+    }
+
+    /**
+     * Get <p>业务系统名称</p> 
+     * @return BusinessSystemName <p>业务系统名称</p>
+     */
+    public String getBusinessSystemName() {
+        return this.BusinessSystemName;
+    }
+
+    /**
+     * Set <p>业务系统名称</p>
+     * @param BusinessSystemName <p>业务系统名称</p>
+     */
+    public void setBusinessSystemName(String BusinessSystemName) {
+        this.BusinessSystemName = BusinessSystemName;
+    }
+
+    /**
+     * Get <p>CLS 机器组 ID</p> 
+     * @return ClsMachineGroupId <p>CLS 机器组 ID</p>
+     */
+    public String getClsMachineGroupId() {
+        return this.ClsMachineGroupId;
+    }
+
+    /**
+     * Set <p>CLS 机器组 ID</p>
+     * @param ClsMachineGroupId <p>CLS 机器组 ID</p>
+     */
+    public void setClsMachineGroupId(String ClsMachineGroupId) {
+        this.ClsMachineGroupId = ClsMachineGroupId;
+    }
+
+    /**
+     * Get <p>是否开启服务治理</p> 
+     * @return EnableGovernance <p>是否开启服务治理</p>
+     */
+    public Boolean getEnableGovernance() {
+        return this.EnableGovernance;
+    }
+
+    /**
+     * Set <p>是否开启服务治理</p>
+     * @param EnableGovernance <p>是否开启服务治理</p>
+     */
+    public void setEnableGovernance(Boolean EnableGovernance) {
+        this.EnableGovernance = EnableGovernance;
+    }
+
+    /**
+     * Get <p>是否开启可观测</p> 
+     * @return EnableTelemetry <p>是否开启可观测</p>
+     */
+    public Boolean getEnableTelemetry() {
+        return this.EnableTelemetry;
+    }
+
+    /**
+     * Set <p>是否开启可观测</p>
+     * @param EnableTelemetry <p>是否开启可观测</p>
+     */
+    public void setEnableTelemetry(Boolean EnableTelemetry) {
+        this.EnableTelemetry = EnableTelemetry;
+    }
+
+    /**
+     * Get <p>是否开启 OT Agent</p> 
+     * @return EnableTelemetryAgent <p>是否开启 OT Agent</p>
+     */
+    public Boolean getEnableTelemetryAgent() {
+        return this.EnableTelemetryAgent;
+    }
+
+    /**
+     * Set <p>是否开启 OT Agent</p>
+     * @param EnableTelemetryAgent <p>是否开启 OT Agent</p>
+     */
+    public void setEnableTelemetryAgent(Boolean EnableTelemetryAgent) {
+        this.EnableTelemetryAgent = EnableTelemetryAgent;
+    }
+
+    /**
+     * Get <p>是否开启单元化</p> 
+     * @return EnabledUnit <p>是否开启单元化</p>
+     */
+    public Boolean getEnabledUnit() {
+        return this.EnabledUnit;
+    }
+
+    /**
+     * Set <p>是否开启单元化</p>
+     * @param EnabledUnit <p>是否开启单元化</p>
+     */
+    public void setEnabledUnit(Boolean EnabledUnit) {
+        this.EnabledUnit = EnabledUnit;
+    }
+
+    /**
+     * Get <p>独享注册中心/配置中心实例列表</p> 
+     * @return ExclusiveInstances <p>独享注册中心/配置中心实例列表</p>
+     */
+    public ExclusiveInstance [] getExclusiveInstances() {
+        return this.ExclusiveInstances;
+    }
+
+    /**
+     * Set <p>独享注册中心/配置中心实例列表</p>
+     * @param ExclusiveInstances <p>独享注册中心/配置中心实例列表</p>
+     */
+    public void setExclusiveInstances(ExclusiveInstance [] ExclusiveInstances) {
+        this.ExclusiveInstances = ExclusiveInstances;
+    }
+
+    /**
+     * Get <p>框架接入类型</p> 
+     * @return FrameworkType <p>框架接入类型</p>
+     */
+    public String getFrameworkType() {
+        return this.FrameworkType;
+    }
+
+    /**
+     * Set <p>框架接入类型</p>
+     * @param FrameworkType <p>框架接入类型</p>
+     */
+    public void setFrameworkType(String FrameworkType) {
+        this.FrameworkType = FrameworkType;
+    }
+
+    /**
+     * Get <p>服务治理实例模式</p> 
+     * @return GovernanceType <p>服务治理实例模式</p>
+     */
+    public String getGovernanceType() {
+        return this.GovernanceType;
+    }
+
+    /**
+     * Set <p>服务治理实例模式</p>
+     * @param GovernanceType <p>服务治理实例模式</p>
+     */
+    public void setGovernanceType(String GovernanceType) {
+        this.GovernanceType = GovernanceType;
+    }
+
+    /**
+     * Get <p>部署组关联实例 ID 列表</p> 
+     * @return InstanceIdList <p>部署组关联实例 ID 列表</p>
+     */
+    public String [] getInstanceIdList() {
+        return this.InstanceIdList;
+    }
+
+    /**
+     * Set <p>部署组关联实例 ID 列表</p>
+     * @param InstanceIdList <p>部署组关联实例 ID 列表</p>
+     */
+    public void setInstanceIdList(String [] InstanceIdList) {
+        this.InstanceIdList = InstanceIdList;
+    }
+
+    /**
+     * Get <p>部署组是否处于停止状态</p> 
+     * @return IsStop <p>部署组是否处于停止状态</p>
+     */
+    public String getIsStop() {
+        return this.IsStop;
+    }
+
+    /**
+     * Set <p>部署组是否处于停止状态</p>
+     * @param IsStop <p>部署组是否处于停止状态</p>
+     */
+    public void setIsStop(String IsStop) {
+        this.IsStop = IsStop;
+    }
+
+    /**
+     * Get <p>K8s 命名空间名称</p> 
+     * @return K8sNamespaceName <p>K8s 命名空间名称</p>
+     */
+    public String getK8sNamespaceName() {
+        return this.K8sNamespaceName;
+    }
+
+    /**
+     * Set <p>K8s 命名空间名称</p>
+     * @param K8sNamespaceName <p>K8s 命名空间名称</p>
+     */
+    public void setK8sNamespaceName(String K8sNamespaceName) {
+        this.K8sNamespaceName = K8sNamespaceName;
+    }
+
+    /**
+     * Get <p>请求语言</p> 
+     * @return Language <p>请求语言</p>
+     */
+    public String getLanguage() {
+        return this.Language;
+    }
+
+    /**
+     * Set <p>请求语言</p>
+     * @param Language <p>请求语言</p>
+     */
+    public void setLanguage(String Language) {
+        this.Language = Language;
+    }
+
+    /**
+     * Get <p>微服务子类型</p> 
+     * @return MicroserviceSubType <p>微服务子类型</p>
+     */
+    public String getMicroserviceSubType() {
+        return this.MicroserviceSubType;
+    }
+
+    /**
+     * Set <p>微服务子类型</p>
+     * @param MicroserviceSubType <p>微服务子类型</p>
+     */
+    public void setMicroserviceSubType(String MicroserviceSubType) {
+        this.MicroserviceSubType = MicroserviceSubType;
+    }
+
+    /**
+     * Get <p>非侵入接入子类型</p> 
+     * @return NonInvasiveType <p>非侵入接入子类型</p>
+     */
+    public String getNonInvasiveType() {
+        return this.NonInvasiveType;
+    }
+
+    /**
+     * Set <p>非侵入接入子类型</p>
+     * @param NonInvasiveType <p>非侵入接入子类型</p>
+     */
+    public void setNonInvasiveType(String NonInvasiveType) {
+        this.NonInvasiveType = NonInvasiveType;
+    }
+
+    /**
+     * Get <p>预停止脚本内容</p> 
+     * @return PreStopScript <p>预停止脚本内容</p>
+     */
+    public String getPreStopScript() {
+        return this.PreStopScript;
+    }
+
+    /**
+     * Set <p>预停止脚本内容</p>
+     * @param PreStopScript <p>预停止脚本内容</p>
+     */
+    public void setPreStopScript(String PreStopScript) {
+        this.PreStopScript = PreStopScript;
+    }
+
+    /**
+     * Get <p>实际使用的 K8s 命名空间名称</p> 
+     * @return RealNamespaceName <p>实际使用的 K8s 命名空间名称</p>
+     */
+    public String getRealNamespaceName() {
+        return this.RealNamespaceName;
+    }
+
+    /**
+     * Set <p>实际使用的 K8s 命名空间名称</p>
+     * @param RealNamespaceName <p>实际使用的 K8s 命名空间名称</p>
+     */
+    public void setRealNamespaceName(String RealNamespaceName) {
+        this.RealNamespaceName = RealNamespaceName;
+    }
+
+    /**
+     * Get <p>Mesh 服务端口与健康检查配置列表</p> 
+     * @return ServiceConfigList <p>Mesh 服务端口与健康检查配置列表</p>
+     */
+    public ServiceConfig [] getServiceConfigList() {
+        return this.ServiceConfigList;
+    }
+
+    /**
+     * Set <p>Mesh 服务端口与健康检查配置列表</p>
+     * @param ServiceConfigList <p>Mesh 服务端口与健康检查配置列表</p>
+     */
+    public void setServiceConfigList(ServiceConfig [] ServiceConfigList) {
+        this.ServiceConfigList = ServiceConfigList;
+    }
+
+    /**
+     * Get <p>服务治理配置聚合对象</p> 
+     * @return ServiceGovernanceConfig <p>服务治理配置聚合对象</p>
+     */
+    public ServiceGovernanceConfig getServiceGovernanceConfig() {
+        return this.ServiceGovernanceConfig;
+    }
+
+    /**
+     * Set <p>服务治理配置聚合对象</p>
+     * @param ServiceGovernanceConfig <p>服务治理配置聚合对象</p>
+     */
+    public void setServiceGovernanceConfig(ServiceGovernanceConfig ServiceGovernanceConfig) {
+        this.ServiceGovernanceConfig = ServiceGovernanceConfig;
+    }
+
+    /**
+     * Get <p>部署组标签列表</p> 
+     * @return Tags <p>部署组标签列表</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>部署组标签列表</p>
+     * @param Tags <p>部署组标签列表</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>Tapm OT Agent 版本</p> 
+     * @return TapmOtAgentVersion <p>Tapm OT Agent 版本</p>
+     */
+    public String getTapmOtAgentVersion() {
+        return this.TapmOtAgentVersion;
+    }
+
+    /**
+     * Set <p>Tapm OT Agent 版本</p>
+     * @param TapmOtAgentVersion <p>Tapm OT Agent 版本</p>
+     */
+    public void setTapmOtAgentVersion(String TapmOtAgentVersion) {
+        this.TapmOtAgentVersion = TapmOtAgentVersion;
+    }
+
+    /**
+     * Get <p>单元环境类型</p> 
+     * @return UnitEnvType <p>单元环境类型</p>
+     */
+    public String getUnitEnvType() {
+        return this.UnitEnvType;
+    }
+
+    /**
+     * Set <p>单元环境类型</p>
+     * @param UnitEnvType <p>单元环境类型</p>
+     */
+    public void setUnitEnvType(String UnitEnvType) {
+        this.UnitEnvType = UnitEnvType;
+    }
+
+    /**
+     * Get <p>单元 ID</p> 
+     * @return UnitId <p>单元 ID</p>
+     */
+    public String getUnitId() {
+        return this.UnitId;
+    }
+
+    /**
+     * Set <p>单元 ID</p>
+     * @param UnitId <p>单元 ID</p>
+     */
+    public void setUnitId(String UnitId) {
+        this.UnitId = UnitId;
+    }
+
+    /**
+     * Get <p>单元类型</p> 
+     * @return UnitName <p>单元类型</p>
+     */
+    public String getUnitName() {
+        return this.UnitName;
+    }
+
+    /**
+     * Set <p>单元类型</p>
+     * @param UnitName <p>单元类型</p>
+     */
+    public void setUnitName(String UnitName) {
+        this.UnitName = UnitName;
+    }
+
+    /**
+     * Get <p>部署组资源类型</p> 
+     * @return UnitType <p>部署组资源类型</p>
+     */
+    public String getUnitType() {
+        return this.UnitType;
+    }
+
+    /**
+     * Set <p>部署组资源类型</p>
+     * @param UnitType <p>部署组资源类型</p>
+     */
+    public void setUnitType(String UnitType) {
+        this.UnitType = UnitType;
+    }
+
     public VmGroup() {
     }
 
@@ -1293,6 +1960,105 @@ public class VmGroup extends AbstractModel {
         if (source.LivenessAutoRestart != null) {
             this.LivenessAutoRestart = new Boolean(source.LivenessAutoRestart);
         }
+        if (source.MeshSidecarVersion != null) {
+            this.MeshSidecarVersion = new String(source.MeshSidecarVersion);
+        }
+        if (source.BusinessLogConfigIdList != null) {
+            this.BusinessLogConfigIdList = new String(source.BusinessLogConfigIdList);
+        }
+        if (source.BusinessLogDeliveryConfigIdList != null) {
+            this.BusinessLogDeliveryConfigIdList = new String(source.BusinessLogDeliveryConfigIdList);
+        }
+        if (source.BusinessSystemId != null) {
+            this.BusinessSystemId = new String(source.BusinessSystemId);
+        }
+        if (source.BusinessSystemName != null) {
+            this.BusinessSystemName = new String(source.BusinessSystemName);
+        }
+        if (source.ClsMachineGroupId != null) {
+            this.ClsMachineGroupId = new String(source.ClsMachineGroupId);
+        }
+        if (source.EnableGovernance != null) {
+            this.EnableGovernance = new Boolean(source.EnableGovernance);
+        }
+        if (source.EnableTelemetry != null) {
+            this.EnableTelemetry = new Boolean(source.EnableTelemetry);
+        }
+        if (source.EnableTelemetryAgent != null) {
+            this.EnableTelemetryAgent = new Boolean(source.EnableTelemetryAgent);
+        }
+        if (source.EnabledUnit != null) {
+            this.EnabledUnit = new Boolean(source.EnabledUnit);
+        }
+        if (source.ExclusiveInstances != null) {
+            this.ExclusiveInstances = new ExclusiveInstance[source.ExclusiveInstances.length];
+            for (int i = 0; i < source.ExclusiveInstances.length; i++) {
+                this.ExclusiveInstances[i] = new ExclusiveInstance(source.ExclusiveInstances[i]);
+            }
+        }
+        if (source.FrameworkType != null) {
+            this.FrameworkType = new String(source.FrameworkType);
+        }
+        if (source.GovernanceType != null) {
+            this.GovernanceType = new String(source.GovernanceType);
+        }
+        if (source.InstanceIdList != null) {
+            this.InstanceIdList = new String[source.InstanceIdList.length];
+            for (int i = 0; i < source.InstanceIdList.length; i++) {
+                this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
+            }
+        }
+        if (source.IsStop != null) {
+            this.IsStop = new String(source.IsStop);
+        }
+        if (source.K8sNamespaceName != null) {
+            this.K8sNamespaceName = new String(source.K8sNamespaceName);
+        }
+        if (source.Language != null) {
+            this.Language = new String(source.Language);
+        }
+        if (source.MicroserviceSubType != null) {
+            this.MicroserviceSubType = new String(source.MicroserviceSubType);
+        }
+        if (source.NonInvasiveType != null) {
+            this.NonInvasiveType = new String(source.NonInvasiveType);
+        }
+        if (source.PreStopScript != null) {
+            this.PreStopScript = new String(source.PreStopScript);
+        }
+        if (source.RealNamespaceName != null) {
+            this.RealNamespaceName = new String(source.RealNamespaceName);
+        }
+        if (source.ServiceConfigList != null) {
+            this.ServiceConfigList = new ServiceConfig[source.ServiceConfigList.length];
+            for (int i = 0; i < source.ServiceConfigList.length; i++) {
+                this.ServiceConfigList[i] = new ServiceConfig(source.ServiceConfigList[i]);
+            }
+        }
+        if (source.ServiceGovernanceConfig != null) {
+            this.ServiceGovernanceConfig = new ServiceGovernanceConfig(source.ServiceGovernanceConfig);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.TapmOtAgentVersion != null) {
+            this.TapmOtAgentVersion = new String(source.TapmOtAgentVersion);
+        }
+        if (source.UnitEnvType != null) {
+            this.UnitEnvType = new String(source.UnitEnvType);
+        }
+        if (source.UnitId != null) {
+            this.UnitId = new String(source.UnitId);
+        }
+        if (source.UnitName != null) {
+            this.UnitName = new String(source.UnitName);
+        }
+        if (source.UnitType != null) {
+            this.UnitType = new String(source.UnitType);
+        }
     }
 
 
@@ -1346,6 +2112,35 @@ public class VmGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
         this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
         this.setParamSimple(map, prefix + "LivenessAutoRestart", this.LivenessAutoRestart);
+        this.setParamSimple(map, prefix + "MeshSidecarVersion", this.MeshSidecarVersion);
+        this.setParamSimple(map, prefix + "BusinessLogConfigIdList", this.BusinessLogConfigIdList);
+        this.setParamSimple(map, prefix + "BusinessLogDeliveryConfigIdList", this.BusinessLogDeliveryConfigIdList);
+        this.setParamSimple(map, prefix + "BusinessSystemId", this.BusinessSystemId);
+        this.setParamSimple(map, prefix + "BusinessSystemName", this.BusinessSystemName);
+        this.setParamSimple(map, prefix + "ClsMachineGroupId", this.ClsMachineGroupId);
+        this.setParamSimple(map, prefix + "EnableGovernance", this.EnableGovernance);
+        this.setParamSimple(map, prefix + "EnableTelemetry", this.EnableTelemetry);
+        this.setParamSimple(map, prefix + "EnableTelemetryAgent", this.EnableTelemetryAgent);
+        this.setParamSimple(map, prefix + "EnabledUnit", this.EnabledUnit);
+        this.setParamArrayObj(map, prefix + "ExclusiveInstances.", this.ExclusiveInstances);
+        this.setParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
+        this.setParamSimple(map, prefix + "GovernanceType", this.GovernanceType);
+        this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+        this.setParamSimple(map, prefix + "IsStop", this.IsStop);
+        this.setParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
+        this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamSimple(map, prefix + "MicroserviceSubType", this.MicroserviceSubType);
+        this.setParamSimple(map, prefix + "NonInvasiveType", this.NonInvasiveType);
+        this.setParamSimple(map, prefix + "PreStopScript", this.PreStopScript);
+        this.setParamSimple(map, prefix + "RealNamespaceName", this.RealNamespaceName);
+        this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+        this.setParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TapmOtAgentVersion", this.TapmOtAgentVersion);
+        this.setParamSimple(map, prefix + "UnitEnvType", this.UnitEnvType);
+        this.setParamSimple(map, prefix + "UnitId", this.UnitId);
+        this.setParamSimple(map, prefix + "UnitName", this.UnitName);
+        this.setParamSimple(map, prefix + "UnitType", this.UnitType);
 
     }
 }
