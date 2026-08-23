@@ -87,6 +87,62 @@ public class ProxyAddress extends AbstractModel {
     private Long ConnectionPoolLimit;
 
     /**
+    * <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+    */
+    @SerializedName("RwSplitEnable")
+    @Expose
+    private Boolean RwSplitEnable;
+
+    /**
+    * <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+    */
+    @SerializedName("WeightMode")
+    @Expose
+    private String WeightMode;
+
+    /**
+    * <p>新增只读是否自动加入读写分离</p>
+    */
+    @SerializedName("RoAutoAdd")
+    @Expose
+    private Boolean RoAutoAdd;
+
+    /**
+    * <p>延迟剔除开关</p>
+    */
+    @SerializedName("LatencyRemove")
+    @Expose
+    private Boolean LatencyRemove;
+
+    /**
+    * <p>延迟剔除阈值</p><p>单位：秒</p>
+    */
+    @SerializedName("LatencyRemoveTime")
+    @Expose
+    private Long LatencyRemoveTime;
+
+    /**
+    * <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+    */
+    @SerializedName("MinRouteNum")
+    @Expose
+    private Long MinRouteNum;
+
+    /**
+    * <p>只读全部异常时是否回切到主</p>
+    */
+    @SerializedName("FailOver")
+    @Expose
+    private Boolean FailOver;
+
+    /**
+    * <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+    */
+    @SerializedName("LoadBalancePolicy")
+    @Expose
+    private Long LoadBalancePolicy;
+
+    /**
      * Get <p>Proxy 接入地址 ID</p> 
      * @return AddressId <p>Proxy 接入地址 ID</p>
      */
@@ -230,6 +286,134 @@ public class ProxyAddress extends AbstractModel {
         this.ConnectionPoolLimit = ConnectionPoolLimit;
     }
 
+    /**
+     * Get <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p> 
+     * @return RwSplitEnable <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+     */
+    public Boolean getRwSplitEnable() {
+        return this.RwSplitEnable;
+    }
+
+    /**
+     * Set <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+     * @param RwSplitEnable <p>读写分离开关。启用后 proxy 将读请求分发到只读节点，写请求仍走主节点。</p>
+     */
+    public void setRwSplitEnable(Boolean RwSplitEnable) {
+        this.RwSplitEnable = RwSplitEnable;
+    }
+
+    /**
+     * Get <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul> 
+     * @return WeightMode <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+     */
+    public String getWeightMode() {
+        return this.WeightMode;
+    }
+
+    /**
+     * Set <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+     * @param WeightMode <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配</li><li>custom： 用户自定义权重</li></ul>
+     */
+    public void setWeightMode(String WeightMode) {
+        this.WeightMode = WeightMode;
+    }
+
+    /**
+     * Get <p>新增只读是否自动加入读写分离</p> 
+     * @return RoAutoAdd <p>新增只读是否自动加入读写分离</p>
+     */
+    public Boolean getRoAutoAdd() {
+        return this.RoAutoAdd;
+    }
+
+    /**
+     * Set <p>新增只读是否自动加入读写分离</p>
+     * @param RoAutoAdd <p>新增只读是否自动加入读写分离</p>
+     */
+    public void setRoAutoAdd(Boolean RoAutoAdd) {
+        this.RoAutoAdd = RoAutoAdd;
+    }
+
+    /**
+     * Get <p>延迟剔除开关</p> 
+     * @return LatencyRemove <p>延迟剔除开关</p>
+     */
+    public Boolean getLatencyRemove() {
+        return this.LatencyRemove;
+    }
+
+    /**
+     * Set <p>延迟剔除开关</p>
+     * @param LatencyRemove <p>延迟剔除开关</p>
+     */
+    public void setLatencyRemove(Boolean LatencyRemove) {
+        this.LatencyRemove = LatencyRemove;
+    }
+
+    /**
+     * Get <p>延迟剔除阈值</p><p>单位：秒</p> 
+     * @return LatencyRemoveTime <p>延迟剔除阈值</p><p>单位：秒</p>
+     */
+    public Long getLatencyRemoveTime() {
+        return this.LatencyRemoveTime;
+    }
+
+    /**
+     * Set <p>延迟剔除阈值</p><p>单位：秒</p>
+     * @param LatencyRemoveTime <p>延迟剔除阈值</p><p>单位：秒</p>
+     */
+    public void setLatencyRemoveTime(Long LatencyRemoveTime) {
+        this.LatencyRemoveTime = LatencyRemoveTime;
+    }
+
+    /**
+     * Get <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p> 
+     * @return MinRouteNum <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     */
+    public Long getMinRouteNum() {
+        return this.MinRouteNum;
+    }
+
+    /**
+     * Set <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     * @param MinRouteNum <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     */
+    public void setMinRouteNum(Long MinRouteNum) {
+        this.MinRouteNum = MinRouteNum;
+    }
+
+    /**
+     * Get <p>只读全部异常时是否回切到主</p> 
+     * @return FailOver <p>只读全部异常时是否回切到主</p>
+     */
+    public Boolean getFailOver() {
+        return this.FailOver;
+    }
+
+    /**
+     * Set <p>只读全部异常时是否回切到主</p>
+     * @param FailOver <p>只读全部异常时是否回切到主</p>
+     */
+    public void setFailOver(Boolean FailOver) {
+        this.FailOver = FailOver;
+    }
+
+    /**
+     * Get <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul> 
+     * @return LoadBalancePolicy <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     */
+    public Long getLoadBalancePolicy() {
+        return this.LoadBalancePolicy;
+    }
+
+    /**
+     * Set <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     * @param LoadBalancePolicy <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     */
+    public void setLoadBalancePolicy(Long LoadBalancePolicy) {
+        this.LoadBalancePolicy = LoadBalancePolicy;
+    }
+
     public ProxyAddress() {
     }
 
@@ -268,6 +452,30 @@ public class ProxyAddress extends AbstractModel {
         if (source.ConnectionPoolLimit != null) {
             this.ConnectionPoolLimit = new Long(source.ConnectionPoolLimit);
         }
+        if (source.RwSplitEnable != null) {
+            this.RwSplitEnable = new Boolean(source.RwSplitEnable);
+        }
+        if (source.WeightMode != null) {
+            this.WeightMode = new String(source.WeightMode);
+        }
+        if (source.RoAutoAdd != null) {
+            this.RoAutoAdd = new Boolean(source.RoAutoAdd);
+        }
+        if (source.LatencyRemove != null) {
+            this.LatencyRemove = new Boolean(source.LatencyRemove);
+        }
+        if (source.LatencyRemoveTime != null) {
+            this.LatencyRemoveTime = new Long(source.LatencyRemoveTime);
+        }
+        if (source.MinRouteNum != null) {
+            this.MinRouteNum = new Long(source.MinRouteNum);
+        }
+        if (source.FailOver != null) {
+            this.FailOver = new Boolean(source.FailOver);
+        }
+        if (source.LoadBalancePolicy != null) {
+            this.LoadBalancePolicy = new Long(source.LoadBalancePolicy);
+        }
     }
 
 
@@ -284,6 +492,14 @@ public class ProxyAddress extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
         this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
         this.setParamSimple(map, prefix + "ConnectionPoolLimit", this.ConnectionPoolLimit);
+        this.setParamSimple(map, prefix + "RwSplitEnable", this.RwSplitEnable);
+        this.setParamSimple(map, prefix + "WeightMode", this.WeightMode);
+        this.setParamSimple(map, prefix + "RoAutoAdd", this.RoAutoAdd);
+        this.setParamSimple(map, prefix + "LatencyRemove", this.LatencyRemove);
+        this.setParamSimple(map, prefix + "LatencyRemoveTime", this.LatencyRemoveTime);
+        this.setParamSimple(map, prefix + "MinRouteNum", this.MinRouteNum);
+        this.setParamSimple(map, prefix + "FailOver", this.FailOver);
+        this.setParamSimple(map, prefix + "LoadBalancePolicy", this.LoadBalancePolicy);
 
     }
 }

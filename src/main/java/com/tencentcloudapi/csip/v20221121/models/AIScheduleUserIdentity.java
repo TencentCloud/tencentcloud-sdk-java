@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class AIScheduleUserIdentity extends AbstractModel {
 
     /**
-    * 
+    * <p>appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 
+    * <p>账号Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 
+    * <p>子账号uin</p>
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * 
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 
+    * <p>机器人ID</p>
     */
     @SerializedName("BotId")
     @Expose
     private String BotId;
 
     /**
-    * 
+    * <p>聊天ID</p>
     */
     @SerializedName("ChatId")
     @Expose
     private String ChatId;
 
     /**
-    * 
+    * <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-     * Get  
-     * @return AppId 
+     * Get <p>appid</p> 
+     * @return AppId <p>appid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 
-     * @param AppId 
+     * Set <p>appid</p>
+     * @param AppId <p>appid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get  
-     * @return Uin 
+     * Get <p>账号Uin</p> 
+     * @return Uin <p>账号Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 
-     * @param Uin 
+     * Set <p>账号Uin</p>
+     * @param Uin <p>账号Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get  
-     * @return SubUin 
+     * Get <p>子账号uin</p> 
+     * @return SubUin <p>子账号uin</p>
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set 
-     * @param SubUin 
+     * Set <p>子账号uin</p>
+     * @param SubUin <p>子账号uin</p>
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get  
-     * @return UserId 
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 
-     * @param UserId 
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get  
-     * @return BotId 
+     * Get <p>机器人ID</p> 
+     * @return BotId <p>机器人ID</p>
      */
     public String getBotId() {
         return this.BotId;
     }
 
     /**
-     * Set 
-     * @param BotId 
+     * Set <p>机器人ID</p>
+     * @param BotId <p>机器人ID</p>
      */
     public void setBotId(String BotId) {
         this.BotId = BotId;
     }
 
     /**
-     * Get  
-     * @return ChatId 
+     * Get <p>聊天ID</p> 
+     * @return ChatId <p>聊天ID</p>
      */
     public String getChatId() {
         return this.ChatId;
     }
 
     /**
-     * Set 
-     * @param ChatId 
+     * Set <p>聊天ID</p>
+     * @param ChatId <p>聊天ID</p>
      */
     public void setChatId(String ChatId) {
         this.ChatId = ChatId;
     }
 
     /**
-     * Get  
-     * @return Channel 
+     * Get <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p> 
+     * @return Channel <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 
-     * @param Channel 
+     * Set <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
+     * @param Channel <p>渠道标识，如 wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;

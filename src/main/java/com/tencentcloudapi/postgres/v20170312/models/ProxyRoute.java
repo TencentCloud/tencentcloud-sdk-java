@@ -45,7 +45,7 @@ public class ProxyRoute extends AbstractModel {
     private Long Weight;
 
     /**
-    * <p>路由状态：available/unavailable</p>
+    * <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -100,16 +100,16 @@ public class ProxyRoute extends AbstractModel {
     }
 
     /**
-     * Get <p>路由状态：available/unavailable</p> 
-     * @return Status <p>路由状态：available/unavailable</p>
+     * Get <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul> 
+     * @return Status <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>路由状态：available/unavailable</p>
-     * @param Status <p>路由状态：available/unavailable</p>
+     * Set <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
+     * @param Status <p>路由状态：online/offline</p><p>枚举值：</p><ul><li>online： 节点处于在线状态</li><li>offline： 节点处于下线状态</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

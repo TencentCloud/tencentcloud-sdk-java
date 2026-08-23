@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ImageInfo extends AbstractModel {
 
     /**
-    * 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
+    * <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
     */
     @SerializedName("ImageType")
     @Expose
     private String ImageType;
 
     /**
-    * 镜像地址
+    * <p>镜像地址</p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * TCR镜像对应的地域
+    * <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistryRegion")
@@ -46,7 +46,7 @@ public class ImageInfo extends AbstractModel {
     private String RegistryRegion;
 
     /**
-    * TCR镜像对应的实例id
+    * <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegistryId")
@@ -54,7 +54,7 @@ public class ImageInfo extends AbstractModel {
     private String RegistryId;
 
     /**
-    * 是否允许导出全部内容
+    * <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowSaveAllContent")
@@ -62,7 +62,7 @@ public class ImageInfo extends AbstractModel {
     private Boolean AllowSaveAllContent;
 
     /**
-    * 镜像名称
+    * <p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageName")
@@ -70,7 +70,7 @@ public class ImageInfo extends AbstractModel {
     private String ImageName;
 
     /**
-    * 是否支持数据构建
+    * <p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportDataPipeline")
@@ -78,41 +78,49 @@ public class ImageInfo extends AbstractModel {
     private Boolean SupportDataPipeline;
 
     /**
-     * Get 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像 
-     * @return ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
+    * <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageSecret")
+    @Expose
+    private ImageSecret ImageSecret;
+
+    /**
+     * Get <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p> 
+     * @return ImageType <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
      */
     public String getImageType() {
         return this.ImageType;
     }
 
     /**
-     * Set 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
-     * @param ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
+     * Set <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
+     * @param ImageType <p>镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像</p>
      */
     public void setImageType(String ImageType) {
         this.ImageType = ImageType;
     }
 
     /**
-     * Get 镜像地址 
-     * @return ImageUrl 镜像地址
+     * Get <p>镜像地址</p> 
+     * @return ImageUrl <p>镜像地址</p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 镜像地址
-     * @param ImageUrl 镜像地址
+     * Set <p>镜像地址</p>
+     * @param ImageUrl <p>镜像地址</p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get TCR镜像对应的地域
+     * Get <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegistryRegion TCR镜像对应的地域
+     * @return RegistryRegion <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistryRegion() {
@@ -120,9 +128,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Set TCR镜像对应的地域
+     * Set <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegistryRegion TCR镜像对应的地域
+     * @param RegistryRegion <p>TCR镜像对应的地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistryRegion(String RegistryRegion) {
@@ -130,9 +138,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get TCR镜像对应的实例id
+     * Get <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegistryId TCR镜像对应的实例id
+     * @return RegistryId <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegistryId() {
@@ -140,9 +148,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Set TCR镜像对应的实例id
+     * Set <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegistryId TCR镜像对应的实例id
+     * @param RegistryId <p>TCR镜像对应的实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegistryId(String RegistryId) {
@@ -150,9 +158,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否允许导出全部内容
+     * Get <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowSaveAllContent 是否允许导出全部内容
+     * @return AllowSaveAllContent <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAllowSaveAllContent() {
@@ -160,9 +168,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否允许导出全部内容
+     * Set <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowSaveAllContent 是否允许导出全部内容
+     * @param AllowSaveAllContent <p>是否允许导出全部内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowSaveAllContent(Boolean AllowSaveAllContent) {
@@ -170,9 +178,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 镜像名称
+     * Get <p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageName 镜像名称
+     * @return ImageName <p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageName() {
@@ -180,9 +188,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Set 镜像名称
+     * Set <p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageName 镜像名称
+     * @param ImageName <p>镜像名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageName(String ImageName) {
@@ -190,9 +198,9 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否支持数据构建
+     * Get <p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportDataPipeline 是否支持数据构建
+     * @return SupportDataPipeline <p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportDataPipeline() {
@@ -200,13 +208,33 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否支持数据构建
+     * Set <p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportDataPipeline 是否支持数据构建
+     * @param SupportDataPipeline <p>是否支持数据构建</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportDataPipeline(Boolean SupportDataPipeline) {
         this.SupportDataPipeline = SupportDataPipeline;
+    }
+
+    /**
+     * Get <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageSecret <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageSecret getImageSecret() {
+        return this.ImageSecret;
+    }
+
+    /**
+     * Set <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageSecret <p>镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageSecret(ImageSecret ImageSecret) {
+        this.ImageSecret = ImageSecret;
     }
 
     public ImageInfo() {
@@ -238,6 +266,9 @@ public class ImageInfo extends AbstractModel {
         if (source.SupportDataPipeline != null) {
             this.SupportDataPipeline = new Boolean(source.SupportDataPipeline);
         }
+        if (source.ImageSecret != null) {
+            this.ImageSecret = new ImageSecret(source.ImageSecret);
+        }
     }
 
 
@@ -252,6 +283,7 @@ public class ImageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
+        this.setParamObj(map, prefix + "ImageSecret.", this.ImageSecret);
 
     }
 }

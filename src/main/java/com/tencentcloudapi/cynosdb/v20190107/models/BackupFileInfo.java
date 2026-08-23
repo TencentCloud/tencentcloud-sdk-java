@@ -108,6 +108,13 @@ public class BackupFileInfo extends AbstractModel {
     private String BackupName;
 
     /**
+    * <p>备份文件所在地域</p>
+    */
+    @SerializedName("ExistRegions")
+    @Expose
+    private BackupRegionAndIds [] ExistRegions;
+
+    /**
     * <p>投递状态</p>
     */
     @SerializedName("CopyStatus")
@@ -335,6 +342,22 @@ public class BackupFileInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>备份文件所在地域</p> 
+     * @return ExistRegions <p>备份文件所在地域</p>
+     */
+    public BackupRegionAndIds [] getExistRegions() {
+        return this.ExistRegions;
+    }
+
+    /**
+     * Set <p>备份文件所在地域</p>
+     * @param ExistRegions <p>备份文件所在地域</p>
+     */
+    public void setExistRegions(BackupRegionAndIds [] ExistRegions) {
+        this.ExistRegions = ExistRegions;
+    }
+
+    /**
      * Get <p>投递状态</p> 
      * @return CopyStatus <p>投递状态</p>
      */
@@ -458,6 +481,12 @@ public class BackupFileInfo extends AbstractModel {
         if (source.BackupName != null) {
             this.BackupName = new String(source.BackupName);
         }
+        if (source.ExistRegions != null) {
+            this.ExistRegions = new BackupRegionAndIds[source.ExistRegions.length];
+            for (int i = 0; i < source.ExistRegions.length; i++) {
+                this.ExistRegions[i] = new BackupRegionAndIds(source.ExistRegions[i]);
+            }
+        }
         if (source.CopyStatus != null) {
             this.CopyStatus = new String(source.CopyStatus);
         }
@@ -495,6 +524,7 @@ public class BackupFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamArrayObj(map, prefix + "ExistRegions.", this.ExistRegions);
         this.setParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
         this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
         this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);

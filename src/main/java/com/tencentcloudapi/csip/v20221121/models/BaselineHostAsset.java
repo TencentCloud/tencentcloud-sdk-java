@@ -31,7 +31,7 @@ public class BaselineHostAsset extends AbstractModel {
     private String InstanceID;
 
     /**
-    * <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+    * <p>主机唯一标识 QUUID。</p>
     */
     @SerializedName("QUUID")
     @Expose
@@ -138,16 +138,16 @@ public class BaselineHostAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>CWP（云镜）侧主机唯一标识 QUUID。</p> 
-     * @return QUUID <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+     * Get <p>主机唯一标识 QUUID。</p> 
+     * @return QUUID <p>主机唯一标识 QUUID。</p>
      */
     public String getQUUID() {
         return this.QUUID;
     }
 
     /**
-     * Set <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
-     * @param QUUID <p>CWP（云镜）侧主机唯一标识 QUUID。</p>
+     * Set <p>主机唯一标识 QUUID。</p>
+     * @param QUUID <p>主机唯一标识 QUUID。</p>
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;

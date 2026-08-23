@@ -45,6 +45,13 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
     private LoginSettings LoginSettings;
 
     /**
+    * <p>当节点中还有业务 Pod 在运行，默认会拦截从集群中移除节点的操作。如果该参数为 true，表示强制执行此操作。</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("Force")
+    @Expose
+    private Boolean Force;
+
+    /**
      * Get <p>DB Custom 集群ID</p> 
      * @return ClusterId <p>DB Custom 集群ID</p>
      */
@@ -92,6 +99,22 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
         this.LoginSettings = LoginSettings;
     }
 
+    /**
+     * Get <p>当节点中还有业务 Pod 在运行，默认会拦截从集群中移除节点的操作。如果该参数为 true，表示强制执行此操作。</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p> 
+     * @return Force <p>当节点中还有业务 Pod 在运行，默认会拦截从集群中移除节点的操作。如果该参数为 true，表示强制执行此操作。</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public Boolean getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set <p>当节点中还有业务 Pod 在运行，默认会拦截从集群中移除节点的操作。如果该参数为 true，表示强制执行此操作。</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     * @param Force <p>当节点中还有业务 Pod 在运行，默认会拦截从集群中移除节点的操作。如果该参数为 true，表示强制执行此操作。</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public void setForce(Boolean Force) {
+        this.Force = Force;
+    }
+
     public RemoveNodesFromDBCustomClusterRequest() {
     }
 
@@ -112,6 +135,9 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
         if (source.LoginSettings != null) {
             this.LoginSettings = new LoginSettings(source.LoginSettings);
         }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class RemoveNodesFromDBCustomClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

@@ -128,7 +128,7 @@ public class DetectDetail extends AbstractModel {
     private String CompareLibType;
 
     /**
-    * <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+    * <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivenessMode")
@@ -396,9 +396,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+     * Get <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+     * @return LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLivenessMode() {
@@ -406,9 +406,9 @@ public class DetectDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+     * Set <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）</p>
+     * @param LivenessMode <p>枚举活体检测类型：<br>0：未知<br>1：数字活体<br>2：动作活体<br>3：静默活体<br>4：一闪活体（动作+光线）<br>5: 远近活体</p><p>枚举值：</p><ul><li>0： 未知</li><li>1： 数字活体</li><li>2： 动作活体</li><li>3： 静默活体</li><li>4： 一闪活体（动作+光线）</li><li>5： 远近活体</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivenessMode(Long LivenessMode) {

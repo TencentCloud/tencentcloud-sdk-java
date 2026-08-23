@@ -963,6 +963,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeClusterStorageAutoExpand）用于查询自动库容配置。
+     * @param req DescribeClusterStorageAutoExpandRequest
+     * @return DescribeClusterStorageAutoExpandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterStorageAutoExpandResponse DescribeClusterStorageAutoExpand(DescribeClusterStorageAutoExpandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterStorageAutoExpand", DescribeClusterStorageAutoExpandResponse.class);
+    }
+
+    /**
      *查询集群透明加密信息
      * @param req DescribeClusterTransparentEncryptInfoRequest
      * @return DescribeClusterTransparentEncryptInfoResponse

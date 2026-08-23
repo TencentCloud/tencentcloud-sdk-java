@@ -59,6 +59,55 @@ public class ModifyDBProxyAddressRequest extends AbstractModel {
     private Boolean ConnectionPool;
 
     /**
+    * <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配权重</li><li>custom： 自定义权重，此模式下ProxyAllocation参数必传</li></ul><p>默认值：system</p>
+    */
+    @SerializedName("WeightMode")
+    @Expose
+    private String WeightMode;
+
+    /**
+    * <p>system</p><p>入参限制：路由权重列表。若 WeightMode 传的是system或不传 ，则传入的权重不生效，由系统分配默认权重。</p>
+    */
+    @SerializedName("ProxyAllocation")
+    @Expose
+    private ProxyRoute [] ProxyAllocation;
+
+    /**
+    * <p>新增只读实例是否自动加入当前连接地址，仅后续新建实例生效</p>
+    */
+    @SerializedName("RoAutoAdd")
+    @Expose
+    private Boolean RoAutoAdd;
+
+    /**
+    * <p>延迟剔除开关</p>
+    */
+    @SerializedName("LatencyRemove")
+    @Expose
+    private Boolean LatencyRemove;
+
+    /**
+    * <p>延迟剔除阈值，仅在延迟剔除开关打开时有效</p><p>单位：秒</p>
+    */
+    @SerializedName("LatencyRemoveTime")
+    @Expose
+    private Long LatencyRemoveTime;
+
+    /**
+    * <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+    */
+    @SerializedName("MinRouteNum")
+    @Expose
+    private Long MinRouteNum;
+
+    /**
+    * <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+    */
+    @SerializedName("LoadBalancePolicy")
+    @Expose
+    private Long LoadBalancePolicy;
+
+    /**
      * Get <p>实例ID</p> 
      * @return DBInstanceId <p>实例ID</p>
      */
@@ -138,6 +187,118 @@ public class ModifyDBProxyAddressRequest extends AbstractModel {
         this.ConnectionPool = ConnectionPool;
     }
 
+    /**
+     * Get <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配权重</li><li>custom： 自定义权重，此模式下ProxyAllocation参数必传</li></ul><p>默认值：system</p> 
+     * @return WeightMode <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配权重</li><li>custom： 自定义权重，此模式下ProxyAllocation参数必传</li></ul><p>默认值：system</p>
+     */
+    public String getWeightMode() {
+        return this.WeightMode;
+    }
+
+    /**
+     * Set <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配权重</li><li>custom： 自定义权重，此模式下ProxyAllocation参数必传</li></ul><p>默认值：system</p>
+     * @param WeightMode <p>权重模式</p><p>枚举值：</p><ul><li>system： 系统自动分配权重</li><li>custom： 自定义权重，此模式下ProxyAllocation参数必传</li></ul><p>默认值：system</p>
+     */
+    public void setWeightMode(String WeightMode) {
+        this.WeightMode = WeightMode;
+    }
+
+    /**
+     * Get <p>system</p><p>入参限制：路由权重列表。若 WeightMode 传的是system或不传 ，则传入的权重不生效，由系统分配默认权重。</p> 
+     * @return ProxyAllocation <p>system</p><p>入参限制：路由权重列表。若 WeightMode 传的是system或不传 ，则传入的权重不生效，由系统分配默认权重。</p>
+     */
+    public ProxyRoute [] getProxyAllocation() {
+        return this.ProxyAllocation;
+    }
+
+    /**
+     * Set <p>system</p><p>入参限制：路由权重列表。若 WeightMode 传的是system或不传 ，则传入的权重不生效，由系统分配默认权重。</p>
+     * @param ProxyAllocation <p>system</p><p>入参限制：路由权重列表。若 WeightMode 传的是system或不传 ，则传入的权重不生效，由系统分配默认权重。</p>
+     */
+    public void setProxyAllocation(ProxyRoute [] ProxyAllocation) {
+        this.ProxyAllocation = ProxyAllocation;
+    }
+
+    /**
+     * Get <p>新增只读实例是否自动加入当前连接地址，仅后续新建实例生效</p> 
+     * @return RoAutoAdd <p>新增只读实例是否自动加入当前连接地址，仅后续新建实例生效</p>
+     */
+    public Boolean getRoAutoAdd() {
+        return this.RoAutoAdd;
+    }
+
+    /**
+     * Set <p>新增只读实例是否自动加入当前连接地址，仅后续新建实例生效</p>
+     * @param RoAutoAdd <p>新增只读实例是否自动加入当前连接地址，仅后续新建实例生效</p>
+     */
+    public void setRoAutoAdd(Boolean RoAutoAdd) {
+        this.RoAutoAdd = RoAutoAdd;
+    }
+
+    /**
+     * Get <p>延迟剔除开关</p> 
+     * @return LatencyRemove <p>延迟剔除开关</p>
+     */
+    public Boolean getLatencyRemove() {
+        return this.LatencyRemove;
+    }
+
+    /**
+     * Set <p>延迟剔除开关</p>
+     * @param LatencyRemove <p>延迟剔除开关</p>
+     */
+    public void setLatencyRemove(Boolean LatencyRemove) {
+        this.LatencyRemove = LatencyRemove;
+    }
+
+    /**
+     * Get <p>延迟剔除阈值，仅在延迟剔除开关打开时有效</p><p>单位：秒</p> 
+     * @return LatencyRemoveTime <p>延迟剔除阈值，仅在延迟剔除开关打开时有效</p><p>单位：秒</p>
+     */
+    public Long getLatencyRemoveTime() {
+        return this.LatencyRemoveTime;
+    }
+
+    /**
+     * Set <p>延迟剔除阈值，仅在延迟剔除开关打开时有效</p><p>单位：秒</p>
+     * @param LatencyRemoveTime <p>延迟剔除阈值，仅在延迟剔除开关打开时有效</p><p>单位：秒</p>
+     */
+    public void setLatencyRemoveTime(Long LatencyRemoveTime) {
+        this.LatencyRemoveTime = LatencyRemoveTime;
+    }
+
+    /**
+     * Get <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p> 
+     * @return MinRouteNum <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     */
+    public Long getMinRouteNum() {
+        return this.MinRouteNum;
+    }
+
+    /**
+     * Set <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     * @param MinRouteNum <p>最小保留路由数。在延迟/故障剔除时，至少保留的路由数量，防止所有节点被剔除导致服务不可用。</p>
+     */
+    public void setMinRouteNum(Long MinRouteNum) {
+        this.MinRouteNum = MinRouteNum;
+    }
+
+    /**
+     * Get <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul> 
+     * @return LoadBalancePolicy <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     */
+    public Long getLoadBalancePolicy() {
+        return this.LoadBalancePolicy;
+    }
+
+    /**
+     * Set <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     * @param LoadBalancePolicy <p>负载均衡策略</p><p>枚举值：</p><ul><li>0： 按活跃连接数(默认)</li><li>1： 按请求数</li></ul>
+     */
+    public void setLoadBalancePolicy(Long LoadBalancePolicy) {
+        this.LoadBalancePolicy = LoadBalancePolicy;
+    }
+
     public ModifyDBProxyAddressRequest() {
     }
 
@@ -161,6 +322,30 @@ public class ModifyDBProxyAddressRequest extends AbstractModel {
         if (source.ConnectionPool != null) {
             this.ConnectionPool = new Boolean(source.ConnectionPool);
         }
+        if (source.WeightMode != null) {
+            this.WeightMode = new String(source.WeightMode);
+        }
+        if (source.ProxyAllocation != null) {
+            this.ProxyAllocation = new ProxyRoute[source.ProxyAllocation.length];
+            for (int i = 0; i < source.ProxyAllocation.length; i++) {
+                this.ProxyAllocation[i] = new ProxyRoute(source.ProxyAllocation[i]);
+            }
+        }
+        if (source.RoAutoAdd != null) {
+            this.RoAutoAdd = new Boolean(source.RoAutoAdd);
+        }
+        if (source.LatencyRemove != null) {
+            this.LatencyRemove = new Boolean(source.LatencyRemove);
+        }
+        if (source.LatencyRemoveTime != null) {
+            this.LatencyRemoveTime = new Long(source.LatencyRemoveTime);
+        }
+        if (source.MinRouteNum != null) {
+            this.MinRouteNum = new Long(source.MinRouteNum);
+        }
+        if (source.LoadBalancePolicy != null) {
+            this.LoadBalancePolicy = new Long(source.LoadBalancePolicy);
+        }
     }
 
 
@@ -173,6 +358,13 @@ public class ModifyDBProxyAddressRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
+        this.setParamSimple(map, prefix + "WeightMode", this.WeightMode);
+        this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+        this.setParamSimple(map, prefix + "RoAutoAdd", this.RoAutoAdd);
+        this.setParamSimple(map, prefix + "LatencyRemove", this.LatencyRemove);
+        this.setParamSimple(map, prefix + "LatencyRemoveTime", this.LatencyRemoveTime);
+        this.setParamSimple(map, prefix + "MinRouteNum", this.MinRouteNum);
+        this.setParamSimple(map, prefix + "LoadBalancePolicy", this.LoadBalancePolicy);
 
     }
 }

@@ -1097,6 +1097,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyInstancePasswordPolicy）用于修改实例密码复杂度。
+     * @param req ModifyInstancePasswordPolicyRequest
+     * @return ModifyInstancePasswordPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordPolicyResponse ModifyInstancePasswordPolicy(ModifyInstancePasswordPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancePasswordPolicy", ModifyInstancePasswordPolicyResponse.class);
+    }
+
+    /**
      *本接口（ModifyInstanceReadOnly）用于设置实例输入模式。
      * @param req ModifyInstanceReadOnlyRequest
      * @return ModifyInstanceReadOnlyResponse

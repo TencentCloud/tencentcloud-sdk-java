@@ -293,6 +293,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *解绑原生节点 Application Role
+     * @param req DetachApplicationRoleRequest
+     * @return DetachApplicationRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachApplicationRoleResponse DetachApplicationRole(DetachApplicationRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetachApplicationRole", DetachApplicationRoleResponse.class);
+    }
+
+    /**
      *修改原生节点
      * @param req ModifyClusterMachineRequest
      * @return ModifyClusterMachineResponse

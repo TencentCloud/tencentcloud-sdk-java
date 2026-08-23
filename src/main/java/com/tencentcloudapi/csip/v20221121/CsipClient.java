@@ -61,6 +61,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *添加镜像仓库信息
+     * @param req AddImageRegistryRequest
+     * @return AddImageRegistryResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddImageRegistryResponse AddImageRegistry(AddImageRegistryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddImageRegistry", AddImageRegistryResponse.class);
+    }
+
+    /**
      *批量添加异地登录白名单
      * @param req AddLoginWhiteListsRequest
      * @return AddLoginWhiteListsResponse
@@ -105,6 +116,50 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *批量修改镜像仓库定时扫描任务配置
+     * @param req BatchModifyImageRegistryTimedScanTaskConfigRequest
+     * @return BatchModifyImageRegistryTimedScanTaskConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyImageRegistryTimedScanTaskConfigResponse BatchModifyImageRegistryTimedScanTaskConfig(BatchModifyImageRegistryTimedScanTaskConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchModifyImageRegistryTimedScanTaskConfig", BatchModifyImageRegistryTimedScanTaskConfigResponse.class);
+    }
+
+    /**
+     *批量修改容器镜像敏感信息白名单
+     * @param req BatchModifyImageSensitiveWhitelistRequest
+     * @return BatchModifyImageSensitiveWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyImageSensitiveWhitelistResponse BatchModifyImageSensitiveWhitelist(BatchModifyImageSensitiveWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchModifyImageSensitiveWhitelist", BatchModifyImageSensitiveWhitelistResponse.class);
+    }
+
+    /**
+     *批量修改镜像木马白名单
+     * @param req BatchModifyImageVirusWhitelistRequest
+     * @return BatchModifyImageVirusWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyImageVirusWhitelistResponse BatchModifyImageVirusWhitelist(BatchModifyImageVirusWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchModifyImageVirusWhitelist", BatchModifyImageVirusWhitelistResponse.class);
+    }
+
+    /**
+     *批量修改容器镜像漏洞白名单
+     * @param req BatchModifyImageVulWhitelistRequest
+     * @return BatchModifyImageVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyImageVulWhitelistResponse BatchModifyImageVulWhitelist(BatchModifyImageVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchModifyImageVulWhitelist", BatchModifyImageVulWhitelistResponse.class);
+    }
+
+    /**
      *绑定集群负责人
      * @param req BindClusterOwnerRequest
      * @return BindClusterOwnerResponse
@@ -135,6 +190,17 @@ public class CsipClient extends AbstractClient{
     public CheckCWPExposePathPermissionResponse CheckCWPExposePathPermission(CheckCWPExposePathPermissionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckCWPExposePathPermission", CheckCWPExposePathPermissionResponse.class);
+    }
+
+    /**
+     *检查镜像仓库实例名是否重复
+     * @param req CheckImageRegistryInstanceNameDuplicateRequest
+     * @return CheckImageRegistryInstanceNameDuplicateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckImageRegistryInstanceNameDuplicateResponse CheckImageRegistryInstanceNameDuplicate(CheckImageRegistryInstanceNameDuplicateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckImageRegistryInstanceNameDuplicate", CheckImageRegistryInstanceNameDuplicateResponse.class);
     }
 
     /**
@@ -214,6 +280,28 @@ public class CsipClient extends AbstractClient{
     public CreateAllAssetsExportJobResponse CreateAllAssetsExportJob(CreateAllAssetsExportJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAllAssetsExportJob", CreateAllAssetsExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像资产中组件列表导出任务
+     * @param req CreateAssetComponentListExportJobRequest
+     * @return CreateAssetComponentListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAssetComponentListExportJobResponse CreateAssetComponentListExportJob(CreateAssetComponentListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAssetComponentListExportJob", CreateAssetComponentListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像仓库组件关联镜像列表导出任务
+     * @param req CreateAssetComponentRelatedImageListExportJobRequest
+     * @return CreateAssetComponentRelatedImageListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAssetComponentRelatedImageListExportJobResponse CreateAssetComponentRelatedImageListExportJob(CreateAssetComponentRelatedImageListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAssetComponentRelatedImageListExportJob", CreateAssetComponentRelatedImageListExportJobResponse.class);
     }
 
     /**
@@ -800,6 +888,182 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建镜像资产列表导出任务
+     * @param req CreateImageAssetListExportJobRequest
+     * @return CreateImageAssetListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageAssetListExportJobResponse CreateImageAssetListExportJob(CreateImageAssetListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageAssetListExportJob", CreateImageAssetListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像关联容器资产导出任务
+     * @param req CreateImageAssociatedContainerListExportJobRequest
+     * @return CreateImageAssociatedContainerListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageAssociatedContainerListExportJobResponse CreateImageAssociatedContainerListExportJob(CreateImageAssociatedContainerListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageAssociatedContainerListExportJob", CreateImageAssociatedContainerListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像关联主机资产列表导出任务
+     * @param req CreateImageAssociatedHostListExportJobRequest
+     * @return CreateImageAssociatedHostListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageAssociatedHostListExportJobResponse CreateImageAssociatedHostListExportJob(CreateImageAssociatedHostListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageAssociatedHostListExportJob", CreateImageAssociatedHostListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像组件列表导出任务
+     * @param req CreateImageComponentListExportJobRequest
+     * @return CreateImageComponentListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageComponentListExportJobResponse CreateImageComponentListExportJob(CreateImageComponentListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageComponentListExportJob", CreateImageComponentListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像层漏洞列表导出任务
+     * @param req CreateImageLayerVulListExportJobRequest
+     * @return CreateImageLayerVulListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageLayerVulListExportJobResponse CreateImageLayerVulListExportJob(CreateImageLayerVulListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageLayerVulListExportJob", CreateImageLayerVulListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像仓库联通性检查任务
+     * @param req CreateImageRegistryConnectivityTaskRequest
+     * @return CreateImageRegistryConnectivityTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageRegistryConnectivityTaskResponse CreateImageRegistryConnectivityTask(CreateImageRegistryConnectivityTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageRegistryConnectivityTask", CreateImageRegistryConnectivityTaskResponse.class);
+    }
+
+    /**
+     *创建镜像仓库列表导出任务
+     * @param req CreateImageRegistryListExportJobRequest
+     * @return CreateImageRegistryListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageRegistryListExportJobResponse CreateImageRegistryListExportJob(CreateImageRegistryListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageRegistryListExportJob", CreateImageRegistryListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像扫描任务
+     * @param req CreateImageRegistryScanTaskRequest
+     * @return CreateImageRegistryScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageRegistryScanTaskResponse CreateImageRegistryScanTask(CreateImageRegistryScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageRegistryScanTask", CreateImageRegistryScanTaskResponse.class);
+    }
+
+    /**
+     *创建镜像仓库镜像扫描任务配置
+     * @param req CreateImageRegistryTimedScanTaskConfigRequest
+     * @return CreateImageRegistryTimedScanTaskConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageRegistryTimedScanTaskConfigResponse CreateImageRegistryTimedScanTaskConfig(CreateImageRegistryTimedScanTaskConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageRegistryTimedScanTaskConfig", CreateImageRegistryTimedScanTaskConfigResponse.class);
+    }
+
+    /**
+     *创建镜像敏感信息列表导出任务
+     * @param req CreateImageSensitiveInfoListExportJobRequest
+     * @return CreateImageSensitiveInfoListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageSensitiveInfoListExportJobResponse CreateImageSensitiveInfoListExportJob(CreateImageSensitiveInfoListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageSensitiveInfoListExportJob", CreateImageSensitiveInfoListExportJobResponse.class);
+    }
+
+    /**
+     *创建容器镜像敏感信息白名单
+     * @param req CreateImageSensitiveWhitelistRequest
+     * @return CreateImageSensitiveWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageSensitiveWhitelistResponse CreateImageSensitiveWhitelist(CreateImageSensitiveWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageSensitiveWhitelist", CreateImageSensitiveWhitelistResponse.class);
+    }
+
+    /**
+     *创建镜像木马病毒列表导出任务
+     * @param req CreateImageVirusListExportJobRequest
+     * @return CreateImageVirusListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageVirusListExportJobResponse CreateImageVirusListExportJob(CreateImageVirusListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageVirusListExportJob", CreateImageVirusListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像木马白名单
+     * @param req CreateImageVirusWhitelistRequest
+     * @return CreateImageVirusWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageVirusWhitelistResponse CreateImageVirusWhitelist(CreateImageVirusWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageVirusWhitelist", CreateImageVirusWhitelistResponse.class);
+    }
+
+    /**
+     *创建镜像漏洞列表导出任务
+     * @param req CreateImageVulListExportJobRequest
+     * @return CreateImageVulListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageVulListExportJobResponse CreateImageVulListExportJob(CreateImageVulListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageVulListExportJob", CreateImageVulListExportJobResponse.class);
+    }
+
+    /**
+     *创建镜像漏洞概览列表导出任务
+     * @param req CreateImageVulSummaryListExportJobRequest
+     * @return CreateImageVulSummaryListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageVulSummaryListExportJobResponse CreateImageVulSummaryListExportJob(CreateImageVulSummaryListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageVulSummaryListExportJob", CreateImageVulSummaryListExportJobResponse.class);
+    }
+
+    /**
+     *创建容器镜像漏洞白名单
+     * @param req CreateImageVulWhitelistRequest
+     * @return CreateImageVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageVulWhitelistResponse CreateImageVulWhitelist(CreateImageVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateImageVulWhitelist", CreateImageVulWhitelistResponse.class);
+    }
+
+    /**
      *创建Pod关联容器列表导出任务。导出字段包含容器ID、容器名称、运行状态、节点ID、节点类型、镜像ID、镜像名称、隔离状态。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。
      * @param req CreatePodContainerListExportJobRequest
      * @return CreatePodContainerListExportJobResponse
@@ -1275,6 +1539,72 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *删除镜像仓库信息
+     * @param req DeleteImageRegistryRequest
+     * @return DeleteImageRegistryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageRegistryResponse DeleteImageRegistry(DeleteImageRegistryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteImageRegistry", DeleteImageRegistryResponse.class);
+    }
+
+    /**
+     *删除镜像仓库扫描任务
+     * @param req DeleteImageRegistryScanTaskRequest
+     * @return DeleteImageRegistryScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageRegistryScanTaskResponse DeleteImageRegistryScanTask(DeleteImageRegistryScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteImageRegistryScanTask", DeleteImageRegistryScanTaskResponse.class);
+    }
+
+    /**
+     *删除镜像仓库定时扫描任务配置
+     * @param req DeleteImageRegistryTimedScanTaskConfigRequest
+     * @return DeleteImageRegistryTimedScanTaskConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageRegistryTimedScanTaskConfigResponse DeleteImageRegistryTimedScanTaskConfig(DeleteImageRegistryTimedScanTaskConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteImageRegistryTimedScanTaskConfig", DeleteImageRegistryTimedScanTaskConfigResponse.class);
+    }
+
+    /**
+     *删除容器镜像敏感信息白名单
+     * @param req DeleteImageSensitiveWhitelistRequest
+     * @return DeleteImageSensitiveWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageSensitiveWhitelistResponse DeleteImageSensitiveWhitelist(DeleteImageSensitiveWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteImageSensitiveWhitelist", DeleteImageSensitiveWhitelistResponse.class);
+    }
+
+    /**
+     *删除镜像木马白名单
+     * @param req DeleteImageVirusWhitelistRequest
+     * @return DeleteImageVirusWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageVirusWhitelistResponse DeleteImageVirusWhitelist(DeleteImageVirusWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteImageVirusWhitelist", DeleteImageVirusWhitelistResponse.class);
+    }
+
+    /**
+     *删除容器镜像漏洞白名单
+     * @param req DeleteImageVulWhitelistRequest
+     * @return DeleteImageVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageVulWhitelistResponse DeleteImageVulWhitelist(DeleteImageVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteImageVulWhitelist", DeleteImageVulWhitelistResponse.class);
+    }
+
+    /**
      *本接口用于删除异地登录白名单规则。
      * @param req DeleteLoginWhiteListRequest
      * @return DeleteLoginWhiteListResponse
@@ -1305,6 +1635,17 @@ public class CsipClient extends AbstractClient{
     public DeleteRiskScanTaskResponse DeleteRiskScanTask(DeleteRiskScanTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRiskScanTask", DeleteRiskScanTaskResponse.class);
+    }
+
+    /**
+     *批量删除 LLM 审计用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+     * @param req DeleteSandboxLLMAuditRuleRequest
+     * @return DeleteSandboxLLMAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSandboxLLMAuditRuleResponse DeleteSandboxLLMAuditRule(DeleteSandboxLLMAuditRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSandboxLLMAuditRule", DeleteSandboxLLMAuditRuleResponse.class);
     }
 
     /**
@@ -1349,6 +1690,39 @@ public class CsipClient extends AbstractClient{
     public DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(DescribeAIAgentAssetListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAIAgentAssetList", DescribeAIAgentAssetListResponse.class);
+    }
+
+    /**
+     *获取 AIAgent 资产凭据扫描列表
+     * @param req DescribeAIAgentCredentialListRequest
+     * @return DescribeAIAgentCredentialListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentCredentialListResponse DescribeAIAgentCredentialList(DescribeAIAgentCredentialListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentCredentialList", DescribeAIAgentCredentialListResponse.class);
+    }
+
+    /**
+     *按凭据组行 ID 分页查询单个凭据的泄露位置列表。用于配合 DescribeAIAgentCredentialList 接口拆分后的展开场景，避免单接口在数据倾斜场景下一次拉取几十万行 location 导致性能问题。
+     * @param req DescribeAIAgentCredentialLocationListRequest
+     * @return DescribeAIAgentCredentialLocationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentCredentialLocationListResponse DescribeAIAgentCredentialLocationList(DescribeAIAgentCredentialLocationListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentCredentialLocationList", DescribeAIAgentCredentialLocationListResponse.class);
+    }
+
+    /**
+     *获取 AI Agent skill 列表
+     * @param req DescribeAIAgentSkillListRequest
+     * @return DescribeAIAgentSkillListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentSkillListResponse DescribeAIAgentSkillList(DescribeAIAgentSkillListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentSkillList", DescribeAIAgentSkillListResponse.class);
     }
 
     /**
@@ -1639,6 +2013,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询资产中组件列表
+     * @param req DescribeAssetComponentListRequest
+     * @return DescribeAssetComponentListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetComponentListResponse DescribeAssetComponentList(DescribeAssetComponentListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetComponentList", DescribeAssetComponentListResponse.class);
+    }
+
+    /**
+     *查询镜像仓库组件关联的镜像列表
+     * @param req DescribeAssetComponentRelatedImageListRequest
+     * @return DescribeAssetComponentRelatedImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetComponentRelatedImageListResponse DescribeAssetComponentRelatedImageList(DescribeAssetComponentRelatedImageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetComponentRelatedImageList", DescribeAssetComponentRelatedImageListResponse.class);
+    }
+
+    /**
      *资产详情信息
      * @param req DescribeAssetDetailRequest
      * @return DescribeAssetDetailResponse
@@ -1801,6 +2197,17 @@ public class CsipClient extends AbstractClient{
     public DescribeAssumeRoleResponse DescribeAssumeRole(DescribeAssumeRoleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAssumeRole", DescribeAssumeRoleResponse.class);
+    }
+
+    /**
+     *查询后台扫描引擎地域列表
+     * @param req DescribeBackendScanEngineRegionListRequest
+     * @return DescribeBackendScanEngineRegionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackendScanEngineRegionListResponse DescribeBackendScanEngineRegionList(DescribeBackendScanEngineRegionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackendScanEngineRegionList", DescribeBackendScanEngineRegionListResponse.class);
     }
 
     /**
@@ -2274,6 +2681,17 @@ public class CsipClient extends AbstractClient{
     public DescribeCallRecordResponse DescribeCallRecord(DescribeCallRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCallRecord", DescribeCallRecordResponse.class);
+    }
+
+    /**
+     *查询联通性检测主机列表
+     * @param req DescribeCheckConnectivityHostListRequest
+     * @return DescribeCheckConnectivityHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCheckConnectivityHostListResponse DescribeCheckConnectivityHostList(DescribeCheckConnectivityHostListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCheckConnectivityHostList", DescribeCheckConnectivityHostListResponse.class);
     }
 
     /**
@@ -4015,6 +4433,281 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询镜像资产详情
+     * @param req DescribeImageAssetDetailRequest
+     * @return DescribeImageAssetDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageAssetDetailResponse DescribeImageAssetDetail(DescribeImageAssetDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageAssetDetail", DescribeImageAssetDetailResponse.class);
+    }
+
+    /**
+     *查询镜像资产列表
+     * @param req DescribeImageAssetListRequest
+     * @return DescribeImageAssetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageAssetListResponse DescribeImageAssetList(DescribeImageAssetListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageAssetList", DescribeImageAssetListResponse.class);
+    }
+
+    /**
+     *查询镜像关联资产数
+     * @param req DescribeImageAssociatedAssetCountRequest
+     * @return DescribeImageAssociatedAssetCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageAssociatedAssetCountResponse DescribeImageAssociatedAssetCount(DescribeImageAssociatedAssetCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageAssociatedAssetCount", DescribeImageAssociatedAssetCountResponse.class);
+    }
+
+    /**
+     *查询镜像关联容器资产
+     * @param req DescribeImageAssociatedContainerListRequest
+     * @return DescribeImageAssociatedContainerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageAssociatedContainerListResponse DescribeImageAssociatedContainerList(DescribeImageAssociatedContainerListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageAssociatedContainerList", DescribeImageAssociatedContainerListResponse.class);
+    }
+
+    /**
+     *查询镜像关联主机资产列表
+     * @param req DescribeImageAssociatedHostListRequest
+     * @return DescribeImageAssociatedHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageAssociatedHostListResponse DescribeImageAssociatedHostList(DescribeImageAssociatedHostListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageAssociatedHostList", DescribeImageAssociatedHostListResponse.class);
+    }
+
+    /**
+     *查询镜像组件列表
+     * @param req DescribeImageComponentListRequest
+     * @return DescribeImageComponentListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageComponentListResponse DescribeImageComponentList(DescribeImageComponentListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageComponentList", DescribeImageComponentListResponse.class);
+    }
+
+    /**
+     *查询镜像仓库导出任务列表
+     * @param req DescribeImageExportJobListRequest
+     * @return DescribeImageExportJobListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageExportJobListResponse DescribeImageExportJobList(DescribeImageExportJobListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageExportJobList", DescribeImageExportJobListResponse.class);
+    }
+
+    /**
+     *查询镜像层信息列表
+     * @param req DescribeImageLayerListRequest
+     * @return DescribeImageLayerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageLayerListResponse DescribeImageLayerList(DescribeImageLayerListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageLayerList", DescribeImageLayerListResponse.class);
+    }
+
+    /**
+     *查询镜像层漏洞列表
+     * @param req DescribeImageLayerVulListRequest
+     * @return DescribeImageLayerVulListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageLayerVulListResponse DescribeImageLayerVulList(DescribeImageLayerVulListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageLayerVulList", DescribeImageLayerVulListResponse.class);
+    }
+
+    /**
+     *查询镜像仓库资产总览
+     * @param req DescribeImageRegistryAssetOverviewRequest
+     * @return DescribeImageRegistryAssetOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryAssetOverviewResponse DescribeImageRegistryAssetOverview(DescribeImageRegistryAssetOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryAssetOverview", DescribeImageRegistryAssetOverviewResponse.class);
+    }
+
+    /**
+     *查询镜像仓库联通性检查任务结果
+     * @param req DescribeImageRegistryConnectivityTaskResultRequest
+     * @return DescribeImageRegistryConnectivityTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryConnectivityTaskResultResponse DescribeImageRegistryConnectivityTaskResult(DescribeImageRegistryConnectivityTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryConnectivityTaskResult", DescribeImageRegistryConnectivityTaskResultResponse.class);
+    }
+
+    /**
+     *查询镜像仓库列表
+     * @param req DescribeImageRegistryListRequest
+     * @return DescribeImageRegistryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryListResponse DescribeImageRegistryList(DescribeImageRegistryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryList", DescribeImageRegistryListResponse.class);
+    }
+
+    /**
+     *查询镜像仓库命名空间列表
+     * @param req DescribeImageRegistryNamespaceListRequest
+     * @return DescribeImageRegistryNamespaceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(DescribeImageRegistryNamespaceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryNamespaceList", DescribeImageRegistryNamespaceListResponse.class);
+    }
+
+    /**
+     *查询镜像仓库扫描子任务信息
+     * @param req DescribeImageRegistryScanSubTaskListRequest
+     * @return DescribeImageRegistryScanSubTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryScanSubTaskListResponse DescribeImageRegistryScanSubTaskList(DescribeImageRegistryScanSubTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryScanSubTaskList", DescribeImageRegistryScanSubTaskListResponse.class);
+    }
+
+    /**
+     *查询镜像仓库镜像扫描任务列表
+     * @param req DescribeImageRegistryScanTaskListRequest
+     * @return DescribeImageRegistryScanTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryScanTaskListResponse DescribeImageRegistryScanTaskList(DescribeImageRegistryScanTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryScanTaskList", DescribeImageRegistryScanTaskListResponse.class);
+    }
+
+    /**
+     *查看镜像仓库定时扫描任务配置
+     * @param req DescribeImageRegistryTimedScanTaskConfigRequest
+     * @return DescribeImageRegistryTimedScanTaskConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryTimedScanTaskConfigResponse DescribeImageRegistryTimedScanTaskConfig(DescribeImageRegistryTimedScanTaskConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryTimedScanTaskConfig", DescribeImageRegistryTimedScanTaskConfigResponse.class);
+    }
+
+    /**
+     *查询镜像仓库定时扫描任务预览
+     * @param req DescribeImageRegistryTimedScanTaskPreviewRequest
+     * @return DescribeImageRegistryTimedScanTaskPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRegistryTimedScanTaskPreviewResponse DescribeImageRegistryTimedScanTaskPreview(DescribeImageRegistryTimedScanTaskPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageRegistryTimedScanTaskPreview", DescribeImageRegistryTimedScanTaskPreviewResponse.class);
+    }
+
+    /**
+     *查询镜像敏感信息列表
+     * @param req DescribeImageSensitiveInfoListRequest
+     * @return DescribeImageSensitiveInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageSensitiveInfoListResponse DescribeImageSensitiveInfoList(DescribeImageSensitiveInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageSensitiveInfoList", DescribeImageSensitiveInfoListResponse.class);
+    }
+
+    /**
+     *查询容器镜像敏感信息白名单
+     * @param req DescribeImageSensitiveWhitelistRequest
+     * @return DescribeImageSensitiveWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageSensitiveWhitelistResponse DescribeImageSensitiveWhitelist(DescribeImageSensitiveWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageSensitiveWhitelist", DescribeImageSensitiveWhitelistResponse.class);
+    }
+
+    /**
+     *查询镜像木马病毒列表
+     * @param req DescribeImageVirusListRequest
+     * @return DescribeImageVirusListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageVirusListResponse DescribeImageVirusList(DescribeImageVirusListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageVirusList", DescribeImageVirusListResponse.class);
+    }
+
+    /**
+     *查询镜像木马白名单
+     * @param req DescribeImageVirusWhitelistRequest
+     * @return DescribeImageVirusWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageVirusWhitelistResponse DescribeImageVirusWhitelist(DescribeImageVirusWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageVirusWhitelist", DescribeImageVirusWhitelistResponse.class);
+    }
+
+    /**
+     *查询镜像木马白名单详情
+     * @param req DescribeImageVirusWhitelistDetailRequest
+     * @return DescribeImageVirusWhitelistDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageVirusWhitelistDetailResponse DescribeImageVirusWhitelistDetail(DescribeImageVirusWhitelistDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageVirusWhitelistDetail", DescribeImageVirusWhitelistDetailResponse.class);
+    }
+
+    /**
+     *查询镜像漏洞列表
+     * @param req DescribeImageVulListRequest
+     * @return DescribeImageVulListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageVulListResponse DescribeImageVulList(DescribeImageVulListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageVulList", DescribeImageVulListResponse.class);
+    }
+
+    /**
+     *查询镜像漏洞概览列表
+     * @param req DescribeImageVulSummaryListRequest
+     * @return DescribeImageVulSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageVulSummaryListResponse DescribeImageVulSummaryList(DescribeImageVulSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageVulSummaryList", DescribeImageVulSummaryListResponse.class);
+    }
+
+    /**
+     *查询容器镜像漏洞白名单
+     * @param req DescribeImageVulWhitelistRequest
+     * @return DescribeImageVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageVulWhitelistResponse DescribeImageVulWhitelist(DescribeImageVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageVulWhitelist", DescribeImageVulWhitelistResponse.class);
+    }
+
+    /**
      *对象存储异常检测调用记录信息
      * @param req DescribeIpInvokeRecordRequest
      * @return DescribeIpInvokeRecordResponse
@@ -4334,6 +5027,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取通知设置（云API风险治理）
+     * @param req DescribeNotifySettingAkRequest
+     * @return DescribeNotifySettingAkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotifySettingAkResponse DescribeNotifySettingAk(DescribeNotifySettingAkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNotifySettingAk", DescribeNotifySettingAkResponse.class);
+    }
+
+    /**
      *获取告警中心通知高级配置
      * @param req DescribeNotifySettingAlertRequest
      * @return DescribeNotifySettingAlertResponse
@@ -4496,6 +5200,28 @@ public class CsipClient extends AbstractClient{
     public DescribeRaspLicenseListResponse DescribeRaspLicenseList(DescribeRaspLicenseListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRaspLicenseList", DescribeRaspLicenseListResponse.class);
+    }
+
+    /**
+     *查询仓库总览
+     * @param req DescribeRegistryOverviewRequest
+     * @return DescribeRegistryOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegistryOverviewResponse DescribeRegistryOverview(DescribeRegistryOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegistryOverview", DescribeRegistryOverviewResponse.class);
+    }
+
+    /**
+     *查询镜像仓库地域列表
+     * @param req DescribeRegistryRegionListRequest
+     * @return DescribeRegistryRegionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegistryRegionListResponse DescribeRegistryRegionList(DescribeRegistryRegionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegistryRegionList", DescribeRegistryRegionListResponse.class);
     }
 
     /**
@@ -4763,6 +5489,61 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *分页查询 ACL 访问控制告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+     * @param req DescribeSandboxACLAlertListRequest
+     * @return DescribeSandboxACLAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxACLAlertListResponse DescribeSandboxACLAlertList(DescribeSandboxACLAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxACLAlertList", DescribeSandboxACLAlertListResponse.class);
+    }
+
+    /**
+     *查询当前租户的 ACL 用户访问控制规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+     * @param req DescribeSandboxACLRuleListRequest
+     * @return DescribeSandboxACLRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxACLRuleListResponse DescribeSandboxACLRuleList(DescribeSandboxACLRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxACLRuleList", DescribeSandboxACLRuleListResponse.class);
+    }
+
+    /**
+     *查询流量沙箱访问控制（ACL）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+     * @param req DescribeSandboxACLSystemRuleListRequest
+     * @return DescribeSandboxACLSystemRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxACLSystemRuleListResponse DescribeSandboxACLSystemRuleList(DescribeSandboxACLSystemRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxACLSystemRuleList", DescribeSandboxACLSystemRuleListResponse.class);
+    }
+
+    /**
+     *查询流量沙箱数据泄露防护（DLP）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
+     * @param req DescribeSandboxDLPSystemRuleListRequest
+     * @return DescribeSandboxDLPSystemRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxDLPSystemRuleListResponse DescribeSandboxDLPSystemRuleList(DescribeSandboxDLPSystemRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxDLPSystemRuleList", DescribeSandboxDLPSystemRuleListResponse.class);
+    }
+
+    /**
+     *获取命令沙箱文件规则列表
+     * @param req DescribeSandboxFileRuleListRequest
+     * @return DescribeSandboxFileRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxFileRuleListResponse DescribeSandboxFileRuleList(DescribeSandboxFileRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxFileRuleList", DescribeSandboxFileRuleListResponse.class);
+    }
+
+    /**
      *获取扫描报告列表
      * @param req DescribeScanReportListRequest
      * @return DescribeScanReportListResponse
@@ -4873,6 +5654,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询 Skill 安全检测告警详情，包含本地告警信息和引擎实时检测数据
+     * @param req DescribeSkillScanAlertDetailRequest
+     * @return DescribeSkillScanAlertDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillScanAlertDetailResponse DescribeSkillScanAlertDetail(DescribeSkillScanAlertDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillScanAlertDetail", DescribeSkillScanAlertDetailResponse.class);
+    }
+
+    /**
+     *查询 Skill 安全检测告警列表，支持分页、过滤和排序
+     * @param req DescribeSkillScanAlertListRequest
+     * @return DescribeSkillScanAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillScanAlertListResponse DescribeSkillScanAlertList(DescribeSkillScanAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillScanAlertList", DescribeSkillScanAlertListResponse.class);
+    }
+
+    /**
      *查询 Skill 安全检测计费信息，包括订单状态、总配额、已消耗配额、到期时间、支付模式等。无订单时返回零值（仅含 TimeNow 和 BetaEndTime）。试用订单通过 ModifyTrialStatus(Module=9) 领取，正式订单通过计费系统创建。
      * @param req DescribeSkillScanPayInfoRequest
      * @return DescribeSkillScanPayInfoResponse
@@ -4925,6 +5728,17 @@ public class CsipClient extends AbstractClient{
     public DescribeSubnetAssetsResponse DescribeSubnetAssets(DescribeSubnetAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSubnetAssets", DescribeSubnetAssetsResponse.class);
+    }
+
+    /**
+     *获取TCR实例列表
+     * @param req DescribeTCRInstanceListRequest
+     * @return DescribeTCRInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTCRInstanceListResponse DescribeTCRInstanceList(DescribeTCRInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTCRInstanceList", DescribeTCRInstanceListResponse.class);
     }
 
     /**
@@ -6150,6 +6964,61 @@ capi 层处理流程：
     }
 
     /**
+     *修改镜像仓库信息
+     * @param req ModifyImageRegistryRequest
+     * @return ModifyImageRegistryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageRegistryResponse ModifyImageRegistry(ModifyImageRegistryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageRegistry", ModifyImageRegistryResponse.class);
+    }
+
+    /**
+     *修改镜像仓库定时扫描任务配置
+     * @param req ModifyImageRegistryTimedScanTaskConfigRequest
+     * @return ModifyImageRegistryTimedScanTaskConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageRegistryTimedScanTaskConfigResponse ModifyImageRegistryTimedScanTaskConfig(ModifyImageRegistryTimedScanTaskConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageRegistryTimedScanTaskConfig", ModifyImageRegistryTimedScanTaskConfigResponse.class);
+    }
+
+    /**
+     *修改容器镜像敏感信息白名单
+     * @param req ModifyImageSensitiveWhitelistRequest
+     * @return ModifyImageSensitiveWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageSensitiveWhitelistResponse ModifyImageSensitiveWhitelist(ModifyImageSensitiveWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageSensitiveWhitelist", ModifyImageSensitiveWhitelistResponse.class);
+    }
+
+    /**
+     *查询资产数据库信息
+     * @param req ModifyImageVirusWhitelistRequest
+     * @return ModifyImageVirusWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageVirusWhitelistResponse ModifyImageVirusWhitelist(ModifyImageVirusWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageVirusWhitelist", ModifyImageVirusWhitelistResponse.class);
+    }
+
+    /**
+     *修改容器镜像漏洞白名单
+     * @param req ModifyImageVulWhitelistRequest
+     * @return ModifyImageVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageVulWhitelistResponse ModifyImageVulWhitelist(ModifyImageVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageVulWhitelist", ModifyImageVulWhitelistResponse.class);
+    }
+
+    /**
      *更新合并后登录审计白名单信息（服务器列表数目应小于1000）
      * @param req ModifyLoginWhiteRecordRequest
      * @return ModifyLoginWhiteRecordResponse
@@ -6260,6 +7129,17 @@ capi 层处理流程：
     }
 
     /**
+     *修改通知成员账号
+     * @param req ModifyNotifyMemberRequest
+     * @return ModifyNotifyMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotifyMemberResponse ModifyNotifyMember(ModifyNotifyMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotifyMember", ModifyNotifyMemberResponse.class);
+    }
+
+    /**
      *修改通知设置
      * @param req ModifyNotifySettingRequest
      * @return ModifyNotifySettingResponse
@@ -6268,6 +7148,17 @@ capi 层处理流程：
     public ModifyNotifySettingResponse ModifyNotifySetting(ModifyNotifySettingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNotifySetting", ModifyNotifySettingResponse.class);
+    }
+
+    /**
+     *修改通知设置（云API风险治理）
+     * @param req ModifyNotifySettingAkRequest
+     * @return ModifyNotifySettingAkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotifySettingAkResponse ModifyNotifySettingAk(ModifyNotifySettingAkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotifySettingAk", ModifyNotifySettingAkResponse.class);
     }
 
     /**
@@ -6390,6 +7281,17 @@ capi 层处理流程：
     }
 
     /**
+     *批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+     * @param req ModifySandboxLLMAuditRuleStatusRequest
+     * @return ModifySandboxLLMAuditRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxLLMAuditRuleStatusResponse ModifySandboxLLMAuditRuleStatus(ModifySandboxLLMAuditRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxLLMAuditRuleStatus", ModifySandboxLLMAuditRuleStatusResponse.class);
+    }
+
+    /**
      *修改安全评分规则，必须传入完整规则集
      * @param req ModifySecurityScoreRuleRequest
      * @return ModifySecurityScoreRuleResponse
@@ -6409,6 +7311,17 @@ capi 层处理流程：
     public ModifyShareUserCSPMResponse ModifyShareUserCSPM(ModifyShareUserCSPMRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyShareUserCSPM", ModifyShareUserCSPMResponse.class);
+    }
+
+    /**
+     *批量修改 Skill 安全检测告警的处理状态
+     * @param req ModifySkillScanAlertStatusRequest
+     * @return ModifySkillScanAlertStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySkillScanAlertStatusResponse ModifySkillScanAlertStatus(ModifySkillScanAlertStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySkillScanAlertStatus", ModifySkillScanAlertStatusResponse.class);
     }
 
     /**
@@ -6676,6 +7589,17 @@ capi 层处理流程：
     }
 
     /**
+     *停止镜像仓库镜像扫描任务
+     * @param req StopImageRegistryScanTaskRequest
+     * @return StopImageRegistryScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopImageRegistryScanTaskResponse StopImageRegistryScanTask(StopImageRegistryScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopImageRegistryScanTask", StopImageRegistryScanTaskResponse.class);
+    }
+
+    /**
      *关闭防卸载功能
      * @param req StopPreventUninstallRequest
      * @return StopPreventUninstallResponse
@@ -6739,6 +7663,17 @@ capi 层处理流程：
     public SyncDspmUsersResponse SyncDspmUsers(SyncDspmUsersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SyncDspmUsers", SyncDspmUsersResponse.class);
+    }
+
+    /**
+     *镜像仓库同步
+     * @param req SyncImageRegistryRequest
+     * @return SyncImageRegistryResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncImageRegistryResponse SyncImageRegistry(SyncImageRegistryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncImageRegistry", SyncImageRegistryResponse.class);
     }
 
     /**
