@@ -87,6 +87,13 @@ public class SeeTaskInfo extends AbstractModel {
     private SeeDetectContinuousResult DetectContinuousResult;
 
     /**
+    * <p>人脸检测结果</p>
+    */
+    @SerializedName("FaceRecognitionResult")
+    @Expose
+    private SeeFaceRecognitionResult FaceRecognitionResult;
+
+    /**
     * <p>完成该任务所消耗的基础能力额度</p>
     */
     @SerializedName("CostBasic")
@@ -280,6 +287,22 @@ public class SeeTaskInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>人脸检测结果</p> 
+     * @return FaceRecognitionResult <p>人脸检测结果</p>
+     */
+    public SeeFaceRecognitionResult getFaceRecognitionResult() {
+        return this.FaceRecognitionResult;
+    }
+
+    /**
+     * Set <p>人脸检测结果</p>
+     * @param FaceRecognitionResult <p>人脸检测结果</p>
+     */
+    public void setFaceRecognitionResult(SeeFaceRecognitionResult FaceRecognitionResult) {
+        this.FaceRecognitionResult = FaceRecognitionResult;
+    }
+
+    /**
      * Get <p>完成该任务所消耗的基础能力额度</p> 
      * @return CostBasic <p>完成该任务所消耗的基础能力额度</p>
      */
@@ -426,6 +449,9 @@ public class SeeTaskInfo extends AbstractModel {
         if (source.DetectContinuousResult != null) {
             this.DetectContinuousResult = new SeeDetectContinuousResult(source.DetectContinuousResult);
         }
+        if (source.FaceRecognitionResult != null) {
+            this.FaceRecognitionResult = new SeeFaceRecognitionResult(source.FaceRecognitionResult);
+        }
         if (source.CostBasic != null) {
             this.CostBasic = new Long(source.CostBasic);
         }
@@ -469,6 +495,7 @@ public class SeeTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ComprehensionResult.", this.ComprehensionResult);
         this.setParamObj(map, prefix + "CompHighlightResult.", this.CompHighlightResult);
         this.setParamObj(map, prefix + "DetectContinuousResult.", this.DetectContinuousResult);
+        this.setParamObj(map, prefix + "FaceRecognitionResult.", this.FaceRecognitionResult);
         this.setParamSimple(map, prefix + "CostBasic", this.CostBasic);
         this.setParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
         this.setParamArraySimple(map, prefix + "Files.", this.Files);

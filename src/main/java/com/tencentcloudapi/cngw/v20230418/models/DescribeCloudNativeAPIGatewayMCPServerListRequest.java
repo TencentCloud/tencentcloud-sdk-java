@@ -45,6 +45,13 @@ public class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractM
     private Long Offset;
 
     /**
+    * <p>密钥凭证ID</p>
+    */
+    @SerializedName("SecretKeyId")
+    @Expose
+    private String SecretKeyId;
+
+    /**
      * Get <p>实例 ID</p> 
      * @return GatewayId <p>实例 ID</p>
      */
@@ -92,6 +99,22 @@ public class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractM
         this.Offset = Offset;
     }
 
+    /**
+     * Get <p>密钥凭证ID</p> 
+     * @return SecretKeyId <p>密钥凭证ID</p>
+     */
+    public String getSecretKeyId() {
+        return this.SecretKeyId;
+    }
+
+    /**
+     * Set <p>密钥凭证ID</p>
+     * @param SecretKeyId <p>密钥凭证ID</p>
+     */
+    public void setSecretKeyId(String SecretKeyId) {
+        this.SecretKeyId = SecretKeyId;
+    }
+
     public DescribeCloudNativeAPIGatewayMCPServerListRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractM
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.SecretKeyId != null) {
+            this.SecretKeyId = new String(source.SecretKeyId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeCloudNativeAPIGatewayMCPServerListRequest extends AbstractM
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
 
     }
 }

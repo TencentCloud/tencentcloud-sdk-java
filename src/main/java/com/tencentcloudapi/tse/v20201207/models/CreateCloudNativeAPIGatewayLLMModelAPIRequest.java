@@ -31,95 +31,109 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     private String GatewayId;
 
     /**
-    * <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
+    * <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：2-50 字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
+    * <p>选择业务场景,  选项：Chat（聊天）。</p>
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
+    * <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
     */
     @SerializedName("RequestProtocol")
     @Expose
     private String RequestProtocol;
 
     /**
-    * <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
+    * <p>初始化关联的模型服务列表。</p>
     */
     @SerializedName("ListModelServiceId")
     @Expose
     private String [] ListModelServiceId;
 
     /**
-    * <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
+    * <p>路由列表</p>
     */
     @SerializedName("RouteList")
     @Expose
     private DefaultKongRoute [] RouteList;
 
     /**
-    * <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+    * <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
     */
     @SerializedName("BasePath")
     @Expose
     private String BasePath;
 
     /**
-    * <p>模型 API 描述。最长 200 字符。</p>
+    * <p>模型 API 的相关描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+    * <p>模型服务路由策略（是指如何路由到模型服务）</p>
     */
     @SerializedName("ModelServiceRoute")
     @Expose
     private CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute;
 
     /**
-    * <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+    * <p>路由 Header 匹配规则</p>
     */
     @SerializedName("MatchHeaders")
     @Expose
     private AIGWKVMatch [] MatchHeaders;
 
     /**
-    * <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
+    * <p>跨服务 fallback 开关</p>
     */
     @SerializedName("EnableCrossServiceFallback")
     @Expose
     private Boolean EnableCrossServiceFallback;
 
     /**
-    * <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+    * <p>跨服务 fallback 配置</p>
     */
     @SerializedName("CrossServiceFallbackConfig")
     @Expose
     private AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig;
 
     /**
-    * <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+    * <p>标签</p>
     */
     @SerializedName("TagFilter")
     @Expose
     private AIGWTagFilter TagFilter;
 
     /**
-    * <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+    * <p>模型 API 日志配置。未传时使用默认日志配置。</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private AIGWLogConfig LogConfig;
+
+    /**
+    * <p>Rerank场景最大文档数限制</p>
+    */
+    @SerializedName("MaxDocumentsConfig")
+    @Expose
+    private AIGWRerankMaxDocumentsConfig MaxDocumentsConfig;
+
+    /**
+    * <p>敏感词路由配置</p>
+    */
+    @SerializedName("SensitiveWordRoute")
+    @Expose
+    private AIGWSensitiveWordRoute SensitiveWordRoute;
 
     /**
      * Get <p>网关 id。</p> 
@@ -138,211 +152,243 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     }
 
     /**
-     * Get <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p> 
-     * @return Name <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
+     * Get <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：2-50 字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p> 
+     * @return Name <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：2-50 字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
-     * @param Name <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
+     * Set <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：2-50 字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
+     * @param Name <p>AI 网关 LLM 模型 API 的唯一标识名称，格式规则：2-50 字符，支持中英文大小写、数字及分隔符（“-”、“_”)，不能以数字和分隔符开头，不能以分隔符结尾。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul> 
-     * @return SceneType <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
+     * Get <p>选择业务场景,  选项：Chat（聊天）。</p> 
+     * @return SceneType <p>选择业务场景,  选项：Chat（聊天）。</p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
-     * @param SceneType <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
+     * Set <p>选择业务场景,  选项：Chat（聊天）。</p>
+     * @param SceneType <p>选择业务场景,  选项：Chat（聊天）。</p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul> 
-     * @return RequestProtocol <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
+     * Get <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p> 
+     * @return RequestProtocol <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
      */
     public String getRequestProtocol() {
         return this.RequestProtocol;
     }
 
     /**
-     * Set <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
-     * @param RequestProtocol <p>请求协议（小写）。当前仅支持：</p><ul><li>openai</li></ul>
+     * Set <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
+     * @param RequestProtocol <p>业务场景对应的请求协议，选项：OpenAI（目前只支持 OpenAI）。</p>
      */
     public void setRequestProtocol(String RequestProtocol) {
         this.RequestProtocol = RequestProtocol;
     }
 
     /**
-     * Get <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p> 
-     * @return ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
+     * Get <p>初始化关联的模型服务列表。</p> 
+     * @return ListModelServiceId <p>初始化关联的模型服务列表。</p>
      */
     public String [] getListModelServiceId() {
         return this.ListModelServiceId;
     }
 
     /**
-     * Set <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
-     * @param ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p><p>注：字段名建议改为 ModelServiceIds，当前保留用于兼容。</p>
+     * Set <p>初始化关联的模型服务列表。</p>
+     * @param ListModelServiceId <p>初始化关联的模型服务列表。</p>
      */
     public void setListModelServiceId(String [] ListModelServiceId) {
         this.ListModelServiceId = ListModelServiceId;
     }
 
     /**
-     * Get <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p> 
-     * @return RouteList <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
+     * Get <p>路由列表</p> 
+     * @return RouteList <p>路由列表</p>
      */
     public DefaultKongRoute [] getRouteList() {
         return this.RouteList;
     }
 
     /**
-     * Set <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
-     * @param RouteList <p>路由列表，至少 1 条。每条包含 Methods/Paths/Hosts 等 Kong 路由属性。</p>
+     * Set <p>路由列表</p>
+     * @param RouteList <p>路由列表</p>
      */
     public void setRouteList(DefaultKongRoute [] RouteList) {
         this.RouteList = RouteList;
     }
 
     /**
-     * Get <p>统一前缀路径（可选）。例如 /v1/openai。</p> 
-     * @return BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+     * Get <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p> 
+     * @return BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
      */
     public String getBasePath() {
         return this.BasePath;
     }
 
     /**
-     * Set <p>统一前缀路径（可选）。例如 /v1/openai。</p>
-     * @param BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+     * Set <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * @param BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
      */
     public void setBasePath(String BasePath) {
         this.BasePath = BasePath;
     }
 
     /**
-     * Get <p>模型 API 描述。最长 200 字符。</p> 
-     * @return Description <p>模型 API 描述。最长 200 字符。</p>
+     * Get <p>模型 API 的相关描述。</p> 
+     * @return Description <p>模型 API 的相关描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>模型 API 描述。最长 200 字符。</p>
-     * @param Description <p>模型 API 描述。最长 200 字符。</p>
+     * Set <p>模型 API 的相关描述。</p>
+     * @param Description <p>模型 API 的相关描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p> 
-     * @return ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+     * Get <p>模型服务路由策略（是指如何路由到模型服务）</p> 
+     * @return ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
      */
     public CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() {
         return this.ModelServiceRoute;
     }
 
     /**
-     * Set <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
-     * @param ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+     * Set <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * @param ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
      */
     public void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute) {
         this.ModelServiceRoute = ModelServiceRoute;
     }
 
     /**
-     * Get <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p> 
-     * @return MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * Get <p>路由 Header 匹配规则</p> 
+     * @return MatchHeaders <p>路由 Header 匹配规则</p>
      */
     public AIGWKVMatch [] getMatchHeaders() {
         return this.MatchHeaders;
     }
 
     /**
-     * Set <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
-     * @param MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * Set <p>路由 Header 匹配规则</p>
+     * @param MatchHeaders <p>路由 Header 匹配规则</p>
      */
     public void setMatchHeaders(AIGWKVMatch [] MatchHeaders) {
         this.MatchHeaders = MatchHeaders;
     }
 
     /**
-     * Get <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p> 
-     * @return EnableCrossServiceFallback <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
+     * Get <p>跨服务 fallback 开关</p> 
+     * @return EnableCrossServiceFallback <p>跨服务 fallback 开关</p>
      */
     public Boolean getEnableCrossServiceFallback() {
         return this.EnableCrossServiceFallback;
     }
 
     /**
-     * Set <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
-     * @param EnableCrossServiceFallback <p>是否启用跨服务 Fallback。开启后需提供 CrossServiceFallbackConfig。</p>
+     * Set <p>跨服务 fallback 开关</p>
+     * @param EnableCrossServiceFallback <p>跨服务 fallback 开关</p>
      */
     public void setEnableCrossServiceFallback(Boolean EnableCrossServiceFallback) {
         this.EnableCrossServiceFallback = EnableCrossServiceFallback;
     }
 
     /**
-     * Get <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p> 
-     * @return CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+     * Get <p>跨服务 fallback 配置</p> 
+     * @return CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
      */
     public AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() {
         return this.CrossServiceFallbackConfig;
     }
 
     /**
-     * Set <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
-     * @param CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+     * Set <p>跨服务 fallback 配置</p>
+     * @param CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
      */
     public void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig) {
         this.CrossServiceFallbackConfig = CrossServiceFallbackConfig;
     }
 
     /**
-     * Get <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p> 
-     * @return TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     * Get <p>标签</p> 
+     * @return TagFilter <p>标签</p>
      */
     public AIGWTagFilter getTagFilter() {
         return this.TagFilter;
     }
 
     /**
-     * Set <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
-     * @param TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     * Set <p>标签</p>
+     * @param TagFilter <p>标签</p>
      */
     public void setTagFilter(AIGWTagFilter TagFilter) {
         this.TagFilter = TagFilter;
     }
 
     /**
-     * Get <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p> 
-     * @return LogConfig <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+     * Get <p>模型 API 日志配置。未传时使用默认日志配置。</p> 
+     * @return LogConfig <p>模型 API 日志配置。未传时使用默认日志配置。</p>
      */
     public AIGWLogConfig getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
-     * @param LogConfig <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
+     * Set <p>模型 API 日志配置。未传时使用默认日志配置。</p>
+     * @param LogConfig <p>模型 API 日志配置。未传时使用默认日志配置。</p>
      */
     public void setLogConfig(AIGWLogConfig LogConfig) {
         this.LogConfig = LogConfig;
+    }
+
+    /**
+     * Get <p>Rerank场景最大文档数限制</p> 
+     * @return MaxDocumentsConfig <p>Rerank场景最大文档数限制</p>
+     */
+    public AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() {
+        return this.MaxDocumentsConfig;
+    }
+
+    /**
+     * Set <p>Rerank场景最大文档数限制</p>
+     * @param MaxDocumentsConfig <p>Rerank场景最大文档数限制</p>
+     */
+    public void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig MaxDocumentsConfig) {
+        this.MaxDocumentsConfig = MaxDocumentsConfig;
+    }
+
+    /**
+     * Get <p>敏感词路由配置</p> 
+     * @return SensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public AIGWSensitiveWordRoute getSensitiveWordRoute() {
+        return this.SensitiveWordRoute;
+    }
+
+    /**
+     * Set <p>敏感词路由配置</p>
+     * @param SensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public void setSensitiveWordRoute(AIGWSensitiveWordRoute SensitiveWordRoute) {
+        this.SensitiveWordRoute = SensitiveWordRoute;
     }
 
     public CreateCloudNativeAPIGatewayLLMModelAPIRequest() {
@@ -404,6 +450,12 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (source.LogConfig != null) {
             this.LogConfig = new AIGWLogConfig(source.LogConfig);
         }
+        if (source.MaxDocumentsConfig != null) {
+            this.MaxDocumentsConfig = new AIGWRerankMaxDocumentsConfig(source.MaxDocumentsConfig);
+        }
+        if (source.SensitiveWordRoute != null) {
+            this.SensitiveWordRoute = new AIGWSensitiveWordRoute(source.SensitiveWordRoute);
+        }
     }
 
 
@@ -425,6 +477,8 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.setParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
         this.setParamObj(map, prefix + "TagFilter.", this.TagFilter);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
+        this.setParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
+        this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
 
     }
 }

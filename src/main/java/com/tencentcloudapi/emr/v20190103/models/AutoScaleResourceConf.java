@@ -24,126 +24,126 @@ import java.util.HashMap;
 public class AutoScaleResourceConf extends AbstractModel {
 
     /**
-    * 配置ID。
+    * <p>配置ID。</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 集群实例ID。
+    * <p>集群实例ID。</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private Long ClusterId;
 
     /**
-    * 自动扩缩容保留最小实例数。
+    * <p>自动扩缩容保留最小实例数。</p>
     */
     @SerializedName("ScaleLowerBound")
     @Expose
     private Long ScaleLowerBound;
 
     /**
-    * 自动扩缩容最大实例数。
+    * <p>自动扩缩容最大实例数。</p>
     */
     @SerializedName("ScaleUpperBound")
     @Expose
     private Long ScaleUpperBound;
 
     /**
-    * 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
+    * <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private Long StrategyType;
 
     /**
-    * 下次可扩容时间。
+    * <p>下次可扩容时间。</p>
     */
     @SerializedName("NextTimeCanScale")
     @Expose
     private Long NextTimeCanScale;
 
     /**
-    * 优雅缩容开关
+    * <p>优雅缩容开关</p>
     */
     @SerializedName("GraceDownFlag")
     @Expose
     private Boolean GraceDownFlag;
 
     /**
-    * "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+    * <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
     */
     @SerializedName("HardwareType")
     @Expose
     private String HardwareType;
 
     /**
-    * "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+    * <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+    * <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
     */
     @SerializedName("PostPayPercentMin")
     @Expose
     private Long PostPayPercentMin;
 
     /**
-    * 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
+    * <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
     */
     @SerializedName("ChangeToPod")
     @Expose
     private Long ChangeToPod;
 
     /**
-    * 伸缩组名
+    * <p>伸缩组名</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * 对应的计算组
+    * <p>对应的计算组</p>
     */
     @SerializedName("WarehouseName")
     @Expose
     private String WarehouseName;
 
     /**
-    * 伸缩组状态
+    * <p>伸缩组状态</p>
     */
     @SerializedName("GroupStatus")
     @Expose
     private Long GroupStatus;
 
     /**
-    * 并行伸缩 0关闭；1开启
+    * <p>并行伸缩 0关闭；1开启</p>
     */
     @SerializedName("Parallel")
     @Expose
     private Long Parallel;
 
     /**
-    * 是否支持MNode
+    * <p>是否支持MNode</p>
     */
     @SerializedName("EnableMNode")
     @Expose
     private Long EnableMNode;
 
     /**
-    * 伸缩组更多设置
+    * <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraAdvanceAttrs")
@@ -151,281 +151,288 @@ public class AutoScaleResourceConf extends AbstractModel {
     private AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs;
 
     /**
-     * Get 配置ID。 
-     * @return Id 配置ID。
+    * <p>自定义主机名</p>
+    */
+    @SerializedName("CustomNodeName")
+    @Expose
+    private String CustomNodeName;
+
+    /**
+     * Get <p>配置ID。</p> 
+     * @return Id <p>配置ID。</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 配置ID。
-     * @param Id 配置ID。
+     * Set <p>配置ID。</p>
+     * @param Id <p>配置ID。</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集群实例ID。 
-     * @return ClusterId 集群实例ID。
+     * Get <p>集群实例ID。</p> 
+     * @return ClusterId <p>集群实例ID。</p>
      */
     public Long getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群实例ID。
-     * @param ClusterId 集群实例ID。
+     * Set <p>集群实例ID。</p>
+     * @param ClusterId <p>集群实例ID。</p>
      */
     public void setClusterId(Long ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 自动扩缩容保留最小实例数。 
-     * @return ScaleLowerBound 自动扩缩容保留最小实例数。
+     * Get <p>自动扩缩容保留最小实例数。</p> 
+     * @return ScaleLowerBound <p>自动扩缩容保留最小实例数。</p>
      */
     public Long getScaleLowerBound() {
         return this.ScaleLowerBound;
     }
 
     /**
-     * Set 自动扩缩容保留最小实例数。
-     * @param ScaleLowerBound 自动扩缩容保留最小实例数。
+     * Set <p>自动扩缩容保留最小实例数。</p>
+     * @param ScaleLowerBound <p>自动扩缩容保留最小实例数。</p>
      */
     public void setScaleLowerBound(Long ScaleLowerBound) {
         this.ScaleLowerBound = ScaleLowerBound;
     }
 
     /**
-     * Get 自动扩缩容最大实例数。 
-     * @return ScaleUpperBound 自动扩缩容最大实例数。
+     * Get <p>自动扩缩容最大实例数。</p> 
+     * @return ScaleUpperBound <p>自动扩缩容最大实例数。</p>
      */
     public Long getScaleUpperBound() {
         return this.ScaleUpperBound;
     }
 
     /**
-     * Set 自动扩缩容最大实例数。
-     * @param ScaleUpperBound 自动扩缩容最大实例数。
+     * Set <p>自动扩缩容最大实例数。</p>
+     * @param ScaleUpperBound <p>自动扩缩容最大实例数。</p>
      */
     public void setScaleUpperBound(Long ScaleUpperBound) {
         this.ScaleUpperBound = ScaleUpperBound;
     }
 
     /**
-     * Get 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则 
-     * @return StrategyType 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
+     * Get <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p> 
+     * @return StrategyType <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
-     * @param StrategyType 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
+     * Set <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
+     * @param StrategyType <p>扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则</p>
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 下次可扩容时间。 
-     * @return NextTimeCanScale 下次可扩容时间。
+     * Get <p>下次可扩容时间。</p> 
+     * @return NextTimeCanScale <p>下次可扩容时间。</p>
      */
     public Long getNextTimeCanScale() {
         return this.NextTimeCanScale;
     }
 
     /**
-     * Set 下次可扩容时间。
-     * @param NextTimeCanScale 下次可扩容时间。
+     * Set <p>下次可扩容时间。</p>
+     * @param NextTimeCanScale <p>下次可扩容时间。</p>
      */
     public void setNextTimeCanScale(Long NextTimeCanScale) {
         this.NextTimeCanScale = NextTimeCanScale;
     }
 
     /**
-     * Get 优雅缩容开关 
-     * @return GraceDownFlag 优雅缩容开关
+     * Get <p>优雅缩容开关</p> 
+     * @return GraceDownFlag <p>优雅缩容开关</p>
      */
     public Boolean getGraceDownFlag() {
         return this.GraceDownFlag;
     }
 
     /**
-     * Set 优雅缩容开关
-     * @param GraceDownFlag 优雅缩容开关
+     * Set <p>优雅缩容开关</p>
+     * @param GraceDownFlag <p>优雅缩容开关</p>
      */
     public void setGraceDownFlag(Boolean GraceDownFlag) {
         this.GraceDownFlag = GraceDownFlag;
     }
 
     /**
-     * Get "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。 
-     * @return HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+     * Get <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p> 
+     * @return HardwareType <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
      */
     public String getHardwareType() {
         return this.HardwareType;
     }
 
     /**
-     * Set "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
-     * @param HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+     * Set <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
+     * @param HardwareType <p>&quot;CVM&quot;表示规格全部使用CVM相关类型，&quot;POD&quot;表示规格使用容器相关类型,默认为&quot;CVM&quot;。</p>
      */
     public void setHardwareType(String HardwareType) {
         this.HardwareType = HardwareType;
     }
 
     /**
-     * Get "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。 
-     * @return PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+     * Get <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p> 
+     * @return PayMode <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
-     * @param PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+     * Set <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
+     * @param PayMode <p>&quot;POSTPAY&quot;表示只使用按量计费，&quot;SPOT_FIRST&quot;表示竞价实例优先，只有HardwareType为&quot;HOST&quot;时支持竞价实例优先，&quot;POD&quot;只支持纯按量计费。</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数 
-     * @return PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+     * Get <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p> 
+     * @return PostPayPercentMin <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
      */
     public Long getPostPayPercentMin() {
         return this.PostPayPercentMin;
     }
 
     /**
-     * Set 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-     * @param PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+     * Set <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
+     * @param PostPayPercentMin <p>竞价实例优先的场景下，按量计费资源数量的最低百分比，整数</p>
      */
     public void setPostPayPercentMin(Long PostPayPercentMin) {
         this.PostPayPercentMin = PostPayPercentMin;
     }
 
     /**
-     * Get 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选 
-     * @return ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
+     * Get <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p> 
+     * @return ChangeToPod <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
      */
     public Long getChangeToPod() {
         return this.ChangeToPod;
     }
 
     /**
-     * Set 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
-     * @param ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
+     * Set <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
+     * @param ChangeToPod <p>预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选</p>
      */
     public void setChangeToPod(Long ChangeToPod) {
         this.ChangeToPod = ChangeToPod;
     }
 
     /**
-     * Get 伸缩组名 
-     * @return GroupName 伸缩组名
+     * Get <p>伸缩组名</p> 
+     * @return GroupName <p>伸缩组名</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 伸缩组名
-     * @param GroupName 伸缩组名
+     * Set <p>伸缩组名</p>
+     * @param GroupName <p>伸缩组名</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 标签 
-     * @return YarnNodeLabel 标签
+     * Get <p>标签</p> 
+     * @return YarnNodeLabel <p>标签</p>
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set 标签
-     * @param YarnNodeLabel 标签
+     * Set <p>标签</p>
+     * @param YarnNodeLabel <p>标签</p>
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get 对应的计算组 
-     * @return WarehouseName 对应的计算组
+     * Get <p>对应的计算组</p> 
+     * @return WarehouseName <p>对应的计算组</p>
      */
     public String getWarehouseName() {
         return this.WarehouseName;
     }
 
     /**
-     * Set 对应的计算组
-     * @param WarehouseName 对应的计算组
+     * Set <p>对应的计算组</p>
+     * @param WarehouseName <p>对应的计算组</p>
      */
     public void setWarehouseName(String WarehouseName) {
         this.WarehouseName = WarehouseName;
     }
 
     /**
-     * Get 伸缩组状态 
-     * @return GroupStatus 伸缩组状态
+     * Get <p>伸缩组状态</p> 
+     * @return GroupStatus <p>伸缩组状态</p>
      */
     public Long getGroupStatus() {
         return this.GroupStatus;
     }
 
     /**
-     * Set 伸缩组状态
-     * @param GroupStatus 伸缩组状态
+     * Set <p>伸缩组状态</p>
+     * @param GroupStatus <p>伸缩组状态</p>
      */
     public void setGroupStatus(Long GroupStatus) {
         this.GroupStatus = GroupStatus;
     }
 
     /**
-     * Get 并行伸缩 0关闭；1开启 
-     * @return Parallel 并行伸缩 0关闭；1开启
+     * Get <p>并行伸缩 0关闭；1开启</p> 
+     * @return Parallel <p>并行伸缩 0关闭；1开启</p>
      */
     public Long getParallel() {
         return this.Parallel;
     }
 
     /**
-     * Set 并行伸缩 0关闭；1开启
-     * @param Parallel 并行伸缩 0关闭；1开启
+     * Set <p>并行伸缩 0关闭；1开启</p>
+     * @param Parallel <p>并行伸缩 0关闭；1开启</p>
      */
     public void setParallel(Long Parallel) {
         this.Parallel = Parallel;
     }
 
     /**
-     * Get 是否支持MNode 
-     * @return EnableMNode 是否支持MNode
+     * Get <p>是否支持MNode</p> 
+     * @return EnableMNode <p>是否支持MNode</p>
      */
     public Long getEnableMNode() {
         return this.EnableMNode;
     }
 
     /**
-     * Set 是否支持MNode
-     * @param EnableMNode 是否支持MNode
+     * Set <p>是否支持MNode</p>
+     * @param EnableMNode <p>是否支持MNode</p>
      */
     public void setEnableMNode(Long EnableMNode) {
         this.EnableMNode = EnableMNode;
     }
 
     /**
-     * Get 伸缩组更多设置
+     * Get <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraAdvanceAttrs 伸缩组更多设置
+     * @return ExtraAdvanceAttrs <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() {
@@ -433,13 +440,29 @@ public class AutoScaleResourceConf extends AbstractModel {
     }
 
     /**
-     * Set 伸缩组更多设置
+     * Set <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraAdvanceAttrs 伸缩组更多设置
+     * @param ExtraAdvanceAttrs <p>伸缩组更多设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs) {
         this.ExtraAdvanceAttrs = ExtraAdvanceAttrs;
+    }
+
+    /**
+     * Get <p>自定义主机名</p> 
+     * @return CustomNodeName <p>自定义主机名</p>
+     */
+    public String getCustomNodeName() {
+        return this.CustomNodeName;
+    }
+
+    /**
+     * Set <p>自定义主机名</p>
+     * @param CustomNodeName <p>自定义主机名</p>
+     */
+    public void setCustomNodeName(String CustomNodeName) {
+        this.CustomNodeName = CustomNodeName;
     }
 
     public AutoScaleResourceConf() {
@@ -504,6 +527,9 @@ public class AutoScaleResourceConf extends AbstractModel {
         if (source.ExtraAdvanceAttrs != null) {
             this.ExtraAdvanceAttrs = new AutoScaleGroupAdvanceAttrs(source.ExtraAdvanceAttrs);
         }
+        if (source.CustomNodeName != null) {
+            this.CustomNodeName = new String(source.CustomNodeName);
+        }
     }
 
 
@@ -529,6 +555,7 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.setParamSimple(map, prefix + "Parallel", this.Parallel);
         this.setParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
         this.setParamObj(map, prefix + "ExtraAdvanceAttrs.", this.ExtraAdvanceAttrs);
+        this.setParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
 
     }
 }

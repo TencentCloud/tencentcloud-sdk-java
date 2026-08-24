@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AIGWForwardDesensitizeConfig extends AbstractModel {
 
     /**
-    * <p>转发脱敏开关</p>
+    * <p>转发脱敏配置总开关</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 电子邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
+    * <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
     */
     @SerializedName("PredefinedRuleTypes")
     @Expose
     private String [] PredefinedRuleTypes;
 
     /**
-    * <p>自定义脱敏规则</p>
+    * <p>自定义规则，最多 20 条</p>
     */
     @SerializedName("CustomRules")
     @Expose
     private AIGWCustomDesensitizeRule [] CustomRules;
 
     /**
-    * <p>掩码</p>
+    * <p>内置规则占位符格式，最长 32；为空时默认 [{type}]</p>
     */
     @SerializedName("PlaceholderFormat")
     @Expose
     private String PlaceholderFormat;
 
     /**
-    * <p>脱敏异常处理</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>Skip： 跳过</li></ul>
+    * <p>脱敏失败处理：Reject（拒绝请求）或 Skip（跳过脱敏并转发）</p>
     */
     @SerializedName("OnFailure")
     @Expose
     private String OnFailure;
 
     /**
-     * Get <p>转发脱敏开关</p> 
-     * @return Enabled <p>转发脱敏开关</p>
+     * Get <p>转发脱敏配置总开关</p> 
+     * @return Enabled <p>转发脱敏配置总开关</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set <p>转发脱敏开关</p>
-     * @param Enabled <p>转发脱敏开关</p>
+     * Set <p>转发脱敏配置总开关</p>
+     * @param Enabled <p>转发脱敏配置总开关</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 电子邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul> 
-     * @return PredefinedRuleTypes <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 电子邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
+     * Get <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p> 
+     * @return PredefinedRuleTypes <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
      */
     public String [] getPredefinedRuleTypes() {
         return this.PredefinedRuleTypes;
     }
 
     /**
-     * Set <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 电子邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
-     * @param PredefinedRuleTypes <p>预定义规则类型</p><p>枚举值：</p><ul><li>Phone： 电话号码</li><li>IdCard： 身份证号</li><li>BankCard： 银行卡号</li><li>Email： 电子邮箱地址</li><li>IP： IP地址</li><li>Name： 姓名</li></ul>
+     * Set <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
+     * @param PredefinedRuleTypes <p>内置规则类型：Phone、IdCard、BankCard、Email、IP、Name</p>
      */
     public void setPredefinedRuleTypes(String [] PredefinedRuleTypes) {
         this.PredefinedRuleTypes = PredefinedRuleTypes;
     }
 
     /**
-     * Get <p>自定义脱敏规则</p> 
-     * @return CustomRules <p>自定义脱敏规则</p>
+     * Get <p>自定义规则，最多 20 条</p> 
+     * @return CustomRules <p>自定义规则，最多 20 条</p>
      */
     public AIGWCustomDesensitizeRule [] getCustomRules() {
         return this.CustomRules;
     }
 
     /**
-     * Set <p>自定义脱敏规则</p>
-     * @param CustomRules <p>自定义脱敏规则</p>
+     * Set <p>自定义规则，最多 20 条</p>
+     * @param CustomRules <p>自定义规则，最多 20 条</p>
      */
     public void setCustomRules(AIGWCustomDesensitizeRule [] CustomRules) {
         this.CustomRules = CustomRules;
     }
 
     /**
-     * Get <p>掩码</p> 
-     * @return PlaceholderFormat <p>掩码</p>
+     * Get <p>内置规则占位符格式，最长 32；为空时默认 [{type}]</p> 
+     * @return PlaceholderFormat <p>内置规则占位符格式，最长 32；为空时默认 [{type}]</p>
      */
     public String getPlaceholderFormat() {
         return this.PlaceholderFormat;
     }
 
     /**
-     * Set <p>掩码</p>
-     * @param PlaceholderFormat <p>掩码</p>
+     * Set <p>内置规则占位符格式，最长 32；为空时默认 [{type}]</p>
+     * @param PlaceholderFormat <p>内置规则占位符格式，最长 32；为空时默认 [{type}]</p>
      */
     public void setPlaceholderFormat(String PlaceholderFormat) {
         this.PlaceholderFormat = PlaceholderFormat;
     }
 
     /**
-     * Get <p>脱敏异常处理</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>Skip： 跳过</li></ul> 
-     * @return OnFailure <p>脱敏异常处理</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>Skip： 跳过</li></ul>
+     * Get <p>脱敏失败处理：Reject（拒绝请求）或 Skip（跳过脱敏并转发）</p> 
+     * @return OnFailure <p>脱敏失败处理：Reject（拒绝请求）或 Skip（跳过脱敏并转发）</p>
      */
     public String getOnFailure() {
         return this.OnFailure;
     }
 
     /**
-     * Set <p>脱敏异常处理</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>Skip： 跳过</li></ul>
-     * @param OnFailure <p>脱敏异常处理</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>Skip： 跳过</li></ul>
+     * Set <p>脱敏失败处理：Reject（拒绝请求）或 Skip（跳过脱敏并转发）</p>
+     * @param OnFailure <p>脱敏失败处理：Reject（拒绝请求）或 Skip（跳过脱敏并转发）</p>
      */
     public void setOnFailure(String OnFailure) {
         this.OnFailure = OnFailure;

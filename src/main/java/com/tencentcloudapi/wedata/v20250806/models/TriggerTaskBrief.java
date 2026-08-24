@@ -152,6 +152,14 @@ public class TriggerTaskBrief extends AbstractModel {
     private String ExecuteUserUin;
 
     /**
+    * <p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CycleType")
+    @Expose
+    private String CycleType;
+
+    /**
      * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId <p>项目id</p>
@@ -471,6 +479,26 @@ public class TriggerTaskBrief extends AbstractModel {
         this.ExecuteUserUin = ExecuteUserUin;
     }
 
+    /**
+     * Get <p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CycleType <p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCycleType() {
+        return this.CycleType;
+    }
+
+    /**
+     * Set <p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CycleType <p>周期类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCycleType(String CycleType) {
+        this.CycleType = CycleType;
+    }
+
     public TriggerTaskBrief() {
     }
 
@@ -527,6 +555,9 @@ public class TriggerTaskBrief extends AbstractModel {
         if (source.ExecuteUserUin != null) {
             this.ExecuteUserUin = new String(source.ExecuteUserUin);
         }
+        if (source.CycleType != null) {
+            this.CycleType = new String(source.CycleType);
+        }
     }
 
 
@@ -550,6 +581,7 @@ public class TriggerTaskBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+        this.setParamSimple(map, prefix + "CycleType", this.CycleType);
 
     }
 }

@@ -24,266 +24,325 @@ import java.util.HashMap;
 public class KongCertificatesPreview extends AbstractModel {
 
     /**
-    * 证书名称
+    * <p>证书名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Id
+    * <p>Id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 绑定的域名
+    * <p>绑定的域名</p>
     */
     @SerializedName("BindDomains")
     @Expose
     private String [] BindDomains;
 
     /**
-    * 证书状态：expired(已过期)
-                   active(生效中)
+    * <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 证书pem格式
+    * <p>证书pem格式</p>
     */
     @SerializedName("Crt")
     @Expose
     private String Crt;
 
     /**
-    * 证书私钥
+    * <p>证书私钥</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 证书过期时间
+    * <p>证书过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 证书上传时间
+    * <p>证书上传时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 证书签发时间
+    * <p>证书签发时间</p>
     */
     @SerializedName("IssueTime")
     @Expose
     private String IssueTime;
 
     /**
-    * 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
+    * <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
     */
     @SerializedName("CertSource")
     @Expose
     private String CertSource;
 
     /**
-    * ssl平台证书Id
+    * <p>ssl平台证书Id</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-     * Get 证书名称 
-     * @return Name 证书名称
+    * <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+    */
+    @SerializedName("CertType")
+    @Expose
+    private String CertType;
+
+    /**
+    * <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+    */
+    @SerializedName("CertUsage")
+    @Expose
+    private String CertUsage;
+
+    /**
+    * <p>证书被引用的次数</p>
+    */
+    @SerializedName("ReferCount")
+    @Expose
+    private Long ReferCount;
+
+    /**
+     * Get <p>证书名称</p> 
+     * @return Name <p>证书名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 证书名称
-     * @param Name 证书名称
+     * Set <p>证书名称</p>
+     * @param Name <p>证书名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get <p>Id</p> 
+     * @return Id <p>Id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set <p>Id</p>
+     * @param Id <p>Id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 绑定的域名 
-     * @return BindDomains 绑定的域名
+     * Get <p>绑定的域名</p> 
+     * @return BindDomains <p>绑定的域名</p>
      */
     public String [] getBindDomains() {
         return this.BindDomains;
     }
 
     /**
-     * Set 绑定的域名
-     * @param BindDomains 绑定的域名
+     * Set <p>绑定的域名</p>
+     * @param BindDomains <p>绑定的域名</p>
      */
     public void setBindDomains(String [] BindDomains) {
         this.BindDomains = BindDomains;
     }
 
     /**
-     * Get 证书状态：expired(已过期)
-                   active(生效中) 
-     * @return Status 证书状态：expired(已过期)
-                   active(生效中)
+     * Get <p>证书状态：expired(已过期)<br>                   active(生效中)</p> 
+     * @return Status <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 证书状态：expired(已过期)
-                   active(生效中)
-     * @param Status 证书状态：expired(已过期)
-                   active(生效中)
+     * Set <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
+     * @param Status <p>证书状态：expired(已过期)<br>                   active(生效中)</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 证书pem格式 
-     * @return Crt 证书pem格式
+     * Get <p>证书pem格式</p> 
+     * @return Crt <p>证书pem格式</p>
      */
     public String getCrt() {
         return this.Crt;
     }
 
     /**
-     * Set 证书pem格式
-     * @param Crt 证书pem格式
+     * Set <p>证书pem格式</p>
+     * @param Crt <p>证书pem格式</p>
      */
     public void setCrt(String Crt) {
         this.Crt = Crt;
     }
 
     /**
-     * Get 证书私钥 
-     * @return Key 证书私钥
+     * Get <p>证书私钥</p> 
+     * @return Key <p>证书私钥</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 证书私钥
-     * @param Key 证书私钥
+     * Set <p>证书私钥</p>
+     * @param Key <p>证书私钥</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 证书过期时间 
-     * @return ExpireTime 证书过期时间
+     * Get <p>证书过期时间</p> 
+     * @return ExpireTime <p>证书过期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 证书过期时间
-     * @param ExpireTime 证书过期时间
+     * Set <p>证书过期时间</p>
+     * @param ExpireTime <p>证书过期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 证书上传时间 
-     * @return CreateTime 证书上传时间
+     * Get <p>证书上传时间</p> 
+     * @return CreateTime <p>证书上传时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 证书上传时间
-     * @param CreateTime 证书上传时间
+     * Set <p>证书上传时间</p>
+     * @param CreateTime <p>证书上传时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 证书签发时间 
-     * @return IssueTime 证书签发时间
+     * Get <p>证书签发时间</p> 
+     * @return IssueTime <p>证书签发时间</p>
      */
     public String getIssueTime() {
         return this.IssueTime;
     }
 
     /**
-     * Set 证书签发时间
-     * @param IssueTime 证书签发时间
+     * Set <p>证书签发时间</p>
+     * @param IssueTime <p>证书签发时间</p>
      */
     public void setIssueTime(String IssueTime) {
         this.IssueTime = IssueTime;
     }
 
     /**
-     * Get 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书) 
-     * @return CertSource 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
+     * Get <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p> 
+     * @return CertSource <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
      */
     public String getCertSource() {
         return this.CertSource;
     }
 
     /**
-     * Set 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
-     * @param CertSource 证书来源：native(kong自定义证书)
-                    ssl(ssl平台证书)
+     * Set <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
+     * @param CertSource <p>证书来源：native(kong自定义证书)<br>                    ssl(ssl平台证书)</p>
      */
     public void setCertSource(String CertSource) {
         this.CertSource = CertSource;
     }
 
     /**
-     * Get ssl平台证书Id 
-     * @return CertId ssl平台证书Id
+     * Get <p>ssl平台证书Id</p> 
+     * @return CertId <p>ssl平台证书Id</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set ssl平台证书Id
-     * @param CertId ssl平台证书Id
+     * Set <p>ssl平台证书Id</p>
+     * @param CertId <p>ssl平台证书Id</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
+    }
+
+    /**
+     * Get <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul> 
+     * @return CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public String getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * Set <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     * @param CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public void setCertType(String CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
+     * Get <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul> 
+     * @return CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public String getCertUsage() {
+        return this.CertUsage;
+    }
+
+    /**
+     * Set <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     * @param CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public void setCertUsage(String CertUsage) {
+        this.CertUsage = CertUsage;
+    }
+
+    /**
+     * Get <p>证书被引用的次数</p> 
+     * @return ReferCount <p>证书被引用的次数</p>
+     */
+    public Long getReferCount() {
+        return this.ReferCount;
+    }
+
+    /**
+     * Set <p>证书被引用的次数</p>
+     * @param ReferCount <p>证书被引用的次数</p>
+     */
+    public void setReferCount(Long ReferCount) {
+        this.ReferCount = ReferCount;
     }
 
     public KongCertificatesPreview() {
@@ -330,6 +389,15 @@ public class KongCertificatesPreview extends AbstractModel {
         if (source.CertId != null) {
             this.CertId = new String(source.CertId);
         }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.CertUsage != null) {
+            this.CertUsage = new String(source.CertUsage);
+        }
+        if (source.ReferCount != null) {
+            this.ReferCount = new Long(source.ReferCount);
+        }
     }
 
 
@@ -348,6 +416,9 @@ public class KongCertificatesPreview extends AbstractModel {
         this.setParamSimple(map, prefix + "IssueTime", this.IssueTime);
         this.setParamSimple(map, prefix + "CertSource", this.CertSource);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "CertUsage", this.CertUsage);
+        this.setParamSimple(map, prefix + "ReferCount", this.ReferCount);
 
     }
 }

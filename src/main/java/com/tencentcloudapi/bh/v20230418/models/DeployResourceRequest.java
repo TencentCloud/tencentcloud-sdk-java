@@ -52,14 +52,14 @@ public class DeployResourceRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * <p>需要开通服务的子网ID</p>
+    * <p>需要开通服务的子网ID，此字段即将废除，请填写DeploySubnets包含的子网</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * <p>需要开通服务的子网网段</p>
+    * <p>需要开通服务的子网网段，此字段即将废除，请填写DeploySubnets包含的子网</p>
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -80,7 +80,7 @@ public class DeployResourceRequest extends AbstractModel {
     private String VpcCidrBlock;
 
     /**
-    * <p>需要开通服务的子网名称</p>
+    * <p>需要开通服务的子网名称，此字段即将废除，请填写DeploySubnets包含的子网</p>
     */
     @SerializedName("SubnetName")
     @Expose
@@ -129,7 +129,7 @@ public class DeployResourceRequest extends AbstractModel {
     private Long ExternalAccess;
 
     /**
-    * <p>开通堡垒机的子网信息</p>
+    * <p>开通堡垒机的子网信息，最多支持2个子网</p>
     */
     @SerializedName("DeploySubnets")
     @Expose
@@ -157,7 +157,7 @@ public class DeployResourceRequest extends AbstractModel {
     private String IntranetVpcName;
 
     /**
-    * <p>开通内网访问的子网信息</p>
+    * <p>开通内网访问的子网信息，最多支持2个子网</p>
     */
     @SerializedName("IntranetSubnets")
     @Expose
@@ -228,32 +228,32 @@ public class DeployResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>需要开通服务的子网ID</p> 
-     * @return SubnetId <p>需要开通服务的子网ID</p>
+     * Get <p>需要开通服务的子网ID，此字段即将废除，请填写DeploySubnets包含的子网</p> 
+     * @return SubnetId <p>需要开通服务的子网ID，此字段即将废除，请填写DeploySubnets包含的子网</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set <p>需要开通服务的子网ID</p>
-     * @param SubnetId <p>需要开通服务的子网ID</p>
+     * Set <p>需要开通服务的子网ID，此字段即将废除，请填写DeploySubnets包含的子网</p>
+     * @param SubnetId <p>需要开通服务的子网ID，此字段即将废除，请填写DeploySubnets包含的子网</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get <p>需要开通服务的子网网段</p> 
-     * @return CidrBlock <p>需要开通服务的子网网段</p>
+     * Get <p>需要开通服务的子网网段，此字段即将废除，请填写DeploySubnets包含的子网</p> 
+     * @return CidrBlock <p>需要开通服务的子网网段，此字段即将废除，请填写DeploySubnets包含的子网</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set <p>需要开通服务的子网网段</p>
-     * @param CidrBlock <p>需要开通服务的子网网段</p>
+     * Set <p>需要开通服务的子网网段，此字段即将废除，请填写DeploySubnets包含的子网</p>
+     * @param CidrBlock <p>需要开通服务的子网网段，此字段即将废除，请填写DeploySubnets包含的子网</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -292,16 +292,16 @@ public class DeployResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>需要开通服务的子网名称</p> 
-     * @return SubnetName <p>需要开通服务的子网名称</p>
+     * Get <p>需要开通服务的子网名称，此字段即将废除，请填写DeploySubnets包含的子网</p> 
+     * @return SubnetName <p>需要开通服务的子网名称，此字段即将废除，请填写DeploySubnets包含的子网</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set <p>需要开通服务的子网名称</p>
-     * @param SubnetName <p>需要开通服务的子网名称</p>
+     * Set <p>需要开通服务的子网名称，此字段即将废除，请填写DeploySubnets包含的子网</p>
+     * @param SubnetName <p>需要开通服务的子网名称，此字段即将废除，请填写DeploySubnets包含的子网</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
@@ -404,16 +404,16 @@ public class DeployResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>开通堡垒机的子网信息</p> 
-     * @return DeploySubnets <p>开通堡垒机的子网信息</p>
+     * Get <p>开通堡垒机的子网信息，最多支持2个子网</p> 
+     * @return DeploySubnets <p>开通堡垒机的子网信息，最多支持2个子网</p>
      */
     public ParamInitResourceSubnet [] getDeploySubnets() {
         return this.DeploySubnets;
     }
 
     /**
-     * Set <p>开通堡垒机的子网信息</p>
-     * @param DeploySubnets <p>开通堡垒机的子网信息</p>
+     * Set <p>开通堡垒机的子网信息，最多支持2个子网</p>
+     * @param DeploySubnets <p>开通堡垒机的子网信息，最多支持2个子网</p>
      */
     public void setDeploySubnets(ParamInitResourceSubnet [] DeploySubnets) {
         this.DeploySubnets = DeploySubnets;
@@ -468,16 +468,16 @@ public class DeployResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>开通内网访问的子网信息</p> 
-     * @return IntranetSubnets <p>开通内网访问的子网信息</p>
+     * Get <p>开通内网访问的子网信息，最多支持2个子网</p> 
+     * @return IntranetSubnets <p>开通内网访问的子网信息，最多支持2个子网</p>
      */
     public ParamInitResourceSubnet [] getIntranetSubnets() {
         return this.IntranetSubnets;
     }
 
     /**
-     * Set <p>开通内网访问的子网信息</p>
-     * @param IntranetSubnets <p>开通内网访问的子网信息</p>
+     * Set <p>开通内网访问的子网信息，最多支持2个子网</p>
+     * @param IntranetSubnets <p>开通内网访问的子网信息，最多支持2个子网</p>
      */
     public void setIntranetSubnets(ParamInitResourceSubnet [] IntranetSubnets) {
         this.IntranetSubnets = IntranetSubnets;

@@ -262,6 +262,69 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
     private String ExternalInstanceId;
 
     /**
+    * <p>负载均衡配置</p>
+    */
+    @SerializedName("LoadBalanceConfig")
+    @Expose
+    private AIGWLoadBalanceConfig LoadBalanceConfig;
+
+    /**
+    * <p>模型服务是否发布到广场</p><p>枚举值：</p><ul><li>Published： 已发布</li><li>Unpublished： 未发布</li></ul>
+    */
+    @SerializedName("PublishStatus")
+    @Expose
+    private String PublishStatus;
+
+    /**
+    * <p>模型服务是否可以发布</p>
+    */
+    @SerializedName("CanPublish")
+    @Expose
+    private Boolean CanPublish;
+
+    /**
+    * <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private String SyncStatus;
+
+    /**
+    * <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDelete： 资源删除</li></ul>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>同步版本</p>
+    */
+    @SerializedName("SyncedVersion")
+    @Expose
+    private String SyncedVersion;
+
+    /**
+    * <p>健康状态</p><p>枚举值：</p><ul><li>Error： 异常</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * <p>是否开启健康检查</p>
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * <p>健康检查配置</p>
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private AIGWLLMHealthCheckSetting HealthCheck;
+
+    /**
      * Get <p>模型服务 ID。</p> 
      * @return Id <p>模型服务 ID。</p>
      */
@@ -805,6 +868,150 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.ExternalInstanceId = ExternalInstanceId;
     }
 
+    /**
+     * Get <p>负载均衡配置</p> 
+     * @return LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public AIGWLoadBalanceConfig getLoadBalanceConfig() {
+        return this.LoadBalanceConfig;
+    }
+
+    /**
+     * Set <p>负载均衡配置</p>
+     * @param LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public void setLoadBalanceConfig(AIGWLoadBalanceConfig LoadBalanceConfig) {
+        this.LoadBalanceConfig = LoadBalanceConfig;
+    }
+
+    /**
+     * Get <p>模型服务是否发布到广场</p><p>枚举值：</p><ul><li>Published： 已发布</li><li>Unpublished： 未发布</li></ul> 
+     * @return PublishStatus <p>模型服务是否发布到广场</p><p>枚举值：</p><ul><li>Published： 已发布</li><li>Unpublished： 未发布</li></ul>
+     */
+    public String getPublishStatus() {
+        return this.PublishStatus;
+    }
+
+    /**
+     * Set <p>模型服务是否发布到广场</p><p>枚举值：</p><ul><li>Published： 已发布</li><li>Unpublished： 未发布</li></ul>
+     * @param PublishStatus <p>模型服务是否发布到广场</p><p>枚举值：</p><ul><li>Published： 已发布</li><li>Unpublished： 未发布</li></ul>
+     */
+    public void setPublishStatus(String PublishStatus) {
+        this.PublishStatus = PublishStatus;
+    }
+
+    /**
+     * Get <p>模型服务是否可以发布</p> 
+     * @return CanPublish <p>模型服务是否可以发布</p>
+     */
+    public Boolean getCanPublish() {
+        return this.CanPublish;
+    }
+
+    /**
+     * Set <p>模型服务是否可以发布</p>
+     * @param CanPublish <p>模型服务是否可以发布</p>
+     */
+    public void setCanPublish(Boolean CanPublish) {
+        this.CanPublish = CanPublish;
+    }
+
+    /**
+     * Get <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul> 
+     * @return SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+     */
+    public String getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+     * @param SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+     */
+    public void setSyncStatus(String SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDelete： 资源删除</li></ul> 
+     * @return SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDelete： 资源删除</li></ul>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDelete： 资源删除</li></ul>
+     * @param SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDelete： 资源删除</li></ul>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>同步版本</p> 
+     * @return SyncedVersion <p>同步版本</p>
+     */
+    public String getSyncedVersion() {
+        return this.SyncedVersion;
+    }
+
+    /**
+     * Set <p>同步版本</p>
+     * @param SyncedVersion <p>同步版本</p>
+     */
+    public void setSyncedVersion(String SyncedVersion) {
+        this.SyncedVersion = SyncedVersion;
+    }
+
+    /**
+     * Get <p>健康状态</p><p>枚举值：</p><ul><li>Error： 异常</li></ul> 
+     * @return Status <p>健康状态</p><p>枚举值：</p><ul><li>Error： 异常</li></ul>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>健康状态</p><p>枚举值：</p><ul><li>Error： 异常</li></ul>
+     * @param Status <p>健康状态</p><p>枚举值：</p><ul><li>Error： 异常</li></ul>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get <p>是否开启健康检查</p> 
+     * @return EnableHealthCheck <p>是否开启健康检查</p>
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set <p>是否开启健康检查</p>
+     * @param EnableHealthCheck <p>是否开启健康检查</p>
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get <p>健康检查配置</p> 
+     * @return HealthCheck <p>健康检查配置</p>
+     */
+    public AIGWLLMHealthCheckSetting getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set <p>健康检查配置</p>
+     * @param HealthCheck <p>健康检查配置</p>
+     */
+    public void setHealthCheck(AIGWLLMHealthCheckSetting HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
     public CloudNativeAPIGatewayLLMModelService() {
     }
 
@@ -924,6 +1131,33 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         if (source.ExternalInstanceId != null) {
             this.ExternalInstanceId = new String(source.ExternalInstanceId);
         }
+        if (source.LoadBalanceConfig != null) {
+            this.LoadBalanceConfig = new AIGWLoadBalanceConfig(source.LoadBalanceConfig);
+        }
+        if (source.PublishStatus != null) {
+            this.PublishStatus = new String(source.PublishStatus);
+        }
+        if (source.CanPublish != null) {
+            this.CanPublish = new Boolean(source.CanPublish);
+        }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new String(source.SyncStatus);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SyncedVersion != null) {
+            this.SyncedVersion = new String(source.SyncedVersion);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.EnableHealthCheck != null) {
+            this.EnableHealthCheck = new Boolean(source.EnableHealthCheck);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new AIGWLLMHealthCheckSetting(source.HealthCheck);
+        }
     }
 
 
@@ -965,6 +1199,15 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
         this.setParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
         this.setParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
+        this.setParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
+        this.setParamSimple(map, prefix + "PublishStatus", this.PublishStatus);
+        this.setParamSimple(map, prefix + "CanPublish", this.CanPublish);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
 
     }
 }

@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class InvokeTWeSeeComprehensionRequest extends AbstractModel {
 
     /**
-    * 输入视频 / 图片的 URL
+    * <p>输入视频 / 图片的 URL</p>
     */
     @SerializedName("InputURL")
     @Expose
     private String InputURL;
 
     /**
-    * 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
+    * <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 任务元数据
+    * <p>任务元数据</p>
     */
     @SerializedName("Metadata")
     @Expose
     private SeeTaskMetadata Metadata;
 
     /**
-    * 视觉理解配置项
+    * <p>视觉理解配置项</p>
     */
     @SerializedName("ComprehensionConfig")
     @Expose
     private SeeComprehensionConfig ComprehensionConfig;
 
     /**
-    * 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
+    * <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
     */
     @SerializedName("WaitResultTimeout")
     @Expose
     private Long WaitResultTimeout;
 
     /**
-    * 回调目标 ID
+    * <p>回调目标 ID</p>
     */
     @SerializedName("CallbackId")
     @Expose
     private String CallbackId;
 
     /**
-     * Get 输入视频 / 图片的 URL 
-     * @return InputURL 输入视频 / 图片的 URL
+     * Get <p>输入视频 / 图片的 URL</p> 
+     * @return InputURL <p>输入视频 / 图片的 URL</p>
      */
     public String getInputURL() {
         return this.InputURL;
     }
 
     /**
-     * Set 输入视频 / 图片的 URL
-     * @param InputURL 输入视频 / 图片的 URL
+     * Set <p>输入视频 / 图片的 URL</p>
+     * @param InputURL <p>输入视频 / 图片的 URL</p>
      */
     public void setInputURL(String InputURL) {
         this.InputURL = InputURL;
     }
 
     /**
-     * Get 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解 
-     * @return ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
+     * Get <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul> 
+     * @return ServiceType <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
-     * @param ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-- `IMG_COMP`：图片理解
+     * Set <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
+     * @param ServiceType <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li></ul>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 任务元数据 
-     * @return Metadata 任务元数据
+     * Get <p>任务元数据</p> 
+     * @return Metadata <p>任务元数据</p>
      */
     public SeeTaskMetadata getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set 任务元数据
-     * @param Metadata 任务元数据
+     * Set <p>任务元数据</p>
+     * @param Metadata <p>任务元数据</p>
      */
     public void setMetadata(SeeTaskMetadata Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 视觉理解配置项 
-     * @return ComprehensionConfig 视觉理解配置项
+     * Get <p>视觉理解配置项</p> 
+     * @return ComprehensionConfig <p>视觉理解配置项</p>
      */
     public SeeComprehensionConfig getComprehensionConfig() {
         return this.ComprehensionConfig;
     }
 
     /**
-     * Set 视觉理解配置项
-     * @param ComprehensionConfig 视觉理解配置项
+     * Set <p>视觉理解配置项</p>
+     * @param ComprehensionConfig <p>视觉理解配置项</p>
      */
     public void setComprehensionConfig(SeeComprehensionConfig ComprehensionConfig) {
         this.ComprehensionConfig = ComprehensionConfig;
     }
 
     /**
-     * Get 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。 
-     * @return WaitResultTimeout 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
+     * Get <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p> 
+     * @return WaitResultTimeout <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
      */
     public Long getWaitResultTimeout() {
         return this.WaitResultTimeout;
     }
 
     /**
-     * Set 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
-     * @param WaitResultTimeout 等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。
+     * Set <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
+     * @param WaitResultTimeout <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
      */
     public void setWaitResultTimeout(Long WaitResultTimeout) {
         this.WaitResultTimeout = WaitResultTimeout;
     }
 
     /**
-     * Get 回调目标 ID 
-     * @return CallbackId 回调目标 ID
+     * Get <p>回调目标 ID</p> 
+     * @return CallbackId <p>回调目标 ID</p>
      */
     public String getCallbackId() {
         return this.CallbackId;
     }
 
     /**
-     * Set 回调目标 ID
-     * @param CallbackId 回调目标 ID
+     * Set <p>回调目标 ID</p>
+     * @param CallbackId <p>回调目标 ID</p>
      */
     public void setCallbackId(String CallbackId) {
         this.CallbackId = CallbackId;

@@ -154,6 +154,69 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String Provider;
 
     /**
+    * <p>AK/SK凭证配置</p>
+    */
+    @SerializedName("AKSKCredentialConfig")
+    @Expose
+    private AIGWAKSKCredentialConfig AKSKCredentialConfig;
+
+    /**
+    * <p>CAM凭证配置</p>
+    */
+    @SerializedName("CAMCredentialConfig")
+    @Expose
+    private AIGWCAMCredentialConfig CAMCredentialConfig;
+
+    /**
+    * <p>Bearer Token凭证配置</p>
+    */
+    @SerializedName("BearerTokenCredentialConfig")
+    @Expose
+    private AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig;
+
+    /**
+    * <p>Basic Auth凭证配置</p>
+    */
+    @SerializedName("BasicCredentialConfig")
+    @Expose
+    private AIGWBasicCredentialConfig BasicCredentialConfig;
+
+    /**
+    * <p>自定义Header凭证配置</p>
+    */
+    @SerializedName("CustomHeaderCredentialConfig")
+    @Expose
+    private AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig;
+
+    /**
+    * <p>自定义Query参数凭证配置</p>
+    */
+    @SerializedName("QueryParamCredentialConfig")
+    @Expose
+    private AIGWQueryParamCredentialConfig QueryParamCredentialConfig;
+
+    /**
+    * <p>同步状态</p>
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private String SyncStatus;
+
+    /**
+    * <p>来源类型</p>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>已同步版本</p>
+    */
+    @SerializedName("SyncedVersion")
+    @Expose
+    private String SyncedVersion;
+
+    /**
      * Get <p>密钥id</p> 
      * @return SecretKeyId <p>密钥id</p>
      */
@@ -457,6 +520,150 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.Provider = Provider;
     }
 
+    /**
+     * Get <p>AK/SK凭证配置</p> 
+     * @return AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public AIGWAKSKCredentialConfig getAKSKCredentialConfig() {
+        return this.AKSKCredentialConfig;
+    }
+
+    /**
+     * Set <p>AK/SK凭证配置</p>
+     * @param AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public void setAKSKCredentialConfig(AIGWAKSKCredentialConfig AKSKCredentialConfig) {
+        this.AKSKCredentialConfig = AKSKCredentialConfig;
+    }
+
+    /**
+     * Get <p>CAM凭证配置</p> 
+     * @return CAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public AIGWCAMCredentialConfig getCAMCredentialConfig() {
+        return this.CAMCredentialConfig;
+    }
+
+    /**
+     * Set <p>CAM凭证配置</p>
+     * @param CAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public void setCAMCredentialConfig(AIGWCAMCredentialConfig CAMCredentialConfig) {
+        this.CAMCredentialConfig = CAMCredentialConfig;
+    }
+
+    /**
+     * Get <p>Bearer Token凭证配置</p> 
+     * @return BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public AIGWBearerTokenCredentialConfig getBearerTokenCredentialConfig() {
+        return this.BearerTokenCredentialConfig;
+    }
+
+    /**
+     * Set <p>Bearer Token凭证配置</p>
+     * @param BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public void setBearerTokenCredentialConfig(AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig) {
+        this.BearerTokenCredentialConfig = BearerTokenCredentialConfig;
+    }
+
+    /**
+     * Get <p>Basic Auth凭证配置</p> 
+     * @return BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public AIGWBasicCredentialConfig getBasicCredentialConfig() {
+        return this.BasicCredentialConfig;
+    }
+
+    /**
+     * Set <p>Basic Auth凭证配置</p>
+     * @param BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public void setBasicCredentialConfig(AIGWBasicCredentialConfig BasicCredentialConfig) {
+        this.BasicCredentialConfig = BasicCredentialConfig;
+    }
+
+    /**
+     * Get <p>自定义Header凭证配置</p> 
+     * @return CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public AIGWCustomHeaderCredentialConfig getCustomHeaderCredentialConfig() {
+        return this.CustomHeaderCredentialConfig;
+    }
+
+    /**
+     * Set <p>自定义Header凭证配置</p>
+     * @param CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public void setCustomHeaderCredentialConfig(AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig) {
+        this.CustomHeaderCredentialConfig = CustomHeaderCredentialConfig;
+    }
+
+    /**
+     * Get <p>自定义Query参数凭证配置</p> 
+     * @return QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public AIGWQueryParamCredentialConfig getQueryParamCredentialConfig() {
+        return this.QueryParamCredentialConfig;
+    }
+
+    /**
+     * Set <p>自定义Query参数凭证配置</p>
+     * @param QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public void setQueryParamCredentialConfig(AIGWQueryParamCredentialConfig QueryParamCredentialConfig) {
+        this.QueryParamCredentialConfig = QueryParamCredentialConfig;
+    }
+
+    /**
+     * Get <p>同步状态</p> 
+     * @return SyncStatus <p>同步状态</p>
+     */
+    public String getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set <p>同步状态</p>
+     * @param SyncStatus <p>同步状态</p>
+     */
+    public void setSyncStatus(String SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get <p>来源类型</p> 
+     * @return SourceType <p>来源类型</p>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>来源类型</p>
+     * @param SourceType <p>来源类型</p>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>已同步版本</p> 
+     * @return SyncedVersion <p>已同步版本</p>
+     */
+    public String getSyncedVersion() {
+        return this.SyncedVersion;
+    }
+
+    /**
+     * Set <p>已同步版本</p>
+     * @param SyncedVersion <p>已同步版本</p>
+     */
+    public void setSyncedVersion(String SyncedVersion) {
+        this.SyncedVersion = SyncedVersion;
+    }
+
     public CNAPIGwSecretKey() {
     }
 
@@ -519,6 +726,33 @@ public class CNAPIGwSecretKey extends AbstractModel {
         if (source.Provider != null) {
             this.Provider = new String(source.Provider);
         }
+        if (source.AKSKCredentialConfig != null) {
+            this.AKSKCredentialConfig = new AIGWAKSKCredentialConfig(source.AKSKCredentialConfig);
+        }
+        if (source.CAMCredentialConfig != null) {
+            this.CAMCredentialConfig = new AIGWCAMCredentialConfig(source.CAMCredentialConfig);
+        }
+        if (source.BearerTokenCredentialConfig != null) {
+            this.BearerTokenCredentialConfig = new AIGWBearerTokenCredentialConfig(source.BearerTokenCredentialConfig);
+        }
+        if (source.BasicCredentialConfig != null) {
+            this.BasicCredentialConfig = new AIGWBasicCredentialConfig(source.BasicCredentialConfig);
+        }
+        if (source.CustomHeaderCredentialConfig != null) {
+            this.CustomHeaderCredentialConfig = new AIGWCustomHeaderCredentialConfig(source.CustomHeaderCredentialConfig);
+        }
+        if (source.QueryParamCredentialConfig != null) {
+            this.QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig(source.QueryParamCredentialConfig);
+        }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new String(source.SyncStatus);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SyncedVersion != null) {
+            this.SyncedVersion = new String(source.SyncedVersion);
+        }
     }
 
 
@@ -544,6 +778,15 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.setParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
         this.setParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+        this.setParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+        this.setParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+        this.setParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
+        this.setParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+        this.setParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
 
     }
 }

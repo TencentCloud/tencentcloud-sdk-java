@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateExportResponse extends AbstractModel {
 
     /**
-    * 日志导出ID。
+    * <p>日志导出ID。</p>
     */
     @SerializedName("ExportId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志导出ID。 
-     * @return ExportId 日志导出ID。
+     * Get <p>日志导出ID。</p> 
+     * @return ExportId <p>日志导出ID。</p>
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set 日志导出ID。
-     * @param ExportId 日志导出ID。
+     * Set <p>日志导出ID。</p>
+     * @param ExportId <p>日志导出ID。</p>
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;

@@ -129,6 +129,13 @@ public class SandboxTool extends AbstractModel {
     private LogConfiguration LogConfiguration;
 
     /**
+    * <p>桌面电脑环境类沙箱配置</p>
+    */
+    @SerializedName("ComputerConfiguration")
+    @Expose
+    private ComputerConfiguration ComputerConfiguration;
+
+    /**
     * <p>用于说明沙箱工具处于该状态的原因</p>
     */
     @SerializedName("StatusReason")
@@ -376,6 +383,22 @@ public class SandboxTool extends AbstractModel {
     }
 
     /**
+     * Get <p>桌面电脑环境类沙箱配置</p> 
+     * @return ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public ComputerConfiguration getComputerConfiguration() {
+        return this.ComputerConfiguration;
+    }
+
+    /**
+     * Set <p>桌面电脑环境类沙箱配置</p>
+     * @param ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public void setComputerConfiguration(ComputerConfiguration ComputerConfiguration) {
+        this.ComputerConfiguration = ComputerConfiguration;
+    }
+
+    /**
      * Get <p>用于说明沙箱工具处于该状态的原因</p> 
      * @return StatusReason <p>用于说明沙箱工具处于该状态的原因</p>
      */
@@ -450,6 +473,9 @@ public class SandboxTool extends AbstractModel {
         if (source.LogConfiguration != null) {
             this.LogConfiguration = new LogConfiguration(source.LogConfiguration);
         }
+        if (source.ComputerConfiguration != null) {
+            this.ComputerConfiguration = new ComputerConfiguration(source.ComputerConfiguration);
+        }
         if (source.StatusReason != null) {
             this.StatusReason = new String(source.StatusReason);
         }
@@ -475,6 +501,7 @@ public class SandboxTool extends AbstractModel {
         this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         this.setParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
+        this.setParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
         this.setParamSimple(map, prefix + "StatusReason", this.StatusReason);
 
     }

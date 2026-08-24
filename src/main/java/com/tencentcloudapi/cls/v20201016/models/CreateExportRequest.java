@@ -24,217 +24,207 @@ import java.util.HashMap;
 public class CreateExportRequest extends AbstractModel {
 
     /**
-    * 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志主题Id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志导出数量,  最大值5000万
+    * <p>日志导出数量,  最大值5000万</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+    * <p>日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a></p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 日志导出起始时间，毫秒时间戳
+    * <p>日志导出起始时间，毫秒时间戳</p>
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 日志导出结束时间，毫秒时间戳
+    * <p>日志导出结束时间，毫秒时间戳</p>
     */
     @SerializedName("To")
     @Expose
     private Long To;
 
     /**
-    * 日志导出时间排序。desc，asc，默认为desc
+    * <p>日志导出时间排序。desc，asc，默认为desc</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 日志导出数据格式。json，csv，默认为json
+    * <p>日志导出数据格式。json，csv，默认为json</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 语法规则,  默认值为0。
-0：Lucene语法，1：CQL语法。
+    * <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-    * 导出字段
+    * <p>导出字段</p>
     */
     @SerializedName("DerivedFields")
     @Expose
     private String [] DerivedFields;
 
     /**
-     * Get 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Get <p>日志主题Id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>日志主题Id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>日志主题Id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>日志主题Id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志导出数量,  最大值5000万 
-     * @return Count 日志导出数量,  最大值5000万
+     * Get <p>日志导出数量,  最大值5000万</p> 
+     * @return Count <p>日志导出数量,  最大值5000万</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 日志导出数量,  最大值5000万
-     * @param Count 日志导出数量,  最大值5000万
+     * Set <p>日志导出数量,  最大值5000万</p>
+     * @param Count <p>日志导出数量,  最大值5000万</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a> 
-     * @return Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     * Get <p>日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a></p> 
+     * @return Query <p>日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a></p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
-     * @param Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     * Set <p>日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a></p>
+     * @param Query <p>日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a></p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 日志导出起始时间，毫秒时间戳 
-     * @return From 日志导出起始时间，毫秒时间戳
+     * Get <p>日志导出起始时间，毫秒时间戳</p> 
+     * @return From <p>日志导出起始时间，毫秒时间戳</p>
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 日志导出起始时间，毫秒时间戳
-     * @param From 日志导出起始时间，毫秒时间戳
+     * Set <p>日志导出起始时间，毫秒时间戳</p>
+     * @param From <p>日志导出起始时间，毫秒时间戳</p>
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 日志导出结束时间，毫秒时间戳 
-     * @return To 日志导出结束时间，毫秒时间戳
+     * Get <p>日志导出结束时间，毫秒时间戳</p> 
+     * @return To <p>日志导出结束时间，毫秒时间戳</p>
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 日志导出结束时间，毫秒时间戳
-     * @param To 日志导出结束时间，毫秒时间戳
+     * Set <p>日志导出结束时间，毫秒时间戳</p>
+     * @param To <p>日志导出结束时间，毫秒时间戳</p>
      */
     public void setTo(Long To) {
         this.To = To;
     }
 
     /**
-     * Get 日志导出时间排序。desc，asc，默认为desc 
-     * @return Order 日志导出时间排序。desc，asc，默认为desc
+     * Get <p>日志导出时间排序。desc，asc，默认为desc</p> 
+     * @return Order <p>日志导出时间排序。desc，asc，默认为desc</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 日志导出时间排序。desc，asc，默认为desc
-     * @param Order 日志导出时间排序。desc，asc，默认为desc
+     * Set <p>日志导出时间排序。desc，asc，默认为desc</p>
+     * @param Order <p>日志导出时间排序。desc，asc，默认为desc</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 日志导出数据格式。json，csv，默认为json 
-     * @return Format 日志导出数据格式。json，csv，默认为json
+     * Get <p>日志导出数据格式。json，csv，默认为json</p> 
+     * @return Format <p>日志导出数据格式。json，csv，默认为json</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 日志导出数据格式。json，csv，默认为json
-     * @param Format 日志导出数据格式。json，csv，默认为json
+     * Set <p>日志导出数据格式。json，csv，默认为json</p>
+     * @param Format <p>日志导出数据格式。json，csv，默认为json</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 语法规则,  默认值为0。
-0：Lucene语法，1：CQL语法。 
-     * @return SyntaxRule 语法规则,  默认值为0。
-0：Lucene语法，1：CQL语法。
+     * Get <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p> 
+     * @return SyntaxRule <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set 语法规则,  默认值为0。
-0：Lucene语法，1：CQL语法。
-     * @param SyntaxRule 语法规则,  默认值为0。
-0：Lucene语法，1：CQL语法。
+     * Set <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p>
+     * @param SyntaxRule <p>检索语法规则，默认值为1，推荐使用1 。</p><ul><li>0：Lucene语法</li><li>1：CQL语法（CLS Query Language，日志服务专用检索语法）</li></ul><p>详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>。</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
     }
 
     /**
-     * Get 导出字段 
-     * @return DerivedFields 导出字段
+     * Get <p>导出字段</p> 
+     * @return DerivedFields <p>导出字段</p>
      */
     public String [] getDerivedFields() {
         return this.DerivedFields;
     }
 
     /**
-     * Set 导出字段
-     * @param DerivedFields 导出字段
+     * Set <p>导出字段</p>
+     * @param DerivedFields <p>导出字段</p>
      */
     public void setDerivedFields(String [] DerivedFields) {
         this.DerivedFields = DerivedFields;

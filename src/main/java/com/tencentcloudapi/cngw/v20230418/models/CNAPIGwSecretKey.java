@@ -98,7 +98,7 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private String Name;
 
     /**
-    * <p>OAuth凭证配置</p>
+    * <p>OAuth2凭证配置</p>
     */
     @SerializedName("OAuthCredentialConfig")
     @Expose
@@ -112,7 +112,7 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private AIGWOIDCCredentialConfig OIDCCredentialConfig;
 
     /**
-    * <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+    * <p>Agent 密钥类型</p>
     */
     @SerializedName("Provider")
     @Expose
@@ -152,6 +152,69 @@ public class CNAPIGwSecretKey extends AbstractModel {
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private String SyncStatus;
+
+    /**
+    * <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>同步版本</p>
+    */
+    @SerializedName("SyncedVersion")
+    @Expose
+    private String SyncedVersion;
+
+    /**
+    * <p>AK/SK凭证配置</p>
+    */
+    @SerializedName("AKSKCredentialConfig")
+    @Expose
+    private AIGWAKSKCredentialConfig AKSKCredentialConfig;
+
+    /**
+    * <p>CAM凭证配置</p>
+    */
+    @SerializedName("CAMCredentialConfig")
+    @Expose
+    private AIGWCAMCredentialConfig CAMCredentialConfig;
+
+    /**
+    * <p>Bearer Token凭证配置</p>
+    */
+    @SerializedName("BearerTokenCredentialConfig")
+    @Expose
+    private AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig;
+
+    /**
+    * <p>Basic Auth凭证配置</p>
+    */
+    @SerializedName("BasicCredentialConfig")
+    @Expose
+    private AIGWBasicCredentialConfig BasicCredentialConfig;
+
+    /**
+    * <p>自定义Header凭证配置</p>
+    */
+    @SerializedName("CustomHeaderCredentialConfig")
+    @Expose
+    private AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig;
+
+    /**
+    * <p>自定义Query参数凭证配置</p>
+    */
+    @SerializedName("QueryParamCredentialConfig")
+    @Expose
+    private AIGWQueryParamCredentialConfig QueryParamCredentialConfig;
 
     /**
      * Get <p>绑定数</p> 
@@ -330,16 +393,16 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get <p>OAuth凭证配置</p> 
-     * @return OAuthCredentialConfig <p>OAuth凭证配置</p>
+     * Get <p>OAuth2凭证配置</p> 
+     * @return OAuthCredentialConfig <p>OAuth2凭证配置</p>
      */
     public AIGWOAuthCredentialConfig getOAuthCredentialConfig() {
         return this.OAuthCredentialConfig;
     }
 
     /**
-     * Set <p>OAuth凭证配置</p>
-     * @param OAuthCredentialConfig <p>OAuth凭证配置</p>
+     * Set <p>OAuth2凭证配置</p>
+     * @param OAuthCredentialConfig <p>OAuth2凭证配置</p>
      */
     public void setOAuthCredentialConfig(AIGWOAuthCredentialConfig OAuthCredentialConfig) {
         this.OAuthCredentialConfig = OAuthCredentialConfig;
@@ -362,16 +425,16 @@ public class CNAPIGwSecretKey extends AbstractModel {
     }
 
     /**
-     * Get <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul> 
-     * @return Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     * Get <p>Agent 密钥类型</p> 
+     * @return Provider <p>Agent 密钥类型</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
-     * @param Provider <p>secret key provider方</p><p>枚举值：</p><ul><li>Dify： Dify</li></ul>
+     * Set <p>Agent 密钥类型</p>
+     * @param Provider <p>Agent 密钥类型</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -457,6 +520,150 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul> 
+     * @return SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+     */
+    public String getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+     * @param SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Success： 成功</li></ul>
+     */
+    public void setSyncStatus(String SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul> 
+     * @return SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+     * @param SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源删除</li></ul>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>同步版本</p> 
+     * @return SyncedVersion <p>同步版本</p>
+     */
+    public String getSyncedVersion() {
+        return this.SyncedVersion;
+    }
+
+    /**
+     * Set <p>同步版本</p>
+     * @param SyncedVersion <p>同步版本</p>
+     */
+    public void setSyncedVersion(String SyncedVersion) {
+        this.SyncedVersion = SyncedVersion;
+    }
+
+    /**
+     * Get <p>AK/SK凭证配置</p> 
+     * @return AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public AIGWAKSKCredentialConfig getAKSKCredentialConfig() {
+        return this.AKSKCredentialConfig;
+    }
+
+    /**
+     * Set <p>AK/SK凭证配置</p>
+     * @param AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public void setAKSKCredentialConfig(AIGWAKSKCredentialConfig AKSKCredentialConfig) {
+        this.AKSKCredentialConfig = AKSKCredentialConfig;
+    }
+
+    /**
+     * Get <p>CAM凭证配置</p> 
+     * @return CAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public AIGWCAMCredentialConfig getCAMCredentialConfig() {
+        return this.CAMCredentialConfig;
+    }
+
+    /**
+     * Set <p>CAM凭证配置</p>
+     * @param CAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public void setCAMCredentialConfig(AIGWCAMCredentialConfig CAMCredentialConfig) {
+        this.CAMCredentialConfig = CAMCredentialConfig;
+    }
+
+    /**
+     * Get <p>Bearer Token凭证配置</p> 
+     * @return BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public AIGWBearerTokenCredentialConfig getBearerTokenCredentialConfig() {
+        return this.BearerTokenCredentialConfig;
+    }
+
+    /**
+     * Set <p>Bearer Token凭证配置</p>
+     * @param BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public void setBearerTokenCredentialConfig(AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig) {
+        this.BearerTokenCredentialConfig = BearerTokenCredentialConfig;
+    }
+
+    /**
+     * Get <p>Basic Auth凭证配置</p> 
+     * @return BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public AIGWBasicCredentialConfig getBasicCredentialConfig() {
+        return this.BasicCredentialConfig;
+    }
+
+    /**
+     * Set <p>Basic Auth凭证配置</p>
+     * @param BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public void setBasicCredentialConfig(AIGWBasicCredentialConfig BasicCredentialConfig) {
+        this.BasicCredentialConfig = BasicCredentialConfig;
+    }
+
+    /**
+     * Get <p>自定义Header凭证配置</p> 
+     * @return CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public AIGWCustomHeaderCredentialConfig getCustomHeaderCredentialConfig() {
+        return this.CustomHeaderCredentialConfig;
+    }
+
+    /**
+     * Set <p>自定义Header凭证配置</p>
+     * @param CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public void setCustomHeaderCredentialConfig(AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig) {
+        this.CustomHeaderCredentialConfig = CustomHeaderCredentialConfig;
+    }
+
+    /**
+     * Get <p>自定义Query参数凭证配置</p> 
+     * @return QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public AIGWQueryParamCredentialConfig getQueryParamCredentialConfig() {
+        return this.QueryParamCredentialConfig;
+    }
+
+    /**
+     * Set <p>自定义Query参数凭证配置</p>
+     * @param QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public void setQueryParamCredentialConfig(AIGWQueryParamCredentialConfig QueryParamCredentialConfig) {
+        this.QueryParamCredentialConfig = QueryParamCredentialConfig;
+    }
+
     public CNAPIGwSecretKey() {
     }
 
@@ -519,6 +726,33 @@ public class CNAPIGwSecretKey extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new String(source.SyncStatus);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SyncedVersion != null) {
+            this.SyncedVersion = new String(source.SyncedVersion);
+        }
+        if (source.AKSKCredentialConfig != null) {
+            this.AKSKCredentialConfig = new AIGWAKSKCredentialConfig(source.AKSKCredentialConfig);
+        }
+        if (source.CAMCredentialConfig != null) {
+            this.CAMCredentialConfig = new AIGWCAMCredentialConfig(source.CAMCredentialConfig);
+        }
+        if (source.BearerTokenCredentialConfig != null) {
+            this.BearerTokenCredentialConfig = new AIGWBearerTokenCredentialConfig(source.BearerTokenCredentialConfig);
+        }
+        if (source.BasicCredentialConfig != null) {
+            this.BasicCredentialConfig = new AIGWBasicCredentialConfig(source.BasicCredentialConfig);
+        }
+        if (source.CustomHeaderCredentialConfig != null) {
+            this.CustomHeaderCredentialConfig = new AIGWCustomHeaderCredentialConfig(source.CustomHeaderCredentialConfig);
+        }
+        if (source.QueryParamCredentialConfig != null) {
+            this.QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig(source.QueryParamCredentialConfig);
+        }
     }
 
 
@@ -544,6 +778,15 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "SecretValue", this.SecretValue);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+        this.setParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+        this.setParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+        this.setParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+        this.setParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
+        this.setParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+        this.setParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
 
     }
 }

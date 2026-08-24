@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class ListDataKeyDetailRequest extends AbstractModel {
 
     /**
-    * 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+    * <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
+    * <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
+    * <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
     */
     @SerializedName("Role")
     @Expose
     private Long Role;
 
     /**
-    * 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
+    * <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
+    * <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
     */
     @SerializedName("KeyState")
     @Expose
     private Long KeyState;
 
     /**
-    * 根据DataKeyId或者DataKeyName进行模糊匹配查询
+    * <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
     */
     @SerializedName("SearchKeyAlias")
     @Expose
     private String SearchKeyAlias;
 
     /**
-    * 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+    * <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * KMS 高级版对应的 HSM 集群 ID。
+    * <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
 
     /**
-    * 根密钥全局唯一标识符
+    * <p>根密钥全局唯一标识符</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 数据密钥的长度
+    * <p>数据密钥的长度</p>
     */
     @SerializedName("DataKeyLen")
     @Expose
     private Long DataKeyLen;
 
     /**
-    * 标签过滤条件
+    * <p>标签过滤条件</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 成员账号信息数组
+    * <p>成员账号信息数组</p>
     */
     @SerializedName("MemberAccounts")
     @Expose
     private MemberAccount [] MemberAccounts;
 
     /**
-     * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
-     * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     * Get <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p> 
+     * @return Offset <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
-     * @param Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     * Set <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
+     * @param Offset <p>含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200 
-     * @return Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
+     * Get <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p> 
+     * @return Limit <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
-     * @param Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
+     * Set <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
+     * @param Limit <p>含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥 
-     * @return Role 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
+     * Get <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p> 
+     * @return Role <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
-     * @param Role 根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥
+     * Set <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
+     * @param Role <p>根据创建者角色筛选，默认 0 表示用户自己创建的数据密钥， 1 表示授权其它云产品自动创建的数据密钥</p>
      */
     public void setRole(Long Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序 
-     * @return OrderType 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
+     * Get <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p> 
+     * @return OrderType <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
-     * @param OrderType 根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序
+     * Set <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
+     * @param OrderType <p>根据DataKey创建时间排序， 0 表示按照降序排序，1表示按照升序排序</p>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。 
-     * @return KeyState 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
+     * Get <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p> 
+     * @return KeyState <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
      */
     public Long getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
-     * @param KeyState 根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。
+     * Set <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
+     * @param KeyState <p>根据DataKey状态筛选， 0表示全部DataKey， 1 表示仅查询Enabled DataKey， 2 表示仅查询Disabled DataKey，3 表示查询PendingDelete 状态的DataKey(处于计划删除状态的Key)。</p>
      */
     public void setKeyState(Long KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get 根据DataKeyId或者DataKeyName进行模糊匹配查询 
-     * @return SearchKeyAlias 根据DataKeyId或者DataKeyName进行模糊匹配查询
+     * Get <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p> 
+     * @return SearchKeyAlias <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
      */
     public String getSearchKeyAlias() {
         return this.SearchKeyAlias;
     }
 
     /**
-     * Set 根据DataKeyId或者DataKeyName进行模糊匹配查询
-     * @param SearchKeyAlias 根据DataKeyId或者DataKeyName进行模糊匹配查询
+     * Set <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
+     * @param SearchKeyAlias <p>根据DataKeyId或者DataKeyName进行模糊匹配查询</p>
      */
     public void setSearchKeyAlias(String SearchKeyAlias) {
         this.SearchKeyAlias = SearchKeyAlias;
     }
 
     /**
-     * Get 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。 
-     * @return Origin 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * Get <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p> 
+     * @return Origin <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
-     * @param Origin 根据DateKey类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的数据密钥， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * Set <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
+     * @param Origin <p>根据DateKey类型筛选， &quot;TENCENT_KMS&quot; 表示筛选密钥材料由KMS创建的数据密钥， &quot;EXTERNAL&quot; 表示筛选密钥材料需要用户导入的 EXTERNAL类型数据密钥，&quot;ALL&quot; 或者不设置表示两种类型都查询，大小写敏感。</p>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get KMS 高级版对应的 HSM 集群 ID。 
-     * @return HsmClusterId KMS 高级版对应的 HSM 集群 ID。
+     * Get <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p> 
+     * @return HsmClusterId <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set KMS 高级版对应的 HSM 集群 ID。
-     * @param HsmClusterId KMS 高级版对应的 HSM 集群 ID。
+     * Set <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
+     * @param HsmClusterId <p>KMS 高级版对应的 HSM 集群 ID。当指定集群ID时查询集群的密钥列表；当指定default时,查询公有云共享版的密钥列表；当为空，默认查询所有的密钥列表包括集群和非集群。</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
     }
 
     /**
-     * Get 根密钥全局唯一标识符 
-     * @return KeyId 根密钥全局唯一标识符
+     * Get <p>根密钥全局唯一标识符</p> 
+     * @return KeyId <p>根密钥全局唯一标识符</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 根密钥全局唯一标识符
-     * @param KeyId 根密钥全局唯一标识符
+     * Set <p>根密钥全局唯一标识符</p>
+     * @param KeyId <p>根密钥全局唯一标识符</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 数据密钥的长度 
-     * @return DataKeyLen 数据密钥的长度
+     * Get <p>数据密钥的长度</p> 
+     * @return DataKeyLen <p>数据密钥的长度</p>
      */
     public Long getDataKeyLen() {
         return this.DataKeyLen;
     }
 
     /**
-     * Set 数据密钥的长度
-     * @param DataKeyLen 数据密钥的长度
+     * Set <p>数据密钥的长度</p>
+     * @param DataKeyLen <p>数据密钥的长度</p>
      */
     public void setDataKeyLen(Long DataKeyLen) {
         this.DataKeyLen = DataKeyLen;
     }
 
     /**
-     * Get 标签过滤条件 
-     * @return TagFilters 标签过滤条件
+     * Get <p>标签过滤条件</p> 
+     * @return TagFilters <p>标签过滤条件</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤条件
-     * @param TagFilters 标签过滤条件
+     * Set <p>标签过滤条件</p>
+     * @param TagFilters <p>标签过滤条件</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 成员账号信息数组 
-     * @return MemberAccounts 成员账号信息数组
+     * Get <p>成员账号信息数组</p> 
+     * @return MemberAccounts <p>成员账号信息数组</p>
      */
     public MemberAccount [] getMemberAccounts() {
         return this.MemberAccounts;
     }
 
     /**
-     * Set 成员账号信息数组
-     * @param MemberAccounts 成员账号信息数组
+     * Set <p>成员账号信息数组</p>
+     * @param MemberAccounts <p>成员账号信息数组</p>
      */
     public void setMemberAccounts(MemberAccount [] MemberAccounts) {
         this.MemberAccounts = MemberAccounts;

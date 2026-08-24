@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
 
     /**
-    * 网关实例id
+    * <p>网关实例id</p>
     */
     @SerializedName("GatewayId")
     @Expose
@@ -45,6 +45,13 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String Name;
 
     /**
+    * <p>优先级，默认Medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private String Priority;
+
+    /**
     * <p>消费者描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
@@ -52,16 +59,16 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get 网关实例id 
-     * @return GatewayId 网关实例id
+     * Get <p>网关实例id</p> 
+     * @return GatewayId <p>网关实例id</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关实例id
-     * @param GatewayId 网关实例id
+     * Set <p>网关实例id</p>
+     * @param GatewayId <p>网关实例id</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
@@ -100,6 +107,22 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>优先级，默认Medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul> 
+     * @return Priority <p>优先级，默认Medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+     */
+    public String getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>优先级，默认Medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+     * @param Priority <p>优先级，默认Medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+     */
+    public void setPriority(String Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
      * Get <p>消费者描述。最长 200 字符。</p> 
      * @return Description <p>消费者描述。最长 200 字符。</p>
      */
@@ -132,6 +155,9 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Priority != null) {
+            this.Priority = new String(source.Priority);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -145,6 +171,7 @@ public class ModifyCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

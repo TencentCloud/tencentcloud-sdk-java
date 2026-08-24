@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class DDoSAttackEvent extends AbstractModel {
 
     /**
-    * 事件ID。
+    * <p>事件 ID。</p>
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 攻击类型(对应交互事件名称)。
+    * <p>攻击类型。</p>
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-    * 攻击状态。
+    * <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
     */
     @SerializedName("AttackStatus")
     @Expose
     private Long AttackStatus;
 
     /**
-    * 攻击最大带宽，单位为 bps。
+    * <p>攻击最大带宽，单位为 bps。</p>
     */
     @SerializedName("AttackMaxBandWidth")
     @Expose
     private Long AttackMaxBandWidth;
 
     /**
-    * 攻击包速率峰值，单位为 pps。
+    * <p>攻击包速率峰值，单位为 pps。</p>
     */
     @SerializedName("AttackPacketMaxRate")
     @Expose
     private Long AttackPacketMaxRate;
 
     /**
-    * 攻击开始时间，单位为s。
+    * <p>攻击开始时间戳。</p><p>单位：秒</p>
     */
     @SerializedName("AttackStartTime")
     @Expose
     private Long AttackStartTime;
 
     /**
-    * 攻击结束时间，单位为s。
+    * <p>攻击结束时间戳。</p><p>单位：秒</p>
     */
     @SerializedName("AttackEndTime")
     @Expose
     private Long AttackEndTime;
 
     /**
-    * DDoS策略组ID。
+    * <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyId")
@@ -81,7 +81,7 @@ public class DDoSAttackEvent extends AbstractModel {
     private Long PolicyId;
 
     /**
-    * 站点ID。
+    * <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -89,9 +89,7 @@ public class DDoSAttackEvent extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+    * <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Area")
@@ -99,7 +97,7 @@ public class DDoSAttackEvent extends AbstractModel {
     private String Area;
 
     /**
-    * 封禁解封信息。
+    * <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DDoSBlockData")
@@ -107,121 +105,128 @@ public class DDoSAttackEvent extends AbstractModel {
     private DDoSBlockData [] DDoSBlockData;
 
     /**
-     * Get 事件ID。 
-     * @return EventId 事件ID。
+    * <p>被 DDoS 攻击的目的 IP 列表。</p>
+    */
+    @SerializedName("DDoSAttackDips")
+    @Expose
+    private String [] DDoSAttackDips;
+
+    /**
+     * Get <p>事件 ID。</p> 
+     * @return EventId <p>事件 ID。</p>
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件ID。
-     * @param EventId 事件ID。
+     * Set <p>事件 ID。</p>
+     * @param EventId <p>事件 ID。</p>
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 攻击类型(对应交互事件名称)。 
-     * @return AttackType 攻击类型(对应交互事件名称)。
+     * Get <p>攻击类型。</p> 
+     * @return AttackType <p>攻击类型。</p>
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set 攻击类型(对应交互事件名称)。
-     * @param AttackType 攻击类型(对应交互事件名称)。
+     * Set <p>攻击类型。</p>
+     * @param AttackType <p>攻击类型。</p>
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
     }
 
     /**
-     * Get 攻击状态。 
-     * @return AttackStatus 攻击状态。
+     * Get <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul> 
+     * @return AttackStatus <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
      */
     public Long getAttackStatus() {
         return this.AttackStatus;
     }
 
     /**
-     * Set 攻击状态。
-     * @param AttackStatus 攻击状态。
+     * Set <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
+     * @param AttackStatus <p>攻击状态。</p><p>枚举值：</p><ul><li>0： 观察中</li><li>1： 攻击中</li><li>2： 攻击结束</li></ul>
      */
     public void setAttackStatus(Long AttackStatus) {
         this.AttackStatus = AttackStatus;
     }
 
     /**
-     * Get 攻击最大带宽，单位为 bps。 
-     * @return AttackMaxBandWidth 攻击最大带宽，单位为 bps。
+     * Get <p>攻击最大带宽，单位为 bps。</p> 
+     * @return AttackMaxBandWidth <p>攻击最大带宽，单位为 bps。</p>
      */
     public Long getAttackMaxBandWidth() {
         return this.AttackMaxBandWidth;
     }
 
     /**
-     * Set 攻击最大带宽，单位为 bps。
-     * @param AttackMaxBandWidth 攻击最大带宽，单位为 bps。
+     * Set <p>攻击最大带宽，单位为 bps。</p>
+     * @param AttackMaxBandWidth <p>攻击最大带宽，单位为 bps。</p>
      */
     public void setAttackMaxBandWidth(Long AttackMaxBandWidth) {
         this.AttackMaxBandWidth = AttackMaxBandWidth;
     }
 
     /**
-     * Get 攻击包速率峰值，单位为 pps。 
-     * @return AttackPacketMaxRate 攻击包速率峰值，单位为 pps。
+     * Get <p>攻击包速率峰值，单位为 pps。</p> 
+     * @return AttackPacketMaxRate <p>攻击包速率峰值，单位为 pps。</p>
      */
     public Long getAttackPacketMaxRate() {
         return this.AttackPacketMaxRate;
     }
 
     /**
-     * Set 攻击包速率峰值，单位为 pps。
-     * @param AttackPacketMaxRate 攻击包速率峰值，单位为 pps。
+     * Set <p>攻击包速率峰值，单位为 pps。</p>
+     * @param AttackPacketMaxRate <p>攻击包速率峰值，单位为 pps。</p>
      */
     public void setAttackPacketMaxRate(Long AttackPacketMaxRate) {
         this.AttackPacketMaxRate = AttackPacketMaxRate;
     }
 
     /**
-     * Get 攻击开始时间，单位为s。 
-     * @return AttackStartTime 攻击开始时间，单位为s。
+     * Get <p>攻击开始时间戳。</p><p>单位：秒</p> 
+     * @return AttackStartTime <p>攻击开始时间戳。</p><p>单位：秒</p>
      */
     public Long getAttackStartTime() {
         return this.AttackStartTime;
     }
 
     /**
-     * Set 攻击开始时间，单位为s。
-     * @param AttackStartTime 攻击开始时间，单位为s。
+     * Set <p>攻击开始时间戳。</p><p>单位：秒</p>
+     * @param AttackStartTime <p>攻击开始时间戳。</p><p>单位：秒</p>
      */
     public void setAttackStartTime(Long AttackStartTime) {
         this.AttackStartTime = AttackStartTime;
     }
 
     /**
-     * Get 攻击结束时间，单位为s。 
-     * @return AttackEndTime 攻击结束时间，单位为s。
+     * Get <p>攻击结束时间戳。</p><p>单位：秒</p> 
+     * @return AttackEndTime <p>攻击结束时间戳。</p><p>单位：秒</p>
      */
     public Long getAttackEndTime() {
         return this.AttackEndTime;
     }
 
     /**
-     * Set 攻击结束时间，单位为s。
-     * @param AttackEndTime 攻击结束时间，单位为s。
+     * Set <p>攻击结束时间戳。</p><p>单位：秒</p>
+     * @param AttackEndTime <p>攻击结束时间戳。</p><p>单位：秒</p>
      */
     public void setAttackEndTime(Long AttackEndTime) {
         this.AttackEndTime = AttackEndTime;
     }
 
     /**
-     * Get DDoS策略组ID。
+     * Get <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyId DDoS策略组ID。
+     * @return PolicyId <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyId() {
@@ -229,9 +234,9 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Set DDoS策略组ID。
+     * Set <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyId DDoS策略组ID。
+     * @param PolicyId <p>DDoS 策略组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyId(Long PolicyId) {
@@ -239,9 +244,9 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Get 站点ID。
+     * Get <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 站点ID。
+     * @return ZoneId <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneId() {
@@ -249,9 +254,9 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Set 站点ID。
+     * Set <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 站点ID。
+     * @param ZoneId <p>站点 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(String ZoneId) {
@@ -259,13 +264,9 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Get 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+     * Get <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Area 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+     * @return Area <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArea() {
@@ -273,13 +274,9 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Set 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+     * Set <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Area 攻击事件所属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>
+     * @param Area <p>攻击事件所属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArea(String Area) {
@@ -287,9 +284,9 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Get 封禁解封信息。
+     * Get <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DDoSBlockData 封禁解封信息。
+     * @return DDoSBlockData <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DDoSBlockData [] getDDoSBlockData() {
@@ -297,13 +294,29 @@ public class DDoSAttackEvent extends AbstractModel {
     }
 
     /**
-     * Set 封禁解封信息。
+     * Set <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DDoSBlockData 封禁解封信息。
+     * @param DDoSBlockData <p>封禁解封信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDDoSBlockData(DDoSBlockData [] DDoSBlockData) {
         this.DDoSBlockData = DDoSBlockData;
+    }
+
+    /**
+     * Get <p>被 DDoS 攻击的目的 IP 列表。</p> 
+     * @return DDoSAttackDips <p>被 DDoS 攻击的目的 IP 列表。</p>
+     */
+    public String [] getDDoSAttackDips() {
+        return this.DDoSAttackDips;
+    }
+
+    /**
+     * Set <p>被 DDoS 攻击的目的 IP 列表。</p>
+     * @param DDoSAttackDips <p>被 DDoS 攻击的目的 IP 列表。</p>
+     */
+    public void setDDoSAttackDips(String [] DDoSAttackDips) {
+        this.DDoSAttackDips = DDoSAttackDips;
     }
 
     public DDoSAttackEvent() {
@@ -350,6 +363,12 @@ public class DDoSAttackEvent extends AbstractModel {
                 this.DDoSBlockData[i] = new DDoSBlockData(source.DDoSBlockData[i]);
             }
         }
+        if (source.DDoSAttackDips != null) {
+            this.DDoSAttackDips = new String[source.DDoSAttackDips.length];
+            for (int i = 0; i < source.DDoSAttackDips.length; i++) {
+                this.DDoSAttackDips[i] = new String(source.DDoSAttackDips[i]);
+            }
+        }
     }
 
 
@@ -368,6 +387,7 @@ public class DDoSAttackEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArrayObj(map, prefix + "DDoSBlockData.", this.DDoSBlockData);
+        this.setParamArraySimple(map, prefix + "DDoSAttackDips.", this.DDoSAttackDips);
 
     }
 }

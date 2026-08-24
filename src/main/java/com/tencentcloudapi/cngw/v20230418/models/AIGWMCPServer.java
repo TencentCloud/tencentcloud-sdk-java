@@ -167,6 +167,13 @@ public class AIGWMCPServer extends AbstractModel {
     private String MarketStatus;
 
     /**
+    * <p>是否开启保留原Host功能</p>
+    */
+    @SerializedName("PreserveHost")
+    @Expose
+    private Boolean PreserveHost;
+
+    /**
      * Get <p>MCP Server ID</p> 
      * @return ServerId <p>MCP Server ID</p>
      */
@@ -498,6 +505,22 @@ public class AIGWMCPServer extends AbstractModel {
         this.MarketStatus = MarketStatus;
     }
 
+    /**
+     * Get <p>是否开启保留原Host功能</p> 
+     * @return PreserveHost <p>是否开启保留原Host功能</p>
+     */
+    public Boolean getPreserveHost() {
+        return this.PreserveHost;
+    }
+
+    /**
+     * Set <p>是否开启保留原Host功能</p>
+     * @param PreserveHost <p>是否开启保留原Host功能</p>
+     */
+    public void setPreserveHost(Boolean PreserveHost) {
+        this.PreserveHost = PreserveHost;
+    }
+
     public AIGWMCPServer() {
     }
 
@@ -566,6 +589,9 @@ public class AIGWMCPServer extends AbstractModel {
         if (source.MarketStatus != null) {
             this.MarketStatus = new String(source.MarketStatus);
         }
+        if (source.PreserveHost != null) {
+            this.PreserveHost = new Boolean(source.PreserveHost);
+        }
     }
 
 
@@ -593,6 +619,7 @@ public class AIGWMCPServer extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolCountLimit", this.ToolCountLimit);
         this.setParamSimple(map, prefix + "ConflictStrategy", this.ConflictStrategy);
         this.setParamSimple(map, prefix + "MarketStatus", this.MarketStatus);
+        this.setParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
 
     }
 }

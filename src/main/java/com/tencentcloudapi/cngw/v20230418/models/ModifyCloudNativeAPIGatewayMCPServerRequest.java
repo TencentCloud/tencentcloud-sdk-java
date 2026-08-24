@@ -101,6 +101,13 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
     private AIGWHealthCheckSetting HealthCheck;
 
     /**
+    * <p>是否开启保留原Host功能</p>
+    */
+    @SerializedName("PreserveHost")
+    @Expose
+    private Boolean PreserveHost;
+
+    /**
      * Get <p>实例 ID</p> 
      * @return GatewayId <p>实例 ID</p>
      */
@@ -276,6 +283,22 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
         this.HealthCheck = HealthCheck;
     }
 
+    /**
+     * Get <p>是否开启保留原Host功能</p> 
+     * @return PreserveHost <p>是否开启保留原Host功能</p>
+     */
+    public Boolean getPreserveHost() {
+        return this.PreserveHost;
+    }
+
+    /**
+     * Set <p>是否开启保留原Host功能</p>
+     * @param PreserveHost <p>是否开启保留原Host功能</p>
+     */
+    public void setPreserveHost(Boolean PreserveHost) {
+        this.PreserveHost = PreserveHost;
+    }
+
     public ModifyCloudNativeAPIGatewayMCPServerRequest() {
     }
 
@@ -317,6 +340,9 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
         if (source.HealthCheck != null) {
             this.HealthCheck = new AIGWHealthCheckSetting(source.HealthCheck);
         }
+        if (source.PreserveHost != null) {
+            this.PreserveHost = new Boolean(source.PreserveHost);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+        this.setParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
 
     }
 }

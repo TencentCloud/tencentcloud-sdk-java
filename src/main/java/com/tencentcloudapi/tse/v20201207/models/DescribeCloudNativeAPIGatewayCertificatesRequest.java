@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayCertificatesRequest extends AbstractModel {
 
     /**
-    * 网关ID
+    * <p>网关ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 列表数量
+    * <p>列表数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 列表offset
+    * <p>列表offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+    * <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
     */
     @SerializedName("Filters")
     @Expose
     private ListFilter [] Filters;
 
     /**
-     * Get 网关ID 
-     * @return GatewayId 网关ID
+    * <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+    */
+    @SerializedName("CertType")
+    @Expose
+    private String CertType;
+
+    /**
+    * <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+    */
+    @SerializedName("CertUsage")
+    @Expose
+    private String CertUsage;
+
+    /**
+     * Get <p>网关ID</p> 
+     * @return GatewayId <p>网关ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关ID
-     * @param GatewayId 网关ID
+     * Set <p>网关ID</p>
+     * @param GatewayId <p>网关ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 列表数量 
-     * @return Limit 列表数量
+     * Get <p>列表数量</p> 
+     * @return Limit <p>列表数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 列表数量
-     * @param Limit 列表数量
+     * Set <p>列表数量</p>
+     * @param Limit <p>列表数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 列表offset 
-     * @return Offset 列表offset
+     * Get <p>列表offset</p> 
+     * @return Offset <p>列表offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 列表offset
-     * @param Offset 列表offset
+     * Set <p>列表offset</p>
+     * @param Offset <p>列表offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name 
-     * @return Filters 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+     * Get <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p> 
+     * @return Filters <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
      */
     public ListFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
-     * @param Filters 过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name
+     * Set <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
+     * @param Filters <p>过滤条件，多个过滤条件之间是与的关系，支持BindDomain ，Name</p>
      */
     public void setFilters(ListFilter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul> 
+     * @return CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public String getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * Set <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     * @param CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public void setCertType(String CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
+     * Get <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul> 
+     * @return CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public String getCertUsage() {
+        return this.CertUsage;
+    }
+
+    /**
+     * Set <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     * @param CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public void setCertUsage(String CertUsage) {
+        this.CertUsage = CertUsage;
     }
 
     public DescribeCloudNativeAPIGatewayCertificatesRequest() {
@@ -138,6 +184,12 @@ public class DescribeCloudNativeAPIGatewayCertificatesRequest extends AbstractMo
                 this.Filters[i] = new ListFilter(source.Filters[i]);
             }
         }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.CertUsage != null) {
+            this.CertUsage = new String(source.CertUsage);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class DescribeCloudNativeAPIGatewayCertificatesRequest extends AbstractMo
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "CertUsage", this.CertUsage);
 
     }
 }

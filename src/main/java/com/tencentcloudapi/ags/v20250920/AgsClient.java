@@ -39,6 +39,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *获取 Deployment 访问 Token
+     * @param req AcquireDeploymentTokenRequest
+     * @return AcquireDeploymentTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcquireDeploymentTokenResponse AcquireDeploymentToken(AcquireDeploymentTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AcquireDeploymentToken", AcquireDeploymentTokenResponse.class);
+    }
+
+    /**
      *获取访问沙箱工具时所需要使用的访问Token，创建沙箱实例后需调用此接口获取沙箱实例访问Token。
 此Token可用于调用代码沙箱实例执行代码，或浏览器沙箱实例进行浏览器操作等。
      * @param req AcquireSandboxInstanceTokenRequest
@@ -59,6 +70,17 @@ public class AgsClient extends AbstractClient{
     public CreateAPIKeyResponse CreateAPIKey(CreateAPIKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAPIKey", CreateAPIKeyResponse.class);
+    }
+
+    /**
+     *创建 Deployment
+     * @param req CreateDeploymentRequest
+     * @return CreateDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeploymentResponse CreateDeployment(CreateDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeployment", CreateDeploymentResponse.class);
     }
 
     /**
@@ -95,6 +117,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *删除 Deployment
+     * @param req DeleteDeploymentRequest
+     * @return DeleteDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeploymentResponse DeleteDeployment(DeleteDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeployment", DeleteDeploymentResponse.class);
+    }
+
+    /**
      *删除沙箱工具
      * @param req DeleteSandboxToolRequest
      * @return DeleteSandboxToolResponse
@@ -114,6 +147,28 @@ public class AgsClient extends AbstractClient{
     public DescribeAPIKeyListResponse DescribeAPIKeyList(DescribeAPIKeyListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAPIKeyList", DescribeAPIKeyListResponse.class);
+    }
+
+    /**
+     *查询 Deployment 信息
+     * @param req DescribeDeploymentRequest
+     * @return DescribeDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeploymentResponse DescribeDeployment(DescribeDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeployment", DescribeDeploymentResponse.class);
+    }
+
+    /**
+     *查询 Deployment 列表
+     * @param req DescribeDeploymentListRequest
+     * @return DescribeDeploymentListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeploymentListResponse DescribeDeploymentList(DescribeDeploymentListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeploymentList", DescribeDeploymentListResponse.class);
     }
 
     /**
@@ -147,6 +202,17 @@ public class AgsClient extends AbstractClient{
     public DescribeSandboxToolListResponse DescribeSandboxToolList(DescribeSandboxToolListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSandboxToolList", DescribeSandboxToolListResponse.class);
+    }
+
+    /**
+     *修改 Deployment
+     * @param req ModifyDeploymentRequest
+     * @return ModifyDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeploymentResponse ModifyDeployment(ModifyDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeployment", ModifyDeploymentResponse.class);
     }
 
     /**

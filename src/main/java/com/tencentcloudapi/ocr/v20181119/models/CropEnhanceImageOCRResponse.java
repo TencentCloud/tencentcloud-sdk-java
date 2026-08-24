@@ -38,11 +38,18 @@ public class CropEnhanceImageOCRResponse extends AbstractModel {
     private Long CroppedHeight;
 
     /**
-    * <p>图像处理后的jpg图片，base64格式</p>
+    * <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
     */
     @SerializedName("CroppedImage")
     @Expose
     private String CroppedImage;
+
+    /**
+    * <p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
+    */
+    @SerializedName("CroppedImageUrl")
+    @Expose
+    private String CroppedImageUrl;
 
     /**
     * <p>切图区域的4个角点坐标, 是个长度为8的数组<br>[0,1,2,3,4,5,6,7]</p><p>(0,1) 左上角坐标<br>(2,3) 右上角坐标<br>(4,5) 右下角坐标<br>(6,7) 左下角坐标</p>
@@ -99,19 +106,35 @@ public class CropEnhanceImageOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>图像处理后的jpg图片，base64格式</p> 
-     * @return CroppedImage <p>图像处理后的jpg图片，base64格式</p>
+     * Get <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p> 
+     * @return CroppedImage <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
      */
     public String getCroppedImage() {
         return this.CroppedImage;
     }
 
     /**
-     * Set <p>图像处理后的jpg图片，base64格式</p>
-     * @param CroppedImage <p>图像处理后的jpg图片，base64格式</p>
+     * Set <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
+     * @param CroppedImage <p>图像处理后的jpg图片，base64格式</p><p><strong><p><code>该字段后续不返回内容，请使用CroppedImageUrl</code></p></strong></p>
      */
     public void setCroppedImage(String CroppedImage) {
         this.CroppedImage = CroppedImage;
+    }
+
+    /**
+     * Get <p>图像处理后的jpg图片</p><p>参数格式：url格式</p> 
+     * @return CroppedImageUrl <p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
+     */
+    public String getCroppedImageUrl() {
+        return this.CroppedImageUrl;
+    }
+
+    /**
+     * Set <p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
+     * @param CroppedImageUrl <p>图像处理后的jpg图片</p><p>参数格式：url格式</p>
+     */
+    public void setCroppedImageUrl(String CroppedImageUrl) {
+        this.CroppedImageUrl = CroppedImageUrl;
     }
 
     /**
@@ -183,6 +206,9 @@ public class CropEnhanceImageOCRResponse extends AbstractModel {
         if (source.CroppedImage != null) {
             this.CroppedImage = new String(source.CroppedImage);
         }
+        if (source.CroppedImageUrl != null) {
+            this.CroppedImageUrl = new String(source.CroppedImageUrl);
+        }
         if (source.Position != null) {
             this.Position = new Long[source.Position.length];
             for (int i = 0; i < source.Position.length; i++) {
@@ -205,6 +231,7 @@ public class CropEnhanceImageOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CroppedWidth", this.CroppedWidth);
         this.setParamSimple(map, prefix + "CroppedHeight", this.CroppedHeight);
         this.setParamSimple(map, prefix + "CroppedImage", this.CroppedImage);
+        this.setParamSimple(map, prefix + "CroppedImageUrl", this.CroppedImageUrl);
         this.setParamArraySimple(map, prefix + "Position.", this.Position);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

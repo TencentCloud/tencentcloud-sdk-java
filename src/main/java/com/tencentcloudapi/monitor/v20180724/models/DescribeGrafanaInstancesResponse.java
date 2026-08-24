@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeGrafanaInstancesResponse extends AbstractModel {
 
     /**
-    * 已废弃，请使用 Instances
+    * <p>已废弃，请使用 Instances</p>
     */
     @SerializedName("InstanceSet")
     @Expose
     private GrafanaInstanceInfo [] InstanceSet;
 
     /**
-    * 符合查询条件的实例总数
+    * <p>符合查询条件的实例总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例列表
+    * <p>实例列表</p>
     */
     @SerializedName("Instances")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeGrafanaInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已废弃，请使用 Instances 
-     * @return InstanceSet 已废弃，请使用 Instances
+     * Get <p>已废弃，请使用 Instances</p> 
+     * @return InstanceSet <p>已废弃，请使用 Instances</p>
      */
     public GrafanaInstanceInfo [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 已废弃，请使用 Instances
-     * @param InstanceSet 已废弃，请使用 Instances
+     * Set <p>已废弃，请使用 Instances</p>
+     * @param InstanceSet <p>已废弃，请使用 Instances</p>
      */
     public void setInstanceSet(GrafanaInstanceInfo [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get 符合查询条件的实例总数 
-     * @return TotalCount 符合查询条件的实例总数
+     * Get <p>符合查询条件的实例总数</p> 
+     * @return TotalCount <p>符合查询条件的实例总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的实例总数
-     * @param TotalCount 符合查询条件的实例总数
+     * Set <p>符合查询条件的实例总数</p>
+     * @param TotalCount <p>符合查询条件的实例总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例列表 
-     * @return Instances 实例列表
+     * Get <p>实例列表</p> 
+     * @return Instances <p>实例列表</p>
      */
     public GrafanaInstanceInfo [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 实例列表
-     * @param Instances 实例列表
+     * Set <p>实例列表</p>
+     * @param Instances <p>实例列表</p>
      */
     public void setInstances(GrafanaInstanceInfo [] Instances) {
         this.Instances = Instances;

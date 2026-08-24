@@ -31,7 +31,7 @@ public class CreateSSOAccountRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>用户账号 ID ，例如：10000000</p>
+    * <p>用户子账号 ID ，例如：10000000</p>
     */
     @SerializedName("UserId")
     @Expose
@@ -68,16 +68,16 @@ public class CreateSSOAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>用户账号 ID ，例如：10000000</p> 
-     * @return UserId <p>用户账号 ID ，例如：10000000</p>
+     * Get <p>用户子账号 ID ，例如：10000000</p> 
+     * @return UserId <p>用户子账号 ID ，例如：10000000</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set <p>用户账号 ID ，例如：10000000</p>
-     * @param UserId <p>用户账号 ID ，例如：10000000</p>
+     * Set <p>用户子账号 ID ，例如：10000000</p>
+     * @param UserId <p>用户子账号 ID ，例如：10000000</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

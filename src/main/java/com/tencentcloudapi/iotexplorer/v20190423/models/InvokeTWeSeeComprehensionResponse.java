@@ -24,40 +24,35 @@ import java.util.HashMap;
 public class InvokeTWeSeeComprehensionResponse extends AbstractModel {
 
     /**
-    * 任务 ID
+    * <p>任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+    * <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 视觉理解结果
+    * <p>视觉理解结果</p>
     */
     @SerializedName("ComprehensionResult")
     @Expose
     private SeeComprehensionResult ComprehensionResult;
 
     /**
-    * 完成该任务所消耗的基础能力额度
+    * <p>完成该任务所消耗的基础能力额度</p>
     */
     @SerializedName("CostBasic")
     @Expose
     private Long CostBasic;
 
     /**
-    * 完成该任务所消耗的高级能力额度
+    * <p>完成该任务所消耗的高级能力额度</p>
     */
     @SerializedName("CostAdvanced")
     @Expose
@@ -71,100 +66,80 @@ public class InvokeTWeSeeComprehensionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+     * Get <p>任务 ID</p> 
+     * @return TaskId <p>任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set <p>任务 ID</p>
+     * @param TaskId <p>任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中 
-     * @return Status 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+     * Get <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul> 
+     * @return Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
-     * @param Status 任务状态。可能取值：
-
-- `1`：失败
-- `2`：空结果
-- `3`：有效结果
-- `4`：处理中
+     * Set <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
+     * @param Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 视觉理解结果 
-     * @return ComprehensionResult 视觉理解结果
+     * Get <p>视觉理解结果</p> 
+     * @return ComprehensionResult <p>视觉理解结果</p>
      */
     public SeeComprehensionResult getComprehensionResult() {
         return this.ComprehensionResult;
     }
 
     /**
-     * Set 视觉理解结果
-     * @param ComprehensionResult 视觉理解结果
+     * Set <p>视觉理解结果</p>
+     * @param ComprehensionResult <p>视觉理解结果</p>
      */
     public void setComprehensionResult(SeeComprehensionResult ComprehensionResult) {
         this.ComprehensionResult = ComprehensionResult;
     }
 
     /**
-     * Get 完成该任务所消耗的基础能力额度 
-     * @return CostBasic 完成该任务所消耗的基础能力额度
+     * Get <p>完成该任务所消耗的基础能力额度</p> 
+     * @return CostBasic <p>完成该任务所消耗的基础能力额度</p>
      */
     public Long getCostBasic() {
         return this.CostBasic;
     }
 
     /**
-     * Set 完成该任务所消耗的基础能力额度
-     * @param CostBasic 完成该任务所消耗的基础能力额度
+     * Set <p>完成该任务所消耗的基础能力额度</p>
+     * @param CostBasic <p>完成该任务所消耗的基础能力额度</p>
      */
     public void setCostBasic(Long CostBasic) {
         this.CostBasic = CostBasic;
     }
 
     /**
-     * Get 完成该任务所消耗的高级能力额度 
-     * @return CostAdvanced 完成该任务所消耗的高级能力额度
+     * Get <p>完成该任务所消耗的高级能力额度</p> 
+     * @return CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      */
     public Long getCostAdvanced() {
         return this.CostAdvanced;
     }
 
     /**
-     * Set 完成该任务所消耗的高级能力额度
-     * @param CostAdvanced 完成该任务所消耗的高级能力额度
+     * Set <p>完成该任务所消耗的高级能力额度</p>
+     * @param CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
      */
     public void setCostAdvanced(Long CostAdvanced) {
         this.CostAdvanced = CostAdvanced;

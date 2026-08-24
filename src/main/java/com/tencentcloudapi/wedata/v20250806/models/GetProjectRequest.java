@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetProjectRequest extends AbstractModel {
 
     /**
-    * 项目id。一般使用项目Id来查询，与projectName必须存在一个。
+    * <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get 项目id。一般使用项目Id来查询，与projectName必须存在一个。 
-     * @return ProjectId 项目id。一般使用项目Id来查询，与projectName必须存在一个。
+     * Get <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p> 
+     * @return ProjectId <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id。一般使用项目Id来查询，与projectName必须存在一个。
-     * @param ProjectId 项目id。一般使用项目Id来查询，与projectName必须存在一个。
+     * Set <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
+     * @param ProjectId <p>项目id。一般使用项目Id来查询，与projectName必须存在一个。</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

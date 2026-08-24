@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AIGWCustomDesensitizeRule extends AbstractModel {
 
     /**
-    * <p>自定义脱敏规则名称</p>
+    * <p>规则名称，同一配置内唯一，最长 64</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>自定义脱敏规则匹配正则</p>
+    * <p>RE2 兼容的正则表达式</p>
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * <p>自定义脱敏规则掩码</p>
+    * <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
     */
     @SerializedName("MaskFormat")
     @Expose
     private String MaskFormat;
 
     /**
-    * <p>自定义脱敏规则开关</p>
+    * <p>单条自定义规则是否启用</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-     * Get <p>自定义脱敏规则名称</p> 
-     * @return Name <p>自定义脱敏规则名称</p>
+     * Get <p>规则名称，同一配置内唯一，最长 64</p> 
+     * @return Name <p>规则名称，同一配置内唯一，最长 64</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>自定义脱敏规则名称</p>
-     * @param Name <p>自定义脱敏规则名称</p>
+     * Set <p>规则名称，同一配置内唯一，最长 64</p>
+     * @param Name <p>规则名称，同一配置内唯一，最长 64</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>自定义脱敏规则匹配正则</p> 
-     * @return Pattern <p>自定义脱敏规则匹配正则</p>
+     * Get <p>RE2 兼容的正则表达式</p> 
+     * @return Pattern <p>RE2 兼容的正则表达式</p>
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set <p>自定义脱敏规则匹配正则</p>
-     * @param Pattern <p>自定义脱敏规则匹配正则</p>
+     * Set <p>RE2 兼容的正则表达式</p>
+     * @param Pattern <p>RE2 兼容的正则表达式</p>
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get <p>自定义脱敏规则掩码</p> 
-     * @return MaskFormat <p>自定义脱敏规则掩码</p>
+     * Get <p>日志场景为掩码格式，转发场景为占位符；最长 64</p> 
+     * @return MaskFormat <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
      */
     public String getMaskFormat() {
         return this.MaskFormat;
     }
 
     /**
-     * Set <p>自定义脱敏规则掩码</p>
-     * @param MaskFormat <p>自定义脱敏规则掩码</p>
+     * Set <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
+     * @param MaskFormat <p>日志场景为掩码格式，转发场景为占位符；最长 64</p>
      */
     public void setMaskFormat(String MaskFormat) {
         this.MaskFormat = MaskFormat;
     }
 
     /**
-     * Get <p>自定义脱敏规则开关</p> 
-     * @return Enabled <p>自定义脱敏规则开关</p>
+     * Get <p>单条自定义规则是否启用</p> 
+     * @return Enabled <p>单条自定义规则是否启用</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set <p>自定义脱敏规则开关</p>
-     * @param Enabled <p>自定义脱敏规则开关</p>
+     * Set <p>单条自定义规则是否启用</p>
+     * @param Enabled <p>单条自定义规则是否启用</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

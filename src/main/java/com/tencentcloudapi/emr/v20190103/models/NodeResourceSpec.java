@@ -70,6 +70,13 @@ public class NodeResourceSpec extends AbstractModel {
     private ServiceDeploy [] SoftwareConfig;
 
     /**
+    * <p>自定义主机名</p>
+    */
+    @SerializedName("CustomNodeName")
+    @Expose
+    private String CustomNodeName;
+
+    /**
      * Get <p>规格类型，如S2.MEDIUM8</p> 
      * @return InstanceType <p>规格类型，如S2.MEDIUM8</p>
      */
@@ -181,6 +188,22 @@ public class NodeResourceSpec extends AbstractModel {
         this.SoftwareConfig = SoftwareConfig;
     }
 
+    /**
+     * Get <p>自定义主机名</p> 
+     * @return CustomNodeName <p>自定义主机名</p>
+     */
+    public String getCustomNodeName() {
+        return this.CustomNodeName;
+    }
+
+    /**
+     * Set <p>自定义主机名</p>
+     * @param CustomNodeName <p>自定义主机名</p>
+     */
+    public void setCustomNodeName(String CustomNodeName) {
+        this.CustomNodeName = CustomNodeName;
+    }
+
     public NodeResourceSpec() {
     }
 
@@ -222,6 +245,9 @@ public class NodeResourceSpec extends AbstractModel {
                 this.SoftwareConfig[i] = new ServiceDeploy(source.SoftwareConfig[i]);
             }
         }
+        if (source.CustomNodeName != null) {
+            this.CustomNodeName = new String(source.CustomNodeName);
+        }
     }
 
 
@@ -235,6 +261,7 @@ public class NodeResourceSpec extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
         this.setParamArrayObj(map, prefix + "LocalDataDisk.", this.LocalDataDisk);
         this.setParamArrayObj(map, prefix + "SoftwareConfig.", this.SoftwareConfig);
+        this.setParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
 
     }
 }

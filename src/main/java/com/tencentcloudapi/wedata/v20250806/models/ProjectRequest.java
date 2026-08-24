@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ProjectRequest extends AbstractModel {
 
     /**
-    * 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+    * <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+    * <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+    * <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
     */
     @SerializedName("ProjectModel")
     @Expose
     private String ProjectModel;
 
     /**
-     * Get 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符 
-     * @return ProjectName 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+    * <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+    */
+    @SerializedName("ScheduleMode")
+    @Expose
+    private String ScheduleMode;
+
+    /**
+     * Get <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p> 
+     * @return ProjectName <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
-     * @param ProjectName 项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+     * Set <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+     * @param ProjectName <p>项目标识，英文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符 
-     * @return DisplayName 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+     * Get <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p> 
+     * @return DisplayName <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
-     * @param DisplayName 项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符
+     * Set <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
+     * @param DisplayName <p>项目显示名称，可以为中文名，以字母开头，可包含字母、数字和下划线，不能超过32个字符</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式 
-     * @return ProjectModel 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+     * Get <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p> 
+     * @return ProjectModel <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
      */
     public String getProjectModel() {
         return this.ProjectModel;
     }
 
     /**
-     * Set 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
-     * @param ProjectModel 项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式
+     * Set <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
+     * @param ProjectModel <p>项目模式，SIMPLE（默认）：简单模式 STANDARD：标准模式</p>
      */
     public void setProjectModel(String ProjectModel) {
         this.ProjectModel = ProjectModel;
+    }
+
+    /**
+     * Get <p>项目调度模式，task：任务模式 workflow：工作流模式</p> 
+     * @return ScheduleMode <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+     */
+    public String getScheduleMode() {
+        return this.ScheduleMode;
+    }
+
+    /**
+     * Set <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+     * @param ScheduleMode <p>项目调度模式，task：任务模式 workflow：工作流模式</p>
+     */
+    public void setScheduleMode(String ScheduleMode) {
+        this.ScheduleMode = ScheduleMode;
     }
 
     public ProjectRequest() {
@@ -109,6 +132,9 @@ public class ProjectRequest extends AbstractModel {
         if (source.ProjectModel != null) {
             this.ProjectModel = new String(source.ProjectModel);
         }
+        if (source.ScheduleMode != null) {
+            this.ScheduleMode = new String(source.ScheduleMode);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ProjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "ProjectModel", this.ProjectModel);
+        this.setParamSimple(map, prefix + "ScheduleMode", this.ScheduleMode);
 
     }
 }

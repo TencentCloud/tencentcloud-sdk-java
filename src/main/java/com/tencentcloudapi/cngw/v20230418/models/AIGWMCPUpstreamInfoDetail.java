@@ -108,6 +108,13 @@ public class AIGWMCPUpstreamInfoDetail extends AbstractModel {
     private String MessageEndpoint;
 
     /**
+    * <p>TLS配置</p>
+    */
+    @SerializedName("TLSConfig")
+    @Expose
+    private AIGWUpstreamTLSConfig TLSConfig;
+
+    /**
      * Get <p>注册中心来源ID</p> 
      * @return SourceId <p>注册中心来源ID</p>
      */
@@ -299,6 +306,22 @@ public class AIGWMCPUpstreamInfoDetail extends AbstractModel {
         this.MessageEndpoint = MessageEndpoint;
     }
 
+    /**
+     * Get <p>TLS配置</p> 
+     * @return TLSConfig <p>TLS配置</p>
+     */
+    public AIGWUpstreamTLSConfig getTLSConfig() {
+        return this.TLSConfig;
+    }
+
+    /**
+     * Set <p>TLS配置</p>
+     * @param TLSConfig <p>TLS配置</p>
+     */
+    public void setTLSConfig(AIGWUpstreamTLSConfig TLSConfig) {
+        this.TLSConfig = TLSConfig;
+    }
+
     public AIGWMCPUpstreamInfoDetail() {
     }
 
@@ -343,6 +366,9 @@ public class AIGWMCPUpstreamInfoDetail extends AbstractModel {
         if (source.MessageEndpoint != null) {
             this.MessageEndpoint = new String(source.MessageEndpoint);
         }
+        if (source.TLSConfig != null) {
+            this.TLSConfig = new AIGWUpstreamTLSConfig(source.TLSConfig);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class AIGWMCPUpstreamInfoDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceGroup", this.ServiceGroup);
         this.setParamSimple(map, prefix + "MCPEndpoint", this.MCPEndpoint);
         this.setParamSimple(map, prefix + "MessageEndpoint", this.MessageEndpoint);
+        this.setParamObj(map, prefix + "TLSConfig.", this.TLSConfig);
 
     }
 }

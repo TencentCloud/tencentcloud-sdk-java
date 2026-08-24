@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel {
 
     /**
-    * 云盘类型
+    * <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
@@ -32,7 +32,7 @@ public class DataDisk extends AbstractModel {
     private String DiskType;
 
     /**
-    * 文件系统(ext3/ext4/xfs)
+    * <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSystem")
@@ -40,7 +40,7 @@ public class DataDisk extends AbstractModel {
     private String FileSystem;
 
     /**
-    * 云盘大小(G）
+    * <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
@@ -48,7 +48,7 @@ public class DataDisk extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * 是否自动化格式盘并挂载
+    * <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoFormatAndMount")
@@ -56,7 +56,7 @@ public class DataDisk extends AbstractModel {
     private Boolean AutoFormatAndMount;
 
     /**
-    * 挂载设备名或分区名
+    * <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskPartition")
@@ -64,7 +64,7 @@ public class DataDisk extends AbstractModel {
     private String DiskPartition;
 
     /**
-    * 挂载目录
+    * <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountTarget")
@@ -72,7 +72,7 @@ public class DataDisk extends AbstractModel {
     private String MountTarget;
 
     /**
-    * 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+    * <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encrypt")
@@ -80,7 +80,7 @@ public class DataDisk extends AbstractModel {
     private String Encrypt;
 
     /**
-    * 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+    * <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KmsKeyId")
@@ -88,7 +88,7 @@ public class DataDisk extends AbstractModel {
     private String KmsKeyId;
 
     /**
-    * 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+    * <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotId")
@@ -96,7 +96,7 @@ public class DataDisk extends AbstractModel {
     private String SnapshotId;
 
     /**
-    * 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+    * <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThroughputPerformance")
@@ -104,9 +104,9 @@ public class DataDisk extends AbstractModel {
     private Long ThroughputPerformance;
 
     /**
-     * Get 云盘类型
+     * Get <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskType 云盘类型
+     * @return DiskType <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
@@ -114,9 +114,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 云盘类型
+     * Set <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskType 云盘类型
+     * @param DiskType <p>云盘类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
@@ -124,9 +124,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 文件系统(ext3/ext4/xfs)
+     * Get <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSystem 文件系统(ext3/ext4/xfs)
+     * @return FileSystem <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSystem() {
@@ -134,9 +134,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 文件系统(ext3/ext4/xfs)
+     * Set <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSystem 文件系统(ext3/ext4/xfs)
+     * @param FileSystem <p>文件系统(ext3/ext4/xfs)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSystem(String FileSystem) {
@@ -144,9 +144,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 云盘大小(G）
+     * Get <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskSize 云盘大小(G）
+     * @return DiskSize <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
@@ -154,9 +154,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 云盘大小(G）
+     * Set <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSize 云盘大小(G）
+     * @param DiskSize <p>云盘大小(G）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
@@ -164,9 +164,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 是否自动化格式盘并挂载
+     * Get <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoFormatAndMount 是否自动化格式盘并挂载
+     * @return AutoFormatAndMount <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoFormatAndMount() {
@@ -174,9 +174,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 是否自动化格式盘并挂载
+     * Set <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoFormatAndMount 是否自动化格式盘并挂载
+     * @param AutoFormatAndMount <p>是否自动化格式盘并挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoFormatAndMount(Boolean AutoFormatAndMount) {
@@ -184,9 +184,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 挂载设备名或分区名
+     * Get <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskPartition 挂载设备名或分区名
+     * @return DiskPartition <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskPartition() {
@@ -194,9 +194,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 挂载设备名或分区名
+     * Set <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskPartition 挂载设备名或分区名
+     * @param DiskPartition <p>挂载设备名或分区名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskPartition(String DiskPartition) {
@@ -204,9 +204,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 挂载目录
+     * Get <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountTarget 挂载目录
+     * @return MountTarget <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountTarget() {
@@ -214,9 +214,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 挂载目录
+     * Set <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountTarget 挂载目录
+     * @param MountTarget <p>挂载目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountTarget(String MountTarget) {
@@ -224,9 +224,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+     * Get <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+     * @return Encrypt <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncrypt() {
@@ -234,9 +234,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+     * Set <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT
+     * @param Encrypt <p>传入该参数用于创建加密云盘，取值固定为ENCRYPT</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncrypt(String Encrypt) {
@@ -244,9 +244,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+     * Get <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KmsKeyId 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+     * @return KmsKeyId <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKmsKeyId() {
@@ -254,9 +254,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+     * Set <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KmsKeyId 购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空
+     * @param KmsKeyId <p>购买加密盘时自定义密钥，当传入该参数时, Encrypt入参不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKmsKeyId(String KmsKeyId) {
@@ -264,9 +264,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+     * Get <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotId 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+     * @return SnapshotId <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotId() {
@@ -274,9 +274,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+     * Set <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotId 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照
+     * @param SnapshotId <p>快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -284,9 +284,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+     * Get <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThroughputPerformance 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+     * @return ThroughputPerformance <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getThroughputPerformance() {
@@ -294,9 +294,9 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Set 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+     * Set <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThroughputPerformance 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能
+     * @param ThroughputPerformance <p>云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {

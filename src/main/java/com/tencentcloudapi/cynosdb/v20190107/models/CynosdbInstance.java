@@ -87,7 +87,7 @@ public class CynosdbInstance extends AbstractModel {
     private String Zone;
 
     /**
-    * <p>实例状态</p>
+    * <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -591,16 +591,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>实例状态</p> 
-     * @return Status <p>实例状态</p>
+     * Get <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul> 
+     * @return Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>实例状态</p>
-     * @param Status <p>实例状态</p>
+     * Set <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
+     * @param Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 从回收站重新恢复</li><li>offlining： 下线中</li><li>offlined： 已下线</li><li>deleting： 删除中</li><li>deleted： 已删除</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

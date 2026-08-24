@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class OperationLog extends AbstractModel {
 
     /**
-    * EMR实例ID
+    * <p>EMR实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private Long InstanceId;
 
     /**
-    * 操作名称
+    * <p>操作名称</p>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 操作类型
+    * <p>操作类型</p>
     */
     @SerializedName("OperationType")
     @Expose
     private Long OperationType;
 
     /**
-    * 用户类型
+    * <p>用户类型</p>
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
 
     /**
-    * 操作者
+    * <p>操作者</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 操作时间
+    * <p>操作时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 操作对象
+    * <p>操作对象</p>
     */
     @SerializedName("Operand")
     @Expose
     private String Operand;
 
     /**
-    * 操作详情
+    * <p>操作详情</p>
     */
     @SerializedName("OperationDesc")
     @Expose
     private String OperationDesc;
 
     /**
-    * 安全级别
+    * <p>安全级别</p>
     */
     @SerializedName("SecurityLevel")
     @Expose
     private String SecurityLevel;
 
     /**
-     * Get EMR实例ID 
-     * @return InstanceId EMR实例ID
+    * <p>操作者名称</p>
+    */
+    @SerializedName("OperatorName")
+    @Expose
+    private String OperatorName;
+
+    /**
+     * Get <p>EMR实例ID</p> 
+     * @return InstanceId <p>EMR实例ID</p>
      */
     public Long getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set EMR实例ID
-     * @param InstanceId EMR实例ID
+     * Set <p>EMR实例ID</p>
+     * @param InstanceId <p>EMR实例ID</p>
      */
     public void setInstanceId(Long InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 操作名称 
-     * @return Operation 操作名称
+     * Get <p>操作名称</p> 
+     * @return Operation <p>操作名称</p>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 操作名称
-     * @param Operation 操作名称
+     * Set <p>操作名称</p>
+     * @param Operation <p>操作名称</p>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 操作类型 
-     * @return OperationType 操作类型
+     * Get <p>操作类型</p> 
+     * @return OperationType <p>操作类型</p>
      */
     public Long getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set 操作类型
-     * @param OperationType 操作类型
+     * Set <p>操作类型</p>
+     * @param OperationType <p>操作类型</p>
      */
     public void setOperationType(Long OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get 用户类型 
-     * @return UserType 用户类型
+     * Get <p>用户类型</p> 
+     * @return UserType <p>用户类型</p>
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 用户类型
-     * @param UserType 用户类型
+     * Set <p>用户类型</p>
+     * @param UserType <p>用户类型</p>
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 操作者 
-     * @return Operator 操作者
+     * Get <p>操作者</p> 
+     * @return Operator <p>操作者</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者
-     * @param Operator 操作者
+     * Set <p>操作者</p>
+     * @param Operator <p>操作者</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 操作时间 
-     * @return CreateTime 操作时间
+     * Get <p>操作时间</p> 
+     * @return CreateTime <p>操作时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 操作时间
-     * @param CreateTime 操作时间
+     * Set <p>操作时间</p>
+     * @param CreateTime <p>操作时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 操作对象 
-     * @return Operand 操作对象
+     * Get <p>操作对象</p> 
+     * @return Operand <p>操作对象</p>
      */
     public String getOperand() {
         return this.Operand;
     }
 
     /**
-     * Set 操作对象
-     * @param Operand 操作对象
+     * Set <p>操作对象</p>
+     * @param Operand <p>操作对象</p>
      */
     public void setOperand(String Operand) {
         this.Operand = Operand;
     }
 
     /**
-     * Get 操作详情 
-     * @return OperationDesc 操作详情
+     * Get <p>操作详情</p> 
+     * @return OperationDesc <p>操作详情</p>
      */
     public String getOperationDesc() {
         return this.OperationDesc;
     }
 
     /**
-     * Set 操作详情
-     * @param OperationDesc 操作详情
+     * Set <p>操作详情</p>
+     * @param OperationDesc <p>操作详情</p>
      */
     public void setOperationDesc(String OperationDesc) {
         this.OperationDesc = OperationDesc;
     }
 
     /**
-     * Get 安全级别 
-     * @return SecurityLevel 安全级别
+     * Get <p>安全级别</p> 
+     * @return SecurityLevel <p>安全级别</p>
      */
     public String getSecurityLevel() {
         return this.SecurityLevel;
     }
 
     /**
-     * Set 安全级别
-     * @param SecurityLevel 安全级别
+     * Set <p>安全级别</p>
+     * @param SecurityLevel <p>安全级别</p>
      */
     public void setSecurityLevel(String SecurityLevel) {
         this.SecurityLevel = SecurityLevel;
+    }
+
+    /**
+     * Get <p>操作者名称</p> 
+     * @return OperatorName <p>操作者名称</p>
+     */
+    public String getOperatorName() {
+        return this.OperatorName;
+    }
+
+    /**
+     * Set <p>操作者名称</p>
+     * @param OperatorName <p>操作者名称</p>
+     */
+    public void setOperatorName(String OperatorName) {
+        this.OperatorName = OperatorName;
     }
 
     public OperationLog() {
@@ -265,6 +288,9 @@ public class OperationLog extends AbstractModel {
         if (source.SecurityLevel != null) {
             this.SecurityLevel = new String(source.SecurityLevel);
         }
+        if (source.OperatorName != null) {
+            this.OperatorName = new String(source.OperatorName);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class OperationLog extends AbstractModel {
         this.setParamSimple(map, prefix + "Operand", this.Operand);
         this.setParamSimple(map, prefix + "OperationDesc", this.OperationDesc);
         this.setParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
+        this.setParamSimple(map, prefix + "OperatorName", this.OperatorName);
 
     }
 }

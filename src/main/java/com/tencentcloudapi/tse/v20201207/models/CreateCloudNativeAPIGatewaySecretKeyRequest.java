@@ -108,6 +108,48 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     private AIGWOIDCCredentialConfig OIDCCredentialConfig;
 
     /**
+    * <p>AK/SK凭证配置</p>
+    */
+    @SerializedName("AKSKCredentialConfig")
+    @Expose
+    private AIGWAKSKCredentialConfig AKSKCredentialConfig;
+
+    /**
+    * <p>CAM凭证配置</p>
+    */
+    @SerializedName("CAMCredentialConfig")
+    @Expose
+    private AIGWCAMCredentialConfig CAMCredentialConfig;
+
+    /**
+    * <p>Bearer Token凭证配置</p>
+    */
+    @SerializedName("BearerTokenCredentialConfig")
+    @Expose
+    private AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig;
+
+    /**
+    * <p>自定义Header凭证配置</p>
+    */
+    @SerializedName("CustomHeaderCredentialConfig")
+    @Expose
+    private AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig;
+
+    /**
+    * <p>自定义Query参数凭证配置</p>
+    */
+    @SerializedName("QueryParamCredentialConfig")
+    @Expose
+    private AIGWQueryParamCredentialConfig QueryParamCredentialConfig;
+
+    /**
+    * <p>Basic Auth凭证配置</p>
+    */
+    @SerializedName("BasicCredentialConfig")
+    @Expose
+    private AIGWBasicCredentialConfig BasicCredentialConfig;
+
+    /**
     * <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
     */
     @SerializedName("Provider")
@@ -307,6 +349,102 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>AK/SK凭证配置</p> 
+     * @return AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public AIGWAKSKCredentialConfig getAKSKCredentialConfig() {
+        return this.AKSKCredentialConfig;
+    }
+
+    /**
+     * Set <p>AK/SK凭证配置</p>
+     * @param AKSKCredentialConfig <p>AK/SK凭证配置</p>
+     */
+    public void setAKSKCredentialConfig(AIGWAKSKCredentialConfig AKSKCredentialConfig) {
+        this.AKSKCredentialConfig = AKSKCredentialConfig;
+    }
+
+    /**
+     * Get <p>CAM凭证配置</p> 
+     * @return CAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public AIGWCAMCredentialConfig getCAMCredentialConfig() {
+        return this.CAMCredentialConfig;
+    }
+
+    /**
+     * Set <p>CAM凭证配置</p>
+     * @param CAMCredentialConfig <p>CAM凭证配置</p>
+     */
+    public void setCAMCredentialConfig(AIGWCAMCredentialConfig CAMCredentialConfig) {
+        this.CAMCredentialConfig = CAMCredentialConfig;
+    }
+
+    /**
+     * Get <p>Bearer Token凭证配置</p> 
+     * @return BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public AIGWBearerTokenCredentialConfig getBearerTokenCredentialConfig() {
+        return this.BearerTokenCredentialConfig;
+    }
+
+    /**
+     * Set <p>Bearer Token凭证配置</p>
+     * @param BearerTokenCredentialConfig <p>Bearer Token凭证配置</p>
+     */
+    public void setBearerTokenCredentialConfig(AIGWBearerTokenCredentialConfig BearerTokenCredentialConfig) {
+        this.BearerTokenCredentialConfig = BearerTokenCredentialConfig;
+    }
+
+    /**
+     * Get <p>自定义Header凭证配置</p> 
+     * @return CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public AIGWCustomHeaderCredentialConfig getCustomHeaderCredentialConfig() {
+        return this.CustomHeaderCredentialConfig;
+    }
+
+    /**
+     * Set <p>自定义Header凭证配置</p>
+     * @param CustomHeaderCredentialConfig <p>自定义Header凭证配置</p>
+     */
+    public void setCustomHeaderCredentialConfig(AIGWCustomHeaderCredentialConfig CustomHeaderCredentialConfig) {
+        this.CustomHeaderCredentialConfig = CustomHeaderCredentialConfig;
+    }
+
+    /**
+     * Get <p>自定义Query参数凭证配置</p> 
+     * @return QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public AIGWQueryParamCredentialConfig getQueryParamCredentialConfig() {
+        return this.QueryParamCredentialConfig;
+    }
+
+    /**
+     * Set <p>自定义Query参数凭证配置</p>
+     * @param QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
+     */
+    public void setQueryParamCredentialConfig(AIGWQueryParamCredentialConfig QueryParamCredentialConfig) {
+        this.QueryParamCredentialConfig = QueryParamCredentialConfig;
+    }
+
+    /**
+     * Get <p>Basic Auth凭证配置</p> 
+     * @return BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public AIGWBasicCredentialConfig getBasicCredentialConfig() {
+        return this.BasicCredentialConfig;
+    }
+
+    /**
+     * Set <p>Basic Auth凭证配置</p>
+     * @param BasicCredentialConfig <p>Basic Auth凭证配置</p>
+     */
+    public void setBasicCredentialConfig(AIGWBasicCredentialConfig BasicCredentialConfig) {
+        this.BasicCredentialConfig = BasicCredentialConfig;
+    }
+
+    /**
      * Get <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul> 
      * @return Provider <p>第三方平台类型</p><p>枚举值：</p><ul><li>Dify： Dify平台</li></ul>
      */
@@ -366,6 +504,24 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         if (source.OIDCCredentialConfig != null) {
             this.OIDCCredentialConfig = new AIGWOIDCCredentialConfig(source.OIDCCredentialConfig);
         }
+        if (source.AKSKCredentialConfig != null) {
+            this.AKSKCredentialConfig = new AIGWAKSKCredentialConfig(source.AKSKCredentialConfig);
+        }
+        if (source.CAMCredentialConfig != null) {
+            this.CAMCredentialConfig = new AIGWCAMCredentialConfig(source.CAMCredentialConfig);
+        }
+        if (source.BearerTokenCredentialConfig != null) {
+            this.BearerTokenCredentialConfig = new AIGWBearerTokenCredentialConfig(source.BearerTokenCredentialConfig);
+        }
+        if (source.CustomHeaderCredentialConfig != null) {
+            this.CustomHeaderCredentialConfig = new AIGWCustomHeaderCredentialConfig(source.CustomHeaderCredentialConfig);
+        }
+        if (source.QueryParamCredentialConfig != null) {
+            this.QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig(source.QueryParamCredentialConfig);
+        }
+        if (source.BasicCredentialConfig != null) {
+            this.BasicCredentialConfig = new AIGWBasicCredentialConfig(source.BasicCredentialConfig);
+        }
         if (source.Provider != null) {
             this.Provider = new String(source.Provider);
         }
@@ -388,6 +544,12 @@ public class CreateCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel {
         this.setParamObj(map, prefix + "JWTCredentialConfig.", this.JWTCredentialConfig);
         this.setParamObj(map, prefix + "OAuthCredentialConfig.", this.OAuthCredentialConfig);
         this.setParamObj(map, prefix + "OIDCCredentialConfig.", this.OIDCCredentialConfig);
+        this.setParamObj(map, prefix + "AKSKCredentialConfig.", this.AKSKCredentialConfig);
+        this.setParamObj(map, prefix + "CAMCredentialConfig.", this.CAMCredentialConfig);
+        this.setParamObj(map, prefix + "BearerTokenCredentialConfig.", this.BearerTokenCredentialConfig);
+        this.setParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
+        this.setParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+        this.setParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
 
     }

@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class CNAPIGwConsumerGroup extends AbstractModel {
 
     /**
-    * 分组id
+    * <p>分组id</p>
     */
     @SerializedName("ConsumerGroupId")
     @Expose
     private String ConsumerGroupId;
 
     /**
-    * 名字
+    * <p>名字</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 状态Disable/Enable
+    * <p>状态Disable/Enable</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间 yyyy-MM-dd hh:mm:ss
+    * <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 绑定的消费者数量
+    * <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindCount")
@@ -74,105 +74,126 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
     private Long BindCount;
 
     /**
-     * Get 分组id 
-     * @return ConsumerGroupId 分组id
+    * <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private String SyncStatus;
+
+    /**
+    * <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公有</li></ul>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>同步版本</p>
+    */
+    @SerializedName("SyncedVersion")
+    @Expose
+    private String SyncedVersion;
+
+    /**
+     * Get <p>分组id</p> 
+     * @return ConsumerGroupId <p>分组id</p>
      */
     public String getConsumerGroupId() {
         return this.ConsumerGroupId;
     }
 
     /**
-     * Set 分组id
-     * @param ConsumerGroupId 分组id
+     * Set <p>分组id</p>
+     * @param ConsumerGroupId <p>分组id</p>
      */
     public void setConsumerGroupId(String ConsumerGroupId) {
         this.ConsumerGroupId = ConsumerGroupId;
     }
 
     /**
-     * Get 名字 
-     * @return Name 名字
+     * Get <p>名字</p> 
+     * @return Name <p>名字</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名字
-     * @param Name 名字
+     * Set <p>名字</p>
+     * @param Name <p>名字</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 状态Disable/Enable 
-     * @return Status 状态Disable/Enable
+     * Get <p>状态Disable/Enable</p> 
+     * @return Status <p>状态Disable/Enable</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态Disable/Enable
-     * @param Status 状态Disable/Enable
+     * Set <p>状态Disable/Enable</p>
+     * @param Status <p>状态Disable/Enable</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 yyyy-MM-dd hh:mm:ss 
-     * @return ModifyTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * Get <p>更新时间 yyyy-MM-dd hh:mm:ss</p> 
+     * @return ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 更新时间 yyyy-MM-dd hh:mm:ss
-     * @param ModifyTime 更新时间 yyyy-MM-dd hh:mm:ss
+     * Set <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
+     * @param ModifyTime <p>更新时间 yyyy-MM-dd hh:mm:ss</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 绑定的消费者数量
+     * Get <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BindCount 绑定的消费者数量
+     * @return BindCount <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindCount() {
@@ -180,13 +201,61 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
     }
 
     /**
-     * Set 绑定的消费者数量
+     * Set <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BindCount 绑定的消费者数量
+     * @param BindCount <p>绑定的消费者数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindCount(Long BindCount) {
         this.BindCount = BindCount;
+    }
+
+    /**
+     * Get <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul> 
+     * @return SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     */
+    public String getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     * @param SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     */
+    public void setSyncStatus(String SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公有</li></ul> 
+     * @return SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公有</li></ul>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公有</li></ul>
+     * @param SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公有</li></ul>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>同步版本</p> 
+     * @return SyncedVersion <p>同步版本</p>
+     */
+    public String getSyncedVersion() {
+        return this.SyncedVersion;
+    }
+
+    /**
+     * Set <p>同步版本</p>
+     * @param SyncedVersion <p>同步版本</p>
+     */
+    public void setSyncedVersion(String SyncedVersion) {
+        this.SyncedVersion = SyncedVersion;
     }
 
     public CNAPIGwConsumerGroup() {
@@ -218,6 +287,15 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
         if (source.BindCount != null) {
             this.BindCount = new Long(source.BindCount);
         }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new String(source.SyncStatus);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SyncedVersion != null) {
+            this.SyncedVersion = new String(source.SyncedVersion);
+        }
     }
 
 
@@ -232,6 +310,9 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "BindCount", this.BindCount);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
 
     }
 }

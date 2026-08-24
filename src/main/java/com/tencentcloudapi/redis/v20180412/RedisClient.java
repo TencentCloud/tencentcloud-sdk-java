@@ -556,6 +556,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询指定实例当前密码复杂度配置
+     * @param req DescribeInstancePasswordPolicyRequest
+     * @return DescribeInstancePasswordPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancePasswordPolicyResponse DescribeInstancePasswordPolicy(DescribeInstancePasswordPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancePasswordPolicy", DescribeInstancePasswordPolicyResponse.class);
+    }
+
+    /**
      *本接口（DescribeInstanceSecurityGroup）用于查询实例安全组信息。
      * @param req DescribeInstanceSecurityGroupRequest
      * @return DescribeInstanceSecurityGroupResponse

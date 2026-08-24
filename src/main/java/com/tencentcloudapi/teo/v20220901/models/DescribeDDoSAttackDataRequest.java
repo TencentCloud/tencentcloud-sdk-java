@@ -24,219 +24,187 @@ import java.util.HashMap;
 public class DescribeDDoSAttackDataRequest extends AbstractModel {
 
     /**
-    * 开始时间。
+    * <p>开始时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+    * <p>结束时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 统计指标列表，取值有：
-<li>ddos_attackMaxBandwidth：攻击带宽峰值；</li>
-<li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
-<li>ddos_attackBandwidth：攻击带宽曲线；</li>
-<li>ddos_attackPackageRate：攻击包速率曲线。</li>
+    * <p>统计指标列表，至少填写 1 个，且不允许重复。</p><p>枚举值：</p><ul><li>ddos_attackMaxBandwidth： 攻击带宽峰值，单位 bps；</li><li>ddos_attackMaxPackageRate： 攻击包速率峰值，单位 pps；</li><li>ddos_attackBandwidth： 攻击带宽曲线，单位 bps；</li><li>ddos_attackPackageRate： 攻击包速率曲线，单位 pps。</li></ul>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+    * <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * DDoS策略组ID列表，不填默认选择全部策略ID。
+    * <p>DDoS 策略组 ID 列表，不填默认选择全部策略 ID。</p>
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * 查询时间粒度，取值有：
-<li>min：1分钟；</li>
-<li>5min：5分钟；</li>
-<li>hour：1小时；</li>
-<li>day：1天。</li>不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+    * <p>查询时间粒度，不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p><p>枚举值：</p><ul><li>min： 1 分钟；</li><li>5min： 5分钟；</li><li>hour： 1小时；</li><li>day： 1天。</li></ul>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+    * <p>数据归属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据；</li><li>global： 全球数据。</li></ul><p>默认值：global</p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+    * <p>过滤条件，QueryCondition.Value 的集合数量上限为 20，详细的过滤条件 QueryCondition.Key 值如下：</p><li>ddos-attack-dip：按照 DDoS 攻击目的 IP 进行过滤，QueryCondition.Operator 仅支持 equals。</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private QueryCondition [] Filters;
+
+    /**
+     * Get <p>开始时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。</p> 
+     * @return StartTime <p>开始时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set <p>开始时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。</p>
+     * @param StartTime <p>开始时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。 
-     * @return EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+     * Get <p>结束时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p> 
+     * @return EndTime <p>结束时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
-     * @param EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+     * Set <p>结束时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
+     * @param EndTime <p>结束时间。时间为世界标准时间（UTC），遵循 ISO 8601 标准的日期和时间格式。查询时间范围（<code>EndTime</code> - <code>StartTime</code>）需小于等于 31 天。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 统计指标列表，取值有：
-<li>ddos_attackMaxBandwidth：攻击带宽峰值；</li>
-<li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
-<li>ddos_attackBandwidth：攻击带宽曲线；</li>
-<li>ddos_attackPackageRate：攻击包速率曲线。</li> 
-     * @return MetricNames 统计指标列表，取值有：
-<li>ddos_attackMaxBandwidth：攻击带宽峰值；</li>
-<li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
-<li>ddos_attackBandwidth：攻击带宽曲线；</li>
-<li>ddos_attackPackageRate：攻击包速率曲线。</li>
+     * Get <p>统计指标列表，至少填写 1 个，且不允许重复。</p><p>枚举值：</p><ul><li>ddos_attackMaxBandwidth： 攻击带宽峰值，单位 bps；</li><li>ddos_attackMaxPackageRate： 攻击包速率峰值，单位 pps；</li><li>ddos_attackBandwidth： 攻击带宽曲线，单位 bps；</li><li>ddos_attackPackageRate： 攻击包速率曲线，单位 pps。</li></ul> 
+     * @return MetricNames <p>统计指标列表，至少填写 1 个，且不允许重复。</p><p>枚举值：</p><ul><li>ddos_attackMaxBandwidth： 攻击带宽峰值，单位 bps；</li><li>ddos_attackMaxPackageRate： 攻击包速率峰值，单位 pps；</li><li>ddos_attackBandwidth： 攻击带宽曲线，单位 bps；</li><li>ddos_attackPackageRate： 攻击包速率曲线，单位 pps。</li></ul>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 统计指标列表，取值有：
-<li>ddos_attackMaxBandwidth：攻击带宽峰值；</li>
-<li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
-<li>ddos_attackBandwidth：攻击带宽曲线；</li>
-<li>ddos_attackPackageRate：攻击包速率曲线。</li>
-     * @param MetricNames 统计指标列表，取值有：
-<li>ddos_attackMaxBandwidth：攻击带宽峰值；</li>
-<li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
-<li>ddos_attackBandwidth：攻击带宽曲线；</li>
-<li>ddos_attackPackageRate：攻击包速率曲线。</li>
+     * Set <p>统计指标列表，至少填写 1 个，且不允许重复。</p><p>枚举值：</p><ul><li>ddos_attackMaxBandwidth： 攻击带宽峰值，单位 bps；</li><li>ddos_attackMaxPackageRate： 攻击包速率峰值，单位 pps；</li><li>ddos_attackBandwidth： 攻击带宽曲线，单位 bps；</li><li>ddos_attackPackageRate： 攻击包速率曲线，单位 pps。</li></ul>
+     * @param MetricNames <p>统计指标列表，至少填写 1 个，且不允许重复。</p><p>枚举值：</p><ul><li>ddos_attackMaxBandwidth： 攻击带宽峰值，单位 bps；</li><li>ddos_attackMaxPackageRate： 攻击包速率峰值，单位 pps；</li><li>ddos_attackBandwidth： 攻击带宽曲线，单位 bps；</li><li>ddos_attackPackageRate： 攻击包速率曲线，单位 pps。</li></ul>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。 
-     * @return ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * Get <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p> 
+     * @return ZoneIds <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
-     * @param ZoneIds 站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：[【腾讯云 EdgeOne】云 API 变更通知](https://cloud.tencent.com/document/product/1552/104902)。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * Set <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
+     * @param ZoneIds <p>站点 ID 集合，此参数将于2024年05月30日后由可选改为必填，详见公告：<a href="https://cloud.tencent.com/document/product/1552/104902">【腾讯云 EdgeOne】云 API 变更通知</a>。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 <code>*</code> 代替，查询账号级别数据需具备本接口全部站点资源权限。</p>
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get DDoS策略组ID列表，不填默认选择全部策略ID。 
-     * @return PolicyIds DDoS策略组ID列表，不填默认选择全部策略ID。
+     * Get <p>DDoS 策略组 ID 列表，不填默认选择全部策略 ID。</p> 
+     * @return PolicyIds <p>DDoS 策略组 ID 列表，不填默认选择全部策略 ID。</p>
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set DDoS策略组ID列表，不填默认选择全部策略ID。
-     * @param PolicyIds DDoS策略组ID列表，不填默认选择全部策略ID。
+     * Set <p>DDoS 策略组 ID 列表，不填默认选择全部策略 ID。</p>
+     * @param PolicyIds <p>DDoS 策略组 ID 列表，不填默认选择全部策略 ID。</p>
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get 查询时间粒度，取值有：
-<li>min：1分钟；</li>
-<li>5min：5分钟；</li>
-<li>hour：1小时；</li>
-<li>day：1天。</li>不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。 
-     * @return Interval 查询时间粒度，取值有：
-<li>min：1分钟；</li>
-<li>5min：5分钟；</li>
-<li>hour：1小时；</li>
-<li>day：1天。</li>不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+     * Get <p>查询时间粒度，不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p><p>枚举值：</p><ul><li>min： 1 分钟；</li><li>5min： 5分钟；</li><li>hour： 1小时；</li><li>day： 1天。</li></ul> 
+     * @return Interval <p>查询时间粒度，不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p><p>枚举值：</p><ul><li>min： 1 分钟；</li><li>5min： 5分钟；</li><li>hour： 1小时；</li><li>day： 1天。</li></ul>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间粒度，取值有：
-<li>min：1分钟；</li>
-<li>5min：5分钟；</li>
-<li>hour：1小时；</li>
-<li>day：1天。</li>不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
-     * @param Interval 查询时间粒度，取值有：
-<li>min：1分钟；</li>
-<li>5min：5分钟；</li>
-<li>hour：1小时；</li>
-<li>day：1天。</li>不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+     * Set <p>查询时间粒度，不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p><p>枚举值：</p><ul><li>min： 1 分钟；</li><li>5min： 5分钟；</li><li>hour： 1小时；</li><li>day： 1天。</li></ul>
+     * @param Interval <p>查询时间粒度，不填将根据开始时间与结束时间的间隔自动推算粒度，具体为：1 小时范围内以 min 粒度查询，2 天范围内以 5min 粒度查询，7 天范围内以 hour 粒度查询，超过 7 天以 day 粒度查询。</p><p>枚举值：</p><ul><li>min： 1 分钟；</li><li>5min： 5分钟；</li><li>hour： 1小时；</li><li>day： 1天。</li></ul>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。 
-     * @return Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+     * Get <p>数据归属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据；</li><li>global： 全球数据。</li></ul><p>默认值：global</p> 
+     * @return Area <p>数据归属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据；</li><li>global： 全球数据。</li></ul><p>默认值：global</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
-     * @param Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据；</li>
-<li>global：全球数据。</li>不填默认取值为global。
+     * Set <p>数据归属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据；</li><li>global： 全球数据。</li></ul><p>默认值：global</p>
+     * @param Area <p>数据归属地区。</p><p>枚举值：</p><ul><li>overseas： 全球（除中国大陆地区）数据；</li><li>mainland： 中国大陆地区数据；</li><li>global： 全球数据。</li></ul><p>默认值：global</p>
      */
     public void setArea(String Area) {
         this.Area = Area;
+    }
+
+    /**
+     * Get <p>过滤条件，QueryCondition.Value 的集合数量上限为 20，详细的过滤条件 QueryCondition.Key 值如下：</p><li>ddos-attack-dip：按照 DDoS 攻击目的 IP 进行过滤，QueryCondition.Operator 仅支持 equals。</li> 
+     * @return Filters <p>过滤条件，QueryCondition.Value 的集合数量上限为 20，详细的过滤条件 QueryCondition.Key 值如下：</p><li>ddos-attack-dip：按照 DDoS 攻击目的 IP 进行过滤，QueryCondition.Operator 仅支持 equals。</li>
+     */
+    public QueryCondition [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件，QueryCondition.Value 的集合数量上限为 20，详细的过滤条件 QueryCondition.Key 值如下：</p><li>ddos-attack-dip：按照 DDoS 攻击目的 IP 进行过滤，QueryCondition.Operator 仅支持 equals。</li>
+     * @param Filters <p>过滤条件，QueryCondition.Value 的集合数量上限为 20，详细的过滤条件 QueryCondition.Key 值如下：</p><li>ddos-attack-dip：按照 DDoS 攻击目的 IP 进行过滤，QueryCondition.Operator 仅支持 equals。</li>
+     */
+    public void setFilters(QueryCondition [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeDDoSAttackDataRequest() {
@@ -277,6 +245,12 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Filters != null) {
+            this.Filters = new QueryCondition[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new QueryCondition(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -291,6 +265,7 @@ public class DescribeDDoSAttackDataRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

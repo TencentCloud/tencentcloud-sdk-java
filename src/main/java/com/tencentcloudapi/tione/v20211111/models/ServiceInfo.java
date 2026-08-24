@@ -336,6 +336,13 @@ public class ServiceInfo extends AbstractModel {
     private Long NodeCount;
 
     /**
+    * <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+    */
+    @SerializedName("InferTemplateId")
+    @Expose
+    private String InferTemplateId;
+
+    /**
      * Get <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Replicas <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
@@ -1099,6 +1106,22 @@ public class ServiceInfo extends AbstractModel {
         this.NodeCount = NodeCount;
     }
 
+    /**
+     * Get <p>推理模板Id</p><p>参数格式：推理模板 ID</p> 
+     * @return InferTemplateId <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+     */
+    public String getInferTemplateId() {
+        return this.InferTemplateId;
+    }
+
+    /**
+     * Set <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+     * @param InferTemplateId <p>推理模板Id</p><p>参数格式：推理模板 ID</p>
+     */
+    public void setInferTemplateId(String InferTemplateId) {
+        this.InferTemplateId = InferTemplateId;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1248,6 +1271,9 @@ public class ServiceInfo extends AbstractModel {
         if (source.NodeCount != null) {
             this.NodeCount = new Long(source.NodeCount);
         }
+        if (source.InferTemplateId != null) {
+            this.InferTemplateId = new String(source.InferTemplateId);
+        }
     }
 
 
@@ -1296,6 +1322,7 @@ public class ServiceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
 
     }
 }

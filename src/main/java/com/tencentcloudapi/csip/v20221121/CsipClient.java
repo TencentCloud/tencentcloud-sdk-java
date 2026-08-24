@@ -635,6 +635,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建Dspm审计过滤策略
+     * @param req CreateDspmAuditFilterStrategyRequest
+     * @return CreateDspmAuditFilterStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmAuditFilterStrategyResponse CreateDspmAuditFilterStrategy(CreateDspmAuditFilterStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmAuditFilterStrategy", CreateDspmAuditFilterStrategyResponse.class);
+    }
+
+    /**
      *创建日志导出任务
      * @param req CreateDspmExportTaskRequest
      * @return CreateDspmExportTaskResponse
@@ -745,6 +756,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建Dspm实例
+     * @param req CreateDspmResourceRequest
+     * @return CreateDspmResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmResourceResponse CreateDspmResource(CreateDspmResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmResource", CreateDspmResourceResponse.class);
+    }
+
+    /**
      *创建Dspm风险导出任务
      * @param req CreateDspmRiskExportJobRequest
      * @return CreateDspmRiskExportJobResponse
@@ -753,6 +775,17 @@ public class CsipClient extends AbstractClient{
     public CreateDspmRiskExportJobResponse CreateDspmRiskExportJob(CreateDspmRiskExportJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDspmRiskExportJob", CreateDspmRiskExportJobResponse.class);
+    }
+
+    /**
+     *创建Dspm自定义风险策略
+     * @param req CreateDspmRiskStrategyRequest
+     * @return CreateDspmRiskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDspmRiskStrategyResponse CreateDspmRiskStrategy(CreateDspmRiskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDspmRiskStrategy", CreateDspmRiskStrategyResponse.class);
     }
 
     /**
@@ -1352,6 +1385,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *删除Dspm审计过滤策略
+     * @param req DeleteDspmAuditFilterStrategyRequest
+     * @return DeleteDspmAuditFilterStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmAuditFilterStrategyResponse DeleteDspmAuditFilterStrategy(DeleteDspmAuditFilterStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmAuditFilterStrategy", DeleteDspmAuditFilterStrategyResponse.class);
+    }
+
+    /**
      *删除备份日志
      * @param req DeleteDspmBackupLogListRequest
      * @return DeleteDspmBackupLogListResponse
@@ -1360,6 +1404,17 @@ public class CsipClient extends AbstractClient{
     public DeleteDspmBackupLogListResponse DeleteDspmBackupLogList(DeleteDspmBackupLogListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDspmBackupLogList", DeleteDspmBackupLogListResponse.class);
+    }
+
+    /**
+     *取消日志投递配置
+     * @param req DeleteDspmCkafkaConfigRequest
+     * @return DeleteDspmCkafkaConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmCkafkaConfigResponse DeleteDspmCkafkaConfig(DeleteDspmCkafkaConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmCkafkaConfig", DeleteDspmCkafkaConfigResponse.class);
     }
 
     /**
@@ -1459,6 +1514,28 @@ public class CsipClient extends AbstractClient{
     public DeleteDspmRestoreLogListResponse DeleteDspmRestoreLogList(DeleteDspmRestoreLogListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDspmRestoreLogList", DeleteDspmRestoreLogListResponse.class);
+    }
+
+    /**
+     *删除Dspm自定义风险策略。仅支持删除自定义策略（rule_source=custom）；内置策略不可删除，请通过 ModifyDspmRiskStrategy 的 IsEnabled 禁用。
+     * @param req DeleteDspmRiskStrategyRequest
+     * @return DeleteDspmRiskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmRiskStrategyResponse DeleteDspmRiskStrategy(DeleteDspmRiskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmRiskStrategy", DeleteDspmRiskStrategyResponse.class);
+    }
+
+    /**
+     *删除dspmg共享账号数据
+     * @param req DeleteDspmShareUserDataRequest
+     * @return DeleteDspmShareUserDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDspmShareUserDataResponse DeleteDspmShareUserData(DeleteDspmShareUserDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDspmShareUserData", DeleteDspmShareUserDataResponse.class);
     }
 
     /**
@@ -3707,6 +3784,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询dspm审计过滤策略
+     * @param req DescribeDspmAuditFilterStrategyRequest
+     * @return DescribeDspmAuditFilterStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAuditFilterStrategyResponse DescribeDspmAuditFilterStrategy(DescribeDspmAuditFilterStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAuditFilterStrategy", DescribeDspmAuditFilterStrategyResponse.class);
+    }
+
+    /**
      *查询备份日志列表
      * @param req DescribeDspmBackupLogListRequest
      * @return DescribeDspmBackupLogListResponse
@@ -3726,6 +3814,28 @@ public class CsipClient extends AbstractClient{
     public DescribeDspmBackupSettingResponse DescribeDspmBackupSetting(DescribeDspmBackupSettingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDspmBackupSetting", DescribeDspmBackupSettingResponse.class);
+    }
+
+    /**
+     *查询Ckafka实例的路由信息
+     * @param req DescribeDspmCkafkaRouteListRequest
+     * @return DescribeDspmCkafkaRouteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmCkafkaRouteListResponse DescribeDspmCkafkaRouteList(DescribeDspmCkafkaRouteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmCkafkaRouteList", DescribeDspmCkafkaRouteListResponse.class);
+    }
+
+    /**
+     *查询实例的主题列表
+     * @param req DescribeDspmCkafkaTopicListRequest
+     * @return DescribeDspmCkafkaTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmCkafkaTopicListResponse DescribeDspmCkafkaTopicList(DescribeDspmCkafkaTopicListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmCkafkaTopicList", DescribeDspmCkafkaTopicListResponse.class);
     }
 
     /**
@@ -3883,6 +3993,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询日志投递的日志类型
+     * @param req DescribeDspmLogDeliveryTypeRequest
+     * @return DescribeDspmLogDeliveryTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmLogDeliveryTypeResponse DescribeDspmLogDeliveryType(DescribeDspmLogDeliveryTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmLogDeliveryType", DescribeDspmLogDeliveryTypeResponse.class);
+    }
+
+    /**
      *查询日志列表信息
      * @param req DescribeDspmLogListRequest
      * @return DescribeDspmLogListResponse
@@ -3891,6 +4012,17 @@ public class CsipClient extends AbstractClient{
     public DescribeDspmLogListResponse DescribeDspmLogList(DescribeDspmLogListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDspmLogList", DescribeDspmLogListResponse.class);
+    }
+
+    /**
+     *查询租户日志投递配置
+     * @param req DescribeDspmLogTypeConfigListRequest
+     * @return DescribeDspmLogTypeConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmLogTypeConfigListResponse DescribeDspmLogTypeConfigList(DescribeDspmLogTypeConfigListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmLogTypeConfigList", DescribeDspmLogTypeConfigListResponse.class);
     }
 
     /**
@@ -3924,6 +4056,17 @@ public class CsipClient extends AbstractClient{
     public DescribeDspmPersonalIdentifyListResponse DescribeDspmPersonalIdentifyList(DescribeDspmPersonalIdentifyListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDspmPersonalIdentifyList", DescribeDspmPersonalIdentifyListResponse.class);
+    }
+
+    /**
+     *查询Dspm实例
+     * @param req DescribeDspmResourceRequest
+     * @return DescribeDspmResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmResourceResponse DescribeDspmResource(DescribeDspmResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmResource", DescribeDspmResourceResponse.class);
     }
 
     /**
@@ -3982,6 +4125,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询审计会话列表信息
+     * @param req DescribeDspmSessionListRequest
+     * @return DescribeDspmSessionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmSessionListResponse DescribeDspmSessionList(DescribeDspmSessionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmSessionList", DescribeDspmSessionListResponse.class);
+    }
+
+    /**
      *查询Dspm统计信息
      * @param req DescribeDspmStatisticsRequest
      * @return DescribeDspmStatisticsResponse
@@ -4023,6 +4177,17 @@ public class CsipClient extends AbstractClient{
     public DescribeDspmSyncUsersStatusResponse DescribeDspmSyncUsersStatus(DescribeDspmSyncUsersStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDspmSyncUsersStatus", DescribeDspmSyncUsersStatusResponse.class);
+    }
+
+    /**
+     *查询租户ckafka实例列表
+     * @param req DescribeDspmUserCkafkaInstanceListRequest
+     * @return DescribeDspmUserCkafkaInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmUserCkafkaInstanceListResponse DescribeDspmUserCkafkaInstanceList(DescribeDspmUserCkafkaInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmUserCkafkaInstanceList", DescribeDspmUserCkafkaInstanceListResponse.class);
     }
 
     /**
@@ -6656,6 +6821,17 @@ capi 层处理流程：
     }
 
     /**
+     *修改Dspm审计过滤策略
+     * @param req ModifyDspmAuditFilterStrategyRequest
+     * @return ModifyDspmAuditFilterStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmAuditFilterStrategyResponse ModifyDspmAuditFilterStrategy(ModifyDspmAuditFilterStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmAuditFilterStrategy", ModifyDspmAuditFilterStrategyResponse.class);
+    }
+
+    /**
      *修改日志备份设置
      * @param req ModifyDspmBackupSettingRequest
      * @return ModifyDspmBackupSettingResponse
@@ -6664,6 +6840,39 @@ capi 层处理流程：
     public ModifyDspmBackupSettingResponse ModifyDspmBackupSetting(ModifyDspmBackupSettingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDspmBackupSetting", ModifyDspmBackupSettingResponse.class);
+    }
+
+    /**
+     *租户Ckafka配置保存
+     * @param req ModifyDspmCkafkaSaveRequest
+     * @return ModifyDspmCkafkaSaveResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmCkafkaSaveResponse ModifyDspmCkafkaSave(ModifyDspmCkafkaSaveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmCkafkaSave", ModifyDspmCkafkaSaveResponse.class);
+    }
+
+    /**
+     *日志投递开启
+     * @param req ModifyDspmCkafkaStartRequest
+     * @return ModifyDspmCkafkaStartResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmCkafkaStartResponse ModifyDspmCkafkaStart(ModifyDspmCkafkaStartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmCkafkaStart", ModifyDspmCkafkaStartResponse.class);
+    }
+
+    /**
+     *日志类型投递关闭
+     * @param req ModifyDspmCkafkaStopRequest
+     * @return ModifyDspmCkafkaStopResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmCkafkaStopResponse ModifyDspmCkafkaStop(ModifyDspmCkafkaStopRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmCkafkaStop", ModifyDspmCkafkaStopResponse.class);
     }
 
     /**
@@ -6774,6 +6983,17 @@ capi 层处理流程：
     public ModifyDspmIpInfoResponse ModifyDspmIpInfo(ModifyDspmIpInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDspmIpInfo", ModifyDspmIpInfoResponse.class);
+    }
+
+    /**
+     *修改日志投递配置信息
+     * @param req ModifyDspmLogDeliveryTypeRequest
+     * @return ModifyDspmLogDeliveryTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDspmLogDeliveryTypeResponse ModifyDspmLogDeliveryType(ModifyDspmLogDeliveryTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDspmLogDeliveryType", ModifyDspmLogDeliveryTypeResponse.class);
     }
 
     /**
@@ -7314,6 +7534,17 @@ capi 层处理流程：
     }
 
     /**
+     *编辑dspm监测账号
+     * @param req ModifyShareUserDspmRequest
+     * @return ModifyShareUserDspmResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyShareUserDspmResponse ModifyShareUserDspm(ModifyShareUserDspmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyShareUserDspm", ModifyShareUserDspmResponse.class);
+    }
+
+    /**
      *批量修改 Skill 安全检测告警的处理状态
      * @param req ModifySkillScanAlertStatusRequest
      * @return ModifySkillScanAlertStatusResponse
@@ -7531,6 +7762,17 @@ capi 层处理流程：
     public SendDspmAssetLoginSmsCodeResponse SendDspmAssetLoginSmsCode(SendDspmAssetLoginSmsCodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendDspmAssetLoginSmsCode", SendDspmAssetLoginSmsCodeResponse.class);
+    }
+
+    /**
+     *租户Ckafka联通性测试
+     * @param req SendDspmCkafkaTestRequest
+     * @return SendDspmCkafkaTestResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendDspmCkafkaTestResponse SendDspmCkafkaTest(SendDspmCkafkaTestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendDspmCkafkaTest", SendDspmCkafkaTestResponse.class);
     }
 
     /**

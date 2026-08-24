@@ -283,6 +283,13 @@ public class ModifyModelServiceRequest extends AbstractModel {
     private Long TargetProjectId;
 
     /**
+    * <p>推理模板 ID，在内置大模型场景下使用</p>
+    */
+    @SerializedName("InferTemplateId")
+    @Expose
+    private String InferTemplateId;
+
+    /**
      * Get <p>服务id</p> 
      * @return ServiceId <p>服务id</p>
      */
@@ -874,6 +881,22 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.TargetProjectId = TargetProjectId;
     }
 
+    /**
+     * Get <p>推理模板 ID，在内置大模型场景下使用</p> 
+     * @return InferTemplateId <p>推理模板 ID，在内置大模型场景下使用</p>
+     */
+    public String getInferTemplateId() {
+        return this.InferTemplateId;
+    }
+
+    /**
+     * Set <p>推理模板 ID，在内置大模型场景下使用</p>
+     * @param InferTemplateId <p>推理模板 ID，在内置大模型场景下使用</p>
+     */
+    public void setInferTemplateId(String InferTemplateId) {
+        this.InferTemplateId = InferTemplateId;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -1005,6 +1028,9 @@ public class ModifyModelServiceRequest extends AbstractModel {
         if (source.TargetProjectId != null) {
             this.TargetProjectId = new Long(source.TargetProjectId);
         }
+        if (source.InferTemplateId != null) {
+            this.InferTemplateId = new String(source.InferTemplateId);
+        }
     }
 
 
@@ -1049,6 +1075,7 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
         this.setParamSimple(map, prefix + "TargetProjectId", this.TargetProjectId);
+        this.setParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
 
     }
 }

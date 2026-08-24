@@ -108,6 +108,13 @@ public class SandboxInstance extends AbstractModel {
     private CustomConfigurationDetail CustomConfiguration;
 
     /**
+    * <p>桌面电脑环境类沙箱配置</p>
+    */
+    @SerializedName("ComputerConfiguration")
+    @Expose
+    private ComputerConfiguration ComputerConfiguration;
+
+    /**
     * <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
     */
     @SerializedName("NetworkMode")
@@ -321,6 +328,22 @@ public class SandboxInstance extends AbstractModel {
     }
 
     /**
+     * Get <p>桌面电脑环境类沙箱配置</p> 
+     * @return ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public ComputerConfiguration getComputerConfiguration() {
+        return this.ComputerConfiguration;
+    }
+
+    /**
+     * Set <p>桌面电脑环境类沙箱配置</p>
+     * @param ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public void setComputerConfiguration(ComputerConfiguration ComputerConfiguration) {
+        this.ComputerConfiguration = ComputerConfiguration;
+    }
+
+    /**
      * Get <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p> 
      * @return NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
      */
@@ -415,6 +438,9 @@ public class SandboxInstance extends AbstractModel {
         if (source.CustomConfiguration != null) {
             this.CustomConfiguration = new CustomConfigurationDetail(source.CustomConfiguration);
         }
+        if (source.ComputerConfiguration != null) {
+            this.ComputerConfiguration = new ComputerConfiguration(source.ComputerConfiguration);
+        }
         if (source.NetworkMode != null) {
             this.NetworkMode = new String(source.NetworkMode);
         }
@@ -446,6 +472,7 @@ public class SandboxInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+        this.setParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
         this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
         this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);

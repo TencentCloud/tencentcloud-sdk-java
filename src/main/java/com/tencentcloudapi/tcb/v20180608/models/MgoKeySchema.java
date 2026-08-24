@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class MgoKeySchema extends AbstractModel {
 
     /**
-    * 索引字段
+    * <p>索引字段</p>
     */
     @SerializedName("MgoIndexKeys")
     @Expose
     private MgoIndexKeys [] MgoIndexKeys;
 
     /**
-    * 是否唯一索引
+    * <p>是否唯一索引</p>
     */
     @SerializedName("MgoIsUnique")
     @Expose
     private Boolean MgoIsUnique;
 
     /**
-    * 是否稀疏索引
+    * <p>是否稀疏索引</p>
     */
     @SerializedName("MgoIsSparse")
     @Expose
     private Boolean MgoIsSparse;
 
     /**
-     * Get 索引字段 
-     * @return MgoIndexKeys 索引字段
+    * <p>稀疏索引表达式</p>
+    */
+    @SerializedName("PartialFilterExpression")
+    @Expose
+    private String PartialFilterExpression;
+
+    /**
+     * Get <p>索引字段</p> 
+     * @return MgoIndexKeys <p>索引字段</p>
      */
     public MgoIndexKeys [] getMgoIndexKeys() {
         return this.MgoIndexKeys;
     }
 
     /**
-     * Set 索引字段
-     * @param MgoIndexKeys 索引字段
+     * Set <p>索引字段</p>
+     * @param MgoIndexKeys <p>索引字段</p>
      */
     public void setMgoIndexKeys(MgoIndexKeys [] MgoIndexKeys) {
         this.MgoIndexKeys = MgoIndexKeys;
     }
 
     /**
-     * Get 是否唯一索引 
-     * @return MgoIsUnique 是否唯一索引
+     * Get <p>是否唯一索引</p> 
+     * @return MgoIsUnique <p>是否唯一索引</p>
      */
     public Boolean getMgoIsUnique() {
         return this.MgoIsUnique;
     }
 
     /**
-     * Set 是否唯一索引
-     * @param MgoIsUnique 是否唯一索引
+     * Set <p>是否唯一索引</p>
+     * @param MgoIsUnique <p>是否唯一索引</p>
      */
     public void setMgoIsUnique(Boolean MgoIsUnique) {
         this.MgoIsUnique = MgoIsUnique;
     }
 
     /**
-     * Get 是否稀疏索引 
-     * @return MgoIsSparse 是否稀疏索引
+     * Get <p>是否稀疏索引</p> 
+     * @return MgoIsSparse <p>是否稀疏索引</p>
      */
     public Boolean getMgoIsSparse() {
         return this.MgoIsSparse;
     }
 
     /**
-     * Set 是否稀疏索引
-     * @param MgoIsSparse 是否稀疏索引
+     * Set <p>是否稀疏索引</p>
+     * @param MgoIsSparse <p>是否稀疏索引</p>
      */
     public void setMgoIsSparse(Boolean MgoIsSparse) {
         this.MgoIsSparse = MgoIsSparse;
+    }
+
+    /**
+     * Get <p>稀疏索引表达式</p> 
+     * @return PartialFilterExpression <p>稀疏索引表达式</p>
+     */
+    public String getPartialFilterExpression() {
+        return this.PartialFilterExpression;
+    }
+
+    /**
+     * Set <p>稀疏索引表达式</p>
+     * @param PartialFilterExpression <p>稀疏索引表达式</p>
+     */
+    public void setPartialFilterExpression(String PartialFilterExpression) {
+        this.PartialFilterExpression = PartialFilterExpression;
     }
 
     public MgoKeySchema() {
@@ -112,6 +135,9 @@ public class MgoKeySchema extends AbstractModel {
         if (source.MgoIsSparse != null) {
             this.MgoIsSparse = new Boolean(source.MgoIsSparse);
         }
+        if (source.PartialFilterExpression != null) {
+            this.PartialFilterExpression = new String(source.PartialFilterExpression);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class MgoKeySchema extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MgoIndexKeys.", this.MgoIndexKeys);
         this.setParamSimple(map, prefix + "MgoIsUnique", this.MgoIsUnique);
         this.setParamSimple(map, prefix + "MgoIsSparse", this.MgoIsSparse);
+        this.setParamSimple(map, prefix + "PartialFilterExpression", this.PartialFilterExpression);
 
     }
 }

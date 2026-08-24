@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListDataKeyDetailResponse extends AbstractModel {
 
     /**
-    * 返回的属性信息列表。
+    * <p>返回的属性信息列表。</p>
     */
     @SerializedName("DataKeyMetadatas")
     @Expose
     private DataKeyMetadata [] DataKeyMetadatas;
 
     /**
-    * DataKey的总数量
+    * <p>DataKey的总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class ListDataKeyDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的属性信息列表。 
-     * @return DataKeyMetadatas 返回的属性信息列表。
+     * Get <p>返回的属性信息列表。</p> 
+     * @return DataKeyMetadatas <p>返回的属性信息列表。</p>
      */
     public DataKeyMetadata [] getDataKeyMetadatas() {
         return this.DataKeyMetadatas;
     }
 
     /**
-     * Set 返回的属性信息列表。
-     * @param DataKeyMetadatas 返回的属性信息列表。
+     * Set <p>返回的属性信息列表。</p>
+     * @param DataKeyMetadatas <p>返回的属性信息列表。</p>
      */
     public void setDataKeyMetadatas(DataKeyMetadata [] DataKeyMetadatas) {
         this.DataKeyMetadatas = DataKeyMetadatas;
     }
 
     /**
-     * Get DataKey的总数量 
-     * @return TotalCount DataKey的总数量
+     * Get <p>DataKey的总数量</p> 
+     * @return TotalCount <p>DataKey的总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set DataKey的总数量
-     * @param TotalCount DataKey的总数量
+     * Set <p>DataKey的总数量</p>
+     * @param TotalCount <p>DataKey的总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

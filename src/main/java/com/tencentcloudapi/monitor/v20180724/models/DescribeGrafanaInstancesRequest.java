@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeGrafanaInstancesRequest extends AbstractModel {
 
     /**
-    * 查询偏移量
+    * <p>查询偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询数量
+    * <p>查询数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Grafana 实例 ID 数组
+    * <p>Grafana 实例 ID 数组</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Grafana 实例名，支持前缀模糊搜索
+    * <p>Grafana 实例名，支持前缀模糊搜索</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 查询状态
+    * <p>查询状态</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private Long [] InstanceStatus;
 
     /**
-    * 标签过滤数组
+    * <p>标签过滤数组</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private PrometheusTag [] TagFilters;
 
     /**
-     * Get 查询偏移量 
-     * @return Offset 查询偏移量
+     * Get <p>查询偏移量</p> 
+     * @return Offset <p>查询偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询偏移量
-     * @param Offset 查询偏移量
+     * Set <p>查询偏移量</p>
+     * @param Offset <p>查询偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询数量 
-     * @return Limit 查询数量
+     * Get <p>查询数量</p> 
+     * @return Limit <p>查询数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数量
-     * @param Limit 查询数量
+     * Set <p>查询数量</p>
+     * @param Limit <p>查询数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Grafana 实例 ID 数组 
-     * @return InstanceIds Grafana 实例 ID 数组
+     * Get <p>Grafana 实例 ID 数组</p> 
+     * @return InstanceIds <p>Grafana 实例 ID 数组</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Grafana 实例 ID 数组
-     * @param InstanceIds Grafana 实例 ID 数组
+     * Set <p>Grafana 实例 ID 数组</p>
+     * @param InstanceIds <p>Grafana 实例 ID 数组</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Grafana 实例名，支持前缀模糊搜索 
-     * @return InstanceName Grafana 实例名，支持前缀模糊搜索
+     * Get <p>Grafana 实例名，支持前缀模糊搜索</p> 
+     * @return InstanceName <p>Grafana 实例名，支持前缀模糊搜索</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Grafana 实例名，支持前缀模糊搜索
-     * @param InstanceName Grafana 实例名，支持前缀模糊搜索
+     * Set <p>Grafana 实例名，支持前缀模糊搜索</p>
+     * @param InstanceName <p>Grafana 实例名，支持前缀模糊搜索</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 查询状态 
-     * @return InstanceStatus 查询状态
+     * Get <p>查询状态</p> 
+     * @return InstanceStatus <p>查询状态</p>
      */
     public Long [] getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 查询状态
-     * @param InstanceStatus 查询状态
+     * Set <p>查询状态</p>
+     * @param InstanceStatus <p>查询状态</p>
      */
     public void setInstanceStatus(Long [] InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 标签过滤数组 
-     * @return TagFilters 标签过滤数组
+     * Get <p>标签过滤数组</p> 
+     * @return TagFilters <p>标签过滤数组</p>
      */
     public PrometheusTag [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤数组
-     * @param TagFilters 标签过滤数组
+     * Set <p>标签过滤数组</p>
+     * @param TagFilters <p>标签过滤数组</p>
      */
     public void setTagFilters(PrometheusTag [] TagFilters) {
         this.TagFilters = TagFilters;

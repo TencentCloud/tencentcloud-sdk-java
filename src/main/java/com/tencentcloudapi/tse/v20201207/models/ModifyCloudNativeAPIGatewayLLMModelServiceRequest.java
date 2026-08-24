@@ -220,6 +220,20 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private String ExternalInstanceId;
 
     /**
+    * <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
+    */
+    @SerializedName("CustomProviderName")
+    @Expose
+    private String CustomProviderName;
+
+    /**
+    * <p>负载均衡配置</p>
+    */
+    @SerializedName("LoadBalanceConfig")
+    @Expose
+    private AIGWLoadBalanceConfig LoadBalanceConfig;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -667,6 +681,38 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.ExternalInstanceId = ExternalInstanceId;
     }
 
+    /**
+     * Get <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p> 
+     * @return CustomProviderName <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
+     */
+    public String getCustomProviderName() {
+        return this.CustomProviderName;
+    }
+
+    /**
+     * Set <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
+     * @param CustomProviderName <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
+     */
+    public void setCustomProviderName(String CustomProviderName) {
+        this.CustomProviderName = CustomProviderName;
+    }
+
+    /**
+     * Get <p>负载均衡配置</p> 
+     * @return LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public AIGWLoadBalanceConfig getLoadBalanceConfig() {
+        return this.LoadBalanceConfig;
+    }
+
+    /**
+     * Set <p>负载均衡配置</p>
+     * @param LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public void setLoadBalanceConfig(AIGWLoadBalanceConfig LoadBalanceConfig) {
+        this.LoadBalanceConfig = LoadBalanceConfig;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -768,6 +814,12 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.ExternalInstanceId != null) {
             this.ExternalInstanceId = new String(source.ExternalInstanceId);
         }
+        if (source.CustomProviderName != null) {
+            this.CustomProviderName = new String(source.CustomProviderName);
+        }
+        if (source.LoadBalanceConfig != null) {
+            this.LoadBalanceConfig = new AIGWLoadBalanceConfig(source.LoadBalanceConfig);
+        }
     }
 
 
@@ -803,6 +855,8 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
         this.setParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
         this.setParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
+        this.setParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
+        this.setParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
 
     }
 }

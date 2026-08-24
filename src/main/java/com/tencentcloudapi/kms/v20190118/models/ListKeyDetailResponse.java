@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListKeyDetailResponse extends AbstractModel {
 
     /**
-    * CMK的总数量
+    * <p>CMK的总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 返回的属性信息列表。
+    * <p>返回的属性信息列表。</p>
     */
     @SerializedName("KeyMetadatas")
     @Expose
@@ -45,32 +45,32 @@ public class ListKeyDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CMK的总数量 
-     * @return TotalCount CMK的总数量
+     * Get <p>CMK的总数量</p> 
+     * @return TotalCount <p>CMK的总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set CMK的总数量
-     * @param TotalCount CMK的总数量
+     * Set <p>CMK的总数量</p>
+     * @param TotalCount <p>CMK的总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 返回的属性信息列表。 
-     * @return KeyMetadatas 返回的属性信息列表。
+     * Get <p>返回的属性信息列表。</p> 
+     * @return KeyMetadatas <p>返回的属性信息列表。</p>
      */
     public KeyMetadata [] getKeyMetadatas() {
         return this.KeyMetadatas;
     }
 
     /**
-     * Set 返回的属性信息列表。
-     * @param KeyMetadatas 返回的属性信息列表。
+     * Set <p>返回的属性信息列表。</p>
+     * @param KeyMetadatas <p>返回的属性信息列表。</p>
      */
     public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
         this.KeyMetadatas = KeyMetadatas;

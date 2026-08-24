@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Project extends AbstractModel {
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -32,7 +32,7 @@ public class Project extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识，英文名
+    * <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -40,7 +40,7 @@ public class Project extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 项目显示名称，可以为中文名
+    * <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisplayName")
@@ -48,7 +48,7 @@ public class Project extends AbstractModel {
     private String DisplayName;
 
     /**
-    * 备注
+    * <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -56,7 +56,7 @@ public class Project extends AbstractModel {
     private String Description;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -64,7 +64,7 @@ public class Project extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 项目创建人id
+    * <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorUin")
@@ -72,7 +72,7 @@ public class Project extends AbstractModel {
     private String CreatorUin;
 
     /**
-    * 项目责任人id
+    * <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectOwnerUin")
@@ -80,14 +80,14 @@ public class Project extends AbstractModel {
     private String ProjectOwnerUin;
 
     /**
-    * 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+    * <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+    * <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectModel")
@@ -95,9 +95,16 @@ public class Project extends AbstractModel {
     private String ProjectModel;
 
     /**
-     * Get 项目id
+    * <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+    */
+    @SerializedName("WorkspaceExt")
+    @Expose
+    private WorkspaceExt [] WorkspaceExt;
+
+    /**
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -105,9 +112,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -115,9 +122,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 项目标识，英文名
+     * Get <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目标识，英文名
+     * @return ProjectName <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -125,9 +132,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 项目标识，英文名
+     * Set <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目标识，英文名
+     * @param ProjectName <p>项目标识，英文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -135,9 +142,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 项目显示名称，可以为中文名
+     * Get <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisplayName 项目显示名称，可以为中文名
+     * @return DisplayName <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisplayName() {
@@ -145,9 +152,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 项目显示名称，可以为中文名
+     * Set <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisplayName 项目显示名称，可以为中文名
+     * @param DisplayName <p>项目显示名称，可以为中文名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplayName(String DisplayName) {
@@ -155,9 +162,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 备注
+     * Get <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 备注
+     * @return Description <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -165,9 +172,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 备注
+     * Set <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 备注
+     * @param Description <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -175,9 +182,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -185,9 +192,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -195,9 +202,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 项目创建人id
+     * Get <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin 项目创建人id
+     * @return CreatorUin <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorUin() {
@@ -205,9 +212,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 项目创建人id
+     * Set <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin 项目创建人id
+     * @param CreatorUin <p>项目创建人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorUin(String CreatorUin) {
@@ -215,9 +222,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 项目责任人id
+     * Get <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectOwnerUin 项目责任人id
+     * @return ProjectOwnerUin <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectOwnerUin() {
@@ -225,9 +232,9 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 项目责任人id
+     * Set <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectOwnerUin 项目责任人id
+     * @param ProjectOwnerUin <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectOwnerUin(String ProjectOwnerUin) {
@@ -235,25 +242,25 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Get 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中 
-     * @return Status 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+     * Get <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p> 
+     * @return Status <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
-     * @param Status 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+     * Set <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
+     * @param Status <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+     * Get <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectModel 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+     * @return ProjectModel <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectModel() {
@@ -261,13 +268,29 @@ public class Project extends AbstractModel {
     }
 
     /**
-     * Set 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+     * Set <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectModel 项目模式，SIMPLE：简单模式 STANDARD：标准模式
+     * @param ProjectModel <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectModel(String ProjectModel) {
         this.ProjectModel = ProjectModel;
+    }
+
+    /**
+     * Get <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p> 
+     * @return WorkspaceExt <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+     */
+    public WorkspaceExt [] getWorkspaceExt() {
+        return this.WorkspaceExt;
+    }
+
+    /**
+     * Set <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+     * @param WorkspaceExt <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
+     */
+    public void setWorkspaceExt(WorkspaceExt [] WorkspaceExt) {
+        this.WorkspaceExt = WorkspaceExt;
     }
 
     public Project() {
@@ -305,6 +328,12 @@ public class Project extends AbstractModel {
         if (source.ProjectModel != null) {
             this.ProjectModel = new String(source.ProjectModel);
         }
+        if (source.WorkspaceExt != null) {
+            this.WorkspaceExt = new WorkspaceExt[source.WorkspaceExt.length];
+            for (int i = 0; i < source.WorkspaceExt.length; i++) {
+                this.WorkspaceExt[i] = new WorkspaceExt(source.WorkspaceExt[i]);
+            }
+        }
     }
 
 
@@ -321,6 +350,7 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectOwnerUin", this.ProjectOwnerUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ProjectModel", this.ProjectModel);
+        this.setParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
 
     }
 }

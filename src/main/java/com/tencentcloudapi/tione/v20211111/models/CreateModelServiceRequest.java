@@ -353,6 +353,13 @@ public class CreateModelServiceRequest extends AbstractModel {
     private ResourceSupplyAttribute ResourceSupplyAttribute;
 
     /**
+    * <p>推理模板 ID</p>
+    */
+    @SerializedName("InferTemplateId")
+    @Expose
+    private String InferTemplateId;
+
+    /**
      * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
      * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
@@ -1104,6 +1111,22 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.ResourceSupplyAttribute = ResourceSupplyAttribute;
     }
 
+    /**
+     * Get <p>推理模板 ID</p> 
+     * @return InferTemplateId <p>推理模板 ID</p>
+     */
+    public String getInferTemplateId() {
+        return this.InferTemplateId;
+    }
+
+    /**
+     * Set <p>推理模板 ID</p>
+     * @param InferTemplateId <p>推理模板 ID</p>
+     */
+    public void setInferTemplateId(String InferTemplateId) {
+        this.InferTemplateId = InferTemplateId;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1268,6 +1291,9 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.ResourceSupplyAttribute != null) {
             this.ResourceSupplyAttribute = new ResourceSupplyAttribute(source.ResourceSupplyAttribute);
         }
+        if (source.InferTemplateId != null) {
+            this.InferTemplateId = new String(source.InferTemplateId);
+        }
     }
 
 
@@ -1322,6 +1348,7 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+        this.setParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
 
     }
 }

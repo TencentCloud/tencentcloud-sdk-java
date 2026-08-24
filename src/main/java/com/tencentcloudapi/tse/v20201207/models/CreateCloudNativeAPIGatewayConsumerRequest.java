@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
 
     /**
-    * 网关实例id
+    * <p>网关实例id</p>
     */
     @SerializedName("GatewayId")
     @Expose
@@ -38,6 +38,13 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String Name;
 
     /**
+    * <p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private String Priority;
+
+    /**
     * <p>消费者描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
@@ -45,16 +52,16 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get 网关实例id 
-     * @return GatewayId 网关实例id
+     * Get <p>网关实例id</p> 
+     * @return GatewayId <p>网关实例id</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关实例id
-     * @param GatewayId 网关实例id
+     * Set <p>网关实例id</p>
+     * @param GatewayId <p>网关实例id</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
@@ -74,6 +81,22 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul> 
+     * @return Priority <p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+     */
+    public String getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+     * @param Priority <p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
+     */
+    public void setPriority(String Priority) {
+        this.Priority = Priority;
     }
 
     /**
@@ -106,6 +129,9 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Priority != null) {
+            this.Priority = new String(source.Priority);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -118,6 +144,7 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

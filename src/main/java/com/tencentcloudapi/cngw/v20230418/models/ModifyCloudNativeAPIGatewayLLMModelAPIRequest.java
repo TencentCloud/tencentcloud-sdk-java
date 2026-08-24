@@ -108,6 +108,20 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     private AIGWLogConfig LogConfig;
 
     /**
+    * <p>AI 网关Rerank场景最大文档数限制配置</p>
+    */
+    @SerializedName("MaxDocumentsConfig")
+    @Expose
+    private AIGWRerankMaxDocumentsConfig MaxDocumentsConfig;
+
+    /**
+    * <p>敏感词路由配置</p>
+    */
+    @SerializedName("SensitiveWordRoute")
+    @Expose
+    private AIGWSensitiveWordRoute SensitiveWordRoute;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -299,6 +313,38 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.LogConfig = LogConfig;
     }
 
+    /**
+     * Get <p>AI 网关Rerank场景最大文档数限制配置</p> 
+     * @return MaxDocumentsConfig <p>AI 网关Rerank场景最大文档数限制配置</p>
+     */
+    public AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() {
+        return this.MaxDocumentsConfig;
+    }
+
+    /**
+     * Set <p>AI 网关Rerank场景最大文档数限制配置</p>
+     * @param MaxDocumentsConfig <p>AI 网关Rerank场景最大文档数限制配置</p>
+     */
+    public void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig MaxDocumentsConfig) {
+        this.MaxDocumentsConfig = MaxDocumentsConfig;
+    }
+
+    /**
+     * Get <p>敏感词路由配置</p> 
+     * @return SensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public AIGWSensitiveWordRoute getSensitiveWordRoute() {
+        return this.SensitiveWordRoute;
+    }
+
+    /**
+     * Set <p>敏感词路由配置</p>
+     * @param SensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public void setSensitiveWordRoute(AIGWSensitiveWordRoute SensitiveWordRoute) {
+        this.SensitiveWordRoute = SensitiveWordRoute;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelAPIRequest() {
     }
 
@@ -349,6 +395,12 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (source.LogConfig != null) {
             this.LogConfig = new AIGWLogConfig(source.LogConfig);
         }
+        if (source.MaxDocumentsConfig != null) {
+            this.MaxDocumentsConfig = new AIGWRerankMaxDocumentsConfig(source.MaxDocumentsConfig);
+        }
+        if (source.SensitiveWordRoute != null) {
+            this.SensitiveWordRoute = new AIGWSensitiveWordRoute(source.SensitiveWordRoute);
+        }
     }
 
 
@@ -368,6 +420,8 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.setParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
         this.setParamObj(map, prefix + "TagFilter.", this.TagFilter);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
+        this.setParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
+        this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
 
     }
 }

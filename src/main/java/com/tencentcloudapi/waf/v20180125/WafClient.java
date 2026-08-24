@@ -1548,6 +1548,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *开关开启后，会将客户端的ip和port透传到后端
+     * @param req EnableClientMsgRequest
+     * @return EnableClientMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClientMsgResponse EnableClientMsg(EnableClientMsgRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableClientMsg", EnableClientMsgResponse.class);
+    }
+
+    /**
      *批量更改自研版限流规则开关
      * @param req EnableRateLimitsV2Request
      * @return EnableRateLimitsV2Response
@@ -2338,6 +2349,17 @@ public class WafClient extends AbstractClient{
     public QueryBypassAllStatusResponse QueryBypassAllStatus(QueryBypassAllStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryBypassAllStatus", QueryBypassAllStatusResponse.class);
+    }
+
+    /**
+     *查询是否开启透传客户端信息
+     * @param req QueryClientMsgRequest
+     * @return QueryClientMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryClientMsgResponse QueryClientMsg(QueryClientMsgRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryClientMsg", QueryClientMsgResponse.class);
     }
 
     /**

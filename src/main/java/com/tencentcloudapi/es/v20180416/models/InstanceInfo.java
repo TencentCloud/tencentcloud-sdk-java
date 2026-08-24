@@ -818,6 +818,20 @@ public class InstanceInfo extends AbstractModel {
     private String ServerCertSource;
 
     /**
+    * <p>集群待迁移的VIP</p>
+    */
+    @SerializedName("OldEsVip")
+    @Expose
+    private String OldEsVip;
+
+    /**
+    * <p>集群待迁移的TCP地址</p>
+    */
+    @SerializedName("OldEsPrivateTcpUrl")
+    @Expose
+    private String OldEsPrivateTcpUrl;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceId <p>实例ID</p>
      */
@@ -2733,6 +2747,38 @@ public class InstanceInfo extends AbstractModel {
         this.ServerCertSource = ServerCertSource;
     }
 
+    /**
+     * Get <p>集群待迁移的VIP</p> 
+     * @return OldEsVip <p>集群待迁移的VIP</p>
+     */
+    public String getOldEsVip() {
+        return this.OldEsVip;
+    }
+
+    /**
+     * Set <p>集群待迁移的VIP</p>
+     * @param OldEsVip <p>集群待迁移的VIP</p>
+     */
+    public void setOldEsVip(String OldEsVip) {
+        this.OldEsVip = OldEsVip;
+    }
+
+    /**
+     * Get <p>集群待迁移的TCP地址</p> 
+     * @return OldEsPrivateTcpUrl <p>集群待迁移的TCP地址</p>
+     */
+    public String getOldEsPrivateTcpUrl() {
+        return this.OldEsPrivateTcpUrl;
+    }
+
+    /**
+     * Set <p>集群待迁移的TCP地址</p>
+     * @param OldEsPrivateTcpUrl <p>集群待迁移的TCP地址</p>
+     */
+    public void setOldEsPrivateTcpUrl(String OldEsPrivateTcpUrl) {
+        this.OldEsPrivateTcpUrl = OldEsPrivateTcpUrl;
+    }
+
     public InstanceInfo() {
     }
 
@@ -3077,6 +3123,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.ServerCertSource != null) {
             this.ServerCertSource = new String(source.ServerCertSource);
         }
+        if (source.OldEsVip != null) {
+            this.OldEsVip = new String(source.OldEsVip);
+        }
+        if (source.OldEsPrivateTcpUrl != null) {
+            this.OldEsPrivateTcpUrl = new String(source.OldEsPrivateTcpUrl);
+        }
     }
 
 
@@ -3189,6 +3241,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableAutoReplace", this.EnableAutoReplace);
         this.setParamSimple(map, prefix + "OpenMTLS", this.OpenMTLS);
         this.setParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
+        this.setParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
+        this.setParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
 
     }
 }

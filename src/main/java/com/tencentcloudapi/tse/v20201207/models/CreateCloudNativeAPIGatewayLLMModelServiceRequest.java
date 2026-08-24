@@ -248,6 +248,13 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private String ExternalInstanceId;
 
     /**
+    * <p>负载均衡配置</p>
+    */
+    @SerializedName("LoadBalanceConfig")
+    @Expose
+    private AIGWLoadBalanceConfig LoadBalanceConfig;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -759,6 +766,22 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.ExternalInstanceId = ExternalInstanceId;
     }
 
+    /**
+     * Get <p>负载均衡配置</p> 
+     * @return LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public AIGWLoadBalanceConfig getLoadBalanceConfig() {
+        return this.LoadBalanceConfig;
+    }
+
+    /**
+     * Set <p>负载均衡配置</p>
+     * @param LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public void setLoadBalanceConfig(AIGWLoadBalanceConfig LoadBalanceConfig) {
+        this.LoadBalanceConfig = LoadBalanceConfig;
+    }
+
     public CreateCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -875,6 +898,9 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.ExternalInstanceId != null) {
             this.ExternalInstanceId = new String(source.ExternalInstanceId);
         }
+        if (source.LoadBalanceConfig != null) {
+            this.LoadBalanceConfig = new AIGWLoadBalanceConfig(source.LoadBalanceConfig);
+        }
     }
 
 
@@ -914,6 +940,7 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
         this.setParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
         this.setParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
+        this.setParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
 
     }
 }

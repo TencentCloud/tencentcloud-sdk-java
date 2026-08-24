@@ -52,6 +52,13 @@ public class CNAPIGwConsumer extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private String Priority;
+
+    /**
     * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -66,6 +73,27 @@ public class CNAPIGwConsumer extends AbstractModel {
     @SerializedName("ConsumerGroups")
     @Expose
     private CNAPIGwConsumerGroup [] ConsumerGroups;
+
+    /**
+    * <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private String SyncStatus;
+
+    /**
+    * <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>同步版本</p>
+    */
+    @SerializedName("SyncedVersion")
+    @Expose
+    private String SyncedVersion;
 
     /**
      * Get <p>消费者 ID。</p> 
@@ -132,6 +160,22 @@ public class CNAPIGwConsumer extends AbstractModel {
     }
 
     /**
+     * Get <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul> 
+     * @return Priority <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+     */
+    public String getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+     * @param Priority <p>消费者优先级</p><p>枚举值：</p><ul><li>High： 高优</li><li>Medium： 中优</li><li>Low： 低优</li></ul>
+     */
+    public void setPriority(String Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
      * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description <p>描述</p>
@@ -171,6 +215,54 @@ public class CNAPIGwConsumer extends AbstractModel {
         this.ConsumerGroups = ConsumerGroups;
     }
 
+    /**
+     * Get <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul> 
+     * @return SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     */
+    public String getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     * @param SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
+     */
+    public void setSyncStatus(String SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul> 
+     * @return SourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+     * @param SourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>同步版本</p> 
+     * @return SyncedVersion <p>同步版本</p>
+     */
+    public String getSyncedVersion() {
+        return this.SyncedVersion;
+    }
+
+    /**
+     * Set <p>同步版本</p>
+     * @param SyncedVersion <p>同步版本</p>
+     */
+    public void setSyncedVersion(String SyncedVersion) {
+        this.SyncedVersion = SyncedVersion;
+    }
+
     public CNAPIGwConsumer() {
     }
 
@@ -191,6 +283,9 @@ public class CNAPIGwConsumer extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Priority != null) {
+            this.Priority = new String(source.Priority);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -199,6 +294,15 @@ public class CNAPIGwConsumer extends AbstractModel {
             for (int i = 0; i < source.ConsumerGroups.length; i++) {
                 this.ConsumerGroups[i] = new CNAPIGwConsumerGroup(source.ConsumerGroups[i]);
             }
+        }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new String(source.SyncStatus);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SyncedVersion != null) {
+            this.SyncedVersion = new String(source.SyncedVersion);
         }
     }
 
@@ -211,8 +315,12 @@ public class CNAPIGwConsumer extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "ConsumerGroups.", this.ConsumerGroups);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
 
     }
 }

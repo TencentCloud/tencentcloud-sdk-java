@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSSOAccountResponse extends AbstractModel {
 
     /**
-    * <p>已添加的用户 UIN</p>
+    * <p>已添加的子账号ID</p>
     */
     @SerializedName("UserId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSSOAccountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>已添加的用户 UIN</p> 
-     * @return UserId <p>已添加的用户 UIN</p>
+     * Get <p>已添加的子账号ID</p> 
+     * @return UserId <p>已添加的子账号ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set <p>已添加的用户 UIN</p>
-     * @param UserId <p>已添加的用户 UIN</p>
+     * Set <p>已添加的子账号ID</p>
+     * @param UserId <p>已添加的子账号ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

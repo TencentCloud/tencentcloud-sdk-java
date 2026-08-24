@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractModel {
 
     /**
-    * 创建证书结果
+    * <p>创建证书结果</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloudNativeAPIGatewayCertificateResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 创建证书结果 
-     * @return Result 创建证书结果
+     * Get <p>创建证书结果</p> 
+     * @return Result <p>创建证书结果</p>
      */
     public CertificateInfo getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建证书结果
-     * @param Result 创建证书结果
+     * Set <p>创建证书结果</p>
+     * @param Result <p>创建证书结果</p>
      */
     public void setResult(CertificateInfo Result) {
         this.Result = Result;

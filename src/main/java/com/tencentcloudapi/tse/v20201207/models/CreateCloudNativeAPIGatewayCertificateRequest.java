@@ -24,114 +24,160 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel {
 
     /**
-    * 网关ID
+    * <p>网关ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 绑定的域名
-    */
-    @SerializedName("BindDomains")
-    @Expose
-    private String [] BindDomains;
-
-    /**
-    * ssl平台证书 Id
+    * <p>ssl平台证书 Id</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * 证书名称
+    * <p>绑定的域名</p>
+    */
+    @SerializedName("BindDomains")
+    @Expose
+    private String [] BindDomains;
+
+    /**
+    * <p>证书名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 证书私钥
+    * <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+    */
+    @SerializedName("CertType")
+    @Expose
+    private String CertType;
+
+    /**
+    * <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+    */
+    @SerializedName("CertUsage")
+    @Expose
+    private String CertUsage;
+
+    /**
+    * <p>证书私钥</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 证书pem格式
+    * <p>证书pem格式</p>
     */
     @SerializedName("Crt")
     @Expose
     private String Crt;
 
     /**
-     * Get 网关ID 
-     * @return GatewayId 网关ID
+     * Get <p>网关ID</p> 
+     * @return GatewayId <p>网关ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关ID
-     * @param GatewayId 网关ID
+     * Set <p>网关ID</p>
+     * @param GatewayId <p>网关ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 绑定的域名 
-     * @return BindDomains 绑定的域名
-     */
-    public String [] getBindDomains() {
-        return this.BindDomains;
-    }
-
-    /**
-     * Set 绑定的域名
-     * @param BindDomains 绑定的域名
-     */
-    public void setBindDomains(String [] BindDomains) {
-        this.BindDomains = BindDomains;
-    }
-
-    /**
-     * Get ssl平台证书 Id 
-     * @return CertId ssl平台证书 Id
+     * Get <p>ssl平台证书 Id</p> 
+     * @return CertId <p>ssl平台证书 Id</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set ssl平台证书 Id
-     * @param CertId ssl平台证书 Id
+     * Set <p>ssl平台证书 Id</p>
+     * @param CertId <p>ssl平台证书 Id</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 证书名称 
-     * @return Name 证书名称
+     * Get <p>绑定的域名</p> 
+     * @return BindDomains <p>绑定的域名</p>
+     */
+    public String [] getBindDomains() {
+        return this.BindDomains;
+    }
+
+    /**
+     * Set <p>绑定的域名</p>
+     * @param BindDomains <p>绑定的域名</p>
+     */
+    public void setBindDomains(String [] BindDomains) {
+        this.BindDomains = BindDomains;
+    }
+
+    /**
+     * Get <p>证书名称</p> 
+     * @return Name <p>证书名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 证书名称
-     * @param Name 证书名称
+     * Set <p>证书名称</p>
+     * @param Name <p>证书名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 证书私钥 
-     * @return Key 证书私钥
+     * Get <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul> 
+     * @return CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public String getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * Set <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     * @param CertType <p>证书类型</p><p>枚举值：</p><ul><li>SVR： 服务证书</li><li>CA： CA证书</li></ul>
+     */
+    public void setCertType(String CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
+     * Get <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul> 
+     * @return CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public String getCertUsage() {
+        return this.CertUsage;
+    }
+
+    /**
+     * Set <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     * @param CertUsage <p>证书用途</p><p>枚举值：</p><ul><li>SERVER： 用作服务端证书</li><li>CLIENT： 用作客户端证书</li></ul>
+     */
+    public void setCertUsage(String CertUsage) {
+        this.CertUsage = CertUsage;
+    }
+
+    /**
+     * Get <p>证书私钥</p> 
+     * @return Key <p>证书私钥</p>
      * @deprecated
      */
     @Deprecated
@@ -140,8 +186,8 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     }
 
     /**
-     * Set 证书私钥
-     * @param Key 证书私钥
+     * Set <p>证书私钥</p>
+     * @param Key <p>证书私钥</p>
      * @deprecated
      */
     @Deprecated
@@ -150,8 +196,8 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     }
 
     /**
-     * Get 证书pem格式 
-     * @return Crt 证书pem格式
+     * Get <p>证书pem格式</p> 
+     * @return Crt <p>证书pem格式</p>
      * @deprecated
      */
     @Deprecated
@@ -160,8 +206,8 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     }
 
     /**
-     * Set 证书pem格式
-     * @param Crt 证书pem格式
+     * Set <p>证书pem格式</p>
+     * @param Crt <p>证书pem格式</p>
      * @deprecated
      */
     @Deprecated
@@ -180,17 +226,23 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
         if (source.GatewayId != null) {
             this.GatewayId = new String(source.GatewayId);
         }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
         if (source.BindDomains != null) {
             this.BindDomains = new String[source.BindDomains.length];
             for (int i = 0; i < source.BindDomains.length; i++) {
                 this.BindDomains[i] = new String(source.BindDomains[i]);
             }
         }
-        if (source.CertId != null) {
-            this.CertId = new String(source.CertId);
-        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.CertUsage != null) {
+            this.CertUsage = new String(source.CertUsage);
         }
         if (source.Key != null) {
             this.Key = new String(source.Key);
@@ -206,9 +258,11 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
-        this.setParamArraySimple(map, prefix + "BindDomains.", this.BindDomains);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamArraySimple(map, prefix + "BindDomains.", this.BindDomains);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "CertUsage", this.CertUsage);
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Crt", this.Crt);
 

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class UpdateTableRequest extends AbstractModel {
 
     /**
-    * 表名
+    * <p>表名</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * FlexDB实例ID
+    * <p>FlexDB实例ID</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * 待删除索引信息
+    * <p>待删除索引信息</p>
     */
     @SerializedName("DropIndexes")
     @Expose
     private DropIndex [] DropIndexes;
 
     /**
-    * 待创建索引信息
+    * <p>待创建索引信息</p>
     */
     @SerializedName("CreateIndexes")
     @Expose
     private CreateIndex [] CreateIndexes;
 
     /**
-    * 云开发环境ID
+    * <p>云开发环境ID</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * MongoDB连接器配置
+    * <p>MongoDB连接器配置</p>
     */
     @SerializedName("MongoConnector")
     @Expose
     private MongoConnector MongoConnector;
 
     /**
-     * Get 表名 
-     * @return TableName 表名
+     * Get <p>表名</p> 
+     * @return TableName <p>表名</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 表名
-     * @param TableName 表名
+     * Set <p>表名</p>
+     * @param TableName <p>表名</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get FlexDB实例ID 
-     * @return Tag FlexDB实例ID
+     * Get <p>FlexDB实例ID</p> 
+     * @return Tag <p>FlexDB实例ID</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set FlexDB实例ID
-     * @param Tag FlexDB实例ID
+     * Set <p>FlexDB实例ID</p>
+     * @param Tag <p>FlexDB实例ID</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 待删除索引信息 
-     * @return DropIndexes 待删除索引信息
+     * Get <p>待删除索引信息</p> 
+     * @return DropIndexes <p>待删除索引信息</p>
      */
     public DropIndex [] getDropIndexes() {
         return this.DropIndexes;
     }
 
     /**
-     * Set 待删除索引信息
-     * @param DropIndexes 待删除索引信息
+     * Set <p>待删除索引信息</p>
+     * @param DropIndexes <p>待删除索引信息</p>
      */
     public void setDropIndexes(DropIndex [] DropIndexes) {
         this.DropIndexes = DropIndexes;
     }
 
     /**
-     * Get 待创建索引信息 
-     * @return CreateIndexes 待创建索引信息
+     * Get <p>待创建索引信息</p> 
+     * @return CreateIndexes <p>待创建索引信息</p>
      */
     public CreateIndex [] getCreateIndexes() {
         return this.CreateIndexes;
     }
 
     /**
-     * Set 待创建索引信息
-     * @param CreateIndexes 待创建索引信息
+     * Set <p>待创建索引信息</p>
+     * @param CreateIndexes <p>待创建索引信息</p>
      */
     public void setCreateIndexes(CreateIndex [] CreateIndexes) {
         this.CreateIndexes = CreateIndexes;
     }
 
     /**
-     * Get 云开发环境ID 
-     * @return EnvId 云开发环境ID
+     * Get <p>云开发环境ID</p> 
+     * @return EnvId <p>云开发环境ID</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 云开发环境ID
-     * @param EnvId 云开发环境ID
+     * Set <p>云开发环境ID</p>
+     * @param EnvId <p>云开发环境ID</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get MongoDB连接器配置 
-     * @return MongoConnector MongoDB连接器配置
+     * Get <p>MongoDB连接器配置</p> 
+     * @return MongoConnector <p>MongoDB连接器配置</p>
      */
     public MongoConnector getMongoConnector() {
         return this.MongoConnector;
     }
 
     /**
-     * Set MongoDB连接器配置
-     * @param MongoConnector MongoDB连接器配置
+     * Set <p>MongoDB连接器配置</p>
+     * @param MongoConnector <p>MongoDB连接器配置</p>
      */
     public void setMongoConnector(MongoConnector MongoConnector) {
         this.MongoConnector = MongoConnector;

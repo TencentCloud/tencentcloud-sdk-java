@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeClusterInfoResponse extends AbstractModel {
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 云盘版实例的读写地址信息。
+    * <p>云盘版实例的读写地址信息。</p>
     */
     @SerializedName("ReadWriteAddress")
     @Expose
     private AddressInfo ReadWriteAddress;
 
     /**
-    * 云盘版实例的只读地址信息。
+    * <p>云盘版实例的只读地址信息。</p>
     */
     @SerializedName("ReadOnlyAddress")
     @Expose
     private AddressInfo [] ReadOnlyAddress;
 
     /**
-    * 云盘版实例的节点列表信息。
+    * <p>云盘版实例的节点列表信息。</p>
     */
     @SerializedName("NodeList")
     @Expose
     private ClusterNodeInfo [] NodeList;
 
     /**
-    * 只读空间保护阈值,单位GB
+    * <p>只读空间保护阈值,单位GB</p>
     */
     @SerializedName("ReadonlyLimit")
     @Expose
     private Long ReadonlyLimit;
 
     /**
-    * 实例节点数。
+    * <p>实例节点数。</p>
     */
     @SerializedName("NodeCount")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeClusterInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例名称。 
-     * @return ClusterName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return ClusterName <p>实例名称。</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 实例名称。
-     * @param ClusterName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param ClusterName <p>实例名称。</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 云盘版实例的读写地址信息。 
-     * @return ReadWriteAddress 云盘版实例的读写地址信息。
+     * Get <p>云盘版实例的读写地址信息。</p> 
+     * @return ReadWriteAddress <p>云盘版实例的读写地址信息。</p>
      */
     public AddressInfo getReadWriteAddress() {
         return this.ReadWriteAddress;
     }
 
     /**
-     * Set 云盘版实例的读写地址信息。
-     * @param ReadWriteAddress 云盘版实例的读写地址信息。
+     * Set <p>云盘版实例的读写地址信息。</p>
+     * @param ReadWriteAddress <p>云盘版实例的读写地址信息。</p>
      */
     public void setReadWriteAddress(AddressInfo ReadWriteAddress) {
         this.ReadWriteAddress = ReadWriteAddress;
     }
 
     /**
-     * Get 云盘版实例的只读地址信息。 
-     * @return ReadOnlyAddress 云盘版实例的只读地址信息。
+     * Get <p>云盘版实例的只读地址信息。</p> 
+     * @return ReadOnlyAddress <p>云盘版实例的只读地址信息。</p>
      */
     public AddressInfo [] getReadOnlyAddress() {
         return this.ReadOnlyAddress;
     }
 
     /**
-     * Set 云盘版实例的只读地址信息。
-     * @param ReadOnlyAddress 云盘版实例的只读地址信息。
+     * Set <p>云盘版实例的只读地址信息。</p>
+     * @param ReadOnlyAddress <p>云盘版实例的只读地址信息。</p>
      */
     public void setReadOnlyAddress(AddressInfo [] ReadOnlyAddress) {
         this.ReadOnlyAddress = ReadOnlyAddress;
     }
 
     /**
-     * Get 云盘版实例的节点列表信息。 
-     * @return NodeList 云盘版实例的节点列表信息。
+     * Get <p>云盘版实例的节点列表信息。</p> 
+     * @return NodeList <p>云盘版实例的节点列表信息。</p>
      */
     public ClusterNodeInfo [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set 云盘版实例的节点列表信息。
-     * @param NodeList 云盘版实例的节点列表信息。
+     * Set <p>云盘版实例的节点列表信息。</p>
+     * @param NodeList <p>云盘版实例的节点列表信息。</p>
      */
     public void setNodeList(ClusterNodeInfo [] NodeList) {
         this.NodeList = NodeList;
     }
 
     /**
-     * Get 只读空间保护阈值,单位GB 
-     * @return ReadonlyLimit 只读空间保护阈值,单位GB
+     * Get <p>只读空间保护阈值,单位GB</p> 
+     * @return ReadonlyLimit <p>只读空间保护阈值,单位GB</p>
      */
     public Long getReadonlyLimit() {
         return this.ReadonlyLimit;
     }
 
     /**
-     * Set 只读空间保护阈值,单位GB
-     * @param ReadonlyLimit 只读空间保护阈值,单位GB
+     * Set <p>只读空间保护阈值,单位GB</p>
+     * @param ReadonlyLimit <p>只读空间保护阈值,单位GB</p>
      */
     public void setReadonlyLimit(Long ReadonlyLimit) {
         this.ReadonlyLimit = ReadonlyLimit;
     }
 
     /**
-     * Get 实例节点数。 
-     * @return NodeCount 实例节点数。
+     * Get <p>实例节点数。</p> 
+     * @return NodeCount <p>实例节点数。</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 实例节点数。
-     * @param NodeCount 实例节点数。
+     * Set <p>实例节点数。</p>
+     * @param NodeCount <p>实例节点数。</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;

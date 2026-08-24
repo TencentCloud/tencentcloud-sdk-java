@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VerificationConfig extends AbstractModel {
 
     /**
-    * <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+    * <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -64,9 +64,17 @@ public class VerificationConfig extends AbstractModel {
     private SMSProviderTemplateConfig TemplateProvider;
 
     /**
-     * Get <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+    * <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudFunction")
+    @Expose
+    private SMSCloudFunctionConfig CloudFunction;
+
+    /**
+     * Get <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+     * @return Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -74,9 +82,9 @@ public class VerificationConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+     * Set <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li></ul>
+     * @param Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -163,6 +171,26 @@ public class VerificationConfig extends AbstractModel {
         this.TemplateProvider = TemplateProvider;
     }
 
+    /**
+     * Get <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudFunction <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SMSCloudFunctionConfig getCloudFunction() {
+        return this.CloudFunction;
+    }
+
+    /**
+     * Set <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudFunction <p>云函数短信通道配置，当 Type 为 function 时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudFunction(SMSCloudFunctionConfig CloudFunction) {
+        this.CloudFunction = CloudFunction;
+    }
+
     public VerificationConfig() {
     }
 
@@ -186,6 +214,9 @@ public class VerificationConfig extends AbstractModel {
         if (source.TemplateProvider != null) {
             this.TemplateProvider = new SMSProviderTemplateConfig(source.TemplateProvider);
         }
+        if (source.CloudFunction != null) {
+            this.CloudFunction = new SMSCloudFunctionConfig(source.CloudFunction);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class VerificationConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "SmsDayLimit", this.SmsDayLimit);
         this.setParamObj(map, prefix + "TemplateProvider.", this.TemplateProvider);
+        this.setParamObj(map, prefix + "CloudFunction.", this.CloudFunction);
 
     }
 }

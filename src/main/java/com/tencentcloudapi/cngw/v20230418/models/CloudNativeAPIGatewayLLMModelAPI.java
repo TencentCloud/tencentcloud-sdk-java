@@ -171,6 +171,34 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     private AIGWForwardDesensitizeConfig ForwardDesensitizeConfig;
 
     /**
+    * <p>rerank documents 上限</p>
+    */
+    @SerializedName("MaxDocumentsConfig")
+    @Expose
+    private AIGWRerankMaxDocumentsConfig MaxDocumentsConfig;
+
+    /**
+    * <p>敏感词路由配置</p>
+    */
+    @SerializedName("SensitiveWordRoute")
+    @Expose
+    private AIGWSensitiveWordRoute SensitiveWordRoute;
+
+    /**
+    * <p>消费者组模型范围</p>
+    */
+    @SerializedName("ConsumerGroupModelScopes")
+    @Expose
+    private AIGWAuthModelScopeItem [] ConsumerGroupModelScopes;
+
+    /**
+    * <p>消费者继承的模型范围</p>
+    */
+    @SerializedName("ConsumerInheritModelScope")
+    @Expose
+    private AIGWConsumerModelScope ConsumerInheritModelScope;
+
+    /**
      * Get <p>模型 API ID。</p> 
      * @return Id <p>模型 API ID。</p>
      */
@@ -506,6 +534,70 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         this.ForwardDesensitizeConfig = ForwardDesensitizeConfig;
     }
 
+    /**
+     * Get <p>rerank documents 上限</p> 
+     * @return MaxDocumentsConfig <p>rerank documents 上限</p>
+     */
+    public AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() {
+        return this.MaxDocumentsConfig;
+    }
+
+    /**
+     * Set <p>rerank documents 上限</p>
+     * @param MaxDocumentsConfig <p>rerank documents 上限</p>
+     */
+    public void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig MaxDocumentsConfig) {
+        this.MaxDocumentsConfig = MaxDocumentsConfig;
+    }
+
+    /**
+     * Get <p>敏感词路由配置</p> 
+     * @return SensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public AIGWSensitiveWordRoute getSensitiveWordRoute() {
+        return this.SensitiveWordRoute;
+    }
+
+    /**
+     * Set <p>敏感词路由配置</p>
+     * @param SensitiveWordRoute <p>敏感词路由配置</p>
+     */
+    public void setSensitiveWordRoute(AIGWSensitiveWordRoute SensitiveWordRoute) {
+        this.SensitiveWordRoute = SensitiveWordRoute;
+    }
+
+    /**
+     * Get <p>消费者组模型范围</p> 
+     * @return ConsumerGroupModelScopes <p>消费者组模型范围</p>
+     */
+    public AIGWAuthModelScopeItem [] getConsumerGroupModelScopes() {
+        return this.ConsumerGroupModelScopes;
+    }
+
+    /**
+     * Set <p>消费者组模型范围</p>
+     * @param ConsumerGroupModelScopes <p>消费者组模型范围</p>
+     */
+    public void setConsumerGroupModelScopes(AIGWAuthModelScopeItem [] ConsumerGroupModelScopes) {
+        this.ConsumerGroupModelScopes = ConsumerGroupModelScopes;
+    }
+
+    /**
+     * Get <p>消费者继承的模型范围</p> 
+     * @return ConsumerInheritModelScope <p>消费者继承的模型范围</p>
+     */
+    public AIGWConsumerModelScope getConsumerInheritModelScope() {
+        return this.ConsumerInheritModelScope;
+    }
+
+    /**
+     * Set <p>消费者继承的模型范围</p>
+     * @param ConsumerInheritModelScope <p>消费者继承的模型范围</p>
+     */
+    public void setConsumerInheritModelScope(AIGWConsumerModelScope ConsumerInheritModelScope) {
+        this.ConsumerInheritModelScope = ConsumerInheritModelScope;
+    }
+
     public CloudNativeAPIGatewayLLMModelAPI() {
     }
 
@@ -583,6 +675,21 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         if (source.ForwardDesensitizeConfig != null) {
             this.ForwardDesensitizeConfig = new AIGWForwardDesensitizeConfig(source.ForwardDesensitizeConfig);
         }
+        if (source.MaxDocumentsConfig != null) {
+            this.MaxDocumentsConfig = new AIGWRerankMaxDocumentsConfig(source.MaxDocumentsConfig);
+        }
+        if (source.SensitiveWordRoute != null) {
+            this.SensitiveWordRoute = new AIGWSensitiveWordRoute(source.SensitiveWordRoute);
+        }
+        if (source.ConsumerGroupModelScopes != null) {
+            this.ConsumerGroupModelScopes = new AIGWAuthModelScopeItem[source.ConsumerGroupModelScopes.length];
+            for (int i = 0; i < source.ConsumerGroupModelScopes.length; i++) {
+                this.ConsumerGroupModelScopes[i] = new AIGWAuthModelScopeItem(source.ConsumerGroupModelScopes[i]);
+            }
+        }
+        if (source.ConsumerInheritModelScope != null) {
+            this.ConsumerInheritModelScope = new AIGWConsumerModelScope(source.ConsumerInheritModelScope);
+        }
     }
 
 
@@ -611,6 +718,10 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamObj(map, prefix + "LogDesensitizeConfig.", this.LogDesensitizeConfig);
         this.setParamObj(map, prefix + "ForwardDesensitizeConfig.", this.ForwardDesensitizeConfig);
+        this.setParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
+        this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
+        this.setParamArrayObj(map, prefix + "ConsumerGroupModelScopes.", this.ConsumerGroupModelScopes);
+        this.setParamObj(map, prefix + "ConsumerInheritModelScope.", this.ConsumerInheritModelScope);
 
     }
 }

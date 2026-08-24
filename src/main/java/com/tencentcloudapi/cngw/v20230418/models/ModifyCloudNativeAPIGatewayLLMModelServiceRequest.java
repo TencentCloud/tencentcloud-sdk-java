@@ -220,6 +220,20 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private String Protocol;
 
     /**
+    * <p>自定义供应商名称</p>
+    */
+    @SerializedName("CustomProviderName")
+    @Expose
+    private String CustomProviderName;
+
+    /**
+    * <p>负载均衡配置</p>
+    */
+    @SerializedName("LoadBalanceConfig")
+    @Expose
+    private AIGWLoadBalanceConfig LoadBalanceConfig;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -667,6 +681,38 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get <p>自定义供应商名称</p> 
+     * @return CustomProviderName <p>自定义供应商名称</p>
+     */
+    public String getCustomProviderName() {
+        return this.CustomProviderName;
+    }
+
+    /**
+     * Set <p>自定义供应商名称</p>
+     * @param CustomProviderName <p>自定义供应商名称</p>
+     */
+    public void setCustomProviderName(String CustomProviderName) {
+        this.CustomProviderName = CustomProviderName;
+    }
+
+    /**
+     * Get <p>负载均衡配置</p> 
+     * @return LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public AIGWLoadBalanceConfig getLoadBalanceConfig() {
+        return this.LoadBalanceConfig;
+    }
+
+    /**
+     * Set <p>负载均衡配置</p>
+     * @param LoadBalanceConfig <p>负载均衡配置</p>
+     */
+    public void setLoadBalanceConfig(AIGWLoadBalanceConfig LoadBalanceConfig) {
+        this.LoadBalanceConfig = LoadBalanceConfig;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -768,6 +814,12 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.CustomProviderName != null) {
+            this.CustomProviderName = new String(source.CustomProviderName);
+        }
+        if (source.LoadBalanceConfig != null) {
+            this.LoadBalanceConfig = new AIGWLoadBalanceConfig(source.LoadBalanceConfig);
+        }
     }
 
 
@@ -803,6 +855,8 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
+        this.setParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
 
     }
 }

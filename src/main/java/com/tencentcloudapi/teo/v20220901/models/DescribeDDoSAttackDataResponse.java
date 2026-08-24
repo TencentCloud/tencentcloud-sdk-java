@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDDoSAttackDataResponse extends AbstractModel {
 
     /**
-    * 查询结果的总条数。
+    * <p>查询结果的总条数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * DDoS攻击数据内容列表。
+    * <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -46,25 +46,25 @@ public class DescribeDDoSAttackDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询结果的总条数。 
-     * @return TotalCount 查询结果的总条数。
+     * Get <p>查询结果的总条数。</p> 
+     * @return TotalCount <p>查询结果的总条数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询结果的总条数。
-     * @param TotalCount 查询结果的总条数。
+     * Set <p>查询结果的总条数。</p>
+     * @param TotalCount <p>查询结果的总条数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get DDoS攻击数据内容列表。
+     * Get <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data DDoS攻击数据内容列表。
+     * @return Data <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecEntry [] getData() {
@@ -72,9 +72,9 @@ public class DescribeDDoSAttackDataResponse extends AbstractModel {
     }
 
     /**
-     * Set DDoS攻击数据内容列表。
+     * Set <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data DDoS攻击数据内容列表。
+     * @param Data <p>DDoS 攻击数据内容列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(SecEntry [] Data) {

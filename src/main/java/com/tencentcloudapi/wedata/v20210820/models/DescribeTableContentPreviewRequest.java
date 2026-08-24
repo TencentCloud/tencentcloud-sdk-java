@@ -115,6 +115,13 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
     private String EngineId;
 
     /**
+    * <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
+
+    /**
      * Get <p>表ID</p> 
      * @return TableId <p>表ID</p>
      */
@@ -322,6 +329,22 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
         this.EngineId = EngineId;
     }
 
+    /**
+     * Get <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul> 
+     * @return EngineTypeDetail <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+     * @param EngineTypeDetail <p>引擎类型详情</p><ul><li>SparkSQL：SparkSQL</li><li>PrestoSQL：Presto</li><li>SparkBatch：Spark作业</li><li>StandardPresto：Presto</li><li>StandardSpark：Spark</li></ul>
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
+    }
+
     public DescribeTableContentPreviewRequest() {
     }
 
@@ -369,6 +392,9 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
         if (source.EngineId != null) {
             this.EngineId = new String(source.EngineId);
         }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "Sql", this.Sql);
         this.setParamSimple(map, prefix + "EngineId", this.EngineId);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
 
     }
 }

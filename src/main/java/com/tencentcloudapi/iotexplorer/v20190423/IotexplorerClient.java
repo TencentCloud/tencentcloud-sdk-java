@@ -506,6 +506,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建一个 TWeSee 人员，可关联已导入的人脸。
+     * @param req CreateTWeSeePersonRequest
+     * @return CreateTWeSeePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeePersonResponse CreateTWeSeePerson(CreateTWeSeePersonRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeePerson", CreateTWeSeePersonResponse.class);
+    }
+
+    /**
      *开通 TWeSee 后付费服务
      * @param req CreateTWeSeePostPaidServiceRequest
      * @return CreateTWeSeePostPaidServiceResponse
@@ -767,6 +778,28 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(DeleteTWeSeeCallbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTWeSeeCallback", DeleteTWeSeeCallbackResponse.class);
+    }
+
+    /**
+     *删除指定 TWeSee 人脸。
+     * @param req DeleteTWeSeeFaceRequest
+     * @return DeleteTWeSeeFaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTWeSeeFaceResponse DeleteTWeSeeFace(DeleteTWeSeeFaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTWeSeeFace", DeleteTWeSeeFaceResponse.class);
+    }
+
+    /**
+     *删除指定 TWeSee 人员，可选择同时删除其关联人脸。
+     * @param req DeleteTWeSeePersonRequest
+     * @return DeleteTWeSeePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTWeSeePersonResponse DeleteTWeSeePerson(DeleteTWeSeePersonRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTWeSeePerson", DeleteTWeSeePersonResponse.class);
     }
 
     /**
@@ -1474,6 +1507,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询指定 TWeSee 人脸详情。
+     * @param req DescribeTWeSeeFaceRequest
+     * @return DescribeTWeSeeFaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeFaceResponse DescribeTWeSeeFace(DescribeTWeSeeFaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeFace", DescribeTWeSeeFaceResponse.class);
+    }
+
+    /**
+     *查询指定 TWeSee 人员详情及其代表人脸。
+     * @param req DescribeTWeSeePersonRequest
+     * @return DescribeTWeSeePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeePersonResponse DescribeTWeSeePerson(DescribeTWeSeePersonRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeePerson", DescribeTWeSeePersonResponse.class);
+    }
+
+    /**
      *查询 TWeSee 后付费服务
      * @param req DescribeTWeSeePostPaidServiceRequest
      * @return DescribeTWeSeePostPaidServiceResponse
@@ -1949,6 +2004,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *检测图片中的人脸，并返回可用于人员管理的人脸元数据。
+     * @param req ImportTWeSeeFacesRequest
+     * @return ImportTWeSeeFacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportTWeSeeFacesResponse ImportTWeSeeFaces(ImportTWeSeeFacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportTWeSeeFaces", ImportTWeSeeFacesResponse.class);
+    }
+
+    /**
      *继承云存用户
      * @param req InheritCloudStorageUserRequest
      * @return InheritCloudStorageUserResponse
@@ -2111,6 +2177,17 @@ public class IotexplorerClient extends AbstractClient{
     public ListTWeSeeCallbackResponse ListTWeSeeCallback(ListTWeSeeCallbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTWeSeeCallback", ListTWeSeeCallbackResponse.class);
+    }
+
+    /**
+     *查询指定设备的 TWeSee 人员列表。
+     * @param req ListTWeSeePersonsRequest
+     * @return ListTWeSeePersonsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTWeSeePersonsResponse ListTWeSeePersons(ListTWeSeePersonsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTWeSeePersons", ListTWeSeePersonsResponse.class);
     }
 
     /**
@@ -2309,6 +2386,28 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(ModifyTWeSeeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTWeSeeConfig", ModifyTWeSeeConfigResponse.class);
+    }
+
+    /**
+     *将 TWeSee 人脸关联到指定人员，或修改其代表人脸状态。
+     * @param req ModifyTWeSeeFaceRequest
+     * @return ModifyTWeSeeFaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeSeeFaceResponse ModifyTWeSeeFace(ModifyTWeSeeFaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeSeeFace", ModifyTWeSeeFaceResponse.class);
+    }
+
+    /**
+     *修改指定 TWeSee 人员的名称或记忆状态。Name、IsRemembered 至少传入一项，不支持取消持久记忆。
+     * @param req ModifyTWeSeePersonRequest
+     * @return ModifyTWeSeePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeSeePersonResponse ModifyTWeSeePerson(ModifyTWeSeePersonRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeSeePerson", ModifyTWeSeePersonResponse.class);
     }
 
     /**
