@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeDedicatedDCDBInstanceResponse extends AbstractModel {
 
     /**
-    * 异步任务流程ID
+    * <p>异步任务流程ID</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeDedicatedDCDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务流程ID 
-     * @return FlowId 异步任务流程ID
+     * Get <p>异步任务流程ID</p> 
+     * @return FlowId <p>异步任务流程ID</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步任务流程ID
-     * @param FlowId 异步任务流程ID
+     * Set <p>异步任务流程ID</p>
+     * @param FlowId <p>异步任务流程ID</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

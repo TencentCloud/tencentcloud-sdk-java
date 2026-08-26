@@ -59,6 +59,13 @@ public class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>识别模板ID</p> 
      * @return Id <p>识别模板ID</p>
      */
@@ -138,6 +145,22 @@ public class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public ModifyDspmIdentifyComplianceGroupRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyDspmIdentifyComplianceGroupRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

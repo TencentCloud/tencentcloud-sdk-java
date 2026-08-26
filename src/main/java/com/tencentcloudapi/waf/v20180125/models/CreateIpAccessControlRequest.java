@@ -81,7 +81,7 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     private String Note;
 
     /**
-    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行，JobType为空时，永久生效
     */
     @SerializedName("JobType")
     @Expose
@@ -231,16 +231,16 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行 
-     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行，JobType为空时，永久生效 
+     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行，JobType为空时，永久生效
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
-     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行，JobType为空时，永久生效
+     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行，JobType为空时，永久生效
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;

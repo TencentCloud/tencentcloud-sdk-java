@@ -9,6 +9,9 @@ public enum MonitorErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* InvalidParameter.Param */
+     INVALIDPARAMETER_PARAM("InvalidParameter.Param"),
+     
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      

@@ -108,6 +108,13 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
     private IntentContent IntentContent;
 
     /**
+    * <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+    */
+    @SerializedName("ClientIP")
+    @Expose
+    private String ClientIP;
+
+    /**
      * Get <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p> 
      * @return ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
@@ -299,6 +306,22 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.IntentContent = IntentContent;
     }
 
+    /**
+     * Get <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p> 
+     * @return ClientIP <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+     */
+    public String getClientIP() {
+        return this.ClientIP;
+    }
+
+    /**
+     * Set <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+     * @param ClientIP <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+     */
+    public void setClientIP(String ClientIP) {
+        this.ClientIP = ClientIP;
+    }
+
     public DescribeLLMContentSecCheckRequest() {
     }
 
@@ -343,6 +366,9 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         if (source.IntentContent != null) {
             this.IntentContent = new IntentContent(source.IntentContent);
         }
+        if (source.ClientIP != null) {
+            this.ClientIP = new String(source.ClientIP);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamObj(map, prefix + "IntentContent.", this.IntentContent);
+        this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
 
     }
 }

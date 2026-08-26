@@ -52,6 +52,13 @@ public class CreateDspmIdentifyLevelGroupRequest extends AbstractModel {
     private DspmAddIdentifyLevelItem [] LevelItems;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>分级组名称</p> 
      * @return Name <p>分级组名称</p>
      */
@@ -115,6 +122,22 @@ public class CreateDspmIdentifyLevelGroupRequest extends AbstractModel {
         this.LevelItems = LevelItems;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public CreateDspmIdentifyLevelGroupRequest() {
     }
 
@@ -141,6 +164,9 @@ public class CreateDspmIdentifyLevelGroupRequest extends AbstractModel {
                 this.LevelItems[i] = new DspmAddIdentifyLevelItem(source.LevelItems[i]);
             }
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class CreateDspmIdentifyLevelGroupRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "LevelItems.", this.LevelItems);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

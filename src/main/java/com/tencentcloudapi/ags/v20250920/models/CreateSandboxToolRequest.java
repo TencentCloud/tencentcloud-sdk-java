@@ -94,6 +94,13 @@ public class CreateSandboxToolRequest extends AbstractModel {
     private CustomConfiguration CustomConfiguration;
 
     /**
+    * <p>桌面电脑环境类沙箱配置</p>
+    */
+    @SerializedName("ComputerConfiguration")
+    @Expose
+    private ComputerConfiguration ComputerConfiguration;
+
+    /**
     * <p>沙箱工具日志推送相关配置</p>
     */
     @SerializedName("LogConfiguration")
@@ -268,6 +275,22 @@ public class CreateSandboxToolRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>桌面电脑环境类沙箱配置</p> 
+     * @return ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public ComputerConfiguration getComputerConfiguration() {
+        return this.ComputerConfiguration;
+    }
+
+    /**
+     * Set <p>桌面电脑环境类沙箱配置</p>
+     * @param ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public void setComputerConfiguration(ComputerConfiguration ComputerConfiguration) {
+        this.ComputerConfiguration = ComputerConfiguration;
+    }
+
+    /**
      * Get <p>沙箱工具日志推送相关配置</p> 
      * @return LogConfiguration <p>沙箱工具日志推送相关配置</p>
      */
@@ -343,6 +366,9 @@ public class CreateSandboxToolRequest extends AbstractModel {
         if (source.CustomConfiguration != null) {
             this.CustomConfiguration = new CustomConfiguration(source.CustomConfiguration);
         }
+        if (source.ComputerConfiguration != null) {
+            this.ComputerConfiguration = new ComputerConfiguration(source.ComputerConfiguration);
+        }
         if (source.LogConfiguration != null) {
             this.LogConfiguration = new LogConfiguration(source.LogConfiguration);
         }
@@ -366,6 +392,7 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+        this.setParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
         this.setParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
         this.setParamSimple(map, prefix + "Persistent", this.Persistent);
 

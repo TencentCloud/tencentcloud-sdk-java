@@ -73,6 +73,13 @@ public class ModifyDspmIdentifyRuleRequest extends AbstractModel {
     private String UnStructuredRule;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>数据项id</p> 
      * @return Id <p>数据项id</p>
      */
@@ -184,6 +191,22 @@ public class ModifyDspmIdentifyRuleRequest extends AbstractModel {
         this.UnStructuredRule = UnStructuredRule;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public ModifyDspmIdentifyRuleRequest() {
     }
 
@@ -216,6 +239,9 @@ public class ModifyDspmIdentifyRuleRequest extends AbstractModel {
         if (source.UnStructuredRule != null) {
             this.UnStructuredRule = new String(source.UnStructuredRule);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyDspmIdentifyRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StructuredRule", this.StructuredRule);
         this.setParamSimple(map, prefix + "UnStructuredRule", this.UnStructuredRule);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

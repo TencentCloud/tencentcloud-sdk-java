@@ -38,6 +38,20 @@ public class ModifyCosAuditObjectSampleRateRequest extends AbstractModel {
     private Float [] SampleRateSet;
 
     /**
+    * <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+    */
+    @SerializedName("TargetAppId")
+    @Expose
+    private Long TargetAppId;
+
+    /**
+    * <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+    */
+    @SerializedName("DefaultSampleRate")
+    @Expose
+    private Float DefaultSampleRate;
+
+    /**
      * Get <p>存储桶资产id集合</p> 
      * @return BucketIdSet <p>存储桶资产id集合</p>
      */
@@ -69,6 +83,38 @@ public class ModifyCosAuditObjectSampleRateRequest extends AbstractModel {
         this.SampleRateSet = SampleRateSet;
     }
 
+    /**
+     * Get <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p> 
+     * @return TargetAppId <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+     */
+    public Long getTargetAppId() {
+        return this.TargetAppId;
+    }
+
+    /**
+     * Set <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+     * @param TargetAppId <p>appid；传 DefaultSampleRate 时必填；只修改已有桶时可选</p>
+     */
+    public void setTargetAppId(Long TargetAppId) {
+        this.TargetAppId = TargetAppId;
+    }
+
+    /**
+     * Get <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p> 
+     * @return DefaultSampleRate <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+     */
+    public Float getDefaultSampleRate() {
+        return this.DefaultSampleRate;
+    }
+
+    /**
+     * Set <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+     * @param DefaultSampleRate <p>传入时修改 TargetAppId 的新增桶默认值； 不传时不修改默认值</p><p>取值范围：[0.001, 1]</p>
+     */
+    public void setDefaultSampleRate(Float DefaultSampleRate) {
+        this.DefaultSampleRate = DefaultSampleRate;
+    }
+
     public ModifyCosAuditObjectSampleRateRequest() {
     }
 
@@ -89,6 +135,12 @@ public class ModifyCosAuditObjectSampleRateRequest extends AbstractModel {
                 this.SampleRateSet[i] = new Float(source.SampleRateSet[i]);
             }
         }
+        if (source.TargetAppId != null) {
+            this.TargetAppId = new Long(source.TargetAppId);
+        }
+        if (source.DefaultSampleRate != null) {
+            this.DefaultSampleRate = new Float(source.DefaultSampleRate);
+        }
     }
 
 
@@ -98,6 +150,8 @@ public class ModifyCosAuditObjectSampleRateRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "BucketIdSet.", this.BucketIdSet);
         this.setParamArraySimple(map, prefix + "SampleRateSet.", this.SampleRateSet);
+        this.setParamSimple(map, prefix + "TargetAppId", this.TargetAppId);
+        this.setParamSimple(map, prefix + "DefaultSampleRate", this.DefaultSampleRate);
 
     }
 }

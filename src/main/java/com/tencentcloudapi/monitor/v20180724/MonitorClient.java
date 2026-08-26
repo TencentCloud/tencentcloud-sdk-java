@@ -94,6 +94,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *创建小程序告警屏蔽规则
+     * @param req CreateAlarmHistoryShieldRequest
+     * @return CreateAlarmHistoryShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmHistoryShieldResponse CreateAlarmHistoryShield(CreateAlarmHistoryShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAlarmHistoryShield", CreateAlarmHistoryShieldResponse.class);
+    }
+
+    /**
      *创建通知模板
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse
@@ -365,6 +376,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *删除小程序告警屏蔽规则
+     * @param req DeleteAlarmHistoryShieldsRequest
+     * @return DeleteAlarmHistoryShieldsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmHistoryShieldsResponse DeleteAlarmHistoryShields(DeleteAlarmHistoryShieldsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAlarmHistoryShields", DeleteAlarmHistoryShieldsResponse.class);
+    }
+
+    /**
      *删除告警通知模板
      * @param req DeleteAlarmNoticesRequest
      * @return DeleteAlarmNoticesResponse
@@ -632,6 +654,17 @@ public class MonitorClient extends AbstractClient{
     public DescribeAlarmHistoriesResponse DescribeAlarmHistories(DescribeAlarmHistoriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlarmHistories", DescribeAlarmHistoriesResponse.class);
+    }
+
+    /**
+     *获取小程序告警屏蔽规则
+     * @param req DescribeAlarmHistoryShieldRequest
+     * @return DescribeAlarmHistoryShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmHistoryShieldResponse DescribeAlarmHistoryShield(DescribeAlarmHistoryShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarmHistoryShield", DescribeAlarmHistoryShieldResponse.class);
     }
 
     /**
@@ -1543,6 +1576,17 @@ public class MonitorClient extends AbstractClient{
     public InstallPluginsResponse InstallPlugins(InstallPluginsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InstallPlugins", InstallPluginsResponse.class);
+    }
+
+    /**
+     *修改小程序告警屏蔽规则
+     * @param req ModifyAlarmHistoryShieldRequest
+     * @return ModifyAlarmHistoryShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmHistoryShieldResponse ModifyAlarmHistoryShield(ModifyAlarmHistoryShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAlarmHistoryShield", ModifyAlarmHistoryShieldResponse.class);
     }
 
     /**

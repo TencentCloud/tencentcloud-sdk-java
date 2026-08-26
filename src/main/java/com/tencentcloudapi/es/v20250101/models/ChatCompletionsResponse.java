@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ChatCompletionsResponse extends SSEResponseModel {
 
     /**
-    * 此次请求的id
+    * <p>此次请求的id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 回复内容
+    * <p>回复内容</p>
     */
     @SerializedName("Choices")
     @Expose
     private Choice [] Choices;
 
     /**
-    * token使用量
+    * <p>token使用量</p>
     */
     @SerializedName("Usage")
     @Expose
     private TokenUsage Usage;
 
     /**
-    * 联网搜索结果。
+    * <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineSearchContent")
@@ -60,57 +60,57 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     private String RequestId;
 
     /**
-     * Get 此次请求的id 
-     * @return Id 此次请求的id
+     * Get <p>此次请求的id</p> 
+     * @return Id <p>此次请求的id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 此次请求的id
-     * @param Id 此次请求的id
+     * Set <p>此次请求的id</p>
+     * @param Id <p>此次请求的id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 回复内容 
-     * @return Choices 回复内容
+     * Get <p>回复内容</p> 
+     * @return Choices <p>回复内容</p>
      */
     public Choice [] getChoices() {
         return this.Choices;
     }
 
     /**
-     * Set 回复内容
-     * @param Choices 回复内容
+     * Set <p>回复内容</p>
+     * @param Choices <p>回复内容</p>
      */
     public void setChoices(Choice [] Choices) {
         this.Choices = Choices;
     }
 
     /**
-     * Get token使用量 
-     * @return Usage token使用量
+     * Get <p>token使用量</p> 
+     * @return Usage <p>token使用量</p>
      */
     public TokenUsage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set token使用量
-     * @param Usage token使用量
+     * Set <p>token使用量</p>
+     * @param Usage <p>token使用量</p>
      */
     public void setUsage(TokenUsage Usage) {
         this.Usage = Usage;
     }
 
     /**
-     * Get 联网搜索结果。
+     * Get <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OnlineSearchContent 联网搜索结果。
+     * @return OnlineSearchContent <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebContent [] getOnlineSearchContent() {
@@ -118,9 +118,9 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     }
 
     /**
-     * Set 联网搜索结果。
+     * Set <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OnlineSearchContent 联网搜索结果。
+     * @param OnlineSearchContent <p>联网搜索结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineSearchContent(WebContent [] OnlineSearchContent) {

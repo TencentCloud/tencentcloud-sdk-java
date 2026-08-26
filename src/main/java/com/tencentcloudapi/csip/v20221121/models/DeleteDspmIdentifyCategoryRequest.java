@@ -38,6 +38,13 @@ public class DeleteDspmIdentifyCategoryRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>分类ID集合</p> 
      * @return Ids <p>分类ID集合</p>
      */
@@ -69,6 +76,22 @@ public class DeleteDspmIdentifyCategoryRequest extends AbstractModel {
         this.MemberId = MemberId;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public DeleteDspmIdentifyCategoryRequest() {
     }
 
@@ -89,6 +112,9 @@ public class DeleteDspmIdentifyCategoryRequest extends AbstractModel {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -98,6 +124,7 @@ public class DeleteDspmIdentifyCategoryRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

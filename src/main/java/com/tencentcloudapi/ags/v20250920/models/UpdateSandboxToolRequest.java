@@ -59,6 +59,13 @@ public class UpdateSandboxToolRequest extends AbstractModel {
     private CustomConfiguration CustomConfiguration;
 
     /**
+    * <p>桌面电脑环境类沙箱配置</p>
+    */
+    @SerializedName("ComputerConfiguration")
+    @Expose
+    private ComputerConfiguration ComputerConfiguration;
+
+    /**
      * Get <p>沙箱工具ID</p> 
      * @return ToolId <p>沙箱工具ID</p>
      */
@@ -138,6 +145,22 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         this.CustomConfiguration = CustomConfiguration;
     }
 
+    /**
+     * Get <p>桌面电脑环境类沙箱配置</p> 
+     * @return ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public ComputerConfiguration getComputerConfiguration() {
+        return this.ComputerConfiguration;
+    }
+
+    /**
+     * Set <p>桌面电脑环境类沙箱配置</p>
+     * @param ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     */
+    public void setComputerConfiguration(ComputerConfiguration ComputerConfiguration) {
+        this.ComputerConfiguration = ComputerConfiguration;
+    }
+
     public UpdateSandboxToolRequest() {
     }
 
@@ -164,6 +187,9 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         if (source.CustomConfiguration != null) {
             this.CustomConfiguration = new CustomConfiguration(source.CustomConfiguration);
         }
+        if (source.ComputerConfiguration != null) {
+            this.ComputerConfiguration = new ComputerConfiguration(source.ComputerConfiguration);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         this.setParamObj(map, prefix + "NetworkConfiguration.", this.NetworkConfiguration);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+        this.setParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
 
     }
 }

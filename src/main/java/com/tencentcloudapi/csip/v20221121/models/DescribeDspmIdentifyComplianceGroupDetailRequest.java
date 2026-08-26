@@ -38,6 +38,13 @@ public class DescribeDspmIdentifyComplianceGroupDetailRequest extends AbstractMo
     private Long Id;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>集团账号的成员id</p> 
      * @return MemberId <p>集团账号的成员id</p>
      */
@@ -69,6 +76,22 @@ public class DescribeDspmIdentifyComplianceGroupDetailRequest extends AbstractMo
         this.Id = Id;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public DescribeDspmIdentifyComplianceGroupDetailRequest() {
     }
 
@@ -86,6 +109,9 @@ public class DescribeDspmIdentifyComplianceGroupDetailRequest extends AbstractMo
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DescribeDspmIdentifyComplianceGroupDetailRequest extends AbstractMo
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

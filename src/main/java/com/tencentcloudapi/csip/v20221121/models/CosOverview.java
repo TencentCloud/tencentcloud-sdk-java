@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CosOverview extends AbstractModel {
 
     /**
-    * 资产总数
+    * <p>资产总数</p>
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * 需要立即处理的资产数
+    * <p>需要立即处理的资产数</p>
     */
     @SerializedName("AlarmAssetCount")
     @Expose
     private Long AlarmAssetCount;
 
     /**
-    * 需要加固的资产数
+    * <p>需要加固的资产数</p>
     */
     @SerializedName("RiskAssetCount")
     @Expose
     private Long RiskAssetCount;
 
     /**
-    * 告警总数
+    * <p>告警总数</p>
     */
     @SerializedName("AlarmCount")
     @Expose
     private Long AlarmCount;
 
     /**
-    * 当日新增告警总数
+    * <p>当日新增告警总数</p>
     */
     @SerializedName("IncrementAlarmCount")
     @Expose
     private Long IncrementAlarmCount;
 
     /**
-    * 风险总数
+    * <p>风险总数</p>
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * 当日新增告警总数
+    * <p>当日新增告警总数</p>
     */
     @SerializedName("IncrementRiskCount")
     @Expose
     private Long IncrementRiskCount;
 
     /**
-    * 风险top详情
+    * <p>风险top详情</p>
     */
     @SerializedName("RiskTop")
     @Expose
     private CosRiskInfo [] RiskTop;
 
     /**
-    * 告警风险top
+    * <p>告警风险top</p>
     */
     @SerializedName("AlarmTop")
     @Expose
     private CosRiskInfo [] AlarmTop;
 
     /**
-     * Get 资产总数 
-     * @return AssetCount 资产总数
+    * <p>高等级敏感文件数</p>
+    */
+    @SerializedName("HighLevelSensitiveFileCount")
+    @Expose
+    private Long HighLevelSensitiveFileCount;
+
+    /**
+     * Get <p>资产总数</p> 
+     * @return AssetCount <p>资产总数</p>
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set 资产总数
-     * @param AssetCount 资产总数
+     * Set <p>资产总数</p>
+     * @param AssetCount <p>资产总数</p>
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get 需要立即处理的资产数 
-     * @return AlarmAssetCount 需要立即处理的资产数
+     * Get <p>需要立即处理的资产数</p> 
+     * @return AlarmAssetCount <p>需要立即处理的资产数</p>
      */
     public Long getAlarmAssetCount() {
         return this.AlarmAssetCount;
     }
 
     /**
-     * Set 需要立即处理的资产数
-     * @param AlarmAssetCount 需要立即处理的资产数
+     * Set <p>需要立即处理的资产数</p>
+     * @param AlarmAssetCount <p>需要立即处理的资产数</p>
      */
     public void setAlarmAssetCount(Long AlarmAssetCount) {
         this.AlarmAssetCount = AlarmAssetCount;
     }
 
     /**
-     * Get 需要加固的资产数 
-     * @return RiskAssetCount 需要加固的资产数
+     * Get <p>需要加固的资产数</p> 
+     * @return RiskAssetCount <p>需要加固的资产数</p>
      */
     public Long getRiskAssetCount() {
         return this.RiskAssetCount;
     }
 
     /**
-     * Set 需要加固的资产数
-     * @param RiskAssetCount 需要加固的资产数
+     * Set <p>需要加固的资产数</p>
+     * @param RiskAssetCount <p>需要加固的资产数</p>
      */
     public void setRiskAssetCount(Long RiskAssetCount) {
         this.RiskAssetCount = RiskAssetCount;
     }
 
     /**
-     * Get 告警总数 
-     * @return AlarmCount 告警总数
+     * Get <p>告警总数</p> 
+     * @return AlarmCount <p>告警总数</p>
      */
     public Long getAlarmCount() {
         return this.AlarmCount;
     }
 
     /**
-     * Set 告警总数
-     * @param AlarmCount 告警总数
+     * Set <p>告警总数</p>
+     * @param AlarmCount <p>告警总数</p>
      */
     public void setAlarmCount(Long AlarmCount) {
         this.AlarmCount = AlarmCount;
     }
 
     /**
-     * Get 当日新增告警总数 
-     * @return IncrementAlarmCount 当日新增告警总数
+     * Get <p>当日新增告警总数</p> 
+     * @return IncrementAlarmCount <p>当日新增告警总数</p>
      */
     public Long getIncrementAlarmCount() {
         return this.IncrementAlarmCount;
     }
 
     /**
-     * Set 当日新增告警总数
-     * @param IncrementAlarmCount 当日新增告警总数
+     * Set <p>当日新增告警总数</p>
+     * @param IncrementAlarmCount <p>当日新增告警总数</p>
      */
     public void setIncrementAlarmCount(Long IncrementAlarmCount) {
         this.IncrementAlarmCount = IncrementAlarmCount;
     }
 
     /**
-     * Get 风险总数 
-     * @return RiskCount 风险总数
+     * Get <p>风险总数</p> 
+     * @return RiskCount <p>风险总数</p>
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set 风险总数
-     * @param RiskCount 风险总数
+     * Set <p>风险总数</p>
+     * @param RiskCount <p>风险总数</p>
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 当日新增告警总数 
-     * @return IncrementRiskCount 当日新增告警总数
+     * Get <p>当日新增告警总数</p> 
+     * @return IncrementRiskCount <p>当日新增告警总数</p>
      */
     public Long getIncrementRiskCount() {
         return this.IncrementRiskCount;
     }
 
     /**
-     * Set 当日新增告警总数
-     * @param IncrementRiskCount 当日新增告警总数
+     * Set <p>当日新增告警总数</p>
+     * @param IncrementRiskCount <p>当日新增告警总数</p>
      */
     public void setIncrementRiskCount(Long IncrementRiskCount) {
         this.IncrementRiskCount = IncrementRiskCount;
     }
 
     /**
-     * Get 风险top详情 
-     * @return RiskTop 风险top详情
+     * Get <p>风险top详情</p> 
+     * @return RiskTop <p>风险top详情</p>
      */
     public CosRiskInfo [] getRiskTop() {
         return this.RiskTop;
     }
 
     /**
-     * Set 风险top详情
-     * @param RiskTop 风险top详情
+     * Set <p>风险top详情</p>
+     * @param RiskTop <p>风险top详情</p>
      */
     public void setRiskTop(CosRiskInfo [] RiskTop) {
         this.RiskTop = RiskTop;
     }
 
     /**
-     * Get 告警风险top 
-     * @return AlarmTop 告警风险top
+     * Get <p>告警风险top</p> 
+     * @return AlarmTop <p>告警风险top</p>
      */
     public CosRiskInfo [] getAlarmTop() {
         return this.AlarmTop;
     }
 
     /**
-     * Set 告警风险top
-     * @param AlarmTop 告警风险top
+     * Set <p>告警风险top</p>
+     * @param AlarmTop <p>告警风险top</p>
      */
     public void setAlarmTop(CosRiskInfo [] AlarmTop) {
         this.AlarmTop = AlarmTop;
+    }
+
+    /**
+     * Get <p>高等级敏感文件数</p> 
+     * @return HighLevelSensitiveFileCount <p>高等级敏感文件数</p>
+     */
+    public Long getHighLevelSensitiveFileCount() {
+        return this.HighLevelSensitiveFileCount;
+    }
+
+    /**
+     * Set <p>高等级敏感文件数</p>
+     * @param HighLevelSensitiveFileCount <p>高等级敏感文件数</p>
+     */
+    public void setHighLevelSensitiveFileCount(Long HighLevelSensitiveFileCount) {
+        this.HighLevelSensitiveFileCount = HighLevelSensitiveFileCount;
     }
 
     public CosOverview() {
@@ -271,6 +294,9 @@ public class CosOverview extends AbstractModel {
                 this.AlarmTop[i] = new CosRiskInfo(source.AlarmTop[i]);
             }
         }
+        if (source.HighLevelSensitiveFileCount != null) {
+            this.HighLevelSensitiveFileCount = new Long(source.HighLevelSensitiveFileCount);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class CosOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "IncrementRiskCount", this.IncrementRiskCount);
         this.setParamArrayObj(map, prefix + "RiskTop.", this.RiskTop);
         this.setParamArrayObj(map, prefix + "AlarmTop.", this.AlarmTop);
+        this.setParamSimple(map, prefix + "HighLevelSensitiveFileCount", this.HighLevelSensitiveFileCount);
 
     }
 }

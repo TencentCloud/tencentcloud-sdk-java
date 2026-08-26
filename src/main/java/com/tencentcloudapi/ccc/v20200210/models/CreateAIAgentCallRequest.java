@@ -24,125 +24,128 @@ import java.util.HashMap;
 public class CreateAIAgentCallRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * AI智能体ID
+    * <p>AI智能体ID</p>
     */
     @SerializedName("AIAgentId")
     @Expose
     private Long AIAgentId;
 
     /**
-    * 被叫号码
+    * <p>被叫号码</p>
     */
     @SerializedName("Callee")
     @Expose
     private String Callee;
 
     /**
-    * 主叫号码列表
+    * <p>主叫号码列表</p>
     */
     @SerializedName("Callers")
     @Expose
     private String [] Callers;
 
     /**
-    * 提示词变量
+    * <p>提示词变量</p>
     */
     @SerializedName("PromptVariables")
     @Expose
     private Variable [] PromptVariables;
 
     /**
-    * 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
+    * <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
     */
     @SerializedName("Variables")
     @Expose
     private Variable [] Variables;
 
     /**
-    * 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    * <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
     */
     @SerializedName("MaxRingTimeoutSecond")
     @Expose
     private Long MaxRingTimeoutSecond;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+    */
+    @SerializedName("AcquireTimeoutSecond")
+    @Expose
+    private Long AcquireTimeoutSecond;
+
+    /**
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get AI智能体ID 
-     * @return AIAgentId AI智能体ID
+     * Get <p>AI智能体ID</p> 
+     * @return AIAgentId <p>AI智能体ID</p>
      */
     public Long getAIAgentId() {
         return this.AIAgentId;
     }
 
     /**
-     * Set AI智能体ID
-     * @param AIAgentId AI智能体ID
+     * Set <p>AI智能体ID</p>
+     * @param AIAgentId <p>AI智能体ID</p>
      */
     public void setAIAgentId(Long AIAgentId) {
         this.AIAgentId = AIAgentId;
     }
 
     /**
-     * Get 被叫号码 
-     * @return Callee 被叫号码
+     * Get <p>被叫号码</p> 
+     * @return Callee <p>被叫号码</p>
      */
     public String getCallee() {
         return this.Callee;
     }
 
     /**
-     * Set 被叫号码
-     * @param Callee 被叫号码
+     * Set <p>被叫号码</p>
+     * @param Callee <p>被叫号码</p>
      */
     public void setCallee(String Callee) {
         this.Callee = Callee;
     }
 
     /**
-     * Get 主叫号码列表 
-     * @return Callers 主叫号码列表
+     * Get <p>主叫号码列表</p> 
+     * @return Callers <p>主叫号码列表</p>
      */
     public String [] getCallers() {
         return this.Callers;
     }
 
     /**
-     * Set 主叫号码列表
-     * @param Callers 主叫号码列表
+     * Set <p>主叫号码列表</p>
+     * @param Callers <p>主叫号码列表</p>
      */
     public void setCallers(String [] Callers) {
         this.Callers = Callers;
     }
 
     /**
-     * Get 提示词变量 
-     * @return PromptVariables 提示词变量
+     * Get <p>提示词变量</p> 
+     * @return PromptVariables <p>提示词变量</p>
      * @deprecated
      */
     @Deprecated
@@ -151,8 +154,8 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     }
 
     /**
-     * Set 提示词变量
-     * @param PromptVariables 提示词变量
+     * Set <p>提示词变量</p>
+     * @param PromptVariables <p>提示词变量</p>
      * @deprecated
      */
     @Deprecated
@@ -161,51 +164,51 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     }
 
     /**
-     * Get 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值 
-     * @return Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
+     * Get <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol> 
+     * @return Variables <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
      */
     public Variable [] getVariables() {
         return this.Variables;
     }
 
     /**
-     * Set 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
-     * @param Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
-
-1. dify-inputs-xxx 为dify的inputs变量
-2.  dify-inputs-user 为dify的user值
-3.  dify-inputs-conversation_id 为dify的conversation_id值
+     * Set <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
+     * @param Variables <p>通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  </p><ol><li>dify-inputs-xxx 为dify的inputs变量</li><li>dify-inputs-user 为dify的user值</li><li>dify-inputs-conversation_id 为dify的conversation_id值</li></ol>
      */
     public void setVariables(Variable [] Variables) {
         this.Variables = Variables;
     }
 
     /**
-     * Get 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数 
-     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * Get <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p> 
+     * @return MaxRingTimeoutSecond <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
      */
     public Long getMaxRingTimeoutSecond() {
         return this.MaxRingTimeoutSecond;
     }
 
     /**
-     * Set 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
-     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * Set <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+     * @param MaxRingTimeoutSecond <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
      */
     public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
         this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Get <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p> 
+     * @return AcquireTimeoutSecond <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+     */
+    public Long getAcquireTimeoutSecond() {
+        return this.AcquireTimeoutSecond;
+    }
+
+    /**
+     * Set <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+     * @param AcquireTimeoutSecond <p>智能体并发不足时，排队等待超时时间，单位秒</p><p>取值范围：[0, 5]</p><p>默认值：5</p>
+     */
+    public void setAcquireTimeoutSecond(Long AcquireTimeoutSecond) {
+        this.AcquireTimeoutSecond = AcquireTimeoutSecond;
     }
 
     public CreateAIAgentCallRequest() {
@@ -246,6 +249,9 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         if (source.MaxRingTimeoutSecond != null) {
             this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
         }
+        if (source.AcquireTimeoutSecond != null) {
+            this.AcquireTimeoutSecond = new Long(source.AcquireTimeoutSecond);
+        }
     }
 
 
@@ -260,6 +266,7 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
         this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+        this.setParamSimple(map, prefix + "AcquireTimeoutSecond", this.AcquireTimeoutSecond);
 
     }
 }

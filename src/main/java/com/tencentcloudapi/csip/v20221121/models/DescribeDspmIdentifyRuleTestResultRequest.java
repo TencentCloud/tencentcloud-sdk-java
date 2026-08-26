@@ -66,6 +66,13 @@ public class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel {
     private String UnStructuredTestContent;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>规则类型</p><p>枚举值：</p><ul><li>structured： 结构化规则</li><li>unstructrued： 非结构化规则</li></ul> 
      * @return RuleType <p>规则类型</p><p>枚举值：</p><ul><li>structured： 结构化规则</li><li>unstructrued： 非结构化规则</li></ul>
      */
@@ -161,6 +168,22 @@ public class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel {
         this.UnStructuredTestContent = UnStructuredTestContent;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public DescribeDspmIdentifyRuleTestResultRequest() {
     }
 
@@ -193,6 +216,9 @@ public class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel {
         if (source.UnStructuredTestContent != null) {
             this.UnStructuredTestContent = new String(source.UnStructuredTestContent);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class DescribeDspmIdentifyRuleTestResultRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "StructuredTestContent.", this.StructuredTestContent);
         this.setParamSimple(map, prefix + "UnStructuredTestContent", this.UnStructuredTestContent);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

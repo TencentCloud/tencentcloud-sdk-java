@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class UpgradeDCDBInstanceResponse extends AbstractModel {
 
     /**
-    * 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+    * <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -39,20 +38,16 @@ public class UpgradeDCDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。 
-     * @return DealName 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+     * Get <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p> 
+     * @return DealName <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
-     * @param DealName 长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+     * Set <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
+     * @param DealName <p>长订单号。可以据此调用 DescribeOrders<br> 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

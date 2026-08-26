@@ -24,102 +24,91 @@ import java.util.HashMap;
 public class MediaTranscodeItem extends AbstractModel {
 
     /**
-    * 转码后文件的目标存储。
+    * <p>转码后文件的目标存储。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 转码后的视频文件路径。
+    * <p>转码后的视频文件路径。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
+    * <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+    * <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 视频流高度的最大值，单位：px。
+    * <p>视频流高度的最大值，单位：px。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 视频流宽度的最大值，单位：px。
+    * <p>视频流宽度的最大值，单位：px。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+    * <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 视频时长，单位：秒。
+    * <p>视频时长，单位：秒。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 容器类型，例如 m4a，mp4 等。
+    * <p>容器类型，例如 m4a，mp4 等。</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 视频的 md5 值。
+    * <p>视频的 md5 值。</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 音频流信息。
+    * <p>音频流信息。</p>
     */
     @SerializedName("AudioStreamSet")
     @Expose
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * 视频流信息。
+    * <p>视频流信息。</p>
     */
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
-    * 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+    * <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallBackExtInfo")
@@ -127,223 +116,208 @@ public class MediaTranscodeItem extends AbstractModel {
     private String CallBackExtInfo;
 
     /**
-     * Get 转码后文件的目标存储。 
-     * @return OutputStorage 转码后文件的目标存储。
+    * <p>MediaTranscodeItem</p>
+    */
+    @SerializedName("Usage")
+    @Expose
+    private MediaUsageItem Usage;
+
+    /**
+     * Get <p>转码后文件的目标存储。</p> 
+     * @return OutputStorage <p>转码后文件的目标存储。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 转码后文件的目标存储。
-     * @param OutputStorage 转码后文件的目标存储。
+     * Set <p>转码后文件的目标存储。</p>
+     * @param OutputStorage <p>转码后文件的目标存储。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 转码后的视频文件路径。 
-     * @return Path 转码后的视频文件路径。
+     * Get <p>转码后的视频文件路径。</p> 
+     * @return Path <p>转码后的视频文件路径。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 转码后的视频文件路径。
-     * @param Path 转码后的视频文件路径。
+     * Set <p>转码后的视频文件路径。</p>
+     * @param Path <p>转码后的视频文件路径。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。 
-     * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
+     * Get <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p> 
+     * @return Definition <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
-     * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
+     * Set <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
+     * @param Definition <p>转码规格 ID，参见<a href="https://cloud.tencent.com/document/product/862/37042">转码参数模板</a>。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 视频流码率平均值与音频流码率平均值之和， 单位：bps。 
-     * @return Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Get <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p> 
+     * @return Bitrate <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 视频流码率平均值与音频流码率平均值之和， 单位：bps。
-     * @param Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Set <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
+     * @param Bitrate <p>视频流码率平均值与音频流码率平均值之和， 单位：bps。</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 视频流高度的最大值，单位：px。 
-     * @return Height 视频流高度的最大值，单位：px。
+     * Get <p>视频流高度的最大值，单位：px。</p> 
+     * @return Height <p>视频流高度的最大值，单位：px。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 视频流高度的最大值，单位：px。
-     * @param Height 视频流高度的最大值，单位：px。
+     * Set <p>视频流高度的最大值，单位：px。</p>
+     * @param Height <p>视频流高度的最大值，单位：px。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 视频流宽度的最大值，单位：px。 
-     * @return Width 视频流宽度的最大值，单位：px。
+     * Get <p>视频流宽度的最大值，单位：px。</p> 
+     * @return Width <p>视频流宽度的最大值，单位：px。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 视频流宽度的最大值，单位：px。
-     * @param Width 视频流宽度的最大值，单位：px。
+     * Set <p>视频流宽度的最大值，单位：px。</p>
+     * @param Width <p>视频流宽度的最大值，单位：px。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。 
-     * @return Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Get <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p> 
+     * @return Size <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-     * @param Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Set <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
+     * @param Size <p>媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 视频时长，单位：秒。 
-     * @return Duration 视频时长，单位：秒。
+     * Get <p>视频时长，单位：秒。</p> 
+     * @return Duration <p>视频时长，单位：秒。</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 视频时长，单位：秒。
-     * @param Duration 视频时长，单位：秒。
+     * Set <p>视频时长，单位：秒。</p>
+     * @param Duration <p>视频时长，单位：秒。</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 容器类型，例如 m4a，mp4 等。 
-     * @return Container 容器类型，例如 m4a，mp4 等。
+     * Get <p>容器类型，例如 m4a，mp4 等。</p> 
+     * @return Container <p>容器类型，例如 m4a，mp4 等。</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 容器类型，例如 m4a，mp4 等。
-     * @param Container 容器类型，例如 m4a，mp4 等。
+     * Set <p>容器类型，例如 m4a，mp4 等。</p>
+     * @param Container <p>容器类型，例如 m4a，mp4 等。</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 视频的 md5 值。 
-     * @return Md5 视频的 md5 值。
+     * Get <p>视频的 md5 值。</p> 
+     * @return Md5 <p>视频的 md5 值。</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set 视频的 md5 值。
-     * @param Md5 视频的 md5 值。
+     * Set <p>视频的 md5 值。</p>
+     * @param Md5 <p>视频的 md5 值。</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 音频流信息。 
-     * @return AudioStreamSet 音频流信息。
+     * Get <p>音频流信息。</p> 
+     * @return AudioStreamSet <p>音频流信息。</p>
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
     }
 
     /**
-     * Set 音频流信息。
-     * @param AudioStreamSet 音频流信息。
+     * Set <p>音频流信息。</p>
+     * @param AudioStreamSet <p>音频流信息。</p>
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
     }
 
     /**
-     * Get 视频流信息。 
-     * @return VideoStreamSet 视频流信息。
+     * Get <p>视频流信息。</p> 
+     * @return VideoStreamSet <p>视频流信息。</p>
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
     }
 
     /**
-     * Set 视频流信息。
-     * @param VideoStreamSet 视频流信息。
+     * Set <p>视频流信息。</p>
+     * @param VideoStreamSet <p>视频流信息。</p>
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+     * Get <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CallBackExtInfo 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+     * @return CallBackExtInfo <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallBackExtInfo() {
@@ -351,35 +325,29 @@ public class MediaTranscodeItem extends AbstractModel {
     }
 
     /**
-     * Set 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+     * Set <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CallBackExtInfo 视频转码使用增强项说明，增强项解释
-<li>hdr：HDR配置</li>
-<li>wd_fps：插帧帧率配置</li>
-<li>video_super_resolution：	超分配置</li>
-<li>repair：综合增强配置</li>
-<li>denoise：视频降噪配置</li>
-<li>color_enhance：色彩增强配置</li>
-<li>scratch：去划痕配置</li>
-<li>artifact：去伪影（毛刺）配置</li>
-<li>sharp：细节增强配置</li>
-<li>low_light：低光照增强配置</li>
-<li>face_enhance：人脸增强配置</li>
+     * @param CallBackExtInfo <p>视频转码使用增强项说明，增强项解释</p><li>hdr：HDR配置</li><li>wd_fps：插帧帧率配置</li><li>video_super_resolution：    超分配置</li><li>repair：综合增强配置</li><li>denoise：视频降噪配置</li><li>color_enhance：色彩增强配置</li><li>scratch：去划痕配置</li><li>artifact：去伪影（毛刺）配置</li><li>sharp：细节增强配置</li><li>low_light：低光照增强配置</li><li>face_enhance：人脸增强配置</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallBackExtInfo(String CallBackExtInfo) {
         this.CallBackExtInfo = CallBackExtInfo;
+    }
+
+    /**
+     * Get <p>MediaTranscodeItem</p> 
+     * @return Usage <p>MediaTranscodeItem</p>
+     */
+    public MediaUsageItem getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set <p>MediaTranscodeItem</p>
+     * @param Usage <p>MediaTranscodeItem</p>
+     */
+    public void setUsage(MediaUsageItem Usage) {
+        this.Usage = Usage;
     }
 
     public MediaTranscodeItem() {
@@ -435,6 +403,9 @@ public class MediaTranscodeItem extends AbstractModel {
         if (source.CallBackExtInfo != null) {
             this.CallBackExtInfo = new String(source.CallBackExtInfo);
         }
+        if (source.Usage != null) {
+            this.Usage = new MediaUsageItem(source.Usage);
+        }
     }
 
 
@@ -455,6 +426,7 @@ public class MediaTranscodeItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
         this.setParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
 
     }
 }

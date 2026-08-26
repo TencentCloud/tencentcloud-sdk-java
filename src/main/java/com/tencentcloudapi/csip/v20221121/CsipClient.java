@@ -877,6 +877,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建本地镜像列表导出任务。导出字段包含镜像ID、镜像名、镜像版本、关联容器数、关联主机数、创建时间、所属账号昵称，以及扫描状态/漏洞/木马/敏感信息等风险字段。支持Filter过滤。导出通过异步任务实现，返回JobId后前端轮询查询导出任务状态。单账号模式下自动排除NickName字段。
+     * @param req CreateHostImageListExportJobRequest
+     * @return CreateHostImageListExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHostImageListExportJobResponse CreateHostImageListExportJob(CreateHostImageListExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHostImageListExportJob", CreateHostImageListExportJobResponse.class);
+    }
+
+    /**
      *创建主机列漏洞表导出任务
      * @param req CreateHostVulExportJobRequest
      * @return CreateHostVulExportJobResponse
@@ -1149,6 +1160,50 @@ public class CsipClient extends AbstractClient{
     public CreateRiskDetailExportJobResponse CreateRiskDetailExportJob(CreateRiskDetailExportJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRiskDetailExportJob", CreateRiskDetailExportJobResponse.class);
+    }
+
+    /**
+     *创建一条 ACL 用户访问控制规则。可选择引用若干条系统规则，亦可自定义规则，两者至少提供其一
+     * @param req CreateSandboxACLRuleRequest
+     * @return CreateSandboxACLRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSandboxACLRuleResponse CreateSandboxACLRule(CreateSandboxACLRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSandboxACLRule", CreateSandboxACLRuleResponse.class);
+    }
+
+    /**
+     *创建一条 DLP 用户规则。可引用若干系统规则（SystemRuleIDList），亦可自定义规则（UserRuleContent，名称 + 正则），两者至少提供其一；UserRuleInfo 为新增可选的结构化入参，与 UserRuleContent 同时传入时以 UserRuleInfo 为准
+     * @param req CreateSandboxDLPRuleRequest
+     * @return CreateSandboxDLPRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSandboxDLPRuleResponse CreateSandboxDLPRule(CreateSandboxDLPRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSandboxDLPRule", CreateSandboxDLPRuleResponse.class);
+    }
+
+    /**
+     *创建命令沙箱文件访问规则
+     * @param req CreateSandboxFileRuleRequest
+     * @return CreateSandboxFileRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSandboxFileRuleResponse CreateSandboxFileRule(CreateSandboxFileRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSandboxFileRule", CreateSandboxFileRuleResponse.class);
+    }
+
+    /**
+     *创建一条 LLM 审计用户规则。必须引用至少一条系统规则，不支持用户自定义规则内容
+     * @param req CreateSandboxLLMAuditRuleRequest
+     * @return CreateSandboxLLMAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSandboxLLMAuditRuleResponse CreateSandboxLLMAuditRule(CreateSandboxLLMAuditRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSandboxLLMAuditRule", CreateSandboxLLMAuditRuleResponse.class);
     }
 
     /**
@@ -1715,6 +1770,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *批量删除 ACL 用户规则。删除后规则不再返回到列表查询，并不再对流量生效。任一 ID 不存在或属于其他租户时整体返回错误
+     * @param req DeleteSandboxACLRuleRequest
+     * @return DeleteSandboxACLRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSandboxACLRuleResponse DeleteSandboxACLRule(DeleteSandboxACLRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSandboxACLRule", DeleteSandboxACLRuleResponse.class);
+    }
+
+    /**
+     *批量删除 DLP 用户规则。任一 ID 不存在或属于其他租户时整体返回错误
+     * @param req DeleteSandboxDLPRuleRequest
+     * @return DeleteSandboxDLPRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSandboxDLPRuleResponse DeleteSandboxDLPRule(DeleteSandboxDLPRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSandboxDLPRule", DeleteSandboxDLPRuleResponse.class);
+    }
+
+    /**
+     *创建命令沙箱文件访问规则
+     * @param req DeleteSandboxFileRuleRequest
+     * @return DeleteSandboxFileRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSandboxFileRuleResponse DeleteSandboxFileRule(DeleteSandboxFileRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSandboxFileRule", DeleteSandboxFileRuleResponse.class);
+    }
+
+    /**
      *批量删除 LLM 审计用户规则。任一 ID 不存在或属于其他租户时整体返回错误
      * @param req DeleteSandboxLLMAuditRuleRequest
      * @return DeleteSandboxLLMAuditRuleResponse
@@ -2043,6 +2131,17 @@ public class CsipClient extends AbstractClient{
     public DescribeAccessKeyUserListResponse DescribeAccessKeyUserList(DescribeAccessKeyUserListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccessKeyUserList", DescribeAccessKeyUserListResponse.class);
+    }
+
+    /**
+     *访问密钥告警记录列表
+     * @param req DescribeAccessKeyWhiteListRequest
+     * @return DescribeAccessKeyWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyWhiteListResponse DescribeAccessKeyWhiteList(DescribeAccessKeyWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyWhiteList", DescribeAccessKeyWhiteListResponse.class);
     }
 
     /**
@@ -2585,6 +2684,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询当前账号的合并版计费信息，包括订单状态、付费模式以及配额等详细信息。
+     * @param req DescribeCSCPayInfoRequest
+     * @return DescribeCSCPayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSCPayInfoResponse DescribeCSCPayInfo(DescribeCSCPayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSCPayInfo", DescribeCSCPayInfoResponse.class);
+    }
+
+    /**
      *查询ModifyCSIPLicenseBinds返回的异步绑定任务进度。
      * @param req DescribeCSIPLicenseBindScheduleRequest
      * @return DescribeCSIPLicenseBindScheduleResponse
@@ -2626,6 +2736,17 @@ public class CsipClient extends AbstractClient{
     public DescribeCSIPRiskStatisticsResponse DescribeCSIPRiskStatistics(DescribeCSIPRiskStatisticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCSIPRiskStatistics", DescribeCSIPRiskStatisticsResponse.class);
+    }
+
+    /**
+     *获取已购CSPM订单信息
+     * @param req DescribeCSPMPayInfoRequest
+     * @return DescribeCSPMPayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSPMPayInfoResponse DescribeCSPMPayInfo(DescribeCSPMPayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSPMPayInfo", DescribeCSPMPayInfoResponse.class);
     }
 
     /**
@@ -5687,6 +5808,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *分页查询 DLP 数据泄露告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+     * @param req DescribeSandboxDLPAlertListRequest
+     * @return DescribeSandboxDLPAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxDLPAlertListResponse DescribeSandboxDLPAlertList(DescribeSandboxDLPAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxDLPAlertList", DescribeSandboxDLPAlertListResponse.class);
+    }
+
+    /**
+     *查询当前租户的 DLP 用户规则列表。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+     * @param req DescribeSandboxDLPRuleListRequest
+     * @return DescribeSandboxDLPRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxDLPRuleListResponse DescribeSandboxDLPRuleList(DescribeSandboxDLPRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxDLPRuleList", DescribeSandboxDLPRuleListResponse.class);
+    }
+
+    /**
      *查询流量沙箱数据泄露防护（DLP）系统规则列表，系统规则由 CSIP 平台内置，可被用户规则引用
      * @param req DescribeSandboxDLPSystemRuleListRequest
      * @return DescribeSandboxDLPSystemRuleListResponse
@@ -5706,6 +5849,39 @@ public class CsipClient extends AbstractClient{
     public DescribeSandboxFileRuleListResponse DescribeSandboxFileRuleList(DescribeSandboxFileRuleListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSandboxFileRuleList", DescribeSandboxFileRuleListResponse.class);
+    }
+
+    /**
+     *分页查询 LLM 审计告警日志列表。支持按 Filter.Name=ID 精确过滤单条告警用于详情页场景
+     * @param req DescribeSandboxLLMAuditAlertListRequest
+     * @return DescribeSandboxLLMAuditAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxLLMAuditAlertListResponse DescribeSandboxLLMAuditAlertList(DescribeSandboxLLMAuditAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxLLMAuditAlertList", DescribeSandboxLLMAuditAlertListResponse.class);
+    }
+
+    /**
+     *查询当前租户的 LLM 审计用户规则列表。LLM 审计规则不支持用户自定义内容，只能引用系统规则组合。传入 Filter.Name=RuleID 可精确查询单条规则（用于详情页面场景）
+     * @param req DescribeSandboxLLMAuditRuleListRequest
+     * @return DescribeSandboxLLMAuditRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxLLMAuditRuleListResponse DescribeSandboxLLMAuditRuleList(DescribeSandboxLLMAuditRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxLLMAuditRuleList", DescribeSandboxLLMAuditRuleListResponse.class);
+    }
+
+    /**
+     *查询 LLM 审计系统规则列表，系统规则由 CSIP 平台内置（来源于 LLM 审计系统规则库），按 LLM 推理防护 / ToolCall 防护拆分为两个扁平规则数组返回，可被用户规则引用
+     * @param req DescribeSandboxLLMAuditSystemRuleListRequest
+     * @return DescribeSandboxLLMAuditSystemRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxLLMAuditSystemRuleListResponse DescribeSandboxLLMAuditSystemRuleList(DescribeSandboxLLMAuditSystemRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxLLMAuditSystemRuleList", DescribeSandboxLLMAuditSystemRuleListResponse.class);
     }
 
     /**
@@ -5874,6 +6050,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取用户访问密钥资产列表（源IP视角）
+     * @param req DescribeSourceIPDetailRequest
+     * @return DescribeSourceIPDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceIPDetailResponse DescribeSourceIPDetail(DescribeSourceIPDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceIPDetail", DescribeSourceIPDetailResponse.class);
+    }
+
+    /**
      *查询集团的子账号列表
      * @param req DescribeSubUserInfoRequest
      * @return DescribeSubUserInfoResponse
@@ -5995,6 +6182,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取账号AK信息
+     * @param req DescribeUserAKInfoListRequest
+     * @return DescribeUserAKInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserAKInfoListResponse DescribeUserAKInfoList(DescribeUserAKInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserAKInfoList", DescribeUserAKInfoListResponse.class);
+    }
+
+    /**
      *获取账号CSPM信息
      * @param req DescribeUserCSPMInfoListRequest
      * @return DescribeUserCSPMInfoListResponse
@@ -6080,6 +6278,17 @@ public class CsipClient extends AbstractClient{
     public DescribeVdbAndPocInfoResponse DescribeVdbAndPocInfo(DescribeVdbAndPocInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVdbAndPocInfo", DescribeVdbAndPocInfoResponse.class);
+    }
+
+    /**
+     *检查当前用户是否有资格领取指定活动的代金券。
+     * @param req DescribeVoucherEligibilityRequest
+     * @return DescribeVoucherEligibilityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoucherEligibilityResponse DescribeVoucherEligibility(DescribeVoucherEligibilityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoucherEligibility", DescribeVoucherEligibilityResponse.class);
     }
 
     /**
@@ -6401,6 +6610,28 @@ capi 层处理流程：
     }
 
     /**
+     *在指定的机器实例上安装密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。安装后，目标机器上的AI Agent即可通过密钥沙箱代理访问凭据，无需接触明文密钥。已安装的实例重复调用不会报错（幂等），直接视为成功。
+     * @param req InstallKeySandboxSkillRequest
+     * @return InstallKeySandboxSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallKeySandboxSkillResponse InstallKeySandboxSkill(InstallKeySandboxSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallKeySandboxSkill", InstallKeySandboxSkillResponse.class);
+    }
+
+    /**
+     *触发将流量沙箱插件安装到指定范围内的 AI Agent 资产。通过 BelongAssetType 区分主机/容器维度，通过 EffectScope 指定安装目标（INCLUDE=仅安装到指定资产，EXCLUDE=全部资产减去指定资产）。接口仅触发下发动作，不等待完成
+     * @param req InstallSandboxPluginRequest
+     * @return InstallSandboxPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallSandboxPluginResponse InstallSandboxPlugin(InstallSandboxPluginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallSandboxPlugin", InstallSandboxPluginResponse.class);
+    }
+
+    /**
      *修改AI-Link智链引擎配置
      * @param req ModifyAILinkSettingRequest
      * @return ModifyAILinkSettingResponse
@@ -6653,6 +6884,17 @@ capi 层处理流程：
     public ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBinds(ModifyCSIPRaspLicenseUnBindsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCSIPRaspLicenseUnBinds", ModifyCSIPRaspLicenseUnBindsResponse.class);
+    }
+
+    /**
+     *修改集群防护状态
+     * @param req ModifyClusterDefendStatusRequest
+     * @return ModifyClusterDefendStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterDefendStatusResponse ModifyClusterDefendStatus(ModifyClusterDefendStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterDefendStatus", ModifyClusterDefendStatusResponse.class);
     }
 
     /**
@@ -7501,6 +7743,94 @@ capi 层处理流程：
     }
 
     /**
+     *修改已有的 ACL 用户规则。未传字段保持原值，支持部分字段更新
+     * @param req ModifySandboxACLRuleRequest
+     * @return ModifySandboxACLRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxACLRuleResponse ModifySandboxACLRule(ModifySandboxACLRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxACLRule", ModifySandboxACLRuleResponse.class);
+    }
+
+    /**
+     *批量切换 ACL 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+     * @param req ModifySandboxACLRuleStatusRequest
+     * @return ModifySandboxACLRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxACLRuleStatusResponse ModifySandboxACLRuleStatus(ModifySandboxACLRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxACLRuleStatus", ModifySandboxACLRuleStatusResponse.class);
+    }
+
+    /**
+     *批量更新流量沙箱告警（覆盖 ACL / DLP / LLM 审计三类）。通过 AlertType + BelongAssetType 定位告警来源。Status 支持 HANDLED / IGNORE 修改状态，以及 DELETE 删除。任一告警 ID 不存在或属于其他租户时整体返回错误。注：加白（PASS）不经本接口，由 Create/Modify***Rule 通过 AlertID 回写触发
+     * @param req ModifySandboxAlertStatusRequest
+     * @return ModifySandboxAlertStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxAlertStatusResponse ModifySandboxAlertStatus(ModifySandboxAlertStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxAlertStatus", ModifySandboxAlertStatusResponse.class);
+    }
+
+    /**
+     *修改已存在的 DLP 用户规则。未传字段保持原值，支持部分字段更新；不支持修改 BelongAssetType
+     * @param req ModifySandboxDLPRuleRequest
+     * @return ModifySandboxDLPRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxDLPRuleResponse ModifySandboxDLPRule(ModifySandboxDLPRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxDLPRule", ModifySandboxDLPRuleResponse.class);
+    }
+
+    /**
+     *批量切换 DLP 用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
+     * @param req ModifySandboxDLPRuleStatusRequest
+     * @return ModifySandboxDLPRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxDLPRuleStatusResponse ModifySandboxDLPRuleStatus(ModifySandboxDLPRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxDLPRuleStatus", ModifySandboxDLPRuleStatusResponse.class);
+    }
+
+    /**
+     *修改命令沙箱文件访问规则
+     * @param req ModifySandboxFileRuleRequest
+     * @return ModifySandboxFileRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxFileRuleResponse ModifySandboxFileRule(ModifySandboxFileRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxFileRule", ModifySandboxFileRuleResponse.class);
+    }
+
+    /**
+     *批量启用或禁用命令沙箱文件访问规则
+     * @param req ModifySandboxFileRuleStatusRequest
+     * @return ModifySandboxFileRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxFileRuleStatusResponse ModifySandboxFileRuleStatus(ModifySandboxFileRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxFileRuleStatus", ModifySandboxFileRuleStatusResponse.class);
+    }
+
+    /**
+     *修改已有的 LLM 审计用户规则。未传字段保持原值，支持部分字段更新
+     * @param req ModifySandboxLLMAuditRuleRequest
+     * @return ModifySandboxLLMAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySandboxLLMAuditRuleResponse ModifySandboxLLMAuditRule(ModifySandboxLLMAuditRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySandboxLLMAuditRule", ModifySandboxLLMAuditRuleResponse.class);
+    }
+
+    /**
      *批量切换 LLM 审计用户规则的启禁用状态。任一规则不存在、属于其他租户或已删除时整体返回错误
      * @param req ModifySandboxLLMAuditRuleStatusRequest
      * @return ModifySandboxLLMAuditRuleStatusResponse
@@ -7520,6 +7850,17 @@ capi 层处理流程：
     public ModifySecurityScoreRuleResponse ModifySecurityScoreRule(ModifySecurityScoreRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySecurityScoreRule", ModifySecurityScoreRuleResponse.class);
+    }
+
+    /**
+     *编辑ak监测账号
+     * @param req ModifyShareUserAKRequest
+     * @return ModifyShareUserAKResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyShareUserAKResponse ModifyShareUserAK(ModifyShareUserAKRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyShareUserAK", ModifyShareUserAKResponse.class);
     }
 
     /**
@@ -7938,6 +8279,17 @@ capi 层处理流程：
     public UninstallClusterAgentResponse UninstallClusterAgent(UninstallClusterAgentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UninstallClusterAgent", UninstallClusterAgentResponse.class);
+    }
+
+    /**
+     *从指定的机器实例上卸载密钥沙箱SKILL。支持批量操作，一次可传入多个实例ID。卸载后，目标机器上的AI Agent将无法再通过密钥沙箱代理访问凭据。未安装的实例重复调用不会报错（幂等），直接视为成功。
+     * @param req UninstallKeySandboxSkillRequest
+     * @return UninstallKeySandboxSkillResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallKeySandboxSkillResponse UninstallKeySandboxSkill(UninstallKeySandboxSkillRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UninstallKeySandboxSkill", UninstallKeySandboxSkillResponse.class);
     }
 
     /**

@@ -31,7 +31,8 @@ public class UpsertSessionResponse extends AbstractModel {
     private String Data;
 
     /**
-    * SessionID
+    * 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
     */
     @SerializedName("SessionID")
     @Expose
@@ -61,16 +62,20 @@ public class UpsertSessionResponse extends AbstractModel {
     }
 
     /**
-     * Get SessionID 
-     * @return SessionID SessionID
+     * Get 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID 
+     * @return SessionID 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
      */
     public Long getSessionID() {
         return this.SessionID;
     }
 
     /**
-     * Set SessionID
-     * @param SessionID SessionID
+     * Set 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
+     * @param SessionID 会话ID
+说明：新增时返回系统生成的SessionID，更新时返回请求中传入的SessionID
      */
     public void setSessionID(Long SessionID) {
         this.SessionID = SessionID;

@@ -31,34 +31,28 @@ public class DescribeTopicsRequest extends AbstractModel {
     private FilterCls [] Filters;
 
     /**
-    * 分页的偏移量，默认值为0。
+    * <p>分页的偏移量，默认值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页单页限制数目，默认值为20，最大值100。
+    * <p>分页单页限制数目，默认值为20，最大值100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 控制Filters相关字段是否为精确匹配。
-<ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li>
-<li>1: topicName   精确匹配</li>
-<li>2: logsetName精确匹配</li>
-<li>3: topicName 和logsetName 都精确匹配</li></ul>
+    * <p>控制Filters相关字段是否为精确匹配。</p><ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li><li>1: topicName   精确匹配</li><li>2: logsetName精确匹配</li><li>3: topicName 和logsetName 都精确匹配</li></ul>
     */
     @SerializedName("PreciseSearch")
     @Expose
     private Long PreciseSearch;
 
     /**
-    * 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+    * <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
     */
     @SerializedName("BizType")
     @Expose
@@ -81,88 +75,64 @@ public class DescribeTopicsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页的偏移量，默认值为0。 
-     * @return Offset 分页的偏移量，默认值为0。
+     * Get <p>分页的偏移量，默认值为0。</p> 
+     * @return Offset <p>分页的偏移量，默认值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页的偏移量，默认值为0。
-     * @param Offset 分页的偏移量，默认值为0。
+     * Set <p>分页的偏移量，默认值为0。</p>
+     * @param Offset <p>分页的偏移量，默认值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页单页限制数目，默认值为20，最大值100。 
-     * @return Limit 分页单页限制数目，默认值为20，最大值100。
+     * Get <p>分页单页限制数目，默认值为20，最大值100。</p> 
+     * @return Limit <p>分页单页限制数目，默认值为20，最大值100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页单页限制数目，默认值为20，最大值100。
-     * @param Limit 分页单页限制数目，默认值为20，最大值100。
+     * Set <p>分页单页限制数目，默认值为20，最大值100。</p>
+     * @param Limit <p>分页单页限制数目，默认值为20，最大值100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 控制Filters相关字段是否为精确匹配。
-<ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li>
-<li>1: topicName   精确匹配</li>
-<li>2: logsetName精确匹配</li>
-<li>3: topicName 和logsetName 都精确匹配</li></ul> 
-     * @return PreciseSearch 控制Filters相关字段是否为精确匹配。
-<ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li>
-<li>1: topicName   精确匹配</li>
-<li>2: logsetName精确匹配</li>
-<li>3: topicName 和logsetName 都精确匹配</li></ul>
+     * Get <p>控制Filters相关字段是否为精确匹配。</p><ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li><li>1: topicName   精确匹配</li><li>2: logsetName精确匹配</li><li>3: topicName 和logsetName 都精确匹配</li></ul> 
+     * @return PreciseSearch <p>控制Filters相关字段是否为精确匹配。</p><ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li><li>1: topicName   精确匹配</li><li>2: logsetName精确匹配</li><li>3: topicName 和logsetName 都精确匹配</li></ul>
      */
     public Long getPreciseSearch() {
         return this.PreciseSearch;
     }
 
     /**
-     * Set 控制Filters相关字段是否为精确匹配。
-<ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li>
-<li>1: topicName   精确匹配</li>
-<li>2: logsetName精确匹配</li>
-<li>3: topicName 和logsetName 都精确匹配</li></ul>
-     * @param PreciseSearch 控制Filters相关字段是否为精确匹配。
-<ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li>
-<li>1: topicName   精确匹配</li>
-<li>2: logsetName精确匹配</li>
-<li>3: topicName 和logsetName 都精确匹配</li></ul>
+     * Set <p>控制Filters相关字段是否为精确匹配。</p><ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li><li>1: topicName   精确匹配</li><li>2: logsetName精确匹配</li><li>3: topicName 和logsetName 都精确匹配</li></ul>
+     * @param PreciseSearch <p>控制Filters相关字段是否为精确匹配。</p><ul><li>0: 默认值，topicName 和 logsetName 模糊匹配</li><li>1: topicName   精确匹配</li><li>2: logsetName精确匹配</li><li>3: topicName 和logsetName 都精确匹配</li></ul>
      */
     public void setPreciseSearch(Long PreciseSearch) {
         this.PreciseSearch = PreciseSearch;
     }
 
     /**
-     * Get 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul> 
-     * @return BizType 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+     * Get <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul> 
+     * @return BizType <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
      */
     public Long getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
-     * @param BizType 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+     * Set <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
+     * @param BizType <p>主题类型</p><ul><li>0:日志主题，默认值</li><li>1:指标主题</li></ul>
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;

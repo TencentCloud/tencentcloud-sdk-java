@@ -171,6 +171,20 @@ public class CreateCloudInstanceRequest extends AbstractModel {
     private EnableSparkAppMonitorInfo EnableSparkAppMonitorInfo;
 
     /**
+    * <p>已有EMR资源节点组Id列表</p>
+    */
+    @SerializedName("ComputeResourceGroupIds")
+    @Expose
+    private String [] ComputeResourceGroupIds;
+
+    /**
+    * <p>是否开启实例保护</p>
+    */
+    @SerializedName("TerminateProtection")
+    @Expose
+    private Boolean TerminateProtection;
+
+    /**
      * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
      * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
@@ -506,6 +520,38 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.EnableSparkAppMonitorInfo = EnableSparkAppMonitorInfo;
     }
 
+    /**
+     * Get <p>已有EMR资源节点组Id列表</p> 
+     * @return ComputeResourceGroupIds <p>已有EMR资源节点组Id列表</p>
+     */
+    public String [] getComputeResourceGroupIds() {
+        return this.ComputeResourceGroupIds;
+    }
+
+    /**
+     * Set <p>已有EMR资源节点组Id列表</p>
+     * @param ComputeResourceGroupIds <p>已有EMR资源节点组Id列表</p>
+     */
+    public void setComputeResourceGroupIds(String [] ComputeResourceGroupIds) {
+        this.ComputeResourceGroupIds = ComputeResourceGroupIds;
+    }
+
+    /**
+     * Get <p>是否开启实例保护</p> 
+     * @return TerminateProtection <p>是否开启实例保护</p>
+     */
+    public Boolean getTerminateProtection() {
+        return this.TerminateProtection;
+    }
+
+    /**
+     * Set <p>是否开启实例保护</p>
+     * @param TerminateProtection <p>是否开启实例保护</p>
+     */
+    public void setTerminateProtection(Boolean TerminateProtection) {
+        this.TerminateProtection = TerminateProtection;
+    }
+
     public CreateCloudInstanceRequest() {
     }
 
@@ -589,6 +635,15 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         if (source.EnableSparkAppMonitorInfo != null) {
             this.EnableSparkAppMonitorInfo = new EnableSparkAppMonitorInfo(source.EnableSparkAppMonitorInfo);
         }
+        if (source.ComputeResourceGroupIds != null) {
+            this.ComputeResourceGroupIds = new String[source.ComputeResourceGroupIds.length];
+            for (int i = 0; i < source.ComputeResourceGroupIds.length; i++) {
+                this.ComputeResourceGroupIds[i] = new String(source.ComputeResourceGroupIds[i]);
+            }
+        }
+        if (source.TerminateProtection != null) {
+            this.TerminateProtection = new Boolean(source.TerminateProtection);
+        }
     }
 
 
@@ -617,6 +672,8 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
         this.setParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
         this.setParamObj(map, prefix + "EnableSparkAppMonitorInfo.", this.EnableSparkAppMonitorInfo);
+        this.setParamArraySimple(map, prefix + "ComputeResourceGroupIds.", this.ComputeResourceGroupIds);
+        this.setParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
 
     }
 }

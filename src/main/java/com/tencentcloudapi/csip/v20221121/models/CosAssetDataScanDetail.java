@@ -59,6 +59,27 @@ public class CosAssetDataScanDetail extends AbstractModel {
     private CosIdentifyCategoryDetail [] CategoryDetails;
 
     /**
+    * <p>无</p>
+    */
+    @SerializedName("RuleDetails")
+    @Expose
+    private CosIdentifyRuleDetail [] RuleDetails;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("LevelDetails")
+    @Expose
+    private CosIdentifyLevelDetail [] LevelDetails;
+
+    /**
+    * <p>是否已发起全量扫描</p>
+    */
+    @SerializedName("IsFullScanned")
+    @Expose
+    private Boolean IsFullScanned;
+
+    /**
      * Get <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p> 
      * @return Status <p>识别任务状态 0:未识别 1:识别中 2:识别终止 3:识别成功 4:识别失败</p>
      */
@@ -138,6 +159,54 @@ public class CosAssetDataScanDetail extends AbstractModel {
         this.CategoryDetails = CategoryDetails;
     }
 
+    /**
+     * Get <p>无</p> 
+     * @return RuleDetails <p>无</p>
+     */
+    public CosIdentifyRuleDetail [] getRuleDetails() {
+        return this.RuleDetails;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param RuleDetails <p>无</p>
+     */
+    public void setRuleDetails(CosIdentifyRuleDetail [] RuleDetails) {
+        this.RuleDetails = RuleDetails;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return LevelDetails <p>无</p>
+     */
+    public CosIdentifyLevelDetail [] getLevelDetails() {
+        return this.LevelDetails;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param LevelDetails <p>无</p>
+     */
+    public void setLevelDetails(CosIdentifyLevelDetail [] LevelDetails) {
+        this.LevelDetails = LevelDetails;
+    }
+
+    /**
+     * Get <p>是否已发起全量扫描</p> 
+     * @return IsFullScanned <p>是否已发起全量扫描</p>
+     */
+    public Boolean getIsFullScanned() {
+        return this.IsFullScanned;
+    }
+
+    /**
+     * Set <p>是否已发起全量扫描</p>
+     * @param IsFullScanned <p>是否已发起全量扫描</p>
+     */
+    public void setIsFullScanned(Boolean IsFullScanned) {
+        this.IsFullScanned = IsFullScanned;
+    }
+
     public CosAssetDataScanDetail() {
     }
 
@@ -164,6 +233,21 @@ public class CosAssetDataScanDetail extends AbstractModel {
                 this.CategoryDetails[i] = new CosIdentifyCategoryDetail(source.CategoryDetails[i]);
             }
         }
+        if (source.RuleDetails != null) {
+            this.RuleDetails = new CosIdentifyRuleDetail[source.RuleDetails.length];
+            for (int i = 0; i < source.RuleDetails.length; i++) {
+                this.RuleDetails[i] = new CosIdentifyRuleDetail(source.RuleDetails[i]);
+            }
+        }
+        if (source.LevelDetails != null) {
+            this.LevelDetails = new CosIdentifyLevelDetail[source.LevelDetails.length];
+            for (int i = 0; i < source.LevelDetails.length; i++) {
+                this.LevelDetails[i] = new CosIdentifyLevelDetail(source.LevelDetails[i]);
+            }
+        }
+        if (source.IsFullScanned != null) {
+            this.IsFullScanned = new Boolean(source.IsFullScanned);
+        }
     }
 
 
@@ -176,6 +260,9 @@ public class CosAssetDataScanDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestScanTime", this.LatestScanTime);
         this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
         this.setParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+        this.setParamArrayObj(map, prefix + "RuleDetails.", this.RuleDetails);
+        this.setParamArrayObj(map, prefix + "LevelDetails.", this.LevelDetails);
+        this.setParamSimple(map, prefix + "IsFullScanned", this.IsFullScanned);
 
     }
 }

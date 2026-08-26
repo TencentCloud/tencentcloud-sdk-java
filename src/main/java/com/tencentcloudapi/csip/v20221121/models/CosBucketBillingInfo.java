@@ -122,6 +122,20 @@ public class CosBucketBillingInfo extends AbstractModel {
     private Long [] PostProductList;
 
     /**
+    * <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+    */
+    @SerializedName("DefaultSampleRate")
+    @Expose
+    private Float DefaultSampleRate;
+
+    /**
+    * <p>是否白名单，仅用于控制前端范围和精度</p>
+    */
+    @SerializedName("BucketSamplingRateWhitelist")
+    @Expose
+    private Boolean BucketSamplingRateWhitelist;
+
+    /**
      * Get <p>appid</p> 
      * @return AppId <p>appid</p>
      */
@@ -345,6 +359,38 @@ public class CosBucketBillingInfo extends AbstractModel {
         this.PostProductList = PostProductList;
     }
 
+    /**
+     * Get <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p> 
+     * @return DefaultSampleRate <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+     */
+    public Float getDefaultSampleRate() {
+        return this.DefaultSampleRate;
+    }
+
+    /**
+     * Set <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+     * @param DefaultSampleRate <p>该 AppId 新增桶默认采样率，单位为 0～1 比率</p><p>取值范围：[0.001, 1]</p>
+     */
+    public void setDefaultSampleRate(Float DefaultSampleRate) {
+        this.DefaultSampleRate = DefaultSampleRate;
+    }
+
+    /**
+     * Get <p>是否白名单，仅用于控制前端范围和精度</p> 
+     * @return BucketSamplingRateWhitelist <p>是否白名单，仅用于控制前端范围和精度</p>
+     */
+    public Boolean getBucketSamplingRateWhitelist() {
+        return this.BucketSamplingRateWhitelist;
+    }
+
+    /**
+     * Set <p>是否白名单，仅用于控制前端范围和精度</p>
+     * @param BucketSamplingRateWhitelist <p>是否白名单，仅用于控制前端范围和精度</p>
+     */
+    public void setBucketSamplingRateWhitelist(Boolean BucketSamplingRateWhitelist) {
+        this.BucketSamplingRateWhitelist = BucketSamplingRateWhitelist;
+    }
+
     public CosBucketBillingInfo() {
     }
 
@@ -398,6 +444,12 @@ public class CosBucketBillingInfo extends AbstractModel {
                 this.PostProductList[i] = new Long(source.PostProductList[i]);
             }
         }
+        if (source.DefaultSampleRate != null) {
+            this.DefaultSampleRate = new Float(source.DefaultSampleRate);
+        }
+        if (source.BucketSamplingRateWhitelist != null) {
+            this.BucketSamplingRateWhitelist = new Boolean(source.BucketSamplingRateWhitelist);
+        }
     }
 
 
@@ -419,6 +471,8 @@ public class CosBucketBillingInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsHaveNewPostOrder", this.IsHaveNewPostOrder);
         this.setParamSimple(map, prefix + "IsHaveOldPostOrder", this.IsHaveOldPostOrder);
         this.setParamArraySimple(map, prefix + "PostProductList.", this.PostProductList);
+        this.setParamSimple(map, prefix + "DefaultSampleRate", this.DefaultSampleRate);
+        this.setParamSimple(map, prefix + "BucketSamplingRateWhitelist", this.BucketSamplingRateWhitelist);
 
     }
 }

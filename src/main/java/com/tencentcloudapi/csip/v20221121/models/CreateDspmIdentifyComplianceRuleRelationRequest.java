@@ -52,6 +52,13 @@ public class CreateDspmIdentifyComplianceRuleRelationRequest extends AbstractMod
     private String [] MemberId;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>识别模板ID</p> 
      * @return ComplianceId <p>识别模板ID</p>
      */
@@ -115,6 +122,22 @@ public class CreateDspmIdentifyComplianceRuleRelationRequest extends AbstractMod
         this.MemberId = MemberId;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public CreateDspmIdentifyComplianceRuleRelationRequest() {
     }
 
@@ -141,6 +164,9 @@ public class CreateDspmIdentifyComplianceRuleRelationRequest extends AbstractMod
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class CreateDspmIdentifyComplianceRuleRelationRequest extends AbstractMod
         this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

@@ -45,6 +45,13 @@ public class DescribeDspmDictionaryListRequest extends AbstractModel {
     private WhereFilter [] Filters;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p> 
      * @return DictType <p>字典类型（RootCategory：一级分类，IdentifyRule:敏感识别数据项）</p>
      */
@@ -92,6 +99,22 @@ public class DescribeDspmDictionaryListRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public DescribeDspmDictionaryListRequest() {
     }
 
@@ -115,6 +138,9 @@ public class DescribeDspmDictionaryListRequest extends AbstractModel {
                 this.Filters[i] = new WhereFilter(source.Filters[i]);
             }
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -125,6 +151,7 @@ public class DescribeDspmDictionaryListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DictType", this.DictType);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

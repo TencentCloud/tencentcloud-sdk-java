@@ -25,13 +25,15 @@ public class AddCustomRuleRequest extends AbstractModel {
 
     /**
     * 规则名称
+入参限制：1-128个字符，不允许特殊字符
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 优先级
+    * 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
     */
     @SerializedName("SortId")
     @Expose
@@ -52,7 +54,10 @@ public class AddCustomRuleRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+    * 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
     */
     @SerializedName("ActionType")
     @Expose
@@ -66,7 +71,9 @@ public class AddCustomRuleRequest extends AbstractModel {
     private String Redirect;
 
     /**
-    * 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+    * 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -137,21 +144,27 @@ public class AddCustomRuleRequest extends AbstractModel {
 
     /**
     * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
     */
     @SerializedName("LogicalOp")
     @Expose
     private String LogicalOp;
 
     /**
-    * 按照动作灰度的比例，默认是100
+    * 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
     */
     @SerializedName("ActionRatio")
     @Expose
     private Long ActionRatio;
 
     /**
-     * Get 规则名称 
+     * Get 规则名称
+入参限制：1-128个字符，不允许特殊字符 
      * @return Name 规则名称
+入参限制：1-128个字符，不允许特殊字符
      */
     public String getName() {
         return this.Name;
@@ -159,23 +172,29 @@ public class AddCustomRuleRequest extends AbstractModel {
 
     /**
      * Set 规则名称
+入参限制：1-128个字符，不允许特殊字符
      * @param Name 规则名称
+入参限制：1-128个字符，不允许特殊字符
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 优先级 
-     * @return SortId 优先级
+     * Get 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0 
+     * @return SortId 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
      */
     public String getSortId() {
         return this.SortId;
     }
 
     /**
-     * Set 优先级
-     * @param SortId 优先级
+     * Set 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
+     * @param SortId 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
+默认值：0
      */
     public void setSortId(String SortId) {
         this.SortId = SortId;
@@ -214,16 +233,28 @@ public class AddCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
-     * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * Get 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空 
+     * @return ActionType 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
-     * @param ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * Set 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
+     * @param ActionType 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当ActionType为4（重定向）时，Redirect参数不能为空
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -246,16 +277,24 @@ public class AddCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期 
-     * @return ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+     * Get 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0） 
+     * @return ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
-     * @param ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+     * Set 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
+     * @param ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59
+取值说明：0表示永不过期
+默认值：0（解析失败时也默认为0）
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -410,8 +449,12 @@ public class AddCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
+     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or 
      * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      */
     public String getLogicalOp() {
         return this.LogicalOp;
@@ -419,23 +462,35 @@ public class AddCustomRuleRequest extends AbstractModel {
 
     /**
      * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      */
     public void setLogicalOp(String LogicalOp) {
         this.LogicalOp = LogicalOp;
     }
 
     /**
-     * Get 按照动作灰度的比例，默认是100 
-     * @return ActionRatio 按照动作灰度的比例，默认是100
+     * Get 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效） 
+     * @return ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     public Long getActionRatio() {
         return this.ActionRatio;
     }
 
     /**
-     * Set 按照动作灰度的比例，默认是100
-     * @param ActionRatio 按照动作灰度的比例，默认是100
+     * Set 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
+     * @param ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     public void setActionRatio(Long ActionRatio) {
         this.ActionRatio = ActionRatio;

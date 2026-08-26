@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ResourceGroup extends AbstractModel {
 
     /**
-    * 资源组id
+    * <p>资源组id</p>
     */
     @SerializedName("ResourceGroupId")
     @Expose
     private String ResourceGroupId;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
     */
     @SerializedName("ResourceGroupName")
     @Expose
     private String ResourceGroupName;
 
     /**
-    * 可用节点个数(运行中的节点)
+    * <p>可用节点个数(运行中的节点)</p>
     */
     @SerializedName("FreeInstance")
     @Expose
     private Long FreeInstance;
 
     /**
-    * 总节点个数(所有节点)
+    * <p>总节点个数(所有节点)</p>
     */
     @SerializedName("TotalInstance")
     @Expose
     private Long TotalInstance;
 
     /**
-    * 资源组已用的资源
+    * <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedResource")
@@ -60,7 +60,7 @@ public class ResourceGroup extends AbstractModel {
     private GroupResource UsedResource;
 
     /**
-    * 资源组总资源
+    * <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalResource")
@@ -68,7 +68,7 @@ public class ResourceGroup extends AbstractModel {
     private GroupResource TotalResource;
 
     /**
-    * 节点信息
+    * <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceSet")
@@ -76,7 +76,7 @@ public class ResourceGroup extends AbstractModel {
     private Instance [] InstanceSet;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
@@ -84,73 +84,73 @@ public class ResourceGroup extends AbstractModel {
     private Tag [] TagSet;
 
     /**
-     * Get 资源组id 
-     * @return ResourceGroupId 资源组id
+     * Get <p>资源组id</p> 
+     * @return ResourceGroupId <p>资源组id</p>
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 资源组id
-     * @param ResourceGroupId 资源组id
+     * Set <p>资源组id</p>
+     * @param ResourceGroupId <p>资源组id</p>
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get 资源组名称 
-     * @return ResourceGroupName 资源组名称
+     * Get <p>资源组名称</p> 
+     * @return ResourceGroupName <p>资源组名称</p>
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
     }
 
     /**
-     * Set 资源组名称
-     * @param ResourceGroupName 资源组名称
+     * Set <p>资源组名称</p>
+     * @param ResourceGroupName <p>资源组名称</p>
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;
     }
 
     /**
-     * Get 可用节点个数(运行中的节点) 
-     * @return FreeInstance 可用节点个数(运行中的节点)
+     * Get <p>可用节点个数(运行中的节点)</p> 
+     * @return FreeInstance <p>可用节点个数(运行中的节点)</p>
      */
     public Long getFreeInstance() {
         return this.FreeInstance;
     }
 
     /**
-     * Set 可用节点个数(运行中的节点)
-     * @param FreeInstance 可用节点个数(运行中的节点)
+     * Set <p>可用节点个数(运行中的节点)</p>
+     * @param FreeInstance <p>可用节点个数(运行中的节点)</p>
      */
     public void setFreeInstance(Long FreeInstance) {
         this.FreeInstance = FreeInstance;
     }
 
     /**
-     * Get 总节点个数(所有节点) 
-     * @return TotalInstance 总节点个数(所有节点)
+     * Get <p>总节点个数(所有节点)</p> 
+     * @return TotalInstance <p>总节点个数(所有节点)</p>
      */
     public Long getTotalInstance() {
         return this.TotalInstance;
     }
 
     /**
-     * Set 总节点个数(所有节点)
-     * @param TotalInstance 总节点个数(所有节点)
+     * Set <p>总节点个数(所有节点)</p>
+     * @param TotalInstance <p>总节点个数(所有节点)</p>
      */
     public void setTotalInstance(Long TotalInstance) {
         this.TotalInstance = TotalInstance;
     }
 
     /**
-     * Get 资源组已用的资源
+     * Get <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UsedResource 资源组已用的资源
+     * @return UsedResource <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupResource getUsedResource() {
@@ -158,9 +158,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Set 资源组已用的资源
+     * Set <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UsedResource 资源组已用的资源
+     * @param UsedResource <p>资源组已用的资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedResource(GroupResource UsedResource) {
@@ -168,9 +168,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Get 资源组总资源
+     * Get <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalResource 资源组总资源
+     * @return TotalResource <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupResource getTotalResource() {
@@ -178,9 +178,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Set 资源组总资源
+     * Set <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalResource 资源组总资源
+     * @param TotalResource <p>资源组总资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalResource(GroupResource TotalResource) {
@@ -188,9 +188,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Get 节点信息
+     * Get <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceSet 节点信息
+     * @return InstanceSet <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instance [] getInstanceSet() {
@@ -198,9 +198,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Set 节点信息
+     * Set <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceSet 节点信息
+     * @param InstanceSet <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceSet(Instance [] InstanceSet) {
@@ -208,9 +208,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
+     * Get <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagSet 标签列表
+     * @return TagSet <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
@@ -218,9 +218,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Set 标签列表
+     * Set <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagSet 标签列表
+     * @param TagSet <p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {

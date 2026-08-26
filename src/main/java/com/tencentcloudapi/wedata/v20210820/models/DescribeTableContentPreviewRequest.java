@@ -122,6 +122,13 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
     private String EngineTypeDetail;
 
     /**
+    * <p>数据源ID</p>
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private Long DatasourceId;
+
+    /**
      * Get <p>表ID</p> 
      * @return TableId <p>表ID</p>
      */
@@ -345,6 +352,22 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
         this.EngineTypeDetail = EngineTypeDetail;
     }
 
+    /**
+     * Get <p>数据源ID</p> 
+     * @return DatasourceId <p>数据源ID</p>
+     */
+    public Long getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set <p>数据源ID</p>
+     * @param DatasourceId <p>数据源ID</p>
+     */
+    public void setDatasourceId(Long DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
     public DescribeTableContentPreviewRequest() {
     }
 
@@ -395,6 +418,9 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
         if (source.EngineTypeDetail != null) {
             this.EngineTypeDetail = new String(source.EngineTypeDetail);
         }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new Long(source.DatasourceId);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class DescribeTableContentPreviewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Sql", this.Sql);
         this.setParamSimple(map, prefix + "EngineId", this.EngineId);
         this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
 
     }
 }

@@ -66,6 +66,20 @@ public class AIGWLogConfig extends AbstractModel {
     private String ResponseLogPayloadMode;
 
     /**
+    * <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+    */
+    @SerializedName("RequestLogPayloadTruncationPolicy")
+    @Expose
+    private String RequestLogPayloadTruncationPolicy;
+
+    /**
+    * <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+    */
+    @SerializedName("ResponseLogPayloadTruncationPolicy")
+    @Expose
+    private String ResponseLogPayloadTruncationPolicy;
+
+    /**
      * Get <p>是否开启请求 payload 记录日志</p> 
      * @return EnableRequestLogPayloads <p>是否开启请求 payload 记录日志</p>
      */
@@ -161,6 +175,38 @@ public class AIGWLogConfig extends AbstractModel {
         this.ResponseLogPayloadMode = ResponseLogPayloadMode;
     }
 
+    /**
+     * Get <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul> 
+     * @return RequestLogPayloadTruncationPolicy <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     */
+    public String getRequestLogPayloadTruncationPolicy() {
+        return this.RequestLogPayloadTruncationPolicy;
+    }
+
+    /**
+     * Set <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     * @param RequestLogPayloadTruncationPolicy <p>请求 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     */
+    public void setRequestLogPayloadTruncationPolicy(String RequestLogPayloadTruncationPolicy) {
+        this.RequestLogPayloadTruncationPolicy = RequestLogPayloadTruncationPolicy;
+    }
+
+    /**
+     * Get <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul> 
+     * @return ResponseLogPayloadTruncationPolicy <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     */
+    public String getResponseLogPayloadTruncationPolicy() {
+        return this.ResponseLogPayloadTruncationPolicy;
+    }
+
+    /**
+     * Set <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     * @param ResponseLogPayloadTruncationPolicy <p>响应 Body 大小裁剪策略</p><p>枚举值：</p><ul><li>Bounded： 裁剪大小</li><li>UnBounded： 不裁剪大小</li></ul>
+     */
+    public void setResponseLogPayloadTruncationPolicy(String ResponseLogPayloadTruncationPolicy) {
+        this.ResponseLogPayloadTruncationPolicy = ResponseLogPayloadTruncationPolicy;
+    }
+
     public AIGWLogConfig() {
     }
 
@@ -187,6 +233,12 @@ public class AIGWLogConfig extends AbstractModel {
         if (source.ResponseLogPayloadMode != null) {
             this.ResponseLogPayloadMode = new String(source.ResponseLogPayloadMode);
         }
+        if (source.RequestLogPayloadTruncationPolicy != null) {
+            this.RequestLogPayloadTruncationPolicy = new String(source.RequestLogPayloadTruncationPolicy);
+        }
+        if (source.ResponseLogPayloadTruncationPolicy != null) {
+            this.ResponseLogPayloadTruncationPolicy = new String(source.ResponseLogPayloadTruncationPolicy);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class AIGWLogConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseLogPayloadMaxSize", this.ResponseLogPayloadMaxSize);
         this.setParamSimple(map, prefix + "RequestLogPayloadMode", this.RequestLogPayloadMode);
         this.setParamSimple(map, prefix + "ResponseLogPayloadMode", this.ResponseLogPayloadMode);
+        this.setParamSimple(map, prefix + "RequestLogPayloadTruncationPolicy", this.RequestLogPayloadTruncationPolicy);
+        this.setParamSimple(map, prefix + "ResponseLogPayloadTruncationPolicy", this.ResponseLogPayloadTruncationPolicy);
 
     }
 }

@@ -45,7 +45,7 @@ public class CreateVulFixTaskRequest extends AbstractModel {
     private Boolean CreateSnapshot;
 
     /**
-    * <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+    * <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
     */
     @SerializedName("SnapshotName")
     @Expose
@@ -114,16 +114,16 @@ public class CreateVulFixTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p> 
-     * @return SnapshotName <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+     * Get <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p> 
+     * @return SnapshotName <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
-     * @param SnapshotName <p>快照名称，CreateSnapshot为true时有效<br>入参限制：最长128个字符</p>
+     * Set <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
+     * @param SnapshotName <p>快照名称，CreateSnapshot为true时有效入参限制：最长60个字符超长自动截断</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;

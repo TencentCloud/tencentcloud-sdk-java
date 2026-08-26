@@ -32,6 +32,8 @@ public class DeleteCustomRuleRequest extends AbstractModel {
 
     /**
     * 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
     */
     @SerializedName("RuleId")
     @Expose
@@ -46,6 +48,7 @@ public class DeleteCustomRuleRequest extends AbstractModel {
 
     /**
     * 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
     */
     @SerializedName("DomainRuleIdList")
     @Expose
@@ -68,8 +71,12 @@ public class DeleteCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 删除的规则ID 
+     * Get 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList 
      * @return RuleId 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
      */
     public String getRuleId() {
         return this.RuleId;
@@ -77,7 +84,11 @@ public class DeleteCustomRuleRequest extends AbstractModel {
 
     /**
      * Set 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
      * @param RuleId 删除的规则ID
+说明：支持批量删除，多个规则ID用英文逗号分隔
+与DomainRuleIdList二选一，优先使用DomainRuleIdList
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -100,8 +111,10 @@ public class DeleteCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 批量删除的规则列表 
+     * Get 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段 
      * @return DomainRuleIdList 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
      */
     public DomainRuleId [] getDomainRuleIdList() {
         return this.DomainRuleIdList;
@@ -109,7 +122,9 @@ public class DeleteCustomRuleRequest extends AbstractModel {
 
     /**
      * Set 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
      * @param DomainRuleIdList 批量删除的规则列表
+说明：支持跨域名批量删除，每个元素指定域名和规则ID。如果不为空则忽略Domain和RuleId字段
      */
     public void setDomainRuleIdList(DomainRuleId [] DomainRuleIdList) {
         this.DomainRuleIdList = DomainRuleIdList;

@@ -52,6 +52,13 @@ public class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel 
     private String Description;
 
     /**
+    * <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get <p>来源模板ID</p> 
      * @return FromId <p>来源模板ID</p>
      */
@@ -115,6 +122,22 @@ public class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel 
         this.Description = Description;
     }
 
+    /**
+     * Get <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p> 
+     * @return OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     * @param OperationSource <p>操作来源：空/dspm=数据库风险监测入口，cos=对象存储风险监测入口</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public CreateDspmIdentifyComplianceGroupCopyRequest() {
     }
 
@@ -138,6 +161,9 @@ public class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel 
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateDspmIdentifyComplianceGroupCopyRequest extends AbstractModel 
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

@@ -167,6 +167,13 @@ public class DynamicInstanceForm extends AbstractModel {
     private GooseFSVolume [] GooseFSVolumes;
 
     /**
+    * <p>开启HistoryServer</p>
+    */
+    @SerializedName("EnableHistoryServer")
+    @Expose
+    private Boolean EnableHistoryServer;
+
+    /**
      * Get <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DynamicInstanceName <p>DynamicInstance名，长度限制1-64字符，只能包含小写字母</p>
@@ -522,6 +529,22 @@ public class DynamicInstanceForm extends AbstractModel {
         this.GooseFSVolumes = GooseFSVolumes;
     }
 
+    /**
+     * Get <p>开启HistoryServer</p> 
+     * @return EnableHistoryServer <p>开启HistoryServer</p>
+     */
+    public Boolean getEnableHistoryServer() {
+        return this.EnableHistoryServer;
+    }
+
+    /**
+     * Set <p>开启HistoryServer</p>
+     * @param EnableHistoryServer <p>开启HistoryServer</p>
+     */
+    public void setEnableHistoryServer(Boolean EnableHistoryServer) {
+        this.EnableHistoryServer = EnableHistoryServer;
+    }
+
     public DynamicInstanceForm() {
     }
 
@@ -617,6 +640,9 @@ public class DynamicInstanceForm extends AbstractModel {
                 this.GooseFSVolumes[i] = new GooseFSVolume(source.GooseFSVolumes[i]);
             }
         }
+        if (source.EnableHistoryServer != null) {
+            this.EnableHistoryServer = new Boolean(source.EnableHistoryServer);
+        }
     }
 
 
@@ -642,6 +668,7 @@ public class DynamicInstanceForm extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CFSTurboVolumes.", this.CFSTurboVolumes);
         this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
         this.setParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
+        this.setParamSimple(map, prefix + "EnableHistoryServer", this.EnableHistoryServer);
 
     }
 }

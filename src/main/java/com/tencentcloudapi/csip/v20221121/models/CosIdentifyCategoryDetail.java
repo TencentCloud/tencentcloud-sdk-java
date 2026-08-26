@@ -79,7 +79,9 @@ public class CosIdentifyCategoryDetail extends AbstractModel {
     /**
      * Get <p>数据项集合</p> 
      * @return RuleSet <p>数据项集合</p>
+     * @deprecated
      */
+    @Deprecated
     public CosIdentifyRuleDetail [] getRuleSet() {
         return this.RuleSet;
     }
@@ -87,7 +89,9 @@ public class CosIdentifyCategoryDetail extends AbstractModel {
     /**
      * Set <p>数据项集合</p>
      * @param RuleSet <p>数据项集合</p>
+     * @deprecated
      */
+    @Deprecated
     public void setRuleSet(CosIdentifyRuleDetail [] RuleSet) {
         this.RuleSet = RuleSet;
     }

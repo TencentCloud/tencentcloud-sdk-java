@@ -24,225 +24,233 @@ import java.util.HashMap;
 public class UpgradeHourDCDBInstanceRequest extends AbstractModel {
 
     /**
-    * 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+    * <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+    * <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-    * 新增分片配置，当UpgradeType为ADD时生效。
+    * <p>新增分片配置，当UpgradeType为ADD时生效。</p>
     */
     @SerializedName("AddShardConfig")
     @Expose
     private AddShardConfig AddShardConfig;
 
     /**
-    * 扩容分片配置，当UpgradeType为EXPAND时生效。
+    * <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
     */
     @SerializedName("ExpandShardConfig")
     @Expose
     private ExpandShardConfig ExpandShardConfig;
 
     /**
-    * 切分分片配置，当UpgradeType为SPLIT时生效。
+    * <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
     */
     @SerializedName("SplitShardConfig")
     @Expose
     private SplitShardConfig SplitShardConfig;
 
     /**
-    * 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+    * <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+    * <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
     */
     @SerializedName("SwitchEndTime")
     @Expose
     private String SwitchEndTime;
 
     /**
-    * 是否自动重试。 0：不自动重试  1：自动重试
+    * <p>是否自动重试。 0：不自动重试  1：自动重试</p>
     */
     @SerializedName("SwitchAutoRetry")
     @Expose
     private Long SwitchAutoRetry;
 
     /**
-    * 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+    * <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-     * Get 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
-     * @return InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+    * <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+    */
+    @SerializedName("SwitchInterval")
+    @Expose
+    private Long SwitchInterval;
+
+    /**
+     * Get <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p> 
+     * @return InstanceId <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
-     * @param InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Set <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
+     * @param InstanceId <p>待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li> 
-     * @return UpgradeType 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+     * Get <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li> 
+     * @return UpgradeType <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
-     * @param UpgradeType 升级类型，取值范围: 
-<li> ADD: 新增分片 </li> 
- <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+     * Set <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+     * @param UpgradeType <p>升级类型，取值范围: </p><li> ADD: 新增分片 </li>  <li> EXPAND: 升级实例中的已有分片 </li>  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
     }
 
     /**
-     * Get 新增分片配置，当UpgradeType为ADD时生效。 
-     * @return AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
+     * Get <p>新增分片配置，当UpgradeType为ADD时生效。</p> 
+     * @return AddShardConfig <p>新增分片配置，当UpgradeType为ADD时生效。</p>
      */
     public AddShardConfig getAddShardConfig() {
         return this.AddShardConfig;
     }
 
     /**
-     * Set 新增分片配置，当UpgradeType为ADD时生效。
-     * @param AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
+     * Set <p>新增分片配置，当UpgradeType为ADD时生效。</p>
+     * @param AddShardConfig <p>新增分片配置，当UpgradeType为ADD时生效。</p>
      */
     public void setAddShardConfig(AddShardConfig AddShardConfig) {
         this.AddShardConfig = AddShardConfig;
     }
 
     /**
-     * Get 扩容分片配置，当UpgradeType为EXPAND时生效。 
-     * @return ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
+     * Get <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p> 
+     * @return ExpandShardConfig <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
      */
     public ExpandShardConfig getExpandShardConfig() {
         return this.ExpandShardConfig;
     }
 
     /**
-     * Set 扩容分片配置，当UpgradeType为EXPAND时生效。
-     * @param ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
+     * Set <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
+     * @param ExpandShardConfig <p>扩容分片配置，当UpgradeType为EXPAND时生效。</p>
      */
     public void setExpandShardConfig(ExpandShardConfig ExpandShardConfig) {
         this.ExpandShardConfig = ExpandShardConfig;
     }
 
     /**
-     * Get 切分分片配置，当UpgradeType为SPLIT时生效。 
-     * @return SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
+     * Get <p>切分分片配置，当UpgradeType为SPLIT时生效。</p> 
+     * @return SplitShardConfig <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
      */
     public SplitShardConfig getSplitShardConfig() {
         return this.SplitShardConfig;
     }
 
     /**
-     * Set 切分分片配置，当UpgradeType为SPLIT时生效。
-     * @param SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
+     * Set <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
+     * @param SplitShardConfig <p>切分分片配置，当UpgradeType为SPLIT时生效。</p>
      */
     public void setSplitShardConfig(SplitShardConfig SplitShardConfig) {
         this.SplitShardConfig = SplitShardConfig;
     }
 
     /**
-     * Get 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。 
-     * @return SwitchStartTime 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     * Get <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p> 
+     * @return SwitchStartTime <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
-     * @param SwitchStartTime 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     * Set <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
+     * @param SwitchStartTime <p>切换开始时间，格式如: &quot;2019-12-12 07:00:00&quot;。开始时间必须在当前时间一个小时以后，3天以内。</p>
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。 
-     * @return SwitchEndTime 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     * Get <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p> 
+     * @return SwitchEndTime <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
-     * @param SwitchEndTime 切换结束时间,  格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     * Set <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
+     * @param SwitchEndTime <p>切换结束时间,  格式如: &quot;2019-12-12 07:15:00&quot;，结束时间必须大于开始时间。</p>
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;
     }
 
     /**
-     * Get 是否自动重试。 0：不自动重试  1：自动重试 
-     * @return SwitchAutoRetry 是否自动重试。 0：不自动重试  1：自动重试
+     * Get <p>是否自动重试。 0：不自动重试  1：自动重试</p> 
+     * @return SwitchAutoRetry <p>是否自动重试。 0：不自动重试  1：自动重试</p>
      */
     public Long getSwitchAutoRetry() {
         return this.SwitchAutoRetry;
     }
 
     /**
-     * Set 是否自动重试。 0：不自动重试  1：自动重试
-     * @param SwitchAutoRetry 是否自动重试。 0：不自动重试  1：自动重试
+     * Set <p>是否自动重试。 0：不自动重试  1：自动重试</p>
+     * @param SwitchAutoRetry <p>是否自动重试。 0：不自动重试  1：自动重试</p>
      */
     public void setSwitchAutoRetry(Long SwitchAutoRetry) {
         this.SwitchAutoRetry = SwitchAutoRetry;
     }
 
     /**
-     * Get 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区 
-     * @return Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     * Get <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p> 
+     * @return Zones <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
-     * @param Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     * Set <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
+     * @param Zones <p>变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区</p>
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
+    }
+
+    /**
+     * Get <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p> 
+     * @return SwitchInterval <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+     */
+    public Long getSwitchInterval() {
+        return this.SwitchInterval;
+    }
+
+    /**
+     * Set <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+     * @param SwitchInterval <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+     */
+    public void setSwitchInterval(Long SwitchInterval) {
+        this.SwitchInterval = SwitchInterval;
     }
 
     public UpgradeHourDCDBInstanceRequest() {
@@ -283,6 +291,9 @@ public class UpgradeHourDCDBInstanceRequest extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.SwitchInterval != null) {
+            this.SwitchInterval = new Long(source.SwitchInterval);
+        }
     }
 
 
@@ -299,6 +310,7 @@ public class UpgradeHourDCDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
         this.setParamSimple(map, prefix + "SwitchAutoRetry", this.SwitchAutoRetry);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "SwitchInterval", this.SwitchInterval);
 
     }
 }

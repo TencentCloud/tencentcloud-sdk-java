@@ -1,0 +1,138 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.monitor.v20230616.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ListAIWorkbenchArtifactsResponse extends AbstractModel {
+
+    /**
+    * <p>产物列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Artifacts")
+    @Expose
+    private ArtifactInfo [] Artifacts;
+
+    /**
+    * <p>分页结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PageResult")
+    @Expose
+    private PageByNumResult PageResult;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get <p>产物列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Artifacts <p>产物列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ArtifactInfo [] getArtifacts() {
+        return this.Artifacts;
+    }
+
+    /**
+     * Set <p>产物列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Artifacts <p>产物列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArtifacts(ArtifactInfo [] Artifacts) {
+        this.Artifacts = Artifacts;
+    }
+
+    /**
+     * Get <p>分页结果</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PageResult <p>分页结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PageByNumResult getPageResult() {
+        return this.PageResult;
+    }
+
+    /**
+     * Set <p>分页结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageResult <p>分页结果</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPageResult(PageByNumResult PageResult) {
+        this.PageResult = PageResult;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public ListAIWorkbenchArtifactsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListAIWorkbenchArtifactsResponse(ListAIWorkbenchArtifactsResponse source) {
+        if (source.Artifacts != null) {
+            this.Artifacts = new ArtifactInfo[source.Artifacts.length];
+            for (int i = 0; i < source.Artifacts.length; i++) {
+                this.Artifacts[i] = new ArtifactInfo(source.Artifacts[i]);
+            }
+        }
+        if (source.PageResult != null) {
+            this.PageResult = new PageByNumResult(source.PageResult);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Artifacts.", this.Artifacts);
+        this.setParamObj(map, prefix + "PageResult.", this.PageResult);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

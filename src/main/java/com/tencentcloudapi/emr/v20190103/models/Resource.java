@@ -131,6 +131,20 @@ public class Resource extends AbstractModel {
     private String HCCHpcClusterId;
 
     /**
+    * <p>自定义主机名</p>
+    */
+    @SerializedName("CustomNodeName")
+    @Expose
+    private String CustomNodeName;
+
+    /**
+    * <p>GPU镜像驱动配置</p>
+    */
+    @SerializedName("GpuImageDriver")
+    @Expose
+    private GpuImageDriverSpec GpuImageDriver;
+
+    /**
      * Get <p>节点规格描述，如CVM.SA2。</p> 
      * @return Spec <p>节点规格描述，如CVM.SA2。</p>
      */
@@ -378,6 +392,38 @@ public class Resource extends AbstractModel {
         this.HCCHpcClusterId = HCCHpcClusterId;
     }
 
+    /**
+     * Get <p>自定义主机名</p> 
+     * @return CustomNodeName <p>自定义主机名</p>
+     */
+    public String getCustomNodeName() {
+        return this.CustomNodeName;
+    }
+
+    /**
+     * Set <p>自定义主机名</p>
+     * @param CustomNodeName <p>自定义主机名</p>
+     */
+    public void setCustomNodeName(String CustomNodeName) {
+        this.CustomNodeName = CustomNodeName;
+    }
+
+    /**
+     * Get <p>GPU镜像驱动配置</p> 
+     * @return GpuImageDriver <p>GPU镜像驱动配置</p>
+     */
+    public GpuImageDriverSpec getGpuImageDriver() {
+        return this.GpuImageDriver;
+    }
+
+    /**
+     * Set <p>GPU镜像驱动配置</p>
+     * @param GpuImageDriver <p>GPU镜像驱动配置</p>
+     */
+    public void setGpuImageDriver(GpuImageDriverSpec GpuImageDriver) {
+        this.GpuImageDriver = GpuImageDriver;
+    }
+
     public Resource() {
     }
 
@@ -437,6 +483,12 @@ public class Resource extends AbstractModel {
         if (source.HCCHpcClusterId != null) {
             this.HCCHpcClusterId = new String(source.HCCHpcClusterId);
         }
+        if (source.CustomNodeName != null) {
+            this.CustomNodeName = new String(source.CustomNodeName);
+        }
+        if (source.GpuImageDriver != null) {
+            this.GpuImageDriver = new GpuImageDriverSpec(source.GpuImageDriver);
+        }
     }
 
 
@@ -459,6 +511,8 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "HCCHpcClusterId", this.HCCHpcClusterId);
+        this.setParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
+        this.setParamObj(map, prefix + "GpuImageDriver.", this.GpuImageDriver);
 
     }
 }

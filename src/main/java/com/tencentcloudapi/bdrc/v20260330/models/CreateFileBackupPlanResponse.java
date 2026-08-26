@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateFileBackupPlanResponse extends AbstractModel {
 
     /**
-    * 备份计划 ID 列表
+    * <p>备份计划 ID 列表</p>
     */
     @SerializedName("PlanIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateFileBackupPlanResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份计划 ID 列表 
-     * @return PlanIds 备份计划 ID 列表
+     * Get <p>备份计划 ID 列表</p> 
+     * @return PlanIds <p>备份计划 ID 列表</p>
      */
     public String [] getPlanIds() {
         return this.PlanIds;
     }
 
     /**
-     * Set 备份计划 ID 列表
-     * @param PlanIds 备份计划 ID 列表
+     * Set <p>备份计划 ID 列表</p>
+     * @param PlanIds <p>备份计划 ID 列表</p>
      */
     public void setPlanIds(String [] PlanIds) {
         this.PlanIds = PlanIds;

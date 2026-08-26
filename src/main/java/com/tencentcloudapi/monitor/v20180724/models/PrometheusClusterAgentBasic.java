@@ -24,230 +24,253 @@ import java.util.HashMap;
 public class PrometheusClusterAgentBasic extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群
+    * <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群 ID
+    * <p>集群 ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 是否开启公网 CLB
+    * <p>是否开启公网 CLB</p>
     */
     @SerializedName("EnableExternal")
     @Expose
     private Boolean EnableExternal;
 
     /**
-    * 集群内部署组件的pod 配置
+    * <p>集群内部署组件的pod 配置</p>
     */
     @SerializedName("InClusterPodConfig")
     @Expose
     private PrometheusClusterAgentPodConfig InClusterPodConfig;
 
     /**
-    * 该集群采集的所有指标都会带上这些labels
+    * <p>该集群采集的所有指标都会带上这些labels</p>
     */
     @SerializedName("ExternalLabels")
     @Expose
     private Label [] ExternalLabels;
 
     /**
-    * 是否安装默认采集 exporter 和采集配置
+    * <p>是否安装默认采集 exporter 和采集配置</p>
     */
     @SerializedName("NotInstallBasicScrape")
     @Expose
     private Boolean NotInstallBasicScrape;
 
     /**
-    * 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+    * <p>是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置</p>
     */
     @SerializedName("NotScrape")
     @Expose
     private Boolean NotScrape;
 
     /**
-    * 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+    * <p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p>
     */
     @SerializedName("DropAll")
     @Expose
     private Boolean DropAll;
 
     /**
-    * 是否开启默认预聚合规则
+    * <p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("CollectAll")
+    @Expose
+    private Boolean CollectAll;
+
+    /**
+    * <p>是否开启默认预聚合规则</p>
     */
     @SerializedName("OpenDefaultRecord")
     @Expose
     private Boolean OpenDefaultRecord;
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群 
-     * @return ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群
+     * Get <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群</p> 
+     * @return ClusterType <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群
-     * @param ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群
+     * Set <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群</p>
+     * @param ClusterType <p>集群类型。可填入tke、eks、tkeedge、tdcc、external，分别代表标准集群、弹性集群、边缘集群、注册集群 和外部集群</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+     * Get <p>集群 ID</p> 
+     * @return ClusterId <p>集群 ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set <p>集群 ID</p>
+     * @param ClusterId <p>集群 ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 是否开启公网 CLB 
-     * @return EnableExternal 是否开启公网 CLB
+     * Get <p>是否开启公网 CLB</p> 
+     * @return EnableExternal <p>是否开启公网 CLB</p>
      */
     public Boolean getEnableExternal() {
         return this.EnableExternal;
     }
 
     /**
-     * Set 是否开启公网 CLB
-     * @param EnableExternal 是否开启公网 CLB
+     * Set <p>是否开启公网 CLB</p>
+     * @param EnableExternal <p>是否开启公网 CLB</p>
      */
     public void setEnableExternal(Boolean EnableExternal) {
         this.EnableExternal = EnableExternal;
     }
 
     /**
-     * Get 集群内部署组件的pod 配置 
-     * @return InClusterPodConfig 集群内部署组件的pod 配置
+     * Get <p>集群内部署组件的pod 配置</p> 
+     * @return InClusterPodConfig <p>集群内部署组件的pod 配置</p>
      */
     public PrometheusClusterAgentPodConfig getInClusterPodConfig() {
         return this.InClusterPodConfig;
     }
 
     /**
-     * Set 集群内部署组件的pod 配置
-     * @param InClusterPodConfig 集群内部署组件的pod 配置
+     * Set <p>集群内部署组件的pod 配置</p>
+     * @param InClusterPodConfig <p>集群内部署组件的pod 配置</p>
      */
     public void setInClusterPodConfig(PrometheusClusterAgentPodConfig InClusterPodConfig) {
         this.InClusterPodConfig = InClusterPodConfig;
     }
 
     /**
-     * Get 该集群采集的所有指标都会带上这些labels 
-     * @return ExternalLabels 该集群采集的所有指标都会带上这些labels
+     * Get <p>该集群采集的所有指标都会带上这些labels</p> 
+     * @return ExternalLabels <p>该集群采集的所有指标都会带上这些labels</p>
      */
     public Label [] getExternalLabels() {
         return this.ExternalLabels;
     }
 
     /**
-     * Set 该集群采集的所有指标都会带上这些labels
-     * @param ExternalLabels 该集群采集的所有指标都会带上这些labels
+     * Set <p>该集群采集的所有指标都会带上这些labels</p>
+     * @param ExternalLabels <p>该集群采集的所有指标都会带上这些labels</p>
      */
     public void setExternalLabels(Label [] ExternalLabels) {
         this.ExternalLabels = ExternalLabels;
     }
 
     /**
-     * Get 是否安装默认采集 exporter 和采集配置 
-     * @return NotInstallBasicScrape 是否安装默认采集 exporter 和采集配置
+     * Get <p>是否安装默认采集 exporter 和采集配置</p> 
+     * @return NotInstallBasicScrape <p>是否安装默认采集 exporter 和采集配置</p>
      */
     public Boolean getNotInstallBasicScrape() {
         return this.NotInstallBasicScrape;
     }
 
     /**
-     * Set 是否安装默认采集 exporter 和采集配置
-     * @param NotInstallBasicScrape 是否安装默认采集 exporter 和采集配置
+     * Set <p>是否安装默认采集 exporter 和采集配置</p>
+     * @param NotInstallBasicScrape <p>是否安装默认采集 exporter 和采集配置</p>
      */
     public void setNotInstallBasicScrape(Boolean NotInstallBasicScrape) {
         this.NotInstallBasicScrape = NotInstallBasicScrape;
     }
 
     /**
-     * Get 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置 
-     * @return NotScrape 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+     * Get <p>是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置</p> 
+     * @return NotScrape <p>是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置</p>
      */
     public Boolean getNotScrape() {
         return this.NotScrape;
     }
 
     /**
-     * Set 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
-     * @param NotScrape 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+     * Set <p>是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置</p>
+     * @param NotScrape <p>是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置</p>
      */
     public void setNotScrape(Boolean NotScrape) {
         this.NotScrape = NotScrape;
     }
 
     /**
-     * Get 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标 
-     * @return DropAll 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+     * Get <p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p> 
+     * @return DropAll <p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p>
      */
     public Boolean getDropAll() {
         return this.DropAll;
     }
 
     /**
-     * Set 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
-     * @param DropAll 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+     * Set <p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p>
+     * @param DropAll <p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p>
      */
     public void setDropAll(Boolean DropAll) {
         this.DropAll = DropAll;
     }
 
     /**
-     * Get 是否开启默认预聚合规则 
-     * @return OpenDefaultRecord 是否开启默认预聚合规则
+     * Get <p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p> 
+     * @return CollectAll <p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
+     */
+    public Boolean getCollectAll() {
+        return this.CollectAll;
+    }
+
+    /**
+     * Set <p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
+     * @param CollectAll <p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
+     */
+    public void setCollectAll(Boolean CollectAll) {
+        this.CollectAll = CollectAll;
+    }
+
+    /**
+     * Get <p>是否开启默认预聚合规则</p> 
+     * @return OpenDefaultRecord <p>是否开启默认预聚合规则</p>
      */
     public Boolean getOpenDefaultRecord() {
         return this.OpenDefaultRecord;
     }
 
     /**
-     * Set 是否开启默认预聚合规则
-     * @param OpenDefaultRecord 是否开启默认预聚合规则
+     * Set <p>是否开启默认预聚合规则</p>
+     * @param OpenDefaultRecord <p>是否开启默认预聚合规则</p>
      */
     public void setOpenDefaultRecord(Boolean OpenDefaultRecord) {
         this.OpenDefaultRecord = OpenDefaultRecord;
@@ -291,6 +314,9 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
         if (source.DropAll != null) {
             this.DropAll = new Boolean(source.DropAll);
         }
+        if (source.CollectAll != null) {
+            this.CollectAll = new Boolean(source.CollectAll);
+        }
         if (source.OpenDefaultRecord != null) {
             this.OpenDefaultRecord = new Boolean(source.OpenDefaultRecord);
         }
@@ -310,6 +336,7 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
         this.setParamSimple(map, prefix + "NotInstallBasicScrape", this.NotInstallBasicScrape);
         this.setParamSimple(map, prefix + "NotScrape", this.NotScrape);
         this.setParamSimple(map, prefix + "DropAll", this.DropAll);
+        this.setParamSimple(map, prefix + "CollectAll", this.CollectAll);
         this.setParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
 
     }

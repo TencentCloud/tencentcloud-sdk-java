@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class CreateFileBackupPlanRequest extends AbstractModel {
 
     /**
-    * 备份策略ID
+    * <p>备份策略ID</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 备份库ID
+    * <p>备份库ID</p>
     */
     @SerializedName("BackupStorageId")
     @Expose
     private String BackupStorageId;
 
     /**
-    * 计划名称
+    * <p>计划名称</p>
     */
     @SerializedName("PlanName")
     @Expose
     private String PlanName;
 
     /**
-    * 实例配置列表，[1,20]
+    * <p>实例配置列表，[1,20]</p>
     */
     @SerializedName("Resources")
     @Expose
     private ResourcePlan [] Resources;
 
     /**
-     * Get 备份策略ID 
-     * @return PolicyId 备份策略ID
+    * <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+     * Get <p>备份策略ID</p> 
+     * @return PolicyId <p>备份策略ID</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 备份策略ID
-     * @param PolicyId 备份策略ID
+     * Set <p>备份策略ID</p>
+     * @param PolicyId <p>备份策略ID</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 备份库ID 
-     * @return BackupStorageId 备份库ID
+     * Get <p>备份库ID</p> 
+     * @return BackupStorageId <p>备份库ID</p>
      */
     public String getBackupStorageId() {
         return this.BackupStorageId;
     }
 
     /**
-     * Set 备份库ID
-     * @param BackupStorageId 备份库ID
+     * Set <p>备份库ID</p>
+     * @param BackupStorageId <p>备份库ID</p>
      */
     public void setBackupStorageId(String BackupStorageId) {
         this.BackupStorageId = BackupStorageId;
     }
 
     /**
-     * Get 计划名称 
-     * @return PlanName 计划名称
+     * Get <p>计划名称</p> 
+     * @return PlanName <p>计划名称</p>
      */
     public String getPlanName() {
         return this.PlanName;
     }
 
     /**
-     * Set 计划名称
-     * @param PlanName 计划名称
+     * Set <p>计划名称</p>
+     * @param PlanName <p>计划名称</p>
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
     }
 
     /**
-     * Get 实例配置列表，[1,20] 
-     * @return Resources 实例配置列表，[1,20]
+     * Get <p>实例配置列表，[1,20]</p> 
+     * @return Resources <p>实例配置列表，[1,20]</p>
      */
     public ResourcePlan [] getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 实例配置列表，[1,20]
-     * @param Resources 实例配置列表，[1,20]
+     * Set <p>实例配置列表，[1,20]</p>
+     * @param Resources <p>实例配置列表，[1,20]</p>
      */
     public void setResources(ResourcePlan [] Resources) {
         this.Resources = Resources;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p> 
+     * @return ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     * @param ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     public CreateFileBackupPlanRequest() {
@@ -138,6 +161,9 @@ public class CreateFileBackupPlanRequest extends AbstractModel {
                 this.Resources[i] = new ResourcePlan(source.Resources[i]);
             }
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateFileBackupPlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupStorageId", this.BackupStorageId);
         this.setParamSimple(map, prefix + "PlanName", this.PlanName);
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

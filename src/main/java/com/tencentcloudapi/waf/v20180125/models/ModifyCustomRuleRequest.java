@@ -39,13 +39,17 @@ public class ModifyCustomRuleRequest extends AbstractModel {
 
     /**
     * 编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+    * 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
     */
     @SerializedName("RuleAction")
     @Expose
@@ -133,13 +137,17 @@ public class ModifyCustomRuleRequest extends AbstractModel {
 
     /**
     * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
     */
     @SerializedName("LogicalOp")
     @Expose
     private String LogicalOp;
 
     /**
-    * 规则生效比例
+    * 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
     */
     @SerializedName("ActionRatio")
     @Expose
@@ -178,8 +186,10 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 编辑的规则名称 
+     * Get 编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符 
      * @return RuleName 编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符
      */
     public String getRuleName() {
         return this.RuleName;
@@ -187,23 +197,37 @@ public class ModifyCustomRuleRequest extends AbstractModel {
 
     /**
      * Set 编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符
      * @param RuleName 编辑的规则名称
+入参限制：1-128个字符，不允许特殊字符
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
-     * @return RuleAction 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * Get 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空 
+     * @return RuleAction 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
      */
     public String getRuleAction() {
         return this.RuleAction;
     }
 
     /**
-     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
-     * @param RuleAction 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * Set 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
+     * @param RuleAction 动作类型
+取值说明：1-阻断，2-人机识别（滑块），3-观察，4-重定向，5-JS校验，6-人机识别（无感验证-拦截），7-人机识别（无感验证-观察），8-语音验证码
+入参限制：必填，取值范围为1-8
+约束条件：当RuleAction为4（重定向）时，Redirect参数不能为空
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
@@ -402,8 +426,12 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
+     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or 
      * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      */
     public String getLogicalOp() {
         return this.LogicalOp;
@@ -411,23 +439,35 @@ public class ModifyCustomRuleRequest extends AbstractModel {
 
     /**
      * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+默认值：and
+入参限制：不区分大小写，仅支持and或or
      */
     public void setLogicalOp(String LogicalOp) {
         this.LogicalOp = LogicalOp;
     }
 
     /**
-     * Get 规则生效比例 
-     * @return ActionRatio 规则生效比例
+     * Get 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效） 
+     * @return ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     public Long getActionRatio() {
         return this.ActionRatio;
     }
 
     /**
-     * Set 规则生效比例
-     * @param ActionRatio 规则生效比例
+     * Set 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
+     * @param ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
+取值范围：1-100
+默认值：100（全量生效）
      */
     public void setActionRatio(Long ActionRatio) {
         this.ActionRatio = ActionRatio;
