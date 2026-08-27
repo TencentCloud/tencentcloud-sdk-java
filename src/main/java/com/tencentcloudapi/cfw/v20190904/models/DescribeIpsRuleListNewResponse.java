@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeIpsRuleListNewResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 规则详情
+    * <p>规则详情</p>
     */
     @SerializedName("Data")
     @Expose
     private IpsRuleDetailNew [] Data;
 
     /**
-    * 返回状态码 0 成功 非0不成功
+    * <p>返回状态码 0 成功 非0不成功</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * 返回信息  success 成功 其他 不成功
+    * <p>返回信息  success 成功 其他 不成功</p>
     */
     @SerializedName("ReturnMsg")
     @Expose
     private String ReturnMsg;
 
     /**
-    * 字段类型
+    * <p>字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
@@ -67,73 +67,73 @@ public class DescribeIpsRuleListNewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get <p>总条数</p> 
+     * @return Total <p>总条数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set <p>总条数</p>
+     * @param Total <p>总条数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 规则详情 
-     * @return Data 规则详情
+     * Get <p>规则详情</p> 
+     * @return Data <p>规则详情</p>
      */
     public IpsRuleDetailNew [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 规则详情
-     * @param Data 规则详情
+     * Set <p>规则详情</p>
+     * @param Data <p>规则详情</p>
      */
     public void setData(IpsRuleDetailNew [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 返回状态码 0 成功 非0不成功 
-     * @return ReturnCode 返回状态码 0 成功 非0不成功
+     * Get <p>返回状态码 0 成功 非0不成功</p> 
+     * @return ReturnCode <p>返回状态码 0 成功 非0不成功</p>
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 返回状态码 0 成功 非0不成功
-     * @param ReturnCode 返回状态码 0 成功 非0不成功
+     * Set <p>返回状态码 0 成功 非0不成功</p>
+     * @param ReturnCode <p>返回状态码 0 成功 非0不成功</p>
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get 返回信息  success 成功 其他 不成功 
-     * @return ReturnMsg 返回信息  success 成功 其他 不成功
+     * Get <p>返回信息  success 成功 其他 不成功</p> 
+     * @return ReturnMsg <p>返回信息  success 成功 其他 不成功</p>
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 返回信息  success 成功 其他 不成功
-     * @param ReturnMsg 返回信息  success 成功 其他 不成功
+     * Set <p>返回信息  success 成功 其他 不成功</p>
+     * @param ReturnMsg <p>返回信息  success 成功 其他 不成功</p>
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 字段类型
+     * Get <p>字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Category 字段类型
+     * @return Category <p>字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCategory() {
@@ -141,9 +141,9 @@ public class DescribeIpsRuleListNewResponse extends AbstractModel {
     }
 
     /**
-     * Set 字段类型
+     * Set <p>字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Category 字段类型
+     * @param Category <p>字段类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String [] Category) {

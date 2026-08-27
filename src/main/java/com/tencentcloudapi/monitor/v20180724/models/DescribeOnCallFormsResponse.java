@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeOnCallFormsResponse extends AbstractModel {
 
     /**
-    * 排班信息
+    * <p>排班信息</p>
     */
     @SerializedName("OnCallForms")
     @Expose
     private OnCallForm [] OnCallForms;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeOnCallFormsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 排班信息 
-     * @return OnCallForms 排班信息
+     * Get <p>排班信息</p> 
+     * @return OnCallForms <p>排班信息</p>
      */
     public OnCallForm [] getOnCallForms() {
         return this.OnCallForms;
     }
 
     /**
-     * Set 排班信息
-     * @param OnCallForms 排班信息
+     * Set <p>排班信息</p>
+     * @param OnCallForms <p>排班信息</p>
      */
     public void setOnCallForms(OnCallForm [] OnCallForms) {
         this.OnCallForms = OnCallForms;
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

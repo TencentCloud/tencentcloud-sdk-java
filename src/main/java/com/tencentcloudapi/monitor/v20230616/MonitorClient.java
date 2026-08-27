@@ -72,6 +72,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *转发接口：创建转发规则
+     * @param req CreateDispenseExternalRuleRequest
+     * @return CreateDispenseExternalRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDispenseExternalRuleResponse CreateDispenseExternalRule(CreateDispenseExternalRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDispenseExternalRule", CreateDispenseExternalRuleResponse.class);
+    }
+
+    /**
      *创建自定义通知内容模板
      * @param req CreateNoticeContentTmplRequest
      * @return CreateNoticeContentTmplResponse
@@ -102,6 +113,17 @@ public class MonitorClient extends AbstractClient{
     public DeleteAIWorkbenchTaskResponse DeleteAIWorkbenchTask(DeleteAIWorkbenchTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAIWorkbenchTask", DeleteAIWorkbenchTaskResponse.class);
+    }
+
+    /**
+     *规则删除接口
+     * @param req DeleteDispenseExternalRuleRequest
+     * @return DeleteDispenseExternalRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDispenseExternalRuleResponse DeleteDispenseExternalRule(DeleteDispenseExternalRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDispenseExternalRule", DeleteDispenseExternalRuleResponse.class);
     }
 
     /**
@@ -212,6 +234,72 @@ public class MonitorClient extends AbstractClient{
     public DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistories(DescribeAlarmNotifyHistoriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlarmNotifyHistories", DescribeAlarmNotifyHistoriesResponse.class);
+    }
+
+    /**
+     *转发规则查询接口
+     * @param req DescribeDispenseExternalRuleRequest
+     * @return DescribeDispenseExternalRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDispenseExternalRuleResponse DescribeDispenseExternalRule(DescribeDispenseExternalRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDispenseExternalRule", DescribeDispenseExternalRuleResponse.class);
+    }
+
+    /**
+     *查询所有列表
+     * @param req DescribeDispenseExternalRuleListRequest
+     * @return DescribeDispenseExternalRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDispenseExternalRuleListResponse DescribeDispenseExternalRuleList(DescribeDispenseExternalRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDispenseExternalRuleList", DescribeDispenseExternalRuleListResponse.class);
+    }
+
+    /**
+     *转发地域列表查询接口
+     * @param req DescribeDispenseRegionRequest
+     * @return DescribeDispenseRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDispenseRegionResponse DescribeDispenseRegion(DescribeDispenseRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDispenseRegion", DescribeDispenseRegionResponse.class);
+    }
+
+    /**
+     *查询对外指标
+     * @param req DescribeExtMetricRequest
+     * @return DescribeExtMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtMetricResponse DescribeExtMetric(DescribeExtMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExtMetric", DescribeExtMetricResponse.class);
+    }
+
+    /**
+     *转发查询对外命名空间接口
+     * @param req DescribeExtNamespaceRequest
+     * @return DescribeExtNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtNamespaceResponse DescribeExtNamespace(DescribeExtNamespaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExtNamespace", DescribeExtNamespaceResponse.class);
+    }
+
+    /**
+     *转发kafka连通性测试
+     * @param req DescribeKafkaRequest
+     * @return DescribeKafkaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaResponse DescribeKafka(DescribeKafkaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafka", DescribeKafkaResponse.class);
     }
 
     /**
@@ -344,6 +432,28 @@ public class MonitorClient extends AbstractClient{
     public ListAIWorkbenchTasksResponse ListAIWorkbenchTasks(ListAIWorkbenchTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAIWorkbenchTasks", ListAIWorkbenchTasksResponse.class);
+    }
+
+    /**
+     *转发规则更新接口
+     * @param req ModifyDispenseExternalRuleRequest
+     * @return ModifyDispenseExternalRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDispenseExternalRuleResponse ModifyDispenseExternalRule(ModifyDispenseExternalRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDispenseExternalRule", ModifyDispenseExternalRuleResponse.class);
+    }
+
+    /**
+     *新增规则开启关闭接口
+     * @param req ModifyDispenseExternalRuleStatusRequest
+     * @return ModifyDispenseExternalRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDispenseExternalRuleStatusResponse ModifyDispenseExternalRuleStatus(ModifyDispenseExternalRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDispenseExternalRuleStatus", ModifyDispenseExternalRuleStatusResponse.class);
     }
 
     /**

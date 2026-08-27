@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreatePartitionRequest extends AbstractModel {
 
     /**
-    * <p>交易类型：purchase-新购，renew-续费，modify-变配</p>
+    * <p>交易类型：purchase-新购</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * <p>付费模式：0-后付费，1-预付费</p>
+    * <p>付费模式：1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
@@ -45,14 +45,14 @@ public class CreatePartitionRequest extends AbstractModel {
     private ResourceQuota [] ResourceQuotaList;
 
     /**
-    * <p>时间大小，预付费时为购买月数，后付费时为3600</p>
+    * <p>时间大小，预付费时为购买月数</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * <p>时间单位，预付费为m（月），后付费为s（秒）</p>
+    * <p>时间单位，预付费为m（月）</p>
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -73,39 +73,39 @@ public class CreatePartitionRequest extends AbstractModel {
     private String Name;
 
     /**
-    * <p>队列描述</p>
+    * <p>资源包描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get <p>交易类型：purchase-新购，renew-续费，modify-变配</p> 
-     * @return ActionType <p>交易类型：purchase-新购，renew-续费，modify-变配</p>
+     * Get <p>交易类型：purchase-新购</p> 
+     * @return ActionType <p>交易类型：purchase-新购</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set <p>交易类型：purchase-新购，renew-续费，modify-变配</p>
-     * @param ActionType <p>交易类型：purchase-新购，renew-续费，modify-变配</p>
+     * Set <p>交易类型：purchase-新购</p>
+     * @param ActionType <p>交易类型：purchase-新购</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get <p>付费模式：0-后付费，1-预付费</p> 
-     * @return PayMode <p>付费模式：0-后付费，1-预付费</p>
+     * Get <p>付费模式：1-预付费</p> 
+     * @return PayMode <p>付费模式：1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set <p>付费模式：0-后付费，1-预付费</p>
-     * @param PayMode <p>付费模式：0-后付费，1-预付费</p>
+     * Set <p>付费模式：1-预付费</p>
+     * @param PayMode <p>付费模式：1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -128,32 +128,32 @@ public class CreatePartitionRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>时间大小，预付费时为购买月数，后付费时为3600</p> 
-     * @return TimeSpan <p>时间大小，预付费时为购买月数，后付费时为3600</p>
+     * Get <p>时间大小，预付费时为购买月数</p> 
+     * @return TimeSpan <p>时间大小，预付费时为购买月数</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set <p>时间大小，预付费时为购买月数，后付费时为3600</p>
-     * @param TimeSpan <p>时间大小，预付费时为购买月数，后付费时为3600</p>
+     * Set <p>时间大小，预付费时为购买月数</p>
+     * @param TimeSpan <p>时间大小，预付费时为购买月数</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get <p>时间单位，预付费为m（月），后付费为s（秒）</p> 
-     * @return TimeUnit <p>时间单位，预付费为m（月），后付费为s（秒）</p>
+     * Get <p>时间单位，预付费为m（月）</p> 
+     * @return TimeUnit <p>时间单位，预付费为m（月）</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set <p>时间单位，预付费为m（月），后付费为s（秒）</p>
-     * @param TimeUnit <p>时间单位，预付费为m（月），后付费为s（秒）</p>
+     * Set <p>时间单位，预付费为m（月）</p>
+     * @param TimeUnit <p>时间单位，预付费为m（月）</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
@@ -192,16 +192,16 @@ public class CreatePartitionRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>队列描述</p> 
-     * @return Description <p>队列描述</p>
+     * Get <p>资源包描述</p> 
+     * @return Description <p>资源包描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>队列描述</p>
-     * @param Description <p>队列描述</p>
+     * Set <p>资源包描述</p>
+     * @param Description <p>资源包描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

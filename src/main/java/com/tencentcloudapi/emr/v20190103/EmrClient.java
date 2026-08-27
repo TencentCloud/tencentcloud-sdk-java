@@ -537,6 +537,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *集群metadb数据
+     * @param req DescribeMetaDBInfoRequest
+     * @return DescribeMetaDBInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetaDBInfoResponse DescribeMetaDBInfo(DescribeMetaDBInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetaDBInfo", DescribeMetaDBInfoResponse.class);
+    }
+
+    /**
      *查询节点数据盘信息
      * @param req DescribeNodeDataDisksRequest
      * @return DescribeNodeDataDisksResponse

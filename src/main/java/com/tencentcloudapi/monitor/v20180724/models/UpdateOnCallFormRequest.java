@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class UpdateOnCallFormRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 值班表id
+    * <p>值班表id</p>
     */
     @SerializedName("OnCallFormID")
     @Expose
     private String OnCallFormID;
 
     /**
-    * 值班表名称
+    * <p>值班表名称</p>
     */
     @SerializedName("OnCallFormName")
     @Expose
     private String OnCallFormName;
 
     /**
-    * 值班人员id组
+    * <p>值班人员id组</p>
     */
     @SerializedName("StaffInfos")
     @Expose
     private StaffInfo [] StaffInfos;
 
     /**
-    * 轮转类型
+    * <p>轮转类型</p>
     */
     @SerializedName("RotationType")
     @Expose
     private String RotationType;
 
     /**
-    * 换班时间
+    * <p>换班时间</p>
     */
     @SerializedName("ShiftTime")
     @Expose
     private String ShiftTime;
 
     /**
-    * 有效期开始时间，单位s
+    * <p>有效期开始时间，单位s</p>
     */
     @SerializedName("EffectiveStartTime")
     @Expose
     private Long EffectiveStartTime;
 
     /**
-    * 有效期结束时间，单位s
+    * <p>有效期结束时间，单位s</p>
     */
     @SerializedName("EffectiveEndTime")
     @Expose
     private Long EffectiveEndTime;
 
     /**
-    * 时区(-12 - 12)
+    * <p>时区(-12 - 12)</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private Float TimeZone;
 
     /**
-    * 值班表描述
+    * <p>值班表描述</p>
     */
     @SerializedName("OnCallFormDesc")
     @Expose
     private String OnCallFormDesc;
 
     /**
-    * 轮班信息
+    * <p>轮班信息</p>
     */
     @SerializedName("CoverStaffInfos")
     @Expose
     private CoverStaffInfo [] CoverStaffInfos;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 值班表id 
-     * @return OnCallFormID 值班表id
+     * Get <p>值班表id</p> 
+     * @return OnCallFormID <p>值班表id</p>
      */
     public String getOnCallFormID() {
         return this.OnCallFormID;
     }
 
     /**
-     * Set 值班表id
-     * @param OnCallFormID 值班表id
+     * Set <p>值班表id</p>
+     * @param OnCallFormID <p>值班表id</p>
      */
     public void setOnCallFormID(String OnCallFormID) {
         this.OnCallFormID = OnCallFormID;
     }
 
     /**
-     * Get 值班表名称 
-     * @return OnCallFormName 值班表名称
+     * Get <p>值班表名称</p> 
+     * @return OnCallFormName <p>值班表名称</p>
      */
     public String getOnCallFormName() {
         return this.OnCallFormName;
     }
 
     /**
-     * Set 值班表名称
-     * @param OnCallFormName 值班表名称
+     * Set <p>值班表名称</p>
+     * @param OnCallFormName <p>值班表名称</p>
      */
     public void setOnCallFormName(String OnCallFormName) {
         this.OnCallFormName = OnCallFormName;
     }
 
     /**
-     * Get 值班人员id组 
-     * @return StaffInfos 值班人员id组
+     * Get <p>值班人员id组</p> 
+     * @return StaffInfos <p>值班人员id组</p>
      */
     public StaffInfo [] getStaffInfos() {
         return this.StaffInfos;
     }
 
     /**
-     * Set 值班人员id组
-     * @param StaffInfos 值班人员id组
+     * Set <p>值班人员id组</p>
+     * @param StaffInfos <p>值班人员id组</p>
      */
     public void setStaffInfos(StaffInfo [] StaffInfos) {
         this.StaffInfos = StaffInfos;
     }
 
     /**
-     * Get 轮转类型 
-     * @return RotationType 轮转类型
+     * Get <p>轮转类型</p> 
+     * @return RotationType <p>轮转类型</p>
      */
     public String getRotationType() {
         return this.RotationType;
     }
 
     /**
-     * Set 轮转类型
-     * @param RotationType 轮转类型
+     * Set <p>轮转类型</p>
+     * @param RotationType <p>轮转类型</p>
      */
     public void setRotationType(String RotationType) {
         this.RotationType = RotationType;
     }
 
     /**
-     * Get 换班时间 
-     * @return ShiftTime 换班时间
+     * Get <p>换班时间</p> 
+     * @return ShiftTime <p>换班时间</p>
      */
     public String getShiftTime() {
         return this.ShiftTime;
     }
 
     /**
-     * Set 换班时间
-     * @param ShiftTime 换班时间
+     * Set <p>换班时间</p>
+     * @param ShiftTime <p>换班时间</p>
      */
     public void setShiftTime(String ShiftTime) {
         this.ShiftTime = ShiftTime;
     }
 
     /**
-     * Get 有效期开始时间，单位s 
-     * @return EffectiveStartTime 有效期开始时间，单位s
+     * Get <p>有效期开始时间，单位s</p> 
+     * @return EffectiveStartTime <p>有效期开始时间，单位s</p>
      */
     public Long getEffectiveStartTime() {
         return this.EffectiveStartTime;
     }
 
     /**
-     * Set 有效期开始时间，单位s
-     * @param EffectiveStartTime 有效期开始时间，单位s
+     * Set <p>有效期开始时间，单位s</p>
+     * @param EffectiveStartTime <p>有效期开始时间，单位s</p>
      */
     public void setEffectiveStartTime(Long EffectiveStartTime) {
         this.EffectiveStartTime = EffectiveStartTime;
     }
 
     /**
-     * Get 有效期结束时间，单位s 
-     * @return EffectiveEndTime 有效期结束时间，单位s
+     * Get <p>有效期结束时间，单位s</p> 
+     * @return EffectiveEndTime <p>有效期结束时间，单位s</p>
      */
     public Long getEffectiveEndTime() {
         return this.EffectiveEndTime;
     }
 
     /**
-     * Set 有效期结束时间，单位s
-     * @param EffectiveEndTime 有效期结束时间，单位s
+     * Set <p>有效期结束时间，单位s</p>
+     * @param EffectiveEndTime <p>有效期结束时间，单位s</p>
      */
     public void setEffectiveEndTime(Long EffectiveEndTime) {
         this.EffectiveEndTime = EffectiveEndTime;
     }
 
     /**
-     * Get 时区(-12 - 12) 
-     * @return TimeZone 时区(-12 - 12)
+     * Get <p>时区(-12 - 12)</p> 
+     * @return TimeZone <p>时区(-12 - 12)</p>
      */
     public Float getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 时区(-12 - 12)
-     * @param TimeZone 时区(-12 - 12)
+     * Set <p>时区(-12 - 12)</p>
+     * @param TimeZone <p>时区(-12 - 12)</p>
      */
     public void setTimeZone(Float TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 值班表描述 
-     * @return OnCallFormDesc 值班表描述
+     * Get <p>值班表描述</p> 
+     * @return OnCallFormDesc <p>值班表描述</p>
      */
     public String getOnCallFormDesc() {
         return this.OnCallFormDesc;
     }
 
     /**
-     * Set 值班表描述
-     * @param OnCallFormDesc 值班表描述
+     * Set <p>值班表描述</p>
+     * @param OnCallFormDesc <p>值班表描述</p>
      */
     public void setOnCallFormDesc(String OnCallFormDesc) {
         this.OnCallFormDesc = OnCallFormDesc;
     }
 
     /**
-     * Get 轮班信息 
-     * @return CoverStaffInfos 轮班信息
+     * Get <p>轮班信息</p> 
+     * @return CoverStaffInfos <p>轮班信息</p>
      */
     public CoverStaffInfo [] getCoverStaffInfos() {
         return this.CoverStaffInfos;
     }
 
     /**
-     * Set 轮班信息
-     * @param CoverStaffInfos 轮班信息
+     * Set <p>轮班信息</p>
+     * @param CoverStaffInfos <p>轮班信息</p>
      */
     public void setCoverStaffInfos(CoverStaffInfo [] CoverStaffInfos) {
         this.CoverStaffInfos = CoverStaffInfos;

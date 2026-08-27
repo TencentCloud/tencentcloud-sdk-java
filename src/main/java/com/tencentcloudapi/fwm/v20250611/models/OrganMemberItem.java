@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OrganMemberItem extends AbstractModel {
 
     /**
-    * 成员 ID
+    * <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberId")
@@ -32,7 +32,7 @@ public class OrganMemberItem extends AbstractModel {
     private String MemberId;
 
     /**
-    * 成员账号 AppId
+    * <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -40,14 +40,14 @@ public class OrganMemberItem extends AbstractModel {
     private String AppId;
 
     /**
-    * 账号Uin
+    * <p>账号Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 账号名称
+    * <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nickname")
@@ -55,7 +55,7 @@ public class OrganMemberItem extends AbstractModel {
     private String Nickname;
 
     /**
-    * 子账号数量
+    * <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountCount")
@@ -63,7 +63,7 @@ public class OrganMemberItem extends AbstractModel {
     private Long SubAccountCount;
 
     /**
-    * 所属组织架构节点名称
+    * <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
@@ -71,7 +71,7 @@ public class OrganMemberItem extends AbstractModel {
     private String NodeName;
 
     /**
-    * 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+    * <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
@@ -79,7 +79,7 @@ public class OrganMemberItem extends AbstractModel {
     private String Role;
 
     /**
-    * 成员身份显示名称（前端展示用）
+    * <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleDisplay")
@@ -87,7 +87,7 @@ public class OrganMemberItem extends AbstractModel {
     private String RoleDisplay;
 
     /**
-    * 所属账户组 
+    * <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroup")
@@ -95,7 +95,7 @@ public class OrganMemberItem extends AbstractModel {
     private AccountGroupInfo AccountGroup;
 
     /**
-    * 云防火墙纳管状态：0-未纳管，1-已纳管
+    * <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwManaged")
@@ -103,7 +103,7 @@ public class OrganMemberItem extends AbstractModel {
     private Long CfwManaged;
 
     /**
-    * 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+    * <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwShareRole")
@@ -111,7 +111,7 @@ public class OrganMemberItem extends AbstractModel {
     private String CfwShareRole;
 
     /**
-    * 云防火墙共享角色显示名称（前端展示用）
+    * <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwShareRoleDisplay")
@@ -119,7 +119,7 @@ public class OrganMemberItem extends AbstractModel {
     private String CfwShareRoleDisplay;
 
     /**
-    * 云防火墙共享者 AppId，成员角色为使用者时有值
+    * <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwSharerAppId")
@@ -127,7 +127,7 @@ public class OrganMemberItem extends AbstractModel {
     private String CfwSharerAppId;
 
     /**
-    * 云防火墙计费实例 ID，非空表示已购买云防火墙
+    * <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwInstanceId")
@@ -135,7 +135,7 @@ public class OrganMemberItem extends AbstractModel {
     private String CfwInstanceId;
 
     /**
-    * 策略分析权限：0-关闭，1-开启
+    * <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyAnalysisEnabled")
@@ -143,7 +143,7 @@ public class OrganMemberItem extends AbstractModel {
     private Long PolicyAnalysisEnabled;
 
     /**
-    * 成员加入集团时间
+    * <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberCreateTime")
@@ -151,16 +151,44 @@ public class OrganMemberItem extends AbstractModel {
     private String MemberCreateTime;
 
     /**
-    * 账号加入方式
+    * <p>账号加入方式</p>
     */
     @SerializedName("JoinType")
     @Expose
     private String JoinType;
 
     /**
-     * Get 成员 ID
+    * <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+    */
+    @SerializedName("CfwPayStatus")
+    @Expose
+    private Long CfwPayStatus;
+
+    /**
+    * <p>是否具备云防火墙使用能力</p>
+    */
+    @SerializedName("CfwCapable")
+    @Expose
+    private Long CfwCapable;
+
+    /**
+    * <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+    */
+    @SerializedName("SgManaged")
+    @Expose
+    private Long SgManaged;
+
+    /**
+    * <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+    */
+    @SerializedName("IsCfwPostPay")
+    @Expose
+    private Long IsCfwPostPay;
+
+    /**
+     * Get <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MemberId 成员 ID
+     * @return MemberId <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberId() {
@@ -168,9 +196,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 成员 ID
+     * Set <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MemberId 成员 ID
+     * @param MemberId <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberId(String MemberId) {
@@ -178,9 +206,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 成员账号 AppId
+     * Get <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 成员账号 AppId
+     * @return AppId <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -188,9 +216,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 成员账号 AppId
+     * Set <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 成员账号 AppId
+     * @param AppId <p>成员账号 AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -198,25 +226,25 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 账号Uin 
-     * @return Uin 账号Uin
+     * Get <p>账号Uin</p> 
+     * @return Uin <p>账号Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 账号Uin
-     * @param Uin 账号Uin
+     * Set <p>账号Uin</p>
+     * @param Uin <p>账号Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 账号名称
+     * Get <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nickname 账号名称
+     * @return Nickname <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickname() {
@@ -224,9 +252,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 账号名称
+     * Set <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nickname 账号名称
+     * @param Nickname <p>账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickname(String Nickname) {
@@ -234,9 +262,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 子账号数量
+     * Get <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubAccountCount 子账号数量
+     * @return SubAccountCount <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubAccountCount() {
@@ -244,9 +272,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 子账号数量
+     * Set <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubAccountCount 子账号数量
+     * @param SubAccountCount <p>子账号数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountCount(Long SubAccountCount) {
@@ -254,9 +282,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 所属组织架构节点名称
+     * Get <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeName 所属组织架构节点名称
+     * @return NodeName <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
@@ -264,9 +292,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 所属组织架构节点名称
+     * Set <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeName 所属组织架构节点名称
+     * @param NodeName <p>所属组织架构节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
@@ -274,9 +302,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+     * Get <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Role 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+     * @return Role <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
@@ -284,9 +312,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+     * Set <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Role 成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员
+     * @param Role <p>成员身份：admin-管理员，delegatedAdmin-委派管理员，member-普通成员</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
@@ -294,9 +322,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 成员身份显示名称（前端展示用）
+     * Get <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleDisplay 成员身份显示名称（前端展示用）
+     * @return RoleDisplay <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleDisplay() {
@@ -304,9 +332,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 成员身份显示名称（前端展示用）
+     * Set <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleDisplay 成员身份显示名称（前端展示用）
+     * @param RoleDisplay <p>成员身份显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleDisplay(String RoleDisplay) {
@@ -314,9 +342,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 所属账户组 
+     * Get <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountGroup 所属账户组 
+     * @return AccountGroup <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccountGroupInfo getAccountGroup() {
@@ -324,9 +352,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 所属账户组 
+     * Set <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountGroup 所属账户组 
+     * @param AccountGroup <p>所属账户组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroup(AccountGroupInfo AccountGroup) {
@@ -334,9 +362,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 云防火墙纳管状态：0-未纳管，1-已纳管
+     * Get <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CfwManaged 云防火墙纳管状态：0-未纳管，1-已纳管
+     * @return CfwManaged <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCfwManaged() {
@@ -344,9 +372,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 云防火墙纳管状态：0-未纳管，1-已纳管
+     * Set <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CfwManaged 云防火墙纳管状态：0-未纳管，1-已纳管
+     * @param CfwManaged <p>云防火墙纳管状态：0-未纳管，1-已纳管</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwManaged(Long CfwManaged) {
@@ -354,9 +382,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+     * Get <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CfwShareRole 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+     * @return CfwShareRole <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCfwShareRole() {
@@ -364,9 +392,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+     * Set <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CfwShareRole 云防火墙共享角色：sharer-共享者，user-使用者，none-未设置
+     * @param CfwShareRole <p>云防火墙共享角色：sharer-共享者，user-使用者，none-未设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwShareRole(String CfwShareRole) {
@@ -374,9 +402,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 云防火墙共享角色显示名称（前端展示用）
+     * Get <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CfwShareRoleDisplay 云防火墙共享角色显示名称（前端展示用）
+     * @return CfwShareRoleDisplay <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCfwShareRoleDisplay() {
@@ -384,9 +412,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 云防火墙共享角色显示名称（前端展示用）
+     * Set <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CfwShareRoleDisplay 云防火墙共享角色显示名称（前端展示用）
+     * @param CfwShareRoleDisplay <p>云防火墙共享角色显示名称（前端展示用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwShareRoleDisplay(String CfwShareRoleDisplay) {
@@ -394,9 +422,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 云防火墙共享者 AppId，成员角色为使用者时有值
+     * Get <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CfwSharerAppId 云防火墙共享者 AppId，成员角色为使用者时有值
+     * @return CfwSharerAppId <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCfwSharerAppId() {
@@ -404,9 +432,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 云防火墙共享者 AppId，成员角色为使用者时有值
+     * Set <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CfwSharerAppId 云防火墙共享者 AppId，成员角色为使用者时有值
+     * @param CfwSharerAppId <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwSharerAppId(String CfwSharerAppId) {
@@ -414,9 +442,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 云防火墙计费实例 ID，非空表示已购买云防火墙
+     * Get <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CfwInstanceId 云防火墙计费实例 ID，非空表示已购买云防火墙
+     * @return CfwInstanceId <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCfwInstanceId() {
@@ -424,9 +452,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 云防火墙计费实例 ID，非空表示已购买云防火墙
+     * Set <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CfwInstanceId 云防火墙计费实例 ID，非空表示已购买云防火墙
+     * @param CfwInstanceId <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwInstanceId(String CfwInstanceId) {
@@ -434,9 +462,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 策略分析权限：0-关闭，1-开启
+     * Get <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyAnalysisEnabled 策略分析权限：0-关闭，1-开启
+     * @return PolicyAnalysisEnabled <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyAnalysisEnabled() {
@@ -444,9 +472,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 策略分析权限：0-关闭，1-开启
+     * Set <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyAnalysisEnabled 策略分析权限：0-关闭，1-开启
+     * @param PolicyAnalysisEnabled <p>策略分析权限：0-关闭，1-开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyAnalysisEnabled(Long PolicyAnalysisEnabled) {
@@ -454,9 +482,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 成员加入集团时间
+     * Get <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MemberCreateTime 成员加入集团时间
+     * @return MemberCreateTime <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberCreateTime() {
@@ -464,9 +492,9 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Set 成员加入集团时间
+     * Set <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MemberCreateTime 成员加入集团时间
+     * @param MemberCreateTime <p>成员加入集团时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberCreateTime(String MemberCreateTime) {
@@ -474,19 +502,83 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
-     * Get 账号加入方式 
-     * @return JoinType 账号加入方式
+     * Get <p>账号加入方式</p> 
+     * @return JoinType <p>账号加入方式</p>
      */
     public String getJoinType() {
         return this.JoinType;
     }
 
     /**
-     * Set 账号加入方式
-     * @param JoinType 账号加入方式
+     * Set <p>账号加入方式</p>
+     * @param JoinType <p>账号加入方式</p>
      */
     public void setJoinType(String JoinType) {
         this.JoinType = JoinType;
+    }
+
+    /**
+     * Get <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul> 
+     * @return CfwPayStatus <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+     */
+    public Long getCfwPayStatus() {
+        return this.CfwPayStatus;
+    }
+
+    /**
+     * Set <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+     * @param CfwPayStatus <p>云防火墙套餐状态</p><p>枚举值：</p><ul><li>0： 未购买</li><li>2： 已购买</li><li>3： 试用中</li><li>4： 已过期</li></ul>
+     */
+    public void setCfwPayStatus(Long CfwPayStatus) {
+        this.CfwPayStatus = CfwPayStatus;
+    }
+
+    /**
+     * Get <p>是否具备云防火墙使用能力</p> 
+     * @return CfwCapable <p>是否具备云防火墙使用能力</p>
+     */
+    public Long getCfwCapable() {
+        return this.CfwCapable;
+    }
+
+    /**
+     * Set <p>是否具备云防火墙使用能力</p>
+     * @param CfwCapable <p>是否具备云防火墙使用能力</p>
+     */
+    public void setCfwCapable(Long CfwCapable) {
+        this.CfwCapable = CfwCapable;
+    }
+
+    /**
+     * Get <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p> 
+     * @return SgManaged <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+     */
+    public Long getSgManaged() {
+        return this.SgManaged;
+    }
+
+    /**
+     * Set <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+     * @param SgManaged <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
+     */
+    public void setSgManaged(Long SgManaged) {
+        this.SgManaged = SgManaged;
+    }
+
+    /**
+     * Get <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul> 
+     * @return IsCfwPostPay <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+     */
+    public Long getIsCfwPostPay() {
+        return this.IsCfwPostPay;
+    }
+
+    /**
+     * Set <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+     * @param IsCfwPostPay <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+     */
+    public void setIsCfwPostPay(Long IsCfwPostPay) {
+        this.IsCfwPostPay = IsCfwPostPay;
     }
 
     public OrganMemberItem() {
@@ -548,6 +640,18 @@ public class OrganMemberItem extends AbstractModel {
         if (source.JoinType != null) {
             this.JoinType = new String(source.JoinType);
         }
+        if (source.CfwPayStatus != null) {
+            this.CfwPayStatus = new Long(source.CfwPayStatus);
+        }
+        if (source.CfwCapable != null) {
+            this.CfwCapable = new Long(source.CfwCapable);
+        }
+        if (source.SgManaged != null) {
+            this.SgManaged = new Long(source.SgManaged);
+        }
+        if (source.IsCfwPostPay != null) {
+            this.IsCfwPostPay = new Long(source.IsCfwPostPay);
+        }
     }
 
 
@@ -572,6 +676,10 @@ public class OrganMemberItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PolicyAnalysisEnabled", this.PolicyAnalysisEnabled);
         this.setParamSimple(map, prefix + "MemberCreateTime", this.MemberCreateTime);
         this.setParamSimple(map, prefix + "JoinType", this.JoinType);
+        this.setParamSimple(map, prefix + "CfwPayStatus", this.CfwPayStatus);
+        this.setParamSimple(map, prefix + "CfwCapable", this.CfwCapable);
+        this.setParamSimple(map, prefix + "SgManaged", this.SgManaged);
+        this.setParamSimple(map, prefix + "IsCfwPostPay", this.IsCfwPostPay);
 
     }
 }

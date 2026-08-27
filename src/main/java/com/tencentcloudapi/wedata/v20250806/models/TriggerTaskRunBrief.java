@@ -496,6 +496,14 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String ScheduleRunType;
 
     /**
+    * <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExecutionId <p>任务运行ID</p>
@@ -1675,6 +1683,26 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.ScheduleRunType = ScheduleRunType;
     }
 
+    /**
+     * Get <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public TriggerTaskRunBrief() {
     }
 
@@ -1863,6 +1891,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
         if (source.ScheduleRunType != null) {
             this.ScheduleRunType = new String(source.ScheduleRunType);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -1929,6 +1960,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         this.setParamSimple(map, prefix + "AssociatedEntityExist", this.AssociatedEntityExist);
         this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

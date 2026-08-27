@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class MemberInfo extends AbstractModel {
 
     /**
-    * 成员AppId
+    * <p>成员AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 成员Uin
+    * <p>成员Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 成员昵称
+    * <p>成员昵称</p>
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * 成员Id
+    * <p>成员Id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-     * Get 成员AppId 
-     * @return AppId 成员AppId
+    * <p>所属部门</p>
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+     * Get <p>成员AppId</p> 
+     * @return AppId <p>成员AppId</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 成员AppId
-     * @param AppId 成员AppId
+     * Set <p>成员AppId</p>
+     * @param AppId <p>成员AppId</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 成员Uin 
-     * @return Uin 成员Uin
+     * Get <p>成员Uin</p> 
+     * @return Uin <p>成员Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 成员Uin
-     * @param Uin 成员Uin
+     * Set <p>成员Uin</p>
+     * @param Uin <p>成员Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 成员昵称 
-     * @return Nickname 成员昵称
+     * Get <p>成员昵称</p> 
+     * @return Nickname <p>成员昵称</p>
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set 成员昵称
-     * @param Nickname 成员昵称
+     * Set <p>成员昵称</p>
+     * @param Nickname <p>成员昵称</p>
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get 成员Id 
-     * @return MemberId 成员Id
+     * Get <p>成员Id</p> 
+     * @return MemberId <p>成员Id</p>
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 成员Id
-     * @param MemberId 成员Id
+     * Set <p>成员Id</p>
+     * @param MemberId <p>成员Id</p>
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
+    }
+
+    /**
+     * Get <p>所属部门</p> 
+     * @return NodeName <p>所属部门</p>
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set <p>所属部门</p>
+     * @param NodeName <p>所属部门</p>
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
     }
 
     public MemberInfo() {
@@ -135,6 +158,9 @@ public class MemberInfo extends AbstractModel {
         if (source.MemberId != null) {
             this.MemberId = new String(source.MemberId);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class MemberInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "Nickname", this.Nickname);
         this.setParamSimple(map, prefix + "MemberId", this.MemberId);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

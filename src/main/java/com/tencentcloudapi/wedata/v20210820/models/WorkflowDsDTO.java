@@ -184,6 +184,14 @@ public class WorkflowDsDTO extends AbstractModel {
     private String ExecuteUserName;
 
     /**
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId <p>工作流ID</p>
@@ -583,6 +591,26 @@ public class WorkflowDsDTO extends AbstractModel {
         this.ExecuteUserName = ExecuteUserName;
     }
 
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public WorkflowDsDTO() {
     }
 
@@ -660,6 +688,9 @@ public class WorkflowDsDTO extends AbstractModel {
         if (source.ExecuteUserName != null) {
             this.ExecuteUserName = new String(source.ExecuteUserName);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -687,6 +718,7 @@ public class WorkflowDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         this.setParamSimple(map, prefix + "ExecuteUserName", this.ExecuteUserName);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

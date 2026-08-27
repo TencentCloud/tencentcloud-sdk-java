@@ -24,233 +24,261 @@ import java.util.HashMap;
 public class AlarmMessage extends AbstractModel {
 
     /**
-    * 告警消息Id
+    * <p>告警消息Id</p>
     */
     @SerializedName("AlarmMessageId")
     @Expose
     private Long AlarmMessageId;
 
     /**
-    * 告警时间，同一条告警可能发送多次，只显示最新的告警时间
+    * <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
     */
     @SerializedName("AlarmTime")
     @Expose
     private String AlarmTime;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务的实例数据时间
+    * <p>任务的实例数据时间</p>
     */
     @SerializedName("CurRunDate")
     @Expose
     private String CurRunDate;
 
     /**
-    * 告警原因
+    * <p>告警原因</p>
     */
     @SerializedName("AlarmReason")
     @Expose
     private String AlarmReason;
 
     /**
-    * 告警级别，1.普通， 2.重要，3.紧急
+    * <p>告警级别，1.普通， 2.重要，3.紧急</p>
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * 告警规则Id
+    * <p>告警规则Id</p>
     */
     @SerializedName("AlarmRuleId")
     @Expose
     private String AlarmRuleId;
 
     /**
-    * 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
+    * <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
     */
     @SerializedName("AlarmWays")
     @Expose
     private String [] AlarmWays;
 
     /**
-    * 告警接收人
+    * <p>告警接收人</p>
     */
     @SerializedName("AlarmRecipients")
     @Expose
     private String [] AlarmRecipients;
 
     /**
-     * Get 告警消息Id 
-     * @return AlarmMessageId 告警消息Id
+    * <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomEmails")
+    @Expose
+    private String [] CustomEmails;
+
+    /**
+     * Get <p>告警消息Id</p> 
+     * @return AlarmMessageId <p>告警消息Id</p>
      */
     public Long getAlarmMessageId() {
         return this.AlarmMessageId;
     }
 
     /**
-     * Set 告警消息Id
-     * @param AlarmMessageId 告警消息Id
+     * Set <p>告警消息Id</p>
+     * @param AlarmMessageId <p>告警消息Id</p>
      */
     public void setAlarmMessageId(Long AlarmMessageId) {
         this.AlarmMessageId = AlarmMessageId;
     }
 
     /**
-     * Get 告警时间，同一条告警可能发送多次，只显示最新的告警时间 
-     * @return AlarmTime 告警时间，同一条告警可能发送多次，只显示最新的告警时间
+     * Get <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p> 
+     * @return AlarmTime <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
      */
     public String getAlarmTime() {
         return this.AlarmTime;
     }
 
     /**
-     * Set 告警时间，同一条告警可能发送多次，只显示最新的告警时间
-     * @param AlarmTime 告警时间，同一条告警可能发送多次，只显示最新的告警时间
+     * Set <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
+     * @param AlarmTime <p>告警时间，同一条告警可能发送多次，只显示最新的告警时间</p>
      */
     public void setAlarmTime(String AlarmTime) {
         this.AlarmTime = AlarmTime;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get <p>任务Id</p> 
+     * @return TaskId <p>任务Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set <p>任务Id</p>
+     * @param TaskId <p>任务Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务的实例数据时间 
-     * @return CurRunDate 任务的实例数据时间
+     * Get <p>任务的实例数据时间</p> 
+     * @return CurRunDate <p>任务的实例数据时间</p>
      */
     public String getCurRunDate() {
         return this.CurRunDate;
     }
 
     /**
-     * Set 任务的实例数据时间
-     * @param CurRunDate 任务的实例数据时间
+     * Set <p>任务的实例数据时间</p>
+     * @param CurRunDate <p>任务的实例数据时间</p>
      */
     public void setCurRunDate(String CurRunDate) {
         this.CurRunDate = CurRunDate;
     }
 
     /**
-     * Get 告警原因 
-     * @return AlarmReason 告警原因
+     * Get <p>告警原因</p> 
+     * @return AlarmReason <p>告警原因</p>
      */
     public String getAlarmReason() {
         return this.AlarmReason;
     }
 
     /**
-     * Set 告警原因
-     * @param AlarmReason 告警原因
+     * Set <p>告警原因</p>
+     * @param AlarmReason <p>告警原因</p>
      */
     public void setAlarmReason(String AlarmReason) {
         this.AlarmReason = AlarmReason;
     }
 
     /**
-     * Get 告警级别，1.普通， 2.重要，3.紧急 
-     * @return AlarmLevel 告警级别，1.普通， 2.重要，3.紧急
+     * Get <p>告警级别，1.普通， 2.重要，3.紧急</p> 
+     * @return AlarmLevel <p>告警级别，1.普通， 2.重要，3.紧急</p>
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set 告警级别，1.普通， 2.重要，3.紧急
-     * @param AlarmLevel 告警级别，1.普通， 2.重要，3.紧急
+     * Set <p>告警级别，1.普通， 2.重要，3.紧急</p>
+     * @param AlarmLevel <p>告警级别，1.普通， 2.重要，3.紧急</p>
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 告警规则Id 
-     * @return AlarmRuleId 告警规则Id
+     * Get <p>告警规则Id</p> 
+     * @return AlarmRuleId <p>告警规则Id</p>
      */
     public String getAlarmRuleId() {
         return this.AlarmRuleId;
     }
 
     /**
-     * Set 告警规则Id
-     * @param AlarmRuleId 告警规则Id
+     * Set <p>告警规则Id</p>
+     * @param AlarmRuleId <p>告警规则Id</p>
      */
     public void setAlarmRuleId(String AlarmRuleId) {
         this.AlarmRuleId = AlarmRuleId;
     }
 
     /**
-     * Get 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群  
-     * @return AlarmWays 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
+     * Get <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p> 
+     * @return AlarmWays <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
      */
     public String [] getAlarmWays() {
         return this.AlarmWays;
     }
 
     /**
-     * Set 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
-     * @param AlarmWays 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群 
+     * Set <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
+     * @param AlarmWays <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群， 8.飞书群，9.钉钉群，10.Slack群,11.Teams群（默认1.邮件），7.企业微信群，8.飞书群，9.钉钉群，10.Slack群，11.Teams群</p>
      */
     public void setAlarmWays(String [] AlarmWays) {
         this.AlarmWays = AlarmWays;
     }
 
     /**
-     * Get 告警接收人 
-     * @return AlarmRecipients 告警接收人
+     * Get <p>告警接收人</p> 
+     * @return AlarmRecipients <p>告警接收人</p>
      */
     public String [] getAlarmRecipients() {
         return this.AlarmRecipients;
     }
 
     /**
-     * Set 告警接收人
-     * @param AlarmRecipients 告警接收人
+     * Set <p>告警接收人</p>
+     * @param AlarmRecipients <p>告警接收人</p>
      */
     public void setAlarmRecipients(String [] AlarmRecipients) {
         this.AlarmRecipients = AlarmRecipients;
+    }
+
+    /**
+     * Get <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomEmails <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCustomEmails() {
+        return this.CustomEmails;
+    }
+
+    /**
+     * Set <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomEmails <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomEmails(String [] CustomEmails) {
+        this.CustomEmails = CustomEmails;
     }
 
     public AlarmMessage() {
@@ -297,6 +325,12 @@ public class AlarmMessage extends AbstractModel {
                 this.AlarmRecipients[i] = new String(source.AlarmRecipients[i]);
             }
         }
+        if (source.CustomEmails != null) {
+            this.CustomEmails = new String[source.CustomEmails.length];
+            for (int i = 0; i < source.CustomEmails.length; i++) {
+                this.CustomEmails[i] = new String(source.CustomEmails[i]);
+            }
+        }
     }
 
 
@@ -314,6 +348,7 @@ public class AlarmMessage extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmRuleId", this.AlarmRuleId);
         this.setParamArraySimple(map, prefix + "AlarmWays.", this.AlarmWays);
         this.setParamArraySimple(map, prefix + "AlarmRecipients.", this.AlarmRecipients);
+        this.setParamArraySimple(map, prefix + "CustomEmails.", this.CustomEmails);
 
     }
 }

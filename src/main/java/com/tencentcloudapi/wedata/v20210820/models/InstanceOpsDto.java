@@ -628,6 +628,14 @@ public class InstanceOpsDto extends AbstractModel {
     private TaskTypeOpsDto ProxyTaskType;
 
     /**
+    * <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId <p>任务ID</p>
@@ -2131,6 +2139,26 @@ public class InstanceOpsDto extends AbstractModel {
         this.ProxyTaskType = ProxyTaskType;
     }
 
+    /**
+     * Get <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2382,6 +2410,9 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.ProxyTaskType != null) {
             this.ProxyTaskType = new TaskTypeOpsDto(source.ProxyTaskType);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -2465,6 +2496,7 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ProxyTaskId", this.ProxyTaskId);
         this.setParamSimple(map, prefix + "WorkflowRunName", this.WorkflowRunName);
         this.setParamObj(map, prefix + "ProxyTaskType.", this.ProxyTaskType);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

@@ -354,6 +354,14 @@ public class MakePlanOpsDto extends AbstractModel {
     private Long [] RunScheduleRangeWeekDays;
 
     /**
+    * <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>补录计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId <p>补录计划ID</p>
@@ -1169,6 +1177,26 @@ public class MakePlanOpsDto extends AbstractModel {
         this.RunScheduleRangeWeekDays = RunScheduleRangeWeekDays;
     }
 
+    /**
+     * Get <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>资源权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 可见</li><li>CAN_MANAGE： 可管理</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public MakePlanOpsDto() {
     }
 
@@ -1318,6 +1346,9 @@ public class MakePlanOpsDto extends AbstractModel {
                 this.RunScheduleRangeWeekDays[i] = new Long(source.RunScheduleRangeWeekDays[i]);
             }
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -1367,6 +1398,7 @@ public class MakePlanOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "RunScheduleRangeStartTime", this.RunScheduleRangeStartTime);
         this.setParamSimple(map, prefix + "RunScheduleRangeEndTime", this.RunScheduleRangeEndTime);
         this.setParamArraySimple(map, prefix + "RunScheduleRangeWeekDays.", this.RunScheduleRangeWeekDays);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

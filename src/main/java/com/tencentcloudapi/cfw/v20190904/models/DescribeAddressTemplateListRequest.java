@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class DescribeAddressTemplateListRequest extends AbstractModel {
 
     /**
-    * 偏移量，分页用
+    * <p>偏移量，分页用</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 条数，分页用
+    * <p>条数，分页用</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+    * <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 排序，取值 ：asc正序，desc逆序
+    * <p>排序，取值 ：asc正序，desc逆序</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 搜索值
+    * <p>搜索值</p>
     */
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
 
     /**
-    * 检索地址模板唯一id
+    * <p>检索地址模板唯一id</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+    * <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * 模板Id
+    * <p>模板Id</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 偏移量，分页用 
-     * @return Offset 偏移量，分页用
+    * <p>模板来源</p>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+     * Get <p>偏移量，分页用</p> 
+     * @return Offset <p>偏移量，分页用</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，分页用
-     * @param Offset 偏移量，分页用
+     * Set <p>偏移量，分页用</p>
+     * @param Offset <p>偏移量，分页用</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 条数，分页用 
-     * @return Limit 条数，分页用
+     * Get <p>条数，分页用</p> 
+     * @return Limit <p>条数，分页用</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数，分页用
-     * @param Limit 条数，分页用
+     * Set <p>条数，分页用</p>
+     * @param Limit <p>条数，分页用</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数 
-     * @return By 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+     * Get <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p> 
+     * @return By <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
-     * @param By 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+     * Set <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
+     * @param By <p>排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get 排序，取值 ：asc正序，desc逆序 
-     * @return Order 排序，取值 ：asc正序，desc逆序
+     * Get <p>排序，取值 ：asc正序，desc逆序</p> 
+     * @return Order <p>排序，取值 ：asc正序，desc逆序</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序，取值 ：asc正序，desc逆序
-     * @param Order 排序，取值 ：asc正序，desc逆序
+     * Set <p>排序，取值 ：asc正序，desc逆序</p>
+     * @param Order <p>排序，取值 ：asc正序，desc逆序</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 搜索值 
-     * @return SearchValue 搜索值
+     * Get <p>搜索值</p> 
+     * @return SearchValue <p>搜索值</p>
      */
     public String getSearchValue() {
         return this.SearchValue;
     }
 
     /**
-     * Set 搜索值
-     * @param SearchValue 搜索值
+     * Set <p>搜索值</p>
+     * @param SearchValue <p>搜索值</p>
      */
     public void setSearchValue(String SearchValue) {
         this.SearchValue = SearchValue;
     }
 
     /**
-     * Get 检索地址模板唯一id 
-     * @return Uuid 检索地址模板唯一id
+     * Get <p>检索地址模板唯一id</p> 
+     * @return Uuid <p>检索地址模板唯一id</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 检索地址模板唯一id
-     * @param Uuid 检索地址模板唯一id
+     * Set <p>检索地址模板唯一id</p>
+     * @param Uuid <p>检索地址模板唯一id</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板 
-     * @return TemplateType 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+     * Get <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p> 
+     * @return TemplateType <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
-     * @param TemplateType 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+     * Set <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
+     * @param TemplateType <p>模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板</p>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get 模板Id 
-     * @return TemplateId 模板Id
+     * Get <p>模板Id</p> 
+     * @return TemplateId <p>模板Id</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id
-     * @param TemplateId 模板Id
+     * Set <p>模板Id</p>
+     * @param TemplateId <p>模板Id</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get <p>模板来源</p> 
+     * @return SourceType <p>模板来源</p>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>模板来源</p>
+     * @param SourceType <p>模板来源</p>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
     }
 
     public DescribeAddressTemplateListRequest() {
@@ -239,6 +262,9 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

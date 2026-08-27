@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBatchOperateTaskDTO extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名
+    * <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -40,7 +40,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String TaskName;
 
     /**
-    * 工作流Id
+    * <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -48,7 +48,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名
+    * <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -56,7 +56,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -64,7 +64,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String Status;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -72,7 +72,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeDesc")
@@ -80,7 +80,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String TaskTypeDesc;
 
     /**
-    * 文件夹名
+    * <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -88,7 +88,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String FolderName;
 
     /**
-    * 文件夹ID
+    * <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -96,7 +96,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String FolderId;
 
     /**
-    * 负责人
+    * <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InCharge")
@@ -104,7 +104,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private String InCharge;
 
     /**
-    * 是否提交
+    * <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Submit")
@@ -112,8 +112,7 @@ public class DescribeBatchOperateTaskDTO extends AbstractModel {
     private Long Submit;
 
     /**
-    * 引擎：
-presto\SparkJob\SparkSql
+    * <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngine")
@@ -121,7 +120,7 @@ presto\SparkJob\SparkSql
     private String DataEngine;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -129,7 +128,7 @@ presto\SparkJob\SparkSql
     private String UpdateTime;
 
     /**
-    * 创造时间
+    * <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -137,15 +136,7 @@ presto\SparkJob\SparkSql
     private String CreateTime;
 
     /**
-    * 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+    * <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleUnit")
@@ -153,7 +144,7 @@ M月
     private String CycleUnit;
 
     /**
-    * 调度计划
+    * <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleDesc")
@@ -161,7 +152,7 @@ M月
     private String ScheduleDesc;
 
     /**
-    * 数据源ID
+    * <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceId")
@@ -169,7 +160,7 @@ M月
     private String DatasourceId;
 
     /**
-    * 数据源类型
+    * <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceType")
@@ -177,7 +168,7 @@ M月
     private String DatasourceType;
 
     /**
-    * 引擎名称
+    * <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComputeResource")
@@ -185,7 +176,7 @@ M月
     private String ComputeResource;
 
     /**
-    * dlc地域
+    * <p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DlcRegion")
@@ -193,7 +184,7 @@ M月
     private String DlcRegion;
 
     /**
-    * 资源组或自定义
+    * <p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsInherit")
@@ -201,9 +192,17 @@ M月
     private String IsInherit;
 
     /**
-     * Get 任务ID
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @return TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -211,9 +210,9 @@ M月
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
+     * @param TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -221,9 +220,9 @@ M月
     }
 
     /**
-     * Get 任务名
+     * Get <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名
+     * @return TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -231,9 +230,9 @@ M月
     }
 
     /**
-     * Set 任务名
+     * Set <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名
+     * @param TaskName <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -241,9 +240,9 @@ M月
     }
 
     /**
-     * Get 工作流Id
+     * Get <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流Id
+     * @return WorkflowId <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -251,9 +250,9 @@ M月
     }
 
     /**
-     * Set 工作流Id
+     * Set <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流Id
+     * @param WorkflowId <p>工作流Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -261,9 +260,9 @@ M月
     }
 
     /**
-     * Get 工作流名
+     * Get <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名
+     * @return WorkflowName <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -271,9 +270,9 @@ M月
     }
 
     /**
-     * Set 工作流名
+     * Set <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名
+     * @param WorkflowName <p>工作流名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -281,9 +280,9 @@ M月
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -291,9 +290,9 @@ M月
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -301,9 +300,9 @@ M月
     }
 
     /**
-     * Get 任务ID
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 任务ID
+     * @return TaskTypeId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -311,9 +310,9 @@ M月
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 任务ID
+     * @param TaskTypeId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -321,9 +320,9 @@ M月
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeDesc 任务类型
+     * @return TaskTypeDesc <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeDesc() {
@@ -331,9 +330,9 @@ M月
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeDesc 任务类型
+     * @param TaskTypeDesc <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeDesc(String TaskTypeDesc) {
@@ -341,9 +340,9 @@ M月
     }
 
     /**
-     * Get 文件夹名
+     * Get <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名
+     * @return FolderName <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -351,9 +350,9 @@ M月
     }
 
     /**
-     * Set 文件夹名
+     * Set <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名
+     * @param FolderName <p>文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -361,9 +360,9 @@ M月
     }
 
     /**
-     * Get 文件夹ID
+     * Get <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹ID
+     * @return FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -371,9 +370,9 @@ M月
     }
 
     /**
-     * Set 文件夹ID
+     * Set <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹ID
+     * @param FolderId <p>文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -381,9 +380,9 @@ M月
     }
 
     /**
-     * Get 负责人
+     * Get <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InCharge 负责人
+     * @return InCharge <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInCharge() {
@@ -391,9 +390,9 @@ M月
     }
 
     /**
-     * Set 负责人
+     * Set <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InCharge 负责人
+     * @param InCharge <p>负责人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInCharge(String InCharge) {
@@ -401,9 +400,9 @@ M月
     }
 
     /**
-     * Get 是否提交
+     * Get <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Submit 是否提交
+     * @return Submit <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubmit() {
@@ -411,9 +410,9 @@ M月
     }
 
     /**
-     * Set 是否提交
+     * Set <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Submit 是否提交
+     * @param Submit <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmit(Long Submit) {
@@ -421,11 +420,9 @@ M月
     }
 
     /**
-     * Get 引擎：
-presto\SparkJob\SparkSql
+     * Get <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataEngine 引擎：
-presto\SparkJob\SparkSql
+     * @return DataEngine <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngine() {
@@ -433,11 +430,9 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Set 引擎：
-presto\SparkJob\SparkSql
+     * Set <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataEngine 引擎：
-presto\SparkJob\SparkSql
+     * @param DataEngine <p>引擎：<br>presto\SparkJob\SparkSql</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngine(String DataEngine) {
@@ -445,9 +440,9 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -455,9 +450,9 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -465,9 +460,9 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Get 创造时间
+     * Get <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创造时间
+     * @return CreateTime <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -475,9 +470,9 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Set 创造时间
+     * Set <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创造时间
+     * @param CreateTime <p>创造时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -485,25 +480,9 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Get 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+     * Get <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleUnit 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+     * @return CycleUnit <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleUnit() {
@@ -511,25 +490,9 @@ M月
     }
 
     /**
-     * Set 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+     * Set <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleUnit 周期类型D天周期
-H小时
-Ccrontab类型
-I分钟
-O一次性
-Y年
-R用户驱动
-W周
-M月
+     * @param CycleUnit <p>周期类型D天周期<br>H小时<br>Ccrontab类型<br>I分钟<br>O一次性<br>Y年<br>R用户驱动<br>W周<br>M月</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleUnit(String CycleUnit) {
@@ -537,9 +500,9 @@ M月
     }
 
     /**
-     * Get 调度计划
+     * Get <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleDesc 调度计划
+     * @return ScheduleDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleDesc() {
@@ -547,9 +510,9 @@ M月
     }
 
     /**
-     * Set 调度计划
+     * Set <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleDesc 调度计划
+     * @param ScheduleDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleDesc(String ScheduleDesc) {
@@ -557,9 +520,9 @@ M月
     }
 
     /**
-     * Get 数据源ID
+     * Get <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceId 数据源ID
+     * @return DatasourceId <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceId() {
@@ -567,9 +530,9 @@ M月
     }
 
     /**
-     * Set 数据源ID
+     * Set <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceId 数据源ID
+     * @param DatasourceId <p>数据源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceId(String DatasourceId) {
@@ -577,9 +540,9 @@ M月
     }
 
     /**
-     * Get 数据源类型
+     * Get <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatasourceType 数据源类型
+     * @return DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceType() {
@@ -587,9 +550,9 @@ M月
     }
 
     /**
-     * Set 数据源类型
+     * Set <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatasourceType 数据源类型
+     * @param DatasourceType <p>数据源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceType(String DatasourceType) {
@@ -597,9 +560,9 @@ M月
     }
 
     /**
-     * Get 引擎名称
+     * Get <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComputeResource 引擎名称
+     * @return ComputeResource <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComputeResource() {
@@ -607,9 +570,9 @@ M月
     }
 
     /**
-     * Set 引擎名称
+     * Set <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComputeResource 引擎名称
+     * @param ComputeResource <p>引擎名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComputeResource(String ComputeResource) {
@@ -617,9 +580,9 @@ M月
     }
 
     /**
-     * Get dlc地域
+     * Get <p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DlcRegion dlc地域
+     * @return DlcRegion <p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDlcRegion() {
@@ -627,9 +590,9 @@ M月
     }
 
     /**
-     * Set dlc地域
+     * Set <p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DlcRegion dlc地域
+     * @param DlcRegion <p>dlc地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDlcRegion(String DlcRegion) {
@@ -637,9 +600,9 @@ M月
     }
 
     /**
-     * Get 资源组或自定义
+     * Get <p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsInherit 资源组或自定义
+     * @return IsInherit <p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsInherit() {
@@ -647,13 +610,33 @@ M月
     }
 
     /**
-     * Set 资源组或自定义
+     * Set <p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsInherit 资源组或自定义
+     * @param IsInherit <p>资源组或自定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsInherit(String IsInherit) {
         this.IsInherit = IsInherit;
+    }
+
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
     }
 
     public DescribeBatchOperateTaskDTO() {
@@ -727,6 +710,9 @@ M月
         if (source.IsInherit != null) {
             this.IsInherit = new String(source.IsInherit);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -755,6 +741,7 @@ M月
         this.setParamSimple(map, prefix + "ComputeResource", this.ComputeResource);
         this.setParamSimple(map, prefix + "DlcRegion", this.DlcRegion);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

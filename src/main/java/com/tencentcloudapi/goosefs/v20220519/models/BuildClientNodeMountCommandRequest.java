@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class BuildClientNodeMountCommandRequest extends AbstractModel {
 
     /**
-    * 文件系统ID
+    * <p>文件系统ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
+    * <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
     */
     @SerializedName("CustomMountDir")
     @Expose
     private String CustomMountDir;
 
     /**
-    * 客户端集群ID
+    * <p>客户端集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 文件系统ID 
-     * @return FileSystemId 文件系统ID
+     * Get <p>文件系统ID</p> 
+     * @return FileSystemId <p>文件系统ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID
-     * @param FileSystemId 文件系统ID
+     * Set <p>文件系统ID</p>
+     * @param FileSystemId <p>文件系统ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy 
-     * @return CustomMountDir 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
+     * Get <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p> 
+     * @return CustomMountDir <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
      */
     public String getCustomMountDir() {
         return this.CustomMountDir;
     }
 
     /**
-     * Set 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
-     * @param CustomMountDir 自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy
+     * Set <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
+     * @param CustomMountDir <p>自定义挂载目录的绝对路径, 如果未指定, 则会使用默认值, 格式/goosefsx/${fs_id}-proxy. 比如/goosefsx/x-c60-a2b3d4-proxy</p>
      */
     public void setCustomMountDir(String CustomMountDir) {
         this.CustomMountDir = CustomMountDir;
     }
 
     /**
-     * Get 客户端集群ID 
-     * @return ClusterId 客户端集群ID
+     * Get <p>客户端集群ID</p> 
+     * @return ClusterId <p>客户端集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 客户端集群ID
-     * @param ClusterId 客户端集群ID
+     * Set <p>客户端集群ID</p>
+     * @param ClusterId <p>客户端集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

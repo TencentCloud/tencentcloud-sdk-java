@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BuildClientNodeMountCommandResponse extends AbstractModel {
 
     /**
-    * 挂载命令
+    * <p>挂载命令</p>
     */
     @SerializedName("Command")
     @Expose
@@ -38,16 +38,16 @@ public class BuildClientNodeMountCommandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 挂载命令 
-     * @return Command 挂载命令
+     * Get <p>挂载命令</p> 
+     * @return Command <p>挂载命令</p>
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 挂载命令
-     * @param Command 挂载命令
+     * Set <p>挂载命令</p>
+     * @param Command <p>挂载命令</p>
      */
     public void setCommand(String Command) {
         this.Command = Command;

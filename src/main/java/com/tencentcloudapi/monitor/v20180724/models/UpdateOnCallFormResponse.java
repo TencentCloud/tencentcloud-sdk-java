@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateOnCallFormResponse extends AbstractModel {
 
     /**
-    * 值班表id
+    * <p>值班表id</p>
     */
     @SerializedName("OnCallFormID")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateOnCallFormResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 值班表id 
-     * @return OnCallFormID 值班表id
+     * Get <p>值班表id</p> 
+     * @return OnCallFormID <p>值班表id</p>
      */
     public String getOnCallFormID() {
         return this.OnCallFormID;
     }
 
     /**
-     * Set 值班表id
-     * @param OnCallFormID 值班表id
+     * Set <p>值班表id</p>
+     * @param OnCallFormID <p>值班表id</p>
      */
     public void setOnCallFormID(String OnCallFormID) {
         this.OnCallFormID = OnCallFormID;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePendingSubmitTaskInfo extends AbstractModel {
 
     /**
-    * 任务编号
+    * <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -40,7 +40,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String TaskName;
 
     /**
-    * 修改类型
+    * <p>修改类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyType")
@@ -48,7 +48,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String ModifyType;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
@@ -56,7 +56,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String TaskStatus;
 
     /**
-    * 提交预检查（Y/N）
+    * <p>提交预检查（Y/N）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubmitPreCheck")
@@ -64,7 +64,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String SubmitPreCheck;
 
     /**
-    * 提交预检查提交可能会失败的原因
+    * <p>提交预检查提交可能会失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubmitPreCheckDetailList")
@@ -72,7 +72,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private TaskSubmitPreCheckDetailInfo [] SubmitPreCheckDetailList;
 
     /**
-    * 资源组编号
+    * <p>资源组编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupId")
@@ -80,7 +80,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String ExecutorGroupId;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorGroupName")
@@ -88,35 +88,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * <p>任务类型id，取值范围：</p>
-<ul>
-<li>26 离线集成任务</li>
-<li>30 Python任务</li>
-<li>31 PySpark任务</li>
-<li>34 HiveSQL任务</li>
-<li>35 Shell任务</li>
-<li>36 SparkSQL任务</li>
-<li>21 JdbcSQL任务</li>
-<li>23 TDSQL-PostgreSQL任务</li>
-<li>32 DLCSQL任务</li>
-<li>33 Impala任务</li>
-<li>41 Kettle任务</li>
-<li>42 Tchouse-X任务</li>
-<li>43 TCHouse-X SQL任务</li>
-<li>46 DLCSpark任务</li>
-<li>50 DLC-PySpark任务</li>
-<li>47 TiOne任务</li>
-<li>48 Trino任务</li>
-<li>39 Spark任务</li>
-<li>92 MapReduce任务</li>
-<li>38 Shell表单模式任务</li>
-<li>130 BranchNode任务</li>
-<li>131 MergeNode任务</li>
-<li>132 Notebook任务</li>
-<li>133 SSH任务</li>
-<li>134 StarRocks任务</li>
-<li>137 For-each任务</li>
-</ul>
+    * <p>任务类型id，取值范围：</p><ul><li>26 离线集成任务</li><li>30 Python任务</li><li>31 PySpark任务</li><li>34 HiveSQL任务</li><li>35 Shell任务</li><li>36 SparkSQL任务</li><li>21 JdbcSQL任务</li><li>23 TDSQL-PostgreSQL任务</li><li>32 DLCSQL任务</li><li>33 Impala任务</li><li>41 Kettle任务</li><li>42 Tchouse-X任务</li><li>43 TCHouse-X SQL任务</li><li>46 DLCSpark任务</li><li>50 DLC-PySpark任务</li><li>47 TiOne任务</li><li>48 Trino任务</li><li>39 Spark任务</li><li>92 MapReduce任务</li><li>38 Shell表单模式任务</li><li>130 BranchNode任务</li><li>131 MergeNode任务</li><li>132 Notebook任务</li><li>133 SSH任务</li><li>134 StarRocks任务</li><li>137 For-each任务</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -124,9 +96,17 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-     * Get 任务编号
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
+     * Get <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务编号
+     * @return TaskId <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -134,9 +114,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务编号
+     * Set <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务编号
+     * @param TaskId <p>任务编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -144,9 +124,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -154,9 +134,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -164,9 +144,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 修改类型
+     * Get <p>修改类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyType 修改类型
+     * @return ModifyType <p>修改类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyType() {
@@ -174,9 +154,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 修改类型
+     * Set <p>修改类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyType 修改类型
+     * @param ModifyType <p>修改类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyType(String ModifyType) {
@@ -184,9 +164,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务状态
+     * Get <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskStatus 任务状态
+     * @return TaskStatus <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStatus() {
@@ -194,9 +174,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务状态
+     * Set <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskStatus 任务状态
+     * @param TaskStatus <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(String TaskStatus) {
@@ -204,9 +184,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 提交预检查（Y/N）
+     * Get <p>提交预检查（Y/N）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubmitPreCheck 提交预检查（Y/N）
+     * @return SubmitPreCheck <p>提交预检查（Y/N）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubmitPreCheck() {
@@ -214,9 +194,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 提交预检查（Y/N）
+     * Set <p>提交预检查（Y/N）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubmitPreCheck 提交预检查（Y/N）
+     * @param SubmitPreCheck <p>提交预检查（Y/N）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmitPreCheck(String SubmitPreCheck) {
@@ -224,9 +204,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 提交预检查提交可能会失败的原因
+     * Get <p>提交预检查提交可能会失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubmitPreCheckDetailList 提交预检查提交可能会失败的原因
+     * @return SubmitPreCheckDetailList <p>提交预检查提交可能会失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskSubmitPreCheckDetailInfo [] getSubmitPreCheckDetailList() {
@@ -234,9 +214,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 提交预检查提交可能会失败的原因
+     * Set <p>提交预检查提交可能会失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubmitPreCheckDetailList 提交预检查提交可能会失败的原因
+     * @param SubmitPreCheckDetailList <p>提交预检查提交可能会失败的原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmitPreCheckDetailList(TaskSubmitPreCheckDetailInfo [] SubmitPreCheckDetailList) {
@@ -244,9 +224,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源组编号
+     * Get <p>资源组编号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupId 资源组编号
+     * @return ExecutorGroupId <p>资源组编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupId() {
@@ -254,9 +234,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 资源组编号
+     * Set <p>资源组编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupId 资源组编号
+     * @param ExecutorGroupId <p>资源组编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupId(String ExecutorGroupId) {
@@ -264,9 +244,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源组名称
+     * Get <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutorGroupName 资源组名称
+     * @return ExecutorGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorGroupName() {
@@ -274,9 +254,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 资源组名称
+     * Set <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutorGroupName 资源组名称
+     * @param ExecutorGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
@@ -284,65 +264,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>任务类型id，取值范围：</p>
-<ul>
-<li>26 离线集成任务</li>
-<li>30 Python任务</li>
-<li>31 PySpark任务</li>
-<li>34 HiveSQL任务</li>
-<li>35 Shell任务</li>
-<li>36 SparkSQL任务</li>
-<li>21 JdbcSQL任务</li>
-<li>23 TDSQL-PostgreSQL任务</li>
-<li>32 DLCSQL任务</li>
-<li>33 Impala任务</li>
-<li>41 Kettle任务</li>
-<li>42 Tchouse-X任务</li>
-<li>43 TCHouse-X SQL任务</li>
-<li>46 DLCSpark任务</li>
-<li>50 DLC-PySpark任务</li>
-<li>47 TiOne任务</li>
-<li>48 Trino任务</li>
-<li>39 Spark任务</li>
-<li>92 MapReduce任务</li>
-<li>38 Shell表单模式任务</li>
-<li>130 BranchNode任务</li>
-<li>131 MergeNode任务</li>
-<li>132 Notebook任务</li>
-<li>133 SSH任务</li>
-<li>134 StarRocks任务</li>
-<li>137 For-each任务</li>
-</ul>
+     * Get <p>任务类型id，取值范围：</p><ul><li>26 离线集成任务</li><li>30 Python任务</li><li>31 PySpark任务</li><li>34 HiveSQL任务</li><li>35 Shell任务</li><li>36 SparkSQL任务</li><li>21 JdbcSQL任务</li><li>23 TDSQL-PostgreSQL任务</li><li>32 DLCSQL任务</li><li>33 Impala任务</li><li>41 Kettle任务</li><li>42 Tchouse-X任务</li><li>43 TCHouse-X SQL任务</li><li>46 DLCSpark任务</li><li>50 DLC-PySpark任务</li><li>47 TiOne任务</li><li>48 Trino任务</li><li>39 Spark任务</li><li>92 MapReduce任务</li><li>38 Shell表单模式任务</li><li>130 BranchNode任务</li><li>131 MergeNode任务</li><li>132 Notebook任务</li><li>133 SSH任务</li><li>134 StarRocks任务</li><li>137 For-each任务</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId <p>任务类型id，取值范围：</p>
-<ul>
-<li>26 离线集成任务</li>
-<li>30 Python任务</li>
-<li>31 PySpark任务</li>
-<li>34 HiveSQL任务</li>
-<li>35 Shell任务</li>
-<li>36 SparkSQL任务</li>
-<li>21 JdbcSQL任务</li>
-<li>23 TDSQL-PostgreSQL任务</li>
-<li>32 DLCSQL任务</li>
-<li>33 Impala任务</li>
-<li>41 Kettle任务</li>
-<li>42 Tchouse-X任务</li>
-<li>43 TCHouse-X SQL任务</li>
-<li>46 DLCSpark任务</li>
-<li>50 DLC-PySpark任务</li>
-<li>47 TiOne任务</li>
-<li>48 Trino任务</li>
-<li>39 Spark任务</li>
-<li>92 MapReduce任务</li>
-<li>38 Shell表单模式任务</li>
-<li>130 BranchNode任务</li>
-<li>131 MergeNode任务</li>
-<li>132 Notebook任务</li>
-<li>133 SSH任务</li>
-<li>134 StarRocks任务</li>
-<li>137 For-each任务</li>
-</ul>
+     * @return TaskTypeId <p>任务类型id，取值范围：</p><ul><li>26 离线集成任务</li><li>30 Python任务</li><li>31 PySpark任务</li><li>34 HiveSQL任务</li><li>35 Shell任务</li><li>36 SparkSQL任务</li><li>21 JdbcSQL任务</li><li>23 TDSQL-PostgreSQL任务</li><li>32 DLCSQL任务</li><li>33 Impala任务</li><li>41 Kettle任务</li><li>42 Tchouse-X任务</li><li>43 TCHouse-X SQL任务</li><li>46 DLCSpark任务</li><li>50 DLC-PySpark任务</li><li>47 TiOne任务</li><li>48 Trino任务</li><li>39 Spark任务</li><li>92 MapReduce任务</li><li>38 Shell表单模式任务</li><li>130 BranchNode任务</li><li>131 MergeNode任务</li><li>132 Notebook任务</li><li>133 SSH任务</li><li>134 StarRocks任务</li><li>137 For-each任务</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -350,69 +274,33 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set <p>任务类型id，取值范围：</p>
-<ul>
-<li>26 离线集成任务</li>
-<li>30 Python任务</li>
-<li>31 PySpark任务</li>
-<li>34 HiveSQL任务</li>
-<li>35 Shell任务</li>
-<li>36 SparkSQL任务</li>
-<li>21 JdbcSQL任务</li>
-<li>23 TDSQL-PostgreSQL任务</li>
-<li>32 DLCSQL任务</li>
-<li>33 Impala任务</li>
-<li>41 Kettle任务</li>
-<li>42 Tchouse-X任务</li>
-<li>43 TCHouse-X SQL任务</li>
-<li>46 DLCSpark任务</li>
-<li>50 DLC-PySpark任务</li>
-<li>47 TiOne任务</li>
-<li>48 Trino任务</li>
-<li>39 Spark任务</li>
-<li>92 MapReduce任务</li>
-<li>38 Shell表单模式任务</li>
-<li>130 BranchNode任务</li>
-<li>131 MergeNode任务</li>
-<li>132 Notebook任务</li>
-<li>133 SSH任务</li>
-<li>134 StarRocks任务</li>
-<li>137 For-each任务</li>
-</ul>
+     * Set <p>任务类型id，取值范围：</p><ul><li>26 离线集成任务</li><li>30 Python任务</li><li>31 PySpark任务</li><li>34 HiveSQL任务</li><li>35 Shell任务</li><li>36 SparkSQL任务</li><li>21 JdbcSQL任务</li><li>23 TDSQL-PostgreSQL任务</li><li>32 DLCSQL任务</li><li>33 Impala任务</li><li>41 Kettle任务</li><li>42 Tchouse-X任务</li><li>43 TCHouse-X SQL任务</li><li>46 DLCSpark任务</li><li>50 DLC-PySpark任务</li><li>47 TiOne任务</li><li>48 Trino任务</li><li>39 Spark任务</li><li>92 MapReduce任务</li><li>38 Shell表单模式任务</li><li>130 BranchNode任务</li><li>131 MergeNode任务</li><li>132 Notebook任务</li><li>133 SSH任务</li><li>134 StarRocks任务</li><li>137 For-each任务</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId <p>任务类型id，取值范围：</p>
-<ul>
-<li>26 离线集成任务</li>
-<li>30 Python任务</li>
-<li>31 PySpark任务</li>
-<li>34 HiveSQL任务</li>
-<li>35 Shell任务</li>
-<li>36 SparkSQL任务</li>
-<li>21 JdbcSQL任务</li>
-<li>23 TDSQL-PostgreSQL任务</li>
-<li>32 DLCSQL任务</li>
-<li>33 Impala任务</li>
-<li>41 Kettle任务</li>
-<li>42 Tchouse-X任务</li>
-<li>43 TCHouse-X SQL任务</li>
-<li>46 DLCSpark任务</li>
-<li>50 DLC-PySpark任务</li>
-<li>47 TiOne任务</li>
-<li>48 Trino任务</li>
-<li>39 Spark任务</li>
-<li>92 MapReduce任务</li>
-<li>38 Shell表单模式任务</li>
-<li>130 BranchNode任务</li>
-<li>131 MergeNode任务</li>
-<li>132 Notebook任务</li>
-<li>133 SSH任务</li>
-<li>134 StarRocks任务</li>
-<li>137 For-each任务</li>
-</ul>
+     * @param TaskTypeId <p>任务类型id，取值范围：</p><ul><li>26 离线集成任务</li><li>30 Python任务</li><li>31 PySpark任务</li><li>34 HiveSQL任务</li><li>35 Shell任务</li><li>36 SparkSQL任务</li><li>21 JdbcSQL任务</li><li>23 TDSQL-PostgreSQL任务</li><li>32 DLCSQL任务</li><li>33 Impala任务</li><li>41 Kettle任务</li><li>42 Tchouse-X任务</li><li>43 TCHouse-X SQL任务</li><li>46 DLCSpark任务</li><li>50 DLC-PySpark任务</li><li>47 TiOne任务</li><li>48 Trino任务</li><li>39 Spark任务</li><li>92 MapReduce任务</li><li>38 Shell表单模式任务</li><li>130 BranchNode任务</li><li>131 MergeNode任务</li><li>132 Notebook任务</li><li>133 SSH任务</li><li>134 StarRocks任务</li><li>137 For-each任务</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
         this.TaskTypeId = TaskTypeId;
+    }
+
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
     }
 
     public DescribePendingSubmitTaskInfo() {
@@ -453,6 +341,9 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
         if (source.TaskTypeId != null) {
             this.TaskTypeId = new Long(source.TaskTypeId);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -469,6 +360,7 @@ public class DescribePendingSubmitTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
         this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
         this.setParamSimple(map, prefix + "TaskTypeId", this.TaskTypeId);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

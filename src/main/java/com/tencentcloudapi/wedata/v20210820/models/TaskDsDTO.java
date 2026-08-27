@@ -872,6 +872,14 @@ public class TaskDsDTO extends AbstractModel {
     private Long LastUpdateTimestamp;
 
     /**
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId <p>任务ID</p>
@@ -2991,6 +2999,26 @@ public class TaskDsDTO extends AbstractModel {
         this.LastUpdateTimestamp = LastUpdateTimestamp;
     }
 
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public TaskDsDTO() {
     }
 
@@ -3344,6 +3372,9 @@ public class TaskDsDTO extends AbstractModel {
         if (source.LastUpdateTimestamp != null) {
             this.LastUpdateTimestamp = new Long(source.LastUpdateTimestamp);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -3457,6 +3488,7 @@ public class TaskDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         this.setParamSimple(map, prefix + "LastUpdateTimestamp", this.LastUpdateTimestamp);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

@@ -24,378 +24,368 @@ import java.util.HashMap;
 public class HaVip extends AbstractModel {
 
     /**
-    * `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+    * <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-    * `HAVIP`名称。
+    * <p><code>HAVIP</code>名称。</p>
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
 
     /**
-    * 虚拟IP地址。
+    * <p>虚拟IP地址。</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * `HAVIP`所在私有网络`ID`。
+    * <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * `HAVIP`所在子网`ID`。
+    * <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * `HAVIP`关联弹性网卡`ID`。
+    * <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 被绑定的实例`ID`。
+    * <p>被绑定的实例<code>ID</code>。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 绑定`EIP`。
+    * <p>绑定<code>EIP</code>。</p>
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-    * 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+    * <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 使用havip的业务标识。
+    * <p>使用havip的业务标识。</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * `HAVIP`的飘移范围。
+    * <p><code>HAVIP</code>的飘移范围。</p>
     */
     @SerializedName("HaVipAssociationSet")
     @Expose
     private HaVipAssociation [] HaVipAssociationSet;
 
     /**
-    * 是否开启`HAVIP`的漂移范围校验。
+    * <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
     */
     @SerializedName("CheckAssociate")
     @Expose
     private Boolean CheckAssociate;
 
     /**
-    * CDC实例ID。
+    * <p>CDC实例ID。</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+    * <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
     */
     @SerializedName("FlushedTime")
     @Expose
     private String FlushedTime;
 
     /**
-    * 标签键值对。	
+    * <p>标签键值对。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-     * Get `HAVIP`的`ID`，是`HAVIP`的唯一标识。 
-     * @return HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * Get <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p> 
+     * @return HaVipId <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`的`ID`，是`HAVIP`的唯一标识。
-     * @param HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * Set <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
+     * @param HaVipId <p><code>HAVIP</code>的<code>ID</code>，是<code>HAVIP</code>的唯一标识。</p>
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get `HAVIP`名称。 
-     * @return HaVipName `HAVIP`名称。
+     * Get <p><code>HAVIP</code>名称。</p> 
+     * @return HaVipName <p><code>HAVIP</code>名称。</p>
      */
     public String getHaVipName() {
         return this.HaVipName;
     }
 
     /**
-     * Set `HAVIP`名称。
-     * @param HaVipName `HAVIP`名称。
+     * Set <p><code>HAVIP</code>名称。</p>
+     * @param HaVipName <p><code>HAVIP</code>名称。</p>
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
     }
 
     /**
-     * Get 虚拟IP地址。 
-     * @return Vip 虚拟IP地址。
+     * Get <p>虚拟IP地址。</p> 
+     * @return Vip <p>虚拟IP地址。</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 虚拟IP地址。
-     * @param Vip 虚拟IP地址。
+     * Set <p>虚拟IP地址。</p>
+     * @param Vip <p>虚拟IP地址。</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get `HAVIP`所在私有网络`ID`。 
-     * @return VpcId `HAVIP`所在私有网络`ID`。
+     * Get <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p> 
+     * @return VpcId <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `HAVIP`所在私有网络`ID`。
-     * @param VpcId `HAVIP`所在私有网络`ID`。
+     * Set <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
+     * @param VpcId <p><code>HAVIP</code>所在私有网络<code>ID</code>。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get `HAVIP`所在子网`ID`。 
-     * @return SubnetId `HAVIP`所在子网`ID`。
+     * Get <p><code>HAVIP</code>所在子网<code>ID</code>。</p> 
+     * @return SubnetId <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set `HAVIP`所在子网`ID`。
-     * @param SubnetId `HAVIP`所在子网`ID`。
+     * Set <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
+     * @param SubnetId <p><code>HAVIP</code>所在子网<code>ID</code>。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get `HAVIP`关联弹性网卡`ID`。 
-     * @return NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
+     * Get <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p> 
+     * @return NetworkInterfaceId <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set `HAVIP`关联弹性网卡`ID`。
-     * @param NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
+     * Set <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
+     * @param NetworkInterfaceId <p><code>HAVIP</code>关联弹性网卡<code>ID</code>。</p>
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 被绑定的实例`ID`。 
-     * @return InstanceId 被绑定的实例`ID`。
+     * Get <p>被绑定的实例<code>ID</code>。</p> 
+     * @return InstanceId <p>被绑定的实例<code>ID</code>。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 被绑定的实例`ID`。
-     * @param InstanceId 被绑定的实例`ID`。
+     * Set <p>被绑定的实例<code>ID</code>。</p>
+     * @param InstanceId <p>被绑定的实例<code>ID</code>。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 绑定`EIP`。 
-     * @return AddressIp 绑定`EIP`。
+     * Get <p>绑定<code>EIP</code>。</p> 
+     * @return AddressIp <p>绑定<code>EIP</code>。</p>
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set 绑定`EIP`。
-     * @param AddressIp 绑定`EIP`。
+     * Set <p>绑定<code>EIP</code>。</p>
+     * @param AddressIp <p>绑定<code>EIP</code>。</p>
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;
     }
 
     /**
-     * Get 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li> 
-     * @return State 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+     * Get <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li> 
+     * @return State <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
-     * @param State 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+     * Set <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
+     * @param State <p>状态：</p><li><code>AVAILABLE</code>：运行中</li><li><code>UNBIND</code>：未绑定</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 使用havip的业务标识。 
-     * @return Business 使用havip的业务标识。
+     * Get <p>使用havip的业务标识。</p> 
+     * @return Business <p>使用havip的业务标识。</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 使用havip的业务标识。
-     * @param Business 使用havip的业务标识。
+     * Set <p>使用havip的业务标识。</p>
+     * @param Business <p>使用havip的业务标识。</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get `HAVIP`的飘移范围。 
-     * @return HaVipAssociationSet `HAVIP`的飘移范围。
+     * Get <p><code>HAVIP</code>的飘移范围。</p> 
+     * @return HaVipAssociationSet <p><code>HAVIP</code>的飘移范围。</p>
      */
     public HaVipAssociation [] getHaVipAssociationSet() {
         return this.HaVipAssociationSet;
     }
 
     /**
-     * Set `HAVIP`的飘移范围。
-     * @param HaVipAssociationSet `HAVIP`的飘移范围。
+     * Set <p><code>HAVIP</code>的飘移范围。</p>
+     * @param HaVipAssociationSet <p><code>HAVIP</code>的飘移范围。</p>
      */
     public void setHaVipAssociationSet(HaVipAssociation [] HaVipAssociationSet) {
         this.HaVipAssociationSet = HaVipAssociationSet;
     }
 
     /**
-     * Get 是否开启`HAVIP`的漂移范围校验。 
-     * @return CheckAssociate 是否开启`HAVIP`的漂移范围校验。
+     * Get <p>是否开启<code>HAVIP</code>的漂移范围校验。</p> 
+     * @return CheckAssociate <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
      */
     public Boolean getCheckAssociate() {
         return this.CheckAssociate;
     }
 
     /**
-     * Set 是否开启`HAVIP`的漂移范围校验。
-     * @param CheckAssociate 是否开启`HAVIP`的漂移范围校验。
+     * Set <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
+     * @param CheckAssociate <p>是否开启<code>HAVIP</code>的漂移范围校验。</p>
      */
     public void setCheckAssociate(Boolean CheckAssociate) {
         this.CheckAssociate = CheckAssociate;
     }
 
     /**
-     * Get CDC实例ID。 
-     * @return CdcId CDC实例ID。
+     * Get <p>CDC实例ID。</p> 
+     * @return CdcId <p>CDC实例ID。</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC实例ID。
-     * @param CdcId CDC实例ID。
+     * Set <p>CDC实例ID。</p>
+     * @param CdcId <p>CDC实例ID。</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00 
-     * @return FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * Get <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p> 
+     * @return FlushedTime <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
      */
     public String getFlushedTime() {
         return this.FlushedTime;
     }
 
     /**
-     * Set HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-     * @param FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * Set <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
+     * @param FlushedTime <p>HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00</p>
      */
     public void setFlushedTime(String FlushedTime) {
         this.FlushedTime = FlushedTime;
     }
 
     /**
-     * Get 标签键值对。	 
-     * @return TagSet 标签键值对。	
+     * Get <p>标签键值对。</p> 
+     * @return TagSet <p>标签键值对。</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对。	
-     * @param TagSet 标签键值对。	
+     * Set <p>标签键值对。</p>
+     * @param TagSet <p>标签键值对。</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeOnCallFormRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 值班id
+    * <p>值班id</p>
     */
     @SerializedName("OnCallFormID")
     @Expose
     private String OnCallFormID;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 值班id 
-     * @return OnCallFormID 值班id
+     * Get <p>值班id</p> 
+     * @return OnCallFormID <p>值班id</p>
      */
     public String getOnCallFormID() {
         return this.OnCallFormID;
     }
 
     /**
-     * Set 值班id
-     * @param OnCallFormID 值班id
+     * Set <p>值班id</p>
+     * @param OnCallFormID <p>值班id</p>
      */
     public void setOnCallFormID(String OnCallFormID) {
         this.OnCallFormID = OnCallFormID;

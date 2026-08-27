@@ -24,60 +24,67 @@ import java.util.HashMap;
 public class DescribeAddressTemplateListResponse extends AbstractModel {
 
     /**
-    * 模板总数
+    * <p>模板总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 模板列表数据
+    * <p>模板列表数据</p>
     */
     @SerializedName("Data")
     @Expose
     private TemplateListInfo [] Data;
 
     /**
-    * 模板名称列表
+    * <p>模板名称列表</p>
     */
     @SerializedName("NameList")
     @Expose
     private String [] NameList;
 
     /**
-    * Ip地址模板数量
+    * <p>Ip地址模板数量</p>
     */
     @SerializedName("IpTemplateCount")
     @Expose
     private Long IpTemplateCount;
 
     /**
-    * 域名地址模板数量
+    * <p>域名地址模板数量</p>
     */
     @SerializedName("DomainTemplateCount")
     @Expose
     private Long DomainTemplateCount;
 
     /**
-    * 协议端口模板数量
+    * <p>协议端口模板数量</p>
     */
     @SerializedName("PortTemplateCount")
     @Expose
     private Long PortTemplateCount;
 
     /**
-    * 已使用的地址模板数
+    * <p>已使用的地址模板数</p>
     */
     @SerializedName("UsedTemplateCount")
     @Expose
     private Long UsedTemplateCount;
 
     /**
-    * 地址模板配额数量
+    * <p>地址模板配额数量</p>
     */
     @SerializedName("TemplateQuotaCount")
     @Expose
     private Long TemplateQuotaCount;
+
+    /**
+    * <p>容器服务地址模板数量</p>
+    */
+    @SerializedName("TkeTemplateCount")
+    @Expose
+    private Long TkeTemplateCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -87,131 +94,147 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板总数 
-     * @return Total 模板总数
+     * Get <p>模板总数</p> 
+     * @return Total <p>模板总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 模板总数
-     * @param Total 模板总数
+     * Set <p>模板总数</p>
+     * @param Total <p>模板总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 模板列表数据 
-     * @return Data 模板列表数据
+     * Get <p>模板列表数据</p> 
+     * @return Data <p>模板列表数据</p>
      */
     public TemplateListInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 模板列表数据
-     * @param Data 模板列表数据
+     * Set <p>模板列表数据</p>
+     * @param Data <p>模板列表数据</p>
      */
     public void setData(TemplateListInfo [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 模板名称列表 
-     * @return NameList 模板名称列表
+     * Get <p>模板名称列表</p> 
+     * @return NameList <p>模板名称列表</p>
      */
     public String [] getNameList() {
         return this.NameList;
     }
 
     /**
-     * Set 模板名称列表
-     * @param NameList 模板名称列表
+     * Set <p>模板名称列表</p>
+     * @param NameList <p>模板名称列表</p>
      */
     public void setNameList(String [] NameList) {
         this.NameList = NameList;
     }
 
     /**
-     * Get Ip地址模板数量 
-     * @return IpTemplateCount Ip地址模板数量
+     * Get <p>Ip地址模板数量</p> 
+     * @return IpTemplateCount <p>Ip地址模板数量</p>
      */
     public Long getIpTemplateCount() {
         return this.IpTemplateCount;
     }
 
     /**
-     * Set Ip地址模板数量
-     * @param IpTemplateCount Ip地址模板数量
+     * Set <p>Ip地址模板数量</p>
+     * @param IpTemplateCount <p>Ip地址模板数量</p>
      */
     public void setIpTemplateCount(Long IpTemplateCount) {
         this.IpTemplateCount = IpTemplateCount;
     }
 
     /**
-     * Get 域名地址模板数量 
-     * @return DomainTemplateCount 域名地址模板数量
+     * Get <p>域名地址模板数量</p> 
+     * @return DomainTemplateCount <p>域名地址模板数量</p>
      */
     public Long getDomainTemplateCount() {
         return this.DomainTemplateCount;
     }
 
     /**
-     * Set 域名地址模板数量
-     * @param DomainTemplateCount 域名地址模板数量
+     * Set <p>域名地址模板数量</p>
+     * @param DomainTemplateCount <p>域名地址模板数量</p>
      */
     public void setDomainTemplateCount(Long DomainTemplateCount) {
         this.DomainTemplateCount = DomainTemplateCount;
     }
 
     /**
-     * Get 协议端口模板数量 
-     * @return PortTemplateCount 协议端口模板数量
+     * Get <p>协议端口模板数量</p> 
+     * @return PortTemplateCount <p>协议端口模板数量</p>
      */
     public Long getPortTemplateCount() {
         return this.PortTemplateCount;
     }
 
     /**
-     * Set 协议端口模板数量
-     * @param PortTemplateCount 协议端口模板数量
+     * Set <p>协议端口模板数量</p>
+     * @param PortTemplateCount <p>协议端口模板数量</p>
      */
     public void setPortTemplateCount(Long PortTemplateCount) {
         this.PortTemplateCount = PortTemplateCount;
     }
 
     /**
-     * Get 已使用的地址模板数 
-     * @return UsedTemplateCount 已使用的地址模板数
+     * Get <p>已使用的地址模板数</p> 
+     * @return UsedTemplateCount <p>已使用的地址模板数</p>
      */
     public Long getUsedTemplateCount() {
         return this.UsedTemplateCount;
     }
 
     /**
-     * Set 已使用的地址模板数
-     * @param UsedTemplateCount 已使用的地址模板数
+     * Set <p>已使用的地址模板数</p>
+     * @param UsedTemplateCount <p>已使用的地址模板数</p>
      */
     public void setUsedTemplateCount(Long UsedTemplateCount) {
         this.UsedTemplateCount = UsedTemplateCount;
     }
 
     /**
-     * Get 地址模板配额数量 
-     * @return TemplateQuotaCount 地址模板配额数量
+     * Get <p>地址模板配额数量</p> 
+     * @return TemplateQuotaCount <p>地址模板配额数量</p>
      */
     public Long getTemplateQuotaCount() {
         return this.TemplateQuotaCount;
     }
 
     /**
-     * Set 地址模板配额数量
-     * @param TemplateQuotaCount 地址模板配额数量
+     * Set <p>地址模板配额数量</p>
+     * @param TemplateQuotaCount <p>地址模板配额数量</p>
      */
     public void setTemplateQuotaCount(Long TemplateQuotaCount) {
         this.TemplateQuotaCount = TemplateQuotaCount;
+    }
+
+    /**
+     * Get <p>容器服务地址模板数量</p> 
+     * @return TkeTemplateCount <p>容器服务地址模板数量</p>
+     */
+    public Long getTkeTemplateCount() {
+        return this.TkeTemplateCount;
+    }
+
+    /**
+     * Set <p>容器服务地址模板数量</p>
+     * @param TkeTemplateCount <p>容器服务地址模板数量</p>
+     */
+    public void setTkeTemplateCount(Long TkeTemplateCount) {
+        this.TkeTemplateCount = TkeTemplateCount;
     }
 
     /**
@@ -268,6 +291,9 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
         if (source.TemplateQuotaCount != null) {
             this.TemplateQuotaCount = new Long(source.TemplateQuotaCount);
         }
+        if (source.TkeTemplateCount != null) {
+            this.TkeTemplateCount = new Long(source.TkeTemplateCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -286,6 +312,7 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "PortTemplateCount", this.PortTemplateCount);
         this.setParamSimple(map, prefix + "UsedTemplateCount", this.UsedTemplateCount);
         this.setParamSimple(map, prefix + "TemplateQuotaCount", this.TemplateQuotaCount);
+        this.setParamSimple(map, prefix + "TkeTemplateCount", this.TkeTemplateCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

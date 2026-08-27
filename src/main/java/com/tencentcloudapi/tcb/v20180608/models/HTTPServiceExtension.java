@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class HTTPServiceExtension extends AbstractModel {
 
     /**
-    * 添加请求头列表
+    * <p>添加请求头列表</p>
     */
     @SerializedName("HeadersHandler")
     @Expose
     private HTTPServiceHeadersHandler HeadersHandler;
 
     /**
-     * Get 添加请求头列表 
-     * @return HeadersHandler 添加请求头列表
+    * <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+    */
+    @SerializedName("Cache")
+    @Expose
+    private HTTPServiceCacheSet Cache;
+
+    /**
+     * Get <p>添加请求头列表</p> 
+     * @return HeadersHandler <p>添加请求头列表</p>
      */
     public HTTPServiceHeadersHandler getHeadersHandler() {
         return this.HeadersHandler;
     }
 
     /**
-     * Set 添加请求头列表
-     * @param HeadersHandler 添加请求头列表
+     * Set <p>添加请求头列表</p>
+     * @param HeadersHandler <p>添加请求头列表</p>
      */
     public void setHeadersHandler(HTTPServiceHeadersHandler HeadersHandler) {
         this.HeadersHandler = HeadersHandler;
+    }
+
+    /**
+     * Get <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p> 
+     * @return Cache <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+     */
+    public HTTPServiceCacheSet getCache() {
+        return this.Cache;
+    }
+
+    /**
+     * Set <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+     * @param Cache <p>HTTPService 缓存配置，包含Cache 节点缓存 / MaxAge 浏览器缓存 / CacheKey 自定义缓存键</p>
+     */
+    public void setCache(HTTPServiceCacheSet Cache) {
+        this.Cache = Cache;
     }
 
     public HTTPServiceExtension() {
@@ -57,6 +80,9 @@ public class HTTPServiceExtension extends AbstractModel {
         if (source.HeadersHandler != null) {
             this.HeadersHandler = new HTTPServiceHeadersHandler(source.HeadersHandler);
         }
+        if (source.Cache != null) {
+            this.Cache = new HTTPServiceCacheSet(source.Cache);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class HTTPServiceExtension extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "HeadersHandler.", this.HeadersHandler);
+        this.setParamObj(map, prefix + "Cache.", this.Cache);
 
     }
 }

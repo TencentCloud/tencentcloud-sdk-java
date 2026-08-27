@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHaVipsResponse extends AbstractModel {
 
     /**
-    * 符合条件的对象数。
+    * <p>符合条件的对象数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * `HAVIP`对象数组。
+    * <p><code>HAVIP</code>对象数组。</p>
     */
     @SerializedName("HaVipSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHaVipsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get <p>符合条件的对象数。</p> 
+     * @return TotalCount <p>符合条件的对象数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set <p>符合条件的对象数。</p>
+     * @param TotalCount <p>符合条件的对象数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get `HAVIP`对象数组。 
-     * @return HaVipSet `HAVIP`对象数组。
+     * Get <p><code>HAVIP</code>对象数组。</p> 
+     * @return HaVipSet <p><code>HAVIP</code>对象数组。</p>
      */
     public HaVip [] getHaVipSet() {
         return this.HaVipSet;
     }
 
     /**
-     * Set `HAVIP`对象数组。
-     * @param HaVipSet `HAVIP`对象数组。
+     * Set <p><code>HAVIP</code>对象数组。</p>
+     * @param HaVipSet <p><code>HAVIP</code>对象数组。</p>
      */
     public void setHaVipSet(HaVip [] HaVipSet) {
         this.HaVipSet = HaVipSet;

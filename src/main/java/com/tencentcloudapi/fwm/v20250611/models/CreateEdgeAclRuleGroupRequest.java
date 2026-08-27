@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateEdgeAclRuleGroupRequest extends AbstractModel {
 
     /**
-    * 规则组名称，长度1-50字符
+    * <p>规则组名称，长度1-50字符</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 产品类型，固定为 cfw_edge_acl
+    * <p>产品类型，固定为 cfw_edge_acl</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 规则列表
+    * <p>规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
     private EdgeAclRuleInfo [] Rules;
 
     /**
-     * Get 规则组名称，长度1-50字符 
-     * @return GroupName 规则组名称，长度1-50字符
+     * Get <p>规则组名称，长度1-50字符</p> 
+     * @return GroupName <p>规则组名称，长度1-50字符</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 规则组名称，长度1-50字符
-     * @param GroupName 规则组名称，长度1-50字符
+     * Set <p>规则组名称，长度1-50字符</p>
+     * @param GroupName <p>规则组名称，长度1-50字符</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 产品类型，固定为 cfw_edge_acl 
-     * @return Product 产品类型，固定为 cfw_edge_acl
+     * Get <p>产品类型，固定为 cfw_edge_acl</p> 
+     * @return Product <p>产品类型，固定为 cfw_edge_acl</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品类型，固定为 cfw_edge_acl
-     * @param Product 产品类型，固定为 cfw_edge_acl
+     * Set <p>产品类型，固定为 cfw_edge_acl</p>
+     * @param Product <p>产品类型，固定为 cfw_edge_acl</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 规则列表 
-     * @return Rules 规则列表
+     * Get <p>规则列表</p> 
+     * @return Rules <p>规则列表</p>
      */
     public EdgeAclRuleInfo [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 规则列表
-     * @param Rules 规则列表
+     * Set <p>规则列表</p>
+     * @param Rules <p>规则列表</p>
      */
     public void setRules(EdgeAclRuleInfo [] Rules) {
         this.Rules = Rules;

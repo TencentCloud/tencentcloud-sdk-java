@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeOnCallFormsRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 分页查询起始位
+    * <p>分页查询起始位</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页查询页数
+    * <p>分页查询页数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 支持userId进行检索
+    * <p>支持userId进行检索</p>
     */
     @SerializedName("OnCallFormStaffIDs")
     @Expose
     private String [] OnCallFormStaffIDs;
 
     /**
-    * 值班类型
+    * <p>值班类型</p>
     */
     @SerializedName("RotationType")
     @Expose
     private String RotationType;
 
     /**
-    * 排序方式
+    * <p>排序方式</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 支持id、name进行检索
+    * <p>支持id、name进行检索</p>
     */
     @SerializedName("OnCallFormName")
     @Expose
     private String OnCallFormName;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 分页查询起始位 
-     * @return Offset 分页查询起始位
+     * Get <p>分页查询起始位</p> 
+     * @return Offset <p>分页查询起始位</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询起始位
-     * @param Offset 分页查询起始位
+     * Set <p>分页查询起始位</p>
+     * @param Offset <p>分页查询起始位</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页查询页数 
-     * @return Limit 分页查询页数
+     * Get <p>分页查询页数</p> 
+     * @return Limit <p>分页查询页数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询页数
-     * @param Limit 分页查询页数
+     * Set <p>分页查询页数</p>
+     * @param Limit <p>分页查询页数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 支持userId进行检索 
-     * @return OnCallFormStaffIDs 支持userId进行检索
+     * Get <p>支持userId进行检索</p> 
+     * @return OnCallFormStaffIDs <p>支持userId进行检索</p>
      */
     public String [] getOnCallFormStaffIDs() {
         return this.OnCallFormStaffIDs;
     }
 
     /**
-     * Set 支持userId进行检索
-     * @param OnCallFormStaffIDs 支持userId进行检索
+     * Set <p>支持userId进行检索</p>
+     * @param OnCallFormStaffIDs <p>支持userId进行检索</p>
      */
     public void setOnCallFormStaffIDs(String [] OnCallFormStaffIDs) {
         this.OnCallFormStaffIDs = OnCallFormStaffIDs;
     }
 
     /**
-     * Get 值班类型 
-     * @return RotationType 值班类型
+     * Get <p>值班类型</p> 
+     * @return RotationType <p>值班类型</p>
      */
     public String getRotationType() {
         return this.RotationType;
     }
 
     /**
-     * Set 值班类型
-     * @param RotationType 值班类型
+     * Set <p>值班类型</p>
+     * @param RotationType <p>值班类型</p>
      */
     public void setRotationType(String RotationType) {
         this.RotationType = RotationType;
     }
 
     /**
-     * Get 排序方式 
-     * @return Order 排序方式
+     * Get <p>排序方式</p> 
+     * @return Order <p>排序方式</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式
-     * @param Order 排序方式
+     * Set <p>排序方式</p>
+     * @param Order <p>排序方式</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 支持id、name进行检索 
-     * @return OnCallFormName 支持id、name进行检索
+     * Get <p>支持id、name进行检索</p> 
+     * @return OnCallFormName <p>支持id、name进行检索</p>
      */
     public String getOnCallFormName() {
         return this.OnCallFormName;
     }
 
     /**
-     * Set 支持id、name进行检索
-     * @param OnCallFormName 支持id、name进行检索
+     * Set <p>支持id、name进行检索</p>
+     * @param OnCallFormName <p>支持id、name进行检索</p>
      */
     public void setOnCallFormName(String OnCallFormName) {
         this.OnCallFormName = OnCallFormName;

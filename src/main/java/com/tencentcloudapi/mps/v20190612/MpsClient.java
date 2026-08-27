@@ -106,6 +106,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *同步音色转换，根据输入音频和指定音色将输入音频转换为指定音色
+     * @param req ChangeVoiceRequest
+     * @return ChangeVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeVoiceResponse ChangeVoice(ChangeVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangeVoice", ChangeVoiceResponse.class);
+    }
+
+    /**
      *爆款复刻。输入爆款参考视频+商品图，生成风格/节奏对齐的视频
      * @param req CloneViralRequest
      * @return CloneViralResponse

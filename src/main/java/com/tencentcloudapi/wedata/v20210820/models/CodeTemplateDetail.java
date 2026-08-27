@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CodeTemplateDetail extends AbstractModel {
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -32,7 +32,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 模版名称
+    * <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeTemplateName")
@@ -40,7 +40,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String CodeTemplateName;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -48,7 +48,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private Long TaskType;
 
     /**
-    * 代码模版描述
+    * <p>代码模版描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeTemplateDesc")
@@ -56,7 +56,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String CodeTemplateDesc;
 
     /**
-    * 文件夹id
+    * <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -64,7 +64,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String FolderId;
 
     /**
-    * 文件夹名称
+    * <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderName")
@@ -72,7 +72,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String FolderName;
 
     /**
-    * 责任人名称
+    * <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InCharge")
@@ -80,7 +80,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String InCharge;
 
     /**
-    * 责任人id
+    * <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InChargeId")
@@ -88,7 +88,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String InChargeId;
 
     /**
-    * 扩展信息
+    * <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ext")
@@ -96,7 +96,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private TaskExtDsVO Ext;
 
     /**
-    * 模版id
+    * <p>模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeTemplateId")
@@ -104,7 +104,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String CodeTemplateId;
 
     /**
-    * 最后更新时间
+    * <p>最后更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
@@ -112,7 +112,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String LastUpdateTime;
 
     /**
-    * 更新人名称
+    * <p>更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUser")
@@ -120,7 +120,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String UpdateUser;
 
     /**
-    * 更新人id
+    * <p>更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateUserId")
@@ -128,7 +128,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String UpdateUserId;
 
     /**
-    * 执行ip
+    * <p>执行ip</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerIp")
@@ -136,7 +136,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String BrokerIp;
 
     /**
-    * 资源组id
+    * <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
@@ -144,7 +144,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private String ResourceGroup;
 
     /**
-    * 是否提交
+    * <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Submit")
@@ -152,7 +152,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private Boolean Submit;
 
     /**
-    * 模版脚本是否发生变化
+    * <p>模版脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScriptChange")
@@ -160,7 +160,7 @@ public class CodeTemplateDetail extends AbstractModel {
     private Boolean ScriptChange;
 
     /**
-    * 代码模版脚本，base64编码返回
+    * <p>代码模版脚本，base64编码返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
@@ -168,9 +168,17 @@ public class CodeTemplateDetail extends AbstractModel {
     private String Content;
 
     /**
-     * Get 项目id
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -178,9 +186,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -188,9 +196,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 模版名称
+     * Get <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeTemplateName 模版名称
+     * @return CodeTemplateName <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeTemplateName() {
@@ -198,9 +206,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 模版名称
+     * Set <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeTemplateName 模版名称
+     * @param CodeTemplateName <p>模版名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeTemplateName(String CodeTemplateName) {
@@ -208,9 +216,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskType() {
@@ -218,9 +226,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(Long TaskType) {
@@ -228,9 +236,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 代码模版描述
+     * Get <p>代码模版描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeTemplateDesc 代码模版描述
+     * @return CodeTemplateDesc <p>代码模版描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeTemplateDesc() {
@@ -238,9 +246,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 代码模版描述
+     * Set <p>代码模版描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeTemplateDesc 代码模版描述
+     * @param CodeTemplateDesc <p>代码模版描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeTemplateDesc(String CodeTemplateDesc) {
@@ -248,9 +256,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 文件夹id
+     * Get <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 文件夹id
+     * @return FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -258,9 +266,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 文件夹id
+     * Set <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 文件夹id
+     * @param FolderId <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -268,9 +276,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 文件夹名称
+     * Get <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderName 文件夹名称
+     * @return FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderName() {
@@ -278,9 +286,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 文件夹名称
+     * Set <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderName 文件夹名称
+     * @param FolderName <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderName(String FolderName) {
@@ -288,9 +296,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 责任人名称
+     * Get <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InCharge 责任人名称
+     * @return InCharge <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInCharge() {
@@ -298,9 +306,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 责任人名称
+     * Set <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InCharge 责任人名称
+     * @param InCharge <p>责任人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInCharge(String InCharge) {
@@ -308,9 +316,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 责任人id
+     * Get <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InChargeId 责任人id
+     * @return InChargeId <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInChargeId() {
@@ -318,9 +326,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 责任人id
+     * Set <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InChargeId 责任人id
+     * @param InChargeId <p>责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInChargeId(String InChargeId) {
@@ -328,9 +336,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 扩展信息
+     * Get <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ext 扩展信息
+     * @return Ext <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskExtDsVO getExt() {
@@ -338,9 +346,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 扩展信息
+     * Set <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ext 扩展信息
+     * @param Ext <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExt(TaskExtDsVO Ext) {
@@ -348,9 +356,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 模版id
+     * Get <p>模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeTemplateId 模版id
+     * @return CodeTemplateId <p>模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodeTemplateId() {
@@ -358,9 +366,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 模版id
+     * Set <p>模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeTemplateId 模版id
+     * @param CodeTemplateId <p>模版id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeTemplateId(String CodeTemplateId) {
@@ -368,9 +376,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 最后更新时间
+     * Get <p>最后更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdateTime 最后更新时间
+     * @return LastUpdateTime <p>最后更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdateTime() {
@@ -378,9 +386,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 最后更新时间
+     * Set <p>最后更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdateTime 最后更新时间
+     * @param LastUpdateTime <p>最后更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(String LastUpdateTime) {
@@ -388,9 +396,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 更新人名称
+     * Get <p>更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUser 更新人名称
+     * @return UpdateUser <p>更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUser() {
@@ -398,9 +406,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 更新人名称
+     * Set <p>更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUser 更新人名称
+     * @param UpdateUser <p>更新人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUser(String UpdateUser) {
@@ -408,9 +416,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 更新人id
+     * Get <p>更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateUserId 更新人id
+     * @return UpdateUserId <p>更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateUserId() {
@@ -418,9 +426,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 更新人id
+     * Set <p>更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateUserId 更新人id
+     * @param UpdateUserId <p>更新人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateUserId(String UpdateUserId) {
@@ -428,9 +436,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 执行ip
+     * Get <p>执行ip</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BrokerIp 执行ip
+     * @return BrokerIp <p>执行ip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBrokerIp() {
@@ -438,9 +446,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 执行ip
+     * Set <p>执行ip</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BrokerIp 执行ip
+     * @param BrokerIp <p>执行ip</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerIp(String BrokerIp) {
@@ -448,9 +456,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 资源组id
+     * Get <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroup 资源组id
+     * @return ResourceGroup <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroup() {
@@ -458,9 +466,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 资源组id
+     * Set <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroup 资源组id
+     * @param ResourceGroup <p>资源组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(String ResourceGroup) {
@@ -468,9 +476,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否提交
+     * Get <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Submit 是否提交
+     * @return Submit <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSubmit() {
@@ -478,9 +486,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 是否提交
+     * Set <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Submit 是否提交
+     * @param Submit <p>是否提交</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmit(Boolean Submit) {
@@ -488,9 +496,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 模版脚本是否发生变化
+     * Get <p>模版脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScriptChange 模版脚本是否发生变化
+     * @return ScriptChange <p>模版脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getScriptChange() {
@@ -498,9 +506,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 模版脚本是否发生变化
+     * Set <p>模版脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScriptChange 模版脚本是否发生变化
+     * @param ScriptChange <p>模版脚本是否发生变化</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScriptChange(Boolean ScriptChange) {
@@ -508,9 +516,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 代码模版脚本，base64编码返回
+     * Get <p>代码模版脚本，base64编码返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content 代码模版脚本，base64编码返回
+     * @return Content <p>代码模版脚本，base64编码返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
@@ -518,13 +526,33 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 代码模版脚本，base64编码返回
+     * Set <p>代码模版脚本，base64编码返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content 代码模版脚本，base64编码返回
+     * @param Content <p>代码模版脚本，base64编码返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
     }
 
     public CodeTemplateDetail() {
@@ -589,6 +617,9 @@ public class CodeTemplateDetail extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -614,6 +645,7 @@ public class CodeTemplateDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Submit", this.Submit);
         this.setParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

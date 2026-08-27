@@ -877,6 +877,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *实例同步/实例复制策略执行记录列表
+     * @param req DescribeReplicationExecutionsRequest
+     * @return DescribeReplicationExecutionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationExecutionsResponse DescribeReplicationExecutions(DescribeReplicationExecutionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplicationExecutions", DescribeReplicationExecutionsResponse.class);
+    }
+
+    /**
      *查询创建从实例任务状态
      * @param req DescribeReplicationInstanceCreateTasksRequest
      * @return DescribeReplicationInstanceCreateTasksResponse
@@ -918,6 +929,17 @@ public class TcrClient extends AbstractClient{
     public DescribeReplicationPoliciesResponse DescribeReplicationPolicies(DescribeReplicationPoliciesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReplicationPolicies", DescribeReplicationPoliciesResponse.class);
+    }
+
+    /**
+     *实例同步/实例复制执行任务列表
+     * @param req DescribeReplicationTasksRequest
+     * @return DescribeReplicationTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationTasksResponse DescribeReplicationTasks(DescribeReplicationTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplicationTasks", DescribeReplicationTasksResponse.class);
     }
 
     /**

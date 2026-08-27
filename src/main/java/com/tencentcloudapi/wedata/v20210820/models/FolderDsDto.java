@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FolderDsDto extends AbstractModel {
 
     /**
-    * 文件夹id
+    * <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class FolderDsDto extends AbstractModel {
     private String Id;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -40,7 +40,7 @@ public class FolderDsDto extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 文件夹名称
+    * <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +48,7 @@ public class FolderDsDto extends AbstractModel {
     private String Name;
 
     /**
-    * 所属项目id
+    * <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -56,7 +56,7 @@ public class FolderDsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -64,7 +64,7 @@ public class FolderDsDto extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 父文件夹id
+    * <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentsFolderId")
@@ -72,7 +72,7 @@ public class FolderDsDto extends AbstractModel {
     private String ParentsFolderId;
 
     /**
-    * 工作流总数
+    * <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -80,7 +80,7 @@ public class FolderDsDto extends AbstractModel {
     private Long Total;
 
     /**
-    * 工作流列表
+    * <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Workflows")
@@ -88,7 +88,7 @@ public class FolderDsDto extends AbstractModel {
     private WorkflowCanvasOpsDto [] Workflows;
 
     /**
-    * 子文件夹总数
+    * <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalFolders")
@@ -96,7 +96,7 @@ public class FolderDsDto extends AbstractModel {
     private Long TotalFolders;
 
     /**
-    * 子文件夹列表
+    * <p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Folders")
@@ -104,7 +104,7 @@ public class FolderDsDto extends AbstractModel {
     private FolderDsDto [] Folders;
 
     /**
-    * 搜索类型
+    * <p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FindType")
@@ -112,9 +112,17 @@ public class FolderDsDto extends AbstractModel {
     private String FindType;
 
     /**
-     * Get 文件夹id
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
+     * Get <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 文件夹id
+     * @return Id <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -122,9 +130,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 文件夹id
+     * Set <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 文件夹id
+     * @param Id <p>文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -132,9 +140,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -142,9 +150,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -152,9 +160,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 文件夹名称
+     * Get <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 文件夹名称
+     * @return Name <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -162,9 +170,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 文件夹名称
+     * Set <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 文件夹名称
+     * @param Name <p>文件夹名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -172,9 +180,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 所属项目id
+     * Get <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 所属项目id
+     * @return ProjectId <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -182,9 +190,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 所属项目id
+     * Set <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 所属项目id
+     * @param ProjectId <p>所属项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -192,9 +200,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -202,9 +210,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -212,9 +220,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 父文件夹id
+     * Get <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentsFolderId 父文件夹id
+     * @return ParentsFolderId <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentsFolderId() {
@@ -222,9 +230,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 父文件夹id
+     * Set <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentsFolderId 父文件夹id
+     * @param ParentsFolderId <p>父文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentsFolderId(String ParentsFolderId) {
@@ -232,9 +240,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流总数
+     * Get <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 工作流总数
+     * @return Total <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -242,9 +250,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流总数
+     * Set <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 工作流总数
+     * @param Total <p>工作流总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -252,9 +260,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流列表
+     * Get <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Workflows 工作流列表
+     * @return Workflows <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowCanvasOpsDto [] getWorkflows() {
@@ -262,9 +270,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流列表
+     * Set <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Workflows 工作流列表
+     * @param Workflows <p>工作流列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflows(WorkflowCanvasOpsDto [] Workflows) {
@@ -272,9 +280,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 子文件夹总数
+     * Get <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalFolders 子文件夹总数
+     * @return TotalFolders <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalFolders() {
@@ -282,9 +290,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 子文件夹总数
+     * Set <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalFolders 子文件夹总数
+     * @param TotalFolders <p>子文件夹总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalFolders(Long TotalFolders) {
@@ -292,9 +300,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 子文件夹列表
+     * Get <p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Folders 子文件夹列表
+     * @return Folders <p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FolderDsDto [] getFolders() {
@@ -302,9 +310,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 子文件夹列表
+     * Set <p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Folders 子文件夹列表
+     * @param Folders <p>子文件夹列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolders(FolderDsDto [] Folders) {
@@ -312,9 +320,9 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Get 搜索类型
+     * Get <p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FindType 搜索类型
+     * @return FindType <p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFindType() {
@@ -322,13 +330,33 @@ public class FolderDsDto extends AbstractModel {
     }
 
     /**
-     * Set 搜索类型
+     * Set <p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FindType 搜索类型
+     * @param FindType <p>搜索类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFindType(String FindType) {
         this.FindType = FindType;
+    }
+
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
     }
 
     public FolderDsDto() {
@@ -378,6 +406,9 @@ public class FolderDsDto extends AbstractModel {
         if (source.FindType != null) {
             this.FindType = new String(source.FindType);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -396,6 +427,7 @@ public class FolderDsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalFolders", this.TotalFolders);
         this.setParamArrayObj(map, prefix + "Folders.", this.Folders);
         this.setParamSimple(map, prefix + "FindType", this.FindType);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

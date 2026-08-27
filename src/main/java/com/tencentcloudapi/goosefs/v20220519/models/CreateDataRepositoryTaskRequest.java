@@ -108,6 +108,34 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
     private String CustomDestPath;
 
     /**
+    * <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+    */
+    @SerializedName("OutputBucket")
+    @Expose
+    private String OutputBucket;
+
+    /**
+    * <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+    */
+    @SerializedName("OutputPrefix")
+    @Expose
+    private String OutputPrefix;
+
+    /**
+    * <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+    */
+    @SerializedName("EnableCustomSrcPath")
+    @Expose
+    private Boolean EnableCustomSrcPath;
+
+    /**
+    * <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+    */
+    @SerializedName("CustomSrcPath")
+    @Expose
+    private String CustomSrcPath;
+
+    /**
      * Get <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p> 
      * @return TaskType <p>数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)</p>
      */
@@ -307,6 +335,70 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         this.CustomDestPath = CustomDestPath;
     }
 
+    /**
+     * Get <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p> 
+     * @return OutputBucket <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     */
+    public String getOutputBucket() {
+        return this.OutputBucket;
+    }
+
+    /**
+     * Set <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     * @param OutputBucket <p>输出的COS桶，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     */
+    public void setOutputBucket(String OutputBucket) {
+        this.OutputBucket = OutputBucket;
+    }
+
+    /**
+     * Get <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p> 
+     * @return OutputPrefix <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     */
+    public String getOutputPrefix() {
+        return this.OutputPrefix;
+    }
+
+    /**
+     * Set <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     * @param OutputPrefix <p>输出的COS桶的前缀，用于存放任务执行的相关结果（当前用于存放任务失败时的失败文件列表）</p>
+     */
+    public void setOutputPrefix(String OutputPrefix) {
+        this.OutputPrefix = OutputPrefix;
+    }
+
+    /**
+     * Get <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p> 
+     * @return EnableCustomSrcPath <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     */
+    public Boolean getEnableCustomSrcPath() {
+        return this.EnableCustomSrcPath;
+    }
+
+    /**
+     * Set <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     * @param EnableCustomSrcPath <p>是否支持自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     */
+    public void setEnableCustomSrcPath(Boolean EnableCustomSrcPath) {
+        this.EnableCustomSrcPath = EnableCustomSrcPath;
+    }
+
+    /**
+     * Get <p>自定义数据源路径(暂时仅支持清单过滤使用)</p> 
+     * @return CustomSrcPath <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     */
+    public String getCustomSrcPath() {
+        return this.CustomSrcPath;
+    }
+
+    /**
+     * Set <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     * @param CustomSrcPath <p>自定义数据源路径(暂时仅支持清单过滤使用)</p>
+     */
+    public void setCustomSrcPath(String CustomSrcPath) {
+        this.CustomSrcPath = CustomSrcPath;
+    }
+
     public CreateDataRepositoryTaskRequest() {
     }
 
@@ -351,6 +443,18 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         if (source.CustomDestPath != null) {
             this.CustomDestPath = new String(source.CustomDestPath);
         }
+        if (source.OutputBucket != null) {
+            this.OutputBucket = new String(source.OutputBucket);
+        }
+        if (source.OutputPrefix != null) {
+            this.OutputPrefix = new String(source.OutputPrefix);
+        }
+        if (source.EnableCustomSrcPath != null) {
+            this.EnableCustomSrcPath = new Boolean(source.EnableCustomSrcPath);
+        }
+        if (source.CustomSrcPath != null) {
+            this.CustomSrcPath = new String(source.CustomSrcPath);
+        }
     }
 
 
@@ -370,6 +474,10 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataFlowSubPath", this.DataFlowSubPath);
         this.setParamSimple(map, prefix + "EnableCustomDestPath", this.EnableCustomDestPath);
         this.setParamSimple(map, prefix + "CustomDestPath", this.CustomDestPath);
+        this.setParamSimple(map, prefix + "OutputBucket", this.OutputBucket);
+        this.setParamSimple(map, prefix + "OutputPrefix", this.OutputPrefix);
+        this.setParamSimple(map, prefix + "EnableCustomSrcPath", this.EnableCustomSrcPath);
+        this.setParamSimple(map, prefix + "CustomSrcPath", this.CustomSrcPath);
 
     }
 }

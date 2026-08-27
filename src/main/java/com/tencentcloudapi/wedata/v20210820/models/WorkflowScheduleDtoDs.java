@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowScheduleDtoDs extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -32,7 +32,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -40,7 +40,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -48,7 +48,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creater")
@@ -56,7 +56,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String Creater;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
@@ -64,7 +64,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String ModifyTime;
 
     /**
-    * 延迟时间
+    * <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayTime")
@@ -72,7 +72,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private Long DelayTime;
 
     /**
-    * 启动时间
+    * <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartupTime")
@@ -80,7 +80,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private Long StartupTime;
 
     /**
-    * 任务依赖
+    * <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfDepend")
@@ -88,7 +88,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String SelfDepend;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -96,7 +96,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -104,7 +104,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String EndTime;
 
     /**
-    * 指定运行时间
+    * <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAction")
@@ -112,7 +112,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String TaskAction;
 
     /**
-    * 调度周期时间单位
+    * <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -120,7 +120,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CycleType;
 
     /**
-    * 调度周期
+    * <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleStep")
@@ -128,7 +128,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private Long CycleStep;
 
     /**
-    * Cron表达式
+    * <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -136,7 +136,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CrontabExpression;
 
     /**
-    * 执行时间左闭区间
+    * <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -144,7 +144,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间
+    * <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEndTime")
@@ -152,7 +152,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String ExecutionEndTime;
 
     /**
-    * 实例初始化策略
+    * <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceInitStrategy")
@@ -160,7 +160,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String InstanceInitStrategy;
 
     /**
-    * 工作流依赖
+    * <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyWorkflow")
@@ -168,7 +168,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String DependencyWorkflow;
 
     /**
-    * 调度计划
+    * <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerDesc")
@@ -176,7 +176,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String SchedulerDesc;
 
     /**
-    * 工作流首次提交时间
+    * <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstSubmitTime")
@@ -184,7 +184,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String FirstSubmitTime;
 
     /**
-    * 工作流最近提交时间
+    * <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestSubmitTime")
@@ -192,7 +192,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String LatestSubmitTime;
 
     /**
-    * 日历调度是否开启
+    * <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarOpen")
@@ -200,7 +200,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CalendarOpen;
 
     /**
-    * 日历调度名称
+    * <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarName")
@@ -208,7 +208,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CalendarName;
 
     /**
-    * 日历调度id
+    * <p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarId")
@@ -216,7 +216,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String CalendarId;
 
     /**
-    * 时区配置
+    * <p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -224,9 +224,17 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
-     * Get 项目ID
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
+     * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID
+     * @return ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -234,9 +242,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 项目ID
+     * Set <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID
+     * @param ProjectId <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -244,9 +252,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 工作流ID
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -254,9 +262,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -264,9 +272,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -274,9 +282,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -284,9 +292,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Creater 创建人
+     * @return Creater <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreater() {
@@ -294,9 +302,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Creater 创建人
+     * @param Creater <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreater(String Creater) {
@@ -304,9 +312,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 修改时间
+     * Get <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyTime 修改时间
+     * @return ModifyTime <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
@@ -314,9 +322,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 修改时间
+     * Set <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyTime 修改时间
+     * @param ModifyTime <p>修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
@@ -324,9 +332,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 延迟时间
+     * Get <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DelayTime 延迟时间
+     * @return DelayTime <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayTime() {
@@ -334,9 +342,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 延迟时间
+     * Set <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DelayTime 延迟时间
+     * @param DelayTime <p>延迟时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayTime(Long DelayTime) {
@@ -344,9 +352,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 启动时间
+     * Get <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartupTime 启动时间
+     * @return StartupTime <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartupTime() {
@@ -354,9 +362,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 启动时间
+     * Set <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartupTime 启动时间
+     * @param StartupTime <p>启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartupTime(Long StartupTime) {
@@ -364,9 +372,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 任务依赖
+     * Get <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfDepend 任务依赖
+     * @return SelfDepend <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfDepend() {
@@ -374,9 +382,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 任务依赖
+     * Set <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfDepend 任务依赖
+     * @param SelfDepend <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfDepend(String SelfDepend) {
@@ -384,9 +392,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 开始时间
+     * Get <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 开始时间
+     * @return StartTime <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -394,9 +402,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 开始时间
+     * Set <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 开始时间
+     * @param StartTime <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -404,9 +412,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 结束时间
+     * Get <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -414,9 +422,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 结束时间
+     * Set <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -424,9 +432,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 指定运行时间
+     * Get <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAction 指定运行时间
+     * @return TaskAction <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskAction() {
@@ -434,9 +442,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 指定运行时间
+     * Set <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAction 指定运行时间
+     * @param TaskAction <p>指定运行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAction(String TaskAction) {
@@ -444,9 +452,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 调度周期时间单位
+     * Get <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 调度周期时间单位
+     * @return CycleType <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -454,9 +462,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 调度周期时间单位
+     * Set <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 调度周期时间单位
+     * @param CycleType <p>调度周期时间单位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -464,9 +472,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 调度周期
+     * Get <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleStep 调度周期
+     * @return CycleStep <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCycleStep() {
@@ -474,9 +482,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 调度周期
+     * Set <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleStep 调度周期
+     * @param CycleStep <p>调度周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleStep(Long CycleStep) {
@@ -484,9 +492,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get Cron表达式
+     * Get <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression Cron表达式
+     * @return CrontabExpression <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -494,9 +502,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set Cron表达式
+     * Set <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression Cron表达式
+     * @param CrontabExpression <p>Cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -504,9 +512,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 执行时间左闭区间
+     * Get <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 执行时间左闭区间
+     * @return ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -514,9 +522,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 执行时间左闭区间
+     * Set <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 执行时间左闭区间
+     * @param ExecutionStartTime <p>执行时间左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -524,9 +532,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 执行时间右闭区间
+     * Get <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionEndTime 执行时间右闭区间
+     * @return ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEndTime() {
@@ -534,9 +542,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 执行时间右闭区间
+     * Set <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionEndTime 执行时间右闭区间
+     * @param ExecutionEndTime <p>执行时间右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
@@ -544,9 +552,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 实例初始化策略
+     * Get <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceInitStrategy 实例初始化策略
+     * @return InstanceInitStrategy <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceInitStrategy() {
@@ -554,9 +562,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 实例初始化策略
+     * Set <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceInitStrategy 实例初始化策略
+     * @param InstanceInitStrategy <p>实例初始化策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceInitStrategy(String InstanceInitStrategy) {
@@ -564,9 +572,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 工作流依赖
+     * Get <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyWorkflow 工作流依赖
+     * @return DependencyWorkflow <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyWorkflow() {
@@ -574,9 +582,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 工作流依赖
+     * Set <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyWorkflow 工作流依赖
+     * @param DependencyWorkflow <p>工作流依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
@@ -584,9 +592,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 调度计划
+     * Get <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerDesc 调度计划
+     * @return SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerDesc() {
@@ -594,9 +602,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 调度计划
+     * Set <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerDesc 调度计划
+     * @param SchedulerDesc <p>调度计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerDesc(String SchedulerDesc) {
@@ -604,9 +612,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 工作流首次提交时间
+     * Get <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstSubmitTime 工作流首次提交时间
+     * @return FirstSubmitTime <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstSubmitTime() {
@@ -614,9 +622,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 工作流首次提交时间
+     * Set <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstSubmitTime 工作流首次提交时间
+     * @param FirstSubmitTime <p>工作流首次提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstSubmitTime(String FirstSubmitTime) {
@@ -624,9 +632,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 工作流最近提交时间
+     * Get <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestSubmitTime 工作流最近提交时间
+     * @return LatestSubmitTime <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestSubmitTime() {
@@ -634,9 +642,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 工作流最近提交时间
+     * Set <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestSubmitTime 工作流最近提交时间
+     * @param LatestSubmitTime <p>工作流最近提交时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestSubmitTime(String LatestSubmitTime) {
@@ -644,9 +652,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 日历调度是否开启
+     * Get <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarOpen 日历调度是否开启
+     * @return CalendarOpen <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarOpen() {
@@ -654,9 +662,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 日历调度是否开启
+     * Set <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarOpen 日历调度是否开启
+     * @param CalendarOpen <p>日历调度是否开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarOpen(String CalendarOpen) {
@@ -664,9 +672,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 日历调度名称
+     * Get <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarName 日历调度名称
+     * @return CalendarName <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarName() {
@@ -674,9 +682,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 日历调度名称
+     * Set <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarName 日历调度名称
+     * @param CalendarName <p>日历调度名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarName(String CalendarName) {
@@ -684,9 +692,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 日历调度id
+     * Get <p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarId 日历调度id
+     * @return CalendarId <p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarId() {
@@ -694,9 +702,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 日历调度id
+     * Set <p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarId 日历调度id
+     * @param CalendarId <p>日历调度id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarId(String CalendarId) {
@@ -704,9 +712,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Get 时区配置
+     * Get <p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 时区配置
+     * @return ScheduleTimeZone <p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -714,13 +722,33 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     }
 
     /**
-     * Set 时区配置
+     * Set <p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 时区配置
+     * @param ScheduleTimeZone <p>时区配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
     }
 
     public WorkflowScheduleDtoDs() {
@@ -806,6 +834,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -838,6 +869,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

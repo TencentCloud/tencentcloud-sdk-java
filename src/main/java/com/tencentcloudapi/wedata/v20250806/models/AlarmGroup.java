@@ -24,169 +24,192 @@ import java.util.HashMap;
 public class AlarmGroup extends AbstractModel {
 
     /**
-    * 告警升级人ID列表
-若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。
+    * <p>告警升级人ID列表<br>若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。</p>
     */
     @SerializedName("AlarmEscalationRecipientIds")
     @Expose
     private String [] AlarmEscalationRecipientIds;
 
     /**
-    * 告警升级间隔
+    * <p>告警升级间隔</p>
     */
     @SerializedName("AlarmEscalationInterval")
     @Expose
     private Long AlarmEscalationInterval;
 
     /**
-    * 告警通知疲劳配置
+    * <p>告警通知疲劳配置</p>
     */
     @SerializedName("NotificationFatigue")
     @Expose
     private NotificationFatigue NotificationFatigue;
 
     /**
-    * 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道
+    * <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道</p>
     */
     @SerializedName("AlarmWays")
     @Expose
     private String [] AlarmWays;
 
     /**
-    * 企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表
+    * <p>企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表</p>
     */
     @SerializedName("WebHooks")
     @Expose
     private AlarmWayWebHook [] WebHooks;
 
     /**
-    * 告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）
+    * <p>告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）</p>
     */
     @SerializedName("AlarmRecipientType")
     @Expose
     private Long AlarmRecipientType;
 
     /**
-    * 根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表
+    * <p>根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表</p>
     */
     @SerializedName("AlarmRecipientIds")
     @Expose
     private String [] AlarmRecipientIds;
 
     /**
-     * Get 告警升级人ID列表
-若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。 
-     * @return AlarmEscalationRecipientIds 告警升级人ID列表
-若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。
+    * <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomEmails")
+    @Expose
+    private String [] CustomEmails;
+
+    /**
+     * Get <p>告警升级人ID列表<br>若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。</p> 
+     * @return AlarmEscalationRecipientIds <p>告警升级人ID列表<br>若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。</p>
      */
     public String [] getAlarmEscalationRecipientIds() {
         return this.AlarmEscalationRecipientIds;
     }
 
     /**
-     * Set 告警升级人ID列表
-若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。
-     * @param AlarmEscalationRecipientIds 告警升级人ID列表
-若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。
+     * Set <p>告警升级人ID列表<br>若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。</p>
+     * @param AlarmEscalationRecipientIds <p>告警升级人ID列表<br>若告警接收人或上级升级人未在告警间隔时间内确认告警，则会发送告警给下一级升级人。</p>
      */
     public void setAlarmEscalationRecipientIds(String [] AlarmEscalationRecipientIds) {
         this.AlarmEscalationRecipientIds = AlarmEscalationRecipientIds;
     }
 
     /**
-     * Get 告警升级间隔 
-     * @return AlarmEscalationInterval 告警升级间隔
+     * Get <p>告警升级间隔</p> 
+     * @return AlarmEscalationInterval <p>告警升级间隔</p>
      */
     public Long getAlarmEscalationInterval() {
         return this.AlarmEscalationInterval;
     }
 
     /**
-     * Set 告警升级间隔
-     * @param AlarmEscalationInterval 告警升级间隔
+     * Set <p>告警升级间隔</p>
+     * @param AlarmEscalationInterval <p>告警升级间隔</p>
      */
     public void setAlarmEscalationInterval(Long AlarmEscalationInterval) {
         this.AlarmEscalationInterval = AlarmEscalationInterval;
     }
 
     /**
-     * Get 告警通知疲劳配置 
-     * @return NotificationFatigue 告警通知疲劳配置
+     * Get <p>告警通知疲劳配置</p> 
+     * @return NotificationFatigue <p>告警通知疲劳配置</p>
      */
     public NotificationFatigue getNotificationFatigue() {
         return this.NotificationFatigue;
     }
 
     /**
-     * Set 告警通知疲劳配置
-     * @param NotificationFatigue 告警通知疲劳配置
+     * Set <p>告警通知疲劳配置</p>
+     * @param NotificationFatigue <p>告警通知疲劳配置</p>
      */
     public void setNotificationFatigue(NotificationFatigue NotificationFatigue) {
         this.NotificationFatigue = NotificationFatigue;
     }
 
     /**
-     * Get 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道 
-     * @return AlarmWays 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道
+     * Get <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道</p> 
+     * @return AlarmWays <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道</p>
      */
     public String [] getAlarmWays() {
         return this.AlarmWays;
     }
 
     /**
-     * Set 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道
-     * @param AlarmWays 告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道
+     * Set <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道</p>
+     * @param AlarmWays <p>告警渠道 1.邮件，2.短信，3.微信，4.语音，5.企业微信，6.Http，7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群（默认1.邮件） 7.企业微信群 8 飞书群 9 钉钉群 10 Slack群 11 Teams群 只能选择一个渠道</p>
      */
     public void setAlarmWays(String [] AlarmWays) {
         this.AlarmWays = AlarmWays;
     }
 
     /**
-     * Get 企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表 
-     * @return WebHooks 企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表
+     * Get <p>企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表</p> 
+     * @return WebHooks <p>企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表</p>
      */
     public AlarmWayWebHook [] getWebHooks() {
         return this.WebHooks;
     }
 
     /**
-     * Set 企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表
-     * @param WebHooks 企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表
+     * Set <p>企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表</p>
+     * @param WebHooks <p>企业微信群/飞书群/钉钉群 /Slack群/Teams群的webhook地址列表</p>
      */
     public void setWebHooks(AlarmWayWebHook [] WebHooks) {
         this.WebHooks = WebHooks;
     }
 
     /**
-     * Get 告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员） 
-     * @return AlarmRecipientType 告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）
+     * Get <p>告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）</p> 
+     * @return AlarmRecipientType <p>告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）</p>
      */
     public Long getAlarmRecipientType() {
         return this.AlarmRecipientType;
     }
 
     /**
-     * Set 告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）
-     * @param AlarmRecipientType 告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）
+     * Set <p>告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）</p>
+     * @param AlarmRecipientType <p>告警接收人类型：1.指定人员，2.任务责任人，3.值班表（默认1.指定人员）</p>
      */
     public void setAlarmRecipientType(Long AlarmRecipientType) {
         this.AlarmRecipientType = AlarmRecipientType;
     }
 
     /**
-     * Get 根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表 
-     * @return AlarmRecipientIds 根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表
+     * Get <p>根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表</p> 
+     * @return AlarmRecipientIds <p>根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表</p>
      */
     public String [] getAlarmRecipientIds() {
         return this.AlarmRecipientIds;
     }
 
     /**
-     * Set 根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表
-     * @param AlarmRecipientIds 根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表
+     * Set <p>根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表</p>
+     * @param AlarmRecipientIds <p>根据AlarmRecipientType的类型该列表具有不同的业务id 1（指定人员）: 告警接收人id列表 2（任务责任人）：无需配置 3（值班表）：值班表id列表</p>
      */
     public void setAlarmRecipientIds(String [] AlarmRecipientIds) {
         this.AlarmRecipientIds = AlarmRecipientIds;
+    }
+
+    /**
+     * Get <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomEmails <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCustomEmails() {
+        return this.CustomEmails;
+    }
+
+    /**
+     * Set <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomEmails <p>自定义邮箱列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomEmails(String [] CustomEmails) {
+        this.CustomEmails = CustomEmails;
     }
 
     public AlarmGroup() {
@@ -230,6 +253,12 @@ public class AlarmGroup extends AbstractModel {
                 this.AlarmRecipientIds[i] = new String(source.AlarmRecipientIds[i]);
             }
         }
+        if (source.CustomEmails != null) {
+            this.CustomEmails = new String[source.CustomEmails.length];
+            for (int i = 0; i < source.CustomEmails.length; i++) {
+                this.CustomEmails[i] = new String(source.CustomEmails[i]);
+            }
+        }
     }
 
 
@@ -244,6 +273,7 @@ public class AlarmGroup extends AbstractModel {
         this.setParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
         this.setParamSimple(map, prefix + "AlarmRecipientType", this.AlarmRecipientType);
         this.setParamArraySimple(map, prefix + "AlarmRecipientIds.", this.AlarmRecipientIds);
+        this.setParamArraySimple(map, prefix + "CustomEmails.", this.CustomEmails);
 
     }
 }

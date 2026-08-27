@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowCanvasOpsDto extends AbstractModel {
 
     /**
-    * 工作流id
+    * <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -32,7 +32,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流详情描述
+    * <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowDesc")
@@ -40,7 +40,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String WorkflowDesc;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -48,7 +48,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 所属文件夹id
+    * <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderId")
@@ -56,7 +56,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String FolderId;
 
     /**
-    * 所属文件夹ids
+    * <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FolderIds")
@@ -64,7 +64,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String [] FolderIds;
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -72,7 +72,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private TaskOpsDto [] Tasks;
 
     /**
-    * 任务依赖边列表
+    * <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Links")
@@ -80,7 +80,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private LinkOpsDto [] Links;
 
     /**
-    * 工作流所属用户分组id,若有多个分号隔开: a;b;c
+    * <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroupId")
@@ -88,7 +88,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String UserGroupId;
 
     /**
-    * 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+    * <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroupName")
@@ -96,7 +96,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String UserGroupName;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -104,7 +104,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 项目标识
+    * <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIdent")
@@ -112,7 +112,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
@@ -120,7 +120,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String ProjectName;
 
     /**
-    * 责任人
+    * <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Owner")
@@ -128,7 +128,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String Owner;
 
     /**
-    * 责任人UserId
+    * <p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerId")
@@ -136,7 +136,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String OwnerId;
 
     /**
-    * 工作流类型，周期cycle，手动manual
+    * <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowType")
@@ -144,9 +144,17 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     private String WorkflowType;
 
     /**
-     * Get 工作流id
+    * <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
+     * Get <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流id
+     * @return WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -154,9 +162,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流id
+     * Set <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流id
+     * @param WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -164,9 +172,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流详情描述
+     * Get <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowDesc 工作流详情描述
+     * @return WorkflowDesc <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowDesc() {
@@ -174,9 +182,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流详情描述
+     * Set <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowDesc 工作流详情描述
+     * @param WorkflowDesc <p>工作流详情描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowDesc(String WorkflowDesc) {
@@ -184,9 +192,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -194,9 +202,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -204,9 +212,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 所属文件夹id
+     * Get <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderId 所属文件夹id
+     * @return FolderId <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFolderId() {
@@ -214,9 +222,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 所属文件夹id
+     * Set <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderId 所属文件夹id
+     * @param FolderId <p>所属文件夹id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderId(String FolderId) {
@@ -224,9 +232,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 所属文件夹ids
+     * Get <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FolderIds 所属文件夹ids
+     * @return FolderIds <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFolderIds() {
@@ -234,9 +242,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 所属文件夹ids
+     * Set <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FolderIds 所属文件夹ids
+     * @param FolderIds <p>所属文件夹ids</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFolderIds(String [] FolderIds) {
@@ -244,9 +252,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务列表
+     * Get <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 任务列表
+     * @return Tasks <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOpsDto [] getTasks() {
@@ -254,9 +262,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务列表
+     * Set <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 任务列表
+     * @param Tasks <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(TaskOpsDto [] Tasks) {
@@ -264,9 +272,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 任务依赖边列表
+     * Get <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Links 任务依赖边列表
+     * @return Links <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LinkOpsDto [] getLinks() {
@@ -274,9 +282,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 任务依赖边列表
+     * Set <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Links 任务依赖边列表
+     * @param Links <p>任务依赖边列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinks(LinkOpsDto [] Links) {
@@ -284,9 +292,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流所属用户分组id,若有多个分号隔开: a;b;c
+     * Get <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserGroupId 工作流所属用户分组id,若有多个分号隔开: a;b;c
+     * @return UserGroupId <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserGroupId() {
@@ -294,9 +302,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流所属用户分组id,若有多个分号隔开: a;b;c
+     * Set <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserGroupId 工作流所属用户分组id,若有多个分号隔开: a;b;c
+     * @param UserGroupId <p>工作流所属用户分组id,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroupId(String UserGroupId) {
@@ -304,9 +312,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+     * Get <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserGroupName 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+     * @return UserGroupName <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserGroupName() {
@@ -314,9 +322,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+     * Set <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserGroupName 工作流所属用户分组名称,若有多个分号隔开: a;b;c
+     * @param UserGroupName <p>工作流所属用户分组名称,若有多个分号隔开: a;b;c</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroupName(String UserGroupName) {
@@ -324,9 +332,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -334,9 +342,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -344,9 +352,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目标识
+     * Get <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIdent 项目标识
+     * @return ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIdent() {
@@ -354,9 +362,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目标识
+     * Set <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIdent 项目标识
+     * @param ProjectIdent <p>项目标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIdent(String ProjectIdent) {
@@ -364,9 +372,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 项目名称
+     * Get <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectName 项目名称
+     * @return ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
@@ -374,9 +382,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 项目名称
+     * Set <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectName 项目名称
+     * @param ProjectName <p>项目名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
@@ -384,9 +392,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 责任人
+     * Get <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Owner 责任人
+     * @return Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwner() {
@@ -394,9 +402,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 责任人
+     * Set <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Owner 责任人
+     * @param Owner <p>责任人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwner(String Owner) {
@@ -404,9 +412,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 责任人UserId
+     * Get <p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerId 责任人UserId
+     * @return OwnerId <p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerId() {
@@ -414,9 +422,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 责任人UserId
+     * Set <p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerId 责任人UserId
+     * @param OwnerId <p>责任人UserId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerId(String OwnerId) {
@@ -424,9 +432,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 工作流类型，周期cycle，手动manual
+     * Get <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowType 工作流类型，周期cycle，手动manual
+     * @return WorkflowType <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowType() {
@@ -434,13 +442,33 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 工作流类型，周期cycle，手动manual
+     * Set <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowType 工作流类型，周期cycle，手动manual
+     * @param WorkflowType <p>工作流类型，周期cycle，手动manual</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowType(String WorkflowType) {
         this.WorkflowType = WorkflowType;
+    }
+
+    /**
+     * Get <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
     }
 
     public WorkflowCanvasOpsDto() {
@@ -505,6 +533,9 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
         if (source.WorkflowType != null) {
             this.WorkflowType = new String(source.WorkflowType);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -527,6 +558,7 @@ public class WorkflowCanvasOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

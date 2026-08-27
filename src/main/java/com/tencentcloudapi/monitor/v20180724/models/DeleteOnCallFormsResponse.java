@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteOnCallFormsResponse extends AbstractModel {
 
     /**
-    * 失败删除的排班id
+    * <p>失败删除的排班id</p>
     */
     @SerializedName("FailedOnCallFormIDs")
     @Expose
     private String [] FailedOnCallFormIDs;
 
     /**
-    * 成功删除的排班id
+    * <p>成功删除的排班id</p>
     */
     @SerializedName("SuccessOnCallFormIDs")
     @Expose
@@ -45,32 +45,32 @@ public class DeleteOnCallFormsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 失败删除的排班id 
-     * @return FailedOnCallFormIDs 失败删除的排班id
+     * Get <p>失败删除的排班id</p> 
+     * @return FailedOnCallFormIDs <p>失败删除的排班id</p>
      */
     public String [] getFailedOnCallFormIDs() {
         return this.FailedOnCallFormIDs;
     }
 
     /**
-     * Set 失败删除的排班id
-     * @param FailedOnCallFormIDs 失败删除的排班id
+     * Set <p>失败删除的排班id</p>
+     * @param FailedOnCallFormIDs <p>失败删除的排班id</p>
      */
     public void setFailedOnCallFormIDs(String [] FailedOnCallFormIDs) {
         this.FailedOnCallFormIDs = FailedOnCallFormIDs;
     }
 
     /**
-     * Get 成功删除的排班id 
-     * @return SuccessOnCallFormIDs 成功删除的排班id
+     * Get <p>成功删除的排班id</p> 
+     * @return SuccessOnCallFormIDs <p>成功删除的排班id</p>
      */
     public String [] getSuccessOnCallFormIDs() {
         return this.SuccessOnCallFormIDs;
     }
 
     /**
-     * Set 成功删除的排班id
-     * @param SuccessOnCallFormIDs 成功删除的排班id
+     * Set <p>成功删除的排班id</p>
+     * @param SuccessOnCallFormIDs <p>成功删除的排班id</p>
      */
     public void setSuccessOnCallFormIDs(String [] SuccessOnCallFormIDs) {
         this.SuccessOnCallFormIDs = SuccessOnCallFormIDs;

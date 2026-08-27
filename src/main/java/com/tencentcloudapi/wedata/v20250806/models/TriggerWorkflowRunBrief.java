@@ -312,6 +312,14 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
     private String ParentTaskExecutionName;
 
     /**
+    * <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>用户AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId <p>用户AppId</p>
@@ -1031,6 +1039,26 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         this.ParentTaskExecutionName = ParentTaskExecutionName;
     }
 
+    /**
+     * Get <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public TriggerWorkflowRunBrief() {
     }
 
@@ -1150,6 +1178,9 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         if (source.ParentTaskExecutionName != null) {
             this.ParentTaskExecutionName = new String(source.ParentTaskExecutionName);
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -1193,6 +1224,7 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "ParentWorkflowExecutionId", this.ParentWorkflowExecutionId);
         this.setParamSimple(map, prefix + "ParentTaskExecutionId", this.ParentTaskExecutionId);
         this.setParamSimple(map, prefix + "ParentTaskExecutionName", this.ParentTaskExecutionName);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

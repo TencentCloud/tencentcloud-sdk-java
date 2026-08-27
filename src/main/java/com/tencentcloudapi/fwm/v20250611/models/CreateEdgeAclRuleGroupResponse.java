@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateEdgeAclRuleGroupResponse extends AbstractModel {
 
     /**
-    * 创建的规则组ID
+    * <p>创建的规则组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateEdgeAclRuleGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的规则组ID 
-     * @return GroupId 创建的规则组ID
+     * Get <p>创建的规则组ID</p> 
+     * @return GroupId <p>创建的规则组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 创建的规则组ID
-     * @param GroupId 创建的规则组ID
+     * Set <p>创建的规则组ID</p>
+     * @param GroupId <p>创建的规则组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

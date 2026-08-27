@@ -215,6 +215,14 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
     private String [] ScheduleTimeList;
 
     /**
+    * <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Privilege")
+    @Expose
+    private String Privilege;
+
+    /**
      * Get <p>运行触发记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TriggerId <p>运行触发记录ID</p>
@@ -690,6 +698,26 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         this.ScheduleTimeList = ScheduleTimeList;
     }
 
+    /**
+     * Get <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Privilege <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivilege() {
+        return this.Privilege;
+    }
+
+    /**
+     * Set <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Privilege <p>对象权限</p><p>枚举值：</p><ul><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivilege(String Privilege) {
+        this.Privilege = Privilege;
+    }
+
     public ManualTriggerRecordOpsDto() {
     }
 
@@ -776,6 +804,9 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
                 this.ScheduleTimeList[i] = new String(source.ScheduleTimeList[i]);
             }
         }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
     }
 
 
@@ -807,6 +838,7 @@ public class ManualTriggerRecordOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ParentSpInstanceName", this.ParentSpInstanceName);
         this.setParamSimple(map, prefix + "ParentSpInstanceDataTime", this.ParentSpInstanceDataTime);
         this.setParamArraySimple(map, prefix + "ScheduleTimeList.", this.ScheduleTimeList);
+        this.setParamSimple(map, prefix + "Privilege", this.Privilege);
 
     }
 }

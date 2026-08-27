@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class TemplateListInfo extends AbstractModel {
 
     /**
-    * 模板ID
+    * <p>模板ID</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 模板名称
+    * <p>模板名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Detail")
     @Expose
     private String Detail;
 
     /**
-    * IP模板
+    * <p>IP模板</p>
     */
     @SerializedName("IpString")
     @Expose
     private String IpString;
 
     /**
-    * 插入时间
+    * <p>插入时间</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 模板类型
+    * <p>模板类型</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 关联规则条数
+    * <p>关联规则条数</p>
     */
     @SerializedName("RulesNum")
     @Expose
     private Long RulesNum;
 
     /**
-    * 模板Id
+    * <p>模板Id</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 协议端口模板，协议类型，4:4层协议，7:7层协议
+    * <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-    * 模板包含地址数量
+    * <p>模板包含地址数量</p>
     */
     @SerializedName("IPNum")
     @Expose
     private Long IPNum;
 
     /**
-    * IP版本,0,IPv4;1,IPv6
+    * <p>IP版本,0,IPv4;1,IPv6</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private Long IpVersion;
 
     /**
-     * Get 模板ID 
-     * @return Uuid 模板ID
+     * Get <p>模板ID</p> 
+     * @return Uuid <p>模板ID</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 模板ID
-     * @param Uuid 模板ID
+     * Set <p>模板ID</p>
+     * @param Uuid <p>模板ID</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 模板名称 
-     * @return Name 模板名称
+     * Get <p>模板名称</p> 
+     * @return Name <p>模板名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称
-     * @param Name 模板名称
+     * Set <p>模板名称</p>
+     * @param Name <p>模板名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述 
-     * @return Detail 描述
+     * Get <p>描述</p> 
+     * @return Detail <p>描述</p>
      */
     public String getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 描述
-     * @param Detail 描述
+     * Set <p>描述</p>
+     * @param Detail <p>描述</p>
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get IP模板 
-     * @return IpString IP模板
+     * Get <p>IP模板</p> 
+     * @return IpString <p>IP模板</p>
      */
     public String getIpString() {
         return this.IpString;
     }
 
     /**
-     * Set IP模板
-     * @param IpString IP模板
+     * Set <p>IP模板</p>
+     * @param IpString <p>IP模板</p>
      */
     public void setIpString(String IpString) {
         this.IpString = IpString;
     }
 
     /**
-     * Get 插入时间 
-     * @return InsertTime 插入时间
+     * Get <p>插入时间</p> 
+     * @return InsertTime <p>插入时间</p>
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 插入时间
-     * @param InsertTime 插入时间
+     * Set <p>插入时间</p>
+     * @param InsertTime <p>插入时间</p>
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return UpdateTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return UpdateTime <p>修改时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 修改时间
-     * @param UpdateTime 修改时间
+     * Set <p>修改时间</p>
+     * @param UpdateTime <p>修改时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 模板类型 
-     * @return Type 模板类型
+     * Get <p>模板类型</p> 
+     * @return Type <p>模板类型</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模板类型
-     * @param Type 模板类型
+     * Set <p>模板类型</p>
+     * @param Type <p>模板类型</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 关联规则条数 
-     * @return RulesNum 关联规则条数
+     * Get <p>关联规则条数</p> 
+     * @return RulesNum <p>关联规则条数</p>
      */
     public Long getRulesNum() {
         return this.RulesNum;
     }
 
     /**
-     * Set 关联规则条数
-     * @param RulesNum 关联规则条数
+     * Set <p>关联规则条数</p>
+     * @param RulesNum <p>关联规则条数</p>
      */
     public void setRulesNum(Long RulesNum) {
         this.RulesNum = RulesNum;
     }
 
     /**
-     * Get 模板Id 
-     * @return TemplateId 模板Id
+     * Get <p>模板Id</p> 
+     * @return TemplateId <p>模板Id</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id
-     * @param TemplateId 模板Id
+     * Set <p>模板Id</p>
+     * @param TemplateId <p>模板Id</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 协议端口模板，协议类型，4:4层协议，7:7层协议 
-     * @return ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
+     * Get <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p> 
+     * @return ProtocolType <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 协议端口模板，协议类型，4:4层协议，7:7层协议
-     * @param ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
+     * Set <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
+     * @param ProtocolType <p>协议端口模板，协议类型，4:4层协议，7:7层协议</p>
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 模板包含地址数量 
-     * @return IPNum 模板包含地址数量
+     * Get <p>模板包含地址数量</p> 
+     * @return IPNum <p>模板包含地址数量</p>
      */
     public Long getIPNum() {
         return this.IPNum;
     }
 
     /**
-     * Set 模板包含地址数量
-     * @param IPNum 模板包含地址数量
+     * Set <p>模板包含地址数量</p>
+     * @param IPNum <p>模板包含地址数量</p>
      */
     public void setIPNum(Long IPNum) {
         this.IPNum = IPNum;
     }
 
     /**
-     * Get IP版本,0,IPv4;1,IPv6 
-     * @return IpVersion IP版本,0,IPv4;1,IPv6
+     * Get <p>IP版本,0,IPv4;1,IPv6</p> 
+     * @return IpVersion <p>IP版本,0,IPv4;1,IPv6</p>
      */
     public Long getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set IP版本,0,IPv4;1,IPv6
-     * @param IpVersion IP版本,0,IPv4;1,IPv6
+     * Set <p>IP版本,0,IPv4;1,IPv6</p>
+     * @param IpVersion <p>IP版本,0,IPv4;1,IPv6</p>
      */
     public void setIpVersion(Long IpVersion) {
         this.IpVersion = IpVersion;

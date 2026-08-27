@@ -128,7 +128,23 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private Long Recursive;
 
     /**
-    * <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+    * <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerMinimumInterval")
+    @Expose
+    private Long TriggerMinimumInterval;
+
+    /**
+    * <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerWaitTime")
+    @Expose
+    private Long TriggerWaitTime;
+
+    /**
+    * <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMinimumIntervalSecond")
@@ -136,7 +152,7 @@ public class WorkflowTriggerConfig extends AbstractModel {
     private Long TriggerMinimumIntervalSecond;
 
     /**
-    * <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+    * <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerWaitTimeSecond")
@@ -404,9 +420,49 @@ public class WorkflowTriggerConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+     * Get <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+     * @return TriggerMinimumInterval <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTriggerMinimumInterval() {
+        return this.TriggerMinimumInterval;
+    }
+
+    /**
+     * Set <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerMinimumInterval <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerMinimumInterval(Long TriggerMinimumInterval) {
+        this.TriggerMinimumInterval = TriggerMinimumInterval;
+    }
+
+    /**
+     * Get <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerWaitTime <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTriggerWaitTime() {
+        return this.TriggerWaitTime;
+    }
+
+    /**
+     * Set <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerWaitTime <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerWaitTime(Long TriggerWaitTime) {
+        this.TriggerWaitTime = TriggerWaitTime;
+    }
+
+    /**
+     * Get <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerMinimumIntervalSecond() {
@@ -414,9 +470,9 @@ public class WorkflowTriggerConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+     * Set <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p>
+     * @param TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMinimumIntervalSecond(Long TriggerMinimumIntervalSecond) {
@@ -424,9 +480,9 @@ public class WorkflowTriggerConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+     * Get <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+     * @return TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTriggerWaitTimeSecond() {
@@ -434,9 +490,9 @@ public class WorkflowTriggerConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+     * Set <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p>
+     * @param TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerWaitTimeSecond(Long TriggerWaitTimeSecond) {
@@ -490,6 +546,12 @@ public class WorkflowTriggerConfig extends AbstractModel {
         if (source.Recursive != null) {
             this.Recursive = new Long(source.Recursive);
         }
+        if (source.TriggerMinimumInterval != null) {
+            this.TriggerMinimumInterval = new Long(source.TriggerMinimumInterval);
+        }
+        if (source.TriggerWaitTime != null) {
+            this.TriggerWaitTime = new Long(source.TriggerWaitTime);
+        }
         if (source.TriggerMinimumIntervalSecond != null) {
             this.TriggerMinimumIntervalSecond = new Long(source.TriggerMinimumIntervalSecond);
         }
@@ -516,6 +578,8 @@ public class WorkflowTriggerConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamSimple(map, prefix + "FileNamePattern", this.FileNamePattern);
         this.setParamSimple(map, prefix + "Recursive", this.Recursive);
+        this.setParamSimple(map, prefix + "TriggerMinimumInterval", this.TriggerMinimumInterval);
+        this.setParamSimple(map, prefix + "TriggerWaitTime", this.TriggerWaitTime);
         this.setParamSimple(map, prefix + "TriggerMinimumIntervalSecond", this.TriggerMinimumIntervalSecond);
         this.setParamSimple(map, prefix + "TriggerWaitTimeSecond", this.TriggerWaitTimeSecond);
 

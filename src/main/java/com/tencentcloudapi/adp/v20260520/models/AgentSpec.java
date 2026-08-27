@@ -31,14 +31,14 @@ public class AgentSpec extends AbstractModel {
     private AgentProfile Profile;
 
     /**
-    * 系统提示词
+    * <p>系统提示词</p>
     */
     @SerializedName("Instructions")
     @Expose
     private String Instructions;
 
     /**
-    * 主模型配置
+    * <p>主模型配置</p>
     */
     @SerializedName("Model")
     @Expose
@@ -66,11 +66,18 @@ public class AgentSpec extends AbstractModel {
     private AgentSkillConfig [] SkillList;
 
     /**
-    * 高级设置
+    * <p>高级设置</p>
     */
     @SerializedName("AdvancedConfig")
     @Expose
     private AgentAdvancedConfig AdvancedConfig;
+
+    /**
+    * <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+    */
+    @SerializedName("ExternalToolList")
+    @Expose
+    private AgentExternalToolConfig [] ExternalToolList;
 
     /**
      * Get <p>Agent基本配置</p> 
@@ -89,32 +96,32 @@ public class AgentSpec extends AbstractModel {
     }
 
     /**
-     * Get 系统提示词 
-     * @return Instructions 系统提示词
+     * Get <p>系统提示词</p> 
+     * @return Instructions <p>系统提示词</p>
      */
     public String getInstructions() {
         return this.Instructions;
     }
 
     /**
-     * Set 系统提示词
-     * @param Instructions 系统提示词
+     * Set <p>系统提示词</p>
+     * @param Instructions <p>系统提示词</p>
      */
     public void setInstructions(String Instructions) {
         this.Instructions = Instructions;
     }
 
     /**
-     * Get 主模型配置 
-     * @return Model 主模型配置
+     * Get <p>主模型配置</p> 
+     * @return Model <p>主模型配置</p>
      */
     public AgentModelConfig getModel() {
         return this.Model;
     }
 
     /**
-     * Set 主模型配置
-     * @param Model 主模型配置
+     * Set <p>主模型配置</p>
+     * @param Model <p>主模型配置</p>
      */
     public void setModel(AgentModelConfig Model) {
         this.Model = Model;
@@ -169,19 +176,35 @@ public class AgentSpec extends AbstractModel {
     }
 
     /**
-     * Get 高级设置 
-     * @return AdvancedConfig 高级设置
+     * Get <p>高级设置</p> 
+     * @return AdvancedConfig <p>高级设置</p>
      */
     public AgentAdvancedConfig getAdvancedConfig() {
         return this.AdvancedConfig;
     }
 
     /**
-     * Set 高级设置
-     * @param AdvancedConfig 高级设置
+     * Set <p>高级设置</p>
+     * @param AdvancedConfig <p>高级设置</p>
      */
     public void setAdvancedConfig(AgentAdvancedConfig AdvancedConfig) {
         this.AdvancedConfig = AdvancedConfig;
+    }
+
+    /**
+     * Get <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p> 
+     * @return ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+     */
+    public AgentExternalToolConfig [] getExternalToolList() {
+        return this.ExternalToolList;
+    }
+
+    /**
+     * Set <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+     * @param ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+     */
+    public void setExternalToolList(AgentExternalToolConfig [] ExternalToolList) {
+        this.ExternalToolList = ExternalToolList;
     }
 
     public AgentSpec() {
@@ -222,6 +245,12 @@ public class AgentSpec extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new AgentAdvancedConfig(source.AdvancedConfig);
         }
+        if (source.ExternalToolList != null) {
+            this.ExternalToolList = new AgentExternalToolConfig[source.ExternalToolList.length];
+            for (int i = 0; i < source.ExternalToolList.length; i++) {
+                this.ExternalToolList[i] = new AgentExternalToolConfig(source.ExternalToolList[i]);
+            }
+        }
     }
 
 
@@ -236,6 +265,7 @@ public class AgentSpec extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PluginList.", this.PluginList);
         this.setParamArrayObj(map, prefix + "SkillList.", this.SkillList);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
 
     }
 }

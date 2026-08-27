@@ -227,6 +227,13 @@ public class CreateClusterRequest extends AbstractModel {
     private Boolean EnableCbsSysEncryptFlag;
 
     /**
+    * <p>自定义metadb数据</p>
+    */
+    @SerializedName("MetaDBGroupInfo")
+    @Expose
+    private CustomMetaDBInfo [] MetaDBGroupInfo;
+
+    /**
      * Get <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p> 
      * @return ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      */
@@ -690,6 +697,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.EnableCbsSysEncryptFlag = EnableCbsSysEncryptFlag;
     }
 
+    /**
+     * Get <p>自定义metadb数据</p> 
+     * @return MetaDBGroupInfo <p>自定义metadb数据</p>
+     */
+    public CustomMetaDBInfo [] getMetaDBGroupInfo() {
+        return this.MetaDBGroupInfo;
+    }
+
+    /**
+     * Set <p>自定义metadb数据</p>
+     * @param MetaDBGroupInfo <p>自定义metadb数据</p>
+     */
+    public void setMetaDBGroupInfo(CustomMetaDBInfo [] MetaDBGroupInfo) {
+        this.MetaDBGroupInfo = MetaDBGroupInfo;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -806,6 +829,12 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.EnableCbsSysEncryptFlag != null) {
             this.EnableCbsSysEncryptFlag = new Boolean(source.EnableCbsSysEncryptFlag);
         }
+        if (source.MetaDBGroupInfo != null) {
+            this.MetaDBGroupInfo = new CustomMetaDBInfo[source.MetaDBGroupInfo.length];
+            for (int i = 0; i < source.MetaDBGroupInfo.length; i++) {
+                this.MetaDBGroupInfo[i] = new CustomMetaDBInfo(source.MetaDBGroupInfo[i]);
+            }
+        }
     }
 
 
@@ -842,6 +871,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
         this.setParamSimple(map, prefix + "EnableCbsSysEncryptFlag", this.EnableCbsSysEncryptFlag);
+        this.setParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
 
     }
 }

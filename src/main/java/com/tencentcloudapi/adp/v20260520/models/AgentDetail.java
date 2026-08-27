@@ -80,6 +80,13 @@ public class AgentDetail extends AbstractModel {
     private AgentAdvancedConfig AdvancedConfig;
 
     /**
+    * <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+    */
+    @SerializedName("ExternalToolList")
+    @Expose
+    private AgentExternalToolConfig [] ExternalToolList;
+
+    /**
      * Get <p>Agent ID</p> 
      * @return AgentId <p>Agent ID</p>
      */
@@ -207,6 +214,22 @@ public class AgentDetail extends AbstractModel {
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p> 
+     * @return ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+     */
+    public AgentExternalToolConfig [] getExternalToolList() {
+        return this.ExternalToolList;
+    }
+
+    /**
+     * Set <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+     * @param ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+     */
+    public void setExternalToolList(AgentExternalToolConfig [] ExternalToolList) {
+        this.ExternalToolList = ExternalToolList;
+    }
+
     public AgentDetail() {
     }
 
@@ -248,6 +271,12 @@ public class AgentDetail extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new AgentAdvancedConfig(source.AdvancedConfig);
         }
+        if (source.ExternalToolList != null) {
+            this.ExternalToolList = new AgentExternalToolConfig[source.ExternalToolList.length];
+            for (int i = 0; i < source.ExternalToolList.length; i++) {
+                this.ExternalToolList[i] = new AgentExternalToolConfig(source.ExternalToolList[i]);
+            }
+        }
     }
 
 
@@ -263,6 +292,7 @@ public class AgentDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PluginList.", this.PluginList);
         this.setParamArrayObj(map, prefix + "SkillList.", this.SkillList);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
 
     }
 }
