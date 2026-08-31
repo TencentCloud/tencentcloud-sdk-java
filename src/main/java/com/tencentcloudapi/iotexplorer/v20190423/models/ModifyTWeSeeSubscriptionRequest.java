@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
 
     /**
-    * 产品 ID
-    */
-    @SerializedName("ProductId")
-    @Expose
-    private String ProductId;
-
-    /**
     * 设备名称
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
+
+    /**
+    * 产品 ID
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
 
     /**
     * 算法类型。可选值：
@@ -54,11 +54,11 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     private Long ChannelId;
 
     /**
-    * 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+    * 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
     */
-    @SerializedName("Enabled")
+    @SerializedName("CompHighlightConfig")
     @Expose
-    private Boolean Enabled;
+    private SeeCompHighlightConfig CompHighlightConfig;
 
     /**
     * 视觉理解配置（适用于视频理解、图片理解），不传则不修改
@@ -68,11 +68,11 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     private SeeComprehensionConfig ComprehensionConfig;
 
     /**
-    * 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+    * 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
     */
-    @SerializedName("CompHighlightConfig")
+    @SerializedName("Enabled")
     @Expose
-    private SeeCompHighlightConfig CompHighlightConfig;
+    private Boolean Enabled;
 
     /**
     * 云存事件 ID 过滤规则配置，不传则不修改
@@ -82,20 +82,11 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     private SeeEventIdFilterConfig EventIdFilterConfig;
 
     /**
-     * Get 产品 ID 
-     * @return ProductId 产品 ID
-     */
-    public String getProductId() {
-        return this.ProductId;
-    }
-
-    /**
-     * Set 产品 ID
-     * @param ProductId 产品 ID
-     */
-    public void setProductId(String ProductId) {
-        this.ProductId = ProductId;
-    }
+    * 每日与每周总结配置，不传则不修改
+    */
+    @SerializedName("SummarizeConfig")
+    @Expose
+    private SeeSummarizeConfig SummarizeConfig;
 
     /**
      * Get 设备名称 
@@ -111,6 +102,22 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
+    }
+
+    /**
+     * Get 产品 ID 
+     * @return ProductId 产品 ID
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品 ID
+     * @param ProductId 产品 ID
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
     }
 
     /**
@@ -154,19 +161,19 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改 
-     * @return Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     * Get 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改 
+     * @return CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
      */
-    public Boolean getEnabled() {
-        return this.Enabled;
+    public SeeCompHighlightConfig getCompHighlightConfig() {
+        return this.CompHighlightConfig;
     }
 
     /**
-     * Set 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
-     * @param Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     * Set 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+     * @param CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
      */
-    public void setEnabled(Boolean Enabled) {
-        this.Enabled = Enabled;
+    public void setCompHighlightConfig(SeeCompHighlightConfig CompHighlightConfig) {
+        this.CompHighlightConfig = CompHighlightConfig;
     }
 
     /**
@@ -186,19 +193,19 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改 
-     * @return CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+     * Get 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改 
+     * @return Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
      */
-    public SeeCompHighlightConfig getCompHighlightConfig() {
-        return this.CompHighlightConfig;
+    public Boolean getEnabled() {
+        return this.Enabled;
     }
 
     /**
-     * Set 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
-     * @param CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
+     * Set 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     * @param Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
      */
-    public void setCompHighlightConfig(SeeCompHighlightConfig CompHighlightConfig) {
-        this.CompHighlightConfig = CompHighlightConfig;
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
     }
 
     /**
@@ -217,6 +224,22 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
         this.EventIdFilterConfig = EventIdFilterConfig;
     }
 
+    /**
+     * Get 每日与每周总结配置，不传则不修改 
+     * @return SummarizeConfig 每日与每周总结配置，不传则不修改
+     */
+    public SeeSummarizeConfig getSummarizeConfig() {
+        return this.SummarizeConfig;
+    }
+
+    /**
+     * Set 每日与每周总结配置，不传则不修改
+     * @param SummarizeConfig 每日与每周总结配置，不传则不修改
+     */
+    public void setSummarizeConfig(SeeSummarizeConfig SummarizeConfig) {
+        this.SummarizeConfig = SummarizeConfig;
+    }
+
     public ModifyTWeSeeSubscriptionRequest() {
     }
 
@@ -225,11 +248,11 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyTWeSeeSubscriptionRequest(ModifyTWeSeeSubscriptionRequest source) {
-        if (source.ProductId != null) {
-            this.ProductId = new String(source.ProductId);
-        }
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
         }
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
@@ -237,17 +260,20 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
-        if (source.Enabled != null) {
-            this.Enabled = new Boolean(source.Enabled);
+        if (source.CompHighlightConfig != null) {
+            this.CompHighlightConfig = new SeeCompHighlightConfig(source.CompHighlightConfig);
         }
         if (source.ComprehensionConfig != null) {
             this.ComprehensionConfig = new SeeComprehensionConfig(source.ComprehensionConfig);
         }
-        if (source.CompHighlightConfig != null) {
-            this.CompHighlightConfig = new SeeCompHighlightConfig(source.CompHighlightConfig);
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
         }
         if (source.EventIdFilterConfig != null) {
             this.EventIdFilterConfig = new SeeEventIdFilterConfig(source.EventIdFilterConfig);
+        }
+        if (source.SummarizeConfig != null) {
+            this.SummarizeConfig = new SeeSummarizeConfig(source.SummarizeConfig);
         }
     }
 
@@ -256,14 +282,15 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
-        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
-        this.setParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
         this.setParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
+        this.setParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
+        this.setParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
 
     }
 }

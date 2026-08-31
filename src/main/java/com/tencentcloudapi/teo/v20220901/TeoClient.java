@@ -969,6 +969,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询站点规则引擎操作可用的定制配置列表。
+     * @param req DescribeAvailableCustomActionsForRuleEngineRequest
+     * @return DescribeAvailableCustomActionsForRuleEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngine(DescribeAvailableCustomActionsForRuleEngineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAvailableCustomActionsForRuleEngine", DescribeAvailableCustomActionsForRuleEngineResponse.class);
+    }
+
+    /**
      *查询当前账户可用套餐信息列表
      * @param req DescribeAvailablePlansRequest
      * @return DescribeAvailablePlansResponse

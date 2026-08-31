@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RTPAddressDestination extends AbstractModel {
 
     /**
-    * 转推的目标地址的IP。
+    * <p>转推的目标地址的IP。</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 转推的目标地址的端口。
+    * <p>转推的目标地址的端口。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 转推的目标地址的IP。 
-     * @return Ip 转推的目标地址的IP。
+     * Get <p>转推的目标地址的IP。</p> 
+     * @return Ip <p>转推的目标地址的IP。</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 转推的目标地址的IP。
-     * @param Ip 转推的目标地址的IP。
+     * Set <p>转推的目标地址的IP。</p>
+     * @param Ip <p>转推的目标地址的IP。</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 转推的目标地址的端口。 
-     * @return Port 转推的目标地址的端口。
+     * Get <p>转推的目标地址的端口。</p> 
+     * @return Port <p>转推的目标地址的端口。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 转推的目标地址的端口。
-     * @param Port 转推的目标地址的端口。
+     * Set <p>转推的目标地址的端口。</p>
+     * @param Port <p>转推的目标地址的端口。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;

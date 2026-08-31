@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class AigcVideoReferenceVideoInfo extends AbstractModel {
 
     /**
-    * 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
+    * <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-    * 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
+    * <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
     */
     @SerializedName("ReferType")
     @Expose
     private String ReferType;
 
     /**
-    * 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+    * <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
     */
     @SerializedName("KeepOriginalSound")
     @Expose
     private String KeepOriginalSound;
 
     /**
-     * Get 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。 
-     * @return VideoUrl 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
+     * Get <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p> 
+     * @return VideoUrl <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
-     * @param VideoUrl 参考视频url。需要外网可访问。
-可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声
-通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频
-参考视频为待编辑视频时，不能定义视频首尾帧。
+     * Set <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
+     * @param VideoUrl <p>参考视频url。需要外网可访问。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声<br>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频<br>参考视频为待编辑视频时，不能定义视频首尾帧。</p>
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。 
-     * @return ReferType 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
+     * Get <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p> 
+     * @return ReferType <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
      */
     public String getReferType() {
         return this.ReferType;
     }
 
     /**
-     * Set 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
-     * @param ReferType 通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。
+     * Set <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
+     * @param ReferType <p>通过ReferType参数区分参考视频类型：feature为特征参考视频，base为待编辑视频。</p>
      */
     public void setReferType(String ReferType) {
         this.ReferType = ReferType;
     }
 
     /**
-     * Get 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。 
-     * @return KeepOriginalSound 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+     * Get <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p> 
+     * @return KeepOriginalSound <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
      */
     public String getKeepOriginalSound() {
         return this.KeepOriginalSound;
     }
 
     /**
-     * Set 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
-     * @param KeepOriginalSound 通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。
+     * Set <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
+     * @param KeepOriginalSound <p>通过KeepOriginalSound参数选择是否保留视频原声，yes为保留，no为不保留；当前参数对特征参考视频（feature）也生效。</p>
      */
     public void setKeepOriginalSound(String KeepOriginalSound) {
         this.KeepOriginalSound = KeepOriginalSound;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribePulsarProInstancesRequest extends AbstractModel {
 
     /**
-    * 查询条件过滤器
+    * <p>查询条件过滤器</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询数目上限，默认20
+    * <p>查询数目上限，默认20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询起始位置
+    * <p>查询起始位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 查询条件过滤器 
-     * @return Filters 查询条件过滤器
+     * Get <p>查询条件过滤器</p> 
+     * @return Filters <p>查询条件过滤器</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件过滤器
-     * @param Filters 查询条件过滤器
+     * Set <p>查询条件过滤器</p>
+     * @param Filters <p>查询条件过滤器</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询数目上限，默认20 
-     * @return Limit 查询数目上限，默认20
+     * Get <p>查询数目上限，默认20</p> 
+     * @return Limit <p>查询数目上限，默认20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数目上限，默认20
-     * @param Limit 查询数目上限，默认20
+     * Set <p>查询数目上限，默认20</p>
+     * @param Limit <p>查询数目上限，默认20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get <p>查询起始位置</p> 
+     * @return Offset <p>查询起始位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set <p>查询起始位置</p>
+     * @param Offset <p>查询起始位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

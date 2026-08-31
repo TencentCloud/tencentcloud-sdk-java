@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeFlow extends AbstractModel {
 
     /**
-    * 流Id。
+    * <p>流Id。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 流名称。
+    * <p>流名称。</p>
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 流状态，目前有IDLE/RUNNING。
+    * <p>流状态，目前有IDLE/RUNNING。</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 最大带宽值。
+    * <p>最大带宽值。</p>
     */
     @SerializedName("MaxBandwidth")
     @Expose
     private Long MaxBandwidth;
 
     /**
-    * 输入组。
+    * <p>输入组。</p>
     */
     @SerializedName("InputGroup")
     @Expose
     private DescribeInput [] InputGroup;
 
     /**
-    * 输出组。
+    * <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputGroup")
@@ -67,117 +67,117 @@ public class DescribeFlow extends AbstractModel {
     private DescribeOutput [] OutputGroup;
 
     /**
-    * 该Flow关联的媒体传输事件EventId。
+    * <p>该Flow关联的媒体传输事件EventId。</p>
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 媒体传输输入流所属的区域，取值和InputRegion相同。
+    * <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 该Flow允许创建的输入协议
+    * <p>该Flow允许创建的输入协议</p>
     */
     @SerializedName("AllowedInputProtocols")
     @Expose
     private String [] AllowedInputProtocols;
 
     /**
-    * 该Flow允许创建的输出协议
+    * <p>该Flow允许创建的输出协议</p>
     */
     @SerializedName("AllowedOutputProtocols")
     @Expose
     private String [] AllowedOutputProtocols;
 
     /**
-     * Get 流Id。 
-     * @return FlowId 流Id。
+     * Get <p>流Id。</p> 
+     * @return FlowId <p>流Id。</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流Id。
-     * @param FlowId 流Id。
+     * Set <p>流Id。</p>
+     * @param FlowId <p>流Id。</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 流名称。 
-     * @return FlowName 流名称。
+     * Get <p>流名称。</p> 
+     * @return FlowName <p>流名称。</p>
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 流名称。
-     * @param FlowName 流名称。
+     * Set <p>流名称。</p>
+     * @param FlowName <p>流名称。</p>
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 流状态，目前有IDLE/RUNNING。 
-     * @return State 流状态，目前有IDLE/RUNNING。
+     * Get <p>流状态，目前有IDLE/RUNNING。</p> 
+     * @return State <p>流状态，目前有IDLE/RUNNING。</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 流状态，目前有IDLE/RUNNING。
-     * @param State 流状态，目前有IDLE/RUNNING。
+     * Set <p>流状态，目前有IDLE/RUNNING。</p>
+     * @param State <p>流状态，目前有IDLE/RUNNING。</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 最大带宽值。 
-     * @return MaxBandwidth 最大带宽值。
+     * Get <p>最大带宽值。</p> 
+     * @return MaxBandwidth <p>最大带宽值。</p>
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set 最大带宽值。
-     * @param MaxBandwidth 最大带宽值。
+     * Set <p>最大带宽值。</p>
+     * @param MaxBandwidth <p>最大带宽值。</p>
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
     /**
-     * Get 输入组。 
-     * @return InputGroup 输入组。
+     * Get <p>输入组。</p> 
+     * @return InputGroup <p>输入组。</p>
      */
     public DescribeInput [] getInputGroup() {
         return this.InputGroup;
     }
 
     /**
-     * Set 输入组。
-     * @param InputGroup 输入组。
+     * Set <p>输入组。</p>
+     * @param InputGroup <p>输入组。</p>
      */
     public void setInputGroup(DescribeInput [] InputGroup) {
         this.InputGroup = InputGroup;
     }
 
     /**
-     * Get 输出组。
+     * Get <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputGroup 输出组。
+     * @return OutputGroup <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutput [] getOutputGroup() {
@@ -185,9 +185,9 @@ public class DescribeFlow extends AbstractModel {
     }
 
     /**
-     * Set 输出组。
+     * Set <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputGroup 输出组。
+     * @param OutputGroup <p>输出组。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputGroup(DescribeOutput [] OutputGroup) {
@@ -195,64 +195,64 @@ public class DescribeFlow extends AbstractModel {
     }
 
     /**
-     * Get 该Flow关联的媒体传输事件EventId。 
-     * @return EventId 该Flow关联的媒体传输事件EventId。
+     * Get <p>该Flow关联的媒体传输事件EventId。</p> 
+     * @return EventId <p>该Flow关联的媒体传输事件EventId。</p>
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 该Flow关联的媒体传输事件EventId。
-     * @param EventId 该Flow关联的媒体传输事件EventId。
+     * Set <p>该Flow关联的媒体传输事件EventId。</p>
+     * @param EventId <p>该Flow关联的媒体传输事件EventId。</p>
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 媒体传输输入流所属的区域，取值和InputRegion相同。 
-     * @return Region 媒体传输输入流所属的区域，取值和InputRegion相同。
+     * Get <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p> 
+     * @return Region <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 媒体传输输入流所属的区域，取值和InputRegion相同。
-     * @param Region 媒体传输输入流所属的区域，取值和InputRegion相同。
+     * Set <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
+     * @param Region <p>媒体传输输入流所属的区域，取值和InputRegion相同。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 该Flow允许创建的输入协议 
-     * @return AllowedInputProtocols 该Flow允许创建的输入协议
+     * Get <p>该Flow允许创建的输入协议</p> 
+     * @return AllowedInputProtocols <p>该Flow允许创建的输入协议</p>
      */
     public String [] getAllowedInputProtocols() {
         return this.AllowedInputProtocols;
     }
 
     /**
-     * Set 该Flow允许创建的输入协议
-     * @param AllowedInputProtocols 该Flow允许创建的输入协议
+     * Set <p>该Flow允许创建的输入协议</p>
+     * @param AllowedInputProtocols <p>该Flow允许创建的输入协议</p>
      */
     public void setAllowedInputProtocols(String [] AllowedInputProtocols) {
         this.AllowedInputProtocols = AllowedInputProtocols;
     }
 
     /**
-     * Get 该Flow允许创建的输出协议 
-     * @return AllowedOutputProtocols 该Flow允许创建的输出协议
+     * Get <p>该Flow允许创建的输出协议</p> 
+     * @return AllowedOutputProtocols <p>该Flow允许创建的输出协议</p>
      */
     public String [] getAllowedOutputProtocols() {
         return this.AllowedOutputProtocols;
     }
 
     /**
-     * Set 该Flow允许创建的输出协议
-     * @param AllowedOutputProtocols 该Flow允许创建的输出协议
+     * Set <p>该Flow允许创建的输出协议</p>
+     * @param AllowedOutputProtocols <p>该Flow允许创建的输出协议</p>
      */
     public void setAllowedOutputProtocols(String [] AllowedOutputProtocols) {
         this.AllowedOutputProtocols = AllowedOutputProtocols;

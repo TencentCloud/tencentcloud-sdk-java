@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AiSamplePerson extends AbstractModel {
 
     /**
-    * 人物 ID。
+    * <p>人物 ID。</p>
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * 人物名称。
+    * <p>人物名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 人物描述。
+    * <p>人物描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 人脸信息。
+    * <p>人脸信息。</p>
     */
     @SerializedName("FaceInfoSet")
     @Expose
     private AiSampleFaceInfo [] FaceInfoSet;
 
     /**
-    * 人物标签。
+    * <p>人物标签。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * 应用场景。
+    * <p>应用场景。</p>
     */
     @SerializedName("UsageSet")
     @Expose
     private String [] UsageSet;
 
     /**
-    * 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 人物 ID。 
-     * @return PersonId 人物 ID。
+     * Get <p>人物 ID。</p> 
+     * @return PersonId <p>人物 ID。</p>
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set 人物 ID。
-     * @param PersonId 人物 ID。
+     * Set <p>人物 ID。</p>
+     * @param PersonId <p>人物 ID。</p>
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get 人物名称。 
-     * @return Name 人物名称。
+     * Get <p>人物名称。</p> 
+     * @return Name <p>人物名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 人物名称。
-     * @param Name 人物名称。
+     * Set <p>人物名称。</p>
+     * @param Name <p>人物名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 人物描述。 
-     * @return Description 人物描述。
+     * Get <p>人物描述。</p> 
+     * @return Description <p>人物描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 人物描述。
-     * @param Description 人物描述。
+     * Set <p>人物描述。</p>
+     * @param Description <p>人物描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 人脸信息。 
-     * @return FaceInfoSet 人脸信息。
+     * Get <p>人脸信息。</p> 
+     * @return FaceInfoSet <p>人脸信息。</p>
      */
     public AiSampleFaceInfo [] getFaceInfoSet() {
         return this.FaceInfoSet;
     }
 
     /**
-     * Set 人脸信息。
-     * @param FaceInfoSet 人脸信息。
+     * Set <p>人脸信息。</p>
+     * @param FaceInfoSet <p>人脸信息。</p>
      */
     public void setFaceInfoSet(AiSampleFaceInfo [] FaceInfoSet) {
         this.FaceInfoSet = FaceInfoSet;
     }
 
     /**
-     * Get 人物标签。 
-     * @return TagSet 人物标签。
+     * Get <p>人物标签。</p> 
+     * @return TagSet <p>人物标签。</p>
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 人物标签。
-     * @param TagSet 人物标签。
+     * Set <p>人物标签。</p>
+     * @param TagSet <p>人物标签。</p>
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 应用场景。 
-     * @return UsageSet 应用场景。
+     * Get <p>应用场景。</p> 
+     * @return UsageSet <p>应用场景。</p>
      */
     public String [] getUsageSet() {
         return this.UsageSet;
     }
 
     /**
-     * Set 应用场景。
-     * @param UsageSet 应用场景。
+     * Set <p>应用场景。</p>
+     * @param UsageSet <p>应用场景。</p>
      */
     public void setUsageSet(String [] UsageSet) {
         this.UsageSet = UsageSet;
     }
 
     /**
-     * Get 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
-     * @return CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
-     * @return UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

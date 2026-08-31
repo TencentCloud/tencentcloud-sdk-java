@@ -80,11 +80,18 @@ public class DescribeUpperModelsRequest extends AbstractModel {
     private String ModelProvider;
 
     /**
-    * <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+    * <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
     */
     @SerializedName("ServiceProviderId")
     @Expose
     private String ServiceProviderId;
+
+    /**
+    * <p>    CMR 私网管道ID </p>
+    */
+    @SerializedName("CMRPrivateNetworkTunnelId")
+    @Expose
+    private String CMRPrivateNetworkTunnelId;
 
     /**
      * Get <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p> 
@@ -215,19 +222,35 @@ public class DescribeUpperModelsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p> 
-     * @return ServiceProviderId <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+     * Get <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p> 
+     * @return ServiceProviderId <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
      */
     public String getServiceProviderId() {
         return this.ServiceProviderId;
     }
 
     /**
-     * Set <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
-     * @param ServiceProviderId <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx</p>
+     * Set <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
+     * @param ServiceProviderId <p>BYOK 业务 ID，可选</p><p>格式：byok-xxxxxxxx，预留参数</p>
      */
     public void setServiceProviderId(String ServiceProviderId) {
         this.ServiceProviderId = ServiceProviderId;
+    }
+
+    /**
+     * Get <p>    CMR 私网管道ID </p> 
+     * @return CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
+     */
+    public String getCMRPrivateNetworkTunnelId() {
+        return this.CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Set <p>    CMR 私网管道ID </p>
+     * @param CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
+     */
+    public void setCMRPrivateNetworkTunnelId(String CMRPrivateNetworkTunnelId) {
+        this.CMRPrivateNetworkTunnelId = CMRPrivateNetworkTunnelId;
     }
 
     public DescribeUpperModelsRequest() {
@@ -265,6 +288,9 @@ public class DescribeUpperModelsRequest extends AbstractModel {
         if (source.ServiceProviderId != null) {
             this.ServiceProviderId = new String(source.ServiceProviderId);
         }
+        if (source.CMRPrivateNetworkTunnelId != null) {
+            this.CMRPrivateNetworkTunnelId = new String(source.CMRPrivateNetworkTunnelId);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class DescribeUpperModelsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelProtocol", this.ModelProtocol);
         this.setParamSimple(map, prefix + "ModelProvider", this.ModelProvider);
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
+        this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
 
     }
 }

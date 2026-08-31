@@ -24,69 +24,63 @@ import java.util.HashMap;
 public class DescribeVirusScanConfigResponse extends AbstractModel {
 
     /**
-    * 是否开启定期扫描
+    * <p>是否开启定期扫描</p>
     */
     @SerializedName("EnableScan")
     @Expose
     private Boolean EnableScan;
 
     /**
-    * 检测周期每隔多少天
+    * <p>检测周期每隔多少天</p>
     */
     @SerializedName("Cycle")
     @Expose
     private Long Cycle;
 
     /**
-    * 扫描开始时间
+    * <p>扫描开始时间</p>
     */
     @SerializedName("BeginScanAt")
     @Expose
     private String BeginScanAt;
 
     /**
-    * 超时时长，单位小时
+    * <p>超时时长，单位小时</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
+    * <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
     */
     @SerializedName("ScanRangeType")
     @Expose
     private String ScanRangeType;
 
     /**
-    * 自选扫描范围的容器id或者节点id 
+    * <p>自选扫描范围的容器id或者节点id</p>
     */
     @SerializedName("ScanIDs")
     @Expose
     private ScanRangeInfo [] ScanIDs;
 
     /**
-    * 自选排除或扫描的地址
+    * <p>自选排除或扫描的地址</p>
     */
     @SerializedName("ScanPath")
     @Expose
     private String [] ScanPath;
 
     /**
-    * 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+    * <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
     */
     @SerializedName("ScanPathMode")
     @Expose
     private String ScanPathMode;
 
     /**
-    * true:包含路径
-false:排除路径
+    * <p>true:包含路径<br>false:排除路径</p>
     */
     @SerializedName("IsIncludePath")
     @Expose
@@ -100,168 +94,144 @@ false:排除路径
     private String RequestId;
 
     /**
-     * Get 是否开启定期扫描 
-     * @return EnableScan 是否开启定期扫描
+     * Get <p>是否开启定期扫描</p> 
+     * @return EnableScan <p>是否开启定期扫描</p>
      */
     public Boolean getEnableScan() {
         return this.EnableScan;
     }
 
     /**
-     * Set 是否开启定期扫描
-     * @param EnableScan 是否开启定期扫描
+     * Set <p>是否开启定期扫描</p>
+     * @param EnableScan <p>是否开启定期扫描</p>
      */
     public void setEnableScan(Boolean EnableScan) {
         this.EnableScan = EnableScan;
     }
 
     /**
-     * Get 检测周期每隔多少天 
-     * @return Cycle 检测周期每隔多少天
+     * Get <p>检测周期每隔多少天</p> 
+     * @return Cycle <p>检测周期每隔多少天</p>
      */
     public Long getCycle() {
         return this.Cycle;
     }
 
     /**
-     * Set 检测周期每隔多少天
-     * @param Cycle 检测周期每隔多少天
+     * Set <p>检测周期每隔多少天</p>
+     * @param Cycle <p>检测周期每隔多少天</p>
      */
     public void setCycle(Long Cycle) {
         this.Cycle = Cycle;
     }
 
     /**
-     * Get 扫描开始时间 
-     * @return BeginScanAt 扫描开始时间
+     * Get <p>扫描开始时间</p> 
+     * @return BeginScanAt <p>扫描开始时间</p>
      */
     public String getBeginScanAt() {
         return this.BeginScanAt;
     }
 
     /**
-     * Set 扫描开始时间
-     * @param BeginScanAt 扫描开始时间
+     * Set <p>扫描开始时间</p>
+     * @param BeginScanAt <p>扫描开始时间</p>
      */
     public void setBeginScanAt(String BeginScanAt) {
         this.BeginScanAt = BeginScanAt;
     }
 
     /**
-     * Get 超时时长，单位小时 
-     * @return Timeout 超时时长，单位小时
+     * Get <p>超时时长，单位小时</p> 
+     * @return Timeout <p>超时时长，单位小时</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时时长，单位小时
-     * @param Timeout 超时时长，单位小时
+     * Set <p>超时时长，单位小时</p>
+     * @param Timeout <p>超时时长，单位小时</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器 
-     * @return ScanRangeType SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
+     * Get <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p> 
+     * @return ScanRangeType <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
      */
     public String getScanRangeType() {
         return this.ScanRangeType;
     }
 
     /**
-     * Set SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
-     * @param ScanRangeType SCAN_NODE:扫描节点
-SCAN_CONTAINER:扫描容器
+     * Set <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
+     * @param ScanRangeType <p>SCAN_NODE:扫描节点<br>SCAN_CONTAINER:扫描容器</p>
      */
     public void setScanRangeType(String ScanRangeType) {
         this.ScanRangeType = ScanRangeType;
     }
 
     /**
-     * Get 自选扫描范围的容器id或者节点id  
-     * @return ScanIDs 自选扫描范围的容器id或者节点id 
+     * Get <p>自选扫描范围的容器id或者节点id</p> 
+     * @return ScanIDs <p>自选扫描范围的容器id或者节点id</p>
      */
     public ScanRangeInfo [] getScanIDs() {
         return this.ScanIDs;
     }
 
     /**
-     * Set 自选扫描范围的容器id或者节点id 
-     * @param ScanIDs 自选扫描范围的容器id或者节点id 
+     * Set <p>自选扫描范围的容器id或者节点id</p>
+     * @param ScanIDs <p>自选扫描范围的容器id或者节点id</p>
      */
     public void setScanIDs(ScanRangeInfo [] ScanIDs) {
         this.ScanIDs = ScanIDs;
     }
 
     /**
-     * Get 自选排除或扫描的地址 
-     * @return ScanPath 自选排除或扫描的地址
+     * Get <p>自选排除或扫描的地址</p> 
+     * @return ScanPath <p>自选排除或扫描的地址</p>
      */
     public String [] getScanPath() {
         return this.ScanPath;
     }
 
     /**
-     * Set 自选排除或扫描的地址
-     * @param ScanPath 自选排除或扫描的地址
+     * Set <p>自选排除或扫描的地址</p>
+     * @param ScanPath <p>自选排除或扫描的地址</p>
      */
     public void setScanPath(String [] ScanPath) {
         this.ScanPath = ScanPath;
     }
 
     /**
-     * Get 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
- 
-     * @return ScanPathMode 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+     * Get <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p> 
+     * @return ScanPathMode <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
      */
     public String getScanPathMode() {
         return this.ScanPathMode;
     }
 
     /**
-     * Set 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
-     * @param ScanPathMode 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+     * Set <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
+     * @param ScanPathMode <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
      */
     public void setScanPathMode(String ScanPathMode) {
         this.ScanPathMode = ScanPathMode;
     }
 
     /**
-     * Get true:包含路径
-false:排除路径 
-     * @return IsIncludePath true:包含路径
-false:排除路径
+     * Get <p>true:包含路径<br>false:排除路径</p> 
+     * @return IsIncludePath <p>true:包含路径<br>false:排除路径</p>
      */
     public Boolean getIsIncludePath() {
         return this.IsIncludePath;
     }
 
     /**
-     * Set true:包含路径
-false:排除路径
-     * @param IsIncludePath true:包含路径
-false:排除路径
+     * Set <p>true:包含路径<br>false:排除路径</p>
+     * @param IsIncludePath <p>true:包含路径<br>false:排除路径</p>
      */
     public void setIsIncludePath(Boolean IsIncludePath) {
         this.IsIncludePath = IsIncludePath;

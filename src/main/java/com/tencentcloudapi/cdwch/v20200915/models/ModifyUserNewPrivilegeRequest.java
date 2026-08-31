@@ -66,6 +66,13 @@ public class ModifyUserNewPrivilegeRequest extends AbstractModel {
     private DatabasePrivilegeInfo [] DatabasePrivilegeList;
 
     /**
+    * <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get <p>实例id</p> 
      * @return InstanceId <p>实例id</p>
      */
@@ -161,6 +168,22 @@ public class ModifyUserNewPrivilegeRequest extends AbstractModel {
         this.DatabasePrivilegeList = DatabasePrivilegeList;
     }
 
+    /**
+     * Get <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul> 
+     * @return InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     * @param InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public ModifyUserNewPrivilegeRequest() {
     }
 
@@ -193,6 +216,9 @@ public class ModifyUserNewPrivilegeRequest extends AbstractModel {
                 this.DatabasePrivilegeList[i] = new DatabasePrivilegeInfo(source.DatabasePrivilegeList[i]);
             }
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class ModifyUserNewPrivilegeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AllDatabase", this.AllDatabase);
         this.setParamArraySimple(map, prefix + "GlobalPrivileges.", this.GlobalPrivileges);
         this.setParamArrayObj(map, prefix + "DatabasePrivilegeList.", this.DatabasePrivilegeList);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

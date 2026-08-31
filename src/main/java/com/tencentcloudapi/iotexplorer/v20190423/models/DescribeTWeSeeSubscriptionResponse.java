@@ -24,96 +24,98 @@ import java.util.HashMap;
 public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
 
     /**
-    * 资源 ID
+    * <p>资源 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+    * <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
     */
     @SerializedName("ServiceTier")
     @Expose
     private String ServiceTier;
 
     /**
-    * 到期时间，秒级时间戳
+    * <p>到期时间，秒级时间戳</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 启用状态，`true` 为开启，`false` 为关闭
+    * <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
+    * <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 视觉理解配置（适用于视频理解、图片理解）
+    * <p>视觉理解配置（适用于视频理解、图片理解）</p>
     */
     @SerializedName("ComprehensionConfig")
     @Expose
     private SeeComprehensionConfig ComprehensionConfig;
 
     /**
-    * 视频语义浓缩配置（适用于视频语义浓缩）
+    * <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
     */
     @SerializedName("CompHighlightConfig")
     @Expose
     private SeeCompHighlightConfig CompHighlightConfig;
 
     /**
-    * 云存事件 ID 过滤规则配置项
+    * <p>云存事件 ID 过滤规则配置项</p>
     */
     @SerializedName("EventIdFilterConfig")
     @Expose
     private SeeEventIdFilterConfig EventIdFilterConfig;
 
     /**
-    * 当前周期基础能力总额度
+    * <p>每日与每周总结配置</p>
+    */
+    @SerializedName("SummarizeConfig")
+    @Expose
+    private SeeSummarizeConfig SummarizeConfig;
+
+    /**
+    * <p>当前周期基础能力总额度</p>
     */
     @SerializedName("QuotaBasic")
     @Expose
     private Long QuotaBasic;
 
     /**
-    * 当前周期基础能力已用额度
+    * <p>当前周期基础能力已用额度</p>
     */
     @SerializedName("QuotaUsedBasic")
     @Expose
     private Long QuotaUsedBasic;
 
     /**
-    * 当前周期高级能力总额度
+    * <p>当前周期高级能力总额度</p>
     */
     @SerializedName("QuotaAdvanced")
     @Expose
     private Long QuotaAdvanced;
 
     /**
-    * 当前周期高级能力已用额度
+    * <p>当前周期高级能力已用额度</p>
     */
     @SerializedName("QuotaUsedAdvanced")
     @Expose
     private Long QuotaUsedAdvanced;
 
     /**
-    * 额度刷新时间
+    * <p>额度刷新时间</p>
     */
     @SerializedName("QuotaRefreshTime")
     @Expose
@@ -127,228 +129,224 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源 ID 
-     * @return ResourceId 资源 ID
+     * Get <p>资源 ID</p> 
+     * @return ResourceId <p>资源 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源 ID
-     * @param ResourceId 资源 ID
+     * Set <p>资源 ID</p>
+     * @param ResourceId <p>资源 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解） 
-     * @return ServiceTier 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * Get <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul> 
+     * @return ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      */
     public String getServiceTier() {
         return this.ServiceTier;
     }
 
     /**
-     * Set 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
-     * @param ServiceTier 套餐规格。可能取值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * Set <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * @param ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
      */
     public void setServiceTier(String ServiceTier) {
         this.ServiceTier = ServiceTier;
     }
 
     /**
-     * Get 到期时间，秒级时间戳 
-     * @return ExpireTime 到期时间，秒级时间戳
+     * Get <p>到期时间，秒级时间戳</p> 
+     * @return ExpireTime <p>到期时间，秒级时间戳</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 到期时间，秒级时间戳
-     * @param ExpireTime 到期时间，秒级时间戳
+     * Set <p>到期时间，秒级时间戳</p>
+     * @param ExpireTime <p>到期时间，秒级时间戳</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 启用状态，`true` 为开启，`false` 为关闭 
-     * @return Enabled 启用状态，`true` 为开启，`false` 为关闭
+     * Get <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p> 
+     * @return Enabled <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 启用状态，`true` 为开启，`false` 为关闭
-     * @param Enabled 启用状态，`true` 为开启，`false` 为关闭
+     * Set <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
+     * @param Enabled <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离 
-     * @return Status 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
+     * Get <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul> 
+     * @return Status <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
-     * @param Status 订阅状态。可能取值：
-
-- `NORMAL`：正常
-- `ISOLATED`：隔离
+     * Set <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
+     * @param Status <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 视觉理解配置（适用于视频理解、图片理解） 
-     * @return ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解）
+     * Get <p>视觉理解配置（适用于视频理解、图片理解）</p> 
+     * @return ComprehensionConfig <p>视觉理解配置（适用于视频理解、图片理解）</p>
      */
     public SeeComprehensionConfig getComprehensionConfig() {
         return this.ComprehensionConfig;
     }
 
     /**
-     * Set 视觉理解配置（适用于视频理解、图片理解）
-     * @param ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解）
+     * Set <p>视觉理解配置（适用于视频理解、图片理解）</p>
+     * @param ComprehensionConfig <p>视觉理解配置（适用于视频理解、图片理解）</p>
      */
     public void setComprehensionConfig(SeeComprehensionConfig ComprehensionConfig) {
         this.ComprehensionConfig = ComprehensionConfig;
     }
 
     /**
-     * Get 视频语义浓缩配置（适用于视频语义浓缩） 
-     * @return CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩）
+     * Get <p>视频语义浓缩配置（适用于视频语义浓缩）</p> 
+     * @return CompHighlightConfig <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
      */
     public SeeCompHighlightConfig getCompHighlightConfig() {
         return this.CompHighlightConfig;
     }
 
     /**
-     * Set 视频语义浓缩配置（适用于视频语义浓缩）
-     * @param CompHighlightConfig 视频语义浓缩配置（适用于视频语义浓缩）
+     * Set <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
+     * @param CompHighlightConfig <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
      */
     public void setCompHighlightConfig(SeeCompHighlightConfig CompHighlightConfig) {
         this.CompHighlightConfig = CompHighlightConfig;
     }
 
     /**
-     * Get 云存事件 ID 过滤规则配置项 
-     * @return EventIdFilterConfig 云存事件 ID 过滤规则配置项
+     * Get <p>云存事件 ID 过滤规则配置项</p> 
+     * @return EventIdFilterConfig <p>云存事件 ID 过滤规则配置项</p>
      */
     public SeeEventIdFilterConfig getEventIdFilterConfig() {
         return this.EventIdFilterConfig;
     }
 
     /**
-     * Set 云存事件 ID 过滤规则配置项
-     * @param EventIdFilterConfig 云存事件 ID 过滤规则配置项
+     * Set <p>云存事件 ID 过滤规则配置项</p>
+     * @param EventIdFilterConfig <p>云存事件 ID 过滤规则配置项</p>
      */
     public void setEventIdFilterConfig(SeeEventIdFilterConfig EventIdFilterConfig) {
         this.EventIdFilterConfig = EventIdFilterConfig;
     }
 
     /**
-     * Get 当前周期基础能力总额度 
-     * @return QuotaBasic 当前周期基础能力总额度
+     * Get <p>每日与每周总结配置</p> 
+     * @return SummarizeConfig <p>每日与每周总结配置</p>
+     */
+    public SeeSummarizeConfig getSummarizeConfig() {
+        return this.SummarizeConfig;
+    }
+
+    /**
+     * Set <p>每日与每周总结配置</p>
+     * @param SummarizeConfig <p>每日与每周总结配置</p>
+     */
+    public void setSummarizeConfig(SeeSummarizeConfig SummarizeConfig) {
+        this.SummarizeConfig = SummarizeConfig;
+    }
+
+    /**
+     * Get <p>当前周期基础能力总额度</p> 
+     * @return QuotaBasic <p>当前周期基础能力总额度</p>
      */
     public Long getQuotaBasic() {
         return this.QuotaBasic;
     }
 
     /**
-     * Set 当前周期基础能力总额度
-     * @param QuotaBasic 当前周期基础能力总额度
+     * Set <p>当前周期基础能力总额度</p>
+     * @param QuotaBasic <p>当前周期基础能力总额度</p>
      */
     public void setQuotaBasic(Long QuotaBasic) {
         this.QuotaBasic = QuotaBasic;
     }
 
     /**
-     * Get 当前周期基础能力已用额度 
-     * @return QuotaUsedBasic 当前周期基础能力已用额度
+     * Get <p>当前周期基础能力已用额度</p> 
+     * @return QuotaUsedBasic <p>当前周期基础能力已用额度</p>
      */
     public Long getQuotaUsedBasic() {
         return this.QuotaUsedBasic;
     }
 
     /**
-     * Set 当前周期基础能力已用额度
-     * @param QuotaUsedBasic 当前周期基础能力已用额度
+     * Set <p>当前周期基础能力已用额度</p>
+     * @param QuotaUsedBasic <p>当前周期基础能力已用额度</p>
      */
     public void setQuotaUsedBasic(Long QuotaUsedBasic) {
         this.QuotaUsedBasic = QuotaUsedBasic;
     }
 
     /**
-     * Get 当前周期高级能力总额度 
-     * @return QuotaAdvanced 当前周期高级能力总额度
+     * Get <p>当前周期高级能力总额度</p> 
+     * @return QuotaAdvanced <p>当前周期高级能力总额度</p>
      */
     public Long getQuotaAdvanced() {
         return this.QuotaAdvanced;
     }
 
     /**
-     * Set 当前周期高级能力总额度
-     * @param QuotaAdvanced 当前周期高级能力总额度
+     * Set <p>当前周期高级能力总额度</p>
+     * @param QuotaAdvanced <p>当前周期高级能力总额度</p>
      */
     public void setQuotaAdvanced(Long QuotaAdvanced) {
         this.QuotaAdvanced = QuotaAdvanced;
     }
 
     /**
-     * Get 当前周期高级能力已用额度 
-     * @return QuotaUsedAdvanced 当前周期高级能力已用额度
+     * Get <p>当前周期高级能力已用额度</p> 
+     * @return QuotaUsedAdvanced <p>当前周期高级能力已用额度</p>
      */
     public Long getQuotaUsedAdvanced() {
         return this.QuotaUsedAdvanced;
     }
 
     /**
-     * Set 当前周期高级能力已用额度
-     * @param QuotaUsedAdvanced 当前周期高级能力已用额度
+     * Set <p>当前周期高级能力已用额度</p>
+     * @param QuotaUsedAdvanced <p>当前周期高级能力已用额度</p>
      */
     public void setQuotaUsedAdvanced(Long QuotaUsedAdvanced) {
         this.QuotaUsedAdvanced = QuotaUsedAdvanced;
     }
 
     /**
-     * Get 额度刷新时间 
-     * @return QuotaRefreshTime 额度刷新时间
+     * Get <p>额度刷新时间</p> 
+     * @return QuotaRefreshTime <p>额度刷新时间</p>
      */
     public Long getQuotaRefreshTime() {
         return this.QuotaRefreshTime;
     }
 
     /**
-     * Set 额度刷新时间
-     * @param QuotaRefreshTime 额度刷新时间
+     * Set <p>额度刷新时间</p>
+     * @param QuotaRefreshTime <p>额度刷新时间</p>
      */
     public void setQuotaRefreshTime(Long QuotaRefreshTime) {
         this.QuotaRefreshTime = QuotaRefreshTime;
@@ -402,6 +400,9 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
         if (source.EventIdFilterConfig != null) {
             this.EventIdFilterConfig = new SeeEventIdFilterConfig(source.EventIdFilterConfig);
         }
+        if (source.SummarizeConfig != null) {
+            this.SummarizeConfig = new SeeSummarizeConfig(source.SummarizeConfig);
+        }
         if (source.QuotaBasic != null) {
             this.QuotaBasic = new Long(source.QuotaBasic);
         }
@@ -435,6 +436,7 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
         this.setParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
         this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
+        this.setParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
         this.setParamSimple(map, prefix + "QuotaBasic", this.QuotaBasic);
         this.setParamSimple(map, prefix + "QuotaUsedBasic", this.QuotaUsedBasic);
         this.setParamSimple(map, prefix + "QuotaAdvanced", this.QuotaAdvanced);

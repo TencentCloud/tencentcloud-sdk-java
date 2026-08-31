@@ -24,20 +24,14 @@ import java.util.HashMap;
 public class AudioBeautifyConfig extends AbstractModel {
 
     /**
-    * 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+    * <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+    * <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Types")
@@ -45,43 +39,25 @@ public class AudioBeautifyConfig extends AbstractModel {
     private String [] Types;
 
     /**
-     * Get 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。 
-     * @return Switch 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+     * Get <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。 
+     * @return Switch <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
-     * @param Switch 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+     * Set <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
+     * @param Switch <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+     * Get <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Types 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+     * @return Types <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTypes() {
@@ -89,15 +65,9 @@ public class AudioBeautifyConfig extends AbstractModel {
     }
 
     /**
-     * Set 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+     * Set <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Types 类型，可多选，可选值：
-<li>declick：杂音去除</li>
-<li>deesser：齿音压制</li>
-默认值：declick。
+     * @param Types <p>类型，可多选，可选值：</p><li>declick：杂音去除</li><li>deesser：齿音压制</li>默认值：declick。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypes(String [] Types) {

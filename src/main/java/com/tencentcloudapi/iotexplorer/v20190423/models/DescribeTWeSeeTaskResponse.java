@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTWeSeeTaskResponse extends AbstractModel {
 
     /**
-    * 任务信息
+    * <p>任务信息</p>
     */
     @SerializedName("TaskInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTWeSeeTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务信息 
-     * @return TaskInfo 任务信息
+     * Get <p>任务信息</p> 
+     * @return TaskInfo <p>任务信息</p>
      */
     public SeeTaskInfo getTaskInfo() {
         return this.TaskInfo;
     }
 
     /**
-     * Set 任务信息
-     * @param TaskInfo 任务信息
+     * Set <p>任务信息</p>
+     * @param TaskInfo <p>任务信息</p>
      */
     public void setTaskInfo(SeeTaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;

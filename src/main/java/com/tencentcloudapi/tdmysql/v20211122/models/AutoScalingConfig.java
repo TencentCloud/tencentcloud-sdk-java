@@ -40,6 +40,13 @@ public class AutoScalingConfig extends AbstractModel {
     private Float RangeMax;
 
     /**
+    * <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
      * Get <p>ccu最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RangeMin <p>ccu最小值</p>
@@ -79,6 +86,22 @@ public class AutoScalingConfig extends AbstractModel {
         this.RangeMax = RangeMax;
     }
 
+    /**
+     * Get <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul> 
+     * @return ResourceType <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul>
+     * @param ResourceType <p>返回的 range 参数对应的资源类型</p><p>枚举值：</p><ul><li>cpu： 返回的是 cpu 调整返回限制，当不存在mem限制时代表 ccu</li><li>nodecount： 返回的是水平扩缩容的节点数限制范围</li></ul>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
     public AutoScalingConfig() {
     }
 
@@ -93,6 +116,9 @@ public class AutoScalingConfig extends AbstractModel {
         if (source.RangeMax != null) {
             this.RangeMax = new Float(source.RangeMax);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class AutoScalingConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RangeMin", this.RangeMin);
         this.setParamSimple(map, prefix + "RangeMax", this.RangeMax);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

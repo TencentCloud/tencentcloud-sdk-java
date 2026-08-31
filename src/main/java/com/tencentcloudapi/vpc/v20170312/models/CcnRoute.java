@@ -24,348 +24,394 @@ import java.util.HashMap;
 public class CcnRoute extends AbstractModel {
 
     /**
-    * 路由策略ID
+    * <p>路由策略ID</p>
     */
     @SerializedName("RouteId")
     @Expose
     private String RouteId;
 
     /**
-    * 目的端
+    * <p>目的端</p>
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
 
     /**
-    * 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+    * <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 下一跳（关联实例）
+    * <p>下一跳（关联实例）</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 下一跳名称（关联实例名称）
+    * <p>下一跳名称（关联实例名称）</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 下一跳所属地域（关联实例所属地域）
+    * <p>下一跳所属地域（关联实例所属地域）</p>
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 路由是否启用
+    * <p>路由是否启用</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 关联实例所属UIN（根账号）
+    * <p>关联实例所属UIN（根账号）</p>
     */
     @SerializedName("InstanceUin")
     @Expose
     private String InstanceUin;
 
     /**
-    * 路由的扩展状态
+    * <p>路由的扩展状态</p>
     */
     @SerializedName("ExtraState")
     @Expose
     private String ExtraState;
 
     /**
-    * 是否动态路由
+    * <p>是否动态路由</p>
     */
     @SerializedName("IsBgp")
     @Expose
     private Boolean IsBgp;
 
     /**
-    * 路由优先级
+    * <p>路由优先级</p>
     */
     @SerializedName("RoutePriority")
     @Expose
     private Long RoutePriority;
 
     /**
-    * 下一跳扩展名称（关联实例的扩展名称）
+    * <p>下一跳扩展名称（关联实例的扩展名称）</p>
     */
     @SerializedName("InstanceExtraName")
     @Expose
     private String InstanceExtraName;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("AliasType")
     @Expose
     private String AliasType;
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("AliasInstanceId")
     @Expose
     private String AliasInstanceId;
 
     /**
-     * Get 路由策略ID 
-     * @return RouteId 路由策略ID
+    * <p>路由表ID</p>
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
+    * <p>AS-PATH</p>
+    */
+    @SerializedName("AsPath")
+    @Expose
+    private String AsPath;
+
+    /**
+     * Get <p>路由策略ID</p> 
+     * @return RouteId <p>路由策略ID</p>
      */
     public String getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由策略ID
-     * @param RouteId 路由策略ID
+     * Set <p>路由策略ID</p>
+     * @param RouteId <p>路由策略ID</p>
      */
     public void setRouteId(String RouteId) {
         this.RouteId = RouteId;
     }
 
     /**
-     * Get 目的端 
-     * @return DestinationCidrBlock 目的端
+     * Get <p>目的端</p> 
+     * @return DestinationCidrBlock <p>目的端</p>
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * Set 目的端
-     * @param DestinationCidrBlock 目的端
+     * Set <p>目的端</p>
+     * @param DestinationCidrBlock <p>目的端</p>
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT 
-     * @return InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * Get <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p> 
+     * @return InstanceType <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
-     * @param InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * Set <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
+     * @param InstanceType <p>下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 下一跳（关联实例） 
-     * @return InstanceId 下一跳（关联实例）
+     * Get <p>下一跳（关联实例）</p> 
+     * @return InstanceId <p>下一跳（关联实例）</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 下一跳（关联实例）
-     * @param InstanceId 下一跳（关联实例）
+     * Set <p>下一跳（关联实例）</p>
+     * @param InstanceId <p>下一跳（关联实例）</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 下一跳名称（关联实例名称） 
-     * @return InstanceName 下一跳名称（关联实例名称）
+     * Get <p>下一跳名称（关联实例名称）</p> 
+     * @return InstanceName <p>下一跳名称（关联实例名称）</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 下一跳名称（关联实例名称）
-     * @param InstanceName 下一跳名称（关联实例名称）
+     * Set <p>下一跳名称（关联实例名称）</p>
+     * @param InstanceName <p>下一跳名称（关联实例名称）</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 下一跳所属地域（关联实例所属地域） 
-     * @return InstanceRegion 下一跳所属地域（关联实例所属地域）
+     * Get <p>下一跳所属地域（关联实例所属地域）</p> 
+     * @return InstanceRegion <p>下一跳所属地域（关联实例所属地域）</p>
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 下一跳所属地域（关联实例所属地域）
-     * @param InstanceRegion 下一跳所属地域（关联实例所属地域）
+     * Set <p>下一跳所属地域（关联实例所属地域）</p>
+     * @param InstanceRegion <p>下一跳所属地域（关联实例所属地域）</p>
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 路由是否启用 
-     * @return Enabled 路由是否启用
+     * Get <p>路由是否启用</p> 
+     * @return Enabled <p>路由是否启用</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 路由是否启用
-     * @param Enabled 路由是否启用
+     * Set <p>路由是否启用</p>
+     * @param Enabled <p>路由是否启用</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 关联实例所属UIN（根账号） 
-     * @return InstanceUin 关联实例所属UIN（根账号）
+     * Get <p>关联实例所属UIN（根账号）</p> 
+     * @return InstanceUin <p>关联实例所属UIN（根账号）</p>
      */
     public String getInstanceUin() {
         return this.InstanceUin;
     }
 
     /**
-     * Set 关联实例所属UIN（根账号）
-     * @param InstanceUin 关联实例所属UIN（根账号）
+     * Set <p>关联实例所属UIN（根账号）</p>
+     * @param InstanceUin <p>关联实例所属UIN（根账号）</p>
      */
     public void setInstanceUin(String InstanceUin) {
         this.InstanceUin = InstanceUin;
     }
 
     /**
-     * Get 路由的扩展状态 
-     * @return ExtraState 路由的扩展状态
+     * Get <p>路由的扩展状态</p> 
+     * @return ExtraState <p>路由的扩展状态</p>
      */
     public String getExtraState() {
         return this.ExtraState;
     }
 
     /**
-     * Set 路由的扩展状态
-     * @param ExtraState 路由的扩展状态
+     * Set <p>路由的扩展状态</p>
+     * @param ExtraState <p>路由的扩展状态</p>
      */
     public void setExtraState(String ExtraState) {
         this.ExtraState = ExtraState;
     }
 
     /**
-     * Get 是否动态路由 
-     * @return IsBgp 是否动态路由
+     * Get <p>是否动态路由</p> 
+     * @return IsBgp <p>是否动态路由</p>
      */
     public Boolean getIsBgp() {
         return this.IsBgp;
     }
 
     /**
-     * Set 是否动态路由
-     * @param IsBgp 是否动态路由
+     * Set <p>是否动态路由</p>
+     * @param IsBgp <p>是否动态路由</p>
      */
     public void setIsBgp(Boolean IsBgp) {
         this.IsBgp = IsBgp;
     }
 
     /**
-     * Get 路由优先级 
-     * @return RoutePriority 路由优先级
+     * Get <p>路由优先级</p> 
+     * @return RoutePriority <p>路由优先级</p>
      */
     public Long getRoutePriority() {
         return this.RoutePriority;
     }
 
     /**
-     * Set 路由优先级
-     * @param RoutePriority 路由优先级
+     * Set <p>路由优先级</p>
+     * @param RoutePriority <p>路由优先级</p>
      */
     public void setRoutePriority(Long RoutePriority) {
         this.RoutePriority = RoutePriority;
     }
 
     /**
-     * Get 下一跳扩展名称（关联实例的扩展名称） 
-     * @return InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
+     * Get <p>下一跳扩展名称（关联实例的扩展名称）</p> 
+     * @return InstanceExtraName <p>下一跳扩展名称（关联实例的扩展名称）</p>
      */
     public String getInstanceExtraName() {
         return this.InstanceExtraName;
     }
 
     /**
-     * Set 下一跳扩展名称（关联实例的扩展名称）
-     * @param InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
+     * Set <p>下一跳扩展名称（关联实例的扩展名称）</p>
+     * @param InstanceExtraName <p>下一跳扩展名称（关联实例的扩展名称）</p>
      */
     public void setInstanceExtraName(String InstanceExtraName) {
         this.InstanceExtraName = InstanceExtraName;
     }
 
     /**
-     * Get 实例类型 
-     * @return AliasType 实例类型
+     * Get <p>实例类型</p> 
+     * @return AliasType <p>实例类型</p>
      */
     public String getAliasType() {
         return this.AliasType;
     }
 
     /**
-     * Set 实例类型
-     * @param AliasType 实例类型
+     * Set <p>实例类型</p>
+     * @param AliasType <p>实例类型</p>
      */
     public void setAliasType(String AliasType) {
         this.AliasType = AliasType;
     }
 
     /**
-     * Get 实例id 
-     * @return AliasInstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return AliasInstanceId <p>实例id</p>
      */
     public String getAliasInstanceId() {
         return this.AliasInstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param AliasInstanceId 实例id
+     * Set <p>实例id</p>
+     * @param AliasInstanceId <p>实例id</p>
      */
     public void setAliasInstanceId(String AliasInstanceId) {
         this.AliasInstanceId = AliasInstanceId;
+    }
+
+    /**
+     * Get <p>路由表ID</p> 
+     * @return RouteTableId <p>路由表ID</p>
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set <p>路由表ID</p>
+     * @param RouteTableId <p>路由表ID</p>
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
+    /**
+     * Get <p>AS-PATH</p> 
+     * @return AsPath <p>AS-PATH</p>
+     */
+    public String getAsPath() {
+        return this.AsPath;
+    }
+
+    /**
+     * Set <p>AS-PATH</p>
+     * @param AsPath <p>AS-PATH</p>
+     */
+    public void setAsPath(String AsPath) {
+        this.AsPath = AsPath;
     }
 
     public CcnRoute() {
@@ -421,6 +467,12 @@ public class CcnRoute extends AbstractModel {
         if (source.AliasInstanceId != null) {
             this.AliasInstanceId = new String(source.AliasInstanceId);
         }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.AsPath != null) {
+            this.AsPath = new String(source.AsPath);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class CcnRoute extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
         this.setParamSimple(map, prefix + "AliasType", this.AliasType);
         this.setParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "AsPath", this.AsPath);
 
     }
 }

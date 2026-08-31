@@ -24,255 +24,256 @@ import java.util.HashMap;
 public class InstanceBind extends AbstractModel {
 
     /**
-    * 云联网ID。
+    * <p>云联网ID。</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。
+    * <p>实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例绑定路由表的时间。
+    * <p>实例绑定路由表的时间。</p>
     */
     @SerializedName("InstanceBindTime")
     @Expose
     private String InstanceBindTime;
 
     /**
-    * 路由表ID。
+    * <p>路由表ID。</p>
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例所在地域。
+    * <p>实例所在地域。</p>
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 实例所属的账户uin。
+    * <p>实例所属的账户uin。</p>
     */
     @SerializedName("InstanceUin")
     @Expose
     private String InstanceUin;
 
     /**
-    * 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+    * <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-     * Get 云联网ID。 
-     * @return CcnId 云联网ID。
+    * <p>别名类型</p>
+    */
+    @SerializedName("AliasType")
+    @Expose
+    private String AliasType;
+
+    /**
+    * <p>别名实例ID</p>
+    */
+    @SerializedName("AliasInstanceId")
+    @Expose
+    private String AliasInstanceId;
+
+    /**
+     * Get <p>云联网ID。</p> 
+     * @return CcnId <p>云联网ID。</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网ID。
-     * @param CcnId 云联网ID。
+     * Set <p>云联网ID。</p>
+     * @param CcnId <p>云联网ID。</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。 
-     * @return InstanceType 实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。
+     * Get <p>实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。</p> 
+     * @return InstanceType <p>实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。
-     * @param InstanceType 实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。
+     * Set <p>实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。</p>
+     * @param InstanceType <p>实例类型：VPC，DIRECTCONNECT，BMVPC，EDGE，EDGE_TUNNEL，EDGE_VPNGW，VPNGW。</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例绑定路由表的时间。 
-     * @return InstanceBindTime 实例绑定路由表的时间。
+     * Get <p>实例绑定路由表的时间。</p> 
+     * @return InstanceBindTime <p>实例绑定路由表的时间。</p>
      */
     public String getInstanceBindTime() {
         return this.InstanceBindTime;
     }
 
     /**
-     * Set 实例绑定路由表的时间。
-     * @param InstanceBindTime 实例绑定路由表的时间。
+     * Set <p>实例绑定路由表的时间。</p>
+     * @param InstanceBindTime <p>实例绑定路由表的时间。</p>
      */
     public void setInstanceBindTime(String InstanceBindTime) {
         this.InstanceBindTime = InstanceBindTime;
     }
 
     /**
-     * Get 路由表ID。 
-     * @return RouteTableId 路由表ID。
+     * Get <p>路由表ID。</p> 
+     * @return RouteTableId <p>路由表ID。</p>
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表ID。
-     * @param RouteTableId 路由表ID。
+     * Set <p>路由表ID。</p>
+     * @param RouteTableId <p>路由表ID。</p>
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return InstanceName <p>实例名称。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param InstanceName <p>实例名称。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例所在地域。 
-     * @return InstanceRegion 实例所在地域。
+     * Get <p>实例所在地域。</p> 
+     * @return InstanceRegion <p>实例所在地域。</p>
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 实例所在地域。
-     * @param InstanceRegion 实例所在地域。
+     * Set <p>实例所在地域。</p>
+     * @param InstanceRegion <p>实例所在地域。</p>
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 实例所属的账户uin。 
-     * @return InstanceUin 实例所属的账户uin。
+     * Get <p>实例所属的账户uin。</p> 
+     * @return InstanceUin <p>实例所属的账户uin。</p>
      */
     public String getInstanceUin() {
         return this.InstanceUin;
     }
 
     /**
-     * Set 实例所属的账户uin。
-     * @param InstanceUin 实例所属的账户uin。
+     * Set <p>实例所属的账户uin。</p>
+     * @param InstanceUin <p>实例所属的账户uin。</p>
      */
     public void setInstanceUin(String InstanceUin) {
         this.InstanceUin = InstanceUin;
     }
 
     /**
-     * Get 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li> 
-     * @return State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * Get <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li> 
+     * @return State <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
-     * @param State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * Set <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
+     * @param State <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
      */
     public void setState(String State) {
         this.State = State;
+    }
+
+    /**
+     * Get <p>别名类型</p> 
+     * @return AliasType <p>别名类型</p>
+     */
+    public String getAliasType() {
+        return this.AliasType;
+    }
+
+    /**
+     * Set <p>别名类型</p>
+     * @param AliasType <p>别名类型</p>
+     */
+    public void setAliasType(String AliasType) {
+        this.AliasType = AliasType;
+    }
+
+    /**
+     * Get <p>别名实例ID</p> 
+     * @return AliasInstanceId <p>别名实例ID</p>
+     */
+    public String getAliasInstanceId() {
+        return this.AliasInstanceId;
+    }
+
+    /**
+     * Set <p>别名实例ID</p>
+     * @param AliasInstanceId <p>别名实例ID</p>
+     */
+    public void setAliasInstanceId(String AliasInstanceId) {
+        this.AliasInstanceId = AliasInstanceId;
     }
 
     public InstanceBind() {
@@ -310,6 +311,12 @@ public class InstanceBind extends AbstractModel {
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.AliasType != null) {
+            this.AliasType = new String(source.AliasType);
+        }
+        if (source.AliasInstanceId != null) {
+            this.AliasInstanceId = new String(source.AliasInstanceId);
+        }
     }
 
 
@@ -326,6 +333,8 @@ public class InstanceBind extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "AliasType", this.AliasType);
+        this.setParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
 
     }
 }

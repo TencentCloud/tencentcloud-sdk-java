@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateProClusterRequest extends AbstractModel {
 
     /**
-    * <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+    * <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -94,16 +94,30 @@ public class CreateProClusterRequest extends AbstractModel {
     private String InstanceVersion;
 
     /**
-     * Get <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p> 
-     * @return ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+    * <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+    */
+    @SerializedName("UserTenant")
+    @Expose
+    private String UserTenant;
+
+    /**
+    * <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+    */
+    @SerializedName("ElasticTpsEnabled")
+    @Expose
+    private Long ElasticTpsEnabled;
+
+    /**
+     * Get <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p> 
+     * @return ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
-     * @param ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+     * Set <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
+     * @param ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>专业版：当选择PULSAR.P2.MINI1时只支持两个可用区，其他规格支持三个可用区<br>标准版（PULSAR.S2系列）：只支持两个可用区</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -253,6 +267,38 @@ public class CreateProClusterRequest extends AbstractModel {
         this.InstanceVersion = InstanceVersion;
     }
 
+    /**
+     * Get <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p> 
+     * @return UserTenant <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+     */
+    public String getUserTenant() {
+        return this.UserTenant;
+    }
+
+    /**
+     * Set <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+     * @param UserTenant <p>用户自定义租户名，可选。<br>不能为空，支持数字、字母以及符号 “-_=:.”，长度不超过 64 个字符。<br>未传时使用默认规则（实例 ID 作为租户名）。</p>
+     */
+    public void setUserTenant(String UserTenant) {
+        this.UserTenant = UserTenant;
+    }
+
+    /**
+     * Get <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p> 
+     * @return ElasticTpsEnabled <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+     */
+    public Long getElasticTpsEnabled() {
+        return this.ElasticTpsEnabled;
+    }
+
+    /**
+     * Set <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+     * @param ElasticTpsEnabled <p>是否开启弹性TPS（1：开启，0：关闭），仅专业版P1固定存储集群支持</p>
+     */
+    public void setElasticTpsEnabled(Long ElasticTpsEnabled) {
+        this.ElasticTpsEnabled = ElasticTpsEnabled;
+    }
+
     public CreateProClusterRequest() {
     }
 
@@ -297,6 +343,12 @@ public class CreateProClusterRequest extends AbstractModel {
         if (source.InstanceVersion != null) {
             this.InstanceVersion = new String(source.InstanceVersion);
         }
+        if (source.UserTenant != null) {
+            this.UserTenant = new String(source.UserTenant);
+        }
+        if (source.ElasticTpsEnabled != null) {
+            this.ElasticTpsEnabled = new Long(source.ElasticTpsEnabled);
+        }
     }
 
 
@@ -314,6 +366,8 @@ public class CreateProClusterRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Vpc.", this.Vpc);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+        this.setParamSimple(map, prefix + "UserTenant", this.UserTenant);
+        this.setParamSimple(map, prefix + "ElasticTpsEnabled", this.ElasticTpsEnabled);
 
     }
 }

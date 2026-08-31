@@ -1876,6 +1876,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改集群级别
+     * @param req ModifyClusterLevelRequest
+     * @return ModifyClusterLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterLevelResponse ModifyClusterLevel(ModifyClusterLevelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterLevel", ModifyClusterLevelResponse.class);
+    }
+
+    /**
      *本接口（ModifyClusterName）用于修改集群名称。
      * @param req ModifyClusterNameRequest
      * @return ModifyClusterNameResponse

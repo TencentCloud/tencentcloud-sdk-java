@@ -24,483 +24,506 @@ import java.util.HashMap;
 public class CreateAlarmPolicyRequest extends AbstractModel {
 
     /**
-    * 固定值，为"monitor"
+    * <p>固定值，为&quot;monitor&quot;</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 策略名称，不超过60字符
+    * <p>策略名称，不超过60字符</p>
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 监控类型 MT_QCE=云产品监控
+    * <p>监控类型 MT_QCE=云产品监控</p>
     */
     @SerializedName("MonitorType")
     @Expose
     private String MonitorType;
 
     /**
-    * 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+    * <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 备注，不超过100字符，仅支持中英文、数字、下划线、-
+    * <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 是否启用 0=停用 1=启用，可不传 默认为1
+    * <p>是否启用 0=停用 1=启用，可不传 默认为1</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
+    * <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
+    * <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
     */
     @SerializedName("ConditionTemplateId")
     @Expose
     private Long ConditionTemplateId;
 
     /**
-    * 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+    * <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
     */
     @SerializedName("Condition")
     @Expose
     private AlarmPolicyCondition Condition;
 
     /**
-    * 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
+    * <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
     */
     @SerializedName("EventCondition")
     @Expose
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-    * 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
+    * <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
     */
     @SerializedName("NoticeIds")
     @Expose
     private String [] NoticeIds;
 
     /**
-    * 触发任务列表
+    * <p>触发任务列表</p>
     */
     @SerializedName("TriggerTasks")
     @Expose
     private AlarmPolicyTriggerTask [] TriggerTasks;
 
     /**
-    * 全局过滤条件
+    * <p>全局过滤条件</p>
     */
     @SerializedName("Filter")
     @Expose
     private AlarmPolicyFilter Filter;
 
     /**
-    * 聚合维度列表，指定按哪些维度 key 来做 group by
+    * <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
     */
     @SerializedName("GroupBy")
     @Expose
     private String [] GroupBy;
 
     /**
-    * 模板绑定的标签
+    * <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+    */
+    @SerializedName("IsBindAll")
+    @Expose
+    private Long IsBindAll;
+
+    /**
+    * <p>模板绑定的标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 日志告警信息
+    * <p>日志告警信息</p>
     */
     @SerializedName("LogAlarmReqInfo")
     @Expose
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
-    * 告警分级通知规则配置
+    * <p>告警分级通知规则配置</p>
     */
     @SerializedName("HierarchicalNotices")
     @Expose
     private AlarmHierarchicalNotice [] HierarchicalNotices;
 
     /**
-    * 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+    * <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
     */
     @SerializedName("MigrateFlag")
     @Expose
     private Long MigrateFlag;
 
     /**
-    * 事件配置的告警
+    * <p>事件配置的告警</p>
     */
     @SerializedName("EbSubject")
     @Expose
     private String EbSubject;
 
     /**
-    * 附加告警内容
+    * <p>附加告警内容</p>
     */
     @SerializedName("AdditionalAlarmContent")
     @Expose
     private String AdditionalAlarmContent;
 
     /**
-    * 通知模板绑定信息
+    * <p>通知模板绑定信息</p>
     */
     @SerializedName("NoticeContentTmplBindInfos")
     @Expose
     private NoticeContentTmplBindInfo [] NoticeContentTmplBindInfos;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get <p>固定值，为&quot;monitor&quot;</p> 
+     * @return Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set <p>固定值，为&quot;monitor&quot;</p>
+     * @param Module <p>固定值，为&quot;monitor&quot;</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 策略名称，不超过60字符 
-     * @return PolicyName 策略名称，不超过60字符
+     * Get <p>策略名称，不超过60字符</p> 
+     * @return PolicyName <p>策略名称，不超过60字符</p>
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称，不超过60字符
-     * @param PolicyName 策略名称，不超过60字符
+     * Set <p>策略名称，不超过60字符</p>
+     * @param PolicyName <p>策略名称，不超过60字符</p>
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 监控类型 MT_QCE=云产品监控 
-     * @return MonitorType 监控类型 MT_QCE=云产品监控
+     * Get <p>监控类型 MT_QCE=云产品监控</p> 
+     * @return MonitorType <p>监控类型 MT_QCE=云产品监控</p>
      */
     public String getMonitorType() {
         return this.MonitorType;
     }
 
     /**
-     * Set 监控类型 MT_QCE=云产品监控
-     * @param MonitorType 监控类型 MT_QCE=云产品监控
+     * Set <p>监控类型 MT_QCE=云产品监控</p>
+     * @param MonitorType <p>监控类型 MT_QCE=云产品监控</p>
      */
     public void setMonitorType(String MonitorType) {
         this.MonitorType = MonitorType;
     }
 
     /**
-     * Get 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device 
-     * @return Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+     * Get <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p> 
+     * @return Namespace <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
-     * @param Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+     * Set <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
+     * @param Namespace <p>告警策略类型，由 <a href="https://cloud.tencent.com/document/product/248/48683">DescribeAllNamespaces</a> 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 备注，不超过100字符，仅支持中英文、数字、下划线、- 
-     * @return Remark 备注，不超过100字符，仅支持中英文、数字、下划线、-
+     * Get <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p> 
+     * @return Remark <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，不超过100字符，仅支持中英文、数字、下划线、-
-     * @param Remark 备注，不超过100字符，仅支持中英文、数字、下划线、-
+     * Set <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
+     * @param Remark <p>备注，不超过100字符，仅支持中英文、数字、下划线、-</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 是否启用 0=停用 1=启用，可不传 默认为1 
-     * @return Enable 是否启用 0=停用 1=启用，可不传 默认为1
+     * Get <p>是否启用 0=停用 1=启用，可不传 默认为1</p> 
+     * @return Enable <p>是否启用 0=停用 1=启用，可不传 默认为1</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否启用 0=停用 1=启用，可不传 默认为1
-     * @param Enable 是否启用 0=停用 1=启用，可不传 默认为1
+     * Set <p>是否启用 0=停用 1=启用，可不传 默认为1</p>
+     * @param Enable <p>是否启用 0=停用 1=启用，可不传 默认为1</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。 
-     * @return ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
+     * Get <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p> 
+     * @return ProjectId <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
-     * @param ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
+     * Set <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
+     * @param ProjectId <p>项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 <a href="https://console.cloud.tencent.com/project">账号中心-项目管理</a> 中查看。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。 
-     * @return ConditionTemplateId 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
+     * Get <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p> 
+     * @return ConditionTemplateId <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
      */
     public Long getConditionTemplateId() {
         return this.ConditionTemplateId;
     }
 
     /**
-     * Set 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
-     * @param ConditionTemplateId 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
+     * Set <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
+     * @param ConditionTemplateId <p>触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 <a href="https://cloud.tencent.com/document/api/248/70250">DescribeConditionsTemplateList</a> 接口获取。</p>
      */
     public void setConditionTemplateId(Long ConditionTemplateId) {
         this.ConditionTemplateId = ConditionTemplateId;
     }
 
     /**
-     * Get 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。 
-     * @return Condition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Get <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p> 
+     * @return Condition <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
      */
     public AlarmPolicyCondition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
-     * @param Condition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * Set <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
+     * @param Condition <p>指标触发条件，支持的指标可以从 <a href="https://cloud.tencent.com/document/product/248/51283">DescribeAlarmMetrics</a> 查询。</p>
      */
     public void setCondition(AlarmPolicyCondition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。 
-     * @return EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
+     * Get <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p> 
+     * @return EventCondition <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
      */
     public AlarmPolicyEventCondition getEventCondition() {
         return this.EventCondition;
     }
 
     /**
-     * Set 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
-     * @param EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
+     * Set <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
+     * @param EventCondition <p>事件触发条件，支持的事件可以从 <a href="https://cloud.tencent.com/document/product/248/51284">DescribeAlarmEvents</a> 查询。</p>
      */
     public void setEventCondition(AlarmPolicyEventCondition EventCondition) {
         this.EventCondition = EventCondition;
     }
 
     /**
-     * Get 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得 
-     * @return NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
+     * Get <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p> 
+     * @return NoticeIds <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
-     * @param NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
+     * Set <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
+     * @param NoticeIds <p>通知规则 Id 列表，由 <a href="https://cloud.tencent.com/document/product/248/51280">DescribeAlarmNotices</a> 获得</p>
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
     }
 
     /**
-     * Get 触发任务列表 
-     * @return TriggerTasks 触发任务列表
+     * Get <p>触发任务列表</p> 
+     * @return TriggerTasks <p>触发任务列表</p>
      */
     public AlarmPolicyTriggerTask [] getTriggerTasks() {
         return this.TriggerTasks;
     }
 
     /**
-     * Set 触发任务列表
-     * @param TriggerTasks 触发任务列表
+     * Set <p>触发任务列表</p>
+     * @param TriggerTasks <p>触发任务列表</p>
      */
     public void setTriggerTasks(AlarmPolicyTriggerTask [] TriggerTasks) {
         this.TriggerTasks = TriggerTasks;
     }
 
     /**
-     * Get 全局过滤条件 
-     * @return Filter 全局过滤条件
+     * Get <p>全局过滤条件</p> 
+     * @return Filter <p>全局过滤条件</p>
      */
     public AlarmPolicyFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 全局过滤条件
-     * @param Filter 全局过滤条件
+     * Set <p>全局过滤条件</p>
+     * @param Filter <p>全局过滤条件</p>
      */
     public void setFilter(AlarmPolicyFilter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 聚合维度列表，指定按哪些维度 key 来做 group by 
-     * @return GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     * Get <p>聚合维度列表，指定按哪些维度 key 来做 group by</p> 
+     * @return GroupBy <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合维度列表，指定按哪些维度 key 来做 group by
-     * @param GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     * Set <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
+     * @param GroupBy <p>聚合维度列表，指定按哪些维度 key 来做 group by</p>
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;
     }
 
     /**
-     * Get 模板绑定的标签 
-     * @return Tags 模板绑定的标签
+     * Get <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p> 
+     * @return IsBindAll <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+     */
+    public Long getIsBindAll() {
+        return this.IsBindAll;
+    }
+
+    /**
+     * Set <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+     * @param IsBindAll <p>是否绑定全部对象。如果是的话，不需要再传filter或者调用BindPolicyObject，0=否，1=是，默认为否</p><p>取值范围：[0, 1]</p><p>默认值：0</p><p>不是所有策略类型都支持绑定全部对象</p>
+     */
+    public void setIsBindAll(Long IsBindAll) {
+        this.IsBindAll = IsBindAll;
+    }
+
+    /**
+     * Get <p>模板绑定的标签</p> 
+     * @return Tags <p>模板绑定的标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 模板绑定的标签
-     * @param Tags 模板绑定的标签
+     * Set <p>模板绑定的标签</p>
+     * @param Tags <p>模板绑定的标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 日志告警信息 
-     * @return LogAlarmReqInfo 日志告警信息
+     * Get <p>日志告警信息</p> 
+     * @return LogAlarmReqInfo <p>日志告警信息</p>
      */
     public LogAlarmReq getLogAlarmReqInfo() {
         return this.LogAlarmReqInfo;
     }
 
     /**
-     * Set 日志告警信息
-     * @param LogAlarmReqInfo 日志告警信息
+     * Set <p>日志告警信息</p>
+     * @param LogAlarmReqInfo <p>日志告警信息</p>
      */
     public void setLogAlarmReqInfo(LogAlarmReq LogAlarmReqInfo) {
         this.LogAlarmReqInfo = LogAlarmReqInfo;
     }
 
     /**
-     * Get 告警分级通知规则配置 
-     * @return HierarchicalNotices 告警分级通知规则配置
+     * Get <p>告警分级通知规则配置</p> 
+     * @return HierarchicalNotices <p>告警分级通知规则配置</p>
      */
     public AlarmHierarchicalNotice [] getHierarchicalNotices() {
         return this.HierarchicalNotices;
     }
 
     /**
-     * Set 告警分级通知规则配置
-     * @param HierarchicalNotices 告警分级通知规则配置
+     * Set <p>告警分级通知规则配置</p>
+     * @param HierarchicalNotices <p>告警分级通知规则配置</p>
      */
     public void setHierarchicalNotices(AlarmHierarchicalNotice [] HierarchicalNotices) {
         this.HierarchicalNotices = HierarchicalNotices;
     }
 
     /**
-     * Get 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑 
-     * @return MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+     * Get <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p> 
+     * @return MigrateFlag <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
      */
     public Long getMigrateFlag() {
         return this.MigrateFlag;
     }
 
     /**
-     * Set 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
-     * @param MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑
+     * Set <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
+     * @param MigrateFlag <p>迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑</p>
      */
     public void setMigrateFlag(Long MigrateFlag) {
         this.MigrateFlag = MigrateFlag;
     }
 
     /**
-     * Get 事件配置的告警 
-     * @return EbSubject 事件配置的告警
+     * Get <p>事件配置的告警</p> 
+     * @return EbSubject <p>事件配置的告警</p>
      */
     public String getEbSubject() {
         return this.EbSubject;
     }
 
     /**
-     * Set 事件配置的告警
-     * @param EbSubject 事件配置的告警
+     * Set <p>事件配置的告警</p>
+     * @param EbSubject <p>事件配置的告警</p>
      */
     public void setEbSubject(String EbSubject) {
         this.EbSubject = EbSubject;
     }
 
     /**
-     * Get 附加告警内容 
-     * @return AdditionalAlarmContent 附加告警内容
+     * Get <p>附加告警内容</p> 
+     * @return AdditionalAlarmContent <p>附加告警内容</p>
      */
     public String getAdditionalAlarmContent() {
         return this.AdditionalAlarmContent;
     }
 
     /**
-     * Set 附加告警内容
-     * @param AdditionalAlarmContent 附加告警内容
+     * Set <p>附加告警内容</p>
+     * @param AdditionalAlarmContent <p>附加告警内容</p>
      */
     public void setAdditionalAlarmContent(String AdditionalAlarmContent) {
         this.AdditionalAlarmContent = AdditionalAlarmContent;
     }
 
     /**
-     * Get 通知模板绑定信息 
-     * @return NoticeContentTmplBindInfos 通知模板绑定信息
+     * Get <p>通知模板绑定信息</p> 
+     * @return NoticeContentTmplBindInfos <p>通知模板绑定信息</p>
      */
     public NoticeContentTmplBindInfo [] getNoticeContentTmplBindInfos() {
         return this.NoticeContentTmplBindInfos;
     }
 
     /**
-     * Set 通知模板绑定信息
-     * @param NoticeContentTmplBindInfos 通知模板绑定信息
+     * Set <p>通知模板绑定信息</p>
+     * @param NoticeContentTmplBindInfos <p>通知模板绑定信息</p>
      */
     public void setNoticeContentTmplBindInfos(NoticeContentTmplBindInfo [] NoticeContentTmplBindInfos) {
         this.NoticeContentTmplBindInfos = NoticeContentTmplBindInfos;
@@ -565,6 +588,9 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.IsBindAll != null) {
+            this.IsBindAll = new Long(source.IsBindAll);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -616,6 +642,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
         this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);

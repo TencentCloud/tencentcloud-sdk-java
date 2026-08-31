@@ -24,256 +24,279 @@ import java.util.HashMap;
 public class Library extends AbstractModel {
 
     /**
-    * 媒体库 ID
+    * <p>媒体库 ID</p>
     */
     @SerializedName("LibraryId")
     @Expose
     private String LibraryId;
 
     /**
-    * 媒体库友好名称
+    * <p>媒体库友好名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 媒体库绑定的 COS 存储桶
+    * <p>媒体库绑定的 COS 存储桶</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 媒体库绑定的 COS 存储桶所在的地域
+    * <p>媒体库绑定的 COS 存储桶所在的地域</p>
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * 该媒体库的业务 API 访问域名
+    * <p>该媒体库的业务 API 访问域名</p>
     */
     @SerializedName("AccessDomain")
     @Expose
     private String AccessDomain;
 
     /**
-    * 媒体库创建时间
+    * <p>媒体库创建时间</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 媒体库配置项
+    * <p>媒体库配置项</p>
     */
     @SerializedName("LibraryExtension")
     @Expose
     private LibraryExtension LibraryExtension;
 
     /**
-    * 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
+    * <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
     */
     @SerializedName("Size")
     @Expose
     private String Size;
 
     /**
-    * 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
+    * <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
     */
     @SerializedName("DirNum")
     @Expose
     private String DirNum;
 
     /**
-    * 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+    * <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
     */
     @SerializedName("FileNum")
     @Expose
     private String FileNum;
 
     /**
-     * Get 媒体库 ID 
-     * @return LibraryId 媒体库 ID
+    * <p>媒体库关联的标签列表。</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
+     * Get <p>媒体库 ID</p> 
+     * @return LibraryId <p>媒体库 ID</p>
      */
     public String getLibraryId() {
         return this.LibraryId;
     }
 
     /**
-     * Set 媒体库 ID
-     * @param LibraryId 媒体库 ID
+     * Set <p>媒体库 ID</p>
+     * @param LibraryId <p>媒体库 ID</p>
      */
     public void setLibraryId(String LibraryId) {
         this.LibraryId = LibraryId;
     }
 
     /**
-     * Get 媒体库友好名称 
-     * @return Name 媒体库友好名称
+     * Get <p>媒体库友好名称</p> 
+     * @return Name <p>媒体库友好名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 媒体库友好名称
-     * @param Name 媒体库友好名称
+     * Set <p>媒体库友好名称</p>
+     * @param Name <p>媒体库友好名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 媒体库绑定的 COS 存储桶 
-     * @return BucketName 媒体库绑定的 COS 存储桶
+     * Get <p>媒体库绑定的 COS 存储桶</p> 
+     * @return BucketName <p>媒体库绑定的 COS 存储桶</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 媒体库绑定的 COS 存储桶
-     * @param BucketName 媒体库绑定的 COS 存储桶
+     * Set <p>媒体库绑定的 COS 存储桶</p>
+     * @param BucketName <p>媒体库绑定的 COS 存储桶</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 媒体库绑定的 COS 存储桶所在的地域 
-     * @return BucketRegion 媒体库绑定的 COS 存储桶所在的地域
+     * Get <p>媒体库绑定的 COS 存储桶所在的地域</p> 
+     * @return BucketRegion <p>媒体库绑定的 COS 存储桶所在的地域</p>
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set 媒体库绑定的 COS 存储桶所在的地域
-     * @param BucketRegion 媒体库绑定的 COS 存储桶所在的地域
+     * Set <p>媒体库绑定的 COS 存储桶所在的地域</p>
+     * @param BucketRegion <p>媒体库绑定的 COS 存储桶所在的地域</p>
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 该媒体库的业务 API 访问域名 
-     * @return AccessDomain 该媒体库的业务 API 访问域名
+     * Get <p>该媒体库的业务 API 访问域名</p> 
+     * @return AccessDomain <p>该媒体库的业务 API 访问域名</p>
      */
     public String getAccessDomain() {
         return this.AccessDomain;
     }
 
     /**
-     * Set 该媒体库的业务 API 访问域名
-     * @param AccessDomain 该媒体库的业务 API 访问域名
+     * Set <p>该媒体库的业务 API 访问域名</p>
+     * @param AccessDomain <p>该媒体库的业务 API 访问域名</p>
      */
     public void setAccessDomain(String AccessDomain) {
         this.AccessDomain = AccessDomain;
     }
 
     /**
-     * Get 媒体库创建时间 
-     * @return CreationTime 媒体库创建时间
+     * Get <p>媒体库创建时间</p> 
+     * @return CreationTime <p>媒体库创建时间</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 媒体库创建时间
-     * @param CreationTime 媒体库创建时间
+     * Set <p>媒体库创建时间</p>
+     * @param CreationTime <p>媒体库创建时间</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 媒体库配置项 
-     * @return LibraryExtension 媒体库配置项
+     * Get <p>媒体库配置项</p> 
+     * @return LibraryExtension <p>媒体库配置项</p>
      */
     public LibraryExtension getLibraryExtension() {
         return this.LibraryExtension;
     }
 
     /**
-     * Set 媒体库配置项
-     * @param LibraryExtension 媒体库配置项
+     * Set <p>媒体库配置项</p>
+     * @param LibraryExtension <p>媒体库配置项</p>
      */
     public void setLibraryExtension(LibraryExtension LibraryExtension) {
         this.LibraryExtension = LibraryExtension;
     }
 
     /**
-     * Get 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。 
-     * @return Size 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
+     * Get <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p> 
+     * @return Size <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public String getSize() {
         return this.Size;
     }
 
     /**
-     * Set 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
-     * @param Size 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
+     * Set <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
+     * @param Size <p>媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public void setSize(String Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。 
-     * @return DirNum 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
+     * Get <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p> 
+     * @return DirNum <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public String getDirNum() {
         return this.DirNum;
     }
 
     /**
-     * Set 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
-     * @param DirNum 媒体库目录数，由于数字类型精度限制，该字段为 String 类型。
+     * Set <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
+     * @param DirNum <p>媒体库目录数，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public void setDirNum(String DirNum) {
         this.DirNum = DirNum;
     }
 
     /**
-     * Get 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。 
-     * @return FileNum 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+     * Get <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p> 
+     * @return FileNum <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public String getFileNum() {
         return this.FileNum;
     }
 
     /**
-     * Set 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
-     * @param FileNum 媒体库文件数，由于数字类型精度限制，该字段为 String 类型。
+     * Set <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
+     * @param FileNum <p>媒体库文件数，由于数字类型精度限制，该字段为 String 类型。</p>
      */
     public void setFileNum(String FileNum) {
         this.FileNum = FileNum;
+    }
+
+    /**
+     * Get <p>媒体库关联的标签列表。</p> 
+     * @return Tags <p>媒体库关联的标签列表。</p>
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>媒体库关联的标签列表。</p>
+     * @param Tags <p>媒体库关联的标签列表。</p>
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
     }
 
     public Library() {
@@ -317,6 +340,12 @@ public class Library extends AbstractModel {
         if (source.FileNum != null) {
             this.FileNum = new String(source.FileNum);
         }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -335,6 +364,7 @@ public class Library extends AbstractModel {
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "DirNum", this.DirNum);
         this.setParamSimple(map, prefix + "FileNum", this.FileNum);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

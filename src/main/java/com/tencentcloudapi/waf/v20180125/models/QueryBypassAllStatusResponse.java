@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueryBypassAllStatusResponse extends AbstractModel {
 
     /**
-    * 该用户是否被加入了全局的bypass列表
+    * <p>该用户是否被加入了全局的bypass列表</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class QueryBypassAllStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该用户是否被加入了全局的bypass列表 
-     * @return Result 该用户是否被加入了全局的bypass列表
+     * Get <p>该用户是否被加入了全局的bypass列表</p> 
+     * @return Result <p>该用户是否被加入了全局的bypass列表</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 该用户是否被加入了全局的bypass列表
-     * @param Result 该用户是否被加入了全局的bypass列表
+     * Set <p>该用户是否被加入了全局的bypass列表</p>
+     * @param Result <p>该用户是否被加入了全局的bypass列表</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

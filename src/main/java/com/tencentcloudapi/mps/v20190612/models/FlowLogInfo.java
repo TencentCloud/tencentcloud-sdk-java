@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class FlowLogInfo extends AbstractModel {
 
     /**
-    * 时间戳，单位为秒。
+    * <p>时间戳，单位为秒。</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * 输入输出类型（input/output）。
+    * <p>输入输出类型（input/output）。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 输入或输出Id。
+    * <p>输入或输出Id。</p>
     */
     @SerializedName("InputOutputId")
     @Expose
     private String InputOutputId;
 
     /**
-    * 协议。
+    * <p>协议。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 事件代码。
+    * <p>事件代码。</p>
     */
     @SerializedName("EventCode")
     @Expose
     private String EventCode;
 
     /**
-    * 事件信息。
+    * <p>事件信息。</p>
     */
     @SerializedName("EventMessage")
     @Expose
     private String EventMessage;
 
     /**
-    * 对端IP。
+    * <p>对端IP。</p>
     */
     @SerializedName("RemoteIp")
     @Expose
     private String RemoteIp;
 
     /**
-    * 对端端口。
+    * <p>对端端口。</p>
     */
     @SerializedName("RemotePort")
     @Expose
     private String RemotePort;
 
     /**
-    * 主备通道，0为主通道，1为备通道。
+    * <p>主备通道，0为主通道，1为备通道。</p>
     */
     @SerializedName("Pipeline")
     @Expose
     private String Pipeline;
 
     /**
-    * 输入或输出的名称。
+    * <p>输入或输出的名称。</p>
     */
     @SerializedName("InputOutputName")
     @Expose
     private String InputOutputName;
 
     /**
-     * Get 时间戳，单位为秒。 
-     * @return Timestamp 时间戳，单位为秒。
+     * Get <p>时间戳，单位为秒。</p> 
+     * @return Timestamp <p>时间戳，单位为秒。</p>
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 时间戳，单位为秒。
-     * @param Timestamp 时间戳，单位为秒。
+     * Set <p>时间戳，单位为秒。</p>
+     * @param Timestamp <p>时间戳，单位为秒。</p>
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 输入输出类型（input/output）。 
-     * @return Type 输入输出类型（input/output）。
+     * Get <p>输入输出类型（input/output）。</p> 
+     * @return Type <p>输入输出类型（input/output）。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 输入输出类型（input/output）。
-     * @param Type 输入输出类型（input/output）。
+     * Set <p>输入输出类型（input/output）。</p>
+     * @param Type <p>输入输出类型（input/output）。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 输入或输出Id。 
-     * @return InputOutputId 输入或输出Id。
+     * Get <p>输入或输出Id。</p> 
+     * @return InputOutputId <p>输入或输出Id。</p>
      */
     public String getInputOutputId() {
         return this.InputOutputId;
     }
 
     /**
-     * Set 输入或输出Id。
-     * @param InputOutputId 输入或输出Id。
+     * Set <p>输入或输出Id。</p>
+     * @param InputOutputId <p>输入或输出Id。</p>
      */
     public void setInputOutputId(String InputOutputId) {
         this.InputOutputId = InputOutputId;
     }
 
     /**
-     * Get 协议。 
-     * @return Protocol 协议。
+     * Get <p>协议。</p> 
+     * @return Protocol <p>协议。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议。
-     * @param Protocol 协议。
+     * Set <p>协议。</p>
+     * @param Protocol <p>协议。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 事件代码。 
-     * @return EventCode 事件代码。
+     * Get <p>事件代码。</p> 
+     * @return EventCode <p>事件代码。</p>
      */
     public String getEventCode() {
         return this.EventCode;
     }
 
     /**
-     * Set 事件代码。
-     * @param EventCode 事件代码。
+     * Set <p>事件代码。</p>
+     * @param EventCode <p>事件代码。</p>
      */
     public void setEventCode(String EventCode) {
         this.EventCode = EventCode;
     }
 
     /**
-     * Get 事件信息。 
-     * @return EventMessage 事件信息。
+     * Get <p>事件信息。</p> 
+     * @return EventMessage <p>事件信息。</p>
      */
     public String getEventMessage() {
         return this.EventMessage;
     }
 
     /**
-     * Set 事件信息。
-     * @param EventMessage 事件信息。
+     * Set <p>事件信息。</p>
+     * @param EventMessage <p>事件信息。</p>
      */
     public void setEventMessage(String EventMessage) {
         this.EventMessage = EventMessage;
     }
 
     /**
-     * Get 对端IP。 
-     * @return RemoteIp 对端IP。
+     * Get <p>对端IP。</p> 
+     * @return RemoteIp <p>对端IP。</p>
      */
     public String getRemoteIp() {
         return this.RemoteIp;
     }
 
     /**
-     * Set 对端IP。
-     * @param RemoteIp 对端IP。
+     * Set <p>对端IP。</p>
+     * @param RemoteIp <p>对端IP。</p>
      */
     public void setRemoteIp(String RemoteIp) {
         this.RemoteIp = RemoteIp;
     }
 
     /**
-     * Get 对端端口。 
-     * @return RemotePort 对端端口。
+     * Get <p>对端端口。</p> 
+     * @return RemotePort <p>对端端口。</p>
      */
     public String getRemotePort() {
         return this.RemotePort;
     }
 
     /**
-     * Set 对端端口。
-     * @param RemotePort 对端端口。
+     * Set <p>对端端口。</p>
+     * @param RemotePort <p>对端端口。</p>
      */
     public void setRemotePort(String RemotePort) {
         this.RemotePort = RemotePort;
     }
 
     /**
-     * Get 主备通道，0为主通道，1为备通道。 
-     * @return Pipeline 主备通道，0为主通道，1为备通道。
+     * Get <p>主备通道，0为主通道，1为备通道。</p> 
+     * @return Pipeline <p>主备通道，0为主通道，1为备通道。</p>
      */
     public String getPipeline() {
         return this.Pipeline;
     }
 
     /**
-     * Set 主备通道，0为主通道，1为备通道。
-     * @param Pipeline 主备通道，0为主通道，1为备通道。
+     * Set <p>主备通道，0为主通道，1为备通道。</p>
+     * @param Pipeline <p>主备通道，0为主通道，1为备通道。</p>
      */
     public void setPipeline(String Pipeline) {
         this.Pipeline = Pipeline;
     }
 
     /**
-     * Get 输入或输出的名称。 
-     * @return InputOutputName 输入或输出的名称。
+     * Get <p>输入或输出的名称。</p> 
+     * @return InputOutputName <p>输入或输出的名称。</p>
      */
     public String getInputOutputName() {
         return this.InputOutputName;
     }
 
     /**
-     * Set 输入或输出的名称。
-     * @param InputOutputName 输入或输出的名称。
+     * Set <p>输入或输出的名称。</p>
+     * @param InputOutputName <p>输入或输出的名称。</p>
      */
     public void setInputOutputName(String InputOutputName) {
         this.InputOutputName = InputOutputName;

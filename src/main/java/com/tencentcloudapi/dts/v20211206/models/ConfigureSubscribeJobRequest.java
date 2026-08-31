@@ -24,268 +24,253 @@ import java.util.HashMap;
 public class ConfigureSubscribeJobRequest extends AbstractModel {
 
     /**
-    * 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+    * <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-    * 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+    * <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
     */
     @SerializedName("SubscribeMode")
     @Expose
     private String SubscribeMode;
 
     /**
-    * 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+    * <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
     */
     @SerializedName("AccessType")
     @Expose
     private String AccessType;
 
     /**
-    * 数据库节点信息
+    * <p>数据库节点信息</p>
     */
     @SerializedName("Endpoints")
     @Expose
     private EndpointItem [] Endpoints;
 
     /**
-    * Kafka配置
+    * <p>Kafka配置</p>
     */
     @SerializedName("KafkaConfig")
     @Expose
     private SubscribeKafkaConfig KafkaConfig;
 
     /**
-    * 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
+    * <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
     */
     @SerializedName("SubscribeObjects")
     @Expose
     private SubscribeObject [] SubscribeObjects;
 
     /**
-    * 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
+    * <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * mongo选填参数：输出聚合设置。
+    * <p>mongo选填参数：输出聚合设置。</p>
     */
     @SerializedName("PipelineInfo")
     @Expose
     private PipelineInfo [] PipelineInfo;
 
     /**
-    * 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
+    * <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
     */
     @SerializedName("ExtraAttr")
     @Expose
     private KeyValuePairOption [] ExtraAttr;
 
     /**
-    * vpc id
+    * <p>vpc id</p>
     */
     @SerializedName("ConsumerVpcId")
     @Expose
     private String ConsumerVpcId;
 
     /**
-    * subnet id
+    * <p>subnet id</p>
     */
     @SerializedName("ConsumerSubnetId")
     @Expose
     private String ConsumerSubnetId;
 
     /**
-     * Get 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。 
-     * @return SubscribeId 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * Get <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p> 
+     * @return SubscribeId <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
-     * @param SubscribeId 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * Set <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
+     * @param SubscribeId <p>数据订阅实例的 ID，可通过<a href="https://cloud.tencent.com/document/product/571/82103">DescribeSyncJobs</a>接口获取。</p>
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
     }
 
     /**
-     * Get 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合 
-     * @return SubscribeMode 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+     * Get <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p> 
+     * @return SubscribeMode <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
      */
     public String getSubscribeMode() {
         return this.SubscribeMode;
     }
 
     /**
-     * Set 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
-     * @param SubscribeMode 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
+     * Set <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
+     * @param SubscribeMode <p>数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合</p>
      */
     public void setSubscribeMode(String SubscribeMode) {
         this.SubscribeMode = SubscribeMode;
     }
 
     /**
-     * Get 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力 
-     * @return AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+     * Get <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p> 
+     * @return AccessType <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
-     * @param AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
+     * Set <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
+     * @param AccessType <p>源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力</p>
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 数据库节点信息 
-     * @return Endpoints 数据库节点信息
+     * Get <p>数据库节点信息</p> 
+     * @return Endpoints <p>数据库节点信息</p>
      */
     public EndpointItem [] getEndpoints() {
         return this.Endpoints;
     }
 
     /**
-     * Set 数据库节点信息
-     * @param Endpoints 数据库节点信息
+     * Set <p>数据库节点信息</p>
+     * @param Endpoints <p>数据库节点信息</p>
      */
     public void setEndpoints(EndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;
     }
 
     /**
-     * Get Kafka配置 
-     * @return KafkaConfig Kafka配置
+     * Get <p>Kafka配置</p> 
+     * @return KafkaConfig <p>Kafka配置</p>
      */
     public SubscribeKafkaConfig getKafkaConfig() {
         return this.KafkaConfig;
     }
 
     /**
-     * Set Kafka配置
-     * @param KafkaConfig Kafka配置
+     * Set <p>Kafka配置</p>
+     * @param KafkaConfig <p>Kafka配置</p>
      */
     public void setKafkaConfig(SubscribeKafkaConfig KafkaConfig) {
         this.KafkaConfig = KafkaConfig;
     }
 
     /**
-     * Get 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数 
-     * @return SubscribeObjects 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
+     * Get <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p> 
+     * @return SubscribeObjects <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
      */
     public SubscribeObject [] getSubscribeObjects() {
         return this.SubscribeObjects;
     }
 
     /**
-     * Set 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
-     * @param SubscribeObjects 订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数
+     * Set <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
+     * @param SubscribeObjects <p>订阅的数据库表信息，当 SubscribeMode 不为 all和ddl 时，SubscribeObjects 为必选参数</p>
      */
     public void setSubscribeObjects(SubscribeObject [] SubscribeObjects) {
         this.SubscribeObjects = SubscribeObjects;
     }
 
     /**
-     * Get 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档 
-     * @return Protocol 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
+     * Get <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p> 
+     * @return Protocol <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
-     * @param Protocol 订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档
+     * Set <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
+     * @param Protocol <p>订阅数据格式，如：protobuf、json、avro。注意具体可选值依赖当前链路支持能力，数据格式详情参考官网的消费demo文档</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get mongo选填参数：输出聚合设置。 
-     * @return PipelineInfo mongo选填参数：输出聚合设置。
+     * Get <p>mongo选填参数：输出聚合设置。</p> 
+     * @return PipelineInfo <p>mongo选填参数：输出聚合设置。</p>
      */
     public PipelineInfo [] getPipelineInfo() {
         return this.PipelineInfo;
     }
 
     /**
-     * Set mongo选填参数：输出聚合设置。
-     * @param PipelineInfo mongo选填参数：输出聚合设置。
+     * Set <p>mongo选填参数：输出聚合设置。</p>
+     * @param PipelineInfo <p>mongo选填参数：输出聚合设置。</p>
      */
     public void setPipelineInfo(PipelineInfo [] PipelineInfo) {
         this.PipelineInfo = PipelineInfo;
     }
 
     /**
-     * Get 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。 
-     * @return ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
+     * Get <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p> 
+     * @return ExtraAttr <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
      */
     public KeyValuePairOption [] getExtraAttr() {
         return this.ExtraAttr;
     }
 
     /**
-     * Set 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
-     * @param ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
-mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
-mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
-其他业务暂没有可选参数。
+     * Set <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
+     * @param ExtraAttr <p>为业务添加的额外信息。参数名作key，参数值作value。<br>mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。<br>mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。<br>其他业务暂没有可选参数。</p>
      */
     public void setExtraAttr(KeyValuePairOption [] ExtraAttr) {
         this.ExtraAttr = ExtraAttr;
     }
 
     /**
-     * Get vpc id 
-     * @return ConsumerVpcId vpc id
+     * Get <p>vpc id</p> 
+     * @return ConsumerVpcId <p>vpc id</p>
      */
     public String getConsumerVpcId() {
         return this.ConsumerVpcId;
     }
 
     /**
-     * Set vpc id
-     * @param ConsumerVpcId vpc id
+     * Set <p>vpc id</p>
+     * @param ConsumerVpcId <p>vpc id</p>
      */
     public void setConsumerVpcId(String ConsumerVpcId) {
         this.ConsumerVpcId = ConsumerVpcId;
     }
 
     /**
-     * Get subnet id 
-     * @return ConsumerSubnetId subnet id
+     * Get <p>subnet id</p> 
+     * @return ConsumerSubnetId <p>subnet id</p>
      */
     public String getConsumerSubnetId() {
         return this.ConsumerSubnetId;
     }
 
     /**
-     * Set subnet id
-     * @param ConsumerSubnetId subnet id
+     * Set <p>subnet id</p>
+     * @param ConsumerSubnetId <p>subnet id</p>
      */
     public void setConsumerSubnetId(String ConsumerSubnetId) {
         this.ConsumerSubnetId = ConsumerSubnetId;

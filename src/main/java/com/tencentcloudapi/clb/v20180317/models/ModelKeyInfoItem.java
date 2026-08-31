@@ -39,6 +39,14 @@ public class ModelKeyInfoItem extends AbstractModel {
     private String ApiBase;
 
     /**
+    * <p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiBases")
+    @Expose
+    private ApiBaseItem [] ApiBases;
+
+    /**
     * <p>模型创建时间（ISO 8601）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -156,6 +164,29 @@ public class ModelKeyInfoItem extends AbstractModel {
     private ServiceProviderHealthCheckConfigOutput HealthCheckConfig;
 
     /**
+    * <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CMRPrivateNetworkTunnelId")
+    @Expose
+    private String CMRPrivateNetworkTunnelId;
+
+    /**
+    * <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CMRPrivateNetworkTunnelName")
+    @Expose
+    private String CMRPrivateNetworkTunnelName;
+
+    /**
+    * <p>健康检查配置</p>
+    */
+    @SerializedName("HealthCheckConfigs")
+    @Expose
+    private ServiceProviderHealthCheckConfigItemOutput [] HealthCheckConfigs;
+
+    /**
      * Get <p>接入类型</p> 
      * @return AccessType <p>接入类型</p>
      */
@@ -189,6 +220,26 @@ public class ModelKeyInfoItem extends AbstractModel {
      */
     public void setApiBase(String ApiBase) {
         this.ApiBase = ApiBase;
+    }
+
+    /**
+     * Get <p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiBases <p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ApiBaseItem [] getApiBases() {
+        return this.ApiBases;
+    }
+
+    /**
+     * Set <p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiBases <p>多协议 API Base URL</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiBases(ApiBaseItem [] ApiBases) {
+        this.ApiBases = ApiBases;
     }
 
     /**
@@ -467,6 +518,62 @@ public class ModelKeyInfoItem extends AbstractModel {
         this.HealthCheckConfig = HealthCheckConfig;
     }
 
+    /**
+     * Get <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCMRPrivateNetworkTunnelId() {
+        return this.CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Set <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCMRPrivateNetworkTunnelId(String CMRPrivateNetworkTunnelId) {
+        this.CMRPrivateNetworkTunnelId = CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Get <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CMRPrivateNetworkTunnelName <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCMRPrivateNetworkTunnelName() {
+        return this.CMRPrivateNetworkTunnelName;
+    }
+
+    /**
+     * Set <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CMRPrivateNetworkTunnelName <p>私网管道名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCMRPrivateNetworkTunnelName(String CMRPrivateNetworkTunnelName) {
+        this.CMRPrivateNetworkTunnelName = CMRPrivateNetworkTunnelName;
+    }
+
+    /**
+     * Get <p>健康检查配置</p> 
+     * @return HealthCheckConfigs <p>健康检查配置</p>
+     */
+    public ServiceProviderHealthCheckConfigItemOutput [] getHealthCheckConfigs() {
+        return this.HealthCheckConfigs;
+    }
+
+    /**
+     * Set <p>健康检查配置</p>
+     * @param HealthCheckConfigs <p>健康检查配置</p>
+     */
+    public void setHealthCheckConfigs(ServiceProviderHealthCheckConfigItemOutput [] HealthCheckConfigs) {
+        this.HealthCheckConfigs = HealthCheckConfigs;
+    }
+
     public ModelKeyInfoItem() {
     }
 
@@ -480,6 +587,12 @@ public class ModelKeyInfoItem extends AbstractModel {
         }
         if (source.ApiBase != null) {
             this.ApiBase = new String(source.ApiBase);
+        }
+        if (source.ApiBases != null) {
+            this.ApiBases = new ApiBaseItem[source.ApiBases.length];
+            for (int i = 0; i < source.ApiBases.length; i++) {
+                this.ApiBases[i] = new ApiBaseItem(source.ApiBases[i]);
+            }
         }
         if (source.CreatedAt != null) {
             this.CreatedAt = new String(source.CreatedAt);
@@ -541,6 +654,18 @@ public class ModelKeyInfoItem extends AbstractModel {
         if (source.HealthCheckConfig != null) {
             this.HealthCheckConfig = new ServiceProviderHealthCheckConfigOutput(source.HealthCheckConfig);
         }
+        if (source.CMRPrivateNetworkTunnelId != null) {
+            this.CMRPrivateNetworkTunnelId = new String(source.CMRPrivateNetworkTunnelId);
+        }
+        if (source.CMRPrivateNetworkTunnelName != null) {
+            this.CMRPrivateNetworkTunnelName = new String(source.CMRPrivateNetworkTunnelName);
+        }
+        if (source.HealthCheckConfigs != null) {
+            this.HealthCheckConfigs = new ServiceProviderHealthCheckConfigItemOutput[source.HealthCheckConfigs.length];
+            for (int i = 0; i < source.HealthCheckConfigs.length; i++) {
+                this.HealthCheckConfigs[i] = new ServiceProviderHealthCheckConfigItemOutput(source.HealthCheckConfigs[i]);
+            }
+        }
     }
 
 
@@ -550,6 +675,7 @@ public class ModelKeyInfoItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
         this.setParamSimple(map, prefix + "ApiBase", this.ApiBase);
+        this.setParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamSimple(map, prefix + "KeyCount", this.KeyCount);
@@ -566,6 +692,9 @@ public class ModelKeyInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
+        this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+        this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelName", this.CMRPrivateNetworkTunnelName);
+        this.setParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
 
     }
 }

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeAccountPrivilegesResponse extends AbstractModel {
 
     /**
-    * 全局权限数组。
+    * <p>全局权限数组。</p>
     */
     @SerializedName("GlobalPrivileges")
     @Expose
     private String [] GlobalPrivileges;
 
     /**
-    * 数据库权限数组。
+    * <p>数据库权限数组。</p>
     */
     @SerializedName("DatabasePrivileges")
     @Expose
     private DatabasePrivilege [] DatabasePrivileges;
 
     /**
-    * 数据库中的表权限数组。
+    * <p>数据库中的表权限数组。</p>
     */
     @SerializedName("TablePrivileges")
     @Expose
     private TablePrivilege [] TablePrivileges;
 
     /**
-    * 数据库表中的列权限数组。
+    * <p>数据库表中的列权限数组。</p>
     */
     @SerializedName("ColumnPrivileges")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeAccountPrivilegesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 全局权限数组。 
-     * @return GlobalPrivileges 全局权限数组。
+     * Get <p>全局权限数组。</p> 
+     * @return GlobalPrivileges <p>全局权限数组。</p>
      */
     public String [] getGlobalPrivileges() {
         return this.GlobalPrivileges;
     }
 
     /**
-     * Set 全局权限数组。
-     * @param GlobalPrivileges 全局权限数组。
+     * Set <p>全局权限数组。</p>
+     * @param GlobalPrivileges <p>全局权限数组。</p>
      */
     public void setGlobalPrivileges(String [] GlobalPrivileges) {
         this.GlobalPrivileges = GlobalPrivileges;
     }
 
     /**
-     * Get 数据库权限数组。 
-     * @return DatabasePrivileges 数据库权限数组。
+     * Get <p>数据库权限数组。</p> 
+     * @return DatabasePrivileges <p>数据库权限数组。</p>
      */
     public DatabasePrivilege [] getDatabasePrivileges() {
         return this.DatabasePrivileges;
     }
 
     /**
-     * Set 数据库权限数组。
-     * @param DatabasePrivileges 数据库权限数组。
+     * Set <p>数据库权限数组。</p>
+     * @param DatabasePrivileges <p>数据库权限数组。</p>
      */
     public void setDatabasePrivileges(DatabasePrivilege [] DatabasePrivileges) {
         this.DatabasePrivileges = DatabasePrivileges;
     }
 
     /**
-     * Get 数据库中的表权限数组。 
-     * @return TablePrivileges 数据库中的表权限数组。
+     * Get <p>数据库中的表权限数组。</p> 
+     * @return TablePrivileges <p>数据库中的表权限数组。</p>
      */
     public TablePrivilege [] getTablePrivileges() {
         return this.TablePrivileges;
     }
 
     /**
-     * Set 数据库中的表权限数组。
-     * @param TablePrivileges 数据库中的表权限数组。
+     * Set <p>数据库中的表权限数组。</p>
+     * @param TablePrivileges <p>数据库中的表权限数组。</p>
      */
     public void setTablePrivileges(TablePrivilege [] TablePrivileges) {
         this.TablePrivileges = TablePrivileges;
     }
 
     /**
-     * Get 数据库表中的列权限数组。 
-     * @return ColumnPrivileges 数据库表中的列权限数组。
+     * Get <p>数据库表中的列权限数组。</p> 
+     * @return ColumnPrivileges <p>数据库表中的列权限数组。</p>
      */
     public ColumnPrivilege [] getColumnPrivileges() {
         return this.ColumnPrivileges;
     }
 
     /**
-     * Set 数据库表中的列权限数组。
-     * @param ColumnPrivileges 数据库表中的列权限数组。
+     * Set <p>数据库表中的列权限数组。</p>
+     * @param ColumnPrivileges <p>数据库表中的列权限数组。</p>
      */
     public void setColumnPrivileges(ColumnPrivilege [] ColumnPrivileges) {
         this.ColumnPrivileges = ColumnPrivileges;

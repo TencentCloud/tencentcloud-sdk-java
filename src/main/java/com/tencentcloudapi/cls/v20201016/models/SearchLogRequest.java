@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchLogRequest extends AbstractModel {
 
     /**
-    * <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
+    * <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+    * <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
     */
     @SerializedName("To")
     @Expose
@@ -129,32 +129,32 @@ public class SearchLogRequest extends AbstractModel {
     private Long SyntaxRule;
 
     /**
-     * Get <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p> 
-     * @return From <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * Get <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p> 
+     * @return From <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
-     * @param From <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * Set <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
+     * @param From <p>要检索分析的日志的起始时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，包含 From 时刻</p>
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p> 
-     * @return To <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * Get <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p> 
+     * @return To <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
-     * @param To <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p>
+     * Set <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
+     * @param To <p>要检索分析的日志的结束时间，<strong>Unix时间戳（毫秒）</strong></p><p>时间范围为左闭右开区间 [From, To)，不包含 To 时刻</p>
      */
     public void setTo(Long To) {
         this.To = To;

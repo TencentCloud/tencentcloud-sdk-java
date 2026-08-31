@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class LiveStreamProcessTask extends AbstractModel {
 
     /**
-    * 媒体处理任务 ID。
+    * <p>媒体处理任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+    * <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码，0 表示成功，其他值表示失败。
+    * <p>错误码，0 表示成功，其他值表示失败。</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误信息。
+    * <p>错误信息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 直播流 URL。
+    * <p>直播流 URL。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get 媒体处理任务 ID。 
-     * @return TaskId 媒体处理任务 ID。
+     * Get <p>媒体处理任务 ID。</p> 
+     * @return TaskId <p>媒体处理任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 媒体处理任务 ID。
-     * @param TaskId 媒体处理任务 ID。
+     * Set <p>媒体处理任务 ID。</p>
+     * @param TaskId <p>媒体处理任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li> 
-     * @return Status 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * Get <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li> 
+     * @return Status <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
-     * @param Status 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * Set <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * @param Status <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码，0 表示成功，其他值表示失败。 
-     * @return ErrCode 错误码，0 表示成功，其他值表示失败。
+     * Get <p>错误码，0 表示成功，其他值表示失败。</p> 
+     * @return ErrCode <p>错误码，0 表示成功，其他值表示失败。</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 错误码，0 表示成功，其他值表示失败。
-     * @param ErrCode 错误码，0 表示成功，其他值表示失败。
+     * Set <p>错误码，0 表示成功，其他值表示失败。</p>
+     * @param ErrCode <p>错误码，0 表示成功，其他值表示失败。</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。 
-     * @return Message 错误信息。
+     * Get <p>错误信息。</p> 
+     * @return Message <p>错误信息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息。
-     * @param Message 错误信息。
+     * Set <p>错误信息。</p>
+     * @param Message <p>错误信息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 直播流 URL。 
-     * @return Url 直播流 URL。
+     * Get <p>直播流 URL。</p> 
+     * @return Url <p>直播流 URL。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 直播流 URL。
-     * @param Url 直播流 URL。
+     * Set <p>直播流 URL。</p>
+     * @param Url <p>直播流 URL。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

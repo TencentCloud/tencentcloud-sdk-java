@@ -24,86 +24,46 @@ import java.util.HashMap;
 public class MediaDeleteItem extends AbstractModel {
 
     /**
-    * 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
-<li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
-<li>TranscodeFiles（删除转码文件）；</li>
-<li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）；</li>
-<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
-<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
-<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
+    * <p>所指定的删除部分。如果未填写该字段则参数无效。可选值有：</p><li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li><li>TranscodeFiles（删除转码文件）；</li><li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li><li>WechatPublishFiles（删除微信发布文件）；</li><li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li><li>MpsAiMediaAiAnalysisFiles（删除ProcessMediaByMPS产生的智能分析产物）。</li><li>MpsAiMediaSmartEraseFiles（删除ProcessMediaByMPS产生的智能擦除产物）。</li><li>MpsAiMediaSmartSubtitleFiles（删除ProcessMediaByMPS产生的智能字幕产物）。</li><font color="red">注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li><li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-默认值为0，表示删除参数Type指定种类下所有的视频。
+    * <p>删除由Type参数指定的种类下的视频模板号，模板定义参见<a href="https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF">转码模板</a>。<br>默认值为0，表示删除参数Type指定种类下所有的视频。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
-<li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
-<li>TranscodeFiles（删除转码文件）；</li>
-<li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）；</li>
-<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
-<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
-<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li> 
-     * @return Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
-<li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
-<li>TranscodeFiles（删除转码文件）；</li>
-<li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）；</li>
-<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
-<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
-<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
+     * Get <p>所指定的删除部分。如果未填写该字段则参数无效。可选值有：</p><li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li><li>TranscodeFiles（删除转码文件）；</li><li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li><li>WechatPublishFiles（删除微信发布文件）；</li><li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li><li>MpsAiMediaAiAnalysisFiles（删除ProcessMediaByMPS产生的智能分析产物）。</li><li>MpsAiMediaSmartEraseFiles（删除ProcessMediaByMPS产生的智能擦除产物）。</li><li>MpsAiMediaSmartSubtitleFiles（删除ProcessMediaByMPS产生的智能字幕产物）。</li><font color="red">注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li><li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li> 
+     * @return Type <p>所指定的删除部分。如果未填写该字段则参数无效。可选值有：</p><li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li><li>TranscodeFiles（删除转码文件）；</li><li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li><li>WechatPublishFiles（删除微信发布文件）；</li><li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li><li>MpsAiMediaAiAnalysisFiles（删除ProcessMediaByMPS产生的智能分析产物）。</li><li>MpsAiMediaSmartEraseFiles（删除ProcessMediaByMPS产生的智能擦除产物）。</li><li>MpsAiMediaSmartSubtitleFiles（删除ProcessMediaByMPS产生的智能字幕产物）。</li><font color="red">注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li><li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
-<li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
-<li>TranscodeFiles（删除转码文件）；</li>
-<li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）；</li>
-<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
-<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
-<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
-     * @param Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
-<li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
-<li>TranscodeFiles（删除转码文件）；</li>
-<li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）；</li>
-<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
-<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
-<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
+     * Set <p>所指定的删除部分。如果未填写该字段则参数无效。可选值有：</p><li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li><li>TranscodeFiles（删除转码文件）；</li><li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li><li>WechatPublishFiles（删除微信发布文件）；</li><li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li><li>MpsAiMediaAiAnalysisFiles（删除ProcessMediaByMPS产生的智能分析产物）。</li><li>MpsAiMediaSmartEraseFiles（删除ProcessMediaByMPS产生的智能擦除产物）。</li><li>MpsAiMediaSmartSubtitleFiles（删除ProcessMediaByMPS产生的智能字幕产物）。</li><font color="red">注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li><li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
+     * @param Type <p>所指定的删除部分。如果未填写该字段则参数无效。可选值有：</p><li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li><li>TranscodeFiles（删除转码文件）；</li><li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li><li>WechatPublishFiles（删除微信发布文件）；</li><li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li><li>MpsAiMediaAiAnalysisFiles（删除ProcessMediaByMPS产生的智能分析产物）。</li><li>MpsAiMediaSmartEraseFiles（删除ProcessMediaByMPS产生的智能擦除产物）。</li><li>MpsAiMediaSmartSubtitleFiles（删除ProcessMediaByMPS产生的智能字幕产物）。</li><font color="red">注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li><li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-默认值为0，表示删除参数Type指定种类下所有的视频。 
-     * @return Definition 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-默认值为0，表示删除参数Type指定种类下所有的视频。
+     * Get <p>删除由Type参数指定的种类下的视频模板号，模板定义参见<a href="https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF">转码模板</a>。<br>默认值为0，表示删除参数Type指定种类下所有的视频。</p> 
+     * @return Definition <p>删除由Type参数指定的种类下的视频模板号，模板定义参见<a href="https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF">转码模板</a>。<br>默认值为0，表示删除参数Type指定种类下所有的视频。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-默认值为0，表示删除参数Type指定种类下所有的视频。
-     * @param Definition 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-默认值为0，表示删除参数Type指定种类下所有的视频。
+     * Set <p>删除由Type参数指定的种类下的视频模板号，模板定义参见<a href="https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF">转码模板</a>。<br>默认值为0，表示删除参数Type指定种类下所有的视频。</p>
+     * @param Definition <p>删除由Type参数指定的种类下的视频模板号，模板定义参见<a href="https://cloud.tencent.com/document/product/266/33478#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF">转码模板</a>。<br>默认值为0，表示删除参数Type指定种类下所有的视频。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

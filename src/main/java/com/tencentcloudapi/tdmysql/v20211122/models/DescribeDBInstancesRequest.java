@@ -52,6 +52,20 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String EngineType;
 
     /**
+    * <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * Get <p>过滤参数</p> 
      * @return Filters <p>过滤参数</p>
      */
@@ -115,6 +129,38 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.EngineType = EngineType;
     }
 
+    /**
+     * Get <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p> 
+     * @return OrderBy <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+     * @param OrderBy <p>查询Order By字段，支持 StorageNodeNum/CreateTime/CreateVersion</p>
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p> 
+     * @return OrderDirection <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
+     * @param OrderDirection <p>排序方向</p><p>枚举值：</p><ul><li>ASC： 升序</li><li>DESC： 降序</li></ul><p>默认值：DESC</p>
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -138,6 +184,12 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         if (source.EngineType != null) {
             this.EngineType = new String(source.EngineType);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

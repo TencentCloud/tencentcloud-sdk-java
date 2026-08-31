@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class SecurityGroupInfo extends AbstractModel {
 
     /**
-    * 安全组 ID。
+    * <p>安全组 ID。</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 安全组名称。
+    * <p>安全组名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 白名单列表。
+    * <p>白名单列表。</p>
     */
     @SerializedName("Whitelist")
     @Expose
     private String [] Whitelist;
 
     /**
-    * 绑定的输入流列表。
+    * <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OccupiedInputs")
@@ -53,14 +53,14 @@ public class SecurityGroupInfo extends AbstractModel {
     private String [] OccupiedInputs;
 
     /**
-    * 安全组地址。
+    * <p>安全组地址。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 绑定的输出流列表。
+    * <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OccupiedOutputs")
@@ -68,57 +68,57 @@ public class SecurityGroupInfo extends AbstractModel {
     private String [] OccupiedOutputs;
 
     /**
-     * Get 安全组 ID。 
-     * @return Id 安全组 ID。
+     * Get <p>安全组 ID。</p> 
+     * @return Id <p>安全组 ID。</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 安全组 ID。
-     * @param Id 安全组 ID。
+     * Set <p>安全组 ID。</p>
+     * @param Id <p>安全组 ID。</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 安全组名称。 
-     * @return Name 安全组名称。
+     * Get <p>安全组名称。</p> 
+     * @return Name <p>安全组名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 安全组名称。
-     * @param Name 安全组名称。
+     * Set <p>安全组名称。</p>
+     * @param Name <p>安全组名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 白名单列表。 
-     * @return Whitelist 白名单列表。
+     * Get <p>白名单列表。</p> 
+     * @return Whitelist <p>白名单列表。</p>
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set 白名单列表。
-     * @param Whitelist 白名单列表。
+     * Set <p>白名单列表。</p>
+     * @param Whitelist <p>白名单列表。</p>
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;
     }
 
     /**
-     * Get 绑定的输入流列表。
+     * Get <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OccupiedInputs 绑定的输入流列表。
+     * @return OccupiedInputs <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOccupiedInputs() {
@@ -126,9 +126,9 @@ public class SecurityGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 绑定的输入流列表。
+     * Set <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OccupiedInputs 绑定的输入流列表。
+     * @param OccupiedInputs <p>绑定的输入流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOccupiedInputs(String [] OccupiedInputs) {
@@ -136,25 +136,25 @@ public class SecurityGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 安全组地址。 
-     * @return Region 安全组地址。
+     * Get <p>安全组地址。</p> 
+     * @return Region <p>安全组地址。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 安全组地址。
-     * @param Region 安全组地址。
+     * Set <p>安全组地址。</p>
+     * @param Region <p>安全组地址。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 绑定的输出流列表。
+     * Get <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OccupiedOutputs 绑定的输出流列表。
+     * @return OccupiedOutputs <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOccupiedOutputs() {
@@ -162,9 +162,9 @@ public class SecurityGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 绑定的输出流列表。
+     * Set <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OccupiedOutputs 绑定的输出流列表。
+     * @param OccupiedOutputs <p>绑定的输出流列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOccupiedOutputs(String [] OccupiedOutputs) {

@@ -227,7 +227,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String SQLMode;
 
     /**
-    * <p>svls实例的ccu变配配置</p>
+    * <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
     */
     @SerializedName("AutoScaleConfig")
     @Expose
@@ -260,6 +260,13 @@ public class CreateDBInstancesRequest extends AbstractModel {
     @SerializedName("EncryptionEnable")
     @Expose
     private Long EncryptionEnable;
+
+    /**
+    * <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+    */
+    @SerializedName("AutoScaleConfigs")
+    @Expose
+    private AutoScalingConfig [] AutoScaleConfigs;
 
     /**
      * Get <p>创建实例区域</p> 
@@ -726,16 +733,16 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>svls实例的ccu变配配置</p> 
-     * @return AutoScaleConfig <p>svls实例的ccu变配配置</p>
+     * Get <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p> 
+     * @return AutoScaleConfig <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
      */
     public AutoScalingConfig getAutoScaleConfig() {
         return this.AutoScaleConfig;
     }
 
     /**
-     * Set <p>svls实例的ccu变配配置</p>
-     * @param AutoScaleConfig <p>svls实例的ccu变配配置</p>
+     * Set <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
+     * @param AutoScaleConfig <p>SVLS 实例的ccu变配配置</p><p>入参限制：同时传入 AutoScaleConfigs 时此参数不再生效</p>
      */
     public void setAutoScaleConfig(AutoScalingConfig AutoScaleConfig) {
         this.AutoScaleConfig = AutoScaleConfig;
@@ -803,6 +810,22 @@ public class CreateDBInstancesRequest extends AbstractModel {
      */
     public void setEncryptionEnable(Long EncryptionEnable) {
         this.EncryptionEnable = EncryptionEnable;
+    }
+
+    /**
+     * Get <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p> 
+     * @return AutoScaleConfigs <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+     */
+    public AutoScalingConfig [] getAutoScaleConfigs() {
+        return this.AutoScaleConfigs;
+    }
+
+    /**
+     * Set <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+     * @param AutoScaleConfigs <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+     */
+    public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
+        this.AutoScaleConfigs = AutoScaleConfigs;
     }
 
     public CreateDBInstancesRequest() {
@@ -930,6 +953,12 @@ public class CreateDBInstancesRequest extends AbstractModel {
         if (source.EncryptionEnable != null) {
             this.EncryptionEnable = new Long(source.EncryptionEnable);
         }
+        if (source.AutoScaleConfigs != null) {
+            this.AutoScaleConfigs = new AutoScalingConfig[source.AutoScaleConfigs.length];
+            for (int i = 0; i < source.AutoScaleConfigs.length; i++) {
+                this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
+            }
+        }
     }
 
 
@@ -971,6 +1000,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
+        this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
 
     }
 }

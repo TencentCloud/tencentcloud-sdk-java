@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeVirusMonitorConfigResponse extends AbstractModel {
 
     /**
-    * 是否开启实时监控
+    * <p>是否开启实时监控</p>
     */
     @SerializedName("EnableScan")
     @Expose
     private Boolean EnableScan;
 
     /**
-    * true:包含路径 false:排除路径
+    * <p>true:包含路径 false:排除路径</p>
     */
     @SerializedName("IsIncludePath")
     @Expose
     private Boolean IsIncludePath;
 
     /**
-    * 自选排除或扫描的地址
+    * <p>自选排除或扫描的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanPath")
@@ -46,11 +46,7 @@ public class DescribeVirusMonitorConfigResponse extends AbstractModel {
     private String [] ScanPath;
 
     /**
-    * 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+    * <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
     */
     @SerializedName("ScanPathMode")
     @Expose
@@ -64,41 +60,41 @@ SCAN_PATH_USER_DEFINE：用户自定义路径
     private String RequestId;
 
     /**
-     * Get 是否开启实时监控 
-     * @return EnableScan 是否开启实时监控
+     * Get <p>是否开启实时监控</p> 
+     * @return EnableScan <p>是否开启实时监控</p>
      */
     public Boolean getEnableScan() {
         return this.EnableScan;
     }
 
     /**
-     * Set 是否开启实时监控
-     * @param EnableScan 是否开启实时监控
+     * Set <p>是否开启实时监控</p>
+     * @param EnableScan <p>是否开启实时监控</p>
      */
     public void setEnableScan(Boolean EnableScan) {
         this.EnableScan = EnableScan;
     }
 
     /**
-     * Get true:包含路径 false:排除路径 
-     * @return IsIncludePath true:包含路径 false:排除路径
+     * Get <p>true:包含路径 false:排除路径</p> 
+     * @return IsIncludePath <p>true:包含路径 false:排除路径</p>
      */
     public Boolean getIsIncludePath() {
         return this.IsIncludePath;
     }
 
     /**
-     * Set true:包含路径 false:排除路径
-     * @param IsIncludePath true:包含路径 false:排除路径
+     * Set <p>true:包含路径 false:排除路径</p>
+     * @param IsIncludePath <p>true:包含路径 false:排除路径</p>
      */
     public void setIsIncludePath(Boolean IsIncludePath) {
         this.IsIncludePath = IsIncludePath;
     }
 
     /**
-     * Get 自选排除或扫描的地址
+     * Get <p>自选排除或扫描的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanPath 自选排除或扫描的地址
+     * @return ScanPath <p>自选排除或扫描的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getScanPath() {
@@ -106,9 +102,9 @@ SCAN_PATH_USER_DEFINE：用户自定义路径
     }
 
     /**
-     * Set 自选排除或扫描的地址
+     * Set <p>自选排除或扫描的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanPath 自选排除或扫描的地址
+     * @param ScanPath <p>自选排除或扫描的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanPath(String [] ScanPath) {
@@ -116,32 +112,16 @@ SCAN_PATH_USER_DEFINE：用户自定义路径
     }
 
     /**
-     * Get 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
- 
-     * @return ScanPathMode 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+     * Get <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p> 
+     * @return ScanPathMode <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
      */
     public String getScanPathMode() {
         return this.ScanPathMode;
     }
 
     /**
-     * Set 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
-     * @param ScanPathMode 扫描路径模式：
-SCAN_PATH_ALL：全部路径
-SCAN_PATH_DEFAULT：默认路径
-SCAN_PATH_USER_DEFINE：用户自定义路径
-
+     * Set <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
+     * @param ScanPathMode <p>扫描路径模式：<br>SCAN_PATH_ALL：全部路径<br>SCAN_PATH_DEFAULT：默认路径<br>SCAN_PATH_USER_DEFINE：用户自定义路径</p>
      */
     public void setScanPathMode(String ScanPathMode) {
         this.ScanPathMode = ScanPathMode;

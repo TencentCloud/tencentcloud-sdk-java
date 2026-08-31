@@ -549,6 +549,9 @@ public enum MpsErrorCode {
      /* 超过限制值：模板数超限。 */
      LIMITEXCEEDED_TOOMUCHTEMPLATE("LimitExceeded.TooMuchTemplate"),
      
+     /* 缺少参数错误。 */
+     MISSINGPARAMETER("MissingParameter"),
+     
      /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      

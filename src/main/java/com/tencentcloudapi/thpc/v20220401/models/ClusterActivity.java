@@ -74,6 +74,14 @@ public class ClusterActivity extends AbstractModel {
     private String Cause;
 
     /**
+    * 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
     * 集群活动描述。
     */
     @SerializedName("Description")
@@ -218,6 +226,26 @@ public class ClusterActivity extends AbstractModel {
     }
 
     /**
+     * Get 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueueName 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueueName 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
      * Get 集群活动描述。 
      * @return Description 集群活动描述。
      */
@@ -310,6 +338,9 @@ public class ClusterActivity extends AbstractModel {
         if (source.Cause != null) {
             this.Cause = new String(source.Cause);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -339,6 +370,7 @@ public class ClusterActivity extends AbstractModel {
         this.setParamSimple(map, prefix + "ActivityStatusCode", this.ActivityStatusCode);
         this.setParamSimple(map, prefix + "ResultDetail", this.ResultDetail);
         this.setParamSimple(map, prefix + "Cause", this.Cause);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "RelatedNodeActivitySet.", this.RelatedNodeActivitySet);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeTWeSeeTaskRequest extends AbstractModel {
 
     /**
-    * 任务 ID
+    * <p>任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+    * <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
+    */
+    @SerializedName("FileURLExpireTime")
+    @Expose
+    private Long FileURLExpireTime;
+
+    /**
+     * Get <p>任务 ID</p> 
+     * @return TaskId <p>任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set <p>任务 ID</p>
+     * @param TaskId <p>任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p> 
+     * @return FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
+     */
+    public Long getFileURLExpireTime() {
+        return this.FileURLExpireTime;
+    }
+
+    /**
+     * Set <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
+     * @param FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p><p>单位：秒</p>
+     */
+    public void setFileURLExpireTime(Long FileURLExpireTime) {
+        this.FileURLExpireTime = FileURLExpireTime;
     }
 
     public DescribeTWeSeeTaskRequest() {
@@ -57,6 +80,9 @@ public class DescribeTWeSeeTaskRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.FileURLExpireTime != null) {
+            this.FileURLExpireTime = new Long(source.FileURLExpireTime);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeTWeSeeTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
 
     }
 }

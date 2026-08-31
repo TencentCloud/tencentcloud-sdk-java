@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SRTAddressDestination extends AbstractModel {
 
     /**
-    * 目标地址的IP。
+    * <p>目标地址的IP。</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 目标地址的端口。
+    * <p>目标地址的端口。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 目标地址的IP。 
-     * @return Ip 目标地址的IP。
+     * Get <p>目标地址的IP。</p> 
+     * @return Ip <p>目标地址的IP。</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 目标地址的IP。
-     * @param Ip 目标地址的IP。
+     * Set <p>目标地址的IP。</p>
+     * @param Ip <p>目标地址的IP。</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 目标地址的端口。 
-     * @return Port 目标地址的端口。
+     * Get <p>目标地址的端口。</p> 
+     * @return Port <p>目标地址的端口。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标地址的端口。
-     * @param Port 目标地址的端口。
+     * Set <p>目标地址的端口。</p>
+     * @param Port <p>目标地址的端口。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;

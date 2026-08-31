@@ -31,6 +31,13 @@ public class DescribeLiveCloudEffectConfigResponse extends AbstractModel {
     private CloudEffectTemplateInfo [] EffectTemplateList;
 
     /**
+    * <p>惩罚特效模板信息列表。</p>
+    */
+    @SerializedName("PunishmentEffectTemplateList")
+    @Expose
+    private CloudEffectTemplateInfo [] PunishmentEffectTemplateList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeLiveCloudEffectConfigResponse extends AbstractModel {
      */
     public void setEffectTemplateList(CloudEffectTemplateInfo [] EffectTemplateList) {
         this.EffectTemplateList = EffectTemplateList;
+    }
+
+    /**
+     * Get <p>惩罚特效模板信息列表。</p> 
+     * @return PunishmentEffectTemplateList <p>惩罚特效模板信息列表。</p>
+     */
+    public CloudEffectTemplateInfo [] getPunishmentEffectTemplateList() {
+        return this.PunishmentEffectTemplateList;
+    }
+
+    /**
+     * Set <p>惩罚特效模板信息列表。</p>
+     * @param PunishmentEffectTemplateList <p>惩罚特效模板信息列表。</p>
+     */
+    public void setPunishmentEffectTemplateList(CloudEffectTemplateInfo [] PunishmentEffectTemplateList) {
+        this.PunishmentEffectTemplateList = PunishmentEffectTemplateList;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeLiveCloudEffectConfigResponse extends AbstractModel {
                 this.EffectTemplateList[i] = new CloudEffectTemplateInfo(source.EffectTemplateList[i]);
             }
         }
+        if (source.PunishmentEffectTemplateList != null) {
+            this.PunishmentEffectTemplateList = new CloudEffectTemplateInfo[source.PunishmentEffectTemplateList.length];
+            for (int i = 0; i < source.PunishmentEffectTemplateList.length; i++) {
+                this.PunishmentEffectTemplateList[i] = new CloudEffectTemplateInfo(source.PunishmentEffectTemplateList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeLiveCloudEffectConfigResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EffectTemplateList.", this.EffectTemplateList);
+        this.setParamArrayObj(map, prefix + "PunishmentEffectTemplateList.", this.PunishmentEffectTemplateList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

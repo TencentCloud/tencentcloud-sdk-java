@@ -52,6 +52,13 @@ public class ModifyLibraryRequest extends AbstractModel {
     private LibraryExtension LibraryExtension;
 
     /**
+    * <p>媒体库标签列表。</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
      * Get <p>媒体库 ID</p> 
      * @return LibraryId <p>媒体库 ID</p>
      */
@@ -115,6 +122,22 @@ public class ModifyLibraryRequest extends AbstractModel {
         this.LibraryExtension = LibraryExtension;
     }
 
+    /**
+     * Get <p>媒体库标签列表。</p> 
+     * @return Tags <p>媒体库标签列表。</p>
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>媒体库标签列表。</p>
+     * @param Tags <p>媒体库标签列表。</p>
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ModifyLibraryRequest() {
     }
 
@@ -135,6 +158,12 @@ public class ModifyLibraryRequest extends AbstractModel {
         if (source.LibraryExtension != null) {
             this.LibraryExtension = new LibraryExtension(source.LibraryExtension);
         }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class ModifyLibraryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "LibraryExtension.", this.LibraryExtension);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

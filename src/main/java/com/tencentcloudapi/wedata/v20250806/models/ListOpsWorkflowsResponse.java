@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListOpsWorkflowsResponse extends AbstractModel {
 
     /**
-    * 工作流列表
+    * <p>工作流列表</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ListOpsWorkflowsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作流列表 
-     * @return Data 工作流列表
+     * Get <p>工作流列表</p> 
+     * @return Data <p>工作流列表</p>
      */
     public OpsWorkflows getData() {
         return this.Data;
     }
 
     /**
-     * Set 工作流列表
-     * @param Data 工作流列表
+     * Set <p>工作流列表</p>
+     * @param Data <p>工作流列表</p>
      */
     public void setData(OpsWorkflows Data) {
         this.Data = Data;

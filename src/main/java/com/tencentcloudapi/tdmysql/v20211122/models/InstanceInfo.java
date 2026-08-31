@@ -493,6 +493,13 @@ public class InstanceInfo extends AbstractModel {
     private AnalysisInstanceInfo AnalysisInstanceInfo;
 
     /**
+    * <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
+    */
+    @SerializedName("AutoScaleConfigs")
+    @Expose
+    private AutoScalingConfig [] AutoScaleConfigs;
+
+    /**
      * Get <p>计算节点数量</p> 
      * @return ComputeNodeNum <p>计算节点数量</p>
      * @deprecated
@@ -1660,6 +1667,22 @@ public class InstanceInfo extends AbstractModel {
         this.AnalysisInstanceInfo = AnalysisInstanceInfo;
     }
 
+    /**
+     * Get <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p> 
+     * @return AutoScaleConfigs <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
+     */
+    public AutoScalingConfig [] getAutoScaleConfigs() {
+        return this.AutoScaleConfigs;
+    }
+
+    /**
+     * Set <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
+     * @param AutoScaleConfigs <p>有关该实例的多个自动变配相关配置，ccu、nodecount 值</p>
+     */
+    public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
+        this.AutoScaleConfigs = AutoScaleConfigs;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1872,6 +1895,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.AnalysisInstanceInfo != null) {
             this.AnalysisInstanceInfo = new AnalysisInstanceInfo(source.AnalysisInstanceInfo);
         }
+        if (source.AutoScaleConfigs != null) {
+            this.AutoScaleConfigs = new AutoScalingConfig[source.AutoScaleConfigs.length];
+            for (int i = 0; i < source.AutoScaleConfigs.length; i++) {
+                this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
+            }
+        }
     }
 
 
@@ -1942,6 +1971,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AnalysisMode", this.AnalysisMode);
         this.setParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
         this.setParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
+        this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
 
     }
 }

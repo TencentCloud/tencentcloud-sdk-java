@@ -94,6 +94,13 @@ public class CreateCloudAppRequest extends AbstractModel {
     private BuildSecret [] Secrets;
 
     /**
+    * <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+    */
+    @SerializedName("NodeJsVersion")
+    @Expose
+    private String NodeJsVersion;
+
+    /**
      * Get <p>环境ID</p> 
      * @return EnvId <p>环境ID</p>
      */
@@ -253,6 +260,22 @@ public class CreateCloudAppRequest extends AbstractModel {
         this.Secrets = Secrets;
     }
 
+    /**
+     * Get <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p> 
+     * @return NodeJsVersion <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+     */
+    public String getNodeJsVersion() {
+        return this.NodeJsVersion;
+    }
+
+    /**
+     * Set <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+     * @param NodeJsVersion <p>选择 NodeRuntime 版本: 16,18,20,22,24 等</p>
+     */
+    public void setNodeJsVersion(String NodeJsVersion) {
+        this.NodeJsVersion = NodeJsVersion;
+    }
+
     public CreateCloudAppRequest() {
     }
 
@@ -300,6 +323,9 @@ public class CreateCloudAppRequest extends AbstractModel {
                 this.Secrets[i] = new BuildSecret(source.Secrets[i]);
             }
         }
+        if (source.NodeJsVersion != null) {
+            this.NodeJsVersion = new String(source.NodeJsVersion);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class CreateCloudAppRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Env.", this.Env);
         this.setParamArrayObj(map, prefix + "CustomSteps.", this.CustomSteps);
         this.setParamArrayObj(map, prefix + "Secrets.", this.Secrets);
+        this.setParamSimple(map, prefix + "NodeJsVersion", this.NodeJsVersion);
 
     }
 }

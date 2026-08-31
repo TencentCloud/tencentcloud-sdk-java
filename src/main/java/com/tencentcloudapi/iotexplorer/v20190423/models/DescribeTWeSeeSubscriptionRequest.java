@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class DescribeTWeSeeSubscriptionRequest extends AbstractModel {
 
     /**
-    * 产品 ID
+    * <p>产品 ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+    * <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 通道 ID
+    * <p>通道 ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private Long ChannelId;
 
     /**
-     * Get 产品 ID 
-     * @return ProductId 产品 ID
+     * Get <p>产品 ID</p> 
+     * @return ProductId <p>产品 ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品 ID
-     * @param ProductId 产品 ID
+     * Set <p>产品 ID</p>
+     * @param ProductId <p>产品 ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 算法类型。可选值：
-
-- `VID_COMP`：视频理解 
-     * @return ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+     * Get <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul> 
+     * @return ServiceType <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-     * @param ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+     * Set <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
+     * @param ServiceType <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 通道 ID 
-     * @return ChannelId 通道 ID
+     * Get <p>通道 ID</p> 
+     * @return ChannelId <p>通道 ID</p>
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道 ID
-     * @param ChannelId 通道 ID
+     * Set <p>通道 ID</p>
+     * @param ChannelId <p>通道 ID</p>
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;

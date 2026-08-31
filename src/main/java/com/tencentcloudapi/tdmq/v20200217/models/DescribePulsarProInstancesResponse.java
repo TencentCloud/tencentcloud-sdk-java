@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePulsarProInstancesResponse extends AbstractModel {
 
     /**
-    * 未分页的总数目
+    * <p>未分页的总数目</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例信息列表
+    * <p>实例信息列表</p>
     */
     @SerializedName("Instances")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePulsarProInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 未分页的总数目 
-     * @return TotalCount 未分页的总数目
+     * Get <p>未分页的总数目</p> 
+     * @return TotalCount <p>未分页的总数目</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 未分页的总数目
-     * @param TotalCount 未分页的总数目
+     * Set <p>未分页的总数目</p>
+     * @param TotalCount <p>未分页的总数目</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例信息列表 
-     * @return Instances 实例信息列表
+     * Get <p>实例信息列表</p> 
+     * @return Instances <p>实例信息列表</p>
      */
     public PulsarProInstance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 实例信息列表
-     * @param Instances 实例信息列表
+     * Set <p>实例信息列表</p>
+     * @param Instances <p>实例信息列表</p>
      */
     public void setInstances(PulsarProInstance [] Instances) {
         this.Instances = Instances;

@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DescribeUserRoleListRequest extends AbstractModel {
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 页数
+    * <p>页数</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 全部页码
+    * <p>全部页码</p>
     */
     @SerializedName("AllPage")
     @Expose
     private Boolean AllPage;
 
     /**
-    * 0 企业用户 1 访客 不填表示所有用户
+    * <p>0 企业用户 1 访客 不填表示所有用户</p>
     */
     @SerializedName("UserType")
     @Expose
     private String UserType;
 
     /**
-    * 模糊搜索的关键字
+    * <p>模糊搜索的关键字</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 是否只获取绑定企微应用的
+    * <p>是否只获取绑定企微应用的</p>
     */
     @SerializedName("IsOnlyBindAppUser")
     @Expose
     private Boolean IsOnlyBindAppUser;
 
     /**
-     * Get 页码 
-     * @return PageNo 页码
+    * <p>用户类型</p>
+    */
+    @SerializedName("IdentityType")
+    @Expose
+    private String IdentityType;
+
+    /**
+     * Get <p>页码</p> 
+     * @return PageNo <p>页码</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 页码
-     * @param PageNo 页码
+     * Set <p>页码</p>
+     * @param PageNo <p>页码</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 页数 
-     * @return PageSize 页数
+     * Get <p>页数</p> 
+     * @return PageSize <p>页数</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 页数
-     * @param PageSize 页数
+     * Set <p>页数</p>
+     * @param PageSize <p>页数</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 全部页码 
-     * @return AllPage 全部页码
+     * Get <p>全部页码</p> 
+     * @return AllPage <p>全部页码</p>
      */
     public Boolean getAllPage() {
         return this.AllPage;
     }
 
     /**
-     * Set 全部页码
-     * @param AllPage 全部页码
+     * Set <p>全部页码</p>
+     * @param AllPage <p>全部页码</p>
      */
     public void setAllPage(Boolean AllPage) {
         this.AllPage = AllPage;
     }
 
     /**
-     * Get 0 企业用户 1 访客 不填表示所有用户 
-     * @return UserType 0 企业用户 1 访客 不填表示所有用户
+     * Get <p>0 企业用户 1 访客 不填表示所有用户</p> 
+     * @return UserType <p>0 企业用户 1 访客 不填表示所有用户</p>
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 0 企业用户 1 访客 不填表示所有用户
-     * @param UserType 0 企业用户 1 访客 不填表示所有用户
+     * Set <p>0 企业用户 1 访客 不填表示所有用户</p>
+     * @param UserType <p>0 企业用户 1 访客 不填表示所有用户</p>
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 模糊搜索的关键字 
-     * @return Keyword 模糊搜索的关键字
+     * Get <p>模糊搜索的关键字</p> 
+     * @return Keyword <p>模糊搜索的关键字</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 模糊搜索的关键字
-     * @param Keyword 模糊搜索的关键字
+     * Set <p>模糊搜索的关键字</p>
+     * @param Keyword <p>模糊搜索的关键字</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 是否只获取绑定企微应用的 
-     * @return IsOnlyBindAppUser 是否只获取绑定企微应用的
+     * Get <p>是否只获取绑定企微应用的</p> 
+     * @return IsOnlyBindAppUser <p>是否只获取绑定企微应用的</p>
      */
     public Boolean getIsOnlyBindAppUser() {
         return this.IsOnlyBindAppUser;
     }
 
     /**
-     * Set 是否只获取绑定企微应用的
-     * @param IsOnlyBindAppUser 是否只获取绑定企微应用的
+     * Set <p>是否只获取绑定企微应用的</p>
+     * @param IsOnlyBindAppUser <p>是否只获取绑定企微应用的</p>
      */
     public void setIsOnlyBindAppUser(Boolean IsOnlyBindAppUser) {
         this.IsOnlyBindAppUser = IsOnlyBindAppUser;
+    }
+
+    /**
+     * Get <p>用户类型</p> 
+     * @return IdentityType <p>用户类型</p>
+     */
+    public String getIdentityType() {
+        return this.IdentityType;
+    }
+
+    /**
+     * Set <p>用户类型</p>
+     * @param IdentityType <p>用户类型</p>
+     */
+    public void setIdentityType(String IdentityType) {
+        this.IdentityType = IdentityType;
     }
 
     public DescribeUserRoleListRequest() {
@@ -213,6 +236,9 @@ public class DescribeUserRoleListRequest extends AbstractModel {
         if (source.IsOnlyBindAppUser != null) {
             this.IsOnlyBindAppUser = new Boolean(source.IsOnlyBindAppUser);
         }
+        if (source.IdentityType != null) {
+            this.IdentityType = new String(source.IdentityType);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DescribeUserRoleListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
 
     }
 }

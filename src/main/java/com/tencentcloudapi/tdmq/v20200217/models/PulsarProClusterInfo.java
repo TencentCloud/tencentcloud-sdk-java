@@ -89,7 +89,7 @@ public class PulsarProClusterInfo extends AbstractModel {
     private Boolean CanEditRoute;
 
     /**
-    * <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+    * <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingLabelVersion")
@@ -121,7 +121,7 @@ public class PulsarProClusterInfo extends AbstractModel {
     private Long DefaultPartitionNumber;
 
     /**
-    * <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+    * <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
     */
     @SerializedName("Tenant")
     @Expose
@@ -147,6 +147,13 @@ public class PulsarProClusterInfo extends AbstractModel {
     @SerializedName("EncryptionStatus")
     @Expose
     private Long EncryptionStatus;
+
+    /**
+    * <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+    */
+    @SerializedName("AutoExpansionEnabled")
+    @Expose
+    private Long AutoExpansionEnabled;
 
     /**
      * Get <p>集群Id。</p> 
@@ -301,9 +308,9 @@ public class PulsarProClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+     * Get <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingLabelVersion <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+     * @return BillingLabelVersion <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingLabelVersion() {
@@ -311,9 +318,9 @@ public class PulsarProClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+     * Set <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingLabelVersion <p>代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储</p>
+     * @param BillingLabelVersion <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingLabelVersion(String BillingLabelVersion) {
@@ -381,16 +388,16 @@ public class PulsarProClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p> 
-     * @return Tenant <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+     * Get <p>用户自定义的租户别名，如果没有，会复用集群 ID</p> 
+     * @return Tenant <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
      */
     public String getTenant() {
         return this.Tenant;
     }
 
     /**
-     * Set <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
-     * @param Tenant <p>用户自定义的租户别名，如果没有，会复用专业集群 ID</p>
+     * Set <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
+     * @param Tenant <p>用户自定义的租户别名，如果没有，会复用集群 ID</p>
      */
     public void setTenant(String Tenant) {
         this.Tenant = Tenant;
@@ -442,6 +449,22 @@ public class PulsarProClusterInfo extends AbstractModel {
      */
     public void setEncryptionStatus(Long EncryptionStatus) {
         this.EncryptionStatus = EncryptionStatus;
+    }
+
+    /**
+     * Get <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p> 
+     * @return AutoExpansionEnabled <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+     */
+    public Long getAutoExpansionEnabled() {
+        return this.AutoExpansionEnabled;
+    }
+
+    /**
+     * Set <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+     * @param AutoExpansionEnabled <p>是否开启磁盘自动扩容。枚举值：0-关闭，1-开启</p>
+     */
+    public void setAutoExpansionEnabled(Long AutoExpansionEnabled) {
+        this.AutoExpansionEnabled = AutoExpansionEnabled;
     }
 
     public PulsarProClusterInfo() {
@@ -506,6 +529,9 @@ public class PulsarProClusterInfo extends AbstractModel {
         if (source.EncryptionStatus != null) {
             this.EncryptionStatus = new Long(source.EncryptionStatus);
         }
+        if (source.AutoExpansionEnabled != null) {
+            this.AutoExpansionEnabled = new Long(source.AutoExpansionEnabled);
+        }
     }
 
 
@@ -530,6 +556,7 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
         this.setParamSimple(map, prefix + "ElasticTpsEnabled", this.ElasticTpsEnabled);
         this.setParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
+        this.setParamSimple(map, prefix + "AutoExpansionEnabled", this.AutoExpansionEnabled);
 
     }
 }

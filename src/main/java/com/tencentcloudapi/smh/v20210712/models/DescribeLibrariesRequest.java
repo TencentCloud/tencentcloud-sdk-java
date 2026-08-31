@@ -59,6 +59,13 @@ public class DescribeLibrariesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get 按照一个或者多个媒体库 ID 查询，每次请求的上限为 100 个。 
      * @return LibraryIds 按照一个或者多个媒体库 ID 查询，每次请求的上限为 100 个。
      */
@@ -138,6 +145,22 @@ public class DescribeLibrariesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get  
+     * @return TagFilters 
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set 
+     * @param TagFilters 
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeLibrariesRequest() {
     }
 
@@ -164,6 +187,12 @@ public class DescribeLibrariesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -176,6 +205,7 @@ public class DescribeLibrariesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

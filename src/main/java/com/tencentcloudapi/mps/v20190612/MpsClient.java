@@ -172,6 +172,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *调用该接口，用于创建Agent录制任务。
+     * @param req CreateAgentRecordTaskRequest
+     * @return CreateAgentRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAgentRecordTaskResponse CreateAgentRecordTask(CreateAgentRecordTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAgentRecordTask", CreateAgentRecordTaskResponse.class);
+    }
+
+    /**
      *Ai漫剧工作流，输入剧本，自动拆分分镜，生成Ai漫剧
      * @param req CreateAiDramaTaskRequest
      * @return CreateAiDramaTaskResponse
@@ -1070,6 +1081,17 @@ public class MpsClient extends AbstractClient{
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
+    }
+
+    /**
+     *调用该接口，用于查询Agent录制任务的进度以及获取生成结果。
+     * @param req DescribeAgentRecordTaskRequest
+     * @return DescribeAgentRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentRecordTaskResponse DescribeAgentRecordTask(DescribeAgentRecordTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentRecordTask", DescribeAgentRecordTaskResponse.class);
     }
 
     /**
@@ -2427,6 +2449,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询混元3D任务对应的结果
+     * @param req QueryHunyuan3DTaskRequest
+     * @return QueryHunyuan3DTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuan3DTaskResponse QueryHunyuan3DTask(QueryHunyuan3DTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuan3DTask", QueryHunyuan3DTaskResponse.class);
+    }
+
+    /**
      *剧集项目查询
      * @param req QueryProjectRequest
      * @return QueryProjectResponse
@@ -2512,6 +2545,17 @@ public class MpsClient extends AbstractClient{
     public StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(StopStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopStreamPackageLinearAssemblyChannel", StopStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *提交创建混元3D的任务
+     * @param req SubmitHunyuan3DTaskRequest
+     * @return SubmitHunyuan3DTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuan3DTaskResponse SubmitHunyuan3DTask(SubmitHunyuan3DTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuan3DTask", SubmitHunyuan3DTaskResponse.class);
     }
 
     /**

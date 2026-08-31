@@ -73,7 +73,7 @@ public class AigcImageTaskOutputFileInfo extends AbstractModel {
     private String FileId;
 
     /**
-    * <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
+    * <p>输出图片的元信息。</p>
     */
     @SerializedName("MetaData")
     @Expose
@@ -192,16 +192,16 @@ public class AigcImageTaskOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p> 
-     * @return MetaData <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * Get <p>输出图片的元信息。</p> 
+     * @return MetaData <p>输出图片的元信息。</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
-     * @param MetaData <p>输出图片的元信息。当 StorageMode 为 Permanent 时有效。</p>
+     * Set <p>输出图片的元信息。</p>
+     * @param MetaData <p>输出图片的元信息。</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

@@ -150,6 +150,48 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
     private String BiosUuid;
 
     /**
+    * <p>多网卡数据</p>
+    */
+    @SerializedName("NetworkCards")
+    @Expose
+    private DeviceNetworkCardBrief [] NetworkCards;
+
+    /**
+    * <p>多显卡数据</p>
+    */
+    @SerializedName("VideoCards")
+    @Expose
+    private DeviceVideoCardBrief [] VideoCards;
+
+    /**
+    * <p>主板型号</p>
+    */
+    @SerializedName("MainBoard")
+    @Expose
+    private String MainBoard;
+
+    /**
+    * <p>主板序列号</p>
+    */
+    @SerializedName("BaseBoardSn")
+    @Expose
+    private String BaseBoardSn;
+
+    /**
+    * <p>主板制造商</p>
+    */
+    @SerializedName("BaseBoardManufacturer")
+    @Expose
+    private String BaseBoardManufacturer;
+
+    /**
+    * <p>声卡</p>
+    */
+    @SerializedName("AudioCard")
+    @Expose
+    private String AudioCard;
+
+    /**
      * Get <p>设备ID</p> 
      * @return Id <p>设备ID</p>
      */
@@ -437,6 +479,102 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
         this.BiosUuid = BiosUuid;
     }
 
+    /**
+     * Get <p>多网卡数据</p> 
+     * @return NetworkCards <p>多网卡数据</p>
+     */
+    public DeviceNetworkCardBrief [] getNetworkCards() {
+        return this.NetworkCards;
+    }
+
+    /**
+     * Set <p>多网卡数据</p>
+     * @param NetworkCards <p>多网卡数据</p>
+     */
+    public void setNetworkCards(DeviceNetworkCardBrief [] NetworkCards) {
+        this.NetworkCards = NetworkCards;
+    }
+
+    /**
+     * Get <p>多显卡数据</p> 
+     * @return VideoCards <p>多显卡数据</p>
+     */
+    public DeviceVideoCardBrief [] getVideoCards() {
+        return this.VideoCards;
+    }
+
+    /**
+     * Set <p>多显卡数据</p>
+     * @param VideoCards <p>多显卡数据</p>
+     */
+    public void setVideoCards(DeviceVideoCardBrief [] VideoCards) {
+        this.VideoCards = VideoCards;
+    }
+
+    /**
+     * Get <p>主板型号</p> 
+     * @return MainBoard <p>主板型号</p>
+     */
+    public String getMainBoard() {
+        return this.MainBoard;
+    }
+
+    /**
+     * Set <p>主板型号</p>
+     * @param MainBoard <p>主板型号</p>
+     */
+    public void setMainBoard(String MainBoard) {
+        this.MainBoard = MainBoard;
+    }
+
+    /**
+     * Get <p>主板序列号</p> 
+     * @return BaseBoardSn <p>主板序列号</p>
+     */
+    public String getBaseBoardSn() {
+        return this.BaseBoardSn;
+    }
+
+    /**
+     * Set <p>主板序列号</p>
+     * @param BaseBoardSn <p>主板序列号</p>
+     */
+    public void setBaseBoardSn(String BaseBoardSn) {
+        this.BaseBoardSn = BaseBoardSn;
+    }
+
+    /**
+     * Get <p>主板制造商</p> 
+     * @return BaseBoardManufacturer <p>主板制造商</p>
+     */
+    public String getBaseBoardManufacturer() {
+        return this.BaseBoardManufacturer;
+    }
+
+    /**
+     * Set <p>主板制造商</p>
+     * @param BaseBoardManufacturer <p>主板制造商</p>
+     */
+    public void setBaseBoardManufacturer(String BaseBoardManufacturer) {
+        this.BaseBoardManufacturer = BaseBoardManufacturer;
+    }
+
+    /**
+     * Get <p>声卡</p> 
+     * @return AudioCard <p>声卡</p>
+     */
+    public String getAudioCard() {
+        return this.AudioCard;
+    }
+
+    /**
+     * Set <p>声卡</p>
+     * @param AudioCard <p>声卡</p>
+     */
+    public void setAudioCard(String AudioCard) {
+        this.AudioCard = AudioCard;
+    }
+
     public DescribeDeviceHardwareInfoItem() {
     }
 
@@ -499,6 +637,30 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
         if (source.BiosUuid != null) {
             this.BiosUuid = new String(source.BiosUuid);
         }
+        if (source.NetworkCards != null) {
+            this.NetworkCards = new DeviceNetworkCardBrief[source.NetworkCards.length];
+            for (int i = 0; i < source.NetworkCards.length; i++) {
+                this.NetworkCards[i] = new DeviceNetworkCardBrief(source.NetworkCards[i]);
+            }
+        }
+        if (source.VideoCards != null) {
+            this.VideoCards = new DeviceVideoCardBrief[source.VideoCards.length];
+            for (int i = 0; i < source.VideoCards.length; i++) {
+                this.VideoCards[i] = new DeviceVideoCardBrief(source.VideoCards[i]);
+            }
+        }
+        if (source.MainBoard != null) {
+            this.MainBoard = new String(source.MainBoard);
+        }
+        if (source.BaseBoardSn != null) {
+            this.BaseBoardSn = new String(source.BaseBoardSn);
+        }
+        if (source.BaseBoardManufacturer != null) {
+            this.BaseBoardManufacturer = new String(source.BaseBoardManufacturer);
+        }
+        if (source.AudioCard != null) {
+            this.AudioCard = new String(source.AudioCard);
+        }
     }
 
 
@@ -524,6 +686,12 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Monitor", this.Monitor);
         this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
         this.setParamSimple(map, prefix + "BiosUuid", this.BiosUuid);
+        this.setParamArrayObj(map, prefix + "NetworkCards.", this.NetworkCards);
+        this.setParamArrayObj(map, prefix + "VideoCards.", this.VideoCards);
+        this.setParamSimple(map, prefix + "MainBoard", this.MainBoard);
+        this.setParamSimple(map, prefix + "BaseBoardSn", this.BaseBoardSn);
+        this.setParamSimple(map, prefix + "BaseBoardManufacturer", this.BaseBoardManufacturer);
+        this.setParamSimple(map, prefix + "AudioCard", this.AudioCard);
 
     }
 }

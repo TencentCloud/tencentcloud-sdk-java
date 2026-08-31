@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiSampleTagOperation extends AbstractModel {
 
     /**
-    * 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+    * <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 标签，长度限制：128 个字符。
+    * <p>标签，长度限制：128 个字符。</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。 
-     * @return Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+     * Get <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p> 
+     * @return Type <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
-     * @param Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+     * Set <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
+     * @param Type <p>操作类型，可选值：add（添加）、delete（删除）、reset（重置）。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 标签，长度限制：128 个字符。 
-     * @return Tags 标签，长度限制：128 个字符。
+     * Get <p>标签，长度限制：128 个字符。</p> 
+     * @return Tags <p>标签，长度限制：128 个字符。</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签，长度限制：128 个字符。
-     * @param Tags 标签，长度限制：128 个字符。
+     * Set <p>标签，长度限制：128 个字符。</p>
+     * @param Tags <p>标签，长度限制：128 个字符。</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

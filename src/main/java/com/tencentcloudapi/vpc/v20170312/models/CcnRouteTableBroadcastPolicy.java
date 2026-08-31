@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
-    * 路由条件
+    * <p>路由条件</p>
     */
     @SerializedName("RouteConditions")
     @Expose
     private CcnRouteBroadcastPolicyRouteCondition [] RouteConditions;
 
     /**
-    * 传播条件
+    * <p>传播条件</p>
     */
     @SerializedName("BroadcastConditions")
     @Expose
     private CcnRouteBroadcastPolicyRouteCondition [] BroadcastConditions;
 
     /**
-    * 路由行为，`accept` 允许，`drop` 拒绝
+    * <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 策略描述
+    * <p>策略描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * as-path操作
+    * <p>as-path操作</p>
     */
     @SerializedName("OperateAsPath")
     @Expose
     private String OperateAsPath;
 
     /**
-    * as-path操作模式
+    * <p>as-path操作模式</p>
     */
     @SerializedName("AsPathOperateMode")
     @Expose
     private String AsPathOperateMode;
 
     /**
-    * community操作
+    * <p>community操作</p>
     */
     @SerializedName("OperateCommunitySet")
     @Expose
     private String [] OperateCommunitySet;
 
     /**
-    * community操作模式
+    * <p>community操作模式</p>
     */
     @SerializedName("CommunityOperateMode")
     @Expose
     private String CommunityOperateMode;
 
     /**
-     * Get 路由条件 
-     * @return RouteConditions 路由条件
+     * Get <p>路由条件</p> 
+     * @return RouteConditions <p>路由条件</p>
      */
     public CcnRouteBroadcastPolicyRouteCondition [] getRouteConditions() {
         return this.RouteConditions;
     }
 
     /**
-     * Set 路由条件
-     * @param RouteConditions 路由条件
+     * Set <p>路由条件</p>
+     * @param RouteConditions <p>路由条件</p>
      */
     public void setRouteConditions(CcnRouteBroadcastPolicyRouteCondition [] RouteConditions) {
         this.RouteConditions = RouteConditions;
     }
 
     /**
-     * Get 传播条件 
-     * @return BroadcastConditions 传播条件
+     * Get <p>传播条件</p> 
+     * @return BroadcastConditions <p>传播条件</p>
      */
     public CcnRouteBroadcastPolicyRouteCondition [] getBroadcastConditions() {
         return this.BroadcastConditions;
     }
 
     /**
-     * Set 传播条件
-     * @param BroadcastConditions 传播条件
+     * Set <p>传播条件</p>
+     * @param BroadcastConditions <p>传播条件</p>
      */
     public void setBroadcastConditions(CcnRouteBroadcastPolicyRouteCondition [] BroadcastConditions) {
         this.BroadcastConditions = BroadcastConditions;
     }
 
     /**
-     * Get 路由行为，`accept` 允许，`drop` 拒绝 
-     * @return Action 路由行为，`accept` 允许，`drop` 拒绝
+     * Get <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p> 
+     * @return Action <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 路由行为，`accept` 允许，`drop` 拒绝
-     * @param Action 路由行为，`accept` 允许，`drop` 拒绝
+     * Set <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
+     * @param Action <p>路由行为，<code>accept</code> 允许，<code>drop</code> 拒绝</p>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 策略描述 
-     * @return Description 策略描述
+     * Get <p>策略描述</p> 
+     * @return Description <p>策略描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 策略描述
-     * @param Description 策略描述
+     * Set <p>策略描述</p>
+     * @param Description <p>策略描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get as-path操作 
-     * @return OperateAsPath as-path操作
+     * Get <p>as-path操作</p> 
+     * @return OperateAsPath <p>as-path操作</p>
      */
     public String getOperateAsPath() {
         return this.OperateAsPath;
     }
 
     /**
-     * Set as-path操作
-     * @param OperateAsPath as-path操作
+     * Set <p>as-path操作</p>
+     * @param OperateAsPath <p>as-path操作</p>
      */
     public void setOperateAsPath(String OperateAsPath) {
         this.OperateAsPath = OperateAsPath;
     }
 
     /**
-     * Get as-path操作模式 
-     * @return AsPathOperateMode as-path操作模式
+     * Get <p>as-path操作模式</p> 
+     * @return AsPathOperateMode <p>as-path操作模式</p>
      */
     public String getAsPathOperateMode() {
         return this.AsPathOperateMode;
     }
 
     /**
-     * Set as-path操作模式
-     * @param AsPathOperateMode as-path操作模式
+     * Set <p>as-path操作模式</p>
+     * @param AsPathOperateMode <p>as-path操作模式</p>
      */
     public void setAsPathOperateMode(String AsPathOperateMode) {
         this.AsPathOperateMode = AsPathOperateMode;
     }
 
     /**
-     * Get community操作 
-     * @return OperateCommunitySet community操作
+     * Get <p>community操作</p> 
+     * @return OperateCommunitySet <p>community操作</p>
      */
     public String [] getOperateCommunitySet() {
         return this.OperateCommunitySet;
     }
 
     /**
-     * Set community操作
-     * @param OperateCommunitySet community操作
+     * Set <p>community操作</p>
+     * @param OperateCommunitySet <p>community操作</p>
      */
     public void setOperateCommunitySet(String [] OperateCommunitySet) {
         this.OperateCommunitySet = OperateCommunitySet;
     }
 
     /**
-     * Get community操作模式 
-     * @return CommunityOperateMode community操作模式
+     * Get <p>community操作模式</p> 
+     * @return CommunityOperateMode <p>community操作模式</p>
      */
     public String getCommunityOperateMode() {
         return this.CommunityOperateMode;
     }
 
     /**
-     * Set community操作模式
-     * @param CommunityOperateMode community操作模式
+     * Set <p>community操作模式</p>
+     * @param CommunityOperateMode <p>community操作模式</p>
      */
     public void setCommunityOperateMode(String CommunityOperateMode) {
         this.CommunityOperateMode = CommunityOperateMode;

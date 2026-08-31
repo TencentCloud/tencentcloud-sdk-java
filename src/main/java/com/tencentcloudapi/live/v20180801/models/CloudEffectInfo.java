@@ -24,247 +24,207 @@ import java.util.HashMap;
 public class CloudEffectInfo extends AbstractModel {
 
     /**
-    * 云端特效 ID。
+    * <p>云端特效 ID。</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 云端特效描述词。
+    * <p>云端特效描述词。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 云端特效标签。
+    * <p>云端特效标签。</p>
     */
     @SerializedName("Flag")
     @Expose
     private String Flag;
 
     /**
-    * 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
+    * <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 特效信息，生成失败时，此处返回失败原因。
+    * <p>特效信息，生成失败时，此处返回失败原因。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 云端特效预览图片。
+    * <p>云端特效预览图片。</p>
     */
     @SerializedName("PreviewImageUrl")
     @Expose
     private String PreviewImageUrl;
 
     /**
-    * 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
+    * <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 云端特效创建时间。
+    * <p>云端特效创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 云端特效更新时间。
+    * <p>云端特效更新时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 云端特效 ID。 
-     * @return Id 云端特效 ID。
+     * Get <p>云端特效 ID。</p> 
+     * @return Id <p>云端特效 ID。</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 云端特效 ID。
-     * @param Id 云端特效 ID。
+     * Set <p>云端特效 ID。</p>
+     * @param Id <p>云端特效 ID。</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 云端特效描述词。 
-     * @return Prompt 云端特效描述词。
+     * Get <p>云端特效描述词。</p> 
+     * @return Prompt <p>云端特效描述词。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 云端特效描述词。
-     * @param Prompt 云端特效描述词。
+     * Set <p>云端特效描述词。</p>
+     * @param Prompt <p>云端特效描述词。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 云端特效标签。 
-     * @return Flag 云端特效标签。
+     * Get <p>云端特效标签。</p> 
+     * @return Flag <p>云端特效标签。</p>
      */
     public String getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 云端特效标签。
-     * @param Flag 云端特效标签。
+     * Set <p>云端特效标签。</p>
+     * @param Flag <p>云端特效标签。</p>
      */
     public void setFlag(String Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
- 
-     * @return Status 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
+     * Get <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p> 
+     * @return Status <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
-     * @param Status 云端特效生成状态。
-生成中 - GENERATING。
-处理中 - PROCESSING。
-生成失败 - FAILED。
-已完成 - FINISH。
-
+     * Set <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
+     * @param Status <p>云端特效生成状态。<br>生成中 - GENERATING。<br>处理中 - PROCESSING。<br>生成失败 - FAILED。<br>已完成 - FINISH。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 特效信息，生成失败时，此处返回失败原因。 
-     * @return Message 特效信息，生成失败时，此处返回失败原因。
+     * Get <p>特效信息，生成失败时，此处返回失败原因。</p> 
+     * @return Message <p>特效信息，生成失败时，此处返回失败原因。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 特效信息，生成失败时，此处返回失败原因。
-     * @param Message 特效信息，生成失败时，此处返回失败原因。
+     * Set <p>特效信息，生成失败时，此处返回失败原因。</p>
+     * @param Message <p>特效信息，生成失败时，此处返回失败原因。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 云端特效预览图片。 
-     * @return PreviewImageUrl 云端特效预览图片。
+     * Get <p>云端特效预览图片。</p> 
+     * @return PreviewImageUrl <p>云端特效预览图片。</p>
      */
     public String getPreviewImageUrl() {
         return this.PreviewImageUrl;
     }
 
     /**
-     * Set 云端特效预览图片。
-     * @param PreviewImageUrl 云端特效预览图片。
+     * Set <p>云端特效预览图片。</p>
+     * @param PreviewImageUrl <p>云端特效预览图片。</p>
      */
     public void setPreviewImageUrl(String PreviewImageUrl) {
         this.PreviewImageUrl = PreviewImageUrl;
     }
 
     /**
-     * Get 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。 
-     * @return Type 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
+     * Get <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p> 
+     * @return Type <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
-     * @param Type 云端特效类型。
-PGC : 官方精品特效。
-AIGC : AI生成的特效。
-UGC : 用户上传特效。
+     * Set <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
+     * @param Type <p>云端特效类型。<br>PGC : 官方精品特效。<br>AIGC : AI生成的特效。<br>UGC : 用户上传特效。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 云端特效创建时间。 
-     * @return CreateTime 云端特效创建时间。
+     * Get <p>云端特效创建时间。</p> 
+     * @return CreateTime <p>云端特效创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 云端特效创建时间。
-     * @param CreateTime 云端特效创建时间。
+     * Set <p>云端特效创建时间。</p>
+     * @param CreateTime <p>云端特效创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 云端特效更新时间。 
-     * @return UpdateTime 云端特效更新时间。
+     * Get <p>云端特效更新时间。</p> 
+     * @return UpdateTime <p>云端特效更新时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 云端特效更新时间。
-     * @param UpdateTime 云端特效更新时间。
+     * Set <p>云端特效更新时间。</p>
+     * @param UpdateTime <p>云端特效更新时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

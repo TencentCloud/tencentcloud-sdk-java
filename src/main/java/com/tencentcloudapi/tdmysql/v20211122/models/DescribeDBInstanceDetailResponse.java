@@ -456,6 +456,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private String EncryptionKmsRegion;
 
     /**
+    * <p>serverless自动变配配置</p>
+    */
+    @SerializedName("AutoScaleConfigs")
+    @Expose
+    private AutoScalingConfig [] AutoScaleConfigs;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1459,6 +1466,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>serverless自动变配配置</p> 
+     * @return AutoScaleConfigs <p>serverless自动变配配置</p>
+     */
+    public AutoScalingConfig [] getAutoScaleConfigs() {
+        return this.AutoScaleConfigs;
+    }
+
+    /**
+     * Set <p>serverless自动变配配置</p>
+     * @param AutoScaleConfigs <p>serverless自动变配配置</p>
+     */
+    public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
+        this.AutoScaleConfigs = AutoScaleConfigs;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1680,6 +1703,12 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.EncryptionKmsRegion != null) {
             this.EncryptionKmsRegion = new String(source.EncryptionKmsRegion);
         }
+        if (source.AutoScaleConfigs != null) {
+            this.AutoScaleConfigs = new AutoScalingConfig[source.AutoScaleConfigs.length];
+            for (int i = 0; i < source.AutoScaleConfigs.length; i++) {
+                this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1751,6 +1780,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "MaintenanceWindow.", this.MaintenanceWindow);
         this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
         this.setParamSimple(map, prefix + "EncryptionKmsRegion", this.EncryptionKmsRegion);
+        this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

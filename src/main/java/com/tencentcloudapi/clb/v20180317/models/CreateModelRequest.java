@@ -80,6 +80,13 @@ public class CreateModelRequest extends AbstractModel {
     private String ApiBase;
 
     /**
+    * <p>多协议 Api Base URL</p>
+    */
+    @SerializedName("ApiBases")
+    @Expose
+    private ApiBaseItem [] ApiBases;
+
+    /**
     * <p>VPC ID</p>
     */
     @SerializedName("VpcId")
@@ -120,6 +127,20 @@ public class CreateModelRequest extends AbstractModel {
     @SerializedName("HealthCheckConfig")
     @Expose
     private ServiceProviderHealthCheckConfigInput HealthCheckConfig;
+
+    /**
+    * <p>私网管道 ID</p>
+    */
+    @SerializedName("CMRPrivateNetworkTunnelId")
+    @Expose
+    private String CMRPrivateNetworkTunnelId;
+
+    /**
+    * <p>健康检查配置</p>
+    */
+    @SerializedName("HealthCheckConfigs")
+    @Expose
+    private ServiceProviderHealthCheckConfigItemInput [] HealthCheckConfigs;
 
     /**
      * Get <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p> 
@@ -250,6 +271,22 @@ public class CreateModelRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>多协议 Api Base URL</p> 
+     * @return ApiBases <p>多协议 Api Base URL</p>
+     */
+    public ApiBaseItem [] getApiBases() {
+        return this.ApiBases;
+    }
+
+    /**
+     * Set <p>多协议 Api Base URL</p>
+     * @param ApiBases <p>多协议 Api Base URL</p>
+     */
+    public void setApiBases(ApiBaseItem [] ApiBases) {
+        this.ApiBases = ApiBases;
+    }
+
+    /**
      * Get <p>VPC ID</p> 
      * @return VpcId <p>VPC ID</p>
      */
@@ -345,6 +382,38 @@ public class CreateModelRequest extends AbstractModel {
         this.HealthCheckConfig = HealthCheckConfig;
     }
 
+    /**
+     * Get <p>私网管道 ID</p> 
+     * @return CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
+     */
+    public String getCMRPrivateNetworkTunnelId() {
+        return this.CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Set <p>私网管道 ID</p>
+     * @param CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
+     */
+    public void setCMRPrivateNetworkTunnelId(String CMRPrivateNetworkTunnelId) {
+        this.CMRPrivateNetworkTunnelId = CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Get <p>健康检查配置</p> 
+     * @return HealthCheckConfigs <p>健康检查配置</p>
+     */
+    public ServiceProviderHealthCheckConfigItemInput [] getHealthCheckConfigs() {
+        return this.HealthCheckConfigs;
+    }
+
+    /**
+     * Set <p>健康检查配置</p>
+     * @param HealthCheckConfigs <p>健康检查配置</p>
+     */
+    public void setHealthCheckConfigs(ServiceProviderHealthCheckConfigItemInput [] HealthCheckConfigs) {
+        this.HealthCheckConfigs = HealthCheckConfigs;
+    }
+
     public CreateModelRequest() {
     }
 
@@ -383,6 +452,12 @@ public class CreateModelRequest extends AbstractModel {
         if (source.ApiBase != null) {
             this.ApiBase = new String(source.ApiBase);
         }
+        if (source.ApiBases != null) {
+            this.ApiBases = new ApiBaseItem[source.ApiBases.length];
+            for (int i = 0; i < source.ApiBases.length; i++) {
+                this.ApiBases[i] = new ApiBaseItem(source.ApiBases[i]);
+            }
+        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
@@ -404,6 +479,15 @@ public class CreateModelRequest extends AbstractModel {
         if (source.HealthCheckConfig != null) {
             this.HealthCheckConfig = new ServiceProviderHealthCheckConfigInput(source.HealthCheckConfig);
         }
+        if (source.CMRPrivateNetworkTunnelId != null) {
+            this.CMRPrivateNetworkTunnelId = new String(source.CMRPrivateNetworkTunnelId);
+        }
+        if (source.HealthCheckConfigs != null) {
+            this.HealthCheckConfigs = new ServiceProviderHealthCheckConfigItemInput[source.HealthCheckConfigs.length];
+            for (int i = 0; i < source.HealthCheckConfigs.length; i++) {
+                this.HealthCheckConfigs[i] = new ServiceProviderHealthCheckConfigItemInput(source.HealthCheckConfigs[i]);
+            }
+        }
     }
 
 
@@ -419,12 +503,15 @@ public class CreateModelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "ApiBase", this.ApiBase);
+        this.setParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
         this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
+        this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+        this.setParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
 
     }
 }

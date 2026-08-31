@@ -63,6 +63,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+     * @param req CloneVoiceAsyncRequest
+     * @return CloneVoiceAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneVoiceAsyncResponse CloneVoiceAsync(CloneVoiceAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneVoiceAsync", CloneVoiceAsyncResponse.class);
+    }
+
+    /**
      *该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
      * @param req CommitUploadRequest
      * @return CommitUploadResponse
@@ -1045,6 +1056,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+     * @param req DeleteVoiceRequest
+     * @return DeleteVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoiceResponse DeleteVoice(DeleteVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoice", DeleteVoiceResponse.class);
+    }
+
+    /**
      *删除用户自定义水印模板。
      * @param req DeleteWatermarkTemplateRequest
      * @return DeleteWatermarkTemplateResponse
@@ -1850,6 +1872,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+     * @param req DescribeVoicesRequest
+     * @return DescribeVoicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoicesResponse DescribeVoices(DescribeVoicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoices", DescribeVoicesResponse.class);
+    }
+
+    /**
      *查询用户自定义水印模板，支持根据条件，分页查询。
      * @param req DescribeWatermarkTemplatesRequest
      * @return DescribeWatermarkTemplatesResponse
@@ -1869,6 +1902,17 @@ public class VodClient extends AbstractClient{
     public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
+    }
+
+    /**
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+     * @param req DesignVoiceAsyncRequest
+     * @return DesignVoiceAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DesignVoiceAsyncResponse DesignVoiceAsync(DesignVoiceAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DesignVoiceAsync", DesignVoiceAsyncResponse.class);
     }
 
     /**
@@ -2907,6 +2951,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+     * @param req TextToSpeechAsyncRequest
+     * @return TextToSpeechAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechAsyncResponse TextToSpeechAsync(TextToSpeechAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechAsync", TextToSpeechAsyncResponse.class);
+    }
+
+    /**
      *创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
      * @param req UpdateAigcApiTokenRequest
      * @return UpdateAigcApiTokenResponse
@@ -2915,6 +2970,17 @@ public class VodClient extends AbstractClient{
     public UpdateAigcApiTokenResponse UpdateAigcApiToken(UpdateAigcApiTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAigcApiToken", UpdateAigcApiTokenResponse.class);
+    }
+
+    /**
+     *音色设计，根据prompt生成音色ID。克隆/设计音色数量上限默认100
+     * @param req UpdateVoiceRequest
+     * @return UpdateVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVoiceResponse UpdateVoice(UpdateVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVoice", UpdateVoiceResponse.class);
     }
 
     /**

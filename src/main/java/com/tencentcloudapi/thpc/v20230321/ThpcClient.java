@@ -98,6 +98,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *为指定集群队列创建定时伸缩任务，按计划时间自动调整队列的节点数量。
+     * @param req CreateScheduledActionRequest
+     * @return CreateScheduledActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScheduledActionResponse CreateScheduledAction(CreateScheduledActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateScheduledAction", CreateScheduledActionResponse.class);
+    }
+
+    /**
      *本接口 (CreateWorkspaces) 用于创建工作空间。
      * @param req CreateWorkspacesRequest
      * @return CreateWorkspacesResponse
@@ -167,6 +178,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *删除指定的定时伸缩任务。
+     * @param req DeleteScheduledActionRequest
+     * @return DeleteScheduledActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScheduledActionResponse DeleteScheduledAction(DeleteScheduledActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteScheduledAction", DeleteScheduledActionResponse.class);
+    }
+
+    /**
      *本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
      * @param req DescribeAutoScalingConfigurationRequest
      * @return DescribeAutoScalingConfigurationResponse
@@ -222,6 +244,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *查询指定集群可用的机型族列表，用于弹性伸缩配置时选择机型族。
+     * @param req DescribeInstanceFamiliesRequest
+     * @return DescribeInstanceFamiliesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceFamiliesResponse DescribeInstanceFamilies(DescribeInstanceFamiliesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceFamilies", DescribeInstanceFamiliesResponse.class);
+    }
+
+    /**
      *本接口用于查询作业的提交信息。
      * @param req DescribeJobSubmitInfoRequest
      * @return DescribeJobSubmitInfoResponse
@@ -266,6 +299,28 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *查询指定集群的队列弹性伸缩配置信息。
+     * @param req DescribeQueueAutoScalingRequest
+     * @return DescribeQueueAutoScalingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQueueAutoScalingResponse DescribeQueueAutoScaling(DescribeQueueAutoScalingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQueueAutoScaling", DescribeQueueAutoScalingResponse.class);
+    }
+
+    /**
+     *查询指定集群的队列弹性伸缩概览信息，包括期望容量、当前容量、当前动态节点数、有效定时任务数等。
+     * @param req DescribeQueueAutoScalingOverviewRequest
+     * @return DescribeQueueAutoScalingOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQueueAutoScalingOverviewResponse DescribeQueueAutoScalingOverview(DescribeQueueAutoScalingOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQueueAutoScalingOverview", DescribeQueueAutoScalingOverviewResponse.class);
+    }
+
+    /**
      *本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
      * @param req DescribeQueuesRequest
      * @return DescribeQueuesResponse
@@ -274,6 +329,17 @@ public class ThpcClient extends AbstractClient{
     public DescribeQueuesResponse DescribeQueues(DescribeQueuesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeQueues", DescribeQueuesResponse.class);
+    }
+
+    /**
+     *查询指定集群队列的定时伸缩任务列表。
+     * @param req DescribeScheduledActionsRequest
+     * @return DescribeScheduledActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledActionsResponse DescribeScheduledActions(DescribeScheduledActionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScheduledActions", DescribeScheduledActionsResponse.class);
     }
 
     /**
@@ -296,6 +362,17 @@ public class ThpcClient extends AbstractClient{
     public DetachNodesResponse DetachNodes(DetachNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DetachNodes", DetachNodesResponse.class);
+    }
+
+    /**
+     *本接口(InquirePriceCreateWorkspaces)用于创建实例询价。
+     * @param req InquirePriceCreateWorkspacesRequest
+     * @return InquirePriceCreateWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateWorkspacesResponse InquirePriceCreateWorkspaces(InquirePriceCreateWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceCreateWorkspaces", InquirePriceCreateWorkspacesResponse.class);
     }
 
     /**
@@ -343,6 +420,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *修改指定的定时伸缩任务配置。
+     * @param req ModifyScheduledActionRequest
+     * @return ModifyScheduledActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScheduledActionResponse ModifyScheduledAction(ModifyScheduledActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyScheduledAction", ModifyScheduledActionResponse.class);
+    }
+
+    /**
      *本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
      * @param req ModifyWorkspacesAttributeRequest
      * @return ModifyWorkspacesAttributeResponse
@@ -384,6 +472,17 @@ public class ThpcClient extends AbstractClient{
     public SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(SetAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetAutoScalingConfiguration", SetAutoScalingConfigurationResponse.class);
+    }
+
+    /**
+     *为指定集群的队列配置弹性伸缩策略，包括伸缩容量、扩容方式等。
+     * @param req SetQueueAutoScalingRequest
+     * @return SetQueueAutoScalingResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetQueueAutoScalingResponse SetQueueAutoScaling(SetQueueAutoScalingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetQueueAutoScaling", SetQueueAutoScalingResponse.class);
     }
 
     /**

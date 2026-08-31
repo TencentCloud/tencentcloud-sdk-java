@@ -59,6 +59,13 @@ public class DescribeCkSqlApisRequest extends AbstractModel {
     private String UserType;
 
     /**
+    * <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get <p>实例id</p> 
      * @return InstanceId <p>实例id</p>
      */
@@ -138,6 +145,22 @@ public class DescribeCkSqlApisRequest extends AbstractModel {
         this.UserType = UserType;
     }
 
+    /**
+     * Get <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul> 
+     * @return InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     * @param InstanceType <p>实例类型</p><p>枚举值：</p><ul><li>SSC： 弹性版实例</li><li>Standard： 标准版实例</li></ul>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DescribeCkSqlApisRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeCkSqlApisRequest extends AbstractModel {
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeCkSqlApisRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

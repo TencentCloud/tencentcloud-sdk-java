@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeInputRTPSettings extends AbstractModel {
 
     /**
-    * 是否FEC。
+    * <p>是否FEC。</p>
     */
     @SerializedName("FEC")
     @Expose
     private String FEC;
 
     /**
-    * 空闲超时时间。
+    * <p>空闲超时时间。</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-     * Get 是否FEC。 
-     * @return FEC 是否FEC。
+     * Get <p>是否FEC。</p> 
+     * @return FEC <p>是否FEC。</p>
      */
     public String getFEC() {
         return this.FEC;
     }
 
     /**
-     * Set 是否FEC。
-     * @param FEC 是否FEC。
+     * Set <p>是否FEC。</p>
+     * @param FEC <p>是否FEC。</p>
      */
     public void setFEC(String FEC) {
         this.FEC = FEC;
     }
 
     /**
-     * Get 空闲超时时间。 
-     * @return IdleTimeout 空闲超时时间。
+     * Get <p>空闲超时时间。</p> 
+     * @return IdleTimeout <p>空闲超时时间。</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set 空闲超时时间。
-     * @param IdleTimeout 空闲超时时间。
+     * Set <p>空闲超时时间。</p>
+     * @param IdleTimeout <p>空闲超时时间。</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;

@@ -24,36 +24,36 @@ import java.util.HashMap;
 public class Agent extends AbstractModel {
 
     /**
-    * 代理机构的应用编号,32位字符串，一般不用传
+    * <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 被代理机构的应用号，一般不用传
+    * <p>被代理机构的应用号，一般不用传</p>
     */
     @SerializedName("ProxyAppId")
     @Expose
     private String ProxyAppId;
 
     /**
-    * 被代理机构在电子签平台的机构编号，集团代理下场景必传
+    * <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
     */
     @SerializedName("ProxyOrganizationId")
     @Expose
     private String ProxyOrganizationId;
 
     /**
-    * 被代理机构的经办人，一般不用传
+    * <p>被代理机构的经办人，一般不用传</p>
     */
     @SerializedName("ProxyOperator")
     @Expose
     private String ProxyOperator;
 
     /**
-     * Get 代理机构的应用编号,32位字符串，一般不用传 
-     * @return AppId 代理机构的应用编号,32位字符串，一般不用传
+     * Get <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p> 
+     * @return AppId <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class Agent extends AbstractModel {
     }
 
     /**
-     * Set 代理机构的应用编号,32位字符串，一般不用传
-     * @param AppId 代理机构的应用编号,32位字符串，一般不用传
+     * Set <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
+     * @param AppId <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
      * @deprecated
      */
     @Deprecated
@@ -72,8 +72,8 @@ public class Agent extends AbstractModel {
     }
 
     /**
-     * Get 被代理机构的应用号，一般不用传 
-     * @return ProxyAppId 被代理机构的应用号，一般不用传
+     * Get <p>被代理机构的应用号，一般不用传</p> 
+     * @return ProxyAppId <p>被代理机构的应用号，一般不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -82,8 +82,8 @@ public class Agent extends AbstractModel {
     }
 
     /**
-     * Set 被代理机构的应用号，一般不用传
-     * @param ProxyAppId 被代理机构的应用号，一般不用传
+     * Set <p>被代理机构的应用号，一般不用传</p>
+     * @param ProxyAppId <p>被代理机构的应用号，一般不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -92,24 +92,24 @@ public class Agent extends AbstractModel {
     }
 
     /**
-     * Get 被代理机构在电子签平台的机构编号，集团代理下场景必传 
-     * @return ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
+     * Get <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p> 
+     * @return ProxyOrganizationId <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
      */
     public String getProxyOrganizationId() {
         return this.ProxyOrganizationId;
     }
 
     /**
-     * Set 被代理机构在电子签平台的机构编号，集团代理下场景必传
-     * @param ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
+     * Set <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
+     * @param ProxyOrganizationId <p>被代理机构在电子签平台的机构编号，集团代理下场景必传</p>
      */
     public void setProxyOrganizationId(String ProxyOrganizationId) {
         this.ProxyOrganizationId = ProxyOrganizationId;
     }
 
     /**
-     * Get 被代理机构的经办人，一般不用传 
-     * @return ProxyOperator 被代理机构的经办人，一般不用传
+     * Get <p>被代理机构的经办人，一般不用传</p> 
+     * @return ProxyOperator <p>被代理机构的经办人，一般不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -118,8 +118,8 @@ public class Agent extends AbstractModel {
     }
 
     /**
-     * Set 被代理机构的经办人，一般不用传
-     * @param ProxyOperator 被代理机构的经办人，一般不用传
+     * Set <p>被代理机构的经办人，一般不用传</p>
+     * @param ProxyOperator <p>被代理机构的经办人，一般不用传</p>
      * @deprecated
      */
     @Deprecated

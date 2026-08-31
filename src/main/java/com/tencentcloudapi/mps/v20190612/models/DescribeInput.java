@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeInput extends AbstractModel {
 
     /**
-    * 输入Id。
+    * <p>输入Id。</p>
     */
     @SerializedName("InputId")
     @Expose
     private String InputId;
 
     /**
-    * 输入名称。
+    * <p>输入名称。</p>
     */
     @SerializedName("InputName")
     @Expose
     private String InputName;
 
     /**
-    * 输入描述。
+    * <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -46,28 +46,28 @@ public class DescribeInput extends AbstractModel {
     private String Description;
 
     /**
-    * 输入协议。
+    * <p>输入协议。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 输入地址列表。
+    * <p>输入地址列表。</p>
     */
     @SerializedName("InputAddressList")
     @Expose
     private InputAddress [] InputAddressList;
 
     /**
-    * 输入IP白名单列表。
+    * <p>输入IP白名单列表。</p>
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * 输入的SRT配置信息。
+    * <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SRTSettings")
@@ -75,7 +75,7 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputSRTSettings SRTSettings;
 
     /**
-    * 输入的RTP配置信息。
+    * <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTPSettings")
@@ -83,21 +83,21 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputRTPSettings RTPSettings;
 
     /**
-    * 输入的地区。
+    * <p>输入的地区。</p>
     */
     @SerializedName("InputRegion")
     @Expose
     private String InputRegion;
 
     /**
-    * 输入的RTMP配置信息。
+    * <p>输入的RTMP配置信息。</p>
     */
     @SerializedName("RTMPSettings")
     @Expose
     private DescribeInputRTMPSettings RTMPSettings;
 
     /**
-    * 输入的主备开关。
+    * <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailOver")
@@ -105,7 +105,7 @@ public class DescribeInput extends AbstractModel {
     private String FailOver;
 
     /**
-    * 输入的RTMP_PULL配置信息。
+    * <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTMPPullSettings")
@@ -113,7 +113,7 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * 输入的RTSP_PULL配置信息。
+    * <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTSPPullSettings")
@@ -121,7 +121,7 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 输入的HLS_PULL配置信息。
+    * <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HLSPullSettings")
@@ -129,7 +129,7 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputHLSPullSettings HLSPullSettings;
 
     /**
-    * 延播平滑吐流配置信息。
+    * <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResilientStream")
@@ -137,7 +137,7 @@ public class DescribeInput extends AbstractModel {
     private ResilientStreamConf ResilientStream;
 
     /**
-    * 绑定的输入安全组 ID。	
+    * <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
@@ -145,14 +145,14 @@ public class DescribeInput extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+    * <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * 输入的RIST配置信息。
+    * <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RISTSettings")
@@ -160,48 +160,48 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputRISTSettings RISTSettings;
 
     /**
-    * 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+    * <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
     */
     @SerializedName("StreamUrls")
     @Expose
     private StreamUrlDetail [] StreamUrls;
 
     /**
-     * Get 输入Id。 
-     * @return InputId 输入Id。
+     * Get <p>输入Id。</p> 
+     * @return InputId <p>输入Id。</p>
      */
     public String getInputId() {
         return this.InputId;
     }
 
     /**
-     * Set 输入Id。
-     * @param InputId 输入Id。
+     * Set <p>输入Id。</p>
+     * @param InputId <p>输入Id。</p>
      */
     public void setInputId(String InputId) {
         this.InputId = InputId;
     }
 
     /**
-     * Get 输入名称。 
-     * @return InputName 输入名称。
+     * Get <p>输入名称。</p> 
+     * @return InputName <p>输入名称。</p>
      */
     public String getInputName() {
         return this.InputName;
     }
 
     /**
-     * Set 输入名称。
-     * @param InputName 输入名称。
+     * Set <p>输入名称。</p>
+     * @param InputName <p>输入名称。</p>
      */
     public void setInputName(String InputName) {
         this.InputName = InputName;
     }
 
     /**
-     * Get 输入描述。
+     * Get <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 输入描述。
+     * @return Description <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -209,9 +209,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入描述。
+     * Set <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 输入描述。
+     * @param Description <p>输入描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -219,57 +219,57 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入协议。 
-     * @return Protocol 输入协议。
+     * Get <p>输入协议。</p> 
+     * @return Protocol <p>输入协议。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 输入协议。
-     * @param Protocol 输入协议。
+     * Set <p>输入协议。</p>
+     * @param Protocol <p>输入协议。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 输入地址列表。 
-     * @return InputAddressList 输入地址列表。
+     * Get <p>输入地址列表。</p> 
+     * @return InputAddressList <p>输入地址列表。</p>
      */
     public InputAddress [] getInputAddressList() {
         return this.InputAddressList;
     }
 
     /**
-     * Set 输入地址列表。
-     * @param InputAddressList 输入地址列表。
+     * Set <p>输入地址列表。</p>
+     * @param InputAddressList <p>输入地址列表。</p>
      */
     public void setInputAddressList(InputAddress [] InputAddressList) {
         this.InputAddressList = InputAddressList;
     }
 
     /**
-     * Get 输入IP白名单列表。 
-     * @return AllowIpList 输入IP白名单列表。
+     * Get <p>输入IP白名单列表。</p> 
+     * @return AllowIpList <p>输入IP白名单列表。</p>
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set 输入IP白名单列表。
-     * @param AllowIpList 输入IP白名单列表。
+     * Set <p>输入IP白名单列表。</p>
+     * @param AllowIpList <p>输入IP白名单列表。</p>
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get 输入的SRT配置信息。
+     * Get <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SRTSettings 输入的SRT配置信息。
+     * @return SRTSettings <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInputSRTSettings getSRTSettings() {
@@ -277,9 +277,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的SRT配置信息。
+     * Set <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SRTSettings 输入的SRT配置信息。
+     * @param SRTSettings <p>输入的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSRTSettings(DescribeInputSRTSettings SRTSettings) {
@@ -287,9 +287,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的RTP配置信息。
+     * Get <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTPSettings 输入的RTP配置信息。
+     * @return RTPSettings <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInputRTPSettings getRTPSettings() {
@@ -297,9 +297,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的RTP配置信息。
+     * Set <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTPSettings 输入的RTP配置信息。
+     * @param RTPSettings <p>输入的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTPSettings(DescribeInputRTPSettings RTPSettings) {
@@ -307,41 +307,41 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的地区。 
-     * @return InputRegion 输入的地区。
+     * Get <p>输入的地区。</p> 
+     * @return InputRegion <p>输入的地区。</p>
      */
     public String getInputRegion() {
         return this.InputRegion;
     }
 
     /**
-     * Set 输入的地区。
-     * @param InputRegion 输入的地区。
+     * Set <p>输入的地区。</p>
+     * @param InputRegion <p>输入的地区。</p>
      */
     public void setInputRegion(String InputRegion) {
         this.InputRegion = InputRegion;
     }
 
     /**
-     * Get 输入的RTMP配置信息。 
-     * @return RTMPSettings 输入的RTMP配置信息。
+     * Get <p>输入的RTMP配置信息。</p> 
+     * @return RTMPSettings <p>输入的RTMP配置信息。</p>
      */
     public DescribeInputRTMPSettings getRTMPSettings() {
         return this.RTMPSettings;
     }
 
     /**
-     * Set 输入的RTMP配置信息。
-     * @param RTMPSettings 输入的RTMP配置信息。
+     * Set <p>输入的RTMP配置信息。</p>
+     * @param RTMPSettings <p>输入的RTMP配置信息。</p>
      */
     public void setRTMPSettings(DescribeInputRTMPSettings RTMPSettings) {
         this.RTMPSettings = RTMPSettings;
     }
 
     /**
-     * Get 输入的主备开关。
+     * Get <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailOver 输入的主备开关。
+     * @return FailOver <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailOver() {
@@ -349,9 +349,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的主备开关。
+     * Set <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailOver 输入的主备开关。
+     * @param FailOver <p>输入的主备开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailOver(String FailOver) {
@@ -359,9 +359,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的RTMP_PULL配置信息。
+     * Get <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTMPPullSettings 输入的RTMP_PULL配置信息。
+     * @return RTMPPullSettings <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInputRTMPPullSettings getRTMPPullSettings() {
@@ -369,9 +369,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的RTMP_PULL配置信息。
+     * Set <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTMPPullSettings 输入的RTMP_PULL配置信息。
+     * @param RTMPPullSettings <p>输入的RTMP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTMPPullSettings(DescribeInputRTMPPullSettings RTMPPullSettings) {
@@ -379,9 +379,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的RTSP_PULL配置信息。
+     * Get <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTSPPullSettings 输入的RTSP_PULL配置信息。
+     * @return RTSPPullSettings <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInputRTSPPullSettings getRTSPPullSettings() {
@@ -389,9 +389,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的RTSP_PULL配置信息。
+     * Set <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTSPPullSettings 输入的RTSP_PULL配置信息。
+     * @param RTSPPullSettings <p>输入的RTSP_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTSPPullSettings(DescribeInputRTSPPullSettings RTSPPullSettings) {
@@ -399,9 +399,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的HLS_PULL配置信息。
+     * Get <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HLSPullSettings 输入的HLS_PULL配置信息。
+     * @return HLSPullSettings <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInputHLSPullSettings getHLSPullSettings() {
@@ -409,9 +409,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的HLS_PULL配置信息。
+     * Set <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HLSPullSettings 输入的HLS_PULL配置信息。
+     * @param HLSPullSettings <p>输入的HLS_PULL配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHLSPullSettings(DescribeInputHLSPullSettings HLSPullSettings) {
@@ -419,9 +419,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 延播平滑吐流配置信息。
+     * Get <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResilientStream 延播平滑吐流配置信息。
+     * @return ResilientStream <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResilientStreamConf getResilientStream() {
@@ -429,9 +429,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 延播平滑吐流配置信息。
+     * Set <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResilientStream 延播平滑吐流配置信息。
+     * @param ResilientStream <p>延播平滑吐流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
@@ -439,9 +439,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 绑定的输入安全组 ID。	
+     * Get <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroupIds 绑定的输入安全组 ID。	
+     * @return SecurityGroupIds <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
@@ -449,9 +449,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 绑定的输入安全组 ID。	
+     * Set <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroupIds 绑定的输入安全组 ID。	
+     * @param SecurityGroupIds <p>绑定的输入安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -459,25 +459,25 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	 
-     * @return Zones 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+     * Get <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p> 
+     * @return Zones <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
-     * @param Zones 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+     * Set <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
+     * @param Zones <p>可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。</p>
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get 输入的RIST配置信息。
+     * Get <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RISTSettings 输入的RIST配置信息。
+     * @return RISTSettings <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeInputRISTSettings getRISTSettings() {
@@ -485,9 +485,9 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的RIST配置信息。
+     * Set <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RISTSettings 输入的RIST配置信息。
+     * @param RISTSettings <p>输入的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRISTSettings(DescribeInputRISTSettings RISTSettings) {
@@ -495,16 +495,16 @@ public class DescribeInput extends AbstractModel {
     }
 
     /**
-     * Get 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址 
-     * @return StreamUrls 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     * Get <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p> 
+     * @return StreamUrls <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
      */
     public StreamUrlDetail [] getStreamUrls() {
         return this.StreamUrls;
     }
 
     /**
-     * Set 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
-     * @param StreamUrls 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     * Set <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
+     * @param StreamUrls <p>输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址</p>
      */
     public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
         this.StreamUrls = StreamUrls;

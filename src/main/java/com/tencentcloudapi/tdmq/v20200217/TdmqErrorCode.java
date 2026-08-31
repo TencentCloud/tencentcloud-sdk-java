@@ -216,6 +216,9 @@ public enum TdmqErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* InvalidParameter.ClusterSpec */
+     INVALIDPARAMETER_CLUSTERSPEC("InvalidParameter.ClusterSpec"),
+     
      /* 集群版本信息不对 */
      INVALIDPARAMETER_INSTANCEVERSION("InvalidParameter.InstanceVersion"),
      
@@ -224,6 +227,9 @@ public enum TdmqErrorCode {
      
      /* 错误的分区数。 */
      INVALIDPARAMETER_PARTITION("InvalidParameter.Partition"),
+     
+     /* InvalidParameter.StorageSize */
+     INVALIDPARAMETER_STORAGESIZE("InvalidParameter.StorageSize"),
      
      /* 上传的 tenant name 错误。 */
      INVALIDPARAMETER_TENANTNOTFOUND("InvalidParameter.TenantNotFound"),
@@ -399,8 +405,14 @@ public enum TdmqErrorCode {
      /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
+     /* UnsupportedOperation.ElasticTps */
+     UNSUPPORTEDOPERATION_ELASTICTPS("UnsupportedOperation.ElasticTps"),
+     
      /* 该实例不支持降配操作。 */
      UNSUPPORTEDOPERATION_INSTANCEDOWNGRADE("UnsupportedOperation.InstanceDowngrade"),
+     
+     /* UnsupportedOperation.StandardTierSpecTypeChange */
+     UNSUPPORTEDOPERATION_STANDARDTIERSPECTYPECHANGE("UnsupportedOperation.StandardTierSpecTypeChange"),
      
      /* 不支持设置主题延迟消息策略操作 */
      UNSUPPORTEDOPERATION_TOPICDELAYMESSAGE("UnsupportedOperation.TopicDelayMessage"),

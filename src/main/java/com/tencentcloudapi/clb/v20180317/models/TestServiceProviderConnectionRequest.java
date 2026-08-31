@@ -94,6 +94,20 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
     private Boolean VerifySSL;
 
     /**
+    * <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+    */
+    @SerializedName("HealthCheckProtocol")
+    @Expose
+    private String HealthCheckProtocol;
+
+    /**
+    * <p>    CMR 私网管道ID </p>
+    */
+    @SerializedName("CMRPrivateNetworkTunnelId")
+    @Expose
+    private String CMRPrivateNetworkTunnelId;
+
+    /**
      * Get <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p> 
      * @return Models <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p>
      */
@@ -253,6 +267,38 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.VerifySSL = VerifySSL;
     }
 
+    /**
+     * Get <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul> 
+     * @return HealthCheckProtocol <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+     */
+    public String getHealthCheckProtocol() {
+        return this.HealthCheckProtocol;
+    }
+
+    /**
+     * Set <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+     * @param HealthCheckProtocol <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
+     */
+    public void setHealthCheckProtocol(String HealthCheckProtocol) {
+        this.HealthCheckProtocol = HealthCheckProtocol;
+    }
+
+    /**
+     * Get <p>    CMR 私网管道ID </p> 
+     * @return CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
+     */
+    public String getCMRPrivateNetworkTunnelId() {
+        return this.CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Set <p>    CMR 私网管道ID </p>
+     * @param CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
+     */
+    public void setCMRPrivateNetworkTunnelId(String CMRPrivateNetworkTunnelId) {
+        this.CMRPrivateNetworkTunnelId = CMRPrivateNetworkTunnelId;
+    }
+
     public TestServiceProviderConnectionRequest() {
     }
 
@@ -294,6 +340,12 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         if (source.VerifySSL != null) {
             this.VerifySSL = new Boolean(source.VerifySSL);
         }
+        if (source.HealthCheckProtocol != null) {
+            this.HealthCheckProtocol = new String(source.HealthCheckProtocol);
+        }
+        if (source.CMRPrivateNetworkTunnelId != null) {
+            this.CMRPrivateNetworkTunnelId = new String(source.CMRPrivateNetworkTunnelId);
+        }
     }
 
 
@@ -311,6 +363,8 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
         this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
+        this.setParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
+        this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
 
     }
 }

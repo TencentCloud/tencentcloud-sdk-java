@@ -45,21 +45,21 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     private String Host;
 
     /**
-    * 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
+    * 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
     */
     @SerializedName("Db")
     @Expose
     private String Db;
 
     /**
-    * 指定数据库下的对象类型，可选"table"，"*"
+    * 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 当Type="table"时，用来指定表名
+    * 当Type="table"时，用来指定表名；Type为table时必填。
     */
     @SerializedName("TableName")
     @Expose
@@ -114,48 +114,48 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限； 
-     * @return Db 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
+     * Get 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。 
+     * @return Db 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
      */
     public String getDb() {
         return this.Db;
     }
 
     /**
-     * Set 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
-     * @param Db 数据库名，为*时，忽略Type/TableName, 表示修改用户全局权限；
+     * Set 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
+     * @param Db 数据库名。为*时，忽略Type/TableName，表示查询用户全局权限；不传时默认为*。
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get 指定数据库下的对象类型，可选"table"，"*" 
-     * @return Type 指定数据库下的对象类型，可选"table"，"*"
+     * Get 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。 
+     * @return Type 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 指定数据库下的对象类型，可选"table"，"*"
-     * @param Type 指定数据库下的对象类型，可选"table"，"*"
+     * Set 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
+     * @param Type 指定数据库下的对象类型，可选"table"、"*"。不传时默认为*；Type为table时，必须指定TableName。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 当Type="table"时，用来指定表名 
-     * @return TableName 当Type="table"时，用来指定表名
+     * Get 当Type="table"时，用来指定表名；Type为table时必填。 
+     * @return TableName 当Type="table"时，用来指定表名；Type为table时必填。
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 当Type="table"时，用来指定表名
-     * @param TableName 当Type="table"时，用来指定表名
+     * Set 当Type="table"时，用来指定表名；Type为table时必填。
+     * @param TableName 当Type="table"时，用来指定表名；Type为table时必填。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;

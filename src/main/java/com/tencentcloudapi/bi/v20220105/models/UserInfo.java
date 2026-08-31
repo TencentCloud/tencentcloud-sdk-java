@@ -86,6 +86,14 @@ public class UserInfo extends AbstractModel {
     private String LarkOpenId;
 
     /**
+    * <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentityType")
+    @Expose
+    private String IdentityType;
+
+    /**
      * Get <p>用户ID</p> 
      * @return UserId <p>用户ID</p>
      */
@@ -237,6 +245,26 @@ public class UserInfo extends AbstractModel {
         this.LarkOpenId = LarkOpenId;
     }
 
+    /**
+     * Get <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentityType <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdentityType() {
+        return this.IdentityType;
+    }
+
+    /**
+     * Set <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentityType <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentityType(String IdentityType) {
+        this.IdentityType = IdentityType;
+    }
+
     public UserInfo() {
     }
 
@@ -269,6 +297,9 @@ public class UserInfo extends AbstractModel {
         if (source.LarkOpenId != null) {
             this.LarkOpenId = new String(source.LarkOpenId);
         }
+        if (source.IdentityType != null) {
+            this.IdentityType = new String(source.IdentityType);
+        }
     }
 
 
@@ -284,6 +315,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
         this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
         this.setParamSimple(map, prefix + "LarkOpenId", this.LarkOpenId);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
 
     }
 }

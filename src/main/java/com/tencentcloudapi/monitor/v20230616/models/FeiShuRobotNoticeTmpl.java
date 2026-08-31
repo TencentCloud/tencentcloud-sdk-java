@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class FeiShuRobotNoticeTmpl extends AbstractModel {
 
     /**
-    * 内容模板
+    * <p>内容模板</p>
     */
     @SerializedName("ContentTmpl")
     @Expose
     private String ContentTmpl;
 
     /**
-    * 标题模板
+    * <p>标题模板</p>
     */
     @SerializedName("TitleTmpl")
     @Expose
     private String TitleTmpl;
 
     /**
-     * Get 内容模板 
-     * @return ContentTmpl 内容模板
+    * <p>通知内容模版标题自定义颜色</p>
+    */
+    @SerializedName("TitleColor")
+    @Expose
+    private RobotNoticeTitleColor TitleColor;
+
+    /**
+     * Get <p>内容模板</p> 
+     * @return ContentTmpl <p>内容模板</p>
      */
     public String getContentTmpl() {
         return this.ContentTmpl;
     }
 
     /**
-     * Set 内容模板
-     * @param ContentTmpl 内容模板
+     * Set <p>内容模板</p>
+     * @param ContentTmpl <p>内容模板</p>
      */
     public void setContentTmpl(String ContentTmpl) {
         this.ContentTmpl = ContentTmpl;
     }
 
     /**
-     * Get 标题模板 
-     * @return TitleTmpl 标题模板
+     * Get <p>标题模板</p> 
+     * @return TitleTmpl <p>标题模板</p>
      */
     public String getTitleTmpl() {
         return this.TitleTmpl;
     }
 
     /**
-     * Set 标题模板
-     * @param TitleTmpl 标题模板
+     * Set <p>标题模板</p>
+     * @param TitleTmpl <p>标题模板</p>
      */
     public void setTitleTmpl(String TitleTmpl) {
         this.TitleTmpl = TitleTmpl;
+    }
+
+    /**
+     * Get <p>通知内容模版标题自定义颜色</p> 
+     * @return TitleColor <p>通知内容模版标题自定义颜色</p>
+     */
+    public RobotNoticeTitleColor getTitleColor() {
+        return this.TitleColor;
+    }
+
+    /**
+     * Set <p>通知内容模版标题自定义颜色</p>
+     * @param TitleColor <p>通知内容模版标题自定义颜色</p>
+     */
+    public void setTitleColor(RobotNoticeTitleColor TitleColor) {
+        this.TitleColor = TitleColor;
     }
 
     public FeiShuRobotNoticeTmpl() {
@@ -83,6 +106,9 @@ public class FeiShuRobotNoticeTmpl extends AbstractModel {
         if (source.TitleTmpl != null) {
             this.TitleTmpl = new String(source.TitleTmpl);
         }
+        if (source.TitleColor != null) {
+            this.TitleColor = new RobotNoticeTitleColor(source.TitleColor);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class FeiShuRobotNoticeTmpl extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ContentTmpl", this.ContentTmpl);
         this.setParamSimple(map, prefix + "TitleTmpl", this.TitleTmpl);
+        this.setParamObj(map, prefix + "TitleColor.", this.TitleColor);
 
     }
 }

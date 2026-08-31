@@ -1067,6 +1067,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     }
 
     /**
+     *修改环境额外配置
+     * @param req ModifyEnvExtraRequest
+     * @return ModifyEnvExtraResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEnvExtraResponse ModifyEnvExtra(ModifyEnvExtraRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEnvExtra", ModifyEnvExtraResponse.class);
+    }
+
+    /**
      *本接口用于变更云开发环境套餐。
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。

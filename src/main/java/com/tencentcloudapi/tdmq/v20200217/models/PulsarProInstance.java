@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class PulsarProInstance extends AbstractModel {
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例版本
+    * <p>实例版本</p>
     */
     @SerializedName("InstanceVersion")
     @Expose
     private String InstanceVersion;
 
     /**
-    * 实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败
+    * <p>实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例配置规格名称
+    * <p>实例配置规格名称</p>
     */
     @SerializedName("ConfigDisplay")
     @Expose
     private String ConfigDisplay;
 
     /**
-    * 峰值TPS
+    * <p>峰值TPS</p>
     */
     @SerializedName("MaxTps")
     @Expose
     private Long MaxTps;
 
     /**
-    * 存储容量，GB为单位
+    * <p>存储容量，GB为单位</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * 实例到期时间，毫秒为单位
+    * <p>实例到期时间，毫秒为单位</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 0-后付费，1-预付费
+    * <p>0-后付费，1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -102,14 +102,14 @@ public class PulsarProInstance extends AbstractModel {
     private String Remark;
 
     /**
-    * 实例配置ID
+    * <p>实例配置ID</p>
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 规格外弹性TPS
+    * <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalableTps")
@@ -117,7 +117,7 @@ public class PulsarProInstance extends AbstractModel {
     private Long ScalableTps;
 
     /**
-    * VPC的id
+    * <p>VPC的id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -125,7 +125,7 @@ public class PulsarProInstance extends AbstractModel {
     private String VpcId;
 
     /**
-    * 子网id
+    * <p>子网id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -133,14 +133,14 @@ public class PulsarProInstance extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 峰值带宽。单位：mbps
+    * <p>峰值带宽。单位：mbps</p>
     */
     @SerializedName("MaxBandWidth")
     @Expose
     private Long MaxBandWidth;
 
     /**
-    * 集群的标签列表
+    * <p>集群的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -148,7 +148,7 @@ public class PulsarProInstance extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 集群创建时间
+    * <p>集群创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -156,7 +156,7 @@ public class PulsarProInstance extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+    * <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingLabelVersion")
@@ -164,183 +164,183 @@ public class PulsarProInstance extends AbstractModel {
     private String BillingLabelVersion;
 
     /**
-    * 自定义租户
+    * <p>自定义租户</p>
     */
     @SerializedName("Tenant")
     @Expose
     private String Tenant;
 
     /**
-    * 集群的证书列表
+    * <p>集群的证书列表</p>
     */
     @SerializedName("CertificateList")
     @Expose
     private CertificateInfo [] CertificateList;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例版本 
-     * @return InstanceVersion 实例版本
+     * Get <p>实例版本</p> 
+     * @return InstanceVersion <p>实例版本</p>
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set 实例版本
-     * @param InstanceVersion 实例版本
+     * Set <p>实例版本</p>
+     * @param InstanceVersion <p>实例版本</p>
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败 
-     * @return Status 实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败
+     * Get <p>实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败</p> 
+     * @return Status <p>实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败
-     * @param Status 实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败
+     * Set <p>实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败</p>
+     * @param Status <p>实例状态，0-创建中，1-正常，2-隔离中，3-已销毁，4 - 异常, 5 - 发货失败，6-变配中，7-变配失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例配置规格名称 
-     * @return ConfigDisplay 实例配置规格名称
+     * Get <p>实例配置规格名称</p> 
+     * @return ConfigDisplay <p>实例配置规格名称</p>
      */
     public String getConfigDisplay() {
         return this.ConfigDisplay;
     }
 
     /**
-     * Set 实例配置规格名称
-     * @param ConfigDisplay 实例配置规格名称
+     * Set <p>实例配置规格名称</p>
+     * @param ConfigDisplay <p>实例配置规格名称</p>
      */
     public void setConfigDisplay(String ConfigDisplay) {
         this.ConfigDisplay = ConfigDisplay;
     }
 
     /**
-     * Get 峰值TPS 
-     * @return MaxTps 峰值TPS
+     * Get <p>峰值TPS</p> 
+     * @return MaxTps <p>峰值TPS</p>
      */
     public Long getMaxTps() {
         return this.MaxTps;
     }
 
     /**
-     * Set 峰值TPS
-     * @param MaxTps 峰值TPS
+     * Set <p>峰值TPS</p>
+     * @param MaxTps <p>峰值TPS</p>
      */
     public void setMaxTps(Long MaxTps) {
         this.MaxTps = MaxTps;
     }
 
     /**
-     * Get 存储容量，GB为单位 
-     * @return MaxStorage 存储容量，GB为单位
+     * Get <p>存储容量，GB为单位</p> 
+     * @return MaxStorage <p>存储容量，GB为单位</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set 存储容量，GB为单位
-     * @param MaxStorage 存储容量，GB为单位
+     * Set <p>存储容量，GB为单位</p>
+     * @param MaxStorage <p>存储容量，GB为单位</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 实例到期时间，毫秒为单位 
-     * @return ExpireTime 实例到期时间，毫秒为单位
+     * Get <p>实例到期时间，毫秒为单位</p> 
+     * @return ExpireTime <p>实例到期时间，毫秒为单位</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例到期时间，毫秒为单位
-     * @param ExpireTime 实例到期时间，毫秒为单位
+     * Set <p>实例到期时间，毫秒为单位</p>
+     * @param ExpireTime <p>实例到期时间，毫秒为单位</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置) 
-     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p> 
+     * @return AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 0-后付费，1-预付费 
-     * @return PayMode 0-后付费，1-预付费
+     * Get <p>0-后付费，1-预付费</p> 
+     * @return PayMode <p>0-后付费，1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 0-后付费，1-预付费
-     * @param PayMode 0-后付费，1-预付费
+     * Set <p>0-后付费，1-预付费</p>
+     * @param PayMode <p>0-后付费，1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 备注信息
+     * Get <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注信息
+     * @return Remark <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -348,9 +348,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set 备注信息
+     * Set <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注信息
+     * @param Remark <p>备注信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -358,25 +358,25 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例配置ID 
-     * @return SpecName 实例配置ID
+     * Get <p>实例配置ID</p> 
+     * @return SpecName <p>实例配置ID</p>
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 实例配置ID
-     * @param SpecName 实例配置ID
+     * Set <p>实例配置ID</p>
+     * @param SpecName <p>实例配置ID</p>
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 规格外弹性TPS
+     * Get <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScalableTps 规格外弹性TPS
+     * @return ScalableTps <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalableTps() {
@@ -384,9 +384,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set 规格外弹性TPS
+     * Set <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalableTps 规格外弹性TPS
+     * @param ScalableTps <p>规格外弹性TPS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalableTps(Long ScalableTps) {
@@ -394,9 +394,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get VPC的id
+     * Get <p>VPC的id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId VPC的id
+     * @return VpcId <p>VPC的id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -404,9 +404,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set VPC的id
+     * Set <p>VPC的id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId VPC的id
+     * @param VpcId <p>VPC的id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -414,9 +414,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 子网id
+     * Get <p>子网id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 子网id
+     * @return SubnetId <p>子网id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -424,9 +424,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set 子网id
+     * Set <p>子网id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 子网id
+     * @param SubnetId <p>子网id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -434,25 +434,25 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 峰值带宽。单位：mbps 
-     * @return MaxBandWidth 峰值带宽。单位：mbps
+     * Get <p>峰值带宽。单位：mbps</p> 
+     * @return MaxBandWidth <p>峰值带宽。单位：mbps</p>
      */
     public Long getMaxBandWidth() {
         return this.MaxBandWidth;
     }
 
     /**
-     * Set 峰值带宽。单位：mbps
-     * @param MaxBandWidth 峰值带宽。单位：mbps
+     * Set <p>峰值带宽。单位：mbps</p>
+     * @param MaxBandWidth <p>峰值带宽。单位：mbps</p>
      */
     public void setMaxBandWidth(Long MaxBandWidth) {
         this.MaxBandWidth = MaxBandWidth;
     }
 
     /**
-     * Get 集群的标签列表
+     * Get <p>集群的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 集群的标签列表
+     * @return Tags <p>集群的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -460,9 +460,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set 集群的标签列表
+     * Set <p>集群的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 集群的标签列表
+     * @param Tags <p>集群的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -470,9 +470,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 集群创建时间
+     * Get <p>集群创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 集群创建时间
+     * @return CreateTime <p>集群创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -480,9 +480,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set 集群创建时间
+     * Set <p>集群创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 集群创建时间
+     * @param CreateTime <p>集群创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -490,9 +490,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * Get <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * @return BillingLabelVersion <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingLabelVersion() {
@@ -500,9 +500,9 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Set 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * Set <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+     * @param BillingLabelVersion <p>代表是专业版和标准版的不同计费规格<br>PULSAR.P1固定存储<br>PULSAR.P2弹性存储<br>PULSAR.S2标准版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingLabelVersion(String BillingLabelVersion) {
@@ -510,32 +510,32 @@ public class PulsarProInstance extends AbstractModel {
     }
 
     /**
-     * Get 自定义租户 
-     * @return Tenant 自定义租户
+     * Get <p>自定义租户</p> 
+     * @return Tenant <p>自定义租户</p>
      */
     public String getTenant() {
         return this.Tenant;
     }
 
     /**
-     * Set 自定义租户
-     * @param Tenant 自定义租户
+     * Set <p>自定义租户</p>
+     * @param Tenant <p>自定义租户</p>
      */
     public void setTenant(String Tenant) {
         this.Tenant = Tenant;
     }
 
     /**
-     * Get 集群的证书列表 
-     * @return CertificateList 集群的证书列表
+     * Get <p>集群的证书列表</p> 
+     * @return CertificateList <p>集群的证书列表</p>
      */
     public CertificateInfo [] getCertificateList() {
         return this.CertificateList;
     }
 
     /**
-     * Set 集群的证书列表
-     * @param CertificateList 集群的证书列表
+     * Set <p>集群的证书列表</p>
+     * @param CertificateList <p>集群的证书列表</p>
      */
     public void setCertificateList(CertificateInfo [] CertificateList) {
         this.CertificateList = CertificateList;

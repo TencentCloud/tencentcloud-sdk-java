@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * <p>账号名，可输入1 - 32个字符。</p>
+    * 账号名称
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+    * 账号的主机地址
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-     * Get <p>账号名，可输入1 - 32个字符。</p> 
-     * @return User <p>账号名，可输入1 - 32个字符。</p>
+     * Get 账号名称 
+     * @return User 账号名称
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set <p>账号名，可输入1 - 32个字符。</p>
-     * @param User <p>账号名，可输入1 - 32个字符。</p>
+     * Set 账号名称
+     * @param User 账号名称
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get <p>账号的主机。</p><p>IP 形式，支持填入%。</p> 
-     * @return Host <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+     * Get 账号的主机地址 
+     * @return Host 账号的主机地址
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
-     * @param Host <p>账号的主机。</p><p>IP 形式，支持填入%。</p>
+     * Set 账号的主机地址
+     * @param Host 账号的主机地址
      */
     public void setHost(String Host) {
         this.Host = Host;

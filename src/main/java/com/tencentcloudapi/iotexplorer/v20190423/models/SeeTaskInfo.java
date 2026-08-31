@@ -45,14 +45,14 @@ public class SeeTaskInfo extends AbstractModel {
     private SeeTaskMetadata Metadata;
 
     /**
-    * <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+    * <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
     */
     @SerializedName("ServiceCategory")
     @Expose
     private String ServiceCategory;
 
     /**
-    * <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+    * <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
     */
     @SerializedName("ServiceType")
     @Expose
@@ -92,6 +92,13 @@ public class SeeTaskInfo extends AbstractModel {
     @SerializedName("FaceRecognitionResult")
     @Expose
     private SeeFaceRecognitionResult FaceRecognitionResult;
+
+    /**
+    * <p>每日或每周总结结果</p>
+    */
+    @SerializedName("SummarizeResult")
+    @Expose
+    private SeeSummarizeResult SummarizeResult;
 
     /**
     * <p>完成该任务所消耗的基础能力额度</p>
@@ -191,32 +198,32 @@ public class SeeTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul> 
-     * @return ServiceCategory <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * Get <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul> 
+     * @return ServiceCategory <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
      */
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
 
     /**
-     * Set <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
-     * @param ServiceCategory <p>算法类目。可能取值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li></ul>
+     * Set <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
+     * @param ServiceCategory <p>算法类目。</p><p>枚举值：</p><ul><li>COMPREHENSION： 视觉理解</li><li>HIGHLIGHT： 视频浓缩</li><li>SUMMARIZATION： 每日/每周总结</li></ul>
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
     }
 
     /**
-     * Get <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul> 
-     * @return ServiceType <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * Get <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul> 
+     * @return ServiceType <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
-     * @param ServiceType <p>算法类型。可能取值：</p><ul><li><code>VID_COMP</code>：视频理解</li><li><code>IMG_COMP</code>：图片理解</li><li><code>COMP_HIGHLIGHT</code>：视频浓缩</li></ul>
+     * Set <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
+     * @param ServiceType <p>算法类型。</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li><li>IMG_COMP： 图片理解</li><li>COMP_HIGHLIGHT： 视频浓缩</li><li>DAILY_SUM： 每日总结</li><li>WEEKLY_SUM： 每周总结</li></ul>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -300,6 +307,22 @@ public class SeeTaskInfo extends AbstractModel {
      */
     public void setFaceRecognitionResult(SeeFaceRecognitionResult FaceRecognitionResult) {
         this.FaceRecognitionResult = FaceRecognitionResult;
+    }
+
+    /**
+     * Get <p>每日或每周总结结果</p> 
+     * @return SummarizeResult <p>每日或每周总结结果</p>
+     */
+    public SeeSummarizeResult getSummarizeResult() {
+        return this.SummarizeResult;
+    }
+
+    /**
+     * Set <p>每日或每周总结结果</p>
+     * @param SummarizeResult <p>每日或每周总结结果</p>
+     */
+    public void setSummarizeResult(SeeSummarizeResult SummarizeResult) {
+        this.SummarizeResult = SummarizeResult;
     }
 
     /**
@@ -452,6 +475,9 @@ public class SeeTaskInfo extends AbstractModel {
         if (source.FaceRecognitionResult != null) {
             this.FaceRecognitionResult = new SeeFaceRecognitionResult(source.FaceRecognitionResult);
         }
+        if (source.SummarizeResult != null) {
+            this.SummarizeResult = new SeeSummarizeResult(source.SummarizeResult);
+        }
         if (source.CostBasic != null) {
             this.CostBasic = new Long(source.CostBasic);
         }
@@ -496,6 +522,7 @@ public class SeeTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "CompHighlightResult.", this.CompHighlightResult);
         this.setParamObj(map, prefix + "DetectContinuousResult.", this.DetectContinuousResult);
         this.setParamObj(map, prefix + "FaceRecognitionResult.", this.FaceRecognitionResult);
+        this.setParamObj(map, prefix + "SummarizeResult.", this.SummarizeResult);
         this.setParamSimple(map, prefix + "CostBasic", this.CostBasic);
         this.setParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
         this.setParamArraySimple(map, prefix + "Files.", this.Files);

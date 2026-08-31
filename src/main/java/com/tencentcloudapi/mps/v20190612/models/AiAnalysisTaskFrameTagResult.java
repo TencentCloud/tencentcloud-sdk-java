@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class AiAnalysisTaskFrameTagResult extends AbstractModel {
 
     /**
-    * 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+    * <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+    * <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
+    * <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误信息。
+    * <p>错误信息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 智能按帧标签任务输入。
+    * <p>智能按帧标签任务输入。</p>
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskFrameTagInput Input;
 
     /**
-    * 智能按帧标签任务输出。
+    * <p>智能按帧标签任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -67,89 +67,89 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel {
     private AiAnalysisTaskFrameTagOutput Output;
 
     /**
-     * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
-     * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Get <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p> 
+     * @return Status <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
-     * @param Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Set <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
+     * @param Status <p>任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。 
-     * @return ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * Get <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p> 
+     * @return ErrCodeExt <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
-     * @param ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * Set <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+     * @param ErrCodeExt <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。 
-     * @return ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
+     * Get <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p> 
+     * @return ErrCode <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
-     * @param ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
+     * Set <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
+     * @param ErrCode <p>错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。 
-     * @return Message 错误信息。
+     * Get <p>错误信息。</p> 
+     * @return Message <p>错误信息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息。
-     * @param Message 错误信息。
+     * Set <p>错误信息。</p>
+     * @param Message <p>错误信息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 智能按帧标签任务输入。 
-     * @return Input 智能按帧标签任务输入。
+     * Get <p>智能按帧标签任务输入。</p> 
+     * @return Input <p>智能按帧标签任务输入。</p>
      */
     public AiAnalysisTaskFrameTagInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 智能按帧标签任务输入。
-     * @param Input 智能按帧标签任务输入。
+     * Set <p>智能按帧标签任务输入。</p>
+     * @param Input <p>智能按帧标签任务输入。</p>
      */
     public void setInput(AiAnalysisTaskFrameTagInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 智能按帧标签任务输出。
+     * Get <p>智能按帧标签任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 智能按帧标签任务输出。
+     * @return Output <p>智能按帧标签任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskFrameTagOutput getOutput() {
@@ -157,9 +157,9 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel {
     }
 
     /**
-     * Set 智能按帧标签任务输出。
+     * Set <p>智能按帧标签任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 智能按帧标签任务输出。
+     * @param Output <p>智能按帧标签任务输出。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiAnalysisTaskFrameTagOutput Output) {

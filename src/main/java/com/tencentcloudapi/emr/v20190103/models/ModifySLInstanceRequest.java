@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class ModifySLInstanceRequest extends AbstractModel {
 
     /**
-    * 实例唯一标识符（字符串表示）。
+    * <p>实例唯一标识符（字符串表示）。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 需要变更的区域名称。
+    * <p>需要变更的区域名称。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
+    * <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+    * <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-     * Get 实例唯一标识符（字符串表示）。 
-     * @return InstanceId 实例唯一标识符（字符串表示）。
+    * <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+     * Get <p>实例唯一标识符（字符串表示）。</p> 
+     * @return InstanceId <p>实例唯一标识符（字符串表示）。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例唯一标识符（字符串表示）。
-     * @param InstanceId 实例唯一标识符（字符串表示）。
+     * Set <p>实例唯一标识符（字符串表示）。</p>
+     * @param InstanceId <p>实例唯一标识符（字符串表示）。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 需要变更的区域名称。 
-     * @return Zone 需要变更的区域名称。
+     * Get <p>需要变更的区域名称。</p> 
+     * @return Zone <p>需要变更的区域名称。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 需要变更的区域名称。
-     * @param Zone 需要变更的区域名称。
+     * Set <p>需要变更的区域名称。</p>
+     * @param Zone <p>需要变更的区域名称。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。 
-     * @return NodeNum 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
+     * Get <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p> 
+     * @return NodeNum <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
-     * @param NodeNum 该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。
+     * Set <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
+     * @param NodeNum <p>该区域变配后的目标节点数量，所有区域节点总数应大于等于3，小于等于50。</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	 
-     * @return ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * Get <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p> 
+     * @return ClientToken <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
-     * @param ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * Set <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+     * @param ClientToken <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p> 
+     * @return DiskSize <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+     * @param DiskSize <p>存储空间大小，需要是100的倍数，且不允许比当前存储空间小（只允许扩容）</p><p>单位：GB</p>
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
     }
 
     public ModifySLInstanceRequest() {
@@ -135,6 +158,9 @@ public class ModifySLInstanceRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifySLInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
 
     }
 }

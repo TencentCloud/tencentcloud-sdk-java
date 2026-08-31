@@ -24,385 +24,371 @@ import java.util.HashMap;
 public class CcnAttachedInstance extends AbstractModel {
 
     /**
-    * 云联网实例ID。
+    * <p>云联网实例ID。</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+    * <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 关联实例ID。
+    * <p>关联实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联实例名称。
+    * <p>关联实例名称。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 关联实例所属大区，例如：ap-guangzhou。
+    * <p>关联实例所属大区，例如：ap-guangzhou。</p>
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 关联实例所属UIN（根账号）。
+    * <p>关联实例所属UIN（根账号）。</p>
     */
     @SerializedName("InstanceUin")
     @Expose
     private String InstanceUin;
 
     /**
-    * 关联实例CIDR。
+    * <p>关联实例CIDR。</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String [] CidrBlock;
 
     /**
-    * 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+    * <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 关联时间。
+    * <p>关联时间。</p>
     */
     @SerializedName("AttachedTime")
     @Expose
     private String AttachedTime;
 
     /**
-    * 云联网所属UIN（根账号）。
+    * <p>云联网所属UIN（根账号）。</p>
     */
     @SerializedName("CcnUin")
     @Expose
     private String CcnUin;
 
     /**
-    * 关联实例所属的大地域，如: CHINA_MAINLAND
+    * <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
     */
     @SerializedName("InstanceArea")
     @Expose
     private String InstanceArea;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 路由表ID
+    * <p>路由表ID</p>
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 路由表名称
+    * <p>路由表名称</p>
     */
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
 
     /**
-     * Get 云联网实例ID。 
-     * @return CcnId 云联网实例ID。
+    * <p>别名类型</p>
+    */
+    @SerializedName("AliasType")
+    @Expose
+    private String AliasType;
+
+    /**
+    * <p>别名ID</p>
+    */
+    @SerializedName("AliasInstanceId")
+    @Expose
+    private String AliasInstanceId;
+
+    /**
+     * Get <p>云联网实例ID。</p> 
+     * @return CcnId <p>云联网实例ID。</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网实例ID。
-     * @param CcnId 云联网实例ID。
+     * Set <p>云联网实例ID。</p>
+     * @param CcnId <p>云联网实例ID。</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li> 
-     * @return InstanceType 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * Get <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li> 
+     * @return InstanceType <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-     * @param InstanceType 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * Set <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
+     * @param InstanceType <p>关联实例类型：</p><li><code>VPC</code>：私有网络</li><li><code>DIRECTCONNECT</code>：专线网关</li><li><code>BMVPC</code>：黑石私有网络</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 关联实例ID。 
-     * @return InstanceId 关联实例ID。
+     * Get <p>关联实例ID。</p> 
+     * @return InstanceId <p>关联实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 关联实例ID。
-     * @param InstanceId 关联实例ID。
+     * Set <p>关联实例ID。</p>
+     * @param InstanceId <p>关联实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 关联实例名称。 
-     * @return InstanceName 关联实例名称。
+     * Get <p>关联实例名称。</p> 
+     * @return InstanceName <p>关联实例名称。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 关联实例名称。
-     * @param InstanceName 关联实例名称。
+     * Set <p>关联实例名称。</p>
+     * @param InstanceName <p>关联实例名称。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 关联实例所属大区，例如：ap-guangzhou。 
-     * @return InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
+     * Get <p>关联实例所属大区，例如：ap-guangzhou。</p> 
+     * @return InstanceRegion <p>关联实例所属大区，例如：ap-guangzhou。</p>
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 关联实例所属大区，例如：ap-guangzhou。
-     * @param InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
+     * Set <p>关联实例所属大区，例如：ap-guangzhou。</p>
+     * @param InstanceRegion <p>关联实例所属大区，例如：ap-guangzhou。</p>
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 关联实例所属UIN（根账号）。 
-     * @return InstanceUin 关联实例所属UIN（根账号）。
+     * Get <p>关联实例所属UIN（根账号）。</p> 
+     * @return InstanceUin <p>关联实例所属UIN（根账号）。</p>
      */
     public String getInstanceUin() {
         return this.InstanceUin;
     }
 
     /**
-     * Set 关联实例所属UIN（根账号）。
-     * @param InstanceUin 关联实例所属UIN（根账号）。
+     * Set <p>关联实例所属UIN（根账号）。</p>
+     * @param InstanceUin <p>关联实例所属UIN（根账号）。</p>
      */
     public void setInstanceUin(String InstanceUin) {
         this.InstanceUin = InstanceUin;
     }
 
     /**
-     * Get 关联实例CIDR。 
-     * @return CidrBlock 关联实例CIDR。
+     * Get <p>关联实例CIDR。</p> 
+     * @return CidrBlock <p>关联实例CIDR。</p>
      */
     public String [] getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 关联实例CIDR。
-     * @param CidrBlock 关联实例CIDR。
+     * Set <p>关联实例CIDR。</p>
+     * @param CidrBlock <p>关联实例CIDR。</p>
      */
     public void setCidrBlock(String [] CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li> 
-     * @return State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * Get <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li> 
+     * @return State <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
-     * @param State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * Set <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
+     * @param State <p>关联实例状态：</p><li><code>PENDING</code>：申请中</li><li><code>ACTIVE</code>：已连接</li><li><code>EXPIRED</code>：已过期</li><li><code>REJECTED</code>：已拒绝</li><li><code>DELETED</code>：已删除</li><li><code>FAILED</code>：失败的（2小时后将异步强制解关联）</li><li><code>ATTACHING</code>：关联中</li><li><code>DETACHING</code>：解关联中</li><li><code>DETACHFAILED</code>：解关联失败（2小时后将异步强制解关联）</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 关联时间。 
-     * @return AttachedTime 关联时间。
+     * Get <p>关联时间。</p> 
+     * @return AttachedTime <p>关联时间。</p>
      */
     public String getAttachedTime() {
         return this.AttachedTime;
     }
 
     /**
-     * Set 关联时间。
-     * @param AttachedTime 关联时间。
+     * Set <p>关联时间。</p>
+     * @param AttachedTime <p>关联时间。</p>
      */
     public void setAttachedTime(String AttachedTime) {
         this.AttachedTime = AttachedTime;
     }
 
     /**
-     * Get 云联网所属UIN（根账号）。 
-     * @return CcnUin 云联网所属UIN（根账号）。
+     * Get <p>云联网所属UIN（根账号）。</p> 
+     * @return CcnUin <p>云联网所属UIN（根账号）。</p>
      */
     public String getCcnUin() {
         return this.CcnUin;
     }
 
     /**
-     * Set 云联网所属UIN（根账号）。
-     * @param CcnUin 云联网所属UIN（根账号）。
+     * Set <p>云联网所属UIN（根账号）。</p>
+     * @param CcnUin <p>云联网所属UIN（根账号）。</p>
      */
     public void setCcnUin(String CcnUin) {
         this.CcnUin = CcnUin;
     }
 
     /**
-     * Get 关联实例所属的大地域，如: CHINA_MAINLAND 
-     * @return InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
+     * Get <p>关联实例所属的大地域，如: CHINA_MAINLAND</p> 
+     * @return InstanceArea <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
      */
     public String getInstanceArea() {
         return this.InstanceArea;
     }
 
     /**
-     * Set 关联实例所属的大地域，如: CHINA_MAINLAND
-     * @param InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
+     * Set <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
+     * @param InstanceArea <p>关联实例所属的大地域，如: CHINA_MAINLAND</p>
      */
     public void setInstanceArea(String InstanceArea) {
         this.InstanceArea = InstanceArea;
     }
 
     /**
-     * Get 备注 
-     * @return Description 备注
+     * Get <p>备注</p> 
+     * @return Description <p>备注</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 备注
-     * @param Description 备注
+     * Set <p>备注</p>
+     * @param Description <p>备注</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 路由表ID 
-     * @return RouteTableId 路由表ID
+     * Get <p>路由表ID</p> 
+     * @return RouteTableId <p>路由表ID</p>
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表ID
-     * @param RouteTableId 路由表ID
+     * Set <p>路由表ID</p>
+     * @param RouteTableId <p>路由表ID</p>
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由表名称 
-     * @return RouteTableName 路由表名称
+     * Get <p>路由表名称</p> 
+     * @return RouteTableName <p>路由表名称</p>
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称
-     * @param RouteTableName 路由表名称
+     * Set <p>路由表名称</p>
+     * @param RouteTableName <p>路由表名称</p>
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;
+    }
+
+    /**
+     * Get <p>别名类型</p> 
+     * @return AliasType <p>别名类型</p>
+     */
+    public String getAliasType() {
+        return this.AliasType;
+    }
+
+    /**
+     * Set <p>别名类型</p>
+     * @param AliasType <p>别名类型</p>
+     */
+    public void setAliasType(String AliasType) {
+        this.AliasType = AliasType;
+    }
+
+    /**
+     * Get <p>别名ID</p> 
+     * @return AliasInstanceId <p>别名ID</p>
+     */
+    public String getAliasInstanceId() {
+        return this.AliasInstanceId;
+    }
+
+    /**
+     * Set <p>别名ID</p>
+     * @param AliasInstanceId <p>别名ID</p>
+     */
+    public void setAliasInstanceId(String AliasInstanceId) {
+        this.AliasInstanceId = AliasInstanceId;
     }
 
     public CcnAttachedInstance() {
@@ -458,6 +444,12 @@ public class CcnAttachedInstance extends AbstractModel {
         if (source.RouteTableName != null) {
             this.RouteTableName = new String(source.RouteTableName);
         }
+        if (source.AliasType != null) {
+            this.AliasType = new String(source.AliasType);
+        }
+        if (source.AliasInstanceId != null) {
+            this.AliasInstanceId = new String(source.AliasInstanceId);
+        }
     }
 
 
@@ -479,6 +471,8 @@ public class CcnAttachedInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
+        this.setParamSimple(map, prefix + "AliasType", this.AliasType);
+        this.setParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
 
     }
 }

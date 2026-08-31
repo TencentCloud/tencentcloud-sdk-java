@@ -182,6 +182,7 @@ public class ModelRouterDetail extends AbstractModel {
 
     /**
     * <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -566,8 +567,10 @@ public class ModelRouterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>带宽</p><p>单位：Mbps</p> 
+     * Get <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bandwidth <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
@@ -575,7 +578,9 @@ public class ModelRouterDetail extends AbstractModel {
 
     /**
      * Set <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Bandwidth <p>带宽</p><p>单位：Mbps</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;

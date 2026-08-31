@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOutputSRTSettings extends AbstractModel {
 
     /**
-    * 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+    * <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Destinations")
@@ -32,7 +32,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private SRTAddressDestination [] Destinations;
 
     /**
-    * 流Id。
+    * <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamId")
@@ -40,7 +40,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private String StreamId;
 
     /**
-    * 延迟。
+    * <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Latency")
@@ -48,7 +48,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private Long Latency;
 
     /**
-    * 接收延迟。
+    * <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecvLatency")
@@ -56,7 +56,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private Long RecvLatency;
 
     /**
-    * 对端延迟。
+    * <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerLatency")
@@ -64,7 +64,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private Long PeerLatency;
 
     /**
-    * 对端空闲超时时间。
+    * <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerIdleTimeout")
@@ -72,7 +72,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private Long PeerIdleTimeout;
 
     /**
-    * 加密密钥。
+    * <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Passphrase")
@@ -80,7 +80,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private String Passphrase;
 
     /**
-    * 加密密钥长度。
+    * <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PbKeyLen")
@@ -88,7 +88,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private Long PbKeyLen;
 
     /**
-    * SRT模式。
+    * <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -96,7 +96,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private String Mode;
 
     /**
-    * 服务器监听地址，SRT模式为LISTENER时使用。
+    * <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceAddresses")
@@ -104,16 +104,16 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private OutputSRTSourceAddressResp [] SourceAddresses;
 
     /**
-    * FEC 配置
+    * <p>FEC 配置</p>
     */
     @SerializedName("FEC")
     @Expose
     private SRTFECFullOptions FEC;
 
     /**
-     * Get 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+     * Get <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Destinations 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+     * @return Destinations <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SRTAddressDestination [] getDestinations() {
@@ -121,9 +121,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+     * Set <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Destinations 转推的目标的地址信息列表，SRT模式为CALLER时使用。
+     * @param Destinations <p>转推的目标的地址信息列表，SRT模式为CALLER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinations(SRTAddressDestination [] Destinations) {
@@ -131,9 +131,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 流Id。
+     * Get <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StreamId 流Id。
+     * @return StreamId <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamId() {
@@ -141,9 +141,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 流Id。
+     * Set <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StreamId 流Id。
+     * @param StreamId <p>流Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamId(String StreamId) {
@@ -151,9 +151,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 延迟。
+     * Get <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Latency 延迟。
+     * @return Latency <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLatency() {
@@ -161,9 +161,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 延迟。
+     * Set <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Latency 延迟。
+     * @param Latency <p>延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatency(Long Latency) {
@@ -171,9 +171,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 接收延迟。
+     * Get <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecvLatency 接收延迟。
+     * @return RecvLatency <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecvLatency() {
@@ -181,9 +181,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 接收延迟。
+     * Set <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecvLatency 接收延迟。
+     * @param RecvLatency <p>接收延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecvLatency(Long RecvLatency) {
@@ -191,9 +191,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 对端延迟。
+     * Get <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeerLatency 对端延迟。
+     * @return PeerLatency <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeerLatency() {
@@ -201,9 +201,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 对端延迟。
+     * Set <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeerLatency 对端延迟。
+     * @param PeerLatency <p>对端延迟。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerLatency(Long PeerLatency) {
@@ -211,9 +211,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 对端空闲超时时间。
+     * Get <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeerIdleTimeout 对端空闲超时时间。
+     * @return PeerIdleTimeout <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeerIdleTimeout() {
@@ -221,9 +221,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 对端空闲超时时间。
+     * Set <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeerIdleTimeout 对端空闲超时时间。
+     * @param PeerIdleTimeout <p>对端空闲超时时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerIdleTimeout(Long PeerIdleTimeout) {
@@ -231,9 +231,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 加密密钥。
+     * Get <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Passphrase 加密密钥。
+     * @return Passphrase <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassphrase() {
@@ -241,9 +241,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 加密密钥。
+     * Set <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Passphrase 加密密钥。
+     * @param Passphrase <p>加密密钥。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassphrase(String Passphrase) {
@@ -251,9 +251,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 加密密钥长度。
+     * Get <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PbKeyLen 加密密钥长度。
+     * @return PbKeyLen <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPbKeyLen() {
@@ -261,9 +261,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 加密密钥长度。
+     * Set <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PbKeyLen 加密密钥长度。
+     * @param PbKeyLen <p>加密密钥长度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPbKeyLen(Long PbKeyLen) {
@@ -271,9 +271,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get SRT模式。
+     * Get <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode SRT模式。
+     * @return Mode <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -281,9 +281,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set SRT模式。
+     * Set <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode SRT模式。
+     * @param Mode <p>SRT模式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -291,9 +291,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 服务器监听地址，SRT模式为LISTENER时使用。
+     * Get <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceAddresses 服务器监听地址，SRT模式为LISTENER时使用。
+     * @return SourceAddresses <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutputSRTSourceAddressResp [] getSourceAddresses() {
@@ -301,9 +301,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Set 服务器监听地址，SRT模式为LISTENER时使用。
+     * Set <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceAddresses 服务器监听地址，SRT模式为LISTENER时使用。
+     * @param SourceAddresses <p>服务器监听地址，SRT模式为LISTENER时使用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceAddresses(OutputSRTSourceAddressResp [] SourceAddresses) {
@@ -311,16 +311,16 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get FEC 配置 
-     * @return FEC FEC 配置
+     * Get <p>FEC 配置</p> 
+     * @return FEC <p>FEC 配置</p>
      */
     public SRTFECFullOptions getFEC() {
         return this.FEC;
     }
 
     /**
-     * Set FEC 配置
-     * @param FEC FEC 配置
+     * Set <p>FEC 配置</p>
+     * @param FEC <p>FEC 配置</p>
      */
     public void setFEC(SRTFECFullOptions FEC) {
         this.FEC = FEC;

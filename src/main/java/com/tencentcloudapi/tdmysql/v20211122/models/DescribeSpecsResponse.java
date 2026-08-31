@@ -39,6 +39,13 @@ public class DescribeSpecsResponse extends AbstractModel {
     private ServerlessCcu [] ServerlessCcuSpec;
 
     /**
+    * <p>serverless节点数量配置</p>
+    */
+    @SerializedName("ServerlessNodeNumSpec")
+    @Expose
+    private ServerlessNodeNumSpec ServerlessNodeNumSpec;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,6 +89,22 @@ public class DescribeSpecsResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>serverless节点数量配置</p> 
+     * @return ServerlessNodeNumSpec <p>serverless节点数量配置</p>
+     */
+    public ServerlessNodeNumSpec getServerlessNodeNumSpec() {
+        return this.ServerlessNodeNumSpec;
+    }
+
+    /**
+     * Set <p>serverless节点数量配置</p>
+     * @param ServerlessNodeNumSpec <p>serverless节点数量配置</p>
+     */
+    public void setServerlessNodeNumSpec(ServerlessNodeNumSpec ServerlessNodeNumSpec) {
+        this.ServerlessNodeNumSpec = ServerlessNodeNumSpec;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -117,6 +140,9 @@ public class DescribeSpecsResponse extends AbstractModel {
                 this.ServerlessCcuSpec[i] = new ServerlessCcu(source.ServerlessCcuSpec[i]);
             }
         }
+        if (source.ServerlessNodeNumSpec != null) {
+            this.ServerlessNodeNumSpec = new ServerlessNodeNumSpec(source.ServerlessNodeNumSpec);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -129,6 +155,7 @@ public class DescribeSpecsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "HybridNodeSpecs.", this.HybridNodeSpecs);
         this.setParamArrayObj(map, prefix + "ServerlessCcuSpec.", this.ServerlessCcuSpec);
+        this.setParamObj(map, prefix + "ServerlessNodeNumSpec.", this.ServerlessNodeNumSpec);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

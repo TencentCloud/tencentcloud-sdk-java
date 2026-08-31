@@ -24,329 +24,299 @@ import java.util.HashMap;
 public class ListOpsWorkflowsRequest extends AbstractModel {
 
     /**
-    * 项目Id
+    * <p>项目Id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 分页页码
+    * <p>分页页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 文件Id
+    * <p>文件Id</p>
     */
     @SerializedName("FolderId")
     @Expose
     private String FolderId;
 
     /**
-    * 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
+    * <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 负责人Id
+    * <p>负责人Id</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
+    * <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
     */
     @SerializedName("WorkflowType")
     @Expose
     private String WorkflowType;
 
     /**
-    * 工作流关键词过滤，支持工作流 Id/name 模糊匹配
+    * <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
     */
     @SerializedName("KeyWord")
     @Expose
     private String KeyWord;
 
     /**
-    * 排序项，可选CreateTime、TaskCount
+    * <p>排序项，可选CreateTime、TaskCount</p>
     */
     @SerializedName("SortItem")
     @Expose
     private String SortItem;
 
     /**
-    * 排序方式，DESC或ASC, 大写
+    * <p>排序方式，DESC或ASC, 大写</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 创建人Id
+    * <p>创建人Id</p>
     */
     @SerializedName("CreateUserUin")
     @Expose
     private String CreateUserUin;
 
     /**
-    * 更新时间，格式yyyy-MM-dd HH:mm:ss
+    * <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 创建时间，格式yyyy-MM-dd HH:mm:ss
+    * <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+     * Get <p>项目Id</p> 
+     * @return ProjectId <p>项目Id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set <p>项目Id</p>
+     * @param ProjectId <p>项目Id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 分页页码 
-     * @return PageNumber 分页页码
+     * Get <p>分页页码</p> 
+     * @return PageNumber <p>分页页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页码
-     * @param PageNumber 分页页码
+     * Set <p>分页页码</p>
+     * @param PageNumber <p>分页页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 文件Id 
-     * @return FolderId 文件Id
+     * Get <p>文件Id</p> 
+     * @return FolderId <p>文件Id</p>
      */
     public String getFolderId() {
         return this.FolderId;
     }
 
     /**
-     * Set 文件Id
-     * @param FolderId 文件Id
+     * Set <p>文件Id</p>
+     * @param FolderId <p>文件Id</p>
      */
     public void setFolderId(String FolderId) {
         this.FolderId = FolderId;
     }
 
     /**
-     * Get 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效 
-     * @return Status 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
+     * Get <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul> 
+     * @return Status <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
-     * @param Status 工作流状态筛选
-* ALL_RUNNING : 全部调度中
-* ALL_FREEZED : 全部已暂停
-* ALL_STOPPTED : 全部已下线
-* PART_RUNNING : 部分调度中
-* ALL_NO_RUNNING : 全部未调度
-* ALL_INVALID : 全部已失效
+     * Set <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
+     * @param Status <p>工作流状态筛选</p><ul><li>ALL_RUNNING : 全部调度中</li><li>ALL_FREEZED : 全部已暂停</li><li>ALL_STOPPTED : 全部已下线</li><li>PART_RUNNING : 部分调度中</li><li>ALL_NO_RUNNING : 全部未调度</li><li>ALL_INVALID : 全部已失效</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 负责人Id 
-     * @return OwnerUin 负责人Id
+     * Get <p>负责人Id</p> 
+     * @return OwnerUin <p>负责人Id</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 负责人Id
-     * @param OwnerUin 负责人Id
+     * Set <p>负责人Id</p>
+     * @param OwnerUin <p>负责人Id</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle 
-     * @return WorkflowType 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
+     * Get <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p> 
+     * @return WorkflowType <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
      */
     public String getWorkflowType() {
         return this.WorkflowType;
     }
 
     /**
-     * Set 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
-     * @param WorkflowType 工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle
+     * Set <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
+     * @param WorkflowType <p>工作流类型筛选, 支持值 Cycle或Manual. 默认只查询 Cycle</p>
      */
     public void setWorkflowType(String WorkflowType) {
         this.WorkflowType = WorkflowType;
     }
 
     /**
-     * Get 工作流关键词过滤，支持工作流 Id/name 模糊匹配 
-     * @return KeyWord 工作流关键词过滤，支持工作流 Id/name 模糊匹配
+     * Get <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p> 
+     * @return KeyWord <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
      */
     public String getKeyWord() {
         return this.KeyWord;
     }
 
     /**
-     * Set 工作流关键词过滤，支持工作流 Id/name 模糊匹配
-     * @param KeyWord 工作流关键词过滤，支持工作流 Id/name 模糊匹配
+     * Set <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
+     * @param KeyWord <p>工作流关键词过滤，支持工作流 Id/name 模糊匹配</p>
      */
     public void setKeyWord(String KeyWord) {
         this.KeyWord = KeyWord;
     }
 
     /**
-     * Get 排序项，可选CreateTime、TaskCount 
-     * @return SortItem 排序项，可选CreateTime、TaskCount
+     * Get <p>排序项，可选CreateTime、TaskCount</p> 
+     * @return SortItem <p>排序项，可选CreateTime、TaskCount</p>
      */
     public String getSortItem() {
         return this.SortItem;
     }
 
     /**
-     * Set 排序项，可选CreateTime、TaskCount
-     * @param SortItem 排序项，可选CreateTime、TaskCount
+     * Set <p>排序项，可选CreateTime、TaskCount</p>
+     * @param SortItem <p>排序项，可选CreateTime、TaskCount</p>
      */
     public void setSortItem(String SortItem) {
         this.SortItem = SortItem;
     }
 
     /**
-     * Get 排序方式，DESC或ASC, 大写 
-     * @return SortType 排序方式，DESC或ASC, 大写
+     * Get <p>排序方式，DESC或ASC, 大写</p> 
+     * @return SortType <p>排序方式，DESC或ASC, 大写</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序方式，DESC或ASC, 大写
-     * @param SortType 排序方式，DESC或ASC, 大写
+     * Set <p>排序方式，DESC或ASC, 大写</p>
+     * @param SortType <p>排序方式，DESC或ASC, 大写</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 创建人Id 
-     * @return CreateUserUin 创建人Id
+     * Get <p>创建人Id</p> 
+     * @return CreateUserUin <p>创建人Id</p>
      */
     public String getCreateUserUin() {
         return this.CreateUserUin;
     }
 
     /**
-     * Set 创建人Id
-     * @param CreateUserUin 创建人Id
+     * Set <p>创建人Id</p>
+     * @param CreateUserUin <p>创建人Id</p>
      */
     public void setCreateUserUin(String CreateUserUin) {
         this.CreateUserUin = CreateUserUin;
     }
 
     /**
-     * Get 更新时间，格式yyyy-MM-dd HH:mm:ss 
-     * @return ModifyTime 更新时间，格式yyyy-MM-dd HH:mm:ss
+     * Get <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p> 
+     * @return ModifyTime <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 更新时间，格式yyyy-MM-dd HH:mm:ss
-     * @param ModifyTime 更新时间，格式yyyy-MM-dd HH:mm:ss
+     * Set <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
+     * @param ModifyTime <p>更新时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间，格式yyyy-MM-dd HH:mm:ss 
-     * @return CreateTime 创建时间，格式yyyy-MM-dd HH:mm:ss
+     * Get <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，格式yyyy-MM-dd HH:mm:ss
-     * @param CreateTime 创建时间，格式yyyy-MM-dd HH:mm:ss
+     * Set <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>创建时间，格式yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

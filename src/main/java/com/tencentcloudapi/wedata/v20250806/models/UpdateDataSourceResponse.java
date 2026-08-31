@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateDataSourceResponse extends AbstractModel {
 
     /**
-    * 操作是否成功
+    * <p>操作是否成功</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateDataSourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作是否成功 
-     * @return Data 操作是否成功
+     * Get <p>操作是否成功</p> 
+     * @return Data <p>操作是否成功</p>
      */
     public DataSourceStatus getData() {
         return this.Data;
     }
 
     /**
-     * Set 操作是否成功
-     * @param Data 操作是否成功
+     * Set <p>操作是否成功</p>
+     * @param Data <p>操作是否成功</p>
      */
     public void setData(DataSourceStatus Data) {
         this.Data = Data;

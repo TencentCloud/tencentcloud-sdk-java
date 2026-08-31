@@ -28,20 +28,20 @@ public class ServerlessCcu extends AbstractModel {
     */
     @SerializedName("MinCcu")
     @Expose
-    private Long MinCcu;
+    private Float MinCcu;
 
     /**
     * <p>ccu最大值范围</p>
     */
     @SerializedName("MaxCcu")
     @Expose
-    private Long [] MaxCcu;
+    private Float [] MaxCcu;
 
     /**
      * Get <p>ccu最小值</p> 
      * @return MinCcu <p>ccu最小值</p>
      */
-    public Long getMinCcu() {
+    public Float getMinCcu() {
         return this.MinCcu;
     }
 
@@ -49,7 +49,7 @@ public class ServerlessCcu extends AbstractModel {
      * Set <p>ccu最小值</p>
      * @param MinCcu <p>ccu最小值</p>
      */
-    public void setMinCcu(Long MinCcu) {
+    public void setMinCcu(Float MinCcu) {
         this.MinCcu = MinCcu;
     }
 
@@ -57,7 +57,7 @@ public class ServerlessCcu extends AbstractModel {
      * Get <p>ccu最大值范围</p> 
      * @return MaxCcu <p>ccu最大值范围</p>
      */
-    public Long [] getMaxCcu() {
+    public Float [] getMaxCcu() {
         return this.MaxCcu;
     }
 
@@ -65,7 +65,7 @@ public class ServerlessCcu extends AbstractModel {
      * Set <p>ccu最大值范围</p>
      * @param MaxCcu <p>ccu最大值范围</p>
      */
-    public void setMaxCcu(Long [] MaxCcu) {
+    public void setMaxCcu(Float [] MaxCcu) {
         this.MaxCcu = MaxCcu;
     }
 
@@ -78,12 +78,12 @@ public class ServerlessCcu extends AbstractModel {
      */
     public ServerlessCcu(ServerlessCcu source) {
         if (source.MinCcu != null) {
-            this.MinCcu = new Long(source.MinCcu);
+            this.MinCcu = new Float(source.MinCcu);
         }
         if (source.MaxCcu != null) {
-            this.MaxCcu = new Long[source.MaxCcu.length];
+            this.MaxCcu = new Float[source.MaxCcu.length];
             for (int i = 0; i < source.MaxCcu.length; i++) {
-                this.MaxCcu[i] = new Long(source.MaxCcu[i]);
+                this.MaxCcu[i] = new Float(source.MaxCcu[i]);
             }
         }
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UserRoleListDataUserRoleInfo extends AbstractModel {
 
     /**
-    * 业务ID
+    * <p>业务ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 角色列表
+    * <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleList")
@@ -39,7 +39,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private UserRoleListDataRoleInfo [] RoleList;
 
     /**
-    * 角色ID列表
+    * <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleIdList")
@@ -47,28 +47,28 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Long [] RoleIdList;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("CorpId")
     @Expose
     private String CorpId;
 
     /**
-    * 邮箱
+    * <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
@@ -76,7 +76,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String Email;
 
     /**
-    * 创建人
+    * <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedUser")
@@ -84,7 +84,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String CreatedUser;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -92,7 +92,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String CreatedAt;
 
     /**
-    * 更新人
+    * <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedUser")
@@ -100,7 +100,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String UpdatedUser;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -108,7 +108,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String UpdatedAt;
 
     /**
-    * 最后一次登录时间
+    * <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastLogin")
@@ -116,7 +116,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String LastLogin;
 
     /**
-    * 账号状态
+    * <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -124,7 +124,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 手机号码
+    * <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneNumber")
@@ -132,7 +132,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String PhoneNumber;
 
     /**
-    * 手机号区号
+    * <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AreaCode")
@@ -140,7 +140,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String AreaCode;
 
     /**
-    * 是否为主账号
+    * <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RootAccount")
@@ -148,7 +148,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Boolean RootAccount;
 
     /**
-    * 是否为企业管理员
+    * <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorpAdmin")
@@ -156,7 +156,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Boolean CorpAdmin;
 
     /**
-    * 企微用户id
+    * <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserId")
@@ -164,7 +164,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String AppUserId;
 
     /**
-    * 昵称
+    * <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserAliasName")
@@ -172,7 +172,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String AppUserAliasName;
 
     /**
-    * 应用用户名
+    * <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppUserName")
@@ -180,7 +180,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String AppUserName;
 
     /**
-    * 是否在可见范围内
+    * <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InValidateAppRange")
@@ -188,7 +188,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Boolean InValidateAppRange;
 
     /**
-    * 用户openid
+    * <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppOpenUserId")
@@ -196,7 +196,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private String AppOpenUserId;
 
     /**
-    * 邮箱激活状态
+    * <p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmailActivationStatus")
@@ -204,7 +204,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Long EmailActivationStatus;
 
     /**
-    * 用户组信息
+    * <p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroupList")
@@ -212,25 +212,33 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private UserGroupDTO [] UserGroupList;
 
     /**
-     * Get 业务ID 
-     * @return Id 业务ID
+    * <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentityType")
+    @Expose
+    private String IdentityType;
+
+    /**
+     * Get <p>业务ID</p> 
+     * @return Id <p>业务ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 业务ID
-     * @param Id 业务ID
+     * Set <p>业务ID</p>
+     * @param Id <p>业务ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 角色列表
+     * Get <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleList 角色列表
+     * @return RoleList <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserRoleListDataRoleInfo [] getRoleList() {
@@ -238,9 +246,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 角色列表
+     * Set <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleList 角色列表
+     * @param RoleList <p>角色列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleList(UserRoleListDataRoleInfo [] RoleList) {
@@ -248,9 +256,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 角色ID列表
+     * Get <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleIdList 角色ID列表
+     * @return RoleIdList <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRoleIdList() {
@@ -258,9 +266,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 角色ID列表
+     * Set <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleIdList 角色ID列表
+     * @param RoleIdList <p>角色ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleIdList(Long [] RoleIdList) {
@@ -268,57 +276,57 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 企业ID 
-     * @return CorpId 企业ID
+     * Get <p>企业ID</p> 
+     * @return CorpId <p>企业ID</p>
      */
     public String getCorpId() {
         return this.CorpId;
     }
 
     /**
-     * Set 企业ID
-     * @param CorpId 企业ID
+     * Set <p>企业ID</p>
+     * @param CorpId <p>企业ID</p>
      */
     public void setCorpId(String CorpId) {
         this.CorpId = CorpId;
     }
 
     /**
-     * Get 邮箱
+     * Get <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Email 邮箱
+     * @return Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
@@ -326,9 +334,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 邮箱
+     * Set <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Email 邮箱
+     * @param Email <p>邮箱</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
@@ -336,9 +344,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建人
+     * Get <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedUser 创建人
+     * @return CreatedUser <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedUser() {
@@ -346,9 +354,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建人
+     * Set <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedUser 创建人
+     * @param CreatedUser <p>创建人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedUser(String CreatedUser) {
@@ -356,9 +364,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 创建时间
+     * @return CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -366,9 +374,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 创建时间
+     * @param CreatedAt <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -376,9 +384,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新人
+     * Get <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedUser 更新人
+     * @return UpdatedUser <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedUser() {
@@ -386,9 +394,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 更新人
+     * Set <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedUser 更新人
+     * @param UpdatedUser <p>更新人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedUser(String UpdatedUser) {
@@ -396,9 +404,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 更新时间
+     * @return UpdatedAt <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -406,9 +414,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 更新时间
+     * @param UpdatedAt <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -416,9 +424,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 最后一次登录时间
+     * Get <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastLogin 最后一次登录时间
+     * @return LastLogin <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastLogin() {
@@ -426,9 +434,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 最后一次登录时间
+     * Set <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastLogin 最后一次登录时间
+     * @param LastLogin <p>最后一次登录时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastLogin(String LastLogin) {
@@ -436,9 +444,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号状态
+     * Get <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 账号状态
+     * @return Status <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -446,9 +454,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 账号状态
+     * Set <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 账号状态
+     * @param Status <p>账号状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -456,9 +464,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 手机号码
+     * Get <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneNumber 手机号码
+     * @return PhoneNumber <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhoneNumber() {
@@ -466,9 +474,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 手机号码
+     * Set <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneNumber 手机号码
+     * @param PhoneNumber <p>手机号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -476,9 +484,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 手机号区号
+     * Get <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AreaCode 手机号区号
+     * @return AreaCode <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAreaCode() {
@@ -486,9 +494,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 手机号区号
+     * Set <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AreaCode 手机号区号
+     * @param AreaCode <p>手机号区号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAreaCode(String AreaCode) {
@@ -496,9 +504,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为主账号
+     * Get <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RootAccount 是否为主账号
+     * @return RootAccount <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRootAccount() {
@@ -506,9 +514,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否为主账号
+     * Set <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RootAccount 是否为主账号
+     * @param RootAccount <p>是否为主账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRootAccount(Boolean RootAccount) {
@@ -516,9 +524,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为企业管理员
+     * Get <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CorpAdmin 是否为企业管理员
+     * @return CorpAdmin <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCorpAdmin() {
@@ -526,9 +534,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否为企业管理员
+     * Set <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CorpAdmin 是否为企业管理员
+     * @param CorpAdmin <p>是否为企业管理员</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorpAdmin(Boolean CorpAdmin) {
@@ -536,9 +544,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 企微用户id
+     * Get <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserId 企微用户id
+     * @return AppUserId <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserId() {
@@ -546,9 +554,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 企微用户id
+     * Set <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserId 企微用户id
+     * @param AppUserId <p>企微用户id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserId(String AppUserId) {
@@ -556,9 +564,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 昵称
+     * Get <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserAliasName 昵称
+     * @return AppUserAliasName <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserAliasName() {
@@ -566,9 +574,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 昵称
+     * Set <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserAliasName 昵称
+     * @param AppUserAliasName <p>昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserAliasName(String AppUserAliasName) {
@@ -576,9 +584,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用用户名
+     * Get <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppUserName 应用用户名
+     * @return AppUserName <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppUserName() {
@@ -586,9 +594,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 应用用户名
+     * Set <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppUserName 应用用户名
+     * @param AppUserName <p>应用用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppUserName(String AppUserName) {
@@ -596,9 +604,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否在可见范围内
+     * Get <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InValidateAppRange 是否在可见范围内
+     * @return InValidateAppRange <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getInValidateAppRange() {
@@ -606,9 +614,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否在可见范围内
+     * Set <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InValidateAppRange 是否在可见范围内
+     * @param InValidateAppRange <p>是否在可见范围内</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInValidateAppRange(Boolean InValidateAppRange) {
@@ -616,9 +624,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户openid
+     * Get <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppOpenUserId 用户openid
+     * @return AppOpenUserId <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppOpenUserId() {
@@ -626,9 +634,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户openid
+     * Set <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppOpenUserId 用户openid
+     * @param AppOpenUserId <p>用户openid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppOpenUserId(String AppOpenUserId) {
@@ -636,9 +644,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 邮箱激活状态
+     * Get <p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EmailActivationStatus 邮箱激活状态
+     * @return EmailActivationStatus <p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEmailActivationStatus() {
@@ -646,9 +654,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 邮箱激活状态
+     * Set <p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EmailActivationStatus 邮箱激活状态
+     * @param EmailActivationStatus <p>邮箱激活状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmailActivationStatus(Long EmailActivationStatus) {
@@ -656,9 +664,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户组信息
+     * Get <p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserGroupList 用户组信息
+     * @return UserGroupList <p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserGroupDTO [] getUserGroupList() {
@@ -666,13 +674,33 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户组信息
+     * Set <p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserGroupList 用户组信息
+     * @param UserGroupList <p>用户组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroupList(UserGroupDTO [] UserGroupList) {
         this.UserGroupList = UserGroupList;
+    }
+
+    /**
+     * Get <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentityType <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdentityType() {
+        return this.IdentityType;
+    }
+
+    /**
+     * Set <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentityType <p>用户类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentityType(String IdentityType) {
+        this.IdentityType = IdentityType;
     }
 
     public UserRoleListDataUserRoleInfo() {
@@ -764,6 +792,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
                 this.UserGroupList[i] = new UserGroupDTO(source.UserGroupList[i]);
             }
         }
+        if (source.IdentityType != null) {
+            this.IdentityType = new String(source.IdentityType);
+        }
     }
 
 
@@ -795,6 +826,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
         this.setParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
         this.setParamArrayObj(map, prefix + "UserGroupList.", this.UserGroupList);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
 
     }
 }
