@@ -185,6 +185,13 @@ public class VatElectronicItemInfo extends AbstractModel {
     private String DateEnd;
 
     /**
+    * <p>车架号</p>
+    */
+    @SerializedName("VinNo")
+    @Expose
+    private String VinNo;
+
+    /**
      * Get <p>项目名称</p> 
      * @return Name <p>项目名称</p>
      */
@@ -552,6 +559,22 @@ public class VatElectronicItemInfo extends AbstractModel {
         this.DateEnd = DateEnd;
     }
 
+    /**
+     * Get <p>车架号</p> 
+     * @return VinNo <p>车架号</p>
+     */
+    public String getVinNo() {
+        return this.VinNo;
+    }
+
+    /**
+     * Set <p>车架号</p>
+     * @param VinNo <p>车架号</p>
+     */
+    public void setVinNo(String VinNo) {
+        this.VinNo = VinNo;
+    }
+
     public VatElectronicItemInfo() {
     }
 
@@ -629,6 +652,9 @@ public class VatElectronicItemInfo extends AbstractModel {
         if (source.DateEnd != null) {
             this.DateEnd = new String(source.DateEnd);
         }
+        if (source.VinNo != null) {
+            this.VinNo = new String(source.VinNo);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class VatElectronicItemInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TravelLevel", this.TravelLevel);
         this.setParamSimple(map, prefix + "DateStart", this.DateStart);
         this.setParamSimple(map, prefix + "DateEnd", this.DateEnd);
+        this.setParamSimple(map, prefix + "VinNo", this.VinNo);
 
     }
 }

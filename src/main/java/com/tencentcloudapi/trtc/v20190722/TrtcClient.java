@@ -149,6 +149,25 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *接口说明：
+用户通过本接口进行热词表的创建。
+
+• 默认最多可创建30个热词表。
+• 每个热词表最多可添加1000个词，每个词最长10个汉字或30个英文字符，不能超出限制。
+• 热词表可以通过数组或者本地文件形式上传。
+• 本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
+• 热词权重取值范围为[1,11]之间的整数或者100，权重越大代表该词被识别出来的概率越大。
+• 注意: 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+     * @param req CreateRecognizeVocabV3Request
+     * @return CreateRecognizeVocabV3Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecognizeVocabV3Response CreateRecognizeVocabV3(CreateRecognizeVocabV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRecognizeVocabV3", CreateRecognizeVocabV3Response.class);
+    }
+
+    /**
      *成功开启AI 内容理解任务后，可以使用此接口来停止进行内容识别。
      * @param req DeleteCloudModerationRequest
      * @return DeleteCloudModerationResponse
@@ -212,6 +231,18 @@ public class TrtcClient extends AbstractClient{
     public DeletePictureResponse DeletePicture(DeletePictureRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePicture", DeletePictureResponse.class);
+    }
+
+    /**
+     *接口说明：
+用户通过本接口进行热词表的删除。
+     * @param req DeleteRecognizeVocabV3Request
+     * @return DeleteRecognizeVocabV3Response
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecognizeVocabV3Response DeleteRecognizeVocabV3(DeleteRecognizeVocabV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRecognizeVocabV3", DeleteRecognizeVocabV3Response.class);
     }
 
     /**
@@ -704,6 +735,42 @@ peakCurrentUsers：峰值同时在线人数。
     }
 
     /**
+     *接口说明：
+用户通过本接口进行热词表的下载，获得词表权重文件形式的 base64 值，文件形式为通过 “|” 分割的词和权重，即 word|weight 的形式。
+     * @param req DownloadRecognizeVocabV3Request
+     * @return DownloadRecognizeVocabV3Response
+     * @throws TencentCloudSDKException
+     */
+    public DownloadRecognizeVocabV3Response DownloadRecognizeVocabV3(DownloadRecognizeVocabV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadRecognizeVocabV3", DownloadRecognizeVocabV3Response.class);
+    }
+
+    /**
+     *接口说明：
+用户通过本接口分页列举所有的热词表。
+     * @param req GetRecognizeVocabListV3Request
+     * @return GetRecognizeVocabListV3Response
+     * @throws TencentCloudSDKException
+     */
+    public GetRecognizeVocabListV3Response GetRecognizeVocabListV3(GetRecognizeVocabListV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRecognizeVocabListV3", GetRecognizeVocabListV3Response.class);
+    }
+
+    /**
+     *接口说明：
+用户根据词表的ID可以获取对应的热词表信息
+     * @param req GetRecognizeVocabV3Request
+     * @return GetRecognizeVocabV3Response
+     * @throws TencentCloudSDKException
+     */
+    public GetRecognizeVocabV3Response GetRecognizeVocabV3(GetRecognizeVocabV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRecognizeVocabV3", GetRecognizeVocabV3Response.class);
+    }
+
+    /**
      *成功开启AI 内容理解任务后，可以使用此接口来更新订阅黑白名单。
      * @param req ModifyCloudModerationRequest
      * @return ModifyCloudModerationResponse
@@ -778,6 +845,18 @@ peakCurrentUsers：峰值同时在线人数。
     public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(RemoveUserByStrRoomIdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveUserByStrRoomId", RemoveUserByStrRoomIdResponse.class);
+    }
+
+    /**
+     *接口说明：
+用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
+     * @param req SetVocabStateV3Request
+     * @return SetVocabStateV3Response
+     * @throws TencentCloudSDKException
+     */
+    public SetVocabStateV3Response SetVocabStateV3(SetVocabStateV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetVocabStateV3", SetVocabStateV3Response.class);
     }
 
     /**
@@ -1040,6 +1119,18 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
     public UpdatePublishCdnStreamResponse UpdatePublishCdnStream(UpdatePublishCdnStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePublishCdnStream", UpdatePublishCdnStreamResponse.class);
+    }
+
+    /**
+     *接口说明：
+用户通过本接口进行热词表的更新。
+     * @param req UpdateRecognizeVocabV3Request
+     * @return UpdateRecognizeVocabV3Response
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRecognizeVocabV3Response UpdateRecognizeVocabV3(UpdateRecognizeVocabV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateRecognizeVocabV3", UpdateRecognizeVocabV3Response.class);
     }
 
     /**

@@ -52,7 +52,7 @@ public class SetUserQuotaRequest extends AbstractModel {
     private Long CapacityHardLimit;
 
     /**
-    * <p>文件硬限制，单位个。设置范围1000-100000000</p>
+    * <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
     */
     @SerializedName("FileHardLimit")
     @Expose
@@ -130,16 +130,16 @@ public class SetUserQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>文件硬限制，单位个。设置范围1000-100000000</p> 
-     * @return FileHardLimit <p>文件硬限制，单位个。设置范围1000-100000000</p>
+     * Get <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p> 
+     * @return FileHardLimit <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
      */
     public Long getFileHardLimit() {
         return this.FileHardLimit;
     }
 
     /**
-     * Set <p>文件硬限制，单位个。设置范围1000-100000000</p>
-     * @param FileHardLimit <p>文件硬限制，单位个。设置范围1000-100000000</p>
+     * Set <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
+     * @param FileHardLimit <p>文件硬限制</p><p>取值范围：[1000, 1000000000]</p><p>单位：个</p><p>默认值：无默认值</p>
      */
     public void setFileHardLimit(Long FileHardLimit) {
         this.FileHardLimit = FileHardLimit;

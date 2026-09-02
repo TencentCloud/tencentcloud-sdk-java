@@ -24,578 +24,601 @@ import java.util.HashMap;
 public class NonTaxIncomeBill extends AbstractModel {
 
     /**
-    * 发票名称
+    * <p>发票名称</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 发票号码
+    * <p>发票号码</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 发票代码
+    * <p>发票代码</p>
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 校验码
+    * <p>校验码</p>
     */
     @SerializedName("CheckCode")
     @Expose
     private String CheckCode;
 
     /**
-    * 开票日期
+    * <p>开票日期</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 价税合计（小写）
+    * <p>价税合计（小写）</p>
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-    * 价税合计（大写）
+    * <p>价税合计（大写）</p>
     */
     @SerializedName("TotalCn")
     @Expose
     private String TotalCn;
 
     /**
-    * 交款人名称
+    * <p>交款人名称</p>
     */
     @SerializedName("Buyer")
     @Expose
     private String Buyer;
 
     /**
-    * 交款人纳税人识别号
+    * <p>交款人纳税人识别号</p>
     */
     @SerializedName("BuyerTaxID")
     @Expose
     private String BuyerTaxID;
 
     /**
-    * 收款人名称
+    * <p>收款人名称</p>
     */
     @SerializedName("Seller")
     @Expose
     private String Seller;
 
     /**
-    * 收款单位名称
+    * <p>收款单位名称</p>
     */
     @SerializedName("SellerCompany")
     @Expose
     private String SellerCompany;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 币种
+    * <p>币种</p>
     */
     @SerializedName("CurrencyCode")
     @Expose
     private String CurrencyCode;
 
     /**
-    * 复核人
+    * <p>复核人</p>
     */
     @SerializedName("Reviewer")
     @Expose
     private String Reviewer;
 
     /**
-    * 是否存在二维码（1：有，0：无）
+    * <p>是否存在二维码（1：有，0：无）</p>
     */
     @SerializedName("QRCodeMark")
     @Expose
     private Long QRCodeMark;
 
     /**
-    * 其他信息
+    * <p>其他信息</p>
     */
     @SerializedName("OtherInfo")
     @Expose
     private String OtherInfo;
 
     /**
-    * 缴款码
+    * <p>缴款码</p>
     */
     @SerializedName("PaymentCode")
     @Expose
     private String PaymentCode;
 
     /**
-    * 执收单位编码
+    * <p>执收单位编码</p>
     */
     @SerializedName("ReceiveUnitCode")
     @Expose
     private String ReceiveUnitCode;
 
     /**
-    * 执收单位名称
+    * <p>执收单位名称</p>
     */
     @SerializedName("Receiver")
     @Expose
     private String Receiver;
 
     /**
-    * 经办人
+    * <p>经办人</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 付款人账号
+    * <p>付款人账号</p>
     */
     @SerializedName("PayerAccount")
     @Expose
     private String PayerAccount;
 
     /**
-    * 付款人开户银行
+    * <p>付款人开户银行</p>
     */
     @SerializedName("PayerBank")
     @Expose
     private String PayerBank;
 
     /**
-    * 收款人账号
+    * <p>收款人账号</p>
     */
     @SerializedName("ReceiverAccount")
     @Expose
     private String ReceiverAccount;
 
     /**
-    * 收款人开户银行
+    * <p>收款人开户银行</p>
     */
     @SerializedName("ReceiverBank")
     @Expose
     private String ReceiverBank;
 
     /**
-    * 条目
+    * <p>条目</p>
     */
     @SerializedName("NonTaxItems")
     @Expose
     private NonTaxItem [] NonTaxItems;
 
     /**
-     * Get 发票名称 
-     * @return Title 发票名称
+    * <p>票据名称</p>
+    */
+    @SerializedName("BillName")
+    @Expose
+    private String BillName;
+
+    /**
+     * Get <p>发票名称</p> 
+     * @return Title <p>发票名称</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 发票名称
-     * @param Title 发票名称
+     * Set <p>发票名称</p>
+     * @param Title <p>发票名称</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 发票号码 
-     * @return Number 发票号码
+     * Get <p>发票号码</p> 
+     * @return Number <p>发票号码</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 发票号码
-     * @param Number 发票号码
+     * Set <p>发票号码</p>
+     * @param Number <p>发票号码</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 发票代码 
-     * @return Code 发票代码
+     * Get <p>发票代码</p> 
+     * @return Code <p>发票代码</p>
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 发票代码
-     * @param Code 发票代码
+     * Set <p>发票代码</p>
+     * @param Code <p>发票代码</p>
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 校验码 
-     * @return CheckCode 校验码
+     * Get <p>校验码</p> 
+     * @return CheckCode <p>校验码</p>
      */
     public String getCheckCode() {
         return this.CheckCode;
     }
 
     /**
-     * Set 校验码
-     * @param CheckCode 校验码
+     * Set <p>校验码</p>
+     * @param CheckCode <p>校验码</p>
      */
     public void setCheckCode(String CheckCode) {
         this.CheckCode = CheckCode;
     }
 
     /**
-     * Get 开票日期 
-     * @return Date 开票日期
+     * Get <p>开票日期</p> 
+     * @return Date <p>开票日期</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 开票日期
-     * @param Date 开票日期
+     * Set <p>开票日期</p>
+     * @param Date <p>开票日期</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 价税合计（小写） 
-     * @return Total 价税合计（小写）
+     * Get <p>价税合计（小写）</p> 
+     * @return Total <p>价税合计（小写）</p>
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 价税合计（小写）
-     * @param Total 价税合计（小写）
+     * Set <p>价税合计（小写）</p>
+     * @param Total <p>价税合计（小写）</p>
      */
     public void setTotal(String Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 价税合计（大写） 
-     * @return TotalCn 价税合计（大写）
+     * Get <p>价税合计（大写）</p> 
+     * @return TotalCn <p>价税合计（大写）</p>
      */
     public String getTotalCn() {
         return this.TotalCn;
     }
 
     /**
-     * Set 价税合计（大写）
-     * @param TotalCn 价税合计（大写）
+     * Set <p>价税合计（大写）</p>
+     * @param TotalCn <p>价税合计（大写）</p>
      */
     public void setTotalCn(String TotalCn) {
         this.TotalCn = TotalCn;
     }
 
     /**
-     * Get 交款人名称 
-     * @return Buyer 交款人名称
+     * Get <p>交款人名称</p> 
+     * @return Buyer <p>交款人名称</p>
      */
     public String getBuyer() {
         return this.Buyer;
     }
 
     /**
-     * Set 交款人名称
-     * @param Buyer 交款人名称
+     * Set <p>交款人名称</p>
+     * @param Buyer <p>交款人名称</p>
      */
     public void setBuyer(String Buyer) {
         this.Buyer = Buyer;
     }
 
     /**
-     * Get 交款人纳税人识别号 
-     * @return BuyerTaxID 交款人纳税人识别号
+     * Get <p>交款人纳税人识别号</p> 
+     * @return BuyerTaxID <p>交款人纳税人识别号</p>
      */
     public String getBuyerTaxID() {
         return this.BuyerTaxID;
     }
 
     /**
-     * Set 交款人纳税人识别号
-     * @param BuyerTaxID 交款人纳税人识别号
+     * Set <p>交款人纳税人识别号</p>
+     * @param BuyerTaxID <p>交款人纳税人识别号</p>
      */
     public void setBuyerTaxID(String BuyerTaxID) {
         this.BuyerTaxID = BuyerTaxID;
     }
 
     /**
-     * Get 收款人名称 
-     * @return Seller 收款人名称
+     * Get <p>收款人名称</p> 
+     * @return Seller <p>收款人名称</p>
      */
     public String getSeller() {
         return this.Seller;
     }
 
     /**
-     * Set 收款人名称
-     * @param Seller 收款人名称
+     * Set <p>收款人名称</p>
+     * @param Seller <p>收款人名称</p>
      */
     public void setSeller(String Seller) {
         this.Seller = Seller;
     }
 
     /**
-     * Get 收款单位名称 
-     * @return SellerCompany 收款单位名称
+     * Get <p>收款单位名称</p> 
+     * @return SellerCompany <p>收款单位名称</p>
      */
     public String getSellerCompany() {
         return this.SellerCompany;
     }
 
     /**
-     * Set 收款单位名称
-     * @param SellerCompany 收款单位名称
+     * Set <p>收款单位名称</p>
+     * @param SellerCompany <p>收款单位名称</p>
      */
     public void setSellerCompany(String SellerCompany) {
         this.SellerCompany = SellerCompany;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 币种 
-     * @return CurrencyCode 币种
+     * Get <p>币种</p> 
+     * @return CurrencyCode <p>币种</p>
      */
     public String getCurrencyCode() {
         return this.CurrencyCode;
     }
 
     /**
-     * Set 币种
-     * @param CurrencyCode 币种
+     * Set <p>币种</p>
+     * @param CurrencyCode <p>币种</p>
      */
     public void setCurrencyCode(String CurrencyCode) {
         this.CurrencyCode = CurrencyCode;
     }
 
     /**
-     * Get 复核人 
-     * @return Reviewer 复核人
+     * Get <p>复核人</p> 
+     * @return Reviewer <p>复核人</p>
      */
     public String getReviewer() {
         return this.Reviewer;
     }
 
     /**
-     * Set 复核人
-     * @param Reviewer 复核人
+     * Set <p>复核人</p>
+     * @param Reviewer <p>复核人</p>
      */
     public void setReviewer(String Reviewer) {
         this.Reviewer = Reviewer;
     }
 
     /**
-     * Get 是否存在二维码（1：有，0：无） 
-     * @return QRCodeMark 是否存在二维码（1：有，0：无）
+     * Get <p>是否存在二维码（1：有，0：无）</p> 
+     * @return QRCodeMark <p>是否存在二维码（1：有，0：无）</p>
      */
     public Long getQRCodeMark() {
         return this.QRCodeMark;
     }
 
     /**
-     * Set 是否存在二维码（1：有，0：无）
-     * @param QRCodeMark 是否存在二维码（1：有，0：无）
+     * Set <p>是否存在二维码（1：有，0：无）</p>
+     * @param QRCodeMark <p>是否存在二维码（1：有，0：无）</p>
      */
     public void setQRCodeMark(Long QRCodeMark) {
         this.QRCodeMark = QRCodeMark;
     }
 
     /**
-     * Get 其他信息 
-     * @return OtherInfo 其他信息
+     * Get <p>其他信息</p> 
+     * @return OtherInfo <p>其他信息</p>
      */
     public String getOtherInfo() {
         return this.OtherInfo;
     }
 
     /**
-     * Set 其他信息
-     * @param OtherInfo 其他信息
+     * Set <p>其他信息</p>
+     * @param OtherInfo <p>其他信息</p>
      */
     public void setOtherInfo(String OtherInfo) {
         this.OtherInfo = OtherInfo;
     }
 
     /**
-     * Get 缴款码 
-     * @return PaymentCode 缴款码
+     * Get <p>缴款码</p> 
+     * @return PaymentCode <p>缴款码</p>
      */
     public String getPaymentCode() {
         return this.PaymentCode;
     }
 
     /**
-     * Set 缴款码
-     * @param PaymentCode 缴款码
+     * Set <p>缴款码</p>
+     * @param PaymentCode <p>缴款码</p>
      */
     public void setPaymentCode(String PaymentCode) {
         this.PaymentCode = PaymentCode;
     }
 
     /**
-     * Get 执收单位编码 
-     * @return ReceiveUnitCode 执收单位编码
+     * Get <p>执收单位编码</p> 
+     * @return ReceiveUnitCode <p>执收单位编码</p>
      */
     public String getReceiveUnitCode() {
         return this.ReceiveUnitCode;
     }
 
     /**
-     * Set 执收单位编码
-     * @param ReceiveUnitCode 执收单位编码
+     * Set <p>执收单位编码</p>
+     * @param ReceiveUnitCode <p>执收单位编码</p>
      */
     public void setReceiveUnitCode(String ReceiveUnitCode) {
         this.ReceiveUnitCode = ReceiveUnitCode;
     }
 
     /**
-     * Get 执收单位名称 
-     * @return Receiver 执收单位名称
+     * Get <p>执收单位名称</p> 
+     * @return Receiver <p>执收单位名称</p>
      */
     public String getReceiver() {
         return this.Receiver;
     }
 
     /**
-     * Set 执收单位名称
-     * @param Receiver 执收单位名称
+     * Set <p>执收单位名称</p>
+     * @param Receiver <p>执收单位名称</p>
      */
     public void setReceiver(String Receiver) {
         this.Receiver = Receiver;
     }
 
     /**
-     * Get 经办人 
-     * @return Operator 经办人
+     * Get <p>经办人</p> 
+     * @return Operator <p>经办人</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 经办人
-     * @param Operator 经办人
+     * Set <p>经办人</p>
+     * @param Operator <p>经办人</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 付款人账号 
-     * @return PayerAccount 付款人账号
+     * Get <p>付款人账号</p> 
+     * @return PayerAccount <p>付款人账号</p>
      */
     public String getPayerAccount() {
         return this.PayerAccount;
     }
 
     /**
-     * Set 付款人账号
-     * @param PayerAccount 付款人账号
+     * Set <p>付款人账号</p>
+     * @param PayerAccount <p>付款人账号</p>
      */
     public void setPayerAccount(String PayerAccount) {
         this.PayerAccount = PayerAccount;
     }
 
     /**
-     * Get 付款人开户银行 
-     * @return PayerBank 付款人开户银行
+     * Get <p>付款人开户银行</p> 
+     * @return PayerBank <p>付款人开户银行</p>
      */
     public String getPayerBank() {
         return this.PayerBank;
     }
 
     /**
-     * Set 付款人开户银行
-     * @param PayerBank 付款人开户银行
+     * Set <p>付款人开户银行</p>
+     * @param PayerBank <p>付款人开户银行</p>
      */
     public void setPayerBank(String PayerBank) {
         this.PayerBank = PayerBank;
     }
 
     /**
-     * Get 收款人账号 
-     * @return ReceiverAccount 收款人账号
+     * Get <p>收款人账号</p> 
+     * @return ReceiverAccount <p>收款人账号</p>
      */
     public String getReceiverAccount() {
         return this.ReceiverAccount;
     }
 
     /**
-     * Set 收款人账号
-     * @param ReceiverAccount 收款人账号
+     * Set <p>收款人账号</p>
+     * @param ReceiverAccount <p>收款人账号</p>
      */
     public void setReceiverAccount(String ReceiverAccount) {
         this.ReceiverAccount = ReceiverAccount;
     }
 
     /**
-     * Get 收款人开户银行 
-     * @return ReceiverBank 收款人开户银行
+     * Get <p>收款人开户银行</p> 
+     * @return ReceiverBank <p>收款人开户银行</p>
      */
     public String getReceiverBank() {
         return this.ReceiverBank;
     }
 
     /**
-     * Set 收款人开户银行
-     * @param ReceiverBank 收款人开户银行
+     * Set <p>收款人开户银行</p>
+     * @param ReceiverBank <p>收款人开户银行</p>
      */
     public void setReceiverBank(String ReceiverBank) {
         this.ReceiverBank = ReceiverBank;
     }
 
     /**
-     * Get 条目 
-     * @return NonTaxItems 条目
+     * Get <p>条目</p> 
+     * @return NonTaxItems <p>条目</p>
      */
     public NonTaxItem [] getNonTaxItems() {
         return this.NonTaxItems;
     }
 
     /**
-     * Set 条目
-     * @param NonTaxItems 条目
+     * Set <p>条目</p>
+     * @param NonTaxItems <p>条目</p>
      */
     public void setNonTaxItems(NonTaxItem [] NonTaxItems) {
         this.NonTaxItems = NonTaxItems;
+    }
+
+    /**
+     * Get <p>票据名称</p> 
+     * @return BillName <p>票据名称</p>
+     */
+    public String getBillName() {
+        return this.BillName;
+    }
+
+    /**
+     * Set <p>票据名称</p>
+     * @param BillName <p>票据名称</p>
+     */
+    public void setBillName(String BillName) {
+        this.BillName = BillName;
     }
 
     public NonTaxIncomeBill() {
@@ -684,6 +707,9 @@ public class NonTaxIncomeBill extends AbstractModel {
                 this.NonTaxItems[i] = new NonTaxItem(source.NonTaxItems[i]);
             }
         }
+        if (source.BillName != null) {
+            this.BillName = new String(source.BillName);
+        }
     }
 
 
@@ -716,6 +742,7 @@ public class NonTaxIncomeBill extends AbstractModel {
         this.setParamSimple(map, prefix + "ReceiverAccount", this.ReceiverAccount);
         this.setParamSimple(map, prefix + "ReceiverBank", this.ReceiverBank);
         this.setParamArrayObj(map, prefix + "NonTaxItems.", this.NonTaxItems);
+        this.setParamSimple(map, prefix + "BillName", this.BillName);
 
     }
 }

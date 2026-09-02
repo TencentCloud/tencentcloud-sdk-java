@@ -39,6 +39,14 @@ public class ExecutePGSqlResponse extends AbstractModel {
     private String [] Columns;
 
     /**
+    * <p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColumnTypes")
+    @Expose
+    private String [] ColumnTypes;
+
+    /**
     * <p>数据行。每一行数据都是一个JSON串，将JSON进行反序列化将得到了每列的值。值可能是 null 或者 字符串，如果是 null 说明该列的值为 &lt;null&gt;，如果是字符串则为该列的值的字符串表示形式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -94,6 +102,26 @@ public class ExecutePGSqlResponse extends AbstractModel {
      */
     public void setColumns(String [] Columns) {
         this.Columns = Columns;
+    }
+
+    /**
+     * Get <p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColumnTypes <p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getColumnTypes() {
+        return this.ColumnTypes;
+    }
+
+    /**
+     * Set <p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnTypes <p>字段类型名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumnTypes(String [] ColumnTypes) {
+        this.ColumnTypes = ColumnTypes;
     }
 
     /**
@@ -165,6 +193,12 @@ public class ExecutePGSqlResponse extends AbstractModel {
                 this.Columns[i] = new String(source.Columns[i]);
             }
         }
+        if (source.ColumnTypes != null) {
+            this.ColumnTypes = new String[source.ColumnTypes.length];
+            for (int i = 0; i < source.ColumnTypes.length; i++) {
+                this.ColumnTypes[i] = new String(source.ColumnTypes[i]);
+            }
+        }
         if (source.Rows != null) {
             this.Rows = new String[source.Rows.length];
             for (int i = 0; i < source.Rows.length; i++) {
@@ -186,6 +220,7 @@ public class ExecutePGSqlResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AffectedRows", this.AffectedRows);
         this.setParamArraySimple(map, prefix + "Columns.", this.Columns);
+        this.setParamArraySimple(map, prefix + "ColumnTypes.", this.ColumnTypes);
         this.setParamArraySimple(map, prefix + "Rows.", this.Rows);
         this.setParamSimple(map, prefix + "ExecutionTimeMs", this.ExecutionTimeMs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

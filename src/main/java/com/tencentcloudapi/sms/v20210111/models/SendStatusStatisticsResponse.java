@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SendStatusStatisticsResponse extends AbstractModel {
 
     /**
-    * 发送数据统计响应包体。
+    * <p>发送数据统计响应包体。</p>
     */
     @SerializedName("SendStatusStatistics")
     @Expose
@@ -38,16 +38,16 @@ public class SendStatusStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发送数据统计响应包体。 
-     * @return SendStatusStatistics 发送数据统计响应包体。
+     * Get <p>发送数据统计响应包体。</p> 
+     * @return SendStatusStatistics <p>发送数据统计响应包体。</p>
      */
     public SendStatusStatistics getSendStatusStatistics() {
         return this.SendStatusStatistics;
     }
 
     /**
-     * Set 发送数据统计响应包体。
-     * @param SendStatusStatistics 发送数据统计响应包体。
+     * Set <p>发送数据统计响应包体。</p>
+     * @param SendStatusStatistics <p>发送数据统计响应包体。</p>
      */
     public void setSendStatusStatistics(SendStatusStatistics SendStatusStatistics) {
         this.SendStatusStatistics = SendStatusStatistics;

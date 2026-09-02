@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMediaMetaDataResponse extends AbstractModel {
 
     /**
-    * 媒体元信息。
+    * <p>媒体元信息。</p>
     */
     @SerializedName("MetaData")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMediaMetaDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体元信息。 
-     * @return MetaData 媒体元信息。
+     * Get <p>媒体元信息。</p> 
+     * @return MetaData <p>媒体元信息。</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 媒体元信息。
-     * @param MetaData 媒体元信息。
+     * Set <p>媒体元信息。</p>
+     * @param MetaData <p>媒体元信息。</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

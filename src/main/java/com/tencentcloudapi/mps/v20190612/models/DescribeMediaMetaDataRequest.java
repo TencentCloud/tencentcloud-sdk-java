@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeMediaMetaDataRequest extends AbstractModel {
 
     /**
-    * 需要获取元信息的文件输入信息。
+    * <p>需要获取元信息的文件输入信息。</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-     * Get 需要获取元信息的文件输入信息。 
-     * @return InputInfo 需要获取元信息的文件输入信息。
+    * <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+     * Get <p>需要获取元信息的文件输入信息。</p> 
+     * @return InputInfo <p>需要获取元信息的文件输入信息。</p>
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 需要获取元信息的文件输入信息。
-     * @param InputInfo 需要获取元信息的文件输入信息。
+     * Set <p>需要获取元信息的文件输入信息。</p>
+     * @param InputInfo <p>需要获取元信息的文件输入信息。</p>
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
+    }
+
+    /**
+     * Get <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul> 
+     * @return Mode <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+     * @param Mode <p>指定为slow时，增加接口超时时间</p><p>枚举值：</p><ul><li>slow： 增加接口超时时间</li></ul>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     public DescribeMediaMetaDataRequest() {
@@ -57,6 +80,9 @@ public class DescribeMediaMetaDataRequest extends AbstractModel {
         if (source.InputInfo != null) {
             this.InputInfo = new MediaInputInfo(source.InputInfo);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeMediaMetaDataRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
 
     }
 }

@@ -302,6 +302,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *根据链路查询目标服务的上下游相关服务
+     * @param req DescribeRelatedServicesOnTraceRequest
+     * @return DescribeRelatedServicesOnTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelatedServicesOnTraceResponse DescribeRelatedServicesOnTrace(DescribeRelatedServicesOnTraceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRelatedServicesOnTrace", DescribeRelatedServicesOnTraceResponse.class);
+    }
+
+    /**
      *应用概览数据拉取
      * @param req DescribeServiceOverviewRequest
      * @return DescribeServiceOverviewResponse
