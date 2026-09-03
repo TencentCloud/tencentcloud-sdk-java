@@ -115,6 +115,13 @@ public class EndpointDetail extends AbstractModel {
     private Long RPM;
 
     /**
+    * <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+    */
+    @SerializedName("ModelStatus")
+    @Expose
+    private String ModelStatus;
+
+    /**
      * Get <p>推理服务 ID。</p> 
      * @return EndpointId <p>推理服务 ID。</p>
      */
@@ -322,6 +329,22 @@ public class EndpointDetail extends AbstractModel {
         this.RPM = RPM;
     }
 
+    /**
+     * Get <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul> 
+     * @return ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+     */
+    public String getModelStatus() {
+        return this.ModelStatus;
+    }
+
+    /**
+     * Set <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+     * @param ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+     */
+    public void setModelStatus(String ModelStatus) {
+        this.ModelStatus = ModelStatus;
+    }
+
     public EndpointDetail() {
     }
 
@@ -369,6 +392,9 @@ public class EndpointDetail extends AbstractModel {
         if (source.RPM != null) {
             this.RPM = new Long(source.RPM);
         }
+        if (source.ModelStatus != null) {
+            this.ModelStatus = new String(source.ModelStatus);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class EndpointDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "TPM", this.TPM);
         this.setParamSimple(map, prefix + "AutoAdjustQuota", this.AutoAdjustQuota);
         this.setParamSimple(map, prefix + "RPM", this.RPM);
+        this.setParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
 
     }
 }

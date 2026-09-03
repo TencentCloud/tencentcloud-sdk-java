@@ -24,30 +24,28 @@ import java.util.HashMap;
 public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
-    * 原价，单位为元。
+    * <p>原价，单位为元。</p>
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * 折扣价，单位为元。
+    * <p>折扣价，单位为元。</p>
     */
     @SerializedName("DiscountCost")
     @Expose
     private String DiscountCost;
 
     /**
-    * 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+    * <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 询价的节点规格。
+    * <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceSpec")
@@ -55,7 +53,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     private PriceResource PriceSpec;
 
     /**
-    * 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+    * <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultipleEmrPrice")
@@ -70,65 +68,57 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原价，单位为元。 
-     * @return OriginalCost 原价，单位为元。
+     * Get <p>原价，单位为元。</p> 
+     * @return OriginalCost <p>原价，单位为元。</p>
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set 原价，单位为元。
-     * @param OriginalCost 原价，单位为元。
+     * Set <p>原价，单位为元。</p>
+     * @param OriginalCost <p>原价，单位为元。</p>
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get 折扣价，单位为元。 
-     * @return DiscountCost 折扣价，单位为元。
+     * Get <p>折扣价，单位为元。</p> 
+     * @return DiscountCost <p>折扣价，单位为元。</p>
      */
     public String getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set 折扣价，单位为元。
-     * @param DiscountCost 折扣价，单位为元。
+     * Set <p>折扣价，单位为元。</p>
+     * @param DiscountCost <p>折扣价，单位为元。</p>
      */
     public void setDiscountCost(String DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li> 
-     * @return Unit 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * Get <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li> 
+     * @return Unit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
-     * @param Unit 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * Set <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
+     * @param Unit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。</li><li>m：表示月份。</li>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 询价的节点规格。
+     * Get <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PriceSpec 询价的节点规格。
+     * @return PriceSpec <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PriceResource getPriceSpec() {
@@ -136,9 +126,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 询价的节点规格。
+     * Set <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PriceSpec 询价的节点规格。
+     * @param PriceSpec <p>询价的节点规格。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceSpec(PriceResource PriceSpec) {
@@ -146,9 +136,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * Get <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * @return MultipleEmrPrice <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EmrPrice [] getMultipleEmrPrice() {
@@ -156,9 +146,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * Set <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * @param MultipleEmrPrice <p>对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultipleEmrPrice(EmrPrice [] MultipleEmrPrice) {

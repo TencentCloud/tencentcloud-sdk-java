@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AgentAppMcpServerDTO extends AbstractModel {
 
     /**
-    * mcp server id
+    * <p>mcp server id</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 是否需要鉴权
+    * <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedAuth")
@@ -39,7 +39,7 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     private Boolean NeedAuth;
 
     /**
-    * 凭据代填的ID
+    * <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentCredentialID")
@@ -47,7 +47,7 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     private String AgentCredentialID;
 
     /**
-    * 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+    * <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSEResourceIdentifier")
@@ -55,7 +55,7 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     private String SSEResourceIdentifier;
 
     /**
-    * 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+    * <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamableResourceIdentifier")
@@ -63,65 +63,73 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     private String StreamableResourceIdentifier;
 
     /**
-     * Get mcp server id 
-     * @return ID mcp server id
+     * Get <p>mcp server id</p> 
+     * @return ID <p>mcp server id</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set mcp server id
-     * @param ID mcp server id
+     * Set <p>mcp server id</p>
+     * @param ID <p>mcp server id</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 是否需要鉴权
+     * Get <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NeedAuth 是否需要鉴权
+     * @return NeedAuth <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getNeedAuth() {
         return this.NeedAuth;
     }
 
     /**
-     * Set 是否需要鉴权
+     * Set <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NeedAuth 是否需要鉴权
+     * @param NeedAuth <p>是否需要鉴权（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setNeedAuth(Boolean NeedAuth) {
         this.NeedAuth = NeedAuth;
     }
 
     /**
-     * Get 凭据代填的ID
+     * Get <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentCredentialID 凭据代填的ID
+     * @return AgentCredentialID <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getAgentCredentialID() {
         return this.AgentCredentialID;
     }
 
     /**
-     * Set 凭据代填的ID
+     * Set <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentCredentialID 凭据代填的ID
+     * @param AgentCredentialID <p>凭据代填的ID（已废弃，请勿使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAgentCredentialID(String AgentCredentialID) {
         this.AgentCredentialID = AgentCredentialID;
     }
 
     /**
-     * Get 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * Get <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SSEResourceIdentifier 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @return SSEResourceIdentifier <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSSEResourceIdentifier() {
@@ -129,9 +137,9 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     }
 
     /**
-     * Set 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * Set <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SSEResourceIdentifier 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @param SSEResourceIdentifier <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSEResourceIdentifier(String SSEResourceIdentifier) {
@@ -139,9 +147,9 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     }
 
     /**
-     * Get 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * Get <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StreamableResourceIdentifier 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @return StreamableResourceIdentifier <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamableResourceIdentifier() {
@@ -149,9 +157,9 @@ public class AgentAppMcpServerDTO extends AbstractModel {
     }
 
     /**
-     * Set 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * Set <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StreamableResourceIdentifier 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @param StreamableResourceIdentifier <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamableResourceIdentifier(String StreamableResourceIdentifier) {

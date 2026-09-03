@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeLocalAccountAccountGroupsData extends AbstractModel {
 
     /**
-    * 组Id(只支持32位)
+    * <p>组Id(只支持32位)</p>
     */
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
 
     /**
-     * Get 组Id(只支持32位) 
-     * @return AccountGroupId 组Id(只支持32位)
+     * Get <p>组Id(只支持32位)</p> 
+     * @return AccountGroupId <p>组Id(只支持32位)</p>
      */
     public Long getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set 组Id(只支持32位)
-     * @param AccountGroupId 组Id(只支持32位)
+     * Set <p>组Id(只支持32位)</p>
+     * @param AccountGroupId <p>组Id(只支持32位)</p>
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;

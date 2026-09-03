@@ -560,6 +560,28 @@ public class ServiceVO extends AbstractModel {
     private Long McpServerNum;
 
     /**
+    * <p>凭据ID</p>
+    */
+    @SerializedName("CredentialID")
+    @Expose
+    private String CredentialID;
+
+    /**
+    * <p>凭据名称</p>
+    */
+    @SerializedName("CredentialName")
+    @Expose
+    private String CredentialName;
+
+    /**
+    * <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestProtocolType")
+    @Expose
+    private String RequestProtocolType;
+
+    /**
      * Get <p>实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceID <p>实例</p>
@@ -1935,6 +1957,58 @@ public class ServiceVO extends AbstractModel {
         this.McpServerNum = McpServerNum;
     }
 
+    /**
+     * Get <p>凭据ID</p> 
+     * @return CredentialID <p>凭据ID</p>
+     */
+    public String getCredentialID() {
+        return this.CredentialID;
+    }
+
+    /**
+     * Set <p>凭据ID</p>
+     * @param CredentialID <p>凭据ID</p>
+     */
+    public void setCredentialID(String CredentialID) {
+        this.CredentialID = CredentialID;
+    }
+
+    /**
+     * Get <p>凭据名称</p> 
+     * @return CredentialName <p>凭据名称</p>
+     */
+    public String getCredentialName() {
+        return this.CredentialName;
+    }
+
+    /**
+     * Set <p>凭据名称</p>
+     * @param CredentialName <p>凭据名称</p>
+     */
+    public void setCredentialName(String CredentialName) {
+        this.CredentialName = CredentialName;
+    }
+
+    /**
+     * Get <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestProtocolType() {
+        return this.RequestProtocolType;
+    }
+
+    /**
+     * Set <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestProtocolType(String RequestProtocolType) {
+        this.RequestProtocolType = RequestProtocolType;
+    }
+
     public ServiceVO() {
     }
 
@@ -2180,6 +2254,15 @@ public class ServiceVO extends AbstractModel {
         if (source.McpServerNum != null) {
             this.McpServerNum = new Long(source.McpServerNum);
         }
+        if (source.CredentialID != null) {
+            this.CredentialID = new String(source.CredentialID);
+        }
+        if (source.CredentialName != null) {
+            this.CredentialName = new String(source.CredentialName);
+        }
+        if (source.RequestProtocolType != null) {
+            this.RequestProtocolType = new String(source.RequestProtocolType);
+        }
     }
 
 
@@ -2254,6 +2337,9 @@ public class ServiceVO extends AbstractModel {
         this.setParamObj(map, prefix + "CustomMatch.", this.CustomMatch);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "McpServerNum", this.McpServerNum);
+        this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
+        this.setParamSimple(map, prefix + "CredentialName", this.CredentialName);
+        this.setParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
 
     }
 }

@@ -241,6 +241,20 @@ public class CreateModelServiceRequest extends AbstractModel {
     private TaskComplexityRouteDTO TaskComplexityRoute;
 
     /**
+    * <p>访问域名</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>访问协议</p>
+    */
+    @SerializedName("RequestProtocolType")
+    @Expose
+    private String RequestProtocolType;
+
+    /**
      * Get <p>实例</p> 
      * @return InstanceID <p>实例</p>
      */
@@ -736,6 +750,38 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.TaskComplexityRoute = TaskComplexityRoute;
     }
 
+    /**
+     * Get <p>访问域名</p> 
+     * @return Domain <p>访问域名</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>访问域名</p>
+     * @param Domain <p>访问域名</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>访问协议</p> 
+     * @return RequestProtocolType <p>访问协议</p>
+     */
+    public String getRequestProtocolType() {
+        return this.RequestProtocolType;
+    }
+
+    /**
+     * Set <p>访问协议</p>
+     * @param RequestProtocolType <p>访问协议</p>
+     */
+    public void setRequestProtocolType(String RequestProtocolType) {
+        this.RequestProtocolType = RequestProtocolType;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -855,6 +901,12 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.TaskComplexityRoute != null) {
             this.TaskComplexityRoute = new TaskComplexityRouteDTO(source.TaskComplexityRoute);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RequestProtocolType != null) {
+            this.RequestProtocolType = new String(source.RequestProtocolType);
+        }
     }
 
 
@@ -893,6 +945,8 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteStrategy", this.RouteStrategy);
         this.setParamArrayObj(map, prefix + "TokenLengthRoute.", this.TokenLengthRoute);
         this.setParamObj(map, prefix + "TaskComplexityRoute.", this.TaskComplexityRoute);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
 
     }
 }

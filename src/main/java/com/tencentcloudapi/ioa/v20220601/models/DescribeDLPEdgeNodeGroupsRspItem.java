@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class DescribeDLPEdgeNodeGroupsRspItem extends AbstractModel {
 
     /**
-    * 自增id，数据库中唯一
+    * <p>自增id，数据库中唯一</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 节点分组名称
+    * <p>节点分组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 节点分组id
+    * <p>节点分组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 包含边缘节点数量
+    * <p>包含边缘节点数量</p>
     */
     @SerializedName("EdgeCount")
     @Expose
     private Long EdgeCount;
 
     /**
-     * Get 自增id，数据库中唯一 
-     * @return Id 自增id，数据库中唯一
+    * <p>分组中英文</p>
+    */
+    @SerializedName("GroupNameI18n")
+    @Expose
+    private I18nString [] GroupNameI18n;
+
+    /**
+     * Get <p>自增id，数据库中唯一</p> 
+     * @return Id <p>自增id，数据库中唯一</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 自增id，数据库中唯一
-     * @param Id 自增id，数据库中唯一
+     * Set <p>自增id，数据库中唯一</p>
+     * @param Id <p>自增id，数据库中唯一</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 节点分组名称 
-     * @return GroupName 节点分组名称
+     * Get <p>节点分组名称</p> 
+     * @return GroupName <p>节点分组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 节点分组名称
-     * @param GroupName 节点分组名称
+     * Set <p>节点分组名称</p>
+     * @param GroupName <p>节点分组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 节点分组id 
-     * @return GroupId 节点分组id
+     * Get <p>节点分组id</p> 
+     * @return GroupId <p>节点分组id</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 节点分组id
-     * @param GroupId 节点分组id
+     * Set <p>节点分组id</p>
+     * @param GroupId <p>节点分组id</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 包含边缘节点数量 
-     * @return EdgeCount 包含边缘节点数量
+     * Get <p>包含边缘节点数量</p> 
+     * @return EdgeCount <p>包含边缘节点数量</p>
      */
     public Long getEdgeCount() {
         return this.EdgeCount;
     }
 
     /**
-     * Set 包含边缘节点数量
-     * @param EdgeCount 包含边缘节点数量
+     * Set <p>包含边缘节点数量</p>
+     * @param EdgeCount <p>包含边缘节点数量</p>
      */
     public void setEdgeCount(Long EdgeCount) {
         this.EdgeCount = EdgeCount;
+    }
+
+    /**
+     * Get <p>分组中英文</p> 
+     * @return GroupNameI18n <p>分组中英文</p>
+     */
+    public I18nString [] getGroupNameI18n() {
+        return this.GroupNameI18n;
+    }
+
+    /**
+     * Set <p>分组中英文</p>
+     * @param GroupNameI18n <p>分组中英文</p>
+     */
+    public void setGroupNameI18n(I18nString [] GroupNameI18n) {
+        this.GroupNameI18n = GroupNameI18n;
     }
 
     public DescribeDLPEdgeNodeGroupsRspItem() {
@@ -135,6 +158,12 @@ public class DescribeDLPEdgeNodeGroupsRspItem extends AbstractModel {
         if (source.EdgeCount != null) {
             this.EdgeCount = new Long(source.EdgeCount);
         }
+        if (source.GroupNameI18n != null) {
+            this.GroupNameI18n = new I18nString[source.GroupNameI18n.length];
+            for (int i = 0; i < source.GroupNameI18n.length; i++) {
+                this.GroupNameI18n[i] = new I18nString(source.GroupNameI18n[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class DescribeDLPEdgeNodeGroupsRspItem extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "EdgeCount", this.EdgeCount);
+        this.setParamArrayObj(map, prefix + "GroupNameI18n.", this.GroupNameI18n);
 
     }
 }

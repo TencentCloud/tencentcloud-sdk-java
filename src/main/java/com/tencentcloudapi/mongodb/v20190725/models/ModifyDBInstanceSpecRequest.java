@@ -101,7 +101,7 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-    * <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+    * <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.LD.T1：本地盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T1。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
     */
     @SerializedName("MachineCode")
     @Expose
@@ -295,16 +295,16 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol> 
-     * @return MachineCode <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+     * Get <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.LD.T1：本地盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T1。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol> 
+     * @return MachineCode <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.LD.T1：本地盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T1。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
-     * @param MachineCode <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>GE.CD.T2：云盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>GE.CD.T1：云盘（通用I型），预计将逐步售罄，建议选择通用II型。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择通用II型。</li><li>HCD：云盘（云盘版），已售罄，建议选择通用II型。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+     * Set <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.LD.T1：本地盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T1。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
+     * @param MachineCode <p>实例配置变更后的产品规格类型。该参数为空值时，默认取实例当前的产品规格类型。<br>当前支持的产品规格类型如下：<br>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.LD.T1：本地盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T1。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：</p><ol><li>白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</li><li>默认不能变更到白名单规格类型</li><li>产品推荐的规格类型之间不支持相互变更</li></ol>
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;

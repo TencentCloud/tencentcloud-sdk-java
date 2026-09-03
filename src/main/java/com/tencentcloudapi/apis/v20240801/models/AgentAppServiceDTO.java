@@ -45,14 +45,14 @@ public class AgentAppServiceDTO extends AbstractModel {
     private InvokeLimitConfigDTO InvokeLimitConfig;
 
     /**
-    * <p>是否要认证</p>
+    * <p>是否要认证（已废弃，请勿使用）</p>
     */
     @SerializedName("NeedAuth")
     @Expose
     private Boolean NeedAuth;
 
     /**
-    * <p>凭据ID</p>
+    * <p>凭据ID（已废弃，请勿使用）</p>
     */
     @SerializedName("AgentCredentialID")
     @Expose
@@ -107,33 +107,41 @@ public class AgentAppServiceDTO extends AbstractModel {
     }
 
     /**
-     * Get <p>是否要认证</p> 
-     * @return NeedAuth <p>是否要认证</p>
+     * Get <p>是否要认证（已废弃，请勿使用）</p> 
+     * @return NeedAuth <p>是否要认证（已废弃，请勿使用）</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getNeedAuth() {
         return this.NeedAuth;
     }
 
     /**
-     * Set <p>是否要认证</p>
-     * @param NeedAuth <p>是否要认证</p>
+     * Set <p>是否要认证（已废弃，请勿使用）</p>
+     * @param NeedAuth <p>是否要认证（已废弃，请勿使用）</p>
+     * @deprecated
      */
+    @Deprecated
     public void setNeedAuth(Boolean NeedAuth) {
         this.NeedAuth = NeedAuth;
     }
 
     /**
-     * Get <p>凭据ID</p> 
-     * @return AgentCredentialID <p>凭据ID</p>
+     * Get <p>凭据ID（已废弃，请勿使用）</p> 
+     * @return AgentCredentialID <p>凭据ID（已废弃，请勿使用）</p>
+     * @deprecated
      */
+    @Deprecated
     public String getAgentCredentialID() {
         return this.AgentCredentialID;
     }
 
     /**
-     * Set <p>凭据ID</p>
-     * @param AgentCredentialID <p>凭据ID</p>
+     * Set <p>凭据ID（已废弃，请勿使用）</p>
+     * @param AgentCredentialID <p>凭据ID（已废弃，请勿使用）</p>
+     * @deprecated
      */
+    @Deprecated
     public void setAgentCredentialID(String AgentCredentialID) {
         this.AgentCredentialID = AgentCredentialID;
     }

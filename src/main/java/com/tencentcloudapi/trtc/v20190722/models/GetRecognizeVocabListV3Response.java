@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class GetRecognizeVocabListV3Response extends AbstractModel {
 
     /**
+    * <p>词表列表</p>
+    */
+    @SerializedName("VocabList")
+    @Expose
+    private Vocab [] VocabList;
+
+    /**
+    * <p>词表个数</p><p>单位：个</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>词表列表</p> 
+     * @return VocabList <p>词表列表</p>
+     */
+    public Vocab [] getVocabList() {
+        return this.VocabList;
+    }
+
+    /**
+     * Set <p>词表列表</p>
+     * @param VocabList <p>词表列表</p>
+     */
+    public void setVocabList(Vocab [] VocabList) {
+        this.VocabList = VocabList;
+    }
+
+    /**
+     * Get <p>词表个数</p><p>单位：个</p> 
+     * @return TotalCount <p>词表个数</p><p>单位：个</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>词表个数</p><p>单位：个</p>
+     * @param TotalCount <p>词表个数</p><p>单位：个</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class GetRecognizeVocabListV3Response extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetRecognizeVocabListV3Response(GetRecognizeVocabListV3Response source) {
+        if (source.VocabList != null) {
+            this.VocabList = new Vocab[source.VocabList.length];
+            for (int i = 0; i < source.VocabList.length; i++) {
+                this.VocabList[i] = new Vocab(source.VocabList[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class GetRecognizeVocabListV3Response extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "VocabList.", this.VocabList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -80,6 +80,13 @@ public class MCPPluginConfig extends AbstractModel {
     private AuthConfig AuthConfig;
 
     /**
+    * <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+    */
+    @SerializedName("SupportsApps")
+    @Expose
+    private Boolean SupportsApps;
+
+    /**
      * Get <p>MCP插件外部访问地址</p> 
      * @return ExternalMCPServerUrl <p>MCP插件外部访问地址</p>
      */
@@ -207,6 +214,22 @@ public class MCPPluginConfig extends AbstractModel {
         this.AuthConfig = AuthConfig;
     }
 
+    /**
+     * Get <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p> 
+     * @return SupportsApps <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+     */
+    public Boolean getSupportsApps() {
+        return this.SupportsApps;
+    }
+
+    /**
+     * Set <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+     * @param SupportsApps <p>是否支持交互界面（MCP Apps），插件级标签，默认false</p>
+     */
+    public void setSupportsApps(Boolean SupportsApps) {
+        this.SupportsApps = SupportsApps;
+    }
+
     public MCPPluginConfig() {
     }
 
@@ -245,6 +268,9 @@ public class MCPPluginConfig extends AbstractModel {
         if (source.AuthConfig != null) {
             this.AuthConfig = new AuthConfig(source.AuthConfig);
         }
+        if (source.SupportsApps != null) {
+            this.SupportsApps = new Boolean(source.SupportsApps);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class MCPPluginConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "SSEReadTimeout", this.SSEReadTimeout);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamObj(map, prefix + "AuthConfig.", this.AuthConfig);
+        this.setParamSimple(map, prefix + "SupportsApps", this.SupportsApps);
 
     }
 }

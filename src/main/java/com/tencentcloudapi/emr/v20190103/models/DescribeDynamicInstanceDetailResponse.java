@@ -185,6 +185,20 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
     private ImageInfoV2 ImageInfoV2;
 
     /**
+    * <p>是否开启日志收集</p>
+    */
+    @SerializedName("EnableHistoryServer")
+    @Expose
+    private Boolean EnableHistoryServer;
+
+    /**
+    * <p>tensorboard 链接</p>
+    */
+    @SerializedName("TensorBoardUrl")
+    @Expose
+    private String TensorBoardUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -560,6 +574,38 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>是否开启日志收集</p> 
+     * @return EnableHistoryServer <p>是否开启日志收集</p>
+     */
+    public Boolean getEnableHistoryServer() {
+        return this.EnableHistoryServer;
+    }
+
+    /**
+     * Set <p>是否开启日志收集</p>
+     * @param EnableHistoryServer <p>是否开启日志收集</p>
+     */
+    public void setEnableHistoryServer(Boolean EnableHistoryServer) {
+        this.EnableHistoryServer = EnableHistoryServer;
+    }
+
+    /**
+     * Get <p>tensorboard 链接</p> 
+     * @return TensorBoardUrl <p>tensorboard 链接</p>
+     */
+    public String getTensorBoardUrl() {
+        return this.TensorBoardUrl;
+    }
+
+    /**
+     * Set <p>tensorboard 链接</p>
+     * @param TensorBoardUrl <p>tensorboard 链接</p>
+     */
+    public void setTensorBoardUrl(String TensorBoardUrl) {
+        this.TensorBoardUrl = TensorBoardUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -664,6 +710,12 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
         if (source.ImageInfoV2 != null) {
             this.ImageInfoV2 = new ImageInfoV2(source.ImageInfoV2);
         }
+        if (source.EnableHistoryServer != null) {
+            this.EnableHistoryServer = new Boolean(source.EnableHistoryServer);
+        }
+        if (source.TensorBoardUrl != null) {
+            this.TensorBoardUrl = new String(source.TensorBoardUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -697,6 +749,8 @@ public class DescribeDynamicInstanceDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "PersistentVolume.", this.PersistentVolume);
         this.setParamSimple(map, prefix + "RayClusterYaml", this.RayClusterYaml);
         this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
+        this.setParamSimple(map, prefix + "EnableHistoryServer", this.EnableHistoryServer);
+        this.setParamSimple(map, prefix + "TensorBoardUrl", this.TensorBoardUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

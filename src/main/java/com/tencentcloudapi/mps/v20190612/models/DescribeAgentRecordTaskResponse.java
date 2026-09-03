@@ -45,6 +45,13 @@ public class DescribeAgentRecordTaskResponse extends AbstractModel {
     private String [] RecordUrls;
 
     /**
+    * <p>直播状态</p><p>枚举值：</p><ul><li>LIVE： 直播中</li><li>PAUSED： 直播暂停</li><li>ENDED： 直播结束</li></ul>
+    */
+    @SerializedName("LiveStatus")
+    @Expose
+    private String LiveStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class DescribeAgentRecordTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>直播状态</p><p>枚举值：</p><ul><li>LIVE： 直播中</li><li>PAUSED： 直播暂停</li><li>ENDED： 直播结束</li></ul> 
+     * @return LiveStatus <p>直播状态</p><p>枚举值：</p><ul><li>LIVE： 直播中</li><li>PAUSED： 直播暂停</li><li>ENDED： 直播结束</li></ul>
+     */
+    public String getLiveStatus() {
+        return this.LiveStatus;
+    }
+
+    /**
+     * Set <p>直播状态</p><p>枚举值：</p><ul><li>LIVE： 直播中</li><li>PAUSED： 直播暂停</li><li>ENDED： 直播结束</li></ul>
+     * @param LiveStatus <p>直播状态</p><p>枚举值：</p><ul><li>LIVE： 直播中</li><li>PAUSED： 直播暂停</li><li>ENDED： 直播结束</li></ul>
+     */
+    public void setLiveStatus(String LiveStatus) {
+        this.LiveStatus = LiveStatus;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -135,6 +158,9 @@ public class DescribeAgentRecordTaskResponse extends AbstractModel {
                 this.RecordUrls[i] = new String(source.RecordUrls[i]);
             }
         }
+        if (source.LiveStatus != null) {
+            this.LiveStatus = new String(source.LiveStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class DescribeAgentRecordTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamArraySimple(map, prefix + "RecordUrls.", this.RecordUrls);
+        this.setParamSimple(map, prefix + "LiveStatus", this.LiveStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

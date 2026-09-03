@@ -148,6 +148,14 @@ public class ConversationContent extends AbstractModel {
     private String WorkflowInput;
 
     /**
+    * <p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("McpApp")
+    @Expose
+    private ConversationMcpApp McpApp;
+
+    /**
      * Get <p>文本内容</p> 
      * @return Text <p>文本内容</p>
      */
@@ -439,6 +447,26 @@ public class ConversationContent extends AbstractModel {
         this.WorkflowInput = WorkflowInput;
     }
 
+    /**
+     * Get <p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return McpApp <p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationMcpApp getMcpApp() {
+        return this.McpApp;
+    }
+
+    /**
+     * Set <p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param McpApp <p>MCP-APP调用信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMcpApp(ConversationMcpApp McpApp) {
+        this.McpApp = McpApp;
+    }
+
     public ConversationContent() {
     }
 
@@ -528,6 +556,9 @@ public class ConversationContent extends AbstractModel {
         if (source.WorkflowInput != null) {
             this.WorkflowInput = new String(source.WorkflowInput);
         }
+        if (source.McpApp != null) {
+            this.McpApp = new ConversationMcpApp(source.McpApp);
+        }
     }
 
 
@@ -552,6 +583,7 @@ public class ConversationContent extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TaskList.", this.TaskList);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "WorkflowInput", this.WorkflowInput);
+        this.setParamObj(map, prefix + "McpApp.", this.McpApp);
 
     }
 }

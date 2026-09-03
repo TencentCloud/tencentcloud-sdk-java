@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReplicateSetInfo extends AbstractModel {
 
     /**
-    * 节点属性
+    * <p>节点属性</p>
     */
     @SerializedName("Nodes")
     @Expose
     private NodeProperty [] Nodes;
 
     /**
-     * Get 节点属性 
-     * @return Nodes 节点属性
+     * Get <p>节点属性</p> 
+     * @return Nodes <p>节点属性</p>
      */
     public NodeProperty [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 节点属性
-     * @param Nodes 节点属性
+     * Set <p>节点属性</p>
+     * @param Nodes <p>节点属性</p>
      */
     public void setNodes(NodeProperty [] Nodes) {
         this.Nodes = Nodes;

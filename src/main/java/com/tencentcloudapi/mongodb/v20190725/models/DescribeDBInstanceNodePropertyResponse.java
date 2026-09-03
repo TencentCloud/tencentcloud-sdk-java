@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
 
     /**
-    * Mongos节点属性。
+    * <p>Mongos节点属性。</p>
     */
     @SerializedName("Mongos")
     @Expose
     private NodeProperty [] Mongos;
 
     /**
-    * 副本集节点信息。
+    * <p>副本集节点信息。</p>
     */
     @SerializedName("ReplicateSets")
     @Expose
     private ReplicateSetInfo [] ReplicateSets;
+
+    /**
+    * <p>Dynamo节点信息</p>
+    */
+    @SerializedName("DynamoProxies")
+    @Expose
+    private NodeProperty [] DynamoProxies;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Mongos节点属性。 
-     * @return Mongos Mongos节点属性。
+     * Get <p>Mongos节点属性。</p> 
+     * @return Mongos <p>Mongos节点属性。</p>
      */
     public NodeProperty [] getMongos() {
         return this.Mongos;
     }
 
     /**
-     * Set Mongos节点属性。
-     * @param Mongos Mongos节点属性。
+     * Set <p>Mongos节点属性。</p>
+     * @param Mongos <p>Mongos节点属性。</p>
      */
     public void setMongos(NodeProperty [] Mongos) {
         this.Mongos = Mongos;
     }
 
     /**
-     * Get 副本集节点信息。 
-     * @return ReplicateSets 副本集节点信息。
+     * Get <p>副本集节点信息。</p> 
+     * @return ReplicateSets <p>副本集节点信息。</p>
      */
     public ReplicateSetInfo [] getReplicateSets() {
         return this.ReplicateSets;
     }
 
     /**
-     * Set 副本集节点信息。
-     * @param ReplicateSets 副本集节点信息。
+     * Set <p>副本集节点信息。</p>
+     * @param ReplicateSets <p>副本集节点信息。</p>
      */
     public void setReplicateSets(ReplicateSetInfo [] ReplicateSets) {
         this.ReplicateSets = ReplicateSets;
+    }
+
+    /**
+     * Get <p>Dynamo节点信息</p> 
+     * @return DynamoProxies <p>Dynamo节点信息</p>
+     */
+    public NodeProperty [] getDynamoProxies() {
+        return this.DynamoProxies;
+    }
+
+    /**
+     * Set <p>Dynamo节点信息</p>
+     * @param DynamoProxies <p>Dynamo节点信息</p>
+     */
+    public void setDynamoProxies(NodeProperty [] DynamoProxies) {
+        this.DynamoProxies = DynamoProxies;
     }
 
     /**
@@ -112,6 +135,12 @@ public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
                 this.ReplicateSets[i] = new ReplicateSetInfo(source.ReplicateSets[i]);
             }
         }
+        if (source.DynamoProxies != null) {
+            this.DynamoProxies = new NodeProperty[source.DynamoProxies.length];
+            for (int i = 0; i < source.DynamoProxies.length; i++) {
+                this.DynamoProxies[i] = new NodeProperty(source.DynamoProxies[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,6 +153,7 @@ public class DescribeDBInstanceNodePropertyResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Mongos.", this.Mongos);
         this.setParamArrayObj(map, prefix + "ReplicateSets.", this.ReplicateSets);
+        this.setParamArrayObj(map, prefix + "DynamoProxies.", this.DynamoProxies);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

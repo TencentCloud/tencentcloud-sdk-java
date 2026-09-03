@@ -24,262 +24,207 @@ import java.util.HashMap;
 public class DescribeLogContextRequest extends AbstractModel {
 
     /**
-    * 要查询的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+    * <p>要查询的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+    * <p>日志时间,  即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。</p>
     */
     @SerializedName("BTime")
     @Expose
     private String BTime;
 
     /**
-    * 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+    * <p>日志包序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的PkgId。</p>
     */
     @SerializedName("PkgId")
     @Expose
     private String PkgId;
 
     /**
-    * 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
+    * <p>日志包内一条日志的序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构中的PkgLogId。</p>
     */
     @SerializedName("PkgLogId")
     @Expose
     private Long PkgLogId;
 
     /**
-    * 前${PrevLogs}条日志，默认值10。
+    * <p>前${PrevLogs}条日志，默认值10，最大100。</p>
     */
     @SerializedName("PrevLogs")
     @Expose
     private Long PrevLogs;
 
     /**
-    * 后${NextLogs}条日志，默认值10。
+    * <p>后${NextLogs}条日志，默认值10，最大100。</p>
     */
     @SerializedName("NextLogs")
     @Expose
     private Long NextLogs;
 
     /**
-    * 检索语句，对日志上下文进行过滤，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+    * <p>检索语句，对日志上下文进行过滤，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 上下文检索的开始时间，单位：毫秒级时间戳
-注意：
-- From为空时，表示上下文检索的开始时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+    * <p>上下文检索的开始时间，单位：毫秒级时间戳<br>注意：</p><ul><li>From为空时，表示上下文检索的开始时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 上下文检索的结束时间，单位：毫秒级时间戳。
-注意：
-- To为空时，表示上下文检索的结束时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+    * <p>上下文检索的结束时间，单位：毫秒级时间戳。<br>注意：</p><ul><li>To为空时，表示上下文检索的结束时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
     */
     @SerializedName("To")
     @Expose
     private Long To;
 
     /**
-     * Get 要查询的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
-     * @return TopicId 要查询的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * Get <p>要查询的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul> 
+     * @return TopicId <p>要查询的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 要查询的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
-     * @param TopicId 要查询的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * Set <p>要查询的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+     * @param TopicId <p>要查询的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。 
-     * @return BTime 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * Get <p>日志时间,  即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。</p> 
+     * @return BTime <p>日志时间,  即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。</p>
      */
     public String getBTime() {
         return this.BTime;
     }
 
     /**
-     * Set 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
-     * @param BTime 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * Set <p>日志时间,  即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。</p>
+     * @param BTime <p>日志时间,  即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。</p>
      */
     public void setBTime(String BTime) {
         this.BTime = BTime;
     }
 
     /**
-     * Get 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。 
-     * @return PkgId 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+     * Get <p>日志包序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的PkgId。</p> 
+     * @return PkgId <p>日志包序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的PkgId。</p>
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
-     * @param PkgId 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+     * Set <p>日志包序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的PkgId。</p>
+     * @param PkgId <p>日志包序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构体中的PkgId。</p>
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。 
-     * @return PkgLogId 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
+     * Get <p>日志包内一条日志的序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构中的PkgLogId。</p> 
+     * @return PkgLogId <p>日志包内一条日志的序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构中的PkgLogId。</p>
      */
     public Long getPkgLogId() {
         return this.PkgLogId;
     }
 
     /**
-     * Set 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
-     * @param PkgLogId 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
+     * Set <p>日志包内一条日志的序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构中的PkgLogId。</p>
+     * @param PkgLogId <p>日志包内一条日志的序号，即 <a href="https://cloud.tencent.com/document/product/614/56447">检索分析日志</a> 接口返回信息中Results结构中的PkgLogId。</p>
      */
     public void setPkgLogId(Long PkgLogId) {
         this.PkgLogId = PkgLogId;
     }
 
     /**
-     * Get 前${PrevLogs}条日志，默认值10。 
-     * @return PrevLogs 前${PrevLogs}条日志，默认值10。
+     * Get <p>前${PrevLogs}条日志，默认值10，最大100。</p> 
+     * @return PrevLogs <p>前${PrevLogs}条日志，默认值10，最大100。</p>
      */
     public Long getPrevLogs() {
         return this.PrevLogs;
     }
 
     /**
-     * Set 前${PrevLogs}条日志，默认值10。
-     * @param PrevLogs 前${PrevLogs}条日志，默认值10。
+     * Set <p>前${PrevLogs}条日志，默认值10，最大100。</p>
+     * @param PrevLogs <p>前${PrevLogs}条日志，默认值10，最大100。</p>
      */
     public void setPrevLogs(Long PrevLogs) {
         this.PrevLogs = PrevLogs;
     }
 
     /**
-     * Get 后${NextLogs}条日志，默认值10。 
-     * @return NextLogs 后${NextLogs}条日志，默认值10。
+     * Get <p>后${NextLogs}条日志，默认值10，最大100。</p> 
+     * @return NextLogs <p>后${NextLogs}条日志，默认值10，最大100。</p>
      */
     public Long getNextLogs() {
         return this.NextLogs;
     }
 
     /**
-     * Set 后${NextLogs}条日志，默认值10。
-     * @param NextLogs 后${NextLogs}条日志，默认值10。
+     * Set <p>后${NextLogs}条日志，默认值10，最大100。</p>
+     * @param NextLogs <p>后${NextLogs}条日志，默认值10，最大100。</p>
      */
     public void setNextLogs(Long NextLogs) {
         this.NextLogs = NextLogs;
     }
 
     /**
-     * Get 检索语句，对日志上下文进行过滤，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句 
-     * @return Query 检索语句，对日志上下文进行过滤，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+     * Get <p>检索语句，对日志上下文进行过滤，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句</p> 
+     * @return Query <p>检索语句，对日志上下文进行过滤，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 检索语句，对日志上下文进行过滤，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
-     * @param Query 检索语句，对日志上下文进行过滤，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+     * Set <p>检索语句，对日志上下文进行过滤，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句</p>
+     * @param Query <p>检索语句，对日志上下文进行过滤，最大长度为12KB<br>语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 上下文检索的开始时间，单位：毫秒级时间戳
-注意：
-- From为空时，表示上下文检索的开始时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域 
-     * @return From 上下文检索的开始时间，单位：毫秒级时间戳
-注意：
-- From为空时，表示上下文检索的开始时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     * Get <p>上下文检索的开始时间，单位：毫秒级时间戳<br>注意：</p><ul><li>From为空时，表示上下文检索的开始时间不做限制</li><li>From和To非空时，From &lt; To</li></ul> 
+     * @return From <p>上下文检索的开始时间，单位：毫秒级时间戳<br>注意：</p><ul><li>From为空时，表示上下文检索的开始时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 上下文检索的开始时间，单位：毫秒级时间戳
-注意：
-- From为空时，表示上下文检索的开始时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
-     * @param From 上下文检索的开始时间，单位：毫秒级时间戳
-注意：
-- From为空时，表示上下文检索的开始时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     * Set <p>上下文检索的开始时间，单位：毫秒级时间戳<br>注意：</p><ul><li>From为空时，表示上下文检索的开始时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
+     * @param From <p>上下文检索的开始时间，单位：毫秒级时间戳<br>注意：</p><ul><li>From为空时，表示上下文检索的开始时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 上下文检索的结束时间，单位：毫秒级时间戳。
-注意：
-- To为空时，表示上下文检索的结束时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域 
-     * @return To 上下文检索的结束时间，单位：毫秒级时间戳。
-注意：
-- To为空时，表示上下文检索的结束时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     * Get <p>上下文检索的结束时间，单位：毫秒级时间戳。<br>注意：</p><ul><li>To为空时，表示上下文检索的结束时间不做限制</li><li>From和To非空时，From &lt; To</li></ul> 
+     * @return To <p>上下文检索的结束时间，单位：毫秒级时间戳。<br>注意：</p><ul><li>To为空时，表示上下文检索的结束时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 上下文检索的结束时间，单位：毫秒级时间戳。
-注意：
-- To为空时，表示上下文检索的结束时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
-     * @param To 上下文检索的结束时间，单位：毫秒级时间戳。
-注意：
-- To为空时，表示上下文检索的结束时间不做限制
-- From和To非空时，From < To
-- 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+     * Set <p>上下文检索的结束时间，单位：毫秒级时间戳。<br>注意：</p><ul><li>To为空时，表示上下文检索的结束时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
+     * @param To <p>上下文检索的结束时间，单位：毫秒级时间戳。<br>注意：</p><ul><li>To为空时，表示上下文检索的结束时间不做限制</li><li>From和To非空时，From &lt; To</li></ul>
      */
     public void setTo(Long To) {
         this.To = To;

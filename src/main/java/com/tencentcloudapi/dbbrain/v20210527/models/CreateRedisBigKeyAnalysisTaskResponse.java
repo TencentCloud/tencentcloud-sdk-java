@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRedisBigKeyAnalysisTaskResponse extends AbstractModel {
 
     /**
-    * 异步任务ID。
+    * <p>异步任务ID。</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRedisBigKeyAnalysisTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务ID。 
-     * @return AsyncRequestId 异步任务ID。
+     * Get <p>异步任务ID。</p> 
+     * @return AsyncRequestId <p>异步任务ID。</p>
      */
     public Long getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务ID。
-     * @param AsyncRequestId 异步任务ID。
+     * Set <p>异步任务ID。</p>
+     * @param AsyncRequestId <p>异步任务ID。</p>
      */
     public void setAsyncRequestId(Long AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

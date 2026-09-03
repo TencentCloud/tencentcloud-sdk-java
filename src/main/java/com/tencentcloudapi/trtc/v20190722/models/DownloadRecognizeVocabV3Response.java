@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DownloadRecognizeVocabV3Response extends AbstractModel {
 
     /**
+    * <p>词表 id</p>
+    */
+    @SerializedName("VocabId")
+    @Expose
+    private String VocabId;
+
+    /**
+    * <p>文本形式热词</p>
+    */
+    @SerializedName("WordWeightStr")
+    @Expose
+    private String WordWeightStr;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>词表 id</p> 
+     * @return VocabId <p>词表 id</p>
+     */
+    public String getVocabId() {
+        return this.VocabId;
+    }
+
+    /**
+     * Set <p>词表 id</p>
+     * @param VocabId <p>词表 id</p>
+     */
+    public void setVocabId(String VocabId) {
+        this.VocabId = VocabId;
+    }
+
+    /**
+     * Get <p>文本形式热词</p> 
+     * @return WordWeightStr <p>文本形式热词</p>
+     */
+    public String getWordWeightStr() {
+        return this.WordWeightStr;
+    }
+
+    /**
+     * Set <p>文本形式热词</p>
+     * @param WordWeightStr <p>文本形式热词</p>
+     */
+    public void setWordWeightStr(String WordWeightStr) {
+        this.WordWeightStr = WordWeightStr;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,12 @@ public class DownloadRecognizeVocabV3Response extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DownloadRecognizeVocabV3Response(DownloadRecognizeVocabV3Response source) {
+        if (source.VocabId != null) {
+            this.VocabId = new String(source.VocabId);
+        }
+        if (source.WordWeightStr != null) {
+            this.WordWeightStr = new String(source.WordWeightStr);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +116,8 @@ public class DownloadRecognizeVocabV3Response extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VocabId", this.VocabId);
+        this.setParamSimple(map, prefix + "WordWeightStr", this.WordWeightStr);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,483 +24,483 @@ import java.util.HashMap;
 public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
-    * 账号分组名全路径，点分格式
+    * <p>账号分组名全路径，点分格式</p>
     */
     @SerializedName("NamePath")
     @Expose
     private String NamePath;
 
     /**
-    * 账号分组ID全路径，数组格式
+    * <p>账号分组ID全路径，数组格式</p>
     */
     @SerializedName("IdPathArr")
     @Expose
     private Long [] IdPathArr;
 
     /**
-    * 扩展信息
+    * <p>扩展信息</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
     private String ExtraInfo;
 
     /**
-    * 最后更新时间
+    * <p>最后更新时间</p>
     */
     @SerializedName("Utime")
     @Expose
     private String Utime;
 
     /**
-    * 父分组ID
+    * <p>父分组ID</p>
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+    * <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
     */
     @SerializedName("OrgId")
     @Expose
     private String OrgId;
 
     /**
-    * 分组名称
+    * <p>分组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 分组ID
+    * <p>分组ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 分组描述
+    * <p>分组描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 同步数据源
+    * <p>同步数据源</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 账号分组ID全路径，点分格式
+    * <p>账号分组ID全路径，点分格式</p>
     */
     @SerializedName("IdPath")
     @Expose
     private String IdPath;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("Itime")
     @Expose
     private String Itime;
 
     /**
-    * 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+    * <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
     */
     @SerializedName("ParentOrgId")
     @Expose
     private String ParentOrgId;
 
     /**
-    * 导入类型
+    * <p>导入类型</p>
     */
     @SerializedName("ImportType")
     @Expose
     private String ImportType;
 
     /**
-    * miniIAM id
+    * <p>miniIAM id</p>
     */
     @SerializedName("MiniIamId")
     @Expose
     private String MiniIamId;
 
     /**
-    * 该分组下含子组的所有用户总数
+    * <p>该分组下含子组的所有用户总数</p>
     */
     @SerializedName("UserTotal")
     @Expose
     private Long UserTotal;
 
     /**
-    * 是否叶子节点
+    * <p>是否叶子节点</p>
     */
     @SerializedName("IsLeaf")
     @Expose
     private Boolean IsLeaf;
 
     /**
-    * 是否该账户的直接权限
+    * <p>是否该账户的直接权限</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * 最新一次同步任务的结果
+    * <p>最新一次同步任务的结果</p>
     */
     @SerializedName("LatestSyncResult")
     @Expose
     private String LatestSyncResult;
 
     /**
-    * 最新一次同步任务的结束时间
+    * <p>最新一次同步任务的结束时间</p>
     */
     @SerializedName("LatestSyncTime")
     @Expose
     private String LatestSyncTime;
 
     /**
-    * 分组名称数组
+    * <p>分组名称数组</p>
     */
     @SerializedName("NamePathArr")
     @Expose
     private String [] NamePathArr;
 
     /**
-     * Get 账号分组名全路径，点分格式 
-     * @return NamePath 账号分组名全路径，点分格式
+     * Get <p>账号分组名全路径，点分格式</p> 
+     * @return NamePath <p>账号分组名全路径，点分格式</p>
      */
     public String getNamePath() {
         return this.NamePath;
     }
 
     /**
-     * Set 账号分组名全路径，点分格式
-     * @param NamePath 账号分组名全路径，点分格式
+     * Set <p>账号分组名全路径，点分格式</p>
+     * @param NamePath <p>账号分组名全路径，点分格式</p>
      */
     public void setNamePath(String NamePath) {
         this.NamePath = NamePath;
     }
 
     /**
-     * Get 账号分组ID全路径，数组格式 
-     * @return IdPathArr 账号分组ID全路径，数组格式
+     * Get <p>账号分组ID全路径，数组格式</p> 
+     * @return IdPathArr <p>账号分组ID全路径，数组格式</p>
      */
     public Long [] getIdPathArr() {
         return this.IdPathArr;
     }
 
     /**
-     * Set 账号分组ID全路径，数组格式
-     * @param IdPathArr 账号分组ID全路径，数组格式
+     * Set <p>账号分组ID全路径，数组格式</p>
+     * @param IdPathArr <p>账号分组ID全路径，数组格式</p>
      */
     public void setIdPathArr(Long [] IdPathArr) {
         this.IdPathArr = IdPathArr;
     }
 
     /**
-     * Get 扩展信息 
-     * @return ExtraInfo 扩展信息
+     * Get <p>扩展信息</p> 
+     * @return ExtraInfo <p>扩展信息</p>
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set 扩展信息
-     * @param ExtraInfo 扩展信息
+     * Set <p>扩展信息</p>
+     * @param ExtraInfo <p>扩展信息</p>
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 最后更新时间 
-     * @return Utime 最后更新时间
+     * Get <p>最后更新时间</p> 
+     * @return Utime <p>最后更新时间</p>
      */
     public String getUtime() {
         return this.Utime;
     }
 
     /**
-     * Set 最后更新时间
-     * @param Utime 最后更新时间
+     * Set <p>最后更新时间</p>
+     * @param Utime <p>最后更新时间</p>
      */
     public void setUtime(String Utime) {
         this.Utime = Utime;
     }
 
     /**
-     * Get 父分组ID 
-     * @return ParentId 父分组ID
+     * Get <p>父分组ID</p> 
+     * @return ParentId <p>父分组ID</p>
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 父分组ID
-     * @param ParentId 父分组ID
+     * Set <p>父分组ID</p>
+     * @param ParentId <p>父分组ID</p>
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID 
-     * @return OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * Get <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p> 
+     * @return OrgId <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
      */
     public String getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
-     * @param OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * Set <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+     * @param OrgId <p>源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
      */
     public void setOrgId(String OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 分组名称 
-     * @return Name 分组名称
+     * Get <p>分组名称</p> 
+     * @return Name <p>分组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分组名称
-     * @param Name 分组名称
+     * Set <p>分组名称</p>
+     * @param Name <p>分组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分组ID 
-     * @return Id 分组ID
+     * Get <p>分组ID</p> 
+     * @return Id <p>分组ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 分组ID
-     * @param Id 分组ID
+     * Set <p>分组ID</p>
+     * @param Id <p>分组ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分组描述 
-     * @return Description 分组描述
+     * Get <p>分组描述</p> 
+     * @return Description <p>分组描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 分组描述
-     * @param Description 分组描述
+     * Set <p>分组描述</p>
+     * @param Description <p>分组描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 同步数据源 
-     * @return Source 同步数据源
+     * Get <p>同步数据源</p> 
+     * @return Source <p>同步数据源</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 同步数据源
-     * @param Source 同步数据源
+     * Set <p>同步数据源</p>
+     * @param Source <p>同步数据源</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 账号分组ID全路径，点分格式 
-     * @return IdPath 账号分组ID全路径，点分格式
+     * Get <p>账号分组ID全路径，点分格式</p> 
+     * @return IdPath <p>账号分组ID全路径，点分格式</p>
      */
     public String getIdPath() {
         return this.IdPath;
     }
 
     /**
-     * Set 账号分组ID全路径，点分格式
-     * @param IdPath 账号分组ID全路径，点分格式
+     * Set <p>账号分组ID全路径，点分格式</p>
+     * @param IdPath <p>账号分组ID全路径，点分格式</p>
      */
     public void setIdPath(String IdPath) {
         this.IdPath = IdPath;
     }
 
     /**
-     * Get 创建时间 
-     * @return Itime 创建时间
+     * Get <p>创建时间</p> 
+     * @return Itime <p>创建时间</p>
      */
     public String getItime() {
         return this.Itime;
     }
 
     /**
-     * Set 创建时间
-     * @param Itime 创建时间
+     * Set <p>创建时间</p>
+     * @param Itime <p>创建时间</p>
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID 
-     * @return ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * Get <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p> 
+     * @return ParentOrgId <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
      */
     public String getParentOrgId() {
         return this.ParentOrgId;
     }
 
     /**
-     * Set 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
-     * @param ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * Set <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
+     * @param ParentOrgId <p>父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID</p>
      */
     public void setParentOrgId(String ParentOrgId) {
         this.ParentOrgId = ParentOrgId;
     }
 
     /**
-     * Get 导入类型 
-     * @return ImportType 导入类型
+     * Get <p>导入类型</p> 
+     * @return ImportType <p>导入类型</p>
      */
     public String getImportType() {
         return this.ImportType;
     }
 
     /**
-     * Set 导入类型
-     * @param ImportType 导入类型
+     * Set <p>导入类型</p>
+     * @param ImportType <p>导入类型</p>
      */
     public void setImportType(String ImportType) {
         this.ImportType = ImportType;
     }
 
     /**
-     * Get miniIAM id 
-     * @return MiniIamId miniIAM id
+     * Get <p>miniIAM id</p> 
+     * @return MiniIamId <p>miniIAM id</p>
      */
     public String getMiniIamId() {
         return this.MiniIamId;
     }
 
     /**
-     * Set miniIAM id
-     * @param MiniIamId miniIAM id
+     * Set <p>miniIAM id</p>
+     * @param MiniIamId <p>miniIAM id</p>
      */
     public void setMiniIamId(String MiniIamId) {
         this.MiniIamId = MiniIamId;
     }
 
     /**
-     * Get 该分组下含子组的所有用户总数 
-     * @return UserTotal 该分组下含子组的所有用户总数
+     * Get <p>该分组下含子组的所有用户总数</p> 
+     * @return UserTotal <p>该分组下含子组的所有用户总数</p>
      */
     public Long getUserTotal() {
         return this.UserTotal;
     }
 
     /**
-     * Set 该分组下含子组的所有用户总数
-     * @param UserTotal 该分组下含子组的所有用户总数
+     * Set <p>该分组下含子组的所有用户总数</p>
+     * @param UserTotal <p>该分组下含子组的所有用户总数</p>
      */
     public void setUserTotal(Long UserTotal) {
         this.UserTotal = UserTotal;
     }
 
     /**
-     * Get 是否叶子节点 
-     * @return IsLeaf 是否叶子节点
+     * Get <p>是否叶子节点</p> 
+     * @return IsLeaf <p>是否叶子节点</p>
      */
     public Boolean getIsLeaf() {
         return this.IsLeaf;
     }
 
     /**
-     * Set 是否叶子节点
-     * @param IsLeaf 是否叶子节点
+     * Set <p>是否叶子节点</p>
+     * @param IsLeaf <p>是否叶子节点</p>
      */
     public void setIsLeaf(Boolean IsLeaf) {
         this.IsLeaf = IsLeaf;
     }
 
     /**
-     * Get 是否该账户的直接权限 
-     * @return ReadOnly 是否该账户的直接权限
+     * Get <p>是否该账户的直接权限</p> 
+     * @return ReadOnly <p>是否该账户的直接权限</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否该账户的直接权限
-     * @param ReadOnly 是否该账户的直接权限
+     * Set <p>是否该账户的直接权限</p>
+     * @param ReadOnly <p>是否该账户的直接权限</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 最新一次同步任务的结果 
-     * @return LatestSyncResult 最新一次同步任务的结果
+     * Get <p>最新一次同步任务的结果</p> 
+     * @return LatestSyncResult <p>最新一次同步任务的结果</p>
      */
     public String getLatestSyncResult() {
         return this.LatestSyncResult;
     }
 
     /**
-     * Set 最新一次同步任务的结果
-     * @param LatestSyncResult 最新一次同步任务的结果
+     * Set <p>最新一次同步任务的结果</p>
+     * @param LatestSyncResult <p>最新一次同步任务的结果</p>
      */
     public void setLatestSyncResult(String LatestSyncResult) {
         this.LatestSyncResult = LatestSyncResult;
     }
 
     /**
-     * Get 最新一次同步任务的结束时间 
-     * @return LatestSyncTime 最新一次同步任务的结束时间
+     * Get <p>最新一次同步任务的结束时间</p> 
+     * @return LatestSyncTime <p>最新一次同步任务的结束时间</p>
      */
     public String getLatestSyncTime() {
         return this.LatestSyncTime;
     }
 
     /**
-     * Set 最新一次同步任务的结束时间
-     * @param LatestSyncTime 最新一次同步任务的结束时间
+     * Set <p>最新一次同步任务的结束时间</p>
+     * @param LatestSyncTime <p>最新一次同步任务的结束时间</p>
      */
     public void setLatestSyncTime(String LatestSyncTime) {
         this.LatestSyncTime = LatestSyncTime;
     }
 
     /**
-     * Get 分组名称数组 
-     * @return NamePathArr 分组名称数组
+     * Get <p>分组名称数组</p> 
+     * @return NamePathArr <p>分组名称数组</p>
      */
     public String [] getNamePathArr() {
         return this.NamePathArr;
     }
 
     /**
-     * Set 分组名称数组
-     * @param NamePathArr 分组名称数组
+     * Set <p>分组名称数组</p>
+     * @param NamePathArr <p>分组名称数组</p>
      */
     public void setNamePathArr(String [] NamePathArr) {
         this.NamePathArr = NamePathArr;

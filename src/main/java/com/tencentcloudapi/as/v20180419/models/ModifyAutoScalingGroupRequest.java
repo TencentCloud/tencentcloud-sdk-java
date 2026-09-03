@@ -59,7 +59,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private String LaunchConfigurationId;
 
     /**
-    * <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+    * <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
     */
     @SerializedName("MaxSize")
     @Expose
@@ -279,16 +279,16 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p> 
-     * @return MaxSize <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+     * Get <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p> 
+     * @return MaxSize <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
-     * @param MaxSize <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p>
+     * Set <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
+     * @param MaxSize <p>最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。</p><p>取值范围：[0, 2000]</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

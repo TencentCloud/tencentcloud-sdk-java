@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class LoadTaskCreationAttrs extends AbstractModel {
 
     /**
-    * 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
+    * <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+    * <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 任务描述，支持中文
+    * <p>任务描述，支持中文</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+    * <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
     */
     @SerializedName("MetadataLoadAttrs")
     @Expose
     private MetadataLoadAttrs MetadataLoadAttrs;
 
     /**
-    * 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+    * <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
     */
     @SerializedName("DistributedLoadAttrs")
     @Expose
     private DistributedLoadAttrs DistributedLoadAttrs;
 
     /**
-    * 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+    * <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
     */
     @SerializedName("ReportPath")
     @Expose
     private String ReportPath;
 
     /**
-     * Get 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。 
-     * @return TaskType 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
+    * <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+    */
+    @SerializedName("LoadDataAttrs")
+    @Expose
+    private LoadDataAttrs LoadDataAttrs;
+
+    /**
+     * Get <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p> 
+     * @return TaskType <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
-     * @param TaskType 预热任务类型，枚举值，MetadataLoad｜DistributedLoad。
+     * Set <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
+     * @param TaskType <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad。</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1 
-     * @return Priority 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+     * Get <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p> 
+     * @return Priority <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
-     * @param Priority 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+     * Set <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+     * @param Priority <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 任务描述，支持中文 
-     * @return Description 任务描述，支持中文
+     * Get <p>任务描述，支持中文</p> 
+     * @return Description <p>任务描述，支持中文</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述，支持中文
-     * @param Description 任务描述，支持中文
+     * Set <p>任务描述，支持中文</p>
+     * @param Description <p>任务描述，支持中文</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。 
-     * @return MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+     * Get <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p> 
+     * @return MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
      */
     public MetadataLoadAttrs getMetadataLoadAttrs() {
         return this.MetadataLoadAttrs;
     }
 
     /**
-     * Set 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
-     * @param MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+     * Set <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+     * @param MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
      */
     public void setMetadataLoadAttrs(MetadataLoadAttrs MetadataLoadAttrs) {
         this.MetadataLoadAttrs = MetadataLoadAttrs;
     }
 
     /**
-     * Get 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。 
-     * @return DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+     * Get <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p> 
+     * @return DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
      */
     public DistributedLoadAttrs getDistributedLoadAttrs() {
         return this.DistributedLoadAttrs;
     }
 
     /**
-     * Set 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
-     * @param DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+     * Set <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+     * @param DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
      */
     public void setDistributedLoadAttrs(DistributedLoadAttrs DistributedLoadAttrs) {
         this.DistributedLoadAttrs = DistributedLoadAttrs;
     }
 
     /**
-     * Get 将任务执行报告写入 COS 的路径，如果不需要报告则入参空 
-     * @return ReportPath 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * Get <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p> 
+     * @return ReportPath <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
      */
     public String getReportPath() {
         return this.ReportPath;
     }
 
     /**
-     * Set 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
-     * @param ReportPath 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * Set <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+     * @param ReportPath <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
      */
     public void setReportPath(String ReportPath) {
         this.ReportPath = ReportPath;
+    }
+
+    /**
+     * Get <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p> 
+     * @return LoadDataAttrs <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     */
+    public LoadDataAttrs getLoadDataAttrs() {
+        return this.LoadDataAttrs;
+    }
+
+    /**
+     * Set <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     * @param LoadDataAttrs <p>仅预热数据任务参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     */
+    public void setLoadDataAttrs(LoadDataAttrs LoadDataAttrs) {
+        this.LoadDataAttrs = LoadDataAttrs;
     }
 
     public LoadTaskCreationAttrs() {
@@ -187,6 +210,9 @@ public class LoadTaskCreationAttrs extends AbstractModel {
         if (source.ReportPath != null) {
             this.ReportPath = new String(source.ReportPath);
         }
+        if (source.LoadDataAttrs != null) {
+            this.LoadDataAttrs = new LoadDataAttrs(source.LoadDataAttrs);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class LoadTaskCreationAttrs extends AbstractModel {
         this.setParamObj(map, prefix + "MetadataLoadAttrs.", this.MetadataLoadAttrs);
         this.setParamObj(map, prefix + "DistributedLoadAttrs.", this.DistributedLoadAttrs);
         this.setParamSimple(map, prefix + "ReportPath", this.ReportPath);
+        this.setParamObj(map, prefix + "LoadDataAttrs.", this.LoadDataAttrs);
 
     }
 }

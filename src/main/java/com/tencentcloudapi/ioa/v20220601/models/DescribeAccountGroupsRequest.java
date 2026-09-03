@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountGroupsRequest extends AbstractModel {
 
     /**
-    * 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
+    * （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
     */
     @SerializedName("Deepin")
     @Expose
@@ -56,16 +63,32 @@ public class DescribeAccountGroupsRequest extends AbstractModel {
     private Long ParentId;
 
     /**
-     * Get 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。 
-     * @return Deepin 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
+
+    /**
+     * Get （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。 
+     * @return Deepin （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      */
     public Long getDeepin() {
         return this.Deepin;
     }
 
     /**
-     * Set 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
-     * @param Deepin 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * Set （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * @param Deepin （仅SaaS版本适用）搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      */
     public void setDeepin(Long Deepin) {
         this.Deepin = Deepin;
@@ -155,6 +178,9 @@ public class DescribeAccountGroupsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAccountGroupsRequest(DescribeAccountGroupsRequest source) {
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
         if (source.Deepin != null) {
             this.Deepin = new Long(source.Deepin);
         }
@@ -171,6 +197,7 @@ public class DescribeAccountGroupsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamSimple(map, prefix + "Deepin", this.Deepin);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamSimple(map, prefix + "ParentId", this.ParentId);

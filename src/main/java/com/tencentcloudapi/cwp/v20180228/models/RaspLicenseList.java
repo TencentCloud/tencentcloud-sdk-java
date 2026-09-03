@@ -24,708 +24,621 @@ import java.util.HashMap;
 public class RaspLicenseList extends AbstractModel {
 
     /**
-    * 机器唯一ID
+    * <p>机器唯一ID</p>
     */
     @SerializedName("QUUID")
     @Expose
     private String QUUID;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 公网IP
+    * <p>公网IP</p>
     */
     @SerializedName("PublicIP")
     @Expose
     private String PublicIP;
 
     /**
-    * 内网IP
+    * <p>内网IP</p>
     */
     @SerializedName("PrivateIP")
     @Expose
     private String PrivateIP;
 
     /**
-    * 云标签信息
+    * <p>云标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
+    * <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+    */
+    @SerializedName("CWPTags")
+    @Expose
+    private CWPTags [] CWPTags;
+
+    /**
+    * <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
     */
     @SerializedName("ProtectionVersion")
     @Expose
     private String [] ProtectionVersion;
 
     /**
-    * 防护设置
-- 0 未配置
-- 1 已配置
+    * <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
     */
     @SerializedName("ConfigurationSetting")
     @Expose
     private Long ConfigurationSetting;
 
     /**
-    * 总开关
-- 0 未开启
-- 1已开启
+    * <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 漏洞防御开关
-- 0 未开启
-- 1 开启
+    * <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
     */
     @SerializedName("VulDefEnable")
     @Expose
     private Long VulDefEnable;
 
     /**
-    * 漏洞防御模式
-- 0 标准
-- 1 重保
+    * <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
     */
     @SerializedName("VulDefMode")
     @Expose
     private Long VulDefMode;
 
     /**
-    * 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
+    * <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
     */
     @SerializedName("VulDefAction")
     @Expose
     private Long VulDefAction;
 
     /**
-    * 内存马防御开关
-- 0 未开启
-- 1 开启
+    * <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
     */
     @SerializedName("MemShellDefEnable")
     @Expose
     private Long MemShellDefEnable;
 
     /**
-    * 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
+    * <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
     */
     @SerializedName("SafeInject")
     @Expose
     private Long SafeInject;
 
     /**
-    * 性能阈值配置开关
-- 0 未开启
-- 1 开启
+    * <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
     */
     @SerializedName("PerformanceLimit")
     @Expose
     private Long PerformanceLimit;
 
     /**
-    * CPU阈值,取值1-99
+    * <p>CPU阈值,取值1-99</p>
     */
     @SerializedName("PerformanceLimitCpu")
     @Expose
     private Long PerformanceLimitCpu;
 
     /**
-    * 内存阈值,取值1-99
+    * <p>内存阈值,取值1-99</p>
     */
     @SerializedName("PerformanceLimitMem")
     @Expose
     private Long PerformanceLimitMem;
 
     /**
-    * 内存剩余阈值
+    * <p>内存剩余阈值</p>
     */
     @SerializedName("PerformanceLimitMemAmount")
     @Expose
     private Long PerformanceLimitMemAmount;
 
     /**
-    * 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
+    * <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
     */
     @SerializedName("RaspException")
     @Expose
     private Long RaspException;
 
     /**
-    * 最近更新时间
+    * <p>最近更新时间</p>
     */
     @SerializedName("LatestUpdateTime")
     @Expose
     private String LatestUpdateTime;
 
     /**
-    * 集群ID,仅容器资产有值
+    * <p>集群ID,仅容器资产有值</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群名称,仅容器资产有值
+    * <p>集群名称,仅容器资产有值</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 订单信息
+    * <p>订单信息</p>
     */
     @SerializedName("OrderDetail")
     @Expose
     private OrderDetail OrderDetail;
 
     /**
-    * 是否允许解绑,fasle 不允许 true 允许
+    * <p>是否允许解绑,fasle 不允许 true 允许</p>
     */
     @SerializedName("IsUnBind")
     @Expose
     private Boolean IsUnBind;
 
     /**
-    * uuid 机器唯一ID,仅AssetType = CWP 时有值
+    * <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
     */
     @SerializedName("UUID")
     @Expose
     private String UUID;
 
     /**
-    * 无注入/注入失败原因
+    * <p>无注入/注入失败原因</p>
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get 机器唯一ID 
-     * @return QUUID 机器唯一ID
+     * Get <p>机器唯一ID</p> 
+     * @return QUUID <p>机器唯一ID</p>
      */
     public String getQUUID() {
         return this.QUUID;
     }
 
     /**
-     * Set 机器唯一ID
-     * @param QUUID 机器唯一ID
+     * Set <p>机器唯一ID</p>
+     * @param QUUID <p>机器唯一ID</p>
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 公网IP 
-     * @return PublicIP 公网IP
+     * Get <p>公网IP</p> 
+     * @return PublicIP <p>公网IP</p>
      */
     public String getPublicIP() {
         return this.PublicIP;
     }
 
     /**
-     * Set 公网IP
-     * @param PublicIP 公网IP
+     * Set <p>公网IP</p>
+     * @param PublicIP <p>公网IP</p>
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
     }
 
     /**
-     * Get 内网IP 
-     * @return PrivateIP 内网IP
+     * Get <p>内网IP</p> 
+     * @return PrivateIP <p>内网IP</p>
      */
     public String getPrivateIP() {
         return this.PrivateIP;
     }
 
     /**
-     * Set 内网IP
-     * @param PrivateIP 内网IP
+     * Set <p>内网IP</p>
+     * @param PrivateIP <p>内网IP</p>
      */
     public void setPrivateIP(String PrivateIP) {
         this.PrivateIP = PrivateIP;
     }
 
     /**
-     * Get 云标签信息 
-     * @return Tags 云标签信息
+     * Get <p>云标签信息</p> 
+     * @return Tags <p>云标签信息</p>
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 云标签信息
-     * @param Tags 云标签信息
+     * Set <p>云标签信息</p>
+     * @param Tags <p>云标签信息</p>
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版 
-     * @return ProtectionVersion 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
+     * Get <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p> 
+     * @return CWPTags <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+     */
+    public CWPTags [] getCWPTags() {
+        return this.CWPTags;
+    }
+
+    /**
+     * Set <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+     * @param CWPTags <p>主机标签信息(仅AssetType=CWP/TCSS_HOST有值)</p>
+     */
+    public void setCWPTags(CWPTags [] CWPTags) {
+        this.CWPTags = CWPTags;
+    }
+
+    /**
+     * Get <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul> 
+     * @return ProtectionVersion <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
      */
     public String [] getProtectionVersion() {
         return this.ProtectionVersion;
     }
 
     /**
-     * Set 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
-     * @param ProtectionVersion 防护版本信息
-- CriticalProtection 重保防护包
-- Pro 容器安全-专业版
-- Ultimate 主机安全-旗舰版
+     * Set <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
+     * @param ProtectionVersion <p>防护版本信息</p><ul><li>CriticalProtection 重保防护包</li><li>Pro 容器安全-专业版</li><li>Ultimate 主机安全-旗舰版</li></ul>
      */
     public void setProtectionVersion(String [] ProtectionVersion) {
         this.ProtectionVersion = ProtectionVersion;
     }
 
     /**
-     * Get 防护设置
-- 0 未配置
-- 1 已配置 
-     * @return ConfigurationSetting 防护设置
-- 0 未配置
-- 1 已配置
+     * Get <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul> 
+     * @return ConfigurationSetting <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
      */
     public Long getConfigurationSetting() {
         return this.ConfigurationSetting;
     }
 
     /**
-     * Set 防护设置
-- 0 未配置
-- 1 已配置
-     * @param ConfigurationSetting 防护设置
-- 0 未配置
-- 1 已配置
+     * Set <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
+     * @param ConfigurationSetting <p>防护设置</p><ul><li>0 未配置</li><li>1 已配置</li></ul>
      */
     public void setConfigurationSetting(Long ConfigurationSetting) {
         this.ConfigurationSetting = ConfigurationSetting;
     }
 
     /**
-     * Get 总开关
-- 0 未开启
-- 1已开启 
-     * @return Enable 总开关
-- 0 未开启
-- 1已开启
+     * Get <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul> 
+     * @return Enable <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 总开关
-- 0 未开启
-- 1已开启
-     * @param Enable 总开关
-- 0 未开启
-- 1已开启
+     * Set <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
+     * @param Enable <p>总开关</p><ul><li>0 未开启</li><li>1已开启</li></ul>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 漏洞防御开关
-- 0 未开启
-- 1 开启 
-     * @return VulDefEnable 漏洞防御开关
-- 0 未开启
-- 1 开启
+     * Get <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul> 
+     * @return VulDefEnable <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public Long getVulDefEnable() {
         return this.VulDefEnable;
     }
 
     /**
-     * Set 漏洞防御开关
-- 0 未开启
-- 1 开启
-     * @param VulDefEnable 漏洞防御开关
-- 0 未开启
-- 1 开启
+     * Set <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+     * @param VulDefEnable <p>漏洞防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public void setVulDefEnable(Long VulDefEnable) {
         this.VulDefEnable = VulDefEnable;
     }
 
     /**
-     * Get 漏洞防御模式
-- 0 标准
-- 1 重保 
-     * @return VulDefMode 漏洞防御模式
-- 0 标准
-- 1 重保
+     * Get <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul> 
+     * @return VulDefMode <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
      */
     public Long getVulDefMode() {
         return this.VulDefMode;
     }
 
     /**
-     * Set 漏洞防御模式
-- 0 标准
-- 1 重保
-     * @param VulDefMode 漏洞防御模式
-- 0 标准
-- 1 重保
+     * Set <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
+     * @param VulDefMode <p>漏洞防御模式</p><ul><li>0 标准</li><li>1 重保</li></ul>
      */
     public void setVulDefMode(Long VulDefMode) {
         this.VulDefMode = VulDefMode;
     }
 
     /**
-     * Get 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御 
-     * @return VulDefAction 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
+     * Get <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul> 
+     * @return VulDefAction <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
      */
     public Long getVulDefAction() {
         return this.VulDefAction;
     }
 
     /**
-     * Set 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
-     * @param VulDefAction 漏洞防御动作
-- 0 仅检测
-- 1 检测+防御
+     * Set <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
+     * @param VulDefAction <p>漏洞防御动作</p><ul><li>0 仅检测</li><li>1 检测+防御</li></ul>
      */
     public void setVulDefAction(Long VulDefAction) {
         this.VulDefAction = VulDefAction;
     }
 
     /**
-     * Get 内存马防御开关
-- 0 未开启
-- 1 开启 
-     * @return MemShellDefEnable 内存马防御开关
-- 0 未开启
-- 1 开启
+     * Get <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul> 
+     * @return MemShellDefEnable <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public Long getMemShellDefEnable() {
         return this.MemShellDefEnable;
     }
 
     /**
-     * Set 内存马防御开关
-- 0 未开启
-- 1 开启
-     * @param MemShellDefEnable 内存马防御开关
-- 0 未开启
-- 1 开启
+     * Set <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+     * @param MemShellDefEnable <p>内存马防御开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public void setMemShellDefEnable(Long MemShellDefEnable) {
         this.MemShellDefEnable = MemShellDefEnable;
     }
 
     /**
-     * Get 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程 
-     * @return SafeInject 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
+     * Get <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul> 
+     * @return SafeInject <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
      */
     public Long getSafeInject() {
         return this.SafeInject;
     }
 
     /**
-     * Set 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
-     * @param SafeInject 更多防护
-- 0 不注入会重启的进程 
-- 1 注入会重启的进程
+     * Set <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
+     * @param SafeInject <p>更多防护</p><ul><li>0 不注入会重启的进程 </li><li>1 注入会重启的进程</li></ul>
      */
     public void setSafeInject(Long SafeInject) {
         this.SafeInject = SafeInject;
     }
 
     /**
-     * Get 性能阈值配置开关
-- 0 未开启
-- 1 开启 
-     * @return PerformanceLimit 性能阈值配置开关
-- 0 未开启
-- 1 开启
+     * Get <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul> 
+     * @return PerformanceLimit <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public Long getPerformanceLimit() {
         return this.PerformanceLimit;
     }
 
     /**
-     * Set 性能阈值配置开关
-- 0 未开启
-- 1 开启
-     * @param PerformanceLimit 性能阈值配置开关
-- 0 未开启
-- 1 开启
+     * Set <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
+     * @param PerformanceLimit <p>性能阈值配置开关</p><ul><li>0 未开启</li><li>1 开启</li></ul>
      */
     public void setPerformanceLimit(Long PerformanceLimit) {
         this.PerformanceLimit = PerformanceLimit;
     }
 
     /**
-     * Get CPU阈值,取值1-99 
-     * @return PerformanceLimitCpu CPU阈值,取值1-99
+     * Get <p>CPU阈值,取值1-99</p> 
+     * @return PerformanceLimitCpu <p>CPU阈值,取值1-99</p>
      */
     public Long getPerformanceLimitCpu() {
         return this.PerformanceLimitCpu;
     }
 
     /**
-     * Set CPU阈值,取值1-99
-     * @param PerformanceLimitCpu CPU阈值,取值1-99
+     * Set <p>CPU阈值,取值1-99</p>
+     * @param PerformanceLimitCpu <p>CPU阈值,取值1-99</p>
      */
     public void setPerformanceLimitCpu(Long PerformanceLimitCpu) {
         this.PerformanceLimitCpu = PerformanceLimitCpu;
     }
 
     /**
-     * Get 内存阈值,取值1-99 
-     * @return PerformanceLimitMem 内存阈值,取值1-99
+     * Get <p>内存阈值,取值1-99</p> 
+     * @return PerformanceLimitMem <p>内存阈值,取值1-99</p>
      */
     public Long getPerformanceLimitMem() {
         return this.PerformanceLimitMem;
     }
 
     /**
-     * Set 内存阈值,取值1-99
-     * @param PerformanceLimitMem 内存阈值,取值1-99
+     * Set <p>内存阈值,取值1-99</p>
+     * @param PerformanceLimitMem <p>内存阈值,取值1-99</p>
      */
     public void setPerformanceLimitMem(Long PerformanceLimitMem) {
         this.PerformanceLimitMem = PerformanceLimitMem;
     }
 
     /**
-     * Get 内存剩余阈值 
-     * @return PerformanceLimitMemAmount 内存剩余阈值
+     * Get <p>内存剩余阈值</p> 
+     * @return PerformanceLimitMemAmount <p>内存剩余阈值</p>
      */
     public Long getPerformanceLimitMemAmount() {
         return this.PerformanceLimitMemAmount;
     }
 
     /**
-     * Set 内存剩余阈值
-     * @param PerformanceLimitMemAmount 内存剩余阈值
+     * Set <p>内存剩余阈值</p>
+     * @param PerformanceLimitMemAmount <p>内存剩余阈值</p>
      */
     public void setPerformanceLimitMemAmount(Long PerformanceLimitMemAmount) {
         this.PerformanceLimitMemAmount = PerformanceLimitMemAmount;
     }
 
     /**
-     * Get 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用 
-     * @return RaspException 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
+     * Get <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul> 
+     * @return RaspException <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
      */
     public Long getRaspException() {
         return this.RaspException;
     }
 
     /**
-     * Set 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
-     * @param RaspException 插件状态
-- 0 使用正常
-- 1 存在异常
-- 2 未使用
+     * Set <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
+     * @param RaspException <p>插件状态</p><ul><li>0 使用正常</li><li>1 存在异常</li><li>2 未使用</li></ul>
      */
     public void setRaspException(Long RaspException) {
         this.RaspException = RaspException;
     }
 
     /**
-     * Get 最近更新时间 
-     * @return LatestUpdateTime 最近更新时间
+     * Get <p>最近更新时间</p> 
+     * @return LatestUpdateTime <p>最近更新时间</p>
      */
     public String getLatestUpdateTime() {
         return this.LatestUpdateTime;
     }
 
     /**
-     * Set 最近更新时间
-     * @param LatestUpdateTime 最近更新时间
+     * Set <p>最近更新时间</p>
+     * @param LatestUpdateTime <p>最近更新时间</p>
      */
     public void setLatestUpdateTime(String LatestUpdateTime) {
         this.LatestUpdateTime = LatestUpdateTime;
     }
 
     /**
-     * Get 集群ID,仅容器资产有值 
-     * @return ClusterName 集群ID,仅容器资产有值
+     * Get <p>集群ID,仅容器资产有值</p> 
+     * @return ClusterName <p>集群ID,仅容器资产有值</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群ID,仅容器资产有值
-     * @param ClusterName 集群ID,仅容器资产有值
+     * Set <p>集群ID,仅容器资产有值</p>
+     * @param ClusterName <p>集群ID,仅容器资产有值</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群名称,仅容器资产有值 
-     * @return ClusterId 集群名称,仅容器资产有值
+     * Get <p>集群名称,仅容器资产有值</p> 
+     * @return ClusterId <p>集群名称,仅容器资产有值</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群名称,仅容器资产有值
-     * @param ClusterId 集群名称,仅容器资产有值
+     * Set <p>集群名称,仅容器资产有值</p>
+     * @param ClusterId <p>集群名称,仅容器资产有值</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 订单信息 
-     * @return OrderDetail 订单信息
+     * Get <p>订单信息</p> 
+     * @return OrderDetail <p>订单信息</p>
      */
     public OrderDetail getOrderDetail() {
         return this.OrderDetail;
     }
 
     /**
-     * Set 订单信息
-     * @param OrderDetail 订单信息
+     * Set <p>订单信息</p>
+     * @param OrderDetail <p>订单信息</p>
      */
     public void setOrderDetail(OrderDetail OrderDetail) {
         this.OrderDetail = OrderDetail;
     }
 
     /**
-     * Get 是否允许解绑,fasle 不允许 true 允许 
-     * @return IsUnBind 是否允许解绑,fasle 不允许 true 允许
+     * Get <p>是否允许解绑,fasle 不允许 true 允许</p> 
+     * @return IsUnBind <p>是否允许解绑,fasle 不允许 true 允许</p>
      */
     public Boolean getIsUnBind() {
         return this.IsUnBind;
     }
 
     /**
-     * Set 是否允许解绑,fasle 不允许 true 允许
-     * @param IsUnBind 是否允许解绑,fasle 不允许 true 允许
+     * Set <p>是否允许解绑,fasle 不允许 true 允许</p>
+     * @param IsUnBind <p>是否允许解绑,fasle 不允许 true 允许</p>
      */
     public void setIsUnBind(Boolean IsUnBind) {
         this.IsUnBind = IsUnBind;
     }
 
     /**
-     * Get uuid 机器唯一ID,仅AssetType = CWP 时有值 
-     * @return UUID uuid 机器唯一ID,仅AssetType = CWP 时有值
+     * Get <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p> 
+     * @return UUID <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
      */
     public String getUUID() {
         return this.UUID;
     }
 
     /**
-     * Set uuid 机器唯一ID,仅AssetType = CWP 时有值
-     * @param UUID uuid 机器唯一ID,仅AssetType = CWP 时有值
+     * Set <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
+     * @param UUID <p>uuid 机器唯一ID,仅AssetType = CWP 时有值</p>
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;
     }
 
     /**
-     * Get 无注入/注入失败原因 
-     * @return Reason 无注入/注入失败原因
+     * Get <p>无注入/注入失败原因</p> 
+     * @return Reason <p>无注入/注入失败原因</p>
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 无注入/注入失败原因
-     * @param Reason 无注入/注入失败原因
+     * Set <p>无注入/注入失败原因</p>
+     * @param Reason <p>无注入/注入失败原因</p>
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
@@ -758,6 +671,12 @@ public class RaspLicenseList extends AbstractModel {
             this.Tags = new Tags[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
+        if (source.CWPTags != null) {
+            this.CWPTags = new CWPTags[source.CWPTags.length];
+            for (int i = 0; i < source.CWPTags.length; i++) {
+                this.CWPTags[i] = new CWPTags(source.CWPTags[i]);
             }
         }
         if (source.ProtectionVersion != null) {
@@ -836,6 +755,7 @@ public class RaspLicenseList extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
         this.setParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "CWPTags.", this.CWPTags);
         this.setParamArraySimple(map, prefix + "ProtectionVersion.", this.ProtectionVersion);
         this.setParamSimple(map, prefix + "ConfigurationSetting", this.ConfigurationSetting);
         this.setParamSimple(map, prefix + "Enable", this.Enable);

@@ -122,7 +122,7 @@ public class AigcVideoOutputConfig extends AbstractModel {
     private String FrameInterpolate;
 
     /**
-    * <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+    * <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
     */
     @SerializedName("LogoAdd")
     @Expose
@@ -360,16 +360,16 @@ public class AigcVideoOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p> 
-     * @return LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+     * Get <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p> 
+     * @return LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public String getLogoAdd() {
         return this.LogoAdd;
     }
 
     /**
-     * Set <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
-     * @param LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li><br>目前支持的模型有 Vidu，其他模型暂不支持。</p>
+     * Set <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+     * @param LogoAdd <p>是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public void setLogoAdd(String LogoAdd) {
         this.LogoAdd = LogoAdd;

@@ -24,93 +24,77 @@ import java.util.HashMap;
 public class NodeProperty extends AbstractModel {
 
     /**
-    * 节点所在的可用区。
+    * <p>节点所在的可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 节点名称。
+    * <p>节点名称。</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 节点访问地址。
+    * <p>节点访问地址。</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 节点公网访问外网地址(IP或域名，示例为IP方式)。
+    * <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
     */
     @SerializedName("WanServiceAddress")
     @Expose
     private String WanServiceAddress;
 
     /**
-    * 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+    * <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
+    * <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
     */
     @SerializedName("Hidden")
     @Expose
     private Boolean Hidden;
 
     /**
-    * 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
+    * <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 主从同步延迟时间，单位：秒。
+    * <p>主从同步延迟时间，单位：秒。</p>
     */
     @SerializedName("SlaveDelay")
     @Expose
     private Long SlaveDelay;
 
     /**
-    * 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+    * <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+    * <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
     */
     @SerializedName("Votes")
     @Expose
     private Long Votes;
 
     /**
-    * 节点标签。
+    * <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -118,240 +102,176 @@ public class NodeProperty extends AbstractModel {
     private NodeTag [] Tags;
 
     /**
-    * 副本集 ID。
+    * <p>副本集 ID。</p>
     */
     @SerializedName("ReplicateSetId")
     @Expose
     private String ReplicateSetId;
 
     /**
-     * Get 节点所在的可用区。 
-     * @return Zone 节点所在的可用区。
+     * Get <p>节点所在的可用区。</p> 
+     * @return Zone <p>节点所在的可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 节点所在的可用区。
-     * @param Zone 节点所在的可用区。
+     * Set <p>节点所在的可用区。</p>
+     * @param Zone <p>节点所在的可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 节点名称。 
-     * @return NodeName 节点名称。
+     * Get <p>节点名称。</p> 
+     * @return NodeName <p>节点名称。</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称。
-     * @param NodeName 节点名称。
+     * Set <p>节点名称。</p>
+     * @param NodeName <p>节点名称。</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点访问地址。 
-     * @return Address 节点访问地址。
+     * Get <p>节点访问地址。</p> 
+     * @return Address <p>节点访问地址。</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 节点访问地址。
-     * @param Address 节点访问地址。
+     * Set <p>节点访问地址。</p>
+     * @param Address <p>节点访问地址。</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 节点公网访问外网地址(IP或域名，示例为IP方式)。 
-     * @return WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
+     * Get <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p> 
+     * @return WanServiceAddress <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
      */
     public String getWanServiceAddress() {
         return this.WanServiceAddress;
     }
 
     /**
-     * Set 节点公网访问外网地址(IP或域名，示例为IP方式)。
-     * @param WanServiceAddress 节点公网访问外网地址(IP或域名，示例为IP方式)。
+     * Set <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
+     * @param WanServiceAddress <p>节点公网访问外网地址(IP或域名，示例为IP方式)。</p>
      */
     public void setWanServiceAddress(String WanServiceAddress) {
         this.WanServiceAddress = WanServiceAddress;
     }
 
     /**
-     * Get 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。 
-     * @return Role 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+     * Get <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul> 
+     * @return Role <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
-     * @param Role 节点角色。
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+     * Set <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+     * @param Role <p>节点角色。</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。 
-     * @return Hidden 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
+     * Get <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul> 
+     * @return Hidden <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
      */
     public Boolean getHidden() {
         return this.Hidden;
     }
 
     /**
-     * Set 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
-     * @param Hidden 节点是否为 Hidden 节点。
-- true：Hidden 节点。
-- false：非 Hidden 节点。
+     * Set <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
+     * @param Hidden <p>节点是否为 Hidden 节点。</p><ul><li>true：Hidden 节点。</li><li>false：非 Hidden 节点。</li></ul>
      */
     public void setHidden(Boolean Hidden) {
         this.Hidden = Hidden;
     }
 
     /**
-     * Get 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。 
-     * @return Status 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
+     * Get <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul> 
+     * @return Status <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
-     * @param Status 节点状态。
-- NORMAL：正常运行中。
-- STARTUP：正在启动。
-- STARTUP2：正在启动，处理中间数据。
-- RECOVERING：恢复中，暂不可用。
-- DOWN：已掉线。
-- UNKNOWN：未知状态。
-- ROLLBACK：回滚中。
-- REMOVED：已移除。
+     * Set <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
+     * @param Status <p>节点状态。</p><ul><li>NORMAL：正常运行中。</li><li>STARTUP：正在启动。</li><li>STARTUP2：正在启动，处理中间数据。</li><li>RECOVERING：恢复中，暂不可用。</li><li>DOWN：已掉线。</li><li>UNKNOWN：未知状态。</li><li>ROLLBACK：回滚中。</li><li>REMOVED：已移除。</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 主从同步延迟时间，单位：秒。 
-     * @return SlaveDelay 主从同步延迟时间，单位：秒。
+     * Get <p>主从同步延迟时间，单位：秒。</p> 
+     * @return SlaveDelay <p>主从同步延迟时间，单位：秒。</p>
      */
     public Long getSlaveDelay() {
         return this.SlaveDelay;
     }
 
     /**
-     * Set 主从同步延迟时间，单位：秒。
-     * @param SlaveDelay 主从同步延迟时间，单位：秒。
+     * Set <p>主从同步延迟时间，单位：秒。</p>
+     * @param SlaveDelay <p>主从同步延迟时间，单位：秒。</p>
      */
     public void setSlaveDelay(Long SlaveDelay) {
         this.SlaveDelay = SlaveDelay;
     }
 
     /**
-     * Get 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。 
-     * @return Priority 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * Get <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p> 
+     * @return Priority <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
-     * @param Priority 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * Set <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+     * @param Priority <p>节点优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。 
-     * @return Votes 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+     * Get <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul> 
+     * @return Votes <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
      */
     public Long getVotes() {
         return this.Votes;
     }
 
     /**
-     * Set 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
-     * @param Votes 节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+     * Set <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+     * @param Votes <p>节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
      */
     public void setVotes(Long Votes) {
         this.Votes = Votes;
     }
 
     /**
-     * Get 节点标签。
+     * Get <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 节点标签。
+     * @return Tags <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeTag [] getTags() {
@@ -359,9 +279,9 @@ public class NodeProperty extends AbstractModel {
     }
 
     /**
-     * Set 节点标签。
+     * Set <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 节点标签。
+     * @param Tags <p>节点标签。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(NodeTag [] Tags) {
@@ -369,16 +289,16 @@ public class NodeProperty extends AbstractModel {
     }
 
     /**
-     * Get 副本集 ID。 
-     * @return ReplicateSetId 副本集 ID。
+     * Get <p>副本集 ID。</p> 
+     * @return ReplicateSetId <p>副本集 ID。</p>
      */
     public String getReplicateSetId() {
         return this.ReplicateSetId;
     }
 
     /**
-     * Set 副本集 ID。
-     * @param ReplicateSetId 副本集 ID。
+     * Set <p>副本集 ID。</p>
+     * @param ReplicateSetId <p>副本集 ID。</p>
      */
     public void setReplicateSetId(String ReplicateSetId) {
         this.ReplicateSetId = ReplicateSetId;

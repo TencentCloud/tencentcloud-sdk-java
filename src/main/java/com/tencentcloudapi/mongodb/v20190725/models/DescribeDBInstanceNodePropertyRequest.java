@@ -24,191 +24,161 @@ import java.util.HashMap;
 public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
-    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+    * <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
     */
     @SerializedName("NodeIds")
     @Expose
     private String [] NodeIds;
 
     /**
-    * 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+    * <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
     */
     @SerializedName("Roles")
     @Expose
     private String [] Roles;
 
     /**
-    * 该参数指定节点是否为 Hidden 节点，默认为 false。
+    * <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
     */
     @SerializedName("OnlyHidden")
     @Expose
     private Boolean OnlyHidden;
 
     /**
-    * 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
+    * <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+    * <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
     */
     @SerializedName("Votes")
     @Expose
     private Long Votes;
 
     /**
-    * 节点标签。
+    * <p>节点标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private NodeTag [] Tags;
 
     /**
-     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Get <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Set <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>实例 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。 
-     * @return NodeIds 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+     * Get <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p> 
+     * @return NodeIds <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
      */
     public String [] getNodeIds() {
         return this.NodeIds;
     }
 
     /**
-     * Set 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
-     * @param NodeIds 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+     * Set <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
+     * @param NodeIds <p>节点 ID。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台的节点管理</a>复制节点 ID。</p>
      */
     public void setNodeIds(String [] NodeIds) {
         this.NodeIds = NodeIds;
     }
 
     /**
-     * Get 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。 
-     * @return Roles 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+     * Get <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul> 
+     * @return Roles <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
      */
     public String [] getRoles() {
         return this.Roles;
     }
 
     /**
-     * Set 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
-     * @param Roles 节点角色。可选值包括：
-- PRIMARY：主节点。
-- SECONDARY：从节点。
-- READONLY：只读节点。
-- ARBITER：仲裁节点。
+     * Set <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+     * @param Roles <p>节点角色。可选值包括：</p><ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
      */
     public void setRoles(String [] Roles) {
         this.Roles = Roles;
     }
 
     /**
-     * Get 该参数指定节点是否为 Hidden 节点，默认为 false。 
-     * @return OnlyHidden 该参数指定节点是否为 Hidden 节点，默认为 false。
+     * Get <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p> 
+     * @return OnlyHidden <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
      */
     public Boolean getOnlyHidden() {
         return this.OnlyHidden;
     }
 
     /**
-     * Set 该参数指定节点是否为 Hidden 节点，默认为 false。
-     * @param OnlyHidden 该参数指定节点是否为 Hidden 节点，默认为 false。
+     * Set <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
+     * @param OnlyHidden <p>该参数指定节点是否为 Hidden 节点，默认为 false。</p>
      */
     public void setOnlyHidden(Boolean OnlyHidden) {
         this.OnlyHidden = OnlyHidden;
     }
 
     /**
-     * Get 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。 
-     * @return Priority 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * Get <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p> 
+     * @return Priority <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
-     * @param Priority 该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * Set <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
+     * @param Priority <p>该参数指定选举新主节点的优先级。其取值范围为[0,100]，数值越高，优先级越高。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。 
-     * @return Votes 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+     * Get <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul> 
+     * @return Votes <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
      */
     public Long getVotes() {
         return this.Votes;
     }
 
     /**
-     * Set 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
-     * @param Votes 该参数指定节点投票权。
-- 1：具有投票权。
-- 0：无投票权。
+     * Set <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+     * @param Votes <p>该参数指定节点投票权。</p><ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
      */
     public void setVotes(Long Votes) {
         this.Votes = Votes;
     }
 
     /**
-     * Get 节点标签。 
-     * @return Tags 节点标签。
+     * Get <p>节点标签。</p> 
+     * @return Tags <p>节点标签。</p>
      */
     public NodeTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 节点标签。
-     * @param Tags 节点标签。
+     * Set <p>节点标签。</p>
+     * @param Tags <p>节点标签。</p>
      */
     public void setTags(NodeTag [] Tags) {
         this.Tags = Tags;

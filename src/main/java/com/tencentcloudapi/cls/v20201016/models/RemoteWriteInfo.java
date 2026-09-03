@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoteWriteInfo extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -40,7 +40,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String TopicId;
 
     /**
-    * Remote Write任务名称
+    * <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,9 +48,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String Name;
 
     /**
-    * 网络类型
-1: 内网
-2:外网
+    * <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetType")
@@ -58,7 +56,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private Long NetType;
 
     /**
-    * 私有网络id
+    * <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -66,10 +64,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String VpcId;
 
     /**
-    * 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+    * <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -77,7 +72,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -85,7 +80,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -93,7 +88,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 目标服务名称
+    * <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Target")
@@ -101,7 +96,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String Target;
 
     /**
-    * 目标地址
+    * <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteWriteURL")
@@ -109,8 +104,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String RemoteWriteURL;
 
     /**
-    * 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+    * <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthType")
@@ -118,7 +112,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private Long AuthType;
 
     /**
-    * 鉴权信息
+    * <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthInfo")
@@ -126,7 +120,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private RemoteWriteAuthInfo AuthInfo;
 
     /**
-    * 日志集
+    * <p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetId")
@@ -134,7 +128,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private String LogsetId;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
@@ -142,7 +136,7 @@ public class RemoteWriteInfo extends AbstractModel {
     private Long Enable;
 
     /**
-    * 后端服务类型
+    * <p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualGatewayType")
@@ -150,9 +144,25 @@ public class RemoteWriteInfo extends AbstractModel {
     private Long VirtualGatewayType;
 
     /**
-     * Get 任务id
+    * <p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -160,9 +170,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -170,9 +180,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志主题ID
+     * Get <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId 日志主题ID
+     * @return TopicId <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -180,9 +190,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 日志主题ID
+     * Set <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId 日志主题ID
+     * @param TopicId <p>日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
@@ -190,9 +200,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get Remote Write任务名称
+     * Get <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name Remote Write任务名称
+     * @return Name <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -200,9 +210,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set Remote Write任务名称
+     * Set <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name Remote Write任务名称
+     * @param Name <p>Remote Write任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -210,13 +220,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 网络类型
-1: 内网
-2:外网
+     * Get <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetType 网络类型
-1: 内网
-2:外网
+     * @return NetType <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetType() {
@@ -224,13 +230,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 网络类型
-1: 内网
-2:外网
+     * Set <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetType 网络类型
-1: 内网
-2:外网
+     * @param NetType <p>网络类型<br>1: 内网<br>2:外网</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetType(Long NetType) {
@@ -238,9 +240,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 私有网络id
+     * Get <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId 私有网络id
+     * @return VpcId <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -248,9 +250,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 私有网络id
+     * Set <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId 私有网络id
+     * @param VpcId <p>私有网络id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -258,15 +260,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+     * Get <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+     * @return Status <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -274,15 +270,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+     * Set <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 任务运行状态
-1: 运行中
-2:暂停
-3: 失败
+     * @param Status <p>任务运行状态<br>1: 运行中<br>2:暂停<br>3: 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -290,9 +280,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -300,9 +290,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -310,9 +300,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -320,9 +310,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -330,9 +320,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标服务名称
+     * Get <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Target 目标服务名称
+     * @return Target <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTarget() {
@@ -340,9 +330,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 目标服务名称
+     * Set <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Target 目标服务名称
+     * @param Target <p>目标服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTarget(String Target) {
@@ -350,9 +340,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标地址
+     * Get <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoteWriteURL 目标地址
+     * @return RemoteWriteURL <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteWriteURL() {
@@ -360,9 +350,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 目标地址
+     * Set <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteWriteURL 目标地址
+     * @param RemoteWriteURL <p>目标地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteWriteURL(String RemoteWriteURL) {
@@ -370,11 +360,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+     * Get <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthType 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+     * @return AuthType <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthType() {
@@ -382,11 +370,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+     * Set <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthType 鉴权类型
-0: 无鉴权 1: basic_auth 2: token
+     * @param AuthType <p>鉴权类型<br>0: 无鉴权 1: basic_auth 2: token</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthType(Long AuthType) {
@@ -394,9 +380,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 鉴权信息
+     * Get <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthInfo 鉴权信息
+     * @return AuthInfo <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RemoteWriteAuthInfo getAuthInfo() {
@@ -404,9 +390,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 鉴权信息
+     * Set <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthInfo 鉴权信息
+     * @param AuthInfo <p>鉴权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthInfo(RemoteWriteAuthInfo AuthInfo) {
@@ -414,9 +400,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志集
+     * Get <p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogsetId 日志集
+     * @return LogsetId <p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetId() {
@@ -424,9 +410,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 日志集
+     * Set <p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogsetId 日志集
+     * @param LogsetId <p>日志集</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetId(String LogsetId) {
@@ -434,9 +420,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务状态
+     * Get <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Enable 任务状态
+     * @return Enable <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
@@ -444,9 +430,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务状态
+     * Set <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Enable 任务状态
+     * @param Enable <p>任务状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
@@ -454,9 +440,9 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Get 后端服务类型
+     * Get <p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualGatewayType 后端服务类型
+     * @return VirtualGatewayType <p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVirtualGatewayType() {
@@ -464,13 +450,53 @@ public class RemoteWriteInfo extends AbstractModel {
     }
 
     /**
-     * Set 后端服务类型
+     * Set <p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualGatewayType 后端服务类型
+     * @param VirtualGatewayType <p>后端服务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualGatewayType(Long VirtualGatewayType) {
         this.VirtualGatewayType = VirtualGatewayType;
+    }
+
+    /**
+     * Get <p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId <p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId <p>云时序数据库实例ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
     }
 
     public RemoteWriteInfo() {
@@ -526,6 +552,12 @@ public class RemoteWriteInfo extends AbstractModel {
         if (source.VirtualGatewayType != null) {
             this.VirtualGatewayType = new Long(source.VirtualGatewayType);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
     }
 
 
@@ -548,6 +580,8 @@ public class RemoteWriteInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "VirtualGatewayType", this.VirtualGatewayType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
 
     }
 }

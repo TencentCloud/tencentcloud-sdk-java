@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
-    * <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
+    * <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6。</p>
+    * <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
     */
     @SerializedName("ModelVersion")
     @Expose
@@ -45,32 +45,25 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String SceneType;
 
     /**
-    * <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
+    * <p>生成音乐的描述。(注：最大支持2000字符)。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>参考视频信息。仅部分模型支持。</p>
+    * <p>参考视频信息。仅部分模型支持。</p><ol><li>Kling的视频生音效。</li><li>EL的视频配背景音乐。</li></ol>
     */
     @SerializedName("VideoInfos")
     @Expose
     private AigcAudioReferenceVideoInfo [] VideoInfos;
 
     /**
-    * <p>传入参考音频信息。</p><p>比如传入音频生成音乐时需要传入。</p>
+    * <p>传入参考音频信息。</p><ol><li>MiniMaxMusic的翻唱功能使用。</li></ol><p>比如传入音频生成音乐时需要传入。</p>
     */
     @SerializedName("AudioInfos")
     @Expose
     private AigcAudioReferenceAudioInfo [] AudioInfos;
-
-    /**
-    * <p>输出音频格式，默认不填。mp3、wav。</p>
-    */
-    @SerializedName("OutputAudioFormat")
-    @Expose
-    private String OutputAudioFormat;
 
     /**
     * <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
@@ -87,7 +80,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private AigcAudioExtraParam ExtraParameters;
 
     /**
-    * <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+    * <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
     */
     @SerializedName("AdditionalParameters")
     @Expose
@@ -101,32 +94,32 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String Operator;
 
     /**
-     * Get <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p> 
-     * @return ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
+     * Get <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p> 
+     * @return ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
-     * @param ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic。</p>
+     * Set <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
+     * @param ModelName <p>模型名称。生音乐当前支持的模型: GL、MiniMaxMusic、EL、Mureka。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6。</p> 
-     * @return ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6。</p>
+     * Get <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p> 
+     * @return ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6。</p>
-     * @param ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。<br>模型GL支持的版本号：3.0-clip、3.0-pro。<br>模型MiniMaxMusic支持的版本号：2.0、2.5、2.6。</p>
+     * Set <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
+     * @param ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。模型GL支持的版本号：3.0-clip、3.0-pro。模型MiniMaxMusic支持的版本号：2.0、2.5、2.6， 3.0。模型EL支持的版本号: compose_v2、sound_t2s_v2。模型Mureka支持的版本号: song_8、song_9、song_9.5、instrumental_8、instrumental_9、instrumental_9.5。</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
@@ -149,67 +142,51 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p> 
-     * @return Prompt <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
+     * Get <p>生成音乐的描述。(注：最大支持2000字符)。</p> 
+     * @return Prompt <p>生成音乐的描述。(注：最大支持2000字符)。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
-     * @param Prompt <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
+     * Set <p>生成音乐的描述。(注：最大支持2000字符)。</p>
+     * @param Prompt <p>生成音乐的描述。(注：最大支持2000字符)。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>参考视频信息。仅部分模型支持。</p> 
-     * @return VideoInfos <p>参考视频信息。仅部分模型支持。</p>
+     * Get <p>参考视频信息。仅部分模型支持。</p><ol><li>Kling的视频生音效。</li><li>EL的视频配背景音乐。</li></ol> 
+     * @return VideoInfos <p>参考视频信息。仅部分模型支持。</p><ol><li>Kling的视频生音效。</li><li>EL的视频配背景音乐。</li></ol>
      */
     public AigcAudioReferenceVideoInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set <p>参考视频信息。仅部分模型支持。</p>
-     * @param VideoInfos <p>参考视频信息。仅部分模型支持。</p>
+     * Set <p>参考视频信息。仅部分模型支持。</p><ol><li>Kling的视频生音效。</li><li>EL的视频配背景音乐。</li></ol>
+     * @param VideoInfos <p>参考视频信息。仅部分模型支持。</p><ol><li>Kling的视频生音效。</li><li>EL的视频配背景音乐。</li></ol>
      */
     public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;
     }
 
     /**
-     * Get <p>传入参考音频信息。</p><p>比如传入音频生成音乐时需要传入。</p> 
-     * @return AudioInfos <p>传入参考音频信息。</p><p>比如传入音频生成音乐时需要传入。</p>
+     * Get <p>传入参考音频信息。</p><ol><li>MiniMaxMusic的翻唱功能使用。</li></ol><p>比如传入音频生成音乐时需要传入。</p> 
+     * @return AudioInfos <p>传入参考音频信息。</p><ol><li>MiniMaxMusic的翻唱功能使用。</li></ol><p>比如传入音频生成音乐时需要传入。</p>
      */
     public AigcAudioReferenceAudioInfo [] getAudioInfos() {
         return this.AudioInfos;
     }
 
     /**
-     * Set <p>传入参考音频信息。</p><p>比如传入音频生成音乐时需要传入。</p>
-     * @param AudioInfos <p>传入参考音频信息。</p><p>比如传入音频生成音乐时需要传入。</p>
+     * Set <p>传入参考音频信息。</p><ol><li>MiniMaxMusic的翻唱功能使用。</li></ol><p>比如传入音频生成音乐时需要传入。</p>
+     * @param AudioInfos <p>传入参考音频信息。</p><ol><li>MiniMaxMusic的翻唱功能使用。</li></ol><p>比如传入音频生成音乐时需要传入。</p>
      */
     public void setAudioInfos(AigcAudioReferenceAudioInfo [] AudioInfos) {
         this.AudioInfos = AudioInfos;
-    }
-
-    /**
-     * Get <p>输出音频格式，默认不填。mp3、wav。</p> 
-     * @return OutputAudioFormat <p>输出音频格式，默认不填。mp3、wav。</p>
-     */
-    public String getOutputAudioFormat() {
-        return this.OutputAudioFormat;
-    }
-
-    /**
-     * Set <p>输出音频格式，默认不填。mp3、wav。</p>
-     * @param OutputAudioFormat <p>输出音频格式，默认不填。mp3、wav。</p>
-     */
-    public void setOutputAudioFormat(String OutputAudioFormat) {
-        this.OutputAudioFormat = OutputAudioFormat;
     }
 
     /**
@@ -245,16 +222,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol> 
-     * @return AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+     * Get <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol> 
+     * @return AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
-     * @param AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+     * Set <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
+     * @param AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例MinimaxMusic模型传入歌词时：<br>{"lyric":{"小马在快乐奔跑，花儿在开放"}}</p><ol><li>MiniMaxMusic生纯音乐参数使用示例: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>支持的透传参数有: lyrics，is_instrumental，aigc_watermark，sample_rate，bitrate。</li><li>EL生音乐支持透传的参数有:<br>PromptInfluence，WithTimestamps，CompositionPlan，ForceInstrumental等参数。</li></ol>
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;
@@ -308,9 +285,6 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
                 this.AudioInfos[i] = new AigcAudioReferenceAudioInfo(source.AudioInfos[i]);
             }
         }
-        if (source.OutputAudioFormat != null) {
-            this.OutputAudioFormat = new String(source.OutputAudioFormat);
-        }
         if (source.StoreCosParam != null) {
             this.StoreCosParam = new AigcStoreCosParam(source.StoreCosParam);
         }
@@ -336,7 +310,6 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
-        this.setParamSimple(map, prefix + "OutputAudioFormat", this.OutputAudioFormat);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);

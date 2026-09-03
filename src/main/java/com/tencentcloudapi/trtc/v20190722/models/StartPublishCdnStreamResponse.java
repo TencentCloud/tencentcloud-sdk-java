@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartPublishCdnStreamResponse extends AbstractModel {
 
     /**
-    * 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
+    * <p>用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。 
-     * @return TaskId 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
+     * Get <p>用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。</p> 
+     * @return TaskId <p>用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
-     * @param TaskId 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
+     * Set <p>用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。</p>
+     * @param TaskId <p>用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class GrantedAccountGroupItem extends AbstractModel {
 
     /**
-    * 账户组Id
+    * <p>账户组Id</p>
     */
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
 
     /**
-    * 分组名称
+    * <p>分组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 所属分组Id
+    * <p>所属分组Id</p>
     */
     @SerializedName("IdPathArray")
     @Expose
     private Long [] IdPathArray;
 
     /**
-    * 所属分组NamePathArray
+    * <p>所属分组NamePathArray</p>
     */
     @SerializedName("NamePathArray")
     @Expose
     private String [] NamePathArray;
 
     /**
-    * 目录id
+    * <p>目录id</p>
     */
     @SerializedName("AccountCount")
     @Expose
     private Long AccountCount;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 关联id
+    * <p>关联id</p>
     */
     @SerializedName("RelationId")
     @Expose
     private Long RelationId;
 
     /**
-     * Get 账户组Id 
-     * @return AccountGroupId 账户组Id
+     * Get <p>账户组Id</p> 
+     * @return AccountGroupId <p>账户组Id</p>
      */
     public Long getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set 账户组Id
-     * @param AccountGroupId 账户组Id
+     * Set <p>账户组Id</p>
+     * @param AccountGroupId <p>账户组Id</p>
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get 分组名称 
-     * @return Name 分组名称
+     * Get <p>分组名称</p> 
+     * @return Name <p>分组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分组名称
-     * @param Name 分组名称
+     * Set <p>分组名称</p>
+     * @param Name <p>分组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 所属分组Id 
-     * @return IdPathArray 所属分组Id
+     * Get <p>所属分组Id</p> 
+     * @return IdPathArray <p>所属分组Id</p>
      */
     public Long [] getIdPathArray() {
         return this.IdPathArray;
     }
 
     /**
-     * Set 所属分组Id
-     * @param IdPathArray 所属分组Id
+     * Set <p>所属分组Id</p>
+     * @param IdPathArray <p>所属分组Id</p>
      */
     public void setIdPathArray(Long [] IdPathArray) {
         this.IdPathArray = IdPathArray;
     }
 
     /**
-     * Get 所属分组NamePathArray 
-     * @return NamePathArray 所属分组NamePathArray
+     * Get <p>所属分组NamePathArray</p> 
+     * @return NamePathArray <p>所属分组NamePathArray</p>
      */
     public String [] getNamePathArray() {
         return this.NamePathArray;
     }
 
     /**
-     * Set 所属分组NamePathArray
-     * @param NamePathArray 所属分组NamePathArray
+     * Set <p>所属分组NamePathArray</p>
+     * @param NamePathArray <p>所属分组NamePathArray</p>
      */
     public void setNamePathArray(String [] NamePathArray) {
         this.NamePathArray = NamePathArray;
     }
 
     /**
-     * Get 目录id 
-     * @return AccountCount 目录id
+     * Get <p>目录id</p> 
+     * @return AccountCount <p>目录id</p>
      */
     public Long getAccountCount() {
         return this.AccountCount;
     }
 
     /**
-     * Set 目录id
-     * @param AccountCount 目录id
+     * Set <p>目录id</p>
+     * @param AccountCount <p>目录id</p>
      */
     public void setAccountCount(Long AccountCount) {
         this.AccountCount = AccountCount;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 关联id 
-     * @return RelationId 关联id
+     * Get <p>关联id</p> 
+     * @return RelationId <p>关联id</p>
      */
     public Long getRelationId() {
         return this.RelationId;
     }
 
     /**
-     * Set 关联id
-     * @param RelationId 关联id
+     * Set <p>关联id</p>
+     * @param RelationId <p>关联id</p>
      */
     public void setRelationId(Long RelationId) {
         this.RelationId = RelationId;

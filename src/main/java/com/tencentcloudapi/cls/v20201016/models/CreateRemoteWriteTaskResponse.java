@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRemoteWriteTaskResponse extends AbstractModel {
 
     /**
-    * remoteWrite任务id
+    * <p>remoteWrite任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -39,9 +39,9 @@ public class CreateRemoteWriteTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get remoteWrite任务id
+     * Get <p>remoteWrite任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId remoteWrite任务id
+     * @return TaskId <p>remoteWrite任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -49,9 +49,9 @@ public class CreateRemoteWriteTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set remoteWrite任务id
+     * Set <p>remoteWrite任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId remoteWrite任务id
+     * @param TaskId <p>remoteWrite任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {

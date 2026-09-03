@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LimitWindowsDTO extends AbstractModel {
 
     /**
-    * 时间窗口，分钟
+    * <p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
@@ -32,7 +32,7 @@ public class LimitWindowsDTO extends AbstractModel {
     private Long Interval;
 
     /**
-    * 累计上限，k
+    * <p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Limit")
@@ -40,9 +40,25 @@ public class LimitWindowsDTO extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 时间窗口，分钟
+    * <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * <p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeRange")
+    @Expose
+    private TimeRange TimeRange;
+
+    /**
+     * Get <p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Interval 时间窗口，分钟
+     * @return Interval <p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInterval() {
@@ -50,9 +66,9 @@ public class LimitWindowsDTO extends AbstractModel {
     }
 
     /**
-     * Set 时间窗口，分钟
+     * Set <p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Interval 时间窗口，分钟
+     * @param Interval <p>时间窗口，分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Long Interval) {
@@ -60,9 +76,9 @@ public class LimitWindowsDTO extends AbstractModel {
     }
 
     /**
-     * Get 累计上限，k
+     * Get <p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Limit 累计上限，k
+     * @return Limit <p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimit() {
@@ -70,13 +86,53 @@ public class LimitWindowsDTO extends AbstractModel {
     }
 
     /**
-     * Set 累计上限，k
+     * Set <p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Limit 累计上限，k
+     * @param Limit <p>累计上限，k</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li><li>timeRange： 时间范围</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeRange <p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TimeRange getTimeRange() {
+        return this.TimeRange;
+    }
+
+    /**
+     * Set <p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeRange <p>时间区间配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeRange(TimeRange TimeRange) {
+        this.TimeRange = TimeRange;
     }
 
     public LimitWindowsDTO() {
@@ -93,6 +149,12 @@ public class LimitWindowsDTO extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TimeRange != null) {
+            this.TimeRange = new TimeRange(source.TimeRange);
+        }
     }
 
 
@@ -102,6 +164,8 @@ public class LimitWindowsDTO extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "TimeRange.", this.TimeRange);
 
     }
 }

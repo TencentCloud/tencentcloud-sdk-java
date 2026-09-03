@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResultList extends AbstractModel {
 
     /**
-    * 题干
+    * <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Question")
@@ -32,7 +32,7 @@ public class ResultList extends AbstractModel {
     private Element [] Question;
 
     /**
-    * 选项
+    * <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Option")
@@ -40,7 +40,7 @@ public class ResultList extends AbstractModel {
     private Element [] Option;
 
     /**
-    * 插图
+    * <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Figure")
@@ -48,7 +48,7 @@ public class ResultList extends AbstractModel {
     private Element [] Figure;
 
     /**
-    * 表格
+    * <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
@@ -56,7 +56,7 @@ public class ResultList extends AbstractModel {
     private Element [] Table;
 
     /**
-    * 答案
+    * <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Answer")
@@ -64,14 +64,14 @@ public class ResultList extends AbstractModel {
     private Element [] Answer;
 
     /**
-    * 解析
+    * <p>解析</p>
     */
     @SerializedName("Parse")
     @Expose
     private Element [] Parse;
 
     /**
-    * 整题的坐标
+    * <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coord")
@@ -79,9 +79,16 @@ public class ResultList extends AbstractModel {
     private Polygon [] Coord;
 
     /**
-     * Get 题干
+    * <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+    */
+    @SerializedName("CoordPageIndex")
+    @Expose
+    private Long [] CoordPageIndex;
+
+    /**
+     * Get <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Question 题干
+     * @return Question <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getQuestion() {
@@ -89,9 +96,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Set 题干
+     * Set <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Question 题干
+     * @param Question <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuestion(Element [] Question) {
@@ -99,9 +106,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get 选项
+     * Get <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Option 选项
+     * @return Option <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getOption() {
@@ -109,9 +116,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Set 选项
+     * Set <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Option 选项
+     * @param Option <p>选项</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOption(Element [] Option) {
@@ -119,9 +126,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get 插图
+     * Get <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Figure 插图
+     * @return Figure <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getFigure() {
@@ -129,9 +136,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Set 插图
+     * Set <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Figure 插图
+     * @param Figure <p>插图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFigure(Element [] Figure) {
@@ -139,9 +146,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get 表格
+     * Get <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Table 表格
+     * @return Table <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getTable() {
@@ -149,9 +156,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Set 表格
+     * Set <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Table 表格
+     * @param Table <p>表格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(Element [] Table) {
@@ -159,9 +166,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get 答案
+     * Get <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Answer 答案
+     * @return Answer <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getAnswer() {
@@ -169,9 +176,9 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Set 答案
+     * Set <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Answer 答案
+     * @param Answer <p>答案</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnswer(Element [] Answer) {
@@ -179,25 +186,25 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get 解析 
-     * @return Parse 解析
+     * Get <p>解析</p> 
+     * @return Parse <p>解析</p>
      */
     public Element [] getParse() {
         return this.Parse;
     }
 
     /**
-     * Set 解析
-     * @param Parse 解析
+     * Set <p>解析</p>
+     * @param Parse <p>解析</p>
      */
     public void setParse(Element [] Parse) {
         this.Parse = Parse;
     }
 
     /**
-     * Get 整题的坐标
+     * Get <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Coord 整题的坐标
+     * @return Coord <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Polygon [] getCoord() {
@@ -205,13 +212,29 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Set 整题的坐标
+     * Set <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Coord 整题的坐标
+     * @param Coord <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoord(Polygon [] Coord) {
         this.Coord = Coord;
+    }
+
+    /**
+     * Get <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p> 
+     * @return CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     */
+    public Long [] getCoordPageIndex() {
+        return this.CoordPageIndex;
+    }
+
+    /**
+     * Set <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     * @param CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     */
+    public void setCoordPageIndex(Long [] CoordPageIndex) {
+        this.CoordPageIndex = CoordPageIndex;
     }
 
     public ResultList() {
@@ -264,6 +287,12 @@ public class ResultList extends AbstractModel {
                 this.Coord[i] = new Polygon(source.Coord[i]);
             }
         }
+        if (source.CoordPageIndex != null) {
+            this.CoordPageIndex = new Long[source.CoordPageIndex.length];
+            for (int i = 0; i < source.CoordPageIndex.length; i++) {
+                this.CoordPageIndex[i] = new Long(source.CoordPageIndex[i]);
+            }
+        }
     }
 
 
@@ -278,6 +307,7 @@ public class ResultList extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Answer.", this.Answer);
         this.setParamArrayObj(map, prefix + "Parse.", this.Parse);
         this.setParamArrayObj(map, prefix + "Coord.", this.Coord);
+        this.setParamArraySimple(map, prefix + "CoordPageIndex.", this.CoordPageIndex);
 
     }
 }

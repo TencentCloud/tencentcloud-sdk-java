@@ -87,6 +87,13 @@ public class DirectoryConfigResultData extends AbstractModel {
     private String [] AuthMethods;
 
     /**
+    * <p>名称多语言支持</p>
+    */
+    @SerializedName("NameI18n")
+    @Expose
+    private I18nString [] NameI18n;
+
+    /**
      * Get <p>企业目录 ID</p> 
      * @return Id <p>企业目录 ID</p>
      */
@@ -230,6 +237,22 @@ public class DirectoryConfigResultData extends AbstractModel {
         this.AuthMethods = AuthMethods;
     }
 
+    /**
+     * Get <p>名称多语言支持</p> 
+     * @return NameI18n <p>名称多语言支持</p>
+     */
+    public I18nString [] getNameI18n() {
+        return this.NameI18n;
+    }
+
+    /**
+     * Set <p>名称多语言支持</p>
+     * @param NameI18n <p>名称多语言支持</p>
+     */
+    public void setNameI18n(I18nString [] NameI18n) {
+        this.NameI18n = NameI18n;
+    }
+
     public DirectoryConfigResultData() {
     }
 
@@ -271,6 +294,12 @@ public class DirectoryConfigResultData extends AbstractModel {
                 this.AuthMethods[i] = new String(source.AuthMethods[i]);
             }
         }
+        if (source.NameI18n != null) {
+            this.NameI18n = new I18nString[source.NameI18n.length];
+            for (int i = 0; i < source.NameI18n.length; i++) {
+                this.NameI18n[i] = new I18nString(source.NameI18n[i]);
+            }
+        }
     }
 
 
@@ -287,6 +316,7 @@ public class DirectoryConfigResultData extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthPolicyId", this.AuthPolicyId);
         this.setParamArraySimple(map, prefix + "AuthSupportPlatforms.", this.AuthSupportPlatforms);
         this.setParamArraySimple(map, prefix + "AuthMethods.", this.AuthMethods);
+        this.setParamArrayObj(map, prefix + "NameI18n.", this.NameI18n);
 
     }
 }

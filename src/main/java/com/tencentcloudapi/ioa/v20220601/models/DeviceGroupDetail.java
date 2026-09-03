@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class DeviceGroupDetail extends AbstractModel {
 
     /**
-    * 设备组id
+    * <p>设备组id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 设备组名称
+    * <p>设备组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 设备组描述
+    * <p>设备组描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 父节点id
+    * <p>父节点id</p>
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * 基于id的节点路径
+    * <p>基于id的节点路径</p>
     */
     @SerializedName("IdPath")
     @Expose
     private String IdPath;
 
     /**
-    * 基于名称的节点路径
+    * <p>基于名称的节点路径</p>
     */
     @SerializedName("NamePath")
     @Expose
     private String NamePath;
 
     /**
-    * 分组锁定状态
+    * <p>分组锁定状态</p>
     */
     @SerializedName("Locked")
     @Expose
     private Long Locked;
 
     /**
-    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
+    * <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 排序
+    * <p>排序</p>
     */
     @SerializedName("Sort")
     @Expose
     private Long Sort;
 
     /**
-    * 是否自动调整
+    * <p>是否自动调整</p>
     */
     @SerializedName("FromAuto")
     @Expose
     private Long FromAuto;
 
     /**
-    * 子节点数量
+    * <p>子节点数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 图标
+    * <p>图标</p>
     */
     @SerializedName("Icon")
     @Expose
     private String Icon;
 
     /**
-    * 是否有ip
+    * <p>是否有ip</p>
     */
     @SerializedName("WithIp")
     @Expose
     private Long WithIp;
 
     /**
-    * 是否有组ip
+    * <p>是否有组ip</p>
     */
     @SerializedName("HasIp")
     @Expose
     private Boolean HasIp;
 
     /**
-    * 是否是叶子节点
+    * <p>是否是叶子节点</p>
     */
     @SerializedName("IsLeaf")
     @Expose
     private Boolean IsLeaf;
 
     /**
-    * 是否只读
+    * <p>是否只读</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * 对应绑定的账号id
+    * <p>对应绑定的账号id</p>
     */
     @SerializedName("BindAccount")
     @Expose
     private Long BindAccount;
 
     /**
-    * 绑定账号的用户名
+    * <p>绑定账号的用户名</p>
     */
     @SerializedName("BindAccountName")
     @Expose
     private String BindAccountName;
 
     /**
-     * Get 设备组id 
-     * @return Id 设备组id
+     * Get <p>设备组id</p> 
+     * @return Id <p>设备组id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 设备组id
-     * @param Id 设备组id
+     * Set <p>设备组id</p>
+     * @param Id <p>设备组id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 设备组名称 
-     * @return Name 设备组名称
+     * Get <p>设备组名称</p> 
+     * @return Name <p>设备组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备组名称
-     * @param Name 设备组名称
+     * Set <p>设备组名称</p>
+     * @param Name <p>设备组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备组描述 
-     * @return Description 设备组描述
+     * Get <p>设备组描述</p> 
+     * @return Description <p>设备组描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备组描述
-     * @param Description 设备组描述
+     * Set <p>设备组描述</p>
+     * @param Description <p>设备组描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 父节点id 
-     * @return ParentId 父节点id
+     * Get <p>父节点id</p> 
+     * @return ParentId <p>父节点id</p>
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 父节点id
-     * @param ParentId 父节点id
+     * Set <p>父节点id</p>
+     * @param ParentId <p>父节点id</p>
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 基于id的节点路径 
-     * @return IdPath 基于id的节点路径
+     * Get <p>基于id的节点路径</p> 
+     * @return IdPath <p>基于id的节点路径</p>
      */
     public String getIdPath() {
         return this.IdPath;
     }
 
     /**
-     * Set 基于id的节点路径
-     * @param IdPath 基于id的节点路径
+     * Set <p>基于id的节点路径</p>
+     * @param IdPath <p>基于id的节点路径</p>
      */
     public void setIdPath(String IdPath) {
         this.IdPath = IdPath;
     }
 
     /**
-     * Get 基于名称的节点路径 
-     * @return NamePath 基于名称的节点路径
+     * Get <p>基于名称的节点路径</p> 
+     * @return NamePath <p>基于名称的节点路径</p>
      */
     public String getNamePath() {
         return this.NamePath;
     }
 
     /**
-     * Set 基于名称的节点路径
-     * @param NamePath 基于名称的节点路径
+     * Set <p>基于名称的节点路径</p>
+     * @param NamePath <p>基于名称的节点路径</p>
      */
     public void setNamePath(String NamePath) {
         this.NamePath = NamePath;
     }
 
     /**
-     * Get 分组锁定状态 
-     * @return Locked 分组锁定状态
+     * Get <p>分组锁定状态</p> 
+     * @return Locked <p>分组锁定状态</p>
      */
     public Long getLocked() {
         return this.Locked;
     }
 
     /**
-     * Set 分组锁定状态
-     * @param Locked 分组锁定状态
+     * Set <p>分组锁定状态</p>
+     * @param Locked <p>分组锁定状态</p>
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;
     }
 
     /**
-     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ） 
-     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
+     * Get <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p> 
+     * @return OsType <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
-     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）
+     * Set <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
+     * @param OsType <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios   ）</p>
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 排序 
-     * @return Sort 排序
+     * Get <p>排序</p> 
+     * @return Sort <p>排序</p>
      */
     public Long getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序
-     * @param Sort 排序
+     * Set <p>排序</p>
+     * @param Sort <p>排序</p>
      */
     public void setSort(Long Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 是否自动调整 
-     * @return FromAuto 是否自动调整
+     * Get <p>是否自动调整</p> 
+     * @return FromAuto <p>是否自动调整</p>
      */
     public Long getFromAuto() {
         return this.FromAuto;
     }
 
     /**
-     * Set 是否自动调整
-     * @param FromAuto 是否自动调整
+     * Set <p>是否自动调整</p>
+     * @param FromAuto <p>是否自动调整</p>
      */
     public void setFromAuto(Long FromAuto) {
         this.FromAuto = FromAuto;
     }
 
     /**
-     * Get 子节点数量 
-     * @return Count 子节点数量
+     * Get <p>子节点数量</p> 
+     * @return Count <p>子节点数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 子节点数量
-     * @param Count 子节点数量
+     * Set <p>子节点数量</p>
+     * @param Count <p>子节点数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 图标 
-     * @return Icon 图标
+     * Get <p>图标</p> 
+     * @return Icon <p>图标</p>
      */
     public String getIcon() {
         return this.Icon;
     }
 
     /**
-     * Set 图标
-     * @param Icon 图标
+     * Set <p>图标</p>
+     * @param Icon <p>图标</p>
      */
     public void setIcon(String Icon) {
         this.Icon = Icon;
     }
 
     /**
-     * Get 是否有ip 
-     * @return WithIp 是否有ip
+     * Get <p>是否有ip</p> 
+     * @return WithIp <p>是否有ip</p>
      */
     public Long getWithIp() {
         return this.WithIp;
     }
 
     /**
-     * Set 是否有ip
-     * @param WithIp 是否有ip
+     * Set <p>是否有ip</p>
+     * @param WithIp <p>是否有ip</p>
      */
     public void setWithIp(Long WithIp) {
         this.WithIp = WithIp;
     }
 
     /**
-     * Get 是否有组ip 
-     * @return HasIp 是否有组ip
+     * Get <p>是否有组ip</p> 
+     * @return HasIp <p>是否有组ip</p>
      */
     public Boolean getHasIp() {
         return this.HasIp;
     }
 
     /**
-     * Set 是否有组ip
-     * @param HasIp 是否有组ip
+     * Set <p>是否有组ip</p>
+     * @param HasIp <p>是否有组ip</p>
      */
     public void setHasIp(Boolean HasIp) {
         this.HasIp = HasIp;
     }
 
     /**
-     * Get 是否是叶子节点 
-     * @return IsLeaf 是否是叶子节点
+     * Get <p>是否是叶子节点</p> 
+     * @return IsLeaf <p>是否是叶子节点</p>
      */
     public Boolean getIsLeaf() {
         return this.IsLeaf;
     }
 
     /**
-     * Set 是否是叶子节点
-     * @param IsLeaf 是否是叶子节点
+     * Set <p>是否是叶子节点</p>
+     * @param IsLeaf <p>是否是叶子节点</p>
      */
     public void setIsLeaf(Boolean IsLeaf) {
         this.IsLeaf = IsLeaf;
     }
 
     /**
-     * Get 是否只读 
-     * @return ReadOnly 是否只读
+     * Get <p>是否只读</p> 
+     * @return ReadOnly <p>是否只读</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否只读
-     * @param ReadOnly 是否只读
+     * Set <p>是否只读</p>
+     * @param ReadOnly <p>是否只读</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 对应绑定的账号id 
-     * @return BindAccount 对应绑定的账号id
+     * Get <p>对应绑定的账号id</p> 
+     * @return BindAccount <p>对应绑定的账号id</p>
      */
     public Long getBindAccount() {
         return this.BindAccount;
     }
 
     /**
-     * Set 对应绑定的账号id
-     * @param BindAccount 对应绑定的账号id
+     * Set <p>对应绑定的账号id</p>
+     * @param BindAccount <p>对应绑定的账号id</p>
      */
     public void setBindAccount(Long BindAccount) {
         this.BindAccount = BindAccount;
     }
 
     /**
-     * Get 绑定账号的用户名 
-     * @return BindAccountName 绑定账号的用户名
+     * Get <p>绑定账号的用户名</p> 
+     * @return BindAccountName <p>绑定账号的用户名</p>
      */
     public String getBindAccountName() {
         return this.BindAccountName;
     }
 
     /**
-     * Set 绑定账号的用户名
-     * @param BindAccountName 绑定账号的用户名
+     * Set <p>绑定账号的用户名</p>
+     * @param BindAccountName <p>绑定账号的用户名</p>
      */
     public void setBindAccountName(String BindAccountName) {
         this.BindAccountName = BindAccountName;

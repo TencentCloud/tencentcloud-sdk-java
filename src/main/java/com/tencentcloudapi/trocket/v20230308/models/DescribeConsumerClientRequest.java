@@ -31,7 +31,7 @@ public class DescribeConsumerClientRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+    * <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
     */
     @SerializedName("ClientId")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeConsumerClientRequest extends AbstractModel {
     }
 
     /**
-     * Get 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。 
-     * @return ClientId 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+     * Get <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p> 
+     * @return ClientId <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
-     * @param ClientId 客户端ID，从 [DescribeConsumerClientList](https://cloud.tencent.com/document/api/1493/120140) 接口中的 [ConsumerClient](https://cloud.tencent.com/document/api/1493/96031#ConsumerClient) 出参中获得。
+     * Set <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
+     * @param ClientId <p>客户端ID，从 <a href="https://cloud.tencent.com/document/api/1493/120140">DescribeConsumerClientList</a> 接口中的 <a href="https://cloud.tencent.com/document/api/1493/96031#ConsumerClient">ConsumerClient</a> 出参中获得。</p>
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;

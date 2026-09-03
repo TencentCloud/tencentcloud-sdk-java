@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MetadataVar extends AbstractModel {
 
     /**
-    * <p>沙箱元数据名</p>
+    * <p>元数据名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>沙箱元数据值</p>
+    * <p>元数据值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get <p>沙箱元数据名</p> 
-     * @return Name <p>沙箱元数据名</p>
+     * Get <p>元数据名</p> 
+     * @return Name <p>元数据名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>沙箱元数据名</p>
-     * @param Name <p>沙箱元数据名</p>
+     * Set <p>元数据名</p>
+     * @param Name <p>元数据名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>沙箱元数据值</p> 
-     * @return Value <p>沙箱元数据值</p>
+     * Get <p>元数据值</p> 
+     * @return Value <p>元数据值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set <p>沙箱元数据值</p>
-     * @param Value <p>沙箱元数据值</p>
+     * Set <p>元数据值</p>
+     * @param Value <p>元数据值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

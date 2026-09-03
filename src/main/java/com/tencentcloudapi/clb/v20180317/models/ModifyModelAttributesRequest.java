@@ -31,11 +31,18 @@ public class ModifyModelAttributesRequest extends AbstractModel {
     private String ServiceProviderId;
 
     /**
-    * <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+    * <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
     */
     @SerializedName("ServiceProviderName")
     @Expose
     private String ServiceProviderName;
+
+    /**
+    * <p>多协议 Api Base URL</p>
+    */
+    @SerializedName("ApiBases")
+    @Expose
+    private ApiBaseItem [] ApiBases;
 
     /**
      * Get <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p> 
@@ -54,19 +61,35 @@ public class ModifyModelAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p> 
-     * @return ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+     * Get <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p> 
+     * @return ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
      */
     public String getServiceProviderName() {
         return this.ServiceProviderName;
     }
 
     /**
-     * Set <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
-     * @param ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～256个字符</p>
+     * Set <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
+     * @param ServiceProviderName <p>BYOK的自定义名字</p><p>入参限制：1～255个字符</p>
      */
     public void setServiceProviderName(String ServiceProviderName) {
         this.ServiceProviderName = ServiceProviderName;
+    }
+
+    /**
+     * Get <p>多协议 Api Base URL</p> 
+     * @return ApiBases <p>多协议 Api Base URL</p>
+     */
+    public ApiBaseItem [] getApiBases() {
+        return this.ApiBases;
+    }
+
+    /**
+     * Set <p>多协议 Api Base URL</p>
+     * @param ApiBases <p>多协议 Api Base URL</p>
+     */
+    public void setApiBases(ApiBaseItem [] ApiBases) {
+        this.ApiBases = ApiBases;
     }
 
     public ModifyModelAttributesRequest() {
@@ -83,6 +106,12 @@ public class ModifyModelAttributesRequest extends AbstractModel {
         if (source.ServiceProviderName != null) {
             this.ServiceProviderName = new String(source.ServiceProviderName);
         }
+        if (source.ApiBases != null) {
+            this.ApiBases = new ApiBaseItem[source.ApiBases.length];
+            for (int i = 0; i < source.ApiBases.length; i++) {
+                this.ApiBases[i] = new ApiBaseItem(source.ApiBases[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class ModifyModelAttributesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
         this.setParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
+        this.setParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
 
     }
 }

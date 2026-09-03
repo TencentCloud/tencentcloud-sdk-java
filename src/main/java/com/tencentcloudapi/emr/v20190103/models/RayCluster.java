@@ -80,6 +80,13 @@ public class RayCluster extends AbstractModel {
     private String Namespace;
 
     /**
+    * <p>raycluster挂载的volume数量</p>
+    */
+    @SerializedName("StorageCount")
+    @Expose
+    private Long StorageCount;
+
+    /**
      * Get <p>RayCluster 集群名</p> 
      * @return RayClusterName <p>RayCluster 集群名</p>
      */
@@ -207,6 +214,22 @@ public class RayCluster extends AbstractModel {
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get <p>raycluster挂载的volume数量</p> 
+     * @return StorageCount <p>raycluster挂载的volume数量</p>
+     */
+    public Long getStorageCount() {
+        return this.StorageCount;
+    }
+
+    /**
+     * Set <p>raycluster挂载的volume数量</p>
+     * @param StorageCount <p>raycluster挂载的volume数量</p>
+     */
+    public void setStorageCount(Long StorageCount) {
+        this.StorageCount = StorageCount;
+    }
+
     public RayCluster() {
     }
 
@@ -239,6 +262,9 @@ public class RayCluster extends AbstractModel {
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.StorageCount != null) {
+            this.StorageCount = new Long(source.StorageCount);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class RayCluster extends AbstractModel {
         this.setParamSimple(map, prefix + "SubmitType", this.SubmitType);
         this.setParamSimple(map, prefix + "DashboardUrl", this.DashboardUrl);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "StorageCount", this.StorageCount);
 
     }
 }

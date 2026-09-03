@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdatePublishCdnStreamResponse extends AbstractModel {
 
     /**
-    * 转推任务唯一的String Id
+    * <p>转推任务唯一的String Id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class UpdatePublishCdnStreamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 转推任务唯一的String Id 
-     * @return TaskId 转推任务唯一的String Id
+     * Get <p>转推任务唯一的String Id</p> 
+     * @return TaskId <p>转推任务唯一的String Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 转推任务唯一的String Id
-     * @param TaskId 转推任务唯一的String Id
+     * Set <p>转推任务唯一的String Id</p>
+     * @param TaskId <p>转推任务唯一的String Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

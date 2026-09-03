@@ -94,6 +94,13 @@ public class CreateCompanyDirectoryConfigRequest extends AbstractModel {
     private String Scene;
 
     /**
+    * <p>名称多语言</p>
+    */
+    @SerializedName("NameI18n")
+    @Expose
+    private I18nString [] NameI18n;
+
+    /**
      * Get <p>企业目录类型</p> 
      * @return Type <p>企业目录类型</p>
      */
@@ -253,6 +260,22 @@ public class CreateCompanyDirectoryConfigRequest extends AbstractModel {
         this.Scene = Scene;
     }
 
+    /**
+     * Get <p>名称多语言</p> 
+     * @return NameI18n <p>名称多语言</p>
+     */
+    public I18nString [] getNameI18n() {
+        return this.NameI18n;
+    }
+
+    /**
+     * Set <p>名称多语言</p>
+     * @param NameI18n <p>名称多语言</p>
+     */
+    public void setNameI18n(I18nString [] NameI18n) {
+        this.NameI18n = NameI18n;
+    }
+
     public CreateCompanyDirectoryConfigRequest() {
     }
 
@@ -291,6 +314,12 @@ public class CreateCompanyDirectoryConfigRequest extends AbstractModel {
         if (source.Scene != null) {
             this.Scene = new String(source.Scene);
         }
+        if (source.NameI18n != null) {
+            this.NameI18n = new I18nString[source.NameI18n.length];
+            for (int i = 0; i < source.NameI18n.length; i++) {
+                this.NameI18n[i] = new I18nString(source.NameI18n[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ public class CreateCompanyDirectoryConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayOnLoginPage", this.DisplayOnLoginPage);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamArrayObj(map, prefix + "NameI18n.", this.NameI18n);
 
     }
 }

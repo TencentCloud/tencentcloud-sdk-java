@@ -350,6 +350,36 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
     private Boolean IgnoreHealthCheck;
 
     /**
+    * <p>凭据ID</p>
+    */
+    @SerializedName("CredentialID")
+    @Expose
+    private String CredentialID;
+
+    /**
+    * <p>凭据名称</p>
+    */
+    @SerializedName("CredentialName")
+    @Expose
+    private String CredentialName;
+
+    /**
+    * <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestProtocolType")
+    @Expose
+    private String RequestProtocolType;
+
+    /**
      * Get <p>实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceID <p>实例ID</p>
@@ -1149,6 +1179,78 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
         this.IgnoreHealthCheck = IgnoreHealthCheck;
     }
 
+    /**
+     * Get <p>凭据ID</p> 
+     * @return CredentialID <p>凭据ID</p>
+     */
+    public String getCredentialID() {
+        return this.CredentialID;
+    }
+
+    /**
+     * Set <p>凭据ID</p>
+     * @param CredentialID <p>凭据ID</p>
+     */
+    public void setCredentialID(String CredentialID) {
+        this.CredentialID = CredentialID;
+    }
+
+    /**
+     * Get <p>凭据名称</p> 
+     * @return CredentialName <p>凭据名称</p>
+     */
+    public String getCredentialName() {
+        return this.CredentialName;
+    }
+
+    /**
+     * Set <p>凭据名称</p>
+     * @param CredentialName <p>凭据名称</p>
+     */
+    public void setCredentialName(String CredentialName) {
+        this.CredentialName = CredentialName;
+    }
+
+    /**
+     * Get <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestProtocolType() {
+        return this.RequestProtocolType;
+    }
+
+    /**
+     * Set <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestProtocolType(String RequestProtocolType) {
+        this.RequestProtocolType = RequestProtocolType;
+    }
+
     public DescribeMcpServerResponseVO() {
     }
 
@@ -1313,6 +1415,18 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
         if (source.IgnoreHealthCheck != null) {
             this.IgnoreHealthCheck = new Boolean(source.IgnoreHealthCheck);
         }
+        if (source.CredentialID != null) {
+            this.CredentialID = new String(source.CredentialID);
+        }
+        if (source.CredentialName != null) {
+            this.CredentialName = new String(source.CredentialName);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RequestProtocolType != null) {
+            this.RequestProtocolType = new String(source.RequestProtocolType);
+        }
     }
 
 
@@ -1362,6 +1476,10 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
         this.setParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
         this.setParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
+        this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
+        this.setParamSimple(map, prefix + "CredentialName", this.CredentialName);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
 
     }
 }

@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class OrderDetail extends AbstractModel {
 
     /**
-    * 资源ID
+    * <p>资源ID</p>
     */
     @SerializedName("ResourceID")
     @Expose
     private String ResourceID;
 
     /**
-    * 计费项
+    * <p>计费项</p>
     */
     @SerializedName("InquireKey")
     @Expose
     private String InquireKey;
 
     /**
-    * 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
+    * <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 资源ID 
-     * @return ResourceID 资源ID
+    * <p>源类型</p>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private Long SourceType;
+
+    /**
+     * Get <p>资源ID</p> 
+     * @return ResourceID <p>资源ID</p>
      */
     public String getResourceID() {
         return this.ResourceID;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceID 资源ID
+     * Set <p>资源ID</p>
+     * @param ResourceID <p>资源ID</p>
      */
     public void setResourceID(String ResourceID) {
         this.ResourceID = ResourceID;
     }
 
     /**
-     * Get 计费项 
-     * @return InquireKey 计费项
+     * Get <p>计费项</p> 
+     * @return InquireKey <p>计费项</p>
      */
     public String getInquireKey() {
         return this.InquireKey;
     }
 
     /**
-     * Set 计费项
-     * @param InquireKey 计费项
+     * Set <p>计费项</p>
+     * @param InquireKey <p>计费项</p>
      */
     public void setInquireKey(String InquireKey) {
         this.InquireKey = InquireKey;
     }
 
     /**
-     * Get 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁 
-     * @return Status 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
+     * Get <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul> 
+     * @return Status <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
-     * @param Status 订单状态
-- 1 正常
-- 2 隔离期
-- 3 已销毁
+     * Set <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
+     * @param Status <p>订单状态</p><ul><li>1 正常</li><li>2 隔离期</li><li>3 已销毁</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>源类型</p> 
+     * @return SourceType <p>源类型</p>
+     */
+    public Long getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>源类型</p>
+     * @param SourceType <p>源类型</p>
+     */
+    public void setSourceType(Long SourceType) {
+        this.SourceType = SourceType;
     }
 
     public OrderDetail() {
@@ -124,6 +132,9 @@ public class OrderDetail extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class OrderDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
         this.setParamSimple(map, prefix + "InquireKey", this.InquireKey);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

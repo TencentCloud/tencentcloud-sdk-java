@@ -102,6 +102,14 @@ public class ClusterActivity extends AbstractModel {
     private String EndTime;
 
     /**
+    * 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
      * Get 集群ID。 
      * @return ClusterId 集群ID。
      */
@@ -281,6 +289,26 @@ public class ClusterActivity extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueueName 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueueName 队列名称。集群级活动（如创建/删除集群）此字段为空，队列级活动（如扩容/缩容）为对应队列名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
     public ClusterActivity() {
     }
 
@@ -325,6 +353,9 @@ public class ClusterActivity extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
     }
 
 
@@ -343,6 +374,7 @@ public class ClusterActivity extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RelatedNodeActivitySet.", this.RelatedNodeActivitySet);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
 
     }
 }

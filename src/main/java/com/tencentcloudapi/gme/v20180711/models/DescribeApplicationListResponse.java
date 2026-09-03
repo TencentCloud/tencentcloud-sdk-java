@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeApplicationListResponse extends AbstractModel {
 
     /**
-    * 获取应用列表返回
+    * <p>获取应用列表返回</p>
     */
     @SerializedName("ApplicationList")
     @Expose
     private ApplicationList [] ApplicationList;
 
     /**
-    * 应用总数
+    * <p>应用总数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeApplicationListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取应用列表返回 
-     * @return ApplicationList 获取应用列表返回
+     * Get <p>获取应用列表返回</p> 
+     * @return ApplicationList <p>获取应用列表返回</p>
      */
     public ApplicationList [] getApplicationList() {
         return this.ApplicationList;
     }
 
     /**
-     * Set 获取应用列表返回
-     * @param ApplicationList 获取应用列表返回
+     * Set <p>获取应用列表返回</p>
+     * @param ApplicationList <p>获取应用列表返回</p>
      */
     public void setApplicationList(ApplicationList [] ApplicationList) {
         this.ApplicationList = ApplicationList;
     }
 
     /**
-     * Get 应用总数 
-     * @return Total 应用总数
+     * Get <p>应用总数</p> 
+     * @return Total <p>应用总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 应用总数
-     * @param Total 应用总数
+     * Set <p>应用总数</p>
+     * @param Total <p>应用总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -24,746 +24,624 @@ import java.util.HashMap;
 public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel {
 
     /**
-    * 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+    * <p>启动配置ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/config">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/20445">DescribeLaunchConfigurations</a> ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</p>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
     private String LaunchConfigurationId;
 
     /**
-    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+    * <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
+    * <p>实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。<br>InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口<a href="https://cloud.tencent.com/document/api/213/15749">DescribeInstanceTypeConfigs</a>来获得最新的规格表或参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格描述</a>。</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
-<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+    * <p>实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。</p><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
     */
     @SerializedName("InstanceTypesCheckPolicy")
     @Expose
     private String InstanceTypesCheckPolicy;
 
     /**
-    * 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+    * <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
     */
     @SerializedName("LaunchConfigurationName")
     @Expose
     private String LaunchConfigurationName;
 
     /**
-    * 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。
+    * <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。</p>
     */
     @SerializedName("UserData")
     @Expose
     private String UserData;
 
     /**
-    * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
-若指定该参数，请至少提供一个安全组，列表顺序有先后。
+    * <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。<br>若指定该参数，请至少提供一个安全组，列表顺序有先后。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 公网带宽相关信息设置。
-当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
+    * <p>公网带宽相关信息设置。<br>当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * 实例计费类型。具体取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+    * <p>实例计费类型。具体取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为预付费。
+    * <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。<br>若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为预付费。</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 实例的市场相关选项，如竞价实例相关参数。
-若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为竞价付费。
+    * <p>实例的市场相关选项，如竞价实例相关参数。<br>若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为竞价付费。</p>
     */
     @SerializedName("InstanceMarketOptions")
     @Expose
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
-    * 云盘类型选择策略，取值范围：
-<li>ORIGINAL：使用设置的云盘类型。</li>
-<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
+    * <p>云盘类型选择策略，取值范围：</p><li>ORIGINAL：使用设置的云盘类型。</li><li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
     */
     @SerializedName("DiskTypePolicy")
     @Expose
     private String DiskTypePolicy;
 
     /**
-    * 实例系统盘配置信息。
+    * <p>实例系统盘配置信息。</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
 
     /**
-    * 实例数据盘配置信息。
-最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
-数据盘类型默认与系统盘类型保持一致。
+    * <p>实例数据盘配置信息。<br>最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。<br>数据盘类型默认与系统盘类型保持一致。</p>
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
 
     /**
-    * 云服务器主机名（HostName）的相关设置。
-不支持windows实例设置主机名。
-新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
-会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
+    * <p>云服务器主机名（HostName）的相关设置。<br>不支持windows实例设置主机名。<br>新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。<br>会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。</p>
     */
     @SerializedName("HostNameSettings")
     @Expose
     private HostNameSettings HostNameSettings;
 
     /**
-    * 云服务器（InstanceName）实例名的相关设置。 
-如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
-新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
-会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。
+    * <p>云服务器（InstanceName）实例名的相关设置。<br>如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。<br>新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。<br>会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。</p>
     */
     @SerializedName("InstanceNameSettings")
     @Expose
     private InstanceNameSettings InstanceNameSettings;
 
     /**
-    * 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+    * <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。</p>
     */
     @SerializedName("EnhancedService")
     @Expose
     private EnhancedService EnhancedService;
 
     /**
-    * CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+    * <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
     */
     @SerializedName("CamRoleName")
     @Expose
     private String CamRoleName;
 
     /**
-    * 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
-注意：此字段默认为空。
+    * <p>高性能计算集群ID。可通过调用<a href="https://cloud.tencent.com/document/product/213/83220">DescribeHpcClusters</a>接口获取该参数。<br>注意：此字段默认为空。</p>
     */
     @SerializedName("HpcClusterId")
     @Expose
     private String HpcClusterId;
 
     /**
-    * IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+    * <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
     */
     @SerializedName("IPv6InternetAccessible")
     @Expose
     private IPv6InternetAccessible IPv6InternetAccessible;
 
     /**
-    * 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
+    * <p>置放群组id，仅支持指定一个。可通过调用<a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>接口获取该参数。</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+    * <p>实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。</p>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+    * <p>实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。<br>该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。</p>
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTag [] InstanceTags;
 
     /**
-    * 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
+    * <p>镜像族名称。可通过调用<a href="https://cloud.tencent.com/document/product/213/15715">DescribeImages</a>接口获取该参数。</p>
     */
     @SerializedName("ImageFamily")
     @Expose
     private String ImageFamily;
 
     /**
-    * 本地专用集群ID。
+    * <p>本地专用集群ID。</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * 自定义metadata。
+    * <p>自定义metadata。</p>
     */
     @SerializedName("Metadata")
     @Expose
     private Metadata Metadata;
 
     /**
-     * Get 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。 
-     * @return LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+    * <p>替换启动配置中的弹性网卡配置。</p><p>入参限制：最多 17 项；必须显式包含且只能包含一个 PRIMARY，AS 不自动补齐主网卡；显式空数组非法。</p><p>字段规则与 CreateLaunchConfiguration 一致。清除请调用 ClearLaunchConfigurationAttributes 并传 ClearNetworkInterfaces=true。</p>
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterface [] NetworkInterfaces;
+
+    /**
+     * Get <p>启动配置ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/config">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/20445">DescribeLaunchConfigurations</a> ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</p> 
+     * @return LaunchConfigurationId <p>启动配置ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/config">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/20445">DescribeLaunchConfigurations</a> ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</p>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
-     * @param LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+     * Set <p>启动配置ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/config">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/20445">DescribeLaunchConfigurations</a> ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</p>
+     * @param LaunchConfigurationId <p>启动配置ID。可通过登录 <a href="https://console.cloud.tencent.com/autoscaling/config">控制台</a> 或调用接口 <a href="https://cloud.tencent.com/document/api/377/20445">DescribeLaunchConfigurations</a> ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</p>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
     }
 
     /**
-     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li> 
-     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+     * Get <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p> 
+     * @return ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
-     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
+     * Set <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
+     * @param ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-8toqc6s3</code>。镜像类型分为四种：<br><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br>可通过以下方式获取可用的镜像ID：<br><li><code>公共镜像</code>、<code>自定义镜像</code>、<code>共享镜像</code>的镜像ID可通过登录<a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">控制台</a>查询；<code>服务镜像市场</code>的镜像ID可通过<a href="https://market.cloud.tencent.com/list">云市场</a>查询。</li><li>通过调用接口 <a href="https://cloud.tencent.com/document/api/213/15715">DescribeImages</a> ，取返回信息中的<code>ImageId</code>字段。</li></p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。 
-     * @return InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
+     * Get <p>实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。<br>InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口<a href="https://cloud.tencent.com/document/api/213/15749">DescribeInstanceTypeConfigs</a>来获得最新的规格表或参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格描述</a>。</p> 
+     * @return InstanceTypes <p>实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。<br>InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口<a href="https://cloud.tencent.com/document/api/213/15749">DescribeInstanceTypeConfigs</a>来获得最新的规格表或参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格描述</a>。</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
-     * @param InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
+     * Set <p>实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。<br>InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口<a href="https://cloud.tencent.com/document/api/213/15749">DescribeInstanceTypeConfigs</a>来获得最新的规格表或参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格描述</a>。</p>
+     * @param InstanceTypes <p>实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。<br>InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口<a href="https://cloud.tencent.com/document/api/213/15749">DescribeInstanceTypeConfigs</a>来获得最新的规格表或参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格描述</a>。</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
-<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。 
-     * @return InstanceTypesCheckPolicy 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
-<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     * Get <p>实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。</p><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。 
+     * @return InstanceTypesCheckPolicy <p>实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。</p><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      */
     public String getInstanceTypesCheckPolicy() {
         return this.InstanceTypesCheckPolicy;
     }
 
     /**
-     * Set 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
-<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
-     * @param InstanceTypesCheckPolicy 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-<li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
-<li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
-实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
-如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     * Set <p>实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。</p><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+     * @param InstanceTypesCheckPolicy <p>实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。</p><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      */
     public void setInstanceTypesCheckPolicy(String InstanceTypesCheckPolicy) {
         this.InstanceTypesCheckPolicy = InstanceTypesCheckPolicy;
     }
 
     /**
-     * Get 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。 
-     * @return LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * Get <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p> 
+     * @return LaunchConfigurationName <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public String getLaunchConfigurationName() {
         return this.LaunchConfigurationName;
     }
 
     /**
-     * Set 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
-     * @param LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * Set <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
+     * @param LaunchConfigurationName <p>启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
         this.LaunchConfigurationName = LaunchConfigurationName;
     }
 
     /**
-     * Get 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。 
-     * @return UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。
+     * Get <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。</p> 
+     * @return UserData <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。</p>
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。
-     * @param UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。
+     * Set <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。</p>
+     * @param UserData <p>经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。</p>
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
     }
 
     /**
-     * Get 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
-若指定该参数，请至少提供一个安全组，列表顺序有先后。 
-     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
-若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     * Get <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。<br>若指定该参数，请至少提供一个安全组，列表顺序有先后。</p> 
+     * @return SecurityGroupIds <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。<br>若指定该参数，请至少提供一个安全组，列表顺序有先后。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
-若指定该参数，请至少提供一个安全组，列表顺序有先后。
-     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
-若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     * Set <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。<br>若指定该参数，请至少提供一个安全组，列表顺序有先后。</p>
+     * @param SecurityGroupIds <p>实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的<code>SecurityGroupId</code>字段来获取。<br>若指定该参数，请至少提供一个安全组，列表顺序有先后。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 公网带宽相关信息设置。
-当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。 
-     * @return InternetAccessible 公网带宽相关信息设置。
-当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
+     * Get <p>公网带宽相关信息设置。<br>当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。</p> 
+     * @return InternetAccessible <p>公网带宽相关信息设置。<br>当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 公网带宽相关信息设置。
-当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
-     * @param InternetAccessible 公网带宽相关信息设置。
-当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
+     * Set <p>公网带宽相关信息设置。<br>当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。</p>
+     * @param InternetAccessible <p>公网带宽相关信息设置。<br>当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * Get 实例计费类型。具体取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li> 
-     * @return InstanceChargeType 实例计费类型。具体取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+     * Get <p>实例计费类型。具体取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li> 
+     * @return InstanceChargeType <p>实例计费类型。具体取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。具体取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
-     * @param InstanceChargeType 实例计费类型。具体取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+     * Set <p>实例计费类型。具体取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
+     * @param InstanceChargeType <p>实例计费类型。具体取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为预付费。 
-     * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为预付费。
+     * Get <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。<br>若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为预付费。</p> 
+     * @return InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。<br>若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为预付费。</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为预付费。
-     * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为预付费。
+     * Set <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。<br>若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为预付费。</p>
+     * @param InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。<br>若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为预付费。</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get 实例的市场相关选项，如竞价实例相关参数。
-若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为竞价付费。 
-     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数。
-若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为竞价付费。
+     * Get <p>实例的市场相关选项，如竞价实例相关参数。<br>若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为竞价付费。</p> 
+     * @return InstanceMarketOptions <p>实例的市场相关选项，如竞价实例相关参数。<br>若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为竞价付费。</p>
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
         return this.InstanceMarketOptions;
     }
 
     /**
-     * Set 实例的市场相关选项，如竞价实例相关参数。
-若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为竞价付费。
-     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数。
-若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
-当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
-当修改本字段时，当前付费模式必须为竞价付费。
+     * Set <p>实例的市场相关选项，如竞价实例相关参数。<br>若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为竞价付费。</p>
+     * @param InstanceMarketOptions <p>实例的市场相关选项，如竞价实例相关参数。<br>若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。<br>当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。<br>当修改本字段时，当前付费模式必须为竞价付费。</p>
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
         this.InstanceMarketOptions = InstanceMarketOptions;
     }
 
     /**
-     * Get 云盘类型选择策略，取值范围：
-<li>ORIGINAL：使用设置的云盘类型。</li>
-<li>AUTOMATIC：自动选择当前可用的云盘类型。</li> 
-     * @return DiskTypePolicy 云盘类型选择策略，取值范围：
-<li>ORIGINAL：使用设置的云盘类型。</li>
-<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
+     * Get <p>云盘类型选择策略，取值范围：</p><li>ORIGINAL：使用设置的云盘类型。</li><li>AUTOMATIC：自动选择当前可用的云盘类型。</li> 
+     * @return DiskTypePolicy <p>云盘类型选择策略，取值范围：</p><li>ORIGINAL：使用设置的云盘类型。</li><li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
      */
     public String getDiskTypePolicy() {
         return this.DiskTypePolicy;
     }
 
     /**
-     * Set 云盘类型选择策略，取值范围：
-<li>ORIGINAL：使用设置的云盘类型。</li>
-<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
-     * @param DiskTypePolicy 云盘类型选择策略，取值范围：
-<li>ORIGINAL：使用设置的云盘类型。</li>
-<li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
+     * Set <p>云盘类型选择策略，取值范围：</p><li>ORIGINAL：使用设置的云盘类型。</li><li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
+     * @param DiskTypePolicy <p>云盘类型选择策略，取值范围：</p><li>ORIGINAL：使用设置的云盘类型。</li><li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
      */
     public void setDiskTypePolicy(String DiskTypePolicy) {
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
     /**
-     * Get 实例系统盘配置信息。 
-     * @return SystemDisk 实例系统盘配置信息。
+     * Get <p>实例系统盘配置信息。</p> 
+     * @return SystemDisk <p>实例系统盘配置信息。</p>
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 实例系统盘配置信息。
-     * @param SystemDisk 实例系统盘配置信息。
+     * Set <p>实例系统盘配置信息。</p>
+     * @param SystemDisk <p>实例系统盘配置信息。</p>
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 实例数据盘配置信息。
-最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
-数据盘类型默认与系统盘类型保持一致。 
-     * @return DataDisks 实例数据盘配置信息。
-最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
-数据盘类型默认与系统盘类型保持一致。
+     * Get <p>实例数据盘配置信息。<br>最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。<br>数据盘类型默认与系统盘类型保持一致。</p> 
+     * @return DataDisks <p>实例数据盘配置信息。<br>最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。<br>数据盘类型默认与系统盘类型保持一致。</p>
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 实例数据盘配置信息。
-最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
-数据盘类型默认与系统盘类型保持一致。
-     * @param DataDisks 实例数据盘配置信息。
-最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
-数据盘类型默认与系统盘类型保持一致。
+     * Set <p>实例数据盘配置信息。<br>最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。<br>数据盘类型默认与系统盘类型保持一致。</p>
+     * @param DataDisks <p>实例数据盘配置信息。<br>最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。<br>数据盘类型默认与系统盘类型保持一致。</p>
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get 云服务器主机名（HostName）的相关设置。
-不支持windows实例设置主机名。
-新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
-会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。 
-     * @return HostNameSettings 云服务器主机名（HostName）的相关设置。
-不支持windows实例设置主机名。
-新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
-会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
+     * Get <p>云服务器主机名（HostName）的相关设置。<br>不支持windows实例设置主机名。<br>新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。<br>会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。</p> 
+     * @return HostNameSettings <p>云服务器主机名（HostName）的相关设置。<br>不支持windows实例设置主机名。<br>新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。<br>会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。</p>
      */
     public HostNameSettings getHostNameSettings() {
         return this.HostNameSettings;
     }
 
     /**
-     * Set 云服务器主机名（HostName）的相关设置。
-不支持windows实例设置主机名。
-新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
-会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
-     * @param HostNameSettings 云服务器主机名（HostName）的相关设置。
-不支持windows实例设置主机名。
-新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
-会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。
+     * Set <p>云服务器主机名（HostName）的相关设置。<br>不支持windows实例设置主机名。<br>新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。<br>会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。</p>
+     * @param HostNameSettings <p>云服务器主机名（HostName）的相关设置。<br>不支持windows实例设置主机名。<br>新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。<br>会校验主机名(如果存在后缀则加上后缀)是否超过最大位数46。</p>
      */
     public void setHostNameSettings(HostNameSettings HostNameSettings) {
         this.HostNameSettings = HostNameSettings;
     }
 
     /**
-     * Get 云服务器（InstanceName）实例名的相关设置。 
-如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
-新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
-会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。 
-     * @return InstanceNameSettings 云服务器（InstanceName）实例名的相关设置。 
-如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
-新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
-会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。
+     * Get <p>云服务器（InstanceName）实例名的相关设置。<br>如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。<br>新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。<br>会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。</p> 
+     * @return InstanceNameSettings <p>云服务器（InstanceName）实例名的相关设置。<br>如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。<br>新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。<br>会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。</p>
      */
     public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
     }
 
     /**
-     * Set 云服务器（InstanceName）实例名的相关设置。 
-如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
-新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
-会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。
-     * @param InstanceNameSettings 云服务器（InstanceName）实例名的相关设置。 
-如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
-新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
-会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。
+     * Set <p>云服务器（InstanceName）实例名的相关设置。<br>如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。<br>新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。<br>会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。</p>
+     * @param InstanceNameSettings <p>云服务器（InstanceName）实例名的相关设置。<br>如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。<br>新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。<br>会校验实例名(如果存在后缀则加上后缀)是否超过最大位数108。</p>
      */
     public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
     /**
-     * Get 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。 
-     * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+     * Get <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。</p> 
+     * @return EnhancedService <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。</p>
      */
     public EnhancedService getEnhancedService() {
         return this.EnhancedService;
     }
 
     /**
-     * Set 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
-     * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+     * Set <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。</p>
+     * @param EnhancedService <p>增强服务。通过该参数可以指定是否开启云安全、云监控等服务。</p>
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
         this.EnhancedService = EnhancedService;
     }
 
     /**
-     * Get CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。 
-     * @return CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * Get <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p> 
+     * @return CamRoleName <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
-     * @param CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * Set <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
+     * @param CamRoleName <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
     }
 
     /**
-     * Get 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
-注意：此字段默认为空。 
-     * @return HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
-注意：此字段默认为空。
+     * Get <p>高性能计算集群ID。可通过调用<a href="https://cloud.tencent.com/document/product/213/83220">DescribeHpcClusters</a>接口获取该参数。<br>注意：此字段默认为空。</p> 
+     * @return HpcClusterId <p>高性能计算集群ID。可通过调用<a href="https://cloud.tencent.com/document/product/213/83220">DescribeHpcClusters</a>接口获取该参数。<br>注意：此字段默认为空。</p>
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
-注意：此字段默认为空。
-     * @param HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
-注意：此字段默认为空。
+     * Set <p>高性能计算集群ID。可通过调用<a href="https://cloud.tencent.com/document/product/213/83220">DescribeHpcClusters</a>接口获取该参数。<br>注意：此字段默认为空。</p>
+     * @param HpcClusterId <p>高性能计算集群ID。可通过调用<a href="https://cloud.tencent.com/document/product/213/83220">DescribeHpcClusters</a>接口获取该参数。<br>注意：此字段默认为空。</p>
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
     }
 
     /**
-     * Get IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。 
-     * @return IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     * Get <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p> 
+     * @return IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
      */
     public IPv6InternetAccessible getIPv6InternetAccessible() {
         return this.IPv6InternetAccessible;
     }
 
     /**
-     * Set IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
-     * @param IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     * Set <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
+     * @param IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。</p>
      */
     public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
         this.IPv6InternetAccessible = IPv6InternetAccessible;
     }
 
     /**
-     * Get 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。 
-     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
+     * Get <p>置放群组id，仅支持指定一个。可通过调用<a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>接口获取该参数。</p> 
+     * @return DisasterRecoverGroupIds <p>置放群组id，仅支持指定一个。可通过调用<a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>接口获取该参数。</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
-     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
+     * Set <p>置放群组id，仅支持指定一个。可通过调用<a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>接口获取该参数。</p>
+     * @param DisasterRecoverGroupIds <p>置放群组id，仅支持指定一个。可通过调用<a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>接口获取该参数。</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。 
-     * @return LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+     * Get <p>实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。</p> 
+     * @return LoginSettings <p>实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。</p>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
-     * @param LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+     * Set <p>实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。</p>
+     * @param LoginSettings <p>实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。</p>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。 
-     * @return InstanceTags 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+     * Get <p>实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。<br>该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。</p> 
+     * @return InstanceTags <p>实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。<br>该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。</p>
      */
     public InstanceTag [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
-     * @param InstanceTags 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+     * Set <p>实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。<br>该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。</p>
+     * @param InstanceTags <p>实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。<br>该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。</p>
      */
     public void setInstanceTags(InstanceTag [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。 
-     * @return ImageFamily 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
+     * Get <p>镜像族名称。可通过调用<a href="https://cloud.tencent.com/document/product/213/15715">DescribeImages</a>接口获取该参数。</p> 
+     * @return ImageFamily <p>镜像族名称。可通过调用<a href="https://cloud.tencent.com/document/product/213/15715">DescribeImages</a>接口获取该参数。</p>
      */
     public String getImageFamily() {
         return this.ImageFamily;
     }
 
     /**
-     * Set 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
-     * @param ImageFamily 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
+     * Set <p>镜像族名称。可通过调用<a href="https://cloud.tencent.com/document/product/213/15715">DescribeImages</a>接口获取该参数。</p>
+     * @param ImageFamily <p>镜像族名称。可通过调用<a href="https://cloud.tencent.com/document/product/213/15715">DescribeImages</a>接口获取该参数。</p>
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;
     }
 
     /**
-     * Get 本地专用集群ID。 
-     * @return DedicatedClusterId 本地专用集群ID。
+     * Get <p>本地专用集群ID。</p> 
+     * @return DedicatedClusterId <p>本地专用集群ID。</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 本地专用集群ID。
-     * @param DedicatedClusterId 本地专用集群ID。
+     * Set <p>本地专用集群ID。</p>
+     * @param DedicatedClusterId <p>本地专用集群ID。</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 自定义metadata。 
-     * @return Metadata 自定义metadata。
+     * Get <p>自定义metadata。</p> 
+     * @return Metadata <p>自定义metadata。</p>
      */
     public Metadata getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set 自定义metadata。
-     * @param Metadata 自定义metadata。
+     * Set <p>自定义metadata。</p>
+     * @param Metadata <p>自定义metadata。</p>
      */
     public void setMetadata(Metadata Metadata) {
         this.Metadata = Metadata;
+    }
+
+    /**
+     * Get <p>替换启动配置中的弹性网卡配置。</p><p>入参限制：最多 17 项；必须显式包含且只能包含一个 PRIMARY，AS 不自动补齐主网卡；显式空数组非法。</p><p>字段规则与 CreateLaunchConfiguration 一致。清除请调用 ClearLaunchConfigurationAttributes 并传 ClearNetworkInterfaces=true。</p> 
+     * @return NetworkInterfaces <p>替换启动配置中的弹性网卡配置。</p><p>入参限制：最多 17 项；必须显式包含且只能包含一个 PRIMARY，AS 不自动补齐主网卡；显式空数组非法。</p><p>字段规则与 CreateLaunchConfiguration 一致。清除请调用 ClearLaunchConfigurationAttributes 并传 ClearNetworkInterfaces=true。</p>
+     */
+    public NetworkInterface [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set <p>替换启动配置中的弹性网卡配置。</p><p>入参限制：最多 17 项；必须显式包含且只能包含一个 PRIMARY，AS 不自动补齐主网卡；显式空数组非法。</p><p>字段规则与 CreateLaunchConfiguration 一致。清除请调用 ClearLaunchConfigurationAttributes 并传 ClearNetworkInterfaces=true。</p>
+     * @param NetworkInterfaces <p>替换启动配置中的弹性网卡配置。</p><p>入参限制：最多 17 项；必须显式包含且只能包含一个 PRIMARY，AS 不自动补齐主网卡；显式空数组非法。</p><p>字段规则与 CreateLaunchConfiguration 一致。清除请调用 ClearLaunchConfigurationAttributes 并传 ClearNetworkInterfaces=true。</p>
+     */
+    public void setNetworkInterfaces(NetworkInterface [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
     }
 
     public ModifyLaunchConfigurationAttributesRequest() {
@@ -867,6 +745,12 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.Metadata != null) {
             this.Metadata = new Metadata(source.Metadata);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterface[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterface(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -900,6 +784,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

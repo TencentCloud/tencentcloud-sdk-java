@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DeviceVirtualDeviceGroupsDetail extends AbstractModel {
 
     /**
-    * 终端自定义分组id
+    * <p>终端自定义分组id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 自定义分组名称
+    * <p>自定义分组名称</p>
     */
     @SerializedName("DeviceVirtualGroupName")
     @Expose
     private String DeviceVirtualGroupName;
 
     /**
-    * 设备数
+    * <p>设备数</p>
     */
     @SerializedName("DeviceCount")
     @Expose
     private Long DeviceCount;
 
     /**
-    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
+    * <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("Itime")
     @Expose
     private String Itime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("Utime")
     @Expose
     private String Utime;
 
     /**
-     * Get 终端自定义分组id 
-     * @return Id 终端自定义分组id
+     * Get <p>终端自定义分组id</p> 
+     * @return Id <p>终端自定义分组id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 终端自定义分组id
-     * @param Id 终端自定义分组id
+     * Set <p>终端自定义分组id</p>
+     * @param Id <p>终端自定义分组id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 自定义分组名称 
-     * @return DeviceVirtualGroupName 自定义分组名称
+     * Get <p>自定义分组名称</p> 
+     * @return DeviceVirtualGroupName <p>自定义分组名称</p>
      */
     public String getDeviceVirtualGroupName() {
         return this.DeviceVirtualGroupName;
     }
 
     /**
-     * Set 自定义分组名称
-     * @param DeviceVirtualGroupName 自定义分组名称
+     * Set <p>自定义分组名称</p>
+     * @param DeviceVirtualGroupName <p>自定义分组名称</p>
      */
     public void setDeviceVirtualGroupName(String DeviceVirtualGroupName) {
         this.DeviceVirtualGroupName = DeviceVirtualGroupName;
     }
 
     /**
-     * Get 设备数 
-     * @return DeviceCount 设备数
+     * Get <p>设备数</p> 
+     * @return DeviceCount <p>设备数</p>
      */
     public Long getDeviceCount() {
         return this.DeviceCount;
     }
 
     /**
-     * Set 设备数
-     * @param DeviceCount 设备数
+     * Set <p>设备数</p>
+     * @param DeviceCount <p>设备数</p>
      */
     public void setDeviceCount(Long DeviceCount) {
         this.DeviceCount = DeviceCount;
     }
 
     /**
-     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ） 
-     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
+     * Get <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p> 
+     * @return OsType <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
-     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
+     * Set <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
+     * @param OsType <p>系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）</p>
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 创建时间 
-     * @return Itime 创建时间
+     * Get <p>创建时间</p> 
+     * @return Itime <p>创建时间</p>
      */
     public String getItime() {
         return this.Itime;
     }
 
     /**
-     * Set 创建时间
-     * @param Itime 创建时间
+     * Set <p>创建时间</p>
+     * @param Itime <p>创建时间</p>
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 更新时间 
-     * @return Utime 更新时间
+     * Get <p>更新时间</p> 
+     * @return Utime <p>更新时间</p>
      */
     public String getUtime() {
         return this.Utime;
     }
 
     /**
-     * Set 更新时间
-     * @param Utime 更新时间
+     * Set <p>更新时间</p>
+     * @param Utime <p>更新时间</p>
      */
     public void setUtime(String Utime) {
         this.Utime = Utime;

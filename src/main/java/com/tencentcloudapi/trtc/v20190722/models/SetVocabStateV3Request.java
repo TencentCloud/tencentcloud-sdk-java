@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class SetVocabStateV3Request extends AbstractModel {
 
+    /**
+    * <p>词表 id</p>
+    */
+    @SerializedName("VocabId")
+    @Expose
+    private String VocabId;
+
+    /**
+    * <p>是否设置为默认词表</p>
+    */
+    @SerializedName("State")
+    @Expose
+    private Long State;
+
+    /**
+    * <p>客户维度唯一标识</p>
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
+
+    /**
+     * Get <p>词表 id</p> 
+     * @return VocabId <p>词表 id</p>
+     */
+    public String getVocabId() {
+        return this.VocabId;
+    }
+
+    /**
+     * Set <p>词表 id</p>
+     * @param VocabId <p>词表 id</p>
+     */
+    public void setVocabId(String VocabId) {
+        this.VocabId = VocabId;
+    }
+
+    /**
+     * Get <p>是否设置为默认词表</p> 
+     * @return State <p>是否设置为默认词表</p>
+     */
+    public Long getState() {
+        return this.State;
+    }
+
+    /**
+     * Set <p>是否设置为默认词表</p>
+     * @param State <p>是否设置为默认词表</p>
+     */
+    public void setState(Long State) {
+        this.State = State;
+    }
+
+    /**
+     * Get <p>客户维度唯一标识</p> 
+     * @return SdkAppId <p>客户维度唯一标识</p>
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set <p>客户维度唯一标识</p>
+     * @param SdkAppId <p>客户维度唯一标识</p>
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
     public SetVocabStateV3Request() {
     }
 
@@ -31,6 +100,15 @@ public class SetVocabStateV3Request extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SetVocabStateV3Request(SetVocabStateV3Request source) {
+        if (source.VocabId != null) {
+            this.VocabId = new String(source.VocabId);
+        }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class SetVocabStateV3Request extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VocabId", this.VocabId);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
 
     }
 }

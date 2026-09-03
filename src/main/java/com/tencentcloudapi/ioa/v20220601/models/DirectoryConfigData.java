@@ -101,6 +101,13 @@ public class DirectoryConfigData extends AbstractModel {
     private Boolean DisplayOnLoginPage;
 
     /**
+    * <p>名称多语言</p>
+    */
+    @SerializedName("NameI18n")
+    @Expose
+    private I18nString [] NameI18n;
+
+    /**
      * Get <p>企业目录 ID</p> 
      * @return Id <p>企业目录 ID</p>
      */
@@ -276,6 +283,22 @@ public class DirectoryConfigData extends AbstractModel {
         this.DisplayOnLoginPage = DisplayOnLoginPage;
     }
 
+    /**
+     * Get <p>名称多语言</p> 
+     * @return NameI18n <p>名称多语言</p>
+     */
+    public I18nString [] getNameI18n() {
+        return this.NameI18n;
+    }
+
+    /**
+     * Set <p>名称多语言</p>
+     * @param NameI18n <p>名称多语言</p>
+     */
+    public void setNameI18n(I18nString [] NameI18n) {
+        this.NameI18n = NameI18n;
+    }
+
     public DirectoryConfigData() {
     }
 
@@ -317,6 +340,12 @@ public class DirectoryConfigData extends AbstractModel {
         if (source.DisplayOnLoginPage != null) {
             this.DisplayOnLoginPage = new Boolean(source.DisplayOnLoginPage);
         }
+        if (source.NameI18n != null) {
+            this.NameI18n = new I18nString[source.NameI18n.length];
+            for (int i = 0; i < source.NameI18n.length; i++) {
+                this.NameI18n[i] = new I18nString(source.NameI18n[i]);
+            }
+        }
     }
 
 
@@ -335,6 +364,7 @@ public class DirectoryConfigData extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "SourceId", this.SourceId);
         this.setParamSimple(map, prefix + "DisplayOnLoginPage", this.DisplayOnLoginPage);
+        this.setParamArrayObj(map, prefix + "NameI18n.", this.NameI18n);
 
     }
 }

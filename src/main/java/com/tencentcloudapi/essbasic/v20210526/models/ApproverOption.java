@@ -73,6 +73,13 @@ public class ApproverOption extends AbstractModel {
     private String ApproverMobileMode;
 
     /**
+    * <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+    */
+    @SerializedName("AddSignComponentUseSealSize")
+    @Expose
+    private Long AddSignComponentUseSealSize;
+
+    /**
      * Get <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p> 
      * @return NoRefuse <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
      */
@@ -184,6 +191,22 @@ public class ApproverOption extends AbstractModel {
         this.ApproverMobileMode = ApproverMobileMode;
     }
 
+    /**
+     * Get <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul> 
+     * @return AddSignComponentUseSealSize <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     */
+    public Long getAddSignComponentUseSealSize() {
+        return this.AddSignComponentUseSealSize;
+    }
+
+    /**
+     * Set <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     * @param AddSignComponentUseSealSize <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     */
+    public void setAddSignComponentUseSealSize(Long AddSignComponentUseSealSize) {
+        this.AddSignComponentUseSealSize = AddSignComponentUseSealSize;
+    }
+
     public ApproverOption() {
     }
 
@@ -213,6 +236,9 @@ public class ApproverOption extends AbstractModel {
         if (source.ApproverMobileMode != null) {
             this.ApproverMobileMode = new String(source.ApproverMobileMode);
         }
+        if (source.AddSignComponentUseSealSize != null) {
+            this.AddSignComponentUseSealSize = new Long(source.AddSignComponentUseSealSize);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ApproverOption extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
         this.setParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
         this.setParamSimple(map, prefix + "ApproverMobileMode", this.ApproverMobileMode);
+        this.setParamSimple(map, prefix + "AddSignComponentUseSealSize", this.AddSignComponentUseSealSize);
 
     }
 }

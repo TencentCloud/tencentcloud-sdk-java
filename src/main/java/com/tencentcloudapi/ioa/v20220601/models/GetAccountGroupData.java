@@ -24,391 +24,391 @@ import java.util.HashMap;
 public class GetAccountGroupData extends AbstractModel {
 
     /**
-    * 分组名称全路径，点分格式
+    * <p>分组名称全路径，点分格式</p>
     */
     @SerializedName("NamePath")
     @Expose
     private String NamePath;
 
     /**
-    * 分组ID全路径，数组格式
+    * <p>分组ID全路径，数组格式</p>
     */
     @SerializedName("IdPathArr")
     @Expose
     private Long [] IdPathArr;
 
     /**
-    * 分组扩展信息
+    * <p>分组扩展信息</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
     private String ExtraInfo;
 
     /**
-    * 最后更新时间
+    * <p>最后更新时间</p>
     */
     @SerializedName("Utime")
     @Expose
     private String Utime;
 
     /**
-    * 当前分组的父分组ID
+    * <p>当前分组的父分组ID</p>
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
+    * <p>源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系</p>
     */
     @SerializedName("OrgId")
     @Expose
     private String OrgId;
 
     /**
-    * 分组名称
+    * <p>分组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 分组ID
+    * <p>分组ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 分组描述
+    * <p>分组描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 分组导入源(只支持32位)
+    * <p>分组导入源(只支持32位)</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 分组ID全路径，点分格式
+    * <p>分组ID全路径，点分格式</p>
     */
     @SerializedName("IdPath")
     @Expose
     private String IdPath;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("Itime")
     @Expose
     private String Itime;
 
     /**
-    * 父源账号组ID，该字段仅适用于第三方同步的组织架构
+    * <p>父源账号组ID，该字段仅适用于第三方同步的组织架构</p>
     */
     @SerializedName("ParentOrgId")
     @Expose
     private String ParentOrgId;
 
     /**
-    * 导入信息,json格式
+    * <p>导入信息,json格式</p>
     */
     @SerializedName("Import")
     @Expose
     private String Import;
 
     /**
-    * 是否开启导入架构
+    * <p>是否开启导入架构</p>
     */
     @SerializedName("ImportEnable")
     @Expose
     private Boolean ImportEnable;
 
     /**
-    * 导入类型
+    * <p>导入类型</p>
     */
     @SerializedName("ImportType")
     @Expose
     private String ImportType;
 
     /**
-    * miniIAMId，MiniIAM源才有
+    * <p>miniIAMId，MiniIAM源才有</p>
     */
     @SerializedName("MiniIamId")
     @Expose
     private String MiniIamId;
 
     /**
-     * Get 分组名称全路径，点分格式 
-     * @return NamePath 分组名称全路径，点分格式
+     * Get <p>分组名称全路径，点分格式</p> 
+     * @return NamePath <p>分组名称全路径，点分格式</p>
      */
     public String getNamePath() {
         return this.NamePath;
     }
 
     /**
-     * Set 分组名称全路径，点分格式
-     * @param NamePath 分组名称全路径，点分格式
+     * Set <p>分组名称全路径，点分格式</p>
+     * @param NamePath <p>分组名称全路径，点分格式</p>
      */
     public void setNamePath(String NamePath) {
         this.NamePath = NamePath;
     }
 
     /**
-     * Get 分组ID全路径，数组格式 
-     * @return IdPathArr 分组ID全路径，数组格式
+     * Get <p>分组ID全路径，数组格式</p> 
+     * @return IdPathArr <p>分组ID全路径，数组格式</p>
      */
     public Long [] getIdPathArr() {
         return this.IdPathArr;
     }
 
     /**
-     * Set 分组ID全路径，数组格式
-     * @param IdPathArr 分组ID全路径，数组格式
+     * Set <p>分组ID全路径，数组格式</p>
+     * @param IdPathArr <p>分组ID全路径，数组格式</p>
      */
     public void setIdPathArr(Long [] IdPathArr) {
         this.IdPathArr = IdPathArr;
     }
 
     /**
-     * Get 分组扩展信息 
-     * @return ExtraInfo 分组扩展信息
+     * Get <p>分组扩展信息</p> 
+     * @return ExtraInfo <p>分组扩展信息</p>
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set 分组扩展信息
-     * @param ExtraInfo 分组扩展信息
+     * Set <p>分组扩展信息</p>
+     * @param ExtraInfo <p>分组扩展信息</p>
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 最后更新时间 
-     * @return Utime 最后更新时间
+     * Get <p>最后更新时间</p> 
+     * @return Utime <p>最后更新时间</p>
      */
     public String getUtime() {
         return this.Utime;
     }
 
     /**
-     * Set 最后更新时间
-     * @param Utime 最后更新时间
+     * Set <p>最后更新时间</p>
+     * @param Utime <p>最后更新时间</p>
      */
     public void setUtime(String Utime) {
         this.Utime = Utime;
     }
 
     /**
-     * Get 当前分组的父分组ID 
-     * @return ParentId 当前分组的父分组ID
+     * Get <p>当前分组的父分组ID</p> 
+     * @return ParentId <p>当前分组的父分组ID</p>
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 当前分组的父分组ID
-     * @param ParentId 当前分组的父分组ID
+     * Set <p>当前分组的父分组ID</p>
+     * @param ParentId <p>当前分组的父分组ID</p>
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系 
-     * @return OrgId 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
+     * Get <p>源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系</p> 
+     * @return OrgId <p>源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系</p>
      */
     public String getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-     * @param OrgId 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
+     * Set <p>源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系</p>
+     * @param OrgId <p>源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系</p>
      */
     public void setOrgId(String OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 分组名称 
-     * @return Name 分组名称
+     * Get <p>分组名称</p> 
+     * @return Name <p>分组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分组名称
-     * @param Name 分组名称
+     * Set <p>分组名称</p>
+     * @param Name <p>分组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分组ID 
-     * @return Id 分组ID
+     * Get <p>分组ID</p> 
+     * @return Id <p>分组ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 分组ID
-     * @param Id 分组ID
+     * Set <p>分组ID</p>
+     * @param Id <p>分组ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分组描述 
-     * @return Description 分组描述
+     * Get <p>分组描述</p> 
+     * @return Description <p>分组描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 分组描述
-     * @param Description 分组描述
+     * Set <p>分组描述</p>
+     * @param Description <p>分组描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 分组导入源(只支持32位) 
-     * @return Source 分组导入源(只支持32位)
+     * Get <p>分组导入源(只支持32位)</p> 
+     * @return Source <p>分组导入源(只支持32位)</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 分组导入源(只支持32位)
-     * @param Source 分组导入源(只支持32位)
+     * Set <p>分组导入源(只支持32位)</p>
+     * @param Source <p>分组导入源(只支持32位)</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 分组ID全路径，点分格式 
-     * @return IdPath 分组ID全路径，点分格式
+     * Get <p>分组ID全路径，点分格式</p> 
+     * @return IdPath <p>分组ID全路径，点分格式</p>
      */
     public String getIdPath() {
         return this.IdPath;
     }
 
     /**
-     * Set 分组ID全路径，点分格式
-     * @param IdPath 分组ID全路径，点分格式
+     * Set <p>分组ID全路径，点分格式</p>
+     * @param IdPath <p>分组ID全路径，点分格式</p>
      */
     public void setIdPath(String IdPath) {
         this.IdPath = IdPath;
     }
 
     /**
-     * Get 创建时间 
-     * @return Itime 创建时间
+     * Get <p>创建时间</p> 
+     * @return Itime <p>创建时间</p>
      */
     public String getItime() {
         return this.Itime;
     }
 
     /**
-     * Set 创建时间
-     * @param Itime 创建时间
+     * Set <p>创建时间</p>
+     * @param Itime <p>创建时间</p>
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 父源账号组ID，该字段仅适用于第三方同步的组织架构 
-     * @return ParentOrgId 父源账号组ID，该字段仅适用于第三方同步的组织架构
+     * Get <p>父源账号组ID，该字段仅适用于第三方同步的组织架构</p> 
+     * @return ParentOrgId <p>父源账号组ID，该字段仅适用于第三方同步的组织架构</p>
      */
     public String getParentOrgId() {
         return this.ParentOrgId;
     }
 
     /**
-     * Set 父源账号组ID，该字段仅适用于第三方同步的组织架构
-     * @param ParentOrgId 父源账号组ID，该字段仅适用于第三方同步的组织架构
+     * Set <p>父源账号组ID，该字段仅适用于第三方同步的组织架构</p>
+     * @param ParentOrgId <p>父源账号组ID，该字段仅适用于第三方同步的组织架构</p>
      */
     public void setParentOrgId(String ParentOrgId) {
         this.ParentOrgId = ParentOrgId;
     }
 
     /**
-     * Get 导入信息,json格式 
-     * @return Import 导入信息,json格式
+     * Get <p>导入信息,json格式</p> 
+     * @return Import <p>导入信息,json格式</p>
      */
     public String getImport() {
         return this.Import;
     }
 
     /**
-     * Set 导入信息,json格式
-     * @param Import 导入信息,json格式
+     * Set <p>导入信息,json格式</p>
+     * @param Import <p>导入信息,json格式</p>
      */
     public void setImport(String Import) {
         this.Import = Import;
     }
 
     /**
-     * Get 是否开启导入架构 
-     * @return ImportEnable 是否开启导入架构
+     * Get <p>是否开启导入架构</p> 
+     * @return ImportEnable <p>是否开启导入架构</p>
      */
     public Boolean getImportEnable() {
         return this.ImportEnable;
     }
 
     /**
-     * Set 是否开启导入架构
-     * @param ImportEnable 是否开启导入架构
+     * Set <p>是否开启导入架构</p>
+     * @param ImportEnable <p>是否开启导入架构</p>
      */
     public void setImportEnable(Boolean ImportEnable) {
         this.ImportEnable = ImportEnable;
     }
 
     /**
-     * Get 导入类型 
-     * @return ImportType 导入类型
+     * Get <p>导入类型</p> 
+     * @return ImportType <p>导入类型</p>
      */
     public String getImportType() {
         return this.ImportType;
     }
 
     /**
-     * Set 导入类型
-     * @param ImportType 导入类型
+     * Set <p>导入类型</p>
+     * @param ImportType <p>导入类型</p>
      */
     public void setImportType(String ImportType) {
         this.ImportType = ImportType;
     }
 
     /**
-     * Get miniIAMId，MiniIAM源才有 
-     * @return MiniIamId miniIAMId，MiniIAM源才有
+     * Get <p>miniIAMId，MiniIAM源才有</p> 
+     * @return MiniIamId <p>miniIAMId，MiniIAM源才有</p>
      */
     public String getMiniIamId() {
         return this.MiniIamId;
     }
 
     /**
-     * Set miniIAMId，MiniIAM源才有
-     * @param MiniIamId miniIAMId，MiniIAM源才有
+     * Set <p>miniIAMId，MiniIAM源才有</p>
+     * @param MiniIamId <p>miniIAMId，MiniIAM源才有</p>
      */
     public void setMiniIamId(String MiniIamId) {
         this.MiniIamId = MiniIamId;

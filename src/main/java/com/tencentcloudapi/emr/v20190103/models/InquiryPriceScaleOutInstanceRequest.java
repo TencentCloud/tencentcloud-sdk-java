@@ -24,337 +24,325 @@ import java.util.HashMap;
 public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
 
     /**
-    * 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+    * <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+    * <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
+    * <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+    * <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 扩容的Core节点数量。
+    * <p>扩容的Core节点数量。</p>
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * 扩容的Task节点数量。
+    * <p>扩容的Task节点数量。</p>
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+    * <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * 扩容的Router节点数量。
+    * <p>扩容的Router节点数量。</p>
     */
     @SerializedName("RouterCount")
     @Expose
     private Long RouterCount;
 
     /**
-    * 扩容的Master节点数量。
+    * <p>扩容的Master节点数量。</p>
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
 
     /**
-    * 类型为ComputeResource和EMR以及默认，默认为EMR
+    * <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
     */
     @SerializedName("ResourceBaseType")
     @Expose
     private String ResourceBaseType;
 
     /**
-    * 计算资源id
+    * <p>计算资源id</p>
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-    * 扩容资源类型
+    * <p>扩容资源类型</p>
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-     * Get 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
-     * @return TimeUnit 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+    * <p>节点组ID</p>
+    */
+    @SerializedName("NodeGroupId")
+    @Expose
+    private String NodeGroupId;
+
+    /**
+     * Get <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+     * @return TimeUnit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
-     * @param TimeUnit 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * Set <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param TimeUnit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
-     * @return TimeSpan 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * Get <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
+     * @return TimeSpan <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
-     * @param TimeSpan 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * Set <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @param TimeSpan <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。 
-     * @return ZoneId 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
+     * Get <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p> 
+     * @return ZoneId <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
-     * @param ZoneId 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
+     * Set <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
+     * @param ZoneId <p>实例所属的可用区ID，例如100003。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/213/15707">DescribeZones</a> 的返回值中的ZoneId字段来获取。</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li> 
-     * @return PayMode 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+     * Get <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li> 
+     * @return PayMode <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
-     * @param PayMode 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+     * Set <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
+     * @param PayMode <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 扩容的Core节点数量。 
-     * @return CoreCount 扩容的Core节点数量。
+     * Get <p>扩容的Core节点数量。</p> 
+     * @return CoreCount <p>扩容的Core节点数量。</p>
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set 扩容的Core节点数量。
-     * @param CoreCount 扩容的Core节点数量。
+     * Set <p>扩容的Core节点数量。</p>
+     * @param CoreCount <p>扩容的Core节点数量。</p>
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get 扩容的Task节点数量。 
-     * @return TaskCount 扩容的Task节点数量。
+     * Get <p>扩容的Task节点数量。</p> 
+     * @return TaskCount <p>扩容的Task节点数量。</p>
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set 扩容的Task节点数量。
-     * @param TaskCount 扩容的Task节点数量。
+     * Set <p>扩容的Task节点数量。</p>
+     * @param TaskCount <p>扩容的Task节点数量。</p>
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get 货币种类。取值范围：
-<li>CNY：表示人民币。</li> 
-     * @return Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+     * Get <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li> 
+     * @return Currency <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
-     * @param Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+     * Set <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
+     * @param Currency <p>货币种类。取值范围：</p><li>CNY：表示人民币。</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get 扩容的Router节点数量。 
-     * @return RouterCount 扩容的Router节点数量。
+     * Get <p>扩容的Router节点数量。</p> 
+     * @return RouterCount <p>扩容的Router节点数量。</p>
      */
     public Long getRouterCount() {
         return this.RouterCount;
     }
 
     /**
-     * Set 扩容的Router节点数量。
-     * @param RouterCount 扩容的Router节点数量。
+     * Set <p>扩容的Router节点数量。</p>
+     * @param RouterCount <p>扩容的Router节点数量。</p>
      */
     public void setRouterCount(Long RouterCount) {
         this.RouterCount = RouterCount;
     }
 
     /**
-     * Get 扩容的Master节点数量。 
-     * @return MasterCount 扩容的Master节点数量。
+     * Get <p>扩容的Master节点数量。</p> 
+     * @return MasterCount <p>扩容的Master节点数量。</p>
      */
     public Long getMasterCount() {
         return this.MasterCount;
     }
 
     /**
-     * Set 扩容的Master节点数量。
-     * @param MasterCount 扩容的Master节点数量。
+     * Set <p>扩容的Master节点数量。</p>
+     * @param MasterCount <p>扩容的Master节点数量。</p>
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
     }
 
     /**
-     * Get 类型为ComputeResource和EMR以及默认，默认为EMR 
-     * @return ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
+     * Get <p>类型为ComputeResource和EMR以及默认，默认为EMR</p> 
+     * @return ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set 类型为ComputeResource和EMR以及默认，默认为EMR
-     * @param ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
+     * Set <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
+     * @param ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR</p>
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;
     }
 
     /**
-     * Get 计算资源id 
-     * @return ComputeResourceId 计算资源id
+     * Get <p>计算资源id</p> 
+     * @return ComputeResourceId <p>计算资源id</p>
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set 计算资源id
-     * @param ComputeResourceId 计算资源id
+     * Set <p>计算资源id</p>
+     * @param ComputeResourceId <p>计算资源id</p>
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;
     }
 
     /**
-     * Get 扩容资源类型 
-     * @return HardwareResourceType 扩容资源类型
+     * Get <p>扩容资源类型</p> 
+     * @return HardwareResourceType <p>扩容资源类型</p>
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set 扩容资源类型
-     * @param HardwareResourceType 扩容资源类型
+     * Set <p>扩容资源类型</p>
+     * @param HardwareResourceType <p>扩容资源类型</p>
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
+     * Get <p>节点组ID</p> 
+     * @return NodeGroupId <p>节点组ID</p>
+     */
+    public String getNodeGroupId() {
+        return this.NodeGroupId;
+    }
+
+    /**
+     * Set <p>节点组ID</p>
+     * @param NodeGroupId <p>节点组ID</p>
+     */
+    public void setNodeGroupId(String NodeGroupId) {
+        this.NodeGroupId = NodeGroupId;
     }
 
     public InquiryPriceScaleOutInstanceRequest() {
@@ -404,6 +392,9 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         if (source.HardwareResourceType != null) {
             this.HardwareResourceType = new String(source.HardwareResourceType);
         }
+        if (source.NodeGroupId != null) {
+            this.NodeGroupId = new String(source.NodeGroupId);
+        }
     }
 
 
@@ -424,6 +415,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamSimple(map, prefix + "NodeGroupId", this.NodeGroupId);
 
     }
 }

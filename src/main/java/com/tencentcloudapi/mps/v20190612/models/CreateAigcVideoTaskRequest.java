@@ -101,6 +101,13 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private AigcVideoReferenceAudioInfo [] AudioInfos;
 
     /**
+    * <p>主体信息。</p>
+    */
+    @SerializedName("SubjectInfos")
+    @Expose
+    private AigcVideoReferenceSubjectInfo [] SubjectInfos;
+
+    /**
     * <p>生成视频的时长。<br>注意：</p><ol><li>Kling，默认：5 秒。<ul><li>O1 支持 3-10 秒。</li><li>3.0-Omni 支持 3-15 秒，当使用视频参考时只支持 3-10 秒。</li><li>3.0 支持 3-15 秒。</li><li>其他版本支持 5、10 秒。</li></ul></li><li>Hailuo 的 std 模式可支持 6、10 秒，其他仅 6 秒。默认：6 秒。</li><li>Vidu，默认：5 秒。<ul><li>q3-pro、q3-turbo、q3、q3-mix 支持 3-16 秒。</li><li>q2-pro、q2-turbo、q2 支持 1-10 秒。 </li></ul></li><li>PixVerse，默认：5 秒。<ul><li>v5.6 支持 5、8、10 秒。</li><li>v6、c1 支持 1-15 秒。</li></ul></li><li>H2，支持 3-15 秒，默认 ：5 秒。</li></ol>
     */
     @SerializedName("Duration")
@@ -312,6 +319,22 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>主体信息。</p> 
+     * @return SubjectInfos <p>主体信息。</p>
+     */
+    public AigcVideoReferenceSubjectInfo [] getSubjectInfos() {
+        return this.SubjectInfos;
+    }
+
+    /**
+     * Set <p>主体信息。</p>
+     * @param SubjectInfos <p>主体信息。</p>
+     */
+    public void setSubjectInfos(AigcVideoReferenceSubjectInfo [] SubjectInfos) {
+        this.SubjectInfos = SubjectInfos;
+    }
+
+    /**
      * Get <p>生成视频的时长。<br>注意：</p><ol><li>Kling，默认：5 秒。<ul><li>O1 支持 3-10 秒。</li><li>3.0-Omni 支持 3-15 秒，当使用视频参考时只支持 3-10 秒。</li><li>3.0 支持 3-15 秒。</li><li>其他版本支持 5、10 秒。</li></ul></li><li>Hailuo 的 std 模式可支持 6、10 秒，其他仅 6 秒。默认：6 秒。</li><li>Vidu，默认：5 秒。<ul><li>q3-pro、q3-turbo、q3、q3-mix 支持 3-16 秒。</li><li>q2-pro、q2-turbo、q2 支持 1-10 秒。 </li></ul></li><li>PixVerse，默认：5 秒。<ul><li>v5.6 支持 5、8、10 秒。</li><li>v6、c1 支持 1-15 秒。</li></ul></li><li>H2，支持 3-15 秒，默认 ：5 秒。</li></ol> 
      * @return Duration <p>生成视频的时长。<br>注意：</p><ol><li>Kling，默认：5 秒。<ul><li>O1 支持 3-10 秒。</li><li>3.0-Omni 支持 3-15 秒，当使用视频参考时只支持 3-10 秒。</li><li>3.0 支持 3-15 秒。</li><li>其他版本支持 5、10 秒。</li></ul></li><li>Hailuo 的 std 模式可支持 6、10 秒，其他仅 6 秒。默认：6 秒。</li><li>Vidu，默认：5 秒。<ul><li>q3-pro、q3-turbo、q3、q3-mix 支持 3-16 秒。</li><li>q2-pro、q2-turbo、q2 支持 1-10 秒。 </li></ul></li><li>PixVerse，默认：5 秒。<ul><li>v5.6 支持 5、8、10 秒。</li><li>v6、c1 支持 1-15 秒。</li></ul></li><li>H2，支持 3-15 秒，默认 ：5 秒。</li></ol>
      */
@@ -441,6 +464,12 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
                 this.AudioInfos[i] = new AigcVideoReferenceAudioInfo(source.AudioInfos[i]);
             }
         }
+        if (source.SubjectInfos != null) {
+            this.SubjectInfos = new AigcVideoReferenceSubjectInfo[source.SubjectInfos.length];
+            for (int i = 0; i < source.SubjectInfos.length; i++) {
+                this.SubjectInfos[i] = new AigcVideoReferenceSubjectInfo(source.SubjectInfos[i]);
+            }
+        }
         if (source.Duration != null) {
             this.Duration = new Long(source.Duration);
         }
@@ -474,6 +503,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
+        this.setParamArrayObj(map, prefix + "SubjectInfos.", this.SubjectInfos);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

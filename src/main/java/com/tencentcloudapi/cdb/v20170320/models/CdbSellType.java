@@ -24,99 +24,69 @@ import java.util.HashMap;
 public class CdbSellType extends AbstractModel {
 
     /**
-    * 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
+    * <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * 引擎版本号
+    * <p>引擎版本号</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String [] EngineVersion;
 
     /**
-    * 售卖规格Id
+    * <p>售卖规格Id</p>
     */
     @SerializedName("ConfigIds")
     @Expose
     private Long [] ConfigIds;
 
     /**
-     * Get 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。 
-     * @return TypeName 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
+     * Get <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p> 
+     * @return TypeName <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
-     * @param TypeName 售卖实例名称。
-Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
-CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
-TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
-CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
-CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
-ECONOMICAL：表示经济型。
+     * Set <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
+     * @param TypeName <p>售卖实例名称。<br>Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。<br>CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。<br>TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。<br>CLOUD_NATIVE_CLUSTER：表示云盘版标准型。<br>CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。<br>CLOUD_NATIVE_CLUSTER_ULTRA：表示云盘版旗舰型。<br>CLOUD_NATIVE_SINGLE_NODE：表示云盘版单节点<br>ECONOMICAL：表示经济型。</p>
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get 引擎版本号 
-     * @return EngineVersion 引擎版本号
+     * Get <p>引擎版本号</p> 
+     * @return EngineVersion <p>引擎版本号</p>
      */
     public String [] getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 引擎版本号
-     * @param EngineVersion 引擎版本号
+     * Set <p>引擎版本号</p>
+     * @param EngineVersion <p>引擎版本号</p>
      */
     public void setEngineVersion(String [] EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 售卖规格Id 
-     * @return ConfigIds 售卖规格Id
+     * Get <p>售卖规格Id</p> 
+     * @return ConfigIds <p>售卖规格Id</p>
      */
     public Long [] getConfigIds() {
         return this.ConfigIds;
     }
 
     /**
-     * Set 售卖规格Id
-     * @param ConfigIds 售卖规格Id
+     * Set <p>售卖规格Id</p>
+     * @param ConfigIds <p>售卖规格Id</p>
      */
     public void setConfigIds(Long [] ConfigIds) {
         this.ConfigIds = ConfigIds;

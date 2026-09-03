@@ -143,6 +143,13 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
     private GooseFSVolume [] GooseFSVolumes;
 
     /**
+    * <p>是否开启日志收集</p>
+    */
+    @SerializedName("EnableHistoryServer")
+    @Expose
+    private Boolean EnableHistoryServer;
+
+    /**
      * Get <p>更新作用域：<br>1：添加workerGroup（DynamicInstance级别）<br>2：更新存储配置（DynamicInstance级别）<br>3：更新标签配置（DynamicInstance级别）<br>4：更新高级配置（DynamicInstance级别）<br>5：更新PodCpu、PodMem（DynamicInstance-group级别）<br>6：更新PodNum、MinPodNum、MaxPodNum（DynamicInstance-group级别）<br>7：更新存储配置（DynamicInstance-group级别）<br>8：更新标签配置（DynamicInstance-group级别）</p> 
      * @return ModifyScope <p>更新作用域：<br>1：添加workerGroup（DynamicInstance级别）<br>2：更新存储配置（DynamicInstance级别）<br>3：更新标签配置（DynamicInstance级别）<br>4：更新高级配置（DynamicInstance级别）<br>5：更新PodCpu、PodMem（DynamicInstance-group级别）<br>6：更新PodNum、MinPodNum、MaxPodNum（DynamicInstance-group级别）<br>7：更新存储配置（DynamicInstance-group级别）<br>8：更新标签配置（DynamicInstance-group级别）</p>
      */
@@ -414,6 +421,22 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
         this.GooseFSVolumes = GooseFSVolumes;
     }
 
+    /**
+     * Get <p>是否开启日志收集</p> 
+     * @return EnableHistoryServer <p>是否开启日志收集</p>
+     */
+    public Boolean getEnableHistoryServer() {
+        return this.EnableHistoryServer;
+    }
+
+    /**
+     * Set <p>是否开启日志收集</p>
+     * @param EnableHistoryServer <p>是否开启日志收集</p>
+     */
+    public void setEnableHistoryServer(Boolean EnableHistoryServer) {
+        this.EnableHistoryServer = EnableHistoryServer;
+    }
+
     public ModifyDynamicInstanceForm() {
     }
 
@@ -503,6 +526,9 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
                 this.GooseFSVolumes[i] = new GooseFSVolume(source.GooseFSVolumes[i]);
             }
         }
+        if (source.EnableHistoryServer != null) {
+            this.EnableHistoryServer = new Boolean(source.EnableHistoryServer);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class ModifyDynamicInstanceForm extends AbstractModel {
         this.setParamObj(map, prefix + "CustomImage.", this.CustomImage);
         this.setParamObj(map, prefix + "ImageInfoV2.", this.ImageInfoV2);
         this.setParamArrayObj(map, prefix + "GooseFSVolumes.", this.GooseFSVolumes);
+        this.setParamSimple(map, prefix + "EnableHistoryServer", this.EnableHistoryServer);
 
     }
 }

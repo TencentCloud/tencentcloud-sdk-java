@@ -24,276 +24,299 @@ import java.util.HashMap;
 public class LoadTaskAttrs extends AbstractModel {
 
     /**
-    * 预热任务 ID
+    * <p>预热任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
+    * <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务描述，支持中文
+    * <p>任务描述，支持中文</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+    * <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+    * <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
     */
     @SerializedName("MetadataLoadAttrs")
     @Expose
     private MetadataLoadAttrs MetadataLoadAttrs;
 
     /**
-    * 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+    * <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
     */
     @SerializedName("DistributedLoadAttrs")
     @Expose
     private DistributedLoadAttrs DistributedLoadAttrs;
 
     /**
-    * 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+    * <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+    */
+    @SerializedName("LoadDataAttrs")
+    @Expose
+    private LoadDataAttrs LoadDataAttrs;
+
+    /**
+    * <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
     */
     @SerializedName("ReportPath")
     @Expose
     private String ReportPath;
 
     /**
-    * 枚举，Completed，Running，Waiting，Cancelled
+    * <p>枚举，Completed，Running，Waiting，Cancelled</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
+    * <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
     */
     @SerializedName("TaskMessage")
     @Expose
     private String TaskMessage;
 
     /**
-    * 预热任务创建时间
+    * <p>预热任务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 预热任务变更时间
+    * <p>预热任务变更时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 任务提交账号，子账号或服务角色 ID
+    * <p>任务提交账号，子账号或服务角色 ID</p>
     */
     @SerializedName("Requester")
     @Expose
     private String Requester;
 
     /**
-     * Get 预热任务 ID 
-     * @return TaskId 预热任务 ID
+     * Get <p>预热任务 ID</p> 
+     * @return TaskId <p>预热任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 预热任务 ID
-     * @param TaskId 预热任务 ID
+     * Set <p>预热任务 ID</p>
+     * @param TaskId <p>预热任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 预热任务类型，枚举值，MetadataLoad｜DistributedLoad 
-     * @return TaskType 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
+     * Get <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p> 
+     * @return TaskType <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
-     * @param TaskType 预热任务类型，枚举值，MetadataLoad｜DistributedLoad
+     * Set <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
+     * @param TaskType <p>预热任务类型，枚举值，MetadataLoad｜DistributedLoad</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务描述，支持中文 
-     * @return Description 任务描述，支持中文
+     * Get <p>任务描述，支持中文</p> 
+     * @return Description <p>任务描述，支持中文</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述，支持中文
-     * @param Description 任务描述，支持中文
+     * Set <p>任务描述，支持中文</p>
+     * @param Description <p>任务描述，支持中文</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1 
-     * @return Priority 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+     * Get <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p> 
+     * @return Priority <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
-     * @param Priority 任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1
+     * Set <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
+     * @param Priority <p>任务优先级，数值越高代表优先级越高，边界值 1-9999，默认值为 1</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。 
-     * @return MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+     * Get <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p> 
+     * @return MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
      */
     public MetadataLoadAttrs getMetadataLoadAttrs() {
         return this.MetadataLoadAttrs;
     }
 
     /**
-     * Set 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
-     * @param MetadataLoadAttrs 元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。
+     * Set <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
+     * @param MetadataLoadAttrs <p>元数据预热任务参数，用于仅预热元数据时入参。入参数TaskType为MetadataLoad时，该参数不应为空。</p>
      */
     public void setMetadataLoadAttrs(MetadataLoadAttrs MetadataLoadAttrs) {
         this.MetadataLoadAttrs = MetadataLoadAttrs;
     }
 
     /**
-     * Get 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。 
-     * @return DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+     * Get <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p> 
+     * @return DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
      */
     public DistributedLoadAttrs getDistributedLoadAttrs() {
         return this.DistributedLoadAttrs;
     }
 
     /**
-     * Set 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
-     * @param DistributedLoadAttrs 数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。
+     * Set <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
+     * @param DistributedLoadAttrs <p>数据预热任务参数。入参数TaskType为DistributedLoad时，该参数不应为空。</p>
      */
     public void setDistributedLoadAttrs(DistributedLoadAttrs DistributedLoadAttrs) {
         this.DistributedLoadAttrs = DistributedLoadAttrs;
     }
 
     /**
-     * Get 将任务执行报告写入 COS 的路径，如果不需要报告则入参空 
-     * @return ReportPath 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * Get <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p> 
+     * @return LoadDataAttrs <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     */
+    public LoadDataAttrs getLoadDataAttrs() {
+        return this.LoadDataAttrs;
+    }
+
+    /**
+     * Set <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     * @param LoadDataAttrs <p>仅预热数据参数。入参数TaskType为LoadData时，该参数不应为空。</p>
+     */
+    public void setLoadDataAttrs(LoadDataAttrs LoadDataAttrs) {
+        this.LoadDataAttrs = LoadDataAttrs;
+    }
+
+    /**
+     * Get <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p> 
+     * @return ReportPath <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
      */
     public String getReportPath() {
         return this.ReportPath;
     }
 
     /**
-     * Set 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
-     * @param ReportPath 将任务执行报告写入 COS 的路径，如果不需要报告则入参空
+     * Set <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
+     * @param ReportPath <p>将任务执行报告写入 COS 的路径，如果不需要报告则入参空</p>
      */
     public void setReportPath(String ReportPath) {
         this.ReportPath = ReportPath;
     }
 
     /**
-     * Get 枚举，Completed，Running，Waiting，Cancelled 
-     * @return State 枚举，Completed，Running，Waiting，Cancelled
+     * Get <p>枚举，Completed，Running，Waiting，Cancelled</p> 
+     * @return State <p>枚举，Completed，Running，Waiting，Cancelled</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 枚举，Completed，Running，Waiting，Cancelled
-     * @param State 枚举，Completed，Running，Waiting，Cancelled
+     * Set <p>枚举，Completed，Running，Waiting，Cancelled</p>
+     * @param State <p>枚举，Completed，Running，Waiting，Cancelled</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息  
-     * @return TaskMessage 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
+     * Get <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p> 
+     * @return TaskMessage <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
      */
     public String getTaskMessage() {
         return this.TaskMessage;
     }
 
     /**
-     * Set 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
-     * @param TaskMessage 任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息 
+     * Set <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
+     * @param TaskMessage <p>任务执行信息，打印预热文件成功个数，失败个数，预热耗时信息</p>
      */
     public void setTaskMessage(String TaskMessage) {
         this.TaskMessage = TaskMessage;
     }
 
     /**
-     * Get 预热任务创建时间 
-     * @return CreateTime 预热任务创建时间
+     * Get <p>预热任务创建时间</p> 
+     * @return CreateTime <p>预热任务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 预热任务创建时间
-     * @param CreateTime 预热任务创建时间
+     * Set <p>预热任务创建时间</p>
+     * @param CreateTime <p>预热任务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 预热任务变更时间 
-     * @return ModifyTime 预热任务变更时间
+     * Get <p>预热任务变更时间</p> 
+     * @return ModifyTime <p>预热任务变更时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 预热任务变更时间
-     * @param ModifyTime 预热任务变更时间
+     * Set <p>预热任务变更时间</p>
+     * @param ModifyTime <p>预热任务变更时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 任务提交账号，子账号或服务角色 ID 
-     * @return Requester 任务提交账号，子账号或服务角色 ID
+     * Get <p>任务提交账号，子账号或服务角色 ID</p> 
+     * @return Requester <p>任务提交账号，子账号或服务角色 ID</p>
      */
     public String getRequester() {
         return this.Requester;
     }
 
     /**
-     * Set 任务提交账号，子账号或服务角色 ID
-     * @param Requester 任务提交账号，子账号或服务角色 ID
+     * Set <p>任务提交账号，子账号或服务角色 ID</p>
+     * @param Requester <p>任务提交账号，子账号或服务角色 ID</p>
      */
     public void setRequester(String Requester) {
         this.Requester = Requester;
@@ -324,6 +347,9 @@ public class LoadTaskAttrs extends AbstractModel {
         }
         if (source.DistributedLoadAttrs != null) {
             this.DistributedLoadAttrs = new DistributedLoadAttrs(source.DistributedLoadAttrs);
+        }
+        if (source.LoadDataAttrs != null) {
+            this.LoadDataAttrs = new LoadDataAttrs(source.LoadDataAttrs);
         }
         if (source.ReportPath != null) {
             this.ReportPath = new String(source.ReportPath);
@@ -356,6 +382,7 @@ public class LoadTaskAttrs extends AbstractModel {
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamObj(map, prefix + "MetadataLoadAttrs.", this.MetadataLoadAttrs);
         this.setParamObj(map, prefix + "DistributedLoadAttrs.", this.DistributedLoadAttrs);
+        this.setParamObj(map, prefix + "LoadDataAttrs.", this.LoadDataAttrs);
         this.setParamSimple(map, prefix + "ReportPath", this.ReportPath);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "TaskMessage", this.TaskMessage);

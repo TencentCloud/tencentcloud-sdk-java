@@ -38,7 +38,7 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel {
     private Long VideoBitrate;
 
     /**
-    * <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+    * <p>音频编码。默认为自动适配</p>
     */
     @SerializedName("Acodec")
     @Expose
@@ -238,16 +238,16 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p> 
-     * @return Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * Get <p>音频编码。默认为自动适配</p> 
+     * @return Acodec <p>音频编码。默认为自动适配</p>
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
-     * @param Acodec <p>音频编码：aac，默认aac。<br>注意：当前该参数未生效，待后续支持！</p>
+     * Set <p>音频编码。默认为自动适配</p>
+     * @param Acodec <p>音频编码。默认为自动适配</p>
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;

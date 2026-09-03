@@ -24,210 +24,256 @@ import java.util.HashMap;
 public class LakeFsInfo extends AbstractModel {
 
     /**
-    * 托管存储名称
+    * <p>托管存储名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 托管存储类型
+    * <p>托管存储类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 存储用量
+    * <p>存储用量</p>
     */
     @SerializedName("SpaceUsedSize")
     @Expose
     private Float SpaceUsedSize;
 
     /**
-    * 创建时候的时间戳
+    * <p>创建时候的时间戳</p>
     */
     @SerializedName("CreateTimeStamp")
     @Expose
     private Long CreateTimeStamp;
 
     /**
-    * 是否是用户默认桶，0：默认桶，1：非默认桶
+    * <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
     */
     @SerializedName("DefaultBucket")
     @Expose
     private Long DefaultBucket;
 
     /**
-    * 托管存储short name
+    * <p>托管存储short name</p>
     */
     @SerializedName("ShortName")
     @Expose
     private String ShortName;
 
     /**
-    * 桶描述信息
+    * <p>桶描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+    * <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 托管存储桶标签列表
+    * <p>托管存储桶标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagInfo [] TagList;
 
     /**
-     * Get 托管存储名称 
-     * @return Name 托管存储名称
+    * <p>是否是多AZ存储桶</p>
+    */
+    @SerializedName("MultiAZ")
+    @Expose
+    private Boolean MultiAZ;
+
+    /**
+    * <p>存储桶配置信息</p>
+    */
+    @SerializedName("Configuration")
+    @Expose
+    private KVPair [] Configuration;
+
+    /**
+     * Get <p>托管存储名称</p> 
+     * @return Name <p>托管存储名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 托管存储名称
-     * @param Name 托管存储名称
+     * Set <p>托管存储名称</p>
+     * @param Name <p>托管存储名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 托管存储类型 
-     * @return Type 托管存储类型
+     * Get <p>托管存储类型</p> 
+     * @return Type <p>托管存储类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 托管存储类型
-     * @param Type 托管存储类型
+     * Set <p>托管存储类型</p>
+     * @param Type <p>托管存储类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 存储用量 
-     * @return SpaceUsedSize 存储用量
+     * Get <p>存储用量</p> 
+     * @return SpaceUsedSize <p>存储用量</p>
      */
     public Float getSpaceUsedSize() {
         return this.SpaceUsedSize;
     }
 
     /**
-     * Set 存储用量
-     * @param SpaceUsedSize 存储用量
+     * Set <p>存储用量</p>
+     * @param SpaceUsedSize <p>存储用量</p>
      */
     public void setSpaceUsedSize(Float SpaceUsedSize) {
         this.SpaceUsedSize = SpaceUsedSize;
     }
 
     /**
-     * Get 创建时候的时间戳 
-     * @return CreateTimeStamp 创建时候的时间戳
+     * Get <p>创建时候的时间戳</p> 
+     * @return CreateTimeStamp <p>创建时候的时间戳</p>
      */
     public Long getCreateTimeStamp() {
         return this.CreateTimeStamp;
     }
 
     /**
-     * Set 创建时候的时间戳
-     * @param CreateTimeStamp 创建时候的时间戳
+     * Set <p>创建时候的时间戳</p>
+     * @param CreateTimeStamp <p>创建时候的时间戳</p>
      */
     public void setCreateTimeStamp(Long CreateTimeStamp) {
         this.CreateTimeStamp = CreateTimeStamp;
     }
 
     /**
-     * Get 是否是用户默认桶，0：默认桶，1：非默认桶 
-     * @return DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
+     * Get <p>是否是用户默认桶，0：默认桶，1：非默认桶</p> 
+     * @return DefaultBucket <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
      */
     public Long getDefaultBucket() {
         return this.DefaultBucket;
     }
 
     /**
-     * Set 是否是用户默认桶，0：默认桶，1：非默认桶
-     * @param DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
+     * Set <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
+     * @param DefaultBucket <p>是否是用户默认桶，0：默认桶，1：非默认桶</p>
      */
     public void setDefaultBucket(Long DefaultBucket) {
         this.DefaultBucket = DefaultBucket;
     }
 
     /**
-     * Get 托管存储short name 
-     * @return ShortName 托管存储short name
+     * Get <p>托管存储short name</p> 
+     * @return ShortName <p>托管存储short name</p>
      */
     public String getShortName() {
         return this.ShortName;
     }
 
     /**
-     * Set 托管存储short name
-     * @param ShortName 托管存储short name
+     * Set <p>托管存储short name</p>
+     * @param ShortName <p>托管存储short name</p>
      */
     public void setShortName(String ShortName) {
         this.ShortName = ShortName;
     }
 
     /**
-     * Get 桶描述信息 
-     * @return Description 桶描述信息
+     * Get <p>桶描述信息</p> 
+     * @return Description <p>桶描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 桶描述信息
-     * @param Description 桶描述信息
+     * Set <p>桶描述信息</p>
+     * @param Description <p>桶描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 托管桶状态，当前取值为：creating、bind、readOnly、isolate 
-     * @return Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+     * Get <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p> 
+     * @return Status <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-     * @param Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+     * Set <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
+     * @param Status <p>托管桶状态，当前取值为：creating、bind、readOnly、isolate</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 托管存储桶标签列表 
-     * @return TagList 托管存储桶标签列表
+     * Get <p>托管存储桶标签列表</p> 
+     * @return TagList <p>托管存储桶标签列表</p>
      */
     public TagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 托管存储桶标签列表
-     * @param TagList 托管存储桶标签列表
+     * Set <p>托管存储桶标签列表</p>
+     * @param TagList <p>托管存储桶标签列表</p>
      */
     public void setTagList(TagInfo [] TagList) {
         this.TagList = TagList;
+    }
+
+    /**
+     * Get <p>是否是多AZ存储桶</p> 
+     * @return MultiAZ <p>是否是多AZ存储桶</p>
+     */
+    public Boolean getMultiAZ() {
+        return this.MultiAZ;
+    }
+
+    /**
+     * Set <p>是否是多AZ存储桶</p>
+     * @param MultiAZ <p>是否是多AZ存储桶</p>
+     */
+    public void setMultiAZ(Boolean MultiAZ) {
+        this.MultiAZ = MultiAZ;
+    }
+
+    /**
+     * Get <p>存储桶配置信息</p> 
+     * @return Configuration <p>存储桶配置信息</p>
+     */
+    public KVPair [] getConfiguration() {
+        return this.Configuration;
+    }
+
+    /**
+     * Set <p>存储桶配置信息</p>
+     * @param Configuration <p>存储桶配置信息</p>
+     */
+    public void setConfiguration(KVPair [] Configuration) {
+        this.Configuration = Configuration;
     }
 
     public LakeFsInfo() {
@@ -268,6 +314,15 @@ public class LakeFsInfo extends AbstractModel {
                 this.TagList[i] = new TagInfo(source.TagList[i]);
             }
         }
+        if (source.MultiAZ != null) {
+            this.MultiAZ = new Boolean(source.MultiAZ);
+        }
+        if (source.Configuration != null) {
+            this.Configuration = new KVPair[source.Configuration.length];
+            for (int i = 0; i < source.Configuration.length; i++) {
+                this.Configuration[i] = new KVPair(source.Configuration[i]);
+            }
+        }
     }
 
 
@@ -284,6 +339,8 @@ public class LakeFsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "MultiAZ", this.MultiAZ);
+        this.setParamArrayObj(map, prefix + "Configuration.", this.Configuration);
 
     }
 }

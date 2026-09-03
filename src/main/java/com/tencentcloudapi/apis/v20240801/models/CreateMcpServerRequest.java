@@ -199,6 +199,27 @@ public class CreateMcpServerRequest extends AbstractModel {
     private Boolean IgnoreHealthCheck;
 
     /**
+    * <p>凭据ID</p>
+    */
+    @SerializedName("CredentialID")
+    @Expose
+    private String CredentialID;
+
+    /**
+    * <p>访问域名</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+    */
+    @SerializedName("RequestProtocolType")
+    @Expose
+    private String RequestProtocolType;
+
+    /**
      * Get <p>模式：proxy代理模式； wrap封装模式；</p> 
      * @return Mode <p>模式：proxy代理模式； wrap封装模式；</p>
      */
@@ -598,6 +619,54 @@ public class CreateMcpServerRequest extends AbstractModel {
         this.IgnoreHealthCheck = IgnoreHealthCheck;
     }
 
+    /**
+     * Get <p>凭据ID</p> 
+     * @return CredentialID <p>凭据ID</p>
+     */
+    public String getCredentialID() {
+        return this.CredentialID;
+    }
+
+    /**
+     * Set <p>凭据ID</p>
+     * @param CredentialID <p>凭据ID</p>
+     */
+    public void setCredentialID(String CredentialID) {
+        this.CredentialID = CredentialID;
+    }
+
+    /**
+     * Get <p>访问域名</p> 
+     * @return Domain <p>访问域名</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>访问域名</p>
+     * @param Domain <p>访问域名</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul> 
+     * @return RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+     */
+    public String getRequestProtocolType() {
+        return this.RequestProtocolType;
+    }
+
+    /**
+     * Set <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+     * @param RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+     */
+    public void setRequestProtocolType(String RequestProtocolType) {
+        this.RequestProtocolType = RequestProtocolType;
+    }
+
     public CreateMcpServerRequest() {
     }
 
@@ -696,6 +765,15 @@ public class CreateMcpServerRequest extends AbstractModel {
         if (source.IgnoreHealthCheck != null) {
             this.IgnoreHealthCheck = new Boolean(source.IgnoreHealthCheck);
         }
+        if (source.CredentialID != null) {
+            this.CredentialID = new String(source.CredentialID);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RequestProtocolType != null) {
+            this.RequestProtocolType = new String(source.RequestProtocolType);
+        }
     }
 
 
@@ -728,6 +806,9 @@ public class CreateMcpServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WrapPaasID", this.WrapPaasID);
         this.setParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
         this.setParamSimple(map, prefix + "IgnoreHealthCheck", this.IgnoreHealthCheck);
+        this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
 
     }
 }

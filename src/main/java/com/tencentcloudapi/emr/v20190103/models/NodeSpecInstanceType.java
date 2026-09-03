@@ -203,6 +203,20 @@ public class NodeSpecInstanceType extends AbstractModel {
     private Boolean IsGpuInstance;
 
     /**
+    * <p>K8S场景GPU资源定义</p>
+    */
+    @SerializedName("GpuResourceKey")
+    @Expose
+    private String GpuResourceKey;
+
+    /**
+    * <p>GPU卡数</p>
+    */
+    @SerializedName("GpuNum")
+    @Expose
+    private Long GpuNum;
+
+    /**
      * Get <p>规格</p> 
      * @return InstanceType <p>规格</p>
      */
@@ -618,6 +632,38 @@ public class NodeSpecInstanceType extends AbstractModel {
         this.IsGpuInstance = IsGpuInstance;
     }
 
+    /**
+     * Get <p>K8S场景GPU资源定义</p> 
+     * @return GpuResourceKey <p>K8S场景GPU资源定义</p>
+     */
+    public String getGpuResourceKey() {
+        return this.GpuResourceKey;
+    }
+
+    /**
+     * Set <p>K8S场景GPU资源定义</p>
+     * @param GpuResourceKey <p>K8S场景GPU资源定义</p>
+     */
+    public void setGpuResourceKey(String GpuResourceKey) {
+        this.GpuResourceKey = GpuResourceKey;
+    }
+
+    /**
+     * Get <p>GPU卡数</p> 
+     * @return GpuNum <p>GPU卡数</p>
+     */
+    public Long getGpuNum() {
+        return this.GpuNum;
+    }
+
+    /**
+     * Set <p>GPU卡数</p>
+     * @param GpuNum <p>GPU卡数</p>
+     */
+    public void setGpuNum(Long GpuNum) {
+        this.GpuNum = GpuNum;
+    }
+
     public NodeSpecInstanceType() {
     }
 
@@ -713,6 +759,12 @@ public class NodeSpecInstanceType extends AbstractModel {
         if (source.IsGpuInstance != null) {
             this.IsGpuInstance = new Boolean(source.IsGpuInstance);
         }
+        if (source.GpuResourceKey != null) {
+            this.GpuResourceKey = new String(source.GpuResourceKey);
+        }
+        if (source.GpuNum != null) {
+            this.GpuNum = new Long(source.GpuNum);
+        }
     }
 
 
@@ -745,6 +797,8 @@ public class NodeSpecInstanceType extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
         this.setParamSimple(map, prefix + "NeedHpcClusterId", this.NeedHpcClusterId);
         this.setParamSimple(map, prefix + "IsGpuInstance", this.IsGpuInstance);
+        this.setParamSimple(map, prefix + "GpuResourceKey", this.GpuResourceKey);
+        this.setParamSimple(map, prefix + "GpuNum", this.GpuNum);
 
     }
 }

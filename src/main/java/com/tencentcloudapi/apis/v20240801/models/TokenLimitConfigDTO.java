@@ -52,7 +52,9 @@ public class TokenLimitConfigDTO extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getType() {
         return this.Type;
     }
@@ -62,7 +64,9 @@ public class TokenLimitConfigDTO extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type <p>限流类型</p><p>枚举值：</p><ul><li>minute： 时间窗口</li><li>day： 自然日</li><li>month： 自然月</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setType(String Type) {
         this.Type = Type;
     }

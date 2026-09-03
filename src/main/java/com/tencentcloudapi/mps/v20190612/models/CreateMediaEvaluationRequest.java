@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateMediaEvaluationRequest extends AbstractModel {
 
     /**
-    * 评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。
+    * <p>评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * 评测任务参数。
+    * <p>评测任务参数。</p>
     */
     @SerializedName("EvaluationTask")
     @Expose
     private EvaluationTaskInput EvaluationTask;
 
     /**
-    * 评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。
+    * <p>评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。
+    * <p>评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * 任务的事件通知信息，不填代表不获取事件通知。
+    * <p>任务的事件通知信息，不填代表不获取事件通知。</p>
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+    * <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+    * <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+    * <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get 评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。 
-     * @return InputInfo 评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。
+     * Get <p>评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。</p> 
+     * @return InputInfo <p>评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。</p>
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。
-     * @param InputInfo 评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。
+     * Set <p>评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。</p>
+     * @param InputInfo <p>评测的原文件输入信息。目前输入对象的类型有 COS 和 URL。</p>
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get 评测任务参数。 
-     * @return EvaluationTask 评测任务参数。
+     * Get <p>评测任务参数。</p> 
+     * @return EvaluationTask <p>评测任务参数。</p>
      */
     public EvaluationTaskInput getEvaluationTask() {
         return this.EvaluationTask;
     }
 
     /**
-     * Set 评测任务参数。
-     * @param EvaluationTask 评测任务参数。
+     * Set <p>评测任务参数。</p>
+     * @param EvaluationTask <p>评测任务参数。</p>
      */
     public void setEvaluationTask(EvaluationTaskInput EvaluationTask) {
         this.EvaluationTask = EvaluationTask;
     }
 
     /**
-     * Get 评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。 
-     * @return OutputStorage 评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。
+     * Get <p>评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。</p> 
+     * @return OutputStorage <p>评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。
-     * @param OutputStorage 评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。
+     * Set <p>评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。</p>
+     * @param OutputStorage <p>评测的输出文件的目标存储。不填则继承 InputInfo 中的存储位置。目前输出对象存储位置的类型有COS。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。 
-     * @return OutputDir 评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * Get <p>评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。</p> 
+     * @return OutputDir <p>评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set 评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。
-     * @param OutputDir 评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * Set <p>评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
+     * @param OutputDir <p>评测生成文件的输出目录，必选以 / 开头和结尾，如/movie/201907/。 如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get 任务的事件通知信息，不填代表不获取事件通知。 
-     * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Get <p>任务的事件通知信息，不填代表不获取事件通知。</p> 
+     * @return TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set 任务的事件通知信息，不填代表不获取事件通知。
-     * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Set <p>任务的事件通知信息，不填代表不获取事件通知。</p>
+     * @param TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
     /**
-     * Get 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。 
-     * @return TasksPriority 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Get <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p> 
+     * @return TasksPriority <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
-     * @param TasksPriority 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Set <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
+     * @param TasksPriority <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
-     * @return SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p> 
+     * @return SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p> 
+     * @return SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+     * @param SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

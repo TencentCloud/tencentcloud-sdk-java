@@ -74,6 +74,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *发起音色克隆任务，基于参考音频克隆生成专属音色，生成的音色可供后续语音合成使用。
+     * @param req CloneVoiceSyncRequest
+     * @return CloneVoiceSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneVoiceSyncResponse CloneVoiceSync(CloneVoiceSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneVoiceSync", CloneVoiceSyncResponse.class);
+    }
+
+    /**
      *该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
      * @param req CommitUploadRequest
      * @return CommitUploadResponse
@@ -2963,6 +2974,17 @@ public class VodClient extends AbstractClient{
     public TextToSpeechAsyncResponse TextToSpeechAsync(TextToSpeechAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TextToSpeechAsync", TextToSpeechAsyncResponse.class);
+    }
+
+    /**
+     *发起语音合成任务，将文本合成为语音。
+     * @param req TextToSpeechSyncRequest
+     * @return TextToSpeechSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechSyncResponse TextToSpeechSync(TextToSpeechSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechSync", TextToSpeechSyncResponse.class);
     }
 
     /**

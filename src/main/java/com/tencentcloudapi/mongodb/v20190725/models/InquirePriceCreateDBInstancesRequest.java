@@ -59,7 +59,7 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     private String MongoVersion;
 
     /**
-    * <p>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
+    * <p>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择 GE.LD.T2。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T2。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
     */
     @SerializedName("MachineCode")
     @Expose
@@ -237,16 +237,16 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p> 
-     * @return MachineCode <p>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
+     * Get <p>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择 GE.LD.T2。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T2。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p> 
+     * @return MachineCode <p>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择 GE.LD.T2。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T2。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set <p>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
-     * @param MachineCode <p>产品推荐规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>HIO10G：本地盘（高IO万兆型）。</li><li>HCD：云盘（云盘版）。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
+     * Set <p>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择 GE.LD.T2。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T2。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
+     * @param MachineCode <p>产品推荐规格类型：</p><ul><li>GE.LD.T2：本地盘（通用II型）。</li><li>EX.LD.T2：本地盘（独享II型）。</li><li>GE.CD.T1：云盘（通用I型）。</li></ul><p>产品白名单规格类型：</p><ul><li>GE.LD.T1：本地盘（通用I型），预计将逐步售罄，建议选择 GE.LD.T2。</li><li>HIO10G：本地盘（高IO万兆型），已售罄，建议选择 GE.LD.T2。</li><li>HCD：云盘（云盘版），已售罄，建议选择 GE.CD.T1。</li></ul><p>注意：白名单规格类型为白名单控制，如若需要，请 <a href="https://console.cloud.tencent.com/workorder/category">提交工单</a> 申请</p>
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ChildTemplateInfo extends AbstractModel {
 
     /**
-    * 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+    * <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -33,7 +32,7 @@ public class ChildTemplateInfo extends AbstractModel {
     private Long TemplateId;
 
     /**
-    * 子模板名称。
+    * <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
@@ -41,9 +40,7 @@ public class ChildTemplateInfo extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+    * <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vcodec")
@@ -51,9 +48,7 @@ origin: 保持原始编码格式。
     private String Vcodec;
 
     /**
-    * 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+    * <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoBitrate")
@@ -61,9 +56,7 @@ origin: 保持原始编码格式。
     private Long VideoBitrate;
 
     /**
-    * 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+    * <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -71,9 +64,7 @@ origin: 保持原始编码格式。
     private Long Width;
 
     /**
-    * 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+    * <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -81,8 +72,7 @@ origin: 保持原始编码格式。
     private Long Height;
 
     /**
-    * 帧率，默认0。
-范围0-60fps。
+    * <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fps")
@@ -90,10 +80,7 @@ origin: 保持原始编码格式。
     private Long Fps;
 
     /**
-    * 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+    * <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gop")
@@ -101,7 +88,7 @@ origin: 保持原始编码格式。
     private Long Gop;
 
     /**
-    * 是否保留视频，0：否，1：是。默认1。
+    * <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedVideo")
@@ -109,7 +96,7 @@ origin: 保持原始编码格式。
     private Long NeedVideo;
 
     /**
-    * 是否保留音频，0：否，1：是。默认1。
+    * <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedAudio")
@@ -117,9 +104,7 @@ origin: 保持原始编码格式。
     private Long NeedAudio;
 
     /**
-    * 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+    * <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BitrateToOrig")
@@ -127,9 +112,7 @@ origin: 保持原始编码格式。
     private Long BitrateToOrig;
 
     /**
-    * 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+    * <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeightToOrig")
@@ -137,9 +120,7 @@ origin: 保持原始编码格式。
     private Long HeightToOrig;
 
     /**
-    * 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+    * <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FpsToOrig")
@@ -147,7 +128,7 @@ origin: 保持原始编码格式。
     private Long FpsToOrig;
 
     /**
-    * 是否以短边作为高度，0：否，1：是。默认0。
+    * <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShortEdgeAsHeight")
@@ -155,9 +136,7 @@ origin: 保持原始编码格式。
     private Long ShortEdgeAsHeight;
 
     /**
-    * HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+    * <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HlsContainerFormat")
@@ -165,9 +144,7 @@ origin: 保持原始编码格式。
     private String HlsContainerFormat;
 
     /**
-    * 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+    * <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HlsMp4VideoCodecTag")
@@ -175,11 +152,23 @@ origin: 保持原始编码格式。
     private String HlsMp4VideoCodecTag;
 
     /**
-     * Get 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+    * <p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+    */
+    @SerializedName("Acodec")
+    @Expose
+    private String Acodec;
+
+    /**
+    * <p>子流音频码率</p><p>单位：Kbps</p>
+    */
+    @SerializedName("AudioBitrate")
+    @Expose
+    private Long AudioBitrate;
+
+    /**
+     * Get <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+     * @return TemplateId <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
@@ -187,11 +176,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+     * Set <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 自适应码率转码模板，子模板Id。
-入参时候，填写此字段，表示更新子模板，否则是新增子模板。
+     * @param TemplateId <p>自适应码率转码模板，子模板Id。<br>入参时候，填写此字段，表示更新子模板，否则是新增子模板。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
@@ -199,9 +186,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 子模板名称。
+     * Get <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 子模板名称。
+     * @return TemplateName <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
@@ -209,9 +196,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 子模板名称。
+     * Set <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 子模板名称。
+     * @param TemplateName <p>子模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
@@ -219,13 +206,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+     * Get <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vcodec 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+     * @return Vcodec <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVcodec() {
@@ -233,13 +216,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+     * Set <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vcodec 视频编码：h264/h265/origin，默认origin。
-
-origin: 保持原始编码格式。
+     * @param Vcodec <p>视频编码：h264/h265/origin，默认origin。</p><p>origin: 保持原始编码格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVcodec(String Vcodec) {
@@ -247,13 +226,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * Get <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoBitrate 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @return VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVideoBitrate() {
@@ -261,13 +236,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * Set <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoBitrate 视频码率。范围：0kbps - 8000kbps。
-0为保持原始码率。
-注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @param VideoBitrate <p>视频码率。范围：0kbps - 8000kbps。<br>0为保持原始码率。<br>注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoBitrate(Long VideoBitrate) {
@@ -275,13 +246,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+     * Get <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Width 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+     * @return Width <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -289,13 +256,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+     * Set <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Width 宽，默认0。
-范围[0-3000]。
-数值必须是2的倍数，0是原始宽度。
+     * @param Width <p>宽，默认0。<br>范围[0-3000]。<br>数值必须是2的倍数，0是原始宽度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -303,13 +266,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+     * Get <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Height 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+     * @return Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -317,13 +276,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+     * Set <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Height 高，默认0。
-范围[0-3000]
-数值必须是2的倍数，0是原始高度。
+     * @param Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
@@ -331,11 +286,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 帧率，默认0。
-范围0-60fps。
+     * Get <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fps 帧率，默认0。
-范围0-60fps。
+     * @return Fps <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFps() {
@@ -343,11 +296,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 帧率，默认0。
-范围0-60fps。
+     * Set <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fps 帧率，默认0。
-范围0-60fps。
+     * @param Fps <p>帧率，默认0。<br>范围0-60fps。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFps(Long Fps) {
@@ -355,15 +306,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+     * Get <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Gop 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+     * @return Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGop() {
@@ -371,15 +316,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+     * Set <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Gop 关键帧间隔，单位：秒。
-默认原始的间隔。
-范围2-6。
-同一个父模板下面的所有子模板，gop必须相等且存在。
+     * @param Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔。<br>范围2-6。<br>同一个父模板下面的所有子模板，gop必须相等且存在。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGop(Long Gop) {
@@ -387,9 +326,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 是否保留视频，0：否，1：是。默认1。
+     * Get <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
+     * @return NeedVideo <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNeedVideo() {
@@ -397,9 +336,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 是否保留视频，0：否，1：是。默认1。
+     * Set <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
+     * @param NeedVideo <p>是否保留视频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeedVideo(Long NeedVideo) {
@@ -407,9 +346,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 是否保留音频，0：否，1：是。默认1。
+     * Get <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
+     * @return NeedAudio <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNeedAudio() {
@@ -417,9 +356,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 是否保留音频，0：否，1：是。默认1。
+     * Set <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NeedAudio 是否保留音频，0：否，1：是。默认1。
+     * @param NeedAudio <p>是否保留音频，0：否，1：是。默认1。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeedAudio(Long NeedAudio) {
@@ -427,13 +366,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * Get <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * @return BitrateToOrig <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrateToOrig() {
@@ -441,13 +376,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * Set <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
-0：否， 1：是
-默认 0。
+     * @param BitrateToOrig <p>当设置的码率&gt;原始码率时，是否以原始码率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrateToOrig(Long BitrateToOrig) {
@@ -455,13 +386,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * Get <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * @return HeightToOrig <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeightToOrig() {
@@ -469,13 +396,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * Set <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
-0：否， 1：是
-默认 0。
+     * @param HeightToOrig <p>当设置的高度&gt;原始高度时，是否以原始高度为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeightToOrig(Long HeightToOrig) {
@@ -483,13 +406,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * Get <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * @return FpsToOrig <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFpsToOrig() {
@@ -497,13 +416,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * Set <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
-0：否， 1：是
-默认 0。
+     * @param FpsToOrig <p>当设置的帧率&gt;原始帧率时，是否以原始帧率为准。<br>0：否， 1：是<br>默认 0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFpsToOrig(Long FpsToOrig) {
@@ -511,9 +426,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 是否以短边作为高度，0：否，1：是。默认0。
+     * Get <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+     * @return ShortEdgeAsHeight <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShortEdgeAsHeight() {
@@ -521,9 +436,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 是否以短边作为高度，0：否，1：是。默认0。
+     * Set <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+     * @param ShortEdgeAsHeight <p>是否以短边作为高度，0：否，1：是。默认0。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShortEdgeAsHeight(Long ShortEdgeAsHeight) {
@@ -531,13 +446,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+     * Get <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HlsContainerFormat HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+     * @return HlsContainerFormat <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHlsContainerFormat() {
@@ -545,13 +456,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+     * Set <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HlsContainerFormat HLS 分片类型。
-可选值：ts、fmp4。
-注：编码方式为 H.265 时生效。
+     * @param HlsContainerFormat <p>HLS 分片类型。<br>可选值：ts、fmp4。<br>注：编码方式为 H.265 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHlsContainerFormat(String HlsContainerFormat) {
@@ -559,13 +466,9 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Get 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+     * Get <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HlsMp4VideoCodecTag 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+     * @return HlsMp4VideoCodecTag <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHlsMp4VideoCodecTag() {
@@ -573,17 +476,45 @@ origin: 保持原始编码格式。
     }
 
     /**
-     * Set 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+     * Set <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HlsMp4VideoCodecTag 编码标签。
-可选值：hvc1、hev1。
-注：HLS 分片类型选择 fmp4 时生效。
+     * @param HlsMp4VideoCodecTag <p>编码标签。<br>可选值：hvc1、hev1。<br>注：HLS 分片类型选择 fmp4 时生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHlsMp4VideoCodecTag(String HlsMp4VideoCodecTag) {
         this.HlsMp4VideoCodecTag = HlsMp4VideoCodecTag;
+    }
+
+    /**
+     * Get <p>子流音频编码类型。默认为&quot;自动适配&quot;</p> 
+     * @return Acodec <p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+     */
+    public String getAcodec() {
+        return this.Acodec;
+    }
+
+    /**
+     * Set <p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+     * @param Acodec <p>子流音频编码类型。默认为&quot;自动适配&quot;</p>
+     */
+    public void setAcodec(String Acodec) {
+        this.Acodec = Acodec;
+    }
+
+    /**
+     * Get <p>子流音频码率</p><p>单位：Kbps</p> 
+     * @return AudioBitrate <p>子流音频码率</p><p>单位：Kbps</p>
+     */
+    public Long getAudioBitrate() {
+        return this.AudioBitrate;
+    }
+
+    /**
+     * Set <p>子流音频码率</p><p>单位：Kbps</p>
+     * @param AudioBitrate <p>子流音频码率</p><p>单位：Kbps</p>
+     */
+    public void setAudioBitrate(Long AudioBitrate) {
+        this.AudioBitrate = AudioBitrate;
     }
 
     public ChildTemplateInfo() {
@@ -642,6 +573,12 @@ origin: 保持原始编码格式。
         if (source.HlsMp4VideoCodecTag != null) {
             this.HlsMp4VideoCodecTag = new String(source.HlsMp4VideoCodecTag);
         }
+        if (source.Acodec != null) {
+            this.Acodec = new String(source.Acodec);
+        }
+        if (source.AudioBitrate != null) {
+            this.AudioBitrate = new Long(source.AudioBitrate);
+        }
     }
 
 
@@ -665,6 +602,8 @@ origin: 保持原始编码格式。
         this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         this.setParamSimple(map, prefix + "HlsContainerFormat", this.HlsContainerFormat);
         this.setParamSimple(map, prefix + "HlsMp4VideoCodecTag", this.HlsMp4VideoCodecTag);
+        this.setParamSimple(map, prefix + "Acodec", this.Acodec);
+        this.setParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
 
     }
 }

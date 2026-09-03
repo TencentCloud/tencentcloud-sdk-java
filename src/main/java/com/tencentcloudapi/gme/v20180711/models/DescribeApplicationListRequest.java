@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class DescribeApplicationListRequest extends AbstractModel {
 
     /**
-    * 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
+    * <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 页码ID，0表示第一页，以此后推。默认填0
+    * <p>页码ID，0表示第一页，以此后推。默认填0</p>
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * 每页展示应用数量。默认填200
+    * <p>每页展示应用数量。默认填200</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
+    * <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
     */
     @SerializedName("SearchText")
     @Expose
     private String SearchText;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * 查找过滤关键字列表
+    * <p>查找过滤关键字列表</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project 
-     * @return ProjectId 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
+    * <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("NewVersion")
+    @Expose
+    private Long NewVersion;
+
+    /**
+     * Get <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p> 
+     * @return ProjectId <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
-     * @param ProjectId 项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project
+     * Set <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
+     * @param ProjectId <p>项目ID，0表示默认项目，-1表示所有项目，如果需要查找具体项目下的应用列表，请填入具体项目ID，项目ID在项目管理中查看 https://console.cloud.tencent.com/project</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 页码ID，0表示第一页，以此后推。默认填0 
-     * @return PageNo 页码ID，0表示第一页，以此后推。默认填0
+     * Get <p>页码ID，0表示第一页，以此后推。默认填0</p> 
+     * @return PageNo <p>页码ID，0表示第一页，以此后推。默认填0</p>
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 页码ID，0表示第一页，以此后推。默认填0
-     * @param PageNo 页码ID，0表示第一页，以此后推。默认填0
+     * Set <p>页码ID，0表示第一页，以此后推。默认填0</p>
+     * @param PageNo <p>页码ID，0表示第一页，以此后推。默认填0</p>
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get 每页展示应用数量。默认填200 
-     * @return PageSize 每页展示应用数量。默认填200
+     * Get <p>每页展示应用数量。默认填200</p> 
+     * @return PageSize <p>每页展示应用数量。默认填200</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页展示应用数量。默认填200
-     * @param PageSize 每页展示应用数量。默认填200
+     * Set <p>每页展示应用数量。默认填200</p>
+     * @param PageSize <p>每页展示应用数量。默认填200</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用 
-     * @return SearchText 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
+     * Get <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p> 
+     * @return SearchText <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
      */
     public String getSearchText() {
         return this.SearchText;
     }
 
     /**
-     * Set 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
-     * @param SearchText 所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用
+     * Set <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
+     * @param SearchText <p>所查找应用名称的关键字，支持模糊匹配查找。空串表示查询所有应用</p>
      */
     public void setSearchText(String SearchText) {
         this.SearchText = SearchText;
     }
 
     /**
-     * Get 标签列表 
-     * @return TagSet 标签列表
+     * Get <p>标签列表</p> 
+     * @return TagSet <p>标签列表</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签列表
-     * @param TagSet 标签列表
+     * Set <p>标签列表</p>
+     * @param TagSet <p>标签列表</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 查找过滤关键字列表 
-     * @return Filters 查找过滤关键字列表
+     * Get <p>查找过滤关键字列表</p> 
+     * @return Filters <p>查找过滤关键字列表</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查找过滤关键字列表
-     * @param Filters 查找过滤关键字列表
+     * Set <p>查找过滤关键字列表</p>
+     * @param Filters <p>查找过滤关键字列表</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return NewVersion <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Long getNewVersion() {
+        return this.NewVersion;
+    }
+
+    /**
+     * Set <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param NewVersion <p>是否查询GME3.0应用</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setNewVersion(Long NewVersion) {
+        this.NewVersion = NewVersion;
     }
 
     public DescribeApplicationListRequest() {
@@ -193,6 +216,9 @@ public class DescribeApplicationListRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.NewVersion != null) {
+            this.NewVersion = new Long(source.NewVersion);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class DescribeApplicationListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchText", this.SearchText);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "NewVersion", this.NewVersion);
 
     }
 }

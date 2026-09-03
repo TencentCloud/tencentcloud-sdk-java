@@ -24,307 +24,348 @@ import java.util.HashMap;
 public class SparkSessionInfo extends AbstractModel {
 
     /**
-    * spark session id
+    * <p>spark session id</p>
     */
     @SerializedName("SparkSessionId")
     @Expose
     private String SparkSessionId;
 
     /**
-    * spark session名称
+    * <p>spark session名称</p>
     */
     @SerializedName("SparkSessionName")
     @Expose
     private String SparkSessionName;
 
     /**
-    * 资源组id
+    * <p>资源组id</p>
     */
     @SerializedName("ResourceGroupId")
     @Expose
     private String ResourceGroupId;
 
     /**
-    * engine session id
+    * <p>engine session id</p>
     */
     @SerializedName("EngineSessionId")
     @Expose
     private String EngineSessionId;
 
     /**
-    * engine session   
-name
+    * <p>engine session<br>name</p>
     */
     @SerializedName("EngineSessionName")
     @Expose
     private String EngineSessionName;
 
     /**
-    * 自动销毁时间
+    * <p>自动销毁时间</p>
     */
     @SerializedName("IdleTimeoutMin")
     @Expose
     private Long IdleTimeoutMin;
 
     /**
-    * driver规格
+    * <p>driver规格</p>
     */
     @SerializedName("DriverSpec")
     @Expose
     private String DriverSpec;
 
     /**
-    * executor规格
+    * <p>executor规格</p>
     */
     @SerializedName("ExecutorSpec")
     @Expose
     private String ExecutorSpec;
 
     /**
-    * executor最小数量
+    * <p>executor最小数量</p>
     */
     @SerializedName("ExecutorNumMin")
     @Expose
     private Long ExecutorNumMin;
 
     /**
-    * executor最大数量
+    * <p>executor最大数量</p>
     */
     @SerializedName("ExecutorNumMax")
     @Expose
     private Long ExecutorNumMax;
 
     /**
-    * 总规格最小
+    * <p>总规格最小</p>
     */
     @SerializedName("TotalSpecMin")
     @Expose
     private Long TotalSpecMin;
 
     /**
-    * 总规格最大
+    * <p>总规格最大</p>
     */
     @SerializedName("TotalSpecMax")
     @Expose
     private Long TotalSpecMax;
 
     /**
-    * 状态，STARTING、RUNNING、TERMINATED
+    * <p>状态，STARTING、RUNNING、TERMINATED</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-     * Get spark session id 
-     * @return SparkSessionId spark session id
+    * <p>应用 ID</p>
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * <p>应用启动时间</p>
+    */
+    @SerializedName("ApplicationStartTime")
+    @Expose
+    private Long ApplicationStartTime;
+
+    /**
+     * Get <p>spark session id</p> 
+     * @return SparkSessionId <p>spark session id</p>
      */
     public String getSparkSessionId() {
         return this.SparkSessionId;
     }
 
     /**
-     * Set spark session id
-     * @param SparkSessionId spark session id
+     * Set <p>spark session id</p>
+     * @param SparkSessionId <p>spark session id</p>
      */
     public void setSparkSessionId(String SparkSessionId) {
         this.SparkSessionId = SparkSessionId;
     }
 
     /**
-     * Get spark session名称 
-     * @return SparkSessionName spark session名称
+     * Get <p>spark session名称</p> 
+     * @return SparkSessionName <p>spark session名称</p>
      */
     public String getSparkSessionName() {
         return this.SparkSessionName;
     }
 
     /**
-     * Set spark session名称
-     * @param SparkSessionName spark session名称
+     * Set <p>spark session名称</p>
+     * @param SparkSessionName <p>spark session名称</p>
      */
     public void setSparkSessionName(String SparkSessionName) {
         this.SparkSessionName = SparkSessionName;
     }
 
     /**
-     * Get 资源组id 
-     * @return ResourceGroupId 资源组id
+     * Get <p>资源组id</p> 
+     * @return ResourceGroupId <p>资源组id</p>
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 资源组id
-     * @param ResourceGroupId 资源组id
+     * Set <p>资源组id</p>
+     * @param ResourceGroupId <p>资源组id</p>
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get engine session id 
-     * @return EngineSessionId engine session id
+     * Get <p>engine session id</p> 
+     * @return EngineSessionId <p>engine session id</p>
      */
     public String getEngineSessionId() {
         return this.EngineSessionId;
     }
 
     /**
-     * Set engine session id
-     * @param EngineSessionId engine session id
+     * Set <p>engine session id</p>
+     * @param EngineSessionId <p>engine session id</p>
      */
     public void setEngineSessionId(String EngineSessionId) {
         this.EngineSessionId = EngineSessionId;
     }
 
     /**
-     * Get engine session   
-name 
-     * @return EngineSessionName engine session   
-name
+     * Get <p>engine session<br>name</p> 
+     * @return EngineSessionName <p>engine session<br>name</p>
      */
     public String getEngineSessionName() {
         return this.EngineSessionName;
     }
 
     /**
-     * Set engine session   
-name
-     * @param EngineSessionName engine session   
-name
+     * Set <p>engine session<br>name</p>
+     * @param EngineSessionName <p>engine session<br>name</p>
      */
     public void setEngineSessionName(String EngineSessionName) {
         this.EngineSessionName = EngineSessionName;
     }
 
     /**
-     * Get 自动销毁时间 
-     * @return IdleTimeoutMin 自动销毁时间
+     * Get <p>自动销毁时间</p> 
+     * @return IdleTimeoutMin <p>自动销毁时间</p>
      */
     public Long getIdleTimeoutMin() {
         return this.IdleTimeoutMin;
     }
 
     /**
-     * Set 自动销毁时间
-     * @param IdleTimeoutMin 自动销毁时间
+     * Set <p>自动销毁时间</p>
+     * @param IdleTimeoutMin <p>自动销毁时间</p>
      */
     public void setIdleTimeoutMin(Long IdleTimeoutMin) {
         this.IdleTimeoutMin = IdleTimeoutMin;
     }
 
     /**
-     * Get driver规格 
-     * @return DriverSpec driver规格
+     * Get <p>driver规格</p> 
+     * @return DriverSpec <p>driver规格</p>
      */
     public String getDriverSpec() {
         return this.DriverSpec;
     }
 
     /**
-     * Set driver规格
-     * @param DriverSpec driver规格
+     * Set <p>driver规格</p>
+     * @param DriverSpec <p>driver规格</p>
      */
     public void setDriverSpec(String DriverSpec) {
         this.DriverSpec = DriverSpec;
     }
 
     /**
-     * Get executor规格 
-     * @return ExecutorSpec executor规格
+     * Get <p>executor规格</p> 
+     * @return ExecutorSpec <p>executor规格</p>
      */
     public String getExecutorSpec() {
         return this.ExecutorSpec;
     }
 
     /**
-     * Set executor规格
-     * @param ExecutorSpec executor规格
+     * Set <p>executor规格</p>
+     * @param ExecutorSpec <p>executor规格</p>
      */
     public void setExecutorSpec(String ExecutorSpec) {
         this.ExecutorSpec = ExecutorSpec;
     }
 
     /**
-     * Get executor最小数量 
-     * @return ExecutorNumMin executor最小数量
+     * Get <p>executor最小数量</p> 
+     * @return ExecutorNumMin <p>executor最小数量</p>
      */
     public Long getExecutorNumMin() {
         return this.ExecutorNumMin;
     }
 
     /**
-     * Set executor最小数量
-     * @param ExecutorNumMin executor最小数量
+     * Set <p>executor最小数量</p>
+     * @param ExecutorNumMin <p>executor最小数量</p>
      */
     public void setExecutorNumMin(Long ExecutorNumMin) {
         this.ExecutorNumMin = ExecutorNumMin;
     }
 
     /**
-     * Get executor最大数量 
-     * @return ExecutorNumMax executor最大数量
+     * Get <p>executor最大数量</p> 
+     * @return ExecutorNumMax <p>executor最大数量</p>
      */
     public Long getExecutorNumMax() {
         return this.ExecutorNumMax;
     }
 
     /**
-     * Set executor最大数量
-     * @param ExecutorNumMax executor最大数量
+     * Set <p>executor最大数量</p>
+     * @param ExecutorNumMax <p>executor最大数量</p>
      */
     public void setExecutorNumMax(Long ExecutorNumMax) {
         this.ExecutorNumMax = ExecutorNumMax;
     }
 
     /**
-     * Get 总规格最小 
-     * @return TotalSpecMin 总规格最小
+     * Get <p>总规格最小</p> 
+     * @return TotalSpecMin <p>总规格最小</p>
      */
     public Long getTotalSpecMin() {
         return this.TotalSpecMin;
     }
 
     /**
-     * Set 总规格最小
-     * @param TotalSpecMin 总规格最小
+     * Set <p>总规格最小</p>
+     * @param TotalSpecMin <p>总规格最小</p>
      */
     public void setTotalSpecMin(Long TotalSpecMin) {
         this.TotalSpecMin = TotalSpecMin;
     }
 
     /**
-     * Get 总规格最大 
-     * @return TotalSpecMax 总规格最大
+     * Get <p>总规格最大</p> 
+     * @return TotalSpecMax <p>总规格最大</p>
      */
     public Long getTotalSpecMax() {
         return this.TotalSpecMax;
     }
 
     /**
-     * Set 总规格最大
-     * @param TotalSpecMax 总规格最大
+     * Set <p>总规格最大</p>
+     * @param TotalSpecMax <p>总规格最大</p>
      */
     public void setTotalSpecMax(Long TotalSpecMax) {
         this.TotalSpecMax = TotalSpecMax;
     }
 
     /**
-     * Get 状态，STARTING、RUNNING、TERMINATED 
-     * @return State 状态，STARTING、RUNNING、TERMINATED
+     * Get <p>状态，STARTING、RUNNING、TERMINATED</p> 
+     * @return State <p>状态，STARTING、RUNNING、TERMINATED</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 状态，STARTING、RUNNING、TERMINATED
-     * @param State 状态，STARTING、RUNNING、TERMINATED
+     * Set <p>状态，STARTING、RUNNING、TERMINATED</p>
+     * @param State <p>状态，STARTING、RUNNING、TERMINATED</p>
      */
     public void setState(String State) {
         this.State = State;
+    }
+
+    /**
+     * Get <p>应用 ID</p> 
+     * @return ApplicationId <p>应用 ID</p>
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set <p>应用 ID</p>
+     * @param ApplicationId <p>应用 ID</p>
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get <p>应用启动时间</p> 
+     * @return ApplicationStartTime <p>应用启动时间</p>
+     */
+    public Long getApplicationStartTime() {
+        return this.ApplicationStartTime;
+    }
+
+    /**
+     * Set <p>应用启动时间</p>
+     * @param ApplicationStartTime <p>应用启动时间</p>
+     */
+    public void setApplicationStartTime(Long ApplicationStartTime) {
+        this.ApplicationStartTime = ApplicationStartTime;
     }
 
     public SparkSessionInfo() {
@@ -374,6 +415,12 @@ name
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationStartTime != null) {
+            this.ApplicationStartTime = new Long(source.ApplicationStartTime);
+        }
     }
 
 
@@ -394,6 +441,8 @@ name
         this.setParamSimple(map, prefix + "TotalSpecMin", this.TotalSpecMin);
         this.setParamSimple(map, prefix + "TotalSpecMax", this.TotalSpecMax);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ApplicationStartTime", this.ApplicationStartTime);
 
     }
 }

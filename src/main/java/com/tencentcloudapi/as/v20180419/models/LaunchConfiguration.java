@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class LaunchConfiguration extends AbstractModel {
 
     /**
-    * 实例所属项目ID。
+    * <p>实例所属项目ID。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 启动配置ID。
+    * <p>启动配置ID。</p>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
     private String LaunchConfigurationId;
 
     /**
-    * 启动配置名称。
+    * <p>启动配置名称。</p>
     */
     @SerializedName("LaunchConfigurationName")
     @Expose
     private String LaunchConfigurationName;
 
     /**
-    * 实例机型。
+    * <p>实例机型。</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例系统盘配置信息。
+    * <p>实例系统盘配置信息。</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
 
     /**
-    * 实例数据盘配置信息。
+    * <p>实例数据盘配置信息。</p>
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
 
     /**
-    * 实例登录设置。
+    * <p>实例登录设置。</p>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LimitedLoginSettings LoginSettings;
 
     /**
-    * 公网带宽相关信息设置。
+    * <p>公网带宽相关信息设置。</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * 实例所属安全组。
+    * <p>实例所属安全组。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 启动配置关联的伸缩组。
+    * <p>启动配置关联的伸缩组。</p>
     */
     @SerializedName("AutoScalingGroupAbstractSet")
     @Expose
     private AutoScalingGroupAbstract [] AutoScalingGroupAbstractSet;
 
     /**
-    * 自定义数据。
+    * <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserData")
@@ -102,46 +102,42 @@ public class LaunchConfiguration extends AbstractModel {
     private String UserData;
 
     /**
-    * 启动配置创建时间，为标准`UTC`时间。
+    * <p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 实例的增强服务启用情况与其设置。
+    * <p>实例的增强服务启用情况与其设置。</p>
     */
     @SerializedName("EnhancedService")
     @Expose
     private EnhancedService EnhancedService;
 
     /**
-    * 镜像ID。
+    * <p>镜像ID。</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
+    * <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
     */
     @SerializedName("LaunchConfigurationStatus")
     @Expose
     private String LaunchConfigurationStatus;
 
     /**
-    * 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+    * <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+    * <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceMarketOptions")
@@ -149,282 +145,288 @@ public class LaunchConfiguration extends AbstractModel {
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
-    * 实例机型列表。
+    * <p>实例机型列表。</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+    * <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTag [] InstanceTags;
 
     /**
-    * 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
+    * <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 版本号。
+    * <p>版本号。</p>
     */
     @SerializedName("VersionNumber")
     @Expose
     private Long VersionNumber;
 
     /**
-    * 更新时间，为标准`UTC`时间。
+    * <p>更新时间，为标准<code>UTC</code>时间。</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+    * <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
     */
     @SerializedName("CamRoleName")
     @Expose
     private String CamRoleName;
 
     /**
-    * 上次操作时，InstanceTypesCheckPolicy 取值。
+    * <p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
     */
     @SerializedName("LastOperationInstanceTypesCheckPolicy")
     @Expose
     private String LastOperationInstanceTypesCheckPolicy;
 
     /**
-    * 云服务器主机名（HostName）的相关设置。
+    * <p>云服务器主机名（HostName）的相关设置。</p>
     */
     @SerializedName("HostNameSettings")
     @Expose
     private HostNameSettings HostNameSettings;
 
     /**
-    * 云服务器实例名（InstanceName）的相关设置。
+    * <p>云服务器实例名（InstanceName）的相关设置。</p>
     */
     @SerializedName("InstanceNameSettings")
     @Expose
     private InstanceNameSettings InstanceNameSettings;
 
     /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+    * <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
+    * <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
     */
     @SerializedName("DiskTypePolicy")
     @Expose
     private String DiskTypePolicy;
 
     /**
-    * 高性能计算集群ID。<br>
-注意：此字段默认为空。
+    * <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
     */
     @SerializedName("HpcClusterId")
     @Expose
     private String HpcClusterId;
 
     /**
-    * IPv6公网带宽相关信息设置。
+    * <p>IPv6公网带宽相关信息设置。</p>
     */
     @SerializedName("IPv6InternetAccessible")
     @Expose
     private IPv6InternetAccessible IPv6InternetAccessible;
 
     /**
-    * 置放群组id，仅支持指定一个。
+    * <p>置放群组id，仅支持指定一个。</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 镜像族名称。
+    * <p>镜像族名称。</p>
     */
     @SerializedName("ImageFamily")
     @Expose
     private String ImageFamily;
 
     /**
-    * 本地专用集群 ID。
+    * <p>本地专用集群 ID。</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-     * Get 实例所属项目ID。 
-     * @return ProjectId 实例所属项目ID。
+    * <p>启动配置的弹性网卡配置。</p>
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterface [] NetworkInterfaces;
+
+    /**
+     * Get <p>实例所属项目ID。</p> 
+     * @return ProjectId <p>实例所属项目ID。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所属项目ID。
-     * @param ProjectId 实例所属项目ID。
+     * Set <p>实例所属项目ID。</p>
+     * @param ProjectId <p>实例所属项目ID。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 启动配置ID。 
-     * @return LaunchConfigurationId 启动配置ID。
+     * Get <p>启动配置ID。</p> 
+     * @return LaunchConfigurationId <p>启动配置ID。</p>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set 启动配置ID。
-     * @param LaunchConfigurationId 启动配置ID。
+     * Set <p>启动配置ID。</p>
+     * @param LaunchConfigurationId <p>启动配置ID。</p>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
     }
 
     /**
-     * Get 启动配置名称。 
-     * @return LaunchConfigurationName 启动配置名称。
+     * Get <p>启动配置名称。</p> 
+     * @return LaunchConfigurationName <p>启动配置名称。</p>
      */
     public String getLaunchConfigurationName() {
         return this.LaunchConfigurationName;
     }
 
     /**
-     * Set 启动配置名称。
-     * @param LaunchConfigurationName 启动配置名称。
+     * Set <p>启动配置名称。</p>
+     * @param LaunchConfigurationName <p>启动配置名称。</p>
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
         this.LaunchConfigurationName = LaunchConfigurationName;
     }
 
     /**
-     * Get 实例机型。 
-     * @return InstanceType 实例机型。
+     * Get <p>实例机型。</p> 
+     * @return InstanceType <p>实例机型。</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例机型。
-     * @param InstanceType 实例机型。
+     * Set <p>实例机型。</p>
+     * @param InstanceType <p>实例机型。</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例系统盘配置信息。 
-     * @return SystemDisk 实例系统盘配置信息。
+     * Get <p>实例系统盘配置信息。</p> 
+     * @return SystemDisk <p>实例系统盘配置信息。</p>
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 实例系统盘配置信息。
-     * @param SystemDisk 实例系统盘配置信息。
+     * Set <p>实例系统盘配置信息。</p>
+     * @param SystemDisk <p>实例系统盘配置信息。</p>
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 实例数据盘配置信息。 
-     * @return DataDisks 实例数据盘配置信息。
+     * Get <p>实例数据盘配置信息。</p> 
+     * @return DataDisks <p>实例数据盘配置信息。</p>
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 实例数据盘配置信息。
-     * @param DataDisks 实例数据盘配置信息。
+     * Set <p>实例数据盘配置信息。</p>
+     * @param DataDisks <p>实例数据盘配置信息。</p>
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get 实例登录设置。 
-     * @return LoginSettings 实例登录设置。
+     * Get <p>实例登录设置。</p> 
+     * @return LoginSettings <p>实例登录设置。</p>
      */
     public LimitedLoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 实例登录设置。
-     * @param LoginSettings 实例登录设置。
+     * Set <p>实例登录设置。</p>
+     * @param LoginSettings <p>实例登录设置。</p>
      */
     public void setLoginSettings(LimitedLoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get 公网带宽相关信息设置。 
-     * @return InternetAccessible 公网带宽相关信息设置。
+     * Get <p>公网带宽相关信息设置。</p> 
+     * @return InternetAccessible <p>公网带宽相关信息设置。</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 公网带宽相关信息设置。
-     * @param InternetAccessible 公网带宽相关信息设置。
+     * Set <p>公网带宽相关信息设置。</p>
+     * @param InternetAccessible <p>公网带宽相关信息设置。</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * Get 实例所属安全组。 
-     * @return SecurityGroupIds 实例所属安全组。
+     * Get <p>实例所属安全组。</p> 
+     * @return SecurityGroupIds <p>实例所属安全组。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 实例所属安全组。
-     * @param SecurityGroupIds 实例所属安全组。
+     * Set <p>实例所属安全组。</p>
+     * @param SecurityGroupIds <p>实例所属安全组。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 启动配置关联的伸缩组。 
-     * @return AutoScalingGroupAbstractSet 启动配置关联的伸缩组。
+     * Get <p>启动配置关联的伸缩组。</p> 
+     * @return AutoScalingGroupAbstractSet <p>启动配置关联的伸缩组。</p>
      */
     public AutoScalingGroupAbstract [] getAutoScalingGroupAbstractSet() {
         return this.AutoScalingGroupAbstractSet;
     }
 
     /**
-     * Set 启动配置关联的伸缩组。
-     * @param AutoScalingGroupAbstractSet 启动配置关联的伸缩组。
+     * Set <p>启动配置关联的伸缩组。</p>
+     * @param AutoScalingGroupAbstractSet <p>启动配置关联的伸缩组。</p>
      */
     public void setAutoScalingGroupAbstractSet(AutoScalingGroupAbstract [] AutoScalingGroupAbstractSet) {
         this.AutoScalingGroupAbstractSet = AutoScalingGroupAbstractSet;
     }
 
     /**
-     * Get 自定义数据。
+     * Get <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserData 自定义数据。
+     * @return UserData <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserData() {
@@ -432,9 +434,9 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 自定义数据。
+     * Set <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserData 自定义数据。
+     * @param UserData <p>自定义数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserData(String UserData) {
@@ -442,105 +444,89 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 启动配置创建时间，为标准`UTC`时间。 
-     * @return CreatedTime 启动配置创建时间，为标准`UTC`时间。
+     * Get <p>启动配置创建时间，为标准<code>UTC</code>时间。</p> 
+     * @return CreatedTime <p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 启动配置创建时间，为标准`UTC`时间。
-     * @param CreatedTime 启动配置创建时间，为标准`UTC`时间。
+     * Set <p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
+     * @param CreatedTime <p>启动配置创建时间，为标准<code>UTC</code>时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 实例的增强服务启用情况与其设置。 
-     * @return EnhancedService 实例的增强服务启用情况与其设置。
+     * Get <p>实例的增强服务启用情况与其设置。</p> 
+     * @return EnhancedService <p>实例的增强服务启用情况与其设置。</p>
      */
     public EnhancedService getEnhancedService() {
         return this.EnhancedService;
     }
 
     /**
-     * Set 实例的增强服务启用情况与其设置。
-     * @param EnhancedService 实例的增强服务启用情况与其设置。
+     * Set <p>实例的增强服务启用情况与其设置。</p>
+     * @param EnhancedService <p>实例的增强服务启用情况与其设置。</p>
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
         this.EnhancedService = EnhancedService;
     }
 
     /**
-     * Get 镜像ID。 
-     * @return ImageId 镜像ID。
+     * Get <p>镜像ID。</p> 
+     * @return ImageId <p>镜像ID。</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像ID。
-     * @param ImageId 镜像ID。
+     * Set <p>镜像ID。</p>
+     * @param ImageId <p>镜像ID。</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li> 
-     * @return LaunchConfigurationStatus 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
+     * Get <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p> 
+     * @return LaunchConfigurationStatus <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
      */
     public String getLaunchConfigurationStatus() {
         return this.LaunchConfigurationStatus;
     }
 
     /**
-     * Set 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
-     * @param LaunchConfigurationStatus 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
+     * Set <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
+     * @param LaunchConfigurationStatus <p>启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li></p>
      */
     public void setLaunchConfigurationStatus(String LaunchConfigurationStatus) {
         this.LaunchConfigurationStatus = LaunchConfigurationStatus;
     }
 
     /**
-     * Get 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li> 
-     * @return InstanceChargeType 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+     * Get <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li> 
+     * @return InstanceChargeType <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
-     * @param InstanceChargeType 实例计费类型，取值范围如下：
-<li>POSTPAID_BY_HOUR：按小时后付费</li>
-<li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li>
-<li>CDCPAID：专用集群付费</li>
+     * Set <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
+     * @param InstanceChargeType <p>实例计费类型，取值范围如下：</p><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li><li>PREPAID：预付费，即包年包月</li><li>CDCPAID：专用集群付费</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * Get <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * @return InstanceMarketOptions <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
@@ -548,9 +534,9 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * Set <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * @param InstanceMarketOptions <p>实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
@@ -558,263 +544,275 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 实例机型列表。 
-     * @return InstanceTypes 实例机型列表。
+     * Get <p>实例机型列表。</p> 
+     * @return InstanceTypes <p>实例机型列表。</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 实例机型列表。
-     * @param InstanceTypes 实例机型列表。
+     * Set <p>实例机型列表。</p>
+     * @param InstanceTypes <p>实例机型列表。</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。 
-     * @return InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+     * Get <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p> 
+     * @return InstanceTags <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
      */
     public InstanceTag [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
-     * @param InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+     * Set <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
+     * @param InstanceTags <p>实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。</p>
      */
     public void setInstanceTags(InstanceTag [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。 
-     * @return Tags 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
+     * Get <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p> 
+     * @return Tags <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
-     * @param Tags 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
+     * Set <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
+     * @param Tags <p>标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 版本号。 
-     * @return VersionNumber 版本号。
+     * Get <p>版本号。</p> 
+     * @return VersionNumber <p>版本号。</p>
      */
     public Long getVersionNumber() {
         return this.VersionNumber;
     }
 
     /**
-     * Set 版本号。
-     * @param VersionNumber 版本号。
+     * Set <p>版本号。</p>
+     * @param VersionNumber <p>版本号。</p>
      */
     public void setVersionNumber(Long VersionNumber) {
         this.VersionNumber = VersionNumber;
     }
 
     /**
-     * Get 更新时间，为标准`UTC`时间。 
-     * @return UpdatedTime 更新时间，为标准`UTC`时间。
+     * Get <p>更新时间，为标准<code>UTC</code>时间。</p> 
+     * @return UpdatedTime <p>更新时间，为标准<code>UTC</code>时间。</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 更新时间，为标准`UTC`时间。
-     * @param UpdatedTime 更新时间，为标准`UTC`时间。
+     * Set <p>更新时间，为标准<code>UTC</code>时间。</p>
+     * @param UpdatedTime <p>更新时间，为标准<code>UTC</code>时间。</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。 
-     * @return CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * Get <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p> 
+     * @return CamRoleName <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
-     * @param CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * Set <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
+     * @param CamRoleName <p>CAM角色名称。可通过<a href="https://cloud.tencent.com/document/product/598/36223">DescribeRoleList</a>接口返回值中的roleName获取。</p>
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
     }
 
     /**
-     * Get 上次操作时，InstanceTypesCheckPolicy 取值。 
-     * @return LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
+     * Get <p>上次操作时，InstanceTypesCheckPolicy 取值。</p> 
+     * @return LastOperationInstanceTypesCheckPolicy <p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
      */
     public String getLastOperationInstanceTypesCheckPolicy() {
         return this.LastOperationInstanceTypesCheckPolicy;
     }
 
     /**
-     * Set 上次操作时，InstanceTypesCheckPolicy 取值。
-     * @param LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
+     * Set <p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
+     * @param LastOperationInstanceTypesCheckPolicy <p>上次操作时，InstanceTypesCheckPolicy 取值。</p>
      */
     public void setLastOperationInstanceTypesCheckPolicy(String LastOperationInstanceTypesCheckPolicy) {
         this.LastOperationInstanceTypesCheckPolicy = LastOperationInstanceTypesCheckPolicy;
     }
 
     /**
-     * Get 云服务器主机名（HostName）的相关设置。 
-     * @return HostNameSettings 云服务器主机名（HostName）的相关设置。
+     * Get <p>云服务器主机名（HostName）的相关设置。</p> 
+     * @return HostNameSettings <p>云服务器主机名（HostName）的相关设置。</p>
      */
     public HostNameSettings getHostNameSettings() {
         return this.HostNameSettings;
     }
 
     /**
-     * Set 云服务器主机名（HostName）的相关设置。
-     * @param HostNameSettings 云服务器主机名（HostName）的相关设置。
+     * Set <p>云服务器主机名（HostName）的相关设置。</p>
+     * @param HostNameSettings <p>云服务器主机名（HostName）的相关设置。</p>
      */
     public void setHostNameSettings(HostNameSettings HostNameSettings) {
         this.HostNameSettings = HostNameSettings;
     }
 
     /**
-     * Get 云服务器实例名（InstanceName）的相关设置。 
-     * @return InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+     * Get <p>云服务器实例名（InstanceName）的相关设置。</p> 
+     * @return InstanceNameSettings <p>云服务器实例名（InstanceName）的相关设置。</p>
      */
     public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
     }
 
     /**
-     * Set 云服务器实例名（InstanceName）的相关设置。
-     * @param InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+     * Set <p>云服务器实例名（InstanceName）的相关设置。</p>
+     * @param InstanceNameSettings <p>云服务器实例名（InstanceName）的相关设置。</p>
      */
     public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
     /**
-     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
-     * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Get <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p> 
+     * @return InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Set <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param InstanceChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li> 
-     * @return DiskTypePolicy 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
+     * Get <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p> 
+     * @return DiskTypePolicy <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
      */
     public String getDiskTypePolicy() {
         return this.DiskTypePolicy;
     }
 
     /**
-     * Set 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
-     * @param DiskTypePolicy 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
+     * Set <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
+     * @param DiskTypePolicy <p>云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li></p>
      */
     public void setDiskTypePolicy(String DiskTypePolicy) {
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
     /**
-     * Get 高性能计算集群ID。<br>
-注意：此字段默认为空。 
-     * @return HpcClusterId 高性能计算集群ID。<br>
-注意：此字段默认为空。
+     * Get <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p> 
+     * @return HpcClusterId <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 高性能计算集群ID。<br>
-注意：此字段默认为空。
-     * @param HpcClusterId 高性能计算集群ID。<br>
-注意：此字段默认为空。
+     * Set <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
+     * @param HpcClusterId <p>高性能计算集群ID。<br><br>注意：此字段默认为空。</p>
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
     }
 
     /**
-     * Get IPv6公网带宽相关信息设置。 
-     * @return IPv6InternetAccessible IPv6公网带宽相关信息设置。
+     * Get <p>IPv6公网带宽相关信息设置。</p> 
+     * @return IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。</p>
      */
     public IPv6InternetAccessible getIPv6InternetAccessible() {
         return this.IPv6InternetAccessible;
     }
 
     /**
-     * Set IPv6公网带宽相关信息设置。
-     * @param IPv6InternetAccessible IPv6公网带宽相关信息设置。
+     * Set <p>IPv6公网带宽相关信息设置。</p>
+     * @param IPv6InternetAccessible <p>IPv6公网带宽相关信息设置。</p>
      */
     public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
         this.IPv6InternetAccessible = IPv6InternetAccessible;
     }
 
     /**
-     * Get 置放群组id，仅支持指定一个。 
-     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * Get <p>置放群组id，仅支持指定一个。</p> 
+     * @return DisasterRecoverGroupIds <p>置放群组id，仅支持指定一个。</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 置放群组id，仅支持指定一个。
-     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * Set <p>置放群组id，仅支持指定一个。</p>
+     * @param DisasterRecoverGroupIds <p>置放群组id，仅支持指定一个。</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get 镜像族名称。 
-     * @return ImageFamily 镜像族名称。
+     * Get <p>镜像族名称。</p> 
+     * @return ImageFamily <p>镜像族名称。</p>
      */
     public String getImageFamily() {
         return this.ImageFamily;
     }
 
     /**
-     * Set 镜像族名称。
-     * @param ImageFamily 镜像族名称。
+     * Set <p>镜像族名称。</p>
+     * @param ImageFamily <p>镜像族名称。</p>
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;
     }
 
     /**
-     * Get 本地专用集群 ID。 
-     * @return DedicatedClusterId 本地专用集群 ID。
+     * Get <p>本地专用集群 ID。</p> 
+     * @return DedicatedClusterId <p>本地专用集群 ID。</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 本地专用集群 ID。
-     * @param DedicatedClusterId 本地专用集群 ID。
+     * Set <p>本地专用集群 ID。</p>
+     * @param DedicatedClusterId <p>本地专用集群 ID。</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get <p>启动配置的弹性网卡配置。</p> 
+     * @return NetworkInterfaces <p>启动配置的弹性网卡配置。</p>
+     */
+    public NetworkInterface [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set <p>启动配置的弹性网卡配置。</p>
+     * @param NetworkInterfaces <p>启动配置的弹性网卡配置。</p>
+     */
+    public void setNetworkInterfaces(NetworkInterface [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
     }
 
     public LaunchConfiguration() {
@@ -945,6 +943,12 @@ public class LaunchConfiguration extends AbstractModel {
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterface[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterface(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -985,6 +989,7 @@ public class LaunchConfiguration extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

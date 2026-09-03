@@ -24,276 +24,302 @@ import java.util.HashMap;
 public class ModifyRemoteWriteTaskRequest extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 日志主题id
+    * <p>日志主题id</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 任务状态
-0 关闭 1 开启
+    * <p>任务状态<br>0 关闭 1 开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * RemoteWrite任务名称
+    * <p>RemoteWrite任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 1 内网 2外网
+    * <p>1 内网 2外网</p>
     */
     @SerializedName("NetType")
     @Expose
     private Long NetType;
 
     /**
-    * 私有网络id
+    * <p>私有网络id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 目标服务名称
+    * <p>目标服务名称</p>
     */
     @SerializedName("Target")
     @Expose
     private String Target;
 
     /**
-    * 目标地址
+    * <p>目标地址</p>
     */
     @SerializedName("RemoteWriteURL")
     @Expose
     private String RemoteWriteURL;
 
     /**
-    * 0: 无鉴权 1: basic_auth 2: token	
+    * <p>0: 无鉴权 1: basic_auth 2: token</p>
     */
     @SerializedName("AuthType")
     @Expose
     private Long AuthType;
 
     /**
-    * 鉴权信息
+    * <p>鉴权信息</p>
     */
     @SerializedName("AuthInfo")
     @Expose
     private RemoteWriteAuthInfo AuthInfo;
 
     /**
-    * 后端服务类型
--1 没有
-0 CVM
-1025 CLB
+    * <p>后端服务类型<br>-1 没有<br>0 CVM<br>1025 CLB</p>
     */
     @SerializedName("VirtualGatewayType")
     @Expose
     private Long VirtualGatewayType;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+    * <p>云时序数据库实例ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 日志主题id 
-     * @return TopicId 日志主题id
+     * Get <p>日志主题id</p> 
+     * @return TopicId <p>日志主题id</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题id
-     * @param TopicId 日志主题id
+     * Set <p>日志主题id</p>
+     * @param TopicId <p>日志主题id</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 任务状态
-0 关闭 1 开启 
-     * @return Enable 任务状态
-0 关闭 1 开启
+     * Get <p>任务状态<br>0 关闭 1 开启</p> 
+     * @return Enable <p>任务状态<br>0 关闭 1 开启</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 任务状态
-0 关闭 1 开启
-     * @param Enable 任务状态
-0 关闭 1 开启
+     * Set <p>任务状态<br>0 关闭 1 开启</p>
+     * @param Enable <p>任务状态<br>0 关闭 1 开启</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get RemoteWrite任务名称 
-     * @return Name RemoteWrite任务名称
+     * Get <p>RemoteWrite任务名称</p> 
+     * @return Name <p>RemoteWrite任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set RemoteWrite任务名称
-     * @param Name RemoteWrite任务名称
+     * Set <p>RemoteWrite任务名称</p>
+     * @param Name <p>RemoteWrite任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 1 内网 2外网 
-     * @return NetType 1 内网 2外网
+     * Get <p>1 内网 2外网</p> 
+     * @return NetType <p>1 内网 2外网</p>
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 1 内网 2外网
-     * @param NetType 1 内网 2外网
+     * Set <p>1 内网 2外网</p>
+     * @param NetType <p>1 内网 2外网</p>
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 私有网络id 
-     * @return VpcId 私有网络id
+     * Get <p>私有网络id</p> 
+     * @return VpcId <p>私有网络id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络id
-     * @param VpcId 私有网络id
+     * Set <p>私有网络id</p>
+     * @param VpcId <p>私有网络id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 目标服务名称 
-     * @return Target 目标服务名称
+     * Get <p>目标服务名称</p> 
+     * @return Target <p>目标服务名称</p>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 目标服务名称
-     * @param Target 目标服务名称
+     * Set <p>目标服务名称</p>
+     * @param Target <p>目标服务名称</p>
      */
     public void setTarget(String Target) {
         this.Target = Target;
     }
 
     /**
-     * Get 目标地址 
-     * @return RemoteWriteURL 目标地址
+     * Get <p>目标地址</p> 
+     * @return RemoteWriteURL <p>目标地址</p>
      */
     public String getRemoteWriteURL() {
         return this.RemoteWriteURL;
     }
 
     /**
-     * Set 目标地址
-     * @param RemoteWriteURL 目标地址
+     * Set <p>目标地址</p>
+     * @param RemoteWriteURL <p>目标地址</p>
      */
     public void setRemoteWriteURL(String RemoteWriteURL) {
         this.RemoteWriteURL = RemoteWriteURL;
     }
 
     /**
-     * Get 0: 无鉴权 1: basic_auth 2: token	 
-     * @return AuthType 0: 无鉴权 1: basic_auth 2: token	
+     * Get <p>0: 无鉴权 1: basic_auth 2: token</p> 
+     * @return AuthType <p>0: 无鉴权 1: basic_auth 2: token</p>
      */
     public Long getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 0: 无鉴权 1: basic_auth 2: token	
-     * @param AuthType 0: 无鉴权 1: basic_auth 2: token	
+     * Set <p>0: 无鉴权 1: basic_auth 2: token</p>
+     * @param AuthType <p>0: 无鉴权 1: basic_auth 2: token</p>
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get 鉴权信息 
-     * @return AuthInfo 鉴权信息
+     * Get <p>鉴权信息</p> 
+     * @return AuthInfo <p>鉴权信息</p>
      */
     public RemoteWriteAuthInfo getAuthInfo() {
         return this.AuthInfo;
     }
 
     /**
-     * Set 鉴权信息
-     * @param AuthInfo 鉴权信息
+     * Set <p>鉴权信息</p>
+     * @param AuthInfo <p>鉴权信息</p>
      */
     public void setAuthInfo(RemoteWriteAuthInfo AuthInfo) {
         this.AuthInfo = AuthInfo;
     }
 
     /**
-     * Get 后端服务类型
--1 没有
-0 CVM
-1025 CLB 
-     * @return VirtualGatewayType 后端服务类型
--1 没有
-0 CVM
-1025 CLB
+     * Get <p>后端服务类型<br>-1 没有<br>0 CVM<br>1025 CLB</p> 
+     * @return VirtualGatewayType <p>后端服务类型<br>-1 没有<br>0 CVM<br>1025 CLB</p>
      */
     public Long getVirtualGatewayType() {
         return this.VirtualGatewayType;
     }
 
     /**
-     * Set 后端服务类型
--1 没有
-0 CVM
-1025 CLB
-     * @param VirtualGatewayType 后端服务类型
--1 没有
-0 CVM
-1025 CLB
+     * Set <p>后端服务类型<br>-1 没有<br>0 CVM<br>1025 CLB</p>
+     * @param VirtualGatewayType <p>后端服务类型<br>-1 没有<br>0 CVM<br>1025 CLB</p>
      */
     public void setVirtualGatewayType(Long VirtualGatewayType) {
         this.VirtualGatewayType = VirtualGatewayType;
+    }
+
+    /**
+     * Get <p>云时序数据库实例ID</p> 
+     * @return InstanceId <p>云时序数据库实例ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>云时序数据库实例ID</p>
+     * @param InstanceId <p>云时序数据库实例ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>是否开启投递服务日志。1：关闭，2：开启。</p> 
+     * @return HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     * @param HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
     }
 
     public ModifyRemoteWriteTaskRequest() {
@@ -337,6 +363,12 @@ public class ModifyRemoteWriteTaskRequest extends AbstractModel {
         if (source.VirtualGatewayType != null) {
             this.VirtualGatewayType = new Long(source.VirtualGatewayType);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
     }
 
 
@@ -355,6 +387,8 @@ public class ModifyRemoteWriteTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
         this.setParamSimple(map, prefix + "VirtualGatewayType", this.VirtualGatewayType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
 
     }
 }

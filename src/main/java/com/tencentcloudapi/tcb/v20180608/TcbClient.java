@@ -1114,6 +1114,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     }
 
     /**
+     *对 PG 独享实例变配
+     * @param req ModifyPGInstanceSpecRequest
+     * @return ModifyPGInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPGInstanceSpecResponse ModifyPGInstanceSpec(ModifyPGInstanceSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPGInstanceSpec", ModifyPGInstanceSpecResponse.class);
+    }
+
+    /**
      *修改身份认证源。更新指定云开发环境下已有身份认证源的配置信息，支持修改基本信息（名称、图标、描述）、协议连接配置（ClientId、ClientSecret、端点地址等）、登录行为控制（透传模式、自动注册、邮箱/手机号自动关联）以及启用状态。
 对于 OIDC 类型身份源，修改 Issuer 后将自动通过 OpenID Connect Discovery 重新获取端点配置。
 若自定义登录（CUSTOM）或邮箱登录（EMAIL）身份源尚不存在，调用该接口时将自动创建。

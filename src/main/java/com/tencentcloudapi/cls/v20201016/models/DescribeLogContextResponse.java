@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeLogContextResponse extends AbstractModel {
 
     /**
-    * 日志上下文信息集合
+    * <p>日志上下文信息集合</p>
     */
     @SerializedName("LogContextInfos")
     @Expose
     private LogContextInfo [] LogContextInfos;
 
     /**
-    * 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+    * <p>上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。</p>
     */
     @SerializedName("PrevOver")
     @Expose
     private Boolean PrevOver;
 
     /**
-    * 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
+    * <p>下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。</p>
     */
     @SerializedName("NextOver")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeLogContextResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志上下文信息集合 
-     * @return LogContextInfos 日志上下文信息集合
+     * Get <p>日志上下文信息集合</p> 
+     * @return LogContextInfos <p>日志上下文信息集合</p>
      */
     public LogContextInfo [] getLogContextInfos() {
         return this.LogContextInfos;
     }
 
     /**
-     * Set 日志上下文信息集合
-     * @param LogContextInfos 日志上下文信息集合
+     * Set <p>日志上下文信息集合</p>
+     * @param LogContextInfos <p>日志上下文信息集合</p>
      */
     public void setLogContextInfos(LogContextInfo [] LogContextInfos) {
         this.LogContextInfos = LogContextInfos;
     }
 
     /**
-     * Get 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。 
-     * @return PrevOver 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+     * Get <p>上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。</p> 
+     * @return PrevOver <p>上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。</p>
      */
     public Boolean getPrevOver() {
         return this.PrevOver;
     }
 
     /**
-     * Set 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
-     * @param PrevOver 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+     * Set <p>上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。</p>
+     * @param PrevOver <p>上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。</p>
      */
     public void setPrevOver(Boolean PrevOver) {
         this.PrevOver = PrevOver;
     }
 
     /**
-     * Get 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。 
-     * @return NextOver 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
+     * Get <p>下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。</p> 
+     * @return NextOver <p>下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。</p>
      */
     public Boolean getNextOver() {
         return this.NextOver;
     }
 
     /**
-     * Set 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
-     * @param NextOver 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
+     * Set <p>下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。</p>
+     * @param NextOver <p>下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。</p>
      */
     public void setNextOver(Boolean NextOver) {
         this.NextOver = NextOver;

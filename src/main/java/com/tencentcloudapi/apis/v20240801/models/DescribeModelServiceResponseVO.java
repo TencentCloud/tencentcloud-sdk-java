@@ -329,6 +329,22 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private TaskComplexityRouteDTO TaskComplexityRoute;
 
     /**
+    * <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestProtocolType")
+    @Expose
+    private String RequestProtocolType;
+
+    /**
      * Get <p>腾讯云AppID</p> 
      * @return AppID <p>腾讯云AppID</p>
      */
@@ -1056,6 +1072,46 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.TaskComplexityRoute = TaskComplexityRoute;
     }
 
+    /**
+     * Get <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain <p>访问域名</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestProtocolType() {
+        return this.RequestProtocolType;
+    }
+
+    /**
+     * Set <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestProtocolType(String RequestProtocolType) {
+        this.RequestProtocolType = RequestProtocolType;
+    }
+
     public DescribeModelServiceResponseVO() {
     }
 
@@ -1208,6 +1264,12 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         if (source.TaskComplexityRoute != null) {
             this.TaskComplexityRoute = new TaskComplexityRouteDTO(source.TaskComplexityRoute);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.RequestProtocolType != null) {
+            this.RequestProtocolType = new String(source.RequestProtocolType);
+        }
     }
 
 
@@ -1256,6 +1318,8 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteStrategy", this.RouteStrategy);
         this.setParamArrayObj(map, prefix + "TokenLengthRoute.", this.TokenLengthRoute);
         this.setParamObj(map, prefix + "TaskComplexityRoute.", this.TaskComplexityRoute);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
 
     }
 }

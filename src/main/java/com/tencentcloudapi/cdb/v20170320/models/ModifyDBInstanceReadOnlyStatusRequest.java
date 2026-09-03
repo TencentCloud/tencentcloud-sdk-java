@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDBInstanceReadOnlyStatusRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+    * <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
+    * <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-     * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Get <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p> 
+     * @return InstanceId <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Set <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
+     * @param InstanceId <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用<a href="https://cloud.tencent.com/document/api/236/15872">查询实例列表</a> 接口获取，其值为输出参数中字段 InstanceId 的值。此接口不支持设置云盘版实例为只读。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态 
-     * @return ReadOnly 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
+     * Get <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p> 
+     * @return ReadOnly <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
-     * @param ReadOnly 是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态
+     * Set <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
+     * @param ReadOnly <p>是否设置为只读。其中：1表示设置实例为只读，0表示解除只读状态</p>
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;

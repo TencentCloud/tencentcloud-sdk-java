@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeOutput extends AbstractModel {
 
     /**
-    * 输出Id。
+    * <p>输出Id。</p>
     */
     @SerializedName("OutputId")
     @Expose
     private String OutputId;
 
     /**
-    * 输出名称。
+    * <p>输出名称。</p>
     */
     @SerializedName("OutputName")
     @Expose
     private String OutputName;
 
     /**
-    * 输出类型。
+    * <p>输出类型。</p>
     */
     @SerializedName("OutputType")
     @Expose
     private String OutputType;
 
     /**
-    * 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+    * <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
     */
     @SerializedName("OutputKind")
     @Expose
     private String OutputKind;
 
     /**
-    * 输出描述。
+    * <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -60,21 +60,21 @@ public class DescribeOutput extends AbstractModel {
     private String Description;
 
     /**
-    * 输出协议。
+    * <p>输出协议。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 输出的出口地址信息列表。
+    * <p>输出的出口地址信息列表。</p>
     */
     @SerializedName("OutputAddressList")
     @Expose
     private OutputAddress [] OutputAddressList;
 
     /**
-    * 输出的地区。
+    * <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputRegion")
@@ -82,7 +82,7 @@ public class DescribeOutput extends AbstractModel {
     private String OutputRegion;
 
     /**
-    * 输出的SRT配置信息。
+    * <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SRTSettings")
@@ -90,7 +90,7 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputSRTSettings SRTSettings;
 
     /**
-    * 输出的RTP配置信息。
+    * <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTPSettings")
@@ -98,7 +98,7 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputRTPSettings RTPSettings;
 
     /**
-    * 输出的RTMP配置信息。
+    * <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTMPSettings")
@@ -106,7 +106,7 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputRTMPSettings RTMPSettings;
 
     /**
-    * 输出的RTMP拉流配置信息。
+    * <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTMPPullSettings")
@@ -114,8 +114,7 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+    * <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowIpList")
@@ -123,7 +122,7 @@ public class DescribeOutput extends AbstractModel {
     private String [] AllowIpList;
 
     /**
-    * 输出的RTSP拉流配置信息。
+    * <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTSPPullSettings")
@@ -131,7 +130,7 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 输出的HLS拉流配置信息。
+    * <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HLSPullSettings")
@@ -139,14 +138,14 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputHLSPullSettings HLSPullSettings;
 
     /**
-    * 最大拉流并发数，最大为4，默认4。
+    * <p>最大拉流并发数，最大为4，默认4。</p>
     */
     @SerializedName("MaxConcurrent")
     @Expose
     private Long MaxConcurrent;
 
     /**
-    * 绑定的安全组 ID。
+    * <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
@@ -154,14 +153,14 @@ public class DescribeOutput extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * 可用区，output目前最多只支持一个。	
+    * <p>可用区，output目前最多只支持一个。</p>
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * 输出的RIST配置信息。
+    * <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RISTSettings")
@@ -169,94 +168,101 @@ public class DescribeOutput extends AbstractModel {
     private DescribeOutputRISTSettings RISTSettings;
 
     /**
-    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+    * <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
     */
     @SerializedName("PidSelector")
     @Expose
     private PidSelector PidSelector;
 
     /**
-    * 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+    * <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
     */
     @SerializedName("StreamUrls")
     @Expose
     private StreamUrlDetail [] StreamUrls;
 
     /**
-    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+    * <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
     */
     @SerializedName("StreamSelector")
     @Expose
     private StreamSelector StreamSelector;
 
     /**
-     * Get 输出Id。 
-     * @return OutputId 输出Id。
+    * <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
+     * Get <p>输出Id。</p> 
+     * @return OutputId <p>输出Id。</p>
      */
     public String getOutputId() {
         return this.OutputId;
     }
 
     /**
-     * Set 输出Id。
-     * @param OutputId 输出Id。
+     * Set <p>输出Id。</p>
+     * @param OutputId <p>输出Id。</p>
      */
     public void setOutputId(String OutputId) {
         this.OutputId = OutputId;
     }
 
     /**
-     * Get 输出名称。 
-     * @return OutputName 输出名称。
+     * Get <p>输出名称。</p> 
+     * @return OutputName <p>输出名称。</p>
      */
     public String getOutputName() {
         return this.OutputName;
     }
 
     /**
-     * Set 输出名称。
-     * @param OutputName 输出名称。
+     * Set <p>输出名称。</p>
+     * @param OutputName <p>输出名称。</p>
      */
     public void setOutputName(String OutputName) {
         this.OutputName = OutputName;
     }
 
     /**
-     * Get 输出类型。 
-     * @return OutputType 输出类型。
+     * Get <p>输出类型。</p> 
+     * @return OutputType <p>输出类型。</p>
      */
     public String getOutputType() {
         return this.OutputType;
     }
 
     /**
-     * Set 输出类型。
-     * @param OutputType 输出类型。
+     * Set <p>输出类型。</p>
+     * @param OutputType <p>输出类型。</p>
      */
     public void setOutputType(String OutputType) {
         this.OutputType = OutputType;
     }
 
     /**
-     * Get 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。 
-     * @return OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     * Get <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p> 
+     * @return OutputKind <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
      */
     public String getOutputKind() {
         return this.OutputKind;
     }
 
     /**
-     * Set 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
-     * @param OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     * Set <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
+     * @param OutputKind <p>输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。</p>
      */
     public void setOutputKind(String OutputKind) {
         this.OutputKind = OutputKind;
     }
 
     /**
-     * Get 输出描述。
+     * Get <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 输出描述。
+     * @return Description <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -264,9 +270,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出描述。
+     * Set <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 输出描述。
+     * @param Description <p>输出描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -274,41 +280,41 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出协议。 
-     * @return Protocol 输出协议。
+     * Get <p>输出协议。</p> 
+     * @return Protocol <p>输出协议。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 输出协议。
-     * @param Protocol 输出协议。
+     * Set <p>输出协议。</p>
+     * @param Protocol <p>输出协议。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 输出的出口地址信息列表。 
-     * @return OutputAddressList 输出的出口地址信息列表。
+     * Get <p>输出的出口地址信息列表。</p> 
+     * @return OutputAddressList <p>输出的出口地址信息列表。</p>
      */
     public OutputAddress [] getOutputAddressList() {
         return this.OutputAddressList;
     }
 
     /**
-     * Set 输出的出口地址信息列表。
-     * @param OutputAddressList 输出的出口地址信息列表。
+     * Set <p>输出的出口地址信息列表。</p>
+     * @param OutputAddressList <p>输出的出口地址信息列表。</p>
      */
     public void setOutputAddressList(OutputAddress [] OutputAddressList) {
         this.OutputAddressList = OutputAddressList;
     }
 
     /**
-     * Get 输出的地区。
+     * Get <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputRegion 输出的地区。
+     * @return OutputRegion <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputRegion() {
@@ -316,9 +322,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的地区。
+     * Set <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputRegion 输出的地区。
+     * @param OutputRegion <p>输出的地区。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputRegion(String OutputRegion) {
@@ -326,9 +332,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出的SRT配置信息。
+     * Get <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SRTSettings 输出的SRT配置信息。
+     * @return SRTSettings <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputSRTSettings getSRTSettings() {
@@ -336,9 +342,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的SRT配置信息。
+     * Set <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SRTSettings 输出的SRT配置信息。
+     * @param SRTSettings <p>输出的SRT配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSRTSettings(DescribeOutputSRTSettings SRTSettings) {
@@ -346,9 +352,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出的RTP配置信息。
+     * Get <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTPSettings 输出的RTP配置信息。
+     * @return RTPSettings <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputRTPSettings getRTPSettings() {
@@ -356,9 +362,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的RTP配置信息。
+     * Set <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTPSettings 输出的RTP配置信息。
+     * @param RTPSettings <p>输出的RTP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTPSettings(DescribeOutputRTPSettings RTPSettings) {
@@ -366,9 +372,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出的RTMP配置信息。
+     * Get <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTMPSettings 输出的RTMP配置信息。
+     * @return RTMPSettings <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputRTMPSettings getRTMPSettings() {
@@ -376,9 +382,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的RTMP配置信息。
+     * Set <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTMPSettings 输出的RTMP配置信息。
+     * @param RTMPSettings <p>输出的RTMP配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTMPSettings(DescribeOutputRTMPSettings RTMPSettings) {
@@ -386,9 +392,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出的RTMP拉流配置信息。
+     * Get <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTMPPullSettings 输出的RTMP拉流配置信息。
+     * @return RTMPPullSettings <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputRTMPPullSettings getRTMPPullSettings() {
@@ -396,9 +402,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的RTMP拉流配置信息。
+     * Set <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTMPPullSettings 输出的RTMP拉流配置信息。
+     * @param RTMPPullSettings <p>输出的RTMP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTMPPullSettings(DescribeOutputRTMPPullSettings RTMPPullSettings) {
@@ -406,11 +412,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+     * Get <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowIpList CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+     * @return AllowIpList <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAllowIpList() {
@@ -418,11 +422,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+     * Set <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowIpList CIDR白名单列表。
-当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
+     * @param AllowIpList <p>CIDR白名单列表。<br>当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowIpList(String [] AllowIpList) {
@@ -430,9 +432,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出的RTSP拉流配置信息。
+     * Get <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RTSPPullSettings 输出的RTSP拉流配置信息。
+     * @return RTSPPullSettings <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputRTSPPullSettings getRTSPPullSettings() {
@@ -440,9 +442,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的RTSP拉流配置信息。
+     * Set <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RTSPPullSettings 输出的RTSP拉流配置信息。
+     * @param RTSPPullSettings <p>输出的RTSP拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTSPPullSettings(DescribeOutputRTSPPullSettings RTSPPullSettings) {
@@ -450,9 +452,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出的HLS拉流配置信息。
+     * Get <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HLSPullSettings 输出的HLS拉流配置信息。
+     * @return HLSPullSettings <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputHLSPullSettings getHLSPullSettings() {
@@ -460,9 +462,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的HLS拉流配置信息。
+     * Set <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HLSPullSettings 输出的HLS拉流配置信息。
+     * @param HLSPullSettings <p>输出的HLS拉流配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHLSPullSettings(DescribeOutputHLSPullSettings HLSPullSettings) {
@@ -470,25 +472,25 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 最大拉流并发数，最大为4，默认4。 
-     * @return MaxConcurrent 最大拉流并发数，最大为4，默认4。
+     * Get <p>最大拉流并发数，最大为4，默认4。</p> 
+     * @return MaxConcurrent <p>最大拉流并发数，最大为4，默认4。</p>
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set 最大拉流并发数，最大为4，默认4。
-     * @param MaxConcurrent 最大拉流并发数，最大为4，默认4。
+     * Set <p>最大拉流并发数，最大为4，默认4。</p>
+     * @param MaxConcurrent <p>最大拉流并发数，最大为4，默认4。</p>
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;
     }
 
     /**
-     * Get 绑定的安全组 ID。
+     * Get <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroupIds 绑定的安全组 ID。
+     * @return SecurityGroupIds <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
@@ -496,9 +498,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 绑定的安全组 ID。
+     * Set <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroupIds 绑定的安全组 ID。
+     * @param SecurityGroupIds <p>绑定的安全组 ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -506,25 +508,25 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 可用区，output目前最多只支持一个。	 
-     * @return Zones 可用区，output目前最多只支持一个。	
+     * Get <p>可用区，output目前最多只支持一个。</p> 
+     * @return Zones <p>可用区，output目前最多只支持一个。</p>
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 可用区，output目前最多只支持一个。	
-     * @param Zones 可用区，output目前最多只支持一个。	
+     * Set <p>可用区，output目前最多只支持一个。</p>
+     * @param Zones <p>可用区，output目前最多只支持一个。</p>
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get 输出的RIST配置信息。
+     * Get <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RISTSettings 输出的RIST配置信息。
+     * @return RISTSettings <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeOutputRISTSettings getRISTSettings() {
@@ -532,9 +534,9 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 输出的RIST配置信息。
+     * Set <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RISTSettings 输出的RIST配置信息。
+     * @param RISTSettings <p>输出的RIST配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRISTSettings(DescribeOutputRISTSettings RISTSettings) {
@@ -542,8 +544,8 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道 
-     * @return PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * Get <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p> 
+     * @return PidSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
      * @deprecated
      */
     @Deprecated
@@ -552,8 +554,8 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道
-     * @param PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * Set <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+     * @param PidSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
      * @deprecated
      */
     @Deprecated
@@ -562,35 +564,51 @@ public class DescribeOutput extends AbstractModel {
     }
 
     /**
-     * Get 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址 
-     * @return StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     * Get <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p> 
+     * @return StreamUrls <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
      */
     public StreamUrlDetail [] getStreamUrls() {
         return this.StreamUrls;
     }
 
     /**
-     * Set 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
-     * @param StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     * Set <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
+     * @param StreamUrls <p>输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址</p>
      */
     public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
         this.StreamUrls = StreamUrls;
     }
 
     /**
-     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道 
-     * @return StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * Get <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p> 
+     * @return StreamSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
      */
     public StreamSelector getStreamSelector() {
         return this.StreamSelector;
     }
 
     /**
-     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道
-     * @param StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * Set <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
+     * @param StreamSelector <p>对于含有多个音/视频轨的流，可以指定需要使用的轨道</p>
      */
     public void setStreamSelector(StreamSelector StreamSelector) {
         this.StreamSelector = StreamSelector;
+    }
+
+    /**
+     * Get <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul> 
+     * @return State <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+     * @param State <p>启用或者禁用输出</p><p>枚举值：</p><ul><li>DISABLED： 禁用</li><li>ENABLED： 启用</li></ul>
+     */
+    public void setState(String State) {
+        this.State = State;
     }
 
     public DescribeOutput() {
@@ -682,6 +700,9 @@ public class DescribeOutput extends AbstractModel {
         if (source.StreamSelector != null) {
             this.StreamSelector = new StreamSelector(source.StreamSelector);
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
     }
 
 
@@ -711,6 +732,7 @@ public class DescribeOutput extends AbstractModel {
         this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
         this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
         this.setParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

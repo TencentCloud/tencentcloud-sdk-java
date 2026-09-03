@@ -24,460 +24,460 @@ import java.util.HashMap;
 public class DescribeLocalAccountsData extends AbstractModel {
 
     /**
-    * uid，数据库中唯一
+    * <p>uid，数据库中唯一</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 账号，登录账号
+    * <p>账号，登录账号</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 账号id，同Id字段
+    * <p>账号id，同Id字段</p>
     */
     @SerializedName("AccountId")
     @Expose
     private Long AccountId;
 
     /**
-    * 账号所在的分组id
+    * <p>账号所在的分组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 账号所在的分组名称
+    * <p>账号所在的分组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 账号所在的分组名称路径，用英文.分割
+    * <p>账号所在的分组名称路径，用英文.分割</p>
     */
     @SerializedName("NamePath")
     @Expose
     private String NamePath;
 
     /**
-    * 账号来源,0表示本地账号(只支持32位)
+    * <p>账号来源,0表示本地账号(只支持32位)</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 账号状态,0禁用，1启用(只支持32位)
+    * <p>账号状态,0禁用，1启用(只支持32位)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 账号的创建时间
+    * <p>账号的创建时间</p>
     */
     @SerializedName("Itime")
     @Expose
     private String Itime;
 
     /**
-    * 账号的最后更新时间
+    * <p>账号的最后更新时间</p>
     */
     @SerializedName("Utime")
     @Expose
     private String Utime;
 
     /**
-    * 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
+    * <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
     private String ExtraInfo;
 
     /**
-    * 用户风险等级，枚举：none, low, middle, high
+    * <p>用户风险等级，枚举：none, low, middle, high</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 所属组
+    * <p>所属组</p>
     */
     @SerializedName("AccountGroups")
     @Expose
     private DescribeLocalAccountAccountGroupsData [] AccountGroups;
 
     /**
-    * 绑定手机端设备数
+    * <p>绑定手机端设备数</p>
     */
     @SerializedName("MobileBindNum")
     @Expose
     private Long MobileBindNum;
 
     /**
-    * 绑定Pc端设备数
+    * <p>绑定Pc端设备数</p>
     */
     @SerializedName("PcBindNum")
     @Expose
     private Long PcBindNum;
 
     /**
-    * 账号在线状态 1：在线 2：离线
+    * <p>账号在线状态 1：在线 2：离线</p>
     */
     @SerializedName("OnlineStatus")
     @Expose
     private Long OnlineStatus;
 
     /**
-    * 账号活跃状态 1：活跃 2：非活跃
+    * <p>账号活跃状态 1：活跃 2：非活跃</p>
     */
     @SerializedName("ActiveStatus")
     @Expose
     private Long ActiveStatus;
 
     /**
-    * 账号登录时间
+    * <p>账号登录时间</p>
     */
     @SerializedName("LoginTime")
     @Expose
     private String LoginTime;
 
     /**
-    * 账号登出时间
+    * <p>账号登出时间</p>
     */
     @SerializedName("LogoutTime")
     @Expose
     private String LogoutTime;
 
     /**
-     * Get uid，数据库中唯一 
-     * @return Id uid，数据库中唯一
+     * Get <p>uid，数据库中唯一</p> 
+     * @return Id <p>uid，数据库中唯一</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set uid，数据库中唯一
-     * @param Id uid，数据库中唯一
+     * Set <p>uid，数据库中唯一</p>
+     * @param Id <p>uid，数据库中唯一</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 账号，登录账号 
-     * @return UserId 账号，登录账号
+     * Get <p>账号，登录账号</p> 
+     * @return UserId <p>账号，登录账号</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 账号，登录账号
-     * @param UserId 账号，登录账号
+     * Set <p>账号，登录账号</p>
+     * @param UserId <p>账号，登录账号</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 账号id，同Id字段 
-     * @return AccountId 账号id，同Id字段
+     * Get <p>账号id，同Id字段</p> 
+     * @return AccountId <p>账号id，同Id字段</p>
      */
     public Long getAccountId() {
         return this.AccountId;
     }
 
     /**
-     * Set 账号id，同Id字段
-     * @param AccountId 账号id，同Id字段
+     * Set <p>账号id，同Id字段</p>
+     * @param AccountId <p>账号id，同Id字段</p>
      */
     public void setAccountId(Long AccountId) {
         this.AccountId = AccountId;
     }
 
     /**
-     * Get 账号所在的分组id 
-     * @return GroupId 账号所在的分组id
+     * Get <p>账号所在的分组id</p> 
+     * @return GroupId <p>账号所在的分组id</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 账号所在的分组id
-     * @param GroupId 账号所在的分组id
+     * Set <p>账号所在的分组id</p>
+     * @param GroupId <p>账号所在的分组id</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 账号所在的分组名称 
-     * @return GroupName 账号所在的分组名称
+     * Get <p>账号所在的分组名称</p> 
+     * @return GroupName <p>账号所在的分组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 账号所在的分组名称
-     * @param GroupName 账号所在的分组名称
+     * Set <p>账号所在的分组名称</p>
+     * @param GroupName <p>账号所在的分组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 账号所在的分组名称路径，用英文.分割 
-     * @return NamePath 账号所在的分组名称路径，用英文.分割
+     * Get <p>账号所在的分组名称路径，用英文.分割</p> 
+     * @return NamePath <p>账号所在的分组名称路径，用英文.分割</p>
      */
     public String getNamePath() {
         return this.NamePath;
     }
 
     /**
-     * Set 账号所在的分组名称路径，用英文.分割
-     * @param NamePath 账号所在的分组名称路径，用英文.分割
+     * Set <p>账号所在的分组名称路径，用英文.分割</p>
+     * @param NamePath <p>账号所在的分组名称路径，用英文.分割</p>
      */
     public void setNamePath(String NamePath) {
         this.NamePath = NamePath;
     }
 
     /**
-     * Get 账号来源,0表示本地账号(只支持32位) 
-     * @return Source 账号来源,0表示本地账号(只支持32位)
+     * Get <p>账号来源,0表示本地账号(只支持32位)</p> 
+     * @return Source <p>账号来源,0表示本地账号(只支持32位)</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 账号来源,0表示本地账号(只支持32位)
-     * @param Source 账号来源,0表示本地账号(只支持32位)
+     * Set <p>账号来源,0表示本地账号(只支持32位)</p>
+     * @param Source <p>账号来源,0表示本地账号(只支持32位)</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 账号状态,0禁用，1启用(只支持32位) 
-     * @return Status 账号状态,0禁用，1启用(只支持32位)
+     * Get <p>账号状态,0禁用，1启用(只支持32位)</p> 
+     * @return Status <p>账号状态,0禁用，1启用(只支持32位)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 账号状态,0禁用，1启用(只支持32位)
-     * @param Status 账号状态,0禁用，1启用(只支持32位)
+     * Set <p>账号状态,0禁用，1启用(只支持32位)</p>
+     * @param Status <p>账号状态,0禁用，1启用(只支持32位)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 账号的创建时间 
-     * @return Itime 账号的创建时间
+     * Get <p>账号的创建时间</p> 
+     * @return Itime <p>账号的创建时间</p>
      */
     public String getItime() {
         return this.Itime;
     }
 
     /**
-     * Set 账号的创建时间
-     * @param Itime 账号的创建时间
+     * Set <p>账号的创建时间</p>
+     * @param Itime <p>账号的创建时间</p>
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 账号的最后更新时间 
-     * @return Utime 账号的最后更新时间
+     * Get <p>账号的最后更新时间</p> 
+     * @return Utime <p>账号的最后更新时间</p>
      */
     public String getUtime() {
         return this.Utime;
     }
 
     /**
-     * Set 账号的最后更新时间
-     * @param Utime 账号的最后更新时间
+     * Set <p>账号的最后更新时间</p>
+     * @param Utime <p>账号的最后更新时间</p>
      */
     public void setUtime(String Utime) {
         this.Utime = Utime;
     }
 
     /**
-     * Get 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息 
-     * @return ExtraInfo 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
+     * Get <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p> 
+     * @return ExtraInfo <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
-     * @param ExtraInfo 账号的扩展信息，包含邮箱、手机号、身份证、职位等信息
+     * Set <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
+     * @param ExtraInfo <p>账号的扩展信息，包含邮箱、手机号、身份证、职位等信息</p>
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 用户风险等级，枚举：none, low, middle, high 
-     * @return RiskLevel 用户风险等级，枚举：none, low, middle, high
+     * Get <p>用户风险等级，枚举：none, low, middle, high</p> 
+     * @return RiskLevel <p>用户风险等级，枚举：none, low, middle, high</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 用户风险等级，枚举：none, low, middle, high
-     * @param RiskLevel 用户风险等级，枚举：none, low, middle, high
+     * Set <p>用户风险等级，枚举：none, low, middle, high</p>
+     * @param RiskLevel <p>用户风险等级，枚举：none, low, middle, high</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 所属组 
-     * @return AccountGroups 所属组
+     * Get <p>所属组</p> 
+     * @return AccountGroups <p>所属组</p>
      */
     public DescribeLocalAccountAccountGroupsData [] getAccountGroups() {
         return this.AccountGroups;
     }
 
     /**
-     * Set 所属组
-     * @param AccountGroups 所属组
+     * Set <p>所属组</p>
+     * @param AccountGroups <p>所属组</p>
      */
     public void setAccountGroups(DescribeLocalAccountAccountGroupsData [] AccountGroups) {
         this.AccountGroups = AccountGroups;
     }
 
     /**
-     * Get 绑定手机端设备数 
-     * @return MobileBindNum 绑定手机端设备数
+     * Get <p>绑定手机端设备数</p> 
+     * @return MobileBindNum <p>绑定手机端设备数</p>
      */
     public Long getMobileBindNum() {
         return this.MobileBindNum;
     }
 
     /**
-     * Set 绑定手机端设备数
-     * @param MobileBindNum 绑定手机端设备数
+     * Set <p>绑定手机端设备数</p>
+     * @param MobileBindNum <p>绑定手机端设备数</p>
      */
     public void setMobileBindNum(Long MobileBindNum) {
         this.MobileBindNum = MobileBindNum;
     }
 
     /**
-     * Get 绑定Pc端设备数 
-     * @return PcBindNum 绑定Pc端设备数
+     * Get <p>绑定Pc端设备数</p> 
+     * @return PcBindNum <p>绑定Pc端设备数</p>
      */
     public Long getPcBindNum() {
         return this.PcBindNum;
     }
 
     /**
-     * Set 绑定Pc端设备数
-     * @param PcBindNum 绑定Pc端设备数
+     * Set <p>绑定Pc端设备数</p>
+     * @param PcBindNum <p>绑定Pc端设备数</p>
      */
     public void setPcBindNum(Long PcBindNum) {
         this.PcBindNum = PcBindNum;
     }
 
     /**
-     * Get 账号在线状态 1：在线 2：离线 
-     * @return OnlineStatus 账号在线状态 1：在线 2：离线
+     * Get <p>账号在线状态 1：在线 2：离线</p> 
+     * @return OnlineStatus <p>账号在线状态 1：在线 2：离线</p>
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set 账号在线状态 1：在线 2：离线
-     * @param OnlineStatus 账号在线状态 1：在线 2：离线
+     * Set <p>账号在线状态 1：在线 2：离线</p>
+     * @param OnlineStatus <p>账号在线状态 1：在线 2：离线</p>
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get 账号活跃状态 1：活跃 2：非活跃 
-     * @return ActiveStatus 账号活跃状态 1：活跃 2：非活跃
+     * Get <p>账号活跃状态 1：活跃 2：非活跃</p> 
+     * @return ActiveStatus <p>账号活跃状态 1：活跃 2：非活跃</p>
      */
     public Long getActiveStatus() {
         return this.ActiveStatus;
     }
 
     /**
-     * Set 账号活跃状态 1：活跃 2：非活跃
-     * @param ActiveStatus 账号活跃状态 1：活跃 2：非活跃
+     * Set <p>账号活跃状态 1：活跃 2：非活跃</p>
+     * @param ActiveStatus <p>账号活跃状态 1：活跃 2：非活跃</p>
      */
     public void setActiveStatus(Long ActiveStatus) {
         this.ActiveStatus = ActiveStatus;
     }
 
     /**
-     * Get 账号登录时间 
-     * @return LoginTime 账号登录时间
+     * Get <p>账号登录时间</p> 
+     * @return LoginTime <p>账号登录时间</p>
      */
     public String getLoginTime() {
         return this.LoginTime;
     }
 
     /**
-     * Set 账号登录时间
-     * @param LoginTime 账号登录时间
+     * Set <p>账号登录时间</p>
+     * @param LoginTime <p>账号登录时间</p>
      */
     public void setLoginTime(String LoginTime) {
         this.LoginTime = LoginTime;
     }
 
     /**
-     * Get 账号登出时间 
-     * @return LogoutTime 账号登出时间
+     * Get <p>账号登出时间</p> 
+     * @return LogoutTime <p>账号登出时间</p>
      */
     public String getLogoutTime() {
         return this.LogoutTime;
     }
 
     /**
-     * Set 账号登出时间
-     * @param LogoutTime 账号登出时间
+     * Set <p>账号登出时间</p>
+     * @param LogoutTime <p>账号登出时间</p>
      */
     public void setLogoutTime(String LogoutTime) {
         this.LogoutTime = LogoutTime;

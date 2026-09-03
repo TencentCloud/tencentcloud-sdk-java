@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AggrSoftDeviceRow extends AbstractModel {
 
     /**
-    * 终端名
+    * <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
@@ -32,7 +32,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 最近登录账号
+    * <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastLoginAccount")
@@ -40,7 +40,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String LastLoginAccount;
 
     /**
-    * 终端用户名
+    * <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceUserName")
@@ -48,7 +48,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String DeviceUserName;
 
     /**
-    * 软件版本
+    * <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -56,7 +56,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String Version;
 
     /**
-    * 是否盗版
+    * <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PiracyRisk")
@@ -64,7 +64,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private Long PiracyRisk;
 
     /**
-    * 盗版原因
+    * <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PiracyReason")
@@ -72,7 +72,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String PiracyReason;
 
     /**
-    * 安装时间
+    * <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstallTime")
@@ -80,7 +80,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String InstallTime;
 
     /**
-    * 用户目录
+    * <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserPath")
@@ -88,7 +88,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String UserPath;
 
     /**
-    * 所在分组
+    * <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserGroup")
@@ -96,7 +96,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String UserGroup;
 
     /**
-    * IP
+    * <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
@@ -104,7 +104,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String IP;
 
     /**
-    * MAC
+    * <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MAC")
@@ -112,7 +112,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String MAC;
 
     /**
-    * 使用时长
+    * <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseTime")
@@ -120,7 +120,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private Long UseTime;
 
     /**
-    * 设备ID
+    * <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceId")
@@ -128,7 +128,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private Long DeviceId;
 
     /**
-    * 软件全名
+    * <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullSoftName")
@@ -136,7 +136,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String FullSoftName;
 
     /**
-    * 数据ID（唯一）
+    * <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -144,51 +144,51 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private Long Id;
 
     /**
-    * 该终端此款软件可升级到的目标版本号
+    * <p>该终端此款软件可升级到的目标版本号</p>
     */
     @SerializedName("NewVersion")
     @Expose
     private String NewVersion;
 
     /**
-    * 该软件对应运营配置的可升级id
+    * <p>该软件对应运营配置的可升级id</p>
     */
     @SerializedName("UpgradeSoftId")
     @Expose
     private Long UpgradeSoftId;
 
     /**
-    * 终端备注名
+    * <p>终端备注名</p>
     */
     @SerializedName("RemarkName")
     @Expose
     private String RemarkName;
 
     /**
-    * 软件id
+    * <p>软件id</p>
     */
     @SerializedName("SoftwareId")
     @Expose
     private Long SoftwareId;
 
     /**
-    * 0:win 2:mac
+    * <p>0:win 2:mac</p>
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 所有权
+    * <p>所有权</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-     * Get 终端名
+     * Get <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceName 终端名
+     * @return DeviceName <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
@@ -196,9 +196,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 终端名
+     * Set <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceName 终端名
+     * @param DeviceName <p>终端名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
@@ -206,9 +206,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 最近登录账号
+     * Get <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastLoginAccount 最近登录账号
+     * @return LastLoginAccount <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastLoginAccount() {
@@ -216,9 +216,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 最近登录账号
+     * Set <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastLoginAccount 最近登录账号
+     * @param LastLoginAccount <p>最近登录账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastLoginAccount(String LastLoginAccount) {
@@ -226,9 +226,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 终端用户名
+     * Get <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceUserName 终端用户名
+     * @return DeviceUserName <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceUserName() {
@@ -236,9 +236,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 终端用户名
+     * Set <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceUserName 终端用户名
+     * @param DeviceUserName <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceUserName(String DeviceUserName) {
@@ -246,9 +246,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 软件版本
+     * Get <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 软件版本
+     * @return Version <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -256,9 +256,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 软件版本
+     * Set <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 软件版本
+     * @param Version <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -266,9 +266,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 是否盗版
+     * Get <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PiracyRisk 是否盗版
+     * @return PiracyRisk <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPiracyRisk() {
@@ -276,9 +276,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 是否盗版
+     * Set <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PiracyRisk 是否盗版
+     * @param PiracyRisk <p>是否盗版</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPiracyRisk(Long PiracyRisk) {
@@ -286,9 +286,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 盗版原因
+     * Get <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PiracyReason 盗版原因
+     * @return PiracyReason <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPiracyReason() {
@@ -296,9 +296,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 盗版原因
+     * Set <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PiracyReason 盗版原因
+     * @param PiracyReason <p>盗版原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPiracyReason(String PiracyReason) {
@@ -306,9 +306,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 安装时间
+     * Get <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstallTime 安装时间
+     * @return InstallTime <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstallTime() {
@@ -316,9 +316,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 安装时间
+     * Set <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstallTime 安装时间
+     * @param InstallTime <p>安装时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstallTime(String InstallTime) {
@@ -326,9 +326,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 用户目录
+     * Get <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserPath 用户目录
+     * @return UserPath <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserPath() {
@@ -336,9 +336,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 用户目录
+     * Set <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserPath 用户目录
+     * @param UserPath <p>用户目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserPath(String UserPath) {
@@ -346,9 +346,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 所在分组
+     * Get <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserGroup 所在分组
+     * @return UserGroup <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserGroup() {
@@ -356,9 +356,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 所在分组
+     * Set <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserGroup 所在分组
+     * @param UserGroup <p>所在分组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserGroup(String UserGroup) {
@@ -366,9 +366,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get IP
+     * Get <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IP IP
+     * @return IP <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
@@ -376,9 +376,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set IP
+     * Set <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IP IP
+     * @param IP <p>IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
@@ -386,9 +386,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get MAC
+     * Get <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MAC MAC
+     * @return MAC <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMAC() {
@@ -396,9 +396,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set MAC
+     * Set <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MAC MAC
+     * @param MAC <p>MAC</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMAC(String MAC) {
@@ -406,9 +406,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 使用时长
+     * Get <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UseTime 使用时长
+     * @return UseTime <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUseTime() {
@@ -416,9 +416,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 使用时长
+     * Set <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UseTime 使用时长
+     * @param UseTime <p>使用时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseTime(Long UseTime) {
@@ -426,9 +426,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 设备ID
+     * Get <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceId 设备ID
+     * @return DeviceId <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceId() {
@@ -436,9 +436,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 设备ID
+     * Set <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceId 设备ID
+     * @param DeviceId <p>设备ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceId(Long DeviceId) {
@@ -446,9 +446,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 软件全名
+     * Get <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FullSoftName 软件全名
+     * @return FullSoftName <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullSoftName() {
@@ -456,9 +456,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 软件全名
+     * Set <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FullSoftName 软件全名
+     * @param FullSoftName <p>软件全名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullSoftName(String FullSoftName) {
@@ -466,9 +466,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 数据ID（唯一）
+     * Get <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 数据ID（唯一）
+     * @return Id <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -476,9 +476,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Set 数据ID（唯一）
+     * Set <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 数据ID（唯一）
+     * @param Id <p>数据ID（唯一）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -486,96 +486,96 @@ public class AggrSoftDeviceRow extends AbstractModel {
     }
 
     /**
-     * Get 该终端此款软件可升级到的目标版本号 
-     * @return NewVersion 该终端此款软件可升级到的目标版本号
+     * Get <p>该终端此款软件可升级到的目标版本号</p> 
+     * @return NewVersion <p>该终端此款软件可升级到的目标版本号</p>
      */
     public String getNewVersion() {
         return this.NewVersion;
     }
 
     /**
-     * Set 该终端此款软件可升级到的目标版本号
-     * @param NewVersion 该终端此款软件可升级到的目标版本号
+     * Set <p>该终端此款软件可升级到的目标版本号</p>
+     * @param NewVersion <p>该终端此款软件可升级到的目标版本号</p>
      */
     public void setNewVersion(String NewVersion) {
         this.NewVersion = NewVersion;
     }
 
     /**
-     * Get 该软件对应运营配置的可升级id 
-     * @return UpgradeSoftId 该软件对应运营配置的可升级id
+     * Get <p>该软件对应运营配置的可升级id</p> 
+     * @return UpgradeSoftId <p>该软件对应运营配置的可升级id</p>
      */
     public Long getUpgradeSoftId() {
         return this.UpgradeSoftId;
     }
 
     /**
-     * Set 该软件对应运营配置的可升级id
-     * @param UpgradeSoftId 该软件对应运营配置的可升级id
+     * Set <p>该软件对应运营配置的可升级id</p>
+     * @param UpgradeSoftId <p>该软件对应运营配置的可升级id</p>
      */
     public void setUpgradeSoftId(Long UpgradeSoftId) {
         this.UpgradeSoftId = UpgradeSoftId;
     }
 
     /**
-     * Get 终端备注名 
-     * @return RemarkName 终端备注名
+     * Get <p>终端备注名</p> 
+     * @return RemarkName <p>终端备注名</p>
      */
     public String getRemarkName() {
         return this.RemarkName;
     }
 
     /**
-     * Set 终端备注名
-     * @param RemarkName 终端备注名
+     * Set <p>终端备注名</p>
+     * @param RemarkName <p>终端备注名</p>
      */
     public void setRemarkName(String RemarkName) {
         this.RemarkName = RemarkName;
     }
 
     /**
-     * Get 软件id 
-     * @return SoftwareId 软件id
+     * Get <p>软件id</p> 
+     * @return SoftwareId <p>软件id</p>
      */
     public Long getSoftwareId() {
         return this.SoftwareId;
     }
 
     /**
-     * Set 软件id
-     * @param SoftwareId 软件id
+     * Set <p>软件id</p>
+     * @param SoftwareId <p>软件id</p>
      */
     public void setSoftwareId(Long SoftwareId) {
         this.SoftwareId = SoftwareId;
     }
 
     /**
-     * Get 0:win 2:mac 
-     * @return OsType 0:win 2:mac
+     * Get <p>0:win 2:mac</p> 
+     * @return OsType <p>0:win 2:mac</p>
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 0:win 2:mac
-     * @param OsType 0:win 2:mac
+     * Set <p>0:win 2:mac</p>
+     * @param OsType <p>0:win 2:mac</p>
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 所有权 
-     * @return AssetType 所有权
+     * Get <p>所有权</p> 
+     * @return AssetType <p>所有权</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 所有权
-     * @param AssetType 所有权
+     * Set <p>所有权</p>
+     * @param AssetType <p>所有权</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;

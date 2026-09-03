@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSoftCensusListByDeviceData extends AbstractModel {
 
     /**
-    * 终端用户名
+    * <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
@@ -32,7 +32,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String UserName;
 
     /**
-    * mac地址
+    * <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MacAddr")
@@ -40,7 +40,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String MacAddr;
 
     /**
-    * 终端计算机名称
+    * <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +48,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String Name;
 
     /**
-    * 终端组路径名
+    * <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupNamePath")
@@ -56,7 +56,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String GroupNamePath;
 
     /**
-    * IP地址
+    * <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
@@ -64,7 +64,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String Ip;
 
     /**
-    * 唯一标识Mid
+    * <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mid")
@@ -72,7 +72,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String Mid;
 
     /**
-    * 企业账户名
+    * <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IoaUserName")
@@ -80,7 +80,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String IoaUserName;
 
     /**
-    * 终端分组Id(只支持32位)
+    * <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -88,7 +88,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private Long GroupId;
 
     /**
-    * 终端组名
+    * <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -96,7 +96,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private String GroupName;
 
     /**
-    * 终端列表Id(只支持32位)
+    * <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -104,7 +104,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private Long Id;
 
     /**
-    * 软件数量(只支持32位)
+    * <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftNum")
@@ -112,7 +112,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private Long SoftNum;
 
     /**
-    * 盗版风险（1=风险;2=未知）
+    * <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PiracyRisk")
@@ -120,16 +120,16 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private Long PiracyRisk;
 
     /**
-    * 终端备注名
+    * <p>终端备注名</p>
     */
     @SerializedName("RemarkName")
     @Expose
     private String RemarkName;
 
     /**
-     * Get 终端用户名
+     * Get <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserName 终端用户名
+     * @return UserName <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
@@ -137,9 +137,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 终端用户名
+     * Set <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserName 终端用户名
+     * @param UserName <p>终端用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
@@ -147,9 +147,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get mac地址
+     * Get <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MacAddr mac地址
+     * @return MacAddr <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMacAddr() {
@@ -157,9 +157,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set mac地址
+     * Set <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MacAddr mac地址
+     * @param MacAddr <p>mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMacAddr(String MacAddr) {
@@ -167,9 +167,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 终端计算机名称
+     * Get <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 终端计算机名称
+     * @return Name <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -177,9 +177,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 终端计算机名称
+     * Set <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 终端计算机名称
+     * @param Name <p>终端计算机名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -187,9 +187,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 终端组路径名
+     * Get <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupNamePath 终端组路径名
+     * @return GroupNamePath <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupNamePath() {
@@ -197,9 +197,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 终端组路径名
+     * Set <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupNamePath 终端组路径名
+     * @param GroupNamePath <p>终端组路径名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupNamePath(String GroupNamePath) {
@@ -207,9 +207,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get IP地址
+     * Get <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ip IP地址
+     * @return Ip <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
@@ -217,9 +217,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set IP地址
+     * Set <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ip IP地址
+     * @param Ip <p>IP地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
@@ -227,9 +227,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 唯一标识Mid
+     * Get <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mid 唯一标识Mid
+     * @return Mid <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMid() {
@@ -237,9 +237,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 唯一标识Mid
+     * Set <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mid 唯一标识Mid
+     * @param Mid <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMid(String Mid) {
@@ -247,9 +247,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 企业账户名
+     * Get <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IoaUserName 企业账户名
+     * @return IoaUserName <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIoaUserName() {
@@ -257,9 +257,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 企业账户名
+     * Set <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IoaUserName 企业账户名
+     * @param IoaUserName <p>企业账户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIoaUserName(String IoaUserName) {
@@ -267,9 +267,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 终端分组Id(只支持32位)
+     * Get <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 终端分组Id(只支持32位)
+     * @return GroupId <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
@@ -277,9 +277,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 终端分组Id(只支持32位)
+     * Set <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 终端分组Id(只支持32位)
+     * @param GroupId <p>终端分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
@@ -287,9 +287,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 终端组名
+     * Get <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 终端组名
+     * @return GroupName <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -297,9 +297,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 终端组名
+     * Set <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 终端组名
+     * @param GroupName <p>终端组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
@@ -307,9 +307,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 终端列表Id(只支持32位)
+     * Get <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 终端列表Id(只支持32位)
+     * @return Id <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -317,9 +317,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 终端列表Id(只支持32位)
+     * Set <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 终端列表Id(只支持32位)
+     * @param Id <p>终端列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -327,9 +327,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 软件数量(只支持32位)
+     * Get <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SoftNum 软件数量(只支持32位)
+     * @return SoftNum <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSoftNum() {
@@ -337,9 +337,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 软件数量(只支持32位)
+     * Set <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SoftNum 软件数量(只支持32位)
+     * @param SoftNum <p>软件数量(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftNum(Long SoftNum) {
@@ -347,9 +347,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 盗版风险（1=风险;2=未知）
+     * Get <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PiracyRisk 盗版风险（1=风险;2=未知）
+     * @return PiracyRisk <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPiracyRisk() {
@@ -357,9 +357,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 盗版风险（1=风险;2=未知）
+     * Set <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PiracyRisk 盗版风险（1=风险;2=未知）
+     * @param PiracyRisk <p>盗版风险（1=风险;2=未知）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPiracyRisk(Long PiracyRisk) {
@@ -367,16 +367,16 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 终端备注名 
-     * @return RemarkName 终端备注名
+     * Get <p>终端备注名</p> 
+     * @return RemarkName <p>终端备注名</p>
      */
     public String getRemarkName() {
         return this.RemarkName;
     }
 
     /**
-     * Set 终端备注名
-     * @param RemarkName 终端备注名
+     * Set <p>终端备注名</p>
+     * @param RemarkName <p>终端备注名</p>
      */
     public void setRemarkName(String RemarkName) {
         this.RemarkName = RemarkName;

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class Element extends AbstractModel {
 
     /**
-    * 元素内容，当type为figure时该字段内容为图片的位置
+    * <p>元素内容，当type为figure时该字段内容为图片的位置</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 元素坐标
+    * <p>元素坐标</p>
     */
     @SerializedName("Coord")
     @Expose
     private Polygon Coord;
 
     /**
-    * 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
+    * <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * 结果列表
+    * <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultList")
@@ -53,64 +53,71 @@ public class Element extends AbstractModel {
     private ResultList [] ResultList;
 
     /**
-    * 元素索引
+    * <p>元素索引</p>
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get 元素内容，当type为figure时该字段内容为图片的位置 
-     * @return Text 元素内容，当type为figure时该字段内容为图片的位置
+    * <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
+
+    /**
+     * Get <p>元素内容，当type为figure时该字段内容为图片的位置</p> 
+     * @return Text <p>元素内容，当type为figure时该字段内容为图片的位置</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 元素内容，当type为figure时该字段内容为图片的位置
-     * @param Text 元素内容，当type为figure时该字段内容为图片的位置
+     * Set <p>元素内容，当type为figure时该字段内容为图片的位置</p>
+     * @param Text <p>元素内容，当type为figure时该字段内容为图片的位置</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 元素坐标 
-     * @return Coord 元素坐标
+     * Get <p>元素坐标</p> 
+     * @return Coord <p>元素坐标</p>
      */
     public Polygon getCoord() {
         return this.Coord;
     }
 
     /**
-     * Set 元素坐标
-     * @param Coord 元素坐标
+     * Set <p>元素坐标</p>
+     * @param Coord <p>元素坐标</p>
      */
     public void setCoord(Polygon Coord) {
         this.Coord = Coord;
     }
 
     /**
-     * Get 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题) 
-     * @return GroupType 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
+     * Get <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p> 
+     * @return GroupType <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
-     * @param GroupType 元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)
+     * Set <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
+     * @param GroupType <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get 结果列表
+     * Get <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultList 结果列表
+     * @return ResultList <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResultList [] getResultList() {
@@ -118,9 +125,9 @@ public class Element extends AbstractModel {
     }
 
     /**
-     * Set 结果列表
+     * Set <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultList 结果列表
+     * @param ResultList <p>结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultList(ResultList [] ResultList) {
@@ -128,19 +135,35 @@ public class Element extends AbstractModel {
     }
 
     /**
-     * Get 元素索引 
-     * @return Index 元素索引
+     * Get <p>元素索引</p> 
+     * @return Index <p>元素索引</p>
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 元素索引
-     * @param Index 元素索引
+     * Set <p>元素索引</p>
+     * @param Index <p>元素索引</p>
      */
     public void setIndex(Long Index) {
         this.Index = Index;
+    }
+
+    /**
+     * Get <p>元素所在页</p><p>单位：页</p><p>默认值：1</p> 
+     * @return PageIndex <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+     * @param PageIndex <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
     }
 
     public Element() {
@@ -169,6 +192,9 @@ public class Element extends AbstractModel {
         if (source.Index != null) {
             this.Index = new Long(source.Index);
         }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class Element extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamArrayObj(map, prefix + "ResultList.", this.ResultList);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
 
     }
 }

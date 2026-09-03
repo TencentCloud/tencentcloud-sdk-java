@@ -50,6 +50,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *为已有推理服务新增部署
+     * @param req AddDeploymentRequest
+     * @return AddDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddDeploymentResponse AddDeployment(AddDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddDeployment", AddDeploymentResponse.class);
+    }
+
+    /**
      *添加数据优化资源
      * @param req AddOptimizerEnginesRequest
      * @return AddOptimizerEnginesResponse
@@ -171,6 +182,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *绑定 API Key 到推理服务
+     * @param req BindApiKeyRequest
+     * @return BindApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindApiKeyResponse BindApiKey(BindApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindApiKey", BindApiKeyResponse.class);
+    }
+
+    /**
      *绑定工作组到用户
      * @param req BindWorkGroupsToUserRequest
      * @return BindWorkGroupsToUserResponse
@@ -248,6 +270,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *暂停（取消）实例
+     * @param req CancelTrainingJobInstanceRequest
+     * @return CancelTrainingJobInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelTrainingJobInstanceResponse CancelTrainingJobInstance(CancelTrainingJobInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelTrainingJobInstance", CancelTrainingJobInstanceResponse.class);
+    }
+
+    /**
+     *检查 API Key 名称是否重复
+     * @param req CheckApiKeyNameRequest
+     * @return CheckApiKeyNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckApiKeyNameResponse CheckApiKeyName(CheckApiKeyNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckApiKeyName", CheckApiKeyNameResponse.class);
+    }
+
+    /**
      *本接口（CheckDataEngineConfigPairsValidity）用于检查引擎用户自定义参数的有效性
      * @param req CheckDataEngineConfigPairsValidityRequest
      * @return CheckDataEngineConfigPairsValidityResponse
@@ -281,6 +325,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *训练作业配置与普通 RayJob 配置共用 job_spec 表及 (appId, name) 唯一命名空间，重名检查统一挂在本接口，供两类前端表单复用
+     * @param req CheckJobSpecNameRequest
+     * @return CheckJobSpecNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckJobSpecNameResponse CheckJobSpecName(CheckJobSpecNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckJobSpecName", CheckJobSpecNameResponse.class);
+    }
+
+    /**
      *元数据锁检查
      * @param req CheckLockMetaDataRequest
      * @return CheckLockMetaDataResponse
@@ -289,6 +344,17 @@ public class DlcClient extends AbstractClient{
     public CheckLockMetaDataResponse CheckLockMetaData(CheckLockMetaDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckLockMetaData", CheckLockMetaDataResponse.class);
+    }
+
+    /**
+     *检查模型标识符是否重复
+     * @param req CheckModelIdentifierRequest
+     * @return CheckModelIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckModelIdentifierResponse CheckModelIdentifier(CheckModelIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckModelIdentifier", CheckModelIdentifierResponse.class);
     }
 
     /**
@@ -325,6 +391,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *检查推理服务名称是否重复
+     * @param req CheckServiceNameRequest
+     * @return CheckServiceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckServiceNameResponse CheckServiceName(CheckServiceNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckServiceName", CheckServiceNameResponse.class);
+    }
+
+    /**
      *复制一份已有的作业配置
      * @param req CopyJobSpecRequest
      * @return CopyJobSpecResponse
@@ -333,6 +410,28 @@ public class DlcClient extends AbstractClient{
     public CopyJobSpecResponse CopyJobSpec(CopyJobSpecRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CopyJobSpec", CopyJobSpecResponse.class);
+    }
+
+    /**
+     *创建 API Key
+     * @param req CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
+    }
+
+    /**
+     *创建性能评测任务
+     * @param req CreateBenchmarkTaskRequest
+     * @return CreateBenchmarkTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBenchmarkTaskResponse CreateBenchmarkTask(CreateBenchmarkTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBenchmarkTask", CreateBenchmarkTaskResponse.class);
     }
 
     /**
@@ -509,6 +608,17 @@ public class DlcClient extends AbstractClient{
     public CreateMetaDatabaseResponse CreateMetaDatabase(CreateMetaDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMetaDatabase", CreateMetaDatabaseResponse.class);
+    }
+
+    /**
+     *创建 MlFlow Server
+     * @param req CreateMlflowServerRequest
+     * @return CreateMlflowServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMlflowServerResponse CreateMlflowServer(CreateMlflowServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMlflowServer", CreateMlflowServerResponse.class);
     }
 
     /**
@@ -756,6 +866,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *基于配置创建实例并提交 RayJob
+     * @param req CreateTrainingJobInstanceRequest
+     * @return CreateTrainingJobInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrainingJobInstanceResponse CreateTrainingJobInstance(CreateTrainingJobInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrainingJobInstance", CreateTrainingJobInstanceResponse.class);
+    }
+
+    /**
      *创建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse
@@ -797,6 +918,28 @@ public class DlcClient extends AbstractClient{
     public CreateWorkGroupResponse CreateWorkGroup(CreateWorkGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWorkGroup", CreateWorkGroupResponse.class);
+    }
+
+    /**
+     *删除 API Key
+     * @param req DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
+    }
+
+    /**
+     *删除性能评测任务
+     * @param req DeleteBenchmarkTaskRequest
+     * @return DeleteBenchmarkTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBenchmarkTaskResponse DeleteBenchmarkTask(DeleteBenchmarkTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBenchmarkTask", DeleteBenchmarkTaskResponse.class);
     }
 
     /**
@@ -844,6 +987,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除指定部署
+     * @param req DeleteDeploymentRequest
+     * @return DeleteDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeploymentResponse DeleteDeployment(DeleteDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeployment", DeleteDeploymentResponse.class);
+    }
+
+    /**
+     *删除推理服务（含所有部署）
+     * @param req DeleteInferenceServiceRequest
+     * @return DeleteInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInferenceServiceResponse DeleteInferenceService(DeleteInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInferenceService", DeleteInferenceServiceResponse.class);
+    }
+
+    /**
      *根据配置ID删除作业配置
      * @param req DeleteJobSpecRequest
      * @return DeleteJobSpecResponse
@@ -874,6 +1039,39 @@ public class DlcClient extends AbstractClient{
     public DeleteMetaDatabaseResponse DeleteMetaDatabase(DeleteMetaDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMetaDatabase", DeleteMetaDatabaseResponse.class);
+    }
+
+    /**
+     *删除 MlFlow Server 请求
+     * @param req DeleteMlflowServerRequest
+     * @return DeleteMlflowServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMlflowServerResponse DeleteMlflowServer(DeleteMlflowServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMlflowServer", DeleteMlflowServerResponse.class);
+    }
+
+    /**
+     *删除模型及其所有版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+     * @param req DeleteModelRequest
+     * @return DeleteModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelResponse DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteModel", DeleteModelResponse.class);
+    }
+
+    /**
+     *删除模型版本（平台托管模型同时删除 COS 文件，用户自带桶仅删除元数据）
+     * @param req DeleteModelVersionRequest
+     * @return DeleteModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelVersionResponse DeleteModelVersion(DeleteModelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteModelVersion", DeleteModelVersionResponse.class);
     }
 
     /**
@@ -998,6 +1196,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除训练作业实例（软删除本地元数据，仅终态实例可删除）
+     * @param req DeleteTrainingJobInstanceRequest
+     * @return DeleteTrainingJobInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrainingJobInstanceResponse DeleteTrainingJobInstance(DeleteTrainingJobInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrainingJobInstance", DeleteTrainingJobInstanceResponse.class);
+    }
+
+    /**
+     *删除训练作业配置
+     * @param req DeleteTrainingJobSpecRequest
+     * @return DeleteTrainingJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrainingJobSpecResponse DeleteTrainingJobSpec(DeleteTrainingJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrainingJobSpec", DeleteTrainingJobSpecResponse.class);
+    }
+
+    /**
      *删除用户
      * @param req DeleteUserRequest
      * @return DeleteUserResponse
@@ -1050,6 +1270,39 @@ public class DlcClient extends AbstractClient{
     public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(DescribeAdvancedStoreLocationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdvancedStoreLocation", DescribeAdvancedStoreLocationResponse.class);
+    }
+
+    /**
+     *查询 TKE 集群可绑定的托管 Prometheus 实例列表。若 TKE 已绑定，返回 Bound=true 与 BoundInstance；若未绑定，返回 Bound=false 与候选列表 Instances（同 VPC 实例前置）。
+     * @param req DescribeBindablePrometheusRequest
+     * @return DescribeBindablePrometheusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBindablePrometheusResponse DescribeBindablePrometheus(DescribeBindablePrometheusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBindablePrometheus", DescribeBindablePrometheusResponse.class);
+    }
+
+    /**
+     *查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
+     * @param req DescribeClsTopicsRequest
+     * @return DescribeClsTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClsTopicsResponse DescribeClsTopics(DescribeClsTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClsTopics", DescribeClsTopicsResponse.class);
+    }
+
+    /**
+     *查询指定 TKE 集群是否开启了事件日志。已开启时同时返回关联的 CLS 日志集 ID、日志主题 ID 与主题所在地域。
+     * @param req DescribeClusterEventLogSwitchRequest
+     * @return DescribeClusterEventLogSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterEventLogSwitchResponse DescribeClusterEventLogSwitch(DescribeClusterEventLogSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterEventLogSwitch", DescribeClusterEventLogSwitchResponse.class);
     }
 
     /**
@@ -1262,6 +1515,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *按 EMR 集群 ID 精确查询单个 EMR 集群的详细信息，包含 VPC、COS Bucket、关联 TKE 集群 ID、资源用量等。
+     * @param req DescribeEmrClusterInfoRequest
+     * @return DescribeEmrClusterInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEmrClusterInfoResponse DescribeEmrClusterInfo(DescribeEmrClusterInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEmrClusterInfo", DescribeEmrClusterInfoResponse.class);
+    }
+
+    /**
      *查询引擎网络信息
      * @param req DescribeEngineNetworksRequest
      * @return DescribeEngineNetworksResponse
@@ -1394,6 +1658,75 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询训练实例的 MLflow 接入配置。 
+MlFlowMode 表示接入的 mlflow 模式，支持 local=Sidecar / remote=已有 Server / none=不启用。云上默认为 remote。
+MlFlowUrl 表示访问的 MLflow URL。
+RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
+     * @param req DescribeMlFlowConfigRequest
+     * @return DescribeMlFlowConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMlFlowConfigResponse DescribeMlFlowConfig(DescribeMlFlowConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMlFlowConfig", DescribeMlFlowConfigResponse.class);
+    }
+
+    /**
+     *查询 MlFlow Server 状态
+     * @param req DescribeMlflowServerRequest
+     * @return DescribeMlflowServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMlflowServerResponse DescribeMlflowServer(DescribeMlflowServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMlflowServer", DescribeMlflowServerResponse.class);
+    }
+
+    /**
+     *查询 MlFlow Server K8s 事件
+     * @param req DescribeMlflowServerEventsRequest
+     * @return DescribeMlflowServerEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMlflowServerEventsResponse DescribeMlflowServerEvents(DescribeMlflowServerEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMlflowServerEvents", DescribeMlflowServerEventsResponse.class);
+    }
+
+    /**
+     *MlFlow Server Pod 列表响应
+     * @param req DescribeMlflowServerPodsRequest
+     * @return DescribeMlflowServerPodsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMlflowServerPodsResponse DescribeMlflowServerPods(DescribeMlflowServerPodsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMlflowServerPods", DescribeMlflowServerPodsResponse.class);
+    }
+
+    /**
+     *根据模型 UID 查询该模型可选的推理引擎列表。后端自动根据模型的 SupportedEngines 声明或 ModelType 进行引擎过滤
+     * @param req DescribeModelEnginesRequest
+     * @return DescribeModelEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelEnginesResponse DescribeModelEngines(DescribeModelEnginesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelEngines", DescribeModelEnginesResponse.class);
+    }
+
+    /**
+     *查询指定模型类型下可选的任务类型列表。
+     * @param req DescribeModelTaskOptionsRequest
+     * @return DescribeModelTaskOptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelTaskOptionsResponse DescribeModelTaskOptions(DescribeModelTaskOptionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelTaskOptions", DescribeModelTaskOptionsResponse.class);
+    }
+
+    /**
      *根据资源组获取spark session列表
      * @param req DescribeNativeSparkSessionsRequest
      * @return DescribeNativeSparkSessionsResponse
@@ -1523,6 +1856,28 @@ public class DlcClient extends AbstractClient{
     public DescribePartitionsResponse DescribePartitions(DescribePartitionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePartitions", DescribePartitionsResponse.class);
+    }
+
+    /**
+     *获取零代码后训练的推荐参数和资源规格配置
+     * @param req DescribePostTrainingPresetRequest
+     * @return DescribePostTrainingPresetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePostTrainingPresetResponse DescribePostTrainingPreset(DescribePostTrainingPresetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePostTrainingPreset", DescribePostTrainingPresetResponse.class);
+    }
+
+    /**
+     *获取推荐的高级参数
+     * @param req DescribeRecommendedParamsRequest
+     * @return DescribeRecommendedParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecommendedParamsResponse DescribeRecommendedParams(DescribeRecommendedParamsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecommendedParams", DescribeRecommendedParamsResponse.class);
     }
 
     /**
@@ -1875,6 +2230,50 @@ public class DlcClient extends AbstractClient{
     public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(DescribeThirdPartyAccessUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeThirdPartyAccessUser", DescribeThirdPartyAccessUserResponse.class);
+    }
+
+    /**
+     *按 EMR 集群 ID 查询已导入的 TKE 集群详情，返回 tke_cluster 表中该条导入记录的核心字段，并对 LoadBalancerId / PrometheusInstanceId / ContainerLogTopicId 三个 ID 分别回查腾讯云 API 获取对应名称一并返回。名称查询失败或查不到时对应字段返回空字符串，不影响主接口返回。
+     * @param req DescribeTkeClusterImportInfoRequest
+     * @return DescribeTkeClusterImportInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTkeClusterImportInfoResponse DescribeTkeClusterImportInfo(DescribeTkeClusterImportInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTkeClusterImportInfo", DescribeTkeClusterImportInfoResponse.class);
+    }
+
+    /**
+     *列出训练实例 Checkpoint 文件列表的响应
+     * @param req DescribeTrainingCheckpointsRequest
+     * @return DescribeTrainingCheckpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrainingCheckpointsResponse DescribeTrainingCheckpoints(DescribeTrainingCheckpointsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrainingCheckpoints", DescribeTrainingCheckpointsResponse.class);
+    }
+
+    /**
+     *查询训练实例详情
+     * @param req DescribeTrainingJobInstanceRequest
+     * @return DescribeTrainingJobInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrainingJobInstanceResponse DescribeTrainingJobInstance(DescribeTrainingJobInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrainingJobInstance", DescribeTrainingJobInstanceResponse.class);
+    }
+
+    /**
+     *获取训练作业配置详情
+     * @param req DescribeTrainingJobSpecRequest
+     * @return DescribeTrainingJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrainingJobSpecResponse DescribeTrainingJobSpec(DescribeTrainingJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrainingJobSpec", DescribeTrainingJobSpecResponse.class);
     }
 
     /**
@@ -2417,6 +2816,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *通过 ClusterType 区分两种导入模式：TKE（直接导入裸 TKE 集群，ClusterId 为 TKE 集群 ID）或 EMR（通过 EMR 集群导入，ClusterId 为 EMR 集群 ID，底层会关联查询对应的 TKE 集群 ID 一并落库）。两种模式均将 TKE 集群 ID 存入 tke_cluster 表。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+     * @param req ImportExternalClusterRequest
+     * @return ImportExternalClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportExternalClusterResponse ImportExternalCluster(ImportExternalClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportExternalCluster", ImportExternalClusterResponse.class);
+    }
+
+    /**
+     *将用户在控制台选择的 EMR-TKE 集群及配套的 COS Bucket、Prometheus 实例、负载均衡、容器日志主题等资源，注册为 DLC 的外部资源池（EXTERNAL_TKE）。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
+     * @param req ImportTkeClusterRequest
+     * @return ImportTkeClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportTkeClusterResponse ImportTkeCluster(ImportTkeClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportTkeCluster", ImportTkeClusterResponse.class);
+    }
+
+    /**
      *开通TCLake
      * @param req InitializeTCLakeRequest
      * @return InitializeTCLakeResponse
@@ -2439,6 +2860,50 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *列出 API Key
+     * @param req ListApiKeysRequest
+     * @return ListApiKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListApiKeysResponse ListApiKeys(ListApiKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListApiKeys", ListApiKeysResponse.class);
+    }
+
+    /**
+     *列出空闲 API Key（未绑定服务）
+     * @param req ListAvailableApiKeysRequest
+     * @return ListAvailableApiKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAvailableApiKeysResponse ListAvailableApiKeys(ListAvailableApiKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAvailableApiKeys", ListAvailableApiKeysResponse.class);
+    }
+
+    /**
+     *查询评测排行榜（所有模型的评测汇总数据）
+     * @param req ListBenchmarkSummaryRequest
+     * @return ListBenchmarkSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListBenchmarkSummaryResponse ListBenchmarkSummary(ListBenchmarkSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListBenchmarkSummary", ListBenchmarkSummaryResponse.class);
+    }
+
+    /**
+     *列出性能评测任务
+     * @param req ListBenchmarkTasksRequest
+     * @return ListBenchmarkTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListBenchmarkTasksResponse ListBenchmarkTasks(ListBenchmarkTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListBenchmarkTasks", ListBenchmarkTasksResponse.class);
+    }
+
+    /**
      *列出所有集群组
      * @param req ListClusterGroupsRequest
      * @return ListClusterGroupsResponse
@@ -2447,6 +2912,28 @@ public class DlcClient extends AbstractClient{
     public ListClusterGroupsResponse ListClusterGroups(ListClusterGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListClusterGroups", ListClusterGroupsResponse.class);
+    }
+
+    /**
+     *列出部署的副本列表
+     * @param req ListDeploymentReplicasRequest
+     * @return ListDeploymentReplicasResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDeploymentReplicasResponse ListDeploymentReplicas(ListDeploymentReplicasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDeploymentReplicas", ListDeploymentReplicasResponse.class);
+    }
+
+    /**
+     *列出推理服务的部署列表
+     * @param req ListDeploymentsRequest
+     * @return ListDeploymentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDeploymentsResponse ListDeployments(ListDeploymentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDeployments", ListDeploymentsResponse.class);
     }
 
     /**
@@ -2571,6 +3058,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询 MlFlow Server 关联的训练实例列表
+     * @param req ListMlflowServerTrainingInstancesRequest
+     * @return ListMlflowServerTrainingInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListMlflowServerTrainingInstancesResponse ListMlflowServerTrainingInstances(ListMlflowServerTrainingInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListMlflowServerTrainingInstances", ListMlflowServerTrainingInstancesResponse.class);
+    }
+
+    /**
+     *列出 MlFlow Server
+     * @param req ListMlflowServersRequest
+     * @return ListMlflowServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListMlflowServersResponse ListMlflowServers(ListMlflowServersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListMlflowServers", ListMlflowServersResponse.class);
+    }
+
+    /**
      *列出模型所有版本
      * @param req ListModelVersionsRequest
      * @return ListModelVersionsResponse
@@ -2615,6 +3124,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *列出用户在指定地域下的 CLB 负载均衡实例，返回实例 ID、名称与网络类型（OPEN/INTERNAL）。
+     * @param req ListRegionLbsRequest
+     * @return ListRegionLbsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRegionLbsResponse ListRegionLbs(ListRegionLbsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRegionLbs", ListRegionLbsResponse.class);
+    }
+
+    /**
      *列出所有资源配置模板
      * @param req ListResourceConfigsRequest
      * @return ListResourceConfigsResponse
@@ -2623,6 +3143,17 @@ public class DlcClient extends AbstractClient{
     public ListResourceConfigsResponse ListResourceConfigs(ListResourceConfigsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListResourceConfigs", ListResourceConfigsResponse.class);
+    }
+
+    /**
+     *列出指定推理服务绑定的 API Key
+     * @param req ListServiceApiKeysRequest
+     * @return ListServiceApiKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListServiceApiKeysResponse ListServiceApiKeys(ListServiceApiKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListServiceApiKeys", ListServiceApiKeysResponse.class);
     }
 
     /**
@@ -2645,6 +3176,39 @@ public class DlcClient extends AbstractClient{
     public ListTaskJobLogNameResponse ListTaskJobLogName(ListTaskJobLogNameRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTaskJobLogName", ListTaskJobLogNameResponse.class);
+    }
+
+    /**
+     *获取tke纳管cos列表
+     * @param req ListTkeCosBucketsRequest
+     * @return ListTkeCosBucketsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTkeCosBucketsResponse ListTkeCosBuckets(ListTkeCosBucketsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTkeCosBuckets", ListTkeCosBucketsResponse.class);
+    }
+
+    /**
+     *列出训练作业实例
+     * @param req ListTrainingJobInstanceRequest
+     * @return ListTrainingJobInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTrainingJobInstanceResponse ListTrainingJobInstance(ListTrainingJobInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTrainingJobInstance", ListTrainingJobInstanceResponse.class);
+    }
+
+    /**
+     *获取训练作业配置的列表。
+     * @param req ListTrainingJobSpecRequest
+     * @return ListTrainingJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTrainingJobSpecResponse ListTrainingJobSpec(ListTrainingJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTrainingJobSpec", ListTrainingJobSpecResponse.class);
     }
 
     /**
@@ -2766,6 +3330,17 @@ public class DlcClient extends AbstractClient{
     public ModifySparkAppForTDLCResponse ModifySparkAppForTDLC(ModifySparkAppForTDLCRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySparkAppForTDLC", ModifySparkAppForTDLCResponse.class);
+    }
+
+    /**
+     *就地更新训练作业配置
+     * @param req ModifyTrainingJobSpecRequest
+     * @return ModifyTrainingJobSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTrainingJobSpecResponse ModifyTrainingJobSpec(ModifyTrainingJobSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTrainingJobSpec", ModifyTrainingJobSpecResponse.class);
     }
 
     /**
@@ -2912,6 +3487,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *重新运行性能评测任务
+     * @param req RerunBenchmarkTaskRequest
+     * @return RerunBenchmarkTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RerunBenchmarkTaskResponse RerunBenchmarkTask(RerunBenchmarkTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RerunBenchmarkTask", RerunBenchmarkTaskResponse.class);
+    }
+
+    /**
      *重启引擎
      * @param req RestartDataEngineRequest
      * @return RestartDataEngineResponse
@@ -2923,6 +3509,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *再次运行部署（以当前配置重新部署）
+     * @param req RestartDeploymentRequest
+     * @return RestartDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDeploymentResponse RestartDeployment(RestartDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartDeployment", RestartDeploymentResponse.class);
+    }
+
+    /**
      *重启推理服务（操作所有部署）。
      * @param req RestartInferenceServiceRequest
      * @return RestartInferenceServiceResponse
@@ -2931,6 +3528,17 @@ public class DlcClient extends AbstractClient{
     public RestartInferenceServiceResponse RestartInferenceService(RestartInferenceServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartInferenceService", RestartInferenceServiceResponse.class);
+    }
+
+    /**
+     *断点续训（克隆实例）
+     * @param req ResumeTrainingJobInstanceRequest
+     * @return ResumeTrainingJobInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeTrainingJobInstanceResponse ResumeTrainingJobInstance(ResumeTrainingJobInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeTrainingJobInstance", ResumeTrainingJobInstanceResponse.class);
     }
 
     /**
@@ -2989,6 +3597,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *启动 MlFlow Server（apply K8s 资源，幂等可重试）
+     * @param req StartMlflowServerRequest
+     * @return StartMlflowServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMlflowServerResponse StartMlflowServer(StartMlflowServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartMlflowServer", StartMlflowServerResponse.class);
+    }
+
+    /**
      *启动集群
      * @param req StartRayClusterRequest
      * @return StartRayClusterResponse
@@ -2997,6 +3616,28 @@ public class DlcClient extends AbstractClient{
     public StartRayClusterResponse StartRayCluster(StartRayClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartRayCluster", StartRayClusterResponse.class);
+    }
+
+    /**
+     *停止性能评测任务
+     * @param req StopBenchmarkTaskRequest
+     * @return StopBenchmarkTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopBenchmarkTaskResponse StopBenchmarkTask(StopBenchmarkTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopBenchmarkTask", StopBenchmarkTaskResponse.class);
+    }
+
+    /**
+     *停止部署
+     * @param req StopDeploymentRequest
+     * @return StopDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopDeploymentResponse StopDeployment(StopDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopDeployment", StopDeploymentResponse.class);
     }
 
     /**
@@ -3022,6 +3663,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *停止 MlFlow Server
+     * @param req StopMlflowServerRequest
+     * @return StopMlflowServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopMlflowServerResponse StopMlflowServer(StopMlflowServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopMlflowServer", StopMlflowServerResponse.class);
+    }
+
+    /**
      *停止集群
      * @param req StopRayClusterRequest
      * @return StopRayClusterResponse
@@ -3030,6 +3682,17 @@ public class DlcClient extends AbstractClient{
     public StopRayClusterResponse StopRayCluster(StopRayClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRayCluster", StopRayClusterResponse.class);
+    }
+
+    /**
+     *断点续训（克隆实例）
+     * @param req SubmitTrainingJobRequest
+     * @return SubmitTrainingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTrainingJobResponse SubmitTrainingJob(SubmitTrainingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTrainingJob", SubmitTrainingJobResponse.class);
     }
 
     /**
@@ -3099,6 +3762,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *更新 API Key 状态
+     * @param req UpdateApiKeyStatusRequest
+     * @return UpdateApiKeyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiKeyStatusResponse UpdateApiKeyStatus(UpdateApiKeyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateApiKeyStatus", UpdateApiKeyStatusResponse.class);
+    }
+
+    /**
      *更新集群组
      * @param req UpdateClusterGroupRequest
      * @return UpdateClusterGroupResponse
@@ -3140,6 +3814,17 @@ public class DlcClient extends AbstractClient{
     public UpdateDataMaskStrategyResponse UpdateDataMaskStrategy(UpdateDataMaskStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateDataMaskStrategy", UpdateDataMaskStrategyResponse.class);
+    }
+
+    /**
+     *更新部署配置
+     * @param req UpdateDeploymentRequest
+     * @return UpdateDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDeploymentResponse UpdateDeployment(UpdateDeploymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDeployment", UpdateDeploymentResponse.class);
     }
 
     /**
@@ -3250,6 +3935,17 @@ public class DlcClient extends AbstractClient{
     public UpdateRowFilterResponse UpdateRowFilter(UpdateRowFilterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateRowFilter", UpdateRowFilterResponse.class);
+    }
+
+    /**
+     *更新推理服务的 API-Key 鉴权配置（启用/停用）
+     * @param req UpdateServiceAuthConfigRequest
+     * @return UpdateServiceAuthConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateServiceAuthConfigResponse UpdateServiceAuthConfig(UpdateServiceAuthConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateServiceAuthConfig", UpdateServiceAuthConfigResponse.class);
     }
 
     /**

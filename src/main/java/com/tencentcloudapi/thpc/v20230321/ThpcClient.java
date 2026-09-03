@@ -85,6 +85,21 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (BindClusterVpc) 用于为IDC集群绑定VPC和子网。
+
+* 绑定VPC后，集群可在该VPC内开启专线/VPN代理。
+* VpcId和SubnetId为必填参数，且子网必须属于指定的VPC。
+* 若集群已开通代理，需先关闭代理（DisableClusterDedicatedProxy）再变更VPC绑定。
+     * @param req BindClusterVpcRequest
+     * @return BindClusterVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindClusterVpcResponse BindClusterVpc(BindClusterVpcRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindClusterVpc", BindClusterVpcResponse.class);
+    }
+
+    /**
      *本接口 (CreateCluster) 用于创建并启动集群。
 
 * 本接口为异步接口， 当创建集群请求下发成功后会返回一个集群`ID`和一个`RequestId`，此时创建集群操作并未立即完成。在此期间集群的状态将会处于“PENDING”或者“INITING”，集群创建结果可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/1527/72100)  接口查询，如果集群状态(ClusterStatus)变为“RUNNING(运行中)”，则代表集群创建成功，“ INIT_FAILED”代表集群创建失败。
@@ -208,6 +223,20 @@ public class ThpcClient extends AbstractClient{
     public DescribeClusterActivitiesResponse DescribeClusterActivities(DescribeClusterActivitiesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterActivities", DescribeClusterActivitiesResponse.class);
+    }
+
+    /**
+     *本接口 (DescribeClusterDedicatedProxy) 用于查询IDC集群专线/VPN代理的状态。
+
+* 返回终端节点（EndPoint）的当前状态，包括是否就绪、VIP地址等信息。
+* 若代理未开通，EndPointReady返回false，EndPointStatus为UNKNOWN。
+     * @param req DescribeClusterDedicatedProxyRequest
+     * @return DescribeClusterDedicatedProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterDedicatedProxyResponse DescribeClusterDedicatedProxy(DescribeClusterDedicatedProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterDedicatedProxy", DescribeClusterDedicatedProxyResponse.class);
     }
 
     /**
@@ -362,6 +391,65 @@ public class ThpcClient extends AbstractClient{
     public DetachNodesResponse DetachNodes(DetachNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DetachNodes", DetachNodesResponse.class);
+    }
+
+    /**
+     *本接口 (DisableClusterDedicatedProxy) 用于关闭IDC集群的专线/VPN代理。
+
+* 关闭后，系统将删除VPC终端节点（EndPoint），断开IDC集群与云上VPC的网络连接。
+* 若代理未开通，调用将返回ProxyNotEnabled错误。
+* 操作不可逆，关闭后需重新调用EnableClusterDedicatedProxy开启。
+     * @param req DisableClusterDedicatedProxyRequest
+     * @return DisableClusterDedicatedProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClusterDedicatedProxyResponse DisableClusterDedicatedProxy(DisableClusterDedicatedProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableClusterDedicatedProxy", DisableClusterDedicatedProxyResponse.class);
+    }
+
+    /**
+     *本接口 (EnableClusterDedicatedProxy) 用于开启IDC集群的专线/VPN代理。
+
+* 开启后，系统将自动创建VPC终端节点（EndPoint），实现IDC集群与云上VPC的网络互通。
+* 若代理已开通，重复调用将幂等返回已有EndPoint信息。
+* SubnetId与VpcId需同时指定或同时不指定。若不指定，则使用集群已绑定的VPC和子网。
+     * @param req EnableClusterDedicatedProxyRequest
+     * @return EnableClusterDedicatedProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClusterDedicatedProxyResponse EnableClusterDedicatedProxy(EnableClusterDedicatedProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableClusterDedicatedProxy", EnableClusterDedicatedProxyResponse.class);
+    }
+
+    /**
+     *本接口(GenerateRegisterCode)用于为队列创建一个注册码，注册码用于IDC机器的注册纳管。
+     * @param req GenerateRegisterCodeRequest
+     * @return GenerateRegisterCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateRegisterCodeResponse GenerateRegisterCode(GenerateRegisterCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateRegisterCode", GenerateRegisterCodeResponse.class);
+    }
+
+    /**
+     *本接口 (GenerateRegisterCommand) 用于生成IDC集群的节点注册命令。
+
+* 返回的注册命令可直接在IDC机器上以root身份执行，将该机器纳管进指定的IDC集群。
+* 当<code>Proxy=true</code>时，系统会先确保集群专线代理就绪（自动开启终端节点并轮询至ACTIVE），再签发注册码并渲染带代理VIP的注册命令；若在超时窗口内代理仍未就绪，将返回<code>FailedOperation.ProxyNotReady</code>。
+* 当<code>Proxy=false</code>时，IDC机器需可直连集群，直接签发注册码并渲染注册命令。
+* VpcId与SubnetId需同时指定或同时不指定；仅当<code>Proxy=true</code>且集群未绑定VPC时二者必填。当<code>Proxy=false</code>时二者不生效，若仍传入将返回<code>InvalidParameterValue.ParametersNotSupported</code>。
+* 若集群此前已开启专线代理并绑定了VPC/子网，本次传入的VpcId/SubnetId与已绑定值不一致时，将返回<code>UnsupportedOperation.VpcAlreadyBound</code>（不支持改绑）。
+* 仅支持IDC类型集群，对非IDC集群调用将返回<code>InvalidParameterValue.ParametersNotSupported</code>。
+     * @param req GenerateRegisterCommandRequest
+     * @return GenerateRegisterCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateRegisterCommandResponse GenerateRegisterCommand(GenerateRegisterCommandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateRegisterCommand", GenerateRegisterCommandResponse.class);
     }
 
     /**

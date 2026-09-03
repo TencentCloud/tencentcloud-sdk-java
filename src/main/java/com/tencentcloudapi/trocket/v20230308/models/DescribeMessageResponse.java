@@ -90,6 +90,14 @@ public class DescribeMessageResponse extends AbstractModel {
     private Long MessageTracksCount;
 
     /**
+    * <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DelayMessageStatus")
+    @Expose
+    private String DelayMessageStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -253,6 +261,26 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DelayMessageStatus <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDelayMessageStatus() {
+        return this.DelayMessageStatus;
+    }
+
+    /**
+     * Set <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DelayMessageStatus <p>5.x 时间轮定时消息状态，仅在查询定时消息（命中 RMQ_SYS_WHEEL_TIMER）时返回。枚举值：PENDING（未到期）、DELIVERED（已到期投递）、RECALLED（已撤回）、NOT_FOUND（消息不存在）、UNSUPPORTED（该消息类型不支持状态查询，如 4.x DelayLevel 延迟消息）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelayMessageStatus(String DelayMessageStatus) {
+        this.DelayMessageStatus = DelayMessageStatus;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -306,6 +334,9 @@ public class DescribeMessageResponse extends AbstractModel {
         if (source.MessageTracksCount != null) {
             this.MessageTracksCount = new Long(source.MessageTracksCount);
         }
+        if (source.DelayMessageStatus != null) {
+            this.DelayMessageStatus = new String(source.DelayMessageStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -325,6 +356,7 @@ public class DescribeMessageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
         this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
         this.setParamSimple(map, prefix + "MessageTracksCount", this.MessageTracksCount);
+        this.setParamSimple(map, prefix + "DelayMessageStatus", this.DelayMessageStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

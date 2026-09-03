@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeNodeSpecResponse extends AbstractModel {
 
     /**
-    * 节点规格类型
+    * <p>节点规格类型</p>
     */
     @SerializedName("NodeSpecs")
     @Expose
     private DescribeNodeSpec [] NodeSpecs;
+
+    /**
+    * <p>机型架构信息</p>
+    */
+    @SerializedName("Architectures")
+    @Expose
+    private ArchitectureInfo [] Architectures;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeNodeSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 节点规格类型 
-     * @return NodeSpecs 节点规格类型
+     * Get <p>节点规格类型</p> 
+     * @return NodeSpecs <p>节点规格类型</p>
      */
     public DescribeNodeSpec [] getNodeSpecs() {
         return this.NodeSpecs;
     }
 
     /**
-     * Set 节点规格类型
-     * @param NodeSpecs 节点规格类型
+     * Set <p>节点规格类型</p>
+     * @param NodeSpecs <p>节点规格类型</p>
      */
     public void setNodeSpecs(DescribeNodeSpec [] NodeSpecs) {
         this.NodeSpecs = NodeSpecs;
+    }
+
+    /**
+     * Get <p>机型架构信息</p> 
+     * @return Architectures <p>机型架构信息</p>
+     */
+    public ArchitectureInfo [] getArchitectures() {
+        return this.Architectures;
+    }
+
+    /**
+     * Set <p>机型架构信息</p>
+     * @param Architectures <p>机型架构信息</p>
+     */
+    public void setArchitectures(ArchitectureInfo [] Architectures) {
+        this.Architectures = Architectures;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeNodeSpecResponse extends AbstractModel {
                 this.NodeSpecs[i] = new DescribeNodeSpec(source.NodeSpecs[i]);
             }
         }
+        if (source.Architectures != null) {
+            this.Architectures = new ArchitectureInfo[source.Architectures.length];
+            for (int i = 0; i < source.Architectures.length; i++) {
+                this.Architectures[i] = new ArchitectureInfo(source.Architectures[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeNodeSpecResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "NodeSpecs.", this.NodeSpecs);
+        this.setParamArrayObj(map, prefix + "Architectures.", this.Architectures);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

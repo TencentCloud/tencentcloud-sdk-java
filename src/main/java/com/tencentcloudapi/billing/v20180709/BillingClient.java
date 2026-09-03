@@ -171,6 +171,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *云api查余额告警阈值接口，支持传入uin
+     * @param req DescribeAccountWarningRequest
+     * @return DescribeAccountWarningResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountWarningResponse DescribeAccountWarning(DescribeAccountWarningRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountWarning", DescribeAccountWarningResponse.class);
+    }
+
+    /**
      *查询资源目录筛选条件
      * @param req DescribeAllocateConditionsRequest
      * @return DescribeAllocateConditionsResponse
@@ -716,6 +727,17 @@ public class BillingClient extends AbstractClient{
     public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(DescribeVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVoucherUsageDetails", DescribeVoucherUsageDetailsResponse.class);
+    }
+
+    /**
+     *云api设置余额告警阈值接口
+     * @param req ModifyAccountWarningRequest
+     * @return ModifyAccountWarningResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountWarningResponse ModifyAccountWarning(ModifyAccountWarningRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccountWarning", ModifyAccountWarningResponse.class);
     }
 
     /**

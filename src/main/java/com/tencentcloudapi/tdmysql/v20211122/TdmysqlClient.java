@@ -39,6 +39,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（BreakStandbyDBInstanceRelation）用于提供断开灾备实例主备连接功能
+     * @param req BreakStandbyDBInstanceRelationRequest
+     * @return BreakStandbyDBInstanceRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BreakStandbyDBInstanceRelationResponse BreakStandbyDBInstanceRelation(BreakStandbyDBInstanceRelationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BreakStandbyDBInstanceRelation", BreakStandbyDBInstanceRelationResponse.class);
+    }
+
+    /**
      *本接口（CancelIsolateDBInstances）提供批量解除隔离实例功能
      * @param req CancelIsolateDBInstancesRequest
      * @return CancelIsolateDBInstancesResponse
@@ -80,6 +91,17 @@ public class TdmysqlClient extends AbstractClient{
     public CreateDBSBackupResponse CreateDBSBackup(CreateDBSBackupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDBSBackup", CreateDBSBackupResponse.class);
+    }
+
+    /**
+     *本接口（CreateStandbyDBInstances）提供批量创建灾备实例功能
+     * @param req CreateStandbyDBInstanceRequest
+     * @return CreateStandbyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStandbyDBInstanceResponse CreateStandbyDBInstance(CreateStandbyDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStandbyDBInstance", CreateStandbyDBInstanceResponse.class);
     }
 
     /**
@@ -333,6 +355,17 @@ public class TdmysqlClient extends AbstractClient{
     public DescribeSpecsResponse DescribeSpecs(DescribeSpecsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSpecs", DescribeSpecsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeStandbyDBinstanceRelations）用于查询实例灾备连接关系
+     * @param req DescribeStandbyDBInstanceRelationDetailRequest
+     * @return DescribeStandbyDBInstanceRelationDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStandbyDBInstanceRelationDetailResponse DescribeStandbyDBInstanceRelationDetail(DescribeStandbyDBInstanceRelationDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStandbyDBInstanceRelationDetail", DescribeStandbyDBInstanceRelationDetailResponse.class);
     }
 
     /**

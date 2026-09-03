@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDeviceDetailListData extends AbstractModel {
 
     /**
-    * 账号名
+    * <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
@@ -32,7 +32,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String UserName;
 
     /**
-    * 计算机名
+    * <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComputerName")
@@ -40,7 +40,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String ComputerName;
 
     /**
-    * 名称
+    * <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +48,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String Name;
 
     /**
-    * 用户组IdPath
+    * <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupIdPath")
@@ -56,7 +56,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String AccountGroupIdPath;
 
     /**
-    * 用户组id(只支持32位)
+    * <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupId")
@@ -64,7 +64,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private Long AccountGroupId;
 
     /**
-    * 终端组名path
+    * <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupNamePath")
@@ -72,7 +72,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String GroupNamePath;
 
     /**
-    * Ip地址
+    * <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
@@ -80,7 +80,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String Ip;
 
     /**
-    * 用户组名
+    * <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupName")
@@ -88,7 +88,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String AccountGroupName;
 
     /**
-    * 终端组IdPath
+    * <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupIdPath")
@@ -96,7 +96,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String GroupIdPath;
 
     /**
-    * 唯一标识Mid
+    * <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mid")
@@ -104,7 +104,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String Mid;
 
     /**
-    * IOA账号名
+    * <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IoaUserName")
@@ -112,7 +112,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String IoaUserName;
 
     /**
-    * 所在分组Id(只支持32位)
+    * <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -120,7 +120,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private Long GroupId;
 
     /**
-    * 所在分组Name
+    * <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -128,7 +128,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String GroupName;
 
     /**
-    * Mac地址
+    * <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mac")
@@ -136,7 +136,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String Mac;
 
     /**
-    * 软件版本
+    * <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -144,7 +144,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String Version;
 
     /**
-    * 用户组名Path
+    * <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupNamePath")
@@ -152,7 +152,7 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private String AccountGroupNamePath;
 
     /**
-    * 列表Id(只支持32位)
+    * <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -160,9 +160,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     private Long Id;
 
     /**
-     * Get 账号名
+     * Get <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserName 账号名
+     * @return UserName <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
@@ -170,9 +170,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 账号名
+     * Set <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserName 账号名
+     * @param UserName <p>账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
@@ -180,9 +180,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 计算机名
+     * Get <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComputerName 计算机名
+     * @return ComputerName <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComputerName() {
@@ -190,9 +190,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 计算机名
+     * Set <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComputerName 计算机名
+     * @param ComputerName <p>计算机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComputerName(String ComputerName) {
@@ -200,9 +200,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 名称
+     * Get <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名称
+     * @return Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -210,9 +210,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 名称
+     * Set <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名称
+     * @param Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -220,9 +220,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 用户组IdPath
+     * Get <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountGroupIdPath 用户组IdPath
+     * @return AccountGroupIdPath <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountGroupIdPath() {
@@ -230,9 +230,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 用户组IdPath
+     * Set <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountGroupIdPath 用户组IdPath
+     * @param AccountGroupIdPath <p>用户组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupIdPath(String AccountGroupIdPath) {
@@ -240,9 +240,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 用户组id(只支持32位)
+     * Get <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountGroupId 用户组id(只支持32位)
+     * @return AccountGroupId <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccountGroupId() {
@@ -250,9 +250,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 用户组id(只支持32位)
+     * Set <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountGroupId 用户组id(只支持32位)
+     * @param AccountGroupId <p>用户组id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupId(Long AccountGroupId) {
@@ -260,9 +260,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 终端组名path
+     * Get <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupNamePath 终端组名path
+     * @return GroupNamePath <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupNamePath() {
@@ -270,9 +270,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 终端组名path
+     * Set <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupNamePath 终端组名path
+     * @param GroupNamePath <p>终端组名path</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupNamePath(String GroupNamePath) {
@@ -280,9 +280,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get Ip地址
+     * Get <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ip Ip地址
+     * @return Ip <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
@@ -290,9 +290,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set Ip地址
+     * Set <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ip Ip地址
+     * @param Ip <p>Ip地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
@@ -300,9 +300,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 用户组名
+     * Get <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountGroupName 用户组名
+     * @return AccountGroupName <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountGroupName() {
@@ -310,9 +310,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 用户组名
+     * Set <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountGroupName 用户组名
+     * @param AccountGroupName <p>用户组名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupName(String AccountGroupName) {
@@ -320,9 +320,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 终端组IdPath
+     * Get <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupIdPath 终端组IdPath
+     * @return GroupIdPath <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupIdPath() {
@@ -330,9 +330,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 终端组IdPath
+     * Set <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupIdPath 终端组IdPath
+     * @param GroupIdPath <p>终端组IdPath</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupIdPath(String GroupIdPath) {
@@ -340,9 +340,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 唯一标识Mid
+     * Get <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mid 唯一标识Mid
+     * @return Mid <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMid() {
@@ -350,9 +350,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 唯一标识Mid
+     * Set <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mid 唯一标识Mid
+     * @param Mid <p>唯一标识Mid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMid(String Mid) {
@@ -360,9 +360,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get IOA账号名
+     * Get <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IoaUserName IOA账号名
+     * @return IoaUserName <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIoaUserName() {
@@ -370,9 +370,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set IOA账号名
+     * Set <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IoaUserName IOA账号名
+     * @param IoaUserName <p>IOA账号名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIoaUserName(String IoaUserName) {
@@ -380,9 +380,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 所在分组Id(只支持32位)
+     * Get <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 所在分组Id(只支持32位)
+     * @return GroupId <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
@@ -390,9 +390,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 所在分组Id(只支持32位)
+     * Set <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 所在分组Id(只支持32位)
+     * @param GroupId <p>所在分组Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
@@ -400,9 +400,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 所在分组Name
+     * Get <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 所在分组Name
+     * @return GroupName <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -410,9 +410,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 所在分组Name
+     * Set <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 所在分组Name
+     * @param GroupName <p>所在分组Name</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
@@ -420,9 +420,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get Mac地址
+     * Get <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mac Mac地址
+     * @return Mac <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMac() {
@@ -430,9 +430,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set Mac地址
+     * Set <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mac Mac地址
+     * @param Mac <p>Mac地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMac(String Mac) {
@@ -440,9 +440,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 软件版本
+     * Get <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 软件版本
+     * @return Version <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -450,9 +450,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 软件版本
+     * Set <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 软件版本
+     * @param Version <p>软件版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -460,9 +460,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 用户组名Path
+     * Get <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountGroupNamePath 用户组名Path
+     * @return AccountGroupNamePath <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountGroupNamePath() {
@@ -470,9 +470,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 用户组名Path
+     * Set <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountGroupNamePath 用户组名Path
+     * @param AccountGroupNamePath <p>用户组名Path</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupNamePath(String AccountGroupNamePath) {
@@ -480,9 +480,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Get 列表Id(只支持32位)
+     * Get <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 列表Id(只支持32位)
+     * @return Id <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -490,9 +490,9 @@ public class DescribeDeviceDetailListData extends AbstractModel {
     }
 
     /**
-     * Set 列表Id(只支持32位)
+     * Set <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 列表Id(只支持32位)
+     * @param Id <p>列表Id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {

@@ -24,100 +24,118 @@ import java.util.HashMap;
 public class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
+    * <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 分片节点序号列表。当列表为空时，选择所有分片节点。
+    * <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
     */
     @SerializedName("ShardIds")
     @Expose
     private Long [] ShardIds;
 
     /**
-    * Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+    * <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
     */
     @SerializedName("KeyDelimiterList")
     @Expose
     private String [] KeyDelimiterList;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>历史备份文件ID</p>
+    */
+    @SerializedName("BackupId")
+    @Expose
+    private String BackupId;
+
+    /**
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 服务产品类型，支持值包括 "redis" - 云数据库 Redis。 
-     * @return Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
+     * Get <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p> 
+     * @return Product <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
-     * @param Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
+     * Set <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
+     * @param Product <p>服务产品类型，支持值包括 &quot;redis&quot; - 云数据库 Redis。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 分片节点序号列表。当列表为空时，选择所有分片节点。 
-     * @return ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
+     * Get <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p> 
+     * @return ShardIds <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
      */
     public Long [] getShardIds() {
         return this.ShardIds;
     }
 
     /**
-     * Set 分片节点序号列表。当列表为空时，选择所有分片节点。
-     * @param ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
+     * Set <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
+     * @param ShardIds <p>分片节点序号列表。当列表为空时，选择所有分片节点。</p>
      */
     public void setShardIds(Long [] ShardIds) {
         this.ShardIds = ShardIds;
     }
 
     /**
-     * Get Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。 
-     * @return KeyDelimiterList Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+     * Get <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p> 
+     * @return KeyDelimiterList <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
      */
     public String [] getKeyDelimiterList() {
         return this.KeyDelimiterList;
     }
 
     /**
-     * Set Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
-     * @param KeyDelimiterList Top Key前缀的分隔符列表。
-目前仅支持以下分割符：[",", ";", ":", "_", "-", "+", "@", "=", "|", "#", "."]，当列表为空时，默认选择所有分隔符。
+     * Set <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
+     * @param KeyDelimiterList <p>Top Key前缀的分隔符列表。<br>目前仅支持以下分割符：[&quot;,&quot;, &quot;;&quot;, &quot;:&quot;, &quot;_&quot;, &quot;-&quot;, &quot;+&quot;, &quot;@&quot;, &quot;=&quot;, &quot;|&quot;, &quot;#&quot;, &quot;.&quot;]，当列表为空时，默认选择所有分隔符。</p>
      */
     public void setKeyDelimiterList(String [] KeyDelimiterList) {
         this.KeyDelimiterList = KeyDelimiterList;
+    }
+
+    /**
+     * Get <p>历史备份文件ID</p> 
+     * @return BackupId <p>历史备份文件ID</p>
+     */
+    public String getBackupId() {
+        return this.BackupId;
+    }
+
+    /**
+     * Set <p>历史备份文件ID</p>
+     * @param BackupId <p>历史备份文件ID</p>
+     */
+    public void setBackupId(String BackupId) {
+        this.BackupId = BackupId;
     }
 
     public CreateRedisBigKeyAnalysisTaskRequest() {
@@ -146,6 +164,9 @@ public class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel {
                 this.KeyDelimiterList[i] = new String(source.KeyDelimiterList[i]);
             }
         }
+        if (source.BackupId != null) {
+            this.BackupId = new String(source.BackupId);
+        }
     }
 
 
@@ -157,6 +178,7 @@ public class CreateRedisBigKeyAnalysisTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
         this.setParamArraySimple(map, prefix + "KeyDelimiterList.", this.KeyDelimiterList);
+        this.setParamSimple(map, prefix + "BackupId", this.BackupId);
 
     }
 }

@@ -72,6 +72,17 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *提交S3兼容存储桶数据源的目录前缀创建批量标注任务。创建后，服务端异步列举前缀下全部视频逐个建立处理项（受配额上限控制，超限截断）。
+     * @param req CreateBatchVideoAnnotationJobRequest
+     * @return CreateBatchVideoAnnotationJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBatchVideoAnnotationJobResponse CreateBatchVideoAnnotationJob(CreateBatchVideoAnnotationJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBatchVideoAnnotationJob", CreateBatchVideoAnnotationJobResponse.class);
+    }
+
+    /**
      *启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
      * @param req CreateCloudRecordingRequest
      * @return CreateCloudRecordingResponse
@@ -105,6 +116,39 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *提交单个视频创建标注任务。支持 S3兼容 存储与 HTTP URL 两种输入源；通过后任务异步执行。
+     * @param req CreateVideoAnnotationJobRequest
+     * @return CreateVideoAnnotationJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoAnnotationJobResponse CreateVideoAnnotationJob(CreateVideoAnnotationJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoAnnotationJob", CreateVideoAnnotationJobResponse.class);
+    }
+
+    /**
+     *删除整个任务并级联删除其全部处理项。
+     * @param req DeleteAnnotationJobRequest
+     * @return DeleteAnnotationJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAnnotationJobResponse DeleteAnnotationJob(DeleteAnnotationJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAnnotationJob", DeleteAnnotationJobResponse.class);
+    }
+
+    /**
+     *删除任务下的单个处理项。
+     * @param req DeleteAnnotationTaskRequest
+     * @return DeleteAnnotationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAnnotationTaskResponse DeleteAnnotationTask(DeleteAnnotationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAnnotationTask", DeleteAnnotationTaskResponse.class);
+    }
+
+    /**
      *成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
      * @param req DeleteCloudRecordingRequest
      * @return DeleteCloudRecordingResponse
@@ -124,6 +168,39 @@ public class TrroClient extends AbstractClient{
     public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
+    }
+
+    /**
+     *分页查询当前用户的任务列表，支持按状态、输入路径前缀过滤。注意任务的聚合状态由后台周期刷新，处理项全部完成后任务状态有短暂延迟。
+     * @param req DescribeAnnotationJobsRequest
+     * @return DescribeAnnotationJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAnnotationJobsResponse DescribeAnnotationJobs(DescribeAnnotationJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAnnotationJobs", DescribeAnnotationJobsResponse.class);
+    }
+
+    /**
+     *查询单个处理项的标注结果详情，返回结果的完整 JSON 原文。仅处理成功（或需确认场景）返回内容。
+     * @param req DescribeAnnotationResultsRequest
+     * @return DescribeAnnotationResultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAnnotationResultsResponse DescribeAnnotationResults(DescribeAnnotationResultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAnnotationResults", DescribeAnnotationResultsResponse.class);
+    }
+
+    /**
+     *分页查询某任务下的处理项列表（每个视频一项），支持按文件名前缀、状态过滤。
+     * @param req DescribeAnnotationTasksRequest
+     * @return DescribeAnnotationTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAnnotationTasksResponse DescribeAnnotationTasks(DescribeAnnotationTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAnnotationTasks", DescribeAnnotationTasksResponse.class);
     }
 
     /**
@@ -359,6 +436,17 @@ public class TrroClient extends AbstractClient{
     public ModifyProjectSecModeResponse ModifyProjectSecMode(ModifyProjectSecModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyProjectSecMode", ModifyProjectSecModeResponse.class);
+    }
+
+    /**
+     *重跑超时或异常的处理项：重置回未处理状态重新等待执行，所属任务若为异常态自动恢复为处理中。其余状态不可重试。
+     * @param req RetryAnnotationTaskRequest
+     * @return RetryAnnotationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryAnnotationTaskResponse RetryAnnotationTask(RetryAnnotationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RetryAnnotationTask", RetryAnnotationTaskResponse.class);
     }
 
     /**

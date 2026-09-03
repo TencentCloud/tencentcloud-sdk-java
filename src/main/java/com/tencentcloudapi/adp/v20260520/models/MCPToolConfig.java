@@ -38,6 +38,21 @@ public class MCPToolConfig extends AbstractModel {
     private ResponseParam [] Outputs;
 
     /**
+    * <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Meta")
+    @Expose
+    private MCPToolMeta Meta;
+
+    /**
+    * <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+    */
+    @SerializedName("SupportsApps")
+    @Expose
+    private Boolean SupportsApps;
+
+    /**
      * Get <p>输入参数</p> 
      * @return Inputs <p>输入参数</p>
      */
@@ -69,6 +84,42 @@ public class MCPToolConfig extends AbstractModel {
         this.Outputs = Outputs;
     }
 
+    /**
+     * Get <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Meta <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MCPToolMeta getMeta() {
+        return this.Meta;
+    }
+
+    /**
+     * Set <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Meta <p>工具meta信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMeta(MCPToolMeta Meta) {
+        this.Meta = Meta;
+    }
+
+    /**
+     * Get <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p> 
+     * @return SupportsApps <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+     */
+    public Boolean getSupportsApps() {
+        return this.SupportsApps;
+    }
+
+    /**
+     * Set <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+     * @param SupportsApps <p>是否支持交互界面（MCP Apps），插件级标签  默认值：false</p>
+     */
+    public void setSupportsApps(Boolean SupportsApps) {
+        this.SupportsApps = SupportsApps;
+    }
+
     public MCPToolConfig() {
     }
 
@@ -89,6 +140,12 @@ public class MCPToolConfig extends AbstractModel {
                 this.Outputs[i] = new ResponseParam(source.Outputs[i]);
             }
         }
+        if (source.Meta != null) {
+            this.Meta = new MCPToolMeta(source.Meta);
+        }
+        if (source.SupportsApps != null) {
+            this.SupportsApps = new Boolean(source.SupportsApps);
+        }
     }
 
 
@@ -98,6 +155,8 @@ public class MCPToolConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Inputs.", this.Inputs);
         this.setParamArrayObj(map, prefix + "Outputs.", this.Outputs);
+        this.setParamObj(map, prefix + "Meta.", this.Meta);
+        this.setParamSimple(map, prefix + "SupportsApps", this.SupportsApps);
 
     }
 }

@@ -38,6 +38,13 @@ public class PlaybackPolicy extends AbstractModel {
     private Long PlaybackDurationSeconds;
 
     /**
+    * <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+    */
+    @SerializedName("CanPersistent")
+    @Expose
+    private Boolean CanPersistent;
+
+    /**
      * Get <p>播放许可证的有效期</p><p>单位：秒</p> 
      * @return LicenseDurationSeconds <p>播放许可证的有效期</p><p>单位：秒</p>
      */
@@ -69,6 +76,22 @@ public class PlaybackPolicy extends AbstractModel {
         this.PlaybackDurationSeconds = PlaybackDurationSeconds;
     }
 
+    /**
+     * Get <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p> 
+     * @return CanPersistent <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+     */
+    public Boolean getCanPersistent() {
+        return this.CanPersistent;
+    }
+
+    /**
+     * Set <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+     * @param CanPersistent <p>是否允许下发离线license</p><p>默认值：false</p><p>widevine方案，<br>当CanPersistent为true时，根据license request中请求的是online还是offline license自动匹配下发。<br>当CanPersistent为false时，只下发online license。</p><p>fairplay方案。<br>当CanPersistent为true时，只下发offline license。<br>当CanPersistent为false时，只下发online license。</p>
+     */
+    public void setCanPersistent(Boolean CanPersistent) {
+        this.CanPersistent = CanPersistent;
+    }
+
     public PlaybackPolicy() {
     }
 
@@ -83,6 +106,9 @@ public class PlaybackPolicy extends AbstractModel {
         if (source.PlaybackDurationSeconds != null) {
             this.PlaybackDurationSeconds = new Long(source.PlaybackDurationSeconds);
         }
+        if (source.CanPersistent != null) {
+            this.CanPersistent = new Boolean(source.CanPersistent);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class PlaybackPolicy extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LicenseDurationSeconds", this.LicenseDurationSeconds);
         this.setParamSimple(map, prefix + "PlaybackDurationSeconds", this.PlaybackDurationSeconds);
+        this.setParamSimple(map, prefix + "CanPersistent", this.CanPersistent);
 
     }
 }

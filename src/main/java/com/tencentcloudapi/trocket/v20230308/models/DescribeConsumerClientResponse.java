@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConsumerClientResponse extends AbstractModel {
 
     /**
-    * 客户端详情
+    * <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Client")
@@ -32,12 +32,19 @@ public class DescribeConsumerClientResponse extends AbstractModel {
     private ConsumerClient Client;
 
     /**
-    * 主题消费信息
+    * <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicList")
     @Expose
     private TopicConsumeStats [] TopicList;
+
+    /**
+    * <p>订阅主题总数</p>
+    */
+    @SerializedName("TopicTotalCount")
+    @Expose
+    private Long TopicTotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,9 +54,9 @@ public class DescribeConsumerClientResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 客户端详情
+     * Get <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Client 客户端详情
+     * @return Client <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerClient getClient() {
@@ -57,9 +64,9 @@ public class DescribeConsumerClientResponse extends AbstractModel {
     }
 
     /**
-     * Set 客户端详情
+     * Set <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Client 客户端详情
+     * @param Client <p>客户端详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClient(ConsumerClient Client) {
@@ -67,9 +74,9 @@ public class DescribeConsumerClientResponse extends AbstractModel {
     }
 
     /**
-     * Get 主题消费信息
+     * Get <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicList 主题消费信息
+     * @return TopicList <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicConsumeStats [] getTopicList() {
@@ -77,13 +84,29 @@ public class DescribeConsumerClientResponse extends AbstractModel {
     }
 
     /**
-     * Set 主题消费信息
+     * Set <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicList 主题消费信息
+     * @param TopicList <p>主题消费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicList(TopicConsumeStats [] TopicList) {
         this.TopicList = TopicList;
+    }
+
+    /**
+     * Get <p>订阅主题总数</p> 
+     * @return TopicTotalCount <p>订阅主题总数</p>
+     */
+    public Long getTopicTotalCount() {
+        return this.TopicTotalCount;
+    }
+
+    /**
+     * Set <p>订阅主题总数</p>
+     * @param TopicTotalCount <p>订阅主题总数</p>
+     */
+    public void setTopicTotalCount(Long TopicTotalCount) {
+        this.TopicTotalCount = TopicTotalCount;
     }
 
     /**
@@ -119,6 +142,9 @@ public class DescribeConsumerClientResponse extends AbstractModel {
                 this.TopicList[i] = new TopicConsumeStats(source.TopicList[i]);
             }
         }
+        if (source.TopicTotalCount != null) {
+            this.TopicTotalCount = new Long(source.TopicTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -131,6 +157,7 @@ public class DescribeConsumerClientResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Client.", this.Client);
         this.setParamArrayObj(map, prefix + "TopicList.", this.TopicList);
+        this.setParamSimple(map, prefix + "TopicTotalCount", this.TopicTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
