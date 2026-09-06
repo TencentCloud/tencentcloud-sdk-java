@@ -52,6 +52,13 @@ public class ModelAssociation extends AbstractModel {
     private String Type;
 
     /**
+    * <p>输出模态</p>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
      * Get <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul> 
      * @return InputModalitiesUnion <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
      */
@@ -115,6 +122,22 @@ public class ModelAssociation extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get <p>输出模态</p> 
+     * @return Capability <p>输出模态</p>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>输出模态</p>
+     * @param Capability <p>输出模态</p>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
     public ModelAssociation() {
     }
 
@@ -141,6 +164,9 @@ public class ModelAssociation extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class ModelAssociation extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamArrayObj(map, prefix + "ServiceProviders.", this.ServiceProviders);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
 
     }
 }

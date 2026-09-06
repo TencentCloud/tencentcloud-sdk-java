@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class VehicleInvoiceInfo extends AbstractModel {
 
     /**
-    * 车辆类型
+    * <p>车辆类型</p>
     */
     @SerializedName("CarType")
     @Expose
     private String CarType;
 
     /**
-    * 厂牌型号
+    * <p>厂牌型号</p>
     */
     @SerializedName("PlateModel")
     @Expose
     private String PlateModel;
 
     /**
-    * 产地
+    * <p>产地</p>
     */
     @SerializedName("ProduceAddress")
     @Expose
     private String ProduceAddress;
 
     /**
-    * 合格证号
+    * <p>合格证号</p>
     */
     @SerializedName("CertificateNo")
     @Expose
     private String CertificateNo;
 
     /**
-    * 进口证明书号
+    * <p>进口证明书号</p>
     */
     @SerializedName("ImportNo")
     @Expose
     private String ImportNo;
 
     /**
-    * LSVCA2NP9HN0xxxxx
+    * <p>LSVCA2NP9HN0xxxxx</p>
     */
     @SerializedName("VinNo")
     @Expose
     private String VinNo;
 
     /**
-    * 完税证书号
+    * <p>完税证书号</p>
     */
     @SerializedName("PayTaxesNo")
     @Expose
     private String PayTaxesNo;
 
     /**
-    * 吨位
+    * <p>吨位</p>
     */
     @SerializedName("Tonnage")
     @Expose
     private String Tonnage;
 
     /**
-    * 限乘人数
+    * <p>限乘人数</p>
     */
     @SerializedName("LimitCount")
     @Expose
     private String LimitCount;
 
     /**
-    * 发动机号码
+    * <p>发动机号码</p>
     */
     @SerializedName("EngineNo")
     @Expose
     private String EngineNo;
 
     /**
-    * 商检单号
+    * <p>商检单号</p>
     */
     @SerializedName("BizCheckFormNo")
     @Expose
     private String BizCheckFormNo;
 
     /**
-    * 主管税务机关代码
+    * <p>主管税务机关代码</p>
     */
     @SerializedName("TaxtationOrgCode")
     @Expose
     private String TaxtationOrgCode;
 
     /**
-    * 主管税务机关名称
+    * <p>主管税务机关名称</p>
     */
     @SerializedName("TaxtationOrgName")
     @Expose
     private String TaxtationOrgName;
 
     /**
-    * 税率
+    * <p>税率</p>
     */
     @SerializedName("MotorTaxRate")
     @Expose
     private String MotorTaxRate;
 
     /**
-    * 银行账号
+    * <p>银行账号</p>
     */
     @SerializedName("MotorBankName")
     @Expose
     private String MotorBankName;
 
     /**
-    * 开户行
+    * <p>开户行</p>
     */
     @SerializedName("MotorBankAccount")
     @Expose
     private String MotorBankAccount;
 
     /**
-    * 销售地址
+    * <p>销售地址</p>
     */
     @SerializedName("SellerAddress")
     @Expose
     private String SellerAddress;
 
     /**
-    * 销售电话
+    * <p>销售电话</p>
     */
     @SerializedName("SellerTel")
     @Expose
     private String SellerTel;
 
     /**
-    * 购方身份证
+    * <p>购方身份证</p>
     */
     @SerializedName("BuyerNo")
     @Expose
     private String BuyerNo;
 
     /**
-     * Get 车辆类型 
-     * @return CarType 车辆类型
+     * Get <p>车辆类型</p> 
+     * @return CarType <p>车辆类型</p>
      */
     public String getCarType() {
         return this.CarType;
     }
 
     /**
-     * Set 车辆类型
-     * @param CarType 车辆类型
+     * Set <p>车辆类型</p>
+     * @param CarType <p>车辆类型</p>
      */
     public void setCarType(String CarType) {
         this.CarType = CarType;
     }
 
     /**
-     * Get 厂牌型号 
-     * @return PlateModel 厂牌型号
+     * Get <p>厂牌型号</p> 
+     * @return PlateModel <p>厂牌型号</p>
      */
     public String getPlateModel() {
         return this.PlateModel;
     }
 
     /**
-     * Set 厂牌型号
-     * @param PlateModel 厂牌型号
+     * Set <p>厂牌型号</p>
+     * @param PlateModel <p>厂牌型号</p>
      */
     public void setPlateModel(String PlateModel) {
         this.PlateModel = PlateModel;
     }
 
     /**
-     * Get 产地 
-     * @return ProduceAddress 产地
+     * Get <p>产地</p> 
+     * @return ProduceAddress <p>产地</p>
      */
     public String getProduceAddress() {
         return this.ProduceAddress;
     }
 
     /**
-     * Set 产地
-     * @param ProduceAddress 产地
+     * Set <p>产地</p>
+     * @param ProduceAddress <p>产地</p>
      */
     public void setProduceAddress(String ProduceAddress) {
         this.ProduceAddress = ProduceAddress;
     }
 
     /**
-     * Get 合格证号 
-     * @return CertificateNo 合格证号
+     * Get <p>合格证号</p> 
+     * @return CertificateNo <p>合格证号</p>
      */
     public String getCertificateNo() {
         return this.CertificateNo;
     }
 
     /**
-     * Set 合格证号
-     * @param CertificateNo 合格证号
+     * Set <p>合格证号</p>
+     * @param CertificateNo <p>合格证号</p>
      */
     public void setCertificateNo(String CertificateNo) {
         this.CertificateNo = CertificateNo;
     }
 
     /**
-     * Get 进口证明书号 
-     * @return ImportNo 进口证明书号
+     * Get <p>进口证明书号</p> 
+     * @return ImportNo <p>进口证明书号</p>
      */
     public String getImportNo() {
         return this.ImportNo;
     }
 
     /**
-     * Set 进口证明书号
-     * @param ImportNo 进口证明书号
+     * Set <p>进口证明书号</p>
+     * @param ImportNo <p>进口证明书号</p>
      */
     public void setImportNo(String ImportNo) {
         this.ImportNo = ImportNo;
     }
 
     /**
-     * Get LSVCA2NP9HN0xxxxx 
-     * @return VinNo LSVCA2NP9HN0xxxxx
+     * Get <p>LSVCA2NP9HN0xxxxx</p> 
+     * @return VinNo <p>LSVCA2NP9HN0xxxxx</p>
      */
     public String getVinNo() {
         return this.VinNo;
     }
 
     /**
-     * Set LSVCA2NP9HN0xxxxx
-     * @param VinNo LSVCA2NP9HN0xxxxx
+     * Set <p>LSVCA2NP9HN0xxxxx</p>
+     * @param VinNo <p>LSVCA2NP9HN0xxxxx</p>
      */
     public void setVinNo(String VinNo) {
         this.VinNo = VinNo;
     }
 
     /**
-     * Get 完税证书号 
-     * @return PayTaxesNo 完税证书号
+     * Get <p>完税证书号</p> 
+     * @return PayTaxesNo <p>完税证书号</p>
      */
     public String getPayTaxesNo() {
         return this.PayTaxesNo;
     }
 
     /**
-     * Set 完税证书号
-     * @param PayTaxesNo 完税证书号
+     * Set <p>完税证书号</p>
+     * @param PayTaxesNo <p>完税证书号</p>
      */
     public void setPayTaxesNo(String PayTaxesNo) {
         this.PayTaxesNo = PayTaxesNo;
     }
 
     /**
-     * Get 吨位 
-     * @return Tonnage 吨位
+     * Get <p>吨位</p> 
+     * @return Tonnage <p>吨位</p>
      */
     public String getTonnage() {
         return this.Tonnage;
     }
 
     /**
-     * Set 吨位
-     * @param Tonnage 吨位
+     * Set <p>吨位</p>
+     * @param Tonnage <p>吨位</p>
      */
     public void setTonnage(String Tonnage) {
         this.Tonnage = Tonnage;
     }
 
     /**
-     * Get 限乘人数 
-     * @return LimitCount 限乘人数
+     * Get <p>限乘人数</p> 
+     * @return LimitCount <p>限乘人数</p>
      */
     public String getLimitCount() {
         return this.LimitCount;
     }
 
     /**
-     * Set 限乘人数
-     * @param LimitCount 限乘人数
+     * Set <p>限乘人数</p>
+     * @param LimitCount <p>限乘人数</p>
      */
     public void setLimitCount(String LimitCount) {
         this.LimitCount = LimitCount;
     }
 
     /**
-     * Get 发动机号码 
-     * @return EngineNo 发动机号码
+     * Get <p>发动机号码</p> 
+     * @return EngineNo <p>发动机号码</p>
      */
     public String getEngineNo() {
         return this.EngineNo;
     }
 
     /**
-     * Set 发动机号码
-     * @param EngineNo 发动机号码
+     * Set <p>发动机号码</p>
+     * @param EngineNo <p>发动机号码</p>
      */
     public void setEngineNo(String EngineNo) {
         this.EngineNo = EngineNo;
     }
 
     /**
-     * Get 商检单号 
-     * @return BizCheckFormNo 商检单号
+     * Get <p>商检单号</p> 
+     * @return BizCheckFormNo <p>商检单号</p>
      */
     public String getBizCheckFormNo() {
         return this.BizCheckFormNo;
     }
 
     /**
-     * Set 商检单号
-     * @param BizCheckFormNo 商检单号
+     * Set <p>商检单号</p>
+     * @param BizCheckFormNo <p>商检单号</p>
      */
     public void setBizCheckFormNo(String BizCheckFormNo) {
         this.BizCheckFormNo = BizCheckFormNo;
     }
 
     /**
-     * Get 主管税务机关代码 
-     * @return TaxtationOrgCode 主管税务机关代码
+     * Get <p>主管税务机关代码</p> 
+     * @return TaxtationOrgCode <p>主管税务机关代码</p>
      */
     public String getTaxtationOrgCode() {
         return this.TaxtationOrgCode;
     }
 
     /**
-     * Set 主管税务机关代码
-     * @param TaxtationOrgCode 主管税务机关代码
+     * Set <p>主管税务机关代码</p>
+     * @param TaxtationOrgCode <p>主管税务机关代码</p>
      */
     public void setTaxtationOrgCode(String TaxtationOrgCode) {
         this.TaxtationOrgCode = TaxtationOrgCode;
     }
 
     /**
-     * Get 主管税务机关名称 
-     * @return TaxtationOrgName 主管税务机关名称
+     * Get <p>主管税务机关名称</p> 
+     * @return TaxtationOrgName <p>主管税务机关名称</p>
      */
     public String getTaxtationOrgName() {
         return this.TaxtationOrgName;
     }
 
     /**
-     * Set 主管税务机关名称
-     * @param TaxtationOrgName 主管税务机关名称
+     * Set <p>主管税务机关名称</p>
+     * @param TaxtationOrgName <p>主管税务机关名称</p>
      */
     public void setTaxtationOrgName(String TaxtationOrgName) {
         this.TaxtationOrgName = TaxtationOrgName;
     }
 
     /**
-     * Get 税率 
-     * @return MotorTaxRate 税率
+     * Get <p>税率</p> 
+     * @return MotorTaxRate <p>税率</p>
      */
     public String getMotorTaxRate() {
         return this.MotorTaxRate;
     }
 
     /**
-     * Set 税率
-     * @param MotorTaxRate 税率
+     * Set <p>税率</p>
+     * @param MotorTaxRate <p>税率</p>
      */
     public void setMotorTaxRate(String MotorTaxRate) {
         this.MotorTaxRate = MotorTaxRate;
     }
 
     /**
-     * Get 银行账号 
-     * @return MotorBankName 银行账号
+     * Get <p>银行账号</p> 
+     * @return MotorBankName <p>银行账号</p>
      */
     public String getMotorBankName() {
         return this.MotorBankName;
     }
 
     /**
-     * Set 银行账号
-     * @param MotorBankName 银行账号
+     * Set <p>银行账号</p>
+     * @param MotorBankName <p>银行账号</p>
      */
     public void setMotorBankName(String MotorBankName) {
         this.MotorBankName = MotorBankName;
     }
 
     /**
-     * Get 开户行 
-     * @return MotorBankAccount 开户行
+     * Get <p>开户行</p> 
+     * @return MotorBankAccount <p>开户行</p>
      */
     public String getMotorBankAccount() {
         return this.MotorBankAccount;
     }
 
     /**
-     * Set 开户行
-     * @param MotorBankAccount 开户行
+     * Set <p>开户行</p>
+     * @param MotorBankAccount <p>开户行</p>
      */
     public void setMotorBankAccount(String MotorBankAccount) {
         this.MotorBankAccount = MotorBankAccount;
     }
 
     /**
-     * Get 销售地址 
-     * @return SellerAddress 销售地址
+     * Get <p>销售地址</p> 
+     * @return SellerAddress <p>销售地址</p>
      */
     public String getSellerAddress() {
         return this.SellerAddress;
     }
 
     /**
-     * Set 销售地址
-     * @param SellerAddress 销售地址
+     * Set <p>销售地址</p>
+     * @param SellerAddress <p>销售地址</p>
      */
     public void setSellerAddress(String SellerAddress) {
         this.SellerAddress = SellerAddress;
     }
 
     /**
-     * Get 销售电话 
-     * @return SellerTel 销售电话
+     * Get <p>销售电话</p> 
+     * @return SellerTel <p>销售电话</p>
      */
     public String getSellerTel() {
         return this.SellerTel;
     }
 
     /**
-     * Set 销售电话
-     * @param SellerTel 销售电话
+     * Set <p>销售电话</p>
+     * @param SellerTel <p>销售电话</p>
      */
     public void setSellerTel(String SellerTel) {
         this.SellerTel = SellerTel;
     }
 
     /**
-     * Get 购方身份证 
-     * @return BuyerNo 购方身份证
+     * Get <p>购方身份证</p> 
+     * @return BuyerNo <p>购方身份证</p>
      */
     public String getBuyerNo() {
         return this.BuyerNo;
     }
 
     /**
-     * Set 购方身份证
-     * @param BuyerNo 购方身份证
+     * Set <p>购方身份证</p>
+     * @param BuyerNo <p>购方身份证</p>
      */
     public void setBuyerNo(String BuyerNo) {
         this.BuyerNo = BuyerNo;

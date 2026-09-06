@@ -31,14 +31,14 @@ public class ModifyDBCustomClusterTagsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
+    * <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
     */
     @SerializedName("AddTags")
     @Expose
     private Tag [] AddTags;
 
     /**
-    * <p>为 DB Custom 集群删除的标签Key</p>
+    * <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
     */
     @SerializedName("DeleteTagKeys")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyDBCustomClusterTagsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p> 
-     * @return AddTags <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
+     * Get <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p> 
+     * @return AddTags <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public Tag [] getAddTags() {
         return this.AddTags;
     }
 
     /**
-     * Set <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
-     * @param AddTags <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
+     * Set <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+     * @param AddTags <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public void setAddTags(Tag [] AddTags) {
         this.AddTags = AddTags;
     }
 
     /**
-     * Get <p>为 DB Custom 集群删除的标签Key</p> 
-     * @return DeleteTagKeys <p>为 DB Custom 集群删除的标签Key</p>
+     * Get <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p> 
+     * @return DeleteTagKeys <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public String [] getDeleteTagKeys() {
         return this.DeleteTagKeys;
     }
 
     /**
-     * Set <p>为 DB Custom 集群删除的标签Key</p>
-     * @param DeleteTagKeys <p>为 DB Custom 集群删除的标签Key</p>
+     * Set <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+     * @param DeleteTagKeys <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public void setDeleteTagKeys(String [] DeleteTagKeys) {
         this.DeleteTagKeys = DeleteTagKeys;

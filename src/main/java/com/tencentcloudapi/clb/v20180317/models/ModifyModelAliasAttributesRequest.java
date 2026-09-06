@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyModelAliasAttributesRequest extends AbstractModel {
 
     /**
-    * <p>模型积分系数配置。</p><p>必填，至少包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code>、<code>OutputCoefficient</code> 中的一个字段，未传字段保持原值。</p><p><code>InputCoefficient</code> 为非缓存命中输入积分系数。</p><p><code>InputCachedCoefficient</code> 为缓存命中输入积分系数，用于 provider prompt cache 命中的输入 token。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>各字段取值范围：[0, 5000]，仅支持整数，0 表示该类 token 不计积分。</p>
+    * <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p>
     */
     @SerializedName("Coefficient")
     @Expose
     private Coefficient Coefficient;
 
     /**
-    * <p>模型别名列表。</p><p>不传 <code>ServiceProviderIds</code>（按 ModelAlias 账号维度修改）时支持数组批量，同一份 Coefficient 应用到多个别名。</p><p>传入 <code>ServiceProviderIds</code>（按 ServiceProvider 维度修改）时只能传 1 个别名，锁定唯一 model 别名；去重后不等于 1 个将返回 InvalidParameter。</p>
+    * <p>模型别名</p>
     */
     @SerializedName("ModelAliasNames")
     @Expose
@@ -45,32 +45,39 @@ public class ModifyModelAliasAttributesRequest extends AbstractModel {
     private String [] ServiceProviderIds;
 
     /**
-     * Get <p>模型积分系数配置。</p><p>必填，至少包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code>、<code>OutputCoefficient</code> 中的一个字段，未传字段保持原值。</p><p><code>InputCoefficient</code> 为非缓存命中输入积分系数。</p><p><code>InputCachedCoefficient</code> 为缓存命中输入积分系数，用于 provider prompt cache 命中的输入 token。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>各字段取值范围：[0, 5000]，仅支持整数，0 表示该类 token 不计积分。</p> 
-     * @return Coefficient <p>模型积分系数配置。</p><p>必填，至少包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code>、<code>OutputCoefficient</code> 中的一个字段，未传字段保持原值。</p><p><code>InputCoefficient</code> 为非缓存命中输入积分系数。</p><p><code>InputCachedCoefficient</code> 为缓存命中输入积分系数，用于 provider prompt cache 命中的输入 token。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>各字段取值范围：[0, 5000]，仅支持整数，0 表示该类 token 不计积分。</p>
+    * <p>模型能力</p>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
+     * Get <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p> 
+     * @return Coefficient <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p>
      */
     public Coefficient getCoefficient() {
         return this.Coefficient;
     }
 
     /**
-     * Set <p>模型积分系数配置。</p><p>必填，至少包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code>、<code>OutputCoefficient</code> 中的一个字段，未传字段保持原值。</p><p><code>InputCoefficient</code> 为非缓存命中输入积分系数。</p><p><code>InputCachedCoefficient</code> 为缓存命中输入积分系数，用于 provider prompt cache 命中的输入 token。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>各字段取值范围：[0, 5000]，仅支持整数，0 表示该类 token 不计积分。</p>
-     * @param Coefficient <p>模型积分系数配置。</p><p>必填，至少包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code>、<code>OutputCoefficient</code> 中的一个字段，未传字段保持原值。</p><p><code>InputCoefficient</code> 为非缓存命中输入积分系数。</p><p><code>InputCachedCoefficient</code> 为缓存命中输入积分系数，用于 provider prompt cache 命中的输入 token。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>各字段取值范围：[0, 5000]，仅支持整数，0 表示该类 token 不计积分。</p>
+     * Set <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p>
+     * @param Coefficient <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p>
      */
     public void setCoefficient(Coefficient Coefficient) {
         this.Coefficient = Coefficient;
     }
 
     /**
-     * Get <p>模型别名列表。</p><p>不传 <code>ServiceProviderIds</code>（按 ModelAlias 账号维度修改）时支持数组批量，同一份 Coefficient 应用到多个别名。</p><p>传入 <code>ServiceProviderIds</code>（按 ServiceProvider 维度修改）时只能传 1 个别名，锁定唯一 model 别名；去重后不等于 1 个将返回 InvalidParameter。</p> 
-     * @return ModelAliasNames <p>模型别名列表。</p><p>不传 <code>ServiceProviderIds</code>（按 ModelAlias 账号维度修改）时支持数组批量，同一份 Coefficient 应用到多个别名。</p><p>传入 <code>ServiceProviderIds</code>（按 ServiceProvider 维度修改）时只能传 1 个别名，锁定唯一 model 别名；去重后不等于 1 个将返回 InvalidParameter。</p>
+     * Get <p>模型别名</p> 
+     * @return ModelAliasNames <p>模型别名</p>
      */
     public String [] getModelAliasNames() {
         return this.ModelAliasNames;
     }
 
     /**
-     * Set <p>模型别名列表。</p><p>不传 <code>ServiceProviderIds</code>（按 ModelAlias 账号维度修改）时支持数组批量，同一份 Coefficient 应用到多个别名。</p><p>传入 <code>ServiceProviderIds</code>（按 ServiceProvider 维度修改）时只能传 1 个别名，锁定唯一 model 别名；去重后不等于 1 个将返回 InvalidParameter。</p>
-     * @param ModelAliasNames <p>模型别名列表。</p><p>不传 <code>ServiceProviderIds</code>（按 ModelAlias 账号维度修改）时支持数组批量，同一份 Coefficient 应用到多个别名。</p><p>传入 <code>ServiceProviderIds</code>（按 ServiceProvider 维度修改）时只能传 1 个别名，锁定唯一 model 别名；去重后不等于 1 个将返回 InvalidParameter。</p>
+     * Set <p>模型别名</p>
+     * @param ModelAliasNames <p>模型别名</p>
      */
     public void setModelAliasNames(String [] ModelAliasNames) {
         this.ModelAliasNames = ModelAliasNames;
@@ -90,6 +97,22 @@ public class ModifyModelAliasAttributesRequest extends AbstractModel {
      */
     public void setServiceProviderIds(String [] ServiceProviderIds) {
         this.ServiceProviderIds = ServiceProviderIds;
+    }
+
+    /**
+     * Get <p>模型能力</p> 
+     * @return Capability <p>模型能力</p>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>模型能力</p>
+     * @param Capability <p>模型能力</p>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
     }
 
     public ModifyModelAliasAttributesRequest() {
@@ -115,6 +138,9 @@ public class ModifyModelAliasAttributesRequest extends AbstractModel {
                 this.ServiceProviderIds[i] = new String(source.ServiceProviderIds[i]);
             }
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
     }
 
 
@@ -125,6 +151,7 @@ public class ModifyModelAliasAttributesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Coefficient.", this.Coefficient);
         this.setParamArraySimple(map, prefix + "ModelAliasNames.", this.ModelAliasNames);
         this.setParamArraySimple(map, prefix + "ServiceProviderIds.", this.ServiceProviderIds);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
 
     }
 }

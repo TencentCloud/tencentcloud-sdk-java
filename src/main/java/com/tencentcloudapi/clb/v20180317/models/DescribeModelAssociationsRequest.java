@@ -45,6 +45,13 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * <p>模型输出模态</p>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
      * Get <p>模型路由实例ID</p> 
      * @return ModelRouterId <p>模型路由实例ID</p>
      */
@@ -92,6 +99,22 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get <p>模型输出模态</p> 
+     * @return Capability <p>模型输出模态</p>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>模型输出模态</p>
+     * @param Capability <p>模型输出模态</p>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
     public DescribeModelAssociationsRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
 
     }
 }

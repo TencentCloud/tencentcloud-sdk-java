@@ -66,6 +66,20 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
+    * <p>模型输出模态</p>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
+    * <p>embedding 模态配置</p>
+    */
+    @SerializedName("EmbeddingConfig")
+    @Expose
+    private EmbeddingConfig EmbeddingConfig;
+
+    /**
      * Get <p>模型路由ID</p> 
      * @return ModelRouterId <p>模型路由ID</p>
      */
@@ -161,6 +175,38 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.Bandwidth = Bandwidth;
     }
 
+    /**
+     * Get <p>模型输出模态</p> 
+     * @return Capability <p>模型输出模态</p>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>模型输出模态</p>
+     * @param Capability <p>模型输出模态</p>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
+    /**
+     * Get <p>embedding 模态配置</p> 
+     * @return EmbeddingConfig <p>embedding 模态配置</p>
+     */
+    public EmbeddingConfig getEmbeddingConfig() {
+        return this.EmbeddingConfig;
+    }
+
+    /**
+     * Set <p>embedding 模态配置</p>
+     * @param EmbeddingConfig <p>embedding 模态配置</p>
+     */
+    public void setEmbeddingConfig(EmbeddingConfig EmbeddingConfig) {
+        this.EmbeddingConfig = EmbeddingConfig;
+    }
+
     public ModifyModelRouterAttributesRequest() {
     }
 
@@ -187,6 +233,12 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
+        if (source.EmbeddingConfig != null) {
+            this.EmbeddingConfig = new EmbeddingConfig(source.EmbeddingConfig);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
         this.setParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
+        this.setParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
 
     }
 }

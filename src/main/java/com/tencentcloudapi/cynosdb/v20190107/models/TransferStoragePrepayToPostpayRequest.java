@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
 
+    /**
+    * <p>集群id</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public TransferStoragePrepayToPostpayRequest() {
     }
 
@@ -31,6 +54,9 @@ public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TransferStoragePrepayToPostpayRequest(TransferStoragePrepayToPostpayRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

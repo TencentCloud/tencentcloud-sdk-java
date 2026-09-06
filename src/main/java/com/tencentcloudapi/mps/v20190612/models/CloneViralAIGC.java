@@ -31,7 +31,7 @@ public class CloneViralAIGC extends AbstractModel {
     private Long Duration;
 
     /**
-    * <p>宽高比。可选 16:9/4:3/1:1/3:4/9:16/21:9/adaptive</p>
+    * <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -68,16 +68,16 @@ public class CloneViralAIGC extends AbstractModel {
     }
 
     /**
-     * Get <p>宽高比。可选 16:9/4:3/1:1/3:4/9:16/21:9/adaptive</p> 
-     * @return AspectRatio <p>宽高比。可选 16:9/4:3/1:1/3:4/9:16/21:9/adaptive</p>
+     * Get <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p> 
+     * @return AspectRatio <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set <p>宽高比。可选 16:9/4:3/1:1/3:4/9:16/21:9/adaptive</p>
-     * @param AspectRatio <p>宽高比。可选 16:9/4:3/1:1/3:4/9:16/21:9/adaptive</p>
+     * Set <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
+     * @param AspectRatio <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;

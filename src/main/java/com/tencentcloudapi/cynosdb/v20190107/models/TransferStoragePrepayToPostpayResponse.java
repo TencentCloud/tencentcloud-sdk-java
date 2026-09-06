@@ -24,11 +24,123 @@ import java.util.HashMap;
 public class TransferStoragePrepayToPostpayResponse extends AbstractModel {
 
     /**
+    * <p>预付费总订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BigDealIds")
+    @Expose
+    private String [] BigDealIds;
+
+    /**
+    * <p>订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealNames")
+    @Expose
+    private String [] DealNames;
+
+    /**
+    * <p>资源id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceIds")
+    @Expose
+    private String [] ResourceIds;
+
+    /**
+    * <p>集群id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIds")
+    @Expose
+    private String [] ClusterIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>预付费总订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BigDealIds <p>预付费总订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBigDealIds() {
+        return this.BigDealIds;
+    }
+
+    /**
+     * Set <p>预付费总订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BigDealIds <p>预付费总订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBigDealIds(String [] BigDealIds) {
+        this.BigDealIds = BigDealIds;
+    }
+
+    /**
+     * Get <p>订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealNames <p>订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDealNames() {
+        return this.DealNames;
+    }
+
+    /**
+     * Set <p>订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealNames <p>订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
+    }
+
+    /**
+     * Get <p>资源id</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceIds <p>资源id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getResourceIds() {
+        return this.ResourceIds;
+    }
+
+    /**
+     * Set <p>资源id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceIds <p>资源id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceIds(String [] ResourceIds) {
+        this.ResourceIds = ResourceIds;
+    }
+
+    /**
+     * Get <p>集群id</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIds <p>集群id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getClusterIds() {
+        return this.ClusterIds;
+    }
+
+    /**
+     * Set <p>集群id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIds <p>集群id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +166,30 @@ public class TransferStoragePrepayToPostpayResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TransferStoragePrepayToPostpayResponse(TransferStoragePrepayToPostpayResponse source) {
+        if (source.BigDealIds != null) {
+            this.BigDealIds = new String[source.BigDealIds.length];
+            for (int i = 0; i < source.BigDealIds.length; i++) {
+                this.BigDealIds[i] = new String(source.BigDealIds[i]);
+            }
+        }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+        if (source.ResourceIds != null) {
+            this.ResourceIds = new String[source.ResourceIds.length];
+            for (int i = 0; i < source.ResourceIds.length; i++) {
+                this.ResourceIds[i] = new String(source.ResourceIds[i]);
+            }
+        }
+        if (source.ClusterIds != null) {
+            this.ClusterIds = new String[source.ClusterIds.length];
+            for (int i = 0; i < source.ClusterIds.length; i++) {
+                this.ClusterIds[i] = new String(source.ClusterIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +200,10 @@ public class TransferStoragePrepayToPostpayResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

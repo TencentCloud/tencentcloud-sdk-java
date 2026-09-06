@@ -45,6 +45,13 @@ public class DescribeCloneViralTaskResponse extends AbstractModel {
     private String [] VideoUrls;
 
     /**
+    * <p>任务请求体</p>
+    */
+    @SerializedName("RequestBody")
+    @Expose
+    private String RequestBody;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class DescribeCloneViralTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>任务请求体</p> 
+     * @return RequestBody <p>任务请求体</p>
+     */
+    public String getRequestBody() {
+        return this.RequestBody;
+    }
+
+    /**
+     * Set <p>任务请求体</p>
+     * @param RequestBody <p>任务请求体</p>
+     */
+    public void setRequestBody(String RequestBody) {
+        this.RequestBody = RequestBody;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -135,6 +158,9 @@ public class DescribeCloneViralTaskResponse extends AbstractModel {
                 this.VideoUrls[i] = new String(source.VideoUrls[i]);
             }
         }
+        if (source.RequestBody != null) {
+            this.RequestBody = new String(source.RequestBody);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class DescribeCloneViralTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArraySimple(map, prefix + "VideoUrls.", this.VideoUrls);
+        this.setParamSimple(map, prefix + "RequestBody", this.RequestBody);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

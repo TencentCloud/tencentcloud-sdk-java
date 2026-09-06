@@ -24,555 +24,853 @@ import java.util.HashMap;
 public class UsedVehicleInvoiceInfo extends AbstractModel {
 
     /**
-    * 所属税局
+    * <p>所属税局</p>
     */
     @SerializedName("TaxBureau")
     @Expose
     private String TaxBureau;
 
     /**
-    * 买方单位/个人
+    * <p>买方单位/个人</p>
     */
     @SerializedName("Buyer")
     @Expose
     private String Buyer;
 
     /**
-    * 买方单位代码/身份证号码
+    * <p>买方单位代码/身份证号码</p>
     */
     @SerializedName("BuyerNo")
     @Expose
     private String BuyerNo;
 
     /**
-    * 买方单位/个人地址
+    * <p>买方单位/个人地址</p>
     */
     @SerializedName("BuyerAddress")
     @Expose
     private String BuyerAddress;
 
     /**
-    * 买方单位电话
+    * <p>买方单位电话</p>
     */
     @SerializedName("BuyerTel")
     @Expose
     private String BuyerTel;
 
     /**
-    * 卖方单位/个人
+    * <p>卖方单位/个人</p>
     */
     @SerializedName("Seller")
     @Expose
     private String Seller;
 
     /**
-    * 卖方单位代码/身份证号码
+    * <p>卖方单位代码/身份证号码</p>
     */
     @SerializedName("SellerNo")
     @Expose
     private String SellerNo;
 
     /**
-    * 卖方单位/个人地址
+    * <p>卖方单位/个人地址</p>
     */
     @SerializedName("SellerAddress")
     @Expose
     private String SellerAddress;
 
     /**
-    * 卖方单位电话
+    * <p>卖方单位电话</p>
     */
     @SerializedName("SellerTel")
     @Expose
     private String SellerTel;
 
     /**
-    * 车牌照号
+    * <p>车牌照号</p>
     */
     @SerializedName("VehicleLicenseNo")
     @Expose
     private String VehicleLicenseNo;
 
     /**
-    * 登记证号
+    * <p>登记证号</p>
     */
     @SerializedName("RegisterNo")
     @Expose
     private String RegisterNo;
 
     /**
-    * 车架号/车辆识别代码
+    * <p>车架号/车辆识别代码</p>
     */
     @SerializedName("VehicleIdentifyNo")
     @Expose
     private String VehicleIdentifyNo;
 
     /**
-    * 转入地车辆管理所名称
+    * <p>转入地车辆管理所名称</p>
     */
     @SerializedName("ManagementOffice")
     @Expose
     private String ManagementOffice;
 
     /**
-    * 车价合计
+    * <p>车价合计</p>
     */
     @SerializedName("VehicleTotalPrice")
     @Expose
     private String VehicleTotalPrice;
 
     /**
-    * 经营、拍卖单位
+    * <p>经营、拍卖单位</p>
     */
     @SerializedName("Auctioneer")
     @Expose
     private String Auctioneer;
 
     /**
-    * 经营、拍卖单位地址
+    * <p>经营、拍卖单位地址</p>
     */
     @SerializedName("AuctioneerAddress")
     @Expose
     private String AuctioneerAddress;
 
     /**
-    * 经营、拍卖单位纳税人识别号
+    * <p>经营、拍卖单位纳税人识别号</p>
     */
     @SerializedName("AuctioneerTaxpayerNum")
     @Expose
     private String AuctioneerTaxpayerNum;
 
     /**
-    * 经营、拍卖单位开户银行、账号
+    * <p>经营、拍卖单位开户银行、账号</p>
     */
     @SerializedName("AuctioneerBankAccount")
     @Expose
     private String AuctioneerBankAccount;
 
     /**
-    * 经营、拍卖单位电话
+    * <p>经营、拍卖单位电话</p>
     */
     @SerializedName("AuctioneerTel")
     @Expose
     private String AuctioneerTel;
 
     /**
-    * 二手车市场
+    * <p>二手车市场</p>
     */
     @SerializedName("Market")
     @Expose
     private String Market;
 
     /**
-    * 二手车市场纳税人识别号
+    * <p>二手车市场纳税人识别号</p>
     */
     @SerializedName("MarketTaxpayerNum")
     @Expose
     private String MarketTaxpayerNum;
 
     /**
-    * 二手车市场地址
+    * <p>二手车市场地址</p>
     */
     @SerializedName("MarketAddress")
     @Expose
     private String MarketAddress;
 
     /**
-    * 二手车市场开户银行账号
+    * <p>二手车市场开户银行账号</p>
     */
     @SerializedName("MarketBankAccount")
     @Expose
     private String MarketBankAccount;
 
     /**
-    * 二手车市场电话
+    * <p>二手车市场电话</p>
     */
     @SerializedName("MarketTel")
     @Expose
     private String MarketTel;
 
     /**
-     * Get 所属税局 
-     * @return TaxBureau 所属税局
+    * <p>车价合计中文大写</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VehicleTotalPriceCN")
+    @Expose
+    private String VehicleTotalPriceCN;
+
+    /**
+    * <p>发票风险等级</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InvoiceRiskLevel")
+    @Expose
+    private String InvoiceRiskLevel;
+
+    /**
+    * <p>车辆类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CarType")
+    @Expose
+    private String CarType;
+
+    /**
+    * <p>厂牌型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlateModel")
+    @Expose
+    private String PlateModel;
+
+    /**
+    * <p>作废人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AbandonerName")
+    @Expose
+    private String AbandonerName;
+
+    /**
+    * <p>作废日期</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AbandonDate")
+    @Expose
+    private String AbandonDate;
+
+    /**
+    * <p>开票方类型：1 经营单位，2 拍卖单位，03 二手车市场。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IssuerType")
+    @Expose
+    private String IssuerType;
+
+    /**
+    * <p>开票方纳税人识别号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IssuerTaxCode")
+    @Expose
+    private String IssuerTaxCode;
+
+    /**
+    * <p>自行编码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomCode")
+    @Expose
+    private String CustomCode;
+
+    /**
+    * <p>商品编码</p>
+    */
+    @SerializedName("TaxClassifyCode")
+    @Expose
+    private String TaxClassifyCode;
+
+    /**
+    * <p>零税率标识：空：非零税率，0：出口零税，1：免税，2：不征税，3 普通零税率</p>
+    */
+    @SerializedName("ZeroTaxRateMark")
+    @Expose
+    private String ZeroTaxRateMark;
+
+    /**
+     * Get <p>所属税局</p> 
+     * @return TaxBureau <p>所属税局</p>
      */
     public String getTaxBureau() {
         return this.TaxBureau;
     }
 
     /**
-     * Set 所属税局
-     * @param TaxBureau 所属税局
+     * Set <p>所属税局</p>
+     * @param TaxBureau <p>所属税局</p>
      */
     public void setTaxBureau(String TaxBureau) {
         this.TaxBureau = TaxBureau;
     }
 
     /**
-     * Get 买方单位/个人 
-     * @return Buyer 买方单位/个人
+     * Get <p>买方单位/个人</p> 
+     * @return Buyer <p>买方单位/个人</p>
      */
     public String getBuyer() {
         return this.Buyer;
     }
 
     /**
-     * Set 买方单位/个人
-     * @param Buyer 买方单位/个人
+     * Set <p>买方单位/个人</p>
+     * @param Buyer <p>买方单位/个人</p>
      */
     public void setBuyer(String Buyer) {
         this.Buyer = Buyer;
     }
 
     /**
-     * Get 买方单位代码/身份证号码 
-     * @return BuyerNo 买方单位代码/身份证号码
+     * Get <p>买方单位代码/身份证号码</p> 
+     * @return BuyerNo <p>买方单位代码/身份证号码</p>
      */
     public String getBuyerNo() {
         return this.BuyerNo;
     }
 
     /**
-     * Set 买方单位代码/身份证号码
-     * @param BuyerNo 买方单位代码/身份证号码
+     * Set <p>买方单位代码/身份证号码</p>
+     * @param BuyerNo <p>买方单位代码/身份证号码</p>
      */
     public void setBuyerNo(String BuyerNo) {
         this.BuyerNo = BuyerNo;
     }
 
     /**
-     * Get 买方单位/个人地址 
-     * @return BuyerAddress 买方单位/个人地址
+     * Get <p>买方单位/个人地址</p> 
+     * @return BuyerAddress <p>买方单位/个人地址</p>
      */
     public String getBuyerAddress() {
         return this.BuyerAddress;
     }
 
     /**
-     * Set 买方单位/个人地址
-     * @param BuyerAddress 买方单位/个人地址
+     * Set <p>买方单位/个人地址</p>
+     * @param BuyerAddress <p>买方单位/个人地址</p>
      */
     public void setBuyerAddress(String BuyerAddress) {
         this.BuyerAddress = BuyerAddress;
     }
 
     /**
-     * Get 买方单位电话 
-     * @return BuyerTel 买方单位电话
+     * Get <p>买方单位电话</p> 
+     * @return BuyerTel <p>买方单位电话</p>
      */
     public String getBuyerTel() {
         return this.BuyerTel;
     }
 
     /**
-     * Set 买方单位电话
-     * @param BuyerTel 买方单位电话
+     * Set <p>买方单位电话</p>
+     * @param BuyerTel <p>买方单位电话</p>
      */
     public void setBuyerTel(String BuyerTel) {
         this.BuyerTel = BuyerTel;
     }
 
     /**
-     * Get 卖方单位/个人 
-     * @return Seller 卖方单位/个人
+     * Get <p>卖方单位/个人</p> 
+     * @return Seller <p>卖方单位/个人</p>
      */
     public String getSeller() {
         return this.Seller;
     }
 
     /**
-     * Set 卖方单位/个人
-     * @param Seller 卖方单位/个人
+     * Set <p>卖方单位/个人</p>
+     * @param Seller <p>卖方单位/个人</p>
      */
     public void setSeller(String Seller) {
         this.Seller = Seller;
     }
 
     /**
-     * Get 卖方单位代码/身份证号码 
-     * @return SellerNo 卖方单位代码/身份证号码
+     * Get <p>卖方单位代码/身份证号码</p> 
+     * @return SellerNo <p>卖方单位代码/身份证号码</p>
      */
     public String getSellerNo() {
         return this.SellerNo;
     }
 
     /**
-     * Set 卖方单位代码/身份证号码
-     * @param SellerNo 卖方单位代码/身份证号码
+     * Set <p>卖方单位代码/身份证号码</p>
+     * @param SellerNo <p>卖方单位代码/身份证号码</p>
      */
     public void setSellerNo(String SellerNo) {
         this.SellerNo = SellerNo;
     }
 
     /**
-     * Get 卖方单位/个人地址 
-     * @return SellerAddress 卖方单位/个人地址
+     * Get <p>卖方单位/个人地址</p> 
+     * @return SellerAddress <p>卖方单位/个人地址</p>
      */
     public String getSellerAddress() {
         return this.SellerAddress;
     }
 
     /**
-     * Set 卖方单位/个人地址
-     * @param SellerAddress 卖方单位/个人地址
+     * Set <p>卖方单位/个人地址</p>
+     * @param SellerAddress <p>卖方单位/个人地址</p>
      */
     public void setSellerAddress(String SellerAddress) {
         this.SellerAddress = SellerAddress;
     }
 
     /**
-     * Get 卖方单位电话 
-     * @return SellerTel 卖方单位电话
+     * Get <p>卖方单位电话</p> 
+     * @return SellerTel <p>卖方单位电话</p>
      */
     public String getSellerTel() {
         return this.SellerTel;
     }
 
     /**
-     * Set 卖方单位电话
-     * @param SellerTel 卖方单位电话
+     * Set <p>卖方单位电话</p>
+     * @param SellerTel <p>卖方单位电话</p>
      */
     public void setSellerTel(String SellerTel) {
         this.SellerTel = SellerTel;
     }
 
     /**
-     * Get 车牌照号 
-     * @return VehicleLicenseNo 车牌照号
+     * Get <p>车牌照号</p> 
+     * @return VehicleLicenseNo <p>车牌照号</p>
      */
     public String getVehicleLicenseNo() {
         return this.VehicleLicenseNo;
     }
 
     /**
-     * Set 车牌照号
-     * @param VehicleLicenseNo 车牌照号
+     * Set <p>车牌照号</p>
+     * @param VehicleLicenseNo <p>车牌照号</p>
      */
     public void setVehicleLicenseNo(String VehicleLicenseNo) {
         this.VehicleLicenseNo = VehicleLicenseNo;
     }
 
     /**
-     * Get 登记证号 
-     * @return RegisterNo 登记证号
+     * Get <p>登记证号</p> 
+     * @return RegisterNo <p>登记证号</p>
      */
     public String getRegisterNo() {
         return this.RegisterNo;
     }
 
     /**
-     * Set 登记证号
-     * @param RegisterNo 登记证号
+     * Set <p>登记证号</p>
+     * @param RegisterNo <p>登记证号</p>
      */
     public void setRegisterNo(String RegisterNo) {
         this.RegisterNo = RegisterNo;
     }
 
     /**
-     * Get 车架号/车辆识别代码 
-     * @return VehicleIdentifyNo 车架号/车辆识别代码
+     * Get <p>车架号/车辆识别代码</p> 
+     * @return VehicleIdentifyNo <p>车架号/车辆识别代码</p>
      */
     public String getVehicleIdentifyNo() {
         return this.VehicleIdentifyNo;
     }
 
     /**
-     * Set 车架号/车辆识别代码
-     * @param VehicleIdentifyNo 车架号/车辆识别代码
+     * Set <p>车架号/车辆识别代码</p>
+     * @param VehicleIdentifyNo <p>车架号/车辆识别代码</p>
      */
     public void setVehicleIdentifyNo(String VehicleIdentifyNo) {
         this.VehicleIdentifyNo = VehicleIdentifyNo;
     }
 
     /**
-     * Get 转入地车辆管理所名称 
-     * @return ManagementOffice 转入地车辆管理所名称
+     * Get <p>转入地车辆管理所名称</p> 
+     * @return ManagementOffice <p>转入地车辆管理所名称</p>
      */
     public String getManagementOffice() {
         return this.ManagementOffice;
     }
 
     /**
-     * Set 转入地车辆管理所名称
-     * @param ManagementOffice 转入地车辆管理所名称
+     * Set <p>转入地车辆管理所名称</p>
+     * @param ManagementOffice <p>转入地车辆管理所名称</p>
      */
     public void setManagementOffice(String ManagementOffice) {
         this.ManagementOffice = ManagementOffice;
     }
 
     /**
-     * Get 车价合计 
-     * @return VehicleTotalPrice 车价合计
+     * Get <p>车价合计</p> 
+     * @return VehicleTotalPrice <p>车价合计</p>
      */
     public String getVehicleTotalPrice() {
         return this.VehicleTotalPrice;
     }
 
     /**
-     * Set 车价合计
-     * @param VehicleTotalPrice 车价合计
+     * Set <p>车价合计</p>
+     * @param VehicleTotalPrice <p>车价合计</p>
      */
     public void setVehicleTotalPrice(String VehicleTotalPrice) {
         this.VehicleTotalPrice = VehicleTotalPrice;
     }
 
     /**
-     * Get 经营、拍卖单位 
-     * @return Auctioneer 经营、拍卖单位
+     * Get <p>经营、拍卖单位</p> 
+     * @return Auctioneer <p>经营、拍卖单位</p>
      */
     public String getAuctioneer() {
         return this.Auctioneer;
     }
 
     /**
-     * Set 经营、拍卖单位
-     * @param Auctioneer 经营、拍卖单位
+     * Set <p>经营、拍卖单位</p>
+     * @param Auctioneer <p>经营、拍卖单位</p>
      */
     public void setAuctioneer(String Auctioneer) {
         this.Auctioneer = Auctioneer;
     }
 
     /**
-     * Get 经营、拍卖单位地址 
-     * @return AuctioneerAddress 经营、拍卖单位地址
+     * Get <p>经营、拍卖单位地址</p> 
+     * @return AuctioneerAddress <p>经营、拍卖单位地址</p>
      */
     public String getAuctioneerAddress() {
         return this.AuctioneerAddress;
     }
 
     /**
-     * Set 经营、拍卖单位地址
-     * @param AuctioneerAddress 经营、拍卖单位地址
+     * Set <p>经营、拍卖单位地址</p>
+     * @param AuctioneerAddress <p>经营、拍卖单位地址</p>
      */
     public void setAuctioneerAddress(String AuctioneerAddress) {
         this.AuctioneerAddress = AuctioneerAddress;
     }
 
     /**
-     * Get 经营、拍卖单位纳税人识别号 
-     * @return AuctioneerTaxpayerNum 经营、拍卖单位纳税人识别号
+     * Get <p>经营、拍卖单位纳税人识别号</p> 
+     * @return AuctioneerTaxpayerNum <p>经营、拍卖单位纳税人识别号</p>
      */
     public String getAuctioneerTaxpayerNum() {
         return this.AuctioneerTaxpayerNum;
     }
 
     /**
-     * Set 经营、拍卖单位纳税人识别号
-     * @param AuctioneerTaxpayerNum 经营、拍卖单位纳税人识别号
+     * Set <p>经营、拍卖单位纳税人识别号</p>
+     * @param AuctioneerTaxpayerNum <p>经营、拍卖单位纳税人识别号</p>
      */
     public void setAuctioneerTaxpayerNum(String AuctioneerTaxpayerNum) {
         this.AuctioneerTaxpayerNum = AuctioneerTaxpayerNum;
     }
 
     /**
-     * Get 经营、拍卖单位开户银行、账号 
-     * @return AuctioneerBankAccount 经营、拍卖单位开户银行、账号
+     * Get <p>经营、拍卖单位开户银行、账号</p> 
+     * @return AuctioneerBankAccount <p>经营、拍卖单位开户银行、账号</p>
      */
     public String getAuctioneerBankAccount() {
         return this.AuctioneerBankAccount;
     }
 
     /**
-     * Set 经营、拍卖单位开户银行、账号
-     * @param AuctioneerBankAccount 经营、拍卖单位开户银行、账号
+     * Set <p>经营、拍卖单位开户银行、账号</p>
+     * @param AuctioneerBankAccount <p>经营、拍卖单位开户银行、账号</p>
      */
     public void setAuctioneerBankAccount(String AuctioneerBankAccount) {
         this.AuctioneerBankAccount = AuctioneerBankAccount;
     }
 
     /**
-     * Get 经营、拍卖单位电话 
-     * @return AuctioneerTel 经营、拍卖单位电话
+     * Get <p>经营、拍卖单位电话</p> 
+     * @return AuctioneerTel <p>经营、拍卖单位电话</p>
      */
     public String getAuctioneerTel() {
         return this.AuctioneerTel;
     }
 
     /**
-     * Set 经营、拍卖单位电话
-     * @param AuctioneerTel 经营、拍卖单位电话
+     * Set <p>经营、拍卖单位电话</p>
+     * @param AuctioneerTel <p>经营、拍卖单位电话</p>
      */
     public void setAuctioneerTel(String AuctioneerTel) {
         this.AuctioneerTel = AuctioneerTel;
     }
 
     /**
-     * Get 二手车市场 
-     * @return Market 二手车市场
+     * Get <p>二手车市场</p> 
+     * @return Market <p>二手车市场</p>
      */
     public String getMarket() {
         return this.Market;
     }
 
     /**
-     * Set 二手车市场
-     * @param Market 二手车市场
+     * Set <p>二手车市场</p>
+     * @param Market <p>二手车市场</p>
      */
     public void setMarket(String Market) {
         this.Market = Market;
     }
 
     /**
-     * Get 二手车市场纳税人识别号 
-     * @return MarketTaxpayerNum 二手车市场纳税人识别号
+     * Get <p>二手车市场纳税人识别号</p> 
+     * @return MarketTaxpayerNum <p>二手车市场纳税人识别号</p>
      */
     public String getMarketTaxpayerNum() {
         return this.MarketTaxpayerNum;
     }
 
     /**
-     * Set 二手车市场纳税人识别号
-     * @param MarketTaxpayerNum 二手车市场纳税人识别号
+     * Set <p>二手车市场纳税人识别号</p>
+     * @param MarketTaxpayerNum <p>二手车市场纳税人识别号</p>
      */
     public void setMarketTaxpayerNum(String MarketTaxpayerNum) {
         this.MarketTaxpayerNum = MarketTaxpayerNum;
     }
 
     /**
-     * Get 二手车市场地址 
-     * @return MarketAddress 二手车市场地址
+     * Get <p>二手车市场地址</p> 
+     * @return MarketAddress <p>二手车市场地址</p>
      */
     public String getMarketAddress() {
         return this.MarketAddress;
     }
 
     /**
-     * Set 二手车市场地址
-     * @param MarketAddress 二手车市场地址
+     * Set <p>二手车市场地址</p>
+     * @param MarketAddress <p>二手车市场地址</p>
      */
     public void setMarketAddress(String MarketAddress) {
         this.MarketAddress = MarketAddress;
     }
 
     /**
-     * Get 二手车市场开户银行账号 
-     * @return MarketBankAccount 二手车市场开户银行账号
+     * Get <p>二手车市场开户银行账号</p> 
+     * @return MarketBankAccount <p>二手车市场开户银行账号</p>
      */
     public String getMarketBankAccount() {
         return this.MarketBankAccount;
     }
 
     /**
-     * Set 二手车市场开户银行账号
-     * @param MarketBankAccount 二手车市场开户银行账号
+     * Set <p>二手车市场开户银行账号</p>
+     * @param MarketBankAccount <p>二手车市场开户银行账号</p>
      */
     public void setMarketBankAccount(String MarketBankAccount) {
         this.MarketBankAccount = MarketBankAccount;
     }
 
     /**
-     * Get 二手车市场电话 
-     * @return MarketTel 二手车市场电话
+     * Get <p>二手车市场电话</p> 
+     * @return MarketTel <p>二手车市场电话</p>
      */
     public String getMarketTel() {
         return this.MarketTel;
     }
 
     /**
-     * Set 二手车市场电话
-     * @param MarketTel 二手车市场电话
+     * Set <p>二手车市场电话</p>
+     * @param MarketTel <p>二手车市场电话</p>
      */
     public void setMarketTel(String MarketTel) {
         this.MarketTel = MarketTel;
+    }
+
+    /**
+     * Get <p>车价合计中文大写</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VehicleTotalPriceCN <p>车价合计中文大写</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVehicleTotalPriceCN() {
+        return this.VehicleTotalPriceCN;
+    }
+
+    /**
+     * Set <p>车价合计中文大写</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VehicleTotalPriceCN <p>车价合计中文大写</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVehicleTotalPriceCN(String VehicleTotalPriceCN) {
+        this.VehicleTotalPriceCN = VehicleTotalPriceCN;
+    }
+
+    /**
+     * Get <p>发票风险等级</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InvoiceRiskLevel <p>发票风险等级</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInvoiceRiskLevel() {
+        return this.InvoiceRiskLevel;
+    }
+
+    /**
+     * Set <p>发票风险等级</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InvoiceRiskLevel <p>发票风险等级</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInvoiceRiskLevel(String InvoiceRiskLevel) {
+        this.InvoiceRiskLevel = InvoiceRiskLevel;
+    }
+
+    /**
+     * Get <p>车辆类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CarType <p>车辆类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCarType() {
+        return this.CarType;
+    }
+
+    /**
+     * Set <p>车辆类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CarType <p>车辆类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCarType(String CarType) {
+        this.CarType = CarType;
+    }
+
+    /**
+     * Get <p>厂牌型号</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlateModel <p>厂牌型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPlateModel() {
+        return this.PlateModel;
+    }
+
+    /**
+     * Set <p>厂牌型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlateModel <p>厂牌型号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlateModel(String PlateModel) {
+        this.PlateModel = PlateModel;
+    }
+
+    /**
+     * Get <p>作废人</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AbandonerName <p>作废人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAbandonerName() {
+        return this.AbandonerName;
+    }
+
+    /**
+     * Set <p>作废人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AbandonerName <p>作废人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbandonerName(String AbandonerName) {
+        this.AbandonerName = AbandonerName;
+    }
+
+    /**
+     * Get <p>作废日期</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AbandonDate <p>作废日期</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAbandonDate() {
+        return this.AbandonDate;
+    }
+
+    /**
+     * Set <p>作废日期</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AbandonDate <p>作废日期</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbandonDate(String AbandonDate) {
+        this.AbandonDate = AbandonDate;
+    }
+
+    /**
+     * Get <p>开票方类型：1 经营单位，2 拍卖单位，03 二手车市场。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IssuerType <p>开票方类型：1 经营单位，2 拍卖单位，03 二手车市场。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIssuerType() {
+        return this.IssuerType;
+    }
+
+    /**
+     * Set <p>开票方类型：1 经营单位，2 拍卖单位，03 二手车市场。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IssuerType <p>开票方类型：1 经营单位，2 拍卖单位，03 二手车市场。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIssuerType(String IssuerType) {
+        this.IssuerType = IssuerType;
+    }
+
+    /**
+     * Get <p>开票方纳税人识别号</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IssuerTaxCode <p>开票方纳税人识别号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIssuerTaxCode() {
+        return this.IssuerTaxCode;
+    }
+
+    /**
+     * Set <p>开票方纳税人识别号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IssuerTaxCode <p>开票方纳税人识别号</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIssuerTaxCode(String IssuerTaxCode) {
+        this.IssuerTaxCode = IssuerTaxCode;
+    }
+
+    /**
+     * Get <p>自行编码</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomCode <p>自行编码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomCode() {
+        return this.CustomCode;
+    }
+
+    /**
+     * Set <p>自行编码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomCode <p>自行编码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomCode(String CustomCode) {
+        this.CustomCode = CustomCode;
+    }
+
+    /**
+     * Get <p>商品编码</p> 
+     * @return TaxClassifyCode <p>商品编码</p>
+     */
+    public String getTaxClassifyCode() {
+        return this.TaxClassifyCode;
+    }
+
+    /**
+     * Set <p>商品编码</p>
+     * @param TaxClassifyCode <p>商品编码</p>
+     */
+    public void setTaxClassifyCode(String TaxClassifyCode) {
+        this.TaxClassifyCode = TaxClassifyCode;
+    }
+
+    /**
+     * Get <p>零税率标识：空：非零税率，0：出口零税，1：免税，2：不征税，3 普通零税率</p> 
+     * @return ZeroTaxRateMark <p>零税率标识：空：非零税率，0：出口零税，1：免税，2：不征税，3 普通零税率</p>
+     */
+    public String getZeroTaxRateMark() {
+        return this.ZeroTaxRateMark;
+    }
+
+    /**
+     * Set <p>零税率标识：空：非零税率，0：出口零税，1：免税，2：不征税，3 普通零税率</p>
+     * @param ZeroTaxRateMark <p>零税率标识：空：非零税率，0：出口零税，1：免税，2：不征税，3 普通零税率</p>
+     */
+    public void setZeroTaxRateMark(String ZeroTaxRateMark) {
+        this.ZeroTaxRateMark = ZeroTaxRateMark;
     }
 
     public UsedVehicleInvoiceInfo() {
@@ -655,6 +953,39 @@ public class UsedVehicleInvoiceInfo extends AbstractModel {
         if (source.MarketTel != null) {
             this.MarketTel = new String(source.MarketTel);
         }
+        if (source.VehicleTotalPriceCN != null) {
+            this.VehicleTotalPriceCN = new String(source.VehicleTotalPriceCN);
+        }
+        if (source.InvoiceRiskLevel != null) {
+            this.InvoiceRiskLevel = new String(source.InvoiceRiskLevel);
+        }
+        if (source.CarType != null) {
+            this.CarType = new String(source.CarType);
+        }
+        if (source.PlateModel != null) {
+            this.PlateModel = new String(source.PlateModel);
+        }
+        if (source.AbandonerName != null) {
+            this.AbandonerName = new String(source.AbandonerName);
+        }
+        if (source.AbandonDate != null) {
+            this.AbandonDate = new String(source.AbandonDate);
+        }
+        if (source.IssuerType != null) {
+            this.IssuerType = new String(source.IssuerType);
+        }
+        if (source.IssuerTaxCode != null) {
+            this.IssuerTaxCode = new String(source.IssuerTaxCode);
+        }
+        if (source.CustomCode != null) {
+            this.CustomCode = new String(source.CustomCode);
+        }
+        if (source.TaxClassifyCode != null) {
+            this.TaxClassifyCode = new String(source.TaxClassifyCode);
+        }
+        if (source.ZeroTaxRateMark != null) {
+            this.ZeroTaxRateMark = new String(source.ZeroTaxRateMark);
+        }
     }
 
 
@@ -686,6 +1017,17 @@ public class UsedVehicleInvoiceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MarketAddress", this.MarketAddress);
         this.setParamSimple(map, prefix + "MarketBankAccount", this.MarketBankAccount);
         this.setParamSimple(map, prefix + "MarketTel", this.MarketTel);
+        this.setParamSimple(map, prefix + "VehicleTotalPriceCN", this.VehicleTotalPriceCN);
+        this.setParamSimple(map, prefix + "InvoiceRiskLevel", this.InvoiceRiskLevel);
+        this.setParamSimple(map, prefix + "CarType", this.CarType);
+        this.setParamSimple(map, prefix + "PlateModel", this.PlateModel);
+        this.setParamSimple(map, prefix + "AbandonerName", this.AbandonerName);
+        this.setParamSimple(map, prefix + "AbandonDate", this.AbandonDate);
+        this.setParamSimple(map, prefix + "IssuerType", this.IssuerType);
+        this.setParamSimple(map, prefix + "IssuerTaxCode", this.IssuerTaxCode);
+        this.setParamSimple(map, prefix + "CustomCode", this.CustomCode);
+        this.setParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
+        this.setParamSimple(map, prefix + "ZeroTaxRateMark", this.ZeroTaxRateMark);
 
     }
 }

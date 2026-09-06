@@ -224,6 +224,13 @@ public class DBCustomNode extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * <p>置放群组ID</p>
+    */
+    @SerializedName("DisasterRecoverGroupId")
+    @Expose
+    private String DisasterRecoverGroupId;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -687,6 +694,22 @@ public class DBCustomNode extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get <p>置放群组ID</p> 
+     * @return DisasterRecoverGroupId <p>置放群组ID</p>
+     */
+    public String getDisasterRecoverGroupId() {
+        return this.DisasterRecoverGroupId;
+    }
+
+    /**
+     * Set <p>置放群组ID</p>
+     * @param DisasterRecoverGroupId <p>置放群组ID</p>
+     */
+    public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
+        this.DisasterRecoverGroupId = DisasterRecoverGroupId;
+    }
+
     public DBCustomNode() {
     }
 
@@ -788,6 +811,9 @@ public class DBCustomNode extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DisasterRecoverGroupId != null) {
+            this.DisasterRecoverGroupId = new String(source.DisasterRecoverGroupId);
+        }
     }
 
 
@@ -823,6 +849,7 @@ public class DBCustomNode extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
         this.setParamSimple(map, prefix + "EniIP", this.EniIP);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
 
     }
 }

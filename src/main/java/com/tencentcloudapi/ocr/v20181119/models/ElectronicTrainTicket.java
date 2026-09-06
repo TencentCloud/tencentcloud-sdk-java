@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ElectronicTrainTicket extends AbstractModel {
 
     /**
-    * 购方名称
+    * <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuyerName")
@@ -32,7 +32,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String BuyerName;
 
     /**
-    * 购方识别号
+    * <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuyerTaxCode")
@@ -40,7 +40,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String BuyerTaxCode;
 
     /**
-    * 发票号码
+    * <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Number")
@@ -48,7 +48,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Number;
 
     /**
-    * 开票日期
+    * <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
@@ -56,7 +56,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Date;
 
     /**
-    * 价税合计（中文大写）
+    * <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCN")
@@ -64,7 +64,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String TotalCN;
 
     /**
-    * 税额
+    * <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tax")
@@ -72,7 +72,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Tax;
 
     /**
-    * 业务类型，0：退票，1:售票
+    * <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceType")
@@ -80,7 +80,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String ServiceType;
 
     /**
-    * 出发时间
+    * <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeGetOn")
@@ -88,7 +88,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String TimeGetOn;
 
     /**
-    * 车次
+    * <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainNumber")
@@ -96,7 +96,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String TrainNumber;
 
     /**
-    * 发票代码
+    * <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -104,7 +104,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Code;
 
     /**
-    * 席别
+    * <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SeatType")
@@ -112,7 +112,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String SeatType;
 
     /**
-    * 乘车日期
+    * <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DateGetOn")
@@ -120,7 +120,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String DateGetOn;
 
     /**
-    * 车厢
+    * <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainCabin")
@@ -128,7 +128,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String TrainCabin;
 
     /**
-    * 出发站
+    * <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StationGetOn")
@@ -136,7 +136,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String StationGetOn;
 
     /**
-    * 电子客票号
+    * <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElectronicNumber")
@@ -144,7 +144,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String ElectronicNumber;
 
     /**
-    * 姓名
+    * <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassengerName")
@@ -152,7 +152,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String PassengerName;
 
     /**
-    * 证件号
+    * <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassengerNo")
@@ -160,7 +160,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String PassengerNo;
 
     /**
-    * 金额
+    * <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amount")
@@ -168,7 +168,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Amount;
 
     /**
-    * 到达站
+    * <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StationGetOff")
@@ -176,7 +176,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String StationGetOff;
 
     /**
-    * 税率
+    * <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaxRate")
@@ -184,7 +184,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String TaxRate;
 
     /**
-    * 席位
+    * <p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seat")
@@ -192,7 +192,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Seat;
 
     /**
-    * 价税合计
+    * <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -200,7 +200,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String Total;
 
     /**
-    * 校验码
+    * <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckCode")
@@ -208,7 +208,7 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String CheckCode;
 
     /**
-    * 发票状态代码，0正常 1 未更新  2作废 3已红冲
+    * <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StateCode")
@@ -216,9 +216,48 @@ public class ElectronicTrainTicket extends AbstractModel {
     private String StateCode;
 
     /**
-     * Get 购方名称
+    * <p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * <p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AirConditionerFeature")
+    @Expose
+    private String AirConditionerFeature;
+
+    /**
+    * <p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TicketType")
+    @Expose
+    private String TicketType;
+
+    /**
+    * <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalTaxRate")
+    @Expose
+    private String OriginalTaxRate;
+
+    /**
+    * <p>全电发票号码，映射源字段 qdfphm。</p>
+    */
+    @SerializedName("FullElectronicNumber")
+    @Expose
+    private String FullElectronicNumber;
+
+    /**
+     * Get <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BuyerName 购方名称
+     * @return BuyerName <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuyerName() {
@@ -226,9 +265,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 购方名称
+     * Set <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BuyerName 购方名称
+     * @param BuyerName <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuyerName(String BuyerName) {
@@ -236,9 +275,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 购方识别号
+     * Get <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BuyerTaxCode 购方识别号
+     * @return BuyerTaxCode <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuyerTaxCode() {
@@ -246,9 +285,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 购方识别号
+     * Set <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BuyerTaxCode 购方识别号
+     * @param BuyerTaxCode <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuyerTaxCode(String BuyerTaxCode) {
@@ -256,9 +295,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 发票号码
+     * Get <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Number 发票号码
+     * @return Number <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNumber() {
@@ -266,9 +305,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 发票号码
+     * Set <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Number 发票号码
+     * @param Number <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumber(String Number) {
@@ -276,9 +315,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 开票日期
+     * Get <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Date 开票日期
+     * @return Date <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
@@ -286,9 +325,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 开票日期
+     * Set <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Date 开票日期
+     * @param Date <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
@@ -296,9 +335,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 价税合计（中文大写）
+     * Get <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCN 价税合计（中文大写）
+     * @return TotalCN <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotalCN() {
@@ -306,9 +345,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 价税合计（中文大写）
+     * Set <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCN 价税合计（中文大写）
+     * @param TotalCN <p>价税合计（中文大写）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCN(String TotalCN) {
@@ -316,9 +355,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 税额
+     * Get <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tax 税额
+     * @return Tax <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTax() {
@@ -326,9 +365,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 税额
+     * Set <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tax 税额
+     * @param Tax <p>税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTax(String Tax) {
@@ -336,9 +375,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 业务类型，0：退票，1:售票
+     * Get <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceType 业务类型，0：退票，1:售票
+     * @return ServiceType <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceType() {
@@ -346,9 +385,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 业务类型，0：退票，1:售票
+     * Set <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceType 业务类型，0：退票，1:售票
+     * @param ServiceType <p>业务类型，0：退票，1:售票</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceType(String ServiceType) {
@@ -356,9 +395,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 出发时间
+     * Get <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeGetOn 出发时间
+     * @return TimeGetOn <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeGetOn() {
@@ -366,9 +405,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 出发时间
+     * Set <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeGetOn 出发时间
+     * @param TimeGetOn <p>出发时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeGetOn(String TimeGetOn) {
@@ -376,9 +415,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 车次
+     * Get <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrainNumber 车次
+     * @return TrainNumber <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainNumber() {
@@ -386,9 +425,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 车次
+     * Set <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrainNumber 车次
+     * @param TrainNumber <p>车次</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainNumber(String TrainNumber) {
@@ -396,9 +435,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 发票代码
+     * Get <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 发票代码
+     * @return Code <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
@@ -406,9 +445,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 发票代码
+     * Set <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 发票代码
+     * @param Code <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
@@ -416,9 +455,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 席别
+     * Get <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SeatType 席别
+     * @return SeatType <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeatType() {
@@ -426,9 +465,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 席别
+     * Set <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SeatType 席别
+     * @param SeatType <p>席别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeatType(String SeatType) {
@@ -436,9 +475,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 乘车日期
+     * Get <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DateGetOn 乘车日期
+     * @return DateGetOn <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDateGetOn() {
@@ -446,9 +485,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 乘车日期
+     * Set <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DateGetOn 乘车日期
+     * @param DateGetOn <p>乘车日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDateGetOn(String DateGetOn) {
@@ -456,9 +495,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 车厢
+     * Get <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrainCabin 车厢
+     * @return TrainCabin <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainCabin() {
@@ -466,9 +505,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 车厢
+     * Set <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrainCabin 车厢
+     * @param TrainCabin <p>车厢</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainCabin(String TrainCabin) {
@@ -476,9 +515,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 出发站
+     * Get <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StationGetOn 出发站
+     * @return StationGetOn <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStationGetOn() {
@@ -486,9 +525,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 出发站
+     * Set <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StationGetOn 出发站
+     * @param StationGetOn <p>出发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStationGetOn(String StationGetOn) {
@@ -496,9 +535,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 电子客票号
+     * Get <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ElectronicNumber 电子客票号
+     * @return ElectronicNumber <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElectronicNumber() {
@@ -506,9 +545,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 电子客票号
+     * Set <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ElectronicNumber 电子客票号
+     * @param ElectronicNumber <p>电子客票号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElectronicNumber(String ElectronicNumber) {
@@ -516,9 +555,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 姓名
+     * Get <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PassengerName 姓名
+     * @return PassengerName <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassengerName() {
@@ -526,9 +565,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 姓名
+     * Set <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PassengerName 姓名
+     * @param PassengerName <p>姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassengerName(String PassengerName) {
@@ -536,9 +575,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 证件号
+     * Get <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PassengerNo 证件号
+     * @return PassengerNo <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassengerNo() {
@@ -546,9 +585,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 证件号
+     * Set <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PassengerNo 证件号
+     * @param PassengerNo <p>证件号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassengerNo(String PassengerNo) {
@@ -556,9 +595,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 金额
+     * Get <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Amount 金额
+     * @return Amount <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAmount() {
@@ -566,9 +605,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 金额
+     * Set <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Amount 金额
+     * @param Amount <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmount(String Amount) {
@@ -576,9 +615,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 到达站
+     * Get <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StationGetOff 到达站
+     * @return StationGetOff <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStationGetOff() {
@@ -586,9 +625,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 到达站
+     * Set <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StationGetOff 到达站
+     * @param StationGetOff <p>到达站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStationGetOff(String StationGetOff) {
@@ -596,9 +635,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 税率
+     * Get <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaxRate 税率
+     * @return TaxRate <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaxRate() {
@@ -606,9 +645,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 税率
+     * Set <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaxRate 税率
+     * @param TaxRate <p>税率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaxRate(String TaxRate) {
@@ -616,9 +655,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 席位
+     * Get <p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Seat 席位
+     * @return Seat <p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeat() {
@@ -626,9 +665,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 席位
+     * Set <p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Seat 席位
+     * @param Seat <p>席位</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeat(String Seat) {
@@ -636,9 +675,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 价税合计
+     * Get <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 价税合计
+     * @return Total <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotal() {
@@ -646,9 +685,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 价税合计
+     * Set <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 价税合计
+     * @param Total <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(String Total) {
@@ -656,9 +695,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 校验码
+     * Get <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckCode 校验码
+     * @return CheckCode <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckCode() {
@@ -666,9 +705,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 校验码
+     * Set <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckCode 校验码
+     * @param CheckCode <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckCode(String CheckCode) {
@@ -676,9 +715,9 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Get 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * Get <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StateCode 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @return StateCode <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStateCode() {
@@ -686,13 +725,109 @@ public class ElectronicTrainTicket extends AbstractModel {
     }
 
     /**
-     * Set 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * Set <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StateCode 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @param StateCode <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStateCode(String StateCode) {
         this.StateCode = StateCode;
+    }
+
+    /**
+     * Get <p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type <p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type <p>发票类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AirConditionerFeature <p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAirConditionerFeature() {
+        return this.AirConditionerFeature;
+    }
+
+    /**
+     * Set <p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AirConditionerFeature <p>空调特征</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAirConditionerFeature(String AirConditionerFeature) {
+        this.AirConditionerFeature = AirConditionerFeature;
+    }
+
+    /**
+     * Get <p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TicketType <p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTicketType() {
+        return this.TicketType;
+    }
+
+    /**
+     * Set <p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TicketType <p>票种，不替代 VatInvoice.Type。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTicketType(String TicketType) {
+        this.TicketType = TicketType;
+    }
+
+    /**
+     * Get <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalTaxRate <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginalTaxRate() {
+        return this.OriginalTaxRate;
+    }
+
+    /**
+     * Set <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalTaxRate <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalTaxRate(String OriginalTaxRate) {
+        this.OriginalTaxRate = OriginalTaxRate;
+    }
+
+    /**
+     * Get <p>全电发票号码，映射源字段 qdfphm。</p> 
+     * @return FullElectronicNumber <p>全电发票号码，映射源字段 qdfphm。</p>
+     */
+    public String getFullElectronicNumber() {
+        return this.FullElectronicNumber;
+    }
+
+    /**
+     * Set <p>全电发票号码，映射源字段 qdfphm。</p>
+     * @param FullElectronicNumber <p>全电发票号码，映射源字段 qdfphm。</p>
+     */
+    public void setFullElectronicNumber(String FullElectronicNumber) {
+        this.FullElectronicNumber = FullElectronicNumber;
     }
 
     public ElectronicTrainTicket() {
@@ -775,6 +910,21 @@ public class ElectronicTrainTicket extends AbstractModel {
         if (source.StateCode != null) {
             this.StateCode = new String(source.StateCode);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.AirConditionerFeature != null) {
+            this.AirConditionerFeature = new String(source.AirConditionerFeature);
+        }
+        if (source.TicketType != null) {
+            this.TicketType = new String(source.TicketType);
+        }
+        if (source.OriginalTaxRate != null) {
+            this.OriginalTaxRate = new String(source.OriginalTaxRate);
+        }
+        if (source.FullElectronicNumber != null) {
+            this.FullElectronicNumber = new String(source.FullElectronicNumber);
+        }
     }
 
 
@@ -806,6 +956,11 @@ public class ElectronicTrainTicket extends AbstractModel {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "CheckCode", this.CheckCode);
         this.setParamSimple(map, prefix + "StateCode", this.StateCode);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "AirConditionerFeature", this.AirConditionerFeature);
+        this.setParamSimple(map, prefix + "TicketType", this.TicketType);
+        this.setParamSimple(map, prefix + "OriginalTaxRate", this.OriginalTaxRate);
+        this.setParamSimple(map, prefix + "FullElectronicNumber", this.FullElectronicNumber);
 
     }
 }

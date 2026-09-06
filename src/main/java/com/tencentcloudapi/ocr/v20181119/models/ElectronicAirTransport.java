@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ElectronicAirTransport extends AbstractModel {
 
     /**
-    * 发票代码
+    * <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -32,7 +32,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String Code;
 
     /**
-    * 发票号码
+    * <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Number")
@@ -40,7 +40,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String Number;
 
     /**
-    * 开票日期
+    * <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
@@ -48,7 +48,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String Date;
 
     /**
-    * 金额
+    * <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amount")
@@ -56,7 +56,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String Amount;
 
     /**
-    * 校验码
+    * <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckCode")
@@ -64,7 +64,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String CheckCode;
 
     /**
-    * 价税合计
+    * <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -72,7 +72,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String Total;
 
     /**
-    * 抵扣标志
+    * <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeductionMark")
@@ -80,7 +80,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String DeductionMark;
 
     /**
-    * 发票状态代码，0正常 1 未更新  2作废 3已红冲
+    * <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StateCode")
@@ -88,7 +88,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String StateCode;
 
     /**
-    * 购方识别号
+    * <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuyerTaxCode")
@@ -96,7 +96,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String BuyerTaxCode;
 
     /**
-    * 购方名称
+    * <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuyerName")
@@ -104,7 +104,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String BuyerName;
 
     /**
-    * 合计税额
+    * <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tax")
@@ -112,7 +112,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String Tax;
 
     /**
-    * 国内国际标识
+    * <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomesticInternationalMark")
@@ -120,7 +120,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String DomesticInternationalMark;
 
     /**
-    * 旅客姓名
+    * <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassengerName")
@@ -128,7 +128,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String PassengerName;
 
     /**
-    * 有效身份证件号码
+    * <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassengerNo")
@@ -136,7 +136,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String PassengerNo;
 
     /**
-    * 电子客票号码
+    * <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElectronicNumber")
@@ -144,9 +144,7 @@ public class ElectronicAirTransport extends AbstractModel {
     private String ElectronicNumber;
 
     /**
-    * 全电发票（航空运输电子客票行程单）详细信息
-
-
+    * <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElectronicAirTransportDetails")
@@ -154,37 +152,37 @@ public class ElectronicAirTransport extends AbstractModel {
     private ElectronicAirTransportDetail [] ElectronicAirTransportDetails;
 
     /**
-    * 票价
+    * <p>票价</p>
     */
     @SerializedName("Fare")
     @Expose
     private String Fare;
 
     /**
-    * 燃油附加费
+    * <p>燃油附加费</p>
     */
     @SerializedName("FuelSurcharge")
     @Expose
     private String FuelSurcharge;
 
     /**
-    * 增值税税额
+    * <p>增值税税额</p>
     */
     @SerializedName("TaxAmount")
     @Expose
     private String TaxAmount;
 
     /**
-    * 民航发展基金
+    * <p>民航发展基金</p>
     */
     @SerializedName("DevelopmentFund")
     @Expose
     private String DevelopmentFund;
 
     /**
-     * Get 发票代码
+     * Get <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 发票代码
+     * @return Code <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
@@ -192,9 +190,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 发票代码
+     * Set <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 发票代码
+     * @param Code <p>发票代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
@@ -202,9 +200,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 发票号码
+     * Get <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Number 发票号码
+     * @return Number <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNumber() {
@@ -212,9 +210,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 发票号码
+     * Set <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Number 发票号码
+     * @param Number <p>发票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumber(String Number) {
@@ -222,9 +220,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 开票日期
+     * Get <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Date 开票日期
+     * @return Date <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
@@ -232,9 +230,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 开票日期
+     * Set <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Date 开票日期
+     * @param Date <p>开票日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
@@ -242,9 +240,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 金额
+     * Get <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Amount 金额
+     * @return Amount <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAmount() {
@@ -252,9 +250,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 金额
+     * Set <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Amount 金额
+     * @param Amount <p>金额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmount(String Amount) {
@@ -262,9 +260,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 校验码
+     * Get <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckCode 校验码
+     * @return CheckCode <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckCode() {
@@ -272,9 +270,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 校验码
+     * Set <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckCode 校验码
+     * @param CheckCode <p>校验码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckCode(String CheckCode) {
@@ -282,9 +280,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 价税合计
+     * Get <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 价税合计
+     * @return Total <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotal() {
@@ -292,9 +290,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 价税合计
+     * Set <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 价税合计
+     * @param Total <p>价税合计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(String Total) {
@@ -302,9 +300,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 抵扣标志
+     * Get <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeductionMark 抵扣标志
+     * @return DeductionMark <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeductionMark() {
@@ -312,9 +310,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 抵扣标志
+     * Set <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeductionMark 抵扣标志
+     * @param DeductionMark <p>抵扣标志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeductionMark(String DeductionMark) {
@@ -322,9 +320,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * Get <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StateCode 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @return StateCode <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStateCode() {
@@ -332,9 +330,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * Set <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StateCode 发票状态代码，0正常 1 未更新  2作废 3已红冲
+     * @param StateCode <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStateCode(String StateCode) {
@@ -342,9 +340,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 购方识别号
+     * Get <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BuyerTaxCode 购方识别号
+     * @return BuyerTaxCode <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuyerTaxCode() {
@@ -352,9 +350,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 购方识别号
+     * Set <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BuyerTaxCode 购方识别号
+     * @param BuyerTaxCode <p>购方识别号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuyerTaxCode(String BuyerTaxCode) {
@@ -362,9 +360,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 购方名称
+     * Get <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BuyerName 购方名称
+     * @return BuyerName <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBuyerName() {
@@ -372,9 +370,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 购方名称
+     * Set <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BuyerName 购方名称
+     * @param BuyerName <p>购方名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuyerName(String BuyerName) {
@@ -382,9 +380,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 合计税额
+     * Get <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tax 合计税额
+     * @return Tax <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTax() {
@@ -392,9 +390,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 合计税额
+     * Set <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tax 合计税额
+     * @param Tax <p>合计税额</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTax(String Tax) {
@@ -402,9 +400,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 国内国际标识
+     * Get <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomesticInternationalMark 国内国际标识
+     * @return DomesticInternationalMark <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomesticInternationalMark() {
@@ -412,9 +410,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 国内国际标识
+     * Set <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomesticInternationalMark 国内国际标识
+     * @param DomesticInternationalMark <p>国内国际标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomesticInternationalMark(String DomesticInternationalMark) {
@@ -422,9 +420,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 旅客姓名
+     * Get <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PassengerName 旅客姓名
+     * @return PassengerName <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassengerName() {
@@ -432,9 +430,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 旅客姓名
+     * Set <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PassengerName 旅客姓名
+     * @param PassengerName <p>旅客姓名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassengerName(String PassengerName) {
@@ -442,9 +440,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 有效身份证件号码
+     * Get <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PassengerNo 有效身份证件号码
+     * @return PassengerNo <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassengerNo() {
@@ -452,9 +450,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 有效身份证件号码
+     * Set <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PassengerNo 有效身份证件号码
+     * @param PassengerNo <p>有效身份证件号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassengerNo(String PassengerNo) {
@@ -462,9 +460,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 电子客票号码
+     * Get <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ElectronicNumber 电子客票号码
+     * @return ElectronicNumber <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getElectronicNumber() {
@@ -472,9 +470,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 电子客票号码
+     * Set <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ElectronicNumber 电子客票号码
+     * @param ElectronicNumber <p>电子客票号码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElectronicNumber(String ElectronicNumber) {
@@ -482,13 +480,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 全电发票（航空运输电子客票行程单）详细信息
-
-
+     * Get <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ElectronicAirTransportDetails 全电发票（航空运输电子客票行程单）详细信息
-
-
+     * @return ElectronicAirTransportDetails <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ElectronicAirTransportDetail [] getElectronicAirTransportDetails() {
@@ -496,13 +490,9 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Set 全电发票（航空运输电子客票行程单）详细信息
-
-
+     * Set <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ElectronicAirTransportDetails 全电发票（航空运输电子客票行程单）详细信息
-
-
+     * @param ElectronicAirTransportDetails <p>全电发票（航空运输电子客票行程单）详细信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElectronicAirTransportDetails(ElectronicAirTransportDetail [] ElectronicAirTransportDetails) {
@@ -510,64 +500,64 @@ public class ElectronicAirTransport extends AbstractModel {
     }
 
     /**
-     * Get 票价 
-     * @return Fare 票价
+     * Get <p>票价</p> 
+     * @return Fare <p>票价</p>
      */
     public String getFare() {
         return this.Fare;
     }
 
     /**
-     * Set 票价
-     * @param Fare 票价
+     * Set <p>票价</p>
+     * @param Fare <p>票价</p>
      */
     public void setFare(String Fare) {
         this.Fare = Fare;
     }
 
     /**
-     * Get 燃油附加费 
-     * @return FuelSurcharge 燃油附加费
+     * Get <p>燃油附加费</p> 
+     * @return FuelSurcharge <p>燃油附加费</p>
      */
     public String getFuelSurcharge() {
         return this.FuelSurcharge;
     }
 
     /**
-     * Set 燃油附加费
-     * @param FuelSurcharge 燃油附加费
+     * Set <p>燃油附加费</p>
+     * @param FuelSurcharge <p>燃油附加费</p>
      */
     public void setFuelSurcharge(String FuelSurcharge) {
         this.FuelSurcharge = FuelSurcharge;
     }
 
     /**
-     * Get 增值税税额 
-     * @return TaxAmount 增值税税额
+     * Get <p>增值税税额</p> 
+     * @return TaxAmount <p>增值税税额</p>
      */
     public String getTaxAmount() {
         return this.TaxAmount;
     }
 
     /**
-     * Set 增值税税额
-     * @param TaxAmount 增值税税额
+     * Set <p>增值税税额</p>
+     * @param TaxAmount <p>增值税税额</p>
      */
     public void setTaxAmount(String TaxAmount) {
         this.TaxAmount = TaxAmount;
     }
 
     /**
-     * Get 民航发展基金 
-     * @return DevelopmentFund 民航发展基金
+     * Get <p>民航发展基金</p> 
+     * @return DevelopmentFund <p>民航发展基金</p>
      */
     public String getDevelopmentFund() {
         return this.DevelopmentFund;
     }
 
     /**
-     * Set 民航发展基金
-     * @param DevelopmentFund 民航发展基金
+     * Set <p>民航发展基金</p>
+     * @param DevelopmentFund <p>民航发展基金</p>
      */
     public void setDevelopmentFund(String DevelopmentFund) {
         this.DevelopmentFund = DevelopmentFund;

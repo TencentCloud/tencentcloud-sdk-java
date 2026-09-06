@@ -59,7 +59,7 @@ public class AddInstancesRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+    * <p>当前字段已废弃。当前版本不再传输该值。</p>
     */
     @SerializedName("InstanceGrpId")
     @Expose
@@ -230,8 +230,8 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p> 
-     * @return InstanceGrpId <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+     * Get <p>当前字段已废弃。当前版本不再传输该值。</p> 
+     * @return InstanceGrpId <p>当前字段已废弃。当前版本不再传输该值。</p>
      * @deprecated
      */
     @Deprecated
@@ -240,8 +240,8 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
-     * @param InstanceGrpId <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+     * Set <p>当前字段已废弃。当前版本不再传输该值。</p>
+     * @param InstanceGrpId <p>当前字段已废弃。当前版本不再传输该值。</p>
      * @deprecated
      */
     @Deprecated

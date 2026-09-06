@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModelAlias extends AbstractModel {
 
     /**
-    * <p>模型积分系数配置，包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数默认为 25，缓存命中输入系数默认为 3，输出系数默认为 100。</p>
+    * <p>模型积分系数配置，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数和输出系数均返回 1。</p>
     */
     @SerializedName("Coefficient")
     @Expose
@@ -59,16 +59,23 @@ public class ModelAlias extends AbstractModel {
     private String Status;
 
     /**
-     * Get <p>模型积分系数配置，包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数默认为 25，缓存命中输入系数默认为 3，输出系数默认为 100。</p> 
-     * @return Coefficient <p>模型积分系数配置，包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数默认为 25，缓存命中输入系数默认为 3，输出系数默认为 100。</p>
+    * <p>模型能力</p>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
+     * Get <p>模型积分系数配置，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数和输出系数均返回 1。</p> 
+     * @return Coefficient <p>模型积分系数配置，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数和输出系数均返回 1。</p>
      */
     public Coefficient getCoefficient() {
         return this.Coefficient;
     }
 
     /**
-     * Set <p>模型积分系数配置，包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数默认为 25，缓存命中输入系数默认为 3，输出系数默认为 100。</p>
-     * @param Coefficient <p>模型积分系数配置，包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数默认为 25，缓存命中输入系数默认为 3，输出系数默认为 100。</p>
+     * Set <p>模型积分系数配置，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数和输出系数均返回 1。</p>
+     * @param Coefficient <p>模型积分系数配置，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数和输出系数均返回 1。</p>
      */
     public void setCoefficient(Coefficient Coefficient) {
         this.Coefficient = Coefficient;
@@ -138,6 +145,22 @@ public class ModelAlias extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get <p>模型能力</p> 
+     * @return Capability <p>模型能力</p>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>模型能力</p>
+     * @param Capability <p>模型能力</p>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
     public ModelAlias() {
     }
 
@@ -164,6 +187,9 @@ public class ModelAlias extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModelAlias extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ServiceProviderCoefficientSet.", this.ServiceProviderCoefficientSet);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
 
     }
 }

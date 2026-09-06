@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ElectronicAirTransportDetail extends AbstractModel {
 
     /**
-    * 航段序号
+    * <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlightSegment")
@@ -32,7 +32,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String FlightSegment;
 
     /**
-    * 始发站
+    * <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StationGetOn")
@@ -40,7 +40,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String StationGetOn;
 
     /**
-    * 目的站
+    * <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StationGetOff")
@@ -48,7 +48,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String StationGetOff;
 
     /**
-    * 承运人
+    * <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Carrier")
@@ -56,7 +56,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String Carrier;
 
     /**
-    * 航班号
+    * <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlightNumber")
@@ -64,7 +64,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String FlightNumber;
 
     /**
-    * 座位等级
+    * <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SeatLevel")
@@ -72,7 +72,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String SeatLevel;
 
     /**
-    * 承运日期
+    * <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlightDate")
@@ -80,7 +80,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String FlightDate;
 
     /**
-    * 起飞时间
+    * <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartureTime")
@@ -88,7 +88,7 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String DepartureTime;
 
     /**
-    * 客票级别/客票类别
+    * <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FareBasis")
@@ -96,9 +96,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     private String FareBasis;
 
     /**
-     * Get 航段序号
+     * Get <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlightSegment 航段序号
+     * @return FlightSegment <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlightSegment() {
@@ -106,9 +106,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 航段序号
+     * Set <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlightSegment 航段序号
+     * @param FlightSegment <p>航段序号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlightSegment(String FlightSegment) {
@@ -116,9 +116,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 始发站
+     * Get <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StationGetOn 始发站
+     * @return StationGetOn <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStationGetOn() {
@@ -126,9 +126,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 始发站
+     * Set <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StationGetOn 始发站
+     * @param StationGetOn <p>始发站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStationGetOn(String StationGetOn) {
@@ -136,9 +136,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 目的站
+     * Get <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StationGetOff 目的站
+     * @return StationGetOff <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStationGetOff() {
@@ -146,9 +146,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 目的站
+     * Set <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StationGetOff 目的站
+     * @param StationGetOff <p>目的站</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStationGetOff(String StationGetOff) {
@@ -156,9 +156,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 承运人
+     * Get <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Carrier 承运人
+     * @return Carrier <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCarrier() {
@@ -166,9 +166,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 承运人
+     * Set <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Carrier 承运人
+     * @param Carrier <p>承运人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCarrier(String Carrier) {
@@ -176,9 +176,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 航班号
+     * Get <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlightNumber 航班号
+     * @return FlightNumber <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlightNumber() {
@@ -186,9 +186,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 航班号
+     * Set <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlightNumber 航班号
+     * @param FlightNumber <p>航班号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlightNumber(String FlightNumber) {
@@ -196,9 +196,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 座位等级
+     * Get <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SeatLevel 座位等级
+     * @return SeatLevel <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeatLevel() {
@@ -206,9 +206,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 座位等级
+     * Set <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SeatLevel 座位等级
+     * @param SeatLevel <p>座位等级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeatLevel(String SeatLevel) {
@@ -216,9 +216,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 承运日期
+     * Get <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlightDate 承运日期
+     * @return FlightDate <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlightDate() {
@@ -226,9 +226,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 承运日期
+     * Set <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlightDate 承运日期
+     * @param FlightDate <p>承运日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlightDate(String FlightDate) {
@@ -236,9 +236,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 起飞时间
+     * Get <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DepartureTime 起飞时间
+     * @return DepartureTime <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartureTime() {
@@ -246,9 +246,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 起飞时间
+     * Set <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DepartureTime 起飞时间
+     * @param DepartureTime <p>起飞时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartureTime(String DepartureTime) {
@@ -256,9 +256,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Get 客票级别/客票类别
+     * Get <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FareBasis 客票级别/客票类别
+     * @return FareBasis <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFareBasis() {
@@ -266,9 +266,9 @@ public class ElectronicAirTransportDetail extends AbstractModel {
     }
 
     /**
-     * Set 客票级别/客票类别
+     * Set <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FareBasis 客票级别/客票类别
+     * @param FareBasis <p>客票级别/客票类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFareBasis(String FareBasis) {

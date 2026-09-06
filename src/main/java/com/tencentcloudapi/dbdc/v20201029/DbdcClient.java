@@ -72,6 +72,17 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（CreateDBCustomDisasterRecoverGroup）用于创建 DB Custom 置放群组。
+     * @param req CreateDBCustomDisasterRecoverGroupRequest
+     * @return CreateDBCustomDisasterRecoverGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBCustomDisasterRecoverGroupResponse CreateDBCustomDisasterRecoverGroup(CreateDBCustomDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDBCustomDisasterRecoverGroup", CreateDBCustomDisasterRecoverGroupResponse.class);
+    }
+
+    /**
      *该接口（CreateDBCustomNodes）用于创建 DB Custom 节点(需支付)。
      * @param req CreateDBCustomNodesRequest
      * @return CreateDBCustomNodesResponse
@@ -80,6 +91,28 @@ public class DbdcClient extends AbstractClient{
     public CreateDBCustomNodesResponse CreateDBCustomNodes(CreateDBCustomNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDBCustomNodes", CreateDBCustomNodesResponse.class);
+    }
+
+    /**
+     *该接口（DeleteDBCustomDisasterRecoverGroups）用于删除 DB Custom 置放群组。
+     * @param req DeleteDBCustomDisasterRecoverGroupsRequest
+     * @return DeleteDBCustomDisasterRecoverGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBCustomDisasterRecoverGroupsResponse DeleteDBCustomDisasterRecoverGroups(DeleteDBCustomDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDBCustomDisasterRecoverGroups", DeleteDBCustomDisasterRecoverGroupsResponse.class);
+    }
+
+    /**
+     *该接口（DeleteDBCustomNodesDisasterRecoverGroup）用于移除 DB Custom 节点的置放群组。
+     * @param req DeleteDBCustomNodesDisasterRecoverGroupRequest
+     * @return DeleteDBCustomNodesDisasterRecoverGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBCustomNodesDisasterRecoverGroupResponse DeleteDBCustomNodesDisasterRecoverGroup(DeleteDBCustomNodesDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDBCustomNodesDisasterRecoverGroup", DeleteDBCustomNodesDisasterRecoverGroupResponse.class);
     }
 
     /**
@@ -157,6 +190,28 @@ public class DbdcClient extends AbstractClient{
     public DescribeDBCustomClustersResponse DescribeDBCustomClusters(DescribeDBCustomClustersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBCustomClusters", DescribeDBCustomClustersResponse.class);
+    }
+
+    /**
+     *该接口（DescribeDBCustomDisasterRecoverGroupQuota）用于查询 DB Custom 置放群组配额。
+     * @param req DescribeDBCustomDisasterRecoverGroupQuotaRequest
+     * @return DescribeDBCustomDisasterRecoverGroupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomDisasterRecoverGroupQuotaResponse DescribeDBCustomDisasterRecoverGroupQuota(DescribeDBCustomDisasterRecoverGroupQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomDisasterRecoverGroupQuota", DescribeDBCustomDisasterRecoverGroupQuotaResponse.class);
+    }
+
+    /**
+     *该接口（DescribeDBCustomDisasterRecoverGroups）用于查询 DB Custom 置放群组列表。
+     * @param req DescribeDBCustomDisasterRecoverGroupsRequest
+     * @return DescribeDBCustomDisasterRecoverGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCustomDisasterRecoverGroupsResponse DescribeDBCustomDisasterRecoverGroups(DescribeDBCustomDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCustomDisasterRecoverGroups", DescribeDBCustomDisasterRecoverGroupsResponse.class);
     }
 
     /**
@@ -358,6 +413,28 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyDBCustomDisasterRecoverGroupAttribute）用于修改 DB Custom 置放群组的属性。
+     * @param req ModifyDBCustomDisasterRecoverGroupAttributeRequest
+     * @return ModifyDBCustomDisasterRecoverGroupAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomDisasterRecoverGroupAttributeResponse ModifyDBCustomDisasterRecoverGroupAttribute(ModifyDBCustomDisasterRecoverGroupAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomDisasterRecoverGroupAttribute", ModifyDBCustomDisasterRecoverGroupAttributeResponse.class);
+    }
+
+    /**
+     *该接口（ModifyDBCustomDisasterRecoverGroupTags）用于修改 DB Custom 置放群组绑定的标签。
+     * @param req ModifyDBCustomDisasterRecoverGroupTagsRequest
+     * @return ModifyDBCustomDisasterRecoverGroupTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomDisasterRecoverGroupTagsResponse ModifyDBCustomDisasterRecoverGroupTags(ModifyDBCustomDisasterRecoverGroupTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomDisasterRecoverGroupTags", ModifyDBCustomDisasterRecoverGroupTagsResponse.class);
+    }
+
+    /**
      *该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
      * @param req ModifyDBCustomNodeAttributesRequest
      * @return ModifyDBCustomNodeAttributesResponse
@@ -388,6 +465,17 @@ public class DbdcClient extends AbstractClient{
     public ModifyDBCustomNodeTagsResponse ModifyDBCustomNodeTags(ModifyDBCustomNodeTagsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBCustomNodeTags", ModifyDBCustomNodeTagsResponse.class);
+    }
+
+    /**
+     *该接口（ModifyDBCustomNodesDisasterRecoverGroup）用于修改 DB Custom 节点的置放群组。
+     * @param req ModifyDBCustomNodesDisasterRecoverGroupRequest
+     * @return ModifyDBCustomNodesDisasterRecoverGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomNodesDisasterRecoverGroupResponse ModifyDBCustomNodesDisasterRecoverGroup(ModifyDBCustomNodesDisasterRecoverGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomNodesDisasterRecoverGroup", ModifyDBCustomNodesDisasterRecoverGroupResponse.class);
     }
 
     /**

@@ -138,6 +138,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBCharsets）提供查询支持字符集功能
+     * @param req DescribeDBCharsetsRequest
+     * @return DescribeDBCharsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCharsetsResponse DescribeDBCharsets(DescribeDBCharsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBCharsets", DescribeDBCharsetsResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBEngines）用于获取DB引擎版本列表
      * @param req DescribeDBEnginesRequest
      * @return DescribeDBEnginesResponse
@@ -300,6 +311,28 @@ public class TdmysqlClient extends AbstractClient{
     public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFlow", DescribeFlowResponse.class);
+    }
+
+    /**
+     *本接口（DescribeFlowTypes）用于获取所有任务类型
+     * @param req DescribeFlowTypesRequest
+     * @return DescribeFlowTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowTypesResponse DescribeFlowTypes(DescribeFlowTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlowTypes", DescribeFlowTypesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeInstanceDataReservedSpace）提供查询实例数据保留空间
+     * @param req DescribeInstanceDataReservedSpaceRequest
+     * @return DescribeInstanceDataReservedSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDataReservedSpaceResponse DescribeInstanceDataReservedSpace(DescribeInstanceDataReservedSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceDataReservedSpace", DescribeInstanceDataReservedSpaceResponse.class);
     }
 
     /**
@@ -490,6 +523,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyInstanceDataReservedSpace）提供修改实例数据保留空间
+     * @param req ModifyInstanceDataReservedSpaceRequest
+     * @return ModifyInstanceDataReservedSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceDataReservedSpaceResponse ModifyInstanceDataReservedSpace(ModifyInstanceDataReservedSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceDataReservedSpace", ModifyInstanceDataReservedSpaceResponse.class);
+    }
+
+    /**
      *本接口（ModifyInstanceName）提供修改实例名称功能
      * @param req ModifyInstanceNameRequest
      * @return ModifyInstanceNameResponse
@@ -542,6 +586,17 @@ public class TdmysqlClient extends AbstractClient{
     public ModifyUserPrivilegesResponse ModifyUserPrivileges(ModifyUserPrivilegesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserPrivileges", ModifyUserPrivilegesResponse.class);
+    }
+
+    /**
+     *重置dbaadmin账号权限
+     * @param req ResetDbaAdminPrivilegesRequest
+     * @return ResetDbaAdminPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetDbaAdminPrivilegesResponse ResetDbaAdminPrivileges(ResetDbaAdminPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetDbaAdminPrivileges", ResetDbaAdminPrivilegesResponse.class);
     }
 
     /**

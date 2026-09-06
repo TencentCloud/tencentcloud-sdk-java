@@ -143,6 +143,20 @@ public class CreateModelRequest extends AbstractModel {
     private ServiceProviderHealthCheckConfigItemInput [] HealthCheckConfigs;
 
     /**
+    * <p>模型输出模态</p>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
+    * <p>请求后缀</p>
+    */
+    @SerializedName("EndpointPath")
+    @Expose
+    private String EndpointPath;
+
+    /**
      * Get <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p> 
      * @return AccessType <p>接入类型：PublicBYOK/PublicCustom/PrivateCustom</p>
      */
@@ -414,6 +428,38 @@ public class CreateModelRequest extends AbstractModel {
         this.HealthCheckConfigs = HealthCheckConfigs;
     }
 
+    /**
+     * Get <p>模型输出模态</p> 
+     * @return Capability <p>模型输出模态</p>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>模型输出模态</p>
+     * @param Capability <p>模型输出模态</p>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
+    /**
+     * Get <p>请求后缀</p> 
+     * @return EndpointPath <p>请求后缀</p>
+     */
+    public String getEndpointPath() {
+        return this.EndpointPath;
+    }
+
+    /**
+     * Set <p>请求后缀</p>
+     * @param EndpointPath <p>请求后缀</p>
+     */
+    public void setEndpointPath(String EndpointPath) {
+        this.EndpointPath = EndpointPath;
+    }
+
     public CreateModelRequest() {
     }
 
@@ -488,6 +534,12 @@ public class CreateModelRequest extends AbstractModel {
                 this.HealthCheckConfigs[i] = new ServiceProviderHealthCheckConfigItemInput(source.HealthCheckConfigs[i]);
             }
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
+        if (source.EndpointPath != null) {
+            this.EndpointPath = new String(source.EndpointPath);
+        }
     }
 
 
@@ -512,6 +564,8 @@ public class CreateModelRequest extends AbstractModel {
         this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
         this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
         this.setParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
+        this.setParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
 
     }
 }

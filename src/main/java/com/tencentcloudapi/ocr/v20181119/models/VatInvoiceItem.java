@@ -24,394 +24,534 @@ import java.util.HashMap;
 public class VatInvoiceItem extends AbstractModel {
 
     /**
-    * 行号
+    * <p>行号</p>
     */
     @SerializedName("LineNo")
     @Expose
     private String LineNo;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 规格
+    * <p>规格</p>
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * 单位
+    * <p>单位</p>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("Quantity")
     @Expose
     private String Quantity;
 
     /**
-    * 单价
+    * <p>单价</p>
     */
     @SerializedName("UnitPrice")
     @Expose
     private String UnitPrice;
 
     /**
-    * 不含税金额
+    * <p>不含税金额</p>
     */
     @SerializedName("AmountWithoutTax")
     @Expose
     private String AmountWithoutTax;
 
     /**
-    * 税率
+    * <p>税率</p>
     */
     @SerializedName("TaxRate")
     @Expose
     private String TaxRate;
 
     /**
-    * 税额
+    * <p>税额</p>
     */
     @SerializedName("TaxAmount")
     @Expose
     private String TaxAmount;
 
     /**
-    * 税收分类编码
+    * <p>税收分类编码</p>
     */
     @SerializedName("TaxClassifyCode")
     @Expose
     private String TaxClassifyCode;
 
     /**
-    * 运输工具类型
+    * <p>运输工具类型</p>
     */
     @SerializedName("VehicleType")
     @Expose
     private String VehicleType;
 
     /**
-    * 运输工具牌号
+    * <p>运输工具牌号</p>
     */
     @SerializedName("VehicleBrand")
     @Expose
     private String VehicleBrand;
 
     /**
-    * 起始地
+    * <p>起始地</p>
     */
     @SerializedName("DeparturePlace")
     @Expose
     private String DeparturePlace;
 
     /**
-    * 到达地
+    * <p>到达地</p>
     */
     @SerializedName("ArrivalPlace")
     @Expose
     private String ArrivalPlace;
 
     /**
-    * 运输货物名称
+    * <p>运输货物名称</p>
     */
     @SerializedName("TransportItemsName")
     @Expose
     private String TransportItemsName;
 
     /**
-    * 建筑服务发生地
+    * <p>建筑服务发生地</p>
     */
     @SerializedName("ConstructionPlace")
     @Expose
     private String ConstructionPlace;
 
     /**
-    * 建筑项目名称
+    * <p>建筑项目名称</p>
     */
     @SerializedName("ConstructionName")
     @Expose
     private String ConstructionName;
 
     /**
-     * Get 行号 
-     * @return LineNo 行号
+    * <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalTaxRate")
+    @Expose
+    private String OriginalTaxRate;
+
+    /**
+    * <p>原始税额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalTaxAmount")
+    @Expose
+    private String OriginalTaxAmount;
+
+    /**
+    * <p>零税率标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZeroTaxRateMark")
+    @Expose
+    private String ZeroTaxRateMark;
+
+    /**
+    * <p>含税单价</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaxIncludedUnitPrice")
+    @Expose
+    private String TaxIncludedUnitPrice;
+
+    /**
+    * <p>含税金额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaxIncludedAmount")
+    @Expose
+    private Float TaxIncludedAmount;
+
+    /**
+     * Get <p>行号</p> 
+     * @return LineNo <p>行号</p>
      */
     public String getLineNo() {
         return this.LineNo;
     }
 
     /**
-     * Set 行号
-     * @param LineNo 行号
+     * Set <p>行号</p>
+     * @param LineNo <p>行号</p>
      */
     public void setLineNo(String LineNo) {
         this.LineNo = LineNo;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规格 
-     * @return Spec 规格
+     * Get <p>规格</p> 
+     * @return Spec <p>规格</p>
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set 规格
-     * @param Spec 规格
+     * Set <p>规格</p>
+     * @param Spec <p>规格</p>
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get 单位 
-     * @return Unit 单位
+     * Get <p>单位</p> 
+     * @return Unit <p>单位</p>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 单位
-     * @param Unit 单位
+     * Set <p>单位</p>
+     * @param Unit <p>单位</p>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 数量 
-     * @return Quantity 数量
+     * Get <p>数量</p> 
+     * @return Quantity <p>数量</p>
      */
     public String getQuantity() {
         return this.Quantity;
     }
 
     /**
-     * Set 数量
-     * @param Quantity 数量
+     * Set <p>数量</p>
+     * @param Quantity <p>数量</p>
      */
     public void setQuantity(String Quantity) {
         this.Quantity = Quantity;
     }
 
     /**
-     * Get 单价 
-     * @return UnitPrice 单价
+     * Get <p>单价</p> 
+     * @return UnitPrice <p>单价</p>
      */
     public String getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set 单价
-     * @param UnitPrice 单价
+     * Set <p>单价</p>
+     * @param UnitPrice <p>单价</p>
      */
     public void setUnitPrice(String UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 不含税金额 
-     * @return AmountWithoutTax 不含税金额
+     * Get <p>不含税金额</p> 
+     * @return AmountWithoutTax <p>不含税金额</p>
      */
     public String getAmountWithoutTax() {
         return this.AmountWithoutTax;
     }
 
     /**
-     * Set 不含税金额
-     * @param AmountWithoutTax 不含税金额
+     * Set <p>不含税金额</p>
+     * @param AmountWithoutTax <p>不含税金额</p>
      */
     public void setAmountWithoutTax(String AmountWithoutTax) {
         this.AmountWithoutTax = AmountWithoutTax;
     }
 
     /**
-     * Get 税率 
-     * @return TaxRate 税率
+     * Get <p>税率</p> 
+     * @return TaxRate <p>税率</p>
      */
     public String getTaxRate() {
         return this.TaxRate;
     }
 
     /**
-     * Set 税率
-     * @param TaxRate 税率
+     * Set <p>税率</p>
+     * @param TaxRate <p>税率</p>
      */
     public void setTaxRate(String TaxRate) {
         this.TaxRate = TaxRate;
     }
 
     /**
-     * Get 税额 
-     * @return TaxAmount 税额
+     * Get <p>税额</p> 
+     * @return TaxAmount <p>税额</p>
      */
     public String getTaxAmount() {
         return this.TaxAmount;
     }
 
     /**
-     * Set 税额
-     * @param TaxAmount 税额
+     * Set <p>税额</p>
+     * @param TaxAmount <p>税额</p>
      */
     public void setTaxAmount(String TaxAmount) {
         this.TaxAmount = TaxAmount;
     }
 
     /**
-     * Get 税收分类编码 
-     * @return TaxClassifyCode 税收分类编码
+     * Get <p>税收分类编码</p> 
+     * @return TaxClassifyCode <p>税收分类编码</p>
      */
     public String getTaxClassifyCode() {
         return this.TaxClassifyCode;
     }
 
     /**
-     * Set 税收分类编码
-     * @param TaxClassifyCode 税收分类编码
+     * Set <p>税收分类编码</p>
+     * @param TaxClassifyCode <p>税收分类编码</p>
      */
     public void setTaxClassifyCode(String TaxClassifyCode) {
         this.TaxClassifyCode = TaxClassifyCode;
     }
 
     /**
-     * Get 运输工具类型 
-     * @return VehicleType 运输工具类型
+     * Get <p>运输工具类型</p> 
+     * @return VehicleType <p>运输工具类型</p>
      */
     public String getVehicleType() {
         return this.VehicleType;
     }
 
     /**
-     * Set 运输工具类型
-     * @param VehicleType 运输工具类型
+     * Set <p>运输工具类型</p>
+     * @param VehicleType <p>运输工具类型</p>
      */
     public void setVehicleType(String VehicleType) {
         this.VehicleType = VehicleType;
     }
 
     /**
-     * Get 运输工具牌号 
-     * @return VehicleBrand 运输工具牌号
+     * Get <p>运输工具牌号</p> 
+     * @return VehicleBrand <p>运输工具牌号</p>
      */
     public String getVehicleBrand() {
         return this.VehicleBrand;
     }
 
     /**
-     * Set 运输工具牌号
-     * @param VehicleBrand 运输工具牌号
+     * Set <p>运输工具牌号</p>
+     * @param VehicleBrand <p>运输工具牌号</p>
      */
     public void setVehicleBrand(String VehicleBrand) {
         this.VehicleBrand = VehicleBrand;
     }
 
     /**
-     * Get 起始地 
-     * @return DeparturePlace 起始地
+     * Get <p>起始地</p> 
+     * @return DeparturePlace <p>起始地</p>
      */
     public String getDeparturePlace() {
         return this.DeparturePlace;
     }
 
     /**
-     * Set 起始地
-     * @param DeparturePlace 起始地
+     * Set <p>起始地</p>
+     * @param DeparturePlace <p>起始地</p>
      */
     public void setDeparturePlace(String DeparturePlace) {
         this.DeparturePlace = DeparturePlace;
     }
 
     /**
-     * Get 到达地 
-     * @return ArrivalPlace 到达地
+     * Get <p>到达地</p> 
+     * @return ArrivalPlace <p>到达地</p>
      */
     public String getArrivalPlace() {
         return this.ArrivalPlace;
     }
 
     /**
-     * Set 到达地
-     * @param ArrivalPlace 到达地
+     * Set <p>到达地</p>
+     * @param ArrivalPlace <p>到达地</p>
      */
     public void setArrivalPlace(String ArrivalPlace) {
         this.ArrivalPlace = ArrivalPlace;
     }
 
     /**
-     * Get 运输货物名称 
-     * @return TransportItemsName 运输货物名称
+     * Get <p>运输货物名称</p> 
+     * @return TransportItemsName <p>运输货物名称</p>
      */
     public String getTransportItemsName() {
         return this.TransportItemsName;
     }
 
     /**
-     * Set 运输货物名称
-     * @param TransportItemsName 运输货物名称
+     * Set <p>运输货物名称</p>
+     * @param TransportItemsName <p>运输货物名称</p>
      */
     public void setTransportItemsName(String TransportItemsName) {
         this.TransportItemsName = TransportItemsName;
     }
 
     /**
-     * Get 建筑服务发生地 
-     * @return ConstructionPlace 建筑服务发生地
+     * Get <p>建筑服务发生地</p> 
+     * @return ConstructionPlace <p>建筑服务发生地</p>
      */
     public String getConstructionPlace() {
         return this.ConstructionPlace;
     }
 
     /**
-     * Set 建筑服务发生地
-     * @param ConstructionPlace 建筑服务发生地
+     * Set <p>建筑服务发生地</p>
+     * @param ConstructionPlace <p>建筑服务发生地</p>
      */
     public void setConstructionPlace(String ConstructionPlace) {
         this.ConstructionPlace = ConstructionPlace;
     }
 
     /**
-     * Get 建筑项目名称 
-     * @return ConstructionName 建筑项目名称
+     * Get <p>建筑项目名称</p> 
+     * @return ConstructionName <p>建筑项目名称</p>
      */
     public String getConstructionName() {
         return this.ConstructionName;
     }
 
     /**
-     * Set 建筑项目名称
-     * @param ConstructionName 建筑项目名称
+     * Set <p>建筑项目名称</p>
+     * @param ConstructionName <p>建筑项目名称</p>
      */
     public void setConstructionName(String ConstructionName) {
         this.ConstructionName = ConstructionName;
+    }
+
+    /**
+     * Get <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalTaxRate <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginalTaxRate() {
+        return this.OriginalTaxRate;
+    }
+
+    /**
+     * Set <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalTaxRate <p>原始税率</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalTaxRate(String OriginalTaxRate) {
+        this.OriginalTaxRate = OriginalTaxRate;
+    }
+
+    /**
+     * Get <p>原始税额</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalTaxAmount <p>原始税额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginalTaxAmount() {
+        return this.OriginalTaxAmount;
+    }
+
+    /**
+     * Set <p>原始税额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalTaxAmount <p>原始税额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalTaxAmount(String OriginalTaxAmount) {
+        this.OriginalTaxAmount = OriginalTaxAmount;
+    }
+
+    /**
+     * Get <p>零税率标识</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZeroTaxRateMark <p>零税率标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZeroTaxRateMark() {
+        return this.ZeroTaxRateMark;
+    }
+
+    /**
+     * Set <p>零税率标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZeroTaxRateMark <p>零税率标识</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZeroTaxRateMark(String ZeroTaxRateMark) {
+        this.ZeroTaxRateMark = ZeroTaxRateMark;
+    }
+
+    /**
+     * Get <p>含税单价</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaxIncludedUnitPrice <p>含税单价</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaxIncludedUnitPrice() {
+        return this.TaxIncludedUnitPrice;
+    }
+
+    /**
+     * Set <p>含税单价</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaxIncludedUnitPrice <p>含税单价</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaxIncludedUnitPrice(String TaxIncludedUnitPrice) {
+        this.TaxIncludedUnitPrice = TaxIncludedUnitPrice;
+    }
+
+    /**
+     * Get <p>含税金额</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaxIncludedAmount <p>含税金额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTaxIncludedAmount() {
+        return this.TaxIncludedAmount;
+    }
+
+    /**
+     * Set <p>含税金额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaxIncludedAmount <p>含税金额</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaxIncludedAmount(Float TaxIncludedAmount) {
+        this.TaxIncludedAmount = TaxIncludedAmount;
     }
 
     public VatInvoiceItem() {
@@ -473,6 +613,21 @@ public class VatInvoiceItem extends AbstractModel {
         if (source.ConstructionName != null) {
             this.ConstructionName = new String(source.ConstructionName);
         }
+        if (source.OriginalTaxRate != null) {
+            this.OriginalTaxRate = new String(source.OriginalTaxRate);
+        }
+        if (source.OriginalTaxAmount != null) {
+            this.OriginalTaxAmount = new String(source.OriginalTaxAmount);
+        }
+        if (source.ZeroTaxRateMark != null) {
+            this.ZeroTaxRateMark = new String(source.ZeroTaxRateMark);
+        }
+        if (source.TaxIncludedUnitPrice != null) {
+            this.TaxIncludedUnitPrice = new String(source.TaxIncludedUnitPrice);
+        }
+        if (source.TaxIncludedAmount != null) {
+            this.TaxIncludedAmount = new Float(source.TaxIncludedAmount);
+        }
     }
 
 
@@ -497,6 +652,11 @@ public class VatInvoiceItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TransportItemsName", this.TransportItemsName);
         this.setParamSimple(map, prefix + "ConstructionPlace", this.ConstructionPlace);
         this.setParamSimple(map, prefix + "ConstructionName", this.ConstructionName);
+        this.setParamSimple(map, prefix + "OriginalTaxRate", this.OriginalTaxRate);
+        this.setParamSimple(map, prefix + "OriginalTaxAmount", this.OriginalTaxAmount);
+        this.setParamSimple(map, prefix + "ZeroTaxRateMark", this.ZeroTaxRateMark);
+        this.setParamSimple(map, prefix + "TaxIncludedUnitPrice", this.TaxIncludedUnitPrice);
+        this.setParamSimple(map, prefix + "TaxIncludedAmount", this.TaxIncludedAmount);
 
     }
 }

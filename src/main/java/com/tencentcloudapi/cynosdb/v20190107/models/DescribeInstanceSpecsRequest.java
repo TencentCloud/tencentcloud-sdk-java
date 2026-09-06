@@ -45,7 +45,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * <p>集群级别，可空。例如 P0, P1</p>
+    * <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
     */
     @SerializedName("ClusterLevel")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>集群级别，可空。例如 P0, P1</p> 
-     * @return ClusterLevel <p>集群级别，可空。例如 P0, P1</p>
+     * Get <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p> 
+     * @return ClusterLevel <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set <p>集群级别，可空。例如 P0, P1</p>
-     * @param ClusterLevel <p>集群级别，可空。例如 P0, P1</p>
+     * Set <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
+     * @param ClusterLevel <p>集群级别。例如 P0, P1。若未指定可用区，针对于不支持亲和性的可用区将降级查询非亲和性资源。</p>
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;

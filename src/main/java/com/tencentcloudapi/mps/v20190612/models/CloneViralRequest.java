@@ -59,6 +59,13 @@ public class CloneViralRequest extends AbstractModel {
     private CloneViralPersona Persona;
 
     /**
+    * <p>输出相关参数</p>
+    */
+    @SerializedName("Output")
+    @Expose
+    private CloneViralOutputOption Output;
+
+    /**
      * Get <p>爆款视频Url</p> 
      * @return VideoUrl <p>爆款视频Url</p>
      */
@@ -138,6 +145,22 @@ public class CloneViralRequest extends AbstractModel {
         this.Persona = Persona;
     }
 
+    /**
+     * Get <p>输出相关参数</p> 
+     * @return Output <p>输出相关参数</p>
+     */
+    public CloneViralOutputOption getOutput() {
+        return this.Output;
+    }
+
+    /**
+     * Set <p>输出相关参数</p>
+     * @param Output <p>输出相关参数</p>
+     */
+    public void setOutput(CloneViralOutputOption Output) {
+        this.Output = Output;
+    }
+
     public CloneViralRequest() {
     }
 
@@ -161,6 +184,9 @@ public class CloneViralRequest extends AbstractModel {
         if (source.Persona != null) {
             this.Persona = new CloneViralPersona(source.Persona);
         }
+        if (source.Output != null) {
+            this.Output = new CloneViralOutputOption(source.Output);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class CloneViralRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AIGCParam.", this.AIGCParam);
         this.setParamObj(map, prefix + "ContentParam.", this.ContentParam);
         this.setParamObj(map, prefix + "Persona.", this.Persona);
+        this.setParamObj(map, prefix + "Output.", this.Output);
 
     }
 }

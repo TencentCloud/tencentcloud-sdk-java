@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeClusterDetailDatabasesRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 偏移量，默认0
+    * <p>偏移量，默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认20,最大100
+    * <p>返回数量，默认20,最大100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 数据库名称
+    * <p>数据库名称，通过该字段进行子串匹配</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 偏移量，默认0 
-     * @return Offset 偏移量，默认0
+     * Get <p>偏移量，默认0</p> 
+     * @return Offset <p>偏移量，默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认0
-     * @param Offset 偏移量，默认0
+     * Set <p>偏移量，默认0</p>
+     * @param Offset <p>偏移量，默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认20,最大100 
-     * @return Limit 返回数量，默认20,最大100
+     * Get <p>返回数量，默认20,最大100</p> 
+     * @return Limit <p>返回数量，默认20,最大100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认20,最大100
-     * @param Limit 返回数量，默认20,最大100
+     * Set <p>返回数量，默认20,最大100</p>
+     * @param Limit <p>返回数量，默认20,最大100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 数据库名称 
-     * @return DbName 数据库名称
+     * Get <p>数据库名称，通过该字段进行子串匹配</p> 
+     * @return DbName <p>数据库名称，通过该字段进行子串匹配</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称
-     * @param DbName 数据库名称
+     * Set <p>数据库名称，通过该字段进行子串匹配</p>
+     * @param DbName <p>数据库名称，通过该字段进行子串匹配</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;

@@ -24,118 +24,164 @@ import java.util.HashMap;
 public class PassInvoiceInfo extends AbstractModel {
 
     /**
-    * 通行费车牌号
+    * <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
     */
     @SerializedName("NumberPlate")
     @Expose
     private String NumberPlate;
 
     /**
-    * 通行费类型
+    * <p>通行费类型；数电通行费源字段 cllx 写入该字</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 通行日期起
+    * <p>通行日期起</p>
     */
     @SerializedName("PassDateBegin")
     @Expose
     private String PassDateBegin;
 
     /**
-    * 通行日期止
+    * <p>通行日期止</p>
     */
     @SerializedName("PassDateEnd")
     @Expose
     private String PassDateEnd;
 
     /**
-    * 税收分类编码
+    * <p>税收分类编码</p>
     */
     @SerializedName("TaxClassifyCode")
     @Expose
     private String TaxClassifyCode;
 
     /**
-     * Get 通行费车牌号 
-     * @return NumberPlate 通行费车牌号
+    * <p>通行费车牌号</p>
+    */
+    @SerializedName("CarType")
+    @Expose
+    private String CarType;
+
+    /**
+    * <p>通行费车辆类型</p>
+    */
+    @SerializedName("PlateNumber")
+    @Expose
+    private String PlateNumber;
+
+    /**
+     * Get <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p> 
+     * @return NumberPlate <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
      */
     public String getNumberPlate() {
         return this.NumberPlate;
     }
 
     /**
-     * Set 通行费车牌号
-     * @param NumberPlate 通行费车牌号
+     * Set <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
+     * @param NumberPlate <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
      */
     public void setNumberPlate(String NumberPlate) {
         this.NumberPlate = NumberPlate;
     }
 
     /**
-     * Get 通行费类型 
-     * @return Type 通行费类型
+     * Get <p>通行费类型；数电通行费源字段 cllx 写入该字</p> 
+     * @return Type <p>通行费类型；数电通行费源字段 cllx 写入该字</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 通行费类型
-     * @param Type 通行费类型
+     * Set <p>通行费类型；数电通行费源字段 cllx 写入该字</p>
+     * @param Type <p>通行费类型；数电通行费源字段 cllx 写入该字</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 通行日期起 
-     * @return PassDateBegin 通行日期起
+     * Get <p>通行日期起</p> 
+     * @return PassDateBegin <p>通行日期起</p>
      */
     public String getPassDateBegin() {
         return this.PassDateBegin;
     }
 
     /**
-     * Set 通行日期起
-     * @param PassDateBegin 通行日期起
+     * Set <p>通行日期起</p>
+     * @param PassDateBegin <p>通行日期起</p>
      */
     public void setPassDateBegin(String PassDateBegin) {
         this.PassDateBegin = PassDateBegin;
     }
 
     /**
-     * Get 通行日期止 
-     * @return PassDateEnd 通行日期止
+     * Get <p>通行日期止</p> 
+     * @return PassDateEnd <p>通行日期止</p>
      */
     public String getPassDateEnd() {
         return this.PassDateEnd;
     }
 
     /**
-     * Set 通行日期止
-     * @param PassDateEnd 通行日期止
+     * Set <p>通行日期止</p>
+     * @param PassDateEnd <p>通行日期止</p>
      */
     public void setPassDateEnd(String PassDateEnd) {
         this.PassDateEnd = PassDateEnd;
     }
 
     /**
-     * Get 税收分类编码 
-     * @return TaxClassifyCode 税收分类编码
+     * Get <p>税收分类编码</p> 
+     * @return TaxClassifyCode <p>税收分类编码</p>
      */
     public String getTaxClassifyCode() {
         return this.TaxClassifyCode;
     }
 
     /**
-     * Set 税收分类编码
-     * @param TaxClassifyCode 税收分类编码
+     * Set <p>税收分类编码</p>
+     * @param TaxClassifyCode <p>税收分类编码</p>
      */
     public void setTaxClassifyCode(String TaxClassifyCode) {
         this.TaxClassifyCode = TaxClassifyCode;
+    }
+
+    /**
+     * Get <p>通行费车牌号</p> 
+     * @return CarType <p>通行费车牌号</p>
+     */
+    public String getCarType() {
+        return this.CarType;
+    }
+
+    /**
+     * Set <p>通行费车牌号</p>
+     * @param CarType <p>通行费车牌号</p>
+     */
+    public void setCarType(String CarType) {
+        this.CarType = CarType;
+    }
+
+    /**
+     * Get <p>通行费车辆类型</p> 
+     * @return PlateNumber <p>通行费车辆类型</p>
+     */
+    public String getPlateNumber() {
+        return this.PlateNumber;
+    }
+
+    /**
+     * Set <p>通行费车辆类型</p>
+     * @param PlateNumber <p>通行费车辆类型</p>
+     */
+    public void setPlateNumber(String PlateNumber) {
+        this.PlateNumber = PlateNumber;
     }
 
     public PassInvoiceInfo() {
@@ -161,6 +207,12 @@ public class PassInvoiceInfo extends AbstractModel {
         if (source.TaxClassifyCode != null) {
             this.TaxClassifyCode = new String(source.TaxClassifyCode);
         }
+        if (source.CarType != null) {
+            this.CarType = new String(source.CarType);
+        }
+        if (source.PlateNumber != null) {
+            this.PlateNumber = new String(source.PlateNumber);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class PassInvoiceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PassDateBegin", this.PassDateBegin);
         this.setParamSimple(map, prefix + "PassDateEnd", this.PassDateEnd);
         this.setParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
+        this.setParamSimple(map, prefix + "CarType", this.CarType);
+        this.setParamSimple(map, prefix + "PlateNumber", this.PlateNumber);
 
     }
 }

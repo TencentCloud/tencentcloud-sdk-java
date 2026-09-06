@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class ColorEnhanceInfo extends AbstractModel {
 
     /**
-    * 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
+    * <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
+    * <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li> 
-     * @return Switch 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
+     * Get <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul> 
+     * @return Switch <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
-     * @param Switch 色彩增强控制开关，可选值：
-<li>ON：开启综合增强；</li>
-<li>OFF：关闭综合增强。</li>
+     * Set <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
+     * @param Switch <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。 
-     * @return Type 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
+     * Get <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。 
+     * @return Type <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
-     * @param Type 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-<li>weak：轻色彩增强；</li>
-<li>normal：正常色彩增强；</li>
-<li>strong：强色彩增强。</li>
-默认值：weak。
+     * Set <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
+     * @param Type <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
      */
     public void setType(String Type) {
         this.Type = Type;

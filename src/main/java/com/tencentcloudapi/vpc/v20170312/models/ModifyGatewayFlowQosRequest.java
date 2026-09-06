@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class ModifyGatewayFlowQosRequest extends AbstractModel {
 
     /**
-    * 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
+    * <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
+    * <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 限流的云服务器内网IP。
+    * <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
     */
     @SerializedName("IpAddresses")
     @Expose
     private String [] IpAddresses;
 
     /**
-     * Get 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。 
-     * @return GatewayId 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
+    * <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
+    */
+    @SerializedName("Direction")
+    @Expose
+    private String Direction;
+
+    /**
+     * Get <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p> 
+     * @return GatewayId <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
-     * @param GatewayId 网关实例ID，目前我们支持的网关实例类型有，
-专线网关实例ID，形如，`dcg-ltjahce6`；
-Nat网关实例ID，形如，`nat-ltjahce6`；
-VPN网关实例ID，形如，`vpn-ltjahce6`。
+     * Set <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
+     * @param GatewayId <p>网关实例ID，目前我们支持的网关实例类型有，<br>专线网关实例ID，形如，<code>dcg-ltjahce6</code>；<br>Nat网关实例ID，形如，<code>nat-ltjahce6</code>；<br>VPN网关实例ID，形如，<code>vpn-ltjahce6</code>。</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。 
-     * @return Bandwidth 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
+     * Get <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p> 
+     * @return Bandwidth <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
-     * @param Bandwidth 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
+     * Set <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
+     * @param Bandwidth <p>流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 限流的云服务器内网IP。 
-     * @return IpAddresses 限流的云服务器内网IP。
+     * Get <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p> 
+     * @return IpAddresses <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
      */
     public String [] getIpAddresses() {
         return this.IpAddresses;
     }
 
     /**
-     * Set 限流的云服务器内网IP。
-     * @param IpAddresses 限流的云服务器内网IP。
+     * Set <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
+     * @param IpAddresses <p>限流的云服务器内网IP。</p><p>参数格式：10.0.0.2</p>
      */
     public void setIpAddresses(String [] IpAddresses) {
         this.IpAddresses = IpAddresses;
+    }
+
+    /**
+     * Get <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p> 
+     * @return Direction <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
+     */
+    public String getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
+     * @param Direction <p>限流方向，取值为In代表入向，Out代表出向。当前仅标准型Nat实例网关流控带宽方向可设置入向限流。</p>
+     */
+    public void setDirection(String Direction) {
+        this.Direction = Direction;
     }
 
     public ModifyGatewayFlowQosRequest() {
@@ -127,6 +135,9 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
                 this.IpAddresses[i] = new String(source.IpAddresses[i]);
             }
         }
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
+        }
     }
 
 
@@ -137,6 +148,7 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamArraySimple(map, prefix + "IpAddresses.", this.IpAddresses);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

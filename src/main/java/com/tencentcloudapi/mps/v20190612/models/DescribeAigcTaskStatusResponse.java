@@ -95,6 +95,22 @@ public class DescribeAigcTaskStatusResponse extends AbstractModel {
     private String TaskType;
 
     /**
+    * <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private String TaskInfo;
+
+    /**
+    * <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Stage")
+    @Expose
+    private String Stage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -266,6 +282,46 @@ public class DescribeAigcTaskStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskInfo <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskInfo <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskInfo(String TaskInfo) {
+        this.TaskInfo = TaskInfo;
+    }
+
+    /**
+     * Get <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Stage <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStage() {
+        return this.Stage;
+    }
+
+    /**
+     * Set <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Stage <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStage(String Stage) {
+        this.Stage = Stage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -319,6 +375,12 @@ public class DescribeAigcTaskStatusResponse extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new String(source.TaskInfo);
+        }
+        if (source.Stage != null) {
+            this.Stage = new String(source.Stage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -339,6 +401,8 @@ public class DescribeAigcTaskStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskResultMsg", this.TaskResultMsg);
         this.setParamSimple(map, prefix + "RequestBody", this.RequestBody);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "TaskInfo", this.TaskInfo);
+        this.setParamSimple(map, prefix + "Stage", this.Stage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

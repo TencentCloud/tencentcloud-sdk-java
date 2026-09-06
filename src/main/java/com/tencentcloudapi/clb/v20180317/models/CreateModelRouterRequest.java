@@ -143,6 +143,13 @@ public class CreateModelRouterRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
+    * <p>Embedding 配置</p>
+    */
+    @SerializedName("EmbeddingConfig")
+    @Expose
+    private EmbeddingConfig EmbeddingConfig;
+
+    /**
      * Get <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul> 
      * @return ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      */
@@ -414,6 +421,22 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.Bandwidth = Bandwidth;
     }
 
+    /**
+     * Get <p>Embedding 配置</p> 
+     * @return EmbeddingConfig <p>Embedding 配置</p>
+     */
+    public EmbeddingConfig getEmbeddingConfig() {
+        return this.EmbeddingConfig;
+    }
+
+    /**
+     * Set <p>Embedding 配置</p>
+     * @param EmbeddingConfig <p>Embedding 配置</p>
+     */
+    public void setEmbeddingConfig(EmbeddingConfig EmbeddingConfig) {
+        this.EmbeddingConfig = EmbeddingConfig;
+    }
+
     public CreateModelRouterRequest() {
     }
 
@@ -476,6 +499,9 @@ public class CreateModelRouterRequest extends AbstractModel {
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
+        if (source.EmbeddingConfig != null) {
+            this.EmbeddingConfig = new EmbeddingConfig(source.EmbeddingConfig);
+        }
     }
 
 
@@ -500,6 +526,7 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
 
     }
 }

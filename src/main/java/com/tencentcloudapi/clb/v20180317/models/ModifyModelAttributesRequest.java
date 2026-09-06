@@ -45,6 +45,20 @@ public class ModifyModelAttributesRequest extends AbstractModel {
     private ApiBaseItem [] ApiBases;
 
     /**
+    * <p>非chat输出模态的Api Base URL</p>
+    */
+    @SerializedName("ApiBase")
+    @Expose
+    private String ApiBase;
+
+    /**
+    * <p>非chat输出模态的请求后缀</p>
+    */
+    @SerializedName("EndpointPath")
+    @Expose
+    private String EndpointPath;
+
+    /**
      * Get <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p> 
      * @return ServiceProviderId <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p>
      */
@@ -92,6 +106,38 @@ public class ModifyModelAttributesRequest extends AbstractModel {
         this.ApiBases = ApiBases;
     }
 
+    /**
+     * Get <p>非chat输出模态的Api Base URL</p> 
+     * @return ApiBase <p>非chat输出模态的Api Base URL</p>
+     */
+    public String getApiBase() {
+        return this.ApiBase;
+    }
+
+    /**
+     * Set <p>非chat输出模态的Api Base URL</p>
+     * @param ApiBase <p>非chat输出模态的Api Base URL</p>
+     */
+    public void setApiBase(String ApiBase) {
+        this.ApiBase = ApiBase;
+    }
+
+    /**
+     * Get <p>非chat输出模态的请求后缀</p> 
+     * @return EndpointPath <p>非chat输出模态的请求后缀</p>
+     */
+    public String getEndpointPath() {
+        return this.EndpointPath;
+    }
+
+    /**
+     * Set <p>非chat输出模态的请求后缀</p>
+     * @param EndpointPath <p>非chat输出模态的请求后缀</p>
+     */
+    public void setEndpointPath(String EndpointPath) {
+        this.EndpointPath = EndpointPath;
+    }
+
     public ModifyModelAttributesRequest() {
     }
 
@@ -112,6 +158,12 @@ public class ModifyModelAttributesRequest extends AbstractModel {
                 this.ApiBases[i] = new ApiBaseItem(source.ApiBases[i]);
             }
         }
+        if (source.ApiBase != null) {
+            this.ApiBase = new String(source.ApiBase);
+        }
+        if (source.EndpointPath != null) {
+            this.EndpointPath = new String(source.EndpointPath);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class ModifyModelAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
         this.setParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
         this.setParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
+        this.setParamSimple(map, prefix + "ApiBase", this.ApiBase);
+        this.setParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
 
     }
 }

@@ -187,6 +187,22 @@ public class ModelKeyInfoItem extends AbstractModel {
     private ServiceProviderHealthCheckConfigItemOutput [] HealthCheckConfigs;
 
     /**
+    * <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
+    * <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndpointPath")
+    @Expose
+    private String EndpointPath;
+
+    /**
      * Get <p>接入类型</p> 
      * @return AccessType <p>接入类型</p>
      */
@@ -574,6 +590,46 @@ public class ModelKeyInfoItem extends AbstractModel {
         this.HealthCheckConfigs = HealthCheckConfigs;
     }
 
+    /**
+     * Get <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Capability <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Capability <p>模型输出模态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
+    /**
+     * Get <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndpointPath <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEndpointPath() {
+        return this.EndpointPath;
+    }
+
+    /**
+     * Set <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndpointPath <p>请求后缀</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndpointPath(String EndpointPath) {
+        this.EndpointPath = EndpointPath;
+    }
+
     public ModelKeyInfoItem() {
     }
 
@@ -666,6 +722,12 @@ public class ModelKeyInfoItem extends AbstractModel {
                 this.HealthCheckConfigs[i] = new ServiceProviderHealthCheckConfigItemOutput(source.HealthCheckConfigs[i]);
             }
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
+        if (source.EndpointPath != null) {
+            this.EndpointPath = new String(source.EndpointPath);
+        }
     }
 
 
@@ -695,6 +757,8 @@ public class ModelKeyInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
         this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelName", this.CMRPrivateNetworkTunnelName);
         this.setParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
+        this.setParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
 
     }
 }

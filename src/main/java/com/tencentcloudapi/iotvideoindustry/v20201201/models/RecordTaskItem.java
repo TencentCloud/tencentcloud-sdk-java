@@ -24,233 +24,325 @@ import java.util.HashMap;
 public class RecordTaskItem extends AbstractModel {
 
     /**
-    * 录像任务ID
+    * <p>录像任务ID</p>
     */
     @SerializedName("RecordTaskId")
     @Expose
     private String RecordTaskId;
 
     /**
-    * 录制计划ID
+    * <p>录制计划ID</p>
     */
     @SerializedName("RecordPlanId")
     @Expose
     private String RecordPlanId;
 
     /**
-    * 本录制片段开始时间
+    * <p>本录制片段开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 本录制片段结束时间
+    * <p>本录制片段结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 录制模式
+    * <p>录制模式</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 本录制片段对应的录制文件URL
+    * <p>本录制片段对应的录制文件URL</p>
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-    * 本录制片段当前的录制状态
+    * <p>本录制片段当前的录制状态</p>
     */
     @SerializedName("RecordStatus")
     @Expose
     private Long RecordStatus;
 
     /**
-    * 场景ID
+    * <p>场景ID</p>
     */
     @SerializedName("SceneId")
     @Expose
     private Long SceneId;
 
     /**
-    * 告警ID
+    * <p>告警ID</p>
     */
     @SerializedName("WarnId")
     @Expose
     private Long WarnId;
 
     /**
-    * 录制id，NVR下属设备有效
+    * <p>录制id，NVR下属设备有效</p>
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-     * Get 录像任务ID 
-     * @return RecordTaskId 录像任务ID
+    * <p>视频自增ID</p>
+    */
+    @SerializedName("InitID")
+    @Expose
+    private Long InitID;
+
+    /**
+    * <p>过期时间</p>
+    */
+    @SerializedName("ExpectDeleteTime")
+    @Expose
+    private Long ExpectDeleteTime;
+
+    /**
+    * <p>录制时长</p>
+    */
+    @SerializedName("RecordTimeLen")
+    @Expose
+    private Long RecordTimeLen;
+
+    /**
+    * <p>文件大小</p>
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
+     * Get <p>录像任务ID</p> 
+     * @return RecordTaskId <p>录像任务ID</p>
      */
     public String getRecordTaskId() {
         return this.RecordTaskId;
     }
 
     /**
-     * Set 录像任务ID
-     * @param RecordTaskId 录像任务ID
+     * Set <p>录像任务ID</p>
+     * @param RecordTaskId <p>录像任务ID</p>
      */
     public void setRecordTaskId(String RecordTaskId) {
         this.RecordTaskId = RecordTaskId;
     }
 
     /**
-     * Get 录制计划ID 
-     * @return RecordPlanId 录制计划ID
+     * Get <p>录制计划ID</p> 
+     * @return RecordPlanId <p>录制计划ID</p>
      */
     public String getRecordPlanId() {
         return this.RecordPlanId;
     }
 
     /**
-     * Set 录制计划ID
-     * @param RecordPlanId 录制计划ID
+     * Set <p>录制计划ID</p>
+     * @param RecordPlanId <p>录制计划ID</p>
      */
     public void setRecordPlanId(String RecordPlanId) {
         this.RecordPlanId = RecordPlanId;
     }
 
     /**
-     * Get 本录制片段开始时间 
-     * @return StartTime 本录制片段开始时间
+     * Get <p>本录制片段开始时间</p> 
+     * @return StartTime <p>本录制片段开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 本录制片段开始时间
-     * @param StartTime 本录制片段开始时间
+     * Set <p>本录制片段开始时间</p>
+     * @param StartTime <p>本录制片段开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 本录制片段结束时间 
-     * @return EndTime 本录制片段结束时间
+     * Get <p>本录制片段结束时间</p> 
+     * @return EndTime <p>本录制片段结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 本录制片段结束时间
-     * @param EndTime 本录制片段结束时间
+     * Set <p>本录制片段结束时间</p>
+     * @param EndTime <p>本录制片段结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 录制模式 
-     * @return EventId 录制模式
+     * Get <p>录制模式</p> 
+     * @return EventId <p>录制模式</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 录制模式
-     * @param EventId 录制模式
+     * Set <p>录制模式</p>
+     * @param EventId <p>录制模式</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 本录制片段对应的录制文件URL 
-     * @return VideoUrl 本录制片段对应的录制文件URL
+     * Get <p>本录制片段对应的录制文件URL</p> 
+     * @return VideoUrl <p>本录制片段对应的录制文件URL</p>
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set 本录制片段对应的录制文件URL
-     * @param VideoUrl 本录制片段对应的录制文件URL
+     * Set <p>本录制片段对应的录制文件URL</p>
+     * @param VideoUrl <p>本录制片段对应的录制文件URL</p>
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get 本录制片段当前的录制状态 
-     * @return RecordStatus 本录制片段当前的录制状态
+     * Get <p>本录制片段当前的录制状态</p> 
+     * @return RecordStatus <p>本录制片段当前的录制状态</p>
      */
     public Long getRecordStatus() {
         return this.RecordStatus;
     }
 
     /**
-     * Set 本录制片段当前的录制状态
-     * @param RecordStatus 本录制片段当前的录制状态
+     * Set <p>本录制片段当前的录制状态</p>
+     * @param RecordStatus <p>本录制片段当前的录制状态</p>
      */
     public void setRecordStatus(Long RecordStatus) {
         this.RecordStatus = RecordStatus;
     }
 
     /**
-     * Get 场景ID 
-     * @return SceneId 场景ID
+     * Get <p>场景ID</p> 
+     * @return SceneId <p>场景ID</p>
      */
     public Long getSceneId() {
         return this.SceneId;
     }
 
     /**
-     * Set 场景ID
-     * @param SceneId 场景ID
+     * Set <p>场景ID</p>
+     * @param SceneId <p>场景ID</p>
      */
     public void setSceneId(Long SceneId) {
         this.SceneId = SceneId;
     }
 
     /**
-     * Get 告警ID 
-     * @return WarnId 告警ID
+     * Get <p>告警ID</p> 
+     * @return WarnId <p>告警ID</p>
      */
     public Long getWarnId() {
         return this.WarnId;
     }
 
     /**
-     * Set 告警ID
-     * @param WarnId 告警ID
+     * Set <p>告警ID</p>
+     * @param WarnId <p>告警ID</p>
      */
     public void setWarnId(Long WarnId) {
         this.WarnId = WarnId;
     }
 
     /**
-     * Get 录制id，NVR下属设备有效 
-     * @return RecordId 录制id，NVR下属设备有效
+     * Get <p>录制id，NVR下属设备有效</p> 
+     * @return RecordId <p>录制id，NVR下属设备有效</p>
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 录制id，NVR下属设备有效
-     * @param RecordId 录制id，NVR下属设备有效
+     * Set <p>录制id，NVR下属设备有效</p>
+     * @param RecordId <p>录制id，NVR下属设备有效</p>
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
+    }
+
+    /**
+     * Get <p>视频自增ID</p> 
+     * @return InitID <p>视频自增ID</p>
+     */
+    public Long getInitID() {
+        return this.InitID;
+    }
+
+    /**
+     * Set <p>视频自增ID</p>
+     * @param InitID <p>视频自增ID</p>
+     */
+    public void setInitID(Long InitID) {
+        this.InitID = InitID;
+    }
+
+    /**
+     * Get <p>过期时间</p> 
+     * @return ExpectDeleteTime <p>过期时间</p>
+     */
+    public Long getExpectDeleteTime() {
+        return this.ExpectDeleteTime;
+    }
+
+    /**
+     * Set <p>过期时间</p>
+     * @param ExpectDeleteTime <p>过期时间</p>
+     */
+    public void setExpectDeleteTime(Long ExpectDeleteTime) {
+        this.ExpectDeleteTime = ExpectDeleteTime;
+    }
+
+    /**
+     * Get <p>录制时长</p> 
+     * @return RecordTimeLen <p>录制时长</p>
+     */
+    public Long getRecordTimeLen() {
+        return this.RecordTimeLen;
+    }
+
+    /**
+     * Set <p>录制时长</p>
+     * @param RecordTimeLen <p>录制时长</p>
+     */
+    public void setRecordTimeLen(Long RecordTimeLen) {
+        this.RecordTimeLen = RecordTimeLen;
+    }
+
+    /**
+     * Get <p>文件大小</p> 
+     * @return FileSize <p>文件大小</p>
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set <p>文件大小</p>
+     * @param FileSize <p>文件大小</p>
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
     }
 
     public RecordTaskItem() {
@@ -291,6 +383,18 @@ public class RecordTaskItem extends AbstractModel {
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
         }
+        if (source.InitID != null) {
+            this.InitID = new Long(source.InitID);
+        }
+        if (source.ExpectDeleteTime != null) {
+            this.ExpectDeleteTime = new Long(source.ExpectDeleteTime);
+        }
+        if (source.RecordTimeLen != null) {
+            this.RecordTimeLen = new Long(source.RecordTimeLen);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
     }
 
 
@@ -308,6 +412,10 @@ public class RecordTaskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SceneId", this.SceneId);
         this.setParamSimple(map, prefix + "WarnId", this.WarnId);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "InitID", this.InitID);
+        this.setParamSimple(map, prefix + "ExpectDeleteTime", this.ExpectDeleteTime);
+        this.setParamSimple(map, prefix + "RecordTimeLen", this.RecordTimeLen);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }

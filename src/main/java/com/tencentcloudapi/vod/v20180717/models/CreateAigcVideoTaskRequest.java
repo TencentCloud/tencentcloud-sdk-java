@@ -38,7 +38,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
+    * <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen、H3-Max；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni、3.0-turbo、scene；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo、q3-mix、q3-drama、q3-ad、scene、avatar-q2-pro、avatar-q2-turbo、lip-sync；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast、3.1-lite、omni；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5、3d_2.0；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
     */
     @SerializedName("ModelVersion")
     @Expose
@@ -101,7 +101,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private AigcVideoOutputConfig OutputConfig;
 
     /**
-    * <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+    * <p>输入文件的区域信息。取值如下：</p><ul><li>当输入文件存储在海外时：Oversea；</li><li>当输入文件存储在美西时：OverseaUSWest；</li><li>当输入文件存储在国内时：Mainland。</li></ul><p>默认值：Mainland</p>
     */
     @SerializedName("InputRegion")
     @Expose
@@ -189,16 +189,16 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p> 
-     * @return ModelVersion <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
+     * Get <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen、H3-Max；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni、3.0-turbo、scene；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo、q3-mix、q3-drama、q3-ad、scene、avatar-q2-pro、avatar-q2-turbo、lip-sync；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast、3.1-lite、omni；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5、3d_2.0；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p> 
+     * @return ModelVersion <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen、H3-Max；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni、3.0-turbo、scene；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo、q3-mix、q3-drama、q3-ad、scene、avatar-q2-pro、avatar-q2-turbo、lip-sync；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast、3.1-lite、omni；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5、3d_2.0；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
-     * @param ModelVersion <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
+     * Set <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen、H3-Max；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni、3.0-turbo、scene；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo、q3-mix、q3-drama、q3-ad、scene、avatar-q2-pro、avatar-q2-turbo、lip-sync；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast、3.1-lite、omni；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5、3d_2.0；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
+     * @param ModelVersion <p>模型版本。取值：<br>当 ModelName 是 Hailuo，可选值为 02、2.3、2.3-fast、H3、H3_regen、H3-Max；<br>当 ModelName 是 Kling，可选值为 1.6、2.0、2.1、2.5、2.6、O1、3.0、3.0-Omni、3.0-turbo、scene；<br>当 ModelName 是 Vidu，可选值为 q2、q2-pro、q2-turbo、q3、q3-pro、q3-turbo、q3-mix、q3-drama、q3-ad、scene、avatar-q2-pro、avatar-q2-turbo、lip-sync；<br>当 ModelName 是 GV，可选值为 3.1、3.1-fast、3.1-lite、omni；<br>当 ModelName 是 OS，可选值为 2.0；<br>当 ModelName 是 Hunyuan，可选值为 1.5、3d_2.0；<br>当 ModelName 是 Mingmou，可选值为 1.0；<br>当 ModelName 是 PixVerse，可选值为 v5.6、v6、c1；</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
@@ -333,16 +333,16 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p> 
-     * @return InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+     * Get <p>输入文件的区域信息。取值如下：</p><ul><li>当输入文件存储在海外时：Oversea；</li><li>当输入文件存储在美西时：OverseaUSWest；</li><li>当输入文件存储在国内时：Mainland。</li></ul><p>默认值：Mainland</p> 
+     * @return InputRegion <p>输入文件的区域信息。取值如下：</p><ul><li>当输入文件存储在海外时：Oversea；</li><li>当输入文件存储在美西时：OverseaUSWest；</li><li>当输入文件存储在国内时：Mainland。</li></ul><p>默认值：Mainland</p>
      */
     public String getInputRegion() {
         return this.InputRegion;
     }
 
     /**
-     * Set <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
-     * @param InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+     * Set <p>输入文件的区域信息。取值如下：</p><ul><li>当输入文件存储在海外时：Oversea；</li><li>当输入文件存储在美西时：OverseaUSWest；</li><li>当输入文件存储在国内时：Mainland。</li></ul><p>默认值：Mainland</p>
+     * @param InputRegion <p>输入文件的区域信息。取值如下：</p><ul><li>当输入文件存储在海外时：Oversea；</li><li>当输入文件存储在美西时：OverseaUSWest；</li><li>当输入文件存储在国内时：Mainland。</li></ul><p>默认值：Mainland</p>
      */
     public void setInputRegion(String InputRegion) {
         this.InputRegion = InputRegion;

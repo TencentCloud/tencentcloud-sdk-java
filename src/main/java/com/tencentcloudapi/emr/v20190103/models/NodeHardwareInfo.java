@@ -455,6 +455,20 @@ public class NodeHardwareInfo extends AbstractModel {
     private DiskHealthIssue [] DiskHealthIssues;
 
     /**
+    * <p>所在节点组ID</p>
+    */
+    @SerializedName("NodeGroupId")
+    @Expose
+    private String NodeGroupId;
+
+    /**
+    * <p>所在节点组名称</p>
+    */
+    @SerializedName("NodeGroupName")
+    @Expose
+    private String NodeGroupName;
+
+    /**
      * Get <p>用户APPID</p> 
      * @return AppId <p>用户APPID</p>
      */
@@ -1446,6 +1460,38 @@ public class NodeHardwareInfo extends AbstractModel {
         this.DiskHealthIssues = DiskHealthIssues;
     }
 
+    /**
+     * Get <p>所在节点组ID</p> 
+     * @return NodeGroupId <p>所在节点组ID</p>
+     */
+    public String getNodeGroupId() {
+        return this.NodeGroupId;
+    }
+
+    /**
+     * Set <p>所在节点组ID</p>
+     * @param NodeGroupId <p>所在节点组ID</p>
+     */
+    public void setNodeGroupId(String NodeGroupId) {
+        this.NodeGroupId = NodeGroupId;
+    }
+
+    /**
+     * Get <p>所在节点组名称</p> 
+     * @return NodeGroupName <p>所在节点组名称</p>
+     */
+    public String getNodeGroupName() {
+        return this.NodeGroupName;
+    }
+
+    /**
+     * Set <p>所在节点组名称</p>
+     * @param NodeGroupName <p>所在节点组名称</p>
+     */
+    public void setNodeGroupName(String NodeGroupName) {
+        this.NodeGroupName = NodeGroupName;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1649,6 +1695,12 @@ public class NodeHardwareInfo extends AbstractModel {
                 this.DiskHealthIssues[i] = new DiskHealthIssue(source.DiskHealthIssues[i]);
             }
         }
+        if (source.NodeGroupId != null) {
+            this.NodeGroupId = new String(source.NodeGroupId);
+        }
+        if (source.NodeGroupName != null) {
+            this.NodeGroupName = new String(source.NodeGroupName);
+        }
     }
 
 
@@ -1717,6 +1769,8 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         this.setParamArrayObj(map, prefix + "DiskHealthIssues.", this.DiskHealthIssues);
+        this.setParamSimple(map, prefix + "NodeGroupId", this.NodeGroupId);
+        this.setParamSimple(map, prefix + "NodeGroupName", this.NodeGroupName);
 
     }
 }

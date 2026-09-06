@@ -31,7 +31,7 @@ public class QueryTaskFilter extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>任务类型</p>
+    * <p>任务类型</p><p>枚举值：</p><ul><li>RedrawVideo： 视频重绘</li><li>AIDrama： AI漫剧</li><li>DocGenVideo： 文档生视频</li><li>FissionVideo： 视频裂变</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
@@ -59,6 +59,27 @@ public class QueryTaskFilter extends AbstractModel {
     private String Ratio;
 
     /**
+    * <p>任务执行模式</p><p>枚举值：</p><ul><li>auto： 直接生成</li><li>phased： 确认后再生成</li></ul>
+    */
+    @SerializedName("ExecuteMode")
+    @Expose
+    private String ExecuteMode;
+
+    /**
+    * <p>裂变任务视频类型过滤: ugc、talk、display、unboxing、reaction</p><p>枚举值：</p><ul><li>ugc： UGC种草</li><li>talk： 产品口播</li><li>display： 产品展示</li><li>unboxing： 开箱分享</li><li>reaction： 反应展示</li></ul>
+    */
+    @SerializedName("VideoType")
+    @Expose
+    private String VideoType;
+
+    /**
+    * <p>模型类型</p><p>枚举值：</p><ul><li>standard： 标准版</li><li>flagship： 高级版</li></ul>
+    */
+    @SerializedName("ModelTier")
+    @Expose
+    private String ModelTier;
+
+    /**
      * Get <p>任务ID</p> 
      * @return TaskId <p>任务ID</p>
      */
@@ -75,16 +96,16 @@ public class QueryTaskFilter extends AbstractModel {
     }
 
     /**
-     * Get <p>任务类型</p> 
-     * @return TaskType <p>任务类型</p>
+     * Get <p>任务类型</p><p>枚举值：</p><ul><li>RedrawVideo： 视频重绘</li><li>AIDrama： AI漫剧</li><li>DocGenVideo： 文档生视频</li><li>FissionVideo： 视频裂变</li></ul> 
+     * @return TaskType <p>任务类型</p><p>枚举值：</p><ul><li>RedrawVideo： 视频重绘</li><li>AIDrama： AI漫剧</li><li>DocGenVideo： 文档生视频</li><li>FissionVideo： 视频裂变</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>任务类型</p>
-     * @param TaskType <p>任务类型</p>
+     * Set <p>任务类型</p><p>枚举值：</p><ul><li>RedrawVideo： 视频重绘</li><li>AIDrama： AI漫剧</li><li>DocGenVideo： 文档生视频</li><li>FissionVideo： 视频裂变</li></ul>
+     * @param TaskType <p>任务类型</p><p>枚举值：</p><ul><li>RedrawVideo： 视频重绘</li><li>AIDrama： AI漫剧</li><li>DocGenVideo： 文档生视频</li><li>FissionVideo： 视频裂变</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -138,6 +159,54 @@ public class QueryTaskFilter extends AbstractModel {
         this.Ratio = Ratio;
     }
 
+    /**
+     * Get <p>任务执行模式</p><p>枚举值：</p><ul><li>auto： 直接生成</li><li>phased： 确认后再生成</li></ul> 
+     * @return ExecuteMode <p>任务执行模式</p><p>枚举值：</p><ul><li>auto： 直接生成</li><li>phased： 确认后再生成</li></ul>
+     */
+    public String getExecuteMode() {
+        return this.ExecuteMode;
+    }
+
+    /**
+     * Set <p>任务执行模式</p><p>枚举值：</p><ul><li>auto： 直接生成</li><li>phased： 确认后再生成</li></ul>
+     * @param ExecuteMode <p>任务执行模式</p><p>枚举值：</p><ul><li>auto： 直接生成</li><li>phased： 确认后再生成</li></ul>
+     */
+    public void setExecuteMode(String ExecuteMode) {
+        this.ExecuteMode = ExecuteMode;
+    }
+
+    /**
+     * Get <p>裂变任务视频类型过滤: ugc、talk、display、unboxing、reaction</p><p>枚举值：</p><ul><li>ugc： UGC种草</li><li>talk： 产品口播</li><li>display： 产品展示</li><li>unboxing： 开箱分享</li><li>reaction： 反应展示</li></ul> 
+     * @return VideoType <p>裂变任务视频类型过滤: ugc、talk、display、unboxing、reaction</p><p>枚举值：</p><ul><li>ugc： UGC种草</li><li>talk： 产品口播</li><li>display： 产品展示</li><li>unboxing： 开箱分享</li><li>reaction： 反应展示</li></ul>
+     */
+    public String getVideoType() {
+        return this.VideoType;
+    }
+
+    /**
+     * Set <p>裂变任务视频类型过滤: ugc、talk、display、unboxing、reaction</p><p>枚举值：</p><ul><li>ugc： UGC种草</li><li>talk： 产品口播</li><li>display： 产品展示</li><li>unboxing： 开箱分享</li><li>reaction： 反应展示</li></ul>
+     * @param VideoType <p>裂变任务视频类型过滤: ugc、talk、display、unboxing、reaction</p><p>枚举值：</p><ul><li>ugc： UGC种草</li><li>talk： 产品口播</li><li>display： 产品展示</li><li>unboxing： 开箱分享</li><li>reaction： 反应展示</li></ul>
+     */
+    public void setVideoType(String VideoType) {
+        this.VideoType = VideoType;
+    }
+
+    /**
+     * Get <p>模型类型</p><p>枚举值：</p><ul><li>standard： 标准版</li><li>flagship： 高级版</li></ul> 
+     * @return ModelTier <p>模型类型</p><p>枚举值：</p><ul><li>standard： 标准版</li><li>flagship： 高级版</li></ul>
+     */
+    public String getModelTier() {
+        return this.ModelTier;
+    }
+
+    /**
+     * Set <p>模型类型</p><p>枚举值：</p><ul><li>standard： 标准版</li><li>flagship： 高级版</li></ul>
+     * @param ModelTier <p>模型类型</p><p>枚举值：</p><ul><li>standard： 标准版</li><li>flagship： 高级版</li></ul>
+     */
+    public void setModelTier(String ModelTier) {
+        this.ModelTier = ModelTier;
+    }
+
     public QueryTaskFilter() {
     }
 
@@ -161,6 +230,15 @@ public class QueryTaskFilter extends AbstractModel {
         if (source.Ratio != null) {
             this.Ratio = new String(source.Ratio);
         }
+        if (source.ExecuteMode != null) {
+            this.ExecuteMode = new String(source.ExecuteMode);
+        }
+        if (source.VideoType != null) {
+            this.VideoType = new String(source.VideoType);
+        }
+        if (source.ModelTier != null) {
+            this.ModelTier = new String(source.ModelTier);
+        }
     }
 
 
@@ -173,6 +251,9 @@ public class QueryTaskFilter extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
+        this.setParamSimple(map, prefix + "ExecuteMode", this.ExecuteMode);
+        this.setParamSimple(map, prefix + "VideoType", this.VideoType);
+        this.setParamSimple(map, prefix + "ModelTier", this.ModelTier);
 
     }
 }

@@ -171,6 +171,13 @@ public class CreateDBCustomNodesRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * <p>置放群组ID</p><p>入参限制：仅支持指定一个</p>
+    */
+    @SerializedName("DisasterRecoverGroupIds")
+    @Expose
+    private String [] DisasterRecoverGroupIds;
+
+    /**
      * Get <p>产品支持的可用区</p><p>枚举值：</p><ul><li>ap-shanghai-5： 上海五区</li><li>ap-shanghai-8： 上海八区</li><li>ap-nanjing-3： 南京三区</li></ul> 
      * @return Zone <p>产品支持的可用区</p><p>枚举值：</p><ul><li>ap-shanghai-5： 上海五区</li><li>ap-shanghai-8： 上海八区</li><li>ap-nanjing-3： 南京三区</li></ul>
      */
@@ -506,6 +513,22 @@ public class CreateDBCustomNodesRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get <p>置放群组ID</p><p>入参限制：仅支持指定一个</p> 
+     * @return DisasterRecoverGroupIds <p>置放群组ID</p><p>入参限制：仅支持指定一个</p>
+     */
+    public String [] getDisasterRecoverGroupIds() {
+        return this.DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set <p>置放群组ID</p><p>入参限制：仅支持指定一个</p>
+     * @param DisasterRecoverGroupIds <p>置放群组ID</p><p>入参限制：仅支持指定一个</p>
+     */
+    public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
+        this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
+    }
+
     public CreateDBCustomNodesRequest() {
     }
 
@@ -589,6 +612,12 @@ public class CreateDBCustomNodesRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
     }
 
 
@@ -617,6 +646,7 @@ public class CreateDBCustomNodesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
 
     }
 }

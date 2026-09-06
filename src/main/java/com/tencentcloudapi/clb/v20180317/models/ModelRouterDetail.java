@@ -203,6 +203,13 @@ public class ModelRouterDetail extends AbstractModel {
     private ModelRouterBillingConfigOutput BillingConfig;
 
     /**
+    * <p>Embedding配置</p>
+    */
+    @SerializedName("EmbeddingConfig")
+    @Expose
+    private EmbeddingConfig EmbeddingConfig;
+
+    /**
      * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -618,6 +625,22 @@ public class ModelRouterDetail extends AbstractModel {
         this.BillingConfig = BillingConfig;
     }
 
+    /**
+     * Get <p>Embedding配置</p> 
+     * @return EmbeddingConfig <p>Embedding配置</p>
+     */
+    public EmbeddingConfig getEmbeddingConfig() {
+        return this.EmbeddingConfig;
+    }
+
+    /**
+     * Set <p>Embedding配置</p>
+     * @param EmbeddingConfig <p>Embedding配置</p>
+     */
+    public void setEmbeddingConfig(EmbeddingConfig EmbeddingConfig) {
+        this.EmbeddingConfig = EmbeddingConfig;
+    }
+
     public ModelRouterDetail() {
     }
 
@@ -713,6 +736,9 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.BillingConfig != null) {
             this.BillingConfig = new ModelRouterBillingConfigOutput(source.BillingConfig);
         }
+        if (source.EmbeddingConfig != null) {
+            this.EmbeddingConfig = new EmbeddingConfig(source.EmbeddingConfig);
+        }
     }
 
 
@@ -745,6 +771,7 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         this.setParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
+        this.setParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
 
     }
 }

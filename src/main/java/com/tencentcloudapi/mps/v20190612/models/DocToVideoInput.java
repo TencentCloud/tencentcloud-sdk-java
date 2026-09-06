@@ -87,6 +87,41 @@ public class DocToVideoInput extends AbstractModel {
     private String VoiceId;
 
     /**
+    * <p>是否开启 PPTX 保真复刻模式。</p><p>开启状态下，会尽可能复刻输入 PPTX 文档的内容，无法完美复刻。<br>暂时无法复刻动画效果，</p><p>开启状态下，需保证输入文档中至少有一个 PPTX 文档。<br>如果有多个 PPTX 文档，则只会对首个文档进行保真复刻。</p><p>默认值：false</p>
+    */
+    @SerializedName("PPTXFidelity")
+    @Expose
+    private Boolean PPTXFidelity;
+
+    /**
+    * <p>生成视频的模式。</p><p>枚举值：</p><ul><li>stage： 确认后生成模式</li><li>auto： 端到端直接生成模式</li></ul>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * <p>用于生成视频的背景图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+    */
+    @SerializedName("Background")
+    @Expose
+    private DocToVideoBackgroundInfo Background;
+
+    /**
+    * <p>用于生成视频的水印图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+    */
+    @SerializedName("Watermark")
+    @Expose
+    private DocToVideoWatermarkInfo Watermark;
+
+    /**
+    * <p>是否开启字幕生成。</p><p>默认值：false</p>
+    */
+    @SerializedName("EnableCaption")
+    @Expose
+    private Boolean EnableCaption;
+
+    /**
      * Get <p>用于生成视频的文档链接。</p><p>支持的文档类型：pdf、pptx、docx、png、jpg<br>文档数量限制：3个<br>文档大小限制：10MB<br>文档页数限制：100页</p> 
      * @return FileUrl <p>用于生成视频的文档链接。</p><p>支持的文档类型：pdf、pptx、docx、png、jpg<br>文档数量限制：3个<br>文档大小限制：10MB<br>文档页数限制：100页</p>
      */
@@ -230,6 +265,86 @@ public class DocToVideoInput extends AbstractModel {
         this.VoiceId = VoiceId;
     }
 
+    /**
+     * Get <p>是否开启 PPTX 保真复刻模式。</p><p>开启状态下，会尽可能复刻输入 PPTX 文档的内容，无法完美复刻。<br>暂时无法复刻动画效果，</p><p>开启状态下，需保证输入文档中至少有一个 PPTX 文档。<br>如果有多个 PPTX 文档，则只会对首个文档进行保真复刻。</p><p>默认值：false</p> 
+     * @return PPTXFidelity <p>是否开启 PPTX 保真复刻模式。</p><p>开启状态下，会尽可能复刻输入 PPTX 文档的内容，无法完美复刻。<br>暂时无法复刻动画效果，</p><p>开启状态下，需保证输入文档中至少有一个 PPTX 文档。<br>如果有多个 PPTX 文档，则只会对首个文档进行保真复刻。</p><p>默认值：false</p>
+     */
+    public Boolean getPPTXFidelity() {
+        return this.PPTXFidelity;
+    }
+
+    /**
+     * Set <p>是否开启 PPTX 保真复刻模式。</p><p>开启状态下，会尽可能复刻输入 PPTX 文档的内容，无法完美复刻。<br>暂时无法复刻动画效果，</p><p>开启状态下，需保证输入文档中至少有一个 PPTX 文档。<br>如果有多个 PPTX 文档，则只会对首个文档进行保真复刻。</p><p>默认值：false</p>
+     * @param PPTXFidelity <p>是否开启 PPTX 保真复刻模式。</p><p>开启状态下，会尽可能复刻输入 PPTX 文档的内容，无法完美复刻。<br>暂时无法复刻动画效果，</p><p>开启状态下，需保证输入文档中至少有一个 PPTX 文档。<br>如果有多个 PPTX 文档，则只会对首个文档进行保真复刻。</p><p>默认值：false</p>
+     */
+    public void setPPTXFidelity(Boolean PPTXFidelity) {
+        this.PPTXFidelity = PPTXFidelity;
+    }
+
+    /**
+     * Get <p>生成视频的模式。</p><p>枚举值：</p><ul><li>stage： 确认后生成模式</li><li>auto： 端到端直接生成模式</li></ul> 
+     * @return Mode <p>生成视频的模式。</p><p>枚举值：</p><ul><li>stage： 确认后生成模式</li><li>auto： 端到端直接生成模式</li></ul>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>生成视频的模式。</p><p>枚举值：</p><ul><li>stage： 确认后生成模式</li><li>auto： 端到端直接生成模式</li></ul>
+     * @param Mode <p>生成视频的模式。</p><p>枚举值：</p><ul><li>stage： 确认后生成模式</li><li>auto： 端到端直接生成模式</li></ul>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get <p>用于生成视频的背景图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p> 
+     * @return Background <p>用于生成视频的背景图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+     */
+    public DocToVideoBackgroundInfo getBackground() {
+        return this.Background;
+    }
+
+    /**
+     * Set <p>用于生成视频的背景图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+     * @param Background <p>用于生成视频的背景图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+     */
+    public void setBackground(DocToVideoBackgroundInfo Background) {
+        this.Background = Background;
+    }
+
+    /**
+     * Get <p>用于生成视频的水印图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p> 
+     * @return Watermark <p>用于生成视频的水印图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+     */
+    public DocToVideoWatermarkInfo getWatermark() {
+        return this.Watermark;
+    }
+
+    /**
+     * Set <p>用于生成视频的水印图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+     * @param Watermark <p>用于生成视频的水印图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+     */
+    public void setWatermark(DocToVideoWatermarkInfo Watermark) {
+        this.Watermark = Watermark;
+    }
+
+    /**
+     * Get <p>是否开启字幕生成。</p><p>默认值：false</p> 
+     * @return EnableCaption <p>是否开启字幕生成。</p><p>默认值：false</p>
+     */
+    public Boolean getEnableCaption() {
+        return this.EnableCaption;
+    }
+
+    /**
+     * Set <p>是否开启字幕生成。</p><p>默认值：false</p>
+     * @param EnableCaption <p>是否开启字幕生成。</p><p>默认值：false</p>
+     */
+    public void setEnableCaption(Boolean EnableCaption) {
+        this.EnableCaption = EnableCaption;
+    }
+
     public DocToVideoInput() {
     }
 
@@ -268,6 +383,21 @@ public class DocToVideoInput extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.PPTXFidelity != null) {
+            this.PPTXFidelity = new Boolean(source.PPTXFidelity);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.Background != null) {
+            this.Background = new DocToVideoBackgroundInfo(source.Background);
+        }
+        if (source.Watermark != null) {
+            this.Watermark = new DocToVideoWatermarkInfo(source.Watermark);
+        }
+        if (source.EnableCaption != null) {
+            this.EnableCaption = new Boolean(source.EnableCaption);
+        }
     }
 
 
@@ -284,6 +414,11 @@ public class DocToVideoInput extends AbstractModel {
         this.setParamSimple(map, prefix + "ReferenceDuration", this.ReferenceDuration);
         this.setParamSimple(map, prefix + "EnableTTS", this.EnableTTS);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "PPTXFidelity", this.PPTXFidelity);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamObj(map, prefix + "Background.", this.Background);
+        this.setParamObj(map, prefix + "Watermark.", this.Watermark);
+        this.setParamSimple(map, prefix + "EnableCaption", this.EnableCaption);
 
     }
 }

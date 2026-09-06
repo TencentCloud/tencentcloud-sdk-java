@@ -111,6 +111,22 @@ public class AigcTaskListItem extends AbstractModel {
     private String RequestBody;
 
     /**
+    * <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private String TaskInfo;
+
+    /**
+    * <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Stage")
+    @Expose
+    private String Stage;
+
+    /**
      * Get <p>任务ID</p> 
      * @return TaskId <p>任务ID</p>
      */
@@ -314,6 +330,46 @@ public class AigcTaskListItem extends AbstractModel {
         this.RequestBody = RequestBody;
     }
 
+    /**
+     * Get <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskInfo <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskInfo <p>任务其他信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskInfo(String TaskInfo) {
+        this.TaskInfo = TaskInfo;
+    }
+
+    /**
+     * Get <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Stage <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStage() {
+        return this.Stage;
+    }
+
+    /**
+     * Set <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Stage <p>任务子状态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStage(String Stage) {
+        this.Stage = Stage;
+    }
+
     public AigcTaskListItem() {
     }
 
@@ -361,6 +417,12 @@ public class AigcTaskListItem extends AbstractModel {
         if (source.RequestBody != null) {
             this.RequestBody = new String(source.RequestBody);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new String(source.TaskInfo);
+        }
+        if (source.Stage != null) {
+            this.Stage = new String(source.Stage);
+        }
     }
 
 
@@ -380,6 +442,8 @@ public class AigcTaskListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
         this.setParamSimple(map, prefix + "RequestBody", this.RequestBody);
+        this.setParamSimple(map, prefix + "TaskInfo", this.TaskInfo);
+        this.setParamSimple(map, prefix + "Stage", this.Stage);
 
     }
 }

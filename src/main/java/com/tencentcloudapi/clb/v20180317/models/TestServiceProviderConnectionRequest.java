@@ -108,6 +108,13 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
     private String CMRPrivateNetworkTunnelId;
 
     /**
+    * <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+    */
+    @SerializedName("Capability")
+    @Expose
+    private String Capability;
+
+    /**
      * Get <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p> 
      * @return Models <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p>
      */
@@ -299,6 +306,22 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.CMRPrivateNetworkTunnelId = CMRPrivateNetworkTunnelId;
     }
 
+    /**
+     * Get <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul> 
+     * @return Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     */
+    public String getCapability() {
+        return this.Capability;
+    }
+
+    /**
+     * Set <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     * @param Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     */
+    public void setCapability(String Capability) {
+        this.Capability = Capability;
+    }
+
     public TestServiceProviderConnectionRequest() {
     }
 
@@ -346,6 +369,9 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         if (source.CMRPrivateNetworkTunnelId != null) {
             this.CMRPrivateNetworkTunnelId = new String(source.CMRPrivateNetworkTunnelId);
         }
+        if (source.Capability != null) {
+            this.Capability = new String(source.Capability);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
         this.setParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
         this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+        this.setParamSimple(map, prefix + "Capability", this.Capability);
 
     }
 }

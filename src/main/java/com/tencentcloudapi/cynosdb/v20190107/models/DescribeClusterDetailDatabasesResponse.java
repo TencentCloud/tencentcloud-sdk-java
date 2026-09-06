@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeClusterDetailDatabasesResponse extends AbstractModel {
 
     /**
-    * 数据库信息
+    * <p>数据库信息</p>
     */
     @SerializedName("DbInfos")
     @Expose
     private DbInfo [] DbInfos;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeClusterDetailDatabasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库信息 
-     * @return DbInfos 数据库信息
+     * Get <p>数据库信息</p> 
+     * @return DbInfos <p>数据库信息</p>
      */
     public DbInfo [] getDbInfos() {
         return this.DbInfos;
     }
 
     /**
-     * Set 数据库信息
-     * @param DbInfos 数据库信息
+     * Set <p>数据库信息</p>
+     * @param DbInfos <p>数据库信息</p>
      */
     public void setDbInfos(DbInfo [] DbInfos) {
         this.DbInfos = DbInfos;
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

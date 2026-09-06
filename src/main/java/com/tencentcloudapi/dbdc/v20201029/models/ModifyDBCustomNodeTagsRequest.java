@@ -31,14 +31,14 @@ public class ModifyDBCustomNodeTagsRequest extends AbstractModel {
     private String NodeId;
 
     /**
-    * <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p>
+    * <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p><p>如果节点未关联输入的标签键，则增加关联；若已关联，则将该节点关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
     */
     @SerializedName("AddTags")
     @Expose
     private Tag [] AddTags;
 
     /**
-    * <p>需要删除的标签Key</p>
+    * <p>需要解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
     */
     @SerializedName("DeleteTagKeys")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyDBCustomNodeTagsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p> 
-     * @return AddTags <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p>
+     * Get <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p><p>如果节点未关联输入的标签键，则增加关联；若已关联，则将该节点关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p> 
+     * @return AddTags <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p><p>如果节点未关联输入的标签键，则增加关联；若已关联，则将该节点关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public Tag [] getAddTags() {
         return this.AddTags;
     }
 
     /**
-     * Set <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p>
-     * @param AddTags <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p>
+     * Set <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p><p>如果节点未关联输入的标签键，则增加关联；若已关联，则将该节点关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+     * @param AddTags <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p><p>如果节点未关联输入的标签键，则增加关联；若已关联，则将该节点关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public void setAddTags(Tag [] AddTags) {
         this.AddTags = AddTags;
     }
 
     /**
-     * Get <p>需要删除的标签Key</p> 
-     * @return DeleteTagKeys <p>需要删除的标签Key</p>
+     * Get <p>需要解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p> 
+     * @return DeleteTagKeys <p>需要解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public String [] getDeleteTagKeys() {
         return this.DeleteTagKeys;
     }
 
     /**
-     * Set <p>需要删除的标签Key</p>
-     * @param DeleteTagKeys <p>需要删除的标签Key</p>
+     * Set <p>需要解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
+     * @param DeleteTagKeys <p>需要解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
      */
     public void setDeleteTagKeys(String [] DeleteTagKeys) {
         this.DeleteTagKeys = DeleteTagKeys;

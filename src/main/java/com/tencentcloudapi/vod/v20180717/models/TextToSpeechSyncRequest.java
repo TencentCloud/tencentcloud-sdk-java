@@ -52,7 +52,7 @@ public class TextToSpeechSyncRequest extends AbstractModel {
     private String LanguageBoost;
 
     /**
-    * <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
+    * <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频URL。</p>
     */
     @SerializedName("Output")
     @Expose
@@ -130,16 +130,16 @@ public class TextToSpeechSyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p> 
-     * @return Output <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
+     * Get <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频URL。</p> 
+     * @return Output <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频URL。</p>
      */
     public TextToSpeechSyncOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
-     * @param Output <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
+     * Set <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频URL。</p>
+     * @param Output <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频URL。</p>
      */
     public void setOutput(TextToSpeechSyncOutputOption Output) {
         this.Output = Output;

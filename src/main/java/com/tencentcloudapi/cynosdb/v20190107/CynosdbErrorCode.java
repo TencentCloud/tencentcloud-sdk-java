@@ -3,6 +3,9 @@ public enum CynosdbErrorCode {
      /* CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
+     /* 鉴权失败，无权限操作 */
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
@@ -276,6 +279,9 @@ public enum CynosdbErrorCode {
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
+     /* 云账号权限不足，不支持该操作。 */
+     OPERATIONDENIED_ACCOUNTOPERATIONDENIED("OperationDenied.AccountOperationDenied"),
+     
      /* 审计日志文件数超过最大限制数 */
      OPERATIONDENIED_AUDITFILEOVERQUOTAERROR("OperationDenied.AuditFileOverQuotaError"),
      
@@ -386,6 +392,9 @@ public enum CynosdbErrorCode {
      
      /* proxy可用区校验失败 */
      OPERATIONDENIED_PROXYZONECHECKERROR("OperationDenied.ProxyZoneCheckError"),
+     
+     /* 实例不存在 */
+     OPERATIONDENIED_RESOURCENOTFUNDERROR("OperationDenied.ResourceNotFundError"),
      
      /* 未知异常。请联系客服进行处理。{{1}} */
      OPERATIONDENIED_SECONDARYCACHEUNKNOWNERROR("OperationDenied.SecondaryCacheUnknownError"),
