@@ -24,46 +24,49 @@ import java.util.HashMap;
 public class SignComponentConfig extends AbstractModel {
 
     /**
-    * 签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。
-
-- false 展示签署日期（默认）
-- true 不展示签署日期 
-![image](https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png)。
+    * <p>签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。</p><ul><li>false 展示签署日期（默认）</li><li>true 不展示签署日期<br><img src="https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png" alt="image">。</li></ul>
     */
     @SerializedName("HideDate")
     @Expose
     private Boolean HideDate;
 
     /**
-     * Get 签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。
+    * <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+    */
+    @SerializedName("AddSignComponentUseSealSize")
+    @Expose
+    private Long AddSignComponentUseSealSize;
 
-- false 展示签署日期（默认）
-- true 不展示签署日期 
-![image](https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png)。 
-     * @return HideDate 签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。
-
-- false 展示签署日期（默认）
-- true 不展示签署日期 
-![image](https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png)。
+    /**
+     * Get <p>签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。</p><ul><li>false 展示签署日期（默认）</li><li>true 不展示签署日期<br><img src="https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png" alt="image">。</li></ul> 
+     * @return HideDate <p>签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。</p><ul><li>false 展示签署日期（默认）</li><li>true 不展示签署日期<br><img src="https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png" alt="image">。</li></ul>
      */
     public Boolean getHideDate() {
         return this.HideDate;
     }
 
     /**
-     * Set 签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。
-
-- false 展示签署日期（默认）
-- true 不展示签署日期 
-![image](https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png)。
-     * @param HideDate 签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。
-
-- false 展示签署日期（默认）
-- true 不展示签署日期 
-![image](https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png)。
+     * Set <p>签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。</p><ul><li>false 展示签署日期（默认）</li><li>true 不展示签署日期<br><img src="https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png" alt="image">。</li></ul>
+     * @param HideDate <p>签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。</p><ul><li>false 展示签署日期（默认）</li><li>true 不展示签署日期<br><img src="https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png" alt="image">。</li></ul>
      */
     public void setHideDate(Boolean HideDate) {
         this.HideDate = HideDate;
+    }
+
+    /**
+     * Get <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul> 
+     * @return AddSignComponentUseSealSize <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     */
+    public Long getAddSignComponentUseSealSize() {
+        return this.AddSignComponentUseSealSize;
+    }
+
+    /**
+     * Set <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     * @param AddSignComponentUseSealSize <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul>
+     */
+    public void setAddSignComponentUseSealSize(Long AddSignComponentUseSealSize) {
+        this.AddSignComponentUseSealSize = AddSignComponentUseSealSize;
     }
 
     public SignComponentConfig() {
@@ -77,6 +80,9 @@ public class SignComponentConfig extends AbstractModel {
         if (source.HideDate != null) {
             this.HideDate = new Boolean(source.HideDate);
         }
+        if (source.AddSignComponentUseSealSize != null) {
+            this.AddSignComponentUseSealSize = new Long(source.AddSignComponentUseSealSize);
+        }
     }
 
 
@@ -85,6 +91,7 @@ public class SignComponentConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HideDate", this.HideDate);
+        this.setParamSimple(map, prefix + "AddSignComponentUseSealSize", this.AddSignComponentUseSealSize);
 
     }
 }

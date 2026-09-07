@@ -59,6 +59,34 @@ public class StartLiveAvatarRoomRequest extends AbstractModel {
     private String RoomType;
 
     /**
+    * <p>交互模式下的协议，支持rtmp和trtc，默认是rtmp</p>
+    */
+    @SerializedName("SessionProtocol")
+    @Expose
+    private String SessionProtocol;
+
+    /**
+    * <p>使用trtc协议时，在trtc的appid</p>
+    */
+    @SerializedName("TrtcSdkAppId")
+    @Expose
+    private String TrtcSdkAppId;
+
+    /**
+    * <p>进入房间时需要用UserSign来校验权限</p>
+    */
+    @SerializedName("TrtcUserSig")
+    @Expose
+    private String TrtcUserSig;
+
+    /**
+    * <p>要进入的房间</p>
+    */
+    @SerializedName("TrtcRoomId")
+    @Expose
+    private String TrtcRoomId;
+
+    /**
      * Get <p>数字人直播间 ID。</p> 
      * @return RoomId <p>数字人直播间 ID。</p>
      */
@@ -138,6 +166,70 @@ public class StartLiveAvatarRoomRequest extends AbstractModel {
         this.RoomType = RoomType;
     }
 
+    /**
+     * Get <p>交互模式下的协议，支持rtmp和trtc，默认是rtmp</p> 
+     * @return SessionProtocol <p>交互模式下的协议，支持rtmp和trtc，默认是rtmp</p>
+     */
+    public String getSessionProtocol() {
+        return this.SessionProtocol;
+    }
+
+    /**
+     * Set <p>交互模式下的协议，支持rtmp和trtc，默认是rtmp</p>
+     * @param SessionProtocol <p>交互模式下的协议，支持rtmp和trtc，默认是rtmp</p>
+     */
+    public void setSessionProtocol(String SessionProtocol) {
+        this.SessionProtocol = SessionProtocol;
+    }
+
+    /**
+     * Get <p>使用trtc协议时，在trtc的appid</p> 
+     * @return TrtcSdkAppId <p>使用trtc协议时，在trtc的appid</p>
+     */
+    public String getTrtcSdkAppId() {
+        return this.TrtcSdkAppId;
+    }
+
+    /**
+     * Set <p>使用trtc协议时，在trtc的appid</p>
+     * @param TrtcSdkAppId <p>使用trtc协议时，在trtc的appid</p>
+     */
+    public void setTrtcSdkAppId(String TrtcSdkAppId) {
+        this.TrtcSdkAppId = TrtcSdkAppId;
+    }
+
+    /**
+     * Get <p>进入房间时需要用UserSign来校验权限</p> 
+     * @return TrtcUserSig <p>进入房间时需要用UserSign来校验权限</p>
+     */
+    public String getTrtcUserSig() {
+        return this.TrtcUserSig;
+    }
+
+    /**
+     * Set <p>进入房间时需要用UserSign来校验权限</p>
+     * @param TrtcUserSig <p>进入房间时需要用UserSign来校验权限</p>
+     */
+    public void setTrtcUserSig(String TrtcUserSig) {
+        this.TrtcUserSig = TrtcUserSig;
+    }
+
+    /**
+     * Get <p>要进入的房间</p> 
+     * @return TrtcRoomId <p>要进入的房间</p>
+     */
+    public String getTrtcRoomId() {
+        return this.TrtcRoomId;
+    }
+
+    /**
+     * Set <p>要进入的房间</p>
+     * @param TrtcRoomId <p>要进入的房间</p>
+     */
+    public void setTrtcRoomId(String TrtcRoomId) {
+        this.TrtcRoomId = TrtcRoomId;
+    }
+
     public StartLiveAvatarRoomRequest() {
     }
 
@@ -161,6 +253,18 @@ public class StartLiveAvatarRoomRequest extends AbstractModel {
         if (source.RoomType != null) {
             this.RoomType = new String(source.RoomType);
         }
+        if (source.SessionProtocol != null) {
+            this.SessionProtocol = new String(source.SessionProtocol);
+        }
+        if (source.TrtcSdkAppId != null) {
+            this.TrtcSdkAppId = new String(source.TrtcSdkAppId);
+        }
+        if (source.TrtcUserSig != null) {
+            this.TrtcUserSig = new String(source.TrtcUserSig);
+        }
+        if (source.TrtcRoomId != null) {
+            this.TrtcRoomId = new String(source.TrtcRoomId);
+        }
     }
 
 
@@ -173,6 +277,10 @@ public class StartLiveAvatarRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "SessionProtocol", this.SessionProtocol);
+        this.setParamSimple(map, prefix + "TrtcSdkAppId", this.TrtcSdkAppId);
+        this.setParamSimple(map, prefix + "TrtcUserSig", this.TrtcUserSig);
+        this.setParamSimple(map, prefix + "TrtcRoomId", this.TrtcRoomId);
 
     }
 }

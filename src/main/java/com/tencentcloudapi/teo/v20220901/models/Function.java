@@ -24,184 +24,207 @@ import java.util.HashMap;
 public class Function extends AbstractModel {
 
     /**
-    * 函数 ID。
+    * <p>函数 ID。</p>
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
 
     /**
-    * 站点 ID。
+    * <p>站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 函数名字。
+    * <p>函数名字。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 函数描述。
+    * <p>函数描述。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 函数内容。
+    * <p>函数内容。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 函数默认域名。
+    * <p>函数默认域名。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+    * <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+    */
+    @SerializedName("DomainComplianceRestrictions")
+    @Expose
+    private ComplianceRestriction [] DomainComplianceRestrictions;
+
+    /**
+    * <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+    * <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 函数 ID。 
-     * @return FunctionId 函数 ID。
+     * Get <p>函数 ID。</p> 
+     * @return FunctionId <p>函数 ID。</p>
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set 函数 ID。
-     * @param FunctionId 函数 ID。
+     * Set <p>函数 ID。</p>
+     * @param FunctionId <p>函数 ID。</p>
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
     }
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 函数名字。 
-     * @return Name 函数名字。
+     * Get <p>函数名字。</p> 
+     * @return Name <p>函数名字。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 函数名字。
-     * @param Name 函数名字。
+     * Set <p>函数名字。</p>
+     * @param Name <p>函数名字。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 函数描述。 
-     * @return Remark 函数描述。
+     * Get <p>函数描述。</p> 
+     * @return Remark <p>函数描述。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 函数描述。
-     * @param Remark 函数描述。
+     * Set <p>函数描述。</p>
+     * @param Remark <p>函数描述。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 函数内容。 
-     * @return Content 函数内容。
+     * Get <p>函数内容。</p> 
+     * @return Content <p>函数内容。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 函数内容。
-     * @param Content 函数内容。
+     * Set <p>函数内容。</p>
+     * @param Content <p>函数内容。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 函数默认域名。 
-     * @return Domain 函数默认域名。
+     * Get <p>函数默认域名。</p> 
+     * @return Domain <p>函数默认域名。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 函数默认域名。
-     * @param Domain 函数默认域名。
+     * Set <p>函数默认域名。</p>
+     * @param Domain <p>函数默认域名。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。 
-     * @return CreateTime 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * Get <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p> 
+     * @return DomainComplianceRestrictions <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+     */
+    public ComplianceRestriction [] getDomainComplianceRestrictions() {
+        return this.DomainComplianceRestrictions;
+    }
+
+    /**
+     * Set <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+     * @param DomainComplianceRestrictions <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+     */
+    public void setDomainComplianceRestrictions(ComplianceRestriction [] DomainComplianceRestrictions) {
+        this.DomainComplianceRestrictions = DomainComplianceRestrictions;
+    }
+
+    /**
+     * Get <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p> 
+     * @return CreateTime <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
-     * @param CreateTime 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * Set <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+     * @param CreateTime <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。 
-     * @return UpdateTime 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * Get <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p> 
+     * @return UpdateTime <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
-     * @param UpdateTime 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+     * Set <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
+     * @param UpdateTime <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -233,6 +256,12 @@ public class Function extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.DomainComplianceRestrictions != null) {
+            this.DomainComplianceRestrictions = new ComplianceRestriction[source.DomainComplianceRestrictions.length];
+            for (int i = 0; i < source.DomainComplianceRestrictions.length; i++) {
+                this.DomainComplianceRestrictions[i] = new ComplianceRestriction(source.DomainComplianceRestrictions[i]);
+            }
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -252,6 +281,7 @@ public class Function extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamArrayObj(map, prefix + "DomainComplianceRestrictions.", this.DomainComplianceRestrictions);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

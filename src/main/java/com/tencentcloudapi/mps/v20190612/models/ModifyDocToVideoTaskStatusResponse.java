@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveAvatarRoomResponse extends AbstractModel {
+public class ModifyDocToVideoTaskStatusResponse extends AbstractModel {
 
     /**
-    * <p>数字人直播间 ID。</p>
+    * <p>任务ID</p>
     */
-    @SerializedName("RoomId")
+    @SerializedName("TaskId")
     @Expose
-    private String RoomId;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>数字人直播间 ID。</p> 
-     * @return RoomId <p>数字人直播间 ID。</p>
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
-    public String getRoomId() {
-        return this.RoomId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set <p>数字人直播间 ID。</p>
-     * @param RoomId <p>数字人直播间 ID。</p>
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
-    public void setRoomId(String RoomId) {
-        this.RoomId = RoomId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -69,16 +69,16 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLiveAvatarRoomResponse() {
+    public ModifyDocToVideoTaskStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLiveAvatarRoomResponse(CreateLiveAvatarRoomResponse source) {
-        if (source.RoomId != null) {
-            this.RoomId = new String(source.RoomId);
+    public ModifyDocToVideoTaskStatusResponse(ModifyDocToVideoTaskStatusResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

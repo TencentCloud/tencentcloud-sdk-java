@@ -24,33 +24,28 @@ import java.util.HashMap;
 public class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel {
 
     /**
-    * 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+    * <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 合同组中每个合同流程ID，每个ID均为32位字符串。
-
-注:
-`此数组的顺序和入参中的FlowInfos顺序一致`
+    * <p>合同组中每个合同流程ID，每个ID均为32位字符串。</p><p>注:<br><code>此数组的顺序和入参中的FlowInfos顺序一致</code></p>
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+    * <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/DescribeFileConvertTask">查询转换任务状态</a>接口查询任务详情；</p>
     */
     @SerializedName("TaskInfos")
     @Expose
     private TaskInfo [] TaskInfos;
 
     /**
-    * 合同组签署方信息
+    * <p>合同组签署方信息</p>
     */
     @SerializedName("Approvers")
     @Expose
@@ -64,84 +59,64 @@ public class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。 
-     * @return FlowGroupId 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * Get <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p> 
+     * @return FlowGroupId <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
-     * @param FlowGroupId 合同组ID，为32位字符串。
-建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * Set <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
+     * @param FlowGroupId <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 合同组中每个合同流程ID，每个ID均为32位字符串。
-
-注:
-`此数组的顺序和入参中的FlowInfos顺序一致` 
-     * @return FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
-
-注:
-`此数组的顺序和入参中的FlowInfos顺序一致`
+     * Get <p>合同组中每个合同流程ID，每个ID均为32位字符串。</p><p>注:<br><code>此数组的顺序和入参中的FlowInfos顺序一致</code></p> 
+     * @return FlowIds <p>合同组中每个合同流程ID，每个ID均为32位字符串。</p><p>注:<br><code>此数组的顺序和入参中的FlowInfos顺序一致</code></p>
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 合同组中每个合同流程ID，每个ID均为32位字符串。
-
-注:
-`此数组的顺序和入参中的FlowInfos顺序一致`
-     * @param FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
-
-注:
-`此数组的顺序和入参中的FlowInfos顺序一致`
+     * Set <p>合同组中每个合同流程ID，每个ID均为32位字符串。</p><p>注:<br><code>此数组的顺序和入参中的FlowInfos顺序一致</code></p>
+     * @param FlowIds <p>合同组中每个合同流程ID，每个ID均为32位字符串。</p><p>注:<br><code>此数组的顺序和入参中的FlowInfos顺序一致</code></p>
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情； 
-     * @return TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * Get <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/DescribeFileConvertTask">查询转换任务状态</a>接口查询任务详情；</p> 
+     * @return TaskInfos <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/DescribeFileConvertTask">查询转换任务状态</a>接口查询任务详情；</p>
      */
     public TaskInfo [] getTaskInfos() {
         return this.TaskInfos;
     }
 
     /**
-     * Set 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
-     * @param TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * Set <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/DescribeFileConvertTask">查询转换任务状态</a>接口查询任务详情；</p>
+     * @param TaskInfos <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/DescribeFileConvertTask">查询转换任务状态</a>接口查询任务详情；</p>
      */
     public void setTaskInfos(TaskInfo [] TaskInfos) {
         this.TaskInfos = TaskInfos;
     }
 
     /**
-     * Get 合同组签署方信息 
-     * @return Approvers 合同组签署方信息
+     * Get <p>合同组签署方信息</p> 
+     * @return Approvers <p>合同组签署方信息</p>
      */
     public FlowGroupApprovers [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 合同组签署方信息
-     * @param Approvers 合同组签署方信息
+     * Set <p>合同组签署方信息</p>
+     * @param Approvers <p>合同组签署方信息</p>
      */
     public void setApprovers(FlowGroupApprovers [] Approvers) {
         this.Approvers = Approvers;

@@ -2739,17 +2739,6 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     }
 
     /**
-     *获取作业事件日志
-     * @param req GetRayJobEventLogRequest
-     * @return GetRayJobEventLogResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetRayJobEventLogResponse GetRayJobEventLog(GetRayJobEventLogRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetRayJobEventLog", GetRayJobEventLogResponse.class);
-    }
-
-    /**
      *根据任务ID获取Ray任务的历史执行记录
      * @param req GetRayJobHistoryRequest
      * @return GetRayJobHistoryResponse

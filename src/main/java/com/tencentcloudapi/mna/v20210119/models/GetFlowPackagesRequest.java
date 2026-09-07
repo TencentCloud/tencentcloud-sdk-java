@@ -24,123 +24,164 @@ import java.util.HashMap;
 public class GetFlowPackagesRequest extends AbstractModel {
 
     /**
-    * 页码，从1开始
+    * <p>页码，从1开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页个数
+    * <p>每页个数</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 流量包的唯一资源ID
+    * <p>流量包的唯一资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 流量包绑定的设备ID
+    * <p>流量包绑定的设备ID</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 流量包状态，0：未生效，1：有效期内，2：已过期
-
+    * <p>流量包状态，0：未生效，1：有效期内，2：已过期</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 页码，从1开始 
-     * @return PageNumber 页码，从1开始
+    * <p>生效时间在此时间之后</p>
+    */
+    @SerializedName("ActiveTimeStart")
+    @Expose
+    private String ActiveTimeStart;
+
+    /**
+    * <p>生效时间在此时间之前</p>
+    */
+    @SerializedName("ActiveTimeEnd")
+    @Expose
+    private String ActiveTimeEnd;
+
+    /**
+     * Get <p>页码，从1开始</p> 
+     * @return PageNumber <p>页码，从1开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码，从1开始
-     * @param PageNumber 页码，从1开始
+     * Set <p>页码，从1开始</p>
+     * @param PageNumber <p>页码，从1开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页个数 
-     * @return PageSize 每页个数
+     * Get <p>每页个数</p> 
+     * @return PageSize <p>每页个数</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页个数
-     * @param PageSize 每页个数
+     * Set <p>每页个数</p>
+     * @param PageSize <p>每页个数</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 流量包的唯一资源ID 
-     * @return ResourceId 流量包的唯一资源ID
+     * Get <p>流量包的唯一资源ID</p> 
+     * @return ResourceId <p>流量包的唯一资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 流量包的唯一资源ID
-     * @param ResourceId 流量包的唯一资源ID
+     * Set <p>流量包的唯一资源ID</p>
+     * @param ResourceId <p>流量包的唯一资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 流量包绑定的设备ID 
-     * @return DeviceId 流量包绑定的设备ID
+     * Get <p>流量包绑定的设备ID</p> 
+     * @return DeviceId <p>流量包绑定的设备ID</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 流量包绑定的设备ID
-     * @param DeviceId 流量包绑定的设备ID
+     * Set <p>流量包绑定的设备ID</p>
+     * @param DeviceId <p>流量包绑定的设备ID</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 流量包状态，0：未生效，1：有效期内，2：已过期
- 
-     * @return Status 流量包状态，0：未生效，1：有效期内，2：已过期
-
+     * Get <p>流量包状态，0：未生效，1：有效期内，2：已过期</p> 
+     * @return Status <p>流量包状态，0：未生效，1：有效期内，2：已过期</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 流量包状态，0：未生效，1：有效期内，2：已过期
-
-     * @param Status 流量包状态，0：未生效，1：有效期内，2：已过期
-
+     * Set <p>流量包状态，0：未生效，1：有效期内，2：已过期</p>
+     * @param Status <p>流量包状态，0：未生效，1：有效期内，2：已过期</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>生效时间在此时间之后</p> 
+     * @return ActiveTimeStart <p>生效时间在此时间之后</p>
+     */
+    public String getActiveTimeStart() {
+        return this.ActiveTimeStart;
+    }
+
+    /**
+     * Set <p>生效时间在此时间之后</p>
+     * @param ActiveTimeStart <p>生效时间在此时间之后</p>
+     */
+    public void setActiveTimeStart(String ActiveTimeStart) {
+        this.ActiveTimeStart = ActiveTimeStart;
+    }
+
+    /**
+     * Get <p>生效时间在此时间之前</p> 
+     * @return ActiveTimeEnd <p>生效时间在此时间之前</p>
+     */
+    public String getActiveTimeEnd() {
+        return this.ActiveTimeEnd;
+    }
+
+    /**
+     * Set <p>生效时间在此时间之前</p>
+     * @param ActiveTimeEnd <p>生效时间在此时间之前</p>
+     */
+    public void setActiveTimeEnd(String ActiveTimeEnd) {
+        this.ActiveTimeEnd = ActiveTimeEnd;
     }
 
     public GetFlowPackagesRequest() {
@@ -166,6 +207,12 @@ public class GetFlowPackagesRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ActiveTimeStart != null) {
+            this.ActiveTimeStart = new String(source.ActiveTimeStart);
+        }
+        if (source.ActiveTimeEnd != null) {
+            this.ActiveTimeEnd = new String(source.ActiveTimeEnd);
+        }
     }
 
 
@@ -178,6 +225,8 @@ public class GetFlowPackagesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ActiveTimeStart", this.ActiveTimeStart);
+        this.setParamSimple(map, prefix + "ActiveTimeEnd", this.ActiveTimeEnd);
 
     }
 }

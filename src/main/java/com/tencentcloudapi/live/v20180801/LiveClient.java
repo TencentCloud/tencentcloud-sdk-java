@@ -275,6 +275,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *调用该接口，用于创建数字人直播间/AIGC直播间话术。
+     * @param req CreateLiveAvatarCloneFigureRequest
+     * @return CreateLiveAvatarCloneFigureResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveAvatarCloneFigureResponse CreateLiveAvatarCloneFigure(CreateLiveAvatarCloneFigureRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveAvatarCloneFigure", CreateLiveAvatarCloneFigureResponse.class);
+    }
+
+    /**
      *调用该接口，用于创建数字人直播间。
      * @param req CreateLiveAvatarRoomRequest
      * @return CreateLiveAvatarRoomResponse
@@ -670,6 +681,17 @@ public class LiveClient extends AbstractClient{
     public DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(DeleteCasterOutputInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCasterOutputInfo", DeleteCasterOutputInfoResponse.class);
+    }
+
+    /**
+     *调用该接口，用于删除已有的数字人直播间里面的话术。
+     * @param req DeleteLiveAvatarCloneFigureRequest
+     * @return DeleteLiveAvatarCloneFigureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveAvatarCloneFigureResponse DeleteLiveAvatarCloneFigure(DeleteLiveAvatarCloneFigureRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveAvatarCloneFigure", DeleteLiveAvatarCloneFigureResponse.class);
     }
 
     /**
@@ -1211,6 +1233,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveAvatarBackgroundListResponse DescribeLiveAvatarBackgroundList(DescribeLiveAvatarBackgroundListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLiveAvatarBackgroundList", DescribeLiveAvatarBackgroundListResponse.class);
+    }
+
+    /**
+     *调用该接口，查询数字人直播间信息列表。
+     * @param req DescribeLiveAvatarCloneFigureListRequest
+     * @return DescribeLiveAvatarCloneFigureListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarCloneFigureListResponse DescribeLiveAvatarCloneFigureList(DescribeLiveAvatarCloneFigureListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarCloneFigureList", DescribeLiveAvatarCloneFigureListResponse.class);
     }
 
     /**

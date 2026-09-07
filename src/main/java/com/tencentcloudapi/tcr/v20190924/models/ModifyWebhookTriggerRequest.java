@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyWebhookTriggerRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 触发器参数
+    * <p>触发器参数</p>
     */
     @SerializedName("Trigger")
     @Expose
     private WebhookTrigger Trigger;
 
     /**
-    * 命名空间
+    * <p>命名空间</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get 实例Id 
-     * @return RegistryId 实例Id
+     * Get <p>实例Id</p> 
+     * @return RegistryId <p>实例Id</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 实例Id
-     * @param RegistryId 实例Id
+     * Set <p>实例Id</p>
+     * @param RegistryId <p>实例Id</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 触发器参数 
-     * @return Trigger 触发器参数
+     * Get <p>触发器参数</p> 
+     * @return Trigger <p>触发器参数</p>
      */
     public WebhookTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set 触发器参数
-     * @param Trigger 触发器参数
+     * Set <p>触发器参数</p>
+     * @param Trigger <p>触发器参数</p>
      */
     public void setTrigger(WebhookTrigger Trigger) {
         this.Trigger = Trigger;
     }
 
     /**
-     * Get 命名空间 
-     * @return Namespace 命名空间
+     * Get <p>命名空间</p> 
+     * @return Namespace <p>命名空间</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间
-     * @param Namespace 命名空间
+     * Set <p>命名空间</p>
+     * @param Namespace <p>命名空间</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

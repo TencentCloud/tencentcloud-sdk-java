@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveAvatarRoomResponse extends AbstractModel {
+public class CreateLiveAvatarCloneFigureResponse extends AbstractModel {
 
     /**
-    * <p>数字人直播间 ID。</p>
+    * <p>该图克隆形象生成的任务id</p>
     */
-    @SerializedName("RoomId")
+    @SerializedName("TaskId")
     @Expose
-    private String RoomId;
+    private String TaskId;
+
+    /**
+    * <p>该克隆形象返回的状态</p><p>枚举值：</p><ul><li>SUBMITTING： 已受理</li><li>CHECKING： 检查中</li><li>QUEUE： 排队中</li><li>MAKING： 训练中</li><li>CONFIRMING： 效果确认</li><li>SUCCESS： 成功</li><li>FAIL： 失败</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>数字人直播间 ID。</p> 
-     * @return RoomId <p>数字人直播间 ID。</p>
+     * Get <p>该图克隆形象生成的任务id</p> 
+     * @return TaskId <p>该图克隆形象生成的任务id</p>
      */
-    public String getRoomId() {
-        return this.RoomId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set <p>数字人直播间 ID。</p>
-     * @param RoomId <p>数字人直播间 ID。</p>
+     * Set <p>该图克隆形象生成的任务id</p>
+     * @param TaskId <p>该图克隆形象生成的任务id</p>
      */
-    public void setRoomId(String RoomId) {
-        this.RoomId = RoomId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get <p>该克隆形象返回的状态</p><p>枚举值：</p><ul><li>SUBMITTING： 已受理</li><li>CHECKING： 检查中</li><li>QUEUE： 排队中</li><li>MAKING： 训练中</li><li>CONFIRMING： 效果确认</li><li>SUCCESS： 成功</li><li>FAIL： 失败</li></ul> 
+     * @return Status <p>该克隆形象返回的状态</p><p>枚举值：</p><ul><li>SUBMITTING： 已受理</li><li>CHECKING： 检查中</li><li>QUEUE： 排队中</li><li>MAKING： 训练中</li><li>CONFIRMING： 效果确认</li><li>SUCCESS： 成功</li><li>FAIL： 失败</li></ul>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>该克隆形象返回的状态</p><p>枚举值：</p><ul><li>SUBMITTING： 已受理</li><li>CHECKING： 检查中</li><li>QUEUE： 排队中</li><li>MAKING： 训练中</li><li>CONFIRMING： 效果确认</li><li>SUCCESS： 成功</li><li>FAIL： 失败</li></ul>
+     * @param Status <p>该克隆形象返回的状态</p><p>枚举值：</p><ul><li>SUBMITTING： 已受理</li><li>CHECKING： 检查中</li><li>QUEUE： 排队中</li><li>MAKING： 训练中</li><li>CONFIRMING： 效果确认</li><li>SUCCESS： 成功</li><li>FAIL： 失败</li></ul>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
@@ -69,16 +92,19 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLiveAvatarRoomResponse() {
+    public CreateLiveAvatarCloneFigureResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLiveAvatarRoomResponse(CreateLiveAvatarRoomResponse source) {
-        if (source.RoomId != null) {
-            this.RoomId = new String(source.RoomId);
+    public CreateLiveAvatarCloneFigureResponse(CreateLiveAvatarCloneFigureResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +116,8 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

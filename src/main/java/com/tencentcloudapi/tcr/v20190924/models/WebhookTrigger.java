@@ -24,207 +24,212 @@ import java.util.HashMap;
 public class WebhookTrigger extends AbstractModel {
 
     /**
-    * 触发器名称
+    * <p>触发器名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 触发器目标
+    * <p>触发器目标</p>
     */
     @SerializedName("Targets")
     @Expose
     private WebhookTarget [] Targets;
 
     /**
-    * 触发动作
+    * <p>触发动作</p>
     */
     @SerializedName("EventTypes")
     @Expose
     private String [] EventTypes;
 
     /**
-    * 触发规则
+    * <p>触发规则</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * 启用触发器
+    * <p>启用触发器</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 触发器Id
+    * <p>触发器Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 触发器描述
+    * <p>触发器描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 触发器所属命名空间 Id
+    * <p>触发器所属命名空间 Id</p>
     */
     @SerializedName("NamespaceId")
     @Expose
     private Long NamespaceId;
 
     /**
-    * 触发器所属命名空间名称
+    * <p>触发器所属命名空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-     * Get 触发器名称 
-     * @return Name 触发器名称
+     * Get <p>触发器名称</p> 
+     * @return Name <p>触发器名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 触发器名称
-     * @param Name 触发器名称
+     * Set <p>触发器名称</p>
+     * @param Name <p>触发器名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 触发器目标 
-     * @return Targets 触发器目标
+     * Get <p>触发器目标</p> 
+     * @return Targets <p>触发器目标</p>
      */
     public WebhookTarget [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 触发器目标
-     * @param Targets 触发器目标
+     * Set <p>触发器目标</p>
+     * @param Targets <p>触发器目标</p>
      */
     public void setTargets(WebhookTarget [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 触发动作 
-     * @return EventTypes 触发动作
+     * Get <p>触发动作</p> 
+     * @return EventTypes <p>触发动作</p>
      */
     public String [] getEventTypes() {
         return this.EventTypes;
     }
 
     /**
-     * Set 触发动作
-     * @param EventTypes 触发动作
+     * Set <p>触发动作</p>
+     * @param EventTypes <p>触发动作</p>
      */
     public void setEventTypes(String [] EventTypes) {
         this.EventTypes = EventTypes;
     }
 
     /**
-     * Get 触发规则 
-     * @return Condition 触发规则
+     * Get <p>触发规则</p> 
+     * @return Condition <p>触发规则</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 触发规则
-     * @param Condition 触发规则
+     * Set <p>触发规则</p>
+     * @param Condition <p>触发规则</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 启用触发器 
-     * @return Enabled 启用触发器
+     * Get <p>启用触发器</p> 
+     * @return Enabled <p>启用触发器</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 启用触发器
-     * @param Enabled 启用触发器
+     * Set <p>启用触发器</p>
+     * @param Enabled <p>启用触发器</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 触发器Id 
-     * @return Id 触发器Id
+     * Get <p>触发器Id</p> 
+     * @return Id <p>触发器Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 触发器Id
-     * @param Id 触发器Id
+     * Set <p>触发器Id</p>
+     * @param Id <p>触发器Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 触发器描述 
-     * @return Description 触发器描述
+     * Get <p>触发器描述</p> 
+     * @return Description <p>触发器描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 触发器描述
-     * @param Description 触发器描述
+     * Set <p>触发器描述</p>
+     * @param Description <p>触发器描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 触发器所属命名空间 Id 
-     * @return NamespaceId 触发器所属命名空间 Id
+     * Get <p>触发器所属命名空间 Id</p> 
+     * @return NamespaceId <p>触发器所属命名空间 Id</p>
      */
     public Long getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 触发器所属命名空间 Id
-     * @param NamespaceId 触发器所属命名空间 Id
+     * Set <p>触发器所属命名空间 Id</p>
+     * @param NamespaceId <p>触发器所属命名空间 Id</p>
      */
     public void setNamespaceId(Long NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 触发器所属命名空间名称 
-     * @return NamespaceName 触发器所属命名空间名称
+     * Get <p>触发器所属命名空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceName <p>触发器所属命名空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 触发器所属命名空间名称
-     * @param NamespaceName 触发器所属命名空间名称
+     * Set <p>触发器所属命名空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceName <p>触发器所属命名空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;

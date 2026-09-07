@@ -914,6 +914,28 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *ScaleDownDBInstanceCpu
+     * @param req ScaleDownDBInstanceCpuRequest
+     * @return ScaleDownDBInstanceCpuResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleDownDBInstanceCpuResponse ScaleDownDBInstanceCpu(ScaleDownDBInstanceCpuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleDownDBInstanceCpu", ScaleDownDBInstanceCpuResponse.class);
+    }
+
+    /**
+     *手动开启cpu弹性扩容
+     * @param req ScaleUpDBInstanceCpuRequest
+     * @return ScaleUpDBInstanceCpuResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleUpDBInstanceCpuResponse ScaleUpDBInstanceCpu(ScaleUpDBInstanceCpuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleUpDBInstanceCpu", ScaleUpDBInstanceCpuResponse.class);
+    }
+
+    /**
      *本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
      * @param req SetAccountUserPrivilegeRequest
      * @return SetAccountUserPrivilegeResponse

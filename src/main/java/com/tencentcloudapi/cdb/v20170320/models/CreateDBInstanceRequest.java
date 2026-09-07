@@ -332,6 +332,13 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String FourthZone;
 
     /**
+    * <p>弹性扩容参数（如果不传，则不开启）</p>
+    */
+    @SerializedName("AutoStrategy")
+    @Expose
+    private AutoStrategy AutoStrategy;
+
+    /**
      * Get <p>实例内存大小，单位：MB，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的内存规格。</p> 
      * @return Memory <p>实例内存大小，单位：MB，请使用 <a href="https://cloud.tencent.com/document/api/236/17229">获取云数据库可售卖规格</a> 接口获取可创建的内存规格。</p>
      */
@@ -1035,6 +1042,22 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.FourthZone = FourthZone;
     }
 
+    /**
+     * Get <p>弹性扩容参数（如果不传，则不开启）</p> 
+     * @return AutoStrategy <p>弹性扩容参数（如果不传，则不开启）</p>
+     */
+    public AutoStrategy getAutoStrategy() {
+        return this.AutoStrategy;
+    }
+
+    /**
+     * Set <p>弹性扩容参数（如果不传，则不开启）</p>
+     * @param AutoStrategy <p>弹性扩容参数（如果不传，则不开启）</p>
+     */
+    public void setAutoStrategy(AutoStrategy AutoStrategy) {
+        this.AutoStrategy = AutoStrategy;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -1193,6 +1216,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
         if (source.FourthZone != null) {
             this.FourthZone = new String(source.FourthZone);
         }
+        if (source.AutoStrategy != null) {
+            this.AutoStrategy = new AutoStrategy(source.AutoStrategy);
+        }
     }
 
 
@@ -1244,6 +1270,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
         this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
+        this.setParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
 
     }
 }

@@ -2103,6 +2103,19 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *修改 AIGC 文档生视频任务状态。
+
+包含 confirm（确认当前阶段）和 regenerate（重新生成当前阶段）两种动作含义。
+     * @param req ModifyDocToVideoTaskStatusRequest
+     * @return ModifyDocToVideoTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDocToVideoTaskStatusResponse ModifyDocToVideoTaskStatus(ModifyDocToVideoTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDocToVideoTaskStatus", ModifyDocToVideoTaskStatusResponse.class);
+    }
+
+    /**
      *修改用户自定义雪碧图模板。
      * @param req ModifyImageSpriteTemplateRequest
      * @return ModifyImageSpriteTemplateResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VerificationConfig extends AbstractModel {
 
     /**
-    * <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
+    * <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 使用云函数作为短信发送通道，需配合 CloudFunction 参数使用</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -72,9 +72,9 @@ public class VerificationConfig extends AbstractModel {
     private SMSCloudFunctionConfig CloudFunction;
 
     /**
-     * Get <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
+     * Get <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 使用云函数作为短信发送通道，需配合 CloudFunction 参数使用</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
+     * @return Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 使用云函数作为短信发送通道，需配合 CloudFunction 参数使用</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -82,9 +82,9 @@ public class VerificationConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
+     * Set <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 使用云函数作为短信发送通道，需配合 CloudFunction 参数使用</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 云函数通道（第三方短信服务商），需要配置CloudFunction</li></ul>
+     * @param Type <p>短信验证码发送通道类型。</p><p>枚举值：</p><ul><li>default： 使用默认云开发短信包发送短信</li><li>apis： 使用云开发自定义 APIs 作为短信发送通道，需配合 Name 和 Method 参数使用。不传则不修改当前配置。</li><li>template： 自定义短信模板配置，需要配置TemplateProvider</li><li>function： 使用云函数作为短信发送通道，需配合 CloudFunction 参数使用</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

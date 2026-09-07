@@ -59,7 +59,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+    * <p>备份的状态：</p><p>枚举值：</p><ul><li>1： 备份在流程中。</li><li>2： 备份正常。</li></ul><p>默认值：2</p>
     */
     @SerializedName("Status")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeInstanceBackupsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p> 
-     * @return Status <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+     * Get <p>备份的状态：</p><p>枚举值：</p><ul><li>1： 备份在流程中。</li><li>2： 备份正常。</li></ul><p>默认值：2</p> 
+     * @return Status <p>备份的状态：</p><p>枚举值：</p><ul><li>1： 备份在流程中。</li><li>2： 备份正常。</li></ul><p>默认值：2</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
-     * @param Status <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+     * Set <p>备份的状态：</p><p>枚举值：</p><ul><li>1： 备份在流程中。</li><li>2： 备份正常。</li></ul><p>默认值：2</p>
+     * @param Status <p>备份的状态：</p><p>枚举值：</p><ul><li>1： 备份在流程中。</li><li>2： 备份正常。</li></ul><p>默认值：2</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

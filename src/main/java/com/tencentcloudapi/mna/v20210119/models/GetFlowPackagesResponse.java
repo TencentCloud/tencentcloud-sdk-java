@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetFlowPackagesResponse extends AbstractModel {
 
     /**
-    * 流量包列表
+    * <p>流量包列表</p>
     */
     @SerializedName("PackageList")
     @Expose
     private FlowPackageInfo [] PackageList;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class GetFlowPackagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流量包列表 
-     * @return PackageList 流量包列表
+     * Get <p>流量包列表</p> 
+     * @return PackageList <p>流量包列表</p>
      */
     public FlowPackageInfo [] getPackageList() {
         return this.PackageList;
     }
 
     /**
-     * Set 流量包列表
-     * @param PackageList 流量包列表
+     * Set <p>流量包列表</p>
+     * @param PackageList <p>流量包列表</p>
      */
     public void setPackageList(FlowPackageInfo [] PackageList) {
         this.PackageList = PackageList;
     }
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

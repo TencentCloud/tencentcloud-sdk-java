@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveAvatarRoomResponse extends AbstractModel {
-
-    /**
-    * <p>数字人直播间 ID。</p>
-    */
-    @SerializedName("RoomId")
-    @Expose
-    private String RoomId;
+public class DeleteLiveAvatarCloneFigureResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>数字人直播间 ID。</p> 
-     * @return RoomId <p>数字人直播间 ID。</p>
-     */
-    public String getRoomId() {
-        return this.RoomId;
-    }
-
-    /**
-     * Set <p>数字人直播间 ID。</p>
-     * @param RoomId <p>数字人直播间 ID。</p>
-     */
-    public void setRoomId(String RoomId) {
-        this.RoomId = RoomId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLiveAvatarRoomResponse() {
+    public DeleteLiveAvatarCloneFigureResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLiveAvatarRoomResponse(CreateLiveAvatarRoomResponse source) {
-        if (source.RoomId != null) {
-            this.RoomId = new String(source.RoomId);
-        }
+    public DeleteLiveAvatarCloneFigureResponse(DeleteLiveAvatarCloneFigureResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class CreateLiveAvatarRoomResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

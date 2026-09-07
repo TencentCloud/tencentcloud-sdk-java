@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ResetUserRequest extends AbstractModel {
 
     /**
-    * 用户ID集合
+    * <p>用户ID集合</p>
     */
     @SerializedName("IdSet")
     @Expose
     private Long [] IdSet;
 
     /**
-     * Get 用户ID集合 
-     * @return IdSet 用户ID集合
+    * <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("ResetType")
+    @Expose
+    private Long ResetType;
+
+    /**
+     * Get <p>用户ID集合</p> 
+     * @return IdSet <p>用户ID集合</p>
      */
     public Long [] getIdSet() {
         return this.IdSet;
     }
 
     /**
-     * Set 用户ID集合
-     * @param IdSet 用户ID集合
+     * Set <p>用户ID集合</p>
+     * @param IdSet <p>用户ID集合</p>
      */
     public void setIdSet(Long [] IdSet) {
         this.IdSet = IdSet;
+    }
+
+    /**
+     * Get <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p> 
+     * @return ResetType <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+     */
+    public Long getResetType() {
+        return this.ResetType;
+    }
+
+    /**
+     * Set <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+     * @param ResetType <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+     */
+    public void setResetType(Long ResetType) {
+        this.ResetType = ResetType;
     }
 
     public ResetUserRequest() {
@@ -60,6 +83,9 @@ public class ResetUserRequest extends AbstractModel {
                 this.IdSet[i] = new Long(source.IdSet[i]);
             }
         }
+        if (source.ResetType != null) {
+            this.ResetType = new Long(source.ResetType);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class ResetUserRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IdSet.", this.IdSet);
+        this.setParamSimple(map, prefix + "ResetType", this.ResetType);
 
     }
 }

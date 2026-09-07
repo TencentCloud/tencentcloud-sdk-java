@@ -73,6 +73,20 @@ public class DescribeModelQuotaResponse extends AbstractModel {
     private Long TPMOutputReserveLimit;
 
     /**
+    * <p>TPM 预留后付费 input 配额</p>
+    */
+    @SerializedName("TPMInputReservePostPaidLimit")
+    @Expose
+    private Long TPMInputReservePostPaidLimit;
+
+    /**
+    * <p>TPM 预留后付费 output 配额</p>
+    */
+    @SerializedName("TPMOutputReservePostPaidLimit")
+    @Expose
+    private Long TPMOutputReservePostPaidLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +206,38 @@ public class DescribeModelQuotaResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>TPM 预留后付费 input 配额</p> 
+     * @return TPMInputReservePostPaidLimit <p>TPM 预留后付费 input 配额</p>
+     */
+    public Long getTPMInputReservePostPaidLimit() {
+        return this.TPMInputReservePostPaidLimit;
+    }
+
+    /**
+     * Set <p>TPM 预留后付费 input 配额</p>
+     * @param TPMInputReservePostPaidLimit <p>TPM 预留后付费 input 配额</p>
+     */
+    public void setTPMInputReservePostPaidLimit(Long TPMInputReservePostPaidLimit) {
+        this.TPMInputReservePostPaidLimit = TPMInputReservePostPaidLimit;
+    }
+
+    /**
+     * Get <p>TPM 预留后付费 output 配额</p> 
+     * @return TPMOutputReservePostPaidLimit <p>TPM 预留后付费 output 配额</p>
+     */
+    public Long getTPMOutputReservePostPaidLimit() {
+        return this.TPMOutputReservePostPaidLimit;
+    }
+
+    /**
+     * Set <p>TPM 预留后付费 output 配额</p>
+     * @param TPMOutputReservePostPaidLimit <p>TPM 预留后付费 output 配额</p>
+     */
+    public void setTPMOutputReservePostPaidLimit(Long TPMOutputReservePostPaidLimit) {
+        this.TPMOutputReservePostPaidLimit = TPMOutputReservePostPaidLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +282,12 @@ public class DescribeModelQuotaResponse extends AbstractModel {
         if (source.TPMOutputReserveLimit != null) {
             this.TPMOutputReserveLimit = new Long(source.TPMOutputReserveLimit);
         }
+        if (source.TPMInputReservePostPaidLimit != null) {
+            this.TPMInputReservePostPaidLimit = new Long(source.TPMInputReservePostPaidLimit);
+        }
+        if (source.TPMOutputReservePostPaidLimit != null) {
+            this.TPMOutputReservePostPaidLimit = new Long(source.TPMOutputReservePostPaidLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +305,8 @@ public class DescribeModelQuotaResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TPMOutputQuotaLimit", this.TPMOutputQuotaLimit);
         this.setParamSimple(map, prefix + "TPMInputReserveLimit", this.TPMInputReserveLimit);
         this.setParamSimple(map, prefix + "TPMOutputReserveLimit", this.TPMOutputReserveLimit);
+        this.setParamSimple(map, prefix + "TPMInputReservePostPaidLimit", this.TPMInputReservePostPaidLimit);
+        this.setParamSimple(map, prefix + "TPMOutputReservePostPaidLimit", this.TPMOutputReservePostPaidLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

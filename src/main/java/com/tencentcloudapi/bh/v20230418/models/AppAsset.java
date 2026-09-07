@@ -80,6 +80,13 @@ public class AppAsset extends AbstractModel {
     private String ClientAppKind;
 
     /**
+    * <p>客户端工具启动参数</p>
+    */
+    @SerializedName("ClientAppArgs")
+    @Expose
+    private String [] ClientAppArgs;
+
+    /**
     * <p>应用资产url</p>
     */
     @SerializedName("Url")
@@ -345,6 +352,22 @@ public class AppAsset extends AbstractModel {
      */
     public void setClientAppKind(String ClientAppKind) {
         this.ClientAppKind = ClientAppKind;
+    }
+
+    /**
+     * Get <p>客户端工具启动参数</p> 
+     * @return ClientAppArgs <p>客户端工具启动参数</p>
+     */
+    public String [] getClientAppArgs() {
+        return this.ClientAppArgs;
+    }
+
+    /**
+     * Set <p>客户端工具启动参数</p>
+     * @param ClientAppArgs <p>客户端工具启动参数</p>
+     */
+    public void setClientAppArgs(String [] ClientAppArgs) {
+        this.ClientAppArgs = ClientAppArgs;
     }
 
     /**
@@ -699,6 +722,12 @@ public class AppAsset extends AbstractModel {
         if (source.ClientAppKind != null) {
             this.ClientAppKind = new String(source.ClientAppKind);
         }
+        if (source.ClientAppArgs != null) {
+            this.ClientAppArgs = new String[source.ClientAppArgs.length];
+            for (int i = 0; i < source.ClientAppArgs.length; i++) {
+                this.ClientAppArgs[i] = new String(source.ClientAppArgs[i]);
+            }
+        }
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
@@ -777,6 +806,7 @@ public class AppAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "ClientAppPath", this.ClientAppPath);
         this.setParamSimple(map, prefix + "ClientAppKind", this.ClientAppKind);
+        this.setParamArraySimple(map, prefix + "ClientAppArgs.", this.ClientAppArgs);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "DeviceInstanceId", this.DeviceInstanceId);

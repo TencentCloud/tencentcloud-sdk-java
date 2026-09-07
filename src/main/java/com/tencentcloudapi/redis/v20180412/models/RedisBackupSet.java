@@ -38,7 +38,7 @@ public class RedisBackupSet extends AbstractModel {
     private String BackupId;
 
     /**
-    * <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+    * <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
     */
     @SerializedName("BackupType")
     @Expose
@@ -168,16 +168,16 @@ public class RedisBackupSet extends AbstractModel {
     }
 
     /**
-     * Get <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul> 
-     * @return BackupType <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+     * Get <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul> 
+     * @return BackupType <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
-     * @param BackupType <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+     * Set <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
+     * @param BackupType <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

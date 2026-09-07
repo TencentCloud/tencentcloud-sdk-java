@@ -130,6 +130,13 @@ public class AccelerationDomain extends AbstractModel {
     private String ModifiedOn;
 
     /**
+    * <p>域名因合规问题产生的地区访问限制列表。</p>
+    */
+    @SerializedName("ComplianceRestrictions")
+    @Expose
+    private ComplianceRestriction [] ComplianceRestrictions;
+
+    /**
      * Get <p>站点 ID。</p> 
      * @return ZoneId <p>站点 ID。</p>
      */
@@ -385,6 +392,22 @@ public class AccelerationDomain extends AbstractModel {
         this.ModifiedOn = ModifiedOn;
     }
 
+    /**
+     * Get <p>域名因合规问题产生的地区访问限制列表。</p> 
+     * @return ComplianceRestrictions <p>域名因合规问题产生的地区访问限制列表。</p>
+     */
+    public ComplianceRestriction [] getComplianceRestrictions() {
+        return this.ComplianceRestrictions;
+    }
+
+    /**
+     * Set <p>域名因合规问题产生的地区访问限制列表。</p>
+     * @param ComplianceRestrictions <p>域名因合规问题产生的地区访问限制列表。</p>
+     */
+    public void setComplianceRestrictions(ComplianceRestriction [] ComplianceRestrictions) {
+        this.ComplianceRestrictions = ComplianceRestrictions;
+    }
+
     public AccelerationDomain() {
     }
 
@@ -435,6 +458,12 @@ public class AccelerationDomain extends AbstractModel {
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
         }
+        if (source.ComplianceRestrictions != null) {
+            this.ComplianceRestrictions = new ComplianceRestriction[source.ComplianceRestrictions.length];
+            for (int i = 0; i < source.ComplianceRestrictions.length; i++) {
+                this.ComplianceRestrictions[i] = new ComplianceRestriction(source.ComplianceRestrictions[i]);
+            }
+        }
     }
 
 
@@ -456,6 +485,7 @@ public class AccelerationDomain extends AbstractModel {
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamArrayObj(map, prefix + "ComplianceRestrictions.", this.ComplianceRestrictions);
 
     }
 }

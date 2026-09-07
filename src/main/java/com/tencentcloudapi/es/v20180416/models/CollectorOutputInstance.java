@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class CollectorOutputInstance extends AbstractModel {
 
     /**
-    * 采集器输出的实例类型（支持elasticsearch、logstash）
+    * <p>采集器输出的实例类型（支持elasticsearch、logstash）</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 采集器输出的实例ID
+    * <p>采集器输出的实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 采集器输出到的ES实例的用户名
+    * <p>采集器输出到的ES实例的用户名</p>
     */
     @SerializedName("ESUserName")
     @Expose
     private String ESUserName;
 
     /**
-    * 采集器输出到的ES实例的密码
+    * <p>采集器输出到的ES实例的密码</p>
     */
     @SerializedName("ESUserPasswd")
     @Expose
     private String ESUserPasswd;
 
     /**
-    * 采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）
+    * <p>采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）</p>
     */
     @SerializedName("EnableMonitoring")
     @Expose
     private Long EnableMonitoring;
 
     /**
-    * 采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）
+    * <p>采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）</p>
     */
     @SerializedName("EnableDashboard")
     @Expose
     private Long EnableDashboard;
 
     /**
-    * Ckafka实例的vip
+    * <p>Ckafka实例的vip</p>
     */
     @SerializedName("KafkaEndpoint")
     @Expose
     private String KafkaEndpoint;
 
     /**
-    * Ckafka实例中的Topic
+    * <p>Ckafka实例中的Topic</p>
     */
     @SerializedName("KafkaTopic")
     @Expose
     private String KafkaTopic;
 
     /**
-    * Ckafka实例的版本号
+    * <p>Ckafka实例的版本号</p>
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * topic id
+    * <p>topic id</p>
     */
     @SerializedName("SesTopicId")
     @Expose
     private String SesTopicId;
 
     /**
-    * topic name
+    * <p>topic name</p>
     */
     @SerializedName("SesTopicName")
     @Expose
     private String SesTopicName;
 
     /**
-    * topic address
+    * <p>topic address</p>
     */
     @SerializedName("SesTopicAddress")
     @Expose
     private String SesTopicAddress;
 
     /**
-    * /
+    * <p>/</p>
     */
     @SerializedName("SesTopicUserName")
     @Expose
     private String SesTopicUserName;
 
     /**
-    * /
+    * <p>/</p>
     */
     @SerializedName("SesTopicPasswd")
     @Expose
     private String SesTopicPasswd;
 
     /**
-    * /
+    * <p>/</p>
     */
     @SerializedName("LogstashListenPort")
     @Expose
     private Long LogstashListenPort;
 
     /**
-     * Get 采集器输出的实例类型（支持elasticsearch、logstash） 
-     * @return Type 采集器输出的实例类型（支持elasticsearch、logstash）
+    * <p>serverless 的 spaceid</p>
+    */
+    @SerializedName("SesSpaceId")
+    @Expose
+    private String SesSpaceId;
+
+    /**
+     * Get <p>采集器输出的实例类型（支持elasticsearch、logstash）</p> 
+     * @return Type <p>采集器输出的实例类型（支持elasticsearch、logstash）</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 采集器输出的实例类型（支持elasticsearch、logstash）
-     * @param Type 采集器输出的实例类型（支持elasticsearch、logstash）
+     * Set <p>采集器输出的实例类型（支持elasticsearch、logstash）</p>
+     * @param Type <p>采集器输出的实例类型（支持elasticsearch、logstash）</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 采集器输出的实例ID 
-     * @return InstanceId 采集器输出的实例ID
+     * Get <p>采集器输出的实例ID</p> 
+     * @return InstanceId <p>采集器输出的实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 采集器输出的实例ID
-     * @param InstanceId 采集器输出的实例ID
+     * Set <p>采集器输出的实例ID</p>
+     * @param InstanceId <p>采集器输出的实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 采集器输出到的ES实例的用户名 
-     * @return ESUserName 采集器输出到的ES实例的用户名
+     * Get <p>采集器输出到的ES实例的用户名</p> 
+     * @return ESUserName <p>采集器输出到的ES实例的用户名</p>
      */
     public String getESUserName() {
         return this.ESUserName;
     }
 
     /**
-     * Set 采集器输出到的ES实例的用户名
-     * @param ESUserName 采集器输出到的ES实例的用户名
+     * Set <p>采集器输出到的ES实例的用户名</p>
+     * @param ESUserName <p>采集器输出到的ES实例的用户名</p>
      */
     public void setESUserName(String ESUserName) {
         this.ESUserName = ESUserName;
     }
 
     /**
-     * Get 采集器输出到的ES实例的密码 
-     * @return ESUserPasswd 采集器输出到的ES实例的密码
+     * Get <p>采集器输出到的ES实例的密码</p> 
+     * @return ESUserPasswd <p>采集器输出到的ES实例的密码</p>
      */
     public String getESUserPasswd() {
         return this.ESUserPasswd;
     }
 
     /**
-     * Set 采集器输出到的ES实例的密码
-     * @param ESUserPasswd 采集器输出到的ES实例的密码
+     * Set <p>采集器输出到的ES实例的密码</p>
+     * @param ESUserPasswd <p>采集器输出到的ES实例的密码</p>
      */
     public void setESUserPasswd(String ESUserPasswd) {
         this.ESUserPasswd = ESUserPasswd;
     }
 
     /**
-     * Get 采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0） 
-     * @return EnableMonitoring 采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）
+     * Get <p>采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）</p> 
+     * @return EnableMonitoring <p>采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）</p>
      */
     public Long getEnableMonitoring() {
         return this.EnableMonitoring;
     }
 
     /**
-     * Set 采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）
-     * @param EnableMonitoring 采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）
+     * Set <p>采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）</p>
+     * @param EnableMonitoring <p>采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）</p>
      */
     public void setEnableMonitoring(Long EnableMonitoring) {
         this.EnableMonitoring = EnableMonitoring;
     }
 
     /**
-     * Get 采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0） 
-     * @return EnableDashboard 采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）
+     * Get <p>采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）</p> 
+     * @return EnableDashboard <p>采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）</p>
      */
     public Long getEnableDashboard() {
         return this.EnableDashboard;
     }
 
     /**
-     * Set 采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）
-     * @param EnableDashboard 采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）
+     * Set <p>采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）</p>
+     * @param EnableDashboard <p>采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）</p>
      */
     public void setEnableDashboard(Long EnableDashboard) {
         this.EnableDashboard = EnableDashboard;
     }
 
     /**
-     * Get Ckafka实例的vip 
-     * @return KafkaEndpoint Ckafka实例的vip
+     * Get <p>Ckafka实例的vip</p> 
+     * @return KafkaEndpoint <p>Ckafka实例的vip</p>
      */
     public String getKafkaEndpoint() {
         return this.KafkaEndpoint;
     }
 
     /**
-     * Set Ckafka实例的vip
-     * @param KafkaEndpoint Ckafka实例的vip
+     * Set <p>Ckafka实例的vip</p>
+     * @param KafkaEndpoint <p>Ckafka实例的vip</p>
      */
     public void setKafkaEndpoint(String KafkaEndpoint) {
         this.KafkaEndpoint = KafkaEndpoint;
     }
 
     /**
-     * Get Ckafka实例中的Topic 
-     * @return KafkaTopic Ckafka实例中的Topic
+     * Get <p>Ckafka实例中的Topic</p> 
+     * @return KafkaTopic <p>Ckafka实例中的Topic</p>
      */
     public String getKafkaTopic() {
         return this.KafkaTopic;
     }
 
     /**
-     * Set Ckafka实例中的Topic
-     * @param KafkaTopic Ckafka实例中的Topic
+     * Set <p>Ckafka实例中的Topic</p>
+     * @param KafkaTopic <p>Ckafka实例中的Topic</p>
      */
     public void setKafkaTopic(String KafkaTopic) {
         this.KafkaTopic = KafkaTopic;
     }
 
     /**
-     * Get Ckafka实例的版本号 
-     * @return KafkaVersion Ckafka实例的版本号
+     * Get <p>Ckafka实例的版本号</p> 
+     * @return KafkaVersion <p>Ckafka实例的版本号</p>
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set Ckafka实例的版本号
-     * @param KafkaVersion Ckafka实例的版本号
+     * Set <p>Ckafka实例的版本号</p>
+     * @param KafkaVersion <p>Ckafka实例的版本号</p>
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get topic id 
-     * @return SesTopicId topic id
+     * Get <p>topic id</p> 
+     * @return SesTopicId <p>topic id</p>
      */
     public String getSesTopicId() {
         return this.SesTopicId;
     }
 
     /**
-     * Set topic id
-     * @param SesTopicId topic id
+     * Set <p>topic id</p>
+     * @param SesTopicId <p>topic id</p>
      */
     public void setSesTopicId(String SesTopicId) {
         this.SesTopicId = SesTopicId;
     }
 
     /**
-     * Get topic name 
-     * @return SesTopicName topic name
+     * Get <p>topic name</p> 
+     * @return SesTopicName <p>topic name</p>
      */
     public String getSesTopicName() {
         return this.SesTopicName;
     }
 
     /**
-     * Set topic name
-     * @param SesTopicName topic name
+     * Set <p>topic name</p>
+     * @param SesTopicName <p>topic name</p>
      */
     public void setSesTopicName(String SesTopicName) {
         this.SesTopicName = SesTopicName;
     }
 
     /**
-     * Get topic address 
-     * @return SesTopicAddress topic address
+     * Get <p>topic address</p> 
+     * @return SesTopicAddress <p>topic address</p>
      */
     public String getSesTopicAddress() {
         return this.SesTopicAddress;
     }
 
     /**
-     * Set topic address
-     * @param SesTopicAddress topic address
+     * Set <p>topic address</p>
+     * @param SesTopicAddress <p>topic address</p>
      */
     public void setSesTopicAddress(String SesTopicAddress) {
         this.SesTopicAddress = SesTopicAddress;
     }
 
     /**
-     * Get / 
-     * @return SesTopicUserName /
+     * Get <p>/</p> 
+     * @return SesTopicUserName <p>/</p>
      */
     public String getSesTopicUserName() {
         return this.SesTopicUserName;
     }
 
     /**
-     * Set /
-     * @param SesTopicUserName /
+     * Set <p>/</p>
+     * @param SesTopicUserName <p>/</p>
      */
     public void setSesTopicUserName(String SesTopicUserName) {
         this.SesTopicUserName = SesTopicUserName;
     }
 
     /**
-     * Get / 
-     * @return SesTopicPasswd /
+     * Get <p>/</p> 
+     * @return SesTopicPasswd <p>/</p>
      */
     public String getSesTopicPasswd() {
         return this.SesTopicPasswd;
     }
 
     /**
-     * Set /
-     * @param SesTopicPasswd /
+     * Set <p>/</p>
+     * @param SesTopicPasswd <p>/</p>
      */
     public void setSesTopicPasswd(String SesTopicPasswd) {
         this.SesTopicPasswd = SesTopicPasswd;
     }
 
     /**
-     * Get / 
-     * @return LogstashListenPort /
+     * Get <p>/</p> 
+     * @return LogstashListenPort <p>/</p>
      */
     public Long getLogstashListenPort() {
         return this.LogstashListenPort;
     }
 
     /**
-     * Set /
-     * @param LogstashListenPort /
+     * Set <p>/</p>
+     * @param LogstashListenPort <p>/</p>
      */
     public void setLogstashListenPort(Long LogstashListenPort) {
         this.LogstashListenPort = LogstashListenPort;
+    }
+
+    /**
+     * Get <p>serverless 的 spaceid</p> 
+     * @return SesSpaceId <p>serverless 的 spaceid</p>
+     */
+    public String getSesSpaceId() {
+        return this.SesSpaceId;
+    }
+
+    /**
+     * Set <p>serverless 的 spaceid</p>
+     * @param SesSpaceId <p>serverless 的 spaceid</p>
+     */
+    public void setSesSpaceId(String SesSpaceId) {
+        this.SesSpaceId = SesSpaceId;
     }
 
     public CollectorOutputInstance() {
@@ -421,6 +444,9 @@ public class CollectorOutputInstance extends AbstractModel {
         if (source.LogstashListenPort != null) {
             this.LogstashListenPort = new Long(source.LogstashListenPort);
         }
+        if (source.SesSpaceId != null) {
+            this.SesSpaceId = new String(source.SesSpaceId);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class CollectorOutputInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "SesTopicUserName", this.SesTopicUserName);
         this.setParamSimple(map, prefix + "SesTopicPasswd", this.SesTopicPasswd);
         this.setParamSimple(map, prefix + "LogstashListenPort", this.LogstashListenPort);
+        this.setParamSimple(map, prefix + "SesSpaceId", this.SesSpaceId);
 
     }
 }

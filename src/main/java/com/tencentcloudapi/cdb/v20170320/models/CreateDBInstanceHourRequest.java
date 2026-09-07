@@ -339,6 +339,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String FourthZone;
 
     /**
+    * <p>弹性扩容参数（如果不传，则不开启）</p>
+    */
+    @SerializedName("AutoStrategy")
+    @Expose
+    private AutoStrategy AutoStrategy;
+
+    /**
      * Get <p>实例数量，默认值为 1，最小值 1，最大值为 100。</p> 
      * @return GoodsNum <p>实例数量，默认值为 1，最小值 1，最大值为 100。</p>
      */
@@ -1058,6 +1065,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.FourthZone = FourthZone;
     }
 
+    /**
+     * Get <p>弹性扩容参数（如果不传，则不开启）</p> 
+     * @return AutoStrategy <p>弹性扩容参数（如果不传，则不开启）</p>
+     */
+    public AutoStrategy getAutoStrategy() {
+        return this.AutoStrategy;
+    }
+
+    /**
+     * Set <p>弹性扩容参数（如果不传，则不开启）</p>
+     * @param AutoStrategy <p>弹性扩容参数（如果不传，则不开启）</p>
+     */
+    public void setAutoStrategy(AutoStrategy AutoStrategy) {
+        this.AutoStrategy = AutoStrategy;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -1219,6 +1242,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.FourthZone != null) {
             this.FourthZone = new String(source.FourthZone);
         }
+        if (source.AutoStrategy != null) {
+            this.AutoStrategy = new AutoStrategy(source.AutoStrategy);
+        }
     }
 
 
@@ -1271,6 +1297,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
         this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
+        this.setParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
 
     }
 }

@@ -45,6 +45,20 @@ public class LoginEvent extends AbstractModel {
     private Result LoginResult;
 
     /**
+    * <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+    */
+    @SerializedName("RegisterTime")
+    @Expose
+    private String RegisterTime;
+
+    /**
+    * <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+    */
+    @SerializedName("IsPaidUser")
+    @Expose
+    private Boolean IsPaidUser;
+
+    /**
     * <p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
     */
     @SerializedName("Cust")
@@ -100,6 +114,38 @@ public class LoginEvent extends AbstractModel {
     }
 
     /**
+     * Get <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p> 
+     * @return RegisterTime <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+     */
+    public String getRegisterTime() {
+        return this.RegisterTime;
+    }
+
+    /**
+     * Set <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+     * @param RegisterTime <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+     */
+    public void setRegisterTime(String RegisterTime) {
+        this.RegisterTime = RegisterTime;
+    }
+
+    /**
+     * Get <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul> 
+     * @return IsPaidUser <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+     */
+    public Boolean getIsPaidUser() {
+        return this.IsPaidUser;
+    }
+
+    /**
+     * Set <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+     * @param IsPaidUser <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+     */
+    public void setIsPaidUser(Boolean IsPaidUser) {
+        this.IsPaidUser = IsPaidUser;
+    }
+
+    /**
      * Get <p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p> 
      * @return Cust <p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
      */
@@ -132,6 +178,12 @@ public class LoginEvent extends AbstractModel {
         if (source.LoginResult != null) {
             this.LoginResult = new Result(source.LoginResult);
         }
+        if (source.RegisterTime != null) {
+            this.RegisterTime = new String(source.RegisterTime);
+        }
+        if (source.IsPaidUser != null) {
+            this.IsPaidUser = new Boolean(source.IsPaidUser);
+        }
         if (source.Cust != null) {
             this.Cust = new Cust[source.Cust.length];
             for (int i = 0; i < source.Cust.length; i++) {
@@ -148,6 +200,8 @@ public class LoginEvent extends AbstractModel {
         this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
         this.setParamSimple(map, prefix + "UserLoginName", this.UserLoginName);
         this.setParamObj(map, prefix + "LoginResult.", this.LoginResult);
+        this.setParamSimple(map, prefix + "RegisterTime", this.RegisterTime);
+        this.setParamSimple(map, prefix + "IsPaidUser", this.IsPaidUser);
         this.setParamArrayObj(map, prefix + "Cust.", this.Cust);
 
     }
