@@ -24,225 +24,233 @@ import java.util.HashMap;
 public class AccountInfo extends AbstractModel {
 
     /**
-    * 实例ID，形如postgres-lnp6j617
+    * <p>实例ID，形如postgres-lnp6j617</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 账号
+    * <p>账号</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 账号备注
+    * <p>账号备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+    * <p>账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 账号创建时间
+    * <p>账号创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 账号最后一次更新时间
+    * <p>账号最后一次更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 账号密码最近一次修改时间。
-
-此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
-同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+    * <p>账号密码最近一次修改时间。</p><p>此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00<br>同时仅通过云API或者管控控制台修改密码，才会更新该字段。</p>
     */
     @SerializedName("PasswordUpdateTime")
     @Expose
     private String PasswordUpdateTime;
 
     /**
-    * 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
+    * <p>账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。</p>
     */
     @SerializedName("UserType")
     @Expose
     private String UserType;
 
     /**
-    * 用户账号是否启用CAM验证
+    * <p>用户账号是否启用CAM验证</p>
     */
     @SerializedName("OpenCam")
     @Expose
     private Boolean OpenCam;
 
     /**
-     * Get 实例ID，形如postgres-lnp6j617 
-     * @return DBInstanceId 实例ID，形如postgres-lnp6j617
+    * <p>该账号实际加入了哪些预设角色</p>
+    */
+    @SerializedName("PGRoles")
+    @Expose
+    private String [] PGRoles;
+
+    /**
+     * Get <p>实例ID，形如postgres-lnp6j617</p> 
+     * @return DBInstanceId <p>实例ID，形如postgres-lnp6j617</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-lnp6j617
-     * @param DBInstanceId 实例ID，形如postgres-lnp6j617
+     * Set <p>实例ID，形如postgres-lnp6j617</p>
+     * @param DBInstanceId <p>实例ID，形如postgres-lnp6j617</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 账号 
-     * @return UserName 账号
+     * Get <p>账号</p> 
+     * @return UserName <p>账号</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 账号
-     * @param UserName 账号
+     * Set <p>账号</p>
+     * @param UserName <p>账号</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 账号备注 
-     * @return Remark 账号备注
+     * Get <p>账号备注</p> 
+     * @return Remark <p>账号备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 账号备注
-     * @param Remark 账号备注
+     * Set <p>账号备注</p>
+     * @param Remark <p>账号备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中 
-     * @return Status 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+     * Get <p>账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中</p> 
+     * @return Status <p>账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
-     * @param Status 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+     * Set <p>账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中</p>
+     * @param Status <p>账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 账号创建时间 
-     * @return CreateTime 账号创建时间
+     * Get <p>账号创建时间</p> 
+     * @return CreateTime <p>账号创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 账号创建时间
-     * @param CreateTime 账号创建时间
+     * Set <p>账号创建时间</p>
+     * @param CreateTime <p>账号创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 账号最后一次更新时间 
-     * @return UpdateTime 账号最后一次更新时间
+     * Get <p>账号最后一次更新时间</p> 
+     * @return UpdateTime <p>账号最后一次更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 账号最后一次更新时间
-     * @param UpdateTime 账号最后一次更新时间
+     * Set <p>账号最后一次更新时间</p>
+     * @param UpdateTime <p>账号最后一次更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 账号密码最近一次修改时间。
-
-此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
-同时仅通过云API或者管控控制台修改密码，才会更新该字段。 
-     * @return PasswordUpdateTime 账号密码最近一次修改时间。
-
-此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
-同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+     * Get <p>账号密码最近一次修改时间。</p><p>此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00<br>同时仅通过云API或者管控控制台修改密码，才会更新该字段。</p> 
+     * @return PasswordUpdateTime <p>账号密码最近一次修改时间。</p><p>此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00<br>同时仅通过云API或者管控控制台修改密码，才会更新该字段。</p>
      */
     public String getPasswordUpdateTime() {
         return this.PasswordUpdateTime;
     }
 
     /**
-     * Set 账号密码最近一次修改时间。
-
-此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
-同时仅通过云API或者管控控制台修改密码，才会更新该字段。
-     * @param PasswordUpdateTime 账号密码最近一次修改时间。
-
-此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
-同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+     * Set <p>账号密码最近一次修改时间。</p><p>此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00<br>同时仅通过云API或者管控控制台修改密码，才会更新该字段。</p>
+     * @param PasswordUpdateTime <p>账号密码最近一次修改时间。</p><p>此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00<br>同时仅通过云API或者管控控制台修改密码，才会更新该字段。</p>
      */
     public void setPasswordUpdateTime(String PasswordUpdateTime) {
         this.PasswordUpdateTime = PasswordUpdateTime;
     }
 
     /**
-     * Get 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。 
-     * @return UserType 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
+     * Get <p>账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。</p> 
+     * @return UserType <p>账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。</p>
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
-     * @param UserType 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
+     * Set <p>账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。</p>
+     * @param UserType <p>账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。</p>
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 用户账号是否启用CAM验证 
-     * @return OpenCam 用户账号是否启用CAM验证
+     * Get <p>用户账号是否启用CAM验证</p> 
+     * @return OpenCam <p>用户账号是否启用CAM验证</p>
      */
     public Boolean getOpenCam() {
         return this.OpenCam;
     }
 
     /**
-     * Set 用户账号是否启用CAM验证
-     * @param OpenCam 用户账号是否启用CAM验证
+     * Set <p>用户账号是否启用CAM验证</p>
+     * @param OpenCam <p>用户账号是否启用CAM验证</p>
      */
     public void setOpenCam(Boolean OpenCam) {
         this.OpenCam = OpenCam;
+    }
+
+    /**
+     * Get <p>该账号实际加入了哪些预设角色</p> 
+     * @return PGRoles <p>该账号实际加入了哪些预设角色</p>
+     */
+    public String [] getPGRoles() {
+        return this.PGRoles;
+    }
+
+    /**
+     * Set <p>该账号实际加入了哪些预设角色</p>
+     * @param PGRoles <p>该账号实际加入了哪些预设角色</p>
+     */
+    public void setPGRoles(String [] PGRoles) {
+        this.PGRoles = PGRoles;
     }
 
     public AccountInfo() {
@@ -280,6 +288,12 @@ public class AccountInfo extends AbstractModel {
         if (source.OpenCam != null) {
             this.OpenCam = new Boolean(source.OpenCam);
         }
+        if (source.PGRoles != null) {
+            this.PGRoles = new String[source.PGRoles.length];
+            for (int i = 0; i < source.PGRoles.length; i++) {
+                this.PGRoles[i] = new String(source.PGRoles[i]);
+            }
+        }
     }
 
 
@@ -296,6 +310,7 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PasswordUpdateTime", this.PasswordUpdateTime);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "OpenCam", this.OpenCam);
+        this.setParamArraySimple(map, prefix + "PGRoles.", this.PGRoles);
 
     }
 }

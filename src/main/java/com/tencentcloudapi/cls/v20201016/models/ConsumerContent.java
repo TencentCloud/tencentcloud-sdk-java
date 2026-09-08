@@ -59,6 +59,13 @@ public class ConsumerContent extends AbstractModel {
     private Long JsonType;
 
     /**
+    * <p>数值类型自动转换开关</p><p>枚举值：</p><ul><li>true： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）会被自动转换为数值类型（int / float）。</li><li>false： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）为字符串。</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("AutoConvertNumber")
+    @Expose
+    private Boolean AutoConvertNumber;
+
+    /**
      * Get <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p> 
      * @return EnableTag <p>是否投递 TAG 信息。<br>当EnableTag为true时，表示投递TAG元信息。</p>
      */
@@ -138,6 +145,22 @@ public class ConsumerContent extends AbstractModel {
         this.JsonType = JsonType;
     }
 
+    /**
+     * Get <p>数值类型自动转换开关</p><p>枚举值：</p><ul><li>true： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）会被自动转换为数值类型（int / float）。</li><li>false： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）为字符串。</li></ul><p>默认值：false</p> 
+     * @return AutoConvertNumber <p>数值类型自动转换开关</p><p>枚举值：</p><ul><li>true： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）会被自动转换为数值类型（int / float）。</li><li>false： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）为字符串。</li></ul><p>默认值：false</p>
+     */
+    public Boolean getAutoConvertNumber() {
+        return this.AutoConvertNumber;
+    }
+
+    /**
+     * Set <p>数值类型自动转换开关</p><p>枚举值：</p><ul><li>true： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）会被自动转换为数值类型（int / float）。</li><li>false： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）为字符串。</li></ul><p>默认值：false</p>
+     * @param AutoConvertNumber <p>数值类型自动转换开关</p><p>枚举值：</p><ul><li>true： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）会被自动转换为数值类型（int / float）。</li><li>false： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）为字符串。</li></ul><p>默认值：false</p>
+     */
+    public void setAutoConvertNumber(Boolean AutoConvertNumber) {
+        this.AutoConvertNumber = AutoConvertNumber;
+    }
+
     public ConsumerContent() {
     }
 
@@ -164,6 +187,9 @@ public class ConsumerContent extends AbstractModel {
         if (source.JsonType != null) {
             this.JsonType = new Long(source.JsonType);
         }
+        if (source.AutoConvertNumber != null) {
+            this.AutoConvertNumber = new Boolean(source.AutoConvertNumber);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ConsumerContent extends AbstractModel {
         this.setParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
         this.setParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
         this.setParamSimple(map, prefix + "JsonType", this.JsonType);
+        this.setParamSimple(map, prefix + "AutoConvertNumber", this.AutoConvertNumber);
 
     }
 }

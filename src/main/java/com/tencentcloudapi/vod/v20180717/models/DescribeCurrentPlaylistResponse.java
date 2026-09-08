@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCurrentPlaylistResponse extends AbstractModel {
 
     /**
-    * 当前播放列表信息。
+    * <p>当前播放列表信息。</p>
     */
     @SerializedName("CurrentPlaylist")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCurrentPlaylistResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前播放列表信息。 
-     * @return CurrentPlaylist 当前播放列表信息。
+     * Get <p>当前播放列表信息。</p> 
+     * @return CurrentPlaylist <p>当前播放列表信息。</p>
      */
     public RoundPlayFilePlayInfo [] getCurrentPlaylist() {
         return this.CurrentPlaylist;
     }
 
     /**
-     * Set 当前播放列表信息。
-     * @param CurrentPlaylist 当前播放列表信息。
+     * Set <p>当前播放列表信息。</p>
+     * @param CurrentPlaylist <p>当前播放列表信息。</p>
      */
     public void setCurrentPlaylist(RoundPlayFilePlayInfo [] CurrentPlaylist) {
         this.CurrentPlaylist = CurrentPlaylist;

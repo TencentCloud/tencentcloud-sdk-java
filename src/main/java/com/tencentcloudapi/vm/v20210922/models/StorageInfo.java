@@ -66,6 +66,13 @@ public class StorageInfo extends AbstractModel {
     private String Title;
 
     /**
+    * <p>额外信息</p>
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
      * Get <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p> 
      * @return Type <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
      */
@@ -161,6 +168,22 @@ public class StorageInfo extends AbstractModel {
         this.Title = Title;
     }
 
+    /**
+     * Get <p>额外信息</p> 
+     * @return Extra <p>额外信息</p>
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set <p>额外信息</p>
+     * @param Extra <p>额外信息</p>
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
     public StorageInfo() {
     }
 
@@ -190,6 +213,9 @@ public class StorageInfo extends AbstractModel {
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class StorageInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
         this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
 
     }
 }

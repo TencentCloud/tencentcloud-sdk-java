@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInsVPCEndpointsResponse extends AbstractModel {
 
     /**
-    * 接入点
+    * <p>接入点</p>
     */
     @SerializedName("Endpoints")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInsVPCEndpointsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 接入点 
-     * @return Endpoints 接入点
+     * Get <p>接入点</p> 
+     * @return Endpoints <p>接入点</p>
      */
     public MQTTEndpointItem [] getEndpoints() {
         return this.Endpoints;
     }
 
     /**
-     * Set 接入点
-     * @param Endpoints 接入点
+     * Set <p>接入点</p>
+     * @param Endpoints <p>接入点</p>
      */
     public void setEndpoints(MQTTEndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;

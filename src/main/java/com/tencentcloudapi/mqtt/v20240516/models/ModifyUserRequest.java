@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyUserRequest extends AbstractModel {
 
     /**
-    * 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 备注，长度不超过128个字符。
+    * <p>备注，长度不超过128个字符。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get <p>用户名</p> 
+     * @return Username <p>用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set <p>用户名</p>
+     * @param Username <p>用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 备注，长度不超过128个字符。 
-     * @return Remark 备注，长度不超过128个字符。
+     * Get <p>备注，长度不超过128个字符。</p> 
+     * @return Remark <p>备注，长度不超过128个字符。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，长度不超过128个字符。
-     * @param Remark 备注，长度不超过128个字符。
+     * Set <p>备注，长度不超过128个字符。</p>
+     * @param Remark <p>备注，长度不超过128个字符。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

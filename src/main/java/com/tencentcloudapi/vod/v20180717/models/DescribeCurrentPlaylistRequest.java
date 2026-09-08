@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCurrentPlaylistRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 轮播播单唯一标识。
+    * <p>轮播播单唯一标识。</p>
     */
     @SerializedName("RoundPlayId")
     @Expose
     private String RoundPlayId;
 
     /**
-    * 返回的播放列表的长度。最大10，默认值为5。
+    * <p>返回的播放列表的长度。最大10，默认值为5。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 轮播播单唯一标识。 
-     * @return RoundPlayId 轮播播单唯一标识。
+     * Get <p>轮播播单唯一标识。</p> 
+     * @return RoundPlayId <p>轮播播单唯一标识。</p>
      */
     public String getRoundPlayId() {
         return this.RoundPlayId;
     }
 
     /**
-     * Set 轮播播单唯一标识。
-     * @param RoundPlayId 轮播播单唯一标识。
+     * Set <p>轮播播单唯一标识。</p>
+     * @param RoundPlayId <p>轮播播单唯一标识。</p>
      */
     public void setRoundPlayId(String RoundPlayId) {
         this.RoundPlayId = RoundPlayId;
     }
 
     /**
-     * Get 返回的播放列表的长度。最大10，默认值为5。 
-     * @return Limit 返回的播放列表的长度。最大10，默认值为5。
+     * Get <p>返回的播放列表的长度。最大10，默认值为5。</p> 
+     * @return Limit <p>返回的播放列表的长度。最大10，默认值为5。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回的播放列表的长度。最大10，默认值为5。
-     * @param Limit 返回的播放列表的长度。最大10，默认值为5。
+     * Set <p>返回的播放列表的长度。最大10，默认值为5。</p>
+     * @param Limit <p>返回的播放列表的长度。最大10，默认值为5。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

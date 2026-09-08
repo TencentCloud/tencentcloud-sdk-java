@@ -24,255 +24,230 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+    * <p>要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 要修改的备注信息，最多128个字符。
+    * <p>要修改的备注信息，最多128个字符。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 需要变更的配置规格
-基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+    * <p>需要变更的配置规格<br>基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。</p>
     */
     @SerializedName("SkuCode")
     @Expose
     private String SkuCode;
 
     /**
-    * 客户端证书注册方式：
-JITP：自动注册
-API：手动通过API注册
+    * <p>客户端证书注册方式：<br>JITP：自动注册<br>API：手动通过API注册</p>
     */
     @SerializedName("DeviceCertificateProvisionType")
     @Expose
     private String DeviceCertificateProvisionType;
 
     /**
-    * 自动注册证书是否自动激活
+    * <p>自动注册证书是否自动激活</p>
     */
     @SerializedName("AutomaticActivation")
     @Expose
     private Boolean AutomaticActivation;
 
     /**
-    * 授权策略开关
+    * <p>授权策略开关</p>
     */
     @SerializedName("AuthorizationPolicy")
     @Expose
     private Boolean AuthorizationPolicy;
 
     /**
-    * 是否使用默认的服务端证书
+    * <p>是否使用默认的服务端证书</p>
     */
     @SerializedName("UseDefaultServerCert")
     @Expose
     private Boolean UseDefaultServerCert;
 
     /**
-    * TLS：单向认证
-mTLS；双向认证
-BYOC：一机一证
+    * <p>TLS：单向认证<br>mTLS；双向认证<br>BYOC：一机一证</p>
     */
     @SerializedName("X509Mode")
     @Expose
     private String X509Mode;
 
     /**
-    * 单客户端消息收发限速单位 条/秒
+    * <p>单客户端消息收发限速单位 条/秒</p>
     */
     @SerializedName("MessageRate")
     @Expose
     private Long MessageRate;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。 
-     * @return Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+     * Get <p>要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。</p> 
+     * @return Name <p>要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
-     * @param Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+     * Set <p>要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。</p>
+     * @param Name <p>要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 要修改的备注信息，最多128个字符。 
-     * @return Remark 要修改的备注信息，最多128个字符。
+     * Get <p>要修改的备注信息，最多128个字符。</p> 
+     * @return Remark <p>要修改的备注信息，最多128个字符。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 要修改的备注信息，最多128个字符。
-     * @param Remark 要修改的备注信息，最多128个字符。
+     * Set <p>要修改的备注信息，最多128个字符。</p>
+     * @param Remark <p>要修改的备注信息，最多128个字符。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 需要变更的配置规格
-基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。 
-     * @return SkuCode 需要变更的配置规格
-基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+     * Get <p>需要变更的配置规格<br>基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。</p> 
+     * @return SkuCode <p>需要变更的配置规格<br>基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。</p>
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set 需要变更的配置规格
-基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
-     * @param SkuCode 需要变更的配置规格
-基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+     * Set <p>需要变更的配置规格<br>基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。</p>
+     * @param SkuCode <p>需要变更的配置规格<br>基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。</p>
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
     }
 
     /**
-     * Get 客户端证书注册方式：
-JITP：自动注册
-API：手动通过API注册 
-     * @return DeviceCertificateProvisionType 客户端证书注册方式：
-JITP：自动注册
-API：手动通过API注册
+     * Get <p>客户端证书注册方式：<br>JITP：自动注册<br>API：手动通过API注册</p> 
+     * @return DeviceCertificateProvisionType <p>客户端证书注册方式：<br>JITP：自动注册<br>API：手动通过API注册</p>
      */
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
     }
 
     /**
-     * Set 客户端证书注册方式：
-JITP：自动注册
-API：手动通过API注册
-     * @param DeviceCertificateProvisionType 客户端证书注册方式：
-JITP：自动注册
-API：手动通过API注册
+     * Set <p>客户端证书注册方式：<br>JITP：自动注册<br>API：手动通过API注册</p>
+     * @param DeviceCertificateProvisionType <p>客户端证书注册方式：<br>JITP：自动注册<br>API：手动通过API注册</p>
      */
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
     }
 
     /**
-     * Get 自动注册证书是否自动激活 
-     * @return AutomaticActivation 自动注册证书是否自动激活
+     * Get <p>自动注册证书是否自动激活</p> 
+     * @return AutomaticActivation <p>自动注册证书是否自动激活</p>
      */
     public Boolean getAutomaticActivation() {
         return this.AutomaticActivation;
     }
 
     /**
-     * Set 自动注册证书是否自动激活
-     * @param AutomaticActivation 自动注册证书是否自动激活
+     * Set <p>自动注册证书是否自动激活</p>
+     * @param AutomaticActivation <p>自动注册证书是否自动激活</p>
      */
     public void setAutomaticActivation(Boolean AutomaticActivation) {
         this.AutomaticActivation = AutomaticActivation;
     }
 
     /**
-     * Get 授权策略开关 
-     * @return AuthorizationPolicy 授权策略开关
+     * Get <p>授权策略开关</p> 
+     * @return AuthorizationPolicy <p>授权策略开关</p>
      */
     public Boolean getAuthorizationPolicy() {
         return this.AuthorizationPolicy;
     }
 
     /**
-     * Set 授权策略开关
-     * @param AuthorizationPolicy 授权策略开关
+     * Set <p>授权策略开关</p>
+     * @param AuthorizationPolicy <p>授权策略开关</p>
      */
     public void setAuthorizationPolicy(Boolean AuthorizationPolicy) {
         this.AuthorizationPolicy = AuthorizationPolicy;
     }
 
     /**
-     * Get 是否使用默认的服务端证书 
-     * @return UseDefaultServerCert 是否使用默认的服务端证书
+     * Get <p>是否使用默认的服务端证书</p> 
+     * @return UseDefaultServerCert <p>是否使用默认的服务端证书</p>
      */
     public Boolean getUseDefaultServerCert() {
         return this.UseDefaultServerCert;
     }
 
     /**
-     * Set 是否使用默认的服务端证书
-     * @param UseDefaultServerCert 是否使用默认的服务端证书
+     * Set <p>是否使用默认的服务端证书</p>
+     * @param UseDefaultServerCert <p>是否使用默认的服务端证书</p>
      */
     public void setUseDefaultServerCert(Boolean UseDefaultServerCert) {
         this.UseDefaultServerCert = UseDefaultServerCert;
     }
 
     /**
-     * Get TLS：单向认证
-mTLS；双向认证
-BYOC：一机一证 
-     * @return X509Mode TLS：单向认证
-mTLS；双向认证
-BYOC：一机一证
+     * Get <p>TLS：单向认证<br>mTLS；双向认证<br>BYOC：一机一证</p> 
+     * @return X509Mode <p>TLS：单向认证<br>mTLS；双向认证<br>BYOC：一机一证</p>
      */
     public String getX509Mode() {
         return this.X509Mode;
     }
 
     /**
-     * Set TLS：单向认证
-mTLS；双向认证
-BYOC：一机一证
-     * @param X509Mode TLS：单向认证
-mTLS；双向认证
-BYOC：一机一证
+     * Set <p>TLS：单向认证<br>mTLS；双向认证<br>BYOC：一机一证</p>
+     * @param X509Mode <p>TLS：单向认证<br>mTLS；双向认证<br>BYOC：一机一证</p>
      */
     public void setX509Mode(String X509Mode) {
         this.X509Mode = X509Mode;
     }
 
     /**
-     * Get 单客户端消息收发限速单位 条/秒 
-     * @return MessageRate 单客户端消息收发限速单位 条/秒
+     * Get <p>单客户端消息收发限速单位 条/秒</p> 
+     * @return MessageRate <p>单客户端消息收发限速单位 条/秒</p>
      */
     public Long getMessageRate() {
         return this.MessageRate;
     }
 
     /**
-     * Set 单客户端消息收发限速单位 条/秒
-     * @param MessageRate 单客户端消息收发限速单位 条/秒
+     * Set <p>单客户端消息收发限速单位 条/秒</p>
+     * @param MessageRate <p>单客户端消息收发限速单位 条/秒</p>
      */
     public void setMessageRate(Long MessageRate) {
         this.MessageRate = MessageRate;

@@ -52,6 +52,13 @@ public class VideoLLMDetail extends AbstractModel {
     private String Suggestion;
 
     /**
+    * <p>其他信息</p>
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
      * Get <p>命中的标签名</p> 
      * @return LabelName <p>命中的标签名</p>
      */
@@ -115,6 +122,22 @@ public class VideoLLMDetail extends AbstractModel {
         this.Suggestion = Suggestion;
     }
 
+    /**
+     * Get <p>其他信息</p> 
+     * @return Extra <p>其他信息</p>
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set <p>其他信息</p>
+     * @param Extra <p>其他信息</p>
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
     public VideoLLMDetail() {
     }
 
@@ -138,6 +161,9 @@ public class VideoLLMDetail extends AbstractModel {
         if (source.Suggestion != null) {
             this.Suggestion = new String(source.Suggestion);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class VideoLLMDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamArraySimple(map, prefix + "TargetText.", this.TargetText);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteUserRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get <p>用户名</p> 
+     * @return Username <p>用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set <p>用户名</p>
+     * @param Username <p>用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;

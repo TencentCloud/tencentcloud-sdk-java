@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyInsPublicEndpointRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 带宽，单位：Mbps
+    * <p>带宽，单位：Mbps</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 公网访问规则
+    * <p>公网访问规则</p>
     */
     @SerializedName("Rules")
     @Expose
     private PublicAccessRule [] Rules;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 带宽，单位：Mbps 
-     * @return Bandwidth 带宽，单位：Mbps
+     * Get <p>带宽，单位：Mbps</p> 
+     * @return Bandwidth <p>带宽，单位：Mbps</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽，单位：Mbps
-     * @param Bandwidth 带宽，单位：Mbps
+     * Set <p>带宽，单位：Mbps</p>
+     * @param Bandwidth <p>带宽，单位：Mbps</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 公网访问规则 
-     * @return Rules 公网访问规则
+     * Get <p>公网访问规则</p> 
+     * @return Rules <p>公网访问规则</p>
      */
     public PublicAccessRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 公网访问规则
-     * @param Rules 公网访问规则
+     * Set <p>公网访问规则</p>
+     * @param Rules <p>公网访问规则</p>
      */
     public void setRules(PublicAccessRule [] Rules) {
         this.Rules = Rules;

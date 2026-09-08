@@ -60,6 +60,20 @@ public class InputInfo extends AbstractModel {
     private String TextContent;
 
     /**
+    * <p>标题</p>
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * <p>其他信息</p>
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
      * Get <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p> 
      * @return Type <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
      */
@@ -143,6 +157,38 @@ public class InputInfo extends AbstractModel {
         this.TextContent = TextContent;
     }
 
+    /**
+     * Get <p>标题</p> 
+     * @return Title <p>标题</p>
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set <p>标题</p>
+     * @param Title <p>标题</p>
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get <p>其他信息</p> 
+     * @return Extra <p>其他信息</p>
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set <p>其他信息</p>
+     * @param Extra <p>其他信息</p>
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
     public InputInfo() {
     }
 
@@ -169,6 +215,12 @@ public class InputInfo extends AbstractModel {
         if (source.TextContent != null) {
             this.TextContent = new String(source.TextContent);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
     }
 
 
@@ -181,6 +233,8 @@ public class InputInfo extends AbstractModel {
         this.setParamObj(map, prefix + "BucketInfo.", this.BucketInfo);
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
 
     }
 }

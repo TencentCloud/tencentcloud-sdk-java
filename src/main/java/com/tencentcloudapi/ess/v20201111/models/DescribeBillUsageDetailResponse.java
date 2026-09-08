@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillUsageDetailResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 消耗详情
+    * <p>消耗详情</p>
     */
     @SerializedName("Details")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBillUsageDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 消耗详情 
-     * @return Details 消耗详情
+     * Get <p>消耗详情</p> 
+     * @return Details <p>消耗详情</p>
      */
     public BillUsageDetail [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 消耗详情
-     * @param Details 消耗详情
+     * Set <p>消耗详情</p>
+     * @param Details <p>消耗详情</p>
      */
     public void setDetails(BillUsageDetail [] Details) {
         this.Details = Details;

@@ -24,130 +24,115 @@ import java.util.HashMap;
 public class DescribeClientListRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 客户端ID
+    * <p>客户端ID</p>
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 客户端数量限制,最大1024，默认1024
+    * <p>客户端数量限制,最大1024，默认1024</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 0:查询在线和离线客户端（默认值）
-1:查询在线客户端
-2:查询离线客户端
+    * <p>0:查询在线和离线客户端（默认值）<br>1:查询在线客户端<br>2:查询离线客户端</p>
     */
     @SerializedName("OnlineStatus")
     @Expose
     private Long OnlineStatus;
 
     /**
-    * 在线连接：表示最后的连接时间
-离线连接：表示最后的断开连接时间
+    * <p>在线连接：表示最后的连接时间<br>离线连接：表示最后的断开连接时间</p>
     */
     @SerializedName("MaxTimestamp")
     @Expose
     private Long MaxTimestamp;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 客户端ID 
-     * @return ClientId 客户端ID
+     * Get <p>客户端ID</p> 
+     * @return ClientId <p>客户端ID</p>
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端ID
-     * @param ClientId 客户端ID
+     * Set <p>客户端ID</p>
+     * @param ClientId <p>客户端ID</p>
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 客户端数量限制,最大1024，默认1024 
-     * @return Number 客户端数量限制,最大1024，默认1024
+     * Get <p>客户端数量限制,最大1024，默认1024</p> 
+     * @return Number <p>客户端数量限制,最大1024，默认1024</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 客户端数量限制,最大1024，默认1024
-     * @param Number 客户端数量限制,最大1024，默认1024
+     * Set <p>客户端数量限制,最大1024，默认1024</p>
+     * @param Number <p>客户端数量限制,最大1024，默认1024</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 0:查询在线和离线客户端（默认值）
-1:查询在线客户端
-2:查询离线客户端 
-     * @return OnlineStatus 0:查询在线和离线客户端（默认值）
-1:查询在线客户端
-2:查询离线客户端
+     * Get <p>0:查询在线和离线客户端（默认值）<br>1:查询在线客户端<br>2:查询离线客户端</p> 
+     * @return OnlineStatus <p>0:查询在线和离线客户端（默认值）<br>1:查询在线客户端<br>2:查询离线客户端</p>
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set 0:查询在线和离线客户端（默认值）
-1:查询在线客户端
-2:查询离线客户端
-     * @param OnlineStatus 0:查询在线和离线客户端（默认值）
-1:查询在线客户端
-2:查询离线客户端
+     * Set <p>0:查询在线和离线客户端（默认值）<br>1:查询在线客户端<br>2:查询离线客户端</p>
+     * @param OnlineStatus <p>0:查询在线和离线客户端（默认值）<br>1:查询在线客户端<br>2:查询离线客户端</p>
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get 在线连接：表示最后的连接时间
-离线连接：表示最后的断开连接时间 
-     * @return MaxTimestamp 在线连接：表示最后的连接时间
-离线连接：表示最后的断开连接时间
+     * Get <p>在线连接：表示最后的连接时间<br>离线连接：表示最后的断开连接时间</p> 
+     * @return MaxTimestamp <p>在线连接：表示最后的连接时间<br>离线连接：表示最后的断开连接时间</p>
      */
     public Long getMaxTimestamp() {
         return this.MaxTimestamp;
     }
 
     /**
-     * Set 在线连接：表示最后的连接时间
-离线连接：表示最后的断开连接时间
-     * @param MaxTimestamp 在线连接：表示最后的连接时间
-离线连接：表示最后的断开连接时间
+     * Set <p>在线连接：表示最后的连接时间<br>离线连接：表示最后的断开连接时间</p>
+     * @param MaxTimestamp <p>在线连接：表示最后的连接时间<br>离线连接：表示最后的断开连接时间</p>
      */
     public void setMaxTimestamp(Long MaxTimestamp) {
         this.MaxTimestamp = MaxTimestamp;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTopicListResponse extends AbstractModel {
 
     /**
-    * 查询总数
+    * <p>查询总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 主题列表
+    * <p>主题列表</p>
     */
     @SerializedName("Data")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTopicListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询总数 
-     * @return TotalCount 查询总数
+     * Get <p>查询总数</p> 
+     * @return TotalCount <p>查询总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询总数
-     * @param TotalCount 查询总数
+     * Set <p>查询总数</p>
+     * @param TotalCount <p>查询总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 主题列表 
-     * @return Data 主题列表
+     * Get <p>主题列表</p> 
+     * @return Data <p>主题列表</p>
      */
     public MQTTTopicItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 主题列表
-     * @param Data 主题列表
+     * Set <p>主题列表</p>
+     * @param Data <p>主题列表</p>
      */
     public void setData(MQTTTopicItem [] Data) {
         this.Data = Data;

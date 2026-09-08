@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DatabaseObject extends AbstractModel {
 
     /**
-    * 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
+    * <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
     */
     @SerializedName("ObjectType")
     @Expose
     private String ObjectType;
 
     /**
-    * 所描述的数据库对象名称
+    * <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
     */
     @SerializedName("ObjectName")
     @Expose
     private String ObjectName;
 
     /**
-    * 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
+    * <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
+    * <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+    * <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-     * Get 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。 
-     * @return ObjectType 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
+     * Get <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p> 
+     * @return ObjectType <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
      */
     public String getObjectType() {
         return this.ObjectType;
     }
 
     /**
-     * Set 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
-     * @param ObjectType 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
+     * Set <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
+     * @param ObjectType <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get 所描述的数据库对象名称 
-     * @return ObjectName 所描述的数据库对象名称
+     * Get <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p> 
+     * @return ObjectName <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
      */
     public String getObjectName() {
         return this.ObjectName;
     }
 
     /**
-     * Set 所描述的数据库对象名称
-     * @param ObjectName 所描述的数据库对象名称
+     * Set <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
+     * @param ObjectName <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
      */
     public void setObjectName(String ObjectName) {
         this.ObjectName = ObjectName;
     }
 
     /**
-     * Get 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。 
-     * @return DatabaseName 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
+     * Get <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p> 
+     * @return DatabaseName <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
-     * @param DatabaseName 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
+     * Set <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
+     * @param DatabaseName <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。 
-     * @return SchemaName 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
+     * Get <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p> 
+     * @return SchemaName <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
-     * @param SchemaName 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
+     * Set <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
+     * @param SchemaName <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。 
-     * @return TableName 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+     * Get <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p> 
+     * @return TableName <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
-     * @param TableName 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+     * Set <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
+     * @param TableName <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;

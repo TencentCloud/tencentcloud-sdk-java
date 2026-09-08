@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Variable extends AbstractModel {
 
     /**
-    * 变量的名称
+    * <p>变量的名称</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 变量的值
+    * <p>变量的值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 变量的名称 
-     * @return Key 变量的名称
+     * Get <p>变量的名称</p> 
+     * @return Key <p>变量的名称</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 变量的名称
-     * @param Key 变量的名称
+     * Set <p>变量的名称</p>
+     * @param Key <p>变量的名称</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 变量的值 
-     * @return Value 变量的值
+     * Get <p>变量的值</p> 
+     * @return Value <p>变量的值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 变量的值
-     * @param Value 变量的值
+     * Set <p>变量的值</p>
+     * @param Value <p>变量的值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

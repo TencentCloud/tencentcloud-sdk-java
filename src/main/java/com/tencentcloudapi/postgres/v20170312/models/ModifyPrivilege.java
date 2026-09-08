@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyPrivilege extends AbstractModel {
 
     /**
-    * 要修改的数据库对象及权限列表
+    * <p>要修改的数据库对象及权限列表</p>
     */
     @SerializedName("DatabasePrivilege")
     @Expose
     private DatabasePrivilege DatabasePrivilege;
 
     /**
-    * 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
+    * <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
     */
     @SerializedName("ModifyType")
     @Expose
     private String ModifyType;
 
     /**
-    * 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
+    * <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
     */
     @SerializedName("IsCascade")
     @Expose
     private Boolean IsCascade;
 
     /**
-     * Get 要修改的数据库对象及权限列表 
-     * @return DatabasePrivilege 要修改的数据库对象及权限列表
+     * Get <p>要修改的数据库对象及权限列表</p> 
+     * @return DatabasePrivilege <p>要修改的数据库对象及权限列表</p>
      */
     public DatabasePrivilege getDatabasePrivilege() {
         return this.DatabasePrivilege;
     }
 
     /**
-     * Set 要修改的数据库对象及权限列表
-     * @param DatabasePrivilege 要修改的数据库对象及权限列表
+     * Set <p>要修改的数据库对象及权限列表</p>
+     * @param DatabasePrivilege <p>要修改的数据库对象及权限列表</p>
      */
     public void setDatabasePrivilege(DatabasePrivilege DatabasePrivilege) {
         this.DatabasePrivilege = DatabasePrivilege;
     }
 
     /**
-     * Get 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。 
-     * @return ModifyType 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
+     * Get <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p> 
+     * @return ModifyType <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
      */
     public String getModifyType() {
         return this.ModifyType;
     }
 
     /**
-     * Set 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-     * @param ModifyType 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
+     * Set <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
+     * @param ModifyType <p>修改的方式，当前仅支持grantObject、revokeObject、alterRole、grantRole、revoke，当前仅支持grantObject、revokeObject、alterRole、grantRole、revokeRole。gRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型、grantRole代表加入对应角色、revokeRole 代表移出对应角色。</p>
      */
     public void setModifyType(String ModifyType) {
         this.ModifyType = ModifyType;
     }
 
     /**
-     * Get 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。 
-     * @return IsCascade 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
+     * Get <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p> 
+     * @return IsCascade <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
      */
     public Boolean getIsCascade() {
         return this.IsCascade;
     }
 
     /**
-     * Set 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-     * @param IsCascade 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
+     * Set <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
+     * @param IsCascade <p>当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。</p>
      */
     public void setIsCascade(Boolean IsCascade) {
         this.IsCascade = IsCascade;

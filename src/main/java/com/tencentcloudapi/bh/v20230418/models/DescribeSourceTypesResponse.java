@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSourceTypesResponse extends AbstractModel {
 
     /**
-    * 认证源总数
+    * <p>认证源总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 认证源信息
+    * <p>认证源信息</p>
     */
     @SerializedName("SourceTypeSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSourceTypesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 认证源总数 
-     * @return TotalCount 认证源总数
+     * Get <p>认证源总数</p> 
+     * @return TotalCount <p>认证源总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 认证源总数
-     * @param TotalCount 认证源总数
+     * Set <p>认证源总数</p>
+     * @param TotalCount <p>认证源总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 认证源信息 
-     * @return SourceTypeSet 认证源信息
+     * Get <p>认证源信息</p> 
+     * @return SourceTypeSet <p>认证源信息</p>
      */
     public SourceType [] getSourceTypeSet() {
         return this.SourceTypeSet;
     }
 
     /**
-     * Set 认证源信息
-     * @param SourceTypeSet 认证源信息
+     * Set <p>认证源信息</p>
+     * @param SourceTypeSet <p>认证源信息</p>
      */
     public void setSourceTypeSet(SourceType [] SourceTypeSet) {
         this.SourceTypeSet = SourceTypeSet;

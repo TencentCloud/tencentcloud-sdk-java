@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClientListResponse extends AbstractModel {
 
     /**
-    * 客户端列表
+    * <p>客户端列表</p>
     */
     @SerializedName("Clients")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClientListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 客户端列表 
-     * @return Clients 客户端列表
+     * Get <p>客户端列表</p> 
+     * @return Clients <p>客户端列表</p>
      */
     public MQTTClientInfo [] getClients() {
         return this.Clients;
     }
 
     /**
-     * Set 客户端列表
-     * @param Clients 客户端列表
+     * Set <p>客户端列表</p>
+     * @param Clients <p>客户端列表</p>
      */
     public void setClients(MQTTClientInfo [] Clients) {
         this.Clients = Clients;

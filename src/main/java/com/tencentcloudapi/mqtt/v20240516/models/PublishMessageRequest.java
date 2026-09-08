@@ -24,176 +24,161 @@ import java.util.HashMap;
 public class PublishMessageRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
+    * <p>消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码</p>
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-    * 消息目的主题，该参数与 TargetClientId 二选一
+    * <p>消息目的主题，该参数与 TargetClientId 二选一</p>
     */
     @SerializedName("TargetTopic")
     @Expose
     private String TargetTopic;
 
     /**
-    * 消息目的客户端 ID，该参数与 TargetTopic 二选一
+    * <p>消息目的客户端 ID，该参数与 TargetTopic 二选一</p>
     */
     @SerializedName("TargetClientId")
     @Expose
     private String TargetClientId;
 
     /**
-    * 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
+    * <p>消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）</p>
     */
     @SerializedName("Encoding")
     @Expose
     private String Encoding;
 
     /**
-    * 消息的服务质量等级，默认为 1
-QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
-QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
-QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
+    * <p>消息的服务质量等级，默认为 1<br>QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。<br>QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。<br>QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。</p>
     */
     @SerializedName("Qos")
     @Expose
     private Long Qos;
 
     /**
-    * 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
+    * <p>是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true</p>
     */
     @SerializedName("Retain")
     @Expose
     private Boolean Retain;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码 
-     * @return Payload 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
+     * Get <p>消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码</p> 
+     * @return Payload <p>消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码</p>
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
-     * @param Payload 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
+     * Set <p>消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码</p>
+     * @param Payload <p>消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码</p>
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get 消息目的主题，该参数与 TargetClientId 二选一 
-     * @return TargetTopic 消息目的主题，该参数与 TargetClientId 二选一
+     * Get <p>消息目的主题，该参数与 TargetClientId 二选一</p> 
+     * @return TargetTopic <p>消息目的主题，该参数与 TargetClientId 二选一</p>
      */
     public String getTargetTopic() {
         return this.TargetTopic;
     }
 
     /**
-     * Set 消息目的主题，该参数与 TargetClientId 二选一
-     * @param TargetTopic 消息目的主题，该参数与 TargetClientId 二选一
+     * Set <p>消息目的主题，该参数与 TargetClientId 二选一</p>
+     * @param TargetTopic <p>消息目的主题，该参数与 TargetClientId 二选一</p>
      */
     public void setTargetTopic(String TargetTopic) {
         this.TargetTopic = TargetTopic;
     }
 
     /**
-     * Get 消息目的客户端 ID，该参数与 TargetTopic 二选一 
-     * @return TargetClientId 消息目的客户端 ID，该参数与 TargetTopic 二选一
+     * Get <p>消息目的客户端 ID，该参数与 TargetTopic 二选一</p> 
+     * @return TargetClientId <p>消息目的客户端 ID，该参数与 TargetTopic 二选一</p>
      */
     public String getTargetClientId() {
         return this.TargetClientId;
     }
 
     /**
-     * Set 消息目的客户端 ID，该参数与 TargetTopic 二选一
-     * @param TargetClientId 消息目的客户端 ID，该参数与 TargetTopic 二选一
+     * Set <p>消息目的客户端 ID，该参数与 TargetTopic 二选一</p>
+     * @param TargetClientId <p>消息目的客户端 ID，该参数与 TargetTopic 二选一</p>
      */
     public void setTargetClientId(String TargetClientId) {
         this.TargetClientId = TargetClientId;
     }
 
     /**
-     * Get 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码） 
-     * @return Encoding 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
+     * Get <p>消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）</p> 
+     * @return Encoding <p>消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）</p>
      */
     public String getEncoding() {
         return this.Encoding;
     }
 
     /**
-     * Set 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
-     * @param Encoding 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
+     * Set <p>消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）</p>
+     * @param Encoding <p>消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）</p>
      */
     public void setEncoding(String Encoding) {
         this.Encoding = Encoding;
     }
 
     /**
-     * Get 消息的服务质量等级，默认为 1
-QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
-QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
-QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。 
-     * @return Qos 消息的服务质量等级，默认为 1
-QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
-QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
-QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
+     * Get <p>消息的服务质量等级，默认为 1<br>QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。<br>QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。<br>QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。</p> 
+     * @return Qos <p>消息的服务质量等级，默认为 1<br>QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。<br>QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。<br>QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。</p>
      */
     public Long getQos() {
         return this.Qos;
     }
 
     /**
-     * Set 消息的服务质量等级，默认为 1
-QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
-QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
-QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
-     * @param Qos 消息的服务质量等级，默认为 1
-QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
-QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
-QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
+     * Set <p>消息的服务质量等级，默认为 1<br>QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。<br>QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。<br>QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。</p>
+     * @param Qos <p>消息的服务质量等级，默认为 1<br>QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。<br>QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。<br>QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。</p>
      */
     public void setQos(Long Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true 
-     * @return Retain 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
+     * Get <p>是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true</p> 
+     * @return Retain <p>是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true</p>
      */
     public Boolean getRetain() {
         return this.Retain;
     }
 
     /**
-     * Set 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
-     * @param Retain 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
+     * Set <p>是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true</p>
+     * @param Retain <p>是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true</p>
      */
     public void setRetain(Boolean Retain) {
         this.Retain = Retain;

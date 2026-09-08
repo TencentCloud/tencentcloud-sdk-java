@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * 需要过滤的字段。过滤条件数量限制为10。
+    * <p>需要过滤的字段。过滤条件数量限制为10。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 字段的过滤值。
+    * <p>字段的过滤值。</p>
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 需要过滤的字段。过滤条件数量限制为10。 
-     * @return Name 需要过滤的字段。过滤条件数量限制为10。
+     * Get <p>需要过滤的字段。过滤条件数量限制为10。</p> 
+     * @return Name <p>需要过滤的字段。过滤条件数量限制为10。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 需要过滤的字段。过滤条件数量限制为10。
-     * @param Name 需要过滤的字段。过滤条件数量限制为10。
+     * Set <p>需要过滤的字段。过滤条件数量限制为10。</p>
+     * @param Name <p>需要过滤的字段。过滤条件数量限制为10。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 字段的过滤值。 
-     * @return Values 字段的过滤值。
+     * Get <p>字段的过滤值。</p> 
+     * @return Values <p>字段的过滤值。</p>
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 字段的过滤值。
-     * @param Values 字段的过滤值。
+     * Set <p>字段的过滤值。</p>
+     * @param Values <p>字段的过滤值。</p>
      */
     public void setValues(String [] Values) {
         this.Values = Values;

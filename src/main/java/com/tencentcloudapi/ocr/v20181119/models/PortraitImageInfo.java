@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PortraitImageInfo extends AbstractModel {
 
     /**
-    * 头像
+    * <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortraitImage")
@@ -32,7 +32,7 @@ public class PortraitImageInfo extends AbstractModel {
     private String PortraitImage;
 
     /**
-    * 头像坐标
+    * <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageCoordinates")
@@ -40,9 +40,9 @@ public class PortraitImageInfo extends AbstractModel {
     private ImageCoordinates ImageCoordinates;
 
     /**
-     * Get 头像
+     * Get <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PortraitImage 头像
+     * @return PortraitImage <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPortraitImage() {
@@ -50,9 +50,9 @@ public class PortraitImageInfo extends AbstractModel {
     }
 
     /**
-     * Set 头像
+     * Set <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PortraitImage 头像
+     * @param PortraitImage <p>头像</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortraitImage(String PortraitImage) {
@@ -60,9 +60,9 @@ public class PortraitImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 头像坐标
+     * Get <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageCoordinates 头像坐标
+     * @return ImageCoordinates <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageCoordinates getImageCoordinates() {
@@ -70,9 +70,9 @@ public class PortraitImageInfo extends AbstractModel {
     }
 
     /**
-     * Set 头像坐标
+     * Set <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageCoordinates 头像坐标
+     * @param ImageCoordinates <p>头像坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageCoordinates(ImageCoordinates ImageCoordinates) {

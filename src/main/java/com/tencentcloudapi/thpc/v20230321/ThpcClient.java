@@ -240,6 +240,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+     * @param req DescribeClusterMonitorStatusRequest
+     * @return DescribeClusterMonitorStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterMonitorStatusResponse DescribeClusterMonitorStatus(DescribeClusterMonitorStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterMonitorStatus", DescribeClusterMonitorStatusResponse.class);
+    }
+
+    /**
      *本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
      * @param req DescribeClusterStorageOptionRequest
      * @return DescribeClusterStorageOptionResponse
@@ -409,6 +420,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+     * @param req DisableClusterMonitorRequest
+     * @return DisableClusterMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClusterMonitorResponse DisableClusterMonitor(DisableClusterMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableClusterMonitor", DisableClusterMonitorResponse.class);
+    }
+
+    /**
      *本接口 (EnableClusterDedicatedProxy) 用于开启IDC集群的专线/VPN代理。
 
 * 开启后，系统将自动创建VPC终端节点（EndPoint），实现IDC集群与云上VPC的网络互通。
@@ -421,6 +443,17 @@ public class ThpcClient extends AbstractClient{
     public EnableClusterDedicatedProxyResponse EnableClusterDedicatedProxy(EnableClusterDedicatedProxyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableClusterDedicatedProxy", EnableClusterDedicatedProxyResponse.class);
+    }
+
+    /**
+     *本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+     * @param req EnableClusterMonitorRequest
+     * @return EnableClusterMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClusterMonitorResponse EnableClusterMonitor(EnableClusterMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableClusterMonitor", EnableClusterMonitorResponse.class);
     }
 
     /**

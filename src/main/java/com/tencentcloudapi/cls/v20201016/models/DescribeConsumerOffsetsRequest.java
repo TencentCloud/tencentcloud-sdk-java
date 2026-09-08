@@ -59,6 +59,13 @@ public class DescribeConsumerOffsetsRequest extends AbstractModel {
     private String PartitionId;
 
     /**
+    * 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+    */
+    @SerializedName("OffsetType")
+    @Expose
+    private Long OffsetType;
+
+    /**
      * Get 日志主题对应的消费组标识 
      * @return ConsumerGroup 日志主题对应的消费组标识
      */
@@ -138,6 +145,22 @@ public class DescribeConsumerOffsetsRequest extends AbstractModel {
         this.PartitionId = PartitionId;
     }
 
+    /**
+     * Get 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset 
+     * @return OffsetType 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+     */
+    public Long getOffsetType() {
+        return this.OffsetType;
+    }
+
+    /**
+     * Set 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+     * @param OffsetType 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+     */
+    public void setOffsetType(Long OffsetType) {
+        this.OffsetType = OffsetType;
+    }
+
     public DescribeConsumerOffsetsRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeConsumerOffsetsRequest extends AbstractModel {
         if (source.PartitionId != null) {
             this.PartitionId = new String(source.PartitionId);
         }
+        if (source.OffsetType != null) {
+            this.OffsetType = new Long(source.OffsetType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeConsumerOffsetsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "PartitionId", this.PartitionId);
+        this.setParamSimple(map, prefix + "OffsetType", this.OffsetType);
 
     }
 }

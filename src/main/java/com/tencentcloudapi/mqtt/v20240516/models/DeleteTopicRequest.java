@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteTopicRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题
+    * <p>主题</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题 
-     * @return Topic 主题
+     * Get <p>主题</p> 
+     * @return Topic <p>主题</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题
-     * @param Topic 主题
+     * Set <p>主题</p>
+     * @param Topic <p>主题</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

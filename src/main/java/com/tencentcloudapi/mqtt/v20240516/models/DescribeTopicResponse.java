@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeTopicResponse extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * <p>主题名称</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 创建时间，秒为单位
+    * <p>创建时间，秒为单位</p>
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return Topic 主题名称
+     * Get <p>主题名称</p> 
+     * @return Topic <p>主题名称</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名称
-     * @param Topic 主题名称
+     * Set <p>主题名称</p>
+     * @param Topic <p>主题名称</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get <p>创建时间，秒为单位</p> 
+     * @return CreatedTime <p>创建时间，秒为单位</p>
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set <p>创建时间，秒为单位</p>
+     * @param CreatedTime <p>创建时间，秒为单位</p>
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;

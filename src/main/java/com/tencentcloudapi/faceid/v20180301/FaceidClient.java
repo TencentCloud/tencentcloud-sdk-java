@@ -325,17 +325,6 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人（该接口已停止接入，新客户请使用<a href="https://cloud.tencent.com/document/product/1007/102203">照片人脸核身（V2.0）</a>接口）。
-     * @param req ImageRecognitionRequest
-     * @return ImageRecognitionResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImageRecognitionResponse ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImageRecognition", ImageRecognitionResponse.class);
-    }
-
-    /**
      *传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人。
      * @param req ImageRecognitionV2Request
      * @return ImageRecognitionV2Response

@@ -24,171 +24,161 @@ import java.util.HashMap;
 public class ModifyJWKSAuthenticatorRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）
+    * <p>JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）</p>
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-    * 认证器状态：open-启用（默认）；close-关闭
+    * <p>认证器状态：open-启用（默认）；close-关闭</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。
+    * <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。</p>
     */
     @SerializedName("RefreshInterval")
     @Expose
     private Long RefreshInterval;
 
     /**
-    * JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）
+    * <p>JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段， 
-password-对应 MQTT CONNECT Packet 中 password 字段。默认username
+    * <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。默认username</p>
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 说明，不能超过 128 个字符
+    * <p>说明，不能超过 128 个字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写） 
-     * @return Endpoint JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）
+     * Get <p>JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）</p> 
+     * @return Endpoint <p>JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）</p>
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）
-     * @param Endpoint JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）
+     * Set <p>JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）</p>
+     * @param Endpoint <p>JWKS服务器地址，（Text字段和Endpoint字段必须选择一个填写）</p>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
     }
 
     /**
-     * Get 认证器状态：open-启用（默认）；close-关闭 
-     * @return Status 认证器状态：open-启用（默认）；close-关闭
+     * Get <p>认证器状态：open-启用（默认）；close-关闭</p> 
+     * @return Status <p>认证器状态：open-启用（默认）；close-关闭</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 认证器状态：open-启用（默认）；close-关闭
-     * @param Status 认证器状态：open-启用（默认）；close-关闭
+     * Set <p>认证器状态：open-启用（默认）；close-关闭</p>
+     * @param Status <p>认证器状态：open-启用（默认）；close-关闭</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。 
-     * @return RefreshInterval 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。
+     * Get <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。</p> 
+     * @return RefreshInterval <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。</p>
      */
     public Long getRefreshInterval() {
         return this.RefreshInterval;
     }
 
     /**
-     * Set 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。
-     * @param RefreshInterval 认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。
+     * Set <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。</p>
+     * @param RefreshInterval <p>认证文本刷新间隔时间，单位：秒，最小值60，默认值60，最大值1000。填写认证服务器地址时生效。</p>
      */
     public void setRefreshInterval(Long RefreshInterval) {
         this.RefreshInterval = RefreshInterval;
     }
 
     /**
-     * Get JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写） 
-     * @return Text JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）
+     * Get <p>JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）</p> 
+     * @return Text <p>JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）
-     * @param Text JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）
+     * Set <p>JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）</p>
+     * @param Text <p>JWKS文本，认证服务器地址为空时生效。（Text字段和Endpoint字段必须选择一个填写）</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段， 
-password-对应 MQTT CONNECT Packet 中 password 字段。默认username 
-     * @return From 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段， 
-password-对应 MQTT CONNECT Packet 中 password 字段。默认username
+     * Get <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。默认username</p> 
+     * @return From <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。默认username</p>
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段， 
-password-对应 MQTT CONNECT Packet 中 password 字段。默认username
-     * @param From 认证字段；
-username-对应 MQTT CONNECT Packet 中 username 字段， 
-password-对应 MQTT CONNECT Packet 中 password 字段。默认username
+     * Set <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。默认username</p>
+     * @param From <p>认证字段；<br>username-对应 MQTT CONNECT Packet 中 username 字段，<br>password-对应 MQTT CONNECT Packet 中 password 字段。默认username</p>
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 说明，不能超过 128 个字符 
-     * @return Remark 说明，不能超过 128 个字符
+     * Get <p>说明，不能超过 128 个字符</p> 
+     * @return Remark <p>说明，不能超过 128 个字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 说明，不能超过 128 个字符
-     * @param Remark 说明，不能超过 128 个字符
+     * Set <p>说明，不能超过 128 个字符</p>
+     * @param Remark <p>说明，不能超过 128 个字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

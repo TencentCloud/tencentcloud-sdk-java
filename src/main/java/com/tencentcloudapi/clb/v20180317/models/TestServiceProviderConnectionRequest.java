@@ -115,6 +115,13 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
     private String Capability;
 
     /**
+    * <p>端点路径</p>
+    */
+    @SerializedName("EndpointPath")
+    @Expose
+    private String EndpointPath;
+
+    /**
      * Get <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p> 
      * @return Models <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p>
      */
@@ -322,6 +329,22 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.Capability = Capability;
     }
 
+    /**
+     * Get <p>端点路径</p> 
+     * @return EndpointPath <p>端点路径</p>
+     */
+    public String getEndpointPath() {
+        return this.EndpointPath;
+    }
+
+    /**
+     * Set <p>端点路径</p>
+     * @param EndpointPath <p>端点路径</p>
+     */
+    public void setEndpointPath(String EndpointPath) {
+        this.EndpointPath = EndpointPath;
+    }
+
     public TestServiceProviderConnectionRequest() {
     }
 
@@ -372,6 +395,9 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         if (source.Capability != null) {
             this.Capability = new String(source.Capability);
         }
+        if (source.EndpointPath != null) {
+            this.EndpointPath = new String(source.EndpointPath);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
         this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
         this.setParamSimple(map, prefix + "Capability", this.Capability);
+        this.setParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
 
     }
 }

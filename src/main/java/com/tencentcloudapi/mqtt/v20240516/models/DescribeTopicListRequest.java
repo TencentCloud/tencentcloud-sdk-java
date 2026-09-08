@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class DescribeTopicListRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 查询条件列表:
-支持TopicName模糊查询
+    * <p>查询条件列表:<br>支持TopicName模糊查询</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询起始位置，默认0。
+    * <p>查询起始位置，默认0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制数量，默认20，最大20
+    * <p>查询结果限制数量，默认20，最大20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 查询条件列表:
-支持TopicName模糊查询 
-     * @return Filters 查询条件列表:
-支持TopicName模糊查询
+     * Get <p>查询条件列表:<br>支持TopicName模糊查询</p> 
+     * @return Filters <p>查询条件列表:<br>支持TopicName模糊查询</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件列表:
-支持TopicName模糊查询
-     * @param Filters 查询条件列表:
-支持TopicName模糊查询
+     * Set <p>查询条件列表:<br>支持TopicName模糊查询</p>
+     * @param Filters <p>查询条件列表:<br>支持TopicName模糊查询</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询起始位置，默认0。 
-     * @return Offset 查询起始位置，默认0。
+     * Get <p>查询起始位置，默认0。</p> 
+     * @return Offset <p>查询起始位置，默认0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置，默认0。
-     * @param Offset 查询起始位置，默认0。
+     * Set <p>查询起始位置，默认0。</p>
+     * @param Offset <p>查询起始位置，默认0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制数量，默认20，最大20 
-     * @return Limit 查询结果限制数量，默认20，最大20
+     * Get <p>查询结果限制数量，默认20，最大20</p> 
+     * @return Limit <p>查询结果限制数量，默认20，最大20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量，默认20，最大20
-     * @param Limit 查询结果限制数量，默认20，最大20
+     * Set <p>查询结果限制数量，默认20，最大20</p>
+     * @param Limit <p>查询结果限制数量，默认20，最大20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

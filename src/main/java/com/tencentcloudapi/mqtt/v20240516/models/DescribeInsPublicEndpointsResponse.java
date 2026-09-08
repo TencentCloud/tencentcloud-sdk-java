@@ -24,40 +24,35 @@ import java.util.HashMap;
 public class DescribeInsPublicEndpointsResponse extends AbstractModel {
 
     /**
-    * 接入点
+    * <p>接入点</p>
     */
     @SerializedName("Endpoints")
     @Expose
     private MQTTEndpointItem [] Endpoints;
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 带宽，单位Mbps
+    * <p>带宽，单位Mbps</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 公网访问规则
+    * <p>公网访问规则</p>
     */
     @SerializedName("Rules")
     @Expose
     private PublicAccessRule [] Rules;
 
     /**
-    * 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
+    * <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
     */
     @SerializedName("Status")
     @Expose
@@ -71,100 +66,80 @@ public class DescribeInsPublicEndpointsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 接入点 
-     * @return Endpoints 接入点
+     * Get <p>接入点</p> 
+     * @return Endpoints <p>接入点</p>
      */
     public MQTTEndpointItem [] getEndpoints() {
         return this.Endpoints;
     }
 
     /**
-     * Set 接入点
-     * @param Endpoints 接入点
+     * Set <p>接入点</p>
+     * @param Endpoints <p>接入点</p>
      */
     public void setEndpoints(MQTTEndpointItem [] Endpoints) {
         this.Endpoints = Endpoints;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 带宽，单位Mbps 
-     * @return Bandwidth 带宽，单位Mbps
+     * Get <p>带宽，单位Mbps</p> 
+     * @return Bandwidth <p>带宽，单位Mbps</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽，单位Mbps
-     * @param Bandwidth 带宽，单位Mbps
+     * Set <p>带宽，单位Mbps</p>
+     * @param Bandwidth <p>带宽，单位Mbps</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 公网访问规则 
-     * @return Rules 公网访问规则
+     * Get <p>公网访问规则</p> 
+     * @return Rules <p>公网访问规则</p>
      */
     public PublicAccessRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 公网访问规则
-     * @param Rules 公网访问规则
+     * Set <p>公网访问规则</p>
+     * @param Rules <p>公网访问规则</p>
      */
     public void setRules(PublicAccessRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭 
-     * @return Status 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
+     * Get <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p> 
+     * @return Status <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
-     * @param Status 公网状态：
-    NORMAL-正常
-    CLOSING-关闭中
-    MODIFYING-修改中
-    CREATING-开启中
-    CLOSE-关闭
+     * Set <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
+     * @param Status <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

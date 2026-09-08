@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeListenersResponse extends AbstractModel {
 
     /**
-    * 符合条件的监听器实例。
+    * <p>符合条件的监听器实例。</p>
     */
     @SerializedName("ListenerSet")
     @Expose
     private ListenerSet [] ListenerSet;
 
     /**
-    * 符合条件的实例个数。
+    * <p>符合条件的实例个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeListenersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的监听器实例。 
-     * @return ListenerSet 符合条件的监听器实例。
+     * Get <p>符合条件的监听器实例。</p> 
+     * @return ListenerSet <p>符合条件的监听器实例。</p>
      */
     public ListenerSet [] getListenerSet() {
         return this.ListenerSet;
     }
 
     /**
-     * Set 符合条件的监听器实例。
-     * @param ListenerSet 符合条件的监听器实例。
+     * Set <p>符合条件的监听器实例。</p>
+     * @param ListenerSet <p>符合条件的监听器实例。</p>
      */
     public void setListenerSet(ListenerSet [] ListenerSet) {
         this.ListenerSet = ListenerSet;
     }
 
     /**
-     * Get 符合条件的实例个数。 
-     * @return TotalCount 符合条件的实例个数。
+     * Get <p>符合条件的实例个数。</p> 
+     * @return TotalCount <p>符合条件的实例个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例个数。
-     * @param TotalCount 符合条件的实例个数。
+     * Set <p>符合条件的实例个数。</p>
+     * @param TotalCount <p>符合条件的实例个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

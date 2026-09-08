@@ -24,230 +24,233 @@ import java.util.HashMap;
 public class ModifyConsumerRequest extends AbstractModel {
 
     /**
-    * 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+    * <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 投递任务是否生效，默认不生效
+    * <p>投递任务是否生效，默认不生效</p>
     */
     @SerializedName("Effective")
     @Expose
     private Boolean Effective;
 
     /**
-    * 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
+    * <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
     */
     @SerializedName("NeedContent")
     @Expose
     private Boolean NeedContent;
 
     /**
-    * 如果需要投递元数据信息，元数据信息的描述
+    * <p>如果需要投递元数据信息，元数据信息的描述</p>
     */
     @SerializedName("Content")
     @Expose
     private ConsumerContent Content;
 
     /**
-    * CKafka的描述
+    * <p>CKafka的描述</p>
     */
     @SerializedName("Ckafka")
     @Expose
     private Ckafka Ckafka;
 
     /**
-    * 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+    * <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
     */
     @SerializedName("Compression")
     @Expose
     private Long Compression;
 
     /**
-    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    * <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
     */
     @SerializedName("RoleArn")
     @Expose
     private String RoleArn;
 
     /**
-    * 外部ID
+    * <p>外部ID</p>
     */
     @SerializedName("ExternalId")
     @Expose
     private String ExternalId;
 
     /**
-    * 高级配置
+    * <p>高级配置</p>
     */
     @SerializedName("AdvancedConfig")
     @Expose
     private AdvancedConsumerConfiguration AdvancedConfig;
 
     /**
-     * Get 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
-     * @return TopicId 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+    * <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul> 
+     * @return TopicId <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
-     * @param TopicId 投递任务绑定的日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * Set <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+     * @param TopicId <p>投递任务绑定的日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 投递任务是否生效，默认不生效 
-     * @return Effective 投递任务是否生效，默认不生效
+     * Get <p>投递任务是否生效，默认不生效</p> 
+     * @return Effective <p>投递任务是否生效，默认不生效</p>
      */
     public Boolean getEffective() {
         return this.Effective;
     }
 
     /**
-     * Set 投递任务是否生效，默认不生效
-     * @param Effective 投递任务是否生效，默认不生效
+     * Set <p>投递任务是否生效，默认不生效</p>
+     * @param Effective <p>投递任务是否生效，默认不生效</p>
      */
     public void setEffective(Boolean Effective) {
         this.Effective = Effective;
     }
 
     /**
-     * Get 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。 
-     * @return NeedContent 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
+     * Get <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p> 
+     * @return NeedContent <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
      */
     public Boolean getNeedContent() {
         return this.NeedContent;
     }
 
     /**
-     * Set 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
-     * @param NeedContent 是否投递日志的元数据信息，默认为 true。
-当NeedContent为true时：字段Content有效。
-当NeedContent为false时：字段Content无效。
+     * Set <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
+     * @param NeedContent <p>是否投递日志的元数据信息，默认为 true。<br>当NeedContent为true时：字段Content有效。<br>当NeedContent为false时：字段Content无效。</p>
      */
     public void setNeedContent(Boolean NeedContent) {
         this.NeedContent = NeedContent;
     }
 
     /**
-     * Get 如果需要投递元数据信息，元数据信息的描述 
-     * @return Content 如果需要投递元数据信息，元数据信息的描述
+     * Get <p>如果需要投递元数据信息，元数据信息的描述</p> 
+     * @return Content <p>如果需要投递元数据信息，元数据信息的描述</p>
      */
     public ConsumerContent getContent() {
         return this.Content;
     }
 
     /**
-     * Set 如果需要投递元数据信息，元数据信息的描述
-     * @param Content 如果需要投递元数据信息，元数据信息的描述
+     * Set <p>如果需要投递元数据信息，元数据信息的描述</p>
+     * @param Content <p>如果需要投递元数据信息，元数据信息的描述</p>
      */
     public void setContent(ConsumerContent Content) {
         this.Content = Content;
     }
 
     /**
-     * Get CKafka的描述 
-     * @return Ckafka CKafka的描述
+     * Get <p>CKafka的描述</p> 
+     * @return Ckafka <p>CKafka的描述</p>
      */
     public Ckafka getCkafka() {
         return this.Ckafka;
     }
 
     /**
-     * Set CKafka的描述
-     * @param Ckafka CKafka的描述
+     * Set <p>CKafka的描述</p>
+     * @param Ckafka <p>CKafka的描述</p>
      */
     public void setCkafka(Ckafka Ckafka) {
         this.Ckafka = Ckafka;
     }
 
     /**
-     * Get 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4] 
-     * @return Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+     * Get <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p> 
+     * @return Compression <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
-     * @param Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+     * Set <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
+     * @param Compression <p>投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]</p>
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
-     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * Get <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p> 
+     * @return RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public String getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
-     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * Set <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+     * @param RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public void setRoleArn(String RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get 外部ID 
-     * @return ExternalId 外部ID
+     * Get <p>外部ID</p> 
+     * @return ExternalId <p>外部ID</p>
      */
     public String getExternalId() {
         return this.ExternalId;
     }
 
     /**
-     * Set 外部ID
-     * @param ExternalId 外部ID
+     * Set <p>外部ID</p>
+     * @param ExternalId <p>外部ID</p>
      */
     public void setExternalId(String ExternalId) {
         this.ExternalId = ExternalId;
     }
 
     /**
-     * Get 高级配置 
-     * @return AdvancedConfig 高级配置
+     * Get <p>高级配置</p> 
+     * @return AdvancedConfig <p>高级配置</p>
      */
     public AdvancedConsumerConfiguration getAdvancedConfig() {
         return this.AdvancedConfig;
     }
 
     /**
-     * Set 高级配置
-     * @param AdvancedConfig 高级配置
+     * Set <p>高级配置</p>
+     * @param AdvancedConfig <p>高级配置</p>
      */
     public void setAdvancedConfig(AdvancedConsumerConfiguration AdvancedConfig) {
         this.AdvancedConfig = AdvancedConfig;
+    }
+
+    /**
+     * Get <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p> 
+     * @return DSLFilter <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     * @param DSLFilter <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public ModifyConsumerRequest() {
@@ -285,6 +288,9 @@ public class ModifyConsumerRequest extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new AdvancedConsumerConfiguration(source.AdvancedConfig);
         }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -301,6 +307,7 @@ public class ModifyConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

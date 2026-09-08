@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ChannelDescribeBillUsageDetailResponse extends AbstractModel {
 
     /**
-    * 返回查询记录总数
+    * <p>返回查询记录总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 消耗记录详情
+    * <p>消耗记录详情</p>
     */
     @SerializedName("Details")
     @Expose
@@ -45,32 +45,32 @@ public class ChannelDescribeBillUsageDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回查询记录总数 
-     * @return Total 返回查询记录总数
+     * Get <p>返回查询记录总数</p> 
+     * @return Total <p>返回查询记录总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 返回查询记录总数
-     * @param Total 返回查询记录总数
+     * Set <p>返回查询记录总数</p>
+     * @param Total <p>返回查询记录总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 消耗记录详情 
-     * @return Details 消耗记录详情
+     * Get <p>消耗记录详情</p> 
+     * @return Details <p>消耗记录详情</p>
      */
     public ChannelBillUsageDetail [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 消耗记录详情
-     * @param Details 消耗记录详情
+     * Set <p>消耗记录详情</p>
+     * @param Details <p>消耗记录详情</p>
      */
     public void setDetails(ChannelBillUsageDetail [] Details) {
         this.Details = Details;

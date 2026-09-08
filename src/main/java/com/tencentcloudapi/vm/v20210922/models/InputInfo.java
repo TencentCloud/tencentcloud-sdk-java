@@ -67,6 +67,13 @@ public class InputInfo extends AbstractModel {
     private String Title;
 
     /**
+    * <p>其他信息</p>
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
      * Get <p>传入的类型可选：URL，COS</p> 
      * @return Type <p>传入的类型可选：URL，COS</p>
      */
@@ -166,6 +173,22 @@ public class InputInfo extends AbstractModel {
         this.Title = Title;
     }
 
+    /**
+     * Get <p>其他信息</p> 
+     * @return Extra <p>其他信息</p>
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set <p>其他信息</p>
+     * @param Extra <p>其他信息</p>
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
     public InputInfo() {
     }
 
@@ -195,6 +218,9 @@ public class InputInfo extends AbstractModel {
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
     }
 
 
@@ -208,6 +234,7 @@ public class InputInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
         this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
 
     }
 }

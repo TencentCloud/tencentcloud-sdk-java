@@ -832,6 +832,13 @@ public class InstanceInfo extends AbstractModel {
     private String OldEsPrivateTcpUrl;
 
     /**
+    * <p>是否需要从VIP下线旧节点</p>
+    */
+    @SerializedName("NeedOfflineOldNodesNotify")
+    @Expose
+    private Boolean NeedOfflineOldNodesNotify;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceId <p>实例ID</p>
      */
@@ -2779,6 +2786,22 @@ public class InstanceInfo extends AbstractModel {
         this.OldEsPrivateTcpUrl = OldEsPrivateTcpUrl;
     }
 
+    /**
+     * Get <p>是否需要从VIP下线旧节点</p> 
+     * @return NeedOfflineOldNodesNotify <p>是否需要从VIP下线旧节点</p>
+     */
+    public Boolean getNeedOfflineOldNodesNotify() {
+        return this.NeedOfflineOldNodesNotify;
+    }
+
+    /**
+     * Set <p>是否需要从VIP下线旧节点</p>
+     * @param NeedOfflineOldNodesNotify <p>是否需要从VIP下线旧节点</p>
+     */
+    public void setNeedOfflineOldNodesNotify(Boolean NeedOfflineOldNodesNotify) {
+        this.NeedOfflineOldNodesNotify = NeedOfflineOldNodesNotify;
+    }
+
     public InstanceInfo() {
     }
 
@@ -3129,6 +3152,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.OldEsPrivateTcpUrl != null) {
             this.OldEsPrivateTcpUrl = new String(source.OldEsPrivateTcpUrl);
         }
+        if (source.NeedOfflineOldNodesNotify != null) {
+            this.NeedOfflineOldNodesNotify = new Boolean(source.NeedOfflineOldNodesNotify);
+        }
     }
 
 
@@ -3243,6 +3269,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
         this.setParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
         this.setParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
+        this.setParamSimple(map, prefix + "NeedOfflineOldNodesNotify", this.NeedOfflineOldNodesNotify);
 
     }
 }

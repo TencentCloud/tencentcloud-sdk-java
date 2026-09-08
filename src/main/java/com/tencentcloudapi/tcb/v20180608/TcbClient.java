@@ -310,18 +310,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *创建虚拟服务器
-创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
-     * @param req CreateVmInstanceRequest
-     * @return CreateVmInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateVmInstanceResponse CreateVmInstance(CreateVmInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateVmInstance", CreateVmInstanceResponse.class);
-    }
-
-    /**
      *删除 AI 模型配置分组，支持批量删除。内置分组无法删除。分组删除后，该分组下的所有模型配置将同步移除，针对该分组模型的请求将会失败，请在删除前确认业务侧已停止对该分组的调用。
 
 注意：
@@ -430,17 +418,6 @@ public class TcbClient extends AbstractClient{
     public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUsers", DeleteUsersResponse.class);
-    }
-
-    /**
-     *销毁云服务器实例
-     * @param req DeleteVmInstanceRequest
-     * @return DeleteVmInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteVmInstanceResponse DeleteVmInstance(DeleteVmInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteVmInstance", DeleteVmInstanceResponse.class);
     }
 
     /**
@@ -732,6 +709,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *本接口DescribeHTTPServiceCachePurgeTask为只读查询，不修改任何缓存或环境资源，仅返回指定环境下域名缓存刷新任务的状态与时间等信息。通过PurgeHTTPServiceCache清除域名缓存后，可通过此接口传入任务id可查询清除任务状态、时间、缓存类型等信息。也可通过此接口查询历史任务记录。
+     * @param req DescribeHTTPServiceCachePurgeTaskRequest
+     * @return DescribeHTTPServiceCachePurgeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHTTPServiceCachePurgeTaskResponse DescribeHTTPServiceCachePurgeTask(DescribeHTTPServiceCachePurgeTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHTTPServiceCachePurgeTask", DescribeHTTPServiceCachePurgeTaskResponse.class);
+    }
+
+    /**
      *本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。HTTP访问服务提供了默认域名，通过本接口可直接获取默认域名。前置需已开通 HTTP 访问服务；调用CreateHTTPServiceRoute或者ModifyHTTPServiceRoute后可使用本接口查询创建或者修改结果
      * @param req DescribeHTTPServiceRouteRequest
      * @return DescribeHTTPServiceRouteResponse
@@ -899,28 +887,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询环境下的云服务器列表
-     * @param req DescribeVmInstancesRequest
-     * @return DescribeVmInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVmInstancesResponse DescribeVmInstances(DescribeVmInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeVmInstances", DescribeVmInstancesResponse.class);
-    }
-
-    /**
-     *云服务器规格list
-     * @param req DescribeVmSpecRequest
-     * @return DescribeVmSpecResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVmSpecResponse DescribeVmSpec(DescribeVmSpecRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeVmSpec", DescribeVmSpecResponse.class);
-    }
-
-    /**
      *本接口用于销毁云开发环境。
 云开发环境遵循腾讯云包年包月预付费产品生命周期，因此环境销毁需要分两步：
 1. 资源退费。此时会根据当前环境剩余有效期，自动退还相关费用(代金券不退)。退款后，环境进入隔离期。
@@ -984,17 +950,6 @@ public class TcbClient extends AbstractClient{
     public GetProvidersResponse GetProviders(GetProvidersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetProviders", GetProvidersResponse.class);
-    }
-
-    /**
-     *查询服务器价格
-     * @param req InquireVmPriceRequest
-     * @return InquireVmPriceResponse
-     * @throws TencentCloudSDKException
-     */
-    public InquireVmPriceResponse InquireVmPrice(InquireVmPriceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "InquireVmPrice", InquireVmPriceResponse.class);
     }
 
     /**
@@ -1197,6 +1152,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     public PreviewPGUserMigrationsResponse PreviewPGUserMigrations(PreviewPGUserMigrationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PreviewPGUserMigrations", PreviewPGUserMigrationsResponse.class);
+    }
+
+    /**
+     *本接口PurgeHTTPServiceCache为异步操作，清除指定环境下 HTTPService 域名的缓存，操作不可逆，仅影响指定 Domain 的缓存命中，不影响源站数据。用于清除HTTP访问服务域名缓存。支持刷新CDN和EO两种类型。清除缓存后会生成任务id，通过DescribeHTTPServiceCachePurgeTask传入任务id可查询任务进度和详细信息。
+     * @param req PurgeHTTPServiceCacheRequest
+     * @return PurgeHTTPServiceCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurgeHTTPServiceCacheResponse PurgeHTTPServiceCache(PurgeHTTPServiceCacheRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PurgeHTTPServiceCache", PurgeHTTPServiceCacheResponse.class);
     }
 
     /**

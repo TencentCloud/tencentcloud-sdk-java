@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateUserSigResponse extends AbstractModel {
 
     /**
-    * 签名结果
+    * <p>签名结果</p>
     */
     @SerializedName("UserSig")
     @Expose
@@ -38,16 +38,16 @@ public class CreateUserSigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签名结果 
-     * @return UserSig 签名结果
+     * Get <p>签名结果</p> 
+     * @return UserSig <p>签名结果</p>
      */
     public String getUserSig() {
         return this.UserSig;
     }
 
     /**
-     * Set 签名结果
-     * @param UserSig 签名结果
+     * Set <p>签名结果</p>
+     * @param UserSig <p>签名结果</p>
      */
     public void setUserSig(String UserSig) {
         this.UserSig = UserSig;

@@ -178,6 +178,13 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private VideoSegment [] VideoSegments;
 
     /**
+    * <p>命中信息</p>
+    */
+    @SerializedName("HitSnippetInfos")
+    @Expose
+    private HitSnippetInfo [] HitSnippetInfos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -537,6 +544,22 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>命中信息</p> 
+     * @return HitSnippetInfos <p>命中信息</p>
+     */
+    public HitSnippetInfo [] getHitSnippetInfos() {
+        return this.HitSnippetInfos;
+    }
+
+    /**
+     * Set <p>命中信息</p>
+     * @param HitSnippetInfos <p>命中信息</p>
+     */
+    public void setHitSnippetInfos(HitSnippetInfo [] HitSnippetInfos) {
+        this.HitSnippetInfos = HitSnippetInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -641,6 +664,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
                 this.VideoSegments[i] = new VideoSegment(source.VideoSegments[i]);
             }
         }
+        if (source.HitSnippetInfos != null) {
+            this.HitSnippetInfos = new HitSnippetInfo[source.HitSnippetInfos.length];
+            for (int i = 0; i < source.HitSnippetInfos.length; i++) {
+                this.HitSnippetInfos[i] = new HitSnippetInfo(source.HitSnippetInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -673,6 +702,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Asrs.", this.Asrs);
         this.setParamObj(map, prefix + "SegmentCosUrlList.", this.SegmentCosUrlList);
         this.setParamArrayObj(map, prefix + "VideoSegments.", this.VideoSegments);
+        this.setParamArrayObj(map, prefix + "HitSnippetInfos.", this.HitSnippetInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

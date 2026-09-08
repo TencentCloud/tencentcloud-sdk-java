@@ -494,6 +494,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建工作区。
+     * @param req CreateResourceGraphRequest
+     * @return CreateResourceGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceGraphResponse CreateResourceGraph(CreateResourceGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateResourceGraph", CreateResourceGraphResponse.class);
+    }
+
+    /**
+     *接入指定云产品。EBPF 类产品需提供 EBPFCollectRule，API 类产品仅需 Product。
+     * @param req CreateResourceGraphProductIngestTaskRequest
+     * @return CreateResourceGraphProductIngestTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceGraphProductIngestTaskResponse CreateResourceGraphProductIngestTask(CreateResourceGraphProductIngestTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateResourceGraphProductIngestTask", CreateResourceGraphProductIngestTaskResponse.class);
+    }
+
+    /**
      *本接口用于创建aws导入任务
      * @param req CreateS3RechargeRequest
      * @return CreateS3RechargeResponse
@@ -931,6 +953,28 @@ public class ClsClient extends AbstractClient{
     public DeleteRemoteWriteTaskResponse DeleteRemoteWriteTask(DeleteRemoteWriteTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRemoteWriteTask", DeleteRemoteWriteTaskResponse.class);
+    }
+
+    /**
+     *删除工作区。删除前需确认是否级联清理已接入的云产品（待产品确认）。
+     * @param req DeleteResourceGraphRequest
+     * @return DeleteResourceGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceGraphResponse DeleteResourceGraph(DeleteResourceGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteResourceGraph", DeleteResourceGraphResponse.class);
+    }
+
+    /**
+     *删除产品接入任务
+     * @param req DeleteResourceGraphProductIngestTaskRequest
+     * @return DeleteResourceGraphProductIngestTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceGraphProductIngestTaskResponse DeleteResourceGraphProductIngestTask(DeleteResourceGraphProductIngestTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteResourceGraphProductIngestTask", DeleteResourceGraphProductIngestTaskResponse.class);
     }
 
     /**
@@ -1584,6 +1628,116 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+     * @param req DescribeResourceGraphDetailRequest
+     * @return DescribeResourceGraphDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphDetailResponse DescribeResourceGraphDetail(DescribeResourceGraphDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphDetail", DescribeResourceGraphDetailResponse.class);
+    }
+
+    /**
+     *分页查询资源图谱实体列表。Filters 支持  Product / EntityClassName / Keyword 过滤；TagFilter 由于结构特殊（key 单选 + values 多选）独立成字段。
+     * @param req DescribeResourceGraphEntitiesRequest
+     * @return DescribeResourceGraphEntitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphEntitiesResponse DescribeResourceGraphEntities(DescribeResourceGraphEntitiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphEntities", DescribeResourceGraphEntitiesResponse.class);
+    }
+
+    /**
+     *以指定实体为中心，按 Direction（上/下游/全部）+ Hop（跳数）查询依赖拓扑，同时返回拓扑图（节点+边）、4 张卡片汇总、列表区数据、产品 tag 汇总。
+     * @param req DescribeResourceGraphEntityDependencyRequest
+     * @return DescribeResourceGraphEntityDependencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphEntityDependencyResponse DescribeResourceGraphEntityDependency(DescribeResourceGraphEntityDependencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphEntityDependency", DescribeResourceGraphEntityDependencyResponse.class);
+    }
+
+    /**
+     *查询单个实体的完整详情，包含基本信息、动态属性、标签、关联主题。
+     * @param req DescribeResourceGraphEntityDetailRequest
+     * @return DescribeResourceGraphEntityDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphEntityDetailResponse DescribeResourceGraphEntityDetail(DescribeResourceGraphEntityDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphEntityDetail", DescribeResourceGraphEntityDetailResponse.class);
+    }
+
+    /**
+     *查询资源图谱失败详情
+     * @param req DescribeResourceGraphFailureDetailRequest
+     * @return DescribeResourceGraphFailureDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphFailureDetailResponse DescribeResourceGraphFailureDetail(DescribeResourceGraphFailureDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphFailureDetail", DescribeResourceGraphFailureDetailResponse.class);
+    }
+
+    /**
+     *查询资源图谱失败详情
+     * @param req DescribeResourceGraphIngestTaskFailureDetailRequest
+     * @return DescribeResourceGraphIngestTaskFailureDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphIngestTaskFailureDetailResponse DescribeResourceGraphIngestTaskFailureDetail(DescribeResourceGraphIngestTaskFailureDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphIngestTaskFailureDetail", DescribeResourceGraphIngestTaskFailureDetailResponse.class);
+    }
+
+    /**
+     *查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+     * @param req DescribeResourceGraphProductIngestTaskDetailRequest
+     * @return DescribeResourceGraphProductIngestTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphProductIngestTaskDetailResponse DescribeResourceGraphProductIngestTaskDetail(DescribeResourceGraphProductIngestTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphProductIngestTaskDetail", DescribeResourceGraphProductIngestTaskDetailResponse.class);
+    }
+
+    /**
+     *分页查询云产品接入列表，返回顶部 4 张卡片汇总 + 列表行。支持按 Status / CollectMethod / Product / Name 过滤。
+     * @param req DescribeResourceGraphProductIngestTaskListRequest
+     * @return DescribeResourceGraphProductIngestTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphProductIngestTaskListResponse DescribeResourceGraphProductIngestTaskList(DescribeResourceGraphProductIngestTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphProductIngestTaskList", DescribeResourceGraphProductIngestTaskListResponse.class);
+    }
+
+    /**
+     *资源图谱tke集群接入状态
+     * @param req DescribeResourceGraphTkeClusterStatusRequest
+     * @return DescribeResourceGraphTkeClusterStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphTkeClusterStatusResponse DescribeResourceGraphTkeClusterStatus(DescribeResourceGraphTkeClusterStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphTkeClusterStatus", DescribeResourceGraphTkeClusterStatusResponse.class);
+    }
+
+    /**
+     *分页查询工作区列表，支持按 WorkAreaId / Name / Region 过滤。
+     * @param req DescribeResourceGraphsRequest
+     * @return DescribeResourceGraphsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGraphsResponse DescribeResourceGraphs(DescribeResourceGraphsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGraphs", DescribeResourceGraphsResponse.class);
+    }
+
+    /**
      *本接口用于获取cos导入配置
      * @param req DescribeS3RechargesRequest
      * @return DescribeS3RechargesResponse
@@ -2114,6 +2268,39 @@ API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
     }
 
     /**
+     *编辑工作区基本信息。支持改名（仍需保持租户内唯一）和修改描述，主题地域 Region 不可修改。
+     * @param req ModifyResourceGraphRequest
+     * @return ModifyResourceGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceGraphResponse ModifyResourceGraph(ModifyResourceGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceGraph", ModifyResourceGraphResponse.class);
+    }
+
+    /**
+     *修改资源图谱实体与日志主题关系
+     * @param req ModifyResourceGraphEntityTopicsRelationRequest
+     * @return ModifyResourceGraphEntityTopicsRelationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceGraphEntityTopicsRelationResponse ModifyResourceGraphEntityTopicsRelation(ModifyResourceGraphEntityTopicsRelationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceGraphEntityTopicsRelation", ModifyResourceGraphEntityTopicsRelationResponse.class);
+    }
+
+    /**
+     *编辑已接入云产品的实例选择、eBPF 规则、日志主题配置。
+     * @param req ModifyResourceGraphProductIngestTaskRequest
+     * @return ModifyResourceGraphProductIngestTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceGraphProductIngestTaskResponse ModifyResourceGraphProductIngestTask(ModifyResourceGraphProductIngestTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceGraphProductIngestTask", ModifyResourceGraphProductIngestTaskResponse.class);
+    }
+
+    /**
      *本接口用于修改aws导入任务
      * @param req ModifyS3RechargeRequest
      * @return ModifyS3RechargeResponse
@@ -2256,6 +2443,28 @@ API 中 Region 填写任意一个地域均可开通所有地域的 CLS，建议�
     public QueryRangeMetricResponse QueryRangeMetric(QueryRangeMetricRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryRangeMetric", QueryRangeMetricResponse.class);
+    }
+
+    /**
+     *重试资源图谱
+     * @param req RetryResourceGraphRequest
+     * @return RetryResourceGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryResourceGraphResponse RetryResourceGraph(RetryResourceGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RetryResourceGraph", RetryResourceGraphResponse.class);
+    }
+
+    /**
+     *重试初始化资源图谱工作区
+     * @param req RetryResourceGraphProductIngestTaskRequest
+     * @return RetryResourceGraphProductIngestTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryResourceGraphProductIngestTaskResponse RetryResourceGraphProductIngestTask(RetryResourceGraphProductIngestTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RetryResourceGraphProductIngestTask", RetryResourceGraphProductIngestTaskResponse.class);
     }
 
     /**

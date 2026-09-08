@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DatabasePrivilege extends AbstractModel {
 
     /**
-    * 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+    * <p>数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Object")
@@ -32,7 +32,7 @@ public class DatabasePrivilege extends AbstractModel {
     private DatabaseObject Object;
 
     /**
-    * 指定账号对数据库对象拥有的权限列表
+    * <p>指定账号对数据库对象拥有的权限列表，或者角色权限修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivilegeSet")
@@ -40,9 +40,9 @@ public class DatabasePrivilege extends AbstractModel {
     private String [] PrivilegeSet;
 
     /**
-     * Get 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * Get <p>数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Object 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * @return Object <p>数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseObject getObject() {
@@ -50,9 +50,9 @@ public class DatabasePrivilege extends AbstractModel {
     }
 
     /**
-     * Set 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * Set <p>数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Object 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * @param Object <p>数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObject(DatabaseObject Object) {
@@ -60,9 +60,9 @@ public class DatabasePrivilege extends AbstractModel {
     }
 
     /**
-     * Get 指定账号对数据库对象拥有的权限列表
+     * Get <p>指定账号对数据库对象拥有的权限列表，或者角色权限修改</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrivilegeSet 指定账号对数据库对象拥有的权限列表
+     * @return PrivilegeSet <p>指定账号对数据库对象拥有的权限列表，或者角色权限修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivilegeSet() {
@@ -70,9 +70,9 @@ public class DatabasePrivilege extends AbstractModel {
     }
 
     /**
-     * Set 指定账号对数据库对象拥有的权限列表
+     * Set <p>指定账号对数据库对象拥有的权限列表，或者角色权限修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrivilegeSet 指定账号对数据库对象拥有的权限列表
+     * @param PrivilegeSet <p>指定账号对数据库对象拥有的权限列表，或者角色权限修改</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivilegeSet(String [] PrivilegeSet) {

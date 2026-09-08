@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ConsumerInfo extends AbstractModel {
 
     /**
-    * 投递规则ID
+    * <p>投递规则ID</p>
     */
     @SerializedName("ConsumerId")
     @Expose
     private String ConsumerId;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 投递任务是否生效
+    * <p>投递任务是否生效</p>
     */
     @SerializedName("Effective")
     @Expose
     private Boolean Effective;
 
     /**
-    * CKafka的描述
+    * <p>CKafka的描述</p>
     */
     @SerializedName("Ckafka")
     @Expose
     private Ckafka Ckafka;
 
     /**
-    * 是否投递日志的元数据信息
+    * <p>是否投递日志的元数据信息</p>
     */
     @SerializedName("NeedContent")
     @Expose
     private Boolean NeedContent;
 
     /**
-    * 如果需要投递元数据信息，元数据信息的描述
+    * <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
@@ -67,7 +67,7 @@ public class ConsumerInfo extends AbstractModel {
     private ConsumerContent Content;
 
     /**
-    * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+    * <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compression")
@@ -75,7 +75,7 @@ public class ConsumerInfo extends AbstractModel {
     private Long Compression;
 
     /**
-    * 投递任务创建毫秒时间戳
+    * <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -83,7 +83,7 @@ public class ConsumerInfo extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+    * <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleArn")
@@ -91,7 +91,7 @@ public class ConsumerInfo extends AbstractModel {
     private String RoleArn;
 
     /**
-    * 外部ID
+    * <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalId")
@@ -99,7 +99,7 @@ public class ConsumerInfo extends AbstractModel {
     private String ExternalId;
 
     /**
-    * 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+    * <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
@@ -107,96 +107,103 @@ public class ConsumerInfo extends AbstractModel {
     private Long TaskStatus;
 
     /**
-    * 高级配置
+    * <p>高级配置</p>
     */
     @SerializedName("AdvancedConfig")
     @Expose
     private AdvancedConsumerConfiguration AdvancedConfig;
 
     /**
-     * Get 投递规则ID 
-     * @return ConsumerId 投递规则ID
+    * <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>投递规则ID</p> 
+     * @return ConsumerId <p>投递规则ID</p>
      */
     public String getConsumerId() {
         return this.ConsumerId;
     }
 
     /**
-     * Set 投递规则ID
-     * @param ConsumerId 投递规则ID
+     * Set <p>投递规则ID</p>
+     * @param ConsumerId <p>投递规则ID</p>
      */
     public void setConsumerId(String ConsumerId) {
         this.ConsumerId = ConsumerId;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 投递任务是否生效 
-     * @return Effective 投递任务是否生效
+     * Get <p>投递任务是否生效</p> 
+     * @return Effective <p>投递任务是否生效</p>
      */
     public Boolean getEffective() {
         return this.Effective;
     }
 
     /**
-     * Set 投递任务是否生效
-     * @param Effective 投递任务是否生效
+     * Set <p>投递任务是否生效</p>
+     * @param Effective <p>投递任务是否生效</p>
      */
     public void setEffective(Boolean Effective) {
         this.Effective = Effective;
     }
 
     /**
-     * Get CKafka的描述 
-     * @return Ckafka CKafka的描述
+     * Get <p>CKafka的描述</p> 
+     * @return Ckafka <p>CKafka的描述</p>
      */
     public Ckafka getCkafka() {
         return this.Ckafka;
     }
 
     /**
-     * Set CKafka的描述
-     * @param Ckafka CKafka的描述
+     * Set <p>CKafka的描述</p>
+     * @param Ckafka <p>CKafka的描述</p>
      */
     public void setCkafka(Ckafka Ckafka) {
         this.Ckafka = Ckafka;
     }
 
     /**
-     * Get 是否投递日志的元数据信息 
-     * @return NeedContent 是否投递日志的元数据信息
+     * Get <p>是否投递日志的元数据信息</p> 
+     * @return NeedContent <p>是否投递日志的元数据信息</p>
      */
     public Boolean getNeedContent() {
         return this.NeedContent;
     }
 
     /**
-     * Set 是否投递日志的元数据信息
-     * @param NeedContent 是否投递日志的元数据信息
+     * Set <p>是否投递日志的元数据信息</p>
+     * @param NeedContent <p>是否投递日志的元数据信息</p>
      */
     public void setNeedContent(Boolean NeedContent) {
         this.NeedContent = NeedContent;
     }
 
     /**
-     * Get 如果需要投递元数据信息，元数据信息的描述
+     * Get <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content 如果需要投递元数据信息，元数据信息的描述
+     * @return Content <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerContent getContent() {
@@ -204,9 +211,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Set 如果需要投递元数据信息，元数据信息的描述
+     * Set <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content 如果需要投递元数据信息，元数据信息的描述
+     * @param Content <p>如果需要投递元数据信息，元数据信息的描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(ConsumerContent Content) {
@@ -214,9 +221,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * Get <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @return Compression <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompression() {
@@ -224,9 +231,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * Set <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @param Compression <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompression(Long Compression) {
@@ -234,9 +241,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Get 投递任务创建毫秒时间戳
+     * Get <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 投递任务创建毫秒时间戳
+     * @return CreateTime <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -244,9 +251,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Set 投递任务创建毫秒时间戳
+     * Set <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 投递任务创建毫秒时间戳
+     * @param CreateTime <p>投递任务创建毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -254,9 +261,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+     * Get <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+     * @return RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleArn() {
@@ -264,9 +271,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+     * Set <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+     * @param RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleArn(String RoleArn) {
@@ -274,9 +281,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Get 外部ID
+     * Get <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExternalId 外部ID
+     * @return ExternalId <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExternalId() {
@@ -284,9 +291,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Set 外部ID
+     * Set <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExternalId 外部ID
+     * @param ExternalId <p>外部ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalId(String ExternalId) {
@@ -294,9 +301,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+     * Get <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskStatus 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+     * @return TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskStatus() {
@@ -304,9 +311,9 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+     * Set <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskStatus 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+     * @param TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(Long TaskStatus) {
@@ -314,19 +321,35 @@ public class ConsumerInfo extends AbstractModel {
     }
 
     /**
-     * Get 高级配置 
-     * @return AdvancedConfig 高级配置
+     * Get <p>高级配置</p> 
+     * @return AdvancedConfig <p>高级配置</p>
      */
     public AdvancedConsumerConfiguration getAdvancedConfig() {
         return this.AdvancedConfig;
     }
 
     /**
-     * Set 高级配置
-     * @param AdvancedConfig 高级配置
+     * Set <p>高级配置</p>
+     * @param AdvancedConfig <p>高级配置</p>
      */
     public void setAdvancedConfig(AdvancedConsumerConfiguration AdvancedConfig) {
         this.AdvancedConfig = AdvancedConfig;
+    }
+
+    /**
+     * Get <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p> 
+     * @return DSLFilter <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     * @param DSLFilter <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public ConsumerInfo() {
@@ -373,6 +396,9 @@ public class ConsumerInfo extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new AdvancedConsumerConfiguration(source.AdvancedConfig);
         }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class ConsumerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

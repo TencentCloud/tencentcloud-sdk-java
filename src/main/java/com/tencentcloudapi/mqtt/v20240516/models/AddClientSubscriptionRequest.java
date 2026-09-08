@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AddClientSubscriptionRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 客户端id
+    * <p>客户端id</p>
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 订阅
+    * <p>订阅</p>
     */
     @SerializedName("TopicFilter")
     @Expose
     private String TopicFilter;
 
     /**
-    * 服务质量:0,1,2
+    * <p>服务质量:0,1,2</p>
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 客户端id 
-     * @return ClientId 客户端id
+     * Get <p>客户端id</p> 
+     * @return ClientId <p>客户端id</p>
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端id
-     * @param ClientId 客户端id
+     * Set <p>客户端id</p>
+     * @param ClientId <p>客户端id</p>
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 订阅 
-     * @return TopicFilter 订阅
+     * Get <p>订阅</p> 
+     * @return TopicFilter <p>订阅</p>
      */
     public String getTopicFilter() {
         return this.TopicFilter;
     }
 
     /**
-     * Set 订阅
-     * @param TopicFilter 订阅
+     * Set <p>订阅</p>
+     * @param TopicFilter <p>订阅</p>
      */
     public void setTopicFilter(String TopicFilter) {
         this.TopicFilter = TopicFilter;
     }
 
     /**
-     * Get 服务质量:0,1,2 
-     * @return Qos 服务质量:0,1,2
+     * Get <p>服务质量:0,1,2</p> 
+     * @return Qos <p>服务质量:0,1,2</p>
      */
     public String getQos() {
         return this.Qos;
     }
 
     /**
-     * Set 服务质量:0,1,2
-     * @param Qos 服务质量:0,1,2
+     * Set <p>服务质量:0,1,2</p>
+     * @param Qos <p>服务质量:0,1,2</p>
      */
     public void setQos(String Qos) {
         this.Qos = Qos;

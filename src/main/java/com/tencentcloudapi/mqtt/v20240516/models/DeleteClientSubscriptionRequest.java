@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteClientSubscriptionRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 客户端id
+    * <p>客户端id</p>
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 订阅
+    * <p>订阅</p>
     */
     @SerializedName("TopicFilter")
     @Expose
     private String TopicFilter;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 客户端id 
-     * @return ClientId 客户端id
+     * Get <p>客户端id</p> 
+     * @return ClientId <p>客户端id</p>
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端id
-     * @param ClientId 客户端id
+     * Set <p>客户端id</p>
+     * @param ClientId <p>客户端id</p>
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 订阅 
-     * @return TopicFilter 订阅
+     * Get <p>订阅</p> 
+     * @return TopicFilter <p>订阅</p>
      */
     public String getTopicFilter() {
         return this.TopicFilter;
     }
 
     /**
-     * Set 订阅
-     * @param TopicFilter 订阅
+     * Set <p>订阅</p>
+     * @param TopicFilter <p>订阅</p>
      */
     public void setTopicFilter(String TopicFilter) {
         this.TopicFilter = TopicFilter;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeListenersRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件。  listener-id- String -（过滤条件）监听器实例ID。
+    * <p>过滤条件。  listener-id- String -（过滤条件）监听器实例ID。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p> 
+     * @return Limit <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
+     * @param Limit <p>返回数量。</p><p>取值范围：[1, 200]</p><p>默认值：20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件。  listener-id- String -（过滤条件）监听器实例ID。 
-     * @return Filters 过滤条件。  listener-id- String -（过滤条件）监听器实例ID。
+     * Get <p>过滤条件。  listener-id- String -（过滤条件）监听器实例ID。</p> 
+     * @return Filters <p>过滤条件。  listener-id- String -（过滤条件）监听器实例ID。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。  listener-id- String -（过滤条件）监听器实例ID。
-     * @param Filters 过滤条件。  listener-id- String -（过滤条件）监听器实例ID。
+     * Set <p>过滤条件。  listener-id- String -（过滤条件）监听器实例ID。</p>
+     * @param Filters <p>过滤条件。  listener-id- String -（过滤条件）监听器实例ID。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

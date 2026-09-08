@@ -24,233 +24,138 @@ import java.util.HashMap;
 public class DescribeBillUsageDetailRequest extends AbstractModel {
 
     /**
-    * 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+    * <p>查询开始时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+    * <p>查询结束时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+    * <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
+    * <p>指定分页每页返回的数据条数，如果不传默认为 100，单页最大支持 100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询的套餐类型 （选填 ）不传则查询所有套餐；
-目前支持:
-<ul>
-<li>**CloudEnterprise**: 企业版合同</li>
-<li>**SingleSignature**: 单方签章</li>
-<li>**CloudProve**: 签署报告</li>
-<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
-<li>**ChannelWeCard**: 微工卡</li>
-<li>**SignFlow**: 合同套餐</li>
-<li>**SignFace**: 签署意愿（人脸识别）</li>
-<li>**SignPassword**: 签署意愿（密码）</li>
-<li>**SignSMS**: 签署意愿（短信）</li>
-<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
-<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
-<li>**OrgEssAuth**: 签署企业实名</li>
-<li>**FlowNotify**: 短信通知</li>
-<li>**AuthService**: 企业工商信息查询</li>
-<li>**NoAuthSign**: 形式签</li>
-</ul>
+    * <p>查询的套餐类型 （选填 ）不传则查询所有套餐；<br>目前支持:</p><ul><li>**CloudEnterprise**: 企业版合同</li><li>**SingleSignature**: 单方签章</li><li>**CloudProve**: 签署报告</li><li>**CloudOnlineSign**: 腾讯会议在线签约</li><li>**ChannelWeCard**: 微工卡</li><li>**SignFlow**: 合同套餐</li><li>**SignFace**: 签署意愿（人脸识别）</li><li>**SignPassword**: 签署意愿（密码）</li><li>**SignSMS**: 签署意愿（短信）</li><li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li><li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li><li>**OrgEssAuth**: 签署企业实名</li><li>**FlowNotify**: 短信通知</li><li>**AuthService**: 企业工商信息查询</li><li>**NoAuthSign**: 形式签</li></ul>
     */
     @SerializedName("QuotaType")
     @Expose
     private String QuotaType;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天 
-     * @return StartTime 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+     * Get <p>查询开始时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p> 
+     * @return StartTime <p>查询开始时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
-     * @param StartTime 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+     * Set <p>查询开始时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
+     * @param StartTime <p>查询开始时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天 
-     * @return EndTime 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+     * Get <p>查询结束时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p> 
+     * @return EndTime <p>查询结束时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
-     * @param EndTime 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+     * Set <p>查询结束时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
+     * @param EndTime <p>查询结束时间字符串，格式为yyyyMMdd，时间跨度不能大于31天。<span style="color: red;">注意：从 2026年10月10日起，开始日期和结束日期必须在同一个自然月内，不支持跨月查询。</span></p><ul><li><p>正确示例：StartTime=20260901，EndTime=20260930。开始和结束日期都在 2026年9月，可以查询。</p></li><li><p>错误示例：StartTime=20260815，EndTime=20260915。开始日期在8月，结束日期在9月，属于跨月查询，不支持。</p></li></ul><p>参数格式：yyyyMMdd</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0 
-     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * Get <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0</p> 
+     * @return Offset <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
-     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * Set <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0</p>
+     * @param Offset <p>指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。 
-     * @return Limit 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
+     * Get <p>指定分页每页返回的数据条数，如果不传默认为 100，单页最大支持 100。</p> 
+     * @return Limit <p>指定分页每页返回的数据条数，如果不传默认为 100，单页最大支持 100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
-     * @param Limit 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
+     * Set <p>指定分页每页返回的数据条数，如果不传默认为 100，单页最大支持 100。</p>
+     * @param Limit <p>指定分页每页返回的数据条数，如果不传默认为 100，单页最大支持 100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询的套餐类型 （选填 ）不传则查询所有套餐；
-目前支持:
-<ul>
-<li>**CloudEnterprise**: 企业版合同</li>
-<li>**SingleSignature**: 单方签章</li>
-<li>**CloudProve**: 签署报告</li>
-<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
-<li>**ChannelWeCard**: 微工卡</li>
-<li>**SignFlow**: 合同套餐</li>
-<li>**SignFace**: 签署意愿（人脸识别）</li>
-<li>**SignPassword**: 签署意愿（密码）</li>
-<li>**SignSMS**: 签署意愿（短信）</li>
-<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
-<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
-<li>**OrgEssAuth**: 签署企业实名</li>
-<li>**FlowNotify**: 短信通知</li>
-<li>**AuthService**: 企业工商信息查询</li>
-<li>**NoAuthSign**: 形式签</li>
-</ul> 
-     * @return QuotaType 查询的套餐类型 （选填 ）不传则查询所有套餐；
-目前支持:
-<ul>
-<li>**CloudEnterprise**: 企业版合同</li>
-<li>**SingleSignature**: 单方签章</li>
-<li>**CloudProve**: 签署报告</li>
-<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
-<li>**ChannelWeCard**: 微工卡</li>
-<li>**SignFlow**: 合同套餐</li>
-<li>**SignFace**: 签署意愿（人脸识别）</li>
-<li>**SignPassword**: 签署意愿（密码）</li>
-<li>**SignSMS**: 签署意愿（短信）</li>
-<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
-<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
-<li>**OrgEssAuth**: 签署企业实名</li>
-<li>**FlowNotify**: 短信通知</li>
-<li>**AuthService**: 企业工商信息查询</li>
-<li>**NoAuthSign**: 形式签</li>
-</ul>
+     * Get <p>查询的套餐类型 （选填 ）不传则查询所有套餐；<br>目前支持:</p><ul><li>**CloudEnterprise**: 企业版合同</li><li>**SingleSignature**: 单方签章</li><li>**CloudProve**: 签署报告</li><li>**CloudOnlineSign**: 腾讯会议在线签约</li><li>**ChannelWeCard**: 微工卡</li><li>**SignFlow**: 合同套餐</li><li>**SignFace**: 签署意愿（人脸识别）</li><li>**SignPassword**: 签署意愿（密码）</li><li>**SignSMS**: 签署意愿（短信）</li><li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li><li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li><li>**OrgEssAuth**: 签署企业实名</li><li>**FlowNotify**: 短信通知</li><li>**AuthService**: 企业工商信息查询</li><li>**NoAuthSign**: 形式签</li></ul> 
+     * @return QuotaType <p>查询的套餐类型 （选填 ）不传则查询所有套餐；<br>目前支持:</p><ul><li>**CloudEnterprise**: 企业版合同</li><li>**SingleSignature**: 单方签章</li><li>**CloudProve**: 签署报告</li><li>**CloudOnlineSign**: 腾讯会议在线签约</li><li>**ChannelWeCard**: 微工卡</li><li>**SignFlow**: 合同套餐</li><li>**SignFace**: 签署意愿（人脸识别）</li><li>**SignPassword**: 签署意愿（密码）</li><li>**SignSMS**: 签署意愿（短信）</li><li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li><li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li><li>**OrgEssAuth**: 签署企业实名</li><li>**FlowNotify**: 短信通知</li><li>**AuthService**: 企业工商信息查询</li><li>**NoAuthSign**: 形式签</li></ul>
      */
     public String getQuotaType() {
         return this.QuotaType;
     }
 
     /**
-     * Set 查询的套餐类型 （选填 ）不传则查询所有套餐；
-目前支持:
-<ul>
-<li>**CloudEnterprise**: 企业版合同</li>
-<li>**SingleSignature**: 单方签章</li>
-<li>**CloudProve**: 签署报告</li>
-<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
-<li>**ChannelWeCard**: 微工卡</li>
-<li>**SignFlow**: 合同套餐</li>
-<li>**SignFace**: 签署意愿（人脸识别）</li>
-<li>**SignPassword**: 签署意愿（密码）</li>
-<li>**SignSMS**: 签署意愿（短信）</li>
-<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
-<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
-<li>**OrgEssAuth**: 签署企业实名</li>
-<li>**FlowNotify**: 短信通知</li>
-<li>**AuthService**: 企业工商信息查询</li>
-<li>**NoAuthSign**: 形式签</li>
-</ul>
-     * @param QuotaType 查询的套餐类型 （选填 ）不传则查询所有套餐；
-目前支持:
-<ul>
-<li>**CloudEnterprise**: 企业版合同</li>
-<li>**SingleSignature**: 单方签章</li>
-<li>**CloudProve**: 签署报告</li>
-<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
-<li>**ChannelWeCard**: 微工卡</li>
-<li>**SignFlow**: 合同套餐</li>
-<li>**SignFace**: 签署意愿（人脸识别）</li>
-<li>**SignPassword**: 签署意愿（密码）</li>
-<li>**SignSMS**: 签署意愿（短信）</li>
-<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
-<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
-<li>**OrgEssAuth**: 签署企业实名</li>
-<li>**FlowNotify**: 短信通知</li>
-<li>**AuthService**: 企业工商信息查询</li>
-<li>**NoAuthSign**: 形式签</li>
-</ul>
+     * Set <p>查询的套餐类型 （选填 ）不传则查询所有套餐；<br>目前支持:</p><ul><li>**CloudEnterprise**: 企业版合同</li><li>**SingleSignature**: 单方签章</li><li>**CloudProve**: 签署报告</li><li>**CloudOnlineSign**: 腾讯会议在线签约</li><li>**ChannelWeCard**: 微工卡</li><li>**SignFlow**: 合同套餐</li><li>**SignFace**: 签署意愿（人脸识别）</li><li>**SignPassword**: 签署意愿（密码）</li><li>**SignSMS**: 签署意愿（短信）</li><li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li><li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li><li>**OrgEssAuth**: 签署企业实名</li><li>**FlowNotify**: 短信通知</li><li>**AuthService**: 企业工商信息查询</li><li>**NoAuthSign**: 形式签</li></ul>
+     * @param QuotaType <p>查询的套餐类型 （选填 ）不传则查询所有套餐；<br>目前支持:</p><ul><li>**CloudEnterprise**: 企业版合同</li><li>**SingleSignature**: 单方签章</li><li>**CloudProve**: 签署报告</li><li>**CloudOnlineSign**: 腾讯会议在线签约</li><li>**ChannelWeCard**: 微工卡</li><li>**SignFlow**: 合同套餐</li><li>**SignFace**: 签署意愿（人脸识别）</li><li>**SignPassword**: 签署意愿（密码）</li><li>**SignSMS**: 签署意愿（短信）</li><li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li><li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li><li>**OrgEssAuth**: 签署企业实名</li><li>**FlowNotify**: 短信通知</li><li>**AuthService**: 企业工商信息查询</li><li>**NoAuthSign**: 形式签</li></ul>
      */
     public void setQuotaType(String QuotaType) {
         this.QuotaType = QuotaType;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

@@ -31,6 +31,13 @@ public class ComputerConfiguration extends AbstractModel {
     private WAAConfiguration WAAConfiguration;
 
     /**
+    * <p>配置内置 OSWorld</p>
+    */
+    @SerializedName("OSWorldConfiguration")
+    @Expose
+    private OSWorldConfiguration OSWorldConfiguration;
+
+    /**
      * Get <p>waa沙箱工具配置</p> 
      * @return WAAConfiguration <p>waa沙箱工具配置</p>
      */
@@ -46,6 +53,22 @@ public class ComputerConfiguration extends AbstractModel {
         this.WAAConfiguration = WAAConfiguration;
     }
 
+    /**
+     * Get <p>配置内置 OSWorld</p> 
+     * @return OSWorldConfiguration <p>配置内置 OSWorld</p>
+     */
+    public OSWorldConfiguration getOSWorldConfiguration() {
+        return this.OSWorldConfiguration;
+    }
+
+    /**
+     * Set <p>配置内置 OSWorld</p>
+     * @param OSWorldConfiguration <p>配置内置 OSWorld</p>
+     */
+    public void setOSWorldConfiguration(OSWorldConfiguration OSWorldConfiguration) {
+        this.OSWorldConfiguration = OSWorldConfiguration;
+    }
+
     public ComputerConfiguration() {
     }
 
@@ -57,6 +80,9 @@ public class ComputerConfiguration extends AbstractModel {
         if (source.WAAConfiguration != null) {
             this.WAAConfiguration = new WAAConfiguration(source.WAAConfiguration);
         }
+        if (source.OSWorldConfiguration != null) {
+            this.OSWorldConfiguration = new OSWorldConfiguration(source.OSWorldConfiguration);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ComputerConfiguration extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "WAAConfiguration.", this.WAAConfiguration);
+        this.setParamObj(map, prefix + "OSWorldConfiguration.", this.OSWorldConfiguration);
 
     }
 }

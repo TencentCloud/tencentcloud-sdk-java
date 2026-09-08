@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateUserSigRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
+    * <p>用户 ID</p>
     */
     @SerializedName("Uid")
     @Expose
     private String Uid;
 
     /**
-    * 用户签名数据，必填字段，为标准 JSON 格式
+    * <p>用户签名数据</p>
     */
     @SerializedName("ClientData")
     @Expose
     private String ClientData;
 
     /**
-    * 有效期，单位秒，不超过 1 小时
+    * <p>有效期，单位秒，不超过 1 小时</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致 
-     * @return Uid 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
+     * Get <p>用户 ID</p> 
+     * @return Uid <p>用户 ID</p>
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
-     * @param Uid 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
+     * Set <p>用户 ID</p>
+     * @param Uid <p>用户 ID</p>
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get 用户签名数据，必填字段，为标准 JSON 格式 
-     * @return ClientData 用户签名数据，必填字段，为标准 JSON 格式
+     * Get <p>用户签名数据</p> 
+     * @return ClientData <p>用户签名数据</p>
      */
     public String getClientData() {
         return this.ClientData;
     }
 
     /**
-     * Set 用户签名数据，必填字段，为标准 JSON 格式
-     * @param ClientData 用户签名数据，必填字段，为标准 JSON 格式
+     * Set <p>用户签名数据</p>
+     * @param ClientData <p>用户签名数据</p>
      */
     public void setClientData(String ClientData) {
         this.ClientData = ClientData;
     }
 
     /**
-     * Get 有效期，单位秒，不超过 1 小时 
-     * @return ExpiredTime 有效期，单位秒，不超过 1 小时
+     * Get <p>有效期，单位秒，不超过 1 小时</p> 
+     * @return ExpiredTime <p>有效期，单位秒，不超过 1 小时</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 有效期，单位秒，不超过 1 小时
-     * @param ExpiredTime 有效期，单位秒，不超过 1 小时
+     * Set <p>有效期，单位秒，不超过 1 小时</p>
+     * @param ExpiredTime <p>有效期，单位秒，不超过 1 小时</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

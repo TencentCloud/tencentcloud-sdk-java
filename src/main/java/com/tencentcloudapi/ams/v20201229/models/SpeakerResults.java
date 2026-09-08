@@ -24,94 +24,94 @@ import java.util.HashMap;
 public class SpeakerResults extends AbstractModel {
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 得分
+    * <p>得分</p>
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
-    private String EndTime;
+    private Float EndTime;
 
     /**
-     * Get 标签 
-     * @return Label 标签
+     * Get <p>标签</p> 
+     * @return Label <p>标签</p>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 标签
-     * @param Label 标签
+     * Set <p>标签</p>
+     * @param Label <p>标签</p>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 得分 
-     * @return Score 得分
+     * Get <p>得分</p> 
+     * @return Score <p>得分</p>
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 得分
-     * @param Score 得分
+     * Set <p>得分</p>
+     * @param Score <p>得分</p>
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
-    public String getEndTime() {
+    public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
-    public void setEndTime(String EndTime) {
+    public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;
     }
 
@@ -133,7 +133,7 @@ public class SpeakerResults extends AbstractModel {
             this.StartTime = new Float(source.StartTime);
         }
         if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
+            this.EndTime = new Float(source.EndTime);
         }
     }
 

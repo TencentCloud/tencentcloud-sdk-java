@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class OpenConfigRecorderRequest extends AbstractModel {
 
+    /**
+    * <p>1:从控制中心调用</p>
+    */
+    @SerializedName("FromMode")
+    @Expose
+    private Long FromMode;
+
+    /**
+     * Get <p>1:从控制中心调用</p> 
+     * @return FromMode <p>1:从控制中心调用</p>
+     */
+    public Long getFromMode() {
+        return this.FromMode;
+    }
+
+    /**
+     * Set <p>1:从控制中心调用</p>
+     * @param FromMode <p>1:从控制中心调用</p>
+     */
+    public void setFromMode(Long FromMode) {
+        this.FromMode = FromMode;
+    }
+
     public OpenConfigRecorderRequest() {
     }
 
@@ -31,6 +54,9 @@ public class OpenConfigRecorderRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OpenConfigRecorderRequest(OpenConfigRecorderRequest source) {
+        if (source.FromMode != null) {
+            this.FromMode = new Long(source.FromMode);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class OpenConfigRecorderRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FromMode", this.FromMode);
 
     }
 }

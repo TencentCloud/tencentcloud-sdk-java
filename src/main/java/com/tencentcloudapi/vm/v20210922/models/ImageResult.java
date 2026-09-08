@@ -24,316 +24,279 @@ import java.util.HashMap;
 public class ImageResult extends AbstractModel {
 
     /**
-    * 违规标志
-0 未命中
-1 命中
+    * <p>违规标志<br>0 未命中<br>1 命中</p>
     */
     @SerializedName("HitFlag")
     @Expose
     private Long HitFlag;
 
     /**
-    * 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+    * <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+    * <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 得分
+    * <p>得分</p>
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 画面截帧图片结果集
+    * <p>画面截帧图片结果集</p>
     */
     @SerializedName("Results")
     @Expose
     private ImageResultResult [] Results;
 
     /**
-    * 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
+    * <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 附加字段
+    * <p>附加字段</p>
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * 二级标签
+    * <p>二级标签</p>
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * 场景结果
+    * <p>场景结果</p>
     */
     @SerializedName("RecognitionResults")
     @Expose
     private RecognitionResult [] RecognitionResults;
 
     /**
-    * 审核命中类型
+    * <p>审核命中类型</p>
     */
     @SerializedName("HitType")
     @Expose
     private String HitType;
 
     /**
-    * 截帧请求ID
+    * <p>截帧请求ID</p>
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * Get 违规标志
-0 未命中
-1 命中 
-     * @return HitFlag 违规标志
-0 未命中
-1 命中
+    * <p>命中信息</p>
+    */
+    @SerializedName("HitSnippetInfos")
+    @Expose
+    private HitSnippetInfo [] HitSnippetInfos;
+
+    /**
+     * Get <p>违规标志<br>0 未命中<br>1 命中</p> 
+     * @return HitFlag <p>违规标志<br>0 未命中<br>1 命中</p>
      */
     public Long getHitFlag() {
         return this.HitFlag;
     }
 
     /**
-     * Set 违规标志
-0 未命中
-1 命中
-     * @param HitFlag 违规标志
-0 未命中
-1 命中
+     * Set <p>违规标志<br>0 未命中<br>1 命中</p>
+     * @param HitFlag <p>违规标志<br>0 未命中<br>1 命中</p>
      */
     public void setHitFlag(Long HitFlag) {
         this.HitFlag = HitFlag;
     }
 
     /**
-     * Get 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告 
-     * @return Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * Get <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p> 
+     * @return Label <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-     * @param Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * Set <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
+     * @param Label <p>命中的标签<br>Porn 色情<br>Sexy 性感<br>Polity 政治<br>Illegal 违法<br>Abuse 谩骂<br>Terror 暴恐<br>Ad 广告</p>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规 
-     * @return Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Get <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p> 
+     * @return Suggestion <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-     * @param Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Set <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
+     * @param Suggestion <p>审核建议，可选值：<br>Pass 通过，<br>Review 建议人审，<br>Block 确认违规</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 得分 
-     * @return Score 得分
+     * Get <p>得分</p> 
+     * @return Score <p>得分</p>
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 得分
-     * @param Score 得分
+     * Set <p>得分</p>
+     * @param Score <p>得分</p>
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 画面截帧图片结果集 
-     * @return Results 画面截帧图片结果集
+     * Get <p>画面截帧图片结果集</p> 
+     * @return Results <p>画面截帧图片结果集</p>
      */
     public ImageResultResult [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set 画面截帧图片结果集
-     * @param Results 画面截帧图片结果集
+     * Set <p>画面截帧图片结果集</p>
+     * @param Results <p>画面截帧图片结果集</p>
      */
     public void setResults(ImageResultResult [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。 
-     * @return Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
+     * Get <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p> 
+     * @return Url <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-     * @param Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
+     * Set <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
+     * @param Url <p>该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用<a href="https://cloud.tencent.com/document/product/1265/104001">COS预签名</a>功能更新签名时效。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 附加字段 
-     * @return Extra 附加字段
+     * Get <p>附加字段</p> 
+     * @return Extra <p>附加字段</p>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 附加字段
-     * @param Extra 附加字段
+     * Set <p>附加字段</p>
+     * @param Extra <p>附加字段</p>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get 二级标签 
-     * @return SubLabel 二级标签
+     * Get <p>二级标签</p> 
+     * @return SubLabel <p>二级标签</p>
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 二级标签
-     * @param SubLabel 二级标签
+     * Set <p>二级标签</p>
+     * @param SubLabel <p>二级标签</p>
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 场景结果 
-     * @return RecognitionResults 场景结果
+     * Get <p>场景结果</p> 
+     * @return RecognitionResults <p>场景结果</p>
      */
     public RecognitionResult [] getRecognitionResults() {
         return this.RecognitionResults;
     }
 
     /**
-     * Set 场景结果
-     * @param RecognitionResults 场景结果
+     * Set <p>场景结果</p>
+     * @param RecognitionResults <p>场景结果</p>
      */
     public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
         this.RecognitionResults = RecognitionResults;
     }
 
     /**
-     * Get 审核命中类型 
-     * @return HitType 审核命中类型
+     * Get <p>审核命中类型</p> 
+     * @return HitType <p>审核命中类型</p>
      */
     public String getHitType() {
         return this.HitType;
     }
 
     /**
-     * Set 审核命中类型
-     * @param HitType 审核命中类型
+     * Set <p>审核命中类型</p>
+     * @param HitType <p>审核命中类型</p>
      */
     public void setHitType(String HitType) {
         this.HitType = HitType;
     }
 
     /**
-     * Get 截帧请求ID 
-     * @return RequestId 截帧请求ID
+     * Get <p>截帧请求ID</p> 
+     * @return RequestId <p>截帧请求ID</p>
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set 截帧请求ID
-     * @param RequestId 截帧请求ID
+     * Set <p>截帧请求ID</p>
+     * @param RequestId <p>截帧请求ID</p>
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
+    }
+
+    /**
+     * Get <p>命中信息</p> 
+     * @return HitSnippetInfos <p>命中信息</p>
+     */
+    public HitSnippetInfo [] getHitSnippetInfos() {
+        return this.HitSnippetInfos;
+    }
+
+    /**
+     * Set <p>命中信息</p>
+     * @param HitSnippetInfos <p>命中信息</p>
+     */
+    public void setHitSnippetInfos(HitSnippetInfo [] HitSnippetInfos) {
+        this.HitSnippetInfos = HitSnippetInfos;
     }
 
     public ImageResult() {
@@ -383,6 +346,12 @@ Block 确认违规
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
+        if (source.HitSnippetInfos != null) {
+            this.HitSnippetInfos = new HitSnippetInfo[source.HitSnippetInfos.length];
+            for (int i = 0; i < source.HitSnippetInfos.length; i++) {
+                this.HitSnippetInfos[i] = new HitSnippetInfo(source.HitSnippetInfos[i]);
+            }
+        }
     }
 
 
@@ -401,6 +370,7 @@ Block 确认违规
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         this.setParamSimple(map, prefix + "HitType", this.HitType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamArrayObj(map, prefix + "HitSnippetInfos.", this.HitSnippetInfos);
 
     }
 }

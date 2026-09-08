@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
+    * <p>主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 备注，最长 128 字符
+    * <p>备注，最长 128 字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。 
-     * @return Topic 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
+     * Get <p>主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。</p> 
+     * @return Topic <p>主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
-     * @param Topic 主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。
+     * Set <p>主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。</p>
+     * @param Topic <p>主题，不能为空，只能包含字母、数字、“-”及“_”，3-100 字符。</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 备注，最长 128 字符 
-     * @return Remark 备注，最长 128 字符
+     * Get <p>备注，最长 128 字符</p> 
+     * @return Remark <p>备注，最长 128 字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，最长 128 字符
-     * @param Remark 备注，最长 128 字符
+     * Set <p>备注，最长 128 字符</p>
+     * @param Remark <p>备注，最长 128 字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

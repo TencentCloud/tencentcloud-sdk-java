@@ -105,6 +105,28 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloseMem0Service）用于关闭实例的Mem0服务
+     * @param req CloseMem0ServiceRequest
+     * @return CloseMem0ServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseMem0ServiceResponse CloseMem0Service(CloseMem0ServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseMem0Service", CloseMem0ServiceResponse.class);
+    }
+
+    /**
+     *本接口（ClosePostgRestService）用于关闭实例的PostgREST服务
+     * @param req ClosePostgRESTServiceRequest
+     * @return ClosePostgRESTServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClosePostgRESTServiceResponse ClosePostgRESTService(ClosePostgRESTServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ClosePostgRESTService", ClosePostgRESTServiceResponse.class);
+    }
+
+    /**
      *此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -749,6 +771,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeMem0Service）用于查询某个实例的Mem0服务信息
+     * @param req DescribeMem0ServiceRequest
+     * @return DescribeMem0ServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMem0ServiceResponse DescribeMem0Service(DescribeMem0ServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMem0Service", DescribeMem0ServiceResponse.class);
+    }
+
+    /**
      *本接口（DescribeOrders）用于查询订单信息。
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse
@@ -790,6 +823,17 @@ public class PostgresClient extends AbstractClient{
     public DescribeParamsEventResponse DescribeParamsEvent(DescribeParamsEventRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeParamsEvent", DescribeParamsEventResponse.class);
+    }
+
+    /**
+     *本接口（DescribePostgRestService）用于查询某个实例的PostgREST服务信息
+     * @param req DescribePostgRESTServiceRequest
+     * @return DescribePostgRESTServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePostgRESTServiceResponse DescribePostgRESTService(DescribePostgRESTServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePostgRESTService", DescribePostgRESTServiceResponse.class);
     }
 
     /**
@@ -1277,6 +1321,28 @@ public class PostgresClient extends AbstractClient{
     public OpenDBExtranetAccessResponse OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenDBExtranetAccess", OpenDBExtranetAccessResponse.class);
+    }
+
+    /**
+     *本接口（OpenMem0Service）用于开启实例Mem0服务
+     * @param req OpenMem0ServiceRequest
+     * @return OpenMem0ServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenMem0ServiceResponse OpenMem0Service(OpenMem0ServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenMem0Service", OpenMem0ServiceResponse.class);
+    }
+
+    /**
+     *本接口（OpenPostgRestService）用于开启实例PostgREST服务
+     * @param req OpenPostgRESTServiceRequest
+     * @return OpenPostgRESTServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenPostgRESTServiceResponse OpenPostgRESTService(OpenPostgRESTServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenPostgRESTService", OpenPostgRESTServiceResponse.class);
     }
 
     /**
