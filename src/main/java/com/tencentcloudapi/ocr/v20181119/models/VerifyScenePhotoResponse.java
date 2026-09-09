@@ -66,6 +66,20 @@ public class VerifyScenePhotoResponse extends AbstractModel {
     private String WatermarkContent;
 
     /**
+    * <p>模板图片提示</p>
+    */
+    @SerializedName("Template")
+    @Expose
+    private SceneWarnInfo Template;
+
+    /**
+    * <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+    */
+    @SerializedName("ReasoningResult")
+    @Expose
+    private ReasoningResult ReasoningResult;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +183,38 @@ public class VerifyScenePhotoResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>模板图片提示</p> 
+     * @return Template <p>模板图片提示</p>
+     */
+    public SceneWarnInfo getTemplate() {
+        return this.Template;
+    }
+
+    /**
+     * Set <p>模板图片提示</p>
+     * @param Template <p>模板图片提示</p>
+     */
+    public void setTemplate(SceneWarnInfo Template) {
+        this.Template = Template;
+    }
+
+    /**
+     * Get <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p> 
+     * @return ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     */
+    public ReasoningResult getReasoningResult() {
+        return this.ReasoningResult;
+    }
+
+    /**
+     * Set <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     * @param ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     */
+    public void setReasoningResult(ReasoningResult ReasoningResult) {
+        this.ReasoningResult = ReasoningResult;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +256,12 @@ public class VerifyScenePhotoResponse extends AbstractModel {
         if (source.WatermarkContent != null) {
             this.WatermarkContent = new String(source.WatermarkContent);
         }
+        if (source.Template != null) {
+            this.Template = new SceneWarnInfo(source.Template);
+        }
+        if (source.ReasoningResult != null) {
+            this.ReasoningResult = new ReasoningResult(source.ReasoningResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +278,8 @@ public class VerifyScenePhotoResponse extends AbstractModel {
         this.setParamObj(map, prefix + "Screenshot.", this.Screenshot);
         this.setParamObj(map, prefix + "TextWatermark.", this.TextWatermark);
         this.setParamSimple(map, prefix + "WatermarkContent", this.WatermarkContent);
+        this.setParamObj(map, prefix + "Template.", this.Template);
+        this.setParamObj(map, prefix + "ReasoningResult.", this.ReasoningResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

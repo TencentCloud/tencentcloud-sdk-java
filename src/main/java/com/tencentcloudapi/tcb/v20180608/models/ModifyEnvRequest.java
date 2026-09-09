@@ -31,7 +31,7 @@ public class ModifyEnvRequest extends AbstractModel {
     private String EnvId;
 
     /**
-    * <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+    * <p>环境备注名</p><p>入参限制：最大长度为32</p>
     */
     @SerializedName("Alias")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyEnvRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p> 
-     * @return Alias <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+     * Get <p>环境备注名</p><p>入参限制：最大长度为32</p> 
+     * @return Alias <p>环境备注名</p><p>入参限制：最大长度为32</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
-     * @param Alias <p>环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+     * Set <p>环境备注名</p><p>入参限制：最大长度为32</p>
+     * @param Alias <p>环境备注名</p><p>入参限制：最大长度为32</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

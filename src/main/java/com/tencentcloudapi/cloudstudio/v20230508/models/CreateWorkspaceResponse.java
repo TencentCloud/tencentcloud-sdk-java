@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateWorkspaceResponse extends AbstractModel {
 
     /**
-    * 工作空间 SpaceKey
+    * <p>工作空间 SpaceKey</p>
     */
     @SerializedName("SpaceKey")
     @Expose
     private String SpaceKey;
 
     /**
-    * 工作空间名称
+    * <p>工作空间名称</p>
     */
     @SerializedName("Name")
     @Expose
@@ -45,32 +45,32 @@ public class CreateWorkspaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作空间 SpaceKey 
-     * @return SpaceKey 工作空间 SpaceKey
+     * Get <p>工作空间 SpaceKey</p> 
+     * @return SpaceKey <p>工作空间 SpaceKey</p>
      */
     public String getSpaceKey() {
         return this.SpaceKey;
     }
 
     /**
-     * Set 工作空间 SpaceKey
-     * @param SpaceKey 工作空间 SpaceKey
+     * Set <p>工作空间 SpaceKey</p>
+     * @param SpaceKey <p>工作空间 SpaceKey</p>
      */
     public void setSpaceKey(String SpaceKey) {
         this.SpaceKey = SpaceKey;
     }
 
     /**
-     * Get 工作空间名称 
-     * @return Name 工作空间名称
+     * Get <p>工作空间名称</p> 
+     * @return Name <p>工作空间名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 工作空间名称
-     * @param Name 工作空间名称
+     * Set <p>工作空间名称</p>
+     * @param Name <p>工作空间名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;

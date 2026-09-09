@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class SkillProfile extends AbstractModel {
 
     /**
-    * 创建时间（Unix秒）
+    * <p>创建时间（Unix秒）</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 创建者
+    * <p>创建者</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * Skill 描述
+    * <p>Skill 描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Skill 展示描述
+    * <p>Skill 展示描述</p>
     */
     @SerializedName("DisplayDescription")
     @Expose
     private String DisplayDescription;
 
     /**
-    * Skill 展示名称
+    * <p>Skill 展示名称</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * Skill 图标
+    * <p>Skill 图标</p>
     */
     @SerializedName("IconUrl")
     @Expose
     private String IconUrl;
 
     /**
-    * Skill 名称
+    * <p>Skill 名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 更新时间（Unix秒）
+    * <p>更新时间（Unix秒）</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 创建时间（Unix秒） 
-     * @return CreateTime 创建时间（Unix秒）
+    * <p>空间</p>
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
+     * Get <p>创建时间（Unix秒）</p> 
+     * @return CreateTime <p>创建时间（Unix秒）</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间（Unix秒）
-     * @param CreateTime 创建时间（Unix秒）
+     * Set <p>创建时间（Unix秒）</p>
+     * @param CreateTime <p>创建时间（Unix秒）</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 创建者 
-     * @return Creator 创建者
+     * Get <p>创建者</p> 
+     * @return Creator <p>创建者</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建者
-     * @param Creator 创建者
+     * Set <p>创建者</p>
+     * @param Creator <p>创建者</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get Skill 描述 
-     * @return Description Skill 描述
+     * Get <p>Skill 描述</p> 
+     * @return Description <p>Skill 描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Skill 描述
-     * @param Description Skill 描述
+     * Set <p>Skill 描述</p>
+     * @param Description <p>Skill 描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Skill 展示描述 
-     * @return DisplayDescription Skill 展示描述
+     * Get <p>Skill 展示描述</p> 
+     * @return DisplayDescription <p>Skill 展示描述</p>
      */
     public String getDisplayDescription() {
         return this.DisplayDescription;
     }
 
     /**
-     * Set Skill 展示描述
-     * @param DisplayDescription Skill 展示描述
+     * Set <p>Skill 展示描述</p>
+     * @param DisplayDescription <p>Skill 展示描述</p>
      */
     public void setDisplayDescription(String DisplayDescription) {
         this.DisplayDescription = DisplayDescription;
     }
 
     /**
-     * Get Skill 展示名称 
-     * @return DisplayName Skill 展示名称
+     * Get <p>Skill 展示名称</p> 
+     * @return DisplayName <p>Skill 展示名称</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set Skill 展示名称
-     * @param DisplayName Skill 展示名称
+     * Set <p>Skill 展示名称</p>
+     * @param DisplayName <p>Skill 展示名称</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get Skill 图标 
-     * @return IconUrl Skill 图标
+     * Get <p>Skill 图标</p> 
+     * @return IconUrl <p>Skill 图标</p>
      */
     public String getIconUrl() {
         return this.IconUrl;
     }
 
     /**
-     * Set Skill 图标
-     * @param IconUrl Skill 图标
+     * Set <p>Skill 图标</p>
+     * @param IconUrl <p>Skill 图标</p>
      */
     public void setIconUrl(String IconUrl) {
         this.IconUrl = IconUrl;
     }
 
     /**
-     * Get Skill 名称 
-     * @return Name Skill 名称
+     * Get <p>Skill 名称</p> 
+     * @return Name <p>Skill 名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Skill 名称
-     * @param Name Skill 名称
+     * Set <p>Skill 名称</p>
+     * @param Name <p>Skill 名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 更新时间（Unix秒） 
-     * @return UpdateTime 更新时间（Unix秒）
+     * Get <p>更新时间（Unix秒）</p> 
+     * @return UpdateTime <p>更新时间（Unix秒）</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间（Unix秒）
-     * @param UpdateTime 更新时间（Unix秒）
+     * Set <p>更新时间（Unix秒）</p>
+     * @param UpdateTime <p>更新时间（Unix秒）</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>空间</p> 
+     * @return SpaceId <p>空间</p>
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set <p>空间</p>
+     * @param SpaceId <p>空间</p>
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
     }
 
     public SkillProfile() {
@@ -239,6 +262,9 @@ public class SkillProfile extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class SkillProfile extends AbstractModel {
         this.setParamSimple(map, prefix + "IconUrl", this.IconUrl);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
 
     }
 }

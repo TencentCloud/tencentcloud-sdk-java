@@ -136,7 +136,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String BusinessLicense;
 
     /**
-    * <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+    * <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
     */
     @SerializedName("ProxyAddress")
     @Expose
@@ -455,16 +455,16 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p> 
-     * @return ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+     * Get <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p> 
+     * @return ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
      */
     public String getProxyAddress() {
         return this.ProxyAddress;
     }
 
     /**
-     * Set <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
-     * @param ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+     * Set <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
+     * @param ProxyAddress <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
      */
     public void setProxyAddress(String ProxyAddress) {
         this.ProxyAddress = ProxyAddress;

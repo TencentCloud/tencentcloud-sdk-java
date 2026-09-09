@@ -129,7 +129,7 @@ public class CreateDBCustomNodesRequest extends AbstractModel {
     private String ChargeType;
 
     /**
-    * <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：privatelink</p>
+    * <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：cross_tenant_eni</p><p>原 privatelink 访问主机的网络模式已下线。</p>
     */
     @SerializedName("NetworkMode")
     @Expose
@@ -418,16 +418,16 @@ public class CreateDBCustomNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：privatelink</p> 
-     * @return NetworkMode <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：privatelink</p>
+     * Get <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：cross_tenant_eni</p><p>原 privatelink 访问主机的网络模式已下线。</p> 
+     * @return NetworkMode <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：cross_tenant_eni</p><p>原 privatelink 访问主机的网络模式已下线。</p>
      */
     public String getNetworkMode() {
         return this.NetworkMode;
     }
 
     /**
-     * Set <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：privatelink</p>
-     * @param NetworkMode <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：privatelink</p>
+     * Set <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：cross_tenant_eni</p><p>原 privatelink 访问主机的网络模式已下线。</p>
+     * @param NetworkMode <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：cross_tenant_eni</p><p>原 privatelink 访问主机的网络模式已下线。</p>
      */
     public void setNetworkMode(String NetworkMode) {
         this.NetworkMode = NetworkMode;

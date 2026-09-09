@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateCustomizeErrorPageRequest extends AbstractModel {
 
     /**
-    * 站点 ID。
+    * <p>站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 自定义错误页名称，名称为 2-30 个字符。
+    * <p>自定义响应页面名称，名称为 2-30 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
+    * <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * 自定义错误页面描述，描述不超过 60 个字符。
+    * <p>自定义响应页面描述，描述不超过 60 个字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 自定义错误页面内容，内容不超过 2KB。
+    * <p>自定义响应页面内容，内容不超过 16KB。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 自定义错误页名称，名称为 2-30 个字符。 
-     * @return Name 自定义错误页名称，名称为 2-30 个字符。
+     * Get <p>自定义响应页面名称，名称为 2-30 个字符。</p> 
+     * @return Name <p>自定义响应页面名称，名称为 2-30 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 自定义错误页名称，名称为 2-30 个字符。
-     * @param Name 自定义错误页名称，名称为 2-30 个字符。
+     * Set <p>自定义响应页面名称，名称为 2-30 个字符。</p>
+     * @param Name <p>自定义响应页面名称，名称为 2-30 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li> 
-     * @return ContentType 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
+     * Get <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul> 
+     * @return ContentType <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
-     * @param ContentType 自定义错误页面类型，取值有：<li>text/html； </li><li>application/json；</li><li>text/plain；</li><li>text/xml。</li>
+     * Set <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
+     * @param ContentType <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 自定义错误页面描述，描述不超过 60 个字符。 
-     * @return Description 自定义错误页面描述，描述不超过 60 个字符。
+     * Get <p>自定义响应页面描述，描述不超过 60 个字符。</p> 
+     * @return Description <p>自定义响应页面描述，描述不超过 60 个字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 自定义错误页面描述，描述不超过 60 个字符。
-     * @param Description 自定义错误页面描述，描述不超过 60 个字符。
+     * Set <p>自定义响应页面描述，描述不超过 60 个字符。</p>
+     * @param Description <p>自定义响应页面描述，描述不超过 60 个字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 自定义错误页面内容，内容不超过 2KB。 
-     * @return Content 自定义错误页面内容，内容不超过 2KB。
+     * Get <p>自定义响应页面内容，内容不超过 16KB。</p> 
+     * @return Content <p>自定义响应页面内容，内容不超过 16KB。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 自定义错误页面内容，内容不超过 2KB。
-     * @param Content 自定义错误页面内容，内容不超过 2KB。
+     * Set <p>自定义响应页面内容，内容不超过 16KB。</p>
+     * @param Content <p>自定义响应页面内容，内容不超过 16KB。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;

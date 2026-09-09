@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class HyperParam extends AbstractModel {
 
     /**
-    * HiCache缓存
+    * <p>HiCache缓存</p>
     */
     @SerializedName("HiCache")
     @Expose
     private HiCacheInfo HiCache;
 
     /**
-     * Get HiCache缓存 
-     * @return HiCache HiCache缓存
+     * Get <p>HiCache缓存</p> 
+     * @return HiCache <p>HiCache缓存</p>
      */
     public HiCacheInfo getHiCache() {
         return this.HiCache;
     }
 
     /**
-     * Set HiCache缓存
-     * @param HiCache HiCache缓存
+     * Set <p>HiCache缓存</p>
+     * @param HiCache <p>HiCache缓存</p>
      */
     public void setHiCache(HiCacheInfo HiCache) {
         this.HiCache = HiCache;

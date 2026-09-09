@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCustomizeErrorPageResponse extends AbstractModel {
 
     /**
-    * 页面 ID。
+    * <p>自定义响应页面 ID。</p>
     */
     @SerializedName("PageId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCustomizeErrorPageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 页面 ID。 
-     * @return PageId 页面 ID。
+     * Get <p>自定义响应页面 ID。</p> 
+     * @return PageId <p>自定义响应页面 ID。</p>
      */
     public String getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 页面 ID。
-     * @param PageId 页面 ID。
+     * Set <p>自定义响应页面 ID。</p>
+     * @param PageId <p>自定义响应页面 ID。</p>
      */
     public void setPageId(String PageId) {
         this.PageId = PageId;

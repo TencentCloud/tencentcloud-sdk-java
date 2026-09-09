@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dataagent.v20250513.models;
+package com.tencentcloudapi.adp.v20260520.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSessionDetailsRequest extends AbstractModel {
+public class UserAgentReference extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>claw agent 运行态标识</p>
     */
-    @SerializedName("InstanceId")
+    @SerializedName("AgentId")
     @Expose
-    private String InstanceId;
+    private String AgentId;
 
     /**
-    * 会话ID
+    * <p>归属用户标识</p>
     */
-    @SerializedName("SessionId")
+    @SerializedName("UserId")
     @Expose
-    private String SessionId;
+    private String UserId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>claw agent 运行态标识</p> 
+     * @return AgentId <p>claw agent 运行态标识</p>
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getAgentId() {
+        return this.AgentId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>claw agent 运行态标识</p>
+     * @param AgentId <p>claw agent 运行态标识</p>
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
     }
 
     /**
-     * Get 会话ID 
-     * @return SessionId 会话ID
+     * Get <p>归属用户标识</p> 
+     * @return UserId <p>归属用户标识</p>
      */
-    public String getSessionId() {
-        return this.SessionId;
+    public String getUserId() {
+        return this.UserId;
     }
 
     /**
-     * Set 会话ID
-     * @param SessionId 会话ID
+     * Set <p>归属用户标识</p>
+     * @param UserId <p>归属用户标识</p>
      */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
-    public GetSessionDetailsRequest() {
+    public UserAgentReference() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSessionDetailsRequest(GetSessionDetailsRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public UserAgentReference(UserAgentReference source) {
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
         }
-        if (source.SessionId != null) {
-            this.SessionId = new String(source.SessionId);
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
         }
     }
 
@@ -90,8 +90,8 @@ public class GetSessionDetailsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

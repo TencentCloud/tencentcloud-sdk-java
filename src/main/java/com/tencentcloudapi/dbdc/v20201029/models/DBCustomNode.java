@@ -231,6 +231,13 @@ public class DBCustomNode extends AbstractModel {
     private String DisasterRecoverGroupId;
 
     /**
+    * <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+    */
+    @SerializedName("LatestRunningTaskType")
+    @Expose
+    private String LatestRunningTaskType;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -710,6 +717,22 @@ public class DBCustomNode extends AbstractModel {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
 
+    /**
+     * Get <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul> 
+     * @return LatestRunningTaskType <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+     */
+    public String getLatestRunningTaskType() {
+        return this.LatestRunningTaskType;
+    }
+
+    /**
+     * Set <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+     * @param LatestRunningTaskType <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+     */
+    public void setLatestRunningTaskType(String LatestRunningTaskType) {
+        this.LatestRunningTaskType = LatestRunningTaskType;
+    }
+
     public DBCustomNode() {
     }
 
@@ -814,6 +837,9 @@ public class DBCustomNode extends AbstractModel {
         if (source.DisasterRecoverGroupId != null) {
             this.DisasterRecoverGroupId = new String(source.DisasterRecoverGroupId);
         }
+        if (source.LatestRunningTaskType != null) {
+            this.LatestRunningTaskType = new String(source.LatestRunningTaskType);
+        }
     }
 
 
@@ -850,6 +876,7 @@ public class DBCustomNode extends AbstractModel {
         this.setParamSimple(map, prefix + "EniIP", this.EniIP);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+        this.setParamSimple(map, prefix + "LatestRunningTaskType", this.LatestRunningTaskType);
 
     }
 }

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeMongoDBProcessListRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 服务产品类型，支持值：mongodb
+    * <p>服务产品类型，支持值：mongodb</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 线程的ID，用于筛选线程列表。
+    * <p>线程的ID，用于筛选线程列表。</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 线程的操作主机地址，用于筛选线程列表。
+    * <p>线程的操作主机地址，用于筛选线程列表。</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
+    * <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
     */
     @SerializedName("DB")
     @Expose
     private String DB;
 
     /**
-    * 命令类型 ,如果是多个 使用 ','  分割
+    * <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+    * <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-    * 返回数量，默认20。
+    * <p>返回数量，默认20。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 服务产品类型，支持值：mongodb 
-     * @return Product 服务产品类型，支持值：mongodb
+     * Get <p>服务产品类型，支持值：mongodb</p> 
+     * @return Product <p>服务产品类型，支持值：mongodb</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值：mongodb
-     * @param Product 服务产品类型，支持值：mongodb
+     * Set <p>服务产品类型，支持值：mongodb</p>
+     * @param Product <p>服务产品类型，支持值：mongodb</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 线程的ID，用于筛选线程列表。 
-     * @return ID 线程的ID，用于筛选线程列表。
+     * Get <p>线程的ID，用于筛选线程列表。</p> 
+     * @return ID <p>线程的ID，用于筛选线程列表。</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 线程的ID，用于筛选线程列表。
-     * @param ID 线程的ID，用于筛选线程列表。
+     * Set <p>线程的ID，用于筛选线程列表。</p>
+     * @param ID <p>线程的ID，用于筛选线程列表。</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 线程的操作主机地址，用于筛选线程列表。 
-     * @return Host 线程的操作主机地址，用于筛选线程列表。
+     * Get <p>线程的操作主机地址，用于筛选线程列表。</p> 
+     * @return Host <p>线程的操作主机地址，用于筛选线程列表。</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 线程的操作主机地址，用于筛选线程列表。
-     * @param Host 线程的操作主机地址，用于筛选线程列表。
+     * Set <p>线程的操作主机地址，用于筛选线程列表。</p>
+     * @param Host <p>线程的操作主机地址，用于筛选线程列表。</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割 
-     * @return DB 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
+     * Get <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p> 
+     * @return DB <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
      */
     public String getDB() {
         return this.DB;
     }
 
     /**
-     * Set 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
-     * @param DB 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
+     * Set <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
+     * @param DB <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
      */
     public void setDB(String DB) {
         this.DB = DB;
     }
 
     /**
-     * Get 命令类型 ,如果是多个 使用 ','  分割 
-     * @return Type 命令类型 ,如果是多个 使用 ','  分割
+     * Get <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p> 
+     * @return Type <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 命令类型 ,如果是多个 使用 ','  分割
-     * @param Type 命令类型 ,如果是多个 使用 ','  分割
+     * Set <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
+     * @param Type <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。 
-     * @return Time 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+     * Get <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p> 
+     * @return Time <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
-     * @param Time 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+     * Set <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
+     * @param Time <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 返回数量，默认20。 
-     * @return Limit 返回数量，默认20。
+     * Get <p>返回数量，默认20。</p> 
+     * @return Limit <p>返回数量，默认20。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认20。
-     * @param Limit 返回数量，默认20。
+     * Set <p>返回数量，默认20。</p>
+     * @param Limit <p>返回数量，默认20。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

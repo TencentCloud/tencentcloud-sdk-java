@@ -45,6 +45,20 @@ public class VerifyScenePhotoRequest extends AbstractModel {
     private String ImageBase64;
 
     /**
+    * <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–2000 字符</p>
+    */
+    @SerializedName("ReasoningPrompt")
+    @Expose
+    private String ReasoningPrompt;
+
+    /**
+    * <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p>
+    */
+    @SerializedName("ReasoningConfig")
+    @Expose
+    private ReasoningConfig ReasoningConfig;
+
+    /**
      * Get <p>场景类型参数，如果场景无法细分请选用该大类的第一个子类，目前支持以下类型：<br><strong>经营场所照</strong><br>0101 门头照<br>0102 店内照<br>0103 流动经营照    </p><p><strong>车牌业务照</strong><br>0201 车牌</p> 
      * @return Scene <p>场景类型参数，如果场景无法细分请选用该大类的第一个子类，目前支持以下类型：<br><strong>经营场所照</strong><br>0101 门头照<br>0102 店内照<br>0103 流动经营照    </p><p><strong>车牌业务照</strong><br>0201 车牌</p>
      */
@@ -92,6 +106,38 @@ public class VerifyScenePhotoRequest extends AbstractModel {
         this.ImageBase64 = ImageBase64;
     }
 
+    /**
+     * Get <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–2000 字符</p> 
+     * @return ReasoningPrompt <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–2000 字符</p>
+     */
+    public String getReasoningPrompt() {
+        return this.ReasoningPrompt;
+    }
+
+    /**
+     * Set <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–2000 字符</p>
+     * @param ReasoningPrompt <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–2000 字符</p>
+     */
+    public void setReasoningPrompt(String ReasoningPrompt) {
+        this.ReasoningPrompt = ReasoningPrompt;
+    }
+
+    /**
+     * Get <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p> 
+     * @return ReasoningConfig <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p>
+     */
+    public ReasoningConfig getReasoningConfig() {
+        return this.ReasoningConfig;
+    }
+
+    /**
+     * Set <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p>
+     * @param ReasoningConfig <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p>
+     */
+    public void setReasoningConfig(ReasoningConfig ReasoningConfig) {
+        this.ReasoningConfig = ReasoningConfig;
+    }
+
     public VerifyScenePhotoRequest() {
     }
 
@@ -109,6 +155,12 @@ public class VerifyScenePhotoRequest extends AbstractModel {
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
         }
+        if (source.ReasoningPrompt != null) {
+            this.ReasoningPrompt = new String(source.ReasoningPrompt);
+        }
+        if (source.ReasoningConfig != null) {
+            this.ReasoningConfig = new ReasoningConfig(source.ReasoningConfig);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class VerifyScenePhotoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+        this.setParamSimple(map, prefix + "ReasoningPrompt", this.ReasoningPrompt);
+        this.setParamObj(map, prefix + "ReasoningConfig.", this.ReasoningConfig);
 
     }
 }

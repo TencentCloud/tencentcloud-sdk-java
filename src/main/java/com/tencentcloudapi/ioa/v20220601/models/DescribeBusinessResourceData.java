@@ -357,6 +357,132 @@ public class DescribeBusinessResourceData extends AbstractModel {
     private String DomainSuffix;
 
     /**
+    * <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+    */
+    @SerializedName("ConnectivityCheckSwitch")
+    @Expose
+    private Long ConnectivityCheckSwitch;
+
+    /**
+    * <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+    */
+    @SerializedName("ConnectivityCheckInterval")
+    @Expose
+    private Long ConnectivityCheckInterval;
+
+    /**
+    * <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+    */
+    @SerializedName("ConnectivityCheckIntervalUnit")
+    @Expose
+    private String ConnectivityCheckIntervalUnit;
+
+    /**
+    * <p>URL审计开关：0-关闭 1-开启，默认0</p>
+    */
+    @SerializedName("URLAuditState")
+    @Expose
+    private Long URLAuditState;
+
+    /**
+    * <p>URL审计证书ID列表，多个用分号分隔</p>
+    */
+    @SerializedName("URLAuditId")
+    @Expose
+    private String URLAuditId;
+
+    /**
+    * <p>URL审计路径，多个用分号分隔</p>
+    */
+    @SerializedName("URLPath")
+    @Expose
+    private String URLPath;
+
+    /**
+    * <p>检测方式：0-未检测 1-主动 2-流量</p>
+    */
+    @SerializedName("ReachableType")
+    @Expose
+    private Long ReachableType;
+
+    /**
+    * <p>API密钥名称</p>
+    */
+    @SerializedName("APISecretName")
+    @Expose
+    private String APISecretName;
+
+    /**
+    * <p>API密钥Key</p>
+    */
+    @SerializedName("APISecretKey")
+    @Expose
+    private String APISecretKey;
+
+    /**
+    * <p>是否为敏感资源：0-否 1-是</p>
+    */
+    @SerializedName("EnableSensitiveRes")
+    @Expose
+    private Long EnableSensitiveRes;
+
+    /**
+    * <p>用户接入IP限制开关：0-不启用 1-启用</p>
+    */
+    @SerializedName("EnableIPPolicy")
+    @Expose
+    private Long EnableIPPolicy;
+
+    /**
+    * <p>IP分组属性：0-白名单 1-黑名单</p>
+    */
+    @SerializedName("IPPolicyAttr")
+    @Expose
+    private Long IPPolicyAttr;
+
+    /**
+    * <p>IP分组ID列表</p>
+    */
+    @SerializedName("IPPolicyIds")
+    @Expose
+    private Long [] IPPolicyIds;
+
+    /**
+    * <p>IP分组名称（分号分隔）</p>
+    */
+    @SerializedName("IPPolicyNames")
+    @Expose
+    private String IPPolicyNames;
+
+    /**
+    * <p>访问浏览器规则开关：0-不启用 1-启用</p>
+    */
+    @SerializedName("EnableUserAgent")
+    @Expose
+    private Long EnableUserAgent;
+
+    /**
+    * <p>浏览器规则属性：0-白名单 1-黑名单</p>
+    */
+    @SerializedName("UserAgentAttr")
+    @Expose
+    private Long UserAgentAttr;
+
+    /**
+    * <p>浏览器规则ID列表</p>
+    */
+    @SerializedName("UserAgentIds")
+    @Expose
+    private String [] UserAgentIds;
+
+    /**
+    * <p>浏览器规则名称（分号分隔）</p>
+    */
+    @SerializedName("UserAgentNames")
+    @Expose
+    private String UserAgentNames;
+
+    /**
      * Get <p>业务资源id(只支持32位)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceId <p>业务资源id(只支持32位)</p>
@@ -1184,6 +1310,294 @@ public class DescribeBusinessResourceData extends AbstractModel {
         this.DomainSuffix = DomainSuffix;
     }
 
+    /**
+     * Get <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p> 
+     * @return ConnectivityCheckSwitch <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     */
+    public Long getConnectivityCheckSwitch() {
+        return this.ConnectivityCheckSwitch;
+    }
+
+    /**
+     * Set <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     * @param ConnectivityCheckSwitch <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     */
+    public void setConnectivityCheckSwitch(Long ConnectivityCheckSwitch) {
+        this.ConnectivityCheckSwitch = ConnectivityCheckSwitch;
+    }
+
+    /**
+     * Get <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p> 
+     * @return ConnectivityCheckInterval <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     */
+    public Long getConnectivityCheckInterval() {
+        return this.ConnectivityCheckInterval;
+    }
+
+    /**
+     * Set <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     * @param ConnectivityCheckInterval <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     */
+    public void setConnectivityCheckInterval(Long ConnectivityCheckInterval) {
+        this.ConnectivityCheckInterval = ConnectivityCheckInterval;
+    }
+
+    /**
+     * Get <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p> 
+     * @return ConnectivityCheckIntervalUnit <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     */
+    public String getConnectivityCheckIntervalUnit() {
+        return this.ConnectivityCheckIntervalUnit;
+    }
+
+    /**
+     * Set <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     * @param ConnectivityCheckIntervalUnit <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     */
+    public void setConnectivityCheckIntervalUnit(String ConnectivityCheckIntervalUnit) {
+        this.ConnectivityCheckIntervalUnit = ConnectivityCheckIntervalUnit;
+    }
+
+    /**
+     * Get <p>URL审计开关：0-关闭 1-开启，默认0</p> 
+     * @return URLAuditState <p>URL审计开关：0-关闭 1-开启，默认0</p>
+     */
+    public Long getURLAuditState() {
+        return this.URLAuditState;
+    }
+
+    /**
+     * Set <p>URL审计开关：0-关闭 1-开启，默认0</p>
+     * @param URLAuditState <p>URL审计开关：0-关闭 1-开启，默认0</p>
+     */
+    public void setURLAuditState(Long URLAuditState) {
+        this.URLAuditState = URLAuditState;
+    }
+
+    /**
+     * Get <p>URL审计证书ID列表，多个用分号分隔</p> 
+     * @return URLAuditId <p>URL审计证书ID列表，多个用分号分隔</p>
+     */
+    public String getURLAuditId() {
+        return this.URLAuditId;
+    }
+
+    /**
+     * Set <p>URL审计证书ID列表，多个用分号分隔</p>
+     * @param URLAuditId <p>URL审计证书ID列表，多个用分号分隔</p>
+     */
+    public void setURLAuditId(String URLAuditId) {
+        this.URLAuditId = URLAuditId;
+    }
+
+    /**
+     * Get <p>URL审计路径，多个用分号分隔</p> 
+     * @return URLPath <p>URL审计路径，多个用分号分隔</p>
+     */
+    public String getURLPath() {
+        return this.URLPath;
+    }
+
+    /**
+     * Set <p>URL审计路径，多个用分号分隔</p>
+     * @param URLPath <p>URL审计路径，多个用分号分隔</p>
+     */
+    public void setURLPath(String URLPath) {
+        this.URLPath = URLPath;
+    }
+
+    /**
+     * Get <p>检测方式：0-未检测 1-主动 2-流量</p> 
+     * @return ReachableType <p>检测方式：0-未检测 1-主动 2-流量</p>
+     */
+    public Long getReachableType() {
+        return this.ReachableType;
+    }
+
+    /**
+     * Set <p>检测方式：0-未检测 1-主动 2-流量</p>
+     * @param ReachableType <p>检测方式：0-未检测 1-主动 2-流量</p>
+     */
+    public void setReachableType(Long ReachableType) {
+        this.ReachableType = ReachableType;
+    }
+
+    /**
+     * Get <p>API密钥名称</p> 
+     * @return APISecretName <p>API密钥名称</p>
+     */
+    public String getAPISecretName() {
+        return this.APISecretName;
+    }
+
+    /**
+     * Set <p>API密钥名称</p>
+     * @param APISecretName <p>API密钥名称</p>
+     */
+    public void setAPISecretName(String APISecretName) {
+        this.APISecretName = APISecretName;
+    }
+
+    /**
+     * Get <p>API密钥Key</p> 
+     * @return APISecretKey <p>API密钥Key</p>
+     */
+    public String getAPISecretKey() {
+        return this.APISecretKey;
+    }
+
+    /**
+     * Set <p>API密钥Key</p>
+     * @param APISecretKey <p>API密钥Key</p>
+     */
+    public void setAPISecretKey(String APISecretKey) {
+        this.APISecretKey = APISecretKey;
+    }
+
+    /**
+     * Get <p>是否为敏感资源：0-否 1-是</p> 
+     * @return EnableSensitiveRes <p>是否为敏感资源：0-否 1-是</p>
+     */
+    public Long getEnableSensitiveRes() {
+        return this.EnableSensitiveRes;
+    }
+
+    /**
+     * Set <p>是否为敏感资源：0-否 1-是</p>
+     * @param EnableSensitiveRes <p>是否为敏感资源：0-否 1-是</p>
+     */
+    public void setEnableSensitiveRes(Long EnableSensitiveRes) {
+        this.EnableSensitiveRes = EnableSensitiveRes;
+    }
+
+    /**
+     * Get <p>用户接入IP限制开关：0-不启用 1-启用</p> 
+     * @return EnableIPPolicy <p>用户接入IP限制开关：0-不启用 1-启用</p>
+     */
+    public Long getEnableIPPolicy() {
+        return this.EnableIPPolicy;
+    }
+
+    /**
+     * Set <p>用户接入IP限制开关：0-不启用 1-启用</p>
+     * @param EnableIPPolicy <p>用户接入IP限制开关：0-不启用 1-启用</p>
+     */
+    public void setEnableIPPolicy(Long EnableIPPolicy) {
+        this.EnableIPPolicy = EnableIPPolicy;
+    }
+
+    /**
+     * Get <p>IP分组属性：0-白名单 1-黑名单</p> 
+     * @return IPPolicyAttr <p>IP分组属性：0-白名单 1-黑名单</p>
+     */
+    public Long getIPPolicyAttr() {
+        return this.IPPolicyAttr;
+    }
+
+    /**
+     * Set <p>IP分组属性：0-白名单 1-黑名单</p>
+     * @param IPPolicyAttr <p>IP分组属性：0-白名单 1-黑名单</p>
+     */
+    public void setIPPolicyAttr(Long IPPolicyAttr) {
+        this.IPPolicyAttr = IPPolicyAttr;
+    }
+
+    /**
+     * Get <p>IP分组ID列表</p> 
+     * @return IPPolicyIds <p>IP分组ID列表</p>
+     */
+    public Long [] getIPPolicyIds() {
+        return this.IPPolicyIds;
+    }
+
+    /**
+     * Set <p>IP分组ID列表</p>
+     * @param IPPolicyIds <p>IP分组ID列表</p>
+     */
+    public void setIPPolicyIds(Long [] IPPolicyIds) {
+        this.IPPolicyIds = IPPolicyIds;
+    }
+
+    /**
+     * Get <p>IP分组名称（分号分隔）</p> 
+     * @return IPPolicyNames <p>IP分组名称（分号分隔）</p>
+     */
+    public String getIPPolicyNames() {
+        return this.IPPolicyNames;
+    }
+
+    /**
+     * Set <p>IP分组名称（分号分隔）</p>
+     * @param IPPolicyNames <p>IP分组名称（分号分隔）</p>
+     */
+    public void setIPPolicyNames(String IPPolicyNames) {
+        this.IPPolicyNames = IPPolicyNames;
+    }
+
+    /**
+     * Get <p>访问浏览器规则开关：0-不启用 1-启用</p> 
+     * @return EnableUserAgent <p>访问浏览器规则开关：0-不启用 1-启用</p>
+     */
+    public Long getEnableUserAgent() {
+        return this.EnableUserAgent;
+    }
+
+    /**
+     * Set <p>访问浏览器规则开关：0-不启用 1-启用</p>
+     * @param EnableUserAgent <p>访问浏览器规则开关：0-不启用 1-启用</p>
+     */
+    public void setEnableUserAgent(Long EnableUserAgent) {
+        this.EnableUserAgent = EnableUserAgent;
+    }
+
+    /**
+     * Get <p>浏览器规则属性：0-白名单 1-黑名单</p> 
+     * @return UserAgentAttr <p>浏览器规则属性：0-白名单 1-黑名单</p>
+     */
+    public Long getUserAgentAttr() {
+        return this.UserAgentAttr;
+    }
+
+    /**
+     * Set <p>浏览器规则属性：0-白名单 1-黑名单</p>
+     * @param UserAgentAttr <p>浏览器规则属性：0-白名单 1-黑名单</p>
+     */
+    public void setUserAgentAttr(Long UserAgentAttr) {
+        this.UserAgentAttr = UserAgentAttr;
+    }
+
+    /**
+     * Get <p>浏览器规则ID列表</p> 
+     * @return UserAgentIds <p>浏览器规则ID列表</p>
+     */
+    public String [] getUserAgentIds() {
+        return this.UserAgentIds;
+    }
+
+    /**
+     * Set <p>浏览器规则ID列表</p>
+     * @param UserAgentIds <p>浏览器规则ID列表</p>
+     */
+    public void setUserAgentIds(String [] UserAgentIds) {
+        this.UserAgentIds = UserAgentIds;
+    }
+
+    /**
+     * Get <p>浏览器规则名称（分号分隔）</p> 
+     * @return UserAgentNames <p>浏览器规则名称（分号分隔）</p>
+     */
+    public String getUserAgentNames() {
+        return this.UserAgentNames;
+    }
+
+    /**
+     * Set <p>浏览器规则名称（分号分隔）</p>
+     * @param UserAgentNames <p>浏览器规则名称（分号分隔）</p>
+     */
+    public void setUserAgentNames(String UserAgentNames) {
+        this.UserAgentNames = UserAgentNames;
+    }
+
     public DescribeBusinessResourceData() {
     }
 
@@ -1321,6 +1735,66 @@ public class DescribeBusinessResourceData extends AbstractModel {
         if (source.DomainSuffix != null) {
             this.DomainSuffix = new String(source.DomainSuffix);
         }
+        if (source.ConnectivityCheckSwitch != null) {
+            this.ConnectivityCheckSwitch = new Long(source.ConnectivityCheckSwitch);
+        }
+        if (source.ConnectivityCheckInterval != null) {
+            this.ConnectivityCheckInterval = new Long(source.ConnectivityCheckInterval);
+        }
+        if (source.ConnectivityCheckIntervalUnit != null) {
+            this.ConnectivityCheckIntervalUnit = new String(source.ConnectivityCheckIntervalUnit);
+        }
+        if (source.URLAuditState != null) {
+            this.URLAuditState = new Long(source.URLAuditState);
+        }
+        if (source.URLAuditId != null) {
+            this.URLAuditId = new String(source.URLAuditId);
+        }
+        if (source.URLPath != null) {
+            this.URLPath = new String(source.URLPath);
+        }
+        if (source.ReachableType != null) {
+            this.ReachableType = new Long(source.ReachableType);
+        }
+        if (source.APISecretName != null) {
+            this.APISecretName = new String(source.APISecretName);
+        }
+        if (source.APISecretKey != null) {
+            this.APISecretKey = new String(source.APISecretKey);
+        }
+        if (source.EnableSensitiveRes != null) {
+            this.EnableSensitiveRes = new Long(source.EnableSensitiveRes);
+        }
+        if (source.EnableIPPolicy != null) {
+            this.EnableIPPolicy = new Long(source.EnableIPPolicy);
+        }
+        if (source.IPPolicyAttr != null) {
+            this.IPPolicyAttr = new Long(source.IPPolicyAttr);
+        }
+        if (source.IPPolicyIds != null) {
+            this.IPPolicyIds = new Long[source.IPPolicyIds.length];
+            for (int i = 0; i < source.IPPolicyIds.length; i++) {
+                this.IPPolicyIds[i] = new Long(source.IPPolicyIds[i]);
+            }
+        }
+        if (source.IPPolicyNames != null) {
+            this.IPPolicyNames = new String(source.IPPolicyNames);
+        }
+        if (source.EnableUserAgent != null) {
+            this.EnableUserAgent = new Long(source.EnableUserAgent);
+        }
+        if (source.UserAgentAttr != null) {
+            this.UserAgentAttr = new Long(source.UserAgentAttr);
+        }
+        if (source.UserAgentIds != null) {
+            this.UserAgentIds = new String[source.UserAgentIds.length];
+            for (int i = 0; i < source.UserAgentIds.length; i++) {
+                this.UserAgentIds[i] = new String(source.UserAgentIds[i]);
+            }
+        }
+        if (source.UserAgentNames != null) {
+            this.UserAgentNames = new String(source.UserAgentNames);
+        }
     }
 
 
@@ -1370,6 +1844,24 @@ public class DescribeBusinessResourceData extends AbstractModel {
         this.setParamSimple(map, prefix + "WebGwNoAuth", this.WebGwNoAuth);
         this.setParamSimple(map, prefix + "ConnectorGroupType", this.ConnectorGroupType);
         this.setParamSimple(map, prefix + "DomainSuffix", this.DomainSuffix);
+        this.setParamSimple(map, prefix + "ConnectivityCheckSwitch", this.ConnectivityCheckSwitch);
+        this.setParamSimple(map, prefix + "ConnectivityCheckInterval", this.ConnectivityCheckInterval);
+        this.setParamSimple(map, prefix + "ConnectivityCheckIntervalUnit", this.ConnectivityCheckIntervalUnit);
+        this.setParamSimple(map, prefix + "URLAuditState", this.URLAuditState);
+        this.setParamSimple(map, prefix + "URLAuditId", this.URLAuditId);
+        this.setParamSimple(map, prefix + "URLPath", this.URLPath);
+        this.setParamSimple(map, prefix + "ReachableType", this.ReachableType);
+        this.setParamSimple(map, prefix + "APISecretName", this.APISecretName);
+        this.setParamSimple(map, prefix + "APISecretKey", this.APISecretKey);
+        this.setParamSimple(map, prefix + "EnableSensitiveRes", this.EnableSensitiveRes);
+        this.setParamSimple(map, prefix + "EnableIPPolicy", this.EnableIPPolicy);
+        this.setParamSimple(map, prefix + "IPPolicyAttr", this.IPPolicyAttr);
+        this.setParamArraySimple(map, prefix + "IPPolicyIds.", this.IPPolicyIds);
+        this.setParamSimple(map, prefix + "IPPolicyNames", this.IPPolicyNames);
+        this.setParamSimple(map, prefix + "EnableUserAgent", this.EnableUserAgent);
+        this.setParamSimple(map, prefix + "UserAgentAttr", this.UserAgentAttr);
+        this.setParamArraySimple(map, prefix + "UserAgentIds.", this.UserAgentIds);
+        this.setParamSimple(map, prefix + "UserAgentNames", this.UserAgentNames);
 
     }
 }

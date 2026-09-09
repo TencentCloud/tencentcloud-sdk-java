@@ -136,7 +136,7 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean HideSignCodeAfterStart;
 
     /**
-    * <p>发起过程中是否保存草稿</p>
+    * <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过ChannelCreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">ChannelCreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
     */
     @SerializedName("NeedFlowDraft")
     @Expose
@@ -441,16 +441,16 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get <p>发起过程中是否保存草稿</p> 
-     * @return NeedFlowDraft <p>发起过程中是否保存草稿</p>
+     * Get <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过ChannelCreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">ChannelCreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol> 
+     * @return NeedFlowDraft <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过ChannelCreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">ChannelCreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
      */
     public Boolean getNeedFlowDraft() {
         return this.NeedFlowDraft;
     }
 
     /**
-     * Set <p>发起过程中是否保存草稿</p>
-     * @param NeedFlowDraft <p>发起过程中是否保存草稿</p>
+     * Set <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过ChannelCreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">ChannelCreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
+     * @param NeedFlowDraft <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过ChannelCreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">ChannelCreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
      */
     public void setNeedFlowDraft(Boolean NeedFlowDraft) {
         this.NeedFlowDraft = NeedFlowDraft;

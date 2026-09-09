@@ -24,302 +24,279 @@ import java.util.HashMap;
 public class CreateWorkspaceRequest extends AbstractModel {
 
     /**
-    * 工作空间名称, 长度限制 2~64
+    * <p>工作空间名称, 长度限制 2~64</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 工作空间描述, 长度限制 0~255
+    * <p>工作空间描述, 长度限制 0~255</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
+    * <p>工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。</p>
     */
     @SerializedName("Specs")
     @Expose
     private String Specs;
 
     /**
-    * 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
+    * <p>工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255</p>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * Git 仓库. 工作空间启动时会自动克隆该仓库
+    * <p>Git 仓库. 工作空间启动时会自动克隆该仓库</p>
     */
     @SerializedName("Repository")
     @Expose
     private GitRepository Repository;
 
     /**
-    * 环境变量. 会被注入到工作空间中
+    * <p>环境变量. 会被注入到工作空间中</p>
     */
     @SerializedName("Envs")
     @Expose
     private Env [] Envs;
 
     /**
-    * 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
+    * <p>预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10</p>
     */
     @SerializedName("Extensions")
     @Expose
     private String [] Extensions;
 
     /**
-    * 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+    * <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
     */
     @SerializedName("Lifecycle")
     @Expose
     private LifeCycle Lifecycle;
 
     /**
-    * 应用名称
+    * <p>应用名称</p>
     */
     @SerializedName("TenantAppId")
     @Expose
     private Long TenantAppId;
 
     /**
-    * 用户UIN
+    * <p>用户UIN</p>
     */
     @SerializedName("TenantUin")
     @Expose
     private String TenantUin;
 
     /**
-    * VPCID
+    * <p>VPCID</p>
     */
     @SerializedName("TenantUniqVpcId")
     @Expose
     private String TenantUniqVpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("TenantSubnetId")
     @Expose
     private String TenantSubnetId;
 
     /**
-    * 地域
-    */
-    @SerializedName("Region")
-    @Expose
-    private String Region;
-
-    /**
-     * Get 工作空间名称, 长度限制 2~64 
-     * @return Name 工作空间名称, 长度限制 2~64
+     * Get <p>工作空间名称, 长度限制 2~64</p> 
+     * @return Name <p>工作空间名称, 长度限制 2~64</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 工作空间名称, 长度限制 2~64
-     * @param Name 工作空间名称, 长度限制 2~64
+     * Set <p>工作空间名称, 长度限制 2~64</p>
+     * @param Name <p>工作空间名称, 长度限制 2~64</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 工作空间描述, 长度限制 0~255 
-     * @return Description 工作空间描述, 长度限制 0~255
+     * Get <p>工作空间描述, 长度限制 0~255</p> 
+     * @return Description <p>工作空间描述, 长度限制 0~255</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 工作空间描述, 长度限制 0~255
-     * @param Description 工作空间描述, 长度限制 0~255
+     * Set <p>工作空间描述, 长度限制 0~255</p>
+     * @param Description <p>工作空间描述, 长度限制 0~255</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。 
-     * @return Specs 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
+     * Get <p>工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。</p> 
+     * @return Specs <p>工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。</p>
      */
     public String getSpecs() {
         return this.Specs;
     }
 
     /**
-     * Set 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
-     * @param Specs 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
+     * Set <p>工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。</p>
+     * @param Specs <p>工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。</p>
      */
     public void setSpecs(String Specs) {
         this.Specs = Specs;
     }
 
     /**
-     * Get 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255 
-     * @return Image 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
+     * Get <p>工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255</p> 
+     * @return Image <p>工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
-     * @param Image 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
+     * Set <p>工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255</p>
+     * @param Image <p>工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255</p>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get Git 仓库. 工作空间启动时会自动克隆该仓库 
-     * @return Repository Git 仓库. 工作空间启动时会自动克隆该仓库
+     * Get <p>Git 仓库. 工作空间启动时会自动克隆该仓库</p> 
+     * @return Repository <p>Git 仓库. 工作空间启动时会自动克隆该仓库</p>
      */
     public GitRepository getRepository() {
         return this.Repository;
     }
 
     /**
-     * Set Git 仓库. 工作空间启动时会自动克隆该仓库
-     * @param Repository Git 仓库. 工作空间启动时会自动克隆该仓库
+     * Set <p>Git 仓库. 工作空间启动时会自动克隆该仓库</p>
+     * @param Repository <p>Git 仓库. 工作空间启动时会自动克隆该仓库</p>
      */
     public void setRepository(GitRepository Repository) {
         this.Repository = Repository;
     }
 
     /**
-     * Get 环境变量. 会被注入到工作空间中 
-     * @return Envs 环境变量. 会被注入到工作空间中
+     * Get <p>环境变量. 会被注入到工作空间中</p> 
+     * @return Envs <p>环境变量. 会被注入到工作空间中</p>
      */
     public Env [] getEnvs() {
         return this.Envs;
     }
 
     /**
-     * Set 环境变量. 会被注入到工作空间中
-     * @param Envs 环境变量. 会被注入到工作空间中
+     * Set <p>环境变量. 会被注入到工作空间中</p>
+     * @param Envs <p>环境变量. 会被注入到工作空间中</p>
      */
     public void setEnvs(Env [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10 
-     * @return Extensions 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
+     * Get <p>预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10</p> 
+     * @return Extensions <p>预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10</p>
      */
     public String [] getExtensions() {
         return this.Extensions;
     }
 
     /**
-     * Set 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
-     * @param Extensions 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
+     * Set <p>预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10</p>
+     * @param Extensions <p>预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10</p>
      */
     public void setExtensions(String [] Extensions) {
         this.Extensions = Extensions;
     }
 
     /**
-     * Get 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.  
-     * @return Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * Get <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p> 
+     * @return Lifecycle <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
      */
     public LifeCycle getLifecycle() {
         return this.Lifecycle;
     }
 
     /**
-     * Set 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
-     * @param Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * Set <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
+     * @param Lifecycle <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
      */
     public void setLifecycle(LifeCycle Lifecycle) {
         this.Lifecycle = Lifecycle;
     }
 
     /**
-     * Get 应用名称 
-     * @return TenantAppId 应用名称
+     * Get <p>应用名称</p> 
+     * @return TenantAppId <p>应用名称</p>
      */
     public Long getTenantAppId() {
         return this.TenantAppId;
     }
 
     /**
-     * Set 应用名称
-     * @param TenantAppId 应用名称
+     * Set <p>应用名称</p>
+     * @param TenantAppId <p>应用名称</p>
      */
     public void setTenantAppId(Long TenantAppId) {
         this.TenantAppId = TenantAppId;
     }
 
     /**
-     * Get 用户UIN 
-     * @return TenantUin 用户UIN
+     * Get <p>用户UIN</p> 
+     * @return TenantUin <p>用户UIN</p>
      */
     public String getTenantUin() {
         return this.TenantUin;
     }
 
     /**
-     * Set 用户UIN
-     * @param TenantUin 用户UIN
+     * Set <p>用户UIN</p>
+     * @param TenantUin <p>用户UIN</p>
      */
     public void setTenantUin(String TenantUin) {
         this.TenantUin = TenantUin;
     }
 
     /**
-     * Get VPCID 
-     * @return TenantUniqVpcId VPCID
+     * Get <p>VPCID</p> 
+     * @return TenantUniqVpcId <p>VPCID</p>
      */
     public String getTenantUniqVpcId() {
         return this.TenantUniqVpcId;
     }
 
     /**
-     * Set VPCID
-     * @param TenantUniqVpcId VPCID
+     * Set <p>VPCID</p>
+     * @param TenantUniqVpcId <p>VPCID</p>
      */
     public void setTenantUniqVpcId(String TenantUniqVpcId) {
         this.TenantUniqVpcId = TenantUniqVpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return TenantSubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return TenantSubnetId <p>子网ID</p>
      */
     public String getTenantSubnetId() {
         return this.TenantSubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param TenantSubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param TenantSubnetId <p>子网ID</p>
      */
     public void setTenantSubnetId(String TenantSubnetId) {
         this.TenantSubnetId = TenantSubnetId;
-    }
-
-    /**
-     * Get 地域 
-     * @return Region 地域
-     */
-    public String getRegion() {
-        return this.Region;
-    }
-
-    /**
-     * Set 地域
-     * @param Region 地域
-     */
-    public void setRegion(String Region) {
-        this.Region = Region;
     }
 
     public CreateWorkspaceRequest() {
@@ -372,9 +349,6 @@ public class CreateWorkspaceRequest extends AbstractModel {
         if (source.TenantSubnetId != null) {
             this.TenantSubnetId = new String(source.TenantSubnetId);
         }
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
-        }
     }
 
 
@@ -394,7 +368,6 @@ public class CreateWorkspaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TenantUin", this.TenantUin);
         this.setParamSimple(map, prefix + "TenantUniqVpcId", this.TenantUniqVpcId);
         this.setParamSimple(map, prefix + "TenantSubnetId", this.TenantSubnetId);
-        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

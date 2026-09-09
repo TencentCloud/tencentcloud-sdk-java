@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class TemplateUserFlowType extends AbstractModel {
 
     /**
-    * 合同类型id
+    * <p>合同类型id</p>
     */
     @SerializedName("UserFlowTypeId")
     @Expose
     private String UserFlowTypeId;
 
     /**
-    * 合同类型名称
+    * <p>合同类型名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 合同类型的具体描述
+    * <p>合同类型的具体描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 每个合同类型绑定的模板数量
+    * <p>每个合同类型绑定的模板数量</p>
     */
     @SerializedName("TemplateNum")
     @Expose
     private Long TemplateNum;
 
     /**
-     * Get 合同类型id 
-     * @return UserFlowTypeId 合同类型id
+    * <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+     * Get <p>合同类型id</p> 
+     * @return UserFlowTypeId <p>合同类型id</p>
      */
     public String getUserFlowTypeId() {
         return this.UserFlowTypeId;
     }
 
     /**
-     * Set 合同类型id
-     * @param UserFlowTypeId 合同类型id
+     * Set <p>合同类型id</p>
+     * @param UserFlowTypeId <p>合同类型id</p>
      */
     public void setUserFlowTypeId(String UserFlowTypeId) {
         this.UserFlowTypeId = UserFlowTypeId;
     }
 
     /**
-     * Get 合同类型名称 
-     * @return Name 合同类型名称
+     * Get <p>合同类型名称</p> 
+     * @return Name <p>合同类型名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 合同类型名称
-     * @param Name 合同类型名称
+     * Set <p>合同类型名称</p>
+     * @param Name <p>合同类型名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 合同类型的具体描述 
-     * @return Description 合同类型的具体描述
+     * Get <p>合同类型的具体描述</p> 
+     * @return Description <p>合同类型的具体描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 合同类型的具体描述
-     * @param Description 合同类型的具体描述
+     * Set <p>合同类型的具体描述</p>
+     * @param Description <p>合同类型的具体描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 每个合同类型绑定的模板数量 
-     * @return TemplateNum 每个合同类型绑定的模板数量
+     * Get <p>每个合同类型绑定的模板数量</p> 
+     * @return TemplateNum <p>每个合同类型绑定的模板数量</p>
      */
     public Long getTemplateNum() {
         return this.TemplateNum;
     }
 
     /**
-     * Set 每个合同类型绑定的模板数量
-     * @param TemplateNum 每个合同类型绑定的模板数量
+     * Set <p>每个合同类型绑定的模板数量</p>
+     * @param TemplateNum <p>每个合同类型绑定的模板数量</p>
      */
     public void setTemplateNum(Long TemplateNum) {
         this.TemplateNum = TemplateNum;
+    }
+
+    /**
+     * Get <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul> 
+     * @return Status <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+     * @param Status <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     public TemplateUserFlowType() {
@@ -135,6 +158,9 @@ public class TemplateUserFlowType extends AbstractModel {
         if (source.TemplateNum != null) {
             this.TemplateNum = new Long(source.TemplateNum);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class TemplateUserFlowType extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TemplateNum", this.TemplateNum);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

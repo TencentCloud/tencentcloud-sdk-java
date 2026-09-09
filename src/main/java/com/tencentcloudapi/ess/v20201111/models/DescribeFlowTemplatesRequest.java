@@ -101,6 +101,13 @@ public class DescribeFlowTemplatesRequest extends AbstractModel {
     private Boolean WithPreviewUrl;
 
     /**
+    * <p>是否在模板预览页面展示模板控件。<br><br><ul><li><strong>false</strong>：不展示（默认），返回嵌入式预览链接，预览页面仅显示模板文件内容<br><img src="https://qcloudimg.tencent-cloud.cn/raw/7524b0fba5ad2b83a53ee9d7d486d233.png" alt="ShowTemplateControls=false"></li><li><strong>true</strong>：展示，返回嵌入式预览链接，预览页面在文件上叠加展示模板中的填写控件与签署控件，并增加模拟签署的特性。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/ff1b707408f9b3a7ef2e39b8ad659135.png" alt="ShowTemplateControls=true"></li></ul><br>注：仅在 <strong>WithPreviewUrl=true</strong> 时生效；当 <strong>WithPreviewUrl=false</strong> 时不生成预览链接，本参数被忽略。<br><br><strong>适用场景</strong>：当业务方需要在发起合同前预览模板中各角色的填写控件与签署控件的位置和布局，以便确认用户使用模板的控件配置是否正确时，可将此参数设置为 true。<br>示例值：false</p>
+    */
+    @SerializedName("ShowPreviewComponents")
+    @Expose
+    private Boolean ShowPreviewComponents;
+
+    /**
      * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
      * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
@@ -288,6 +295,22 @@ public class DescribeFlowTemplatesRequest extends AbstractModel {
         this.WithPreviewUrl = WithPreviewUrl;
     }
 
+    /**
+     * Get <p>是否在模板预览页面展示模板控件。<br><br><ul><li><strong>false</strong>：不展示（默认），返回嵌入式预览链接，预览页面仅显示模板文件内容<br><img src="https://qcloudimg.tencent-cloud.cn/raw/7524b0fba5ad2b83a53ee9d7d486d233.png" alt="ShowTemplateControls=false"></li><li><strong>true</strong>：展示，返回嵌入式预览链接，预览页面在文件上叠加展示模板中的填写控件与签署控件，并增加模拟签署的特性。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/ff1b707408f9b3a7ef2e39b8ad659135.png" alt="ShowTemplateControls=true"></li></ul><br>注：仅在 <strong>WithPreviewUrl=true</strong> 时生效；当 <strong>WithPreviewUrl=false</strong> 时不生成预览链接，本参数被忽略。<br><br><strong>适用场景</strong>：当业务方需要在发起合同前预览模板中各角色的填写控件与签署控件的位置和布局，以便确认用户使用模板的控件配置是否正确时，可将此参数设置为 true。<br>示例值：false</p> 
+     * @return ShowPreviewComponents <p>是否在模板预览页面展示模板控件。<br><br><ul><li><strong>false</strong>：不展示（默认），返回嵌入式预览链接，预览页面仅显示模板文件内容<br><img src="https://qcloudimg.tencent-cloud.cn/raw/7524b0fba5ad2b83a53ee9d7d486d233.png" alt="ShowTemplateControls=false"></li><li><strong>true</strong>：展示，返回嵌入式预览链接，预览页面在文件上叠加展示模板中的填写控件与签署控件，并增加模拟签署的特性。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/ff1b707408f9b3a7ef2e39b8ad659135.png" alt="ShowTemplateControls=true"></li></ul><br>注：仅在 <strong>WithPreviewUrl=true</strong> 时生效；当 <strong>WithPreviewUrl=false</strong> 时不生成预览链接，本参数被忽略。<br><br><strong>适用场景</strong>：当业务方需要在发起合同前预览模板中各角色的填写控件与签署控件的位置和布局，以便确认用户使用模板的控件配置是否正确时，可将此参数设置为 true。<br>示例值：false</p>
+     */
+    public Boolean getShowPreviewComponents() {
+        return this.ShowPreviewComponents;
+    }
+
+    /**
+     * Set <p>是否在模板预览页面展示模板控件。<br><br><ul><li><strong>false</strong>：不展示（默认），返回嵌入式预览链接，预览页面仅显示模板文件内容<br><img src="https://qcloudimg.tencent-cloud.cn/raw/7524b0fba5ad2b83a53ee9d7d486d233.png" alt="ShowTemplateControls=false"></li><li><strong>true</strong>：展示，返回嵌入式预览链接，预览页面在文件上叠加展示模板中的填写控件与签署控件，并增加模拟签署的特性。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/ff1b707408f9b3a7ef2e39b8ad659135.png" alt="ShowTemplateControls=true"></li></ul><br>注：仅在 <strong>WithPreviewUrl=true</strong> 时生效；当 <strong>WithPreviewUrl=false</strong> 时不生成预览链接，本参数被忽略。<br><br><strong>适用场景</strong>：当业务方需要在发起合同前预览模板中各角色的填写控件与签署控件的位置和布局，以便确认用户使用模板的控件配置是否正确时，可将此参数设置为 true。<br>示例值：false</p>
+     * @param ShowPreviewComponents <p>是否在模板预览页面展示模板控件。<br><br><ul><li><strong>false</strong>：不展示（默认），返回嵌入式预览链接，预览页面仅显示模板文件内容<br><img src="https://qcloudimg.tencent-cloud.cn/raw/7524b0fba5ad2b83a53ee9d7d486d233.png" alt="ShowTemplateControls=false"></li><li><strong>true</strong>：展示，返回嵌入式预览链接，预览页面在文件上叠加展示模板中的填写控件与签署控件，并增加模拟签署的特性。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/ff1b707408f9b3a7ef2e39b8ad659135.png" alt="ShowTemplateControls=true"></li></ul><br>注：仅在 <strong>WithPreviewUrl=true</strong> 时生效；当 <strong>WithPreviewUrl=false</strong> 时不生成预览链接，本参数被忽略。<br><br><strong>适用场景</strong>：当业务方需要在发起合同前预览模板中各角色的填写控件与签署控件的位置和布局，以便确认用户使用模板的控件配置是否正确时，可将此参数设置为 true。<br>示例值：false</p>
+     */
+    public void setShowPreviewComponents(Boolean ShowPreviewComponents) {
+        this.ShowPreviewComponents = ShowPreviewComponents;
+    }
+
     public DescribeFlowTemplatesRequest() {
     }
 
@@ -332,6 +355,9 @@ public class DescribeFlowTemplatesRequest extends AbstractModel {
         if (source.WithPreviewUrl != null) {
             this.WithPreviewUrl = new Boolean(source.WithPreviewUrl);
         }
+        if (source.ShowPreviewComponents != null) {
+            this.ShowPreviewComponents = new Boolean(source.ShowPreviewComponents);
+        }
     }
 
 
@@ -350,6 +376,7 @@ public class DescribeFlowTemplatesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
+        this.setParamSimple(map, prefix + "ShowPreviewComponents", this.ShowPreviewComponents);
 
     }
 }

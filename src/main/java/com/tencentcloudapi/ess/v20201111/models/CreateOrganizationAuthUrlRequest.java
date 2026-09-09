@@ -66,7 +66,7 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     private String AutoJumpUrl;
 
     /**
-    * <p>营业执照企业地址</p>
+    * <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
     */
     @SerializedName("OrganizationAddress")
     @Expose
@@ -337,16 +337,16 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>营业执照企业地址</p> 
-     * @return OrganizationAddress <p>营业执照企业地址</p>
+     * Get <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p> 
+     * @return OrganizationAddress <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
      */
     public String getOrganizationAddress() {
         return this.OrganizationAddress;
     }
 
     /**
-     * Set <p>营业执照企业地址</p>
-     * @param OrganizationAddress <p>营业执照企业地址</p>
+     * Set <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
+     * @param OrganizationAddress <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
      */
     public void setOrganizationAddress(String OrganizationAddress) {
         this.OrganizationAddress = OrganizationAddress;

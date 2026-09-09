@@ -160,17 +160,6 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
-     *获取用户会话记录详情列表
-     * @param req GetSessionDetailsRequest
-     * @return GetSessionDetailsResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetSessionDetailsResponse GetSessionDetails(GetSessionDetailsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetSessionDetails", GetSessionDetailsResponse.class);
-    }
-
-    /**
      *查询上传任务
      * @param req GetUploadJobDetailsRequest
      * @return GetUploadJobDetailsResponse
@@ -267,6 +256,17 @@ public class DataagentClient extends AbstractClient{
     public QueryUserAuthorityResponse QueryUserAuthority(QueryUserAuthorityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryUserAuthority", QueryUserAuthorityResponse.class);
+    }
+
+    /**
+     *查询用户会话详情
+     * @param req QueryUserSessionDetailRequest
+     * @return QueryUserSessionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryUserSessionDetailResponse QueryUserSessionDetail(QueryUserSessionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryUserSessionDetail", QueryUserSessionDetailResponse.class);
     }
 
     /**

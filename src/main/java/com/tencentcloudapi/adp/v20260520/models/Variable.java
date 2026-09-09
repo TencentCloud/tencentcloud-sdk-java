@@ -45,7 +45,7 @@ public class Variable extends AbstractModel {
     private String Description;
 
     /**
-    * <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+    * <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
     */
     @SerializedName("ModuleType")
     @Expose
@@ -85,6 +85,20 @@ public class Variable extends AbstractModel {
     @SerializedName("EndpointList")
     @Expose
     private String [] EndpointList;
+
+    /**
+    * <p>是否内置变量</p>
+    */
+    @SerializedName("IsBuiltin")
+    @Expose
+    private Boolean IsBuiltin;
+
+    /**
+    * <p>是否可注入到沙箱环境</p>
+    */
+    @SerializedName("EnableSandbox")
+    @Expose
+    private Boolean EnableSandbox;
 
     /**
      * Get <p>默认文件名称</p> 
@@ -135,16 +149,16 @@ public class Variable extends AbstractModel {
     }
 
     /**
-     * Get <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p> 
-     * @return ModuleType <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+     * Get <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul> 
+     * @return ModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public Long getModuleType() {
         return this.ModuleType;
     }
 
     /**
-     * Set <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
-     * @param ModuleType <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+     * Set <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
+     * @param ModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public void setModuleType(Long ModuleType) {
         this.ModuleType = ModuleType;
@@ -230,6 +244,38 @@ public class Variable extends AbstractModel {
         this.EndpointList = EndpointList;
     }
 
+    /**
+     * Get <p>是否内置变量</p> 
+     * @return IsBuiltin <p>是否内置变量</p>
+     */
+    public Boolean getIsBuiltin() {
+        return this.IsBuiltin;
+    }
+
+    /**
+     * Set <p>是否内置变量</p>
+     * @param IsBuiltin <p>是否内置变量</p>
+     */
+    public void setIsBuiltin(Boolean IsBuiltin) {
+        this.IsBuiltin = IsBuiltin;
+    }
+
+    /**
+     * Get <p>是否可注入到沙箱环境</p> 
+     * @return EnableSandbox <p>是否可注入到沙箱环境</p>
+     */
+    public Boolean getEnableSandbox() {
+        return this.EnableSandbox;
+    }
+
+    /**
+     * Set <p>是否可注入到沙箱环境</p>
+     * @param EnableSandbox <p>是否可注入到沙箱环境</p>
+     */
+    public void setEnableSandbox(Boolean EnableSandbox) {
+        this.EnableSandbox = EnableSandbox;
+    }
+
     public Variable() {
     }
 
@@ -268,6 +314,12 @@ public class Variable extends AbstractModel {
                 this.EndpointList[i] = new String(source.EndpointList[i]);
             }
         }
+        if (source.IsBuiltin != null) {
+            this.IsBuiltin = new Boolean(source.IsBuiltin);
+        }
+        if (source.EnableSandbox != null) {
+            this.EnableSandbox = new Boolean(source.EnableSandbox);
+        }
     }
 
 
@@ -284,6 +336,8 @@ public class Variable extends AbstractModel {
         this.setParamSimple(map, prefix + "VariableId", this.VariableId);
         this.setParamSimple(map, prefix + "EnableEndpoints", this.EnableEndpoints);
         this.setParamArraySimple(map, prefix + "EndpointList.", this.EndpointList);
+        this.setParamSimple(map, prefix + "IsBuiltin", this.IsBuiltin);
+        this.setParamSimple(map, prefix + "EnableSandbox", this.EnableSandbox);
 
     }
 }

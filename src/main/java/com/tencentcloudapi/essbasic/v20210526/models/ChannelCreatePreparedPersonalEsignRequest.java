@@ -52,13 +52,6 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String SealName;
 
     /**
-    * <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
-    */
-    @SerializedName("SealImage")
-    @Expose
-    private String SealImage;
-
-    /**
     * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
@@ -73,13 +66,6 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String IdCardType;
 
     /**
-    * <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
-    */
-    @SerializedName("SealImageCompress")
-    @Expose
-    private Boolean SealImageCompress;
-
-    /**
     * <p>手机号码；当需要开通自动签时，该参数必传</p>
     */
     @SerializedName("Mobile")
@@ -87,18 +73,11 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String Mobile;
 
     /**
-    * <p>该字段已不再使用</p>
+    * <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
     */
-    @SerializedName("EnableAutoSign")
+    @SerializedName("FileId")
     @Expose
-    private Boolean EnableAutoSign;
-
-    /**
-    * <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
-    */
-    @SerializedName("LicenseType")
-    @Expose
-    private Long LicenseType;
+    private String FileId;
 
     /**
     * <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
@@ -108,11 +87,32 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String SceneKey;
 
     /**
-    * <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
+    * <p>该字段已不再使用，设置不生效。</p>
     */
-    @SerializedName("FileId")
+    @SerializedName("LicenseType")
     @Expose
-    private String FileId;
+    private Long LicenseType;
+
+    /**
+    * <p>该字段已不再使用，请使用 FileId 参数代替。</p>
+    */
+    @SerializedName("SealImage")
+    @Expose
+    private String SealImage;
+
+    /**
+    * <p>该字段已不再使用，设置不生效。</p>
+    */
+    @SerializedName("EnableAutoSign")
+    @Expose
+    private Boolean EnableAutoSign;
+
+    /**
+    * <p>该字段已不再使用，设置不生效。</p>
+    */
+    @SerializedName("SealImageCompress")
+    @Expose
+    private Boolean SealImageCompress;
 
     /**
      * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p> 
@@ -179,22 +179,6 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p> 
-     * @return SealImage <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
-     */
-    public String getSealImage() {
-        return this.SealImage;
-    }
-
-    /**
-     * Set <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
-     * @param SealImage <p>电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。</p>
-     */
-    public void setSealImage(String SealImage) {
-        this.SealImage = SealImage;
-    }
-
-    /**
      * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
      * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
@@ -227,22 +211,6 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p> 
-     * @return SealImageCompress <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
-     */
-    public Boolean getSealImageCompress() {
-        return this.SealImageCompress;
-    }
-
-    /**
-     * Set <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
-     * @param SealImageCompress <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
-     */
-    public void setSealImageCompress(Boolean SealImageCompress) {
-        this.SealImageCompress = SealImageCompress;
-    }
-
-    /**
      * Get <p>手机号码；当需要开通自动签时，该参数必传</p> 
      * @return Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
      */
@@ -259,39 +227,19 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>该字段已不再使用</p> 
-     * @return EnableAutoSign <p>该字段已不再使用</p>
-     * @deprecated
+     * Get <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p> 
+     * @return FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
      */
-    @Deprecated
-    public Boolean getEnableAutoSign() {
-        return this.EnableAutoSign;
+    public String getFileId() {
+        return this.FileId;
     }
 
     /**
-     * Set <p>该字段已不再使用</p>
-     * @param EnableAutoSign <p>该字段已不再使用</p>
-     * @deprecated
+     * Set <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
+     * @param FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
      */
-    @Deprecated
-    public void setEnableAutoSign(Boolean EnableAutoSign) {
-        this.EnableAutoSign = EnableAutoSign;
-    }
-
-    /**
-     * Get <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p> 
-     * @return LicenseType <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
-     */
-    public Long getLicenseType() {
-        return this.LicenseType;
-    }
-
-    /**
-     * Set <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
-     * @param LicenseType <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
-     */
-    public void setLicenseType(Long LicenseType) {
-        this.LicenseType = LicenseType;
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     /**
@@ -311,19 +259,83 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p> 
-     * @return FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
+     * Get <p>该字段已不再使用，设置不生效。</p> 
+     * @return LicenseType <p>该字段已不再使用，设置不生效。</p>
+     * @deprecated
      */
-    public String getFileId() {
-        return this.FileId;
+    @Deprecated
+    public Long getLicenseType() {
+        return this.LicenseType;
     }
 
     /**
-     * Set <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
-     * @param FileId <p>印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。</p>
+     * Set <p>该字段已不再使用，设置不生效。</p>
+     * @param LicenseType <p>该字段已不再使用，设置不生效。</p>
+     * @deprecated
      */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
+    @Deprecated
+    public void setLicenseType(Long LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
+    /**
+     * Get <p>该字段已不再使用，请使用 FileId 参数代替。</p> 
+     * @return SealImage <p>该字段已不再使用，请使用 FileId 参数代替。</p>
+     * @deprecated
+     */
+    @Deprecated
+    public String getSealImage() {
+        return this.SealImage;
+    }
+
+    /**
+     * Set <p>该字段已不再使用，请使用 FileId 参数代替。</p>
+     * @param SealImage <p>该字段已不再使用，请使用 FileId 参数代替。</p>
+     * @deprecated
+     */
+    @Deprecated
+    public void setSealImage(String SealImage) {
+        this.SealImage = SealImage;
+    }
+
+    /**
+     * Get <p>该字段已不再使用，设置不生效。</p> 
+     * @return EnableAutoSign <p>该字段已不再使用，设置不生效。</p>
+     * @deprecated
+     */
+    @Deprecated
+    public Boolean getEnableAutoSign() {
+        return this.EnableAutoSign;
+    }
+
+    /**
+     * Set <p>该字段已不再使用，设置不生效。</p>
+     * @param EnableAutoSign <p>该字段已不再使用，设置不生效。</p>
+     * @deprecated
+     */
+    @Deprecated
+    public void setEnableAutoSign(Boolean EnableAutoSign) {
+        this.EnableAutoSign = EnableAutoSign;
+    }
+
+    /**
+     * Get <p>该字段已不再使用，设置不生效。</p> 
+     * @return SealImageCompress <p>该字段已不再使用，设置不生效。</p>
+     * @deprecated
+     */
+    @Deprecated
+    public Boolean getSealImageCompress() {
+        return this.SealImageCompress;
+    }
+
+    /**
+     * Set <p>该字段已不再使用，设置不生效。</p>
+     * @param SealImageCompress <p>该字段已不再使用，设置不生效。</p>
+     * @deprecated
+     */
+    @Deprecated
+    public void setSealImageCompress(Boolean SealImageCompress) {
+        this.SealImageCompress = SealImageCompress;
     }
 
     public ChannelCreatePreparedPersonalEsignRequest() {
@@ -346,32 +358,32 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         if (source.SealName != null) {
             this.SealName = new String(source.SealName);
         }
-        if (source.SealImage != null) {
-            this.SealImage = new String(source.SealImage);
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
         if (source.IdCardType != null) {
             this.IdCardType = new String(source.IdCardType);
         }
-        if (source.SealImageCompress != null) {
-            this.SealImageCompress = new Boolean(source.SealImageCompress);
-        }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
-        if (source.EnableAutoSign != null) {
-            this.EnableAutoSign = new Boolean(source.EnableAutoSign);
-        }
-        if (source.LicenseType != null) {
-            this.LicenseType = new Long(source.LicenseType);
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
         }
         if (source.SceneKey != null) {
             this.SceneKey = new String(source.SceneKey);
         }
-        if (source.FileId != null) {
-            this.FileId = new String(source.FileId);
+        if (source.LicenseType != null) {
+            this.LicenseType = new Long(source.LicenseType);
+        }
+        if (source.SealImage != null) {
+            this.SealImage = new String(source.SealImage);
+        }
+        if (source.EnableAutoSign != null) {
+            this.EnableAutoSign = new Boolean(source.EnableAutoSign);
+        }
+        if (source.SealImageCompress != null) {
+            this.SealImageCompress = new Boolean(source.SealImageCompress);
         }
     }
 
@@ -384,15 +396,15 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "SealName", this.SealName);
-        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
-        this.setParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
-        this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
-        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
-        this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
+        this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
+        this.setParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
 
     }
 }

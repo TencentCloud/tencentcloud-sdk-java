@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMongoDBProcessListResponse extends AbstractModel {
 
     /**
-    * 数据
+    * <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessList")
@@ -39,9 +39,9 @@ public class DescribeMongoDBProcessListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据
+     * Get <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProcessList 数据
+     * @return ProcessList <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBProcessList getProcessList() {
@@ -49,9 +49,9 @@ public class DescribeMongoDBProcessListResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据
+     * Set <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProcessList 数据
+     * @param ProcessList <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessList(MongoDBProcessList ProcessList) {

@@ -39,7 +39,7 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *创建Agent
+     *复制 Agent（目前仅支持claw模式））
      * @param req CopyAgentFromAppRequest
      * @return CopyAgentFromAppResponse
      * @throws TencentCloudSDKException
@@ -91,6 +91,17 @@ public class AdpClient extends AbstractClient{
     public CreateAppTriggerResponse CreateAppTrigger(CreateAppTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAppTrigger", CreateAppTriggerResponse.class);
+    }
+
+    /**
+     *创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
+     * @param req CreateChannelRequest
+     * @return CreateChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChannelResponse CreateChannel(CreateChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateChannel", CreateChannelResponse.class);
     }
 
     /**
@@ -234,6 +245,17 @@ public class AdpClient extends AbstractClient{
     public DeleteAppTriggerResponse DeleteAppTrigger(DeleteAppTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAppTrigger", DeleteAppTriggerResponse.class);
+    }
+
+    /**
+     *删除渠道（通过scene区分场景）
+     * @param req DeleteChannelRequest
+     * @return DeleteChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteChannelResponse DeleteChannel(DeleteChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteChannel", DeleteChannelResponse.class);
     }
 
     /**
@@ -443,6 +465,28 @@ public class AdpClient extends AbstractClient{
     public DescribeAuditLogMetaResponse DescribeAuditLogMeta(DescribeAuditLogMetaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditLogMeta", DescribeAuditLogMetaResponse.class);
+    }
+
+    /**
+     *获取渠道详情（scene区分场景）
+     * @param req DescribeChannelRequest
+     * @return DescribeChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelResponse DescribeChannel(DescribeChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChannel", DescribeChannelResponse.class);
+    }
+
+    /**
+     *获取渠道列表（scene区分场景）
+     * @param req DescribeChannelListRequest
+     * @return DescribeChannelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelListResponse DescribeChannelList(DescribeChannelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChannelList", DescribeChannelListResponse.class);
     }
 
     /**
@@ -762,6 +806,17 @@ public class AdpClient extends AbstractClient{
     public ModifyAppTriggerResponse ModifyAppTrigger(ModifyAppTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAppTrigger", ModifyAppTriggerResponse.class);
+    }
+
+    /**
+     *修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
+     * @param req ModifyChannelRequest
+     * @return ModifyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyChannelResponse ModifyChannel(ModifyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyChannel", ModifyChannelResponse.class);
     }
 
     /**

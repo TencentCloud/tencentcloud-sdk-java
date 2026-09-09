@@ -361,6 +361,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询导出配置
+     * @param req DescribeExportConfsRequest
+     * @return DescribeExportConfsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportConfsResponse DescribeExportConfs(DescribeExportConfsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExportConfs", DescribeExportConfsResponse.class);
+    }
+
+    /**
      *查询YARN资源调度的全局配置
      * @param req DescribeGlobalConfigRequest
      * @return DescribeGlobalConfigResponse
@@ -971,6 +982,17 @@ public class EmrClient extends AbstractClient{
     public ModifySLInstanceBasicResponse ModifySLInstanceBasic(ModifySLInstanceBasicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySLInstanceBasic", ModifySLInstanceBasicResponse.class);
+    }
+
+    /**
+     *配置导入下发
+     * @param req ModifyServiceParamsByExportConfsRequest
+     * @return ModifyServiceParamsByExportConfsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceParamsByExportConfsResponse ModifyServiceParamsByExportConfs(ModifyServiceParamsByExportConfsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServiceParamsByExportConfs", ModifyServiceParamsByExportConfsResponse.class);
     }
 
     /**

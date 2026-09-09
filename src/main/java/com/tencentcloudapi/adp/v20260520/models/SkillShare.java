@@ -24,176 +24,164 @@ import java.util.HashMap;
 public class SkillShare extends AbstractModel {
 
     /**
-    * 审批ID
+    * <p>审批ID</p>
     */
     @SerializedName("ApprovalId")
     @Expose
     private String ApprovalId;
 
     /**
-    * 共享后关联的新 skill_id
+    * <p>共享后关联的新 skill_id</p>
     */
     @SerializedName("ShareSkillId")
     @Expose
     private String ShareSkillId;
 
     /**
-    * 共享版本，如 1.0.0
+    * <p>共享版本，如 1.0.0</p>
     */
     @SerializedName("ShareVersion")
     @Expose
     private String ShareVersion;
 
     /**
-    * 共享版本ID
+    * <p>共享版本ID</p>
     */
     @SerializedName("ShareVersionId")
     @Expose
     private String ShareVersionId;
 
     /**
-    * 原 skill_id
+    * <p>原 skill_id</p>
     */
     @SerializedName("SkillId")
     @Expose
     private String SkillId;
 
     /**
-    * 共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
+    * <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 审批ID 
-     * @return ApprovalId 审批ID
+    * <p>企业共享范围</p>
+    */
+    @SerializedName("CorpShareConfig")
+    @Expose
+    private SkillCorpShareConfig CorpShareConfig;
+
+    /**
+     * Get <p>审批ID</p> 
+     * @return ApprovalId <p>审批ID</p>
      */
     public String getApprovalId() {
         return this.ApprovalId;
     }
 
     /**
-     * Set 审批ID
-     * @param ApprovalId 审批ID
+     * Set <p>审批ID</p>
+     * @param ApprovalId <p>审批ID</p>
      */
     public void setApprovalId(String ApprovalId) {
         this.ApprovalId = ApprovalId;
     }
 
     /**
-     * Get 共享后关联的新 skill_id 
-     * @return ShareSkillId 共享后关联的新 skill_id
+     * Get <p>共享后关联的新 skill_id</p> 
+     * @return ShareSkillId <p>共享后关联的新 skill_id</p>
      */
     public String getShareSkillId() {
         return this.ShareSkillId;
     }
 
     /**
-     * Set 共享后关联的新 skill_id
-     * @param ShareSkillId 共享后关联的新 skill_id
+     * Set <p>共享后关联的新 skill_id</p>
+     * @param ShareSkillId <p>共享后关联的新 skill_id</p>
      */
     public void setShareSkillId(String ShareSkillId) {
         this.ShareSkillId = ShareSkillId;
     }
 
     /**
-     * Get 共享版本，如 1.0.0 
-     * @return ShareVersion 共享版本，如 1.0.0
+     * Get <p>共享版本，如 1.0.0</p> 
+     * @return ShareVersion <p>共享版本，如 1.0.0</p>
      */
     public String getShareVersion() {
         return this.ShareVersion;
     }
 
     /**
-     * Set 共享版本，如 1.0.0
-     * @param ShareVersion 共享版本，如 1.0.0
+     * Set <p>共享版本，如 1.0.0</p>
+     * @param ShareVersion <p>共享版本，如 1.0.0</p>
      */
     public void setShareVersion(String ShareVersion) {
         this.ShareVersion = ShareVersion;
     }
 
     /**
-     * Get 共享版本ID 
-     * @return ShareVersionId 共享版本ID
+     * Get <p>共享版本ID</p> 
+     * @return ShareVersionId <p>共享版本ID</p>
      */
     public String getShareVersionId() {
         return this.ShareVersionId;
     }
 
     /**
-     * Set 共享版本ID
-     * @param ShareVersionId 共享版本ID
+     * Set <p>共享版本ID</p>
+     * @param ShareVersionId <p>共享版本ID</p>
      */
     public void setShareVersionId(String ShareVersionId) {
         this.ShareVersionId = ShareVersionId;
     }
 
     /**
-     * Get 原 skill_id 
-     * @return SkillId 原 skill_id
+     * Get <p>原 skill_id</p> 
+     * @return SkillId <p>原 skill_id</p>
      */
     public String getSkillId() {
         return this.SkillId;
     }
 
     /**
-     * Set 原 skill_id
-     * @param SkillId 原 skill_id
+     * Set <p>原 skill_id</p>
+     * @param SkillId <p>原 skill_id</p>
      */
     public void setSkillId(String SkillId) {
         this.SkillId = SkillId;
     }
 
     /**
-     * Get 共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 | 
-     * @return Status 共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
+     * Get <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p> 
+     * @return Status <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
-     * @param Status 共享状态
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 未共享 |
-| 1 | 已共享 |
-| 2 | 审批中 |
+     * Set <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
+     * @param Status <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>企业共享范围</p> 
+     * @return CorpShareConfig <p>企业共享范围</p>
+     */
+    public SkillCorpShareConfig getCorpShareConfig() {
+        return this.CorpShareConfig;
+    }
+
+    /**
+     * Set <p>企业共享范围</p>
+     * @param CorpShareConfig <p>企业共享范围</p>
+     */
+    public void setCorpShareConfig(SkillCorpShareConfig CorpShareConfig) {
+        this.CorpShareConfig = CorpShareConfig;
     }
 
     public SkillShare() {
@@ -222,6 +210,9 @@ public class SkillShare extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.CorpShareConfig != null) {
+            this.CorpShareConfig = new SkillCorpShareConfig(source.CorpShareConfig);
+        }
     }
 
 
@@ -235,6 +226,7 @@ public class SkillShare extends AbstractModel {
         this.setParamSimple(map, prefix + "ShareVersionId", this.ShareVersionId);
         this.setParamSimple(map, prefix + "SkillId", this.SkillId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
 
     }
 }

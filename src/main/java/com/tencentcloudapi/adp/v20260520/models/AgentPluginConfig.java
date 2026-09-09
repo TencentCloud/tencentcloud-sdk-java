@@ -66,6 +66,13 @@ public class AgentPluginConfig extends AbstractModel {
     private Long OAuthConsent;
 
     /**
+    * <p>凭证配置</p>
+    */
+    @SerializedName("CredentialConfig")
+    @Expose
+    private AgentPluginCredentialConfig CredentialConfig;
+
+    /**
      * Get <p>插件id</p> 
      * @return PluginId <p>插件id</p>
      */
@@ -161,6 +168,22 @@ public class AgentPluginConfig extends AbstractModel {
         this.OAuthConsent = OAuthConsent;
     }
 
+    /**
+     * Get <p>凭证配置</p> 
+     * @return CredentialConfig <p>凭证配置</p>
+     */
+    public AgentPluginCredentialConfig getCredentialConfig() {
+        return this.CredentialConfig;
+    }
+
+    /**
+     * Set <p>凭证配置</p>
+     * @param CredentialConfig <p>凭证配置</p>
+     */
+    public void setCredentialConfig(AgentPluginCredentialConfig CredentialConfig) {
+        this.CredentialConfig = CredentialConfig;
+    }
+
     public AgentPluginConfig() {
     }
 
@@ -193,6 +216,9 @@ public class AgentPluginConfig extends AbstractModel {
         if (source.OAuthConsent != null) {
             this.OAuthConsent = new Long(source.OAuthConsent);
         }
+        if (source.CredentialConfig != null) {
+            this.CredentialConfig = new AgentPluginCredentialConfig(source.CredentialConfig);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class AgentPluginConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableCamRoleAuth", this.EnableCamRoleAuth);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "OAuthConsent", this.OAuthConsent);
+        this.setParamObj(map, prefix + "CredentialConfig.", this.CredentialConfig);
 
     }
 }

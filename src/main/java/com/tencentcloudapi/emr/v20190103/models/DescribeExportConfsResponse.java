@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dataagent.v20250513.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSessionDetailsResponse extends AbstractModel {
+public class DescribeExportConfsResponse extends AbstractModel {
 
     /**
-    * 会话记录详情
+    * <p>导出配置参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RecordList")
+    @SerializedName("ExportConfParamList")
     @Expose
-    private Record [] RecordList;
-
-    /**
-    * 记录总数
-    */
-    @SerializedName("RecordCount")
-    @Expose
-    private Long RecordCount;
-
-    /**
-    * 当前在运行的record信息
-    */
-    @SerializedName("RunRecord")
-    @Expose
-    private String RunRecord;
+    private ExportConfMeta [] ExportConfParamList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +39,23 @@ public class GetSessionDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 会话记录详情 
-     * @return RecordList 会话记录详情
+     * Get <p>导出配置参数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExportConfParamList <p>导出配置参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Record [] getRecordList() {
-        return this.RecordList;
+    public ExportConfMeta [] getExportConfParamList() {
+        return this.ExportConfParamList;
     }
 
     /**
-     * Set 会话记录详情
-     * @param RecordList 会话记录详情
+     * Set <p>导出配置参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExportConfParamList <p>导出配置参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRecordList(Record [] RecordList) {
-        this.RecordList = RecordList;
-    }
-
-    /**
-     * Get 记录总数 
-     * @return RecordCount 记录总数
-     */
-    public Long getRecordCount() {
-        return this.RecordCount;
-    }
-
-    /**
-     * Set 记录总数
-     * @param RecordCount 记录总数
-     */
-    public void setRecordCount(Long RecordCount) {
-        this.RecordCount = RecordCount;
-    }
-
-    /**
-     * Get 当前在运行的record信息 
-     * @return RunRecord 当前在运行的record信息
-     */
-    public String getRunRecord() {
-        return this.RunRecord;
-    }
-
-    /**
-     * Set 当前在运行的record信息
-     * @param RunRecord 当前在运行的record信息
-     */
-    public void setRunRecord(String RunRecord) {
-        this.RunRecord = RunRecord;
+    public void setExportConfParamList(ExportConfMeta [] ExportConfParamList) {
+        this.ExportConfParamList = ExportConfParamList;
     }
 
     /**
@@ -115,25 +74,19 @@ public class GetSessionDetailsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public GetSessionDetailsResponse() {
+    public DescribeExportConfsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSessionDetailsResponse(GetSessionDetailsResponse source) {
-        if (source.RecordList != null) {
-            this.RecordList = new Record[source.RecordList.length];
-            for (int i = 0; i < source.RecordList.length; i++) {
-                this.RecordList[i] = new Record(source.RecordList[i]);
+    public DescribeExportConfsResponse(DescribeExportConfsResponse source) {
+        if (source.ExportConfParamList != null) {
+            this.ExportConfParamList = new ExportConfMeta[source.ExportConfParamList.length];
+            for (int i = 0; i < source.ExportConfParamList.length; i++) {
+                this.ExportConfParamList[i] = new ExportConfMeta(source.ExportConfParamList[i]);
             }
-        }
-        if (source.RecordCount != null) {
-            this.RecordCount = new Long(source.RecordCount);
-        }
-        if (source.RunRecord != null) {
-            this.RunRecord = new String(source.RunRecord);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -145,9 +98,7 @@ public class GetSessionDetailsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
-        this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
-        this.setParamSimple(map, prefix + "RunRecord", this.RunRecord);
+        this.setParamArrayObj(map, prefix + "ExportConfParamList.", this.ExportConfParamList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

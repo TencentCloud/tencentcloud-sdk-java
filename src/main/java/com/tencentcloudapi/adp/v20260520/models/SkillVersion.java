@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SkillVersion extends AbstractModel {
 
     /**
-    * 检测信息
+    * <p>检测信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisInfo")
@@ -32,71 +32,72 @@ public class SkillVersion extends AbstractModel {
     private SkillAnalysisInfo AnalysisInfo;
 
     /**
-    * 当前生效版本号
+    * <p>当前生效版本号</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 当前生效版本ID
+    * <p>当前生效版本ID</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    *     Skill 版本发布流程状态：
-      - 0 INITIALIZED      初始化（版本初始态）
-      - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）
-      - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）
-      - 3 RELEASED         已发布
-      - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史"不通过"语义）
-    与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。
+    * <p>Skill 版本发布流程状态：</p><pre><code>  - 0 INITIALIZED      初始化（版本初始态）  - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）  - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）  - 3 RELEASED         已发布  - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史&quot;不通过&quot;语义）与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。</code></pre>
     */
     @SerializedName("VersionStatus")
     @Expose
     private Long VersionStatus;
 
     /**
-    * Skill包的md5信息
+    * <p>Skill包的md5信息</p>
     */
     @SerializedName("SkillMd5")
     @Expose
     private String SkillMd5;
 
     /**
-    * 版本包地址
+    * <p>版本包地址</p>
     */
     @SerializedName("SkillUrl")
     @Expose
     private String SkillUrl;
 
     /**
-    * 版本创建时间（Unix秒）
+    * <p>版本创建时间（Unix秒）</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * skill md文档
+    * <p>skill md文档</p>
     */
     @SerializedName("SkillMarkdownUrl")
     @Expose
     private String SkillMarkdownUrl;
 
     /**
-    * 版本变更说明
+    * <p>版本变更说明</p>
     */
     @SerializedName("UpdateDesc")
     @Expose
     private String UpdateDesc;
 
     /**
-     * Get 检测信息
+    * <p>变更用户</p>
+    */
+    @SerializedName("Updater")
+    @Expose
+    private String Updater;
+
+    /**
+     * Get <p>检测信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisInfo 检测信息
+     * @return AnalysisInfo <p>检测信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SkillAnalysisInfo getAnalysisInfo() {
@@ -104,9 +105,9 @@ public class SkillVersion extends AbstractModel {
     }
 
     /**
-     * Set 检测信息
+     * Set <p>检测信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisInfo 检测信息
+     * @param AnalysisInfo <p>检测信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisInfo(SkillAnalysisInfo AnalysisInfo) {
@@ -114,155 +115,147 @@ public class SkillVersion extends AbstractModel {
     }
 
     /**
-     * Get 当前生效版本号 
-     * @return Version 当前生效版本号
+     * Get <p>当前生效版本号</p> 
+     * @return Version <p>当前生效版本号</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 当前生效版本号
-     * @param Version 当前生效版本号
+     * Set <p>当前生效版本号</p>
+     * @param Version <p>当前生效版本号</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 当前生效版本ID 
-     * @return VersionId 当前生效版本ID
+     * Get <p>当前生效版本ID</p> 
+     * @return VersionId <p>当前生效版本ID</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 当前生效版本ID
-     * @param VersionId 当前生效版本ID
+     * Set <p>当前生效版本ID</p>
+     * @param VersionId <p>当前生效版本ID</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get     Skill 版本发布流程状态：
-      - 0 INITIALIZED      初始化（版本初始态）
-      - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）
-      - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）
-      - 3 RELEASED         已发布
-      - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史"不通过"语义）
-    与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。 
-     * @return VersionStatus     Skill 版本发布流程状态：
-      - 0 INITIALIZED      初始化（版本初始态）
-      - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）
-      - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）
-      - 3 RELEASED         已发布
-      - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史"不通过"语义）
-    与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。
+     * Get <p>Skill 版本发布流程状态：</p><pre><code>  - 0 INITIALIZED      初始化（版本初始态）  - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）  - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）  - 3 RELEASED         已发布  - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史&quot;不通过&quot;语义）与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。</code></pre> 
+     * @return VersionStatus <p>Skill 版本发布流程状态：</p><pre><code>  - 0 INITIALIZED      初始化（版本初始态）  - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）  - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）  - 3 RELEASED         已发布  - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史&quot;不通过&quot;语义）与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。</code></pre>
      */
     public Long getVersionStatus() {
         return this.VersionStatus;
     }
 
     /**
-     * Set     Skill 版本发布流程状态：
-      - 0 INITIALIZED      初始化（版本初始态）
-      - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）
-      - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）
-      - 3 RELEASED         已发布
-      - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史"不通过"语义）
-    与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。
-     * @param VersionStatus     Skill 版本发布流程状态：
-      - 0 INITIALIZED      初始化（版本初始态）
-      - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）
-      - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）
-      - 3 RELEASED         已发布
-      - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史"不通过"语义）
-    与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。
+     * Set <p>Skill 版本发布流程状态：</p><pre><code>  - 0 INITIALIZED      初始化（版本初始态）  - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）  - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）  - 3 RELEASED         已发布  - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史&quot;不通过&quot;语义）与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。</code></pre>
+     * @param VersionStatus <p>Skill 版本发布流程状态：</p><pre><code>  - 0 INITIALIZED      初始化（版本初始态）  - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）  - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）  - 3 RELEASED         已发布  - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史&quot;不通过&quot;语义）与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。</code></pre>
      */
     public void setVersionStatus(Long VersionStatus) {
         this.VersionStatus = VersionStatus;
     }
 
     /**
-     * Get Skill包的md5信息 
-     * @return SkillMd5 Skill包的md5信息
+     * Get <p>Skill包的md5信息</p> 
+     * @return SkillMd5 <p>Skill包的md5信息</p>
      */
     public String getSkillMd5() {
         return this.SkillMd5;
     }
 
     /**
-     * Set Skill包的md5信息
-     * @param SkillMd5 Skill包的md5信息
+     * Set <p>Skill包的md5信息</p>
+     * @param SkillMd5 <p>Skill包的md5信息</p>
      */
     public void setSkillMd5(String SkillMd5) {
         this.SkillMd5 = SkillMd5;
     }
 
     /**
-     * Get 版本包地址 
-     * @return SkillUrl 版本包地址
+     * Get <p>版本包地址</p> 
+     * @return SkillUrl <p>版本包地址</p>
      */
     public String getSkillUrl() {
         return this.SkillUrl;
     }
 
     /**
-     * Set 版本包地址
-     * @param SkillUrl 版本包地址
+     * Set <p>版本包地址</p>
+     * @param SkillUrl <p>版本包地址</p>
      */
     public void setSkillUrl(String SkillUrl) {
         this.SkillUrl = SkillUrl;
     }
 
     /**
-     * Get 版本创建时间（Unix秒） 
-     * @return CreateTime 版本创建时间（Unix秒）
+     * Get <p>版本创建时间（Unix秒）</p> 
+     * @return CreateTime <p>版本创建时间（Unix秒）</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 版本创建时间（Unix秒）
-     * @param CreateTime 版本创建时间（Unix秒）
+     * Set <p>版本创建时间（Unix秒）</p>
+     * @param CreateTime <p>版本创建时间（Unix秒）</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get skill md文档 
-     * @return SkillMarkdownUrl skill md文档
+     * Get <p>skill md文档</p> 
+     * @return SkillMarkdownUrl <p>skill md文档</p>
      */
     public String getSkillMarkdownUrl() {
         return this.SkillMarkdownUrl;
     }
 
     /**
-     * Set skill md文档
-     * @param SkillMarkdownUrl skill md文档
+     * Set <p>skill md文档</p>
+     * @param SkillMarkdownUrl <p>skill md文档</p>
      */
     public void setSkillMarkdownUrl(String SkillMarkdownUrl) {
         this.SkillMarkdownUrl = SkillMarkdownUrl;
     }
 
     /**
-     * Get 版本变更说明 
-     * @return UpdateDesc 版本变更说明
+     * Get <p>版本变更说明</p> 
+     * @return UpdateDesc <p>版本变更说明</p>
      */
     public String getUpdateDesc() {
         return this.UpdateDesc;
     }
 
     /**
-     * Set 版本变更说明
-     * @param UpdateDesc 版本变更说明
+     * Set <p>版本变更说明</p>
+     * @param UpdateDesc <p>版本变更说明</p>
      */
     public void setUpdateDesc(String UpdateDesc) {
         this.UpdateDesc = UpdateDesc;
+    }
+
+    /**
+     * Get <p>变更用户</p> 
+     * @return Updater <p>变更用户</p>
+     */
+    public String getUpdater() {
+        return this.Updater;
+    }
+
+    /**
+     * Set <p>变更用户</p>
+     * @param Updater <p>变更用户</p>
+     */
+    public void setUpdater(String Updater) {
+        this.Updater = Updater;
     }
 
     public SkillVersion() {
@@ -300,6 +293,9 @@ public class SkillVersion extends AbstractModel {
         if (source.UpdateDesc != null) {
             this.UpdateDesc = new String(source.UpdateDesc);
         }
+        if (source.Updater != null) {
+            this.Updater = new String(source.Updater);
+        }
     }
 
 
@@ -316,6 +312,7 @@ public class SkillVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SkillMarkdownUrl", this.SkillMarkdownUrl);
         this.setParamSimple(map, prefix + "UpdateDesc", this.UpdateDesc);
+        this.setParamSimple(map, prefix + "Updater", this.Updater);
 
     }
 }

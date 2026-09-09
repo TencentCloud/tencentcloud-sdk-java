@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class ControlAIConversationRequest extends AbstractModel {
 
     /**
-    * 任务唯一标识
+    * <p>任务唯一标识</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
+    * <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * 服务端发送播报文本命令，当Command为ServerPushText时必填
+    * <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
     */
     @SerializedName("ServerPushText")
     @Expose
     private ServerPushText ServerPushText;
 
     /**
-    * 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+    * <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
     */
     @SerializedName("InvokeLLM")
     @Expose
     private InvokeLLM InvokeLLM;
 
     /**
-     * Get 任务唯一标识 
-     * @return TaskId 任务唯一标识
+    * <p>ai对话需要透传给客户端的信息</p>
+    */
+    @SerializedName("TransparentData")
+    @Expose
+    private TransparentData TransparentData;
+
+    /**
+     * Get <p>任务唯一标识</p> 
+     * @return TaskId <p>任务唯一标识</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务唯一标识
-     * @param TaskId 任务唯一标识
+     * Set <p>任务唯一标识</p>
+     * @param TaskId <p>任务唯一标识</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话 
-     * @return Command 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
+     * Get <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p> 
+     * @return Command <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
-     * @param Command 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
+     * Set <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
+     * @param Command <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 服务端发送播报文本命令，当Command为ServerPushText时必填 
-     * @return ServerPushText 服务端发送播报文本命令，当Command为ServerPushText时必填
+     * Get <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p> 
+     * @return ServerPushText <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
      */
     public ServerPushText getServerPushText() {
         return this.ServerPushText;
     }
 
     /**
-     * Set 服务端发送播报文本命令，当Command为ServerPushText时必填
-     * @param ServerPushText 服务端发送播报文本命令，当Command为ServerPushText时必填
+     * Set <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
+     * @param ServerPushText <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
      */
     public void setServerPushText(ServerPushText ServerPushText) {
         this.ServerPushText = ServerPushText;
     }
 
     /**
-     * Get 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1" 
-     * @return InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     * Get <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p> 
+     * @return InvokeLLM <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
      */
     public InvokeLLM getInvokeLLM() {
         return this.InvokeLLM;
     }
 
     /**
-     * Set 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
-     * @param InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     * Set <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
+     * @param InvokeLLM <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
      */
     public void setInvokeLLM(InvokeLLM InvokeLLM) {
         this.InvokeLLM = InvokeLLM;
+    }
+
+    /**
+     * Get <p>ai对话需要透传给客户端的信息</p> 
+     * @return TransparentData <p>ai对话需要透传给客户端的信息</p>
+     */
+    public TransparentData getTransparentData() {
+        return this.TransparentData;
+    }
+
+    /**
+     * Set <p>ai对话需要透传给客户端的信息</p>
+     * @param TransparentData <p>ai对话需要透传给客户端的信息</p>
+     */
+    public void setTransparentData(TransparentData TransparentData) {
+        this.TransparentData = TransparentData;
     }
 
     public ControlAIConversationRequest() {
@@ -135,6 +158,9 @@ public class ControlAIConversationRequest extends AbstractModel {
         if (source.InvokeLLM != null) {
             this.InvokeLLM = new InvokeLLM(source.InvokeLLM);
         }
+        if (source.TransparentData != null) {
+            this.TransparentData = new TransparentData(source.TransparentData);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ControlAIConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
         this.setParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
+        this.setParamObj(map, prefix + "TransparentData.", this.TransparentData);
 
     }
 }

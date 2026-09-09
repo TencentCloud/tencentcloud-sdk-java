@@ -31,6 +31,13 @@ public class ModifyDBCustomNodeAttributesRequest extends AbstractModel {
     private String NodeId;
 
     /**
+    * <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+    */
+    @SerializedName("NodeIds")
+    @Expose
+    private String [] NodeIds;
+
+    /**
     * <p>主机 HostName</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 HostName 参数说明。</p><p>注意：节点在没有加入到集群之前才支持修改主机 HostName。</p>
     */
     @SerializedName("HostName")
@@ -65,6 +72,22 @@ public class ModifyDBCustomNodeAttributesRequest extends AbstractModel {
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
+    }
+
+    /**
+     * Get <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p> 
+     * @return NodeIds <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+     */
+    public String [] getNodeIds() {
+        return this.NodeIds;
+    }
+
+    /**
+     * Set <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+     * @param NodeIds <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+     */
+    public void setNodeIds(String [] NodeIds) {
+        this.NodeIds = NodeIds;
     }
 
     /**
@@ -126,6 +149,12 @@ public class ModifyDBCustomNodeAttributesRequest extends AbstractModel {
         if (source.NodeId != null) {
             this.NodeId = new String(source.NodeId);
         }
+        if (source.NodeIds != null) {
+            this.NodeIds = new String[source.NodeIds.length];
+            for (int i = 0; i < source.NodeIds.length; i++) {
+                this.NodeIds[i] = new String(source.NodeIds[i]);
+            }
+        }
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
@@ -143,6 +172,7 @@ public class ModifyDBCustomNodeAttributesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "AutoReboot", this.AutoReboot);

@@ -326,6 +326,13 @@ public class Instance extends AbstractModel {
     private String LatestOperationErrorMsg;
 
     /**
+    * <p>实例是否开启巨型帧</p>
+    */
+    @SerializedName("EnableJumboFrame")
+    @Expose
+    private Boolean EnableJumboFrame;
+
+    /**
     * <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
     */
     @SerializedName("Metadata")
@@ -1062,6 +1069,22 @@ public class Instance extends AbstractModel {
     }
 
     /**
+     * Get <p>实例是否开启巨型帧</p> 
+     * @return EnableJumboFrame <p>实例是否开启巨型帧</p>
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.EnableJumboFrame;
+    }
+
+    /**
+     * Set <p>实例是否开启巨型帧</p>
+     * @param EnableJumboFrame <p>实例是否开启巨型帧</p>
+     */
+    public void setEnableJumboFrame(Boolean EnableJumboFrame) {
+        this.EnableJumboFrame = EnableJumboFrame;
+    }
+
+    /**
      * Get <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p> 
      * @return Metadata <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
      */
@@ -1283,6 +1306,9 @@ public class Instance extends AbstractModel {
         if (source.LatestOperationErrorMsg != null) {
             this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
         }
+        if (source.EnableJumboFrame != null) {
+            this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
+        }
         if (source.Metadata != null) {
             this.Metadata = new Metadata(source.Metadata);
         }
@@ -1347,6 +1373,7 @@ public class Instance extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
         this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+        this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
