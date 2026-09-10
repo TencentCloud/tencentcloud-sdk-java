@@ -48,6 +48,13 @@ public class ProcessImageAsyncTask extends AbstractModel {
     private ImageBeautyConfig BeautyConfig;
 
     /**
+    * <p>Ai抠图配置</p>
+    */
+    @SerializedName("AiCutOutConfig")
+    @Expose
+    private AiCutOutConfig AiCutOutConfig;
+
+    /**
      * Get <p>图片转码输出配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig <p>图片转码输出配置。</p>
@@ -107,6 +114,22 @@ public class ProcessImageAsyncTask extends AbstractModel {
         this.BeautyConfig = BeautyConfig;
     }
 
+    /**
+     * Get <p>Ai抠图配置</p> 
+     * @return AiCutOutConfig <p>Ai抠图配置</p>
+     */
+    public AiCutOutConfig getAiCutOutConfig() {
+        return this.AiCutOutConfig;
+    }
+
+    /**
+     * Set <p>Ai抠图配置</p>
+     * @param AiCutOutConfig <p>Ai抠图配置</p>
+     */
+    public void setAiCutOutConfig(AiCutOutConfig AiCutOutConfig) {
+        this.AiCutOutConfig = AiCutOutConfig;
+    }
+
     public ProcessImageAsyncTask() {
     }
 
@@ -124,6 +147,9 @@ public class ProcessImageAsyncTask extends AbstractModel {
         if (source.BeautyConfig != null) {
             this.BeautyConfig = new ImageBeautyConfig(source.BeautyConfig);
         }
+        if (source.AiCutOutConfig != null) {
+            this.AiCutOutConfig = new AiCutOutConfig(source.AiCutOutConfig);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class ProcessImageAsyncTask extends AbstractModel {
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
+        this.setParamObj(map, prefix + "AiCutOutConfig.", this.AiCutOutConfig);
 
     }
 }

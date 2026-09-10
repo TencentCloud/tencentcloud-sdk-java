@@ -101,6 +101,13 @@ public class ProcessMediaRequest extends AbstractModel {
     private SmartEraseTaskInput SmartEraseTask;
 
     /**
+    * <p>AI配音类型任务参数</p>
+    */
+    @SerializedName("AIDubbingTask")
+    @Expose
+    private AIDubbingTaskInput AIDubbingTask;
+
+    /**
     * <p>任务的事件通知信息，不填代表不获取事件通知。</p>
     */
     @SerializedName("TaskNotifyConfig")
@@ -333,6 +340,22 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>AI配音类型任务参数</p> 
+     * @return AIDubbingTask <p>AI配音类型任务参数</p>
+     */
+    public AIDubbingTaskInput getAIDubbingTask() {
+        return this.AIDubbingTask;
+    }
+
+    /**
+     * Set <p>AI配音类型任务参数</p>
+     * @param AIDubbingTask <p>AI配音类型任务参数</p>
+     */
+    public void setAIDubbingTask(AIDubbingTaskInput AIDubbingTask) {
+        this.AIDubbingTask = AIDubbingTask;
+    }
+
+    /**
      * Get <p>任务的事件通知信息，不填代表不获取事件通知。</p> 
      * @return TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
@@ -501,6 +524,9 @@ public class ProcessMediaRequest extends AbstractModel {
         if (source.SmartEraseTask != null) {
             this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
         }
+        if (source.AIDubbingTask != null) {
+            this.AIDubbingTask = new AIDubbingTaskInput(source.AIDubbingTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -546,6 +572,7 @@ public class ProcessMediaRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+        this.setParamObj(map, prefix + "AIDubbingTask.", this.AIDubbingTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

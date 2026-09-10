@@ -72,6 +72,50 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *上传插件前置操作，获取COS相关信息
+     * @param req CheckCloudNativeAPIGatewayMCPRouteMatchRequest
+     * @return CheckCloudNativeAPIGatewayMCPRouteMatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCloudNativeAPIGatewayMCPRouteMatchResponse CheckCloudNativeAPIGatewayMCPRouteMatch(CheckCloudNativeAPIGatewayMCPRouteMatchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCloudNativeAPIGatewayMCPRouteMatch", CheckCloudNativeAPIGatewayMCPRouteMatchResponse.class);
+    }
+
+    /**
+     *修改云原生智能网关MCP Tool
+     * @param req CheckCloudNativeAPIGatewayMCPToolVersionExistRequest
+     * @return CheckCloudNativeAPIGatewayMCPToolVersionExistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCloudNativeAPIGatewayMCPToolVersionExistResponse CheckCloudNativeAPIGatewayMCPToolVersionExist(CheckCloudNativeAPIGatewayMCPToolVersionExistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCloudNativeAPIGatewayMCPToolVersionExist", CheckCloudNativeAPIGatewayMCPToolVersionExistResponse.class);
+    }
+
+    /**
+     *修改云原生智能网关MCP Tool
+     * @param req CompareCloudNativeAPIGatewayMCPToolVersionRequest
+     * @return CompareCloudNativeAPIGatewayMCPToolVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompareCloudNativeAPIGatewayMCPToolVersionResponse CompareCloudNativeAPIGatewayMCPToolVersion(CompareCloudNativeAPIGatewayMCPToolVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CompareCloudNativeAPIGatewayMCPToolVersion", CompareCloudNativeAPIGatewayMCPToolVersionResponse.class);
+    }
+
+    /**
+     *创建云原生网关AI服务来源
+     * @param req CreateCloudNativeAPIGatewayAIServiceSourceRequest
+     * @return CreateCloudNativeAPIGatewayAIServiceSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayAIServiceSourceResponse CreateCloudNativeAPIGatewayAIServiceSource(CreateCloudNativeAPIGatewayAIServiceSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayAIServiceSource", CreateCloudNativeAPIGatewayAIServiceSourceResponse.class);
+    }
+
+    /**
      *创建AI网关消费者。
      * @param req CreateCloudNativeAPIGatewayConsumerRequest
      * @return CreateCloudNativeAPIGatewayConsumerResponse
@@ -116,6 +160,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *上传插件前置操作，获取COS相关信息
+     * @param req CreateCloudNativeAPIGatewayMCPRouteRequest
+     * @return CreateCloudNativeAPIGatewayMCPRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayMCPRouteResponse CreateCloudNativeAPIGatewayMCPRoute(CreateCloudNativeAPIGatewayMCPRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayMCPRoute", CreateCloudNativeAPIGatewayMCPRouteResponse.class);
+    }
+
+    /**
      *创建AI网关MCP Server
      * @param req CreateCloudNativeAPIGatewayMCPServerRequest
      * @return CreateCloudNativeAPIGatewayMCPServerResponse
@@ -146,6 +201,17 @@ public class CngwClient extends AbstractClient{
     public CreateCloudNativeAPIGatewaySecretKeyResponse CreateCloudNativeAPIGatewaySecretKey(CreateCloudNativeAPIGatewaySecretKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCloudNativeAPIGatewaySecretKey", CreateCloudNativeAPIGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *删除云原生网关AI服务来源
+     * @param req DeleteCloudNativeAPIGatewayAIServiceSourceRequest
+     * @return DeleteCloudNativeAPIGatewayAIServiceSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayAIServiceSourceResponse DeleteCloudNativeAPIGatewayAIServiceSource(DeleteCloudNativeAPIGatewayAIServiceSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayAIServiceSource", DeleteCloudNativeAPIGatewayAIServiceSourceResponse.class);
     }
 
     /**
@@ -193,6 +259,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *上传插件前置操作，获取COS相关信息
+     * @param req DeleteCloudNativeAPIGatewayMCPRouteRequest
+     * @return DeleteCloudNativeAPIGatewayMCPRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayMCPRouteResponse DeleteCloudNativeAPIGatewayMCPRoute(DeleteCloudNativeAPIGatewayMCPRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayMCPRoute", DeleteCloudNativeAPIGatewayMCPRouteResponse.class);
+    }
+
+    /**
      *删除AI网关MCP服务
      * @param req DeleteCloudNativeAPIGatewayMCPServerRequest
      * @return DeleteCloudNativeAPIGatewayMCPServerResponse
@@ -215,6 +292,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *修改云原生智能网关MCP Tool
+     * @param req DeleteCloudNativeAPIGatewayMCPToolVersionRequest
+     * @return DeleteCloudNativeAPIGatewayMCPToolVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayMCPToolVersionResponse DeleteCloudNativeAPIGatewayMCPToolVersion(DeleteCloudNativeAPIGatewayMCPToolVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayMCPToolVersion", DeleteCloudNativeAPIGatewayMCPToolVersionResponse.class);
+    }
+
+    /**
      *删除消费者密钥（被绑定时需先解绑）。
      * @param req DeleteCloudNativeAPIGatewaySecretKeyRequest
      * @return DeleteCloudNativeAPIGatewaySecretKeyResponse
@@ -234,6 +322,39 @@ public class CngwClient extends AbstractClient{
     public DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutes(DescribeCNGWServicesWithRoutesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCNGWServicesWithRoutes", DescribeCNGWServicesWithRoutesResponse.class);
+    }
+
+    /**
+     *查询AI网关配额
+     * @param req DescribeCloudNativeAPIGatewayAIQuotaRequest
+     * @return DescribeCloudNativeAPIGatewayAIQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayAIQuotaResponse DescribeCloudNativeAPIGatewayAIQuota(DescribeCloudNativeAPIGatewayAIQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayAIQuota", DescribeCloudNativeAPIGatewayAIQuotaResponse.class);
+    }
+
+    /**
+     *查询AI配额配置列表
+     * @param req DescribeCloudNativeAPIGatewayAIQuotaListRequest
+     * @return DescribeCloudNativeAPIGatewayAIQuotaListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayAIQuotaListResponse DescribeCloudNativeAPIGatewayAIQuotaList(DescribeCloudNativeAPIGatewayAIQuotaListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayAIQuotaList", DescribeCloudNativeAPIGatewayAIQuotaListResponse.class);
+    }
+
+    /**
+     *查询云原生网关AI服务来源
+     * @param req DescribeCloudNativeAPIGatewayAIServiceSourceListRequest
+     * @return DescribeCloudNativeAPIGatewayAIServiceSourceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayAIServiceSourceListResponse DescribeCloudNativeAPIGatewayAIServiceSourceList(DescribeCloudNativeAPIGatewayAIServiceSourceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayAIServiceSourceList", DescribeCloudNativeAPIGatewayAIServiceSourceListResponse.class);
     }
 
     /**
@@ -325,6 +446,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *上传插件前置操作，获取COS相关信息
+     * @param req DescribeCloudNativeAPIGatewayMCPRouteListRequest
+     * @return DescribeCloudNativeAPIGatewayMCPRouteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayMCPRouteListResponse DescribeCloudNativeAPIGatewayMCPRouteList(DescribeCloudNativeAPIGatewayMCPRouteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPRouteList", DescribeCloudNativeAPIGatewayMCPRouteListResponse.class);
+    }
+
+    /**
      *查询AI 网关MCP服务信息
      * @param req DescribeCloudNativeAPIGatewayMCPServerRequest
      * @return DescribeCloudNativeAPIGatewayMCPServerResponse
@@ -391,6 +523,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *查询批量导入MCP Tools的任务进度
+     * @param req DescribeCloudNativeAPIGatewayMCPToolImportTaskRequest
+     * @return DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse DescribeCloudNativeAPIGatewayMCPToolImportTask(DescribeCloudNativeAPIGatewayMCPToolImportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPToolImportTask", DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse.class);
+    }
+
+    /**
      *查询 AI 网关MCP Tool 列表
      * @param req DescribeCloudNativeAPIGatewayMCPToolListRequest
      * @return DescribeCloudNativeAPIGatewayMCPToolListResponse
@@ -399,6 +542,28 @@ public class CngwClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewayMCPToolListResponse DescribeCloudNativeAPIGatewayMCPToolList(DescribeCloudNativeAPIGatewayMCPToolListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPToolList", DescribeCloudNativeAPIGatewayMCPToolListResponse.class);
+    }
+
+    /**
+     *修改云原生智能网关MCP Tool
+     * @param req DescribeCloudNativeAPIGatewayMCPToolVersionRequest
+     * @return DescribeCloudNativeAPIGatewayMCPToolVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayMCPToolVersionResponse DescribeCloudNativeAPIGatewayMCPToolVersion(DescribeCloudNativeAPIGatewayMCPToolVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPToolVersion", DescribeCloudNativeAPIGatewayMCPToolVersionResponse.class);
+    }
+
+    /**
+     *修改云原生智能网关MCP Tool
+     * @param req DescribeCloudNativeAPIGatewayMCPToolVersionListRequest
+     * @return DescribeCloudNativeAPIGatewayMCPToolVersionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayMCPToolVersionListResponse DescribeCloudNativeAPIGatewayMCPToolVersionList(DescribeCloudNativeAPIGatewayMCPToolVersionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayMCPToolVersionList", DescribeCloudNativeAPIGatewayMCPToolVersionListResponse.class);
     }
 
     /**
@@ -424,6 +589,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *查询密钥列表。
+     * @param req DescribeCloudNativeAPIGatewaySecretKeyListRequest
+     * @return DescribeCloudNativeAPIGatewaySecretKeyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewaySecretKeyListResponse DescribeCloudNativeAPIGatewaySecretKeyList(DescribeCloudNativeAPIGatewaySecretKeyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewaySecretKeyList", DescribeCloudNativeAPIGatewaySecretKeyListResponse.class);
+    }
+
+    /**
      *查询密钥明文值（KMS 类型密钥不可获取）。
      * @param req DescribeCloudNativeAPIGatewaySecretKeyValueRequest
      * @return DescribeCloudNativeAPIGatewaySecretKeyValueResponse
@@ -432,6 +608,17 @@ public class CngwClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewaySecretKeyValueResponse DescribeCloudNativeAPIGatewaySecretKeyValue(DescribeCloudNativeAPIGatewaySecretKeyValueRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGatewaySecretKeyValue", DescribeCloudNativeAPIGatewaySecretKeyValueResponse.class);
+    }
+
+    /**
+     *修改云原生网关AI服务来源
+     * @param req ModifyCloudNativeAPIGatewayAIServiceSourceRequest
+     * @return ModifyCloudNativeAPIGatewayAIServiceSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayAIServiceSourceResponse ModifyCloudNativeAPIGatewayAIServiceSource(ModifyCloudNativeAPIGatewayAIServiceSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayAIServiceSource", ModifyCloudNativeAPIGatewayAIServiceSourceResponse.class);
     }
 
     /**
@@ -476,6 +663,28 @@ public class CngwClient extends AbstractClient{
     public ModifyCloudNativeAPIGatewayLLMModelServiceResponse ModifyCloudNativeAPIGatewayLLMModelService(ModifyCloudNativeAPIGatewayLLMModelServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCloudNativeAPIGatewayLLMModelService", ModifyCloudNativeAPIGatewayLLMModelServiceResponse.class);
+    }
+
+    /**
+     *上传插件前置操作，获取COS相关信息
+     * @param req ModifyCloudNativeAPIGatewayMCPRouteRequest
+     * @return ModifyCloudNativeAPIGatewayMCPRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayMCPRouteResponse ModifyCloudNativeAPIGatewayMCPRoute(ModifyCloudNativeAPIGatewayMCPRouteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayMCPRoute", ModifyCloudNativeAPIGatewayMCPRouteResponse.class);
+    }
+
+    /**
+     *上传插件前置操作，获取COS相关信息
+     * @param req ModifyCloudNativeAPIGatewayMCPRouteStatusRequest
+     * @return ModifyCloudNativeAPIGatewayMCPRouteStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayMCPRouteStatusResponse ModifyCloudNativeAPIGatewayMCPRouteStatus(ModifyCloudNativeAPIGatewayMCPRouteStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudNativeAPIGatewayMCPRouteStatus", ModifyCloudNativeAPIGatewayMCPRouteStatusResponse.class);
     }
 
     /**
@@ -586,6 +795,17 @@ public class CngwClient extends AbstractClient{
     public RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroup(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveCloudNativeAPIGatewayConsumerInGroup", RemoveCloudNativeAPIGatewayConsumerInGroupResponse.class);
+    }
+
+    /**
+     *修改云原生智能网关MCP Tool
+     * @param req RollbackCloudNativeAPIGatewayMCPToolVersionRequest
+     * @return RollbackCloudNativeAPIGatewayMCPToolVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackCloudNativeAPIGatewayMCPToolVersionResponse RollbackCloudNativeAPIGatewayMCPToolVersion(RollbackCloudNativeAPIGatewayMCPToolVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RollbackCloudNativeAPIGatewayMCPToolVersion", RollbackCloudNativeAPIGatewayMCPToolVersionResponse.class);
     }
 
     /**

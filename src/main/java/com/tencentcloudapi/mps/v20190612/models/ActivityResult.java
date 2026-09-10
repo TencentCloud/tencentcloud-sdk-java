@@ -24,106 +24,46 @@ import java.util.HashMap;
 public class ActivityResult extends AbstractModel {
 
     /**
-    * 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
+    * <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
     */
     @SerializedName("ActivityType")
     @Expose
     private String ActivityType;
 
     /**
-    * 原子任务输出。
+    * <p>原子任务输出。</p>
     */
     @SerializedName("ActivityResItem")
     @Expose
     private ActivityResItem ActivityResItem;
 
     /**
-     * Get 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li> 
-     * @return ActivityType 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
+     * Get <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li> 
+     * @return ActivityType <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
      */
     public String getActivityType() {
         return this.ActivityType;
     }
 
     /**
-     * Set 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
-     * @param ActivityType 原子任务类型。
-<li>Transcode：转码。</li>
-<li>SampleSnapshot：采样截图。</li>
-<li>AnimatedGraphics：转动图。</li>
-<li>SnapshotByTimeOffset：时间点截图。</li>
-<li>ImageSprites：雪碧图。</li>
-<li>AdaptiveDynamicStreaming：自适应码流。</li>
-<li>AiContentReview：内容审核。</li>
-<li>AIRecognition：智能识别。</li>
-<li>AIAnalysis：智能分析。</li>
-<li>AiQualityControl：媒体质检。</li>
-<li>SmartSubtitles：智能字幕。</li>
-<li>SmartErase：智能擦除。</li>
+     * Set <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
+     * @param ActivityType <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get 原子任务输出。 
-     * @return ActivityResItem 原子任务输出。
+     * Get <p>原子任务输出。</p> 
+     * @return ActivityResItem <p>原子任务输出。</p>
      */
     public ActivityResItem getActivityResItem() {
         return this.ActivityResItem;
     }
 
     /**
-     * Set 原子任务输出。
-     * @param ActivityResItem 原子任务输出。
+     * Set <p>原子任务输出。</p>
+     * @param ActivityResItem <p>原子任务输出。</p>
      */
     public void setActivityResItem(ActivityResItem ActivityResItem) {
         this.ActivityResItem = ActivityResItem;

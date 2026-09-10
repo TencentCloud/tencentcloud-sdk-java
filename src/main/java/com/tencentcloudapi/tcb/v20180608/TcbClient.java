@@ -242,6 +242,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *创建云函数
+     * @param req CreateFunctionRequest
+     * @return CreateFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionResponse CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFunction", CreateFunctionResponse.class);
+    }
+
+    /**
      *本接口CreateHTTPServiceRoute用于创建HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。此外HTTP访问服务提供了默认域名，通过DescribeHTTPServiceRoute接口可直接获取默认域名。
      * @param req CreateHTTPServiceRouteRequest
      * @return CreateHTTPServiceRouteResponse
@@ -372,6 +383,19 @@ public class TcbClient extends AbstractClient{
     public DeleteCloudAppVersionResponse DeleteCloudAppVersion(DeleteCloudAppVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudAppVersion", DeleteCloudAppVersionResponse.class);
+    }
+
+    /**
+     *删除云函数。
+
+删除指定环境下的云函数。调用接口后，若通过 GetFunction 接口查询不到该函数，则表示删除成功。
+     * @param req DeleteFunctionRequest
+     * @return DeleteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunction", DeleteFunctionResponse.class);
     }
 
     /**
@@ -931,6 +955,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取云函数地址并下载zip包
+     * @param req DownloadFunctionRequest
+     * @return DownloadFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadFunctionResponse DownloadFunction(DownloadFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadFunction", DownloadFunctionResponse.class);
+    }
+
+    /**
      *在Postgres数据库上执行SQL
      * @param req ExecutePGSqlRequest
      * @return ExecutePGSqlResponse
@@ -942,6 +977,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取云函数详情
+     * @param req GetFunctionRequest
+     * @return GetFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFunctionResponse GetFunction(GetFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFunction", GetFunctionResponse.class);
+    }
+
+    /**
      *查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
      * @param req GetProvidersRequest
      * @return GetProvidersResponse
@@ -950,6 +996,17 @@ public class TcbClient extends AbstractClient{
     public GetProvidersResponse GetProviders(GetProvidersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetProviders", GetProvidersResponse.class);
+    }
+
+    /**
+     *该接口根据传入的查询参数返回相关函数信息。
+     * @param req ListFunctionsRequest
+     * @return ListFunctionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListFunctionsResponse ListFunctions(ListFunctionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListFunctions", ListFunctionsResponse.class);
     }
 
     /**
@@ -1287,6 +1344,28 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     public UpdateAIModelResponse UpdateAIModel(UpdateAIModelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAIModel", UpdateAIModelResponse.class);
+    }
+
+    /**
+     *更新云函数代码
+     * @param req UpdateFunctionCodeRequest
+     * @return UpdateFunctionCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionCodeResponse UpdateFunctionCode(UpdateFunctionCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFunctionCode", UpdateFunctionCodeResponse.class);
+    }
+
+    /**
+     *该接口根据传入参数更新函数配置。
+     * @param req UpdateFunctionConfigurationRequest
+     * @return UpdateFunctionConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFunctionConfiguration", UpdateFunctionConfigurationResponse.class);
     }
 
     /**

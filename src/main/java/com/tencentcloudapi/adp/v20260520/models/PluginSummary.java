@@ -24,6 +24,20 @@ import java.util.HashMap;
 public class PluginSummary extends AbstractModel {
 
     /**
+    * <p>插件配置信息</p>
+    */
+    @SerializedName("Config")
+    @Expose
+    private PluginConfig Config;
+
+    /**
+    * <p>是否已配置共享</p>
+    */
+    @SerializedName("IsShared")
+    @Expose
+    private Boolean IsShared;
+
+    /**
     * <p>插件运营管理信息</p>
     */
     @SerializedName("Operation")
@@ -45,6 +59,13 @@ public class PluginSummary extends AbstractModel {
     private PluginProfile Profile;
 
     /**
+    * <p>插件所属空间 ID；内置插件为空</p>
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
     * <p>插件统计信息</p>
     */
     @SerializedName("Statistics")
@@ -59,6 +80,13 @@ public class PluginSummary extends AbstractModel {
     private Long Status;
 
     /**
+    * <p>工具信息</p>
+    */
+    @SerializedName("ToolList")
+    @Expose
+    private ToolSummary [] ToolList;
+
+    /**
     * <p>用户维度的插件状态信息</p>
     */
     @SerializedName("UserState")
@@ -66,18 +94,43 @@ public class PluginSummary extends AbstractModel {
     private PluginUserState UserState;
 
     /**
-    * <p>插件配置信息</p>
+    * <p>更新时间，Unix时间戳</p><p>单位：秒</p>
     */
-    @SerializedName("Config")
+    @SerializedName("UpdateTime")
     @Expose
-    private PluginConfig Config;
+    private String UpdateTime;
 
     /**
-    * <p>工具信息</p>
-    */
-    @SerializedName("ToolList")
-    @Expose
-    private ToolSummary [] ToolList;
+     * Get <p>插件配置信息</p> 
+     * @return Config <p>插件配置信息</p>
+     */
+    public PluginConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set <p>插件配置信息</p>
+     * @param Config <p>插件配置信息</p>
+     */
+    public void setConfig(PluginConfig Config) {
+        this.Config = Config;
+    }
+
+    /**
+     * Get <p>是否已配置共享</p> 
+     * @return IsShared <p>是否已配置共享</p>
+     */
+    public Boolean getIsShared() {
+        return this.IsShared;
+    }
+
+    /**
+     * Set <p>是否已配置共享</p>
+     * @param IsShared <p>是否已配置共享</p>
+     */
+    public void setIsShared(Boolean IsShared) {
+        this.IsShared = IsShared;
+    }
 
     /**
      * Get <p>插件运营管理信息</p> 
@@ -128,6 +181,22 @@ public class PluginSummary extends AbstractModel {
     }
 
     /**
+     * Get <p>插件所属空间 ID；内置插件为空</p> 
+     * @return SpaceId <p>插件所属空间 ID；内置插件为空</p>
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set <p>插件所属空间 ID；内置插件为空</p>
+     * @param SpaceId <p>插件所属空间 ID；内置插件为空</p>
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
+    /**
      * Get <p>插件统计信息</p> 
      * @return Statistics <p>插件统计信息</p>
      */
@@ -160,6 +229,22 @@ public class PluginSummary extends AbstractModel {
     }
 
     /**
+     * Get <p>工具信息</p> 
+     * @return ToolList <p>工具信息</p>
+     */
+    public ToolSummary [] getToolList() {
+        return this.ToolList;
+    }
+
+    /**
+     * Set <p>工具信息</p>
+     * @param ToolList <p>工具信息</p>
+     */
+    public void setToolList(ToolSummary [] ToolList) {
+        this.ToolList = ToolList;
+    }
+
+    /**
      * Get <p>用户维度的插件状态信息</p> 
      * @return UserState <p>用户维度的插件状态信息</p>
      */
@@ -176,35 +261,19 @@ public class PluginSummary extends AbstractModel {
     }
 
     /**
-     * Get <p>插件配置信息</p> 
-     * @return Config <p>插件配置信息</p>
+     * Get <p>更新时间，Unix时间戳</p><p>单位：秒</p> 
+     * @return UpdateTime <p>更新时间，Unix时间戳</p><p>单位：秒</p>
      */
-    public PluginConfig getConfig() {
-        return this.Config;
+    public String getUpdateTime() {
+        return this.UpdateTime;
     }
 
     /**
-     * Set <p>插件配置信息</p>
-     * @param Config <p>插件配置信息</p>
+     * Set <p>更新时间，Unix时间戳</p><p>单位：秒</p>
+     * @param UpdateTime <p>更新时间，Unix时间戳</p><p>单位：秒</p>
      */
-    public void setConfig(PluginConfig Config) {
-        this.Config = Config;
-    }
-
-    /**
-     * Get <p>工具信息</p> 
-     * @return ToolList <p>工具信息</p>
-     */
-    public ToolSummary [] getToolList() {
-        return this.ToolList;
-    }
-
-    /**
-     * Set <p>工具信息</p>
-     * @param ToolList <p>工具信息</p>
-     */
-    public void setToolList(ToolSummary [] ToolList) {
-        this.ToolList = ToolList;
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public PluginSummary() {
@@ -215,6 +284,12 @@ public class PluginSummary extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PluginSummary(PluginSummary source) {
+        if (source.Config != null) {
+            this.Config = new PluginConfig(source.Config);
+        }
+        if (source.IsShared != null) {
+            this.IsShared = new Boolean(source.IsShared);
+        }
         if (source.Operation != null) {
             this.Operation = new PluginOperation(source.Operation);
         }
@@ -224,23 +299,26 @@ public class PluginSummary extends AbstractModel {
         if (source.Profile != null) {
             this.Profile = new PluginProfile(source.Profile);
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
         if (source.Statistics != null) {
             this.Statistics = new PluginStatistics(source.Statistics);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
-        if (source.UserState != null) {
-            this.UserState = new PluginUserState(source.UserState);
-        }
-        if (source.Config != null) {
-            this.Config = new PluginConfig(source.Config);
-        }
         if (source.ToolList != null) {
             this.ToolList = new ToolSummary[source.ToolList.length];
             for (int i = 0; i < source.ToolList.length; i++) {
                 this.ToolList[i] = new ToolSummary(source.ToolList[i]);
             }
+        }
+        if (source.UserState != null) {
+            this.UserState = new PluginUserState(source.UserState);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
         }
     }
 
@@ -249,14 +327,17 @@ public class PluginSummary extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamSimple(map, prefix + "IsShared", this.IsShared);
         this.setParamObj(map, prefix + "Operation.", this.Operation);
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);
         this.setParamObj(map, prefix + "Profile.", this.Profile);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamObj(map, prefix + "Statistics.", this.Statistics);
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamObj(map, prefix + "UserState.", this.UserState);
-        this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamArrayObj(map, prefix + "ToolList.", this.ToolList);
+        this.setParamObj(map, prefix + "UserState.", this.UserState);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class ChangeInstanceMasterRequest extends AbstractModel {
 
     /**
-    * 实例 ID，如：kee-6ubh****。
+    * <p>实例 ID，如：kee-6ubh****。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 副本节点 ID。
+    * <p>副本节点组 ID，请通过接口DescribeInstanceReplicas获取多 AZ备节点组的 ID 信息。</p>
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
+    * <p>副本节点 ID。</p>
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-     * Get 实例 ID，如：kee-6ubh****。 
-     * @return InstanceId 实例 ID，如：kee-6ubh****。
+     * Get <p>实例 ID，如：kee-6ubh****。</p> 
+     * @return InstanceId <p>实例 ID，如：kee-6ubh****。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，如：kee-6ubh****。
-     * @param InstanceId 实例 ID，如：kee-6ubh****。
+     * Set <p>实例 ID，如：kee-6ubh****。</p>
+     * @param InstanceId <p>实例 ID，如：kee-6ubh****。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 副本节点 ID。 
-     * @return NodeId 副本节点 ID。
+     * Get <p>副本节点组 ID，请通过接口DescribeInstanceReplicas获取多 AZ备节点组的 ID 信息。</p> 
+     * @return GroupId <p>副本节点组 ID，请通过接口DescribeInstanceReplicas获取多 AZ备节点组的 ID 信息。</p>
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set <p>副本节点组 ID，请通过接口DescribeInstanceReplicas获取多 AZ备节点组的 ID 信息。</p>
+     * @param GroupId <p>副本节点组 ID，请通过接口DescribeInstanceReplicas获取多 AZ备节点组的 ID 信息。</p>
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get <p>副本节点 ID。</p> 
+     * @return NodeId <p>副本节点 ID。</p>
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 副本节点 ID。
-     * @param NodeId 副本节点 ID。
+     * Set <p>副本节点 ID。</p>
+     * @param NodeId <p>副本节点 ID。</p>
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
@@ -80,6 +103,9 @@ public class ChangeInstanceMasterRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
         if (source.NodeId != null) {
             this.NodeId = new String(source.NodeId);
         }
@@ -91,6 +117,7 @@ public class ChangeInstanceMasterRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }

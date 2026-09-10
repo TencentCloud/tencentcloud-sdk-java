@@ -199,6 +199,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private String Password;
 
     /**
+    * <p>自定义镜像 ID</p>
+    */
+    @SerializedName("CustomImage")
+    @Expose
+    private String CustomImage;
+
+    /**
      * Get <p>节点池伸缩配置</p> 
      * @return Scaling <p>节点池伸缩配置</p>
      */
@@ -598,6 +605,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get <p>自定义镜像 ID</p> 
+     * @return CustomImage <p>自定义镜像 ID</p>
+     */
+    public String getCustomImage() {
+        return this.CustomImage;
+    }
+
+    /**
+     * Set <p>自定义镜像 ID</p>
+     * @param CustomImage <p>自定义镜像 ID</p>
+     */
+    public void setCustomImage(String CustomImage) {
+        this.CustomImage = CustomImage;
+    }
+
     public CreateNativeNodePoolParam() {
     }
 
@@ -702,6 +725,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.CustomImage != null) {
+            this.CustomImage = new String(source.CustomImage);
+        }
     }
 
 
@@ -734,6 +760,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "CustomImage", this.CustomImage);
 
     }
 }

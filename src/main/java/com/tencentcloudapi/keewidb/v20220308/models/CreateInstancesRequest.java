@@ -143,6 +143,13 @@ public class CreateInstancesRequest extends AbstractModel {
     private String [] SecurityGroupIdList;
 
     /**
+    * <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+    */
+    @SerializedName("NodeSet")
+    @Expose
+    private NodeInfo [] NodeSet;
+
+    /**
     * <p>给实例绑定标签。</p>
     */
     @SerializedName("ResourceTags")
@@ -457,6 +464,22 @@ public class CreateInstancesRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul> 
+     * @return NodeSet <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+     */
+    public NodeInfo [] getNodeSet() {
+        return this.NodeSet;
+    }
+
+    /**
+     * Set <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+     * @param NodeSet <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+     */
+    public void setNodeSet(NodeInfo [] NodeSet) {
+        this.NodeSet = NodeSet;
+    }
+
+    /**
      * Get <p>给实例绑定标签。</p> 
      * @return ResourceTags <p>给实例绑定标签。</p>
      */
@@ -614,6 +637,12 @@ public class CreateInstancesRequest extends AbstractModel {
                 this.SecurityGroupIdList[i] = new String(source.SecurityGroupIdList[i]);
             }
         }
+        if (source.NodeSet != null) {
+            this.NodeSet = new NodeInfo[source.NodeSet.length];
+            for (int i = 0; i < source.NodeSet.length; i++) {
+                this.NodeSet[i] = new NodeInfo(source.NodeSet[i]);
+            }
+        }
         if (source.ResourceTags != null) {
             this.ResourceTags = new ResourceTag[source.ResourceTags.length];
             for (int i = 0; i < source.ResourceTags.length; i++) {
@@ -659,6 +688,7 @@ public class CreateInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArraySimple(map, prefix + "SecurityGroupIdList.", this.SecurityGroupIdList);
+        this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);

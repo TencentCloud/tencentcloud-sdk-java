@@ -24,37 +24,35 @@ import java.util.HashMap;
 public class WorkflowTask extends AbstractModel {
 
     /**
-    * 媒体处理任务 ID。
+    * <p>媒体处理任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+    * <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+    * <p>源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+    * <p>源异常时返回对应异常Message，否则请使用各个具体任务的 Message。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 媒体处理的目标文件信息。
+    * <p>媒体处理的目标文件信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
@@ -62,7 +60,7 @@ public class WorkflowTask extends AbstractModel {
     private MediaInputInfo InputInfo;
 
     /**
-    * 原始视频的元信息。
+    * <p>原始视频的元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
@@ -70,35 +68,35 @@ public class WorkflowTask extends AbstractModel {
     private MediaMetaData MetaData;
 
     /**
-    * 媒体处理任务的执行状态与结果。
+    * <p>媒体处理任务的执行状态与结果。</p>
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * 视频内容审核任务的执行状态与结果。
+    * <p>视频内容审核任务的执行状态与结果。</p>
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * 视频内容分析任务的执行状态与结果。
+    * <p>视频内容分析任务的执行状态与结果。</p>
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
-    * 视频内容识别任务的执行状态与结果。
+    * <p>视频内容识别任务的执行状态与结果。</p>
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * 媒体质检任务的执行状态与结果。
+    * <p>媒体质检任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiQualityControlTaskResult")
@@ -106,7 +104,7 @@ public class WorkflowTask extends AbstractModel {
     private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
 
     /**
-    * 智能字幕任务的执行结果
+    * <p>智能字幕任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartSubtitlesTaskResult")
@@ -114,7 +112,7 @@ public class WorkflowTask extends AbstractModel {
     private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
 
     /**
-    * 智能擦除任务的执行结果
+    * <p>智能擦除任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartEraseTaskResult")
@@ -122,81 +120,80 @@ public class WorkflowTask extends AbstractModel {
     private SmartEraseTaskResult SmartEraseTaskResult;
 
     /**
-     * Get 媒体处理任务 ID。 
-     * @return TaskId 媒体处理任务 ID。
+    * <p>AI配音任务的执行结果。</p>
+    */
+    @SerializedName("AiDubbingTaskResult")
+    @Expose
+    private AIDubbingTaskResult AiDubbingTaskResult;
+
+    /**
+     * Get <p>媒体处理任务 ID。</p> 
+     * @return TaskId <p>媒体处理任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 媒体处理任务 ID。
-     * @param TaskId 媒体处理任务 ID。
+     * Set <p>媒体处理任务 ID。</p>
+     * @param TaskId <p>媒体处理任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li> 
-     * @return Status 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * Get <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li> 
+     * @return Status <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
-     * @param Status 任务流状态，取值：
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * Set <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * @param Status <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。 
-     * @return ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     * Get <p>源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。</p> 
+     * @return ErrCode <p>源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-     * @param ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     * Set <p>源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。</p>
+     * @param ErrCode <p>源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。 
-     * @return Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     * Get <p>源异常时返回对应异常Message，否则请使用各个具体任务的 Message。</p> 
+     * @return Message <p>源异常时返回对应异常Message，否则请使用各个具体任务的 Message。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-     * @param Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     * Set <p>源异常时返回对应异常Message，否则请使用各个具体任务的 Message。</p>
+     * @param Message <p>源异常时返回对应异常Message，否则请使用各个具体任务的 Message。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 媒体处理的目标文件信息。
+     * Get <p>媒体处理的目标文件信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputInfo 媒体处理的目标文件信息。
+     * @return InputInfo <p>媒体处理的目标文件信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInputInfo getInputInfo() {
@@ -204,9 +201,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 媒体处理的目标文件信息。
+     * Set <p>媒体处理的目标文件信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputInfo 媒体处理的目标文件信息。
+     * @param InputInfo <p>媒体处理的目标文件信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
@@ -214,9 +211,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 原始视频的元信息。
+     * Get <p>原始视频的元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetaData 原始视频的元信息。
+     * @return MetaData <p>原始视频的元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
@@ -224,9 +221,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 原始视频的元信息。
+     * Set <p>原始视频的元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaData 原始视频的元信息。
+     * @param MetaData <p>原始视频的元信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
@@ -234,73 +231,73 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 媒体处理任务的执行状态与结果。 
-     * @return MediaProcessResultSet 媒体处理任务的执行状态与结果。
+     * Get <p>媒体处理任务的执行状态与结果。</p> 
+     * @return MediaProcessResultSet <p>媒体处理任务的执行状态与结果。</p>
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set 媒体处理任务的执行状态与结果。
-     * @param MediaProcessResultSet 媒体处理任务的执行状态与结果。
+     * Set <p>媒体处理任务的执行状态与结果。</p>
+     * @param MediaProcessResultSet <p>媒体处理任务的执行状态与结果。</p>
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get 视频内容审核任务的执行状态与结果。 
-     * @return AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * Get <p>视频内容审核任务的执行状态与结果。</p> 
+     * @return AiContentReviewResultSet <p>视频内容审核任务的执行状态与结果。</p>
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set 视频内容审核任务的执行状态与结果。
-     * @param AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * Set <p>视频内容审核任务的执行状态与结果。</p>
+     * @param AiContentReviewResultSet <p>视频内容审核任务的执行状态与结果。</p>
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get 视频内容分析任务的执行状态与结果。 
-     * @return AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+     * Get <p>视频内容分析任务的执行状态与结果。</p> 
+     * @return AiAnalysisResultSet <p>视频内容分析任务的执行状态与结果。</p>
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set 视频内容分析任务的执行状态与结果。
-     * @param AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
+     * Set <p>视频内容分析任务的执行状态与结果。</p>
+     * @param AiAnalysisResultSet <p>视频内容分析任务的执行状态与结果。</p>
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get 视频内容识别任务的执行状态与结果。 
-     * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     * Get <p>视频内容识别任务的执行状态与结果。</p> 
+     * @return AiRecognitionResultSet <p>视频内容识别任务的执行状态与结果。</p>
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
     }
 
     /**
-     * Set 视频内容识别任务的执行状态与结果。
-     * @param AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     * Set <p>视频内容识别任务的执行状态与结果。</p>
+     * @param AiRecognitionResultSet <p>视频内容识别任务的执行状态与结果。</p>
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
     /**
-     * Get 媒体质检任务的执行状态与结果。
+     * Get <p>媒体质检任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiQualityControlTaskResult 媒体质检任务的执行状态与结果。
+     * @return AiQualityControlTaskResult <p>媒体质检任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
@@ -308,9 +305,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 媒体质检任务的执行状态与结果。
+     * Set <p>媒体质检任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiQualityControlTaskResult 媒体质检任务的执行状态与结果。
+     * @param AiQualityControlTaskResult <p>媒体质检任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {
@@ -318,9 +315,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 智能字幕任务的执行结果
+     * Get <p>智能字幕任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmartSubtitlesTaskResult 智能字幕任务的执行结果
+     * @return SmartSubtitlesTaskResult <p>智能字幕任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitlesResult [] getSmartSubtitlesTaskResult() {
@@ -328,9 +325,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 智能字幕任务的执行结果
+     * Set <p>智能字幕任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartSubtitlesTaskResult 智能字幕任务的执行结果
+     * @param SmartSubtitlesTaskResult <p>智能字幕任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartSubtitlesTaskResult(SmartSubtitlesResult [] SmartSubtitlesTaskResult) {
@@ -338,9 +335,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 智能擦除任务的执行结果
+     * Get <p>智能擦除任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmartEraseTaskResult 智能擦除任务的执行结果
+     * @return SmartEraseTaskResult <p>智能擦除任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartEraseTaskResult getSmartEraseTaskResult() {
@@ -348,13 +345,29 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 智能擦除任务的执行结果
+     * Set <p>智能擦除任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartEraseTaskResult 智能擦除任务的执行结果
+     * @param SmartEraseTaskResult <p>智能擦除任务的执行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartEraseTaskResult(SmartEraseTaskResult SmartEraseTaskResult) {
         this.SmartEraseTaskResult = SmartEraseTaskResult;
+    }
+
+    /**
+     * Get <p>AI配音任务的执行结果。</p> 
+     * @return AiDubbingTaskResult <p>AI配音任务的执行结果。</p>
+     */
+    public AIDubbingTaskResult getAiDubbingTaskResult() {
+        return this.AiDubbingTaskResult;
+    }
+
+    /**
+     * Set <p>AI配音任务的执行结果。</p>
+     * @param AiDubbingTaskResult <p>AI配音任务的执行结果。</p>
+     */
+    public void setAiDubbingTaskResult(AIDubbingTaskResult AiDubbingTaskResult) {
+        this.AiDubbingTaskResult = AiDubbingTaskResult;
     }
 
     public WorkflowTask() {
@@ -419,6 +432,9 @@ public class WorkflowTask extends AbstractModel {
         if (source.SmartEraseTaskResult != null) {
             this.SmartEraseTaskResult = new SmartEraseTaskResult(source.SmartEraseTaskResult);
         }
+        if (source.AiDubbingTaskResult != null) {
+            this.AiDubbingTaskResult = new AIDubbingTaskResult(source.AiDubbingTaskResult);
+        }
     }
 
 
@@ -439,6 +455,7 @@ public class WorkflowTask extends AbstractModel {
         this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
         this.setParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
         this.setParamObj(map, prefix + "SmartEraseTaskResult.", this.SmartEraseTaskResult);
+        this.setParamObj(map, prefix + "AiDubbingTaskResult.", this.AiDubbingTaskResult);
 
     }
 }

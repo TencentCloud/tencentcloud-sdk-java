@@ -899,6 +899,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *DescribeNDRDataLeakOutAlertList -- 查询NDR数据泄露出站告警列表
+     * @param req DescribeNDRDataLeakOutAlertListRequest
+     * @return DescribeNDRDataLeakOutAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNDRDataLeakOutAlertListResponse DescribeNDRDataLeakOutAlertList(DescribeNDRDataLeakOutAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNDRDataLeakOutAlertList", DescribeNDRDataLeakOutAlertListResponse.class);
+    }
+
+    /**
      *查询NAT访问控制列表
      * @param req DescribeNatAcRuleRequest
      * @return DescribeNatAcRuleResponse

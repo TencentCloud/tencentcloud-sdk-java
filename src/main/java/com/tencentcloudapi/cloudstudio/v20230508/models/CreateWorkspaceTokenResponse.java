@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateWorkspaceTokenResponse extends AbstractModel {
 
     /**
-    * 访问工作空间临时凭证
+    * <p>访问工作空间临时凭证</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * token 过期时间
+    * <p>token 过期时间</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -45,32 +45,32 @@ public class CreateWorkspaceTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 访问工作空间临时凭证 
-     * @return Token 访问工作空间临时凭证
+     * Get <p>访问工作空间临时凭证</p> 
+     * @return Token <p>访问工作空间临时凭证</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 访问工作空间临时凭证
-     * @param Token 访问工作空间临时凭证
+     * Set <p>访问工作空间临时凭证</p>
+     * @param Token <p>访问工作空间临时凭证</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get token 过期时间 
-     * @return ExpiredTime token 过期时间
+     * Get <p>token 过期时间</p> 
+     * @return ExpiredTime <p>token 过期时间</p>
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set token 过期时间
-     * @param ExpiredTime token 过期时间
+     * Set <p>token 过期时间</p>
+     * @param ExpiredTime <p>token 过期时间</p>
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

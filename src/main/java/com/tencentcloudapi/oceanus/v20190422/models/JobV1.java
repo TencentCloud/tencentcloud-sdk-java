@@ -424,6 +424,27 @@ public class JobV1 extends AbstractModel {
     private String ManagerUin;
 
     /**
+    * <p>启动位点</p>
+    */
+    @SerializedName("StartupPoint")
+    @Expose
+    private String StartupPoint;
+
+    /**
+    * <p>是否有事件</p>
+    */
+    @SerializedName("IsEvent")
+    @Expose
+    private Boolean IsEvent;
+
+    /**
+    * <p>是否告警</p>
+    */
+    @SerializedName("IsAlarm")
+    @Expose
+    private Boolean IsAlarm;
+
+    /**
      * Get <p>作业ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId <p>作业ID</p>
@@ -1411,6 +1432,54 @@ public class JobV1 extends AbstractModel {
         this.ManagerUin = ManagerUin;
     }
 
+    /**
+     * Get <p>启动位点</p> 
+     * @return StartupPoint <p>启动位点</p>
+     */
+    public String getStartupPoint() {
+        return this.StartupPoint;
+    }
+
+    /**
+     * Set <p>启动位点</p>
+     * @param StartupPoint <p>启动位点</p>
+     */
+    public void setStartupPoint(String StartupPoint) {
+        this.StartupPoint = StartupPoint;
+    }
+
+    /**
+     * Get <p>是否有事件</p> 
+     * @return IsEvent <p>是否有事件</p>
+     */
+    public Boolean getIsEvent() {
+        return this.IsEvent;
+    }
+
+    /**
+     * Set <p>是否有事件</p>
+     * @param IsEvent <p>是否有事件</p>
+     */
+    public void setIsEvent(Boolean IsEvent) {
+        this.IsEvent = IsEvent;
+    }
+
+    /**
+     * Get <p>是否告警</p> 
+     * @return IsAlarm <p>是否告警</p>
+     */
+    public Boolean getIsAlarm() {
+        return this.IsAlarm;
+    }
+
+    /**
+     * Set <p>是否告警</p>
+     * @param IsAlarm <p>是否告警</p>
+     */
+    public void setIsAlarm(Boolean IsAlarm) {
+        this.IsAlarm = IsAlarm;
+    }
+
     public JobV1() {
     }
 
@@ -1575,6 +1644,15 @@ public class JobV1 extends AbstractModel {
         if (source.ManagerUin != null) {
             this.ManagerUin = new String(source.ManagerUin);
         }
+        if (source.StartupPoint != null) {
+            this.StartupPoint = new String(source.StartupPoint);
+        }
+        if (source.IsEvent != null) {
+            this.IsEvent = new Boolean(source.IsEvent);
+        }
+        if (source.IsAlarm != null) {
+            this.IsAlarm = new Boolean(source.IsAlarm);
+        }
     }
 
 
@@ -1633,6 +1711,9 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthScore", this.HealthScore);
         this.setParamSimple(map, prefix + "LastDiagnoseTime", this.LastDiagnoseTime);
         this.setParamSimple(map, prefix + "ManagerUin", this.ManagerUin);
+        this.setParamSimple(map, prefix + "StartupPoint", this.StartupPoint);
+        this.setParamSimple(map, prefix + "IsEvent", this.IsEvent);
+        this.setParamSimple(map, prefix + "IsAlarm", this.IsAlarm);
 
     }
 }

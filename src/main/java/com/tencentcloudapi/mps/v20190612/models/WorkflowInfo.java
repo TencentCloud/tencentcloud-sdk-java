@@ -55,7 +55,6 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
     * 媒体处理的文件输出存储位置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -63,7 +62,6 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
     * 媒体处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaProcessTask")
     @Expose
@@ -95,7 +93,6 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
     * 任务的事件通知信息，不填代表不获取事件通知。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
@@ -202,10 +199,8 @@ public class WorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 媒体处理的文件输出存储位置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体处理的文件输出存储位置。 
      * @return OutputStorage 媒体处理的文件输出存储位置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -213,19 +208,15 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
      * Set 媒体处理的文件输出存储位置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 媒体处理的文件输出存储位置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 媒体处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体处理类型任务参数。 
      * @return MediaProcessTask 媒体处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
@@ -233,9 +224,7 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
      * Set 媒体处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTask 媒体处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
@@ -302,10 +291,8 @@ public class WorkflowInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务的事件通知信息，不填代表不获取事件通知。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的事件通知信息，不填代表不获取事件通知。 
      * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
@@ -313,9 +300,7 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
      * Set 任务的事件通知信息，不填代表不获取事件通知。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;

@@ -31,6 +31,13 @@ public class DescribeSkillReferenceListResponse extends AbstractModel {
     private SkillReferenceGroup [] ReferenceList;
 
     /**
+    * <p>当前用户是否允许强制删除有引用的Skill</p>
+    */
+    @SerializedName("AllowForceModify")
+    @Expose
+    private Boolean AllowForceModify;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeSkillReferenceListResponse extends AbstractModel {
      */
     public void setReferenceList(SkillReferenceGroup [] ReferenceList) {
         this.ReferenceList = ReferenceList;
+    }
+
+    /**
+     * Get <p>当前用户是否允许强制删除有引用的Skill</p> 
+     * @return AllowForceModify <p>当前用户是否允许强制删除有引用的Skill</p>
+     */
+    public Boolean getAllowForceModify() {
+        return this.AllowForceModify;
+    }
+
+    /**
+     * Set <p>当前用户是否允许强制删除有引用的Skill</p>
+     * @param AllowForceModify <p>当前用户是否允许强制删除有引用的Skill</p>
+     */
+    public void setAllowForceModify(Boolean AllowForceModify) {
+        this.AllowForceModify = AllowForceModify;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeSkillReferenceListResponse extends AbstractModel {
                 this.ReferenceList[i] = new SkillReferenceGroup(source.ReferenceList[i]);
             }
         }
+        if (source.AllowForceModify != null) {
+            this.AllowForceModify = new Boolean(source.AllowForceModify);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeSkillReferenceListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ReferenceList.", this.ReferenceList);
+        this.setParamSimple(map, prefix + "AllowForceModify", this.AllowForceModify);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

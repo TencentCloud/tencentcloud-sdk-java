@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateWorkspaceTokenRequest extends AbstractModel {
 
     /**
-    * 工作空间 SpaceKey
+    * <p>工作空间 SpaceKey</p>
     */
     @SerializedName("SpaceKey")
     @Expose
     private String SpaceKey;
 
     /**
-    * token过期时间，单位是秒，默认 3600
+    * <p>token过期时间，单位是秒，默认 3600</p>
     */
     @SerializedName("TokenExpiredLimitSec")
     @Expose
     private Long TokenExpiredLimitSec;
 
     /**
-    * token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+    * <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
     */
     @SerializedName("Policies")
     @Expose
     private String [] Policies;
 
     /**
-     * Get 工作空间 SpaceKey 
-     * @return SpaceKey 工作空间 SpaceKey
+     * Get <p>工作空间 SpaceKey</p> 
+     * @return SpaceKey <p>工作空间 SpaceKey</p>
      */
     public String getSpaceKey() {
         return this.SpaceKey;
     }
 
     /**
-     * Set 工作空间 SpaceKey
-     * @param SpaceKey 工作空间 SpaceKey
+     * Set <p>工作空间 SpaceKey</p>
+     * @param SpaceKey <p>工作空间 SpaceKey</p>
      */
     public void setSpaceKey(String SpaceKey) {
         this.SpaceKey = SpaceKey;
     }
 
     /**
-     * Get token过期时间，单位是秒，默认 3600 
-     * @return TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
+     * Get <p>token过期时间，单位是秒，默认 3600</p> 
+     * @return TokenExpiredLimitSec <p>token过期时间，单位是秒，默认 3600</p>
      */
     public Long getTokenExpiredLimitSec() {
         return this.TokenExpiredLimitSec;
     }
 
     /**
-     * Set token过期时间，单位是秒，默认 3600
-     * @param TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
+     * Set <p>token过期时间，单位是秒，默认 3600</p>
+     * @param TokenExpiredLimitSec <p>token过期时间，单位是秒，默认 3600</p>
      */
     public void setTokenExpiredLimitSec(Long TokenExpiredLimitSec) {
         this.TokenExpiredLimitSec = TokenExpiredLimitSec;
     }
 
     /**
-     * Get token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only 
-     * @return Policies token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+     * Get <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p> 
+     * @return Policies <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
      */
     public String [] getPolicies() {
         return this.Policies;
     }
 
     /**
-     * Set token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
-     * @param Policies token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+     * Set <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
+     * @param Policies <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
      */
     public void setPolicies(String [] Policies) {
         this.Policies = Policies;

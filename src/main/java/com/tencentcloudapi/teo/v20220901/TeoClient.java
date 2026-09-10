@@ -1881,7 +1881,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *本接口（DownloadL4Logs）用于下载四层离线日志。
+     *本接口（DownloadL4Logs）用于获取四层代理业务的离线日志下载链接。
+**注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
      * @param req DownloadL4LogsRequest
      * @return DownloadL4LogsResponse
      * @throws TencentCloudSDKException
@@ -1892,7 +1893,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *本接口（DownloadL7Logs）下载七层离线日志。
+     *本接口（DownloadL7Logs）用于获取七层域名业务的离线日志下载链接。
+**注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
      * @param req DownloadL7LogsRequest
      * @return DownloadL7LogsResponse
      * @throws TencentCloudSDKException

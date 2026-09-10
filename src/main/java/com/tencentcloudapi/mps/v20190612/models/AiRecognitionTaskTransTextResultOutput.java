@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiRecognitionTaskTransTextResultOutput extends AbstractModel {
 
     /**
-    * 翻译片段列表。
+    * <p>翻译片段列表。</p>
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskTransTextSegmentItem [] SegmentSet;
 
     /**
-    * 字幕文件地址。
+    * <p>字幕文件地址。</p>
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-     * Get 翻译片段列表。 
-     * @return SegmentSet 翻译片段列表。
+     * Get <p>翻译片段列表。</p> 
+     * @return SegmentSet <p>翻译片段列表。</p>
      */
     public AiRecognitionTaskTransTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 翻译片段列表。
-     * @param SegmentSet 翻译片段列表。
+     * Set <p>翻译片段列表。</p>
+     * @param SegmentSet <p>翻译片段列表。</p>
      */
     public void setSegmentSet(AiRecognitionTaskTransTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get 字幕文件地址。 
-     * @return SubtitlePath 字幕文件地址。
+     * Get <p>字幕文件地址。</p> 
+     * @return SubtitlePath <p>字幕文件地址。</p>
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set 字幕文件地址。
-     * @param SubtitlePath 字幕文件地址。
+     * Set <p>字幕文件地址。</p>
+     * @param SubtitlePath <p>字幕文件地址。</p>
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;

@@ -61,7 +61,7 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *创建Agent
+     *创建Agent（目前仅支持claw模式）
      * @param req CreateAgentRequest
      * @return CreateAgentResponse
      * @throws TencentCloudSDKException

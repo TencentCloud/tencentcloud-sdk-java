@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeInstanceResponse extends AbstractModel {
 
     /**
-    * 交易ID。
+    * <p>交易ID。</p>
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -45,8 +45,8 @@ public class UpgradeInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 交易ID。 
-     * @return DealId 交易ID。
+     * Get <p>交易ID。</p> 
+     * @return DealId <p>交易ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -55,8 +55,8 @@ public class UpgradeInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 交易ID。
-     * @param DealId 交易ID。
+     * Set <p>交易ID。</p>
+     * @param DealId <p>交易ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -65,16 +65,16 @@ public class UpgradeInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 订单号。 
-     * @return DealName 订单号。
+     * Get <p>订单号。</p> 
+     * @return DealName <p>订单号。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单号。
-     * @param DealName 订单号。
+     * Set <p>订单号。</p>
+     * @param DealName <p>订单号。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ModifyWorkspaceRequest extends AbstractModel {
 
     /**
-    * 工作空间 SpaceKey. 更新该工作空间的属性
+    * <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
     */
     @SerializedName("SpaceKey")
     @Expose
     private String SpaceKey;
 
     /**
-    * 工作空间名称
+    * <p>工作空间名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 工作空间描述
+    * <p>工作空间描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
+    * <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
     */
     @SerializedName("Specs")
     @Expose
     private String Specs;
 
     /**
-    * 环境变量. 会被注入到工作空间中
+    * <p>环境变量. 会被注入到工作空间中</p>
     */
     @SerializedName("Envs")
     @Expose
     private Env [] Envs;
 
     /**
-    * 预装插件. 工作空间启动时, 会自动安装这些插件 
+    * <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
     */
     @SerializedName("Extensions")
     @Expose
     private String [] Extensions;
 
     /**
-    * 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+    * <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
     */
     @SerializedName("Lifecycle")
     @Expose
     private LifeCycle Lifecycle;
 
     /**
-     * Get 工作空间 SpaceKey. 更新该工作空间的属性 
-     * @return SpaceKey 工作空间 SpaceKey. 更新该工作空间的属性
+     * Get <p>工作空间 SpaceKey. 更新该工作空间的属性</p> 
+     * @return SpaceKey <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
      */
     public String getSpaceKey() {
         return this.SpaceKey;
     }
 
     /**
-     * Set 工作空间 SpaceKey. 更新该工作空间的属性
-     * @param SpaceKey 工作空间 SpaceKey. 更新该工作空间的属性
+     * Set <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
+     * @param SpaceKey <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
      */
     public void setSpaceKey(String SpaceKey) {
         this.SpaceKey = SpaceKey;
     }
 
     /**
-     * Get 工作空间名称 
-     * @return Name 工作空间名称
+     * Get <p>工作空间名称</p> 
+     * @return Name <p>工作空间名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 工作空间名称
-     * @param Name 工作空间名称
+     * Set <p>工作空间名称</p>
+     * @param Name <p>工作空间名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 工作空间描述 
-     * @return Description 工作空间描述
+     * Get <p>工作空间描述</p> 
+     * @return Description <p>工作空间描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 工作空间描述
-     * @param Description 工作空间描述
+     * Set <p>工作空间描述</p>
+     * @param Description <p>工作空间描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。 
-     * @return Specs 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
+     * Get <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p> 
+     * @return Specs <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
      */
     public String getSpecs() {
         return this.Specs;
     }
 
     /**
-     * Set 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
-     * @param Specs 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
+     * Set <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
+     * @param Specs <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
      */
     public void setSpecs(String Specs) {
         this.Specs = Specs;
     }
 
     /**
-     * Get 环境变量. 会被注入到工作空间中 
-     * @return Envs 环境变量. 会被注入到工作空间中
+     * Get <p>环境变量. 会被注入到工作空间中</p> 
+     * @return Envs <p>环境变量. 会被注入到工作空间中</p>
      */
     public Env [] getEnvs() {
         return this.Envs;
     }
 
     /**
-     * Set 环境变量. 会被注入到工作空间中
-     * @param Envs 环境变量. 会被注入到工作空间中
+     * Set <p>环境变量. 会被注入到工作空间中</p>
+     * @param Envs <p>环境变量. 会被注入到工作空间中</p>
      */
     public void setEnvs(Env [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get 预装插件. 工作空间启动时, 会自动安装这些插件  
-     * @return Extensions 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * Get <p>预装插件. 工作空间启动时, 会自动安装这些插件</p> 
+     * @return Extensions <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
      */
     public String [] getExtensions() {
         return this.Extensions;
     }
 
     /**
-     * Set 预装插件. 工作空间启动时, 会自动安装这些插件 
-     * @param Extensions 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * Set <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
+     * @param Extensions <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
      */
     public void setExtensions(String [] Extensions) {
         this.Extensions = Extensions;
     }
 
     /**
-     * Get 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.  
-     * @return Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * Get <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p> 
+     * @return Lifecycle <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
      */
     public LifeCycle getLifecycle() {
         return this.Lifecycle;
     }
 
     /**
-     * Set 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
-     * @param Lifecycle 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+     * Set <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
+     * @param Lifecycle <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
      */
     public void setLifecycle(LifeCycle Lifecycle) {
         this.Lifecycle = Lifecycle;

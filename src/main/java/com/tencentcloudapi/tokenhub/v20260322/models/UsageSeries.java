@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class UsageSeries extends AbstractModel {
 
     /**
-    * <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+    * <p>[tokens / apikey_usage 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
     */
     @SerializedName("TotalToken")
     @Expose
     private String TotalToken;
 
     /**
-    * <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+    * <p>[tokens / apikey_usage 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
     */
     @SerializedName("InputTotalToken")
     @Expose
     private String InputTotalToken;
 
     /**
-    * <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+    * <p>[tokens / apikey_usage 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
     */
     @SerializedName("OutputTotalToken")
     @Expose
     private String OutputTotalToken;
 
     /**
-    * <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+    * <p>[tokens / apikey_usage 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
     */
     @SerializedName("CacheTotalToken")
     @Expose
@@ -66,64 +66,78 @@ public class UsageSeries extends AbstractModel {
     private String SearchCount;
 
     /**
-     * Get <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p> 
-     * @return TotalToken <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+    * <p>[apikey_usage 族] 请求次数在时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+    */
+    @SerializedName("RequestCount")
+    @Expose
+    private String RequestCount;
+
+    /**
+    * <p>[apikey_usage 族] 请求失败次数在时间周期内的 JSON 字符串形式，如 &quot;[12,null,15]&quot;。</p>
+    */
+    @SerializedName("RequestFailCount")
+    @Expose
+    private String RequestFailCount;
+
+    /**
+     * Get <p>[tokens / apikey_usage 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p> 
+     * @return TotalToken <p>[tokens / apikey_usage 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
      */
     public String getTotalToken() {
         return this.TotalToken;
     }
 
     /**
-     * Set <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
-     * @param TotalToken <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     * Set <p>[tokens / apikey_usage 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     * @param TotalToken <p>[tokens / apikey_usage 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
      */
     public void setTotalToken(String TotalToken) {
         this.TotalToken = TotalToken;
     }
 
     /**
-     * Get <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p> 
-     * @return InputTotalToken <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+     * Get <p>[tokens / apikey_usage 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p> 
+     * @return InputTotalToken <p>[tokens / apikey_usage 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
      */
     public String getInputTotalToken() {
         return this.InputTotalToken;
     }
 
     /**
-     * Set <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
-     * @param InputTotalToken <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+     * Set <p>[tokens / apikey_usage 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+     * @param InputTotalToken <p>[tokens / apikey_usage 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
      */
     public void setInputTotalToken(String InputTotalToken) {
         this.InputTotalToken = InputTotalToken;
     }
 
     /**
-     * Get <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p> 
-     * @return OutputTotalToken <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+     * Get <p>[tokens / apikey_usage 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p> 
+     * @return OutputTotalToken <p>[tokens / apikey_usage 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public String getOutputTotalToken() {
         return this.OutputTotalToken;
     }
 
     /**
-     * Set <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
-     * @param OutputTotalToken <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+     * Set <p>[tokens / apikey_usage 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param OutputTotalToken <p>[tokens / apikey_usage 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public void setOutputTotalToken(String OutputTotalToken) {
         this.OutputTotalToken = OutputTotalToken;
     }
 
     /**
-     * Get <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p> 
-     * @return CacheTotalToken <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * Get <p>[tokens / apikey_usage 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p> 
+     * @return CacheTotalToken <p>[tokens / apikey_usage 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public String getCacheTotalToken() {
         return this.CacheTotalToken;
     }
 
     /**
-     * Set <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
-     * @param CacheTotalToken <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * Set <p>[tokens / apikey_usage 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+     * @param CacheTotalToken <p>[tokens / apikey_usage 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
      */
     public void setCacheTotalToken(String CacheTotalToken) {
         this.CacheTotalToken = CacheTotalToken;
@@ -161,6 +175,38 @@ public class UsageSeries extends AbstractModel {
         this.SearchCount = SearchCount;
     }
 
+    /**
+     * Get <p>[apikey_usage 族] 请求次数在时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p> 
+     * @return RequestCount <p>[apikey_usage 族] 请求次数在时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     */
+    public String getRequestCount() {
+        return this.RequestCount;
+    }
+
+    /**
+     * Set <p>[apikey_usage 族] 请求次数在时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     * @param RequestCount <p>[apikey_usage 族] 请求次数在时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+     */
+    public void setRequestCount(String RequestCount) {
+        this.RequestCount = RequestCount;
+    }
+
+    /**
+     * Get <p>[apikey_usage 族] 请求失败次数在时间周期内的 JSON 字符串形式，如 &quot;[12,null,15]&quot;。</p> 
+     * @return RequestFailCount <p>[apikey_usage 族] 请求失败次数在时间周期内的 JSON 字符串形式，如 &quot;[12,null,15]&quot;。</p>
+     */
+    public String getRequestFailCount() {
+        return this.RequestFailCount;
+    }
+
+    /**
+     * Set <p>[apikey_usage 族] 请求失败次数在时间周期内的 JSON 字符串形式，如 &quot;[12,null,15]&quot;。</p>
+     * @param RequestFailCount <p>[apikey_usage 族] 请求失败次数在时间周期内的 JSON 字符串形式，如 &quot;[12,null,15]&quot;。</p>
+     */
+    public void setRequestFailCount(String RequestFailCount) {
+        this.RequestFailCount = RequestFailCount;
+    }
+
     public UsageSeries() {
     }
 
@@ -187,6 +233,12 @@ public class UsageSeries extends AbstractModel {
         if (source.SearchCount != null) {
             this.SearchCount = new String(source.SearchCount);
         }
+        if (source.RequestCount != null) {
+            this.RequestCount = new String(source.RequestCount);
+        }
+        if (source.RequestFailCount != null) {
+            this.RequestFailCount = new String(source.RequestFailCount);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class UsageSeries extends AbstractModel {
         this.setParamSimple(map, prefix + "CacheTotalToken", this.CacheTotalToken);
         this.setParamSimple(map, prefix + "SearchRequestCount", this.SearchRequestCount);
         this.setParamSimple(map, prefix + "SearchCount", this.SearchCount);
+        this.setParamSimple(map, prefix + "RequestCount", this.RequestCount);
+        this.setParamSimple(map, prefix + "RequestFailCount", this.RequestFailCount);
 
     }
 }

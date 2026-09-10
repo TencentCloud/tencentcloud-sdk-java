@@ -52,6 +52,13 @@ public class CreateSkillShareRequest extends AbstractModel {
     private String VersionId;
 
     /**
+    * <p>共享配置</p>
+    */
+    @SerializedName("CorpShareConfig")
+    @Expose
+    private SkillCorpShareConfig CorpShareConfig;
+
+    /**
      * Get <p>必填，申请备注（弹窗&quot;申请备注&quot;）</p> 
      * @return ApplyRemark <p>必填，申请备注（弹窗&quot;申请备注&quot;）</p>
      */
@@ -115,6 +122,22 @@ public class CreateSkillShareRequest extends AbstractModel {
         this.VersionId = VersionId;
     }
 
+    /**
+     * Get <p>共享配置</p> 
+     * @return CorpShareConfig <p>共享配置</p>
+     */
+    public SkillCorpShareConfig getCorpShareConfig() {
+        return this.CorpShareConfig;
+    }
+
+    /**
+     * Set <p>共享配置</p>
+     * @param CorpShareConfig <p>共享配置</p>
+     */
+    public void setCorpShareConfig(SkillCorpShareConfig CorpShareConfig) {
+        this.CorpShareConfig = CorpShareConfig;
+    }
+
     public CreateSkillShareRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateSkillShareRequest extends AbstractModel {
         if (source.VersionId != null) {
             this.VersionId = new String(source.VersionId);
         }
+        if (source.CorpShareConfig != null) {
+            this.CorpShareConfig = new SkillCorpShareConfig(source.CorpShareConfig);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateSkillShareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SkillId", this.SkillId);
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
 
     }
 }

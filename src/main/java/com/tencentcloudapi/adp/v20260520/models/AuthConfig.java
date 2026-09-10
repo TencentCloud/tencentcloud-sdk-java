@@ -31,7 +31,7 @@ public class AuthConfig extends AbstractModel {
     private Long AuthType;
 
     /**
-    * API Key授权配置
+    * <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiKeyAuthConfig")
@@ -39,7 +39,7 @@ public class AuthConfig extends AbstractModel {
     private ApiKeyAuthConfig ApiKeyAuthConfig;
 
     /**
-    * CAM授权配置
+    * <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CamAuthConfig")
@@ -47,12 +47,19 @@ public class AuthConfig extends AbstractModel {
     private CamAuthConfig CamAuthConfig;
 
     /**
-    * OAuth2.0授权配置
+    * <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OAuthConfig")
     @Expose
     private OAuthConfig OAuthConfig;
+
+    /**
+    * <p>AccessKey授权配置</p>
+    */
+    @SerializedName("AccessKeyAuthConfig")
+    @Expose
+    private AccessKeyAuthConfig AccessKeyAuthConfig;
 
     /**
      * Get <p>授权方式。</p><p>枚举值：</p><ul><li>0：无鉴权</li><li>1：API Key 鉴权</li><li>2：CAM 授权</li><li>3：OAuth 2.0 授权</li></ul> 
@@ -71,9 +78,9 @@ public class AuthConfig extends AbstractModel {
     }
 
     /**
-     * Get API Key授权配置
+     * Get <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiKeyAuthConfig API Key授权配置
+     * @return ApiKeyAuthConfig <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiKeyAuthConfig getApiKeyAuthConfig() {
@@ -81,9 +88,9 @@ public class AuthConfig extends AbstractModel {
     }
 
     /**
-     * Set API Key授权配置
+     * Set <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiKeyAuthConfig API Key授权配置
+     * @param ApiKeyAuthConfig <p>API Key授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiKeyAuthConfig(ApiKeyAuthConfig ApiKeyAuthConfig) {
@@ -91,9 +98,9 @@ public class AuthConfig extends AbstractModel {
     }
 
     /**
-     * Get CAM授权配置
+     * Get <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CamAuthConfig CAM授权配置
+     * @return CamAuthConfig <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CamAuthConfig getCamAuthConfig() {
@@ -101,9 +108,9 @@ public class AuthConfig extends AbstractModel {
     }
 
     /**
-     * Set CAM授权配置
+     * Set <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CamAuthConfig CAM授权配置
+     * @param CamAuthConfig <p>CAM授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCamAuthConfig(CamAuthConfig CamAuthConfig) {
@@ -111,9 +118,9 @@ public class AuthConfig extends AbstractModel {
     }
 
     /**
-     * Get OAuth2.0授权配置
+     * Get <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OAuthConfig OAuth2.0授权配置
+     * @return OAuthConfig <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OAuthConfig getOAuthConfig() {
@@ -121,13 +128,29 @@ public class AuthConfig extends AbstractModel {
     }
 
     /**
-     * Set OAuth2.0授权配置
+     * Set <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OAuthConfig OAuth2.0授权配置
+     * @param OAuthConfig <p>OAuth2.0授权配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOAuthConfig(OAuthConfig OAuthConfig) {
         this.OAuthConfig = OAuthConfig;
+    }
+
+    /**
+     * Get <p>AccessKey授权配置</p> 
+     * @return AccessKeyAuthConfig <p>AccessKey授权配置</p>
+     */
+    public AccessKeyAuthConfig getAccessKeyAuthConfig() {
+        return this.AccessKeyAuthConfig;
+    }
+
+    /**
+     * Set <p>AccessKey授权配置</p>
+     * @param AccessKeyAuthConfig <p>AccessKey授权配置</p>
+     */
+    public void setAccessKeyAuthConfig(AccessKeyAuthConfig AccessKeyAuthConfig) {
+        this.AccessKeyAuthConfig = AccessKeyAuthConfig;
     }
 
     public AuthConfig() {
@@ -150,6 +173,9 @@ public class AuthConfig extends AbstractModel {
         if (source.OAuthConfig != null) {
             this.OAuthConfig = new OAuthConfig(source.OAuthConfig);
         }
+        if (source.AccessKeyAuthConfig != null) {
+            this.AccessKeyAuthConfig = new AccessKeyAuthConfig(source.AccessKeyAuthConfig);
+        }
     }
 
 
@@ -161,6 +187,7 @@ public class AuthConfig extends AbstractModel {
         this.setParamObj(map, prefix + "ApiKeyAuthConfig.", this.ApiKeyAuthConfig);
         this.setParamObj(map, prefix + "CamAuthConfig.", this.CamAuthConfig);
         this.setParamObj(map, prefix + "OAuthConfig.", this.OAuthConfig);
+        this.setParamObj(map, prefix + "AccessKeyAuthConfig.", this.AccessKeyAuthConfig);
 
     }
 }

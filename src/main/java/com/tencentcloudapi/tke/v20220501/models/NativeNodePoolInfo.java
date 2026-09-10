@@ -185,6 +185,14 @@ public class NativeNodePoolInfo extends AbstractModel {
     private String MachineType;
 
     /**
+    * <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomImage")
+    @Expose
+    private String CustomImage;
+
+    /**
      * Get <p>伸缩配置</p> 
      * @return Scaling <p>伸缩配置</p>
      */
@@ -564,6 +572,26 @@ public class NativeNodePoolInfo extends AbstractModel {
         this.MachineType = MachineType;
     }
 
+    /**
+     * Get <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomImage <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomImage() {
+        return this.CustomImage;
+    }
+
+    /**
+     * Set <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomImage <p>自定义镜像 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomImage(String CustomImage) {
+        this.CustomImage = CustomImage;
+    }
+
     public NativeNodePoolInfo() {
     }
 
@@ -656,6 +684,9 @@ public class NativeNodePoolInfo extends AbstractModel {
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.CustomImage != null) {
+            this.CustomImage = new String(source.CustomImage);
+        }
     }
 
 
@@ -685,6 +716,7 @@ public class NativeNodePoolInfo extends AbstractModel {
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "CustomImage", this.CustomImage);
 
     }
 }

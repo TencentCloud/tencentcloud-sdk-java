@@ -24,125 +24,141 @@ import java.util.HashMap;
 public class CamAuthConfig extends AbstractModel {
 
     /**
-    * 角色名称
+    * <p>角色名称</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
+    * <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
     */
     @SerializedName("KeyLocation")
     @Expose
     private Long KeyLocation;
 
     /**
-    * SecretId字段名称
+    * <p>SecretId字段名称</p>
     */
     @SerializedName("SecretIdName")
     @Expose
     private String SecretIdName;
 
     /**
-    * SecretKey字段名称
+    * <p>SecretKey字段名称</p>
     */
     @SerializedName("SecretKeyName")
     @Expose
     private String SecretKeyName;
 
     /**
-     * Get 角色名称 
-     * @return RoleName 角色名称
+    * <p>CAM Access Key 字段配置</p>
+    */
+    @SerializedName("ParamList")
+    @Expose
+    private AccessKeyParamConfig [] ParamList;
+
+    /**
+    * <p>是否支持CAM角色授权</p>
+    */
+    @SerializedName("SupportRoleAuth")
+    @Expose
+    private Boolean SupportRoleAuth;
+
+    /**
+     * Get <p>角色名称</p> 
+     * @return RoleName <p>角色名称</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名称
-     * @param RoleName 角色名称
+     * Set <p>角色名称</p>
+     * @param RoleName <p>角色名称</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 | 
-     * @return KeyLocation 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
+     * Get <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p> 
+     * @return KeyLocation <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
      */
     public Long getKeyLocation() {
         return this.KeyLocation;
     }
 
     /**
-     * Set 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
-     * @param KeyLocation 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | 头鉴权 |
-| 1 | 请求信息鉴权 |
+     * Set <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
+     * @param KeyLocation <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
      */
     public void setKeyLocation(Long KeyLocation) {
         this.KeyLocation = KeyLocation;
     }
 
     /**
-     * Get SecretId字段名称 
-     * @return SecretIdName SecretId字段名称
+     * Get <p>SecretId字段名称</p> 
+     * @return SecretIdName <p>SecretId字段名称</p>
      */
     public String getSecretIdName() {
         return this.SecretIdName;
     }
 
     /**
-     * Set SecretId字段名称
-     * @param SecretIdName SecretId字段名称
+     * Set <p>SecretId字段名称</p>
+     * @param SecretIdName <p>SecretId字段名称</p>
      */
     public void setSecretIdName(String SecretIdName) {
         this.SecretIdName = SecretIdName;
     }
 
     /**
-     * Get SecretKey字段名称 
-     * @return SecretKeyName SecretKey字段名称
+     * Get <p>SecretKey字段名称</p> 
+     * @return SecretKeyName <p>SecretKey字段名称</p>
      */
     public String getSecretKeyName() {
         return this.SecretKeyName;
     }
 
     /**
-     * Set SecretKey字段名称
-     * @param SecretKeyName SecretKey字段名称
+     * Set <p>SecretKey字段名称</p>
+     * @param SecretKeyName <p>SecretKey字段名称</p>
      */
     public void setSecretKeyName(String SecretKeyName) {
         this.SecretKeyName = SecretKeyName;
+    }
+
+    /**
+     * Get <p>CAM Access Key 字段配置</p> 
+     * @return ParamList <p>CAM Access Key 字段配置</p>
+     */
+    public AccessKeyParamConfig [] getParamList() {
+        return this.ParamList;
+    }
+
+    /**
+     * Set <p>CAM Access Key 字段配置</p>
+     * @param ParamList <p>CAM Access Key 字段配置</p>
+     */
+    public void setParamList(AccessKeyParamConfig [] ParamList) {
+        this.ParamList = ParamList;
+    }
+
+    /**
+     * Get <p>是否支持CAM角色授权</p> 
+     * @return SupportRoleAuth <p>是否支持CAM角色授权</p>
+     */
+    public Boolean getSupportRoleAuth() {
+        return this.SupportRoleAuth;
+    }
+
+    /**
+     * Set <p>是否支持CAM角色授权</p>
+     * @param SupportRoleAuth <p>是否支持CAM角色授权</p>
+     */
+    public void setSupportRoleAuth(Boolean SupportRoleAuth) {
+        this.SupportRoleAuth = SupportRoleAuth;
     }
 
     public CamAuthConfig() {
@@ -165,6 +181,15 @@ public class CamAuthConfig extends AbstractModel {
         if (source.SecretKeyName != null) {
             this.SecretKeyName = new String(source.SecretKeyName);
         }
+        if (source.ParamList != null) {
+            this.ParamList = new AccessKeyParamConfig[source.ParamList.length];
+            for (int i = 0; i < source.ParamList.length; i++) {
+                this.ParamList[i] = new AccessKeyParamConfig(source.ParamList[i]);
+            }
+        }
+        if (source.SupportRoleAuth != null) {
+            this.SupportRoleAuth = new Boolean(source.SupportRoleAuth);
+        }
     }
 
 
@@ -176,6 +201,8 @@ public class CamAuthConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyLocation", this.KeyLocation);
         this.setParamSimple(map, prefix + "SecretIdName", this.SecretIdName);
         this.setParamSimple(map, prefix + "SecretKeyName", this.SecretKeyName);
+        this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamSimple(map, prefix + "SupportRoleAuth", this.SupportRoleAuth);
 
     }
 }

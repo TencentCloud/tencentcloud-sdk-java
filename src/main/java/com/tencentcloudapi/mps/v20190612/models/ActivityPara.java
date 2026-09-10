@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ActivityPara extends AbstractModel {
 
     /**
-    * 视频转码任务
+    * <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTask")
@@ -32,7 +32,7 @@ public class ActivityPara extends AbstractModel {
     private TranscodeTaskInput TranscodeTask;
 
     /**
-    * 视频转动图任务
+    * <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicTask")
@@ -40,7 +40,7 @@ public class ActivityPara extends AbstractModel {
     private AnimatedGraphicTaskInput AnimatedGraphicTask;
 
     /**
-    * 视频按时间点截图任务
+    * <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetTask")
@@ -48,7 +48,7 @@ public class ActivityPara extends AbstractModel {
     private SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask;
 
     /**
-    * 视频采样截图任务
+    * <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotTask")
@@ -56,7 +56,7 @@ public class ActivityPara extends AbstractModel {
     private SampleSnapshotTaskInput SampleSnapshotTask;
 
     /**
-    * 视频截雪碧图任务
+    * <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSpriteTask")
@@ -64,7 +64,7 @@ public class ActivityPara extends AbstractModel {
     private ImageSpriteTaskInput ImageSpriteTask;
 
     /**
-    * 转自适应码流任务
+    * <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
@@ -72,7 +72,7 @@ public class ActivityPara extends AbstractModel {
     private AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask;
 
     /**
-    * 视频内容审核类型任务
+    * <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiContentReviewTask")
@@ -80,7 +80,7 @@ public class ActivityPara extends AbstractModel {
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * 视频内容分析类型任务
+    * <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiAnalysisTask")
@@ -88,7 +88,7 @@ public class ActivityPara extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 视频内容识别类型任务
+    * <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiRecognitionTask")
@@ -96,7 +96,7 @@ public class ActivityPara extends AbstractModel {
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 媒体质检任务
+    * <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityControlTask")
@@ -104,7 +104,7 @@ public class ActivityPara extends AbstractModel {
     private AiQualityControlTaskInput QualityControlTask;
 
     /**
-    * 任务条件判断
+    * <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecRulesTask")
@@ -112,7 +112,7 @@ public class ActivityPara extends AbstractModel {
     private ExecRulesTask ExecRulesTask;
 
     /**
-    * 智能字幕任务
+    * <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartSubtitlesTask")
@@ -120,7 +120,7 @@ public class ActivityPara extends AbstractModel {
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
-    * 智能擦除任务
+    * <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartEraseTask")
@@ -128,9 +128,16 @@ public class ActivityPara extends AbstractModel {
     private SmartEraseTaskInput SmartEraseTask;
 
     /**
-     * Get 视频转码任务
+    * <p>AI配音任务。</p>
+    */
+    @SerializedName("AIDubbingTask")
+    @Expose
+    private AIDubbingTaskInput AIDubbingTask;
+
+    /**
+     * Get <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranscodeTask 视频转码任务
+     * @return TranscodeTask <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTaskInput getTranscodeTask() {
@@ -138,9 +145,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频转码任务
+     * Set <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranscodeTask 视频转码任务
+     * @param TranscodeTask <p>视频转码任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTask(TranscodeTaskInput TranscodeTask) {
@@ -148,9 +155,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频转动图任务
+     * Get <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnimatedGraphicTask 视频转动图任务
+     * @return AnimatedGraphicTask <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnimatedGraphicTaskInput getAnimatedGraphicTask() {
@@ -158,9 +165,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频转动图任务
+     * Set <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnimatedGraphicTask 视频转动图任务
+     * @param AnimatedGraphicTask <p>视频转动图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicTask(AnimatedGraphicTaskInput AnimatedGraphicTask) {
@@ -168,9 +175,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频按时间点截图任务
+     * Get <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotByTimeOffsetTask 视频按时间点截图任务
+     * @return SnapshotByTimeOffsetTask <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() {
@@ -178,9 +185,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频按时间点截图任务
+     * Set <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetTask 视频按时间点截图任务
+     * @param SnapshotByTimeOffsetTask <p>视频按时间点截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask) {
@@ -188,9 +195,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频采样截图任务
+     * Get <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SampleSnapshotTask 视频采样截图任务
+     * @return SampleSnapshotTask <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SampleSnapshotTaskInput getSampleSnapshotTask() {
@@ -198,9 +205,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频采样截图任务
+     * Set <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SampleSnapshotTask 视频采样截图任务
+     * @param SampleSnapshotTask <p>视频采样截图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotTask(SampleSnapshotTaskInput SampleSnapshotTask) {
@@ -208,9 +215,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频截雪碧图任务
+     * Get <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSpriteTask 视频截雪碧图任务
+     * @return ImageSpriteTask <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSpriteTaskInput getImageSpriteTask() {
@@ -218,9 +225,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频截雪碧图任务
+     * Set <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSpriteTask 视频截雪碧图任务
+     * @param ImageSpriteTask <p>视频截雪碧图任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSpriteTask(ImageSpriteTaskInput ImageSpriteTask) {
@@ -228,9 +235,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 转自适应码流任务
+     * Get <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdaptiveDynamicStreamingTask 转自适应码流任务
+     * @return AdaptiveDynamicStreamingTask <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() {
@@ -238,9 +245,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 转自适应码流任务
+     * Set <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdaptiveDynamicStreamingTask 转自适应码流任务
+     * @param AdaptiveDynamicStreamingTask <p>转自适应码流任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask) {
@@ -248,9 +255,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频内容审核类型任务
+     * Get <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiContentReviewTask 视频内容审核类型任务
+     * @return AiContentReviewTask <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -258,9 +265,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频内容审核类型任务
+     * Set <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiContentReviewTask 视频内容审核类型任务
+     * @param AiContentReviewTask <p>视频内容审核类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -268,9 +275,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频内容分析类型任务
+     * Get <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiAnalysisTask 视频内容分析类型任务
+     * @return AiAnalysisTask <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
@@ -278,9 +285,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频内容分析类型任务
+     * Set <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiAnalysisTask 视频内容分析类型任务
+     * @param AiAnalysisTask <p>视频内容分析类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
@@ -288,9 +295,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 视频内容识别类型任务
+     * Get <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiRecognitionTask 视频内容识别类型任务
+     * @return AiRecognitionTask <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
@@ -298,9 +305,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 视频内容识别类型任务
+     * Set <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRecognitionTask 视频内容识别类型任务
+     * @param AiRecognitionTask <p>视频内容识别类型任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
@@ -308,9 +315,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 媒体质检任务
+     * Get <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityControlTask 媒体质检任务
+     * @return QualityControlTask <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiQualityControlTaskInput getQualityControlTask() {
@@ -318,9 +325,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 媒体质检任务
+     * Set <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityControlTask 媒体质检任务
+     * @param QualityControlTask <p>媒体质检任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityControlTask(AiQualityControlTaskInput QualityControlTask) {
@@ -328,9 +335,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 任务条件判断
+     * Get <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecRulesTask 任务条件判断
+     * @return ExecRulesTask <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExecRulesTask getExecRulesTask() {
@@ -338,9 +345,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 任务条件判断
+     * Set <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecRulesTask 任务条件判断
+     * @param ExecRulesTask <p>任务条件判断</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecRulesTask(ExecRulesTask ExecRulesTask) {
@@ -348,9 +355,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 智能字幕任务
+     * Get <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmartSubtitlesTask 智能字幕任务
+     * @return SmartSubtitlesTask <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
@@ -358,9 +365,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 智能字幕任务
+     * Set <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartSubtitlesTask 智能字幕任务
+     * @param SmartSubtitlesTask <p>智能字幕任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
@@ -368,9 +375,9 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Get 智能擦除任务
+     * Get <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmartEraseTask 智能擦除任务
+     * @return SmartEraseTask <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartEraseTaskInput getSmartEraseTask() {
@@ -378,13 +385,29 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
-     * Set 智能擦除任务
+     * Set <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartEraseTask 智能擦除任务
+     * @param SmartEraseTask <p>智能擦除任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
         this.SmartEraseTask = SmartEraseTask;
+    }
+
+    /**
+     * Get <p>AI配音任务。</p> 
+     * @return AIDubbingTask <p>AI配音任务。</p>
+     */
+    public AIDubbingTaskInput getAIDubbingTask() {
+        return this.AIDubbingTask;
+    }
+
+    /**
+     * Set <p>AI配音任务。</p>
+     * @param AIDubbingTask <p>AI配音任务。</p>
+     */
+    public void setAIDubbingTask(AIDubbingTaskInput AIDubbingTask) {
+        this.AIDubbingTask = AIDubbingTask;
     }
 
     public ActivityPara() {
@@ -434,6 +457,9 @@ public class ActivityPara extends AbstractModel {
         if (source.SmartEraseTask != null) {
             this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
         }
+        if (source.AIDubbingTask != null) {
+            this.AIDubbingTask = new AIDubbingTaskInput(source.AIDubbingTask);
+        }
     }
 
 
@@ -454,6 +480,7 @@ public class ActivityPara extends AbstractModel {
         this.setParamObj(map, prefix + "ExecRulesTask.", this.ExecRulesTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+        this.setParamObj(map, prefix + "AIDubbingTask.", this.AIDubbingTask);
 
     }
 }

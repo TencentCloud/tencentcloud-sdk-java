@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePluginSummaryListResponse extends AbstractModel {
 
     /**
-    * plugin_list
+    * <p>plugin_list</p>
     */
     @SerializedName("PluginList")
     @Expose
     private PluginSummary [] PluginList;
 
     /**
-    * total_count
+    * <p>total_count</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePluginSummaryListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get plugin_list 
-     * @return PluginList plugin_list
+     * Get <p>plugin_list</p> 
+     * @return PluginList <p>plugin_list</p>
      */
     public PluginSummary [] getPluginList() {
         return this.PluginList;
     }
 
     /**
-     * Set plugin_list
-     * @param PluginList plugin_list
+     * Set <p>plugin_list</p>
+     * @param PluginList <p>plugin_list</p>
      */
     public void setPluginList(PluginSummary [] PluginList) {
         this.PluginList = PluginList;
     }
 
     /**
-     * Get total_count 
-     * @return TotalCount total_count
+     * Get <p>total_count</p> 
+     * @return TotalCount <p>total_count</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set total_count
-     * @param TotalCount total_count
+     * Set <p>total_count</p>
+     * @param TotalCount <p>total_count</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChangeInstanceMasterResponse extends AbstractModel {
 
     /**
-    * 异步任务 ID。
+    * <p>异步任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ChangeInstanceMasterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务 ID。 
-     * @return TaskId 异步任务 ID。
+     * Get <p>异步任务 ID。</p> 
+     * @return TaskId <p>异步任务 ID。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务 ID。
-     * @param TaskId 异步任务 ID。
+     * Set <p>异步任务 ID。</p>
+     * @param TaskId <p>异步任务 ID。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

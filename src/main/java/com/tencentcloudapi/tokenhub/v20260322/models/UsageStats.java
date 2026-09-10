@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class UsageStats extends AbstractModel {
 
     /**
-    * <p>[tokens 族] 时间周期内的累计总 token 数。</p>
+    * <p>[tokens / apikey_usage 族] 时间周期内的累计总 token 数。</p>
     */
     @SerializedName("TotalToken")
     @Expose
     private Long TotalToken;
 
     /**
-    * <p>[tokens 族] 时间周期内的累计输入 token 数。</p>
+    * <p>[tokens / apikey_usage 族] 时间周期内的累计输入 token 数。</p>
     */
     @SerializedName("InputTotalToken")
     @Expose
     private Long InputTotalToken;
 
     /**
-    * <p>[tokens 族] 时间周期内的累计输出 token 数。</p>
+    * <p>[tokens / apikey_usage 族] 时间周期内的累计输出 token 数。</p>
     */
     @SerializedName("OutputTotalToken")
     @Expose
     private Long OutputTotalToken;
 
     /**
-    * <p>[tokens 族] 时间周期内的累计读缓存 token 数（命中缓存部分）</p>
+    * <p>[tokens / apikey_usage 族] 时间周期内的累计读缓存 token 数（命中缓存部分）注意：CacheTotalToken 是 InputTotalToken 的子集（已包含在内）。</p>
     */
     @SerializedName("CacheTotalToken")
     @Expose
     private Long CacheTotalToken;
 
     /**
-    * <p>[search 族] 整段累计联网搜索请求数</p>
+    * <p>[search 族] 时间周期内的累计联网搜索请求数</p>
     */
     @SerializedName("SearchRequestCount")
     @Expose
     private Long SearchRequestCount;
 
     /**
-    * <p>[search 族] 整段累计搜索引擎调用次数</p>
+    * <p>[search 族] 时间周期内的累计搜索引擎调用次数</p>
     */
     @SerializedName("SearchCount")
     @Expose
     private Long SearchCount;
 
     /**
-     * Get <p>[tokens 族] 时间周期内的累计总 token 数。</p> 
-     * @return TotalToken <p>[tokens 族] 时间周期内的累计总 token 数。</p>
+    * <p>[apikey_usage 族] 时间周期内的累计请求次数</p>
+    */
+    @SerializedName("RequestCount")
+    @Expose
+    private Long RequestCount;
+
+    /**
+    * <p>[apikey_usage 族] 时间周期内的累计请求失败次数</p>
+    */
+    @SerializedName("RequestFailCount")
+    @Expose
+    private Long RequestFailCount;
+
+    /**
+     * Get <p>[tokens / apikey_usage 族] 时间周期内的累计总 token 数。</p> 
+     * @return TotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计总 token 数。</p>
      */
     public Long getTotalToken() {
         return this.TotalToken;
     }
 
     /**
-     * Set <p>[tokens 族] 时间周期内的累计总 token 数。</p>
-     * @param TotalToken <p>[tokens 族] 时间周期内的累计总 token 数。</p>
+     * Set <p>[tokens / apikey_usage 族] 时间周期内的累计总 token 数。</p>
+     * @param TotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计总 token 数。</p>
      */
     public void setTotalToken(Long TotalToken) {
         this.TotalToken = TotalToken;
     }
 
     /**
-     * Get <p>[tokens 族] 时间周期内的累计输入 token 数。</p> 
-     * @return InputTotalToken <p>[tokens 族] 时间周期内的累计输入 token 数。</p>
+     * Get <p>[tokens / apikey_usage 族] 时间周期内的累计输入 token 数。</p> 
+     * @return InputTotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计输入 token 数。</p>
      */
     public Long getInputTotalToken() {
         return this.InputTotalToken;
     }
 
     /**
-     * Set <p>[tokens 族] 时间周期内的累计输入 token 数。</p>
-     * @param InputTotalToken <p>[tokens 族] 时间周期内的累计输入 token 数。</p>
+     * Set <p>[tokens / apikey_usage 族] 时间周期内的累计输入 token 数。</p>
+     * @param InputTotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计输入 token 数。</p>
      */
     public void setInputTotalToken(Long InputTotalToken) {
         this.InputTotalToken = InputTotalToken;
     }
 
     /**
-     * Get <p>[tokens 族] 时间周期内的累计输出 token 数。</p> 
-     * @return OutputTotalToken <p>[tokens 族] 时间周期内的累计输出 token 数。</p>
+     * Get <p>[tokens / apikey_usage 族] 时间周期内的累计输出 token 数。</p> 
+     * @return OutputTotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计输出 token 数。</p>
      */
     public Long getOutputTotalToken() {
         return this.OutputTotalToken;
     }
 
     /**
-     * Set <p>[tokens 族] 时间周期内的累计输出 token 数。</p>
-     * @param OutputTotalToken <p>[tokens 族] 时间周期内的累计输出 token 数。</p>
+     * Set <p>[tokens / apikey_usage 族] 时间周期内的累计输出 token 数。</p>
+     * @param OutputTotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计输出 token 数。</p>
      */
     public void setOutputTotalToken(Long OutputTotalToken) {
         this.OutputTotalToken = OutputTotalToken;
     }
 
     /**
-     * Get <p>[tokens 族] 时间周期内的累计读缓存 token 数（命中缓存部分）</p> 
-     * @return CacheTotalToken <p>[tokens 族] 时间周期内的累计读缓存 token 数（命中缓存部分）</p>
+     * Get <p>[tokens / apikey_usage 族] 时间周期内的累计读缓存 token 数（命中缓存部分）注意：CacheTotalToken 是 InputTotalToken 的子集（已包含在内）。</p> 
+     * @return CacheTotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计读缓存 token 数（命中缓存部分）注意：CacheTotalToken 是 InputTotalToken 的子集（已包含在内）。</p>
      */
     public Long getCacheTotalToken() {
         return this.CacheTotalToken;
     }
 
     /**
-     * Set <p>[tokens 族] 时间周期内的累计读缓存 token 数（命中缓存部分）</p>
-     * @param CacheTotalToken <p>[tokens 族] 时间周期内的累计读缓存 token 数（命中缓存部分）</p>
+     * Set <p>[tokens / apikey_usage 族] 时间周期内的累计读缓存 token 数（命中缓存部分）注意：CacheTotalToken 是 InputTotalToken 的子集（已包含在内）。</p>
+     * @param CacheTotalToken <p>[tokens / apikey_usage 族] 时间周期内的累计读缓存 token 数（命中缓存部分）注意：CacheTotalToken 是 InputTotalToken 的子集（已包含在内）。</p>
      */
     public void setCacheTotalToken(Long CacheTotalToken) {
         this.CacheTotalToken = CacheTotalToken;
     }
 
     /**
-     * Get <p>[search 族] 整段累计联网搜索请求数</p> 
-     * @return SearchRequestCount <p>[search 族] 整段累计联网搜索请求数</p>
+     * Get <p>[search 族] 时间周期内的累计联网搜索请求数</p> 
+     * @return SearchRequestCount <p>[search 族] 时间周期内的累计联网搜索请求数</p>
      */
     public Long getSearchRequestCount() {
         return this.SearchRequestCount;
     }
 
     /**
-     * Set <p>[search 族] 整段累计联网搜索请求数</p>
-     * @param SearchRequestCount <p>[search 族] 整段累计联网搜索请求数</p>
+     * Set <p>[search 族] 时间周期内的累计联网搜索请求数</p>
+     * @param SearchRequestCount <p>[search 族] 时间周期内的累计联网搜索请求数</p>
      */
     public void setSearchRequestCount(Long SearchRequestCount) {
         this.SearchRequestCount = SearchRequestCount;
     }
 
     /**
-     * Get <p>[search 族] 整段累计搜索引擎调用次数</p> 
-     * @return SearchCount <p>[search 族] 整段累计搜索引擎调用次数</p>
+     * Get <p>[search 族] 时间周期内的累计搜索引擎调用次数</p> 
+     * @return SearchCount <p>[search 族] 时间周期内的累计搜索引擎调用次数</p>
      */
     public Long getSearchCount() {
         return this.SearchCount;
     }
 
     /**
-     * Set <p>[search 族] 整段累计搜索引擎调用次数</p>
-     * @param SearchCount <p>[search 族] 整段累计搜索引擎调用次数</p>
+     * Set <p>[search 族] 时间周期内的累计搜索引擎调用次数</p>
+     * @param SearchCount <p>[search 族] 时间周期内的累计搜索引擎调用次数</p>
      */
     public void setSearchCount(Long SearchCount) {
         this.SearchCount = SearchCount;
+    }
+
+    /**
+     * Get <p>[apikey_usage 族] 时间周期内的累计请求次数</p> 
+     * @return RequestCount <p>[apikey_usage 族] 时间周期内的累计请求次数</p>
+     */
+    public Long getRequestCount() {
+        return this.RequestCount;
+    }
+
+    /**
+     * Set <p>[apikey_usage 族] 时间周期内的累计请求次数</p>
+     * @param RequestCount <p>[apikey_usage 族] 时间周期内的累计请求次数</p>
+     */
+    public void setRequestCount(Long RequestCount) {
+        this.RequestCount = RequestCount;
+    }
+
+    /**
+     * Get <p>[apikey_usage 族] 时间周期内的累计请求失败次数</p> 
+     * @return RequestFailCount <p>[apikey_usage 族] 时间周期内的累计请求失败次数</p>
+     */
+    public Long getRequestFailCount() {
+        return this.RequestFailCount;
+    }
+
+    /**
+     * Set <p>[apikey_usage 族] 时间周期内的累计请求失败次数</p>
+     * @param RequestFailCount <p>[apikey_usage 族] 时间周期内的累计请求失败次数</p>
+     */
+    public void setRequestFailCount(Long RequestFailCount) {
+        this.RequestFailCount = RequestFailCount;
     }
 
     public UsageStats() {
@@ -187,6 +233,12 @@ public class UsageStats extends AbstractModel {
         if (source.SearchCount != null) {
             this.SearchCount = new Long(source.SearchCount);
         }
+        if (source.RequestCount != null) {
+            this.RequestCount = new Long(source.RequestCount);
+        }
+        if (source.RequestFailCount != null) {
+            this.RequestFailCount = new Long(source.RequestFailCount);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class UsageStats extends AbstractModel {
         this.setParamSimple(map, prefix + "CacheTotalToken", this.CacheTotalToken);
         this.setParamSimple(map, prefix + "SearchRequestCount", this.SearchRequestCount);
         this.setParamSimple(map, prefix + "SearchCount", this.SearchCount);
+        this.setParamSimple(map, prefix + "RequestCount", this.RequestCount);
+        this.setParamSimple(map, prefix + "RequestFailCount", this.RequestFailCount);
 
     }
 }

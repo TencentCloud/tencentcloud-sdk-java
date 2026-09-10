@@ -24,59 +24,59 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel {
 
     /**
-    * 用户在平台的编号
+    * <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+    * <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+    * <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 用户真实IP，内部字段，暂未开放
+    * <p>用户真实IP，内部字段，暂未开放</p>
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 用户代理IP，内部字段，暂未开放
+    * <p>用户代理IP，内部字段，暂未开放</p>
     */
     @SerializedName("ProxyIp")
     @Expose
     private String ProxyIp;
 
     /**
-     * Get 用户在平台的编号 
-     * @return UserId 用户在平台的编号
+     * Get <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p> 
+     * @return UserId <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户在平台的编号
-     * @param UserId 用户在平台的编号
+     * Set <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
+     * @param UserId <p>用户在平台中的编号（UserId）</p><p>UserId 获取方式：<a href="https://qcloudimg.tencent-cloud.cn/raw/6b054d6161b04c24855de15cb243f6bf.png" target="_blank">点击查看</a></p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户的来源渠道，一般不用传，特定场景根据接口说明传值 
-     * @return Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * Get <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p> 
+     * @return Channel <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
      * @deprecated
      */
     @Deprecated
@@ -85,8 +85,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户的来源渠道，一般不用传，特定场景根据接口说明传值
-     * @param Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * Set <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
+     * @param Channel <p>用户的来源渠道，一般不用传，特定场景根据接口说明传值</p>
      * @deprecated
      */
     @Deprecated
@@ -95,8 +95,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户在渠道的编号，一般不用传，特定场景根据接口说明传值 
-     * @return OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * Get <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p> 
+     * @return OpenId <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
      * @deprecated
      */
     @Deprecated
@@ -105,8 +105,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
-     * @param OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * Set <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
+     * @param OpenId <p>用户在渠道的编号，一般不用传，特定场景根据接口说明传值</p>
      * @deprecated
      */
     @Deprecated
@@ -115,8 +115,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户真实IP，内部字段，暂未开放 
-     * @return ClientIp 用户真实IP，内部字段，暂未开放
+     * Get <p>用户真实IP，内部字段，暂未开放</p> 
+     * @return ClientIp <p>用户真实IP，内部字段，暂未开放</p>
      * @deprecated
      */
     @Deprecated
@@ -125,8 +125,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户真实IP，内部字段，暂未开放
-     * @param ClientIp 用户真实IP，内部字段，暂未开放
+     * Set <p>用户真实IP，内部字段，暂未开放</p>
+     * @param ClientIp <p>用户真实IP，内部字段，暂未开放</p>
      * @deprecated
      */
     @Deprecated
@@ -135,8 +135,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户代理IP，内部字段，暂未开放 
-     * @return ProxyIp 用户代理IP，内部字段，暂未开放
+     * Get <p>用户代理IP，内部字段，暂未开放</p> 
+     * @return ProxyIp <p>用户代理IP，内部字段，暂未开放</p>
      * @deprecated
      */
     @Deprecated
@@ -145,8 +145,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户代理IP，内部字段，暂未开放
-     * @param ProxyIp 用户代理IP，内部字段，暂未开放
+     * Set <p>用户代理IP，内部字段，暂未开放</p>
+     * @param ProxyIp <p>用户代理IP，内部字段，暂未开放</p>
      * @deprecated
      */
     @Deprecated

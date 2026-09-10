@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePluginSummaryListRequest extends AbstractModel {
 
     /**
-    * 空间ID，查询空间内的插件列表时使用
+    * <p>空间ID，查询空间内的插件列表时使用</p>
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+    * <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
     */
     @SerializedName("FilterList")
     @Expose
@@ -52,21 +52,21 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     private Long Module;
 
     /**
-    * 页码 从0开始
+    * <p>页码 从0开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页大小
+    * <p>每页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+    * <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
     */
     @SerializedName("Query")
     @Expose
@@ -80,32 +80,39 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     private Long SortType;
 
     /**
-     * Get 空间ID，查询空间内的插件列表时使用 
-     * @return SpaceId 空间ID，查询空间内的插件列表时使用
+    * <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+    */
+    @SerializedName("PluginSpaceRelation")
+    @Expose
+    private Long PluginSpaceRelation;
+
+    /**
+     * Get <p>空间ID，查询空间内的插件列表时使用</p> 
+     * @return SpaceId <p>空间ID，查询空间内的插件列表时使用</p>
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 空间ID，查询空间内的插件列表时使用
-     * @param SpaceId 空间ID，查询空间内的插件列表时使用
+     * Set <p>空间ID，查询空间内的插件列表时使用</p>
+     * @param SpaceId <p>空间ID，查询空间内的插件列表时使用</p>
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType 
-     * @return FilterList 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+     * Get <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p> 
+     * @return FilterList <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
      */
     public Filter [] getFilterList() {
         return this.FilterList;
     }
 
     /**
-     * Set 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
-     * @param FilterList 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+     * Set <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
+     * @param FilterList <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
      */
     public void setFilterList(Filter [] FilterList) {
         this.FilterList = FilterList;
@@ -144,48 +151,48 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
     }
 
     /**
-     * Get 页码 从0开始 
-     * @return PageNumber 页码 从0开始
+     * Get <p>页码 从0开始</p> 
+     * @return PageNumber <p>页码 从0开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码 从0开始
-     * @param PageNumber 页码 从0开始
+     * Set <p>页码 从0开始</p>
+     * @param PageNumber <p>页码 从0开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页大小 
-     * @return PageSize 每页大小
+     * Get <p>每页大小</p> 
+     * @return PageSize <p>每页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页大小
-     * @param PageSize 每页大小
+     * Set <p>每页大小</p>
+     * @param PageSize <p>每页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述 
-     * @return Query 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+     * Get <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p> 
+     * @return Query <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
-     * @param Query 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+     * Set <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
+     * @param Query <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
@@ -205,6 +212,22 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
      */
     public void setSortType(Long SortType) {
         this.SortType = SortType;
+    }
+
+    /**
+     * Get <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p> 
+     * @return PluginSpaceRelation <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+     */
+    public Long getPluginSpaceRelation() {
+        return this.PluginSpaceRelation;
+    }
+
+    /**
+     * Set <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+     * @param PluginSpaceRelation <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+     */
+    public void setPluginSpaceRelation(Long PluginSpaceRelation) {
+        this.PluginSpaceRelation = PluginSpaceRelation;
     }
 
     public DescribePluginSummaryListRequest() {
@@ -242,6 +265,9 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
         if (source.SortType != null) {
             this.SortType = new Long(source.SortType);
         }
+        if (source.PluginSpaceRelation != null) {
+            this.PluginSpaceRelation = new Long(source.PluginSpaceRelation);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class DescribePluginSummaryListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamSimple(map, prefix + "PluginSpaceRelation", this.PluginSpaceRelation);
 
     }
 }
