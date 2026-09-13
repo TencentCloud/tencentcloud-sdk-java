@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApproverInfo extends AbstractModel {
 
     /**
-    * <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<br><strong>0</strong>：企业<br><strong>1</strong>：个人<br><strong>3</strong>：企业静默签署<br>注：<code>类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。</code><br><strong>7</strong>: 个人自动签署，适用于个人自动签场景。<br>注: <code>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+    * <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<strong>0</strong>：企业<strong>1</strong>：个人<strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
     */
     @SerializedName("ApproverType")
     @Expose
@@ -150,7 +150,7 @@ public class ApproverInfo extends AbstractModel {
     private Long [] ApproverSignTypes;
 
     /**
-    * <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+    * <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
     */
     @SerializedName("ApproverNeedSignReview")
     @Expose
@@ -213,16 +213,16 @@ public class ApproverInfo extends AbstractModel {
     private String ApproverEmail;
 
     /**
-     * Get <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<br><strong>0</strong>：企业<br><strong>1</strong>：个人<br><strong>3</strong>：企业静默签署<br>注：<code>类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。</code><br><strong>7</strong>: 个人自动签署，适用于个人自动签场景。<br>注: <code>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p> 
-     * @return ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<br><strong>0</strong>：企业<br><strong>1</strong>：个人<br><strong>3</strong>：企业静默签署<br>注：<code>类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。</code><br><strong>7</strong>: 个人自动签署，适用于个人自动签场景。<br>注: <code>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+     * Get <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<strong>0</strong>：企业<strong>1</strong>：个人<strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p> 
+     * @return ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<strong>0</strong>：企业<strong>1</strong>：个人<strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
      */
     public Long getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<br><strong>0</strong>：企业<br><strong>1</strong>：个人<br><strong>3</strong>：企业静默签署<br>注：<code>类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。</code><br><strong>7</strong>: 个人自动签署，适用于个人自动签场景。<br>注: <code>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
-     * @param ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<br><strong>0</strong>：企业<br><strong>1</strong>：个人<br><strong>3</strong>：企业静默签署<br>注：<code>类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。</code><br><strong>7</strong>: 个人自动签署，适用于个人自动签场景。<br>注: <code>个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+     * Set <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<strong>0</strong>：企业<strong>1</strong>：个人<strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+     * @param ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<strong>0</strong>：企业<strong>1</strong>：个人<strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
@@ -501,16 +501,16 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p> 
-     * @return ApproverNeedSignReview <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+     * Get <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p> 
+     * @return ApproverNeedSignReview <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
      */
     public Boolean getApproverNeedSignReview() {
         return this.ApproverNeedSignReview;
     }
 
     /**
-     * Set <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
-     * @param ApproverNeedSignReview <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：</p><ul><li>**false**：（默认）不需要审批，直接签署。</li><li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul><p>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同</code></p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+     * Set <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
+     * @param ApproverNeedSignReview <p>此签署人（员工或者个人）签署前，是否需要发起方企业审批，取值如下：<ul><li><strong>false</strong>：（默认）不需要审批，直接签署。</li><li><strong>true</strong>：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li><li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>注：<code>此功能可用于与发起方企业内部的审批流程进行关联，支持手动、“授权签”合同</code><img src="https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png" alt="image"></p>
      */
     public void setApproverNeedSignReview(Boolean ApproverNeedSignReview) {
         this.ApproverNeedSignReview = ApproverNeedSignReview;

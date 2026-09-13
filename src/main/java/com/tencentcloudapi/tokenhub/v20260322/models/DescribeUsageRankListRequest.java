@@ -45,11 +45,18 @@ public class DescribeUsageRankListRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+    * <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 用量消耗（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>apikey_usage: APIKey 锚定用量统计（某 APIKey 下按模型或接入点展开）（statistics=sum），支持 Dimension = endpoint/model</li><li>其他值返回 InvalidParameter。</li></ul>
     */
     @SerializedName("MetricType")
     @Expose
     private String MetricType;
+
+    /**
+    * <p>锚定对象，用于缩小统计范围「在哪个具体对象之内」，MetricType 为 apikey_usage 时必填。<br>各 MetricType 是否支持/如何使用 Anchor，见 MetricType 字段说明。</p>
+    */
+    @SerializedName("Anchor")
+    @Expose
+    private String Anchor;
 
     /**
     * <p>维度过滤值。空字符串表示查询全部对象，非空时仅查询指定单个对象（如指定 APIKey ID）。最大 256 字符。</p>
@@ -78,6 +85,13 @@ public class DescribeUsageRankListRequest extends AbstractModel {
     @SerializedName("ShowAll")
     @Expose
     private Boolean ShowAll;
+
+    /**
+    * <p>排序指标键（可选），具体值见响应 MetricKeys。为空时按 <code>MetricKeys[0]</code> 降序排序（tokens/apikey_usage 族为 TotalToken，search 族为 SearchRequestCount）。非法值返回 InvalidParameter。</p>
+    */
+    @SerializedName("SortKey")
+    @Expose
+    private String SortKey;
 
     /**
      * Get <p>统计维度。取值：apikey（按 APIKey 统计）、endpoint（按接入点统计）、model（按模型统计）。</p> 
@@ -128,19 +142,35 @@ public class DescribeUsageRankListRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul> 
-     * @return MetricType <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+     * Get <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 用量消耗（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>apikey_usage: APIKey 锚定用量统计（某 APIKey 下按模型或接入点展开）（statistics=sum），支持 Dimension = endpoint/model</li><li>其他值返回 InvalidParameter。</li></ul> 
+     * @return MetricType <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 用量消耗（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>apikey_usage: APIKey 锚定用量统计（某 APIKey 下按模型或接入点展开）（statistics=sum），支持 Dimension = endpoint/model</li><li>其他值返回 InvalidParameter。</li></ul>
      */
     public String getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
-     * @param MetricType <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 消耗图（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search【待上线】：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>其他值返回 InvalidParameter。</li></ul><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+     * Set <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 用量消耗（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>apikey_usage: APIKey 锚定用量统计（某 APIKey 下按模型或接入点展开）（statistics=sum），支持 Dimension = endpoint/model</li><li>其他值返回 InvalidParameter。</li></ul>
+     * @param MetricType <p>指标族切换字段。</p><ul><li>tokens（默认）：Token 用量消耗（statistics=sum），支持 Dimension = apikey/endpoint/model</li><li>search：联网搜索调用次数（statistics=sum），仅支持 Dimension = model</li><li>apikey_usage: APIKey 锚定用量统计（某 APIKey 下按模型或接入点展开）（statistics=sum），支持 Dimension = endpoint/model</li><li>其他值返回 InvalidParameter。</li></ul>
      */
     public void setMetricType(String MetricType) {
         this.MetricType = MetricType;
+    }
+
+    /**
+     * Get <p>锚定对象，用于缩小统计范围「在哪个具体对象之内」，MetricType 为 apikey_usage 时必填。<br>各 MetricType 是否支持/如何使用 Anchor，见 MetricType 字段说明。</p> 
+     * @return Anchor <p>锚定对象，用于缩小统计范围「在哪个具体对象之内」，MetricType 为 apikey_usage 时必填。<br>各 MetricType 是否支持/如何使用 Anchor，见 MetricType 字段说明。</p>
+     */
+    public String getAnchor() {
+        return this.Anchor;
+    }
+
+    /**
+     * Set <p>锚定对象，用于缩小统计范围「在哪个具体对象之内」，MetricType 为 apikey_usage 时必填。<br>各 MetricType 是否支持/如何使用 Anchor，见 MetricType 字段说明。</p>
+     * @param Anchor <p>锚定对象，用于缩小统计范围「在哪个具体对象之内」，MetricType 为 apikey_usage 时必填。<br>各 MetricType 是否支持/如何使用 Anchor，见 MetricType 字段说明。</p>
+     */
+    public void setAnchor(String Anchor) {
+        this.Anchor = Anchor;
     }
 
     /**
@@ -207,6 +237,22 @@ public class DescribeUsageRankListRequest extends AbstractModel {
         this.ShowAll = ShowAll;
     }
 
+    /**
+     * Get <p>排序指标键（可选），具体值见响应 MetricKeys。为空时按 <code>MetricKeys[0]</code> 降序排序（tokens/apikey_usage 族为 TotalToken，search 族为 SearchRequestCount）。非法值返回 InvalidParameter。</p> 
+     * @return SortKey <p>排序指标键（可选），具体值见响应 MetricKeys。为空时按 <code>MetricKeys[0]</code> 降序排序（tokens/apikey_usage 族为 TotalToken，search 族为 SearchRequestCount）。非法值返回 InvalidParameter。</p>
+     */
+    public String getSortKey() {
+        return this.SortKey;
+    }
+
+    /**
+     * Set <p>排序指标键（可选），具体值见响应 MetricKeys。为空时按 <code>MetricKeys[0]</code> 降序排序（tokens/apikey_usage 族为 TotalToken，search 族为 SearchRequestCount）。非法值返回 InvalidParameter。</p>
+     * @param SortKey <p>排序指标键（可选），具体值见响应 MetricKeys。为空时按 <code>MetricKeys[0]</code> 降序排序（tokens/apikey_usage 族为 TotalToken，search 族为 SearchRequestCount）。非法值返回 InvalidParameter。</p>
+     */
+    public void setSortKey(String SortKey) {
+        this.SortKey = SortKey;
+    }
+
     public DescribeUsageRankListRequest() {
     }
 
@@ -227,6 +273,9 @@ public class DescribeUsageRankListRequest extends AbstractModel {
         if (source.MetricType != null) {
             this.MetricType = new String(source.MetricType);
         }
+        if (source.Anchor != null) {
+            this.Anchor = new String(source.Anchor);
+        }
         if (source.Target != null) {
             this.Target = new String(source.Target);
         }
@@ -239,6 +288,9 @@ public class DescribeUsageRankListRequest extends AbstractModel {
         if (source.ShowAll != null) {
             this.ShowAll = new Boolean(source.ShowAll);
         }
+        if (source.SortKey != null) {
+            this.SortKey = new String(source.SortKey);
+        }
     }
 
 
@@ -250,10 +302,12 @@ public class DescribeUsageRankListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "MetricType", this.MetricType);
+        this.setParamSimple(map, prefix + "Anchor", this.Anchor);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "ShowAll", this.ShowAll);
+        this.setParamSimple(map, prefix + "SortKey", this.SortKey);
 
     }
 }

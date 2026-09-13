@@ -80,7 +80,7 @@ public class FlowApproverDetail extends AbstractModel {
     private Long ApproveTime;
 
     /**
-    * <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+    * <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
     */
     @SerializedName("ApproveType")
     @Expose
@@ -275,16 +275,16 @@ public class FlowApproverDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p> 
-     * @return ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+     * Get <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p> 
+     * @return ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
      */
     public String getApproveType() {
         return this.ApproveType;
     }
 
     /**
-     * Set <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
-     * @param ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签</p>
+     * Set <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
+     * @param ApproveType <p>签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业“授权签”</p>
      */
     public void setApproveType(String ApproveType) {
         this.ApproveType = ApproveType;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NeedReviewApproverInfo extends AbstractModel {
 
     /**
-    * <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+    * <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
     */
     @SerializedName("ApproverType")
     @Expose
@@ -66,16 +66,16 @@ public class NeedReviewApproverInfo extends AbstractModel {
     private String OrganizationName;
 
     /**
-     * Get <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul> 
-     * @return ApproverType <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+     * Get <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p> 
+     * @return ApproverType <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
      */
     public String getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
-     * @param ApproverType <p>签署方经办人的类型，支持以下类型</p><ul><li> ORGANIZATION 企业（含企业自动签）</li><li>PERSON 个人（含个人自动签）</li></ul>
+     * Set <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
+     * @param ApproverType <p>签署方经办人的类型，支持以下类型<ul><li> ORGANIZATION 企业（含企业“授权签”）</li><li>PERSON 个人（含个人“授权签”）</li></ul></p>
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;

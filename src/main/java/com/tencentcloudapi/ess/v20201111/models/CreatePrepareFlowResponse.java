@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreatePrepareFlowResponse extends AbstractModel {
 
     /**
-    * 发起流程的web页面链接，有效期5分钟
+    * <p>发起流程的web页面链接，有效期5分钟</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+    * <p>创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+    * <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
     */
     @SerializedName("DraftId")
     @Expose
@@ -52,48 +52,48 @@ public class CreatePrepareFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发起流程的web页面链接，有效期5分钟 
-     * @return Url 发起流程的web页面链接，有效期5分钟
+     * Get <p>发起流程的web页面链接，有效期5分钟</p> 
+     * @return Url <p>发起流程的web页面链接，有效期5分钟</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 发起流程的web页面链接，有效期5分钟
-     * @param Url 发起流程的web页面链接，有效期5分钟
+     * Set <p>发起流程的web页面链接，有效期5分钟</p>
+     * @param Url <p>发起流程的web页面链接，有效期5分钟</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。 
-     * @return FlowId 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+     * Get <p>创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。</p> 
+     * @return FlowId <p>创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
-     * @param FlowId 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+     * Set <p>创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。</p>
+     * @param FlowId <p>创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。 
-     * @return DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * Get <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p> 
+     * @return DraftId <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
      */
     public String getDraftId() {
         return this.DraftId;
     }
 
     /**
-     * Set 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
-     * @param DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * Set <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
+     * @param DraftId <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
      */
     public void setDraftId(String DraftId) {
         this.DraftId = DraftId;

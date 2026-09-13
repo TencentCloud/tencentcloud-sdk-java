@@ -24,250 +24,115 @@ import java.util.HashMap;
 public class ModifyExtendedServiceRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
+    * <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
+    * <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
     */
     @SerializedName("Operate")
     @Expose
     private String Operate;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
+    * <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul> 
-     * @return ServiceType 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
+     * Get <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p> 
+     * @return ServiceType <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
-     * @param ServiceType 要管理的拓展服务类型。
-<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
-<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
-<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
-<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
-<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
-<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
-<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
-<li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li>
-<li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li>
-<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
-<li>FLOW_APPROVAL：合同审批强制开启</li>
-<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li>
-<li>APP_LOGIN：限制企业员工小程序端登录</li>
-<li>PC_LOGIN：限制企业员工网页端登录</li>
-</ul>
+     * Set <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
+     * @param ServiceType <p>要管理的拓展服务类型。<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>AUTO_SIGN_CAN_FILL_IN：本企业“授权签”合同支持签前内容补充</li><li>OVERSEA_SIGN：企业与港澳台居民签署合同</li><li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li><li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li><li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li><li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li><li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li><li>HIDE_ONE_KEY_SIGN：个人签署方手写签名时需逐个手写</li><li>SIGN_SIGNATURE_DEFAULT_SET_HANDWRITE：个人签署方手动签名</li><li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li><li>FLOW_APPROVAL：合同审批强制开启</li><li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li><li>APP_LOGIN：限制企业员工小程序端登录</li><li>PC_LOGIN：限制企业员工网页端登录</li></ul></p>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul> 
-     * @return Operate 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
+     * Get <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul> 
+     * @return Operate <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
      */
     public String getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
-     * @param Operate 操作类型
-<ul>
-<li>OPEN : 开通</li>
-<li>CLOSE : 关闭</li>
-</ul>
+     * Set <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
+     * @param Operate <p>操作类型</p><ul><li>OPEN : 开通</li><li>CLOSE : 关闭</li></ul>
      */
     public void setOperate(String Operate) {
         this.Operate = Operate;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul> 
-     * @return Endpoint 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
+     * Get <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul> 
+     * @return Endpoint <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
-     * @param Endpoint 链接跳转类型，支持以下类型
-<ul>
-<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li>
-<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
-</ul>
+     * Set <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
+     * @param Endpoint <p>链接跳转类型，支持以下类型</p><ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li><li>APP : 第三方APP或小程序跳转电子签小程序</li><li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li></ul>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;

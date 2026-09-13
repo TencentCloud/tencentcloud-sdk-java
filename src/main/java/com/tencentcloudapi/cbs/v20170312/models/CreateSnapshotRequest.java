@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class CreateSnapshotRequest extends AbstractModel {
 
     /**
-    * 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+    * <p>需要创建快照的云硬盘ID，可通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 快照名称，不传则新快照名称默认为“未命名”。
+    * <p>快照名称，不传则新快照名称默认为“未命名”。</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00,。到期时间最小可设置为一天后的当前时间。
+    * <p>快照的到期时间，到期后该快照将会自动删除，需要传入UTC时间下的ISO-8601标准时间格式，例如:2022-01-08T09:47:55+00:00。到期时间最小可设置为一天后的当前时间。</p>
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-    * 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+    * <p>云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过<a href="/document/product/362/80278">DescribeDiskBackups</a>接口查询。</p>
     */
     @SerializedName("DiskBackupId")
     @Expose
     private String DiskBackupId;
 
     /**
-    * 快照绑定的标签。
+    * <p>快照绑定的标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+    * <p>是否创建极速快照。</p><p>极速快照数据存储在云硬盘所在的存储集群上，可实现秒级创建和回滚。该功能当前通过白名单控制开放。</p>
+    */
+    @SerializedName("LocalSnap")
+    @Expose
+    private Boolean LocalSnap;
+
+    /**
+    * <p>快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。</p>
     */
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
 
     /**
-     * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get <p>需要创建快照的云硬盘ID，可通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p> 
+     * @return DiskId <p>需要创建快照的云硬盘ID，可通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set <p>需要创建快照的云硬盘ID，可通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
+     * @param DiskId <p>需要创建快照的云硬盘ID，可通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 快照名称，不传则新快照名称默认为“未命名”。 
-     * @return SnapshotName 快照名称，不传则新快照名称默认为“未命名”。
+     * Get <p>快照名称，不传则新快照名称默认为“未命名”。</p> 
+     * @return SnapshotName <p>快照名称，不传则新快照名称默认为“未命名”。</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 快照名称，不传则新快照名称默认为“未命名”。
-     * @param SnapshotName 快照名称，不传则新快照名称默认为“未命名”。
+     * Set <p>快照名称，不传则新快照名称默认为“未命名”。</p>
+     * @param SnapshotName <p>快照名称，不传则新快照名称默认为“未命名”。</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00,。到期时间最小可设置为一天后的当前时间。 
-     * @return Deadline 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00,。到期时间最小可设置为一天后的当前时间。
+     * Get <p>快照的到期时间，到期后该快照将会自动删除，需要传入UTC时间下的ISO-8601标准时间格式，例如:2022-01-08T09:47:55+00:00。到期时间最小可设置为一天后的当前时间。</p> 
+     * @return Deadline <p>快照的到期时间，到期后该快照将会自动删除，需要传入UTC时间下的ISO-8601标准时间格式，例如:2022-01-08T09:47:55+00:00。到期时间最小可设置为一天后的当前时间。</p>
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00,。到期时间最小可设置为一天后的当前时间。
-     * @param Deadline 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00,。到期时间最小可设置为一天后的当前时间。
+     * Set <p>快照的到期时间，到期后该快照将会自动删除，需要传入UTC时间下的ISO-8601标准时间格式，例如:2022-01-08T09:47:55+00:00。到期时间最小可设置为一天后的当前时间。</p>
+     * @param Deadline <p>快照的到期时间，到期后该快照将会自动删除，需要传入UTC时间下的ISO-8601标准时间格式，例如:2022-01-08T09:47:55+00:00。到期时间最小可设置为一天后的当前时间。</p>
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。 
-     * @return DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+     * Get <p>云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过<a href="/document/product/362/80278">DescribeDiskBackups</a>接口查询。</p> 
+     * @return DiskBackupId <p>云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过<a href="/document/product/362/80278">DescribeDiskBackups</a>接口查询。</p>
      */
     public String getDiskBackupId() {
         return this.DiskBackupId;
     }
 
     /**
-     * Set 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
-     * @param DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+     * Set <p>云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过<a href="/document/product/362/80278">DescribeDiskBackups</a>接口查询。</p>
+     * @param DiskBackupId <p>云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过<a href="/document/product/362/80278">DescribeDiskBackups</a>接口查询。</p>
      */
     public void setDiskBackupId(String DiskBackupId) {
         this.DiskBackupId = DiskBackupId;
     }
 
     /**
-     * Get 快照绑定的标签。 
-     * @return Tags 快照绑定的标签。
+     * Get <p>快照绑定的标签。</p> 
+     * @return Tags <p>快照绑定的标签。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 快照绑定的标签。
-     * @param Tags 快照绑定的标签。
+     * Set <p>快照绑定的标签。</p>
+     * @param Tags <p>快照绑定的标签。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。 
-     * @return DiskUsage 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+     * Get <p>是否创建极速快照。</p><p>极速快照数据存储在云硬盘所在的存储集群上，可实现秒级创建和回滚。该功能当前通过白名单控制开放。</p> 
+     * @return LocalSnap <p>是否创建极速快照。</p><p>极速快照数据存储在云硬盘所在的存储集群上，可实现秒级创建和回滚。该功能当前通过白名单控制开放。</p>
+     */
+    public Boolean getLocalSnap() {
+        return this.LocalSnap;
+    }
+
+    /**
+     * Set <p>是否创建极速快照。</p><p>极速快照数据存储在云硬盘所在的存储集群上，可实现秒级创建和回滚。该功能当前通过白名单控制开放。</p>
+     * @param LocalSnap <p>是否创建极速快照。</p><p>极速快照数据存储在云硬盘所在的存储集群上，可实现秒级创建和回滚。该功能当前通过白名单控制开放。</p>
+     */
+    public void setLocalSnap(Boolean LocalSnap) {
+        this.LocalSnap = LocalSnap;
+    }
+
+    /**
+     * Get <p>快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。</p> 
+     * @return DiskUsage <p>快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。</p>
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
-     * @param DiskUsage 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+     * Set <p>快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。</p>
+     * @param DiskUsage <p>快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。</p>
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
@@ -187,6 +210,9 @@ public class CreateSnapshotRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LocalSnap != null) {
+            this.LocalSnap = new Boolean(source.LocalSnap);
+        }
         if (source.DiskUsage != null) {
             this.DiskUsage = new String(source.DiskUsage);
         }
@@ -202,6 +228,7 @@ public class CreateSnapshotRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LocalSnap", this.LocalSnap);
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
 
     }

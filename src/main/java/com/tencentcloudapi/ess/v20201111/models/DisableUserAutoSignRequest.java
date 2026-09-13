@@ -31,14 +31,14 @@ public class DisableUserAutoSignRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+    * <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
     */
     @SerializedName("SceneKey")
     @Expose
     private String SceneKey;
 
     /**
-    * <p>需要关闭自动签的个人的信息，如姓名，证件信息等。</p>
+    * <p>需要关闭“授权签”的个人的信息，如姓名，证件信息等。</p>
     */
     @SerializedName("UserInfo")
     @Expose
@@ -68,32 +68,32 @@ public class DisableUserAutoSignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
-     * @return SceneKey <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Get <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p> 
+     * @return SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
-     * @param SceneKey <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Set <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * @param SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;
     }
 
     /**
-     * Get <p>需要关闭自动签的个人的信息，如姓名，证件信息等。</p> 
-     * @return UserInfo <p>需要关闭自动签的个人的信息，如姓名，证件信息等。</p>
+     * Get <p>需要关闭“授权签”的个人的信息，如姓名，证件信息等。</p> 
+     * @return UserInfo <p>需要关闭“授权签”的个人的信息，如姓名，证件信息等。</p>
      */
     public UserThreeFactor getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set <p>需要关闭自动签的个人的信息，如姓名，证件信息等。</p>
-     * @param UserInfo <p>需要关闭自动签的个人的信息，如姓名，证件信息等。</p>
+     * Set <p>需要关闭“授权签”的个人的信息，如姓名，证件信息等。</p>
+     * @param UserInfo <p>需要关闭“授权签”的个人的信息，如姓名，证件信息等。</p>
      */
     public void setUserInfo(UserThreeFactor UserInfo) {
         this.UserInfo = UserInfo;

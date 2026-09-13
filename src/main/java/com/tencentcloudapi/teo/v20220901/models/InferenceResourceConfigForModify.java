@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class InferenceResourceConfigForModify extends AbstractModel {
 
     /**
-    * 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+    * <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
     */
     @SerializedName("ScalingMode")
     @Expose
     private String ScalingMode;
 
     /**
-    * 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+    * <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
     */
     @SerializedName("AutoScalingConfig")
     @Expose
     private InferenceAutoScalingConfig AutoScalingConfig;
 
     /**
-    * 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+    * <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
     */
     @SerializedName("ManualInstanceConfig")
     @Expose
     private InferenceManualInstanceConfig ManualInstanceConfig;
 
     /**
-    * 单实例的并发数。默认值为 1。
+    * <p>单实例的并发数。默认值为 1。</p>
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-     * Get 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li> 
-     * @return ScalingMode 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+    * <p>推理服务的硬件资源配置。</p>
+    */
+    @SerializedName("HardwareConfig")
+    @Expose
+    private InferenceHardwareConfigForModify HardwareConfig;
+
+    /**
+     * Get <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p> 
+     * @return ScalingMode <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
      */
     public String getScalingMode() {
         return this.ScalingMode;
     }
 
     /**
-     * Set 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
-     * @param ScalingMode 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+     * Set <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
+     * @param ScalingMode <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
      */
     public void setScalingMode(String ScalingMode) {
         this.ScalingMode = ScalingMode;
     }
 
     /**
-     * Get 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。 
-     * @return AutoScalingConfig 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * Get <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p> 
+     * @return AutoScalingConfig <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
      */
     public InferenceAutoScalingConfig getAutoScalingConfig() {
         return this.AutoScalingConfig;
     }
 
     /**
-     * Set 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
-     * @param AutoScalingConfig 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * Set <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
+     * @param AutoScalingConfig <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
      */
     public void setAutoScalingConfig(InferenceAutoScalingConfig AutoScalingConfig) {
         this.AutoScalingConfig = AutoScalingConfig;
     }
 
     /**
-     * Get 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。 
-     * @return ManualInstanceConfig 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * Get <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p> 
+     * @return ManualInstanceConfig <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
      */
     public InferenceManualInstanceConfig getManualInstanceConfig() {
         return this.ManualInstanceConfig;
     }
 
     /**
-     * Set 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
-     * @param ManualInstanceConfig 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * Set <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
+     * @param ManualInstanceConfig <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
      */
     public void setManualInstanceConfig(InferenceManualInstanceConfig ManualInstanceConfig) {
         this.ManualInstanceConfig = ManualInstanceConfig;
     }
 
     /**
-     * Get 单实例的并发数。默认值为 1。 
-     * @return Concurrency 单实例的并发数。默认值为 1。
+     * Get <p>单实例的并发数。默认值为 1。</p> 
+     * @return Concurrency <p>单实例的并发数。默认值为 1。</p>
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set 单实例的并发数。默认值为 1。
-     * @param Concurrency 单实例的并发数。默认值为 1。
+     * Set <p>单实例的并发数。默认值为 1。</p>
+     * @param Concurrency <p>单实例的并发数。默认值为 1。</p>
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
+    }
+
+    /**
+     * Get <p>推理服务的硬件资源配置。</p> 
+     * @return HardwareConfig <p>推理服务的硬件资源配置。</p>
+     */
+    public InferenceHardwareConfigForModify getHardwareConfig() {
+        return this.HardwareConfig;
+    }
+
+    /**
+     * Set <p>推理服务的硬件资源配置。</p>
+     * @param HardwareConfig <p>推理服务的硬件资源配置。</p>
+     */
+    public void setHardwareConfig(InferenceHardwareConfigForModify HardwareConfig) {
+        this.HardwareConfig = HardwareConfig;
     }
 
     public InferenceResourceConfigForModify() {
@@ -135,6 +158,9 @@ public class InferenceResourceConfigForModify extends AbstractModel {
         if (source.Concurrency != null) {
             this.Concurrency = new Long(source.Concurrency);
         }
+        if (source.HardwareConfig != null) {
+            this.HardwareConfig = new InferenceHardwareConfigForModify(source.HardwareConfig);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InferenceResourceConfigForModify extends AbstractModel {
         this.setParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
         this.setParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
         this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);
+        this.setParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
 
     }
 }

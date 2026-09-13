@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AutoSignConfig extends AbstractModel {
 
     /**
-    * <p>自动签开通个人用户信息, 包括名字,身份证等</p>
+    * <p>“授权签”开通个人用户信息, 包括名字,身份证等</p>
     */
     @SerializedName("UserInfo")
     @Expose
@@ -45,7 +45,7 @@ public class AutoSignConfig extends AbstractModel {
     private Boolean UserDefineSeal;
 
     /**
-    * <p>回调中是否需要自动签将要使用的印章(签名) 图片的 base64:</p><ul><li>**false**: 不需要(默认)</li><li>**true**: 需要</li></ul>
+    * <p>回调中是否需要“授权签”将要使用的印章(签名) 图片的 base64:<ul><li><strong>false</strong>: 不需要(默认)</li><li><strong>true</strong>: 需要</li></ul></p>
     */
     @SerializedName("SealImgCallback")
     @Expose
@@ -66,7 +66,7 @@ public class AutoSignConfig extends AbstractModel {
     private String [] VerifyChannels;
 
     /**
-    * <p>设置用户自动签合同的扣费方式。</p><ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul><p>注：<code>该字段已经失效，请勿设置此参数。</code></p>
+    * <p>设置用户“授权签”合同的扣费方式。<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>注：<code>该字段已经失效，请勿设置此参数。</code></p>
     */
     @SerializedName("LicenseType")
     @Expose
@@ -80,16 +80,16 @@ public class AutoSignConfig extends AbstractModel {
     private String JumpUrl;
 
     /**
-     * Get <p>自动签开通个人用户信息, 包括名字,身份证等</p> 
-     * @return UserInfo <p>自动签开通个人用户信息, 包括名字,身份证等</p>
+     * Get <p>“授权签”开通个人用户信息, 包括名字,身份证等</p> 
+     * @return UserInfo <p>“授权签”开通个人用户信息, 包括名字,身份证等</p>
      */
     public UserThreeFactor getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set <p>自动签开通个人用户信息, 包括名字,身份证等</p>
-     * @param UserInfo <p>自动签开通个人用户信息, 包括名字,身份证等</p>
+     * Set <p>“授权签”开通个人用户信息, 包括名字,身份证等</p>
+     * @param UserInfo <p>“授权签”开通个人用户信息, 包括名字,身份证等</p>
      */
     public void setUserInfo(UserThreeFactor UserInfo) {
         this.UserInfo = UserInfo;
@@ -128,16 +128,16 @@ public class AutoSignConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>回调中是否需要自动签将要使用的印章(签名) 图片的 base64:</p><ul><li>**false**: 不需要(默认)</li><li>**true**: 需要</li></ul> 
-     * @return SealImgCallback <p>回调中是否需要自动签将要使用的印章(签名) 图片的 base64:</p><ul><li>**false**: 不需要(默认)</li><li>**true**: 需要</li></ul>
+     * Get <p>回调中是否需要“授权签”将要使用的印章(签名) 图片的 base64:<ul><li><strong>false</strong>: 不需要(默认)</li><li><strong>true</strong>: 需要</li></ul></p> 
+     * @return SealImgCallback <p>回调中是否需要“授权签”将要使用的印章(签名) 图片的 base64:<ul><li><strong>false</strong>: 不需要(默认)</li><li><strong>true</strong>: 需要</li></ul></p>
      */
     public Boolean getSealImgCallback() {
         return this.SealImgCallback;
     }
 
     /**
-     * Set <p>回调中是否需要自动签将要使用的印章(签名) 图片的 base64:</p><ul><li>**false**: 不需要(默认)</li><li>**true**: 需要</li></ul>
-     * @param SealImgCallback <p>回调中是否需要自动签将要使用的印章(签名) 图片的 base64:</p><ul><li>**false**: 不需要(默认)</li><li>**true**: 需要</li></ul>
+     * Set <p>回调中是否需要“授权签”将要使用的印章(签名) 图片的 base64:<ul><li><strong>false</strong>: 不需要(默认)</li><li><strong>true</strong>: 需要</li></ul></p>
+     * @param SealImgCallback <p>回调中是否需要“授权签”将要使用的印章(签名) 图片的 base64:<ul><li><strong>false</strong>: 不需要(默认)</li><li><strong>true</strong>: 需要</li></ul></p>
      */
     public void setSealImgCallback(Boolean SealImgCallback) {
         this.SealImgCallback = SealImgCallback;
@@ -180,16 +180,16 @@ public class AutoSignConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>设置用户自动签合同的扣费方式。</p><ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul><p>注：<code>该字段已经失效，请勿设置此参数。</code></p> 
-     * @return LicenseType <p>设置用户自动签合同的扣费方式。</p><ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul><p>注：<code>该字段已经失效，请勿设置此参数。</code></p>
+     * Get <p>设置用户“授权签”合同的扣费方式。<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>注：<code>该字段已经失效，请勿设置此参数。</code></p> 
+     * @return LicenseType <p>设置用户“授权签”合同的扣费方式。<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>注：<code>该字段已经失效，请勿设置此参数。</code></p>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set <p>设置用户自动签合同的扣费方式。</p><ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul><p>注：<code>该字段已经失效，请勿设置此参数。</code></p>
-     * @param LicenseType <p>设置用户自动签合同的扣费方式。</p><ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul><p>注：<code>该字段已经失效，请勿设置此参数。</code></p>
+     * Set <p>设置用户“授权签”合同的扣费方式。<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>注：<code>该字段已经失效，请勿设置此参数。</code></p>
+     * @param LicenseType <p>设置用户“授权签”合同的扣费方式。<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>注：<code>该字段已经失效，请勿设置此参数。</code></p>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;

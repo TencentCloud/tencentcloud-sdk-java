@@ -122,7 +122,7 @@ public class TemplateInfo extends AbstractModel {
     private Recipient Promoter;
 
     /**
-    * <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+    * <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
     */
     @SerializedName("TemplateType")
     @Expose
@@ -185,7 +185,7 @@ public class TemplateInfo extends AbstractModel {
     private String ShareTemplateId;
 
     /**
-    * <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+    * <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
     */
     @SerializedName("TemplateSeals")
     @Expose
@@ -424,16 +424,16 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p> 
-     * @return TemplateType <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+     * Get <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p> 
+     * @return TemplateType <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
      */
     public Long getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
-     * @param TemplateType <p>模板类型可以分为以下两种：</p><p><b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。<br><b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+     * Set <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
+     * @param TemplateType <p>模板类型可以分为以下两种：<b>1</b>：带有本企业“授权签”的模板，即签署过程无需签署人手动操作，系统自动完成签署。<b>3</b>：普通模板，即签署人需要手动进行签署操作。</p>
      */
     public void setTemplateType(Long TemplateType) {
         this.TemplateType = TemplateType;
@@ -568,16 +568,16 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p> 
-     * @return TemplateSeals <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+     * Get <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p> 
+     * @return TemplateSeals <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
      */
     public SealInfo [] getTemplateSeals() {
         return this.TemplateSeals;
     }
 
     /**
-     * Set <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
-     * @param TemplateSeals <p>此模板配置的预填印章列表（包括自动签署指定的印章）</p>
+     * Set <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
+     * @param TemplateSeals <p>此模板配置的预填印章列表（包括“授权签”指定的印章）</p>
      */
     public void setTemplateSeals(SealInfo [] TemplateSeals) {
         this.TemplateSeals = TemplateSeals;

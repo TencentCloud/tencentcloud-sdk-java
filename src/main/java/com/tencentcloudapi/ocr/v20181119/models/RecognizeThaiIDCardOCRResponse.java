@@ -24,132 +24,126 @@ import java.util.HashMap;
 public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
 
     /**
-    * 身份证号码
+    * <p>身份证号码</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 泰文姓名
+    * <p>泰文姓名</p>
     */
     @SerializedName("ThaiName")
     @Expose
     private String ThaiName;
 
     /**
-    * 英文姓名
+    * <p>英文姓名</p>
     */
     @SerializedName("EnFirstName")
     @Expose
     private String EnFirstName;
 
     /**
-    * 英文姓名
+    * <p>英文姓名</p>
     */
     @SerializedName("EnLastName")
     @Expose
     private String EnLastName;
 
     /**
-    * 泰文签发日期
+    * <p>泰文签发日期</p>
     */
     @SerializedName("IssueDate")
     @Expose
     private String IssueDate;
 
     /**
-    * 泰文到期日期
+    * <p>泰文到期日期</p>
     */
     @SerializedName("ExpirationDate")
     @Expose
     private String ExpirationDate;
 
     /**
-    * 英文签发日期
+    * <p>英文签发日期</p>
     */
     @SerializedName("EnIssueDate")
     @Expose
     private String EnIssueDate;
 
     /**
-    * 英文到期日期
+    * <p>英文到期日期</p>
     */
     @SerializedName("EnExpirationDate")
     @Expose
     private String EnExpirationDate;
 
     /**
-    * 泰文出生日期
+    * <p>泰文出生日期</p>
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * 英文出生日期
+    * <p>英文出生日期</p>
     */
     @SerializedName("EnBirthday")
     @Expose
     private String EnBirthday;
 
     /**
-    * 宗教信仰
+    * <p>宗教信仰</p>
     */
     @SerializedName("Religion")
     @Expose
     private String Religion;
 
     /**
-    * 序列号
+    * <p>序列号</p>
     */
     @SerializedName("SerialNumber")
     @Expose
     private String SerialNumber;
 
     /**
-    * 地址
+    * <p>地址</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 背面号码
+    * <p>背面号码</p>
     */
     @SerializedName("LaserID")
     @Expose
     private String LaserID;
 
     /**
-    * 证件人像照片抠取
+    * <p>证件人像照片抠取</p>
     */
     @SerializedName("PortraitImage")
     @Expose
     private String PortraitImage;
 
     /**
-    * 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+    * <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
     */
     @SerializedName("WarnCardInfos")
     @Expose
     private Long [] WarnCardInfos;
 
     /**
-    * 该字段已废弃， 将固定返回"1"，不建议使用。 
+    * <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
     */
     @SerializedName("AdvancedInfo")
     @Expose
     private String AdvancedInfo;
 
     /**
-    * 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+    * <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
     */
     @SerializedName("CardCount")
     @Expose
@@ -163,288 +157,264 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 身份证号码 
-     * @return ID 身份证号码
+     * Get <p>身份证号码</p> 
+     * @return ID <p>身份证号码</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 身份证号码
-     * @param ID 身份证号码
+     * Set <p>身份证号码</p>
+     * @param ID <p>身份证号码</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 泰文姓名 
-     * @return ThaiName 泰文姓名
+     * Get <p>泰文姓名</p> 
+     * @return ThaiName <p>泰文姓名</p>
      */
     public String getThaiName() {
         return this.ThaiName;
     }
 
     /**
-     * Set 泰文姓名
-     * @param ThaiName 泰文姓名
+     * Set <p>泰文姓名</p>
+     * @param ThaiName <p>泰文姓名</p>
      */
     public void setThaiName(String ThaiName) {
         this.ThaiName = ThaiName;
     }
 
     /**
-     * Get 英文姓名 
-     * @return EnFirstName 英文姓名
+     * Get <p>英文姓名</p> 
+     * @return EnFirstName <p>英文姓名</p>
      */
     public String getEnFirstName() {
         return this.EnFirstName;
     }
 
     /**
-     * Set 英文姓名
-     * @param EnFirstName 英文姓名
+     * Set <p>英文姓名</p>
+     * @param EnFirstName <p>英文姓名</p>
      */
     public void setEnFirstName(String EnFirstName) {
         this.EnFirstName = EnFirstName;
     }
 
     /**
-     * Get 英文姓名 
-     * @return EnLastName 英文姓名
+     * Get <p>英文姓名</p> 
+     * @return EnLastName <p>英文姓名</p>
      */
     public String getEnLastName() {
         return this.EnLastName;
     }
 
     /**
-     * Set 英文姓名
-     * @param EnLastName 英文姓名
+     * Set <p>英文姓名</p>
+     * @param EnLastName <p>英文姓名</p>
      */
     public void setEnLastName(String EnLastName) {
         this.EnLastName = EnLastName;
     }
 
     /**
-     * Get 泰文签发日期 
-     * @return IssueDate 泰文签发日期
+     * Get <p>泰文签发日期</p> 
+     * @return IssueDate <p>泰文签发日期</p>
      */
     public String getIssueDate() {
         return this.IssueDate;
     }
 
     /**
-     * Set 泰文签发日期
-     * @param IssueDate 泰文签发日期
+     * Set <p>泰文签发日期</p>
+     * @param IssueDate <p>泰文签发日期</p>
      */
     public void setIssueDate(String IssueDate) {
         this.IssueDate = IssueDate;
     }
 
     /**
-     * Get 泰文到期日期 
-     * @return ExpirationDate 泰文到期日期
+     * Get <p>泰文到期日期</p> 
+     * @return ExpirationDate <p>泰文到期日期</p>
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
     }
 
     /**
-     * Set 泰文到期日期
-     * @param ExpirationDate 泰文到期日期
+     * Set <p>泰文到期日期</p>
+     * @param ExpirationDate <p>泰文到期日期</p>
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;
     }
 
     /**
-     * Get 英文签发日期 
-     * @return EnIssueDate 英文签发日期
+     * Get <p>英文签发日期</p> 
+     * @return EnIssueDate <p>英文签发日期</p>
      */
     public String getEnIssueDate() {
         return this.EnIssueDate;
     }
 
     /**
-     * Set 英文签发日期
-     * @param EnIssueDate 英文签发日期
+     * Set <p>英文签发日期</p>
+     * @param EnIssueDate <p>英文签发日期</p>
      */
     public void setEnIssueDate(String EnIssueDate) {
         this.EnIssueDate = EnIssueDate;
     }
 
     /**
-     * Get 英文到期日期 
-     * @return EnExpirationDate 英文到期日期
+     * Get <p>英文到期日期</p> 
+     * @return EnExpirationDate <p>英文到期日期</p>
      */
     public String getEnExpirationDate() {
         return this.EnExpirationDate;
     }
 
     /**
-     * Set 英文到期日期
-     * @param EnExpirationDate 英文到期日期
+     * Set <p>英文到期日期</p>
+     * @param EnExpirationDate <p>英文到期日期</p>
      */
     public void setEnExpirationDate(String EnExpirationDate) {
         this.EnExpirationDate = EnExpirationDate;
     }
 
     /**
-     * Get 泰文出生日期 
-     * @return Birthday 泰文出生日期
+     * Get <p>泰文出生日期</p> 
+     * @return Birthday <p>泰文出生日期</p>
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set 泰文出生日期
-     * @param Birthday 泰文出生日期
+     * Set <p>泰文出生日期</p>
+     * @param Birthday <p>泰文出生日期</p>
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get 英文出生日期 
-     * @return EnBirthday 英文出生日期
+     * Get <p>英文出生日期</p> 
+     * @return EnBirthday <p>英文出生日期</p>
      */
     public String getEnBirthday() {
         return this.EnBirthday;
     }
 
     /**
-     * Set 英文出生日期
-     * @param EnBirthday 英文出生日期
+     * Set <p>英文出生日期</p>
+     * @param EnBirthday <p>英文出生日期</p>
      */
     public void setEnBirthday(String EnBirthday) {
         this.EnBirthday = EnBirthday;
     }
 
     /**
-     * Get 宗教信仰 
-     * @return Religion 宗教信仰
+     * Get <p>宗教信仰</p> 
+     * @return Religion <p>宗教信仰</p>
      */
     public String getReligion() {
         return this.Religion;
     }
 
     /**
-     * Set 宗教信仰
-     * @param Religion 宗教信仰
+     * Set <p>宗教信仰</p>
+     * @param Religion <p>宗教信仰</p>
      */
     public void setReligion(String Religion) {
         this.Religion = Religion;
     }
 
     /**
-     * Get 序列号 
-     * @return SerialNumber 序列号
+     * Get <p>序列号</p> 
+     * @return SerialNumber <p>序列号</p>
      */
     public String getSerialNumber() {
         return this.SerialNumber;
     }
 
     /**
-     * Set 序列号
-     * @param SerialNumber 序列号
+     * Set <p>序列号</p>
+     * @param SerialNumber <p>序列号</p>
      */
     public void setSerialNumber(String SerialNumber) {
         this.SerialNumber = SerialNumber;
     }
 
     /**
-     * Get 地址 
-     * @return Address 地址
+     * Get <p>地址</p> 
+     * @return Address <p>地址</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 地址
-     * @param Address 地址
+     * Set <p>地址</p>
+     * @param Address <p>地址</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 背面号码 
-     * @return LaserID 背面号码
+     * Get <p>背面号码</p> 
+     * @return LaserID <p>背面号码</p>
      */
     public String getLaserID() {
         return this.LaserID;
     }
 
     /**
-     * Set 背面号码
-     * @param LaserID 背面号码
+     * Set <p>背面号码</p>
+     * @param LaserID <p>背面号码</p>
      */
     public void setLaserID(String LaserID) {
         this.LaserID = LaserID;
     }
 
     /**
-     * Get 证件人像照片抠取 
-     * @return PortraitImage 证件人像照片抠取
+     * Get <p>证件人像照片抠取</p> 
+     * @return PortraitImage <p>证件人像照片抠取</p>
      */
     public String getPortraitImage() {
         return this.PortraitImage;
     }
 
     /**
-     * Set 证件人像照片抠取
-     * @param PortraitImage 证件人像照片抠取
+     * Set <p>证件人像照片抠取</p>
+     * @param PortraitImage <p>证件人像照片抠取</p>
      */
     public void setPortraitImage(String PortraitImage) {
         this.PortraitImage = PortraitImage;
     }
 
     /**
-     * Get 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通 
-     * @return WarnCardInfos 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+     * Get <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p> 
+     * @return WarnCardInfos <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
-     * @param WarnCardInfos 告警码
--9101 证件边框不完整告警
--9102 证件复印件告警
--9103 证件翻拍告警
--9107 证件反光告警
--9108 证件模糊告警
--9109 告警能力未开通
+     * Set <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
+     * @param WarnCardInfos <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;
     }
 
     /**
-     * Get 该字段已废弃， 将固定返回"1"，不建议使用。  
-     * @return AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * Get <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p> 
+     * @return AdvancedInfo <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
      * @deprecated
      */
     @Deprecated
@@ -453,8 +423,8 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段已废弃， 将固定返回"1"，不建议使用。 
-     * @param AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * Set <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
+     * @param AdvancedInfo <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
      * @deprecated
      */
     @Deprecated
@@ -463,16 +433,16 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回） 
-     * @return CardCount 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+     * Get <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p> 
+     * @return CardCount <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
      */
     public Long getCardCount() {
         return this.CardCount;
     }
 
     /**
-     * Set 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
-     * @param CardCount 卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）
+     * Set <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
+     * @param CardCount <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
      */
     public void setCardCount(Long CardCount) {
         this.CardCount = CardCount;

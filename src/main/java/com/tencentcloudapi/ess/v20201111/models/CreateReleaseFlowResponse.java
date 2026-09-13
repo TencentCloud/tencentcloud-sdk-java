@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class CreateReleaseFlowResponse extends AbstractModel {
 
     /**
-    * 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+    * <p>解除协议流程编号<br><code>注意：这里的流程编号对应的合同是本次发起的解除协议。</code></p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -40,24 +38,16 @@ public class CreateReleaseFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
- 
-     * @return FlowId 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+     * Get <p>解除协议流程编号<br><code>注意：这里的流程编号对应的合同是本次发起的解除协议。</code></p> 
+     * @return FlowId <p>解除协议流程编号<br><code>注意：这里的流程编号对应的合同是本次发起的解除协议。</code></p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
-     * @param FlowId 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+     * Set <p>解除协议流程编号<br><code>注意：这里的流程编号对应的合同是本次发起的解除协议。</code></p>
+     * @param FlowId <p>解除协议流程编号<br><code>注意：这里的流程编号对应的合同是本次发起的解除协议。</code></p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

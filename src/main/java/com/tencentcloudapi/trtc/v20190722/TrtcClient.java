@@ -61,6 +61,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *短音频同步内容理解接口
+     * @param req CreateAudioModerationSyncRequest
+     * @return CreateAudioModerationSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAudioModerationSyncResponse CreateAudioModerationSync(CreateAudioModerationSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAudioModerationSync", CreateAudioModerationSyncResponse.class);
+    }
+
+    /**
      *启动AI 内容理解功能，完成房间内的音视频切片，视频截帧，或者录制音频流，投递到AI内容理解，完成内容识别。您可以通过此接口实现如下目标：
 ●指定内容参数（ModerationParams）来指定内容理解需要的详细参数。
 ●指定存储参数（ModerationStorageParams）将命中的切片文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）以及第三方AWS（S3）和阿里云（OSS）

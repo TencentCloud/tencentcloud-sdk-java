@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePersonCertificateResponse extends AbstractModel {
 
     /**
-    * 证书的Base64
+    * <p>证书的Base64</p>
     */
     @SerializedName("Cert")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePersonCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 证书的Base64 
-     * @return Cert 证书的Base64
+     * Get <p>证书的Base64</p> 
+     * @return Cert <p>证书的Base64</p>
      */
     public String getCert() {
         return this.Cert;
     }
 
     /**
-     * Set 证书的Base64
-     * @param Cert 证书的Base64
+     * Set <p>证书的Base64</p>
+     * @param Cert <p>证书的Base64</p>
      */
     public void setCert(String Cert) {
         this.Cert = Cert;

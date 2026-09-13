@@ -24,122 +24,92 @@ import java.util.HashMap;
 public class DescribePersonCertificateRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 个人用户的三要素信息：
-<ul><li>姓名</li>
-<li>证件号</li>
-<li>证件类型</li></ul>
+    * <p>个人用户的三要素信息：</p><ul><li>姓名</li><li>证件号</li><li>证件类型</li></ul>
     */
     @SerializedName("UserInfo")
     @Expose
     private UserThreeFactor UserInfo;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+    * <p>证书使用场景，可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
     */
     @SerializedName("SceneKey")
     @Expose
     private String SceneKey;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 个人用户的三要素信息：
-<ul><li>姓名</li>
-<li>证件号</li>
-<li>证件类型</li></ul> 
-     * @return UserInfo 个人用户的三要素信息：
-<ul><li>姓名</li>
-<li>证件号</li>
-<li>证件类型</li></ul>
+     * Get <p>个人用户的三要素信息：</p><ul><li>姓名</li><li>证件号</li><li>证件类型</li></ul> 
+     * @return UserInfo <p>个人用户的三要素信息：</p><ul><li>姓名</li><li>证件号</li><li>证件类型</li></ul>
      */
     public UserThreeFactor getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set 个人用户的三要素信息：
-<ul><li>姓名</li>
-<li>证件号</li>
-<li>证件类型</li></ul>
-     * @param UserInfo 个人用户的三要素信息：
-<ul><li>姓名</li>
-<li>证件号</li>
-<li>证件类型</li></ul>
+     * Set <p>个人用户的三要素信息：</p><ul><li>姓名</li><li>证件号</li><li>证件类型</li></ul>
+     * @param UserInfo <p>个人用户的三要素信息：</p><ul><li>姓名</li><li>证件号</li><li>证件类型</li></ul>
      */
     public void setUserInfo(UserThreeFactor UserInfo) {
         this.UserInfo = UserInfo;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
-     * @return SceneKey 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Get <p>证书使用场景，可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
+     * @return SceneKey <p>证书使用场景，可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
-     * @param SceneKey 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Set <p>证书使用场景，可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * @param SceneKey <p>证书使用场景，可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;

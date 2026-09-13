@@ -24,198 +24,138 @@ import java.util.HashMap;
 public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
-<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
-</ul>
+    * <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li><li>OPEN_AUTO_SIGN :开通企业“授权签”</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权“授权签”</li><li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(<strong>授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用</strong>)</li></ul></p>
     */
     @SerializedName("OperateTypes")
     @Expose
     private String [] OperateTypes;
 
     /**
-    * 批量操作的企业Id列表，最大支持50个
+    * <p>批量操作的企业Id列表，最大支持50个</p>
     */
     @SerializedName("OrganizationIds")
     @Expose
     private String [] OrganizationIds;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * <p>代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
-
-企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
-
-![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+    * <p>被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权“授权签”）时必传。企业电子签账号可在<a href="https://qian.tencent.com/console/company-settings/company-center">电子签的网页端</a> ，于企业设置-企业信息菜单栏下复制获取。<img src="https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png" alt="企业电子签账号"></p>
     */
     @SerializedName("AuthorizedOrganizationId")
     @Expose
     private String AuthorizedOrganizationId;
 
     /**
-    * 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+    * <p>初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用“授权签”（需操作人有“授权签”授权）</p>
     */
     @SerializedName("ChangeAdminAuthAutoSign")
     @Expose
     private Boolean ChangeAdminAuthAutoSign;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
-<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
-</ul> 
-     * @return OperateTypes 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
-<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
-</ul>
+     * Get <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li><li>OPEN_AUTO_SIGN :开通企业“授权签”</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权“授权签”</li><li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(<strong>授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用</strong>)</li></ul></p> 
+     * @return OperateTypes <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li><li>OPEN_AUTO_SIGN :开通企业“授权签”</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权“授权签”</li><li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(<strong>授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用</strong>)</li></ul></p>
      */
     public String [] getOperateTypes() {
         return this.OperateTypes;
     }
 
     /**
-     * Set 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
-<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
-</ul>
-     * @param OperateTypes 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
-<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
-</ul>
+     * Set <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li><li>OPEN_AUTO_SIGN :开通企业“授权签”</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权“授权签”</li><li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(<strong>授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用</strong>)</li></ul></p>
+     * @param OperateTypes <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li><li>OPEN_AUTO_SIGN :开通企业“授权签”</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权“授权签”</li><li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(<strong>授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用</strong>)</li></ul></p>
      */
     public void setOperateTypes(String [] OperateTypes) {
         this.OperateTypes = OperateTypes;
     }
 
     /**
-     * Get 批量操作的企业Id列表，最大支持50个 
-     * @return OrganizationIds 批量操作的企业Id列表，最大支持50个
+     * Get <p>批量操作的企业Id列表，最大支持50个</p> 
+     * @return OrganizationIds <p>批量操作的企业Id列表，最大支持50个</p>
      */
     public String [] getOrganizationIds() {
         return this.OrganizationIds;
     }
 
     /**
-     * Set 批量操作的企业Id列表，最大支持50个
-     * @param OrganizationIds 批量操作的企业Id列表，最大支持50个
+     * Set <p>批量操作的企业Id列表，最大支持50个</p>
+     * @param OrganizationIds <p>批量操作的企业Id列表，最大支持50个</p>
      */
     public void setOrganizationIds(String [] OrganizationIds) {
         this.OrganizationIds = OrganizationIds;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get <p>代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填</p> 
+     * @return Agent <p>代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set <p>代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填</p>
+     * @param Agent <p>代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
-
-企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
-
-![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png) 
-     * @return AuthorizedOrganizationId 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
-
-企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
-
-![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+     * Get <p>被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权“授权签”）时必传。企业电子签账号可在<a href="https://qian.tencent.com/console/company-settings/company-center">电子签的网页端</a> ，于企业设置-企业信息菜单栏下复制获取。<img src="https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png" alt="企业电子签账号"></p> 
+     * @return AuthorizedOrganizationId <p>被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权“授权签”）时必传。企业电子签账号可在<a href="https://qian.tencent.com/console/company-settings/company-center">电子签的网页端</a> ，于企业设置-企业信息菜单栏下复制获取。<img src="https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png" alt="企业电子签账号"></p>
      */
     public String getAuthorizedOrganizationId() {
         return this.AuthorizedOrganizationId;
     }
 
     /**
-     * Set 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
-
-企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
-
-![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
-     * @param AuthorizedOrganizationId 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
-
-企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
-
-![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+     * Set <p>被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权“授权签”）时必传。企业电子签账号可在<a href="https://qian.tencent.com/console/company-settings/company-center">电子签的网页端</a> ，于企业设置-企业信息菜单栏下复制获取。<img src="https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png" alt="企业电子签账号"></p>
+     * @param AuthorizedOrganizationId <p>被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权“授权签”）时必传。企业电子签账号可在<a href="https://qian.tencent.com/console/company-settings/company-center">电子签的网页端</a> ，于企业设置-企业信息菜单栏下复制获取。<img src="https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png" alt="企业电子签账号"></p>
      */
     public void setAuthorizedOrganizationId(String AuthorizedOrganizationId) {
         this.AuthorizedOrganizationId = AuthorizedOrganizationId;
     }
 
     /**
-     * Get 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权） 
-     * @return ChangeAdminAuthAutoSign 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+     * Get <p>初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用“授权签”（需操作人有“授权签”授权）</p> 
+     * @return ChangeAdminAuthAutoSign <p>初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用“授权签”（需操作人有“授权签”授权）</p>
      */
     public Boolean getChangeAdminAuthAutoSign() {
         return this.ChangeAdminAuthAutoSign;
     }
 
     /**
-     * Set 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
-     * @param ChangeAdminAuthAutoSign 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+     * Set <p>初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用“授权签”（需操作人有“授权签”授权）</p>
+     * @param ChangeAdminAuthAutoSign <p>初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用“授权签”（需操作人有“授权签”授权）</p>
      */
     public void setChangeAdminAuthAutoSign(Boolean ChangeAdminAuthAutoSign) {
         this.ChangeAdminAuthAutoSign = ChangeAdminAuthAutoSign;

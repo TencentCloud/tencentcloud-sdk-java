@@ -66,7 +66,7 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     private String IdCardType;
 
     /**
-    * <p>手机号码；当需要开通自动签时，该参数必传</p>
+    * <p>手机号码；当需要开通“授权签”时，该参数必传</p>
     */
     @SerializedName("Mobile")
     @Expose
@@ -94,7 +94,7 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     private Boolean ProcessSeal;
 
     /**
-    * <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul><p>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
+    * <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
     */
     @SerializedName("SceneKey")
     @Expose
@@ -225,16 +225,16 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>手机号码；当需要开通自动签时，该参数必传</p> 
-     * @return Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * Get <p>手机号码；当需要开通“授权签”时，该参数必传</p> 
+     * @return Mobile <p>手机号码；当需要开通“授权签”时，该参数必传</p>
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set <p>手机号码；当需要开通自动签时，该参数必传</p>
-     * @param Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * Set <p>手机号码；当需要开通“授权签”时，该参数必传</p>
+     * @param Mobile <p>手机号码；当需要开通“授权签”时，该参数必传</p>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
@@ -289,16 +289,16 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul><p>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p> 
-     * @return SceneKey <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul><p>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
+     * Get <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p> 
+     * @return SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul><p>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
-     * @param SceneKey <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul><p>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
+     * Set <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
+     * @param SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;

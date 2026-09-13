@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateDynamicFlowApproverResponse extends AbstractModel {
 
     /**
-    * 合同流程ID，为32位字符串
+    * <p>合同流程ID，为32位字符串</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 补充动态合同签署人的结果数组
+    * <p>补充动态合同签署人的结果数组</p>
     */
     @SerializedName("DynamicFlowApproverList")
     @Expose
@@ -45,32 +45,32 @@ public class CreateDynamicFlowApproverResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同流程ID，为32位字符串 
-     * @return FlowId 合同流程ID，为32位字符串
+     * Get <p>合同流程ID，为32位字符串</p> 
+     * @return FlowId <p>合同流程ID，为32位字符串</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同流程ID，为32位字符串
-     * @param FlowId 合同流程ID，为32位字符串
+     * Set <p>合同流程ID，为32位字符串</p>
+     * @param FlowId <p>合同流程ID，为32位字符串</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 补充动态合同签署人的结果数组 
-     * @return DynamicFlowApproverList 补充动态合同签署人的结果数组
+     * Get <p>补充动态合同签署人的结果数组</p> 
+     * @return DynamicFlowApproverList <p>补充动态合同签署人的结果数组</p>
      */
     public DynamicFlowApproverResult [] getDynamicFlowApproverList() {
         return this.DynamicFlowApproverList;
     }
 
     /**
-     * Set 补充动态合同签署人的结果数组
-     * @param DynamicFlowApproverList 补充动态合同签署人的结果数组
+     * Set <p>补充动态合同签署人的结果数组</p>
+     * @param DynamicFlowApproverList <p>补充动态合同签署人的结果数组</p>
      */
     public void setDynamicFlowApproverList(DynamicFlowApproverResult [] DynamicFlowApproverList) {
         this.DynamicFlowApproverList = DynamicFlowApproverList;

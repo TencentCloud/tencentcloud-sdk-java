@@ -122,6 +122,13 @@ public class AigcVideoTaskInput extends AbstractModel {
     private Long Seed;
 
     /**
+    * <p>透传参数。</p>
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get <p>模型名称。</p> 
      * @return ModelName <p>模型名称。</p>
      */
@@ -345,6 +352,22 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.Seed = Seed;
     }
 
+    /**
+     * Get <p>透传参数。</p> 
+     * @return ExtInfo <p>透传参数。</p>
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set <p>透传参数。</p>
+     * @param ExtInfo <p>透传参数。</p>
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public AigcVideoTaskInput() {
     }
 
@@ -401,6 +424,9 @@ public class AigcVideoTaskInput extends AbstractModel {
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelCreateDynamicFlowApproverResponse extends AbstractModel {
 
     /**
-    * 动态合同补充结果列表
+    * <p>动态合同补充结果列表</p>
     */
     @SerializedName("DynamicFlowResultList")
     @Expose
@@ -38,16 +38,16 @@ public class ChannelCreateDynamicFlowApproverResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 动态合同补充结果列表 
-     * @return DynamicFlowResultList 动态合同补充结果列表
+     * Get <p>动态合同补充结果列表</p> 
+     * @return DynamicFlowResultList <p>动态合同补充结果列表</p>
      */
     public DynamicFlowResult [] getDynamicFlowResultList() {
         return this.DynamicFlowResultList;
     }
 
     /**
-     * Set 动态合同补充结果列表
-     * @param DynamicFlowResultList 动态合同补充结果列表
+     * Set <p>动态合同补充结果列表</p>
+     * @param DynamicFlowResultList <p>动态合同补充结果列表</p>
      */
     public void setDynamicFlowResultList(DynamicFlowResult [] DynamicFlowResultList) {
         this.DynamicFlowResultList = DynamicFlowResultList;

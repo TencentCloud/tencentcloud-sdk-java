@@ -38,7 +38,7 @@ public class TextToSpeechAsyncRequest extends AbstractModel {
     private String VoiceId;
 
     /**
-    * <p>文本语言，默认中文</p>
+    * <p>文本语言，不填时默认自动探测</p>
     */
     @SerializedName("TextLang")
     @Expose
@@ -84,16 +84,16 @@ public class TextToSpeechAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>文本语言，默认中文</p> 
-     * @return TextLang <p>文本语言，默认中文</p>
+     * Get <p>文本语言，不填时默认自动探测</p> 
+     * @return TextLang <p>文本语言，不填时默认自动探测</p>
      */
     public String getTextLang() {
         return this.TextLang;
     }
 
     /**
-     * Set <p>文本语言，默认中文</p>
-     * @param TextLang <p>文本语言，默认中文</p>
+     * Set <p>文本语言，不填时默认自动探测</p>
+     * @param TextLang <p>文本语言，不填时默认自动探测</p>
      */
     public void setTextLang(String TextLang) {
         this.TextLang = TextLang;

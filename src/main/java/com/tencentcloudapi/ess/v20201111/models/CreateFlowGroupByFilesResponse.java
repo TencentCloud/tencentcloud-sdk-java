@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateFlowGroupByFilesResponse extends AbstractModel {
 
     /**
-    * 合同(流程)组的合同组Id
+    * <p>合同(流程)组的合同组Id</p>
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 合同(流程)组中子合同列表.
+    * <p>合同(流程)组中子合同列表.</p>
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 合同组签署方信息。
+    * <p>合同组签署方信息。</p>
     */
     @SerializedName("Approvers")
     @Expose
     private FlowGroupApprovers [] Approvers;
 
     /**
-    * 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+    * <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
     */
     @SerializedName("WorkflowInstanceId")
     @Expose
@@ -59,64 +59,64 @@ public class CreateFlowGroupByFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同(流程)组的合同组Id 
-     * @return FlowGroupId 合同(流程)组的合同组Id
+     * Get <p>合同(流程)组的合同组Id</p> 
+     * @return FlowGroupId <p>合同(流程)组的合同组Id</p>
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同(流程)组的合同组Id
-     * @param FlowGroupId 合同(流程)组的合同组Id
+     * Set <p>合同(流程)组的合同组Id</p>
+     * @param FlowGroupId <p>合同(流程)组的合同组Id</p>
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 合同(流程)组中子合同列表. 
-     * @return FlowIds 合同(流程)组中子合同列表.
+     * Get <p>合同(流程)组中子合同列表.</p> 
+     * @return FlowIds <p>合同(流程)组中子合同列表.</p>
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 合同(流程)组中子合同列表.
-     * @param FlowIds 合同(流程)组中子合同列表.
+     * Set <p>合同(流程)组中子合同列表.</p>
+     * @param FlowIds <p>合同(流程)组中子合同列表.</p>
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 合同组签署方信息。 
-     * @return Approvers 合同组签署方信息。
+     * Get <p>合同组签署方信息。</p> 
+     * @return Approvers <p>合同组签署方信息。</p>
      */
     public FlowGroupApprovers [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 合同组签署方信息。
-     * @param Approvers 合同组签署方信息。
+     * Set <p>合同组签署方信息。</p>
+     * @param Approvers <p>合同组签署方信息。</p>
      */
     public void setApprovers(FlowGroupApprovers [] Approvers) {
         this.Approvers = Approvers;
     }
 
     /**
-     * Get 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回 
-     * @return WorkflowInstanceId 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+     * Get <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p> 
+     * @return WorkflowInstanceId <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
      */
     public String getWorkflowInstanceId() {
         return this.WorkflowInstanceId;
     }
 
     /**
-     * Set 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
-     * @param WorkflowInstanceId 发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回
+     * Set <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
+     * @param WorkflowInstanceId <p>发起审批流id，仅在发起时指定FlowGroupOptions.FlowGroupNeedWorkflow=true时返回</p>
      */
     public void setWorkflowInstanceId(String WorkflowInstanceId) {
         this.WorkflowInstanceId = WorkflowInstanceId;

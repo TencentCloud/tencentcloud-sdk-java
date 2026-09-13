@@ -150,6 +150,13 @@ public class SeeTaskInfo extends AbstractModel {
     private String COSURI;
 
     /**
+    * <p>任务的输入 URL</p>
+    */
+    @SerializedName("InputURL")
+    @Expose
+    private String InputURL;
+
+    /**
      * Get <p>任务 ID</p> 
      * @return TaskId <p>任务 ID</p>
      */
@@ -437,6 +444,22 @@ public class SeeTaskInfo extends AbstractModel {
         this.COSURI = COSURI;
     }
 
+    /**
+     * Get <p>任务的输入 URL</p> 
+     * @return InputURL <p>任务的输入 URL</p>
+     */
+    public String getInputURL() {
+        return this.InputURL;
+    }
+
+    /**
+     * Set <p>任务的输入 URL</p>
+     * @param InputURL <p>任务的输入 URL</p>
+     */
+    public void setInputURL(String InputURL) {
+        this.InputURL = InputURL;
+    }
+
     public SeeTaskInfo() {
     }
 
@@ -505,6 +528,9 @@ public class SeeTaskInfo extends AbstractModel {
         if (source.COSURI != null) {
             this.COSURI = new String(source.COSURI);
         }
+        if (source.InputURL != null) {
+            this.InputURL = new String(source.InputURL);
+        }
     }
 
 
@@ -530,6 +556,7 @@ public class SeeTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "COSURI", this.COSURI);
+        this.setParamSimple(map, prefix + "InputURL", this.InputURL);
 
     }
 }

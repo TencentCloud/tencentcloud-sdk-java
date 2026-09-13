@@ -1971,19 +1971,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *后端服务已经删除这个接口,  API 接口下线处理
-
-重关联业务日志配置
-     * @param req ReassociateBusinessLogConfigRequest
-     * @return ReassociateBusinessLogConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(ReassociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ReassociateBusinessLogConfig", ReassociateBusinessLogConfigResponse.class);
-    }
-
-    /**
      *发布Api分组
      * @param req ReleaseApiGroupRequest
      * @return ReleaseApiGroupResponse

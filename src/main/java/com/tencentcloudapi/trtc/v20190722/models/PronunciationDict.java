@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PronunciationDict extends AbstractModel {
 
     /**
-    * 需要纠正发音的词语，前后空格自动去除。同一请求中若有重复词语，以最后一条为准。
+    * <p>需要纠正发音的词语，同一请求中若有重复词语，以最后一条为准。</p>
     */
     @SerializedName("Word")
     @Expose
     private String Word;
 
     /**
-    * 目标发音，支持以下格式：<br>① 带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 yin2 hang2；<br>② 拼音连写（无空格），如 yin2hang2；<br>③ 文字+拼音混写，如 银hang2；<br>④ 直接文本替换，会将原始文本替换为目标文本
+    * <p>目标发音，支持以下格式：</p><ul><li>带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 (yin2)(hang2)</li><li>英文音标，如  (rɪˈzjuːm)</li><li>裸文本替换，会将原始文本替换为目标文本</li></ul><p>支持任意格式混排，注意拼音和音标需要被括号包裹</p>
     */
     @SerializedName("Pronunciation")
     @Expose
     private String Pronunciation;
 
     /**
-     * Get 需要纠正发音的词语，前后空格自动去除。同一请求中若有重复词语，以最后一条为准。 
-     * @return Word 需要纠正发音的词语，前后空格自动去除。同一请求中若有重复词语，以最后一条为准。
+     * Get <p>需要纠正发音的词语，同一请求中若有重复词语，以最后一条为准。</p> 
+     * @return Word <p>需要纠正发音的词语，同一请求中若有重复词语，以最后一条为准。</p>
      */
     public String getWord() {
         return this.Word;
     }
 
     /**
-     * Set 需要纠正发音的词语，前后空格自动去除。同一请求中若有重复词语，以最后一条为准。
-     * @param Word 需要纠正发音的词语，前后空格自动去除。同一请求中若有重复词语，以最后一条为准。
+     * Set <p>需要纠正发音的词语，同一请求中若有重复词语，以最后一条为准。</p>
+     * @param Word <p>需要纠正发音的词语，同一请求中若有重复词语，以最后一条为准。</p>
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * Get 目标发音，支持以下格式：<br>① 带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 yin2 hang2；<br>② 拼音连写（无空格），如 yin2hang2；<br>③ 文字+拼音混写，如 银hang2；<br>④ 直接文本替换，会将原始文本替换为目标文本 
-     * @return Pronunciation 目标发音，支持以下格式：<br>① 带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 yin2 hang2；<br>② 拼音连写（无空格），如 yin2hang2；<br>③ 文字+拼音混写，如 银hang2；<br>④ 直接文本替换，会将原始文本替换为目标文本
+     * Get <p>目标发音，支持以下格式：</p><ul><li>带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 (yin2)(hang2)</li><li>英文音标，如  (rɪˈzjuːm)</li><li>裸文本替换，会将原始文本替换为目标文本</li></ul><p>支持任意格式混排，注意拼音和音标需要被括号包裹</p> 
+     * @return Pronunciation <p>目标发音，支持以下格式：</p><ul><li>带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 (yin2)(hang2)</li><li>英文音标，如  (rɪˈzjuːm)</li><li>裸文本替换，会将原始文本替换为目标文本</li></ul><p>支持任意格式混排，注意拼音和音标需要被括号包裹</p>
      */
     public String getPronunciation() {
         return this.Pronunciation;
     }
 
     /**
-     * Set 目标发音，支持以下格式：<br>① 带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 yin2 hang2；<br>② 拼音连写（无空格），如 yin2hang2；<br>③ 文字+拼音混写，如 银hang2；<br>④ 直接文本替换，会将原始文本替换为目标文本
-     * @param Pronunciation 目标发音，支持以下格式：<br>① 带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 yin2 hang2；<br>② 拼音连写（无空格），如 yin2hang2；<br>③ 文字+拼音混写，如 银hang2；<br>④ 直接文本替换，会将原始文本替换为目标文本
+     * Set <p>目标发音，支持以下格式：</p><ul><li>带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 (yin2)(hang2)</li><li>英文音标，如  (rɪˈzjuːm)</li><li>裸文本替换，会将原始文本替换为目标文本</li></ul><p>支持任意格式混排，注意拼音和音标需要被括号包裹</p>
+     * @param Pronunciation <p>目标发音，支持以下格式：</p><ul><li>带声调数字的拼音（1=阴平，2=阳平，3=上声，4=去声，5=轻声），如 (yin2)(hang2)</li><li>英文音标，如  (rɪˈzjuːm)</li><li>裸文本替换，会将原始文本替换为目标文本</li></ul><p>支持任意格式混排，注意拼音和音标需要被括号包裹</p>
      */
     public void setPronunciation(String Pronunciation) {
         this.Pronunciation = Pronunciation;

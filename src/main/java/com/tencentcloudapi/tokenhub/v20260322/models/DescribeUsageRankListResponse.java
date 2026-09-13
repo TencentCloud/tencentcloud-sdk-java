@@ -31,14 +31,14 @@ public class DescribeUsageRankListResponse extends AbstractModel {
     private String Dimension;
 
     /**
-    * <p>回填请求的指标族：tokens / search 。</p>
+    * <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
     */
     @SerializedName("MetricType")
     @Expose
     private String MetricType;
 
     /**
-    * <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+    * <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
     */
     @SerializedName("MetricKeys")
     @Expose
@@ -101,7 +101,7 @@ public class DescribeUsageRankListResponse extends AbstractModel {
     private Long [] Timestamps;
 
     /**
-    * <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+    * <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
     */
     @SerializedName("TopList")
     @Expose
@@ -120,6 +120,13 @@ public class DescribeUsageRankListResponse extends AbstractModel {
     @SerializedName("TotalStats")
     @Expose
     private UsageStats TotalStats;
+
+    /**
+    * <p>排序指标键</p>
+    */
+    @SerializedName("SortKey")
+    @Expose
+    private String SortKey;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -145,32 +152,32 @@ public class DescribeUsageRankListResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>回填请求的指标族：tokens / search 。</p> 
-     * @return MetricType <p>回填请求的指标族：tokens / search 。</p>
+     * Get <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul> 
+     * @return MetricType <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
      */
     public String getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set <p>回填请求的指标族：tokens / search 。</p>
-     * @param MetricType <p>回填请求的指标族：tokens / search 。</p>
+     * Set <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
+     * @param MetricType <p>回填请求的指标族：取值同入参 MetricType（tokens / search / apikey_usage）</p><p>枚举值：</p><ul><li>tokens： tokens</li></ul>
      */
     public void setMetricType(String MetricType) {
         this.MetricType = MetricType;
     }
 
     /**
-     * Get <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p> 
-     * @return MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+     * Get <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p> 
+     * @return MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
      */
     public String [] getMetricKeys() {
         return this.MetricKeys;
     }
 
     /**
-     * Set <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
-     * @param MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：tokens=[Total,Input,Output,Cache]、search=[SearchRequestCount,SearchCount]</p>
+     * Set <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
+     * @param MetricKeys <p>本次响应中 Stats / Series / PageStats / TotalStats 实际包含的 metric key 列表，按MetricType 区分：<br>tokens=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken]<br>search=[SearchRequestCount,SearchCount]<br>apikey_usage=[TotalToken, InputTotalToken, OutputTotalToken, CacheTotalToken, RequestCount, RequestFailCount]</p>
      */
     public void setMetricKeys(String [] MetricKeys) {
         this.MetricKeys = MetricKeys;
@@ -305,16 +312,16 @@ public class DescribeUsageRankListResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p> 
-     * @return TopList <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * Get <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p> 
+     * @return TopList <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      */
     public UsageRankItem [] getTopList() {
         return this.TopList;
     }
 
     /**
-     * Set <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
-     * @param TopList <p>对象排行列表，按<code>MetricKeys[0]</code>降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * Set <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
+     * @param TopList <p>对象排行列表，按 SortKey 降序排序。ShowAll=false 时为当前页 10 个对象（含 Series）；ShowAll=true 时为全量对象（不含 Series，用于 CSV 导出）。</p>
      */
     public void setTopList(UsageRankItem [] TopList) {
         this.TopList = TopList;
@@ -350,6 +357,22 @@ public class DescribeUsageRankListResponse extends AbstractModel {
      */
     public void setTotalStats(UsageStats TotalStats) {
         this.TotalStats = TotalStats;
+    }
+
+    /**
+     * Get <p>排序指标键</p> 
+     * @return SortKey <p>排序指标键</p>
+     */
+    public String getSortKey() {
+        return this.SortKey;
+    }
+
+    /**
+     * Set <p>排序指标键</p>
+     * @param SortKey <p>排序指标键</p>
+     */
+    public void setSortKey(String SortKey) {
+        this.SortKey = SortKey;
     }
 
     /**
@@ -427,6 +450,9 @@ public class DescribeUsageRankListResponse extends AbstractModel {
         if (source.TotalStats != null) {
             this.TotalStats = new UsageStats(source.TotalStats);
         }
+        if (source.SortKey != null) {
+            this.SortKey = new String(source.SortKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -451,6 +477,7 @@ public class DescribeUsageRankListResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TopList.", this.TopList);
         this.setParamObj(map, prefix + "PageStats.", this.PageStats);
         this.setParamObj(map, prefix + "TotalStats.", this.TotalStats);
+        this.setParamSimple(map, prefix + "SortKey", this.SortKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

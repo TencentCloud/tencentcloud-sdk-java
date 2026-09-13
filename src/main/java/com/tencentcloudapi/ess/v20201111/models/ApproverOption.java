@@ -45,7 +45,7 @@ public class ApproverOption extends AbstractModel {
     private Boolean CanEditApprover;
 
     /**
-    * <p>签署人信息补充类型，默认无需补充。</p><ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业自动签不支持动态补充</code></li></ul><p>注：</p><ol><li><code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code></li><li>此参数在嵌入式场景下无效。</li></ol>
+    * <p>签署人信息补充类型，默认无需补充。<ul><li> <strong>1</strong> :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业“授权签”不支持动态补充</code></li></ul>注：1. <code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code>2. 此参数在嵌入式场景下无效。</p>
     */
     @SerializedName("FillType")
     @Expose
@@ -135,16 +135,16 @@ public class ApproverOption extends AbstractModel {
     }
 
     /**
-     * Get <p>签署人信息补充类型，默认无需补充。</p><ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业自动签不支持动态补充</code></li></ul><p>注：</p><ol><li><code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code></li><li>此参数在嵌入式场景下无效。</li></ol> 
-     * @return FillType <p>签署人信息补充类型，默认无需补充。</p><ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业自动签不支持动态补充</code></li></ul><p>注：</p><ol><li><code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code></li><li>此参数在嵌入式场景下无效。</li></ol>
+     * Get <p>签署人信息补充类型，默认无需补充。<ul><li> <strong>1</strong> :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业“授权签”不支持动态补充</code></li></ul>注：1. <code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code>2. 此参数在嵌入式场景下无效。</p> 
+     * @return FillType <p>签署人信息补充类型，默认无需补充。<ul><li> <strong>1</strong> :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业“授权签”不支持动态补充</code></li></ul>注：1. <code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code>2. 此参数在嵌入式场景下无效。</p>
      */
     public Long getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set <p>签署人信息补充类型，默认无需补充。</p><ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业自动签不支持动态补充</code></li></ul><p>注：</p><ol><li><code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code></li><li>此参数在嵌入式场景下无效。</li></ol>
-     * @param FillType <p>签署人信息补充类型，默认无需补充。</p><ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业自动签不支持动态补充</code></li></ul><p>注：</p><ol><li><code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code></li><li>此参数在嵌入式场景下无效。</li></ol>
+     * Set <p>签署人信息补充类型，默认无需补充。<ul><li> <strong>1</strong> :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业“授权签”不支持动态补充</code></li></ul>注：1. <code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code>2. 此参数在嵌入式场景下无效。</p>
+     * @param FillType <p>签署人信息补充类型，默认无需补充。<ul><li> <strong>1</strong> :  动态签署人（可发起合同后再补充签署人信息）注：<code>企业“授权签”不支持动态补充</code></li></ul>注：1. <code>使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关</code>2. 此参数在嵌入式场景下无效。</p>
      */
     public void setFillType(Long FillType) {
         this.FillType = FillType;

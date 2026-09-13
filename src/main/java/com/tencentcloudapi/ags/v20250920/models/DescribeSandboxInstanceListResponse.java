@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeSandboxInstanceListResponse extends AbstractModel {
 
     /**
-    * 沙箱实例列表
+    * <p>沙箱实例列表</p>
     */
     @SerializedName("InstanceSet")
     @Expose
     private SandboxInstance [] InstanceSet;
 
     /**
-    * 符合条件的实例总数
+    * <p>符合条件的实例总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class DescribeSandboxInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 沙箱实例列表 
-     * @return InstanceSet 沙箱实例列表
+     * Get <p>沙箱实例列表</p> 
+     * @return InstanceSet <p>沙箱实例列表</p>
      */
     public SandboxInstance [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 沙箱实例列表
-     * @param InstanceSet 沙箱实例列表
+     * Set <p>沙箱实例列表</p>
+     * @param InstanceSet <p>沙箱实例列表</p>
      */
     public void setInstanceSet(SandboxInstance [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get 符合条件的实例总数 
-     * @return TotalCount 符合条件的实例总数
+     * Get <p>符合条件的实例总数</p> 
+     * @return TotalCount <p>符合条件的实例总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例总数
-     * @param TotalCount 符合条件的实例总数
+     * Set <p>符合条件的实例总数</p>
+     * @param TotalCount <p>符合条件的实例总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p> 
+     * @return NextToken <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     */
+    public String getNextToken() {
+        return this.NextToken;
+    }
+
+    /**
+     * Set <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     * @param NextToken <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     */
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
     }
 
     /**
@@ -109,6 +132,9 @@ public class DescribeSandboxInstanceListResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeSandboxInstanceListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

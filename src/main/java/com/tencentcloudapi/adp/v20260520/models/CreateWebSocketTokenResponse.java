@@ -38,6 +38,13 @@ public class CreateWebSocketTokenResponse extends AbstractModel {
     private String Token;
 
     /**
+    * <p>用户ID，在后续DescribeUserDialogConfig接口中会使用</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class CreateWebSocketTokenResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>用户ID，在后续DescribeUserDialogConfig接口中会使用</p> 
+     * @return UserId <p>用户ID，在后续DescribeUserDialogConfig接口中会使用</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>用户ID，在后续DescribeUserDialogConfig接口中会使用</p>
+     * @param UserId <p>用户ID，在后续DescribeUserDialogConfig接口中会使用</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class CreateWebSocketTokenResponse extends AbstractModel {
         if (source.Token != null) {
             this.Token = new String(source.Token);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class CreateWebSocketTokenResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

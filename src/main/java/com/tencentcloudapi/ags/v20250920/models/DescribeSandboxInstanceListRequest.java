@@ -24,118 +24,187 @@ import java.util.HashMap;
 public class DescribeSandboxInstanceListRequest extends AbstractModel {
 
     /**
-    * 沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID
+    * <p>沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例
+    * <p>沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例</p>
     */
     @SerializedName("ToolId")
     @Expose
     private String ToolId;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * <p>返回数量，默认为20，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件
+    * <p>过滤条件</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID 
-     * @return InstanceIds 沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID
+    * <p>每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。</p>
+    */
+    @SerializedName("MaxResults")
+    @Expose
+    private Long MaxResults;
+
+    /**
+    * <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
+
+    /**
+    * <p>是否返回符合当前查询条件的沙箱实例总数，仅在使用 MaxResults/NextToken 分页时生效。设置为 true 时，首次请求（NextToken 为空）计算并返回精确的 TotalCount；后续使用 NextToken 翻页时返回首次请求计算的 TotalCount，分页期间该值保持不变。重新发起不带 NextToken 的请求时将重新计算。使用 NextToken 翻页时，本参数及其他查询参数必须与首次请求保持一致。默认值为 false，此时 TotalCount 返回 0。</p>
+    */
+    @SerializedName("NeedTotalCount")
+    @Expose
+    private Boolean NeedTotalCount;
+
+    /**
+     * Get <p>沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID</p> 
+     * @return InstanceIds <p>沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID
-     * @param InstanceIds 沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID
+     * Set <p>沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID</p>
+     * @param InstanceIds <p>沙箱实例ID列表，指定要查询的实例。如果为空则查询所有实例。最大支持100个ID</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例 
-     * @return ToolId 沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例
+     * Get <p>沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例</p> 
+     * @return ToolId <p>沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例
-     * @param ToolId 沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例
+     * Set <p>沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例</p>
+     * @param ToolId <p>沙箱工具ID，指定时查询该沙箱模板下的实例，为空则查询所有沙箱模板的实例</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get <p>返回数量，默认为20，最大值为100</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set <p>返回数量，默认为20，最大值为100</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get <p>过滤条件</p> 
+     * @return Filters <p>过滤条件</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set <p>过滤条件</p>
+     * @param Filters <p>过滤条件</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。</p> 
+     * @return MaxResults <p>每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。</p>
+     */
+    public Long getMaxResults() {
+        return this.MaxResults;
+    }
+
+    /**
+     * Set <p>每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。</p>
+     * @param MaxResults <p>每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。</p>
+     */
+    public void setMaxResults(Long MaxResults) {
+        this.MaxResults = MaxResults;
+    }
+
+    /**
+     * Get <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p> 
+     * @return NextToken <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     */
+    public String getNextToken() {
+        return this.NextToken;
+    }
+
+    /**
+     * Set <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     * @param NextToken <p>如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。</p>
+     */
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
+    }
+
+    /**
+     * Get <p>是否返回符合当前查询条件的沙箱实例总数，仅在使用 MaxResults/NextToken 分页时生效。设置为 true 时，首次请求（NextToken 为空）计算并返回精确的 TotalCount；后续使用 NextToken 翻页时返回首次请求计算的 TotalCount，分页期间该值保持不变。重新发起不带 NextToken 的请求时将重新计算。使用 NextToken 翻页时，本参数及其他查询参数必须与首次请求保持一致。默认值为 false，此时 TotalCount 返回 0。</p> 
+     * @return NeedTotalCount <p>是否返回符合当前查询条件的沙箱实例总数，仅在使用 MaxResults/NextToken 分页时生效。设置为 true 时，首次请求（NextToken 为空）计算并返回精确的 TotalCount；后续使用 NextToken 翻页时返回首次请求计算的 TotalCount，分页期间该值保持不变。重新发起不带 NextToken 的请求时将重新计算。使用 NextToken 翻页时，本参数及其他查询参数必须与首次请求保持一致。默认值为 false，此时 TotalCount 返回 0。</p>
+     */
+    public Boolean getNeedTotalCount() {
+        return this.NeedTotalCount;
+    }
+
+    /**
+     * Set <p>是否返回符合当前查询条件的沙箱实例总数，仅在使用 MaxResults/NextToken 分页时生效。设置为 true 时，首次请求（NextToken 为空）计算并返回精确的 TotalCount；后续使用 NextToken 翻页时返回首次请求计算的 TotalCount，分页期间该值保持不变。重新发起不带 NextToken 的请求时将重新计算。使用 NextToken 翻页时，本参数及其他查询参数必须与首次请求保持一致。默认值为 false，此时 TotalCount 返回 0。</p>
+     * @param NeedTotalCount <p>是否返回符合当前查询条件的沙箱实例总数，仅在使用 MaxResults/NextToken 分页时生效。设置为 true 时，首次请求（NextToken 为空）计算并返回精确的 TotalCount；后续使用 NextToken 翻页时返回首次请求计算的 TotalCount，分页期间该值保持不变。重新发起不带 NextToken 的请求时将重新计算。使用 NextToken 翻页时，本参数及其他查询参数必须与首次请求保持一致。默认值为 false，此时 TotalCount 返回 0。</p>
+     */
+    public void setNeedTotalCount(Boolean NeedTotalCount) {
+        this.NeedTotalCount = NeedTotalCount;
     }
 
     public DescribeSandboxInstanceListRequest() {
@@ -167,6 +236,15 @@ public class DescribeSandboxInstanceListRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.MaxResults != null) {
+            this.MaxResults = new Long(source.MaxResults);
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
+        if (source.NeedTotalCount != null) {
+            this.NeedTotalCount = new Boolean(source.NeedTotalCount);
+        }
     }
 
 
@@ -179,6 +257,9 @@ public class DescribeSandboxInstanceListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
+        this.setParamSimple(map, prefix + "NeedTotalCount", this.NeedTotalCount);
 
     }
 }

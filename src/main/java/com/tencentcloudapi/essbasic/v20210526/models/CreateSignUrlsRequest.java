@@ -52,7 +52,7 @@ public class CreateSignUrlsRequest extends AbstractModel {
     private String Endpoint;
 
     /**
-    * <p>签署链接生成类型，可以选择的类型如下</p><ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li><li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li><li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li><li><strong>PERSON</strong>：适用于个人或自然人签署方。</li><li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li><li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
+    * <p>签署链接生成类型，可以选择的类型如下</p><p>枚举值：</p><ul><li>ALL： 为所有签署方生成签署链接，但不包括授权签署的签署方。注意：此中类型不支持多个合同ID（FlowIds）。</li><li>CHANNEL： 适用于第三方子企业的员工签署方。</li><li>NOT_CHANNEL： 适用于SaaS平台企业的员工签署方。</li><li>PERSON： 适用于个人或自然人签署方。</li><li>FOLLOWER： 适用于关注方，目前指合同的抄送方。</li><li>RECIPIENT： 根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul><p>默认值：ALL</p>
     */
     @SerializedName("GenerateType")
     @Expose
@@ -228,16 +228,16 @@ public class CreateSignUrlsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>签署链接生成类型，可以选择的类型如下</p><ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li><li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li><li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li><li><strong>PERSON</strong>：适用于个人或自然人签署方。</li><li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li><li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul> 
-     * @return GenerateType <p>签署链接生成类型，可以选择的类型如下</p><ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li><li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li><li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li><li><strong>PERSON</strong>：适用于个人或自然人签署方。</li><li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li><li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
+     * Get <p>签署链接生成类型，可以选择的类型如下</p><p>枚举值：</p><ul><li>ALL： 为所有签署方生成签署链接，但不包括授权签署的签署方。注意：此中类型不支持多个合同ID（FlowIds）。</li><li>CHANNEL： 适用于第三方子企业的员工签署方。</li><li>NOT_CHANNEL： 适用于SaaS平台企业的员工签署方。</li><li>PERSON： 适用于个人或自然人签署方。</li><li>FOLLOWER： 适用于关注方，目前指合同的抄送方。</li><li>RECIPIENT： 根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul><p>默认值：ALL</p> 
+     * @return GenerateType <p>签署链接生成类型，可以选择的类型如下</p><p>枚举值：</p><ul><li>ALL： 为所有签署方生成签署链接，但不包括授权签署的签署方。注意：此中类型不支持多个合同ID（FlowIds）。</li><li>CHANNEL： 适用于第三方子企业的员工签署方。</li><li>NOT_CHANNEL： 适用于SaaS平台企业的员工签署方。</li><li>PERSON： 适用于个人或自然人签署方。</li><li>FOLLOWER： 适用于关注方，目前指合同的抄送方。</li><li>RECIPIENT： 根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul><p>默认值：ALL</p>
      */
     public String getGenerateType() {
         return this.GenerateType;
     }
 
     /**
-     * Set <p>签署链接生成类型，可以选择的类型如下</p><ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li><li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li><li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li><li><strong>PERSON</strong>：适用于个人或自然人签署方。</li><li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li><li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
-     * @param GenerateType <p>签署链接生成类型，可以选择的类型如下</p><ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li><li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li><li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li><li><strong>PERSON</strong>：适用于个人或自然人签署方。</li><li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li><li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
+     * Set <p>签署链接生成类型，可以选择的类型如下</p><p>枚举值：</p><ul><li>ALL： 为所有签署方生成签署链接，但不包括授权签署的签署方。注意：此中类型不支持多个合同ID（FlowIds）。</li><li>CHANNEL： 适用于第三方子企业的员工签署方。</li><li>NOT_CHANNEL： 适用于SaaS平台企业的员工签署方。</li><li>PERSON： 适用于个人或自然人签署方。</li><li>FOLLOWER： 适用于关注方，目前指合同的抄送方。</li><li>RECIPIENT： 根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul><p>默认值：ALL</p>
+     * @param GenerateType <p>签署链接生成类型，可以选择的类型如下</p><p>枚举值：</p><ul><li>ALL： 为所有签署方生成签署链接，但不包括授权签署的签署方。注意：此中类型不支持多个合同ID（FlowIds）。</li><li>CHANNEL： 适用于第三方子企业的员工签署方。</li><li>NOT_CHANNEL： 适用于SaaS平台企业的员工签署方。</li><li>PERSON： 适用于个人或自然人签署方。</li><li>FOLLOWER： 适用于关注方，目前指合同的抄送方。</li><li>RECIPIENT： 根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul><p>默认值：ALL</p>
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;

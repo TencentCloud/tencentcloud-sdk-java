@@ -87,6 +87,20 @@ public class TargetInfo extends AbstractModel {
     private String Thumbnail;
 
     /**
+    * <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+    */
+    @SerializedName("Confidence")
+    @Expose
+    private String Confidence;
+
+    /**
+    * <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private SeeTaskInfo TaskInfo;
+
+    /**
      * Get <p>视频唯一ID</p> 
      * @return Id <p>视频唯一ID</p>
      */
@@ -230,6 +244,38 @@ public class TargetInfo extends AbstractModel {
         this.Thumbnail = Thumbnail;
     }
 
+    /**
+     * Get <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul> 
+     * @return Confidence <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+     */
+    public String getConfidence() {
+        return this.Confidence;
+    }
+
+    /**
+     * Set <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+     * @param Confidence <p>搜索结果置信度</p><p>枚举值：</p><ul><li>high： 高（精准匹配，或包括性的匹配）</li><li>medium： 中（近义匹配）</li><li>low： 低（模糊匹配，部分要素与用户 Query 可能不符合）</li></ul>
+     */
+    public void setConfidence(String Confidence) {
+        this.Confidence = Confidence;
+    }
+
+    /**
+     * Get <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p> 
+     * @return TaskInfo <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+     */
+    public SeeTaskInfo getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+     * @param TaskInfo <p>任务信息</p><p>当入参 WithTaskInfo = true 时，出参中会返回任务信息</p>
+     */
+    public void setTaskInfo(SeeTaskInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
+    }
+
     public TargetInfo() {
     }
 
@@ -265,6 +311,12 @@ public class TargetInfo extends AbstractModel {
         if (source.Thumbnail != null) {
             this.Thumbnail = new String(source.Thumbnail);
         }
+        if (source.Confidence != null) {
+            this.Confidence = new String(source.Confidence);
+        }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new SeeTaskInfo(source.TaskInfo);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class TargetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
+        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
 
     }
 }

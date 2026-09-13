@@ -24,21 +24,35 @@ import java.util.HashMap;
 public class InferenceResourceConfig extends AbstractModel {
 
     /**
-    * 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+    * <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
     */
     @SerializedName("ScalingMode")
     @Expose
     private String ScalingMode;
 
     /**
-    * 硬件规格。
+    * <p>硬件规格标识。已废弃，请参考使用 <code>HardwareSpecId</code>。</p>
     */
     @SerializedName("HardwareSpec")
     @Expose
     private String HardwareSpec;
 
     /**
-    * 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+    * <p>硬件规格唯一标识 ID，可通过 <code>DescribeInferenceHardwareSpecifications</code> 接口获取当前站点支持的硬件规格。</p><p>系统默认按照所选 <code>HardwareSpecId</code> 对应的硬件规格配置推理服务所需资源；如需调整，可通过 <code>HardwareConfig</code> 自定义硬件资源配置。</p>
+    */
+    @SerializedName("HardwareSpecId")
+    @Expose
+    private String HardwareSpecId;
+
+    /**
+    * <p>推理服务硬件配置。</p><p>作为入参时，若未填充则按照所选 <code>HardwareSpecId</code> 规格的默认值配置硬件资源；若填充则优先按照填写值进行配置。</p>
+    */
+    @SerializedName("HardwareConfig")
+    @Expose
+    private InferenceHardwareConfig HardwareConfig;
+
+    /**
+    * <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoScalingConfig")
@@ -46,7 +60,7 @@ public class InferenceResourceConfig extends AbstractModel {
     private InferenceAutoScalingConfig AutoScalingConfig;
 
     /**
-    * 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+    * <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManualInstanceConfig")
@@ -54,48 +68,84 @@ public class InferenceResourceConfig extends AbstractModel {
     private InferenceManualInstanceConfig ManualInstanceConfig;
 
     /**
-    * 单实例的并发数。默认值为 1。
+    * <p>单实例的并发数。默认值为 1。</p>
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-     * Get 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li> 
-     * @return ScalingMode 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+     * Get <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p> 
+     * @return ScalingMode <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
      */
     public String getScalingMode() {
         return this.ScalingMode;
     }
 
     /**
-     * Set 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
-     * @param ScalingMode 扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li>
+     * Set <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
+     * @param ScalingMode <p>扩容缩容的方式。取值有：<li>Auto：根据请求量自动调整实例数量；</li><li>Manual：人工设置固定的实例数量。</li></p>
      */
     public void setScalingMode(String ScalingMode) {
         this.ScalingMode = ScalingMode;
     }
 
     /**
-     * Get 硬件规格。 
-     * @return HardwareSpec 硬件规格。
+     * Get <p>硬件规格标识。已废弃，请参考使用 <code>HardwareSpecId</code>。</p> 
+     * @return HardwareSpec <p>硬件规格标识。已废弃，请参考使用 <code>HardwareSpecId</code>。</p>
+     * @deprecated
      */
+    @Deprecated
     public String getHardwareSpec() {
         return this.HardwareSpec;
     }
 
     /**
-     * Set 硬件规格。
-     * @param HardwareSpec 硬件规格。
+     * Set <p>硬件规格标识。已废弃，请参考使用 <code>HardwareSpecId</code>。</p>
+     * @param HardwareSpec <p>硬件规格标识。已废弃，请参考使用 <code>HardwareSpecId</code>。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setHardwareSpec(String HardwareSpec) {
         this.HardwareSpec = HardwareSpec;
     }
 
     /**
-     * Get 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * Get <p>硬件规格唯一标识 ID，可通过 <code>DescribeInferenceHardwareSpecifications</code> 接口获取当前站点支持的硬件规格。</p><p>系统默认按照所选 <code>HardwareSpecId</code> 对应的硬件规格配置推理服务所需资源；如需调整，可通过 <code>HardwareConfig</code> 自定义硬件资源配置。</p> 
+     * @return HardwareSpecId <p>硬件规格唯一标识 ID，可通过 <code>DescribeInferenceHardwareSpecifications</code> 接口获取当前站点支持的硬件规格。</p><p>系统默认按照所选 <code>HardwareSpecId</code> 对应的硬件规格配置推理服务所需资源；如需调整，可通过 <code>HardwareConfig</code> 自定义硬件资源配置。</p>
+     */
+    public String getHardwareSpecId() {
+        return this.HardwareSpecId;
+    }
+
+    /**
+     * Set <p>硬件规格唯一标识 ID，可通过 <code>DescribeInferenceHardwareSpecifications</code> 接口获取当前站点支持的硬件规格。</p><p>系统默认按照所选 <code>HardwareSpecId</code> 对应的硬件规格配置推理服务所需资源；如需调整，可通过 <code>HardwareConfig</code> 自定义硬件资源配置。</p>
+     * @param HardwareSpecId <p>硬件规格唯一标识 ID，可通过 <code>DescribeInferenceHardwareSpecifications</code> 接口获取当前站点支持的硬件规格。</p><p>系统默认按照所选 <code>HardwareSpecId</code> 对应的硬件规格配置推理服务所需资源；如需调整，可通过 <code>HardwareConfig</code> 自定义硬件资源配置。</p>
+     */
+    public void setHardwareSpecId(String HardwareSpecId) {
+        this.HardwareSpecId = HardwareSpecId;
+    }
+
+    /**
+     * Get <p>推理服务硬件配置。</p><p>作为入参时，若未填充则按照所选 <code>HardwareSpecId</code> 规格的默认值配置硬件资源；若填充则优先按照填写值进行配置。</p> 
+     * @return HardwareConfig <p>推理服务硬件配置。</p><p>作为入参时，若未填充则按照所选 <code>HardwareSpecId</code> 规格的默认值配置硬件资源；若填充则优先按照填写值进行配置。</p>
+     */
+    public InferenceHardwareConfig getHardwareConfig() {
+        return this.HardwareConfig;
+    }
+
+    /**
+     * Set <p>推理服务硬件配置。</p><p>作为入参时，若未填充则按照所选 <code>HardwareSpecId</code> 规格的默认值配置硬件资源；若填充则优先按照填写值进行配置。</p>
+     * @param HardwareConfig <p>推理服务硬件配置。</p><p>作为入参时，若未填充则按照所选 <code>HardwareSpecId</code> 规格的默认值配置硬件资源；若填充则优先按照填写值进行配置。</p>
+     */
+    public void setHardwareConfig(InferenceHardwareConfig HardwareConfig) {
+        this.HardwareConfig = HardwareConfig;
+    }
+
+    /**
+     * Get <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoScalingConfig 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * @return AutoScalingConfig <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InferenceAutoScalingConfig getAutoScalingConfig() {
@@ -103,9 +153,9 @@ public class InferenceResourceConfig extends AbstractModel {
     }
 
     /**
-     * Set 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * Set <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoScalingConfig 推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。
+     * @param AutoScalingConfig <p>推理服务自动伸缩配置。当 ScalingMode 为 Auto 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoScalingConfig(InferenceAutoScalingConfig AutoScalingConfig) {
@@ -113,9 +163,9 @@ public class InferenceResourceConfig extends AbstractModel {
     }
 
     /**
-     * Get 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * Get <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ManualInstanceConfig 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * @return ManualInstanceConfig <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InferenceManualInstanceConfig getManualInstanceConfig() {
@@ -123,9 +173,9 @@ public class InferenceResourceConfig extends AbstractModel {
     }
 
     /**
-     * Set 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * Set <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManualInstanceConfig 推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。
+     * @param ManualInstanceConfig <p>推理服务人工设置实例配置。当 ScalingMode 为 Manual 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManualInstanceConfig(InferenceManualInstanceConfig ManualInstanceConfig) {
@@ -133,16 +183,16 @@ public class InferenceResourceConfig extends AbstractModel {
     }
 
     /**
-     * Get 单实例的并发数。默认值为 1。 
-     * @return Concurrency 单实例的并发数。默认值为 1。
+     * Get <p>单实例的并发数。默认值为 1。</p> 
+     * @return Concurrency <p>单实例的并发数。默认值为 1。</p>
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set 单实例的并发数。默认值为 1。
-     * @param Concurrency 单实例的并发数。默认值为 1。
+     * Set <p>单实例的并发数。默认值为 1。</p>
+     * @param Concurrency <p>单实例的并发数。默认值为 1。</p>
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
@@ -162,6 +212,12 @@ public class InferenceResourceConfig extends AbstractModel {
         if (source.HardwareSpec != null) {
             this.HardwareSpec = new String(source.HardwareSpec);
         }
+        if (source.HardwareSpecId != null) {
+            this.HardwareSpecId = new String(source.HardwareSpecId);
+        }
+        if (source.HardwareConfig != null) {
+            this.HardwareConfig = new InferenceHardwareConfig(source.HardwareConfig);
+        }
         if (source.AutoScalingConfig != null) {
             this.AutoScalingConfig = new InferenceAutoScalingConfig(source.AutoScalingConfig);
         }
@@ -180,6 +236,8 @@ public class InferenceResourceConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         this.setParamSimple(map, prefix + "HardwareSpec", this.HardwareSpec);
+        this.setParamSimple(map, prefix + "HardwareSpecId", this.HardwareSpecId);
+        this.setParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
         this.setParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
         this.setParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
         this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);

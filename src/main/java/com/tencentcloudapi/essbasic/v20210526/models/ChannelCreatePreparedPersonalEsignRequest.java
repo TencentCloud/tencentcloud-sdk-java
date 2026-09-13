@@ -66,7 +66,7 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String IdCardType;
 
     /**
-    * <p>手机号码；当需要开通自动签时，该参数必传</p>
+    * <p>手机号码；当需要开通授权签时，该参数必传</p>
     */
     @SerializedName("Mobile")
     @Expose
@@ -211,16 +211,16 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>手机号码；当需要开通自动签时，该参数必传</p> 
-     * @return Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * Get <p>手机号码；当需要开通授权签时，该参数必传</p> 
+     * @return Mobile <p>手机号码；当需要开通授权签时，该参数必传</p>
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set <p>手机号码；当需要开通自动签时，该参数必传</p>
-     * @param Mobile <p>手机号码；当需要开通自动签时，该参数必传</p>
+     * Set <p>手机号码；当需要开通授权签时，该参数必传</p>
+     * @param Mobile <p>手机号码；当需要开通授权签时，该参数必传</p>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateBatchInitOrganizationUrlResponse extends AbstractModel {
 
     /**
-    * 小程序路径
+    * <p>小程序路径</p>
     */
     @SerializedName("MiniAppPath")
     @Expose
     private String MiniAppPath;
 
     /**
-    * 操作长链
+    * <p>操作长链</p>
     */
     @SerializedName("OperateLongUrl")
     @Expose
     private String OperateLongUrl;
 
     /**
-    * 操作短链
+    * <p>操作短链</p>
     */
     @SerializedName("OperateShortUrl")
     @Expose
     private String OperateShortUrl;
 
     /**
-    * 操作二维码
+    * <p>操作二维码</p>
     */
     @SerializedName("QRCodeUrl")
     @Expose
@@ -59,64 +59,64 @@ public class CreateBatchInitOrganizationUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 小程序路径 
-     * @return MiniAppPath 小程序路径
+     * Get <p>小程序路径</p> 
+     * @return MiniAppPath <p>小程序路径</p>
      */
     public String getMiniAppPath() {
         return this.MiniAppPath;
     }
 
     /**
-     * Set 小程序路径
-     * @param MiniAppPath 小程序路径
+     * Set <p>小程序路径</p>
+     * @param MiniAppPath <p>小程序路径</p>
      */
     public void setMiniAppPath(String MiniAppPath) {
         this.MiniAppPath = MiniAppPath;
     }
 
     /**
-     * Get 操作长链 
-     * @return OperateLongUrl 操作长链
+     * Get <p>操作长链</p> 
+     * @return OperateLongUrl <p>操作长链</p>
      */
     public String getOperateLongUrl() {
         return this.OperateLongUrl;
     }
 
     /**
-     * Set 操作长链
-     * @param OperateLongUrl 操作长链
+     * Set <p>操作长链</p>
+     * @param OperateLongUrl <p>操作长链</p>
      */
     public void setOperateLongUrl(String OperateLongUrl) {
         this.OperateLongUrl = OperateLongUrl;
     }
 
     /**
-     * Get 操作短链 
-     * @return OperateShortUrl 操作短链
+     * Get <p>操作短链</p> 
+     * @return OperateShortUrl <p>操作短链</p>
      */
     public String getOperateShortUrl() {
         return this.OperateShortUrl;
     }
 
     /**
-     * Set 操作短链
-     * @param OperateShortUrl 操作短链
+     * Set <p>操作短链</p>
+     * @param OperateShortUrl <p>操作短链</p>
      */
     public void setOperateShortUrl(String OperateShortUrl) {
         this.OperateShortUrl = OperateShortUrl;
     }
 
     /**
-     * Get 操作二维码 
-     * @return QRCodeUrl 操作二维码
+     * Get <p>操作二维码</p> 
+     * @return QRCodeUrl <p>操作二维码</p>
      */
     public String getQRCodeUrl() {
         return this.QRCodeUrl;
     }
 
     /**
-     * Set 操作二维码
-     * @param QRCodeUrl 操作二维码
+     * Set <p>操作二维码</p>
+     * @param QRCodeUrl <p>操作二维码</p>
      */
     public void setQRCodeUrl(String QRCodeUrl) {
         this.QRCodeUrl = QRCodeUrl;

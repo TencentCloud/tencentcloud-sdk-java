@@ -45,7 +45,7 @@ public class AuthInfoDetail extends AbstractModel {
     private HasAuthUser [] HasAuthUserList;
 
     /**
-    * <p>授权企业列表（企业自动签时，该字段有值）</p>
+    * <p>授权企业列表（企业“授权签”时，该字段有值）</p>
     */
     @SerializedName("HasAuthOrganizationList")
     @Expose
@@ -114,16 +114,16 @@ public class AuthInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>授权企业列表（企业自动签时，该字段有值）</p> 
-     * @return HasAuthOrganizationList <p>授权企业列表（企业自动签时，该字段有值）</p>
+     * Get <p>授权企业列表（企业“授权签”时，该字段有值）</p> 
+     * @return HasAuthOrganizationList <p>授权企业列表（企业“授权签”时，该字段有值）</p>
      */
     public HasAuthOrganization [] getHasAuthOrganizationList() {
         return this.HasAuthOrganizationList;
     }
 
     /**
-     * Set <p>授权企业列表（企业自动签时，该字段有值）</p>
-     * @param HasAuthOrganizationList <p>授权企业列表（企业自动签时，该字段有值）</p>
+     * Set <p>授权企业列表（企业“授权签”时，该字段有值）</p>
+     * @param HasAuthOrganizationList <p>授权企业列表（企业“授权签”时，该字段有值）</p>
      */
     public void setHasAuthOrganizationList(HasAuthOrganization [] HasAuthOrganizationList) {
         this.HasAuthOrganizationList = HasAuthOrganizationList;

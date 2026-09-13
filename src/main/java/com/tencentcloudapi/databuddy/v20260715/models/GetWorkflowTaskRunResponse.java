@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.databuddy.v20260715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReassociateBusinessLogConfigResponse extends AbstractModel {
+public class GetWorkflowTaskRunResponse extends AbstractModel {
+
+    /**
+    * <p>查询任务运行详情响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private GetWorkflowTaskRunRsp Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +37,26 @@ public class ReassociateBusinessLogConfigResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>查询任务运行详情响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data <p>查询任务运行详情响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GetWorkflowTaskRunRsp getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set <p>查询任务运行详情响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data <p>查询任务运行详情响应内容</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(GetWorkflowTaskRunRsp Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +74,17 @@ public class ReassociateBusinessLogConfigResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ReassociateBusinessLogConfigResponse() {
+    public GetWorkflowTaskRunResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReassociateBusinessLogConfigResponse(ReassociateBusinessLogConfigResponse source) {
+    public GetWorkflowTaskRunResponse(GetWorkflowTaskRunResponse source) {
+        if (source.Data != null) {
+            this.Data = new GetWorkflowTaskRunRsp(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +95,7 @@ public class ReassociateBusinessLogConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

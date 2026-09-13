@@ -94,6 +94,13 @@ public class AigcImageTaskInput extends AbstractModel {
     private String SceneType;
 
     /**
+    * <p>透传参数。</p>
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get <p>模型名称。</p> 
      * @return ModelName <p>模型名称。</p>
      */
@@ -253,6 +260,22 @@ public class AigcImageTaskInput extends AbstractModel {
         this.SceneType = SceneType;
     }
 
+    /**
+     * Get <p>透传参数。</p> 
+     * @return ExtInfo <p>透传参数。</p>
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set <p>透传参数。</p>
+     * @param ExtInfo <p>透传参数。</p>
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public AigcImageTaskInput() {
     }
 
@@ -294,6 +317,9 @@ public class AigcImageTaskInput extends AbstractModel {
         if (source.SceneType != null) {
             this.SceneType = new String(source.SceneType);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class AigcImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

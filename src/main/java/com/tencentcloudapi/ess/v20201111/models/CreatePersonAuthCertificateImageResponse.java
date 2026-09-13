@@ -24,40 +24,35 @@ import java.util.HashMap;
 public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
-    * 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
+    * <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
     */
     @SerializedName("AuthCertUrl")
     @Expose
     private String AuthCertUrl;
 
     /**
-    * 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
+    * <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
     */
     @SerializedName("ImageCertId")
     @Expose
     private String ImageCertId;
 
     /**
-    * 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
+    * <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
     */
     @SerializedName("SerialNumber")
     @Expose
     private String SerialNumber;
 
     /**
-    * CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
+    * <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
     */
     @SerializedName("ValidFrom")
     @Expose
     private Long ValidFrom;
 
     /**
-    * CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
+    * <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
     */
     @SerializedName("ValidTo")
     @Expose
@@ -71,100 +66,80 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。 
-     * @return AuthCertUrl 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
+     * Get <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p> 
+     * @return AuthCertUrl <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
      */
     public String getAuthCertUrl() {
         return this.AuthCertUrl;
     }
 
     /**
-     * Set 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
-     * @param AuthCertUrl 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
+     * Set <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
+     * @param AuthCertUrl <p>个人用户认证证书图片下载URL，<code>有效期为5分钟</code>，超过有效期后将无法再下载。</p>
      */
     public void setAuthCertUrl(String AuthCertUrl) {
         this.AuthCertUrl = AuthCertUrl;
     }
 
     /**
-     * Get 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动` 
-     * @return ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
+     * Get <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p> 
+     * @return ImageCertId <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
      */
     public String getImageCertId() {
         return this.ImageCertId;
     }
 
     /**
-     * Set 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-     * @param ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
-该编号会合成到个人用户证书证明图片。
-
-注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
+     * Set <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
+     * @param ImageCertId <p>个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。<br>该编号会合成到个人用户证书证明图片。</p><p>注: <code>个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动</code></p>
      */
     public void setImageCertId(String ImageCertId) {
         this.ImageCertId = ImageCertId;
     }
 
     /**
-     * Get 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。 
-     * @return SerialNumber 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
+     * Get <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p> 
+     * @return SerialNumber <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
      */
     public String getSerialNumber() {
         return this.SerialNumber;
     }
 
     /**
-     * Set 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-     * @param SerialNumber 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
+     * Set <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
+     * @param SerialNumber <p>在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。</p>
      */
     public void setSerialNumber(String SerialNumber) {
         this.SerialNumber = SerialNumber;
     }
 
     /**
-     * Get CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片 
-     * @return ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
+     * Get <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p> 
+     * @return ValidFrom <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      */
     public Long getValidFrom() {
         return this.ValidFrom;
     }
 
     /**
-     * Set CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
-     * @param ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   
-该时间格式化后会合成到个人用户证书证明图片
+     * Set <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
+     * @param ValidFrom <p>CA证书颁发时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      */
     public void setValidFrom(Long ValidFrom) {
         this.ValidFrom = ValidFrom;
     }
 
     /**
-     * Get CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片 
-     * @return ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
+     * Get <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p> 
+     * @return ValidTo <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      */
     public Long getValidTo() {
         return this.ValidTo;
     }
 
     /**
-     * Set CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
-     * @param ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）
-该时间格式化后会合成到个人用户证书证明图片
+     * Set <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
+     * @param ValidTo <p>CA证书有效截止时间，格式为Unix标准时间戳（秒）<br>该时间格式化后会合成到个人用户证书证明图片</p>
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSnapshotResponse extends AbstractModel {
 
     /**
-    * 新创建的快照ID。
+    * <p>新创建的快照ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotId")
@@ -39,9 +39,9 @@ public class CreateSnapshotResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新创建的快照ID。
+     * Get <p>新创建的快照ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotId 新创建的快照ID。
+     * @return SnapshotId <p>新创建的快照ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotId() {
@@ -49,9 +49,9 @@ public class CreateSnapshotResponse extends AbstractModel {
     }
 
     /**
-     * Set 新创建的快照ID。
+     * Set <p>新创建的快照ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotId 新创建的快照ID。
+     * @param SnapshotId <p>新创建的快照ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotId(String SnapshotId) {

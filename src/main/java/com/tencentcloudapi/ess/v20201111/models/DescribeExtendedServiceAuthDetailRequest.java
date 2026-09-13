@@ -31,7 +31,7 @@ public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
+    * <p>要查询的扩展服务类型。如下所示：<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
     */
     @SerializedName("ExtendServiceType")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+    * <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业“授权签”时有效</p>
     */
     @SerializedName("PartnerOrganizationName")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul> 
-     * @return ExtendServiceType <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
+     * Get <p>要查询的扩展服务类型。如下所示：<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p> 
+     * @return ExtendServiceType <p>要查询的扩展服务类型。如下所示：<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
      */
     public String getExtendServiceType() {
         return this.ExtendServiceType;
     }
 
     /**
-     * Set <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
-     * @param ExtendServiceType <p>要查询的扩展服务类型。<br>如下所示：</p><ul><li>OPEN_SERVER_SIGN：企业静默签署</li><li>BATCH_SIGN：批量签署</li></ul>
+     * Set <p>要查询的扩展服务类型。如下所示：<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
+     * @param ExtendServiceType <p>要查询的扩展服务类型。如下所示：<ul><li>OPEN_SERVER_SIGN：企业“授权签”</li><li>BATCH_SIGN：批量签署</li></ul></p>
      */
     public void setExtendServiceType(String ExtendServiceType) {
         this.ExtendServiceType = ExtendServiceType;
@@ -146,16 +146,16 @@ public class DescribeExtendedServiceAuthDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p> 
-     * @return PartnerOrganizationName <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+     * Get <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业“授权签”时有效</p> 
+     * @return PartnerOrganizationName <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业“授权签”时有效</p>
      */
     public String getPartnerOrganizationName() {
         return this.PartnerOrganizationName;
     }
 
     /**
-     * Set <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
-     * @param PartnerOrganizationName <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业静默签署时有效</p>
+     * Set <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业“授权签”时有效</p>
+     * @param PartnerOrganizationName <p>查询指定的合作方企业的授权信息，当ExtendServiceType=OPEN_SERVER_SIGN：企业“授权签”时有效</p>
      */
     public void setPartnerOrganizationName(String PartnerOrganizationName) {
         this.PartnerOrganizationName = PartnerOrganizationName;

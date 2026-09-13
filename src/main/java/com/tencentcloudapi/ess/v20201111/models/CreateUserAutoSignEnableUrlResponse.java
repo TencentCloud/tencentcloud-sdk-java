@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateUserAutoSignEnableUrlResponse extends AbstractModel {
 
     /**
-    * <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+    * <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
     */
     @SerializedName("Url")
     @Expose
@@ -73,16 +73,16 @@ public class CreateUserAutoSignEnableUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p> 
-     * @return Url <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * Get <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p> 
+     * @return Url <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
-     * @param Url <p>个人用户自动签的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * Set <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
+     * @param Url <p>个人用户“授权签”的开通链接, 短链/长链接形式。过期时间受 <code>ExpiredTime</code> 参数控制。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
