@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccelerateRegionsResponse extends AbstractModel {
 
     /**
-    * 加速地域信息。
+    * <p>加速地域信息。</p>
     */
     @SerializedName("AcceleratorRegionSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccelerateRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 加速地域信息。 
-     * @return AcceleratorRegionSet 加速地域信息。
+     * Get <p>加速地域信息。</p> 
+     * @return AcceleratorRegionSet <p>加速地域信息。</p>
      */
     public AcceleratorRegionSet [] getAcceleratorRegionSet() {
         return this.AcceleratorRegionSet;
     }
 
     /**
-     * Set 加速地域信息。
-     * @param AcceleratorRegionSet 加速地域信息。
+     * Set <p>加速地域信息。</p>
+     * @param AcceleratorRegionSet <p>加速地域信息。</p>
      */
     public void setAcceleratorRegionSet(AcceleratorRegionSet [] AcceleratorRegionSet) {
         this.AcceleratorRegionSet = AcceleratorRegionSet;

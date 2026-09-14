@@ -48,7 +48,7 @@ public class ExportConfMeta extends AbstractModel {
     private String ServiceVersion;
 
     /**
-    * <p>导出配置参数</p>
+    * <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -116,9 +116,9 @@ public class ExportConfMeta extends AbstractModel {
     }
 
     /**
-     * Get <p>导出配置参数</p>
+     * Get <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties <p>导出配置参数</p>
+     * @return Properties <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProperties() {
@@ -126,9 +126,9 @@ public class ExportConfMeta extends AbstractModel {
     }
 
     /**
-     * Set <p>导出配置参数</p>
+     * Set <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties <p>导出配置参数</p>
+     * @param Properties <p>导出配置参数 base64格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(String Properties) {

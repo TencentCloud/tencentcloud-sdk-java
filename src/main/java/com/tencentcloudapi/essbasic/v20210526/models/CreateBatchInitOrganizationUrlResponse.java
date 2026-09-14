@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateBatchInitOrganizationUrlResponse extends AbstractModel {
 
     /**
-    * 小程序路径，有效时间为7天
+    * <p>小程序路径，有效时间为7天</p>
     */
     @SerializedName("MiniAppPath")
     @Expose
     private String MiniAppPath;
 
     /**
-    * 操作长链，有效时间为7天
+    * <p>操作长链，有效时间为7天</p>
     */
     @SerializedName("OperateLongUrl")
     @Expose
     private String OperateLongUrl;
 
     /**
-    * 操作短链，有效时间为7天
+    * <p>操作短链，有效时间为7天</p>
     */
     @SerializedName("OperateShortUrl")
     @Expose
     private String OperateShortUrl;
 
     /**
-    * 操作二维码，有效时间为7天
+    * <p>操作二维码，有效时间为7天</p>
     */
     @SerializedName("QRCodeUrl")
     @Expose
@@ -59,64 +59,64 @@ public class CreateBatchInitOrganizationUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 小程序路径，有效时间为7天 
-     * @return MiniAppPath 小程序路径，有效时间为7天
+     * Get <p>小程序路径，有效时间为7天</p> 
+     * @return MiniAppPath <p>小程序路径，有效时间为7天</p>
      */
     public String getMiniAppPath() {
         return this.MiniAppPath;
     }
 
     /**
-     * Set 小程序路径，有效时间为7天
-     * @param MiniAppPath 小程序路径，有效时间为7天
+     * Set <p>小程序路径，有效时间为7天</p>
+     * @param MiniAppPath <p>小程序路径，有效时间为7天</p>
      */
     public void setMiniAppPath(String MiniAppPath) {
         this.MiniAppPath = MiniAppPath;
     }
 
     /**
-     * Get 操作长链，有效时间为7天 
-     * @return OperateLongUrl 操作长链，有效时间为7天
+     * Get <p>操作长链，有效时间为7天</p> 
+     * @return OperateLongUrl <p>操作长链，有效时间为7天</p>
      */
     public String getOperateLongUrl() {
         return this.OperateLongUrl;
     }
 
     /**
-     * Set 操作长链，有效时间为7天
-     * @param OperateLongUrl 操作长链，有效时间为7天
+     * Set <p>操作长链，有效时间为7天</p>
+     * @param OperateLongUrl <p>操作长链，有效时间为7天</p>
      */
     public void setOperateLongUrl(String OperateLongUrl) {
         this.OperateLongUrl = OperateLongUrl;
     }
 
     /**
-     * Get 操作短链，有效时间为7天 
-     * @return OperateShortUrl 操作短链，有效时间为7天
+     * Get <p>操作短链，有效时间为7天</p> 
+     * @return OperateShortUrl <p>操作短链，有效时间为7天</p>
      */
     public String getOperateShortUrl() {
         return this.OperateShortUrl;
     }
 
     /**
-     * Set 操作短链，有效时间为7天
-     * @param OperateShortUrl 操作短链，有效时间为7天
+     * Set <p>操作短链，有效时间为7天</p>
+     * @param OperateShortUrl <p>操作短链，有效时间为7天</p>
      */
     public void setOperateShortUrl(String OperateShortUrl) {
         this.OperateShortUrl = OperateShortUrl;
     }
 
     /**
-     * Get 操作二维码，有效时间为7天 
-     * @return QRCodeUrl 操作二维码，有效时间为7天
+     * Get <p>操作二维码，有效时间为7天</p> 
+     * @return QRCodeUrl <p>操作二维码，有效时间为7天</p>
      */
     public String getQRCodeUrl() {
         return this.QRCodeUrl;
     }
 
     /**
-     * Set 操作二维码，有效时间为7天
-     * @param QRCodeUrl 操作二维码，有效时间为7天
+     * Set <p>操作二维码，有效时间为7天</p>
+     * @param QRCodeUrl <p>操作二维码，有效时间为7天</p>
      */
     public void setQRCodeUrl(String QRCodeUrl) {
         this.QRCodeUrl = QRCodeUrl;

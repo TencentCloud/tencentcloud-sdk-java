@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeTaskResultRequest extends AbstractModel {
 
     /**
-    * 异步任务ID。
+    * <p>异步任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 异步任务ID。 
-     * @return TaskId 异步任务ID。
+     * Get <p>异步任务ID。</p> 
+     * @return TaskId <p>异步任务ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID。
-     * @param TaskId 异步任务ID。
+     * Set <p>异步任务ID。</p>
+     * @param TaskId <p>异步任务ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

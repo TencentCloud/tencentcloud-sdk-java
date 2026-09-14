@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGlobalAcceleratorAccessLogRequest extends AbstractModel {
 
     /**
-    * <p>GA示例唯一Id</p>
+    * <p>GA实例唯一Id</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
@@ -80,16 +80,16 @@ public class CreateGlobalAcceleratorAccessLogRequest extends AbstractModel {
     private String FlowLogDescription;
 
     /**
-     * Get <p>GA示例唯一Id</p> 
-     * @return GlobalAcceleratorId <p>GA示例唯一Id</p>
+     * Get <p>GA实例唯一Id</p> 
+     * @return GlobalAcceleratorId <p>GA实例唯一Id</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set <p>GA示例唯一Id</p>
-     * @param GlobalAcceleratorId <p>GA示例唯一Id</p>
+     * Set <p>GA实例唯一Id</p>
+     * @param GlobalAcceleratorId <p>GA实例唯一Id</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;

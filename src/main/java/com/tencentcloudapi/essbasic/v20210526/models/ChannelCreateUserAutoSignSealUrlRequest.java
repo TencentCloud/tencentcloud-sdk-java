@@ -31,7 +31,7 @@ public class ChannelCreateUserAutoSignSealUrlRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+    * <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
     */
     @SerializedName("SceneKey")
     @Expose
@@ -82,16 +82,16 @@ public class ChannelCreateUserAutoSignSealUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p> 
-     * @return SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * Get <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul> 
+     * @return SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
-     * @param SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * Set <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
+     * @param SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN：  电子处方场景</li><li>OTHER：  通用场景</li></ul>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;

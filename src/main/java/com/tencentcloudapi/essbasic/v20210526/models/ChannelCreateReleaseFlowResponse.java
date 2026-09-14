@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelCreateReleaseFlowResponse extends AbstractModel {
 
     /**
-    * 解除协议流程编号
+    * <p>解除协议流程编号</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class ChannelCreateReleaseFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 解除协议流程编号 
-     * @return FlowId 解除协议流程编号
+     * Get <p>解除协议流程编号</p> 
+     * @return FlowId <p>解除协议流程编号</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 解除协议流程编号
-     * @param FlowId 解除协议流程编号
+     * Set <p>解除协议流程编号</p>
+     * @param FlowId <p>解除协议流程编号</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

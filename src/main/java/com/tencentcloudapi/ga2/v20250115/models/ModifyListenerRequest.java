@@ -122,6 +122,13 @@ public class ModifyListenerRequest extends AbstractModel {
     private String GetRealIpType;
 
     /**
+    * <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+    */
+    @SerializedName("HttpVersion")
+    @Expose
+    private String HttpVersion;
+
+    /**
      * Get <p>全球加速实例ID。</p> 
      * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
@@ -345,6 +352,22 @@ public class ModifyListenerRequest extends AbstractModel {
         this.GetRealIpType = GetRealIpType;
     }
 
+    /**
+     * Get <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul> 
+     * @return HttpVersion <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     */
+    public String getHttpVersion() {
+        return this.HttpVersion;
+    }
+
+    /**
+     * Set <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     * @param HttpVersion <p>HTTPS监听器支持选择版本</p><p>枚举值：</p><ul><li>HTTP/1.1： 版本HTTP/1.1</li><li>HTTP/2： 版本HTTP/2</li></ul>
+     */
+    public void setHttpVersion(String HttpVersion) {
+        this.HttpVersion = HttpVersion;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -401,6 +424,9 @@ public class ModifyListenerRequest extends AbstractModel {
         if (source.GetRealIpType != null) {
             this.GetRealIpType = new String(source.GetRealIpType);
         }
+        if (source.HttpVersion != null) {
+            this.HttpVersion = new String(source.HttpVersion);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class ModifyListenerRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ServerCertificates.", this.ServerCertificates);
         this.setParamArraySimple(map, prefix + "ClientCaCertificates.", this.ClientCaCertificates);
         this.setParamSimple(map, prefix + "GetRealIpType", this.GetRealIpType);
+        this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
 
     }
 }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateEksLogConfigRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 日志采集配置的json表达
+    * <p>日志采集配置的json表达</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private String LogConfig;
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 日志采集配置的json表达 
-     * @return LogConfig 日志采集配置的json表达
+     * Get <p>日志采集配置的json表达</p> 
+     * @return LogConfig <p>日志采集配置的json表达</p>
      */
     public String getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set 日志采集配置的json表达
-     * @param LogConfig 日志采集配置的json表达
+     * Set <p>日志采集配置的json表达</p>
+     * @param LogConfig <p>日志采集配置的json表达</p>
      */
     public void setLogConfig(String LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return LogsetId <p>日志集ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param LogsetId <p>日志集ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

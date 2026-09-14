@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeForwardingRuleResponse extends AbstractModel {
 
     /**
-    * 符合条件的规则信息。
+    * <p>符合条件的规则信息。</p>
     */
     @SerializedName("ForwardingRuleSet")
     @Expose
     private ForwardingRuleSet [] ForwardingRuleSet;
 
     /**
-    * 符合条件的实例个数。
+    * <p>符合条件的实例个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeForwardingRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的规则信息。 
-     * @return ForwardingRuleSet 符合条件的规则信息。
+     * Get <p>符合条件的规则信息。</p> 
+     * @return ForwardingRuleSet <p>符合条件的规则信息。</p>
      */
     public ForwardingRuleSet [] getForwardingRuleSet() {
         return this.ForwardingRuleSet;
     }
 
     /**
-     * Set 符合条件的规则信息。
-     * @param ForwardingRuleSet 符合条件的规则信息。
+     * Set <p>符合条件的规则信息。</p>
+     * @param ForwardingRuleSet <p>符合条件的规则信息。</p>
      */
     public void setForwardingRuleSet(ForwardingRuleSet [] ForwardingRuleSet) {
         this.ForwardingRuleSet = ForwardingRuleSet;
     }
 
     /**
-     * Get 符合条件的实例个数。 
-     * @return TotalCount 符合条件的实例个数。
+     * Get <p>符合条件的实例个数。</p> 
+     * @return TotalCount <p>符合条件的实例个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例个数。
-     * @param TotalCount 符合条件的实例个数。
+     * Set <p>符合条件的实例个数。</p>
+     * @param TotalCount <p>符合条件的实例个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

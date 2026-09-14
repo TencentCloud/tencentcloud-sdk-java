@@ -39,6 +39,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *校验标签下的标准词是否已存在
+     * @param req CheckLabelRequest
+     * @return CheckLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckLabelResponse CheckLabel(CheckLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckLabel", CheckLabelResponse.class);
+    }
+
+    /**
      *复制 Agent（目前仅支持claw模式））
      * @param req CopyAgentFromAppRequest
      * @return CopyAgentFromAppResponse
@@ -94,6 +105,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *创建分类
+     * @param req CreateCategoryRequest
+     * @return CreateCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCategoryResponse CreateCategory(CreateCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCategory", CreateCategoryResponse.class);
+    }
+
+    /**
      *创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
      * @param req CreateChannelRequest
      * @return CreateChannelResponse
@@ -113,6 +135,28 @@ public class AdpClient extends AbstractClient{
     public CreateConversationResponse CreateConversation(CreateConversationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateConversation", CreateConversationResponse.class);
+    }
+
+    /**
+     *创建知识库
+     * @param req CreateKBRequest
+     * @return CreateKBResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKBResponse CreateKB(CreateKBRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateKB", CreateKBResponse.class);
+    }
+
+    /**
+     *创建标签
+     * @param req CreateLabelRequest
+     * @return CreateLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLabelResponse CreateLabel(CreateLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLabel", CreateLabelResponse.class);
     }
 
     /**
@@ -138,6 +182,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *创建 QA 生成任务
+     * @param req CreateQAGenerationTaskRequest
+     * @return CreateQAGenerationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQAGenerationTaskResponse CreateQAGenerationTask(CreateQAGenerationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQAGenerationTask", CreateQAGenerationTaskResponse.class);
+    }
+
+    /**
+     *批量创建 QA
+     * @param req CreateQAListRequest
+     * @return CreateQAListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQAListResponse CreateQAList(CreateQAListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQAList", CreateQAListResponse.class);
+    }
+
+    /**
      *新增发布任务
      * @param req CreateReleaseRequest
      * @return CreateReleaseResponse
@@ -146,6 +212,17 @@ public class AdpClient extends AbstractClient{
     public CreateReleaseResponse CreateRelease(CreateReleaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRelease", CreateReleaseResponse.class);
+    }
+
+    /**
+     *创建相似问生成任务
+     * @param req CreateSimilarQuestionRequest
+     * @return CreateSimilarQuestionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSimilarQuestionResponse CreateSimilarQuestion(CreateSimilarQuestionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSimilarQuestion", CreateSimilarQuestionResponse.class);
     }
 
     /**
@@ -248,6 +325,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *删除分类
+     * @param req DeleteCategoryRequest
+     * @return DeleteCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCategoryResponse DeleteCategory(DeleteCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCategory", DeleteCategoryResponse.class);
+    }
+
+    /**
      *删除渠道（通过scene区分场景）
      * @param req DeleteChannelRequest
      * @return DeleteChannelResponse
@@ -270,6 +358,39 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *批量删除文档
+     * @param req DeleteDocListRequest
+     * @return DeleteDocListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDocListResponse DeleteDocList(DeleteDocListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDocList", DeleteDocListResponse.class);
+    }
+
+    /**
+     *删除知识库
+     * @param req DeleteKBRequest
+     * @return DeleteKBResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteKBResponse DeleteKB(DeleteKBRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteKB", DeleteKBResponse.class);
+    }
+
+    /**
+     *批量删除标签
+     * @param req DeleteLabelListRequest
+     * @return DeleteLabelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLabelListResponse DeleteLabelList(DeleteLabelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLabelList", DeleteLabelListResponse.class);
+    }
+
+    /**
      *删除指定的消息记录分类
      * @param req DeleteMsgRecordCategoryRequest
      * @return DeleteMsgRecordCategoryResponse
@@ -289,6 +410,17 @@ public class AdpClient extends AbstractClient{
     public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
+    }
+
+    /**
+     *批量删除 QA
+     * @param req DeleteQAListRequest
+     * @return DeleteQAListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteQAListResponse DeleteQAList(DeleteQAListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteQAList", DeleteQAListResponse.class);
     }
 
     /**
@@ -468,6 +600,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查询分类列表
+     * @param req DescribeCategoryListRequest
+     * @return DescribeCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCategoryListResponse DescribeCategoryList(DescribeCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCategoryList", DescribeCategoryListResponse.class);
+    }
+
+    /**
      *获取渠道详情（scene区分场景）
      * @param req DescribeChannelRequest
      * @return DescribeChannelResponse
@@ -498,6 +641,28 @@ public class AdpClient extends AbstractClient{
     public DescribeConcurrencyLimitDetailListResponse DescribeConcurrencyLimitDetailList(DescribeConcurrencyLimitDetailListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConcurrencyLimitDetailList", DescribeConcurrencyLimitDetailListResponse.class);
+    }
+
+    /**
+     *查询冲突问详情
+     * @param req DescribeConflictQARequest
+     * @return DescribeConflictQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConflictQAResponse DescribeConflictQA(DescribeConflictQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConflictQA", DescribeConflictQAResponse.class);
+    }
+
+    /**
+     *查询冲突问列表
+     * @param req DescribeConflictQASummaryListRequest
+     * @return DescribeConflictQASummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConflictQASummaryListResponse DescribeConflictQASummaryList(DescribeConflictQASummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConflictQASummaryList", DescribeConflictQASummaryListResponse.class);
     }
 
     /**
@@ -542,6 +707,72 @@ public class AdpClient extends AbstractClient{
     public DescribeConversationMessageListResponse DescribeConversationMessageList(DescribeConversationMessageListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConversationMessageList", DescribeConversationMessageListResponse.class);
+    }
+
+    /**
+     *查询文档详情
+     * @param req DescribeDocRequest
+     * @return DescribeDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocResponse DescribeDoc(DescribeDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDoc", DescribeDocResponse.class);
+    }
+
+    /**
+     *查询文档摘要列表
+     * @param req DescribeDocSummaryListRequest
+     * @return DescribeDocSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocSummaryListResponse DescribeDocSummaryList(DescribeDocSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDocSummaryList", DescribeDocSummaryListResponse.class);
+    }
+
+    /**
+     *查询知识库详情
+     * @param req DescribeKBRequest
+     * @return DescribeKBResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKBResponse DescribeKB(DescribeKBRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKB", DescribeKBResponse.class);
+    }
+
+    /**
+     *查询知识库列表
+     * @param req DescribeKBSummaryListRequest
+     * @return DescribeKBSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKBSummaryListResponse DescribeKBSummaryList(DescribeKBSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKBSummaryList", DescribeKBSummaryListResponse.class);
+    }
+
+    /**
+     *查询标签详情
+     * @param req DescribeLabelRequest
+     * @return DescribeLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLabelResponse DescribeLabel(DescribeLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLabel", DescribeLabelResponse.class);
+    }
+
+    /**
+     *查询标签列表
+     * @param req DescribeLabelSummaryListRequest
+     * @return DescribeLabelSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLabelSummaryListResponse DescribeLabelSummaryList(DescribeLabelSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLabelSummaryList", DescribeLabelSummaryListResponse.class);
     }
 
     /**
@@ -619,6 +850,28 @@ public class AdpClient extends AbstractClient{
     public DescribePluginSummaryListResponse DescribePluginSummaryList(DescribePluginSummaryListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePluginSummaryList", DescribePluginSummaryListResponse.class);
+    }
+
+    /**
+     *查询 QA 详情
+     * @param req DescribeQARequest
+     * @return DescribeQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQAResponse DescribeQA(DescribeQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQA", DescribeQAResponse.class);
+    }
+
+    /**
+     *查询 QA 列表
+     * @param req DescribeQASummaryListRequest
+     * @return DescribeQASummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQASummaryListResponse DescribeQASummaryList(DescribeQASummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQASummaryList", DescribeQASummaryListResponse.class);
     }
 
     /**
@@ -754,6 +1007,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *异步导出 QA
+     * @param req ExportQARequest
+     * @return ExportQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportQAResponse ExportQA(ExportQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportQA", ExportQAResponse.class);
+    }
+
+    /**
      *收藏插件
      * @param req FavoritePluginRequest
      * @return FavoritePluginResponse
@@ -773,6 +1037,17 @@ public class AdpClient extends AbstractClient{
     public FavoriteSkillResponse FavoriteSkill(FavoriteSkillRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "FavoriteSkill", FavoriteSkillResponse.class);
+    }
+
+    /**
+     *批量导入文档
+     * @param req ImportDocListRequest
+     * @return ImportDocListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportDocListResponse ImportDocList(ImportDocListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportDocList", ImportDocListResponse.class);
     }
 
     /**
@@ -809,6 +1084,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *修改分类
+     * @param req ModifyCategoryRequest
+     * @return ModifyCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCategoryResponse ModifyCategory(ModifyCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCategory", ModifyCategoryResponse.class);
+    }
+
+    /**
      *修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
      * @param req ModifyChannelRequest
      * @return ModifyChannelResponse
@@ -820,6 +1106,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *修改冲突问
+     * @param req ModifyConflictQARequest
+     * @return ModifyConflictQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConflictQAResponse ModifyConflictQA(ModifyConflictQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConflictQA", ModifyConflictQAResponse.class);
+    }
+
+    /**
      *修改会话信息
      * @param req ModifyConversationRequest
      * @return ModifyConversationResponse
@@ -828,6 +1125,50 @@ public class AdpClient extends AbstractClient{
     public ModifyConversationResponse ModifyConversation(ModifyConversationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyConversation", ModifyConversationResponse.class);
+    }
+
+    /**
+     *修改单个文档
+     * @param req ModifyDocRequest
+     * @return ModifyDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDocResponse ModifyDoc(ModifyDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDoc", ModifyDocResponse.class);
+    }
+
+    /**
+     *批量修改文档
+     * @param req ModifyDocListRequest
+     * @return ModifyDocListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDocListResponse ModifyDocList(ModifyDocListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDocList", ModifyDocListResponse.class);
+    }
+
+    /**
+     *修改知识库
+     * @param req ModifyKBRequest
+     * @return ModifyKBResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKBResponse ModifyKB(ModifyKBRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyKB", ModifyKBResponse.class);
+    }
+
+    /**
+     *修改标签
+     * @param req ModifyLabelRequest
+     * @return ModifyLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLabelResponse ModifyLabel(ModifyLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLabel", ModifyLabelResponse.class);
     }
 
     /**
@@ -850,6 +1191,28 @@ public class AdpClient extends AbstractClient{
     public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
+    }
+
+    /**
+     *修改单个 QA
+     * @param req ModifyQARequest
+     * @return ModifyQAResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyQAResponse ModifyQA(ModifyQARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyQA", ModifyQAResponse.class);
+    }
+
+    /**
+     *批量修改 QA
+     * @param req ModifyQAListRequest
+     * @return ModifyQAListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyQAListResponse ModifyQAList(ModifyQAListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyQAList", ModifyQAListResponse.class);
     }
 
     /**
@@ -961,6 +1324,17 @@ public class AdpClient extends AbstractClient{
     public RunAppTriggerNowResponse RunAppTriggerNow(RunAppTriggerNowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunAppTriggerNow", RunAppTriggerNowResponse.class);
+    }
+
+    /**
+     *知识检索
+     * @param req SearchKnowledgeRequest
+     * @return SearchKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchKnowledgeResponse SearchKnowledge(SearchKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchKnowledge", SearchKnowledgeResponse.class);
     }
 
     /**

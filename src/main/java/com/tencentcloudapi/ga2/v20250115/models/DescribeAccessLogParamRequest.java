@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeAccessLogParamRequest extends AbstractModel {
 
+    /**
+    * <p>全球加速实例ID。</p>
+    */
+    @SerializedName("GlobalAcceleratorId")
+    @Expose
+    private String GlobalAcceleratorId;
+
+    /**
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
+     */
+    public String getGlobalAcceleratorId() {
+        return this.GlobalAcceleratorId;
+    }
+
+    /**
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
+     */
+    public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
+        this.GlobalAcceleratorId = GlobalAcceleratorId;
+    }
+
     public DescribeAccessLogParamRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeAccessLogParamRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAccessLogParamRequest(DescribeAccessLogParamRequest source) {
+        if (source.GlobalAcceleratorId != null) {
+            this.GlobalAcceleratorId = new String(source.GlobalAcceleratorId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeAccessLogParamRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "GlobalAcceleratorId", this.GlobalAcceleratorId);
 
     }
 }

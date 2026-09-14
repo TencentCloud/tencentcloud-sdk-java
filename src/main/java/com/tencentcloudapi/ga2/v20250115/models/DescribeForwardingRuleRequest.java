@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class DescribeForwardingRuleRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 七层转发规则ID。
+    * <p>七层转发规则ID。</p>
     */
     @SerializedName("ForwardingPolicyId")
     @Expose
     private String ForwardingPolicyId;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+    * <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 七层转发规则ID。 
-     * @return ForwardingPolicyId 七层转发规则ID。
+     * Get <p>七层转发规则ID。</p> 
+     * @return ForwardingPolicyId <p>七层转发规则ID。</p>
      */
     public String getForwardingPolicyId() {
         return this.ForwardingPolicyId;
     }
 
     /**
-     * Set 七层转发规则ID。
-     * @param ForwardingPolicyId 七层转发规则ID。
+     * Set <p>七层转发规则ID。</p>
+     * @param ForwardingPolicyId <p>七层转发规则ID。</p>
      */
     public void setForwardingPolicyId(String ForwardingPolicyId) {
         this.ForwardingPolicyId = ForwardingPolicyId;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p> 
+     * @return Filters <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+     * @param Filters <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeForwardingRuleRequest() {
@@ -161,6 +184,12 @@ public class DescribeForwardingRuleRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class DescribeForwardingRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForwardingPolicyId", this.ForwardingPolicyId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

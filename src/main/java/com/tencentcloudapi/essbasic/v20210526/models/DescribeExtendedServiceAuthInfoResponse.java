@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExtendedServiceAuthInfoResponse extends AbstractModel {
 
     /**
-    * 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
+    * <p>服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。</p>
     */
     @SerializedName("AuthInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeExtendedServiceAuthInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。 
-     * @return AuthInfo 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
+     * Get <p>服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。</p> 
+     * @return AuthInfo <p>服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。</p>
      */
     public ExtentServiceAuthInfo [] getAuthInfo() {
         return this.AuthInfo;
     }
 
     /**
-     * Set 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
-     * @param AuthInfo 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
+     * Set <p>服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。</p>
+     * @param AuthInfo <p>服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。</p>
      */
     public void setAuthInfo(ExtentServiceAuthInfo [] AuthInfo) {
         this.AuthInfo = AuthInfo;

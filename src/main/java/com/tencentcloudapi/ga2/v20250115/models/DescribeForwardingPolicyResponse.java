@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeForwardingPolicyResponse extends AbstractModel {
 
     /**
-    * 符合条件的策略信息。
+    * <p>符合条件的策略信息。</p>
     */
     @SerializedName("ForwardingPolicySet")
     @Expose
     private ForwardingPolicySet [] ForwardingPolicySet;
 
     /**
-    * 符合条件的实例个数。
+    * <p>符合条件的实例个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeForwardingPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的策略信息。 
-     * @return ForwardingPolicySet 符合条件的策略信息。
+     * Get <p>符合条件的策略信息。</p> 
+     * @return ForwardingPolicySet <p>符合条件的策略信息。</p>
      */
     public ForwardingPolicySet [] getForwardingPolicySet() {
         return this.ForwardingPolicySet;
     }
 
     /**
-     * Set 符合条件的策略信息。
-     * @param ForwardingPolicySet 符合条件的策略信息。
+     * Set <p>符合条件的策略信息。</p>
+     * @param ForwardingPolicySet <p>符合条件的策略信息。</p>
      */
     public void setForwardingPolicySet(ForwardingPolicySet [] ForwardingPolicySet) {
         this.ForwardingPolicySet = ForwardingPolicySet;
     }
 
     /**
-     * Get 符合条件的实例个数。 
-     * @return TotalCount 符合条件的实例个数。
+     * Get <p>符合条件的实例个数。</p> 
+     * @return TotalCount <p>符合条件的实例个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例个数。
-     * @param TotalCount 符合条件的实例个数。
+     * Set <p>符合条件的实例个数。</p>
+     * @param TotalCount <p>符合条件的实例个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateEksLogConfigResponse extends AbstractModel {
 
     /**
-    * 日志采集topicid
+    * <p>日志采集topicid</p>
     */
     @SerializedName("TopicId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateEksLogConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志采集topicid 
-     * @return TopicId 日志采集topicid
+     * Get <p>日志采集topicid</p> 
+     * @return TopicId <p>日志采集topicid</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志采集topicid
-     * @param TopicId 日志采集topicid
+     * Set <p>日志采集topicid</p>
+     * @param TopicId <p>日志采集topicid</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

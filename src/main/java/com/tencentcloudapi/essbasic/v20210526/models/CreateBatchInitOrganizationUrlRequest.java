@@ -24,160 +24,115 @@ import java.util.HashMap;
 public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 此接口Agent.AppId 必填。
+    * <p>应用相关信息。 此接口Agent.AppId 必填。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
+    * <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
     */
     @SerializedName("OperateTypes")
     @Expose
     private String [] OperateTypes;
 
     /**
-    * 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
+    * <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
     private String [] ProxyOrganizationOpenIds;
 
     /**
-    * 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
+    * <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
     */
     @SerializedName("IsAuthorizePlatformApplication")
     @Expose
     private Boolean IsAuthorizePlatformApplication;
 
     /**
-    * 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
-
+    * <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
     */
     @SerializedName("AuthorizedProxyOrganizationOpenId")
     @Expose
     private String AuthorizedProxyOrganizationOpenId;
 
     /**
-     * Get 应用相关信息。 此接口Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.AppId 必填。
+     * Get <p>应用相关信息。 此接口Agent.AppId 必填。</p> 
+     * @return Agent <p>应用相关信息。 此接口Agent.AppId 必填。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.AppId 必填。
+     * Set <p>应用相关信息。 此接口Agent.AppId 必填。</p>
+     * @param Agent <p>应用相关信息。 此接口Agent.AppId 必填。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul> 
-     * @return OperateTypes 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
+     * Get <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p> 
+     * @return OperateTypes <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
      */
     public String [] getOperateTypes() {
         return this.OperateTypes;
     }
 
     /**
-     * Set 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
-     * @param OperateTypes 初始化操作类型
-<ul>
-<li>CREATE_SEAL : 创建印章</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
-<li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
-</ul>
+     * Set <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
+     * @param OperateTypes <p>初始化操作类型<ul><li>CREATE_SEAL : 创建印章</li><li>OPEN_AUTO_SIGN :开通企业授权签署</li><li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权“授权签”</li></ul></p>
      */
     public void setOperateTypes(String [] OperateTypes) {
         this.OperateTypes = OperateTypes;
     }
 
     /**
-     * Get 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个 
-     * @return ProxyOrganizationOpenIds 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
+     * Get <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p> 
+     * @return ProxyOrganizationOpenIds <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
      */
     public String [] getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
     }
 
     /**
-     * Set 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
-     * @param ProxyOrganizationOpenIds 批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个
+     * Set <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
+     * @param ProxyOrganizationOpenIds <p>批量操作的企业列表在第三方平台的企业Id列表，即ProxyOrganizationOpenId列表,最大支持50个</p>
      */
     public void setProxyOrganizationOpenIds(String [] ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
     }
 
     /**
-     * Get 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png) 
-     * @return IsAuthorizePlatformApplication 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
+     * Get <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p> 
+     * @return IsAuthorizePlatformApplication <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
      */
     public Boolean getIsAuthorizePlatformApplication() {
         return this.IsAuthorizePlatformApplication;
     }
 
     /**
-     * Set 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
-     * @param IsAuthorizePlatformApplication 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
-![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
+     * Set <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
+     * @param IsAuthorizePlatformApplication <p>当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权【授权签】时传true。<br><img src="https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png" alt="image"></p>
      */
     public void setIsAuthorizePlatformApplication(Boolean IsAuthorizePlatformApplication) {
         this.IsAuthorizePlatformApplication = IsAuthorizePlatformApplication;
     }
 
     /**
-     * Get 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
- 
-     * @return AuthorizedProxyOrganizationOpenId 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
-
+     * Get <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p> 
+     * @return AuthorizedProxyOrganizationOpenId <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
      */
     public String getAuthorizedProxyOrganizationOpenId() {
         return this.AuthorizedProxyOrganizationOpenId;
     }
 
     /**
-     * Set 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
-
-     * @param AuthorizedProxyOrganizationOpenId 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
-
-
-
+     * Set <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
+     * @param AuthorizedProxyOrganizationOpenId <p>被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权【授权签】时必传。</p>
      */
     public void setAuthorizedProxyOrganizationOpenId(String AuthorizedProxyOrganizationOpenId) {
         this.AuthorizedProxyOrganizationOpenId = AuthorizedProxyOrganizationOpenId;

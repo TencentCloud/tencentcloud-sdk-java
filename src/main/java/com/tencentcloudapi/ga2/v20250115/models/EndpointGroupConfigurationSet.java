@@ -227,6 +227,20 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
     private String HttpVersion;
 
     /**
+    * <p>出终端节点组内网IP</p>
+    */
+    @SerializedName("OriginPrivateIps")
+    @Expose
+    private String [] OriginPrivateIps;
+
+    /**
+    * <p>出终端节点组公网CIDR</p>
+    */
+    @SerializedName("OriginPublicCidrs")
+    @Expose
+    private String [] OriginPublicCidrs;
+
+    /**
      * Get <p>全球加速实例ID。</p> 
      * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
@@ -690,6 +704,38 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
         this.HttpVersion = HttpVersion;
     }
 
+    /**
+     * Get <p>出终端节点组内网IP</p> 
+     * @return OriginPrivateIps <p>出终端节点组内网IP</p>
+     */
+    public String [] getOriginPrivateIps() {
+        return this.OriginPrivateIps;
+    }
+
+    /**
+     * Set <p>出终端节点组内网IP</p>
+     * @param OriginPrivateIps <p>出终端节点组内网IP</p>
+     */
+    public void setOriginPrivateIps(String [] OriginPrivateIps) {
+        this.OriginPrivateIps = OriginPrivateIps;
+    }
+
+    /**
+     * Get <p>出终端节点组公网CIDR</p> 
+     * @return OriginPublicCidrs <p>出终端节点组公网CIDR</p>
+     */
+    public String [] getOriginPublicCidrs() {
+        return this.OriginPublicCidrs;
+    }
+
+    /**
+     * Set <p>出终端节点组公网CIDR</p>
+     * @param OriginPublicCidrs <p>出终端节点组公网CIDR</p>
+     */
+    public void setOriginPublicCidrs(String [] OriginPublicCidrs) {
+        this.OriginPublicCidrs = OriginPublicCidrs;
+    }
+
     public EndpointGroupConfigurationSet() {
     }
 
@@ -797,6 +843,18 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
         if (source.HttpVersion != null) {
             this.HttpVersion = new String(source.HttpVersion);
         }
+        if (source.OriginPrivateIps != null) {
+            this.OriginPrivateIps = new String[source.OriginPrivateIps.length];
+            for (int i = 0; i < source.OriginPrivateIps.length; i++) {
+                this.OriginPrivateIps[i] = new String(source.OriginPrivateIps[i]);
+            }
+        }
+        if (source.OriginPublicCidrs != null) {
+            this.OriginPublicCidrs = new String[source.OriginPublicCidrs.length];
+            for (int i = 0; i < source.OriginPublicCidrs.length; i++) {
+                this.OriginPublicCidrs[i] = new String(source.OriginPublicCidrs[i]);
+            }
+        }
     }
 
 
@@ -833,6 +891,8 @@ public class EndpointGroupConfigurationSet extends AbstractModel {
         this.setParamSimple(map, prefix + "IspType", this.IspType);
         this.setParamSimple(map, prefix + "CipherPolicyId", this.CipherPolicyId);
         this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
+        this.setParamArraySimple(map, prefix + "OriginPrivateIps.", this.OriginPrivateIps);
+        this.setParamArraySimple(map, prefix + "OriginPublicCidrs.", this.OriginPublicCidrs);
 
     }
 }

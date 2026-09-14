@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateCLSLogConfigRequest extends AbstractModel {
 
     /**
-    * 日志采集配置的json表达
+    * <p>日志采集配置的json表达</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private String LogConfig;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * CLS日志集ID
+    * <p>CLS日志集ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 当前集群类型支持tke（标准集群）、eks（serverless集群）
+    * <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-     * Get 日志采集配置的json表达 
-     * @return LogConfig 日志采集配置的json表达
+     * Get <p>日志采集配置的json表达</p> 
+     * @return LogConfig <p>日志采集配置的json表达</p>
      */
     public String getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set 日志采集配置的json表达
-     * @param LogConfig 日志采集配置的json表达
+     * Set <p>日志采集配置的json表达</p>
+     * @param LogConfig <p>日志采集配置的json表达</p>
      */
     public void setLogConfig(String LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get CLS日志集ID 
-     * @return LogsetId CLS日志集ID
+     * Get <p>CLS日志集ID</p> 
+     * @return LogsetId <p>CLS日志集ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set CLS日志集ID
-     * @param LogsetId CLS日志集ID
+     * Set <p>CLS日志集ID</p>
+     * @param LogsetId <p>CLS日志集ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 当前集群类型支持tke（标准集群）、eks（serverless集群） 
-     * @return ClusterType 当前集群类型支持tke（标准集群）、eks（serverless集群）
+     * Get <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p> 
+     * @return ClusterType <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 当前集群类型支持tke（标准集群）、eks（serverless集群）
-     * @param ClusterType 当前集群类型支持tke（标准集群）、eks（serverless集群）
+     * Set <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
+     * @param ClusterType <p>当前集群类型支持tke（标准集群）、eks（serverless集群）</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

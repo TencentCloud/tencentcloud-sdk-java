@@ -31,7 +31,7 @@ public class AIRoundPath extends AbstractModel {
     private String NodeName;
 
     /**
-    * <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
+    * <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
     */
     @SerializedName("NodeType")
     @Expose
@@ -43,6 +43,14 @@ public class AIRoundPath extends AbstractModel {
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
+
+    /**
+    * <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("APICall")
+    @Expose
+    private AICallAPICallDetail APICall;
 
     /**
      * Get <p>画布中的节点名称</p> 
@@ -61,16 +69,16 @@ public class AIRoundPath extends AbstractModel {
     }
 
     /**
-     * Get <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul> 
-     * @return NodeType <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
+     * Get <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul> 
+     * @return NodeType <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
-     * @param NodeType <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li></ul>
+     * Set <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
+     * @param NodeType <p>画布中的节点类型</p><p>枚举值：</p><ul><li>DIALOGUE： 对话节点</li><li>API_CALL： 接口调用节点</li><li>TRANSFER： 转接节点</li><li>KEY_PRESS： 按键节点</li><li>END_CALL： 挂断节点</li><li>TRANSFER_AGENT： 转接智能体节点</li><li>WORK_TIME： 工作时间节点</li></ul>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
@@ -92,6 +100,26 @@ public class AIRoundPath extends AbstractModel {
         this.Timestamp = Timestamp;
     }
 
+    /**
+     * Get <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return APICall <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AICallAPICallDetail getAPICall() {
+        return this.APICall;
+    }
+
+    /**
+     * Set <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param APICall <p>接口调用节点的调用详情，包含请求、响应、耗时以及每次重试的明细。仅 NodeType 为 API_CALL 时有值，其余节点类型不返回该字段。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAPICall(AICallAPICallDetail APICall) {
+        this.APICall = APICall;
+    }
+
     public AIRoundPath() {
     }
 
@@ -109,6 +137,9 @@ public class AIRoundPath extends AbstractModel {
         if (source.Timestamp != null) {
             this.Timestamp = new Long(source.Timestamp);
         }
+        if (source.APICall != null) {
+            this.APICall = new AICallAPICallDetail(source.APICall);
+        }
     }
 
 
@@ -119,6 +150,7 @@ public class AIRoundPath extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamObj(map, prefix + "APICall.", this.APICall);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskResultResponse extends AbstractModel {
 
     /**
-    * 任务状态。
+    * <p>任务状态。</p><p>枚举值：</p><ul><li>SUCCESS： 任务成功。</li><li>FAILURE： 任务失败。</li><li>RUNNING： 任务运行。</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTaskResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态。 
-     * @return Status 任务状态。
+     * Get <p>任务状态。</p><p>枚举值：</p><ul><li>SUCCESS： 任务成功。</li><li>FAILURE： 任务失败。</li><li>RUNNING： 任务运行。</li></ul> 
+     * @return Status <p>任务状态。</p><p>枚举值：</p><ul><li>SUCCESS： 任务成功。</li><li>FAILURE： 任务失败。</li><li>RUNNING： 任务运行。</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。
-     * @param Status 任务状态。
+     * Set <p>任务状态。</p><p>枚举值：</p><ul><li>SUCCESS： 任务成功。</li><li>FAILURE： 任务失败。</li><li>RUNNING： 任务运行。</li></ul>
+     * @param Status <p>任务状态。</p><p>枚举值：</p><ul><li>SUCCESS： 任务成功。</li><li>FAILURE： 任务失败。</li><li>RUNNING： 任务运行。</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -24,181 +24,161 @@ import java.util.HashMap;
 public class ModifyIntegrationRoleRequest extends AbstractModel {
 
     /**
-    * 角色Id，可通过接口 DescribeIntegrationRoles 查询获取
+    * <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
     */
     @SerializedName("RoleId")
     @Expose
     private String RoleId;
 
     /**
-    * 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
+    * <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+    * <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 角色描述，最大长度为50个字符
+    * <p>角色描述，最大长度为50个字符</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 权限树
+    * <p>权限树</p>
     */
     @SerializedName("PermissionGroups")
     @Expose
     private PermissionGroup [] PermissionGroups;
 
     /**
-    * 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+    * <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
     */
     @SerializedName("SubOrganizationIds")
     @Expose
     private String [] SubOrganizationIds;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 角色Id，可通过接口 DescribeIntegrationRoles 查询获取 
-     * @return RoleId 角色Id，可通过接口 DescribeIntegrationRoles 查询获取
+     * Get <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p> 
+     * @return RoleId <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
      */
     public String getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 角色Id，可通过接口 DescribeIntegrationRoles 查询获取
-     * @param RoleId 角色Id，可通过接口 DescribeIntegrationRoles 查询获取
+     * Set <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
+     * @param RoleId <p>角色Id，可通过接口 DescribeIntegrationRoles 查询获取</p>
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。 
-     * @return Name 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
+     * Get <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p> 
+     * @return Name <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
-     * @param Name 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
+     * Set <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
+     * @param Name <p>角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
-     * @return Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * Get <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p> 
+     * @return Operator <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
-
-注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * Set <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+     * @param Operator <p>执行本接口操作的员工信息。使用此接口时，必须填写userId。<br>支持填入集团子公司经办人 userId 代发合同。</p><p>注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 角色描述，最大长度为50个字符 
-     * @return Description 角色描述，最大长度为50个字符
+     * Get <p>角色描述，最大长度为50个字符</p> 
+     * @return Description <p>角色描述，最大长度为50个字符</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 角色描述，最大长度为50个字符
-     * @param Description 角色描述，最大长度为50个字符
+     * Set <p>角色描述，最大长度为50个字符</p>
+     * @param Description <p>角色描述，最大长度为50个字符</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 权限树 
-     * @return PermissionGroups 权限树
+     * Get <p>权限树</p> 
+     * @return PermissionGroups <p>权限树</p>
      */
     public PermissionGroup [] getPermissionGroups() {
         return this.PermissionGroups;
     }
 
     /**
-     * Set 权限树
-     * @param PermissionGroups 权限树
+     * Set <p>权限树</p>
+     * @param PermissionGroups <p>权限树</p>
      */
     public void setPermissionGroups(PermissionGroup [] PermissionGroups) {
         this.PermissionGroups = PermissionGroups;
     }
 
     /**
-     * Get 集团角色的话，需要传递集团子企业列表，如果是全选，则传1 
-     * @return SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+     * Get <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p> 
+     * @return SubOrganizationIds <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
      */
     public String [] getSubOrganizationIds() {
         return this.SubOrganizationIds;
     }
 
     /**
-     * Set 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
-     * @param SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
+     * Set <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
+     * @param SubOrganizationIds <p>集团角色的话，需要传递集团子企业列表，如果是全选，则传1</p>
      */
     public void setSubOrganizationIds(String [] SubOrganizationIds) {
         this.SubOrganizationIds = SubOrganizationIds;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

@@ -45,7 +45,7 @@ public class DocToVideoInput extends AbstractModel {
     private String ModelName;
 
     /**
-    * <p>文档生成视频模型版本号</p><p>默认值：1.0</p>
+    * <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
     */
     @SerializedName("ModelVersion")
     @Expose
@@ -170,16 +170,16 @@ public class DocToVideoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>文档生成视频模型版本号</p><p>默认值：1.0</p> 
-     * @return ModelVersion <p>文档生成视频模型版本号</p><p>默认值：1.0</p>
+     * Get <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p> 
+     * @return ModelVersion <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>文档生成视频模型版本号</p><p>默认值：1.0</p>
-     * @param ModelVersion <p>文档生成视频模型版本号</p><p>默认值：1.0</p>
+     * Set <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
+     * @param ModelVersion <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;

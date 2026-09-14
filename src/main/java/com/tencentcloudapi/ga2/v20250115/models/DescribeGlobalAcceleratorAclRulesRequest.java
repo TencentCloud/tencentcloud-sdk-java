@@ -45,6 +45,13 @@ public class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get <p>访问控制策略ID。</p> 
      * @return GlobalAcceleratorAclPolicyId <p>访问控制策略ID。</p>
      */
@@ -92,6 +99,22 @@ public class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p> 
+     * @return Filters <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+     * @param Filters <p>过滤条件。<li>global-accelerator-acl-rule-id - String -（过滤条件）ACL规则ID。</li></p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeGlobalAcceleratorAclRulesRequest() {
     }
 
@@ -109,6 +132,12 @@ public class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class DescribeGlobalAcceleratorAclRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GlobalAcceleratorAclPolicyId", this.GlobalAcceleratorAclPolicyId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

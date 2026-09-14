@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AcceleratorRegionSet extends AbstractModel {
 
     /**
-    * <p>地域中文名称。</p>
+    * <p>地域名称。</p>
     */
     @SerializedName("Name")
     @Expose
@@ -38,7 +38,7 @@ public class AcceleratorRegionSet extends AbstractModel {
     private Long IsAvailable;
 
     /**
-    * <p>地域信息。</p>
+    * <p>地域。</p>
     */
     @SerializedName("Region")
     @Expose
@@ -52,7 +52,7 @@ public class AcceleratorRegionSet extends AbstractModel {
     private String AreaName;
 
     /**
-    * <p>是否中国地域。</p>
+    * <p>是否中国地域。1 代表是中国地域，0代表不是中国地域。</p>
     */
     @SerializedName("IsChinaMainland")
     @Expose
@@ -66,23 +66,23 @@ public class AcceleratorRegionSet extends AbstractModel {
     private String [] SupportIspType;
 
     /**
-    * <p>是否腾讯地域。</p>
+    * <p>是否腾讯云地域。1代表是腾讯云地域，0代表不是。</p>
     */
     @SerializedName("IsTencentRegion")
     @Expose
     private Long IsTencentRegion;
 
     /**
-     * Get <p>地域中文名称。</p> 
-     * @return Name <p>地域中文名称。</p>
+     * Get <p>地域名称。</p> 
+     * @return Name <p>地域名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>地域中文名称。</p>
-     * @param Name <p>地域中文名称。</p>
+     * Set <p>地域名称。</p>
+     * @param Name <p>地域名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -105,16 +105,16 @@ public class AcceleratorRegionSet extends AbstractModel {
     }
 
     /**
-     * Get <p>地域信息。</p> 
-     * @return Region <p>地域信息。</p>
+     * Get <p>地域。</p> 
+     * @return Region <p>地域。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>地域信息。</p>
-     * @param Region <p>地域信息。</p>
+     * Set <p>地域。</p>
+     * @param Region <p>地域。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -137,16 +137,16 @@ public class AcceleratorRegionSet extends AbstractModel {
     }
 
     /**
-     * Get <p>是否中国地域。</p> 
-     * @return IsChinaMainland <p>是否中国地域。</p>
+     * Get <p>是否中国地域。1 代表是中国地域，0代表不是中国地域。</p> 
+     * @return IsChinaMainland <p>是否中国地域。1 代表是中国地域，0代表不是中国地域。</p>
      */
     public Long getIsChinaMainland() {
         return this.IsChinaMainland;
     }
 
     /**
-     * Set <p>是否中国地域。</p>
-     * @param IsChinaMainland <p>是否中国地域。</p>
+     * Set <p>是否中国地域。1 代表是中国地域，0代表不是中国地域。</p>
+     * @param IsChinaMainland <p>是否中国地域。1 代表是中国地域，0代表不是中国地域。</p>
      */
     public void setIsChinaMainland(Long IsChinaMainland) {
         this.IsChinaMainland = IsChinaMainland;
@@ -169,16 +169,16 @@ public class AcceleratorRegionSet extends AbstractModel {
     }
 
     /**
-     * Get <p>是否腾讯地域。</p> 
-     * @return IsTencentRegion <p>是否腾讯地域。</p>
+     * Get <p>是否腾讯云地域。1代表是腾讯云地域，0代表不是。</p> 
+     * @return IsTencentRegion <p>是否腾讯云地域。1代表是腾讯云地域，0代表不是。</p>
      */
     public Long getIsTencentRegion() {
         return this.IsTencentRegion;
     }
 
     /**
-     * Set <p>是否腾讯地域。</p>
-     * @param IsTencentRegion <p>是否腾讯地域。</p>
+     * Set <p>是否腾讯云地域。1代表是腾讯云地域，0代表不是。</p>
+     * @param IsTencentRegion <p>是否腾讯云地域。1代表是腾讯云地域，0代表不是。</p>
      */
     public void setIsTencentRegion(Long IsTencentRegion) {
         this.IsTencentRegion = IsTencentRegion;

@@ -24,165 +24,115 @@ import java.util.HashMap;
 public class ExtentServiceAuthInfo extends AbstractModel {
 
     /**
-    * 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
+    * <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 扩展服务名称 
+    * <p>扩展服务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
+    * <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 操作扩展服务的操作人第三方应用平台的用户openid
+    * <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
     */
     @SerializedName("OperatorOpenId")
     @Expose
     private String OperatorOpenId;
 
     /**
-    * 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+    * <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
     */
     @SerializedName("OperateOn")
     @Expose
     private Long OperateOn;
 
     /**
-     * Get 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul> 
-     * @return Type 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
+     * Get <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p> 
+     * @return Type <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
-     * @param Type 扩展服务类型
-<ul>
-<li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
-<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
-<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
-<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
-</ul>
+     * Set <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
+     * @param Type <p>扩展服务类型<ul><li>AUTO_SIGN             企业“授权签”（“授权签”）</li><li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li><li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li><li> DOWNLOAD_FLOW         授权渠道下载合同 </li><li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li><li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li></ul></p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 扩展服务名称  
-     * @return Name 扩展服务名称 
+     * Get <p>扩展服务名称</p> 
+     * @return Name <p>扩展服务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 扩展服务名称 
-     * @param Name 扩展服务名称 
+     * Set <p>扩展服务名称</p>
+     * @param Name <p>扩展服务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	 
-     * @return Status 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
+     * Get <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p> 
+     * @return Status <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
-     * @param Status 扩展服务的开通状态
-**ENABLE**：开通 
-**DISABLE**：未开通	
+     * Set <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
+     * @param Status <p>扩展服务的开通状态<br><strong>ENABLE</strong>：开通<br><strong>DISABLE</strong>：未开通</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 操作扩展服务的操作人第三方应用平台的用户openid 
-     * @return OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
+     * Get <p>操作扩展服务的操作人第三方应用平台的用户openid</p> 
+     * @return OperatorOpenId <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
      */
     public String getOperatorOpenId() {
         return this.OperatorOpenId;
     }
 
     /**
-     * Set 操作扩展服务的操作人第三方应用平台的用户openid
-     * @param OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
+     * Set <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
+     * @param OperatorOpenId <p>操作扩展服务的操作人第三方应用平台的用户openid</p>
      */
     public void setOperatorOpenId(String OperatorOpenId) {
         this.OperatorOpenId = OperatorOpenId;
     }
 
     /**
-     * Get 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	 
-     * @return OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+     * Get <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p> 
+     * @return OperateOn <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
      */
     public Long getOperateOn() {
         return this.OperateOn;
     }
 
     /**
-     * Set 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
-     * @param OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
+     * Set <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
+     * @param OperateOn <p>扩展服务的操作时间，格式为Unix标准时间戳（秒）。</p>
      */
     public void setOperateOn(Long OperateOn) {
         this.OperateOn = OperateOn;

@@ -24,483 +24,483 @@ import java.util.HashMap;
 public class ListenerSet extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 监听器名称。
+    * <p>监听器名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 监听器描述。
+    * <p>监听器描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 协议。
+    * <p>协议。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 端口范围。
+    * <p>端口范围。</p>
     */
     @SerializedName("PortRanges")
     @Expose
     private PortRanges PortRanges;
 
     /**
-    * 是否打开七层获取源IP方式。
+    * <p>是否打开七层获取源IP方式。</p>
     */
     @SerializedName("XForwardedForRealIp")
     @Expose
     private Boolean XForwardedForRealIp;
 
     /**
-    * 开启会话保持。
+    * <p>开启会话保持。</p>
     */
     @SerializedName("ClientAffinity")
     @Expose
     private String ClientAffinity;
 
     /**
-    * 会话保持时间。
+    * <p>会话保持时间。</p>
     */
     @SerializedName("ClientAffinityTime")
     @Expose
     private Long ClientAffinityTime;
 
     /**
-    * SSL解析方式。
+    * <p>SSL解析方式。</p>
     */
     @SerializedName("CertificationType")
     @Expose
     private String CertificationType;
 
     /**
-    * 服务器证书。
+    * <p>服务器证书。</p>
     */
     @SerializedName("ServerCertificates")
     @Expose
     private String [] ServerCertificates;
 
     /**
-    * 客户端证书。
+    * <p>客户端证书。</p>
     */
     @SerializedName("ClientCaCertificates")
     @Expose
     private String [] ClientCaCertificates;
 
     /**
-    * TLS密码套件包。
+    * <p>TLS密码套件包。</p>
     */
     @SerializedName("CipherPolicyId")
     @Expose
     private String CipherPolicyId;
 
     /**
-    * HTTP版本。
+    * <p>HTTP版本。</p>
     */
     @SerializedName("HttpVersion")
     @Expose
     private String HttpVersion;
 
     /**
-    * 请求超时时间。
+    * <p>请求超时时间。</p>
     */
     @SerializedName("RequestTimeout")
     @Expose
     private Long RequestTimeout;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 监听路由类型。
+    * <p>监听路由类型。</p>
     */
     @SerializedName("ListenerType")
     @Expose
     private String ListenerType;
 
     /**
-    * 监听器状态。
+    * <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 所属监听器终端节点组个数。
+    * <p>所属监听器终端节点组个数。</p>
     */
     @SerializedName("EndpointGroupCounts")
     @Expose
     private Long EndpointGroupCounts;
 
     /**
-    * 四层获取源IP方式。
+    * <p>四层获取源IP方式。</p>
     */
     @SerializedName("GetRealIpType")
     @Expose
     private String GetRealIpType;
 
     /**
-    * 连接超时时间。
+    * <p>连接超时时间。</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 监听器名称。 
-     * @return Name 监听器名称。
+     * Get <p>监听器名称。</p> 
+     * @return Name <p>监听器名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 监听器名称。
-     * @param Name 监听器名称。
+     * Set <p>监听器名称。</p>
+     * @param Name <p>监听器名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 监听器描述。 
-     * @return Description 监听器描述。
+     * Get <p>监听器描述。</p> 
+     * @return Description <p>监听器描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 监听器描述。
-     * @param Description 监听器描述。
+     * Set <p>监听器描述。</p>
+     * @param Description <p>监听器描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 协议。 
-     * @return Protocol 协议。
+     * Get <p>协议。</p> 
+     * @return Protocol <p>协议。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议。
-     * @param Protocol 协议。
+     * Set <p>协议。</p>
+     * @param Protocol <p>协议。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口范围。 
-     * @return PortRanges 端口范围。
+     * Get <p>端口范围。</p> 
+     * @return PortRanges <p>端口范围。</p>
      */
     public PortRanges getPortRanges() {
         return this.PortRanges;
     }
 
     /**
-     * Set 端口范围。
-     * @param PortRanges 端口范围。
+     * Set <p>端口范围。</p>
+     * @param PortRanges <p>端口范围。</p>
      */
     public void setPortRanges(PortRanges PortRanges) {
         this.PortRanges = PortRanges;
     }
 
     /**
-     * Get 是否打开七层获取源IP方式。 
-     * @return XForwardedForRealIp 是否打开七层获取源IP方式。
+     * Get <p>是否打开七层获取源IP方式。</p> 
+     * @return XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
      */
     public Boolean getXForwardedForRealIp() {
         return this.XForwardedForRealIp;
     }
 
     /**
-     * Set 是否打开七层获取源IP方式。
-     * @param XForwardedForRealIp 是否打开七层获取源IP方式。
+     * Set <p>是否打开七层获取源IP方式。</p>
+     * @param XForwardedForRealIp <p>是否打开七层获取源IP方式。</p>
      */
     public void setXForwardedForRealIp(Boolean XForwardedForRealIp) {
         this.XForwardedForRealIp = XForwardedForRealIp;
     }
 
     /**
-     * Get 开启会话保持。 
-     * @return ClientAffinity 开启会话保持。
+     * Get <p>开启会话保持。</p> 
+     * @return ClientAffinity <p>开启会话保持。</p>
      */
     public String getClientAffinity() {
         return this.ClientAffinity;
     }
 
     /**
-     * Set 开启会话保持。
-     * @param ClientAffinity 开启会话保持。
+     * Set <p>开启会话保持。</p>
+     * @param ClientAffinity <p>开启会话保持。</p>
      */
     public void setClientAffinity(String ClientAffinity) {
         this.ClientAffinity = ClientAffinity;
     }
 
     /**
-     * Get 会话保持时间。 
-     * @return ClientAffinityTime 会话保持时间。
+     * Get <p>会话保持时间。</p> 
+     * @return ClientAffinityTime <p>会话保持时间。</p>
      */
     public Long getClientAffinityTime() {
         return this.ClientAffinityTime;
     }
 
     /**
-     * Set 会话保持时间。
-     * @param ClientAffinityTime 会话保持时间。
+     * Set <p>会话保持时间。</p>
+     * @param ClientAffinityTime <p>会话保持时间。</p>
      */
     public void setClientAffinityTime(Long ClientAffinityTime) {
         this.ClientAffinityTime = ClientAffinityTime;
     }
 
     /**
-     * Get SSL解析方式。 
-     * @return CertificationType SSL解析方式。
+     * Get <p>SSL解析方式。</p> 
+     * @return CertificationType <p>SSL解析方式。</p>
      */
     public String getCertificationType() {
         return this.CertificationType;
     }
 
     /**
-     * Set SSL解析方式。
-     * @param CertificationType SSL解析方式。
+     * Set <p>SSL解析方式。</p>
+     * @param CertificationType <p>SSL解析方式。</p>
      */
     public void setCertificationType(String CertificationType) {
         this.CertificationType = CertificationType;
     }
 
     /**
-     * Get 服务器证书。 
-     * @return ServerCertificates 服务器证书。
+     * Get <p>服务器证书。</p> 
+     * @return ServerCertificates <p>服务器证书。</p>
      */
     public String [] getServerCertificates() {
         return this.ServerCertificates;
     }
 
     /**
-     * Set 服务器证书。
-     * @param ServerCertificates 服务器证书。
+     * Set <p>服务器证书。</p>
+     * @param ServerCertificates <p>服务器证书。</p>
      */
     public void setServerCertificates(String [] ServerCertificates) {
         this.ServerCertificates = ServerCertificates;
     }
 
     /**
-     * Get 客户端证书。 
-     * @return ClientCaCertificates 客户端证书。
+     * Get <p>客户端证书。</p> 
+     * @return ClientCaCertificates <p>客户端证书。</p>
      */
     public String [] getClientCaCertificates() {
         return this.ClientCaCertificates;
     }
 
     /**
-     * Set 客户端证书。
-     * @param ClientCaCertificates 客户端证书。
+     * Set <p>客户端证书。</p>
+     * @param ClientCaCertificates <p>客户端证书。</p>
      */
     public void setClientCaCertificates(String [] ClientCaCertificates) {
         this.ClientCaCertificates = ClientCaCertificates;
     }
 
     /**
-     * Get TLS密码套件包。 
-     * @return CipherPolicyId TLS密码套件包。
+     * Get <p>TLS密码套件包。</p> 
+     * @return CipherPolicyId <p>TLS密码套件包。</p>
      */
     public String getCipherPolicyId() {
         return this.CipherPolicyId;
     }
 
     /**
-     * Set TLS密码套件包。
-     * @param CipherPolicyId TLS密码套件包。
+     * Set <p>TLS密码套件包。</p>
+     * @param CipherPolicyId <p>TLS密码套件包。</p>
      */
     public void setCipherPolicyId(String CipherPolicyId) {
         this.CipherPolicyId = CipherPolicyId;
     }
 
     /**
-     * Get HTTP版本。 
-     * @return HttpVersion HTTP版本。
+     * Get <p>HTTP版本。</p> 
+     * @return HttpVersion <p>HTTP版本。</p>
      */
     public String getHttpVersion() {
         return this.HttpVersion;
     }
 
     /**
-     * Set HTTP版本。
-     * @param HttpVersion HTTP版本。
+     * Set <p>HTTP版本。</p>
+     * @param HttpVersion <p>HTTP版本。</p>
      */
     public void setHttpVersion(String HttpVersion) {
         this.HttpVersion = HttpVersion;
     }
 
     /**
-     * Get 请求超时时间。 
-     * @return RequestTimeout 请求超时时间。
+     * Get <p>请求超时时间。</p> 
+     * @return RequestTimeout <p>请求超时时间。</p>
      */
     public Long getRequestTimeout() {
         return this.RequestTimeout;
     }
 
     /**
-     * Set 请求超时时间。
-     * @param RequestTimeout 请求超时时间。
+     * Set <p>请求超时时间。</p>
+     * @param RequestTimeout <p>请求超时时间。</p>
      */
     public void setRequestTimeout(Long RequestTimeout) {
         this.RequestTimeout = RequestTimeout;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 监听路由类型。 
-     * @return ListenerType 监听路由类型。
+     * Get <p>监听路由类型。</p> 
+     * @return ListenerType <p>监听路由类型。</p>
      */
     public String getListenerType() {
         return this.ListenerType;
     }
 
     /**
-     * Set 监听路由类型。
-     * @param ListenerType 监听路由类型。
+     * Set <p>监听路由类型。</p>
+     * @param ListenerType <p>监听路由类型。</p>
      */
     public void setListenerType(String ListenerType) {
         this.ListenerType = ListenerType;
     }
 
     /**
-     * Get 监听器状态。 
-     * @return Status 监听器状态。
+     * Get <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul> 
+     * @return Status <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 监听器状态。
-     * @param Status 监听器状态。
+     * Set <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
+     * @param Status <p>监听器状态。</p><p>枚举值：</p><ul><li>ACTIVE： 可用。</li><li>CREATING： 创建中。</li><li>DELETING： 删除中。</li><li>CONFIGURING： 修改配置中。</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 所属监听器终端节点组个数。 
-     * @return EndpointGroupCounts 所属监听器终端节点组个数。
+     * Get <p>所属监听器终端节点组个数。</p> 
+     * @return EndpointGroupCounts <p>所属监听器终端节点组个数。</p>
      */
     public Long getEndpointGroupCounts() {
         return this.EndpointGroupCounts;
     }
 
     /**
-     * Set 所属监听器终端节点组个数。
-     * @param EndpointGroupCounts 所属监听器终端节点组个数。
+     * Set <p>所属监听器终端节点组个数。</p>
+     * @param EndpointGroupCounts <p>所属监听器终端节点组个数。</p>
      */
     public void setEndpointGroupCounts(Long EndpointGroupCounts) {
         this.EndpointGroupCounts = EndpointGroupCounts;
     }
 
     /**
-     * Get 四层获取源IP方式。 
-     * @return GetRealIpType 四层获取源IP方式。
+     * Get <p>四层获取源IP方式。</p> 
+     * @return GetRealIpType <p>四层获取源IP方式。</p>
      */
     public String getGetRealIpType() {
         return this.GetRealIpType;
     }
 
     /**
-     * Set 四层获取源IP方式。
-     * @param GetRealIpType 四层获取源IP方式。
+     * Set <p>四层获取源IP方式。</p>
+     * @param GetRealIpType <p>四层获取源IP方式。</p>
      */
     public void setGetRealIpType(String GetRealIpType) {
         this.GetRealIpType = GetRealIpType;
     }
 
     /**
-     * Get 连接超时时间。 
-     * @return IdleTimeout 连接超时时间。
+     * Get <p>连接超时时间。</p> 
+     * @return IdleTimeout <p>连接超时时间。</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set 连接超时时间。
-     * @param IdleTimeout 连接超时时间。
+     * Set <p>连接超时时间。</p>
+     * @param IdleTimeout <p>连接超时时间。</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;

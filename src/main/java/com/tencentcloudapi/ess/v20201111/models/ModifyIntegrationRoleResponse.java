@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyIntegrationRoleResponse extends AbstractModel {
 
     /**
-    * 角色id
+    * <p>角色id</p>
     */
     @SerializedName("RoleId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyIntegrationRoleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 角色id 
-     * @return RoleId 角色id
+     * Get <p>角色id</p> 
+     * @return RoleId <p>角色id</p>
      */
     public String getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 角色id
-     * @param RoleId 角色id
+     * Set <p>角色id</p>
+     * @param RoleId <p>角色id</p>
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;

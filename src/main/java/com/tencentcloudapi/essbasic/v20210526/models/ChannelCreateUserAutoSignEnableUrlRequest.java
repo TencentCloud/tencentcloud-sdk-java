@@ -31,7 +31,7 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+    * <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
     */
     @SerializedName("SceneKey")
     @Expose
@@ -45,7 +45,7 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * <p>自动签开通配置信息, 包括开通的人员的信息等</p>
+    * <p>授权签开通配置信息, 包括开通的人员的信息等</p>
     */
     @SerializedName("AutoSignConfig")
     @Expose
@@ -80,7 +80,7 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     private Long ExpiredTime;
 
     /**
-    * <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
+    * <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人授权签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
     */
     @SerializedName("UserData")
     @Expose
@@ -110,16 +110,16 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
-     * @return SceneKey <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Get <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul> 
+     * @return SceneKey <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
-     * @param SceneKey <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Set <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
+     * @param SceneKey <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;
@@ -142,16 +142,16 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>自动签开通配置信息, 包括开通的人员的信息等</p> 
-     * @return AutoSignConfig <p>自动签开通配置信息, 包括开通的人员的信息等</p>
+     * Get <p>授权签开通配置信息, 包括开通的人员的信息等</p> 
+     * @return AutoSignConfig <p>授权签开通配置信息, 包括开通的人员的信息等</p>
      */
     public AutoSignConfig getAutoSignConfig() {
         return this.AutoSignConfig;
     }
 
     /**
-     * Set <p>自动签开通配置信息, 包括开通的人员的信息等</p>
-     * @param AutoSignConfig <p>自动签开通配置信息, 包括开通的人员的信息等</p>
+     * Set <p>授权签开通配置信息, 包括开通的人员的信息等</p>
+     * @param AutoSignConfig <p>授权签开通配置信息, 包括开通的人员的信息等</p>
      */
     public void setAutoSignConfig(AutoSignConfig AutoSignConfig) {
         this.AutoSignConfig = AutoSignConfig;
@@ -222,16 +222,16 @@ public class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p> 
-     * @return UserData <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
+     * Get <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人授权签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p> 
+     * @return UserData <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人授权签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
-     * @param UserData <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人自动签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
+     * Set <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人授权签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
+     * @param UserData <p>调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。 在个人授权签的开通、关闭等回调信息场景中，该字段的信息将原封不动地透传给贵方。</p>
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;

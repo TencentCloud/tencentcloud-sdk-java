@@ -38,7 +38,7 @@ public class AICallInteractionRound extends AbstractModel {
     private Long RoundIndex;
 
     /**
-    * <p>用户回复分类的标签， json序列化后的表示</p>
+    * <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
     */
     @SerializedName("Tags")
     @Expose
@@ -91,16 +91,16 @@ public class AICallInteractionRound extends AbstractModel {
     }
 
     /**
-     * Get <p>用户回复分类的标签， json序列化后的表示</p> 
-     * @return Tags <p>用户回复分类的标签， json序列化后的表示</p>
+     * Get <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p> 
+     * @return Tags <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <p>用户回复分类的标签， json序列化后的表示</p>
-     * @param Tags <p>用户回复分类的标签， json序列化后的表示</p>
+     * Set <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
+     * @param Tags <p>本轮命中的普通标签列表（TagType 为 1），json 序列化后的字符串。数组元素含 TagName（标签名）、TagValue（标签值）、TagType（标签类型，1 表示普通标签）三个字段；无标签时为空字符串。</p>
      */
     public void setTags(String Tags) {
         this.Tags = Tags;

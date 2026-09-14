@@ -83,6 +83,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *批量查询 TWeSee 订单状态
+     * @param req BatchDescribeTWeSeeOrdersRequest
+     * @return BatchDescribeTWeSeeOrdersResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDescribeTWeSeeOrdersResponse BatchDescribeTWeSeeOrders(BatchDescribeTWeSeeOrdersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchDescribeTWeSeeOrders", BatchDescribeTWeSeeOrdersResponse.class);
+    }
+
+    /**
      *批量同步执行 TWeSee 语义理解任务
      * @param req BatchInvokeTWeSeeRecognitionTaskRequest
      * @return BatchInvokeTWeSeeRecognitionTaskResponse
@@ -2518,6 +2529,17 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyTopicRuleResponse ModifyTopicRule(ModifyTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTopicRule", ModifyTopicRuleResponse.class);
+    }
+
+    /**
+     *查询、删除或列举 TWeSee 直传对象
+     * @param req OperateTWeSeeDirectUploadObjectRequest
+     * @return OperateTWeSeeDirectUploadObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateTWeSeeDirectUploadObjectResponse OperateTWeSeeDirectUploadObject(OperateTWeSeeDirectUploadObjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OperateTWeSeeDirectUploadObject", OperateTWeSeeDirectUploadObjectResponse.class);
     }
 
     /**

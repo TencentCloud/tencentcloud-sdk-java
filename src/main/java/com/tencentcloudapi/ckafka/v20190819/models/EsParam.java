@@ -171,6 +171,13 @@ public class EsParam extends AbstractModel {
     private String Protocol;
 
     /**
+    * <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+    */
+    @SerializedName("SourceDataFormat")
+    @Expose
+    private String SourceDataFormat;
+
+    /**
      * Get <p>Es实例资源Id</p> 
      * @return Resource <p>Es实例资源Id</p>
      */
@@ -506,6 +513,22 @@ public class EsParam extends AbstractModel {
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul> 
+     * @return SourceDataFormat <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+     */
+    public String getSourceDataFormat() {
+        return this.SourceDataFormat;
+    }
+
+    /**
+     * Set <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+     * @param SourceDataFormat <p>用户选择数据订阅任务的数据（如DTS）时，源数据的格式</p><p>枚举值：</p><ul><li>Debezium： Debezium格式json</li><li>Canal： Canal格式json</li></ul>
+     */
+    public void setSourceDataFormat(String SourceDataFormat) {
+        this.SourceDataFormat = SourceDataFormat;
+    }
+
     public EsParam() {
     }
 
@@ -580,6 +603,9 @@ public class EsParam extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.SourceDataFormat != null) {
+            this.SourceDataFormat = new String(source.SourceDataFormat);
+        }
     }
 
 
@@ -608,6 +634,7 @@ public class EsParam extends AbstractModel {
         this.setParamSimple(map, prefix + "DateField", this.DateField);
         this.setParamSimple(map, prefix + "RecordMappingMode", this.RecordMappingMode);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "SourceDataFormat", this.SourceDataFormat);
 
     }
 }

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ChannelDescribeRolesResponse extends AbstractModel {
 
     /**
-    * 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+    * <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+    * <p>指定每页返回的数据条数，和Offset参数配合使用，单页最大200。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询角色的总数量
+    * <p>查询角色的总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 查询的角色信息列表
+    * <p>查询的角色信息列表</p>
     */
     @SerializedName("ChannelRoles")
     @Expose
@@ -59,64 +59,64 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。 
-     * @return Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+     * Get <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。</p> 
+     * @return Offset <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
-     * @param Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+     * Set <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。</p>
+     * @param Offset <p>查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。 
-     * @return Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+     * Get <p>指定每页返回的数据条数，和Offset参数配合使用，单页最大200。</p> 
+     * @return Limit <p>指定每页返回的数据条数，和Offset参数配合使用，单页最大200。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
-     * @param Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+     * Set <p>指定每页返回的数据条数，和Offset参数配合使用，单页最大200。</p>
+     * @param Limit <p>指定每页返回的数据条数，和Offset参数配合使用，单页最大200。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询角色的总数量 
-     * @return TotalCount 查询角色的总数量
+     * Get <p>查询角色的总数量</p> 
+     * @return TotalCount <p>查询角色的总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询角色的总数量
-     * @param TotalCount 查询角色的总数量
+     * Set <p>查询角色的总数量</p>
+     * @param TotalCount <p>查询角色的总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 查询的角色信息列表 
-     * @return ChannelRoles 查询的角色信息列表
+     * Get <p>查询的角色信息列表</p> 
+     * @return ChannelRoles <p>查询的角色信息列表</p>
      */
     public ChannelRole [] getChannelRoles() {
         return this.ChannelRoles;
     }
 
     /**
-     * Set 查询的角色信息列表
-     * @param ChannelRoles 查询的角色信息列表
+     * Set <p>查询的角色信息列表</p>
+     * @param ChannelRoles <p>查询的角色信息列表</p>
      */
     public void setChannelRoles(ChannelRole [] ChannelRoles) {
         this.ChannelRoles = ChannelRoles;

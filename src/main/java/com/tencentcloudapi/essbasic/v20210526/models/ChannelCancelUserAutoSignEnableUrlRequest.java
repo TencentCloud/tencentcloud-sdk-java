@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class ChannelCancelUserAutoSignEnableUrlRequest extends AbstractModel {
 
     /**
-    * 渠道应用相关信息
+    * <p>渠道应用相关信息</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 操作人信息
+    * <p>操作人信息</p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+    * <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
     */
     @SerializedName("SceneKey")
     @Expose
     private String SceneKey;
 
     /**
-    * 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+    * <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
     */
     @SerializedName("UserInfo")
     @Expose
     private UserThreeFactor UserInfo;
 
     /**
-     * Get 渠道应用相关信息 
-     * @return Agent 渠道应用相关信息
+     * Get <p>渠道应用相关信息</p> 
+     * @return Agent <p>渠道应用相关信息</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息
-     * @param Agent 渠道应用相关信息
+     * Set <p>渠道应用相关信息</p>
+     * @param Agent <p>渠道应用相关信息</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get <p>操作人信息</p> 
+     * @return Operator <p>操作人信息</p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set <p>操作人信息</p>
+     * @param Operator <p>操作人信息</p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
-     * @return SceneKey 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Get <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul> 
+     * @return SceneKey <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
-     * @param SceneKey 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * Set <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
+     * @param SceneKey <p>授权签使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景</li><li>OTHER： 通用场景</li></ul>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;
     }
 
     /**
-     * Get 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。 
-     * @return UserInfo 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * Get <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p> 
+     * @return UserInfo <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
      */
     public UserThreeFactor getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
-     * @param UserInfo 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * Set <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
+     * @param UserInfo <p>指定撤销链接的用户信息，包含姓名、证件类型、证件号码。</p>
      */
     public void setUserInfo(UserThreeFactor UserInfo) {
         this.UserInfo = UserInfo;

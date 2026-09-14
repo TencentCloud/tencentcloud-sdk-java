@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AssociateAddressRequest extends AbstractModel {
 
     /**
-    * 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
+    * <p>标识 EIP 的唯一 ID。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。EIP 唯一 ID 形如：<code>eip-11112222</code>。</p>
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 要绑定的实例 ID。实例 ID 形如：`ins-11112222`、`lb-11112222`。可通过登录[控制台](https://console.cloud.tencent.com/cvm)查询，也可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+    * <p>要绑定的实例 ID。实例 ID 形如：<code>ins-11112222</code>、<code>lb-11112222</code>。可通过登录<a href="https://console.cloud.tencent.com/cvm">控制台</a>查询，也可通过 <a href="https://cloud.tencent.com/document/api/213/15728">DescribeInstances</a> 接口返回值中的<code>InstanceId</code>获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 与 `InstanceId` 不可同时指定。弹性网卡 ID 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`networkInterfaceId`获取。
+    * <p>要绑定的弹性网卡 ID。 弹性网卡 ID 形如：<code>eni-11112222</code>。<code>NetworkInterfaceId</code> 与 <code>InstanceId</code> 不可同时指定。弹性网卡 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>networkInterfaceId</code>获取。</p>
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 要绑定的内网 IP。如果指定了 `NetworkInterfaceId` 则也必须指定 `PrivateIpAddress` ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`privateIpAddress`获取。
+    * <p>要绑定的内网 IP。如果指定了 <code>NetworkInterfaceId</code> 则也必须指定 <code>PrivateIpAddress</code> ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 <code>PrivateIpAddress</code> 是指定的 <code>NetworkInterfaceId</code> 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>privateIpAddress</code>获取。</p>
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+    * <p>指定绑定时是否设置直通。弹性公网 IP 直通请参见 <a href="https://cloud.tencent.com/document/product/1199/41709">EIP 直通</a>。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 <a href="https://console.cloud.tencent.com/workorder/category?level1_id=6&amp;level2_id=163&amp;source=0&amp;data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&amp;level3_id=1071&amp;queue=96&amp;scene_code=34639&amp;step=2">工单申请</a>。</p>
     */
     @SerializedName("EipDirectConnection")
     @Expose
     private Boolean EipDirectConnection;
 
     /**
-    * 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
+    * <p>要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。</p>
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-     * Get 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。 
-     * @return AddressId 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
+     * Get <p>标识 EIP 的唯一 ID。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。EIP 唯一 ID 形如：<code>eip-11112222</code>。</p> 
+     * @return AddressId <p>标识 EIP 的唯一 ID。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。EIP 唯一 ID 形如：<code>eip-11112222</code>。</p>
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param AddressId 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
+     * Set <p>标识 EIP 的唯一 ID。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。EIP 唯一 ID 形如：<code>eip-11112222</code>。</p>
+     * @param AddressId <p>标识 EIP 的唯一 ID。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。EIP 唯一 ID 形如：<code>eip-11112222</code>。</p>
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 要绑定的实例 ID。实例 ID 形如：`ins-11112222`、`lb-11112222`。可通过登录[控制台](https://console.cloud.tencent.com/cvm)查询，也可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。 
-     * @return InstanceId 要绑定的实例 ID。实例 ID 形如：`ins-11112222`、`lb-11112222`。可通过登录[控制台](https://console.cloud.tencent.com/cvm)查询，也可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+     * Get <p>要绑定的实例 ID。实例 ID 形如：<code>ins-11112222</code>、<code>lb-11112222</code>。可通过登录<a href="https://console.cloud.tencent.com/cvm">控制台</a>查询，也可通过 <a href="https://cloud.tencent.com/document/api/213/15728">DescribeInstances</a> 接口返回值中的<code>InstanceId</code>获取。</p> 
+     * @return InstanceId <p>要绑定的实例 ID。实例 ID 形如：<code>ins-11112222</code>、<code>lb-11112222</code>。可通过登录<a href="https://console.cloud.tencent.com/cvm">控制台</a>查询，也可通过 <a href="https://cloud.tencent.com/document/api/213/15728">DescribeInstances</a> 接口返回值中的<code>InstanceId</code>获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 要绑定的实例 ID。实例 ID 形如：`ins-11112222`、`lb-11112222`。可通过登录[控制台](https://console.cloud.tencent.com/cvm)查询，也可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
-     * @param InstanceId 要绑定的实例 ID。实例 ID 形如：`ins-11112222`、`lb-11112222`。可通过登录[控制台](https://console.cloud.tencent.com/cvm)查询，也可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+     * Set <p>要绑定的实例 ID。实例 ID 形如：<code>ins-11112222</code>、<code>lb-11112222</code>。可通过登录<a href="https://console.cloud.tencent.com/cvm">控制台</a>查询，也可通过 <a href="https://cloud.tencent.com/document/api/213/15728">DescribeInstances</a> 接口返回值中的<code>InstanceId</code>获取。</p>
+     * @param InstanceId <p>要绑定的实例 ID。实例 ID 形如：<code>ins-11112222</code>、<code>lb-11112222</code>。可通过登录<a href="https://console.cloud.tencent.com/cvm">控制台</a>查询，也可通过 <a href="https://cloud.tencent.com/document/api/213/15728">DescribeInstances</a> 接口返回值中的<code>InstanceId</code>获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 与 `InstanceId` 不可同时指定。弹性网卡 ID 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`networkInterfaceId`获取。 
-     * @return NetworkInterfaceId 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 与 `InstanceId` 不可同时指定。弹性网卡 ID 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`networkInterfaceId`获取。
+     * Get <p>要绑定的弹性网卡 ID。 弹性网卡 ID 形如：<code>eni-11112222</code>。<code>NetworkInterfaceId</code> 与 <code>InstanceId</code> 不可同时指定。弹性网卡 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>networkInterfaceId</code>获取。</p> 
+     * @return NetworkInterfaceId <p>要绑定的弹性网卡 ID。 弹性网卡 ID 形如：<code>eni-11112222</code>。<code>NetworkInterfaceId</code> 与 <code>InstanceId</code> 不可同时指定。弹性网卡 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>networkInterfaceId</code>获取。</p>
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 与 `InstanceId` 不可同时指定。弹性网卡 ID 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`networkInterfaceId`获取。
-     * @param NetworkInterfaceId 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：`eni-11112222`。`NetworkInterfaceId` 与 `InstanceId` 不可同时指定。弹性网卡 ID 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`networkInterfaceId`获取。
+     * Set <p>要绑定的弹性网卡 ID。 弹性网卡 ID 形如：<code>eni-11112222</code>。<code>NetworkInterfaceId</code> 与 <code>InstanceId</code> 不可同时指定。弹性网卡 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>networkInterfaceId</code>获取。</p>
+     * @param NetworkInterfaceId <p>要绑定的弹性网卡 ID。 弹性网卡 ID 形如：<code>eni-11112222</code>。<code>NetworkInterfaceId</code> 与 <code>InstanceId</code> 不可同时指定。弹性网卡 ID 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>networkInterfaceId</code>获取。</p>
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 要绑定的内网 IP。如果指定了 `NetworkInterfaceId` 则也必须指定 `PrivateIpAddress` ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`privateIpAddress`获取。 
-     * @return PrivateIpAddress 要绑定的内网 IP。如果指定了 `NetworkInterfaceId` 则也必须指定 `PrivateIpAddress` ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`privateIpAddress`获取。
+     * Get <p>要绑定的内网 IP。如果指定了 <code>NetworkInterfaceId</code> 则也必须指定 <code>PrivateIpAddress</code> ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 <code>PrivateIpAddress</code> 是指定的 <code>NetworkInterfaceId</code> 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>privateIpAddress</code>获取。</p> 
+     * @return PrivateIpAddress <p>要绑定的内网 IP。如果指定了 <code>NetworkInterfaceId</code> 则也必须指定 <code>PrivateIpAddress</code> ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 <code>PrivateIpAddress</code> 是指定的 <code>NetworkInterfaceId</code> 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>privateIpAddress</code>获取。</p>
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set 要绑定的内网 IP。如果指定了 `NetworkInterfaceId` 则也必须指定 `PrivateIpAddress` ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`privateIpAddress`获取。
-     * @param PrivateIpAddress 要绑定的内网 IP。如果指定了 `NetworkInterfaceId` 则也必须指定 `PrivateIpAddress` ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 `PrivateIpAddress` 是指定的 `NetworkInterfaceId` 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的`privateIpAddress`获取。
+     * Set <p>要绑定的内网 IP。如果指定了 <code>NetworkInterfaceId</code> 则也必须指定 <code>PrivateIpAddress</code> ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 <code>PrivateIpAddress</code> 是指定的 <code>NetworkInterfaceId</code> 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>privateIpAddress</code>获取。</p>
+     * @param PrivateIpAddress <p>要绑定的内网 IP。如果指定了 <code>NetworkInterfaceId</code> 则也必须指定 <code>PrivateIpAddress</code> ，表示将 EIP 绑定到指定弹性网卡的指定内网 IP 上。同时要确保指定的 <code>PrivateIpAddress</code> 是指定的 <code>NetworkInterfaceId</code> 上的一个内网 IP。指定弹性网卡的内网 IP 可通过登录<a href="https://console.cloud.tencent.com/vpc/eni">控制台</a>查询，也可通过<a href="https://cloud.tencent.com/document/api/215/15817">DescribeNetworkInterfaces</a>接口返回值中的<code>privateIpAddress</code>获取。</p>
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。 
-     * @return EipDirectConnection 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+     * Get <p>指定绑定时是否设置直通。弹性公网 IP 直通请参见 <a href="https://cloud.tencent.com/document/product/1199/41709">EIP 直通</a>。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 <a href="https://console.cloud.tencent.com/workorder/category?level1_id=6&amp;level2_id=163&amp;source=0&amp;data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&amp;level3_id=1071&amp;queue=96&amp;scene_code=34639&amp;step=2">工单申请</a>。</p> 
+     * @return EipDirectConnection <p>指定绑定时是否设置直通。弹性公网 IP 直通请参见 <a href="https://cloud.tencent.com/document/product/1199/41709">EIP 直通</a>。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 <a href="https://console.cloud.tencent.com/workorder/category?level1_id=6&amp;level2_id=163&amp;source=0&amp;data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&amp;level3_id=1071&amp;queue=96&amp;scene_code=34639&amp;step=2">工单申请</a>。</p>
      */
     public Boolean getEipDirectConnection() {
         return this.EipDirectConnection;
     }
 
     /**
-     * Set 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
-     * @param EipDirectConnection 指定绑定时是否设置直通。弹性公网 IP 直通请参见 [EIP 直通](https://cloud.tencent.com/document/product/1199/41709)。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2)。
+     * Set <p>指定绑定时是否设置直通。弹性公网 IP 直通请参见 <a href="https://cloud.tencent.com/document/product/1199/41709">EIP 直通</a>。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 <a href="https://console.cloud.tencent.com/workorder/category?level1_id=6&amp;level2_id=163&amp;source=0&amp;data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&amp;level3_id=1071&amp;queue=96&amp;scene_code=34639&amp;step=2">工单申请</a>。</p>
+     * @param EipDirectConnection <p>指定绑定时是否设置直通。弹性公网 IP 直通请参见 <a href="https://cloud.tencent.com/document/product/1199/41709">EIP 直通</a>。取值：true、false，默认值为 false。当绑定 CVM 实例、EKS 弹性集群时，可设定此参数为 true。此参数目前处于内测中，如需使用，请提交 <a href="https://console.cloud.tencent.com/workorder/category?level1_id=6&amp;level2_id=163&amp;source=0&amp;data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&amp;level3_id=1071&amp;queue=96&amp;scene_code=34639&amp;step=2">工单申请</a>。</p>
      */
     public void setEipDirectConnection(Boolean EipDirectConnection) {
         this.EipDirectConnection = EipDirectConnection;
     }
 
     /**
-     * Get 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。 
-     * @return InstanceRegion 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
+     * Get <p>要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。</p> 
+     * @return InstanceRegion <p>要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。</p>
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
-     * @param InstanceRegion 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
+     * Set <p>要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。</p>
+     * @param InstanceRegion <p>要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。</p>
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
