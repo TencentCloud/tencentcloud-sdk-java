@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribePartitionDetailRequest extends AbstractModel {
 
     /**
-    * 分区编码
+    * <p>分区编码</p>
     */
     @SerializedName("PartitionCode")
     @Expose
     private String PartitionCode;
 
     /**
-     * Get 分区编码 
-     * @return PartitionCode 分区编码
+     * Get <p>分区编码</p> 
+     * @return PartitionCode <p>分区编码</p>
      */
     public String getPartitionCode() {
         return this.PartitionCode;
     }
 
     /**
-     * Set 分区编码
-     * @param PartitionCode 分区编码
+     * Set <p>分区编码</p>
+     * @param PartitionCode <p>分区编码</p>
      */
     public void setPartitionCode(String PartitionCode) {
         this.PartitionCode = PartitionCode;

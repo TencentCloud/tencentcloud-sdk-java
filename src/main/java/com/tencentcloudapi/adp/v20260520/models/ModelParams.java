@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModelParams extends AbstractModel {
 
     /**
-    * 是否开启深度思考
+    * <p>是否开启深度思考</p>
     */
     @SerializedName("DeepThinking")
     @Expose
     private String DeepThinking;
 
     /**
-    * 频率惩罚
+    * <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrequencyPenalty")
@@ -39,7 +39,7 @@ public class ModelParams extends AbstractModel {
     private Float FrequencyPenalty;
 
     /**
-    * 最大输出长度
+    * <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxTokens")
@@ -47,7 +47,7 @@ public class ModelParams extends AbstractModel {
     private Long MaxTokens;
 
     /**
-    * 存在惩罚
+    * <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PresencePenalty")
@@ -55,14 +55,14 @@ public class ModelParams extends AbstractModel {
     private Float PresencePenalty;
 
     /**
-    * 深度思考效果
+    * <p>深度思考效果</p>
     */
     @SerializedName("ReasoningEffort")
     @Expose
     private String ReasoningEffort;
 
     /**
-    * 重复惩罚
+    * <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepetitionPenalty")
@@ -70,14 +70,14 @@ public class ModelParams extends AbstractModel {
     private Float RepetitionPenalty;
 
     /**
-    * 输出格式（text、json_object）
+    * <p>输出格式（text、json_object）</p>
     */
     @SerializedName("ReplyFormat")
     @Expose
     private String ReplyFormat;
 
     /**
-    * seed 随机种子
+    * <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seed")
@@ -85,14 +85,14 @@ public class ModelParams extends AbstractModel {
     private Long Seed;
 
     /**
-    * 停止序列
+    * <p>停止序列</p>
     */
     @SerializedName("StopSequenceList")
     @Expose
     private String [] StopSequenceList;
 
     /**
-    * 温度
+    * <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Temperature")
@@ -100,7 +100,7 @@ public class ModelParams extends AbstractModel {
     private Float Temperature;
 
     /**
-    * top_p
+    * <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopP")
@@ -108,25 +108,32 @@ public class ModelParams extends AbstractModel {
     private Float TopP;
 
     /**
-     * Get 是否开启深度思考 
-     * @return DeepThinking 是否开启深度思考
+    * <p>top_k</p>
+    */
+    @SerializedName("TopK")
+    @Expose
+    private Long TopK;
+
+    /**
+     * Get <p>是否开启深度思考</p> 
+     * @return DeepThinking <p>是否开启深度思考</p>
      */
     public String getDeepThinking() {
         return this.DeepThinking;
     }
 
     /**
-     * Set 是否开启深度思考
-     * @param DeepThinking 是否开启深度思考
+     * Set <p>是否开启深度思考</p>
+     * @param DeepThinking <p>是否开启深度思考</p>
      */
     public void setDeepThinking(String DeepThinking) {
         this.DeepThinking = DeepThinking;
     }
 
     /**
-     * Get 频率惩罚
+     * Get <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrequencyPenalty 频率惩罚
+     * @return FrequencyPenalty <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFrequencyPenalty() {
@@ -134,9 +141,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set 频率惩罚
+     * Set <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrequencyPenalty 频率惩罚
+     * @param FrequencyPenalty <p>频率惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrequencyPenalty(Float FrequencyPenalty) {
@@ -144,9 +151,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Get 最大输出长度
+     * Get <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxTokens 最大输出长度
+     * @return MaxTokens <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxTokens() {
@@ -154,9 +161,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set 最大输出长度
+     * Set <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxTokens 最大输出长度
+     * @param MaxTokens <p>最大输出长度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxTokens(Long MaxTokens) {
@@ -164,9 +171,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Get 存在惩罚
+     * Get <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PresencePenalty 存在惩罚
+     * @return PresencePenalty <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPresencePenalty() {
@@ -174,9 +181,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set 存在惩罚
+     * Set <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PresencePenalty 存在惩罚
+     * @param PresencePenalty <p>存在惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPresencePenalty(Float PresencePenalty) {
@@ -184,25 +191,25 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Get 深度思考效果 
-     * @return ReasoningEffort 深度思考效果
+     * Get <p>深度思考效果</p> 
+     * @return ReasoningEffort <p>深度思考效果</p>
      */
     public String getReasoningEffort() {
         return this.ReasoningEffort;
     }
 
     /**
-     * Set 深度思考效果
-     * @param ReasoningEffort 深度思考效果
+     * Set <p>深度思考效果</p>
+     * @param ReasoningEffort <p>深度思考效果</p>
      */
     public void setReasoningEffort(String ReasoningEffort) {
         this.ReasoningEffort = ReasoningEffort;
     }
 
     /**
-     * Get 重复惩罚
+     * Get <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RepetitionPenalty 重复惩罚
+     * @return RepetitionPenalty <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRepetitionPenalty() {
@@ -210,9 +217,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set 重复惩罚
+     * Set <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RepetitionPenalty 重复惩罚
+     * @param RepetitionPenalty <p>重复惩罚</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepetitionPenalty(Float RepetitionPenalty) {
@@ -220,25 +227,25 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Get 输出格式（text、json_object） 
-     * @return ReplyFormat 输出格式（text、json_object）
+     * Get <p>输出格式（text、json_object）</p> 
+     * @return ReplyFormat <p>输出格式（text、json_object）</p>
      */
     public String getReplyFormat() {
         return this.ReplyFormat;
     }
 
     /**
-     * Set 输出格式（text、json_object）
-     * @param ReplyFormat 输出格式（text、json_object）
+     * Set <p>输出格式（text、json_object）</p>
+     * @param ReplyFormat <p>输出格式（text、json_object）</p>
      */
     public void setReplyFormat(String ReplyFormat) {
         this.ReplyFormat = ReplyFormat;
     }
 
     /**
-     * Get seed 随机种子
+     * Get <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Seed seed 随机种子
+     * @return Seed <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSeed() {
@@ -246,9 +253,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set seed 随机种子
+     * Set <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Seed seed 随机种子
+     * @param Seed <p>seed 随机种子</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeed(Long Seed) {
@@ -256,25 +263,25 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Get 停止序列 
-     * @return StopSequenceList 停止序列
+     * Get <p>停止序列</p> 
+     * @return StopSequenceList <p>停止序列</p>
      */
     public String [] getStopSequenceList() {
         return this.StopSequenceList;
     }
 
     /**
-     * Set 停止序列
-     * @param StopSequenceList 停止序列
+     * Set <p>停止序列</p>
+     * @param StopSequenceList <p>停止序列</p>
      */
     public void setStopSequenceList(String [] StopSequenceList) {
         this.StopSequenceList = StopSequenceList;
     }
 
     /**
-     * Get 温度
+     * Get <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Temperature 温度
+     * @return Temperature <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTemperature() {
@@ -282,9 +289,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set 温度
+     * Set <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Temperature 温度
+     * @param Temperature <p>温度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemperature(Float Temperature) {
@@ -292,9 +299,9 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Get top_p
+     * Get <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopP top_p
+     * @return TopP <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopP() {
@@ -302,13 +309,29 @@ public class ModelParams extends AbstractModel {
     }
 
     /**
-     * Set top_p
+     * Set <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopP top_p
+     * @param TopP <p>top_p</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopP(Float TopP) {
         this.TopP = TopP;
+    }
+
+    /**
+     * Get <p>top_k</p> 
+     * @return TopK <p>top_k</p>
+     */
+    public Long getTopK() {
+        return this.TopK;
+    }
+
+    /**
+     * Set <p>top_k</p>
+     * @param TopK <p>top_k</p>
+     */
+    public void setTopK(Long TopK) {
+        this.TopK = TopK;
     }
 
     public ModelParams() {
@@ -355,6 +378,9 @@ public class ModelParams extends AbstractModel {
         if (source.TopP != null) {
             this.TopP = new Float(source.TopP);
         }
+        if (source.TopK != null) {
+            this.TopK = new Long(source.TopK);
+        }
     }
 
 
@@ -373,6 +399,7 @@ public class ModelParams extends AbstractModel {
         this.setParamArraySimple(map, prefix + "StopSequenceList.", this.StopSequenceList);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "TopP", this.TopP);
+        this.setParamSimple(map, prefix + "TopK", this.TopK);
 
     }
 }

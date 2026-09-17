@@ -31,7 +31,7 @@ public class DeleteCustomErrorPageRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 自定义页面 ID。
+    * 自定义响应页面 ID。
     */
     @SerializedName("PageId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteCustomErrorPageRequest extends AbstractModel {
     }
 
     /**
-     * Get 自定义页面 ID。 
-     * @return PageId 自定义页面 ID。
+     * Get 自定义响应页面 ID。 
+     * @return PageId 自定义响应页面 ID。
      */
     public String getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 自定义页面 ID。
-     * @param PageId 自定义页面 ID。
+     * Set 自定义响应页面 ID。
+     * @param PageId 自定义响应页面 ID。
      */
     public void setPageId(String PageId) {
         this.PageId = PageId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMonitorDetailResponse extends AbstractModel {
 
     /**
-    * 探测规则
+    * <p>探测规则</p>
     */
     @SerializedName("MonitorDetail")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMonitorDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 探测规则 
-     * @return MonitorDetail 探测规则
+     * Get <p>探测规则</p> 
+     * @return MonitorDetail <p>探测规则</p>
      */
     public MonitorDetail getMonitorDetail() {
         return this.MonitorDetail;
     }
 
     /**
-     * Set 探测规则
-     * @param MonitorDetail 探测规则
+     * Set <p>探测规则</p>
+     * @param MonitorDetail <p>探测规则</p>
      */
     public void setMonitorDetail(MonitorDetail MonitorDetail) {
         this.MonitorDetail = MonitorDetail;

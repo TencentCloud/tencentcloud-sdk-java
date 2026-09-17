@@ -288,6 +288,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *用户在购买平台版套餐后，可调用此接口创建平台版套餐环境，将产生一个平台版套餐环境。
+     * @param req CreatePlatformEnvRequest
+     * @return CreatePlatformEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePlatformEnvResponse CreatePlatformEnv(CreatePlatformEnvRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePlatformEnv", CreatePlatformEnvResponse.class);
+    }
+
+    /**
      *创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
      * @param req CreateStaticStoreRequest
      * @return CreateStaticStoreResponse
@@ -829,6 +840,88 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询平台版资源计费周期。
+云开发平台版资源点都是按月结算的，每个月都有一定的抵扣额度。
+
+例如：
+  某个平台版在 2026-01-05 购买了3个月(到期时间: 2026-04-05)，则他可以在以下3个周期内，分别享有40000资源点的额度：
+  1. 2026-01-05 ~ 2026-02-05 23:59:59
+  2. 2026-02-06 ~ 2026-03-05 23:59:59
+  3. 2026-03-06 ~ 2026-04-05 23:59:59
+
+本接口，用于获取平台版当前属于哪个计费周期内。
+
+影响范围：只读查询，不影响平台版资源
+使用场景：控制台资源用量页面/API 主动查询当前计费周期等
+     * @param req DescribePlatformAccountCircleRequest
+     * @return DescribePlatformAccountCircleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformAccountCircleResponse DescribePlatformAccountCircle(DescribePlatformAccountCircleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlatformAccountCircle", DescribePlatformAccountCircleResponse.class);
+    }
+
+    /**
+     *查询平台版本资源点模式下的资源点用量
+     * @param req DescribePlatformCreditsUsageRequest
+     * @return DescribePlatformCreditsUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformCreditsUsageResponse DescribePlatformCreditsUsage(DescribePlatformCreditsUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlatformCreditsUsage", DescribePlatformCreditsUsageResponse.class);
+    }
+
+    /**
+     *查询平台版资源点模式下的资源点用量及原始用量明细
+     * @param req DescribePlatformCreditsUsageDetailRequest
+     * @return DescribePlatformCreditsUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformCreditsUsageDetailResponse DescribePlatformCreditsUsageDetail(DescribePlatformCreditsUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlatformCreditsUsageDetail", DescribePlatformCreditsUsageDetailResponse.class);
+    }
+
+    /**
+     *查询平台版环境资源用量
+
+指定查询范围，按资源类型返回各资源指标的用量及用量明细(按天)
+用量信息包含资源点用量，原始用量值（如流量、调用次数、容量等），原始用量单位等
+
+影响范围：只读查询、不改变资源
+使用场景：控制台用量页/API 查询平台版环境用量
+     * @param req DescribePlatformEnvUsageRequest
+     * @return DescribePlatformEnvUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformEnvUsageResponse DescribePlatformEnvUsage(DescribePlatformEnvUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlatformEnvUsage", DescribePlatformEnvUsageResponse.class);
+    }
+
+    /**
+     *查询平台版资源信息列表，返回信息包括
+
+1.平台版基础信息如资源id，所属地域等;
+2.计费相关信息如：购买/过期时间，资源规格，计费状态等; 
+3.底层资源信息如：存储，日志，静态托管等资源信息等;
+
+入参支持platformIds，可查询指定平台版套餐信息
+
+影响范围：查询接口，返回当前用户账号下平台版资源信息
+使用场景：控制台展示平台版套餐信息/查平台版资源详情/资源状态
+     * @param req DescribePlatformsRequest
+     * @return DescribePlatformsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformsResponse DescribePlatforms(DescribePlatformsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlatforms", DescribePlatformsResponse.class);
+    }
+
+    /**
      *查询指定指标的配额使用量
      * @param req DescribeQuotaDataRequest
      * @return DescribeQuotaDataResponse
@@ -941,6 +1034,17 @@ public class TcbClient extends AbstractClient{
     public DestroyMySQLResponse DestroyMySQL(DestroyMySQLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroyMySQL", DestroyMySQLResponse.class);
+    }
+
+    /**
+     *用户可以调用本接口，删除平台版套餐下的指定平台版环境。
+     * @param req DestroyPlatformEnvRequest
+     * @return DestroyPlatformEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPlatformEnvResponse DestroyPlatformEnv(DestroyPlatformEnvRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyPlatformEnv", DestroyPlatformEnvResponse.class);
     }
 
     /**
@@ -1134,6 +1238,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     public ModifyPGInstanceSpecResponse ModifyPGInstanceSpec(ModifyPGInstanceSpecRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPGInstanceSpec", ModifyPGInstanceSpecResponse.class);
+    }
+
+    /**
+     *修改平台版环境信息
+     * @param req ModifyPlatformEnvRequest
+     * @return ModifyPlatformEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPlatformEnvResponse ModifyPlatformEnv(ModifyPlatformEnvRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPlatformEnv", ModifyPlatformEnvResponse.class);
     }
 
     /**

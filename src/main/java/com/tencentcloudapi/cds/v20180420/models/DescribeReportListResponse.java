@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeReportListResponse extends AbstractModel {
 
     /**
-    * 总数目
+    * <p>总数目</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 数据列表
+    * <p>数据列表</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeReportListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数目 
-     * @return TotalCount 总数目
+     * Get <p>总数目</p> 
+     * @return TotalCount <p>总数目</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数目
-     * @param TotalCount 总数目
+     * Set <p>总数目</p>
+     * @param TotalCount <p>总数目</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据列表 
-     * @return List 数据列表
+     * Get <p>数据列表</p> 
+     * @return List <p>数据列表</p>
      */
     public Reports [] getList() {
         return this.List;
     }
 
     /**
-     * Set 数据列表
-     * @param List 数据列表
+     * Set <p>数据列表</p>
+     * @param List <p>数据列表</p>
      */
     public void setList(Reports [] List) {
         this.List = List;

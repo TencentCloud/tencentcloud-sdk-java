@@ -24,276 +24,280 @@ import java.util.HashMap;
 public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
 
     /**
-    * SSL-VPN SERVER 实例ID
+    * <p>SSL-VPN SERVER 实例ID</p>
     */
     @SerializedName("SslVpnServerId")
     @Expose
     private String SslVpnServerId;
 
     /**
-    * SSL-VPN SERVER NAME
+    * <p>SSL-VPN SERVER NAME</p>
     */
     @SerializedName("SslVpnServerName")
     @Expose
     private String SslVpnServerName;
 
     /**
-    * 本端地址
+    * <p>本端地址</p>
     */
     @SerializedName("LocalAddress")
     @Expose
     private String [] LocalAddress;
 
     /**
-    * 客户端地址
+    * <p>客户端地址</p>
     */
     @SerializedName("RemoteAddress")
     @Expose
     private String RemoteAddress;
 
     /**
-    * SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+    * <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
     */
     @SerializedName("SslVpnProtocol")
     @Expose
     private String SslVpnProtocol;
 
     /**
-    * SSL VPN服务端监听协议端口。
+    * <p>SSL VPN服务端监听协议端口。</p>
     */
     @SerializedName("SslVpnPort")
     @Expose
     private Long SslVpnPort;
 
     /**
-    * 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+    * <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * 认证算法。可选 'SHA1'，默认SHA1。
+    * <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
     */
     @SerializedName("IntegrityAlgorithm")
     @Expose
     private String IntegrityAlgorithm;
 
     /**
-    * 是否支持压缩。当前不支持压缩。默认False。
+    * <p>是否支持压缩。当前不支持压缩。默认False。</p>
     */
     @SerializedName("Compress")
     @Expose
     private Boolean Compress;
 
     /**
-    * 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+    * <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
     */
     @SerializedName("SsoEnabled")
     @Expose
     private Boolean SsoEnabled;
 
     /**
-    * SAML-DATA
+    * <p>SAML-DATA</p>
     */
     @SerializedName("SamlData")
     @Expose
     private String SamlData;
 
     /**
-    * DNS Server地址
+    * <p>DNS Server地址</p>
     */
     @SerializedName("DnsServers")
     @Expose
     private DnsServers DnsServers;
 
     /**
-     * Get SSL-VPN SERVER 实例ID 
-     * @return SslVpnServerId SSL-VPN SERVER 实例ID
+     * Get <p>SSL-VPN SERVER 实例ID</p> 
+     * @return SslVpnServerId <p>SSL-VPN SERVER 实例ID</p>
      */
     public String getSslVpnServerId() {
         return this.SslVpnServerId;
     }
 
     /**
-     * Set SSL-VPN SERVER 实例ID
-     * @param SslVpnServerId SSL-VPN SERVER 实例ID
+     * Set <p>SSL-VPN SERVER 实例ID</p>
+     * @param SslVpnServerId <p>SSL-VPN SERVER 实例ID</p>
      */
     public void setSslVpnServerId(String SslVpnServerId) {
         this.SslVpnServerId = SslVpnServerId;
     }
 
     /**
-     * Get SSL-VPN SERVER NAME 
-     * @return SslVpnServerName SSL-VPN SERVER NAME
+     * Get <p>SSL-VPN SERVER NAME</p> 
+     * @return SslVpnServerName <p>SSL-VPN SERVER NAME</p>
      */
     public String getSslVpnServerName() {
         return this.SslVpnServerName;
     }
 
     /**
-     * Set SSL-VPN SERVER NAME
-     * @param SslVpnServerName SSL-VPN SERVER NAME
+     * Set <p>SSL-VPN SERVER NAME</p>
+     * @param SslVpnServerName <p>SSL-VPN SERVER NAME</p>
      */
     public void setSslVpnServerName(String SslVpnServerName) {
         this.SslVpnServerName = SslVpnServerName;
     }
 
     /**
-     * Get 本端地址 
-     * @return LocalAddress 本端地址
+     * Get <p>本端地址</p> 
+     * @return LocalAddress <p>本端地址</p>
      */
     public String [] getLocalAddress() {
         return this.LocalAddress;
     }
 
     /**
-     * Set 本端地址
-     * @param LocalAddress 本端地址
+     * Set <p>本端地址</p>
+     * @param LocalAddress <p>本端地址</p>
      */
     public void setLocalAddress(String [] LocalAddress) {
         this.LocalAddress = LocalAddress;
     }
 
     /**
-     * Get 客户端地址 
-     * @return RemoteAddress 客户端地址
+     * Get <p>客户端地址</p> 
+     * @return RemoteAddress <p>客户端地址</p>
      */
     public String getRemoteAddress() {
         return this.RemoteAddress;
     }
 
     /**
-     * Set 客户端地址
-     * @param RemoteAddress 客户端地址
+     * Set <p>客户端地址</p>
+     * @param RemoteAddress <p>客户端地址</p>
      */
     public void setRemoteAddress(String RemoteAddress) {
         this.RemoteAddress = RemoteAddress;
     }
 
     /**
-     * Get SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP 
-     * @return SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+     * Get <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p> 
+     * @return SslVpnProtocol <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+     * @deprecated
      */
+    @Deprecated
     public String getSslVpnProtocol() {
         return this.SslVpnProtocol;
     }
 
     /**
-     * Set SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
-     * @param SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+     * Set <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+     * @param SslVpnProtocol <p>SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP</p>
+     * @deprecated
      */
+    @Deprecated
     public void setSslVpnProtocol(String SslVpnProtocol) {
         this.SslVpnProtocol = SslVpnProtocol;
     }
 
     /**
-     * Get SSL VPN服务端监听协议端口。 
-     * @return SslVpnPort SSL VPN服务端监听协议端口。
+     * Get <p>SSL VPN服务端监听协议端口。</p> 
+     * @return SslVpnPort <p>SSL VPN服务端监听协议端口。</p>
      */
     public Long getSslVpnPort() {
         return this.SslVpnPort;
     }
 
     /**
-     * Set SSL VPN服务端监听协议端口。
-     * @param SslVpnPort SSL VPN服务端监听协议端口。
+     * Set <p>SSL VPN服务端监听协议端口。</p>
+     * @param SslVpnPort <p>SSL VPN服务端监听协议端口。</p>
      */
     public void setSslVpnPort(Long SslVpnPort) {
         this.SslVpnPort = SslVpnPort;
     }
 
     /**
-     * Get 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。 
-     * @return EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+     * Get <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p> 
+     * @return EncryptAlgorithm <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
-     * @param EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+     * Set <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
+     * @param EncryptAlgorithm <p>加密算法。可选值 &#39;AES-128-CBC&#39;, &#39;AES-192-CBC&#39;, &#39;AES-256-CBC&#39;, &#39;AES-128-GCM&#39;, &#39;AES-192-GCM&#39;, &#39;AES-256-GCM&#39;, 默认AES-128-CBC。</p>
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get 认证算法。可选 'SHA1'，默认SHA1。 
-     * @return IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
+     * Get <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p> 
+     * @return IntegrityAlgorithm <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
      */
     public String getIntegrityAlgorithm() {
         return this.IntegrityAlgorithm;
     }
 
     /**
-     * Set 认证算法。可选 'SHA1'，默认SHA1。
-     * @param IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
+     * Set <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
+     * @param IntegrityAlgorithm <p>认证算法。可选 &#39;SHA1&#39;, &#39;MD5&#39;, &#39;SHA224&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, &#39;SHA512&#39;，默认SHA1。</p>
      */
     public void setIntegrityAlgorithm(String IntegrityAlgorithm) {
         this.IntegrityAlgorithm = IntegrityAlgorithm;
     }
 
     /**
-     * Get 是否支持压缩。当前不支持压缩。默认False。 
-     * @return Compress 是否支持压缩。当前不支持压缩。默认False。
+     * Get <p>是否支持压缩。当前不支持压缩。默认False。</p> 
+     * @return Compress <p>是否支持压缩。当前不支持压缩。默认False。</p>
      */
     public Boolean getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 是否支持压缩。当前不支持压缩。默认False。
-     * @param Compress 是否支持压缩。当前不支持压缩。默认False。
+     * Set <p>是否支持压缩。当前不支持压缩。默认False。</p>
+     * @param Compress <p>是否支持压缩。当前不支持压缩。默认False。</p>
      */
     public void setCompress(Boolean Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。 
-     * @return SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+     * Get <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p> 
+     * @return SsoEnabled <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
      */
     public Boolean getSsoEnabled() {
         return this.SsoEnabled;
     }
 
     /**
-     * Set 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
-     * @param SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+     * Set <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
+     * @param SsoEnabled <p>是否开启SSO认证。默认为False。该功能当前需要申请开白使用。</p>
      */
     public void setSsoEnabled(Boolean SsoEnabled) {
         this.SsoEnabled = SsoEnabled;
     }
 
     /**
-     * Get SAML-DATA 
-     * @return SamlData SAML-DATA
+     * Get <p>SAML-DATA</p> 
+     * @return SamlData <p>SAML-DATA</p>
      */
     public String getSamlData() {
         return this.SamlData;
     }
 
     /**
-     * Set SAML-DATA
-     * @param SamlData SAML-DATA
+     * Set <p>SAML-DATA</p>
+     * @param SamlData <p>SAML-DATA</p>
      */
     public void setSamlData(String SamlData) {
         this.SamlData = SamlData;
     }
 
     /**
-     * Get DNS Server地址 
-     * @return DnsServers DNS Server地址
+     * Get <p>DNS Server地址</p> 
+     * @return DnsServers <p>DNS Server地址</p>
      */
     public DnsServers getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS Server地址
-     * @param DnsServers DNS Server地址
+     * Set <p>DNS Server地址</p>
+     * @param DnsServers <p>DNS Server地址</p>
      */
     public void setDnsServers(DnsServers DnsServers) {
         this.DnsServers = DnsServers;

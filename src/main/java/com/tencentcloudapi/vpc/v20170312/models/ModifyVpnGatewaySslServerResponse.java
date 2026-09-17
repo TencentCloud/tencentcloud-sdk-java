@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVpnGatewaySslServerResponse extends AbstractModel {
 
     /**
-    * 异步任务TASKID
+    * <p>异步任务TASKID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyVpnGatewaySslServerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务TASKID 
-     * @return TaskId 异步任务TASKID
+     * Get <p>异步任务TASKID</p> 
+     * @return TaskId <p>异步任务TASKID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务TASKID
-     * @param TaskId 异步任务TASKID
+     * Set <p>异步任务TASKID</p>
+     * @param TaskId <p>异步任务TASKID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

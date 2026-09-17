@@ -164,6 +164,34 @@ public class EventDetail extends AbstractModel {
     private BrowseEvent Browse;
 
     /**
+    * <p>聊天消息</p>
+    */
+    @SerializedName("Chat")
+    @Expose
+    private ChatEvent Chat;
+
+    /**
+    * <p>编辑角色资料</p>
+    */
+    @SerializedName("ModifyRole")
+    @Expose
+    private ModifyRoleEvent ModifyRole;
+
+    /**
+    * <p>添加好友</p>
+    */
+    @SerializedName("AddFriend")
+    @Expose
+    private AddFriendEvent AddFriend;
+
+    /**
+    * <p>编辑公会资料</p>
+    */
+    @SerializedName("ModifyGuild")
+    @Expose
+    private ModifyGuildEvent ModifyGuild;
+
+    /**
      * Get <p>登录</p> 
      * @return Login <p>登录</p>
      */
@@ -483,6 +511,70 @@ public class EventDetail extends AbstractModel {
         this.Browse = Browse;
     }
 
+    /**
+     * Get <p>聊天消息</p> 
+     * @return Chat <p>聊天消息</p>
+     */
+    public ChatEvent getChat() {
+        return this.Chat;
+    }
+
+    /**
+     * Set <p>聊天消息</p>
+     * @param Chat <p>聊天消息</p>
+     */
+    public void setChat(ChatEvent Chat) {
+        this.Chat = Chat;
+    }
+
+    /**
+     * Get <p>编辑角色资料</p> 
+     * @return ModifyRole <p>编辑角色资料</p>
+     */
+    public ModifyRoleEvent getModifyRole() {
+        return this.ModifyRole;
+    }
+
+    /**
+     * Set <p>编辑角色资料</p>
+     * @param ModifyRole <p>编辑角色资料</p>
+     */
+    public void setModifyRole(ModifyRoleEvent ModifyRole) {
+        this.ModifyRole = ModifyRole;
+    }
+
+    /**
+     * Get <p>添加好友</p> 
+     * @return AddFriend <p>添加好友</p>
+     */
+    public AddFriendEvent getAddFriend() {
+        return this.AddFriend;
+    }
+
+    /**
+     * Set <p>添加好友</p>
+     * @param AddFriend <p>添加好友</p>
+     */
+    public void setAddFriend(AddFriendEvent AddFriend) {
+        this.AddFriend = AddFriend;
+    }
+
+    /**
+     * Get <p>编辑公会资料</p> 
+     * @return ModifyGuild <p>编辑公会资料</p>
+     */
+    public ModifyGuildEvent getModifyGuild() {
+        return this.ModifyGuild;
+    }
+
+    /**
+     * Set <p>编辑公会资料</p>
+     * @param ModifyGuild <p>编辑公会资料</p>
+     */
+    public void setModifyGuild(ModifyGuildEvent ModifyGuild) {
+        this.ModifyGuild = ModifyGuild;
+    }
+
     public EventDetail() {
     }
 
@@ -551,6 +643,18 @@ public class EventDetail extends AbstractModel {
         if (source.Browse != null) {
             this.Browse = new BrowseEvent(source.Browse);
         }
+        if (source.Chat != null) {
+            this.Chat = new ChatEvent(source.Chat);
+        }
+        if (source.ModifyRole != null) {
+            this.ModifyRole = new ModifyRoleEvent(source.ModifyRole);
+        }
+        if (source.AddFriend != null) {
+            this.AddFriend = new AddFriendEvent(source.AddFriend);
+        }
+        if (source.ModifyGuild != null) {
+            this.ModifyGuild = new ModifyGuildEvent(source.ModifyGuild);
+        }
     }
 
 
@@ -578,6 +682,10 @@ public class EventDetail extends AbstractModel {
         this.setParamObj(map, prefix + "Invitation.", this.Invitation);
         this.setParamObj(map, prefix + "ClaimRedPacket.", this.ClaimRedPacket);
         this.setParamObj(map, prefix + "Browse.", this.Browse);
+        this.setParamObj(map, prefix + "Chat.", this.Chat);
+        this.setParamObj(map, prefix + "ModifyRole.", this.ModifyRole);
+        this.setParamObj(map, prefix + "AddFriend.", this.AddFriend);
+        this.setParamObj(map, prefix + "ModifyGuild.", this.ModifyGuild);
 
     }
 }

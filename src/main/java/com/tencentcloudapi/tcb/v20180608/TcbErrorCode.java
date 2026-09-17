@@ -63,6 +63,9 @@ public enum TcbErrorCode {
      /* 操作冲突。 */
      FAILEDOPERATION_OPERATIONCONFLICT("FailedOperation.OperationConflict"),
      
+     /* 操作超时 */
+     FAILEDOPERATION_OPERATIONTIMEOUT("FailedOperation.OperationTimeout"),
+     
      /* Failed to connect to PostgreSQL instance. */
      FAILEDOPERATION_PGCONNECTERROR("FailedOperation.PGConnectError"),
      

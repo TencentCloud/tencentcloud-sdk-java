@@ -52,6 +52,13 @@ public class RayJobSubmitEntity extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>所属队列别名</p>
+    */
+    @SerializedName("QueueAlias")
+    @Expose
+    private String QueueAlias;
+
+    /**
     * <p>任务状态</p>
     */
     @SerializedName("Status")
@@ -281,6 +288,22 @@ public class RayJobSubmitEntity extends AbstractModel {
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
+    }
+
+    /**
+     * Get <p>所属队列别名</p> 
+     * @return QueueAlias <p>所属队列别名</p>
+     */
+    public String getQueueAlias() {
+        return this.QueueAlias;
+    }
+
+    /**
+     * Set <p>所属队列别名</p>
+     * @param QueueAlias <p>所属队列别名</p>
+     */
+    public void setQueueAlias(String QueueAlias) {
+        this.QueueAlias = QueueAlias;
     }
 
     /**
@@ -687,6 +710,9 @@ public class RayJobSubmitEntity extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.QueueAlias != null) {
+            this.QueueAlias = new String(source.QueueAlias);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -773,6 +799,7 @@ public class RayJobSubmitEntity extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
         this.setParamSimple(map, prefix + "JobName", this.JobName);

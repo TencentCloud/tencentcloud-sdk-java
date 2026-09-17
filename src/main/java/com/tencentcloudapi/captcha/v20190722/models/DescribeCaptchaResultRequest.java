@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeCaptchaResultRequest extends AbstractModel {
 
     /**
-    * 固定填值：9。
+    * <p>固定填值：9。</p>
     */
     @SerializedName("CaptchaType")
     @Expose
     private Long CaptchaType;
 
     /**
-    * 前端回调函数返回的用户验证票据
+    * <p>前端回调函数返回的用户验证票据</p>
     */
     @SerializedName("Ticket")
     @Expose
     private String Ticket;
 
     /**
-    * 业务侧获取到的验证码使用者的外网IP
+    * <p>业务侧获取到的验证码使用者的外网IP</p>
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * 前端回调函数返回的随机字符串
+    * <p>前端回调函数返回的随机字符串</p>
     */
     @SerializedName("Randstr")
     @Expose
     private String Randstr;
 
     /**
-    * 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+    * <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
     */
     @SerializedName("CaptchaAppId")
     @Expose
     private Long CaptchaAppId;
 
     /**
-    * 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+    * <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
     */
     @SerializedName("AppSecretKey")
     @Expose
     private String AppSecretKey;
 
     /**
-    * 预留字段
+    * <p>预留字段</p>
     */
     @SerializedName("BusinessId")
     @Expose
     private Long BusinessId;
 
     /**
-    * 预留字段
+    * <p>预留字段</p>
     */
     @SerializedName("SceneId")
     @Expose
     private Long SceneId;
 
     /**
-    * mac 地址或设备唯一标识
+    * <p>mac 地址或设备唯一标识</p>
     */
     @SerializedName("MacAddress")
     @Expose
     private String MacAddress;
 
     /**
-    * 手机设备号
+    * <p>手机设备号</p>
     */
     @SerializedName("Imei")
     @Expose
     private String Imei;
 
     /**
-    * 是否返回前端获取验证码时间，取值1：需要返回
+    * <p>是否返回前端获取验证码时间，取值1：需要返回</p>
     */
     @SerializedName("NeedGetCaptchaTime")
     @Expose
     private Long NeedGetCaptchaTime;
 
     /**
-     * Get 固定填值：9。 
-     * @return CaptchaType 固定填值：9。
+     * Get <p>固定填值：9。</p> 
+     * @return CaptchaType <p>固定填值：9。</p>
      */
     public Long getCaptchaType() {
         return this.CaptchaType;
     }
 
     /**
-     * Set 固定填值：9。
-     * @param CaptchaType 固定填值：9。
+     * Set <p>固定填值：9。</p>
+     * @param CaptchaType <p>固定填值：9。</p>
      */
     public void setCaptchaType(Long CaptchaType) {
         this.CaptchaType = CaptchaType;
     }
 
     /**
-     * Get 前端回调函数返回的用户验证票据 
-     * @return Ticket 前端回调函数返回的用户验证票据
+     * Get <p>前端回调函数返回的用户验证票据</p> 
+     * @return Ticket <p>前端回调函数返回的用户验证票据</p>
      */
     public String getTicket() {
         return this.Ticket;
     }
 
     /**
-     * Set 前端回调函数返回的用户验证票据
-     * @param Ticket 前端回调函数返回的用户验证票据
+     * Set <p>前端回调函数返回的用户验证票据</p>
+     * @param Ticket <p>前端回调函数返回的用户验证票据</p>
      */
     public void setTicket(String Ticket) {
         this.Ticket = Ticket;
     }
 
     /**
-     * Get 业务侧获取到的验证码使用者的外网IP 
-     * @return UserIp 业务侧获取到的验证码使用者的外网IP
+     * Get <p>业务侧获取到的验证码使用者的外网IP</p> 
+     * @return UserIp <p>业务侧获取到的验证码使用者的外网IP</p>
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 业务侧获取到的验证码使用者的外网IP
-     * @param UserIp 业务侧获取到的验证码使用者的外网IP
+     * Set <p>业务侧获取到的验证码使用者的外网IP</p>
+     * @param UserIp <p>业务侧获取到的验证码使用者的外网IP</p>
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get 前端回调函数返回的随机字符串 
-     * @return Randstr 前端回调函数返回的随机字符串
+     * Get <p>前端回调函数返回的随机字符串</p> 
+     * @return Randstr <p>前端回调函数返回的随机字符串</p>
      */
     public String getRandstr() {
         return this.Randstr;
     }
 
     /**
-     * Set 前端回调函数返回的随机字符串
-     * @param Randstr 前端回调函数返回的随机字符串
+     * Set <p>前端回调函数返回的随机字符串</p>
+     * @param Randstr <p>前端回调函数返回的随机字符串</p>
      */
     public void setRandstr(String Randstr) {
         this.Randstr = Randstr;
     }
 
     /**
-     * Get 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。 
-     * @return CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+     * Get <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p> 
+     * @return CaptchaAppId <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
      */
     public Long getCaptchaAppId() {
         return this.CaptchaAppId;
     }
 
     /**
-     * Set 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
-     * @param CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+     * Set <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
+     * @param CaptchaAppId <p>验证码应用ID。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到CaptchaAppId。</p>
      */
     public void setCaptchaAppId(Long CaptchaAppId) {
         this.CaptchaAppId = CaptchaAppId;
     }
 
     /**
-     * Get 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。 
-     * @return AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+     * Get <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p> 
+     * @return AppSecretKey <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
      */
     public String getAppSecretKey() {
         return this.AppSecretKey;
     }
 
     /**
-     * Set 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
-     * @param AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+     * Set <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
+     * @param AppSecretKey <p>验证码应用密钥。登录 <a href="https://console.cloud.tencent.com/captcha/graphical">验证码控制台</a>，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。</p>
      */
     public void setAppSecretKey(String AppSecretKey) {
         this.AppSecretKey = AppSecretKey;
     }
 
     /**
-     * Get 预留字段 
-     * @return BusinessId 预留字段
+     * Get <p>预留字段</p> 
+     * @return BusinessId <p>预留字段</p>
      */
     public Long getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 预留字段
-     * @param BusinessId 预留字段
+     * Set <p>预留字段</p>
+     * @param BusinessId <p>预留字段</p>
      */
     public void setBusinessId(Long BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 预留字段 
-     * @return SceneId 预留字段
+     * Get <p>预留字段</p> 
+     * @return SceneId <p>预留字段</p>
      */
     public Long getSceneId() {
         return this.SceneId;
     }
 
     /**
-     * Set 预留字段
-     * @param SceneId 预留字段
+     * Set <p>预留字段</p>
+     * @param SceneId <p>预留字段</p>
      */
     public void setSceneId(Long SceneId) {
         this.SceneId = SceneId;
     }
 
     /**
-     * Get mac 地址或设备唯一标识 
-     * @return MacAddress mac 地址或设备唯一标识
+     * Get <p>mac 地址或设备唯一标识</p> 
+     * @return MacAddress <p>mac 地址或设备唯一标识</p>
      */
     public String getMacAddress() {
         return this.MacAddress;
     }
 
     /**
-     * Set mac 地址或设备唯一标识
-     * @param MacAddress mac 地址或设备唯一标识
+     * Set <p>mac 地址或设备唯一标识</p>
+     * @param MacAddress <p>mac 地址或设备唯一标识</p>
      */
     public void setMacAddress(String MacAddress) {
         this.MacAddress = MacAddress;
     }
 
     /**
-     * Get 手机设备号 
-     * @return Imei 手机设备号
+     * Get <p>手机设备号</p> 
+     * @return Imei <p>手机设备号</p>
      */
     public String getImei() {
         return this.Imei;
     }
 
     /**
-     * Set 手机设备号
-     * @param Imei 手机设备号
+     * Set <p>手机设备号</p>
+     * @param Imei <p>手机设备号</p>
      */
     public void setImei(String Imei) {
         this.Imei = Imei;
     }
 
     /**
-     * Get 是否返回前端获取验证码时间，取值1：需要返回 
-     * @return NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回
+     * Get <p>是否返回前端获取验证码时间，取值1：需要返回</p> 
+     * @return NeedGetCaptchaTime <p>是否返回前端获取验证码时间，取值1：需要返回</p>
      */
     public Long getNeedGetCaptchaTime() {
         return this.NeedGetCaptchaTime;
     }
 
     /**
-     * Set 是否返回前端获取验证码时间，取值1：需要返回
-     * @param NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回
+     * Set <p>是否返回前端获取验证码时间，取值1：需要返回</p>
+     * @param NeedGetCaptchaTime <p>是否返回前端获取验证码时间，取值1：需要返回</p>
      */
     public void setNeedGetCaptchaTime(Long NeedGetCaptchaTime) {
         this.NeedGetCaptchaTime = NeedGetCaptchaTime;

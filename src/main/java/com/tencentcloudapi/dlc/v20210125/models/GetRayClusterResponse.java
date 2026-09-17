@@ -73,6 +73,13 @@ public class GetRayClusterResponse extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>所属队列别名</p>
+    */
+    @SerializedName("QueueAlias")
+    @Expose
+    private String QueueAlias;
+
+    /**
     * <p>应用ID</p>
     */
     @SerializedName("AppId")
@@ -336,6 +343,22 @@ public class GetRayClusterResponse extends AbstractModel {
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
+    }
+
+    /**
+     * Get <p>所属队列别名</p> 
+     * @return QueueAlias <p>所属队列别名</p>
+     */
+    public String getQueueAlias() {
+        return this.QueueAlias;
+    }
+
+    /**
+     * Set <p>所属队列别名</p>
+     * @param QueueAlias <p>所属队列别名</p>
+     */
+    public void setQueueAlias(String QueueAlias) {
+        this.QueueAlias = QueueAlias;
     }
 
     /**
@@ -719,6 +742,9 @@ public class GetRayClusterResponse extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.QueueAlias != null) {
+            this.QueueAlias = new String(source.QueueAlias);
+        }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
@@ -802,6 +828,7 @@ public class GetRayClusterResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);

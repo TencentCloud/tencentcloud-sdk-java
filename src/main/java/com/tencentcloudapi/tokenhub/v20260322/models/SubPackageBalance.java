@@ -24,221 +24,184 @@ import java.util.HashMap;
 public class SubPackageBalance extends AbstractModel {
 
     /**
-    * 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("ExclusiveQuota")
     @Expose
     private String ExclusiveQuota;
 
     /**
-    * 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("ExclusiveUsed")
     @Expose
     private String ExclusiveUsed;
 
     /**
-    * 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("ExclusiveRemain")
     @Expose
     private String ExclusiveRemain;
 
     /**
-    * 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("SharedQuota")
     @Expose
     private String SharedQuota;
 
     /**
-    * 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("SharedUsed")
     @Expose
     private String SharedUsed;
 
     /**
-    * 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("SharedRemain")
     @Expose
     private String SharedRemain;
 
     /**
-    * API Key 额度包状态。取值：0（正常）、1（耗尽）。
+    * <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+    */
+    @SerializedName("TotalUsed")
+    @Expose
+    private String TotalUsed;
+
+    /**
+    * <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return ExclusiveQuota 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return ExclusiveQuota <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public String getExclusiveQuota() {
         return this.ExclusiveQuota;
     }
 
     /**
-     * Set 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param ExclusiveQuota 独占额度。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param ExclusiveQuota <p>独占额度。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setExclusiveQuota(String ExclusiveQuota) {
         this.ExclusiveQuota = ExclusiveQuota;
     }
 
     /**
-     * Get 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return ExclusiveUsed 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return ExclusiveUsed <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public String getExclusiveUsed() {
         return this.ExclusiveUsed;
     }
 
     /**
-     * Set 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param ExclusiveUsed 独占额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param ExclusiveUsed <p>独占额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setExclusiveUsed(String ExclusiveUsed) {
         this.ExclusiveUsed = ExclusiveUsed;
     }
 
     /**
-     * Get 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return ExclusiveRemain 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return ExclusiveRemain <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public String getExclusiveRemain() {
         return this.ExclusiveRemain;
     }
 
     /**
-     * Set 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param ExclusiveRemain 独占额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param ExclusiveRemain <p>独占额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setExclusiveRemain(String ExclusiveRemain) {
         this.ExclusiveRemain = ExclusiveRemain;
     }
 
     /**
-     * Get 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return SharedQuota 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return SharedQuota <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public String getSharedQuota() {
         return this.SharedQuota;
     }
 
     /**
-     * Set 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param SharedQuota 共享额度上限，-1 表示不限。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param SharedQuota <p>共享额度上限，-1 表示不限。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setSharedQuota(String SharedQuota) {
         this.SharedQuota = SharedQuota;
     }
 
     /**
-     * Get 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return SharedUsed 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return SharedUsed <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public String getSharedUsed() {
         return this.SharedUsed;
     }
 
     /**
-     * Set 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param SharedUsed 共享额度已用量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param SharedUsed <p>共享额度已用量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setSharedUsed(String SharedUsed) {
         this.SharedUsed = SharedUsed;
     }
 
     /**
-     * Get 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return SharedRemain 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return SharedRemain <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public String getSharedRemain() {
         return this.SharedRemain;
     }
 
     /**
-     * Set 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param SharedRemain 共享额度剩余量。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param SharedRemain <p>共享额度剩余量。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setSharedRemain(String SharedRemain) {
         this.SharedRemain = SharedRemain;
     }
 
     /**
-     * Get API Key 额度包状态。取值：0（正常）、1（耗尽）。 
-     * @return Status API Key 额度包状态。取值：0（正常）、1（耗尽）。
+     * Get <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p> 
+     * @return TotalUsed <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+     */
+    public String getTotalUsed() {
+        return this.TotalUsed;
+    }
+
+    /**
+     * Set <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+     * @param TotalUsed <p>当前周期已用总量 exclusive_used + shared_used + overflow_used</p>
+     */
+    public void setTotalUsed(String TotalUsed) {
+        this.TotalUsed = TotalUsed;
+    }
+
+    /**
+     * Get <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p> 
+     * @return Status <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set API Key 额度包状态。取值：0（正常）、1（耗尽）。
-     * @param Status API Key 额度包状态。取值：0（正常）、1（耗尽）。
+     * Set <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
+     * @param Status <p>API Key 额度包状态。取值：0（正常）、1（耗尽）。</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -270,6 +233,9 @@ public class SubPackageBalance extends AbstractModel {
         if (source.SharedRemain != null) {
             this.SharedRemain = new String(source.SharedRemain);
         }
+        if (source.TotalUsed != null) {
+            this.TotalUsed = new String(source.TotalUsed);
+        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
@@ -286,6 +252,7 @@ public class SubPackageBalance extends AbstractModel {
         this.setParamSimple(map, prefix + "SharedQuota", this.SharedQuota);
         this.setParamSimple(map, prefix + "SharedUsed", this.SharedUsed);
         this.setParamSimple(map, prefix + "SharedRemain", this.SharedRemain);
+        this.setParamSimple(map, prefix + "TotalUsed", this.TotalUsed);
         this.setParamSimple(map, prefix + "Status", this.Status);
 
     }

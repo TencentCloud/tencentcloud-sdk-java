@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListTargetsForPolicyRequest extends AbstractModel {
 
     /**
-    * 策略Id。
+    * <p>策略Id。</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 每页数量。默认值是 20，必须大于 0 且小于或等于 200
+    * <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
     */
     @SerializedName("Rp")
     @Expose
     private Long Rp;
 
     /**
-    * 页码。默认值是 1，从 1开始，不能大于 200
+    * <p>页码。默认值是 1，从 1开始，不能大于 200</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 策略类型。取值范围：All-全部、User-用户、Node-节点
+    * <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+    * <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
     */
     @SerializedName("PolicyType")
     @Expose
     private String PolicyType;
 
     /**
-    * 按照多个策略id搜索，空格隔开。
+    * <p>按照多个策略id搜索，空格隔开。</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get 策略Id。 
-     * @return PolicyId 策略Id。
+     * Get <p>策略Id。</p> 
+     * @return PolicyId <p>策略Id。</p>
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略Id。
-     * @param PolicyId 策略Id。
+     * Set <p>策略Id。</p>
+     * @param PolicyId <p>策略Id。</p>
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 每页数量。默认值是 20，必须大于 0 且小于或等于 200 
-     * @return Rp 每页数量。默认值是 20，必须大于 0 且小于或等于 200
+     * Get <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p> 
+     * @return Rp <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
      */
     public Long getRp() {
         return this.Rp;
     }
 
     /**
-     * Set 每页数量。默认值是 20，必须大于 0 且小于或等于 200
-     * @param Rp 每页数量。默认值是 20，必须大于 0 且小于或等于 200
+     * Set <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
+     * @param Rp <p>每页数量。默认值是 20，必须大于 0 且小于或等于 200</p>
      */
     public void setRp(Long Rp) {
         this.Rp = Rp;
     }
 
     /**
-     * Get 页码。默认值是 1，从 1开始，不能大于 200 
-     * @return Page 页码。默认值是 1，从 1开始，不能大于 200
+     * Get <p>页码。默认值是 1，从 1开始，不能大于 200</p> 
+     * @return Page <p>页码。默认值是 1，从 1开始，不能大于 200</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码。默认值是 1，从 1开始，不能大于 200
-     * @param Page 页码。默认值是 1，从 1开始，不能大于 200
+     * Set <p>页码。默认值是 1，从 1开始，不能大于 200</p>
+     * @param Page <p>页码。默认值是 1，从 1开始，不能大于 200</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 策略类型。取值范围：All-全部、User-用户、Node-节点 
-     * @return TargetType 策略类型。取值范围：All-全部、User-用户、Node-节点
+     * Get <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p> 
+     * @return TargetType <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 策略类型。取值范围：All-全部、User-用户、Node-节点
-     * @param TargetType 策略类型。取值范围：All-全部、User-用户、Node-节点
+     * Set <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
+     * @param TargetType <p>策略类型。取值范围：All-全部、User-用户、Node-节点</p>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略 
-     * @return PolicyType 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * Get <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p> 
+     * @return PolicyType <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
-     * @param PolicyType 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * Set <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
+     * @param PolicyType <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 按照多个策略id搜索，空格隔开。 
-     * @return Keyword 按照多个策略id搜索，空格隔开。
+     * Get <p>按照多个策略id搜索，空格隔开。</p> 
+     * @return Keyword <p>按照多个策略id搜索，空格隔开。</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 按照多个策略id搜索，空格隔开。
-     * @param Keyword 按照多个策略id搜索，空格隔开。
+     * Set <p>按照多个策略id搜索，空格隔开。</p>
+     * @param Keyword <p>按照多个策略id搜索，空格隔开。</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

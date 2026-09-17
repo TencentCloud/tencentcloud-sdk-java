@@ -185,6 +185,20 @@ public class AgentInstance extends AbstractModel {
     private String ProductName;
 
     /**
+    * <p>具备能力</p>
+    */
+    @SerializedName("Capabilities")
+    @Expose
+    private String [] Capabilities;
+
+    /**
+    * <p>是否是免部署实例</p>
+    */
+    @SerializedName("DeploymentFree")
+    @Expose
+    private Boolean DeploymentFree;
+
+    /**
      * Get <p>智能体实例ID</p> 
      * @return InstanceId <p>智能体实例ID</p>
      */
@@ -552,6 +566,38 @@ public class AgentInstance extends AbstractModel {
         this.ProductName = ProductName;
     }
 
+    /**
+     * Get <p>具备能力</p> 
+     * @return Capabilities <p>具备能力</p>
+     */
+    public String [] getCapabilities() {
+        return this.Capabilities;
+    }
+
+    /**
+     * Set <p>具备能力</p>
+     * @param Capabilities <p>具备能力</p>
+     */
+    public void setCapabilities(String [] Capabilities) {
+        this.Capabilities = Capabilities;
+    }
+
+    /**
+     * Get <p>是否是免部署实例</p> 
+     * @return DeploymentFree <p>是否是免部署实例</p>
+     */
+    public Boolean getDeploymentFree() {
+        return this.DeploymentFree;
+    }
+
+    /**
+     * Set <p>是否是免部署实例</p>
+     * @param DeploymentFree <p>是否是免部署实例</p>
+     */
+    public void setDeploymentFree(Boolean DeploymentFree) {
+        this.DeploymentFree = DeploymentFree;
+    }
+
     public AgentInstance() {
     }
 
@@ -641,6 +687,15 @@ public class AgentInstance extends AbstractModel {
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
+        if (source.Capabilities != null) {
+            this.Capabilities = new String[source.Capabilities.length];
+            for (int i = 0; i < source.Capabilities.length; i++) {
+                this.Capabilities[i] = new String(source.Capabilities[i]);
+            }
+        }
+        if (source.DeploymentFree != null) {
+            this.DeploymentFree = new Boolean(source.DeploymentFree);
+        }
     }
 
 
@@ -671,6 +726,8 @@ public class AgentInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
+        this.setParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
 
     }
 }

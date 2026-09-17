@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class AiSampleWordInfo extends AbstractModel {
 
     /**
-    * 关键词，长度限制：20 个字符。
+    * <p>关键词，长度限制：20 个字符。</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+    * <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get 关键词，长度限制：20 个字符。 
-     * @return Keyword 关键词，长度限制：20 个字符。
+     * Get <p>关键词，长度限制：20 个字符。</p> 
+     * @return Keyword <p>关键词，长度限制：20 个字符。</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 关键词，长度限制：20 个字符。
-     * @param Keyword 关键词，长度限制：20 个字符。
+     * Set <p>关键词，长度限制：20 个字符。</p>
+     * @param Keyword <p>关键词，长度限制：20 个字符。</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li> 
-     * @return Tags 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+     * Get <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li> 
+     * @return Tags <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
-     * @param Tags 关键词标签
-<li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+     * Set <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
+     * @param Tags <p>关键词标签</p><li>数组长度限制：20 个标签；</li><li>单个标签长度限制：128 个字符。</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

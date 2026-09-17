@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRoundPlaysResponse extends AbstractModel {
 
     /**
-    * 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+    * <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 轮播播单详情列表。
+    * <p>轮播播单详情列表。</p>
     */
     @SerializedName("RoundPlaySet")
     @Expose
     private RoundPlayInfo [] RoundPlaySet;
 
     /**
-    * 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+    * <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -52,8 +52,8 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。 
-     * @return TotalCount 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+     * Get <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p> 
+     * @return TotalCount <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     }
 
     /**
-     * Set 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
-     * @param TotalCount 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+     * Set <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
+     * @param TotalCount <p>符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。</p>
      * @deprecated
      */
     @Deprecated
@@ -72,32 +72,32 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     }
 
     /**
-     * Get 轮播播单详情列表。 
-     * @return RoundPlaySet 轮播播单详情列表。
+     * Get <p>轮播播单详情列表。</p> 
+     * @return RoundPlaySet <p>轮播播单详情列表。</p>
      */
     public RoundPlayInfo [] getRoundPlaySet() {
         return this.RoundPlaySet;
     }
 
     /**
-     * Set 轮播播单详情列表。
-     * @param RoundPlaySet 轮播播单详情列表。
+     * Set <p>轮播播单详情列表。</p>
+     * @param RoundPlaySet <p>轮播播单详情列表。</p>
      */
     public void setRoundPlaySet(RoundPlayInfo [] RoundPlaySet) {
         this.RoundPlaySet = RoundPlaySet;
     }
 
     /**
-     * Get 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。 
-     * @return ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * Get <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p> 
+     * @return ScrollToken <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
-     * @param ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * Set <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
+     * @param ScrollToken <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

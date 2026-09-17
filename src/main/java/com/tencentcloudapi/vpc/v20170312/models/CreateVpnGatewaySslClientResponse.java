@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class CreateVpnGatewaySslClientResponse extends AbstractModel {
 
     /**
-    * 异步任务ID。
+    * <p>异步任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * SSL-VPN client 唯一ID
+    * <p>SSL VPN客户端唯一ID</p>
     */
     @SerializedName("SslVpnClientId")
     @Expose
     private String SslVpnClientId;
+
+    /**
+    * <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+    */
+    @SerializedName("SslVpnClientIds")
+    @Expose
+    private String [] SslVpnClientIds;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务ID。 
-     * @return TaskId 异步任务ID。
+     * Get <p>异步任务ID。</p> 
+     * @return TaskId <p>异步任务ID。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID。
-     * @param TaskId 异步任务ID。
+     * Set <p>异步任务ID。</p>
+     * @param TaskId <p>异步任务ID。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get SSL-VPN client 唯一ID 
-     * @return SslVpnClientId SSL-VPN client 唯一ID
+     * Get <p>SSL VPN客户端唯一ID</p> 
+     * @return SslVpnClientId <p>SSL VPN客户端唯一ID</p>
      */
     public String getSslVpnClientId() {
         return this.SslVpnClientId;
     }
 
     /**
-     * Set SSL-VPN client 唯一ID
-     * @param SslVpnClientId SSL-VPN client 唯一ID
+     * Set <p>SSL VPN客户端唯一ID</p>
+     * @param SslVpnClientId <p>SSL VPN客户端唯一ID</p>
      */
     public void setSslVpnClientId(String SslVpnClientId) {
         this.SslVpnClientId = SslVpnClientId;
+    }
+
+    /**
+     * Get <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p> 
+     * @return SslVpnClientIds <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+     */
+    public String [] getSslVpnClientIds() {
+        return this.SslVpnClientIds;
+    }
+
+    /**
+     * Set <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+     * @param SslVpnClientIds <p>SSL VPN客户端唯一ID</p><p>仅批量场景返回</p>
+     */
+    public void setSslVpnClientIds(String [] SslVpnClientIds) {
+        this.SslVpnClientIds = SslVpnClientIds;
     }
 
     /**
@@ -106,6 +129,12 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel {
         if (source.SslVpnClientId != null) {
             this.SslVpnClientId = new String(source.SslVpnClientId);
         }
+        if (source.SslVpnClientIds != null) {
+            this.SslVpnClientIds = new String[source.SslVpnClientIds.length];
+            for (int i = 0; i < source.SslVpnClientIds.length; i++) {
+                this.SslVpnClientIds[i] = new String(source.SslVpnClientIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +147,7 @@ public class CreateVpnGatewaySslClientResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
+        this.setParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

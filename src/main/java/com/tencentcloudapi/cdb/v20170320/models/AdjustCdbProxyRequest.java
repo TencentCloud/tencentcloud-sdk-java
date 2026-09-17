@@ -24,153 +24,141 @@ import java.util.HashMap;
 public class AdjustCdbProxyRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+    * <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
+    * <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
     */
     @SerializedName("ProxyNodeCustom")
     @Expose
     private ProxyNodeCustom [] ProxyNodeCustom;
 
     /**
-    * 重新负载均衡：auto(自动),manual(手动)
+    * <p>重新负载均衡：auto(自动),manual(手动)</p>
     */
     @SerializedName("ReloadBalance")
     @Expose
     private String ReloadBalance;
 
     /**
-    * 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+    * <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
     */
     @SerializedName("UpgradeTime")
     @Expose
     private String UpgradeTime;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+    */
+    @SerializedName("RollUpgradeWaitingTime")
+    @Expose
+    private Long RollUpgradeWaitingTime;
+
+    /**
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
-     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Get <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p> 
+     * @return ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Set <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param ProxyGroupId <p>代理组 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB） 
-     * @return ProxyNodeCustom 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
+     * Get <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p> 
+     * @return ProxyNodeCustom <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
      */
     public ProxyNodeCustom [] getProxyNodeCustom() {
         return this.ProxyNodeCustom;
     }
 
     /**
-     * Set 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
-     * @param ProxyNodeCustom 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
-示例中参数说明：
-NodeCount：节点个数
-Region：节点地域
-Zone：节点可用区
-Cpu：单个代理节点核数（单位：核）
-Mem：单个代理节点内存数（单位：MB）
+     * Set <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
+     * @param ProxyNodeCustom <p>节点规格配置<br>备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。<br>示例中参数说明：<br>NodeCount：节点个数<br>Region：节点地域<br>Zone：节点可用区<br>Cpu：单个代理节点核数（单位：核）<br>Mem：单个代理节点内存数（单位：MB）</p>
      */
     public void setProxyNodeCustom(ProxyNodeCustom [] ProxyNodeCustom) {
         this.ProxyNodeCustom = ProxyNodeCustom;
     }
 
     /**
-     * Get 重新负载均衡：auto(自动),manual(手动) 
-     * @return ReloadBalance 重新负载均衡：auto(自动),manual(手动)
+     * Get <p>重新负载均衡：auto(自动),manual(手动)</p> 
+     * @return ReloadBalance <p>重新负载均衡：auto(自动),manual(手动)</p>
      */
     public String getReloadBalance() {
         return this.ReloadBalance;
     }
 
     /**
-     * Set 重新负载均衡：auto(自动),manual(手动)
-     * @param ReloadBalance 重新负载均衡：auto(自动),manual(手动)
+     * Set <p>重新负载均衡：auto(自动),manual(手动)</p>
+     * @param ReloadBalance <p>重新负载均衡：auto(自动),manual(手动)</p>
      */
     public void setReloadBalance(String ReloadBalance) {
         this.ReloadBalance = ReloadBalance;
     }
 
     /**
-     * Get 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内) 
-     * @return UpgradeTime 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+     * Get <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul> 
+     * @return UpgradeTime <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
      */
     public String getUpgradeTime() {
         return this.UpgradeTime;
     }
 
     /**
-     * Set 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
-     * @param UpgradeTime 升级切换时间：nowTime(升级完成时),timeWindow(维护时间内)
+     * Set <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
+     * @param UpgradeTime <p>升级切换时间。</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 维护时间内</li><li>rollUpgrade： 滚动升级</li></ul>
      */
     public void setUpgradeTime(String UpgradeTime) {
         this.UpgradeTime = UpgradeTime;
+    }
+
+    /**
+     * Get <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p> 
+     * @return RollUpgradeWaitingTime <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+     */
+    public Long getRollUpgradeWaitingTime() {
+        return this.RollUpgradeWaitingTime;
+    }
+
+    /**
+     * Set <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+     * @param RollUpgradeWaitingTime <p>滚动升级或平滑变配等待时间</p><p>取值范围：[0, 3600]</p><p>单位：秒</p>
+     */
+    public void setRollUpgradeWaitingTime(Long RollUpgradeWaitingTime) {
+        this.RollUpgradeWaitingTime = RollUpgradeWaitingTime;
     }
 
     public AdjustCdbProxyRequest() {
@@ -199,6 +187,9 @@ Mem：单个代理节点内存数（单位：MB）
         if (source.UpgradeTime != null) {
             this.UpgradeTime = new String(source.UpgradeTime);
         }
+        if (source.RollUpgradeWaitingTime != null) {
+            this.RollUpgradeWaitingTime = new Long(source.RollUpgradeWaitingTime);
+        }
     }
 
 
@@ -211,6 +202,7 @@ Mem：单个代理节点内存数（单位：MB）
         this.setParamArrayObj(map, prefix + "ProxyNodeCustom.", this.ProxyNodeCustom);
         this.setParamSimple(map, prefix + "ReloadBalance", this.ReloadBalance);
         this.setParamSimple(map, prefix + "UpgradeTime", this.UpgradeTime);
+        this.setParamSimple(map, prefix + "RollUpgradeWaitingTime", this.RollUpgradeWaitingTime);
 
     }
 }

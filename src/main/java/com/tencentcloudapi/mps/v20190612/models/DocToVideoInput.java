@@ -38,18 +38,18 @@ public class DocToVideoInput extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>文档生成视频模型名称</p><p>默认值：Wand</p>
-    */
-    @SerializedName("ModelName")
-    @Expose
-    private String ModelName;
-
-    /**
     * <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
+
+    /**
+    * <p>文档生成视频模型名称</p><p>枚举值：</p><ul><li>WAND： WAND</li></ul><p>默认值：WAND</p>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
 
     /**
     * <p>生成视频的宽高比。</p><p>枚举值：</p><ul><li>16:9： 16:9</li><li>9:16： 9:16</li><li>1:1： 1:1</li></ul><p>默认值：16:9</p>
@@ -154,22 +154,6 @@ public class DocToVideoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>文档生成视频模型名称</p><p>默认值：Wand</p> 
-     * @return ModelName <p>文档生成视频模型名称</p><p>默认值：Wand</p>
-     */
-    public String getModelName() {
-        return this.ModelName;
-    }
-
-    /**
-     * Set <p>文档生成视频模型名称</p><p>默认值：Wand</p>
-     * @param ModelName <p>文档生成视频模型名称</p><p>默认值：Wand</p>
-     */
-    public void setModelName(String ModelName) {
-        this.ModelName = ModelName;
-    }
-
-    /**
      * Get <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p> 
      * @return ModelVersion <p>文档生成视频模型版本号</p><p>枚举值：</p><ul><li>1.0： 1.0</li><li>1.0-lite： 1.0-lite</li></ul><p>默认值：1.0</p>
      */
@@ -183,6 +167,22 @@ public class DocToVideoInput extends AbstractModel {
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
+    }
+
+    /**
+     * Get <p>文档生成视频模型名称</p><p>枚举值：</p><ul><li>WAND： WAND</li></ul><p>默认值：WAND</p> 
+     * @return ModelName <p>文档生成视频模型名称</p><p>枚举值：</p><ul><li>WAND： WAND</li></ul><p>默认值：WAND</p>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>文档生成视频模型名称</p><p>枚举值：</p><ul><li>WAND： WAND</li></ul><p>默认值：WAND</p>
+     * @param ModelName <p>文档生成视频模型名称</p><p>枚举值：</p><ul><li>WAND： WAND</li></ul><p>默认值：WAND</p>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
     }
 
     /**
@@ -362,11 +362,11 @@ public class DocToVideoInput extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
-        if (source.ModelName != null) {
-            this.ModelName = new String(source.ModelName);
-        }
         if (source.ModelVersion != null) {
             this.ModelVersion = new String(source.ModelVersion);
+        }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
         }
         if (source.Ratio != null) {
             this.Ratio = new String(source.Ratio);
@@ -407,8 +407,8 @@ public class DocToVideoInput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileUrl.", this.FileUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
-        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "ReferenceDuration", this.ReferenceDuration);

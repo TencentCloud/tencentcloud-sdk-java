@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class ListTargetsForPolicyNode extends AbstractModel {
 
     /**
-    * scp账号uin或节点Id
+    * <p>scp账号uin或节点Id</p>
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * 关联类型 1-节点关联 2-用户关联
+    * <p>关联类型 1-节点关联 2-用户关联</p>
     */
     @SerializedName("RelatedType")
     @Expose
     private Long RelatedType;
 
     /**
-    * 账号或者节点名称
+    * <p>账号或者节点名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 绑定时间
+    * <p>绑定时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-     * Get scp账号uin或节点Id 
-     * @return Uin scp账号uin或节点Id
+    * <p>目标对象所属的组织层级名称路径</p>
+    */
+    @SerializedName("NodePath")
+    @Expose
+    private String [] NodePath;
+
+    /**
+    * <p>对应的组织层级 ID 路径</p>
+    */
+    @SerializedName("NodePathIds")
+    @Expose
+    private Long [] NodePathIds;
+
+    /**
+     * Get <p>scp账号uin或节点Id</p> 
+     * @return Uin <p>scp账号uin或节点Id</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set scp账号uin或节点Id
-     * @param Uin scp账号uin或节点Id
+     * Set <p>scp账号uin或节点Id</p>
+     * @param Uin <p>scp账号uin或节点Id</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 关联类型 1-节点关联 2-用户关联 
-     * @return RelatedType 关联类型 1-节点关联 2-用户关联
+     * Get <p>关联类型 1-节点关联 2-用户关联</p> 
+     * @return RelatedType <p>关联类型 1-节点关联 2-用户关联</p>
      */
     public Long getRelatedType() {
         return this.RelatedType;
     }
 
     /**
-     * Set 关联类型 1-节点关联 2-用户关联
-     * @param RelatedType 关联类型 1-节点关联 2-用户关联
+     * Set <p>关联类型 1-节点关联 2-用户关联</p>
+     * @param RelatedType <p>关联类型 1-节点关联 2-用户关联</p>
      */
     public void setRelatedType(Long RelatedType) {
         this.RelatedType = RelatedType;
     }
 
     /**
-     * Get 账号或者节点名称 
-     * @return Name 账号或者节点名称
+     * Get <p>账号或者节点名称</p> 
+     * @return Name <p>账号或者节点名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 账号或者节点名称
-     * @param Name 账号或者节点名称
+     * Set <p>账号或者节点名称</p>
+     * @param Name <p>账号或者节点名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 绑定时间 
-     * @return AddTime 绑定时间
+     * Get <p>绑定时间</p> 
+     * @return AddTime <p>绑定时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 绑定时间
-     * @param AddTime 绑定时间
+     * Set <p>绑定时间</p>
+     * @param AddTime <p>绑定时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
+    }
+
+    /**
+     * Get <p>目标对象所属的组织层级名称路径</p> 
+     * @return NodePath <p>目标对象所属的组织层级名称路径</p>
+     */
+    public String [] getNodePath() {
+        return this.NodePath;
+    }
+
+    /**
+     * Set <p>目标对象所属的组织层级名称路径</p>
+     * @param NodePath <p>目标对象所属的组织层级名称路径</p>
+     */
+    public void setNodePath(String [] NodePath) {
+        this.NodePath = NodePath;
+    }
+
+    /**
+     * Get <p>对应的组织层级 ID 路径</p> 
+     * @return NodePathIds <p>对应的组织层级 ID 路径</p>
+     */
+    public Long [] getNodePathIds() {
+        return this.NodePathIds;
+    }
+
+    /**
+     * Set <p>对应的组织层级 ID 路径</p>
+     * @param NodePathIds <p>对应的组织层级 ID 路径</p>
+     */
+    public void setNodePathIds(Long [] NodePathIds) {
+        this.NodePathIds = NodePathIds;
     }
 
     public ListTargetsForPolicyNode() {
@@ -135,6 +181,18 @@ public class ListTargetsForPolicyNode extends AbstractModel {
         if (source.AddTime != null) {
             this.AddTime = new String(source.AddTime);
         }
+        if (source.NodePath != null) {
+            this.NodePath = new String[source.NodePath.length];
+            for (int i = 0; i < source.NodePath.length; i++) {
+                this.NodePath[i] = new String(source.NodePath[i]);
+            }
+        }
+        if (source.NodePathIds != null) {
+            this.NodePathIds = new Long[source.NodePathIds.length];
+            for (int i = 0; i < source.NodePathIds.length; i++) {
+                this.NodePathIds[i] = new Long(source.NodePathIds[i]);
+            }
+        }
     }
 
 
@@ -146,6 +204,8 @@ public class ListTargetsForPolicyNode extends AbstractModel {
         this.setParamSimple(map, prefix + "RelatedType", this.RelatedType);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamArraySimple(map, prefix + "NodePath.", this.NodePath);
+        this.setParamArraySimple(map, prefix + "NodePathIds.", this.NodePathIds);
 
     }
 }

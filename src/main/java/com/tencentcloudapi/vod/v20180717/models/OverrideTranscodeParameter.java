@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
-    * 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+    * <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+    * <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+    * <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 视频流配置参数。
+    * <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoTemplate")
@@ -57,7 +53,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private VideoTemplateInfoForUpdate VideoTemplate;
 
     /**
-    * 音频流配置参数。
+    * <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioTemplate")
@@ -65,7 +61,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * 极速高清转码配置参数。
+    * <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TEHDConfig")
@@ -73,73 +69,64 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-     * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。 
-     * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+    * <p>标准扩展字段，特殊用途使用。</p>
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+     * Get <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p> 
+     * @return Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
-     * @param Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+     * Set <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+     * @param Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li> 
-     * @return RemoveVideo 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+     * Get <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p> 
+     * @return RemoveVideo <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
-     * @param RemoveVideo 是否去除视频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+     * Set <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+     * @param RemoveVideo <p>是否去除视频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li> 
-     * @return RemoveAudio 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+     * Get <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p> 
+     * @return RemoveAudio <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
-     * @param RemoveAudio 是否去除音频数据，取值：
-<li>0：保留；<\li>
-<li>1：去除。<\li>
+     * Set <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
+     * @param RemoveAudio <p>是否去除音频数据，取值：<br>&lt;li&gt;0：保留；&lt;\li&gt;<br>&lt;li&gt;1：去除。&lt;\li&gt;</p>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get 视频流配置参数。
+     * Get <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoTemplate 视频流配置参数。
+     * @return VideoTemplate <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoTemplateInfoForUpdate getVideoTemplate() {
@@ -147,9 +134,9 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Set 视频流配置参数。
+     * Set <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoTemplate 视频流配置参数。
+     * @param VideoTemplate <p>视频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoTemplate(VideoTemplateInfoForUpdate VideoTemplate) {
@@ -157,9 +144,9 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get 音频流配置参数。
+     * Get <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioTemplate 音频流配置参数。
+     * @return AudioTemplate <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioTemplateInfoForUpdate getAudioTemplate() {
@@ -167,9 +154,9 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Set 音频流配置参数。
+     * Set <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioTemplate 音频流配置参数。
+     * @param AudioTemplate <p>音频流配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioTemplate(AudioTemplateInfoForUpdate AudioTemplate) {
@@ -177,9 +164,9 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get 极速高清转码配置参数。
+     * Get <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TEHDConfig 极速高清转码配置参数。
+     * @return TEHDConfig <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TEHDConfigForUpdate getTEHDConfig() {
@@ -187,13 +174,29 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Set 极速高清转码配置参数。
+     * Set <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TEHDConfig 极速高清转码配置参数。
+     * @param TEHDConfig <p>极速高清转码配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
+    }
+
+    /**
+     * Get <p>标准扩展字段，特殊用途使用。</p> 
+     * @return StdExtInfo <p>标准扩展字段，特殊用途使用。</p>
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set <p>标准扩展字段，特殊用途使用。</p>
+     * @param StdExtInfo <p>标准扩展字段，特殊用途使用。</p>
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
     }
 
     public OverrideTranscodeParameter() {
@@ -222,6 +225,9 @@ public class OverrideTranscodeParameter extends AbstractModel {
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -235,6 +241,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

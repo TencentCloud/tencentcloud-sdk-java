@@ -77,6 +77,14 @@ public class PartitionDetail extends AbstractModel {
     private ResourceQuota [] ResourceQuota;
 
     /**
+    * <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchedulableLimitList")
+    @Expose
+    private SchedulableLimit [] SchedulableLimitList;
+
+    /**
     * <p>付费模式</p>
     */
     @SerializedName("PayMode")
@@ -104,6 +112,42 @@ public class PartitionDetail extends AbstractModel {
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+    */
+    @SerializedName("IsolatedTimestamp")
+    @Expose
+    private String IsolatedTimestamp;
+
+    /**
+    * <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private CloudTag [] Tags;
+
+    /**
+    * <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+    */
+    @SerializedName("ResourcePoolKind")
+    @Expose
+    private String ResourcePoolKind;
+
+    /**
+    * <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+    */
+    @SerializedName("ExternalClusterId")
+    @Expose
+    private String ExternalClusterId;
 
     /**
      * Get <p>分区编码</p> 
@@ -234,6 +278,26 @@ public class PartitionDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchedulableLimitList <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SchedulableLimit [] getSchedulableLimitList() {
+        return this.SchedulableLimitList;
+    }
+
+    /**
+     * Set <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchedulableLimitList <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchedulableLimitList(SchedulableLimit [] SchedulableLimitList) {
+        this.SchedulableLimitList = SchedulableLimitList;
+    }
+
+    /**
      * Get <p>付费模式</p> 
      * @return PayMode <p>付费模式</p>
      */
@@ -301,6 +365,90 @@ public class PartitionDetail extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p> 
+     * @return ExpireTime <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     * @param ExpireTime <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p> 
+     * @return IsolatedTimestamp <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     */
+    public String getIsolatedTimestamp() {
+        return this.IsolatedTimestamp;
+    }
+
+    /**
+     * Set <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     * @param IsolatedTimestamp <p>过期时间</p><p>参数格式：yyyy-MM-dd hh:mm:ss</p>
+     */
+    public void setIsolatedTimestamp(String IsolatedTimestamp) {
+        this.IsolatedTimestamp = IsolatedTimestamp;
+    }
+
+    /**
+     * Get <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CloudTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(CloudTag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p> 
+     * @return ResourcePoolKind <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+     */
+    public String getResourcePoolKind() {
+        return this.ResourcePoolKind;
+    }
+
+    /**
+     * Set <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+     * @param ResourcePoolKind <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+     */
+    public void setResourcePoolKind(String ResourcePoolKind) {
+        this.ResourcePoolKind = ResourcePoolKind;
+    }
+
+    /**
+     * Get <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p> 
+     * @return ExternalClusterId <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+     */
+    public String getExternalClusterId() {
+        return this.ExternalClusterId;
+    }
+
+    /**
+     * Set <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+     * @param ExternalClusterId <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+     */
+    public void setExternalClusterId(String ExternalClusterId) {
+        this.ExternalClusterId = ExternalClusterId;
+    }
+
     public PartitionDetail() {
     }
 
@@ -333,6 +481,12 @@ public class PartitionDetail extends AbstractModel {
                 this.ResourceQuota[i] = new ResourceQuota(source.ResourceQuota[i]);
             }
         }
+        if (source.SchedulableLimitList != null) {
+            this.SchedulableLimitList = new SchedulableLimit[source.SchedulableLimitList.length];
+            for (int i = 0; i < source.SchedulableLimitList.length; i++) {
+                this.SchedulableLimitList[i] = new SchedulableLimit(source.SchedulableLimitList[i]);
+            }
+        }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
@@ -344,6 +498,24 @@ public class PartitionDetail extends AbstractModel {
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.IsolatedTimestamp != null) {
+            this.IsolatedTimestamp = new String(source.IsolatedTimestamp);
+        }
+        if (source.Tags != null) {
+            this.Tags = new CloudTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new CloudTag(source.Tags[i]);
+            }
+        }
+        if (source.ResourcePoolKind != null) {
+            this.ResourcePoolKind = new String(source.ResourcePoolKind);
+        }
+        if (source.ExternalClusterId != null) {
+            this.ExternalClusterId = new String(source.ExternalClusterId);
         }
     }
 
@@ -359,10 +531,16 @@ public class PartitionDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductInfo", this.ProductInfo);
         this.setParamSimple(map, prefix + "ResourcePoolCode", this.ResourcePoolCode);
         this.setParamArrayObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
+        this.setParamArrayObj(map, prefix + "SchedulableLimitList.", this.SchedulableLimitList);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "IsolatedTimestamp", this.IsolatedTimestamp);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ResourcePoolKind", this.ResourcePoolKind);
+        this.setParamSimple(map, prefix + "ExternalClusterId", this.ExternalClusterId);
 
     }
 }

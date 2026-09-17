@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCustomErrorPagesResponse extends AbstractModel {
 
     /**
-    * 自定义错误页面总数。
+    * <p>自定义响应页面总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 自定义错误页面数据列表。
+    * <p>自定义响应页面数据列表。</p>
     */
     @SerializedName("ErrorPages")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCustomErrorPagesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自定义错误页面总数。 
-     * @return TotalCount 自定义错误页面总数。
+     * Get <p>自定义响应页面总数。</p> 
+     * @return TotalCount <p>自定义响应页面总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 自定义错误页面总数。
-     * @param TotalCount 自定义错误页面总数。
+     * Set <p>自定义响应页面总数。</p>
+     * @param TotalCount <p>自定义响应页面总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 自定义错误页面数据列表。 
-     * @return ErrorPages 自定义错误页面数据列表。
+     * Get <p>自定义响应页面数据列表。</p> 
+     * @return ErrorPages <p>自定义响应页面数据列表。</p>
      */
     public CustomErrorPage [] getErrorPages() {
         return this.ErrorPages;
     }
 
     /**
-     * Set 自定义错误页面数据列表。
-     * @param ErrorPages 自定义错误页面数据列表。
+     * Set <p>自定义响应页面数据列表。</p>
+     * @param ErrorPages <p>自定义响应页面数据列表。</p>
      */
     public void setErrorPages(CustomErrorPage [] ErrorPages) {
         this.ErrorPages = ErrorPages;

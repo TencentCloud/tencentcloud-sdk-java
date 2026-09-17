@@ -136,6 +136,13 @@ public class JobSpec extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>所属队列别名</p>
+    */
+    @SerializedName("QueueAlias")
+    @Expose
+    private String QueueAlias;
+
+    /**
     * <p>集群组Id</p>
     */
     @SerializedName("GroupId")
@@ -171,6 +178,13 @@ public class JobSpec extends AbstractModel {
     private String JobPackageName;
 
     /**
+    * <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+    */
+    @SerializedName("JobPackageSource")
+    @Expose
+    private String JobPackageSource;
+
+    /**
     * <p>优先级</p>
     */
     @SerializedName("Priority")
@@ -197,6 +211,13 @@ public class JobSpec extends AbstractModel {
     @SerializedName("SubAccountUin")
     @Expose
     private String SubAccountUin;
+
+    /**
+    * <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
 
     /**
     * <p>创建时间</p>
@@ -525,6 +546,22 @@ public class JobSpec extends AbstractModel {
     }
 
     /**
+     * Get <p>所属队列别名</p> 
+     * @return QueueAlias <p>所属队列别名</p>
+     */
+    public String getQueueAlias() {
+        return this.QueueAlias;
+    }
+
+    /**
+     * Set <p>所属队列别名</p>
+     * @param QueueAlias <p>所属队列别名</p>
+     */
+    public void setQueueAlias(String QueueAlias) {
+        this.QueueAlias = QueueAlias;
+    }
+
+    /**
      * Get <p>集群组Id</p> 
      * @return GroupId <p>集群组Id</p>
      */
@@ -605,6 +642,22 @@ public class JobSpec extends AbstractModel {
     }
 
     /**
+     * Get <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p> 
+     * @return JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+     */
+    public String getJobPackageSource() {
+        return this.JobPackageSource;
+    }
+
+    /**
+     * Set <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+     * @param JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+     */
+    public void setJobPackageSource(String JobPackageSource) {
+        this.JobPackageSource = JobPackageSource;
+    }
+
+    /**
      * Get <p>优先级</p> 
      * @return Priority <p>优先级</p>
      */
@@ -666,6 +719,22 @@ public class JobSpec extends AbstractModel {
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>子用户名称（由聚合层通过 CAM 接口回填）</p> 
+     * @return SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     * @param SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
     }
 
     /**
@@ -884,6 +953,9 @@ public class JobSpec extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.QueueAlias != null) {
+            this.QueueAlias = new String(source.QueueAlias);
+        }
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
@@ -899,6 +971,9 @@ public class JobSpec extends AbstractModel {
         if (source.JobPackageName != null) {
             this.JobPackageName = new String(source.JobPackageName);
         }
+        if (source.JobPackageSource != null) {
+            this.JobPackageSource = new String(source.JobPackageSource);
+        }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
         }
@@ -910,6 +985,9 @@ public class JobSpec extends AbstractModel {
         }
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
@@ -967,15 +1045,18 @@ public class JobSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterGroup", this.ClusterGroup);
         this.setParamSimple(map, prefix + "JobPackage", this.JobPackage);
         this.setParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
+        this.setParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "JobInstanceCount", this.JobInstanceCount);

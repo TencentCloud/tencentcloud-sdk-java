@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeListenerDetailRequest extends AbstractModel {
 
     /**
-    * 监听器 ID，格式为 lst- 后接 8 位字母数字。
+    * <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+    * <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-     * Get 监听器 ID，格式为 lst- 后接 8 位字母数字。 
-     * @return ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * Get <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p> 
+     * @return ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器 ID，格式为 lst- 后接 8 位字母数字。
-     * @param ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * Set <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+     * @param ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。 
-     * @return LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * Get <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p> 
+     * @return LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
-     * @param LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * Set <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+     * @param LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

@@ -87,6 +87,20 @@ public class DescribeVoicesRequest extends AbstractModel {
     private String [] Scenes;
 
     /**
+    * <p>分页查询页码。从1开始，默认1</p>
+    */
+    @SerializedName("PageNum")
+    @Expose
+    private Long PageNum;
+
+    /**
+    * <p>页大小。不填默认返回所有符合条件数据</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
     * <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
     */
     @SerializedName("ExtParam")
@@ -238,6 +252,38 @@ public class DescribeVoicesRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>分页查询页码。从1开始，默认1</p> 
+     * @return PageNum <p>分页查询页码。从1开始，默认1</p>
+     */
+    public Long getPageNum() {
+        return this.PageNum;
+    }
+
+    /**
+     * Set <p>分页查询页码。从1开始，默认1</p>
+     * @param PageNum <p>分页查询页码。从1开始，默认1</p>
+     */
+    public void setPageNum(Long PageNum) {
+        this.PageNum = PageNum;
+    }
+
+    /**
+     * Get <p>页大小。不填默认返回所有符合条件数据</p> 
+     * @return PageSize <p>页大小。不填默认返回所有符合条件数据</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>页大小。不填默认返回所有符合条件数据</p>
+     * @param PageSize <p>页大小。不填默认返回所有符合条件数据</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
      * Get <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p> 
      * @return ExtParam <p>扩展参数，json字符串</p><p>其他筛选条件voiceName String 音色名，模糊匹配labels Array of String 标签，匹配包含这些标签的音色</p>
      */
@@ -297,6 +343,12 @@ public class DescribeVoicesRequest extends AbstractModel {
                 this.Scenes[i] = new String(source.Scenes[i]);
             }
         }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
         }
@@ -316,6 +368,8 @@ public class DescribeVoicesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Languages.", this.Languages);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }

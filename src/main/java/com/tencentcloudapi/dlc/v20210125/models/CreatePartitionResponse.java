@@ -32,10 +32,19 @@ public class CreatePartitionResponse extends AbstractModel {
 
     /**
     * <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealId")
     @Expose
     private String BigDealId;
+
+    /**
+    * <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillId")
+    @Expose
+    private String BillId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -61,8 +70,10 @@ public class CreatePartitionResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>大订单号</p> 
+     * Get <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BigDealId <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBigDealId() {
         return this.BigDealId;
@@ -70,10 +81,32 @@ public class CreatePartitionResponse extends AbstractModel {
 
     /**
      * Set <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BigDealId <p>大订单号</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;
+    }
+
+    /**
+     * Get <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillId <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillId() {
+        return this.BillId;
+    }
+
+    /**
+     * Set <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillId <p>冻结流水号（后付费返回；预付费为空）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillId(String BillId) {
+        this.BillId = BillId;
     }
 
     /**
@@ -106,6 +139,9 @@ public class CreatePartitionResponse extends AbstractModel {
         if (source.BigDealId != null) {
             this.BigDealId = new String(source.BigDealId);
         }
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +154,7 @@ public class CreatePartitionResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
+        this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

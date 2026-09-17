@@ -199,6 +199,13 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     private String SysHangupReasonString;
 
     /**
+    * <p>通话结束状态V2（灰度中）</p>
+    */
+    @SerializedName("EndStatusV2")
+    @Expose
+    private Long EndStatusV2;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -606,6 +613,22 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>通话结束状态V2（灰度中）</p> 
+     * @return EndStatusV2 <p>通话结束状态V2（灰度中）</p>
+     */
+    public Long getEndStatusV2() {
+        return this.EndStatusV2;
+    }
+
+    /**
+     * Set <p>通话结束状态V2（灰度中）</p>
+     * @param EndStatusV2 <p>通话结束状态V2（灰度中）</p>
+     */
+    public void setEndStatusV2(Long EndStatusV2) {
+        this.EndStatusV2 = EndStatusV2;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -722,6 +745,9 @@ public class DescribeSessionDetailResponse extends AbstractModel {
         if (source.SysHangupReasonString != null) {
             this.SysHangupReasonString = new String(source.SysHangupReasonString);
         }
+        if (source.EndStatusV2 != null) {
+            this.EndStatusV2 = new Long(source.EndStatusV2);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -757,6 +783,7 @@ public class DescribeSessionDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ServeParticipants.", this.ServeParticipants);
         this.setParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
         this.setParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
+        this.setParamSimple(map, prefix + "EndStatusV2", this.EndStatusV2);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

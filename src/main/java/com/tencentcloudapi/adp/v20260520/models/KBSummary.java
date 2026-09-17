@@ -96,6 +96,14 @@ public class KBSummary extends AbstractModel {
     private String Name;
 
     /**
+    * <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Permission")
+    @Expose
+    private KBPermission Permission;
+
+    /**
     * <p>处理中状态列表</p>
     */
     @SerializedName("ProcessingFlagList")
@@ -285,6 +293,26 @@ public class KBSummary extends AbstractModel {
     }
 
     /**
+     * Get <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Permission <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KBPermission getPermission() {
+        return this.Permission;
+    }
+
+    /**
+     * Set <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Permission <p>操作权限</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPermission(KBPermission Permission) {
+        this.Permission = Permission;
+    }
+
+    /**
      * Get <p>处理中状态列表</p> 
      * @return ProcessingFlagList <p>处理中状态列表</p>
      */
@@ -373,6 +401,9 @@ public class KBSummary extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Permission != null) {
+            this.Permission = new KBPermission(source.Permission);
+        }
         if (source.ProcessingFlagList != null) {
             this.ProcessingFlagList = new Long[source.ProcessingFlagList.length];
             for (int i = 0; i < source.ProcessingFlagList.length; i++) {
@@ -402,6 +433,7 @@ public class KBSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "KbType", this.KbType);
         this.setParamObj(map, prefix + "LatestOperator.", this.LatestOperator);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamObj(map, prefix + "Permission.", this.Permission);
         this.setParamArraySimple(map, prefix + "ProcessingFlagList.", this.ProcessingFlagList);
         this.setParamSimple(map, prefix + "SharedSubType", this.SharedSubType);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

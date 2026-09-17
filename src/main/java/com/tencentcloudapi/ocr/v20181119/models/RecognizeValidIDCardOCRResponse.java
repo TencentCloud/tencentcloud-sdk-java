@@ -24,25 +24,14 @@ import java.util.HashMap;
 public class RecognizeValidIDCardOCRResponse extends AbstractModel {
 
     /**
-    * 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
+    * <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 身份证信息
+    * <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IDCardInfo")
@@ -50,7 +39,7 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     private IDCardInfo IDCardInfo;
 
     /**
-    * 临时身份证信息
+    * <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemporaryIDCardInfo")
@@ -58,7 +47,7 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     private TemporaryIDCardInfo TemporaryIDCardInfo;
 
     /**
-    * 港澳台居住证信息
+    * <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResidencePermitInfo")
@@ -66,7 +55,7 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     private ResidencePermitInfo ResidencePermitInfo;
 
     /**
-    * 外国人永久居留证信息
+    * <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PermanentResidencePermitInfo")
@@ -81,69 +70,25 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面 
-     * @return Type 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
+     * Get <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p> 
+     * @return Type <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
-     * @param Type 卡证类型
-身份证人像面
-身份证国徽面
-
-临时身份证人像面
-临时身份证人像面
-
-港澳台居住证人像面
-港澳台居住证国徽面
-
-外国人永久居留证人像面
-外国人永久居留证国徽面
+     * Set <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
+     * @param Type <p>卡证类型<br>身份证人像面<br>身份证国徽面</p><p>临时身份证人像面<br>临时身份证人像面</p><p>港澳台居住证人像面<br>港澳台居住证国徽面</p><p>外国人永久居留证人像面<br>外国人永久居留证国徽面</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 身份证信息
+     * Get <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IDCardInfo 身份证信息
+     * @return IDCardInfo <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IDCardInfo getIDCardInfo() {
@@ -151,9 +96,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 身份证信息
+     * Set <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IDCardInfo 身份证信息
+     * @param IDCardInfo <p>身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIDCardInfo(IDCardInfo IDCardInfo) {
@@ -161,9 +106,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 临时身份证信息
+     * Get <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemporaryIDCardInfo 临时身份证信息
+     * @return TemporaryIDCardInfo <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TemporaryIDCardInfo getTemporaryIDCardInfo() {
@@ -171,9 +116,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 临时身份证信息
+     * Set <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemporaryIDCardInfo 临时身份证信息
+     * @param TemporaryIDCardInfo <p>临时身份证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemporaryIDCardInfo(TemporaryIDCardInfo TemporaryIDCardInfo) {
@@ -181,9 +126,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 港澳台居住证信息
+     * Get <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResidencePermitInfo 港澳台居住证信息
+     * @return ResidencePermitInfo <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResidencePermitInfo getResidencePermitInfo() {
@@ -191,9 +136,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 港澳台居住证信息
+     * Set <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResidencePermitInfo 港澳台居住证信息
+     * @param ResidencePermitInfo <p>港澳台居住证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResidencePermitInfo(ResidencePermitInfo ResidencePermitInfo) {
@@ -201,9 +146,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 外国人永久居留证信息
+     * Get <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PermanentResidencePermitInfo 外国人永久居留证信息
+     * @return PermanentResidencePermitInfo <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PermanentResidencePermitInfo getPermanentResidencePermitInfo() {
@@ -211,9 +156,9 @@ public class RecognizeValidIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 外国人永久居留证信息
+     * Set <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PermanentResidencePermitInfo 外国人永久居留证信息
+     * @param PermanentResidencePermitInfo <p>外国人永久居留证信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermanentResidencePermitInfo(PermanentResidencePermitInfo PermanentResidencePermitInfo) {

@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeReportListRequest extends AbstractModel {
 
     /**
-    * 限制数目
+    * <p>限制数目</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 报告名称
+    * <p>报告名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 报告类型
+    * <p>报告类型</p>
     */
     @SerializedName("ReportType")
     @Expose
     private Long ReportType;
 
     /**
-    * 报告状态
+    * <p>报告状态</p>
     */
     @SerializedName("ReportStatus")
     @Expose
     private Long ReportStatus;
 
     /**
-    * 报表模版id
+    * <p>报表模板id</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 需要排序的字段
+    * <p>需要排序的字段</p>
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 排序顺序 asc desc
+    * <p>排序顺序 asc desc</p>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+    * <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
     */
     @SerializedName("CntDay")
     @Expose
     private Long CntDay;
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get <p>限制数目</p> 
+     * @return Limit <p>限制数目</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set <p>限制数目</p>
+     * @param Limit <p>限制数目</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 报告名称 
-     * @return Name 报告名称
+     * Get <p>报告名称</p> 
+     * @return Name <p>报告名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 报告名称
-     * @param Name 报告名称
+     * Set <p>报告名称</p>
+     * @param Name <p>报告名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 报告类型 
-     * @return ReportType 报告类型
+     * Get <p>报告类型</p> 
+     * @return ReportType <p>报告类型</p>
      */
     public Long getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set 报告类型
-     * @param ReportType 报告类型
+     * Set <p>报告类型</p>
+     * @param ReportType <p>报告类型</p>
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 报告状态 
-     * @return ReportStatus 报告状态
+     * Get <p>报告状态</p> 
+     * @return ReportStatus <p>报告状态</p>
      */
     public Long getReportStatus() {
         return this.ReportStatus;
     }
 
     /**
-     * Set 报告状态
-     * @param ReportStatus 报告状态
+     * Set <p>报告状态</p>
+     * @param ReportStatus <p>报告状态</p>
      */
     public void setReportStatus(Long ReportStatus) {
         this.ReportStatus = ReportStatus;
     }
 
     /**
-     * Get 报表模版id 
-     * @return TemplateId 报表模版id
+     * Get <p>报表模板id</p> 
+     * @return TemplateId <p>报表模板id</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 报表模版id
-     * @param TemplateId 报表模版id
+     * Set <p>报表模板id</p>
+     * @param TemplateId <p>报表模板id</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 需要排序的字段 
-     * @return Field 需要排序的字段
+     * Get <p>需要排序的字段</p> 
+     * @return Field <p>需要排序的字段</p>
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 需要排序的字段
-     * @param Field 需要排序的字段
+     * Set <p>需要排序的字段</p>
+     * @param Field <p>需要排序的字段</p>
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 排序顺序 asc desc 
-     * @return Sort 排序顺序 asc desc
+     * Get <p>排序顺序 asc desc</p> 
+     * @return Sort <p>排序顺序 asc desc</p>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序顺序 asc desc
-     * @param Sort 排序顺序 asc desc
+     * Set <p>排序顺序 asc desc</p>
+     * @param Sort <p>排序顺序 asc desc</p>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0 
-     * @return CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * Get <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p> 
+     * @return CntDay <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     public Long getCntDay() {
         return this.CntDay;
     }
 
     /**
-     * Set 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-     * @param CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * Set <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
+     * @param CntDay <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     public void setCntDay(Long CntDay) {
         this.CntDay = CntDay;

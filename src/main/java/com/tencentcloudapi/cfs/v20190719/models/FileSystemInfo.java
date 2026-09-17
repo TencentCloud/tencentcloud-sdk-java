@@ -228,6 +228,27 @@ public class FileSystemInfo extends AbstractModel {
     private String Scenario;
 
     /**
+    * <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+    */
+    @SerializedName("FullDeleteCapacityUsage")
+    @Expose
+    private Float FullDeleteCapacityUsage;
+
+    /**
+    * <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+    */
+    @SerializedName("FullDeleteMinTtl")
+    @Expose
+    private Long FullDeleteMinTtl;
+
+    /**
+    * <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+    */
+    @SerializedName("ExpireDeleteTtl")
+    @Expose
+    private Long ExpireDeleteTtl;
+
+    /**
      * Get <p>创建时间</p> 
      * @return CreationTime <p>创建时间</p>
      */
@@ -695,6 +716,54 @@ public class FileSystemInfo extends AbstractModel {
         this.Scenario = Scenario;
     }
 
+    /**
+     * Get <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p> 
+     * @return FullDeleteCapacityUsage <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+     */
+    public Float getFullDeleteCapacityUsage() {
+        return this.FullDeleteCapacityUsage;
+    }
+
+    /**
+     * Set <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+     * @param FullDeleteCapacityUsage <p>过满删除容量占比，0.0 表示关闭</p><p>取值范围：[0.0, 1.0]</p>
+     */
+    public void setFullDeleteCapacityUsage(Float FullDeleteCapacityUsage) {
+        this.FullDeleteCapacityUsage = FullDeleteCapacityUsage;
+    }
+
+    /**
+     * Get <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p> 
+     * @return FullDeleteMinTtl <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+     */
+    public Long getFullDeleteMinTtl() {
+        return this.FullDeleteMinTtl;
+    }
+
+    /**
+     * Set <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+     * @param FullDeleteMinTtl <p>过满删除最小存活时间，单位秒</p><p>单位：秒</p>
+     */
+    public void setFullDeleteMinTtl(Long FullDeleteMinTtl) {
+        this.FullDeleteMinTtl = FullDeleteMinTtl;
+    }
+
+    /**
+     * Get <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p> 
+     * @return ExpireDeleteTtl <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+     */
+    public Long getExpireDeleteTtl() {
+        return this.ExpireDeleteTtl;
+    }
+
+    /**
+     * Set <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+     * @param ExpireDeleteTtl <p>过期删除 TTL，单位秒，0 表示关闭</p><p>单位：秒</p>
+     */
+    public void setExpireDeleteTtl(Long ExpireDeleteTtl) {
+        this.ExpireDeleteTtl = ExpireDeleteTtl;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -796,6 +865,15 @@ public class FileSystemInfo extends AbstractModel {
         if (source.Scenario != null) {
             this.Scenario = new String(source.Scenario);
         }
+        if (source.FullDeleteCapacityUsage != null) {
+            this.FullDeleteCapacityUsage = new Float(source.FullDeleteCapacityUsage);
+        }
+        if (source.FullDeleteMinTtl != null) {
+            this.FullDeleteMinTtl = new Long(source.FullDeleteMinTtl);
+        }
+        if (source.ExpireDeleteTtl != null) {
+            this.ExpireDeleteTtl = new Long(source.ExpireDeleteTtl);
+        }
     }
 
 
@@ -832,6 +910,9 @@ public class FileSystemInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
         this.setParamSimple(map, prefix + "Scenario", this.Scenario);
+        this.setParamSimple(map, prefix + "FullDeleteCapacityUsage", this.FullDeleteCapacityUsage);
+        this.setParamSimple(map, prefix + "FullDeleteMinTtl", this.FullDeleteMinTtl);
+        this.setParamSimple(map, prefix + "ExpireDeleteTtl", this.ExpireDeleteTtl);
 
     }
 }

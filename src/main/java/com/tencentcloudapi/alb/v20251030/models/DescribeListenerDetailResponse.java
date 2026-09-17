@@ -24,138 +24,133 @@ import java.util.HashMap;
 public class DescribeListenerDetailResponse extends AbstractModel {
 
     /**
-    * 监听器绑定的CA证书ID列表。
+    * <p>监听器绑定的CA证书ID列表。</p>
     */
     @SerializedName("CaCertificateIds")
     @Expose
     private String [] CaCertificateIds;
 
     /**
-    * 是否开启双向认证。
+    * <p>是否开启双向认证。</p>
     */
     @SerializedName("CaEnabled")
     @Expose
     private Boolean CaEnabled;
 
     /**
-    * 服务器证书 ID 列表。
+    * <p>服务器证书 ID 列表。</p>
     */
     @SerializedName("CertificateIds")
     @Expose
     private String [] CertificateIds;
 
     /**
-    * 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+    * <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 规则动作列表。
+    * <p>规则动作列表。</p>
     */
     @SerializedName("DefaultActions")
     @Expose
     private DefaultAction [] DefaultActions;
 
     /**
-    * 是否启用 Gzip 压缩。
+    * <p>是否启用 Gzip 压缩。</p>
     */
     @SerializedName("GzipEnabled")
     @Expose
     private Boolean GzipEnabled;
 
     /**
-    * 是否开启HTTP/2特性。
+    * <p>是否开启HTTP/2特性。</p>
     */
     @SerializedName("Http2Enabled")
     @Expose
     private Boolean Http2Enabled;
 
     /**
-    * 指定连接空闲超时时间。单位：秒。
+    * <p>指定连接空闲超时时间。单位：秒。</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-    * 监听器 ID，格式为 lst- 后接 8 位字母数字。
+    * <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 自定义监听名称。
+    * <p>自定义监听名称。</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 负载均衡实例前端使用的端口。
+    * <p>负载均衡实例前端使用的端口。</p>
     */
     @SerializedName("ListenerPort")
     @Expose
     private Long ListenerPort;
 
     /**
-    * 监听协议。
+    * <p>监听协议。</p>
     */
     @SerializedName("ListenerProtocol")
     @Expose
     private String ListenerProtocol;
 
     /**
-    * 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
+    * <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
     */
     @SerializedName("ListenerStatus")
     @Expose
     private String ListenerStatus;
 
     /**
-    * 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+    * <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+    * <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 请求超时时间。单位：秒。
+    * <p>连接请求超时时间。单位：秒。</p>
     */
     @SerializedName("RequestTimeout")
     @Expose
     private Long RequestTimeout;
 
     /**
-    * 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+    * <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
     */
     @SerializedName("SecurityPolicyId")
     @Expose
     private String SecurityPolicyId;
 
     /**
-    * 标签。
+    * <p>标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * XForwardedFor配置。
+    * <p>XForwardedFor配置。</p>
     */
     @SerializedName("XForwardedForConfig")
     @Expose
@@ -169,324 +164,304 @@ public class DescribeListenerDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监听器绑定的CA证书ID列表。 
-     * @return CaCertificateIds 监听器绑定的CA证书ID列表。
+     * Get <p>监听器绑定的CA证书ID列表。</p> 
+     * @return CaCertificateIds <p>监听器绑定的CA证书ID列表。</p>
      */
     public String [] getCaCertificateIds() {
         return this.CaCertificateIds;
     }
 
     /**
-     * Set 监听器绑定的CA证书ID列表。
-     * @param CaCertificateIds 监听器绑定的CA证书ID列表。
+     * Set <p>监听器绑定的CA证书ID列表。</p>
+     * @param CaCertificateIds <p>监听器绑定的CA证书ID列表。</p>
      */
     public void setCaCertificateIds(String [] CaCertificateIds) {
         this.CaCertificateIds = CaCertificateIds;
     }
 
     /**
-     * Get 是否开启双向认证。 
-     * @return CaEnabled 是否开启双向认证。
+     * Get <p>是否开启双向认证。</p> 
+     * @return CaEnabled <p>是否开启双向认证。</p>
      */
     public Boolean getCaEnabled() {
         return this.CaEnabled;
     }
 
     /**
-     * Set 是否开启双向认证。
-     * @param CaEnabled 是否开启双向认证。
+     * Set <p>是否开启双向认证。</p>
+     * @param CaEnabled <p>是否开启双向认证。</p>
      */
     public void setCaEnabled(Boolean CaEnabled) {
         this.CaEnabled = CaEnabled;
     }
 
     /**
-     * Get 服务器证书 ID 列表。 
-     * @return CertificateIds 服务器证书 ID 列表。
+     * Get <p>服务器证书 ID 列表。</p> 
+     * @return CertificateIds <p>服务器证书 ID 列表。</p>
      */
     public String [] getCertificateIds() {
         return this.CertificateIds;
     }
 
     /**
-     * Set 服务器证书 ID 列表。
-     * @param CertificateIds 服务器证书 ID 列表。
+     * Set <p>服务器证书 ID 列表。</p>
+     * @param CertificateIds <p>服务器证书 ID 列表。</p>
      */
     public void setCertificateIds(String [] CertificateIds) {
         this.CertificateIds = CertificateIds;
     }
 
     /**
-     * Get 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00） 
-     * @return CreateTime 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * Get <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p> 
+     * @return CreateTime <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
-     * @param CreateTime 监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * Set <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+     * @param CreateTime <p>监听器实例的创建时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 规则动作列表。 
-     * @return DefaultActions 规则动作列表。
+     * Get <p>规则动作列表。</p> 
+     * @return DefaultActions <p>规则动作列表。</p>
      */
     public DefaultAction [] getDefaultActions() {
         return this.DefaultActions;
     }
 
     /**
-     * Set 规则动作列表。
-     * @param DefaultActions 规则动作列表。
+     * Set <p>规则动作列表。</p>
+     * @param DefaultActions <p>规则动作列表。</p>
      */
     public void setDefaultActions(DefaultAction [] DefaultActions) {
         this.DefaultActions = DefaultActions;
     }
 
     /**
-     * Get 是否启用 Gzip 压缩。 
-     * @return GzipEnabled 是否启用 Gzip 压缩。
+     * Get <p>是否启用 Gzip 压缩。</p> 
+     * @return GzipEnabled <p>是否启用 Gzip 压缩。</p>
      */
     public Boolean getGzipEnabled() {
         return this.GzipEnabled;
     }
 
     /**
-     * Set 是否启用 Gzip 压缩。
-     * @param GzipEnabled 是否启用 Gzip 压缩。
+     * Set <p>是否启用 Gzip 压缩。</p>
+     * @param GzipEnabled <p>是否启用 Gzip 压缩。</p>
      */
     public void setGzipEnabled(Boolean GzipEnabled) {
         this.GzipEnabled = GzipEnabled;
     }
 
     /**
-     * Get 是否开启HTTP/2特性。 
-     * @return Http2Enabled 是否开启HTTP/2特性。
+     * Get <p>是否开启HTTP/2特性。</p> 
+     * @return Http2Enabled <p>是否开启HTTP/2特性。</p>
      */
     public Boolean getHttp2Enabled() {
         return this.Http2Enabled;
     }
 
     /**
-     * Set 是否开启HTTP/2特性。
-     * @param Http2Enabled 是否开启HTTP/2特性。
+     * Set <p>是否开启HTTP/2特性。</p>
+     * @param Http2Enabled <p>是否开启HTTP/2特性。</p>
      */
     public void setHttp2Enabled(Boolean Http2Enabled) {
         this.Http2Enabled = Http2Enabled;
     }
 
     /**
-     * Get 指定连接空闲超时时间。单位：秒。 
-     * @return IdleTimeout 指定连接空闲超时时间。单位：秒。
+     * Get <p>指定连接空闲超时时间。单位：秒。</p> 
+     * @return IdleTimeout <p>指定连接空闲超时时间。单位：秒。</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set 指定连接空闲超时时间。单位：秒。
-     * @param IdleTimeout 指定连接空闲超时时间。单位：秒。
+     * Set <p>指定连接空闲超时时间。单位：秒。</p>
+     * @param IdleTimeout <p>指定连接空闲超时时间。单位：秒。</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get 监听器 ID，格式为 lst- 后接 8 位字母数字。 
-     * @return ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * Get <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p> 
+     * @return ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器 ID，格式为 lst- 后接 8 位字母数字。
-     * @param ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * Set <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+     * @param ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 自定义监听名称。 
-     * @return ListenerName 自定义监听名称。
+     * Get <p>自定义监听名称。</p> 
+     * @return ListenerName <p>自定义监听名称。</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 自定义监听名称。
-     * @param ListenerName 自定义监听名称。
+     * Set <p>自定义监听名称。</p>
+     * @param ListenerName <p>自定义监听名称。</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 负载均衡实例前端使用的端口。 
-     * @return ListenerPort 负载均衡实例前端使用的端口。
+     * Get <p>负载均衡实例前端使用的端口。</p> 
+     * @return ListenerPort <p>负载均衡实例前端使用的端口。</p>
      */
     public Long getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * Set 负载均衡实例前端使用的端口。
-     * @param ListenerPort 负载均衡实例前端使用的端口。
+     * Set <p>负载均衡实例前端使用的端口。</p>
+     * @param ListenerPort <p>负载均衡实例前端使用的端口。</p>
      */
     public void setListenerPort(Long ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
     /**
-     * Get 监听协议。 
-     * @return ListenerProtocol 监听协议。
+     * Get <p>监听协议。</p> 
+     * @return ListenerProtocol <p>监听协议。</p>
      */
     public String getListenerProtocol() {
         return this.ListenerProtocol;
     }
 
     /**
-     * Set 监听协议。
-     * @param ListenerProtocol 监听协议。
+     * Set <p>监听协议。</p>
+     * @param ListenerProtocol <p>监听协议。</p>
      */
     public void setListenerProtocol(String ListenerProtocol) {
         this.ListenerProtocol = ListenerProtocol;
     }
 
     /**
-     * Get 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败 
-     * @return ListenerStatus 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
+     * Get <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul> 
+     * @return ListenerStatus <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
      */
     public String getListenerStatus() {
         return this.ListenerStatus;
     }
 
     /**
-     * Set 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
-     * @param ListenerStatus 监听器状态。取值:=
-
-- **Active**: 运行中。
-- **Provisioning**：创建中。
-- **Configuring**：变配中。
-- **ProvisionFailed**：创建失败
+     * Set <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
+     * @param ListenerStatus <p>监听器状态。取值:=</p><ul><li><strong>Active</strong>: 运行中。</li><li><strong>Provisioning</strong>：创建中。</li><li><strong>Configuring</strong>：变配中。</li><li><strong>ProvisionFailed</strong>：创建失败</li></ul>
      */
     public void setListenerStatus(String ListenerStatus) {
         this.ListenerStatus = ListenerStatus;
     }
 
     /**
-     * Get 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。 
-     * @return LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * Get <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p> 
+     * @return LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
-     * @param LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * Set <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+     * @param LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00） 
-     * @return ModifyTime 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * Get <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p> 
+     * @return ModifyTime <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
-     * @param ModifyTime 监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）
+     * Set <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
+     * @param ModifyTime <p>监听器实例的最后变更时间。格式：ISO 8601（例如 2025-01-01T08:30:00+08:00）</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 请求超时时间。单位：秒。 
-     * @return RequestTimeout 请求超时时间。单位：秒。
+     * Get <p>连接请求超时时间。单位：秒。</p> 
+     * @return RequestTimeout <p>连接请求超时时间。单位：秒。</p>
      */
     public Long getRequestTimeout() {
         return this.RequestTimeout;
     }
 
     /**
-     * Set 请求超时时间。单位：秒。
-     * @param RequestTimeout 请求超时时间。单位：秒。
+     * Set <p>连接请求超时时间。单位：秒。</p>
+     * @param RequestTimeout <p>连接请求超时时间。单位：秒。</p>
      */
     public void setRequestTimeout(Long RequestTimeout) {
         this.RequestTimeout = RequestTimeout;
     }
 
     /**
-     * Get 安全策略 ID，格式为 tls- 后接 8 位字母数字。 
-     * @return SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * Get <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p> 
+     * @return SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public String getSecurityPolicyId() {
         return this.SecurityPolicyId;
     }
 
     /**
-     * Set 安全策略 ID，格式为 tls- 后接 8 位字母数字。
-     * @param SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * Set <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+     * @param SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public void setSecurityPolicyId(String SecurityPolicyId) {
         this.SecurityPolicyId = SecurityPolicyId;
     }
 
     /**
-     * Get 标签。 
-     * @return Tags 标签。
+     * Get <p>标签。</p> 
+     * @return Tags <p>标签。</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签。
-     * @param Tags 标签。
+     * Set <p>标签。</p>
+     * @param Tags <p>标签。</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get XForwardedFor配置。 
-     * @return XForwardedForConfig XForwardedFor配置。
+     * Get <p>XForwardedFor配置。</p> 
+     * @return XForwardedForConfig <p>XForwardedFor配置。</p>
      */
     public XForwardedForConfig getXForwardedForConfig() {
         return this.XForwardedForConfig;
     }
 
     /**
-     * Set XForwardedFor配置。
-     * @param XForwardedForConfig XForwardedFor配置。
+     * Set <p>XForwardedFor配置。</p>
+     * @param XForwardedForConfig <p>XForwardedFor配置。</p>
      */
     public void setXForwardedForConfig(XForwardedForConfig XForwardedForConfig) {
         this.XForwardedForConfig = XForwardedForConfig;

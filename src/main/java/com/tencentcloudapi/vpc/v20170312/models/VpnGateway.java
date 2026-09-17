@@ -178,6 +178,13 @@ public class VpnGateway extends AbstractModel {
     private Tag [] TagSet;
 
     /**
+    * <p>私网VPN标识</p>
+    */
+    @SerializedName("IsPrivate")
+    @Expose
+    private Boolean IsPrivate;
+
+    /**
      * Get <p>网关实例ID。</p> 
      * @return VpnGatewayId <p>网关实例ID。</p>
      */
@@ -529,6 +536,22 @@ public class VpnGateway extends AbstractModel {
         this.TagSet = TagSet;
     }
 
+    /**
+     * Get <p>私网VPN标识</p> 
+     * @return IsPrivate <p>私网VPN标识</p>
+     */
+    public Boolean getIsPrivate() {
+        return this.IsPrivate;
+    }
+
+    /**
+     * Set <p>私网VPN标识</p>
+     * @param IsPrivate <p>私网VPN标识</p>
+     */
+    public void setIsPrivate(Boolean IsPrivate) {
+        this.IsPrivate = IsPrivate;
+    }
+
     public VpnGateway() {
     }
 
@@ -609,6 +632,9 @@ public class VpnGateway extends AbstractModel {
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.IsPrivate != null) {
+            this.IsPrivate = new Boolean(source.IsPrivate);
+        }
     }
 
 
@@ -638,6 +664,7 @@ public class VpnGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
         this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "IsPrivate", this.IsPrivate);
 
     }
 }

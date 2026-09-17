@@ -31,11 +31,18 @@ public class QueueInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * <p>队列名称</p>
+    * <p>不可变的Code</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
+
+    /**
+    * <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
 
     /**
     * <p>资源用量列表</p>
@@ -44,6 +51,14 @@ public class QueueInfo extends AbstractModel {
     @SerializedName("ResourceUsage")
     @Expose
     private ResourceUsage [] ResourceUsage;
+
+    /**
+    * <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceQuotas")
+    @Expose
+    private QueueResourceQuota [] ResourceQuotas;
 
     /**
     * <p>队列描述</p>
@@ -84,19 +99,35 @@ public class QueueInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>队列名称</p> 
-     * @return QueueName <p>队列名称</p>
+     * Get <p>不可变的Code</p> 
+     * @return QueueName <p>不可变的Code</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set <p>队列名称</p>
-     * @param QueueName <p>队列名称</p>
+     * Set <p>不可变的Code</p>
+     * @param QueueName <p>不可变的Code</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
+    }
+
+    /**
+     * Get <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p> 
+     * @return Alias <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+     * @param Alias <p>队列别名（用户可改显示名）；alias 为空时回落为 QueueName</p>
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
     }
 
     /**
@@ -117,6 +148,26 @@ public class QueueInfo extends AbstractModel {
      */
     public void setResourceUsage(ResourceUsage [] ResourceUsage) {
         this.ResourceUsage = ResourceUsage;
+    }
+
+    /**
+     * Get <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceQuotas <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QueueResourceQuota [] getResourceQuotas() {
+        return this.ResourceQuotas;
+    }
+
+    /**
+     * Set <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceQuotas <p>队列各资源类型的实时余量（总量 / 已用量 / 可用量）。由 Kueue Prometheus 指标实时计算；监控关闭或查询失败时为 null，字段省略不返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceQuotas(QueueResourceQuota [] ResourceQuotas) {
+        this.ResourceQuotas = ResourceQuotas;
     }
 
     /**
@@ -185,10 +236,19 @@ public class QueueInfo extends AbstractModel {
         if (source.QueueName != null) {
             this.QueueName = new String(source.QueueName);
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
         if (source.ResourceUsage != null) {
             this.ResourceUsage = new ResourceUsage[source.ResourceUsage.length];
             for (int i = 0; i < source.ResourceUsage.length; i++) {
                 this.ResourceUsage[i] = new ResourceUsage(source.ResourceUsage[i]);
+            }
+        }
+        if (source.ResourceQuotas != null) {
+            this.ResourceQuotas = new QueueResourceQuota[source.ResourceQuotas.length];
+            for (int i = 0; i < source.ResourceQuotas.length; i++) {
+                this.ResourceQuotas[i] = new QueueResourceQuota(source.ResourceQuotas[i]);
             }
         }
         if (source.Description != null) {
@@ -209,7 +269,9 @@ public class QueueInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamArrayObj(map, prefix + "ResourceUsage.", this.ResourceUsage);
+        this.setParamArrayObj(map, prefix + "ResourceQuotas.", this.ResourceQuotas);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "QueueType", this.QueueType);

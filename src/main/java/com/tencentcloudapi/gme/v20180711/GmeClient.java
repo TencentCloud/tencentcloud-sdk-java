@@ -84,6 +84,17 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *短音频内容理解同步接口
+     * @param req CreateAudioModerationSyncRequest
+     * @return CreateAudioModerationSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAudioModerationSyncResponse CreateAudioModerationSync(CreateAudioModerationSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAudioModerationSync", CreateAudioModerationSyncResponse.class);
+    }
+
+    /**
      *用户使用该接口可以创建语音消息转文本热句模型，以供识别调用
      * @param req CreateCustomizationRequest
      * @return CreateCustomizationResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LabelTermCheckResult extends AbstractModel {
 
     /**
-    * <p>校验结果</p>
+    * 校验结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckResult")
@@ -32,23 +32,23 @@ public class LabelTermCheckResult extends AbstractModel {
     private CheckResult CheckResult;
 
     /**
-    * <p>待校验的标准词</p>
+    * 待校验的标准词
     */
     @SerializedName("Term")
     @Expose
     private String Term;
 
     /**
-    * <p>已存在时返回对应标准词 ID</p>
+    * 已存在时返回对应标准词 ID
     */
     @SerializedName("TermId")
     @Expose
     private String TermId;
 
     /**
-     * Get <p>校验结果</p>
+     * Get 校验结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckResult <p>校验结果</p>
+     * @return CheckResult 校验结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CheckResult getCheckResult() {
@@ -56,9 +56,9 @@ public class LabelTermCheckResult extends AbstractModel {
     }
 
     /**
-     * Set <p>校验结果</p>
+     * Set 校验结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckResult <p>校验结果</p>
+     * @param CheckResult 校验结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckResult(CheckResult CheckResult) {
@@ -66,32 +66,32 @@ public class LabelTermCheckResult extends AbstractModel {
     }
 
     /**
-     * Get <p>待校验的标准词</p> 
-     * @return Term <p>待校验的标准词</p>
+     * Get 待校验的标准词 
+     * @return Term 待校验的标准词
      */
     public String getTerm() {
         return this.Term;
     }
 
     /**
-     * Set <p>待校验的标准词</p>
-     * @param Term <p>待校验的标准词</p>
+     * Set 待校验的标准词
+     * @param Term 待校验的标准词
      */
     public void setTerm(String Term) {
         this.Term = Term;
     }
 
     /**
-     * Get <p>已存在时返回对应标准词 ID</p> 
-     * @return TermId <p>已存在时返回对应标准词 ID</p>
+     * Get 已存在时返回对应标准词 ID 
+     * @return TermId 已存在时返回对应标准词 ID
      */
     public String getTermId() {
         return this.TermId;
     }
 
     /**
-     * Set <p>已存在时返回对应标准词 ID</p>
-     * @param TermId <p>已存在时返回对应标准词 ID</p>
+     * Set 已存在时返回对应标准词 ID
+     * @param TermId 已存在时返回对应标准词 ID
      */
     public void setTermId(String TermId) {
         this.TermId = TermId;

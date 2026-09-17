@@ -45,6 +45,13 @@ public class User extends AbstractModel {
     private String UserType;
 
     /**
+    * <p>是否付费账号</p>
+    */
+    @SerializedName("IsPaid")
+    @Expose
+    private Boolean IsPaid;
+
+    /**
      * Get <p>用户等级</p> 
      * @return UserLevel <p>用户等级</p>
      */
@@ -92,6 +99,22 @@ public class User extends AbstractModel {
         this.UserType = UserType;
     }
 
+    /**
+     * Get <p>是否付费账号</p> 
+     * @return IsPaid <p>是否付费账号</p>
+     */
+    public Boolean getIsPaid() {
+        return this.IsPaid;
+    }
+
+    /**
+     * Set <p>是否付费账号</p>
+     * @param IsPaid <p>是否付费账号</p>
+     */
+    public void setIsPaid(Boolean IsPaid) {
+        this.IsPaid = IsPaid;
+    }
+
     public User() {
     }
 
@@ -109,6 +132,9 @@ public class User extends AbstractModel {
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.IsPaid != null) {
+            this.IsPaid = new Boolean(source.IsPaid);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "UserLevel", this.UserLevel);
         this.setParamObj(map, prefix + "UserPoint.", this.UserPoint);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "IsPaid", this.IsPaid);
 
     }
 }

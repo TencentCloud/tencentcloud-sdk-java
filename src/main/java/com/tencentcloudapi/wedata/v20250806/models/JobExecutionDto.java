@@ -104,6 +104,14 @@ public class JobExecutionDto extends AbstractModel {
     private String ResultPreviewFilePath;
 
     /**
+    * 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaInfoFilePath")
+    @Expose
+    private String SchemaInfoFilePath;
+
+    /**
     * 任务执行的结果总行数
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -174,6 +182,14 @@ public class JobExecutionDto extends AbstractModel {
     @SerializedName("ScriptContentTruncate")
     @Expose
     private Boolean ScriptContentTruncate;
+
+    /**
+    * 预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectedPreviewResult")
+    @Expose
+    private Boolean CollectedPreviewResult;
 
     /**
      * Get 数据探索任务ID
@@ -376,6 +392,26 @@ public class JobExecutionDto extends AbstractModel {
     }
 
     /**
+     * Get 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaInfoFilePath 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaInfoFilePath() {
+        return this.SchemaInfoFilePath;
+    }
+
+    /**
+     * Set 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaInfoFilePath 结果集schema信息文件cos路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaInfoFilePath(String SchemaInfoFilePath) {
+        this.SchemaInfoFilePath = SchemaInfoFilePath;
+    }
+
+    /**
      * Get 任务执行的结果总行数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultTotalCount 任务执行的结果总行数
@@ -555,6 +591,26 @@ public class JobExecutionDto extends AbstractModel {
         this.ScriptContentTruncate = ScriptContentTruncate;
     }
 
+    /**
+     * Get 预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectedPreviewResult 预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCollectedPreviewResult() {
+        return this.CollectedPreviewResult;
+    }
+
+    /**
+     * Set 预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectedPreviewResult 预览结果集是否收集完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectedPreviewResult(Boolean CollectedPreviewResult) {
+        this.CollectedPreviewResult = CollectedPreviewResult;
+    }
+
     public JobExecutionDto() {
     }
 
@@ -593,6 +649,9 @@ public class JobExecutionDto extends AbstractModel {
         if (source.ResultPreviewFilePath != null) {
             this.ResultPreviewFilePath = new String(source.ResultPreviewFilePath);
         }
+        if (source.SchemaInfoFilePath != null) {
+            this.SchemaInfoFilePath = new String(source.SchemaInfoFilePath);
+        }
         if (source.ResultTotalCount != null) {
             this.ResultTotalCount = new Long(source.ResultTotalCount);
         }
@@ -623,6 +682,9 @@ public class JobExecutionDto extends AbstractModel {
         if (source.ScriptContentTruncate != null) {
             this.ScriptContentTruncate = new Boolean(source.ScriptContentTruncate);
         }
+        if (source.CollectedPreviewResult != null) {
+            this.CollectedPreviewResult = new Boolean(source.CollectedPreviewResult);
+        }
     }
 
 
@@ -640,6 +702,7 @@ public class JobExecutionDto extends AbstractModel {
         this.setParamSimple(map, prefix + "LogFilePath", this.LogFilePath);
         this.setParamSimple(map, prefix + "ResultFilePath", this.ResultFilePath);
         this.setParamSimple(map, prefix + "ResultPreviewFilePath", this.ResultPreviewFilePath);
+        this.setParamSimple(map, prefix + "SchemaInfoFilePath", this.SchemaInfoFilePath);
         this.setParamSimple(map, prefix + "ResultTotalCount", this.ResultTotalCount);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
@@ -649,6 +712,7 @@ public class JobExecutionDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultEffectCount", this.ResultEffectCount);
         this.setParamSimple(map, prefix + "CollectingTotalResult", this.CollectingTotalResult);
         this.setParamSimple(map, prefix + "ScriptContentTruncate", this.ScriptContentTruncate);
+        this.setParamSimple(map, prefix + "CollectedPreviewResult", this.CollectedPreviewResult);
 
     }
 }

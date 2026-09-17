@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class UpgradeCDBProxyVersionRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+    * <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 数据库代理当前版本
+    * <p>数据库代理当前版本</p>
     */
     @SerializedName("SrcProxyVersion")
     @Expose
     private String SrcProxyVersion;
 
     /**
-    * 数据库代理升级版本
+    * <p>数据库代理升级版本</p>
     */
     @SerializedName("DstProxyVersion")
     @Expose
     private String DstProxyVersion;
 
     /**
-    * 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
+    * <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
     */
     @SerializedName("UpgradeTime")
     @Expose
     private String UpgradeTime;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
+    */
+    @SerializedName("RollUpgradeWaitingTime")
+    @Expose
+    private Long RollUpgradeWaitingTime;
+
+    /**
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
-     * @return ProxyGroupId 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Get <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p> 
+     * @return ProxyGroupId <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
-     * @param ProxyGroupId 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * Set <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
+     * @param ProxyGroupId <p>数据库代理 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/90585">DescribeCdbProxyInfo</a> 接口获取。</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 数据库代理当前版本 
-     * @return SrcProxyVersion 数据库代理当前版本
+     * Get <p>数据库代理当前版本</p> 
+     * @return SrcProxyVersion <p>数据库代理当前版本</p>
      */
     public String getSrcProxyVersion() {
         return this.SrcProxyVersion;
     }
 
     /**
-     * Set 数据库代理当前版本
-     * @param SrcProxyVersion 数据库代理当前版本
+     * Set <p>数据库代理当前版本</p>
+     * @param SrcProxyVersion <p>数据库代理当前版本</p>
      */
     public void setSrcProxyVersion(String SrcProxyVersion) {
         this.SrcProxyVersion = SrcProxyVersion;
     }
 
     /**
-     * Get 数据库代理升级版本 
-     * @return DstProxyVersion 数据库代理升级版本
+     * Get <p>数据库代理升级版本</p> 
+     * @return DstProxyVersion <p>数据库代理升级版本</p>
      */
     public String getDstProxyVersion() {
         return this.DstProxyVersion;
     }
 
     /**
-     * Set 数据库代理升级版本
-     * @param DstProxyVersion 数据库代理升级版本
+     * Set <p>数据库代理升级版本</p>
+     * @param DstProxyVersion <p>数据库代理升级版本</p>
      */
     public void setDstProxyVersion(String DstProxyVersion) {
         this.DstProxyVersion = DstProxyVersion;
     }
 
     /**
-     * Get 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间） 
-     * @return UpgradeTime 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
+     * Get <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul> 
+     * @return UpgradeTime <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
      */
     public String getUpgradeTime() {
         return this.UpgradeTime;
     }
 
     /**
-     * Set 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
-     * @param UpgradeTime 升级时间 ：nowTime（升级完成时）timeWindow（实例维护时间）
+     * Set <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
+     * @param UpgradeTime <p>升级切换时间</p><p>枚举值：</p><ul><li>nowTime： 升级完成时</li><li>timeWindow： 实例维护时间</li><li>rollUpgrade： 滚动升级</li></ul>
      */
     public void setUpgradeTime(String UpgradeTime) {
         this.UpgradeTime = UpgradeTime;
+    }
+
+    /**
+     * Get <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p> 
+     * @return RollUpgradeWaitingTime <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
+     */
+    public Long getRollUpgradeWaitingTime() {
+        return this.RollUpgradeWaitingTime;
+    }
+
+    /**
+     * Set <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
+     * @param RollUpgradeWaitingTime <p>滚动升级等待时间</p><p>取值范围：[10, 3600]</p><p>单位：秒</p>
+     */
+    public void setRollUpgradeWaitingTime(Long RollUpgradeWaitingTime) {
+        this.RollUpgradeWaitingTime = RollUpgradeWaitingTime;
     }
 
     public UpgradeCDBProxyVersionRequest() {
@@ -161,6 +184,9 @@ public class UpgradeCDBProxyVersionRequest extends AbstractModel {
         if (source.UpgradeTime != null) {
             this.UpgradeTime = new String(source.UpgradeTime);
         }
+        if (source.RollUpgradeWaitingTime != null) {
+            this.RollUpgradeWaitingTime = new Long(source.RollUpgradeWaitingTime);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class UpgradeCDBProxyVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SrcProxyVersion", this.SrcProxyVersion);
         this.setParamSimple(map, prefix + "DstProxyVersion", this.DstProxyVersion);
         this.setParamSimple(map, prefix + "UpgradeTime", this.UpgradeTime);
+        this.setParamSimple(map, prefix + "RollUpgradeWaitingTime", this.RollUpgradeWaitingTime);
 
     }
 }

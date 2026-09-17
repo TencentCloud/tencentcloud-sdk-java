@@ -25,6 +25,7 @@ public class ViewImage extends AbstractModel {
 
     /**
     * <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewType")
     @Expose
@@ -32,14 +33,17 @@ public class ViewImage extends AbstractModel {
 
     /**
     * <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewImageUrl")
     @Expose
     private String ViewImageUrl;
 
     /**
-     * Get <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p> 
+     * Get <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ViewType <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewType() {
         return this.ViewType;
@@ -47,15 +51,19 @@ public class ViewImage extends AbstractModel {
 
     /**
      * Set <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewType <p>视角类型</p><p>枚举值：</p><ul><li>front： 正视图 （必填）</li><li>back： 背视图</li><li>left： 左视图</li><li>right： 右视图</li><li>top： 顶视图</li><li>bottom： 底视图</li><li>left_front： 左前 45°</li><li>right_front： 右前 45°</li></ul><p>MultiViewImages 数组长度 ≥ 2 ; 必须包含 front 视角;  同一 ViewType 不允许重复; 每项必须提供 ViewImageUrl</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewType(String ViewType) {
         this.ViewType = ViewType;
     }
 
     /**
-     * Get <p>图片 URL（http / https）</p> 
+     * Get <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ViewImageUrl <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewImageUrl() {
         return this.ViewImageUrl;
@@ -63,7 +71,9 @@ public class ViewImage extends AbstractModel {
 
     /**
      * Set <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewImageUrl <p>图片 URL（http / https）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewImageUrl(String ViewImageUrl) {
         this.ViewImageUrl = ViewImageUrl;

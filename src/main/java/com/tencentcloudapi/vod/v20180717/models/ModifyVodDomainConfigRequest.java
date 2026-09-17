@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyVodDomainConfigRequest extends AbstractModel {
 
     /**
-    * 域名。
+    * <p>域名。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * [Referer 防盗链](/document/product/266/14046)规则。
+    * <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
     private RefererAuthPolicy RefererAuthPolicy;
 
     /**
-    * [Key 防盗链](/document/product/266/14047)规则。
+    * <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
 
     /**
-    * QUIC 配置。
+    * <p>QUIC 配置。</p>
     */
     @SerializedName("QUICConfig")
     @Expose
     private DomainQUICConfig QUICConfig;
 
     /**
-    * IP 访问限制规则。
+    * <p>IP 访问限制规则。</p>
     */
     @SerializedName("IPFilterPolicy")
     @Expose
     private IPFilterPolicy IPFilterPolicy;
 
     /**
-     * Get 域名。 
-     * @return Domain 域名。
+     * Get <p>域名。</p> 
+     * @return Domain <p>域名。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名。
-     * @param Domain 域名。
+     * Set <p>域名。</p>
+     * @param Domain <p>域名。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get [Referer 防盗链](/document/product/266/14046)规则。 
-     * @return RefererAuthPolicy [Referer 防盗链](/document/product/266/14046)规则。
+     * Get <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p> 
+     * @return RefererAuthPolicy <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
     }
 
     /**
-     * Set [Referer 防盗链](/document/product/266/14046)规则。
-     * @param RefererAuthPolicy [Referer 防盗链](/document/product/266/14046)规则。
+     * Set <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
+     * @param RefererAuthPolicy <p><a href="/document/product/266/14046">Referer 防盗链</a>规则。</p>
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
     }
 
     /**
-     * Get [Key 防盗链](/document/product/266/14047)规则。 
-     * @return UrlSignatureAuthPolicy [Key 防盗链](/document/product/266/14047)规则。
+     * Get <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p> 
+     * @return UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
     }
 
     /**
-     * Set [Key 防盗链](/document/product/266/14047)规则。
-     * @param UrlSignatureAuthPolicy [Key 防盗链](/document/product/266/14047)规则。
+     * Set <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
+     * @param UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key 防盗链</a>规则。</p>
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
     /**
-     * Get QUIC 配置。 
-     * @return QUICConfig QUIC 配置。
+     * Get <p>QUIC 配置。</p> 
+     * @return QUICConfig <p>QUIC 配置。</p>
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
     }
 
     /**
-     * Set QUIC 配置。
-     * @param QUICConfig QUIC 配置。
+     * Set <p>QUIC 配置。</p>
+     * @param QUICConfig <p>QUIC 配置。</p>
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
     }
 
     /**
-     * Get IP 访问限制规则。 
-     * @return IPFilterPolicy IP 访问限制规则。
+     * Get <p>IP 访问限制规则。</p> 
+     * @return IPFilterPolicy <p>IP 访问限制规则。</p>
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
     }
 
     /**
-     * Set IP 访问限制规则。
-     * @param IPFilterPolicy IP 访问限制规则。
+     * Set <p>IP 访问限制规则。</p>
+     * @param IPFilterPolicy <p>IP 访问限制规则。</p>
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;

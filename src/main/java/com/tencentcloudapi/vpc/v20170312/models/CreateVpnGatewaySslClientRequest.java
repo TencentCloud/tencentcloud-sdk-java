@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateVpnGatewaySslClientRequest extends AbstractModel {
 
     /**
-    * SSL-VPN-SERVER 实例ID。
+    * <p>SSL-VPN-SERVER 实例ID。</p>
     */
     @SerializedName("SslVpnServerId")
     @Expose
     private String SslVpnServerId;
 
     /**
-    * SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+    * <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
     */
     @SerializedName("SslVpnClientName")
     @Expose
     private String SslVpnClientName;
 
     /**
-    * SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+    * <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
     */
     @SerializedName("SslVpnClientNames")
     @Expose
     private String [] SslVpnClientNames;
 
     /**
-    * 指定绑定的标签列表
+    * <p>指定绑定的标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get SSL-VPN-SERVER 实例ID。 
-     * @return SslVpnServerId SSL-VPN-SERVER 实例ID。
+     * Get <p>SSL-VPN-SERVER 实例ID。</p> 
+     * @return SslVpnServerId <p>SSL-VPN-SERVER 实例ID。</p>
      */
     public String getSslVpnServerId() {
         return this.SslVpnServerId;
     }
 
     /**
-     * Set SSL-VPN-SERVER 实例ID。
-     * @param SslVpnServerId SSL-VPN-SERVER 实例ID。
+     * Set <p>SSL-VPN-SERVER 实例ID。</p>
+     * @param SslVpnServerId <p>SSL-VPN-SERVER 实例ID。</p>
      */
     public void setSslVpnServerId(String SslVpnServerId) {
         this.SslVpnServerId = SslVpnServerId;
     }
 
     /**
-     * Get SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。 
-     * @return SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+     * Get <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p> 
+     * @return SslVpnClientName <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
      */
     public String getSslVpnClientName() {
         return this.SslVpnClientName;
     }
 
     /**
-     * Set SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
-     * @param SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+     * Set <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
+     * @param SslVpnClientName <p>SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。</p>
      */
     public void setSslVpnClientName(String SslVpnClientName) {
         this.SslVpnClientName = SslVpnClientName;
     }
 
     /**
-     * Get SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。 
-     * @return SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     * Get <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p> 
+     * @return SslVpnClientNames <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
      */
     public String [] getSslVpnClientNames() {
         return this.SslVpnClientNames;
     }
 
     /**
-     * Set SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
-     * @param SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     * Set <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
+     * @param SslVpnClientNames <p>SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。</p>
      */
     public void setSslVpnClientNames(String [] SslVpnClientNames) {
         this.SslVpnClientNames = SslVpnClientNames;
     }
 
     /**
-     * Get 指定绑定的标签列表 
-     * @return Tags 指定绑定的标签列表
+     * Get <p>指定绑定的标签列表</p> 
+     * @return Tags <p>指定绑定的标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表
-     * @param Tags 指定绑定的标签列表
+     * Set <p>指定绑定的标签列表</p>
+     * @param Tags <p>指定绑定的标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

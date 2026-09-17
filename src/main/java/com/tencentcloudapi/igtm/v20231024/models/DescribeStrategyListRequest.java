@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeStrategyListRequest extends AbstractModel {
 
     /**
-    * 实例 id
+    * <p>实例 id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条数
+    * <p>每页条数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 策略过滤条件：StrategyName：策略名称
+    * <p>策略过滤条件：StrategyName：策略名称</p>
     */
     @SerializedName("Filters")
     @Expose
     private ResourceFilter [] Filters;
 
     /**
-     * Get 实例 id 
-     * @return InstanceId 实例 id
+     * Get <p>实例 id</p> 
+     * @return InstanceId <p>实例 id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 id
-     * @param InstanceId 实例 id
+     * Set <p>实例 id</p>
+     * @param InstanceId <p>实例 id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条数 
-     * @return Limit 每页条数
+     * Get <p>每页条数</p> 
+     * @return Limit <p>每页条数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数
-     * @param Limit 每页条数
+     * Set <p>每页条数</p>
+     * @param Limit <p>每页条数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 策略过滤条件：StrategyName：策略名称 
-     * @return Filters 策略过滤条件：StrategyName：策略名称
+     * Get <p>策略过滤条件：StrategyName：策略名称</p> 
+     * @return Filters <p>策略过滤条件：StrategyName：策略名称</p>
      */
     public ResourceFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 策略过滤条件：StrategyName：策略名称
-     * @param Filters 策略过滤条件：StrategyName：策略名称
+     * Set <p>策略过滤条件：StrategyName：策略名称</p>
+     * @param Filters <p>策略过滤条件：StrategyName：策略名称</p>
      */
     public void setFilters(ResourceFilter [] Filters) {
         this.Filters = Filters;

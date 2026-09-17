@@ -39,7 +39,7 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
-     *校验标签下的标准词是否已存在
+     *校验标签
      * @param req CheckLabelRequest
      * @return CheckLabelResponse
      * @throws TencentCloudSDKException
@@ -894,6 +894,17 @@ public class AdpClient extends AbstractClient{
     public DescribeReleaseSummaryResponse DescribeReleaseSummary(DescribeReleaseSummaryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReleaseSummary", DescribeReleaseSummaryResponse.class);
+    }
+
+    /**
+     *获取用户资源套餐和增值包用量信息
+     * @param req DescribeResourceSummaryRequest
+     * @return DescribeResourceSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceSummaryResponse DescribeResourceSummary(DescribeResourceSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceSummary", DescribeResourceSummaryResponse.class);
     }
 
     /**

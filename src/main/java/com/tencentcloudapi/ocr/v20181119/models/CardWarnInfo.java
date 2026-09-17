@@ -24,257 +24,210 @@ import java.util.HashMap;
 public class CardWarnInfo extends AbstractModel {
 
     /**
-    * 证件边缘是否完整
-0：正常
-1：边缘不完整
+    * <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
     */
     @SerializedName("BorderCheck")
     @Expose
     private Long BorderCheck;
 
     /**
-    * 证件是否被遮挡
-0：正常
-1：有遮挡
+    * <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
     */
     @SerializedName("OcclusionCheck")
     @Expose
     private Long OcclusionCheck;
 
     /**
-    * 是否复印
-0:正常
-1:复印件
+    * <p>是否复印<br>0:正常<br>1:复印件</p>
     */
     @SerializedName("CopyCheck")
     @Expose
     private Long CopyCheck;
 
     /**
-    * 是否屏幕翻拍
-0:正常
-1:翻拍
+    * <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
     */
     @SerializedName("ReshootCheck")
     @Expose
     private Long ReshootCheck;
 
     /**
-    * 证件是否有PS
-0：正常
-1：有PS
+    * <p>证件是否有PS<br>0：正常<br>1：有PS</p>
     */
     @SerializedName("PSCheck")
     @Expose
     private Long PSCheck;
 
     /**
-    * 是否模糊：
-0:正常
-1:模糊
+    * <p>是否模糊：<br>0:正常<br>1:模糊</p>
     */
     @SerializedName("BlurCheck")
     @Expose
     private Long BlurCheck;
 
     /**
-    * 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+    * <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
     */
     @SerializedName("BlurScore")
     @Expose
     private Float BlurScore;
 
     /**
-    * 是否电子身份证
-0：否
-1：是电子身份证
+    * <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
     */
     @SerializedName("ElectronCheck")
     @Expose
     private Long ElectronCheck;
 
     /**
-     * Get 证件边缘是否完整
-0：正常
-1：边缘不完整 
-     * @return BorderCheck 证件边缘是否完整
-0：正常
-1：边缘不完整
+    * <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("ReflectCheck")
+    @Expose
+    private Long ReflectCheck;
+
+    /**
+     * Get <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p> 
+     * @return BorderCheck <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
      */
     public Long getBorderCheck() {
         return this.BorderCheck;
     }
 
     /**
-     * Set 证件边缘是否完整
-0：正常
-1：边缘不完整
-     * @param BorderCheck 证件边缘是否完整
-0：正常
-1：边缘不完整
+     * Set <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
+     * @param BorderCheck <p>证件边缘是否完整<br>0：正常<br>1：边缘不完整</p>
      */
     public void setBorderCheck(Long BorderCheck) {
         this.BorderCheck = BorderCheck;
     }
 
     /**
-     * Get 证件是否被遮挡
-0：正常
-1：有遮挡 
-     * @return OcclusionCheck 证件是否被遮挡
-0：正常
-1：有遮挡
+     * Get <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p> 
+     * @return OcclusionCheck <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
      */
     public Long getOcclusionCheck() {
         return this.OcclusionCheck;
     }
 
     /**
-     * Set 证件是否被遮挡
-0：正常
-1：有遮挡
-     * @param OcclusionCheck 证件是否被遮挡
-0：正常
-1：有遮挡
+     * Set <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
+     * @param OcclusionCheck <p>证件是否被遮挡<br>0：正常<br>1：有遮挡</p>
      */
     public void setOcclusionCheck(Long OcclusionCheck) {
         this.OcclusionCheck = OcclusionCheck;
     }
 
     /**
-     * Get 是否复印
-0:正常
-1:复印件 
-     * @return CopyCheck 是否复印
-0:正常
-1:复印件
+     * Get <p>是否复印<br>0:正常<br>1:复印件</p> 
+     * @return CopyCheck <p>是否复印<br>0:正常<br>1:复印件</p>
      */
     public Long getCopyCheck() {
         return this.CopyCheck;
     }
 
     /**
-     * Set 是否复印
-0:正常
-1:复印件
-     * @param CopyCheck 是否复印
-0:正常
-1:复印件
+     * Set <p>是否复印<br>0:正常<br>1:复印件</p>
+     * @param CopyCheck <p>是否复印<br>0:正常<br>1:复印件</p>
      */
     public void setCopyCheck(Long CopyCheck) {
         this.CopyCheck = CopyCheck;
     }
 
     /**
-     * Get 是否屏幕翻拍
-0:正常
-1:翻拍 
-     * @return ReshootCheck 是否屏幕翻拍
-0:正常
-1:翻拍
+     * Get <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p> 
+     * @return ReshootCheck <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
      */
     public Long getReshootCheck() {
         return this.ReshootCheck;
     }
 
     /**
-     * Set 是否屏幕翻拍
-0:正常
-1:翻拍
-     * @param ReshootCheck 是否屏幕翻拍
-0:正常
-1:翻拍
+     * Set <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
+     * @param ReshootCheck <p>是否屏幕翻拍<br>0:正常<br>1:翻拍</p>
      */
     public void setReshootCheck(Long ReshootCheck) {
         this.ReshootCheck = ReshootCheck;
     }
 
     /**
-     * Get 证件是否有PS
-0：正常
-1：有PS 
-     * @return PSCheck 证件是否有PS
-0：正常
-1：有PS
+     * Get <p>证件是否有PS<br>0：正常<br>1：有PS</p> 
+     * @return PSCheck <p>证件是否有PS<br>0：正常<br>1：有PS</p>
      */
     public Long getPSCheck() {
         return this.PSCheck;
     }
 
     /**
-     * Set 证件是否有PS
-0：正常
-1：有PS
-     * @param PSCheck 证件是否有PS
-0：正常
-1：有PS
+     * Set <p>证件是否有PS<br>0：正常<br>1：有PS</p>
+     * @param PSCheck <p>证件是否有PS<br>0：正常<br>1：有PS</p>
      */
     public void setPSCheck(Long PSCheck) {
         this.PSCheck = PSCheck;
     }
 
     /**
-     * Get 是否模糊：
-0:正常
-1:模糊 
-     * @return BlurCheck 是否模糊：
-0:正常
-1:模糊
+     * Get <p>是否模糊：<br>0:正常<br>1:模糊</p> 
+     * @return BlurCheck <p>是否模糊：<br>0:正常<br>1:模糊</p>
      */
     public Long getBlurCheck() {
         return this.BlurCheck;
     }
 
     /**
-     * Set 是否模糊：
-0:正常
-1:模糊
-     * @param BlurCheck 是否模糊：
-0:正常
-1:模糊
+     * Set <p>是否模糊：<br>0:正常<br>1:模糊</p>
+     * @param BlurCheck <p>是否模糊：<br>0:正常<br>1:模糊</p>
      */
     public void setBlurCheck(Long BlurCheck) {
         this.BlurCheck = BlurCheck;
     }
 
     /**
-     * Get 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5 
-     * @return BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     * Get <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p> 
+     * @return BlurScore <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
      */
     public Float getBlurScore() {
         return this.BlurScore;
     }
 
     /**
-     * Set 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
-     * @param BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     * Set <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
+     * @param BlurScore <p>模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5</p>
      */
     public void setBlurScore(Float BlurScore) {
         this.BlurScore = BlurScore;
     }
 
     /**
-     * Get 是否电子身份证
-0：否
-1：是电子身份证 
-     * @return ElectronCheck 是否电子身份证
-0：否
-1：是电子身份证
+     * Get <p>是否电子身份证<br>0：否<br>1：是电子身份证</p> 
+     * @return ElectronCheck <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
      */
     public Long getElectronCheck() {
         return this.ElectronCheck;
     }
 
     /**
-     * Set 是否电子身份证
-0：否
-1：是电子身份证
-     * @param ElectronCheck 是否电子身份证
-0：否
-1：是电子身份证
+     * Set <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
+     * @param ElectronCheck <p>是否电子身份证<br>0：否<br>1：是电子身份证</p>
      */
     public void setElectronCheck(Long ElectronCheck) {
         this.ElectronCheck = ElectronCheck;
+    }
+
+    /**
+     * Get <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p> 
+     * @return ReflectCheck <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+     */
+    public Long getReflectCheck() {
+        return this.ReflectCheck;
+    }
+
+    /**
+     * Set <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+     * @param ReflectCheck <p>是否存在反光</p><p>枚举值：</p><ul><li>0： 正常</li><li>1： 反光</li></ul><p>默认值：0</p>
+     */
+    public void setReflectCheck(Long ReflectCheck) {
+        this.ReflectCheck = ReflectCheck;
     }
 
     public CardWarnInfo() {
@@ -309,6 +262,9 @@ public class CardWarnInfo extends AbstractModel {
         if (source.ElectronCheck != null) {
             this.ElectronCheck = new Long(source.ElectronCheck);
         }
+        if (source.ReflectCheck != null) {
+            this.ReflectCheck = new Long(source.ReflectCheck);
+        }
     }
 
 
@@ -324,6 +280,7 @@ public class CardWarnInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BlurCheck", this.BlurCheck);
         this.setParamSimple(map, prefix + "BlurScore", this.BlurScore);
         this.setParamSimple(map, prefix + "ElectronCheck", this.ElectronCheck);
+        this.setParamSimple(map, prefix + "ReflectCheck", this.ReflectCheck);
 
     }
 }

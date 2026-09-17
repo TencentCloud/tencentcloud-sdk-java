@@ -24,122 +24,92 @@ import java.util.HashMap;
 public class ModifyVodDomainAccelerateConfigRequest extends AbstractModel {
 
     /**
-    * 需要设置加速配置的域名。
+    * <p>需要设置加速配置的域名。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 区域，可选值：
-<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>Outside Chinese Mainland: 中国境外。</li>
-<li>Global: 全球范围。</li>
+    * <p>区域，可选值：</p><li>Chinese Mainland：中国境内（不包含港澳台）。</li><li>Outside Chinese Mainland: 中国境外。</li><li>Global: 全球范围。</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 开启或者关闭所选区域的域名加速，可选值：
-<li>Enabled: 开启。</li>
-<li>Disabled：关闭。</li>
-开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+    * <p>开启或者关闭所选区域的域名加速，可选值：</p><li>Enabled: 开启。</li><li>Disabled：关闭。</li>开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get 需要设置加速配置的域名。 
-     * @return Domain 需要设置加速配置的域名。
+     * Get <p>需要设置加速配置的域名。</p> 
+     * @return Domain <p>需要设置加速配置的域名。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 需要设置加速配置的域名。
-     * @param Domain 需要设置加速配置的域名。
+     * Set <p>需要设置加速配置的域名。</p>
+     * @param Domain <p>需要设置加速配置的域名。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 区域，可选值：
-<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>Outside Chinese Mainland: 中国境外。</li>
-<li>Global: 全球范围。</li> 
-     * @return Area 区域，可选值：
-<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>Outside Chinese Mainland: 中国境外。</li>
-<li>Global: 全球范围。</li>
+     * Get <p>区域，可选值：</p><li>Chinese Mainland：中国境内（不包含港澳台）。</li><li>Outside Chinese Mainland: 中国境外。</li><li>Global: 全球范围。</li> 
+     * @return Area <p>区域，可选值：</p><li>Chinese Mainland：中国境内（不包含港澳台）。</li><li>Outside Chinese Mainland: 中国境外。</li><li>Global: 全球范围。</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 区域，可选值：
-<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>Outside Chinese Mainland: 中国境外。</li>
-<li>Global: 全球范围。</li>
-     * @param Area 区域，可选值：
-<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>Outside Chinese Mainland: 中国境外。</li>
-<li>Global: 全球范围。</li>
+     * Set <p>区域，可选值：</p><li>Chinese Mainland：中国境内（不包含港澳台）。</li><li>Outside Chinese Mainland: 中国境外。</li><li>Global: 全球范围。</li>
+     * @param Area <p>区域，可选值：</p><li>Chinese Mainland：中国境内（不包含港澳台）。</li><li>Outside Chinese Mainland: 中国境外。</li><li>Global: 全球范围。</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 开启或者关闭所选区域的域名加速，可选值：
-<li>Enabled: 开启。</li>
-<li>Disabled：关闭。</li>
-开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。 
-     * @return Status 开启或者关闭所选区域的域名加速，可选值：
-<li>Enabled: 开启。</li>
-<li>Disabled：关闭。</li>
-开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+     * Get <p>开启或者关闭所选区域的域名加速，可选值：</p><li>Enabled: 开启。</li><li>Disabled：关闭。</li>开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。 
+     * @return Status <p>开启或者关闭所选区域的域名加速，可选值：</p><li>Enabled: 开启。</li><li>Disabled：关闭。</li>开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开启或者关闭所选区域的域名加速，可选值：
-<li>Enabled: 开启。</li>
-<li>Disabled：关闭。</li>
-开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
-     * @param Status 开启或者关闭所选区域的域名加速，可选值：
-<li>Enabled: 开启。</li>
-<li>Disabled：关闭。</li>
-开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+     * Set <p>开启或者关闭所选区域的域名加速，可选值：</p><li>Enabled: 开启。</li><li>Disabled：关闭。</li>开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
+     * @param Status <p>开启或者关闭所选区域的域名加速，可选值：</p><li>Enabled: 开启。</li><li>Disabled：关闭。</li>开启中国境内加速的域名，需要先[备案域名](/document/product/243/18905)。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

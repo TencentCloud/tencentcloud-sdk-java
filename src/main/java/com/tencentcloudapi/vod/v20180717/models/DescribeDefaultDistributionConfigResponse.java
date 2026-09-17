@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
 
     /**
-    * 分发配置的域名(已废弃）。
+    * <p>分发配置的域名(已废弃）。</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 分发配置的域名。
+    * <p>分发配置的域名。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 分发配置的协议，为 HTTP 或 HTTPS。
+    * <p>分发配置的协议，为 HTTP 或 HTTPS。</p>
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。
+    * <p>播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。</p>
     */
     @SerializedName("PlayKey")
     @Expose
@@ -59,8 +59,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分发配置的域名(已废弃）。 
-     * @return DomainName 分发配置的域名(已废弃）。
+     * Get <p>分发配置的域名(已废弃）。</p> 
+     * @return DomainName <p>分发配置的域名(已废弃）。</p>
      * @deprecated
      */
     @Deprecated
@@ -69,8 +69,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 分发配置的域名(已废弃）。
-     * @param DomainName 分发配置的域名(已废弃）。
+     * Set <p>分发配置的域名(已废弃）。</p>
+     * @param DomainName <p>分发配置的域名(已废弃）。</p>
      * @deprecated
      */
     @Deprecated
@@ -79,48 +79,48 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 分发配置的域名。 
-     * @return Domain 分发配置的域名。
+     * Get <p>分发配置的域名。</p> 
+     * @return Domain <p>分发配置的域名。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 分发配置的域名。
-     * @param Domain 分发配置的域名。
+     * Set <p>分发配置的域名。</p>
+     * @param Domain <p>分发配置的域名。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 分发配置的协议，为 HTTP 或 HTTPS。 
-     * @return Scheme 分发配置的协议，为 HTTP 或 HTTPS。
+     * Get <p>分发配置的协议，为 HTTP 或 HTTPS。</p> 
+     * @return Scheme <p>分发配置的协议，为 HTTP 或 HTTPS。</p>
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 分发配置的协议，为 HTTP 或 HTTPS。
-     * @param Scheme 分发配置的协议，为 HTTP 或 HTTPS。
+     * Set <p>分发配置的协议，为 HTTP 或 HTTPS。</p>
+     * @param Scheme <p>分发配置的协议，为 HTTP 或 HTTPS。</p>
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get 播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。 
-     * @return PlayKey 播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。
+     * Get <p>播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。</p> 
+     * @return PlayKey <p>播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。</p>
      */
     public String getPlayKey() {
         return this.PlayKey;
     }
 
     /**
-     * Set 播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。
-     * @param PlayKey 播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。
+     * Set <p>播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。</p>
+     * @param PlayKey <p>播放密钥，由大小写字母（a - Z）或者数字（0 - 9）组成，长度在8 - 20个字符之间。</p>
      */
     public void setPlayKey(String PlayKey) {
         this.PlayKey = PlayKey;

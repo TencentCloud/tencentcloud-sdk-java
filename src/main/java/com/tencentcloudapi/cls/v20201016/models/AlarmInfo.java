@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class AlarmInfo extends AbstractModel {
 
     /**
-    * 告警策略名称。
+    * <p>告警策略名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 监控对象列表。
+    * <p>监控对象列表。</p>
     */
     @SerializedName("AlarmTargets")
     @Expose
     private AlarmTargetInfo [] AlarmTargets;
 
     /**
-    * 监控任务运行时间点。
+    * <p>监控任务运行时间点。</p>
     */
     @SerializedName("MonitorTime")
     @Expose
     private MonitorTime MonitorTime;
 
     /**
-    * 是否触发告警的单触发条件。与MultiConditions参数互斥。
+    * <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+    * <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
     */
     @SerializedName("TriggerCount")
     @Expose
     private Long TriggerCount;
 
     /**
-    * 告警重复的周期。单位是min。取值范围是0~1440。
+    * <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
     */
     @SerializedName("AlarmPeriod")
     @Expose
     private Long AlarmPeriod;
 
     /**
-    * 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+    * <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
     */
     @SerializedName("AlarmNoticeIds")
     @Expose
     private String [] AlarmNoticeIds;
 
     /**
-    * 开启状态。
+    * <p>开启状态。</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 告警策略ID。
+    * <p>告警策略ID。</p>
     */
     @SerializedName("AlarmId")
     @Expose
     private String AlarmId;
 
     /**
-    * 创建时间。格式： YYYY-MM-DD HH:MM:SS
+    * <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+    * <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 自定义通知模板
+    * <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTemplate")
@@ -109,256 +109,269 @@ public class AlarmInfo extends AbstractModel {
     private String MessageTemplate;
 
     /**
-    * 自定义回调模板
+    * <p>自定义回调模板</p>
     */
     @SerializedName("CallBack")
     @Expose
     private CallBackInfo CallBack;
 
     /**
-    * 多维分析设置
+    * <p>多维分析设置</p>
     */
     @SerializedName("Analysis")
     @Expose
     private AnalysisDimensional [] Analysis;
 
     /**
-    * 分组触发状态。true：开启，false：关闭（默认）
+    * <p>分组触发状态。true：开启，false：关闭（默认）</p>
     */
     @SerializedName("GroupTriggerStatus")
     @Expose
     private Boolean GroupTriggerStatus;
 
     /**
-    * 分组触发条件。
+    * <p>分组触发条件。</p>
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
     private String [] GroupTriggerCondition;
 
     /**
-    * 告警策略绑定的标签信息。
+    * <p>告警策略绑定的标签信息。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+    * <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
     */
     @SerializedName("MonitorObjectType")
     @Expose
     private Long MonitorObjectType;
 
     /**
-    * 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+    * <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * 告警附加分类字段。
+    * <p>告警附加分类字段。</p>
     */
     @SerializedName("Classifications")
     @Expose
     private AlarmClassification [] Classifications;
 
     /**
-    * 多触发条件。与
-Condition互斥。
+    * <p>多触发条件。与<br>Condition互斥。</p>
     */
     @SerializedName("MultiConditions")
     @Expose
     private MultiCondition [] MultiConditions;
 
     /**
-    * 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+    * <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
     */
     @SerializedName("MonitorNotice")
     @Expose
     private MonitorNotice MonitorNotice;
 
     /**
-     * Get 告警策略名称。 
-     * @return Name 告警策略名称。
+    * <p>AI分析内容</p>
+    */
+    @SerializedName("AIAnalysis")
+    @Expose
+    private AIAnalysis AIAnalysis;
+
+    /**
+    * <p>最后修改人的uin信息</p>
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private Long SubUin;
+
+    /**
+     * Get <p>告警策略名称。</p> 
+     * @return Name <p>告警策略名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警策略名称。
-     * @param Name 告警策略名称。
+     * Set <p>告警策略名称。</p>
+     * @param Name <p>告警策略名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 监控对象列表。 
-     * @return AlarmTargets 监控对象列表。
+     * Get <p>监控对象列表。</p> 
+     * @return AlarmTargets <p>监控对象列表。</p>
      */
     public AlarmTargetInfo [] getAlarmTargets() {
         return this.AlarmTargets;
     }
 
     /**
-     * Set 监控对象列表。
-     * @param AlarmTargets 监控对象列表。
+     * Set <p>监控对象列表。</p>
+     * @param AlarmTargets <p>监控对象列表。</p>
      */
     public void setAlarmTargets(AlarmTargetInfo [] AlarmTargets) {
         this.AlarmTargets = AlarmTargets;
     }
 
     /**
-     * Get 监控任务运行时间点。 
-     * @return MonitorTime 监控任务运行时间点。
+     * Get <p>监控任务运行时间点。</p> 
+     * @return MonitorTime <p>监控任务运行时间点。</p>
      */
     public MonitorTime getMonitorTime() {
         return this.MonitorTime;
     }
 
     /**
-     * Set 监控任务运行时间点。
-     * @param MonitorTime 监控任务运行时间点。
+     * Set <p>监控任务运行时间点。</p>
+     * @param MonitorTime <p>监控任务运行时间点。</p>
      */
     public void setMonitorTime(MonitorTime MonitorTime) {
         this.MonitorTime = MonitorTime;
     }
 
     /**
-     * Get 是否触发告警的单触发条件。与MultiConditions参数互斥。 
-     * @return Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
+     * Get <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p> 
+     * @return Condition <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 是否触发告警的单触发条件。与MultiConditions参数互斥。
-     * @param Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
+     * Set <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
+     * @param Condition <p>是否触发告警的单触发条件。与MultiConditions参数互斥。</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。 
-     * @return TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * Get <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p> 
+     * @return TriggerCount <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
      */
     public Long getTriggerCount() {
         return this.TriggerCount;
     }
 
     /**
-     * Set 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
-     * @param TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * Set <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
+     * @param TriggerCount <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。</p>
      */
     public void setTriggerCount(Long TriggerCount) {
         this.TriggerCount = TriggerCount;
     }
 
     /**
-     * Get 告警重复的周期。单位是min。取值范围是0~1440。 
-     * @return AlarmPeriod 告警重复的周期。单位是min。取值范围是0~1440。
+     * Get <p>告警重复的周期。单位是min。取值范围是0~1440。</p> 
+     * @return AlarmPeriod <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set 告警重复的周期。单位是min。取值范围是0~1440。
-     * @param AlarmPeriod 告警重复的周期。单位是min。取值范围是0~1440。
+     * Set <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
+     * @param AlarmPeriod <p>告警重复的周期。单位是min。取值范围是0~1440。</p>
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
     }
 
     /**
-     * Get 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥 
-     * @return AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+     * Get <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p> 
+     * @return AlarmNoticeIds <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
      */
     public String [] getAlarmNoticeIds() {
         return this.AlarmNoticeIds;
     }
 
     /**
-     * Set 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     * @param AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+     * Set <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     * @param AlarmNoticeIds <p>关联的告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
      */
     public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
         this.AlarmNoticeIds = AlarmNoticeIds;
     }
 
     /**
-     * Get 开启状态。 
-     * @return Status 开启状态。
+     * Get <p>开启状态。</p> 
+     * @return Status <p>开启状态。</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开启状态。
-     * @param Status 开启状态。
+     * Set <p>开启状态。</p>
+     * @param Status <p>开启状态。</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 告警策略ID。 
-     * @return AlarmId 告警策略ID。
+     * Get <p>告警策略ID。</p> 
+     * @return AlarmId <p>告警策略ID。</p>
      */
     public String getAlarmId() {
         return this.AlarmId;
     }
 
     /**
-     * Set 告警策略ID。
-     * @param AlarmId 告警策略ID。
+     * Set <p>告警策略ID。</p>
+     * @param AlarmId <p>告警策略ID。</p>
      */
     public void setAlarmId(String AlarmId) {
         this.AlarmId = AlarmId;
     }
 
     /**
-     * Get 创建时间。格式： YYYY-MM-DD HH:MM:SS 
-     * @return CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * Get <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p> 
+     * @return CreateTime <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * Set <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param CreateTime <p>创建时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近更新时间。格式： YYYY-MM-DD HH:MM:SS 
-     * @return UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * Get <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p> 
+     * @return UpdateTime <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
-     * @param UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * Set <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
+     * @param UpdateTime <p>最近更新时间。格式： YYYY-MM-DD HH:MM:SS</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 自定义通知模板
+     * Get <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MessageTemplate 自定义通知模板
+     * @return MessageTemplate <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessageTemplate() {
@@ -366,9 +379,9 @@ Condition互斥。
     }
 
     /**
-     * Set 自定义通知模板
+     * Set <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MessageTemplate 自定义通知模板
+     * @param MessageTemplate <p>自定义通知模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTemplate(String MessageTemplate) {
@@ -376,167 +389,195 @@ Condition互斥。
     }
 
     /**
-     * Get 自定义回调模板 
-     * @return CallBack 自定义回调模板
+     * Get <p>自定义回调模板</p> 
+     * @return CallBack <p>自定义回调模板</p>
      */
     public CallBackInfo getCallBack() {
         return this.CallBack;
     }
 
     /**
-     * Set 自定义回调模板
-     * @param CallBack 自定义回调模板
+     * Set <p>自定义回调模板</p>
+     * @param CallBack <p>自定义回调模板</p>
      */
     public void setCallBack(CallBackInfo CallBack) {
         this.CallBack = CallBack;
     }
 
     /**
-     * Get 多维分析设置 
-     * @return Analysis 多维分析设置
+     * Get <p>多维分析设置</p> 
+     * @return Analysis <p>多维分析设置</p>
      */
     public AnalysisDimensional [] getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set 多维分析设置
-     * @param Analysis 多维分析设置
+     * Set <p>多维分析设置</p>
+     * @param Analysis <p>多维分析设置</p>
      */
     public void setAnalysis(AnalysisDimensional [] Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get 分组触发状态。true：开启，false：关闭（默认） 
-     * @return GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     * Get <p>分组触发状态。true：开启，false：关闭（默认）</p> 
+     * @return GroupTriggerStatus <p>分组触发状态。true：开启，false：关闭（默认）</p>
      */
     public Boolean getGroupTriggerStatus() {
         return this.GroupTriggerStatus;
     }
 
     /**
-     * Set 分组触发状态。true：开启，false：关闭（默认）
-     * @param GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     * Set <p>分组触发状态。true：开启，false：关闭（默认）</p>
+     * @param GroupTriggerStatus <p>分组触发状态。true：开启，false：关闭（默认）</p>
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
         this.GroupTriggerStatus = GroupTriggerStatus;
     }
 
     /**
-     * Get 分组触发条件。 
-     * @return GroupTriggerCondition 分组触发条件。
+     * Get <p>分组触发条件。</p> 
+     * @return GroupTriggerCondition <p>分组触发条件。</p>
      */
     public String [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
     }
 
     /**
-     * Set 分组触发条件。
-     * @param GroupTriggerCondition 分组触发条件。
+     * Set <p>分组触发条件。</p>
+     * @param GroupTriggerCondition <p>分组触发条件。</p>
      */
     public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get 告警策略绑定的标签信息。 
-     * @return Tags 告警策略绑定的标签信息。
+     * Get <p>告警策略绑定的标签信息。</p> 
+     * @return Tags <p>告警策略绑定的标签信息。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 告警策略绑定的标签信息。
-     * @param Tags 告警策略绑定的标签信息。
+     * Set <p>告警策略绑定的标签信息。</p>
+     * @param Tags <p>告警策略绑定的标签信息。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。  
-     * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+     * Get <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p> 
+     * @return MonitorObjectType <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
     }
 
     /**
-     * Set 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-     * @param MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+     * Set <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
+     * @param MonitorObjectType <p>监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。</p>
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;
     }
 
     /**
-     * Get 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。 
-     * @return AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+     * Get <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p> 
+     * @return AlarmLevel <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-     * @param AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+     * Set <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
+     * @param AlarmLevel <p>告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。</p>
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 告警附加分类字段。 
-     * @return Classifications 告警附加分类字段。
+     * Get <p>告警附加分类字段。</p> 
+     * @return Classifications <p>告警附加分类字段。</p>
      */
     public AlarmClassification [] getClassifications() {
         return this.Classifications;
     }
 
     /**
-     * Set 告警附加分类字段。
-     * @param Classifications 告警附加分类字段。
+     * Set <p>告警附加分类字段。</p>
+     * @param Classifications <p>告警附加分类字段。</p>
      */
     public void setClassifications(AlarmClassification [] Classifications) {
         this.Classifications = Classifications;
     }
 
     /**
-     * Get 多触发条件。与
-Condition互斥。 
-     * @return MultiConditions 多触发条件。与
-Condition互斥。
+     * Get <p>多触发条件。与<br>Condition互斥。</p> 
+     * @return MultiConditions <p>多触发条件。与<br>Condition互斥。</p>
      */
     public MultiCondition [] getMultiConditions() {
         return this.MultiConditions;
     }
 
     /**
-     * Set 多触发条件。与
-Condition互斥。
-     * @param MultiConditions 多触发条件。与
-Condition互斥。
+     * Set <p>多触发条件。与<br>Condition互斥。</p>
+     * @param MultiConditions <p>多触发条件。与<br>Condition互斥。</p>
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {
         this.MultiConditions = MultiConditions;
     }
 
     /**
-     * Get 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥 
-     * @return MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+     * Get <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p> 
+     * @return MonitorNotice <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
      */
     public MonitorNotice getMonitorNotice() {
         return this.MonitorNotice;
     }
 
     /**
-     * Set 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
-     * @param MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+     * Set <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
+     * @param MonitorNotice <p>腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥</p>
      */
     public void setMonitorNotice(MonitorNotice MonitorNotice) {
         this.MonitorNotice = MonitorNotice;
+    }
+
+    /**
+     * Get <p>AI分析内容</p> 
+     * @return AIAnalysis <p>AI分析内容</p>
+     */
+    public AIAnalysis getAIAnalysis() {
+        return this.AIAnalysis;
+    }
+
+    /**
+     * Set <p>AI分析内容</p>
+     * @param AIAnalysis <p>AI分析内容</p>
+     */
+    public void setAIAnalysis(AIAnalysis AIAnalysis) {
+        this.AIAnalysis = AIAnalysis;
+    }
+
+    /**
+     * Get <p>最后修改人的uin信息</p> 
+     * @return SubUin <p>最后修改人的uin信息</p>
+     */
+    public Long getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set <p>最后修改人的uin信息</p>
+     * @param SubUin <p>最后修改人的uin信息</p>
+     */
+    public void setSubUin(Long SubUin) {
+        this.SubUin = SubUin;
     }
 
     public AlarmInfo() {
@@ -634,6 +675,12 @@ Condition互斥。
         if (source.MonitorNotice != null) {
             this.MonitorNotice = new MonitorNotice(source.MonitorNotice);
         }
+        if (source.AIAnalysis != null) {
+            this.AIAnalysis = new AIAnalysis(source.AIAnalysis);
+        }
+        if (source.SubUin != null) {
+            this.SubUin = new Long(source.SubUin);
+        }
     }
 
 
@@ -663,6 +710,8 @@ Condition互斥。
         this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         this.setParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
+        this.setParamObj(map, prefix + "AIAnalysis.", this.AIAnalysis);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
 
     }
 }

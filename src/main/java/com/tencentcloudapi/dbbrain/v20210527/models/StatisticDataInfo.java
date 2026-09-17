@@ -25,6 +25,7 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
     * 统计维度的值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,6 +33,7 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
     * 平均时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeAvg")
     @Expose
@@ -39,6 +41,7 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
     * 总时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSum")
     @Expose
@@ -46,14 +49,17 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
     * 数量。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 统计维度的值。 
+     * Get 统计维度的值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 统计维度的值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -61,15 +67,19 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
      * Set 统计维度的值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 统计维度的值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 平均时间。 
+     * Get 平均时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeAvg 平均时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTimeAvg() {
         return this.TimeAvg;
@@ -77,15 +87,19 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
      * Set 平均时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeAvg 平均时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeAvg(Float TimeAvg) {
         this.TimeAvg = TimeAvg;
     }
 
     /**
-     * Get 总时间。 
+     * Get 总时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeSum 总时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTimeSum() {
         return this.TimeSum;
@@ -93,15 +107,19 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
      * Set 总时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSum 总时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSum(Float TimeSum) {
         this.TimeSum = TimeSum;
     }
 
     /**
-     * Get 数量。 
+     * Get 数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Count 数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -109,7 +127,9 @@ public class StatisticDataInfo extends AbstractModel {
 
     /**
      * Set 数量。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

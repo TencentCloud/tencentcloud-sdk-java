@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeCDBProxyVersionResponse extends AbstractModel {
 
     /**
-    * 异步处理ID
+    * <p>异步处理ID</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeCDBProxyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步处理ID 
-     * @return AsyncRequestId 异步处理ID
+     * Get <p>异步处理ID</p> 
+     * @return AsyncRequestId <p>异步处理ID</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步处理ID
-     * @param AsyncRequestId 异步处理ID
+     * Set <p>异步处理ID</p>
+     * @param AsyncRequestId <p>异步处理ID</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

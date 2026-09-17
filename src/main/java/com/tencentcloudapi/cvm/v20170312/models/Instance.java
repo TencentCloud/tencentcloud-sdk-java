@@ -304,6 +304,13 @@ public class Instance extends AbstractModel {
     private Boolean DisableApiTermination;
 
     /**
+    * <p>实例主机名。</p>
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
     * <p>默认登录用户。</p>
     */
     @SerializedName("DefaultLoginUser")
@@ -1017,6 +1024,22 @@ public class Instance extends AbstractModel {
     }
 
     /**
+     * Get <p>实例主机名。</p> 
+     * @return HostName <p>实例主机名。</p>
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set <p>实例主机名。</p>
+     * @param HostName <p>实例主机名。</p>
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
      * Get <p>默认登录用户。</p> 
      * @return DefaultLoginUser <p>默认登录用户。</p>
      */
@@ -1297,6 +1320,9 @@ public class Instance extends AbstractModel {
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
         if (source.DefaultLoginUser != null) {
             this.DefaultLoginUser = new String(source.DefaultLoginUser);
         }
@@ -1370,6 +1396,7 @@ public class Instance extends AbstractModel {
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
         this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);

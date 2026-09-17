@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FileDeleteTask extends AbstractModel {
 
     /**
-    * 删除文件 ID 列表。
+    * <p>删除文件 ID 列表。</p>
     */
     @SerializedName("FileIdSet")
     @Expose
     private String [] FileIdSet;
 
     /**
-    * 删除文件结果信息列表。
+    * <p>删除文件结果信息列表。</p>
     */
     @SerializedName("FileDeleteResultInfo")
     @Expose
     private FileDeleteResultItem [] FileDeleteResultInfo;
 
     /**
-     * Get 删除文件 ID 列表。 
-     * @return FileIdSet 删除文件 ID 列表。
+     * Get <p>删除文件 ID 列表。</p> 
+     * @return FileIdSet <p>删除文件 ID 列表。</p>
      */
     public String [] getFileIdSet() {
         return this.FileIdSet;
     }
 
     /**
-     * Set 删除文件 ID 列表。
-     * @param FileIdSet 删除文件 ID 列表。
+     * Set <p>删除文件 ID 列表。</p>
+     * @param FileIdSet <p>删除文件 ID 列表。</p>
      */
     public void setFileIdSet(String [] FileIdSet) {
         this.FileIdSet = FileIdSet;
     }
 
     /**
-     * Get 删除文件结果信息列表。 
-     * @return FileDeleteResultInfo 删除文件结果信息列表。
+     * Get <p>删除文件结果信息列表。</p> 
+     * @return FileDeleteResultInfo <p>删除文件结果信息列表。</p>
      */
     public FileDeleteResultItem [] getFileDeleteResultInfo() {
         return this.FileDeleteResultInfo;
     }
 
     /**
-     * Set 删除文件结果信息列表。
-     * @param FileDeleteResultInfo 删除文件结果信息列表。
+     * Set <p>删除文件结果信息列表。</p>
+     * @param FileDeleteResultInfo <p>删除文件结果信息列表。</p>
      */
     public void setFileDeleteResultInfo(FileDeleteResultItem [] FileDeleteResultInfo) {
         this.FileDeleteResultInfo = FileDeleteResultInfo;

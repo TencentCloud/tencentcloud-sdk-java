@@ -182,6 +182,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量cc规则配置接口
+     * @param req CreateAndUpdateBatchCCRuleRequest
+     * @return CreateAndUpdateBatchCCRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndUpdateBatchCCRuleResponse CreateAndUpdateBatchCCRule(CreateAndUpdateBatchCCRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndUpdateBatchCCRule", CreateAndUpdateBatchCCRuleResponse.class);
+    }
+
+    /**
      *添加（编辑）地域封禁中的地域信息
      * @param req CreateAreaBanRuleRequest
      * @return CreateAreaBanRuleResponse

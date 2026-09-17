@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListTargetsForPolicyResponse extends AbstractModel {
 
     /**
-    * 总数。
+    * <p>总数。</p>
     */
     @SerializedName("TotalNum")
     @Expose
     private Long TotalNum;
 
     /**
-    * 指定SCP策略关联目标列表。
+    * <p>指定SCP策略关联目标列表。</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class ListTargetsForPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数。 
-     * @return TotalNum 总数。
+     * Get <p>总数。</p> 
+     * @return TotalNum <p>总数。</p>
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 总数。
-     * @param TotalNum 总数。
+     * Set <p>总数。</p>
+     * @param TotalNum <p>总数。</p>
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 指定SCP策略关联目标列表。 
-     * @return List 指定SCP策略关联目标列表。
+     * Get <p>指定SCP策略关联目标列表。</p> 
+     * @return List <p>指定SCP策略关联目标列表。</p>
      */
     public ListTargetsForPolicyNode [] getList() {
         return this.List;
     }
 
     /**
-     * Set 指定SCP策略关联目标列表。
-     * @param List 指定SCP策略关联目标列表。
+     * Set <p>指定SCP策略关联目标列表。</p>
+     * @param List <p>指定SCP策略关联目标列表。</p>
      */
     public void setList(ListTargetsForPolicyNode [] List) {
         this.List = List;

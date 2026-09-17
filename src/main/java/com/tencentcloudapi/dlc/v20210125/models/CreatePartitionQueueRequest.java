@@ -31,13 +31,6 @@ public class CreatePartitionQueueRequest extends AbstractModel {
     private String PartitionCode;
 
     /**
-    * <p>队列名称</p>
-    */
-    @SerializedName("QueueName")
-    @Expose
-    private String QueueName;
-
-    /**
     * <p>资源规格列表，定义队列的资源类型及大小范围</p>
     */
     @SerializedName("ResourceUsages")
@@ -50,6 +43,20 @@ public class CreatePartitionQueueRequest extends AbstractModel {
     @SerializedName("QueueType")
     @Expose
     private Long QueueType;
+
+    /**
+    * <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
 
     /**
     * <p>队列描述</p>
@@ -72,22 +79,6 @@ public class CreatePartitionQueueRequest extends AbstractModel {
      */
     public void setPartitionCode(String PartitionCode) {
         this.PartitionCode = PartitionCode;
-    }
-
-    /**
-     * Get <p>队列名称</p> 
-     * @return QueueName <p>队列名称</p>
-     */
-    public String getQueueName() {
-        return this.QueueName;
-    }
-
-    /**
-     * Set <p>队列名称</p>
-     * @param QueueName <p>队列名称</p>
-     */
-    public void setQueueName(String QueueName) {
-        this.QueueName = QueueName;
     }
 
     /**
@@ -123,6 +114,38 @@ public class CreatePartitionQueueRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p> 
+     * @return QueueName <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+     * @param QueueName <p>队列编码（不可变 code）：透传时按 RFC1123 校验并作为队列的固定标识；未透传时系统自动生成（格式 dlc-rg-xxxxxxxx）。落库后不可修改</p>
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p> 
+     * @return Alias <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+     * @param Alias <p>队列别名（显示名）：用户可见、可修改；未提供时等于最终 QueueName。可与其它队列重复</p>
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
      * Get <p>队列描述</p> 
      * @return Description <p>队列描述</p>
      */
@@ -149,9 +172,6 @@ public class CreatePartitionQueueRequest extends AbstractModel {
         if (source.PartitionCode != null) {
             this.PartitionCode = new String(source.PartitionCode);
         }
-        if (source.QueueName != null) {
-            this.QueueName = new String(source.QueueName);
-        }
         if (source.ResourceUsages != null) {
             this.ResourceUsages = new ResourceUsage[source.ResourceUsages.length];
             for (int i = 0; i < source.ResourceUsages.length; i++) {
@@ -160,6 +180,12 @@ public class CreatePartitionQueueRequest extends AbstractModel {
         }
         if (source.QueueType != null) {
             this.QueueType = new Long(source.QueueType);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -172,9 +198,10 @@ public class CreatePartitionQueueRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
-        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamArrayObj(map, prefix + "ResourceUsages.", this.ResourceUsages);
         this.setParamSimple(map, prefix + "QueueType", this.QueueType);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

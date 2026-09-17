@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateVpnGatewaySslServerResponse extends AbstractModel {
 
     /**
-    * 创建SSL-VPN server 异步任务ID。
+    * <p>创建SSL-VPN server 异步任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * SSL-VPN-SERVER 唯一ID。
+    * <p>SSL-VPN-SERVER 唯一ID。</p>
     */
     @SerializedName("SslVpnServerId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateVpnGatewaySslServerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建SSL-VPN server 异步任务ID。 
-     * @return TaskId 创建SSL-VPN server 异步任务ID。
+     * Get <p>创建SSL-VPN server 异步任务ID。</p> 
+     * @return TaskId <p>创建SSL-VPN server 异步任务ID。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 创建SSL-VPN server 异步任务ID。
-     * @param TaskId 创建SSL-VPN server 异步任务ID。
+     * Set <p>创建SSL-VPN server 异步任务ID。</p>
+     * @param TaskId <p>创建SSL-VPN server 异步任务ID。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get SSL-VPN-SERVER 唯一ID。 
-     * @return SslVpnServerId SSL-VPN-SERVER 唯一ID。
+     * Get <p>SSL-VPN-SERVER 唯一ID。</p> 
+     * @return SslVpnServerId <p>SSL-VPN-SERVER 唯一ID。</p>
      */
     public String getSslVpnServerId() {
         return this.SslVpnServerId;
     }
 
     /**
-     * Set SSL-VPN-SERVER 唯一ID。
-     * @param SslVpnServerId SSL-VPN-SERVER 唯一ID。
+     * Set <p>SSL-VPN-SERVER 唯一ID。</p>
+     * @param SslVpnServerId <p>SSL-VPN-SERVER 唯一ID。</p>
      */
     public void setSslVpnServerId(String SslVpnServerId) {
         this.SslVpnServerId = SslVpnServerId;

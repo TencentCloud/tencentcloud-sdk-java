@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DailyPlayStatInfo extends AbstractModel {
 
     /**
-    * 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 媒体文件ID。
+    * <p>媒体文件ID。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 播放次数。
+    * <p>播放次数。</p>
     */
     @SerializedName("PlayTimes")
     @Expose
     private Long PlayTimes;
 
     /**
-    * 播放流量，单位：字节。
+    * <p>播放流量，单位：字节。</p>
     */
     @SerializedName("Traffic")
     @Expose
     private Long Traffic;
 
     /**
-     * Get 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return Date 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return Date <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param Date 播放媒体文件的日期，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param Date <p>播放媒体文件的日期，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 媒体文件ID。 
-     * @return FileId 媒体文件ID。
+     * Get <p>媒体文件ID。</p> 
+     * @return FileId <p>媒体文件ID。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件ID。
-     * @param FileId 媒体文件ID。
+     * Set <p>媒体文件ID。</p>
+     * @param FileId <p>媒体文件ID。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 播放次数。 
-     * @return PlayTimes 播放次数。
+     * Get <p>播放次数。</p> 
+     * @return PlayTimes <p>播放次数。</p>
      */
     public Long getPlayTimes() {
         return this.PlayTimes;
     }
 
     /**
-     * Set 播放次数。
-     * @param PlayTimes 播放次数。
+     * Set <p>播放次数。</p>
+     * @param PlayTimes <p>播放次数。</p>
      */
     public void setPlayTimes(Long PlayTimes) {
         this.PlayTimes = PlayTimes;
     }
 
     /**
-     * Get 播放流量，单位：字节。 
-     * @return Traffic 播放流量，单位：字节。
+     * Get <p>播放流量，单位：字节。</p> 
+     * @return Traffic <p>播放流量，单位：字节。</p>
      */
     public Long getTraffic() {
         return this.Traffic;
     }
 
     /**
-     * Set 播放流量，单位：字节。
-     * @param Traffic 播放流量，单位：字节。
+     * Set <p>播放流量，单位：字节。</p>
+     * @param Traffic <p>播放流量，单位：字节。</p>
      */
     public void setTraffic(Long Traffic) {
         this.Traffic = Traffic;

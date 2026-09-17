@@ -178,6 +178,13 @@ public class GovernanceService extends AbstractModel {
     private Long Type;
 
     /**
+    * <p>服务元数据</p>
+    */
+    @SerializedName("ExtendedMetadata")
+    @Expose
+    private ExtendedMetadata [] ExtendedMetadata;
+
+    /**
      * Get <p>服务名称。</p> 
      * @return Name <p>服务名称。</p>
      */
@@ -529,6 +536,22 @@ public class GovernanceService extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get <p>服务元数据</p> 
+     * @return ExtendedMetadata <p>服务元数据</p>
+     */
+    public ExtendedMetadata [] getExtendedMetadata() {
+        return this.ExtendedMetadata;
+    }
+
+    /**
+     * Set <p>服务元数据</p>
+     * @param ExtendedMetadata <p>服务元数据</p>
+     */
+    public void setExtendedMetadata(ExtendedMetadata [] ExtendedMetadata) {
+        this.ExtendedMetadata = ExtendedMetadata;
+    }
+
     public GovernanceService() {
     }
 
@@ -621,6 +644,12 @@ public class GovernanceService extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.ExtendedMetadata != null) {
+            this.ExtendedMetadata = new ExtendedMetadata[source.ExtendedMetadata.length];
+            for (int i = 0; i < source.ExtendedMetadata.length; i++) {
+                this.ExtendedMetadata[i] = new ExtendedMetadata(source.ExtendedMetadata[i]);
+            }
+        }
     }
 
 
@@ -650,6 +679,7 @@ public class GovernanceService extends AbstractModel {
         this.setParamSimple(map, prefix + "IsolateInstanceCount", this.IsolateInstanceCount);
         this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "ExtendedMetadata.", this.ExtendedMetadata);
 
     }
 }

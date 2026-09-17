@@ -24,428 +24,368 @@ import java.util.HashMap;
 public class CreateListenerRequest extends AbstractModel {
 
     /**
-    * 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
+    * <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
     */
     @SerializedName("DefaultActions")
     @Expose
     private DefaultAction [] DefaultActions;
 
     /**
-    * 负载均衡实例前端使用的端口。  取值：1~65535。
+    * <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
     */
     @SerializedName("ListenerPort")
     @Expose
     private Long ListenerPort;
 
     /**
-    * 监听协议。  取值：HTTP、HTTPS 或 QUIC。
+    * <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
     */
     @SerializedName("ListenerProtocol")
     @Expose
     private String ListenerProtocol;
 
     /**
-    * 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+    * <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
+    * <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
     */
     @SerializedName("CaCertificateIds")
     @Expose
     private String [] CaCertificateIds;
 
     /**
-    * 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
+    * <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
     */
     @SerializedName("CaEnabled")
     @Expose
     private Boolean CaEnabled;
 
     /**
-    * 服务器证书 ID 列表。
+    * <p>服务器证书 ID 列表。</p>
     */
     @SerializedName("CertificateIds")
     @Expose
     private String [] CertificateIds;
 
     /**
-    * 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+    * <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 是否开启Gzip压缩。取值:true(默认值):是。false:否
+    * <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
     */
     @SerializedName("GzipEnabled")
     @Expose
     private Boolean GzipEnabled;
 
     /**
-    * 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
+    * <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
     */
     @SerializedName("Http2Enabled")
     @Expose
     private Boolean Http2Enabled;
 
     /**
-    * 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
+    * <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-    * 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+    * <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
+    * <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
     */
     @SerializedName("RequestTimeout")
     @Expose
     private Long RequestTimeout;
 
     /**
-    * 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+    * <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
     */
     @SerializedName("SecurityPolicyId")
     @Expose
     private String SecurityPolicyId;
 
     /**
-    * 标签列表。最大支持20个。
+    * <p>标签列表。最大支持20个。</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * X-Forwarded-For配置
+    * <p>X-Forwarded-For配置</p>
     */
     @SerializedName("XForwardedForConfig")
     @Expose
     private XForwardedForConfig XForwardedForConfig;
 
     /**
-     * Get 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。 
-     * @return DefaultActions 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
+     * Get <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p> 
+     * @return DefaultActions <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
      */
     public DefaultAction [] getDefaultActions() {
         return this.DefaultActions;
     }
 
     /**
-     * Set 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
-     * @param DefaultActions 默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。
+     * Set <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
+     * @param DefaultActions <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
      */
     public void setDefaultActions(DefaultAction [] DefaultActions) {
         this.DefaultActions = DefaultActions;
     }
 
     /**
-     * Get 负载均衡实例前端使用的端口。  取值：1~65535。 
-     * @return ListenerPort 负载均衡实例前端使用的端口。  取值：1~65535。
+     * Get <p>负载均衡实例前端使用的端口。  取值：1~65535。</p> 
+     * @return ListenerPort <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
      */
     public Long getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * Set 负载均衡实例前端使用的端口。  取值：1~65535。
-     * @param ListenerPort 负载均衡实例前端使用的端口。  取值：1~65535。
+     * Set <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
+     * @param ListenerPort <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
      */
     public void setListenerPort(Long ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
     /**
-     * Get 监听协议。  取值：HTTP、HTTPS 或 QUIC。 
-     * @return ListenerProtocol 监听协议。  取值：HTTP、HTTPS 或 QUIC。
+     * Get <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p> 
+     * @return ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
      */
     public String getListenerProtocol() {
         return this.ListenerProtocol;
     }
 
     /**
-     * Set 监听协议。  取值：HTTP、HTTPS 或 QUIC。
-     * @param ListenerProtocol 监听协议。  取值：HTTP、HTTPS 或 QUIC。
+     * Set <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+     * @param ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
      */
     public void setListenerProtocol(String ListenerProtocol) {
         this.ListenerProtocol = ListenerProtocol;
     }
 
     /**
-     * Get 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。 
-     * @return LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * Get <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p> 
+     * @return LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
-     * @param LoadBalancerId 负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。
+     * Set <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
+     * @param LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。 
-     * @return CaCertificateIds 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
+     * Get <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p> 
+     * @return CaCertificateIds <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
      */
     public String [] getCaCertificateIds() {
         return this.CaCertificateIds;
     }
 
     /**
-     * Set 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
-     * @param CaCertificateIds 监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。
-当 CaEnabled 参数取值为 true 时，此参数必填。
+     * Set <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
+     * @param CaCertificateIds <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
      */
     public void setCaCertificateIds(String [] CaCertificateIds) {
         this.CaCertificateIds = CaCertificateIds;
     }
 
     /**
-     * Get 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。 
-     * @return CaEnabled 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
+     * Get <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p> 
+     * @return CaEnabled <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
      */
     public Boolean getCaEnabled() {
         return this.CaEnabled;
     }
 
     /**
-     * Set 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
-     * @param CaEnabled 是否开启双向认证。
-取值：
-true：开启。
-false（默认值）：不开启。
+     * Set <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
+     * @param CaEnabled <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>
      */
     public void setCaEnabled(Boolean CaEnabled) {
         this.CaEnabled = CaEnabled;
     }
 
     /**
-     * Get 服务器证书 ID 列表。 
-     * @return CertificateIds 服务器证书 ID 列表。
+     * Get <p>服务器证书 ID 列表。</p> 
+     * @return CertificateIds <p>服务器证书 ID 列表。</p>
      */
     public String [] getCertificateIds() {
         return this.CertificateIds;
     }
 
     /**
-     * Set 服务器证书 ID 列表。
-     * @param CertificateIds 服务器证书 ID 列表。
+     * Set <p>服务器证书 ID 列表。</p>
+     * @param CertificateIds <p>服务器证书 ID 列表。</p>
      */
     public void setCertificateIds(String [] CertificateIds) {
         this.CertificateIds = CertificateIds;
     }
 
     /**
-     * Get 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。 
-     * @return ClientToken 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * Get <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p> 
+     * @return ClientToken <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
-     * @param ClientToken 客户端Token，用于保证请求的幂等性。  
-
-从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。
+     * Set <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
+     * @param ClientToken <p>客户端Token，用于保证请求的幂等性。  </p><p>从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 是否开启Gzip压缩。取值:true(默认值):是。false:否 
-     * @return GzipEnabled 是否开启Gzip压缩。取值:true(默认值):是。false:否
+     * Get <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p> 
+     * @return GzipEnabled <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
      */
     public Boolean getGzipEnabled() {
         return this.GzipEnabled;
     }
 
     /**
-     * Set 是否开启Gzip压缩。取值:true(默认值):是。false:否
-     * @param GzipEnabled 是否开启Gzip压缩。取值:true(默认值):是。false:否
+     * Set <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
+     * @param GzipEnabled <p>是否开启Gzip压缩。取值:true(默认值):是。false:否</p>
      */
     public void setGzipEnabled(Boolean GzipEnabled) {
         this.GzipEnabled = GzipEnabled;
     }
 
     /**
-     * Get 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。 
-     * @return Http2Enabled 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
+     * Get <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p> 
+     * @return Http2Enabled <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
      */
     public Boolean getHttp2Enabled() {
         return this.Http2Enabled;
     }
 
     /**
-     * Set 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
-     * @param Http2Enabled 是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。
+     * Set <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
+     * @param Http2Enabled <p>是否开启HTTP/2特性。HTTP 协议默认 false，HTTPS 协议默认 true。只有 HTTPS 协议支持此参数。</p>
      */
     public void setHttp2Enabled(Boolean Http2Enabled) {
         this.Http2Enabled = Http2Enabled;
     }
 
     /**
-     * Get 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。 
-     * @return IdleTimeout 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
+     * Get <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p> 
+     * @return IdleTimeout <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
-     * @param IdleTimeout 连接空闲超时时间。单位：秒。
-取值范围：1~600。
-默认值：15。
-如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。
+     * Set <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
+     * @param IdleTimeout <p>连接空闲超时时间。单位：秒。<br>取值范围：1~600。<br>默认值：15。<br>如果在超时时间内一直没有访问请求，负载均衡会断开当前连接，在下次请求到来时创建新的连接。</p>
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。 
-     * @return ListenerName 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * Get <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p> 
+     * @return ListenerName <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
-     * @param ListenerName 自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * Set <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
+     * @param ListenerName <p>自定义监听名称。  长度为 1~255 个字符，必须是中文和无害字符串中的字符，  可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。 
-     * @return RequestTimeout 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
+     * Get <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p> 
+     * @return RequestTimeout <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
      */
     public Long getRequestTimeout() {
         return this.RequestTimeout;
     }
 
     /**
-     * Set 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
-     * @param RequestTimeout 请求超时时间。单位：秒。
-取值：1~600。
-默认值：60。
-如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。
+     * Set <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
+     * @param RequestTimeout <p>连接请求超时时间。单位：秒。取值：1~600。默认值：60。如果在超时时间内后端服务器没有返回响应，负载均衡将放弃等待，并给客户端返回HTTP 504错误码。</p>
      */
     public void setRequestTimeout(Long RequestTimeout) {
         this.RequestTimeout = RequestTimeout;
     }
 
     /**
-     * Get 安全策略 ID，格式为 tls- 后接 8 位字母数字。 
-     * @return SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * Get <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p> 
+     * @return SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public String getSecurityPolicyId() {
         return this.SecurityPolicyId;
     }
 
     /**
-     * Set 安全策略 ID，格式为 tls- 后接 8 位字母数字。
-     * @param SecurityPolicyId 安全策略 ID，格式为 tls- 后接 8 位字母数字。
+     * Set <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
+     * @param SecurityPolicyId <p>安全策略 ID，格式为 tls- 后接 8 位字母数字。</p>
      */
     public void setSecurityPolicyId(String SecurityPolicyId) {
         this.SecurityPolicyId = SecurityPolicyId;
     }
 
     /**
-     * Get 标签列表。最大支持20个。 
-     * @return Tags 标签列表。最大支持20个。
+     * Get <p>标签列表。最大支持20个。</p> 
+     * @return Tags <p>标签列表。最大支持20个。</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表。最大支持20个。
-     * @param Tags 标签列表。最大支持20个。
+     * Set <p>标签列表。最大支持20个。</p>
+     * @param Tags <p>标签列表。最大支持20个。</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get X-Forwarded-For配置 
-     * @return XForwardedForConfig X-Forwarded-For配置
+     * Get <p>X-Forwarded-For配置</p> 
+     * @return XForwardedForConfig <p>X-Forwarded-For配置</p>
      */
     public XForwardedForConfig getXForwardedForConfig() {
         return this.XForwardedForConfig;
     }
 
     /**
-     * Set X-Forwarded-For配置
-     * @param XForwardedForConfig X-Forwarded-For配置
+     * Set <p>X-Forwarded-For配置</p>
+     * @param XForwardedForConfig <p>X-Forwarded-For配置</p>
      */
     public void setXForwardedForConfig(XForwardedForConfig XForwardedForConfig) {
         this.XForwardedForConfig = XForwardedForConfig;

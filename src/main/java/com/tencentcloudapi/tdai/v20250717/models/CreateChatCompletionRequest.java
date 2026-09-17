@@ -59,6 +59,13 @@ public class CreateChatCompletionRequest extends AbstractModel {
     private Boolean IsChatHidden;
 
     /**
+    * <p>传递图片附件</p>
+    */
+    @SerializedName("Attachments")
+    @Expose
+    private Attachments [] Attachments;
+
+    /**
      * Get <p>输入内容</p> 
      * @return InputContent <p>输入内容</p>
      */
@@ -138,6 +145,22 @@ public class CreateChatCompletionRequest extends AbstractModel {
         this.IsChatHidden = IsChatHidden;
     }
 
+    /**
+     * Get <p>传递图片附件</p> 
+     * @return Attachments <p>传递图片附件</p>
+     */
+    public Attachments [] getAttachments() {
+        return this.Attachments;
+    }
+
+    /**
+     * Set <p>传递图片附件</p>
+     * @param Attachments <p>传递图片附件</p>
+     */
+    public void setAttachments(Attachments [] Attachments) {
+        this.Attachments = Attachments;
+    }
+
     public CreateChatCompletionRequest() {
     }
 
@@ -161,6 +184,12 @@ public class CreateChatCompletionRequest extends AbstractModel {
         if (source.IsChatHidden != null) {
             this.IsChatHidden = new Boolean(source.IsChatHidden);
         }
+        if (source.Attachments != null) {
+            this.Attachments = new Attachments[source.Attachments.length];
+            for (int i = 0; i < source.Attachments.length; i++) {
+                this.Attachments[i] = new Attachments(source.Attachments[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class CreateChatCompletionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ChatId", this.ChatId);
         this.setParamSimple(map, prefix + "IsHidden", this.IsHidden);
         this.setParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
+        this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
 
     }
 }

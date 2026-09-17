@@ -45,7 +45,7 @@ public class HTTPServiceCacheKeyParams extends AbstractModel {
     private String QueryStringAction;
 
     /**
-    * <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+    * <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
     */
     @SerializedName("QueryStringValues")
     @Expose
@@ -100,16 +100,16 @@ public class HTTPServiceCacheKeyParams extends AbstractModel {
     }
 
     /**
-     * Get <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p> 
-     * @return QueryStringValues <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+     * Get <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p> 
+     * @return QueryStringValues <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
      */
     public String [] getQueryStringValues() {
         return this.QueryStringValues;
     }
 
     /**
-     * Set <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
-     * @param QueryStringValues <p>参数名列表</p><p>入参限制：最多 100 项，单项 1~128 字节</p>
+     * Set <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
+     * @param QueryStringValues <p>参数名列表</p><p>入参限制：最多 30 项，单项 1~128 字节</p>
      */
     public void setQueryStringValues(String [] QueryStringValues) {
         this.QueryStringValues = QueryStringValues;

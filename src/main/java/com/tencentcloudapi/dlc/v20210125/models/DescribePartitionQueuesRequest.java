@@ -59,6 +59,13 @@ public class DescribePartitionQueuesRequest extends AbstractModel {
     private Long PageSize;
 
     /**
+    * 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+    */
+    @SerializedName("ShowResourceQuotas")
+    @Expose
+    private Boolean ShowResourceQuotas;
+
+    /**
      * Get 分区编码 
      * @return PartitionCode 分区编码
      */
@@ -138,6 +145,22 @@ public class DescribePartitionQueuesRequest extends AbstractModel {
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集 
+     * @return ShowResourceQuotas 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+     */
+    public Boolean getShowResourceQuotas() {
+        return this.ShowResourceQuotas;
+    }
+
+    /**
+     * Set 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+     * @param ShowResourceQuotas 是否返回队列实时余量（ResourceQuotas），默认 false 不返回。余量需实时查询 Prometheus，仅在需要时透传 true。Used 为计费 spec 口径（队列内业务容器 Pod limits，经 kube_pod_labels 队列过滤），依赖 kube_pod_labels 指标采集
+     */
+    public void setShowResourceQuotas(Boolean ShowResourceQuotas) {
+        this.ShowResourceQuotas = ShowResourceQuotas;
+    }
+
     public DescribePartitionQueuesRequest() {
     }
 
@@ -167,6 +190,9 @@ public class DescribePartitionQueuesRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.ShowResourceQuotas != null) {
+            this.ShowResourceQuotas = new Boolean(source.ShowResourceQuotas);
+        }
     }
 
 
@@ -179,6 +205,7 @@ public class DescribePartitionQueuesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "ShowResourceQuotas", this.ShowResourceQuotas);
 
     }
 }

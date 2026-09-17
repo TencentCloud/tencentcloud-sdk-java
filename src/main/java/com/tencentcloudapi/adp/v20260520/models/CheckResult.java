@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CheckResult extends AbstractModel {
 
     /**
-    * <p>是否通过校验</p>
+    * 是否通过校验
     */
     @SerializedName("Passed")
     @Expose
     private Boolean Passed;
 
     /**
-    * <p>失败原因（passed=false 时填充）</p>
+    * 失败原因（passed=false 时填充）
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get <p>是否通过校验</p> 
-     * @return Passed <p>是否通过校验</p>
+     * Get 是否通过校验 
+     * @return Passed 是否通过校验
      */
     public Boolean getPassed() {
         return this.Passed;
     }
 
     /**
-     * Set <p>是否通过校验</p>
-     * @param Passed <p>是否通过校验</p>
+     * Set 是否通过校验
+     * @param Passed 是否通过校验
      */
     public void setPassed(Boolean Passed) {
         this.Passed = Passed;
     }
 
     /**
-     * Get <p>失败原因（passed=false 时填充）</p> 
-     * @return Reason <p>失败原因（passed=false 时填充）</p>
+     * Get 失败原因（passed=false 时填充） 
+     * @return Reason 失败原因（passed=false 时填充）
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set <p>失败原因（passed=false 时填充）</p>
-     * @param Reason <p>失败原因（passed=false 时填充）</p>
+     * Set 失败原因（passed=false 时填充）
+     * @param Reason 失败原因（passed=false 时填充）
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

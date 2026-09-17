@@ -68,11 +68,27 @@ public class PartitionInfo extends AbstractModel {
     private ResourceQuota [] ResourceQuota;
 
     /**
+    * <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchedulableLimitList")
+    @Expose
+    private SchedulableLimit [] SchedulableLimitList;
+
+    /**
     * <p>计费类型：1-包年包月，0-按量计费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
+
+    /**
+    * <p>续费标志：0-默认，1-自动续费，2-不自动续费（仅预付费有效）；按量计费分区无该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
 
     /**
     * <p>创建时间</p>
@@ -97,6 +113,30 @@ public class PartitionInfo extends AbstractModel {
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
+
+    /**
+    * <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourcePoolKind")
+    @Expose
+    private String ResourcePoolKind;
+
+    /**
+    * <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalClusterId")
+    @Expose
+    private String ExternalClusterId;
+
+    /**
+    * <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到；列表场景下仅对当前页分区加载，单分区标签查询失败时降级留空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private CloudTag [] Tags;
 
     /**
      * Get <p>分区名称</p> 
@@ -203,6 +243,26 @@ public class PartitionInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchedulableLimitList <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SchedulableLimit [] getSchedulableLimitList() {
+        return this.SchedulableLimitList;
+    }
+
+    /**
+     * Set <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchedulableLimitList <p>各计费项的单 worker/executor 最大可调度资源量列表，用于约束提交作业时可申请的规格上限；仅包含分区已有的非 GPU 计费项，无可返回项时为空数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchedulableLimitList(SchedulableLimit [] SchedulableLimitList) {
+        this.SchedulableLimitList = SchedulableLimitList;
+    }
+
+    /**
      * Get <p>计费类型：1-包年包月，0-按量计费</p> 
      * @return PayMode <p>计费类型：1-包年包月，0-按量计费</p>
      */
@@ -216,6 +276,26 @@ public class PartitionInfo extends AbstractModel {
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
+    }
+
+    /**
+     * Get <p>续费标志：0-默认，1-自动续费，2-不自动续费（仅预付费有效）；按量计费分区无该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag <p>续费标志：0-默认，1-自动续费，2-不自动续费（仅预付费有效）；按量计费分区无该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set <p>续费标志：0-默认，1-自动续费，2-不自动续费（仅预付费有效）；按量计费分区无该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag <p>续费标志：0-默认，1-自动续费，2-不自动续费（仅预付费有效）；按量计费分区无该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
     }
 
     /**
@@ -278,6 +358,66 @@ public class PartitionInfo extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourcePoolKind <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourcePoolKind() {
+        return this.ResourcePoolKind;
+    }
+
+    /**
+     * Set <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourcePoolKind <p>资源池形态：SYSTEM（系统）/ USER（用户）/ EXTERNAL_TKE（纳管外部 TKE 集群）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourcePoolKind(String ResourcePoolKind) {
+        this.ResourcePoolKind = ResourcePoolKind;
+    }
+
+    /**
+     * Get <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalClusterId <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExternalClusterId() {
+        return this.ExternalClusterId;
+    }
+
+    /**
+     * Set <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalClusterId <p>纳管外部集群的原始 ID（例如 EMR 实例 ID emr-xxx），仅 EXTERNAL_TKE 等纳管场景有值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalClusterId(String ExternalClusterId) {
+        this.ExternalClusterId = ExternalClusterId;
+    }
+
+    /**
+     * Get <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到；列表场景下仅对当前页分区加载，单分区标签查询失败时降级留空</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到；列表场景下仅对当前页分区加载，单分区标签查询失败时降级留空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CloudTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到；列表场景下仅对当前页分区加载，单分区标签查询失败时降级留空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags <p>资源已绑定的标签列表，由标签平台 GetResources 接口实时查询得到；列表场景下仅对当前页分区加载，单分区标签查询失败时降级留空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(CloudTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public PartitionInfo() {
     }
 
@@ -307,8 +447,17 @@ public class PartitionInfo extends AbstractModel {
                 this.ResourceQuota[i] = new ResourceQuota(source.ResourceQuota[i]);
             }
         }
+        if (source.SchedulableLimitList != null) {
+            this.SchedulableLimitList = new SchedulableLimit[source.SchedulableLimitList.length];
+            for (int i = 0; i < source.SchedulableLimitList.length; i++) {
+                this.SchedulableLimitList[i] = new SchedulableLimit(source.SchedulableLimitList[i]);
+            }
+        }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -318,6 +467,18 @@ public class PartitionInfo extends AbstractModel {
         }
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.ResourcePoolKind != null) {
+            this.ResourcePoolKind = new String(source.ResourcePoolKind);
+        }
+        if (source.ExternalClusterId != null) {
+            this.ExternalClusterId = new String(source.ExternalClusterId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new CloudTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new CloudTag(source.Tags[i]);
+            }
         }
     }
 
@@ -332,10 +493,15 @@ public class PartitionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "QueueCount", this.QueueCount);
         this.setParamArrayObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
+        this.setParamArrayObj(map, prefix + "SchedulableLimitList.", this.SchedulableLimitList);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "ResourcePoolKind", this.ResourcePoolKind);
+        this.setParamSimple(map, prefix + "ExternalClusterId", this.ExternalClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

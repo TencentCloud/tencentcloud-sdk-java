@@ -25,8 +25,8 @@ public class ResourceFilter extends AbstractModel {
 
     /**
     * 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
     */
     @SerializedName("Name")
     @Expose
@@ -50,11 +50,11 @@ public class ResourceFilter extends AbstractModel {
 
     /**
      * Get 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。 
+- MonitorName：监控器名称。
+- MonitorId：监控器名称 
      * @return Name 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
      */
     public String getName() {
         return this.Name;
@@ -62,11 +62,11 @@ public class ResourceFilter extends AbstractModel {
 
     /**
      * Set 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
      * @param Name 过滤字段名，支持的列表如下：
-- type：主资源类型，CDN。
-- instanceId：IGTM实例ID。此为必传参数，未传将导致接口查询失败。
+- MonitorName：监控器名称。
+- MonitorId：监控器名称
      */
     public void setName(String Name) {
         this.Name = Name;

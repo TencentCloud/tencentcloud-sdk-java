@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class ContentReviewOcrResult extends AbstractModel {
 
     /**
-    * Ocr 文字鉴别结果的评分，分值为0到100。
+    * <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
+    * <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Ocr 文字鉴别的嫌疑关键词列表。
+    * <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-    * Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+    * <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get Ocr 文字鉴别结果的评分，分值为0到100。 
-     * @return Confidence Ocr 文字鉴别结果的评分，分值为0到100。
+     * Get <p>Ocr 文字鉴别结果的评分，分值为0到100。</p> 
+     * @return Confidence <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Ocr 文字鉴别结果的评分，分值为0到100。
-     * @param Confidence Ocr 文字鉴别结果的评分，分值为0到100。
+     * Set <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
+     * @param Confidence <p>Ocr 文字鉴别结果的评分，分值为0到100。</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li> 
-     * @return Suggestion Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
+     * Get <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li> 
+     * @return Suggestion <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
-     * @param Suggestion Ocr 文字鉴别的结果建议，取值范围：
-<li>pass；</li>
-<li>review；</li>
-<li>block。</li>
+     * Set <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
+     * @param Suggestion <p>Ocr 文字鉴别的结果建议，取值范围：</p><li>pass；</li><li>review；</li><li>block。</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Ocr 文字鉴别的嫌疑关键词列表。 
-     * @return KeywordSet Ocr 文字鉴别的嫌疑关键词列表。
+     * Get <p>Ocr 文字鉴别的嫌疑关键词列表。</p> 
+     * @return KeywordSet <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set Ocr 文字鉴别的嫌疑关键词列表。
-     * @param KeywordSet Ocr 文字鉴别的嫌疑关键词列表。
+     * Set <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
+     * @param KeywordSet <p>Ocr 文字鉴别的嫌疑关键词列表。</p>
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;
     }
 
     /**
-     * Get Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
-     * @return AreaCoordSet Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Get <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p> 
+     * @return AreaCoordSet <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
-     * @param AreaCoordSet Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Set <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
+     * @param AreaCoordSet <p>Ocr 文字鉴别的嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。</p>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

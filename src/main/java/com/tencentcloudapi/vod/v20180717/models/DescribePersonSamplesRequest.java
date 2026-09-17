@@ -24,186 +24,161 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
+    * <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 素材 ID，数组长度限制：100。
+    * <p>素材 ID，数组长度限制：100。</p>
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * 素材名称，数组长度限制：20。
+    * <p>素材名称，数组长度限制：20。</p>
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 素材标签，数组长度限制：20。
+    * <p>素材标签，数组长度限制：20。</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 分页偏移量，默认值：0。
+    * <p>分页偏移量，默认值：0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：100，最大值：100。
+    * <p>返回记录条数，默认值：100，最大值：100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。 
-     * @return Type 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
+     * Get <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p> 
+     * @return Type <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
-     * @param Type 拉取的素材类型，可选值：
-<li>UserDefine：用户自定义素材库；</li>
-<li>Default：系统默认素材库。</li>
-
-默认值：UserDefine，拉取用户自定义素材库素材。
-说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。
+     * Set <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
+     * @param Type <p>拉取的素材类型，可选值：</p><li>UserDefine：用户自定义素材库；</li><li>Default：系统默认素材库。</li><p>默认值：UserDefine，拉取用户自定义素材库素材。<br>说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且五官图片只返回一张。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 素材 ID，数组长度限制：100。 
-     * @return PersonIds 素材 ID，数组长度限制：100。
+     * Get <p>素材 ID，数组长度限制：100。</p> 
+     * @return PersonIds <p>素材 ID，数组长度限制：100。</p>
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set 素材 ID，数组长度限制：100。
-     * @param PersonIds 素材 ID，数组长度限制：100。
+     * Set <p>素材 ID，数组长度限制：100。</p>
+     * @param PersonIds <p>素材 ID，数组长度限制：100。</p>
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get 素材名称，数组长度限制：20。 
-     * @return Names 素材名称，数组长度限制：20。
+     * Get <p>素材名称，数组长度限制：20。</p> 
+     * @return Names <p>素材名称，数组长度限制：20。</p>
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 素材名称，数组长度限制：20。
-     * @param Names 素材名称，数组长度限制：20。
+     * Set <p>素材名称，数组长度限制：20。</p>
+     * @param Names <p>素材名称，数组长度限制：20。</p>
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 素材标签，数组长度限制：20。 
-     * @return Tags 素材标签，数组长度限制：20。
+     * Get <p>素材标签，数组长度限制：20。</p> 
+     * @return Tags <p>素材标签，数组长度限制：20。</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 素材标签，数组长度限制：20。
-     * @param Tags 素材标签，数组长度限制：20。
+     * Set <p>素材标签，数组长度限制：20。</p>
+     * @param Tags <p>素材标签，数组长度限制：20。</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 分页偏移量，默认值：0。 
-     * @return Offset 分页偏移量，默认值：0。
+     * Get <p>分页偏移量，默认值：0。</p> 
+     * @return Offset <p>分页偏移量，默认值：0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认值：0。
-     * @param Offset 分页偏移量，默认值：0。
+     * Set <p>分页偏移量，默认值：0。</p>
+     * @param Offset <p>分页偏移量，默认值：0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回记录条数，默认值：100，最大值：100。 
-     * @return Limit 返回记录条数，默认值：100，最大值：100。
+     * Get <p>返回记录条数，默认值：100，最大值：100。</p> 
+     * @return Limit <p>返回记录条数，默认值：100，最大值：100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，默认值：100，最大值：100。
-     * @param Limit 返回记录条数，默认值：100，最大值：100。
+     * Set <p>返回记录条数，默认值：100，最大值：100。</p>
+     * @param Limit <p>返回记录条数，默认值：100，最大值：100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePartitionDetailResponse extends AbstractModel {
 
     /**
-    * 分区详情
+    * <p>分区详情</p>
     */
     @SerializedName("PartitionDetail")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePartitionDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分区详情 
-     * @return PartitionDetail 分区详情
+     * Get <p>分区详情</p> 
+     * @return PartitionDetail <p>分区详情</p>
      */
     public PartitionDetail getPartitionDetail() {
         return this.PartitionDetail;
     }
 
     /**
-     * Set 分区详情
-     * @param PartitionDetail 分区详情
+     * Set <p>分区详情</p>
+     * @param PartitionDetail <p>分区详情</p>
      */
     public void setPartitionDetail(PartitionDetail PartitionDetail) {
         this.PartitionDetail = PartitionDetail;

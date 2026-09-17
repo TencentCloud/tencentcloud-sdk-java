@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeAddressPoolListRequest extends AbstractModel {
 
     /**
-    * 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
+    * <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
     */
     @SerializedName("Filters")
     @Expose
     private ResourceFilter [] Filters;
 
     /**
-    * 页数
+    * <p>页数</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页数
+    * <p>每页数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id 
-     * @return Filters 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
+     * Get <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p> 
+     * @return Filters <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
      */
     public ResourceFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
-     * @param Filters 告警过滤条件：PoolName：地址池名称；MonitorId：监控器id
+     * Set <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
+     * @param Filters <p>告警过滤条件：PoolName：地址池名称；MonitorId：监控器id</p>
      */
     public void setFilters(ResourceFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 页数 
-     * @return Offset 页数
+     * Get <p>页数</p> 
+     * @return Offset <p>页数</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页数
-     * @param Offset 页数
+     * Set <p>页数</p>
+     * @param Offset <p>页数</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页数 
-     * @return Limit 每页数
+     * Get <p>每页数</p> 
+     * @return Limit <p>每页数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数
-     * @param Limit 每页数
+     * Set <p>每页数</p>
+     * @param Limit <p>每页数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

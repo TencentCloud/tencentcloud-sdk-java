@@ -38,7 +38,7 @@ public class AcquireSandboxInstanceTokenResponse extends AbstractModel {
     private String ExpiresAt;
 
     /**
-    * <p>非管控面（envd）的访问Token</p>
+    * <p>除管控面envd端口(49983)以外端口的访问Token</p>
     */
     @SerializedName("TrafficToken")
     @Expose
@@ -84,16 +84,16 @@ public class AcquireSandboxInstanceTokenResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>非管控面（envd）的访问Token</p> 
-     * @return TrafficToken <p>非管控面（envd）的访问Token</p>
+     * Get <p>除管控面envd端口(49983)以外端口的访问Token</p> 
+     * @return TrafficToken <p>除管控面envd端口(49983)以外端口的访问Token</p>
      */
     public String getTrafficToken() {
         return this.TrafficToken;
     }
 
     /**
-     * Set <p>非管控面（envd）的访问Token</p>
-     * @param TrafficToken <p>非管控面（envd）的访问Token</p>
+     * Set <p>除管控面envd端口(49983)以外端口的访问Token</p>
+     * @param TrafficToken <p>除管控面envd端口(49983)以外端口的访问Token</p>
      */
     public void setTrafficToken(String TrafficToken) {
         this.TrafficToken = TrafficToken;

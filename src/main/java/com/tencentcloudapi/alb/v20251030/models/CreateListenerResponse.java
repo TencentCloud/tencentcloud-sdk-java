@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateListenerResponse extends AbstractModel {
 
     /**
-    * 监听器 ID，格式为 lst- 后接 8 位字母数字。
+    * <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
     */
     @SerializedName("ListenerId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateListenerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监听器 ID，格式为 lst- 后接 8 位字母数字。 
-     * @return ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * Get <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p> 
+     * @return ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器 ID，格式为 lst- 后接 8 位字母数字。
-     * @param ListenerId 监听器 ID，格式为 lst- 后接 8 位字母数字。
+     * Set <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
+     * @param ListenerId <p>监听器 ID，格式为 lst- 后接 8 位字母数字。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;

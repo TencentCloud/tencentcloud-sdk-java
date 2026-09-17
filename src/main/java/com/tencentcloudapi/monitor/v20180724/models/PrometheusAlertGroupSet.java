@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PrometheusAlertGroupSet extends AbstractModel {
 
     /**
-    * 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+    * <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -32,7 +32,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String GroupId;
 
     /**
-    * 告警分组名称
+    * <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -40,7 +40,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String GroupName;
 
     /**
-    * 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+    * <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AMPReceivers")
@@ -48,7 +48,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String [] AMPReceivers;
 
     /**
-    * 自定义告警模板
+    * <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomReceiver")
@@ -56,7 +56,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private PrometheusAlertCustomReceiver CustomReceiver;
 
     /**
-    * 告警通知间隔
+    * <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepeatInterval")
@@ -64,7 +64,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String RepeatInterval;
 
     /**
-    * 若告警分组通过模板创建，则返回模板ID
+    * <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -72,7 +72,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 分组内告警规则详情
+    * <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
@@ -80,7 +80,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private PrometheusAlertGroupRuleSet [] Rules;
 
     /**
-    * 分组创建时间
+    * <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -88,7 +88,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String CreatedAt;
 
     /**
-    * 分组更新时间
+    * <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -96,9 +96,16 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String UpdatedAt;
 
     /**
-     * Get 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+    * <p>最后修改人子账号uin</p>
+    */
+    @SerializedName("LastModifySubAccountUin")
+    @Expose
+    private String LastModifySubAccountUin;
+
+    /**
+     * Get <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+     * @return GroupId <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
@@ -106,9 +113,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+     * Set <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
+     * @param GroupId <p>告警分组ID，满足正则表达式<code>alert-[a-z0-9]{8}</code></p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
@@ -116,9 +123,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 告警分组名称
+     * Get <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 告警分组名称
+     * @return GroupName <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -126,9 +133,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 告警分组名称
+     * Set <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 告警分组名称
+     * @param GroupName <p>告警分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
@@ -136,9 +143,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+     * Get <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AMPReceivers 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+     * @return AMPReceivers <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAMPReceivers() {
@@ -146,9 +153,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+     * Set <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AMPReceivers 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
+     * @param AMPReceivers <p>腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAMPReceivers(String [] AMPReceivers) {
@@ -156,9 +163,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 自定义告警模板
+     * Get <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomReceiver 自定义告警模板
+     * @return CustomReceiver <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusAlertCustomReceiver getCustomReceiver() {
@@ -166,9 +173,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 自定义告警模板
+     * Set <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomReceiver 自定义告警模板
+     * @param CustomReceiver <p>自定义告警模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomReceiver(PrometheusAlertCustomReceiver CustomReceiver) {
@@ -176,9 +183,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 告警通知间隔
+     * Get <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RepeatInterval 告警通知间隔
+     * @return RepeatInterval <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepeatInterval() {
@@ -186,9 +193,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 告警通知间隔
+     * Set <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RepeatInterval 告警通知间隔
+     * @param RepeatInterval <p>告警通知间隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepeatInterval(String RepeatInterval) {
@@ -196,9 +203,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 若告警分组通过模板创建，则返回模板ID
+     * Get <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 若告警分组通过模板创建，则返回模板ID
+     * @return TemplateId <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
@@ -206,9 +213,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 若告警分组通过模板创建，则返回模板ID
+     * Set <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 若告警分组通过模板创建，则返回模板ID
+     * @param TemplateId <p>若告警分组通过模板创建，则返回模板ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
@@ -216,9 +223,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 分组内告警规则详情
+     * Get <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rules 分组内告警规则详情
+     * @return Rules <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusAlertGroupRuleSet [] getRules() {
@@ -226,9 +233,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 分组内告警规则详情
+     * Set <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rules 分组内告警规则详情
+     * @param Rules <p>分组内告警规则详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(PrometheusAlertGroupRuleSet [] Rules) {
@@ -236,9 +243,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 分组创建时间
+     * Get <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 分组创建时间
+     * @return CreatedAt <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -246,9 +253,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 分组创建时间
+     * Set <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 分组创建时间
+     * @param CreatedAt <p>分组创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -256,9 +263,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 分组更新时间
+     * Get <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 分组更新时间
+     * @return UpdatedAt <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -266,13 +273,29 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 分组更新时间
+     * Set <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 分组更新时间
+     * @param UpdatedAt <p>分组更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
+    }
+
+    /**
+     * Get <p>最后修改人子账号uin</p> 
+     * @return LastModifySubAccountUin <p>最后修改人子账号uin</p>
+     */
+    public String getLastModifySubAccountUin() {
+        return this.LastModifySubAccountUin;
+    }
+
+    /**
+     * Set <p>最后修改人子账号uin</p>
+     * @param LastModifySubAccountUin <p>最后修改人子账号uin</p>
+     */
+    public void setLastModifySubAccountUin(String LastModifySubAccountUin) {
+        this.LastModifySubAccountUin = LastModifySubAccountUin;
     }
 
     public PrometheusAlertGroupSet() {
@@ -316,6 +339,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.LastModifySubAccountUin != null) {
+            this.LastModifySubAccountUin = new String(source.LastModifySubAccountUin);
+        }
     }
 
 
@@ -332,6 +358,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "LastModifySubAccountUin", this.LastModifySubAccountUin);
 
     }
 }

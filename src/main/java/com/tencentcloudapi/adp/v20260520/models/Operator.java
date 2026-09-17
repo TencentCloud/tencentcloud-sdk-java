@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Operator extends AbstractModel {
 
     /**
-    * <p>用户 ID</p>
+    * 用户 ID
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * <p>用户姓名</p>
+    * 用户姓名
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get <p>用户 ID</p> 
-     * @return UserId <p>用户 ID</p>
+     * Get 用户 ID 
+     * @return UserId 用户 ID
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set <p>用户 ID</p>
-     * @param UserId <p>用户 ID</p>
+     * Set 用户 ID
+     * @param UserId 用户 ID
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get <p>用户姓名</p> 
-     * @return UserName <p>用户姓名</p>
+     * Get 用户姓名 
+     * @return UserName 用户姓名
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set <p>用户姓名</p>
-     * @param UserName <p>用户姓名</p>
+     * Set 用户姓名
+     * @param UserName 用户姓名
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

@@ -136,6 +136,13 @@ public class CopyJobSpecResponse extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>所属队列别名</p>
+    */
+    @SerializedName("QueueAlias")
+    @Expose
+    private String QueueAlias;
+
+    /**
     * <p>作业包URL</p>
     */
     @SerializedName("JobPackage")
@@ -521,6 +528,22 @@ public class CopyJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>所属队列别名</p> 
+     * @return QueueAlias <p>所属队列别名</p>
+     */
+    public String getQueueAlias() {
+        return this.QueueAlias;
+    }
+
+    /**
+     * Set <p>所属队列别名</p>
+     * @param QueueAlias <p>所属队列别名</p>
+     */
+    public void setQueueAlias(String QueueAlias) {
+        this.QueueAlias = QueueAlias;
+    }
+
+    /**
      * Get <p>作业包URL</p> 
      * @return JobPackage <p>作业包URL</p>
      */
@@ -876,6 +899,9 @@ public class CopyJobSpecResponse extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.QueueAlias != null) {
+            this.QueueAlias = new String(source.QueueAlias);
+        }
         if (source.JobPackage != null) {
             this.JobPackage = new String(source.JobPackage);
         }
@@ -956,6 +982,7 @@ public class CopyJobSpecResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamSimple(map, prefix + "JobPackage", this.JobPackage);
         this.setParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);

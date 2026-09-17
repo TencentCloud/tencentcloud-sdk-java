@@ -31,6 +31,20 @@ public class CreatePartitionQueueResponse extends AbstractModel {
     private Long Id;
 
     /**
+    * <p>最终生效的队列编码（含系统生成场景），与 DescribePartitionQueues 出参的 QueueName 语义一致</p>
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * <p>队列别名（显示名）</p>
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class CreatePartitionQueueResponse extends AbstractModel {
      */
     public void setId(Long Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get <p>最终生效的队列编码（含系统生成场景），与 DescribePartitionQueues 出参的 QueueName 语义一致</p> 
+     * @return QueueName <p>最终生效的队列编码（含系统生成场景），与 DescribePartitionQueues 出参的 QueueName 语义一致</p>
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set <p>最终生效的队列编码（含系统生成场景），与 DescribePartitionQueues 出参的 QueueName 语义一致</p>
+     * @param QueueName <p>最终生效的队列编码（含系统生成场景），与 DescribePartitionQueues 出参的 QueueName 语义一致</p>
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get <p>队列别名（显示名）</p> 
+     * @return Alias <p>队列别名（显示名）</p>
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set <p>队列别名（显示名）</p>
+     * @param Alias <p>队列别名（显示名）</p>
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
     }
 
     /**
@@ -80,6 +126,12 @@ public class CreatePartitionQueueResponse extends AbstractModel {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +143,8 @@ public class CreatePartitionQueueResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

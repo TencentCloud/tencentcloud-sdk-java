@@ -24,160 +24,160 @@ import java.util.HashMap;
 public class DescribeRoundPlaysRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 过滤条件：轮播播单标识，数组长度限制：100。
+    * <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
     */
     @SerializedName("RoundPlayIds")
     @Expose
     private String [] RoundPlayIds;
 
     /**
-    * 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
+    * <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 过滤条件：轮播播单创建时间。
+    * <p>过滤条件：轮播播单创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private TimeRange CreateTime;
 
     /**
-    * 过滤条件：轮播播单更新时间。
+    * <p>过滤条件：轮播播单更新时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private TimeRange UpdateTime;
 
     /**
-    * 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+    * <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+    * <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10，最大值：100。
+    * <p>返回记录条数，默认值：10，最大值：100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 过滤条件：轮播播单标识，数组长度限制：100。 
-     * @return RoundPlayIds 过滤条件：轮播播单标识，数组长度限制：100。
+     * Get <p>过滤条件：轮播播单标识，数组长度限制：100。</p> 
+     * @return RoundPlayIds <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
      */
     public String [] getRoundPlayIds() {
         return this.RoundPlayIds;
     }
 
     /**
-     * Set 过滤条件：轮播播单标识，数组长度限制：100。
-     * @param RoundPlayIds 过滤条件：轮播播单标识，数组长度限制：100。
+     * Set <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
+     * @param RoundPlayIds <p>过滤条件：轮播播单标识，数组长度限制：100。</p>
      */
     public void setRoundPlayIds(String [] RoundPlayIds) {
         this.RoundPlayIds = RoundPlayIds;
     }
 
     /**
-     * Get 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li> 
-     * @return Status 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
+     * Get <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p> 
+     * @return Status <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
-     * @param Status 过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li>
+     * Set <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
+     * @param Status <p>过滤条件，轮播播单状态，可选值： <li>Enabled：启动状态；</li> <li>Disabled：停止状态。</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 过滤条件：轮播播单创建时间。 
-     * @return CreateTime 过滤条件：轮播播单创建时间。
+     * Get <p>过滤条件：轮播播单创建时间。</p> 
+     * @return CreateTime <p>过滤条件：轮播播单创建时间。</p>
      */
     public TimeRange getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 过滤条件：轮播播单创建时间。
-     * @param CreateTime 过滤条件：轮播播单创建时间。
+     * Set <p>过滤条件：轮播播单创建时间。</p>
+     * @param CreateTime <p>过滤条件：轮播播单创建时间。</p>
      */
     public void setCreateTime(TimeRange CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过滤条件：轮播播单更新时间。 
-     * @return UpdateTime 过滤条件：轮播播单更新时间。
+     * Get <p>过滤条件：轮播播单更新时间。</p> 
+     * @return UpdateTime <p>过滤条件：轮播播单更新时间。</p>
      */
     public TimeRange getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 过滤条件：轮播播单更新时间。
-     * @param UpdateTime 过滤条件：轮播播单更新时间。
+     * Set <p>过滤条件：轮播播单更新时间。</p>
+     * @param UpdateTime <p>过滤条件：轮播播单更新时间。</p>
      */
     public void setUpdateTime(TimeRange UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。 
-     * @return ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * Get <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p> 
+     * @return ScrollToken <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
-     * @param ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * Set <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
+     * @param ScrollToken <p>翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。 
-     * @return Offset 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+     * Get <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p> 
+     * @return Offset <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
      * @deprecated
      */
     @Deprecated
@@ -186,8 +186,8 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     }
 
     /**
-     * Set 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
-     * @param Offset 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+     * Set <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
+     * @param Offset <p>分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。</p>
      * @deprecated
      */
     @Deprecated
@@ -196,16 +196,16 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回记录条数，默认值：10，最大值：100。 
-     * @return Limit 返回记录条数，默认值：10，最大值：100。
+     * Get <p>返回记录条数，默认值：10，最大值：100。</p> 
+     * @return Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，默认值：10，最大值：100。
-     * @param Limit 返回记录条数，默认值：10，最大值：100。
+     * Set <p>返回记录条数，默认值：10，最大值：100。</p>
+     * @param Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

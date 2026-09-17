@@ -122,6 +122,13 @@ public class TrainingJobInstance extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>所属队列别名</p>
+    */
+    @SerializedName("QueueAlias")
+    @Expose
+    private String QueueAlias;
+
+    /**
     * <p>提交时 runtime_env JSON</p>
     */
     @SerializedName("RuntimeEnv")
@@ -472,6 +479,22 @@ public class TrainingJobInstance extends AbstractModel {
     }
 
     /**
+     * Get <p>所属队列别名</p> 
+     * @return QueueAlias <p>所属队列别名</p>
+     */
+    public String getQueueAlias() {
+        return this.QueueAlias;
+    }
+
+    /**
+     * Set <p>所属队列别名</p>
+     * @param QueueAlias <p>所属队列别名</p>
+     */
+    public void setQueueAlias(String QueueAlias) {
+        this.QueueAlias = QueueAlias;
+    }
+
+    /**
      * Get <p>提交时 runtime_env JSON</p> 
      * @return RuntimeEnv <p>提交时 runtime_env JSON</p>
      */
@@ -809,6 +832,9 @@ public class TrainingJobInstance extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.QueueAlias != null) {
+            this.QueueAlias = new String(source.QueueAlias);
+        }
         if (source.RuntimeEnv != null) {
             this.RuntimeEnv = new String(source.RuntimeEnv);
         }
@@ -890,6 +916,7 @@ public class TrainingJobInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
         this.setParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
         this.setParamSimple(map, prefix + "Image", this.Image);

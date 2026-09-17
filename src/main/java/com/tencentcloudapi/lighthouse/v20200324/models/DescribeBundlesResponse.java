@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBundlesResponse extends AbstractModel {
 
     /**
-    * 套餐详细信息列表。
+    * <p>套餐详细信息列表。</p>
     */
     @SerializedName("BundleSet")
     @Expose
     private Bundle [] BundleSet;
 
     /**
-    * 符合要求的套餐总数，用于分页展示。
+    * <p>符合要求的套餐总数，用于分页展示。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBundlesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 套餐详细信息列表。 
-     * @return BundleSet 套餐详细信息列表。
+     * Get <p>套餐详细信息列表。</p> 
+     * @return BundleSet <p>套餐详细信息列表。</p>
      */
     public Bundle [] getBundleSet() {
         return this.BundleSet;
     }
 
     /**
-     * Set 套餐详细信息列表。
-     * @param BundleSet 套餐详细信息列表。
+     * Set <p>套餐详细信息列表。</p>
+     * @param BundleSet <p>套餐详细信息列表。</p>
      */
     public void setBundleSet(Bundle [] BundleSet) {
         this.BundleSet = BundleSet;
     }
 
     /**
-     * Get 符合要求的套餐总数，用于分页展示。 
-     * @return TotalCount 符合要求的套餐总数，用于分页展示。
+     * Get <p>符合要求的套餐总数，用于分页展示。</p> 
+     * @return TotalCount <p>符合要求的套餐总数，用于分页展示。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合要求的套餐总数，用于分页展示。
-     * @param TotalCount 符合要求的套餐总数，用于分页展示。
+     * Set <p>符合要求的套餐总数，用于分页展示。</p>
+     * @param TotalCount <p>符合要求的套餐总数，用于分页展示。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

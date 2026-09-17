@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCustomerGatewaysResponse extends AbstractModel {
 
     /**
-    * 对端网关对象列表。
+    * <p>对端网关对象列表。</p>
     */
     @SerializedName("CustomerGatewaySet")
     @Expose
     private CustomerGateway [] CustomerGatewaySet;
 
     /**
-    * 符合条件的实例数量。
+    * <p>符合条件的实例数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCustomerGatewaysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 对端网关对象列表。 
-     * @return CustomerGatewaySet 对端网关对象列表。
+     * Get <p>对端网关对象列表。</p> 
+     * @return CustomerGatewaySet <p>对端网关对象列表。</p>
      */
     public CustomerGateway [] getCustomerGatewaySet() {
         return this.CustomerGatewaySet;
     }
 
     /**
-     * Set 对端网关对象列表。
-     * @param CustomerGatewaySet 对端网关对象列表。
+     * Set <p>对端网关对象列表。</p>
+     * @param CustomerGatewaySet <p>对端网关对象列表。</p>
      */
     public void setCustomerGatewaySet(CustomerGateway [] CustomerGatewaySet) {
         this.CustomerGatewaySet = CustomerGatewaySet;
     }
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get <p>符合条件的实例数量。</p> 
+     * @return TotalCount <p>符合条件的实例数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set <p>符合条件的实例数量。</p>
+     * @param TotalCount <p>符合条件的实例数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

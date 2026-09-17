@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePersonSamplesResponse extends AbstractModel {
 
     /**
-    * 符合条件的记录总数。
+    * <p>符合条件的记录总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 人物信息。
+    * <p>人物信息。</p>
     */
     @SerializedName("PersonSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePersonSamplesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的记录总数。 
-     * @return TotalCount 符合条件的记录总数。
+     * Get <p>符合条件的记录总数。</p> 
+     * @return TotalCount <p>符合条件的记录总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的记录总数。
-     * @param TotalCount 符合条件的记录总数。
+     * Set <p>符合条件的记录总数。</p>
+     * @param TotalCount <p>符合条件的记录总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 人物信息。 
-     * @return PersonSet 人物信息。
+     * Get <p>人物信息。</p> 
+     * @return PersonSet <p>人物信息。</p>
      */
     public AiSamplePerson [] getPersonSet() {
         return this.PersonSet;
     }
 
     /**
-     * Set 人物信息。
-     * @param PersonSet 人物信息。
+     * Set <p>人物信息。</p>
+     * @param PersonSet <p>人物信息。</p>
      */
     public void setPersonSet(AiSamplePerson [] PersonSet) {
         this.PersonSet = PersonSet;

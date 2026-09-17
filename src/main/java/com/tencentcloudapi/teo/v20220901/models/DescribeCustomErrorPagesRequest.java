@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class DescribeCustomErrorPagesRequest extends AbstractModel {
 
     /**
-    * 站点 ID。
+    * <p>站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
+    * <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * 分页查询偏移量。默认值：0。
+    * <p>分页查询偏移量。默认值：0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页查询限制数目。默认值：20，最大值：1000。 
+    * <p>分页查询限制数目。默认值：20，最大值：1000。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li> 
-     * @return Filters 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
+     * Get <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p> 
+     * @return Filters <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
-     * @param Filters 过滤条件，Filters.Values 的上限为20，详细的过滤条件Name值如下：
-<li>page-id： 按照页面 ID 进行过滤；</li>
-<li>name： 按照页面名称进行过滤；</li>
-<li>description：按照页面描述过滤；</li>
-<li>content-type：按照页面类型过滤。</li>
+     * Set <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
+     * @param Filters <p>过滤条件，Filters.Values 的上限为 20，详细的过滤条件Name值如下：<li>page-id： 按照页面 ID 进行过滤；</li><li>name： 按照页面名称进行过滤；</li><li>description：按照页面描述过滤；</li><li>content-type：按照页面类型过滤。</li></p>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 分页查询偏移量。默认值：0。 
-     * @return Offset 分页查询偏移量。默认值：0。
+     * Get <p>分页查询偏移量。默认值：0。</p> 
+     * @return Offset <p>分页查询偏移量。默认值：0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询偏移量。默认值：0。
-     * @param Offset 分页查询偏移量。默认值：0。
+     * Set <p>分页查询偏移量。默认值：0。</p>
+     * @param Offset <p>分页查询偏移量。默认值：0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页查询限制数目。默认值：20，最大值：1000。  
-     * @return Limit 分页查询限制数目。默认值：20，最大值：1000。 
+     * Get <p>分页查询限制数目。默认值：20，最大值：1000。</p> 
+     * @return Limit <p>分页查询限制数目。默认值：20，最大值：1000。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询限制数目。默认值：20，最大值：1000。 
-     * @param Limit 分页查询限制数目。默认值：20，最大值：1000。 
+     * Set <p>分页查询限制数目。默认值：20，最大值：1000。</p>
+     * @param Limit <p>分页查询限制数目。默认值：20，最大值：1000。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Credentials extends AbstractModel {
 
     /**
-    * 访问凭证 ID。
+    * <p>访问凭证 ID。</p>
     */
     @SerializedName("AccessKeyId")
     @Expose
     private String AccessKeyId;
 
     /**
-    * 访问凭证 Key。
+    * <p>访问凭证 Key。</p>
     */
     @SerializedName("SecretAccessKey")
     @Expose
     private String SecretAccessKey;
 
     /**
-    * 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+    * <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
     */
     @SerializedName("SessionToken")
     @Expose
     private String SessionToken;
 
     /**
-    * 访问凭证的过期时间。
+    * <p>访问凭证的过期时间。</p>
     */
     @SerializedName("Expiration")
     @Expose
     private String Expiration;
 
     /**
-     * Get 访问凭证 ID。 
-     * @return AccessKeyId 访问凭证 ID。
+     * Get <p>访问凭证 ID。</p> 
+     * @return AccessKeyId <p>访问凭证 ID。</p>
      */
     public String getAccessKeyId() {
         return this.AccessKeyId;
     }
 
     /**
-     * Set 访问凭证 ID。
-     * @param AccessKeyId 访问凭证 ID。
+     * Set <p>访问凭证 ID。</p>
+     * @param AccessKeyId <p>访问凭证 ID。</p>
      */
     public void setAccessKeyId(String AccessKeyId) {
         this.AccessKeyId = AccessKeyId;
     }
 
     /**
-     * Get 访问凭证 Key。 
-     * @return SecretAccessKey 访问凭证 Key。
+     * Get <p>访问凭证 Key。</p> 
+     * @return SecretAccessKey <p>访问凭证 Key。</p>
      */
     public String getSecretAccessKey() {
         return this.SecretAccessKey;
     }
 
     /**
-     * Set 访问凭证 Key。
-     * @param SecretAccessKey 访问凭证 Key。
+     * Set <p>访问凭证 Key。</p>
+     * @param SecretAccessKey <p>访问凭证 Key。</p>
      */
     public void setSecretAccessKey(String SecretAccessKey) {
         this.SecretAccessKey = SecretAccessKey;
     }
 
     /**
-     * Get 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。 
-     * @return SessionToken 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+     * Get <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p> 
+     * @return SessionToken <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
      */
     public String getSessionToken() {
         return this.SessionToken;
     }
 
     /**
-     * Set 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
-     * @param SessionToken 访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。
+     * Set <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
+     * @param SessionToken <p>访问凭证 Token，长度和绑定的策略有关，最长不超过 4096 字节。</p>
      */
     public void setSessionToken(String SessionToken) {
         this.SessionToken = SessionToken;
     }
 
     /**
-     * Get 访问凭证的过期时间。 
-     * @return Expiration 访问凭证的过期时间。
+     * Get <p>访问凭证的过期时间。</p> 
+     * @return Expiration <p>访问凭证的过期时间。</p>
      */
     public String getExpiration() {
         return this.Expiration;
     }
 
     /**
-     * Set 访问凭证的过期时间。
-     * @param Expiration 访问凭证的过期时间。
+     * Set <p>访问凭证的过期时间。</p>
+     * @param Expiration <p>访问凭证的过期时间。</p>
      */
     public void setExpiration(String Expiration) {
         this.Expiration = Expiration;

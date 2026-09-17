@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDnsLineListResponse extends AbstractModel {
 
     /**
-    * 地址池列表
+    * <p>地址池列表</p>
     */
     @SerializedName("DnsLineSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDnsLineListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地址池列表 
-     * @return DnsLineSet 地址池列表
+     * Get <p>地址池列表</p> 
+     * @return DnsLineSet <p>地址池列表</p>
      */
     public GroupLine [] getDnsLineSet() {
         return this.DnsLineSet;
     }
 
     /**
-     * Set 地址池列表
-     * @param DnsLineSet 地址池列表
+     * Set <p>地址池列表</p>
+     * @param DnsLineSet <p>地址池列表</p>
      */
     public void setDnsLineSet(GroupLine [] DnsLineSet) {
         this.DnsLineSet = DnsLineSet;

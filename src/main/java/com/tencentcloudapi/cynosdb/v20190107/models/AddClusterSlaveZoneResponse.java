@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddClusterSlaveZoneResponse extends AbstractModel {
 
     /**
-    * 异步FlowId
+    * <p>异步FlowId</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class AddClusterSlaveZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步FlowId 
-     * @return FlowId 异步FlowId
+     * Get <p>异步FlowId</p> 
+     * @return FlowId <p>异步FlowId</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步FlowId
-     * @param FlowId 异步FlowId
+     * Set <p>异步FlowId</p>
+     * @param FlowId <p>异步FlowId</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

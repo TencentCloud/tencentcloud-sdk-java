@@ -326,6 +326,13 @@ public class TelCdrInfo extends AbstractModel {
     private String SysHangupReasonString;
 
     /**
+    * <p>通话结束状态V2（灰度中）</p>
+    */
+    @SerializedName("EndStatusV2")
+    @Expose
+    private Long EndStatusV2;
+
+    /**
      * Get <p>主叫号码</p> 
      * @return Caller <p>主叫号码</p>
      */
@@ -1029,6 +1036,22 @@ public class TelCdrInfo extends AbstractModel {
         this.SysHangupReasonString = SysHangupReasonString;
     }
 
+    /**
+     * Get <p>通话结束状态V2（灰度中）</p> 
+     * @return EndStatusV2 <p>通话结束状态V2（灰度中）</p>
+     */
+    public Long getEndStatusV2() {
+        return this.EndStatusV2;
+    }
+
+    /**
+     * Set <p>通话结束状态V2（灰度中）</p>
+     * @param EndStatusV2 <p>通话结束状态V2（灰度中）</p>
+     */
+    public void setEndStatusV2(Long EndStatusV2) {
+        this.EndStatusV2 = EndStatusV2;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1187,6 +1210,9 @@ public class TelCdrInfo extends AbstractModel {
         if (source.SysHangupReasonString != null) {
             this.SysHangupReasonString = new String(source.SysHangupReasonString);
         }
+        if (source.EndStatusV2 != null) {
+            this.EndStatusV2 = new Long(source.EndStatusV2);
+        }
     }
 
 
@@ -1237,6 +1263,7 @@ public class TelCdrInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
         this.setParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
         this.setParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
+        this.setParamSimple(map, prefix + "EndStatusV2", this.EndStatusV2);
 
     }
 }

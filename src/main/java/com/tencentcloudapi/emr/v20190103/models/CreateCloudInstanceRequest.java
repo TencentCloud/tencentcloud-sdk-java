@@ -185,6 +185,20 @@ public class CreateCloudInstanceRequest extends AbstractModel {
     private Boolean TerminateProtection;
 
     /**
+    * <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+    */
+    @SerializedName("EnableEmrProxy")
+    @Expose
+    private Boolean EnableEmrProxy;
+
+    /**
+    * <p>日志存储服务实例id</p>
+    */
+    @SerializedName("LogStoreID")
+    @Expose
+    private String LogStoreID;
+
+    /**
      * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
      * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
@@ -552,6 +566,38 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.TerminateProtection = TerminateProtection;
     }
 
+    /**
+     * Get <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul> 
+     * @return EnableEmrProxy <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+     */
+    public Boolean getEnableEmrProxy() {
+        return this.EnableEmrProxy;
+    }
+
+    /**
+     * Set <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+     * @param EnableEmrProxy <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
+     */
+    public void setEnableEmrProxy(Boolean EnableEmrProxy) {
+        this.EnableEmrProxy = EnableEmrProxy;
+    }
+
+    /**
+     * Get <p>日志存储服务实例id</p> 
+     * @return LogStoreID <p>日志存储服务实例id</p>
+     */
+    public String getLogStoreID() {
+        return this.LogStoreID;
+    }
+
+    /**
+     * Set <p>日志存储服务实例id</p>
+     * @param LogStoreID <p>日志存储服务实例id</p>
+     */
+    public void setLogStoreID(String LogStoreID) {
+        this.LogStoreID = LogStoreID;
+    }
+
     public CreateCloudInstanceRequest() {
     }
 
@@ -644,6 +690,12 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         if (source.TerminateProtection != null) {
             this.TerminateProtection = new Boolean(source.TerminateProtection);
         }
+        if (source.EnableEmrProxy != null) {
+            this.EnableEmrProxy = new Boolean(source.EnableEmrProxy);
+        }
+        if (source.LogStoreID != null) {
+            this.LogStoreID = new String(source.LogStoreID);
+        }
     }
 
 
@@ -674,6 +726,8 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "EnableSparkAppMonitorInfo.", this.EnableSparkAppMonitorInfo);
         this.setParamArraySimple(map, prefix + "ComputeResourceGroupIds.", this.ComputeResourceGroupIds);
         this.setParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
+        this.setParamSimple(map, prefix + "EnableEmrProxy", this.EnableEmrProxy);
+        this.setParamSimple(map, prefix + "LogStoreID", this.LogStoreID);
 
     }
 }

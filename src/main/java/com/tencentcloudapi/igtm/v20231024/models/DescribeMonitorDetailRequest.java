@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeMonitorDetailRequest extends AbstractModel {
 
     /**
-    * 监控器id
+    * <p>监控器id</p>
     */
     @SerializedName("MonitorId")
     @Expose
     private Long MonitorId;
 
     /**
-     * Get 监控器id 
-     * @return MonitorId 监控器id
+     * Get <p>监控器id</p> 
+     * @return MonitorId <p>监控器id</p>
      */
     public Long getMonitorId() {
         return this.MonitorId;
     }
 
     /**
-     * Set 监控器id
-     * @param MonitorId 监控器id
+     * Set <p>监控器id</p>
+     * @param MonitorId <p>监控器id</p>
      */
     public void setMonitorId(Long MonitorId) {
         this.MonitorId = MonitorId;

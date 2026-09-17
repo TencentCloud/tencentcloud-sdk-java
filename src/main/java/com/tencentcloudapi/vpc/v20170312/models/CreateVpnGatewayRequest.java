@@ -101,6 +101,41 @@ public class CreateVpnGatewayRequest extends AbstractModel {
     private Long BgpAsn;
 
     /**
+    * <p>是否是私网类型</p>
+    */
+    @SerializedName("IsPrivate")
+    @Expose
+    private Boolean IsPrivate;
+
+    /**
+    * <p>私网唯一ID</p>
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * <p>BGP 开关，开启时需指定BgpAsn。</p>
+    */
+    @SerializedName("BgpEnable")
+    @Expose
+    private Boolean BgpEnable;
+
+    /**
+    * <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+    */
+    @SerializedName("IpStack")
+    @Expose
+    private String IpStack;
+
+    /**
+    * <p>CCN类型私网VPN接入网段</p>
+    */
+    @SerializedName("AccessSubnet")
+    @Expose
+    private String AccessSubnet;
+
+    /**
      * Get <p>VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>。接口返回值中的VpcId获取</p><p>入参限制：当Type为CCN/SSL_CCN 类型时传 &quot;&quot;，IPSEC/SSL 类型必须传对应VPC实例ID。</p> 
      * @return VpcId <p>VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>。接口返回值中的VpcId获取</p><p>入参限制：当Type为CCN/SSL_CCN 类型时传 &quot;&quot;，IPSEC/SSL 类型必须传对应VPC实例ID。</p>
      */
@@ -183,7 +218,9 @@ public class CreateVpnGatewayRequest extends AbstractModel {
     /**
      * Get <p>可用区，如：ap-guangzhou-2。</p> 
      * @return Zone <p>可用区，如：ap-guangzhou-2。</p>
+     * @deprecated
      */
+    @Deprecated
     public String getZone() {
         return this.Zone;
     }
@@ -191,7 +228,9 @@ public class CreateVpnGatewayRequest extends AbstractModel {
     /**
      * Set <p>可用区，如：ap-guangzhou-2。</p>
      * @param Zone <p>可用区，如：ap-guangzhou-2。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
@@ -276,6 +315,86 @@ public class CreateVpnGatewayRequest extends AbstractModel {
         this.BgpAsn = BgpAsn;
     }
 
+    /**
+     * Get <p>是否是私网类型</p> 
+     * @return IsPrivate <p>是否是私网类型</p>
+     */
+    public Boolean getIsPrivate() {
+        return this.IsPrivate;
+    }
+
+    /**
+     * Set <p>是否是私网类型</p>
+     * @param IsPrivate <p>是否是私网类型</p>
+     */
+    public void setIsPrivate(Boolean IsPrivate) {
+        this.IsPrivate = IsPrivate;
+    }
+
+    /**
+     * Get <p>私网唯一ID</p> 
+     * @return SubnetId <p>私网唯一ID</p>
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set <p>私网唯一ID</p>
+     * @param SubnetId <p>私网唯一ID</p>
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get <p>BGP 开关，开启时需指定BgpAsn。</p> 
+     * @return BgpEnable <p>BGP 开关，开启时需指定BgpAsn。</p>
+     */
+    public Boolean getBgpEnable() {
+        return this.BgpEnable;
+    }
+
+    /**
+     * Set <p>BGP 开关，开启时需指定BgpAsn。</p>
+     * @param BgpEnable <p>BGP 开关，开启时需指定BgpAsn。</p>
+     */
+    public void setBgpEnable(Boolean BgpEnable) {
+        this.BgpEnable = BgpEnable;
+    }
+
+    /**
+     * Get <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p> 
+     * @return IpStack <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+     */
+    public String getIpStack() {
+        return this.IpStack;
+    }
+
+    /**
+     * Set <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+     * @param IpStack <p>内外层IP协议</p><p>枚举值：</p><ul><li>4in4： IPv4 over IPv4</li><li>6in4： IPv6 over IPv4</li><li>6in6： IPv6 over IPv6</li><li>4in6： IPv4 over IPv6</li></ul><p>默认值：4in4</p>
+     */
+    public void setIpStack(String IpStack) {
+        this.IpStack = IpStack;
+    }
+
+    /**
+     * Get <p>CCN类型私网VPN接入网段</p> 
+     * @return AccessSubnet <p>CCN类型私网VPN接入网段</p>
+     */
+    public String getAccessSubnet() {
+        return this.AccessSubnet;
+    }
+
+    /**
+     * Set <p>CCN类型私网VPN接入网段</p>
+     * @param AccessSubnet <p>CCN类型私网VPN接入网段</p>
+     */
+    public void setAccessSubnet(String AccessSubnet) {
+        this.AccessSubnet = AccessSubnet;
+    }
+
     public CreateVpnGatewayRequest() {
     }
 
@@ -320,6 +439,21 @@ public class CreateVpnGatewayRequest extends AbstractModel {
         if (source.BgpAsn != null) {
             this.BgpAsn = new Long(source.BgpAsn);
         }
+        if (source.IsPrivate != null) {
+            this.IsPrivate = new Boolean(source.IsPrivate);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.BgpEnable != null) {
+            this.BgpEnable = new Boolean(source.BgpEnable);
+        }
+        if (source.IpStack != null) {
+            this.IpStack = new String(source.IpStack);
+        }
+        if (source.AccessSubnet != null) {
+            this.AccessSubnet = new String(source.AccessSubnet);
+        }
     }
 
 
@@ -338,6 +472,11 @@ public class CreateVpnGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
         this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+        this.setParamSimple(map, prefix + "IsPrivate", this.IsPrivate);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "BgpEnable", this.BgpEnable);
+        this.setParamSimple(map, prefix + "IpStack", this.IpStack);
+        this.setParamSimple(map, prefix + "AccessSubnet", this.AccessSubnet);
 
     }
 }

@@ -24,122 +24,92 @@ import java.util.HashMap;
 public class PornImgReviewTemplateInfo extends AbstractModel {
 
     /**
-    * 画面鉴别涉及令人反感的信息的任务开关，可选值：
-<li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
-<li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
+    * <p>画面鉴别涉及令人反感的信息的任务开关，可选值：</p><li>ON：开启画面鉴别涉及令人反感的信息的任务；</li><li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>porn：色情；</li>
-<li>vulgar：低俗；</li>
-<li>intimacy：亲密行为；</li>
-<li>sexy：性感。</li>
+    * <p>画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>porn：色情；</li><li>vulgar：低俗；</li><li>intimacy：亲密行为；</li><li>sexy：性感。</li>
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-    * 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+    * <p>判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+    * <p>判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。</p>
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get 画面鉴别涉及令人反感的信息的任务开关，可选值：
-<li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
-<li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li> 
-     * @return Switch 画面鉴别涉及令人反感的信息的任务开关，可选值：
-<li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
-<li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
+     * Get <p>画面鉴别涉及令人反感的信息的任务开关，可选值：</p><li>ON：开启画面鉴别涉及令人反感的信息的任务；</li><li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li> 
+     * @return Switch <p>画面鉴别涉及令人反感的信息的任务开关，可选值：</p><li>ON：开启画面鉴别涉及令人反感的信息的任务；</li><li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 画面鉴别涉及令人反感的信息的任务开关，可选值：
-<li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
-<li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
-     * @param Switch 画面鉴别涉及令人反感的信息的任务开关，可选值：
-<li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
-<li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
+     * Set <p>画面鉴别涉及令人反感的信息的任务开关，可选值：</p><li>ON：开启画面鉴别涉及令人反感的信息的任务；</li><li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
+     * @param Switch <p>画面鉴别涉及令人反感的信息的任务开关，可选值：</p><li>ON：开启画面鉴别涉及令人反感的信息的任务；</li><li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>porn：色情；</li>
-<li>vulgar：低俗；</li>
-<li>intimacy：亲密行为；</li>
-<li>sexy：性感。</li> 
-     * @return LabelSet 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>porn：色情；</li>
-<li>vulgar：低俗；</li>
-<li>intimacy：亲密行为；</li>
-<li>sexy：性感。</li>
+     * Get <p>画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>porn：色情；</li><li>vulgar：低俗；</li><li>intimacy：亲密行为；</li><li>sexy：性感。</li> 
+     * @return LabelSet <p>画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>porn：色情；</li><li>vulgar：低俗；</li><li>intimacy：亲密行为；</li><li>sexy：性感。</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>porn：色情；</li>
-<li>vulgar：低俗；</li>
-<li>intimacy：亲密行为；</li>
-<li>sexy：性感。</li>
-     * @param LabelSet 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
-<li>porn：色情；</li>
-<li>vulgar：低俗；</li>
-<li>intimacy：亲密行为；</li>
-<li>sexy：性感。</li>
+     * Set <p>画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>porn：色情；</li><li>vulgar：低俗；</li><li>intimacy：亲密行为；</li><li>sexy：性感。</li>
+     * @param LabelSet <p>画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：</p><li>porn：色情；</li><li>vulgar：低俗；</li><li>intimacy：亲密行为；</li><li>sexy：性感。</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
     /**
-     * Get 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。 
-     * @return BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * Get <p>判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p> 
+     * @return BlockConfidence <p>判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
-     * @param BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * Set <p>判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
+     * @param BlockConfidence <p>判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。</p>
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。 
-     * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+     * Get <p>判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。</p> 
+     * @return ReviewConfidence <p>判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。</p>
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
-     * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+     * Set <p>判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。</p>
+     * @param ReviewConfidence <p>判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。</p>
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

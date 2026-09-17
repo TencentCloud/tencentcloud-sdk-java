@@ -180,6 +180,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *新建CLS投递任务
+     * @param req CreateCLSDeliverTaskRequest
+     * @return CreateCLSDeliverTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSDeliverTaskResponse CreateCLSDeliverTask(CreateCLSDeliverTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSDeliverTask", CreateCLSDeliverTaskResponse.class);
+    }
+
+    /**
      *内部云产品接入使用相关接口
      * @param req CreateCloudProductLogCollectionRequest
      * @return CreateCloudProductLogCollectionResponse
@@ -634,6 +645,17 @@ public class ClsClient extends AbstractClient{
     public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
+    }
+
+    /**
+     *删除CLS投递任务
+     * @param req DeleteCLSDeliverTaskRequest
+     * @return DeleteCLSDeliverTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCLSDeliverTaskResponse DeleteCLSDeliverTask(DeleteCLSDeliverTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCLSDeliverTask", DeleteCLSDeliverTaskResponse.class);
     }
 
     /**
@@ -1118,6 +1140,17 @@ public class ClsClient extends AbstractClient{
     public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlertRecordHistory", DescribeAlertRecordHistoryResponse.class);
+    }
+
+    /**
+     *获取CLS投递任务列表
+     * @param req DescribeCLSDeliverTasksRequest
+     * @return DescribeCLSDeliverTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSDeliverTasksResponse DescribeCLSDeliverTasks(DescribeCLSDeliverTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSDeliverTasks", DescribeCLSDeliverTasksResponse.class);
     }
 
     /**
@@ -1956,6 +1989,17 @@ API 中 Region 填写任意一个地域均可，建议使用广州(ap-guangzhou)
     public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
+    }
+
+    /**
+     *修改CLS投递任务
+     * @param req ModifyCLSDeliverTaskRequest
+     * @return ModifyCLSDeliverTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCLSDeliverTaskResponse ModifyCLSDeliverTask(ModifyCLSDeliverTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCLSDeliverTask", ModifyCLSDeliverTaskResponse.class);
     }
 
     /**

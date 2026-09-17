@@ -24,118 +24,164 @@ import java.util.HashMap;
 public class CustomerGateway extends AbstractModel {
 
     /**
-    * 用户网关唯一ID
+    * <p>用户网关唯一ID</p>
     */
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
 
     /**
-    * 网关名称
+    * <p>网关名称</p>
     */
     @SerializedName("CustomerGatewayName")
     @Expose
     private String CustomerGatewayName;
 
     /**
-    * 公网地址
+    * <p>公网地址</p>
     */
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * BGP ASN。
+    * <p>BGP ASN。</p>
     */
     @SerializedName("BgpAsn")
     @Expose
     private Long BgpAsn;
 
     /**
-     * Get 用户网关唯一ID 
-     * @return CustomerGatewayId 用户网关唯一ID
+    * <p>关联通道数</p>
+    */
+    @SerializedName("VpnConnNum")
+    @Expose
+    private Long VpnConnNum;
+
+    /**
+    * <p>标签信息</p>
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+     * Get <p>用户网关唯一ID</p> 
+     * @return CustomerGatewayId <p>用户网关唯一ID</p>
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 用户网关唯一ID
-     * @param CustomerGatewayId 用户网关唯一ID
+     * Set <p>用户网关唯一ID</p>
+     * @param CustomerGatewayId <p>用户网关唯一ID</p>
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
     /**
-     * Get 网关名称 
-     * @return CustomerGatewayName 网关名称
+     * Get <p>网关名称</p> 
+     * @return CustomerGatewayName <p>网关名称</p>
      */
     public String getCustomerGatewayName() {
         return this.CustomerGatewayName;
     }
 
     /**
-     * Set 网关名称
-     * @param CustomerGatewayName 网关名称
+     * Set <p>网关名称</p>
+     * @param CustomerGatewayName <p>网关名称</p>
      */
     public void setCustomerGatewayName(String CustomerGatewayName) {
         this.CustomerGatewayName = CustomerGatewayName;
     }
 
     /**
-     * Get 公网地址 
-     * @return IpAddress 公网地址
+     * Get <p>公网地址</p> 
+     * @return IpAddress <p>公网地址</p>
      */
     public String getIpAddress() {
         return this.IpAddress;
     }
 
     /**
-     * Set 公网地址
-     * @param IpAddress 公网地址
+     * Set <p>公网地址</p>
+     * @param IpAddress <p>公网地址</p>
      */
     public void setIpAddress(String IpAddress) {
         this.IpAddress = IpAddress;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get BGP ASN。 
-     * @return BgpAsn BGP ASN。
+     * Get <p>BGP ASN。</p> 
+     * @return BgpAsn <p>BGP ASN。</p>
      */
     public Long getBgpAsn() {
         return this.BgpAsn;
     }
 
     /**
-     * Set BGP ASN。
-     * @param BgpAsn BGP ASN。
+     * Set <p>BGP ASN。</p>
+     * @param BgpAsn <p>BGP ASN。</p>
      */
     public void setBgpAsn(Long BgpAsn) {
         this.BgpAsn = BgpAsn;
+    }
+
+    /**
+     * Get <p>关联通道数</p> 
+     * @return VpnConnNum <p>关联通道数</p>
+     */
+    public Long getVpnConnNum() {
+        return this.VpnConnNum;
+    }
+
+    /**
+     * Set <p>关联通道数</p>
+     * @param VpnConnNum <p>关联通道数</p>
+     */
+    public void setVpnConnNum(Long VpnConnNum) {
+        this.VpnConnNum = VpnConnNum;
+    }
+
+    /**
+     * Get <p>标签信息</p> 
+     * @return TagSet <p>标签信息</p>
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set <p>标签信息</p>
+     * @param TagSet <p>标签信息</p>
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
     }
 
     public CustomerGateway() {
@@ -161,6 +207,15 @@ public class CustomerGateway extends AbstractModel {
         if (source.BgpAsn != null) {
             this.BgpAsn = new Long(source.BgpAsn);
         }
+        if (source.VpnConnNum != null) {
+            this.VpnConnNum = new Long(source.VpnConnNum);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -173,6 +228,8 @@ public class CustomerGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "IpAddress", this.IpAddress);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+        this.setParamSimple(map, prefix + "VpnConnNum", this.VpnConnNum);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class VpnGatewayQuota extends AbstractModel {
 
     /**
-    * 带宽配额，单位：Mbps。
+    * <p>带宽配额，单位：Mbps。</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 配额中文名称
+    * <p>配额中文名称</p>
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * 配额英文名称
+    * <p>配额英文名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 带宽配额，单位：Mbps。 
-     * @return Bandwidth 带宽配额，单位：Mbps。
+    * <p>SSL 连接数可选配额</p>
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long [] MaxConnection;
+
+    /**
+     * Get <p>带宽配额，单位：Mbps。</p> 
+     * @return Bandwidth <p>带宽配额，单位：Mbps。</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽配额，单位：Mbps。
-     * @param Bandwidth 带宽配额，单位：Mbps。
+     * Set <p>带宽配额，单位：Mbps。</p>
+     * @param Bandwidth <p>带宽配额，单位：Mbps。</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 配额中文名称 
-     * @return Cname 配额中文名称
+     * Get <p>配额中文名称</p> 
+     * @return Cname <p>配额中文名称</p>
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set 配额中文名称
-     * @param Cname 配额中文名称
+     * Set <p>配额中文名称</p>
+     * @param Cname <p>配额中文名称</p>
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get 配额英文名称 
-     * @return Name 配额英文名称
+     * Get <p>配额英文名称</p> 
+     * @return Name <p>配额英文名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 配额英文名称
-     * @param Name 配额英文名称
+     * Set <p>配额英文名称</p>
+     * @param Name <p>配额英文名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <p>SSL 连接数可选配额</p> 
+     * @return MaxConnection <p>SSL 连接数可选配额</p>
+     */
+    public Long [] getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set <p>SSL 连接数可选配额</p>
+     * @param MaxConnection <p>SSL 连接数可选配额</p>
+     */
+    public void setMaxConnection(Long [] MaxConnection) {
+        this.MaxConnection = MaxConnection;
     }
 
     public VpnGatewayQuota() {
@@ -109,6 +132,12 @@ public class VpnGatewayQuota extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long[source.MaxConnection.length];
+            for (int i = 0; i < source.MaxConnection.length; i++) {
+                this.MaxConnection[i] = new Long(source.MaxConnection[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class VpnGatewayQuota extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "MaxConnection.", this.MaxConnection);
 
     }
 }

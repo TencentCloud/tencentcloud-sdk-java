@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Identity extends AbstractModel {
 
     /**
-    * <p>描述</p>
+    * 描述
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>数字 ID</p>
+    * 数字 ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * <p>名称</p>
+    * 名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>字符串 ID</p>
+    * 字符串 ID
     */
     @SerializedName("StrId")
     @Expose
     private String StrId;
 
     /**
-     * Get <p>描述</p> 
-     * @return Description <p>描述</p>
+     * Get 描述 
+     * @return Description 描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>描述</p>
-     * @param Description <p>描述</p>
+     * Set 描述
+     * @param Description 描述
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>数字 ID</p> 
-     * @return Id <p>数字 ID</p>
+     * Get 数字 ID 
+     * @return Id 数字 ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>数字 ID</p>
-     * @param Id <p>数字 ID</p>
+     * Set 数字 ID
+     * @param Id 数字 ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get <p>名称</p> 
-     * @return Name <p>名称</p>
+     * Get 名称 
+     * @return Name 名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称</p>
-     * @param Name <p>名称</p>
+     * Set 名称
+     * @param Name 名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>字符串 ID</p> 
-     * @return StrId <p>字符串 ID</p>
+     * Get 字符串 ID 
+     * @return StrId 字符串 ID
      */
     public String getStrId() {
         return this.StrId;
     }
 
     /**
-     * Set <p>字符串 ID</p>
-     * @param StrId <p>字符串 ID</p>
+     * Set 字符串 ID
+     * @param StrId 字符串 ID
      */
     public void setStrId(String StrId) {
         this.StrId = StrId;

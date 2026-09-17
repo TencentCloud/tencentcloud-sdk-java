@@ -24,923 +24,969 @@ import java.util.HashMap;
 public class SREInstance extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 版本号
+    * <p>版本号</p>
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
+    * <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 规格ID
+    * <p>规格ID</p>
     */
     @SerializedName("SpecId")
     @Expose
     private String SpecId;
 
     /**
-    * 副本数
+    * <p>副本数</p>
     */
     @SerializedName("Replica")
     @Expose
     private Long Replica;
 
     /**
-    * 类型
+    * <p>类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Vpc iD
+    * <p>Vpc iD</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 是否开启持久化存储
+    * <p>是否开启持久化存储</p>
     */
     @SerializedName("EnableStorage")
     @Expose
     private Boolean EnableStorage;
 
     /**
-    * 数据存储方式
+    * <p>数据存储方式</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 云硬盘容量
+    * <p>云硬盘容量</p>
     */
     @SerializedName("StorageCapacity")
     @Expose
     private Long StorageCapacity;
 
     /**
-    * 计费方式
+    * <p>计费方式</p>
     */
     @SerializedName("Paymode")
     @Expose
     private String Paymode;
 
     /**
-    * EKS集群的ID
+    * <p>EKS集群的ID</p>
     */
     @SerializedName("EKSClusterID")
     @Expose
     private String EKSClusterID;
 
     /**
-    * 集群创建时间
+    * <p>集群创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 环境配置信息列表
+    * <p>环境配置信息列表</p>
     */
     @SerializedName("EnvInfos")
     @Expose
     private EnvInfo [] EnvInfos;
 
     /**
-    * 引擎所在的区域
+    * <p>引擎所在的区域</p>
     */
     @SerializedName("EngineRegion")
     @Expose
     private String EngineRegion;
 
     /**
-    * 注册引擎是否开启公网
+    * <p>注册引擎是否开启公网</p>
     */
     @SerializedName("EnableInternet")
     @Expose
     private Boolean EnableInternet;
 
     /**
-    * 私有网络列表信息
+    * <p>私有网络列表信息</p>
     */
     @SerializedName("VpcInfos")
     @Expose
     private VpcInfo [] VpcInfos;
 
     /**
-    * 服务治理相关信息列表
+    * <p>服务治理相关信息列表</p>
     */
     @SerializedName("ServiceGovernanceInfos")
     @Expose
     private ServiceGovernanceInfo [] ServiceGovernanceInfos;
 
     /**
-    * 实例的标签信息
+    * <p>实例的标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private KVPair [] Tags;
 
     /**
-    * 引擎实例是否开启控制台公网访问地址
+    * <p>引擎实例是否开启控制台公网访问地址</p>
     */
     @SerializedName("EnableConsoleInternet")
     @Expose
     private Boolean EnableConsoleInternet;
 
     /**
-    * 引擎实例是否开启控制台内网访问地址
+    * <p>引擎实例是否开启控制台内网访问地址</p>
     */
     @SerializedName("EnableConsoleIntranet")
     @Expose
     private Boolean EnableConsoleIntranet;
 
     /**
-    * 引擎实例是否展示参数配置页面
+    * <p>引擎实例是否展示参数配置页面</p>
     */
     @SerializedName("ConfigInfoVisible")
     @Expose
     private Boolean ConfigInfoVisible;
 
     /**
-    * 引擎实例控制台默认密码
+    * <p>引擎实例控制台默认密码</p>
     */
     @SerializedName("ConsoleDefaultPwd")
     @Expose
     private String ConsoleDefaultPwd;
 
     /**
-    * 交易付费类型，0后付费/1预付费
+    * <p>交易付费类型，0后付费/1预付费</p>
     */
     @SerializedName("TradeType")
     @Expose
     private Long TradeType;
 
     /**
-    * 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+    * <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 预付费到期时间
+    * <p>预付费到期时间</p>
     */
     @SerializedName("CurDeadline")
     @Expose
     private String CurDeadline;
 
     /**
-    * 隔离开始时间
+    * <p>隔离开始时间</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 实例地域相关的描述信息
+    * <p>实例地域相关的描述信息</p>
     */
     @SerializedName("RegionInfos")
     @Expose
     private DescribeInstanceRegionInfo [] RegionInfos;
 
     /**
-    * 所在EKS环境，分为common和yunti
+    * <p>所在EKS环境，分为common和yunti</p>
     */
     @SerializedName("EKSType")
     @Expose
     private String EKSType;
 
     /**
-    * 引擎的产品版本
+    * <p>引擎的产品版本</p>
     */
     @SerializedName("FeatureVersion")
     @Expose
     private String FeatureVersion;
 
     /**
-    * 引擎实例是否开启客户端内网访问地址
+    * <p>引擎实例是否开启客户端内网访问地址</p>
     */
     @SerializedName("EnableClientIntranet")
     @Expose
     private Boolean EnableClientIntranet;
 
     /**
-    * 存储额外配置选项
+    * <p>存储额外配置选项</p>
     */
     @SerializedName("StorageOption")
     @Expose
     private StorageOption [] StorageOption;
 
     /**
-    * Zookeeper的额外环境数据信息
+    * <p>Zookeeper的额外环境数据信息</p>
     */
     @SerializedName("ZookeeperRegionInfo")
     @Expose
     private ZookeeperRegionInfo ZookeeperRegionInfo;
 
     /**
-    * 部署架构
+    * <p>部署架构</p>
     */
     @SerializedName("DeployMode")
     @Expose
     private String DeployMode;
 
     /**
-    * 全局属性
+    * <p>全局属性</p>
     */
     @SerializedName("GlobalType")
     @Expose
     private String GlobalType;
 
     /**
-    * 所属组类型
+    * <p>所属组类型</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * 组id
+    * <p>组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String [] GroupId;
 
     /**
-    * 是否为主地域
+    * <p>是否为主地域</p>
     */
     @SerializedName("IsMainRegion")
     @Expose
     private Boolean IsMainRegion;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>是否禁止变更</p>
+    */
+    @SerializedName("MutationEnabled")
+    @Expose
+    private Boolean MutationEnabled;
+
+    /**
+    * <p>禁止限流</p>
+    */
+    @SerializedName("MaxCapacityLimitEnabled")
+    @Expose
+    private Boolean MaxCapacityLimitEnabled;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 版本号 
-     * @return Edition 版本号
+     * Get <p>版本号</p> 
+     * @return Edition <p>版本号</p>
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 版本号
-     * @param Edition 版本号
+     * Set <p>版本号</p>
+     * @param Edition <p>版本号</p>
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail 
-     * @return Status 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
+     * Get <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p> 
+     * @return Status <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
-     * @param Status 状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail
+     * Set <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
+     * @param Status <p>状态, 枚举值:creating/create_fail/running/updating/update_fail/restarting/restart_fail/destroying/destroy_fail</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 规格ID 
-     * @return SpecId 规格ID
+     * Get <p>规格ID</p> 
+     * @return SpecId <p>规格ID</p>
      */
     public String getSpecId() {
         return this.SpecId;
     }
 
     /**
-     * Set 规格ID
-     * @param SpecId 规格ID
+     * Set <p>规格ID</p>
+     * @param SpecId <p>规格ID</p>
      */
     public void setSpecId(String SpecId) {
         this.SpecId = SpecId;
     }
 
     /**
-     * Get 副本数 
-     * @return Replica 副本数
+     * Get <p>副本数</p> 
+     * @return Replica <p>副本数</p>
      */
     public Long getReplica() {
         return this.Replica;
     }
 
     /**
-     * Set 副本数
-     * @param Replica 副本数
+     * Set <p>副本数</p>
+     * @param Replica <p>副本数</p>
      */
     public void setReplica(Long Replica) {
         this.Replica = Replica;
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get <p>类型</p> 
+     * @return Type <p>类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set <p>类型</p>
+     * @param Type <p>类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Vpc iD 
-     * @return VpcId Vpc iD
+     * Get <p>Vpc iD</p> 
+     * @return VpcId <p>Vpc iD</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Vpc iD
-     * @param VpcId Vpc iD
+     * Set <p>Vpc iD</p>
+     * @param VpcId <p>Vpc iD</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetIds 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetIds <p>子网ID</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetIds 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetIds <p>子网ID</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 是否开启持久化存储 
-     * @return EnableStorage 是否开启持久化存储
+     * Get <p>是否开启持久化存储</p> 
+     * @return EnableStorage <p>是否开启持久化存储</p>
      */
     public Boolean getEnableStorage() {
         return this.EnableStorage;
     }
 
     /**
-     * Set 是否开启持久化存储
-     * @param EnableStorage 是否开启持久化存储
+     * Set <p>是否开启持久化存储</p>
+     * @param EnableStorage <p>是否开启持久化存储</p>
      */
     public void setEnableStorage(Boolean EnableStorage) {
         this.EnableStorage = EnableStorage;
     }
 
     /**
-     * Get 数据存储方式 
-     * @return StorageType 数据存储方式
+     * Get <p>数据存储方式</p> 
+     * @return StorageType <p>数据存储方式</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 数据存储方式
-     * @param StorageType 数据存储方式
+     * Set <p>数据存储方式</p>
+     * @param StorageType <p>数据存储方式</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 云硬盘容量 
-     * @return StorageCapacity 云硬盘容量
+     * Get <p>云硬盘容量</p> 
+     * @return StorageCapacity <p>云硬盘容量</p>
      */
     public Long getStorageCapacity() {
         return this.StorageCapacity;
     }
 
     /**
-     * Set 云硬盘容量
-     * @param StorageCapacity 云硬盘容量
+     * Set <p>云硬盘容量</p>
+     * @param StorageCapacity <p>云硬盘容量</p>
      */
     public void setStorageCapacity(Long StorageCapacity) {
         this.StorageCapacity = StorageCapacity;
     }
 
     /**
-     * Get 计费方式 
-     * @return Paymode 计费方式
+     * Get <p>计费方式</p> 
+     * @return Paymode <p>计费方式</p>
      */
     public String getPaymode() {
         return this.Paymode;
     }
 
     /**
-     * Set 计费方式
-     * @param Paymode 计费方式
+     * Set <p>计费方式</p>
+     * @param Paymode <p>计费方式</p>
      */
     public void setPaymode(String Paymode) {
         this.Paymode = Paymode;
     }
 
     /**
-     * Get EKS集群的ID 
-     * @return EKSClusterID EKS集群的ID
+     * Get <p>EKS集群的ID</p> 
+     * @return EKSClusterID <p>EKS集群的ID</p>
      */
     public String getEKSClusterID() {
         return this.EKSClusterID;
     }
 
     /**
-     * Set EKS集群的ID
-     * @param EKSClusterID EKS集群的ID
+     * Set <p>EKS集群的ID</p>
+     * @param EKSClusterID <p>EKS集群的ID</p>
      */
     public void setEKSClusterID(String EKSClusterID) {
         this.EKSClusterID = EKSClusterID;
     }
 
     /**
-     * Get 集群创建时间 
-     * @return CreateTime 集群创建时间
+     * Get <p>集群创建时间</p> 
+     * @return CreateTime <p>集群创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 集群创建时间
-     * @param CreateTime 集群创建时间
+     * Set <p>集群创建时间</p>
+     * @param CreateTime <p>集群创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 环境配置信息列表 
-     * @return EnvInfos 环境配置信息列表
+     * Get <p>环境配置信息列表</p> 
+     * @return EnvInfos <p>环境配置信息列表</p>
      */
     public EnvInfo [] getEnvInfos() {
         return this.EnvInfos;
     }
 
     /**
-     * Set 环境配置信息列表
-     * @param EnvInfos 环境配置信息列表
+     * Set <p>环境配置信息列表</p>
+     * @param EnvInfos <p>环境配置信息列表</p>
      */
     public void setEnvInfos(EnvInfo [] EnvInfos) {
         this.EnvInfos = EnvInfos;
     }
 
     /**
-     * Get 引擎所在的区域 
-     * @return EngineRegion 引擎所在的区域
+     * Get <p>引擎所在的区域</p> 
+     * @return EngineRegion <p>引擎所在的区域</p>
      */
     public String getEngineRegion() {
         return this.EngineRegion;
     }
 
     /**
-     * Set 引擎所在的区域
-     * @param EngineRegion 引擎所在的区域
+     * Set <p>引擎所在的区域</p>
+     * @param EngineRegion <p>引擎所在的区域</p>
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get 注册引擎是否开启公网 
-     * @return EnableInternet 注册引擎是否开启公网
+     * Get <p>注册引擎是否开启公网</p> 
+     * @return EnableInternet <p>注册引擎是否开启公网</p>
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
     }
 
     /**
-     * Set 注册引擎是否开启公网
-     * @param EnableInternet 注册引擎是否开启公网
+     * Set <p>注册引擎是否开启公网</p>
+     * @param EnableInternet <p>注册引擎是否开启公网</p>
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;
     }
 
     /**
-     * Get 私有网络列表信息 
-     * @return VpcInfos 私有网络列表信息
+     * Get <p>私有网络列表信息</p> 
+     * @return VpcInfos <p>私有网络列表信息</p>
      */
     public VpcInfo [] getVpcInfos() {
         return this.VpcInfos;
     }
 
     /**
-     * Set 私有网络列表信息
-     * @param VpcInfos 私有网络列表信息
+     * Set <p>私有网络列表信息</p>
+     * @param VpcInfos <p>私有网络列表信息</p>
      */
     public void setVpcInfos(VpcInfo [] VpcInfos) {
         this.VpcInfos = VpcInfos;
     }
 
     /**
-     * Get 服务治理相关信息列表 
-     * @return ServiceGovernanceInfos 服务治理相关信息列表
+     * Get <p>服务治理相关信息列表</p> 
+     * @return ServiceGovernanceInfos <p>服务治理相关信息列表</p>
      */
     public ServiceGovernanceInfo [] getServiceGovernanceInfos() {
         return this.ServiceGovernanceInfos;
     }
 
     /**
-     * Set 服务治理相关信息列表
-     * @param ServiceGovernanceInfos 服务治理相关信息列表
+     * Set <p>服务治理相关信息列表</p>
+     * @param ServiceGovernanceInfos <p>服务治理相关信息列表</p>
      */
     public void setServiceGovernanceInfos(ServiceGovernanceInfo [] ServiceGovernanceInfos) {
         this.ServiceGovernanceInfos = ServiceGovernanceInfos;
     }
 
     /**
-     * Get 实例的标签信息 
-     * @return Tags 实例的标签信息
+     * Get <p>实例的标签信息</p> 
+     * @return Tags <p>实例的标签信息</p>
      */
     public KVPair [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例的标签信息
-     * @param Tags 实例的标签信息
+     * Set <p>实例的标签信息</p>
+     * @param Tags <p>实例的标签信息</p>
      */
     public void setTags(KVPair [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 引擎实例是否开启控制台公网访问地址 
-     * @return EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
+     * Get <p>引擎实例是否开启控制台公网访问地址</p> 
+     * @return EnableConsoleInternet <p>引擎实例是否开启控制台公网访问地址</p>
      */
     public Boolean getEnableConsoleInternet() {
         return this.EnableConsoleInternet;
     }
 
     /**
-     * Set 引擎实例是否开启控制台公网访问地址
-     * @param EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
+     * Set <p>引擎实例是否开启控制台公网访问地址</p>
+     * @param EnableConsoleInternet <p>引擎实例是否开启控制台公网访问地址</p>
      */
     public void setEnableConsoleInternet(Boolean EnableConsoleInternet) {
         this.EnableConsoleInternet = EnableConsoleInternet;
     }
 
     /**
-     * Get 引擎实例是否开启控制台内网访问地址 
-     * @return EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
+     * Get <p>引擎实例是否开启控制台内网访问地址</p> 
+     * @return EnableConsoleIntranet <p>引擎实例是否开启控制台内网访问地址</p>
      */
     public Boolean getEnableConsoleIntranet() {
         return this.EnableConsoleIntranet;
     }
 
     /**
-     * Set 引擎实例是否开启控制台内网访问地址
-     * @param EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
+     * Set <p>引擎实例是否开启控制台内网访问地址</p>
+     * @param EnableConsoleIntranet <p>引擎实例是否开启控制台内网访问地址</p>
      */
     public void setEnableConsoleIntranet(Boolean EnableConsoleIntranet) {
         this.EnableConsoleIntranet = EnableConsoleIntranet;
     }
 
     /**
-     * Get 引擎实例是否展示参数配置页面 
-     * @return ConfigInfoVisible 引擎实例是否展示参数配置页面
+     * Get <p>引擎实例是否展示参数配置页面</p> 
+     * @return ConfigInfoVisible <p>引擎实例是否展示参数配置页面</p>
      */
     public Boolean getConfigInfoVisible() {
         return this.ConfigInfoVisible;
     }
 
     /**
-     * Set 引擎实例是否展示参数配置页面
-     * @param ConfigInfoVisible 引擎实例是否展示参数配置页面
+     * Set <p>引擎实例是否展示参数配置页面</p>
+     * @param ConfigInfoVisible <p>引擎实例是否展示参数配置页面</p>
      */
     public void setConfigInfoVisible(Boolean ConfigInfoVisible) {
         this.ConfigInfoVisible = ConfigInfoVisible;
     }
 
     /**
-     * Get 引擎实例控制台默认密码 
-     * @return ConsoleDefaultPwd 引擎实例控制台默认密码
+     * Get <p>引擎实例控制台默认密码</p> 
+     * @return ConsoleDefaultPwd <p>引擎实例控制台默认密码</p>
      */
     public String getConsoleDefaultPwd() {
         return this.ConsoleDefaultPwd;
     }
 
     /**
-     * Set 引擎实例控制台默认密码
-     * @param ConsoleDefaultPwd 引擎实例控制台默认密码
+     * Set <p>引擎实例控制台默认密码</p>
+     * @param ConsoleDefaultPwd <p>引擎实例控制台默认密码</p>
      */
     public void setConsoleDefaultPwd(String ConsoleDefaultPwd) {
         this.ConsoleDefaultPwd = ConsoleDefaultPwd;
     }
 
     /**
-     * Get 交易付费类型，0后付费/1预付费 
-     * @return TradeType 交易付费类型，0后付费/1预付费
+     * Get <p>交易付费类型，0后付费/1预付费</p> 
+     * @return TradeType <p>交易付费类型，0后付费/1预付费</p>
      */
     public Long getTradeType() {
         return this.TradeType;
     }
 
     /**
-     * Set 交易付费类型，0后付费/1预付费
-     * @param TradeType 交易付费类型，0后付费/1预付费
+     * Set <p>交易付费类型，0后付费/1预付费</p>
+     * @param TradeType <p>交易付费类型，0后付费/1预付费</p>
      */
     public void setTradeType(Long TradeType) {
         this.TradeType = TradeType;
     }
 
     /**
-     * Get 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费 
-     * @return AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+     * Get <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p> 
+     * @return AutoRenewFlag <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
-     * @param AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+     * Set <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
+     * @param AutoRenewFlag <p>自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 预付费到期时间 
-     * @return CurDeadline 预付费到期时间
+     * Get <p>预付费到期时间</p> 
+     * @return CurDeadline <p>预付费到期时间</p>
      */
     public String getCurDeadline() {
         return this.CurDeadline;
     }
 
     /**
-     * Set 预付费到期时间
-     * @param CurDeadline 预付费到期时间
+     * Set <p>预付费到期时间</p>
+     * @param CurDeadline <p>预付费到期时间</p>
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
     }
 
     /**
-     * Get 隔离开始时间 
-     * @return IsolateTime 隔离开始时间
+     * Get <p>隔离开始时间</p> 
+     * @return IsolateTime <p>隔离开始时间</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 隔离开始时间
-     * @param IsolateTime 隔离开始时间
+     * Set <p>隔离开始时间</p>
+     * @param IsolateTime <p>隔离开始时间</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get 实例地域相关的描述信息 
-     * @return RegionInfos 实例地域相关的描述信息
+     * Get <p>实例地域相关的描述信息</p> 
+     * @return RegionInfos <p>实例地域相关的描述信息</p>
      */
     public DescribeInstanceRegionInfo [] getRegionInfos() {
         return this.RegionInfos;
     }
 
     /**
-     * Set 实例地域相关的描述信息
-     * @param RegionInfos 实例地域相关的描述信息
+     * Set <p>实例地域相关的描述信息</p>
+     * @param RegionInfos <p>实例地域相关的描述信息</p>
      */
     public void setRegionInfos(DescribeInstanceRegionInfo [] RegionInfos) {
         this.RegionInfos = RegionInfos;
     }
 
     /**
-     * Get 所在EKS环境，分为common和yunti 
-     * @return EKSType 所在EKS环境，分为common和yunti
+     * Get <p>所在EKS环境，分为common和yunti</p> 
+     * @return EKSType <p>所在EKS环境，分为common和yunti</p>
      */
     public String getEKSType() {
         return this.EKSType;
     }
 
     /**
-     * Set 所在EKS环境，分为common和yunti
-     * @param EKSType 所在EKS环境，分为common和yunti
+     * Set <p>所在EKS环境，分为common和yunti</p>
+     * @param EKSType <p>所在EKS环境，分为common和yunti</p>
      */
     public void setEKSType(String EKSType) {
         this.EKSType = EKSType;
     }
 
     /**
-     * Get 引擎的产品版本 
-     * @return FeatureVersion 引擎的产品版本
+     * Get <p>引擎的产品版本</p> 
+     * @return FeatureVersion <p>引擎的产品版本</p>
      */
     public String getFeatureVersion() {
         return this.FeatureVersion;
     }
 
     /**
-     * Set 引擎的产品版本
-     * @param FeatureVersion 引擎的产品版本
+     * Set <p>引擎的产品版本</p>
+     * @param FeatureVersion <p>引擎的产品版本</p>
      */
     public void setFeatureVersion(String FeatureVersion) {
         this.FeatureVersion = FeatureVersion;
     }
 
     /**
-     * Get 引擎实例是否开启客户端内网访问地址 
-     * @return EnableClientIntranet 引擎实例是否开启客户端内网访问地址
+     * Get <p>引擎实例是否开启客户端内网访问地址</p> 
+     * @return EnableClientIntranet <p>引擎实例是否开启客户端内网访问地址</p>
      */
     public Boolean getEnableClientIntranet() {
         return this.EnableClientIntranet;
     }
 
     /**
-     * Set 引擎实例是否开启客户端内网访问地址
-     * @param EnableClientIntranet 引擎实例是否开启客户端内网访问地址
+     * Set <p>引擎实例是否开启客户端内网访问地址</p>
+     * @param EnableClientIntranet <p>引擎实例是否开启客户端内网访问地址</p>
      */
     public void setEnableClientIntranet(Boolean EnableClientIntranet) {
         this.EnableClientIntranet = EnableClientIntranet;
     }
 
     /**
-     * Get 存储额外配置选项 
-     * @return StorageOption 存储额外配置选项
+     * Get <p>存储额外配置选项</p> 
+     * @return StorageOption <p>存储额外配置选项</p>
      */
     public StorageOption [] getStorageOption() {
         return this.StorageOption;
     }
 
     /**
-     * Set 存储额外配置选项
-     * @param StorageOption 存储额外配置选项
+     * Set <p>存储额外配置选项</p>
+     * @param StorageOption <p>存储额外配置选项</p>
      */
     public void setStorageOption(StorageOption [] StorageOption) {
         this.StorageOption = StorageOption;
     }
 
     /**
-     * Get Zookeeper的额外环境数据信息 
-     * @return ZookeeperRegionInfo Zookeeper的额外环境数据信息
+     * Get <p>Zookeeper的额外环境数据信息</p> 
+     * @return ZookeeperRegionInfo <p>Zookeeper的额外环境数据信息</p>
      */
     public ZookeeperRegionInfo getZookeeperRegionInfo() {
         return this.ZookeeperRegionInfo;
     }
 
     /**
-     * Set Zookeeper的额外环境数据信息
-     * @param ZookeeperRegionInfo Zookeeper的额外环境数据信息
+     * Set <p>Zookeeper的额外环境数据信息</p>
+     * @param ZookeeperRegionInfo <p>Zookeeper的额外环境数据信息</p>
      */
     public void setZookeeperRegionInfo(ZookeeperRegionInfo ZookeeperRegionInfo) {
         this.ZookeeperRegionInfo = ZookeeperRegionInfo;
     }
 
     /**
-     * Get 部署架构 
-     * @return DeployMode 部署架构
+     * Get <p>部署架构</p> 
+     * @return DeployMode <p>部署架构</p>
      */
     public String getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 部署架构
-     * @param DeployMode 部署架构
+     * Set <p>部署架构</p>
+     * @param DeployMode <p>部署架构</p>
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 全局属性 
-     * @return GlobalType 全局属性
+     * Get <p>全局属性</p> 
+     * @return GlobalType <p>全局属性</p>
      */
     public String getGlobalType() {
         return this.GlobalType;
     }
 
     /**
-     * Set 全局属性
-     * @param GlobalType 全局属性
+     * Set <p>全局属性</p>
+     * @param GlobalType <p>全局属性</p>
      */
     public void setGlobalType(String GlobalType) {
         this.GlobalType = GlobalType;
     }
 
     /**
-     * Get 所属组类型 
-     * @return GroupType 所属组类型
+     * Get <p>所属组类型</p> 
+     * @return GroupType <p>所属组类型</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 所属组类型
-     * @param GroupType 所属组类型
+     * Set <p>所属组类型</p>
+     * @param GroupType <p>所属组类型</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get 组id 
-     * @return GroupId 组id
+     * Get <p>组id</p> 
+     * @return GroupId <p>组id</p>
      */
     public String [] getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 组id
-     * @param GroupId 组id
+     * Set <p>组id</p>
+     * @param GroupId <p>组id</p>
      */
     public void setGroupId(String [] GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 是否为主地域 
-     * @return IsMainRegion 是否为主地域
+     * Get <p>是否为主地域</p> 
+     * @return IsMainRegion <p>是否为主地域</p>
      */
     public Boolean getIsMainRegion() {
         return this.IsMainRegion;
     }
 
     /**
-     * Set 是否为主地域
-     * @param IsMainRegion 是否为主地域
+     * Set <p>是否为主地域</p>
+     * @param IsMainRegion <p>是否为主地域</p>
      */
     public void setIsMainRegion(Boolean IsMainRegion) {
         this.IsMainRegion = IsMainRegion;
+    }
+
+    /**
+     * Get <p>是否禁止变更</p> 
+     * @return MutationEnabled <p>是否禁止变更</p>
+     */
+    public Boolean getMutationEnabled() {
+        return this.MutationEnabled;
+    }
+
+    /**
+     * Set <p>是否禁止变更</p>
+     * @param MutationEnabled <p>是否禁止变更</p>
+     */
+    public void setMutationEnabled(Boolean MutationEnabled) {
+        this.MutationEnabled = MutationEnabled;
+    }
+
+    /**
+     * Get <p>禁止限流</p> 
+     * @return MaxCapacityLimitEnabled <p>禁止限流</p>
+     */
+    public Boolean getMaxCapacityLimitEnabled() {
+        return this.MaxCapacityLimitEnabled;
+    }
+
+    /**
+     * Set <p>禁止限流</p>
+     * @param MaxCapacityLimitEnabled <p>禁止限流</p>
+     */
+    public void setMaxCapacityLimitEnabled(Boolean MaxCapacityLimitEnabled) {
+        this.MaxCapacityLimitEnabled = MaxCapacityLimitEnabled;
     }
 
     public SREInstance() {
@@ -1095,6 +1141,12 @@ public class SREInstance extends AbstractModel {
         if (source.IsMainRegion != null) {
             this.IsMainRegion = new Boolean(source.IsMainRegion);
         }
+        if (source.MutationEnabled != null) {
+            this.MutationEnabled = new Boolean(source.MutationEnabled);
+        }
+        if (source.MaxCapacityLimitEnabled != null) {
+            this.MaxCapacityLimitEnabled = new Boolean(source.MaxCapacityLimitEnabled);
+        }
     }
 
 
@@ -1142,6 +1194,8 @@ public class SREInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamArraySimple(map, prefix + "GroupId.", this.GroupId);
         this.setParamSimple(map, prefix + "IsMainRegion", this.IsMainRegion);
+        this.setParamSimple(map, prefix + "MutationEnabled", this.MutationEnabled);
+        this.setParamSimple(map, prefix + "MaxCapacityLimitEnabled", this.MaxCapacityLimitEnabled);
 
     }
 }

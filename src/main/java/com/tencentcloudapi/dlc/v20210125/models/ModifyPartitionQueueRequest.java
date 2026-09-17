@@ -38,11 +38,18 @@ public class ModifyPartitionQueueRequest extends AbstractModel {
     private String PartitionCode;
 
     /**
-    * 队列名称
+    * 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
+
+    /**
+    * 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
 
     /**
     * 队列描述
@@ -98,19 +105,35 @@ public class ModifyPartitionQueueRequest extends AbstractModel {
     }
 
     /**
-     * Get 队列名称 
-     * @return QueueName 队列名称
+     * Get 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新 
+     * @return QueueName 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 队列名称
-     * @param QueueName 队列名称
+     * Set 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
+     * @param QueueName 队列编码（不可变 code）：与 Id 定位记录的一致性校验键，传入值必须与队列当前 QueueName 一致，不参与更新
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
+    }
+
+    /**
+     * Get 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复 
+     * @return Alias 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+     * @param Alias 队列别名（显示名）：透传时更新，未透传时保持不变。可与其它队列重复
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
     }
 
     /**
@@ -178,6 +201,9 @@ public class ModifyPartitionQueueRequest extends AbstractModel {
         if (source.QueueName != null) {
             this.QueueName = new String(source.QueueName);
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -200,6 +226,7 @@ public class ModifyPartitionQueueRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "ResourceUsages.", this.ResourceUsages);
         this.setParamSimple(map, prefix + "QueueType", this.QueueType);

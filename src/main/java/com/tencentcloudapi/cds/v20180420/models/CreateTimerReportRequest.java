@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class CreateTimerReportRequest extends AbstractModel {
 
     /**
-    * 任务名称 不变更为""
+    * <p>任务名称 不变更为&quot;&quot;</p>
     */
     @SerializedName("TplName")
     @Expose
     private String TplName;
 
     /**
-    * 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
+    * <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
     */
     @SerializedName("CntTime")
     @Expose
     private Long CntTime;
 
     /**
-    * 重复周期
+    * <p>重复周期</p>
     */
     @SerializedName("CntCycle")
     @Expose
     private Long CntCycle;
 
     /**
-    * 发送目标
+    * <p>发送目标</p>
     */
     @SerializedName("Receivers")
     @Expose
     private String Receivers;
 
     /**
-    * 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+    * <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
     */
     @SerializedName("CntDay")
     @Expose
     private Long CntDay;
 
     /**
-    * 执行时间 格式15:04 到分钟
+    * <p>执行时间 格式15:04 到分钟</p>
     */
     @SerializedName("CntDate")
     @Expose
     private String CntDate;
 
     /**
-    * 报告说明
+    * <p>报告说明</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 模版Id
+    * <p>模板Id</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 报表类型
+    * <p>报表类型</p>
     */
     @SerializedName("ReportType")
     @Expose
     private Long ReportType;
 
     /**
-    * 关联的资产数组
+    * <p>关联的资产数组</p>
     */
     @SerializedName("AssetsId")
     @Expose
     private Long [] AssetsId;
 
     /**
-    * 报表通知 1关闭 2开启 不变更为0
+    * <p>报表通知 1关闭 2开启 不变更为0</p>
     */
     @SerializedName("Notification")
     @Expose
     private Long Notification;
 
     /**
-    * 任务起停 1:关闭 2:开启 单次报表默认为2
+    * <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
     */
     @SerializedName("MissionStart")
     @Expose
     private Long MissionStart;
 
     /**
-     * Get 任务名称 不变更为"" 
-     * @return TplName 任务名称 不变更为""
+     * Get <p>任务名称 不变更为&quot;&quot;</p> 
+     * @return TplName <p>任务名称 不变更为&quot;&quot;</p>
      */
     public String getTplName() {
         return this.TplName;
     }
 
     /**
-     * Set 任务名称 不变更为""
-     * @param TplName 任务名称 不变更为""
+     * Set <p>任务名称 不变更为&quot;&quot;</p>
+     * @param TplName <p>任务名称 不变更为&quot;&quot;</p>
      */
     public void setTplName(String TplName) {
         this.TplName = TplName;
     }
 
     /**
-     * Get 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31 
-     * @return CntTime 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
+     * Get <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p> 
+     * @return CntTime <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
      */
     public Long getCntTime() {
         return this.CntTime;
     }
 
     /**
-     * Set 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
-     * @param CntTime 执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31
+     * Set <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
+     * @param CntTime <p>执行日期 重复周期为天：无意义周：星期几1-7月每月几号 1-31</p>
      */
     public void setCntTime(Long CntTime) {
         this.CntTime = CntTime;
     }
 
     /**
-     * Get 重复周期 
-     * @return CntCycle 重复周期
+     * Get <p>重复周期</p> 
+     * @return CntCycle <p>重复周期</p>
      */
     public Long getCntCycle() {
         return this.CntCycle;
     }
 
     /**
-     * Set 重复周期
-     * @param CntCycle 重复周期
+     * Set <p>重复周期</p>
+     * @param CntCycle <p>重复周期</p>
      */
     public void setCntCycle(Long CntCycle) {
         this.CntCycle = CntCycle;
     }
 
     /**
-     * Get 发送目标 
-     * @return Receivers 发送目标
+     * Get <p>发送目标</p> 
+     * @return Receivers <p>发送目标</p>
      */
     public String getReceivers() {
         return this.Receivers;
     }
 
     /**
-     * Set 发送目标
-     * @param Receivers 发送目标
+     * Set <p>发送目标</p>
+     * @param Receivers <p>发送目标</p>
      */
     public void setReceivers(String Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0 
-     * @return CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * Get <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p> 
+     * @return CntDay <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     public Long getCntDay() {
         return this.CntDay;
     }
 
     /**
-     * Set 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
-     * @param CntDay 时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0
+     * Set <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
+     * @param CntDay <p>时间范围 1:24小时 7:近一周 30:近30天 90:近90天 180:近180天 不变更为0</p>
      */
     public void setCntDay(Long CntDay) {
         this.CntDay = CntDay;
     }
 
     /**
-     * Get 执行时间 格式15:04 到分钟 
-     * @return CntDate 执行时间 格式15:04 到分钟
+     * Get <p>执行时间 格式15:04 到分钟</p> 
+     * @return CntDate <p>执行时间 格式15:04 到分钟</p>
      */
     public String getCntDate() {
         return this.CntDate;
     }
 
     /**
-     * Set 执行时间 格式15:04 到分钟
-     * @param CntDate 执行时间 格式15:04 到分钟
+     * Set <p>执行时间 格式15:04 到分钟</p>
+     * @param CntDate <p>执行时间 格式15:04 到分钟</p>
      */
     public void setCntDate(String CntDate) {
         this.CntDate = CntDate;
     }
 
     /**
-     * Get 报告说明 
-     * @return Remark 报告说明
+     * Get <p>报告说明</p> 
+     * @return Remark <p>报告说明</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 报告说明
-     * @param Remark 报告说明
+     * Set <p>报告说明</p>
+     * @param Remark <p>报告说明</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 模版Id 
-     * @return TemplateId 模版Id
+     * Get <p>模板Id</p> 
+     * @return TemplateId <p>模板Id</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版Id
-     * @param TemplateId 模版Id
+     * Set <p>模板Id</p>
+     * @param TemplateId <p>模板Id</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 报表类型 
-     * @return ReportType 报表类型
+     * Get <p>报表类型</p> 
+     * @return ReportType <p>报表类型</p>
      */
     public Long getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set 报表类型
-     * @param ReportType 报表类型
+     * Set <p>报表类型</p>
+     * @param ReportType <p>报表类型</p>
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 关联的资产数组 
-     * @return AssetsId 关联的资产数组
+     * Get <p>关联的资产数组</p> 
+     * @return AssetsId <p>关联的资产数组</p>
      */
     public Long [] getAssetsId() {
         return this.AssetsId;
     }
 
     /**
-     * Set 关联的资产数组
-     * @param AssetsId 关联的资产数组
+     * Set <p>关联的资产数组</p>
+     * @param AssetsId <p>关联的资产数组</p>
      */
     public void setAssetsId(Long [] AssetsId) {
         this.AssetsId = AssetsId;
     }
 
     /**
-     * Get 报表通知 1关闭 2开启 不变更为0 
-     * @return Notification 报表通知 1关闭 2开启 不变更为0
+     * Get <p>报表通知 1关闭 2开启 不变更为0</p> 
+     * @return Notification <p>报表通知 1关闭 2开启 不变更为0</p>
      */
     public Long getNotification() {
         return this.Notification;
     }
 
     /**
-     * Set 报表通知 1关闭 2开启 不变更为0
-     * @param Notification 报表通知 1关闭 2开启 不变更为0
+     * Set <p>报表通知 1关闭 2开启 不变更为0</p>
+     * @param Notification <p>报表通知 1关闭 2开启 不变更为0</p>
      */
     public void setNotification(Long Notification) {
         this.Notification = Notification;
     }
 
     /**
-     * Get 任务起停 1:关闭 2:开启 单次报表默认为2 
-     * @return MissionStart 任务起停 1:关闭 2:开启 单次报表默认为2
+     * Get <p>任务起停 1:关闭 2:开启 单次报表默认为2</p> 
+     * @return MissionStart <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
      */
     public Long getMissionStart() {
         return this.MissionStart;
     }
 
     /**
-     * Set 任务起停 1:关闭 2:开启 单次报表默认为2
-     * @param MissionStart 任务起停 1:关闭 2:开启 单次报表默认为2
+     * Set <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
+     * @param MissionStart <p>任务起停 1:关闭 2:开启 单次报表默认为2</p>
      */
     public void setMissionStart(Long MissionStart) {
         this.MissionStart = MissionStart;

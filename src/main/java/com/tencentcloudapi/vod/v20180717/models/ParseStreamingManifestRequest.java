@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ParseStreamingManifestRequest extends AbstractModel {
 
     /**
-    * 待解析的索引文件内容。
+    * <p>待解析的索引文件内容。</p>
     */
     @SerializedName("MediaManifestContent")
     @Expose
     private String MediaManifestContent;
 
     /**
-    * 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
+    * <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
     */
     @SerializedName("ManifestType")
     @Expose
     private String ManifestType;
 
     /**
-     * Get 待解析的索引文件内容。 
-     * @return MediaManifestContent 待解析的索引文件内容。
+     * Get <p>待解析的索引文件内容。</p> 
+     * @return MediaManifestContent <p>待解析的索引文件内容。</p>
      */
     public String getMediaManifestContent() {
         return this.MediaManifestContent;
     }
 
     /**
-     * Set 待解析的索引文件内容。
-     * @param MediaManifestContent 待解析的索引文件内容。
+     * Set <p>待解析的索引文件内容。</p>
+     * @param MediaManifestContent <p>待解析的索引文件内容。</p>
      */
     public void setMediaManifestContent(String MediaManifestContent) {
         this.MediaManifestContent = MediaManifestContent;
     }
 
     /**
-     * Get 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li> 
-     * @return ManifestType 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
+     * Get <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li> 
+     * @return ManifestType <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
      */
     public String getManifestType() {
         return this.ManifestType;
     }
 
     /**
-     * Set 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
-     * @param ManifestType 视频索引文件格式。默认 m3u8 格式。
-<li>m3u8</li>
-<li>mpd</li>
+     * Set <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
+     * @param ManifestType <p>视频索引文件格式。默认 m3u8 格式。</p><li>m3u8</li><li>mpd</li>
      */
     public void setManifestType(String ManifestType) {
         this.ManifestType = ManifestType;

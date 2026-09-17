@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStorageCredentialsResponse extends AbstractModel {
 
     /**
-    * 临时访问凭证。
+    * <p>临时访问凭证。</p>
     */
     @SerializedName("Credentials")
     @Expose
@@ -38,16 +38,16 @@ public class CreateStorageCredentialsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 临时访问凭证。 
-     * @return Credentials 临时访问凭证。
+     * Get <p>临时访问凭证。</p> 
+     * @return Credentials <p>临时访问凭证。</p>
      */
     public Credentials getCredentials() {
         return this.Credentials;
     }
 
     /**
-     * Set 临时访问凭证。
-     * @param Credentials 临时访问凭证。
+     * Set <p>临时访问凭证。</p>
+     * @param Credentials <p>临时访问凭证。</p>
      */
     public void setCredentials(Credentials Credentials) {
         this.Credentials = Credentials;

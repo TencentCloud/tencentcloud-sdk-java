@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiRecognitionTaskObjectSeqmentItem extends AbstractModel {
 
     /**
-    * 识别片段起始的偏移时间，单位：秒。
+    * <p>识别片段起始的偏移时间，单位：秒。</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 识别片段终止的偏移时间，单位：秒。
+    * <p>识别片段终止的偏移时间，单位：秒。</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 识别片段置信度。取值：0~100。
+    * <p>识别片段置信度。取值：0~100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+    * <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get 识别片段起始的偏移时间，单位：秒。 
-     * @return StartTimeOffset 识别片段起始的偏移时间，单位：秒。
+     * Get <p>识别片段起始的偏移时间，单位：秒。</p> 
+     * @return StartTimeOffset <p>识别片段起始的偏移时间，单位：秒。</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 识别片段起始的偏移时间，单位：秒。
-     * @param StartTimeOffset 识别片段起始的偏移时间，单位：秒。
+     * Set <p>识别片段起始的偏移时间，单位：秒。</p>
+     * @param StartTimeOffset <p>识别片段起始的偏移时间，单位：秒。</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 识别片段终止的偏移时间，单位：秒。 
-     * @return EndTimeOffset 识别片段终止的偏移时间，单位：秒。
+     * Get <p>识别片段终止的偏移时间，单位：秒。</p> 
+     * @return EndTimeOffset <p>识别片段终止的偏移时间，单位：秒。</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 识别片段终止的偏移时间，单位：秒。
-     * @param EndTimeOffset 识别片段终止的偏移时间，单位：秒。
+     * Set <p>识别片段终止的偏移时间，单位：秒。</p>
+     * @param EndTimeOffset <p>识别片段终止的偏移时间，单位：秒。</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get 识别片段置信度。取值：0~100。 
-     * @return Confidence 识别片段置信度。取值：0~100。
+     * Get <p>识别片段置信度。取值：0~100。</p> 
+     * @return Confidence <p>识别片段置信度。取值：0~100。</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 识别片段置信度。取值：0~100。
-     * @param Confidence 识别片段置信度。取值：0~100。
+     * Set <p>识别片段置信度。取值：0~100。</p>
+     * @param Confidence <p>识别片段置信度。取值：0~100。</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。 
-     * @return AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Get <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p> 
+     * @return AreaCoordSet <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
-     * @param AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Set <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
+     * @param AreaCoordSet <p>识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。</p>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

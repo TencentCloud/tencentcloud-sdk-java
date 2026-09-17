@@ -115,6 +115,13 @@ public class GovernanceServiceInput extends AbstractModel {
     private Long Type;
 
     /**
+    * <p>拓展服务元数据</p>
+    */
+    @SerializedName("ExtendedMetadata")
+    @Expose
+    private ExtendedMetadata [] ExtendedMetadata;
+
+    /**
      * Get <p>服务名。</p> 
      * @return Name <p>服务名。</p>
      */
@@ -322,6 +329,22 @@ public class GovernanceServiceInput extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get <p>拓展服务元数据</p> 
+     * @return ExtendedMetadata <p>拓展服务元数据</p>
+     */
+    public ExtendedMetadata [] getExtendedMetadata() {
+        return this.ExtendedMetadata;
+    }
+
+    /**
+     * Set <p>拓展服务元数据</p>
+     * @param ExtendedMetadata <p>拓展服务元数据</p>
+     */
+    public void setExtendedMetadata(ExtendedMetadata [] ExtendedMetadata) {
+        this.ExtendedMetadata = ExtendedMetadata;
+    }
+
     public GovernanceServiceInput() {
     }
 
@@ -387,6 +410,12 @@ public class GovernanceServiceInput extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.ExtendedMetadata != null) {
+            this.ExtendedMetadata = new ExtendedMetadata[source.ExtendedMetadata.length];
+            for (int i = 0; i < source.ExtendedMetadata.length; i++) {
+                this.ExtendedMetadata[i] = new ExtendedMetadata(source.ExtendedMetadata[i]);
+            }
+        }
     }
 
 
@@ -407,6 +436,7 @@ public class GovernanceServiceInput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "ExtendedMetadata.", this.ExtendedMetadata);
 
     }
 }

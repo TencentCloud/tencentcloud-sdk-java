@@ -24,29 +24,28 @@ import java.util.HashMap;
 public class FlowActivityDetail extends AbstractModel {
 
     /**
-    * <p>活动编码</p>
+    * <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
     */
     @SerializedName("ActivityCode")
     @Expose
     private String ActivityCode;
 
     /**
-    * <p>活动状态</p>
+    * <p>活动状态：1-运行中，2-已完成，-2-失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>活动创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>耗时（秒）</p>
+    * <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -54,61 +53,57 @@ public class FlowActivityDetail extends AbstractModel {
     private Long Duration;
 
     /**
-     * Get <p>活动编码</p> 
-     * @return ActivityCode <p>活动编码</p>
+     * Get <p>活动编码；国际站返回英文编码，国内站返回中文描述</p> 
+     * @return ActivityCode <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
      */
     public String getActivityCode() {
         return this.ActivityCode;
     }
 
     /**
-     * Set <p>活动编码</p>
-     * @param ActivityCode <p>活动编码</p>
+     * Set <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
+     * @param ActivityCode <p>活动编码；国际站返回英文编码，国内站返回中文描述</p>
      */
     public void setActivityCode(String ActivityCode) {
         this.ActivityCode = ActivityCode;
     }
 
     /**
-     * Get <p>活动状态</p> 
-     * @return Status <p>活动状态</p>
+     * Get <p>活动状态：1-运行中，2-已完成，-2-失败</p> 
+     * @return Status <p>活动状态：1-运行中，2-已完成，-2-失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>活动状态</p>
-     * @param Status <p>活动状态</p>
+     * Set <p>活动状态：1-运行中，2-已完成，-2-失败</p>
+     * @param Status <p>活动状态：1-运行中，2-已完成，-2-失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>活动创建时间</p> 
+     * @return CreateTime <p>活动创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime <p>创建时间</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>活动创建时间</p>
+     * @param CreateTime <p>活动创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>耗时（秒）</p>
+     * Get <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration <p>耗时（秒）</p>
+     * @return Duration <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
@@ -116,9 +111,9 @@ public class FlowActivityDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>耗时（秒）</p>
+     * Set <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration <p>耗时（秒）</p>
+     * @param Duration <p>耗时（秒），活动未完成时省略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {

@@ -24,233 +24,279 @@ import java.util.HashMap;
 public class ServiceGovernanceInfo extends AbstractModel {
 
     /**
-    * 引擎所在的地域
+    * <p>引擎所在的地域</p>
     */
     @SerializedName("EngineRegion")
     @Expose
     private String EngineRegion;
 
     /**
-    * 服务治理引擎绑定的kubernetes集群信息
+    * <p>服务治理引擎绑定的kubernetes集群信息</p>
     */
     @SerializedName("BoundK8SInfos")
     @Expose
     private BoundK8SInfo [] BoundK8SInfos;
 
     /**
-    * 服务治理引擎绑定的网络信息
+    * <p>服务治理引擎绑定的网络信息</p>
     */
     @SerializedName("VpcInfos")
     @Expose
     private VpcInfo [] VpcInfos;
 
     /**
-    * 当前实例鉴权是否开启
+    * <p>当前实例鉴权是否开启</p>
     */
     @SerializedName("AuthOpen")
     @Expose
     private Boolean AuthOpen;
 
     /**
-    * 该实例支持的功能，鉴权就是 Auth
+    * <p>该实例支持的功能，鉴权就是 Auth</p>
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-    * 主账户名默认为 polaris，该值为主账户的默认密码
+    * <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
     */
     @SerializedName("MainPassword")
     @Expose
     private String MainPassword;
 
     /**
-    * 服务治理pushgateway引擎绑定的网络信息
+    * <p>服务治理pushgateway引擎绑定的网络信息</p>
     */
     @SerializedName("PgwVpcInfos")
     @Expose
     private VpcInfo [] PgwVpcInfos;
 
     /**
-    * 服务治理限流server引擎绑定的网络信息
+    * <p>服务治理限流server引擎绑定的网络信息</p>
     */
     @SerializedName("LimiterVpcInfos")
     @Expose
     private VpcInfo [] LimiterVpcInfos;
 
     /**
-    * 引擎关联CLS日志主题信息
+    * <p>引擎关联CLS日志主题信息</p>
     */
     @SerializedName("CLSTopics")
     @Expose
     private PolarisCLSTopicInfo [] CLSTopics;
 
     /**
-    * 子用户密码
+    * <p>子用户密码</p>
     */
     @SerializedName("SubPassword")
     @Expose
     private String SubPassword;
 
     /**
-     * Get 引擎所在的地域 
-     * @return EngineRegion 引擎所在的地域
+    * <p>是否允许变更</p>
+    */
+    @SerializedName("DisableMutation")
+    @Expose
+    private Boolean DisableMutation;
+
+    /**
+    * <p>是否开启限流</p>
+    */
+    @SerializedName("MaxCapacityLimitEnabled")
+    @Expose
+    private Boolean MaxCapacityLimitEnabled;
+
+    /**
+     * Get <p>引擎所在的地域</p> 
+     * @return EngineRegion <p>引擎所在的地域</p>
      */
     public String getEngineRegion() {
         return this.EngineRegion;
     }
 
     /**
-     * Set 引擎所在的地域
-     * @param EngineRegion 引擎所在的地域
+     * Set <p>引擎所在的地域</p>
+     * @param EngineRegion <p>引擎所在的地域</p>
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get 服务治理引擎绑定的kubernetes集群信息 
-     * @return BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
+     * Get <p>服务治理引擎绑定的kubernetes集群信息</p> 
+     * @return BoundK8SInfos <p>服务治理引擎绑定的kubernetes集群信息</p>
      */
     public BoundK8SInfo [] getBoundK8SInfos() {
         return this.BoundK8SInfos;
     }
 
     /**
-     * Set 服务治理引擎绑定的kubernetes集群信息
-     * @param BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
+     * Set <p>服务治理引擎绑定的kubernetes集群信息</p>
+     * @param BoundK8SInfos <p>服务治理引擎绑定的kubernetes集群信息</p>
      */
     public void setBoundK8SInfos(BoundK8SInfo [] BoundK8SInfos) {
         this.BoundK8SInfos = BoundK8SInfos;
     }
 
     /**
-     * Get 服务治理引擎绑定的网络信息 
-     * @return VpcInfos 服务治理引擎绑定的网络信息
+     * Get <p>服务治理引擎绑定的网络信息</p> 
+     * @return VpcInfos <p>服务治理引擎绑定的网络信息</p>
      */
     public VpcInfo [] getVpcInfos() {
         return this.VpcInfos;
     }
 
     /**
-     * Set 服务治理引擎绑定的网络信息
-     * @param VpcInfos 服务治理引擎绑定的网络信息
+     * Set <p>服务治理引擎绑定的网络信息</p>
+     * @param VpcInfos <p>服务治理引擎绑定的网络信息</p>
      */
     public void setVpcInfos(VpcInfo [] VpcInfos) {
         this.VpcInfos = VpcInfos;
     }
 
     /**
-     * Get 当前实例鉴权是否开启 
-     * @return AuthOpen 当前实例鉴权是否开启
+     * Get <p>当前实例鉴权是否开启</p> 
+     * @return AuthOpen <p>当前实例鉴权是否开启</p>
      */
     public Boolean getAuthOpen() {
         return this.AuthOpen;
     }
 
     /**
-     * Set 当前实例鉴权是否开启
-     * @param AuthOpen 当前实例鉴权是否开启
+     * Set <p>当前实例鉴权是否开启</p>
+     * @param AuthOpen <p>当前实例鉴权是否开启</p>
      */
     public void setAuthOpen(Boolean AuthOpen) {
         this.AuthOpen = AuthOpen;
     }
 
     /**
-     * Get 该实例支持的功能，鉴权就是 Auth 
-     * @return Features 该实例支持的功能，鉴权就是 Auth
+     * Get <p>该实例支持的功能，鉴权就是 Auth</p> 
+     * @return Features <p>该实例支持的功能，鉴权就是 Auth</p>
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 该实例支持的功能，鉴权就是 Auth
-     * @param Features 该实例支持的功能，鉴权就是 Auth
+     * Set <p>该实例支持的功能，鉴权就是 Auth</p>
+     * @param Features <p>该实例支持的功能，鉴权就是 Auth</p>
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
     }
 
     /**
-     * Get 主账户名默认为 polaris，该值为主账户的默认密码 
-     * @return MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
+     * Get <p>主账户名默认为 polaris，该值为主账户的默认密码</p> 
+     * @return MainPassword <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
      */
     public String getMainPassword() {
         return this.MainPassword;
     }
 
     /**
-     * Set 主账户名默认为 polaris，该值为主账户的默认密码
-     * @param MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
+     * Set <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
+     * @param MainPassword <p>主账户名默认为 polaris，该值为主账户的默认密码</p>
      */
     public void setMainPassword(String MainPassword) {
         this.MainPassword = MainPassword;
     }
 
     /**
-     * Get 服务治理pushgateway引擎绑定的网络信息 
-     * @return PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
+     * Get <p>服务治理pushgateway引擎绑定的网络信息</p> 
+     * @return PgwVpcInfos <p>服务治理pushgateway引擎绑定的网络信息</p>
      */
     public VpcInfo [] getPgwVpcInfos() {
         return this.PgwVpcInfos;
     }
 
     /**
-     * Set 服务治理pushgateway引擎绑定的网络信息
-     * @param PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
+     * Set <p>服务治理pushgateway引擎绑定的网络信息</p>
+     * @param PgwVpcInfos <p>服务治理pushgateway引擎绑定的网络信息</p>
      */
     public void setPgwVpcInfos(VpcInfo [] PgwVpcInfos) {
         this.PgwVpcInfos = PgwVpcInfos;
     }
 
     /**
-     * Get 服务治理限流server引擎绑定的网络信息 
-     * @return LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
+     * Get <p>服务治理限流server引擎绑定的网络信息</p> 
+     * @return LimiterVpcInfos <p>服务治理限流server引擎绑定的网络信息</p>
      */
     public VpcInfo [] getLimiterVpcInfos() {
         return this.LimiterVpcInfos;
     }
 
     /**
-     * Set 服务治理限流server引擎绑定的网络信息
-     * @param LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
+     * Set <p>服务治理限流server引擎绑定的网络信息</p>
+     * @param LimiterVpcInfos <p>服务治理限流server引擎绑定的网络信息</p>
      */
     public void setLimiterVpcInfos(VpcInfo [] LimiterVpcInfos) {
         this.LimiterVpcInfos = LimiterVpcInfos;
     }
 
     /**
-     * Get 引擎关联CLS日志主题信息 
-     * @return CLSTopics 引擎关联CLS日志主题信息
+     * Get <p>引擎关联CLS日志主题信息</p> 
+     * @return CLSTopics <p>引擎关联CLS日志主题信息</p>
      */
     public PolarisCLSTopicInfo [] getCLSTopics() {
         return this.CLSTopics;
     }
 
     /**
-     * Set 引擎关联CLS日志主题信息
-     * @param CLSTopics 引擎关联CLS日志主题信息
+     * Set <p>引擎关联CLS日志主题信息</p>
+     * @param CLSTopics <p>引擎关联CLS日志主题信息</p>
      */
     public void setCLSTopics(PolarisCLSTopicInfo [] CLSTopics) {
         this.CLSTopics = CLSTopics;
     }
 
     /**
-     * Get 子用户密码 
-     * @return SubPassword 子用户密码
+     * Get <p>子用户密码</p> 
+     * @return SubPassword <p>子用户密码</p>
      */
     public String getSubPassword() {
         return this.SubPassword;
     }
 
     /**
-     * Set 子用户密码
-     * @param SubPassword 子用户密码
+     * Set <p>子用户密码</p>
+     * @param SubPassword <p>子用户密码</p>
      */
     public void setSubPassword(String SubPassword) {
         this.SubPassword = SubPassword;
+    }
+
+    /**
+     * Get <p>是否允许变更</p> 
+     * @return DisableMutation <p>是否允许变更</p>
+     */
+    public Boolean getDisableMutation() {
+        return this.DisableMutation;
+    }
+
+    /**
+     * Set <p>是否允许变更</p>
+     * @param DisableMutation <p>是否允许变更</p>
+     */
+    public void setDisableMutation(Boolean DisableMutation) {
+        this.DisableMutation = DisableMutation;
+    }
+
+    /**
+     * Get <p>是否开启限流</p> 
+     * @return MaxCapacityLimitEnabled <p>是否开启限流</p>
+     */
+    public Boolean getMaxCapacityLimitEnabled() {
+        return this.MaxCapacityLimitEnabled;
+    }
+
+    /**
+     * Set <p>是否开启限流</p>
+     * @param MaxCapacityLimitEnabled <p>是否开启限流</p>
+     */
+    public void setMaxCapacityLimitEnabled(Boolean MaxCapacityLimitEnabled) {
+        this.MaxCapacityLimitEnabled = MaxCapacityLimitEnabled;
     }
 
     public ServiceGovernanceInfo() {
@@ -309,6 +355,12 @@ public class ServiceGovernanceInfo extends AbstractModel {
         if (source.SubPassword != null) {
             this.SubPassword = new String(source.SubPassword);
         }
+        if (source.DisableMutation != null) {
+            this.DisableMutation = new Boolean(source.DisableMutation);
+        }
+        if (source.MaxCapacityLimitEnabled != null) {
+            this.MaxCapacityLimitEnabled = new Boolean(source.MaxCapacityLimitEnabled);
+        }
     }
 
 
@@ -326,6 +378,8 @@ public class ServiceGovernanceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
         this.setParamArrayObj(map, prefix + "CLSTopics.", this.CLSTopics);
         this.setParamSimple(map, prefix + "SubPassword", this.SubPassword);
+        this.setParamSimple(map, prefix + "DisableMutation", this.DisableMutation);
+        this.setParamSimple(map, prefix + "MaxCapacityLimitEnabled", this.MaxCapacityLimitEnabled);
 
     }
 }

@@ -24,194 +24,184 @@ import java.util.HashMap;
 public class CreateImageSpriteTask2017 extends AbstractModel {
 
     /**
-    * 截图雪碧图任务 ID。
+    * <p>截图雪碧图任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+    * <p>错误码</p><li>0：成功；</li><li>其他值：失败。</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误信息。
+    * <p>错误信息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 截取雪碧图文件 ID。
+    * <p>截取雪碧图文件 ID。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+    * <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图截图模板</a>。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 雪碧图小图总数量。
+    * <p>雪碧图小图总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 截取雪碧图输出的地址。
+    * <p>截取雪碧图输出的地址。</p>
     */
     @SerializedName("ImageSpriteUrlSet")
     @Expose
     private String [] ImageSpriteUrlSet;
 
     /**
-    * 雪碧图子图位置与时间关系 WebVtt 文件地址。
+    * <p>雪碧图子图位置与时间关系 WebVtt 文件地址。</p>
     */
     @SerializedName("WebVttUrl")
     @Expose
     private String WebVttUrl;
 
     /**
-     * Get 截图雪碧图任务 ID。 
-     * @return TaskId 截图雪碧图任务 ID。
+     * Get <p>截图雪碧图任务 ID。</p> 
+     * @return TaskId <p>截图雪碧图任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 截图雪碧图任务 ID。
-     * @param TaskId 截图雪碧图任务 ID。
+     * Set <p>截图雪碧图任务 ID。</p>
+     * @param TaskId <p>截图雪碧图任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li> 
-     * @return ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * Get <p>错误码</p><li>0：成功；</li><li>其他值：失败。</li> 
+     * @return ErrCode <p>错误码</p><li>0：成功；</li><li>其他值：失败。</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
-     * @param ErrCode 错误码
-<li>0：成功；</li>
-<li>其他值：失败。</li>
+     * Set <p>错误码</p><li>0：成功；</li><li>其他值：失败。</li>
+     * @param ErrCode <p>错误码</p><li>0：成功；</li><li>其他值：失败。</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。 
-     * @return Message 错误信息。
+     * Get <p>错误信息。</p> 
+     * @return Message <p>错误信息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息。
-     * @param Message 错误信息。
+     * Set <p>错误信息。</p>
+     * @param Message <p>错误信息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 截取雪碧图文件 ID。 
-     * @return FileId 截取雪碧图文件 ID。
+     * Get <p>截取雪碧图文件 ID。</p> 
+     * @return FileId <p>截取雪碧图文件 ID。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 截取雪碧图文件 ID。
-     * @param FileId 截取雪碧图文件 ID。
+     * Set <p>截取雪碧图文件 ID。</p>
+     * @param FileId <p>截取雪碧图文件 ID。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
-     * @return Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图截图模板</a>。</p> 
+     * @return Definition <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图截图模板</a>。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-     * @param Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图截图模板</a>。</p>
+     * @param Definition <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图截图模板</a>。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 雪碧图小图总数量。 
-     * @return TotalCount 雪碧图小图总数量。
+     * Get <p>雪碧图小图总数量。</p> 
+     * @return TotalCount <p>雪碧图小图总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 雪碧图小图总数量。
-     * @param TotalCount 雪碧图小图总数量。
+     * Set <p>雪碧图小图总数量。</p>
+     * @param TotalCount <p>雪碧图小图总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 截取雪碧图输出的地址。 
-     * @return ImageSpriteUrlSet 截取雪碧图输出的地址。
+     * Get <p>截取雪碧图输出的地址。</p> 
+     * @return ImageSpriteUrlSet <p>截取雪碧图输出的地址。</p>
      */
     public String [] getImageSpriteUrlSet() {
         return this.ImageSpriteUrlSet;
     }
 
     /**
-     * Set 截取雪碧图输出的地址。
-     * @param ImageSpriteUrlSet 截取雪碧图输出的地址。
+     * Set <p>截取雪碧图输出的地址。</p>
+     * @param ImageSpriteUrlSet <p>截取雪碧图输出的地址。</p>
      */
     public void setImageSpriteUrlSet(String [] ImageSpriteUrlSet) {
         this.ImageSpriteUrlSet = ImageSpriteUrlSet;
     }
 
     /**
-     * Get 雪碧图子图位置与时间关系 WebVtt 文件地址。 
-     * @return WebVttUrl 雪碧图子图位置与时间关系 WebVtt 文件地址。
+     * Get <p>雪碧图子图位置与时间关系 WebVtt 文件地址。</p> 
+     * @return WebVttUrl <p>雪碧图子图位置与时间关系 WebVtt 文件地址。</p>
      */
     public String getWebVttUrl() {
         return this.WebVttUrl;
     }
 
     /**
-     * Set 雪碧图子图位置与时间关系 WebVtt 文件地址。
-     * @param WebVttUrl 雪碧图子图位置与时间关系 WebVtt 文件地址。
+     * Set <p>雪碧图子图位置与时间关系 WebVtt 文件地址。</p>
+     * @param WebVttUrl <p>雪碧图子图位置与时间关系 WebVtt 文件地址。</p>
      */
     public void setWebVttUrl(String WebVttUrl) {
         this.WebVttUrl = WebVttUrl;

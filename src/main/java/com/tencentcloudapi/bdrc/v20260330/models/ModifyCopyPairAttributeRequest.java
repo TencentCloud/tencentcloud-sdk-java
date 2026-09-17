@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ModifyCopyPairAttributeRequest extends AbstractModel {
 
     /**
-    * 要修改属性的复制对id
+    * <p>要修改属性的复制对id</p>
     */
     @SerializedName("CopyPairId")
     @Expose
     private String CopyPairId;
 
     /**
-    * 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
+    * <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
     */
     @SerializedName("CopyPairType")
     @Expose
     private String CopyPairType;
 
     /**
-    * 修改复制对名称（长度最大支持 64 个字符）
+    * <p>修改复制对名称（长度最大支持 64 个字符）</p>
     */
     @SerializedName("CopyPairName")
     @Expose
     private String CopyPairName;
 
     /**
-     * Get 要修改属性的复制对id 
-     * @return CopyPairId 要修改属性的复制对id
+    * <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+     * Get <p>要修改属性的复制对id</p> 
+     * @return CopyPairId <p>要修改属性的复制对id</p>
      */
     public String getCopyPairId() {
         return this.CopyPairId;
     }
 
     /**
-     * Set 要修改属性的复制对id
-     * @param CopyPairId 要修改属性的复制对id
+     * Set <p>要修改属性的复制对id</p>
+     * @param CopyPairId <p>要修改属性的复制对id</p>
      */
     public void setCopyPairId(String CopyPairId) {
         this.CopyPairId = CopyPairId;
     }
 
     /**
-     * Get 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE 
-     * @return CopyPairType 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
+     * Get <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p> 
+     * @return CopyPairType <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
      */
     public String getCopyPairType() {
         return this.CopyPairType;
     }
 
     /**
-     * Set 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
-     * @param CopyPairType 要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE
+     * Set <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+     * @param CopyPairType <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
      */
     public void setCopyPairType(String CopyPairType) {
         this.CopyPairType = CopyPairType;
     }
 
     /**
-     * Get 修改复制对名称（长度最大支持 64 个字符） 
-     * @return CopyPairName 修改复制对名称（长度最大支持 64 个字符）
+     * Get <p>修改复制对名称（长度最大支持 64 个字符）</p> 
+     * @return CopyPairName <p>修改复制对名称（长度最大支持 64 个字符）</p>
      */
     public String getCopyPairName() {
         return this.CopyPairName;
     }
 
     /**
-     * Set 修改复制对名称（长度最大支持 64 个字符）
-     * @param CopyPairName 修改复制对名称（长度最大支持 64 个字符）
+     * Set <p>修改复制对名称（长度最大支持 64 个字符）</p>
+     * @param CopyPairName <p>修改复制对名称（长度最大支持 64 个字符）</p>
      */
     public void setCopyPairName(String CopyPairName) {
         this.CopyPairName = CopyPairName;
+    }
+
+    /**
+     * Get <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p> 
+     * @return InstanceType <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+     * @param InstanceType <p>容灾端实例类型（仅容灾端CVM未创建时可修改）</p>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
     }
 
     public ModifyCopyPairAttributeRequest() {
@@ -109,6 +132,9 @@ public class ModifyCopyPairAttributeRequest extends AbstractModel {
         if (source.CopyPairName != null) {
             this.CopyPairName = new String(source.CopyPairName);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyCopyPairAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CopyPairId", this.CopyPairId);
         this.setParamSimple(map, prefix + "CopyPairType", this.CopyPairType);
         this.setParamSimple(map, prefix + "CopyPairName", this.CopyPairName);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

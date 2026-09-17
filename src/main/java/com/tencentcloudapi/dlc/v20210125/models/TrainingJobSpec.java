@@ -140,6 +140,13 @@ public class TrainingJobSpec extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>所属队列别名</p>
+    */
+    @SerializedName("QueueAlias")
+    @Expose
+    private String QueueAlias;
+
+    /**
     * <p>Checkpoint 挂载摘要</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -572,6 +579,22 @@ public class TrainingJobSpec extends AbstractModel {
     }
 
     /**
+     * Get <p>所属队列别名</p> 
+     * @return QueueAlias <p>所属队列别名</p>
+     */
+    public String getQueueAlias() {
+        return this.QueueAlias;
+    }
+
+    /**
+     * Set <p>所属队列别名</p>
+     * @param QueueAlias <p>所属队列别名</p>
+     */
+    public void setQueueAlias(String QueueAlias) {
+        this.QueueAlias = QueueAlias;
+    }
+
+    /**
      * Get <p>Checkpoint 挂载摘要</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CheckpointMountInfo <p>Checkpoint 挂载摘要</p>
@@ -976,6 +999,9 @@ public class TrainingJobSpec extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.QueueAlias != null) {
+            this.QueueAlias = new String(source.QueueAlias);
+        }
         if (source.CheckpointMountInfo != null) {
             this.CheckpointMountInfo = new CheckpointMountInfo(source.CheckpointMountInfo);
         }
@@ -1064,6 +1090,7 @@ public class TrainingJobSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamObj(map, prefix + "CheckpointMountInfo.", this.CheckpointMountInfo);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamSimple(map, prefix + "Creator", this.Creator);

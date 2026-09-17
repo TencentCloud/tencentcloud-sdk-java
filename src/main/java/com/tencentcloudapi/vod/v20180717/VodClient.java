@@ -230,6 +230,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建 AIGC 混元 3D 任务。
+     * @param req CreateAigcHunyuan3DTaskRequest
+     * @return CreateAigcHunyuan3DTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcHunyuan3DTaskResponse CreateAigcHunyuan3DTask(CreateAigcHunyuan3DTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcHunyuan3DTask", CreateAigcHunyuan3DTaskResponse.class);
+    }
+
+    /**
      *该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。默认限制1个并发处理，接口调用会产生实际费用，请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
      * @param req CreateAigcImageTaskRequest
      * @return CreateAigcImageTaskResponse

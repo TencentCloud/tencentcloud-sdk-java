@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTasksResponse extends AbstractModel {
 
     /**
-    * 任务概要列表。
+    * <p>任务概要列表。</p>
     */
     @SerializedName("TaskSet")
     @Expose
     private TaskSimpleInfo [] TaskSet;
 
     /**
-    * 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+    * <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务概要列表。 
-     * @return TaskSet 任务概要列表。
+     * Get <p>任务概要列表。</p> 
+     * @return TaskSet <p>任务概要列表。</p>
      */
     public TaskSimpleInfo [] getTaskSet() {
         return this.TaskSet;
     }
 
     /**
-     * Set 任务概要列表。
-     * @param TaskSet 任务概要列表。
+     * Set <p>任务概要列表。</p>
+     * @param TaskSet <p>任务概要列表。</p>
      */
     public void setTaskSet(TaskSimpleInfo [] TaskSet) {
         this.TaskSet = TaskSet;
     }
 
     /**
-     * Get 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。 
-     * @return ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * Get <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p> 
+     * @return ScrollToken <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
-     * @param ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * Set <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
+     * @param ScrollToken <p>翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

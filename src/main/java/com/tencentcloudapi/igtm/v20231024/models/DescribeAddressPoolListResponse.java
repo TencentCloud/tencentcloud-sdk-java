@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAddressPoolListResponse extends AbstractModel {
 
     /**
-    * 资源组列表
+    * <p>资源组列表</p>
     */
     @SerializedName("AddressPoolSet")
     @Expose
     private AddressPool [] AddressPoolSet;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAddressPoolListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源组列表 
-     * @return AddressPoolSet 资源组列表
+     * Get <p>资源组列表</p> 
+     * @return AddressPoolSet <p>资源组列表</p>
      */
     public AddressPool [] getAddressPoolSet() {
         return this.AddressPoolSet;
     }
 
     /**
-     * Set 资源组列表
-     * @param AddressPoolSet 资源组列表
+     * Set <p>资源组列表</p>
+     * @param AddressPoolSet <p>资源组列表</p>
      */
     public void setAddressPoolSet(AddressPool [] AddressPoolSet) {
         this.AddressPoolSet = AddressPoolSet;
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

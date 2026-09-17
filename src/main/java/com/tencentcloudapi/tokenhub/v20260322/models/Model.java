@@ -94,6 +94,13 @@ public class Model extends AbstractModel {
     private String Provider;
 
     /**
+    * <p>markdown 原生内容的模型提供方详情</p>
+    */
+    @SerializedName("ProviderIntroduction")
+    @Expose
+    private String ProviderIntroduction;
+
+    /**
     * <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
     */
     @SerializedName("Status")
@@ -324,6 +331,22 @@ public class Model extends AbstractModel {
     }
 
     /**
+     * Get <p>markdown 原生内容的模型提供方详情</p> 
+     * @return ProviderIntroduction <p>markdown 原生内容的模型提供方详情</p>
+     */
+    public String getProviderIntroduction() {
+        return this.ProviderIntroduction;
+    }
+
+    /**
+     * Set <p>markdown 原生内容的模型提供方详情</p>
+     * @param ProviderIntroduction <p>markdown 原生内容的模型提供方详情</p>
+     */
+    public void setProviderIntroduction(String ProviderIntroduction) {
+        this.ProviderIntroduction = ProviderIntroduction;
+    }
+
+    /**
      * Get <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul> 
      * @return Status <p>模型状态。取值：online（上线）、offline（下线）。</p><p>枚举值：</p><ul><li>online ： 上线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li></ul>
      */
@@ -524,6 +547,9 @@ public class Model extends AbstractModel {
         if (source.Provider != null) {
             this.Provider = new String(source.Provider);
         }
+        if (source.ProviderIntroduction != null) {
+            this.ProviderIntroduction = new String(source.ProviderIntroduction);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -577,6 +603,7 @@ public class Model extends AbstractModel {
         this.setParamSimple(map, prefix + "Brand", this.Brand);
         this.setParamObj(map, prefix + "ModelImage.", this.ModelImage);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamSimple(map, prefix + "ProviderIntroduction", this.ProviderIntroduction);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "ModelChargingInfo.", this.ModelChargingInfo);
