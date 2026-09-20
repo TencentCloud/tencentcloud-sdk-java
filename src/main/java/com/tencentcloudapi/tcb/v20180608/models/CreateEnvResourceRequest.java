@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateEnvResourceRequest extends AbstractModel {
 
     /**
-    * 环境ID
+    * <p>环境ID</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
+    * <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
     */
     @SerializedName("Resources")
     @Expose
     private String [] Resources;
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+     * Get <p>环境ID</p> 
+     * @return EnvId <p>环境ID</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set <p>环境ID</p>
+     * @param EnvId <p>环境ID</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值 
-     * @return Resources 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
+     * Get <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p> 
+     * @return Resources <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
      */
     public String [] getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
-     * @param Resources 资源类型。代表本次开通哪些资源。 可取值以及含义： - log : 表示日志资源，当前仅支持 log（日志资源类型），后续版本可能扩展，该数组不能为空，且每个元素必须为合法的资源类型值
+     * Set <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
+     * @param Resources <p>资源类型。代表本次开通哪些资源。<br>可取值以及含义：</p><ul><li>log : 表示日志资源。</li><li>function： 表示云函数资源。</li></ul><p>该数组不能为空，且每个元素必须为合法的资源类型值</p>
      */
     public void setResources(String [] Resources) {
         this.Resources = Resources;

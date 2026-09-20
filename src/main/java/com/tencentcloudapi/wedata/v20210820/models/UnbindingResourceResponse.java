@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.csip.v20221121.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindClusterOwnerResponse extends AbstractModel {
+public class UnbindingResourceResponse extends AbstractModel {
+
+    /**
+    * 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private BooleanResponse [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +37,26 @@ public class BindClusterOwnerResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 操作结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BooleanResponse [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(BooleanResponse [] Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +74,20 @@ public class BindClusterOwnerResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public BindClusterOwnerResponse() {
+    public UnbindingResourceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public BindClusterOwnerResponse(BindClusterOwnerResponse source) {
+    public UnbindingResourceResponse(UnbindingResourceResponse source) {
+        if (source.Data != null) {
+            this.Data = new BooleanResponse[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new BooleanResponse(source.Data[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +98,7 @@ public class BindClusterOwnerResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

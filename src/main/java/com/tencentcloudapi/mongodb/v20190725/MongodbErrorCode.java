@@ -318,6 +318,9 @@ public enum MongodbErrorCode {
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
+     /* 实例未查询到 */
+     RESOURCENOTFOUND_INSTANCENOTFUNDERROR("ResourceNotFound.InstanceNotFundError"),
+     
      /* 资源不可用。 */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      

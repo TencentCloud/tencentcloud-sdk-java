@@ -24,83 +24,77 @@ import java.util.HashMap;
 public class HKIDCardOCRResponse extends AbstractModel {
 
     /**
-    * 中文姓名
+    * <p>中文姓名</p>
     */
     @SerializedName("CnName")
     @Expose
     private String CnName;
 
     /**
-    * 英文姓名
+    * <p>英文姓名</p>
     */
     @SerializedName("EnName")
     @Expose
     private String EnName;
 
     /**
-    * 中文姓名对应电码
+    * <p>中文姓名对应电码</p>
     */
     @SerializedName("TelexCode")
     @Expose
     private String TelexCode;
 
     /**
-    * 性别 ：“男M”或“女F”
+    * <p>性别 ：“男M”或“女F”</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 出生日期
+    * <p>出生日期</p>
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
+    * <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
     */
     @SerializedName("Permanent")
     @Expose
     private Long Permanent;
 
     /**
-    * 身份证号码
+    * <p>身份证号码</p>
     */
     @SerializedName("IdNum")
     @Expose
     private String IdNum;
 
     /**
-    * 证件符号，出生日期下的符号，例如"***AZ"
+    * <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
     */
     @SerializedName("Symbol")
     @Expose
     private String Symbol;
 
     /**
-    * 首次签发日期
+    * <p>首次签发日期</p>
     */
     @SerializedName("FirstIssueDate")
     @Expose
     private String FirstIssueDate;
 
     /**
-    * 最近领用日期
+    * <p>最近领用日期</p>
     */
     @SerializedName("CurrentIssueDate")
     @Expose
     private String CurrentIssueDate;
 
     /**
-    * 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+    * <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FakeDetectResult")
@@ -108,7 +102,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private Long FakeDetectResult;
 
     /**
-    * Base64编码的证件左侧人像大图
+    * <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadImage")
@@ -116,7 +110,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private String HeadImage;
 
     /**
-    * Base64编码的证件右侧人像小图
+    * <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmallHeadImage")
@@ -124,22 +118,21 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private String SmallHeadImage;
 
     /**
-    * 该字段已废弃， 将固定返回空数组，不建议使用。
-
+    * <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
     */
     @SerializedName("WarningCode")
     @Expose
     private Long [] WarningCode;
 
     /**
-    * 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
+    * <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
     */
     @SerializedName("WarnCardInfos")
     @Expose
     private Long [] WarnCardInfos;
 
     /**
-    * 证件透明视窗内的文本信息
+    * <p>证件透明视窗内的文本信息</p>
     */
     @SerializedName("WindowEmbeddedText")
     @Expose
@@ -153,187 +146,169 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 中文姓名 
-     * @return CnName 中文姓名
+     * Get <p>中文姓名</p> 
+     * @return CnName <p>中文姓名</p>
      */
     public String getCnName() {
         return this.CnName;
     }
 
     /**
-     * Set 中文姓名
-     * @param CnName 中文姓名
+     * Set <p>中文姓名</p>
+     * @param CnName <p>中文姓名</p>
      */
     public void setCnName(String CnName) {
         this.CnName = CnName;
     }
 
     /**
-     * Get 英文姓名 
-     * @return EnName 英文姓名
+     * Get <p>英文姓名</p> 
+     * @return EnName <p>英文姓名</p>
      */
     public String getEnName() {
         return this.EnName;
     }
 
     /**
-     * Set 英文姓名
-     * @param EnName 英文姓名
+     * Set <p>英文姓名</p>
+     * @param EnName <p>英文姓名</p>
      */
     public void setEnName(String EnName) {
         this.EnName = EnName;
     }
 
     /**
-     * Get 中文姓名对应电码 
-     * @return TelexCode 中文姓名对应电码
+     * Get <p>中文姓名对应电码</p> 
+     * @return TelexCode <p>中文姓名对应电码</p>
      */
     public String getTelexCode() {
         return this.TelexCode;
     }
 
     /**
-     * Set 中文姓名对应电码
-     * @param TelexCode 中文姓名对应电码
+     * Set <p>中文姓名对应电码</p>
+     * @param TelexCode <p>中文姓名对应电码</p>
      */
     public void setTelexCode(String TelexCode) {
         this.TelexCode = TelexCode;
     }
 
     /**
-     * Get 性别 ：“男M”或“女F” 
-     * @return Sex 性别 ：“男M”或“女F”
+     * Get <p>性别 ：“男M”或“女F”</p> 
+     * @return Sex <p>性别 ：“男M”或“女F”</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别 ：“男M”或“女F”
-     * @param Sex 性别 ：“男M”或“女F”
+     * Set <p>性别 ：“男M”或“女F”</p>
+     * @param Sex <p>性别 ：“男M”或“女F”</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 出生日期 
-     * @return Birthday 出生日期
+     * Get <p>出生日期</p> 
+     * @return Birthday <p>出生日期</p>
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set 出生日期
-     * @param Birthday 出生日期
+     * Set <p>出生日期</p>
+     * @param Birthday <p>出生日期</p>
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。 
-     * @return Permanent 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
+     * Get <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p> 
+     * @return Permanent <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
      */
     public Long getPermanent() {
         return this.Permanent;
     }
 
     /**
-     * Set 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
-     * @param Permanent 永久性居民身份证。
-0：非永久；
-1：永久；
--1：未知。
+     * Set <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
+     * @param Permanent <p>永久性居民身份证。<br>0：非永久；<br>1：永久；<br>-1：未知。</p>
      */
     public void setPermanent(Long Permanent) {
         this.Permanent = Permanent;
     }
 
     /**
-     * Get 身份证号码 
-     * @return IdNum 身份证号码
+     * Get <p>身份证号码</p> 
+     * @return IdNum <p>身份证号码</p>
      */
     public String getIdNum() {
         return this.IdNum;
     }
 
     /**
-     * Set 身份证号码
-     * @param IdNum 身份证号码
+     * Set <p>身份证号码</p>
+     * @param IdNum <p>身份证号码</p>
      */
     public void setIdNum(String IdNum) {
         this.IdNum = IdNum;
     }
 
     /**
-     * Get 证件符号，出生日期下的符号，例如"***AZ" 
-     * @return Symbol 证件符号，出生日期下的符号，例如"***AZ"
+     * Get <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p> 
+     * @return Symbol <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
      */
     public String getSymbol() {
         return this.Symbol;
     }
 
     /**
-     * Set 证件符号，出生日期下的符号，例如"***AZ"
-     * @param Symbol 证件符号，出生日期下的符号，例如"***AZ"
+     * Set <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
+     * @param Symbol <p>证件符号，出生日期下的符号，例如&quot;***AZ&quot;</p>
      */
     public void setSymbol(String Symbol) {
         this.Symbol = Symbol;
     }
 
     /**
-     * Get 首次签发日期 
-     * @return FirstIssueDate 首次签发日期
+     * Get <p>首次签发日期</p> 
+     * @return FirstIssueDate <p>首次签发日期</p>
      */
     public String getFirstIssueDate() {
         return this.FirstIssueDate;
     }
 
     /**
-     * Set 首次签发日期
-     * @param FirstIssueDate 首次签发日期
+     * Set <p>首次签发日期</p>
+     * @param FirstIssueDate <p>首次签发日期</p>
      */
     public void setFirstIssueDate(String FirstIssueDate) {
         this.FirstIssueDate = FirstIssueDate;
     }
 
     /**
-     * Get 最近领用日期 
-     * @return CurrentIssueDate 最近领用日期
+     * Get <p>最近领用日期</p> 
+     * @return CurrentIssueDate <p>最近领用日期</p>
      */
     public String getCurrentIssueDate() {
         return this.CurrentIssueDate;
     }
 
     /**
-     * Set 最近领用日期
-     * @param CurrentIssueDate 最近领用日期
+     * Set <p>最近领用日期</p>
+     * @param CurrentIssueDate <p>最近领用日期</p>
      */
     public void setCurrentIssueDate(String CurrentIssueDate) {
         this.CurrentIssueDate = CurrentIssueDate;
     }
 
     /**
-     * Get 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+     * Get <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FakeDetectResult 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+     * @return FakeDetectResult <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -343,15 +318,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+     * Set <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FakeDetectResult 真假判断。
-0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；
-1：假；
-2：真。
+     * @param FakeDetectResult <p>真假判断。<br>0：无法判断（图像模糊、不完整、反光、过暗等导致无法判断）；<br>1：假；<br>2：真。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -361,9 +330,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Base64编码的证件左侧人像大图
+     * Get <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HeadImage Base64编码的证件左侧人像大图
+     * @return HeadImage <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeadImage() {
@@ -371,9 +340,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set Base64编码的证件左侧人像大图
+     * Set <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HeadImage Base64编码的证件左侧人像大图
+     * @param HeadImage <p>Base64编码的证件左侧人像大图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadImage(String HeadImage) {
@@ -381,9 +350,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Base64编码的证件右侧人像小图
+     * Get <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SmallHeadImage Base64编码的证件右侧人像小图
+     * @return SmallHeadImage <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSmallHeadImage() {
@@ -391,9 +360,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set Base64编码的证件右侧人像小图
+     * Set <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmallHeadImage Base64编码的证件右侧人像小图
+     * @param SmallHeadImage <p>Base64编码的证件右侧人像小图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmallHeadImage(String SmallHeadImage) {
@@ -401,10 +370,8 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段已废弃， 将固定返回空数组，不建议使用。
- 
-     * @return WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
-
+     * Get <p>该字段已废弃， 将固定返回空数组，不建议使用。</p> 
+     * @return WarningCode <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
      * @deprecated
      */
     @Deprecated
@@ -413,10 +380,8 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段已废弃， 将固定返回空数组，不建议使用。
-
-     * @param WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
-
+     * Set <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
+     * @param WarningCode <p>该字段已废弃， 将固定返回空数组，不建议使用。</p>
      * @deprecated
      */
     @Deprecated
@@ -425,32 +390,32 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通 
-     * @return WarnCardInfos 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
+     * Get <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p> 
+     * @return WarnCardInfos <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
-     * @param WarnCardInfos 该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通
+     * Set <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
+     * @param WarnCardInfos <p>该字段仅对国际站请求起作用，国内站该字段将固定返回空数组。国际站告警码如下：    告警码-9101 证件边框不完整告警-9102 证件复印件告警-9103 证件翻拍告警-9104 证件PS告警-9107 证件反光告警-9108 证件模糊告警-9109 告警能力未开通</p>
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;
     }
 
     /**
-     * Get 证件透明视窗内的文本信息 
-     * @return WindowEmbeddedText 证件透明视窗内的文本信息
+     * Get <p>证件透明视窗内的文本信息</p> 
+     * @return WindowEmbeddedText <p>证件透明视窗内的文本信息</p>
      */
     public String getWindowEmbeddedText() {
         return this.WindowEmbeddedText;
     }
 
     /**
-     * Set 证件透明视窗内的文本信息
-     * @param WindowEmbeddedText 证件透明视窗内的文本信息
+     * Set <p>证件透明视窗内的文本信息</p>
+     * @param WindowEmbeddedText <p>证件透明视窗内的文本信息</p>
      */
     public void setWindowEmbeddedText(String WindowEmbeddedText) {
         this.WindowEmbeddedText = WindowEmbeddedText;

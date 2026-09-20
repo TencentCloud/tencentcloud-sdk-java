@@ -45,6 +45,13 @@ public class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractMod
     private Long Limit;
 
     /**
+    * <p>关键字</p>
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
     * <p>过滤条件</p>
     */
     @SerializedName("Filters")
@@ -107,6 +114,22 @@ public class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractMod
     }
 
     /**
+     * Get <p>关键字</p> 
+     * @return Keyword <p>关键字</p>
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set <p>关键字</p>
+     * @param Keyword <p>关键字</p>
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
      * Get <p>过滤条件</p> 
      * @return Filters <p>过滤条件</p>
      */
@@ -155,6 +178,9 @@ public class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractMod
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -177,6 +203,7 @@ public class DescribeCloudNativeAPIGatewayAIQuotaListRequest extends AbstractMod
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
 

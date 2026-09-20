@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeDspmAssetTableListRequest extends AbstractModel {
 
     /**
-    * 资产实例id
+    * <p>资产实例id</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
+
+    /**
+    * <p>Schema名称</p>
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
 
     /**
     * <p>集团账号的成员id</p>
@@ -45,42 +52,58 @@ public class DescribeDspmAssetTableListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * 筛选项
+    * <p>筛选项</p>
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-     * Get 资产实例id 
-     * @return AssetId 资产实例id
+     * Get <p>资产实例id</p> 
+     * @return AssetId <p>资产实例id</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产实例id
-     * @param AssetId 资产实例id
+     * Set <p>资产实例id</p>
+     * @param AssetId <p>资产实例id</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 数据库名称 
-     * @return DbName 数据库名称
+     * Get <p>数据库名称</p> 
+     * @return DbName <p>数据库名称</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库名称
-     * @param DbName 数据库名称
+     * Set <p>数据库名称</p>
+     * @param DbName <p>数据库名称</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
+    }
+
+    /**
+     * Get <p>Schema名称</p> 
+     * @return SchemaName <p>Schema名称</p>
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set <p>Schema名称</p>
+     * @param SchemaName <p>Schema名称</p>
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
     }
 
     /**
@@ -100,16 +123,16 @@ public class DescribeDspmAssetTableListRequest extends AbstractModel {
     }
 
     /**
-     * Get 筛选项 
-     * @return Filter 筛选项
+     * Get <p>筛选项</p> 
+     * @return Filter <p>筛选项</p>
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 筛选项
-     * @param Filter 筛选项
+     * Set <p>筛选项</p>
+     * @param Filter <p>筛选项</p>
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
@@ -129,6 +152,9 @@ public class DescribeDspmAssetTableListRequest extends AbstractModel {
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
@@ -147,6 +173,7 @@ public class DescribeDspmAssetTableListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AssetId", this.AssetId);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
 

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeUserInfoRequest extends AbstractModel {
 
     /**
-    * 应用名称。
+    * <p>应用名称。</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 用户标识。
+    * <p>用户标识。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get 应用名称。 
-     * @return AppName 应用名称。
+     * Get <p>应用名称。</p> 
+     * @return AppName <p>应用名称。</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 应用名称。
-     * @param AppName 应用名称。
+     * Set <p>应用名称。</p>
+     * @param AppName <p>应用名称。</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 用户标识。 
-     * @return UserId 用户标识。
+     * Get <p>用户标识。</p> 
+     * @return UserId <p>用户标识。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户标识。
-     * @param UserId 用户标识。
+     * Set <p>用户标识。</p>
+     * @param UserId <p>用户标识。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

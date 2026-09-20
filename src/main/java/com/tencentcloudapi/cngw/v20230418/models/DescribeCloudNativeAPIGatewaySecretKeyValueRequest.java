@@ -38,6 +38,13 @@ public class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends Abstract
     private String SecretKeyId;
 
     /**
+    * 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+    */
+    @SerializedName("SecretValueType")
+    @Expose
+    private String SecretValueType;
+
+    /**
      * Get 实例 ID 
      * @return GatewayId 实例 ID
      */
@@ -69,6 +76,22 @@ public class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends Abstract
         this.SecretKeyId = SecretKeyId;
     }
 
+    /**
+     * Get 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。 
+     * @return SecretValueType 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+     */
+    public String getSecretValueType() {
+        return this.SecretValueType;
+    }
+
+    /**
+     * Set 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+     * @param SecretValueType 指定从 AKSK 或 CAM 成对凭证中返回哪一半。取值：AccessKey（AKSK 返回 AccessKeyId，CAM 返回 SecretId）、SecretKey（AKSK 返回 SecretAccessKey，CAM 返回 SecretKey）。不传则保持原行为，仅返回 AccessKeyId 或 SecretId。
+     */
+    public void setSecretValueType(String SecretValueType) {
+        this.SecretValueType = SecretValueType;
+    }
+
     public DescribeCloudNativeAPIGatewaySecretKeyValueRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends Abstract
         if (source.SecretKeyId != null) {
             this.SecretKeyId = new String(source.SecretKeyId);
         }
+        if (source.SecretValueType != null) {
+            this.SecretValueType = new String(source.SecretValueType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeCloudNativeAPIGatewaySecretKeyValueRequest extends Abstract
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
+        this.setParamSimple(map, prefix + "SecretValueType", this.SecretValueType);
 
     }
 }

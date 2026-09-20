@@ -31,28 +31,28 @@ public class DescribeExposePathRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * 资产ID
+    * <p>资产ID</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * 资产IP
+    * <p>资产IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 资产域名
+    * <p>资产域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 端口或端口范围
+    * <p>端口或端口范围</p>
     */
     @SerializedName("Port")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeExposePathRequest extends AbstractModel {
     }
 
     /**
-     * Get 资产ID 
-     * @return AssetId 资产ID
+     * Get <p>资产ID</p> 
+     * @return AssetId <p>资产ID</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 资产ID
-     * @param AssetId 资产ID
+     * Set <p>资产ID</p>
+     * @param AssetId <p>资产ID</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 资产IP 
-     * @return Ip 资产IP
+     * Get <p>资产IP</p> 
+     * @return Ip <p>资产IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 资产IP
-     * @param Ip 资产IP
+     * Set <p>资产IP</p>
+     * @param Ip <p>资产IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 资产域名 
-     * @return Domain 资产域名
+     * Get <p>资产域名</p> 
+     * @return Domain <p>资产域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 资产域名
-     * @param Domain 资产域名
+     * Set <p>资产域名</p>
+     * @param Domain <p>资产域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 端口或端口范围 
-     * @return Port 端口或端口范围
+     * Get <p>端口或端口范围</p> 
+     * @return Port <p>端口或端口范围</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口或端口范围
-     * @param Port 端口或端口范围
+     * Set <p>端口或端口范围</p>
+     * @param Port <p>端口或端口范围</p>
      */
     public void setPort(String Port) {
         this.Port = Port;

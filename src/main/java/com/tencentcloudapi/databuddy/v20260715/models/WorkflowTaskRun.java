@@ -336,6 +336,14 @@ public class WorkflowTaskRun extends AbstractModel {
     private InnerWorkflowTaskBrief InnerTask;
 
     /**
+    * <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduledTime")
+    @Expose
+    private String ScheduledTime;
+
+    /**
      * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskName <p>任务名称</p>
@@ -1115,6 +1123,26 @@ public class WorkflowTaskRun extends AbstractModel {
         this.InnerTask = InnerTask;
     }
 
+    /**
+     * Get <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduledTime() {
+        return this.ScheduledTime;
+    }
+
+    /**
+     * Set <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduledTime(String ScheduledTime) {
+        this.ScheduledTime = ScheduledTime;
+    }
+
     public WorkflowTaskRun() {
     }
 
@@ -1246,6 +1274,9 @@ public class WorkflowTaskRun extends AbstractModel {
         if (source.InnerTask != null) {
             this.InnerTask = new InnerWorkflowTaskBrief(source.InnerTask);
         }
+        if (source.ScheduledTime != null) {
+            this.ScheduledTime = new String(source.ScheduledTime);
+        }
     }
 
 
@@ -1292,6 +1323,7 @@ public class WorkflowTaskRun extends AbstractModel {
         this.setParamSimple(map, prefix + "DependOnRunCondition", this.DependOnRunCondition);
         this.setParamObj(map, prefix + "AdvancedDependencyConfig.", this.AdvancedDependencyConfig);
         this.setParamObj(map, prefix + "InnerTask.", this.InnerTask);
+        this.setParamSimple(map, prefix + "ScheduledTime", this.ScheduledTime);
 
     }
 }

@@ -66,6 +66,13 @@ public class RerunWorkflowRunRequest extends AbstractModel {
     private String [] TaskIds;
 
     /**
+    * <p>计划调度时间列表配置</p>
+    */
+    @SerializedName("ScheduledTimeConfig")
+    @Expose
+    private ScheduledTimeConfig ScheduledTimeConfig;
+
+    /**
      * Get <p>工作空间ID，可通过 ListWorkspaces 获取。必填</p> 
      * @return WorkspaceId <p>工作空间ID，可通过 ListWorkspaces 获取。必填</p>
      */
@@ -161,6 +168,22 @@ public class RerunWorkflowRunRequest extends AbstractModel {
         this.TaskIds = TaskIds;
     }
 
+    /**
+     * Get <p>计划调度时间列表配置</p> 
+     * @return ScheduledTimeConfig <p>计划调度时间列表配置</p>
+     */
+    public ScheduledTimeConfig getScheduledTimeConfig() {
+        return this.ScheduledTimeConfig;
+    }
+
+    /**
+     * Set <p>计划调度时间列表配置</p>
+     * @param ScheduledTimeConfig <p>计划调度时间列表配置</p>
+     */
+    public void setScheduledTimeConfig(ScheduledTimeConfig ScheduledTimeConfig) {
+        this.ScheduledTimeConfig = ScheduledTimeConfig;
+    }
+
     public RerunWorkflowRunRequest() {
     }
 
@@ -193,6 +216,9 @@ public class RerunWorkflowRunRequest extends AbstractModel {
                 this.TaskIds[i] = new String(source.TaskIds[i]);
             }
         }
+        if (source.ScheduledTimeConfig != null) {
+            this.ScheduledTimeConfig = new ScheduledTimeConfig(source.ScheduledTimeConfig);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class RerunWorkflowRunRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RunType", this.RunType);
         this.setParamArrayObj(map, prefix + "AdvancedParams.", this.AdvancedParams);
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+        this.setParamObj(map, prefix + "ScheduledTimeConfig.", this.ScheduledTimeConfig);
 
     }
 }

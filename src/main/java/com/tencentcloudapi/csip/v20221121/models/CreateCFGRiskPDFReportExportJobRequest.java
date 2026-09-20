@@ -73,6 +73,13 @@ public class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel {
     private String By;
 
     /**
+    * <p>资产标签ID</p>
+    */
+    @SerializedName("AssetTagIDs")
+    @Expose
+    private Long [] AssetTagIDs;
+
+    /**
      * Get <p>合规规范ID</p> 
      * @return StandardID <p>合规规范ID</p>
      */
@@ -184,6 +191,22 @@ public class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get <p>资产标签ID</p> 
+     * @return AssetTagIDs <p>资产标签ID</p>
+     */
+    public Long [] getAssetTagIDs() {
+        return this.AssetTagIDs;
+    }
+
+    /**
+     * Set <p>资产标签ID</p>
+     * @param AssetTagIDs <p>资产标签ID</p>
+     */
+    public void setAssetTagIDs(Long [] AssetTagIDs) {
+        this.AssetTagIDs = AssetTagIDs;
+    }
+
     public CreateCFGRiskPDFReportExportJobRequest() {
     }
 
@@ -219,6 +242,12 @@ public class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.AssetTagIDs != null) {
+            this.AssetTagIDs = new Long[source.AssetTagIDs.length];
+            for (int i = 0; i < source.AssetTagIDs.length; i++) {
+                this.AssetTagIDs[i] = new Long(source.AssetTagIDs[i]);
+            }
+        }
     }
 
 
@@ -233,6 +262,7 @@ public class CreateCFGRiskPDFReportExportJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamArraySimple(map, prefix + "AssetTagIDs.", this.AssetTagIDs);
 
     }
 }

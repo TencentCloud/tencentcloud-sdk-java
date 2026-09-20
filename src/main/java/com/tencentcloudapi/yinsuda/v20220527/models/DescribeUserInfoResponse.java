@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserInfoResponse extends AbstractModel {
 
     /**
-    * 用户信息。
+    * <p>用户信息。</p>
     */
     @SerializedName("UserInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeUserInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户信息。 
-     * @return UserInfo 用户信息。
+     * Get <p>用户信息。</p> 
+     * @return UserInfo <p>用户信息。</p>
      */
     public UserInfo getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set 用户信息。
-     * @param UserInfo 用户信息。
+     * Set <p>用户信息。</p>
+     * @param UserInfo <p>用户信息。</p>
      */
     public void setUserInfo(UserInfo UserInfo) {
         this.UserInfo = UserInfo;

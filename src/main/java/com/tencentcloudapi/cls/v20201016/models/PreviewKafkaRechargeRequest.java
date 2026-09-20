@@ -24,288 +24,276 @@ import java.util.HashMap;
 public class PreviewKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * 预览类型，1：源数据预览；2：导出结果预览。
+    * <p>预览类型，1：源数据预览；2：导出结果预览。</p>
     */
     @SerializedName("PreviewType")
     @Expose
     private Long PreviewType;
 
     /**
-    * 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
+    * <p>导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。</p>
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-最多支持100个。
+    * <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。<br>最多支持100个。</p>
     */
     @SerializedName("UserKafkaTopics")
     @Expose
     private String UserKafkaTopics;
 
     /**
-    * 导入数据位置，-2：最早；-1：最晚。
+    * <p>导入数据位置，-2：最早；-1：最晚。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+    * <p>腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * 服务地址。
-KafkaType为1时ServerAddr必填。
+    * <p>服务地址。<br>KafkaType为1时ServerAddr必填。</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * ServerAddr是否为加密连接。
-KafkaType为1时有效。
+    * <p>ServerAddr是否为加密连接。<br>KafkaType为1时有效。</p>
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
+    * <p>加密访问协议。<br>KafkaType为1并且IsEncryptionAddr为true时Protocol必填。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户Kafka消费组。
-
-- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+    * <p>用户Kafka消费组。</p><ul><li>消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。</li></ul>
     */
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
 
     /**
-    * 日志导入规则
+    * <p>日志导入规则</p>
     */
     @SerializedName("LogRechargeRule")
     @Expose
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * 用户kafka拓展信息
+    * <p>网络连接参数</p>
+    */
+    @SerializedName("NetworkInfo")
+    @Expose
+    private NetworkInfo NetworkInfo;
+
+    /**
+    * <p>用户kafka拓展信息</p>
     */
     @SerializedName("UserKafkaMeta")
     @Expose
     private UserKafkaMeta UserKafkaMeta;
 
     /**
-     * Get 预览类型，1：源数据预览；2：导出结果预览。 
-     * @return PreviewType 预览类型，1：源数据预览；2：导出结果预览。
+     * Get <p>预览类型，1：源数据预览；2：导出结果预览。</p> 
+     * @return PreviewType <p>预览类型，1：源数据预览；2：导出结果预览。</p>
      */
     public Long getPreviewType() {
         return this.PreviewType;
     }
 
     /**
-     * Set 预览类型，1：源数据预览；2：导出结果预览。
-     * @param PreviewType 预览类型，1：源数据预览；2：导出结果预览。
+     * Set <p>预览类型，1：源数据预览；2：导出结果预览。</p>
+     * @param PreviewType <p>预览类型，1：源数据预览；2：导出结果预览。</p>
      */
     public void setPreviewType(Long PreviewType) {
         this.PreviewType = PreviewType;
     }
 
     /**
-     * Get 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。 
-     * @return KafkaType 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
+     * Get <p>导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。</p> 
+     * @return KafkaType <p>导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。</p>
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
-     * @param KafkaType 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
+     * Set <p>导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。</p>
+     * @param KafkaType <p>导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。</p>
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-最多支持100个。 
-     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-最多支持100个。
+     * Get <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。<br>最多支持100个。</p> 
+     * @return UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。<br>最多支持100个。</p>
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-最多支持100个。
-     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-最多支持100个。
+     * Set <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。<br>最多支持100个。</p>
+     * @param UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。<br>最多支持100个。</p>
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
     }
 
     /**
-     * Get 导入数据位置，-2：最早；-1：最晚。 
-     * @return Offset 导入数据位置，-2：最早；-1：最晚。
+     * Get <p>导入数据位置，-2：最早；-1：最晚。</p> 
+     * @return Offset <p>导入数据位置，-2：最早；-1：最晚。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 导入数据位置，-2：最早；-1：最晚。
-     * @param Offset 导入数据位置，-2：最早；-1：最晚。
+     * Set <p>导入数据位置，-2：最早；-1：最晚。</p>
+     * @param Offset <p>导入数据位置，-2：最早；-1：最晚。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
-     * @return KafkaInstance 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * Get <p>腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul> 
+     * @return KafkaInstance <p>腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
-     * @param KafkaInstance 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * Set <p>腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
+     * @param KafkaInstance <p>腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get 服务地址。
-KafkaType为1时ServerAddr必填。 
-     * @return ServerAddr 服务地址。
-KafkaType为1时ServerAddr必填。
+     * Get <p>服务地址。<br>KafkaType为1时ServerAddr必填。</p> 
+     * @return ServerAddr <p>服务地址。<br>KafkaType为1时ServerAddr必填。</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址。
-KafkaType为1时ServerAddr必填。
-     * @param ServerAddr 服务地址。
-KafkaType为1时ServerAddr必填。
+     * Set <p>服务地址。<br>KafkaType为1时ServerAddr必填。</p>
+     * @param ServerAddr <p>服务地址。<br>KafkaType为1时ServerAddr必填。</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get ServerAddr是否为加密连接。
-KafkaType为1时有效。 
-     * @return IsEncryptionAddr ServerAddr是否为加密连接。
-KafkaType为1时有效。
+     * Get <p>ServerAddr是否为加密连接。<br>KafkaType为1时有效。</p> 
+     * @return IsEncryptionAddr <p>ServerAddr是否为加密连接。<br>KafkaType为1时有效。</p>
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set ServerAddr是否为加密连接。
-KafkaType为1时有效。
-     * @param IsEncryptionAddr ServerAddr是否为加密连接。
-KafkaType为1时有效。
+     * Set <p>ServerAddr是否为加密连接。<br>KafkaType为1时有效。</p>
+     * @param IsEncryptionAddr <p>ServerAddr是否为加密连接。<br>KafkaType为1时有效。</p>
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填。 
-     * @return Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
+     * Get <p>加密访问协议。<br>KafkaType为1并且IsEncryptionAddr为true时Protocol必填。</p> 
+     * @return Protocol <p>加密访问协议。<br>KafkaType为1并且IsEncryptionAddr为true时Protocol必填。</p>
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
-     * @param Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
+     * Set <p>加密访问协议。<br>KafkaType为1并且IsEncryptionAddr为true时Protocol必填。</p>
+     * @param Protocol <p>加密访问协议。<br>KafkaType为1并且IsEncryptionAddr为true时Protocol必填。</p>
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 用户Kafka消费组。
-
-- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。 
-     * @return ConsumerGroupName 用户Kafka消费组。
-
-- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+     * Get <p>用户Kafka消费组。</p><ul><li>消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。</li></ul> 
+     * @return ConsumerGroupName <p>用户Kafka消费组。</p><ul><li>消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。</li></ul>
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set 用户Kafka消费组。
-
-- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
-     * @param ConsumerGroupName 用户Kafka消费组。
-
-- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+     * Set <p>用户Kafka消费组。</p><ul><li>消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。</li></ul>
+     * @param ConsumerGroupName <p>用户Kafka消费组。</p><ul><li>消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。</li></ul>
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
     }
 
     /**
-     * Get 日志导入规则 
-     * @return LogRechargeRule 日志导入规则
+     * Get <p>日志导入规则</p> 
+     * @return LogRechargeRule <p>日志导入规则</p>
      */
     public LogRechargeRuleInfo getLogRechargeRule() {
         return this.LogRechargeRule;
     }
 
     /**
-     * Set 日志导入规则
-     * @param LogRechargeRule 日志导入规则
+     * Set <p>日志导入规则</p>
+     * @param LogRechargeRule <p>日志导入规则</p>
      */
     public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
         this.LogRechargeRule = LogRechargeRule;
     }
 
     /**
-     * Get 用户kafka拓展信息 
-     * @return UserKafkaMeta 用户kafka拓展信息
+     * Get <p>网络连接参数</p> 
+     * @return NetworkInfo <p>网络连接参数</p>
+     */
+    public NetworkInfo getNetworkInfo() {
+        return this.NetworkInfo;
+    }
+
+    /**
+     * Set <p>网络连接参数</p>
+     * @param NetworkInfo <p>网络连接参数</p>
+     */
+    public void setNetworkInfo(NetworkInfo NetworkInfo) {
+        this.NetworkInfo = NetworkInfo;
+    }
+
+    /**
+     * Get <p>用户kafka拓展信息</p> 
+     * @return UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public UserKafkaMeta getUserKafkaMeta() {
         return this.UserKafkaMeta;
     }
 
     /**
-     * Set 用户kafka拓展信息
-     * @param UserKafkaMeta 用户kafka拓展信息
+     * Set <p>用户kafka拓展信息</p>
+     * @param UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
         this.UserKafkaMeta = UserKafkaMeta;
@@ -349,6 +337,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         if (source.LogRechargeRule != null) {
             this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
         }
+        if (source.NetworkInfo != null) {
+            this.NetworkInfo = new NetworkInfo(source.NetworkInfo);
+        }
         if (source.UserKafkaMeta != null) {
             this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
         }
@@ -369,6 +360,7 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+        this.setParamObj(map, prefix + "NetworkInfo.", this.NetworkInfo);
         this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }

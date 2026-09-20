@@ -3341,6 +3341,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *解绑bundle绑定的资源
+     * @param req UnbindingResourceRequest
+     * @return UnbindingResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindingResourceResponse UnbindingResource(UnbindingResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindingResource", UnbindingResourceResponse.class);
+    }
+
+    /**
      *商业化版本：执行资源组/资源包解除绑定项目
      * @param req UnboundProjectExecutorResourceRequest
      * @return UnboundProjectExecutorResourceResponse

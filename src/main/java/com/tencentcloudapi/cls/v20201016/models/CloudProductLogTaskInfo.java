@@ -87,6 +87,13 @@ public class CloudProductLogTaskInfo extends AbstractModel {
     private Tag [] LogsetTags;
 
     /**
+    * <p>应用id</p>
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get <p>日志服务地域</p> 
      * @return ClsRegion <p>日志服务地域</p>
      */
@@ -230,6 +237,22 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         this.LogsetTags = LogsetTags;
     }
 
+    /**
+     * Get <p>应用id</p> 
+     * @return ApplicationId <p>应用id</p>
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set <p>应用id</p>
+     * @param ApplicationId <p>应用id</p>
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public CloudProductLogTaskInfo() {
     }
 
@@ -271,6 +294,9 @@ public class CloudProductLogTaskInfo extends AbstractModel {
                 this.LogsetTags[i] = new Tag(source.LogsetTags[i]);
             }
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "TopicTags.", this.TopicTags);
         this.setParamArrayObj(map, prefix + "LogsetTags.", this.LogsetTags);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

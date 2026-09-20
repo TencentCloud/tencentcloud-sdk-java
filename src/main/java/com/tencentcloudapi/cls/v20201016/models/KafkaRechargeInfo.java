@@ -24,368 +24,391 @@ import java.util.HashMap;
 public class KafkaRechargeInfo extends AbstractModel {
 
     /**
-    * Kafka数据订阅配置的ID。
+    * <p>Kafka数据订阅配置的ID。</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Kafka导入任务名称
+    * <p>Kafka导入任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+    * <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * 腾讯云CKafka实例ID，KafkaType为0时必填
+    * <p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * 服务地址
+    * <p>服务地址</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * ServerAddr是否为加密连接	
+    * <p>ServerAddr是否为加密连接</p>
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * 加密访问协议，IsEncryptionAddr参数为true时必填
+    * <p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+    * <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
     */
     @SerializedName("UserKafkaTopics")
     @Expose
     private String UserKafkaTopics;
 
     /**
-    * 用户Kafka消费组名称	
+    * <p>用户Kafka消费组名称</p>
     */
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
 
     /**
-    * 状态 ，1：运行中；2：暂停。
+    * <p>状态 ，1：运行中；2：暂停。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 导入数据位置，-2:最早（默认），-1：最晚
+    * <p>导入数据位置，-2:最早（默认），-1：最晚</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 创建时间。格式`YYYY-MM-DD HH:MM:SS`
+    * <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间。格式`YYYY-MM-DD HH:MM:SS`
+    * <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 日志导入规则
+    * <p>日志导入规则</p>
     */
     @SerializedName("LogRechargeRule")
     @Expose
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * 用户kafka拓展信息
+    * <p>私有网络信息</p>
+    */
+    @SerializedName("NetworkInfo")
+    @Expose
+    private NetworkInfo NetworkInfo;
+
+    /**
+    * <p>用户kafka拓展信息</p>
     */
     @SerializedName("UserKafkaMeta")
     @Expose
     private UserKafkaMeta UserKafkaMeta;
 
     /**
-     * Get Kafka数据订阅配置的ID。 
-     * @return Id Kafka数据订阅配置的ID。
+     * Get <p>Kafka数据订阅配置的ID。</p> 
+     * @return Id <p>Kafka数据订阅配置的ID。</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Kafka数据订阅配置的ID。
-     * @param Id Kafka数据订阅配置的ID。
+     * Set <p>Kafka数据订阅配置的ID。</p>
+     * @param Id <p>Kafka数据订阅配置的ID。</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Kafka导入任务名称 
-     * @return Name Kafka导入任务名称
+     * Get <p>Kafka导入任务名称</p> 
+     * @return Name <p>Kafka导入任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Kafka导入任务名称
-     * @param Name Kafka导入任务名称
+     * Set <p>Kafka导入任务名称</p>
+     * @param Name <p>Kafka导入任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka 
-     * @return KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+     * Get <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p> 
+     * @return KafkaType <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-     * @param KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+     * Set <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
+     * @param KafkaType <p>导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka</p>
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，KafkaType为0时必填 
-     * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
+     * Get <p>腾讯云CKafka实例ID，KafkaType为0时必填</p> 
+     * @return KafkaInstance <p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID，KafkaType为0时必填
-     * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
+     * Set <p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
+     * @param KafkaInstance <p>腾讯云CKafka实例ID，KafkaType为0时必填</p>
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get 服务地址 
-     * @return ServerAddr 服务地址
+     * Get <p>服务地址</p> 
+     * @return ServerAddr <p>服务地址</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址
-     * @param ServerAddr 服务地址
+     * Set <p>服务地址</p>
+     * @param ServerAddr <p>服务地址</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get ServerAddr是否为加密连接	 
-     * @return IsEncryptionAddr ServerAddr是否为加密连接	
+     * Get <p>ServerAddr是否为加密连接</p> 
+     * @return IsEncryptionAddr <p>ServerAddr是否为加密连接</p>
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set ServerAddr是否为加密连接	
-     * @param IsEncryptionAddr ServerAddr是否为加密连接	
+     * Set <p>ServerAddr是否为加密连接</p>
+     * @param IsEncryptionAddr <p>ServerAddr是否为加密连接</p>
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get 加密访问协议，IsEncryptionAddr参数为true时必填 
-     * @return Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * Get <p>加密访问协议，IsEncryptionAddr参数为true时必填</p> 
+     * @return Protocol <p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 加密访问协议，IsEncryptionAddr参数为true时必填
-     * @param Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * Set <p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
+     * @param Protocol <p>加密访问协议，IsEncryptionAddr参数为true时必填</p>
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开 
-     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+     * Get <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p> 
+     * @return UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+     * Set <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
+     * @param UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开</p>
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
     }
 
     /**
-     * Get 用户Kafka消费组名称	 
-     * @return ConsumerGroupName 用户Kafka消费组名称	
+     * Get <p>用户Kafka消费组名称</p> 
+     * @return ConsumerGroupName <p>用户Kafka消费组名称</p>
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set 用户Kafka消费组名称	
-     * @param ConsumerGroupName 用户Kafka消费组名称	
+     * Set <p>用户Kafka消费组名称</p>
+     * @param ConsumerGroupName <p>用户Kafka消费组名称</p>
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
     }
 
     /**
-     * Get 状态 ，1：运行中；2：暂停。 
-     * @return Status 状态 ，1：运行中；2：暂停。
+     * Get <p>状态 ，1：运行中；2：暂停。</p> 
+     * @return Status <p>状态 ，1：运行中；2：暂停。</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态 ，1：运行中；2：暂停。
-     * @param Status 状态 ，1：运行中；2：暂停。
+     * Set <p>状态 ，1：运行中；2：暂停。</p>
+     * @param Status <p>状态 ，1：运行中；2：暂停。</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 导入数据位置，-2:最早（默认），-1：最晚 
-     * @return Offset 导入数据位置，-2:最早（默认），-1：最晚
+     * Get <p>导入数据位置，-2:最早（默认），-1：最晚</p> 
+     * @return Offset <p>导入数据位置，-2:最早（默认），-1：最晚</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 导入数据位置，-2:最早（默认），-1：最晚
-     * @param Offset 导入数据位置，-2:最早（默认），-1：最晚
+     * Set <p>导入数据位置，-2:最早（默认），-1：最晚</p>
+     * @param Offset <p>导入数据位置，-2:最早（默认），-1：最晚</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 创建时间。格式`YYYY-MM-DD HH:MM:SS` 
-     * @return CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
+     * Get <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p> 
+     * @return CreateTime <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。格式`YYYY-MM-DD HH:MM:SS`
-     * @param CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
+     * Set <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+     * @param CreateTime <p>创建时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间。格式`YYYY-MM-DD HH:MM:SS` 
-     * @return UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
+     * Get <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p> 
+     * @return UpdateTime <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间。格式`YYYY-MM-DD HH:MM:SS`
-     * @param UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
+     * Set <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
+     * @param UpdateTime <p>更新时间。格式<code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 日志导入规则 
-     * @return LogRechargeRule 日志导入规则
+     * Get <p>日志导入规则</p> 
+     * @return LogRechargeRule <p>日志导入规则</p>
      */
     public LogRechargeRuleInfo getLogRechargeRule() {
         return this.LogRechargeRule;
     }
 
     /**
-     * Set 日志导入规则
-     * @param LogRechargeRule 日志导入规则
+     * Set <p>日志导入规则</p>
+     * @param LogRechargeRule <p>日志导入规则</p>
      */
     public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
         this.LogRechargeRule = LogRechargeRule;
     }
 
     /**
-     * Get 用户kafka拓展信息 
-     * @return UserKafkaMeta 用户kafka拓展信息
+     * Get <p>私有网络信息</p> 
+     * @return NetworkInfo <p>私有网络信息</p>
+     */
+    public NetworkInfo getNetworkInfo() {
+        return this.NetworkInfo;
+    }
+
+    /**
+     * Set <p>私有网络信息</p>
+     * @param NetworkInfo <p>私有网络信息</p>
+     */
+    public void setNetworkInfo(NetworkInfo NetworkInfo) {
+        this.NetworkInfo = NetworkInfo;
+    }
+
+    /**
+     * Get <p>用户kafka拓展信息</p> 
+     * @return UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public UserKafkaMeta getUserKafkaMeta() {
         return this.UserKafkaMeta;
     }
 
     /**
-     * Set 用户kafka拓展信息
-     * @param UserKafkaMeta 用户kafka拓展信息
+     * Set <p>用户kafka拓展信息</p>
+     * @param UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
         this.UserKafkaMeta = UserKafkaMeta;
@@ -444,6 +467,9 @@ public class KafkaRechargeInfo extends AbstractModel {
         if (source.LogRechargeRule != null) {
             this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
         }
+        if (source.NetworkInfo != null) {
+            this.NetworkInfo = new NetworkInfo(source.NetworkInfo);
+        }
         if (source.UserKafkaMeta != null) {
             this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
         }
@@ -469,6 +495,7 @@ public class KafkaRechargeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+        this.setParamObj(map, prefix + "NetworkInfo.", this.NetworkInfo);
         this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }

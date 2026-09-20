@@ -52,7 +52,7 @@ public class AIGWMCPServer extends AbstractModel {
     private String Transport;
 
     /**
-    * <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+    * <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
     */
     @SerializedName("UpstreamType")
     @Expose
@@ -174,6 +174,13 @@ public class AIGWMCPServer extends AbstractModel {
     private Boolean PreserveHost;
 
     /**
+    * <p>日志采集配置</p>
+    */
+    @SerializedName("LogConfig")
+    @Expose
+    private AIGWLogConfig LogConfig;
+
+    /**
      * Get <p>MCP Server ID</p> 
      * @return ServerId <p>MCP Server ID</p>
      */
@@ -238,16 +245,16 @@ public class AIGWMCPServer extends AbstractModel {
     }
 
     /**
-     * Get <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul> 
-     * @return UpstreamType <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+     * Get <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul> 
+     * @return UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      */
     public String getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
-     * @param UpstreamType <p>服务类型：</p><ul><li>Registry  </li><li>HostIP</li></ul>
+     * Set <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
+     * @param UpstreamType <p>后端类型</p><p>枚举值：</p><ul><li>MCPRegistry： mcp 注册中心</li><li>Registry： 普通注册中心</li><li>HostIP： 域名或ip</li><li>VirtualMCPServer： 虚拟MCPServer</li><li>DNS： 私有域名</li><li>Kubernetes： Kubernetes服务</li></ul>
      */
     public void setUpstreamType(String UpstreamType) {
         this.UpstreamType = UpstreamType;
@@ -521,6 +528,22 @@ public class AIGWMCPServer extends AbstractModel {
         this.PreserveHost = PreserveHost;
     }
 
+    /**
+     * Get <p>日志采集配置</p> 
+     * @return LogConfig <p>日志采集配置</p>
+     */
+    public AIGWLogConfig getLogConfig() {
+        return this.LogConfig;
+    }
+
+    /**
+     * Set <p>日志采集配置</p>
+     * @param LogConfig <p>日志采集配置</p>
+     */
+    public void setLogConfig(AIGWLogConfig LogConfig) {
+        this.LogConfig = LogConfig;
+    }
+
     public AIGWMCPServer() {
     }
 
@@ -592,6 +615,9 @@ public class AIGWMCPServer extends AbstractModel {
         if (source.PreserveHost != null) {
             this.PreserveHost = new Boolean(source.PreserveHost);
         }
+        if (source.LogConfig != null) {
+            this.LogConfig = new AIGWLogConfig(source.LogConfig);
+        }
     }
 
 
@@ -620,6 +646,7 @@ public class AIGWMCPServer extends AbstractModel {
         this.setParamSimple(map, prefix + "ConflictStrategy", this.ConflictStrategy);
         this.setParamSimple(map, prefix + "MarketStatus", this.MarketStatus);
         this.setParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
+        this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
 
     }
 }

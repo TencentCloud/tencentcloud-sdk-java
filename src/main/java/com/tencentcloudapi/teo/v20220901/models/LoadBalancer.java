@@ -24,293 +24,253 @@ import java.util.HashMap;
 public class LoadBalancer extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。	
+    * <p>实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例类型，取值有：
-<li>HTTP：HTTP 专用型，支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）；</li>
-<li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。</li>
+    * <p>实例类型，取值有：</p><li>HTTP_V2：HTTP 专用型（V2），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型支持选择发起探测的区域，可显著降低探测请求量但对源站的健康感知灵敏度更低；</li><li>HTTP：HTTP 专用型（V1），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高；</li><li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 健康检查策略。详情请参考 [健康检查策略介绍](https://cloud.tencent.com/document/product/1552/104228)。
+    * <p>健康检查策略。详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>。</p>
     */
     @SerializedName("HealthChecker")
     @Expose
     private HealthChecker HealthChecker;
 
     /**
-    * 源站组间的流量调度策略，取值有：
-<li>Pritory：按优先级顺序进行故障转移 。</li>
+    * <p>源站组间的流量调度策略，取值有：</p><li>Pritory：按优先级顺序进行故障转移 。</li>
     */
     @SerializedName("SteeringPolicy")
     @Expose
     private String SteeringPolicy;
 
     /**
-    * 实际访问某源站失败时的请求重试策略，详情请参考 [请求重试策略介绍](https://cloud.tencent.com/document/product/1552/104227)，取值有：
-<li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li>
-<li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
+    * <p>实际访问某源站失败时的请求重试策略，详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104227">请求重试策略介绍</a>，取值有：</p><li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li><li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
     */
     @SerializedName("FailoverPolicy")
     @Expose
     private String FailoverPolicy;
 
     /**
-    * 源站组健康状态。
+    * <p>源站组健康状态。</p>
     */
     @SerializedName("OriginGroupHealthStatus")
     @Expose
     private OriginGroupHealthStatus [] OriginGroupHealthStatus;
 
     /**
-    * 负载均衡状态，取值有：
-<li>Pending：部署中；</li>
-<li>Deleting：删除中；</li>
-<li>Running：已生效。</li>
+    * <p>负载均衡状态，取值有：</p><li>Pending：部署中；</li><li>Deleting：删除中；</li><li>Running：已生效。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 该负载均衡实例绑的四层代理实例的列表。
+    * <p>该负载均衡实例绑的四层代理实例的列表。</p>
     */
     @SerializedName("L4UsedList")
     @Expose
     private String [] L4UsedList;
 
     /**
-    * 该负载均衡实例绑定的七层域名列表。
+    * <p>该负载均衡实例绑定的七层域名列表。</p>
     */
     @SerializedName("L7UsedList")
     @Expose
     private String [] L7UsedList;
 
     /**
-    * 负载均衡被引用实例的列表。
+    * <p>负载均衡被引用实例的列表。</p>
     */
     @SerializedName("References")
     @Expose
     private OriginGroupReference [] References;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get <p>实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceId <p>实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。	 
-     * @return Name 实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。	
+     * Get <p>实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。</p> 
+     * @return Name <p>实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。	
-     * @param Name 实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。	
+     * Set <p>实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。</p>
+     * @param Name <p>实例名称，可输入 1-200 个字符，允许字符为 a-z，A-Z，0-9，_，-。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例类型，取值有：
-<li>HTTP：HTTP 专用型，支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）；</li>
-<li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。</li> 
-     * @return Type 实例类型，取值有：
-<li>HTTP：HTTP 专用型，支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）；</li>
-<li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。</li>
+     * Get <p>实例类型，取值有：</p><li>HTTP_V2：HTTP 专用型（V2），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型支持选择发起探测的区域，可显著降低探测请求量但对源站的健康感知灵敏度更低；</li><li>HTTP：HTTP 专用型（V1），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高；</li><li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高。</li> 
+     * @return Type <p>实例类型，取值有：</p><li>HTTP_V2：HTTP 专用型（V2），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型支持选择发起探测的区域，可显著降低探测请求量但对源站的健康感知灵敏度更低；</li><li>HTTP：HTTP 专用型（V1），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高；</li><li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型，取值有：
-<li>HTTP：HTTP 专用型，支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）；</li>
-<li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。</li>
-     * @param Type 实例类型，取值有：
-<li>HTTP：HTTP 专用型，支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）；</li>
-<li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。</li>
+     * Set <p>实例类型，取值有：</p><li>HTTP_V2：HTTP 专用型（V2），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型支持选择发起探测的区域，可显著降低探测请求量但对源站的健康感知灵敏度更低；</li><li>HTTP：HTTP 专用型（V1），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高；</li><li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高。</li>
+     * @param Type <p>实例类型，取值有：</p><li>HTTP_V2：HTTP 专用型（V2），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型支持选择发起探测的区域，可显著降低探测请求量但对源站的健康感知灵敏度更低；</li><li>HTTP：HTTP 专用型（V1），支持添加 HTTP 专用型和通用型源站组，仅支持被站点加速相关服务引用（如域名服务和规则引擎）。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高；</li><li>GENERAL：通用型，仅支持添加通用型源站组，能被站点加速服务（如域名服务和规则引擎）和四层代理引用。该实例类型不支持选择发起探测的区域，探测请求量较大但对源站的健康感知灵敏度更高。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 健康检查策略。详情请参考 [健康检查策略介绍](https://cloud.tencent.com/document/product/1552/104228)。 
-     * @return HealthChecker 健康检查策略。详情请参考 [健康检查策略介绍](https://cloud.tencent.com/document/product/1552/104228)。
+     * Get <p>健康检查策略。详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>。</p> 
+     * @return HealthChecker <p>健康检查策略。详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>。</p>
      */
     public HealthChecker getHealthChecker() {
         return this.HealthChecker;
     }
 
     /**
-     * Set 健康检查策略。详情请参考 [健康检查策略介绍](https://cloud.tencent.com/document/product/1552/104228)。
-     * @param HealthChecker 健康检查策略。详情请参考 [健康检查策略介绍](https://cloud.tencent.com/document/product/1552/104228)。
+     * Set <p>健康检查策略。详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>。</p>
+     * @param HealthChecker <p>健康检查策略。详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>。</p>
      */
     public void setHealthChecker(HealthChecker HealthChecker) {
         this.HealthChecker = HealthChecker;
     }
 
     /**
-     * Get 源站组间的流量调度策略，取值有：
-<li>Pritory：按优先级顺序进行故障转移 。</li> 
-     * @return SteeringPolicy 源站组间的流量调度策略，取值有：
-<li>Pritory：按优先级顺序进行故障转移 。</li>
+     * Get <p>源站组间的流量调度策略，取值有：</p><li>Pritory：按优先级顺序进行故障转移 。</li> 
+     * @return SteeringPolicy <p>源站组间的流量调度策略，取值有：</p><li>Pritory：按优先级顺序进行故障转移 。</li>
      */
     public String getSteeringPolicy() {
         return this.SteeringPolicy;
     }
 
     /**
-     * Set 源站组间的流量调度策略，取值有：
-<li>Pritory：按优先级顺序进行故障转移 。</li>
-     * @param SteeringPolicy 源站组间的流量调度策略，取值有：
-<li>Pritory：按优先级顺序进行故障转移 。</li>
+     * Set <p>源站组间的流量调度策略，取值有：</p><li>Pritory：按优先级顺序进行故障转移 。</li>
+     * @param SteeringPolicy <p>源站组间的流量调度策略，取值有：</p><li>Pritory：按优先级顺序进行故障转移 。</li>
      */
     public void setSteeringPolicy(String SteeringPolicy) {
         this.SteeringPolicy = SteeringPolicy;
     }
 
     /**
-     * Get 实际访问某源站失败时的请求重试策略，详情请参考 [请求重试策略介绍](https://cloud.tencent.com/document/product/1552/104227)，取值有：
-<li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li>
-<li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li> 
-     * @return FailoverPolicy 实际访问某源站失败时的请求重试策略，详情请参考 [请求重试策略介绍](https://cloud.tencent.com/document/product/1552/104227)，取值有：
-<li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li>
-<li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
+     * Get <p>实际访问某源站失败时的请求重试策略，详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104227">请求重试策略介绍</a>，取值有：</p><li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li><li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li> 
+     * @return FailoverPolicy <p>实际访问某源站失败时的请求重试策略，详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104227">请求重试策略介绍</a>，取值有：</p><li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li><li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
      */
     public String getFailoverPolicy() {
         return this.FailoverPolicy;
     }
 
     /**
-     * Set 实际访问某源站失败时的请求重试策略，详情请参考 [请求重试策略介绍](https://cloud.tencent.com/document/product/1552/104227)，取值有：
-<li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li>
-<li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
-     * @param FailoverPolicy 实际访问某源站失败时的请求重试策略，详情请参考 [请求重试策略介绍](https://cloud.tencent.com/document/product/1552/104227)，取值有：
-<li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li>
-<li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
+     * Set <p>实际访问某源站失败时的请求重试策略，详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104227">请求重试策略介绍</a>，取值有：</p><li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li><li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
+     * @param FailoverPolicy <p>实际访问某源站失败时的请求重试策略，详情请参考 <a href="https://cloud.tencent.com/document/product/1552/104227">请求重试策略介绍</a>，取值有：</p><li>OtherOriginGroup：单次请求失败后，请求优先重试下一优先级源站组；</li><li>OtherRecordInOriginGroup：单次请求失败后，请求优先重试同源站组内的其他源站。</li>
      */
     public void setFailoverPolicy(String FailoverPolicy) {
         this.FailoverPolicy = FailoverPolicy;
     }
 
     /**
-     * Get 源站组健康状态。 
-     * @return OriginGroupHealthStatus 源站组健康状态。
+     * Get <p>源站组健康状态。</p> 
+     * @return OriginGroupHealthStatus <p>源站组健康状态。</p>
      */
     public OriginGroupHealthStatus [] getOriginGroupHealthStatus() {
         return this.OriginGroupHealthStatus;
     }
 
     /**
-     * Set 源站组健康状态。
-     * @param OriginGroupHealthStatus 源站组健康状态。
+     * Set <p>源站组健康状态。</p>
+     * @param OriginGroupHealthStatus <p>源站组健康状态。</p>
      */
     public void setOriginGroupHealthStatus(OriginGroupHealthStatus [] OriginGroupHealthStatus) {
         this.OriginGroupHealthStatus = OriginGroupHealthStatus;
     }
 
     /**
-     * Get 负载均衡状态，取值有：
-<li>Pending：部署中；</li>
-<li>Deleting：删除中；</li>
-<li>Running：已生效。</li> 
-     * @return Status 负载均衡状态，取值有：
-<li>Pending：部署中；</li>
-<li>Deleting：删除中；</li>
-<li>Running：已生效。</li>
+     * Get <p>负载均衡状态，取值有：</p><li>Pending：部署中；</li><li>Deleting：删除中；</li><li>Running：已生效。</li> 
+     * @return Status <p>负载均衡状态，取值有：</p><li>Pending：部署中；</li><li>Deleting：删除中；</li><li>Running：已生效。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 负载均衡状态，取值有：
-<li>Pending：部署中；</li>
-<li>Deleting：删除中；</li>
-<li>Running：已生效。</li>
-     * @param Status 负载均衡状态，取值有：
-<li>Pending：部署中；</li>
-<li>Deleting：删除中；</li>
-<li>Running：已生效。</li>
+     * Set <p>负载均衡状态，取值有：</p><li>Pending：部署中；</li><li>Deleting：删除中；</li><li>Running：已生效。</li>
+     * @param Status <p>负载均衡状态，取值有：</p><li>Pending：部署中；</li><li>Deleting：删除中；</li><li>Running：已生效。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 该负载均衡实例绑的四层代理实例的列表。 
-     * @return L4UsedList 该负载均衡实例绑的四层代理实例的列表。
+     * Get <p>该负载均衡实例绑的四层代理实例的列表。</p> 
+     * @return L4UsedList <p>该负载均衡实例绑的四层代理实例的列表。</p>
      */
     public String [] getL4UsedList() {
         return this.L4UsedList;
     }
 
     /**
-     * Set 该负载均衡实例绑的四层代理实例的列表。
-     * @param L4UsedList 该负载均衡实例绑的四层代理实例的列表。
+     * Set <p>该负载均衡实例绑的四层代理实例的列表。</p>
+     * @param L4UsedList <p>该负载均衡实例绑的四层代理实例的列表。</p>
      */
     public void setL4UsedList(String [] L4UsedList) {
         this.L4UsedList = L4UsedList;
     }
 
     /**
-     * Get 该负载均衡实例绑定的七层域名列表。 
-     * @return L7UsedList 该负载均衡实例绑定的七层域名列表。
+     * Get <p>该负载均衡实例绑定的七层域名列表。</p> 
+     * @return L7UsedList <p>该负载均衡实例绑定的七层域名列表。</p>
      */
     public String [] getL7UsedList() {
         return this.L7UsedList;
     }
 
     /**
-     * Set 该负载均衡实例绑定的七层域名列表。
-     * @param L7UsedList 该负载均衡实例绑定的七层域名列表。
+     * Set <p>该负载均衡实例绑定的七层域名列表。</p>
+     * @param L7UsedList <p>该负载均衡实例绑定的七层域名列表。</p>
      */
     public void setL7UsedList(String [] L7UsedList) {
         this.L7UsedList = L7UsedList;
     }
 
     /**
-     * Get 负载均衡被引用实例的列表。 
-     * @return References 负载均衡被引用实例的列表。
+     * Get <p>负载均衡被引用实例的列表。</p> 
+     * @return References <p>负载均衡被引用实例的列表。</p>
      */
     public OriginGroupReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set 负载均衡被引用实例的列表。
-     * @param References 负载均衡被引用实例的列表。
+     * Set <p>负载均衡被引用实例的列表。</p>
+     * @param References <p>负载均衡被引用实例的列表。</p>
      */
     public void setReferences(OriginGroupReference [] References) {
         this.References = References;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayAIServiceSourceListResponse extends AbstractModel {
 
     /**
-    * MCP Server 列表结果
+    * <p>MCP Server 列表结果</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewayAIServiceSourceListResponse extends Ab
     private String RequestId;
 
     /**
-     * Get MCP Server 列表结果 
-     * @return Result MCP Server 列表结果
+     * Get <p>MCP Server 列表结果</p> 
+     * @return Result <p>MCP Server 列表结果</p>
      */
     public CNAPIGwAIServiceSourceList getResult() {
         return this.Result;
     }
 
     /**
-     * Set MCP Server 列表结果
-     * @param Result MCP Server 列表结果
+     * Set <p>MCP Server 列表结果</p>
+     * @param Result <p>MCP Server 列表结果</p>
      */
     public void setResult(CNAPIGwAIServiceSourceList Result) {
         this.Result = Result;

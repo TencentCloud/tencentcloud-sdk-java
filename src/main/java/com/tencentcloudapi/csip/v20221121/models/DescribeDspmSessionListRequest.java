@@ -45,7 +45,7 @@ public class DescribeDspmSessionListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>登陆状态(0 全部 1 成功 2 失败)</p>
+    * <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
     */
     @SerializedName("LoginType")
     @Expose
@@ -177,16 +177,16 @@ public class DescribeDspmSessionListRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>登陆状态(0 全部 1 成功 2 失败)</p> 
-     * @return LoginType <p>登陆状态(0 全部 1 成功 2 失败)</p>
+     * Get <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul> 
+     * @return LoginType <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
      */
     public Long getLoginType() {
         return this.LoginType;
     }
 
     /**
-     * Set <p>登陆状态(0 全部 1 成功 2 失败)</p>
-     * @param LoginType <p>登陆状态(0 全部 1 成功 2 失败)</p>
+     * Set <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
+     * @param LoginType <p>登录状态</p><p>枚举值：</p><ul><li>0： 全部</li><li>1： 成功</li><li>2： 失败</li></ul>
      */
     public void setLoginType(Long LoginType) {
         this.LoginType = LoginType;

@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeExposePathResponse extends AbstractModel {
 
     /**
-    * 云边界分析路径节点内容
+    * <p>云边界分析路径节点内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
+
+    /**
+    * <p>互联网节点数量</p>
+    */
+    @SerializedName("PathCount")
+    @Expose
+    private Long PathCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeExposePathResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云边界分析路径节点内容 
-     * @return Content 云边界分析路径节点内容
+     * Get <p>云边界分析路径节点内容</p> 
+     * @return Content <p>云边界分析路径节点内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 云边界分析路径节点内容
-     * @param Content 云边界分析路径节点内容
+     * Set <p>云边界分析路径节点内容</p>
+     * @param Content <p>云边界分析路径节点内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get <p>互联网节点数量</p> 
+     * @return PathCount <p>互联网节点数量</p>
+     */
+    public Long getPathCount() {
+        return this.PathCount;
+    }
+
+    /**
+     * Set <p>互联网节点数量</p>
+     * @param PathCount <p>互联网节点数量</p>
+     */
+    public void setPathCount(Long PathCount) {
+        this.PathCount = PathCount;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DescribeExposePathResponse extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.PathCount != null) {
+            this.PathCount = new Long(source.PathCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class DescribeExposePathResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "PathCount", this.PathCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

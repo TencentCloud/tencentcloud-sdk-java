@@ -1,0 +1,182 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iotexplorer.v20190423.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class GetVodCloudStorageVideoListResponse extends AbstractModel {
+
+    /**
+    * <p>播放器使用的 VOD 子应用 ID</p>
+    */
+    @SerializedName("VodAppId")
+    @Expose
+    private String VodAppId;
+
+    /**
+    * <p>视频列表</p>
+    */
+    @SerializedName("VideoList")
+    @Expose
+    private VideoList [] VideoList;
+
+    /**
+    * <p>是否已拉完</p>
+    */
+    @SerializedName("Listover")
+    @Expose
+    private Boolean Listover;
+
+    /**
+    * <p>下一页游标</p>
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get <p>播放器使用的 VOD 子应用 ID</p> 
+     * @return VodAppId <p>播放器使用的 VOD 子应用 ID</p>
+     */
+    public String getVodAppId() {
+        return this.VodAppId;
+    }
+
+    /**
+     * Set <p>播放器使用的 VOD 子应用 ID</p>
+     * @param VodAppId <p>播放器使用的 VOD 子应用 ID</p>
+     */
+    public void setVodAppId(String VodAppId) {
+        this.VodAppId = VodAppId;
+    }
+
+    /**
+     * Get <p>视频列表</p> 
+     * @return VideoList <p>视频列表</p>
+     */
+    public VideoList [] getVideoList() {
+        return this.VideoList;
+    }
+
+    /**
+     * Set <p>视频列表</p>
+     * @param VideoList <p>视频列表</p>
+     */
+    public void setVideoList(VideoList [] VideoList) {
+        this.VideoList = VideoList;
+    }
+
+    /**
+     * Get <p>是否已拉完</p> 
+     * @return Listover <p>是否已拉完</p>
+     */
+    public Boolean getListover() {
+        return this.Listover;
+    }
+
+    /**
+     * Set <p>是否已拉完</p>
+     * @param Listover <p>是否已拉完</p>
+     */
+    public void setListover(Boolean Listover) {
+        this.Listover = Listover;
+    }
+
+    /**
+     * Get <p>下一页游标</p> 
+     * @return Context <p>下一页游标</p>
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set <p>下一页游标</p>
+     * @param Context <p>下一页游标</p>
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public GetVodCloudStorageVideoListResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetVodCloudStorageVideoListResponse(GetVodCloudStorageVideoListResponse source) {
+        if (source.VodAppId != null) {
+            this.VodAppId = new String(source.VodAppId);
+        }
+        if (source.VideoList != null) {
+            this.VideoList = new VideoList[source.VideoList.length];
+            for (int i = 0; i < source.VideoList.length; i++) {
+                this.VideoList[i] = new VideoList(source.VideoList[i]);
+            }
+        }
+        if (source.Listover != null) {
+            this.Listover = new Boolean(source.Listover);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VodAppId", this.VodAppId);
+        this.setParamArrayObj(map, prefix + "VideoList.", this.VideoList);
+        this.setParamSimple(map, prefix + "Listover", this.Listover);
+        this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

@@ -101,7 +101,7 @@ public class CreateListenerRequest extends AbstractModel {
     private Boolean XForwardedForRealIp;
 
     /**
-    * <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+    * <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
     */
     @SerializedName("CertificationType")
     @Expose
@@ -312,16 +312,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p> 
-     * @return CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * Get <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p> 
+     * @return CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      */
     public String getCertificationType() {
         return this.CertificationType;
     }
 
     /**
-     * Set <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
-     * @param CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 双向。</li><li>U： 单向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * Set <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
+     * @param CertificationType <p>解析方式。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向。</li><li>MUTUAL： 双向。</li></ul><p>HTTPS监听器，此字段必传。</p>
      */
     public void setCertificationType(String CertificationType) {
         this.CertificationType = CertificationType;

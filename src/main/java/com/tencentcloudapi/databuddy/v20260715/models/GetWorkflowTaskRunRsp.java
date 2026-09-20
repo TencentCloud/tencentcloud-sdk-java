@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetWorkflowTaskRunRsp extends AbstractModel {
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -32,7 +32,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TaskName;
 
     /**
-    * 任务运行ID
+    * <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowTaskRunId")
@@ -40,7 +40,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String WorkflowTaskRunId;
 
     /**
-    * 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+    * <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunState")
@@ -48,7 +48,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunState;
 
     /**
-    * 工作空间ID
+    * <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
@@ -56,7 +56,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String WorkspaceId;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -64,7 +64,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流运行ID
+    * <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowRunId")
@@ -72,7 +72,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String WorkflowRunId;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -80,7 +80,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务类型名称
+    * <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeName")
@@ -88,7 +88,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TaskTypeName;
 
     /**
-    * 任务版本ID
+    * <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskVersionId")
@@ -96,7 +96,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TaskVersionId;
 
     /**
-    * 触发类型 (参考SchedulerTriggerType枚举)
+    * <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
@@ -104,7 +104,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TriggerType;
 
     /**
-    * 所属资源组ID
+    * <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -112,7 +112,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 错误码
+    * <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorCodeString")
@@ -120,7 +120,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String ErrorCodeString;
 
     /**
-    * 运行用户UIN
+    * <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunUserUin")
@@ -128,7 +128,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunUserUin;
 
     /**
-    * 运行用户名称
+    * <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunUserName")
@@ -136,7 +136,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunUserName;
 
     /**
-    * 创建人UIN
+    * <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserUin")
@@ -144,7 +144,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String CreateUserUin;
 
     /**
-    * 执行平台执行ID
+    * <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -152,7 +152,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String JobId;
 
     /**
-    * 创建时间，单位：毫秒时间戳
+    * <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -160,7 +160,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间，单位：毫秒时间戳
+    * <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -168,7 +168,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 依赖任务完成时间，单位：毫秒时间戳
+    * <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependenceFinishedTime")
@@ -176,7 +176,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String DependenceFinishedTime;
 
     /**
-    * 运行开始时间，单位：毫秒时间戳
+    * <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunStartTime")
@@ -184,7 +184,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunStartTime;
 
     /**
-    * 运行结束时间，单位：毫秒时间戳
+    * <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunEndTime")
@@ -192,7 +192,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunEndTime;
 
     /**
-    * 运行时长，单位：秒
+    * <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunCostTime")
@@ -200,7 +200,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunCostTime;
 
     /**
-    * 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+    * <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaitTime")
@@ -208,7 +208,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String WaitTime;
 
     /**
-    * 下发执行平台时间，单位：毫秒时间戳
+    * <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IssueTime")
@@ -216,7 +216,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String IssueTime;
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeZone")
@@ -224,7 +224,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TimeZone;
 
     /**
-    * 依赖上游任务ID列表
+    * <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependOnList")
@@ -232,7 +232,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String [] DependOnList;
 
     /**
-    * 运行参数
+    * <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunParams")
@@ -240,7 +240,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunParams;
 
     /**
-    * 任务扩展信息，包含脚本路径
+    * <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeExtensions")
@@ -248,7 +248,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TaskTypeExtensions;
 
     /**
-    * 任务X坐标
+    * <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftCoordinate")
@@ -256,7 +256,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private Float LeftCoordinate;
 
     /**
-    * 任务Y坐标
+    * <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopCoordinate")
@@ -264,7 +264,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private Float TopCoordinate;
 
     /**
-    * 重试次数
+    * <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryTimes")
@@ -272,7 +272,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private Long RetryTimes;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -280,7 +280,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 重跑次数
+    * <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RerunTimes")
@@ -288,7 +288,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private Long RerunTimes;
 
     /**
-    * 是否最新一次运行
+    * <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLatestRun")
@@ -296,7 +296,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private Boolean IsLatestRun;
 
     /**
-    * 资源组信息列表
+    * <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupInfoList")
@@ -304,7 +304,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private ResourceGroupInfo [] ResourceGroupInfoList;
 
     /**
-    * 错误消息
+    * <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
@@ -312,7 +312,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String ErrorMessage;
 
     /**
-    * 运行结果
+    * <p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunResult")
@@ -320,7 +320,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String RunResult;
 
     /**
-    * 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+    * <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerWorkflowTaskRun")
@@ -328,9 +328,17 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private InnerWorkflowTaskRun InnerWorkflowTaskRun;
 
     /**
-     * Get 任务名称
+    * <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduledTime")
+    @Expose
+    private String ScheduledTime;
+
+    /**
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -338,9 +346,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -348,9 +356,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务运行ID
+     * Get <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowTaskRunId 任务运行ID
+     * @return WorkflowTaskRunId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowTaskRunId() {
@@ -358,9 +366,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务运行ID
+     * Set <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowTaskRunId 任务运行ID
+     * @param WorkflowTaskRunId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowTaskRunId(String WorkflowTaskRunId) {
@@ -368,9 +376,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+     * Get <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunState 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+     * @return RunState <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunState() {
@@ -378,9 +386,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+     * Set <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunState 运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed
+     * @param RunState <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunState(String RunState) {
@@ -388,9 +396,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 工作空间ID
+     * Get <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkspaceId 工作空间ID
+     * @return WorkspaceId <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceId() {
@@ -398,9 +406,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 工作空间ID
+     * Set <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkspaceId 工作空间ID
+     * @param WorkspaceId <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(String WorkspaceId) {
@@ -408,9 +416,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 工作流ID
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -418,9 +426,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -428,9 +436,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 工作流运行ID
+     * Get <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowRunId 工作流运行ID
+     * @return WorkflowRunId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowRunId() {
@@ -438,9 +446,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 工作流运行ID
+     * Set <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowRunId 工作流运行ID
+     * @param WorkflowRunId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowRunId(String WorkflowRunId) {
@@ -448,9 +456,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务ID
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @return TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -458,9 +466,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
+     * @param TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -468,9 +476,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务类型名称
+     * Get <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeName 任务类型名称
+     * @return TaskTypeName <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeName() {
@@ -478,9 +486,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务类型名称
+     * Set <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeName 任务类型名称
+     * @param TaskTypeName <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeName(String TaskTypeName) {
@@ -488,9 +496,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务版本ID
+     * Get <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskVersionId 任务版本ID
+     * @return TaskVersionId <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskVersionId() {
@@ -498,9 +506,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务版本ID
+     * Set <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskVersionId 任务版本ID
+     * @param TaskVersionId <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskVersionId(String TaskVersionId) {
@@ -508,9 +516,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 触发类型 (参考SchedulerTriggerType枚举)
+     * Get <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerType 触发类型 (参考SchedulerTriggerType枚举)
+     * @return TriggerType <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerType() {
@@ -518,9 +526,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 触发类型 (参考SchedulerTriggerType枚举)
+     * Set <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerType 触发类型 (参考SchedulerTriggerType枚举)
+     * @param TriggerType <p>触发类型 (参考SchedulerTriggerType枚举)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(String TriggerType) {
@@ -528,9 +536,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 所属资源组ID
+     * Get <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 所属资源组ID
+     * @return ResourceGroupId <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -538,9 +546,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 所属资源组ID
+     * Set <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 所属资源组ID
+     * @param ResourceGroupId <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -548,9 +556,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 错误码
+     * Get <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorCodeString 错误码
+     * @return ErrorCodeString <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorCodeString() {
@@ -558,9 +566,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 错误码
+     * Set <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorCodeString 错误码
+     * @param ErrorCodeString <p>错误码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorCodeString(String ErrorCodeString) {
@@ -568,9 +576,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行用户UIN
+     * Get <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunUserUin 运行用户UIN
+     * @return RunUserUin <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunUserUin() {
@@ -578,9 +586,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行用户UIN
+     * Set <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunUserUin 运行用户UIN
+     * @param RunUserUin <p>运行用户UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunUserUin(String RunUserUin) {
@@ -588,9 +596,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行用户名称
+     * Get <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunUserName 运行用户名称
+     * @return RunUserName <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunUserName() {
@@ -598,9 +606,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行用户名称
+     * Set <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunUserName 运行用户名称
+     * @param RunUserName <p>运行用户名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunUserName(String RunUserName) {
@@ -608,9 +616,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 创建人UIN
+     * Get <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserUin 创建人UIN
+     * @return CreateUserUin <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserUin() {
@@ -618,9 +626,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 创建人UIN
+     * Set <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserUin 创建人UIN
+     * @param CreateUserUin <p>创建人UIN</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserUin(String CreateUserUin) {
@@ -628,9 +636,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 执行平台执行ID
+     * Get <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 执行平台执行ID
+     * @return JobId <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
@@ -638,9 +646,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 执行平台执行ID
+     * Set <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 执行平台执行ID
+     * @param JobId <p>执行平台执行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
@@ -648,9 +656,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，单位：毫秒时间戳
+     * Get <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间，单位：毫秒时间戳
+     * @return CreateTime <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -658,9 +666,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 创建时间，单位：毫秒时间戳
+     * Set <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间，单位：毫秒时间戳
+     * @param CreateTime <p>创建时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -668,9 +676,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 更新时间，单位：毫秒时间戳
+     * Get <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间，单位：毫秒时间戳
+     * @return UpdateTime <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -678,9 +686,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 更新时间，单位：毫秒时间戳
+     * Set <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间，单位：毫秒时间戳
+     * @param UpdateTime <p>更新时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -688,9 +696,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 依赖任务完成时间，单位：毫秒时间戳
+     * Get <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependenceFinishedTime 依赖任务完成时间，单位：毫秒时间戳
+     * @return DependenceFinishedTime <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependenceFinishedTime() {
@@ -698,9 +706,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 依赖任务完成时间，单位：毫秒时间戳
+     * Set <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependenceFinishedTime 依赖任务完成时间，单位：毫秒时间戳
+     * @param DependenceFinishedTime <p>依赖任务完成时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependenceFinishedTime(String DependenceFinishedTime) {
@@ -708,9 +716,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行开始时间，单位：毫秒时间戳
+     * Get <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunStartTime 运行开始时间，单位：毫秒时间戳
+     * @return RunStartTime <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunStartTime() {
@@ -718,9 +726,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行开始时间，单位：毫秒时间戳
+     * Set <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunStartTime 运行开始时间，单位：毫秒时间戳
+     * @param RunStartTime <p>运行开始时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunStartTime(String RunStartTime) {
@@ -728,9 +736,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行结束时间，单位：毫秒时间戳
+     * Get <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunEndTime 运行结束时间，单位：毫秒时间戳
+     * @return RunEndTime <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunEndTime() {
@@ -738,9 +746,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行结束时间，单位：毫秒时间戳
+     * Set <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunEndTime 运行结束时间，单位：毫秒时间戳
+     * @param RunEndTime <p>运行结束时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunEndTime(String RunEndTime) {
@@ -748,9 +756,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行时长，单位：秒
+     * Get <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunCostTime 运行时长，单位：秒
+     * @return RunCostTime <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunCostTime() {
@@ -758,9 +766,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行时长，单位：秒
+     * Set <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunCostTime 运行时长，单位：秒
+     * @param RunCostTime <p>运行时长，单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunCostTime(String RunCostTime) {
@@ -768,9 +776,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+     * Get <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitTime 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+     * @return WaitTime <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWaitTime() {
@@ -778,9 +786,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+     * Set <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitTime 等待时长（依赖就绪到开始运行的等待耗时），单位：秒
+     * @param WaitTime <p>等待时长（依赖就绪到开始运行的等待耗时），单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaitTime(String WaitTime) {
@@ -788,9 +796,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 下发执行平台时间，单位：毫秒时间戳
+     * Get <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IssueTime 下发执行平台时间，单位：毫秒时间戳
+     * @return IssueTime <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIssueTime() {
@@ -798,9 +806,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 下发执行平台时间，单位：毫秒时间戳
+     * Set <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IssueTime 下发执行平台时间，单位：毫秒时间戳
+     * @param IssueTime <p>下发执行平台时间，单位：毫秒时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIssueTime(String IssueTime) {
@@ -808,9 +816,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 时区
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeZone 时区
+     * @return TimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeZone() {
@@ -818,9 +826,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeZone 时区
+     * @param TimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeZone(String TimeZone) {
@@ -828,9 +836,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 依赖上游任务ID列表
+     * Get <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependOnList 依赖上游任务ID列表
+     * @return DependOnList <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDependOnList() {
@@ -838,9 +846,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 依赖上游任务ID列表
+     * Set <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependOnList 依赖上游任务ID列表
+     * @param DependOnList <p>依赖上游任务ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependOnList(String [] DependOnList) {
@@ -848,9 +856,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行参数
+     * Get <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunParams 运行参数
+     * @return RunParams <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunParams() {
@@ -858,9 +866,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行参数
+     * Set <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunParams 运行参数
+     * @param RunParams <p>运行参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunParams(String RunParams) {
@@ -868,9 +876,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务扩展信息，包含脚本路径
+     * Get <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeExtensions 任务扩展信息，包含脚本路径
+     * @return TaskTypeExtensions <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeExtensions() {
@@ -878,9 +886,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务扩展信息，包含脚本路径
+     * Set <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeExtensions 任务扩展信息，包含脚本路径
+     * @param TaskTypeExtensions <p>任务扩展信息，包含脚本路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeExtensions(String TaskTypeExtensions) {
@@ -888,9 +896,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务X坐标
+     * Get <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LeftCoordinate 任务X坐标
+     * @return LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLeftCoordinate() {
@@ -898,9 +906,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务X坐标
+     * Set <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LeftCoordinate 任务X坐标
+     * @param LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftCoordinate(Float LeftCoordinate) {
@@ -908,9 +916,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 任务Y坐标
+     * Get <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopCoordinate 任务Y坐标
+     * @return TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopCoordinate() {
@@ -918,9 +926,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 任务Y坐标
+     * Set <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopCoordinate 任务Y坐标
+     * @param TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopCoordinate(Float TopCoordinate) {
@@ -928,9 +936,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 重试次数
+     * Get <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryTimes 重试次数
+     * @return RetryTimes <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryTimes() {
@@ -938,9 +946,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 重试次数
+     * Set <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryTimes 重试次数
+     * @param RetryTimes <p>重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryTimes(Long RetryTimes) {
@@ -948,9 +956,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -958,9 +966,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -968,9 +976,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 重跑次数
+     * Get <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RerunTimes 重跑次数
+     * @return RerunTimes <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRerunTimes() {
@@ -978,9 +986,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 重跑次数
+     * Set <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RerunTimes 重跑次数
+     * @param RerunTimes <p>重跑次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRerunTimes(Long RerunTimes) {
@@ -988,9 +996,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 是否最新一次运行
+     * Get <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLatestRun 是否最新一次运行
+     * @return IsLatestRun <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsLatestRun() {
@@ -998,9 +1006,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 是否最新一次运行
+     * Set <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLatestRun 是否最新一次运行
+     * @param IsLatestRun <p>是否最新一次运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLatestRun(Boolean IsLatestRun) {
@@ -1008,9 +1016,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 资源组信息列表
+     * Get <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupInfoList 资源组信息列表
+     * @return ResourceGroupInfoList <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceGroupInfo [] getResourceGroupInfoList() {
@@ -1018,9 +1026,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 资源组信息列表
+     * Set <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupInfoList 资源组信息列表
+     * @param ResourceGroupInfoList <p>资源组信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupInfoList(ResourceGroupInfo [] ResourceGroupInfoList) {
@@ -1028,9 +1036,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 错误消息
+     * Get <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMessage 错误消息
+     * @return ErrorMessage <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
@@ -1038,9 +1046,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 错误消息
+     * Set <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMessage 错误消息
+     * @param ErrorMessage <p>错误消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
@@ -1048,9 +1056,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 运行结果
+     * Get <p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunResult 运行结果
+     * @return RunResult <p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunResult() {
@@ -1058,9 +1066,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 运行结果
+     * Set <p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunResult 运行结果
+     * @param RunResult <p>运行结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunResult(String RunResult) {
@@ -1068,9 +1076,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+     * Get <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerWorkflowTaskRun 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+     * @return InnerWorkflowTaskRun <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InnerWorkflowTaskRun getInnerWorkflowTaskRun() {
@@ -1078,13 +1086,33 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+     * Set <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerWorkflowTaskRun 内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）
+     * @param InnerWorkflowTaskRun <p>内嵌工作流任务运行详情（仅限 FOR_EACH 任务，其他任务类型不返回该字段）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerWorkflowTaskRun(InnerWorkflowTaskRun InnerWorkflowTaskRun) {
         this.InnerWorkflowTaskRun = InnerWorkflowTaskRun;
+    }
+
+    /**
+     * Get <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduledTime() {
+        return this.ScheduledTime;
+    }
+
+    /**
+     * Set <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳（UTC）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduledTime(String ScheduledTime) {
+        this.ScheduledTime = ScheduledTime;
     }
 
     public GetWorkflowTaskRunRsp() {
@@ -1215,6 +1243,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
         if (source.InnerWorkflowTaskRun != null) {
             this.InnerWorkflowTaskRun = new InnerWorkflowTaskRun(source.InnerWorkflowTaskRun);
         }
+        if (source.ScheduledTime != null) {
+            this.ScheduledTime = new String(source.ScheduledTime);
+        }
     }
 
 
@@ -1260,6 +1291,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "RunResult", this.RunResult);
         this.setParamObj(map, prefix + "InnerWorkflowTaskRun.", this.InnerWorkflowTaskRun);
+        this.setParamSimple(map, prefix + "ScheduledTime", this.ScheduledTime);
 
     }
 }

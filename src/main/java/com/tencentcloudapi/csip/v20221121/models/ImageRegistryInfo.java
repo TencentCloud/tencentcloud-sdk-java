@@ -164,6 +164,13 @@ public class ImageRegistryInfo extends AbstractModel {
     private String UserName;
 
     /**
+    * <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+    */
+    @SerializedName("ConnStatus")
+    @Expose
+    private String ConnStatus;
+
+    /**
      * Get <p>仓库id</p> 
      * @return RegistryId <p>仓库id</p>
      */
@@ -483,6 +490,22 @@ public class ImageRegistryInfo extends AbstractModel {
         this.UserName = UserName;
     }
 
+    /**
+     * Get <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul> 
+     * @return ConnStatus <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+     */
+    public String getConnStatus() {
+        return this.ConnStatus;
+    }
+
+    /**
+     * Set <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+     * @param ConnStatus <p>连接状态</p><p>枚举值：</p><ul><li>status_connected： 连接成功</li><li>status_connecting： 连接中</li><li>status_connect_failed： 连接失败</li><li>status_partial_failed： 部分连接失败</li></ul>
+     */
+    public void setConnStatus(String ConnStatus) {
+        this.ConnStatus = ConnStatus;
+    }
+
     public ImageRegistryInfo() {
     }
 
@@ -554,6 +577,9 @@ public class ImageRegistryInfo extends AbstractModel {
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.ConnStatus != null) {
+            this.ConnStatus = new String(source.ConnStatus);
+        }
     }
 
 
@@ -581,6 +607,7 @@ public class ImageRegistryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncFailReason", this.SyncFailReason);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "ConnStatus", this.ConnStatus);
 
     }
 }

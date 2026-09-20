@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLoadBalancerResponse extends AbstractModel {
 
     /**
-    * 负载均衡实例 ID。
+    * <p>负载均衡实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 负载均衡实例 ID。 
-     * @return InstanceId 负载均衡实例 ID。
+     * Get <p>负载均衡实例 ID。</p> 
+     * @return InstanceId <p>负载均衡实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 负载均衡实例 ID。
-     * @param InstanceId 负载均衡实例 ID。
+     * Set <p>负载均衡实例 ID。</p>
+     * @param InstanceId <p>负载均衡实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

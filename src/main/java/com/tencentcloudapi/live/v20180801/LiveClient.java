@@ -184,6 +184,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *直播审核图库添加图片，添加到预设库，图库不需要创建。
+     * @param req CreateAuditImagesRequest
+     * @return CreateAuditImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditImagesResponse CreateAuditImages(CreateAuditImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditImages", CreateAuditImagesResponse.class);
+    }
+
+    /**
      *创建关键词库，直播审核功能使用。
      * @param req CreateAuditKeywordLibRequest
      * @return CreateAuditKeywordLibResponse
@@ -605,6 +616,28 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *直播审核图库删除图片。
+     * @param req DeleteAuditImagesRequest
+     * @return DeleteAuditImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditImagesResponse DeleteAuditImages(DeleteAuditImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditImages", DeleteAuditImagesResponse.class);
+    }
+
+    /**
+     *删除关键词库，直播审核功能使用。
+     * @param req DeleteAuditKeywordLibRequest
+     * @return DeleteAuditKeywordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditKeywordLibResponse DeleteAuditKeywordLib(DeleteAuditKeywordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditKeywordLib", DeleteAuditKeywordLibResponse.class);
+    }
+
+    /**
      *删除关键词信息。
      * @param req DeleteAuditKeywordsRequest
      * @return DeleteAuditKeywordsResponse
@@ -983,6 +1016,39 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAreaBillBandwidthAndFluxList", DescribeAreaBillBandwidthAndFluxListResponse.class);
+    }
+
+    /**
+     *获取标签组分类数据，直播审核中。
+     * @param req DescribeAuditGroupTagRequest
+     * @return DescribeAuditGroupTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditGroupTagResponse DescribeAuditGroupTag(DescribeAuditGroupTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditGroupTag", DescribeAuditGroupTagResponse.class);
+    }
+
+    /**
+     *直播审核图库获取图片。
+     * @param req DescribeAuditImagesRequest
+     * @return DescribeAuditImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditImagesResponse DescribeAuditImages(DescribeAuditImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditImages", DescribeAuditImagesResponse.class);
+    }
+
+    /**
+     *获取关键词库列表，直播审核功能使用。
+     * @param req DescribeAuditKeywordLibsRequest
+     * @return DescribeAuditKeywordLibsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditKeywordLibsResponse DescribeAuditKeywordLibs(DescribeAuditKeywordLibsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditKeywordLibs", DescribeAuditKeywordLibsResponse.class);
     }
 
     /**
@@ -2242,6 +2308,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public InsertTaskTemporaryFilesResponse InsertTaskTemporaryFiles(InsertTaskTemporaryFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InsertTaskTemporaryFiles", InsertTaskTemporaryFilesResponse.class);
+    }
+
+    /**
+     *更新关键词库信息，直播审核功能使用。
+     * @param req ModifyAuditKeywordLibRequest
+     * @return ModifyAuditKeywordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditKeywordLibResponse ModifyAuditKeywordLib(ModifyAuditKeywordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditKeywordLib", ModifyAuditKeywordLibResponse.class);
     }
 
     /**

@@ -45,11 +45,39 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
     private Long Offset;
 
     /**
+    * <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * <p>模糊匹配密钥名称。</p>
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
+    * <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
     * <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
+
+    /**
+    * <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+    */
+    @SerializedName("UseToBind")
+    @Expose
+    private Boolean UseToBind;
 
     /**
      * Get <p>实例 ID</p> 
@@ -100,6 +128,54 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
     }
 
     /**
+     * Get <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p> 
+     * @return Filters <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+     * @param Filters <p>过滤条件。支持的 Name：Status / GenerateType / SecretType。</p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>模糊匹配密钥名称。</p> 
+     * @return Keyword <p>模糊匹配密钥名称。</p>
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set <p>模糊匹配密钥名称。</p>
+     * @param Keyword <p>模糊匹配密钥名称。</p>
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
+     * Get <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p> 
+     * @return ResourceId <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+     * @param ResourceId <p>对应资源的 ID（消费者 ID 或模型服务 ID）。</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
      * Get <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul> 
      * @return ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
      */
@@ -113,6 +189,22 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p> 
+     * @return UseToBind <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+     */
+    public Boolean getUseToBind() {
+        return this.UseToBind;
+    }
+
+    /**
+     * Set <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+     * @param UseToBind <p>是否用于绑定场景。true 时返回可被绑定到指定资源的密钥。</p>
+     */
+    public void setUseToBind(Boolean UseToBind) {
+        this.UseToBind = UseToBind;
     }
 
     public DescribeCloudNativeAPIGatewaySecretKeyListRequest() {
@@ -132,8 +224,23 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.UseToBind != null) {
+            this.UseToBind = new Boolean(source.UseToBind);
         }
     }
 
@@ -145,7 +252,11 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "UseToBind", this.UseToBind);
 
     }
 }

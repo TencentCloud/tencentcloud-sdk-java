@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateKafkaRechargeResponse extends AbstractModel {
 
     /**
-    * Kafka导入配置ID
+    * <p>Kafka导入配置ID</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateKafkaRechargeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Kafka导入配置ID 
-     * @return Id Kafka导入配置ID
+     * Get <p>Kafka导入配置ID</p> 
+     * @return Id <p>Kafka导入配置ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Kafka导入配置ID
-     * @param Id Kafka导入配置ID
+     * Set <p>Kafka导入配置ID</p>
+     * @param Id <p>Kafka导入配置ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;

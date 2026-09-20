@@ -129,6 +129,27 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     private String NickName;
 
     /**
+    * <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+    */
+    @SerializedName("PostPayStatus")
+    @Expose
+    private Long PostPayStatus;
+
+    /**
+    * <p>后付费资源ID，未开通后付费时为空</p>
+    */
+    @SerializedName("PostPayResourceId")
+    @Expose
+    private String PostPayResourceId;
+
+    /**
+    * <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+    */
+    @SerializedName("PostPayBeginTime")
+    @Expose
+    private String PostPayBeginTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -376,6 +397,54 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p> 
+     * @return PostPayStatus <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+     */
+    public Long getPostPayStatus() {
+        return this.PostPayStatus;
+    }
+
+    /**
+     * Set <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+     * @param PostPayStatus <p>后付费资源状态<br>枚举值：<br>0：未开通<br>1：正常<br>2：隔离</p>
+     */
+    public void setPostPayStatus(Long PostPayStatus) {
+        this.PostPayStatus = PostPayStatus;
+    }
+
+    /**
+     * Get <p>后付费资源ID，未开通后付费时为空</p> 
+     * @return PostPayResourceId <p>后付费资源ID，未开通后付费时为空</p>
+     */
+    public String getPostPayResourceId() {
+        return this.PostPayResourceId;
+    }
+
+    /**
+     * Set <p>后付费资源ID，未开通后付费时为空</p>
+     * @param PostPayResourceId <p>后付费资源ID，未开通后付费时为空</p>
+     */
+    public void setPostPayResourceId(String PostPayResourceId) {
+        this.PostPayResourceId = PostPayResourceId;
+    }
+
+    /**
+     * Get <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p> 
+     * @return PostPayBeginTime <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+     */
+    public String getPostPayBeginTime() {
+        return this.PostPayBeginTime;
+    }
+
+    /**
+     * Set <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+     * @param PostPayBeginTime <p>后付费资源开通时间，未开通后付费时为空。格式 YYYY-MM-DD HH:mm:ss</p>
+     */
+    public void setPostPayBeginTime(String PostPayBeginTime) {
+        this.PostPayBeginTime = PostPayBeginTime;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -444,6 +513,15 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
         if (source.NickName != null) {
             this.NickName = new String(source.NickName);
         }
+        if (source.PostPayStatus != null) {
+            this.PostPayStatus = new Long(source.PostPayStatus);
+        }
+        if (source.PostPayResourceId != null) {
+            this.PostPayResourceId = new String(source.PostPayResourceId);
+        }
+        if (source.PostPayBeginTime != null) {
+            this.PostPayBeginTime = new String(source.PostPayBeginTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -469,6 +547,9 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeNow", this.TimeNow);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
+        this.setParamSimple(map, prefix + "PostPayStatus", this.PostPayStatus);
+        this.setParamSimple(map, prefix + "PostPayResourceId", this.PostPayResourceId);
+        this.setParamSimple(map, prefix + "PostPayBeginTime", this.PostPayBeginTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

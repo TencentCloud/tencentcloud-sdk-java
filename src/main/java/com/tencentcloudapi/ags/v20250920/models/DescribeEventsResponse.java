@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.csip.v20221121.models;
+package com.tencentcloudapi.ags.v20250920.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterListV2Response extends AbstractModel {
+public class DescribeEventsResponse extends AbstractModel {
 
     /**
-    * <p>总数</p>
+    * <p>事件列表。</p>
+    */
+    @SerializedName("Events")
+    @Expose
+    private EventInfo [] Events;
+
+    /**
+    * <p>符合条件的事件总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
-
-    /**
-    * <p>列表</p>
-    */
-    @SerializedName("List")
-    @Expose
-    private ClusterListItem [] List;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class DescribeClusterListV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>总数</p> 
-     * @return TotalCount <p>总数</p>
+     * Get <p>事件列表。</p> 
+     * @return Events <p>事件列表。</p>
+     */
+    public EventInfo [] getEvents() {
+        return this.Events;
+    }
+
+    /**
+     * Set <p>事件列表。</p>
+     * @param Events <p>事件列表。</p>
+     */
+    public void setEvents(EventInfo [] Events) {
+        this.Events = Events;
+    }
+
+    /**
+     * Get <p>符合条件的事件总数。</p> 
+     * @return TotalCount <p>符合条件的事件总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>总数</p>
-     * @param TotalCount <p>总数</p>
+     * Set <p>符合条件的事件总数。</p>
+     * @param TotalCount <p>符合条件的事件总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get <p>列表</p> 
-     * @return List <p>列表</p>
-     */
-    public ClusterListItem [] getList() {
-        return this.List;
-    }
-
-    /**
-     * Set <p>列表</p>
-     * @param List <p>列表</p>
-     */
-    public void setList(ClusterListItem [] List) {
-        this.List = List;
     }
 
     /**
@@ -92,22 +92,22 @@ public class DescribeClusterListV2Response extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeClusterListV2Response() {
+    public DescribeEventsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterListV2Response(DescribeClusterListV2Response source) {
+    public DescribeEventsResponse(DescribeEventsResponse source) {
+        if (source.Events != null) {
+            this.Events = new EventInfo[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new EventInfo(source.Events[i]);
+            }
+        }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.List != null) {
-            this.List = new ClusterListItem[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new ClusterListItem(source.List[i]);
-            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +119,8 @@ public class DescribeClusterListV2Response extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

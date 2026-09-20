@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KVPair extends AbstractModel {
 
     /**
-    * <p>配置的key值</p>
+    * 配置的key值
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * <p>配置的value值</p>
+    * 配置的value值
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get <p>配置的key值</p> 
-     * @return Key <p>配置的key值</p>
+     * Get 配置的key值 
+     * @return Key 配置的key值
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set <p>配置的key值</p>
-     * @param Key <p>配置的key值</p>
+     * Set 配置的key值
+     * @param Key 配置的key值
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get <p>配置的value值</p> 
-     * @return Value <p>配置的value值</p>
+     * Get 配置的value值 
+     * @return Value 配置的value值
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set <p>配置的value值</p>
-     * @param Value <p>配置的value值</p>
+     * Set 配置的value值
+     * @param Value 配置的value值
      */
     public void setValue(String Value) {
         this.Value = Value;

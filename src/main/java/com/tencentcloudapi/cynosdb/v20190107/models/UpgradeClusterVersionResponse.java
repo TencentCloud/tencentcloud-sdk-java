@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class UpgradeClusterVersionResponse extends AbstractModel {
 
     /**
-    * 异步任务id
+    * <p>异步任务id</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
+
+    /**
+    * <p>任务 ID</p>
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class UpgradeClusterVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务id 
-     * @return FlowId 异步任务id
+     * Get <p>异步任务id</p> 
+     * @return FlowId <p>异步任务id</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步任务id
-     * @param FlowId 异步任务id
+     * Set <p>异步任务id</p>
+     * @param FlowId <p>异步任务id</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
+    }
+
+    /**
+     * Get <p>任务 ID</p> 
+     * @return TaskId <p>任务 ID</p>
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set <p>任务 ID</p>
+     * @param TaskId <p>任务 ID</p>
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class UpgradeClusterVersionResponse extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class UpgradeClusterVersionResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

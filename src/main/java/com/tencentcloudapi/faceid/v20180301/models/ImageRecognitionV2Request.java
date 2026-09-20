@@ -59,7 +59,7 @@ public class ImageRecognitionV2Request extends AbstractModel {
     private Encryption Encryption;
 
     /**
-    * <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+    * <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
     */
     @SerializedName("Extra")
     @Expose
@@ -146,16 +146,16 @@ public class ImageRecognitionV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul> 
-     * @return Extra <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+     * Get <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul> 
+     * @return Extra <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
-     * @param Extra <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+     * Set <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
+     * @param Extra <p>自定义描述字段。</p><ul><li><p>用于描述调用业务信息，出参中将返回此描述字段。</p></li><li><p>每个自定义描述字段最长支持10 个字符（即 [0,10] 个字符）；不传该参数时，出参中此字段返回空字符串。</p></li></ul>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

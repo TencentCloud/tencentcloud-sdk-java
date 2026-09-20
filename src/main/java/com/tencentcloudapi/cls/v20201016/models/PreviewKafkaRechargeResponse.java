@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PreviewKafkaRechargeResponse extends AbstractModel {
 
     /**
-    * 日志样例，PreviewType为2时返回
+    * <p>日志样例，PreviewType为2时返回</p>
     */
     @SerializedName("LogSample")
     @Expose
     private String LogSample;
 
     /**
-    * 日志预览结果
+    * <p>日志预览结果</p>
     */
     @SerializedName("LogData")
     @Expose
@@ -45,32 +45,32 @@ public class PreviewKafkaRechargeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志样例，PreviewType为2时返回 
-     * @return LogSample 日志样例，PreviewType为2时返回
+     * Get <p>日志样例，PreviewType为2时返回</p> 
+     * @return LogSample <p>日志样例，PreviewType为2时返回</p>
      */
     public String getLogSample() {
         return this.LogSample;
     }
 
     /**
-     * Set 日志样例，PreviewType为2时返回
-     * @param LogSample 日志样例，PreviewType为2时返回
+     * Set <p>日志样例，PreviewType为2时返回</p>
+     * @param LogSample <p>日志样例，PreviewType为2时返回</p>
      */
     public void setLogSample(String LogSample) {
         this.LogSample = LogSample;
     }
 
     /**
-     * Get 日志预览结果 
-     * @return LogData 日志预览结果
+     * Get <p>日志预览结果</p> 
+     * @return LogData <p>日志预览结果</p>
      */
     public String getLogData() {
         return this.LogData;
     }
 
     /**
-     * Set 日志预览结果
-     * @param LogData 日志预览结果
+     * Set <p>日志预览结果</p>
+     * @param LogData <p>日志预览结果</p>
      */
     public void setLogData(String LogData) {
         this.LogData = LogData;

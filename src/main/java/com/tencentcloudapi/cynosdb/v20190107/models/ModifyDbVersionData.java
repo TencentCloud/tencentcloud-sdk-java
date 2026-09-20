@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyDbVersionData extends AbstractModel {
 
     /**
-    * 修改前版本
+    * <p>修改前版本</p>
     */
     @SerializedName("OldVersion")
     @Expose
     private String OldVersion;
 
     /**
-    * 修改后版本
+    * <p>修改后版本</p>
     */
     @SerializedName("NewVersion")
     @Expose
     private String NewVersion;
 
     /**
-    * 升级方式
+    * <p>升级方式</p>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-     * Get 修改前版本 
-     * @return OldVersion 修改前版本
+     * Get <p>修改前版本</p> 
+     * @return OldVersion <p>修改前版本</p>
      */
     public String getOldVersion() {
         return this.OldVersion;
     }
 
     /**
-     * Set 修改前版本
-     * @param OldVersion 修改前版本
+     * Set <p>修改前版本</p>
+     * @param OldVersion <p>修改前版本</p>
      */
     public void setOldVersion(String OldVersion) {
         this.OldVersion = OldVersion;
     }
 
     /**
-     * Get 修改后版本 
-     * @return NewVersion 修改后版本
+     * Get <p>修改后版本</p> 
+     * @return NewVersion <p>修改后版本</p>
      */
     public String getNewVersion() {
         return this.NewVersion;
     }
 
     /**
-     * Set 修改后版本
-     * @param NewVersion 修改后版本
+     * Set <p>修改后版本</p>
+     * @param NewVersion <p>修改后版本</p>
      */
     public void setNewVersion(String NewVersion) {
         this.NewVersion = NewVersion;
     }
 
     /**
-     * Get 升级方式 
-     * @return UpgradeType 升级方式
+     * Get <p>升级方式</p> 
+     * @return UpgradeType <p>升级方式</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 升级方式
-     * @param UpgradeType 升级方式
+     * Set <p>升级方式</p>
+     * @param UpgradeType <p>升级方式</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

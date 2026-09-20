@@ -73,6 +73,13 @@ public class CreateCFGRisksExportJobRequest extends AbstractModel {
     private Long [] StandardIDs;
 
     /**
+    * <p>资产标签ID</p>
+    */
+    @SerializedName("AssetTagIDs")
+    @Expose
+    private Long [] AssetTagIDs;
+
+    /**
      * Get <p>集团账号的成员id</p> 
      * @return MemberId <p>集团账号的成员id</p>
      */
@@ -184,6 +191,22 @@ public class CreateCFGRisksExportJobRequest extends AbstractModel {
         this.StandardIDs = StandardIDs;
     }
 
+    /**
+     * Get <p>资产标签ID</p> 
+     * @return AssetTagIDs <p>资产标签ID</p>
+     */
+    public Long [] getAssetTagIDs() {
+        return this.AssetTagIDs;
+    }
+
+    /**
+     * Set <p>资产标签ID</p>
+     * @param AssetTagIDs <p>资产标签ID</p>
+     */
+    public void setAssetTagIDs(Long [] AssetTagIDs) {
+        this.AssetTagIDs = AssetTagIDs;
+    }
+
     public CreateCFGRisksExportJobRequest() {
     }
 
@@ -222,6 +245,12 @@ public class CreateCFGRisksExportJobRequest extends AbstractModel {
                 this.StandardIDs[i] = new Long(source.StandardIDs[i]);
             }
         }
+        if (source.AssetTagIDs != null) {
+            this.AssetTagIDs = new Long[source.AssetTagIDs.length];
+            for (int i = 0; i < source.AssetTagIDs.length; i++) {
+                this.AssetTagIDs[i] = new Long(source.AssetTagIDs[i]);
+            }
+        }
     }
 
 
@@ -236,6 +265,7 @@ public class CreateCFGRisksExportJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamArraySimple(map, prefix + "StandardIDs.", this.StandardIDs);
+        this.setParamArraySimple(map, prefix + "AssetTagIDs.", this.AssetTagIDs);
 
     }
 }

@@ -59,6 +59,20 @@ public class CreateModelRequest extends AbstractModel {
     private TargetHostDTO [] TargetHosts;
 
     /**
+    * <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+    */
+    @SerializedName("Provider")
+    @Expose
+    private String Provider;
+
+    /**
+    * <p>Provider=tencentTokenHub时对应的密钥</p>
+    */
+    @SerializedName("ApiKeys")
+    @Expose
+    private String [] ApiKeys;
+
+    /**
     * <p>凭据ID</p>
     */
     @SerializedName("CredentialID")
@@ -174,6 +188,38 @@ public class CreateModelRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul> 
+     * @return Provider <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+     */
+    public String getProvider() {
+        return this.Provider;
+    }
+
+    /**
+     * Set <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+     * @param Provider <p>模型提供商</p><p>枚举值：</p><ul><li>tencentTokenHub： 腾讯云TokenHub</li><li>tiONE： TI-ONE应用</li><li>default： 其他</li></ul>
+     */
+    public void setProvider(String Provider) {
+        this.Provider = Provider;
+    }
+
+    /**
+     * Get <p>Provider=tencentTokenHub时对应的密钥</p> 
+     * @return ApiKeys <p>Provider=tencentTokenHub时对应的密钥</p>
+     */
+    public String [] getApiKeys() {
+        return this.ApiKeys;
+    }
+
+    /**
+     * Set <p>Provider=tencentTokenHub时对应的密钥</p>
+     * @param ApiKeys <p>Provider=tencentTokenHub时对应的密钥</p>
+     */
+    public void setApiKeys(String [] ApiKeys) {
+        this.ApiKeys = ApiKeys;
+    }
+
+    /**
      * Get <p>凭据ID</p> 
      * @return CredentialID <p>凭据ID</p>
      */
@@ -279,6 +325,15 @@ public class CreateModelRequest extends AbstractModel {
                 this.TargetHosts[i] = new TargetHostDTO(source.TargetHosts[i]);
             }
         }
+        if (source.Provider != null) {
+            this.Provider = new String(source.Provider);
+        }
+        if (source.ApiKeys != null) {
+            this.ApiKeys = new String[source.ApiKeys.length];
+            for (int i = 0; i < source.ApiKeys.length; i++) {
+                this.ApiKeys[i] = new String(source.ApiKeys[i]);
+            }
+        }
         if (source.CredentialID != null) {
             this.CredentialID = new String(source.CredentialID);
         }
@@ -306,6 +361,8 @@ public class CreateModelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HttpProtocolType", this.HttpProtocolType);
         this.setParamSimple(map, prefix + "TargetPath", this.TargetPath);
         this.setParamArrayObj(map, prefix + "TargetHosts.", this.TargetHosts);
+        this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamArraySimple(map, prefix + "ApiKeys.", this.ApiKeys);
         this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
         this.setParamSimple(map, prefix + "CheckTargetCertsError", this.CheckTargetCertsError);
         this.setParamSimple(map, prefix + "HttpProtocolVersion", this.HttpProtocolVersion);

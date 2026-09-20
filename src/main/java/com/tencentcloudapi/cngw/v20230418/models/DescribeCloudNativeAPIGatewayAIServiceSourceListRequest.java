@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayAIServiceSourceListRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移
+    * <p>分页偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例 ID 
-     * @return GatewayId 实例 ID
+    * <p>搜索关键词</p>
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
+    * <p>过滤条件</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get <p>实例 ID</p> 
+     * @return GatewayId <p>实例 ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 实例 ID
-     * @param GatewayId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param GatewayId <p>实例 ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get <p>分页大小</p> 
+     * @return Limit <p>分页大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set <p>分页大小</p>
+     * @param Limit <p>分页大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移 
-     * @return Offset 分页偏移
+     * Get <p>分页偏移</p> 
+     * @return Offset <p>分页偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移
-     * @param Offset 分页偏移
+     * Set <p>分页偏移</p>
+     * @param Offset <p>分页偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>搜索关键词</p> 
+     * @return Keyword <p>搜索关键词</p>
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set <p>搜索关键词</p>
+     * @param Keyword <p>搜索关键词</p>
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
+     * Get <p>过滤条件</p> 
+     * @return Filters <p>过滤条件</p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件</p>
+     * @param Filters <p>过滤条件</p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeCloudNativeAPIGatewayAIServiceSourceListRequest() {
@@ -109,6 +155,15 @@ public class DescribeCloudNativeAPIGatewayAIServiceSourceListRequest extends Abs
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -119,6 +174,8 @@ public class DescribeCloudNativeAPIGatewayAIServiceSourceListRequest extends Abs
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

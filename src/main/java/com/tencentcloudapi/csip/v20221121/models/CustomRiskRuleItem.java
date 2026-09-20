@@ -115,6 +115,13 @@ public class CustomRiskRuleItem extends AbstractModel {
     private String AssetTypeIconURL;
 
     /**
+    * <p>规则默认开启状态</p>
+    */
+    @SerializedName("EnableDefault")
+    @Expose
+    private Long EnableDefault;
+
+    /**
      * Get <p>风险规则ID</p> 
      * @return RuleID <p>风险规则ID</p>
      */
@@ -322,6 +329,22 @@ public class CustomRiskRuleItem extends AbstractModel {
         this.AssetTypeIconURL = AssetTypeIconURL;
     }
 
+    /**
+     * Get <p>规则默认开启状态</p> 
+     * @return EnableDefault <p>规则默认开启状态</p>
+     */
+    public Long getEnableDefault() {
+        return this.EnableDefault;
+    }
+
+    /**
+     * Set <p>规则默认开启状态</p>
+     * @param EnableDefault <p>规则默认开启状态</p>
+     */
+    public void setEnableDefault(Long EnableDefault) {
+        this.EnableDefault = EnableDefault;
+    }
+
     public CustomRiskRuleItem() {
     }
 
@@ -372,6 +395,9 @@ public class CustomRiskRuleItem extends AbstractModel {
         if (source.AssetTypeIconURL != null) {
             this.AssetTypeIconURL = new String(source.AssetTypeIconURL);
         }
+        if (source.EnableDefault != null) {
+            this.EnableDefault = new Long(source.EnableDefault);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class CustomRiskRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckType", this.CheckType);
         this.setParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
         this.setParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+        this.setParamSimple(map, prefix + "EnableDefault", this.EnableDefault);
 
     }
 }

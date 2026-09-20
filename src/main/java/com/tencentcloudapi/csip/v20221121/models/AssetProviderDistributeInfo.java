@@ -59,6 +59,13 @@ public class AssetProviderDistributeInfo extends AbstractModel {
     private Long AzureAssetCount;
 
     /**
+    * <p>腾讯TCE专有云资产数量</p>
+    */
+    @SerializedName("TceAssetCount")
+    @Expose
+    private Long TceAssetCount;
+
+    /**
      * Get <p>腾讯云资产总数</p> 
      * @return TencentAssetCount <p>腾讯云资产总数</p>
      */
@@ -138,6 +145,22 @@ public class AssetProviderDistributeInfo extends AbstractModel {
         this.AzureAssetCount = AzureAssetCount;
     }
 
+    /**
+     * Get <p>腾讯TCE专有云资产数量</p> 
+     * @return TceAssetCount <p>腾讯TCE专有云资产数量</p>
+     */
+    public Long getTceAssetCount() {
+        return this.TceAssetCount;
+    }
+
+    /**
+     * Set <p>腾讯TCE专有云资产数量</p>
+     * @param TceAssetCount <p>腾讯TCE专有云资产数量</p>
+     */
+    public void setTceAssetCount(Long TceAssetCount) {
+        this.TceAssetCount = TceAssetCount;
+    }
+
     public AssetProviderDistributeInfo() {
     }
 
@@ -161,6 +184,9 @@ public class AssetProviderDistributeInfo extends AbstractModel {
         if (source.AzureAssetCount != null) {
             this.AzureAssetCount = new Long(source.AzureAssetCount);
         }
+        if (source.TceAssetCount != null) {
+            this.TceAssetCount = new Long(source.TceAssetCount);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class AssetProviderDistributeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AwsAssetCount", this.AwsAssetCount);
         this.setParamSimple(map, prefix + "OtherAssetCount", this.OtherAssetCount);
         this.setParamSimple(map, prefix + "AzureAssetCount", this.AzureAssetCount);
+        this.setParamSimple(map, prefix + "TceAssetCount", this.TceAssetCount);
 
     }
 }

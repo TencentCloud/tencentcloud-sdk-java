@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class LogInfo extends AbstractModel {
 
     /**
-    * 日志时间，单位ms
+    * <p>日志时间，单位ms</p>
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志主题名称
+    * <p>日志主题名称</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 日志来源IP
+    * <p>日志来源IP</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 日志文件名称
+    * <p>日志文件名称</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 日志上报请求包的ID
+    * <p>日志上报请求包的ID</p>
     */
     @SerializedName("PkgId")
     @Expose
     private String PkgId;
 
     /**
-    * 请求包内日志的ID
+    * <p>请求包内日志的ID</p>
     */
     @SerializedName("PkgLogId")
     @Expose
     private String PkgLogId;
 
     /**
-    * 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+    * <p>符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索</p>
     */
     @SerializedName("HighLights")
     @Expose
     private HighLightItem [] HighLights;
 
     /**
-    * 日志内容的Json序列化字符串
+    * <p>日志内容的Json序列化字符串</p>
     */
     @SerializedName("LogJson")
     @Expose
     private String LogJson;
 
     /**
-    * 日志来源主机名称
+    * <p>日志来源主机名称</p>
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * 原始日志(仅在日志创建索引异常时有值)
+    * <p>原始日志(仅在日志创建索引异常时有值)</p>
     */
     @SerializedName("RawLog")
     @Expose
     private String RawLog;
 
     /**
-    * 日志创建索引异常原因(仅在日志创建索引异常时有值)
+    * <p>日志创建索引异常原因(仅在日志创建索引异常时有值)</p>
     */
     @SerializedName("IndexStatus")
     @Expose
     private String IndexStatus;
 
     /**
-     * Get 日志时间，单位ms 
-     * @return Time 日志时间，单位ms
+    * <p>日志时间，单位ns</p><p>单位：纳秒</p>
+    */
+    @SerializedName("TimeNanos")
+    @Expose
+    private Long TimeNanos;
+
+    /**
+     * Get <p>日志时间，单位ms</p> 
+     * @return Time <p>日志时间，单位ms</p>
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set 日志时间，单位ms
-     * @param Time 日志时间，单位ms
+     * Set <p>日志时间，单位ms</p>
+     * @param Time <p>日志时间，单位ms</p>
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称 
-     * @return TopicName 日志主题名称
+     * Get <p>日志主题名称</p> 
+     * @return TopicName <p>日志主题名称</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 日志主题名称
-     * @param TopicName 日志主题名称
+     * Set <p>日志主题名称</p>
+     * @param TopicName <p>日志主题名称</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 日志来源IP 
-     * @return Source 日志来源IP
+     * Get <p>日志来源IP</p> 
+     * @return Source <p>日志来源IP</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 日志来源IP
-     * @param Source 日志来源IP
+     * Set <p>日志来源IP</p>
+     * @param Source <p>日志来源IP</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 日志文件名称 
-     * @return FileName 日志文件名称
+     * Get <p>日志文件名称</p> 
+     * @return FileName <p>日志文件名称</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 日志文件名称
-     * @param FileName 日志文件名称
+     * Set <p>日志文件名称</p>
+     * @param FileName <p>日志文件名称</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 日志上报请求包的ID 
-     * @return PkgId 日志上报请求包的ID
+     * Get <p>日志上报请求包的ID</p> 
+     * @return PkgId <p>日志上报请求包的ID</p>
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set 日志上报请求包的ID
-     * @param PkgId 日志上报请求包的ID
+     * Set <p>日志上报请求包的ID</p>
+     * @param PkgId <p>日志上报请求包的ID</p>
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 请求包内日志的ID 
-     * @return PkgLogId 请求包内日志的ID
+     * Get <p>请求包内日志的ID</p> 
+     * @return PkgLogId <p>请求包内日志的ID</p>
      */
     public String getPkgLogId() {
         return this.PkgLogId;
     }
 
     /**
-     * Set 请求包内日志的ID
-     * @param PkgLogId 请求包内日志的ID
+     * Set <p>请求包内日志的ID</p>
+     * @param PkgLogId <p>请求包内日志的ID</p>
      */
     public void setPkgLogId(String PkgLogId) {
         this.PkgLogId = PkgLogId;
     }
 
     /**
-     * Get 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	 
-     * @return HighLights 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+     * Get <p>符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索</p> 
+     * @return HighLights <p>符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索</p>
      */
     public HighLightItem [] getHighLights() {
         return this.HighLights;
     }
 
     /**
-     * Set 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
-     * @param HighLights 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+     * Set <p>符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索</p>
+     * @param HighLights <p>符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索</p>
      */
     public void setHighLights(HighLightItem [] HighLights) {
         this.HighLights = HighLights;
     }
 
     /**
-     * Get 日志内容的Json序列化字符串 
-     * @return LogJson 日志内容的Json序列化字符串
+     * Get <p>日志内容的Json序列化字符串</p> 
+     * @return LogJson <p>日志内容的Json序列化字符串</p>
      */
     public String getLogJson() {
         return this.LogJson;
     }
 
     /**
-     * Set 日志内容的Json序列化字符串
-     * @param LogJson 日志内容的Json序列化字符串
+     * Set <p>日志内容的Json序列化字符串</p>
+     * @param LogJson <p>日志内容的Json序列化字符串</p>
      */
     public void setLogJson(String LogJson) {
         this.LogJson = LogJson;
     }
 
     /**
-     * Get 日志来源主机名称 
-     * @return HostName 日志来源主机名称
+     * Get <p>日志来源主机名称</p> 
+     * @return HostName <p>日志来源主机名称</p>
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 日志来源主机名称
-     * @param HostName 日志来源主机名称
+     * Set <p>日志来源主机名称</p>
+     * @param HostName <p>日志来源主机名称</p>
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 原始日志(仅在日志创建索引异常时有值) 
-     * @return RawLog 原始日志(仅在日志创建索引异常时有值)
+     * Get <p>原始日志(仅在日志创建索引异常时有值)</p> 
+     * @return RawLog <p>原始日志(仅在日志创建索引异常时有值)</p>
      */
     public String getRawLog() {
         return this.RawLog;
     }
 
     /**
-     * Set 原始日志(仅在日志创建索引异常时有值)
-     * @param RawLog 原始日志(仅在日志创建索引异常时有值)
+     * Set <p>原始日志(仅在日志创建索引异常时有值)</p>
+     * @param RawLog <p>原始日志(仅在日志创建索引异常时有值)</p>
      */
     public void setRawLog(String RawLog) {
         this.RawLog = RawLog;
     }
 
     /**
-     * Get 日志创建索引异常原因(仅在日志创建索引异常时有值) 
-     * @return IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
+     * Get <p>日志创建索引异常原因(仅在日志创建索引异常时有值)</p> 
+     * @return IndexStatus <p>日志创建索引异常原因(仅在日志创建索引异常时有值)</p>
      */
     public String getIndexStatus() {
         return this.IndexStatus;
     }
 
     /**
-     * Set 日志创建索引异常原因(仅在日志创建索引异常时有值)
-     * @param IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
+     * Set <p>日志创建索引异常原因(仅在日志创建索引异常时有值)</p>
+     * @param IndexStatus <p>日志创建索引异常原因(仅在日志创建索引异常时有值)</p>
      */
     public void setIndexStatus(String IndexStatus) {
         this.IndexStatus = IndexStatus;
+    }
+
+    /**
+     * Get <p>日志时间，单位ns</p><p>单位：纳秒</p> 
+     * @return TimeNanos <p>日志时间，单位ns</p><p>单位：纳秒</p>
+     */
+    public Long getTimeNanos() {
+        return this.TimeNanos;
+    }
+
+    /**
+     * Set <p>日志时间，单位ns</p><p>单位：纳秒</p>
+     * @param TimeNanos <p>日志时间，单位ns</p><p>单位：纳秒</p>
+     */
+    public void setTimeNanos(Long TimeNanos) {
+        this.TimeNanos = TimeNanos;
     }
 
     public LogInfo() {
@@ -346,6 +369,9 @@ public class LogInfo extends AbstractModel {
         if (source.IndexStatus != null) {
             this.IndexStatus = new String(source.IndexStatus);
         }
+        if (source.TimeNanos != null) {
+            this.TimeNanos = new Long(source.TimeNanos);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class LogInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "RawLog", this.RawLog);
         this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
+        this.setParamSimple(map, prefix + "TimeNanos", this.TimeNanos);
 
     }
 }

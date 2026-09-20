@@ -45,6 +45,13 @@ public class DeleteConsumerRouteConfigRequest extends AbstractModel {
     private String Group;
 
     /**
+    * <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
      * Get 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。 
      * @return Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      */
@@ -92,6 +99,22 @@ public class DeleteConsumerRouteConfigRequest extends AbstractModel {
         this.Group = Group;
     }
 
+    /**
+     * Get <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p> 
+     * @return Label <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+     * @param Label <p>消费者标签</p><p>传入 Label 表示只删除该标签路由，不传表示删除完整路由</p>
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
     public DeleteConsumerRouteConfigRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DeleteConsumerRouteConfigRequest extends AbstractModel {
         if (source.Group != null) {
             this.Group = new String(source.Group);
         }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DeleteConsumerRouteConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Group", this.Group);
+        this.setParamSimple(map, prefix + "Label", this.Label);
 
     }
 }

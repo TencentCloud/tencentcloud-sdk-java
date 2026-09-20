@@ -381,6 +381,13 @@ public class InstanceInfo extends AbstractModel {
     private String DestroyProtect;
 
     /**
+    * <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+    */
+    @SerializedName("DiskEncryption")
+    @Expose
+    private String DiskEncryption;
+
+    /**
     * <p>TDSQL引擎参数</p>
     */
     @SerializedName("CpuModel")
@@ -1212,6 +1219,22 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p> 
+     * @return DiskEncryption <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+     */
+    public String getDiskEncryption() {
+        return this.DiskEncryption;
+    }
+
+    /**
+     * Set <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+     * @param DiskEncryption <p>云盘版实例才使用该值。 on表示磁盘加密，否则为不加密。</p>
+     */
+    public void setDiskEncryption(String DiskEncryption) {
+        this.DiskEncryption = DiskEncryption;
+    }
+
+    /**
      * Get <p>TDSQL引擎参数</p> 
      * @return CpuModel <p>TDSQL引擎参数</p>
      */
@@ -1423,6 +1446,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.DestroyProtect != null) {
             this.DestroyProtect = new String(source.DestroyProtect);
         }
+        if (source.DiskEncryption != null) {
+            this.DiskEncryption = new String(source.DiskEncryption);
+        }
         if (source.CpuModel != null) {
             this.CpuModel = new String(source.CpuModel);
         }
@@ -1487,6 +1513,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
         this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+        this.setParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
         this.setParamSimple(map, prefix + "CpuModel", this.CpuModel);
         this.setParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
 

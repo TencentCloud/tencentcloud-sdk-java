@@ -1034,6 +1034,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询 TWeSee 人员关联的云存事件及 AI 任务
+     * @param req DescribeCloudStorageEventsByTWeSeePersonRequest
+     * @return DescribeCloudStorageEventsByTWeSeePersonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageEventsByTWeSeePersonResponse DescribeCloudStorageEventsByTWeSeePerson(DescribeCloudStorageEventsByTWeSeePersonRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageEventsByTWeSeePerson", DescribeCloudStorageEventsByTWeSeePersonResponse.class);
+    }
+
+    /**
      *拉取云存事件列表
      * @param req DescribeCloudStorageEventsWithAITasksRequest
      * @return DescribeCloudStorageEventsWithAITasksResponse
@@ -1540,6 +1551,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询 TWeSee 直传信息
+     * @param req DescribeTWeSeeDirectUploadInfoRequest
+     * @return DescribeTWeSeeDirectUploadInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeDirectUploadInfoResponse DescribeTWeSeeDirectUploadInfo(DescribeTWeSeeDirectUploadInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeDirectUploadInfo", DescribeTWeSeeDirectUploadInfoResponse.class);
+    }
+
+    /**
      *查询指定 TWeSee 人脸详情。
      * @param req DescribeTWeSeeFaceRequest
      * @return DescribeTWeSeeFaceResponse
@@ -1726,6 +1748,17 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeVideoLicenseResponse DescribeVideoLicense(DescribeVideoLicenseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVideoLicense", DescribeVideoLicenseResponse.class);
+    }
+
+    /**
+     *拉取云存日期
+     * @param req DescribeVodCloudStorageDateRequest
+     * @return DescribeVodCloudStorageDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVodCloudStorageDateResponse DescribeVodCloudStorageDate(DescribeVodCloudStorageDateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVodCloudStorageDate", DescribeVodCloudStorageDateResponse.class);
     }
 
     /**
@@ -2023,6 +2056,28 @@ public class IotexplorerClient extends AbstractClient{
     public GetTopicRuleListResponse GetTopicRuleList(GetTopicRuleListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTopicRuleList", GetTopicRuleListResponse.class);
+    }
+
+    /**
+     *获取云存事件列表
+     * @param req GetVodCloudStorageEventListRequest
+     * @return GetVodCloudStorageEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVodCloudStorageEventListResponse GetVodCloudStorageEventList(GetVodCloudStorageEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVodCloudStorageEventList", GetVodCloudStorageEventListResponse.class);
+    }
+
+    /**
+     *获取云存时间轴视频列表
+     * @param req GetVodCloudStorageVideoListRequest
+     * @return GetVodCloudStorageVideoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVodCloudStorageVideoListResponse GetVodCloudStorageVideoList(GetVodCloudStorageVideoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVodCloudStorageVideoList", GetVodCloudStorageVideoListResponse.class);
     }
 
     /**

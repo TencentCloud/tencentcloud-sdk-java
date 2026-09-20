@@ -52,6 +52,13 @@ public class DescribeModelResponseVO extends AbstractModel {
     private String ID;
 
     /**
+    * <p>模型提供商</p>
+    */
+    @SerializedName("Provider")
+    @Expose
+    private String Provider;
+
+    /**
     * <p>模型名称</p>
     */
     @SerializedName("Name")
@@ -204,6 +211,22 @@ public class DescribeModelResponseVO extends AbstractModel {
      */
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    /**
+     * Get <p>模型提供商</p> 
+     * @return Provider <p>模型提供商</p>
+     */
+    public String getProvider() {
+        return this.Provider;
+    }
+
+    /**
+     * Set <p>模型提供商</p>
+     * @param Provider <p>模型提供商</p>
+     */
+    public void setProvider(String Provider) {
+        this.Provider = Provider;
     }
 
     /**
@@ -434,6 +457,9 @@ public class DescribeModelResponseVO extends AbstractModel {
         if (source.ID != null) {
             this.ID = new String(source.ID);
         }
+        if (source.Provider != null) {
+            this.Provider = new String(source.Provider);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -487,6 +513,7 @@ public class DescribeModelResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "Provider", this.Provider);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
         this.setParamSimple(map, prefix + "CredentialName", this.CredentialName);

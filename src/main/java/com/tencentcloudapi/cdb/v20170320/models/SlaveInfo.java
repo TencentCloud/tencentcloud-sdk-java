@@ -38,6 +38,13 @@ public class SlaveInfo extends AbstractModel {
     private SlaveInstanceInfo Second;
 
     /**
+    * <p>第三备机信息</p>
+    */
+    @SerializedName("Third")
+    @Expose
+    private SlaveInstanceInfo Third;
+
+    /**
      * Get <p>第一备机信息</p> 
      * @return First <p>第一备机信息</p>
      */
@@ -69,6 +76,22 @@ public class SlaveInfo extends AbstractModel {
         this.Second = Second;
     }
 
+    /**
+     * Get <p>第三备机信息</p> 
+     * @return Third <p>第三备机信息</p>
+     */
+    public SlaveInstanceInfo getThird() {
+        return this.Third;
+    }
+
+    /**
+     * Set <p>第三备机信息</p>
+     * @param Third <p>第三备机信息</p>
+     */
+    public void setThird(SlaveInstanceInfo Third) {
+        this.Third = Third;
+    }
+
     public SlaveInfo() {
     }
 
@@ -83,6 +106,9 @@ public class SlaveInfo extends AbstractModel {
         if (source.Second != null) {
             this.Second = new SlaveInstanceInfo(source.Second);
         }
+        if (source.Third != null) {
+            this.Third = new SlaveInstanceInfo(source.Third);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class SlaveInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "First.", this.First);
         this.setParamObj(map, prefix + "Second.", this.Second);
+        this.setParamObj(map, prefix + "Third.", this.Third);
 
     }
 }

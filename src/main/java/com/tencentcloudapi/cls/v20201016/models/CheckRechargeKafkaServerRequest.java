@@ -24,158 +24,161 @@ import java.util.HashMap;
 public class CheckRechargeKafkaServerRequest extends AbstractModel {
 
     /**
-    * 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
+    * <p>导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。</p>
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * 腾讯云CKafka实例ID。
-KafkaType为0时，KafkaInstance必填
-
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+    * <p>腾讯云CKafka实例ID。<br>KafkaType为0时，KafkaInstance必填</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * 服务地址。
-KafkaType为1时，ServerAddr必填
+    * <p>服务地址。<br>KafkaType为1时，ServerAddr必填</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
+    * <p>ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。</p>
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+    * <p>加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户kafka拓展信息
+    * <p>网络信息参数</p>
+    */
+    @SerializedName("NetworkInfo")
+    @Expose
+    private NetworkInfo NetworkInfo;
+
+    /**
+    * <p>用户kafka拓展信息</p>
     */
     @SerializedName("UserKafkaMeta")
     @Expose
     private UserKafkaMeta UserKafkaMeta;
 
     /**
-     * Get 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。 
-     * @return KafkaType 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
+     * Get <p>导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。</p> 
+     * @return KafkaType <p>导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。</p>
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
-     * @param KafkaType 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
+     * Set <p>导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。</p>
+     * @param KafkaType <p>导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。</p>
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get 腾讯云CKafka实例ID。
-KafkaType为0时，KafkaInstance必填
-
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
-     * @return KafkaInstance 腾讯云CKafka实例ID。
-KafkaType为0时，KafkaInstance必填
-
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * Get <p>腾讯云CKafka实例ID。<br>KafkaType为0时，KafkaInstance必填</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul> 
+     * @return KafkaInstance <p>腾讯云CKafka实例ID。<br>KafkaType为0时，KafkaInstance必填</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID。
-KafkaType为0时，KafkaInstance必填
-
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
-     * @param KafkaInstance 腾讯云CKafka实例ID。
-KafkaType为0时，KafkaInstance必填
-
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * Set <p>腾讯云CKafka实例ID。<br>KafkaType为0时，KafkaInstance必填</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
+     * @param KafkaInstance <p>腾讯云CKafka实例ID。<br>KafkaType为0时，KafkaInstance必填</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get 服务地址。
-KafkaType为1时，ServerAddr必填 
-     * @return ServerAddr 服务地址。
-KafkaType为1时，ServerAddr必填
+     * Get <p>服务地址。<br>KafkaType为1时，ServerAddr必填</p> 
+     * @return ServerAddr <p>服务地址。<br>KafkaType为1时，ServerAddr必填</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址。
-KafkaType为1时，ServerAddr必填
-     * @param ServerAddr 服务地址。
-KafkaType为1时，ServerAddr必填
+     * Set <p>服务地址。<br>KafkaType为1时，ServerAddr必填</p>
+     * @param ServerAddr <p>服务地址。<br>KafkaType为1时，ServerAddr必填</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。 
-     * @return IsEncryptionAddr ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
+     * Get <p>ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。</p> 
+     * @return IsEncryptionAddr <p>ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。</p>
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
-     * @param IsEncryptionAddr ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
+     * Set <p>ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。</p>
+     * @param IsEncryptionAddr <p>ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。</p>
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。 
-     * @return Protocol 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+     * Get <p>加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p> 
+     * @return Protocol <p>加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
-     * @param Protocol 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+     * Set <p>加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
+     * @param Protocol <p>加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 用户kafka拓展信息 
-     * @return UserKafkaMeta 用户kafka拓展信息
+     * Get <p>网络信息参数</p> 
+     * @return NetworkInfo <p>网络信息参数</p>
+     */
+    public NetworkInfo getNetworkInfo() {
+        return this.NetworkInfo;
+    }
+
+    /**
+     * Set <p>网络信息参数</p>
+     * @param NetworkInfo <p>网络信息参数</p>
+     */
+    public void setNetworkInfo(NetworkInfo NetworkInfo) {
+        this.NetworkInfo = NetworkInfo;
+    }
+
+    /**
+     * Get <p>用户kafka拓展信息</p> 
+     * @return UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public UserKafkaMeta getUserKafkaMeta() {
         return this.UserKafkaMeta;
     }
 
     /**
-     * Set 用户kafka拓展信息
-     * @param UserKafkaMeta 用户kafka拓展信息
+     * Set <p>用户kafka拓展信息</p>
+     * @param UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
         this.UserKafkaMeta = UserKafkaMeta;
@@ -204,6 +207,9 @@ KafkaType为1时，ServerAddr必填
         if (source.Protocol != null) {
             this.Protocol = new KafkaProtocolInfo(source.Protocol);
         }
+        if (source.NetworkInfo != null) {
+            this.NetworkInfo = new NetworkInfo(source.NetworkInfo);
+        }
         if (source.UserKafkaMeta != null) {
             this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
         }
@@ -219,6 +225,7 @@ KafkaType为1时，ServerAddr必填
         this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
         this.setParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
+        this.setParamObj(map, prefix + "NetworkInfo.", this.NetworkInfo);
         this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }

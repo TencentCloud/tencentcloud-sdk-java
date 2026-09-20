@@ -50,6 +50,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *查询cpu弹性扩容信息
+     * @param req CheckDBInstanceElasticCpuScalableRequest
+     * @return CheckDBInstanceElasticCpuScalableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckDBInstanceElasticCpuScalableResponse CheckDBInstanceElasticCpuScalable(CheckDBInstanceElasticCpuScalableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckDBInstanceElasticCpuScalable", CheckDBInstanceElasticCpuScalableResponse.class);
+    }
+
+    /**
      *本接口（CloseAuditService）用于关闭审计服务
      * @param req CloseAuditServiceRequest
      * @return CloseAuditServiceResponse

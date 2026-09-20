@@ -42,7 +42,7 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
     */
     @SerializedName("Keywords")
     @Expose
-    private AuditKeywordInfo [] Keywords;
+    private AuditKeywordInfo Keywords;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -87,7 +87,7 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
      * Get <p>新增成功关键词列表</p> 
      * @return Keywords <p>新增成功关键词列表</p>
      */
-    public AuditKeywordInfo [] getKeywords() {
+    public AuditKeywordInfo getKeywords() {
         return this.Keywords;
     }
 
@@ -95,7 +95,7 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
      * Set <p>新增成功关键词列表</p>
      * @param Keywords <p>新增成功关键词列表</p>
      */
-    public void setKeywords(AuditKeywordInfo [] Keywords) {
+    public void setKeywords(AuditKeywordInfo Keywords) {
         this.Keywords = Keywords;
     }
 
@@ -136,10 +136,7 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
             }
         }
         if (source.Keywords != null) {
-            this.Keywords = new AuditKeywordInfo[source.Keywords.length];
-            for (int i = 0; i < source.Keywords.length; i++) {
-                this.Keywords[i] = new AuditKeywordInfo(source.Keywords[i]);
-            }
+            this.Keywords = new AuditKeywordInfo(source.Keywords);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -153,7 +150,7 @@ public class CreateAuditKeywordsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeywordIds.", this.KeywordIds);
         this.setParamArrayObj(map, prefix + "DupInfos.", this.DupInfos);
-        this.setParamArrayObj(map, prefix + "Keywords.", this.Keywords);
+        this.setParamObj(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

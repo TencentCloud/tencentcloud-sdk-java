@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UpgradeClusterVersionRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 内核版本
+    * <p>内核版本</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+    * <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 内核版本 
-     * @return CynosVersion 内核版本
+     * Get <p>内核版本</p> 
+     * @return CynosVersion <p>内核版本</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set 内核版本
-     * @param CynosVersion 内核版本
+     * Set <p>内核版本</p>
+     * @param CynosVersion <p>内核版本</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get 升级时间类型，可选：upgradeImmediate,upgradeInMaintain 
-     * @return UpgradeType 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+     * Get <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p> 
+     * @return UpgradeType <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
-     * @param UpgradeType 升级时间类型，可选：upgradeImmediate,upgradeInMaintain
+     * Set <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
+     * @param UpgradeType <p>升级时间类型，可选：upgradeImmediate,upgradeInMaintain</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

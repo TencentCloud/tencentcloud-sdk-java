@@ -38,7 +38,7 @@ public class AgentApplicationInfo extends AbstractModel {
     private String ApplicationName;
 
     /**
-    * <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+    * <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
     */
     @SerializedName("AccessType")
     @Expose
@@ -80,6 +80,41 @@ public class AgentApplicationInfo extends AbstractModel {
     private Long UpdateTime;
 
     /**
+    * <p>日志集id</p>
+    */
+    @SerializedName("LogsetId")
+    @Expose
+    private String LogsetId;
+
+    /**
+    * <p>服务方名称</p>
+    */
+    @SerializedName("AssumerName")
+    @Expose
+    private String AssumerName;
+
+    /**
+    * <p>服务方子名称</p>
+    */
+    @SerializedName("SubAssumerName")
+    @Expose
+    private String SubAssumerName;
+
+    /**
+    * <p>服务方Uin</p>
+    */
+    @SerializedName("AssumerUin")
+    @Expose
+    private Long AssumerUin;
+
+    /**
+    * <p>服务方使用的角色</p>
+    */
+    @SerializedName("RoleName")
+    @Expose
+    private String RoleName;
+
+    /**
      * Get <p>应用id</p> 
      * @return ApplicationId <p>应用id</p>
      */
@@ -112,16 +147,16 @@ public class AgentApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul> 
-     * @return AccessType <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+     * Get <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul> 
+     * @return AccessType <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
-     * @param AccessType <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse​ 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+     * Set <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
+     * @param AccessType <p>接入类型</p><p>枚举值：</p><ul><li>Langfuse：  Langfuse 是一款开源的 LLM（大语言模型）工程与可观测性平台（LLMOps Tool）</li></ul>
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
@@ -207,6 +242,86 @@ public class AgentApplicationInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get <p>日志集id</p> 
+     * @return LogsetId <p>日志集id</p>
+     */
+    public String getLogsetId() {
+        return this.LogsetId;
+    }
+
+    /**
+     * Set <p>日志集id</p>
+     * @param LogsetId <p>日志集id</p>
+     */
+    public void setLogsetId(String LogsetId) {
+        this.LogsetId = LogsetId;
+    }
+
+    /**
+     * Get <p>服务方名称</p> 
+     * @return AssumerName <p>服务方名称</p>
+     */
+    public String getAssumerName() {
+        return this.AssumerName;
+    }
+
+    /**
+     * Set <p>服务方名称</p>
+     * @param AssumerName <p>服务方名称</p>
+     */
+    public void setAssumerName(String AssumerName) {
+        this.AssumerName = AssumerName;
+    }
+
+    /**
+     * Get <p>服务方子名称</p> 
+     * @return SubAssumerName <p>服务方子名称</p>
+     */
+    public String getSubAssumerName() {
+        return this.SubAssumerName;
+    }
+
+    /**
+     * Set <p>服务方子名称</p>
+     * @param SubAssumerName <p>服务方子名称</p>
+     */
+    public void setSubAssumerName(String SubAssumerName) {
+        this.SubAssumerName = SubAssumerName;
+    }
+
+    /**
+     * Get <p>服务方Uin</p> 
+     * @return AssumerUin <p>服务方Uin</p>
+     */
+    public Long getAssumerUin() {
+        return this.AssumerUin;
+    }
+
+    /**
+     * Set <p>服务方Uin</p>
+     * @param AssumerUin <p>服务方Uin</p>
+     */
+    public void setAssumerUin(Long AssumerUin) {
+        this.AssumerUin = AssumerUin;
+    }
+
+    /**
+     * Get <p>服务方使用的角色</p> 
+     * @return RoleName <p>服务方使用的角色</p>
+     */
+    public String getRoleName() {
+        return this.RoleName;
+    }
+
+    /**
+     * Set <p>服务方使用的角色</p>
+     * @param RoleName <p>服务方使用的角色</p>
+     */
+    public void setRoleName(String RoleName) {
+        this.RoleName = RoleName;
+    }
+
     public AgentApplicationInfo() {
     }
 
@@ -245,6 +360,21 @@ public class AgentApplicationInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.AssumerName != null) {
+            this.AssumerName = new String(source.AssumerName);
+        }
+        if (source.SubAssumerName != null) {
+            this.SubAssumerName = new String(source.SubAssumerName);
+        }
+        if (source.AssumerUin != null) {
+            this.AssumerUin = new Long(source.AssumerUin);
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
+        }
     }
 
 
@@ -260,6 +390,11 @@ public class AgentApplicationInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MetricsTopics.", this.MetricsTopics);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
+        this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
+        this.setParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
+        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
 
     }
 }

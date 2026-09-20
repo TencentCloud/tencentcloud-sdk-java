@@ -217,6 +217,20 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private AIGWQueryParamCredentialConfig QueryParamCredentialConfig;
 
     /**
+    * <p>该消费者密钥绑定的模型密钥列表</p>
+    */
+    @SerializedName("BoundModelSecretKeys")
+    @Expose
+    private AIGWSimpleSecretKey [] BoundModelSecretKeys;
+
+    /**
+    * <p>绑定了该模型密钥的消费者密钥列表</p>
+    */
+    @SerializedName("BoundConsumerSecretKeys")
+    @Expose
+    private AIGWSimpleSecretKey [] BoundConsumerSecretKeys;
+
+    /**
      * Get <p>绑定数</p> 
      * @return BindCount <p>绑定数</p>
      */
@@ -664,6 +678,38 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.QueryParamCredentialConfig = QueryParamCredentialConfig;
     }
 
+    /**
+     * Get <p>该消费者密钥绑定的模型密钥列表</p> 
+     * @return BoundModelSecretKeys <p>该消费者密钥绑定的模型密钥列表</p>
+     */
+    public AIGWSimpleSecretKey [] getBoundModelSecretKeys() {
+        return this.BoundModelSecretKeys;
+    }
+
+    /**
+     * Set <p>该消费者密钥绑定的模型密钥列表</p>
+     * @param BoundModelSecretKeys <p>该消费者密钥绑定的模型密钥列表</p>
+     */
+    public void setBoundModelSecretKeys(AIGWSimpleSecretKey [] BoundModelSecretKeys) {
+        this.BoundModelSecretKeys = BoundModelSecretKeys;
+    }
+
+    /**
+     * Get <p>绑定了该模型密钥的消费者密钥列表</p> 
+     * @return BoundConsumerSecretKeys <p>绑定了该模型密钥的消费者密钥列表</p>
+     */
+    public AIGWSimpleSecretKey [] getBoundConsumerSecretKeys() {
+        return this.BoundConsumerSecretKeys;
+    }
+
+    /**
+     * Set <p>绑定了该模型密钥的消费者密钥列表</p>
+     * @param BoundConsumerSecretKeys <p>绑定了该模型密钥的消费者密钥列表</p>
+     */
+    public void setBoundConsumerSecretKeys(AIGWSimpleSecretKey [] BoundConsumerSecretKeys) {
+        this.BoundConsumerSecretKeys = BoundConsumerSecretKeys;
+    }
+
     public CNAPIGwSecretKey() {
     }
 
@@ -753,6 +799,18 @@ public class CNAPIGwSecretKey extends AbstractModel {
         if (source.QueryParamCredentialConfig != null) {
             this.QueryParamCredentialConfig = new AIGWQueryParamCredentialConfig(source.QueryParamCredentialConfig);
         }
+        if (source.BoundModelSecretKeys != null) {
+            this.BoundModelSecretKeys = new AIGWSimpleSecretKey[source.BoundModelSecretKeys.length];
+            for (int i = 0; i < source.BoundModelSecretKeys.length; i++) {
+                this.BoundModelSecretKeys[i] = new AIGWSimpleSecretKey(source.BoundModelSecretKeys[i]);
+            }
+        }
+        if (source.BoundConsumerSecretKeys != null) {
+            this.BoundConsumerSecretKeys = new AIGWSimpleSecretKey[source.BoundConsumerSecretKeys.length];
+            for (int i = 0; i < source.BoundConsumerSecretKeys.length; i++) {
+                this.BoundConsumerSecretKeys[i] = new AIGWSimpleSecretKey(source.BoundConsumerSecretKeys[i]);
+            }
+        }
     }
 
 
@@ -787,6 +845,8 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.setParamObj(map, prefix + "BasicCredentialConfig.", this.BasicCredentialConfig);
         this.setParamObj(map, prefix + "CustomHeaderCredentialConfig.", this.CustomHeaderCredentialConfig);
         this.setParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
+        this.setParamArrayObj(map, prefix + "BoundModelSecretKeys.", this.BoundModelSecretKeys);
+        this.setParamArrayObj(map, prefix + "BoundConsumerSecretKeys.", this.BoundConsumerSecretKeys);
 
     }
 }

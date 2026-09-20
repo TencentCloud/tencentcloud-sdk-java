@@ -523,6 +523,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查询应用视图下的调用统计总览，包含总调用次数、调用成功率、总tokens平均耗时及首tokens平均耗时；RAG 应用额外返回各回复方式的调用次数及占比，用于绘制饼图
+     * @param req DescribeAppStatisticsOverviewRequest
+     * @return DescribeAppStatisticsOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppStatisticsOverviewResponse DescribeAppStatisticsOverview(DescribeAppStatisticsOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAppStatisticsOverview", DescribeAppStatisticsOverviewResponse.class);
+    }
+
+    /**
      *获取应用摘要列表
      * @param req DescribeAppSummaryListRequest
      * @return DescribeAppSummaryListResponse

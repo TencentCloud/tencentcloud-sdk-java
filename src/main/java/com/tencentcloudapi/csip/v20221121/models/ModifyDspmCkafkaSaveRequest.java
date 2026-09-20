@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class ModifyDspmCkafkaSaveRequest extends AbstractModel {
 
     /**
-    * 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+    * <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
     */
     @SerializedName("VipType")
     @Expose
     private Long VipType;
 
     /**
-    * 实例的地域
+    * <p>实例的地域</p>
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 实例的id
+    * <p>实例的id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例的接入信息
+    * <p>实例的接入信息</p>
     */
     @SerializedName("RouteInfo")
     @Expose
     private RouteInfo RouteInfo;
 
     /**
-    * 接入为域名的时候，有效
+    * <p>接入为域名的时候，有效</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 接入为域名的时候，有效
+    * <p>接入为域名的时候，有效</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 日志投递的主题配置
+    * <p>日志投递的主题配置</p>
     */
     @SerializedName("LogDeliveryInfo")
     @Expose
     private LogDeliveryInfo [] LogDeliveryInfo;
 
     /**
-    * 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+    * <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
     */
     @SerializedName("IsOverwrite")
     @Expose
@@ -94,144 +94,144 @@ public class ModifyDspmCkafkaSaveRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境） 
-     * @return VipType 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+     * Get <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul> 
+     * @return VipType <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
-     * @param VipType 接入类型，当前支持 1和7, 类型vip网络类型（1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+     * Set <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
+     * @param VipType <p>接入类型，当前支持 1和7</p><p>枚举值：</p><ul><li>1： 外网TGW</li><li>2： 基础网络</li><li>3： VPC网络</li><li>4： idc环境-支撑网络</li><li>5： SSL外网访问方式访问</li><li>6： 黑石环境vpc</li><li>7： cvm环境-支撑网络</li></ul>
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
     }
 
     /**
-     * Get 实例的地域 
-     * @return RegionId 实例的地域
+     * Get <p>实例的地域</p> 
+     * @return RegionId <p>实例的地域</p>
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 实例的地域
-     * @param RegionId 实例的地域
+     * Set <p>实例的地域</p>
+     * @param RegionId <p>实例的地域</p>
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例的id 
-     * @return InstanceId 实例的id
+     * Get <p>实例的id</p> 
+     * @return InstanceId <p>实例的id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例的id
-     * @param InstanceId 实例的id
+     * Set <p>实例的id</p>
+     * @param InstanceId <p>实例的id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例的接入信息 
-     * @return RouteInfo 实例的接入信息
+     * Get <p>实例的接入信息</p> 
+     * @return RouteInfo <p>实例的接入信息</p>
      */
     public RouteInfo getRouteInfo() {
         return this.RouteInfo;
     }
 
     /**
-     * Set 实例的接入信息
-     * @param RouteInfo 实例的接入信息
+     * Set <p>实例的接入信息</p>
+     * @param RouteInfo <p>实例的接入信息</p>
      */
     public void setRouteInfo(RouteInfo RouteInfo) {
         this.RouteInfo = RouteInfo;
     }
 
     /**
-     * Get 接入为域名的时候，有效 
-     * @return Username 接入为域名的时候，有效
+     * Get <p>接入为域名的时候，有效</p> 
+     * @return Username <p>接入为域名的时候，有效</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 接入为域名的时候，有效
-     * @param Username 接入为域名的时候，有效
+     * Set <p>接入为域名的时候，有效</p>
+     * @param Username <p>接入为域名的时候，有效</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 接入为域名的时候，有效 
-     * @return Password 接入为域名的时候，有效
+     * Get <p>接入为域名的时候，有效</p> 
+     * @return Password <p>接入为域名的时候，有效</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 接入为域名的时候，有效
-     * @param Password 接入为域名的时候，有效
+     * Set <p>接入为域名的时候，有效</p>
+     * @param Password <p>接入为域名的时候，有效</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 日志投递的主题配置 
-     * @return LogDeliveryInfo 日志投递的主题配置
+     * Get <p>日志投递的主题配置</p> 
+     * @return LogDeliveryInfo <p>日志投递的主题配置</p>
      */
     public LogDeliveryInfo [] getLogDeliveryInfo() {
         return this.LogDeliveryInfo;
     }
 
     /**
-     * Set 日志投递的主题配置
-     * @param LogDeliveryInfo 日志投递的主题配置
+     * Set <p>日志投递的主题配置</p>
+     * @param LogDeliveryInfo <p>日志投递的主题配置</p>
      */
     public void setLogDeliveryInfo(LogDeliveryInfo [] LogDeliveryInfo) {
         this.LogDeliveryInfo = LogDeliveryInfo;
     }
 
     /**
-     * Get 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容） 
-     * @return IsOverwrite 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+     * Get <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p> 
+     * @return IsOverwrite <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
      */
     public Boolean getIsOverwrite() {
         return this.IsOverwrite;
     }
 
     /**
-     * Set 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
-     * @param IsOverwrite 已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）
+     * Set <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
+     * @param IsOverwrite <p>已存在配置时是否覆盖，默认 false（不覆盖，保持兼容）</p>
      */
     public void setIsOverwrite(Boolean IsOverwrite) {
         this.IsOverwrite = IsOverwrite;

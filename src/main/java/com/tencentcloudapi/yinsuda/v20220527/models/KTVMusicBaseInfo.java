@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class KTVMusicBaseInfo extends AbstractModel {
 
     /**
-    * 歌曲Id。
+    * <p>歌曲Id。</p>
     */
     @SerializedName("MusicId")
     @Expose
     private String MusicId;
 
     /**
-    * 歌曲名称。
+    * <p>歌曲名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 歌手名称。
+    * <p>歌手名称。</p>
     */
     @SerializedName("SingerSet")
     @Expose
     private String [] SingerSet;
 
     /**
-    * 播放时长。
+    * <p>播放时长。</p><p>单位：秒</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 歌手图片链接。
+    * <p>歌手图片链接。</p>
     */
     @SerializedName("SingerImageUrl")
     @Expose
     private String SingerImageUrl;
 
     /**
-    * 专辑信息。
+    * <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlbumInfo")
@@ -67,107 +67,103 @@ public class KTVMusicBaseInfo extends AbstractModel {
     private MusicAlbumInfo AlbumInfo;
 
     /**
-    * 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
+    * <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
     */
     @SerializedName("RightSet")
     @Expose
     private String [] RightSet;
 
     /**
-    * 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
+    * <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
     */
     @SerializedName("RecommendType")
     @Expose
     private String RecommendType;
 
     /**
-     * Get 歌曲Id。 
-     * @return MusicId 歌曲Id。
+     * Get <p>歌曲Id。</p> 
+     * @return MusicId <p>歌曲Id。</p>
      */
     public String getMusicId() {
         return this.MusicId;
     }
 
     /**
-     * Set 歌曲Id。
-     * @param MusicId 歌曲Id。
+     * Set <p>歌曲Id。</p>
+     * @param MusicId <p>歌曲Id。</p>
      */
     public void setMusicId(String MusicId) {
         this.MusicId = MusicId;
     }
 
     /**
-     * Get 歌曲名称。 
-     * @return Name 歌曲名称。
+     * Get <p>歌曲名称。</p> 
+     * @return Name <p>歌曲名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 歌曲名称。
-     * @param Name 歌曲名称。
+     * Set <p>歌曲名称。</p>
+     * @param Name <p>歌曲名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 歌手名称。 
-     * @return SingerSet 歌手名称。
+     * Get <p>歌手名称。</p> 
+     * @return SingerSet <p>歌手名称。</p>
      */
     public String [] getSingerSet() {
         return this.SingerSet;
     }
 
     /**
-     * Set 歌手名称。
-     * @param SingerSet 歌手名称。
+     * Set <p>歌手名称。</p>
+     * @param SingerSet <p>歌手名称。</p>
      */
     public void setSingerSet(String [] SingerSet) {
         this.SingerSet = SingerSet;
     }
 
     /**
-     * Get 播放时长。 
-     * @return Duration 播放时长。
+     * Get <p>播放时长。</p><p>单位：秒</p> 
+     * @return Duration <p>播放时长。</p><p>单位：秒</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 播放时长。
-     * @param Duration 播放时长。
+     * Set <p>播放时长。</p><p>单位：秒</p>
+     * @param Duration <p>播放时长。</p><p>单位：秒</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 歌手图片链接。 
-     * @return SingerImageUrl 歌手图片链接。
+     * Get <p>歌手图片链接。</p> 
+     * @return SingerImageUrl <p>歌手图片链接。</p>
      */
     public String getSingerImageUrl() {
         return this.SingerImageUrl;
     }
 
     /**
-     * Set 歌手图片链接。
-     * @param SingerImageUrl 歌手图片链接。
+     * Set <p>歌手图片链接。</p>
+     * @param SingerImageUrl <p>歌手图片链接。</p>
      */
     public void setSingerImageUrl(String SingerImageUrl) {
         this.SingerImageUrl = SingerImageUrl;
     }
 
     /**
-     * Get 专辑信息。
+     * Get <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlbumInfo 专辑信息。
+     * @return AlbumInfo <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MusicAlbumInfo getAlbumInfo() {
@@ -175,9 +171,9 @@ public class KTVMusicBaseInfo extends AbstractModel {
     }
 
     /**
-     * Set 专辑信息。
+     * Set <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlbumInfo 专辑信息。
+     * @param AlbumInfo <p>专辑信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlbumInfo(MusicAlbumInfo AlbumInfo) {
@@ -185,48 +181,32 @@ public class KTVMusicBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li> 
-     * @return RightSet 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
+     * Get <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li> 
+     * @return RightSet <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
      */
     public String [] getRightSet() {
         return this.RightSet;
     }
 
     /**
-     * Set 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
-     * @param RightSet 权益列表，取值有：
-<li>Play：可播；</li>
-<li>Sing：可唱。</li>
+     * Set <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
+     * @param RightSet <p>权益列表，取值有：</p><li>Play：可播；</li><li>Sing：可唱。</li>
      */
     public void setRightSet(String [] RightSet) {
         this.RightSet = RightSet;
     }
 
     /**
-     * Get 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li> 
-     * @return RecommendType 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
+     * Get <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li> 
+     * @return RecommendType <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
      */
     public String getRecommendType() {
         return this.RecommendType;
     }
 
     /**
-     * Set 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
-     * @param RecommendType 推荐类型，取值有：
-<li>Featured：精选；</li>
-<li>Other：其他。</li>
+     * Set <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
+     * @param RecommendType <p>推荐类型，取值有：</p><li>Featured：精选；</li><li>Other：其他。</li>
      */
     public void setRecommendType(String RecommendType) {
         this.RecommendType = RecommendType;

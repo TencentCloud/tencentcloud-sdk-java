@@ -122,6 +122,20 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
     private String EndpointPath;
 
     /**
+    * <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+    */
+    @SerializedName("HealthCheckMethod")
+    @Expose
+    private String HealthCheckMethod;
+
+    /**
+    * <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+    */
+    @SerializedName("HealthCheckPath")
+    @Expose
+    private String HealthCheckPath;
+
+    /**
      * Get <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p> 
      * @return Models <p>需要探测的模型列表</p><p>入参限制：上限为20个模型</p>
      */
@@ -345,6 +359,38 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.EndpointPath = EndpointPath;
     }
 
+    /**
+     * Get <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul> 
+     * @return HealthCheckMethod <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     */
+    public String getHealthCheckMethod() {
+        return this.HealthCheckMethod;
+    }
+
+    /**
+     * Set <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     * @param HealthCheckMethod <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     */
+    public void setHealthCheckMethod(String HealthCheckMethod) {
+        this.HealthCheckMethod = HealthCheckMethod;
+    }
+
+    /**
+     * Get <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p> 
+     * @return HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public String getHealthCheckPath() {
+        return this.HealthCheckPath;
+    }
+
+    /**
+     * Set <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     * @param HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public void setHealthCheckPath(String HealthCheckPath) {
+        this.HealthCheckPath = HealthCheckPath;
+    }
+
     public TestServiceProviderConnectionRequest() {
     }
 
@@ -398,6 +444,12 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         if (source.EndpointPath != null) {
             this.EndpointPath = new String(source.EndpointPath);
         }
+        if (source.HealthCheckMethod != null) {
+            this.HealthCheckMethod = new String(source.HealthCheckMethod);
+        }
+        if (source.HealthCheckPath != null) {
+            this.HealthCheckPath = new String(source.HealthCheckPath);
+        }
     }
 
 
@@ -419,6 +471,8 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
         this.setParamSimple(map, prefix + "Capability", this.Capability);
         this.setParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
+        this.setParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
+        this.setParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
 
     }
 }

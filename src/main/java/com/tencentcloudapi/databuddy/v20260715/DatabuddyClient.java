@@ -39,6 +39,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *添加控制台用户
+     * @param req AddConsoleUsersRequest
+     * @return AddConsoleUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddConsoleUsersResponse AddConsoleUsers(AddConsoleUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddConsoleUsers", AddConsoleUsersResponse.class);
+    }
+
+    /**
      *在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -179,6 +190,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询控制台用户列表
+     * @param req ListConsoleUsersRequest
+     * @return ListConsoleUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListConsoleUsersResponse ListConsoleUsers(ListConsoleUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListConsoleUsers", ListConsoleUsersResponse.class);
+    }
+
+    /**
      *工作流运行列表
      * @param req ListWorkflowRunsRequest
      * @return ListWorkflowRunsResponse
@@ -209,6 +231,17 @@ public class DatabuddyClient extends AbstractClient{
     public ListWorkflowsResponse ListWorkflows(ListWorkflowsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListWorkflows", ListWorkflowsResponse.class);
+    }
+
+    /**
+     *<p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
+     * @param req RemoveConsoleUsersRequest
+     * @return RemoveConsoleUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveConsoleUsersResponse RemoveConsoleUsers(RemoveConsoleUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveConsoleUsers", RemoveConsoleUsersResponse.class);
     }
 
     /**
@@ -243,6 +276,17 @@ public class DatabuddyClient extends AbstractClient{
     public UnbindWorkflowBundleResponse UnbindWorkflowBundle(UnbindWorkflowBundleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindWorkflowBundle", UnbindWorkflowBundleResponse.class);
+    }
+
+    /**
+     *修改控制台用户角色
+     * @param req UpdateConsoleUsersRequest
+     * @return UpdateConsoleUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateConsoleUsersResponse UpdateConsoleUsers(UpdateConsoleUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateConsoleUsers", UpdateConsoleUsersResponse.class);
     }
 
     /**

@@ -24,334 +24,322 @@ import java.util.HashMap;
 public class ModifyKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+    * <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
+    * <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Kafka导入配置名称
+    * <p>Kafka导入配置名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
+    * <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+    * <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * 服务地址，KafkaType为1时必填。
+    * <p>服务地址，KafkaType为1时必填。</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * ServerAddr是否为加密连接，KafkaType为1时必填。
+    * <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+    * <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
+    * <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
     */
     @SerializedName("UserKafkaTopics")
     @Expose
     private String UserKafkaTopics;
 
     /**
-    * 用户Kafka消费组名称
+    * <p>用户Kafka消费组名称</p>
     */
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
 
     /**
-    * 日志导入规则
+    * <p>日志导入规则</p>
     */
     @SerializedName("LogRechargeRule")
     @Expose
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * 导入控制，1：暂停；2：启动。
+    * <p>导入控制，1：暂停；2：启动。</p>
     */
     @SerializedName("StatusControl")
     @Expose
     private Long StatusControl;
 
     /**
-    * 用户kafka拓展信息
+    * <p>私有网络信息参数</p>
+    */
+    @SerializedName("NetworkInfo")
+    @Expose
+    private NetworkInfo NetworkInfo;
+
+    /**
+    * <p>用户kafka拓展信息</p>
     */
     @SerializedName("UserKafkaMeta")
     @Expose
     private UserKafkaMeta UserKafkaMeta;
 
     /**
-     * Get 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。 
-     * @return Id 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * Get <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul> 
+     * @return Id <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
-     * @param Id 导入配置Id。
-- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
-- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * Set <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
+     * @param Id <p>导入配置Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/94448">创建Kafka数据订阅任务</a>获取Kafka导入配置Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/94446">获取Kafka数据订阅任务列表</a>获取Kafka导入配置Id。</li></ul>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。 
-     * @return TopicId 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
+     * Get <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
-     * @param TopicId 导入CLS目标TopicId。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
+     * Set <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>导入CLS目标TopicId。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Kafka导入配置名称 
-     * @return Name Kafka导入配置名称
+     * Get <p>Kafka导入配置名称</p> 
+     * @return Name <p>Kafka导入配置名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Kafka导入配置名称
-     * @param Name Kafka导入配置名称
+     * Set <p>Kafka导入配置名称</p>
+     * @param Name <p>Kafka导入配置名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。 
-     * @return KafkaType 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
+     * Get <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p> 
+     * @return KafkaType <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
-     * @param KafkaType 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
+     * Set <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
+     * @param KafkaType <p>导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。</p>
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
-     * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * Get <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul> 
+     * @return KafkaInstance <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
-     * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
-- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+     * Set <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
+     * @param KafkaInstance <p>腾讯云CKafka实例ID，KafkaType为0时必填。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/597/40835">获取实例列表信息</a> 获取实例id。</li></ul>
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get 服务地址，KafkaType为1时必填。 
-     * @return ServerAddr 服务地址，KafkaType为1时必填。
+     * Get <p>服务地址，KafkaType为1时必填。</p> 
+     * @return ServerAddr <p>服务地址，KafkaType为1时必填。</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址，KafkaType为1时必填。
-     * @param ServerAddr 服务地址，KafkaType为1时必填。
+     * Set <p>服务地址，KafkaType为1时必填。</p>
+     * @param ServerAddr <p>服务地址，KafkaType为1时必填。</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get ServerAddr是否为加密连接，KafkaType为1时必填。 
-     * @return IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
+     * Get <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p> 
+     * @return IsEncryptionAddr <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set ServerAddr是否为加密连接，KafkaType为1时必填。
-     * @param IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
+     * Set <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
+     * @param IsEncryptionAddr <p>ServerAddr是否为加密连接，KafkaType为1时必填。</p>
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。 
-     * @return Protocol 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+     * Get <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p> 
+     * @return Protocol <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
-     * @param Protocol 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
+     * Set <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
+     * @param Protocol <p>加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。</p>
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。 
-     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
+     * Get <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul> 
+     * @return UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
-     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
-
-- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
+     * Set <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
+     * @param UserKafkaTopics <p>用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。</p><ul><li>Kafka类型为腾讯云CKafka时：通过 <a href="https://cloud.tencent.com/document/product/597/40847">获取主题列表</a> 获取TopicName。</li></ul>
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
     }
 
     /**
-     * Get 用户Kafka消费组名称 
-     * @return ConsumerGroupName 用户Kafka消费组名称
+     * Get <p>用户Kafka消费组名称</p> 
+     * @return ConsumerGroupName <p>用户Kafka消费组名称</p>
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set 用户Kafka消费组名称
-     * @param ConsumerGroupName 用户Kafka消费组名称
+     * Set <p>用户Kafka消费组名称</p>
+     * @param ConsumerGroupName <p>用户Kafka消费组名称</p>
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
     }
 
     /**
-     * Get 日志导入规则 
-     * @return LogRechargeRule 日志导入规则
+     * Get <p>日志导入规则</p> 
+     * @return LogRechargeRule <p>日志导入规则</p>
      */
     public LogRechargeRuleInfo getLogRechargeRule() {
         return this.LogRechargeRule;
     }
 
     /**
-     * Set 日志导入规则
-     * @param LogRechargeRule 日志导入规则
+     * Set <p>日志导入规则</p>
+     * @param LogRechargeRule <p>日志导入规则</p>
      */
     public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
         this.LogRechargeRule = LogRechargeRule;
     }
 
     /**
-     * Get 导入控制，1：暂停；2：启动。 
-     * @return StatusControl 导入控制，1：暂停；2：启动。
+     * Get <p>导入控制，1：暂停；2：启动。</p> 
+     * @return StatusControl <p>导入控制，1：暂停；2：启动。</p>
      */
     public Long getStatusControl() {
         return this.StatusControl;
     }
 
     /**
-     * Set 导入控制，1：暂停；2：启动。
-     * @param StatusControl 导入控制，1：暂停；2：启动。
+     * Set <p>导入控制，1：暂停；2：启动。</p>
+     * @param StatusControl <p>导入控制，1：暂停；2：启动。</p>
      */
     public void setStatusControl(Long StatusControl) {
         this.StatusControl = StatusControl;
     }
 
     /**
-     * Get 用户kafka拓展信息 
-     * @return UserKafkaMeta 用户kafka拓展信息
+     * Get <p>私有网络信息参数</p> 
+     * @return NetworkInfo <p>私有网络信息参数</p>
+     */
+    public NetworkInfo getNetworkInfo() {
+        return this.NetworkInfo;
+    }
+
+    /**
+     * Set <p>私有网络信息参数</p>
+     * @param NetworkInfo <p>私有网络信息参数</p>
+     */
+    public void setNetworkInfo(NetworkInfo NetworkInfo) {
+        this.NetworkInfo = NetworkInfo;
+    }
+
+    /**
+     * Get <p>用户kafka拓展信息</p> 
+     * @return UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public UserKafkaMeta getUserKafkaMeta() {
         return this.UserKafkaMeta;
     }
 
     /**
-     * Set 用户kafka拓展信息
-     * @param UserKafkaMeta 用户kafka拓展信息
+     * Set <p>用户kafka拓展信息</p>
+     * @param UserKafkaMeta <p>用户kafka拓展信息</p>
      */
     public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
         this.UserKafkaMeta = UserKafkaMeta;
@@ -401,6 +389,9 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         if (source.StatusControl != null) {
             this.StatusControl = new Long(source.StatusControl);
         }
+        if (source.NetworkInfo != null) {
+            this.NetworkInfo = new NetworkInfo(source.NetworkInfo);
+        }
         if (source.UserKafkaMeta != null) {
             this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
         }
@@ -423,6 +414,7 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
         this.setParamSimple(map, prefix + "StatusControl", this.StatusControl);
+        this.setParamObj(map, prefix + "NetworkInfo.", this.NetworkInfo);
         this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
