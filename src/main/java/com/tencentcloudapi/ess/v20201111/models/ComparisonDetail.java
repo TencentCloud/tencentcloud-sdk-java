@@ -24,231 +24,164 @@ import java.util.HashMap;
 public class ComparisonDetail extends AbstractModel {
 
     /**
-    * 合同对比差异点唯一ID。
+    * <p>合同对比差异点唯一ID。</p>
     */
     @SerializedName("ComparisonPointId")
     @Expose
     private String ComparisonPointId;
 
     /**
-    * 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
+    * <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
     */
     @SerializedName("ComparisonType")
     @Expose
     private String ComparisonType;
 
     /**
-    * 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
+    * <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * 原文文本。
+    * <p>原文文本。</p>
     */
     @SerializedName("OriginText")
     @Expose
     private String OriginText;
 
     /**
-    * 对比文本。
+    * <p>对比文本。</p>
     */
     @SerializedName("DiffText")
     @Expose
     private String DiffText;
 
     /**
-    * 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
+    * <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
     */
     @SerializedName("FormatType")
     @Expose
     private Long FormatType;
 
     /**
-     * Get 合同对比差异点唯一ID。 
-     * @return ComparisonPointId 合同对比差异点唯一ID。
+    * <p>页码：对比点所在页码。</p>
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
+     * Get <p>合同对比差异点唯一ID。</p> 
+     * @return ComparisonPointId <p>合同对比差异点唯一ID。</p>
      */
     public String getComparisonPointId() {
         return this.ComparisonPointId;
     }
 
     /**
-     * Set 合同对比差异点唯一ID。
-     * @param ComparisonPointId 合同对比差异点唯一ID。
+     * Set <p>合同对比差异点唯一ID。</p>
+     * @param ComparisonPointId <p>合同对比差异点唯一ID。</p>
      */
     public void setComparisonPointId(String ComparisonPointId) {
         this.ComparisonPointId = ComparisonPointId;
     }
 
     /**
-     * Get 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul> 
-     * @return ComparisonType 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
+     * Get <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul> 
+     * @return ComparisonType <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
      */
     public String getComparisonType() {
         return this.ComparisonType;
     }
 
     /**
-     * Set 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
-     * @param ComparisonType 对比前后差异类型，具体如下：
-<ul><li> **add**：新增</li>
-<li> **change**：变更</li>
-<li> **delete**：删除</li>
-</ul>
+     * Set <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
+     * @param ComparisonType <p>对比前后差异类型，具体如下：</p><ul><li> **add**：新增</li><li> **change**：变更</li><li> **delete**：删除</li></ul>
      */
     public void setComparisonType(String ComparisonType) {
         this.ComparisonType = ComparisonType;
     }
 
     /**
-     * Get 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul> 
-     * @return ContentType 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
+     * Get <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul> 
+     * @return ContentType <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
-     * @param ContentType 对比内容类型，具体如下：
-<ul><li> **text**：文本</li>
-<li> **table**：表格</li>
-<li> **picture**：图片</li>
-</ul>
+     * Set <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
+     * @param ContentType <p>对比内容类型，具体如下：</p><ul><li> **text**：文本</li><li> **table**：表格</li><li> **picture**：图片</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 原文文本。 
-     * @return OriginText 原文文本。
+     * Get <p>原文文本。</p> 
+     * @return OriginText <p>原文文本。</p>
      */
     public String getOriginText() {
         return this.OriginText;
     }
 
     /**
-     * Set 原文文本。
-     * @param OriginText 原文文本。
+     * Set <p>原文文本。</p>
+     * @param OriginText <p>原文文本。</p>
      */
     public void setOriginText(String OriginText) {
         this.OriginText = OriginText;
     }
 
     /**
-     * Get 对比文本。 
-     * @return DiffText 对比文本。
+     * Get <p>对比文本。</p> 
+     * @return DiffText <p>对比文本。</p>
      */
     public String getDiffText() {
         return this.DiffText;
     }
 
     /**
-     * Set 对比文本。
-     * @param DiffText 对比文本。
+     * Set <p>对比文本。</p>
+     * @param DiffText <p>对比文本。</p>
      */
     public void setDiffText(String DiffText) {
         this.DiffText = DiffText;
     }
 
     /**
-     * Get 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul> 
-     * @return FormatType 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
+     * Get <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul> 
+     * @return FormatType <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
      */
     public Long getFormatType() {
         return this.FormatType;
     }
 
     /**
-     * Set 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
-     * @param FormatType 合同文本的格式类型。
-类型如下：
-<ul><li> **0**：段落（正文）</li>
-<li> **1**：标点符号</li>
-<li> **2**：页眉页脚</li>
-<li> **3**：目录</li>
-<li> **4**：印章</li>
-<li> **5**：序号</li>
-<li> **6**：水印</li>
-<li> **7**：下划线内容（填写区）</li>
-</ul>
+     * Set <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
+     * @param FormatType <p>合同文本的格式类型。<br>类型如下：</p><ul><li> **0**：段落（正文）</li><li> **1**：标点符号</li><li> **2**：页眉页脚</li><li> **3**：目录</li><li> **4**：印章</li><li> **5**：序号</li><li> **6**：水印</li><li> **7**：下划线内容（填写区）</li></ul>
      */
     public void setFormatType(Long FormatType) {
         this.FormatType = FormatType;
+    }
+
+    /**
+     * Get <p>页码：对比点所在页码。</p> 
+     * @return PageNumber <p>页码：对比点所在页码。</p>
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set <p>页码：对比点所在页码。</p>
+     * @param PageNumber <p>页码：对比点所在页码。</p>
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
     }
 
     public ComparisonDetail() {
@@ -277,6 +210,9 @@ public class ComparisonDetail extends AbstractModel {
         if (source.FormatType != null) {
             this.FormatType = new Long(source.FormatType);
         }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
     }
 
 
@@ -290,6 +226,7 @@ public class ComparisonDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginText", this.OriginText);
         this.setParamSimple(map, prefix + "DiffText", this.DiffText);
         this.setParamSimple(map, prefix + "FormatType", this.FormatType);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
 
     }
 }

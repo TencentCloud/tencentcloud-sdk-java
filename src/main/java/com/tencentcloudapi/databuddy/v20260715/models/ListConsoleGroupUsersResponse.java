@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aiart.v20221229.models;
+package com.tencentcloudapi.databuddy.v20260715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageToImageResponse extends AbstractModel {
+public class ListConsoleGroupUsersResponse extends AbstractModel {
 
     /**
-    * <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+    * <p>返回结果</p>
     */
-    @SerializedName("ResultImage")
+    @SerializedName("Data")
     @Expose
-    private String ResultImage;
+    private ListConsoleGroupUsersRsp Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class ImageToImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p> 
-     * @return ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * Get <p>返回结果</p> 
+     * @return Data <p>返回结果</p>
      */
-    public String getResultImage() {
-        return this.ResultImage;
+    public ListConsoleGroupUsersRsp getData() {
+        return this.Data;
     }
 
     /**
-     * Set <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
-     * @param ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * Set <p>返回结果</p>
+     * @param Data <p>返回结果</p>
      */
-    public void setResultImage(String ResultImage) {
-        this.ResultImage = ResultImage;
+    public void setData(ListConsoleGroupUsersRsp Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,16 +69,16 @@ public class ImageToImageResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ImageToImageResponse() {
+    public ListConsoleGroupUsersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImageToImageResponse(ImageToImageResponse source) {
-        if (source.ResultImage != null) {
-            this.ResultImage = new String(source.ResultImage);
+    public ListConsoleGroupUsersResponse(ListConsoleGroupUsersResponse source) {
+        if (source.Data != null) {
+            this.Data = new ListConsoleGroupUsersRsp(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class ImageToImageResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

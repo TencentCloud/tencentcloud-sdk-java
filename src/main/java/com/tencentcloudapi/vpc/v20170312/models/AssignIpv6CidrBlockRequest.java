@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AssignIpv6CidrBlockRequest extends AbstractModel {
 
     /**
-    * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+    * <p><code>VPC</code>实例<code>ID</code>，形如：<code>vpc-f49l6u0z</code>。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
+    * <p>申请IPv6 Cidr 的类型，<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</p>
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
 
     /**
-     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
-     * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get <p><code>VPC</code>实例<code>ID</code>，形如：<code>vpc-f49l6u0z</code>。</p> 
+     * @return VpcId <p><code>VPC</code>实例<code>ID</code>，形如：<code>vpc-f49l6u0z</code>。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set <p><code>VPC</code>实例<code>ID</code>，形如：<code>vpc-f49l6u0z</code>。</p>
+     * @param VpcId <p><code>VPC</code>实例<code>ID</code>，形如：<code>vpc-f49l6u0z</code>。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。 
-     * @return AddressType 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
+     * Get <p>申请IPv6 Cidr 的类型，<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</p> 
+     * @return AddressType <p>申请IPv6 Cidr 的类型，<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</p>
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
-     * @param AddressType 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
+     * Set <p>申请IPv6 Cidr 的类型，<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</p>
+     * @param AddressType <p>申请IPv6 Cidr 的类型，<code>GUA</code>(全球单播地址), <code>ULA</code>(唯一本地地址)。</p>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

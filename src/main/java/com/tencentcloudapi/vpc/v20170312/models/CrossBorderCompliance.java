@@ -192,6 +192,13 @@ public class CrossBorderCompliance extends AbstractModel {
     private String LegalPersonIdCard;
 
     /**
+    * 白名单开关是否开启
+    */
+    @SerializedName("WhiteListFlag")
+    @Expose
+    private Boolean WhiteListFlag;
+
+    /**
      * Get 服务商，可选值：`UNICOM`。 
      * @return ServiceProvider 服务商，可选值：`UNICOM`。
      */
@@ -575,6 +582,22 @@ public class CrossBorderCompliance extends AbstractModel {
         this.LegalPersonIdCard = LegalPersonIdCard;
     }
 
+    /**
+     * Get 白名单开关是否开启 
+     * @return WhiteListFlag 白名单开关是否开启
+     */
+    public Boolean getWhiteListFlag() {
+        return this.WhiteListFlag;
+    }
+
+    /**
+     * Set 白名单开关是否开启
+     * @param WhiteListFlag 白名单开关是否开启
+     */
+    public void setWhiteListFlag(Boolean WhiteListFlag) {
+        this.WhiteListFlag = WhiteListFlag;
+    }
+
     public CrossBorderCompliance() {
     }
 
@@ -655,6 +678,9 @@ public class CrossBorderCompliance extends AbstractModel {
         if (source.LegalPersonIdCard != null) {
             this.LegalPersonIdCard = new String(source.LegalPersonIdCard);
         }
+        if (source.WhiteListFlag != null) {
+            this.WhiteListFlag = new Boolean(source.WhiteListFlag);
+        }
     }
 
 
@@ -686,6 +712,7 @@ public class CrossBorderCompliance extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
         this.setParamSimple(map, prefix + "LegalPersonIdCard", this.LegalPersonIdCard);
+        this.setParamSimple(map, prefix + "WhiteListFlag", this.WhiteListFlag);
 
     }
 }

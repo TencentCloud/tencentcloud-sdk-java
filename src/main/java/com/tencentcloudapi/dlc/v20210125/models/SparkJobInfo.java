@@ -24,175 +24,175 @@ import java.util.HashMap;
 public class SparkJobInfo extends AbstractModel {
 
     /**
-    * spark作业ID
+    * <p>spark作业ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * spark作业名
+    * <p>spark作业名</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
+    * <p>spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业</p>
     */
     @SerializedName("JobType")
     @Expose
     private Long JobType;
 
     /**
-    * 引擎名
+    * <p>引擎名</p>
     */
     @SerializedName("DataEngine")
     @Expose
     private String DataEngine;
 
     /**
-    * 该字段已下线，请使用字段Datasource
+    * <p>该字段已下线，请使用字段Datasource</p>
     */
     @SerializedName("Eni")
     @Expose
     private String Eni;
 
     /**
-    * 程序包是否本地上传，cos或者lakefs
+    * <p>程序包是否本地上传，cos或者lakefs</p>
     */
     @SerializedName("IsLocal")
     @Expose
     private String IsLocal;
 
     /**
-    * 程序包路径
+    * <p>程序包路径</p>
     */
     @SerializedName("JobFile")
     @Expose
     private String JobFile;
 
     /**
-    * 角色ID
+    * <p>角色ID</p>
     */
     @SerializedName("RoleArn")
     @Expose
     private Long RoleArn;
 
     /**
-    * spark作业运行主类
+    * <p>spark作业运行主类</p>
     */
     @SerializedName("MainClass")
     @Expose
     private String MainClass;
 
     /**
-    * 命令行参数，spark作业命令行参数，空格分隔
+    * <p>命令行参数，spark作业命令行参数，空格分隔</p>
     */
     @SerializedName("CmdArgs")
     @Expose
     private String CmdArgs;
 
     /**
-    * spark原生配置，换行符分隔
+    * <p>spark原生配置，换行符分隔</p>
     */
     @SerializedName("JobConf")
     @Expose
     private String JobConf;
 
     /**
-    * 依赖jars是否本地上传，cos或者lakefs
+    * <p>依赖jars是否本地上传，cos或者lakefs</p>
     */
     @SerializedName("IsLocalJars")
     @Expose
     private String IsLocalJars;
 
     /**
-    * spark作业依赖jars，逗号分隔
+    * <p>spark作业依赖jars，逗号分隔</p>
     */
     @SerializedName("JobJars")
     @Expose
     private String JobJars;
 
     /**
-    * 依赖文件是否本地上传，cos或者lakefs
+    * <p>依赖文件是否本地上传，cos或者lakefs</p>
     */
     @SerializedName("IsLocalFiles")
     @Expose
     private String IsLocalFiles;
 
     /**
-    * spark作业依赖文件，逗号分隔
+    * <p>spark作业依赖文件，逗号分隔</p>
     */
     @SerializedName("JobFiles")
     @Expose
     private String JobFiles;
 
     /**
-    * spark作业driver资源大小
+    * <p>spark作业driver资源大小</p>
     */
     @SerializedName("JobDriverSize")
     @Expose
     private String JobDriverSize;
 
     /**
-    * spark作业executor资源大小
+    * <p>spark作业executor资源大小</p>
     */
     @SerializedName("JobExecutorSize")
     @Expose
     private String JobExecutorSize;
 
     /**
-    * spark作业executor个数
+    * <p>spark作业executor个数</p>
     */
     @SerializedName("JobExecutorNums")
     @Expose
     private Long JobExecutorNums;
 
     /**
-    * spark流任务最大重试次数
+    * <p>spark流任务最大重试次数</p>
     */
     @SerializedName("JobMaxAttempts")
     @Expose
     private Long JobMaxAttempts;
 
     /**
-    * spark作业创建者
+    * <p>spark作业创建者</p>
     */
     @SerializedName("JobCreator")
     @Expose
     private String JobCreator;
 
     /**
-    * spark作业创建时间
+    * <p>spark作业创建时间</p>
     */
     @SerializedName("JobCreateTime")
     @Expose
     private Long JobCreateTime;
 
     /**
-    * spark作业更新时间
+    * <p>spark作业更新时间</p>
     */
     @SerializedName("JobUpdateTime")
     @Expose
     private Long JobUpdateTime;
 
     /**
-    * spark作业最近任务ID
+    * <p>spark作业最近任务ID</p>
     */
     @SerializedName("CurrentTaskId")
     @Expose
     private String CurrentTaskId;
 
     /**
-    * spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
+    * <p>spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5</p>
     */
     @SerializedName("JobStatus")
     @Expose
     private Long JobStatus;
 
     /**
-    * spark流作业统计
+    * <p>spark流作业统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamingStat")
@@ -200,7 +200,7 @@ public class SparkJobInfo extends AbstractModel {
     private StreamingStatistics StreamingStat;
 
     /**
-    * 数据源名
+    * <p>数据源名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSource")
@@ -208,7 +208,7 @@ public class SparkJobInfo extends AbstractModel {
     private String DataSource;
 
     /**
-    * pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+    * <p>pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLocalPythonFiles")
@@ -216,7 +216,7 @@ public class SparkJobInfo extends AbstractModel {
     private String IsLocalPythonFiles;
 
     /**
-    * 注：该返回值已废弃
+    * <p>注：该返回值已废弃</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppPythonFiles")
@@ -224,7 +224,7 @@ public class SparkJobInfo extends AbstractModel {
     private String AppPythonFiles;
 
     /**
-    * archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+    * <p>archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLocalArchives")
@@ -232,7 +232,7 @@ public class SparkJobInfo extends AbstractModel {
     private String IsLocalArchives;
 
     /**
-    * archives：依赖资源
+    * <p>archives：依赖资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobArchives")
@@ -240,7 +240,7 @@ public class SparkJobInfo extends AbstractModel {
     private String JobArchives;
 
     /**
-    * Spark Image 版本
+    * <p>Spark Image 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkImage")
@@ -248,7 +248,7 @@ public class SparkJobInfo extends AbstractModel {
     private String SparkImage;
 
     /**
-    * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+    * <p>pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobPythonFiles")
@@ -256,7 +256,7 @@ public class SparkJobInfo extends AbstractModel {
     private String JobPythonFiles;
 
     /**
-    * 当前job正在运行或准备运行的任务个数
+    * <p>当前job正在运行或准备运行的任务个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskNum")
@@ -264,7 +264,7 @@ public class SparkJobInfo extends AbstractModel {
     private Long TaskNum;
 
     /**
-    * 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+    * <p>引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineStatus")
@@ -272,7 +272,7 @@ public class SparkJobInfo extends AbstractModel {
     private Long DataEngineStatus;
 
     /**
-    * 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+    * <p>指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobExecutorMaxNumbers")
@@ -280,7 +280,7 @@ public class SparkJobInfo extends AbstractModel {
     private Long JobExecutorMaxNumbers;
 
     /**
-    * 镜像版本
+    * <p>镜像版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkImageVersion")
@@ -288,7 +288,7 @@ public class SparkJobInfo extends AbstractModel {
     private String SparkImageVersion;
 
     /**
-    * 查询脚本关联id
+    * <p>查询脚本关联id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
@@ -296,7 +296,7 @@ public class SparkJobInfo extends AbstractModel {
     private String SessionId;
 
     /**
-    * spark_emr_livy
+    * <p>spark_emr_livy</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineClusterType")
@@ -304,7 +304,7 @@ public class SparkJobInfo extends AbstractModel {
     private String DataEngineClusterType;
 
     /**
-    * Spark 3.2-EMR
+    * <p>Spark 3.2-EMR</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineImageVersion")
@@ -312,7 +312,7 @@ public class SparkJobInfo extends AbstractModel {
     private String DataEngineImageVersion;
 
     /**
-    * 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+    * <p>任务资源配置是否继承集群模板，0（默认）不继承，1：继承</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsInherit")
@@ -320,7 +320,7 @@ public class SparkJobInfo extends AbstractModel {
     private Long IsInherit;
 
     /**
-    * 是否使用session脚本的sql运行任务：false：否，true：是
+    * <p>是否使用session脚本的sql运行任务：false：否，true：是</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSessionStarted")
@@ -328,7 +328,7 @@ public class SparkJobInfo extends AbstractModel {
     private Boolean IsSessionStarted;
 
     /**
-    * 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+    * <p>引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineTypeDetail")
@@ -336,393 +336,407 @@ public class SparkJobInfo extends AbstractModel {
     private String EngineTypeDetail;
 
     /**
-     * Get spark作业ID 
-     * @return JobId spark作业ID
+    * <p>标准引擎依赖包</p>
+    */
+    @SerializedName("DependencyPackages")
+    @Expose
+    private DependencyPackage [] DependencyPackages;
+
+    /**
+    * <p>作业运行鉴权身份</p>
+    */
+    @SerializedName("RunAsIdentity")
+    @Expose
+    private String RunAsIdentity;
+
+    /**
+     * Get <p>spark作业ID</p> 
+     * @return JobId <p>spark作业ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set spark作业ID
-     * @param JobId spark作业ID
+     * Set <p>spark作业ID</p>
+     * @param JobId <p>spark作业ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get spark作业名 
-     * @return JobName spark作业名
+     * Get <p>spark作业名</p> 
+     * @return JobName <p>spark作业名</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set spark作业名
-     * @param JobName spark作业名
+     * Set <p>spark作业名</p>
+     * @param JobName <p>spark作业名</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业 
-     * @return JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
+     * Get <p>spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业</p> 
+     * @return JobType <p>spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业</p>
      */
     public Long getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
-     * @param JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
+     * Set <p>spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业</p>
+     * @param JobType <p>spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业</p>
      */
     public void setJobType(Long JobType) {
         this.JobType = JobType;
     }
 
     /**
-     * Get 引擎名 
-     * @return DataEngine 引擎名
+     * Get <p>引擎名</p> 
+     * @return DataEngine <p>引擎名</p>
      */
     public String getDataEngine() {
         return this.DataEngine;
     }
 
     /**
-     * Set 引擎名
-     * @param DataEngine 引擎名
+     * Set <p>引擎名</p>
+     * @param DataEngine <p>引擎名</p>
      */
     public void setDataEngine(String DataEngine) {
         this.DataEngine = DataEngine;
     }
 
     /**
-     * Get 该字段已下线，请使用字段Datasource 
-     * @return Eni 该字段已下线，请使用字段Datasource
+     * Get <p>该字段已下线，请使用字段Datasource</p> 
+     * @return Eni <p>该字段已下线，请使用字段Datasource</p>
      */
     public String getEni() {
         return this.Eni;
     }
 
     /**
-     * Set 该字段已下线，请使用字段Datasource
-     * @param Eni 该字段已下线，请使用字段Datasource
+     * Set <p>该字段已下线，请使用字段Datasource</p>
+     * @param Eni <p>该字段已下线，请使用字段Datasource</p>
      */
     public void setEni(String Eni) {
         this.Eni = Eni;
     }
 
     /**
-     * Get 程序包是否本地上传，cos或者lakefs 
-     * @return IsLocal 程序包是否本地上传，cos或者lakefs
+     * Get <p>程序包是否本地上传，cos或者lakefs</p> 
+     * @return IsLocal <p>程序包是否本地上传，cos或者lakefs</p>
      */
     public String getIsLocal() {
         return this.IsLocal;
     }
 
     /**
-     * Set 程序包是否本地上传，cos或者lakefs
-     * @param IsLocal 程序包是否本地上传，cos或者lakefs
+     * Set <p>程序包是否本地上传，cos或者lakefs</p>
+     * @param IsLocal <p>程序包是否本地上传，cos或者lakefs</p>
      */
     public void setIsLocal(String IsLocal) {
         this.IsLocal = IsLocal;
     }
 
     /**
-     * Get 程序包路径 
-     * @return JobFile 程序包路径
+     * Get <p>程序包路径</p> 
+     * @return JobFile <p>程序包路径</p>
      */
     public String getJobFile() {
         return this.JobFile;
     }
 
     /**
-     * Set 程序包路径
-     * @param JobFile 程序包路径
+     * Set <p>程序包路径</p>
+     * @param JobFile <p>程序包路径</p>
      */
     public void setJobFile(String JobFile) {
         this.JobFile = JobFile;
     }
 
     /**
-     * Get 角色ID 
-     * @return RoleArn 角色ID
+     * Get <p>角色ID</p> 
+     * @return RoleArn <p>角色ID</p>
      */
     public Long getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 角色ID
-     * @param RoleArn 角色ID
+     * Set <p>角色ID</p>
+     * @param RoleArn <p>角色ID</p>
      */
     public void setRoleArn(Long RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get spark作业运行主类 
-     * @return MainClass spark作业运行主类
+     * Get <p>spark作业运行主类</p> 
+     * @return MainClass <p>spark作业运行主类</p>
      */
     public String getMainClass() {
         return this.MainClass;
     }
 
     /**
-     * Set spark作业运行主类
-     * @param MainClass spark作业运行主类
+     * Set <p>spark作业运行主类</p>
+     * @param MainClass <p>spark作业运行主类</p>
      */
     public void setMainClass(String MainClass) {
         this.MainClass = MainClass;
     }
 
     /**
-     * Get 命令行参数，spark作业命令行参数，空格分隔 
-     * @return CmdArgs 命令行参数，spark作业命令行参数，空格分隔
+     * Get <p>命令行参数，spark作业命令行参数，空格分隔</p> 
+     * @return CmdArgs <p>命令行参数，spark作业命令行参数，空格分隔</p>
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set 命令行参数，spark作业命令行参数，空格分隔
-     * @param CmdArgs 命令行参数，spark作业命令行参数，空格分隔
+     * Set <p>命令行参数，spark作业命令行参数，空格分隔</p>
+     * @param CmdArgs <p>命令行参数，spark作业命令行参数，空格分隔</p>
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;
     }
 
     /**
-     * Get spark原生配置，换行符分隔 
-     * @return JobConf spark原生配置，换行符分隔
+     * Get <p>spark原生配置，换行符分隔</p> 
+     * @return JobConf <p>spark原生配置，换行符分隔</p>
      */
     public String getJobConf() {
         return this.JobConf;
     }
 
     /**
-     * Set spark原生配置，换行符分隔
-     * @param JobConf spark原生配置，换行符分隔
+     * Set <p>spark原生配置，换行符分隔</p>
+     * @param JobConf <p>spark原生配置，换行符分隔</p>
      */
     public void setJobConf(String JobConf) {
         this.JobConf = JobConf;
     }
 
     /**
-     * Get 依赖jars是否本地上传，cos或者lakefs 
-     * @return IsLocalJars 依赖jars是否本地上传，cos或者lakefs
+     * Get <p>依赖jars是否本地上传，cos或者lakefs</p> 
+     * @return IsLocalJars <p>依赖jars是否本地上传，cos或者lakefs</p>
      */
     public String getIsLocalJars() {
         return this.IsLocalJars;
     }
 
     /**
-     * Set 依赖jars是否本地上传，cos或者lakefs
-     * @param IsLocalJars 依赖jars是否本地上传，cos或者lakefs
+     * Set <p>依赖jars是否本地上传，cos或者lakefs</p>
+     * @param IsLocalJars <p>依赖jars是否本地上传，cos或者lakefs</p>
      */
     public void setIsLocalJars(String IsLocalJars) {
         this.IsLocalJars = IsLocalJars;
     }
 
     /**
-     * Get spark作业依赖jars，逗号分隔 
-     * @return JobJars spark作业依赖jars，逗号分隔
+     * Get <p>spark作业依赖jars，逗号分隔</p> 
+     * @return JobJars <p>spark作业依赖jars，逗号分隔</p>
      */
     public String getJobJars() {
         return this.JobJars;
     }
 
     /**
-     * Set spark作业依赖jars，逗号分隔
-     * @param JobJars spark作业依赖jars，逗号分隔
+     * Set <p>spark作业依赖jars，逗号分隔</p>
+     * @param JobJars <p>spark作业依赖jars，逗号分隔</p>
      */
     public void setJobJars(String JobJars) {
         this.JobJars = JobJars;
     }
 
     /**
-     * Get 依赖文件是否本地上传，cos或者lakefs 
-     * @return IsLocalFiles 依赖文件是否本地上传，cos或者lakefs
+     * Get <p>依赖文件是否本地上传，cos或者lakefs</p> 
+     * @return IsLocalFiles <p>依赖文件是否本地上传，cos或者lakefs</p>
      */
     public String getIsLocalFiles() {
         return this.IsLocalFiles;
     }
 
     /**
-     * Set 依赖文件是否本地上传，cos或者lakefs
-     * @param IsLocalFiles 依赖文件是否本地上传，cos或者lakefs
+     * Set <p>依赖文件是否本地上传，cos或者lakefs</p>
+     * @param IsLocalFiles <p>依赖文件是否本地上传，cos或者lakefs</p>
      */
     public void setIsLocalFiles(String IsLocalFiles) {
         this.IsLocalFiles = IsLocalFiles;
     }
 
     /**
-     * Get spark作业依赖文件，逗号分隔 
-     * @return JobFiles spark作业依赖文件，逗号分隔
+     * Get <p>spark作业依赖文件，逗号分隔</p> 
+     * @return JobFiles <p>spark作业依赖文件，逗号分隔</p>
      */
     public String getJobFiles() {
         return this.JobFiles;
     }
 
     /**
-     * Set spark作业依赖文件，逗号分隔
-     * @param JobFiles spark作业依赖文件，逗号分隔
+     * Set <p>spark作业依赖文件，逗号分隔</p>
+     * @param JobFiles <p>spark作业依赖文件，逗号分隔</p>
      */
     public void setJobFiles(String JobFiles) {
         this.JobFiles = JobFiles;
     }
 
     /**
-     * Get spark作业driver资源大小 
-     * @return JobDriverSize spark作业driver资源大小
+     * Get <p>spark作业driver资源大小</p> 
+     * @return JobDriverSize <p>spark作业driver资源大小</p>
      */
     public String getJobDriverSize() {
         return this.JobDriverSize;
     }
 
     /**
-     * Set spark作业driver资源大小
-     * @param JobDriverSize spark作业driver资源大小
+     * Set <p>spark作业driver资源大小</p>
+     * @param JobDriverSize <p>spark作业driver资源大小</p>
      */
     public void setJobDriverSize(String JobDriverSize) {
         this.JobDriverSize = JobDriverSize;
     }
 
     /**
-     * Get spark作业executor资源大小 
-     * @return JobExecutorSize spark作业executor资源大小
+     * Get <p>spark作业executor资源大小</p> 
+     * @return JobExecutorSize <p>spark作业executor资源大小</p>
      */
     public String getJobExecutorSize() {
         return this.JobExecutorSize;
     }
 
     /**
-     * Set spark作业executor资源大小
-     * @param JobExecutorSize spark作业executor资源大小
+     * Set <p>spark作业executor资源大小</p>
+     * @param JobExecutorSize <p>spark作业executor资源大小</p>
      */
     public void setJobExecutorSize(String JobExecutorSize) {
         this.JobExecutorSize = JobExecutorSize;
     }
 
     /**
-     * Get spark作业executor个数 
-     * @return JobExecutorNums spark作业executor个数
+     * Get <p>spark作业executor个数</p> 
+     * @return JobExecutorNums <p>spark作业executor个数</p>
      */
     public Long getJobExecutorNums() {
         return this.JobExecutorNums;
     }
 
     /**
-     * Set spark作业executor个数
-     * @param JobExecutorNums spark作业executor个数
+     * Set <p>spark作业executor个数</p>
+     * @param JobExecutorNums <p>spark作业executor个数</p>
      */
     public void setJobExecutorNums(Long JobExecutorNums) {
         this.JobExecutorNums = JobExecutorNums;
     }
 
     /**
-     * Get spark流任务最大重试次数 
-     * @return JobMaxAttempts spark流任务最大重试次数
+     * Get <p>spark流任务最大重试次数</p> 
+     * @return JobMaxAttempts <p>spark流任务最大重试次数</p>
      */
     public Long getJobMaxAttempts() {
         return this.JobMaxAttempts;
     }
 
     /**
-     * Set spark流任务最大重试次数
-     * @param JobMaxAttempts spark流任务最大重试次数
+     * Set <p>spark流任务最大重试次数</p>
+     * @param JobMaxAttempts <p>spark流任务最大重试次数</p>
      */
     public void setJobMaxAttempts(Long JobMaxAttempts) {
         this.JobMaxAttempts = JobMaxAttempts;
     }
 
     /**
-     * Get spark作业创建者 
-     * @return JobCreator spark作业创建者
+     * Get <p>spark作业创建者</p> 
+     * @return JobCreator <p>spark作业创建者</p>
      */
     public String getJobCreator() {
         return this.JobCreator;
     }
 
     /**
-     * Set spark作业创建者
-     * @param JobCreator spark作业创建者
+     * Set <p>spark作业创建者</p>
+     * @param JobCreator <p>spark作业创建者</p>
      */
     public void setJobCreator(String JobCreator) {
         this.JobCreator = JobCreator;
     }
 
     /**
-     * Get spark作业创建时间 
-     * @return JobCreateTime spark作业创建时间
+     * Get <p>spark作业创建时间</p> 
+     * @return JobCreateTime <p>spark作业创建时间</p>
      */
     public Long getJobCreateTime() {
         return this.JobCreateTime;
     }
 
     /**
-     * Set spark作业创建时间
-     * @param JobCreateTime spark作业创建时间
+     * Set <p>spark作业创建时间</p>
+     * @param JobCreateTime <p>spark作业创建时间</p>
      */
     public void setJobCreateTime(Long JobCreateTime) {
         this.JobCreateTime = JobCreateTime;
     }
 
     /**
-     * Get spark作业更新时间 
-     * @return JobUpdateTime spark作业更新时间
+     * Get <p>spark作业更新时间</p> 
+     * @return JobUpdateTime <p>spark作业更新时间</p>
      */
     public Long getJobUpdateTime() {
         return this.JobUpdateTime;
     }
 
     /**
-     * Set spark作业更新时间
-     * @param JobUpdateTime spark作业更新时间
+     * Set <p>spark作业更新时间</p>
+     * @param JobUpdateTime <p>spark作业更新时间</p>
      */
     public void setJobUpdateTime(Long JobUpdateTime) {
         this.JobUpdateTime = JobUpdateTime;
     }
 
     /**
-     * Get spark作业最近任务ID 
-     * @return CurrentTaskId spark作业最近任务ID
+     * Get <p>spark作业最近任务ID</p> 
+     * @return CurrentTaskId <p>spark作业最近任务ID</p>
      */
     public String getCurrentTaskId() {
         return this.CurrentTaskId;
     }
 
     /**
-     * Set spark作业最近任务ID
-     * @param CurrentTaskId spark作业最近任务ID
+     * Set <p>spark作业最近任务ID</p>
+     * @param CurrentTaskId <p>spark作业最近任务ID</p>
      */
     public void setCurrentTaskId(String CurrentTaskId) {
         this.CurrentTaskId = CurrentTaskId;
     }
 
     /**
-     * Get spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5 
-     * @return JobStatus spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
+     * Get <p>spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5</p> 
+     * @return JobStatus <p>spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5</p>
      */
     public Long getJobStatus() {
         return this.JobStatus;
     }
 
     /**
-     * Set spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
-     * @param JobStatus spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
+     * Set <p>spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5</p>
+     * @param JobStatus <p>spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5</p>
      */
     public void setJobStatus(Long JobStatus) {
         this.JobStatus = JobStatus;
     }
 
     /**
-     * Get spark流作业统计
+     * Get <p>spark流作业统计</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StreamingStat spark流作业统计
+     * @return StreamingStat <p>spark流作业统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StreamingStatistics getStreamingStat() {
@@ -730,9 +744,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set spark流作业统计
+     * Set <p>spark流作业统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StreamingStat spark流作业统计
+     * @param StreamingStat <p>spark流作业统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamingStat(StreamingStatistics StreamingStat) {
@@ -740,9 +754,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源名
+     * Get <p>数据源名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSource 数据源名
+     * @return DataSource <p>数据源名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSource() {
@@ -750,9 +764,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 数据源名
+     * Set <p>数据源名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSource 数据源名
+     * @param DataSource <p>数据源名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSource(String DataSource) {
@@ -760,9 +774,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Get <p>pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @return IsLocalPythonFiles <p>pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsLocalPythonFiles() {
@@ -770,9 +784,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Set <p>pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalPythonFiles <p>pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLocalPythonFiles(String IsLocalPythonFiles) {
@@ -780,9 +794,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 注：该返回值已废弃
+     * Get <p>注：该返回值已废弃</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppPythonFiles 注：该返回值已废弃
+     * @return AppPythonFiles <p>注：该返回值已废弃</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppPythonFiles() {
@@ -790,9 +804,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 注：该返回值已废弃
+     * Set <p>注：该返回值已废弃</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppPythonFiles 注：该返回值已废弃
+     * @param AppPythonFiles <p>注：该返回值已废弃</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppPythonFiles(String AppPythonFiles) {
@@ -800,9 +814,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Get <p>archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @return IsLocalArchives <p>archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsLocalArchives() {
@@ -810,9 +824,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Set <p>archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalArchives <p>archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLocalArchives(String IsLocalArchives) {
@@ -820,9 +834,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get archives：依赖资源
+     * Get <p>archives：依赖资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobArchives archives：依赖资源
+     * @return JobArchives <p>archives：依赖资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobArchives() {
@@ -830,9 +844,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set archives：依赖资源
+     * Set <p>archives：依赖资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobArchives archives：依赖资源
+     * @param JobArchives <p>archives：依赖资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobArchives(String JobArchives) {
@@ -840,9 +854,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get Spark Image 版本
+     * Get <p>Spark Image 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SparkImage Spark Image 版本
+     * @return SparkImage <p>Spark Image 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkImage() {
@@ -850,9 +864,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set Spark Image 版本
+     * Set <p>Spark Image 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SparkImage Spark Image 版本
+     * @param SparkImage <p>Spark Image 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkImage(String SparkImage) {
@@ -860,9 +874,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * Get <p>pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @return JobPythonFiles <p>pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobPythonFiles() {
@@ -870,9 +884,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * Set <p>pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @param JobPythonFiles <p>pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobPythonFiles(String JobPythonFiles) {
@@ -880,9 +894,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前job正在运行或准备运行的任务个数
+     * Get <p>当前job正在运行或准备运行的任务个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskNum 当前job正在运行或准备运行的任务个数
+     * @return TaskNum <p>当前job正在运行或准备运行的任务个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskNum() {
@@ -890,9 +904,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 当前job正在运行或准备运行的任务个数
+     * Set <p>当前job正在运行或准备运行的任务个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskNum 当前job正在运行或准备运行的任务个数
+     * @param TaskNum <p>当前job正在运行或准备运行的任务个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskNum(Long TaskNum) {
@@ -900,9 +914,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+     * Get <p>引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataEngineStatus 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+     * @return DataEngineStatus <p>引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataEngineStatus() {
@@ -910,9 +924,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+     * Set <p>引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataEngineStatus 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+     * @param DataEngineStatus <p>引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineStatus(Long DataEngineStatus) {
@@ -920,9 +934,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+     * Get <p>指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+     * @return JobExecutorMaxNumbers <p>指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobExecutorMaxNumbers() {
@@ -930,9 +944,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+     * Set <p>指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+     * @param JobExecutorMaxNumbers <p>指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobExecutorMaxNumbers(Long JobExecutorMaxNumbers) {
@@ -940,9 +954,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 镜像版本
+     * Get <p>镜像版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SparkImageVersion 镜像版本
+     * @return SparkImageVersion <p>镜像版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkImageVersion() {
@@ -950,9 +964,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 镜像版本
+     * Set <p>镜像版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SparkImageVersion 镜像版本
+     * @param SparkImageVersion <p>镜像版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkImageVersion(String SparkImageVersion) {
@@ -960,9 +974,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 查询脚本关联id
+     * Get <p>查询脚本关联id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessionId 查询脚本关联id
+     * @return SessionId <p>查询脚本关联id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
@@ -970,9 +984,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 查询脚本关联id
+     * Set <p>查询脚本关联id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionId 查询脚本关联id
+     * @param SessionId <p>查询脚本关联id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
@@ -980,9 +994,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get spark_emr_livy
+     * Get <p>spark_emr_livy</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataEngineClusterType spark_emr_livy
+     * @return DataEngineClusterType <p>spark_emr_livy</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineClusterType() {
@@ -990,9 +1004,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set spark_emr_livy
+     * Set <p>spark_emr_livy</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataEngineClusterType spark_emr_livy
+     * @param DataEngineClusterType <p>spark_emr_livy</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineClusterType(String DataEngineClusterType) {
@@ -1000,9 +1014,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get Spark 3.2-EMR
+     * Get <p>Spark 3.2-EMR</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataEngineImageVersion Spark 3.2-EMR
+     * @return DataEngineImageVersion <p>Spark 3.2-EMR</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineImageVersion() {
@@ -1010,9 +1024,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set Spark 3.2-EMR
+     * Set <p>Spark 3.2-EMR</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataEngineImageVersion Spark 3.2-EMR
+     * @param DataEngineImageVersion <p>Spark 3.2-EMR</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineImageVersion(String DataEngineImageVersion) {
@@ -1020,9 +1034,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+     * Get <p>任务资源配置是否继承集群模板，0（默认）不继承，1：继承</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+     * @return IsInherit <p>任务资源配置是否继承集群模板，0（默认）不继承，1：继承</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsInherit() {
@@ -1030,9 +1044,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+     * Set <p>任务资源配置是否继承集群模板，0（默认）不继承，1：继承</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+     * @param IsInherit <p>任务资源配置是否继承集群模板，0（默认）不继承，1：继承</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsInherit(Long IsInherit) {
@@ -1040,9 +1054,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否使用session脚本的sql运行任务：false：否，true：是
+     * Get <p>是否使用session脚本的sql运行任务：false：否，true：是</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+     * @return IsSessionStarted <p>是否使用session脚本的sql运行任务：false：否，true：是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSessionStarted() {
@@ -1050,9 +1064,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否使用session脚本的sql运行任务：false：否，true：是
+     * Set <p>是否使用session脚本的sql运行任务：false：否，true：是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+     * @param IsSessionStarted <p>是否使用session脚本的sql运行任务：false：否，true：是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSessionStarted(Boolean IsSessionStarted) {
@@ -1060,9 +1074,9 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+     * Get <p>引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineTypeDetail 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+     * @return EngineTypeDetail <p>引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineTypeDetail() {
@@ -1070,13 +1084,45 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Set 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+     * Set <p>引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineTypeDetail 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+     * @param EngineTypeDetail <p>引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineTypeDetail(String EngineTypeDetail) {
         this.EngineTypeDetail = EngineTypeDetail;
+    }
+
+    /**
+     * Get <p>标准引擎依赖包</p> 
+     * @return DependencyPackages <p>标准引擎依赖包</p>
+     */
+    public DependencyPackage [] getDependencyPackages() {
+        return this.DependencyPackages;
+    }
+
+    /**
+     * Set <p>标准引擎依赖包</p>
+     * @param DependencyPackages <p>标准引擎依赖包</p>
+     */
+    public void setDependencyPackages(DependencyPackage [] DependencyPackages) {
+        this.DependencyPackages = DependencyPackages;
+    }
+
+    /**
+     * Get <p>作业运行鉴权身份</p> 
+     * @return RunAsIdentity <p>作业运行鉴权身份</p>
+     */
+    public String getRunAsIdentity() {
+        return this.RunAsIdentity;
+    }
+
+    /**
+     * Set <p>作业运行鉴权身份</p>
+     * @param RunAsIdentity <p>作业运行鉴权身份</p>
+     */
+    public void setRunAsIdentity(String RunAsIdentity) {
+        this.RunAsIdentity = RunAsIdentity;
     }
 
     public SparkJobInfo() {
@@ -1213,6 +1259,15 @@ public class SparkJobInfo extends AbstractModel {
         if (source.EngineTypeDetail != null) {
             this.EngineTypeDetail = new String(source.EngineTypeDetail);
         }
+        if (source.DependencyPackages != null) {
+            this.DependencyPackages = new DependencyPackage[source.DependencyPackages.length];
+            for (int i = 0; i < source.DependencyPackages.length; i++) {
+                this.DependencyPackages[i] = new DependencyPackage(source.DependencyPackages[i]);
+            }
+        }
+        if (source.RunAsIdentity != null) {
+            this.RunAsIdentity = new String(source.RunAsIdentity);
+        }
     }
 
 
@@ -1262,6 +1317,8 @@ public class SparkJobInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
         this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
         this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+        this.setParamArrayObj(map, prefix + "DependencyPackages.", this.DependencyPackages);
+        this.setParamSimple(map, prefix + "RunAsIdentity", this.RunAsIdentity);
 
     }
 }

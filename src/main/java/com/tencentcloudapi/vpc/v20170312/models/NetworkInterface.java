@@ -24,95 +24,84 @@ import java.util.HashMap;
 public class NetworkInterface extends AbstractModel {
 
     /**
-    * 弹性网卡实例ID，例如：eni-f1xjkw1b。
+    * <p>弹性网卡实例ID，例如：eni-f1xjkw1b。</p>
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 弹性网卡名称。
+    * <p>弹性网卡名称。</p>
     */
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
 
     /**
-    * 弹性网卡描述。
+    * <p>弹性网卡描述。</p>
     */
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
 
     /**
-    * 子网实例ID。
+    * <p>子网实例ID。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * VPC实例ID。
+    * <p>VPC实例ID。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 绑定的安全组。
+    * <p>绑定的安全组。</p>
     */
     @SerializedName("GroupSet")
     @Expose
     private String [] GroupSet;
 
     /**
-    * 是否是主网卡。
+    * <p>是否是主网卡。</p>
     */
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
 
     /**
-    * MAC地址。
+    * <p>MAC地址。</p>
     */
     @SerializedName("MacAddress")
     @Expose
     private String MacAddress;
 
     /**
-    * 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+    * <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-<li>`INUSE`：已绑定</li>
+    * <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li><li><code>INUSE</code>：已绑定</li>
     */
     @SerializedName("NetworkInterfaceState")
     @Expose
     private String NetworkInterfaceState;
 
     /**
-    * 内网IP信息。
+    * <p>内网IP信息。</p>
     */
     @SerializedName("PrivateIpAddressSet")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddressSet;
 
     /**
-    * 绑定的云服务器对象。
+    * <p>绑定的云服务器对象。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attachment")
@@ -120,303 +109,269 @@ public class NetworkInterface extends AbstractModel {
     private NetworkInterfaceAttachment Attachment;
 
     /**
-    * 可用区。
+    * <p>可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
+    * <p>创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * `IPv6`地址列表。
+    * <p><code>IPv6</code>地址列表。</p>
     */
     @SerializedName("Ipv6AddressSet")
     @Expose
     private Ipv6Address [] Ipv6AddressSet;
 
     /**
-    * 标签键值对。
+    * <p>标签键值对。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+    * <p>网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡</p>
     */
     @SerializedName("EniType")
     @Expose
     private Long EniType;
 
     /**
-    * 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
+    * <p>网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * 网卡所关联的CDC实例ID。
+    * <p>网卡所关联的CDC实例ID。</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+    * <p>弹性网卡类型：0:标准型/1:扩展型。默认值为0。</p>
     */
     @SerializedName("AttachType")
     @Expose
     private Long AttachType;
 
     /**
-    * 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+    * <p>用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 服务质量级别：
-PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
+    * <p>服务质量级别：<br>PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p><p>可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p>
     */
     @SerializedName("QosLevel")
     @Expose
     private String QosLevel;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
+    * <p>指定的<code>IPv6</code>地址列表，单次最多指定10个。与入参<code>Ipv6AddressCount</code>合并计算配额。</p>
+    */
+    @SerializedName("Ipv6Addresses")
+    @Expose
+    private Ipv6Address [] Ipv6Addresses;
+
+    /**
+    * <p>自动分配<code>IPv6</code>地址个数，内网IP地址个数总和不能超过配额数。与入参<code>Ipv6Addresses</code>合并计算配额。</p><p>取值范围：[1, 10]</p><p>单位：个</p>
+    */
+    @SerializedName("Ipv6AddressCount")
+    @Expose
+    private Long Ipv6AddressCount;
+
+    /**
+     * Get <p>弹性网卡实例ID，例如：eni-f1xjkw1b。</p> 
+     * @return NetworkInterfaceId <p>弹性网卡实例ID，例如：eni-f1xjkw1b。</p>
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-f1xjkw1b。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * Set <p>弹性网卡实例ID，例如：eni-f1xjkw1b。</p>
+     * @param NetworkInterfaceId <p>弹性网卡实例ID，例如：eni-f1xjkw1b。</p>
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 弹性网卡名称。 
-     * @return NetworkInterfaceName 弹性网卡名称。
+     * Get <p>弹性网卡名称。</p> 
+     * @return NetworkInterfaceName <p>弹性网卡名称。</p>
      */
     public String getNetworkInterfaceName() {
         return this.NetworkInterfaceName;
     }
 
     /**
-     * Set 弹性网卡名称。
-     * @param NetworkInterfaceName 弹性网卡名称。
+     * Set <p>弹性网卡名称。</p>
+     * @param NetworkInterfaceName <p>弹性网卡名称。</p>
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
         this.NetworkInterfaceName = NetworkInterfaceName;
     }
 
     /**
-     * Get 弹性网卡描述。 
-     * @return NetworkInterfaceDescription 弹性网卡描述。
+     * Get <p>弹性网卡描述。</p> 
+     * @return NetworkInterfaceDescription <p>弹性网卡描述。</p>
      */
     public String getNetworkInterfaceDescription() {
         return this.NetworkInterfaceDescription;
     }
 
     /**
-     * Set 弹性网卡描述。
-     * @param NetworkInterfaceDescription 弹性网卡描述。
+     * Set <p>弹性网卡描述。</p>
+     * @param NetworkInterfaceDescription <p>弹性网卡描述。</p>
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
         this.NetworkInterfaceDescription = NetworkInterfaceDescription;
     }
 
     /**
-     * Get 子网实例ID。 
-     * @return SubnetId 子网实例ID。
+     * Get <p>子网实例ID。</p> 
+     * @return SubnetId <p>子网实例ID。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。
-     * @param SubnetId 子网实例ID。
+     * Set <p>子网实例ID。</p>
+     * @param SubnetId <p>子网实例ID。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get <p>VPC实例ID。</p> 
+     * @return VpcId <p>VPC实例ID。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set <p>VPC实例ID。</p>
+     * @param VpcId <p>VPC实例ID。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 绑定的安全组。 
-     * @return GroupSet 绑定的安全组。
+     * Get <p>绑定的安全组。</p> 
+     * @return GroupSet <p>绑定的安全组。</p>
      */
     public String [] getGroupSet() {
         return this.GroupSet;
     }
 
     /**
-     * Set 绑定的安全组。
-     * @param GroupSet 绑定的安全组。
+     * Set <p>绑定的安全组。</p>
+     * @param GroupSet <p>绑定的安全组。</p>
      */
     public void setGroupSet(String [] GroupSet) {
         this.GroupSet = GroupSet;
     }
 
     /**
-     * Get 是否是主网卡。 
-     * @return Primary 是否是主网卡。
+     * Get <p>是否是主网卡。</p> 
+     * @return Primary <p>是否是主网卡。</p>
      */
     public Boolean getPrimary() {
         return this.Primary;
     }
 
     /**
-     * Set 是否是主网卡。
-     * @param Primary 是否是主网卡。
+     * Set <p>是否是主网卡。</p>
+     * @param Primary <p>是否是主网卡。</p>
      */
     public void setPrimary(Boolean Primary) {
         this.Primary = Primary;
     }
 
     /**
-     * Get MAC地址。 
-     * @return MacAddress MAC地址。
+     * Get <p>MAC地址。</p> 
+     * @return MacAddress <p>MAC地址。</p>
      */
     public String getMacAddress() {
         return this.MacAddress;
     }
 
     /**
-     * Set MAC地址。
-     * @param MacAddress MAC地址。
+     * Set <p>MAC地址。</p>
+     * @param MacAddress <p>MAC地址。</p>
      */
     public void setMacAddress(String MacAddress) {
         this.MacAddress = MacAddress;
     }
 
     /**
-     * Get 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li> 
-     * @return State 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+     * Get <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li> 
+     * @return State <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-     * @param State 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+     * Set <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li>
+     * @param State <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-<li>`INUSE`：已绑定</li> 
-     * @return NetworkInterfaceState 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-<li>`INUSE`：已绑定</li>
+     * Get <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li><li><code>INUSE</code>：已绑定</li> 
+     * @return NetworkInterfaceState <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li><li><code>INUSE</code>：已绑定</li>
      */
     public String getNetworkInterfaceState() {
         return this.NetworkInterfaceState;
     }
 
     /**
-     * Set 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-<li>`INUSE`：已绑定</li>
-     * @param NetworkInterfaceState 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-<li>`INUSE`：已绑定</li>
+     * Set <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li><li><code>INUSE</code>：已绑定</li>
+     * @param NetworkInterfaceState <p>弹性网卡状态：</p><li><code>PENDING</code>：创建中</li><li><code>AVAILABLE</code>：可用的</li><li><code>ATTACHING</code>：绑定中</li><li><code>DETACHING</code>：解绑中</li><li><code>DELETING</code>：删除中</li><li><code>INUSE</code>：已绑定</li>
      */
     public void setNetworkInterfaceState(String NetworkInterfaceState) {
         this.NetworkInterfaceState = NetworkInterfaceState;
     }
 
     /**
-     * Get 内网IP信息。 
-     * @return PrivateIpAddressSet 内网IP信息。
+     * Get <p>内网IP信息。</p> 
+     * @return PrivateIpAddressSet <p>内网IP信息。</p>
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddressSet() {
         return this.PrivateIpAddressSet;
     }
 
     /**
-     * Set 内网IP信息。
-     * @param PrivateIpAddressSet 内网IP信息。
+     * Set <p>内网IP信息。</p>
+     * @param PrivateIpAddressSet <p>内网IP信息。</p>
      */
     public void setPrivateIpAddressSet(PrivateIpAddressSpecification [] PrivateIpAddressSet) {
         this.PrivateIpAddressSet = PrivateIpAddressSet;
     }
 
     /**
-     * Get 绑定的云服务器对象。
+     * Get <p>绑定的云服务器对象。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Attachment 绑定的云服务器对象。
+     * @return Attachment <p>绑定的云服务器对象。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkInterfaceAttachment getAttachment() {
@@ -424,9 +379,9 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
     }
 
     /**
-     * Set 绑定的云服务器对象。
+     * Set <p>绑定的云服务器对象。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Attachment 绑定的云服务器对象。
+     * @param Attachment <p>绑定的云服务器对象。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachment(NetworkInterfaceAttachment Attachment) {
@@ -434,179 +389,195 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
     }
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get <p>可用区。</p> 
+     * @return Zone <p>可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set <p>可用区。</p>
+     * @param Zone <p>可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59 
-     * @return CreatedTime 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
+     * Get <p>创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59</p> 
+     * @return CreatedTime <p>创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
-     * @param CreatedTime 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
+     * Set <p>创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59</p>
+     * @param CreatedTime <p>创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get `IPv6`地址列表。 
-     * @return Ipv6AddressSet `IPv6`地址列表。
+     * Get <p><code>IPv6</code>地址列表。</p> 
+     * @return Ipv6AddressSet <p><code>IPv6</code>地址列表。</p>
      */
     public Ipv6Address [] getIpv6AddressSet() {
         return this.Ipv6AddressSet;
     }
 
     /**
-     * Set `IPv6`地址列表。
-     * @param Ipv6AddressSet `IPv6`地址列表。
+     * Set <p><code>IPv6</code>地址列表。</p>
+     * @param Ipv6AddressSet <p><code>IPv6</code>地址列表。</p>
      */
     public void setIpv6AddressSet(Ipv6Address [] Ipv6AddressSet) {
         this.Ipv6AddressSet = Ipv6AddressSet;
     }
 
     /**
-     * Get 标签键值对。 
-     * @return TagSet 标签键值对。
+     * Get <p>标签键值对。</p> 
+     * @return TagSet <p>标签键值对。</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对。
-     * @param TagSet 标签键值对。
+     * Set <p>标签键值对。</p>
+     * @param TagSet <p>标签键值对。</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡 
-     * @return EniType 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+     * Get <p>网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡</p> 
+     * @return EniType <p>网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡</p>
      */
     public Long getEniType() {
         return this.EniType;
     }
 
     /**
-     * Set 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
-     * @param EniType 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+     * Set <p>网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡</p>
+     * @param EniType <p>网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡</p>
      */
     public void setEniType(Long EniType) {
         this.EniType = EniType;
     }
 
     /**
-     * Get 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。 
-     * @return Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
+     * Get <p>网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。</p> 
+     * @return Business <p>网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-     * @param Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
+     * Set <p>网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。</p>
+     * @param Business <p>网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 网卡所关联的CDC实例ID。 
-     * @return CdcId 网卡所关联的CDC实例ID。
+     * Get <p>网卡所关联的CDC实例ID。</p> 
+     * @return CdcId <p>网卡所关联的CDC实例ID。</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set 网卡所关联的CDC实例ID。
-     * @param CdcId 网卡所关联的CDC实例ID。
+     * Set <p>网卡所关联的CDC实例ID。</p>
+     * @param CdcId <p>网卡所关联的CDC实例ID。</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 弹性网卡类型：0:标准型/1:扩展型。默认值为0。 
-     * @return AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+     * Get <p>弹性网卡类型：0:标准型/1:扩展型。默认值为0。</p> 
+     * @return AttachType <p>弹性网卡类型：0:标准型/1:扩展型。默认值为0。</p>
      */
     public Long getAttachType() {
         return this.AttachType;
     }
 
     /**
-     * Set 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-     * @param AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+     * Set <p>弹性网卡类型：0:标准型/1:扩展型。默认值为0。</p>
+     * @param AttachType <p>弹性网卡类型：0:标准型/1:扩展型。默认值为0。</p>
      */
     public void setAttachType(Long AttachType) {
         this.AttachType = AttachType;
     }
 
     /**
-     * Get 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。 
-     * @return ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+     * Get <p>用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。</p> 
+     * @return ResourceId <p>用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-     * @param ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
+     * Set <p>用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。</p>
+     * @param ResourceId <p>用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 服务质量级别：
-PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
- 
-     * @return QosLevel 服务质量级别：
-PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
+     * Get <p>服务质量级别：<br>PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p><p>可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p> 
+     * @return QosLevel <p>服务质量级别：<br>PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p><p>可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p>
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set 服务质量级别：
-PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-     * @param QosLevel 服务质量级别：
-PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
+     * Set <p>服务质量级别：<br>PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p><p>可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p>
+     * @param QosLevel <p>服务质量级别：<br>PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p><p>可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</p>
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;
+    }
+
+    /**
+     * Get <p>指定的<code>IPv6</code>地址列表，单次最多指定10个。与入参<code>Ipv6AddressCount</code>合并计算配额。</p> 
+     * @return Ipv6Addresses <p>指定的<code>IPv6</code>地址列表，单次最多指定10个。与入参<code>Ipv6AddressCount</code>合并计算配额。</p>
+     */
+    public Ipv6Address [] getIpv6Addresses() {
+        return this.Ipv6Addresses;
+    }
+
+    /**
+     * Set <p>指定的<code>IPv6</code>地址列表，单次最多指定10个。与入参<code>Ipv6AddressCount</code>合并计算配额。</p>
+     * @param Ipv6Addresses <p>指定的<code>IPv6</code>地址列表，单次最多指定10个。与入参<code>Ipv6AddressCount</code>合并计算配额。</p>
+     */
+    public void setIpv6Addresses(Ipv6Address [] Ipv6Addresses) {
+        this.Ipv6Addresses = Ipv6Addresses;
+    }
+
+    /**
+     * Get <p>自动分配<code>IPv6</code>地址个数，内网IP地址个数总和不能超过配额数。与入参<code>Ipv6Addresses</code>合并计算配额。</p><p>取值范围：[1, 10]</p><p>单位：个</p> 
+     * @return Ipv6AddressCount <p>自动分配<code>IPv6</code>地址个数，内网IP地址个数总和不能超过配额数。与入参<code>Ipv6Addresses</code>合并计算配额。</p><p>取值范围：[1, 10]</p><p>单位：个</p>
+     */
+    public Long getIpv6AddressCount() {
+        return this.Ipv6AddressCount;
+    }
+
+    /**
+     * Set <p>自动分配<code>IPv6</code>地址个数，内网IP地址个数总和不能超过配额数。与入参<code>Ipv6Addresses</code>合并计算配额。</p><p>取值范围：[1, 10]</p><p>单位：个</p>
+     * @param Ipv6AddressCount <p>自动分配<code>IPv6</code>地址个数，内网IP地址个数总和不能超过配额数。与入参<code>Ipv6Addresses</code>合并计算配额。</p><p>取值范围：[1, 10]</p><p>单位：个</p>
+     */
+    public void setIpv6AddressCount(Long Ipv6AddressCount) {
+        this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
     public NetworkInterface() {
@@ -695,6 +666,15 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
         if (source.QosLevel != null) {
             this.QosLevel = new String(source.QosLevel);
         }
+        if (source.Ipv6Addresses != null) {
+            this.Ipv6Addresses = new Ipv6Address[source.Ipv6Addresses.length];
+            for (int i = 0; i < source.Ipv6Addresses.length; i++) {
+                this.Ipv6Addresses[i] = new Ipv6Address(source.Ipv6Addresses[i]);
+            }
+        }
+        if (source.Ipv6AddressCount != null) {
+            this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
+        }
     }
 
 
@@ -724,6 +704,8 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
         this.setParamSimple(map, prefix + "AttachType", this.AttachType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
+        this.setParamArrayObj(map, prefix + "Ipv6Addresses.", this.Ipv6Addresses);
+        this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
 
     }
 }

@@ -1857,6 +1857,19 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于查询站点级自定义变量配置，包括变量定义和变量运算。未配置时，变量定义和变量运算均返回空列表。
+
+如需查询规则级自定义变量，请调用 DescribeL7AccRules 接口。
+     * @param req DescribeZoneCustomVariablesRequest
+     * @return DescribeZoneCustomVariablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneCustomVariablesResponse DescribeZoneCustomVariables(DescribeZoneCustomVariablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeZoneCustomVariables", DescribeZoneCustomVariablesResponse.class);
+    }
+
+    /**
      *本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819)。
      * @param req DescribeZoneSettingRequest
      * @return DescribeZoneSettingResponse
@@ -2593,6 +2606,19 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyZoneResponse ModifyZone(ModifyZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZone", ModifyZoneResponse.class);
+    }
+
+    /**
+     *本接口用于管理站点级自定义变量，支持创建、修改和删除变量定义及变量运算。提交的列表将覆盖对应的现有配置；如需清空配置，请传入空列表。未传入的配置项保持不变。变量定义和变量运算的默认值均为空。
+
+规则级自定义变量相关操作，请调用 CreateL7AccRules 或 ModifyL7AccRule 接口。
+     * @param req ModifyZoneCustomVariablesRequest
+     * @return ModifyZoneCustomVariablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneCustomVariablesResponse ModifyZoneCustomVariables(ModifyZoneCustomVariablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyZoneCustomVariables", ModifyZoneCustomVariablesResponse.class);
     }
 
     /**

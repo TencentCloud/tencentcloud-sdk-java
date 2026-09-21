@@ -24,598 +24,598 @@ import java.util.HashMap;
 public class VpnConnection extends AbstractModel {
 
     /**
-    * 通道实例ID。
+    * <p>通道实例ID。</p>
     */
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
 
     /**
-    * 通道名称。
+    * <p>通道名称。</p>
     */
     @SerializedName("VpnConnectionName")
     @Expose
     private String VpnConnectionName;
 
     /**
-    * VPC实例ID。
+    * <p>VPC实例ID。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPN网关实例ID。
+    * <p>VPN网关实例ID。</p>
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 对端网关实例ID。
+    * <p>对端网关实例ID。</p>
     */
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
 
     /**
-    * 预共享密钥。
+    * <p>预共享密钥。</p>
     */
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
 
     /**
-    * 通道传输协议。
+    * <p>通道传输协议。</p>
     */
     @SerializedName("VpnProto")
     @Expose
     private String VpnProto;
 
     /**
-    * 通道加密协议。
+    * <p>通道加密协议。</p>
     */
     @SerializedName("EncryptProto")
     @Expose
     private String EncryptProto;
 
     /**
-    * 路由类型。
+    * <p>路由类型。</p>
     */
     @SerializedName("RouteType")
     @Expose
     private String RouteType;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+    * <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 通道连接状态，AVAILABLE：已连接。
+    * <p>通道连接状态，AVAILABLE：已连接。</p>
     */
     @SerializedName("NetStatus")
     @Expose
     private String NetStatus;
 
     /**
-    * SPD。
+    * <p>SPD。</p>
     */
     @SerializedName("SecurityPolicyDatabaseSet")
     @Expose
     private SecurityPolicyDatabase [] SecurityPolicyDatabaseSet;
 
     /**
-    * IKE选项。
+    * <p>IKE选项。</p>
     */
     @SerializedName("IKEOptionsSpecification")
     @Expose
     private IKEOptionsSpecification IKEOptionsSpecification;
 
     /**
-    * IPSEC选择。
+    * <p>IPSEC选择。</p>
     */
     @SerializedName("IPSECOptionsSpecification")
     @Expose
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-    * 是否支持健康状态探测
+    * <p>是否支持健康状态探测</p>
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * 本端探测ip
+    * <p>本端探测ip</p>
     */
     @SerializedName("HealthCheckLocalIp")
     @Expose
     private String HealthCheckLocalIp;
 
     /**
-    * 对端探测ip
+    * <p>对端探测ip</p>
     */
     @SerializedName("HealthCheckRemoteIp")
     @Expose
     private String HealthCheckRemoteIp;
 
     /**
-    * 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+    * <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
     */
     @SerializedName("HealthCheckStatus")
     @Expose
     private String HealthCheckStatus;
 
     /**
-    * DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+    * <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
     */
     @SerializedName("DpdEnable")
     @Expose
     private Long DpdEnable;
 
     /**
-    * DPD超时时间。即探测确认对端不存在需要的时间。
+    * <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
     */
     @SerializedName("DpdTimeout")
     @Expose
     private String DpdTimeout;
 
     /**
-    * DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+    * <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
     */
     @SerializedName("DpdAction")
     @Expose
     private String DpdAction;
 
     /**
-    * 标签键值对数组
+    * <p>标签键值对数组</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * 协商类型
+    * <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
     */
     @SerializedName("NegotiationType")
     @Expose
     private String NegotiationType;
 
     /**
-    * Bgp配置信息
+    * <p>Bgp配置信息</p>
     */
     @SerializedName("BgpConfig")
     @Expose
     private BgpConfigAndAsn BgpConfig;
 
     /**
-    * Nqa配置信息
+    * <p>Nqa配置信息</p>
     */
     @SerializedName("HealthCheckConfig")
     @Expose
     private HealthCheckConfig HealthCheckConfig;
 
     /**
-     * Get 通道实例ID。 
-     * @return VpnConnectionId 通道实例ID。
+     * Get <p>通道实例ID。</p> 
+     * @return VpnConnectionId <p>通道实例ID。</p>
      */
     public String getVpnConnectionId() {
         return this.VpnConnectionId;
     }
 
     /**
-     * Set 通道实例ID。
-     * @param VpnConnectionId 通道实例ID。
+     * Set <p>通道实例ID。</p>
+     * @param VpnConnectionId <p>通道实例ID。</p>
      */
     public void setVpnConnectionId(String VpnConnectionId) {
         this.VpnConnectionId = VpnConnectionId;
     }
 
     /**
-     * Get 通道名称。 
-     * @return VpnConnectionName 通道名称。
+     * Get <p>通道名称。</p> 
+     * @return VpnConnectionName <p>通道名称。</p>
      */
     public String getVpnConnectionName() {
         return this.VpnConnectionName;
     }
 
     /**
-     * Set 通道名称。
-     * @param VpnConnectionName 通道名称。
+     * Set <p>通道名称。</p>
+     * @param VpnConnectionName <p>通道名称。</p>
      */
     public void setVpnConnectionName(String VpnConnectionName) {
         this.VpnConnectionName = VpnConnectionName;
     }
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get <p>VPC实例ID。</p> 
+     * @return VpcId <p>VPC实例ID。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set <p>VPC实例ID。</p>
+     * @param VpcId <p>VPC实例ID。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPN网关实例ID。 
-     * @return VpnGatewayId VPN网关实例ID。
+     * Get <p>VPN网关实例ID。</p> 
+     * @return VpnGatewayId <p>VPN网关实例ID。</p>
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID。
-     * @param VpnGatewayId VPN网关实例ID。
+     * Set <p>VPN网关实例ID。</p>
+     * @param VpnGatewayId <p>VPN网关实例ID。</p>
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 对端网关实例ID。 
-     * @return CustomerGatewayId 对端网关实例ID。
+     * Get <p>对端网关实例ID。</p> 
+     * @return CustomerGatewayId <p>对端网关实例ID。</p>
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 对端网关实例ID。
-     * @param CustomerGatewayId 对端网关实例ID。
+     * Set <p>对端网关实例ID。</p>
+     * @param CustomerGatewayId <p>对端网关实例ID。</p>
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
     /**
-     * Get 预共享密钥。 
-     * @return PreShareKey 预共享密钥。
+     * Get <p>预共享密钥。</p> 
+     * @return PreShareKey <p>预共享密钥。</p>
      */
     public String getPreShareKey() {
         return this.PreShareKey;
     }
 
     /**
-     * Set 预共享密钥。
-     * @param PreShareKey 预共享密钥。
+     * Set <p>预共享密钥。</p>
+     * @param PreShareKey <p>预共享密钥。</p>
      */
     public void setPreShareKey(String PreShareKey) {
         this.PreShareKey = PreShareKey;
     }
 
     /**
-     * Get 通道传输协议。 
-     * @return VpnProto 通道传输协议。
+     * Get <p>通道传输协议。</p> 
+     * @return VpnProto <p>通道传输协议。</p>
      */
     public String getVpnProto() {
         return this.VpnProto;
     }
 
     /**
-     * Set 通道传输协议。
-     * @param VpnProto 通道传输协议。
+     * Set <p>通道传输协议。</p>
+     * @param VpnProto <p>通道传输协议。</p>
      */
     public void setVpnProto(String VpnProto) {
         this.VpnProto = VpnProto;
     }
 
     /**
-     * Get 通道加密协议。 
-     * @return EncryptProto 通道加密协议。
+     * Get <p>通道加密协议。</p> 
+     * @return EncryptProto <p>通道加密协议。</p>
      */
     public String getEncryptProto() {
         return this.EncryptProto;
     }
 
     /**
-     * Set 通道加密协议。
-     * @param EncryptProto 通道加密协议。
+     * Set <p>通道加密协议。</p>
+     * @param EncryptProto <p>通道加密协议。</p>
      */
     public void setEncryptProto(String EncryptProto) {
         this.EncryptProto = EncryptProto;
     }
 
     /**
-     * Get 路由类型。 
-     * @return RouteType 路由类型。
+     * Get <p>路由类型。</p> 
+     * @return RouteType <p>路由类型。</p>
      */
     public String getRouteType() {
         return this.RouteType;
     }
 
     /**
-     * Set 路由类型。
-     * @param RouteType 路由类型。
+     * Set <p>路由类型。</p>
+     * @param RouteType <p>路由类型。</p>
      */
     public void setRouteType(String RouteType) {
         this.RouteType = RouteType;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedTime <p>创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedTime <p>创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。 
-     * @return State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * Get <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p> 
+     * @return State <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
-     * @param State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * Set <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
+     * @param State <p>通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 通道连接状态，AVAILABLE：已连接。 
-     * @return NetStatus 通道连接状态，AVAILABLE：已连接。
+     * Get <p>通道连接状态，AVAILABLE：已连接。</p> 
+     * @return NetStatus <p>通道连接状态，AVAILABLE：已连接。</p>
      */
     public String getNetStatus() {
         return this.NetStatus;
     }
 
     /**
-     * Set 通道连接状态，AVAILABLE：已连接。
-     * @param NetStatus 通道连接状态，AVAILABLE：已连接。
+     * Set <p>通道连接状态，AVAILABLE：已连接。</p>
+     * @param NetStatus <p>通道连接状态，AVAILABLE：已连接。</p>
      */
     public void setNetStatus(String NetStatus) {
         this.NetStatus = NetStatus;
     }
 
     /**
-     * Get SPD。 
-     * @return SecurityPolicyDatabaseSet SPD。
+     * Get <p>SPD。</p> 
+     * @return SecurityPolicyDatabaseSet <p>SPD。</p>
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabaseSet() {
         return this.SecurityPolicyDatabaseSet;
     }
 
     /**
-     * Set SPD。
-     * @param SecurityPolicyDatabaseSet SPD。
+     * Set <p>SPD。</p>
+     * @param SecurityPolicyDatabaseSet <p>SPD。</p>
      */
     public void setSecurityPolicyDatabaseSet(SecurityPolicyDatabase [] SecurityPolicyDatabaseSet) {
         this.SecurityPolicyDatabaseSet = SecurityPolicyDatabaseSet;
     }
 
     /**
-     * Get IKE选项。 
-     * @return IKEOptionsSpecification IKE选项。
+     * Get <p>IKE选项。</p> 
+     * @return IKEOptionsSpecification <p>IKE选项。</p>
      */
     public IKEOptionsSpecification getIKEOptionsSpecification() {
         return this.IKEOptionsSpecification;
     }
 
     /**
-     * Set IKE选项。
-     * @param IKEOptionsSpecification IKE选项。
+     * Set <p>IKE选项。</p>
+     * @param IKEOptionsSpecification <p>IKE选项。</p>
      */
     public void setIKEOptionsSpecification(IKEOptionsSpecification IKEOptionsSpecification) {
         this.IKEOptionsSpecification = IKEOptionsSpecification;
     }
 
     /**
-     * Get IPSEC选择。 
-     * @return IPSECOptionsSpecification IPSEC选择。
+     * Get <p>IPSEC选择。</p> 
+     * @return IPSECOptionsSpecification <p>IPSEC选择。</p>
      */
     public IPSECOptionsSpecification getIPSECOptionsSpecification() {
         return this.IPSECOptionsSpecification;
     }
 
     /**
-     * Set IPSEC选择。
-     * @param IPSECOptionsSpecification IPSEC选择。
+     * Set <p>IPSEC选择。</p>
+     * @param IPSECOptionsSpecification <p>IPSEC选择。</p>
      */
     public void setIPSECOptionsSpecification(IPSECOptionsSpecification IPSECOptionsSpecification) {
         this.IPSECOptionsSpecification = IPSECOptionsSpecification;
     }
 
     /**
-     * Get 是否支持健康状态探测 
-     * @return EnableHealthCheck 是否支持健康状态探测
+     * Get <p>是否支持健康状态探测</p> 
+     * @return EnableHealthCheck <p>是否支持健康状态探测</p>
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否支持健康状态探测
-     * @param EnableHealthCheck 是否支持健康状态探测
+     * Set <p>是否支持健康状态探测</p>
+     * @param EnableHealthCheck <p>是否支持健康状态探测</p>
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 本端探测ip 
-     * @return HealthCheckLocalIp 本端探测ip
+     * Get <p>本端探测ip</p> 
+     * @return HealthCheckLocalIp <p>本端探测ip</p>
      */
     public String getHealthCheckLocalIp() {
         return this.HealthCheckLocalIp;
     }
 
     /**
-     * Set 本端探测ip
-     * @param HealthCheckLocalIp 本端探测ip
+     * Set <p>本端探测ip</p>
+     * @param HealthCheckLocalIp <p>本端探测ip</p>
      */
     public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
         this.HealthCheckLocalIp = HealthCheckLocalIp;
     }
 
     /**
-     * Get 对端探测ip 
-     * @return HealthCheckRemoteIp 对端探测ip
+     * Get <p>对端探测ip</p> 
+     * @return HealthCheckRemoteIp <p>对端探测ip</p>
      */
     public String getHealthCheckRemoteIp() {
         return this.HealthCheckRemoteIp;
     }
 
     /**
-     * Set 对端探测ip
-     * @param HealthCheckRemoteIp 对端探测ip
+     * Set <p>对端探测ip</p>
+     * @param HealthCheckRemoteIp <p>对端探测ip</p>
      */
     public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;
     }
 
     /**
-     * Get 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象 
-     * @return HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     * Get <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p> 
+     * @return HealthCheckStatus <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
      */
     public String getHealthCheckStatus() {
         return this.HealthCheckStatus;
     }
 
     /**
-     * Set 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
-     * @param HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     * Set <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
+     * @param HealthCheckStatus <p>通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象</p>
      */
     public void setHealthCheckStatus(String HealthCheckStatus) {
         this.HealthCheckStatus = HealthCheckStatus;
     }
 
     /**
-     * Get DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启） 
-     * @return DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * Get <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p> 
+     * @return DpdEnable <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
      */
     public Long getDpdEnable() {
         return this.DpdEnable;
     }
 
     /**
-     * Set DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-     * @param DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * Set <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
+     * @param DpdEnable <p>DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）</p>
      */
     public void setDpdEnable(Long DpdEnable) {
         this.DpdEnable = DpdEnable;
     }
 
     /**
-     * Get DPD超时时间。即探测确认对端不存在需要的时间。 
-     * @return DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
+     * Get <p>DPD超时时间。即探测确认对端不存在需要的时间。</p> 
+     * @return DpdTimeout <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
      */
     public String getDpdTimeout() {
         return this.DpdTimeout;
     }
 
     /**
-     * Set DPD超时时间。即探测确认对端不存在需要的时间。
-     * @param DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
+     * Set <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
+     * @param DpdTimeout <p>DPD超时时间。即探测确认对端不存在需要的时间。</p>
      */
     public void setDpdTimeout(String DpdTimeout) {
         this.DpdTimeout = DpdTimeout;
     }
 
     /**
-     * Get DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试） 
-     * @return DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * Get <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p> 
+     * @return DpdAction <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
      */
     public String getDpdAction() {
         return this.DpdAction;
     }
 
     /**
-     * Set DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-     * @param DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * Set <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
+     * @param DpdAction <p>DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）</p>
      */
     public void setDpdAction(String DpdAction) {
         this.DpdAction = DpdAction;
     }
 
     /**
-     * Get 标签键值对数组 
-     * @return TagSet 标签键值对数组
+     * Get <p>标签键值对数组</p> 
+     * @return TagSet <p>标签键值对数组</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对数组
-     * @param TagSet 标签键值对数组
+     * Set <p>标签键值对数组</p>
+     * @param TagSet <p>标签键值对数组</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 协商类型 
-     * @return NegotiationType 协商类型
+     * Get <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul> 
+     * @return NegotiationType <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
      */
     public String getNegotiationType() {
         return this.NegotiationType;
     }
 
     /**
-     * Set 协商类型
-     * @param NegotiationType 协商类型
+     * Set <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
+     * @param NegotiationType <p>协商类型</p><p>枚举值：</p><ul><li>active： 主动协商</li><li>passive： 被动协商</li><li>flowTrigger： 流量协商</li></ul>
      */
     public void setNegotiationType(String NegotiationType) {
         this.NegotiationType = NegotiationType;
     }
 
     /**
-     * Get Bgp配置信息 
-     * @return BgpConfig Bgp配置信息
+     * Get <p>Bgp配置信息</p> 
+     * @return BgpConfig <p>Bgp配置信息</p>
      */
     public BgpConfigAndAsn getBgpConfig() {
         return this.BgpConfig;
     }
 
     /**
-     * Set Bgp配置信息
-     * @param BgpConfig Bgp配置信息
+     * Set <p>Bgp配置信息</p>
+     * @param BgpConfig <p>Bgp配置信息</p>
      */
     public void setBgpConfig(BgpConfigAndAsn BgpConfig) {
         this.BgpConfig = BgpConfig;
     }
 
     /**
-     * Get Nqa配置信息 
-     * @return HealthCheckConfig Nqa配置信息
+     * Get <p>Nqa配置信息</p> 
+     * @return HealthCheckConfig <p>Nqa配置信息</p>
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.HealthCheckConfig;
     }
 
     /**
-     * Set Nqa配置信息
-     * @param HealthCheckConfig Nqa配置信息
+     * Set <p>Nqa配置信息</p>
+     * @param HealthCheckConfig <p>Nqa配置信息</p>
      */
     public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
         this.HealthCheckConfig = HealthCheckConfig;

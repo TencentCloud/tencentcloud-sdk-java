@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aiart.v20221229.models;
+package com.tencentcloudapi.hai.v20230812.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryTextToImageJobRequest extends AbstractModel {
+public class GetServicePodLogsRequest extends AbstractModel {
 
-    /**
-    * 任务 ID。
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
-
-    /**
-     * Get 任务 ID。 
-     * @return JobId 任务 ID。
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set 任务 ID。
-     * @param JobId 任务 ID。
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
-
-    public QueryTextToImageJobRequest() {
+    public GetServicePodLogsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryTextToImageJobRequest(QueryTextToImageJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
+    public GetServicePodLogsRequest(GetServicePodLogsRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class QueryTextToImageJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

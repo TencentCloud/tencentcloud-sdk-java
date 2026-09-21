@@ -290,6 +290,13 @@ public class ModifyModelServiceRequest extends AbstractModel {
     private String InferTemplateId;
 
     /**
+    * <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
      * Get <p>服务id</p> 
      * @return ServiceId <p>服务id</p>
      */
@@ -897,6 +904,22 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.InferTemplateId = InferTemplateId;
     }
 
+    /**
+     * Get <p>服务的优先级</p><p>取值范围：[0, 9]</p> 
+     * @return Priority <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+     * @param Priority <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -1031,6 +1054,9 @@ public class ModifyModelServiceRequest extends AbstractModel {
         if (source.InferTemplateId != null) {
             this.InferTemplateId = new String(source.InferTemplateId);
         }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
     }
 
 
@@ -1076,6 +1102,7 @@ public class ModifyModelServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
         this.setParamSimple(map, prefix + "TargetProjectId", this.TargetProjectId);
         this.setParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }

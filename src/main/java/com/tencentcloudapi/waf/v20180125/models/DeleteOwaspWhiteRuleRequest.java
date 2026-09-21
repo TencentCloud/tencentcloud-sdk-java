@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteOwaspWhiteRuleRequest extends AbstractModel {
 
     /**
-    * 规则白名单ID列表
+    * 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
     */
     @SerializedName("Ids")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteOwaspWhiteRuleRequest extends AbstractModel {
     private String Domain;
 
     /**
-     * Get 规则白名单ID列表 
-     * @return Ids 规则白名单ID列表
+     * Get 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取 
+     * @return Ids 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 规则白名单ID列表
-     * @param Ids 规则白名单ID列表
+     * Set 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
+     * @param Ids 规则白名单ID列表，可通过 [DescribeOwaspWhiteRule](https://cloud.tencent.com/document/product/627/122155) 接口获取
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

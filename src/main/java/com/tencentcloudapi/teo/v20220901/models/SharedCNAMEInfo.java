@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class SharedCNAMEInfo extends AbstractModel {
 
     /**
-    * 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
+    * <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 共享CNAME名称。
+    * <p>共享CNAME名称。</p>
     */
     @SerializedName("SharedCNAME")
     @Expose
     private String SharedCNAME;
 
     /**
-    * 描述。
+    * <p>描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
+    * <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
     */
     @SerializedName("IPSSLConfig")
     @Expose
     private IPSSLConfig IPSSLConfig;
 
     /**
-    * 共享CNAME绑定的加速域名数量。
+    * <p>共享CNAME绑定的加速域名数量。</p>
     */
     @SerializedName("BindDomainCount")
     @Expose
     private Long BindDomainCount;
 
     /**
-    * 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+    * <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
     */
     @SerializedName("AccelerationDomains")
     @Expose
     private ReferenceHolder [] AccelerationDomains;
 
     /**
-     * Get 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li> 
-     * @return Type 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
+     * Get <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li> 
+     * @return Type <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
-     * @param Type 共享CNAME类型：取值范围如下：
-<li>custom：由用户创建的自定义共享CNAME</li>
-<li>ip-ssl：IP SSL类型的共享CNAME</li>
+     * Set <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
+     * @param Type <p>共享CNAME类型：取值范围如下：</p><li>custom：由用户创建的自定义共享CNAME</li><li>ip-ssl：IP SSL类型的共享CNAME</li><li>zero-rating：免流类型的共享CNAME</li><li>preset：预置资源类型的共享CNAME</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 共享CNAME名称。 
-     * @return SharedCNAME 共享CNAME名称。
+     * Get <p>共享CNAME名称。</p> 
+     * @return SharedCNAME <p>共享CNAME名称。</p>
      */
     public String getSharedCNAME() {
         return this.SharedCNAME;
     }
 
     /**
-     * Set 共享CNAME名称。
-     * @param SharedCNAME 共享CNAME名称。
+     * Set <p>共享CNAME名称。</p>
+     * @param SharedCNAME <p>共享CNAME名称。</p>
      */
     public void setSharedCNAME(String SharedCNAME) {
         this.SharedCNAME = SharedCNAME;
     }
 
     /**
-     * Get 描述。 
-     * @return Description 描述。
+     * Get <p>描述。</p> 
+     * @return Description <p>描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述。
-     * @param Description 描述。
+     * Set <p>描述。</p>
+     * @param Description <p>描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。 
-     * @return IPSSLConfig 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
+     * Get <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p> 
+     * @return IPSSLConfig <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
      */
     public IPSSLConfig getIPSSLConfig() {
         return this.IPSSLConfig;
     }
 
     /**
-     * Set 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
-     * @param IPSSLConfig 当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。
+     * Set <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
+     * @param IPSSLConfig <p>当type为ip-ssl时，展示该共享CNAME关联的 IP SSL 配置信息。</p>
      */
     public void setIPSSLConfig(IPSSLConfig IPSSLConfig) {
         this.IPSSLConfig = IPSSLConfig;
     }
 
     /**
-     * Get 共享CNAME绑定的加速域名数量。 
-     * @return BindDomainCount 共享CNAME绑定的加速域名数量。
+     * Get <p>共享CNAME绑定的加速域名数量。</p> 
+     * @return BindDomainCount <p>共享CNAME绑定的加速域名数量。</p>
      */
     public Long getBindDomainCount() {
         return this.BindDomainCount;
     }
 
     /**
-     * Set 共享CNAME绑定的加速域名数量。
-     * @param BindDomainCount 共享CNAME绑定的加速域名数量。
+     * Set <p>共享CNAME绑定的加速域名数量。</p>
+     * @param BindDomainCount <p>共享CNAME绑定的加速域名数量。</p>
      */
     public void setBindDomainCount(Long BindDomainCount) {
         this.BindDomainCount = BindDomainCount;
     }
 
     /**
-     * Get 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。 
-     * @return AccelerationDomains 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+     * Get <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p> 
+     * @return AccelerationDomains <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
      */
     public ReferenceHolder [] getAccelerationDomains() {
         return this.AccelerationDomains;
     }
 
     /**
-     * Set 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
-     * @param AccelerationDomains 加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。
+     * Set <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
+     * @param AccelerationDomains <p>加入该共享CNAME的加速域名列表。当加入的域名数量超过100个时，只返回前100个加速域名。</p>
      */
     public void setAccelerationDomains(ReferenceHolder [] AccelerationDomains) {
         this.AccelerationDomains = AccelerationDomains;

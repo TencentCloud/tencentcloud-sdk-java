@@ -24,419 +24,414 @@ import java.util.HashMap;
 public class AddDeviceData extends AbstractModel {
 
     /**
-    * 设备iD
+    * <p>设备iD</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+    * <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 设备接入协议，1:RTMP,2:GB,3:GW 
+    * <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul>
     */
     @SerializedName("AccessProtocol")
     @Expose
     private Long AccessProtocol;
 
     /**
-    * 设备类型，1:IPC,2:NVR
+    * <p>设备类型，1:IPC,2:NVR</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 设备接入服务节点ID
+    * <p>设备接入服务节点ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 设备接入服务节点名称
-
+    * <p>设备接入服务节点名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 设备流传输协议，1:UDP,2:TCP 
+    * <p>设备流传输协议，1:UDP,2:TCP</p>
     */
     @SerializedName("TransportProtocol")
     @Expose
     private Long TransportProtocol;
 
     /**
-    * 设备密码
+    * <p>设备密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 设备描述
+    * <p>设备描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 设备状态，0:未注册,1:在线,2:离线,3:禁用
+    * <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 设备所属组织ID
+    * <p>设备所属组织ID</p>
     */
     @SerializedName("OrganizationId")
     @Expose
     private Long OrganizationId;
 
     /**
-    * 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+    * <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+    * <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private Long ProtocolType;
 
     /**
-    * 设备接入IP（仅网关接入需要）
+    * <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 设备Port（仅网关接入需要）
+    * <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 设备用户名（仅网关接入需要）
+    * <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-     * Get 设备iD 
-     * @return DeviceId 设备iD
+     * Get <p>设备iD</p> 
+     * @return DeviceId <p>设备iD</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备iD
-     * @param DeviceId 设备iD
+     * Set <p>设备iD</p>
+     * @param DeviceId <p>设备iD</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码） 
-     * @return Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+     * Get <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p> 
+     * @return Code <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
-     * @param Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+     * Set <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
+     * @param Code <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 设备名称 
-     * @return Name 设备名称
+     * Get <p>设备名称</p> 
+     * @return Name <p>设备名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备名称
-     * @param Name 设备名称
+     * Set <p>设备名称</p>
+     * @param Name <p>设备名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备接入协议，1:RTMP,2:GB,3:GW  
-     * @return AccessProtocol 设备接入协议，1:RTMP,2:GB,3:GW 
+     * Get <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul> 
+     * @return AccessProtocol <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul>
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set 设备接入协议，1:RTMP,2:GB,3:GW 
-     * @param AccessProtocol 设备接入协议，1:RTMP,2:GB,3:GW 
+     * Set <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul>
+     * @param AccessProtocol <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul>
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;
     }
 
     /**
-     * Get 设备类型，1:IPC,2:NVR 
-     * @return Type 设备类型，1:IPC,2:NVR
+     * Get <p>设备类型，1:IPC,2:NVR</p> 
+     * @return Type <p>设备类型，1:IPC,2:NVR</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 设备类型，1:IPC,2:NVR
-     * @param Type 设备类型，1:IPC,2:NVR
+     * Set <p>设备类型，1:IPC,2:NVR</p>
+     * @param Type <p>设备类型，1:IPC,2:NVR</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 设备接入服务节点ID 
-     * @return ClusterId 设备接入服务节点ID
+     * Get <p>设备接入服务节点ID</p> 
+     * @return ClusterId <p>设备接入服务节点ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 设备接入服务节点ID
-     * @param ClusterId 设备接入服务节点ID
+     * Set <p>设备接入服务节点ID</p>
+     * @param ClusterId <p>设备接入服务节点ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 设备接入服务节点名称
- 
-     * @return ClusterName 设备接入服务节点名称
-
+     * Get <p>设备接入服务节点名称</p> 
+     * @return ClusterName <p>设备接入服务节点名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 设备接入服务节点名称
-
-     * @param ClusterName 设备接入服务节点名称
-
+     * Set <p>设备接入服务节点名称</p>
+     * @param ClusterName <p>设备接入服务节点名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 设备流传输协议，1:UDP,2:TCP  
-     * @return TransportProtocol 设备流传输协议，1:UDP,2:TCP 
+     * Get <p>设备流传输协议，1:UDP,2:TCP</p> 
+     * @return TransportProtocol <p>设备流传输协议，1:UDP,2:TCP</p>
      */
     public Long getTransportProtocol() {
         return this.TransportProtocol;
     }
 
     /**
-     * Set 设备流传输协议，1:UDP,2:TCP 
-     * @param TransportProtocol 设备流传输协议，1:UDP,2:TCP 
+     * Set <p>设备流传输协议，1:UDP,2:TCP</p>
+     * @param TransportProtocol <p>设备流传输协议，1:UDP,2:TCP</p>
      */
     public void setTransportProtocol(Long TransportProtocol) {
         this.TransportProtocol = TransportProtocol;
     }
 
     /**
-     * Get 设备密码 
-     * @return Password 设备密码
+     * Get <p>设备密码</p> 
+     * @return Password <p>设备密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 设备密码
-     * @param Password 设备密码
+     * Set <p>设备密码</p>
+     * @param Password <p>设备密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 设备描述 
-     * @return Description 设备描述
+     * Get <p>设备描述</p> 
+     * @return Description <p>设备描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备描述
-     * @param Description 设备描述
+     * Set <p>设备描述</p>
+     * @param Description <p>设备描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 设备状态，0:未注册,1:在线,2:离线,3:禁用 
-     * @return Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
+     * Get <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p> 
+     * @return Status <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 设备状态，0:未注册,1:在线,2:离线,3:禁用
-     * @param Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
+     * Set <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
+     * @param Status <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 设备所属组织ID 
-     * @return OrganizationId 设备所属组织ID
+     * Get <p>设备所属组织ID</p> 
+     * @return OrganizationId <p>设备所属组织ID</p>
      */
     public Long getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 设备所属组织ID
-     * @param OrganizationId 设备所属组织ID
+     * Set <p>设备所属组织ID</p>
+     * @param OrganizationId <p>设备所属组织ID</p>
      */
     public void setOrganizationId(Long OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要） 
-     * @return GatewayId 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+     * Get <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
-     * @param GatewayId 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+     * Set <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+     * @param GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要） 
-     * @return ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * Get <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
-     * @param ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * Set <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+     * @param ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setProtocolType(Long ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 设备接入IP（仅网关接入需要） 
-     * @return Ip 设备接入IP（仅网关接入需要）
+     * Get <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 设备接入IP（仅网关接入需要）
-     * @param Ip 设备接入IP（仅网关接入需要）
+     * Set <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 设备Port（仅网关接入需要） 
-     * @return Port 设备Port（仅网关接入需要）
+     * Get <p>设备Port（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 设备Port（仅网关接入需要）
-     * @param Port 设备Port（仅网关接入需要）
+     * Set <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 设备用户名（仅网关接入需要） 
-     * @return Username 设备用户名（仅网关接入需要）
+     * Get <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 设备用户名（仅网关接入需要）
-     * @param Username 设备用户名（仅网关接入需要）
+     * Set <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 用户ID 
-     * @return AppId 用户ID
+     * Get <p>用户ID</p> 
+     * @return AppId <p>用户ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户ID
-     * @param AppId 用户ID
+     * Set <p>用户ID</p>
+     * @param AppId <p>用户ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;

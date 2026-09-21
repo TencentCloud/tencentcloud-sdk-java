@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class AddUserDeviceRequest extends AbstractModel {
 
     /**
-    * 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
+    * <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+    * <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
     */
     @SerializedName("AccessProtocol")
     @Expose
     private Long AccessProtocol;
 
     /**
-    * 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+    * <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 设备所属组织ID，从查询组织接口DescribeOrganization中获取
+    * <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
     */
     @SerializedName("OrganizationId")
     @Expose
     private String OrganizationId;
 
     /**
-    * 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
+    * <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
+    * <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
     */
     @SerializedName("TransportProtocol")
     @Expose
     private Long TransportProtocol;
 
     /**
-    * 设备密码（国标，网关设备必填，长度为1-64个字符）
+    * <p>设备密码（国标设备必填，长度为1-64个字符）</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 设备描述，长度不超过128个字符
+    * <p>设备描述，长度不超过128个字符</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
+    * <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+    * <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private Long ProtocolType;
 
     /**
-    * 设备接入IP（仅网关接入需要）
+    * <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 设备端口（仅网关接入需要）
+    * <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 设备用户名（仅网关接入需要）
+    * <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 设备 SN，仅IVCP 协议设备需要
+    * <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("SNCode")
     @Expose
     private String SNCode;
 
     /**
-    * RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+    * <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+    * <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-     * Get 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复） 
-     * @return Name 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
+     * Get <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p> 
+     * @return Name <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
-     * @param Name 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
+     * Set <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
+     * @param Name <p>设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP） 
-     * @return AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+     * Get <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p> 
+     * @return AccessProtocol <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
-     * @param AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+     * Set <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
+     * @param AccessProtocol <p>设备接入协议（1:RTMP,2:GB,6:ISUP）</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li><li>6： ISUP</li></ul><p>默认值：2</p>
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;
     }
 
     /**
-     * Get 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC） 
-     * @return Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+     * Get <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul> 
+     * @return Type <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
-     * @param Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+     * Set <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
+     * @param Type <p>设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）</p><p>枚举值：</p><ul><li>1： IPC</li><li>2： NVR</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 设备所属组织ID，从查询组织接口DescribeOrganization中获取 
-     * @return OrganizationId 设备所属组织ID，从查询组织接口DescribeOrganization中获取
+     * Get <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p> 
+     * @return OrganizationId <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
      */
     public String getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 设备所属组织ID，从查询组织接口DescribeOrganization中获取
-     * @param OrganizationId 设备所属组织ID，从查询组织接口DescribeOrganization中获取
+     * Set <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
+     * @param OrganizationId <p>设备所属组织ID，从查询组织接口DescribeOrganization中获取</p>
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段） 
-     * @return ClusterId 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
+     * Get <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p> 
+     * @return ClusterId <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
-     * @param ClusterId 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
+     * Set <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
+     * @param ClusterId <p>设备接入服务节点ID（从查询设备可用服务节点接口DescribeRegionDomain中获取的Value字段）</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议) 
-     * @return TransportProtocol 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
+     * Get <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p> 
+     * @return TransportProtocol <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
      */
     public Long getTransportProtocol() {
         return this.TransportProtocol;
     }
 
     /**
-     * Set 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
-     * @param TransportProtocol 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
+     * Set <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
+     * @param TransportProtocol <p>设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)</p>
      */
     public void setTransportProtocol(Long TransportProtocol) {
         this.TransportProtocol = TransportProtocol;
     }
 
     /**
-     * Get 设备密码（国标，网关设备必填，长度为1-64个字符） 
-     * @return Password 设备密码（国标，网关设备必填，长度为1-64个字符）
+     * Get <p>设备密码（国标设备必填，长度为1-64个字符）</p> 
+     * @return Password <p>设备密码（国标设备必填，长度为1-64个字符）</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 设备密码（国标，网关设备必填，长度为1-64个字符）
-     * @param Password 设备密码（国标，网关设备必填，长度为1-64个字符）
+     * Set <p>设备密码（国标设备必填，长度为1-64个字符）</p>
+     * @param Password <p>设备密码（国标设备必填，长度为1-64个字符）</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 设备描述，长度不超过128个字符 
-     * @return Description 设备描述，长度不超过128个字符
+     * Get <p>设备描述，长度不超过128个字符</p> 
+     * @return Description <p>设备描述，长度不超过128个字符</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备描述，长度不超过128个字符
-     * @param Description 设备描述，长度不超过128个字符
+     * Set <p>设备描述，长度不超过128个字符</p>
+     * @param Description <p>设备描述，长度不超过128个字符</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要） 
-     * @return GatewayId 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
+     * Get <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
-     * @param GatewayId 设备接入网关ID，从查询网关列表接口中ListGateways获取（仅网关接入需要）
+     * Set <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+     * @param GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要） 
-     * @return ProtocolType 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * Get <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
-     * @param ProtocolType 网关接入协议类型（从查询网关接入协议接口DescribeGatewayProtocol中获取）1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * Set <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+     * @param ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setProtocolType(Long ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 设备接入IP（仅网关接入需要） 
-     * @return Ip 设备接入IP（仅网关接入需要）
+     * Get <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 设备接入IP（仅网关接入需要）
-     * @param Ip 设备接入IP（仅网关接入需要）
+     * Set <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 设备端口（仅网关接入需要） 
-     * @return Port 设备端口（仅网关接入需要）
+     * Get <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p> 
+     * @return Port <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 设备端口（仅网关接入需要）
-     * @param Port 设备端口（仅网关接入需要）
+     * Set <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
+     * @param Port <p>设备端口（已不再使用，保留用于兼容，可忽略）</p><p>取值范围：[1, 65535]</p><p>单位： 端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 设备用户名（仅网关接入需要） 
-     * @return Username 设备用户名（仅网关接入需要）
+     * Get <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 设备用户名（仅网关接入需要）
-     * @param Username 设备用户名（仅网关接入需要）
+     * Set <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 设备 SN，仅IVCP 协议设备需要 
-     * @return SNCode 设备 SN，仅IVCP 协议设备需要
+     * Get <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return SNCode <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getSNCode() {
         return this.SNCode;
     }
 
     /**
-     * Set 设备 SN，仅IVCP 协议设备需要
-     * @param SNCode 设备 SN，仅IVCP 协议设备需要
+     * Set <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
+     * @param SNCode <p>设备 SN（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setSNCode(String SNCode) {
         this.SNCode = SNCode;
     }
 
     /**
-     * Get RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位） 
-     * @return AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * Get <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p> 
+     * @return AppName <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
-     * @param AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * Set <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
+     * @param AppName <p>RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位） 
-     * @return StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * Get <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p> 
+     * @return StreamName <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
-     * @param StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * Set <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
+     * @param StreamName <p>RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）</p>
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

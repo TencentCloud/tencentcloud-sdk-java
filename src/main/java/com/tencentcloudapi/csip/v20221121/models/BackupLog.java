@@ -24,302 +24,371 @@ import java.util.HashMap;
 public class BackupLog extends AbstractModel {
 
     /**
-    * 索引
+    * <p>索引</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 索引开始时间
+    * <p>索引开始时间</p>
     */
     @SerializedName("IndexStartTime")
     @Expose
     private Long IndexStartTime;
 
     /**
-    * 索引结束时间
+    * <p>索引结束时间</p>
     */
     @SerializedName("IndexEndTime")
     @Expose
     private Long IndexEndTime;
 
     /**
-    * 备份后压缩的大小，单位M
+    * <p>备份后压缩的大小，单位M</p>
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
+    * <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 恢复剩余的分钟数，分钟，需要前端转换
+    * <p>恢复剩余的分钟数，分钟，需要前端转换</p>
     */
     @SerializedName("RestoreProcessRemindTime")
     @Expose
     private Long RestoreProcessRemindTime;
 
     /**
-    * 恢复日志保留的时间
+    * <p>恢复日志保留的时间</p>
     */
     @SerializedName("RestoreRemindTime")
     @Expose
     private Long RestoreRemindTime;
 
     /**
-    * 恢复索引大小
+    * <p>恢复索引大小</p>
     */
     @SerializedName("RestoreIndexSize")
     @Expose
     private Long RestoreIndexSize;
 
     /**
-    * 恢复日志执行结束时间
+    * <p>恢复日志执行结束时间</p>
     */
     @SerializedName("RestoreEndTime")
     @Expose
     private Long RestoreEndTime;
 
     /**
-    * 备份所属的appId
+    * <p>备份所属的appId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 备份所属的资产ID
+    * <p>备份所属的资产ID</p>
     */
     @SerializedName("AssetId")
     @Expose
     private Long AssetId;
 
     /**
-    * 账号昵称
+    * <p>账号昵称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 资产所属账号uin
+    * <p>资产所属账号uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-     * Get 索引 
-     * @return Id 索引
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>实例名称</p>
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
+     * Get <p>索引</p> 
+     * @return Id <p>索引</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 索引
-     * @param Id 索引
+     * Set <p>索引</p>
+     * @param Id <p>索引</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 索引开始时间 
-     * @return IndexStartTime 索引开始时间
+     * Get <p>索引开始时间</p> 
+     * @return IndexStartTime <p>索引开始时间</p>
      */
     public Long getIndexStartTime() {
         return this.IndexStartTime;
     }
 
     /**
-     * Set 索引开始时间
-     * @param IndexStartTime 索引开始时间
+     * Set <p>索引开始时间</p>
+     * @param IndexStartTime <p>索引开始时间</p>
      */
     public void setIndexStartTime(Long IndexStartTime) {
         this.IndexStartTime = IndexStartTime;
     }
 
     /**
-     * Get 索引结束时间 
-     * @return IndexEndTime 索引结束时间
+     * Get <p>索引结束时间</p> 
+     * @return IndexEndTime <p>索引结束时间</p>
      */
     public Long getIndexEndTime() {
         return this.IndexEndTime;
     }
 
     /**
-     * Set 索引结束时间
-     * @param IndexEndTime 索引结束时间
+     * Set <p>索引结束时间</p>
+     * @param IndexEndTime <p>索引结束时间</p>
      */
     public void setIndexEndTime(Long IndexEndTime) {
         this.IndexEndTime = IndexEndTime;
     }
 
     /**
-     * Get 备份后压缩的大小，单位M 
-     * @return BackupSize 备份后压缩的大小，单位M
+     * Get <p>备份后压缩的大小，单位M</p> 
+     * @return BackupSize <p>备份后压缩的大小，单位M</p>
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set 备份后压缩的大小，单位M
-     * @param BackupSize 备份后压缩的大小，单位M
+     * Set <p>备份后压缩的大小，单位M</p>
+     * @param BackupSize <p>备份后压缩的大小，单位M</p>
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除 
-     * @return Status 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
+     * Get <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p> 
+     * @return Status <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
-     * @param Status 日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除
+     * Set <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
+     * @param Status <p>日志状态 0备份未完成， 1备份文件，2恢复中，3已恢复，4.已删除</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 恢复剩余的分钟数，分钟，需要前端转换 
-     * @return RestoreProcessRemindTime 恢复剩余的分钟数，分钟，需要前端转换
+     * Get <p>恢复剩余的分钟数，分钟，需要前端转换</p> 
+     * @return RestoreProcessRemindTime <p>恢复剩余的分钟数，分钟，需要前端转换</p>
      */
     public Long getRestoreProcessRemindTime() {
         return this.RestoreProcessRemindTime;
     }
 
     /**
-     * Set 恢复剩余的分钟数，分钟，需要前端转换
-     * @param RestoreProcessRemindTime 恢复剩余的分钟数，分钟，需要前端转换
+     * Set <p>恢复剩余的分钟数，分钟，需要前端转换</p>
+     * @param RestoreProcessRemindTime <p>恢复剩余的分钟数，分钟，需要前端转换</p>
      */
     public void setRestoreProcessRemindTime(Long RestoreProcessRemindTime) {
         this.RestoreProcessRemindTime = RestoreProcessRemindTime;
     }
 
     /**
-     * Get 恢复日志保留的时间 
-     * @return RestoreRemindTime 恢复日志保留的时间
+     * Get <p>恢复日志保留的时间</p> 
+     * @return RestoreRemindTime <p>恢复日志保留的时间</p>
      */
     public Long getRestoreRemindTime() {
         return this.RestoreRemindTime;
     }
 
     /**
-     * Set 恢复日志保留的时间
-     * @param RestoreRemindTime 恢复日志保留的时间
+     * Set <p>恢复日志保留的时间</p>
+     * @param RestoreRemindTime <p>恢复日志保留的时间</p>
      */
     public void setRestoreRemindTime(Long RestoreRemindTime) {
         this.RestoreRemindTime = RestoreRemindTime;
     }
 
     /**
-     * Get 恢复索引大小 
-     * @return RestoreIndexSize 恢复索引大小
+     * Get <p>恢复索引大小</p> 
+     * @return RestoreIndexSize <p>恢复索引大小</p>
      */
     public Long getRestoreIndexSize() {
         return this.RestoreIndexSize;
     }
 
     /**
-     * Set 恢复索引大小
-     * @param RestoreIndexSize 恢复索引大小
+     * Set <p>恢复索引大小</p>
+     * @param RestoreIndexSize <p>恢复索引大小</p>
      */
     public void setRestoreIndexSize(Long RestoreIndexSize) {
         this.RestoreIndexSize = RestoreIndexSize;
     }
 
     /**
-     * Get 恢复日志执行结束时间 
-     * @return RestoreEndTime 恢复日志执行结束时间
+     * Get <p>恢复日志执行结束时间</p> 
+     * @return RestoreEndTime <p>恢复日志执行结束时间</p>
      */
     public Long getRestoreEndTime() {
         return this.RestoreEndTime;
     }
 
     /**
-     * Set 恢复日志执行结束时间
-     * @param RestoreEndTime 恢复日志执行结束时间
+     * Set <p>恢复日志执行结束时间</p>
+     * @param RestoreEndTime <p>恢复日志执行结束时间</p>
      */
     public void setRestoreEndTime(Long RestoreEndTime) {
         this.RestoreEndTime = RestoreEndTime;
     }
 
     /**
-     * Get 备份所属的appId 
-     * @return AppId 备份所属的appId
+     * Get <p>备份所属的appId</p> 
+     * @return AppId <p>备份所属的appId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 备份所属的appId
-     * @param AppId 备份所属的appId
+     * Set <p>备份所属的appId</p>
+     * @param AppId <p>备份所属的appId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 备份所属的资产ID 
-     * @return AssetId 备份所属的资产ID
+     * Get <p>备份所属的资产ID</p> 
+     * @return AssetId <p>备份所属的资产ID</p>
      */
     public Long getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set 备份所属的资产ID
-     * @param AssetId 备份所属的资产ID
+     * Set <p>备份所属的资产ID</p>
+     * @param AssetId <p>备份所属的资产ID</p>
      */
     public void setAssetId(Long AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 账号昵称 
-     * @return NickName 账号昵称
+     * Get <p>账号昵称</p> 
+     * @return NickName <p>账号昵称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 账号昵称
-     * @param NickName 账号昵称
+     * Set <p>账号昵称</p>
+     * @param NickName <p>账号昵称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 资产所属账号uin 
-     * @return Uin 资产所属账号uin
+     * Get <p>资产所属账号uin</p> 
+     * @return Uin <p>资产所属账号uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 资产所属账号uin
-     * @param Uin 资产所属账号uin
+     * Set <p>资产所属账号uin</p>
+     * @param Uin <p>资产所属账号uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul> 
+     * @return AssetType <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+     * @param AssetType <p>实例类型</p><p>枚举值：</p><ul><li>cdb：  cdb</li><li>mariadb： mariadb</li></ul>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
     }
 
     public BackupLog() {
@@ -369,6 +438,15 @@ public class BackupLog extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -389,6 +467,9 @@ public class BackupLog extends AbstractModel {
         this.setParamSimple(map, prefix + "AssetId", this.AssetId);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceGroupInfo extends AbstractModel {
 
     /**
-    * 资源组ID
+    * <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -32,7 +32,7 @@ public class ResourceGroupInfo extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 资源组名称
+    * <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -40,18 +40,7 @@ public class ResourceGroupInfo extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+    * <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupStatus")
@@ -59,9 +48,9 @@ COMPUTE_RESOURCE_STATUS_FAILED  失败
     private String ResourceGroupStatus;
 
     /**
-     * Get 资源组ID
+     * Get <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 资源组ID
+     * @return ResourceGroupId <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -69,9 +58,9 @@ COMPUTE_RESOURCE_STATUS_FAILED  失败
     }
 
     /**
-     * Set 资源组ID
+     * Set <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 资源组ID
+     * @param ResourceGroupId <p>资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -79,9 +68,9 @@ COMPUTE_RESOURCE_STATUS_FAILED  失败
     }
 
     /**
-     * Get 资源组名称
+     * Get <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 资源组名称
+     * @return ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -89,9 +78,9 @@ COMPUTE_RESOURCE_STATUS_FAILED  失败
     }
 
     /**
-     * Set 资源组名称
+     * Set <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 资源组名称
+     * @param ResourceGroupName <p>资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -99,31 +88,9 @@ COMPUTE_RESOURCE_STATUS_FAILED  失败
     }
 
     /**
-     * Get 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+     * Get <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupStatus 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+     * @return ResourceGroupStatus <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupStatus() {
@@ -131,31 +98,9 @@ COMPUTE_RESOURCE_STATUS_FAILED  失败
     }
 
     /**
-     * Set 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+     * Set <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupStatus 资源组状态
-COMPUTE_RESOURCE_STATUS_UNSPECIFIED 未指定
-COMPUTE_RESOURCE_STATUS_PENDING_CREATE 待创建
-COMPUTE_RESOURCE_STATUS_CREATING 创建中
-COMPUTE_RESOURCE_STATUS_RUNNING 运行中
-COMPUTE_RESOURCE_STATUS_STOPPED 已停止
-COMPUTE_RESOURCE_STATUS_STOPPING 停止中
-COMPUTE_RESOURCE_STATUS_STARTING 启动中
-COMPUTE_RESOURCE_STATUS_UPDATING 更新中
-COMPUTE_RESOURCE_STATUS_DELETING 删除中
-COMPUTE_RESOURCE_STATUS_DELETED 已删除
-COMPUTE_RESOURCE_STATUS_FAILED  失败
+     * @param ResourceGroupStatus <p>资源组状态</p><p>参数格式：0 // 未指定 1 // 待创建 2 // 创建中 3 // 运行中 4 // 已停止 5 // 停止中 6 // 启动中 7 // 更新中 8 // 删除中 9 // 已删除 10 // 用户主动启动 / 自动启动（有任务提交且自动启停开启） 11 // 可用: 仅存在于数据计算型 12 // 不可用: 仅存在于数据计算型 13 // 失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupStatus(String ResourceGroupStatus) {

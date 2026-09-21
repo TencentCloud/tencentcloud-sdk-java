@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchOperateDeviceResponse extends AbstractModel {
 
     /**
-    * 返回结果
+    * <p>返回结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class BatchOperateDeviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回结果 
-     * @return Data 返回结果
+     * Get <p>返回结果</p> 
+     * @return Data <p>返回结果</p>
      */
     public BatchOperateDeviceData getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回结果
-     * @param Data 返回结果
+     * Set <p>返回结果</p>
+     * @param Data <p>返回结果</p>
      */
     public void setData(BatchOperateDeviceData Data) {
         this.Data = Data;

@@ -45,7 +45,7 @@ public class DescribeDeviceData extends AbstractModel {
     private String Name;
 
     /**
-    * <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+    * <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
     */
     @SerializedName("AccessProtocol")
     @Expose
@@ -143,49 +143,49 @@ public class DescribeDeviceData extends AbstractModel {
     private String OrganizationId;
 
     /**
-    * <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+    * <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * <p>设备所属网关名称</p>
+    * <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("GatewayName")
     @Expose
     private String GatewayName;
 
     /**
-    * <p>设备网关协议名称</p>
+    * <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("ProtocolTypeName")
     @Expose
     private String ProtocolTypeName;
 
     /**
-    * <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+    * <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private Long ProtocolType;
 
     /**
-    * <p>设备接入IP</p>
+    * <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * <p>设备Port</p>
+    * <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * <p>设备用户名</p>
+    * <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Username")
     @Expose
@@ -248,6 +248,27 @@ public class DescribeDeviceData extends AbstractModel {
     private String PushStreamSecureUrl;
 
     /**
+    * <p>国标SIP域名</p>
+    */
+    @SerializedName("SipFQDN")
+    @Expose
+    private String SipFQDN;
+
+    /**
+    * <p>国标SIP三网IP地址</p>
+    */
+    @SerializedName("SipCarrierEndpoints")
+    @Expose
+    private SipCarrierEndpoints SipCarrierEndpoints;
+
+    /**
+    * <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+    */
+    @SerializedName("TimeSyncSwitch")
+    @Expose
+    private Long TimeSyncSwitch;
+
+    /**
      * Get <p>设备ID</p> 
      * @return DeviceId <p>设备ID</p>
      */
@@ -296,16 +317,16 @@ public class DescribeDeviceData extends AbstractModel {
     }
 
     /**
-     * Get <p>设备接入协议，1:RTMP,2:GB,3:GW</p> 
-     * @return AccessProtocol <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+     * Get <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul> 
+     * @return AccessProtocol <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
-     * @param AccessProtocol <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+     * Set <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
+     * @param AccessProtocol <p>设备接入协议，1:RTMP,2:GB</p><p>枚举值：</p><ul><li>1： RTMP</li><li>2： GB</li></ul>
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;
@@ -520,112 +541,112 @@ public class DescribeDeviceData extends AbstractModel {
     }
 
     /**
-     * Get <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p> 
-     * @return GatewayId <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+     * Get <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
-     * @param GatewayId <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+     * Set <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
+     * @param GatewayId <p>设备接入网关ID（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get <p>设备所属网关名称</p> 
-     * @return GatewayName <p>设备所属网关名称</p>
+     * Get <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return GatewayName <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getGatewayName() {
         return this.GatewayName;
     }
 
     /**
-     * Set <p>设备所属网关名称</p>
-     * @param GatewayName <p>设备所属网关名称</p>
+     * Set <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
+     * @param GatewayName <p>设备所属网关名称（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get <p>设备网关协议名称</p> 
-     * @return ProtocolTypeName <p>设备网关协议名称</p>
+     * Get <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return ProtocolTypeName <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getProtocolTypeName() {
         return this.ProtocolTypeName;
     }
 
     /**
-     * Set <p>设备网关协议名称</p>
-     * @param ProtocolTypeName <p>设备网关协议名称</p>
+     * Set <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
+     * @param ProtocolTypeName <p>设备网关协议名称（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setProtocolTypeName(String ProtocolTypeName) {
         this.ProtocolTypeName = ProtocolTypeName;
     }
 
     /**
-     * Get <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p> 
-     * @return ProtocolType <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+     * Get <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
-     * @param ProtocolType <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+     * Set <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
+     * @param ProtocolType <p>网关接入协议类型（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setProtocolType(Long ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get <p>设备接入IP</p> 
-     * @return Ip <p>设备接入IP</p>
+     * Get <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set <p>设备接入IP</p>
-     * @param Ip <p>设备接入IP</p>
+     * Set <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get <p>设备Port</p> 
-     * @return Port <p>设备Port</p>
+     * Get <p>设备Port（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set <p>设备Port</p>
-     * @param Port <p>设备Port</p>
+     * Set <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get <p>设备用户名</p> 
-     * @return Username <p>设备用户名</p>
+     * Get <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set <p>设备用户名</p>
-     * @param Username <p>设备用户名</p>
+     * Set <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
@@ -759,6 +780,54 @@ public class DescribeDeviceData extends AbstractModel {
         this.PushStreamSecureUrl = PushStreamSecureUrl;
     }
 
+    /**
+     * Get <p>国标SIP域名</p> 
+     * @return SipFQDN <p>国标SIP域名</p>
+     */
+    public String getSipFQDN() {
+        return this.SipFQDN;
+    }
+
+    /**
+     * Set <p>国标SIP域名</p>
+     * @param SipFQDN <p>国标SIP域名</p>
+     */
+    public void setSipFQDN(String SipFQDN) {
+        this.SipFQDN = SipFQDN;
+    }
+
+    /**
+     * Get <p>国标SIP三网IP地址</p> 
+     * @return SipCarrierEndpoints <p>国标SIP三网IP地址</p>
+     */
+    public SipCarrierEndpoints getSipCarrierEndpoints() {
+        return this.SipCarrierEndpoints;
+    }
+
+    /**
+     * Set <p>国标SIP三网IP地址</p>
+     * @param SipCarrierEndpoints <p>国标SIP三网IP地址</p>
+     */
+    public void setSipCarrierEndpoints(SipCarrierEndpoints SipCarrierEndpoints) {
+        this.SipCarrierEndpoints = SipCarrierEndpoints;
+    }
+
+    /**
+     * Get <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p> 
+     * @return TimeSyncSwitch <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     */
+    public Long getTimeSyncSwitch() {
+        return this.TimeSyncSwitch;
+    }
+
+    /**
+     * Set <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     * @param TimeSyncSwitch <p>国标校时开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     */
+    public void setTimeSyncSwitch(Long TimeSyncSwitch) {
+        this.TimeSyncSwitch = TimeSyncSwitch;
+    }
+
     public DescribeDeviceData() {
     }
 
@@ -863,6 +932,15 @@ public class DescribeDeviceData extends AbstractModel {
         if (source.PushStreamSecureUrl != null) {
             this.PushStreamSecureUrl = new String(source.PushStreamSecureUrl);
         }
+        if (source.SipFQDN != null) {
+            this.SipFQDN = new String(source.SipFQDN);
+        }
+        if (source.SipCarrierEndpoints != null) {
+            this.SipCarrierEndpoints = new SipCarrierEndpoints(source.SipCarrierEndpoints);
+        }
+        if (source.TimeSyncSwitch != null) {
+            this.TimeSyncSwitch = new Long(source.TimeSyncSwitch);
+        }
     }
 
 
@@ -902,6 +980,9 @@ public class DescribeDeviceData extends AbstractModel {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
         this.setParamSimple(map, prefix + "PushStreamSecureUrl", this.PushStreamSecureUrl);
+        this.setParamSimple(map, prefix + "SipFQDN", this.SipFQDN);
+        this.setParamObj(map, prefix + "SipCarrierEndpoints.", this.SipCarrierEndpoints);
+        this.setParamSimple(map, prefix + "TimeSyncSwitch", this.TimeSyncSwitch);
 
     }
 }

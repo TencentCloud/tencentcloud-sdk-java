@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBillingResourceGroupResponse extends AbstractModel {
 
     /**
-    * 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+    * <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -32,7 +32,7 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 资源组节点信息
+    * <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceSet")
@@ -40,7 +40,7 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     private Instance [] InstanceSet;
 
     /**
-    * 资源组纳管类型
+    * <p>资源组纳管类型</p>
     */
     @SerializedName("ResourceGroupSWType")
     @Expose
@@ -54,9 +54,9 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+     * Get <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+     * @return TotalCount <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -64,9 +64,9 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     }
 
     /**
-     * Set 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+     * Set <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小
+     * @param TotalCount <p>资源组节点总数； 注意接口是分页拉取的，total是指资源组节点总数，不是本次返回中InstanceSet数组的大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -74,9 +74,9 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源组节点信息
+     * Get <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceSet 资源组节点信息
+     * @return InstanceSet <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instance [] getInstanceSet() {
@@ -84,9 +84,9 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     }
 
     /**
-     * Set 资源组节点信息
+     * Set <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceSet 资源组节点信息
+     * @param InstanceSet <p>资源组节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceSet(Instance [] InstanceSet) {
@@ -94,16 +94,16 @@ public class DescribeBillingResourceGroupResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源组纳管类型 
-     * @return ResourceGroupSWType 资源组纳管类型
+     * Get <p>资源组纳管类型</p> 
+     * @return ResourceGroupSWType <p>资源组纳管类型</p>
      */
     public String getResourceGroupSWType() {
         return this.ResourceGroupSWType;
     }
 
     /**
-     * Set 资源组纳管类型
-     * @param ResourceGroupSWType 资源组纳管类型
+     * Set <p>资源组纳管类型</p>
+     * @param ResourceGroupSWType <p>资源组纳管类型</p>
      */
     public void setResourceGroupSWType(String ResourceGroupSWType) {
         this.ResourceGroupSWType = ResourceGroupSWType;

@@ -46,6 +46,20 @@ public class ServiceProviderCoefficient extends AbstractModel {
     private String ServiceProviderName;
 
     /**
+    * <p>分级积分系数设置</p>
+    */
+    @SerializedName("CoefficientTiers")
+    @Expose
+    private CoefficientTier [] CoefficientTiers;
+
+    /**
+    * <p>峰谷积分系数设置</p>
+    */
+    @SerializedName("CoefficientSchedule")
+    @Expose
+    private CoefficientScheduleRule [] CoefficientSchedule;
+
+    /**
      * Get <p>该 BYOK 实例（ServiceProvider）维度的积分系数。</p><p>可选字段：仅当该实例单独配置了 ServiceProvider 维度系数时返回，返回值即该实例的生效系数；未返回时表示该实例继承所属 ModelAlias 的 <code>Coefficient</code>。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Coefficient <p>该 BYOK 实例（ServiceProvider）维度的积分系数。</p><p>可选字段：仅当该实例单独配置了 ServiceProvider 维度系数时返回，返回值即该实例的生效系数；未返回时表示该实例继承所属 ModelAlias 的 <code>Coefficient</code>。</p>
@@ -97,6 +111,38 @@ public class ServiceProviderCoefficient extends AbstractModel {
         this.ServiceProviderName = ServiceProviderName;
     }
 
+    /**
+     * Get <p>分级积分系数设置</p> 
+     * @return CoefficientTiers <p>分级积分系数设置</p>
+     */
+    public CoefficientTier [] getCoefficientTiers() {
+        return this.CoefficientTiers;
+    }
+
+    /**
+     * Set <p>分级积分系数设置</p>
+     * @param CoefficientTiers <p>分级积分系数设置</p>
+     */
+    public void setCoefficientTiers(CoefficientTier [] CoefficientTiers) {
+        this.CoefficientTiers = CoefficientTiers;
+    }
+
+    /**
+     * Get <p>峰谷积分系数设置</p> 
+     * @return CoefficientSchedule <p>峰谷积分系数设置</p>
+     */
+    public CoefficientScheduleRule [] getCoefficientSchedule() {
+        return this.CoefficientSchedule;
+    }
+
+    /**
+     * Set <p>峰谷积分系数设置</p>
+     * @param CoefficientSchedule <p>峰谷积分系数设置</p>
+     */
+    public void setCoefficientSchedule(CoefficientScheduleRule [] CoefficientSchedule) {
+        this.CoefficientSchedule = CoefficientSchedule;
+    }
+
     public ServiceProviderCoefficient() {
     }
 
@@ -114,6 +160,18 @@ public class ServiceProviderCoefficient extends AbstractModel {
         if (source.ServiceProviderName != null) {
             this.ServiceProviderName = new String(source.ServiceProviderName);
         }
+        if (source.CoefficientTiers != null) {
+            this.CoefficientTiers = new CoefficientTier[source.CoefficientTiers.length];
+            for (int i = 0; i < source.CoefficientTiers.length; i++) {
+                this.CoefficientTiers[i] = new CoefficientTier(source.CoefficientTiers[i]);
+            }
+        }
+        if (source.CoefficientSchedule != null) {
+            this.CoefficientSchedule = new CoefficientScheduleRule[source.CoefficientSchedule.length];
+            for (int i = 0; i < source.CoefficientSchedule.length; i++) {
+                this.CoefficientSchedule[i] = new CoefficientScheduleRule(source.CoefficientSchedule[i]);
+            }
+        }
     }
 
 
@@ -124,6 +182,8 @@ public class ServiceProviderCoefficient extends AbstractModel {
         this.setParamObj(map, prefix + "Coefficient.", this.Coefficient);
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
         this.setParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
+        this.setParamArrayObj(map, prefix + "CoefficientTiers.", this.CoefficientTiers);
+        this.setParamArrayObj(map, prefix + "CoefficientSchedule.", this.CoefficientSchedule);
 
     }
 }

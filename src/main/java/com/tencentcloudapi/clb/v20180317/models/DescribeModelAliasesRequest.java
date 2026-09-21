@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeModelAliasesRequest extends AbstractModel {
 
     /**
-    * <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
+    * <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
     */
     @SerializedName("Filters")
     @Expose
@@ -45,23 +45,23 @@ public class DescribeModelAliasesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
+    * <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
     */
     @SerializedName("Sort")
     @Expose
     private Sort [] Sort;
 
     /**
-     * Get <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul> 
-     * @return Filters <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
+     * Get <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p> 
+     * @return Filters <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
-     * @param Filters <p>过滤条件</p><p>支持的过滤键：</p><ul><li>ModelAliasName：按模型别名过滤。</li></ul>
+     * Set <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
+     * @param Filters <p>过滤条件</p><p></p>- ModelAliasName：模型别名<p></p><p></p>- Capability：输出模态<p></p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -100,16 +100,16 @@ public class DescribeModelAliasesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p> 
-     * @return Sort <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
+     * Get <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p> 
+     * @return Sort <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
      */
     public Sort [] getSort() {
         return this.Sort;
     }
 
     /**
-     * Set <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
-     * @param Sort <p>排序条件。支持按 InputCoefficient、InputCachedCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 3 个排序条件，排序字段不可重复。</p>
+     * Set <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
+     * @param Sort <p>排序条件。支持按 InputCoefficient 或 OutputCoefficient 排序，Order 支持 ASC、DESC。不传或传空数组时，默认按 OutputCoefficient 降序排列。最多支持 2 个排序条件，排序字段不可重复。</p>
      */
     public void setSort(Sort [] Sort) {
         this.Sort = Sort;

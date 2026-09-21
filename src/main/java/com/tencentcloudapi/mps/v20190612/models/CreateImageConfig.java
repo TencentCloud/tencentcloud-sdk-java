@@ -38,14 +38,14 @@ public class CreateImageConfig extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p>
+    * <p>输出图片的分辨率，可取值：1K/2K/4K。</p><p>默认值：1K</p>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * <p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
+    * <p>输出图片的宽高比，可取值：</p><ul><li>1:1</li><li>2:3</li><li>3:2</li><li>3:4</li><li>4:3</li><li>4:5</li><li>5:4</li><li>9:16</li><li>16:9</li></ul><p>默认值：1:1</p>
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -91,32 +91,32 @@ public class CreateImageConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p> 
-     * @return Resolution <p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p>
+     * Get <p>输出图片的分辨率，可取值：1K/2K/4K。</p><p>默认值：1K</p> 
+     * @return Resolution <p>输出图片的分辨率，可取值：1K/2K/4K。</p><p>默认值：1K</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set <p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p>
-     * @param Resolution <p>输出图片的分辨率</p><p>枚举值：</p><ul><li>1K： 短边分辨率 1080</li><li>2K： 短边分辨率 1440</li><li>4K： 短边分辨率 2160</li></ul><p>默认值：1K</p>
+     * Set <p>输出图片的分辨率，可取值：1K/2K/4K。</p><p>默认值：1K</p>
+     * @param Resolution <p>输出图片的分辨率，可取值：1K/2K/4K。</p><p>默认值：1K</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get <p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p> 
-     * @return AspectRatio <p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
+     * Get <p>输出图片的宽高比，可取值：</p><ul><li>1:1</li><li>2:3</li><li>3:2</li><li>3:4</li><li>4:3</li><li>4:5</li><li>5:4</li><li>9:16</li><li>16:9</li></ul><p>默认值：1:1</p> 
+     * @return AspectRatio <p>输出图片的宽高比，可取值：</p><ul><li>1:1</li><li>2:3</li><li>3:2</li><li>3:4</li><li>4:3</li><li>4:5</li><li>5:4</li><li>9:16</li><li>16:9</li></ul><p>默认值：1:1</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set <p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
-     * @param AspectRatio <p>输出图片的宽高比</p><p>枚举值：</p><ul><li>1:1： 宽高比 1:1</li><li>2:3： 宽高比 2:3</li><li>3:2： 宽高比 3:2</li><li>3:4： 宽高比 3:4</li><li>4:3： 宽高比 4:3</li><li>9:16： 宽高比 9:16</li><li>16:9： 宽高比 16:9</li></ul><p>默认值：1:1</p>
+     * Set <p>输出图片的宽高比，可取值：</p><ul><li>1:1</li><li>2:3</li><li>3:2</li><li>3:4</li><li>4:3</li><li>4:5</li><li>5:4</li><li>9:16</li><li>16:9</li></ul><p>默认值：1:1</p>
+     * @param AspectRatio <p>输出图片的宽高比，可取值：</p><ul><li>1:1</li><li>2:3</li><li>3:2</li><li>3:4</li><li>4:3</li><li>4:5</li><li>5:4</li><li>9:16</li><li>16:9</li></ul><p>默认值：1:1</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;

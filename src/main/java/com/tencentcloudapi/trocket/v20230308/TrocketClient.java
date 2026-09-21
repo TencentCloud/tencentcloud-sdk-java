@@ -73,6 +73,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *批量创建消费组灰度标签
+     * @param req CreateConsumerLabelsRequest
+     * @return CreateConsumerLabelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerLabelsResponse CreateConsumerLabels(CreateConsumerLabelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsumerLabels", CreateConsumerLabelsResponse.class);
+    }
+
+    /**
      *创建 RocketMQ 5.x 集群。
 当前 API 适用集群：5.x 集群。创建 4.x 专享/通用集群的接口文档见 [CreateRocketMQVipInstance](https://cloud.tencent.com/document/product/1179/95721)。
      * @param req CreateInstanceRequest
@@ -143,6 +154,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *批量删除消费组灰度标签
+     * @param req DeleteConsumerLabelsRequest
+     * @return DeleteConsumerLabelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerLabelsResponse DeleteConsumerLabels(DeleteConsumerLabelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsumerLabels", DeleteConsumerLabelsResponse.class);
+    }
+
+    /**
      *删除消费组灰度路由配置
      * @param req DeleteConsumerRouteConfigRequest
      * @return DeleteConsumerRouteConfigResponse
@@ -151,6 +173,17 @@ public class TrocketClient extends AbstractClient{
     public DeleteConsumerRouteConfigResponse DeleteConsumerRouteConfig(DeleteConsumerRouteConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConsumerRouteConfig", DeleteConsumerRouteConfigResponse.class);
+    }
+
+    /**
+     *批量删除消费组灰度路由配置
+     * @param req DeleteConsumerRouteConfigsRequest
+     * @return DeleteConsumerRouteConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerRouteConfigsResponse DeleteConsumerRouteConfigs(DeleteConsumerRouteConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsumerRouteConfigs", DeleteConsumerRouteConfigsResponse.class);
     }
 
     /**
@@ -282,6 +315,28 @@ Filters示例：
     }
 
     /**
+     *批量查询多个消费组的灰度标签列表
+     * @param req DescribeConsumerLabelListsRequest
+     * @return DescribeConsumerLabelListsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerLabelListsResponse DescribeConsumerLabelLists(DescribeConsumerLabelListsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerLabelLists", DescribeConsumerLabelListsResponse.class);
+    }
+
+    /**
+     *批量查询消费组灰度标签命中的 Topic 路由
+     * @param req DescribeConsumerLabelRoutesRequest
+     * @return DescribeConsumerLabelRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerLabelRoutesResponse DescribeConsumerLabelRoutes(DescribeConsumerLabelRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerLabelRoutes", DescribeConsumerLabelRoutesResponse.class);
+    }
+
+    /**
      *查询指定消费组堆积数。
 当前 API 适用集群：4.x 集群和 5.x 集群。
      * @param req DescribeConsumerLagRequest
@@ -302,6 +357,17 @@ Filters示例：
     public DescribeConsumerRouteConfigResponse DescribeConsumerRouteConfig(DescribeConsumerRouteConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConsumerRouteConfig", DescribeConsumerRouteConfigResponse.class);
+    }
+
+    /**
+     *批量查询消费组灰度路由配置
+     * @param req DescribeConsumerRouteConfigsRequest
+     * @return DescribeConsumerRouteConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerRouteConfigsResponse DescribeConsumerRouteConfigs(DescribeConsumerRouteConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerRouteConfigs", DescribeConsumerRouteConfigsResponse.class);
     }
 
     /**
@@ -728,6 +794,17 @@ Filters示例：
     public PutConsumerRouteConfigResponse PutConsumerRouteConfig(PutConsumerRouteConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PutConsumerRouteConfig", PutConsumerRouteConfigResponse.class);
+    }
+
+    /**
+     *批量写入消费组灰度路由配置
+     * @param req PutConsumerRouteConfigsRequest
+     * @return PutConsumerRouteConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutConsumerRouteConfigsResponse PutConsumerRouteConfigs(PutConsumerRouteConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PutConsumerRouteConfigs", PutConsumerRouteConfigsResponse.class);
     }
 
     /**

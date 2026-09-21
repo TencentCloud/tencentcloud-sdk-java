@@ -52,14 +52,14 @@ public class DescribeVpcAcRuleRequest extends AbstractModel {
     private CommonFilter [] Filters;
 
     /**
-    * <p>检索的起始时间，可不传</p>
+    * <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * <p>检索的截止时间，可不传</p>
+    * <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
     */
     @SerializedName("EndTime")
     @Expose
@@ -144,32 +144,32 @@ public class DescribeVpcAcRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>检索的起始时间，可不传</p> 
-     * @return StartTime <p>检索的起始时间，可不传</p>
+     * Get <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p> 
+     * @return StartTime <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>检索的起始时间，可不传</p>
-     * @param StartTime <p>检索的起始时间，可不传</p>
+     * Set <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
+     * @param StartTime <p>检索的起始时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>检索的截止时间，可不传</p> 
-     * @return EndTime <p>检索的截止时间，可不传</p>
+     * Get <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p> 
+     * @return EndTime <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>检索的截止时间，可不传</p>
-     * @param EndTime <p>检索的截止时间，可不传</p>
+     * Set <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
+     * @param EndTime <p>检索的截止时间，规则创建时间，可不传</p><p>参数格式：2022-07-27 16:00:00</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

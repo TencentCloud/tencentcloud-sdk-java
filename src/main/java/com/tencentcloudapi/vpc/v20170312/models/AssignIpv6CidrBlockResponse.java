@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AssignIpv6CidrBlockResponse extends AbstractModel {
 
     /**
-    * 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
+    * <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-    * 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+    * <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
     */
     @SerializedName("AddressType")
     @Expose
@@ -45,32 +45,32 @@ public class AssignIpv6CidrBlockResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。 
-     * @return Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
+     * Get <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p> 
+     * @return Ipv6CidrBlock <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
-     * @param Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
+     * Set <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
+     * @param Ipv6CidrBlock <p>分配的 <code>IPv6</code> 网段。形如：<code>3402:4e00:20:1000::/56</code>。</p>
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 申请IPv6 Cidr 的类型，`GUA`,  `ULA` 
-     * @return AddressType 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     * Get <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p> 
+     * @return AddressType <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
-     * @param AddressType 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     * Set <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
+     * @param AddressType <p>申请IPv6 Cidr 的类型，<code>GUA</code>,  <code>ULA</code></p>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

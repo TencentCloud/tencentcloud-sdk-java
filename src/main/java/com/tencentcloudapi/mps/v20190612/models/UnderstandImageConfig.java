@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UnderstandImageConfig extends AbstractModel {
 
     /**
-    * <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+    * <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
     */
     @SerializedName("Model")
     @Expose
@@ -45,16 +45,16 @@ public class UnderstandImageConfig extends AbstractModel {
     private String Parameters;
 
     /**
-     * Get <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul> 
-     * @return Model <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+     * Get <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul> 
+     * @return Model <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
-     * @param Model <p>图片理解模型</p><p>枚举值：</p><ul><li>WAND-understand-1.0-lite： 轻量理解模型</li><li>WAND-understand-1.0-flash： 质量-速度平衡理解模型</li><li>WAND-understand-1.0-pro： 高质量理解模型</li></ul>
+     * Set <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
+     * @param Model <p>图片理解模型</p><p>枚举值：</p><ul><li>understand-1.0-lite： 轻量理解模型</li><li>understand-1.0-flash： 质量-速度平衡理解模型</li><li>understand-1.0-pro： 高质量理解模型</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;

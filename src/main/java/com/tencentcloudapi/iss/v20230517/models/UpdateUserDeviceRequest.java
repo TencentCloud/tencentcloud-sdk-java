@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class UpdateUserDeviceRequest extends AbstractModel {
 
     /**
-    * 设备ID（从获取设备列表接口ListDevices中获取）
+    * <p>设备ID（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
+    * <p>设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
+    * <p>设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）</p>
     */
     @SerializedName("TransportProtocol")
     @Expose
     private Long TransportProtocol;
 
     /**
-    * 设备密码（仅国标，网关设备支持，长度不超过 64 位）
+    * <p>设备密码（仅国标设备支持，长度不超过 64 位）</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 设备描述（长度不超过128位）
+    * <p>设备描述（长度不超过128位）</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 设备接入Ip（仅网关接入支持）
+    * <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 设备Port（仅网关接入支持）
+    * <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 设备用户名（仅网关接入支持）
+    * <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 网关设备接入协议（仅网关接入支持）
+    * <p>网关设备接入协议（已不再使用，保留用于兼容，可忽略）</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private Long ProtocolType;
 
     /**
-    * 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+    * <p>音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频</p>
     */
     @SerializedName("AudioSwitch")
     @Expose
     private Long AudioSwitch;
 
     /**
-    * 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+    * <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
     */
     @SerializedName("SubscribeSwitch")
     @Expose
     private Long SubscribeSwitch;
 
     /**
-    * 是否开启静音帧（0：关闭；1 开启）
+    * <p>是否开启静音帧（0：关闭；1 开启）</p>
     */
     @SerializedName("SilentFrameSwitch")
     @Expose
     private Long SilentFrameSwitch;
 
     /**
-     * Get 设备ID（从获取设备列表接口ListDevices中获取） 
-     * @return DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
+    * <p>时钟同步开关（仅国标设备生效）</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+    */
+    @SerializedName("TimeSyncSwitch")
+    @Expose
+    private Long TimeSyncSwitch;
+
+    /**
+     * Get <p>设备ID（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p> 
+     * @return DeviceId <p>设备ID（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID（从获取设备列表接口ListDevices中获取）
-     * @param DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
+     * Set <p>设备ID（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
+     * @param DeviceId <p>设备ID（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位） 
-     * @return Name 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
+     * Get <p>设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）</p> 
+     * @return Name <p>设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
-     * @param Name 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
+     * Set <p>设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）</p>
+     * @param Name <p>设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP） 
-     * @return TransportProtocol 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
+     * Get <p>设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）</p> 
+     * @return TransportProtocol <p>设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）</p>
      */
     public Long getTransportProtocol() {
         return this.TransportProtocol;
     }
 
     /**
-     * Set 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
-     * @param TransportProtocol 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
+     * Set <p>设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）</p>
+     * @param TransportProtocol <p>设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）</p>
      */
     public void setTransportProtocol(Long TransportProtocol) {
         this.TransportProtocol = TransportProtocol;
     }
 
     /**
-     * Get 设备密码（仅国标，网关设备支持，长度不超过 64 位） 
-     * @return Password 设备密码（仅国标，网关设备支持，长度不超过 64 位）
+     * Get <p>设备密码（仅国标设备支持，长度不超过 64 位）</p> 
+     * @return Password <p>设备密码（仅国标设备支持，长度不超过 64 位）</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 设备密码（仅国标，网关设备支持，长度不超过 64 位）
-     * @param Password 设备密码（仅国标，网关设备支持，长度不超过 64 位）
+     * Set <p>设备密码（仅国标设备支持，长度不超过 64 位）</p>
+     * @param Password <p>设备密码（仅国标设备支持，长度不超过 64 位）</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 设备描述（长度不超过128位） 
-     * @return Description 设备描述（长度不超过128位）
+     * Get <p>设备描述（长度不超过128位）</p> 
+     * @return Description <p>设备描述（长度不超过128位）</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备描述（长度不超过128位）
-     * @param Description 设备描述（长度不超过128位）
+     * Set <p>设备描述（长度不超过128位）</p>
+     * @param Description <p>设备描述（长度不超过128位）</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 设备接入Ip（仅网关接入支持） 
-     * @return Ip 设备接入Ip（仅网关接入支持）
+     * Get <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 设备接入Ip（仅网关接入支持）
-     * @param Ip 设备接入Ip（仅网关接入支持）
+     * Set <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Ip <p>设备接入IP（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 设备Port（仅网关接入支持） 
-     * @return Port 设备Port（仅网关接入支持）
+     * Get <p>设备Port（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 设备Port（仅网关接入支持）
-     * @param Port 设备Port（仅网关接入支持）
+     * Set <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Port <p>设备Port（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 设备用户名（仅网关接入支持） 
-     * @return Username 设备用户名（仅网关接入支持）
+     * Get <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 设备用户名（仅网关接入支持）
-     * @param Username 设备用户名（仅网关接入支持）
+     * Set <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
+     * @param Username <p>设备用户名（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 网关设备接入协议（仅网关接入支持） 
-     * @return ProtocolType 网关设备接入协议（仅网关接入支持）
+     * Get <p>网关设备接入协议（已不再使用，保留用于兼容，可忽略）</p> 
+     * @return ProtocolType <p>网关设备接入协议（已不再使用，保留用于兼容，可忽略）</p>
      */
     public Long getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 网关设备接入协议（仅网关接入支持）
-     * @param ProtocolType 网关设备接入协议（仅网关接入支持）
+     * Set <p>网关设备接入协议（已不再使用，保留用于兼容，可忽略）</p>
+     * @param ProtocolType <p>网关设备接入协议（已不再使用，保留用于兼容，可忽略）</p>
      */
     public void setProtocolType(Long ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频 
-     * @return AudioSwitch 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+     * Get <p>音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频</p> 
+     * @return AudioSwitch <p>音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频</p>
      */
     public Long getAudioSwitch() {
         return this.AudioSwitch;
     }
 
     /**
-     * Set 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
-     * @param AudioSwitch 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+     * Set <p>音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频</p>
+     * @param AudioSwitch <p>音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频</p>
      */
     public void setAudioSwitch(Long AudioSwitch) {
         this.AudioSwitch = AudioSwitch;
     }
 
     /**
-     * Get 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效 
-     * @return SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+     * Get <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p> 
+     * @return SubscribeSwitch <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
      */
     public Long getSubscribeSwitch() {
         return this.SubscribeSwitch;
     }
 
     /**
-     * Set 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
-     * @param SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+     * Set <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
+     * @param SubscribeSwitch <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
      */
     public void setSubscribeSwitch(Long SubscribeSwitch) {
         this.SubscribeSwitch = SubscribeSwitch;
     }
 
     /**
-     * Get 是否开启静音帧（0：关闭；1 开启） 
-     * @return SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     * Get <p>是否开启静音帧（0：关闭；1 开启）</p> 
+     * @return SilentFrameSwitch <p>是否开启静音帧（0：关闭；1 开启）</p>
      */
     public Long getSilentFrameSwitch() {
         return this.SilentFrameSwitch;
     }
 
     /**
-     * Set 是否开启静音帧（0：关闭；1 开启）
-     * @param SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     * Set <p>是否开启静音帧（0：关闭；1 开启）</p>
+     * @param SilentFrameSwitch <p>是否开启静音帧（0：关闭；1 开启）</p>
      */
     public void setSilentFrameSwitch(Long SilentFrameSwitch) {
         this.SilentFrameSwitch = SilentFrameSwitch;
+    }
+
+    /**
+     * Get <p>时钟同步开关（仅国标设备生效）</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p> 
+     * @return TimeSyncSwitch <p>时钟同步开关（仅国标设备生效）</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     */
+    public Long getTimeSyncSwitch() {
+        return this.TimeSyncSwitch;
+    }
+
+    /**
+     * Set <p>时钟同步开关（仅国标设备生效）</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     * @param TimeSyncSwitch <p>时钟同步开关（仅国标设备生效）</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul><p>默认值： 1</p>
+     */
+    public void setTimeSyncSwitch(Long TimeSyncSwitch) {
+        this.TimeSyncSwitch = TimeSyncSwitch;
     }
 
     public UpdateUserDeviceRequest() {
@@ -343,6 +366,9 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         if (source.SilentFrameSwitch != null) {
             this.SilentFrameSwitch = new Long(source.SilentFrameSwitch);
         }
+        if (source.TimeSyncSwitch != null) {
+            this.TimeSyncSwitch = new Long(source.TimeSyncSwitch);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
         this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
         this.setParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
+        this.setParamSimple(map, prefix + "TimeSyncSwitch", this.TimeSyncSwitch);
 
     }
 }

@@ -59,11 +59,25 @@ public class ModelAlias extends AbstractModel {
     private String Status;
 
     /**
-    * <p>模型能力</p>
+    * <p>模型输出模态</p><p>枚举值：</p><ul><li>chat ： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
     */
     @SerializedName("Capability")
     @Expose
     private String Capability;
+
+    /**
+    * <p>分级积分系数配置</p>
+    */
+    @SerializedName("CoefficientTiers")
+    @Expose
+    private CoefficientTier [] CoefficientTiers;
+
+    /**
+    * <p>峰谷积分系数配置</p>
+    */
+    @SerializedName("CoefficientSchedule")
+    @Expose
+    private CoefficientScheduleRule [] CoefficientSchedule;
 
     /**
      * Get <p>模型积分系数配置，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p>未配置时输入系数和输出系数均返回 1。</p> 
@@ -146,19 +160,51 @@ public class ModelAlias extends AbstractModel {
     }
 
     /**
-     * Get <p>模型能力</p> 
-     * @return Capability <p>模型能力</p>
+     * Get <p>模型输出模态</p><p>枚举值：</p><ul><li>chat ： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul> 
+     * @return Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat ： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
      */
     public String getCapability() {
         return this.Capability;
     }
 
     /**
-     * Set <p>模型能力</p>
-     * @param Capability <p>模型能力</p>
+     * Set <p>模型输出模态</p><p>枚举值：</p><ul><li>chat ： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+     * @param Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat ： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
      */
     public void setCapability(String Capability) {
         this.Capability = Capability;
+    }
+
+    /**
+     * Get <p>分级积分系数配置</p> 
+     * @return CoefficientTiers <p>分级积分系数配置</p>
+     */
+    public CoefficientTier [] getCoefficientTiers() {
+        return this.CoefficientTiers;
+    }
+
+    /**
+     * Set <p>分级积分系数配置</p>
+     * @param CoefficientTiers <p>分级积分系数配置</p>
+     */
+    public void setCoefficientTiers(CoefficientTier [] CoefficientTiers) {
+        this.CoefficientTiers = CoefficientTiers;
+    }
+
+    /**
+     * Get <p>峰谷积分系数配置</p> 
+     * @return CoefficientSchedule <p>峰谷积分系数配置</p>
+     */
+    public CoefficientScheduleRule [] getCoefficientSchedule() {
+        return this.CoefficientSchedule;
+    }
+
+    /**
+     * Set <p>峰谷积分系数配置</p>
+     * @param CoefficientSchedule <p>峰谷积分系数配置</p>
+     */
+    public void setCoefficientSchedule(CoefficientScheduleRule [] CoefficientSchedule) {
+        this.CoefficientSchedule = CoefficientSchedule;
     }
 
     public ModelAlias() {
@@ -190,6 +236,18 @@ public class ModelAlias extends AbstractModel {
         if (source.Capability != null) {
             this.Capability = new String(source.Capability);
         }
+        if (source.CoefficientTiers != null) {
+            this.CoefficientTiers = new CoefficientTier[source.CoefficientTiers.length];
+            for (int i = 0; i < source.CoefficientTiers.length; i++) {
+                this.CoefficientTiers[i] = new CoefficientTier(source.CoefficientTiers[i]);
+            }
+        }
+        if (source.CoefficientSchedule != null) {
+            this.CoefficientSchedule = new CoefficientScheduleRule[source.CoefficientSchedule.length];
+            for (int i = 0; i < source.CoefficientSchedule.length; i++) {
+                this.CoefficientSchedule[i] = new CoefficientScheduleRule(source.CoefficientSchedule[i]);
+            }
+        }
     }
 
 
@@ -203,6 +261,8 @@ public class ModelAlias extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Capability", this.Capability);
+        this.setParamArrayObj(map, prefix + "CoefficientTiers.", this.CoefficientTiers);
+        this.setParamArrayObj(map, prefix + "CoefficientSchedule.", this.CoefficientSchedule);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowTaskNodeBrief extends AbstractModel {
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -32,7 +32,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -40,7 +40,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -48,7 +48,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String TaskName;
 
     /**
-    * 任务类型名称
+    * <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeName")
@@ -56,7 +56,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String TaskTypeName;
 
     /**
-    * 任务依赖列表
+    * <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependOnList")
@@ -64,7 +64,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private DependOnBrief [] DependOnList;
 
     /**
-    * 任务资源组ID
+    * <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -72,7 +72,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 任务资源组名称
+    * <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -80,7 +80,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 任务X坐标
+    * <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftCoordinate")
@@ -88,7 +88,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private Float LeftCoordinate;
 
     /**
-    * 任务Y坐标
+    * <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopCoordinate")
@@ -96,7 +96,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private Float TopCoordinate;
 
     /**
-    * 任务重试策略
+    * <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskRetryStrategy")
@@ -104,7 +104,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private TaskRetryStrategy TaskRetryStrategy;
 
     /**
-    * 依赖运行条件
+    * <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependOnRunCondition")
@@ -112,7 +112,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private String DependOnRunCondition;
 
     /**
-    * 高级依赖配置
+    * <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedDependencyConfig")
@@ -120,7 +120,7 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private AdvancedDependencyConfig AdvancedDependencyConfig;
 
     /**
-    * 内嵌工作流任务节点
+    * <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerTask")
@@ -128,9 +128,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     private WorkflowTaskNodeBrief InnerTask;
 
     /**
-     * Get 工作流ID
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -138,9 +138,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -148,9 +148,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务ID
+     * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
+     * @return TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -158,9 +158,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务ID
+     * Set <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
+     * @param TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -168,9 +168,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -178,9 +178,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -188,9 +188,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务类型名称
+     * Get <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeName 任务类型名称
+     * @return TaskTypeName <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeName() {
@@ -198,9 +198,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务类型名称
+     * Set <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeName 任务类型名称
+     * @param TaskTypeName <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeName(String TaskTypeName) {
@@ -208,9 +208,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务依赖列表
+     * Get <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependOnList 任务依赖列表
+     * @return DependOnList <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependOnBrief [] getDependOnList() {
@@ -218,9 +218,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务依赖列表
+     * Set <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependOnList 任务依赖列表
+     * @param DependOnList <p>任务依赖列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependOnList(DependOnBrief [] DependOnList) {
@@ -228,9 +228,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务资源组ID
+     * Get <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 任务资源组ID
+     * @return ResourceGroupId <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -238,9 +238,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务资源组ID
+     * Set <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 任务资源组ID
+     * @param ResourceGroupId <p>任务资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -248,9 +248,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务资源组名称
+     * Get <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 任务资源组名称
+     * @return ResourceGroupName <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -258,9 +258,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务资源组名称
+     * Set <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 任务资源组名称
+     * @param ResourceGroupName <p>任务资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -268,9 +268,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务X坐标
+     * Get <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LeftCoordinate 任务X坐标
+     * @return LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLeftCoordinate() {
@@ -278,9 +278,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务X坐标
+     * Set <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LeftCoordinate 任务X坐标
+     * @param LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftCoordinate(Float LeftCoordinate) {
@@ -288,9 +288,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务Y坐标
+     * Get <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopCoordinate 任务Y坐标
+     * @return TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopCoordinate() {
@@ -298,9 +298,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务Y坐标
+     * Set <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopCoordinate 任务Y坐标
+     * @param TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopCoordinate(Float TopCoordinate) {
@@ -308,9 +308,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 任务重试策略
+     * Get <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskRetryStrategy 任务重试策略
+     * @return TaskRetryStrategy <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskRetryStrategy getTaskRetryStrategy() {
@@ -318,9 +318,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 任务重试策略
+     * Set <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskRetryStrategy 任务重试策略
+     * @param TaskRetryStrategy <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskRetryStrategy(TaskRetryStrategy TaskRetryStrategy) {
@@ -328,9 +328,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 依赖运行条件
+     * Get <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependOnRunCondition 依赖运行条件
+     * @return DependOnRunCondition <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependOnRunCondition() {
@@ -338,9 +338,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 依赖运行条件
+     * Set <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependOnRunCondition 依赖运行条件
+     * @param DependOnRunCondition <p>任依赖运行条件</p><ul><li>ALL_SUCCESS: 全部成功：所有上游依赖任务均已执行并成功</li><li>ONE_SUCCESS: 至少一个成功：至少有一个上游依赖任务成功</li><li>NONE_FAILED: 目前没有失败：没有依赖任务失败，并且至少有一个依赖任务在运行中</li><li>ALL_DONE: 全部完成：所有上游依赖任务均已执行并完成（无论成功或失败</li><li>ONE_FAILED: 至少一个失败：至少有一个上游依赖任务失败</li><li>ALL_FAILED: 全部失败：所有上游依赖任务都失败</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li><li>ADVANCED:运行条件为高级模式时配置</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependOnRunCondition(String DependOnRunCondition) {
@@ -348,9 +348,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 高级依赖配置
+     * Get <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedDependencyConfig 高级依赖配置
+     * @return AdvancedDependencyConfig <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdvancedDependencyConfig getAdvancedDependencyConfig() {
@@ -358,9 +358,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 高级依赖配置
+     * Set <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedDependencyConfig 高级依赖配置
+     * @param AdvancedDependencyConfig <p>高级依赖配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedDependencyConfig(AdvancedDependencyConfig AdvancedDependencyConfig) {
@@ -368,9 +368,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Get 内嵌工作流任务节点
+     * Get <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerTask 内嵌工作流任务节点
+     * @return InnerTask <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowTaskNodeBrief getInnerTask() {
@@ -378,9 +378,9 @@ public class WorkflowTaskNodeBrief extends AbstractModel {
     }
 
     /**
-     * Set 内嵌工作流任务节点
+     * Set <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerTask 内嵌工作流任务节点
+     * @param InnerTask <p>内嵌工作流任务节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerTask(WorkflowTaskNodeBrief InnerTask) {

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class HostDel extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名ID
+    * <p>域名ID，使用DescribeDomains接口可以查询获取</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 实例类型
+    * <p>实例类型</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名ID 
-     * @return DomainId 域名ID
+     * Get <p>域名ID，使用DescribeDomains接口可以查询获取</p> 
+     * @return DomainId <p>域名ID，使用DescribeDomains接口可以查询获取</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID
-     * @param DomainId 域名ID
+     * Set <p>域名ID，使用DescribeDomains接口可以查询获取</p>
+     * @param DomainId <p>域名ID，使用DescribeDomains接口可以查询获取</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 实例类型 
-     * @return InstanceID 实例类型
+     * Get <p>实例类型</p> 
+     * @return InstanceID <p>实例类型</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceID 实例类型
+     * Set <p>实例类型</p>
+     * @param InstanceID <p>实例类型</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

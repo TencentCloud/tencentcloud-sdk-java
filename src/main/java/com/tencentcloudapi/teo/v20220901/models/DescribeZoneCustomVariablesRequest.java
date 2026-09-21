@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aiart.v20221229.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Image extends AbstractModel {
+public class DescribeZoneCustomVariablesRequest extends AbstractModel {
 
     /**
-    * 图片Base64
+    * <p>站点 ID。</p>
     */
-    @SerializedName("Base64")
+    @SerializedName("ZoneId")
     @Expose
-    private String Base64;
+    private String ZoneId;
 
     /**
-    * 图片Url
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
-     * Get 图片Base64 
-     * @return Base64 图片Base64
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
-    public String getBase64() {
-        return this.Base64;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set 图片Base64
-     * @param Base64 图片Base64
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
-    public void setBase64(String Base64) {
-        this.Base64 = Base64;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
-    /**
-     * Get 图片Url 
-     * @return Url 图片Url
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set 图片Url
-     * @param Url 图片Url
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
-
-    public Image() {
+    public DescribeZoneCustomVariablesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Image(Image source) {
-        if (source.Base64 != null) {
-            this.Base64 = new String(source.Base64);
-        }
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+    public DescribeZoneCustomVariablesRequest(DescribeZoneCustomVariablesRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
         }
     }
 
@@ -90,8 +64,7 @@ public class Image extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Base64", this.Base64);
-        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

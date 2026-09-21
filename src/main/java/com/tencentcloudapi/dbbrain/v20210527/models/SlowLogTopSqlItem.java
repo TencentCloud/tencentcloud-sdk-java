@@ -199,6 +199,20 @@ public class SlowLogTopSqlItem extends AbstractModel {
     private String Md5;
 
     /**
+    * 
+    */
+    @SerializedName("SqlType")
+    @Expose
+    private String SqlType;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get sql总锁等待时间，单位秒 
      * @return LockTime sql总锁等待时间，单位秒
      */
@@ -598,6 +612,38 @@ public class SlowLogTopSqlItem extends AbstractModel {
         this.Md5 = Md5;
     }
 
+    /**
+     * Get  
+     * @return SqlType 
+     */
+    public String getSqlType() {
+        return this.SqlType;
+    }
+
+    /**
+     * Set 
+     * @param SqlType 
+     */
+    public void setSqlType(String SqlType) {
+        this.SqlType = SqlType;
+    }
+
+    /**
+     * Get  
+     * @return InstanceId 
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 
+     * @param InstanceId 
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public SlowLogTopSqlItem() {
     }
 
@@ -681,6 +727,12 @@ public class SlowLogTopSqlItem extends AbstractModel {
         if (source.Md5 != null) {
             this.Md5 = new String(source.Md5);
         }
+        if (source.SqlType != null) {
+            this.SqlType = new String(source.SqlType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -713,6 +765,8 @@ public class SlowLogTopSqlItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
         this.setParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
+        this.setParamSimple(map, prefix + "SqlType", this.SqlType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

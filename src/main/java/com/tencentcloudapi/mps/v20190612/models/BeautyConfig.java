@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class BeautyConfig extends AbstractModel {
 
     /**
-    * 美颜效果
+    * <p>美颜效果</p>
     */
     @SerializedName("BeautyEffectItems")
     @Expose
     private BeautyEffectItemConfig [] BeautyEffectItems;
 
     /**
-    * 美颜滤镜
+    * <p>美颜滤镜</p>
     */
     @SerializedName("BeautyFilterItems")
     @Expose
     private BeautyFilterItemConfig [] BeautyFilterItems;
 
     /**
-     * Get 美颜效果 
-     * @return BeautyEffectItems 美颜效果
+    * <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+     * Get <p>美颜效果</p> 
+     * @return BeautyEffectItems <p>美颜效果</p>
      */
     public BeautyEffectItemConfig [] getBeautyEffectItems() {
         return this.BeautyEffectItems;
     }
 
     /**
-     * Set 美颜效果
-     * @param BeautyEffectItems 美颜效果
+     * Set <p>美颜效果</p>
+     * @param BeautyEffectItems <p>美颜效果</p>
      */
     public void setBeautyEffectItems(BeautyEffectItemConfig [] BeautyEffectItems) {
         this.BeautyEffectItems = BeautyEffectItems;
     }
 
     /**
-     * Get 美颜滤镜 
-     * @return BeautyFilterItems 美颜滤镜
+     * Get <p>美颜滤镜</p> 
+     * @return BeautyFilterItems <p>美颜滤镜</p>
      */
     public BeautyFilterItemConfig [] getBeautyFilterItems() {
         return this.BeautyFilterItems;
     }
 
     /**
-     * Set 美颜滤镜
-     * @param BeautyFilterItems 美颜滤镜
+     * Set <p>美颜滤镜</p>
+     * @param BeautyFilterItems <p>美颜滤镜</p>
      */
     public void setBeautyFilterItems(BeautyFilterItemConfig [] BeautyFilterItems) {
         this.BeautyFilterItems = BeautyFilterItems;
+    }
+
+    /**
+     * Get <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p> 
+     * @return Type <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+     * @param Type <p>美颜类型</p><p>枚举值：</p><ul><li>auto： 智能自动美颜</li></ul><p>传入美颜参数时，忽略该参数。</p>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public BeautyConfig() {
@@ -89,6 +112,9 @@ public class BeautyConfig extends AbstractModel {
                 this.BeautyFilterItems[i] = new BeautyFilterItemConfig(source.BeautyFilterItems[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -98,6 +124,7 @@ public class BeautyConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "BeautyEffectItems.", this.BeautyEffectItems);
         this.setParamArrayObj(map, prefix + "BeautyFilterItems.", this.BeautyFilterItems);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

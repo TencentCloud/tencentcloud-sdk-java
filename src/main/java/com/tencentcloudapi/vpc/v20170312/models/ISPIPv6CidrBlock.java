@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ISPIPv6CidrBlock extends AbstractModel {
 
     /**
-    * IPv6 CIdr Block
+    * <p>IPv6网段</p>
     */
     @SerializedName("IPv6CidrBlock")
     @Expose
     private String IPv6CidrBlock;
 
     /**
-    * 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+    * <p>网络运营商类型</p><p>枚举值：</p><ul><li>BGP： 默认</li><li>CMCC： 中国移动</li><li>CTCC： 中国电信</li><li>CUCC： 中国联通</li></ul>
     */
     @SerializedName("ISPType")
     @Expose
     private String ISPType;
 
     /**
-    * IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
+    * <p>IPv6网段类型</p><p>枚举值：</p><ul><li>GUA： 全球单播地址</li><li>ULA： 唯一本地地址</li></ul>
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
 
     /**
-     * Get IPv6 CIdr Block 
-     * @return IPv6CidrBlock IPv6 CIdr Block
+     * Get <p>IPv6网段</p> 
+     * @return IPv6CidrBlock <p>IPv6网段</p>
      */
     public String getIPv6CidrBlock() {
         return this.IPv6CidrBlock;
     }
 
     /**
-     * Set IPv6 CIdr Block
-     * @param IPv6CidrBlock IPv6 CIdr Block
+     * Set <p>IPv6网段</p>
+     * @param IPv6CidrBlock <p>IPv6网段</p>
      */
     public void setIPv6CidrBlock(String IPv6CidrBlock) {
         this.IPv6CidrBlock = IPv6CidrBlock;
     }
 
     /**
-     * Get 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调 
-     * @return ISPType 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+     * Get <p>网络运营商类型</p><p>枚举值：</p><ul><li>BGP： 默认</li><li>CMCC： 中国移动</li><li>CTCC： 中国电信</li><li>CUCC： 中国联通</li></ul> 
+     * @return ISPType <p>网络运营商类型</p><p>枚举值：</p><ul><li>BGP： 默认</li><li>CMCC： 中国移动</li><li>CTCC： 中国电信</li><li>CUCC： 中国联通</li></ul>
      */
     public String getISPType() {
         return this.ISPType;
     }
 
     /**
-     * Set 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
-     * @param ISPType 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+     * Set <p>网络运营商类型</p><p>枚举值：</p><ul><li>BGP： 默认</li><li>CMCC： 中国移动</li><li>CTCC： 中国电信</li><li>CUCC： 中国联通</li></ul>
+     * @param ISPType <p>网络运营商类型</p><p>枚举值：</p><ul><li>BGP： 默认</li><li>CMCC： 中国移动</li><li>CTCC： 中国电信</li><li>CUCC： 中国联通</li></ul>
      */
     public void setISPType(String ISPType) {
         this.ISPType = ISPType;
     }
 
     /**
-     * Get IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址) 
-     * @return AddressType IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
+     * Get <p>IPv6网段类型</p><p>枚举值：</p><ul><li>GUA： 全球单播地址</li><li>ULA： 唯一本地地址</li></ul> 
+     * @return AddressType <p>IPv6网段类型</p><p>枚举值：</p><ul><li>GUA： 全球单播地址</li><li>ULA： 唯一本地地址</li></ul>
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
-     * @param AddressType IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
+     * Set <p>IPv6网段类型</p><p>枚举值：</p><ul><li>GUA： 全球单播地址</li><li>ULA： 唯一本地地址</li></ul>
+     * @param AddressType <p>IPv6网段类型</p><p>枚举值：</p><ul><li>GUA： 全球单播地址</li><li>ULA： 唯一本地地址</li></ul>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

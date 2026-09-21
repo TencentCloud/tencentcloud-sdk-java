@@ -360,6 +360,13 @@ public class CreateModelServiceRequest extends AbstractModel {
     private String InferTemplateId;
 
     /**
+    * <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
      * Get <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p> 
      * @return TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
      */
@@ -1127,6 +1134,22 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.InferTemplateId = InferTemplateId;
     }
 
+    /**
+     * Get <p>服务的优先级</p><p>取值范围：[0, 9]</p> 
+     * @return Priority <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+     * @param Priority <p>服务的优先级</p><p>取值范围：[0, 9]</p>
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1294,6 +1317,9 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.InferTemplateId != null) {
             this.InferTemplateId = new String(source.InferTemplateId);
         }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
     }
 
 
@@ -1349,6 +1375,7 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
         this.setParamSimple(map, prefix + "InferTemplateId", this.InferTemplateId);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }

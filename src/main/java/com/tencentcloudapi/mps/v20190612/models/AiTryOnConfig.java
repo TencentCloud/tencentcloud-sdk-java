@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiTryOnConfig extends AbstractModel {
 
     /**
-    * <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+    * <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
     */
     @SerializedName("Model")
     @Expose
@@ -45,16 +45,16 @@ public class AiTryOnConfig extends AbstractModel {
     private String Resolution;
 
     /**
-     * Get <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul> 
-     * @return Model <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+     * Get <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul> 
+     * @return Model <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
-     * @param Model <p>换装模型，取值：</p><ul><li>WAND-tryon-1.0-lite</li><li>WAND-tryon-1.0-flash</li><li>WAND-tryon-1.0-pro</li></ul>
+     * Set <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
+     * @param Model <p>换装模型，取值：</p><ul><li>tryon-1.0-lite</li><li>tryon-1.0-flash</li><li>tryon-1.0-pro</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;

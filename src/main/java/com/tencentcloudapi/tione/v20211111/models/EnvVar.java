@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EnvVar extends AbstractModel {
 
     /**
-    * 环境变量key
+    * <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class EnvVar extends AbstractModel {
     private String Name;
 
     /**
-    * 环境变量value
+    * <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -40,9 +40,9 @@ public class EnvVar extends AbstractModel {
     private String Value;
 
     /**
-     * Get 环境变量key
+     * Get <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 环境变量key
+     * @return Name <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -50,9 +50,9 @@ public class EnvVar extends AbstractModel {
     }
 
     /**
-     * Set 环境变量key
+     * Set <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 环境变量key
+     * @param Name <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -60,9 +60,9 @@ public class EnvVar extends AbstractModel {
     }
 
     /**
-     * Get 环境变量value
+     * Get <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 环境变量value
+     * @return Value <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -70,9 +70,9 @@ public class EnvVar extends AbstractModel {
     }
 
     /**
-     * Set 环境变量value
+     * Set <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 环境变量value
+     * @param Value <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {

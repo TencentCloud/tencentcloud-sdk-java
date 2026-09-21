@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssignIpv6AddressesResponse extends AbstractModel {
 
     /**
-    * 分配给弹性网卡的`IPv6`地址列表。
+    * <p>分配给弹性网卡的<code>IPv6</code>地址列表。</p>
     */
     @SerializedName("Ipv6AddressSet")
     @Expose
@@ -38,16 +38,16 @@ public class AssignIpv6AddressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分配给弹性网卡的`IPv6`地址列表。 
-     * @return Ipv6AddressSet 分配给弹性网卡的`IPv6`地址列表。
+     * Get <p>分配给弹性网卡的<code>IPv6</code>地址列表。</p> 
+     * @return Ipv6AddressSet <p>分配给弹性网卡的<code>IPv6</code>地址列表。</p>
      */
     public Ipv6Address [] getIpv6AddressSet() {
         return this.Ipv6AddressSet;
     }
 
     /**
-     * Set 分配给弹性网卡的`IPv6`地址列表。
-     * @param Ipv6AddressSet 分配给弹性网卡的`IPv6`地址列表。
+     * Set <p>分配给弹性网卡的<code>IPv6</code>地址列表。</p>
+     * @param Ipv6AddressSet <p>分配给弹性网卡的<code>IPv6</code>地址列表。</p>
      */
     public void setIpv6AddressSet(Ipv6Address [] Ipv6AddressSet) {
         this.Ipv6AddressSet = Ipv6AddressSet;

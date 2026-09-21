@@ -45,6 +45,13 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel {
     private Boolean SetDefaultLimitFlag;
 
     /**
+    * 是否设置默认QOS带宽；
+    */
+    @SerializedName("SetQosDefaultLimitFlag")
+    @Expose
+    private Boolean SetQosDefaultLimitFlag;
+
+    /**
      * Get CCN实例ID，形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID，形如：ccn-f49l6u0z。
      */
@@ -92,6 +99,22 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel {
         this.SetDefaultLimitFlag = SetDefaultLimitFlag;
     }
 
+    /**
+     * Get 是否设置默认QOS带宽； 
+     * @return SetQosDefaultLimitFlag 是否设置默认QOS带宽；
+     */
+    public Boolean getSetQosDefaultLimitFlag() {
+        return this.SetQosDefaultLimitFlag;
+    }
+
+    /**
+     * Set 是否设置默认QOS带宽；
+     * @param SetQosDefaultLimitFlag 是否设置默认QOS带宽；
+     */
+    public void setSetQosDefaultLimitFlag(Boolean SetQosDefaultLimitFlag) {
+        this.SetQosDefaultLimitFlag = SetQosDefaultLimitFlag;
+    }
+
     public SetCcnRegionBandwidthLimitsRequest() {
     }
 
@@ -112,6 +135,9 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel {
         if (source.SetDefaultLimitFlag != null) {
             this.SetDefaultLimitFlag = new Boolean(source.SetDefaultLimitFlag);
         }
+        if (source.SetQosDefaultLimitFlag != null) {
+            this.SetQosDefaultLimitFlag = new Boolean(source.SetQosDefaultLimitFlag);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
         this.setParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
+        this.setParamSimple(map, prefix + "SetQosDefaultLimitFlag", this.SetQosDefaultLimitFlag);
 
     }
 }

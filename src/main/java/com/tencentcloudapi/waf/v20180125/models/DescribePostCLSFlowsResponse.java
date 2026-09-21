@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePostCLSFlowsResponse extends AbstractModel {
 
     /**
-    * 客户的投递流列表
+    * <p>客户的投递流列表</p>
     */
     @SerializedName("PostCLSFlows")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePostCLSFlowsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 客户的投递流列表 
-     * @return PostCLSFlows 客户的投递流列表
+     * Get <p>客户的投递流列表</p> 
+     * @return PostCLSFlows <p>客户的投递流列表</p>
      */
     public PostCLSFlowInfo [] getPostCLSFlows() {
         return this.PostCLSFlows;
     }
 
     /**
-     * Set 客户的投递流列表
-     * @param PostCLSFlows 客户的投递流列表
+     * Set <p>客户的投递流列表</p>
+     * @param PostCLSFlows <p>客户的投递流列表</p>
      */
     public void setPostCLSFlows(PostCLSFlowInfo [] PostCLSFlows) {
         this.PostCLSFlows = PostCLSFlows;

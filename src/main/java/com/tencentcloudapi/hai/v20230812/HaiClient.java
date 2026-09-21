@@ -215,6 +215,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口(GetServicePodLogs)用于查询推理服务Pod日志
+     * @param req GetServicePodLogsRequest
+     * @return GetServicePodLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetServicePodLogsResponse GetServicePodLogs(GetServicePodLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetServicePodLogs", GetServicePodLogsResponse.class);
+    }
+
+    /**
      *本接口 (InquirePriceRunInstances) 用于实例询价。
      * @param req InquirePriceRunInstancesRequest
      * @return InquirePriceRunInstancesResponse

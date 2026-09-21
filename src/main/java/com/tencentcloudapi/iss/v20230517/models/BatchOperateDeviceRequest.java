@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BatchOperateDeviceRequest extends AbstractModel {
 
     /**
-    * 设备 ID 数组（从获取设备列表接口ListDevices中获取）
+    * <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
     */
     @SerializedName("DeviceIds")
     @Expose
     private String [] DeviceIds;
 
     /**
-    * 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+    * <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
     */
     @SerializedName("Cmd")
     @Expose
     private String Cmd;
 
     /**
-     * Get 设备 ID 数组（从获取设备列表接口ListDevices中获取） 
-     * @return DeviceIds 设备 ID 数组（从获取设备列表接口ListDevices中获取）
+     * Get <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p> 
+     * @return DeviceIds <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
      */
     public String [] getDeviceIds() {
         return this.DeviceIds;
     }
 
     /**
-     * Set 设备 ID 数组（从获取设备列表接口ListDevices中获取）
-     * @param DeviceIds 设备 ID 数组（从获取设备列表接口ListDevices中获取）
+     * Set <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
+     * @param DeviceIds <p>设备 ID 数组（从获取设备列表接口ListDevices中获取）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1344/95871">ListDevices</a></p>
      */
     public void setDeviceIds(String [] DeviceIds) {
         this.DeviceIds = DeviceIds;
     }
 
     /**
-     * Get 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启） 
-     * @return Cmd 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+     * Get <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul> 
+     * @return Cmd <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
-     * @param Cmd 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+     * Set <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
+     * @param Cmd <p>操作命令</p><p>枚举值：</p><ul><li>enable： 启用</li><li>disable： 禁用</li><li>delete： 删除</li><li>sync： 同步设备通道</li></ul>
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;

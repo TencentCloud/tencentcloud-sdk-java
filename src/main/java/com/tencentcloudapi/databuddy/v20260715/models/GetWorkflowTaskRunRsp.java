@@ -80,7 +80,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>任务类型名称</p>
+    * 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeName")
@@ -224,7 +224,7 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     private String TimeZone;
 
     /**
-    * <p>依赖上游任务ID列表</p>
+    * <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependOnList")
@@ -476,9 +476,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get <p>任务类型名称</p>
+     * Get 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeName <p>任务类型名称</p>
+     * @return TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeName() {
@@ -486,9 +486,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set <p>任务类型名称</p>
+     * Set 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeName <p>任务类型名称</p>
+     * @param TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeName(String TaskTypeName) {
@@ -836,9 +836,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Get <p>依赖上游任务ID列表</p>
+     * Get <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependOnList <p>依赖上游任务ID列表</p>
+     * @return DependOnList <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDependOnList() {
@@ -846,9 +846,9 @@ public class GetWorkflowTaskRunRsp extends AbstractModel {
     }
 
     /**
-     * Set <p>依赖上游任务ID列表</p>
+     * Set <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependOnList <p>依赖上游任务ID列表</p>
+     * @param DependOnList <p>依赖上游任务ID列表。保留字段，暂时返回为[]</p><p>保留字段，暂时返回为[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependOnList(String [] DependOnList) {

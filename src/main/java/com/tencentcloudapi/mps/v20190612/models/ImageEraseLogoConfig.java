@@ -24,10 +24,7 @@ import java.util.HashMap;
 public class ImageEraseLogoConfig extends AbstractModel {
 
     /**
-    * 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+    * <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -35,8 +32,7 @@ public class ImageEraseLogoConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * 需要擦除的多个框选区域，最多开启16个区域。
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>需要擦除的多个框选区域，最多开启16个区域。<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageAreaBoxes")
@@ -44,10 +40,7 @@ public class ImageEraseLogoConfig extends AbstractModel {
     private ImageAreaBoxInfo [] ImageAreaBoxes;
 
     /**
-    * 图片框选区域类型，可选值：
-<li>logo：图标；</li>
-<li>text：文字；</li>
-<li>watermark：水印；</li>
+    * <p>图片框选区域类型，可选值：</p><li>logo：图标；</li><li>text：文字；</li><li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectTypes")
@@ -55,15 +48,23 @@ public class ImageEraseLogoConfig extends AbstractModel {
     private String [] DetectTypes;
 
     /**
-     * Get 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+    * <p>水印擦除能力档位，可选值：</p><p>枚举值：</p><ul><li>low： 快速擦除档位</li><li>mid： 擦除效果和速度均衡档位</li><li>high： 进阶擦除效果档位</li></ul><p>注意：根据擦除场景复杂度选择对应擦除档位。</p>
+    */
+    @SerializedName("EraseStrength")
+    @Expose
+    private String EraseStrength;
+
+    /**
+    * <p>擦除图像水印时，选择特定水印类型，可选值：</p><p>枚举值：</p><ul><li>corner_watermark： 擦除常规定点水印</li><li>tiled_watermark： 擦除全图平铺水印</li><li>auto_detect_type： 自动识别水印类型擦除</li><li>selected_watermark： 跳过自动擦除，按指定位置进行水印擦除</li></ul>
+    */
+    @SerializedName("WatermarkType")
+    @Expose
+    private String WatermarkType;
+
+    /**
+     * Get <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+     * @return Switch <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -71,15 +72,9 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Set 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+     * Set <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 能力配置开关，可选值：
-<li>ON：开启；</li>
-<li>OFF：关闭。</li>
-默认值：ON。
+     * @param Switch <p>能力配置开关，可选值：</p><li>ON：开启；</li><li>OFF：关闭。</li>默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
@@ -87,11 +82,9 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Get 需要擦除的多个框选区域，最多开启16个区域。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>需要擦除的多个框选区域，最多开启16个区域。<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageAreaBoxes 需要擦除的多个框选区域，最多开启16个区域。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @return ImageAreaBoxes <p>需要擦除的多个框选区域，最多开启16个区域。<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageAreaBoxInfo [] getImageAreaBoxes() {
@@ -99,11 +92,9 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Set 需要擦除的多个框选区域，最多开启16个区域。
+     * Set <p>需要擦除的多个框选区域，最多开启16个区域。<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageAreaBoxes 需要擦除的多个框选区域，最多开启16个区域。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageAreaBoxes <p>需要擦除的多个框选区域，最多开启16个区域。<br>注意：此字段可能返回 null，表示取不到有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageAreaBoxes(ImageAreaBoxInfo [] ImageAreaBoxes) {
@@ -111,15 +102,9 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Get 图片框选区域类型，可选值：
-<li>logo：图标；</li>
-<li>text：文字；</li>
-<li>watermark：水印；</li>
+     * Get <p>图片框选区域类型，可选值：</p><li>logo：图标；</li><li>text：文字；</li><li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DetectTypes 图片框选区域类型，可选值：
-<li>logo：图标；</li>
-<li>text：文字；</li>
-<li>watermark：水印；</li>
+     * @return DetectTypes <p>图片框选区域类型，可选值：</p><li>logo：图标；</li><li>text：文字；</li><li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDetectTypes() {
@@ -127,19 +112,45 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Set 图片框选区域类型，可选值：
-<li>logo：图标；</li>
-<li>text：文字；</li>
-<li>watermark：水印；</li>
+     * Set <p>图片框选区域类型，可选值：</p><li>logo：图标；</li><li>text：文字；</li><li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetectTypes 图片框选区域类型，可选值：
-<li>logo：图标；</li>
-<li>text：文字；</li>
-<li>watermark：水印；</li>
+     * @param DetectTypes <p>图片框选区域类型，可选值：</p><li>logo：图标；</li><li>text：文字；</li><li>watermark：水印；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectTypes(String [] DetectTypes) {
         this.DetectTypes = DetectTypes;
+    }
+
+    /**
+     * Get <p>水印擦除能力档位，可选值：</p><p>枚举值：</p><ul><li>low： 快速擦除档位</li><li>mid： 擦除效果和速度均衡档位</li><li>high： 进阶擦除效果档位</li></ul><p>注意：根据擦除场景复杂度选择对应擦除档位。</p> 
+     * @return EraseStrength <p>水印擦除能力档位，可选值：</p><p>枚举值：</p><ul><li>low： 快速擦除档位</li><li>mid： 擦除效果和速度均衡档位</li><li>high： 进阶擦除效果档位</li></ul><p>注意：根据擦除场景复杂度选择对应擦除档位。</p>
+     */
+    public String getEraseStrength() {
+        return this.EraseStrength;
+    }
+
+    /**
+     * Set <p>水印擦除能力档位，可选值：</p><p>枚举值：</p><ul><li>low： 快速擦除档位</li><li>mid： 擦除效果和速度均衡档位</li><li>high： 进阶擦除效果档位</li></ul><p>注意：根据擦除场景复杂度选择对应擦除档位。</p>
+     * @param EraseStrength <p>水印擦除能力档位，可选值：</p><p>枚举值：</p><ul><li>low： 快速擦除档位</li><li>mid： 擦除效果和速度均衡档位</li><li>high： 进阶擦除效果档位</li></ul><p>注意：根据擦除场景复杂度选择对应擦除档位。</p>
+     */
+    public void setEraseStrength(String EraseStrength) {
+        this.EraseStrength = EraseStrength;
+    }
+
+    /**
+     * Get <p>擦除图像水印时，选择特定水印类型，可选值：</p><p>枚举值：</p><ul><li>corner_watermark： 擦除常规定点水印</li><li>tiled_watermark： 擦除全图平铺水印</li><li>auto_detect_type： 自动识别水印类型擦除</li><li>selected_watermark： 跳过自动擦除，按指定位置进行水印擦除</li></ul> 
+     * @return WatermarkType <p>擦除图像水印时，选择特定水印类型，可选值：</p><p>枚举值：</p><ul><li>corner_watermark： 擦除常规定点水印</li><li>tiled_watermark： 擦除全图平铺水印</li><li>auto_detect_type： 自动识别水印类型擦除</li><li>selected_watermark： 跳过自动擦除，按指定位置进行水印擦除</li></ul>
+     */
+    public String getWatermarkType() {
+        return this.WatermarkType;
+    }
+
+    /**
+     * Set <p>擦除图像水印时，选择特定水印类型，可选值：</p><p>枚举值：</p><ul><li>corner_watermark： 擦除常规定点水印</li><li>tiled_watermark： 擦除全图平铺水印</li><li>auto_detect_type： 自动识别水印类型擦除</li><li>selected_watermark： 跳过自动擦除，按指定位置进行水印擦除</li></ul>
+     * @param WatermarkType <p>擦除图像水印时，选择特定水印类型，可选值：</p><p>枚举值：</p><ul><li>corner_watermark： 擦除常规定点水印</li><li>tiled_watermark： 擦除全图平铺水印</li><li>auto_detect_type： 自动识别水印类型擦除</li><li>selected_watermark： 跳过自动擦除，按指定位置进行水印擦除</li></ul>
+     */
+    public void setWatermarkType(String WatermarkType) {
+        this.WatermarkType = WatermarkType;
     }
 
     public ImageEraseLogoConfig() {
@@ -165,6 +176,12 @@ public class ImageEraseLogoConfig extends AbstractModel {
                 this.DetectTypes[i] = new String(source.DetectTypes[i]);
             }
         }
+        if (source.EraseStrength != null) {
+            this.EraseStrength = new String(source.EraseStrength);
+        }
+        if (source.WatermarkType != null) {
+            this.WatermarkType = new String(source.WatermarkType);
+        }
     }
 
 
@@ -175,6 +192,8 @@ public class ImageEraseLogoConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "ImageAreaBoxes.", this.ImageAreaBoxes);
         this.setParamArraySimple(map, prefix + "DetectTypes.", this.DetectTypes);
+        this.setParamSimple(map, prefix + "EraseStrength", this.EraseStrength);
+        this.setParamSimple(map, prefix + "WatermarkType", this.WatermarkType);
 
     }
 }

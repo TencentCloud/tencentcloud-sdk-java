@@ -143,6 +143,13 @@ public class Subnet extends AbstractModel {
     private Long IsCdcSubnet;
 
     /**
+    * <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+    */
+    @SerializedName("StackType")
+    @Expose
+    private String StackType;
+
+    /**
      * Get <p><code>VPC</code>实例<code>ID</code>。</p> 
      * @return VpcId <p><code>VPC</code>实例<code>ID</code>。</p>
      */
@@ -414,6 +421,22 @@ public class Subnet extends AbstractModel {
         this.IsCdcSubnet = IsCdcSubnet;
     }
 
+    /**
+     * Get <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul> 
+     * @return StackType <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     */
+    public String getStackType() {
+        return this.StackType;
+    }
+
+    /**
+     * Set <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     * @param StackType <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     */
+    public void setStackType(String StackType) {
+        this.StackType = StackType;
+    }
+
     public Subnet() {
     }
 
@@ -476,6 +499,9 @@ public class Subnet extends AbstractModel {
         if (source.IsCdcSubnet != null) {
             this.IsCdcSubnet = new Long(source.IsCdcSubnet);
         }
+        if (source.StackType != null) {
+            this.StackType = new String(source.StackType);
+        }
     }
 
 
@@ -500,6 +526,7 @@ public class Subnet extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "IsCdcSubnet", this.IsCdcSubnet);
+        this.setParamSimple(map, prefix + "StackType", this.StackType);
 
     }
 }

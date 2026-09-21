@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribePostCLSFlowsRequest extends AbstractModel {
 
     /**
-    * 1-访问日志，2-攻击日志，默认为访问日志。
+    * <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
     */
     @SerializedName("LogType")
     @Expose
     private Long LogType;
 
     /**
-     * Get 1-访问日志，2-攻击日志，默认为访问日志。 
-     * @return LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * Get <p>1-访问日志，2-攻击日志，默认为访问日志。</p> 
+     * @return LogType <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     public Long getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 1-访问日志，2-攻击日志，默认为访问日志。
-     * @param LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * Set <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
+     * @param LogType <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     public void setLogType(Long LogType) {
         this.LogType = LogType;

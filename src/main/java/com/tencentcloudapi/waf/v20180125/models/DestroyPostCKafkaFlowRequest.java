@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DestroyPostCKafkaFlowRequest extends AbstractModel {
 
     /**
-    * 投递流的流ID
+    * <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 1-访问日志，2-攻击日志，默认为访问日志。
+    * <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
     */
     @SerializedName("LogType")
     @Expose
     private Long LogType;
 
     /**
-     * Get 投递流的流ID 
-     * @return FlowId 投递流的流ID
+     * Get <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p> 
+     * @return FlowId <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 投递流的流ID
-     * @param FlowId 投递流的流ID
+     * Set <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
+     * @param FlowId <p>投递流的流ID，可以通过DescribePostCKafkaFlows接口获取</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 1-访问日志，2-攻击日志，默认为访问日志。 
-     * @return LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * Get <p>1-访问日志，2-攻击日志，默认为访问日志。</p> 
+     * @return LogType <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     public Long getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 1-访问日志，2-攻击日志，默认为访问日志。
-     * @param LogType 1-访问日志，2-攻击日志，默认为访问日志。
+     * Set <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
+     * @param LogType <p>1-访问日志，2-攻击日志，默认为访问日志。</p>
      */
     public void setLogType(Long LogType) {
         this.LogType = LogType;

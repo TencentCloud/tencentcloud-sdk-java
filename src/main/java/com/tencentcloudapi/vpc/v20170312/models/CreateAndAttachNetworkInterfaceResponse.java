@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAndAttachNetworkInterfaceResponse extends AbstractModel {
 
     /**
-    * 弹性网卡实例。
+    * <p>弹性网卡实例。</p>
     */
     @SerializedName("NetworkInterface")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAndAttachNetworkInterfaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 弹性网卡实例。 
-     * @return NetworkInterface 弹性网卡实例。
+     * Get <p>弹性网卡实例。</p> 
+     * @return NetworkInterface <p>弹性网卡实例。</p>
      */
     public NetworkInterface getNetworkInterface() {
         return this.NetworkInterface;
     }
 
     /**
-     * Set 弹性网卡实例。
-     * @param NetworkInterface 弹性网卡实例。
+     * Set <p>弹性网卡实例。</p>
+     * @param NetworkInterface <p>弹性网卡实例。</p>
      */
     public void setNetworkInterface(NetworkInterface NetworkInterface) {
         this.NetworkInterface = NetworkInterface;

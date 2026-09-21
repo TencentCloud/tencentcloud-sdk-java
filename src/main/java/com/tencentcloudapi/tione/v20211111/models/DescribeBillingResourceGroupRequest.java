@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBillingResourceGroupRequest extends AbstractModel {
 
     /**
-    * 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+    * <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
     */
     @SerializedName("ResourceGroupId")
     @Expose
@@ -38,59 +38,51 @@ public class DescribeBillingResourceGroupRequest extends AbstractModel {
     private String TiProjectId;
 
     /**
-    * 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
+    * <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
+    * <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页查询每页大小，默认20
+    * <p>分页查询每页大小，默认20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序方向; 枚举值: ASC | DESC；默认DESC
+    * <p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
+    * <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-     * Get 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId 
-     * @return ResourceGroupId 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+     * Get <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p> 
+     * @return ResourceGroupId <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
-     * @param ResourceGroupId 资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId
+     * Set <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
+     * @param ResourceGroupId <p>资源组id, 取值为创建资源组接口(CreateBillingResourceGroup)响应中的ResourceGroupId</p>
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
@@ -113,112 +105,80 @@ public class DescribeBillingResourceGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100 
-     * @return Filters 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
+     * Get <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol> 
+     * @return Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
-     * @param Filters 过滤条件
-注意: 
-1. Filter.Name 只支持以下枚举值:
-    InstanceId (资源组节点id)
-    InstanceStatus (资源组节点状态)
-2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. Filter.Negative: 是否取反，默认为false
-4. Filter.Fuzzy: 是否模糊查询，默认为false
-5. 每次请求的Filters的上限为10，Filter.Values的上限为100
+     * Set <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
+     * @param Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name 只支持以下枚举值:<br> InstanceId (资源组节点id)<br> InstanceStatus (资源组节点状态)</li><li>Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询</li><li>Filter.Negative: 是否取反，默认为false</li><li>Filter.Fuzzy: 是否模糊查询，默认为false</li><li>每次请求的Filters的上限为10，Filter.Values的上限为100</li></ol>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0 
-     * @return Offset 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
+     * Get <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p> 
+     * @return Offset <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
-     * @param Offset 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0
+     * Set <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
+     * @param Offset <p>分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10...即每页左边为闭区间; 默认0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页查询每页大小，默认20 
-     * @return Limit 分页查询每页大小，默认20
+     * Get <p>分页查询每页大小，默认20</p> 
+     * @return Limit <p>分页查询每页大小，默认20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询每页大小，默认20
-     * @param Limit 分页查询每页大小，默认20
+     * Set <p>分页查询每页大小，默认20</p>
+     * @param Limit <p>分页查询每页大小，默认20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序方向; 枚举值: ASC | DESC；默认DESC 
-     * @return Order 排序方向; 枚举值: ASC | DESC；默认DESC
+     * Get <p>排序方向; 枚举值: ASC | DESC；默认DESC</p> 
+     * @return Order <p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方向; 枚举值: ASC | DESC；默认DESC
-     * @param Order 排序方向; 枚举值: ASC | DESC；默认DESC
+     * Set <p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
+     * @param Order <p>排序方向; 枚举值: ASC | DESC；默认DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime 
-     * @return OrderField 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
+     * Get <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p> 
+     * @return OrderField <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
-     * @param OrderField 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
+     * Set <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
+     * @param OrderField <p>排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

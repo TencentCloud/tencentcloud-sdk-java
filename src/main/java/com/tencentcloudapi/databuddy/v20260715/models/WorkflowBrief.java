@@ -152,7 +152,7 @@ public class WorkflowBrief extends AbstractModel {
     private ResourceGroupInfo [] ResourceGroupInfoList;
 
     /**
-    * <p>工作流权限信息</p>
+    * <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Permission")
@@ -512,9 +512,9 @@ public class WorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Get <p>工作流权限信息</p>
+     * Get <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Permission <p>工作流权限信息</p>
+     * @return Permission <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPermission() {
@@ -522,9 +522,9 @@ public class WorkflowBrief extends AbstractModel {
     }
 
     /**
-     * Set <p>工作流权限信息</p>
+     * Set <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Permission <p>工作流权限信息</p>
+     * @param Permission <p>授权权限类型<br>PERMISSION_TYPE_UNSPECIFIED：未指定权限<br>MANAGE : 管理权限：包含所有操作权限<br>RUN : 运行权限：可执行实体<br>VIEW : 查看权限：可查看实体内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermission(String Permission) {

@@ -52,6 +52,27 @@ public class Coefficient extends AbstractModel {
     private Float OutputCoefficient;
 
     /**
+    * <p>输入图片系数</p>
+    */
+    @SerializedName("InputImageCoefficient")
+    @Expose
+    private Float InputImageCoefficient;
+
+    /**
+    * <p>输入视频每秒系数</p>
+    */
+    @SerializedName("InputVideoSecondCoefficient")
+    @Expose
+    private Float InputVideoSecondCoefficient;
+
+    /**
+    * <p>输出视频每秒系数</p>
+    */
+    @SerializedName("OutputVideoSecondCoefficient")
+    @Expose
+    private Float OutputVideoSecondCoefficient;
+
+    /**
      * Get <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p> 
      * @return InputCachedCoefficient <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
      */
@@ -115,6 +136,54 @@ public class Coefficient extends AbstractModel {
         this.OutputCoefficient = OutputCoefficient;
     }
 
+    /**
+     * Get <p>输入图片系数</p> 
+     * @return InputImageCoefficient <p>输入图片系数</p>
+     */
+    public Float getInputImageCoefficient() {
+        return this.InputImageCoefficient;
+    }
+
+    /**
+     * Set <p>输入图片系数</p>
+     * @param InputImageCoefficient <p>输入图片系数</p>
+     */
+    public void setInputImageCoefficient(Float InputImageCoefficient) {
+        this.InputImageCoefficient = InputImageCoefficient;
+    }
+
+    /**
+     * Get <p>输入视频每秒系数</p> 
+     * @return InputVideoSecondCoefficient <p>输入视频每秒系数</p>
+     */
+    public Float getInputVideoSecondCoefficient() {
+        return this.InputVideoSecondCoefficient;
+    }
+
+    /**
+     * Set <p>输入视频每秒系数</p>
+     * @param InputVideoSecondCoefficient <p>输入视频每秒系数</p>
+     */
+    public void setInputVideoSecondCoefficient(Float InputVideoSecondCoefficient) {
+        this.InputVideoSecondCoefficient = InputVideoSecondCoefficient;
+    }
+
+    /**
+     * Get <p>输出视频每秒系数</p> 
+     * @return OutputVideoSecondCoefficient <p>输出视频每秒系数</p>
+     */
+    public Float getOutputVideoSecondCoefficient() {
+        return this.OutputVideoSecondCoefficient;
+    }
+
+    /**
+     * Set <p>输出视频每秒系数</p>
+     * @param OutputVideoSecondCoefficient <p>输出视频每秒系数</p>
+     */
+    public void setOutputVideoSecondCoefficient(Float OutputVideoSecondCoefficient) {
+        this.OutputVideoSecondCoefficient = OutputVideoSecondCoefficient;
+    }
+
     public Coefficient() {
     }
 
@@ -135,6 +204,15 @@ public class Coefficient extends AbstractModel {
         if (source.OutputCoefficient != null) {
             this.OutputCoefficient = new Float(source.OutputCoefficient);
         }
+        if (source.InputImageCoefficient != null) {
+            this.InputImageCoefficient = new Float(source.InputImageCoefficient);
+        }
+        if (source.InputVideoSecondCoefficient != null) {
+            this.InputVideoSecondCoefficient = new Float(source.InputVideoSecondCoefficient);
+        }
+        if (source.OutputVideoSecondCoefficient != null) {
+            this.OutputVideoSecondCoefficient = new Float(source.OutputVideoSecondCoefficient);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class Coefficient extends AbstractModel {
         this.setParamSimple(map, prefix + "InputCacheCreationCoefficient", this.InputCacheCreationCoefficient);
         this.setParamSimple(map, prefix + "InputCoefficient", this.InputCoefficient);
         this.setParamSimple(map, prefix + "OutputCoefficient", this.OutputCoefficient);
+        this.setParamSimple(map, prefix + "InputImageCoefficient", this.InputImageCoefficient);
+        this.setParamSimple(map, prefix + "InputVideoSecondCoefficient", this.InputVideoSecondCoefficient);
+        this.setParamSimple(map, prefix + "OutputVideoSecondCoefficient", this.OutputVideoSecondCoefficient);
 
     }
 }

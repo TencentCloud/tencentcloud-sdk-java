@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aiart.v20221229.models;
+package com.tencentcloudapi.hai.v20230812.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitTextToImageJobResponse extends AbstractModel {
-
-    /**
-    * <p>任务 ID。</p>
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
+public class GetServicePodLogsResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class SubmitTextToImageJobResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>任务 ID。</p> 
-     * @return JobId <p>任务 ID。</p>
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set <p>任务 ID。</p>
-     * @param JobId <p>任务 ID。</p>
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class SubmitTextToImageJobResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SubmitTextToImageJobResponse() {
+    public GetServicePodLogsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SubmitTextToImageJobResponse(SubmitTextToImageJobResponse source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
+    public GetServicePodLogsResponse(GetServicePodLogsResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class SubmitTextToImageJobResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

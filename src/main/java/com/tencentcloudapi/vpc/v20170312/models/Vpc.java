@@ -136,6 +136,13 @@ public class Vpc extends AbstractModel {
     private Boolean EnableRouteVpcPublishIpv6;
 
     /**
+    * <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+    */
+    @SerializedName("StackType")
+    @Expose
+    private String StackType;
+
+    /**
      * Get <p><code>VPC</code>名称。</p> 
      * @return VpcName <p><code>VPC</code>名称。</p>
      */
@@ -391,6 +398,22 @@ public class Vpc extends AbstractModel {
         this.EnableRouteVpcPublishIpv6 = EnableRouteVpcPublishIpv6;
     }
 
+    /**
+     * Get <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul> 
+     * @return StackType <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     */
+    public String getStackType() {
+        return this.StackType;
+    }
+
+    /**
+     * Set <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     * @param StackType <p>协议栈类型</p><p>枚举值：</p><ul><li>DualStack： IPv4和IPv6双栈</li><li>IPv6Only： IPv6单栈</li></ul>
+     */
+    public void setStackType(String StackType) {
+        this.StackType = StackType;
+    }
+
     public Vpc() {
     }
 
@@ -459,6 +482,9 @@ public class Vpc extends AbstractModel {
         if (source.EnableRouteVpcPublishIpv6 != null) {
             this.EnableRouteVpcPublishIpv6 = new Boolean(source.EnableRouteVpcPublishIpv6);
         }
+        if (source.StackType != null) {
+            this.StackType = new String(source.StackType);
+        }
     }
 
 
@@ -482,6 +508,7 @@ public class Vpc extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
         this.setParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
         this.setParamSimple(map, prefix + "EnableRouteVpcPublishIpv6", this.EnableRouteVpcPublishIpv6);
+        this.setParamSimple(map, prefix + "StackType", this.StackType);
 
     }
 }

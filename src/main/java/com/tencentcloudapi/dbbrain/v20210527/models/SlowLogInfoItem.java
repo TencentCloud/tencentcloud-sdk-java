@@ -87,6 +87,13 @@ public class SlowLogInfoItem extends AbstractModel {
     private Long RowsSent;
 
     /**
+    * 
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss" 
      * @return Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
@@ -230,6 +237,22 @@ public class SlowLogInfoItem extends AbstractModel {
         this.RowsSent = RowsSent;
     }
 
+    /**
+     * Get  
+     * @return InstanceId 
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 
+     * @param InstanceId 
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public SlowLogInfoItem() {
     }
 
@@ -265,6 +288,9 @@ public class SlowLogInfoItem extends AbstractModel {
         if (source.RowsSent != null) {
             this.RowsSent = new Long(source.RowsSent);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class SlowLogInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LockTime", this.LockTime);
         this.setParamSimple(map, prefix + "RowsExamined", this.RowsExamined);
         this.setParamSimple(map, prefix + "RowsSent", this.RowsSent);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

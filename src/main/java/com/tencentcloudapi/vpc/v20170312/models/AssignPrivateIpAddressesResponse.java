@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssignPrivateIpAddressesResponse extends AbstractModel {
 
     /**
-    * 内网IP详细信息。
+    * <p>内网IP详细信息。</p>
     */
     @SerializedName("PrivateIpAddressSet")
     @Expose
@@ -38,16 +38,16 @@ public class AssignPrivateIpAddressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 内网IP详细信息。 
-     * @return PrivateIpAddressSet 内网IP详细信息。
+     * Get <p>内网IP详细信息。</p> 
+     * @return PrivateIpAddressSet <p>内网IP详细信息。</p>
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddressSet() {
         return this.PrivateIpAddressSet;
     }
 
     /**
-     * Set 内网IP详细信息。
-     * @param PrivateIpAddressSet 内网IP详细信息。
+     * Set <p>内网IP详细信息。</p>
+     * @param PrivateIpAddressSet <p>内网IP详细信息。</p>
      */
     public void setPrivateIpAddressSet(PrivateIpAddressSpecification [] PrivateIpAddressSet) {
         this.PrivateIpAddressSet = PrivateIpAddressSet;

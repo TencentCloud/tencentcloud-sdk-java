@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SSHConfig extends AbstractModel {
 
     /**
-    * 是否开启ssh
+    * <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
@@ -32,7 +32,7 @@ public class SSHConfig extends AbstractModel {
     private Boolean Enable;
 
     /**
-    * 公钥信息
+    * <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicKey")
@@ -40,7 +40,7 @@ public class SSHConfig extends AbstractModel {
     private String PublicKey;
 
     /**
-    * 端口号
+    * <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
@@ -48,7 +48,7 @@ public class SSHConfig extends AbstractModel {
     private Long Port;
 
     /**
-    * 登录命令
+    * <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginCommand")
@@ -56,7 +56,7 @@ public class SSHConfig extends AbstractModel {
     private String LoginCommand;
 
     /**
-    * 登录地址是否改变
+    * <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAddressChanged")
@@ -64,7 +64,7 @@ public class SSHConfig extends AbstractModel {
     private Boolean IsAddressChanged;
 
     /**
-    * POD访问信息
+    * <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodSSHInfo")
@@ -72,9 +72,9 @@ public class SSHConfig extends AbstractModel {
     private PodSSHInfo PodSSHInfo;
 
     /**
-     * Get 是否开启ssh
+     * Get <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Enable 是否开启ssh
+     * @return Enable <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnable() {
@@ -82,9 +82,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启ssh
+     * Set <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Enable 是否开启ssh
+     * @param Enable <p>是否开启ssh</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Boolean Enable) {
@@ -92,9 +92,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Get 公钥信息
+     * Get <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicKey 公钥信息
+     * @return PublicKey <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicKey() {
@@ -102,9 +102,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Set 公钥信息
+     * Set <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicKey 公钥信息
+     * @param PublicKey <p>公钥信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicKey(String PublicKey) {
@@ -112,9 +112,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Get 端口号
+     * Get <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Port 端口号
+     * @return Port <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
@@ -122,9 +122,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Set 端口号
+     * Set <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Port 端口号
+     * @param Port <p>端口号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
@@ -132,9 +132,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Get 登录命令
+     * Get <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoginCommand 登录命令
+     * @return LoginCommand <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoginCommand() {
@@ -142,9 +142,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Set 登录命令
+     * Set <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoginCommand 登录命令
+     * @param LoginCommand <p>登录命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginCommand(String LoginCommand) {
@@ -152,9 +152,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Get 登录地址是否改变
+     * Get <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsAddressChanged 登录地址是否改变
+     * @return IsAddressChanged <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAddressChanged() {
@@ -162,9 +162,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Set 登录地址是否改变
+     * Set <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsAddressChanged 登录地址是否改变
+     * @param IsAddressChanged <p>登录地址是否改变</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAddressChanged(Boolean IsAddressChanged) {
@@ -172,9 +172,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Get POD访问信息
+     * Get <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodSSHInfo POD访问信息
+     * @return PodSSHInfo <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PodSSHInfo getPodSSHInfo() {
@@ -182,9 +182,9 @@ public class SSHConfig extends AbstractModel {
     }
 
     /**
-     * Set POD访问信息
+     * Set <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodSSHInfo POD访问信息
+     * @param PodSSHInfo <p>POD访问信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodSSHInfo(PodSSHInfo PodSSHInfo) {

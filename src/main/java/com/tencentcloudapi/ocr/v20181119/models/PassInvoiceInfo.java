@@ -59,20 +59,6 @@ public class PassInvoiceInfo extends AbstractModel {
     private String TaxClassifyCode;
 
     /**
-    * <p>通行费车牌号</p>
-    */
-    @SerializedName("CarType")
-    @Expose
-    private String CarType;
-
-    /**
-    * <p>通行费车辆类型</p>
-    */
-    @SerializedName("PlateNumber")
-    @Expose
-    private String PlateNumber;
-
-    /**
      * Get <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p> 
      * @return NumberPlate <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
      */
@@ -152,38 +138,6 @@ public class PassInvoiceInfo extends AbstractModel {
         this.TaxClassifyCode = TaxClassifyCode;
     }
 
-    /**
-     * Get <p>通行费车牌号</p> 
-     * @return CarType <p>通行费车牌号</p>
-     */
-    public String getCarType() {
-        return this.CarType;
-    }
-
-    /**
-     * Set <p>通行费车牌号</p>
-     * @param CarType <p>通行费车牌号</p>
-     */
-    public void setCarType(String CarType) {
-        this.CarType = CarType;
-    }
-
-    /**
-     * Get <p>通行费车辆类型</p> 
-     * @return PlateNumber <p>通行费车辆类型</p>
-     */
-    public String getPlateNumber() {
-        return this.PlateNumber;
-    }
-
-    /**
-     * Set <p>通行费车辆类型</p>
-     * @param PlateNumber <p>通行费车辆类型</p>
-     */
-    public void setPlateNumber(String PlateNumber) {
-        this.PlateNumber = PlateNumber;
-    }
-
     public PassInvoiceInfo() {
     }
 
@@ -207,12 +161,6 @@ public class PassInvoiceInfo extends AbstractModel {
         if (source.TaxClassifyCode != null) {
             this.TaxClassifyCode = new String(source.TaxClassifyCode);
         }
-        if (source.CarType != null) {
-            this.CarType = new String(source.CarType);
-        }
-        if (source.PlateNumber != null) {
-            this.PlateNumber = new String(source.PlateNumber);
-        }
     }
 
 
@@ -225,8 +173,6 @@ public class PassInvoiceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PassDateBegin", this.PassDateBegin);
         this.setParamSimple(map, prefix + "PassDateEnd", this.PassDateEnd);
         this.setParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
-        this.setParamSimple(map, prefix + "CarType", this.CarType);
-        this.setParamSimple(map, prefix + "PlateNumber", this.PlateNumber);
 
     }
 }

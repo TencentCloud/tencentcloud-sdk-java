@@ -114,6 +114,15 @@ public enum HaiErrorCode {
      /* VpcId不能为空 */
      INVALIDPARAMETERVALUE_INVALIDVPCIDISNONE("InvalidParameterValue.InvalidVpcIdIsNone"),
      
+     /* 最大字节数无效 */
+     INVALIDPARAMETERVALUE_LIMITBYTESINVALID("InvalidParameterValue.LimitBytesInvalid"),
+     
+     /* Pod名称无效 */
+     INVALIDPARAMETERVALUE_PODNAMEINVALID("InvalidParameterValue.PodNameInvalid"),
+     
+     /* Pod不存在 */
+     INVALIDPARAMETERVALUE_PODNOTFOUND("InvalidParameterValue.PodNotFound"),
+     
      /* 地域非法 */
      INVALIDPARAMETERVALUE_REGIONINVALID("InvalidParameterValue.RegionInvalid"),
      
@@ -134,6 +143,9 @@ public enum HaiErrorCode {
      
      /* 无法找到指定的子网，或该子网不属于指定的VPC */
      INVALIDPARAMETERVALUE_SUBNETNOTFOUND("InvalidParameterValue.SubnetNotFound"),
+     
+     /* 日志行数无效 */
+     INVALIDPARAMETERVALUE_TAILLINESINVALID("InvalidParameterValue.TailLinesInvalid"),
      
      /* 目标副本数不能与运行中副本数相同 */
      INVALIDPARAMETERVALUE_TARGETREPLICASMUSTDIFFERFROMRUNNINGREPLICAS("InvalidParameterValue.TargetReplicasMustDifferFromRunningReplicas"),
@@ -209,6 +221,9 @@ public enum HaiErrorCode {
      
      /* 不支持对处于`Terminated`状态的实例执行当前操作。 */
      UNSUPPORTEDOPERATION_INSTANCESTATETERMINATED("UnsupportedOperation.InstanceStateTerminated"),
+     
+     /* 不支持多Deployment场景 */
+     UNSUPPORTEDOPERATION_MULTIDEPLOYMENTNOTSUPPORTED("UnsupportedOperation.MultiDeploymentNotSupported"),
      
      /* 不支持同时操作预付费和后付费实例 */
      UNSUPPORTEDOPERATION_NOTSUPPORTTERMINATEPREPAIDANDPOSTPAID("UnsupportedOperation.NotSupportTerminatePrePaidAndPostPaid"),

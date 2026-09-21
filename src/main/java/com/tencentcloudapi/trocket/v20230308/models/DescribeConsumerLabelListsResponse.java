@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aiart.v20221229.models;
+package com.tencentcloudapi.trocket.v20230308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToImageRapidResponse extends AbstractModel {
+public class DescribeConsumerLabelListsResponse extends AbstractModel {
 
     /**
-    * <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+    * 查询总数
     */
-    @SerializedName("ResultImage")
+    @SerializedName("TotalCount")
     @Expose
-    private String ResultImage;
+    private Long TotalCount;
 
     /**
-    * <p>Seed</p>
+    * <p>消费者标签列表</p>
     */
-    @SerializedName("Seed")
+    @SerializedName("Results")
     @Expose
-    private Long Seed;
+    private ConsumerLabelList [] Results;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class TextToImageRapidResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p> 
-     * @return ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * Get 查询总数 
+     * @return TotalCount 查询总数
      */
-    public String getResultImage() {
-        return this.ResultImage;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
-     * @param ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * Set 查询总数
+     * @param TotalCount 查询总数
      */
-    public void setResultImage(String ResultImage) {
-        this.ResultImage = ResultImage;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>Seed</p> 
-     * @return Seed <p>Seed</p>
+     * Get <p>消费者标签列表</p> 
+     * @return Results <p>消费者标签列表</p>
      */
-    public Long getSeed() {
-        return this.Seed;
+    public ConsumerLabelList [] getResults() {
+        return this.Results;
     }
 
     /**
-     * Set <p>Seed</p>
-     * @param Seed <p>Seed</p>
+     * Set <p>消费者标签列表</p>
+     * @param Results <p>消费者标签列表</p>
      */
-    public void setSeed(Long Seed) {
-        this.Seed = Seed;
+    public void setResults(ConsumerLabelList [] Results) {
+        this.Results = Results;
     }
 
     /**
@@ -92,19 +92,22 @@ public class TextToImageRapidResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public TextToImageRapidResponse() {
+    public DescribeConsumerLabelListsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextToImageRapidResponse(TextToImageRapidResponse source) {
-        if (source.ResultImage != null) {
-            this.ResultImage = new String(source.ResultImage);
+    public DescribeConsumerLabelListsResponse(DescribeConsumerLabelListsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Seed != null) {
-            this.Seed = new Long(source.Seed);
+        if (source.Results != null) {
+            this.Results = new ConsumerLabelList[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new ConsumerLabelList(source.Results[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +119,8 @@ public class TextToImageRapidResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
-        this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

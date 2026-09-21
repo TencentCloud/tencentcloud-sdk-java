@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowTriggerConfiguration extends AbstractModel {
 
     /**
-    * 调度配置ID，创建时无需传入，由服务端生成
+    * <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerId")
@@ -32,7 +32,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String TriggerId;
 
     /**
-    * 调度状态 启动：START，暂停：PAUSE
+    * <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerStatus")
@@ -40,13 +40,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String SchedulerStatus;
 
     /**
-    * 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+    * <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerMode")
@@ -54,7 +48,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String TriggerMode;
 
     /**
-    * 调度时区
+    * <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchedulerTimeZone")
@@ -62,7 +56,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String SchedulerTimeZone;
 
     /**
-    * 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+    * <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -70,7 +64,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String StartTime;
 
     /**
-    * 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+    * <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -78,7 +72,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String EndTime;
 
     /**
-    * 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+    * <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigMode")
@@ -86,8 +80,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private String ConfigMode;
 
     /**
-    * 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+    * <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -95,7 +88,7 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     private String CycleType;
 
     /**
-    * cron表达式
+    * <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -103,7 +96,7 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     private String CrontabExpression;
 
     /**
-    * Json格式，对账使用
+    * <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
@@ -111,7 +104,7 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     private String ExtraInfo;
 
     /**
-    * 高级配置
+    * <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedConfig")
@@ -119,9 +112,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     private WorkflowTriggerAdvancedConfiguration AdvancedConfig;
 
     /**
-     * Get 调度配置ID，创建时无需传入，由服务端生成
+     * Get <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerId 调度配置ID，创建时无需传入，由服务端生成
+     * @return TriggerId <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerId() {
@@ -129,9 +122,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度配置ID，创建时无需传入，由服务端生成
+     * Set <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerId 调度配置ID，创建时无需传入，由服务端生成
+     * @param TriggerId <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerId(String TriggerId) {
@@ -139,9 +132,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度状态 启动：START，暂停：PAUSE
+     * Get <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerStatus 调度状态 启动：START，暂停：PAUSE
+     * @return SchedulerStatus <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerStatus() {
@@ -149,9 +142,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度状态 启动：START，暂停：PAUSE
+     * Set <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerStatus 调度状态 启动：START，暂停：PAUSE
+     * @param SchedulerStatus <p>调度状态 启动：START，暂停：PAUSE</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerStatus(String SchedulerStatus) {
@@ -159,21 +152,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+     * Get <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerMode 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+     * @return TriggerMode <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerMode() {
@@ -181,21 +162,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+     * Set <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerMode 触发方式，
-- 定时触发：TIME_TRIGGER
-- 持续运行：CONTINUE_RUN
-
-注意：
-- TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；
-- CONTINUE_RUN 模式下，AdvancedConfig必填；
+     * @param TriggerMode <p>触发方式，</p><ul><li>定时触发：TIME_TRIGGER</li><li>持续运行：CONTINUE_RUN</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>CONTINUE_RUN 模式下，AdvancedConfig必填；</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerMode(String TriggerMode) {
@@ -203,9 +172,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度时区
+     * Get <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchedulerTimeZone 调度时区
+     * @return SchedulerTimeZone <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchedulerTimeZone() {
@@ -213,9 +182,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度时区
+     * Set <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchedulerTimeZone 调度时区
+     * @param SchedulerTimeZone <p>调度时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedulerTimeZone(String SchedulerTimeZone) {
@@ -223,9 +192,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+     * Get <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+     * @return StartTime <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -233,9 +202,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+     * Set <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 调度生效时间，单位：毫秒时间戳。必须小于 EndTime
+     * @param StartTime <p>调度生效时间，单位：毫秒时间戳。必须小于 EndTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -243,9 +212,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+     * Get <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+     * @return EndTime <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -253,9 +222,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+     * Set <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 调度结束时间，单位：毫秒时间戳。必须大于 StartTime
+     * @param EndTime <p>调度结束时间，单位：毫秒时间戳。必须大于 StartTime</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -263,9 +232,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * Get <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigMode 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @return ConfigMode <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigMode() {
@@ -273,9 +242,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * Set <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigMode 配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION
+     * @param ConfigMode <p>配置方式，常规：COMMON，CRON表达式：CRON_EXPRESSION</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigMode(String ConfigMode) {
@@ -283,11 +252,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+     * Get <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+     * @return CycleType <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -295,11 +262,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+     * Set <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天
-HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
+     * @param CycleType <p>周期类型：支持的类型为 ONEOFF_CYCLE: 一次性 YEAR_CYCLE: 年 MONTH_CYCLE: 月 WEEK_CYCLE: 周 DAY_CYCLE: 天<br>HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -307,9 +272,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get cron表达式
+     * Get <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression cron表达式
+     * @return CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -317,9 +282,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set cron表达式
+     * Set <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression cron表达式
+     * @param CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -327,9 +292,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get Json格式，对账使用
+     * Get <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraInfo Json格式，对账使用
+     * @return ExtraInfo <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInfo() {
@@ -337,9 +302,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set Json格式，对账使用
+     * Set <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraInfo Json格式，对账使用
+     * @param ExtraInfo <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(String ExtraInfo) {
@@ -347,9 +312,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 高级配置
+     * Get <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedConfig 高级配置
+     * @return AdvancedConfig <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowTriggerAdvancedConfiguration getAdvancedConfig() {
@@ -357,9 +322,9 @@ HOUR_CYCLE: 小时 MINUTE_CYCLE: 分钟 CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 高级配置
+     * Set <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedConfig 高级配置
+     * @param AdvancedConfig <p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedConfig(WorkflowTriggerAdvancedConfiguration AdvancedConfig) {

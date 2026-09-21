@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskRunConditionRule extends AbstractModel {
 
     /**
-    * 上游任务ID
+    * <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamTaskId")
@@ -32,7 +32,7 @@ public class TaskRunConditionRule extends AbstractModel {
     private String UpstreamTaskId;
 
     /**
-    * 上游任务名称
+    * <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamTaskName")
@@ -40,8 +40,7 @@ public class TaskRunConditionRule extends AbstractModel {
     private String UpstreamTaskName;
 
     /**
-    * 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+    * <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowedStates")
@@ -49,9 +48,9 @@ public class TaskRunConditionRule extends AbstractModel {
     private String [] AllowedStates;
 
     /**
-     * Get 上游任务ID
+     * Get <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamTaskId 上游任务ID
+     * @return UpstreamTaskId <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamTaskId() {
@@ -59,9 +58,9 @@ public class TaskRunConditionRule extends AbstractModel {
     }
 
     /**
-     * Set 上游任务ID
+     * Set <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamTaskId 上游任务ID
+     * @param UpstreamTaskId <p>上游任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamTaskId(String UpstreamTaskId) {
@@ -69,9 +68,9 @@ public class TaskRunConditionRule extends AbstractModel {
     }
 
     /**
-     * Get 上游任务名称
+     * Get <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamTaskName 上游任务名称
+     * @return UpstreamTaskName <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamTaskName() {
@@ -79,9 +78,9 @@ public class TaskRunConditionRule extends AbstractModel {
     }
 
     /**
-     * Set 上游任务名称
+     * Set <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamTaskName 上游任务名称
+     * @param UpstreamTaskName <p>上游任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamTaskName(String UpstreamTaskName) {
@@ -89,11 +88,9 @@ public class TaskRunConditionRule extends AbstractModel {
     }
 
     /**
-     * Get 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+     * Get <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowedStates 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+     * @return AllowedStates <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAllowedStates() {
@@ -101,11 +98,9 @@ public class TaskRunConditionRule extends AbstractModel {
     }
 
     /**
-     * Set 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+     * Set <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowedStates 任务可运行条件
-支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行
+     * @param AllowedStates <p>任务可运行条件<br>支持的状态值： - SUCCESS: 成功 - FAILED: 失败 - UPSTREAM_FAILED: 上游失败 - EXCLUDED: 排除运行</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowedStates(String [] AllowedStates) {

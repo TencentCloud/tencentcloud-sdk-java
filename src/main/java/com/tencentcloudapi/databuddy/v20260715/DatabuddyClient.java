@@ -50,6 +50,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *创建控制台用户组
+     * @param req CreateConsoleGroupRequest
+     * @return CreateConsoleGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsoleGroupResponse CreateConsoleGroup(CreateConsoleGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsoleGroup", CreateConsoleGroupResponse.class);
+    }
+
+    /**
      *在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -76,6 +87,17 @@ public class DatabuddyClient extends AbstractClient{
     public CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWorkflow", CreateWorkflowResponse.class);
+    }
+
+    /**
+     *删除控制台用户组
+     * @param req DeleteConsoleGroupsRequest
+     * @return DeleteConsoleGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsoleGroupsResponse DeleteConsoleGroups(DeleteConsoleGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsoleGroups", DeleteConsoleGroupsResponse.class);
     }
 
     /**
@@ -190,6 +212,39 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询控制台用户组成员列表
+     * @param req ListConsoleGroupUsersRequest
+     * @return ListConsoleGroupUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListConsoleGroupUsersResponse ListConsoleGroupUsers(ListConsoleGroupUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListConsoleGroupUsers", ListConsoleGroupUsersResponse.class);
+    }
+
+    /**
+     *查询控制台用户组列表
+     * @param req ListConsoleGroupsRequest
+     * @return ListConsoleGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListConsoleGroupsResponse ListConsoleGroups(ListConsoleGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListConsoleGroups", ListConsoleGroupsResponse.class);
+    }
+
+    /**
+     *查询控制台角色列表
+     * @param req ListConsoleRolesRequest
+     * @return ListConsoleRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListConsoleRolesResponse ListConsoleRoles(ListConsoleRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListConsoleRoles", ListConsoleRolesResponse.class);
+    }
+
+    /**
      *查询控制台用户列表
      * @param req ListConsoleUsersRequest
      * @return ListConsoleUsersResponse
@@ -276,6 +331,17 @@ public class DatabuddyClient extends AbstractClient{
     public UnbindWorkflowBundleResponse UnbindWorkflowBundle(UnbindWorkflowBundleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindWorkflowBundle", UnbindWorkflowBundleResponse.class);
+    }
+
+    /**
+     *修改控制台用户组
+     * @param req UpdateConsoleGroupRequest
+     * @return UpdateConsoleGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateConsoleGroupResponse UpdateConsoleGroup(UpdateConsoleGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateConsoleGroup", UpdateConsoleGroupResponse.class);
     }
 
     /**
