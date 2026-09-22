@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class TaskTypeNotebookExt extends AbstractModel {
 
     /**
-    * 脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/
-SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/
-SCRIPT_SOURCE_WORKSPACE（工作空间）
+    * <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
@@ -34,7 +32,7 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     private String Source;
 
     /**
-    * 前端显示使用，对执行平台无意义
+    * <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisplayPath")
@@ -42,7 +40,7 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     private String DisplayPath;
 
     /**
-    * Notebook 相对路径
+    * <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotebookPath")
@@ -50,7 +48,7 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     private String NotebookPath;
 
     /**
-    * Notebook 绝对路径
+    * <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotebookAbsolutePath")
@@ -58,13 +56,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     private String NotebookAbsolutePath;
 
     /**
-     * Get 脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/
-SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/
-SCRIPT_SOURCE_WORKSPACE（工作空间）
+     * Get <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Source 脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/
-SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/
-SCRIPT_SOURCE_WORKSPACE（工作空间）
+     * @return Source <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
@@ -72,13 +66,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Set 脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/
-SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/
-SCRIPT_SOURCE_WORKSPACE（工作空间）
+     * Set <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Source 脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/
-SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/
-SCRIPT_SOURCE_WORKSPACE（工作空间）
+     * @param Source <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
@@ -86,9 +76,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Get 前端显示使用，对执行平台无意义
+     * Get <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisplayPath 前端显示使用，对执行平台无意义
+     * @return DisplayPath <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisplayPath() {
@@ -96,9 +86,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Set 前端显示使用，对执行平台无意义
+     * Set <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisplayPath 前端显示使用，对执行平台无意义
+     * @param DisplayPath <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplayPath(String DisplayPath) {
@@ -106,9 +96,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Get Notebook 相对路径
+     * Get <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotebookPath Notebook 相对路径
+     * @return NotebookPath <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotebookPath() {
@@ -116,9 +106,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Set Notebook 相对路径
+     * Set <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotebookPath Notebook 相对路径
+     * @param NotebookPath <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotebookPath(String NotebookPath) {
@@ -126,9 +116,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Get Notebook 绝对路径
+     * Get <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotebookAbsolutePath Notebook 绝对路径
+     * @return NotebookAbsolutePath <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotebookAbsolutePath() {
@@ -136,9 +126,9 @@ SCRIPT_SOURCE_WORKSPACE（工作空间）
     }
 
     /**
-     * Set Notebook 绝对路径
+     * Set <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotebookAbsolutePath Notebook 绝对路径
+     * @param NotebookAbsolutePath <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotebookAbsolutePath(String NotebookAbsolutePath) {

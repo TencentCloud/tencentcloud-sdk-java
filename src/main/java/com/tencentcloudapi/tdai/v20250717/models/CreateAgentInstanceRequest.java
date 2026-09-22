@@ -101,6 +101,20 @@ public class CreateAgentInstanceRequest extends AbstractModel {
     private Boolean UsePlatformAccount;
 
     /**
+    * <p>是否是免部署实例</p>
+    */
+    @SerializedName("DeploymentFree")
+    @Expose
+    private Boolean DeploymentFree;
+
+    /**
+    * <p>是否支持记忆</p>
+    */
+    @SerializedName("EnableMemory")
+    @Expose
+    private Boolean EnableMemory;
+
+    /**
      * Get <p>智能体ID</p> 
      * @return AgentId <p>智能体ID</p>
      */
@@ -276,6 +290,38 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         this.UsePlatformAccount = UsePlatformAccount;
     }
 
+    /**
+     * Get <p>是否是免部署实例</p> 
+     * @return DeploymentFree <p>是否是免部署实例</p>
+     */
+    public Boolean getDeploymentFree() {
+        return this.DeploymentFree;
+    }
+
+    /**
+     * Set <p>是否是免部署实例</p>
+     * @param DeploymentFree <p>是否是免部署实例</p>
+     */
+    public void setDeploymentFree(Boolean DeploymentFree) {
+        this.DeploymentFree = DeploymentFree;
+    }
+
+    /**
+     * Get <p>是否支持记忆</p> 
+     * @return EnableMemory <p>是否支持记忆</p>
+     */
+    public Boolean getEnableMemory() {
+        return this.EnableMemory;
+    }
+
+    /**
+     * Set <p>是否支持记忆</p>
+     * @param EnableMemory <p>是否支持记忆</p>
+     */
+    public void setEnableMemory(Boolean EnableMemory) {
+        this.EnableMemory = EnableMemory;
+    }
+
     public CreateAgentInstanceRequest() {
     }
 
@@ -326,6 +372,12 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         if (source.UsePlatformAccount != null) {
             this.UsePlatformAccount = new Boolean(source.UsePlatformAccount);
         }
+        if (source.DeploymentFree != null) {
+            this.DeploymentFree = new Boolean(source.DeploymentFree);
+        }
+        if (source.EnableMemory != null) {
+            this.EnableMemory = new Boolean(source.EnableMemory);
+        }
     }
 
 
@@ -344,6 +396,8 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SoulId", this.SoulId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "UsePlatformAccount", this.UsePlatformAccount);
+        this.setParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
+        this.setParamSimple(map, prefix + "EnableMemory", this.EnableMemory);
 
     }
 }

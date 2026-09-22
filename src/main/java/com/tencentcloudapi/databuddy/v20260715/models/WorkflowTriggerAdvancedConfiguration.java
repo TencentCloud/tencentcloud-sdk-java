@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowTriggerAdvancedConfiguration extends AbstractModel {
 
     /**
-    * 任务重试模式
+    * <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskRetryMode")
@@ -32,9 +32,9 @@ public class WorkflowTriggerAdvancedConfiguration extends AbstractModel {
     private String TaskRetryMode;
 
     /**
-     * Get 任务重试模式
+     * Get <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskRetryMode 任务重试模式
+     * @return TaskRetryMode <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskRetryMode() {
@@ -42,9 +42,9 @@ public class WorkflowTriggerAdvancedConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 任务重试模式
+     * Set <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskRetryMode 任务重试模式
+     * @param TaskRetryMode <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskRetryMode(String TaskRetryMode) {

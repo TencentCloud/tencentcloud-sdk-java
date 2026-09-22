@@ -40,7 +40,7 @@ public class CommonFilter extends AbstractModel {
     private String [] Values;
 
     /**
-    * 操作类型：1-精确匹配 9-模糊匹配
+    * 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorType")
@@ -88,9 +88,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Get 操作类型：1-精确匹配 9-模糊匹配
+     * Get 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorType 操作类型：1-精确匹配 9-模糊匹配
+     * @return OperatorType 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperatorType() {
@@ -98,9 +98,9 @@ public class CommonFilter extends AbstractModel {
     }
 
     /**
-     * Set 操作类型：1-精确匹配 9-模糊匹配
+     * Set 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorType 操作类型：1-精确匹配 9-模糊匹配
+     * @param OperatorType 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorType(Long OperatorType) {

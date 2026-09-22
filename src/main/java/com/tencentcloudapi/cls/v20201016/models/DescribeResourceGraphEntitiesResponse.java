@@ -24,6 +24,20 @@ import java.util.HashMap;
 public class DescribeResourceGraphEntitiesResponse extends AbstractModel {
 
     /**
+    * <p>实体列表</p>
+    */
+    @SerializedName("EntityInfos")
+    @Expose
+    private EntityInfo [] EntityInfos;
+
+    /**
+    * <p>是否还有下一页</p><p>枚举值：</p><ul><li>0： 没有下一页</li><li>1： 还有下一页</li></ul>
+    */
+    @SerializedName("HasMore")
+    @Expose
+    private Long HasMore;
+
+    /**
     * <p>分页的游标，有值则下次分页请求原样带上，无值则表示无下一页</p>
     */
     @SerializedName("NextCursor")
@@ -36,6 +50,38 @@ public class DescribeResourceGraphEntitiesResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>实体列表</p> 
+     * @return EntityInfos <p>实体列表</p>
+     */
+    public EntityInfo [] getEntityInfos() {
+        return this.EntityInfos;
+    }
+
+    /**
+     * Set <p>实体列表</p>
+     * @param EntityInfos <p>实体列表</p>
+     */
+    public void setEntityInfos(EntityInfo [] EntityInfos) {
+        this.EntityInfos = EntityInfos;
+    }
+
+    /**
+     * Get <p>是否还有下一页</p><p>枚举值：</p><ul><li>0： 没有下一页</li><li>1： 还有下一页</li></ul> 
+     * @return HasMore <p>是否还有下一页</p><p>枚举值：</p><ul><li>0： 没有下一页</li><li>1： 还有下一页</li></ul>
+     */
+    public Long getHasMore() {
+        return this.HasMore;
+    }
+
+    /**
+     * Set <p>是否还有下一页</p><p>枚举值：</p><ul><li>0： 没有下一页</li><li>1： 还有下一页</li></ul>
+     * @param HasMore <p>是否还有下一页</p><p>枚举值：</p><ul><li>0： 没有下一页</li><li>1： 还有下一页</li></ul>
+     */
+    public void setHasMore(Long HasMore) {
+        this.HasMore = HasMore;
+    }
 
     /**
      * Get <p>分页的游标，有值则下次分页请求原样带上，无值则表示无下一页</p> 
@@ -77,6 +123,15 @@ public class DescribeResourceGraphEntitiesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeResourceGraphEntitiesResponse(DescribeResourceGraphEntitiesResponse source) {
+        if (source.EntityInfos != null) {
+            this.EntityInfos = new EntityInfo[source.EntityInfos.length];
+            for (int i = 0; i < source.EntityInfos.length; i++) {
+                this.EntityInfos[i] = new EntityInfo(source.EntityInfos[i]);
+            }
+        }
+        if (source.HasMore != null) {
+            this.HasMore = new Long(source.HasMore);
+        }
         if (source.NextCursor != null) {
             this.NextCursor = new String(source.NextCursor);
         }
@@ -90,6 +145,8 @@ public class DescribeResourceGraphEntitiesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "EntityInfos.", this.EntityInfos);
+        this.setParamSimple(map, prefix + "HasMore", this.HasMore);
         this.setParamSimple(map, prefix + "NextCursor", this.NextCursor);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -40,7 +40,7 @@ public class TaskType extends AbstractModel {
     private TaskTypeNotebookExt Notebook;
 
     /**
-    * <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+    * <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypePropertyList")
@@ -96,9 +96,9 @@ public class TaskType extends AbstractModel {
     }
 
     /**
-     * Get <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+     * Get <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypePropertyList <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+     * @return TaskTypePropertyList <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskTypeProperty [] getTaskTypePropertyList() {
@@ -106,9 +106,9 @@ public class TaskType extends AbstractModel {
     }
 
     /**
-     * Set <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+     * Set <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypePropertyList <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+     * @param TaskTypePropertyList <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypePropertyList(TaskTypeProperty [] TaskTypePropertyList) {

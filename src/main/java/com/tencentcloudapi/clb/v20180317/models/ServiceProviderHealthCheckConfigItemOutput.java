@@ -46,6 +46,7 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
 
     /**
     * <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckMaxTokens")
     @Expose
@@ -58,6 +59,20 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
     @SerializedName("HealthCheckProtocol")
     @Expose
     private String HealthCheckProtocol;
+
+    /**
+    * <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+    */
+    @SerializedName("HealthCheckPath")
+    @Expose
+    private String HealthCheckPath;
+
+    /**
+    * <p>健康检查方式。</p>
+    */
+    @SerializedName("HealthCheckMethod")
+    @Expose
+    private String HealthCheckMethod;
 
     /**
      * Get <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
@@ -108,8 +123,10 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
     }
 
     /**
-     * Get <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p> 
+     * Get <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthCheckMaxTokens <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthCheckMaxTokens() {
         return this.HealthCheckMaxTokens;
@@ -117,7 +134,9 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
 
     /**
      * Set <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckMaxTokens <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckMaxTokens(Long HealthCheckMaxTokens) {
         this.HealthCheckMaxTokens = HealthCheckMaxTokens;
@@ -143,6 +162,38 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
         this.HealthCheckProtocol = HealthCheckProtocol;
     }
 
+    /**
+     * Get <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p> 
+     * @return HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public String getHealthCheckPath() {
+        return this.HealthCheckPath;
+    }
+
+    /**
+     * Set <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     * @param HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public void setHealthCheckPath(String HealthCheckPath) {
+        this.HealthCheckPath = HealthCheckPath;
+    }
+
+    /**
+     * Get <p>健康检查方式。</p> 
+     * @return HealthCheckMethod <p>健康检查方式。</p>
+     */
+    public String getHealthCheckMethod() {
+        return this.HealthCheckMethod;
+    }
+
+    /**
+     * Set <p>健康检查方式。</p>
+     * @param HealthCheckMethod <p>健康检查方式。</p>
+     */
+    public void setHealthCheckMethod(String HealthCheckMethod) {
+        this.HealthCheckMethod = HealthCheckMethod;
+    }
+
     public ServiceProviderHealthCheckConfigItemOutput() {
     }
 
@@ -166,6 +217,12 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
         if (source.HealthCheckProtocol != null) {
             this.HealthCheckProtocol = new String(source.HealthCheckProtocol);
         }
+        if (source.HealthCheckPath != null) {
+            this.HealthCheckPath = new String(source.HealthCheckPath);
+        }
+        if (source.HealthCheckMethod != null) {
+            this.HealthCheckMethod = new String(source.HealthCheckMethod);
+        }
     }
 
 
@@ -178,6 +235,8 @@ public class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthCheckUnhealthyThreshold", this.HealthCheckUnhealthyThreshold);
         this.setParamSimple(map, prefix + "HealthCheckMaxTokens", this.HealthCheckMaxTokens);
         this.setParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
+        this.setParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
+        this.setParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
 
     }
 }

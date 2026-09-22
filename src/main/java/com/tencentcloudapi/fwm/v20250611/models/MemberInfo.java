@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MemberInfo extends AbstractModel {
 
     /**
-    * <p>成员AppId</p>
+    * 成员 AppId
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * <p>成员Uin</p>
+    * 成员 Uin
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * <p>成员昵称</p>
+    * 成员昵称
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * <p>成员Id</p>
+    * 成员 ID（个人场景为空）
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * <p>所属部门</p>
+    * 所属部门
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-     * Get <p>成员AppId</p> 
-     * @return AppId <p>成员AppId</p>
+     * Get 成员 AppId 
+     * @return AppId 成员 AppId
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>成员AppId</p>
-     * @param AppId <p>成员AppId</p>
+     * Set 成员 AppId
+     * @param AppId 成员 AppId
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>成员Uin</p> 
-     * @return Uin <p>成员Uin</p>
+     * Get 成员 Uin 
+     * @return Uin 成员 Uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set <p>成员Uin</p>
-     * @param Uin <p>成员Uin</p>
+     * Set 成员 Uin
+     * @param Uin 成员 Uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get <p>成员昵称</p> 
-     * @return Nickname <p>成员昵称</p>
+     * Get 成员昵称 
+     * @return Nickname 成员昵称
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set <p>成员昵称</p>
-     * @param Nickname <p>成员昵称</p>
+     * Set 成员昵称
+     * @param Nickname 成员昵称
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get <p>成员Id</p> 
-     * @return MemberId <p>成员Id</p>
+     * Get 成员 ID（个人场景为空） 
+     * @return MemberId 成员 ID（个人场景为空）
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set <p>成员Id</p>
-     * @param MemberId <p>成员Id</p>
+     * Set 成员 ID（个人场景为空）
+     * @param MemberId 成员 ID（个人场景为空）
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get <p>所属部门</p> 
-     * @return NodeName <p>所属部门</p>
+     * Get 所属部门 
+     * @return NodeName 所属部门
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set <p>所属部门</p>
-     * @param NodeName <p>所属部门</p>
+     * Set 所属部门
+     * @param NodeName 所属部门
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

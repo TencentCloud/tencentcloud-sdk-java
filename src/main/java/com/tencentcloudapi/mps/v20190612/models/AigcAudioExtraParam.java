@@ -31,6 +31,13 @@ public class AigcAudioExtraParam extends AbstractModel {
     private String ResourceId;
 
     /**
+    * <p>指定的音频输出格式。</p>
+    */
+    @SerializedName("OutputAudioFormat")
+    @Expose
+    private String OutputAudioFormat;
+
+    /**
      * Get <p>资源id，根据具体需要填写。</p> 
      * @return ResourceId <p>资源id，根据具体需要填写。</p>
      */
@@ -46,6 +53,22 @@ public class AigcAudioExtraParam extends AbstractModel {
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get <p>指定的音频输出格式。</p> 
+     * @return OutputAudioFormat <p>指定的音频输出格式。</p>
+     */
+    public String getOutputAudioFormat() {
+        return this.OutputAudioFormat;
+    }
+
+    /**
+     * Set <p>指定的音频输出格式。</p>
+     * @param OutputAudioFormat <p>指定的音频输出格式。</p>
+     */
+    public void setOutputAudioFormat(String OutputAudioFormat) {
+        this.OutputAudioFormat = OutputAudioFormat;
+    }
+
     public AigcAudioExtraParam() {
     }
 
@@ -57,6 +80,9 @@ public class AigcAudioExtraParam extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.OutputAudioFormat != null) {
+            this.OutputAudioFormat = new String(source.OutputAudioFormat);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AigcAudioExtraParam extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "OutputAudioFormat", this.OutputAudioFormat);
 
     }
 }

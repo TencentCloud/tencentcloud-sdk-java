@@ -993,6 +993,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeTaskResult）用于查询任务结果。
+     * @param req DescribeTaskResultRequest
+     * @return DescribeTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskResult", DescribeTaskResultResponse.class);
+    }
+
+    /**
      *查询tcb用户列表
      * @param req DescribeUserListRequest
      * @return DescribeUserListResponse
@@ -1384,6 +1395,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     }
 
     /**
+     *修改 PG 实例用户角色密码。
+     * @param req ResetPGAccountPasswordRequest
+     * @return ResetPGAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetPGAccountPasswordResponse ResetPGAccountPassword(ResetPGAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetPGAccountPassword", ResetPGAccountPasswordResponse.class);
+    }
+
+    /**
      *本接口（RunCommands）用于执行文档型数据库命令。
      * @param req RunCommandsRequest
      * @return RunCommandsResponse
@@ -1492,6 +1514,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     public UpdateTableResponse UpdateTable(UpdateTableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateTable", UpdateTableResponse.class);
+    }
+
+    /**
+     *本接口（UpgradePGInstanceToDedicated）用于共享PG升级独享PG。
+     * @param req UpgradePGInstanceToDedicatedRequest
+     * @return UpgradePGInstanceToDedicatedResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradePGInstanceToDedicatedResponse UpgradePGInstanceToDedicated(UpgradePGInstanceToDedicatedRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradePGInstanceToDedicated", UpgradePGInstanceToDedicatedResponse.class);
     }
 
     /**

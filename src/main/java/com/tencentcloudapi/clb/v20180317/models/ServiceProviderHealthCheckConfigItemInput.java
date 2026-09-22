@@ -59,6 +59,20 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
     private String HealthCheckProtocol;
 
     /**
+    * <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+    */
+    @SerializedName("HealthCheckPath")
+    @Expose
+    private String HealthCheckPath;
+
+    /**
+    * <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+    */
+    @SerializedName("HealthCheckMethod")
+    @Expose
+    private String HealthCheckMethod;
+
+    /**
      * Get <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
      * @return HealthCheckEnabled <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
@@ -138,6 +152,38 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
         this.HealthCheckProtocol = HealthCheckProtocol;
     }
 
+    /**
+     * Get <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p> 
+     * @return HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public String getHealthCheckPath() {
+        return this.HealthCheckPath;
+    }
+
+    /**
+     * Set <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     * @param HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public void setHealthCheckPath(String HealthCheckPath) {
+        this.HealthCheckPath = HealthCheckPath;
+    }
+
+    /**
+     * Get <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul> 
+     * @return HealthCheckMethod <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     */
+    public String getHealthCheckMethod() {
+        return this.HealthCheckMethod;
+    }
+
+    /**
+     * Set <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     * @param HealthCheckMethod <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     */
+    public void setHealthCheckMethod(String HealthCheckMethod) {
+        this.HealthCheckMethod = HealthCheckMethod;
+    }
+
     public ServiceProviderHealthCheckConfigItemInput() {
     }
 
@@ -161,6 +207,12 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
         if (source.HealthCheckProtocol != null) {
             this.HealthCheckProtocol = new String(source.HealthCheckProtocol);
         }
+        if (source.HealthCheckPath != null) {
+            this.HealthCheckPath = new String(source.HealthCheckPath);
+        }
+        if (source.HealthCheckMethod != null) {
+            this.HealthCheckMethod = new String(source.HealthCheckMethod);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthCheckUnhealthyThreshold", this.HealthCheckUnhealthyThreshold);
         this.setParamSimple(map, prefix + "HealthCheckMaxTokens", this.HealthCheckMaxTokens);
         this.setParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
+        this.setParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
+        this.setParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
 
     }
 }

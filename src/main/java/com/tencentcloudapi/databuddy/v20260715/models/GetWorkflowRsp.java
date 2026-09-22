@@ -48,7 +48,7 @@ public class GetWorkflowRsp extends AbstractModel {
     private WorkflowTriggerConfiguration [] Trigger;
 
     /**
-    * <p>工作流参数列表</p>
+    * <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamList")
@@ -56,7 +56,7 @@ public class GetWorkflowRsp extends AbstractModel {
     private ParamInfo [] ParamList;
 
     /**
-    * <p>标签列表</p>
+    * <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelList")
@@ -188,9 +188,9 @@ public class GetWorkflowRsp extends AbstractModel {
     }
 
     /**
-     * Get <p>工作流参数列表</p>
+     * Get <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamList <p>工作流参数列表</p>
+     * @return ParamList <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamInfo [] getParamList() {
@@ -198,9 +198,9 @@ public class GetWorkflowRsp extends AbstractModel {
     }
 
     /**
-     * Set <p>工作流参数列表</p>
+     * Set <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamList <p>工作流参数列表</p>
+     * @param ParamList <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamList(ParamInfo [] ParamList) {
@@ -208,9 +208,9 @@ public class GetWorkflowRsp extends AbstractModel {
     }
 
     /**
-     * Get <p>标签列表</p>
+     * Get <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelList <p>标签列表</p>
+     * @return LabelList <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LabelBrief [] getLabelList() {
@@ -218,9 +218,9 @@ public class GetWorkflowRsp extends AbstractModel {
     }
 
     /**
-     * Set <p>标签列表</p>
+     * Set <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelList <p>标签列表</p>
+     * @param LabelList <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelList(LabelBrief [] LabelList) {

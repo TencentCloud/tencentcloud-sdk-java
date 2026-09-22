@@ -276,6 +276,27 @@ public class CynosdbInstanceDetail extends AbstractModel {
     private String MasterZone;
 
     /**
+    * <p>实例的真实可用区</p>
+    */
+    @SerializedName("RealZone")
+    @Expose
+    private String RealZone;
+
+    /**
+    * <p>备可用区列表</p>
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
+    * <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+    */
+    @SerializedName("StorageVersion")
+    @Expose
+    private String StorageVersion;
+
+    /**
      * Get <p>用户Uin</p> 
      * @return Uin <p>用户Uin</p>
      */
@@ -851,6 +872,54 @@ public class CynosdbInstanceDetail extends AbstractModel {
         this.MasterZone = MasterZone;
     }
 
+    /**
+     * Get <p>实例的真实可用区</p> 
+     * @return RealZone <p>实例的真实可用区</p>
+     */
+    public String getRealZone() {
+        return this.RealZone;
+    }
+
+    /**
+     * Set <p>实例的真实可用区</p>
+     * @param RealZone <p>实例的真实可用区</p>
+     */
+    public void setRealZone(String RealZone) {
+        this.RealZone = RealZone;
+    }
+
+    /**
+     * Get <p>备可用区列表</p> 
+     * @return SlaveZones <p>备可用区列表</p>
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set <p>备可用区列表</p>
+     * @param SlaveZones <p>备可用区列表</p>
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul> 
+     * @return StorageVersion <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+     */
+    public String getStorageVersion() {
+        return this.StorageVersion;
+    }
+
+    /**
+     * Set <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+     * @param StorageVersion <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+     */
+    public void setStorageVersion(String StorageVersion) {
+        this.StorageVersion = StorageVersion;
+    }
+
     public CynosdbInstanceDetail() {
     }
 
@@ -967,6 +1036,18 @@ public class CynosdbInstanceDetail extends AbstractModel {
         if (source.MasterZone != null) {
             this.MasterZone = new String(source.MasterZone);
         }
+        if (source.RealZone != null) {
+            this.RealZone = new String(source.RealZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
+        if (source.StorageVersion != null) {
+            this.StorageVersion = new String(source.StorageVersion);
+        }
     }
 
 
@@ -1010,6 +1091,9 @@ public class CynosdbInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamSimple(map, prefix + "RealZone", this.RealZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
 
     }
 }

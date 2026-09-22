@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class GetServicePodLogsResponse extends AbstractModel {
 
     /**
+    * <p>日志内容</p>
+    */
+    @SerializedName("LogLines")
+    @Expose
+    private String [] LogLines;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>日志内容</p> 
+     * @return LogLines <p>日志内容</p>
+     */
+    public String [] getLogLines() {
+        return this.LogLines;
+    }
+
+    /**
+     * Set <p>日志内容</p>
+     * @param LogLines <p>日志内容</p>
+     */
+    public void setLogLines(String [] LogLines) {
+        this.LogLines = LogLines;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class GetServicePodLogsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetServicePodLogsResponse(GetServicePodLogsResponse source) {
+        if (source.LogLines != null) {
+            this.LogLines = new String[source.LogLines.length];
+            for (int i = 0; i < source.LogLines.length; i++) {
+                this.LogLines[i] = new String(source.LogLines[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class GetServicePodLogsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "LogLines.", this.LogLines);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

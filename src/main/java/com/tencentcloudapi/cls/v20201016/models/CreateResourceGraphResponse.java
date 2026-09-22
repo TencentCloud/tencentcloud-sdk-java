@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateResourceGraphResponse extends AbstractModel {
 
     /**
+    * <p>资源图谱id</p>
+    */
+    @SerializedName("ResourceGraphId")
+    @Expose
+    private String ResourceGraphId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>资源图谱id</p> 
+     * @return ResourceGraphId <p>资源图谱id</p>
+     */
+    public String getResourceGraphId() {
+        return this.ResourceGraphId;
+    }
+
+    /**
+     * Set <p>资源图谱id</p>
+     * @param ResourceGraphId <p>资源图谱id</p>
+     */
+    public void setResourceGraphId(String ResourceGraphId) {
+        this.ResourceGraphId = ResourceGraphId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateResourceGraphResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateResourceGraphResponse(CreateResourceGraphResponse source) {
+        if (source.ResourceGraphId != null) {
+            this.ResourceGraphId = new String(source.ResourceGraphId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateResourceGraphResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ResourceGraphId", this.ResourceGraphId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

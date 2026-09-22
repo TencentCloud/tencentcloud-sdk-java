@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class ClientAttestationRule extends AbstractModel {
 
     /**
-    * 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
+    * <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 客户端认证规则的名称。
+    * <p>客户端认证规则的名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+    * <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
+    * <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+    * <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * 客户端认证选项 ID。
+    * <p>客户端认证选项 ID。</p>
     */
     @SerializedName("AttesterId")
     @Expose
     private String AttesterId;
 
     /**
-    * 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
-    */
-    @SerializedName("DeviceProfiles")
-    @Expose
-    private DeviceProfile [] DeviceProfiles;
-
-    /**
-    * 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+    * <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
     */
     @SerializedName("InvalidAttestationAction")
     @Expose
     private SecurityAction InvalidAttestationAction;
 
     /**
-     * Get 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li> 
-     * @return Id 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
+    * <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+    */
+    @SerializedName("DeviceProfiles")
+    @Expose
+    private DeviceProfile [] DeviceProfiles;
+
+    /**
+    * <p>账号保护配置。</p>
+    */
+    @SerializedName("AccountProtectionSettings")
+    @Expose
+    private AccountProtectionSettings AccountProtectionSettings;
+
+    /**
+     * Get <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p> 
+     * @return Id <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
-     * @param Id 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
+     * Set <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
+     * @param Id <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 客户端认证规则的名称。 
-     * @return Name 客户端认证规则的名称。
+     * Get <p>客户端认证规则的名称。</p> 
+     * @return Name <p>客户端认证规则的名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 客户端认证规则的名称。
-     * @param Name 客户端认证规则的名称。
+     * Set <p>客户端认证规则的名称。</p>
+     * @param Name <p>客户端认证规则的名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li> 
-     * @return Enabled 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * Get <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p> 
+     * @return Enabled <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
-     * @param Enabled 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * Set <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+     * @param Enabled <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。 
-     * @return Priority 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
+     * Get <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p> 
+     * @return Priority <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
-     * @param Priority 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
+     * Set <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
+     * @param Priority <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 规则的具体内容，需符合表达式语法，详细规范参见产品文档。 
-     * @return Condition 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * Get <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p> 
+     * @return Condition <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
-     * @param Condition 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * Set <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+     * @param Condition <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 客户端认证选项 ID。 
-     * @return AttesterId 客户端认证选项 ID。
+     * Get <p>客户端认证选项 ID。</p> 
+     * @return AttesterId <p>客户端认证选项 ID。</p>
      */
     public String getAttesterId() {
         return this.AttesterId;
     }
 
     /**
-     * Set 客户端认证选项 ID。
-     * @param AttesterId 客户端认证选项 ID。
+     * Set <p>客户端认证选项 ID。</p>
+     * @param AttesterId <p>客户端认证选项 ID。</p>
      */
     public void setAttesterId(String AttesterId) {
         this.AttesterId = AttesterId;
     }
 
     /**
-     * Get 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。 
-     * @return DeviceProfiles 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
-     */
-    public DeviceProfile [] getDeviceProfiles() {
-        return this.DeviceProfiles;
-    }
-
-    /**
-     * Set 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
-     * @param DeviceProfiles 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
-     */
-    public void setDeviceProfiles(DeviceProfile [] DeviceProfiles) {
-        this.DeviceProfiles = DeviceProfiles;
-    }
-
-    /**
-     * Get 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。 
-     * @return InvalidAttestationAction 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+     * Get <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul> 
+     * @return InvalidAttestationAction <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
      */
     public SecurityAction getInvalidAttestationAction() {
         return this.InvalidAttestationAction;
     }
 
     /**
-     * Set 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
-     * @param InvalidAttestationAction 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+     * Set <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
+     * @param InvalidAttestationAction <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
      */
     public void setInvalidAttestationAction(SecurityAction InvalidAttestationAction) {
         this.InvalidAttestationAction = InvalidAttestationAction;
+    }
+
+    /**
+     * Get <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p> 
+     * @return DeviceProfiles <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+     */
+    public DeviceProfile [] getDeviceProfiles() {
+        return this.DeviceProfiles;
+    }
+
+    /**
+     * Set <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+     * @param DeviceProfiles <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+     */
+    public void setDeviceProfiles(DeviceProfile [] DeviceProfiles) {
+        this.DeviceProfiles = DeviceProfiles;
+    }
+
+    /**
+     * Get <p>账号保护配置。</p> 
+     * @return AccountProtectionSettings <p>账号保护配置。</p>
+     */
+    public AccountProtectionSettings getAccountProtectionSettings() {
+        return this.AccountProtectionSettings;
+    }
+
+    /**
+     * Set <p>账号保护配置。</p>
+     * @param AccountProtectionSettings <p>账号保护配置。</p>
+     */
+    public void setAccountProtectionSettings(AccountProtectionSettings AccountProtectionSettings) {
+        this.AccountProtectionSettings = AccountProtectionSettings;
     }
 
     public ClientAttestationRule() {
@@ -233,14 +256,17 @@ public class ClientAttestationRule extends AbstractModel {
         if (source.AttesterId != null) {
             this.AttesterId = new String(source.AttesterId);
         }
+        if (source.InvalidAttestationAction != null) {
+            this.InvalidAttestationAction = new SecurityAction(source.InvalidAttestationAction);
+        }
         if (source.DeviceProfiles != null) {
             this.DeviceProfiles = new DeviceProfile[source.DeviceProfiles.length];
             for (int i = 0; i < source.DeviceProfiles.length; i++) {
                 this.DeviceProfiles[i] = new DeviceProfile(source.DeviceProfiles[i]);
             }
         }
-        if (source.InvalidAttestationAction != null) {
-            this.InvalidAttestationAction = new SecurityAction(source.InvalidAttestationAction);
+        if (source.AccountProtectionSettings != null) {
+            this.AccountProtectionSettings = new AccountProtectionSettings(source.AccountProtectionSettings);
         }
     }
 
@@ -255,8 +281,9 @@ public class ClientAttestationRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Condition", this.Condition);
         this.setParamSimple(map, prefix + "AttesterId", this.AttesterId);
-        this.setParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
         this.setParamObj(map, prefix + "InvalidAttestationAction.", this.InvalidAttestationAction);
+        this.setParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
+        this.setParamObj(map, prefix + "AccountProtectionSettings.", this.AccountProtectionSettings);
 
     }
 }

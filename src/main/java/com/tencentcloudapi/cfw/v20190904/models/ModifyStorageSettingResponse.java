@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyStorageSettingResponse extends AbstractModel {
 
     /**
+    * <p>操作状态</p><p>枚举值：</p><ul><li>processing： 进行中</li><li>success： 成功</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>操作状态</p><p>枚举值：</p><ul><li>processing： 进行中</li><li>success： 成功</li></ul> 
+     * @return Status <p>操作状态</p><p>枚举值：</p><ul><li>processing： 进行中</li><li>success： 成功</li></ul>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>操作状态</p><p>枚举值：</p><ul><li>processing： 进行中</li><li>success： 成功</li></ul>
+     * @param Status <p>操作状态</p><p>枚举值：</p><ul><li>processing： 进行中</li><li>success： 成功</li></ul>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class ModifyStorageSettingResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyStorageSettingResponse(ModifyStorageSettingResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ModifyStorageSettingResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -423,6 +423,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *开通付费版本
+     * @param req OpenApmPaidVersionRequest
+     * @return OpenApmPaidVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenApmPaidVersionResponse OpenApmPaidVersion(OpenApmPaidVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenApmPaidVersion", OpenApmPaidVersionResponse.class);
+    }
+
+    /**
      *销毁 APM 业务系统
      * @param req TerminateApmInstanceRequest
      * @return TerminateApmInstanceResponse

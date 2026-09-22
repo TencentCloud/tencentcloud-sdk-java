@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class QueueOverview extends AbstractModel {
 
     /**
-    * 队列名称。
+    * <p>队列名称。</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-     * Get 队列名称。 
-     * @return QueueName 队列名称。
+     * Get <p>队列名称。</p> 
+     * @return QueueName <p>队列名称。</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 队列名称。
-     * @param QueueName 队列名称。
+     * Set <p>队列名称。</p>
+     * @param QueueName <p>队列名称。</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

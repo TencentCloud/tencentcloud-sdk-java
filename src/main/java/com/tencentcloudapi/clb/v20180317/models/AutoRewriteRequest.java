@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AutoRewriteRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID。
+    * <p>负载均衡实例ID。</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * HTTPS:443监听器的ID。
+    * <p>HTTPS:443监听器的ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+    * <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 重定向状态码，可取值301,302,307。
+    * <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
     */
     @SerializedName("RewriteCodes")
     @Expose
     private Long [] RewriteCodes;
 
     /**
-    * 重定向是否携带匹配的URL。
+    * <p>重定向是否携带匹配的URL。</p>
     */
     @SerializedName("TakeUrls")
     @Expose
     private Boolean [] TakeUrls;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+     * Get <p>负载均衡实例ID。</p> 
+     * @return LoadBalancerId <p>负载均衡实例ID。</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set <p>负载均衡实例ID。</p>
+     * @param LoadBalancerId <p>负载均衡实例ID。</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get HTTPS:443监听器的ID。 
-     * @return ListenerId HTTPS:443监听器的ID。
+     * Get <p>HTTPS:443监听器的ID。</p> 
+     * @return ListenerId <p>HTTPS:443监听器的ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set HTTPS:443监听器的ID。
-     * @param ListenerId HTTPS:443监听器的ID。
+     * Set <p>HTTPS:443监听器的ID。</p>
+     * @param ListenerId <p>HTTPS:443监听器的ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。 
-     * @return Domains HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+     * Get <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p> 
+     * @return Domains <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
-     * @param Domains HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+     * Set <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
+     * @param Domains <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 重定向状态码，可取值301,302,307。 
-     * @return RewriteCodes 重定向状态码，可取值301,302,307。
+     * Get <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p> 
+     * @return RewriteCodes <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
      */
     public Long [] getRewriteCodes() {
         return this.RewriteCodes;
     }
 
     /**
-     * Set 重定向状态码，可取值301,302,307。
-     * @param RewriteCodes 重定向状态码，可取值301,302,307。
+     * Set <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
+     * @param RewriteCodes <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
      */
     public void setRewriteCodes(Long [] RewriteCodes) {
         this.RewriteCodes = RewriteCodes;
     }
 
     /**
-     * Get 重定向是否携带匹配的URL。 
-     * @return TakeUrls 重定向是否携带匹配的URL。
+     * Get <p>重定向是否携带匹配的URL。</p> 
+     * @return TakeUrls <p>重定向是否携带匹配的URL。</p>
      */
     public Boolean [] getTakeUrls() {
         return this.TakeUrls;
     }
 
     /**
-     * Set 重定向是否携带匹配的URL。
-     * @param TakeUrls 重定向是否携带匹配的URL。
+     * Set <p>重定向是否携带匹配的URL。</p>
+     * @param TakeUrls <p>重定向是否携带匹配的URL。</p>
      */
     public void setTakeUrls(Boolean [] TakeUrls) {
         this.TakeUrls = TakeUrls;

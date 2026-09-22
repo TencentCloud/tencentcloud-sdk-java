@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeResourceGraphEntityDependencyResponse extends AbstractModel {
 
     /**
+    * <p>拓扑图（节点 + 边）</p>
+    */
+    @SerializedName("Topology")
+    @Expose
+    private DependencyTopology Topology;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>拓扑图（节点 + 边）</p> 
+     * @return Topology <p>拓扑图（节点 + 边）</p>
+     */
+    public DependencyTopology getTopology() {
+        return this.Topology;
+    }
+
+    /**
+     * Set <p>拓扑图（节点 + 边）</p>
+     * @param Topology <p>拓扑图（节点 + 边）</p>
+     */
+    public void setTopology(DependencyTopology Topology) {
+        this.Topology = Topology;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeResourceGraphEntityDependencyResponse extends AbstractModel
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeResourceGraphEntityDependencyResponse(DescribeResourceGraphEntityDependencyResponse source) {
+        if (source.Topology != null) {
+            this.Topology = new DependencyTopology(source.Topology);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeResourceGraphEntityDependencyResponse extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Topology.", this.Topology);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

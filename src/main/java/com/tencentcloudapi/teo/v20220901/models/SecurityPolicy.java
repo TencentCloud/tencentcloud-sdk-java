@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class SecurityPolicy extends AbstractModel {
 
     /**
-    * 自定义规则配置。
+    * <p>自定义规则配置。</p>
     */
     @SerializedName("CustomRules")
     @Expose
     private CustomRules CustomRules;
 
     /**
-    * 托管规则配置。
+    * <p>托管规则配置。</p>
     */
     @SerializedName("ManagedRules")
     @Expose
     private ManagedRules ManagedRules;
 
     /**
-    * HTTP DDOS 防护配置。
+    * <p>HTTP DDOS 防护配置。</p>
     */
     @SerializedName("HttpDDoSProtection")
     @Expose
     private HttpDDoSProtection HttpDDoSProtection;
 
     /**
-    * 速率限制规则配置。
+    * <p>速率限制规则配置。</p>
     */
     @SerializedName("RateLimitingRules")
     @Expose
     private RateLimitingRules RateLimitingRules;
 
     /**
-    * 例外规则配置。
+    * <p>例外规则配置。</p>
     */
     @SerializedName("ExceptionRules")
     @Expose
     private ExceptionRules ExceptionRules;
 
     /**
-    * Bot 管理配置。
+    * <p>Bot 管理配置。</p>
     */
     @SerializedName("BotManagement")
     @Expose
     private BotManagement BotManagement;
 
     /**
-    * 基础 Bot 管理配置。
+    * <p>基础 Bot 管理配置。</p>
     */
     @SerializedName("BotManagementLite")
     @Expose
     private BotManagementLite BotManagementLite;
 
     /**
-    * 默认拦截动作配置。
+    * <p>默认拦截动作配置。</p>
     */
     @SerializedName("DefaultDenySecurityActionParameters")
     @Expose
     private DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters;
 
     /**
-     * Get 自定义规则配置。 
-     * @return CustomRules 自定义规则配置。
+    * <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+    */
+    @SerializedName("SecurityHeadersToOrigin")
+    @Expose
+    private SecurityHeadersToOrigin SecurityHeadersToOrigin;
+
+    /**
+     * Get <p>自定义规则配置。</p> 
+     * @return CustomRules <p>自定义规则配置。</p>
      */
     public CustomRules getCustomRules() {
         return this.CustomRules;
     }
 
     /**
-     * Set 自定义规则配置。
-     * @param CustomRules 自定义规则配置。
+     * Set <p>自定义规则配置。</p>
+     * @param CustomRules <p>自定义规则配置。</p>
      */
     public void setCustomRules(CustomRules CustomRules) {
         this.CustomRules = CustomRules;
     }
 
     /**
-     * Get 托管规则配置。 
-     * @return ManagedRules 托管规则配置。
+     * Get <p>托管规则配置。</p> 
+     * @return ManagedRules <p>托管规则配置。</p>
      */
     public ManagedRules getManagedRules() {
         return this.ManagedRules;
     }
 
     /**
-     * Set 托管规则配置。
-     * @param ManagedRules 托管规则配置。
+     * Set <p>托管规则配置。</p>
+     * @param ManagedRules <p>托管规则配置。</p>
      */
     public void setManagedRules(ManagedRules ManagedRules) {
         this.ManagedRules = ManagedRules;
     }
 
     /**
-     * Get HTTP DDOS 防护配置。 
-     * @return HttpDDoSProtection HTTP DDOS 防护配置。
+     * Get <p>HTTP DDOS 防护配置。</p> 
+     * @return HttpDDoSProtection <p>HTTP DDOS 防护配置。</p>
      */
     public HttpDDoSProtection getHttpDDoSProtection() {
         return this.HttpDDoSProtection;
     }
 
     /**
-     * Set HTTP DDOS 防护配置。
-     * @param HttpDDoSProtection HTTP DDOS 防护配置。
+     * Set <p>HTTP DDOS 防护配置。</p>
+     * @param HttpDDoSProtection <p>HTTP DDOS 防护配置。</p>
      */
     public void setHttpDDoSProtection(HttpDDoSProtection HttpDDoSProtection) {
         this.HttpDDoSProtection = HttpDDoSProtection;
     }
 
     /**
-     * Get 速率限制规则配置。 
-     * @return RateLimitingRules 速率限制规则配置。
+     * Get <p>速率限制规则配置。</p> 
+     * @return RateLimitingRules <p>速率限制规则配置。</p>
      */
     public RateLimitingRules getRateLimitingRules() {
         return this.RateLimitingRules;
     }
 
     /**
-     * Set 速率限制规则配置。
-     * @param RateLimitingRules 速率限制规则配置。
+     * Set <p>速率限制规则配置。</p>
+     * @param RateLimitingRules <p>速率限制规则配置。</p>
      */
     public void setRateLimitingRules(RateLimitingRules RateLimitingRules) {
         this.RateLimitingRules = RateLimitingRules;
     }
 
     /**
-     * Get 例外规则配置。 
-     * @return ExceptionRules 例外规则配置。
+     * Get <p>例外规则配置。</p> 
+     * @return ExceptionRules <p>例外规则配置。</p>
      */
     public ExceptionRules getExceptionRules() {
         return this.ExceptionRules;
     }
 
     /**
-     * Set 例外规则配置。
-     * @param ExceptionRules 例外规则配置。
+     * Set <p>例外规则配置。</p>
+     * @param ExceptionRules <p>例外规则配置。</p>
      */
     public void setExceptionRules(ExceptionRules ExceptionRules) {
         this.ExceptionRules = ExceptionRules;
     }
 
     /**
-     * Get Bot 管理配置。 
-     * @return BotManagement Bot 管理配置。
+     * Get <p>Bot 管理配置。</p> 
+     * @return BotManagement <p>Bot 管理配置。</p>
      */
     public BotManagement getBotManagement() {
         return this.BotManagement;
     }
 
     /**
-     * Set Bot 管理配置。
-     * @param BotManagement Bot 管理配置。
+     * Set <p>Bot 管理配置。</p>
+     * @param BotManagement <p>Bot 管理配置。</p>
      */
     public void setBotManagement(BotManagement BotManagement) {
         this.BotManagement = BotManagement;
     }
 
     /**
-     * Get 基础 Bot 管理配置。 
-     * @return BotManagementLite 基础 Bot 管理配置。
+     * Get <p>基础 Bot 管理配置。</p> 
+     * @return BotManagementLite <p>基础 Bot 管理配置。</p>
      */
     public BotManagementLite getBotManagementLite() {
         return this.BotManagementLite;
     }
 
     /**
-     * Set 基础 Bot 管理配置。
-     * @param BotManagementLite 基础 Bot 管理配置。
+     * Set <p>基础 Bot 管理配置。</p>
+     * @param BotManagementLite <p>基础 Bot 管理配置。</p>
      */
     public void setBotManagementLite(BotManagementLite BotManagementLite) {
         this.BotManagementLite = BotManagementLite;
     }
 
     /**
-     * Get 默认拦截动作配置。 
-     * @return DefaultDenySecurityActionParameters 默认拦截动作配置。
+     * Get <p>默认拦截动作配置。</p> 
+     * @return DefaultDenySecurityActionParameters <p>默认拦截动作配置。</p>
      */
     public DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() {
         return this.DefaultDenySecurityActionParameters;
     }
 
     /**
-     * Set 默认拦截动作配置。
-     * @param DefaultDenySecurityActionParameters 默认拦截动作配置。
+     * Set <p>默认拦截动作配置。</p>
+     * @param DefaultDenySecurityActionParameters <p>默认拦截动作配置。</p>
      */
     public void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters) {
         this.DefaultDenySecurityActionParameters = DefaultDenySecurityActionParameters;
+    }
+
+    /**
+     * Get <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p> 
+     * @return SecurityHeadersToOrigin <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+     */
+    public SecurityHeadersToOrigin getSecurityHeadersToOrigin() {
+        return this.SecurityHeadersToOrigin;
+    }
+
+    /**
+     * Set <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+     * @param SecurityHeadersToOrigin <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+     */
+    public void setSecurityHeadersToOrigin(SecurityHeadersToOrigin SecurityHeadersToOrigin) {
+        this.SecurityHeadersToOrigin = SecurityHeadersToOrigin;
     }
 
     public SecurityPolicy() {
@@ -239,6 +262,9 @@ public class SecurityPolicy extends AbstractModel {
         if (source.DefaultDenySecurityActionParameters != null) {
             this.DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters(source.DefaultDenySecurityActionParameters);
         }
+        if (source.SecurityHeadersToOrigin != null) {
+            this.SecurityHeadersToOrigin = new SecurityHeadersToOrigin(source.SecurityHeadersToOrigin);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class SecurityPolicy extends AbstractModel {
         this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
         this.setParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
         this.setParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
+        this.setParamObj(map, prefix + "SecurityHeadersToOrigin.", this.SecurityHeadersToOrigin);
 
     }
 }

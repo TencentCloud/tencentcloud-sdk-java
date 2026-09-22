@@ -40,7 +40,7 @@ public class WorkflowTaskRun extends AbstractModel {
     private String WorkflowTaskRunId;
 
     /**
-    * <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+    * <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunState")
@@ -80,7 +80,7 @@ public class WorkflowTaskRun extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+    * <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeName")
@@ -96,7 +96,7 @@ public class WorkflowTaskRun extends AbstractModel {
     private String TaskVersionId;
 
     /**
-    * <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+    * <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
@@ -384,9 +384,9 @@ public class WorkflowTaskRun extends AbstractModel {
     }
 
     /**
-     * Get <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+     * Get <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunState <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+     * @return RunState <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunState() {
@@ -394,9 +394,9 @@ public class WorkflowTaskRun extends AbstractModel {
     }
 
     /**
-     * Set <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+     * Set <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunState <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+     * @param RunState <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunState(String RunState) {
@@ -484,9 +484,9 @@ public class WorkflowTaskRun extends AbstractModel {
     }
 
     /**
-     * Get 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+     * Get <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+     * @return TaskTypeName <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTypeName() {
@@ -494,9 +494,9 @@ public class WorkflowTaskRun extends AbstractModel {
     }
 
     /**
-     * Set 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+     * Set <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+     * @param TaskTypeName <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeName(String TaskTypeName) {
@@ -524,9 +524,9 @@ public class WorkflowTaskRun extends AbstractModel {
     }
 
     /**
-     * Get <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+     * Get <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerType <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+     * @return TriggerType <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTriggerType() {
@@ -534,9 +534,9 @@ public class WorkflowTaskRun extends AbstractModel {
     }
 
     /**
-     * Set <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+     * Set <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerType <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+     * @param TriggerType <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(String TriggerType) {

@@ -217,6 +217,28 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建审核规则。
+     * @param req CreateAuditRuleRequest
+     * @return CreateAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditRuleResponse CreateAuditRule(CreateAuditRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditRule", CreateAuditRuleResponse.class);
+    }
+
+    /**
+     *创建单个审核模板。
+     * @param req CreateAuditTemplateRequest
+     * @return CreateAuditTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditTemplateResponse CreateAuditTemplate(CreateAuditTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditTemplate", CreateAuditTemplateResponse.class);
+    }
+
+    /**
      *该接口用来创建新的导播台
      * @param req CreateCasterRequest
      * @return CreateCasterResponse
@@ -446,6 +468,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建直播智能擦除模板。
+     * @param req CreateLiveSmartEraseTemplateRequest
+     * @return CreateLiveSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveSmartEraseTemplateResponse CreateLiveSmartEraseTemplate(CreateLiveSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveSmartEraseTemplate", CreateLiveSmartEraseTemplateResponse.class);
+    }
+
+    /**
      *创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
 <br>截图相关文档：[直播截图](/document/product/267/32737)。
 注意：单个域名仅支持关联一个截图模板。
@@ -646,6 +679,28 @@ public class LiveClient extends AbstractClient{
     public DeleteAuditKeywordsResponse DeleteAuditKeywords(DeleteAuditKeywordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAuditKeywords", DeleteAuditKeywordsResponse.class);
+    }
+
+    /**
+     *删除审核规则。
+     * @param req DeleteAuditRuleRequest
+     * @return DeleteAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditRuleResponse DeleteAuditRule(DeleteAuditRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditRule", DeleteAuditRuleResponse.class);
+    }
+
+    /**
+     *删除审核模板。
+     * @param req DeleteAuditTemplateRequest
+     * @return DeleteAuditTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditTemplateResponse DeleteAuditTemplate(DeleteAuditTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditTemplate", DeleteAuditTemplateResponse.class);
     }
 
     /**
@@ -1060,6 +1115,39 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeAuditKeywordsResponse DescribeAuditKeywords(DescribeAuditKeywordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditKeywords", DescribeAuditKeywordsResponse.class);
+    }
+
+    /**
+     *获取审核规则列表。
+     * @param req DescribeAuditRulesRequest
+     * @return DescribeAuditRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRulesResponse DescribeAuditRules(DescribeAuditRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditRules", DescribeAuditRulesResponse.class);
+    }
+
+    /**
+     *获取单个审核模板。
+     * @param req DescribeAuditTemplateRequest
+     * @return DescribeAuditTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditTemplateResponse DescribeAuditTemplate(DescribeAuditTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditTemplate", DescribeAuditTemplateResponse.class);
+    }
+
+    /**
+     *返回当前用户的审核模板列表。
+     * @param req DescribeAuditTemplatesRequest
+     * @return DescribeAuditTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditTemplatesResponse DescribeAuditTemplates(DescribeAuditTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditTemplates", DescribeAuditTemplatesResponse.class);
     }
 
     /**
@@ -2319,6 +2407,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyAuditKeywordLibResponse ModifyAuditKeywordLib(ModifyAuditKeywordLibRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuditKeywordLib", ModifyAuditKeywordLibResponse.class);
+    }
+
+    /**
+     *修改审核模板。
+     * @param req ModifyAuditTemplateRequest
+     * @return ModifyAuditTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditTemplateResponse ModifyAuditTemplate(ModifyAuditTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditTemplate", ModifyAuditTemplateResponse.class);
     }
 
     /**

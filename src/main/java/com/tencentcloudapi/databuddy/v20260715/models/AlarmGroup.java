@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmGroup extends AbstractModel {
 
     /**
-    * 通知渠道ID，可通过基础平台通知渠道相关接口获取
+    * <p>通知渠道ID，可通过基础平台通知渠道相关接口获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelId")
@@ -32,7 +32,7 @@ public class AlarmGroup extends AbstractModel {
     private String ChannelId;
 
     /**
-    * 通知渠道名称，可以是用户组名称或邮箱地址
+    * <p>通知渠道名称，可以是用户组名称或邮箱地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelName")
@@ -40,7 +40,7 @@ public class AlarmGroup extends AbstractModel {
     private String ChannelName;
 
     /**
-    * 是否启用邮件渠道，默认值：false
+    * <p>是否启用邮件渠道，默认值：false</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEmailChannel")
@@ -48,7 +48,7 @@ public class AlarmGroup extends AbstractModel {
     private Boolean IsEmailChannel;
 
     /**
-    * 一组告警条件，有 启动，成功，失败和任务超时告警
+    * <p>告警条件列表。取值：<br>START：启动<br>SUCCESS：成功<br>FAILURE：失败<br>MONITOR_INDICATOR_ALARM：监控指标告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmConditions")
@@ -56,7 +56,7 @@ public class AlarmGroup extends AbstractModel {
     private String [] AlarmConditions;
 
     /**
-    * 通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack
+    * <p>通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelType")
@@ -64,9 +64,9 @@ public class AlarmGroup extends AbstractModel {
     private Long ChannelType;
 
     /**
-     * Get 通知渠道ID，可通过基础平台通知渠道相关接口获取
+     * Get <p>通知渠道ID，可通过基础平台通知渠道相关接口获取</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelId 通知渠道ID，可通过基础平台通知渠道相关接口获取
+     * @return ChannelId <p>通知渠道ID，可通过基础平台通知渠道相关接口获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelId() {
@@ -74,9 +74,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Set 通知渠道ID，可通过基础平台通知渠道相关接口获取
+     * Set <p>通知渠道ID，可通过基础平台通知渠道相关接口获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelId 通知渠道ID，可通过基础平台通知渠道相关接口获取
+     * @param ChannelId <p>通知渠道ID，可通过基础平台通知渠道相关接口获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelId(String ChannelId) {
@@ -84,9 +84,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Get 通知渠道名称，可以是用户组名称或邮箱地址
+     * Get <p>通知渠道名称，可以是用户组名称或邮箱地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelName 通知渠道名称，可以是用户组名称或邮箱地址
+     * @return ChannelName <p>通知渠道名称，可以是用户组名称或邮箱地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelName() {
@@ -94,9 +94,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Set 通知渠道名称，可以是用户组名称或邮箱地址
+     * Set <p>通知渠道名称，可以是用户组名称或邮箱地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelName 通知渠道名称，可以是用户组名称或邮箱地址
+     * @param ChannelName <p>通知渠道名称，可以是用户组名称或邮箱地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelName(String ChannelName) {
@@ -104,9 +104,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Get 是否启用邮件渠道，默认值：false
+     * Get <p>是否启用邮件渠道，默认值：false</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsEmailChannel 是否启用邮件渠道，默认值：false
+     * @return IsEmailChannel <p>是否启用邮件渠道，默认值：false</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsEmailChannel() {
@@ -114,9 +114,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Set 是否启用邮件渠道，默认值：false
+     * Set <p>是否启用邮件渠道，默认值：false</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsEmailChannel 是否启用邮件渠道，默认值：false
+     * @param IsEmailChannel <p>是否启用邮件渠道，默认值：false</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEmailChannel(Boolean IsEmailChannel) {
@@ -124,9 +124,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Get 一组告警条件，有 启动，成功，失败和任务超时告警
+     * Get <p>告警条件列表。取值：<br>START：启动<br>SUCCESS：成功<br>FAILURE：失败<br>MONITOR_INDICATOR_ALARM：监控指标告警</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmConditions 一组告警条件，有 启动，成功，失败和任务超时告警
+     * @return AlarmConditions <p>告警条件列表。取值：<br>START：启动<br>SUCCESS：成功<br>FAILURE：失败<br>MONITOR_INDICATOR_ALARM：监控指标告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlarmConditions() {
@@ -134,9 +134,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Set 一组告警条件，有 启动，成功，失败和任务超时告警
+     * Set <p>告警条件列表。取值：<br>START：启动<br>SUCCESS：成功<br>FAILURE：失败<br>MONITOR_INDICATOR_ALARM：监控指标告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmConditions 一组告警条件，有 启动，成功，失败和任务超时告警
+     * @param AlarmConditions <p>告警条件列表。取值：<br>START：启动<br>SUCCESS：成功<br>FAILURE：失败<br>MONITOR_INDICATOR_ALARM：监控指标告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmConditions(String [] AlarmConditions) {
@@ -144,9 +144,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Get 通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack
+     * Get <p>通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelType 通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack
+     * @return ChannelType <p>通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelType() {
@@ -154,9 +154,9 @@ public class AlarmGroup extends AbstractModel {
     }
 
     /**
-     * Set 通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack
+     * Set <p>通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelType 通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack
+     * @param ChannelType <p>通知渠道类型。取值：0 未指定，1 Email，2 Webhook，3 Teams，4 Slack</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelType(Long ChannelType) {

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeResourceGraphEntityDetailResponse extends AbstractModel {
 
     /**
+    * <p>实体信息</p>
+    */
+    @SerializedName("EntityInfo")
+    @Expose
+    private EntityInfo EntityInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>实体信息</p> 
+     * @return EntityInfo <p>实体信息</p>
+     */
+    public EntityInfo getEntityInfo() {
+        return this.EntityInfo;
+    }
+
+    /**
+     * Set <p>实体信息</p>
+     * @param EntityInfo <p>实体信息</p>
+     */
+    public void setEntityInfo(EntityInfo EntityInfo) {
+        this.EntityInfo = EntityInfo;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeResourceGraphEntityDetailResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeResourceGraphEntityDetailResponse(DescribeResourceGraphEntityDetailResponse source) {
+        if (source.EntityInfo != null) {
+            this.EntityInfo = new EntityInfo(source.EntityInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeResourceGraphEntityDetailResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "EntityInfo.", this.EntityInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
