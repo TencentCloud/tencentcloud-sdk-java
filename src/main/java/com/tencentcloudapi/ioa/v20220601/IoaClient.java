@@ -50,6 +50,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/BindVirtualAccount，从7.x版本开始支持
+     * @param req BindVirtualAccountsRequest
+     * @return BindVirtualAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindVirtualAccountsResponse BindVirtualAccounts(BindVirtualAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindVirtualAccounts", BindVirtualAccountsResponse.class);
+    }
+
+    /**
      *创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
      * @param req CreateBusinessResourceRequest
      * @return CreateBusinessResourceResponse
@@ -316,6 +327,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *查询指定终端的病毒库版本、漏洞库版本、系统修复引擎版本、防火墙状态和实时防护状态
+     * @param req DescribeDeviceSecurityInfoRequest
+     * @return DescribeDeviceSecurityInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceSecurityInfoResponse DescribeDeviceSecurityInfo(DescribeDeviceSecurityInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceSecurityInfo", DescribeDeviceSecurityInfoResponse.class);
+    }
+
+    /**
      *查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
      * @param req DescribeDeviceVirtualGroupsRequest
      * @return DescribeDeviceVirtualGroupsResponse
@@ -357,6 +379,17 @@ public class IoaClient extends AbstractClient{
     public DescribeLocalAccountsResponse DescribeLocalAccounts(DescribeLocalAccountsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLocalAccounts", DescribeLocalAccountsResponse.class);
+    }
+
+    /**
+     *查询终端描述字段数据,私有化调用path为：capi/Assets/Device/DescribeProfileFieldsMenu
+     * @param req DescribeProfileFieldsMenuRequest
+     * @return DescribeProfileFieldsMenuResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProfileFieldsMenuResponse DescribeProfileFieldsMenu(DescribeProfileFieldsMenuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProfileFieldsMenu", DescribeProfileFieldsMenuResponse.class);
     }
 
     /**
@@ -423,6 +456,17 @@ public class IoaClient extends AbstractClient{
     public DescribeSoftwareInformationResponse DescribeSoftwareInformation(DescribeSoftwareInformationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSoftwareInformation", DescribeSoftwareInformationResponse.class);
+    }
+
+    /**
+     *列表虚拟组的账户，私有化调用path为：/capi/Assets/AccountVirtualGroup/DescribeVirtualAccounts，从7.x版本开始支持
+     * @param req DescribeVirtualAccountsRequest
+     * @return DescribeVirtualAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirtualAccountsResponse DescribeVirtualAccounts(DescribeVirtualAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirtualAccounts", DescribeVirtualAccountsResponse.class);
     }
 
     /**
@@ -533,6 +577,17 @@ public class IoaClient extends AbstractClient{
     public ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(ModifyVirtualDeviceGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyVirtualDeviceGroups", ModifyVirtualDeviceGroupsResponse.class);
+    }
+
+    /**
+     *取消关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/UnbindVirtualAccount，从7.x版本开始支持
+     * @param req UnbindVirtualAccountsRequest
+     * @return UnbindVirtualAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindVirtualAccountsResponse UnbindVirtualAccounts(UnbindVirtualAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindVirtualAccounts", UnbindVirtualAccountsResponse.class);
     }
 
 }

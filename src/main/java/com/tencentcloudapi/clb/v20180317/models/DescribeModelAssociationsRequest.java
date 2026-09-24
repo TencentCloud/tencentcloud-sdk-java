@@ -45,11 +45,18 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>模型输出模态</p>
+    * <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
     */
     @SerializedName("Capability")
     @Expose
     private String Capability;
+
+    /**
+    * <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+    */
+    @SerializedName("Capabilities")
+    @Expose
+    private String [] Capabilities;
 
     /**
      * Get <p>模型路由实例ID</p> 
@@ -100,19 +107,35 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>模型输出模态</p> 
-     * @return Capability <p>模型输出模态</p>
+     * Get <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul> 
+     * @return Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public String getCapability() {
         return this.Capability;
     }
 
     /**
-     * Set <p>模型输出模态</p>
-     * @param Capability <p>模型输出模态</p>
+     * Set <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+     * @param Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public void setCapability(String Capability) {
         this.Capability = Capability;
+    }
+
+    /**
+     * Get <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul> 
+     * @return Capabilities <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+     */
+    public String [] getCapabilities() {
+        return this.Capabilities;
+    }
+
+    /**
+     * Set <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+     * @param Capabilities <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+     */
+    public void setCapabilities(String [] Capabilities) {
+        this.Capabilities = Capabilities;
     }
 
     public DescribeModelAssociationsRequest() {
@@ -135,6 +158,12 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
         if (source.Capability != null) {
             this.Capability = new String(source.Capability);
         }
+        if (source.Capabilities != null) {
+            this.Capabilities = new String[source.Capabilities.length];
+            for (int i = 0; i < source.Capabilities.length; i++) {
+                this.Capabilities[i] = new String(source.Capabilities[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class DescribeModelAssociationsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Capability", this.Capability);
+        this.setParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
 
     }
 }

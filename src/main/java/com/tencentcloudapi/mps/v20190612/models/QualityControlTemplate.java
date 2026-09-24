@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class QualityControlTemplate extends AbstractModel {
 
     /**
-    * 媒体质检模板唯一标识。
+    * <p>媒体质检模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 媒体质检模板名称。
+    * <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -39,7 +39,7 @@ public class QualityControlTemplate extends AbstractModel {
     private String Name;
 
     /**
-    * 模板描述信息。
+    * <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
@@ -47,9 +47,7 @@ public class QualityControlTemplate extends AbstractModel {
     private String Comment;
 
     /**
-    * 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+    * <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -57,7 +55,7 @@ public class QualityControlTemplate extends AbstractModel {
     private String Type;
 
     /**
-    * 媒体质检配置参数。
+    * <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityControlItemSet")
@@ -65,7 +63,7 @@ public class QualityControlTemplate extends AbstractModel {
     private QualityControlItemConfig [] QualityControlItemSet;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -73,7 +71,7 @@ public class QualityControlTemplate extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -81,32 +79,32 @@ public class QualityControlTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 媒体质检的抽检策略。
+    * <p>媒体质检的抽检策略。</p>
     */
     @SerializedName("Strategy")
     @Expose
     private QualityControlStrategy Strategy;
 
     /**
-     * Get 媒体质检模板唯一标识。 
-     * @return Definition 媒体质检模板唯一标识。
+     * Get <p>媒体质检模板唯一标识。</p> 
+     * @return Definition <p>媒体质检模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 媒体质检模板唯一标识。
-     * @param Definition 媒体质检模板唯一标识。
+     * Set <p>媒体质检模板唯一标识。</p>
+     * @param Definition <p>媒体质检模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 媒体质检模板名称。
+     * Get <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 媒体质检模板名称。
+     * @return Name <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -114,9 +112,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Set 媒体质检模板名称。
+     * Set <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 媒体质检模板名称。
+     * @param Name <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -124,9 +122,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板描述信息。
+     * Get <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comment 模板描述信息。
+     * @return Comment <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
@@ -134,9 +132,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模板描述信息。
+     * Set <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comment 模板描述信息。
+     * @param Comment <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
@@ -144,13 +142,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Get <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @return Type <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -158,13 +152,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Set <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @param Type <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -172,9 +162,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Get 媒体质检配置参数。
+     * Get <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityControlItemSet 媒体质检配置参数。
+     * @return QualityControlItemSet <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityControlItemConfig [] getQualityControlItemSet() {
@@ -182,9 +172,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Set 媒体质检配置参数。
+     * Set <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityControlItemSet 媒体质检配置参数。
+     * @param QualityControlItemSet <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityControlItemSet(QualityControlItemConfig [] QualityControlItemSet) {
@@ -192,9 +182,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -202,9 +192,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -212,9 +202,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -222,9 +212,9 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -232,16 +222,16 @@ public class QualityControlTemplate extends AbstractModel {
     }
 
     /**
-     * Get 媒体质检的抽检策略。 
-     * @return Strategy 媒体质检的抽检策略。
+     * Get <p>媒体质检的抽检策略。</p> 
+     * @return Strategy <p>媒体质检的抽检策略。</p>
      */
     public QualityControlStrategy getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set 媒体质检的抽检策略。
-     * @param Strategy 媒体质检的抽检策略。
+     * Set <p>媒体质检的抽检策略。</p>
+     * @param Strategy <p>媒体质检的抽检策略。</p>
      */
     public void setStrategy(QualityControlStrategy Strategy) {
         this.Strategy = Strategy;

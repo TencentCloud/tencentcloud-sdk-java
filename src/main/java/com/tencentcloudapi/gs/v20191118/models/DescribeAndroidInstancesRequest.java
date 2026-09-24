@@ -24,209 +24,184 @@ import java.util.HashMap;
 public class DescribeAndroidInstancesRequest extends AbstractModel {
 
     /**
-    * 偏移量，默认为 0
+    * <p>偏移量，默认为 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制量，默认为20，最大值为100
+    * <p>限制量，默认为20，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 实例ID。每次请求的实例的上限为100。
+    * <p>实例ID。每次请求的实例的上限为100。</p>
     */
     @SerializedName("AndroidInstanceIds")
     @Expose
     private String [] AndroidInstanceIds;
 
     /**
-    * 实例地域。目前还不支持按地域进行聚合查询
+    * <p>实例地域。目前还不支持按地域进行聚合查询</p>
     */
     @SerializedName("AndroidInstanceRegion")
     @Expose
     private String AndroidInstanceRegion;
 
     /**
-    * 实例可用区
+    * <p>实例可用区</p>
     */
     @SerializedName("AndroidInstanceZone")
     @Expose
     private String AndroidInstanceZone;
 
     /**
-    * 实例分组 ID 列表
+    * <p>实例分组 ID 列表</p>
     */
     @SerializedName("AndroidInstanceGroupIds")
     @Expose
     private String [] AndroidInstanceGroupIds;
 
     /**
-    * 实例标签选择器
+    * <p>实例标签选择器</p>
     */
     @SerializedName("LabelSelector")
     @Expose
     private LabelRequirement [] LabelSelector;
 
     /**
-    * 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
+    * <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 偏移量，默认为 0 
-     * @return Offset 偏移量，默认为 0
+     * Get <p>偏移量，默认为 0</p> 
+     * @return Offset <p>偏移量，默认为 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为 0
-     * @param Offset 偏移量，默认为 0
+     * Set <p>偏移量，默认为 0</p>
+     * @param Offset <p>偏移量，默认为 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制量，默认为20，最大值为100 
-     * @return Limit 限制量，默认为20，最大值为100
+     * Get <p>限制量，默认为20，最大值为100</p> 
+     * @return Limit <p>限制量，默认为20，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制量，默认为20，最大值为100
-     * @param Limit 限制量，默认为20，最大值为100
+     * Set <p>限制量，默认为20，最大值为100</p>
+     * @param Limit <p>限制量，默认为20，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 实例ID。每次请求的实例的上限为100。 
-     * @return AndroidInstanceIds 实例ID。每次请求的实例的上限为100。
+     * Get <p>实例ID。每次请求的实例的上限为100。</p> 
+     * @return AndroidInstanceIds <p>实例ID。每次请求的实例的上限为100。</p>
      */
     public String [] getAndroidInstanceIds() {
         return this.AndroidInstanceIds;
     }
 
     /**
-     * Set 实例ID。每次请求的实例的上限为100。
-     * @param AndroidInstanceIds 实例ID。每次请求的实例的上限为100。
+     * Set <p>实例ID。每次请求的实例的上限为100。</p>
+     * @param AndroidInstanceIds <p>实例ID。每次请求的实例的上限为100。</p>
      */
     public void setAndroidInstanceIds(String [] AndroidInstanceIds) {
         this.AndroidInstanceIds = AndroidInstanceIds;
     }
 
     /**
-     * Get 实例地域。目前还不支持按地域进行聚合查询 
-     * @return AndroidInstanceRegion 实例地域。目前还不支持按地域进行聚合查询
+     * Get <p>实例地域。目前还不支持按地域进行聚合查询</p> 
+     * @return AndroidInstanceRegion <p>实例地域。目前还不支持按地域进行聚合查询</p>
      */
     public String getAndroidInstanceRegion() {
         return this.AndroidInstanceRegion;
     }
 
     /**
-     * Set 实例地域。目前还不支持按地域进行聚合查询
-     * @param AndroidInstanceRegion 实例地域。目前还不支持按地域进行聚合查询
+     * Set <p>实例地域。目前还不支持按地域进行聚合查询</p>
+     * @param AndroidInstanceRegion <p>实例地域。目前还不支持按地域进行聚合查询</p>
      */
     public void setAndroidInstanceRegion(String AndroidInstanceRegion) {
         this.AndroidInstanceRegion = AndroidInstanceRegion;
     }
 
     /**
-     * Get 实例可用区 
-     * @return AndroidInstanceZone 实例可用区
+     * Get <p>实例可用区</p> 
+     * @return AndroidInstanceZone <p>实例可用区</p>
      */
     public String getAndroidInstanceZone() {
         return this.AndroidInstanceZone;
     }
 
     /**
-     * Set 实例可用区
-     * @param AndroidInstanceZone 实例可用区
+     * Set <p>实例可用区</p>
+     * @param AndroidInstanceZone <p>实例可用区</p>
      */
     public void setAndroidInstanceZone(String AndroidInstanceZone) {
         this.AndroidInstanceZone = AndroidInstanceZone;
     }
 
     /**
-     * Get 实例分组 ID 列表 
-     * @return AndroidInstanceGroupIds 实例分组 ID 列表
+     * Get <p>实例分组 ID 列表</p> 
+     * @return AndroidInstanceGroupIds <p>实例分组 ID 列表</p>
      */
     public String [] getAndroidInstanceGroupIds() {
         return this.AndroidInstanceGroupIds;
     }
 
     /**
-     * Set 实例分组 ID 列表
-     * @param AndroidInstanceGroupIds 实例分组 ID 列表
+     * Set <p>实例分组 ID 列表</p>
+     * @param AndroidInstanceGroupIds <p>实例分组 ID 列表</p>
      */
     public void setAndroidInstanceGroupIds(String [] AndroidInstanceGroupIds) {
         this.AndroidInstanceGroupIds = AndroidInstanceGroupIds;
     }
 
     /**
-     * Get 实例标签选择器 
-     * @return LabelSelector 实例标签选择器
+     * Get <p>实例标签选择器</p> 
+     * @return LabelSelector <p>实例标签选择器</p>
      */
     public LabelRequirement [] getLabelSelector() {
         return this.LabelSelector;
     }
 
     /**
-     * Set 实例标签选择器
-     * @param LabelSelector 实例标签选择器
+     * Set <p>实例标签选择器</p>
+     * @param LabelSelector <p>实例标签选择器</p>
      */
     public void setLabelSelector(LabelRequirement [] LabelSelector) {
         this.LabelSelector = LabelSelector;
     }
 
     /**
-     * Get 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号 
-     * @return Filters 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
+     * Get <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p> 
+     * @return Filters <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
-     * @param Filters 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
+     * Set <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
+     * @param Filters <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

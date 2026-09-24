@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSlowLogQueryTimeStatsResponse extends AbstractModel {
 
     /**
-    * 符合条件的记录总数。
+    * <p>符合条件的记录总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 慢日志 top sql 列表。
+    * <p>慢日志 top sql 列表。</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSlowLogQueryTimeStatsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的记录总数。 
-     * @return TotalCount 符合条件的记录总数。
+     * Get <p>符合条件的记录总数。</p> 
+     * @return TotalCount <p>符合条件的记录总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的记录总数。
-     * @param TotalCount 符合条件的记录总数。
+     * Set <p>符合条件的记录总数。</p>
+     * @param TotalCount <p>符合条件的记录总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 慢日志 top sql 列表。 
-     * @return Items 慢日志 top sql 列表。
+     * Get <p>慢日志 top sql 列表。</p> 
+     * @return Items <p>慢日志 top sql 列表。</p>
      */
     public SqlCostDistribution [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 慢日志 top sql 列表。
-     * @param Items 慢日志 top sql 列表。
+     * Set <p>慢日志 top sql 列表。</p>
+     * @param Items <p>慢日志 top sql 列表。</p>
      */
     public void setItems(SqlCostDistribution [] Items) {
         this.Items = Items;

@@ -52,6 +52,13 @@ public class DescribeModelsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private String ServiceId;
+
+    /**
      * Get 模型id 
      * @return ModelIds 模型id
      */
@@ -115,6 +122,22 @@ public class DescribeModelsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。 
+     * @return ServiceId 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+     */
+    public String getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+     * @param ServiceId 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+     */
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
     public DescribeModelsRequest() {
     }
 
@@ -141,6 +164,9 @@ public class DescribeModelsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class DescribeModelsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
 
     }
 }

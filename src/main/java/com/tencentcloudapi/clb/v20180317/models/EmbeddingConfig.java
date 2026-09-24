@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EmbeddingConfig extends AbstractModel {
 
     /**
-    * <p>模型内路由策略</p>
+    * <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoutingStrategy")
@@ -40,7 +40,7 @@ public class EmbeddingConfig extends AbstractModel {
     private RoutingStrategyArgs RoutingStrategyArgs;
 
     /**
-    * <p>同一模型请求重试次数</p>
+    * <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumRetries")
@@ -48,9 +48,9 @@ public class EmbeddingConfig extends AbstractModel {
     private Long NumRetries;
 
     /**
-     * Get <p>模型内路由策略</p>
+     * Get <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoutingStrategy <p>模型内路由策略</p>
+     * @return RoutingStrategy <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoutingStrategy() {
@@ -58,9 +58,9 @@ public class EmbeddingConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>模型内路由策略</p>
+     * Set <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoutingStrategy <p>模型内路由策略</p>
+     * @param RoutingStrategy <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoutingStrategy(String RoutingStrategy) {
@@ -88,9 +88,9 @@ public class EmbeddingConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>同一模型请求重试次数</p>
+     * Get <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumRetries <p>同一模型请求重试次数</p>
+     * @return NumRetries <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumRetries() {
@@ -98,9 +98,9 @@ public class EmbeddingConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>同一模型请求重试次数</p>
+     * Set <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumRetries <p>同一模型请求重试次数</p>
+     * @param NumRetries <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumRetries(Long NumRetries) {

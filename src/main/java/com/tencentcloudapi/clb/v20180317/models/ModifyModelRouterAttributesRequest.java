@@ -66,18 +66,39 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * <p>模型输出模态</p>
+    * <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
     */
     @SerializedName("Capability")
     @Expose
     private String Capability;
 
     /**
-    * <p>embedding 模态配置</p>
+    * <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
     */
     @SerializedName("EmbeddingConfig")
     @Expose
     private EmbeddingConfig EmbeddingConfig;
+
+    /**
+    * <p>Video 调度配置</p>
+    */
+    @SerializedName("VideoConfig")
+    @Expose
+    private VideoConfig VideoConfig;
+
+    /**
+    * <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+    */
+    @SerializedName("RerankConfig")
+    @Expose
+    private RerankConfig RerankConfig;
+
+    /**
+    * <p>Decisions 调度配置</p>
+    */
+    @SerializedName("DecisionsConfig")
+    @Expose
+    private DecisionsConfig DecisionsConfig;
 
     /**
      * Get <p>模型路由ID</p> 
@@ -176,35 +197,83 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>模型输出模态</p> 
-     * @return Capability <p>模型输出模态</p>
+     * Get <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul> 
+     * @return Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public String getCapability() {
         return this.Capability;
     }
 
     /**
-     * Set <p>模型输出模态</p>
-     * @param Capability <p>模型输出模态</p>
+     * Set <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+     * @param Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public void setCapability(String Capability) {
         this.Capability = Capability;
     }
 
     /**
-     * Get <p>embedding 模态配置</p> 
-     * @return EmbeddingConfig <p>embedding 模态配置</p>
+     * Get <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p> 
+     * @return EmbeddingConfig <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
      */
     public EmbeddingConfig getEmbeddingConfig() {
         return this.EmbeddingConfig;
     }
 
     /**
-     * Set <p>embedding 模态配置</p>
-     * @param EmbeddingConfig <p>embedding 模态配置</p>
+     * Set <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
+     * @param EmbeddingConfig <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
      */
     public void setEmbeddingConfig(EmbeddingConfig EmbeddingConfig) {
         this.EmbeddingConfig = EmbeddingConfig;
+    }
+
+    /**
+     * Get <p>Video 调度配置</p> 
+     * @return VideoConfig <p>Video 调度配置</p>
+     */
+    public VideoConfig getVideoConfig() {
+        return this.VideoConfig;
+    }
+
+    /**
+     * Set <p>Video 调度配置</p>
+     * @param VideoConfig <p>Video 调度配置</p>
+     */
+    public void setVideoConfig(VideoConfig VideoConfig) {
+        this.VideoConfig = VideoConfig;
+    }
+
+    /**
+     * Get <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p> 
+     * @return RerankConfig <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+     */
+    public RerankConfig getRerankConfig() {
+        return this.RerankConfig;
+    }
+
+    /**
+     * Set <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+     * @param RerankConfig <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+     */
+    public void setRerankConfig(RerankConfig RerankConfig) {
+        this.RerankConfig = RerankConfig;
+    }
+
+    /**
+     * Get <p>Decisions 调度配置</p> 
+     * @return DecisionsConfig <p>Decisions 调度配置</p>
+     */
+    public DecisionsConfig getDecisionsConfig() {
+        return this.DecisionsConfig;
+    }
+
+    /**
+     * Set <p>Decisions 调度配置</p>
+     * @param DecisionsConfig <p>Decisions 调度配置</p>
+     */
+    public void setDecisionsConfig(DecisionsConfig DecisionsConfig) {
+        this.DecisionsConfig = DecisionsConfig;
     }
 
     public ModifyModelRouterAttributesRequest() {
@@ -239,6 +308,15 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         if (source.EmbeddingConfig != null) {
             this.EmbeddingConfig = new EmbeddingConfig(source.EmbeddingConfig);
         }
+        if (source.VideoConfig != null) {
+            this.VideoConfig = new VideoConfig(source.VideoConfig);
+        }
+        if (source.RerankConfig != null) {
+            this.RerankConfig = new RerankConfig(source.RerankConfig);
+        }
+        if (source.DecisionsConfig != null) {
+            this.DecisionsConfig = new DecisionsConfig(source.DecisionsConfig);
+        }
     }
 
 
@@ -254,6 +332,9 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Capability", this.Capability);
         this.setParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
+        this.setParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
+        this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
+        this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
 
     }
 }

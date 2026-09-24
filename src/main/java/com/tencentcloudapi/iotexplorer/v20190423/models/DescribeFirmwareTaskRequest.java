@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeFirmwareTaskRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductID")
     @Expose
     private String ProductID;
 
     /**
-    * 固件版本号
+    * <p>固件版本号</p>
     */
     @SerializedName("FirmwareVersion")
     @Expose
     private String FirmwareVersion;
 
     /**
-    * 固件任务ID
+    * <p>固件任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 产品ID 
-     * @return ProductID 产品ID
+     * Get <p>产品ID</p> 
+     * @return ProductID <p>产品ID</p>
      */
     public String getProductID() {
         return this.ProductID;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductID 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductID <p>产品ID</p>
      */
     public void setProductID(String ProductID) {
         this.ProductID = ProductID;
     }
 
     /**
-     * Get 固件版本号 
-     * @return FirmwareVersion 固件版本号
+     * Get <p>固件版本号</p> 
+     * @return FirmwareVersion <p>固件版本号</p>
      */
     public String getFirmwareVersion() {
         return this.FirmwareVersion;
     }
 
     /**
-     * Set 固件版本号
-     * @param FirmwareVersion 固件版本号
+     * Set <p>固件版本号</p>
+     * @param FirmwareVersion <p>固件版本号</p>
      */
     public void setFirmwareVersion(String FirmwareVersion) {
         this.FirmwareVersion = FirmwareVersion;
     }
 
     /**
-     * Get 固件任务ID 
-     * @return TaskId 固件任务ID
+     * Get <p>固件任务ID</p> 
+     * @return TaskId <p>固件任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 固件任务ID
-     * @param TaskId 固件任务ID
+     * Set <p>固件任务ID</p>
+     * @param TaskId <p>固件任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

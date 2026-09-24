@@ -24,137 +24,151 @@ import java.util.HashMap;
 public class DescribeFirmwareTaskResponse extends AbstractModel {
 
     /**
-    * 固件任务ID
+    * <p>固件任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 固件任务状态
+    * <p>固件任务状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 固件任务创建时间，单位：秒
+    * <p>固件任务创建时间，单位：秒</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 固件任务升级类型
+    * <p>固件任务升级类型</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 产品名称
+    * <p>产品名称</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
+    * <p>固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）</p>
     */
     @SerializedName("UpgradeMode")
     @Expose
     private String UpgradeMode;
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
+    * <p>原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回</p>
     */
     @SerializedName("OriginalVersion")
     @Expose
     private String OriginalVersion;
 
     /**
-    * 创建账号ID
+    * <p>创建账号ID</p>
     */
     @SerializedName("CreateUserId")
     @Expose
     private Long CreateUserId;
 
     /**
-    * 创建账号ID昵称
+    * <p>创建账号ID昵称</p>
     */
     @SerializedName("CreatorNickName")
     @Expose
     private String CreatorNickName;
 
     /**
-    * 延迟时间
+    * <p>延迟时间</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * 超时时间
+    * <p>超时时间</p>
     */
     @SerializedName("TimeoutInterval")
     @Expose
     private Long TimeoutInterval;
 
     /**
-    * 静默升级or用户确认升级
+    * <p>静默升级or用户确认升级</p>
     */
     @SerializedName("UpgradeMethod")
     @Expose
     private Long UpgradeMethod;
 
     /**
-    * 最大重试次数
+    * <p>最大重试次数</p>
     */
     @SerializedName("MaxRetryNum")
     @Expose
     private Long MaxRetryNum;
 
     /**
-    * 固件类型
+    * <p>固件类型</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-    * 重试间隔时间单位min
+    * <p>重试间隔时间单位min</p>
     */
     @SerializedName("RetryInterval")
     @Expose
     private Long RetryInterval;
 
     /**
-    * 是否覆盖任务
+    * <p>是否覆盖任务</p>
     */
     @SerializedName("OverrideMode")
     @Expose
     private Long OverrideMode;
 
     /**
-    * 用户自定义消息
+    * <p>用户自定义消息</p>
     */
     @SerializedName("TaskUserDefine")
     @Expose
     private String TaskUserDefine;
 
     /**
-    * 每分钟发送设备量
+    * <p>每分钟发送设备量</p>
     */
     @SerializedName("RateLimit")
     @Expose
     private Long RateLimit;
+
+    /**
+    * <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。 </p><p>单位：秒</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。 </p><p>单位：秒</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -164,307 +178,339 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 固件任务ID 
-     * @return TaskId 固件任务ID
+     * Get <p>固件任务ID</p> 
+     * @return TaskId <p>固件任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 固件任务ID
-     * @param TaskId 固件任务ID
+     * Set <p>固件任务ID</p>
+     * @param TaskId <p>固件任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 固件任务状态 
-     * @return Status 固件任务状态
+     * Get <p>固件任务状态</p> 
+     * @return Status <p>固件任务状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 固件任务状态
-     * @param Status 固件任务状态
+     * Set <p>固件任务状态</p>
+     * @param Status <p>固件任务状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 固件任务创建时间，单位：秒 
-     * @return CreateTime 固件任务创建时间，单位：秒
+     * Get <p>固件任务创建时间，单位：秒</p> 
+     * @return CreateTime <p>固件任务创建时间，单位：秒</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 固件任务创建时间，单位：秒
-     * @param CreateTime 固件任务创建时间，单位：秒
+     * Set <p>固件任务创建时间，单位：秒</p>
+     * @param CreateTime <p>固件任务创建时间，单位：秒</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 固件任务升级类型 
-     * @return Type 固件任务升级类型
+     * Get <p>固件任务升级类型</p> 
+     * @return Type <p>固件任务升级类型</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 固件任务升级类型
-     * @param Type 固件任务升级类型
+     * Set <p>固件任务升级类型</p>
+     * @param Type <p>固件任务升级类型</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 产品名称 
-     * @return ProductName 产品名称
+     * Get <p>产品名称</p> 
+     * @return ProductName <p>产品名称</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 产品名称
-     * @param ProductName 产品名称
+     * Set <p>产品名称</p>
+     * @param ProductName <p>产品名称</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级） 
-     * @return UpgradeMode 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
+     * Get <p>固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）</p> 
+     * @return UpgradeMode <p>固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）</p>
      */
     public String getUpgradeMode() {
         return this.UpgradeMode;
     }
 
     /**
-     * Set 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-     * @param UpgradeMode 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
+     * Set <p>固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）</p>
+     * @param UpgradeMode <p>固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）</p>
      */
     public void setUpgradeMode(String UpgradeMode) {
         this.UpgradeMode = UpgradeMode;
     }
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回 
-     * @return OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
+     * Get <p>原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回</p> 
+     * @return OriginalVersion <p>原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回</p>
      */
     public String getOriginalVersion() {
         return this.OriginalVersion;
     }
 
     /**
-     * Set 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-     * @param OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
+     * Set <p>原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回</p>
+     * @param OriginalVersion <p>原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回</p>
      */
     public void setOriginalVersion(String OriginalVersion) {
         this.OriginalVersion = OriginalVersion;
     }
 
     /**
-     * Get 创建账号ID 
-     * @return CreateUserId 创建账号ID
+     * Get <p>创建账号ID</p> 
+     * @return CreateUserId <p>创建账号ID</p>
      */
     public Long getCreateUserId() {
         return this.CreateUserId;
     }
 
     /**
-     * Set 创建账号ID
-     * @param CreateUserId 创建账号ID
+     * Set <p>创建账号ID</p>
+     * @param CreateUserId <p>创建账号ID</p>
      */
     public void setCreateUserId(Long CreateUserId) {
         this.CreateUserId = CreateUserId;
     }
 
     /**
-     * Get 创建账号ID昵称 
-     * @return CreatorNickName 创建账号ID昵称
+     * Get <p>创建账号ID昵称</p> 
+     * @return CreatorNickName <p>创建账号ID昵称</p>
      */
     public String getCreatorNickName() {
         return this.CreatorNickName;
     }
 
     /**
-     * Set 创建账号ID昵称
-     * @param CreatorNickName 创建账号ID昵称
+     * Set <p>创建账号ID昵称</p>
+     * @param CreatorNickName <p>创建账号ID昵称</p>
      */
     public void setCreatorNickName(String CreatorNickName) {
         this.CreatorNickName = CreatorNickName;
     }
 
     /**
-     * Get 延迟时间 
-     * @return DelayTime 延迟时间
+     * Get <p>延迟时间</p> 
+     * @return DelayTime <p>延迟时间</p>
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 延迟时间
-     * @param DelayTime 延迟时间
+     * Set <p>延迟时间</p>
+     * @param DelayTime <p>延迟时间</p>
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 超时时间 
-     * @return TimeoutInterval 超时时间
+     * Get <p>超时时间</p> 
+     * @return TimeoutInterval <p>超时时间</p>
      */
     public Long getTimeoutInterval() {
         return this.TimeoutInterval;
     }
 
     /**
-     * Set 超时时间
-     * @param TimeoutInterval 超时时间
+     * Set <p>超时时间</p>
+     * @param TimeoutInterval <p>超时时间</p>
      */
     public void setTimeoutInterval(Long TimeoutInterval) {
         this.TimeoutInterval = TimeoutInterval;
     }
 
     /**
-     * Get 静默升级or用户确认升级 
-     * @return UpgradeMethod 静默升级or用户确认升级
+     * Get <p>静默升级or用户确认升级</p> 
+     * @return UpgradeMethod <p>静默升级or用户确认升级</p>
      */
     public Long getUpgradeMethod() {
         return this.UpgradeMethod;
     }
 
     /**
-     * Set 静默升级or用户确认升级
-     * @param UpgradeMethod 静默升级or用户确认升级
+     * Set <p>静默升级or用户确认升级</p>
+     * @param UpgradeMethod <p>静默升级or用户确认升级</p>
      */
     public void setUpgradeMethod(Long UpgradeMethod) {
         this.UpgradeMethod = UpgradeMethod;
     }
 
     /**
-     * Get 最大重试次数 
-     * @return MaxRetryNum 最大重试次数
+     * Get <p>最大重试次数</p> 
+     * @return MaxRetryNum <p>最大重试次数</p>
      */
     public Long getMaxRetryNum() {
         return this.MaxRetryNum;
     }
 
     /**
-     * Set 最大重试次数
-     * @param MaxRetryNum 最大重试次数
+     * Set <p>最大重试次数</p>
+     * @param MaxRetryNum <p>最大重试次数</p>
      */
     public void setMaxRetryNum(Long MaxRetryNum) {
         this.MaxRetryNum = MaxRetryNum;
     }
 
     /**
-     * Get 固件类型 
-     * @return FwType 固件类型
+     * Get <p>固件类型</p> 
+     * @return FwType <p>固件类型</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set 固件类型
-     * @param FwType 固件类型
+     * Set <p>固件类型</p>
+     * @param FwType <p>固件类型</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 重试间隔时间单位min 
-     * @return RetryInterval 重试间隔时间单位min
+     * Get <p>重试间隔时间单位min</p> 
+     * @return RetryInterval <p>重试间隔时间单位min</p>
      */
     public Long getRetryInterval() {
         return this.RetryInterval;
     }
 
     /**
-     * Set 重试间隔时间单位min
-     * @param RetryInterval 重试间隔时间单位min
+     * Set <p>重试间隔时间单位min</p>
+     * @param RetryInterval <p>重试间隔时间单位min</p>
      */
     public void setRetryInterval(Long RetryInterval) {
         this.RetryInterval = RetryInterval;
     }
 
     /**
-     * Get 是否覆盖任务 
-     * @return OverrideMode 是否覆盖任务
+     * Get <p>是否覆盖任务</p> 
+     * @return OverrideMode <p>是否覆盖任务</p>
      */
     public Long getOverrideMode() {
         return this.OverrideMode;
     }
 
     /**
-     * Set 是否覆盖任务
-     * @param OverrideMode 是否覆盖任务
+     * Set <p>是否覆盖任务</p>
+     * @param OverrideMode <p>是否覆盖任务</p>
      */
     public void setOverrideMode(Long OverrideMode) {
         this.OverrideMode = OverrideMode;
     }
 
     /**
-     * Get 用户自定义消息 
-     * @return TaskUserDefine 用户自定义消息
+     * Get <p>用户自定义消息</p> 
+     * @return TaskUserDefine <p>用户自定义消息</p>
      */
     public String getTaskUserDefine() {
         return this.TaskUserDefine;
     }
 
     /**
-     * Set 用户自定义消息
-     * @param TaskUserDefine 用户自定义消息
+     * Set <p>用户自定义消息</p>
+     * @param TaskUserDefine <p>用户自定义消息</p>
      */
     public void setTaskUserDefine(String TaskUserDefine) {
         this.TaskUserDefine = TaskUserDefine;
     }
 
     /**
-     * Get 每分钟发送设备量 
-     * @return RateLimit 每分钟发送设备量
+     * Get <p>每分钟发送设备量</p> 
+     * @return RateLimit <p>每分钟发送设备量</p>
      */
     public Long getRateLimit() {
         return this.RateLimit;
     }
 
     /**
-     * Set 每分钟发送设备量
-     * @param RateLimit 每分钟发送设备量
+     * Set <p>每分钟发送设备量</p>
+     * @param RateLimit <p>每分钟发送设备量</p>
      */
     public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
+    }
+
+    /**
+     * Get <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。 </p><p>单位：秒</p> 
+     * @return EndTime <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。 </p><p>单位：秒</p>
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。 </p><p>单位：秒</p>
+     * @param EndTime <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。 </p><p>单位：秒</p>
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。 </p><p>单位：秒</p> 
+     * @return StartTime <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。 </p><p>单位：秒</p>
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。 </p><p>单位：秒</p>
+     * @param StartTime <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。 </p><p>单位：秒</p>
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
     }
 
     /**
@@ -548,6 +594,12 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
         if (source.RateLimit != null) {
             this.RateLimit = new Long(source.RateLimit);
         }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -577,6 +629,8 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "OverrideMode", this.OverrideMode);
         this.setParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
         this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

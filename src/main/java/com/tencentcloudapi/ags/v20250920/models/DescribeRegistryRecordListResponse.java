@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeRegistryRecordListResponse extends AbstractModel {
 
     /**
+    * <p>Record 对象数组。</p>
+    */
+    @SerializedName("RecordSet")
+    @Expose
+    private CloudRecord [] RecordSet;
+
+    /**
+    * <p>符合条件的总数。</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>Record 对象数组。</p> 
+     * @return RecordSet <p>Record 对象数组。</p>
+     */
+    public CloudRecord [] getRecordSet() {
+        return this.RecordSet;
+    }
+
+    /**
+     * Set <p>Record 对象数组。</p>
+     * @param RecordSet <p>Record 对象数组。</p>
+     */
+    public void setRecordSet(CloudRecord [] RecordSet) {
+        this.RecordSet = RecordSet;
+    }
+
+    /**
+     * Get <p>符合条件的总数。</p> 
+     * @return TotalCount <p>符合条件的总数。</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>符合条件的总数。</p>
+     * @param TotalCount <p>符合条件的总数。</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeRegistryRecordListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRegistryRecordListResponse(DescribeRegistryRecordListResponse source) {
+        if (source.RecordSet != null) {
+            this.RecordSet = new CloudRecord[source.RecordSet.length];
+            for (int i = 0; i < source.RecordSet.length; i++) {
+                this.RecordSet[i] = new CloudRecord(source.RecordSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeRegistryRecordListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "RecordSet.", this.RecordSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

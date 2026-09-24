@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAndroidInstancesResponse extends AbstractModel {
 
     /**
-    * 实例总数量
+    * <p>实例总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例列表
+    * <p>实例列表</p>
     */
     @SerializedName("AndroidInstances")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAndroidInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例总数量 
-     * @return TotalCount 实例总数量
+     * Get <p>实例总数量</p> 
+     * @return TotalCount <p>实例总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例总数量
-     * @param TotalCount 实例总数量
+     * Set <p>实例总数量</p>
+     * @param TotalCount <p>实例总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例列表 
-     * @return AndroidInstances 实例列表
+     * Get <p>实例列表</p> 
+     * @return AndroidInstances <p>实例列表</p>
      */
     public AndroidInstance [] getAndroidInstances() {
         return this.AndroidInstances;
     }
 
     /**
-     * Set 实例列表
-     * @param AndroidInstances 实例列表
+     * Set <p>实例列表</p>
+     * @param AndroidInstances <p>实例列表</p>
      */
     public void setAndroidInstances(AndroidInstance [] AndroidInstances) {
         this.AndroidInstances = AndroidInstances;

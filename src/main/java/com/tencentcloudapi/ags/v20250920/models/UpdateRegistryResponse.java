@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class UpdateRegistryResponse extends AbstractModel {
 
     /**
+    * <p>更新后的 Registry 详情。</p>
+    */
+    @SerializedName("Registry")
+    @Expose
+    private CloudRegistry Registry;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>更新后的 Registry 详情。</p> 
+     * @return Registry <p>更新后的 Registry 详情。</p>
+     */
+    public CloudRegistry getRegistry() {
+        return this.Registry;
+    }
+
+    /**
+     * Set <p>更新后的 Registry 详情。</p>
+     * @param Registry <p>更新后的 Registry 详情。</p>
+     */
+    public void setRegistry(CloudRegistry Registry) {
+        this.Registry = Registry;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class UpdateRegistryResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateRegistryResponse(UpdateRegistryResponse source) {
+        if (source.Registry != null) {
+            this.Registry = new CloudRegistry(source.Registry);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class UpdateRegistryResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Registry.", this.Registry);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

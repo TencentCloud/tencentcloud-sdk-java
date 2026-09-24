@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteConsoleGroupsRequest extends AbstractModel {
 
     /**
-    * <p>要删除的用户组 ID 列表</p>
+    * <p>要删除的用户组 ID 列表，单次最多100个</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-     * Get <p>要删除的用户组 ID 列表</p> 
-     * @return GroupIds <p>要删除的用户组 ID 列表</p>
+     * Get <p>要删除的用户组 ID 列表，单次最多100个</p> 
+     * @return GroupIds <p>要删除的用户组 ID 列表，单次最多100个</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set <p>要删除的用户组 ID 列表</p>
-     * @param GroupIds <p>要删除的用户组 ID 列表</p>
+     * Set <p>要删除的用户组 ID 列表，单次最多100个</p>
+     * @param GroupIds <p>要删除的用户组 ID 列表，单次最多100个</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

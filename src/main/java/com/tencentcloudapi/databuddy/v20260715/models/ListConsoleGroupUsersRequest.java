@@ -45,7 +45,7 @@ public class ListConsoleGroupUsersRequest extends AbstractModel {
     private String [] UserUins;
 
     /**
-    * <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+    * <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
     */
     @SerializedName("OrderBys")
     @Expose
@@ -59,7 +59,7 @@ public class ListConsoleGroupUsersRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * <p>每页大小，默认10，最小10，最大200</p>
+    * <p>每页大小，默认10，最小10，最大100</p>
     */
     @SerializedName("PageSize")
     @Expose
@@ -114,16 +114,16 @@ public class ListConsoleGroupUsersRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p> 
-     * @return OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+     * Get <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p> 
+     * @return OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
      */
     public OrderBy [] getOrderBys() {
         return this.OrderBys;
     }
 
     /**
-     * Set <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
-     * @param OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+     * Set <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
+     * @param OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
      */
     public void setOrderBys(OrderBy [] OrderBys) {
         this.OrderBys = OrderBys;
@@ -146,16 +146,16 @@ public class ListConsoleGroupUsersRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>每页大小，默认10，最小10，最大200</p> 
-     * @return PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * Get <p>每页大小，默认10，最小10，最大100</p> 
+     * @return PageSize <p>每页大小，默认10，最小10，最大100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set <p>每页大小，默认10，最小10，最大200</p>
-     * @param PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * Set <p>每页大小，默认10，最小10，最大100</p>
+     * @param PageSize <p>每页大小，默认10，最小10，最大100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

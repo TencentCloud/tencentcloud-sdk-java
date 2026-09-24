@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeSlowLogUserHostStatsResponse extends AbstractModel {
 
     /**
-    * 来源地址数目。
+    * <p>来源地址数目。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 各来源地址的慢日志占比详情列表。
+    * <p>各来源地址的慢日志占比详情列表。</p>
     */
     @SerializedName("Items")
     @Expose
     private SlowLogHost [] Items;
 
     /**
-    * 各来源用户名的慢日志占比详情列表。
+    * <p>各来源用户名的慢日志占比详情列表。</p>
     */
     @SerializedName("UserNameItems")
     @Expose
     private SlowLogUser [] UserNameItems;
 
     /**
-    * 来源用户数目。
+    * <p>来源用户数目。</p>
     */
     @SerializedName("UserTotalCount")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 来源地址数目。 
-     * @return TotalCount 来源地址数目。
+     * Get <p>来源地址数目。</p> 
+     * @return TotalCount <p>来源地址数目。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 来源地址数目。
-     * @param TotalCount 来源地址数目。
+     * Set <p>来源地址数目。</p>
+     * @param TotalCount <p>来源地址数目。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 各来源地址的慢日志占比详情列表。 
-     * @return Items 各来源地址的慢日志占比详情列表。
+     * Get <p>各来源地址的慢日志占比详情列表。</p> 
+     * @return Items <p>各来源地址的慢日志占比详情列表。</p>
      */
     public SlowLogHost [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 各来源地址的慢日志占比详情列表。
-     * @param Items 各来源地址的慢日志占比详情列表。
+     * Set <p>各来源地址的慢日志占比详情列表。</p>
+     * @param Items <p>各来源地址的慢日志占比详情列表。</p>
      */
     public void setItems(SlowLogHost [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 各来源用户名的慢日志占比详情列表。 
-     * @return UserNameItems 各来源用户名的慢日志占比详情列表。
+     * Get <p>各来源用户名的慢日志占比详情列表。</p> 
+     * @return UserNameItems <p>各来源用户名的慢日志占比详情列表。</p>
      */
     public SlowLogUser [] getUserNameItems() {
         return this.UserNameItems;
     }
 
     /**
-     * Set 各来源用户名的慢日志占比详情列表。
-     * @param UserNameItems 各来源用户名的慢日志占比详情列表。
+     * Set <p>各来源用户名的慢日志占比详情列表。</p>
+     * @param UserNameItems <p>各来源用户名的慢日志占比详情列表。</p>
      */
     public void setUserNameItems(SlowLogUser [] UserNameItems) {
         this.UserNameItems = UserNameItems;
     }
 
     /**
-     * Get 来源用户数目。 
-     * @return UserTotalCount 来源用户数目。
+     * Get <p>来源用户数目。</p> 
+     * @return UserTotalCount <p>来源用户数目。</p>
      */
     public Long getUserTotalCount() {
         return this.UserTotalCount;
     }
 
     /**
-     * Set 来源用户数目。
-     * @param UserTotalCount 来源用户数目。
+     * Set <p>来源用户数目。</p>
+     * @param UserTotalCount <p>来源用户数目。</p>
      */
     public void setUserTotalCount(Long UserTotalCount) {
         this.UserTotalCount = UserTotalCount;

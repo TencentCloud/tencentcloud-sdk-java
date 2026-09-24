@@ -38,6 +38,13 @@ public class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractMo
     private Long Total;
 
     /**
+    * <p>视频播放URL</p>
+    */
+    @SerializedName("VideoURL")
+    @Expose
+    private String VideoURL;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractMo
     }
 
     /**
+     * Get <p>视频播放URL</p> 
+     * @return VideoURL <p>视频播放URL</p>
+     */
+    public String getVideoURL() {
+        return this.VideoURL;
+    }
+
+    /**
+     * Set <p>视频播放URL</p>
+     * @param VideoURL <p>视频播放URL</p>
+     */
+    public void setVideoURL(String VideoURL) {
+        this.VideoURL = VideoURL;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractMo
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.VideoURL != null) {
+            this.VideoURL = new String(source.VideoURL);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractMo
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "VideoURL", this.VideoURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

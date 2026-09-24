@@ -153,6 +153,9 @@ public enum IoaErrorCode {
      /* 没有业务资源权限。 */
      UNAUTHORIZEDOPERATION_NORESOURCEPERMISSIONS("UnauthorizedOperation.NoResourcePermissions"),
      
+     /* 当前业务资源无权限。 */
+     UNAUTHORIZEDOPERATION_NORESOURCEPERMISSIONSD("UnauthorizedOperation.NoResourcePermissionsd"),
+     
      /* 未授权的操作。 */
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
      

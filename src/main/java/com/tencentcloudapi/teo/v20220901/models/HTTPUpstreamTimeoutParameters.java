@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class HTTPUpstreamTimeoutParameters extends AbstractModel {
 
     /**
-    * HTTP 应答超时时间，单位为秒，取值：5～600。
+    * <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
     */
     @SerializedName("ResponseTimeout")
     @Expose
     private Long ResponseTimeout;
 
     /**
-     * Get HTTP 应答超时时间，单位为秒，取值：5～600。 
-     * @return ResponseTimeout HTTP 应答超时时间，单位为秒，取值：5～600。
+     * Get <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p> 
+     * @return ResponseTimeout <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
      */
     public Long getResponseTimeout() {
         return this.ResponseTimeout;
     }
 
     /**
-     * Set HTTP 应答超时时间，单位为秒，取值：5～600。
-     * @param ResponseTimeout HTTP 应答超时时间，单位为秒，取值：5～600。
+     * Set <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
+     * @param ResponseTimeout <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
      */
     public void setResponseTimeout(Long ResponseTimeout) {
         this.ResponseTimeout = ResponseTimeout;

@@ -199,6 +199,13 @@ public class AgentInstance extends AbstractModel {
     private Boolean DeploymentFree;
 
     /**
+    * <p>agent memory 服务详情</p>
+    */
+    @SerializedName("AgentMem")
+    @Expose
+    private AgentMemInfo AgentMem;
+
+    /**
      * Get <p>智能体实例ID</p> 
      * @return InstanceId <p>智能体实例ID</p>
      */
@@ -598,6 +605,22 @@ public class AgentInstance extends AbstractModel {
         this.DeploymentFree = DeploymentFree;
     }
 
+    /**
+     * Get <p>agent memory 服务详情</p> 
+     * @return AgentMem <p>agent memory 服务详情</p>
+     */
+    public AgentMemInfo getAgentMem() {
+        return this.AgentMem;
+    }
+
+    /**
+     * Set <p>agent memory 服务详情</p>
+     * @param AgentMem <p>agent memory 服务详情</p>
+     */
+    public void setAgentMem(AgentMemInfo AgentMem) {
+        this.AgentMem = AgentMem;
+    }
+
     public AgentInstance() {
     }
 
@@ -696,6 +719,9 @@ public class AgentInstance extends AbstractModel {
         if (source.DeploymentFree != null) {
             this.DeploymentFree = new Boolean(source.DeploymentFree);
         }
+        if (source.AgentMem != null) {
+            this.AgentMem = new AgentMemInfo(source.AgentMem);
+        }
     }
 
 
@@ -728,6 +754,7 @@ public class AgentInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
         this.setParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
+        this.setParamObj(map, prefix + "AgentMem.", this.AgentMem);
 
     }
 }

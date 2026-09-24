@@ -24,176 +24,161 @@ import java.util.HashMap;
 public class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
+    * <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+    * <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+    * <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * Proxy节点ID。
+    * <p>Proxy节点ID。</p>
     */
     @SerializedName("InstanceProxyId")
     @Expose
     private String InstanceProxyId;
 
     /**
-    * 实例节点ID。
+    * <p>实例节点ID。</p>
     */
     @SerializedName("InstanceNodeId")
     @Expose
     private String InstanceNodeId;
 
     /**
-    * 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
+    * <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。 
-     * @return StartTime 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
+     * Get <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p> 
+     * @return StartTime <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
-     * @param StartTime 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
+     * Set <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
+     * @param StartTime <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。 
-     * @return EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+     * Get <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p> 
+     * @return EndTime <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
-     * @param EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+     * Set <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
+     * @param EndTime <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。 
-     * @return Product "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+     * Get <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
-     * @param Product "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+     * Set <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get Proxy节点ID。 
-     * @return InstanceProxyId Proxy节点ID。
+     * Get <p>Proxy节点ID。</p> 
+     * @return InstanceProxyId <p>Proxy节点ID。</p>
      */
     public String getInstanceProxyId() {
         return this.InstanceProxyId;
     }
 
     /**
-     * Set Proxy节点ID。
-     * @param InstanceProxyId Proxy节点ID。
+     * Set <p>Proxy节点ID。</p>
+     * @param InstanceProxyId <p>Proxy节点ID。</p>
      */
     public void setInstanceProxyId(String InstanceProxyId) {
         this.InstanceProxyId = InstanceProxyId;
     }
 
     /**
-     * Get 实例节点ID。 
-     * @return InstanceNodeId 实例节点ID。
+     * Get <p>实例节点ID。</p> 
+     * @return InstanceNodeId <p>实例节点ID。</p>
      */
     public String getInstanceNodeId() {
         return this.InstanceNodeId;
     }
 
     /**
-     * Set 实例节点ID。
-     * @param InstanceNodeId 实例节点ID。
+     * Set <p>实例节点ID。</p>
+     * @param InstanceNodeId <p>实例节点ID。</p>
      */
     public void setInstanceNodeId(String InstanceNodeId) {
         this.InstanceNodeId = InstanceNodeId;
     }
 
     /**
-     * Get 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点 
-     * @return Type 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
+     * Get <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p> 
+     * @return Type <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
-     * @param Type 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
+     * Set <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
+     * @param Type <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
      */
     public void setType(String Type) {
         this.Type = Type;

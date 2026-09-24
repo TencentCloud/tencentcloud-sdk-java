@@ -59,6 +59,20 @@ public class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractMod
     private Long Offset;
 
     /**
+    * <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
     * <p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
     */
     @SerializedName("ChannelId")
@@ -146,6 +160,38 @@ public class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractMod
     }
 
     /**
+     * Get <p>起始时间（Unix 时间戳）</p><p>单位：秒</p> 
+     * @return StartTime <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+     * @param StartTime <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>结束时间（Unix 时间戳）</p><p>单位：秒</p> 
+     * @return EndTime <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+     * @param EndTime <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * Get <p>通道 ID，非 NVR 设备不填，NVR 设备必填</p> 
      * @return ChannelId <p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
      */
@@ -184,6 +230,12 @@ public class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractMod
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
@@ -199,6 +251,8 @@ public class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractMod
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }

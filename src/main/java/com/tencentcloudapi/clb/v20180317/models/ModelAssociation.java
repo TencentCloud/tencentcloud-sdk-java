@@ -52,7 +52,7 @@ public class ModelAssociation extends AbstractModel {
     private String Type;
 
     /**
-    * <p>输出模态</p>
+    * <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
     */
     @SerializedName("Capability")
     @Expose
@@ -123,16 +123,16 @@ public class ModelAssociation extends AbstractModel {
     }
 
     /**
-     * Get <p>输出模态</p> 
-     * @return Capability <p>输出模态</p>
+     * Get <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul> 
+     * @return Capability <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public String getCapability() {
         return this.Capability;
     }
 
     /**
-     * Set <p>输出模态</p>
-     * @param Capability <p>输出模态</p>
+     * Set <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+     * @param Capability <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public void setCapability(String Capability) {
         this.Capability = Capability;

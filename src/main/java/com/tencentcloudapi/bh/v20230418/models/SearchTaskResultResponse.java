@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchTaskResultResponse extends AbstractModel {
 
     /**
-    * 记录数
+    * <p>记录数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 运维任务执行结果
+    * <p>运维任务执行结果</p>
     */
     @SerializedName("TaskResult")
     @Expose
@@ -45,32 +45,32 @@ public class SearchTaskResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录数 
-     * @return TotalCount 记录数
+     * Get <p>记录数</p> 
+     * @return TotalCount <p>记录数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录数
-     * @param TotalCount 记录数
+     * Set <p>记录数</p>
+     * @param TotalCount <p>记录数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 运维任务执行结果 
-     * @return TaskResult 运维任务执行结果
+     * Get <p>运维任务执行结果</p> 
+     * @return TaskResult <p>运维任务执行结果</p>
      */
     public TaskResult [] getTaskResult() {
         return this.TaskResult;
     }
 
     /**
-     * Set 运维任务执行结果
-     * @param TaskResult 运维任务执行结果
+     * Set <p>运维任务执行结果</p>
+     * @param TaskResult <p>运维任务执行结果</p>
      */
     public void setTaskResult(TaskResult [] TaskResult) {
         this.TaskResult = TaskResult;

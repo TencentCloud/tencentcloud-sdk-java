@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class SeeEventIdFilterConfig extends AbstractModel {
 
     /**
-    * 包含的云存事件 ID 集合
+    * <p>包含的云存事件 ID 集合</p>
     */
     @SerializedName("IncludeOnly")
     @Expose
     private String [] IncludeOnly;
 
     /**
-    * 排除的云存事件 ID 集合
+    * <p>排除的云存事件 ID 集合</p>
     */
     @SerializedName("Exclude")
     @Expose
     private String [] Exclude;
 
     /**
-     * Get 包含的云存事件 ID 集合 
-     * @return IncludeOnly 包含的云存事件 ID 集合
+    * <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+    */
+    @SerializedName("TriggerAt")
+    @Expose
+    private String TriggerAt;
+
+    /**
+     * Get <p>包含的云存事件 ID 集合</p> 
+     * @return IncludeOnly <p>包含的云存事件 ID 集合</p>
      */
     public String [] getIncludeOnly() {
         return this.IncludeOnly;
     }
 
     /**
-     * Set 包含的云存事件 ID 集合
-     * @param IncludeOnly 包含的云存事件 ID 集合
+     * Set <p>包含的云存事件 ID 集合</p>
+     * @param IncludeOnly <p>包含的云存事件 ID 集合</p>
      */
     public void setIncludeOnly(String [] IncludeOnly) {
         this.IncludeOnly = IncludeOnly;
     }
 
     /**
-     * Get 排除的云存事件 ID 集合 
-     * @return Exclude 排除的云存事件 ID 集合
+     * Get <p>排除的云存事件 ID 集合</p> 
+     * @return Exclude <p>排除的云存事件 ID 集合</p>
      */
     public String [] getExclude() {
         return this.Exclude;
     }
 
     /**
-     * Set 排除的云存事件 ID 集合
-     * @param Exclude 排除的云存事件 ID 集合
+     * Set <p>排除的云存事件 ID 集合</p>
+     * @param Exclude <p>排除的云存事件 ID 集合</p>
      */
     public void setExclude(String [] Exclude) {
         this.Exclude = Exclude;
+    }
+
+    /**
+     * Get <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p> 
+     * @return TriggerAt <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+     */
+    public String getTriggerAt() {
+        return this.TriggerAt;
+    }
+
+    /**
+     * Set <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+     * @param TriggerAt <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+     */
+    public void setTriggerAt(String TriggerAt) {
+        this.TriggerAt = TriggerAt;
     }
 
     public SeeEventIdFilterConfig() {
@@ -89,6 +112,9 @@ public class SeeEventIdFilterConfig extends AbstractModel {
                 this.Exclude[i] = new String(source.Exclude[i]);
             }
         }
+        if (source.TriggerAt != null) {
+            this.TriggerAt = new String(source.TriggerAt);
+        }
     }
 
 
@@ -98,6 +124,7 @@ public class SeeEventIdFilterConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IncludeOnly.", this.IncludeOnly);
         this.setParamArraySimple(map, prefix + "Exclude.", this.Exclude);
+        this.setParamSimple(map, prefix + "TriggerAt", this.TriggerAt);
 
     }
 }

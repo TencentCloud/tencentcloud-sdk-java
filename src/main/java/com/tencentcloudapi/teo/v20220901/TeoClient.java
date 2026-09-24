@@ -297,6 +297,21 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建推理服务域名，用于通过自定义域名访问推理服务，一个推理服务下最多支持创建 5 个自定义域名。
+创建成功后，还需完成以下步骤，域名才能正常对外提供访问：
+1. 校验域名 CNAME 配置状态，请参考 [CheckCnameStatus](https://cloud.tencent.com/document/api/1552/94491) 接口；
+2. 验证归属权，请参考 [VerifyOwnership](https://cloud.tencent.com/document/api/1552/98879) 接口；
+3. 配置域名证书，请参考 [ModifyHostsCertificate](https://cloud.tencent.com/document/api/1552/80764) 接口。
+     * @param req CreateInferenceDomainRequest
+     * @return CreateInferenceDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInferenceDomainResponse CreateInferenceDomain(CreateInferenceDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInferenceDomain", CreateInferenceDomainResponse.class);
+    }
+
+    /**
      *创建推理服务，支持设置服务名称、监听端口、容器镜像配置和资源配置，创建成功后提供推理访问地址。
      * @param req CreateInferenceServiceRequest
      * @return CreateInferenceServiceResponse
@@ -1291,6 +1306,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeInferenceAPITokensResponse DescribeInferenceAPITokens(DescribeInferenceAPITokensRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInferenceAPITokens", DescribeInferenceAPITokensResponse.class);
+    }
+
+    /**
+     *查询推理服务域名列表，返回域名的Cname地址、归属权验证和证书等相关信息。
+     * @param req DescribeInferenceDomainsRequest
+     * @return DescribeInferenceDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceDomainsResponse DescribeInferenceDomains(DescribeInferenceDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceDomains", DescribeInferenceDomainsResponse.class);
     }
 
     /**
@@ -2652,6 +2678,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyZoneWorkModeResponse ModifyZoneWorkMode(ModifyZoneWorkModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneWorkMode", ModifyZoneWorkModeResponse.class);
+    }
+
+    /**
+     *操作推理服务域名，支持停止、启用和删除推理服务域名，删除后的资源不可恢复。
+     * @param req OperateInferenceDomainRequest
+     * @return OperateInferenceDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateInferenceDomainResponse OperateInferenceDomain(OperateInferenceDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OperateInferenceDomain", OperateInferenceDomainResponse.class);
     }
 
     /**

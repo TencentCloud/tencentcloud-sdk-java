@@ -143,11 +143,32 @@ public class CreateModelRouterRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * <p>Embedding 配置</p>
+    * <p>Embedding 调度配置</p>
     */
     @SerializedName("EmbeddingConfig")
     @Expose
     private EmbeddingConfig EmbeddingConfig;
+
+    /**
+    * <p>Video 配置</p>
+    */
+    @SerializedName("VideoConfig")
+    @Expose
+    private VideoConfig VideoConfig;
+
+    /**
+    * <p>Rerank 调度配置</p>
+    */
+    @SerializedName("RerankConfig")
+    @Expose
+    private RerankConfig RerankConfig;
+
+    /**
+    * <p>Decisions 调度配置</p>
+    */
+    @SerializedName("DecisionsConfig")
+    @Expose
+    private DecisionsConfig DecisionsConfig;
 
     /**
      * Get <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul> 
@@ -422,19 +443,67 @@ public class CreateModelRouterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Embedding 配置</p> 
-     * @return EmbeddingConfig <p>Embedding 配置</p>
+     * Get <p>Embedding 调度配置</p> 
+     * @return EmbeddingConfig <p>Embedding 调度配置</p>
      */
     public EmbeddingConfig getEmbeddingConfig() {
         return this.EmbeddingConfig;
     }
 
     /**
-     * Set <p>Embedding 配置</p>
-     * @param EmbeddingConfig <p>Embedding 配置</p>
+     * Set <p>Embedding 调度配置</p>
+     * @param EmbeddingConfig <p>Embedding 调度配置</p>
      */
     public void setEmbeddingConfig(EmbeddingConfig EmbeddingConfig) {
         this.EmbeddingConfig = EmbeddingConfig;
+    }
+
+    /**
+     * Get <p>Video 配置</p> 
+     * @return VideoConfig <p>Video 配置</p>
+     */
+    public VideoConfig getVideoConfig() {
+        return this.VideoConfig;
+    }
+
+    /**
+     * Set <p>Video 配置</p>
+     * @param VideoConfig <p>Video 配置</p>
+     */
+    public void setVideoConfig(VideoConfig VideoConfig) {
+        this.VideoConfig = VideoConfig;
+    }
+
+    /**
+     * Get <p>Rerank 调度配置</p> 
+     * @return RerankConfig <p>Rerank 调度配置</p>
+     */
+    public RerankConfig getRerankConfig() {
+        return this.RerankConfig;
+    }
+
+    /**
+     * Set <p>Rerank 调度配置</p>
+     * @param RerankConfig <p>Rerank 调度配置</p>
+     */
+    public void setRerankConfig(RerankConfig RerankConfig) {
+        this.RerankConfig = RerankConfig;
+    }
+
+    /**
+     * Get <p>Decisions 调度配置</p> 
+     * @return DecisionsConfig <p>Decisions 调度配置</p>
+     */
+    public DecisionsConfig getDecisionsConfig() {
+        return this.DecisionsConfig;
+    }
+
+    /**
+     * Set <p>Decisions 调度配置</p>
+     * @param DecisionsConfig <p>Decisions 调度配置</p>
+     */
+    public void setDecisionsConfig(DecisionsConfig DecisionsConfig) {
+        this.DecisionsConfig = DecisionsConfig;
     }
 
     public CreateModelRouterRequest() {
@@ -502,6 +571,15 @@ public class CreateModelRouterRequest extends AbstractModel {
         if (source.EmbeddingConfig != null) {
             this.EmbeddingConfig = new EmbeddingConfig(source.EmbeddingConfig);
         }
+        if (source.VideoConfig != null) {
+            this.VideoConfig = new VideoConfig(source.VideoConfig);
+        }
+        if (source.RerankConfig != null) {
+            this.RerankConfig = new RerankConfig(source.RerankConfig);
+        }
+        if (source.DecisionsConfig != null) {
+            this.DecisionsConfig = new DecisionsConfig(source.DecisionsConfig);
+        }
     }
 
 
@@ -527,6 +605,9 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
+        this.setParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
+        this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
+        this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
 
     }
 }

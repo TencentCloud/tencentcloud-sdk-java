@@ -23,6 +23,121 @@ import java.util.HashMap;
 
 public class DescribeRegistryRecordVersionListRequest extends AbstractModel {
 
+    /**
+    * <p>父 Registry ID。</p>
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private String RegistryId;
+
+    /**
+    * <p>Record ID。</p>
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
+    * <p>分页起始偏移，默认 0。</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * <p>分页条数，默认 20，最大 100。</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * <p>过滤条件。支持：status（按 Version 状态：PREPARING/PENDING_APPROVAL/APPROVED/REJECTED/CANCELED，多值 OR）、source_type（按内容来源：MANUAL/URL_IMPORT/TAR_PACKAGE，多值 OR）。</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private CloudFilter [] Filters;
+
+    /**
+     * Get <p>父 Registry ID。</p> 
+     * @return RegistryId <p>父 Registry ID。</p>
+     */
+    public String getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set <p>父 Registry ID。</p>
+     * @param RegistryId <p>父 Registry ID。</p>
+     */
+    public void setRegistryId(String RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get <p>Record ID。</p> 
+     * @return RecordId <p>Record ID。</p>
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set <p>Record ID。</p>
+     * @param RecordId <p>Record ID。</p>
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
+    }
+
+    /**
+     * Get <p>分页起始偏移，默认 0。</p> 
+     * @return Offset <p>分页起始偏移，默认 0。</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>分页起始偏移，默认 0。</p>
+     * @param Offset <p>分页起始偏移，默认 0。</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>分页条数，默认 20，最大 100。</p> 
+     * @return Limit <p>分页条数，默认 20，最大 100。</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>分页条数，默认 20，最大 100。</p>
+     * @param Limit <p>分页条数，默认 20，最大 100。</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>过滤条件。支持：status（按 Version 状态：PREPARING/PENDING_APPROVAL/APPROVED/REJECTED/CANCELED，多值 OR）、source_type（按内容来源：MANUAL/URL_IMPORT/TAR_PACKAGE，多值 OR）。</p> 
+     * @return Filters <p>过滤条件。支持：status（按 Version 状态：PREPARING/PENDING_APPROVAL/APPROVED/REJECTED/CANCELED，多值 OR）、source_type（按内容来源：MANUAL/URL_IMPORT/TAR_PACKAGE，多值 OR）。</p>
+     */
+    public CloudFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件。支持：status（按 Version 状态：PREPARING/PENDING_APPROVAL/APPROVED/REJECTED/CANCELED，多值 OR）、source_type（按内容来源：MANUAL/URL_IMPORT/TAR_PACKAGE，多值 OR）。</p>
+     * @param Filters <p>过滤条件。支持：status（按 Version 状态：PREPARING/PENDING_APPROVAL/APPROVED/REJECTED/CANCELED，多值 OR）、source_type（按内容来源：MANUAL/URL_IMPORT/TAR_PACKAGE，多值 OR）。</p>
+     */
+    public void setFilters(CloudFilter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeRegistryRecordVersionListRequest() {
     }
 
@@ -31,6 +146,24 @@ public class DescribeRegistryRecordVersionListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRegistryRecordVersionListRequest(DescribeRegistryRecordVersionListRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filters != null) {
+            this.Filters = new CloudFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new CloudFilter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -38,6 +171,11 @@ public class DescribeRegistryRecordVersionListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

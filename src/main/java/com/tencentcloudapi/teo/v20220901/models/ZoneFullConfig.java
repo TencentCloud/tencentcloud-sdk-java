@@ -38,6 +38,13 @@ public class ZoneFullConfig extends AbstractModel {
     private ZoneConfig ZoneConfig;
 
     /**
+    * <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+    */
+    @SerializedName("ZoneCustomVariables")
+    @Expose
+    private ZoneCustomVariables ZoneCustomVariables;
+
+    /**
     * <p>规则级配置，包含「规则引擎」中所有规则，且数组可为空，表示不启用任何规则。</p>
     */
     @SerializedName("Rules")
@@ -88,6 +95,22 @@ public class ZoneFullConfig extends AbstractModel {
      */
     public void setZoneConfig(ZoneConfig ZoneConfig) {
         this.ZoneConfig = ZoneConfig;
+    }
+
+    /**
+     * Get <p>站点级自定义变量配置，包括变量定义和变量运算。</p> 
+     * @return ZoneCustomVariables <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+     */
+    public ZoneCustomVariables getZoneCustomVariables() {
+        return this.ZoneCustomVariables;
+    }
+
+    /**
+     * Set <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+     * @param ZoneCustomVariables <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+     */
+    public void setZoneCustomVariables(ZoneCustomVariables ZoneCustomVariables) {
+        this.ZoneCustomVariables = ZoneCustomVariables;
     }
 
     /**
@@ -152,6 +175,9 @@ public class ZoneFullConfig extends AbstractModel {
         if (source.ZoneConfig != null) {
             this.ZoneConfig = new ZoneConfig(source.ZoneConfig);
         }
+        if (source.ZoneCustomVariables != null) {
+            this.ZoneCustomVariables = new ZoneCustomVariables(source.ZoneCustomVariables);
+        }
         if (source.Rules != null) {
             this.Rules = new ConfigGroupRuleEngineItem[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
@@ -176,6 +202,7 @@ public class ZoneFullConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FormatVersion", this.FormatVersion);
         this.setParamObj(map, prefix + "ZoneConfig.", this.ZoneConfig);
+        this.setParamObj(map, prefix + "ZoneCustomVariables.", this.ZoneCustomVariables);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamObj(map, prefix + "WebSecurity.", this.WebSecurity);
         this.setParamArrayObj(map, prefix + "FunctionTriggers.", this.FunctionTriggers);

@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class UpdateRegistryRequest extends AbstractModel {
 
+    /**
+    * <p>Registry ID。</p>
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private String RegistryId;
+
+    /**
+    * <p>新的描述；必填；最长 4096。</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get <p>Registry ID。</p> 
+     * @return RegistryId <p>Registry ID。</p>
+     */
+    public String getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set <p>Registry ID。</p>
+     * @param RegistryId <p>Registry ID。</p>
+     */
+    public void setRegistryId(String RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get <p>新的描述；必填；最长 4096。</p> 
+     * @return Description <p>新的描述；必填；最长 4096。</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>新的描述；必填；最长 4096。</p>
+     * @param Description <p>新的描述；必填；最长 4096。</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public UpdateRegistryRequest() {
     }
 
@@ -31,6 +77,12 @@ public class UpdateRegistryRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateRegistryRequest(UpdateRegistryRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class UpdateRegistryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

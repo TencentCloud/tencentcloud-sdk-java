@@ -59,7 +59,7 @@ public class UpdateConsoleGroupRequest extends AbstractModel {
     private String Description;
 
     /**
-    * <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+    * <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
     */
     @SerializedName("UserUins")
     @Expose
@@ -146,16 +146,16 @@ public class UpdateConsoleGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p> 
-     * @return UserUins <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+     * Get <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p> 
+     * @return UserUins <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
      */
     public String [] getUserUins() {
         return this.UserUins;
     }
 
     /**
-     * Set <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
-     * @param UserUins <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+     * Set <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
+     * @param UserUins <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
      */
     public void setUserUins(String [] UserUins) {
         this.UserUins = UserUins;

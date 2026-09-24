@@ -93,6 +93,12 @@ public enum WorkbuddyenterpriseErrorCode {
      /* InternalError.Unknown */
      INTERNALERROR_UNKNOWN("InternalError.Unknown"),
      
+     /* InternalError.UserAccessTokenExchangeFailed */
+     INTERNALERROR_USERACCESSTOKENEXCHANGEFAILED("InternalError.UserAccessTokenExchangeFailed"),
+     
+     /* InternalError.UserAccessTokenNotConfigured */
+     INTERNALERROR_USERACCESSTOKENNOTCONFIGURED("InternalError.UserAccessTokenNotConfigured"),
+     
      /* InternalError.VersionOperationFailed */
      INTERNALERROR_VERSIONOPERATIONFAILED("InternalError.VersionOperationFailed"),
      
@@ -173,6 +179,9 @@ public enum WorkbuddyenterpriseErrorCode {
      
      /* InvalidParameterValue.InvalidConnectorStatus */
      INVALIDPARAMETERVALUE_INVALIDCONNECTORSTATUS("InvalidParameterValue.InvalidConnectorStatus"),
+     
+     /* MissingParameter.SubAccountUinRequired */
+     MISSINGPARAMETER_SUBACCOUNTUINREQUIRED("MissingParameter.SubAccountUinRequired"),
      
      /* MissingParameter.UinRequired */
      MISSINGPARAMETER_UINREQUIRED("MissingParameter.UinRequired"),

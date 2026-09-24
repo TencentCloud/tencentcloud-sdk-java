@@ -31,7 +31,7 @@ public class ListConsoleGroupsRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * <p>每页大小，默认10，最小10，最大200</p>
+    * <p>每页大小，默认10，最小10，最大100</p>
     */
     @SerializedName("PageSize")
     @Expose
@@ -75,16 +75,16 @@ public class ListConsoleGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>每页大小，默认10，最小10，最大200</p> 
-     * @return PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * Get <p>每页大小，默认10，最小10，最大100</p> 
+     * @return PageSize <p>每页大小，默认10，最小10，最大100</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set <p>每页大小，默认10，最小10，最大200</p>
-     * @param PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * Set <p>每页大小，默认10，最小10，最大100</p>
+     * @param PageSize <p>每页大小，默认10，最小10，最大100</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

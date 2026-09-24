@@ -24,394 +24,440 @@ import java.util.HashMap;
 public class BatchUpdateFirmwareRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductID")
     @Expose
     private String ProductID;
 
     /**
-    * 固件新版本号
+    * <p>固件新版本号</p>
     */
     @SerializedName("FirmwareVersion")
     @Expose
     private String FirmwareVersion;
 
     /**
-    * 固件原版本号
+    * <p>固件原版本号</p>
     */
     @SerializedName("FirmwareOriVersion")
     @Expose
     private String FirmwareOriVersion;
 
     /**
-    * 升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式
+    * <p>升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式</p>
     */
     @SerializedName("UpgradeMethod")
     @Expose
     private Long UpgradeMethod;
 
     /**
-    * 设备列表文件名称，根据文件列表升级固件需要填写此参数
+    * <p>设备列表文件名称，根据文件列表升级固件需要填写此参数</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 设备列表的文件md5值
+    * <p>设备列表的文件md5值</p>
     */
     @SerializedName("FileMd5")
     @Expose
     private String FileMd5;
 
     /**
-    * 设备列表的文件大小值
+    * <p>设备列表的文件大小值</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 需要升级的设备名称列表
+    * <p>需要升级的设备名称列表</p>
     */
     @SerializedName("DeviceNames")
     @Expose
     private String [] DeviceNames;
 
     /**
-    * 固件升级任务，默认超时时间。 最小取值120秒，最大为900秒
+    * <p>固件升级任务，默认超时时间。 最小取值120秒，最大为900秒</p>
     */
     @SerializedName("TimeoutInterval")
     @Expose
     private Long TimeoutInterval;
 
     /**
-    * 固件升级任务类型，默认静态升级值为空或1，动态升级值为7
+    * <p>固件升级任务类型，默认静态升级值为空或1，动态升级值为7</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 任务延迟时间
+    * <p>任务延迟时间</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * 是否覆盖，0不覆盖，1覆盖
+    * <p>是否覆盖，0不覆盖，1覆盖</p>
     */
     @SerializedName("OverrideMode")
     @Expose
     private Long OverrideMode;
 
     /**
-    * 失败重试次数
+    * <p>失败重试次数</p>
     */
     @SerializedName("MaxRetryNum")
     @Expose
     private Long MaxRetryNum;
 
     /**
-    * 重试间隔min
+    * <p>重试间隔min</p>
     */
     @SerializedName("RetryInterval")
     @Expose
     private Long RetryInterval;
 
     /**
-    * 固件模块
+    * <p>固件模块</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-    * 用户自定义信息
+    * <p>用户自定义信息</p>
     */
     @SerializedName("TaskUserDefine")
     @Expose
     private String TaskUserDefine;
 
     /**
-    * 每分钟下发设备量
+    * <p>每分钟下发设备量</p>
     */
     @SerializedName("RateLimit")
     @Expose
     private Long RateLimit;
 
     /**
-     * Get 产品ID 
-     * @return ProductID 产品ID
+    * <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。</p><p>单位：秒</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。</p><p>单位：秒</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+     * Get <p>产品ID</p> 
+     * @return ProductID <p>产品ID</p>
      */
     public String getProductID() {
         return this.ProductID;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductID 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductID <p>产品ID</p>
      */
     public void setProductID(String ProductID) {
         this.ProductID = ProductID;
     }
 
     /**
-     * Get 固件新版本号 
-     * @return FirmwareVersion 固件新版本号
+     * Get <p>固件新版本号</p> 
+     * @return FirmwareVersion <p>固件新版本号</p>
      */
     public String getFirmwareVersion() {
         return this.FirmwareVersion;
     }
 
     /**
-     * Set 固件新版本号
-     * @param FirmwareVersion 固件新版本号
+     * Set <p>固件新版本号</p>
+     * @param FirmwareVersion <p>固件新版本号</p>
      */
     public void setFirmwareVersion(String FirmwareVersion) {
         this.FirmwareVersion = FirmwareVersion;
     }
 
     /**
-     * Get 固件原版本号 
-     * @return FirmwareOriVersion 固件原版本号
+     * Get <p>固件原版本号</p> 
+     * @return FirmwareOriVersion <p>固件原版本号</p>
      */
     public String getFirmwareOriVersion() {
         return this.FirmwareOriVersion;
     }
 
     /**
-     * Set 固件原版本号
-     * @param FirmwareOriVersion 固件原版本号
+     * Set <p>固件原版本号</p>
+     * @param FirmwareOriVersion <p>固件原版本号</p>
      */
     public void setFirmwareOriVersion(String FirmwareOriVersion) {
         this.FirmwareOriVersion = FirmwareOriVersion;
     }
 
     /**
-     * Get 升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式 
-     * @return UpgradeMethod 升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式
+     * Get <p>升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式</p> 
+     * @return UpgradeMethod <p>升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式</p>
      */
     public Long getUpgradeMethod() {
         return this.UpgradeMethod;
     }
 
     /**
-     * Set 升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式
-     * @param UpgradeMethod 升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式
+     * Set <p>升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式</p>
+     * @param UpgradeMethod <p>升级方式，0 静默升级  1 用户确认升级。 不填默认为静默升级方式</p>
      */
     public void setUpgradeMethod(Long UpgradeMethod) {
         this.UpgradeMethod = UpgradeMethod;
     }
 
     /**
-     * Get 设备列表文件名称，根据文件列表升级固件需要填写此参数 
-     * @return FileName 设备列表文件名称，根据文件列表升级固件需要填写此参数
+     * Get <p>设备列表文件名称，根据文件列表升级固件需要填写此参数</p> 
+     * @return FileName <p>设备列表文件名称，根据文件列表升级固件需要填写此参数</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 设备列表文件名称，根据文件列表升级固件需要填写此参数
-     * @param FileName 设备列表文件名称，根据文件列表升级固件需要填写此参数
+     * Set <p>设备列表文件名称，根据文件列表升级固件需要填写此参数</p>
+     * @param FileName <p>设备列表文件名称，根据文件列表升级固件需要填写此参数</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 设备列表的文件md5值 
-     * @return FileMd5 设备列表的文件md5值
+     * Get <p>设备列表的文件md5值</p> 
+     * @return FileMd5 <p>设备列表的文件md5值</p>
      */
     public String getFileMd5() {
         return this.FileMd5;
     }
 
     /**
-     * Set 设备列表的文件md5值
-     * @param FileMd5 设备列表的文件md5值
+     * Set <p>设备列表的文件md5值</p>
+     * @param FileMd5 <p>设备列表的文件md5值</p>
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get 设备列表的文件大小值 
-     * @return FileSize 设备列表的文件大小值
+     * Get <p>设备列表的文件大小值</p> 
+     * @return FileSize <p>设备列表的文件大小值</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 设备列表的文件大小值
-     * @param FileSize 设备列表的文件大小值
+     * Set <p>设备列表的文件大小值</p>
+     * @param FileSize <p>设备列表的文件大小值</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 需要升级的设备名称列表 
-     * @return DeviceNames 需要升级的设备名称列表
+     * Get <p>需要升级的设备名称列表</p> 
+     * @return DeviceNames <p>需要升级的设备名称列表</p>
      */
     public String [] getDeviceNames() {
         return this.DeviceNames;
     }
 
     /**
-     * Set 需要升级的设备名称列表
-     * @param DeviceNames 需要升级的设备名称列表
+     * Set <p>需要升级的设备名称列表</p>
+     * @param DeviceNames <p>需要升级的设备名称列表</p>
      */
     public void setDeviceNames(String [] DeviceNames) {
         this.DeviceNames = DeviceNames;
     }
 
     /**
-     * Get 固件升级任务，默认超时时间。 最小取值120秒，最大为900秒 
-     * @return TimeoutInterval 固件升级任务，默认超时时间。 最小取值120秒，最大为900秒
+     * Get <p>固件升级任务，默认超时时间。 最小取值120秒，最大为900秒</p> 
+     * @return TimeoutInterval <p>固件升级任务，默认超时时间。 最小取值120秒，最大为900秒</p>
      */
     public Long getTimeoutInterval() {
         return this.TimeoutInterval;
     }
 
     /**
-     * Set 固件升级任务，默认超时时间。 最小取值120秒，最大为900秒
-     * @param TimeoutInterval 固件升级任务，默认超时时间。 最小取值120秒，最大为900秒
+     * Set <p>固件升级任务，默认超时时间。 最小取值120秒，最大为900秒</p>
+     * @param TimeoutInterval <p>固件升级任务，默认超时时间。 最小取值120秒，最大为900秒</p>
      */
     public void setTimeoutInterval(Long TimeoutInterval) {
         this.TimeoutInterval = TimeoutInterval;
     }
 
     /**
-     * Get 固件升级任务类型，默认静态升级值为空或1，动态升级值为7 
-     * @return Type 固件升级任务类型，默认静态升级值为空或1，动态升级值为7
+     * Get <p>固件升级任务类型，默认静态升级值为空或1，动态升级值为7</p> 
+     * @return Type <p>固件升级任务类型，默认静态升级值为空或1，动态升级值为7</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 固件升级任务类型，默认静态升级值为空或1，动态升级值为7
-     * @param Type 固件升级任务类型，默认静态升级值为空或1，动态升级值为7
+     * Set <p>固件升级任务类型，默认静态升级值为空或1，动态升级值为7</p>
+     * @param Type <p>固件升级任务类型，默认静态升级值为空或1，动态升级值为7</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 任务延迟时间 
-     * @return DelayTime 任务延迟时间
+     * Get <p>任务延迟时间</p> 
+     * @return DelayTime <p>任务延迟时间</p>
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 任务延迟时间
-     * @param DelayTime 任务延迟时间
+     * Set <p>任务延迟时间</p>
+     * @param DelayTime <p>任务延迟时间</p>
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 是否覆盖，0不覆盖，1覆盖 
-     * @return OverrideMode 是否覆盖，0不覆盖，1覆盖
+     * Get <p>是否覆盖，0不覆盖，1覆盖</p> 
+     * @return OverrideMode <p>是否覆盖，0不覆盖，1覆盖</p>
      */
     public Long getOverrideMode() {
         return this.OverrideMode;
     }
 
     /**
-     * Set 是否覆盖，0不覆盖，1覆盖
-     * @param OverrideMode 是否覆盖，0不覆盖，1覆盖
+     * Set <p>是否覆盖，0不覆盖，1覆盖</p>
+     * @param OverrideMode <p>是否覆盖，0不覆盖，1覆盖</p>
      */
     public void setOverrideMode(Long OverrideMode) {
         this.OverrideMode = OverrideMode;
     }
 
     /**
-     * Get 失败重试次数 
-     * @return MaxRetryNum 失败重试次数
+     * Get <p>失败重试次数</p> 
+     * @return MaxRetryNum <p>失败重试次数</p>
      */
     public Long getMaxRetryNum() {
         return this.MaxRetryNum;
     }
 
     /**
-     * Set 失败重试次数
-     * @param MaxRetryNum 失败重试次数
+     * Set <p>失败重试次数</p>
+     * @param MaxRetryNum <p>失败重试次数</p>
      */
     public void setMaxRetryNum(Long MaxRetryNum) {
         this.MaxRetryNum = MaxRetryNum;
     }
 
     /**
-     * Get 重试间隔min 
-     * @return RetryInterval 重试间隔min
+     * Get <p>重试间隔min</p> 
+     * @return RetryInterval <p>重试间隔min</p>
      */
     public Long getRetryInterval() {
         return this.RetryInterval;
     }
 
     /**
-     * Set 重试间隔min
-     * @param RetryInterval 重试间隔min
+     * Set <p>重试间隔min</p>
+     * @param RetryInterval <p>重试间隔min</p>
      */
     public void setRetryInterval(Long RetryInterval) {
         this.RetryInterval = RetryInterval;
     }
 
     /**
-     * Get 固件模块 
-     * @return FwType 固件模块
+     * Get <p>固件模块</p> 
+     * @return FwType <p>固件模块</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set 固件模块
-     * @param FwType 固件模块
+     * Set <p>固件模块</p>
+     * @param FwType <p>固件模块</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 用户自定义信息 
-     * @return TaskUserDefine 用户自定义信息
+     * Get <p>用户自定义信息</p> 
+     * @return TaskUserDefine <p>用户自定义信息</p>
      */
     public String getTaskUserDefine() {
         return this.TaskUserDefine;
     }
 
     /**
-     * Set 用户自定义信息
-     * @param TaskUserDefine 用户自定义信息
+     * Set <p>用户自定义信息</p>
+     * @param TaskUserDefine <p>用户自定义信息</p>
      */
     public void setTaskUserDefine(String TaskUserDefine) {
         this.TaskUserDefine = TaskUserDefine;
     }
 
     /**
-     * Get 每分钟下发设备量 
-     * @return RateLimit 每分钟下发设备量
+     * Get <p>每分钟下发设备量</p> 
+     * @return RateLimit <p>每分钟下发设备量</p>
      */
     public Long getRateLimit() {
         return this.RateLimit;
     }
 
     /**
-     * Set 每分钟下发设备量
-     * @param RateLimit 每分钟下发设备量
+     * Set <p>每分钟下发设备量</p>
+     * @param RateLimit <p>每分钟下发设备量</p>
      */
     public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
+    }
+
+    /**
+     * Get <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。</p><p>单位：秒</p> 
+     * @return EndTime <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。</p><p>单位：秒</p>
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。</p><p>单位：秒</p>
+     * @param EndTime <p>任务截止时间，Unix 时间戳（单位：秒）。传入 0 或不传表示不设截止，任务按原重试/超时策略执行完毕。</p><p>单位：秒</p>
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。</p><p>单位：秒</p> 
+     * @return StartTime <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。</p><p>单位：秒</p>
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。</p><p>单位：秒</p>
+     * @param StartTime <p>任务开始调度时间，Unix 时间戳（单位：秒）。传入 0 或不传时任务立即创建执行，与 DelayTime 同时传入时，本参数优先生效。</p><p>单位：秒</p>
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
     }
 
     public BatchUpdateFirmwareRequest() {
@@ -476,6 +522,12 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         if (source.RateLimit != null) {
             this.RateLimit = new Long(source.RateLimit);
         }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
     }
 
 
@@ -500,6 +552,8 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FwType", this.FwType);
         this.setParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
         this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
 
     }
 }

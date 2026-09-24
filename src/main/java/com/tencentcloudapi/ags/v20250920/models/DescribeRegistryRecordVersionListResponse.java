@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeRegistryRecordVersionListResponse extends AbstractModel {
 
     /**
+    * <p>Version 对象数组。</p>
+    */
+    @SerializedName("VersionSet")
+    @Expose
+    private CloudRecordVersion [] VersionSet;
+
+    /**
+    * <p>符合条件的总数。</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>Version 对象数组。</p> 
+     * @return VersionSet <p>Version 对象数组。</p>
+     */
+    public CloudRecordVersion [] getVersionSet() {
+        return this.VersionSet;
+    }
+
+    /**
+     * Set <p>Version 对象数组。</p>
+     * @param VersionSet <p>Version 对象数组。</p>
+     */
+    public void setVersionSet(CloudRecordVersion [] VersionSet) {
+        this.VersionSet = VersionSet;
+    }
+
+    /**
+     * Get <p>符合条件的总数。</p> 
+     * @return TotalCount <p>符合条件的总数。</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>符合条件的总数。</p>
+     * @param TotalCount <p>符合条件的总数。</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeRegistryRecordVersionListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRegistryRecordVersionListResponse(DescribeRegistryRecordVersionListResponse source) {
+        if (source.VersionSet != null) {
+            this.VersionSet = new CloudRecordVersion[source.VersionSet.length];
+            for (int i = 0; i < source.VersionSet.length; i++) {
+                this.VersionSet[i] = new CloudRecordVersion(source.VersionSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeRegistryRecordVersionListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "VersionSet.", this.VersionSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -187,7 +187,7 @@ public class ModelKeyInfoItem extends AbstractModel {
     private ServiceProviderHealthCheckConfigItemOutput [] HealthCheckConfigs;
 
     /**
-    * <p>模型输出模态</p>
+    * <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capability")
@@ -591,9 +591,9 @@ public class ModelKeyInfoItem extends AbstractModel {
     }
 
     /**
-     * Get <p>模型输出模态</p>
+     * Get <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Capability <p>模型输出模态</p>
+     * @return Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCapability() {
@@ -601,9 +601,9 @@ public class ModelKeyInfoItem extends AbstractModel {
     }
 
     /**
-     * Set <p>模型输出模态</p>
+     * Set <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Capability <p>模型输出模态</p>
+     * @param Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapability(String Capability) {

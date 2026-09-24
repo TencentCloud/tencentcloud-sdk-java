@@ -24,221 +24,161 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsRequest extends AbstractModel {
 
     /**
-    * 加速域名所属站点 ID。
+    * <p>加速域名所属站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 分页查询偏移量，默认为 0。
+    * <p>分页查询偏移量，默认为 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页查询限制数目，默认值：20，上限：200。
+    * <p>分页查询限制数目，默认值：20，上限：200。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
-<li>domain-name：按照加速域名进行过滤；</li>
-<li>origin-type：按照源站类型进行过滤；</li>
-<li>origin：按照主源站地址进行过滤；</li>
-<li>backup-origin： 按照备用源站地址进行过滤；</li>
-<li>domain-cname：按照 CNAME 进行过滤；</li>
-<li>share-cname：按照共享 CNAME 进行过滤；</li>
+    * <p>过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：</p><li>domain-name：按照加速域名进行过滤；</li><li>origin-type：按照源站类型进行过滤；</li><li>origin：按照主源站地址进行过滤；</li><li>backup-origin： 按照备用源站地址进行过滤；</li><li>domain-cname：按照 CNAME 进行过滤；</li><li>share-cname：按照共享 CNAME 进行过滤；</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * 可根据该字段对返回结果进行排序，取值有：
-<li>created_on：加速域名创建时间；</li>
-<li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
+    * <p>可根据该字段对返回结果进行排序，取值有：</p><li>created_on：加速域名创建时间；</li><li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
-<li>asc：升序排列；</li>
-<li>desc：降序排列。</li>不填写使用默认值 asc。
+    * <p>排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ASCII 码的大小排序。取值有：</p><li>asc：升序排列；</li><li>desc：降序排列。</li>不填写使用默认值 asc。
     */
     @SerializedName("Direction")
     @Expose
     private String Direction;
 
     /**
-    * 匹配方式，取值有：
-<li>all：返回匹配所有查询条件的加速域名；</li>
-<li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
+    * <p>匹配方式，取值有：</p><li>all：返回匹配所有查询条件的加速域名；</li><li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
     */
     @SerializedName("Match")
     @Expose
     private String Match;
 
     /**
-     * Get 加速域名所属站点 ID。 
-     * @return ZoneId 加速域名所属站点 ID。
+     * Get <p>加速域名所属站点 ID。</p> 
+     * @return ZoneId <p>加速域名所属站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 加速域名所属站点 ID。
-     * @param ZoneId 加速域名所属站点 ID。
+     * Set <p>加速域名所属站点 ID。</p>
+     * @param ZoneId <p>加速域名所属站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 分页查询偏移量，默认为 0。 
-     * @return Offset 分页查询偏移量，默认为 0。
+     * Get <p>分页查询偏移量，默认为 0。</p> 
+     * @return Offset <p>分页查询偏移量，默认为 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询偏移量，默认为 0。
-     * @param Offset 分页查询偏移量，默认为 0。
+     * Set <p>分页查询偏移量，默认为 0。</p>
+     * @param Offset <p>分页查询偏移量，默认为 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页查询限制数目，默认值：20，上限：200。 
-     * @return Limit 分页查询限制数目，默认值：20，上限：200。
+     * Get <p>分页查询限制数目，默认值：20，上限：200。</p> 
+     * @return Limit <p>分页查询限制数目，默认值：20，上限：200。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询限制数目，默认值：20，上限：200。
-     * @param Limit 分页查询限制数目，默认值：20，上限：200。
+     * Set <p>分页查询限制数目，默认值：20，上限：200。</p>
+     * @param Limit <p>分页查询限制数目，默认值：20，上限：200。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
-<li>domain-name：按照加速域名进行过滤；</li>
-<li>origin-type：按照源站类型进行过滤；</li>
-<li>origin：按照主源站地址进行过滤；</li>
-<li>backup-origin： 按照备用源站地址进行过滤；</li>
-<li>domain-cname：按照 CNAME 进行过滤；</li>
-<li>share-cname：按照共享 CNAME 进行过滤；</li> 
-     * @return Filters 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
-<li>domain-name：按照加速域名进行过滤；</li>
-<li>origin-type：按照源站类型进行过滤；</li>
-<li>origin：按照主源站地址进行过滤；</li>
-<li>backup-origin： 按照备用源站地址进行过滤；</li>
-<li>domain-cname：按照 CNAME 进行过滤；</li>
-<li>share-cname：按照共享 CNAME 进行过滤；</li>
+     * Get <p>过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：</p><li>domain-name：按照加速域名进行过滤；</li><li>origin-type：按照源站类型进行过滤；</li><li>origin：按照主源站地址进行过滤；</li><li>backup-origin： 按照备用源站地址进行过滤；</li><li>domain-cname：按照 CNAME 进行过滤；</li><li>share-cname：按照共享 CNAME 进行过滤；</li> 
+     * @return Filters <p>过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：</p><li>domain-name：按照加速域名进行过滤；</li><li>origin-type：按照源站类型进行过滤；</li><li>origin：按照主源站地址进行过滤；</li><li>backup-origin： 按照备用源站地址进行过滤；</li><li>domain-cname：按照 CNAME 进行过滤；</li><li>share-cname：按照共享 CNAME 进行过滤；</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
-<li>domain-name：按照加速域名进行过滤；</li>
-<li>origin-type：按照源站类型进行过滤；</li>
-<li>origin：按照主源站地址进行过滤；</li>
-<li>backup-origin： 按照备用源站地址进行过滤；</li>
-<li>domain-cname：按照 CNAME 进行过滤；</li>
-<li>share-cname：按照共享 CNAME 进行过滤；</li>
-     * @param Filters 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
-<li>domain-name：按照加速域名进行过滤；</li>
-<li>origin-type：按照源站类型进行过滤；</li>
-<li>origin：按照主源站地址进行过滤；</li>
-<li>backup-origin： 按照备用源站地址进行过滤；</li>
-<li>domain-cname：按照 CNAME 进行过滤；</li>
-<li>share-cname：按照共享 CNAME 进行过滤；</li>
+     * Set <p>过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：</p><li>domain-name：按照加速域名进行过滤；</li><li>origin-type：按照源站类型进行过滤；</li><li>origin：按照主源站地址进行过滤；</li><li>backup-origin： 按照备用源站地址进行过滤；</li><li>domain-cname：按照 CNAME 进行过滤；</li><li>share-cname：按照共享 CNAME 进行过滤；</li>
+     * @param Filters <p>过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：</p><li>domain-name：按照加速域名进行过滤；</li><li>origin-type：按照源站类型进行过滤；</li><li>origin：按照主源站地址进行过滤；</li><li>backup-origin： 按照备用源站地址进行过滤；</li><li>domain-cname：按照 CNAME 进行过滤；</li><li>share-cname：按照共享 CNAME 进行过滤；</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 可根据该字段对返回结果进行排序，取值有：
-<li>created_on：加速域名创建时间；</li>
-<li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。 
-     * @return Order 可根据该字段对返回结果进行排序，取值有：
-<li>created_on：加速域名创建时间；</li>
-<li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
+     * Get <p>可根据该字段对返回结果进行排序，取值有：</p><li>created_on：加速域名创建时间；</li><li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。 
+     * @return Order <p>可根据该字段对返回结果进行排序，取值有：</p><li>created_on：加速域名创建时间；</li><li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 可根据该字段对返回结果进行排序，取值有：
-<li>created_on：加速域名创建时间；</li>
-<li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
-     * @param Order 可根据该字段对返回结果进行排序，取值有：
-<li>created_on：加速域名创建时间；</li>
-<li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
+     * Set <p>可根据该字段对返回结果进行排序，取值有：</p><li>created_on：加速域名创建时间；</li><li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
+     * @param Order <p>可根据该字段对返回结果进行排序，取值有：</p><li>created_on：加速域名创建时间；</li><li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
-<li>asc：升序排列；</li>
-<li>desc：降序排列。</li>不填写使用默认值 asc。 
-     * @return Direction 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
-<li>asc：升序排列；</li>
-<li>desc：降序排列。</li>不填写使用默认值 asc。
+     * Get <p>排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ASCII 码的大小排序。取值有：</p><li>asc：升序排列；</li><li>desc：降序排列。</li>不填写使用默认值 asc。 
+     * @return Direction <p>排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ASCII 码的大小排序。取值有：</p><li>asc：升序排列；</li><li>desc：降序排列。</li>不填写使用默认值 asc。
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
-<li>asc：升序排列；</li>
-<li>desc：降序排列。</li>不填写使用默认值 asc。
-     * @param Direction 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
-<li>asc：升序排列；</li>
-<li>desc：降序排列。</li>不填写使用默认值 asc。
+     * Set <p>排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ASCII 码的大小排序。取值有：</p><li>asc：升序排列；</li><li>desc：降序排列。</li>不填写使用默认值 asc。
+     * @param Direction <p>排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ASCII 码的大小排序。取值有：</p><li>asc：升序排列；</li><li>desc：降序排列。</li>不填写使用默认值 asc。
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 匹配方式，取值有：
-<li>all：返回匹配所有查询条件的加速域名；</li>
-<li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。 
-     * @return Match 匹配方式，取值有：
-<li>all：返回匹配所有查询条件的加速域名；</li>
-<li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
+     * Get <p>匹配方式，取值有：</p><li>all：返回匹配所有查询条件的加速域名；</li><li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。 
+     * @return Match <p>匹配方式，取值有：</p><li>all：返回匹配所有查询条件的加速域名；</li><li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
      */
     public String getMatch() {
         return this.Match;
     }
 
     /**
-     * Set 匹配方式，取值有：
-<li>all：返回匹配所有查询条件的加速域名；</li>
-<li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
-     * @param Match 匹配方式，取值有：
-<li>all：返回匹配所有查询条件的加速域名；</li>
-<li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
+     * Set <p>匹配方式，取值有：</p><li>all：返回匹配所有查询条件的加速域名；</li><li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
+     * @param Match <p>匹配方式，取值有：</p><li>all：返回匹配所有查询条件的加速域名；</li><li>any：返回匹配任意一个查询条件的加速域名。</li>不填写时默认值为 all。
      */
     public void setMatch(String Match) {
         this.Match = Match;

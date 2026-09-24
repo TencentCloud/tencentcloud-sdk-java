@@ -367,6 +367,13 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private String CrossAccountPeerId;
 
     /**
+    * <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
+    */
+    @SerializedName("TokenDisplayProtection")
+    @Expose
+    private Long TokenDisplayProtection;
+
+    /**
      * Get <p>业务系统 ID</p> 
      * @return InstanceId <p>业务系统 ID</p>
      */
@@ -1150,6 +1157,22 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.CrossAccountPeerId = CrossAccountPeerId;
     }
 
+    /**
+     * Get <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p> 
+     * @return TokenDisplayProtection <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
+     */
+    public Long getTokenDisplayProtection() {
+        return this.TokenDisplayProtection;
+    }
+
+    /**
+     * Set <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
+     * @param TokenDisplayProtection <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
+     */
+    public void setTokenDisplayProtection(Long TokenDisplayProtection) {
+        this.TokenDisplayProtection = TokenDisplayProtection;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -1311,6 +1334,9 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.CrossAccountPeerId != null) {
             this.CrossAccountPeerId = new String(source.CrossAccountPeerId);
         }
+        if (source.TokenDisplayProtection != null) {
+            this.TokenDisplayProtection = new Long(source.TokenDisplayProtection);
+        }
     }
 
 
@@ -1367,6 +1393,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DisableAiAbility", this.DisableAiAbility);
         this.setParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
         this.setParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
+        this.setParamSimple(map, prefix + "TokenDisplayProtection", this.TokenDisplayProtection);
 
     }
 }

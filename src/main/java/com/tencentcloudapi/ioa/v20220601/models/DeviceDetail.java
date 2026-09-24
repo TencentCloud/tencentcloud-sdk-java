@@ -311,6 +311,13 @@ public class DeviceDetail extends AbstractModel {
     private String HostName;
 
     /**
+    * <p>信息登记数据</p>
+    */
+    @SerializedName("Profiles")
+    @Expose
+    private DeviceProfile [] Profiles;
+
+    /**
     * <p>主板序列号</p>
     */
     @SerializedName("BaseBoardSn")
@@ -372,6 +379,13 @@ public class DeviceDetail extends AbstractModel {
     @SerializedName("DiskAccessPermission")
     @Expose
     private Long DiskAccessPermission;
+
+    /**
+    * <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+    */
+    @SerializedName("InstallationStatus")
+    @Expose
+    private Long InstallationStatus;
 
     /**
     * <p>终端备注名</p>
@@ -1044,6 +1058,22 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>信息登记数据</p> 
+     * @return Profiles <p>信息登记数据</p>
+     */
+    public DeviceProfile [] getProfiles() {
+        return this.Profiles;
+    }
+
+    /**
+     * Set <p>信息登记数据</p>
+     * @param Profiles <p>信息登记数据</p>
+     */
+    public void setProfiles(DeviceProfile [] Profiles) {
+        this.Profiles = Profiles;
+    }
+
+    /**
      * Get <p>主板序列号</p> 
      * @return BaseBoardSn <p>主板序列号</p>
      */
@@ -1185,6 +1215,22 @@ public class DeviceDetail extends AbstractModel {
      */
     public void setDiskAccessPermission(Long DiskAccessPermission) {
         this.DiskAccessPermission = DiskAccessPermission;
+    }
+
+    /**
+     * Get <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p> 
+     * @return InstallationStatus <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+     */
+    public Long getInstallationStatus() {
+        return this.InstallationStatus;
+    }
+
+    /**
+     * Set <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+     * @param InstallationStatus <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+     */
+    public void setInstallationStatus(Long InstallationStatus) {
+        this.InstallationStatus = InstallationStatus;
     }
 
     /**
@@ -1353,6 +1399,12 @@ public class DeviceDetail extends AbstractModel {
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.Profiles != null) {
+            this.Profiles = new DeviceProfile[source.Profiles.length];
+            for (int i = 0; i < source.Profiles.length; i++) {
+                this.Profiles[i] = new DeviceProfile(source.Profiles[i]);
+            }
+        }
         if (source.BaseBoardSn != null) {
             this.BaseBoardSn = new String(source.BaseBoardSn);
         }
@@ -1379,6 +1431,9 @@ public class DeviceDetail extends AbstractModel {
         }
         if (source.DiskAccessPermission != null) {
             this.DiskAccessPermission = new Long(source.DiskAccessPermission);
+        }
+        if (source.InstallationStatus != null) {
+            this.InstallationStatus = new Long(source.InstallationStatus);
         }
         if (source.RemarkName != null) {
             this.RemarkName = new String(source.RemarkName);
@@ -1434,6 +1489,7 @@ public class DeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceNewStrategyVer", this.DeviceNewStrategyVer);
         this.setParamSimple(map, prefix + "NGNNewStrategyVer", this.NGNNewStrategyVer);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamArrayObj(map, prefix + "Profiles.", this.Profiles);
         this.setParamSimple(map, prefix + "BaseBoardSn", this.BaseBoardSn);
         this.setParamSimple(map, prefix + "AccountUsers", this.AccountUsers);
         this.setParamSimple(map, prefix + "IdentityStrategyVer", this.IdentityStrategyVer);
@@ -1443,6 +1499,7 @@ public class DeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
         this.setParamSimple(map, prefix + "ScreenRecordingPermission", this.ScreenRecordingPermission);
         this.setParamSimple(map, prefix + "DiskAccessPermission", this.DiskAccessPermission);
+        this.setParamSimple(map, prefix + "InstallationStatus", this.InstallationStatus);
         this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
         this.setParamSimple(map, prefix + "BiosUuid", this.BiosUuid);
 

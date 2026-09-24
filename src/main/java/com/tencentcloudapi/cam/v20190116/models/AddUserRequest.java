@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class AddUserRequest extends AbstractModel {
 
     /**
-    * 子用户用户名
+    * <p>子用户用户名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 子用户备注
+    * <p>子用户备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+    * <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
     */
     @SerializedName("ConsoleLogin")
     @Expose
     private Long ConsoleLogin;
 
     /**
-    * 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+    * <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
     */
     @SerializedName("UseApi")
     @Expose
     private Long UseApi;
 
     /**
-    * 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
+    * <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+    * <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
     */
     @SerializedName("NeedResetPassword")
     @Expose
     private Long NeedResetPassword;
 
     /**
-    * 手机号
+    * <p>手机号</p>
     */
     @SerializedName("PhoneNum")
     @Expose
     private String PhoneNum;
 
     /**
-    * 区号
+    * <p>区号</p>
     */
     @SerializedName("CountryCode")
     @Expose
     private String CountryCode;
 
     /**
-    * 邮箱
+    * <p>邮箱</p>
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-     * Get 子用户用户名 
-     * @return Name 子用户用户名
+     * Get <p>子用户用户名</p> 
+     * @return Name <p>子用户用户名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 子用户用户名
-     * @param Name 子用户用户名
+     * Set <p>子用户用户名</p>
+     * @param Name <p>子用户用户名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 子用户备注 
-     * @return Remark 子用户备注
+     * Get <p>子用户备注</p> 
+     * @return Remark <p>子用户备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 子用户备注
-     * @param Remark 子用户备注
+     * Set <p>子用户备注</p>
+     * @param Remark <p>子用户备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。 
-     * @return ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * Get <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p> 
+     * @return ConsoleLogin <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
      */
     public Long getConsoleLogin() {
         return this.ConsoleLogin;
     }
 
     /**
-     * Set 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
-     * @param ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * Set <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
+     * @param ConsoleLogin <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
      */
     public void setConsoleLogin(Long ConsoleLogin) {
         this.ConsoleLogin = ConsoleLogin;
     }
 
     /**
-     * Get 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。 
-     * @return UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * Get <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p> 
+     * @return UseApi <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
      */
     public Long getUseApi() {
         return this.UseApi;
     }
 
     /**
-     * Set 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
-     * @param UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * Set <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
+     * @param UseApi <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
      */
     public void setUseApi(Long UseApi) {
         this.UseApi = UseApi;
     }
 
     /**
-     * Get 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。 
-     * @return Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
+     * Get <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p> 
+     * @return Password <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
-     * @param Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
+     * Set <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
+     * @param Password <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。 
-     * @return NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * Get <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p> 
+     * @return NeedResetPassword <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
      */
     public Long getNeedResetPassword() {
         return this.NeedResetPassword;
     }
 
     /**
-     * Set 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
-     * @param NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * Set <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
+     * @param NeedResetPassword <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
      */
     public void setNeedResetPassword(Long NeedResetPassword) {
         this.NeedResetPassword = NeedResetPassword;
     }
 
     /**
-     * Get 手机号 
-     * @return PhoneNum 手机号
+     * Get <p>手机号</p> 
+     * @return PhoneNum <p>手机号</p>
      */
     public String getPhoneNum() {
         return this.PhoneNum;
     }
 
     /**
-     * Set 手机号
-     * @param PhoneNum 手机号
+     * Set <p>手机号</p>
+     * @param PhoneNum <p>手机号</p>
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
     }
 
     /**
-     * Get 区号 
-     * @return CountryCode 区号
+     * Get <p>区号</p> 
+     * @return CountryCode <p>区号</p>
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set 区号
-     * @param CountryCode 区号
+     * Set <p>区号</p>
+     * @param CountryCode <p>区号</p>
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get 邮箱 
-     * @return Email 邮箱
+     * Get <p>邮箱</p> 
+     * @return Email <p>邮箱</p>
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 邮箱
-     * @param Email 邮箱
+     * Set <p>邮箱</p>
+     * @param Email <p>邮箱</p>
      */
     public void setEmail(String Email) {
         this.Email = Email;

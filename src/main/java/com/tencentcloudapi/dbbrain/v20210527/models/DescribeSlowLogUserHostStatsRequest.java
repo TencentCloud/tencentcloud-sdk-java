@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+    * <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+    * <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+    * <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * SQL模板的MD5值
+    * <p>SQL模板的MD5值</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 仅Redis产品使用；实例Proxy ID。
+    * <p>仅Redis产品使用；实例Proxy ID。</p>
     */
     @SerializedName("InstanceProxyId")
     @Expose
     private String InstanceProxyId;
 
     /**
-    * 仅Redis产品使用；命令。
+    * <p>仅Redis产品使用；命令。</p>
     */
     @SerializedName("Cmd")
     @Expose
     private String Cmd;
 
     /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Get <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。 
-     * @return StartTime 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * Get <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p> 
+     * @return StartTime <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
-     * @param StartTime 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * Set <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+     * @param StartTime <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。 
-     * @return EndTime 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * Get <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p> 
+     * @return EndTime <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
-     * @param EndTime 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * Set <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+     * @param EndTime <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * Get <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * Set <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get SQL模板的MD5值 
-     * @return Md5 SQL模板的MD5值
+     * Get <p>SQL模板的MD5值</p> 
+     * @return Md5 <p>SQL模板的MD5值</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set SQL模板的MD5值
-     * @param Md5 SQL模板的MD5值
+     * Set <p>SQL模板的MD5值</p>
+     * @param Md5 <p>SQL模板的MD5值</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 仅Redis产品使用；实例Proxy ID。 
-     * @return InstanceProxyId 仅Redis产品使用；实例Proxy ID。
+     * Get <p>仅Redis产品使用；实例Proxy ID。</p> 
+     * @return InstanceProxyId <p>仅Redis产品使用；实例Proxy ID。</p>
      */
     public String getInstanceProxyId() {
         return this.InstanceProxyId;
     }
 
     /**
-     * Set 仅Redis产品使用；实例Proxy ID。
-     * @param InstanceProxyId 仅Redis产品使用；实例Proxy ID。
+     * Set <p>仅Redis产品使用；实例Proxy ID。</p>
+     * @param InstanceProxyId <p>仅Redis产品使用；实例Proxy ID。</p>
      */
     public void setInstanceProxyId(String InstanceProxyId) {
         this.InstanceProxyId = InstanceProxyId;
     }
 
     /**
-     * Get 仅Redis产品使用；命令。 
-     * @return Cmd 仅Redis产品使用；命令。
+     * Get <p>仅Redis产品使用；命令。</p> 
+     * @return Cmd <p>仅Redis产品使用；命令。</p>
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set 仅Redis产品使用；命令。
-     * @param Cmd 仅Redis产品使用；命令。
+     * Set <p>仅Redis产品使用；命令。</p>
+     * @param Cmd <p>仅Redis产品使用；命令。</p>
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;

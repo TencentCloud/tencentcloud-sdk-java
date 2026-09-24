@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeRegistryRequest extends AbstractModel {
 
+    /**
+    * <p>Registry ID。</p>
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private String RegistryId;
+
+    /**
+     * Get <p>Registry ID。</p> 
+     * @return RegistryId <p>Registry ID。</p>
+     */
+    public String getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set <p>Registry ID。</p>
+     * @param RegistryId <p>Registry ID。</p>
+     */
+    public void setRegistryId(String RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
     public DescribeRegistryRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeRegistryRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRegistryRequest(DescribeRegistryRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeRegistryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
 
     }
 }

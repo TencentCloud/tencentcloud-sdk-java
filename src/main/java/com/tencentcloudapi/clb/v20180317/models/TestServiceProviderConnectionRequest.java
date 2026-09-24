@@ -108,7 +108,7 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
     private String CMRPrivateNetworkTunnelId;
 
     /**
-    * <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+    * <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
     */
     @SerializedName("Capability")
     @Expose
@@ -328,16 +328,16 @@ public class TestServiceProviderConnectionRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul> 
-     * @return Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     * Get <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul> 
+     * @return Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
      */
     public String getCapability() {
         return this.Capability;
     }
 
     /**
-     * Set <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
-     * @param Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     * Set <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
+     * @param Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
      */
     public void setCapability(String Capability) {
         this.Capability = Capability;

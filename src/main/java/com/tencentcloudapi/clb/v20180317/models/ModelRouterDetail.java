@@ -203,11 +203,41 @@ public class ModelRouterDetail extends AbstractModel {
     private ModelRouterBillingConfigOutput BillingConfig;
 
     /**
-    * <p>Embedding配置</p>
+    * <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmbeddingConfig")
     @Expose
     private EmbeddingConfig EmbeddingConfig;
+
+    /**
+    * <p>CMR关联的负载均衡实例id</p>
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
+
+    /**
+    * <p>视频模型设置</p>
+    */
+    @SerializedName("VideoConfig")
+    @Expose
+    private VideoConfig VideoConfig;
+
+    /**
+    * <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RerankConfig")
+    @Expose
+    private RerankConfig RerankConfig;
+
+    /**
+    * <p>决策模型设置</p>
+    */
+    @SerializedName("DecisionsConfig")
+    @Expose
+    private DecisionsConfig DecisionsConfig;
 
     /**
      * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -626,19 +656,91 @@ public class ModelRouterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Embedding配置</p> 
-     * @return EmbeddingConfig <p>Embedding配置</p>
+     * Get <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmbeddingConfig <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EmbeddingConfig getEmbeddingConfig() {
         return this.EmbeddingConfig;
     }
 
     /**
-     * Set <p>Embedding配置</p>
-     * @param EmbeddingConfig <p>Embedding配置</p>
+     * Set <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmbeddingConfig <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmbeddingConfig(EmbeddingConfig EmbeddingConfig) {
         this.EmbeddingConfig = EmbeddingConfig;
+    }
+
+    /**
+     * Get <p>CMR关联的负载均衡实例id</p> 
+     * @return LoadBalancerId <p>CMR关联的负载均衡实例id</p>
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set <p>CMR关联的负载均衡实例id</p>
+     * @param LoadBalancerId <p>CMR关联的负载均衡实例id</p>
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
+    /**
+     * Get <p>视频模型设置</p> 
+     * @return VideoConfig <p>视频模型设置</p>
+     */
+    public VideoConfig getVideoConfig() {
+        return this.VideoConfig;
+    }
+
+    /**
+     * Set <p>视频模型设置</p>
+     * @param VideoConfig <p>视频模型设置</p>
+     */
+    public void setVideoConfig(VideoConfig VideoConfig) {
+        this.VideoConfig = VideoConfig;
+    }
+
+    /**
+     * Get <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RerankConfig <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RerankConfig getRerankConfig() {
+        return this.RerankConfig;
+    }
+
+    /**
+     * Set <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RerankConfig <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRerankConfig(RerankConfig RerankConfig) {
+        this.RerankConfig = RerankConfig;
+    }
+
+    /**
+     * Get <p>决策模型设置</p> 
+     * @return DecisionsConfig <p>决策模型设置</p>
+     */
+    public DecisionsConfig getDecisionsConfig() {
+        return this.DecisionsConfig;
+    }
+
+    /**
+     * Set <p>决策模型设置</p>
+     * @param DecisionsConfig <p>决策模型设置</p>
+     */
+    public void setDecisionsConfig(DecisionsConfig DecisionsConfig) {
+        this.DecisionsConfig = DecisionsConfig;
     }
 
     public ModelRouterDetail() {
@@ -739,6 +841,18 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.EmbeddingConfig != null) {
             this.EmbeddingConfig = new EmbeddingConfig(source.EmbeddingConfig);
         }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.VideoConfig != null) {
+            this.VideoConfig = new VideoConfig(source.VideoConfig);
+        }
+        if (source.RerankConfig != null) {
+            this.RerankConfig = new RerankConfig(source.RerankConfig);
+        }
+        if (source.DecisionsConfig != null) {
+            this.DecisionsConfig = new DecisionsConfig(source.DecisionsConfig);
+        }
     }
 
 
@@ -772,6 +886,10 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         this.setParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
         this.setParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+        this.setParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
+        this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
+        this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
 
     }
 }

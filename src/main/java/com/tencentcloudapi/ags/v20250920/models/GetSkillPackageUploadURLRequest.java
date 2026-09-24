@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class GetSkillPackageUploadURLRequest extends AbstractModel {
 
+    /**
+    * <p>父 Registry ID。</p>
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private String RegistryId;
+
+    /**
+    * <p>Record ID。</p>
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
+    * <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
+
+    /**
+     * Get <p>父 Registry ID。</p> 
+     * @return RegistryId <p>父 Registry ID。</p>
+     */
+    public String getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set <p>父 Registry ID。</p>
+     * @param RegistryId <p>父 Registry ID。</p>
+     */
+    public void setRegistryId(String RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get <p>Record ID。</p> 
+     * @return RecordId <p>Record ID。</p>
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set <p>Record ID。</p>
+     * @param RecordId <p>Record ID。</p>
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
+    }
+
+    /**
+     * Get <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p> 
+     * @return VersionId <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+     * @param VersionId <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
+    }
+
     public GetSkillPackageUploadURLRequest() {
     }
 
@@ -31,6 +100,15 @@ public class GetSkillPackageUploadURLRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetSkillPackageUploadURLRequest(GetSkillPackageUploadURLRequest source) {
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class GetSkillPackageUploadURLRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
 
     }
 }

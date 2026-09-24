@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsResponse extends AbstractModel {
 
     /**
-    * 符合查询条件的加速域名个数。
+    * <p>符合查询条件的加速域名个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 符合查询条件的所有加速域名的信息。
+    * <p>符合查询条件的所有加速域名的信息。</p>
     */
     @SerializedName("AccelerationDomains")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccelerationDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合查询条件的加速域名个数。 
-     * @return TotalCount 符合查询条件的加速域名个数。
+     * Get <p>符合查询条件的加速域名个数。</p> 
+     * @return TotalCount <p>符合查询条件的加速域名个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的加速域名个数。
-     * @param TotalCount 符合查询条件的加速域名个数。
+     * Set <p>符合查询条件的加速域名个数。</p>
+     * @param TotalCount <p>符合查询条件的加速域名个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合查询条件的所有加速域名的信息。 
-     * @return AccelerationDomains 符合查询条件的所有加速域名的信息。
+     * Get <p>符合查询条件的所有加速域名的信息。</p> 
+     * @return AccelerationDomains <p>符合查询条件的所有加速域名的信息。</p>
      */
     public AccelerationDomain [] getAccelerationDomains() {
         return this.AccelerationDomains;
     }
 
     /**
-     * Set 符合查询条件的所有加速域名的信息。
-     * @param AccelerationDomains 符合查询条件的所有加速域名的信息。
+     * Set <p>符合查询条件的所有加速域名的信息。</p>
+     * @param AccelerationDomains <p>符合查询条件的所有加速域名的信息。</p>
      */
     public void setAccelerationDomains(AccelerationDomain [] AccelerationDomains) {
         this.AccelerationDomains = AccelerationDomains;

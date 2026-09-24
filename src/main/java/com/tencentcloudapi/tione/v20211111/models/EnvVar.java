@@ -40,6 +40,13 @@ public class EnvVar extends AbstractModel {
     private String Value;
 
     /**
+    * <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+    */
+    @SerializedName("IsPrivate")
+    @Expose
+    private Boolean IsPrivate;
+
+    /**
      * Get <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name <p>环境变量key</p>
@@ -79,6 +86,22 @@ public class EnvVar extends AbstractModel {
         this.Value = Value;
     }
 
+    /**
+     * Get <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p> 
+     * @return IsPrivate <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+     */
+    public Boolean getIsPrivate() {
+        return this.IsPrivate;
+    }
+
+    /**
+     * Set <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+     * @param IsPrivate <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+     */
+    public void setIsPrivate(Boolean IsPrivate) {
+        this.IsPrivate = IsPrivate;
+    }
+
     public EnvVar() {
     }
 
@@ -93,6 +116,9 @@ public class EnvVar extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.IsPrivate != null) {
+            this.IsPrivate = new Boolean(source.IsPrivate);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class EnvVar extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "IsPrivate", this.IsPrivate);
 
     }
 }

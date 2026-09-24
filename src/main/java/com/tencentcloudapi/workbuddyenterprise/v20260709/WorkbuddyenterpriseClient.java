@@ -248,6 +248,17 @@ public class WorkbuddyenterpriseClient extends AbstractClient{
     }
 
     /**
+     *根据调用者的 Uin / SubAccountUin 调用 OneID 换取用户级 access_token。换取到的 token 是 OneID 用户身份的短期凭证，供调用方以用户身份访问 OneID 开平接口。默认开启 JIT，SubAccountUin 不存在时自动在目标企业下创建影子用户。
+     * @param req DescribeUserAccessTokenRequest
+     * @return DescribeUserAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserAccessTokenResponse DescribeUserAccessToken(DescribeUserAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserAccessToken", DescribeUserAccessTokenResponse.class);
+    }
+
+    /**
      *将指定会话迁移到目标版本。SessionID / RuntimeID 保持不变，通过 AgentOS UpdateSession 在原沙箱上更新 manifest 到新版本；AgentId 必须与原 Session 一致（禁止跨 Agent 迁移）；ChatToken 复用旧值不轮转。
      * @param req MigrateAgentSessionRequest
      * @return MigrateAgentSessionResponse

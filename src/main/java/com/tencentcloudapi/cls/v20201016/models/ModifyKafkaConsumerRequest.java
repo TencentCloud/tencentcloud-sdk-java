@@ -52,6 +52,20 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
     private Long HasServicesLog;
 
     /**
+    * <p>外网消费开关。</p>
+    */
+    @SerializedName("EnableInternetConsume")
+    @Expose
+    private Boolean EnableInternetConsume;
+
+    /**
+    * <p>内网消费开关。</p>
+    */
+    @SerializedName("EnableIntranetConsume")
+    @Expose
+    private Boolean EnableIntranetConsume;
+
+    /**
     * <p>消费范围类型，0:最新，1:历史+最新</p>
     */
     @SerializedName("ScopeType")
@@ -123,6 +137,38 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>外网消费开关。</p> 
+     * @return EnableInternetConsume <p>外网消费开关。</p>
+     */
+    public Boolean getEnableInternetConsume() {
+        return this.EnableInternetConsume;
+    }
+
+    /**
+     * Set <p>外网消费开关。</p>
+     * @param EnableInternetConsume <p>外网消费开关。</p>
+     */
+    public void setEnableInternetConsume(Boolean EnableInternetConsume) {
+        this.EnableInternetConsume = EnableInternetConsume;
+    }
+
+    /**
+     * Get <p>内网消费开关。</p> 
+     * @return EnableIntranetConsume <p>内网消费开关。</p>
+     */
+    public Boolean getEnableIntranetConsume() {
+        return this.EnableIntranetConsume;
+    }
+
+    /**
+     * Set <p>内网消费开关。</p>
+     * @param EnableIntranetConsume <p>内网消费开关。</p>
+     */
+    public void setEnableIntranetConsume(Boolean EnableIntranetConsume) {
+        this.EnableIntranetConsume = EnableIntranetConsume;
+    }
+
+    /**
      * Get <p>消费范围类型，0:最新，1:历史+最新</p> 
      * @return ScopeType <p>消费范围类型，0:最新，1:历史+最新</p>
      */
@@ -158,6 +204,12 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
         }
+        if (source.EnableInternetConsume != null) {
+            this.EnableInternetConsume = new Boolean(source.EnableInternetConsume);
+        }
+        if (source.EnableIntranetConsume != null) {
+            this.EnableIntranetConsume = new Boolean(source.EnableIntranetConsume);
+        }
         if (source.ScopeType != null) {
             this.ScopeType = new Long(source.ScopeType);
         }
@@ -172,6 +224,8 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "EnableInternetConsume", this.EnableInternetConsume);
+        this.setParamSimple(map, prefix + "EnableIntranetConsume", this.EnableIntranetConsume);
         this.setParamSimple(map, prefix + "ScopeType", this.ScopeType);
 
     }

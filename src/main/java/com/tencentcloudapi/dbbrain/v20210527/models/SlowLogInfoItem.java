@@ -94,6 +94,20 @@ public class SlowLogInfoItem extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 
+    */
+    @SerializedName("ClientAppName")
+    @Expose
+    private String ClientAppName;
+
+    /**
+    * 
+    */
+    @SerializedName("ClientHostName")
+    @Expose
+    private String ClientHostName;
+
+    /**
      * Get 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss" 
      * @return Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
@@ -253,6 +267,38 @@ public class SlowLogInfoItem extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get  
+     * @return ClientAppName 
+     */
+    public String getClientAppName() {
+        return this.ClientAppName;
+    }
+
+    /**
+     * Set 
+     * @param ClientAppName 
+     */
+    public void setClientAppName(String ClientAppName) {
+        this.ClientAppName = ClientAppName;
+    }
+
+    /**
+     * Get  
+     * @return ClientHostName 
+     */
+    public String getClientHostName() {
+        return this.ClientHostName;
+    }
+
+    /**
+     * Set 
+     * @param ClientHostName 
+     */
+    public void setClientHostName(String ClientHostName) {
+        this.ClientHostName = ClientHostName;
+    }
+
     public SlowLogInfoItem() {
     }
 
@@ -291,6 +337,12 @@ public class SlowLogInfoItem extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ClientAppName != null) {
+            this.ClientAppName = new String(source.ClientAppName);
+        }
+        if (source.ClientHostName != null) {
+            this.ClientHostName = new String(source.ClientHostName);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class SlowLogInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RowsExamined", this.RowsExamined);
         this.setParamSimple(map, prefix + "RowsSent", this.RowsSent);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ClientAppName", this.ClientAppName);
+        this.setParamSimple(map, prefix + "ClientHostName", this.ClientHostName);
 
     }
 }

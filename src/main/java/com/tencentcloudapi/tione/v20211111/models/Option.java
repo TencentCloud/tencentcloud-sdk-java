@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Option extends AbstractModel {
 
     /**
-    * 指标名
+    * <p>指标名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 指标值
+    * <p>指标值</p>
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get 指标名 
-     * @return Name 指标名
+     * Get <p>指标名</p> 
+     * @return Name <p>指标名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 指标名
-     * @param Name 指标名
+     * Set <p>指标名</p>
+     * @param Name <p>指标名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 指标值 
-     * @return Value 指标值
+     * Get <p>指标值</p> 
+     * @return Value <p>指标值</p>
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set 指标值
-     * @param Value 指标值
+     * Set <p>指标值</p>
+     * @param Value <p>指标值</p>
      */
     public void setValue(Long Value) {
         this.Value = Value;

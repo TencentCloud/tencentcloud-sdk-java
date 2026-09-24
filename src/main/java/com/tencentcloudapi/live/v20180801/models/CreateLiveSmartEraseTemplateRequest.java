@@ -45,28 +45,28 @@ public class CreateLiveSmartEraseTemplateRequest extends AbstractModel {
     private String Description;
 
     /**
-    * <p>关联的审核模板id, 表audio_conf 。</p>
+    * <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
     */
     @SerializedName("AuditConfId")
     @Expose
     private Long AuditConfId;
 
     /**
-    * <p>天御图片审核策略BizType  Image 。</p>
+    * <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
     */
     @SerializedName("ImageBizType")
     @Expose
     private String ImageBizType;
 
     /**
-    * <p>天御音频审核策略BizType  ShortAudio 。</p>
+    * <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
     */
     @SerializedName("AudioBizType")
     @Expose
     private String AudioBizType;
 
     /**
-    * <p>天御音频文本审核策略BizType  ShortAudio 。</p>
+    * <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
     */
     @SerializedName("AudioTextBizType")
     @Expose
@@ -149,64 +149,64 @@ public class CreateLiveSmartEraseTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>关联的审核模板id, 表audio_conf 。</p> 
-     * @return AuditConfId <p>关联的审核模板id, 表audio_conf 。</p>
+     * Get <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p> 
+     * @return AuditConfId <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
      */
     public Long getAuditConfId() {
         return this.AuditConfId;
     }
 
     /**
-     * Set <p>关联的审核模板id, 表audio_conf 。</p>
-     * @param AuditConfId <p>关联的审核模板id, 表audio_conf 。</p>
+     * Set <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
+     * @param AuditConfId <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
      */
     public void setAuditConfId(Long AuditConfId) {
         this.AuditConfId = AuditConfId;
     }
 
     /**
-     * Get <p>天御图片审核策略BizType  Image 。</p> 
-     * @return ImageBizType <p>天御图片审核策略BizType  Image 。</p>
+     * Get <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p> 
+     * @return ImageBizType <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
      */
     public String getImageBizType() {
         return this.ImageBizType;
     }
 
     /**
-     * Set <p>天御图片审核策略BizType  Image 。</p>
-     * @param ImageBizType <p>天御图片审核策略BizType  Image 。</p>
+     * Set <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
+     * @param ImageBizType <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
      */
     public void setImageBizType(String ImageBizType) {
         this.ImageBizType = ImageBizType;
     }
 
     /**
-     * Get <p>天御音频审核策略BizType  ShortAudio 。</p> 
-     * @return AudioBizType <p>天御音频审核策略BizType  ShortAudio 。</p>
+     * Get <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p> 
+     * @return AudioBizType <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
      */
     public String getAudioBizType() {
         return this.AudioBizType;
     }
 
     /**
-     * Set <p>天御音频审核策略BizType  ShortAudio 。</p>
-     * @param AudioBizType <p>天御音频审核策略BizType  ShortAudio 。</p>
+     * Set <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
+     * @param AudioBizType <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
      */
     public void setAudioBizType(String AudioBizType) {
         this.AudioBizType = AudioBizType;
     }
 
     /**
-     * Get <p>天御音频文本审核策略BizType  ShortAudio 。</p> 
-     * @return AudioTextBizType <p>天御音频文本审核策略BizType  ShortAudio 。</p>
+     * Get <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p> 
+     * @return AudioTextBizType <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
      */
     public String getAudioTextBizType() {
         return this.AudioTextBizType;
     }
 
     /**
-     * Set <p>天御音频文本审核策略BizType  ShortAudio 。</p>
-     * @param AudioTextBizType <p>天御音频文本审核策略BizType  ShortAudio 。</p>
+     * Set <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
+     * @param AudioTextBizType <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
      */
     public void setAudioTextBizType(String AudioTextBizType) {
         this.AudioTextBizType = AudioTextBizType;

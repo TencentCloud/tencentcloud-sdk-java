@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeRegistryAuditLogListResponse extends AbstractModel {
 
     /**
+    * <p>Record 维度的审计日志。</p>
+    */
+    @SerializedName("AuditLogSet")
+    @Expose
+    private CloudAuditLog [] AuditLogSet;
+
+    /**
+    * <p>符合条件的总数。</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>Record 维度的审计日志。</p> 
+     * @return AuditLogSet <p>Record 维度的审计日志。</p>
+     */
+    public CloudAuditLog [] getAuditLogSet() {
+        return this.AuditLogSet;
+    }
+
+    /**
+     * Set <p>Record 维度的审计日志。</p>
+     * @param AuditLogSet <p>Record 维度的审计日志。</p>
+     */
+    public void setAuditLogSet(CloudAuditLog [] AuditLogSet) {
+        this.AuditLogSet = AuditLogSet;
+    }
+
+    /**
+     * Get <p>符合条件的总数。</p> 
+     * @return TotalCount <p>符合条件的总数。</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>符合条件的总数。</p>
+     * @param TotalCount <p>符合条件的总数。</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeRegistryAuditLogListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRegistryAuditLogListResponse(DescribeRegistryAuditLogListResponse source) {
+        if (source.AuditLogSet != null) {
+            this.AuditLogSet = new CloudAuditLog[source.AuditLogSet.length];
+            for (int i = 0; i < source.AuditLogSet.length; i++) {
+                this.AuditLogSet[i] = new CloudAuditLog(source.AuditLogSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeRegistryAuditLogListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AuditLogSet.", this.AuditLogSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

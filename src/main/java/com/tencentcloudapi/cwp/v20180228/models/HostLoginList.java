@@ -24,552 +24,716 @@ import java.util.HashMap;
 public class HostLoginList extends AbstractModel {
 
     /**
-    * 记录Id
+    * <p>记录Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 主机Uuid
+    * <p>主机Uuid</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机ip
+    * <p>主机ip</p>
     */
     @SerializedName("MachineIp")
     @Expose
     private String MachineIp;
 
     /**
-    * 主机名
+    * <p>主机名</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 来源ip
+    * <p>来源ip</p>
     */
     @SerializedName("SrcIp")
     @Expose
     private String SrcIp;
 
     /**
-    * 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
+    * <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 国家id
+    * <p>国家id</p>
     */
     @SerializedName("Country")
     @Expose
     private Long Country;
 
     /**
-    * 城市id
+    * <p>城市id</p>
     */
     @SerializedName("City")
     @Expose
     private Long City;
 
     /**
-    * 省份id
+    * <p>省份id</p>
     */
     @SerializedName("Province")
     @Expose
     private Long Province;
 
     /**
-    * 登录时间
+    * <p>登录时间</p>
     */
     @SerializedName("LoginTime")
     @Expose
     private String LoginTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
+    * <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
     */
     @SerializedName("IsRiskArea")
     @Expose
     private Long IsRiskArea;
 
     /**
-    * 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
+    * <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
     */
     @SerializedName("IsRiskUser")
     @Expose
     private Long IsRiskUser;
 
     /**
-    * 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
+    * <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
     */
     @SerializedName("IsRiskTime")
     @Expose
     private Long IsRiskTime;
 
     /**
-    * 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
+    * <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
     */
     @SerializedName("IsRiskSrcIp")
     @Expose
     private Long IsRiskSrcIp;
 
     /**
-    * 危险等级：
-0 高危
-1 可疑
+    * <p>危险等级：<br>0 高危<br>1 可疑</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * 位置名称
+    * <p>位置名称</p>
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * 主机quuid
+    * <p>主机quuid</p>
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
+    * <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * 附加信息
+    * <p>附加信息</p>
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * 请求目的端口
+    * <p>请求目的端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * ip分析
+    * <p>ip分析</p>
     */
     @SerializedName("IPAnalyse")
     @Expose
     private IPAnalyse IPAnalyse;
 
     /**
-     * Get 记录Id 
-     * @return Id 记录Id
+    * <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+    */
+    @SerializedName("HitRule")
+    @Expose
+    private String HitRule;
+
+    /**
+    * <p>命中策略名</p>
+    */
+    @SerializedName("HitRuleName")
+    @Expose
+    private String HitRuleName;
+
+    /**
+    * <p>告警数量</p>
+    */
+    @SerializedName("AlertCount")
+    @Expose
+    private Long AlertCount;
+
+    /**
+    * <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+    */
+    @SerializedName("FirstDiscoverTime")
+    @Expose
+    private String FirstDiscoverTime;
+
+    /**
+    * <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+    */
+    @SerializedName("LastDiscoverTime")
+    @Expose
+    private String LastDiscoverTime;
+
+    /**
+    * <p>危害描述</p>
+    */
+    @SerializedName("HarmDescribe")
+    @Expose
+    private String HarmDescribe;
+
+    /**
+    * <p>修复建议</p>
+    */
+    @SerializedName("SuggestScheme")
+    @Expose
+    private String SuggestScheme;
+
+    /**
+    * <p>最近登录历史</p>
+    */
+    @SerializedName("RecentLoginList")
+    @Expose
+    private RecentLoginItem [] RecentLoginList;
+
+    /**
+     * Get <p>记录Id</p> 
+     * @return Id <p>记录Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 记录Id
-     * @param Id 记录Id
+     * Set <p>记录Id</p>
+     * @param Id <p>记录Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 主机Uuid 
-     * @return Uuid 主机Uuid
+     * Get <p>主机Uuid</p> 
+     * @return Uuid <p>主机Uuid</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机Uuid
-     * @param Uuid 主机Uuid
+     * Set <p>主机Uuid</p>
+     * @param Uuid <p>主机Uuid</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ip 
-     * @return MachineIp 主机ip
+     * Get <p>主机ip</p> 
+     * @return MachineIp <p>主机ip</p>
      */
     public String getMachineIp() {
         return this.MachineIp;
     }
 
     /**
-     * Set 主机ip
-     * @param MachineIp 主机ip
+     * Set <p>主机ip</p>
+     * @param MachineIp <p>主机ip</p>
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get 主机名 
-     * @return MachineName 主机名
+     * Get <p>主机名</p> 
+     * @return MachineName <p>主机名</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set 主机名
-     * @param MachineName 主机名
+     * Set <p>主机名</p>
+     * @param MachineName <p>主机名</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 来源ip 
-     * @return SrcIp 来源ip
+     * Get <p>来源ip</p> 
+     * @return SrcIp <p>来源ip</p>
      */
     public String getSrcIp() {
         return this.SrcIp;
     }
 
     /**
-     * Set 来源ip
-     * @param SrcIp 来源ip
+     * Set <p>来源ip</p>
+     * @param SrcIp <p>来源ip</p>
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。 
-     * @return Status 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
+     * Get <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p> 
+     * @return Status <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
-     * @param Status 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
+     * Set <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
+     * @param Status <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 国家id 
-     * @return Country 国家id
+     * Get <p>国家id</p> 
+     * @return Country <p>国家id</p>
      */
     public Long getCountry() {
         return this.Country;
     }
 
     /**
-     * Set 国家id
-     * @param Country 国家id
+     * Set <p>国家id</p>
+     * @param Country <p>国家id</p>
      */
     public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 城市id 
-     * @return City 城市id
+     * Get <p>城市id</p> 
+     * @return City <p>城市id</p>
      */
     public Long getCity() {
         return this.City;
     }
 
     /**
-     * Set 城市id
-     * @param City 城市id
+     * Set <p>城市id</p>
+     * @param City <p>城市id</p>
      */
     public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * Get 省份id 
-     * @return Province 省份id
+     * Get <p>省份id</p> 
+     * @return Province <p>省份id</p>
      */
     public Long getProvince() {
         return this.Province;
     }
 
     /**
-     * Set 省份id
-     * @param Province 省份id
+     * Set <p>省份id</p>
+     * @param Province <p>省份id</p>
      */
     public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 登录时间 
-     * @return LoginTime 登录时间
+     * Get <p>登录时间</p> 
+     * @return LoginTime <p>登录时间</p>
      */
     public String getLoginTime() {
         return this.LoginTime;
     }
 
     /**
-     * Set 登录时间
-     * @param LoginTime 登录时间
+     * Set <p>登录时间</p>
+     * @param LoginTime <p>登录时间</p>
      */
     public void setLoginTime(String LoginTime) {
         this.LoginTime = LoginTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 是否命中异地登录异常  1表示命中此类异常, 0表示未命中 
-     * @return IsRiskArea 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
+     * Get <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p> 
+     * @return IsRiskArea <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
      */
     public Long getIsRiskArea() {
         return this.IsRiskArea;
     }
 
     /**
-     * Set 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-     * @param IsRiskArea 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
+     * Set <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
+     * @param IsRiskArea <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
      */
     public void setIsRiskArea(Long IsRiskArea) {
         this.IsRiskArea = IsRiskArea;
     }
 
     /**
-     * Get 是否命中异常用户异常 1表示命中此类异常, 0表示未命中 
-     * @return IsRiskUser 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
+     * Get <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p> 
+     * @return IsRiskUser <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
      */
     public Long getIsRiskUser() {
         return this.IsRiskUser;
     }
 
     /**
-     * Set 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-     * @param IsRiskUser 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
+     * Set <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
+     * @param IsRiskUser <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
      */
     public void setIsRiskUser(Long IsRiskUser) {
         this.IsRiskUser = IsRiskUser;
     }
 
     /**
-     * Get 是否命中异常时间异常 1表示命中此类异常, 0表示未命中 
-     * @return IsRiskTime 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
+     * Get <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p> 
+     * @return IsRiskTime <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
      */
     public Long getIsRiskTime() {
         return this.IsRiskTime;
     }
 
     /**
-     * Set 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-     * @param IsRiskTime 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
+     * Set <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
+     * @param IsRiskTime <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
      */
     public void setIsRiskTime(Long IsRiskTime) {
         this.IsRiskTime = IsRiskTime;
     }
 
     /**
-     * Get 是否命中异常IP异常 1表示命中此类异常, 0表示未命中 
-     * @return IsRiskSrcIp 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
+     * Get <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p> 
+     * @return IsRiskSrcIp <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
      */
     public Long getIsRiskSrcIp() {
         return this.IsRiskSrcIp;
     }
 
     /**
-     * Set 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-     * @param IsRiskSrcIp 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
+     * Set <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
+     * @param IsRiskSrcIp <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
      */
     public void setIsRiskSrcIp(Long IsRiskSrcIp) {
         this.IsRiskSrcIp = IsRiskSrcIp;
     }
 
     /**
-     * Get 危险等级：
-0 高危
-1 可疑 
-     * @return RiskLevel 危险等级：
-0 高危
-1 可疑
+     * Get <p>危险等级：<br>0 高危<br>1 可疑</p> 
+     * @return RiskLevel <p>危险等级：<br>0 高危<br>1 可疑</p>
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 危险等级：
-0 高危
-1 可疑
-     * @param RiskLevel 危险等级：
-0 高危
-1 可疑
+     * Set <p>危险等级：<br>0 高危<br>1 可疑</p>
+     * @param RiskLevel <p>危险等级：<br>0 高危<br>1 可疑</p>
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 位置名称 
-     * @return Location 位置名称
+     * Get <p>位置名称</p> 
+     * @return Location <p>位置名称</p>
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 位置名称
-     * @param Location 位置名称
+     * Set <p>位置名称</p>
+     * @param Location <p>位置名称</p>
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 主机quuid 
-     * @return Quuid 主机quuid
+     * Get <p>主机quuid</p> 
+     * @return Quuid <p>主机quuid</p>
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 主机quuid
-     * @param Quuid 主机quuid
+     * Set <p>主机quuid</p>
+     * @param Quuid <p>主机quuid</p>
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报 
-     * @return Desc 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
+     * Get <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p> 
+     * @return Desc <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
-     * @param Desc 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
+     * Set <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
+     * @param Desc <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 附加信息 
-     * @return MachineExtraInfo 附加信息
+     * Get <p>附加信息</p> 
+     * @return MachineExtraInfo <p>附加信息</p>
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set 附加信息
-     * @param MachineExtraInfo 附加信息
+     * Set <p>附加信息</p>
+     * @param MachineExtraInfo <p>附加信息</p>
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 请求目的端口 
-     * @return Port 请求目的端口
+     * Get <p>请求目的端口</p> 
+     * @return Port <p>请求目的端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 请求目的端口
-     * @param Port 请求目的端口
+     * Set <p>请求目的端口</p>
+     * @param Port <p>请求目的端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get ip分析 
-     * @return IPAnalyse ip分析
+     * Get <p>ip分析</p> 
+     * @return IPAnalyse <p>ip分析</p>
      */
     public IPAnalyse getIPAnalyse() {
         return this.IPAnalyse;
     }
 
     /**
-     * Set ip分析
-     * @param IPAnalyse ip分析
+     * Set <p>ip分析</p>
+     * @param IPAnalyse <p>ip分析</p>
      */
     public void setIPAnalyse(IPAnalyse IPAnalyse) {
         this.IPAnalyse = IPAnalyse;
+    }
+
+    /**
+     * Get <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul> 
+     * @return HitRule <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+     */
+    public String getHitRule() {
+        return this.HitRule;
+    }
+
+    /**
+     * Set <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+     * @param HitRule <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+     */
+    public void setHitRule(String HitRule) {
+        this.HitRule = HitRule;
+    }
+
+    /**
+     * Get <p>命中策略名</p> 
+     * @return HitRuleName <p>命中策略名</p>
+     */
+    public String getHitRuleName() {
+        return this.HitRuleName;
+    }
+
+    /**
+     * Set <p>命中策略名</p>
+     * @param HitRuleName <p>命中策略名</p>
+     */
+    public void setHitRuleName(String HitRuleName) {
+        this.HitRuleName = HitRuleName;
+    }
+
+    /**
+     * Get <p>告警数量</p> 
+     * @return AlertCount <p>告警数量</p>
+     */
+    public Long getAlertCount() {
+        return this.AlertCount;
+    }
+
+    /**
+     * Set <p>告警数量</p>
+     * @param AlertCount <p>告警数量</p>
+     */
+    public void setAlertCount(Long AlertCount) {
+        this.AlertCount = AlertCount;
+    }
+
+    /**
+     * Get <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p> 
+     * @return FirstDiscoverTime <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     */
+    public String getFirstDiscoverTime() {
+        return this.FirstDiscoverTime;
+    }
+
+    /**
+     * Set <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     * @param FirstDiscoverTime <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     */
+    public void setFirstDiscoverTime(String FirstDiscoverTime) {
+        this.FirstDiscoverTime = FirstDiscoverTime;
+    }
+
+    /**
+     * Get <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p> 
+     * @return LastDiscoverTime <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     */
+    public String getLastDiscoverTime() {
+        return this.LastDiscoverTime;
+    }
+
+    /**
+     * Set <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     * @param LastDiscoverTime <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     */
+    public void setLastDiscoverTime(String LastDiscoverTime) {
+        this.LastDiscoverTime = LastDiscoverTime;
+    }
+
+    /**
+     * Get <p>危害描述</p> 
+     * @return HarmDescribe <p>危害描述</p>
+     */
+    public String getHarmDescribe() {
+        return this.HarmDescribe;
+    }
+
+    /**
+     * Set <p>危害描述</p>
+     * @param HarmDescribe <p>危害描述</p>
+     */
+    public void setHarmDescribe(String HarmDescribe) {
+        this.HarmDescribe = HarmDescribe;
+    }
+
+    /**
+     * Get <p>修复建议</p> 
+     * @return SuggestScheme <p>修复建议</p>
+     */
+    public String getSuggestScheme() {
+        return this.SuggestScheme;
+    }
+
+    /**
+     * Set <p>修复建议</p>
+     * @param SuggestScheme <p>修复建议</p>
+     */
+    public void setSuggestScheme(String SuggestScheme) {
+        this.SuggestScheme = SuggestScheme;
+    }
+
+    /**
+     * Get <p>最近登录历史</p> 
+     * @return RecentLoginList <p>最近登录历史</p>
+     */
+    public RecentLoginItem [] getRecentLoginList() {
+        return this.RecentLoginList;
+    }
+
+    /**
+     * Set <p>最近登录历史</p>
+     * @param RecentLoginList <p>最近登录历史</p>
+     */
+    public void setRecentLoginList(RecentLoginItem [] RecentLoginList) {
+        this.RecentLoginList = RecentLoginList;
     }
 
     public HostLoginList() {
@@ -649,6 +813,33 @@ XTI - 威胁情报
         if (source.IPAnalyse != null) {
             this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
         }
+        if (source.HitRule != null) {
+            this.HitRule = new String(source.HitRule);
+        }
+        if (source.HitRuleName != null) {
+            this.HitRuleName = new String(source.HitRuleName);
+        }
+        if (source.AlertCount != null) {
+            this.AlertCount = new Long(source.AlertCount);
+        }
+        if (source.FirstDiscoverTime != null) {
+            this.FirstDiscoverTime = new String(source.FirstDiscoverTime);
+        }
+        if (source.LastDiscoverTime != null) {
+            this.LastDiscoverTime = new String(source.LastDiscoverTime);
+        }
+        if (source.HarmDescribe != null) {
+            this.HarmDescribe = new String(source.HarmDescribe);
+        }
+        if (source.SuggestScheme != null) {
+            this.SuggestScheme = new String(source.SuggestScheme);
+        }
+        if (source.RecentLoginList != null) {
+            this.RecentLoginList = new RecentLoginItem[source.RecentLoginList.length];
+            for (int i = 0; i < source.RecentLoginList.length; i++) {
+                this.RecentLoginList[i] = new RecentLoginItem(source.RecentLoginList[i]);
+            }
+        }
     }
 
 
@@ -679,6 +870,14 @@ XTI - 威胁情报
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
+        this.setParamSimple(map, prefix + "HitRule", this.HitRule);
+        this.setParamSimple(map, prefix + "HitRuleName", this.HitRuleName);
+        this.setParamSimple(map, prefix + "AlertCount", this.AlertCount);
+        this.setParamSimple(map, prefix + "FirstDiscoverTime", this.FirstDiscoverTime);
+        this.setParamSimple(map, prefix + "LastDiscoverTime", this.LastDiscoverTime);
+        this.setParamSimple(map, prefix + "HarmDescribe", this.HarmDescribe);
+        this.setParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
+        this.setParamArrayObj(map, prefix + "RecentLoginList.", this.RecentLoginList);
 
     }
 }

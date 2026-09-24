@@ -31,6 +31,13 @@ public class DescribeDeployTemplatesRequest extends AbstractModel {
     private String ModelId;
 
     /**
+    * 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private String ServiceId;
+
+    /**
      * Get 模型ID 
      * @return ModelId 模型ID
      */
@@ -46,6 +53,22 @@ public class DescribeDeployTemplatesRequest extends AbstractModel {
         this.ModelId = ModelId;
     }
 
+    /**
+     * Get 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。 
+     * @return ServiceId 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+     */
+    public String getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+     * @param ServiceId 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+     */
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
     public DescribeDeployTemplatesRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeDeployTemplatesRequest extends AbstractModel {
         if (source.ModelId != null) {
             this.ModelId = new String(source.ModelId);
         }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeDeployTemplatesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
 
     }
 }

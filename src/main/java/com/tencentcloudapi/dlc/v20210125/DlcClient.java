@@ -578,6 +578,39 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建并提交作业 Action。
+     * @param req CreateJobRequest
+     * @return CreateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJobResponse CreateJob(CreateJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJob", CreateJobResponse.class);
+    }
+
+    /**
+     *创建作业定义。
+     * @param req CreateJobDefinitionRequest
+     * @return CreateJobDefinitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJobDefinitionResponse CreateJobDefinition(CreateJobDefinitionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJobDefinition", CreateJobDefinitionResponse.class);
+    }
+
+    /**
+     *按作业定义创建作业。
+     * @param req CreateJobFromDefinitionRequest
+     * @return CreateJobFromDefinitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJobFromDefinitionResponse CreateJobFromDefinition(CreateJobFromDefinitionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJobFromDefinition", CreateJobFromDefinitionResponse.class);
+    }
+
+    /**
      *创建作业配置
      * @param req CreateJobSpecRequest
      * @return CreateJobSpecResponse
@@ -1284,6 +1317,50 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *获取 Table 详情
+     * @param req DescribeCatalogTableInfoRequest
+     * @return DescribeCatalogTableInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCatalogTableInfoResponse DescribeCatalogTableInfo(DescribeCatalogTableInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCatalogTableInfo", DescribeCatalogTableInfoResponse.class);
+    }
+
+    /**
+     *获取 Schema 下所有 Table
+     * @param req DescribeCatalogTableNamesRequest
+     * @return DescribeCatalogTableNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCatalogTableNamesResponse DescribeCatalogTableNames(DescribeCatalogTableNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCatalogTableNames", DescribeCatalogTableNamesResponse.class);
+    }
+
+    /**
+     *分页查询表名
+     * @param req DescribeCatalogTableNamesPageRequest
+     * @return DescribeCatalogTableNamesPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCatalogTableNamesPageResponse DescribeCatalogTableNamesPage(DescribeCatalogTableNamesPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCatalogTableNamesPage", DescribeCatalogTableNamesPageResponse.class);
+    }
+
+    /**
+     *查询数据目录列表
+     * @param req DescribeCatalogsRequest
+     * @return DescribeCatalogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCatalogsResponse DescribeCatalogs(DescribeCatalogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCatalogs", DescribeCatalogsResponse.class);
+    }
+
+    /**
      *查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
      * @param req DescribeClsTopicsRequest
      * @return DescribeClsTopicsResponse
@@ -1589,6 +1666,72 @@ public class DlcClient extends AbstractClient{
     public DescribeForbiddenTableProResponse DescribeForbiddenTablePro(DescribeForbiddenTableProRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeForbiddenTablePro", DescribeForbiddenTableProResponse.class);
+    }
+
+    /**
+     *查询作业定义详情。
+     * @param req DescribeJobDefinitionDetailRequest
+     * @return DescribeJobDefinitionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobDefinitionDetailResponse DescribeJobDefinitionDetail(DescribeJobDefinitionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobDefinitionDetail", DescribeJobDefinitionDetailResponse.class);
+    }
+
+    /**
+     *查询作业定义列表。
+     * @param req DescribeJobDefinitionsRequest
+     * @return DescribeJobDefinitionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobDefinitionsResponse DescribeJobDefinitions(DescribeJobDefinitionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobDefinitions", DescribeJobDefinitionsResponse.class);
+    }
+
+    /**
+     *查询作业完整详情 Action。
+     * @param req DescribeJobDetailRequest
+     * @return DescribeJobDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobDetailResponse DescribeJobDetail(DescribeJobDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobDetail", DescribeJobDetailResponse.class);
+    }
+
+    /**
+     *分页查询作业列表 Action. PageSize 上限 200；QueueName 必须配合 PartitionCode。
+     * @param req DescribeJobListRequest
+     * @return DescribeJobListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobListResponse DescribeJobList(DescribeJobListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobList", DescribeJobListResponse.class);
+    }
+
+    /**
+     *统一作业日志查询 Action。
+     * @param req DescribeJobLogRequest
+     * @return DescribeJobLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobLogResponse DescribeJobLog(DescribeJobLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobLog", DescribeJobLogResponse.class);
+    }
+
+    /**
+     *获取 SQL 作业结果集 Action. 仅 MinorType=SPARK_SQL 有效（Batch 固定返回 State=NOT_SUPPORTED）。
+     * @param req DescribeJobResultRequest
+     * @return DescribeJobResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobResultResponse DescribeJobResult(DescribeJobResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobResult", DescribeJobResultResponse.class);
     }
 
     /**
@@ -1922,6 +2065,17 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     public DescribeSaleResourceInfoResponse DescribeSaleResourceInfo(DescribeSaleResourceInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSaleResourceInfo", DescribeSaleResourceInfoResponse.class);
+    }
+
+    /**
+     *分页查询 Catalog 下 Schema 列表
+     * @param req DescribeSchemaNamesPageRequest
+     * @return DescribeSchemaNamesPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchemaNamesPageResponse DescribeSchemaNamesPage(DescribeSchemaNamesPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSchemaNamesPage", DescribeSchemaNamesPageResponse.class);
     }
 
     /**
@@ -2384,6 +2538,17 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     public DescribeViewsResponse DescribeViews(DescribeViewsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeViews", DescribeViewsResponse.class);
+    }
+
+    /**
+     *查询计算仓库列表 Action。
+     * @param req DescribeWarehousesRequest
+     * @return DescribeWarehousesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWarehousesResponse DescribeWarehouses(DescribeWarehousesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWarehouses", DescribeWarehousesResponse.class);
     }
 
     /**
@@ -3253,6 +3418,17 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     public ModifyGovernEventRuleResponse ModifyGovernEventRule(ModifyGovernEventRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGovernEventRule", ModifyGovernEventRuleResponse.class);
+    }
+
+    /**
+     *修改作业定义。
+     * @param req ModifyJobDefinitionRequest
+     * @return ModifyJobDefinitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyJobDefinitionResponse ModifyJobDefinition(ModifyJobDefinitionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyJobDefinition", ModifyJobDefinitionResponse.class);
     }
 
     /**

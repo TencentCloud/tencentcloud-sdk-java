@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateMessageReceiverRequest extends AbstractModel {
 
     /**
-    * 消息接收人的用户名
+    * <p>消息接收人的用户名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 手机号国际区号，国内为86
+    * <p>手机号国际区号，国内为86</p>
     */
     @SerializedName("CountryCode")
     @Expose
     private String CountryCode;
 
     /**
-    * 手机号码, 例如：132****2492
-    */
-    @SerializedName("PhoneNumber")
-    @Expose
-    private String PhoneNumber;
-
-    /**
-    * 邮箱，例如：57*****@qq.com
+    * <p>邮箱，例如：57<strong>*</strong>@qq.com</p>
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-    * 消息接收人的备注，选填
+    * <p>手机号码, 例如：132****2492</p>
+    */
+    @SerializedName("PhoneNumber")
+    @Expose
+    private String PhoneNumber;
+
+    /**
+    * <p>消息接收人的备注，选填</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 消息接收人的用户名 
-     * @return Name 消息接收人的用户名
+     * Get <p>消息接收人的用户名</p> 
+     * @return Name <p>消息接收人的用户名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 消息接收人的用户名
-     * @param Name 消息接收人的用户名
+     * Set <p>消息接收人的用户名</p>
+     * @param Name <p>消息接收人的用户名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 手机号国际区号，国内为86 
-     * @return CountryCode 手机号国际区号，国内为86
+     * Get <p>手机号国际区号，国内为86</p> 
+     * @return CountryCode <p>手机号国际区号，国内为86</p>
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set 手机号国际区号，国内为86
-     * @param CountryCode 手机号国际区号，国内为86
+     * Set <p>手机号国际区号，国内为86</p>
+     * @param CountryCode <p>手机号国际区号，国内为86</p>
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get 手机号码, 例如：132****2492 
-     * @return PhoneNumber 手机号码, 例如：132****2492
-     */
-    public String getPhoneNumber() {
-        return this.PhoneNumber;
-    }
-
-    /**
-     * Set 手机号码, 例如：132****2492
-     * @param PhoneNumber 手机号码, 例如：132****2492
-     */
-    public void setPhoneNumber(String PhoneNumber) {
-        this.PhoneNumber = PhoneNumber;
-    }
-
-    /**
-     * Get 邮箱，例如：57*****@qq.com 
-     * @return Email 邮箱，例如：57*****@qq.com
+     * Get <p>邮箱，例如：57<strong>*</strong>@qq.com</p> 
+     * @return Email <p>邮箱，例如：57<strong>*</strong>@qq.com</p>
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 邮箱，例如：57*****@qq.com
-     * @param Email 邮箱，例如：57*****@qq.com
+     * Set <p>邮箱，例如：57<strong>*</strong>@qq.com</p>
+     * @param Email <p>邮箱，例如：57<strong>*</strong>@qq.com</p>
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 消息接收人的备注，选填 
-     * @return Remark 消息接收人的备注，选填
+     * Get <p>手机号码, 例如：132****2492</p> 
+     * @return PhoneNumber <p>手机号码, 例如：132****2492</p>
+     */
+    public String getPhoneNumber() {
+        return this.PhoneNumber;
+    }
+
+    /**
+     * Set <p>手机号码, 例如：132****2492</p>
+     * @param PhoneNumber <p>手机号码, 例如：132****2492</p>
+     */
+    public void setPhoneNumber(String PhoneNumber) {
+        this.PhoneNumber = PhoneNumber;
+    }
+
+    /**
+     * Get <p>消息接收人的备注，选填</p> 
+     * @return Remark <p>消息接收人的备注，选填</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 消息接收人的备注，选填
-     * @param Remark 消息接收人的备注，选填
+     * Set <p>消息接收人的备注，选填</p>
+     * @param Remark <p>消息接收人的备注，选填</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -152,11 +152,11 @@ public class CreateMessageReceiverRequest extends AbstractModel {
         if (source.CountryCode != null) {
             this.CountryCode = new String(source.CountryCode);
         }
-        if (source.PhoneNumber != null) {
-            this.PhoneNumber = new String(source.PhoneNumber);
-        }
         if (source.Email != null) {
             this.Email = new String(source.Email);
+        }
+        if (source.PhoneNumber != null) {
+            this.PhoneNumber = new String(source.PhoneNumber);
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
@@ -170,8 +170,8 @@ public class CreateMessageReceiverRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
-        this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }

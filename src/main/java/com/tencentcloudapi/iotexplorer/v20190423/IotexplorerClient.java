@@ -105,6 +105,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *批量设备透传指令控制
+     * @param req BatchPublishMessageRequest
+     * @return BatchPublishMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchPublishMessageResponse BatchPublishMessage(BatchPublishMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchPublishMessage", BatchPublishMessageResponse.class);
+    }
+
+    /**
      *批量续费 TWeSee 预付费订阅
      * @param req BatchRenewTWeSeeSubscriptionRequest
      * @return BatchRenewTWeSeeSubscriptionResponse

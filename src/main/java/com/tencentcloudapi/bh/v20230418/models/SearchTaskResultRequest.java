@@ -24,222 +24,207 @@ import java.util.HashMap;
 public class SearchTaskResultRequest extends AbstractModel {
 
     /**
-    * 搜索区间的开始时间
+    * <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 搜索区间的结束时间
+    * <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 运维任务ID
+    * <p>运维任务ID</p>
     */
     @SerializedName("OperationId")
     @Expose
     private String OperationId;
 
     /**
-    * 运维任务名称
+    * <p>运维任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户名，长度不超过20
+    * <p>用户名，长度不超过20</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 姓名，长度不超过20
+    * <p>姓名，长度不超过20</p>
     */
     @SerializedName("RealName")
     @Expose
     private String RealName;
 
     /**
-    * 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
+    * <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long [] TaskType;
 
     /**
-    * 查询偏移
+    * <p>查询偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页的页内记录数，默认为20，最大200
+    * <p>分页的页内记录数，默认为20，最大200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 搜索区间的开始时间 
-     * @return StartTime 搜索区间的开始时间
+     * Get <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p> 
+     * @return StartTime <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 搜索区间的开始时间
-     * @param StartTime 搜索区间的开始时间
+     * Set <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
+     * @param StartTime <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 搜索区间的结束时间 
-     * @return EndTime 搜索区间的结束时间
+     * Get <p>搜索区间的结束时间。未指定时，默认取当前时间</p> 
+     * @return EndTime <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 搜索区间的结束时间
-     * @param EndTime 搜索区间的结束时间
+     * Set <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
+     * @param EndTime <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 运维任务ID 
-     * @return OperationId 运维任务ID
+     * Get <p>运维任务ID</p> 
+     * @return OperationId <p>运维任务ID</p>
      */
     public String getOperationId() {
         return this.OperationId;
     }
 
     /**
-     * Set 运维任务ID
-     * @param OperationId 运维任务ID
+     * Set <p>运维任务ID</p>
+     * @param OperationId <p>运维任务ID</p>
      */
     public void setOperationId(String OperationId) {
         this.OperationId = OperationId;
     }
 
     /**
-     * Get 运维任务名称 
-     * @return Name 运维任务名称
+     * Get <p>运维任务名称</p> 
+     * @return Name <p>运维任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 运维任务名称
-     * @param Name 运维任务名称
+     * Set <p>运维任务名称</p>
+     * @param Name <p>运维任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户名，长度不超过20 
-     * @return UserName 用户名，长度不超过20
+     * Get <p>用户名，长度不超过20</p> 
+     * @return UserName <p>用户名，长度不超过20</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名，长度不超过20
-     * @param UserName 用户名，长度不超过20
+     * Set <p>用户名，长度不超过20</p>
+     * @param UserName <p>用户名，长度不超过20</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 姓名，长度不超过20 
-     * @return RealName 姓名，长度不超过20
+     * Get <p>姓名，长度不超过20</p> 
+     * @return RealName <p>姓名，长度不超过20</p>
      */
     public String getRealName() {
         return this.RealName;
     }
 
     /**
-     * Set 姓名，长度不超过20
-     * @param RealName 姓名，长度不超过20
+     * Set <p>姓名，长度不超过20</p>
+     * @param RealName <p>姓名，长度不超过20</p>
      */
     public void setRealName(String RealName) {
         this.RealName = RealName;
     }
 
     /**
-     * Get 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务 
-     * @return TaskType 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
+     * Get <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p> 
+     * @return TaskType <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
      */
     public Long [] getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
-     * @param TaskType 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
+     * Set <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
+     * @param TaskType <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
      */
     public void setTaskType(Long [] TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 查询偏移 
-     * @return Offset 查询偏移
+     * Get <p>查询偏移</p> 
+     * @return Offset <p>查询偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询偏移
-     * @param Offset 查询偏移
+     * Set <p>查询偏移</p>
+     * @param Offset <p>查询偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页的页内记录数，默认为20，最大200 
-     * @return Limit 分页的页内记录数，默认为20，最大200
+     * Get <p>分页的页内记录数，默认为20，最大200</p> 
+     * @return Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页的页内记录数，默认为20，最大200
-     * @param Limit 分页的页内记录数，默认为20，最大200
+     * Set <p>分页的页内记录数，默认为20，最大200</p>
+     * @param Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
