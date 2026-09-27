@@ -52,6 +52,13 @@ public class CreateIntentRouterRequest extends AbstractModel {
     private String RouterDescribe;
 
     /**
+    * <p>意图路由使用决策模型配置</p>
+    */
+    @SerializedName("DecisionModelConfig")
+    @Expose
+    private IntentRouterDecisionModelConfig DecisionModelConfig;
+
+    /**
      * Get <p>模型路由实例ID。</p> 
      * @return ModelRouterId <p>模型路由实例ID。</p>
      */
@@ -115,6 +122,22 @@ public class CreateIntentRouterRequest extends AbstractModel {
         this.RouterDescribe = RouterDescribe;
     }
 
+    /**
+     * Get <p>意图路由使用决策模型配置</p> 
+     * @return DecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public IntentRouterDecisionModelConfig getDecisionModelConfig() {
+        return this.DecisionModelConfig;
+    }
+
+    /**
+     * Set <p>意图路由使用决策模型配置</p>
+     * @param DecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public void setDecisionModelConfig(IntentRouterDecisionModelConfig DecisionModelConfig) {
+        this.DecisionModelConfig = DecisionModelConfig;
+    }
+
     public CreateIntentRouterRequest() {
     }
 
@@ -138,6 +161,9 @@ public class CreateIntentRouterRequest extends AbstractModel {
         if (source.RouterDescribe != null) {
             this.RouterDescribe = new String(source.RouterDescribe);
         }
+        if (source.DecisionModelConfig != null) {
+            this.DecisionModelConfig = new IntentRouterDecisionModelConfig(source.DecisionModelConfig);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateIntentRouterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteName", this.RouteName);
         this.setParamArrayObj(map, prefix + "Tiers.", this.Tiers);
         this.setParamSimple(map, prefix + "RouterDescribe", this.RouterDescribe);
+        this.setParamObj(map, prefix + "DecisionModelConfig.", this.DecisionModelConfig);
 
     }
 }

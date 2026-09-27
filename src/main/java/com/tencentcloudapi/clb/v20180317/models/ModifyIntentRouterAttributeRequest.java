@@ -52,11 +52,18 @@ public class ModifyIntentRouterAttributeRequest extends AbstractModel {
     private String RouterDescribe;
 
     /**
-    * <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+    * <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
     */
     @SerializedName("Tiers")
     @Expose
     private TierItem [] Tiers;
+
+    /**
+    * <p>意图路由使用决策模型配置</p>
+    */
+    @SerializedName("DecisionModelConfig")
+    @Expose
+    private IntentRouterDecisionModelConfig DecisionModelConfig;
 
     /**
      * Get <p>意图路由ID（ir-xxx格式）。</p> 
@@ -123,19 +130,35 @@ public class ModifyIntentRouterAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p> 
-     * @return Tiers <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+     * Get <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p> 
+     * @return Tiers <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
      */
     public TierItem [] getTiers() {
         return this.Tiers;
     }
 
     /**
-     * Set <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
-     * @param Tiers <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+     * Set <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
+     * @param Tiers <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
      */
     public void setTiers(TierItem [] Tiers) {
         this.Tiers = Tiers;
+    }
+
+    /**
+     * Get <p>意图路由使用决策模型配置</p> 
+     * @return DecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public IntentRouterDecisionModelConfig getDecisionModelConfig() {
+        return this.DecisionModelConfig;
+    }
+
+    /**
+     * Set <p>意图路由使用决策模型配置</p>
+     * @param DecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public void setDecisionModelConfig(IntentRouterDecisionModelConfig DecisionModelConfig) {
+        this.DecisionModelConfig = DecisionModelConfig;
     }
 
     public ModifyIntentRouterAttributeRequest() {
@@ -164,6 +187,9 @@ public class ModifyIntentRouterAttributeRequest extends AbstractModel {
                 this.Tiers[i] = new TierItem(source.Tiers[i]);
             }
         }
+        if (source.DecisionModelConfig != null) {
+            this.DecisionModelConfig = new IntentRouterDecisionModelConfig(source.DecisionModelConfig);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyIntentRouterAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteName", this.RouteName);
         this.setParamSimple(map, prefix + "RouterDescribe", this.RouterDescribe);
         this.setParamArrayObj(map, prefix + "Tiers.", this.Tiers);
+        this.setParamObj(map, prefix + "DecisionModelConfig.", this.DecisionModelConfig);
 
     }
 }

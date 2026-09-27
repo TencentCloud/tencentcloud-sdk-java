@@ -66,6 +66,13 @@ public class IntentRouterItem extends AbstractModel {
     private IntentRouterTierItem [] Tiers;
 
     /**
+    * <p>意图路由使用决策模型配置</p>
+    */
+    @SerializedName("DecisionModelConfig")
+    @Expose
+    private IntentRouterDecisionModelConfig DecisionModelConfig;
+
+    /**
     * <p>更新时间（ISO 8601格式）。</p>
     */
     @SerializedName("UpdatedTime")
@@ -169,6 +176,22 @@ public class IntentRouterItem extends AbstractModel {
     }
 
     /**
+     * Get <p>意图路由使用决策模型配置</p> 
+     * @return DecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public IntentRouterDecisionModelConfig getDecisionModelConfig() {
+        return this.DecisionModelConfig;
+    }
+
+    /**
+     * Set <p>意图路由使用决策模型配置</p>
+     * @param DecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public void setDecisionModelConfig(IntentRouterDecisionModelConfig DecisionModelConfig) {
+        this.DecisionModelConfig = DecisionModelConfig;
+    }
+
+    /**
      * Get <p>更新时间（ISO 8601格式）。</p> 
      * @return UpdatedTime <p>更新时间（ISO 8601格式）。</p>
      */
@@ -213,6 +236,9 @@ public class IntentRouterItem extends AbstractModel {
                 this.Tiers[i] = new IntentRouterTierItem(source.Tiers[i]);
             }
         }
+        if (source.DecisionModelConfig != null) {
+            this.DecisionModelConfig = new IntentRouterDecisionModelConfig(source.DecisionModelConfig);
+        }
         if (source.UpdatedTime != null) {
             this.UpdatedTime = new String(source.UpdatedTime);
         }
@@ -229,6 +255,7 @@ public class IntentRouterItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RouterDescribe", this.RouterDescribe);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Tiers.", this.Tiers);
+        this.setParamObj(map, prefix + "DecisionModelConfig.", this.DecisionModelConfig);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
