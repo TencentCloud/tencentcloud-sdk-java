@@ -24,143 +24,141 @@ import java.util.HashMap;
 public class WebhookAssetScope extends AbstractModel {
 
     /**
-    * 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
+    * <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
     */
     @SerializedName("AssetRange")
     @Expose
     private Long AssetRange;
 
     /**
-    * 选中的主机 quuid 列表，仅 AssetRange=2 生效
+    * <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 排除的主机 quuid 列表，仅 AssetRange=1 生效
+    * <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
     */
     @SerializedName("ExcludedInstanceIds")
     @Expose
     private String [] ExcludedInstanceIds;
 
     /**
-    * 安全中心标签 ID 列表，仅 AssetRange=3 生效
+    * <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
     */
     @SerializedName("TagIds")
     @Expose
     private Long [] TagIds;
 
     /**
-    * 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
+    * <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
     */
     @SerializedName("CloudTags")
     @Expose
     private String [] CloudTags;
 
     /**
-     * Get 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择 
-     * @return AssetRange 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
+    * <p>项目ID</p>
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private Long [] ProjectIds;
+
+    /**
+     * Get <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p> 
+     * @return AssetRange <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
      */
     public Long getAssetRange() {
         return this.AssetRange;
     }
 
     /**
-     * Set 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
-     * @param AssetRange 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
+     * Set <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
+     * @param AssetRange <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
      */
     public void setAssetRange(Long AssetRange) {
         this.AssetRange = AssetRange;
     }
 
     /**
-     * Get 选中的主机 quuid 列表，仅 AssetRange=2 生效 
-     * @return InstanceIds 选中的主机 quuid 列表，仅 AssetRange=2 生效
+     * Get <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p> 
+     * @return InstanceIds <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 选中的主机 quuid 列表，仅 AssetRange=2 生效
-     * @param InstanceIds 选中的主机 quuid 列表，仅 AssetRange=2 生效
+     * Set <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
+     * @param InstanceIds <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 排除的主机 quuid 列表，仅 AssetRange=1 生效 
-     * @return ExcludedInstanceIds 排除的主机 quuid 列表，仅 AssetRange=1 生效
+     * Get <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p> 
+     * @return ExcludedInstanceIds <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
      */
     public String [] getExcludedInstanceIds() {
         return this.ExcludedInstanceIds;
     }
 
     /**
-     * Set 排除的主机 quuid 列表，仅 AssetRange=1 生效
-     * @param ExcludedInstanceIds 排除的主机 quuid 列表，仅 AssetRange=1 生效
+     * Set <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
+     * @param ExcludedInstanceIds <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
      */
     public void setExcludedInstanceIds(String [] ExcludedInstanceIds) {
         this.ExcludedInstanceIds = ExcludedInstanceIds;
     }
 
     /**
-     * Get 安全中心标签 ID 列表，仅 AssetRange=3 生效 
-     * @return TagIds 安全中心标签 ID 列表，仅 AssetRange=3 生效
+     * Get <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p> 
+     * @return TagIds <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
      */
     public Long [] getTagIds() {
         return this.TagIds;
     }
 
     /**
-     * Set 安全中心标签 ID 列表，仅 AssetRange=3 生效
-     * @param TagIds 安全中心标签 ID 列表，仅 AssetRange=3 生效
+     * Set <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
+     * @param TagIds <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
      */
     public void setTagIds(Long [] TagIds) {
         this.TagIds = TagIds;
     }
 
     /**
-     * Get 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空 
-     * @return CloudTags 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
+     * Get <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p> 
+     * @return CloudTags <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
      */
     public String [] getCloudTags() {
         return this.CloudTags;
     }
 
     /**
-     * Set 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
-     * @param CloudTags 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
+     * Set <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
+     * @param CloudTags <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
      */
     public void setCloudTags(String [] CloudTags) {
         this.CloudTags = CloudTags;
+    }
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectIds <p>项目ID</p>
+     */
+    public Long [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set <p>项目ID</p>
+     * @param ProjectIds <p>项目ID</p>
+     */
+    public void setProjectIds(Long [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
     }
 
     public WebhookAssetScope() {
@@ -198,6 +196,12 @@ public class WebhookAssetScope extends AbstractModel {
                 this.CloudTags[i] = new String(source.CloudTags[i]);
             }
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -210,6 +214,7 @@ public class WebhookAssetScope extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExcludedInstanceIds.", this.ExcludedInstanceIds);
         this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
         this.setParamArraySimple(map, prefix + "CloudTags.", this.CloudTags);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

@@ -31,6 +31,13 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
     private String Image;
 
     /**
+    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+    */
+    @SerializedName("ImageRegistryType")
+    @Expose
+    private String ImageRegistryType;
+
+    /**
     * <p>镜像 Digest</p>
     */
     @SerializedName("ImageDigest")
@@ -38,11 +45,11 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
     private String ImageDigest;
 
     /**
-    * <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+    * <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
     */
-    @SerializedName("ImageRegistryType")
+    @SerializedName("PreCacheImageId")
     @Expose
-    private String ImageRegistryType;
+    private String PreCacheImageId;
 
     /**
      * Get <p>镜像地址</p> 
@@ -58,6 +65,22 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
      */
     public void setImage(String Image) {
         this.Image = Image;
+    }
+
+    /**
+     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     */
+    public String getImageRegistryType() {
+        return this.ImageRegistryType;
+    }
+
+    /**
+     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     */
+    public void setImageRegistryType(String ImageRegistryType) {
+        this.ImageRegistryType = ImageRegistryType;
     }
 
     /**
@@ -77,19 +100,19 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul> 
-     * @return ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * Get <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p> 
+     * @return PreCacheImageId <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
      */
-    public String getImageRegistryType() {
-        return this.ImageRegistryType;
+    public String getPreCacheImageId() {
+        return this.PreCacheImageId;
     }
 
     /**
-     * Set <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
-     * @param ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * Set <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
+     * @param PreCacheImageId <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
      */
-    public void setImageRegistryType(String ImageRegistryType) {
-        this.ImageRegistryType = ImageRegistryType;
+    public void setPreCacheImageId(String PreCacheImageId) {
+        this.PreCacheImageId = PreCacheImageId;
     }
 
     public DescribePreCacheImageTaskRequest() {
@@ -103,11 +126,14 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
         if (source.Image != null) {
             this.Image = new String(source.Image);
         }
+        if (source.ImageRegistryType != null) {
+            this.ImageRegistryType = new String(source.ImageRegistryType);
+        }
         if (source.ImageDigest != null) {
             this.ImageDigest = new String(source.ImageDigest);
         }
-        if (source.ImageRegistryType != null) {
-            this.ImageRegistryType = new String(source.ImageRegistryType);
+        if (source.PreCacheImageId != null) {
+            this.PreCacheImageId = new String(source.PreCacheImageId);
         }
     }
 
@@ -117,8 +143,9 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
-        this.setParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+        this.setParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
+        this.setParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
 
     }
 }

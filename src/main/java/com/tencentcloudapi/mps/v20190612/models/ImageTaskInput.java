@@ -126,6 +126,13 @@ public class ImageTaskInput extends AbstractModel {
     private ImageQualityConfig ImageQualityConfig;
 
     /**
+    * <p>图层融合配置。</p>
+    */
+    @SerializedName("AiComposeConfig")
+    @Expose
+    private AiComposeConfig AiComposeConfig;
+
+    /**
      * Get <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig <p>图片编码配置。</p>
@@ -365,6 +372,22 @@ public class ImageTaskInput extends AbstractModel {
         this.ImageQualityConfig = ImageQualityConfig;
     }
 
+    /**
+     * Get <p>图层融合配置。</p> 
+     * @return AiComposeConfig <p>图层融合配置。</p>
+     */
+    public AiComposeConfig getAiComposeConfig() {
+        return this.AiComposeConfig;
+    }
+
+    /**
+     * Set <p>图层融合配置。</p>
+     * @param AiComposeConfig <p>图层融合配置。</p>
+     */
+    public void setAiComposeConfig(AiComposeConfig AiComposeConfig) {
+        this.AiComposeConfig = AiComposeConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -415,6 +438,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.ImageQualityConfig != null) {
             this.ImageQualityConfig = new ImageQualityConfig(source.ImageQualityConfig);
         }
+        if (source.AiComposeConfig != null) {
+            this.AiComposeConfig = new AiComposeConfig(source.AiComposeConfig);
+        }
     }
 
 
@@ -436,6 +462,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
         this.setParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
         this.setParamObj(map, prefix + "ImageQualityConfig.", this.ImageQualityConfig);
+        this.setParamObj(map, prefix + "AiComposeConfig.", this.AiComposeConfig);
 
     }
 }

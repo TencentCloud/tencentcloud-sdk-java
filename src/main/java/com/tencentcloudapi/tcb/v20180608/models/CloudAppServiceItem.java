@@ -24,210 +24,256 @@ import java.util.HashMap;
 public class CloudAppServiceItem extends AbstractModel {
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 框架名
+    * <p>框架名</p>
     */
     @SerializedName("Framework")
     @Expose
     private String Framework;
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 应用路径
+    * <p>应用路径</p>
     */
     @SerializedName("AppPath")
     @Expose
     private String AppPath;
 
     /**
-    * 服务创建时间
+    * <p>服务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最新版本名
+    * <p>最新版本名</p>
     */
     @SerializedName("LatestVersionName")
     @Expose
     private String LatestVersionName;
 
     /**
-    * 最新版本状态
+    * <p>最新版本状态</p>
     */
     @SerializedName("LatestStatus")
     @Expose
     private String LatestStatus;
 
     /**
-    * 最新版本构建时间
+    * <p>最新版本构建时间</p>
     */
     @SerializedName("LatestBuildTime")
     @Expose
     private String LatestBuildTime;
 
     /**
-    * 部署类型
+    * <p>部署类型</p>
     */
     @SerializedName("DeployType")
     @Expose
     private String DeployType;
 
     /**
-     * Get 服务名 
-     * @return ServiceName 服务名
+    * <p>构建配置</p>
+    */
+    @SerializedName("BuildConfig")
+    @Expose
+    private String BuildConfig;
+
+    /**
+    * <p>当前流量版本</p>
+    */
+    @SerializedName("CurrentVersion")
+    @Expose
+    private String CurrentVersion;
+
+    /**
+     * Get <p>服务名</p> 
+     * @return ServiceName <p>服务名</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名
-     * @param ServiceName 服务名
+     * Set <p>服务名</p>
+     * @param ServiceName <p>服务名</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 框架名 
-     * @return Framework 框架名
+     * Get <p>框架名</p> 
+     * @return Framework <p>框架名</p>
      */
     public String getFramework() {
         return this.Framework;
     }
 
     /**
-     * Set 框架名
-     * @param Framework 框架名
+     * Set <p>框架名</p>
+     * @param Framework <p>框架名</p>
      */
     public void setFramework(String Framework) {
         this.Framework = Framework;
     }
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 应用路径 
-     * @return AppPath 应用路径
+     * Get <p>应用路径</p> 
+     * @return AppPath <p>应用路径</p>
      */
     public String getAppPath() {
         return this.AppPath;
     }
 
     /**
-     * Set 应用路径
-     * @param AppPath 应用路径
+     * Set <p>应用路径</p>
+     * @param AppPath <p>应用路径</p>
      */
     public void setAppPath(String AppPath) {
         this.AppPath = AppPath;
     }
 
     /**
-     * Get 服务创建时间 
-     * @return CreateTime 服务创建时间
+     * Get <p>服务创建时间</p> 
+     * @return CreateTime <p>服务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 服务创建时间
-     * @param CreateTime 服务创建时间
+     * Set <p>服务创建时间</p>
+     * @param CreateTime <p>服务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最新版本名 
-     * @return LatestVersionName 最新版本名
+     * Get <p>最新版本名</p> 
+     * @return LatestVersionName <p>最新版本名</p>
      */
     public String getLatestVersionName() {
         return this.LatestVersionName;
     }
 
     /**
-     * Set 最新版本名
-     * @param LatestVersionName 最新版本名
+     * Set <p>最新版本名</p>
+     * @param LatestVersionName <p>最新版本名</p>
      */
     public void setLatestVersionName(String LatestVersionName) {
         this.LatestVersionName = LatestVersionName;
     }
 
     /**
-     * Get 最新版本状态 
-     * @return LatestStatus 最新版本状态
+     * Get <p>最新版本状态</p> 
+     * @return LatestStatus <p>最新版本状态</p>
      */
     public String getLatestStatus() {
         return this.LatestStatus;
     }
 
     /**
-     * Set 最新版本状态
-     * @param LatestStatus 最新版本状态
+     * Set <p>最新版本状态</p>
+     * @param LatestStatus <p>最新版本状态</p>
      */
     public void setLatestStatus(String LatestStatus) {
         this.LatestStatus = LatestStatus;
     }
 
     /**
-     * Get 最新版本构建时间 
-     * @return LatestBuildTime 最新版本构建时间
+     * Get <p>最新版本构建时间</p> 
+     * @return LatestBuildTime <p>最新版本构建时间</p>
      */
     public String getLatestBuildTime() {
         return this.LatestBuildTime;
     }
 
     /**
-     * Set 最新版本构建时间
-     * @param LatestBuildTime 最新版本构建时间
+     * Set <p>最新版本构建时间</p>
+     * @param LatestBuildTime <p>最新版本构建时间</p>
      */
     public void setLatestBuildTime(String LatestBuildTime) {
         this.LatestBuildTime = LatestBuildTime;
     }
 
     /**
-     * Get 部署类型 
-     * @return DeployType 部署类型
+     * Get <p>部署类型</p> 
+     * @return DeployType <p>部署类型</p>
      */
     public String getDeployType() {
         return this.DeployType;
     }
 
     /**
-     * Set 部署类型
-     * @param DeployType 部署类型
+     * Set <p>部署类型</p>
+     * @param DeployType <p>部署类型</p>
      */
     public void setDeployType(String DeployType) {
         this.DeployType = DeployType;
+    }
+
+    /**
+     * Get <p>构建配置</p> 
+     * @return BuildConfig <p>构建配置</p>
+     */
+    public String getBuildConfig() {
+        return this.BuildConfig;
+    }
+
+    /**
+     * Set <p>构建配置</p>
+     * @param BuildConfig <p>构建配置</p>
+     */
+    public void setBuildConfig(String BuildConfig) {
+        this.BuildConfig = BuildConfig;
+    }
+
+    /**
+     * Get <p>当前流量版本</p> 
+     * @return CurrentVersion <p>当前流量版本</p>
+     */
+    public String getCurrentVersion() {
+        return this.CurrentVersion;
+    }
+
+    /**
+     * Set <p>当前流量版本</p>
+     * @param CurrentVersion <p>当前流量版本</p>
+     */
+    public void setCurrentVersion(String CurrentVersion) {
+        this.CurrentVersion = CurrentVersion;
     }
 
     public CloudAppServiceItem() {
@@ -265,6 +311,12 @@ public class CloudAppServiceItem extends AbstractModel {
         if (source.DeployType != null) {
             this.DeployType = new String(source.DeployType);
         }
+        if (source.BuildConfig != null) {
+            this.BuildConfig = new String(source.BuildConfig);
+        }
+        if (source.CurrentVersion != null) {
+            this.CurrentVersion = new String(source.CurrentVersion);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class CloudAppServiceItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestStatus", this.LatestStatus);
         this.setParamSimple(map, prefix + "LatestBuildTime", this.LatestBuildTime);
         this.setParamSimple(map, prefix + "DeployType", this.DeployType);
+        this.setParamSimple(map, prefix + "BuildConfig", this.BuildConfig);
+        this.setParamSimple(map, prefix + "CurrentVersion", this.CurrentVersion);
 
     }
 }

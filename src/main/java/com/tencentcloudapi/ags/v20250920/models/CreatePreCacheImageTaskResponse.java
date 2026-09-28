@@ -45,6 +45,13 @@ public class CreatePreCacheImageTaskResponse extends AbstractModel {
     private String ImageRegistryType;
 
     /**
+    * <p>镜像预热ID</p>
+    */
+    @SerializedName("PreCacheImageId")
+    @Expose
+    private String PreCacheImageId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class CreatePreCacheImageTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>镜像预热ID</p> 
+     * @return PreCacheImageId <p>镜像预热ID</p>
+     */
+    public String getPreCacheImageId() {
+        return this.PreCacheImageId;
+    }
+
+    /**
+     * Set <p>镜像预热ID</p>
+     * @param PreCacheImageId <p>镜像预热ID</p>
+     */
+    public void setPreCacheImageId(String PreCacheImageId) {
+        this.PreCacheImageId = PreCacheImageId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +155,9 @@ public class CreatePreCacheImageTaskResponse extends AbstractModel {
         if (source.ImageRegistryType != null) {
             this.ImageRegistryType = new String(source.ImageRegistryType);
         }
+        if (source.PreCacheImageId != null) {
+            this.PreCacheImageId = new String(source.PreCacheImageId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +171,7 @@ public class CreatePreCacheImageTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+        this.setParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

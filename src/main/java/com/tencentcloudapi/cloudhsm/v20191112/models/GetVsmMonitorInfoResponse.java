@@ -24,11 +24,25 @@ import java.util.HashMap;
 public class GetVsmMonitorInfoResponse extends AbstractModel {
 
     /**
-    * VSM监控信息
+    * <p>VSM监控信息</p>
     */
     @SerializedName("MonitorInfo")
     @Expose
     private String [] MonitorInfo;
+
+    /**
+    * <p>vsm摘要列表</p>
+    */
+    @SerializedName("DigestList")
+    @Expose
+    private VsmDigestItem [] DigestList;
+
+    /**
+    * <p>初始化状态</p>
+    */
+    @SerializedName("InitStatus")
+    @Expose
+    private Long InitStatus;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +52,51 @@ public class GetVsmMonitorInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get VSM监控信息 
-     * @return MonitorInfo VSM监控信息
+     * Get <p>VSM监控信息</p> 
+     * @return MonitorInfo <p>VSM监控信息</p>
      */
     public String [] getMonitorInfo() {
         return this.MonitorInfo;
     }
 
     /**
-     * Set VSM监控信息
-     * @param MonitorInfo VSM监控信息
+     * Set <p>VSM监控信息</p>
+     * @param MonitorInfo <p>VSM监控信息</p>
      */
     public void setMonitorInfo(String [] MonitorInfo) {
         this.MonitorInfo = MonitorInfo;
+    }
+
+    /**
+     * Get <p>vsm摘要列表</p> 
+     * @return DigestList <p>vsm摘要列表</p>
+     */
+    public VsmDigestItem [] getDigestList() {
+        return this.DigestList;
+    }
+
+    /**
+     * Set <p>vsm摘要列表</p>
+     * @param DigestList <p>vsm摘要列表</p>
+     */
+    public void setDigestList(VsmDigestItem [] DigestList) {
+        this.DigestList = DigestList;
+    }
+
+    /**
+     * Get <p>初始化状态</p> 
+     * @return InitStatus <p>初始化状态</p>
+     */
+    public Long getInitStatus() {
+        return this.InitStatus;
+    }
+
+    /**
+     * Set <p>初始化状态</p>
+     * @param InitStatus <p>初始化状态</p>
+     */
+    public void setInitStatus(Long InitStatus) {
+        this.InitStatus = InitStatus;
     }
 
     /**
@@ -83,6 +129,15 @@ public class GetVsmMonitorInfoResponse extends AbstractModel {
                 this.MonitorInfo[i] = new String(source.MonitorInfo[i]);
             }
         }
+        if (source.DigestList != null) {
+            this.DigestList = new VsmDigestItem[source.DigestList.length];
+            for (int i = 0; i < source.DigestList.length; i++) {
+                this.DigestList[i] = new VsmDigestItem(source.DigestList[i]);
+            }
+        }
+        if (source.InitStatus != null) {
+            this.InitStatus = new Long(source.InitStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +149,8 @@ public class GetVsmMonitorInfoResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MonitorInfo.", this.MonitorInfo);
+        this.setParamArrayObj(map, prefix + "DigestList.", this.DigestList);
+        this.setParamSimple(map, prefix + "InitStatus", this.InitStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

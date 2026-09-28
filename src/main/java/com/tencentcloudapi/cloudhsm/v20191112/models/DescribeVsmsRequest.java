@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class DescribeVsmsRequest extends AbstractModel {
 
     /**
-    * 偏移
+    * <p>偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 最大数量
+    * <p>最大数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 资源ID或者资源名字模糊查询的关键字
+    * <p>资源ID或者资源名字模糊查询的关键字</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 标签过滤条件
+    * <p>标签过滤条件</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 设备所属的厂商名称，根据厂商来进行筛选
+    * <p>设备所属的厂商名称，根据厂商来进行筛选</p>
     */
     @SerializedName("Manufacturer")
     @Expose
     private String Manufacturer;
 
     /**
-    * Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+    * <p>Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all</p>
     */
     @SerializedName("HsmType")
     @Expose
     private String HsmType;
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+    * <p>集群id</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get <p>偏移</p> 
+     * @return Offset <p>偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set <p>偏移</p>
+     * @param Offset <p>偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 最大数量 
-     * @return Limit 最大数量
+     * Get <p>最大数量</p> 
+     * @return Limit <p>最大数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大数量
-     * @param Limit 最大数量
+     * Set <p>最大数量</p>
+     * @param Limit <p>最大数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 资源ID或者资源名字模糊查询的关键字 
-     * @return SearchWord 资源ID或者资源名字模糊查询的关键字
+     * Get <p>资源ID或者资源名字模糊查询的关键字</p> 
+     * @return SearchWord <p>资源ID或者资源名字模糊查询的关键字</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 资源ID或者资源名字模糊查询的关键字
-     * @param SearchWord 资源ID或者资源名字模糊查询的关键字
+     * Set <p>资源ID或者资源名字模糊查询的关键字</p>
+     * @param SearchWord <p>资源ID或者资源名字模糊查询的关键字</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 标签过滤条件 
-     * @return TagFilters 标签过滤条件
+     * Get <p>标签过滤条件</p> 
+     * @return TagFilters <p>标签过滤条件</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤条件
-     * @param TagFilters 标签过滤条件
+     * Set <p>标签过滤条件</p>
+     * @param TagFilters <p>标签过滤条件</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 设备所属的厂商名称，根据厂商来进行筛选 
-     * @return Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
+     * Get <p>设备所属的厂商名称，根据厂商来进行筛选</p> 
+     * @return Manufacturer <p>设备所属的厂商名称，根据厂商来进行筛选</p>
      */
     public String getManufacturer() {
         return this.Manufacturer;
     }
 
     /**
-     * Set 设备所属的厂商名称，根据厂商来进行筛选
-     * @param Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
+     * Set <p>设备所属的厂商名称，根据厂商来进行筛选</p>
+     * @param Manufacturer <p>设备所属的厂商名称，根据厂商来进行筛选</p>
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all 
-     * @return HsmType Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+     * Get <p>Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all</p> 
+     * @return HsmType <p>Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all</p>
      */
     public String getHsmType() {
         return this.HsmType;
     }
 
     /**
-     * Set Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
-     * @param HsmType Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+     * Set <p>Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all</p>
+     * @param HsmType <p>Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all</p>
      */
     public void setHsmType(String HsmType) {
         this.HsmType = HsmType;
+    }
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     public DescribeVsmsRequest() {
@@ -190,6 +213,9 @@ public class DescribeVsmsRequest extends AbstractModel {
         if (source.HsmType != null) {
             this.HsmType = new String(source.HsmType);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeVsmsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         this.setParamSimple(map, prefix + "HsmType", this.HsmType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

@@ -81,6 +81,41 @@ public class CloudAppVersionItem extends AbstractModel {
     private BuildStepStatus [] Steps;
 
     /**
+    * <p>服务版本部署快照</p>
+    */
+    @SerializedName("Snapshot")
+    @Expose
+    private String Snapshot;
+
+    /**
+    * <p>服务版本域名</p>
+    */
+    @SerializedName("VersionDomain")
+    @Expose
+    private String VersionDomain;
+
+    /**
+    * <p>服务版本流量</p>
+    */
+    @SerializedName("TrafficPercent")
+    @Expose
+    private Long TrafficPercent;
+
+    /**
+    * <p>服务资源</p>
+    */
+    @SerializedName("Resources")
+    @Expose
+    private CloudAppResourceItem [] Resources;
+
+    /**
+    * <p>服务产物列表</p>
+    */
+    @SerializedName("Artifacts")
+    @Expose
+    private BuildArtifactInfo [] Artifacts;
+
+    /**
      * Get <p>版本名</p> 
      * @return VersionName <p>版本名</p>
      */
@@ -212,6 +247,86 @@ public class CloudAppVersionItem extends AbstractModel {
         this.Steps = Steps;
     }
 
+    /**
+     * Get <p>服务版本部署快照</p> 
+     * @return Snapshot <p>服务版本部署快照</p>
+     */
+    public String getSnapshot() {
+        return this.Snapshot;
+    }
+
+    /**
+     * Set <p>服务版本部署快照</p>
+     * @param Snapshot <p>服务版本部署快照</p>
+     */
+    public void setSnapshot(String Snapshot) {
+        this.Snapshot = Snapshot;
+    }
+
+    /**
+     * Get <p>服务版本域名</p> 
+     * @return VersionDomain <p>服务版本域名</p>
+     */
+    public String getVersionDomain() {
+        return this.VersionDomain;
+    }
+
+    /**
+     * Set <p>服务版本域名</p>
+     * @param VersionDomain <p>服务版本域名</p>
+     */
+    public void setVersionDomain(String VersionDomain) {
+        this.VersionDomain = VersionDomain;
+    }
+
+    /**
+     * Get <p>服务版本流量</p> 
+     * @return TrafficPercent <p>服务版本流量</p>
+     */
+    public Long getTrafficPercent() {
+        return this.TrafficPercent;
+    }
+
+    /**
+     * Set <p>服务版本流量</p>
+     * @param TrafficPercent <p>服务版本流量</p>
+     */
+    public void setTrafficPercent(Long TrafficPercent) {
+        this.TrafficPercent = TrafficPercent;
+    }
+
+    /**
+     * Get <p>服务资源</p> 
+     * @return Resources <p>服务资源</p>
+     */
+    public CloudAppResourceItem [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set <p>服务资源</p>
+     * @param Resources <p>服务资源</p>
+     */
+    public void setResources(CloudAppResourceItem [] Resources) {
+        this.Resources = Resources;
+    }
+
+    /**
+     * Get <p>服务产物列表</p> 
+     * @return Artifacts <p>服务产物列表</p>
+     */
+    public BuildArtifactInfo [] getArtifacts() {
+        return this.Artifacts;
+    }
+
+    /**
+     * Set <p>服务产物列表</p>
+     * @param Artifacts <p>服务产物列表</p>
+     */
+    public void setArtifacts(BuildArtifactInfo [] Artifacts) {
+        this.Artifacts = Artifacts;
+    }
+
     public CloudAppVersionItem() {
     }
 
@@ -247,6 +362,27 @@ public class CloudAppVersionItem extends AbstractModel {
                 this.Steps[i] = new BuildStepStatus(source.Steps[i]);
             }
         }
+        if (source.Snapshot != null) {
+            this.Snapshot = new String(source.Snapshot);
+        }
+        if (source.VersionDomain != null) {
+            this.VersionDomain = new String(source.VersionDomain);
+        }
+        if (source.TrafficPercent != null) {
+            this.TrafficPercent = new Long(source.TrafficPercent);
+        }
+        if (source.Resources != null) {
+            this.Resources = new CloudAppResourceItem[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new CloudAppResourceItem(source.Resources[i]);
+            }
+        }
+        if (source.Artifacts != null) {
+            this.Artifacts = new BuildArtifactInfo[source.Artifacts.length];
+            for (int i = 0; i < source.Artifacts.length; i++) {
+                this.Artifacts[i] = new BuildArtifactInfo(source.Artifacts[i]);
+            }
+        }
     }
 
 
@@ -262,6 +398,11 @@ public class CloudAppVersionItem extends AbstractModel {
         this.setParamObj(map, prefix + "StaticConfig.", this.StaticConfig);
         this.setParamSimple(map, prefix + "BuildTime", this.BuildTime);
         this.setParamArrayObj(map, prefix + "Steps.", this.Steps);
+        this.setParamSimple(map, prefix + "Snapshot", this.Snapshot);
+        this.setParamSimple(map, prefix + "VersionDomain", this.VersionDomain);
+        this.setParamSimple(map, prefix + "TrafficPercent", this.TrafficPercent);
+        this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamArrayObj(map, prefix + "Artifacts.", this.Artifacts);
 
     }
 }

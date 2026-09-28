@@ -59,6 +59,13 @@ public class DescribeCloudAppListRequest extends AbstractModel {
     private Long PageNo;
 
     /**
+    * <p>服务过滤</p>
+    */
+    @SerializedName("Filter")
+    @Expose
+    private CloudAppFilter Filter;
+
+    /**
      * Get <p>环境ID</p> 
      * @return EnvId <p>环境ID</p>
      */
@@ -138,6 +145,22 @@ public class DescribeCloudAppListRequest extends AbstractModel {
         this.PageNo = PageNo;
     }
 
+    /**
+     * Get <p>服务过滤</p> 
+     * @return Filter <p>服务过滤</p>
+     */
+    public CloudAppFilter getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set <p>服务过滤</p>
+     * @param Filter <p>服务过滤</p>
+     */
+    public void setFilter(CloudAppFilter Filter) {
+        this.Filter = Filter;
+    }
+
     public DescribeCloudAppListRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeCloudAppListRequest extends AbstractModel {
         if (source.PageNo != null) {
             this.PageNo = new Long(source.PageNo);
         }
+        if (source.Filter != null) {
+            this.Filter = new CloudAppFilter(source.Filter);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeCloudAppListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNo", this.PageNo);
+        this.setParamObj(map, prefix + "Filter.", this.Filter);
 
     }
 }

@@ -73,6 +73,41 @@ public class DescribeCloudAppVersionResponse extends AbstractModel {
     private BuildStepStatus [] Steps;
 
     /**
+    * <p>服务版本快照</p>
+    */
+    @SerializedName("Snapshot")
+    @Expose
+    private String Snapshot;
+
+    /**
+    * <p>服务版本流量比例</p>
+    */
+    @SerializedName("TrafficPercent")
+    @Expose
+    private Long TrafficPercent;
+
+    /**
+    * <p>服务版本域名</p>
+    */
+    @SerializedName("VersionDomain")
+    @Expose
+    private String VersionDomain;
+
+    /**
+    * <p>服务管理资源列表</p>
+    */
+    @SerializedName("Resources")
+    @Expose
+    private CloudAppResourceItem [] Resources;
+
+    /**
+    * <p>[]ArtifactInfo 的 JSON 序列化</p>
+    */
+    @SerializedName("Artifacts")
+    @Expose
+    private BuildArtifactInfo [] Artifacts;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +227,86 @@ public class DescribeCloudAppVersionResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>服务版本快照</p> 
+     * @return Snapshot <p>服务版本快照</p>
+     */
+    public String getSnapshot() {
+        return this.Snapshot;
+    }
+
+    /**
+     * Set <p>服务版本快照</p>
+     * @param Snapshot <p>服务版本快照</p>
+     */
+    public void setSnapshot(String Snapshot) {
+        this.Snapshot = Snapshot;
+    }
+
+    /**
+     * Get <p>服务版本流量比例</p> 
+     * @return TrafficPercent <p>服务版本流量比例</p>
+     */
+    public Long getTrafficPercent() {
+        return this.TrafficPercent;
+    }
+
+    /**
+     * Set <p>服务版本流量比例</p>
+     * @param TrafficPercent <p>服务版本流量比例</p>
+     */
+    public void setTrafficPercent(Long TrafficPercent) {
+        this.TrafficPercent = TrafficPercent;
+    }
+
+    /**
+     * Get <p>服务版本域名</p> 
+     * @return VersionDomain <p>服务版本域名</p>
+     */
+    public String getVersionDomain() {
+        return this.VersionDomain;
+    }
+
+    /**
+     * Set <p>服务版本域名</p>
+     * @param VersionDomain <p>服务版本域名</p>
+     */
+    public void setVersionDomain(String VersionDomain) {
+        this.VersionDomain = VersionDomain;
+    }
+
+    /**
+     * Get <p>服务管理资源列表</p> 
+     * @return Resources <p>服务管理资源列表</p>
+     */
+    public CloudAppResourceItem [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set <p>服务管理资源列表</p>
+     * @param Resources <p>服务管理资源列表</p>
+     */
+    public void setResources(CloudAppResourceItem [] Resources) {
+        this.Resources = Resources;
+    }
+
+    /**
+     * Get <p>[]ArtifactInfo 的 JSON 序列化</p> 
+     * @return Artifacts <p>[]ArtifactInfo 的 JSON 序列化</p>
+     */
+    public BuildArtifactInfo [] getArtifacts() {
+        return this.Artifacts;
+    }
+
+    /**
+     * Set <p>[]ArtifactInfo 的 JSON 序列化</p>
+     * @param Artifacts <p>[]ArtifactInfo 的 JSON 序列化</p>
+     */
+    public void setArtifacts(BuildArtifactInfo [] Artifacts) {
+        this.Artifacts = Artifacts;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -239,6 +354,27 @@ public class DescribeCloudAppVersionResponse extends AbstractModel {
                 this.Steps[i] = new BuildStepStatus(source.Steps[i]);
             }
         }
+        if (source.Snapshot != null) {
+            this.Snapshot = new String(source.Snapshot);
+        }
+        if (source.TrafficPercent != null) {
+            this.TrafficPercent = new Long(source.TrafficPercent);
+        }
+        if (source.VersionDomain != null) {
+            this.VersionDomain = new String(source.VersionDomain);
+        }
+        if (source.Resources != null) {
+            this.Resources = new CloudAppResourceItem[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new CloudAppResourceItem(source.Resources[i]);
+            }
+        }
+        if (source.Artifacts != null) {
+            this.Artifacts = new BuildArtifactInfo[source.Artifacts.length];
+            for (int i = 0; i < source.Artifacts.length; i++) {
+                this.Artifacts[i] = new BuildArtifactInfo(source.Artifacts[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -256,6 +392,11 @@ public class DescribeCloudAppVersionResponse extends AbstractModel {
         this.setParamObj(map, prefix + "StaticConfig.", this.StaticConfig);
         this.setParamSimple(map, prefix + "BuildTime", this.BuildTime);
         this.setParamArrayObj(map, prefix + "Steps.", this.Steps);
+        this.setParamSimple(map, prefix + "Snapshot", this.Snapshot);
+        this.setParamSimple(map, prefix + "TrafficPercent", this.TrafficPercent);
+        this.setParamSimple(map, prefix + "VersionDomain", this.VersionDomain);
+        this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamArrayObj(map, prefix + "Artifacts.", this.Artifacts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

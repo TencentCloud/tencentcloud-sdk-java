@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreatePreCacheImageTaskRequest extends AbstractModel {
 
     /**
-    * <p>镜像地址</p>
+    * <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
     */
     @SerializedName("Image")
     @Expose
@@ -38,16 +38,16 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     private String ImageRegistryType;
 
     /**
-     * Get <p>镜像地址</p> 
-     * @return Image <p>镜像地址</p>
+     * Get <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p> 
+     * @return Image <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set <p>镜像地址</p>
-     * @param Image <p>镜像地址</p>
+     * Set <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
+     * @param Image <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
      */
     public void setImage(String Image) {
         this.Image = Image;

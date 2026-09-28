@@ -116,6 +116,20 @@ public class ImageModerationResponse extends AbstractModel {
     private RecognitionResult [] RecognitionResults;
 
     /**
+    * <p>转存地址，开启转存能力返回转存地址</p>
+    */
+    @SerializedName("StoreUrl")
+    @Expose
+    private String StoreUrl;
+
+    /**
+    * <p>命中原因，大模型提召回输出原因内容</p>
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -335,6 +349,38 @@ public class ImageModerationResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>转存地址，开启转存能力返回转存地址</p> 
+     * @return StoreUrl <p>转存地址，开启转存能力返回转存地址</p>
+     */
+    public String getStoreUrl() {
+        return this.StoreUrl;
+    }
+
+    /**
+     * Set <p>转存地址，开启转存能力返回转存地址</p>
+     * @param StoreUrl <p>转存地址，开启转存能力返回转存地址</p>
+     */
+    public void setStoreUrl(String StoreUrl) {
+        this.StoreUrl = StoreUrl;
+    }
+
+    /**
+     * Get <p>命中原因，大模型提召回输出原因内容</p> 
+     * @return Reason <p>命中原因，大模型提召回输出原因内容</p>
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set <p>命中原因，大模型提召回输出原因内容</p>
+     * @param Reason <p>命中原因，大模型提召回输出原因内容</p>
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -412,6 +458,12 @@ public class ImageModerationResponse extends AbstractModel {
                 this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
             }
         }
+        if (source.StoreUrl != null) {
+            this.StoreUrl = new String(source.StoreUrl);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -435,6 +487,8 @@ public class ImageModerationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "FileMD5", this.FileMD5);
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+        this.setParamSimple(map, prefix + "StoreUrl", this.StoreUrl);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

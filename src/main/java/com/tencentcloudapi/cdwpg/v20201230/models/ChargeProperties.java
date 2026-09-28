@@ -45,18 +45,18 @@ public class ChargeProperties extends AbstractModel {
     private String TimeUnit;
 
     /**
-    * 计费类型0-按量计费，1-包年包月
-    */
-    @SerializedName("PayMode")
-    @Expose
-    private Long PayMode;
-
-    /**
     * PREPAID、POSTPAID_BY_HOUR
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
+
+    /**
+    * 计费类型0-按量计费，1-包年包月
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
 
     /**
      * Get 1-需要自动续期 
@@ -107,22 +107,6 @@ public class ChargeProperties extends AbstractModel {
     }
 
     /**
-     * Get 计费类型0-按量计费，1-包年包月 
-     * @return PayMode 计费类型0-按量计费，1-包年包月
-     */
-    public Long getPayMode() {
-        return this.PayMode;
-    }
-
-    /**
-     * Set 计费类型0-按量计费，1-包年包月
-     * @param PayMode 计费类型0-按量计费，1-包年包月
-     */
-    public void setPayMode(Long PayMode) {
-        this.PayMode = PayMode;
-    }
-
-    /**
      * Get PREPAID、POSTPAID_BY_HOUR 
      * @return ChargeType PREPAID、POSTPAID_BY_HOUR
      */
@@ -136,6 +120,22 @@ public class ChargeProperties extends AbstractModel {
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
+    }
+
+    /**
+     * Get 计费类型0-按量计费，1-包年包月 
+     * @return PayMode 计费类型0-按量计费，1-包年包月
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 计费类型0-按量计费，1-包年包月
+     * @param PayMode 计费类型0-按量计费，1-包年包月
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
     }
 
     public ChargeProperties() {
@@ -155,11 +155,11 @@ public class ChargeProperties extends AbstractModel {
         if (source.TimeUnit != null) {
             this.TimeUnit = new String(source.TimeUnit);
         }
-        if (source.PayMode != null) {
-            this.PayMode = new Long(source.PayMode);
-        }
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
         }
     }
 
@@ -171,8 +171,8 @@ public class ChargeProperties extends AbstractModel {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
-        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

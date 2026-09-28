@@ -199,6 +199,20 @@ public class CreateCloudInstanceRequest extends AbstractModel {
     private String LogStoreID;
 
     /**
+    * <p>airflow目录源</p>
+    */
+    @SerializedName("AirflowDagSource")
+    @Expose
+    private AirflowDagSourceInput AirflowDagSource;
+
+    /**
+    * <p>airflow源凭证</p>
+    */
+    @SerializedName("AirflowGitCredential")
+    @Expose
+    private AirflowGitCredentialInput AirflowGitCredential;
+
+    /**
      * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
      * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
@@ -598,6 +612,38 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.LogStoreID = LogStoreID;
     }
 
+    /**
+     * Get <p>airflow目录源</p> 
+     * @return AirflowDagSource <p>airflow目录源</p>
+     */
+    public AirflowDagSourceInput getAirflowDagSource() {
+        return this.AirflowDagSource;
+    }
+
+    /**
+     * Set <p>airflow目录源</p>
+     * @param AirflowDagSource <p>airflow目录源</p>
+     */
+    public void setAirflowDagSource(AirflowDagSourceInput AirflowDagSource) {
+        this.AirflowDagSource = AirflowDagSource;
+    }
+
+    /**
+     * Get <p>airflow源凭证</p> 
+     * @return AirflowGitCredential <p>airflow源凭证</p>
+     */
+    public AirflowGitCredentialInput getAirflowGitCredential() {
+        return this.AirflowGitCredential;
+    }
+
+    /**
+     * Set <p>airflow源凭证</p>
+     * @param AirflowGitCredential <p>airflow源凭证</p>
+     */
+    public void setAirflowGitCredential(AirflowGitCredentialInput AirflowGitCredential) {
+        this.AirflowGitCredential = AirflowGitCredential;
+    }
+
     public CreateCloudInstanceRequest() {
     }
 
@@ -696,6 +742,12 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         if (source.LogStoreID != null) {
             this.LogStoreID = new String(source.LogStoreID);
         }
+        if (source.AirflowDagSource != null) {
+            this.AirflowDagSource = new AirflowDagSourceInput(source.AirflowDagSource);
+        }
+        if (source.AirflowGitCredential != null) {
+            this.AirflowGitCredential = new AirflowGitCredentialInput(source.AirflowGitCredential);
+        }
     }
 
 
@@ -728,6 +780,8 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TerminateProtection", this.TerminateProtection);
         this.setParamSimple(map, prefix + "EnableEmrProxy", this.EnableEmrProxy);
         this.setParamSimple(map, prefix + "LogStoreID", this.LogStoreID);
+        this.setParamObj(map, prefix + "AirflowDagSource.", this.AirflowDagSource);
+        this.setParamObj(map, prefix + "AirflowGitCredential.", this.AirflowGitCredential);
 
     }
 }

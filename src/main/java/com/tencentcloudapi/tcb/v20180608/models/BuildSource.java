@@ -80,6 +80,13 @@ public class BuildSource extends AbstractModel {
     private String CosSuffix;
 
     /**
+    * <p>zip 包名称</p>
+    */
+    @SerializedName("PackageFileName")
+    @Expose
+    private String PackageFileName;
+
+    /**
      * Get <p>源码来源类型，取值：&quot;git&quot; &quot;zip&quot;</p> 
      * @return Type <p>源码来源类型，取值：&quot;git&quot; &quot;zip&quot;</p>
      */
@@ -207,6 +214,22 @@ public class BuildSource extends AbstractModel {
         this.CosSuffix = CosSuffix;
     }
 
+    /**
+     * Get <p>zip 包名称</p> 
+     * @return PackageFileName <p>zip 包名称</p>
+     */
+    public String getPackageFileName() {
+        return this.PackageFileName;
+    }
+
+    /**
+     * Set <p>zip 包名称</p>
+     * @param PackageFileName <p>zip 包名称</p>
+     */
+    public void setPackageFileName(String PackageFileName) {
+        this.PackageFileName = PackageFileName;
+    }
+
     public BuildSource() {
     }
 
@@ -239,6 +262,9 @@ public class BuildSource extends AbstractModel {
         if (source.CosSuffix != null) {
             this.CosSuffix = new String(source.CosSuffix);
         }
+        if (source.PackageFileName != null) {
+            this.PackageFileName = new String(source.PackageFileName);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class BuildSource extends AbstractModel {
         this.setParamSimple(map, prefix + "CodeUrlWithAuth", this.CodeUrlWithAuth);
         this.setParamSimple(map, prefix + "CosTimestamp", this.CosTimestamp);
         this.setParamSimple(map, prefix + "CosSuffix", this.CosSuffix);
+        this.setParamSimple(map, prefix + "PackageFileName", this.PackageFileName);
 
     }
 }

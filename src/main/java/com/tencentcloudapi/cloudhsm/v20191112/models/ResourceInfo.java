@@ -206,6 +206,27 @@ public class ResourceInfo extends AbstractModel {
     private String DeployEnv;
 
     /**
+    * <p>vsm版本号</p>
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * <p>集群id</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * <p>集群角色，0-未加入集群 1-主 2-从</p>
+    */
+    @SerializedName("ClusterRole")
+    @Expose
+    private Long ClusterRole;
+
+    /**
      * Get <p>资源Id</p> 
      * @return ResourceId <p>资源Id</p>
      */
@@ -621,6 +642,54 @@ public class ResourceInfo extends AbstractModel {
         this.DeployEnv = DeployEnv;
     }
 
+    /**
+     * Get <p>vsm版本号</p> 
+     * @return Version <p>vsm版本号</p>
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set <p>vsm版本号</p>
+     * @param Version <p>vsm版本号</p>
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>集群角色，0-未加入集群 1-主 2-从</p> 
+     * @return ClusterRole <p>集群角色，0-未加入集群 1-主 2-从</p>
+     */
+    public Long getClusterRole() {
+        return this.ClusterRole;
+    }
+
+    /**
+     * Set <p>集群角色，0-未加入集群 1-主 2-从</p>
+     * @param ClusterRole <p>集群角色，0-未加入集群 1-主 2-从</p>
+     */
+    public void setClusterRole(Long ClusterRole) {
+        this.ClusterRole = ClusterRole;
+    }
+
     public ResourceInfo() {
     }
 
@@ -713,6 +782,15 @@ public class ResourceInfo extends AbstractModel {
         if (source.DeployEnv != null) {
             this.DeployEnv = new String(source.DeployEnv);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterRole != null) {
+            this.ClusterRole = new Long(source.ClusterRole);
+        }
     }
 
 
@@ -746,6 +824,9 @@ public class ResourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PqcStatus", this.PqcStatus);
         this.setParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
         this.setParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterRole", this.ClusterRole);
 
     }
 }

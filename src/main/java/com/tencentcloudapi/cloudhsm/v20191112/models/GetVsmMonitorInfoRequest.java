@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GetVsmMonitorInfoRequest extends AbstractModel {
 
     /**
-    * 资源Id
+    * <p>资源Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源名称
+    * <p>资源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-     * Get 资源Id 
-     * @return ResourceId 资源Id
+     * Get <p>资源Id</p> 
+     * @return ResourceId <p>资源Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id
-     * @param ResourceId 资源Id
+     * Set <p>资源Id</p>
+     * @param ResourceId <p>资源Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源名称 
-     * @return ResourceName 资源名称
+     * Get <p>资源名称</p> 
+     * @return ResourceName <p>资源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称
-     * @param ResourceName 资源名称
+     * Set <p>资源名称</p>
+     * @param ResourceName <p>资源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;

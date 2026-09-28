@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LogResult extends AbstractModel {
 
     /**
-    * 时间戳
+    * <p>时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -32,7 +32,7 @@ public class LogResult extends AbstractModel {
     private Long Timestamp;
 
     /**
-    * 错误类别
+    * <p>错误类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
@@ -40,7 +40,7 @@ public class LogResult extends AbstractModel {
     private String Category;
 
     /**
-    * 客户端应用程序名称
+    * <p>客户端应用程序名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientAppName")
@@ -48,7 +48,7 @@ public class LogResult extends AbstractModel {
     private String ClientAppName;
 
     /**
-    * 客户端主机名
+    * <p>客户端主机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientHostName")
@@ -56,7 +56,7 @@ public class LogResult extends AbstractModel {
     private String ClientHostName;
 
     /**
-    * CPU 时间
+    * <p>CPU 时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuTime")
@@ -64,7 +64,7 @@ public class LogResult extends AbstractModel {
     private Long CpuTime;
 
     /**
-    * 数据库 ID
+    * <p>数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseId")
@@ -72,7 +72,7 @@ public class LogResult extends AbstractModel {
     private Long DatabaseId;
 
     /**
-    * 数据库名称
+    * <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
@@ -80,7 +80,7 @@ public class LogResult extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * 执行时间
+    * <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -88,7 +88,7 @@ public class LogResult extends AbstractModel {
     private Long Duration;
 
     /**
-    * 错误编号
+    * <p>错误编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorNumber")
@@ -96,7 +96,7 @@ public class LogResult extends AbstractModel {
     private Long ErrorNumber;
 
     /**
-    * 是否被拦截
+    * <p>是否被拦截</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsIntercepted")
@@ -104,7 +104,7 @@ public class LogResult extends AbstractModel {
     private String IsIntercepted;
 
     /**
-    * 最后行计数
+    * <p>最后行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastRowCount")
@@ -112,7 +112,7 @@ public class LogResult extends AbstractModel {
     private Long LastRowCount;
 
     /**
-    * 逻辑读取
+    * <p>逻辑读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogicalReads")
@@ -120,7 +120,7 @@ public class LogResult extends AbstractModel {
     private Long LogicalReads;
 
     /**
-    * 消息
+    * <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -128,7 +128,7 @@ public class LogResult extends AbstractModel {
     private String Message;
 
     /**
-    * 对象 ID
+    * <p>对象 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectId")
@@ -136,7 +136,7 @@ public class LogResult extends AbstractModel {
     private Long ObjectId;
 
     /**
-    * 对象名称
+    * <p>对象名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectName")
@@ -144,7 +144,7 @@ public class LogResult extends AbstractModel {
     private String ObjectName;
 
     /**
-    * 对象类型
+    * <p>对象类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectType")
@@ -152,7 +152,7 @@ public class LogResult extends AbstractModel {
     private String ObjectType;
 
     /**
-    * 输出参数
+    * <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputParameters")
@@ -160,7 +160,7 @@ public class LogResult extends AbstractModel {
     private String OutputParameters;
 
     /**
-    * 参数化计划句柄
+    * <p>参数化计划句柄</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterizedPlanHandle")
@@ -168,7 +168,7 @@ public class LogResult extends AbstractModel {
     private String ParameterizedPlanHandle;
 
     /**
-    * 物理读取
+    * <p>物理读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhysicalReads")
@@ -176,7 +176,7 @@ public class LogResult extends AbstractModel {
     private Long PhysicalReads;
 
     /**
-    * 结果
+    * <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -184,7 +184,7 @@ public class LogResult extends AbstractModel {
     private String Result;
 
     /**
-    * 行计数
+    * <p>行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowCount")
@@ -192,7 +192,7 @@ public class LogResult extends AbstractModel {
     private Long RowCount;
 
     /**
-    * 服务器主体名称
+    * <p>服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerPrincipalName")
@@ -200,7 +200,7 @@ public class LogResult extends AbstractModel {
     private String ServerPrincipalName;
 
     /**
-    * 会话服务器主体名称
+    * <p>会话服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionServerPrincipalName")
@@ -208,7 +208,7 @@ public class LogResult extends AbstractModel {
     private String SessionServerPrincipalName;
 
     /**
-    * 严重性
+    * <p>严重性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Severity")
@@ -216,7 +216,7 @@ public class LogResult extends AbstractModel {
     private Long Severity;
 
     /**
-    * 源数据库 ID
+    * <p>源数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceDatabaseId")
@@ -224,7 +224,7 @@ public class LogResult extends AbstractModel {
     private Long SourceDatabaseId;
 
     /**
-    * SQL 文本
+    * <p>SQL 文本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlText")
@@ -232,7 +232,7 @@ public class LogResult extends AbstractModel {
     private String SqlText;
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -240,7 +240,7 @@ public class LogResult extends AbstractModel {
     private Long State;
 
     /**
-    * 语句
+    * <p>语句</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Statement")
@@ -248,7 +248,7 @@ public class LogResult extends AbstractModel {
     private String Statement;
 
     /**
-    * 系统线程 ID
+    * <p>系统线程 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemThreadId")
@@ -256,7 +256,7 @@ public class LogResult extends AbstractModel {
     private Long SystemThreadId;
 
     /**
-    * 事务 ID
+    * <p>事务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransactionId")
@@ -264,7 +264,7 @@ public class LogResult extends AbstractModel {
     private Long TransactionId;
 
     /**
-    * 用户定义
+    * <p>用户定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefined")
@@ -272,7 +272,7 @@ public class LogResult extends AbstractModel {
     private String UserDefined;
 
     /**
-    * 用户名
+    * <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
@@ -280,7 +280,7 @@ public class LogResult extends AbstractModel {
     private String UserName;
 
     /**
-    * 写入
+    * <p>写入</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Writes")
@@ -288,7 +288,7 @@ public class LogResult extends AbstractModel {
     private Long Writes;
 
     /**
-    * 目标
+    * <p>目标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Destination")
@@ -296,9 +296,17 @@ public class LogResult extends AbstractModel {
     private String Destination;
 
     /**
-     * Get 时间戳
+    * <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventName")
+    @Expose
+    private String EventName;
+
+    /**
+     * Get <p>时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp 时间戳
+     * @return Timestamp <p>时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
@@ -306,9 +314,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 时间戳
+     * Set <p>时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp 时间戳
+     * @param Timestamp <p>时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
@@ -316,9 +324,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 错误类别
+     * Get <p>错误类别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Category 错误类别
+     * @return Category <p>错误类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
@@ -326,9 +334,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 错误类别
+     * Set <p>错误类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Category 错误类别
+     * @param Category <p>错误类别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
@@ -336,9 +344,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 客户端应用程序名称
+     * Get <p>客户端应用程序名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientAppName 客户端应用程序名称
+     * @return ClientAppName <p>客户端应用程序名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientAppName() {
@@ -346,9 +354,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 客户端应用程序名称
+     * Set <p>客户端应用程序名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientAppName 客户端应用程序名称
+     * @param ClientAppName <p>客户端应用程序名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientAppName(String ClientAppName) {
@@ -356,9 +364,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 客户端主机名
+     * Get <p>客户端主机名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientHostName 客户端主机名
+     * @return ClientHostName <p>客户端主机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientHostName() {
@@ -366,9 +374,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 客户端主机名
+     * Set <p>客户端主机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientHostName 客户端主机名
+     * @param ClientHostName <p>客户端主机名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientHostName(String ClientHostName) {
@@ -376,9 +384,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get CPU 时间
+     * Get <p>CPU 时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CpuTime CPU 时间
+     * @return CpuTime <p>CPU 时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpuTime() {
@@ -386,9 +394,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set CPU 时间
+     * Set <p>CPU 时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CpuTime CPU 时间
+     * @param CpuTime <p>CPU 时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuTime(Long CpuTime) {
@@ -396,9 +404,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 数据库 ID
+     * Get <p>数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseId 数据库 ID
+     * @return DatabaseId <p>数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatabaseId() {
@@ -406,9 +414,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 数据库 ID
+     * Set <p>数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseId 数据库 ID
+     * @param DatabaseId <p>数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseId(Long DatabaseId) {
@@ -416,9 +424,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 数据库名称
+     * Get <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseName 数据库名称
+     * @return DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
@@ -426,9 +434,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 数据库名称
+     * Set <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseName 数据库名称
+     * @param DatabaseName <p>数据库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
@@ -436,9 +444,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 执行时间
+     * Get <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration 执行时间
+     * @return Duration <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
@@ -446,9 +454,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 执行时间
+     * Set <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration 执行时间
+     * @param Duration <p>执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
@@ -456,9 +464,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 错误编号
+     * Get <p>错误编号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorNumber 错误编号
+     * @return ErrorNumber <p>错误编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrorNumber() {
@@ -466,9 +474,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 错误编号
+     * Set <p>错误编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorNumber 错误编号
+     * @param ErrorNumber <p>错误编号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorNumber(Long ErrorNumber) {
@@ -476,9 +484,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 是否被拦截
+     * Get <p>是否被拦截</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsIntercepted 是否被拦截
+     * @return IsIntercepted <p>是否被拦截</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsIntercepted() {
@@ -486,9 +494,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 是否被拦截
+     * Set <p>是否被拦截</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsIntercepted 是否被拦截
+     * @param IsIntercepted <p>是否被拦截</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsIntercepted(String IsIntercepted) {
@@ -496,9 +504,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 最后行计数
+     * Get <p>最后行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastRowCount 最后行计数
+     * @return LastRowCount <p>最后行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastRowCount() {
@@ -506,9 +514,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 最后行计数
+     * Set <p>最后行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastRowCount 最后行计数
+     * @param LastRowCount <p>最后行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastRowCount(Long LastRowCount) {
@@ -516,9 +524,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 逻辑读取
+     * Get <p>逻辑读取</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogicalReads 逻辑读取
+     * @return LogicalReads <p>逻辑读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogicalReads() {
@@ -526,9 +534,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 逻辑读取
+     * Set <p>逻辑读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogicalReads 逻辑读取
+     * @param LogicalReads <p>逻辑读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogicalReads(Long LogicalReads) {
@@ -536,9 +544,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 消息
+     * Get <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 消息
+     * @return Message <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -546,9 +554,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 消息
+     * Set <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 消息
+     * @param Message <p>消息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -556,9 +564,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 对象 ID
+     * Get <p>对象 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectId 对象 ID
+     * @return ObjectId <p>对象 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getObjectId() {
@@ -566,9 +574,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 对象 ID
+     * Set <p>对象 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectId 对象 ID
+     * @param ObjectId <p>对象 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectId(Long ObjectId) {
@@ -576,9 +584,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 对象名称
+     * Get <p>对象名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectName 对象名称
+     * @return ObjectName <p>对象名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectName() {
@@ -586,9 +594,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 对象名称
+     * Set <p>对象名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectName 对象名称
+     * @param ObjectName <p>对象名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectName(String ObjectName) {
@@ -596,9 +604,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 对象类型
+     * Get <p>对象类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectType 对象类型
+     * @return ObjectType <p>对象类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectType() {
@@ -606,9 +614,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 对象类型
+     * Set <p>对象类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectType 对象类型
+     * @param ObjectType <p>对象类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectType(String ObjectType) {
@@ -616,9 +624,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 输出参数
+     * Get <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputParameters 输出参数
+     * @return OutputParameters <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputParameters() {
@@ -626,9 +634,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 输出参数
+     * Set <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputParameters 输出参数
+     * @param OutputParameters <p>输出参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputParameters(String OutputParameters) {
@@ -636,9 +644,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 参数化计划句柄
+     * Get <p>参数化计划句柄</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParameterizedPlanHandle 参数化计划句柄
+     * @return ParameterizedPlanHandle <p>参数化计划句柄</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterizedPlanHandle() {
@@ -646,9 +654,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 参数化计划句柄
+     * Set <p>参数化计划句柄</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParameterizedPlanHandle 参数化计划句柄
+     * @param ParameterizedPlanHandle <p>参数化计划句柄</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterizedPlanHandle(String ParameterizedPlanHandle) {
@@ -656,9 +664,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 物理读取
+     * Get <p>物理读取</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhysicalReads 物理读取
+     * @return PhysicalReads <p>物理读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhysicalReads() {
@@ -666,9 +674,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 物理读取
+     * Set <p>物理读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhysicalReads 物理读取
+     * @param PhysicalReads <p>物理读取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhysicalReads(Long PhysicalReads) {
@@ -676,9 +684,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 结果
+     * Get <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 结果
+     * @return Result <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
@@ -686,9 +694,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 结果
+     * Set <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 结果
+     * @param Result <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
@@ -696,9 +704,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 行计数
+     * Get <p>行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RowCount 行计数
+     * @return RowCount <p>行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRowCount() {
@@ -706,9 +714,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 行计数
+     * Set <p>行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RowCount 行计数
+     * @param RowCount <p>行计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowCount(Long RowCount) {
@@ -716,9 +724,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 服务器主体名称
+     * Get <p>服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServerPrincipalName 服务器主体名称
+     * @return ServerPrincipalName <p>服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerPrincipalName() {
@@ -726,9 +734,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 服务器主体名称
+     * Set <p>服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServerPrincipalName 服务器主体名称
+     * @param ServerPrincipalName <p>服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerPrincipalName(String ServerPrincipalName) {
@@ -736,9 +744,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 会话服务器主体名称
+     * Get <p>会话服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessionServerPrincipalName 会话服务器主体名称
+     * @return SessionServerPrincipalName <p>会话服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionServerPrincipalName() {
@@ -746,9 +754,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 会话服务器主体名称
+     * Set <p>会话服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionServerPrincipalName 会话服务器主体名称
+     * @param SessionServerPrincipalName <p>会话服务器主体名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionServerPrincipalName(String SessionServerPrincipalName) {
@@ -756,9 +764,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 严重性
+     * Get <p>严重性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Severity 严重性
+     * @return Severity <p>严重性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSeverity() {
@@ -766,9 +774,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 严重性
+     * Set <p>严重性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Severity 严重性
+     * @param Severity <p>严重性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeverity(Long Severity) {
@@ -776,9 +784,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 源数据库 ID
+     * Get <p>源数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceDatabaseId 源数据库 ID
+     * @return SourceDatabaseId <p>源数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceDatabaseId() {
@@ -786,9 +794,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 源数据库 ID
+     * Set <p>源数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceDatabaseId 源数据库 ID
+     * @param SourceDatabaseId <p>源数据库 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceDatabaseId(Long SourceDatabaseId) {
@@ -796,9 +804,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get SQL 文本
+     * Get <p>SQL 文本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SqlText SQL 文本
+     * @return SqlText <p>SQL 文本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSqlText() {
@@ -806,9 +814,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set SQL 文本
+     * Set <p>SQL 文本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SqlText SQL 文本
+     * @param SqlText <p>SQL 文本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlText(String SqlText) {
@@ -816,9 +824,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 状态
+     * @return State <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
@@ -826,9 +834,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 状态
+     * @param State <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
@@ -836,9 +844,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 语句
+     * Get <p>语句</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Statement 语句
+     * @return Statement <p>语句</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatement() {
@@ -846,9 +854,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 语句
+     * Set <p>语句</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Statement 语句
+     * @param Statement <p>语句</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatement(String Statement) {
@@ -856,9 +864,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 系统线程 ID
+     * Get <p>系统线程 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SystemThreadId 系统线程 ID
+     * @return SystemThreadId <p>系统线程 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSystemThreadId() {
@@ -866,9 +874,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 系统线程 ID
+     * Set <p>系统线程 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SystemThreadId 系统线程 ID
+     * @param SystemThreadId <p>系统线程 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemThreadId(Long SystemThreadId) {
@@ -876,9 +884,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 事务 ID
+     * Get <p>事务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransactionId 事务 ID
+     * @return TransactionId <p>事务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTransactionId() {
@@ -886,9 +894,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 事务 ID
+     * Set <p>事务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransactionId 事务 ID
+     * @param TransactionId <p>事务 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransactionId(Long TransactionId) {
@@ -896,9 +904,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 用户定义
+     * Get <p>用户定义</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserDefined 用户定义
+     * @return UserDefined <p>用户定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDefined() {
@@ -906,9 +914,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 用户定义
+     * Set <p>用户定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefined 用户定义
+     * @param UserDefined <p>用户定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefined(String UserDefined) {
@@ -916,9 +924,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 用户名
+     * Get <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserName 用户名
+     * @return UserName <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
@@ -926,9 +934,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 用户名
+     * Set <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserName 用户名
+     * @param UserName <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
@@ -936,9 +944,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 写入
+     * Get <p>写入</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Writes 写入
+     * @return Writes <p>写入</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWrites() {
@@ -946,9 +954,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 写入
+     * Set <p>写入</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Writes 写入
+     * @param Writes <p>写入</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWrites(Long Writes) {
@@ -956,9 +964,9 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Get 目标
+     * Get <p>目标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Destination 目标
+     * @return Destination <p>目标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestination() {
@@ -966,13 +974,33 @@ public class LogResult extends AbstractModel {
     }
 
     /**
-     * Set 目标
+     * Set <p>目标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Destination 目标
+     * @param Destination <p>目标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestination(String Destination) {
         this.Destination = Destination;
+    }
+
+    /**
+     * Get <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventName <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventName() {
+        return this.EventName;
+    }
+
+    /**
+     * Set <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventName <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventName(String EventName) {
+        this.EventName = EventName;
     }
 
     public LogResult() {
@@ -1085,6 +1113,9 @@ public class LogResult extends AbstractModel {
         if (source.Destination != null) {
             this.Destination = new String(source.Destination);
         }
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
     }
 
 
@@ -1126,6 +1157,7 @@ public class LogResult extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Writes", this.Writes);
         this.setParamSimple(map, prefix + "Destination", this.Destination);
+        this.setParamSimple(map, prefix + "EventName", this.EventName);
 
     }
 }

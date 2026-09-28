@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVsmsResponse extends AbstractModel {
 
     /**
-    * 获取实例的总个数
+    * <p>获取实例的总个数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 资源信息
+    * <p>资源信息</p>
     */
     @SerializedName("VsmList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVsmsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取实例的总个数 
-     * @return TotalCount 获取实例的总个数
+     * Get <p>获取实例的总个数</p> 
+     * @return TotalCount <p>获取实例的总个数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 获取实例的总个数
-     * @param TotalCount 获取实例的总个数
+     * Set <p>获取实例的总个数</p>
+     * @param TotalCount <p>获取实例的总个数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 资源信息 
-     * @return VsmList 资源信息
+     * Get <p>资源信息</p> 
+     * @return VsmList <p>资源信息</p>
      */
     public ResourceInfo [] getVsmList() {
         return this.VsmList;
     }
 
     /**
-     * Set 资源信息
-     * @param VsmList 资源信息
+     * Set <p>资源信息</p>
+     * @param VsmList <p>资源信息</p>
      */
     public void setVsmList(ResourceInfo [] VsmList) {
         this.VsmList = VsmList;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeInstanceStateRequest extends AbstractModel {
 
     /**
-    * 集群实例名称
+    * <p>集群实例名称</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 集群实例名称 
-     * @return InstanceId 集群实例名称
+    * <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
+     * Get <p>集群实例名称</p> 
+     * @return InstanceId <p>集群实例名称</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例名称
-     * @param InstanceId 集群实例名称
+     * Set <p>集群实例名称</p>
+     * @param InstanceId <p>集群实例名称</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p> 
+     * @return InstanceIds <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
+     * @param InstanceIds <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     public DescribeInstanceStateRequest() {
@@ -57,6 +80,12 @@ public class DescribeInstanceStateRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class DescribeInstanceStateRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

@@ -150,6 +150,20 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private Long CardCount;
 
     /**
+    * <p>泰文姓名</p>
+    */
+    @SerializedName("ThaiFirstName")
+    @Expose
+    private String ThaiFirstName;
+
+    /**
+    * <p>泰文姓名</p>
+    */
+    @SerializedName("ThaiLastName")
+    @Expose
+    private String ThaiLastName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -449,6 +463,38 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>泰文姓名</p> 
+     * @return ThaiFirstName <p>泰文姓名</p>
+     */
+    public String getThaiFirstName() {
+        return this.ThaiFirstName;
+    }
+
+    /**
+     * Set <p>泰文姓名</p>
+     * @param ThaiFirstName <p>泰文姓名</p>
+     */
+    public void setThaiFirstName(String ThaiFirstName) {
+        this.ThaiFirstName = ThaiFirstName;
+    }
+
+    /**
+     * Get <p>泰文姓名</p> 
+     * @return ThaiLastName <p>泰文姓名</p>
+     */
+    public String getThaiLastName() {
+        return this.ThaiLastName;
+    }
+
+    /**
+     * Set <p>泰文姓名</p>
+     * @param ThaiLastName <p>泰文姓名</p>
+     */
+    public void setThaiLastName(String ThaiLastName) {
+        this.ThaiLastName = ThaiLastName;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -529,6 +575,12 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         if (source.CardCount != null) {
             this.CardCount = new Long(source.CardCount);
         }
+        if (source.ThaiFirstName != null) {
+            this.ThaiFirstName = new String(source.ThaiFirstName);
+        }
+        if (source.ThaiLastName != null) {
+            this.ThaiLastName = new String(source.ThaiLastName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -557,6 +609,8 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "CardCount", this.CardCount);
+        this.setParamSimple(map, prefix + "ThaiFirstName", this.ThaiFirstName);
+        this.setParamSimple(map, prefix + "ThaiLastName", this.ThaiLastName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

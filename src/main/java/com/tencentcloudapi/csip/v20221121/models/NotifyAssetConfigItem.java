@@ -80,6 +80,13 @@ public class NotifyAssetConfigItem extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * <p>项目ID</p>
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private Long [] ProjectIds;
+
+    /**
      * Get <p>模块名</p> 
      * @return Module <p>模块名</p>
      */
@@ -207,6 +214,22 @@ public class NotifyAssetConfigItem extends AbstractModel {
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectIds <p>项目ID</p>
+     */
+    public Long [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set <p>项目ID</p>
+     * @param ProjectIds <p>项目ID</p>
+     */
+    public void setProjectIds(Long [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
     public NotifyAssetConfigItem() {
     }
 
@@ -251,6 +274,12 @@ public class NotifyAssetConfigItem extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new Long[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new Long(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -266,6 +295,7 @@ public class NotifyAssetConfigItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
         this.setParamArraySimple(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

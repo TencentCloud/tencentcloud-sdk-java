@@ -24,67 +24,74 @@ import java.util.HashMap;
 public class DescribeInstanceStateResponse extends AbstractModel {
 
     /**
-    * 集群状态，例如：Serving
+    * <p>集群备份任务开启状态2</p>
     */
-    @SerializedName("InstanceState")
+    @SerializedName("BackupOpenStatus")
     @Expose
-    private String InstanceState;
+    private Long BackupOpenStatus;
 
     /**
-    * 集群操作创建时间
-    */
-    @SerializedName("FlowCreateTime")
-    @Expose
-    private String FlowCreateTime;
-
-    /**
-    * 集群操作名称
-    */
-    @SerializedName("FlowName")
-    @Expose
-    private String FlowName;
-
-    /**
-    * 集群操作进度
-    */
-    @SerializedName("FlowProgress")
-    @Expose
-    private Float FlowProgress;
-
-    /**
-    * 集群状态描述，例如：运行中
-    */
-    @SerializedName("InstanceStateDesc")
-    @Expose
-    private String InstanceStateDesc;
-
-    /**
-    * 集群流程错误信息，例如：“创建失败，资源不足”
-    */
-    @SerializedName("FlowMsg")
-    @Expose
-    private String FlowMsg;
-
-    /**
-    * 当前步骤的名称，例如：”购买资源中“
-    */
-    @SerializedName("ProcessName")
-    @Expose
-    private String ProcessName;
-
-    /**
-    * 集群备份任务开启状态
+    * <p>集群备份任务开启状态</p>
     */
     @SerializedName("BackupStatus")
     @Expose
     private Long BackupStatus;
 
     /**
-    * 集群备份任务开启状态2
+    * <p>集群操作创建时间</p>
     */
-    @SerializedName("BackupOpenStatus")
+    @SerializedName("FlowCreateTime")
     @Expose
-    private Long BackupOpenStatus;
+    private String FlowCreateTime;
+
+    /**
+    * <p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+    */
+    @SerializedName("FlowMsg")
+    @Expose
+    private String FlowMsg;
+
+    /**
+    * <p>集群操作名称</p>
+    */
+    @SerializedName("FlowName")
+    @Expose
+    private String FlowName;
+
+    /**
+    * <p>集群操作进度</p>
+    */
+    @SerializedName("FlowProgress")
+    @Expose
+    private Float FlowProgress;
+
+    /**
+    * <p>集群状态，例如：Serving</p>
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
+    * <p>集群状态描述，例如：运行中</p>
+    */
+    @SerializedName("InstanceStateDesc")
+    @Expose
+    private String InstanceStateDesc;
+
+    /**
+    * <p>当前步骤的名称，例如：”购买资源中“</p>
+    */
+    @SerializedName("ProcessName")
+    @Expose
+    private String ProcessName;
+
+    /**
+    * <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+    */
+    @SerializedName("InstanceStates")
+    @Expose
+    private InstanceStateItem [] InstanceStates;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -94,147 +101,163 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群状态，例如：Serving 
-     * @return InstanceState 集群状态，例如：Serving
-     */
-    public String getInstanceState() {
-        return this.InstanceState;
-    }
-
-    /**
-     * Set 集群状态，例如：Serving
-     * @param InstanceState 集群状态，例如：Serving
-     */
-    public void setInstanceState(String InstanceState) {
-        this.InstanceState = InstanceState;
-    }
-
-    /**
-     * Get 集群操作创建时间 
-     * @return FlowCreateTime 集群操作创建时间
-     */
-    public String getFlowCreateTime() {
-        return this.FlowCreateTime;
-    }
-
-    /**
-     * Set 集群操作创建时间
-     * @param FlowCreateTime 集群操作创建时间
-     */
-    public void setFlowCreateTime(String FlowCreateTime) {
-        this.FlowCreateTime = FlowCreateTime;
-    }
-
-    /**
-     * Get 集群操作名称 
-     * @return FlowName 集群操作名称
-     */
-    public String getFlowName() {
-        return this.FlowName;
-    }
-
-    /**
-     * Set 集群操作名称
-     * @param FlowName 集群操作名称
-     */
-    public void setFlowName(String FlowName) {
-        this.FlowName = FlowName;
-    }
-
-    /**
-     * Get 集群操作进度 
-     * @return FlowProgress 集群操作进度
-     */
-    public Float getFlowProgress() {
-        return this.FlowProgress;
-    }
-
-    /**
-     * Set 集群操作进度
-     * @param FlowProgress 集群操作进度
-     */
-    public void setFlowProgress(Float FlowProgress) {
-        this.FlowProgress = FlowProgress;
-    }
-
-    /**
-     * Get 集群状态描述，例如：运行中 
-     * @return InstanceStateDesc 集群状态描述，例如：运行中
-     */
-    public String getInstanceStateDesc() {
-        return this.InstanceStateDesc;
-    }
-
-    /**
-     * Set 集群状态描述，例如：运行中
-     * @param InstanceStateDesc 集群状态描述，例如：运行中
-     */
-    public void setInstanceStateDesc(String InstanceStateDesc) {
-        this.InstanceStateDesc = InstanceStateDesc;
-    }
-
-    /**
-     * Get 集群流程错误信息，例如：“创建失败，资源不足” 
-     * @return FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-     */
-    public String getFlowMsg() {
-        return this.FlowMsg;
-    }
-
-    /**
-     * Set 集群流程错误信息，例如：“创建失败，资源不足”
-     * @param FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-     */
-    public void setFlowMsg(String FlowMsg) {
-        this.FlowMsg = FlowMsg;
-    }
-
-    /**
-     * Get 当前步骤的名称，例如：”购买资源中“ 
-     * @return ProcessName 当前步骤的名称，例如：”购买资源中“
-     */
-    public String getProcessName() {
-        return this.ProcessName;
-    }
-
-    /**
-     * Set 当前步骤的名称，例如：”购买资源中“
-     * @param ProcessName 当前步骤的名称，例如：”购买资源中“
-     */
-    public void setProcessName(String ProcessName) {
-        this.ProcessName = ProcessName;
-    }
-
-    /**
-     * Get 集群备份任务开启状态 
-     * @return BackupStatus 集群备份任务开启状态
-     */
-    public Long getBackupStatus() {
-        return this.BackupStatus;
-    }
-
-    /**
-     * Set 集群备份任务开启状态
-     * @param BackupStatus 集群备份任务开启状态
-     */
-    public void setBackupStatus(Long BackupStatus) {
-        this.BackupStatus = BackupStatus;
-    }
-
-    /**
-     * Get 集群备份任务开启状态2 
-     * @return BackupOpenStatus 集群备份任务开启状态2
+     * Get <p>集群备份任务开启状态2</p> 
+     * @return BackupOpenStatus <p>集群备份任务开启状态2</p>
      */
     public Long getBackupOpenStatus() {
         return this.BackupOpenStatus;
     }
 
     /**
-     * Set 集群备份任务开启状态2
-     * @param BackupOpenStatus 集群备份任务开启状态2
+     * Set <p>集群备份任务开启状态2</p>
+     * @param BackupOpenStatus <p>集群备份任务开启状态2</p>
      */
     public void setBackupOpenStatus(Long BackupOpenStatus) {
         this.BackupOpenStatus = BackupOpenStatus;
+    }
+
+    /**
+     * Get <p>集群备份任务开启状态</p> 
+     * @return BackupStatus <p>集群备份任务开启状态</p>
+     */
+    public Long getBackupStatus() {
+        return this.BackupStatus;
+    }
+
+    /**
+     * Set <p>集群备份任务开启状态</p>
+     * @param BackupStatus <p>集群备份任务开启状态</p>
+     */
+    public void setBackupStatus(Long BackupStatus) {
+        this.BackupStatus = BackupStatus;
+    }
+
+    /**
+     * Get <p>集群操作创建时间</p> 
+     * @return FlowCreateTime <p>集群操作创建时间</p>
+     */
+    public String getFlowCreateTime() {
+        return this.FlowCreateTime;
+    }
+
+    /**
+     * Set <p>集群操作创建时间</p>
+     * @param FlowCreateTime <p>集群操作创建时间</p>
+     */
+    public void setFlowCreateTime(String FlowCreateTime) {
+        this.FlowCreateTime = FlowCreateTime;
+    }
+
+    /**
+     * Get <p>集群流程错误信息，例如：“创建失败，资源不足”</p> 
+     * @return FlowMsg <p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+     */
+    public String getFlowMsg() {
+        return this.FlowMsg;
+    }
+
+    /**
+     * Set <p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+     * @param FlowMsg <p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+     */
+    public void setFlowMsg(String FlowMsg) {
+        this.FlowMsg = FlowMsg;
+    }
+
+    /**
+     * Get <p>集群操作名称</p> 
+     * @return FlowName <p>集群操作名称</p>
+     */
+    public String getFlowName() {
+        return this.FlowName;
+    }
+
+    /**
+     * Set <p>集群操作名称</p>
+     * @param FlowName <p>集群操作名称</p>
+     */
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
+    }
+
+    /**
+     * Get <p>集群操作进度</p> 
+     * @return FlowProgress <p>集群操作进度</p>
+     */
+    public Float getFlowProgress() {
+        return this.FlowProgress;
+    }
+
+    /**
+     * Set <p>集群操作进度</p>
+     * @param FlowProgress <p>集群操作进度</p>
+     */
+    public void setFlowProgress(Float FlowProgress) {
+        this.FlowProgress = FlowProgress;
+    }
+
+    /**
+     * Get <p>集群状态，例如：Serving</p> 
+     * @return InstanceState <p>集群状态，例如：Serving</p>
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set <p>集群状态，例如：Serving</p>
+     * @param InstanceState <p>集群状态，例如：Serving</p>
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * Get <p>集群状态描述，例如：运行中</p> 
+     * @return InstanceStateDesc <p>集群状态描述，例如：运行中</p>
+     */
+    public String getInstanceStateDesc() {
+        return this.InstanceStateDesc;
+    }
+
+    /**
+     * Set <p>集群状态描述，例如：运行中</p>
+     * @param InstanceStateDesc <p>集群状态描述，例如：运行中</p>
+     */
+    public void setInstanceStateDesc(String InstanceStateDesc) {
+        this.InstanceStateDesc = InstanceStateDesc;
+    }
+
+    /**
+     * Get <p>当前步骤的名称，例如：”购买资源中“</p> 
+     * @return ProcessName <p>当前步骤的名称，例如：”购买资源中“</p>
+     */
+    public String getProcessName() {
+        return this.ProcessName;
+    }
+
+    /**
+     * Set <p>当前步骤的名称，例如：”购买资源中“</p>
+     * @param ProcessName <p>当前步骤的名称，例如：”购买资源中“</p>
+     */
+    public void setProcessName(String ProcessName) {
+        this.ProcessName = ProcessName;
+    }
+
+    /**
+     * Get <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p> 
+     * @return InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     */
+    public InstanceStateItem [] getInstanceStates() {
+        return this.InstanceStates;
+    }
+
+    /**
+     * Set <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     * @param InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     */
+    public void setInstanceStates(InstanceStateItem [] InstanceStates) {
+        this.InstanceStates = InstanceStates;
     }
 
     /**
@@ -261,11 +284,17 @@ public class DescribeInstanceStateResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceStateResponse(DescribeInstanceStateResponse source) {
-        if (source.InstanceState != null) {
-            this.InstanceState = new String(source.InstanceState);
+        if (source.BackupOpenStatus != null) {
+            this.BackupOpenStatus = new Long(source.BackupOpenStatus);
+        }
+        if (source.BackupStatus != null) {
+            this.BackupStatus = new Long(source.BackupStatus);
         }
         if (source.FlowCreateTime != null) {
             this.FlowCreateTime = new String(source.FlowCreateTime);
+        }
+        if (source.FlowMsg != null) {
+            this.FlowMsg = new String(source.FlowMsg);
         }
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
@@ -273,20 +302,20 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         if (source.FlowProgress != null) {
             this.FlowProgress = new Float(source.FlowProgress);
         }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
         if (source.InstanceStateDesc != null) {
             this.InstanceStateDesc = new String(source.InstanceStateDesc);
-        }
-        if (source.FlowMsg != null) {
-            this.FlowMsg = new String(source.FlowMsg);
         }
         if (source.ProcessName != null) {
             this.ProcessName = new String(source.ProcessName);
         }
-        if (source.BackupStatus != null) {
-            this.BackupStatus = new Long(source.BackupStatus);
-        }
-        if (source.BackupOpenStatus != null) {
-            this.BackupOpenStatus = new Long(source.BackupOpenStatus);
+        if (source.InstanceStates != null) {
+            this.InstanceStates = new InstanceStateItem[source.InstanceStates.length];
+            for (int i = 0; i < source.InstanceStates.length; i++) {
+                this.InstanceStates[i] = new InstanceStateItem(source.InstanceStates[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -298,15 +327,16 @@ public class DescribeInstanceStateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "BackupOpenStatus", this.BackupOpenStatus);
+        this.setParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
         this.setParamSimple(map, prefix + "FlowCreateTime", this.FlowCreateTime);
+        this.setParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
-        this.setParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
         this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
-        this.setParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
-        this.setParamSimple(map, prefix + "BackupOpenStatus", this.BackupOpenStatus);
+        this.setParamArrayObj(map, prefix + "InstanceStates.", this.InstanceStates);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

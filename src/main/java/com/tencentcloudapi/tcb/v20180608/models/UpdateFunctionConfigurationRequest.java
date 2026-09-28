@@ -101,14 +101,14 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
     private String InstallDependency;
 
     /**
-    * <p>日志投递到的cls日志集ID</p>
+    * <p>日志投递到的cls Topic ID</p>
     */
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
 
     /**
-    * <p>日志投递到的cls Topic ID</p>
+    * <p>日志投递到的cls日志集ID</p>
     */
     @SerializedName("ClsLogsetId")
     @Expose
@@ -340,32 +340,32 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>日志投递到的cls日志集ID</p> 
-     * @return ClsTopicId <p>日志投递到的cls日志集ID</p>
+     * Get <p>日志投递到的cls Topic ID</p> 
+     * @return ClsTopicId <p>日志投递到的cls Topic ID</p>
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
     }
 
     /**
-     * Set <p>日志投递到的cls日志集ID</p>
-     * @param ClsTopicId <p>日志投递到的cls日志集ID</p>
+     * Set <p>日志投递到的cls Topic ID</p>
+     * @param ClsTopicId <p>日志投递到的cls Topic ID</p>
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get <p>日志投递到的cls Topic ID</p> 
-     * @return ClsLogsetId <p>日志投递到的cls Topic ID</p>
+     * Get <p>日志投递到的cls日志集ID</p> 
+     * @return ClsLogsetId <p>日志投递到的cls日志集ID</p>
      */
     public String getClsLogsetId() {
         return this.ClsLogsetId;
     }
 
     /**
-     * Set <p>日志投递到的cls Topic ID</p>
-     * @param ClsLogsetId <p>日志投递到的cls Topic ID</p>
+     * Set <p>日志投递到的cls日志集ID</p>
+     * @param ClsLogsetId <p>日志投递到的cls日志集ID</p>
      */
     public void setClsLogsetId(String ClsLogsetId) {
         this.ClsLogsetId = ClsLogsetId;

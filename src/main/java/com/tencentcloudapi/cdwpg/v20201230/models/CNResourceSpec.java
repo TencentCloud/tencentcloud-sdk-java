@@ -24,20 +24,6 @@ import java.util.HashMap;
 public class CNResourceSpec extends AbstractModel {
 
     /**
-    * 节点类型
-    */
-    @SerializedName("Type")
-    @Expose
-    private String Type;
-
-    /**
-    * 机型
-    */
-    @SerializedName("SpecName")
-    @Expose
-    private String SpecName;
-
-    /**
     * 节点个数
     */
     @SerializedName("Count")
@@ -52,36 +38,18 @@ public class CNResourceSpec extends AbstractModel {
     private CBSSpec DiskSpec;
 
     /**
-     * Get 节点类型 
-     * @return Type 节点类型
-     */
-    public String getType() {
-        return this.Type;
-    }
+    * 机型
+    */
+    @SerializedName("SpecName")
+    @Expose
+    private String SpecName;
 
     /**
-     * Set 节点类型
-     * @param Type 节点类型
-     */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
-
-    /**
-     * Get 机型 
-     * @return SpecName 机型
-     */
-    public String getSpecName() {
-        return this.SpecName;
-    }
-
-    /**
-     * Set 机型
-     * @param SpecName 机型
-     */
-    public void setSpecName(String SpecName) {
-        this.SpecName = SpecName;
-    }
+    * 节点类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
 
     /**
      * Get 节点个数 
@@ -115,6 +83,38 @@ public class CNResourceSpec extends AbstractModel {
         this.DiskSpec = DiskSpec;
     }
 
+    /**
+     * Get 机型 
+     * @return SpecName 机型
+     */
+    public String getSpecName() {
+        return this.SpecName;
+    }
+
+    /**
+     * Set 机型
+     * @param SpecName 机型
+     */
+    public void setSpecName(String SpecName) {
+        this.SpecName = SpecName;
+    }
+
+    /**
+     * Get 节点类型 
+     * @return Type 节点类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 节点类型
+     * @param Type 节点类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public CNResourceSpec() {
     }
 
@@ -123,17 +123,17 @@ public class CNResourceSpec extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CNResourceSpec(CNResourceSpec source) {
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
-        if (source.SpecName != null) {
-            this.SpecName = new String(source.SpecName);
-        }
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
         if (source.DiskSpec != null) {
             this.DiskSpec = new CBSSpec(source.DiskSpec);
+        }
+        if (source.SpecName != null) {
+            this.SpecName = new String(source.SpecName);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
     }
 
@@ -142,10 +142,10 @@ public class CNResourceSpec extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamObj(map, prefix + "DiskSpec.", this.DiskSpec);
+        this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -199,6 +199,20 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
     private String DeployEnv;
 
     /**
+    * <p>集群id</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * <p>集群角色</p>
+    */
+    @SerializedName("ClusterRole")
+    @Expose
+    private Long ClusterRole;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -606,6 +620,38 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>集群角色</p> 
+     * @return ClusterRole <p>集群角色</p>
+     */
+    public Long getClusterRole() {
+        return this.ClusterRole;
+    }
+
+    /**
+     * Set <p>集群角色</p>
+     * @param ClusterRole <p>集群角色</p>
+     */
+    public void setClusterRole(Long ClusterRole) {
+        this.ClusterRole = ClusterRole;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -710,6 +756,12 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
         if (source.DeployEnv != null) {
             this.DeployEnv = new String(source.DeployEnv);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterRole != null) {
+            this.ClusterRole = new Long(source.ClusterRole);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -745,6 +797,8 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         this.setParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
         this.setParamSimple(map, prefix + "DeployEnv", this.DeployEnv);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterRole", this.ClusterRole);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

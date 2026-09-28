@@ -96,6 +96,30 @@ public class ExportFile extends AbstractModel {
     private Long AsyncRequestId;
 
     /**
+    * <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogStartTime")
+    @Expose
+    private String LogStartTime;
+
+    /**
+    * <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogEndTime")
+    @Expose
+    private String LogEndTime;
+
+    /**
+    * <p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogFilter")
+    @Expose
+    private String LogFilter;
+
+    /**
      * Get <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileName <p>文件名</p>
@@ -275,6 +299,66 @@ public class ExportFile extends AbstractModel {
         this.AsyncRequestId = AsyncRequestId;
     }
 
+    /**
+     * Get <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogStartTime <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogStartTime() {
+        return this.LogStartTime;
+    }
+
+    /**
+     * Set <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogStartTime <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogStartTime(String LogStartTime) {
+        this.LogStartTime = LogStartTime;
+    }
+
+    /**
+     * Get <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogEndTime <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogEndTime() {
+        return this.LogEndTime;
+    }
+
+    /**
+     * Set <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogEndTime <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogEndTime(String LogEndTime) {
+        this.LogEndTime = LogEndTime;
+    }
+
+    /**
+     * Get <p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogFilter <p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogFilter() {
+        return this.LogFilter;
+    }
+
+    /**
+     * Set <p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogFilter <p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogFilter(String LogFilter) {
+        this.LogFilter = LogFilter;
+    }
+
     public ExportFile() {
     }
 
@@ -310,6 +394,15 @@ public class ExportFile extends AbstractModel {
         if (source.AsyncRequestId != null) {
             this.AsyncRequestId = new Long(source.AsyncRequestId);
         }
+        if (source.LogStartTime != null) {
+            this.LogStartTime = new String(source.LogStartTime);
+        }
+        if (source.LogEndTime != null) {
+            this.LogEndTime = new String(source.LogEndTime);
+        }
+        if (source.LogFilter != null) {
+            this.LogFilter = new String(source.LogFilter);
+        }
     }
 
 
@@ -326,6 +419,9 @@ public class ExportFile extends AbstractModel {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "LogStartTime", this.LogStartTime);
+        this.setParamSimple(map, prefix + "LogEndTime", this.LogEndTime);
+        this.setParamSimple(map, prefix + "LogFilter", this.LogFilter);
 
     }
 }

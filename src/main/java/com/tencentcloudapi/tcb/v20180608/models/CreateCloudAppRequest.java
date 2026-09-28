@@ -101,6 +101,62 @@ public class CreateCloudAppRequest extends AbstractModel {
     private String NodeJsVersion;
 
     /**
+    * <p>暂不支持：Webhook 触发器功能尚未对外开放，客户端传入的 Trigger 字段会被平台静默忽略（仅日志告警，不拒绝请求）</p>
+    */
+    @SerializedName("Trigger")
+    @Expose
+    private CloudAppTrigger Trigger;
+
+    /**
+    * <p>服务列表</p>
+    */
+    @SerializedName("ServiceList")
+    @Expose
+    private CloudAppLinkService [] ServiceList;
+
+    /**
+    * <p>全局工作目录</p>
+    */
+    @SerializedName("WorkingDir")
+    @Expose
+    private String WorkingDir;
+
+    /**
+    * <p>路由列表</p>
+    */
+    @SerializedName("Routes")
+    @Expose
+    private CloudAppRoute [] Routes;
+
+    /**
+    * <p>部署类型</p>
+    */
+    @SerializedName("PromoteType")
+    @Expose
+    private String PromoteType;
+
+    /**
+    * <p>发布 Token 校验</p>
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
+    * <p>前置执行命令</p>
+    */
+    @SerializedName("PreDeployCommand")
+    @Expose
+    private String PreDeployCommand;
+
+    /**
+    * <p>后置执行命令</p>
+    */
+    @SerializedName("PostDeployCommand")
+    @Expose
+    private String PostDeployCommand;
+
+    /**
      * Get <p>环境ID</p> 
      * @return EnvId <p>环境ID</p>
      */
@@ -276,6 +332,134 @@ public class CreateCloudAppRequest extends AbstractModel {
         this.NodeJsVersion = NodeJsVersion;
     }
 
+    /**
+     * Get <p>暂不支持：Webhook 触发器功能尚未对外开放，客户端传入的 Trigger 字段会被平台静默忽略（仅日志告警，不拒绝请求）</p> 
+     * @return Trigger <p>暂不支持：Webhook 触发器功能尚未对外开放，客户端传入的 Trigger 字段会被平台静默忽略（仅日志告警，不拒绝请求）</p>
+     */
+    public CloudAppTrigger getTrigger() {
+        return this.Trigger;
+    }
+
+    /**
+     * Set <p>暂不支持：Webhook 触发器功能尚未对外开放，客户端传入的 Trigger 字段会被平台静默忽略（仅日志告警，不拒绝请求）</p>
+     * @param Trigger <p>暂不支持：Webhook 触发器功能尚未对外开放，客户端传入的 Trigger 字段会被平台静默忽略（仅日志告警，不拒绝请求）</p>
+     */
+    public void setTrigger(CloudAppTrigger Trigger) {
+        this.Trigger = Trigger;
+    }
+
+    /**
+     * Get <p>服务列表</p> 
+     * @return ServiceList <p>服务列表</p>
+     */
+    public CloudAppLinkService [] getServiceList() {
+        return this.ServiceList;
+    }
+
+    /**
+     * Set <p>服务列表</p>
+     * @param ServiceList <p>服务列表</p>
+     */
+    public void setServiceList(CloudAppLinkService [] ServiceList) {
+        this.ServiceList = ServiceList;
+    }
+
+    /**
+     * Get <p>全局工作目录</p> 
+     * @return WorkingDir <p>全局工作目录</p>
+     */
+    public String getWorkingDir() {
+        return this.WorkingDir;
+    }
+
+    /**
+     * Set <p>全局工作目录</p>
+     * @param WorkingDir <p>全局工作目录</p>
+     */
+    public void setWorkingDir(String WorkingDir) {
+        this.WorkingDir = WorkingDir;
+    }
+
+    /**
+     * Get <p>路由列表</p> 
+     * @return Routes <p>路由列表</p>
+     */
+    public CloudAppRoute [] getRoutes() {
+        return this.Routes;
+    }
+
+    /**
+     * Set <p>路由列表</p>
+     * @param Routes <p>路由列表</p>
+     */
+    public void setRoutes(CloudAppRoute [] Routes) {
+        this.Routes = Routes;
+    }
+
+    /**
+     * Get <p>部署类型</p> 
+     * @return PromoteType <p>部署类型</p>
+     */
+    public String getPromoteType() {
+        return this.PromoteType;
+    }
+
+    /**
+     * Set <p>部署类型</p>
+     * @param PromoteType <p>部署类型</p>
+     */
+    public void setPromoteType(String PromoteType) {
+        this.PromoteType = PromoteType;
+    }
+
+    /**
+     * Get <p>发布 Token 校验</p> 
+     * @return ClientToken <p>发布 Token 校验</p>
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set <p>发布 Token 校验</p>
+     * @param ClientToken <p>发布 Token 校验</p>
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get <p>前置执行命令</p> 
+     * @return PreDeployCommand <p>前置执行命令</p>
+     */
+    public String getPreDeployCommand() {
+        return this.PreDeployCommand;
+    }
+
+    /**
+     * Set <p>前置执行命令</p>
+     * @param PreDeployCommand <p>前置执行命令</p>
+     */
+    public void setPreDeployCommand(String PreDeployCommand) {
+        this.PreDeployCommand = PreDeployCommand;
+    }
+
+    /**
+     * Get <p>后置执行命令</p> 
+     * @return PostDeployCommand <p>后置执行命令</p>
+     */
+    public String getPostDeployCommand() {
+        return this.PostDeployCommand;
+    }
+
+    /**
+     * Set <p>后置执行命令</p>
+     * @param PostDeployCommand <p>后置执行命令</p>
+     */
+    public void setPostDeployCommand(String PostDeployCommand) {
+        this.PostDeployCommand = PostDeployCommand;
+    }
+
     public CreateCloudAppRequest() {
     }
 
@@ -326,6 +510,36 @@ public class CreateCloudAppRequest extends AbstractModel {
         if (source.NodeJsVersion != null) {
             this.NodeJsVersion = new String(source.NodeJsVersion);
         }
+        if (source.Trigger != null) {
+            this.Trigger = new CloudAppTrigger(source.Trigger);
+        }
+        if (source.ServiceList != null) {
+            this.ServiceList = new CloudAppLinkService[source.ServiceList.length];
+            for (int i = 0; i < source.ServiceList.length; i++) {
+                this.ServiceList[i] = new CloudAppLinkService(source.ServiceList[i]);
+            }
+        }
+        if (source.WorkingDir != null) {
+            this.WorkingDir = new String(source.WorkingDir);
+        }
+        if (source.Routes != null) {
+            this.Routes = new CloudAppRoute[source.Routes.length];
+            for (int i = 0; i < source.Routes.length; i++) {
+                this.Routes[i] = new CloudAppRoute(source.Routes[i]);
+            }
+        }
+        if (source.PromoteType != null) {
+            this.PromoteType = new String(source.PromoteType);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.PreDeployCommand != null) {
+            this.PreDeployCommand = new String(source.PreDeployCommand);
+        }
+        if (source.PostDeployCommand != null) {
+            this.PostDeployCommand = new String(source.PostDeployCommand);
+        }
     }
 
 
@@ -344,6 +558,14 @@ public class CreateCloudAppRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomSteps.", this.CustomSteps);
         this.setParamArrayObj(map, prefix + "Secrets.", this.Secrets);
         this.setParamSimple(map, prefix + "NodeJsVersion", this.NodeJsVersion);
+        this.setParamObj(map, prefix + "Trigger.", this.Trigger);
+        this.setParamArrayObj(map, prefix + "ServiceList.", this.ServiceList);
+        this.setParamSimple(map, prefix + "WorkingDir", this.WorkingDir);
+        this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
+        this.setParamSimple(map, prefix + "PromoteType", this.PromoteType);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "PreDeployCommand", this.PreDeployCommand);
+        this.setParamSimple(map, prefix + "PostDeployCommand", this.PostDeployCommand);
 
     }
 }

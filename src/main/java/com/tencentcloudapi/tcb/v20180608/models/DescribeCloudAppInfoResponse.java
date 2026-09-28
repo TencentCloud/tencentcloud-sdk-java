@@ -87,6 +87,27 @@ public class DescribeCloudAppInfoResponse extends AbstractModel {
     private String DeployType;
 
     /**
+    * <p>构建配置</p>
+    */
+    @SerializedName("BuildConfig")
+    @Expose
+    private String BuildConfig;
+
+    /**
+    * <p>当前服务流量版本</p>
+    */
+    @SerializedName("CurrentVersion")
+    @Expose
+    private String CurrentVersion;
+
+    /**
+    * <p>版本关联默认域名</p>
+    */
+    @SerializedName("PreviewDomain")
+    @Expose
+    private String PreviewDomain;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +259,54 @@ public class DescribeCloudAppInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>构建配置</p> 
+     * @return BuildConfig <p>构建配置</p>
+     */
+    public String getBuildConfig() {
+        return this.BuildConfig;
+    }
+
+    /**
+     * Set <p>构建配置</p>
+     * @param BuildConfig <p>构建配置</p>
+     */
+    public void setBuildConfig(String BuildConfig) {
+        this.BuildConfig = BuildConfig;
+    }
+
+    /**
+     * Get <p>当前服务流量版本</p> 
+     * @return CurrentVersion <p>当前服务流量版本</p>
+     */
+    public String getCurrentVersion() {
+        return this.CurrentVersion;
+    }
+
+    /**
+     * Set <p>当前服务流量版本</p>
+     * @param CurrentVersion <p>当前服务流量版本</p>
+     */
+    public void setCurrentVersion(String CurrentVersion) {
+        this.CurrentVersion = CurrentVersion;
+    }
+
+    /**
+     * Get <p>版本关联默认域名</p> 
+     * @return PreviewDomain <p>版本关联默认域名</p>
+     */
+    public String getPreviewDomain() {
+        return this.PreviewDomain;
+    }
+
+    /**
+     * Set <p>版本关联默认域名</p>
+     * @param PreviewDomain <p>版本关联默认域名</p>
+     */
+    public void setPreviewDomain(String PreviewDomain) {
+        this.PreviewDomain = PreviewDomain;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +357,15 @@ public class DescribeCloudAppInfoResponse extends AbstractModel {
         if (source.DeployType != null) {
             this.DeployType = new String(source.DeployType);
         }
+        if (source.BuildConfig != null) {
+            this.BuildConfig = new String(source.BuildConfig);
+        }
+        if (source.CurrentVersion != null) {
+            this.CurrentVersion = new String(source.CurrentVersion);
+        }
+        if (source.PreviewDomain != null) {
+            this.PreviewDomain = new String(source.PreviewDomain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -307,6 +385,9 @@ public class DescribeCloudAppInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestStatus", this.LatestStatus);
         this.setParamSimple(map, prefix + "LatestBuildTime", this.LatestBuildTime);
         this.setParamSimple(map, prefix + "DeployType", this.DeployType);
+        this.setParamSimple(map, prefix + "BuildConfig", this.BuildConfig);
+        this.setParamSimple(map, prefix + "CurrentVersion", this.CurrentVersion);
+        this.setParamSimple(map, prefix + "PreviewDomain", this.PreviewDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

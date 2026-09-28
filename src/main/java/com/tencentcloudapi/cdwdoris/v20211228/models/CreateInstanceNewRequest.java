@@ -24,387 +24,379 @@ import java.util.HashMap;
 public class CreateInstanceNewRequest extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * FE规格
+    * <p>FE规格</p>
     */
     @SerializedName("FeSpec")
     @Expose
     private CreateInstanceSpec FeSpec;
 
     /**
-    * BE规格
+    * <p>BE规格</p>
     */
     @SerializedName("BeSpec")
     @Expose
     private CreateInstanceSpec BeSpec;
 
     /**
-    * 是否高可用
+    * <p>是否高可用</p>
     */
     @SerializedName("HaFlag")
     @Expose
     private Boolean HaFlag;
 
     /**
-    * 用户VPCID
+    * <p>用户VPCID</p>
     */
     @SerializedName("UserVPCId")
     @Expose
     private String UserVPCId;
 
     /**
-    * 用户子网ID
+    * <p>用户子网ID</p>
     */
     @SerializedName("UserSubnetId")
     @Expose
     private String UserSubnetId;
 
     /**
-    * 产品版本号
+    * <p>产品版本号</p>
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * 付费类型
+    * <p>付费类型</p>
     */
     @SerializedName("ChargeProperties")
     @Expose
     private ChargeProperties ChargeProperties;
 
     /**
-    * 实例名字
+    * <p>实例名字</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 数据库密码
+    * <p>数据库密码</p>
     */
     @SerializedName("DorisUserPwd")
     @Expose
     private String DorisUserPwd;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
+    * <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
     */
     @SerializedName("HaType")
     @Expose
     private Long HaType;
 
     /**
-    * 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+    * <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
     */
     @SerializedName("CaseSensitive")
     @Expose
     private Long CaseSensitive;
 
     /**
-    * 是否开启多可用区
+    * <p>是否开启多可用区</p>
     */
     @SerializedName("EnableMultiZones")
     @Expose
     private Boolean EnableMultiZones;
 
     /**
-    * 开启多可用区后，用户的所有可用区和子网信息
+    * <p>开启多可用区后，用户的所有可用区和子网信息</p>
     */
     @SerializedName("UserMultiZoneInfos")
     @Expose
     private NetworkInfo UserMultiZoneInfos;
 
     /**
-    * 开启多可用区后，用户的所有可用区和子网信息
+    * <p>开启多可用区后，用户的所有可用区和子网信息</p>
     */
     @SerializedName("UserMultiZoneInfoArr")
     @Expose
     private NetworkInfo [] UserMultiZoneInfoArr;
 
     /**
-    * 是否存算分离
+    * <p>是否存算分离</p>
     */
     @SerializedName("IsSSC")
     @Expose
     private Boolean IsSSC;
 
     /**
-    * CU数
+    * <p>CU数</p>
     */
     @SerializedName("SSCCU")
     @Expose
     private Long SSCCU;
 
     /**
-    * 缓存盘大小
+    * <p>缓存盘大小</p>
     */
     @SerializedName("CacheDiskSize")
     @Expose
     private String CacheDiskSize;
 
     /**
-    * 缓存盘大小
+    * <p>缓存盘大小</p>
     */
     @SerializedName("CacheDataDiskSize")
     @Expose
     private Long CacheDataDiskSize;
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+    * <p>磁盘加密</p>
+    */
+    @SerializedName("DiskEncrypt")
+    @Expose
+    private Long DiskEncrypt;
+
+    /**
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get FE规格 
-     * @return FeSpec FE规格
+     * Get <p>FE规格</p> 
+     * @return FeSpec <p>FE规格</p>
      */
     public CreateInstanceSpec getFeSpec() {
         return this.FeSpec;
     }
 
     /**
-     * Set FE规格
-     * @param FeSpec FE规格
+     * Set <p>FE规格</p>
+     * @param FeSpec <p>FE规格</p>
      */
     public void setFeSpec(CreateInstanceSpec FeSpec) {
         this.FeSpec = FeSpec;
     }
 
     /**
-     * Get BE规格 
-     * @return BeSpec BE规格
+     * Get <p>BE规格</p> 
+     * @return BeSpec <p>BE规格</p>
      */
     public CreateInstanceSpec getBeSpec() {
         return this.BeSpec;
     }
 
     /**
-     * Set BE规格
-     * @param BeSpec BE规格
+     * Set <p>BE规格</p>
+     * @param BeSpec <p>BE规格</p>
      */
     public void setBeSpec(CreateInstanceSpec BeSpec) {
         this.BeSpec = BeSpec;
     }
 
     /**
-     * Get 是否高可用 
-     * @return HaFlag 是否高可用
+     * Get <p>是否高可用</p> 
+     * @return HaFlag <p>是否高可用</p>
      */
     public Boolean getHaFlag() {
         return this.HaFlag;
     }
 
     /**
-     * Set 是否高可用
-     * @param HaFlag 是否高可用
+     * Set <p>是否高可用</p>
+     * @param HaFlag <p>是否高可用</p>
      */
     public void setHaFlag(Boolean HaFlag) {
         this.HaFlag = HaFlag;
     }
 
     /**
-     * Get 用户VPCID 
-     * @return UserVPCId 用户VPCID
+     * Get <p>用户VPCID</p> 
+     * @return UserVPCId <p>用户VPCID</p>
      */
     public String getUserVPCId() {
         return this.UserVPCId;
     }
 
     /**
-     * Set 用户VPCID
-     * @param UserVPCId 用户VPCID
+     * Set <p>用户VPCID</p>
+     * @param UserVPCId <p>用户VPCID</p>
      */
     public void setUserVPCId(String UserVPCId) {
         this.UserVPCId = UserVPCId;
     }
 
     /**
-     * Get 用户子网ID 
-     * @return UserSubnetId 用户子网ID
+     * Get <p>用户子网ID</p> 
+     * @return UserSubnetId <p>用户子网ID</p>
      */
     public String getUserSubnetId() {
         return this.UserSubnetId;
     }
 
     /**
-     * Set 用户子网ID
-     * @param UserSubnetId 用户子网ID
+     * Set <p>用户子网ID</p>
+     * @param UserSubnetId <p>用户子网ID</p>
      */
     public void setUserSubnetId(String UserSubnetId) {
         this.UserSubnetId = UserSubnetId;
     }
 
     /**
-     * Get 产品版本号 
-     * @return ProductVersion 产品版本号
+     * Get <p>产品版本号</p> 
+     * @return ProductVersion <p>产品版本号</p>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set 产品版本号
-     * @param ProductVersion 产品版本号
+     * Set <p>产品版本号</p>
+     * @param ProductVersion <p>产品版本号</p>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get 付费类型 
-     * @return ChargeProperties 付费类型
+     * Get <p>付费类型</p> 
+     * @return ChargeProperties <p>付费类型</p>
      */
     public ChargeProperties getChargeProperties() {
         return this.ChargeProperties;
     }
 
     /**
-     * Set 付费类型
-     * @param ChargeProperties 付费类型
+     * Set <p>付费类型</p>
+     * @param ChargeProperties <p>付费类型</p>
      */
     public void setChargeProperties(ChargeProperties ChargeProperties) {
         this.ChargeProperties = ChargeProperties;
     }
 
     /**
-     * Get 实例名字 
-     * @return InstanceName 实例名字
+     * Get <p>实例名字</p> 
+     * @return InstanceName <p>实例名字</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名字
-     * @param InstanceName 实例名字
+     * Set <p>实例名字</p>
+     * @param InstanceName <p>实例名字</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 数据库密码 
-     * @return DorisUserPwd 数据库密码
+     * Get <p>数据库密码</p> 
+     * @return DorisUserPwd <p>数据库密码</p>
      */
     public String getDorisUserPwd() {
         return this.DorisUserPwd;
     }
 
     /**
-     * Set 数据库密码
-     * @param DorisUserPwd 数据库密码
+     * Set <p>数据库密码</p>
+     * @param DorisUserPwd <p>数据库密码</p>
      */
     public void setDorisUserPwd(String DorisUserPwd) {
         this.DorisUserPwd = DorisUserPwd;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。 
-     * @return HaType 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
+     * Get <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p> 
+     * @return HaType <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
      */
     public Long getHaType() {
         return this.HaType;
     }
 
     /**
-     * Set 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
-     * @param HaType 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
+     * Set <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
+     * @param HaType <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
      */
     public void setHaType(Long HaType) {
         this.HaType = HaType;
     }
 
     /**
-     * Get 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储 
-     * @return CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+     * Get <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p> 
+     * @return CaseSensitive <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
      */
     public Long getCaseSensitive() {
         return this.CaseSensitive;
     }
 
     /**
-     * Set 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-     * @param CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+     * Set <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
+     * @param CaseSensitive <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
      */
     public void setCaseSensitive(Long CaseSensitive) {
         this.CaseSensitive = CaseSensitive;
     }
 
     /**
-     * Get 是否开启多可用区 
-     * @return EnableMultiZones 是否开启多可用区
+     * Get <p>是否开启多可用区</p> 
+     * @return EnableMultiZones <p>是否开启多可用区</p>
      */
     public Boolean getEnableMultiZones() {
         return this.EnableMultiZones;
     }
 
     /**
-     * Set 是否开启多可用区
-     * @param EnableMultiZones 是否开启多可用区
+     * Set <p>是否开启多可用区</p>
+     * @param EnableMultiZones <p>是否开启多可用区</p>
      */
     public void setEnableMultiZones(Boolean EnableMultiZones) {
         this.EnableMultiZones = EnableMultiZones;
     }
 
     /**
-     * Get 开启多可用区后，用户的所有可用区和子网信息 
-     * @return UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     * Get <p>开启多可用区后，用户的所有可用区和子网信息</p> 
+     * @return UserMultiZoneInfos <p>开启多可用区后，用户的所有可用区和子网信息</p>
      * @deprecated
      */
     @Deprecated
@@ -413,8 +405,8 @@ public class CreateInstanceNewRequest extends AbstractModel {
     }
 
     /**
-     * Set 开启多可用区后，用户的所有可用区和子网信息
-     * @param UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     * Set <p>开启多可用区后，用户的所有可用区和子网信息</p>
+     * @param UserMultiZoneInfos <p>开启多可用区后，用户的所有可用区和子网信息</p>
      * @deprecated
      */
     @Deprecated
@@ -423,56 +415,56 @@ public class CreateInstanceNewRequest extends AbstractModel {
     }
 
     /**
-     * Get 开启多可用区后，用户的所有可用区和子网信息 
-     * @return UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
+     * Get <p>开启多可用区后，用户的所有可用区和子网信息</p> 
+     * @return UserMultiZoneInfoArr <p>开启多可用区后，用户的所有可用区和子网信息</p>
      */
     public NetworkInfo [] getUserMultiZoneInfoArr() {
         return this.UserMultiZoneInfoArr;
     }
 
     /**
-     * Set 开启多可用区后，用户的所有可用区和子网信息
-     * @param UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
+     * Set <p>开启多可用区后，用户的所有可用区和子网信息</p>
+     * @param UserMultiZoneInfoArr <p>开启多可用区后，用户的所有可用区和子网信息</p>
      */
     public void setUserMultiZoneInfoArr(NetworkInfo [] UserMultiZoneInfoArr) {
         this.UserMultiZoneInfoArr = UserMultiZoneInfoArr;
     }
 
     /**
-     * Get 是否存算分离 
-     * @return IsSSC 是否存算分离
+     * Get <p>是否存算分离</p> 
+     * @return IsSSC <p>是否存算分离</p>
      */
     public Boolean getIsSSC() {
         return this.IsSSC;
     }
 
     /**
-     * Set 是否存算分离
-     * @param IsSSC 是否存算分离
+     * Set <p>是否存算分离</p>
+     * @param IsSSC <p>是否存算分离</p>
      */
     public void setIsSSC(Boolean IsSSC) {
         this.IsSSC = IsSSC;
     }
 
     /**
-     * Get CU数 
-     * @return SSCCU CU数
+     * Get <p>CU数</p> 
+     * @return SSCCU <p>CU数</p>
      */
     public Long getSSCCU() {
         return this.SSCCU;
     }
 
     /**
-     * Set CU数
-     * @param SSCCU CU数
+     * Set <p>CU数</p>
+     * @param SSCCU <p>CU数</p>
      */
     public void setSSCCU(Long SSCCU) {
         this.SSCCU = SSCCU;
     }
 
     /**
-     * Get 缓存盘大小 
-     * @return CacheDiskSize 缓存盘大小
+     * Get <p>缓存盘大小</p> 
+     * @return CacheDiskSize <p>缓存盘大小</p>
      * @deprecated
      */
     @Deprecated
@@ -481,8 +473,8 @@ public class CreateInstanceNewRequest extends AbstractModel {
     }
 
     /**
-     * Set 缓存盘大小
-     * @param CacheDiskSize 缓存盘大小
+     * Set <p>缓存盘大小</p>
+     * @param CacheDiskSize <p>缓存盘大小</p>
      * @deprecated
      */
     @Deprecated
@@ -491,19 +483,35 @@ public class CreateInstanceNewRequest extends AbstractModel {
     }
 
     /**
-     * Get 缓存盘大小 
-     * @return CacheDataDiskSize 缓存盘大小
+     * Get <p>缓存盘大小</p> 
+     * @return CacheDataDiskSize <p>缓存盘大小</p>
      */
     public Long getCacheDataDiskSize() {
         return this.CacheDataDiskSize;
     }
 
     /**
-     * Set 缓存盘大小
-     * @param CacheDataDiskSize 缓存盘大小
+     * Set <p>缓存盘大小</p>
+     * @param CacheDataDiskSize <p>缓存盘大小</p>
      */
     public void setCacheDataDiskSize(Long CacheDataDiskSize) {
         this.CacheDataDiskSize = CacheDataDiskSize;
+    }
+
+    /**
+     * Get <p>磁盘加密</p> 
+     * @return DiskEncrypt <p>磁盘加密</p>
+     */
+    public Long getDiskEncrypt() {
+        return this.DiskEncrypt;
+    }
+
+    /**
+     * Set <p>磁盘加密</p>
+     * @param DiskEncrypt <p>磁盘加密</p>
+     */
+    public void setDiskEncrypt(Long DiskEncrypt) {
+        this.DiskEncrypt = DiskEncrypt;
     }
 
     public CreateInstanceNewRequest() {
@@ -580,6 +588,9 @@ public class CreateInstanceNewRequest extends AbstractModel {
         if (source.CacheDataDiskSize != null) {
             this.CacheDataDiskSize = new Long(source.CacheDataDiskSize);
         }
+        if (source.DiskEncrypt != null) {
+            this.DiskEncrypt = new Long(source.DiskEncrypt);
+        }
     }
 
 
@@ -607,6 +618,7 @@ public class CreateInstanceNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SSCCU", this.SSCCU);
         this.setParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
         this.setParamSimple(map, prefix + "CacheDataDiskSize", this.CacheDataDiskSize);
+        this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
 
     }
 }

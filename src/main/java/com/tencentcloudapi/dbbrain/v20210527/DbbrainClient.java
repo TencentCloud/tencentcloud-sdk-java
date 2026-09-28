@@ -512,6 +512,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询实例的死锁事件列表
+     * @param req DescribeDeadLockLogsRequest
+     * @return DescribeDeadLockLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeadLockLogsResponse DescribeDeadLockLogs(DescribeDeadLockLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeadLockLogs", DescribeDeadLockLogsResponse.class);
+    }
+
+    /**
      *获取实例信息列表。Region统一选择广州。
      * @param req DescribeDiagDBInstancesRequest
      * @return DescribeDiagDBInstancesResponse

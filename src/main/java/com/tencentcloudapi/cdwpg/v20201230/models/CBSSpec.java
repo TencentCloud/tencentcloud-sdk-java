@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class CBSSpec extends AbstractModel {
 
     /**
-    * 盘类型
+    * 个数
     */
-    @SerializedName("DiskType")
+    @SerializedName("DiskCount")
     @Expose
-    private String DiskType;
+    private Long DiskCount;
 
     /**
     * 大小
@@ -38,26 +38,26 @@ public class CBSSpec extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * 个数
+    * 盘类型
     */
-    @SerializedName("DiskCount")
+    @SerializedName("DiskType")
     @Expose
-    private Long DiskCount;
+    private String DiskType;
 
     /**
-     * Get 盘类型 
-     * @return DiskType 盘类型
+     * Get 个数 
+     * @return DiskCount 个数
      */
-    public String getDiskType() {
-        return this.DiskType;
+    public Long getDiskCount() {
+        return this.DiskCount;
     }
 
     /**
-     * Set 盘类型
-     * @param DiskType 盘类型
+     * Set 个数
+     * @param DiskCount 个数
      */
-    public void setDiskType(String DiskType) {
-        this.DiskType = DiskType;
+    public void setDiskCount(Long DiskCount) {
+        this.DiskCount = DiskCount;
     }
 
     /**
@@ -77,19 +77,19 @@ public class CBSSpec extends AbstractModel {
     }
 
     /**
-     * Get 个数 
-     * @return DiskCount 个数
+     * Get 盘类型 
+     * @return DiskType 盘类型
      */
-    public Long getDiskCount() {
-        return this.DiskCount;
+    public String getDiskType() {
+        return this.DiskType;
     }
 
     /**
-     * Set 个数
-     * @param DiskCount 个数
+     * Set 盘类型
+     * @param DiskType 盘类型
      */
-    public void setDiskCount(Long DiskCount) {
-        this.DiskCount = DiskCount;
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
     }
 
     public CBSSpec() {
@@ -100,14 +100,14 @@ public class CBSSpec extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CBSSpec(CBSSpec source) {
-        if (source.DiskType != null) {
-            this.DiskType = new String(source.DiskType);
+        if (source.DiskCount != null) {
+            this.DiskCount = new Long(source.DiskCount);
         }
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
-        if (source.DiskCount != null) {
-            this.DiskCount = new Long(source.DiskCount);
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
         }
     }
 
@@ -116,9 +116,9 @@ public class CBSSpec extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
-        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

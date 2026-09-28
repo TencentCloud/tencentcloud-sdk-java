@@ -59,6 +59,41 @@ public class DescribePreCacheImageTaskResponse extends AbstractModel {
     private String Message;
 
     /**
+    * <p>镜像预热创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>镜像预热ID</p>
+    */
+    @SerializedName("PreCacheImageId")
+    @Expose
+    private String PreCacheImageId;
+
+    /**
+    * <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>镜像预热存储大小</p><p>单位：Byte</p>
+    */
+    @SerializedName("CachedImageSizeBytes")
+    @Expose
+    private Long CachedImageSizeBytes;
+
+    /**
+    * <p>该预热镜像最近一次被沙箱实例使用时间</p>
+    */
+    @SerializedName("LastUsedTime")
+    @Expose
+    private String LastUsedTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +181,86 @@ public class DescribePreCacheImageTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>镜像预热创建时间</p> 
+     * @return CreateTime <p>镜像预热创建时间</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>镜像预热创建时间</p>
+     * @param CreateTime <p>镜像预热创建时间</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>镜像预热ID</p> 
+     * @return PreCacheImageId <p>镜像预热ID</p>
+     */
+    public String getPreCacheImageId() {
+        return this.PreCacheImageId;
+    }
+
+    /**
+     * Set <p>镜像预热ID</p>
+     * @param PreCacheImageId <p>镜像预热ID</p>
+     */
+    public void setPreCacheImageId(String PreCacheImageId) {
+        this.PreCacheImageId = PreCacheImageId;
+    }
+
+    /**
+     * Get <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul> 
+     * @return SourceType <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+     * @param SourceType <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>镜像预热存储大小</p><p>单位：Byte</p> 
+     * @return CachedImageSizeBytes <p>镜像预热存储大小</p><p>单位：Byte</p>
+     */
+    public Long getCachedImageSizeBytes() {
+        return this.CachedImageSizeBytes;
+    }
+
+    /**
+     * Set <p>镜像预热存储大小</p><p>单位：Byte</p>
+     * @param CachedImageSizeBytes <p>镜像预热存储大小</p><p>单位：Byte</p>
+     */
+    public void setCachedImageSizeBytes(Long CachedImageSizeBytes) {
+        this.CachedImageSizeBytes = CachedImageSizeBytes;
+    }
+
+    /**
+     * Get <p>该预热镜像最近一次被沙箱实例使用时间</p> 
+     * @return LastUsedTime <p>该预热镜像最近一次被沙箱实例使用时间</p>
+     */
+    public String getLastUsedTime() {
+        return this.LastUsedTime;
+    }
+
+    /**
+     * Set <p>该预热镜像最近一次被沙箱实例使用时间</p>
+     * @param LastUsedTime <p>该预热镜像最近一次被沙箱实例使用时间</p>
+     */
+    public void setLastUsedTime(String LastUsedTime) {
+        this.LastUsedTime = LastUsedTime;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +299,21 @@ public class DescribePreCacheImageTaskResponse extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PreCacheImageId != null) {
+            this.PreCacheImageId = new String(source.PreCacheImageId);
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.CachedImageSizeBytes != null) {
+            this.CachedImageSizeBytes = new Long(source.CachedImageSizeBytes);
+        }
+        if (source.LastUsedTime != null) {
+            this.LastUsedTime = new String(source.LastUsedTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +329,11 @@ public class DescribePreCacheImageTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "CachedImageSizeBytes", this.CachedImageSizeBytes);
+        this.setParamSimple(map, prefix + "LastUsedTime", this.LastUsedTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

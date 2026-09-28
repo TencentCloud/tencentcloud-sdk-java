@@ -73,7 +73,7 @@ public class AiPosterSuiteConfig extends AbstractModel {
     private CustomVariable [] CustomVariables;
 
     /**
-    * <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+    * <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
     */
     @SerializedName("Model")
     @Expose
@@ -192,16 +192,16 @@ public class AiPosterSuiteConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul> 
-     * @return Model <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+     * Get <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul> 
+     * @return Model <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
-     * @param Model <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+     * Set <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
+     * @param Model <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;
