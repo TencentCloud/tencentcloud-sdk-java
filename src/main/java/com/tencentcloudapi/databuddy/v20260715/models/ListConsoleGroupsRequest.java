@@ -38,7 +38,7 @@ public class ListConsoleGroupsRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * <p>通过用户组 ID 批量查询</p>
+    * <p>通过用户组ID批量查询；用户组ID可通过 ListConsoleGroups 接口获取</p>
     */
     @SerializedName("GroupIds")
     @Expose
@@ -91,16 +91,16 @@ public class ListConsoleGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>通过用户组 ID 批量查询</p> 
-     * @return GroupIds <p>通过用户组 ID 批量查询</p>
+     * Get <p>通过用户组ID批量查询；用户组ID可通过 ListConsoleGroups 接口获取</p> 
+     * @return GroupIds <p>通过用户组ID批量查询；用户组ID可通过 ListConsoleGroups 接口获取</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set <p>通过用户组 ID 批量查询</p>
-     * @param GroupIds <p>通过用户组 ID 批量查询</p>
+     * Set <p>通过用户组ID批量查询；用户组ID可通过 ListConsoleGroups 接口获取</p>
+     * @param GroupIds <p>通过用户组ID批量查询；用户组ID可通过 ListConsoleGroups 接口获取</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

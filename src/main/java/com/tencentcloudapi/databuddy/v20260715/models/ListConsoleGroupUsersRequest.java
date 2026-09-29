@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListConsoleGroupUsersRequest extends AbstractModel {
 
     /**
-    * <p>用户组 ID</p>
+    * <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
     */
     @SerializedName("GroupId")
     @Expose
@@ -66,16 +66,16 @@ public class ListConsoleGroupUsersRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-     * Get <p>用户组 ID</p> 
-     * @return GroupId <p>用户组 ID</p>
+     * Get <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p> 
+     * @return GroupId <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set <p>用户组 ID</p>
-     * @param GroupId <p>用户组 ID</p>
+     * Set <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
+     * @param GroupId <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

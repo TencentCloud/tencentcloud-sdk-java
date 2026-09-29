@@ -278,7 +278,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *查询控制台用户组成员列表
+     *查询控制台用户组成员列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req ListConsoleGroupUsersRequest
      * @return ListConsoleGroupUsersResponse
      * @throws TencentCloudSDKException
@@ -289,7 +289,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *查询控制台用户组列表
+     *查询控制台用户组列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req ListConsoleGroupsRequest
      * @return ListConsoleGroupsResponse
      * @throws TencentCloudSDKException
@@ -300,7 +300,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *查询控制台角色列表
+     *查询控制台角色列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req ListConsoleRolesRequest
      * @return ListConsoleRolesResponse
      * @throws TencentCloudSDKException
@@ -311,7 +311,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *查询控制台用户列表
+     *查询控制台用户列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req ListConsoleUsersRequest
      * @return ListConsoleUsersResponse
      * @throws TencentCloudSDKException

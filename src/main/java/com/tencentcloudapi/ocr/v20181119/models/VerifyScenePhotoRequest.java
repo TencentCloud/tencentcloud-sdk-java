@@ -31,6 +31,20 @@ public class VerifyScenePhotoRequest extends AbstractModel {
     private String Scene;
 
     /**
+    * <p>鉴伪模式，目前支持以下模式，对应支持不同的入参、出参。<br>Image：图像鉴伪模式，根据图像分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按1次调用计费。<br>Video：视频鉴伪模式，根据视频分析输出告警提示，不支持推理，支持屏幕翻拍提示。每次调用按1次调用计费。<br>Hybrid：混合鉴伪模式，综合图像、视频分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按2次调用计费。</p>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * <p>视频的 Url 地址。格式支持：xxxxxx。要求视频不超过 100M。建议视频时长不小于1s。</p>
+    */
+    @SerializedName("VideoUrl")
+    @Expose
+    private String VideoUrl;
+
+    /**
     * <p>图片的 Url 地址。要求图片经Base64编码后不超过 10M。</p>
     */
     @SerializedName("ImageUrl")
@@ -59,6 +73,13 @@ public class VerifyScenePhotoRequest extends AbstractModel {
     private ReasoningConfig ReasoningConfig;
 
     /**
+    * <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。<br>PhoneCam：手机相机水印<br>WatermarkCam：水印相机水印</p>
+    */
+    @SerializedName("IgnoreWatermarkCategories")
+    @Expose
+    private String [] IgnoreWatermarkCategories;
+
+    /**
      * Get <p>场景类型参数，如果场景无法细分请选用该大类的第一个子类，目前支持以下类型：<br><strong>经营场所照</strong><br>0101 门头照<br>0102 店内照<br>0103 流动经营照    </p><p><strong>车牌业务照</strong><br>0201 车牌</p> 
      * @return Scene <p>场景类型参数，如果场景无法细分请选用该大类的第一个子类，目前支持以下类型：<br><strong>经营场所照</strong><br>0101 门头照<br>0102 店内照<br>0103 流动经营照    </p><p><strong>车牌业务照</strong><br>0201 车牌</p>
      */
@@ -72,6 +93,38 @@ public class VerifyScenePhotoRequest extends AbstractModel {
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
+    }
+
+    /**
+     * Get <p>鉴伪模式，目前支持以下模式，对应支持不同的入参、出参。<br>Image：图像鉴伪模式，根据图像分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按1次调用计费。<br>Video：视频鉴伪模式，根据视频分析输出告警提示，不支持推理，支持屏幕翻拍提示。每次调用按1次调用计费。<br>Hybrid：混合鉴伪模式，综合图像、视频分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按2次调用计费。</p> 
+     * @return Mode <p>鉴伪模式，目前支持以下模式，对应支持不同的入参、出参。<br>Image：图像鉴伪模式，根据图像分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按1次调用计费。<br>Video：视频鉴伪模式，根据视频分析输出告警提示，不支持推理，支持屏幕翻拍提示。每次调用按1次调用计费。<br>Hybrid：混合鉴伪模式，综合图像、视频分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按2次调用计费。</p>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>鉴伪模式，目前支持以下模式，对应支持不同的入参、出参。<br>Image：图像鉴伪模式，根据图像分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按1次调用计费。<br>Video：视频鉴伪模式，根据视频分析输出告警提示，不支持推理，支持屏幕翻拍提示。每次调用按1次调用计费。<br>Hybrid：混合鉴伪模式，综合图像、视频分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按2次调用计费。</p>
+     * @param Mode <p>鉴伪模式，目前支持以下模式，对应支持不同的入参、出参。<br>Image：图像鉴伪模式，根据图像分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按1次调用计费。<br>Video：视频鉴伪模式，根据视频分析输出告警提示，不支持推理，支持屏幕翻拍提示。每次调用按1次调用计费。<br>Hybrid：混合鉴伪模式，综合图像、视频分析输出告警提示，支持推理，支持区域篡改提示、AIGC合成提示、屏幕翻拍提示、截图提示、文字水印提示、水印内容、模板图片提示、VLM 推理结果。每次调用按2次调用计费。</p>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get <p>视频的 Url 地址。格式支持：xxxxxx。要求视频不超过 100M。建议视频时长不小于1s。</p> 
+     * @return VideoUrl <p>视频的 Url 地址。格式支持：xxxxxx。要求视频不超过 100M。建议视频时长不小于1s。</p>
+     */
+    public String getVideoUrl() {
+        return this.VideoUrl;
+    }
+
+    /**
+     * Set <p>视频的 Url 地址。格式支持：xxxxxx。要求视频不超过 100M。建议视频时长不小于1s。</p>
+     * @param VideoUrl <p>视频的 Url 地址。格式支持：xxxxxx。要求视频不超过 100M。建议视频时长不小于1s。</p>
+     */
+    public void setVideoUrl(String VideoUrl) {
+        this.VideoUrl = VideoUrl;
     }
 
     /**
@@ -138,6 +191,22 @@ public class VerifyScenePhotoRequest extends AbstractModel {
         this.ReasoningConfig = ReasoningConfig;
     }
 
+    /**
+     * Get <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。<br>PhoneCam：手机相机水印<br>WatermarkCam：水印相机水印</p> 
+     * @return IgnoreWatermarkCategories <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。<br>PhoneCam：手机相机水印<br>WatermarkCam：水印相机水印</p>
+     */
+    public String [] getIgnoreWatermarkCategories() {
+        return this.IgnoreWatermarkCategories;
+    }
+
+    /**
+     * Set <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。<br>PhoneCam：手机相机水印<br>WatermarkCam：水印相机水印</p>
+     * @param IgnoreWatermarkCategories <p>水印提示排除类型，选择出参“水印提示”排除掉的水印类型，不传的话即代表任意水印都会提示。<br>PhoneCam：手机相机水印<br>WatermarkCam：水印相机水印</p>
+     */
+    public void setIgnoreWatermarkCategories(String [] IgnoreWatermarkCategories) {
+        this.IgnoreWatermarkCategories = IgnoreWatermarkCategories;
+    }
+
     public VerifyScenePhotoRequest() {
     }
 
@@ -148,6 +217,12 @@ public class VerifyScenePhotoRequest extends AbstractModel {
     public VerifyScenePhotoRequest(VerifyScenePhotoRequest source) {
         if (source.Scene != null) {
             this.Scene = new String(source.Scene);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
         }
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
@@ -161,6 +236,12 @@ public class VerifyScenePhotoRequest extends AbstractModel {
         if (source.ReasoningConfig != null) {
             this.ReasoningConfig = new ReasoningConfig(source.ReasoningConfig);
         }
+        if (source.IgnoreWatermarkCategories != null) {
+            this.IgnoreWatermarkCategories = new String[source.IgnoreWatermarkCategories.length];
+            for (int i = 0; i < source.IgnoreWatermarkCategories.length; i++) {
+                this.IgnoreWatermarkCategories[i] = new String(source.IgnoreWatermarkCategories[i]);
+            }
+        }
     }
 
 
@@ -169,10 +250,13 @@ public class VerifyScenePhotoRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ReasoningPrompt", this.ReasoningPrompt);
         this.setParamObj(map, prefix + "ReasoningConfig.", this.ReasoningConfig);
+        this.setParamArraySimple(map, prefix + "IgnoreWatermarkCategories.", this.IgnoreWatermarkCategories);
 
     }
 }

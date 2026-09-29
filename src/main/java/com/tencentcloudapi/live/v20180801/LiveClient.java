@@ -468,6 +468,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建直播智能擦除规则。
+     * @param req CreateLiveSmartEraseRuleRequest
+     * @return CreateLiveSmartEraseRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveSmartEraseRuleResponse CreateLiveSmartEraseRule(CreateLiveSmartEraseRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveSmartEraseRule", CreateLiveSmartEraseRuleResponse.class);
+    }
+
+    /**
      *创建直播智能擦除模板。
      * @param req CreateLiveSmartEraseTemplateRequest
      * @return CreateLiveSmartEraseTemplateResponse
@@ -904,6 +915,28 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
+    }
+
+    /**
+     *删除直播智能擦除规则。
+     * @param req DeleteLiveSmartEraseRuleRequest
+     * @return DeleteLiveSmartEraseRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveSmartEraseRuleResponse DeleteLiveSmartEraseRule(DeleteLiveSmartEraseRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveSmartEraseRule", DeleteLiveSmartEraseRuleResponse.class);
+    }
+
+    /**
+     *删除直播智能擦除模板。
+     * @param req DeleteLiveSmartEraseTemplateRequest
+     * @return DeleteLiveSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveSmartEraseTemplateResponse DeleteLiveSmartEraseTemplate(DeleteLiveSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveSmartEraseTemplate", DeleteLiveSmartEraseTemplateResponse.class);
     }
 
     /**
@@ -1753,6 +1786,39 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
+    }
+
+    /**
+     *获取直播智能擦除规则列表。
+     * @param req DescribeLiveSmartEraseRulesRequest
+     * @return DescribeLiveSmartEraseRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveSmartEraseRulesResponse DescribeLiveSmartEraseRules(DescribeLiveSmartEraseRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveSmartEraseRules", DescribeLiveSmartEraseRulesResponse.class);
+    }
+
+    /**
+     *获取单个直播智能擦除模板
+     * @param req DescribeLiveSmartEraseTemplateRequest
+     * @return DescribeLiveSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveSmartEraseTemplateResponse DescribeLiveSmartEraseTemplate(DescribeLiveSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveSmartEraseTemplate", DescribeLiveSmartEraseTemplateResponse.class);
+    }
+
+    /**
+     *获取直播智能擦除模板。
+     * @param req DescribeLiveSmartEraseTemplatesRequest
+     * @return DescribeLiveSmartEraseTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveSmartEraseTemplatesResponse DescribeLiveSmartEraseTemplates(DescribeLiveSmartEraseTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveSmartEraseTemplates", DescribeLiveSmartEraseTemplatesResponse.class);
     }
 
     /**
@@ -2611,6 +2677,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
+    }
+
+    /**
+     *修改直播智能擦除模板。
+     * @param req ModifyLiveSmartEraseTemplateRequest
+     * @return ModifyLiveSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveSmartEraseTemplateResponse ModifyLiveSmartEraseTemplate(ModifyLiveSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveSmartEraseTemplate", ModifyLiveSmartEraseTemplateResponse.class);
     }
 
     /**
