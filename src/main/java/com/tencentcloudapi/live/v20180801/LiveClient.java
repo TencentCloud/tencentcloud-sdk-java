@@ -2132,6 +2132,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *获取直播源站的拉流IP白名单列表
+     * @param req DescribeOriginWhiteIpListRequest
+     * @return DescribeOriginWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpList(DescribeOriginWhiteIpListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOriginWhiteIpList", DescribeOriginWhiteIpListResponse.class);
+    }
+
+    /**
      *该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 查询下行播放错误码信息，某段时间内1分钟粒度的各http错误码出现的次数，包括4xx，5xx。
      * @param req DescribePlayErrorCodeDetailInfoListRequest
