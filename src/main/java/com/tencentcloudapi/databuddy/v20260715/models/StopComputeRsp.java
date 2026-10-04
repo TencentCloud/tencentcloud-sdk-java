@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.databuddy.v20260715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOriginWhiteIpListRequest extends AbstractModel {
+public class StopComputeRsp extends AbstractModel {
 
     /**
-    * <p>播放域名</p>
+    * 操作是否成功
     */
-    @SerializedName("Domain")
+    @SerializedName("Status")
     @Expose
-    private String Domain;
+    private Boolean Status;
 
     /**
-     * Get <p>播放域名</p> 
-     * @return Domain <p>播放域名</p>
+     * Get 操作是否成功 
+     * @return Status 操作是否成功
      */
-    public String getDomain() {
-        return this.Domain;
+    public Boolean getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set <p>播放域名</p>
-     * @param Domain <p>播放域名</p>
+     * Set 操作是否成功
+     * @param Status 操作是否成功
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
     }
 
-    public DescribeOriginWhiteIpListRequest() {
+    public StopComputeRsp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOriginWhiteIpListRequest(DescribeOriginWhiteIpListRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public StopComputeRsp(StopComputeRsp source) {
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeOriginWhiteIpListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.databuddy.v20260715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOriginWhiteIpListRequest extends AbstractModel {
+public class DeleteSchemaRsp extends AbstractModel {
 
     /**
-    * <p>播放域名</p>
+    * 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Domain")
+    @SerializedName("Result")
     @Expose
-    private String Domain;
+    private Boolean Result;
 
     /**
-     * Get <p>播放域名</p> 
-     * @return Domain <p>播放域名</p>
+     * Get 操作结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDomain() {
-        return this.Domain;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set <p>播放域名</p>
-     * @param Domain <p>播放域名</p>
+     * Set 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 操作结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
-    public DescribeOriginWhiteIpListRequest() {
+    public DeleteSchemaRsp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOriginWhiteIpListRequest(DescribeOriginWhiteIpListRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public DeleteSchemaRsp(DeleteSchemaRsp source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
     }
 
@@ -64,7 +69,7 @@ public class DescribeOriginWhiteIpListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Result", this.Result);
 
     }
 }

@@ -50,6 +50,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *创建数据目录接口
+     * @param req CreateCatalogRequest
+     * @return CreateCatalogResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCatalogResponse CreateCatalog(CreateCatalogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCatalog", CreateCatalogResponse.class);
+    }
+
+    /**
      *创建控制台用户组
      * @param req CreateConsoleGroupRequest
      * @return CreateConsoleGroupResponse
@@ -90,6 +101,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *创建schema
+     * @param req CreateSchemaRequest
+     * @return CreateSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSchemaResponse CreateSchema(CreateSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSchema", CreateSchemaResponse.class);
+    }
+
+    /**
      *创建工作流
      * @param req CreateWorkflowRequest
      * @return CreateWorkflowResponse
@@ -109,6 +131,28 @@ public class DatabuddyClient extends AbstractClient{
     public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWorkspace", CreateWorkspaceResponse.class);
+    }
+
+    /**
+     *创建工作空间角色
+     * @param req CreateWorkspaceRoleRequest
+     * @return CreateWorkspaceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkspaceRoleResponse CreateWorkspaceRole(CreateWorkspaceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkspaceRole", CreateWorkspaceRoleResponse.class);
+    }
+
+    /**
+     *删除catalog
+     * @param req DeleteCatalogRequest
+     * @return DeleteCatalogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCatalogResponse DeleteCatalog(DeleteCatalogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCatalog", DeleteCatalogResponse.class);
     }
 
     /**
@@ -162,6 +206,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *删除schema
+     * @param req DeleteSchemaRequest
+     * @return DeleteSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSchemaResponse DeleteSchema(DeleteSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSchema", DeleteSchemaResponse.class);
+    }
+
+    /**
      *删除工作流
      * @param req DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
@@ -181,6 +236,17 @@ public class DatabuddyClient extends AbstractClient{
     public DeleteWorkspaceResponse DeleteWorkspace(DeleteWorkspaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWorkspace", DeleteWorkspaceResponse.class);
+    }
+
+    /**
+     *删除工作空间角色
+     * @param req DeleteWorkspaceRoleRequest
+     * @return DeleteWorkspaceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWorkspaceRoleResponse DeleteWorkspaceRole(DeleteWorkspaceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWorkspaceRole", DeleteWorkspaceRoleResponse.class);
     }
 
     /**
@@ -333,6 +399,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *获取schema列表
+     * @param req ListSchemasRequest
+     * @return ListSchemasResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSchemasResponse ListSchemas(ListSchemasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSchemas", ListSchemasResponse.class);
+    }
+
+    /**
      *工作流运行列表
      * @param req ListWorkflowRunsRequest
      * @return ListWorkflowRunsResponse
@@ -366,6 +443,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询工作空间列表
+     * @param req ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListWorkspaces", ListWorkspacesResponse.class);
+    }
+
+    /**
      *<p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
      * @param req RemoveConsoleUsersRequest
      * @return RemoveConsoleUsersResponse
@@ -396,6 +484,28 @@ public class DatabuddyClient extends AbstractClient{
     public RunWorkflowResponse RunWorkflow(RunWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunWorkflow", RunWorkflowResponse.class);
+    }
+
+    /**
+     *启动计算资源
+     * @param req StartComputeRequest
+     * @return StartComputeResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartComputeResponse StartCompute(StartComputeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartCompute", StartComputeResponse.class);
+    }
+
+    /**
+     *停止计算资源
+     * @param req StopComputeRequest
+     * @return StopComputeResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopComputeResponse StopCompute(StopComputeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopCompute", StopComputeResponse.class);
     }
 
     /**
@@ -493,6 +603,17 @@ public class DatabuddyClient extends AbstractClient{
     public UpdateWorkspaceResponse UpdateWorkspace(UpdateWorkspaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateWorkspace", UpdateWorkspaceResponse.class);
+    }
+
+    /**
+     *更新工作空间角色
+     * @param req UpdateWorkspaceRoleRequest
+     * @return UpdateWorkspaceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateWorkspaceRoleResponse UpdateWorkspaceRole(UpdateWorkspaceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateWorkspaceRole", UpdateWorkspaceRoleResponse.class);
     }
 
 }

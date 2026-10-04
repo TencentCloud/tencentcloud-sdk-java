@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.databuddy.v20260715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOriginWhiteIpListRequest extends AbstractModel {
+public class CreateSchemaRsp extends AbstractModel {
 
     /**
-    * <p>播放域名</p>
+    * schema信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Domain")
+    @SerializedName("Schema")
     @Expose
-    private String Domain;
+    private Schema Schema;
 
     /**
-     * Get <p>播放域名</p> 
-     * @return Domain <p>播放域名</p>
+     * Get schema信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Schema schema信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDomain() {
-        return this.Domain;
+    public Schema getSchema() {
+        return this.Schema;
     }
 
     /**
-     * Set <p>播放域名</p>
-     * @param Domain <p>播放域名</p>
+     * Set schema信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Schema schema信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setSchema(Schema Schema) {
+        this.Schema = Schema;
     }
 
-    public DescribeOriginWhiteIpListRequest() {
+    public CreateSchemaRsp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOriginWhiteIpListRequest(DescribeOriginWhiteIpListRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public CreateSchemaRsp(CreateSchemaRsp source) {
+        if (source.Schema != null) {
+            this.Schema = new Schema(source.Schema);
         }
     }
 
@@ -64,7 +69,7 @@ public class DescribeOriginWhiteIpListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamObj(map, prefix + "Schema.", this.Schema);
 
     }
 }
