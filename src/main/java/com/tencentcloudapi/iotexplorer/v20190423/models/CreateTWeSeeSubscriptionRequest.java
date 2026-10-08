@@ -24,219 +24,184 @@ import java.util.HashMap;
 public class CreateTWeSeeSubscriptionRequest extends AbstractModel {
 
     /**
-    * 产品 ID
+    * <p>产品 ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+    * <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+    * <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
     */
     @SerializedName("ServiceTier")
     @Expose
     private String ServiceTier;
 
     /**
-    * 订阅购买时长，单位：月，支持 1-60
+    * <p>订阅购买时长，单位：月，支持 1-60</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 通道 ID
+    * <p>通道 ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private Long ChannelId;
 
     /**
-    * 自定义订单 ID
+    * <p>自定义订单 ID</p>
     */
     @SerializedName("CustomOrderId")
     @Expose
     private String CustomOrderId;
 
     /**
-    * 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+    * <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-     * Get 产品 ID 
-     * @return ProductId 产品 ID
+     * Get <p>产品 ID</p> 
+     * @return ProductId <p>产品 ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品 ID
-     * @param ProductId 产品 ID
+     * Set <p>产品 ID</p>
+     * @param ProductId <p>产品 ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 算法类型。可选值：
-
-- `VID_COMP`：视频理解 
-     * @return ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+     * Get <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul> 
+     * @return ServiceType <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-     * @param ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+     * Set <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
+     * @param ServiceType <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解） 
-     * @return ServiceTier 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * Get <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul> 
+     * @return ServiceTier <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      */
     public String getServiceTier() {
         return this.ServiceTier;
     }
 
     /**
-     * Set 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
-     * @param ServiceTier 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * Set <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
+     * @param ServiceTier <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      */
     public void setServiceTier(String ServiceTier) {
         this.ServiceTier = ServiceTier;
     }
 
     /**
-     * Get 订阅购买时长，单位：月，支持 1-60 
-     * @return Period 订阅购买时长，单位：月，支持 1-60
+     * Get <p>订阅购买时长，单位：月，支持 1-60</p> 
+     * @return Period <p>订阅购买时长，单位：月，支持 1-60</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 订阅购买时长，单位：月，支持 1-60
-     * @param Period 订阅购买时长，单位：月，支持 1-60
+     * Set <p>订阅购买时长，单位：月，支持 1-60</p>
+     * @param Period <p>订阅购买时长，单位：月，支持 1-60</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 通道 ID 
-     * @return ChannelId 通道 ID
+     * Get <p>通道 ID</p> 
+     * @return ChannelId <p>通道 ID</p>
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道 ID
-     * @param ChannelId 通道 ID
+     * Set <p>通道 ID</p>
+     * @param ChannelId <p>通道 ID</p>
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 自定义订单 ID 
-     * @return CustomOrderId 自定义订单 ID
+     * Get <p>自定义订单 ID</p> 
+     * @return CustomOrderId <p>自定义订单 ID</p>
      */
     public String getCustomOrderId() {
         return this.CustomOrderId;
     }
 
     /**
-     * Set 自定义订单 ID
-     * @param CustomOrderId 自定义订单 ID
+     * Set <p>自定义订单 ID</p>
+     * @param CustomOrderId <p>自定义订单 ID</p>
      */
     public void setCustomOrderId(String CustomOrderId) {
         this.CustomOrderId = CustomOrderId;
     }
 
     /**
-     * Get 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费 
-     * @return RenewFlag 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+     * Get <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul> 
+     * @return RenewFlag <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
-     * @param RenewFlag 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+     * Set <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
+     * @param RenewFlag <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;

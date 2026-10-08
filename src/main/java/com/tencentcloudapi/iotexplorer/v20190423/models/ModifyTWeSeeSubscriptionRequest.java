@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
 
     /**
-    * 设备名称
-    */
-    @SerializedName("DeviceName")
-    @Expose
-    private String DeviceName;
-
-    /**
     * 产品 ID
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
+
+    /**
+    * 设备名称
+    */
+    @SerializedName("DeviceName")
+    @Expose
+    private String DeviceName;
 
     /**
     * 算法类型。可选值：
@@ -47,11 +47,11 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     private String ServiceType;
 
     /**
-    * 通道 ID
+    * 视觉理解配置（适用于视频理解、图片理解），不传则不修改
     */
-    @SerializedName("ChannelId")
+    @SerializedName("ComprehensionConfig")
     @Expose
-    private Long ChannelId;
+    private SeeComprehensionConfig ComprehensionConfig;
 
     /**
     * 视频语义浓缩配置（适用于视频语义浓缩），不传则不修改
@@ -61,18 +61,11 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     private SeeCompHighlightConfig CompHighlightConfig;
 
     /**
-    * 视觉理解配置（适用于视频理解、图片理解），不传则不修改
+    * 每日与每周总结配置，不传则不修改
     */
-    @SerializedName("ComprehensionConfig")
+    @SerializedName("SummarizeConfig")
     @Expose
-    private SeeComprehensionConfig ComprehensionConfig;
-
-    /**
-    * 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
-    */
-    @SerializedName("Enabled")
-    @Expose
-    private Boolean Enabled;
+    private SeeSummarizeConfig SummarizeConfig;
 
     /**
     * 云存事件 ID 过滤规则配置，不传则不修改
@@ -82,27 +75,18 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     private SeeEventIdFilterConfig EventIdFilterConfig;
 
     /**
-    * 每日与每周总结配置，不传则不修改
+    * 通道 ID
     */
-    @SerializedName("SummarizeConfig")
+    @SerializedName("ChannelId")
     @Expose
-    private SeeSummarizeConfig SummarizeConfig;
+    private Long ChannelId;
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
-     */
-    public String getDeviceName() {
-        return this.DeviceName;
-    }
-
-    /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
-     */
-    public void setDeviceName(String DeviceName) {
-        this.DeviceName = DeviceName;
-    }
+    * 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
 
     /**
      * Get 产品 ID 
@@ -118,6 +102,22 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 设备名称 
+     * @return DeviceName 设备名称
+     */
+    public String getDeviceName() {
+        return this.DeviceName;
+    }
+
+    /**
+     * Set 设备名称
+     * @param DeviceName 设备名称
+     */
+    public void setDeviceName(String DeviceName) {
+        this.DeviceName = DeviceName;
     }
 
     /**
@@ -145,19 +145,19 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 通道 ID 
-     * @return ChannelId 通道 ID
+     * Get 视觉理解配置（适用于视频理解、图片理解），不传则不修改 
+     * @return ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
      */
-    public Long getChannelId() {
-        return this.ChannelId;
+    public SeeComprehensionConfig getComprehensionConfig() {
+        return this.ComprehensionConfig;
     }
 
     /**
-     * Set 通道 ID
-     * @param ChannelId 通道 ID
+     * Set 视觉理解配置（适用于视频理解、图片理解），不传则不修改
+     * @param ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
      */
-    public void setChannelId(Long ChannelId) {
-        this.ChannelId = ChannelId;
+    public void setComprehensionConfig(SeeComprehensionConfig ComprehensionConfig) {
+        this.ComprehensionConfig = ComprehensionConfig;
     }
 
     /**
@@ -177,35 +177,19 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 视觉理解配置（适用于视频理解、图片理解），不传则不修改 
-     * @return ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
+     * Get 每日与每周总结配置，不传则不修改 
+     * @return SummarizeConfig 每日与每周总结配置，不传则不修改
      */
-    public SeeComprehensionConfig getComprehensionConfig() {
-        return this.ComprehensionConfig;
+    public SeeSummarizeConfig getSummarizeConfig() {
+        return this.SummarizeConfig;
     }
 
     /**
-     * Set 视觉理解配置（适用于视频理解、图片理解），不传则不修改
-     * @param ComprehensionConfig 视觉理解配置（适用于视频理解、图片理解），不传则不修改
+     * Set 每日与每周总结配置，不传则不修改
+     * @param SummarizeConfig 每日与每周总结配置，不传则不修改
      */
-    public void setComprehensionConfig(SeeComprehensionConfig ComprehensionConfig) {
-        this.ComprehensionConfig = ComprehensionConfig;
-    }
-
-    /**
-     * Get 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改 
-     * @return Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
-     */
-    public Boolean getEnabled() {
-        return this.Enabled;
-    }
-
-    /**
-     * Set 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
-     * @param Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
-     */
-    public void setEnabled(Boolean Enabled) {
-        this.Enabled = Enabled;
+    public void setSummarizeConfig(SeeSummarizeConfig SummarizeConfig) {
+        this.SummarizeConfig = SummarizeConfig;
     }
 
     /**
@@ -225,19 +209,35 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 每日与每周总结配置，不传则不修改 
-     * @return SummarizeConfig 每日与每周总结配置，不传则不修改
+     * Get 通道 ID 
+     * @return ChannelId 通道 ID
      */
-    public SeeSummarizeConfig getSummarizeConfig() {
-        return this.SummarizeConfig;
+    public Long getChannelId() {
+        return this.ChannelId;
     }
 
     /**
-     * Set 每日与每周总结配置，不传则不修改
-     * @param SummarizeConfig 每日与每周总结配置，不传则不修改
+     * Set 通道 ID
+     * @param ChannelId 通道 ID
      */
-    public void setSummarizeConfig(SeeSummarizeConfig SummarizeConfig) {
-        this.SummarizeConfig = SummarizeConfig;
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改 
+     * @return Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     * @param Enabled 功能开关。`true` 为开启，`false` 为关闭；不传表示不修改
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
     }
 
     public ModifyTWeSeeSubscriptionRequest() {
@@ -248,32 +248,32 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyTWeSeeSubscriptionRequest(ModifyTWeSeeSubscriptionRequest source) {
-        if (source.DeviceName != null) {
-            this.DeviceName = new String(source.DeviceName);
-        }
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
         }
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
-        if (source.ChannelId != null) {
-            this.ChannelId = new Long(source.ChannelId);
+        if (source.ComprehensionConfig != null) {
+            this.ComprehensionConfig = new SeeComprehensionConfig(source.ComprehensionConfig);
         }
         if (source.CompHighlightConfig != null) {
             this.CompHighlightConfig = new SeeCompHighlightConfig(source.CompHighlightConfig);
         }
-        if (source.ComprehensionConfig != null) {
-            this.ComprehensionConfig = new SeeComprehensionConfig(source.ComprehensionConfig);
-        }
-        if (source.Enabled != null) {
-            this.Enabled = new Boolean(source.Enabled);
+        if (source.SummarizeConfig != null) {
+            this.SummarizeConfig = new SeeSummarizeConfig(source.SummarizeConfig);
         }
         if (source.EventIdFilterConfig != null) {
             this.EventIdFilterConfig = new SeeEventIdFilterConfig(source.EventIdFilterConfig);
         }
-        if (source.SummarizeConfig != null) {
-            this.SummarizeConfig = new SeeSummarizeConfig(source.SummarizeConfig);
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
         }
     }
 
@@ -282,15 +282,15 @@ public class ModifyTWeSeeSubscriptionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
-        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
-        this.setParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
         this.setParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
-        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
-        this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
+        this.setParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
         this.setParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
+        this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

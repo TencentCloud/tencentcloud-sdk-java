@@ -59,6 +59,13 @@ public class InvokeTWeSeeComprehensionRequest extends AbstractModel {
     private Long WaitResultTimeout;
 
     /**
+    * <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+    */
+    @SerializedName("WaitResultFields")
+    @Expose
+    private String [] WaitResultFields;
+
+    /**
     * <p>回调目标 ID</p>
     */
     @SerializedName("CallbackId")
@@ -146,6 +153,22 @@ public class InvokeTWeSeeComprehensionRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p> 
+     * @return WaitResultFields <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+     */
+    public String [] getWaitResultFields() {
+        return this.WaitResultFields;
+    }
+
+    /**
+     * Set <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+     * @param WaitResultFields <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+     */
+    public void setWaitResultFields(String [] WaitResultFields) {
+        this.WaitResultFields = WaitResultFields;
+    }
+
+    /**
      * Get <p>回调目标 ID</p> 
      * @return CallbackId <p>回调目标 ID</p>
      */
@@ -184,6 +207,12 @@ public class InvokeTWeSeeComprehensionRequest extends AbstractModel {
         if (source.WaitResultTimeout != null) {
             this.WaitResultTimeout = new Long(source.WaitResultTimeout);
         }
+        if (source.WaitResultFields != null) {
+            this.WaitResultFields = new String[source.WaitResultFields.length];
+            for (int i = 0; i < source.WaitResultFields.length; i++) {
+                this.WaitResultFields[i] = new String(source.WaitResultFields[i]);
+            }
+        }
         if (source.CallbackId != null) {
             this.CallbackId = new String(source.CallbackId);
         }
@@ -199,6 +228,7 @@ public class InvokeTWeSeeComprehensionRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamObj(map, prefix + "ComprehensionConfig.", this.ComprehensionConfig);
         this.setParamSimple(map, prefix + "WaitResultTimeout", this.WaitResultTimeout);
+        this.setParamArraySimple(map, prefix + "WaitResultFields.", this.WaitResultFields);
         this.setParamSimple(map, prefix + "CallbackId", this.CallbackId);
 
     }

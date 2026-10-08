@@ -31,7 +31,7 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
     private String ResourceId;
 
     /**
-    * <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+    * <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
     */
     @SerializedName("ServiceTier")
     @Expose
@@ -87,32 +87,18 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
     private SeeSummarizeConfig SummarizeConfig;
 
     /**
-    * <p>当前周期基础能力总额度</p>
+    * <p>当前周期内的额度总量</p>
     */
-    @SerializedName("QuotaBasic")
+    @SerializedName("CreditsQuota")
     @Expose
-    private Long QuotaBasic;
+    private Float CreditsQuota;
 
     /**
-    * <p>当前周期基础能力已用额度</p>
+    * <p>当前周期内的已使用额度</p>
     */
-    @SerializedName("QuotaUsedBasic")
+    @SerializedName("CreditsUsed")
     @Expose
-    private Long QuotaUsedBasic;
-
-    /**
-    * <p>当前周期高级能力总额度</p>
-    */
-    @SerializedName("QuotaAdvanced")
-    @Expose
-    private Long QuotaAdvanced;
-
-    /**
-    * <p>当前周期高级能力已用额度</p>
-    */
-    @SerializedName("QuotaUsedAdvanced")
-    @Expose
-    private Long QuotaUsedAdvanced;
+    private Float CreditsUsed;
 
     /**
     * <p>额度刷新时间</p>
@@ -120,6 +106,34 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
     @SerializedName("QuotaRefreshTime")
     @Expose
     private Long QuotaRefreshTime;
+
+    /**
+    * <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+    */
+    @SerializedName("QuotaBasic")
+    @Expose
+    private Long QuotaBasic;
+
+    /**
+    * <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+    */
+    @SerializedName("QuotaUsedBasic")
+    @Expose
+    private Long QuotaUsedBasic;
+
+    /**
+    * <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+    */
+    @SerializedName("QuotaAdvanced")
+    @Expose
+    private Long QuotaAdvanced;
+
+    /**
+    * <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+    */
+    @SerializedName("QuotaUsedAdvanced")
+    @Expose
+    private Long QuotaUsedAdvanced;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -145,16 +159,16 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul> 
-     * @return ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * Get <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul> 
+     * @return ServiceTier <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      */
     public String getServiceTier() {
         return this.ServiceTier;
     }
 
     /**
-     * Set <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
-     * @param ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * Set <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
+     * @param ServiceTier <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      */
     public void setServiceTier(String ServiceTier) {
         this.ServiceTier = ServiceTier;
@@ -273,67 +287,35 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>当前周期基础能力总额度</p> 
-     * @return QuotaBasic <p>当前周期基础能力总额度</p>
+     * Get <p>当前周期内的额度总量</p> 
+     * @return CreditsQuota <p>当前周期内的额度总量</p>
      */
-    public Long getQuotaBasic() {
-        return this.QuotaBasic;
+    public Float getCreditsQuota() {
+        return this.CreditsQuota;
     }
 
     /**
-     * Set <p>当前周期基础能力总额度</p>
-     * @param QuotaBasic <p>当前周期基础能力总额度</p>
+     * Set <p>当前周期内的额度总量</p>
+     * @param CreditsQuota <p>当前周期内的额度总量</p>
      */
-    public void setQuotaBasic(Long QuotaBasic) {
-        this.QuotaBasic = QuotaBasic;
+    public void setCreditsQuota(Float CreditsQuota) {
+        this.CreditsQuota = CreditsQuota;
     }
 
     /**
-     * Get <p>当前周期基础能力已用额度</p> 
-     * @return QuotaUsedBasic <p>当前周期基础能力已用额度</p>
+     * Get <p>当前周期内的已使用额度</p> 
+     * @return CreditsUsed <p>当前周期内的已使用额度</p>
      */
-    public Long getQuotaUsedBasic() {
-        return this.QuotaUsedBasic;
+    public Float getCreditsUsed() {
+        return this.CreditsUsed;
     }
 
     /**
-     * Set <p>当前周期基础能力已用额度</p>
-     * @param QuotaUsedBasic <p>当前周期基础能力已用额度</p>
+     * Set <p>当前周期内的已使用额度</p>
+     * @param CreditsUsed <p>当前周期内的已使用额度</p>
      */
-    public void setQuotaUsedBasic(Long QuotaUsedBasic) {
-        this.QuotaUsedBasic = QuotaUsedBasic;
-    }
-
-    /**
-     * Get <p>当前周期高级能力总额度</p> 
-     * @return QuotaAdvanced <p>当前周期高级能力总额度</p>
-     */
-    public Long getQuotaAdvanced() {
-        return this.QuotaAdvanced;
-    }
-
-    /**
-     * Set <p>当前周期高级能力总额度</p>
-     * @param QuotaAdvanced <p>当前周期高级能力总额度</p>
-     */
-    public void setQuotaAdvanced(Long QuotaAdvanced) {
-        this.QuotaAdvanced = QuotaAdvanced;
-    }
-
-    /**
-     * Get <p>当前周期高级能力已用额度</p> 
-     * @return QuotaUsedAdvanced <p>当前周期高级能力已用额度</p>
-     */
-    public Long getQuotaUsedAdvanced() {
-        return this.QuotaUsedAdvanced;
-    }
-
-    /**
-     * Set <p>当前周期高级能力已用额度</p>
-     * @param QuotaUsedAdvanced <p>当前周期高级能力已用额度</p>
-     */
-    public void setQuotaUsedAdvanced(Long QuotaUsedAdvanced) {
-        this.QuotaUsedAdvanced = QuotaUsedAdvanced;
+    public void setCreditsUsed(Float CreditsUsed) {
+        this.CreditsUsed = CreditsUsed;
     }
 
     /**
@@ -350,6 +332,70 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
      */
     public void setQuotaRefreshTime(Long QuotaRefreshTime) {
         this.QuotaRefreshTime = QuotaRefreshTime;
+    }
+
+    /**
+     * Get <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p> 
+     * @return QuotaBasic <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+     */
+    public Long getQuotaBasic() {
+        return this.QuotaBasic;
+    }
+
+    /**
+     * Set <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+     * @param QuotaBasic <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+     */
+    public void setQuotaBasic(Long QuotaBasic) {
+        this.QuotaBasic = QuotaBasic;
+    }
+
+    /**
+     * Get <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p> 
+     * @return QuotaUsedBasic <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+     */
+    public Long getQuotaUsedBasic() {
+        return this.QuotaUsedBasic;
+    }
+
+    /**
+     * Set <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+     * @param QuotaUsedBasic <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+     */
+    public void setQuotaUsedBasic(Long QuotaUsedBasic) {
+        this.QuotaUsedBasic = QuotaUsedBasic;
+    }
+
+    /**
+     * Get <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p> 
+     * @return QuotaAdvanced <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+     */
+    public Long getQuotaAdvanced() {
+        return this.QuotaAdvanced;
+    }
+
+    /**
+     * Set <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+     * @param QuotaAdvanced <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+     */
+    public void setQuotaAdvanced(Long QuotaAdvanced) {
+        this.QuotaAdvanced = QuotaAdvanced;
+    }
+
+    /**
+     * Get <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p> 
+     * @return QuotaUsedAdvanced <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+     */
+    public Long getQuotaUsedAdvanced() {
+        return this.QuotaUsedAdvanced;
+    }
+
+    /**
+     * Set <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+     * @param QuotaUsedAdvanced <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+     */
+    public void setQuotaUsedAdvanced(Long QuotaUsedAdvanced) {
+        this.QuotaUsedAdvanced = QuotaUsedAdvanced;
     }
 
     /**
@@ -403,6 +449,15 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
         if (source.SummarizeConfig != null) {
             this.SummarizeConfig = new SeeSummarizeConfig(source.SummarizeConfig);
         }
+        if (source.CreditsQuota != null) {
+            this.CreditsQuota = new Float(source.CreditsQuota);
+        }
+        if (source.CreditsUsed != null) {
+            this.CreditsUsed = new Float(source.CreditsUsed);
+        }
+        if (source.QuotaRefreshTime != null) {
+            this.QuotaRefreshTime = new Long(source.QuotaRefreshTime);
+        }
         if (source.QuotaBasic != null) {
             this.QuotaBasic = new Long(source.QuotaBasic);
         }
@@ -414,9 +469,6 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
         }
         if (source.QuotaUsedAdvanced != null) {
             this.QuotaUsedAdvanced = new Long(source.QuotaUsedAdvanced);
-        }
-        if (source.QuotaRefreshTime != null) {
-            this.QuotaRefreshTime = new Long(source.QuotaRefreshTime);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -437,11 +489,13 @@ public class DescribeTWeSeeSubscriptionResponse extends AbstractModel {
         this.setParamObj(map, prefix + "CompHighlightConfig.", this.CompHighlightConfig);
         this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
         this.setParamObj(map, prefix + "SummarizeConfig.", this.SummarizeConfig);
+        this.setParamSimple(map, prefix + "CreditsQuota", this.CreditsQuota);
+        this.setParamSimple(map, prefix + "CreditsUsed", this.CreditsUsed);
+        this.setParamSimple(map, prefix + "QuotaRefreshTime", this.QuotaRefreshTime);
         this.setParamSimple(map, prefix + "QuotaBasic", this.QuotaBasic);
         this.setParamSimple(map, prefix + "QuotaUsedBasic", this.QuotaUsedBasic);
         this.setParamSimple(map, prefix + "QuotaAdvanced", this.QuotaAdvanced);
         this.setParamSimple(map, prefix + "QuotaUsedAdvanced", this.QuotaUsedAdvanced);
-        this.setParamSimple(map, prefix + "QuotaRefreshTime", this.QuotaRefreshTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -59,6 +59,76 @@ public class QueryHunyuan3DTaskResponse extends AbstractModel {
     private File3D [] ResultFile3Ds;
 
     /**
+    * <p>任务ID</p>
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+    * <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
+    * <p>输入的Prompt</p>
+    */
+    @SerializedName("Prompt")
+    @Expose
+    private String Prompt;
+
+    /**
+    * <p>图生3D场景下输入的图片URL</p>
+    */
+    @SerializedName("RefImage")
+    @Expose
+    private String RefImage;
+
+    /**
+    * <p>多图生3D场景下输入的图片信息</p>
+    */
+    @SerializedName("MultiViewImages")
+    @Expose
+    private ViewImage [] MultiViewImages;
+
+    /**
+    * <p>任务创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>任务更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * <p>提交任务的目标面数</p>
+    */
+    @SerializedName("FaceCount")
+    @Expose
+    private Long FaceCount;
+
+    /**
+    * <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+    */
+    @SerializedName("GenerateType")
+    @Expose
+    private String GenerateType;
+
+    /**
+    * <p>任务在队列中的位置，数值越小越靠前；</p>
+    */
+    @SerializedName("QueuePosition")
+    @Expose
+    private Long QueuePosition;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +216,166 @@ public class QueryHunyuan3DTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul> 
+     * @return TaskType <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+     * @param TaskType <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get <p>输入的Prompt</p> 
+     * @return Prompt <p>输入的Prompt</p>
+     */
+    public String getPrompt() {
+        return this.Prompt;
+    }
+
+    /**
+     * Set <p>输入的Prompt</p>
+     * @param Prompt <p>输入的Prompt</p>
+     */
+    public void setPrompt(String Prompt) {
+        this.Prompt = Prompt;
+    }
+
+    /**
+     * Get <p>图生3D场景下输入的图片URL</p> 
+     * @return RefImage <p>图生3D场景下输入的图片URL</p>
+     */
+    public String getRefImage() {
+        return this.RefImage;
+    }
+
+    /**
+     * Set <p>图生3D场景下输入的图片URL</p>
+     * @param RefImage <p>图生3D场景下输入的图片URL</p>
+     */
+    public void setRefImage(String RefImage) {
+        this.RefImage = RefImage;
+    }
+
+    /**
+     * Get <p>多图生3D场景下输入的图片信息</p> 
+     * @return MultiViewImages <p>多图生3D场景下输入的图片信息</p>
+     */
+    public ViewImage [] getMultiViewImages() {
+        return this.MultiViewImages;
+    }
+
+    /**
+     * Set <p>多图生3D场景下输入的图片信息</p>
+     * @param MultiViewImages <p>多图生3D场景下输入的图片信息</p>
+     */
+    public void setMultiViewImages(ViewImage [] MultiViewImages) {
+        this.MultiViewImages = MultiViewImages;
+    }
+
+    /**
+     * Get <p>任务创建时间</p> 
+     * @return CreateTime <p>任务创建时间</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>任务创建时间</p>
+     * @param CreateTime <p>任务创建时间</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>任务更新时间</p> 
+     * @return UpdateTime <p>任务更新时间</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>任务更新时间</p>
+     * @param UpdateTime <p>任务更新时间</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>提交任务的目标面数</p> 
+     * @return FaceCount <p>提交任务的目标面数</p>
+     */
+    public Long getFaceCount() {
+        return this.FaceCount;
+    }
+
+    /**
+     * Set <p>提交任务的目标面数</p>
+     * @param FaceCount <p>提交任务的目标面数</p>
+     */
+    public void setFaceCount(Long FaceCount) {
+        this.FaceCount = FaceCount;
+    }
+
+    /**
+     * Get <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p> 
+     * @return GenerateType <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+     */
+    public String getGenerateType() {
+        return this.GenerateType;
+    }
+
+    /**
+     * Set <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+     * @param GenerateType <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+     */
+    public void setGenerateType(String GenerateType) {
+        this.GenerateType = GenerateType;
+    }
+
+    /**
+     * Get <p>任务在队列中的位置，数值越小越靠前；</p> 
+     * @return QueuePosition <p>任务在队列中的位置，数值越小越靠前；</p>
+     */
+    public Long getQueuePosition() {
+        return this.QueuePosition;
+    }
+
+    /**
+     * Set <p>任务在队列中的位置，数值越小越靠前；</p>
+     * @param QueuePosition <p>任务在队列中的位置，数值越小越靠前；</p>
+     */
+    public void setQueuePosition(Long QueuePosition) {
+        this.QueuePosition = QueuePosition;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -187,6 +417,39 @@ public class QueryHunyuan3DTaskResponse extends AbstractModel {
                 this.ResultFile3Ds[i] = new File3D(source.ResultFile3Ds[i]);
             }
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
+        if (source.Prompt != null) {
+            this.Prompt = new String(source.Prompt);
+        }
+        if (source.RefImage != null) {
+            this.RefImage = new String(source.RefImage);
+        }
+        if (source.MultiViewImages != null) {
+            this.MultiViewImages = new ViewImage[source.MultiViewImages.length];
+            for (int i = 0; i < source.MultiViewImages.length; i++) {
+                this.MultiViewImages[i] = new ViewImage(source.MultiViewImages[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.FaceCount != null) {
+            this.FaceCount = new Long(source.FaceCount);
+        }
+        if (source.GenerateType != null) {
+            this.GenerateType = new String(source.GenerateType);
+        }
+        if (source.QueuePosition != null) {
+            this.QueuePosition = new Long(source.QueuePosition);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +465,16 @@ public class QueryHunyuan3DTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamArrayObj(map, prefix + "ResultFile3Ds.", this.ResultFile3Ds);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "RefImage", this.RefImage);
+        this.setParamArrayObj(map, prefix + "MultiViewImages.", this.MultiViewImages);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "FaceCount", this.FaceCount);
+        this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
+        this.setParamSimple(map, prefix + "QueuePosition", this.QueuePosition);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -45,18 +45,25 @@ public class InvokeTWeSeeComprehensionResponse extends AbstractModel {
     private SeeComprehensionResult ComprehensionResult;
 
     /**
-    * <p>完成该任务所消耗的基础能力额度</p>
+    * <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
     */
     @SerializedName("CostBasic")
     @Expose
     private Long CostBasic;
 
     /**
-    * <p>完成该任务所消耗的高级能力额度</p>
+    * <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
     */
     @SerializedName("CostAdvanced")
     @Expose
     private Long CostAdvanced;
+
+    /**
+    * <p>完成该任务所消耗的视觉理解预付费额度</p>
+    */
+    @SerializedName("CostCredits")
+    @Expose
+    private Float CostCredits;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -114,35 +121,51 @@ public class InvokeTWeSeeComprehensionResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>完成该任务所消耗的基础能力额度</p> 
-     * @return CostBasic <p>完成该任务所消耗的基础能力额度</p>
+     * Get <p>完成该任务所产生的视觉理解基础能力后付费用量</p> 
+     * @return CostBasic <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
      */
     public Long getCostBasic() {
         return this.CostBasic;
     }
 
     /**
-     * Set <p>完成该任务所消耗的基础能力额度</p>
-     * @param CostBasic <p>完成该任务所消耗的基础能力额度</p>
+     * Set <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+     * @param CostBasic <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
      */
     public void setCostBasic(Long CostBasic) {
         this.CostBasic = CostBasic;
     }
 
     /**
-     * Get <p>完成该任务所消耗的高级能力额度</p> 
-     * @return CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * Get <p>完成该任务所产生的视觉理解高级能力后付费用量</p> 
+     * @return CostAdvanced <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
      */
     public Long getCostAdvanced() {
         return this.CostAdvanced;
     }
 
     /**
-     * Set <p>完成该任务所消耗的高级能力额度</p>
-     * @param CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * Set <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+     * @param CostAdvanced <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
      */
     public void setCostAdvanced(Long CostAdvanced) {
         this.CostAdvanced = CostAdvanced;
+    }
+
+    /**
+     * Get <p>完成该任务所消耗的视觉理解预付费额度</p> 
+     * @return CostCredits <p>完成该任务所消耗的视觉理解预付费额度</p>
+     */
+    public Float getCostCredits() {
+        return this.CostCredits;
+    }
+
+    /**
+     * Set <p>完成该任务所消耗的视觉理解预付费额度</p>
+     * @param CostCredits <p>完成该任务所消耗的视觉理解预付费额度</p>
+     */
+    public void setCostCredits(Float CostCredits) {
+        this.CostCredits = CostCredits;
     }
 
     /**
@@ -184,6 +207,9 @@ public class InvokeTWeSeeComprehensionResponse extends AbstractModel {
         if (source.CostAdvanced != null) {
             this.CostAdvanced = new Long(source.CostAdvanced);
         }
+        if (source.CostCredits != null) {
+            this.CostCredits = new Float(source.CostCredits);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +225,7 @@ public class InvokeTWeSeeComprehensionResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ComprehensionResult.", this.ComprehensionResult);
         this.setParamSimple(map, prefix + "CostBasic", this.CostBasic);
         this.setParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
+        this.setParamSimple(map, prefix + "CostCredits", this.CostCredits);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

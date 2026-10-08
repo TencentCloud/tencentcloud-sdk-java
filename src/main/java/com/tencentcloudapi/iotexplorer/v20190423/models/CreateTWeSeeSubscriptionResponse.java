@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class CreateTWeSeeSubscriptionResponse extends AbstractModel {
 
     /**
-    * 订单 ID
+    * <p>订单 ID</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 订单状态
+    * <p>订单状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 资源 ID
+    * <p>资源 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 原价
+    * <p>原价</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private String OriginalPrice;
 
     /**
-    * 折后价
+    * <p>折后价</p>
     */
     @SerializedName("DiscountPrice")
     @Expose
     private String DiscountPrice;
 
     /**
-    * 币种
+    * <p>币种</p>
     */
     @SerializedName("Currency")
     @Expose
@@ -73,96 +73,96 @@ public class CreateTWeSeeSubscriptionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单 ID 
-     * @return OrderId 订单 ID
+     * Get <p>订单 ID</p> 
+     * @return OrderId <p>订单 ID</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单 ID
-     * @param OrderId 订单 ID
+     * Set <p>订单 ID</p>
+     * @param OrderId <p>订单 ID</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 订单状态 
-     * @return Status 订单状态
+     * Get <p>订单状态</p> 
+     * @return Status <p>订单状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订单状态
-     * @param Status 订单状态
+     * Set <p>订单状态</p>
+     * @param Status <p>订单状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 资源 ID 
-     * @return ResourceId 资源 ID
+     * Get <p>资源 ID</p> 
+     * @return ResourceId <p>资源 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源 ID
-     * @param ResourceId 资源 ID
+     * Set <p>资源 ID</p>
+     * @param ResourceId <p>资源 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 原价 
-     * @return OriginalPrice 原价
+     * Get <p>原价</p> 
+     * @return OriginalPrice <p>原价</p>
      */
     public String getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 原价
-     * @param OriginalPrice 原价
+     * Set <p>原价</p>
+     * @param OriginalPrice <p>原价</p>
      */
     public void setOriginalPrice(String OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 折后价 
-     * @return DiscountPrice 折后价
+     * Get <p>折后价</p> 
+     * @return DiscountPrice <p>折后价</p>
      */
     public String getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 折后价
-     * @param DiscountPrice 折后价
+     * Set <p>折后价</p>
+     * @param DiscountPrice <p>折后价</p>
      */
     public void setDiscountPrice(String DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 币种 
-     * @return Currency 币种
+     * Get <p>币种</p> 
+     * @return Currency <p>币种</p>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 币种
-     * @param Currency 币种
+     * Set <p>币种</p>
+     * @param Currency <p>币种</p>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

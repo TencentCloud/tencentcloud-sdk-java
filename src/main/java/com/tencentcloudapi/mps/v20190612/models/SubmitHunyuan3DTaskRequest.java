@@ -101,6 +101,13 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
     private String Style;
 
     /**
+    * <p>客户自己申请创建的COS存储桶</p>
+    */
+    @SerializedName("StoreCosParam")
+    @Expose
+    private AigcStoreCosParam StoreCosParam;
+
+    /**
      * Get <p>文生 3D 的提示词</p><p>入参限制：最长 1024 utf-8 字符</p> 
      * @return Prompt <p>文生 3D 的提示词</p><p>入参限制：最长 1024 utf-8 字符</p>
      */
@@ -276,6 +283,22 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
         this.Style = Style;
     }
 
+    /**
+     * Get <p>客户自己申请创建的COS存储桶</p> 
+     * @return StoreCosParam <p>客户自己申请创建的COS存储桶</p>
+     */
+    public AigcStoreCosParam getStoreCosParam() {
+        return this.StoreCosParam;
+    }
+
+    /**
+     * Set <p>客户自己申请创建的COS存储桶</p>
+     * @param StoreCosParam <p>客户自己申请创建的COS存储桶</p>
+     */
+    public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
+        this.StoreCosParam = StoreCosParam;
+    }
+
     public SubmitHunyuan3DTaskRequest() {
     }
 
@@ -320,6 +343,9 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
+        if (source.StoreCosParam != null) {
+            this.StoreCosParam = new AigcStoreCosParam(source.StoreCosParam);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "Style", this.Style);
+        this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
 
     }
 }

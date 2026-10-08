@@ -101,18 +101,25 @@ public class SeeTaskInfo extends AbstractModel {
     private SeeSummarizeResult SummarizeResult;
 
     /**
-    * <p>完成该任务所消耗的基础能力额度</p>
+    * <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
     */
     @SerializedName("CostBasic")
     @Expose
     private Long CostBasic;
 
     /**
-    * <p>完成该任务所消耗的高级能力额度</p>
+    * <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
     */
     @SerializedName("CostAdvanced")
     @Expose
     private Long CostAdvanced;
+
+    /**
+    * <p>完成该任务所消耗的视觉理解预付费额度</p>
+    */
+    @SerializedName("CostCredits")
+    @Expose
+    private Float CostCredits;
 
     /**
     * <p>输出文件名列表</p>
@@ -333,35 +340,51 @@ public class SeeTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>完成该任务所消耗的基础能力额度</p> 
-     * @return CostBasic <p>完成该任务所消耗的基础能力额度</p>
+     * Get <p>完成该任务所产生的视觉理解基础能力后付费用量</p> 
+     * @return CostBasic <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
      */
     public Long getCostBasic() {
         return this.CostBasic;
     }
 
     /**
-     * Set <p>完成该任务所消耗的基础能力额度</p>
-     * @param CostBasic <p>完成该任务所消耗的基础能力额度</p>
+     * Set <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+     * @param CostBasic <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
      */
     public void setCostBasic(Long CostBasic) {
         this.CostBasic = CostBasic;
     }
 
     /**
-     * Get <p>完成该任务所消耗的高级能力额度</p> 
-     * @return CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * Get <p>完成该任务所产生的视觉理解高级能力后付费用量</p> 
+     * @return CostAdvanced <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
      */
     public Long getCostAdvanced() {
         return this.CostAdvanced;
     }
 
     /**
-     * Set <p>完成该任务所消耗的高级能力额度</p>
-     * @param CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * Set <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+     * @param CostAdvanced <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
      */
     public void setCostAdvanced(Long CostAdvanced) {
         this.CostAdvanced = CostAdvanced;
+    }
+
+    /**
+     * Get <p>完成该任务所消耗的视觉理解预付费额度</p> 
+     * @return CostCredits <p>完成该任务所消耗的视觉理解预付费额度</p>
+     */
+    public Float getCostCredits() {
+        return this.CostCredits;
+    }
+
+    /**
+     * Set <p>完成该任务所消耗的视觉理解预付费额度</p>
+     * @param CostCredits <p>完成该任务所消耗的视觉理解预付费额度</p>
+     */
+    public void setCostCredits(Float CostCredits) {
+        this.CostCredits = CostCredits;
     }
 
     /**
@@ -507,6 +530,9 @@ public class SeeTaskInfo extends AbstractModel {
         if (source.CostAdvanced != null) {
             this.CostAdvanced = new Long(source.CostAdvanced);
         }
+        if (source.CostCredits != null) {
+            this.CostCredits = new Float(source.CostCredits);
+        }
         if (source.Files != null) {
             this.Files = new String[source.Files.length];
             for (int i = 0; i < source.Files.length; i++) {
@@ -551,6 +577,7 @@ public class SeeTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "SummarizeResult.", this.SummarizeResult);
         this.setParamSimple(map, prefix + "CostBasic", this.CostBasic);
         this.setParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
+        this.setParamSimple(map, prefix + "CostCredits", this.CostCredits);
         this.setParamArraySimple(map, prefix + "Files.", this.Files);
         this.setParamArrayObj(map, prefix + "FilesInfo.", this.FilesInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

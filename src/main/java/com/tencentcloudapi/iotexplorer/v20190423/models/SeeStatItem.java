@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class SeeStatItem extends AbstractModel {
 
     /**
-    * 时间
+    * <p>时间</p>
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 任务数量
+    * <p>任务数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 基础能力用量
+    * <p>基础能力后付费用量</p>
     */
     @SerializedName("CostBasic")
     @Expose
     private Long CostBasic;
 
     /**
-    * 高级能力用量
+    * <p>高级能力后付费用量</p>
     */
     @SerializedName("CostAdvanced")
     @Expose
     private Long CostAdvanced;
 
     /**
-     * Get 时间 
-     * @return Time 时间
+    * <p>预付费额度用量</p>
+    */
+    @SerializedName("CostCredits")
+    @Expose
+    private Float CostCredits;
+
+    /**
+     * Get <p>时间</p> 
+     * @return Time <p>时间</p>
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间
-     * @param Time 时间
+     * Set <p>时间</p>
+     * @param Time <p>时间</p>
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 任务数量 
-     * @return Count 任务数量
+     * Get <p>任务数量</p> 
+     * @return Count <p>任务数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 任务数量
-     * @param Count 任务数量
+     * Set <p>任务数量</p>
+     * @param Count <p>任务数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 基础能力用量 
-     * @return CostBasic 基础能力用量
+     * Get <p>基础能力后付费用量</p> 
+     * @return CostBasic <p>基础能力后付费用量</p>
      */
     public Long getCostBasic() {
         return this.CostBasic;
     }
 
     /**
-     * Set 基础能力用量
-     * @param CostBasic 基础能力用量
+     * Set <p>基础能力后付费用量</p>
+     * @param CostBasic <p>基础能力后付费用量</p>
      */
     public void setCostBasic(Long CostBasic) {
         this.CostBasic = CostBasic;
     }
 
     /**
-     * Get 高级能力用量 
-     * @return CostAdvanced 高级能力用量
+     * Get <p>高级能力后付费用量</p> 
+     * @return CostAdvanced <p>高级能力后付费用量</p>
      */
     public Long getCostAdvanced() {
         return this.CostAdvanced;
     }
 
     /**
-     * Set 高级能力用量
-     * @param CostAdvanced 高级能力用量
+     * Set <p>高级能力后付费用量</p>
+     * @param CostAdvanced <p>高级能力后付费用量</p>
      */
     public void setCostAdvanced(Long CostAdvanced) {
         this.CostAdvanced = CostAdvanced;
+    }
+
+    /**
+     * Get <p>预付费额度用量</p> 
+     * @return CostCredits <p>预付费额度用量</p>
+     */
+    public Float getCostCredits() {
+        return this.CostCredits;
+    }
+
+    /**
+     * Set <p>预付费额度用量</p>
+     * @param CostCredits <p>预付费额度用量</p>
+     */
+    public void setCostCredits(Float CostCredits) {
+        this.CostCredits = CostCredits;
     }
 
     public SeeStatItem() {
@@ -135,6 +158,9 @@ public class SeeStatItem extends AbstractModel {
         if (source.CostAdvanced != null) {
             this.CostAdvanced = new Long(source.CostAdvanced);
         }
+        if (source.CostCredits != null) {
+            this.CostCredits = new Float(source.CostCredits);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class SeeStatItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "CostBasic", this.CostBasic);
         this.setParamSimple(map, prefix + "CostAdvanced", this.CostAdvanced);
+        this.setParamSimple(map, prefix + "CostCredits", this.CostCredits);
 
     }
 }

@@ -24,20 +24,6 @@ import java.util.HashMap;
 public class ListTWeSeeTasksRequest extends AbstractModel {
 
     /**
-    * <p>设备名称</p>
-    */
-    @SerializedName("DeviceName")
-    @Expose
-    private String DeviceName;
-
-    /**
-    * <p>分页拉取数量</p>
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
     * <p>产品 ID</p>
     */
     @SerializedName("ProductId")
@@ -45,11 +31,25 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     private String ProductId;
 
     /**
+    * <p>设备名称</p>
+    */
+    @SerializedName("DeviceName")
+    @Expose
+    private String DeviceName;
+
+    /**
     * <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul>
     */
     @SerializedName("ServiceCategory")
     @Expose
     private String ServiceCategory;
+
+    /**
+    * <p>分页拉取数量</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
     * <p>通道 ID</p>
@@ -108,38 +108,6 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     private Long Status;
 
     /**
-     * Get <p>设备名称</p> 
-     * @return DeviceName <p>设备名称</p>
-     */
-    public String getDeviceName() {
-        return this.DeviceName;
-    }
-
-    /**
-     * Set <p>设备名称</p>
-     * @param DeviceName <p>设备名称</p>
-     */
-    public void setDeviceName(String DeviceName) {
-        this.DeviceName = DeviceName;
-    }
-
-    /**
-     * Get <p>分页拉取数量</p> 
-     * @return Limit <p>分页拉取数量</p>
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set <p>分页拉取数量</p>
-     * @param Limit <p>分页拉取数量</p>
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
      * Get <p>产品 ID</p> 
      * @return ProductId <p>产品 ID</p>
      */
@@ -156,6 +124,22 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
+     */
+    public String getDeviceName() {
+        return this.DeviceName;
+    }
+
+    /**
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
+     */
+    public void setDeviceName(String DeviceName) {
+        this.DeviceName = DeviceName;
+    }
+
+    /**
      * Get <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul> 
      * @return ServiceCategory <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul>
      */
@@ -169,6 +153,22 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
+    }
+
+    /**
+     * Get <p>分页拉取数量</p> 
+     * @return Limit <p>分页拉取数量</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>分页拉取数量</p>
+     * @param Limit <p>分页拉取数量</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     /**
@@ -307,17 +307,17 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListTWeSeeTasksRequest(ListTWeSeeTasksRequest source) {
-        if (source.DeviceName != null) {
-            this.DeviceName = new String(source.DeviceName);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
         if (source.ServiceCategory != null) {
             this.ServiceCategory = new String(source.ServiceCategory);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
@@ -356,10 +356,10 @@ public class ListTWeSeeTasksRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "FileURLExpireTime", this.FileURLExpireTime);
