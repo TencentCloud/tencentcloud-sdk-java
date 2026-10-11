@@ -21,9 +21,16 @@ public class DefaultCredentialsProvider implements CredentialsProvider {
         } catch (TencentCloudSDKException e) {
 
         }
-        cred = new CvmRoleCredential();
-        if (cred.getSecretId() != null && cred.getSecretKey() != null && cred.getToken() != null) {
-            return cred;
+        try {
+            cred = new CvmRoleCredential();
+            if (cred.getSecretId() != null && cred.getSecretKey() != null && cred.getToken() != null) {
+                return cred;
+            }
+        } catch (RuntimeException e) {
+            // Credential getters wrap refresh failures in RuntimeException.
+            if (!(e.getCause() instanceof TencentCloudSDKException)) {
+                throw e;
+            }
         }
 
         cred = new OIDCRoleArnProvider().getCredentials();
