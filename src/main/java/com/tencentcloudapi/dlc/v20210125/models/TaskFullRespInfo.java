@@ -556,6 +556,13 @@ public class TaskFullRespInfo extends AbstractModel {
     private String ResourceGroupType;
 
     /**
+    * <p>任务标签</p><p>参数格式：任意字符串</p>
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
      * Get <p>任务所属Database的名称。</p> 
      * @return DatabaseName <p>任务所属Database的名称。</p>
      */
@@ -1819,6 +1826,22 @@ public class TaskFullRespInfo extends AbstractModel {
         this.ResourceGroupType = ResourceGroupType;
     }
 
+    /**
+     * Get <p>任务标签</p><p>参数格式：任意字符串</p> 
+     * @return Tag <p>任务标签</p><p>参数格式：任意字符串</p>
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set <p>任务标签</p><p>参数格式：任意字符串</p>
+     * @param Tag <p>任务标签</p><p>参数格式：任意字符串</p>
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public TaskFullRespInfo() {
     }
 
@@ -2043,6 +2066,9 @@ public class TaskFullRespInfo extends AbstractModel {
         if (source.ResourceGroupType != null) {
             this.ResourceGroupType = new String(source.ResourceGroupType);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -2122,6 +2148,7 @@ public class TaskFullRespInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ActiveCore", this.ActiveCore);
         this.setParamSimple(map, prefix + "QueueTime", this.QueueTime);
         this.setParamSimple(map, prefix + "ResourceGroupType", this.ResourceGroupType);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

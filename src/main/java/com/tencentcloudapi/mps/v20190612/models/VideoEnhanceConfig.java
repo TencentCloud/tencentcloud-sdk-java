@@ -128,6 +128,14 @@ public class VideoEnhanceConfig extends AbstractModel {
     private AiRestorationConfig AiRestoration;
 
     /**
+    * <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiffusionEnhanceV2")
+    @Expose
+    private DiffusionEnhanceV2Config DiffusionEnhanceV2;
+
+    /**
      * Get <p>插帧帧率配置（旧）。新用户建议使用FrameRateWithDen配置插帧帧率，支持分数，且效果更好。注意，FrameRate 与FrameRateWithDen 只能二选一，同时配置可能导致任务失败。源帧率大于等于目标帧率时能力不会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FrameRate <p>插帧帧率配置（旧）。新用户建议使用FrameRateWithDen配置插帧帧率，支持分数，且效果更好。注意，FrameRate 与FrameRateWithDen 只能二选一，同时配置可能导致任务失败。源帧率大于等于目标帧率时能力不会生效。</p>
@@ -387,6 +395,26 @@ public class VideoEnhanceConfig extends AbstractModel {
         this.AiRestoration = AiRestoration;
     }
 
+    /**
+     * Get <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiffusionEnhanceV2 <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiffusionEnhanceV2Config getDiffusionEnhanceV2() {
+        return this.DiffusionEnhanceV2;
+    }
+
+    /**
+     * Set <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiffusionEnhanceV2 <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiffusionEnhanceV2(DiffusionEnhanceV2Config DiffusionEnhanceV2) {
+        this.DiffusionEnhanceV2 = DiffusionEnhanceV2;
+    }
+
     public VideoEnhanceConfig() {
     }
 
@@ -434,6 +462,9 @@ public class VideoEnhanceConfig extends AbstractModel {
         if (source.AiRestoration != null) {
             this.AiRestoration = new AiRestorationConfig(source.AiRestoration);
         }
+        if (source.DiffusionEnhanceV2 != null) {
+            this.DiffusionEnhanceV2 = new DiffusionEnhanceV2Config(source.DiffusionEnhanceV2);
+        }
     }
 
 
@@ -454,6 +485,7 @@ public class VideoEnhanceConfig extends AbstractModel {
         this.setParamObj(map, prefix + "DiffusionEnhance.", this.DiffusionEnhance);
         this.setParamObj(map, prefix + "FrameRateWithDen.", this.FrameRateWithDen);
         this.setParamObj(map, prefix + "AiRestoration.", this.AiRestoration);
+        this.setParamObj(map, prefix + "DiffusionEnhanceV2.", this.DiffusionEnhanceV2);
 
     }
 }

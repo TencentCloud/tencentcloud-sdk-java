@@ -73,7 +73,14 @@ public class DescribeJobResultResponse extends AbstractModel {
     private ResultRow [] Rows;
 
     /**
-    * <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+    * <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+    */
+    @SerializedName("Download")
+    @Expose
+    private DownloadInfo Download;
+
+    /**
+    * <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
     */
     @SerializedName("Truncated")
     @Expose
@@ -199,16 +206,32 @@ public class DescribeJobResultResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p> 
-     * @return Truncated <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+     * Get <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p> 
+     * @return Download <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+     */
+    public DownloadInfo getDownload() {
+        return this.Download;
+    }
+
+    /**
+     * Set <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+     * @param Download <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+     */
+    public void setDownload(DownloadInfo Download) {
+        this.Download = Download;
+    }
+
+    /**
+     * Get <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p> 
+     * @return Truncated <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
      */
     public Boolean getTruncated() {
         return this.Truncated;
     }
 
     /**
-     * Set <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
-     * @param Truncated <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+     * Set <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
+     * @param Truncated <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
      */
     public void setTruncated(Boolean Truncated) {
         this.Truncated = Truncated;
@@ -265,6 +288,9 @@ public class DescribeJobResultResponse extends AbstractModel {
                 this.Rows[i] = new ResultRow(source.Rows[i]);
             }
         }
+        if (source.Download != null) {
+            this.Download = new DownloadInfo(source.Download);
+        }
         if (source.Truncated != null) {
             this.Truncated = new Boolean(source.Truncated);
         }
@@ -285,6 +311,7 @@ public class DescribeJobResultResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
         this.setParamSimple(map, prefix + "TotalRows", this.TotalRows);
         this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
+        this.setParamObj(map, prefix + "Download.", this.Download);
         this.setParamSimple(map, prefix + "Truncated", this.Truncated);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -60,7 +60,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Source <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getSource() {
         return this.Source;
     }
@@ -70,7 +72,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Source <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSource(String Source) {
         this.Source = Source;
     }
@@ -80,7 +84,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DisplayPath <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getDisplayPath() {
         return this.DisplayPath;
     }
@@ -90,7 +96,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DisplayPath <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDisplayPath(String DisplayPath) {
         this.DisplayPath = DisplayPath;
     }
@@ -100,7 +108,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NotebookPath <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getNotebookPath() {
         return this.NotebookPath;
     }
@@ -110,7 +120,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NotebookPath <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setNotebookPath(String NotebookPath) {
         this.NotebookPath = NotebookPath;
     }
@@ -120,7 +132,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NotebookAbsolutePath <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getNotebookAbsolutePath() {
         return this.NotebookAbsolutePath;
     }
@@ -130,7 +144,9 @@ public class TaskTypeNotebookExt extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NotebookAbsolutePath <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setNotebookAbsolutePath(String NotebookAbsolutePath) {
         this.NotebookAbsolutePath = NotebookAbsolutePath;
     }

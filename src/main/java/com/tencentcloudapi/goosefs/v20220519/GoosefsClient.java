@@ -116,6 +116,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *取消正在执行的扫描任务，正在扫描的任务取消后没有结果
+     * @param req CancelPolicyRuleExecuteRecordRequest
+     * @return CancelPolicyRuleExecuteRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelPolicyRuleExecuteRecordResponse CancelPolicyRuleExecuteRecord(CancelPolicyRuleExecuteRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelPolicyRuleExecuteRecord", CancelPolicyRuleExecuteRecordResponse.class);
+    }
+
+    /**
      *创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
      * @param req CreateDataRepositoryTaskRequest
      * @return CreateDataRepositoryTaskResponse
@@ -160,6 +171,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *创建数据洞察任务
+     * @param req CreatePolicyRuleRequest
+     * @return CreatePolicyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePolicyRuleResponse CreatePolicyRule(CreatePolicyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePolicyRule", CreatePolicyRuleResponse.class);
+    }
+
+    /**
      *为客户端节点删除跨vpc子网访问能力
      * @param req DeleteCrossVpcSubnetSupportForClientNodeRequest
      * @return DeleteCrossVpcSubnetSupportForClientNodeResponse
@@ -201,6 +223,17 @@ public class GoosefsClient extends AbstractClient{
     public DeleteFilesetResponse DeleteFileset(DeleteFilesetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteFileset", DeleteFilesetResponse.class);
+    }
+
+    /**
+     *删除扫描规则
+     * @param req DeletePolicyRuleRequest
+     * @return DeletePolicyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePolicyRuleResponse DeletePolicyRule(DeletePolicyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePolicyRule", DeletePolicyRuleResponse.class);
     }
 
     /**
@@ -314,6 +347,28 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *列出所有的扫描规则
+     * @param req DescribePolicyRuleRequest
+     * @return DescribePolicyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyRuleResponse DescribePolicyRule(DescribePolicyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyRule", DescribePolicyRuleResponse.class);
+    }
+
+    /**
+     *列出指定扫描规则的执行记录
+     * @param req DescribePolicyRuleExecuteRecordRequest
+     * @return DescribePolicyRuleExecuteRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyRuleExecuteRecordResponse DescribePolicyRuleExecuteRecord(DescribePolicyRuleExecuteRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyRuleExecuteRecord", DescribePolicyRuleExecuteRecordResponse.class);
+    }
+
+    /**
      *解绑文件系统与Bucket的映射
      * @param req DetachFileSystemBucketRequest
      * @return DetachFileSystemBucketResponse
@@ -322,6 +377,28 @@ public class GoosefsClient extends AbstractClient{
     public DetachFileSystemBucketResponse DetachFileSystemBucket(DetachFileSystemBucketRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DetachFileSystemBucket", DetachFileSystemBucketResponse.class);
+    }
+
+    /**
+     *禁用扫描任务
+     * @param req DisablePolicyRuleRequest
+     * @return DisablePolicyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisablePolicyRuleResponse DisablePolicyRule(DisablePolicyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisablePolicyRule", DisablePolicyRuleResponse.class);
+    }
+
+    /**
+     *启用扫描任务
+     * @param req EnablePolicyRuleRequest
+     * @return EnablePolicyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePolicyRuleResponse EnablePolicyRule(EnablePolicyRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePolicyRule", EnablePolicyRuleResponse.class);
     }
 
     /**

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class QueryMetricItem extends AbstractModel {
 
     /**
-    * 指标名
+    * <p>指标名</p>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+    * <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
     */
     @SerializedName("Compares")
     @Expose
     private String [] Compares;
 
     /**
-    * 同比，已弃用，不建议使用
+    * <p>同比，已弃用，不建议使用</p>
     */
     @SerializedName("Compare")
     @Expose
     private String Compare;
 
     /**
-     * Get 指标名 
-     * @return MetricName 指标名
+     * Get <p>指标名</p> 
+     * @return MetricName <p>指标名</p>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名
-     * @param MetricName 指标名
+     * Set <p>指标名</p>
+     * @param MetricName <p>指标名</p>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)  
-     * @return Compares 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     * Get <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p> 
+     * @return Compares <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
      */
     public String [] getCompares() {
         return this.Compares;
     }
 
     /**
-     * Set 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
-     * @param Compares 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     * Set <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
+     * @param Compares <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
      */
     public void setCompares(String [] Compares) {
         this.Compares = Compares;
     }
 
     /**
-     * Get 同比，已弃用，不建议使用 
-     * @return Compare 同比，已弃用，不建议使用
+     * Get <p>同比，已弃用，不建议使用</p> 
+     * @return Compare <p>同比，已弃用，不建议使用</p>
      */
     public String getCompare() {
         return this.Compare;
     }
 
     /**
-     * Set 同比，已弃用，不建议使用
-     * @param Compare 同比，已弃用，不建议使用
+     * Set <p>同比，已弃用，不建议使用</p>
+     * @param Compare <p>同比，已弃用，不建议使用</p>
      */
     public void setCompare(String Compare) {
         this.Compare = Compare;

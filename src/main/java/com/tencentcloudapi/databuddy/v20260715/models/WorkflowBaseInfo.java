@@ -64,8 +64,7 @@ public class WorkflowBaseInfo extends AbstractModel {
     private String OwnerUserName;
 
     /**
-    * 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+    * <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserUin")
@@ -173,25 +172,25 @@ public class WorkflowBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+     * Get <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserUin 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+     * @return CreateUserUin <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getCreateUserUin() {
         return this.CreateUserUin;
     }
 
     /**
-     * Set 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+     * Set <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserUin 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+     * @param CreateUserUin <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setCreateUserUin(String CreateUserUin) {
         this.CreateUserUin = CreateUserUin;
     }

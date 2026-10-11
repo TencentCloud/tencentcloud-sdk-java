@@ -31,7 +31,7 @@ public class DeleteWorkspaceRoleRequest extends AbstractModel {
     private String WorkspaceId;
 
     /**
-    * 角色ID
+    * 角色ID，可通过 ListWorkspaceRoles 接口获取
     */
     @SerializedName("RoleId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteWorkspaceRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get 角色ID 
-     * @return RoleId 角色ID
+     * Get 角色ID，可通过 ListWorkspaceRoles 接口获取 
+     * @return RoleId 角色ID，可通过 ListWorkspaceRoles 接口获取
      */
     public String getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 角色ID
-     * @param RoleId 角色ID
+     * Set 角色ID，可通过 ListWorkspaceRoles 接口获取
+     * @param RoleId 角色ID，可通过 ListWorkspaceRoles 接口获取
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;

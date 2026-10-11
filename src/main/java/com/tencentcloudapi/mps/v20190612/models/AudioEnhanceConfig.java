@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AudioEnhanceConfig extends AbstractModel {
 
     /**
-    * 音频降噪配置。
+    * <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Denoise")
@@ -32,7 +32,7 @@ public class AudioEnhanceConfig extends AbstractModel {
     private AudioDenoiseConfig Denoise;
 
     /**
-    * 音频分离配置。
+    * <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Separate")
@@ -40,7 +40,7 @@ public class AudioEnhanceConfig extends AbstractModel {
     private AudioSeparateConfig Separate;
 
     /**
-    * 音量均衡配置。
+    * <p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeBalance")
@@ -48,7 +48,7 @@ public class AudioEnhanceConfig extends AbstractModel {
     private VolumeBalanceConfig VolumeBalance;
 
     /**
-    * 音频美化配置。
+    * <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Beautify")
@@ -56,9 +56,17 @@ public class AudioEnhanceConfig extends AbstractModel {
     private AudioBeautifyConfig Beautify;
 
     /**
-     * Get 音频降噪配置。
+    * <p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioEnhanceEdit")
+    @Expose
+    private AudioEnhanceEditConfig AudioEnhanceEdit;
+
+    /**
+     * Get <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Denoise 音频降噪配置。
+     * @return Denoise <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioDenoiseConfig getDenoise() {
@@ -66,9 +74,9 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Set 音频降噪配置。
+     * Set <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Denoise 音频降噪配置。
+     * @param Denoise <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDenoise(AudioDenoiseConfig Denoise) {
@@ -76,9 +84,9 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get 音频分离配置。
+     * Get <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Separate 音频分离配置。
+     * @return Separate <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioSeparateConfig getSeparate() {
@@ -86,9 +94,9 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Set 音频分离配置。
+     * Set <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Separate 音频分离配置。
+     * @param Separate <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeparate(AudioSeparateConfig Separate) {
@@ -96,9 +104,9 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get 音量均衡配置。
+     * Get <p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeBalance 音量均衡配置。
+     * @return VolumeBalance <p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeBalanceConfig getVolumeBalance() {
@@ -106,9 +114,9 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Set 音量均衡配置。
+     * Set <p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeBalance 音量均衡配置。
+     * @param VolumeBalance <p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeBalance(VolumeBalanceConfig VolumeBalance) {
@@ -116,9 +124,9 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get 音频美化配置。
+     * Get <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Beautify 音频美化配置。
+     * @return Beautify <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioBeautifyConfig getBeautify() {
@@ -126,13 +134,33 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Set 音频美化配置。
+     * Set <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Beautify 音频美化配置。
+     * @param Beautify <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeautify(AudioBeautifyConfig Beautify) {
         this.Beautify = Beautify;
+    }
+
+    /**
+     * Get <p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioEnhanceEdit <p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioEnhanceEditConfig getAudioEnhanceEdit() {
+        return this.AudioEnhanceEdit;
+    }
+
+    /**
+     * Set <p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioEnhanceEdit <p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioEnhanceEdit(AudioEnhanceEditConfig AudioEnhanceEdit) {
+        this.AudioEnhanceEdit = AudioEnhanceEdit;
     }
 
     public AudioEnhanceConfig() {
@@ -155,6 +183,9 @@ public class AudioEnhanceConfig extends AbstractModel {
         if (source.Beautify != null) {
             this.Beautify = new AudioBeautifyConfig(source.Beautify);
         }
+        if (source.AudioEnhanceEdit != null) {
+            this.AudioEnhanceEdit = new AudioEnhanceEditConfig(source.AudioEnhanceEdit);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class AudioEnhanceConfig extends AbstractModel {
         this.setParamObj(map, prefix + "Separate.", this.Separate);
         this.setParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
         this.setParamObj(map, prefix + "Beautify.", this.Beautify);
+        this.setParamObj(map, prefix + "AudioEnhanceEdit.", this.AudioEnhanceEdit);
 
     }
 }

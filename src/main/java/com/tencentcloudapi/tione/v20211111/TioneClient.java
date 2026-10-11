@@ -704,6 +704,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *开启CLS日志投递
+     * @param req EnableTrainingTaskClsConfigRequest
+     * @return EnableTrainingTaskClsConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableTrainingTaskClsConfigResponse EnableTrainingTaskClsConfig(EnableTrainingTaskClsConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableTrainingTaskClsConfig", EnableTrainingTaskClsConfigResponse.class);
+    }
+
+    /**
      *用于更新模型服务
      * @param req ModifyModelServiceRequest
      * @return ModifyModelServiceResponse

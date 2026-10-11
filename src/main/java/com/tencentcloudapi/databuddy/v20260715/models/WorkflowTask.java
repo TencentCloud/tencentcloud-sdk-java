@@ -144,8 +144,7 @@ public class WorkflowTask extends AbstractModel {
     private WorkflowTask InnerTask;
 
     /**
-    * 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+    * <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -153,8 +152,7 @@ public class WorkflowTask extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+    * <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -162,8 +160,7 @@ public class WorkflowTask extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+    * <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserUin")
@@ -471,11 +468,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * Get <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @return CreateTime <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -483,11 +478,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * Set <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @param CreateTime <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -495,11 +488,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * Get <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @return UpdateTime <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -507,11 +498,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * Set <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @param UpdateTime <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -519,11 +508,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * Get <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUserUin 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @return CreateUserUin <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserUin() {
@@ -531,11 +518,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * Set <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUserUin 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @param CreateUserUin <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserUin(String CreateUserUin) {

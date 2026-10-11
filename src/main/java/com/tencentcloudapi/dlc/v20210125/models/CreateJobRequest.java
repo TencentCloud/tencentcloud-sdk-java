@@ -108,6 +108,13 @@ public class CreateJobRequest extends AbstractModel {
     private String QueueName;
 
     /**
+    * <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+    */
+    @SerializedName("Spec")
+    @Expose
+    private Spec Spec;
+
+    /**
     * <p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
     */
     @SerializedName("CustomProperties")
@@ -115,11 +122,25 @@ public class CreateJobRequest extends AbstractModel {
     private String CustomProperties;
 
     /**
+    * <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+    */
+    @SerializedName("Dependencies")
+    @Expose
+    private EngineConfigDependencies Dependencies;
+
+    /**
     * <p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
     */
     @SerializedName("EnvVars")
     @Expose
     private KVPair [] EnvVars;
+
+    /**
+    * <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+    */
+    @SerializedName("Entrypoint")
+    @Expose
+    private EntrypointInfo Entrypoint;
 
     /**
      * Get <p>作业名称，长度 ≤256；可省略，省略时服务端回退为 JobId。</p> 
@@ -314,6 +335,22 @@ public class CreateJobRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p> 
+     * @return Spec <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+     */
+    public Spec getSpec() {
+        return this.Spec;
+    }
+
+    /**
+     * Set <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+     * @param Spec <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+     */
+    public void setSpec(Spec Spec) {
+        this.Spec = Spec;
+    }
+
+    /**
      * Get <p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p> 
      * @return CustomProperties <p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
      */
@@ -330,6 +367,22 @@ public class CreateJobRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p> 
+     * @return Dependencies <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+     */
+    public EngineConfigDependencies getDependencies() {
+        return this.Dependencies;
+    }
+
+    /**
+     * Set <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+     * @param Dependencies <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+     */
+    public void setDependencies(EngineConfigDependencies Dependencies) {
+        this.Dependencies = Dependencies;
+    }
+
+    /**
      * Get <p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p> 
      * @return EnvVars <p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
      */
@@ -343,6 +396,22 @@ public class CreateJobRequest extends AbstractModel {
      */
     public void setEnvVars(KVPair [] EnvVars) {
         this.EnvVars = EnvVars;
+    }
+
+    /**
+     * Get <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p> 
+     * @return Entrypoint <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+     */
+    public EntrypointInfo getEntrypoint() {
+        return this.Entrypoint;
+    }
+
+    /**
+     * Set <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+     * @param Entrypoint <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+     */
+    public void setEntrypoint(EntrypointInfo Entrypoint) {
+        this.Entrypoint = Entrypoint;
     }
 
     public CreateJobRequest() {
@@ -389,14 +458,23 @@ public class CreateJobRequest extends AbstractModel {
         if (source.QueueName != null) {
             this.QueueName = new String(source.QueueName);
         }
+        if (source.Spec != null) {
+            this.Spec = new Spec(source.Spec);
+        }
         if (source.CustomProperties != null) {
             this.CustomProperties = new String(source.CustomProperties);
+        }
+        if (source.Dependencies != null) {
+            this.Dependencies = new EngineConfigDependencies(source.Dependencies);
         }
         if (source.EnvVars != null) {
             this.EnvVars = new KVPair[source.EnvVars.length];
             for (int i = 0; i < source.EnvVars.length; i++) {
                 this.EnvVars[i] = new KVPair(source.EnvVars[i]);
             }
+        }
+        if (source.Entrypoint != null) {
+            this.Entrypoint = new EntrypointInfo(source.Entrypoint);
         }
     }
 
@@ -417,8 +495,11 @@ public class CreateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SysCatalogVersion", this.SysCatalogVersion);
         this.setParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamObj(map, prefix + "Spec.", this.Spec);
         this.setParamSimple(map, prefix + "CustomProperties", this.CustomProperties);
+        this.setParamObj(map, prefix + "Dependencies.", this.Dependencies);
         this.setParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
+        this.setParamObj(map, prefix + "Entrypoint.", this.Entrypoint);
 
     }
 }

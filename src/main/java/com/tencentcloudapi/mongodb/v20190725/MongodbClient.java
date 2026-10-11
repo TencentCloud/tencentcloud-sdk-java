@@ -150,6 +150,28 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *创建数据库角色
+     * @param req CreateInstanceRoleRequest
+     * @return CreateInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceRoleResponse CreateInstanceRole(CreateInstanceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstanceRole", CreateInstanceRoleResponse.class);
+    }
+
+    /**
+     *创建数据库账号
+     * @param req CreateInstanceUserRequest
+     * @return CreateInstanceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceUserResponse CreateInstanceUser(CreateInstanceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstanceUser", CreateInstanceUserResponse.class);
+    }
+
+    /**
      *创建日志下载任务
      * @param req CreateLogDownloadTaskRequest
      * @return CreateLogDownloadTaskResponse
@@ -202,6 +224,28 @@ public class MongodbClient extends AbstractClient{
     public DeleteDBBackupsResponse DeleteDBBackups(DeleteDBBackupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDBBackups", DeleteDBBackupsResponse.class);
+    }
+
+    /**
+     *删除角色
+     * @param req DeleteInstanceRoleRequest
+     * @return DeleteInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceRoleResponse DeleteInstanceRole(DeleteInstanceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstanceRole", DeleteInstanceRoleResponse.class);
+    }
+
+    /**
+     *删除数据库账号。
+     * @param req DeleteInstanceUserRequest
+     * @return DeleteInstanceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceUserResponse DeleteInstanceUser(DeleteInstanceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstanceUser", DeleteInstanceUserResponse.class);
     }
 
     /**
@@ -449,6 +493,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *获取角色列表
+     * @param req DescribeInstanceRolesRequest
+     * @return DescribeInstanceRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceRolesResponse DescribeInstanceRoles(DescribeInstanceRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceRoles", DescribeInstanceRolesResponse.class);
+    }
+
+    /**
      *查看实例SSL开启状态
      * @param req DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
@@ -457,6 +512,17 @@ public class MongodbClient extends AbstractClient{
     public DescribeInstanceSSLResponse DescribeInstanceSSL(DescribeInstanceSSLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceSSL", DescribeInstanceSSLResponse.class);
+    }
+
+    /**
+     *获取账号列表
+     * @param req DescribeInstanceUsersRequest
+     * @return DescribeInstanceUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceUsersResponse DescribeInstanceUsers(DescribeInstanceUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceUsers", DescribeInstanceUsersResponse.class);
     }
 
     /**
@@ -999,6 +1065,28 @@ public class MongodbClient extends AbstractClient{
     public TerminateDBInstancesResponse TerminateDBInstances(TerminateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateDBInstances", TerminateDBInstancesResponse.class);
+    }
+
+    /**
+     *更新数据库角色
+     * @param req UpdateInstanceRoleRequest
+     * @return UpdateInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateInstanceRoleResponse UpdateInstanceRole(UpdateInstanceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateInstanceRole", UpdateInstanceRoleResponse.class);
+    }
+
+    /**
+     *更新数据库账号
+     * @param req UpdateInstanceUserRequest
+     * @return UpdateInstanceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateInstanceUserResponse UpdateInstanceUser(UpdateInstanceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateInstanceUser", UpdateInstanceUserResponse.class);
     }
 
     /**

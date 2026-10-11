@@ -324,6 +324,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *查询trace详情接口信息
+     * @param req DescribeSpanTreeByIDRequest
+     * @return DescribeSpanTreeByIDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpanTreeByIDResponse DescribeSpanTreeByID(DescribeSpanTreeByIDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpanTreeByID", DescribeSpanTreeByIDResponse.class);
+    }
+
+    /**
      *根据维度名和过滤条件，查询维度数据.
      * @param req DescribeTagValuesRequest
      * @return DescribeTagValuesResponse

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteWordSamplesRequest extends AbstractModel {
 
     /**
-    * 关键词，数组长度限制：100 个词。
+    * <p>关键词，数组长度限制：100 个词。</p>
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-     * Get 关键词，数组长度限制：100 个词。 
-     * @return Keywords 关键词，数组长度限制：100 个词。
+     * Get <p>关键词，数组长度限制：100 个词。</p> 
+     * @return Keywords <p>关键词，数组长度限制：100 个词。</p>
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 关键词，数组长度限制：100 个词。
-     * @param Keywords 关键词，数组长度限制：100 个词。
+     * Set <p>关键词，数组长度限制：100 个词。</p>
+     * @param Keywords <p>关键词，数组长度限制：100 个词。</p>
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;

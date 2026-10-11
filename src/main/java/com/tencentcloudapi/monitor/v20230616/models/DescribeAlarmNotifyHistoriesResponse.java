@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlarmNotifyHistoriesResponse extends AbstractModel {
 
     /**
-    * 告警历史
+    * <p>告警历史</p>
     */
     @SerializedName("AlarmNotifyHistoryList")
     @Expose
     private AlarmNotifyHistory [] AlarmNotifyHistoryList;
 
     /**
-    * 分页情况
+    * <p>分页情况</p>
     */
     @SerializedName("PageResult")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAlarmNotifyHistoriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警历史 
-     * @return AlarmNotifyHistoryList 告警历史
+     * Get <p>告警历史</p> 
+     * @return AlarmNotifyHistoryList <p>告警历史</p>
      */
     public AlarmNotifyHistory [] getAlarmNotifyHistoryList() {
         return this.AlarmNotifyHistoryList;
     }
 
     /**
-     * Set 告警历史
-     * @param AlarmNotifyHistoryList 告警历史
+     * Set <p>告警历史</p>
+     * @param AlarmNotifyHistoryList <p>告警历史</p>
      */
     public void setAlarmNotifyHistoryList(AlarmNotifyHistory [] AlarmNotifyHistoryList) {
         this.AlarmNotifyHistoryList = AlarmNotifyHistoryList;
     }
 
     /**
-     * Get 分页情况 
-     * @return PageResult 分页情况
+     * Get <p>分页情况</p> 
+     * @return PageResult <p>分页情况</p>
      */
     public PageByNoResult getPageResult() {
         return this.PageResult;
     }
 
     /**
-     * Set 分页情况
-     * @param PageResult 分页情况
+     * Set <p>分页情况</p>
+     * @param PageResult <p>分页情况</p>
      */
     public void setPageResult(PageByNoResult PageResult) {
         this.PageResult = PageResult;

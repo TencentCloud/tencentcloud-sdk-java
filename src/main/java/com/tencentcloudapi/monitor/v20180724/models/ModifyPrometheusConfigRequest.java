@@ -24,167 +24,166 @@ import java.util.HashMap;
 public class ModifyPrometheusConfigRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * <p>实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * ServiceMonitors配置
+    * <p>ServiceMonitors配置</p>
     */
     @SerializedName("ServiceMonitors")
     @Expose
     private PrometheusConfigItem [] ServiceMonitors;
 
     /**
-    * PodMonitors配置
+    * <p>PodMonitors配置</p>
     */
     @SerializedName("PodMonitors")
     @Expose
     private PrometheusConfigItem [] PodMonitors;
 
     /**
-    * prometheus原生Job配置
+    * <p>prometheus原生Job配置</p>
     */
     @SerializedName("RawJobs")
     @Expose
     private PrometheusConfigItem [] RawJobs;
 
     /**
-    * 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
+    * <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
     */
     @SerializedName("UpdateImage")
     @Expose
     private Long UpdateImage;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get <p>实例id</p> 
+     * @return InstanceId <p>实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set <p>实例id</p>
+     * @param InstanceId <p>实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get <p>集群类型</p> 
+     * @return ClusterType <p>集群类型</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set <p>集群类型</p>
+     * @param ClusterType <p>集群类型</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get ServiceMonitors配置 
-     * @return ServiceMonitors ServiceMonitors配置
+     * Get <p>ServiceMonitors配置</p> 
+     * @return ServiceMonitors <p>ServiceMonitors配置</p>
      */
     public PrometheusConfigItem [] getServiceMonitors() {
         return this.ServiceMonitors;
     }
 
     /**
-     * Set ServiceMonitors配置
-     * @param ServiceMonitors ServiceMonitors配置
+     * Set <p>ServiceMonitors配置</p>
+     * @param ServiceMonitors <p>ServiceMonitors配置</p>
      */
     public void setServiceMonitors(PrometheusConfigItem [] ServiceMonitors) {
         this.ServiceMonitors = ServiceMonitors;
     }
 
     /**
-     * Get PodMonitors配置 
-     * @return PodMonitors PodMonitors配置
+     * Get <p>PodMonitors配置</p> 
+     * @return PodMonitors <p>PodMonitors配置</p>
      */
     public PrometheusConfigItem [] getPodMonitors() {
         return this.PodMonitors;
     }
 
     /**
-     * Set PodMonitors配置
-     * @param PodMonitors PodMonitors配置
+     * Set <p>PodMonitors配置</p>
+     * @param PodMonitors <p>PodMonitors配置</p>
      */
     public void setPodMonitors(PrometheusConfigItem [] PodMonitors) {
         this.PodMonitors = PodMonitors;
     }
 
     /**
-     * Get prometheus原生Job配置 
-     * @return RawJobs prometheus原生Job配置
+     * Get <p>prometheus原生Job配置</p> 
+     * @return RawJobs <p>prometheus原生Job配置</p>
      */
     public PrometheusConfigItem [] getRawJobs() {
         return this.RawJobs;
     }
 
     /**
-     * Set prometheus原生Job配置
-     * @param RawJobs prometheus原生Job配置
+     * Set <p>prometheus原生Job配置</p>
+     * @param RawJobs <p>prometheus原生Job配置</p>
      */
     public void setRawJobs(PrometheusConfigItem [] RawJobs) {
         this.RawJobs = RawJobs;
     }
 
     /**
-     * Get 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本 
-     * @return UpdateImage 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
+     * Get <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return UpdateImage <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getUpdateImage() {
         return this.UpdateImage;
     }
 
     /**
-     * Set 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
-     * @param UpdateImage 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
+     * Set <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param UpdateImage <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @deprecated
      */
+    @Deprecated
     public void setUpdateImage(Long UpdateImage) {
         this.UpdateImage = UpdateImage;
     }

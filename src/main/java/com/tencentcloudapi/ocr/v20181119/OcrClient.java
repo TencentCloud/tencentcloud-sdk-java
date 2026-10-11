@@ -192,6 +192,21 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+
+创建任务接口文档地址：https://cloud.tencent.com/document/product/1024/953218
+
+默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
+     * @param req DescribeMultimodalDocParseJobRequest
+     * @return DescribeMultimodalDocParseJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultimodalDocParseJobResponse DescribeMultimodalDocParseJob(DescribeMultimodalDocParseJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultimodalDocParseJob", DescribeMultimodalDocParseJobResponse.class);
+    }
+
+    /**
      *用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
 默认接口请求并发限制：10张/分钟。
@@ -1254,6 +1269,17 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *基于知识引擎精调模型技术的 Rerank 模型，支持对多路召回的结果进行重排序，根据查询内容与文档切片内容的相关性，按顺序返回每一条文档内容与查询内容的相关性分数。
+     * @param req RunRerankRequest
+     * @return RunRerankResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunRerankResponse RunRerank(RunRerankRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunRerank", RunRerankResponse.class);
+    }
+
+    /**
      *本接口支持各类印章主体内容、印章其他内容及形状识别，支持单图多印章识别，包括发票章、财务章等，适用于公文票据等场景。
 
 默认接口请求频率限制：5次/秒。
@@ -1304,6 +1330,21 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+
+查询任务接口文档地址：https://cloud.tencent.com/document/product/1024/953219
+
+默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
+     * @param req SubmitMultimodalDocParseJobRequest
+     * @return SubmitMultimodalDocParseJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitMultimodalDocParseJobResponse SubmitMultimodalDocParseJob(SubmitMultimodalDocParseJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitMultimodalDocParseJob", SubmitMultimodalDocParseJobResponse.class);
+    }
+
+    /**
      *用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
 默认接口请求并发限制：10张/分钟。
@@ -1318,6 +1359,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *异步试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，是试卷切题的接口补充。主要解决试卷录题这类多页场景、单题跨页场景。需要 SubmitQuestionSplitOCRJob（提交任务）、DescribeQuestionSplitOCRJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+
+默认接口请求频率限制：5次/秒。
      * @param req SubmitQuestionSplitJobRequest
      * @return SubmitQuestionSplitJobResponse
      * @throws TencentCloudSDKException

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Selectors extends AbstractModel {
 
     /**
-    * 组件勾选情况
+    * <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Component")
@@ -32,9 +32,9 @@ public class Selectors extends AbstractModel {
     private String [] Component;
 
     /**
-     * Get 组件勾选情况
+     * Get <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Component 组件勾选情况
+     * @return Component <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getComponent() {
@@ -42,9 +42,9 @@ public class Selectors extends AbstractModel {
     }
 
     /**
-     * Set 组件勾选情况
+     * Set <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Component 组件勾选情况
+     * @param Component <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponent(String [] Component) {

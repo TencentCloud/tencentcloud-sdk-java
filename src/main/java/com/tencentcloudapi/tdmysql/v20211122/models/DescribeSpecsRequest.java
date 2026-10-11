@@ -38,6 +38,13 @@ public class DescribeSpecsRequest extends AbstractModel {
     private Long IsExclusiveInstance;
 
     /**
+    * <p>可用区组合列表</p>
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get <p>全能型副本数，当前支持范围：1-3，默认为3</p> 
      * @return FullReplications <p>全能型副本数，当前支持范围：1-3，默认为3</p>
      */
@@ -69,6 +76,22 @@ public class DescribeSpecsRequest extends AbstractModel {
         this.IsExclusiveInstance = IsExclusiveInstance;
     }
 
+    /**
+     * Get <p>可用区组合列表</p> 
+     * @return Zones <p>可用区组合列表</p>
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set <p>可用区组合列表</p>
+     * @param Zones <p>可用区组合列表</p>
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public DescribeSpecsRequest() {
     }
 
@@ -83,6 +106,12 @@ public class DescribeSpecsRequest extends AbstractModel {
         if (source.IsExclusiveInstance != null) {
             this.IsExclusiveInstance = new Long(source.IsExclusiveInstance);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class DescribeSpecsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FullReplications", this.FullReplications);
         this.setParamSimple(map, prefix + "IsExclusiveInstance", this.IsExclusiveInstance);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

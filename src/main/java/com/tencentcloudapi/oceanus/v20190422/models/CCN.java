@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CCN extends AbstractModel {
 
     /**
-    * 私有网络 ID
+    * <p>私有网络 ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID
+    * <p>子网 ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 云联网 ID，如 ccn-rahigzjd
+    * <p>云联网 ID，如 ccn-rahigzjd</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-     * Get 私有网络 ID 
-     * @return VpcId 私有网络 ID
+     * Get <p>私有网络 ID</p> 
+     * @return VpcId <p>私有网络 ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络 ID
-     * @param VpcId 私有网络 ID
+     * Set <p>私有网络 ID</p>
+     * @param VpcId <p>私有网络 ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID 
-     * @return SubnetId 子网 ID
+     * Get <p>子网 ID</p> 
+     * @return SubnetId <p>子网 ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID
-     * @param SubnetId 子网 ID
+     * Set <p>子网 ID</p>
+     * @param SubnetId <p>子网 ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 云联网 ID，如 ccn-rahigzjd 
-     * @return CcnId 云联网 ID，如 ccn-rahigzjd
+     * Get <p>云联网 ID，如 ccn-rahigzjd</p> 
+     * @return CcnId <p>云联网 ID，如 ccn-rahigzjd</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网 ID，如 ccn-rahigzjd
-     * @param CcnId 云联网 ID，如 ccn-rahigzjd
+     * Set <p>云联网 ID，如 ccn-rahigzjd</p>
+     * @param CcnId <p>云联网 ID，如 ccn-rahigzjd</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;

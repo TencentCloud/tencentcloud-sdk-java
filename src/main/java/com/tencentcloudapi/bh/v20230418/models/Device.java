@@ -24,759 +24,759 @@ import java.util.HashMap;
 public class Device extends AbstractModel {
 
     /**
-    * 资产ID
+    * <p>资产ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 实例ID，对应CVM、CDB等实例ID
+    * <p>实例ID，对应CVM、CDB等实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 资产名
+    * <p>资产名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 公网IP
+    * <p>公网IP</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 内网IP
+    * <p>内网IP</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * 地域编码
+    * <p>地域编码</p>
     */
     @SerializedName("ApCode")
     @Expose
     private String ApCode;
 
     /**
-    * 地域名称
+    * <p>地域名称</p>
     */
     @SerializedName("ApName")
     @Expose
     private String ApName;
 
     /**
-    * 操作系统名称
+    * <p>操作系统名称</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+    * <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
     */
     @SerializedName("Kind")
     @Expose
     private Long Kind;
 
     /**
-    * 管理端口
+    * <p>管理端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 所属资产组列表
+    * <p>所属资产组列表</p>
     */
     @SerializedName("GroupSet")
     @Expose
     private Group [] GroupSet;
 
     /**
-    * 资产绑定的账号数
+    * <p>资产绑定的账号数</p>
     */
     @SerializedName("AccountCount")
     @Expose
     private Long AccountCount;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 堡垒机服务信息，注意没有绑定服务时为null
+    * <p>堡垒机服务信息，注意没有绑定服务时为null</p>
     */
     @SerializedName("Resource")
     @Expose
     private Resource Resource;
 
     /**
-    * 资产所属部门
+    * <p>资产所属部门</p>
     */
     @SerializedName("Department")
     @Expose
     private Department Department;
 
     /**
-    * 数据库资产的多节点
+    * <p>数据库资产的多节点</p>
     */
     @SerializedName("IpPortSet")
     @Expose
     private String [] IpPortSet;
 
     /**
-    * 网络域Id
+    * <p>网络域Id</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 网络域名称
+    * <p>网络域名称</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+    * <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
     */
     @SerializedName("EnableSSL")
     @Expose
     private Long EnableSSL;
 
     /**
-    * 已上传的SSL证书名称
+    * <p>已上传的SSL证书名称</p>
     */
     @SerializedName("SSLCertName")
     @Expose
     private String SSLCertName;
 
     /**
-    * IOA侧的资源ID
+    * <p>IOA侧的资源ID</p>
     */
     @SerializedName("IOAId")
     @Expose
     private Long IOAId;
 
     /**
-    * K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+    * <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
     */
     @SerializedName("ManageDimension")
     @Expose
     private Long ManageDimension;
 
     /**
-    * K8S集群托管账号id	
+    * <p>K8S集群托管账号id</p>
     */
     @SerializedName("ManageAccountId")
     @Expose
     private Long ManageAccountId;
 
     /**
-    * K8S集群命名空间	
+    * <p>K8S集群命名空间</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * K8S集群工作负载	
+    * <p>K8S集群工作负载</p>
     */
     @SerializedName("Workload")
     @Expose
     private String Workload;
 
     /**
-    * K8S集群pod已同步数量
+    * <p>K8S集群pod已同步数量</p>
     */
     @SerializedName("SyncPodCount")
     @Expose
     private Long SyncPodCount;
 
     /**
-    * K8S集群pod总数量	
+    * <p>K8S集群pod总数量</p>
     */
     @SerializedName("TotalPodCount")
     @Expose
     private Long TotalPodCount;
 
     /**
-    * 云账号id
+    * <p>云账号id</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
     private Long CloudAccountId;
 
     /**
-    * 云账号名称
+    * <p>云账号名称</p>
     */
     @SerializedName("CloudAccountName")
     @Expose
     private String CloudAccountName;
 
     /**
-    * 云厂商类型1-腾讯云，2-阿里云
+    * <p>云厂商类型1-腾讯云，2-阿里云</p>
     */
     @SerializedName("ProviderType")
     @Expose
     private Long ProviderType;
 
     /**
-    * 云厂商名称
+    * <p>云厂商名称</p>
     */
     @SerializedName("ProviderName")
     @Expose
     private String ProviderName;
 
     /**
-    * 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+    * <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
     */
     @SerializedName("SyncCloudDeviceStatus")
     @Expose
     private Long SyncCloudDeviceStatus;
 
     /**
-     * Get 资产ID 
-     * @return Id 资产ID
+     * Get <p>资产ID</p> 
+     * @return Id <p>资产ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产ID
-     * @param Id 资产ID
+     * Set <p>资产ID</p>
+     * @param Id <p>资产ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 实例ID，对应CVM、CDB等实例ID 
-     * @return InstanceId 实例ID，对应CVM、CDB等实例ID
+     * Get <p>实例ID，对应CVM、CDB等实例ID</p> 
+     * @return InstanceId <p>实例ID，对应CVM、CDB等实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，对应CVM、CDB等实例ID
-     * @param InstanceId 实例ID，对应CVM、CDB等实例ID
+     * Set <p>实例ID，对应CVM、CDB等实例ID</p>
+     * @param InstanceId <p>实例ID，对应CVM、CDB等实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资产名 
-     * @return Name 资产名
+     * Get <p>资产名</p> 
+     * @return Name <p>资产名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 资产名
-     * @param Name 资产名
+     * Set <p>资产名</p>
+     * @param Name <p>资产名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 公网IP 
-     * @return PublicIp 公网IP
+     * Get <p>公网IP</p> 
+     * @return PublicIp <p>公网IP</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 公网IP
-     * @param PublicIp 公网IP
+     * Set <p>公网IP</p>
+     * @param PublicIp <p>公网IP</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网IP 
-     * @return PrivateIp 内网IP
+     * Get <p>内网IP</p> 
+     * @return PrivateIp <p>内网IP</p>
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 内网IP
-     * @param PrivateIp 内网IP
+     * Set <p>内网IP</p>
+     * @param PrivateIp <p>内网IP</p>
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 地域编码 
-     * @return ApCode 地域编码
+     * Get <p>地域编码</p> 
+     * @return ApCode <p>地域编码</p>
      */
     public String getApCode() {
         return this.ApCode;
     }
 
     /**
-     * Set 地域编码
-     * @param ApCode 地域编码
+     * Set <p>地域编码</p>
+     * @param ApCode <p>地域编码</p>
      */
     public void setApCode(String ApCode) {
         this.ApCode = ApCode;
     }
 
     /**
-     * Get 地域名称 
-     * @return ApName 地域名称
+     * Get <p>地域名称</p> 
+     * @return ApName <p>地域名称</p>
      */
     public String getApName() {
         return this.ApName;
     }
 
     /**
-     * Set 地域名称
-     * @param ApName 地域名称
+     * Set <p>地域名称</p>
+     * @param ApName <p>地域名称</p>
      */
     public void setApName(String ApName) {
         this.ApName = ApName;
     }
 
     /**
-     * Get 操作系统名称 
-     * @return OsName 操作系统名称
+     * Get <p>操作系统名称</p> 
+     * @return OsName <p>操作系统名称</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set 操作系统名称
-     * @param OsName 操作系统名称
+     * Set <p>操作系统名称</p>
+     * @param OsName <p>操作系统名称</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
-     * @return Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Get <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p> 
+     * @return Kind <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public Long getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Set <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
+     * @param Kind <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public void setKind(Long Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 管理端口 
-     * @return Port 管理端口
+     * Get <p>管理端口</p> 
+     * @return Port <p>管理端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 管理端口
-     * @param Port 管理端口
+     * Set <p>管理端口</p>
+     * @param Port <p>管理端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 所属资产组列表 
-     * @return GroupSet 所属资产组列表
+     * Get <p>所属资产组列表</p> 
+     * @return GroupSet <p>所属资产组列表</p>
      */
     public Group [] getGroupSet() {
         return this.GroupSet;
     }
 
     /**
-     * Set 所属资产组列表
-     * @param GroupSet 所属资产组列表
+     * Set <p>所属资产组列表</p>
+     * @param GroupSet <p>所属资产组列表</p>
      */
     public void setGroupSet(Group [] GroupSet) {
         this.GroupSet = GroupSet;
     }
 
     /**
-     * Get 资产绑定的账号数 
-     * @return AccountCount 资产绑定的账号数
+     * Get <p>资产绑定的账号数</p> 
+     * @return AccountCount <p>资产绑定的账号数</p>
      */
     public Long getAccountCount() {
         return this.AccountCount;
     }
 
     /**
-     * Set 资产绑定的账号数
-     * @param AccountCount 资产绑定的账号数
+     * Set <p>资产绑定的账号数</p>
+     * @param AccountCount <p>资产绑定的账号数</p>
      */
     public void setAccountCount(Long AccountCount) {
         this.AccountCount = AccountCount;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC ID</p> 
+     * @return VpcId <p>VPC ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC ID</p>
+     * @param VpcId <p>VPC ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 堡垒机服务信息，注意没有绑定服务时为null 
-     * @return Resource 堡垒机服务信息，注意没有绑定服务时为null
+     * Get <p>堡垒机服务信息，注意没有绑定服务时为null</p> 
+     * @return Resource <p>堡垒机服务信息，注意没有绑定服务时为null</p>
      */
     public Resource getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 堡垒机服务信息，注意没有绑定服务时为null
-     * @param Resource 堡垒机服务信息，注意没有绑定服务时为null
+     * Set <p>堡垒机服务信息，注意没有绑定服务时为null</p>
+     * @param Resource <p>堡垒机服务信息，注意没有绑定服务时为null</p>
      */
     public void setResource(Resource Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 资产所属部门 
-     * @return Department 资产所属部门
+     * Get <p>资产所属部门</p> 
+     * @return Department <p>资产所属部门</p>
      */
     public Department getDepartment() {
         return this.Department;
     }
 
     /**
-     * Set 资产所属部门
-     * @param Department 资产所属部门
+     * Set <p>资产所属部门</p>
+     * @param Department <p>资产所属部门</p>
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 数据库资产的多节点 
-     * @return IpPortSet 数据库资产的多节点
+     * Get <p>数据库资产的多节点</p> 
+     * @return IpPortSet <p>数据库资产的多节点</p>
      */
     public String [] getIpPortSet() {
         return this.IpPortSet;
     }
 
     /**
-     * Set 数据库资产的多节点
-     * @param IpPortSet 数据库资产的多节点
+     * Set <p>数据库资产的多节点</p>
+     * @param IpPortSet <p>数据库资产的多节点</p>
      */
     public void setIpPortSet(String [] IpPortSet) {
         this.IpPortSet = IpPortSet;
     }
 
     /**
-     * Get 网络域Id 
-     * @return DomainId 网络域Id
+     * Get <p>网络域Id</p> 
+     * @return DomainId <p>网络域Id</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 网络域Id
-     * @param DomainId 网络域Id
+     * Set <p>网络域Id</p>
+     * @param DomainId <p>网络域Id</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 网络域名称 
-     * @return DomainName 网络域名称
+     * Get <p>网络域名称</p> 
+     * @return DomainName <p>网络域名称</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 网络域名称
-     * @param DomainName 网络域名称
+     * Set <p>网络域名称</p>
+     * @param DomainName <p>网络域名称</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 是否启用SSL，仅支持Redis资产。0：禁用 1：启用 
-     * @return EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+     * Get <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p> 
+     * @return EnableSSL <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
      */
     public Long getEnableSSL() {
         return this.EnableSSL;
     }
 
     /**
-     * Set 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-     * @param EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+     * Set <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
+     * @param EnableSSL <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
      */
     public void setEnableSSL(Long EnableSSL) {
         this.EnableSSL = EnableSSL;
     }
 
     /**
-     * Get 已上传的SSL证书名称 
-     * @return SSLCertName 已上传的SSL证书名称
+     * Get <p>已上传的SSL证书名称</p> 
+     * @return SSLCertName <p>已上传的SSL证书名称</p>
      */
     public String getSSLCertName() {
         return this.SSLCertName;
     }
 
     /**
-     * Set 已上传的SSL证书名称
-     * @param SSLCertName 已上传的SSL证书名称
+     * Set <p>已上传的SSL证书名称</p>
+     * @param SSLCertName <p>已上传的SSL证书名称</p>
      */
     public void setSSLCertName(String SSLCertName) {
         this.SSLCertName = SSLCertName;
     }
 
     /**
-     * Get IOA侧的资源ID 
-     * @return IOAId IOA侧的资源ID
+     * Get <p>IOA侧的资源ID</p> 
+     * @return IOAId <p>IOA侧的资源ID</p>
      */
     public Long getIOAId() {
         return this.IOAId;
     }
 
     /**
-     * Set IOA侧的资源ID
-     * @param IOAId IOA侧的资源ID
+     * Set <p>IOA侧的资源ID</p>
+     * @param IOAId <p>IOA侧的资源ID</p>
      */
     public void setIOAId(Long IOAId) {
         this.IOAId = IOAId;
     }
 
     /**
-     * Get K8S集群托管维度。1-集群，2-命名空间，3-工作负载 
-     * @return ManageDimension K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     * Get <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p> 
+     * @return ManageDimension <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
      */
     public Long getManageDimension() {
         return this.ManageDimension;
     }
 
     /**
-     * Set K8S集群托管维度。1-集群，2-命名空间，3-工作负载
-     * @param ManageDimension K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     * Set <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
+     * @param ManageDimension <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
      */
     public void setManageDimension(Long ManageDimension) {
         this.ManageDimension = ManageDimension;
     }
 
     /**
-     * Get K8S集群托管账号id	 
-     * @return ManageAccountId K8S集群托管账号id	
+     * Get <p>K8S集群托管账号id</p> 
+     * @return ManageAccountId <p>K8S集群托管账号id</p>
      */
     public Long getManageAccountId() {
         return this.ManageAccountId;
     }
 
     /**
-     * Set K8S集群托管账号id	
-     * @param ManageAccountId K8S集群托管账号id	
+     * Set <p>K8S集群托管账号id</p>
+     * @param ManageAccountId <p>K8S集群托管账号id</p>
      */
     public void setManageAccountId(Long ManageAccountId) {
         this.ManageAccountId = ManageAccountId;
     }
 
     /**
-     * Get K8S集群命名空间	 
-     * @return Namespace K8S集群命名空间	
+     * Get <p>K8S集群命名空间</p> 
+     * @return Namespace <p>K8S集群命名空间</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set K8S集群命名空间	
-     * @param Namespace K8S集群命名空间	
+     * Set <p>K8S集群命名空间</p>
+     * @param Namespace <p>K8S集群命名空间</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get K8S集群工作负载	 
-     * @return Workload K8S集群工作负载	
+     * Get <p>K8S集群工作负载</p> 
+     * @return Workload <p>K8S集群工作负载</p>
      */
     public String getWorkload() {
         return this.Workload;
     }
 
     /**
-     * Set K8S集群工作负载	
-     * @param Workload K8S集群工作负载	
+     * Set <p>K8S集群工作负载</p>
+     * @param Workload <p>K8S集群工作负载</p>
      */
     public void setWorkload(String Workload) {
         this.Workload = Workload;
     }
 
     /**
-     * Get K8S集群pod已同步数量 
-     * @return SyncPodCount K8S集群pod已同步数量
+     * Get <p>K8S集群pod已同步数量</p> 
+     * @return SyncPodCount <p>K8S集群pod已同步数量</p>
      */
     public Long getSyncPodCount() {
         return this.SyncPodCount;
     }
 
     /**
-     * Set K8S集群pod已同步数量
-     * @param SyncPodCount K8S集群pod已同步数量
+     * Set <p>K8S集群pod已同步数量</p>
+     * @param SyncPodCount <p>K8S集群pod已同步数量</p>
      */
     public void setSyncPodCount(Long SyncPodCount) {
         this.SyncPodCount = SyncPodCount;
     }
 
     /**
-     * Get K8S集群pod总数量	 
-     * @return TotalPodCount K8S集群pod总数量	
+     * Get <p>K8S集群pod总数量</p> 
+     * @return TotalPodCount <p>K8S集群pod总数量</p>
      */
     public Long getTotalPodCount() {
         return this.TotalPodCount;
     }
 
     /**
-     * Set K8S集群pod总数量	
-     * @param TotalPodCount K8S集群pod总数量	
+     * Set <p>K8S集群pod总数量</p>
+     * @param TotalPodCount <p>K8S集群pod总数量</p>
      */
     public void setTotalPodCount(Long TotalPodCount) {
         this.TotalPodCount = TotalPodCount;
     }
 
     /**
-     * Get 云账号id 
-     * @return CloudAccountId 云账号id
+     * Get <p>云账号id</p> 
+     * @return CloudAccountId <p>云账号id</p>
      */
     public Long getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set 云账号id
-     * @param CloudAccountId 云账号id
+     * Set <p>云账号id</p>
+     * @param CloudAccountId <p>云账号id</p>
      */
     public void setCloudAccountId(Long CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
     }
 
     /**
-     * Get 云账号名称 
-     * @return CloudAccountName 云账号名称
+     * Get <p>云账号名称</p> 
+     * @return CloudAccountName <p>云账号名称</p>
      */
     public String getCloudAccountName() {
         return this.CloudAccountName;
     }
 
     /**
-     * Set 云账号名称
-     * @param CloudAccountName 云账号名称
+     * Set <p>云账号名称</p>
+     * @param CloudAccountName <p>云账号名称</p>
      */
     public void setCloudAccountName(String CloudAccountName) {
         this.CloudAccountName = CloudAccountName;
     }
 
     /**
-     * Get 云厂商类型1-腾讯云，2-阿里云 
-     * @return ProviderType 云厂商类型1-腾讯云，2-阿里云
+     * Get <p>云厂商类型1-腾讯云，2-阿里云</p> 
+     * @return ProviderType <p>云厂商类型1-腾讯云，2-阿里云</p>
      */
     public Long getProviderType() {
         return this.ProviderType;
     }
 
     /**
-     * Set 云厂商类型1-腾讯云，2-阿里云
-     * @param ProviderType 云厂商类型1-腾讯云，2-阿里云
+     * Set <p>云厂商类型1-腾讯云，2-阿里云</p>
+     * @param ProviderType <p>云厂商类型1-腾讯云，2-阿里云</p>
      */
     public void setProviderType(Long ProviderType) {
         this.ProviderType = ProviderType;
     }
 
     /**
-     * Get 云厂商名称 
-     * @return ProviderName 云厂商名称
+     * Get <p>云厂商名称</p> 
+     * @return ProviderName <p>云厂商名称</p>
      */
     public String getProviderName() {
         return this.ProviderName;
     }
 
     /**
-     * Set 云厂商名称
-     * @param ProviderName 云厂商名称
+     * Set <p>云厂商名称</p>
+     * @param ProviderName <p>云厂商名称</p>
      */
     public void setProviderName(String ProviderName) {
         this.ProviderName = ProviderName;
     }
 
     /**
-     * Get 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期 
-     * @return SyncCloudDeviceStatus 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * Get <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p> 
+     * @return SyncCloudDeviceStatus <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
      */
     public Long getSyncCloudDeviceStatus() {
         return this.SyncCloudDeviceStatus;
     }
 
     /**
-     * Set 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
-     * @param SyncCloudDeviceStatus 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * Set <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
+     * @param SyncCloudDeviceStatus <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
      */
     public void setSyncCloudDeviceStatus(Long SyncCloudDeviceStatus) {
         this.SyncCloudDeviceStatus = SyncCloudDeviceStatus;

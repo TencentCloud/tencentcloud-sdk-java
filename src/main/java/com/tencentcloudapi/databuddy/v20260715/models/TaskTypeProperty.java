@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskTypeProperty extends AbstractModel {
 
     /**
-    * 属性名
+    * <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PropertyKey")
@@ -32,7 +32,7 @@ public class TaskTypeProperty extends AbstractModel {
     private String PropertyKey;
 
     /**
-    * 属性值
+    * <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PropertyValue")
@@ -40,9 +40,9 @@ public class TaskTypeProperty extends AbstractModel {
     private String PropertyValue;
 
     /**
-     * Get 属性名
+     * Get <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PropertyKey 属性名
+     * @return PropertyKey <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPropertyKey() {
@@ -50,9 +50,9 @@ public class TaskTypeProperty extends AbstractModel {
     }
 
     /**
-     * Set 属性名
+     * Set <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PropertyKey 属性名
+     * @param PropertyKey <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPropertyKey(String PropertyKey) {
@@ -60,9 +60,9 @@ public class TaskTypeProperty extends AbstractModel {
     }
 
     /**
-     * Get 属性值
+     * Get <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PropertyValue 属性值
+     * @return PropertyValue <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPropertyValue() {
@@ -70,9 +70,9 @@ public class TaskTypeProperty extends AbstractModel {
     }
 
     /**
-     * Set 属性值
+     * Set <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PropertyValue 属性值
+     * @param PropertyValue <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPropertyValue(String PropertyValue) {

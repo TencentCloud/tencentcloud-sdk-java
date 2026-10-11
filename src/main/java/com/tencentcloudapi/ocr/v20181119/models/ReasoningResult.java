@@ -31,28 +31,28 @@ public class ReasoningResult extends AbstractModel {
     private String OutputMode;
 
     /**
-    * <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，必定命中请求中 EnumValues 的某个值。 若 VLM 输出无法匹配任何枚举值，则返回 <strong>UNCERTAIN</strong>。</p>
+    * <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，取值对应请求中配置的 EnumValues。</p>
     */
     @SerializedName("EnumValue")
     @Expose
     private String EnumValue;
 
     /**
-    * <p>文本模式下的推理结果值。当 OutputMode=string 时返回。 若 VLM 无法得出结论，则返回 <strong>UNCERTAIN</strong>。</p>
+    * <p>文本模式下的推理结果值。当 OutputMode=string 时返回，以文本形式描述推理结论。</p>
     */
     @SerializedName("TextValue")
     @Expose
     private String TextValue;
 
     /**
-    * <p>VLM 原始输出文本（未经过结构化校验）。</p>
+    * <p>VLM 原始输出文本（未经过结构化校验）。该字段仅用于调试，生产环境可忽略。</p>
     */
     @SerializedName("RawOutput")
     @Expose
     private String RawOutput;
 
     /**
-    * <p>变量替换后的实际 Prompt（脱敏后）。</p>
+    * <p>变量替换后的用户 Prompt 文本。该字段仅用于调试，生产环境可忽略。</p>
     */
     @SerializedName("RenderedPrompt")
     @Expose
@@ -75,64 +75,64 @@ public class ReasoningResult extends AbstractModel {
     }
 
     /**
-     * Get <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，必定命中请求中 EnumValues 的某个值。 若 VLM 输出无法匹配任何枚举值，则返回 <strong>UNCERTAIN</strong>。</p> 
-     * @return EnumValue <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，必定命中请求中 EnumValues 的某个值。 若 VLM 输出无法匹配任何枚举值，则返回 <strong>UNCERTAIN</strong>。</p>
+     * Get <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，取值对应请求中配置的 EnumValues。</p> 
+     * @return EnumValue <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，取值对应请求中配置的 EnumValues。</p>
      */
     public String getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，必定命中请求中 EnumValues 的某个值。 若 VLM 输出无法匹配任何枚举值，则返回 <strong>UNCERTAIN</strong>。</p>
-     * @param EnumValue <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，必定命中请求中 EnumValues 的某个值。 若 VLM 输出无法匹配任何枚举值，则返回 <strong>UNCERTAIN</strong>。</p>
+     * Set <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，取值对应请求中配置的 EnumValues。</p>
+     * @param EnumValue <p>枚举模式下的推理结果值。当 OutputMode=enum 时返回，取值对应请求中配置的 EnumValues。</p>
      */
     public void setEnumValue(String EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get <p>文本模式下的推理结果值。当 OutputMode=string 时返回。 若 VLM 无法得出结论，则返回 <strong>UNCERTAIN</strong>。</p> 
-     * @return TextValue <p>文本模式下的推理结果值。当 OutputMode=string 时返回。 若 VLM 无法得出结论，则返回 <strong>UNCERTAIN</strong>。</p>
+     * Get <p>文本模式下的推理结果值。当 OutputMode=string 时返回，以文本形式描述推理结论。</p> 
+     * @return TextValue <p>文本模式下的推理结果值。当 OutputMode=string 时返回，以文本形式描述推理结论。</p>
      */
     public String getTextValue() {
         return this.TextValue;
     }
 
     /**
-     * Set <p>文本模式下的推理结果值。当 OutputMode=string 时返回。 若 VLM 无法得出结论，则返回 <strong>UNCERTAIN</strong>。</p>
-     * @param TextValue <p>文本模式下的推理结果值。当 OutputMode=string 时返回。 若 VLM 无法得出结论，则返回 <strong>UNCERTAIN</strong>。</p>
+     * Set <p>文本模式下的推理结果值。当 OutputMode=string 时返回，以文本形式描述推理结论。</p>
+     * @param TextValue <p>文本模式下的推理结果值。当 OutputMode=string 时返回，以文本形式描述推理结论。</p>
      */
     public void setTextValue(String TextValue) {
         this.TextValue = TextValue;
     }
 
     /**
-     * Get <p>VLM 原始输出文本（未经过结构化校验）。</p> 
-     * @return RawOutput <p>VLM 原始输出文本（未经过结构化校验）。</p>
+     * Get <p>VLM 原始输出文本（未经过结构化校验）。该字段仅用于调试，生产环境可忽略。</p> 
+     * @return RawOutput <p>VLM 原始输出文本（未经过结构化校验）。该字段仅用于调试，生产环境可忽略。</p>
      */
     public String getRawOutput() {
         return this.RawOutput;
     }
 
     /**
-     * Set <p>VLM 原始输出文本（未经过结构化校验）。</p>
-     * @param RawOutput <p>VLM 原始输出文本（未经过结构化校验）。</p>
+     * Set <p>VLM 原始输出文本（未经过结构化校验）。该字段仅用于调试，生产环境可忽略。</p>
+     * @param RawOutput <p>VLM 原始输出文本（未经过结构化校验）。该字段仅用于调试，生产环境可忽略。</p>
      */
     public void setRawOutput(String RawOutput) {
         this.RawOutput = RawOutput;
     }
 
     /**
-     * Get <p>变量替换后的实际 Prompt（脱敏后）。</p> 
-     * @return RenderedPrompt <p>变量替换后的实际 Prompt（脱敏后）。</p>
+     * Get <p>变量替换后的用户 Prompt 文本。该字段仅用于调试，生产环境可忽略。</p> 
+     * @return RenderedPrompt <p>变量替换后的用户 Prompt 文本。该字段仅用于调试，生产环境可忽略。</p>
      */
     public String getRenderedPrompt() {
         return this.RenderedPrompt;
     }
 
     /**
-     * Set <p>变量替换后的实际 Prompt（脱敏后）。</p>
-     * @param RenderedPrompt <p>变量替换后的实际 Prompt（脱敏后）。</p>
+     * Set <p>变量替换后的用户 Prompt 文本。该字段仅用于调试，生产环境可忽略。</p>
+     * @param RenderedPrompt <p>变量替换后的用户 Prompt 文本。该字段仅用于调试，生产环境可忽略。</p>
      */
     public void setRenderedPrompt(String RenderedPrompt) {
         this.RenderedPrompt = RenderedPrompt;

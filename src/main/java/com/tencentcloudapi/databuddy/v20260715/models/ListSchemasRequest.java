@@ -66,6 +66,13 @@ public class ListSchemasRequest extends AbstractModel {
     private String ConnectionId;
 
     /**
+    * 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+    */
+    @SerializedName("CatalogSource")
+    @Expose
+    private String CatalogSource;
+
+    /**
      * Get <p>数据目录名</p> 
      * @return CatalogName <p>数据目录名</p>
      */
@@ -161,6 +168,22 @@ public class ListSchemasRequest extends AbstractModel {
         this.ConnectionId = ConnectionId;
     }
 
+    /**
+     * Get 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。 
+     * @return CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     */
+    public String getCatalogSource() {
+        return this.CatalogSource;
+    }
+
+    /**
+     * Set 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * @param CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     */
+    public void setCatalogSource(String CatalogSource) {
+        this.CatalogSource = CatalogSource;
+    }
+
     public ListSchemasRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ListSchemasRequest extends AbstractModel {
         if (source.ConnectionId != null) {
             this.ConnectionId = new String(source.ConnectionId);
         }
+        if (source.CatalogSource != null) {
+            this.CatalogSource = new String(source.CatalogSource);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ListSchemasRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
         this.setParamObj(map, prefix + "FetchOption.", this.FetchOption);
         this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
+        this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
 
     }
 }

@@ -103,6 +103,14 @@ public class FileConfig extends AbstractModel {
     private String ClusterId;
 
     /**
+    * <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultCatalogSource")
+    @Expose
+    private String DefaultCatalogSource;
+
+    /**
      * Get <p>高级运行参数，变量替换用，map-json String,String</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Params <p>高级运行参数，变量替换用，map-json String,String</p>
@@ -298,6 +306,26 @@ public class FileConfig extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultCatalogSource <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultCatalogSource() {
+        return this.DefaultCatalogSource;
+    }
+
+    /**
+     * Set <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultCatalogSource <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultCatalogSource(String DefaultCatalogSource) {
+        this.DefaultCatalogSource = DefaultCatalogSource;
+    }
+
     public FileConfig() {
     }
 
@@ -339,6 +367,9 @@ public class FileConfig extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.DefaultCatalogSource != null) {
+            this.DefaultCatalogSource = new String(source.DefaultCatalogSource);
+        }
     }
 
 
@@ -356,6 +387,7 @@ public class FileConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "OutputConf.", this.OutputConf);
         this.setParamSimple(map, prefix + "SqlSyntax", this.SqlSyntax);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "DefaultCatalogSource", this.DefaultCatalogSource);
 
     }
 }

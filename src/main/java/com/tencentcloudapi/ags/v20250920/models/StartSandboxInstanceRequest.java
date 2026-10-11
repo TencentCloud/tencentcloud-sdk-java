@@ -38,6 +38,13 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     private String ToolName;
 
     /**
+    * <p>待克隆的源沙箱 ID</p>
+    */
+    @SerializedName("SourceInstanceId")
+    @Expose
+    private String SourceInstanceId;
+
+    /**
     * <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
     */
     @SerializedName("Timeout")
@@ -109,6 +116,22 @@ public class StartSandboxInstanceRequest extends AbstractModel {
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;
+    }
+
+    /**
+     * Get <p>待克隆的源沙箱 ID</p> 
+     * @return SourceInstanceId <p>待克隆的源沙箱 ID</p>
+     */
+    public String getSourceInstanceId() {
+        return this.SourceInstanceId;
+    }
+
+    /**
+     * Set <p>待克隆的源沙箱 ID</p>
+     * @param SourceInstanceId <p>待克隆的源沙箱 ID</p>
+     */
+    public void setSourceInstanceId(String SourceInstanceId) {
+        this.SourceInstanceId = SourceInstanceId;
     }
 
     /**
@@ -221,6 +244,9 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         if (source.ToolName != null) {
             this.ToolName = new String(source.ToolName);
         }
+        if (source.SourceInstanceId != null) {
+            this.SourceInstanceId = new String(source.SourceInstanceId);
+        }
         if (source.Timeout != null) {
             this.Timeout = new String(source.Timeout);
         }
@@ -254,6 +280,7 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ToolId", this.ToolId);
         this.setParamSimple(map, prefix + "ToolName", this.ToolName);
+        this.setParamSimple(map, prefix + "SourceInstanceId", this.SourceInstanceId);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);

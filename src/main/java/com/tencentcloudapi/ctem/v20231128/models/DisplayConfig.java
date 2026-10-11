@@ -122,6 +122,20 @@ public class DisplayConfig extends AbstractModel {
     private Long AggregationCount;
 
     /**
+    * <p>状态</p>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * <p>最近检测时间</p>
+    */
+    @SerializedName("LastCheckTime")
+    @Expose
+    private String LastCheckTime;
+
+    /**
      * Get <p>主键Id</p> 
      * @return Id <p>主键Id</p>
      */
@@ -345,6 +359,38 @@ public class DisplayConfig extends AbstractModel {
         this.AggregationCount = AggregationCount;
     }
 
+    /**
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get <p>最近检测时间</p> 
+     * @return LastCheckTime <p>最近检测时间</p>
+     */
+    public String getLastCheckTime() {
+        return this.LastCheckTime;
+    }
+
+    /**
+     * Set <p>最近检测时间</p>
+     * @param LastCheckTime <p>最近检测时间</p>
+     */
+    public void setLastCheckTime(String LastCheckTime) {
+        this.LastCheckTime = LastCheckTime;
+    }
+
     public DisplayConfig() {
     }
 
@@ -395,6 +441,12 @@ public class DisplayConfig extends AbstractModel {
         if (source.AggregationCount != null) {
             this.AggregationCount = new Long(source.AggregationCount);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.LastCheckTime != null) {
+            this.LastCheckTime = new String(source.LastCheckTime);
+        }
     }
 
 
@@ -416,6 +468,8 @@ public class DisplayConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
         this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
         this.setParamSimple(map, prefix + "AggregationCount", this.AggregationCount);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
 
     }
 }

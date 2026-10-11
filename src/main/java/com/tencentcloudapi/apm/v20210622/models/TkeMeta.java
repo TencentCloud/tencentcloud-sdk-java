@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class TkeMeta extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * pod name
+    * <p>pod name</p>
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * 命名空间
+    * <p>命名空间</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 工作负载
+    * <p>工作负载</p>
     */
     @SerializedName("Deployment")
     @Expose
     private String Deployment;
 
     /**
-    * pod ip
+    * <p>pod ip</p>
     */
     @SerializedName("PodIP")
     @Expose
     private String PodIP;
 
     /**
-    * node ip
+    * <p>node ip</p>
     */
     @SerializedName("NodeIP")
     @Expose
     private String NodeIP;
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterID <p>集群ID</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterID <p>集群ID</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get pod name 
-     * @return PodName pod name
+     * Get <p>pod name</p> 
+     * @return PodName <p>pod name</p>
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set pod name
-     * @param PodName pod name
+     * Set <p>pod name</p>
+     * @param PodName <p>pod name</p>
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get 命名空间 
-     * @return Namespace 命名空间
+     * Get <p>命名空间</p> 
+     * @return Namespace <p>命名空间</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间
-     * @param Namespace 命名空间
+     * Set <p>命名空间</p>
+     * @param Namespace <p>命名空间</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 工作负载 
-     * @return Deployment 工作负载
+     * Get <p>工作负载</p> 
+     * @return Deployment <p>工作负载</p>
      */
     public String getDeployment() {
         return this.Deployment;
     }
 
     /**
-     * Set 工作负载
-     * @param Deployment 工作负载
+     * Set <p>工作负载</p>
+     * @param Deployment <p>工作负载</p>
      */
     public void setDeployment(String Deployment) {
         this.Deployment = Deployment;
     }
 
     /**
-     * Get pod ip 
-     * @return PodIP pod ip
+     * Get <p>pod ip</p> 
+     * @return PodIP <p>pod ip</p>
      */
     public String getPodIP() {
         return this.PodIP;
     }
 
     /**
-     * Set pod ip
-     * @param PodIP pod ip
+     * Set <p>pod ip</p>
+     * @param PodIP <p>pod ip</p>
      */
     public void setPodIP(String PodIP) {
         this.PodIP = PodIP;
     }
 
     /**
-     * Get node ip 
-     * @return NodeIP node ip
+     * Get <p>node ip</p> 
+     * @return NodeIP <p>node ip</p>
      */
     public String getNodeIP() {
         return this.NodeIP;
     }
 
     /**
-     * Set node ip
-     * @param NodeIP node ip
+     * Set <p>node ip</p>
+     * @param NodeIP <p>node ip</p>
      */
     public void setNodeIP(String NodeIP) {
         this.NodeIP = NodeIP;

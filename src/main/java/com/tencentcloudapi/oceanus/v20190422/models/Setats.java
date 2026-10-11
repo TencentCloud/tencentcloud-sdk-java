@@ -176,6 +176,22 @@ public class Setats extends AbstractModel {
     private Long IsolationPolicyVersion;
 
     /**
+    * <p>安全组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * <p>网络信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CCNs")
+    @Expose
+    private CCN [] CCNs;
+
+    /**
      * Get <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetatsSerialId <p>setats serialId</p>
@@ -543,6 +559,46 @@ public class Setats extends AbstractModel {
         this.IsolationPolicyVersion = IsolationPolicyVersion;
     }
 
+    /**
+     * Get <p>安全组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupIds <p>安全组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set <p>安全组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupIds <p>安全组信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get <p>网络信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CCNs <p>网络信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CCN [] getCCNs() {
+        return this.CCNs;
+    }
+
+    /**
+     * Set <p>网络信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CCNs <p>网络信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCCNs(CCN [] CCNs) {
+        this.CCNs = CCNs;
+    }
+
     public Setats() {
     }
 
@@ -614,6 +670,18 @@ public class Setats extends AbstractModel {
         if (source.IsolationPolicyVersion != null) {
             this.IsolationPolicyVersion = new Long(source.IsolationPolicyVersion);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.CCNs != null) {
+            this.CCNs = new CCN[source.CCNs.length];
+            for (int i = 0; i < source.CCNs.length; i++) {
+                this.CCNs[i] = new CCN(source.CCNs[i]);
+            }
+        }
     }
 
 
@@ -641,6 +709,8 @@ public class Setats extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArrayObj(map, prefix + "CCNs.", this.CCNs);
 
     }
 }

@@ -38,13 +38,6 @@ public class CreateSchemaRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 描述
-    */
-    @SerializedName("Comment")
-    @Expose
-    private String Comment;
-
-    /**
     * 调用时所在workspace唯一id
     */
     @SerializedName("WorkspaceId")
@@ -52,11 +45,25 @@ public class CreateSchemaRequest extends AbstractModel {
     private String WorkspaceId;
 
     /**
+    * 描述
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
     * 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
     */
     @SerializedName("ConnectionId")
     @Expose
     private String ConnectionId;
+
+    /**
+    * 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+    */
+    @SerializedName("CatalogSource")
+    @Expose
+    private String CatalogSource;
 
     /**
      * Get catalog名称 
@@ -91,22 +98,6 @@ public class CreateSchemaRequest extends AbstractModel {
     }
 
     /**
-     * Get 描述 
-     * @return Comment 描述
-     */
-    public String getComment() {
-        return this.Comment;
-    }
-
-    /**
-     * Set 描述
-     * @param Comment 描述
-     */
-    public void setComment(String Comment) {
-        this.Comment = Comment;
-    }
-
-    /**
      * Get 调用时所在workspace唯一id 
      * @return WorkspaceId 调用时所在workspace唯一id
      */
@@ -120,6 +111,22 @@ public class CreateSchemaRequest extends AbstractModel {
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get 描述 
+     * @return Comment 描述
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 描述
+     * @param Comment 描述
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
     }
 
     /**
@@ -138,6 +145,22 @@ public class CreateSchemaRequest extends AbstractModel {
         this.ConnectionId = ConnectionId;
     }
 
+    /**
+     * Get 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。 
+     * @return CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     */
+    public String getCatalogSource() {
+        return this.CatalogSource;
+    }
+
+    /**
+     * Set 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * @param CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     */
+    public void setCatalogSource(String CatalogSource) {
+        this.CatalogSource = CatalogSource;
+    }
+
     public CreateSchemaRequest() {
     }
 
@@ -152,14 +175,17 @@ public class CreateSchemaRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Comment != null) {
-            this.Comment = new String(source.Comment);
-        }
         if (source.WorkspaceId != null) {
             this.WorkspaceId = new String(source.WorkspaceId);
         }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
         if (source.ConnectionId != null) {
             this.ConnectionId = new String(source.ConnectionId);
+        }
+        if (source.CatalogSource != null) {
+            this.CatalogSource = new String(source.CatalogSource);
         }
     }
 
@@ -170,9 +196,10 @@ public class CreateSchemaRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
+        this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
 
     }
 }

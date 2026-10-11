@@ -31,7 +31,7 @@ public class ExpandCapacityRequest extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * 新增扩容的系统容量
+    * 新增扩容的系统容量(单位 GiB)
     */
     @SerializedName("ExpandedCapacity")
     @Expose
@@ -43,6 +43,13 @@ public class ExpandCapacityRequest extends AbstractModel {
     @SerializedName("ModifyType")
     @Expose
     private String ModifyType;
+
+    /**
+    * 是否是快速扩容,只针对部分model有效
+    */
+    @SerializedName("RapidExpansion")
+    @Expose
+    private Boolean RapidExpansion;
 
     /**
      * Get 文件系统ID 
@@ -61,16 +68,16 @@ public class ExpandCapacityRequest extends AbstractModel {
     }
 
     /**
-     * Get 新增扩容的系统容量 
-     * @return ExpandedCapacity 新增扩容的系统容量
+     * Get 新增扩容的系统容量(单位 GiB) 
+     * @return ExpandedCapacity 新增扩容的系统容量(单位 GiB)
      */
     public Long getExpandedCapacity() {
         return this.ExpandedCapacity;
     }
 
     /**
-     * Set 新增扩容的系统容量
-     * @param ExpandedCapacity 新增扩容的系统容量
+     * Set 新增扩容的系统容量(单位 GiB)
+     * @param ExpandedCapacity 新增扩容的系统容量(单位 GiB)
      */
     public void setExpandedCapacity(Long ExpandedCapacity) {
         this.ExpandedCapacity = ExpandedCapacity;
@@ -92,6 +99,22 @@ public class ExpandCapacityRequest extends AbstractModel {
         this.ModifyType = ModifyType;
     }
 
+    /**
+     * Get 是否是快速扩容,只针对部分model有效 
+     * @return RapidExpansion 是否是快速扩容,只针对部分model有效
+     */
+    public Boolean getRapidExpansion() {
+        return this.RapidExpansion;
+    }
+
+    /**
+     * Set 是否是快速扩容,只针对部分model有效
+     * @param RapidExpansion 是否是快速扩容,只针对部分model有效
+     */
+    public void setRapidExpansion(Boolean RapidExpansion) {
+        this.RapidExpansion = RapidExpansion;
+    }
+
     public ExpandCapacityRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ExpandCapacityRequest extends AbstractModel {
         if (source.ModifyType != null) {
             this.ModifyType = new String(source.ModifyType);
         }
+        if (source.RapidExpansion != null) {
+            this.RapidExpansion = new Boolean(source.RapidExpansion);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ExpandCapacityRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "ExpandedCapacity", this.ExpandedCapacity);
         this.setParamSimple(map, prefix + "ModifyType", this.ModifyType);
+        this.setParamSimple(map, prefix + "RapidExpansion", this.RapidExpansion);
 
     }
 }

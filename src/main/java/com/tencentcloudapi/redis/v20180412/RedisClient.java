@@ -1328,6 +1328,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（UpgradeInstanceProductVersion）用于升级实例类型，可从通用 I 型升级到通用 II 型。
+     * @param req UpgradeInstanceProductVersionRequest
+     * @return UpgradeInstanceProductVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersion(UpgradeInstanceProductVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeInstanceProductVersion", UpgradeInstanceProductVersionResponse.class);
+    }
+
+    /**
      *本接口（UpgradeInstanceVersion）用于将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
      * @param req UpgradeInstanceVersionRequest
      * @return UpgradeInstanceVersionResponse

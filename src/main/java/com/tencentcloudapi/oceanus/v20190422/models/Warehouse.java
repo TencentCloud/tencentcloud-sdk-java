@@ -103,6 +103,14 @@ public class Warehouse extends AbstractModel {
     private Long HiveCatalogType;
 
     /**
+    * <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageSerialId")
+    @Expose
+    private String StorageSerialId;
+
+    /**
      * Get <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
@@ -298,6 +306,26 @@ public class Warehouse extends AbstractModel {
         this.HiveCatalogType = HiveCatalogType;
     }
 
+    /**
+     * Get <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageSerialId <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageSerialId() {
+        return this.StorageSerialId;
+    }
+
+    /**
+     * Set <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageSerialId <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageSerialId(String StorageSerialId) {
+        this.StorageSerialId = StorageSerialId;
+    }
+
     public Warehouse() {
     }
 
@@ -342,6 +370,9 @@ public class Warehouse extends AbstractModel {
         if (source.HiveCatalogType != null) {
             this.HiveCatalogType = new Long(source.HiveCatalogType);
         }
+        if (source.StorageSerialId != null) {
+            this.StorageSerialId = new String(source.StorageSerialId);
+        }
     }
 
 
@@ -359,6 +390,7 @@ public class Warehouse extends AbstractModel {
         this.setParamSimple(map, prefix + "HiveUri", this.HiveUri);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "HiveCatalogType", this.HiveCatalogType);
+        this.setParamSimple(map, prefix + "StorageSerialId", this.StorageSerialId);
 
     }
 }

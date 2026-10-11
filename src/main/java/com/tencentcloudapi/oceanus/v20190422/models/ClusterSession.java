@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class ClusterSession extends AbstractModel {
 
     /**
-    * 集群SerialId
+    * <p>集群SerialId</p>
     */
     @SerializedName("ClusterGroupSerialId")
     @Expose
     private String ClusterGroupSerialId;
 
     /**
-    * 创建者appId
+    * <p>创建者appId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 创建者主账号
+    * <p>创建者主账号</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 创建者账号
+    * <p>创建者账号</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private String CreatorUin;
 
     /**
-    * 区域
+    * <p>区域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * zone
+    * <p>zone</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Session集群状态
+    * <p>Session集群状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Session集群消耗的cu数量
+    * <p>Session集群消耗的cu数量</p>
     */
     @SerializedName("CuNum")
     @Expose
     private Float CuNum;
 
     /**
-    * Session集群的Flink版本
+    * <p>Session集群的Flink版本</p>
     */
     @SerializedName("FlinkVersion")
     @Expose
     private String FlinkVersion;
 
     /**
-    * session集群FlinkUi地址
+    * <p>session集群FlinkUi地址</p>
     */
     @SerializedName("WebUIUrl")
     @Expose
     private String WebUIUrl;
 
     /**
-    * session集群高级参数
+    * <p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -102,7 +102,7 @@ public class ClusterSession extends AbstractModel {
     private Property [] Properties;
 
     /**
-    * 引用资源
+    * <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRefs")
@@ -110,239 +110,327 @@ public class ClusterSession extends AbstractModel {
     private SessionClusterRefItem [] ResourceRefs;
 
     /**
-    * JobManager的规格
+    * <p>JobManager的规格</p>
     */
     @SerializedName("JobManagerCuSpec")
     @Expose
     private Float JobManagerCuSpec;
 
     /**
-    * TaskManager的规格
+    * <p>TaskManager的规格</p>
     */
     @SerializedName("TaskManagerCuSpec")
     @Expose
     private Float TaskManagerCuSpec;
 
     /**
-    * TaskManager启动的数量
+    * <p>TaskManager启动的数量</p>
     */
     @SerializedName("TaskManagerNum")
     @Expose
     private Long TaskManagerNum;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * JobManagerCpu
+    * <p>JobManagerCpu</p>
     */
     @SerializedName("JobManagerCpu")
     @Expose
     private Float JobManagerCpu;
 
     /**
-    * JobManagerMem
+    * <p>JobManagerMem</p>
     */
     @SerializedName("JobManagerMem")
     @Expose
     private Float JobManagerMem;
 
     /**
-    * TaskManagerCpu
+    * <p>TaskManagerCpu</p>
     */
     @SerializedName("TaskManagerCpu")
     @Expose
     private Float TaskManagerCpu;
 
     /**
-    * TaskManagerMem
+    * <p>TaskManagerMem</p>
     */
     @SerializedName("TaskManagerMem")
     @Expose
     private Float TaskManagerMem;
 
     /**
-    * jdk版本
+    * <p>jdk版本</p>
     */
     @SerializedName("JdkVersion")
     @Expose
     private String JdkVersion;
 
     /**
-     * Get 集群SerialId 
-     * @return ClusterGroupSerialId 集群SerialId
+    * <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * <p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SerialId")
+    @Expose
+    private String SerialId;
+
+    /**
+    * <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterGroupName")
+    @Expose
+    private String ClusterGroupName;
+
+    /**
+    * <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCpu")
+    @Expose
+    private Float TotalCpu;
+
+    /**
+    * <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalMem")
+    @Expose
+    private Float TotalMem;
+
+    /**
+    * <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
+    * <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkSpaceName")
+    @Expose
+    private String WorkSpaceName;
+
+    /**
+    * <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogConfig")
+    @Expose
+    private String LogConfig;
+
+    /**
+    * <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateUin")
+    @Expose
+    private String UpdateUin;
+
+    /**
+     * Get <p>集群SerialId</p> 
+     * @return ClusterGroupSerialId <p>集群SerialId</p>
      */
     public String getClusterGroupSerialId() {
         return this.ClusterGroupSerialId;
     }
 
     /**
-     * Set 集群SerialId
-     * @param ClusterGroupSerialId 集群SerialId
+     * Set <p>集群SerialId</p>
+     * @param ClusterGroupSerialId <p>集群SerialId</p>
      */
     public void setClusterGroupSerialId(String ClusterGroupSerialId) {
         this.ClusterGroupSerialId = ClusterGroupSerialId;
     }
 
     /**
-     * Get 创建者appId 
-     * @return AppId 创建者appId
+     * Get <p>创建者appId</p> 
+     * @return AppId <p>创建者appId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 创建者appId
-     * @param AppId 创建者appId
+     * Set <p>创建者appId</p>
+     * @param AppId <p>创建者appId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 创建者主账号 
-     * @return OwnerUin 创建者主账号
+     * Get <p>创建者主账号</p> 
+     * @return OwnerUin <p>创建者主账号</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 创建者主账号
-     * @param OwnerUin 创建者主账号
+     * Set <p>创建者主账号</p>
+     * @param OwnerUin <p>创建者主账号</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 创建者账号 
-     * @return CreatorUin 创建者账号
+     * Get <p>创建者账号</p> 
+     * @return CreatorUin <p>创建者账号</p>
      */
     public String getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 创建者账号
-     * @param CreatorUin 创建者账号
+     * Set <p>创建者账号</p>
+     * @param CreatorUin <p>创建者账号</p>
      */
     public void setCreatorUin(String CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get 区域 
-     * @return Region 区域
+     * Get <p>区域</p> 
+     * @return Region <p>区域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 区域
-     * @param Region 区域
+     * Set <p>区域</p>
+     * @param Region <p>区域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get zone 
-     * @return Zone zone
+     * Get <p>zone</p> 
+     * @return Zone <p>zone</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set zone
-     * @param Zone zone
+     * Set <p>zone</p>
+     * @param Zone <p>zone</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Session集群状态 
-     * @return Status Session集群状态
+     * Get <p>Session集群状态</p> 
+     * @return Status <p>Session集群状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Session集群状态
-     * @param Status Session集群状态
+     * Set <p>Session集群状态</p>
+     * @param Status <p>Session集群状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Session集群消耗的cu数量 
-     * @return CuNum Session集群消耗的cu数量
+     * Get <p>Session集群消耗的cu数量</p> 
+     * @return CuNum <p>Session集群消耗的cu数量</p>
      */
     public Float getCuNum() {
         return this.CuNum;
     }
 
     /**
-     * Set Session集群消耗的cu数量
-     * @param CuNum Session集群消耗的cu数量
+     * Set <p>Session集群消耗的cu数量</p>
+     * @param CuNum <p>Session集群消耗的cu数量</p>
      */
     public void setCuNum(Float CuNum) {
         this.CuNum = CuNum;
     }
 
     /**
-     * Get Session集群的Flink版本 
-     * @return FlinkVersion Session集群的Flink版本
+     * Get <p>Session集群的Flink版本</p> 
+     * @return FlinkVersion <p>Session集群的Flink版本</p>
      */
     public String getFlinkVersion() {
         return this.FlinkVersion;
     }
 
     /**
-     * Set Session集群的Flink版本
-     * @param FlinkVersion Session集群的Flink版本
+     * Set <p>Session集群的Flink版本</p>
+     * @param FlinkVersion <p>Session集群的Flink版本</p>
      */
     public void setFlinkVersion(String FlinkVersion) {
         this.FlinkVersion = FlinkVersion;
     }
 
     /**
-     * Get session集群FlinkUi地址 
-     * @return WebUIUrl session集群FlinkUi地址
+     * Get <p>session集群FlinkUi地址</p> 
+     * @return WebUIUrl <p>session集群FlinkUi地址</p>
      */
     public String getWebUIUrl() {
         return this.WebUIUrl;
     }
 
     /**
-     * Set session集群FlinkUi地址
-     * @param WebUIUrl session集群FlinkUi地址
+     * Set <p>session集群FlinkUi地址</p>
+     * @param WebUIUrl <p>session集群FlinkUi地址</p>
      */
     public void setWebUIUrl(String WebUIUrl) {
         this.WebUIUrl = WebUIUrl;
     }
 
     /**
-     * Get session集群高级参数
+     * Get <p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties session集群高级参数
+     * @return Properties <p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Property [] getProperties() {
@@ -350,9 +438,9 @@ public class ClusterSession extends AbstractModel {
     }
 
     /**
-     * Set session集群高级参数
+     * Set <p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties session集群高级参数
+     * @param Properties <p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(Property [] Properties) {
@@ -360,9 +448,9 @@ public class ClusterSession extends AbstractModel {
     }
 
     /**
-     * Get 引用资源
+     * Get <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceRefs 引用资源
+     * @return ResourceRefs <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SessionClusterRefItem [] getResourceRefs() {
@@ -370,9 +458,9 @@ public class ClusterSession extends AbstractModel {
     }
 
     /**
-     * Set 引用资源
+     * Set <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceRefs 引用资源
+     * @param ResourceRefs <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRefs(SessionClusterRefItem [] ResourceRefs) {
@@ -380,163 +468,383 @@ public class ClusterSession extends AbstractModel {
     }
 
     /**
-     * Get JobManager的规格 
-     * @return JobManagerCuSpec JobManager的规格
+     * Get <p>JobManager的规格</p> 
+     * @return JobManagerCuSpec <p>JobManager的规格</p>
      */
     public Float getJobManagerCuSpec() {
         return this.JobManagerCuSpec;
     }
 
     /**
-     * Set JobManager的规格
-     * @param JobManagerCuSpec JobManager的规格
+     * Set <p>JobManager的规格</p>
+     * @param JobManagerCuSpec <p>JobManager的规格</p>
      */
     public void setJobManagerCuSpec(Float JobManagerCuSpec) {
         this.JobManagerCuSpec = JobManagerCuSpec;
     }
 
     /**
-     * Get TaskManager的规格 
-     * @return TaskManagerCuSpec TaskManager的规格
+     * Get <p>TaskManager的规格</p> 
+     * @return TaskManagerCuSpec <p>TaskManager的规格</p>
      */
     public Float getTaskManagerCuSpec() {
         return this.TaskManagerCuSpec;
     }
 
     /**
-     * Set TaskManager的规格
-     * @param TaskManagerCuSpec TaskManager的规格
+     * Set <p>TaskManager的规格</p>
+     * @param TaskManagerCuSpec <p>TaskManager的规格</p>
      */
     public void setTaskManagerCuSpec(Float TaskManagerCuSpec) {
         this.TaskManagerCuSpec = TaskManagerCuSpec;
     }
 
     /**
-     * Get TaskManager启动的数量 
-     * @return TaskManagerNum TaskManager启动的数量
+     * Get <p>TaskManager启动的数量</p> 
+     * @return TaskManagerNum <p>TaskManager启动的数量</p>
      */
     public Long getTaskManagerNum() {
         return this.TaskManagerNum;
     }
 
     /**
-     * Set TaskManager启动的数量
-     * @param TaskManagerNum TaskManager启动的数量
+     * Set <p>TaskManager启动的数量</p>
+     * @param TaskManagerNum <p>TaskManager启动的数量</p>
      */
     public void setTaskManagerNum(Long TaskManagerNum) {
         this.TaskManagerNum = TaskManagerNum;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get JobManagerCpu 
-     * @return JobManagerCpu JobManagerCpu
+     * Get <p>JobManagerCpu</p> 
+     * @return JobManagerCpu <p>JobManagerCpu</p>
      */
     public Float getJobManagerCpu() {
         return this.JobManagerCpu;
     }
 
     /**
-     * Set JobManagerCpu
-     * @param JobManagerCpu JobManagerCpu
+     * Set <p>JobManagerCpu</p>
+     * @param JobManagerCpu <p>JobManagerCpu</p>
      */
     public void setJobManagerCpu(Float JobManagerCpu) {
         this.JobManagerCpu = JobManagerCpu;
     }
 
     /**
-     * Get JobManagerMem 
-     * @return JobManagerMem JobManagerMem
+     * Get <p>JobManagerMem</p> 
+     * @return JobManagerMem <p>JobManagerMem</p>
      */
     public Float getJobManagerMem() {
         return this.JobManagerMem;
     }
 
     /**
-     * Set JobManagerMem
-     * @param JobManagerMem JobManagerMem
+     * Set <p>JobManagerMem</p>
+     * @param JobManagerMem <p>JobManagerMem</p>
      */
     public void setJobManagerMem(Float JobManagerMem) {
         this.JobManagerMem = JobManagerMem;
     }
 
     /**
-     * Get TaskManagerCpu 
-     * @return TaskManagerCpu TaskManagerCpu
+     * Get <p>TaskManagerCpu</p> 
+     * @return TaskManagerCpu <p>TaskManagerCpu</p>
      */
     public Float getTaskManagerCpu() {
         return this.TaskManagerCpu;
     }
 
     /**
-     * Set TaskManagerCpu
-     * @param TaskManagerCpu TaskManagerCpu
+     * Set <p>TaskManagerCpu</p>
+     * @param TaskManagerCpu <p>TaskManagerCpu</p>
      */
     public void setTaskManagerCpu(Float TaskManagerCpu) {
         this.TaskManagerCpu = TaskManagerCpu;
     }
 
     /**
-     * Get TaskManagerMem 
-     * @return TaskManagerMem TaskManagerMem
+     * Get <p>TaskManagerMem</p> 
+     * @return TaskManagerMem <p>TaskManagerMem</p>
      */
     public Float getTaskManagerMem() {
         return this.TaskManagerMem;
     }
 
     /**
-     * Set TaskManagerMem
-     * @param TaskManagerMem TaskManagerMem
+     * Set <p>TaskManagerMem</p>
+     * @param TaskManagerMem <p>TaskManagerMem</p>
      */
     public void setTaskManagerMem(Float TaskManagerMem) {
         this.TaskManagerMem = TaskManagerMem;
     }
 
     /**
-     * Get jdk版本 
-     * @return JdkVersion jdk版本
+     * Get <p>jdk版本</p> 
+     * @return JdkVersion <p>jdk版本</p>
      */
     public String getJdkVersion() {
         return this.JdkVersion;
     }
 
     /**
-     * Set jdk版本
-     * @param JdkVersion jdk版本
+     * Set <p>jdk版本</p>
+     * @param JdkVersion <p>jdk版本</p>
      */
     public void setJdkVersion(String JdkVersion) {
         this.JdkVersion = JdkVersion;
+    }
+
+    /**
+     * Get <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get <p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name <p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name <p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SerialId <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSerialId() {
+        return this.SerialId;
+    }
+
+    /**
+     * Set <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SerialId <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSerialId(String SerialId) {
+        this.SerialId = SerialId;
+    }
+
+    /**
+     * Get <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterGroupName <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterGroupName() {
+        return this.ClusterGroupName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterGroupName <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterGroupName(String ClusterGroupName) {
+        this.ClusterGroupName = ClusterGroupName;
+    }
+
+    /**
+     * Get <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCpu <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTotalCpu() {
+        return this.TotalCpu;
+    }
+
+    /**
+     * Set <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCpu <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCpu(Float TotalCpu) {
+        this.TotalCpu = TotalCpu;
+    }
+
+    /**
+     * Get <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalMem <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTotalMem() {
+        return this.TotalMem;
+    }
+
+    /**
+     * Set <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalMem <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalMem(Float TotalMem) {
+        this.TotalMem = TotalMem;
+    }
+
+    /**
+     * Get <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkSpaceId <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkSpaceId <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
+    /**
+     * Get <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkSpaceName <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkSpaceName() {
+        return this.WorkSpaceName;
+    }
+
+    /**
+     * Set <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkSpaceName <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkSpaceName(String WorkSpaceName) {
+        this.WorkSpaceName = WorkSpaceName;
+    }
+
+    /**
+     * Get <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogConfig <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogConfig() {
+        return this.LogConfig;
+    }
+
+    /**
+     * Set <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogConfig <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogConfig(String LogConfig) {
+        this.LogConfig = LogConfig;
+    }
+
+    /**
+     * Get <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateUin <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateUin() {
+        return this.UpdateUin;
+    }
+
+    /**
+     * Set <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateUin <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateUin(String UpdateUin) {
+        this.UpdateUin = UpdateUin;
     }
 
     public ClusterSession() {
@@ -619,6 +927,42 @@ public class ClusterSession extends AbstractModel {
         if (source.JdkVersion != null) {
             this.JdkVersion = new String(source.JdkVersion);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SerialId != null) {
+            this.SerialId = new String(source.SerialId);
+        }
+        if (source.ClusterGroupName != null) {
+            this.ClusterGroupName = new String(source.ClusterGroupName);
+        }
+        if (source.TotalCpu != null) {
+            this.TotalCpu = new Float(source.TotalCpu);
+        }
+        if (source.TotalMem != null) {
+            this.TotalMem = new Float(source.TotalMem);
+        }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
+        if (source.WorkSpaceName != null) {
+            this.WorkSpaceName = new String(source.WorkSpaceName);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.LogConfig != null) {
+            this.LogConfig = new String(source.LogConfig);
+        }
+        if (source.UpdateUin != null) {
+            this.UpdateUin = new String(source.UpdateUin);
+        }
     }
 
 
@@ -648,6 +992,17 @@ public class ClusterSession extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
         this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
         this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SerialId", this.SerialId);
+        this.setParamSimple(map, prefix + "ClusterGroupName", this.ClusterGroupName);
+        this.setParamSimple(map, prefix + "TotalCpu", this.TotalCpu);
+        this.setParamSimple(map, prefix + "TotalMem", this.TotalMem);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LogConfig", this.LogConfig);
+        this.setParamSimple(map, prefix + "UpdateUin", this.UpdateUin);
 
     }
 }

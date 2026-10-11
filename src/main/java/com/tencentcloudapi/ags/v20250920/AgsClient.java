@@ -152,6 +152,18 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *创建沙箱快照
+该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
+     * @param req CreateSandboxSnapshotRequest
+     * @return CreateSandboxSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSandboxSnapshotResponse CreateSandboxSnapshot(CreateSandboxSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSandboxSnapshot", CreateSandboxSnapshotResponse.class);
+    }
+
+    /**
      *创建沙箱工具
      * @param req CreateSandboxToolRequest
      * @return CreateSandboxToolResponse
@@ -229,6 +241,18 @@ public class AgsClient extends AbstractClient{
     public DeleteRegistryRecordResponse DeleteRegistryRecord(DeleteRegistryRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRegistryRecord", DeleteRegistryRecordResponse.class);
+    }
+
+    /**
+     *删除沙箱快照
+该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
+     * @param req DeleteSandboxSnapshotRequest
+     * @return DeleteSandboxSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSandboxSnapshotResponse DeleteSandboxSnapshot(DeleteSandboxSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSandboxSnapshot", DeleteSandboxSnapshotResponse.class);
     }
 
     /**
@@ -408,6 +432,18 @@ public class AgsClient extends AbstractClient{
     public DescribeSandboxInstanceListResponse DescribeSandboxInstanceList(DescribeSandboxInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSandboxInstanceList", DescribeSandboxInstanceListResponse.class);
+    }
+
+    /**
+     *查询沙箱快照
+该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。请关注后续版本及变更说明，并根据需要调整调用代码。
+     * @param req DescribeSandboxSnapshotListRequest
+     * @return DescribeSandboxSnapshotListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxSnapshotListResponse DescribeSandboxSnapshotList(DescribeSandboxSnapshotListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxSnapshotList", DescribeSandboxSnapshotListResponse.class);
     }
 
     /**

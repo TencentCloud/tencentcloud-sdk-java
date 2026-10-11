@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class AlarmNotifyHistory extends AbstractModel {
 
     /**
-    * 通知的唯一ID
+    * <p>通知的唯一ID</p>
     */
     @SerializedName("NotifyId")
     @Expose
     private String NotifyId;
 
     /**
-    * 告警策略ID
+    * <p>告警策略ID</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 告警周期iD
+    * <p>告警周期iD</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 通知时间 unix秒级时间戳
+    * <p>通知时间 unix秒级时间戳</p>
     */
     @SerializedName("NotifyTime")
     @Expose
     private Long NotifyTime;
 
     /**
-    * 触发时间 unix秒级时间戳
+    * <p>触发时间 unix秒级时间戳</p>
     */
     @SerializedName("TriggerTime")
     @Expose
     private Long TriggerTime;
 
     /**
-    * 告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别
+    * <p>告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别</p>
     */
     @SerializedName("TriggerLevel")
     @Expose
     private String TriggerLevel;
 
     /**
-    * 告警内容
+    * <p>告警内容</p>
     */
     @SerializedName("AlarmContent")
     @Expose
     private String AlarmContent;
 
     /**
-    * 告警对象
+    * <p>告警对象</p>
     */
     @SerializedName("AlarmObject")
     @Expose
     private String AlarmObject;
 
     /**
-    * 本次告警通知涉及到的渠道合集
+    * <p>本次告警通知涉及到的渠道合集</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelSet")
@@ -88,193 +88,201 @@ public class AlarmNotifyHistory extends AbstractModel {
     private String [] ChannelSet;
 
     /**
-    * 渠道的接收人信息
+    * <p>渠道的接收人信息</p>
     */
     @SerializedName("ChannelsReceivers")
     @Expose
     private ChannelsReceivers [] ChannelsReceivers;
 
     /**
-    * 告警策略名称
+    * <p>告警策略名称</p>
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * Prometheus实例ID, 仅当 MT_PROME 时有效
+    * <p>Prometheus实例ID, 仅当 MT_PROME 时有效</p>
     */
     @SerializedName("PromeInstanceID")
     @Expose
     private String PromeInstanceID;
 
     /**
-    * Prometheus实例所在的地域, 仅当 MT_PROME 时有效
+    * <p>Prometheus实例所在的地域, 仅当 MT_PROME 时有效</p>
     */
     @SerializedName("PromeInstanceRegion")
     @Expose
     private String PromeInstanceRegion;
 
     /**
-    * 通知模板相关的配置信息
+    * <p>通知模板相关的配置信息</p>
     */
     @SerializedName("Notices")
     @Expose
     private NotifyRelatedNotice [] Notices;
 
     /**
-    * 告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复
+    * <p>告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复</p>
     */
     @SerializedName("TriggerStatus")
     @Expose
     private String TriggerStatus;
 
     /**
-    * 与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效
+    * <p>与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效</p>
     */
     @SerializedName("PromeConsoleURL")
     @Expose
     private String PromeConsoleURL;
 
     /**
-    * 告警的lable
+    * <p>告警的lable</p>
     */
     @SerializedName("Labels")
     @Expose
     private AlarmLable [] Labels;
 
     /**
-     * Get 通知的唯一ID 
-     * @return NotifyId 通知的唯一ID
+    * <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReceiverGroups")
+    @Expose
+    private ReceiverGroup [] ReceiverGroups;
+
+    /**
+     * Get <p>通知的唯一ID</p> 
+     * @return NotifyId <p>通知的唯一ID</p>
      */
     public String getNotifyId() {
         return this.NotifyId;
     }
 
     /**
-     * Set 通知的唯一ID
-     * @param NotifyId 通知的唯一ID
+     * Set <p>通知的唯一ID</p>
+     * @param NotifyId <p>通知的唯一ID</p>
      */
     public void setNotifyId(String NotifyId) {
         this.NotifyId = NotifyId;
     }
 
     /**
-     * Get 告警策略ID 
-     * @return PolicyId 告警策略ID
+     * Get <p>告警策略ID</p> 
+     * @return PolicyId <p>告警策略ID</p>
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID
-     * @param PolicyId 告警策略ID
+     * Set <p>告警策略ID</p>
+     * @param PolicyId <p>告警策略ID</p>
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 告警周期iD 
-     * @return SessionId 告警周期iD
+     * Get <p>告警周期iD</p> 
+     * @return SessionId <p>告警周期iD</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 告警周期iD
-     * @param SessionId 告警周期iD
+     * Set <p>告警周期iD</p>
+     * @param SessionId <p>告警周期iD</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 通知时间 unix秒级时间戳 
-     * @return NotifyTime 通知时间 unix秒级时间戳
+     * Get <p>通知时间 unix秒级时间戳</p> 
+     * @return NotifyTime <p>通知时间 unix秒级时间戳</p>
      */
     public Long getNotifyTime() {
         return this.NotifyTime;
     }
 
     /**
-     * Set 通知时间 unix秒级时间戳
-     * @param NotifyTime 通知时间 unix秒级时间戳
+     * Set <p>通知时间 unix秒级时间戳</p>
+     * @param NotifyTime <p>通知时间 unix秒级时间戳</p>
      */
     public void setNotifyTime(Long NotifyTime) {
         this.NotifyTime = NotifyTime;
     }
 
     /**
-     * Get 触发时间 unix秒级时间戳 
-     * @return TriggerTime 触发时间 unix秒级时间戳
+     * Get <p>触发时间 unix秒级时间戳</p> 
+     * @return TriggerTime <p>触发时间 unix秒级时间戳</p>
      */
     public Long getTriggerTime() {
         return this.TriggerTime;
     }
 
     /**
-     * Set 触发时间 unix秒级时间戳
-     * @param TriggerTime 触发时间 unix秒级时间戳
+     * Set <p>触发时间 unix秒级时间戳</p>
+     * @param TriggerTime <p>触发时间 unix秒级时间戳</p>
      */
     public void setTriggerTime(Long TriggerTime) {
         this.TriggerTime = TriggerTime;
     }
 
     /**
-     * Get 告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别 
-     * @return TriggerLevel 告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别
+     * Get <p>告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别</p> 
+     * @return TriggerLevel <p>告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别</p>
      */
     public String getTriggerLevel() {
         return this.TriggerLevel;
     }
 
     /**
-     * Set 告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别
-     * @param TriggerLevel 告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别
+     * Set <p>告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别</p>
+     * @param TriggerLevel <p>告警级别 None 非分级告警级别; Note 提示级别; Warn 严重级别; Serious 紧急级别</p>
      */
     public void setTriggerLevel(String TriggerLevel) {
         this.TriggerLevel = TriggerLevel;
     }
 
     /**
-     * Get 告警内容 
-     * @return AlarmContent 告警内容
+     * Get <p>告警内容</p> 
+     * @return AlarmContent <p>告警内容</p>
      */
     public String getAlarmContent() {
         return this.AlarmContent;
     }
 
     /**
-     * Set 告警内容
-     * @param AlarmContent 告警内容
+     * Set <p>告警内容</p>
+     * @param AlarmContent <p>告警内容</p>
      */
     public void setAlarmContent(String AlarmContent) {
         this.AlarmContent = AlarmContent;
     }
 
     /**
-     * Get 告警对象 
-     * @return AlarmObject 告警对象
+     * Get <p>告警对象</p> 
+     * @return AlarmObject <p>告警对象</p>
      */
     public String getAlarmObject() {
         return this.AlarmObject;
     }
 
     /**
-     * Set 告警对象
-     * @param AlarmObject 告警对象
+     * Set <p>告警对象</p>
+     * @param AlarmObject <p>告警对象</p>
      */
     public void setAlarmObject(String AlarmObject) {
         this.AlarmObject = AlarmObject;
     }
 
     /**
-     * Get 本次告警通知涉及到的渠道合集
+     * Get <p>本次告警通知涉及到的渠道合集</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelSet 本次告警通知涉及到的渠道合集
+     * @return ChannelSet <p>本次告警通知涉及到的渠道合集</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getChannelSet() {
@@ -282,9 +290,9 @@ public class AlarmNotifyHistory extends AbstractModel {
     }
 
     /**
-     * Set 本次告警通知涉及到的渠道合集
+     * Set <p>本次告警通知涉及到的渠道合集</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelSet 本次告警通知涉及到的渠道合集
+     * @param ChannelSet <p>本次告警通知涉及到的渠道合集</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelSet(String [] ChannelSet) {
@@ -292,131 +300,151 @@ public class AlarmNotifyHistory extends AbstractModel {
     }
 
     /**
-     * Get 渠道的接收人信息 
-     * @return ChannelsReceivers 渠道的接收人信息
+     * Get <p>渠道的接收人信息</p> 
+     * @return ChannelsReceivers <p>渠道的接收人信息</p>
      */
     public ChannelsReceivers [] getChannelsReceivers() {
         return this.ChannelsReceivers;
     }
 
     /**
-     * Set 渠道的接收人信息
-     * @param ChannelsReceivers 渠道的接收人信息
+     * Set <p>渠道的接收人信息</p>
+     * @param ChannelsReceivers <p>渠道的接收人信息</p>
      */
     public void setChannelsReceivers(ChannelsReceivers [] ChannelsReceivers) {
         this.ChannelsReceivers = ChannelsReceivers;
     }
 
     /**
-     * Get 告警策略名称 
-     * @return PolicyName 告警策略名称
+     * Get <p>告警策略名称</p> 
+     * @return PolicyName <p>告警策略名称</p>
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 告警策略名称
-     * @param PolicyName 告警策略名称
+     * Set <p>告警策略名称</p>
+     * @param PolicyName <p>告警策略名称</p>
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get Prometheus实例ID, 仅当 MT_PROME 时有效 
-     * @return PromeInstanceID Prometheus实例ID, 仅当 MT_PROME 时有效
+     * Get <p>Prometheus实例ID, 仅当 MT_PROME 时有效</p> 
+     * @return PromeInstanceID <p>Prometheus实例ID, 仅当 MT_PROME 时有效</p>
      */
     public String getPromeInstanceID() {
         return this.PromeInstanceID;
     }
 
     /**
-     * Set Prometheus实例ID, 仅当 MT_PROME 时有效
-     * @param PromeInstanceID Prometheus实例ID, 仅当 MT_PROME 时有效
+     * Set <p>Prometheus实例ID, 仅当 MT_PROME 时有效</p>
+     * @param PromeInstanceID <p>Prometheus实例ID, 仅当 MT_PROME 时有效</p>
      */
     public void setPromeInstanceID(String PromeInstanceID) {
         this.PromeInstanceID = PromeInstanceID;
     }
 
     /**
-     * Get Prometheus实例所在的地域, 仅当 MT_PROME 时有效 
-     * @return PromeInstanceRegion Prometheus实例所在的地域, 仅当 MT_PROME 时有效
+     * Get <p>Prometheus实例所在的地域, 仅当 MT_PROME 时有效</p> 
+     * @return PromeInstanceRegion <p>Prometheus实例所在的地域, 仅当 MT_PROME 时有效</p>
      */
     public String getPromeInstanceRegion() {
         return this.PromeInstanceRegion;
     }
 
     /**
-     * Set Prometheus实例所在的地域, 仅当 MT_PROME 时有效
-     * @param PromeInstanceRegion Prometheus实例所在的地域, 仅当 MT_PROME 时有效
+     * Set <p>Prometheus实例所在的地域, 仅当 MT_PROME 时有效</p>
+     * @param PromeInstanceRegion <p>Prometheus实例所在的地域, 仅当 MT_PROME 时有效</p>
      */
     public void setPromeInstanceRegion(String PromeInstanceRegion) {
         this.PromeInstanceRegion = PromeInstanceRegion;
     }
 
     /**
-     * Get 通知模板相关的配置信息 
-     * @return Notices 通知模板相关的配置信息
+     * Get <p>通知模板相关的配置信息</p> 
+     * @return Notices <p>通知模板相关的配置信息</p>
      */
     public NotifyRelatedNotice [] getNotices() {
         return this.Notices;
     }
 
     /**
-     * Set 通知模板相关的配置信息
-     * @param Notices 通知模板相关的配置信息
+     * Set <p>通知模板相关的配置信息</p>
+     * @param Notices <p>通知模板相关的配置信息</p>
      */
     public void setNotices(NotifyRelatedNotice [] Notices) {
         this.Notices = Notices;
     }
 
     /**
-     * Get 告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复 
-     * @return TriggerStatus 告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复
+     * Get <p>告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复</p> 
+     * @return TriggerStatus <p>告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复</p>
      */
     public String getTriggerStatus() {
         return this.TriggerStatus;
     }
 
     /**
-     * Set 告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复
-     * @param TriggerStatus 告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复
+     * Set <p>告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复</p>
+     * @param TriggerStatus <p>告警触发状态  Trigger 告警状态触发; Recovery 告警状态恢复</p>
      */
     public void setTriggerStatus(String TriggerStatus) {
         this.TriggerStatus = TriggerStatus;
     }
 
     /**
-     * Get 与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效 
-     * @return PromeConsoleURL 与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效
+     * Get <p>与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效</p> 
+     * @return PromeConsoleURL <p>与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效</p>
      */
     public String getPromeConsoleURL() {
         return this.PromeConsoleURL;
     }
 
     /**
-     * Set 与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效
-     * @param PromeConsoleURL 与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效
+     * Set <p>与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效</p>
+     * @param PromeConsoleURL <p>与当前Prometheus通知历史相关控制台页面地址，仅当 MR_PROME 时有效</p>
      */
     public void setPromeConsoleURL(String PromeConsoleURL) {
         this.PromeConsoleURL = PromeConsoleURL;
     }
 
     /**
-     * Get 告警的lable 
-     * @return Labels 告警的lable
+     * Get <p>告警的lable</p> 
+     * @return Labels <p>告警的lable</p>
      */
     public AlarmLable [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 告警的lable
-     * @param Labels 告警的lable
+     * Set <p>告警的lable</p>
+     * @param Labels <p>告警的lable</p>
      */
     public void setLabels(AlarmLable [] Labels) {
         this.Labels = Labels;
+    }
+
+    /**
+     * Get <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReceiverGroups <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReceiverGroup [] getReceiverGroups() {
+        return this.ReceiverGroups;
+    }
+
+    /**
+     * Set <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReceiverGroups <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReceiverGroups(ReceiverGroup [] ReceiverGroups) {
+        this.ReceiverGroups = ReceiverGroups;
     }
 
     public AlarmNotifyHistory() {
@@ -490,6 +518,12 @@ public class AlarmNotifyHistory extends AbstractModel {
                 this.Labels[i] = new AlarmLable(source.Labels[i]);
             }
         }
+        if (source.ReceiverGroups != null) {
+            this.ReceiverGroups = new ReceiverGroup[source.ReceiverGroups.length];
+            for (int i = 0; i < source.ReceiverGroups.length; i++) {
+                this.ReceiverGroups[i] = new ReceiverGroup(source.ReceiverGroups[i]);
+            }
+        }
     }
 
 
@@ -514,6 +548,7 @@ public class AlarmNotifyHistory extends AbstractModel {
         this.setParamSimple(map, prefix + "TriggerStatus", this.TriggerStatus);
         this.setParamSimple(map, prefix + "PromeConsoleURL", this.PromeConsoleURL);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamArrayObj(map, prefix + "ReceiverGroups.", this.ReceiverGroups);
 
     }
 }

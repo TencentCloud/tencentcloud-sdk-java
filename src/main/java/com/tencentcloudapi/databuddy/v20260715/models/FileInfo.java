@@ -174,12 +174,20 @@ public class FileInfo extends AbstractModel {
     private Long ResourceMode;
 
     /**
-    * ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+    * <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncOperation")
     @Expose
     private AsyncOperation AsyncOperation;
+
+    /**
+    * <p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
 
     /**
      * Get <p>主账号 AppId</p>
@@ -554,9 +562,9 @@ public class FileInfo extends AbstractModel {
     }
 
     /**
-     * Get ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+     * Get <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncOperation ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+     * @return AsyncOperation <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsyncOperation getAsyncOperation() {
@@ -564,13 +572,33 @@ public class FileInfo extends AbstractModel {
     }
 
     /**
-     * Set ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+     * Set <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncOperation ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+     * @param AsyncOperation <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncOperation(AsyncOperation AsyncOperation) {
         this.AsyncOperation = AsyncOperation;
+    }
+
+    /**
+     * Get <p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionId <p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set <p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionId <p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
     }
 
     public FileInfo() {
@@ -641,6 +669,9 @@ public class FileInfo extends AbstractModel {
         if (source.AsyncOperation != null) {
             this.AsyncOperation = new AsyncOperation(source.AsyncOperation);
         }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
     }
 
 
@@ -668,6 +699,7 @@ public class FileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ReleaseStatus", this.ReleaseStatus);
         this.setParamSimple(map, prefix + "ResourceMode", this.ResourceMode);
         this.setParamObj(map, prefix + "AsyncOperation.", this.AsyncOperation);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
 
     }
 }

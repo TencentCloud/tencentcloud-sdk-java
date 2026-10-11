@@ -66,6 +66,13 @@ public class CreateCatalogRequest extends AbstractModel {
     private String CatalogSource;
 
     /**
+    * 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+    */
+    @SerializedName("ConnectionCatalogName")
+    @Expose
+    private String ConnectionCatalogName;
+
+    /**
      * Get catalog名称 
      * @return Name catalog名称
      */
@@ -161,6 +168,22 @@ public class CreateCatalogRequest extends AbstractModel {
         this.CatalogSource = CatalogSource;
     }
 
+    /**
+     * Get 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。 
+     * @return ConnectionCatalogName 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+     */
+    public String getConnectionCatalogName() {
+        return this.ConnectionCatalogName;
+    }
+
+    /**
+     * Set 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+     * @param ConnectionCatalogName 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+     */
+    public void setConnectionCatalogName(String ConnectionCatalogName) {
+        this.ConnectionCatalogName = ConnectionCatalogName;
+    }
+
     public CreateCatalogRequest() {
     }
 
@@ -187,6 +210,9 @@ public class CreateCatalogRequest extends AbstractModel {
         if (source.CatalogSource != null) {
             this.CatalogSource = new String(source.CatalogSource);
         }
+        if (source.ConnectionCatalogName != null) {
+            this.ConnectionCatalogName = new String(source.ConnectionCatalogName);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateCatalogRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
         this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
+        this.setParamSimple(map, prefix + "ConnectionCatalogName", this.ConnectionCatalogName);
 
     }
 }

@@ -38,6 +38,20 @@ public class ModifyInstanceSSLStatusRequest extends AbstractModel {
     private Boolean Enabled;
 
     /**
+    * <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+    */
+    @SerializedName("CertificateType")
+    @Expose
+    private String CertificateType;
+
+    /**
+    * <p>腾讯云SSL证书服务的证书ID</p>
+    */
+    @SerializedName("CertificateId")
+    @Expose
+    private String CertificateId;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceId <p>实例ID</p>
      */
@@ -69,6 +83,38 @@ public class ModifyInstanceSSLStatusRequest extends AbstractModel {
         this.Enabled = Enabled;
     }
 
+    /**
+     * Get <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul> 
+     * @return CertificateType <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+     */
+    public String getCertificateType() {
+        return this.CertificateType;
+    }
+
+    /**
+     * Set <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+     * @param CertificateType <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+     */
+    public void setCertificateType(String CertificateType) {
+        this.CertificateType = CertificateType;
+    }
+
+    /**
+     * Get <p>腾讯云SSL证书服务的证书ID</p> 
+     * @return CertificateId <p>腾讯云SSL证书服务的证书ID</p>
+     */
+    public String getCertificateId() {
+        return this.CertificateId;
+    }
+
+    /**
+     * Set <p>腾讯云SSL证书服务的证书ID</p>
+     * @param CertificateId <p>腾讯云SSL证书服务的证书ID</p>
+     */
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
+    }
+
     public ModifyInstanceSSLStatusRequest() {
     }
 
@@ -83,6 +129,12 @@ public class ModifyInstanceSSLStatusRequest extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
+        if (source.CertificateType != null) {
+            this.CertificateType = new String(source.CertificateType);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class ModifyInstanceSSLStatusRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "CertificateType", this.CertificateType);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
 
     }
 }

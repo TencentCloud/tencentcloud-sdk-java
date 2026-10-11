@@ -182,6 +182,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *列表账户虚拟组，支持分页，名称搜索，私有化调用path为：capi/Assets/DescribeAccountVirtualGroups，从7.x版本开始支持
+     * @param req DescribeAccountVirtualGroupsRequest
+     * @return DescribeAccountVirtualGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountVirtualGroupsResponse DescribeAccountVirtualGroups(DescribeAccountVirtualGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountVirtualGroups", DescribeAccountVirtualGroupsResponse.class);
+    }
+
+    /**
      *聚合的分类软件列表
      * @param req DescribeAggrSoftCategorySoftListRequest
      * @return DescribeAggrSoftCategorySoftListResponse
