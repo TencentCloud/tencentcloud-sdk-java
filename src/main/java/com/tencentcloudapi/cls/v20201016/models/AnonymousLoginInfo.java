@@ -40,6 +40,13 @@ public class AnonymousLoginInfo extends AbstractModel {
     private String SecretKey;
 
     /**
+    * <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
      * Get <p>匿名登录账号secretId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecretId <p>匿名登录账号secretId</p>
@@ -79,6 +86,22 @@ public class AnonymousLoginInfo extends AbstractModel {
         this.SecretKey = SecretKey;
     }
 
+    /**
+     * Get <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p> 
+     * @return RoleArn <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
+     * @param RoleArn <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
     public AnonymousLoginInfo() {
     }
 
@@ -93,6 +116,9 @@ public class AnonymousLoginInfo extends AbstractModel {
         if (source.SecretKey != null) {
             this.SecretKey = new String(source.SecretKey);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class AnonymousLoginInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
 
     }
 }

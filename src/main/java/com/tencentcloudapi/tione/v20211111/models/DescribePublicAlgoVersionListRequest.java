@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribePublicAlgoVersionListRequest extends AbstractModel {
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 过滤器
     */
     @SerializedName("Filters")
@@ -50,6 +57,22 @@ public class DescribePublicAlgoVersionListRequest extends AbstractModel {
     @SerializedName("NeedsAggregate")
     @Expose
     private Boolean NeedsAggregate;
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
 
     /**
      * Get 过滤器 
@@ -123,6 +146,9 @@ public class DescribePublicAlgoVersionListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePublicAlgoVersionListRequest(DescribePublicAlgoVersionListRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -145,6 +171,7 @@ public class DescribePublicAlgoVersionListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

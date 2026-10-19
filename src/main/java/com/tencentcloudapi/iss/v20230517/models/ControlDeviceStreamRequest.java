@@ -24,127 +24,92 @@ import java.util.HashMap;
 public class ControlDeviceStreamRequest extends AbstractModel {
 
     /**
-    * 通道 ID（从通道查询接口DescribeDeviceChannel中获取）
+    * <p>通道 ID（从通道查询接口DescribeDeviceChannel中获取）</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * 流类型（1:主码流；
-2:子码流（不可以和 Resolution 同时下发））
+    * <p>流类型（1:主码流；<br>2:子码流（不可以和 Resolution 同时下发））</p>
     */
     @SerializedName("StreamType")
     @Expose
     private String StreamType;
 
     /**
-    * 分辨率（1:QCIF；
-2:CIF；
-3:4CIF；
-4:D1；
-5:720P；
-6:1080P/I；
-自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+    * <p>分辨率（1:QCIF；<br>2:CIF；<br>3:4CIF；<br>4:D1；<br>5:720P；<br>6:1080P/I；<br>自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * 是否内网
+    * <p>是否内网</p>
     */
     @SerializedName("IsInternal")
     @Expose
     private Boolean IsInternal;
 
     /**
-     * Get 通道 ID（从通道查询接口DescribeDeviceChannel中获取） 
-     * @return ChannelId 通道 ID（从通道查询接口DescribeDeviceChannel中获取）
+     * Get <p>通道 ID（从通道查询接口DescribeDeviceChannel中获取）</p> 
+     * @return ChannelId <p>通道 ID（从通道查询接口DescribeDeviceChannel中获取）</p>
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道 ID（从通道查询接口DescribeDeviceChannel中获取）
-     * @param ChannelId 通道 ID（从通道查询接口DescribeDeviceChannel中获取）
+     * Set <p>通道 ID（从通道查询接口DescribeDeviceChannel中获取）</p>
+     * @param ChannelId <p>通道 ID（从通道查询接口DescribeDeviceChannel中获取）</p>
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 流类型（1:主码流；
-2:子码流（不可以和 Resolution 同时下发）） 
-     * @return StreamType 流类型（1:主码流；
-2:子码流（不可以和 Resolution 同时下发））
+     * Get <p>流类型（1:主码流；<br>2:子码流（不可以和 Resolution 同时下发））</p> 
+     * @return StreamType <p>流类型（1:主码流；<br>2:子码流（不可以和 Resolution 同时下发））</p>
      */
     public String getStreamType() {
         return this.StreamType;
     }
 
     /**
-     * Set 流类型（1:主码流；
-2:子码流（不可以和 Resolution 同时下发））
-     * @param StreamType 流类型（1:主码流；
-2:子码流（不可以和 Resolution 同时下发））
+     * Set <p>流类型（1:主码流；<br>2:子码流（不可以和 Resolution 同时下发））</p>
+     * @param StreamType <p>流类型（1:主码流；<br>2:子码流（不可以和 Resolution 同时下发））</p>
      */
     public void setStreamType(String StreamType) {
         this.StreamType = StreamType;
     }
 
     /**
-     * Get 分辨率（1:QCIF；
-2:CIF；
-3:4CIF；
-4:D1；
-5:720P；
-6:1080P/I；
-自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发）） 
-     * @return Resolution 分辨率（1:QCIF；
-2:CIF；
-3:4CIF；
-4:D1；
-5:720P；
-6:1080P/I；
-自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+     * Get <p>分辨率（1:QCIF；<br>2:CIF；<br>3:4CIF；<br>4:D1；<br>5:720P；<br>6:1080P/I；<br>自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p> 
+     * @return Resolution <p>分辨率（1:QCIF；<br>2:CIF；<br>3:4CIF；<br>4:D1；<br>5:720P；<br>6:1080P/I；<br>自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 分辨率（1:QCIF；
-2:CIF；
-3:4CIF；
-4:D1；
-5:720P；
-6:1080P/I；
-自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
-     * @param Resolution 分辨率（1:QCIF；
-2:CIF；
-3:4CIF；
-4:D1；
-5:720P；
-6:1080P/I；
-自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+     * Set <p>分辨率（1:QCIF；<br>2:CIF；<br>3:4CIF；<br>4:D1；<br>5:720P；<br>6:1080P/I；<br>自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
+     * @param Resolution <p>分辨率（1:QCIF；<br>2:CIF；<br>3:4CIF；<br>4:D1；<br>5:720P；<br>6:1080P/I；<br>自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 是否内网 
-     * @return IsInternal 是否内网
+     * Get <p>是否内网</p> 
+     * @return IsInternal <p>是否内网</p>
      */
     public Boolean getIsInternal() {
         return this.IsInternal;
     }
 
     /**
-     * Set 是否内网
-     * @param IsInternal 是否内网
+     * Set <p>是否内网</p>
+     * @param IsInternal <p>是否内网</p>
      */
     public void setIsInternal(Boolean IsInternal) {
         this.IsInternal = IsInternal;

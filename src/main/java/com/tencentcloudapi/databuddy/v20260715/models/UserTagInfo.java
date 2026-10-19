@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UserTagInfo extends AbstractModel {
 
     /**
-    * <p>标签维度ID</p>
+    * <p>标签维度ID。ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中必填，可通过 ListTags 接口出参 Items[].TagId 获取，也可通过 CreateTags 创建后获取；按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中无需传入；查询接口出参中回填。ID 不存在或已删除时接口报错 TagNotExist</p>
     */
     @SerializedName("TagId")
     @Expose
     private String TagId;
 
     /**
-    * <p>标签名称，查询时填充，写入时不传</p>
+    * <p>标签名称。按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中必填；ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中无需传入，服务端忽略；查询接口出参中回填</p>
     */
     @SerializedName("TagName")
     @Expose
     private String TagName;
 
     /**
-    * <p>该维度下绑定的所有标签值</p>
+    * <p>该标签维度下绑定的标签值集合，元素结构见 TagValueInfo。ID 模式写接口中元素 TagValueId 必填；按名称模式接口中元素 TagValue 必填；查询接口出参中回填</p>
     */
     @SerializedName("Values")
     @Expose
     private TagValueInfo [] Values;
 
     /**
-     * Get <p>标签维度ID</p> 
-     * @return TagId <p>标签维度ID</p>
+     * Get <p>标签维度ID。ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中必填，可通过 ListTags 接口出参 Items[].TagId 获取，也可通过 CreateTags 创建后获取；按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中无需传入；查询接口出参中回填。ID 不存在或已删除时接口报错 TagNotExist</p> 
+     * @return TagId <p>标签维度ID。ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中必填，可通过 ListTags 接口出参 Items[].TagId 获取，也可通过 CreateTags 创建后获取；按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中无需传入；查询接口出参中回填。ID 不存在或已删除时接口报错 TagNotExist</p>
      */
     public String getTagId() {
         return this.TagId;
     }
 
     /**
-     * Set <p>标签维度ID</p>
-     * @param TagId <p>标签维度ID</p>
+     * Set <p>标签维度ID。ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中必填，可通过 ListTags 接口出参 Items[].TagId 获取，也可通过 CreateTags 创建后获取；按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中无需传入；查询接口出参中回填。ID 不存在或已删除时接口报错 TagNotExist</p>
+     * @param TagId <p>标签维度ID。ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中必填，可通过 ListTags 接口出参 Items[].TagId 获取，也可通过 CreateTags 创建后获取；按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中无需传入；查询接口出参中回填。ID 不存在或已删除时接口报错 TagNotExist</p>
      */
     public void setTagId(String TagId) {
         this.TagId = TagId;
     }
 
     /**
-     * Get <p>标签名称，查询时填充，写入时不传</p> 
-     * @return TagName <p>标签名称，查询时填充，写入时不传</p>
+     * Get <p>标签名称。按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中必填；ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中无需传入，服务端忽略；查询接口出参中回填</p> 
+     * @return TagName <p>标签名称。按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中必填；ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中无需传入，服务端忽略；查询接口出参中回填</p>
      */
     public String getTagName() {
         return this.TagName;
     }
 
     /**
-     * Set <p>标签名称，查询时填充，写入时不传</p>
-     * @param TagName <p>标签名称，查询时填充，写入时不传</p>
+     * Set <p>标签名称。按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中必填；ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中无需传入，服务端忽略；查询接口出参中回填</p>
+     * @param TagName <p>标签名称。按名称模式接口（AttachWorkspaceUserTags / DetachWorkspaceUserTags）中必填；ID 模式写接口（UpdateWorkspaceUsersTags / UpdateWorkspaceGroupsTags）中无需传入，服务端忽略；查询接口出参中回填</p>
      */
     public void setTagName(String TagName) {
         this.TagName = TagName;
     }
 
     /**
-     * Get <p>该维度下绑定的所有标签值</p> 
-     * @return Values <p>该维度下绑定的所有标签值</p>
+     * Get <p>该标签维度下绑定的标签值集合，元素结构见 TagValueInfo。ID 模式写接口中元素 TagValueId 必填；按名称模式接口中元素 TagValue 必填；查询接口出参中回填</p> 
+     * @return Values <p>该标签维度下绑定的标签值集合，元素结构见 TagValueInfo。ID 模式写接口中元素 TagValueId 必填；按名称模式接口中元素 TagValue 必填；查询接口出参中回填</p>
      */
     public TagValueInfo [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set <p>该维度下绑定的所有标签值</p>
-     * @param Values <p>该维度下绑定的所有标签值</p>
+     * Set <p>该标签维度下绑定的标签值集合，元素结构见 TagValueInfo。ID 模式写接口中元素 TagValueId 必填；按名称模式接口中元素 TagValue 必填；查询接口出参中回填</p>
+     * @param Values <p>该标签维度下绑定的标签值集合，元素结构见 TagValueInfo。ID 模式写接口中元素 TagValueId 必填；按名称模式接口中元素 TagValue 必填；查询接口出参中回填</p>
      */
     public void setValues(TagValueInfo [] Values) {
         this.Values = Values;

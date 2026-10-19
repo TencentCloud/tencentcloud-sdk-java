@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateTopicResponse extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名
+    * <p>主题名</p>
     */
     @SerializedName("Topic")
     @Expose
@@ -45,32 +45,32 @@ public class CreateTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get <p>集群ID</p> 
+     * @return InstanceId <p>集群ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set <p>集群ID</p>
+     * @param InstanceId <p>集群ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名 
-     * @return Topic 主题名
+     * Get <p>主题名</p> 
+     * @return Topic <p>主题名</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名
-     * @param Topic 主题名
+     * Set <p>主题名</p>
+     * @param Topic <p>主题名</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

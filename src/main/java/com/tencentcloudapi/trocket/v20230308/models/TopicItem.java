@@ -24,46 +24,42 @@ import java.util.HashMap;
 public class TopicItem extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * <p>主题名称</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+    * <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
     */
     @SerializedName("TopicType")
     @Expose
     private String TopicType;
 
     /**
-    * 队列数量
+    * <p>队列数量</p>
     */
     @SerializedName("QueueNum")
     @Expose
     private Long QueueNum;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 4.x的集群id
+    * <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIdV4")
@@ -71,7 +67,7 @@ TRANSACTION:事务消息
     private String ClusterIdV4;
 
     /**
-    * 4.x的命名空间
+    * <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceV4")
@@ -79,7 +75,7 @@ TRANSACTION:事务消息
     private String NamespaceV4;
 
     /**
-    * 4.x的主题名称
+    * <p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicV4")
@@ -87,7 +83,7 @@ TRANSACTION:事务消息
     private String TopicV4;
 
     /**
-    * 4.x的完整命名空间
+    * <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullNamespaceV4")
@@ -95,119 +91,119 @@ TRANSACTION:事务消息
     private String FullNamespaceV4;
 
     /**
-    * 消息保留时长
+    * <p>消息保留时长</p>
     */
     @SerializedName("MsgTTL")
     @Expose
     private Long MsgTTL;
 
     /**
-    * 绑定的标签列表
+    * <p>绑定的标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoExpireDelete")
+    @Expose
+    private Boolean AutoExpireDelete;
+
+    /**
+    * <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoExpireTime")
+    @Expose
+    private Long AutoExpireTime;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return Topic 主题名称
+     * Get <p>主题名称</p> 
+     * @return Topic <p>主题名称</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名称
-     * @param Topic 主题名称
+     * Set <p>主题名称</p>
+     * @param Topic <p>主题名称</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息 
-     * @return TopicType 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * Get <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p> 
+     * @return TopicType <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
-     * @param TopicType 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * Set <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+     * @param TopicType <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get 队列数量 
-     * @return QueueNum 队列数量
+     * Get <p>队列数量</p> 
+     * @return QueueNum <p>队列数量</p>
      */
     public Long getQueueNum() {
         return this.QueueNum;
     }
 
     /**
-     * Set 队列数量
-     * @param QueueNum 队列数量
+     * Set <p>队列数量</p>
+     * @param QueueNum <p>队列数量</p>
      */
     public void setQueueNum(Long QueueNum) {
         this.QueueNum = QueueNum;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get <p>备注信息</p> 
+     * @return Remark <p>备注信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set <p>备注信息</p>
+     * @param Remark <p>备注信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 4.x的集群id
+     * Get <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterIdV4 4.x的集群id
+     * @return ClusterIdV4 <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterIdV4() {
@@ -215,9 +211,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Set 4.x的集群id
+     * Set <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterIdV4 4.x的集群id
+     * @param ClusterIdV4 <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIdV4(String ClusterIdV4) {
@@ -225,9 +221,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 4.x的命名空间
+     * Get <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamespaceV4 4.x的命名空间
+     * @return NamespaceV4 <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceV4() {
@@ -235,9 +231,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Set 4.x的命名空间
+     * Set <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamespaceV4 4.x的命名空间
+     * @param NamespaceV4 <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceV4(String NamespaceV4) {
@@ -245,9 +241,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 4.x的主题名称
+     * Get <p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicV4 4.x的主题名称
+     * @return TopicV4 <p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicV4() {
@@ -255,9 +251,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Set 4.x的主题名称
+     * Set <p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicV4 4.x的主题名称
+     * @param TopicV4 <p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicV4(String TopicV4) {
@@ -265,9 +261,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 4.x的完整命名空间
+     * Get <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FullNamespaceV4 4.x的完整命名空间
+     * @return FullNamespaceV4 <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullNamespaceV4() {
@@ -275,9 +271,9 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Set 4.x的完整命名空间
+     * Set <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FullNamespaceV4 4.x的完整命名空间
+     * @param FullNamespaceV4 <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullNamespaceV4(String FullNamespaceV4) {
@@ -285,35 +281,75 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 消息保留时长 
-     * @return MsgTTL 消息保留时长
+     * Get <p>消息保留时长</p> 
+     * @return MsgTTL <p>消息保留时长</p>
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 消息保留时长
-     * @param MsgTTL 消息保留时长
+     * Set <p>消息保留时长</p>
+     * @param MsgTTL <p>消息保留时长</p>
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;
     }
 
     /**
-     * Get 绑定的标签列表 
-     * @return TagList 绑定的标签列表
+     * Get <p>绑定的标签列表</p> 
+     * @return TagList <p>绑定的标签列表</p>
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 绑定的标签列表
-     * @param TagList 绑定的标签列表
+     * Set <p>绑定的标签列表</p>
+     * @param TagList <p>绑定的标签列表</p>
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
+    }
+
+    /**
+     * Get <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoExpireDelete <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoExpireDelete() {
+        return this.AutoExpireDelete;
+    }
+
+    /**
+     * Set <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoExpireDelete <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoExpireDelete(Boolean AutoExpireDelete) {
+        this.AutoExpireDelete = AutoExpireDelete;
+    }
+
+    /**
+     * Get <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoExpireTime <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoExpireTime() {
+        return this.AutoExpireTime;
+    }
+
+    /**
+     * Set <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoExpireTime <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoExpireTime(Long AutoExpireTime) {
+        this.AutoExpireTime = AutoExpireTime;
     }
 
     public TopicItem() {
@@ -360,6 +396,12 @@ TRANSACTION:事务消息
                 this.TagList[i] = new Tag(source.TagList[i]);
             }
         }
+        if (source.AutoExpireDelete != null) {
+            this.AutoExpireDelete = new Boolean(source.AutoExpireDelete);
+        }
+        if (source.AutoExpireTime != null) {
+            this.AutoExpireTime = new Long(source.AutoExpireTime);
+        }
     }
 
 
@@ -378,6 +420,8 @@ TRANSACTION:事务消息
         this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "AutoExpireDelete", this.AutoExpireDelete);
+        this.setParamSimple(map, prefix + "AutoExpireTime", this.AutoExpireTime);
 
     }
 }

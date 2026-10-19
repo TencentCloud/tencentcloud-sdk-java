@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 分页偏移量（0 表示全量）
     */
     @SerializedName("Offset")
@@ -43,6 +50,22 @@ public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
 
     /**
      * Get 分页偏移量（0 表示全量） 
@@ -100,6 +123,9 @@ public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSubAccountLinuxUserInfosRequest(DescribeSubAccountLinuxUserInfosRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -119,6 +145,7 @@ public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

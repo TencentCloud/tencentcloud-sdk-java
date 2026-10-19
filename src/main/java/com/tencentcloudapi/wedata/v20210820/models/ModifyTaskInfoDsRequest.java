@@ -24,831 +24,854 @@ import java.util.HashMap;
 public class ModifyTaskInfoDsRequest extends AbstractModel {
 
     /**
-    * 项目Id
+    * <p>项目Id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
+    * <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * 启动时间：该字段已废弃，无需填写
+    * <p>启动时间：该字段已废弃，无需填写</p>
     */
     @SerializedName("StartupTime")
     @Expose
     private Long StartupTime;
 
     /**
-    * 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
+    * <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
     */
     @SerializedName("SelfDepend")
     @Expose
     private Long SelfDepend;
 
     /**
-    * 生效开始时间，格式 yyyy-MM-dd HH:mm:ss
+    * <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 生效结束时间，格式 yyyy-MM-dd HH:mm:ss
+    * <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
+    * <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
     */
     @SerializedName("TaskAction")
     @Expose
     private String TaskAction;
 
     /**
-    * 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
+    * <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
     */
     @SerializedName("CycleType")
     @Expose
     private Long CycleType;
 
     /**
-    * 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
+    * <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
     */
     @SerializedName("CycleStep")
     @Expose
     private Long CycleStep;
 
     /**
-    * cron表达式  周期类型为crontab调度才需要
+    * <p>cron表达式  周期类型为crontab调度才需要</p>
     */
     @SerializedName("CrontabExpression")
     @Expose
     private String CrontabExpression;
 
     /**
-    * 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+    * <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
     */
     @SerializedName("ExecutionStartTime")
     @Expose
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+    * <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
     */
     @SerializedName("ExecutionEndTime")
     @Expose
     private String ExecutionEndTime;
 
     /**
-    * 任务名，该字段废弃，请勿使用该字段重命名任务
+    * <p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 失败重试间隔,单位分钟，创建任务的时候已经给了默认值
+    * <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
     */
     @SerializedName("RetryWait")
     @Expose
     private Long RetryWait;
 
     /**
-    * 失败重试次数，创建任务的时候已经给了默认值
+    * <p>失败重试次数，创建任务的时候已经给了默认值</p>
     */
     @SerializedName("TryLimit")
     @Expose
     private Long TryLimit;
 
     /**
-    * 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
+    * <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
     */
     @SerializedName("Retriable")
     @Expose
     private Long Retriable;
 
     /**
-    * 运行优先级，4高 5中 6低；暂不支持其他值
+    * <p>运行优先级，4高 5中 6低；暂不支持其他值</p>
     */
     @SerializedName("RunPriority")
     @Expose
     private Long RunPriority;
 
     /**
-    * 任务的扩展配置
+    * <p>任务的扩展配置</p>
     */
     @SerializedName("TaskExt")
     @Expose
     private TaskExtInfo [] TaskExt;
 
     /**
-    * 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
+    * <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
     */
     @SerializedName("ResourceGroup")
     @Expose
     private String ResourceGroup;
 
     /**
-    * 资源池队列名称
+    * <p>资源池队列名称</p>
     */
     @SerializedName("YarnQueue")
     @Expose
     private String YarnQueue;
 
     /**
-    * 资源组下具体执行机，any 表示可以跑在任意一台。
+    * <p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
     */
     @SerializedName("BrokerIp")
     @Expose
     private String BrokerIp;
 
     /**
-    * 责任人，多个责任人请用分号隔开
+    * <p>责任人，多个责任人请用分号隔开</p>
     */
     @SerializedName("InCharge")
     @Expose
     private String InCharge;
 
     /**
-    * 任务备注
+    * <p>任务备注</p>
     */
     @SerializedName("Notes")
     @Expose
     private String Notes;
 
     /**
-    * 任务参数
+    * <p>任务参数</p>
     */
     @SerializedName("TaskParamInfos")
     @Expose
     private ParamInfo [] TaskParamInfos;
 
     /**
-    * 源数据源Id
+    * <p>源数据源Id</p>
     */
     @SerializedName("SourceServer")
     @Expose
     private String SourceServer;
 
     /**
-    * 目标数据源Id
+    * <p>目标数据源Id</p>
     */
     @SerializedName("TargetServer")
     @Expose
     private String TargetServer;
 
     /**
-    * 是否支持工作流依赖 yes / no 默认 no
+    * <p>是否支持工作流依赖 yes / no 默认 no</p>
     */
     @SerializedName("DependencyWorkflow")
     @Expose
     private String DependencyWorkflow;
 
     /**
-    * 依赖配置,仅可修改上游任务实例配置方法
+    * <p>依赖配置,仅可修改上游任务实例配置方法</p>
     */
     @SerializedName("DependencyConfigDTOs")
     @Expose
     private DependencyConfig [] DependencyConfigDTOs;
 
     /**
-    * 运行耗时超时时间分钟数
+    * <p>运行耗时超时时间分钟数</p>
     */
     @SerializedName("ExecutionTTL")
     @Expose
     private Long ExecutionTTL;
 
     /**
-    * 脚本是否改变
+    * <p>脚本是否改变</p>
     */
     @SerializedName("ScriptChange")
     @Expose
     private Boolean ScriptChange;
 
     /**
-    * 任务时区，仅支持整数时区配置
+    * <p>任务时区，仅支持整数时区配置</p>
     */
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
 
     /**
-    * 0 正常调度 1 空跑调度；暂不支持其他值
+    * <p>0 正常调度 1 空跑调度；暂不支持其他值</p>
     */
     @SerializedName("ScheduleRunType")
     @Expose
     private Long ScheduleRunType;
 
     /**
-    * 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
+    * <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
     */
     @SerializedName("ConcurrentStrategy")
     @Expose
     private Long ConcurrentStrategy;
 
     /**
-    * shell任务发布事件
+    * <p>shell任务发布事件</p>
     */
     @SerializedName("RegisterDsEventPublisherRequest")
     @Expose
     private RegisterDsEventPublisherReq RegisterDsEventPublisherRequest;
 
     /**
-    * base64编码后脚本内容
+    * <p>base64编码后脚本内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+    * <p>分钟任务相位偏移</p>
+    */
+    @SerializedName("MinuteOffset")
+    @Expose
+    private Long MinuteOffset;
+
+    /**
+     * Get <p>项目Id</p> 
+     * @return ProjectId <p>项目Id</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set <p>项目Id</p>
+     * @param ProjectId <p>项目Id</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟 
-     * @return DelayTime 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
+     * Get <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p> 
+     * @return DelayTime <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
-     * @param DelayTime 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
+     * Set <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
+     * @param DelayTime <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 启动时间：该字段已废弃，无需填写 
-     * @return StartupTime 启动时间：该字段已废弃，无需填写
+     * Get <p>启动时间：该字段已废弃，无需填写</p> 
+     * @return StartupTime <p>启动时间：该字段已废弃，无需填写</p>
      */
     public Long getStartupTime() {
         return this.StartupTime;
     }
 
     /**
-     * Set 启动时间：该字段已废弃，无需填写
-     * @param StartupTime 启动时间：该字段已废弃，无需填写
+     * Set <p>启动时间：该字段已废弃，无需填写</p>
+     * @param StartupTime <p>启动时间：该字段已废弃，无需填写</p>
      */
     public void setStartupTime(Long StartupTime) {
         this.StartupTime = StartupTime;
     }
 
     /**
-     * Get 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值 
-     * @return SelfDepend 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
+     * Get <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p> 
+     * @return SelfDepend <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
      */
     public Long getSelfDepend() {
         return this.SelfDepend;
     }
 
     /**
-     * Set 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
-     * @param SelfDepend 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
+     * Set <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
+     * @param SelfDepend <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
      */
     public void setSelfDepend(Long SelfDepend) {
         this.SelfDepend = SelfDepend;
     }
 
     /**
-     * Get 生效开始时间，格式 yyyy-MM-dd HH:mm:ss 
-     * @return StartTime 生效开始时间，格式 yyyy-MM-dd HH:mm:ss
+     * Get <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p> 
+     * @return StartTime <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 生效开始时间，格式 yyyy-MM-dd HH:mm:ss
-     * @param StartTime 生效开始时间，格式 yyyy-MM-dd HH:mm:ss
+     * Set <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
+     * @param StartTime <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 生效结束时间，格式 yyyy-MM-dd HH:mm:ss 
-     * @return EndTime 生效结束时间，格式 yyyy-MM-dd HH:mm:ss
+     * Get <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p> 
+     * @return EndTime <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 生效结束时间，格式 yyyy-MM-dd HH:mm:ss
-     * @param EndTime 生效结束时间，格式 yyyy-MM-dd HH:mm:ss
+     * Set <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
+     * @param EndTime <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。 
-     * @return TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
+     * Get <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p> 
+     * @return TaskAction <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
      */
     public String getTaskAction() {
         return this.TaskAction;
     }
 
     /**
-     * Set 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
-     * @param TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
+     * Set <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
+     * @param TaskAction <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
      */
     public void setTaskAction(String TaskAction) {
         this.TaskAction = TaskAction;
     }
 
     /**
-     * Get 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离 
-     * @return CycleType 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
+     * Get <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p> 
+     * @return CycleType <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
      */
     public Long getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
-     * @param CycleType 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
+     * Set <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
+     * @param CycleType <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
      */
     public void setCycleType(Long CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。 
-     * @return CycleStep 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
+     * Get <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p> 
+     * @return CycleStep <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
      */
     public Long getCycleStep() {
         return this.CycleStep;
     }
 
     /**
-     * Set 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
-     * @param CycleStep 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
+     * Set <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
+     * @param CycleStep <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
      */
     public void setCycleStep(Long CycleStep) {
         this.CycleStep = CycleStep;
     }
 
     /**
-     * Get cron表达式  周期类型为crontab调度才需要 
-     * @return CrontabExpression cron表达式  周期类型为crontab调度才需要
+     * Get <p>cron表达式  周期类型为crontab调度才需要</p> 
+     * @return CrontabExpression <p>cron表达式  周期类型为crontab调度才需要</p>
      */
     public String getCrontabExpression() {
         return this.CrontabExpression;
     }
 
     /**
-     * Set cron表达式  周期类型为crontab调度才需要
-     * @param CrontabExpression cron表达式  周期类型为crontab调度才需要
+     * Set <p>cron表达式  周期类型为crontab调度才需要</p>
+     * @param CrontabExpression <p>cron表达式  周期类型为crontab调度才需要</p>
      */
     public void setCrontabExpression(String CrontabExpression) {
         this.CrontabExpression = CrontabExpression;
     }
 
     /**
-     * Get 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效 
-     * @return ExecutionStartTime 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+     * Get <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p> 
+     * @return ExecutionStartTime <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
      */
     public String getExecutionStartTime() {
         return this.ExecutionStartTime;
     }
 
     /**
-     * Set 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
-     * @param ExecutionStartTime 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+     * Set <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+     * @param ExecutionStartTime <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
     /**
-     * Get 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效 
-     * @return ExecutionEndTime 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+     * Get <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p> 
+     * @return ExecutionEndTime <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
      */
     public String getExecutionEndTime() {
         return this.ExecutionEndTime;
     }
 
     /**
-     * Set 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
-     * @param ExecutionEndTime 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+     * Set <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+     * @param ExecutionEndTime <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
         this.ExecutionEndTime = ExecutionEndTime;
     }
 
     /**
-     * Get 任务名，该字段废弃，请勿使用该字段重命名任务 
-     * @return TaskName 任务名，该字段废弃，请勿使用该字段重命名任务
+     * Get <p>任务名，该字段废弃，请勿使用该字段重命名任务</p> 
+     * @return TaskName <p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名，该字段废弃，请勿使用该字段重命名任务
-     * @param TaskName 任务名，该字段废弃，请勿使用该字段重命名任务
+     * Set <p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
+     * @param TaskName <p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 失败重试间隔,单位分钟，创建任务的时候已经给了默认值 
-     * @return RetryWait 失败重试间隔,单位分钟，创建任务的时候已经给了默认值
+     * Get <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p> 
+     * @return RetryWait <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
      */
     public Long getRetryWait() {
         return this.RetryWait;
     }
 
     /**
-     * Set 失败重试间隔,单位分钟，创建任务的时候已经给了默认值
-     * @param RetryWait 失败重试间隔,单位分钟，创建任务的时候已经给了默认值
+     * Set <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
+     * @param RetryWait <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
      */
     public void setRetryWait(Long RetryWait) {
         this.RetryWait = RetryWait;
     }
 
     /**
-     * Get 失败重试次数，创建任务的时候已经给了默认值 
-     * @return TryLimit 失败重试次数，创建任务的时候已经给了默认值
+     * Get <p>失败重试次数，创建任务的时候已经给了默认值</p> 
+     * @return TryLimit <p>失败重试次数，创建任务的时候已经给了默认值</p>
      */
     public Long getTryLimit() {
         return this.TryLimit;
     }
 
     /**
-     * Set 失败重试次数，创建任务的时候已经给了默认值
-     * @param TryLimit 失败重试次数，创建任务的时候已经给了默认值
+     * Set <p>失败重试次数，创建任务的时候已经给了默认值</p>
+     * @param TryLimit <p>失败重试次数，创建任务的时候已经给了默认值</p>
      */
     public void setTryLimit(Long TryLimit) {
         this.TryLimit = TryLimit;
     }
 
     /**
-     * Get 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值 
-     * @return Retriable 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
+     * Get <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p> 
+     * @return Retriable <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
      */
     public Long getRetriable() {
         return this.Retriable;
     }
 
     /**
-     * Set 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
-     * @param Retriable 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
+     * Set <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
+     * @param Retriable <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
      */
     public void setRetriable(Long Retriable) {
         this.Retriable = Retriable;
     }
 
     /**
-     * Get 运行优先级，4高 5中 6低；暂不支持其他值 
-     * @return RunPriority 运行优先级，4高 5中 6低；暂不支持其他值
+     * Get <p>运行优先级，4高 5中 6低；暂不支持其他值</p> 
+     * @return RunPriority <p>运行优先级，4高 5中 6低；暂不支持其他值</p>
      */
     public Long getRunPriority() {
         return this.RunPriority;
     }
 
     /**
-     * Set 运行优先级，4高 5中 6低；暂不支持其他值
-     * @param RunPriority 运行优先级，4高 5中 6低；暂不支持其他值
+     * Set <p>运行优先级，4高 5中 6低；暂不支持其他值</p>
+     * @param RunPriority <p>运行优先级，4高 5中 6低；暂不支持其他值</p>
      */
     public void setRunPriority(Long RunPriority) {
         this.RunPriority = RunPriority;
     }
 
     /**
-     * Get 任务的扩展配置 
-     * @return TaskExt 任务的扩展配置
+     * Get <p>任务的扩展配置</p> 
+     * @return TaskExt <p>任务的扩展配置</p>
      */
     public TaskExtInfo [] getTaskExt() {
         return this.TaskExt;
     }
 
     /**
-     * Set 任务的扩展配置
-     * @param TaskExt 任务的扩展配置
+     * Set <p>任务的扩展配置</p>
+     * @param TaskExt <p>任务的扩展配置</p>
      */
     public void setTaskExt(TaskExtInfo [] TaskExt) {
         this.TaskExt = TaskExt;
     }
 
     /**
-     * Get 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器 
-     * @return ResourceGroup 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
+     * Get <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p> 
+     * @return ResourceGroup <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
      */
     public String getResourceGroup() {
         return this.ResourceGroup;
     }
 
     /**
-     * Set 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
-     * @param ResourceGroup 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
+     * Set <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
+     * @param ResourceGroup <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
      */
     public void setResourceGroup(String ResourceGroup) {
         this.ResourceGroup = ResourceGroup;
     }
 
     /**
-     * Get 资源池队列名称 
-     * @return YarnQueue 资源池队列名称
+     * Get <p>资源池队列名称</p> 
+     * @return YarnQueue <p>资源池队列名称</p>
      */
     public String getYarnQueue() {
         return this.YarnQueue;
     }
 
     /**
-     * Set 资源池队列名称
-     * @param YarnQueue 资源池队列名称
+     * Set <p>资源池队列名称</p>
+     * @param YarnQueue <p>资源池队列名称</p>
      */
     public void setYarnQueue(String YarnQueue) {
         this.YarnQueue = YarnQueue;
     }
 
     /**
-     * Get 资源组下具体执行机，any 表示可以跑在任意一台。 
-     * @return BrokerIp 资源组下具体执行机，any 表示可以跑在任意一台。
+     * Get <p>资源组下具体执行机，any 表示可以跑在任意一台。</p> 
+     * @return BrokerIp <p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
      */
     public String getBrokerIp() {
         return this.BrokerIp;
     }
 
     /**
-     * Set 资源组下具体执行机，any 表示可以跑在任意一台。
-     * @param BrokerIp 资源组下具体执行机，any 表示可以跑在任意一台。
+     * Set <p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
+     * @param BrokerIp <p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
      */
     public void setBrokerIp(String BrokerIp) {
         this.BrokerIp = BrokerIp;
     }
 
     /**
-     * Get 责任人，多个责任人请用分号隔开 
-     * @return InCharge 责任人，多个责任人请用分号隔开
+     * Get <p>责任人，多个责任人请用分号隔开</p> 
+     * @return InCharge <p>责任人，多个责任人请用分号隔开</p>
      */
     public String getInCharge() {
         return this.InCharge;
     }
 
     /**
-     * Set 责任人，多个责任人请用分号隔开
-     * @param InCharge 责任人，多个责任人请用分号隔开
+     * Set <p>责任人，多个责任人请用分号隔开</p>
+     * @param InCharge <p>责任人，多个责任人请用分号隔开</p>
      */
     public void setInCharge(String InCharge) {
         this.InCharge = InCharge;
     }
 
     /**
-     * Get 任务备注 
-     * @return Notes 任务备注
+     * Get <p>任务备注</p> 
+     * @return Notes <p>任务备注</p>
      */
     public String getNotes() {
         return this.Notes;
     }
 
     /**
-     * Set 任务备注
-     * @param Notes 任务备注
+     * Set <p>任务备注</p>
+     * @param Notes <p>任务备注</p>
      */
     public void setNotes(String Notes) {
         this.Notes = Notes;
     }
 
     /**
-     * Get 任务参数 
-     * @return TaskParamInfos 任务参数
+     * Get <p>任务参数</p> 
+     * @return TaskParamInfos <p>任务参数</p>
      */
     public ParamInfo [] getTaskParamInfos() {
         return this.TaskParamInfos;
     }
 
     /**
-     * Set 任务参数
-     * @param TaskParamInfos 任务参数
+     * Set <p>任务参数</p>
+     * @param TaskParamInfos <p>任务参数</p>
      */
     public void setTaskParamInfos(ParamInfo [] TaskParamInfos) {
         this.TaskParamInfos = TaskParamInfos;
     }
 
     /**
-     * Get 源数据源Id 
-     * @return SourceServer 源数据源Id
+     * Get <p>源数据源Id</p> 
+     * @return SourceServer <p>源数据源Id</p>
      */
     public String getSourceServer() {
         return this.SourceServer;
     }
 
     /**
-     * Set 源数据源Id
-     * @param SourceServer 源数据源Id
+     * Set <p>源数据源Id</p>
+     * @param SourceServer <p>源数据源Id</p>
      */
     public void setSourceServer(String SourceServer) {
         this.SourceServer = SourceServer;
     }
 
     /**
-     * Get 目标数据源Id 
-     * @return TargetServer 目标数据源Id
+     * Get <p>目标数据源Id</p> 
+     * @return TargetServer <p>目标数据源Id</p>
      */
     public String getTargetServer() {
         return this.TargetServer;
     }
 
     /**
-     * Set 目标数据源Id
-     * @param TargetServer 目标数据源Id
+     * Set <p>目标数据源Id</p>
+     * @param TargetServer <p>目标数据源Id</p>
      */
     public void setTargetServer(String TargetServer) {
         this.TargetServer = TargetServer;
     }
 
     /**
-     * Get 是否支持工作流依赖 yes / no 默认 no 
-     * @return DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
+     * Get <p>是否支持工作流依赖 yes / no 默认 no</p> 
+     * @return DependencyWorkflow <p>是否支持工作流依赖 yes / no 默认 no</p>
      */
     public String getDependencyWorkflow() {
         return this.DependencyWorkflow;
     }
 
     /**
-     * Set 是否支持工作流依赖 yes / no 默认 no
-     * @param DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
+     * Set <p>是否支持工作流依赖 yes / no 默认 no</p>
+     * @param DependencyWorkflow <p>是否支持工作流依赖 yes / no 默认 no</p>
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
         this.DependencyWorkflow = DependencyWorkflow;
     }
 
     /**
-     * Get 依赖配置,仅可修改上游任务实例配置方法 
-     * @return DependencyConfigDTOs 依赖配置,仅可修改上游任务实例配置方法
+     * Get <p>依赖配置,仅可修改上游任务实例配置方法</p> 
+     * @return DependencyConfigDTOs <p>依赖配置,仅可修改上游任务实例配置方法</p>
      */
     public DependencyConfig [] getDependencyConfigDTOs() {
         return this.DependencyConfigDTOs;
     }
 
     /**
-     * Set 依赖配置,仅可修改上游任务实例配置方法
-     * @param DependencyConfigDTOs 依赖配置,仅可修改上游任务实例配置方法
+     * Set <p>依赖配置,仅可修改上游任务实例配置方法</p>
+     * @param DependencyConfigDTOs <p>依赖配置,仅可修改上游任务实例配置方法</p>
      */
     public void setDependencyConfigDTOs(DependencyConfig [] DependencyConfigDTOs) {
         this.DependencyConfigDTOs = DependencyConfigDTOs;
     }
 
     /**
-     * Get 运行耗时超时时间分钟数 
-     * @return ExecutionTTL 运行耗时超时时间分钟数
+     * Get <p>运行耗时超时时间分钟数</p> 
+     * @return ExecutionTTL <p>运行耗时超时时间分钟数</p>
      */
     public Long getExecutionTTL() {
         return this.ExecutionTTL;
     }
 
     /**
-     * Set 运行耗时超时时间分钟数
-     * @param ExecutionTTL 运行耗时超时时间分钟数
+     * Set <p>运行耗时超时时间分钟数</p>
+     * @param ExecutionTTL <p>运行耗时超时时间分钟数</p>
      */
     public void setExecutionTTL(Long ExecutionTTL) {
         this.ExecutionTTL = ExecutionTTL;
     }
 
     /**
-     * Get 脚本是否改变 
-     * @return ScriptChange 脚本是否改变
+     * Get <p>脚本是否改变</p> 
+     * @return ScriptChange <p>脚本是否改变</p>
      */
     public Boolean getScriptChange() {
         return this.ScriptChange;
     }
 
     /**
-     * Set 脚本是否改变
-     * @param ScriptChange 脚本是否改变
+     * Set <p>脚本是否改变</p>
+     * @param ScriptChange <p>脚本是否改变</p>
      */
     public void setScriptChange(Boolean ScriptChange) {
         this.ScriptChange = ScriptChange;
     }
 
     /**
-     * Get 任务时区，仅支持整数时区配置 
-     * @return ScheduleTimeZone 任务时区，仅支持整数时区配置
+     * Get <p>任务时区，仅支持整数时区配置</p> 
+     * @return ScheduleTimeZone <p>任务时区，仅支持整数时区配置</p>
      */
     public String getScheduleTimeZone() {
         return this.ScheduleTimeZone;
     }
 
     /**
-     * Set 任务时区，仅支持整数时区配置
-     * @param ScheduleTimeZone 任务时区，仅支持整数时区配置
+     * Set <p>任务时区，仅支持整数时区配置</p>
+     * @param ScheduleTimeZone <p>任务时区，仅支持整数时区配置</p>
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     /**
-     * Get 0 正常调度 1 空跑调度；暂不支持其他值 
-     * @return ScheduleRunType 0 正常调度 1 空跑调度；暂不支持其他值
+     * Get <p>0 正常调度 1 空跑调度；暂不支持其他值</p> 
+     * @return ScheduleRunType <p>0 正常调度 1 空跑调度；暂不支持其他值</p>
      */
     public Long getScheduleRunType() {
         return this.ScheduleRunType;
     }
 
     /**
-     * Set 0 正常调度 1 空跑调度；暂不支持其他值
-     * @param ScheduleRunType 0 正常调度 1 空跑调度；暂不支持其他值
+     * Set <p>0 正常调度 1 空跑调度；暂不支持其他值</p>
+     * @param ScheduleRunType <p>0 正常调度 1 空跑调度；暂不支持其他值</p>
      */
     public void setScheduleRunType(Long ScheduleRunType) {
         this.ScheduleRunType = ScheduleRunType;
     }
 
     /**
-     * Get 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值 
-     * @return ConcurrentStrategy 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
+     * Get <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p> 
+     * @return ConcurrentStrategy <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
      */
     public Long getConcurrentStrategy() {
         return this.ConcurrentStrategy;
     }
 
     /**
-     * Set 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
-     * @param ConcurrentStrategy 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
+     * Set <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
+     * @param ConcurrentStrategy <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
      */
     public void setConcurrentStrategy(Long ConcurrentStrategy) {
         this.ConcurrentStrategy = ConcurrentStrategy;
     }
 
     /**
-     * Get shell任务发布事件 
-     * @return RegisterDsEventPublisherRequest shell任务发布事件
+     * Get <p>shell任务发布事件</p> 
+     * @return RegisterDsEventPublisherRequest <p>shell任务发布事件</p>
      */
     public RegisterDsEventPublisherReq getRegisterDsEventPublisherRequest() {
         return this.RegisterDsEventPublisherRequest;
     }
 
     /**
-     * Set shell任务发布事件
-     * @param RegisterDsEventPublisherRequest shell任务发布事件
+     * Set <p>shell任务发布事件</p>
+     * @param RegisterDsEventPublisherRequest <p>shell任务发布事件</p>
      */
     public void setRegisterDsEventPublisherRequest(RegisterDsEventPublisherReq RegisterDsEventPublisherRequest) {
         this.RegisterDsEventPublisherRequest = RegisterDsEventPublisherRequest;
     }
 
     /**
-     * Get base64编码后脚本内容 
-     * @return Content base64编码后脚本内容
+     * Get <p>base64编码后脚本内容</p> 
+     * @return Content <p>base64编码后脚本内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set base64编码后脚本内容
-     * @param Content base64编码后脚本内容
+     * Set <p>base64编码后脚本内容</p>
+     * @param Content <p>base64编码后脚本内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get <p>分钟任务相位偏移</p> 
+     * @return MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public Long getMinuteOffset() {
+        return this.MinuteOffset;
+    }
+
+    /**
+     * Set <p>分钟任务相位偏移</p>
+     * @param MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public void setMinuteOffset(Long MinuteOffset) {
+        this.MinuteOffset = MinuteOffset;
     }
 
     public ModifyTaskInfoDsRequest() {
@@ -976,6 +999,9 @@ public class ModifyTaskInfoDsRequest extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.MinuteOffset != null) {
+            this.MinuteOffset = new Long(source.MinuteOffset);
+        }
     }
 
 
@@ -1019,6 +1045,7 @@ public class ModifyTaskInfoDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
         this.setParamObj(map, prefix + "RegisterDsEventPublisherRequest.", this.RegisterDsEventPublisherRequest);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
 
     }
 }

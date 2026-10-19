@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeGeneralApmApplicationConfigRequest extends AbstractModel {
 
     /**
-    * 应用名
+    * <p>应用名</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 业务系统ID
+    * <p>业务系统ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 应用名 
-     * @return ServiceName 应用名
+     * Get <p>应用名</p> 
+     * @return ServiceName <p>应用名</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 应用名
-     * @param ServiceName 应用名
+     * Set <p>应用名</p>
+     * @param ServiceName <p>应用名</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get <p>业务系统ID</p> 
+     * @return InstanceId <p>业务系统ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set <p>业务系统ID</p>
+     * @param InstanceId <p>业务系统ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

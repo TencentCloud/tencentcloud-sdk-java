@@ -24,509 +24,578 @@ import java.util.HashMap;
 public class BashEventNew extends AbstractModel {
 
     /**
-    * 数据ID
+    * <p>数据ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 主机安全ID
+    * <p>主机安全ID</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机ID
+    * <p>主机ID</p>
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 主机内网IP
+    * <p>主机内网IP</p>
     */
     @SerializedName("HostIp")
     @Expose
     private String HostIp;
 
     /**
-    * 执行用户名
+    * <p>执行用户名</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 平台类型
+    * <p>平台类型</p>
     */
     @SerializedName("Platform")
     @Expose
     private Long Platform;
 
     /**
-    * 执行命令
+    * <p>执行命令</p>
     */
     @SerializedName("BashCmd")
     @Expose
     private String BashCmd;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 规则等级：1-高 2-中 3-低
+    * <p>规则等级：1-高 2-中 3-低</p>
     */
     @SerializedName("RuleLevel")
     @Expose
     private Long RuleLevel;
 
     /**
-    * 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
+    * <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 发生时间
+    * <p>发生时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 主机名
+    * <p>主机名</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * 0: bash日志 1: 实时监控(雷霆版)
+    * <p>0: bash日志 1: 实时监控(雷霆版)</p>
     */
     @SerializedName("DetectBy")
     @Expose
     private Long DetectBy;
 
     /**
-    * 进程id
+    * <p>进程id</p>
     */
     @SerializedName("Pid")
     @Expose
     private String Pid;
 
     /**
-    * 进程名称
+    * <p>进程名称</p>
     */
     @SerializedName("Exe")
     @Expose
     private String Exe;
 
     /**
-    * 处理时间
+    * <p>处理时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 规则类别  0=系统规则，1=用户规则
+    * <p>规则类别  0=系统规则，1=用户规则</p>
     */
     @SerializedName("RuleCategory")
     @Expose
     private Long RuleCategory;
 
     /**
-    * 转义后的正则表达式
+    * <p>转义后的正则表达式</p>
     */
     @SerializedName("RegexBashCmd")
     @Expose
     private String RegexBashCmd;
 
     /**
-    * 转义后的正则表达式
+    * <p>转义后的正则表达式</p>
     */
     @SerializedName("RegexExe")
     @Expose
     private String RegexExe;
 
     /**
-    * 0:普通 1:专业版 2:旗舰版
+    * <p>0:普通 1:专业版 2:旗舰版</p>
     */
     @SerializedName("MachineType")
     @Expose
     private Long MachineType;
 
     /**
-    * 机器额外信息
+    * <p>机器额外信息</p>
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-     * Get 数据ID 
-     * @return Id 数据ID
+    * <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+    */
+    @SerializedName("EventCount")
+    @Expose
+    private Long EventCount;
+
+    /**
+    * <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+    */
+    @SerializedName("FirstDetectTime")
+    @Expose
+    private String FirstDetectTime;
+
+    /**
+    * <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+    */
+    @SerializedName("LatestDetectTime")
+    @Expose
+    private String LatestDetectTime;
+
+    /**
+     * Get <p>数据ID</p> 
+     * @return Id <p>数据ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 数据ID
-     * @param Id 数据ID
+     * Set <p>数据ID</p>
+     * @param Id <p>数据ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 主机安全ID 
-     * @return Uuid 主机安全ID
+     * Get <p>主机安全ID</p> 
+     * @return Uuid <p>主机安全ID</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机安全ID
-     * @param Uuid 主机安全ID
+     * Set <p>主机安全ID</p>
+     * @param Uuid <p>主机安全ID</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ID 
-     * @return Quuid 主机ID
+     * Get <p>主机ID</p> 
+     * @return Quuid <p>主机ID</p>
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 主机ID
-     * @param Quuid 主机ID
+     * Set <p>主机ID</p>
+     * @param Quuid <p>主机ID</p>
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 主机内网IP 
-     * @return HostIp 主机内网IP
+     * Get <p>主机内网IP</p> 
+     * @return HostIp <p>主机内网IP</p>
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set 主机内网IP
-     * @param HostIp 主机内网IP
+     * Set <p>主机内网IP</p>
+     * @param HostIp <p>主机内网IP</p>
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 执行用户名 
-     * @return User 执行用户名
+     * Get <p>执行用户名</p> 
+     * @return User <p>执行用户名</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 执行用户名
-     * @param User 执行用户名
+     * Set <p>执行用户名</p>
+     * @param User <p>执行用户名</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 平台类型 
-     * @return Platform 平台类型
+     * Get <p>平台类型</p> 
+     * @return Platform <p>平台类型</p>
      */
     public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台类型
-     * @param Platform 平台类型
+     * Set <p>平台类型</p>
+     * @param Platform <p>平台类型</p>
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 执行命令 
-     * @return BashCmd 执行命令
+     * Get <p>执行命令</p> 
+     * @return BashCmd <p>执行命令</p>
      */
     public String getBashCmd() {
         return this.BashCmd;
     }
 
     /**
-     * Set 执行命令
-     * @param BashCmd 执行命令
+     * Set <p>执行命令</p>
+     * @param BashCmd <p>执行命令</p>
      */
     public void setBashCmd(String BashCmd) {
         this.BashCmd = BashCmd;
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get <p>规则ID</p> 
+     * @return RuleId <p>规则ID</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set <p>规则ID</p>
+     * @param RuleId <p>规则ID</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则等级：1-高 2-中 3-低 
-     * @return RuleLevel 规则等级：1-高 2-中 3-低
+     * Get <p>规则等级：1-高 2-中 3-低</p> 
+     * @return RuleLevel <p>规则等级：1-高 2-中 3-低</p>
      */
     public Long getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * Set 规则等级：1-高 2-中 3-低
-     * @param RuleLevel 规则等级：1-高 2-中 3-低
+     * Set <p>规则等级：1-高 2-中 3-低</p>
+     * @param RuleLevel <p>规则等级：1-高 2-中 3-低</p>
      */
     public void setRuleLevel(Long RuleLevel) {
         this.RuleLevel = RuleLevel;
     }
 
     /**
-     * Get 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略 
-     * @return Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
+     * Get <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p> 
+     * @return Status <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
-     * @param Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
+     * Set <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
+     * @param Status <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 发生时间 
-     * @return CreateTime 发生时间
+     * Get <p>发生时间</p> 
+     * @return CreateTime <p>发生时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 发生时间
-     * @param CreateTime 发生时间
+     * Set <p>发生时间</p>
+     * @param CreateTime <p>发生时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 主机名 
-     * @return MachineName 主机名
+     * Get <p>主机名</p> 
+     * @return MachineName <p>主机名</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set 主机名
-     * @param MachineName 主机名
+     * Set <p>主机名</p>
+     * @param MachineName <p>主机名</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 0: bash日志 1: 实时监控(雷霆版) 
-     * @return DetectBy 0: bash日志 1: 实时监控(雷霆版)
+     * Get <p>0: bash日志 1: 实时监控(雷霆版)</p> 
+     * @return DetectBy <p>0: bash日志 1: 实时监控(雷霆版)</p>
      */
     public Long getDetectBy() {
         return this.DetectBy;
     }
 
     /**
-     * Set 0: bash日志 1: 实时监控(雷霆版)
-     * @param DetectBy 0: bash日志 1: 实时监控(雷霆版)
+     * Set <p>0: bash日志 1: 实时监控(雷霆版)</p>
+     * @param DetectBy <p>0: bash日志 1: 实时监控(雷霆版)</p>
      */
     public void setDetectBy(Long DetectBy) {
         this.DetectBy = DetectBy;
     }
 
     /**
-     * Get 进程id 
-     * @return Pid 进程id
+     * Get <p>进程id</p> 
+     * @return Pid <p>进程id</p>
      */
     public String getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 进程id
-     * @param Pid 进程id
+     * Set <p>进程id</p>
+     * @param Pid <p>进程id</p>
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 进程名称 
-     * @return Exe 进程名称
+     * Get <p>进程名称</p> 
+     * @return Exe <p>进程名称</p>
      */
     public String getExe() {
         return this.Exe;
     }
 
     /**
-     * Set 进程名称
-     * @param Exe 进程名称
+     * Set <p>进程名称</p>
+     * @param Exe <p>进程名称</p>
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get 处理时间 
-     * @return ModifyTime 处理时间
+     * Get <p>处理时间</p> 
+     * @return ModifyTime <p>处理时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 处理时间
-     * @param ModifyTime 处理时间
+     * Set <p>处理时间</p>
+     * @param ModifyTime <p>处理时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 规则类别  0=系统规则，1=用户规则 
-     * @return RuleCategory 规则类别  0=系统规则，1=用户规则
+     * Get <p>规则类别  0=系统规则，1=用户规则</p> 
+     * @return RuleCategory <p>规则类别  0=系统规则，1=用户规则</p>
      */
     public Long getRuleCategory() {
         return this.RuleCategory;
     }
 
     /**
-     * Set 规则类别  0=系统规则，1=用户规则
-     * @param RuleCategory 规则类别  0=系统规则，1=用户规则
+     * Set <p>规则类别  0=系统规则，1=用户规则</p>
+     * @param RuleCategory <p>规则类别  0=系统规则，1=用户规则</p>
      */
     public void setRuleCategory(Long RuleCategory) {
         this.RuleCategory = RuleCategory;
     }
 
     /**
-     * Get 转义后的正则表达式 
-     * @return RegexBashCmd 转义后的正则表达式
+     * Get <p>转义后的正则表达式</p> 
+     * @return RegexBashCmd <p>转义后的正则表达式</p>
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
     }
 
     /**
-     * Set 转义后的正则表达式
-     * @param RegexBashCmd 转义后的正则表达式
+     * Set <p>转义后的正则表达式</p>
+     * @param RegexBashCmd <p>转义后的正则表达式</p>
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
     }
 
     /**
-     * Get 转义后的正则表达式 
-     * @return RegexExe 转义后的正则表达式
+     * Get <p>转义后的正则表达式</p> 
+     * @return RegexExe <p>转义后的正则表达式</p>
      */
     public String getRegexExe() {
         return this.RegexExe;
     }
 
     /**
-     * Set 转义后的正则表达式
-     * @param RegexExe 转义后的正则表达式
+     * Set <p>转义后的正则表达式</p>
+     * @param RegexExe <p>转义后的正则表达式</p>
      */
     public void setRegexExe(String RegexExe) {
         this.RegexExe = RegexExe;
     }
 
     /**
-     * Get 0:普通 1:专业版 2:旗舰版 
-     * @return MachineType 0:普通 1:专业版 2:旗舰版
+     * Get <p>0:普通 1:专业版 2:旗舰版</p> 
+     * @return MachineType <p>0:普通 1:专业版 2:旗舰版</p>
      */
     public Long getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 0:普通 1:专业版 2:旗舰版
-     * @param MachineType 0:普通 1:专业版 2:旗舰版
+     * Set <p>0:普通 1:专业版 2:旗舰版</p>
+     * @param MachineType <p>0:普通 1:专业版 2:旗舰版</p>
      */
     public void setMachineType(Long MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 机器额外信息 
-     * @return MachineExtraInfo 机器额外信息
+     * Get <p>机器额外信息</p> 
+     * @return MachineExtraInfo <p>机器额外信息</p>
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set 机器额外信息
-     * @param MachineExtraInfo 机器额外信息
+     * Set <p>机器额外信息</p>
+     * @param MachineExtraInfo <p>机器额外信息</p>
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
+    }
+
+    /**
+     * Get <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p> 
+     * @return EventCount <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     */
+    public Long getEventCount() {
+        return this.EventCount;
+    }
+
+    /**
+     * Set <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     * @param EventCount <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     */
+    public void setEventCount(Long EventCount) {
+        this.EventCount = EventCount;
+    }
+
+    /**
+     * Get <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p> 
+     * @return FirstDetectTime <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public String getFirstDetectTime() {
+        return this.FirstDetectTime;
+    }
+
+    /**
+     * Set <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     * @param FirstDetectTime <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public void setFirstDetectTime(String FirstDetectTime) {
+        this.FirstDetectTime = FirstDetectTime;
+    }
+
+    /**
+     * Get <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p> 
+     * @return LatestDetectTime <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public String getLatestDetectTime() {
+        return this.LatestDetectTime;
+    }
+
+    /**
+     * Set <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     * @param LatestDetectTime <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public void setLatestDetectTime(String LatestDetectTime) {
+        this.LatestDetectTime = LatestDetectTime;
     }
 
     public BashEventNew() {
@@ -603,6 +672,15 @@ public class BashEventNew extends AbstractModel {
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.EventCount != null) {
+            this.EventCount = new Long(source.EventCount);
+        }
+        if (source.FirstDetectTime != null) {
+            this.FirstDetectTime = new String(source.FirstDetectTime);
+        }
+        if (source.LatestDetectTime != null) {
+            this.LatestDetectTime = new String(source.LatestDetectTime);
+        }
     }
 
 
@@ -632,6 +710,9 @@ public class BashEventNew extends AbstractModel {
         this.setParamSimple(map, prefix + "RegexExe", this.RegexExe);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "EventCount", this.EventCount);
+        this.setParamSimple(map, prefix + "FirstDetectTime", this.FirstDetectTime);
+        this.setParamSimple(map, prefix + "LatestDetectTime", this.LatestDetectTime);
 
     }
 }

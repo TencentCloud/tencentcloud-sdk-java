@@ -24,394 +24,417 @@ import java.util.HashMap;
 public class BashPolicy extends AbstractModel {
 
     /**
-    * 策略名称
+    * <p>策略名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 1:有效 0:无效
+    * <p>1:有效 0:无效</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 0:黑名单 1:白名单
+    * <p>0:黑名单 1:白名单</p>
     */
     @SerializedName("White")
     @Expose
     private Long White;
 
     /**
-    * 0:告警 1:白名单 2:拦截
+    * <p>0:告警 1:白名单 2:拦截</p>
     */
     @SerializedName("BashAction")
     @Expose
     private Long BashAction;
 
     /**
-    * 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+    * <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
     */
     @SerializedName("Rule")
     @Expose
     private String Rule;
 
     /**
-    * 危险等级(0:无，1: 高危 2:中危 3: 低危)
+    * <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
+    * <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * 策略ID
+    * <p>策略ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 策略描述
+    * <p>策略描述</p>
     */
     @SerializedName("Descript")
     @Expose
     private String Descript;
 
     /**
-    * 事件列表点击“加入白名单”时,需要传EventId 事件的id
+    * <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 是否处理旧事件为白名单 0=不处理 1=处理
+    * <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
     */
     @SerializedName("DealOldEvents")
     @Expose
     private Long DealOldEvents;
 
     /**
-    * 生效主机的QUUID集合
+    * <p>生效主机的QUUID集合</p>
     */
     @SerializedName("Quuids")
     @Expose
     private String [] Quuids;
 
     /**
-    * 策略类型，0:系统  1:用户
+    * <p>策略类型，0:系统  1:用户</p>
     */
     @SerializedName("Category")
     @Expose
     private Long Category;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 老版本兼容可能会用到
+    * <p>老版本兼容可能会用到</p>
     */
     @SerializedName("Uuids")
     @Expose
     private String [] Uuids;
 
     /**
-    * 规则表达式
+    * <p>规则表达式</p>
     */
     @SerializedName("Rules")
     @Expose
     private PolicyRules Rules;
 
     /**
-     * Get 策略名称 
-     * @return Name 策略名称
+    * <p>匹配类型：0-命令行（默认） 1-文件操作</p>
+    */
+    @SerializedName("MatchType")
+    @Expose
+    private Long MatchType;
+
+    /**
+     * Get <p>策略名称</p> 
+     * @return Name <p>策略名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略名称
-     * @param Name 策略名称
+     * Set <p>策略名称</p>
+     * @param Name <p>策略名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 1:有效 0:无效 
-     * @return Enable 1:有效 0:无效
+     * Get <p>1:有效 0:无效</p> 
+     * @return Enable <p>1:有效 0:无效</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 1:有效 0:无效
-     * @param Enable 1:有效 0:无效
+     * Set <p>1:有效 0:无效</p>
+     * @param Enable <p>1:有效 0:无效</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 0:黑名单 1:白名单 
-     * @return White 0:黑名单 1:白名单
+     * Get <p>0:黑名单 1:白名单</p> 
+     * @return White <p>0:黑名单 1:白名单</p>
      */
     public Long getWhite() {
         return this.White;
     }
 
     /**
-     * Set 0:黑名单 1:白名单
-     * @param White 0:黑名单 1:白名单
+     * Set <p>0:黑名单 1:白名单</p>
+     * @param White <p>0:黑名单 1:白名单</p>
      */
     public void setWhite(Long White) {
         this.White = White;
     }
 
     /**
-     * Get 0:告警 1:白名单 2:拦截 
-     * @return BashAction 0:告警 1:白名单 2:拦截
+     * Get <p>0:告警 1:白名单 2:拦截</p> 
+     * @return BashAction <p>0:告警 1:白名单 2:拦截</p>
      */
     public Long getBashAction() {
         return this.BashAction;
     }
 
     /**
-     * Set 0:告警 1:白名单 2:拦截
-     * @param BashAction 0:告警 1:白名单 2:拦截
+     * Set <p>0:告警 1:白名单 2:拦截</p>
+     * @param BashAction <p>0:告警 1:白名单 2:拦截</p>
      */
     public void setBashAction(Long BashAction) {
         this.BashAction = BashAction;
     }
 
     /**
-     * Get 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine 
-     * @return Rule 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+     * Get <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p> 
+     * @return Rule <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
-     * @param Rule 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+     * Set <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
+     * @param Rule <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get 危险等级(0:无，1: 高危 2:中危 3: 低危) 
-     * @return Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
+     * Get <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p> 
+     * @return Level <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 危险等级(0:无，1: 高危 2:中危 3: 低危)
-     * @param Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
+     * Set <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
+     * @param Level <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机） 
-     * @return Scope 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
+     * Get <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p> 
+     * @return Scope <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
-     * @param Scope 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
+     * Set <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
+     * @param Scope <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 策略ID 
-     * @return Id 策略ID
+     * Get <p>策略ID</p> 
+     * @return Id <p>策略ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 策略ID
-     * @param Id 策略ID
+     * Set <p>策略ID</p>
+     * @param Id <p>策略ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 策略描述 
-     * @return Descript 策略描述
+     * Get <p>策略描述</p> 
+     * @return Descript <p>策略描述</p>
      */
     public String getDescript() {
         return this.Descript;
     }
 
     /**
-     * Set 策略描述
-     * @param Descript 策略描述
+     * Set <p>策略描述</p>
+     * @param Descript <p>策略描述</p>
      */
     public void setDescript(String Descript) {
         this.Descript = Descript;
     }
 
     /**
-     * Get 事件列表点击“加入白名单”时,需要传EventId 事件的id 
-     * @return EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
+     * Get <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p> 
+     * @return EventId <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件列表点击“加入白名单”时,需要传EventId 事件的id
-     * @param EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
+     * Set <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
+     * @param EventId <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 是否处理旧事件为白名单 0=不处理 1=处理 
-     * @return DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
+     * Get <p>是否处理旧事件为白名单 0=不处理 1=处理</p> 
+     * @return DealOldEvents <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
      */
     public Long getDealOldEvents() {
         return this.DealOldEvents;
     }
 
     /**
-     * Set 是否处理旧事件为白名单 0=不处理 1=处理
-     * @param DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
+     * Set <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
+     * @param DealOldEvents <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
      */
     public void setDealOldEvents(Long DealOldEvents) {
         this.DealOldEvents = DealOldEvents;
     }
 
     /**
-     * Get 生效主机的QUUID集合 
-     * @return Quuids 生效主机的QUUID集合
+     * Get <p>生效主机的QUUID集合</p> 
+     * @return Quuids <p>生效主机的QUUID集合</p>
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set 生效主机的QUUID集合
-     * @param Quuids 生效主机的QUUID集合
+     * Set <p>生效主机的QUUID集合</p>
+     * @param Quuids <p>生效主机的QUUID集合</p>
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get 策略类型，0:系统  1:用户 
-     * @return Category 策略类型，0:系统  1:用户
+     * Get <p>策略类型，0:系统  1:用户</p> 
+     * @return Category <p>策略类型，0:系统  1:用户</p>
      */
     public Long getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 策略类型，0:系统  1:用户
-     * @param Category 策略类型，0:系统  1:用户
+     * Set <p>策略类型，0:系统  1:用户</p>
+     * @param Category <p>策略类型，0:系统  1:用户</p>
      */
     public void setCategory(Long Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 老版本兼容可能会用到 
-     * @return Uuids 老版本兼容可能会用到
+     * Get <p>老版本兼容可能会用到</p> 
+     * @return Uuids <p>老版本兼容可能会用到</p>
      */
     public String [] getUuids() {
         return this.Uuids;
     }
 
     /**
-     * Set 老版本兼容可能会用到
-     * @param Uuids 老版本兼容可能会用到
+     * Set <p>老版本兼容可能会用到</p>
+     * @param Uuids <p>老版本兼容可能会用到</p>
      */
     public void setUuids(String [] Uuids) {
         this.Uuids = Uuids;
     }
 
     /**
-     * Get 规则表达式 
-     * @return Rules 规则表达式
+     * Get <p>规则表达式</p> 
+     * @return Rules <p>规则表达式</p>
      */
     public PolicyRules getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 规则表达式
-     * @param Rules 规则表达式
+     * Set <p>规则表达式</p>
+     * @param Rules <p>规则表达式</p>
      */
     public void setRules(PolicyRules Rules) {
         this.Rules = Rules;
+    }
+
+    /**
+     * Get <p>匹配类型：0-命令行（默认） 1-文件操作</p> 
+     * @return MatchType <p>匹配类型：0-命令行（默认） 1-文件操作</p>
+     */
+    public Long getMatchType() {
+        return this.MatchType;
+    }
+
+    /**
+     * Set <p>匹配类型：0-命令行（默认） 1-文件操作</p>
+     * @param MatchType <p>匹配类型：0-命令行（默认） 1-文件操作</p>
+     */
+    public void setMatchType(Long MatchType) {
+        this.MatchType = MatchType;
     }
 
     public BashPolicy() {
@@ -479,6 +502,9 @@ public class BashPolicy extends AbstractModel {
         if (source.Rules != null) {
             this.Rules = new PolicyRules(source.Rules);
         }
+        if (source.MatchType != null) {
+            this.MatchType = new Long(source.MatchType);
+        }
     }
 
 
@@ -503,6 +529,7 @@ public class BashPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
         this.setParamObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "MatchType", this.MatchType);
 
     }
 }

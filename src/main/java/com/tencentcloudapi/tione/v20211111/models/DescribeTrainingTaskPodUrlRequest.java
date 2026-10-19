@@ -31,6 +31,13 @@ public class DescribeTrainingTaskPodUrlRequest extends AbstractModel {
     private String PodName;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
      * Get 任务实例名 
      * @return PodName 任务实例名
      */
@@ -46,6 +53,22 @@ public class DescribeTrainingTaskPodUrlRequest extends AbstractModel {
         this.PodName = PodName;
     }
 
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
     public DescribeTrainingTaskPodUrlRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeTrainingTaskPodUrlRequest extends AbstractModel {
         if (source.PodName != null) {
             this.PodName = new String(source.PodName);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeTrainingTaskPodUrlRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

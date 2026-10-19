@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class PlayRecordData extends AbstractModel {
 
     /**
-    * 录像播放地址
+    * <p>flv录像播放地址</p>
     */
     @SerializedName("Flv")
     @Expose
     private String Flv;
 
     /**
-     * Get 录像播放地址 
-     * @return Flv 录像播放地址
+    * <p>fmp4录像播放地址</p>
+    */
+    @SerializedName("FMp4")
+    @Expose
+    private String FMp4;
+
+    /**
+     * Get <p>flv录像播放地址</p> 
+     * @return Flv <p>flv录像播放地址</p>
      */
     public String getFlv() {
         return this.Flv;
     }
 
     /**
-     * Set 录像播放地址
-     * @param Flv 录像播放地址
+     * Set <p>flv录像播放地址</p>
+     * @param Flv <p>flv录像播放地址</p>
      */
     public void setFlv(String Flv) {
         this.Flv = Flv;
+    }
+
+    /**
+     * Get <p>fmp4录像播放地址</p> 
+     * @return FMp4 <p>fmp4录像播放地址</p>
+     */
+    public String getFMp4() {
+        return this.FMp4;
+    }
+
+    /**
+     * Set <p>fmp4录像播放地址</p>
+     * @param FMp4 <p>fmp4录像播放地址</p>
+     */
+    public void setFMp4(String FMp4) {
+        this.FMp4 = FMp4;
     }
 
     public PlayRecordData() {
@@ -57,6 +80,9 @@ public class PlayRecordData extends AbstractModel {
         if (source.Flv != null) {
             this.Flv = new String(source.Flv);
         }
+        if (source.FMp4 != null) {
+            this.FMp4 = new String(source.FMp4);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class PlayRecordData extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Flv", this.Flv);
+        this.setParamSimple(map, prefix + "FMp4", this.FMp4);
 
     }
 }

@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class CreateNotebookImageRequest extends AbstractModel {
 
     /**
-    * 镜像信息
+    * <p>镜像信息</p>
     */
     @SerializedName("ImageInfo")
     @Expose
     private ImageInfo ImageInfo;
 
     /**
-    * notebook id
+    * <p>notebook id</p>
     */
     @SerializedName("NotebookId")
     @Expose
     private String NotebookId;
 
     /**
-    * 要保存的kernel数组
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>要保存的kernel数组</p>
     */
     @SerializedName("Kernels")
     @Expose
     private String [] Kernels;
 
     /**
-     * Get 镜像信息 
-     * @return ImageInfo 镜像信息
+    * <p>是否保存到镜像中心</p>
+    */
+    @SerializedName("RegisterToImageCenter")
+    @Expose
+    private Boolean RegisterToImageCenter;
+
+    /**
+     * Get <p>镜像信息</p> 
+     * @return ImageInfo <p>镜像信息</p>
      */
     public ImageInfo getImageInfo() {
         return this.ImageInfo;
     }
 
     /**
-     * Set 镜像信息
-     * @param ImageInfo 镜像信息
+     * Set <p>镜像信息</p>
+     * @param ImageInfo <p>镜像信息</p>
      */
     public void setImageInfo(ImageInfo ImageInfo) {
         this.ImageInfo = ImageInfo;
     }
 
     /**
-     * Get notebook id 
-     * @return NotebookId notebook id
+     * Get <p>notebook id</p> 
+     * @return NotebookId <p>notebook id</p>
      */
     public String getNotebookId() {
         return this.NotebookId;
     }
 
     /**
-     * Set notebook id
-     * @param NotebookId notebook id
+     * Set <p>notebook id</p>
+     * @param NotebookId <p>notebook id</p>
      */
     public void setNotebookId(String NotebookId) {
         this.NotebookId = NotebookId;
     }
 
     /**
-     * Get 要保存的kernel数组 
-     * @return Kernels 要保存的kernel数组
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>要保存的kernel数组</p> 
+     * @return Kernels <p>要保存的kernel数组</p>
      */
     public String [] getKernels() {
         return this.Kernels;
     }
 
     /**
-     * Set 要保存的kernel数组
-     * @param Kernels 要保存的kernel数组
+     * Set <p>要保存的kernel数组</p>
+     * @param Kernels <p>要保存的kernel数组</p>
      */
     public void setKernels(String [] Kernels) {
         this.Kernels = Kernels;
+    }
+
+    /**
+     * Get <p>是否保存到镜像中心</p> 
+     * @return RegisterToImageCenter <p>是否保存到镜像中心</p>
+     */
+    public Boolean getRegisterToImageCenter() {
+        return this.RegisterToImageCenter;
+    }
+
+    /**
+     * Set <p>是否保存到镜像中心</p>
+     * @param RegisterToImageCenter <p>是否保存到镜像中心</p>
+     */
+    public void setRegisterToImageCenter(Boolean RegisterToImageCenter) {
+        this.RegisterToImageCenter = RegisterToImageCenter;
     }
 
     public CreateNotebookImageRequest() {
@@ -106,11 +152,17 @@ public class CreateNotebookImageRequest extends AbstractModel {
         if (source.NotebookId != null) {
             this.NotebookId = new String(source.NotebookId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Kernels != null) {
             this.Kernels = new String[source.Kernels.length];
             for (int i = 0; i < source.Kernels.length; i++) {
                 this.Kernels[i] = new String(source.Kernels[i]);
             }
+        }
+        if (source.RegisterToImageCenter != null) {
+            this.RegisterToImageCenter = new Boolean(source.RegisterToImageCenter);
         }
     }
 
@@ -121,7 +173,9 @@ public class CreateNotebookImageRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "NotebookId", this.NotebookId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamArraySimple(map, prefix + "Kernels.", this.Kernels);
+        this.setParamSimple(map, prefix + "RegisterToImageCenter", this.RegisterToImageCenter);
 
     }
 }

@@ -122,6 +122,13 @@ public class DescribeCSCPayInfoResponse extends AbstractModel {
     private OrderQuotaInfo [] QuotaList;
 
     /**
+    * <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+    */
+    @SerializedName("QuotaUsedError")
+    @Expose
+    private String QuotaUsedError;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -353,6 +360,22 @@ public class DescribeCSCPayInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p> 
+     * @return QuotaUsedError <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+     */
+    public String getQuotaUsedError() {
+        return this.QuotaUsedError;
+    }
+
+    /**
+     * Set <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+     * @param QuotaUsedError <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+     */
+    public void setQuotaUsedError(String QuotaUsedError) {
+        this.QuotaUsedError = QuotaUsedError;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -421,6 +444,9 @@ public class DescribeCSCPayInfoResponse extends AbstractModel {
                 this.QuotaList[i] = new OrderQuotaInfo(source.QuotaList[i]);
             }
         }
+        if (source.QuotaUsedError != null) {
+            this.QuotaUsedError = new String(source.QuotaUsedError);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -445,6 +471,7 @@ public class DescribeCSCPayInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "NewUser", this.NewUser);
         this.setParamArrayObj(map, prefix + "QuotaList.", this.QuotaList);
+        this.setParamSimple(map, prefix + "QuotaUsedError", this.QuotaUsedError);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

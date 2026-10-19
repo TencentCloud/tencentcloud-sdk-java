@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class RedoLogItem extends AbstractModel {
 
     /**
-    * 文件名
+    * <p>文件名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 文件大小
+    * <p>文件大小</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 备份时间
+    * <p>备份时间</p>
     */
     @SerializedName("BackupTime")
     @Expose
     private String BackupTime;
 
     /**
-    * redoLogId
+    * <p>redoLogId</p>
     */
     @SerializedName("RedoLogId")
     @Expose
     private Long RedoLogId;
 
     /**
-    * 跨地域信息
+    * <p>跨地域信息</p>
     */
     @SerializedName("RedoCrossRegions")
     @Expose
     private BackupRegionAndIds [] RedoCrossRegions;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 完成时间
+    * <p>完成时间</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 保险箱信息
+    * <p>保险箱信息</p>
     */
     @SerializedName("VaultInfos")
     @Expose
     private VaultInfo [] VaultInfos;
 
     /**
-    * 备份投递状态
+    * <p>备份投递状态</p>
     */
     @SerializedName("CopyStatus")
     @Expose
     private String CopyStatus;
 
     /**
-    * 加密秘钥key
+    * <p>加密秘钥key</p>
     */
     @SerializedName("EncryptKeyId")
     @Expose
     private String EncryptKeyId;
 
     /**
-    * 加密秘钥地域
+    * <p>加密秘钥地域</p>
     */
     @SerializedName("EncryptRegion")
     @Expose
     private String EncryptRegion;
 
     /**
-     * Get 文件名 
-     * @return FileName 文件名
+     * Get <p>文件名</p> 
+     * @return FileName <p>文件名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名
-     * @param FileName 文件名
+     * Set <p>文件名</p>
+     * @param FileName <p>文件名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件大小 
-     * @return FileSize 文件大小
+     * Get <p>文件大小</p> 
+     * @return FileSize <p>文件大小</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小
-     * @param FileSize 文件大小
+     * Set <p>文件大小</p>
+     * @param FileSize <p>文件大小</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 备份时间 
-     * @return BackupTime 备份时间
+     * Get <p>备份时间</p> 
+     * @return BackupTime <p>备份时间</p>
      */
     public String getBackupTime() {
         return this.BackupTime;
     }
 
     /**
-     * Set 备份时间
-     * @param BackupTime 备份时间
+     * Set <p>备份时间</p>
+     * @param BackupTime <p>备份时间</p>
      */
     public void setBackupTime(String BackupTime) {
         this.BackupTime = BackupTime;
     }
 
     /**
-     * Get redoLogId 
-     * @return RedoLogId redoLogId
+     * Get <p>redoLogId</p> 
+     * @return RedoLogId <p>redoLogId</p>
      */
     public Long getRedoLogId() {
         return this.RedoLogId;
     }
 
     /**
-     * Set redoLogId
-     * @param RedoLogId redoLogId
+     * Set <p>redoLogId</p>
+     * @param RedoLogId <p>redoLogId</p>
      */
     public void setRedoLogId(Long RedoLogId) {
         this.RedoLogId = RedoLogId;
     }
 
     /**
-     * Get 跨地域信息 
-     * @return RedoCrossRegions 跨地域信息
+     * Get <p>跨地域信息</p> 
+     * @return RedoCrossRegions <p>跨地域信息</p>
      */
     public BackupRegionAndIds [] getRedoCrossRegions() {
         return this.RedoCrossRegions;
     }
 
     /**
-     * Set 跨地域信息
-     * @param RedoCrossRegions 跨地域信息
+     * Set <p>跨地域信息</p>
+     * @param RedoCrossRegions <p>跨地域信息</p>
      */
     public void setRedoCrossRegions(BackupRegionAndIds [] RedoCrossRegions) {
         this.RedoCrossRegions = RedoCrossRegions;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 完成时间 
-     * @return FinishTime 完成时间
+     * Get <p>完成时间</p> 
+     * @return FinishTime <p>完成时间</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 完成时间
-     * @param FinishTime 完成时间
+     * Set <p>完成时间</p>
+     * @param FinishTime <p>完成时间</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 保险箱信息 
-     * @return VaultInfos 保险箱信息
+     * Get <p>保险箱信息</p> 
+     * @return VaultInfos <p>保险箱信息</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set 保险箱信息
-     * @param VaultInfos 保险箱信息
+     * Set <p>保险箱信息</p>
+     * @param VaultInfos <p>保险箱信息</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
     }
 
     /**
-     * Get 备份投递状态 
-     * @return CopyStatus 备份投递状态
+     * Get <p>备份投递状态</p> 
+     * @return CopyStatus <p>备份投递状态</p>
      */
     public String getCopyStatus() {
         return this.CopyStatus;
     }
 
     /**
-     * Set 备份投递状态
-     * @param CopyStatus 备份投递状态
+     * Set <p>备份投递状态</p>
+     * @param CopyStatus <p>备份投递状态</p>
      */
     public void setCopyStatus(String CopyStatus) {
         this.CopyStatus = CopyStatus;
     }
 
     /**
-     * Get 加密秘钥key 
-     * @return EncryptKeyId 加密秘钥key
+     * Get <p>加密秘钥key</p> 
+     * @return EncryptKeyId <p>加密秘钥key</p>
      */
     public String getEncryptKeyId() {
         return this.EncryptKeyId;
     }
 
     /**
-     * Set 加密秘钥key
-     * @param EncryptKeyId 加密秘钥key
+     * Set <p>加密秘钥key</p>
+     * @param EncryptKeyId <p>加密秘钥key</p>
      */
     public void setEncryptKeyId(String EncryptKeyId) {
         this.EncryptKeyId = EncryptKeyId;
     }
 
     /**
-     * Get 加密秘钥地域 
-     * @return EncryptRegion 加密秘钥地域
+     * Get <p>加密秘钥地域</p> 
+     * @return EncryptRegion <p>加密秘钥地域</p>
      */
     public String getEncryptRegion() {
         return this.EncryptRegion;
     }
 
     /**
-     * Set 加密秘钥地域
-     * @param EncryptRegion 加密秘钥地域
+     * Set <p>加密秘钥地域</p>
+     * @param EncryptRegion <p>加密秘钥地域</p>
      */
     public void setEncryptRegion(String EncryptRegion) {
         this.EncryptRegion = EncryptRegion;

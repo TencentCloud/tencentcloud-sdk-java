@@ -45,14 +45,14 @@ public class CreateConsoleRequest extends AbstractModel {
     private String DomainPrefix;
 
     /**
-    * <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+    * <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
     */
     @SerializedName("Accounts")
     @Expose
     private ConsoleAccount [] Accounts;
 
     /**
-    * <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+    * <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
     */
     @SerializedName("AnonymousLogin")
     @Expose
@@ -87,7 +87,7 @@ public class CreateConsoleRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+    * <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
     */
     @SerializedName("AuthRoles")
     @Expose
@@ -177,32 +177,32 @@ public class CreateConsoleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p> 
-     * @return Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+     * Get <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p> 
+     * @return Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public ConsoleAccount [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
-     * @param Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+     * Set <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+     * @param Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public void setAccounts(ConsoleAccount [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p> 
-     * @return AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+     * Get <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p> 
+     * @return AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public AnonymousLoginInfo getAnonymousLogin() {
         return this.AnonymousLogin;
     }
 
     /**
-     * Set <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
-     * @param AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+     * Set <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+     * @param AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public void setAnonymousLogin(AnonymousLoginInfo AnonymousLogin) {
         this.AnonymousLogin = AnonymousLogin;
@@ -273,16 +273,16 @@ public class CreateConsoleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p> 
-     * @return AuthRoles <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+     * Get <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p> 
+     * @return AuthRoles <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public AuthRoleInfo [] getAuthRoles() {
         return this.AuthRoles;
     }
 
     /**
-     * Set <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
-     * @param AuthRoles <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+     * Set <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+     * @param AuthRoles <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public void setAuthRoles(AuthRoleInfo [] AuthRoles) {
         this.AuthRoles = AuthRoles;

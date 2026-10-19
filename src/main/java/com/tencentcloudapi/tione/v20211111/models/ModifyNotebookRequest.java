@@ -80,6 +80,13 @@ public class ModifyNotebookRequest extends AbstractModel {
     private Boolean LogEnable;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * <p>资源组ID(for预付费)</p>
     */
     @SerializedName("ResourceGroupId")
@@ -331,6 +338,22 @@ public class ModifyNotebookRequest extends AbstractModel {
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -653,6 +676,9 @@ public class ModifyNotebookRequest extends AbstractModel {
         if (source.LogEnable != null) {
             this.LogEnable = new Boolean(source.LogEnable);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.ResourceGroupId != null) {
             this.ResourceGroupId = new String(source.ResourceGroupId);
         }
@@ -734,6 +760,7 @@ public class ModifyNotebookRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DirectInternetAccess", this.DirectInternetAccess);
         this.setParamSimple(map, prefix + "RootAccess", this.RootAccess);
         this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

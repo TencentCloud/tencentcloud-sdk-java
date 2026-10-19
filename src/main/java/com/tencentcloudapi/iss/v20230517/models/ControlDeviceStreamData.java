@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ControlDeviceStreamData extends AbstractModel {
 
     /**
-    * flv 流地址
+    * <p>flv 流地址</p>
     */
     @SerializedName("Flv")
     @Expose
     private String Flv;
 
     /**
-    * hls 流地址
+    * <p>hls 流地址</p>
     */
     @SerializedName("Hls")
     @Expose
     private String Hls;
 
     /**
-    * rtmp 流地址
+    * <p>rtmp 流地址</p>
     */
     @SerializedName("Rtmp")
     @Expose
     private String Rtmp;
 
     /**
-     * Get flv 流地址 
-     * @return Flv flv 流地址
+    * <p>fmp4地址</p>
+    */
+    @SerializedName("FMp4")
+    @Expose
+    private String FMp4;
+
+    /**
+     * Get <p>flv 流地址</p> 
+     * @return Flv <p>flv 流地址</p>
      */
     public String getFlv() {
         return this.Flv;
     }
 
     /**
-     * Set flv 流地址
-     * @param Flv flv 流地址
+     * Set <p>flv 流地址</p>
+     * @param Flv <p>flv 流地址</p>
      */
     public void setFlv(String Flv) {
         this.Flv = Flv;
     }
 
     /**
-     * Get hls 流地址 
-     * @return Hls hls 流地址
+     * Get <p>hls 流地址</p> 
+     * @return Hls <p>hls 流地址</p>
      */
     public String getHls() {
         return this.Hls;
     }
 
     /**
-     * Set hls 流地址
-     * @param Hls hls 流地址
+     * Set <p>hls 流地址</p>
+     * @param Hls <p>hls 流地址</p>
      */
     public void setHls(String Hls) {
         this.Hls = Hls;
     }
 
     /**
-     * Get rtmp 流地址 
-     * @return Rtmp rtmp 流地址
+     * Get <p>rtmp 流地址</p> 
+     * @return Rtmp <p>rtmp 流地址</p>
      */
     public String getRtmp() {
         return this.Rtmp;
     }
 
     /**
-     * Set rtmp 流地址
-     * @param Rtmp rtmp 流地址
+     * Set <p>rtmp 流地址</p>
+     * @param Rtmp <p>rtmp 流地址</p>
      */
     public void setRtmp(String Rtmp) {
         this.Rtmp = Rtmp;
+    }
+
+    /**
+     * Get <p>fmp4地址</p> 
+     * @return FMp4 <p>fmp4地址</p>
+     */
+    public String getFMp4() {
+        return this.FMp4;
+    }
+
+    /**
+     * Set <p>fmp4地址</p>
+     * @param FMp4 <p>fmp4地址</p>
+     */
+    public void setFMp4(String FMp4) {
+        this.FMp4 = FMp4;
     }
 
     public ControlDeviceStreamData() {
@@ -109,6 +132,9 @@ public class ControlDeviceStreamData extends AbstractModel {
         if (source.Rtmp != null) {
             this.Rtmp = new String(source.Rtmp);
         }
+        if (source.FMp4 != null) {
+            this.FMp4 = new String(source.FMp4);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ControlDeviceStreamData extends AbstractModel {
         this.setParamSimple(map, prefix + "Flv", this.Flv);
         this.setParamSimple(map, prefix + "Hls", this.Hls);
         this.setParamSimple(map, prefix + "Rtmp", this.Rtmp);
+        this.setParamSimple(map, prefix + "FMp4", this.FMp4);
 
     }
 }

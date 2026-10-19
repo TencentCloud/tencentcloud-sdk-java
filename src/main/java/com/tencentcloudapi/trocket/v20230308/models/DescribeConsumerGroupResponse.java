@@ -115,6 +115,13 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
     private String LiteTopic;
 
     /**
+    * <p>自定义死信Topic</p>
+    */
+    @SerializedName("DeadLetterTargetTopic")
+    @Expose
+    private String DeadLetterTargetTopic;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -330,6 +337,22 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>自定义死信Topic</p> 
+     * @return DeadLetterTargetTopic <p>自定义死信Topic</p>
+     */
+    public String getDeadLetterTargetTopic() {
+        return this.DeadLetterTargetTopic;
+    }
+
+    /**
+     * Set <p>自定义死信Topic</p>
+     * @param DeadLetterTargetTopic <p>自定义死信Topic</p>
+     */
+    public void setDeadLetterTargetTopic(String DeadLetterTargetTopic) {
+        this.DeadLetterTargetTopic = DeadLetterTargetTopic;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -392,6 +415,9 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
         if (source.LiteTopic != null) {
             this.LiteTopic = new String(source.LiteTopic);
         }
+        if (source.DeadLetterTargetTopic != null) {
+            this.DeadLetterTargetTopic = new String(source.DeadLetterTargetTopic);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -415,6 +441,7 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
         this.setParamSimple(map, prefix + "ConsumeModel", this.ConsumeModel);
         this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
+        this.setParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

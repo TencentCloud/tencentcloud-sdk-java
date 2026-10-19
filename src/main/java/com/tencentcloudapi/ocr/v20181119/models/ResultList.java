@@ -86,6 +86,27 @@ public class ResultList extends AbstractModel {
     private Long [] CoordPageIndex;
 
     /**
+    * <p>返回正确答案内容</p>
+    */
+    @SerializedName("RightAnswer")
+    @Expose
+    private String RightAnswer;
+
+    /**
+    * <p>学科（如语文、数学、英语）</p>
+    */
+    @SerializedName("Subject")
+    @Expose
+    private String Subject;
+
+    /**
+    * <p>返回题目的知识点内容</p>
+    */
+    @SerializedName("KnowledgePoints")
+    @Expose
+    private String [] KnowledgePoints;
+
+    /**
      * Get <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Question <p>题干</p>
@@ -237,6 +258,54 @@ public class ResultList extends AbstractModel {
         this.CoordPageIndex = CoordPageIndex;
     }
 
+    /**
+     * Get <p>返回正确答案内容</p> 
+     * @return RightAnswer <p>返回正确答案内容</p>
+     */
+    public String getRightAnswer() {
+        return this.RightAnswer;
+    }
+
+    /**
+     * Set <p>返回正确答案内容</p>
+     * @param RightAnswer <p>返回正确答案内容</p>
+     */
+    public void setRightAnswer(String RightAnswer) {
+        this.RightAnswer = RightAnswer;
+    }
+
+    /**
+     * Get <p>学科（如语文、数学、英语）</p> 
+     * @return Subject <p>学科（如语文、数学、英语）</p>
+     */
+    public String getSubject() {
+        return this.Subject;
+    }
+
+    /**
+     * Set <p>学科（如语文、数学、英语）</p>
+     * @param Subject <p>学科（如语文、数学、英语）</p>
+     */
+    public void setSubject(String Subject) {
+        this.Subject = Subject;
+    }
+
+    /**
+     * Get <p>返回题目的知识点内容</p> 
+     * @return KnowledgePoints <p>返回题目的知识点内容</p>
+     */
+    public String [] getKnowledgePoints() {
+        return this.KnowledgePoints;
+    }
+
+    /**
+     * Set <p>返回题目的知识点内容</p>
+     * @param KnowledgePoints <p>返回题目的知识点内容</p>
+     */
+    public void setKnowledgePoints(String [] KnowledgePoints) {
+        this.KnowledgePoints = KnowledgePoints;
+    }
+
     public ResultList() {
     }
 
@@ -293,6 +362,18 @@ public class ResultList extends AbstractModel {
                 this.CoordPageIndex[i] = new Long(source.CoordPageIndex[i]);
             }
         }
+        if (source.RightAnswer != null) {
+            this.RightAnswer = new String(source.RightAnswer);
+        }
+        if (source.Subject != null) {
+            this.Subject = new String(source.Subject);
+        }
+        if (source.KnowledgePoints != null) {
+            this.KnowledgePoints = new String[source.KnowledgePoints.length];
+            for (int i = 0; i < source.KnowledgePoints.length; i++) {
+                this.KnowledgePoints[i] = new String(source.KnowledgePoints[i]);
+            }
+        }
     }
 
 
@@ -308,6 +389,9 @@ public class ResultList extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Parse.", this.Parse);
         this.setParamArrayObj(map, prefix + "Coord.", this.Coord);
         this.setParamArraySimple(map, prefix + "CoordPageIndex.", this.CoordPageIndex);
+        this.setParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
+        this.setParamSimple(map, prefix + "Subject", this.Subject);
+        this.setParamArraySimple(map, prefix + "KnowledgePoints.", this.KnowledgePoints);
 
     }
 }

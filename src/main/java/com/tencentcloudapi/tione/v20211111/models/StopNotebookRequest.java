@@ -31,6 +31,13 @@ public class StopNotebookRequest extends AbstractModel {
     private String Id;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
      * Get notebook id 
      * @return Id notebook id
      */
@@ -46,6 +53,22 @@ public class StopNotebookRequest extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
     public StopNotebookRequest() {
     }
 
@@ -57,6 +80,9 @@ public class StopNotebookRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class StopNotebookRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

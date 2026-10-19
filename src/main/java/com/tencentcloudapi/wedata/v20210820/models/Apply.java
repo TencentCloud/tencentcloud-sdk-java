@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class Apply extends AbstractModel {
 
     /**
-    * 申请人id
+    * <p>申请人id</p>
     */
     @SerializedName("ApplicantId")
     @Expose
     private String ApplicantId;
 
     /**
-    * 申请人名称
+    * <p>申请人名称</p>
     */
     @SerializedName("ApplicantName")
     @Expose
     private String ApplicantName;
 
     /**
-    * 审批备注
+    * <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -46,28 +46,28 @@ public class Apply extends AbstractModel {
     private String Remark;
 
     /**
-    * 审批分类key
+    * <p>审批分类key</p>
     */
     @SerializedName("ApproveClassification")
     @Expose
     private String ApproveClassification;
 
     /**
-    * 审批单id
+    * <p>审批单id</p>
     */
     @SerializedName("ApproveId")
     @Expose
     private String ApproveId;
 
     /**
-    * 审批类型key
+    * <p>审批类型key</p>
     */
     @SerializedName("ApproveType")
     @Expose
     private String ApproveType;
 
     /**
-    * 申请原因
+    * <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
@@ -75,14 +75,14 @@ public class Apply extends AbstractModel {
     private String Reason;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 审批时间
+    * <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveTime")
@@ -90,35 +90,35 @@ public class Apply extends AbstractModel {
     private String ApproveTime;
 
     /**
-    * 审批分类名称
+    * <p>审批分类名称</p>
     */
     @SerializedName("ApproveClassificationName")
     @Expose
     private String ApproveClassificationName;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 审批类型名称
+    * <p>审批类型名称</p>
     */
     @SerializedName("ApproveTypeName")
     @Expose
     private String ApproveTypeName;
 
     /**
-    * 审批异常或者失败信息
+    * <p>审批异常或者失败信息</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 申请名称
+    * <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyName")
@@ -126,7 +126,7 @@ public class Apply extends AbstractModel {
     private String ApplyName;
 
     /**
-    * 审批人id
+    * <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverId")
@@ -134,7 +134,7 @@ public class Apply extends AbstractModel {
     private String ApproverId;
 
     /**
-    * 审批人名称
+    * <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverName")
@@ -142,7 +142,7 @@ public class Apply extends AbstractModel {
     private String ApproverName;
 
     /**
-    * 审批所属项目
+    * <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveProjectName")
@@ -150,7 +150,7 @@ public class Apply extends AbstractModel {
     private String ApproveProjectName;
 
     /**
-    * 审批id
+    * <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyId")
@@ -158,7 +158,7 @@ public class Apply extends AbstractModel {
     private String ApplyId;
 
     /**
-    * 扩展字段
+    * <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
@@ -166,7 +166,7 @@ public class Apply extends AbstractModel {
     private String Metadata;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTimestamp")
@@ -174,7 +174,7 @@ public class Apply extends AbstractModel {
     private Long CreateTimestamp;
 
     /**
-    * 审批时间
+    * <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveTimestamp")
@@ -182,41 +182,48 @@ public class Apply extends AbstractModel {
     private Long ApproveTimestamp;
 
     /**
-     * Get 申请人id 
-     * @return ApplicantId 申请人id
+    * <p>审批扩展码</p>
+    */
+    @SerializedName("ApproveCode")
+    @Expose
+    private String ApproveCode;
+
+    /**
+     * Get <p>申请人id</p> 
+     * @return ApplicantId <p>申请人id</p>
      */
     public String getApplicantId() {
         return this.ApplicantId;
     }
 
     /**
-     * Set 申请人id
-     * @param ApplicantId 申请人id
+     * Set <p>申请人id</p>
+     * @param ApplicantId <p>申请人id</p>
      */
     public void setApplicantId(String ApplicantId) {
         this.ApplicantId = ApplicantId;
     }
 
     /**
-     * Get 申请人名称 
-     * @return ApplicantName 申请人名称
+     * Get <p>申请人名称</p> 
+     * @return ApplicantName <p>申请人名称</p>
      */
     public String getApplicantName() {
         return this.ApplicantName;
     }
 
     /**
-     * Set 申请人名称
-     * @param ApplicantName 申请人名称
+     * Set <p>申请人名称</p>
+     * @param ApplicantName <p>申请人名称</p>
      */
     public void setApplicantName(String ApplicantName) {
         this.ApplicantName = ApplicantName;
     }
 
     /**
-     * Get 审批备注
+     * Get <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 审批备注
+     * @return Remark <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -224,9 +231,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批备注
+     * Set <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 审批备注
+     * @param Remark <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -234,57 +241,57 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批分类key 
-     * @return ApproveClassification 审批分类key
+     * Get <p>审批分类key</p> 
+     * @return ApproveClassification <p>审批分类key</p>
      */
     public String getApproveClassification() {
         return this.ApproveClassification;
     }
 
     /**
-     * Set 审批分类key
-     * @param ApproveClassification 审批分类key
+     * Set <p>审批分类key</p>
+     * @param ApproveClassification <p>审批分类key</p>
      */
     public void setApproveClassification(String ApproveClassification) {
         this.ApproveClassification = ApproveClassification;
     }
 
     /**
-     * Get 审批单id 
-     * @return ApproveId 审批单id
+     * Get <p>审批单id</p> 
+     * @return ApproveId <p>审批单id</p>
      */
     public String getApproveId() {
         return this.ApproveId;
     }
 
     /**
-     * Set 审批单id
-     * @param ApproveId 审批单id
+     * Set <p>审批单id</p>
+     * @param ApproveId <p>审批单id</p>
      */
     public void setApproveId(String ApproveId) {
         this.ApproveId = ApproveId;
     }
 
     /**
-     * Get 审批类型key 
-     * @return ApproveType 审批类型key
+     * Get <p>审批类型key</p> 
+     * @return ApproveType <p>审批类型key</p>
      */
     public String getApproveType() {
         return this.ApproveType;
     }
 
     /**
-     * Set 审批类型key
-     * @param ApproveType 审批类型key
+     * Set <p>审批类型key</p>
+     * @param ApproveType <p>审批类型key</p>
      */
     public void setApproveType(String ApproveType) {
         this.ApproveType = ApproveType;
     }
 
     /**
-     * Get 申请原因
+     * Get <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Reason 申请原因
+     * @return Reason <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
@@ -292,9 +299,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 申请原因
+     * Set <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Reason 申请原因
+     * @param Reason <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
@@ -302,25 +309,25 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 审批时间
+     * Get <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveTime 审批时间
+     * @return ApproveTime <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproveTime() {
@@ -328,9 +335,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批时间
+     * Set <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveTime 审批时间
+     * @param ApproveTime <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveTime(String ApproveTime) {
@@ -338,73 +345,73 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批分类名称 
-     * @return ApproveClassificationName 审批分类名称
+     * Get <p>审批分类名称</p> 
+     * @return ApproveClassificationName <p>审批分类名称</p>
      */
     public String getApproveClassificationName() {
         return this.ApproveClassificationName;
     }
 
     /**
-     * Set 审批分类名称
-     * @param ApproveClassificationName 审批分类名称
+     * Set <p>审批分类名称</p>
+     * @param ApproveClassificationName <p>审批分类名称</p>
      */
     public void setApproveClassificationName(String ApproveClassificationName) {
         this.ApproveClassificationName = ApproveClassificationName;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 审批类型名称 
-     * @return ApproveTypeName 审批类型名称
+     * Get <p>审批类型名称</p> 
+     * @return ApproveTypeName <p>审批类型名称</p>
      */
     public String getApproveTypeName() {
         return this.ApproveTypeName;
     }
 
     /**
-     * Set 审批类型名称
-     * @param ApproveTypeName 审批类型名称
+     * Set <p>审批类型名称</p>
+     * @param ApproveTypeName <p>审批类型名称</p>
      */
     public void setApproveTypeName(String ApproveTypeName) {
         this.ApproveTypeName = ApproveTypeName;
     }
 
     /**
-     * Get 审批异常或者失败信息 
-     * @return ErrorMessage 审批异常或者失败信息
+     * Get <p>审批异常或者失败信息</p> 
+     * @return ErrorMessage <p>审批异常或者失败信息</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 审批异常或者失败信息
-     * @param ErrorMessage 审批异常或者失败信息
+     * Set <p>审批异常或者失败信息</p>
+     * @param ErrorMessage <p>审批异常或者失败信息</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 申请名称
+     * Get <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplyName 申请名称
+     * @return ApplyName <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyName() {
@@ -412,9 +419,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 申请名称
+     * Set <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplyName 申请名称
+     * @param ApplyName <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyName(String ApplyName) {
@@ -422,9 +429,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批人id
+     * Get <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproverId 审批人id
+     * @return ApproverId <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverId() {
@@ -432,9 +439,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批人id
+     * Set <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproverId 审批人id
+     * @param ApproverId <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverId(String ApproverId) {
@@ -442,9 +449,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批人名称
+     * Get <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproverName 审批人名称
+     * @return ApproverName <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverName() {
@@ -452,9 +459,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批人名称
+     * Set <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproverName 审批人名称
+     * @param ApproverName <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverName(String ApproverName) {
@@ -462,9 +469,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批所属项目
+     * Get <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveProjectName 审批所属项目
+     * @return ApproveProjectName <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproveProjectName() {
@@ -472,9 +479,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批所属项目
+     * Set <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveProjectName 审批所属项目
+     * @param ApproveProjectName <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveProjectName(String ApproveProjectName) {
@@ -482,9 +489,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批id
+     * Get <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplyId 审批id
+     * @return ApplyId <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyId() {
@@ -492,9 +499,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批id
+     * Set <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplyId 审批id
+     * @param ApplyId <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyId(String ApplyId) {
@@ -502,9 +509,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 扩展字段
+     * Get <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metadata 扩展字段
+     * @return Metadata <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetadata() {
@@ -512,9 +519,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 扩展字段
+     * Set <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metadata 扩展字段
+     * @param Metadata <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(String Metadata) {
@@ -522,9 +529,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTimestamp 创建时间
+     * @return CreateTimestamp <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTimestamp() {
@@ -532,9 +539,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTimestamp 创建时间
+     * @param CreateTimestamp <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTimestamp(Long CreateTimestamp) {
@@ -542,9 +549,9 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 审批时间
+     * Get <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveTimestamp 审批时间
+     * @return ApproveTimestamp <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApproveTimestamp() {
@@ -552,13 +559,29 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Set 审批时间
+     * Set <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveTimestamp 审批时间
+     * @param ApproveTimestamp <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveTimestamp(Long ApproveTimestamp) {
         this.ApproveTimestamp = ApproveTimestamp;
+    }
+
+    /**
+     * Get <p>审批扩展码</p> 
+     * @return ApproveCode <p>审批扩展码</p>
+     */
+    public String getApproveCode() {
+        return this.ApproveCode;
+    }
+
+    /**
+     * Set <p>审批扩展码</p>
+     * @param ApproveCode <p>审批扩展码</p>
+     */
+    public void setApproveCode(String ApproveCode) {
+        this.ApproveCode = ApproveCode;
     }
 
     public Apply() {
@@ -632,6 +655,9 @@ public class Apply extends AbstractModel {
         if (source.ApproveTimestamp != null) {
             this.ApproveTimestamp = new Long(source.ApproveTimestamp);
         }
+        if (source.ApproveCode != null) {
+            this.ApproveCode = new String(source.ApproveCode);
+        }
     }
 
 
@@ -660,6 +686,7 @@ public class Apply extends AbstractModel {
         this.setParamSimple(map, prefix + "Metadata", this.Metadata);
         this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
         this.setParamSimple(map, prefix + "ApproveTimestamp", this.ApproveTimestamp);
+        this.setParamSimple(map, prefix + "ApproveCode", this.ApproveCode);
 
     }
 }

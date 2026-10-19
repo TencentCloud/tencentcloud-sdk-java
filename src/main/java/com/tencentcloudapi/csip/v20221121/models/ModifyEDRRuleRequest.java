@@ -248,6 +248,13 @@ public class ModifyEDRRuleRequest extends AbstractModel {
     private ConditionMatch [] ConditionMatches;
 
     /**
+    * <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+    */
+    @SerializedName("FileOperationRules")
+    @Expose
+    private RuleContentFileOperation FileOperationRules;
+
+    /**
      * Get <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p> 
      * @return RuleType <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      */
@@ -759,6 +766,22 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.ConditionMatches = ConditionMatches;
     }
 
+    /**
+     * Get <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p> 
+     * @return FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public RuleContentFileOperation getFileOperationRules() {
+        return this.FileOperationRules;
+    }
+
+    /**
+     * Set <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     * @param FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public void setFileOperationRules(RuleContentFileOperation FileOperationRules) {
+        this.FileOperationRules = FileOperationRules;
+    }
+
     public ModifyEDRRuleRequest() {
     }
 
@@ -911,6 +934,9 @@ public class ModifyEDRRuleRequest extends AbstractModel {
                 this.ConditionMatches[i] = new ConditionMatch(source.ConditionMatches[i]);
             }
         }
+        if (source.FileOperationRules != null) {
+            this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
+        }
     }
 
 
@@ -950,6 +976,7 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExcludeClusterIDsWithAppId.", this.ExcludeClusterIDsWithAppId);
         this.setParamArrayObj(map, prefix + "ImageIDsWithAppId.", this.ImageIDsWithAppId);
         this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
+        this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
 
     }
 }

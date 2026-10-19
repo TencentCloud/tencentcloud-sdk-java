@@ -54,6 +54,22 @@ public class LineageNodeInfo extends AbstractModel {
     private Long UpStreamCount;
 
     /**
+    * 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceColumnName")
+    @Expose
+    private String SourceColumnName;
+
+    /**
+    * 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColumnName")
+    @Expose
+    private String ColumnName;
+
+    /**
      * Get 当前资源
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource 当前资源
@@ -125,6 +141,46 @@ public class LineageNodeInfo extends AbstractModel {
         this.UpStreamCount = UpStreamCount;
     }
 
+    /**
+     * Get 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceColumnName 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceColumnName() {
+        return this.SourceColumnName;
+    }
+
+    /**
+     * Set 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceColumnName 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceColumnName(String SourceColumnName) {
+        this.SourceColumnName = SourceColumnName;
+    }
+
+    /**
+     * Get 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColumnName 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColumnName() {
+        return this.ColumnName;
+    }
+
+    /**
+     * Set 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnName 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumnName(String ColumnName) {
+        this.ColumnName = ColumnName;
+    }
+
     public LineageNodeInfo() {
     }
 
@@ -145,6 +201,12 @@ public class LineageNodeInfo extends AbstractModel {
         if (source.UpStreamCount != null) {
             this.UpStreamCount = new Long(source.UpStreamCount);
         }
+        if (source.SourceColumnName != null) {
+            this.SourceColumnName = new String(source.SourceColumnName);
+        }
+        if (source.ColumnName != null) {
+            this.ColumnName = new String(source.ColumnName);
+        }
     }
 
 
@@ -156,6 +218,8 @@ public class LineageNodeInfo extends AbstractModel {
         this.setParamObj(map, prefix + "Relation.", this.Relation);
         this.setParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
         this.setParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
+        this.setParamSimple(map, prefix + "SourceColumnName", this.SourceColumnName);
+        this.setParamSimple(map, prefix + "ColumnName", this.ColumnName);
 
     }
 }

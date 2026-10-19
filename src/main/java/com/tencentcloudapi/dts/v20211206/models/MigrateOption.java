@@ -88,6 +88,13 @@ public class MigrateOption extends AbstractModel {
     private RateLimit RateLimit;
 
     /**
+    * <p>跳过报错的DDL策略</p>
+    */
+    @SerializedName("SkipDdlOnError")
+    @Expose
+    private SkipDdlOnError SkipDdlOnError;
+
+    /**
      * Get <p>迁移对象选项，需要告知迁移服务迁移哪些库表对象</p> 
      * @return DatabaseTable <p>迁移对象选项，需要告知迁移服务迁移哪些库表对象</p>
      */
@@ -235,6 +242,22 @@ public class MigrateOption extends AbstractModel {
         this.RateLimit = RateLimit;
     }
 
+    /**
+     * Get <p>跳过报错的DDL策略</p> 
+     * @return SkipDdlOnError <p>跳过报错的DDL策略</p>
+     */
+    public SkipDdlOnError getSkipDdlOnError() {
+        return this.SkipDdlOnError;
+    }
+
+    /**
+     * Set <p>跳过报错的DDL策略</p>
+     * @param SkipDdlOnError <p>跳过报错的DDL策略</p>
+     */
+    public void setSkipDdlOnError(SkipDdlOnError SkipDdlOnError) {
+        this.SkipDdlOnError = SkipDdlOnError;
+    }
+
     public MigrateOption() {
     }
 
@@ -273,6 +296,9 @@ public class MigrateOption extends AbstractModel {
         if (source.RateLimit != null) {
             this.RateLimit = new RateLimit(source.RateLimit);
         }
+        if (source.SkipDdlOnError != null) {
+            this.SkipDdlOnError = new SkipDdlOnError(source.SkipDdlOnError);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class MigrateOption extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
         this.setParamSimple(map, prefix + "MigrateWay", this.MigrateWay);
         this.setParamObj(map, prefix + "RateLimit.", this.RateLimit);
+        this.setParamObj(map, prefix + "SkipDdlOnError.", this.SkipDdlOnError);
 
     }
 }

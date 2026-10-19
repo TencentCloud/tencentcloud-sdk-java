@@ -38,6 +38,13 @@ public class ModifyServiceGroupWeightsRequest extends AbstractModel {
     private WeightEntry [] Weights;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -69,6 +76,22 @@ public class ModifyServiceGroupWeightsRequest extends AbstractModel {
         this.Weights = Weights;
     }
 
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
     public ModifyServiceGroupWeightsRequest() {
     }
 
@@ -86,6 +109,9 @@ public class ModifyServiceGroupWeightsRequest extends AbstractModel {
                 this.Weights[i] = new WeightEntry(source.Weights[i]);
             }
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ModifyServiceGroupWeightsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
         this.setParamArrayObj(map, prefix + "Weights.", this.Weights);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

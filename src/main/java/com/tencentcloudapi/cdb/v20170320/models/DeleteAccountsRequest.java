@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAccountsRequest extends AbstractModel {
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 云数据库账号。
+    * <p>云数据库账号。</p>
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p> 
+     * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云数据库账号。 
-     * @return Accounts 云数据库账号。
+     * Get <p>云数据库账号。</p> 
+     * @return Accounts <p>云数据库账号。</p>
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 云数据库账号。
-     * @param Accounts 云数据库账号。
+     * Set <p>云数据库账号。</p>
+     * @param Accounts <p>云数据库账号。</p>
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;

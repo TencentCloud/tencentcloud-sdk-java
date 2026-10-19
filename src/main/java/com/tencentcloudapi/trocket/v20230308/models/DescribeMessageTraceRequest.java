@@ -59,6 +59,20 @@ public class DescribeMessageTraceRequest extends AbstractModel {
     private Boolean QueryDelayMessage;
 
     /**
+    * <p>是否为重试消息</p>
+    */
+    @SerializedName("QueryRetryMessage")
+    @Expose
+    private Boolean QueryRetryMessage;
+
+    /**
+    * <p>查询重试消息时，需要指定具体的消费组名称</p>
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -138,6 +152,38 @@ public class DescribeMessageTraceRequest extends AbstractModel {
         this.QueryDelayMessage = QueryDelayMessage;
     }
 
+    /**
+     * Get <p>是否为重试消息</p> 
+     * @return QueryRetryMessage <p>是否为重试消息</p>
+     */
+    public Boolean getQueryRetryMessage() {
+        return this.QueryRetryMessage;
+    }
+
+    /**
+     * Set <p>是否为重试消息</p>
+     * @param QueryRetryMessage <p>是否为重试消息</p>
+     */
+    public void setQueryRetryMessage(Boolean QueryRetryMessage) {
+        this.QueryRetryMessage = QueryRetryMessage;
+    }
+
+    /**
+     * Get <p>查询重试消息时，需要指定具体的消费组名称</p> 
+     * @return GroupId <p>查询重试消息时，需要指定具体的消费组名称</p>
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set <p>查询重试消息时，需要指定具体的消费组名称</p>
+     * @param GroupId <p>查询重试消息时，需要指定具体的消费组名称</p>
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public DescribeMessageTraceRequest() {
     }
 
@@ -161,6 +207,12 @@ public class DescribeMessageTraceRequest extends AbstractModel {
         if (source.QueryDelayMessage != null) {
             this.QueryDelayMessage = new Boolean(source.QueryDelayMessage);
         }
+        if (source.QueryRetryMessage != null) {
+            this.QueryRetryMessage = new Boolean(source.QueryRetryMessage);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class DescribeMessageTraceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgId", this.MsgId);
         this.setParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
         this.setParamSimple(map, prefix + "QueryDelayMessage", this.QueryDelayMessage);
+        this.setParamSimple(map, prefix + "QueryRetryMessage", this.QueryRetryMessage);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

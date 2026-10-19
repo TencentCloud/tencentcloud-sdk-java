@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyTaskInfoDsResponse extends AbstractModel {
 
     /**
-    * 执行结果
+    * <p>执行结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyTaskInfoDsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 执行结果 
-     * @return Data 执行结果
+     * Get <p>执行结果</p> 
+     * @return Data <p>执行结果</p>
      */
     public Boolean getData() {
         return this.Data;
     }
 
     /**
-     * Set 执行结果
-     * @param Data 执行结果
+     * Set <p>执行结果</p>
+     * @param Data <p>执行结果</p>
      */
     public void setData(Boolean Data) {
         this.Data = Data;

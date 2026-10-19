@@ -45,7 +45,7 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * <p>工作流ID，精确匹配。非必填，单值</p>
+    * <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
     */
     @SerializedName("WorkflowId")
     @Expose
@@ -163,16 +163,16 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>工作流ID，精确匹配。非必填，单值</p> 
-     * @return WorkflowId <p>工作流ID，精确匹配。非必填，单值</p>
+     * Get <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p> 
+     * @return WorkflowId <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set <p>工作流ID，精确匹配。非必填，单值</p>
-     * @param WorkflowId <p>工作流ID，精确匹配。非必填，单值</p>
+     * Set <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
+     * @param WorkflowId <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;

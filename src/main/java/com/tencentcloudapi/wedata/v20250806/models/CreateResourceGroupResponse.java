@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateResourceGroupResponse extends AbstractModel {
 
     /**
-    * 是否开启成功
+    * <p>是否开启成功</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateResourceGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否开启成功 
-     * @return Data 是否开启成功
+     * Get <p>是否开启成功</p> 
+     * @return Data <p>是否开启成功</p>
      */
     public ResourceResult getData() {
         return this.Data;
     }
 
     /**
-     * Set 是否开启成功
-     * @param Data 是否开启成功
+     * Set <p>是否开启成功</p>
+     * @param Data <p>是否开启成功</p>
      */
     public void setData(ResourceResult Data) {
         this.Data = Data;

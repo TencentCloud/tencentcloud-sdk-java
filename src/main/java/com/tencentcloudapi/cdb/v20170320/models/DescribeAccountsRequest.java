@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeAccountsRequest extends AbstractModel {
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 记录偏移量，默认值为0。
+    * <p>记录偏移量，默认值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+    * <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 匹配账号名的正则表达式，规则同 MySQL 官网。
+    * <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
     */
     @SerializedName("AccountRegexp")
     @Expose
     private String AccountRegexp;
 
     /**
-    * 默认无排序，支持：ASC、DESC、asc、desc
+    * <p>默认无排序，支持：ASC、DESC、asc、desc</p>
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+    * <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+    * <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
     */
     @SerializedName("HostRegexp")
     @Expose
     private String HostRegexp;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p> 
+     * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 记录偏移量，默认值为0。 
-     * @return Offset 记录偏移量，默认值为0。
+     * Get <p>记录偏移量，默认值为0。</p> 
+     * @return Offset <p>记录偏移量，默认值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 记录偏移量，默认值为0。
-     * @param Offset 记录偏移量，默认值为0。
+     * Set <p>记录偏移量，默认值为0。</p>
+     * @param Offset <p>记录偏移量，默认值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单次请求返回的数量，默认值为20，最小值为1，最大值为100。 
-     * @return Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * Get <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p> 
+     * @return Limit <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
-     * @param Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * Set <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
+     * @param Limit <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 匹配账号名的正则表达式，规则同 MySQL 官网。 
-     * @return AccountRegexp 匹配账号名的正则表达式，规则同 MySQL 官网。
+     * Get <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p> 
+     * @return AccountRegexp <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
      */
     public String getAccountRegexp() {
         return this.AccountRegexp;
     }
 
     /**
-     * Set 匹配账号名的正则表达式，规则同 MySQL 官网。
-     * @param AccountRegexp 匹配账号名的正则表达式，规则同 MySQL 官网。
+     * Set <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
+     * @param AccountRegexp <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
      */
     public void setAccountRegexp(String AccountRegexp) {
         this.AccountRegexp = AccountRegexp;
     }
 
     /**
-     * Get 默认无排序，支持：ASC、DESC、asc、desc 
-     * @return SortBy 默认无排序，支持：ASC、DESC、asc、desc
+     * Get <p>默认无排序，支持：ASC、DESC、asc、desc</p> 
+     * @return SortBy <p>默认无排序，支持：ASC、DESC、asc、desc</p>
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 默认无排序，支持：ASC、DESC、asc、desc
-     * @param SortBy 默认无排序，支持：ASC、DESC、asc、desc
+     * Set <p>默认无排序，支持：ASC、DESC、asc、desc</p>
+     * @param SortBy <p>默认无排序，支持：ASC、DESC、asc、desc</p>
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间) 
-     * @return OrderBy 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     * Get <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p> 
+     * @return OrderBy <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
-     * @param OrderBy 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     * Set <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
+     * @param OrderBy <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网 
-     * @return HostRegexp 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     * Get <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p> 
+     * @return HostRegexp <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
      */
     public String getHostRegexp() {
         return this.HostRegexp;
     }
 
     /**
-     * Set 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
-     * @param HostRegexp 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     * Set <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
+     * @param HostRegexp <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
      */
     public void setHostRegexp(String HostRegexp) {
         this.HostRegexp = HostRegexp;

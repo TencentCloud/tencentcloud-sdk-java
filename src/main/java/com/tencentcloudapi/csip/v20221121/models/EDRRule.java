@@ -283,6 +283,13 @@ public class EDRRule extends AbstractModel {
     private EDRRuleTagItem [] TagItems;
 
     /**
+    * <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+    */
+    @SerializedName("FileOperationRules")
+    @Expose
+    private RuleContentFileOperation FileOperationRules;
+
+    /**
      * Get <p>策略ID</p> 
      * @return RuleID <p>策略ID</p>
      */
@@ -874,6 +881,22 @@ public class EDRRule extends AbstractModel {
         this.TagItems = TagItems;
     }
 
+    /**
+     * Get <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p> 
+     * @return FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public RuleContentFileOperation getFileOperationRules() {
+        return this.FileOperationRules;
+    }
+
+    /**
+     * Set <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     * @param FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public void setFileOperationRules(RuleContentFileOperation FileOperationRules) {
+        this.FileOperationRules = FileOperationRules;
+    }
+
     public EDRRule() {
     }
 
@@ -1041,6 +1064,9 @@ public class EDRRule extends AbstractModel {
                 this.TagItems[i] = new EDRRuleTagItem(source.TagItems[i]);
             }
         }
+        if (source.FileOperationRules != null) {
+            this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
+        }
     }
 
 
@@ -1085,6 +1111,7 @@ public class EDRRule extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExcludeClusterIDs.", this.ExcludeClusterIDs);
         this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
+        this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
 
     }
 }

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class UpdateSubAccountLinuxUserInfoRequest extends AbstractModel {
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 子账号信息列表
     */
     @SerializedName("SubAccountList")
     @Expose
     private SubAccountInfo [] SubAccountList;
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
 
     /**
      * Get 子账号信息列表 
@@ -54,6 +77,9 @@ public class UpdateSubAccountLinuxUserInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateSubAccountLinuxUserInfoRequest(UpdateSubAccountLinuxUserInfoRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.SubAccountList != null) {
             this.SubAccountList = new SubAccountInfo[source.SubAccountList.length];
             for (int i = 0; i < source.SubAccountList.length; i++) {
@@ -67,6 +93,7 @@ public class UpdateSubAccountLinuxUserInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamArrayObj(map, prefix + "SubAccountList.", this.SubAccountList);
 
     }

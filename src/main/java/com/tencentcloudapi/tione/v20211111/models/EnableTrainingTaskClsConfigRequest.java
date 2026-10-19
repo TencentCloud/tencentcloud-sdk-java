@@ -38,6 +38,13 @@ public class EnableTrainingTaskClsConfigRequest extends AbstractModel {
     private Boolean LogEnable;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 日志配置
     */
     @SerializedName("LogConfig")
@@ -77,6 +84,22 @@ public class EnableTrainingTaskClsConfigRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
      * Get 日志配置 
      * @return LogConfig 日志配置
      */
@@ -106,6 +129,9 @@ public class EnableTrainingTaskClsConfigRequest extends AbstractModel {
         if (source.LogEnable != null) {
             this.LogEnable = new Boolean(source.LogEnable);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.LogConfig != null) {
             this.LogConfig = new LogConfig(source.LogConfig);
         }
@@ -118,6 +144,7 @@ public class EnableTrainingTaskClsConfigRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
 
     }

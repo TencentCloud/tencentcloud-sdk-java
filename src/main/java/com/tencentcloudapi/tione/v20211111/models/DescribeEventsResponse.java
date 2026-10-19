@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeEventsResponse extends AbstractModel {
 
     /**
-    * 事件的列表
+    * <p>事件的列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
@@ -32,7 +32,7 @@ public class DescribeEventsResponse extends AbstractModel {
     private Event [] Events;
 
     /**
-    * 此次查询的事件的个数
+    * <p>此次查询的事件的个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -47,9 +47,9 @@ public class DescribeEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件的列表
+     * Get <p>事件的列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Events 事件的列表
+     * @return Events <p>事件的列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Event [] getEvents() {
@@ -57,9 +57,9 @@ public class DescribeEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 事件的列表
+     * Set <p>事件的列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Events 事件的列表
+     * @param Events <p>事件的列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(Event [] Events) {
@@ -67,9 +67,9 @@ public class DescribeEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 此次查询的事件的个数
+     * Get <p>此次查询的事件的个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 此次查询的事件的个数
+     * @return TotalCount <p>此次查询的事件的个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -77,9 +77,9 @@ public class DescribeEventsResponse extends AbstractModel {
     }
 
     /**
-     * Set 此次查询的事件的个数
+     * Set <p>此次查询的事件的个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 此次查询的事件的个数
+     * @param TotalCount <p>此次查询的事件的个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

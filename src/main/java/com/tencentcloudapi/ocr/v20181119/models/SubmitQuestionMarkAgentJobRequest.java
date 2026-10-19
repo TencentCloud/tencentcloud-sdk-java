@@ -38,7 +38,7 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。</p>
+    * <p>不传则默认识别整个PDF，如果识别单页则输入指定页码</p>
     */
     @SerializedName("PdfPageNumber")
     @Expose
@@ -59,28 +59,28 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     private Boolean EnableDeepThink;
 
     /**
-    * <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
+    * <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p>
     */
     @SerializedName("QuestionConfigMap")
     @Expose
     private String QuestionConfigMap;
 
     /**
-    * <p>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
+    * <p>【废除字段】<br>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
     */
     @SerializedName("ReferenceAnswer")
     @Expose
     private String ReferenceAnswer;
 
     /**
-    * <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+    * <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
     */
     @SerializedName("ImageBase64List")
     @Expose
     private String [] ImageBase64List;
 
     /**
-    * <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+    * <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
     */
     @SerializedName("ImageUrlList")
     @Expose
@@ -99,6 +99,13 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     @SerializedName("AnswerAssistMap")
     @Expose
     private String AnswerAssistMap;
+
+    /**
+    * <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启<br>示例值：false</p>
+    */
+    @SerializedName("EnableImageCrop")
+    @Expose
+    private Boolean EnableImageCrop;
 
     /**
      * Get <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。  示例值：/9j/4AAQSkZJRg.....s97n//2Q==</p> 
@@ -133,16 +140,16 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。</p> 
-     * @return PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。</p>
+     * Get <p>不传则默认识别整个PDF，如果识别单页则输入指定页码</p> 
+     * @return PdfPageNumber <p>不传则默认识别整个PDF，如果识别单页则输入指定页码</p>
      */
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
 
     /**
-     * Set <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。</p>
-     * @param PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。</p>
+     * Set <p>不传则默认识别整个PDF，如果识别单页则输入指定页码</p>
+     * @param PdfPageNumber <p>不传则默认识别整个PDF，如果识别单页则输入指定页码</p>
      */
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;
@@ -189,64 +196,64 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p> 
-     * @return QuestionConfigMap <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
+     * Get <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p> 
+     * @return QuestionConfigMap <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p>
      */
     public String getQuestionConfigMap() {
         return this.QuestionConfigMap;
     }
 
     /**
-     * Set <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
-     * @param QuestionConfigMap <p>题目信息输出配置，当key对应为true表示开启配置开关。</p><p>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；</p><p>当key为DisableAnswerAnalysis value为true表示不输出答案解析；</p><p>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p><p>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p><p>参数格式：{&quot;KnowledgePoints&quot;:true,&quot;TrueAnswer&quot;:true}</p>
+     * Set <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p>
+     * @param QuestionConfigMap <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为KnowledgePoints value为true 表示输出每道题结构信息中输出知识点内容；<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；<br>当key为UseCoordAssist value为true表示使用精调坐标辅助模型，false表示默认模型坐标（性能更优）；</p>
      */
     public void setQuestionConfigMap(String QuestionConfigMap) {
         this.QuestionConfigMap = QuestionConfigMap;
     }
 
     /**
-     * Get <p>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p> 
-     * @return ReferenceAnswer <p>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
+     * Get <p>【废除字段】<br>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p> 
+     * @return ReferenceAnswer <p>【废除字段】<br>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
      */
     public String getReferenceAnswer() {
         return this.ReferenceAnswer;
     }
 
     /**
-     * Set <p>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
-     * @param ReferenceAnswer <p>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
+     * Set <p>【废除字段】<br>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
+     * @param ReferenceAnswer <p>【废除字段】<br>仅有单题有效，如果切题有多题则不生效，单题批改的时候作为参考答案输入到批改模型中</p>
      */
     public void setReferenceAnswer(String ReferenceAnswer) {
         this.ReferenceAnswer = ReferenceAnswer;
     }
 
     /**
-     * Get <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol> 
-     * @return ImageBase64List <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+     * Get <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol> 
+     * @return ImageBase64List <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
      */
     public String [] getImageBase64List() {
         return this.ImageBase64List;
     }
 
     /**
-     * Set <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
-     * @param ImageBase64List <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+     * Set <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
+     * @param ImageBase64List <p>批量base64图片入口，每个base64参考单独ImageBase64参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
      */
     public void setImageBase64List(String [] ImageBase64List) {
         this.ImageBase64List = ImageBase64List;
     }
 
     /**
-     * Get <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol> 
-     * @return ImageUrlList <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+     * Get <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol> 
+     * @return ImageUrlList <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
      */
     public String [] getImageUrlList() {
         return this.ImageUrlList;
     }
 
     /**
-     * Set <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
-     * @param ImageUrlList <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行拼接逻辑（解决单题跨页场景）</li></ol>
+     * Set <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
+     * @param ImageUrlList <p>批量ImageUrl图片入口，每个ImageUrl参考单独ImageUrl参数规则。</p><ol><li>当AssistMarkType为2时，用于提供题目相关的辅助批改图片信息.ImageBase64List.N/ImageUrlList.N 来输入答题试卷和含正确解析试卷，最多两张</li><li>当AssistMarkType不为2时，ImageBase64List.N/ImageUrlList.N图片会执行多图同时批改逻辑（解决单题跨页场景）</li></ol>
      */
     public void setImageUrlList(String [] ImageUrlList) {
         this.ImageUrlList = ImageUrlList;
@@ -282,6 +289,22 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
      */
     public void setAnswerAssistMap(String AnswerAssistMap) {
         this.AnswerAssistMap = AnswerAssistMap;
+    }
+
+    /**
+     * Get <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启<br>示例值：false</p> 
+     * @return EnableImageCrop <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启<br>示例值：false</p>
+     */
+    public Boolean getEnableImageCrop() {
+        return this.EnableImageCrop;
+    }
+
+    /**
+     * Set <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启<br>示例值：false</p>
+     * @param EnableImageCrop <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启<br>示例值：false</p>
+     */
+    public void setEnableImageCrop(Boolean EnableImageCrop) {
+        this.EnableImageCrop = EnableImageCrop;
     }
 
     public SubmitQuestionMarkAgentJobRequest() {
@@ -331,6 +354,9 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
         if (source.AnswerAssistMap != null) {
             this.AnswerAssistMap = new String(source.AnswerAssistMap);
         }
+        if (source.EnableImageCrop != null) {
+            this.EnableImageCrop = new Boolean(source.EnableImageCrop);
+        }
     }
 
 
@@ -349,6 +375,7 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "AssistMarkType", this.AssistMarkType);
         this.setParamSimple(map, prefix + "AnswerAssistMap", this.AnswerAssistMap);
+        this.setParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
 
     }
 }

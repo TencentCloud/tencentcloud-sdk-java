@@ -24,50 +24,49 @@ import java.util.HashMap;
 public class ConsumeGroupItem extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费组名称
+    * <p>消费组名称</p>
     */
     @SerializedName("ConsumerGroup")
     @Expose
     private String ConsumerGroup;
 
     /**
-    * 是否开启消费
+    * <p>是否开启消费</p>
     */
     @SerializedName("ConsumeEnable")
     @Expose
     private Boolean ConsumeEnable;
 
     /**
-    * 顺序投递：true
-并发投递：false
+    * <p>顺序投递：true<br>并发投递：false</p>
     */
     @SerializedName("ConsumeMessageOrderly")
     @Expose
     private Boolean ConsumeMessageOrderly;
 
     /**
-    * 最大重试次数
+    * <p>最大重试次数</p>
     */
     @SerializedName("MaxRetryTimes")
     @Expose
     private Long MaxRetryTimes;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 4.x的集群ID
+    * <p>4.x的集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIdV4")
@@ -75,7 +74,7 @@ public class ConsumeGroupItem extends AbstractModel {
     private String ClusterIdV4;
 
     /**
-    * 4.x的命名空间
+    * <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceV4")
@@ -83,7 +82,7 @@ public class ConsumeGroupItem extends AbstractModel {
     private String NamespaceV4;
 
     /**
-    * 4.x的消费组名称
+    * <p>4.x的消费组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumerGroupV4")
@@ -91,7 +90,7 @@ public class ConsumeGroupItem extends AbstractModel {
     private String ConsumerGroupV4;
 
     /**
-    * 4.x的完整命名空间
+    * <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullNamespaceV4")
@@ -99,14 +98,14 @@ public class ConsumeGroupItem extends AbstractModel {
     private String FullNamespaceV4;
 
     /**
-    * 订阅的主题个数
+    * <p>订阅的主题个数</p>
     */
     @SerializedName("SubscribeTopicNum")
     @Expose
     private Long SubscribeTopicNum;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -114,123 +113,133 @@ public class ConsumeGroupItem extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 绑定的标签列表
+    * <p>绑定的标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-    * 重试策略
+    * <p>重试策略</p>
     */
     @SerializedName("RetryPolicy")
     @Expose
     private RetryPolicy RetryPolicy;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>消费模式，枚举值如下：</p><ul><li>CLUSTERING：集群/广播消费</li><li>LITE：LiteTopic 消费</li></ul>
+    */
+    @SerializedName("ConsumeModel")
+    @Expose
+    private String ConsumeModel;
+
+    /**
+    * <p>自定义的死信Topic名称</p>
+    */
+    @SerializedName("DeadLetterTargetTopic")
+    @Expose
+    private String DeadLetterTargetTopic;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费组名称 
-     * @return ConsumerGroup 消费组名称
+     * Get <p>消费组名称</p> 
+     * @return ConsumerGroup <p>消费组名称</p>
      */
     public String getConsumerGroup() {
         return this.ConsumerGroup;
     }
 
     /**
-     * Set 消费组名称
-     * @param ConsumerGroup 消费组名称
+     * Set <p>消费组名称</p>
+     * @param ConsumerGroup <p>消费组名称</p>
      */
     public void setConsumerGroup(String ConsumerGroup) {
         this.ConsumerGroup = ConsumerGroup;
     }
 
     /**
-     * Get 是否开启消费 
-     * @return ConsumeEnable 是否开启消费
+     * Get <p>是否开启消费</p> 
+     * @return ConsumeEnable <p>是否开启消费</p>
      */
     public Boolean getConsumeEnable() {
         return this.ConsumeEnable;
     }
 
     /**
-     * Set 是否开启消费
-     * @param ConsumeEnable 是否开启消费
+     * Set <p>是否开启消费</p>
+     * @param ConsumeEnable <p>是否开启消费</p>
      */
     public void setConsumeEnable(Boolean ConsumeEnable) {
         this.ConsumeEnable = ConsumeEnable;
     }
 
     /**
-     * Get 顺序投递：true
-并发投递：false 
-     * @return ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * Get <p>顺序投递：true<br>并发投递：false</p> 
+     * @return ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      */
     public Boolean getConsumeMessageOrderly() {
         return this.ConsumeMessageOrderly;
     }
 
     /**
-     * Set 顺序投递：true
-并发投递：false
-     * @param ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * Set <p>顺序投递：true<br>并发投递：false</p>
+     * @param ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      */
     public void setConsumeMessageOrderly(Boolean ConsumeMessageOrderly) {
         this.ConsumeMessageOrderly = ConsumeMessageOrderly;
     }
 
     /**
-     * Get 最大重试次数 
-     * @return MaxRetryTimes 最大重试次数
+     * Get <p>最大重试次数</p> 
+     * @return MaxRetryTimes <p>最大重试次数</p>
      */
     public Long getMaxRetryTimes() {
         return this.MaxRetryTimes;
     }
 
     /**
-     * Set 最大重试次数
-     * @param MaxRetryTimes 最大重试次数
+     * Set <p>最大重试次数</p>
+     * @param MaxRetryTimes <p>最大重试次数</p>
      */
     public void setMaxRetryTimes(Long MaxRetryTimes) {
         this.MaxRetryTimes = MaxRetryTimes;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 4.x的集群ID
+     * Get <p>4.x的集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterIdV4 4.x的集群ID
+     * @return ClusterIdV4 <p>4.x的集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterIdV4() {
@@ -238,9 +247,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Set 4.x的集群ID
+     * Set <p>4.x的集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterIdV4 4.x的集群ID
+     * @param ClusterIdV4 <p>4.x的集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIdV4(String ClusterIdV4) {
@@ -248,9 +257,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Get 4.x的命名空间
+     * Get <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamespaceV4 4.x的命名空间
+     * @return NamespaceV4 <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceV4() {
@@ -258,9 +267,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Set 4.x的命名空间
+     * Set <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamespaceV4 4.x的命名空间
+     * @param NamespaceV4 <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceV4(String NamespaceV4) {
@@ -268,9 +277,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Get 4.x的消费组名称
+     * Get <p>4.x的消费组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConsumerGroupV4 4.x的消费组名称
+     * @return ConsumerGroupV4 <p>4.x的消费组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumerGroupV4() {
@@ -278,9 +287,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Set 4.x的消费组名称
+     * Set <p>4.x的消费组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConsumerGroupV4 4.x的消费组名称
+     * @param ConsumerGroupV4 <p>4.x的消费组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumerGroupV4(String ConsumerGroupV4) {
@@ -288,9 +297,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Get 4.x的完整命名空间
+     * Get <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FullNamespaceV4 4.x的完整命名空间
+     * @return FullNamespaceV4 <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullNamespaceV4() {
@@ -298,9 +307,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Set 4.x的完整命名空间
+     * Set <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FullNamespaceV4 4.x的完整命名空间
+     * @param FullNamespaceV4 <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullNamespaceV4(String FullNamespaceV4) {
@@ -308,25 +317,25 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Get 订阅的主题个数 
-     * @return SubscribeTopicNum 订阅的主题个数
+     * Get <p>订阅的主题个数</p> 
+     * @return SubscribeTopicNum <p>订阅的主题个数</p>
      */
     public Long getSubscribeTopicNum() {
         return this.SubscribeTopicNum;
     }
 
     /**
-     * Set 订阅的主题个数
-     * @param SubscribeTopicNum 订阅的主题个数
+     * Set <p>订阅的主题个数</p>
+     * @param SubscribeTopicNum <p>订阅的主题个数</p>
      */
     public void setSubscribeTopicNum(Long SubscribeTopicNum) {
         this.SubscribeTopicNum = SubscribeTopicNum;
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -334,9 +343,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -344,35 +353,67 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Get 绑定的标签列表 
-     * @return TagList 绑定的标签列表
+     * Get <p>绑定的标签列表</p> 
+     * @return TagList <p>绑定的标签列表</p>
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 绑定的标签列表
-     * @param TagList 绑定的标签列表
+     * Set <p>绑定的标签列表</p>
+     * @param TagList <p>绑定的标签列表</p>
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 重试策略 
-     * @return RetryPolicy 重试策略
+     * Get <p>重试策略</p> 
+     * @return RetryPolicy <p>重试策略</p>
      */
     public RetryPolicy getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * Set 重试策略
-     * @param RetryPolicy 重试策略
+     * Set <p>重试策略</p>
+     * @param RetryPolicy <p>重试策略</p>
      */
     public void setRetryPolicy(RetryPolicy RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
+    }
+
+    /**
+     * Get <p>消费模式，枚举值如下：</p><ul><li>CLUSTERING：集群/广播消费</li><li>LITE：LiteTopic 消费</li></ul> 
+     * @return ConsumeModel <p>消费模式，枚举值如下：</p><ul><li>CLUSTERING：集群/广播消费</li><li>LITE：LiteTopic 消费</li></ul>
+     */
+    public String getConsumeModel() {
+        return this.ConsumeModel;
+    }
+
+    /**
+     * Set <p>消费模式，枚举值如下：</p><ul><li>CLUSTERING：集群/广播消费</li><li>LITE：LiteTopic 消费</li></ul>
+     * @param ConsumeModel <p>消费模式，枚举值如下：</p><ul><li>CLUSTERING：集群/广播消费</li><li>LITE：LiteTopic 消费</li></ul>
+     */
+    public void setConsumeModel(String ConsumeModel) {
+        this.ConsumeModel = ConsumeModel;
+    }
+
+    /**
+     * Get <p>自定义的死信Topic名称</p> 
+     * @return DeadLetterTargetTopic <p>自定义的死信Topic名称</p>
+     */
+    public String getDeadLetterTargetTopic() {
+        return this.DeadLetterTargetTopic;
+    }
+
+    /**
+     * Set <p>自定义的死信Topic名称</p>
+     * @param DeadLetterTargetTopic <p>自定义的死信Topic名称</p>
+     */
+    public void setDeadLetterTargetTopic(String DeadLetterTargetTopic) {
+        this.DeadLetterTargetTopic = DeadLetterTargetTopic;
     }
 
     public ConsumeGroupItem() {
@@ -428,6 +469,12 @@ public class ConsumeGroupItem extends AbstractModel {
         if (source.RetryPolicy != null) {
             this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
         }
+        if (source.ConsumeModel != null) {
+            this.ConsumeModel = new String(source.ConsumeModel);
+        }
+        if (source.DeadLetterTargetTopic != null) {
+            this.DeadLetterTargetTopic = new String(source.DeadLetterTargetTopic);
+        }
     }
 
 
@@ -449,6 +496,8 @@ public class ConsumeGroupItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+        this.setParamSimple(map, prefix + "ConsumeModel", this.ConsumeModel);
+        this.setParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
 
     }
 }

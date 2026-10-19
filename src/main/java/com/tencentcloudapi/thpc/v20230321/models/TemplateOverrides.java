@@ -56,6 +56,14 @@ public class TemplateOverrides extends AbstractModel {
     private Boolean EnableMultiZone;
 
     /**
+    * <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableJobLoadAutoscaling")
+    @Expose
+    private Boolean EnableJobLoadAutoscaling;
+
+    /**
      * Get <p>候选机型族列表，最多 10 个。MULTI_CARD 模式的明确标志字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceFamilies <p>候选机型族列表，最多 10 个。MULTI_CARD 模式的明确标志字段。</p>
@@ -135,6 +143,26 @@ public class TemplateOverrides extends AbstractModel {
         this.EnableMultiZone = EnableMultiZone;
     }
 
+    /**
+     * Get <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableJobLoadAutoscaling <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableJobLoadAutoscaling() {
+        return this.EnableJobLoadAutoscaling;
+    }
+
+    /**
+     * Set <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableJobLoadAutoscaling <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableJobLoadAutoscaling(Boolean EnableJobLoadAutoscaling) {
+        this.EnableJobLoadAutoscaling = EnableJobLoadAutoscaling;
+    }
+
     public TemplateOverrides() {
     }
 
@@ -158,6 +186,9 @@ public class TemplateOverrides extends AbstractModel {
         if (source.EnableMultiZone != null) {
             this.EnableMultiZone = new Boolean(source.EnableMultiZone);
         }
+        if (source.EnableJobLoadAutoscaling != null) {
+            this.EnableJobLoadAutoscaling = new Boolean(source.EnableJobLoadAutoscaling);
+        }
     }
 
 
@@ -169,6 +200,7 @@ public class TemplateOverrides extends AbstractModel {
         this.setParamSimple(map, prefix + "GpuCountPerNode", this.GpuCountPerNode);
         this.setParamSimple(map, prefix + "EnableMixedGpuCount", this.EnableMixedGpuCount);
         this.setParamSimple(map, prefix + "EnableMultiZone", this.EnableMultiZone);
+        this.setParamSimple(map, prefix + "EnableJobLoadAutoscaling", this.EnableJobLoadAutoscaling);
 
     }
 }

@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CreateResourceGroupRequest extends AbstractModel {
 
     /**
-    * 资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。
+    * <p>资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 开通的资源组信息
+    * <p>开通的资源组信息</p>
     */
     @SerializedName("Type")
     @Expose
     private ResourceType Type;
 
     /**
-    * 是否自动续费
+    * <p>是否自动续费</p>
     */
     @SerializedName("AutoRenewEnabled")
     @Expose
     private Boolean AutoRenewEnabled;
 
     /**
-    * 购买时长，单位月
+    * <p>购买时长，单位月</p>
     */
     @SerializedName("PurchasePeriod")
     @Expose
     private Long PurchasePeriod;
 
     /**
-    * vpcId
+    * <p>vpcId</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网
+    * <p>子网</p>
     */
     @SerializedName("SubNet")
     @Expose
     private String SubNet;
 
     /**
-    * 资源购买地域
+    * <p>资源购买地域</p>
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-    * 关联项目空间项目id
+    * <p>关联项目空间项目id</p>
     */
     @SerializedName("AssociatedProjectId")
     @Expose
     private String AssociatedProjectId;
 
     /**
-    * 资源组描述
+    * <p>资源组描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。 
-     * @return Name 资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。
+    * <p>标签值</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
+     * Get <p>资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。</p> 
+     * @return Name <p>资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。
-     * @param Name 资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。
+     * Set <p>资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。</p>
+     * @param Name <p>资源组名称。创建通用资源组的名称，必须以字母开头，可包含字母、数字、下划线（_），最多 64 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 开通的资源组信息 
-     * @return Type 开通的资源组信息
+     * Get <p>开通的资源组信息</p> 
+     * @return Type <p>开通的资源组信息</p>
      */
     public ResourceType getType() {
         return this.Type;
     }
 
     /**
-     * Set 开通的资源组信息
-     * @param Type 开通的资源组信息
+     * Set <p>开通的资源组信息</p>
+     * @param Type <p>开通的资源组信息</p>
      */
     public void setType(ResourceType Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 是否自动续费 
-     * @return AutoRenewEnabled 是否自动续费
+     * Get <p>是否自动续费</p> 
+     * @return AutoRenewEnabled <p>是否自动续费</p>
      */
     public Boolean getAutoRenewEnabled() {
         return this.AutoRenewEnabled;
     }
 
     /**
-     * Set 是否自动续费
-     * @param AutoRenewEnabled 是否自动续费
+     * Set <p>是否自动续费</p>
+     * @param AutoRenewEnabled <p>是否自动续费</p>
      */
     public void setAutoRenewEnabled(Boolean AutoRenewEnabled) {
         this.AutoRenewEnabled = AutoRenewEnabled;
     }
 
     /**
-     * Get 购买时长，单位月 
-     * @return PurchasePeriod 购买时长，单位月
+     * Get <p>购买时长，单位月</p> 
+     * @return PurchasePeriod <p>购买时长，单位月</p>
      */
     public Long getPurchasePeriod() {
         return this.PurchasePeriod;
     }
 
     /**
-     * Set 购买时长，单位月
-     * @param PurchasePeriod 购买时长，单位月
+     * Set <p>购买时长，单位月</p>
+     * @param PurchasePeriod <p>购买时长，单位月</p>
      */
     public void setPurchasePeriod(Long PurchasePeriod) {
         this.PurchasePeriod = PurchasePeriod;
     }
 
     /**
-     * Get vpcId 
-     * @return VpcId vpcId
+     * Get <p>vpcId</p> 
+     * @return VpcId <p>vpcId</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpcId
-     * @param VpcId vpcId
+     * Set <p>vpcId</p>
+     * @param VpcId <p>vpcId</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 
-     * @return SubNet 子网
+     * Get <p>子网</p> 
+     * @return SubNet <p>子网</p>
      */
     public String getSubNet() {
         return this.SubNet;
     }
 
     /**
-     * Set 子网
-     * @param SubNet 子网
+     * Set <p>子网</p>
+     * @param SubNet <p>子网</p>
      */
     public void setSubNet(String SubNet) {
         this.SubNet = SubNet;
     }
 
     /**
-     * Get 资源购买地域 
-     * @return ResourceRegion 资源购买地域
+     * Get <p>资源购买地域</p> 
+     * @return ResourceRegion <p>资源购买地域</p>
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set 资源购买地域
-     * @param ResourceRegion 资源购买地域
+     * Set <p>资源购买地域</p>
+     * @param ResourceRegion <p>资源购买地域</p>
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 关联项目空间项目id 
-     * @return AssociatedProjectId 关联项目空间项目id
+     * Get <p>关联项目空间项目id</p> 
+     * @return AssociatedProjectId <p>关联项目空间项目id</p>
      */
     public String getAssociatedProjectId() {
         return this.AssociatedProjectId;
     }
 
     /**
-     * Set 关联项目空间项目id
-     * @param AssociatedProjectId 关联项目空间项目id
+     * Set <p>关联项目空间项目id</p>
+     * @param AssociatedProjectId <p>关联项目空间项目id</p>
      */
     public void setAssociatedProjectId(String AssociatedProjectId) {
         this.AssociatedProjectId = AssociatedProjectId;
     }
 
     /**
-     * Get 资源组描述 
-     * @return Description 资源组描述
+     * Get <p>资源组描述</p> 
+     * @return Description <p>资源组描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 资源组描述
-     * @param Description 资源组描述
+     * Set <p>资源组描述</p>
+     * @param Description <p>资源组描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>标签值</p> 
+     * @return Tags <p>标签值</p>
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签值</p>
+     * @param Tags <p>标签值</p>
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateResourceGroupRequest() {
@@ -265,6 +288,12 @@ public class CreateResourceGroupRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class CreateResourceGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "AssociatedProjectId", this.AssociatedProjectId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -59,7 +59,7 @@ public class ListWorkflowsRequest extends AbstractModel {
     private String [] WorkflowNames;
 
     /**
-    * <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+    * <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
     */
     @SerializedName("WorkflowIds")
     @Expose
@@ -87,14 +87,14 @@ public class ListWorkflowsRequest extends AbstractModel {
     private String [] LabelValueIds;
 
     /**
-    * <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
+    * <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
     */
     @SerializedName("QuickSelectionType")
     @Expose
     private String QuickSelectionType;
 
     /**
-    * <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+    * <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
     */
     @SerializedName("OrderBys")
     @Expose
@@ -181,16 +181,16 @@ public class ListWorkflowsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p> 
-     * @return WorkflowIds <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+     * Get <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p> 
+     * @return WorkflowIds <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      */
     public String [] getWorkflowIds() {
         return this.WorkflowIds;
     }
 
     /**
-     * Set <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
-     * @param WorkflowIds <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+     * Set <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
+     * @param WorkflowIds <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      */
     public void setWorkflowIds(String [] WorkflowIds) {
         this.WorkflowIds = WorkflowIds;
@@ -245,32 +245,32 @@ public class ListWorkflowsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p> 
-     * @return QuickSelectionType <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
+     * Get <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p> 
+     * @return QuickSelectionType <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
      */
     public String getQuickSelectionType() {
         return this.QuickSelectionType;
     }
 
     /**
-     * Set <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
-     * @param QuickSelectionType <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
+     * Set <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
+     * @param QuickSelectionType <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
      */
     public void setQuickSelectionType(String QuickSelectionType) {
         this.QuickSelectionType = QuickSelectionType;
     }
 
     /**
-     * Get <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p> 
-     * @return OrderBys <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+     * Get <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p> 
+     * @return OrderBys <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
      */
     public OrderBy [] getOrderBys() {
         return this.OrderBys;
     }
 
     /**
-     * Set <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
-     * @param OrderBys <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+     * Set <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
+     * @param OrderBys <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
      */
     public void setOrderBys(OrderBy [] OrderBys) {
         this.OrderBys = OrderBys;

@@ -38,55 +38,49 @@ public class CreateTopicRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
+    * <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
     */
     @SerializedName("TopicType")
     @Expose
     private String TopicType;
 
     /**
-    * 队列数量，取值范围3～16
+    * <p>队列数量，取值范围3～16</p>
     */
     @SerializedName("QueueNum")
     @Expose
     private Long QueueNum;
 
     /**
-    * 备注信息，最多 128 个字符
+    * <p>备注信息，最多 128 个字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 消息保留时长（单位：小时）
+    * <p>消息保留时长（单位：小时）</p>
     */
     @SerializedName("MsgTTL")
     @Expose
     private Long MsgTTL;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-    * 是否过期自动删除（仅针对轻量主题类型）
+    * <p>是否过期自动删除（仅针对轻量主题类型）</p>
     */
     @SerializedName("AutoExpireDelete")
     @Expose
     private Boolean AutoExpireDelete;
 
     /**
-    * 过期时间，单位：秒（仅针对轻量主题类型）
+    * <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
     */
     @SerializedName("AutoExpireTime")
     @Expose
@@ -125,136 +119,112 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息 
-     * @return TopicType 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
+     * Get <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul> 
+     * @return TopicType <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
-     * @param TopicType 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
+     * Set <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
+     * @param TopicType <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get 队列数量，取值范围3～16 
-     * @return QueueNum 队列数量，取值范围3～16
+     * Get <p>队列数量，取值范围3～16</p> 
+     * @return QueueNum <p>队列数量，取值范围3～16</p>
      */
     public Long getQueueNum() {
         return this.QueueNum;
     }
 
     /**
-     * Set 队列数量，取值范围3～16
-     * @param QueueNum 队列数量，取值范围3～16
+     * Set <p>队列数量，取值范围3～16</p>
+     * @param QueueNum <p>队列数量，取值范围3～16</p>
      */
     public void setQueueNum(Long QueueNum) {
         this.QueueNum = QueueNum;
     }
 
     /**
-     * Get 备注信息，最多 128 个字符 
-     * @return Remark 备注信息，最多 128 个字符
+     * Get <p>备注信息，最多 128 个字符</p> 
+     * @return Remark <p>备注信息，最多 128 个字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息，最多 128 个字符
-     * @param Remark 备注信息，最多 128 个字符
+     * Set <p>备注信息，最多 128 个字符</p>
+     * @param Remark <p>备注信息，最多 128 个字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 消息保留时长（单位：小时） 
-     * @return MsgTTL 消息保留时长（单位：小时）
+     * Get <p>消息保留时长（单位：小时）</p> 
+     * @return MsgTTL <p>消息保留时长（单位：小时）</p>
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 消息保留时长（单位：小时）
-     * @param MsgTTL 消息保留时长（单位：小时）
+     * Set <p>消息保留时长（单位：小时）</p>
+     * @param MsgTTL <p>消息保留时长（单位：小时）</p>
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;
     }
 
     /**
-     * Get 标签列表 
-     * @return TagList 标签列表
+     * Get <p>标签列表</p> 
+     * @return TagList <p>标签列表</p>
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 标签列表
-     * @param TagList 标签列表
+     * Set <p>标签列表</p>
+     * @param TagList <p>标签列表</p>
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 是否过期自动删除（仅针对轻量主题类型） 
-     * @return AutoExpireDelete 是否过期自动删除（仅针对轻量主题类型）
+     * Get <p>是否过期自动删除（仅针对轻量主题类型）</p> 
+     * @return AutoExpireDelete <p>是否过期自动删除（仅针对轻量主题类型）</p>
      */
     public Boolean getAutoExpireDelete() {
         return this.AutoExpireDelete;
     }
 
     /**
-     * Set 是否过期自动删除（仅针对轻量主题类型）
-     * @param AutoExpireDelete 是否过期自动删除（仅针对轻量主题类型）
+     * Set <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     * @param AutoExpireDelete <p>是否过期自动删除（仅针对轻量主题类型）</p>
      */
     public void setAutoExpireDelete(Boolean AutoExpireDelete) {
         this.AutoExpireDelete = AutoExpireDelete;
     }
 
     /**
-     * Get 过期时间，单位：秒（仅针对轻量主题类型） 
-     * @return AutoExpireTime 过期时间，单位：秒（仅针对轻量主题类型）
+     * Get <p>过期时间，单位：秒（仅针对轻量主题类型）</p> 
+     * @return AutoExpireTime <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
      */
     public Long getAutoExpireTime() {
         return this.AutoExpireTime;
     }
 
     /**
-     * Set 过期时间，单位：秒（仅针对轻量主题类型）
-     * @param AutoExpireTime 过期时间，单位：秒（仅针对轻量主题类型）
+     * Set <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
+     * @param AutoExpireTime <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
      */
     public void setAutoExpireTime(Long AutoExpireTime) {
         this.AutoExpireTime = AutoExpireTime;

@@ -45,6 +45,13 @@ public class SubmitQuestionSplitJobRequest extends AbstractModel {
     private String ModelType;
 
     /**
+    * <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p>
+    */
+    @SerializedName("EnableImageCrop")
+    @Expose
+    private Boolean EnableImageCrop;
+
+    /**
      * Get <p>批量ImageUrl图片入口。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p><p>入参限制：要求pdf只能有一个url或base64</p> 
      * @return ImageUrlList <p>批量ImageUrl图片入口。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p><p>入参限制：要求pdf只能有一个url或base64</p>
      */
@@ -92,6 +99,22 @@ public class SubmitQuestionSplitJobRequest extends AbstractModel {
         this.ModelType = ModelType;
     }
 
+    /**
+     * Get <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p> 
+     * @return EnableImageCrop <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p>
+     */
+    public Boolean getEnableImageCrop() {
+        return this.EnableImageCrop;
+    }
+
+    /**
+     * Set <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p>
+     * @param EnableImageCrop <p>是否开启切边、弯曲矫正、方向矫正，开启则批改之前先做图片前处理，图片url地址返回在查询接口的QuestionInfo-&gt; ReturnImageUr中l,默认为false不开启</p>
+     */
+    public void setEnableImageCrop(Boolean EnableImageCrop) {
+        this.EnableImageCrop = EnableImageCrop;
+    }
+
     public SubmitQuestionSplitJobRequest() {
     }
 
@@ -115,6 +138,9 @@ public class SubmitQuestionSplitJobRequest extends AbstractModel {
         if (source.ModelType != null) {
             this.ModelType = new String(source.ModelType);
         }
+        if (source.EnableImageCrop != null) {
+            this.EnableImageCrop = new Boolean(source.EnableImageCrop);
+        }
     }
 
 
@@ -125,6 +151,7 @@ public class SubmitQuestionSplitJobRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamArraySimple(map, prefix + "ImageBase64List.", this.ImageBase64List);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
+        this.setParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
 
     }
 }

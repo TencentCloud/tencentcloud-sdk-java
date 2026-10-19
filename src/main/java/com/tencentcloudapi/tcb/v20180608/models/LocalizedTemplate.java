@@ -40,6 +40,38 @@ public class LocalizedTemplate extends AbstractModel {
     private String EnUS;
 
     /**
+    * <p>中文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubjectZhCN")
+    @Expose
+    private String SubjectZhCN;
+
+    /**
+    * <p>英文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubjectEnUS")
+    @Expose
+    private String SubjectEnUS;
+
+    /**
+    * <p>中文发件人</p><p>入参限制：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SenderNameZhCN")
+    @Expose
+    private String SenderNameZhCN;
+
+    /**
+    * <p>英文发件人</p><p>默认值：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SenderNameEnUS")
+    @Expose
+    private String SenderNameEnUS;
+
+    /**
      * Get <p>中文</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZhCN <p>中文</p>
@@ -79,6 +111,86 @@ public class LocalizedTemplate extends AbstractModel {
         this.EnUS = EnUS;
     }
 
+    /**
+     * Get <p>中文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubjectZhCN <p>中文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubjectZhCN() {
+        return this.SubjectZhCN;
+    }
+
+    /**
+     * Set <p>中文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubjectZhCN <p>中文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubjectZhCN(String SubjectZhCN) {
+        this.SubjectZhCN = SubjectZhCN;
+    }
+
+    /**
+     * Get <p>英文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubjectEnUS <p>英文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubjectEnUS() {
+        return this.SubjectEnUS;
+    }
+
+    /**
+     * Set <p>英文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubjectEnUS <p>英文主题</p><p>入参限制：长度限制100字符以内，仅允许：{{.VerificationCode}}、{{.Usage}}、{{.Email}}、{{.ExpireMinutes}}、{{.ConfirmationURL}}，未知变量拒绝</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubjectEnUS(String SubjectEnUS) {
+        this.SubjectEnUS = SubjectEnUS;
+    }
+
+    /**
+     * Get <p>中文发件人</p><p>入参限制：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SenderNameZhCN <p>中文发件人</p><p>入参限制：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSenderNameZhCN() {
+        return this.SenderNameZhCN;
+    }
+
+    /**
+     * Set <p>中文发件人</p><p>入参限制：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SenderNameZhCN <p>中文发件人</p><p>入参限制：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSenderNameZhCN(String SenderNameZhCN) {
+        this.SenderNameZhCN = SenderNameZhCN;
+    }
+
+    /**
+     * Get <p>英文发件人</p><p>默认值：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SenderNameEnUS <p>英文发件人</p><p>默认值：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSenderNameEnUS() {
+        return this.SenderNameEnUS;
+    }
+
+    /**
+     * Set <p>英文发件人</p><p>默认值：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SenderNameEnUS <p>英文发件人</p><p>默认值：长度限制50字符以内，静态纯文本，不支持变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSenderNameEnUS(String SenderNameEnUS) {
+        this.SenderNameEnUS = SenderNameEnUS;
+    }
+
     public LocalizedTemplate() {
     }
 
@@ -93,6 +205,18 @@ public class LocalizedTemplate extends AbstractModel {
         if (source.EnUS != null) {
             this.EnUS = new String(source.EnUS);
         }
+        if (source.SubjectZhCN != null) {
+            this.SubjectZhCN = new String(source.SubjectZhCN);
+        }
+        if (source.SubjectEnUS != null) {
+            this.SubjectEnUS = new String(source.SubjectEnUS);
+        }
+        if (source.SenderNameZhCN != null) {
+            this.SenderNameZhCN = new String(source.SenderNameZhCN);
+        }
+        if (source.SenderNameEnUS != null) {
+            this.SenderNameEnUS = new String(source.SenderNameEnUS);
+        }
     }
 
 
@@ -102,6 +226,10 @@ public class LocalizedTemplate extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZhCN", this.ZhCN);
         this.setParamSimple(map, prefix + "EnUS", this.EnUS);
+        this.setParamSimple(map, prefix + "SubjectZhCN", this.SubjectZhCN);
+        this.setParamSimple(map, prefix + "SubjectEnUS", this.SubjectEnUS);
+        this.setParamSimple(map, prefix + "SenderNameZhCN", this.SenderNameZhCN);
+        this.setParamSimple(map, prefix + "SenderNameEnUS", this.SenderNameEnUS);
 
     }
 }

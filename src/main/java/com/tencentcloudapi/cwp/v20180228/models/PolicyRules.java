@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class PolicyRules extends AbstractModel {
 
     /**
-    * 进程
+    * <p>进程</p>
     */
     @SerializedName("Process")
     @Expose
     private CommandLine Process;
 
     /**
-    * 父进程
+    * <p>父进程</p>
     */
     @SerializedName("PProcess")
     @Expose
     private CommandLine PProcess;
 
     /**
-    * 祖先进程
+    * <p>祖先进程</p>
     */
     @SerializedName("AProcess")
     @Expose
     private CommandLine AProcess;
 
     /**
-     * Get 进程 
-     * @return Process 进程
+    * <p>目标文件路径（匹配类型=文件操作时有效）</p>
+    */
+    @SerializedName("FilePath")
+    @Expose
+    private String FilePath;
+
+    /**
+    * <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+    */
+    @SerializedName("FileActions")
+    @Expose
+    private String [] FileActions;
+
+    /**
+     * Get <p>进程</p> 
+     * @return Process <p>进程</p>
      */
     public CommandLine getProcess() {
         return this.Process;
     }
 
     /**
-     * Set 进程
-     * @param Process 进程
+     * Set <p>进程</p>
+     * @param Process <p>进程</p>
      */
     public void setProcess(CommandLine Process) {
         this.Process = Process;
     }
 
     /**
-     * Get 父进程 
-     * @return PProcess 父进程
+     * Get <p>父进程</p> 
+     * @return PProcess <p>父进程</p>
      */
     public CommandLine getPProcess() {
         return this.PProcess;
     }
 
     /**
-     * Set 父进程
-     * @param PProcess 父进程
+     * Set <p>父进程</p>
+     * @param PProcess <p>父进程</p>
      */
     public void setPProcess(CommandLine PProcess) {
         this.PProcess = PProcess;
     }
 
     /**
-     * Get 祖先进程 
-     * @return AProcess 祖先进程
+     * Get <p>祖先进程</p> 
+     * @return AProcess <p>祖先进程</p>
      */
     public CommandLine getAProcess() {
         return this.AProcess;
     }
 
     /**
-     * Set 祖先进程
-     * @param AProcess 祖先进程
+     * Set <p>祖先进程</p>
+     * @param AProcess <p>祖先进程</p>
      */
     public void setAProcess(CommandLine AProcess) {
         this.AProcess = AProcess;
+    }
+
+    /**
+     * Get <p>目标文件路径（匹配类型=文件操作时有效）</p> 
+     * @return FilePath <p>目标文件路径（匹配类型=文件操作时有效）</p>
+     */
+    public String getFilePath() {
+        return this.FilePath;
+    }
+
+    /**
+     * Set <p>目标文件路径（匹配类型=文件操作时有效）</p>
+     * @param FilePath <p>目标文件路径（匹配类型=文件操作时有效）</p>
+     */
+    public void setFilePath(String FilePath) {
+        this.FilePath = FilePath;
+    }
+
+    /**
+     * Get <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p> 
+     * @return FileActions <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+     */
+    public String [] getFileActions() {
+        return this.FileActions;
+    }
+
+    /**
+     * Set <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+     * @param FileActions <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+     */
+    public void setFileActions(String [] FileActions) {
+        this.FileActions = FileActions;
     }
 
     public PolicyRules() {
@@ -109,6 +155,15 @@ public class PolicyRules extends AbstractModel {
         if (source.AProcess != null) {
             this.AProcess = new CommandLine(source.AProcess);
         }
+        if (source.FilePath != null) {
+            this.FilePath = new String(source.FilePath);
+        }
+        if (source.FileActions != null) {
+            this.FileActions = new String[source.FileActions.length];
+            for (int i = 0; i < source.FileActions.length; i++) {
+                this.FileActions[i] = new String(source.FileActions[i]);
+            }
+        }
     }
 
 
@@ -119,6 +174,8 @@ public class PolicyRules extends AbstractModel {
         this.setParamObj(map, prefix + "Process.", this.Process);
         this.setParamObj(map, prefix + "PProcess.", this.PProcess);
         this.setParamObj(map, prefix + "AProcess.", this.AProcess);
+        this.setParamSimple(map, prefix + "FilePath", this.FilePath);
+        this.setParamArraySimple(map, prefix + "FileActions.", this.FileActions);
 
     }
 }

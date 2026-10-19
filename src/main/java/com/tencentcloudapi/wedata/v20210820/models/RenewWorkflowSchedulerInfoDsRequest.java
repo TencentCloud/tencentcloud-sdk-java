@@ -24,537 +24,555 @@ import java.util.HashMap;
 public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * 延迟时间
+    * <p>延迟时间</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * 启动时间
+    * <p>启动时间</p>
     */
     @SerializedName("StartupTime")
     @Expose
     private Long StartupTime;
 
     /**
-    * 任务依赖
+    * <p>任务依赖</p>
     */
     @SerializedName("SelfDepend")
     @Expose
     private String SelfDepend;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 指定运行时间
+    * <p>指定运行时间</p>
     */
     @SerializedName("TaskAction")
     @Expose
     private String TaskAction;
 
     /**
-    * 调度周期时间单位
+    * <p>调度周期时间单位</p>
     */
     @SerializedName("CycleType")
     @Expose
     private String CycleType;
 
     /**
-    * 调度周期
+    * <p>调度周期</p>
     */
     @SerializedName("CycleStep")
     @Expose
     private Long CycleStep;
 
     /**
-    * 执行时间左闭区间
+    * <p>执行时间左闭区间</p>
     */
     @SerializedName("ExecutionStartTime")
     @Expose
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间
+    * <p>执行时间右闭区间</p>
     */
     @SerializedName("ExecutionEndTime")
     @Expose
     private String ExecutionEndTime;
 
     /**
-    * 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1
+    * <p>任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1</p>
     */
     @SerializedName("InstanceInitStrategy")
     @Expose
     private String InstanceInitStrategy;
 
     /**
-    * 工作流依赖，yes or no
+    * <p>工作流依赖，yes or no</p>
     */
     @SerializedName("DependencyWorkflow")
     @Expose
     private String DependencyWorkflow;
 
     /**
-    * CrontabExpression
+    * <p>CrontabExpression</p>
     */
     @SerializedName("CrontabExpression")
     @Expose
     private String CrontabExpression;
 
     /**
-    * 0：不修改
-1：将任务的上游依赖配置改为默认值 
+    * <p>0：不修改<br>1：将任务的上游依赖配置改为默认值</p>
     */
     @SerializedName("ModifyCycleValue")
     @Expose
     private String ModifyCycleValue;
 
     /**
-    * 是否开启日历调度 1 开启 0关闭
+    * <p>是否开启日历调度 1 开启 0关闭</p>
     */
     @SerializedName("CalendarOpen")
     @Expose
     private String CalendarOpen;
 
     /**
-    * 日历名称
+    * <p>日历名称</p>
     */
     @SerializedName("CalendarName")
     @Expose
     private String CalendarName;
 
     /**
-    * 日历id
+    * <p>日历id</p>
     */
     @SerializedName("CalendarId")
     @Expose
     private String CalendarId;
 
     /**
-    * 时区
+    * <p>时区</p>
     */
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
 
     /**
-    * 是否自动清理不支持的任务链接
+    * <p>是否自动清理不支持的任务链接</p>
     */
     @SerializedName("ClearLink")
     @Expose
     private Boolean ClearLink;
 
     /**
-    * ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+    * <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度</p>
     */
     @SerializedName("MainCyclicConfig")
     @Expose
     private String MainCyclicConfig;
 
     /**
-    * ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+    * <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围</p>
     */
     @SerializedName("SubordinateCyclicConfig")
     @Expose
     private String SubordinateCyclicConfig;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>分钟任务相位偏移</p>
+    */
+    @SerializedName("MinuteOffset")
+    @Expose
+    private Long MinuteOffset;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 工作流ID 
-     * @return WorkflowId 工作流ID
+     * Get <p>工作流ID</p> 
+     * @return WorkflowId <p>工作流ID</p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 工作流ID
-     * @param WorkflowId 工作流ID
+     * Set <p>工作流ID</p>
+     * @param WorkflowId <p>工作流ID</p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get 延迟时间 
-     * @return DelayTime 延迟时间
+     * Get <p>延迟时间</p> 
+     * @return DelayTime <p>延迟时间</p>
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 延迟时间
-     * @param DelayTime 延迟时间
+     * Set <p>延迟时间</p>
+     * @param DelayTime <p>延迟时间</p>
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 启动时间 
-     * @return StartupTime 启动时间
+     * Get <p>启动时间</p> 
+     * @return StartupTime <p>启动时间</p>
      */
     public Long getStartupTime() {
         return this.StartupTime;
     }
 
     /**
-     * Set 启动时间
-     * @param StartupTime 启动时间
+     * Set <p>启动时间</p>
+     * @param StartupTime <p>启动时间</p>
      */
     public void setStartupTime(Long StartupTime) {
         this.StartupTime = StartupTime;
     }
 
     /**
-     * Get 任务依赖 
-     * @return SelfDepend 任务依赖
+     * Get <p>任务依赖</p> 
+     * @return SelfDepend <p>任务依赖</p>
      */
     public String getSelfDepend() {
         return this.SelfDepend;
     }
 
     /**
-     * Set 任务依赖
-     * @param SelfDepend 任务依赖
+     * Set <p>任务依赖</p>
+     * @param SelfDepend <p>任务依赖</p>
      */
     public void setSelfDepend(String SelfDepend) {
         this.SelfDepend = SelfDepend;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 指定运行时间 
-     * @return TaskAction 指定运行时间
+     * Get <p>指定运行时间</p> 
+     * @return TaskAction <p>指定运行时间</p>
      */
     public String getTaskAction() {
         return this.TaskAction;
     }
 
     /**
-     * Set 指定运行时间
-     * @param TaskAction 指定运行时间
+     * Set <p>指定运行时间</p>
+     * @param TaskAction <p>指定运行时间</p>
      */
     public void setTaskAction(String TaskAction) {
         this.TaskAction = TaskAction;
     }
 
     /**
-     * Get 调度周期时间单位 
-     * @return CycleType 调度周期时间单位
+     * Get <p>调度周期时间单位</p> 
+     * @return CycleType <p>调度周期时间单位</p>
      */
     public String getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set 调度周期时间单位
-     * @param CycleType 调度周期时间单位
+     * Set <p>调度周期时间单位</p>
+     * @param CycleType <p>调度周期时间单位</p>
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get 调度周期 
-     * @return CycleStep 调度周期
+     * Get <p>调度周期</p> 
+     * @return CycleStep <p>调度周期</p>
      */
     public Long getCycleStep() {
         return this.CycleStep;
     }
 
     /**
-     * Set 调度周期
-     * @param CycleStep 调度周期
+     * Set <p>调度周期</p>
+     * @param CycleStep <p>调度周期</p>
      */
     public void setCycleStep(Long CycleStep) {
         this.CycleStep = CycleStep;
     }
 
     /**
-     * Get 执行时间左闭区间 
-     * @return ExecutionStartTime 执行时间左闭区间
+     * Get <p>执行时间左闭区间</p> 
+     * @return ExecutionStartTime <p>执行时间左闭区间</p>
      */
     public String getExecutionStartTime() {
         return this.ExecutionStartTime;
     }
 
     /**
-     * Set 执行时间左闭区间
-     * @param ExecutionStartTime 执行时间左闭区间
+     * Set <p>执行时间左闭区间</p>
+     * @param ExecutionStartTime <p>执行时间左闭区间</p>
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
     /**
-     * Get 执行时间右闭区间 
-     * @return ExecutionEndTime 执行时间右闭区间
+     * Get <p>执行时间右闭区间</p> 
+     * @return ExecutionEndTime <p>执行时间右闭区间</p>
      */
     public String getExecutionEndTime() {
         return this.ExecutionEndTime;
     }
 
     /**
-     * Set 执行时间右闭区间
-     * @param ExecutionEndTime 执行时间右闭区间
+     * Set <p>执行时间右闭区间</p>
+     * @param ExecutionEndTime <p>执行时间右闭区间</p>
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
         this.ExecutionEndTime = ExecutionEndTime;
     }
 
     /**
-     * Get 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1 
-     * @return InstanceInitStrategy 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1
+     * Get <p>任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1</p> 
+     * @return InstanceInitStrategy <p>任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1</p>
      */
     public String getInstanceInitStrategy() {
         return this.InstanceInitStrategy;
     }
 
     /**
-     * Set 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1
-     * @param InstanceInitStrategy 任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1
+     * Set <p>任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1</p>
+     * @param InstanceInitStrategy <p>任务初始化策略，T_PLUS_1、T_PLUS_0、T_MINUS_1</p>
      */
     public void setInstanceInitStrategy(String InstanceInitStrategy) {
         this.InstanceInitStrategy = InstanceInitStrategy;
     }
 
     /**
-     * Get 工作流依赖，yes or no 
-     * @return DependencyWorkflow 工作流依赖，yes or no
+     * Get <p>工作流依赖，yes or no</p> 
+     * @return DependencyWorkflow <p>工作流依赖，yes or no</p>
      */
     public String getDependencyWorkflow() {
         return this.DependencyWorkflow;
     }
 
     /**
-     * Set 工作流依赖，yes or no
-     * @param DependencyWorkflow 工作流依赖，yes or no
+     * Set <p>工作流依赖，yes or no</p>
+     * @param DependencyWorkflow <p>工作流依赖，yes or no</p>
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
         this.DependencyWorkflow = DependencyWorkflow;
     }
 
     /**
-     * Get CrontabExpression 
-     * @return CrontabExpression CrontabExpression
+     * Get <p>CrontabExpression</p> 
+     * @return CrontabExpression <p>CrontabExpression</p>
      */
     public String getCrontabExpression() {
         return this.CrontabExpression;
     }
 
     /**
-     * Set CrontabExpression
-     * @param CrontabExpression CrontabExpression
+     * Set <p>CrontabExpression</p>
+     * @param CrontabExpression <p>CrontabExpression</p>
      */
     public void setCrontabExpression(String CrontabExpression) {
         this.CrontabExpression = CrontabExpression;
     }
 
     /**
-     * Get 0：不修改
-1：将任务的上游依赖配置改为默认值  
-     * @return ModifyCycleValue 0：不修改
-1：将任务的上游依赖配置改为默认值 
+     * Get <p>0：不修改<br>1：将任务的上游依赖配置改为默认值</p> 
+     * @return ModifyCycleValue <p>0：不修改<br>1：将任务的上游依赖配置改为默认值</p>
      */
     public String getModifyCycleValue() {
         return this.ModifyCycleValue;
     }
 
     /**
-     * Set 0：不修改
-1：将任务的上游依赖配置改为默认值 
-     * @param ModifyCycleValue 0：不修改
-1：将任务的上游依赖配置改为默认值 
+     * Set <p>0：不修改<br>1：将任务的上游依赖配置改为默认值</p>
+     * @param ModifyCycleValue <p>0：不修改<br>1：将任务的上游依赖配置改为默认值</p>
      */
     public void setModifyCycleValue(String ModifyCycleValue) {
         this.ModifyCycleValue = ModifyCycleValue;
     }
 
     /**
-     * Get 是否开启日历调度 1 开启 0关闭 
-     * @return CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * Get <p>是否开启日历调度 1 开启 0关闭</p> 
+     * @return CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
      */
     public String getCalendarOpen() {
         return this.CalendarOpen;
     }
 
     /**
-     * Set 是否开启日历调度 1 开启 0关闭
-     * @param CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * Set <p>是否开启日历调度 1 开启 0关闭</p>
+     * @param CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
      */
     public void setCalendarOpen(String CalendarOpen) {
         this.CalendarOpen = CalendarOpen;
     }
 
     /**
-     * Get 日历名称 
-     * @return CalendarName 日历名称
+     * Get <p>日历名称</p> 
+     * @return CalendarName <p>日历名称</p>
      */
     public String getCalendarName() {
         return this.CalendarName;
     }
 
     /**
-     * Set 日历名称
-     * @param CalendarName 日历名称
+     * Set <p>日历名称</p>
+     * @param CalendarName <p>日历名称</p>
      */
     public void setCalendarName(String CalendarName) {
         this.CalendarName = CalendarName;
     }
 
     /**
-     * Get 日历id 
-     * @return CalendarId 日历id
+     * Get <p>日历id</p> 
+     * @return CalendarId <p>日历id</p>
      */
     public String getCalendarId() {
         return this.CalendarId;
     }
 
     /**
-     * Set 日历id
-     * @param CalendarId 日历id
+     * Set <p>日历id</p>
+     * @param CalendarId <p>日历id</p>
      */
     public void setCalendarId(String CalendarId) {
         this.CalendarId = CalendarId;
     }
 
     /**
-     * Get 时区 
-     * @return ScheduleTimeZone 时区
+     * Get <p>时区</p> 
+     * @return ScheduleTimeZone <p>时区</p>
      */
     public String getScheduleTimeZone() {
         return this.ScheduleTimeZone;
     }
 
     /**
-     * Set 时区
-     * @param ScheduleTimeZone 时区
+     * Set <p>时区</p>
+     * @param ScheduleTimeZone <p>时区</p>
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     /**
-     * Get 是否自动清理不支持的任务链接 
-     * @return ClearLink 是否自动清理不支持的任务链接
+     * Get <p>是否自动清理不支持的任务链接</p> 
+     * @return ClearLink <p>是否自动清理不支持的任务链接</p>
      */
     public Boolean getClearLink() {
         return this.ClearLink;
     }
 
     /**
-     * Set 是否自动清理不支持的任务链接
-     * @param ClearLink 是否自动清理不支持的任务链接
+     * Set <p>是否自动清理不支持的任务链接</p>
+     * @param ClearLink <p>是否自动清理不支持的任务链接</p>
      */
     public void setClearLink(Boolean ClearLink) {
         this.ClearLink = ClearLink;
     }
 
     /**
-     * Get ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度 
-     * @return MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     * Get <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度</p> 
+     * @return MainCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度</p>
      */
     public String getMainCyclicConfig() {
         return this.MainCyclicConfig;
     }
 
     /**
-     * Set ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
-     * @param MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     * Set <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度</p>
+     * @param MainCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度</p>
      */
     public void setMainCyclicConfig(String MainCyclicConfig) {
         this.MainCyclicConfig = MainCyclicConfig;
     }
 
     /**
-     * Get ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围 
-     * @return SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+     * Get <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围</p> 
+     * @return SubordinateCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围</p>
      */
     public String getSubordinateCyclicConfig() {
         return this.SubordinateCyclicConfig;
     }
 
     /**
-     * Set ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-     * @param SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+     * Set <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围</p>
+     * @param SubordinateCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围</p>
      */
     public void setSubordinateCyclicConfig(String SubordinateCyclicConfig) {
         this.SubordinateCyclicConfig = SubordinateCyclicConfig;
+    }
+
+    /**
+     * Get <p>分钟任务相位偏移</p> 
+     * @return MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public Long getMinuteOffset() {
+        return this.MinuteOffset;
+    }
+
+    /**
+     * Set <p>分钟任务相位偏移</p>
+     * @param MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public void setMinuteOffset(Long MinuteOffset) {
+        this.MinuteOffset = MinuteOffset;
     }
 
     public RenewWorkflowSchedulerInfoDsRequest() {
@@ -634,6 +652,9 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         if (source.SubordinateCyclicConfig != null) {
             this.SubordinateCyclicConfig = new String(source.SubordinateCyclicConfig);
         }
+        if (source.MinuteOffset != null) {
+            this.MinuteOffset = new Long(source.MinuteOffset);
+        }
     }
 
 
@@ -664,6 +685,7 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClearLink", this.ClearLink);
         this.setParamSimple(map, prefix + "MainCyclicConfig", this.MainCyclicConfig);
         this.setParamSimple(map, prefix + "SubordinateCyclicConfig", this.SubordinateCyclicConfig);
+        this.setParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
 
     }
 }

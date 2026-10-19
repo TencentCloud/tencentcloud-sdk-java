@@ -232,6 +232,14 @@ public class ServiceGroup extends AbstractModel {
     private String ChangerName;
 
     /**
+    * <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartRouter")
+    @Expose
+    private SmartRouter SmartRouter;
+
+    /**
      * Get <p>服务组id</p> 
      * @return ServiceGroupId <p>服务组id</p>
      */
@@ -727,6 +735,26 @@ public class ServiceGroup extends AbstractModel {
         this.ChangerName = ChangerName;
     }
 
+    /**
+     * Get <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartRouter <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartRouter getSmartRouter() {
+        return this.SmartRouter;
+    }
+
+    /**
+     * Set <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartRouter <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartRouter(SmartRouter SmartRouter) {
+        this.SmartRouter = SmartRouter;
+    }
+
     public ServiceGroup() {
     }
 
@@ -828,6 +856,9 @@ public class ServiceGroup extends AbstractModel {
         if (source.ChangerName != null) {
             this.ChangerName = new String(source.ChangerName);
         }
+        if (source.SmartRouter != null) {
+            this.SmartRouter = new SmartRouter(source.SmartRouter);
+        }
     }
 
 
@@ -863,6 +894,7 @@ public class ServiceGroup extends AbstractModel {
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
         this.setParamSimple(map, prefix + "Changer", this.Changer);
         this.setParamSimple(map, prefix + "ChangerName", this.ChangerName);
+        this.setParamObj(map, prefix + "SmartRouter.", this.SmartRouter);
 
     }
 }

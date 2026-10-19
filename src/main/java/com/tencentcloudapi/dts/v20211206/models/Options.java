@@ -117,6 +117,13 @@ public class Options extends AbstractModel {
     private Boolean FilterCheckpoint;
 
     /**
+    * <p>跳过报错的DDL策略</p>
+    */
+    @SerializedName("SkipDdlOnError")
+    @Expose
+    private SkipDdlOnError SkipDdlOnError;
+
+    /**
      * Get <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p> 
      * @return InitType <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p>
      */
@@ -332,6 +339,22 @@ public class Options extends AbstractModel {
         this.FilterCheckpoint = FilterCheckpoint;
     }
 
+    /**
+     * Get <p>跳过报错的DDL策略</p> 
+     * @return SkipDdlOnError <p>跳过报错的DDL策略</p>
+     */
+    public SkipDdlOnError getSkipDdlOnError() {
+        return this.SkipDdlOnError;
+    }
+
+    /**
+     * Set <p>跳过报错的DDL策略</p>
+     * @param SkipDdlOnError <p>跳过报错的DDL策略</p>
+     */
+    public void setSkipDdlOnError(SkipDdlOnError SkipDdlOnError) {
+        this.SkipDdlOnError = SkipDdlOnError;
+    }
+
     public Options() {
     }
 
@@ -385,6 +408,9 @@ public class Options extends AbstractModel {
         if (source.FilterCheckpoint != null) {
             this.FilterCheckpoint = new Boolean(source.FilterCheckpoint);
         }
+        if (source.SkipDdlOnError != null) {
+            this.SkipDdlOnError = new SkipDdlOnError(source.SkipDdlOnError);
+        }
     }
 
 
@@ -405,6 +431,7 @@ public class Options extends AbstractModel {
         this.setParamSimple(map, prefix + "StartPosition", this.StartPosition);
         this.setParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
         this.setParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
+        this.setParamObj(map, prefix + "SkipDdlOnError.", this.SkipDdlOnError);
 
     }
 }

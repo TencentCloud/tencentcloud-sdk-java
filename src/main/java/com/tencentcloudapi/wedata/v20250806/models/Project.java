@@ -87,6 +87,13 @@ public class Project extends AbstractModel {
     private Long Status;
 
     /**
+    * <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+    */
+    @SerializedName("DisplayStatus")
+    @Expose
+    private String DisplayStatus;
+
+    /**
     * <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -258,6 +265,22 @@ public class Project extends AbstractModel {
     }
 
     /**
+     * Get <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p> 
+     * @return DisplayStatus <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+     */
+    public String getDisplayStatus() {
+        return this.DisplayStatus;
+    }
+
+    /**
+     * Set <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+     * @param DisplayStatus <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+     */
+    public void setDisplayStatus(String DisplayStatus) {
+        this.DisplayStatus = DisplayStatus;
+    }
+
+    /**
      * Get <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectModel <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
@@ -325,6 +348,9 @@ public class Project extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.DisplayStatus != null) {
+            this.DisplayStatus = new String(source.DisplayStatus);
+        }
         if (source.ProjectModel != null) {
             this.ProjectModel = new String(source.ProjectModel);
         }
@@ -349,6 +375,7 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
         this.setParamSimple(map, prefix + "ProjectOwnerUin", this.ProjectOwnerUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "DisplayStatus", this.DisplayStatus);
         this.setParamSimple(map, prefix + "ProjectModel", this.ProjectModel);
         this.setParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
 

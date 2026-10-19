@@ -24,39 +24,46 @@ import java.util.HashMap;
 public class DescribeQuestionMarkAgentJobResponse extends AbstractModel {
 
     /**
-    * 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+    * <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+    * <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+    * <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
     */
     @SerializedName("JobStatus")
     @Expose
     private String JobStatus;
 
     /**
-    * 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+    * <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 试题批改信息
+    * <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
     */
     @SerializedName("MarkInfos")
     @Expose
     private MarkInfo [] MarkInfos;
+
+    /**
+    * <p>试题批改信息。</p>
+    */
+    @SerializedName("QuestionInfo")
+    @Expose
+    private QuestionInfo [] QuestionInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,83 +73,99 @@ public class DescribeQuestionMarkAgentJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务执行错误码。当任务状态不为 FAIL 时，该值为""。 
-     * @return ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * Get <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p> 
+     * @return ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
-     * @param ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * Set <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。 
-     * @return ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * Get <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p> 
+     * @return ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
-     * @param ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * Set <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 
-     * @return JobStatus 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+     * Get <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p> 
+     * @return JobStatus <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
      */
     public String getJobStatus() {
         return this.JobStatus;
     }
 
     /**
-     * Set 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
-     * @param JobStatus 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+     * Set <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
+     * @param JobStatus <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
      */
     public void setJobStatus(String JobStatus) {
         this.JobStatus = JobStatus;
     }
 
     /**
-     * Get 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。 
-     * @return Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * Get <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p> 
+     * @return Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
-     * @param Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * Set <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
+     * @param Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 试题批改信息 
-     * @return MarkInfos 试题批改信息
+     * Get <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p> 
+     * @return MarkInfos <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
      */
     public MarkInfo [] getMarkInfos() {
         return this.MarkInfos;
     }
 
     /**
-     * Set 试题批改信息
-     * @param MarkInfos 试题批改信息
+     * Set <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
+     * @param MarkInfos <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
      */
     public void setMarkInfos(MarkInfo [] MarkInfos) {
         this.MarkInfos = MarkInfos;
+    }
+
+    /**
+     * Get <p>试题批改信息。</p> 
+     * @return QuestionInfo <p>试题批改信息。</p>
+     */
+    public QuestionInfo [] getQuestionInfo() {
+        return this.QuestionInfo;
+    }
+
+    /**
+     * Set <p>试题批改信息。</p>
+     * @param QuestionInfo <p>试题批改信息。</p>
+     */
+    public void setQuestionInfo(QuestionInfo [] QuestionInfo) {
+        this.QuestionInfo = QuestionInfo;
     }
 
     /**
@@ -187,6 +210,12 @@ public class DescribeQuestionMarkAgentJobResponse extends AbstractModel {
                 this.MarkInfos[i] = new MarkInfo(source.MarkInfos[i]);
             }
         }
+        if (source.QuestionInfo != null) {
+            this.QuestionInfo = new QuestionInfo[source.QuestionInfo.length];
+            for (int i = 0; i < source.QuestionInfo.length; i++) {
+                this.QuestionInfo[i] = new QuestionInfo(source.QuestionInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +231,7 @@ public class DescribeQuestionMarkAgentJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamArrayObj(map, prefix + "MarkInfos.", this.MarkInfos);
+        this.setParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

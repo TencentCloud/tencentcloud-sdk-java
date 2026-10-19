@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeCSCPayInfoRequest extends AbstractModel {
 
+    /**
+    * <p>集团账号的成员id</p>
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
+    * <p>是否返回配额已使用量。默认为 false：不采集用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true。只关心订单状态、到期时间或配额购买数量的调用方无需传入</p>
+    */
+    @SerializedName("NeedQuotaUsed")
+    @Expose
+    private Boolean NeedQuotaUsed;
+
+    /**
+     * Get <p>集团账号的成员id</p> 
+     * @return MemberId <p>集团账号的成员id</p>
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set <p>集团账号的成员id</p>
+     * @param MemberId <p>集团账号的成员id</p>
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
+     * Get <p>是否返回配额已使用量。默认为 false：不采集用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true。只关心订单状态、到期时间或配额购买数量的调用方无需传入</p> 
+     * @return NeedQuotaUsed <p>是否返回配额已使用量。默认为 false：不采集用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true。只关心订单状态、到期时间或配额购买数量的调用方无需传入</p>
+     */
+    public Boolean getNeedQuotaUsed() {
+        return this.NeedQuotaUsed;
+    }
+
+    /**
+     * Set <p>是否返回配额已使用量。默认为 false：不采集用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true。只关心订单状态、到期时间或配额购买数量的调用方无需传入</p>
+     * @param NeedQuotaUsed <p>是否返回配额已使用量。默认为 false：不采集用量，QuotaList 中的 QuotaUsed 恒为 0；需要展示已用量的调用方显式传 true。只关心订单状态、到期时间或配额购买数量的调用方无需传入</p>
+     */
+    public void setNeedQuotaUsed(Boolean NeedQuotaUsed) {
+        this.NeedQuotaUsed = NeedQuotaUsed;
+    }
+
     public DescribeCSCPayInfoRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DescribeCSCPayInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCSCPayInfoRequest(DescribeCSCPayInfoRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
+        if (source.NeedQuotaUsed != null) {
+            this.NeedQuotaUsed = new Boolean(source.NeedQuotaUsed);
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DescribeCSCPayInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamSimple(map, prefix + "NeedQuotaUsed", this.NeedQuotaUsed);
 
     }
 }

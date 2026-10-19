@@ -67,6 +67,13 @@ public class Element extends AbstractModel {
     private Long PageIndex;
 
     /**
+    * <p>批改时答案的额外数据</p>
+    */
+    @SerializedName("AnswerElement")
+    @Expose
+    private AnswerElement AnswerElement;
+
+    /**
      * Get <p>元素内容，当type为figure时该字段内容为图片的位置</p> 
      * @return Text <p>元素内容，当type为figure时该字段内容为图片的位置</p>
      */
@@ -166,6 +173,22 @@ public class Element extends AbstractModel {
         this.PageIndex = PageIndex;
     }
 
+    /**
+     * Get <p>批改时答案的额外数据</p> 
+     * @return AnswerElement <p>批改时答案的额外数据</p>
+     */
+    public AnswerElement getAnswerElement() {
+        return this.AnswerElement;
+    }
+
+    /**
+     * Set <p>批改时答案的额外数据</p>
+     * @param AnswerElement <p>批改时答案的额外数据</p>
+     */
+    public void setAnswerElement(AnswerElement AnswerElement) {
+        this.AnswerElement = AnswerElement;
+    }
+
     public Element() {
     }
 
@@ -195,6 +218,9 @@ public class Element extends AbstractModel {
         if (source.PageIndex != null) {
             this.PageIndex = new Long(source.PageIndex);
         }
+        if (source.AnswerElement != null) {
+            this.AnswerElement = new AnswerElement(source.AnswerElement);
+        }
     }
 
 
@@ -208,6 +234,7 @@ public class Element extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResultList.", this.ResultList);
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
+        this.setParamObj(map, prefix + "AnswerElement.", this.AnswerElement);
 
     }
 }

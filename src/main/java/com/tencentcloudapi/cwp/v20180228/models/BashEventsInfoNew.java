@@ -24,647 +24,946 @@ import java.util.HashMap;
 public class BashEventsInfoNew extends AbstractModel {
 
     /**
-    * 数据ID
+    * <p>数据ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 主机安全ID
+    * <p>主机安全ID</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机ID
+    * <p>主机ID</p>
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 主机内网IP
+    * <p>主机内网IP</p>
     */
     @SerializedName("HostIp")
     @Expose
     private String HostIp;
 
     /**
-    * 平台类型
+    * <p>平台类型</p>
     */
     @SerializedName("Platform")
     @Expose
     private Long Platform;
 
     /**
-    * 执行命令
+    * <p>执行命令</p>
     */
     @SerializedName("BashCmd")
     @Expose
     private String BashCmd;
 
     /**
-    * 规则ID,等于0表示已规则已被删除或生效范围已修改
+    * <p>规则ID,等于0表示已规则已被删除或生效范围已修改</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 规则名称
+    * <p>规则名称</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 规则等级：1-高 2-中 3-低
+    * <p>规则等级：1-高 2-中 3-低</p>
     */
     @SerializedName("RuleLevel")
     @Expose
     private Long RuleLevel;
 
     /**
-    * 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略
+    * <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 发生时间
+    * <p>发生时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 主机名
+    * <p>主机名</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * 进程名称
+    * <p>进程名称</p>
     */
     @SerializedName("Exe")
     @Expose
     private String Exe;
 
     /**
-    * 处理时间
+    * <p>处理时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 规则类别  0=系统规则，1=用户规则
+    * <p>规则类别  0=系统规则，1=用户规则</p>
     */
     @SerializedName("RuleCategory")
     @Expose
     private Long RuleCategory;
 
     /**
-    * 自动生成的正则表达式
+    * <p>自动生成的正则表达式</p>
     */
     @SerializedName("RegexBashCmd")
     @Expose
     private String RegexBashCmd;
 
     /**
-    * 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
+    * <p>进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源</p>
     */
     @SerializedName("PsTree")
     @Expose
     private String PsTree;
 
     /**
-    * 建议方案
+    * <p>建议方案</p>
     */
     @SerializedName("SuggestScheme")
     @Expose
     private String SuggestScheme;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("HarmDescribe")
     @Expose
     private String HarmDescribe;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 参考链接
+    * <p>参考链接</p>
     */
     @SerializedName("References")
     @Expose
     private String [] References;
 
     /**
-    * 主机外网ip
+    * <p>主机外网ip</p>
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * 主机在线状态 OFFLINE  ONLINE
+    * <p>主机在线状态 OFFLINE  ONLINE</p>
     */
     @SerializedName("MachineStatus")
     @Expose
     private String MachineStatus;
 
     /**
-    * 登录用户
+    * <p>登录用户</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 进程号
+    * <p>进程号</p>
     */
     @SerializedName("Pid")
     @Expose
     private String Pid;
 
     /**
-    * 0:普通 1:专业版 2:旗舰版
+    * <p>0:普通 1:专业版 2:旗舰版</p>
     */
     @SerializedName("MachineType")
     @Expose
     private Long MachineType;
 
     /**
-    * 检测来源 0:bash日志 1:实时监控
+    * <p>检测来源 0:bash日志 1:实时监控</p>
     */
     @SerializedName("DetectBy")
     @Expose
     private Long DetectBy;
 
     /**
-    * 执行命令(解码后)
+    * <p>执行命令(解码后)</p>
     */
     @SerializedName("BashCmdDecoded")
     @Expose
     private String BashCmdDecoded;
 
     /**
-     * Get 数据ID 
-     * @return Id 数据ID
+    * <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+    */
+    @SerializedName("EventCount")
+    @Expose
+    private Long EventCount;
+
+    /**
+    * <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+    */
+    @SerializedName("FirstDetectTime")
+    @Expose
+    private String FirstDetectTime;
+
+    /**
+    * <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+    */
+    @SerializedName("LatestDetectTime")
+    @Expose
+    private String LatestDetectTime;
+
+    /**
+    * <p>进程MD5（文件监控行为独有）</p>
+    */
+    @SerializedName("FileProcessMd5")
+    @Expose
+    private String FileProcessMd5;
+
+    /**
+    * <p>动作：进程对文件的操作，如 读/写/重命名/删除/清空内容（文件监控行为独有）</p>
+    */
+    @SerializedName("FileAction")
+    @Expose
+    private String FileAction;
+
+    /**
+    * <p>文件路径（文件监控行为独有）</p>
+    */
+    @SerializedName("FilePath")
+    @Expose
+    private String FilePath;
+
+    /**
+    * <p>文件MD5（文件监控行为独有）</p>
+    */
+    @SerializedName("FileMd5")
+    @Expose
+    private String FileMd5;
+
+    /**
+    * <p>文件名称（文件监控行为独有）</p>
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
+    * <p>文件大小（文件监控行为独有）</p>
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private String FileSize;
+
+    /**
+    * <p>文件修改时间（文件监控行为独有）</p>
+    */
+    @SerializedName("FileModifyTime")
+    @Expose
+    private String FileModifyTime;
+
+    /**
+    * <p>文件权限（文件监控行为独有）</p>
+    */
+    @SerializedName("FilePermission")
+    @Expose
+    private String FilePermission;
+
+    /**
+    * <p>文件访问时间</p>
+    */
+    @SerializedName("FileAccessTime")
+    @Expose
+    private String FileAccessTime;
+
+    /**
+    * <p>高危命令事件类型</p><p>枚举值：</p><ul><li>filemon： 文件监控事件</li><li>connect： 外联行为事件</li><li>process： 进程启动事件</li></ul>
+    */
+    @SerializedName("BashType")
+    @Expose
+    private String BashType;
+
+    /**
+     * Get <p>数据ID</p> 
+     * @return Id <p>数据ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 数据ID
-     * @param Id 数据ID
+     * Set <p>数据ID</p>
+     * @param Id <p>数据ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 主机安全ID 
-     * @return Uuid 主机安全ID
+     * Get <p>主机安全ID</p> 
+     * @return Uuid <p>主机安全ID</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机安全ID
-     * @param Uuid 主机安全ID
+     * Set <p>主机安全ID</p>
+     * @param Uuid <p>主机安全ID</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ID 
-     * @return Quuid 主机ID
+     * Get <p>主机ID</p> 
+     * @return Quuid <p>主机ID</p>
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 主机ID
-     * @param Quuid 主机ID
+     * Set <p>主机ID</p>
+     * @param Quuid <p>主机ID</p>
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 主机内网IP 
-     * @return HostIp 主机内网IP
+     * Get <p>主机内网IP</p> 
+     * @return HostIp <p>主机内网IP</p>
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set 主机内网IP
-     * @param HostIp 主机内网IP
+     * Set <p>主机内网IP</p>
+     * @param HostIp <p>主机内网IP</p>
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 平台类型 
-     * @return Platform 平台类型
+     * Get <p>平台类型</p> 
+     * @return Platform <p>平台类型</p>
      */
     public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台类型
-     * @param Platform 平台类型
+     * Set <p>平台类型</p>
+     * @param Platform <p>平台类型</p>
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 执行命令 
-     * @return BashCmd 执行命令
+     * Get <p>执行命令</p> 
+     * @return BashCmd <p>执行命令</p>
      */
     public String getBashCmd() {
         return this.BashCmd;
     }
 
     /**
-     * Set 执行命令
-     * @param BashCmd 执行命令
+     * Set <p>执行命令</p>
+     * @param BashCmd <p>执行命令</p>
      */
     public void setBashCmd(String BashCmd) {
         this.BashCmd = BashCmd;
     }
 
     /**
-     * Get 规则ID,等于0表示已规则已被删除或生效范围已修改 
-     * @return RuleId 规则ID,等于0表示已规则已被删除或生效范围已修改
+     * Get <p>规则ID,等于0表示已规则已被删除或生效范围已修改</p> 
+     * @return RuleId <p>规则ID,等于0表示已规则已被删除或生效范围已修改</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID,等于0表示已规则已被删除或生效范围已修改
-     * @param RuleId 规则ID,等于0表示已规则已被删除或生效范围已修改
+     * Set <p>规则ID,等于0表示已规则已被删除或生效范围已修改</p>
+     * @param RuleId <p>规则ID,等于0表示已规则已被删除或生效范围已修改</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get <p>规则名称</p> 
+     * @return RuleName <p>规则名称</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set <p>规则名称</p>
+     * @param RuleName <p>规则名称</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则等级：1-高 2-中 3-低 
-     * @return RuleLevel 规则等级：1-高 2-中 3-低
+     * Get <p>规则等级：1-高 2-中 3-低</p> 
+     * @return RuleLevel <p>规则等级：1-高 2-中 3-低</p>
      */
     public Long getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * Set 规则等级：1-高 2-中 3-低
-     * @param RuleLevel 规则等级：1-高 2-中 3-低
+     * Set <p>规则等级：1-高 2-中 3-低</p>
+     * @param RuleLevel <p>规则等级：1-高 2-中 3-低</p>
      */
     public void setRuleLevel(Long RuleLevel) {
         this.RuleLevel = RuleLevel;
     }
 
     /**
-     * Get 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略 
-     * @return Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略
+     * Get <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略</p> 
+     * @return Status <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略
-     * @param Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略
+     * Set <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略</p>
+     * @param Status <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3= 已忽略</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 发生时间 
-     * @return CreateTime 发生时间
+     * Get <p>发生时间</p> 
+     * @return CreateTime <p>发生时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 发生时间
-     * @param CreateTime 发生时间
+     * Set <p>发生时间</p>
+     * @param CreateTime <p>发生时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 主机名 
-     * @return MachineName 主机名
+     * Get <p>主机名</p> 
+     * @return MachineName <p>主机名</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set 主机名
-     * @param MachineName 主机名
+     * Set <p>主机名</p>
+     * @param MachineName <p>主机名</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 进程名称 
-     * @return Exe 进程名称
+     * Get <p>进程名称</p> 
+     * @return Exe <p>进程名称</p>
      */
     public String getExe() {
         return this.Exe;
     }
 
     /**
-     * Set 进程名称
-     * @param Exe 进程名称
+     * Set <p>进程名称</p>
+     * @param Exe <p>进程名称</p>
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get 处理时间 
-     * @return ModifyTime 处理时间
+     * Get <p>处理时间</p> 
+     * @return ModifyTime <p>处理时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 处理时间
-     * @param ModifyTime 处理时间
+     * Set <p>处理时间</p>
+     * @param ModifyTime <p>处理时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 规则类别  0=系统规则，1=用户规则 
-     * @return RuleCategory 规则类别  0=系统规则，1=用户规则
+     * Get <p>规则类别  0=系统规则，1=用户规则</p> 
+     * @return RuleCategory <p>规则类别  0=系统规则，1=用户规则</p>
      */
     public Long getRuleCategory() {
         return this.RuleCategory;
     }
 
     /**
-     * Set 规则类别  0=系统规则，1=用户规则
-     * @param RuleCategory 规则类别  0=系统规则，1=用户规则
+     * Set <p>规则类别  0=系统规则，1=用户规则</p>
+     * @param RuleCategory <p>规则类别  0=系统规则，1=用户规则</p>
      */
     public void setRuleCategory(Long RuleCategory) {
         this.RuleCategory = RuleCategory;
     }
 
     /**
-     * Get 自动生成的正则表达式 
-     * @return RegexBashCmd 自动生成的正则表达式
+     * Get <p>自动生成的正则表达式</p> 
+     * @return RegexBashCmd <p>自动生成的正则表达式</p>
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
     }
 
     /**
-     * Set 自动生成的正则表达式
-     * @param RegexBashCmd 自动生成的正则表达式
+     * Set <p>自动生成的正则表达式</p>
+     * @param RegexBashCmd <p>自动生成的正则表达式</p>
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
     }
 
     /**
-     * Get 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源 
-     * @return PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
+     * Get <p>进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源</p> 
+     * @return PsTree <p>进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源</p>
      */
     public String getPsTree() {
         return this.PsTree;
     }
 
     /**
-     * Set 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-     * @param PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
+     * Set <p>进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源</p>
+     * @param PsTree <p>进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源</p>
      */
     public void setPsTree(String PsTree) {
         this.PsTree = PsTree;
     }
 
     /**
-     * Get 建议方案 
-     * @return SuggestScheme 建议方案
+     * Get <p>建议方案</p> 
+     * @return SuggestScheme <p>建议方案</p>
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
     }
 
     /**
-     * Set 建议方案
-     * @param SuggestScheme 建议方案
+     * Set <p>建议方案</p>
+     * @param SuggestScheme <p>建议方案</p>
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get 描述 
-     * @return HarmDescribe 描述
+     * Get <p>描述</p> 
+     * @return HarmDescribe <p>描述</p>
      */
     public String getHarmDescribe() {
         return this.HarmDescribe;
     }
 
     /**
-     * Set 描述
-     * @param HarmDescribe 描述
+     * Set <p>描述</p>
+     * @param HarmDescribe <p>描述</p>
      */
     public void setHarmDescribe(String HarmDescribe) {
         this.HarmDescribe = HarmDescribe;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 参考链接 
-     * @return References 参考链接
+     * Get <p>参考链接</p> 
+     * @return References <p>参考链接</p>
      */
     public String [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set 参考链接
-     * @param References 参考链接
+     * Set <p>参考链接</p>
+     * @param References <p>参考链接</p>
      */
     public void setReferences(String [] References) {
         this.References = References;
     }
 
     /**
-     * Get 主机外网ip 
-     * @return MachineWanIp 主机外网ip
+     * Get <p>主机外网ip</p> 
+     * @return MachineWanIp <p>主机外网ip</p>
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
     }
 
     /**
-     * Set 主机外网ip
-     * @param MachineWanIp 主机外网ip
+     * Set <p>主机外网ip</p>
+     * @param MachineWanIp <p>主机外网ip</p>
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get 主机在线状态 OFFLINE  ONLINE 
-     * @return MachineStatus 主机在线状态 OFFLINE  ONLINE
+     * Get <p>主机在线状态 OFFLINE  ONLINE</p> 
+     * @return MachineStatus <p>主机在线状态 OFFLINE  ONLINE</p>
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set 主机在线状态 OFFLINE  ONLINE
-     * @param MachineStatus 主机在线状态 OFFLINE  ONLINE
+     * Set <p>主机在线状态 OFFLINE  ONLINE</p>
+     * @param MachineStatus <p>主机在线状态 OFFLINE  ONLINE</p>
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get 登录用户 
-     * @return User 登录用户
+     * Get <p>登录用户</p> 
+     * @return User <p>登录用户</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 登录用户
-     * @param User 登录用户
+     * Set <p>登录用户</p>
+     * @param User <p>登录用户</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 进程号 
-     * @return Pid 进程号
+     * Get <p>进程号</p> 
+     * @return Pid <p>进程号</p>
      */
     public String getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 进程号
-     * @param Pid 进程号
+     * Set <p>进程号</p>
+     * @param Pid <p>进程号</p>
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 0:普通 1:专业版 2:旗舰版 
-     * @return MachineType 0:普通 1:专业版 2:旗舰版
+     * Get <p>0:普通 1:专业版 2:旗舰版</p> 
+     * @return MachineType <p>0:普通 1:专业版 2:旗舰版</p>
      */
     public Long getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 0:普通 1:专业版 2:旗舰版
-     * @param MachineType 0:普通 1:专业版 2:旗舰版
+     * Set <p>0:普通 1:专业版 2:旗舰版</p>
+     * @param MachineType <p>0:普通 1:专业版 2:旗舰版</p>
      */
     public void setMachineType(Long MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 检测来源 0:bash日志 1:实时监控 
-     * @return DetectBy 检测来源 0:bash日志 1:实时监控
+     * Get <p>检测来源 0:bash日志 1:实时监控</p> 
+     * @return DetectBy <p>检测来源 0:bash日志 1:实时监控</p>
      */
     public Long getDetectBy() {
         return this.DetectBy;
     }
 
     /**
-     * Set 检测来源 0:bash日志 1:实时监控
-     * @param DetectBy 检测来源 0:bash日志 1:实时监控
+     * Set <p>检测来源 0:bash日志 1:实时监控</p>
+     * @param DetectBy <p>检测来源 0:bash日志 1:实时监控</p>
      */
     public void setDetectBy(Long DetectBy) {
         this.DetectBy = DetectBy;
     }
 
     /**
-     * Get 执行命令(解码后) 
-     * @return BashCmdDecoded 执行命令(解码后)
+     * Get <p>执行命令(解码后)</p> 
+     * @return BashCmdDecoded <p>执行命令(解码后)</p>
      */
     public String getBashCmdDecoded() {
         return this.BashCmdDecoded;
     }
 
     /**
-     * Set 执行命令(解码后)
-     * @param BashCmdDecoded 执行命令(解码后)
+     * Set <p>执行命令(解码后)</p>
+     * @param BashCmdDecoded <p>执行命令(解码后)</p>
      */
     public void setBashCmdDecoded(String BashCmdDecoded) {
         this.BashCmdDecoded = BashCmdDecoded;
+    }
+
+    /**
+     * Get <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p> 
+     * @return EventCount <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     */
+    public Long getEventCount() {
+        return this.EventCount;
+    }
+
+    /**
+     * Set <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     * @param EventCount <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     */
+    public void setEventCount(Long EventCount) {
+        this.EventCount = EventCount;
+    }
+
+    /**
+     * Get <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p> 
+     * @return FirstDetectTime <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public String getFirstDetectTime() {
+        return this.FirstDetectTime;
+    }
+
+    /**
+     * Set <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     * @param FirstDetectTime <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public void setFirstDetectTime(String FirstDetectTime) {
+        this.FirstDetectTime = FirstDetectTime;
+    }
+
+    /**
+     * Get <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p> 
+     * @return LatestDetectTime <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public String getLatestDetectTime() {
+        return this.LatestDetectTime;
+    }
+
+    /**
+     * Set <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     * @param LatestDetectTime <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public void setLatestDetectTime(String LatestDetectTime) {
+        this.LatestDetectTime = LatestDetectTime;
+    }
+
+    /**
+     * Get <p>进程MD5（文件监控行为独有）</p> 
+     * @return FileProcessMd5 <p>进程MD5（文件监控行为独有）</p>
+     */
+    public String getFileProcessMd5() {
+        return this.FileProcessMd5;
+    }
+
+    /**
+     * Set <p>进程MD5（文件监控行为独有）</p>
+     * @param FileProcessMd5 <p>进程MD5（文件监控行为独有）</p>
+     */
+    public void setFileProcessMd5(String FileProcessMd5) {
+        this.FileProcessMd5 = FileProcessMd5;
+    }
+
+    /**
+     * Get <p>动作：进程对文件的操作，如 读/写/重命名/删除/清空内容（文件监控行为独有）</p> 
+     * @return FileAction <p>动作：进程对文件的操作，如 读/写/重命名/删除/清空内容（文件监控行为独有）</p>
+     */
+    public String getFileAction() {
+        return this.FileAction;
+    }
+
+    /**
+     * Set <p>动作：进程对文件的操作，如 读/写/重命名/删除/清空内容（文件监控行为独有）</p>
+     * @param FileAction <p>动作：进程对文件的操作，如 读/写/重命名/删除/清空内容（文件监控行为独有）</p>
+     */
+    public void setFileAction(String FileAction) {
+        this.FileAction = FileAction;
+    }
+
+    /**
+     * Get <p>文件路径（文件监控行为独有）</p> 
+     * @return FilePath <p>文件路径（文件监控行为独有）</p>
+     */
+    public String getFilePath() {
+        return this.FilePath;
+    }
+
+    /**
+     * Set <p>文件路径（文件监控行为独有）</p>
+     * @param FilePath <p>文件路径（文件监控行为独有）</p>
+     */
+    public void setFilePath(String FilePath) {
+        this.FilePath = FilePath;
+    }
+
+    /**
+     * Get <p>文件MD5（文件监控行为独有）</p> 
+     * @return FileMd5 <p>文件MD5（文件监控行为独有）</p>
+     */
+    public String getFileMd5() {
+        return this.FileMd5;
+    }
+
+    /**
+     * Set <p>文件MD5（文件监控行为独有）</p>
+     * @param FileMd5 <p>文件MD5（文件监控行为独有）</p>
+     */
+    public void setFileMd5(String FileMd5) {
+        this.FileMd5 = FileMd5;
+    }
+
+    /**
+     * Get <p>文件名称（文件监控行为独有）</p> 
+     * @return FileName <p>文件名称（文件监控行为独有）</p>
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set <p>文件名称（文件监控行为独有）</p>
+     * @param FileName <p>文件名称（文件监控行为独有）</p>
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
+    /**
+     * Get <p>文件大小（文件监控行为独有）</p> 
+     * @return FileSize <p>文件大小（文件监控行为独有）</p>
+     */
+    public String getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set <p>文件大小（文件监控行为独有）</p>
+     * @param FileSize <p>文件大小（文件监控行为独有）</p>
+     */
+    public void setFileSize(String FileSize) {
+        this.FileSize = FileSize;
+    }
+
+    /**
+     * Get <p>文件修改时间（文件监控行为独有）</p> 
+     * @return FileModifyTime <p>文件修改时间（文件监控行为独有）</p>
+     */
+    public String getFileModifyTime() {
+        return this.FileModifyTime;
+    }
+
+    /**
+     * Set <p>文件修改时间（文件监控行为独有）</p>
+     * @param FileModifyTime <p>文件修改时间（文件监控行为独有）</p>
+     */
+    public void setFileModifyTime(String FileModifyTime) {
+        this.FileModifyTime = FileModifyTime;
+    }
+
+    /**
+     * Get <p>文件权限（文件监控行为独有）</p> 
+     * @return FilePermission <p>文件权限（文件监控行为独有）</p>
+     */
+    public String getFilePermission() {
+        return this.FilePermission;
+    }
+
+    /**
+     * Set <p>文件权限（文件监控行为独有）</p>
+     * @param FilePermission <p>文件权限（文件监控行为独有）</p>
+     */
+    public void setFilePermission(String FilePermission) {
+        this.FilePermission = FilePermission;
+    }
+
+    /**
+     * Get <p>文件访问时间</p> 
+     * @return FileAccessTime <p>文件访问时间</p>
+     */
+    public String getFileAccessTime() {
+        return this.FileAccessTime;
+    }
+
+    /**
+     * Set <p>文件访问时间</p>
+     * @param FileAccessTime <p>文件访问时间</p>
+     */
+    public void setFileAccessTime(String FileAccessTime) {
+        this.FileAccessTime = FileAccessTime;
+    }
+
+    /**
+     * Get <p>高危命令事件类型</p><p>枚举值：</p><ul><li>filemon： 文件监控事件</li><li>connect： 外联行为事件</li><li>process： 进程启动事件</li></ul> 
+     * @return BashType <p>高危命令事件类型</p><p>枚举值：</p><ul><li>filemon： 文件监控事件</li><li>connect： 外联行为事件</li><li>process： 进程启动事件</li></ul>
+     */
+    public String getBashType() {
+        return this.BashType;
+    }
+
+    /**
+     * Set <p>高危命令事件类型</p><p>枚举值：</p><ul><li>filemon： 文件监控事件</li><li>connect： 外联行为事件</li><li>process： 进程启动事件</li></ul>
+     * @param BashType <p>高危命令事件类型</p><p>枚举值：</p><ul><li>filemon： 文件监控事件</li><li>connect： 外联行为事件</li><li>process： 进程启动事件</li></ul>
+     */
+    public void setBashType(String BashType) {
+        this.BashType = BashType;
     }
 
     public BashEventsInfoNew() {
@@ -765,6 +1064,45 @@ public class BashEventsInfoNew extends AbstractModel {
         if (source.BashCmdDecoded != null) {
             this.BashCmdDecoded = new String(source.BashCmdDecoded);
         }
+        if (source.EventCount != null) {
+            this.EventCount = new Long(source.EventCount);
+        }
+        if (source.FirstDetectTime != null) {
+            this.FirstDetectTime = new String(source.FirstDetectTime);
+        }
+        if (source.LatestDetectTime != null) {
+            this.LatestDetectTime = new String(source.LatestDetectTime);
+        }
+        if (source.FileProcessMd5 != null) {
+            this.FileProcessMd5 = new String(source.FileProcessMd5);
+        }
+        if (source.FileAction != null) {
+            this.FileAction = new String(source.FileAction);
+        }
+        if (source.FilePath != null) {
+            this.FilePath = new String(source.FilePath);
+        }
+        if (source.FileMd5 != null) {
+            this.FileMd5 = new String(source.FileMd5);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new String(source.FileSize);
+        }
+        if (source.FileModifyTime != null) {
+            this.FileModifyTime = new String(source.FileModifyTime);
+        }
+        if (source.FilePermission != null) {
+            this.FilePermission = new String(source.FilePermission);
+        }
+        if (source.FileAccessTime != null) {
+            this.FileAccessTime = new String(source.FileAccessTime);
+        }
+        if (source.BashType != null) {
+            this.BashType = new String(source.BashType);
+        }
     }
 
 
@@ -800,6 +1138,19 @@ public class BashEventsInfoNew extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
         this.setParamSimple(map, prefix + "BashCmdDecoded", this.BashCmdDecoded);
+        this.setParamSimple(map, prefix + "EventCount", this.EventCount);
+        this.setParamSimple(map, prefix + "FirstDetectTime", this.FirstDetectTime);
+        this.setParamSimple(map, prefix + "LatestDetectTime", this.LatestDetectTime);
+        this.setParamSimple(map, prefix + "FileProcessMd5", this.FileProcessMd5);
+        this.setParamSimple(map, prefix + "FileAction", this.FileAction);
+        this.setParamSimple(map, prefix + "FilePath", this.FilePath);
+        this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
+        this.setParamSimple(map, prefix + "FilePermission", this.FilePermission);
+        this.setParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
+        this.setParamSimple(map, prefix + "BashType", this.BashType);
 
     }
 }

@@ -87,6 +87,13 @@ public class LicenseStatusItem extends AbstractModel {
     private String EndTime;
 
     /**
+    * <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private String OrderType;
+
+    /**
      * Get <p>资源ID</p> 
      * @return ResourceId <p>资源ID</p>
      */
@@ -230,6 +237,22 @@ public class LicenseStatusItem extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul> 
+     * @return OrderType <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
+     */
+    public String getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
+     * @param OrderType <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
+     */
+    public void setOrderType(String OrderType) {
+        this.OrderType = OrderType;
+    }
+
     public LicenseStatusItem() {
     }
 
@@ -265,6 +288,9 @@ public class LicenseStatusItem extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.OrderType != null) {
+            this.OrderType = new String(source.OrderType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class LicenseStatusItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RemainNum", this.RemainNum);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
 
     }
 }

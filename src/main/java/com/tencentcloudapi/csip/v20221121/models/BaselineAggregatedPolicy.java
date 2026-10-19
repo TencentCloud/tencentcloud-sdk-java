@@ -115,6 +115,13 @@ public class BaselineAggregatedPolicy extends AbstractModel {
     private Boolean Scanned;
 
     /**
+    * <p>自定义策略情况下策略的appid</p>
+    */
+    @SerializedName("AppID")
+    @Expose
+    private Long AppID;
+
+    /**
      * Get <p>系统策略所属父分类 ID（仅 PolicyType=SYSTEM 时聚合使用，自定义策略为 0）。</p> 
      * @return ParentCategoryID <p>系统策略所属父分类 ID（仅 PolicyType=SYSTEM 时聚合使用，自定义策略为 0）。</p>
      */
@@ -322,6 +329,22 @@ public class BaselineAggregatedPolicy extends AbstractModel {
         this.Scanned = Scanned;
     }
 
+    /**
+     * Get <p>自定义策略情况下策略的appid</p> 
+     * @return AppID <p>自定义策略情况下策略的appid</p>
+     */
+    public Long getAppID() {
+        return this.AppID;
+    }
+
+    /**
+     * Set <p>自定义策略情况下策略的appid</p>
+     * @param AppID <p>自定义策略情况下策略的appid</p>
+     */
+    public void setAppID(Long AppID) {
+        this.AppID = AppID;
+    }
+
     public BaselineAggregatedPolicy() {
     }
 
@@ -378,6 +401,9 @@ public class BaselineAggregatedPolicy extends AbstractModel {
         if (source.Scanned != null) {
             this.Scanned = new Boolean(source.Scanned);
         }
+        if (source.AppID != null) {
+            this.AppID = new Long(source.AppID);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class BaselineAggregatedPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
         this.setParamSimple(map, prefix + "CheckAssetType", this.CheckAssetType);
         this.setParamSimple(map, prefix + "Scanned", this.Scanned);
+        this.setParamSimple(map, prefix + "AppID", this.AppID);
 
     }
 }

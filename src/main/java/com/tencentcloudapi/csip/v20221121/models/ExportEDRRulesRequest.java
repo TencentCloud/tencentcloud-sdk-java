@@ -52,6 +52,13 @@ public class ExportEDRRulesRequest extends AbstractModel {
     private String By;
 
     /**
+    * <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+    */
+    @SerializedName("FileOperationRules")
+    @Expose
+    private RuleContentFileOperation FileOperationRules;
+
+    /**
      * Get <p>集团账号的成员id</p> 
      * @return MemberId <p>集团账号的成员id</p>
      */
@@ -115,6 +122,22 @@ public class ExportEDRRulesRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p> 
+     * @return FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public RuleContentFileOperation getFileOperationRules() {
+        return this.FileOperationRules;
+    }
+
+    /**
+     * Set <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     * @param FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public void setFileOperationRules(RuleContentFileOperation FileOperationRules) {
+        this.FileOperationRules = FileOperationRules;
+    }
+
     public ExportEDRRulesRequest() {
     }
 
@@ -141,6 +164,9 @@ public class ExportEDRRulesRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.FileOperationRules != null) {
+            this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class ExportEDRRulesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
 
     }
 }

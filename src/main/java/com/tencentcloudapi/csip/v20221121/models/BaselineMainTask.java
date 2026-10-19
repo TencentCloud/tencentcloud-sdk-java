@@ -122,6 +122,13 @@ public class BaselineMainTask extends AbstractModel {
     private Long ScanTotalCount;
 
     /**
+    * <p>检测的策略列表</p>
+    */
+    @SerializedName("PolicyList")
+    @Expose
+    private BaselinePolicyBrief [] PolicyList;
+
+    /**
      * Get <p>主任务对应的全局任务 ID。</p> 
      * @return JobID <p>主任务对应的全局任务 ID。</p>
      */
@@ -345,6 +352,22 @@ public class BaselineMainTask extends AbstractModel {
         this.ScanTotalCount = ScanTotalCount;
     }
 
+    /**
+     * Get <p>检测的策略列表</p> 
+     * @return PolicyList <p>检测的策略列表</p>
+     */
+    public BaselinePolicyBrief [] getPolicyList() {
+        return this.PolicyList;
+    }
+
+    /**
+     * Set <p>检测的策略列表</p>
+     * @param PolicyList <p>检测的策略列表</p>
+     */
+    public void setPolicyList(BaselinePolicyBrief [] PolicyList) {
+        this.PolicyList = PolicyList;
+    }
+
     public BaselineMainTask() {
     }
 
@@ -395,6 +418,12 @@ public class BaselineMainTask extends AbstractModel {
         if (source.ScanTotalCount != null) {
             this.ScanTotalCount = new Long(source.ScanTotalCount);
         }
+        if (source.PolicyList != null) {
+            this.PolicyList = new BaselinePolicyBrief[source.PolicyList.length];
+            for (int i = 0; i < source.PolicyList.length; i++) {
+                this.PolicyList[i] = new BaselinePolicyBrief(source.PolicyList[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class BaselineMainTask extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanSuccessCount", this.ScanSuccessCount);
         this.setParamSimple(map, prefix + "ScanFailedCount", this.ScanFailedCount);
         this.setParamSimple(map, prefix + "ScanTotalCount", this.ScanTotalCount);
+        this.setParamArrayObj(map, prefix + "PolicyList.", this.PolicyList);
 
     }
 }

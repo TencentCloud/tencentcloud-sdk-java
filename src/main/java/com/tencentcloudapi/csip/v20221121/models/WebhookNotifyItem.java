@@ -52,6 +52,13 @@ public class WebhookNotifyItem extends AbstractModel {
     private String [] Items;
 
     /**
+    * <p>可选项</p>
+    */
+    @SerializedName("Options")
+    @Expose
+    private String [] Options;
+
+    /**
      * Get <p>模块编码（与 ModifyNotifySettingAlert 共用枚举）<br>枚举值：<br>Vul：漏洞与云安全态势<br>Alert：告警中心<br>AkSk：云API风险治理<br>Agent：客户端/主机资产<br>LogAnalysis：日志分析</p> 
      * @return Module <p>模块编码（与 ModifyNotifySettingAlert 共用枚举）<br>枚举值：<br>Vul：漏洞与云安全态势<br>Alert：告警中心<br>AkSk：云API风险治理<br>Agent：客户端/主机资产<br>LogAnalysis：日志分析</p>
      */
@@ -115,6 +122,22 @@ public class WebhookNotifyItem extends AbstractModel {
         this.Items = Items;
     }
 
+    /**
+     * Get <p>可选项</p> 
+     * @return Options <p>可选项</p>
+     */
+    public String [] getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set <p>可选项</p>
+     * @param Options <p>可选项</p>
+     */
+    public void setOptions(String [] Options) {
+        this.Options = Options;
+    }
+
     public WebhookNotifyItem() {
     }
 
@@ -141,6 +164,12 @@ public class WebhookNotifyItem extends AbstractModel {
                 this.Items[i] = new String(source.Items[i]);
             }
         }
+        if (source.Options != null) {
+            this.Options = new String[source.Options.length];
+            for (int i = 0; i < source.Options.length; i++) {
+                this.Options[i] = new String(source.Options[i]);
+            }
+        }
     }
 
 
@@ -152,6 +181,7 @@ public class WebhookNotifyItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SubModule", this.SubModule);
         this.setParamArraySimple(map, prefix + "Levels.", this.Levels);
         this.setParamArraySimple(map, prefix + "Items.", this.Items);
+        this.setParamArraySimple(map, prefix + "Options.", this.Options);
 
     }
 }

@@ -39,6 +39,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *用户在 MCP App iframe 内触发的工具调用
+     * @param req CallMCPToolRequest
+     * @return CallMCPToolResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallMCPToolResponse CallMCPTool(CallMCPToolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CallMCPTool", CallMCPToolResponse.class);
+    }
+
+    /**
      *校验标签
      * @param req CheckLabelRequest
      * @return CheckLabelResponse
@@ -1335,6 +1346,17 @@ public class AdpClient extends AbstractClient{
     public PauseAppTriggerResponse PauseAppTrigger(PauseAppTriggerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PauseAppTrigger", PauseAppTriggerResponse.class);
+    }
+
+    /**
+     *读取 MCP UI 资源（HTML），供前端 iframe 加载 MCP App 界面
+     * @param req ReadMCPResourceRequest
+     * @return ReadMCPResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReadMCPResourceResponse ReadMCPResource(ReadMCPResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReadMCPResource", ReadMCPResourceResponse.class);
     }
 
     /**

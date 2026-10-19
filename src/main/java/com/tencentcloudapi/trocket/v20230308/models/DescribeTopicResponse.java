@@ -45,6 +45,13 @@ public class DescribeTopicResponse extends AbstractModel {
     private String TopicType;
 
     /**
+    * <p>队列数量</p>
+    */
+    @SerializedName("QueueNum")
+    @Expose
+    private Long QueueNum;
+
+    /**
     * <p>备注</p>
     */
     @SerializedName("Remark")
@@ -153,6 +160,22 @@ public class DescribeTopicResponse extends AbstractModel {
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
+    }
+
+    /**
+     * Get <p>队列数量</p> 
+     * @return QueueNum <p>队列数量</p>
+     */
+    public Long getQueueNum() {
+        return this.QueueNum;
+    }
+
+    /**
+     * Set <p>队列数量</p>
+     * @param QueueNum <p>队列数量</p>
+     */
+    public void setQueueNum(Long QueueNum) {
+        this.QueueNum = QueueNum;
     }
 
     /**
@@ -316,6 +339,9 @@ public class DescribeTopicResponse extends AbstractModel {
         if (source.TopicType != null) {
             this.TopicType = new String(source.TopicType);
         }
+        if (source.QueueNum != null) {
+            this.QueueNum = new Long(source.QueueNum);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
@@ -356,6 +382,7 @@ public class DescribeTopicResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
+        this.setParamSimple(map, prefix + "QueueNum", this.QueueNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);

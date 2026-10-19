@@ -38,32 +38,39 @@ public class SendMessageRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 消息内容
+    * <p>消息内容</p>
     */
     @SerializedName("MsgBody")
     @Expose
     private String MsgBody;
 
     /**
-    * 消息Key
+    * <p>消息Key</p>
     */
     @SerializedName("MsgKey")
     @Expose
     private String MsgKey;
 
     /**
-    * 消息Tag
+    * <p>消息Tag</p>
     */
     @SerializedName("MsgTag")
     @Expose
     private String MsgTag;
 
     /**
-    * 轻量主题
+    * <p>轻量主题</p>
     */
     @SerializedName("LiteTopic")
     @Expose
     private String LiteTopic;
+
+    /**
+    * <p>指定队列优先级</p>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
 
     /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
@@ -98,67 +105,83 @@ public class SendMessageRequest extends AbstractModel {
     }
 
     /**
-     * Get 消息内容 
-     * @return MsgBody 消息内容
+     * Get <p>消息内容</p> 
+     * @return MsgBody <p>消息内容</p>
      */
     public String getMsgBody() {
         return this.MsgBody;
     }
 
     /**
-     * Set 消息内容
-     * @param MsgBody 消息内容
+     * Set <p>消息内容</p>
+     * @param MsgBody <p>消息内容</p>
      */
     public void setMsgBody(String MsgBody) {
         this.MsgBody = MsgBody;
     }
 
     /**
-     * Get 消息Key 
-     * @return MsgKey 消息Key
+     * Get <p>消息Key</p> 
+     * @return MsgKey <p>消息Key</p>
      */
     public String getMsgKey() {
         return this.MsgKey;
     }
 
     /**
-     * Set 消息Key
-     * @param MsgKey 消息Key
+     * Set <p>消息Key</p>
+     * @param MsgKey <p>消息Key</p>
      */
     public void setMsgKey(String MsgKey) {
         this.MsgKey = MsgKey;
     }
 
     /**
-     * Get 消息Tag 
-     * @return MsgTag 消息Tag
+     * Get <p>消息Tag</p> 
+     * @return MsgTag <p>消息Tag</p>
      */
     public String getMsgTag() {
         return this.MsgTag;
     }
 
     /**
-     * Set 消息Tag
-     * @param MsgTag 消息Tag
+     * Set <p>消息Tag</p>
+     * @param MsgTag <p>消息Tag</p>
      */
     public void setMsgTag(String MsgTag) {
         this.MsgTag = MsgTag;
     }
 
     /**
-     * Get 轻量主题 
-     * @return LiteTopic 轻量主题
+     * Get <p>轻量主题</p> 
+     * @return LiteTopic <p>轻量主题</p>
      */
     public String getLiteTopic() {
         return this.LiteTopic;
     }
 
     /**
-     * Set 轻量主题
-     * @param LiteTopic 轻量主题
+     * Set <p>轻量主题</p>
+     * @param LiteTopic <p>轻量主题</p>
      */
     public void setLiteTopic(String LiteTopic) {
         this.LiteTopic = LiteTopic;
+    }
+
+    /**
+     * Get <p>指定队列优先级</p> 
+     * @return Priority <p>指定队列优先级</p>
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>指定队列优先级</p>
+     * @param Priority <p>指定队列优先级</p>
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
     }
 
     public SendMessageRequest() {
@@ -187,6 +210,9 @@ public class SendMessageRequest extends AbstractModel {
         if (source.LiteTopic != null) {
             this.LiteTopic = new String(source.LiteTopic);
         }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class SendMessageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgKey", this.MsgKey);
         this.setParamSimple(map, prefix + "MsgTag", this.MsgTag);
         this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }

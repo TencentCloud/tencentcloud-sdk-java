@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class OrderQuotaInfo extends AbstractModel {
 
     /**
-    * 配额键
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>配额键</p>
     */
     @SerializedName("QuotaKey")
     @Expose
     private String QuotaKey;
 
     /**
-    * 配额总量
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>配额总量</p>
     */
     @SerializedName("QuotaNum")
     @Expose
     private Long QuotaNum;
 
     /**
-    * 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
     */
     @SerializedName("QuotaUsed")
     @Expose
     private Long QuotaUsed;
 
     /**
-     * Get 配额键
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuotaKey 配额键
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+    */
+    @SerializedName("QuotaGranted")
+    @Expose
+    private Long QuotaGranted;
+
+    /**
+     * Get <p>配额键</p> 
+     * @return QuotaKey <p>配额键</p>
      */
     public String getQuotaKey() {
         return this.QuotaKey;
     }
 
     /**
-     * Set 配额键
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuotaKey 配额键
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>配额键</p>
+     * @param QuotaKey <p>配额键</p>
      */
     public void setQuotaKey(String QuotaKey) {
         this.QuotaKey = QuotaKey;
     }
 
     /**
-     * Get 配额总量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuotaNum 配额总量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>配额总量</p> 
+     * @return QuotaNum <p>配额总量</p>
      */
     public Long getQuotaNum() {
         return this.QuotaNum;
     }
 
     /**
-     * Set 配额总量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuotaNum 配额总量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>配额总量</p>
+     * @param QuotaNum <p>配额总量</p>
      */
     public void setQuotaNum(Long QuotaNum) {
         this.QuotaNum = QuotaNum;
     }
 
     /**
-     * Get 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuotaUsed 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p> 
+     * @return QuotaUsed <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
      */
     public Long getQuotaUsed() {
         return this.QuotaUsed;
     }
 
     /**
-     * Set 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuotaUsed 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
+     * @param QuotaUsed <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
      */
     public void setQuotaUsed(Long QuotaUsed) {
         this.QuotaUsed = QuotaUsed;
+    }
+
+    /**
+     * Get <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p> 
+     * @return QuotaGranted <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+     */
+    public Long getQuotaGranted() {
+        return this.QuotaGranted;
+    }
+
+    /**
+     * Set <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+     * @param QuotaGranted <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+     */
+    public void setQuotaGranted(Long QuotaGranted) {
+        this.QuotaGranted = QuotaGranted;
     }
 
     public OrderQuotaInfo() {
@@ -124,6 +132,9 @@ public class OrderQuotaInfo extends AbstractModel {
         if (source.QuotaUsed != null) {
             this.QuotaUsed = new Long(source.QuotaUsed);
         }
+        if (source.QuotaGranted != null) {
+            this.QuotaGranted = new Long(source.QuotaGranted);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class OrderQuotaInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaKey", this.QuotaKey);
         this.setParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
         this.setParamSimple(map, prefix + "QuotaUsed", this.QuotaUsed);
+        this.setParamSimple(map, prefix + "QuotaGranted", this.QuotaGranted);
 
     }
 }

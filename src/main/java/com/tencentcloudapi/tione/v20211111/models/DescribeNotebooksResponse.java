@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeNotebooksResponse extends AbstractModel {
 
     /**
-    * notebook详情
+    * <p>notebook详情</p>
     */
     @SerializedName("NotebookSet")
     @Expose
     private NotebookSetItem [] NotebookSet;
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeNotebooksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get notebook详情 
-     * @return NotebookSet notebook详情
+     * Get <p>notebook详情</p> 
+     * @return NotebookSet <p>notebook详情</p>
      */
     public NotebookSetItem [] getNotebookSet() {
         return this.NotebookSet;
     }
 
     /**
-     * Set notebook详情
-     * @param NotebookSet notebook详情
+     * Set <p>notebook详情</p>
+     * @param NotebookSet <p>notebook详情</p>
      */
     public void setNotebookSet(NotebookSetItem [] NotebookSet) {
         this.NotebookSet = NotebookSet;
     }
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

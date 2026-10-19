@@ -74,6 +74,13 @@ public class QuestionInfo extends AbstractModel {
     private String ImageBase64;
 
     /**
+    * <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+    */
+    @SerializedName("ReturnImageUrl")
+    @Expose
+    private String ReturnImageUrl;
+
+    /**
      * Get <p>旋转角度</p> 
      * @return Angle <p>旋转角度</p>
      */
@@ -189,6 +196,22 @@ public class QuestionInfo extends AbstractModel {
         this.ImageBase64 = ImageBase64;
     }
 
+    /**
+     * Get <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p> 
+     * @return ReturnImageUrl <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+     */
+    public String getReturnImageUrl() {
+        return this.ReturnImageUrl;
+    }
+
+    /**
+     * Set <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+     * @param ReturnImageUrl <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+     */
+    public void setReturnImageUrl(String ReturnImageUrl) {
+        this.ReturnImageUrl = ReturnImageUrl;
+    }
+
     public QuestionInfo() {
     }
 
@@ -221,6 +244,9 @@ public class QuestionInfo extends AbstractModel {
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
         }
+        if (source.ReturnImageUrl != null) {
+            this.ReturnImageUrl = new String(source.ReturnImageUrl);
+        }
     }
 
 
@@ -235,6 +261,7 @@ public class QuestionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OrgHeight", this.OrgHeight);
         this.setParamSimple(map, prefix + "OrgWidth", this.OrgWidth);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+        this.setParamSimple(map, prefix + "ReturnImageUrl", this.ReturnImageUrl);
 
     }
 }

@@ -31,6 +31,13 @@ public class DescribeBillingSpecsPriceRequest extends AbstractModel {
     private SpecUnit [] SpecsParam;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
      * Get 询价参数，支持批量询价 
      * @return SpecsParam 询价参数，支持批量询价
      */
@@ -44,6 +51,22 @@ public class DescribeBillingSpecsPriceRequest extends AbstractModel {
      */
     public void setSpecsParam(SpecUnit [] SpecsParam) {
         this.SpecsParam = SpecsParam;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     public DescribeBillingSpecsPriceRequest() {
@@ -60,6 +83,9 @@ public class DescribeBillingSpecsPriceRequest extends AbstractModel {
                 this.SpecsParam[i] = new SpecUnit(source.SpecsParam[i]);
             }
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DescribeBillingSpecsPriceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SpecsParam.", this.SpecsParam);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

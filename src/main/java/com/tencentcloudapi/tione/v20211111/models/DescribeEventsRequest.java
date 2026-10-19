@@ -24,307 +24,230 @@ import java.util.HashMap;
 public class DescribeEventsRequest extends AbstractModel {
 
     /**
-    * 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
+    * <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+    * <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天
+    * <p>查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间
+    * <p>查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 分页Limit，默认值为100，最大值为100
+    * <p>分页Limit，默认值为100，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页Offset，默认值为0
+    * <p>分页Offset，默认值为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排列顺序（可选值为ASC, DESC ），默认为DESC
+    * <p>排列顺序（可选值为ASC, DESC ），默认为DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp
+    * <p>排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 过滤条件
-注意: 
-1. Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）
-2. Filter.Values：
-对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；
-对于Name为Type，Values的可选取值仅为Normal或者Warning；
-Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
+    * <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）</li><li>Filter.Values：<br>对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；<br>对于Name为Type，Values的可选取值仅为Normal或者Warning；<br>Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH 
-     * @return Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
+     * Get <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul> 
+     * @return Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
-     * @param Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
+     * Set <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
+     * @param Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId 
-     * @return ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
+
+    /**
+     * Get <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul> 
+     * @return ServiceId <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
-     * @param ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     * Set <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
+     * @param ServiceId <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天 
-     * @return StartTime 查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天
+     * Get <p>查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天</p> 
+     * @return StartTime <p>查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天
-     * @param StartTime 查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天
+     * Set <p>查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天</p>
+     * @param StartTime <p>查询事件最早发生的时间（RFC3339格式的时间字符串），默认值为当前时间的前一天</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间 
-     * @return EndTime 查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间
+     * Get <p>查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间</p> 
+     * @return EndTime <p>查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间
-     * @param EndTime 查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间
+     * Set <p>查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间</p>
+     * @param EndTime <p>查询事件最晚发生的时间（RFC3339格式的时间字符串），默认值为当前时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 分页Limit，默认值为100，最大值为100 
-     * @return Limit 分页Limit，默认值为100，最大值为100
+     * Get <p>分页Limit，默认值为100，最大值为100</p> 
+     * @return Limit <p>分页Limit，默认值为100，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit，默认值为100，最大值为100
-     * @param Limit 分页Limit，默认值为100，最大值为100
+     * Set <p>分页Limit，默认值为100，最大值为100</p>
+     * @param Limit <p>分页Limit，默认值为100，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页Offset，默认值为0 
-     * @return Offset 分页Offset，默认值为0
+     * Get <p>分页Offset，默认值为0</p> 
+     * @return Offset <p>分页Offset，默认值为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Offset，默认值为0
-     * @param Offset 分页Offset，默认值为0
+     * Set <p>分页Offset，默认值为0</p>
+     * @param Offset <p>分页Offset，默认值为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排列顺序（可选值为ASC, DESC ），默认为DESC 
-     * @return Order 排列顺序（可选值为ASC, DESC ），默认为DESC
+     * Get <p>排列顺序（可选值为ASC, DESC ），默认为DESC</p> 
+     * @return Order <p>排列顺序（可选值为ASC, DESC ），默认为DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排列顺序（可选值为ASC, DESC ），默认为DESC
-     * @param Order 排列顺序（可选值为ASC, DESC ），默认为DESC
+     * Set <p>排列顺序（可选值为ASC, DESC ），默认为DESC</p>
+     * @param Order <p>排列顺序（可选值为ASC, DESC ），默认为DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp 
-     * @return OrderField 排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp
+     * Get <p>排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp</p> 
+     * @return OrderField <p>排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp
-     * @param OrderField 排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp
+     * Set <p>排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp</p>
+     * @param OrderField <p>排序的依据字段（可选值为FirstTimestamp, LastTimestamp），默认值为LastTimestamp</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 过滤条件
-注意: 
-1. Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）
-2. Filter.Values：
-对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；
-对于Name为Type，Values的可选取值仅为Normal或者Warning；
-Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用 
-     * @return Filters 过滤条件
-注意: 
-1. Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）
-2. Filter.Values：
-对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；
-对于Name为Type，Values的可选取值仅为Normal或者Warning；
-Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
+     * Get <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）</li><li>Filter.Values：<br>对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；<br>对于Name为Type，Values的可选取值仅为Normal或者Warning；<br>Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol> 
+     * @return Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）</li><li>Filter.Values：<br>对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；<br>对于Name为Type，Values的可选取值仅为Normal或者Warning；<br>Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-注意: 
-1. Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）
-2. Filter.Values：
-对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；
-对于Name为Type，Values的可选取值仅为Normal或者Warning；
-Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
-     * @param Filters 过滤条件
-注意: 
-1. Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）
-2. Filter.Values：
-对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；
-对于Name为Type，Values的可选取值仅为Normal或者Warning；
-Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
+     * Set <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）</li><li>Filter.Values：<br>对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；<br>对于Name为Type，Values的可选取值仅为Normal或者Warning；<br>Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
+     * @param Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前支持ResourceKind（按事件关联的资源类型过滤）；Type（按事件类型过滤）</li><li>Filter.Values：<br>对于Name为ResourceKind，Values的可选取值为Deployment, Replicaset, Pod等K8S资源类型；<br>对于Name为Type，Values的可选取值仅为Normal或者Warning；<br>Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -340,6 +263,9 @@ Values为多个的时候表示同时满足
     public DescribeEventsRequest(DescribeEventsRequest source) {
         if (source.Service != null) {
             this.Service = new String(source.Service);
+        }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
         }
         if (source.ServiceId != null) {
             this.ServiceId = new String(source.ServiceId);
@@ -376,6 +302,7 @@ Values为多个的时候表示同时满足
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);

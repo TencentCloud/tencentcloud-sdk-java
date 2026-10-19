@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAccountsResponse extends AbstractModel {
 
     /**
-    * 符合查询条件的账号数量。
+    * <p>符合查询条件的账号数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 符合查询条件的账号详细信息。
+    * <p>符合查询条件的账号详细信息。</p>
     */
     @SerializedName("Items")
     @Expose
     private AccountInfo [] Items;
 
     /**
-    * 用户可设置实例最大连接数。
+    * <p>用户可设置实例最大连接数。</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合查询条件的账号数量。 
-     * @return TotalCount 符合查询条件的账号数量。
+     * Get <p>符合查询条件的账号数量。</p> 
+     * @return TotalCount <p>符合查询条件的账号数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的账号数量。
-     * @param TotalCount 符合查询条件的账号数量。
+     * Set <p>符合查询条件的账号数量。</p>
+     * @param TotalCount <p>符合查询条件的账号数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合查询条件的账号详细信息。 
-     * @return Items 符合查询条件的账号详细信息。
+     * Get <p>符合查询条件的账号详细信息。</p> 
+     * @return Items <p>符合查询条件的账号详细信息。</p>
      */
     public AccountInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 符合查询条件的账号详细信息。
-     * @param Items 符合查询条件的账号详细信息。
+     * Set <p>符合查询条件的账号详细信息。</p>
+     * @param Items <p>符合查询条件的账号详细信息。</p>
      */
     public void setItems(AccountInfo [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 用户可设置实例最大连接数。 
-     * @return MaxUserConnections 用户可设置实例最大连接数。
+     * Get <p>用户可设置实例最大连接数。</p> 
+     * @return MaxUserConnections <p>用户可设置实例最大连接数。</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set 用户可设置实例最大连接数。
-     * @param MaxUserConnections 用户可设置实例最大连接数。
+     * Set <p>用户可设置实例最大连接数。</p>
+     * @param MaxUserConnections <p>用户可设置实例最大连接数。</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

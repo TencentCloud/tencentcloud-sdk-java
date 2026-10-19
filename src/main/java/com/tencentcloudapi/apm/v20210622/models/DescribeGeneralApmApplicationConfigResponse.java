@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGeneralApmApplicationConfigResponse extends AbstractModel {
 
     /**
-    * 应用配置项
+    * <p>应用配置项</p>
     */
     @SerializedName("ApmApplicationConfigView")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGeneralApmApplicationConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用配置项 
-     * @return ApmApplicationConfigView 应用配置项
+     * Get <p>应用配置项</p> 
+     * @return ApmApplicationConfigView <p>应用配置项</p>
      */
     public ApmApplicationConfigView getApmApplicationConfigView() {
         return this.ApmApplicationConfigView;
     }
 
     /**
-     * Set 应用配置项
-     * @param ApmApplicationConfigView 应用配置项
+     * Set <p>应用配置项</p>
+     * @param ApmApplicationConfigView <p>应用配置项</p>
      */
     public void setApmApplicationConfigView(ApmApplicationConfigView ApmApplicationConfigView) {
         this.ApmApplicationConfigView = ApmApplicationConfigView;

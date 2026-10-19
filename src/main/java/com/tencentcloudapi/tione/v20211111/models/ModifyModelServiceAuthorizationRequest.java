@@ -31,6 +31,13 @@ public class ModifyModelServiceAuthorizationRequest extends AbstractModel {
     private String ServiceGroupId;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 是否开启鉴权,true表示开启
     */
     @SerializedName("AuthorizationEnable")
@@ -51,6 +58,22 @@ public class ModifyModelServiceAuthorizationRequest extends AbstractModel {
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class ModifyModelServiceAuthorizationRequest extends AbstractModel {
         if (source.ServiceGroupId != null) {
             this.ServiceGroupId = new String(source.ServiceGroupId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.AuthorizationEnable != null) {
             this.AuthorizationEnable = new Boolean(source.AuthorizationEnable);
         }
@@ -91,6 +117,7 @@ public class ModifyModelServiceAuthorizationRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
 
     }

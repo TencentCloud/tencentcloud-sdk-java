@@ -87,6 +87,13 @@ public class CreateConsumerGroupRequest extends AbstractModel {
     private String LiteTopic;
 
     /**
+    * <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+    */
+    @SerializedName("DeadLetterTargetTopic")
+    @Expose
+    private String DeadLetterTargetTopic;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -230,6 +237,22 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         this.LiteTopic = LiteTopic;
     }
 
+    /**
+     * Get <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p> 
+     * @return DeadLetterTargetTopic <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+     */
+    public String getDeadLetterTargetTopic() {
+        return this.DeadLetterTargetTopic;
+    }
+
+    /**
+     * Set <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+     * @param DeadLetterTargetTopic <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+     */
+    public void setDeadLetterTargetTopic(String DeadLetterTargetTopic) {
+        this.DeadLetterTargetTopic = DeadLetterTargetTopic;
+    }
+
     public CreateConsumerGroupRequest() {
     }
 
@@ -268,6 +291,9 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         if (source.LiteTopic != null) {
             this.LiteTopic = new String(source.LiteTopic);
         }
+        if (source.DeadLetterTargetTopic != null) {
+            this.DeadLetterTargetTopic = new String(source.DeadLetterTargetTopic);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
         this.setParamSimple(map, prefix + "LiteTopic", this.LiteTopic);
+        this.setParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
 
     }
 }

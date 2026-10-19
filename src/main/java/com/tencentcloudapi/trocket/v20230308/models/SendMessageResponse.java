@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SendMessageResponse extends AbstractModel {
 
     /**
-    * 消息ID
+    * <p>消息ID</p>
     */
     @SerializedName("MsgId")
     @Expose
@@ -38,16 +38,16 @@ public class SendMessageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消息ID 
-     * @return MsgId 消息ID
+     * Get <p>消息ID</p> 
+     * @return MsgId <p>消息ID</p>
      */
     public String getMsgId() {
         return this.MsgId;
     }
 
     /**
-     * Set 消息ID
-     * @param MsgId 消息ID
+     * Set <p>消息ID</p>
+     * @param MsgId <p>消息ID</p>
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;

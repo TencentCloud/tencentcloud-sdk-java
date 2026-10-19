@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewWorkflowSchedulerInfoDsResponse extends AbstractModel {
 
     /**
-    * 数据
+    * <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class RenewWorkflowSchedulerInfoDsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据
+     * Get <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 数据
+     * @return Data <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchResultDs getData() {
@@ -49,9 +49,9 @@ public class RenewWorkflowSchedulerInfoDsResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据
+     * Set <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 数据
+     * @param Data <p>数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(BatchResultDs Data) {

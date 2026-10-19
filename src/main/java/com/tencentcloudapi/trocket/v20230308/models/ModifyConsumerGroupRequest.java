@@ -31,15 +31,14 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 是否开启消费
+    * <p>是否开启消费</p>
     */
     @SerializedName("ConsumeEnable")
     @Expose
     private Boolean ConsumeEnable;
 
     /**
-    * 顺序投递：true
-并发投递：false
+    * <p>顺序投递：true<br>并发投递：false</p>
     */
     @SerializedName("ConsumeMessageOrderly")
     @Expose
@@ -53,25 +52,32 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     private String ConsumerGroup;
 
     /**
-    * 最大重试次数，取值范围0～1000
+    * <p>最大重试次数，取值范围0～1000</p>
     */
     @SerializedName("MaxRetryTimes")
     @Expose
     private Long MaxRetryTimes;
 
     /**
-    * 备注信息，最多 128 个字符
+    * <p>备注信息，最多 128 个字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 重试策略
+    * <p>重试策略</p>
     */
     @SerializedName("RetryPolicy")
     @Expose
     private RetryPolicy RetryPolicy;
+
+    /**
+    * <p>自定义死信Topic</p>
+    */
+    @SerializedName("DeadLetterTargetTopic")
+    @Expose
+    private String DeadLetterTargetTopic;
 
     /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
@@ -90,36 +96,32 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启消费 
-     * @return ConsumeEnable 是否开启消费
+     * Get <p>是否开启消费</p> 
+     * @return ConsumeEnable <p>是否开启消费</p>
      */
     public Boolean getConsumeEnable() {
         return this.ConsumeEnable;
     }
 
     /**
-     * Set 是否开启消费
-     * @param ConsumeEnable 是否开启消费
+     * Set <p>是否开启消费</p>
+     * @param ConsumeEnable <p>是否开启消费</p>
      */
     public void setConsumeEnable(Boolean ConsumeEnable) {
         this.ConsumeEnable = ConsumeEnable;
     }
 
     /**
-     * Get 顺序投递：true
-并发投递：false 
-     * @return ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * Get <p>顺序投递：true<br>并发投递：false</p> 
+     * @return ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      */
     public Boolean getConsumeMessageOrderly() {
         return this.ConsumeMessageOrderly;
     }
 
     /**
-     * Set 顺序投递：true
-并发投递：false
-     * @param ConsumeMessageOrderly 顺序投递：true
-并发投递：false
+     * Set <p>顺序投递：true<br>并发投递：false</p>
+     * @param ConsumeMessageOrderly <p>顺序投递：true<br>并发投递：false</p>
      */
     public void setConsumeMessageOrderly(Boolean ConsumeMessageOrderly) {
         this.ConsumeMessageOrderly = ConsumeMessageOrderly;
@@ -142,51 +144,67 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大重试次数，取值范围0～1000 
-     * @return MaxRetryTimes 最大重试次数，取值范围0～1000
+     * Get <p>最大重试次数，取值范围0～1000</p> 
+     * @return MaxRetryTimes <p>最大重试次数，取值范围0～1000</p>
      */
     public Long getMaxRetryTimes() {
         return this.MaxRetryTimes;
     }
 
     /**
-     * Set 最大重试次数，取值范围0～1000
-     * @param MaxRetryTimes 最大重试次数，取值范围0～1000
+     * Set <p>最大重试次数，取值范围0～1000</p>
+     * @param MaxRetryTimes <p>最大重试次数，取值范围0～1000</p>
      */
     public void setMaxRetryTimes(Long MaxRetryTimes) {
         this.MaxRetryTimes = MaxRetryTimes;
     }
 
     /**
-     * Get 备注信息，最多 128 个字符 
-     * @return Remark 备注信息，最多 128 个字符
+     * Get <p>备注信息，最多 128 个字符</p> 
+     * @return Remark <p>备注信息，最多 128 个字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息，最多 128 个字符
-     * @param Remark 备注信息，最多 128 个字符
+     * Set <p>备注信息，最多 128 个字符</p>
+     * @param Remark <p>备注信息，最多 128 个字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 重试策略 
-     * @return RetryPolicy 重试策略
+     * Get <p>重试策略</p> 
+     * @return RetryPolicy <p>重试策略</p>
      */
     public RetryPolicy getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * Set 重试策略
-     * @param RetryPolicy 重试策略
+     * Set <p>重试策略</p>
+     * @param RetryPolicy <p>重试策略</p>
      */
     public void setRetryPolicy(RetryPolicy RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
+    }
+
+    /**
+     * Get <p>自定义死信Topic</p> 
+     * @return DeadLetterTargetTopic <p>自定义死信Topic</p>
+     */
+    public String getDeadLetterTargetTopic() {
+        return this.DeadLetterTargetTopic;
+    }
+
+    /**
+     * Set <p>自定义死信Topic</p>
+     * @param DeadLetterTargetTopic <p>自定义死信Topic</p>
+     */
+    public void setDeadLetterTargetTopic(String DeadLetterTargetTopic) {
+        this.DeadLetterTargetTopic = DeadLetterTargetTopic;
     }
 
     public ModifyConsumerGroupRequest() {
@@ -218,6 +236,9 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
         if (source.RetryPolicy != null) {
             this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
         }
+        if (source.DeadLetterTargetTopic != null) {
+            this.DeadLetterTargetTopic = new String(source.DeadLetterTargetTopic);
+        }
     }
 
 
@@ -232,6 +253,7 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+        this.setParamSimple(map, prefix + "DeadLetterTargetTopic", this.DeadLetterTargetTopic);
 
     }
 }
