@@ -206,6 +206,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private String CustomImage;
 
     /**
+    * 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
+
+    /**
      * Get <p>节点池伸缩配置</p> 
      * @return Scaling <p>节点池伸缩配置</p>
      */
@@ -621,6 +628,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.CustomImage = CustomImage;
     }
 
+    /**
+     * Get 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。 
+     * @return RuntimeVersion 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     * @param RuntimeVersion 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
     public CreateNativeNodePoolParam() {
     }
 
@@ -728,6 +751,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         if (source.CustomImage != null) {
             this.CustomImage = new String(source.CustomImage);
         }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
     }
 
 
@@ -761,6 +787,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "CustomImage", this.CustomImage);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
 
     }
 }

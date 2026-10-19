@@ -45,7 +45,7 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
+    * <p>排序字段，支持如下字段类型，create-time（创建时间，默认）</p>
     */
     @SerializedName("SortBy")
     @Expose
@@ -142,16 +142,16 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p> 
-     * @return SortBy <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
+     * Get <p>排序字段，支持如下字段类型，create-time（创建时间，默认）</p> 
+     * @return SortBy <p>排序字段，支持如下字段类型，create-time（创建时间，默认）</p>
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
-     * @param SortBy <p>排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）</p>
+     * Set <p>排序字段，支持如下字段类型，create-time（创建时间，默认）</p>
+     * @param SortBy <p>排序字段，支持如下字段类型，create-time（创建时间，默认）</p>
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

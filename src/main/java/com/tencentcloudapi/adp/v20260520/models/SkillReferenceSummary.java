@@ -66,6 +66,13 @@ public class SkillReferenceSummary extends AbstractModel {
     private String Owner;
 
     /**
+    * <p>应用标识</p>
+    */
+    @SerializedName("AppIdentity")
+    @Expose
+    private AppIdentity AppIdentity;
+
+    /**
      * Get <p>关联ID</p> 
      * @return ReferenceId <p>关联ID</p>
      */
@@ -161,6 +168,22 @@ public class SkillReferenceSummary extends AbstractModel {
         this.Owner = Owner;
     }
 
+    /**
+     * Get <p>应用标识</p> 
+     * @return AppIdentity <p>应用标识</p>
+     */
+    public AppIdentity getAppIdentity() {
+        return this.AppIdentity;
+    }
+
+    /**
+     * Set <p>应用标识</p>
+     * @param AppIdentity <p>应用标识</p>
+     */
+    public void setAppIdentity(AppIdentity AppIdentity) {
+        this.AppIdentity = AppIdentity;
+    }
+
     public SkillReferenceSummary() {
     }
 
@@ -187,6 +210,9 @@ public class SkillReferenceSummary extends AbstractModel {
         if (source.Owner != null) {
             this.Owner = new String(source.Owner);
         }
+        if (source.AppIdentity != null) {
+            this.AppIdentity = new AppIdentity(source.AppIdentity);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class SkillReferenceSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamSimple(map, prefix + "SpaceName", this.SpaceName);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
+        this.setParamObj(map, prefix + "AppIdentity.", this.AppIdentity);
 
     }
 }

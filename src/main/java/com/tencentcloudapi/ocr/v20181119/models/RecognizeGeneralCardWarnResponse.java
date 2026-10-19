@@ -24,95 +24,84 @@ import java.util.HashMap;
 public class RecognizeGeneralCardWarnResponse extends AbstractModel {
 
     /**
-    * 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+    * <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
     */
     @SerializedName("CardType")
     @Expose
     private String CardType;
 
     /**
-    * 模糊信息
+    * <p>模糊信息</p>
     */
     @SerializedName("Blur")
     @Expose
     private GeneralCardWarnInfo Blur;
 
     /**
-    * 边框不完整信息
+    * <p>边框不完整信息</p>
     */
     @SerializedName("BorderIncomplete")
     @Expose
     private GeneralCardWarnInfo BorderIncomplete;
 
     /**
-    * 复印件信息
+    * <p>复印件信息</p>
     */
     @SerializedName("Copy")
     @Expose
     private GeneralCardWarnInfo Copy;
 
     /**
-    * ps篡改信息
+    * <p>ps篡改信息</p>
     */
     @SerializedName("Ps")
     @Expose
     private GeneralCardWarnInfo Ps;
 
     /**
-    * 反光信息
+    * <p>反光信息</p>
     */
     @SerializedName("Reflection")
     @Expose
     private GeneralCardWarnInfo Reflection;
 
     /**
-    * 翻拍件信息
+    * <p>翻拍件信息</p>
     */
     @SerializedName("Reprint")
     @Expose
     private GeneralCardWarnInfo Reprint;
 
     /**
-    * 是否截图
+    * <p>是否截图</p>
     */
     @SerializedName("Screenshot")
     @Expose
     private GeneralCardWarnInfo Screenshot;
 
     /**
-    * 是否遮挡
+    * <p>是否遮挡</p>
     */
     @SerializedName("Cover")
     @Expose
     private GeneralCardWarnInfo Cover;
 
     /**
-    * 是否重叠
+    * <p>是否重叠</p>
     */
     @SerializedName("Overlap")
     @Expose
     private GeneralCardWarnInfo Overlap;
 
     /**
-    * 是否水印
+    * <p>是否水印</p>
     */
     @SerializedName("Watermark")
     @Expose
     private GeneralCardWarnInfo Watermark;
 
     /**
-    * 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+    * <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
     */
     @SerializedName("Electron")
     @Expose
@@ -126,236 +115,192 @@ SocialSecurityCard：社保卡
     private String RequestId;
 
     /**
-     * Get 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡 
-     * @return CardType 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+     * Get <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p> 
+     * @return CardType <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
      */
     public String getCardType() {
         return this.CardType;
     }
 
     /**
-     * Set 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
-     * @param CardType 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+     * Set <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
+     * @param CardType <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
      */
     public void setCardType(String CardType) {
         this.CardType = CardType;
     }
 
     /**
-     * Get 模糊信息 
-     * @return Blur 模糊信息
+     * Get <p>模糊信息</p> 
+     * @return Blur <p>模糊信息</p>
      */
     public GeneralCardWarnInfo getBlur() {
         return this.Blur;
     }
 
     /**
-     * Set 模糊信息
-     * @param Blur 模糊信息
+     * Set <p>模糊信息</p>
+     * @param Blur <p>模糊信息</p>
      */
     public void setBlur(GeneralCardWarnInfo Blur) {
         this.Blur = Blur;
     }
 
     /**
-     * Get 边框不完整信息 
-     * @return BorderIncomplete 边框不完整信息
+     * Get <p>边框不完整信息</p> 
+     * @return BorderIncomplete <p>边框不完整信息</p>
      */
     public GeneralCardWarnInfo getBorderIncomplete() {
         return this.BorderIncomplete;
     }
 
     /**
-     * Set 边框不完整信息
-     * @param BorderIncomplete 边框不完整信息
+     * Set <p>边框不完整信息</p>
+     * @param BorderIncomplete <p>边框不完整信息</p>
      */
     public void setBorderIncomplete(GeneralCardWarnInfo BorderIncomplete) {
         this.BorderIncomplete = BorderIncomplete;
     }
 
     /**
-     * Get 复印件信息 
-     * @return Copy 复印件信息
+     * Get <p>复印件信息</p> 
+     * @return Copy <p>复印件信息</p>
      */
     public GeneralCardWarnInfo getCopy() {
         return this.Copy;
     }
 
     /**
-     * Set 复印件信息
-     * @param Copy 复印件信息
+     * Set <p>复印件信息</p>
+     * @param Copy <p>复印件信息</p>
      */
     public void setCopy(GeneralCardWarnInfo Copy) {
         this.Copy = Copy;
     }
 
     /**
-     * Get ps篡改信息 
-     * @return Ps ps篡改信息
+     * Get <p>ps篡改信息</p> 
+     * @return Ps <p>ps篡改信息</p>
      */
     public GeneralCardWarnInfo getPs() {
         return this.Ps;
     }
 
     /**
-     * Set ps篡改信息
-     * @param Ps ps篡改信息
+     * Set <p>ps篡改信息</p>
+     * @param Ps <p>ps篡改信息</p>
      */
     public void setPs(GeneralCardWarnInfo Ps) {
         this.Ps = Ps;
     }
 
     /**
-     * Get 反光信息 
-     * @return Reflection 反光信息
+     * Get <p>反光信息</p> 
+     * @return Reflection <p>反光信息</p>
      */
     public GeneralCardWarnInfo getReflection() {
         return this.Reflection;
     }
 
     /**
-     * Set 反光信息
-     * @param Reflection 反光信息
+     * Set <p>反光信息</p>
+     * @param Reflection <p>反光信息</p>
      */
     public void setReflection(GeneralCardWarnInfo Reflection) {
         this.Reflection = Reflection;
     }
 
     /**
-     * Get 翻拍件信息 
-     * @return Reprint 翻拍件信息
+     * Get <p>翻拍件信息</p> 
+     * @return Reprint <p>翻拍件信息</p>
      */
     public GeneralCardWarnInfo getReprint() {
         return this.Reprint;
     }
 
     /**
-     * Set 翻拍件信息
-     * @param Reprint 翻拍件信息
+     * Set <p>翻拍件信息</p>
+     * @param Reprint <p>翻拍件信息</p>
      */
     public void setReprint(GeneralCardWarnInfo Reprint) {
         this.Reprint = Reprint;
     }
 
     /**
-     * Get 是否截图 
-     * @return Screenshot 是否截图
+     * Get <p>是否截图</p> 
+     * @return Screenshot <p>是否截图</p>
      */
     public GeneralCardWarnInfo getScreenshot() {
         return this.Screenshot;
     }
 
     /**
-     * Set 是否截图
-     * @param Screenshot 是否截图
+     * Set <p>是否截图</p>
+     * @param Screenshot <p>是否截图</p>
      */
     public void setScreenshot(GeneralCardWarnInfo Screenshot) {
         this.Screenshot = Screenshot;
     }
 
     /**
-     * Get 是否遮挡 
-     * @return Cover 是否遮挡
+     * Get <p>是否遮挡</p> 
+     * @return Cover <p>是否遮挡</p>
      */
     public GeneralCardWarnInfo getCover() {
         return this.Cover;
     }
 
     /**
-     * Set 是否遮挡
-     * @param Cover 是否遮挡
+     * Set <p>是否遮挡</p>
+     * @param Cover <p>是否遮挡</p>
      */
     public void setCover(GeneralCardWarnInfo Cover) {
         this.Cover = Cover;
     }
 
     /**
-     * Get 是否重叠 
-     * @return Overlap 是否重叠
+     * Get <p>是否重叠</p> 
+     * @return Overlap <p>是否重叠</p>
      */
     public GeneralCardWarnInfo getOverlap() {
         return this.Overlap;
     }
 
     /**
-     * Set 是否重叠
-     * @param Overlap 是否重叠
+     * Set <p>是否重叠</p>
+     * @param Overlap <p>是否重叠</p>
      */
     public void setOverlap(GeneralCardWarnInfo Overlap) {
         this.Overlap = Overlap;
     }
 
     /**
-     * Get 是否水印 
-     * @return Watermark 是否水印
+     * Get <p>是否水印</p> 
+     * @return Watermark <p>是否水印</p>
      */
     public GeneralCardWarnInfo getWatermark() {
         return this.Watermark;
     }
 
     /**
-     * Set 是否水印
-     * @param Watermark 是否水印
+     * Set <p>是否水印</p>
+     * @param Watermark <p>是否水印</p>
      */
     public void setWatermark(GeneralCardWarnInfo Watermark) {
         this.Watermark = Watermark;
     }
 
     /**
-     * Get 是否电子证照（目前仅支持电子身份证、电子营业执照识别 
-     * @return Electron 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     * Get <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p> 
+     * @return Electron <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
      */
     public GeneralCardWarnInfo getElectron() {
         return this.Electron;
     }
 
     /**
-     * Set 是否电子证照（目前仅支持电子身份证、电子营业执照识别
-     * @param Electron 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     * Set <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
+     * @param Electron <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
      */
     public void setElectron(GeneralCardWarnInfo Electron) {
         this.Electron = Electron;

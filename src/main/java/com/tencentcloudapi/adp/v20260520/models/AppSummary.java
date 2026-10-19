@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class AppSummary extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+    * <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
     */
     @SerializedName("AppMode")
     @Expose
     private Long AppMode;
 
     /**
-    * 应用头像
+    * <p>应用头像</p>
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-    * 应用名称
+    * <p>应用名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 操作信息
+    * <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationInfo")
@@ -60,7 +60,7 @@ public class AppSummary extends AbstractModel {
     private AppOperation OperationInfo;
 
     /**
-    * 状态信息
+    * <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -68,7 +68,7 @@ public class AppSummary extends AbstractModel {
     private AppStatusInfo Status;
 
     /**
-    * 子状态信息
+    * <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubStatus")
@@ -76,80 +76,87 @@ public class AppSummary extends AbstractModel {
     private AppSubStatusInfo SubStatus;
 
     /**
-    * 资源操作权限
+    * <p>资源操作权限</p>
     */
     @SerializedName("PermissionIdList")
     @Expose
     private String [] PermissionIdList;
 
     /**
-     * Get 应用ID 
-     * @return AppId 应用ID
+    * <p>应用描述信息</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get <p>应用ID</p> 
+     * @return AppId <p>应用ID</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppId 应用ID
+     * Set <p>应用ID</p>
+     * @param AppId <p>应用ID</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式 
-     * @return AppMode 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+     * Get <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p> 
+     * @return AppMode <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
      */
     public Long getAppMode() {
         return this.AppMode;
     }
 
     /**
-     * Set 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
-     * @param AppMode 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+     * Set <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+     * @param AppMode <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
      */
     public void setAppMode(Long AppMode) {
         this.AppMode = AppMode;
     }
 
     /**
-     * Get 应用头像 
-     * @return Avatar 应用头像
+     * Get <p>应用头像</p> 
+     * @return Avatar <p>应用头像</p>
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set 应用头像
-     * @param Avatar 应用头像
+     * Set <p>应用头像</p>
+     * @param Avatar <p>应用头像</p>
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;
     }
 
     /**
-     * Get 应用名称 
-     * @return Name 应用名称
+     * Get <p>应用名称</p> 
+     * @return Name <p>应用名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 应用名称
-     * @param Name 应用名称
+     * Set <p>应用名称</p>
+     * @param Name <p>应用名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 操作信息
+     * Get <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperationInfo 操作信息
+     * @return OperationInfo <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppOperation getOperationInfo() {
@@ -157,9 +164,9 @@ public class AppSummary extends AbstractModel {
     }
 
     /**
-     * Set 操作信息
+     * Set <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperationInfo 操作信息
+     * @param OperationInfo <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationInfo(AppOperation OperationInfo) {
@@ -167,9 +174,9 @@ public class AppSummary extends AbstractModel {
     }
 
     /**
-     * Get 状态信息
+     * Get <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态信息
+     * @return Status <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppStatusInfo getStatus() {
@@ -177,9 +184,9 @@ public class AppSummary extends AbstractModel {
     }
 
     /**
-     * Set 状态信息
+     * Set <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态信息
+     * @param Status <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(AppStatusInfo Status) {
@@ -187,9 +194,9 @@ public class AppSummary extends AbstractModel {
     }
 
     /**
-     * Get 子状态信息
+     * Get <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubStatus 子状态信息
+     * @return SubStatus <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppSubStatusInfo getSubStatus() {
@@ -197,9 +204,9 @@ public class AppSummary extends AbstractModel {
     }
 
     /**
-     * Set 子状态信息
+     * Set <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubStatus 子状态信息
+     * @param SubStatus <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubStatus(AppSubStatusInfo SubStatus) {
@@ -207,19 +214,35 @@ public class AppSummary extends AbstractModel {
     }
 
     /**
-     * Get 资源操作权限 
-     * @return PermissionIdList 资源操作权限
+     * Get <p>资源操作权限</p> 
+     * @return PermissionIdList <p>资源操作权限</p>
      */
     public String [] getPermissionIdList() {
         return this.PermissionIdList;
     }
 
     /**
-     * Set 资源操作权限
-     * @param PermissionIdList 资源操作权限
+     * Set <p>资源操作权限</p>
+     * @param PermissionIdList <p>资源操作权限</p>
      */
     public void setPermissionIdList(String [] PermissionIdList) {
         this.PermissionIdList = PermissionIdList;
+    }
+
+    /**
+     * Get <p>应用描述信息</p> 
+     * @return Description <p>应用描述信息</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>应用描述信息</p>
+     * @param Description <p>应用描述信息</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public AppSummary() {
@@ -257,6 +280,9 @@ public class AppSummary extends AbstractModel {
                 this.PermissionIdList[i] = new String(source.PermissionIdList[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -272,6 +298,7 @@ public class AppSummary extends AbstractModel {
         this.setParamObj(map, prefix + "Status.", this.Status);
         this.setParamObj(map, prefix + "SubStatus.", this.SubStatus);
         this.setParamArraySimple(map, prefix + "PermissionIdList.", this.PermissionIdList);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

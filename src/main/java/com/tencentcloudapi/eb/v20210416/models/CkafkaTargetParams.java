@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class CkafkaTargetParams extends AbstractModel {
 
     /**
-    * 要投递到的ckafka topic
+    * <p>要投递到的ckafka topic</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 重试策略
+    * <p>重试策略</p>
     */
     @SerializedName("RetryPolicy")
     @Expose
     private RetryPolicy RetryPolicy;
 
     /**
-    * 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+    * <p>事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)</p>
     */
     @SerializedName("EventDeliveryFormat")
     @Expose
     private String EventDeliveryFormat;
 
     /**
-     * Get 要投递到的ckafka topic 
-     * @return TopicName 要投递到的ckafka topic
+    * <p>事件顶层Time参数投递格式</p><p>枚举值：</p><ul><li>RFC3339： 将时间戳转换成 YYYY-MM-DDTHH:mm:ssZ 格式</li></ul>
+    */
+    @SerializedName("TimeFormat")
+    @Expose
+    private String TimeFormat;
+
+    /**
+     * Get <p>要投递到的ckafka topic</p> 
+     * @return TopicName <p>要投递到的ckafka topic</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 要投递到的ckafka topic
-     * @param TopicName 要投递到的ckafka topic
+     * Set <p>要投递到的ckafka topic</p>
+     * @param TopicName <p>要投递到的ckafka topic</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 重试策略 
-     * @return RetryPolicy 重试策略
+     * Get <p>重试策略</p> 
+     * @return RetryPolicy <p>重试策略</p>
      */
     public RetryPolicy getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * Set 重试策略
-     * @param RetryPolicy 重试策略
+     * Set <p>重试策略</p>
+     * @param RetryPolicy <p>重试策略</p>
      */
     public void setRetryPolicy(RetryPolicy RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
     }
 
     /**
-     * Get 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容) 
-     * @return EventDeliveryFormat 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+     * Get <p>事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)</p> 
+     * @return EventDeliveryFormat <p>事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)</p>
      */
     public String getEventDeliveryFormat() {
         return this.EventDeliveryFormat;
     }
 
     /**
-     * Set 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
-     * @param EventDeliveryFormat 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+     * Set <p>事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)</p>
+     * @param EventDeliveryFormat <p>事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)</p>
      */
     public void setEventDeliveryFormat(String EventDeliveryFormat) {
         this.EventDeliveryFormat = EventDeliveryFormat;
+    }
+
+    /**
+     * Get <p>事件顶层Time参数投递格式</p><p>枚举值：</p><ul><li>RFC3339： 将时间戳转换成 YYYY-MM-DDTHH:mm:ssZ 格式</li></ul> 
+     * @return TimeFormat <p>事件顶层Time参数投递格式</p><p>枚举值：</p><ul><li>RFC3339： 将时间戳转换成 YYYY-MM-DDTHH:mm:ssZ 格式</li></ul>
+     */
+    public String getTimeFormat() {
+        return this.TimeFormat;
+    }
+
+    /**
+     * Set <p>事件顶层Time参数投递格式</p><p>枚举值：</p><ul><li>RFC3339： 将时间戳转换成 YYYY-MM-DDTHH:mm:ssZ 格式</li></ul>
+     * @param TimeFormat <p>事件顶层Time参数投递格式</p><p>枚举值：</p><ul><li>RFC3339： 将时间戳转换成 YYYY-MM-DDTHH:mm:ssZ 格式</li></ul>
+     */
+    public void setTimeFormat(String TimeFormat) {
+        this.TimeFormat = TimeFormat;
     }
 
     public CkafkaTargetParams() {
@@ -109,6 +132,9 @@ public class CkafkaTargetParams extends AbstractModel {
         if (source.EventDeliveryFormat != null) {
             this.EventDeliveryFormat = new String(source.EventDeliveryFormat);
         }
+        if (source.TimeFormat != null) {
+            this.TimeFormat = new String(source.TimeFormat);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CkafkaTargetParams extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
         this.setParamSimple(map, prefix + "EventDeliveryFormat", this.EventDeliveryFormat);
+        this.setParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
 
     }
 }

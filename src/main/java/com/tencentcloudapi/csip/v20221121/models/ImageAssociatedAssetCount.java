@@ -66,6 +66,13 @@ public class ImageAssociatedAssetCount extends AbstractModel {
     private String OwnerUin;
 
     /**
+    * <p>镜像关联超级节点数</p>
+    */
+    @SerializedName("SuperNodeHostCount")
+    @Expose
+    private Long SuperNodeHostCount;
+
+    /**
      * Get <p>镜像id</p> 
      * @return Id <p>镜像id</p>
      */
@@ -161,6 +168,22 @@ public class ImageAssociatedAssetCount extends AbstractModel {
         this.OwnerUin = OwnerUin;
     }
 
+    /**
+     * Get <p>镜像关联超级节点数</p> 
+     * @return SuperNodeHostCount <p>镜像关联超级节点数</p>
+     */
+    public Long getSuperNodeHostCount() {
+        return this.SuperNodeHostCount;
+    }
+
+    /**
+     * Set <p>镜像关联超级节点数</p>
+     * @param SuperNodeHostCount <p>镜像关联超级节点数</p>
+     */
+    public void setSuperNodeHostCount(Long SuperNodeHostCount) {
+        this.SuperNodeHostCount = SuperNodeHostCount;
+    }
+
     public ImageAssociatedAssetCount() {
     }
 
@@ -187,6 +210,9 @@ public class ImageAssociatedAssetCount extends AbstractModel {
         if (source.OwnerUin != null) {
             this.OwnerUin = new String(source.OwnerUin);
         }
+        if (source.SuperNodeHostCount != null) {
+            this.SuperNodeHostCount = new Long(source.SuperNodeHostCount);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ImageAssociatedAssetCount extends AbstractModel {
         this.setParamSimple(map, prefix + "OwnerAccountName", this.OwnerAccountName);
         this.setParamSimple(map, prefix + "OwnerAppId", this.OwnerAppId);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "SuperNodeHostCount", this.SuperNodeHostCount);
 
     }
 }

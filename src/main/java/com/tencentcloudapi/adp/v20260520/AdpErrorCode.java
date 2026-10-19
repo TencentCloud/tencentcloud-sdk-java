@@ -9,6 +9,9 @@ public enum AdpErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* 缺少参数错误。 */
+     MISSINGPARAMETER("MissingParameter"),
+     
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound");
      

@@ -38,28 +38,28 @@ public class AigcVideoTaskUsage extends AbstractModel {
     private Long ThoughtTokens;
 
     /**
-    * <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+    * <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
     */
     @SerializedName("InputImageCount")
     @Expose
     private Long InputImageCount;
 
     /**
-    * <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+    * <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
     */
     @SerializedName("InputSeconds")
     @Expose
     private Long InputSeconds;
 
     /**
-    * <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+    * <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
     */
     @SerializedName("OutputSeconds")
     @Expose
     private Long OutputSeconds;
 
     /**
-    * <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+    * <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
     */
     @SerializedName("TotalSeconds")
     @Expose
@@ -98,64 +98,64 @@ public class AigcVideoTaskUsage extends AbstractModel {
     }
 
     /**
-     * Get <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p> 
-     * @return InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Get <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p> 
+     * @return InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
      */
     public Long getInputImageCount() {
         return this.InputImageCount;
     }
 
     /**
-     * Set <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Set <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
+     * @param InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
      */
     public void setInputImageCount(Long InputImageCount) {
         this.InputImageCount = InputImageCount;
     }
 
     /**
-     * Get <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p> 
-     * @return InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Get <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p> 
+     * @return InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     public Long getInputSeconds() {
         return this.InputSeconds;
     }
 
     /**
-     * Set <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Set <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
+     * @param InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     public void setInputSeconds(Long InputSeconds) {
         this.InputSeconds = InputSeconds;
     }
 
     /**
-     * Get <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p> 
-     * @return OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Get <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p> 
+     * @return OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
      */
     public Long getOutputSeconds() {
         return this.OutputSeconds;
     }
 
     /**
-     * Set <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Set <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
+     * @param OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
      */
     public void setOutputSeconds(Long OutputSeconds) {
         this.OutputSeconds = OutputSeconds;
     }
 
     /**
-     * Get <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p> 
-     * @return TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Get <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p> 
+     * @return TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     public Long getTotalSeconds() {
         return this.TotalSeconds;
     }
 
     /**
-     * Set <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * Set <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
+     * @param TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     public void setTotalSeconds(Long TotalSeconds) {
         this.TotalSeconds = TotalSeconds;

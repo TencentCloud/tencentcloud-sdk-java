@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeStreamLinkEventsResponse extends AbstractModel {
 
     /**
-    * 媒体传输事件的配置信息列表。
+    * <p>媒体传输事件的配置信息列表。</p>
     */
     @SerializedName("Infos")
     @Expose
     private DescribeEvent [] Infos;
 
     /**
-    * 当前页数。
+    * <p>当前页数。</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 每页大小。
+    * <p>每页大小。</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 总数量。
+    * <p>总数量。</p>
     */
     @SerializedName("TotalNum")
     @Expose
     private Long TotalNum;
 
     /**
-    * 总页数。
+    * <p>总页数。</p>
     */
     @SerializedName("TotalPage")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeStreamLinkEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体传输事件的配置信息列表。 
-     * @return Infos 媒体传输事件的配置信息列表。
+     * Get <p>媒体传输事件的配置信息列表。</p> 
+     * @return Infos <p>媒体传输事件的配置信息列表。</p>
      */
     public DescribeEvent [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set 媒体传输事件的配置信息列表。
-     * @param Infos 媒体传输事件的配置信息列表。
+     * Set <p>媒体传输事件的配置信息列表。</p>
+     * @param Infos <p>媒体传输事件的配置信息列表。</p>
      */
     public void setInfos(DescribeEvent [] Infos) {
         this.Infos = Infos;
     }
 
     /**
-     * Get 当前页数。 
-     * @return PageNum 当前页数。
+     * Get <p>当前页数。</p> 
+     * @return PageNum <p>当前页数。</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 当前页数。
-     * @param PageNum 当前页数。
+     * Set <p>当前页数。</p>
+     * @param PageNum <p>当前页数。</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 每页大小。 
-     * @return PageSize 每页大小。
+     * Get <p>每页大小。</p> 
+     * @return PageSize <p>每页大小。</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页大小。
-     * @param PageSize 每页大小。
+     * Set <p>每页大小。</p>
+     * @param PageSize <p>每页大小。</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 总数量。 
-     * @return TotalNum 总数量。
+     * Get <p>总数量。</p> 
+     * @return TotalNum <p>总数量。</p>
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 总数量。
-     * @param TotalNum 总数量。
+     * Set <p>总数量。</p>
+     * @param TotalNum <p>总数量。</p>
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 总页数。 
-     * @return TotalPage 总页数。
+     * Get <p>总页数。</p> 
+     * @return TotalPage <p>总页数。</p>
      */
     public Long getTotalPage() {
         return this.TotalPage;
     }
 
     /**
-     * Set 总页数。
-     * @param TotalPage 总页数。
+     * Set <p>总页数。</p>
+     * @param TotalPage <p>总页数。</p>
      */
     public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;

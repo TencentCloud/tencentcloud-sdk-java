@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConversationExperience extends AbstractModel {
 
     /**
-    * AI通话配置
+    * <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiCall")
@@ -32,7 +32,7 @@ public class ConversationExperience extends AbstractModel {
     private AICallConfig AiCall;
 
     /**
-    * 背景图片配置
+    * <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackgroundImage")
@@ -40,35 +40,35 @@ public class ConversationExperience extends AbstractModel {
     private BackgroundImage BackgroundImage;
 
     /**
-    * 兜底回复开关
+    * <p>兜底回复开关</p>
     */
     @SerializedName("EnableFallbackReply")
     @Expose
     private Boolean EnableFallbackReply;
 
     /**
-    * 是否使用推荐问
+    * <p>是否使用推荐问</p>
     */
     @SerializedName("EnableRecommended")
     @Expose
     private Boolean EnableRecommended;
 
     /**
-    * 是否使用联网搜索
+    * <p>是否使用联网搜索</p>
     */
     @SerializedName("EnableWebSearch")
     @Expose
     private Boolean EnableWebSearch;
 
     /**
-    * 兜底回复语
+    * <p>兜底回复语</p>
     */
     @SerializedName("FallbackReply")
     @Expose
     private String FallbackReply;
 
     /**
-    * 输入框配置
+    * <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputBoxConfig")
@@ -76,23 +76,23 @@ public class ConversationExperience extends AbstractModel {
     private InputBoxConfig InputBoxConfig;
 
     /**
-    * 输出方式。枚举值: 1:流式, 2:非流式
+    * <p>输出方式。枚举值: 1:流式, 2:非流式</p>
     */
     @SerializedName("Method")
     @Expose
     private Long Method;
 
     /**
-    * 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+    * <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
     */
     @SerializedName("RecommendPromptMode")
     @Expose
     private Long RecommendPromptMode;
 
     /**
-     * Get AI通话配置
+     * Get <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiCall AI通话配置
+     * @return AiCall <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AICallConfig getAiCall() {
@@ -100,9 +100,9 @@ public class ConversationExperience extends AbstractModel {
     }
 
     /**
-     * Set AI通话配置
+     * Set <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiCall AI通话配置
+     * @param AiCall <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiCall(AICallConfig AiCall) {
@@ -110,9 +110,9 @@ public class ConversationExperience extends AbstractModel {
     }
 
     /**
-     * Get 背景图片配置
+     * Get <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackgroundImage 背景图片配置
+     * @return BackgroundImage <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackgroundImage getBackgroundImage() {
@@ -120,9 +120,9 @@ public class ConversationExperience extends AbstractModel {
     }
 
     /**
-     * Set 背景图片配置
+     * Set <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackgroundImage 背景图片配置
+     * @param BackgroundImage <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackgroundImage(BackgroundImage BackgroundImage) {
@@ -130,73 +130,73 @@ public class ConversationExperience extends AbstractModel {
     }
 
     /**
-     * Get 兜底回复开关 
-     * @return EnableFallbackReply 兜底回复开关
+     * Get <p>兜底回复开关</p> 
+     * @return EnableFallbackReply <p>兜底回复开关</p>
      */
     public Boolean getEnableFallbackReply() {
         return this.EnableFallbackReply;
     }
 
     /**
-     * Set 兜底回复开关
-     * @param EnableFallbackReply 兜底回复开关
+     * Set <p>兜底回复开关</p>
+     * @param EnableFallbackReply <p>兜底回复开关</p>
      */
     public void setEnableFallbackReply(Boolean EnableFallbackReply) {
         this.EnableFallbackReply = EnableFallbackReply;
     }
 
     /**
-     * Get 是否使用推荐问 
-     * @return EnableRecommended 是否使用推荐问
+     * Get <p>是否使用推荐问</p> 
+     * @return EnableRecommended <p>是否使用推荐问</p>
      */
     public Boolean getEnableRecommended() {
         return this.EnableRecommended;
     }
 
     /**
-     * Set 是否使用推荐问
-     * @param EnableRecommended 是否使用推荐问
+     * Set <p>是否使用推荐问</p>
+     * @param EnableRecommended <p>是否使用推荐问</p>
      */
     public void setEnableRecommended(Boolean EnableRecommended) {
         this.EnableRecommended = EnableRecommended;
     }
 
     /**
-     * Get 是否使用联网搜索 
-     * @return EnableWebSearch 是否使用联网搜索
+     * Get <p>是否使用联网搜索</p> 
+     * @return EnableWebSearch <p>是否使用联网搜索</p>
      */
     public Boolean getEnableWebSearch() {
         return this.EnableWebSearch;
     }
 
     /**
-     * Set 是否使用联网搜索
-     * @param EnableWebSearch 是否使用联网搜索
+     * Set <p>是否使用联网搜索</p>
+     * @param EnableWebSearch <p>是否使用联网搜索</p>
      */
     public void setEnableWebSearch(Boolean EnableWebSearch) {
         this.EnableWebSearch = EnableWebSearch;
     }
 
     /**
-     * Get 兜底回复语 
-     * @return FallbackReply 兜底回复语
+     * Get <p>兜底回复语</p> 
+     * @return FallbackReply <p>兜底回复语</p>
      */
     public String getFallbackReply() {
         return this.FallbackReply;
     }
 
     /**
-     * Set 兜底回复语
-     * @param FallbackReply 兜底回复语
+     * Set <p>兜底回复语</p>
+     * @param FallbackReply <p>兜底回复语</p>
      */
     public void setFallbackReply(String FallbackReply) {
         this.FallbackReply = FallbackReply;
     }
 
     /**
-     * Get 输入框配置
+     * Get <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputBoxConfig 输入框配置
+     * @return InputBoxConfig <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputBoxConfig getInputBoxConfig() {
@@ -204,9 +204,9 @@ public class ConversationExperience extends AbstractModel {
     }
 
     /**
-     * Set 输入框配置
+     * Set <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputBoxConfig 输入框配置
+     * @param InputBoxConfig <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputBoxConfig(InputBoxConfig InputBoxConfig) {
@@ -214,32 +214,32 @@ public class ConversationExperience extends AbstractModel {
     }
 
     /**
-     * Get 输出方式。枚举值: 1:流式, 2:非流式 
-     * @return Method 输出方式。枚举值: 1:流式, 2:非流式
+     * Get <p>输出方式。枚举值: 1:流式, 2:非流式</p> 
+     * @return Method <p>输出方式。枚举值: 1:流式, 2:非流式</p>
      */
     public Long getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 输出方式。枚举值: 1:流式, 2:非流式
-     * @param Method 输出方式。枚举值: 1:流式, 2:非流式
+     * Set <p>输出方式。枚举值: 1:流式, 2:非流式</p>
+     * @param Method <p>输出方式。枚举值: 1:流式, 2:非流式</p>
      */
     public void setMethod(Long Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt 
-     * @return RecommendPromptMode 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+     * Get <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p> 
+     * @return RecommendPromptMode <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
      */
     public Long getRecommendPromptMode() {
         return this.RecommendPromptMode;
     }
 
     /**
-     * Set 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
-     * @param RecommendPromptMode 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+     * Set <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
+     * @param RecommendPromptMode <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
      */
     public void setRecommendPromptMode(Long RecommendPromptMode) {
         this.RecommendPromptMode = RecommendPromptMode;

@@ -240,6 +240,13 @@ public class ModelRouterDetail extends AbstractModel {
     private DecisionsConfig DecisionsConfig;
 
     /**
+    * <p>Images 生图配置</p>
+    */
+    @SerializedName("ImageConfig")
+    @Expose
+    private ImageConfig ImageConfig;
+
+    /**
      * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -743,6 +750,22 @@ public class ModelRouterDetail extends AbstractModel {
         this.DecisionsConfig = DecisionsConfig;
     }
 
+    /**
+     * Get <p>Images 生图配置</p> 
+     * @return ImageConfig <p>Images 生图配置</p>
+     */
+    public ImageConfig getImageConfig() {
+        return this.ImageConfig;
+    }
+
+    /**
+     * Set <p>Images 生图配置</p>
+     * @param ImageConfig <p>Images 生图配置</p>
+     */
+    public void setImageConfig(ImageConfig ImageConfig) {
+        this.ImageConfig = ImageConfig;
+    }
+
     public ModelRouterDetail() {
     }
 
@@ -853,6 +876,9 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.DecisionsConfig != null) {
             this.DecisionsConfig = new DecisionsConfig(source.DecisionsConfig);
         }
+        if (source.ImageConfig != null) {
+            this.ImageConfig = new ImageConfig(source.ImageConfig);
+        }
     }
 
 
@@ -890,6 +916,7 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
         this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
         this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
+        this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
 
     }
 }

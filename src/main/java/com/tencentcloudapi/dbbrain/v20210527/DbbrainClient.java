@@ -380,6 +380,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询指定实例在时间窗口内的审计日志明细，支持按 SQL 类型、执行耗时、错误码、关键词等多条件过滤。当前仅支持 dcdb、mariadb 产品（cdb、cynosdb 已切至中台）。注意 Filter.MultiSql 与 Filter.ExcludeMultiSql 需以 JSON 字符串形式传递二维数组内容，例如 [["a","b"]] 表示 (a OR b)，服务端会自动解析。
+     * @param req DescribeDBAuditLogsRequest
+     * @return DescribeDBAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBAuditLogsResponse DescribeDBAuditLogs(DescribeDBAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBAuditLogs", DescribeDBAuditLogsResponse.class);
+    }
+
+    /**
      *自治中心-查询自治事件任务详情。
      * @param req DescribeDBAutonomyActionRequest
      * @return DescribeDBAutonomyActionResponse
@@ -509,6 +520,17 @@ public class DbbrainClient extends AbstractClient{
     public DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatus(DescribeDatabaseAutonomyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDatabaseAutonomyStatus", DescribeDatabaseAutonomyStatusResponse.class);
+    }
+
+    /**
+     *查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
+     * @param req DescribeDatabaseObjectV2Request
+     * @return DescribeDatabaseObjectV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseObjectV2Response DescribeDatabaseObjectV2(DescribeDatabaseObjectV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseObjectV2", DescribeDatabaseObjectV2Response.class);
     }
 
     /**

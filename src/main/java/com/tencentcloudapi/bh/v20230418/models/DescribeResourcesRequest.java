@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeResourcesRequest extends AbstractModel {
 
     /**
-    * 地域码, 如: ap-guangzhou
+    * <p>地域码, 如: ap-guangzhou</p>
     */
     @SerializedName("ApCode")
     @Expose
     private String ApCode;
 
     /**
-    * 按照堡垒机开通的 VPC 实例ID查询
+    * <p>按照堡垒机开通的 VPC 实例ID查询</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+    * <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 每页条目数量
+    * <p>每页条目数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移位置
+    * <p>分页偏移位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 地域码, 如: ap-guangzhou 
-     * @return ApCode 地域码, 如: ap-guangzhou
+     * Get <p>地域码, 如: ap-guangzhou</p> 
+     * @return ApCode <p>地域码, 如: ap-guangzhou</p>
      */
     public String getApCode() {
         return this.ApCode;
     }
 
     /**
-     * Set 地域码, 如: ap-guangzhou
-     * @param ApCode 地域码, 如: ap-guangzhou
+     * Set <p>地域码, 如: ap-guangzhou</p>
+     * @param ApCode <p>地域码, 如: ap-guangzhou</p>
      */
     public void setApCode(String ApCode) {
         this.ApCode = ApCode;
     }
 
     /**
-     * Get 按照堡垒机开通的 VPC 实例ID查询 
-     * @return VpcId 按照堡垒机开通的 VPC 实例ID查询
+     * Get <p>按照堡垒机开通的 VPC 实例ID查询</p> 
+     * @return VpcId <p>按照堡垒机开通的 VPC 实例ID查询</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 按照堡垒机开通的 VPC 实例ID查询
-     * @param VpcId 按照堡垒机开通的 VPC 实例ID查询
+     * Set <p>按照堡垒机开通的 VPC 实例ID查询</p>
+     * @param VpcId <p>按照堡垒机开通的 VPC 实例ID查询</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId 
-     * @return ResourceIds 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+     * Get <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p> 
+     * @return ResourceIds <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
-     * @param ResourceIds 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+     * Set <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
+     * @param ResourceIds <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 每页条目数量 
-     * @return Limit 每页条目数量
+     * Get <p>每页条目数量</p> 
+     * @return Limit <p>每页条目数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条目数量
-     * @param Limit 每页条目数量
+     * Set <p>每页条目数量</p>
+     * @param Limit <p>每页条目数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移位置 
-     * @return Offset 分页偏移位置
+     * Get <p>分页偏移位置</p> 
+     * @return Offset <p>分页偏移位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移位置
-     * @param Offset 分页偏移位置
+     * Set <p>分页偏移位置</p>
+     * @param Offset <p>分页偏移位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -130,6 +130,28 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *批量添加截图配置的通道
+     * @param req BatchAddVideoSnapshotConfigChannelRequest
+     * @return BatchAddVideoSnapshotConfigChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchAddVideoSnapshotConfigChannelResponse BatchAddVideoSnapshotConfigChannel(BatchAddVideoSnapshotConfigChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchAddVideoSnapshotConfigChannel", BatchAddVideoSnapshotConfigChannelResponse.class);
+    }
+
+    /**
+     *批量关联视觉理解计划通道
+     * @param req BatchAssignVLPlanChannelsRequest
+     * @return BatchAssignVLPlanChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchAssignVLPlanChannelsResponse BatchAssignVLPlanChannels(BatchAssignVLPlanChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchAssignVLPlanChannels", BatchAssignVLPlanChannelsResponse.class);
+    }
+
+    /**
      *用于批量删除本地录像下载失败的任务
      * @param req BatchDeleteVideoDownloadTaskRequest
      * @return BatchDeleteVideoDownloadTaskResponse
@@ -138,6 +160,28 @@ public class IssClient extends AbstractClient{
     public BatchDeleteVideoDownloadTaskResponse BatchDeleteVideoDownloadTask(BatchDeleteVideoDownloadTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BatchDeleteVideoDownloadTask", BatchDeleteVideoDownloadTaskResponse.class);
+    }
+
+    /**
+     *批量获取视觉理解计划源素材 URL
+     * @param req BatchGetVLPlanSourceFileURLRequest
+     * @return BatchGetVLPlanSourceFileURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchGetVLPlanSourceFileURLResponse BatchGetVLPlanSourceFileURL(BatchGetVLPlanSourceFileURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchGetVLPlanSourceFileURL", BatchGetVLPlanSourceFileURLResponse.class);
+    }
+
+    /**
+     *批量获取截图图片URL
+     * @param req BatchGetVideoSnapshotImageUrlRequest
+     * @return BatchGetVideoSnapshotImageUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchGetVideoSnapshotImageUrlResponse BatchGetVideoSnapshotImageUrl(BatchGetVideoSnapshotImageUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchGetVideoSnapshotImageUrl", BatchGetVideoSnapshotImageUrlResponse.class);
     }
 
     /**
@@ -229,6 +273,28 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *创建视觉理解计划
+     * @param req CreateVLPlanRequest
+     * @return CreateVLPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVLPlanResponse CreateVLPlan(CreateVLPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVLPlan", CreateVLPlanResponse.class);
+    }
+
+    /**
+     *创建视觉理解模板
+     * @param req CreateVLTemplateRequest
+     * @return CreateVLTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVLTemplateResponse CreateVLTemplate(CreateVLTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVLTemplate", CreateVLTemplateResponse.class);
+    }
+
+    /**
      *创建本地录像下载任务
      * @param req CreateVideoDownloadTaskRequest
      * @return CreateVideoDownloadTaskResponse
@@ -237,6 +303,28 @@ public class IssClient extends AbstractClient{
     public CreateVideoDownloadTaskResponse CreateVideoDownloadTask(CreateVideoDownloadTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateVideoDownloadTask", CreateVideoDownloadTaskResponse.class);
+    }
+
+    /**
+     *创建截图配置
+     * @param req CreateVideoSnapshotConfigRequest
+     * @return CreateVideoSnapshotConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoSnapshotConfigResponse CreateVideoSnapshotConfig(CreateVideoSnapshotConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoSnapshotConfig", CreateVideoSnapshotConfigResponse.class);
+    }
+
+    /**
+     *创建截图模板
+     * @param req CreateVideoSnapshotTemplateRequest
+     * @return CreateVideoSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoSnapshotTemplateResponse CreateVideoSnapshotTemplate(CreateVideoSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoSnapshotTemplate", CreateVideoSnapshotTemplateResponse.class);
     }
 
     /**
@@ -336,6 +424,50 @@ public class IssClient extends AbstractClient{
     public DeleteUserDeviceResponse DeleteUserDevice(DeleteUserDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUserDevice", DeleteUserDeviceResponse.class);
+    }
+
+    /**
+     *删除视觉理解计划
+     * @param req DeleteVLPlanRequest
+     * @return DeleteVLPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVLPlanResponse DeleteVLPlan(DeleteVLPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVLPlan", DeleteVLPlanResponse.class);
+    }
+
+    /**
+     *删除视觉理解模板
+     * @param req DeleteVLTemplateRequest
+     * @return DeleteVLTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVLTemplateResponse DeleteVLTemplate(DeleteVLTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVLTemplate", DeleteVLTemplateResponse.class);
+    }
+
+    /**
+     *删除截图配置
+     * @param req DeleteVideoSnapshotConfigRequest
+     * @return DeleteVideoSnapshotConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVideoSnapshotConfigResponse DeleteVideoSnapshotConfig(DeleteVideoSnapshotConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVideoSnapshotConfig", DeleteVideoSnapshotConfigResponse.class);
+    }
+
+    /**
+     *删除截图模板
+     * @param req DeleteVideoSnapshotTemplateRequest
+     * @return DeleteVideoSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVideoSnapshotTemplateResponse DeleteVideoSnapshotTemplate(DeleteVideoSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVideoSnapshotTemplate", DeleteVideoSnapshotTemplateResponse.class);
     }
 
     /**
@@ -560,6 +692,39 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *查询视觉理解计划详情
+     * @param req DescribeVLPlanRequest
+     * @return DescribeVLPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVLPlanResponse DescribeVLPlan(DescribeVLPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVLPlan", DescribeVLPlanResponse.class);
+    }
+
+    /**
+     *查询视觉理解计划结果详情
+     * @param req DescribeVLPlanResultRequest
+     * @return DescribeVLPlanResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVLPlanResultResponse DescribeVLPlanResult(DescribeVLPlanResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVLPlanResult", DescribeVLPlanResultResponse.class);
+    }
+
+    /**
+     *查询视觉理解模板详情
+     * @param req DescribeVLTemplateRequest
+     * @return DescribeVLTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVLTemplateResponse DescribeVLTemplate(DescribeVLTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVLTemplate", DescribeVLTemplateResponse.class);
+    }
+
+    /**
      *用于获取视频通道的码率信息
      * @param req DescribeVideoBitRateRequest
      * @return DescribeVideoBitRateResponse
@@ -579,6 +744,28 @@ public class IssClient extends AbstractClient{
     public DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(DescribeVideoDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVideoDownloadUrl", DescribeVideoDownloadUrlResponse.class);
+    }
+
+    /**
+     *获取截图配置详情
+     * @param req DescribeVideoSnapshotConfigRequest
+     * @return DescribeVideoSnapshotConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoSnapshotConfigResponse DescribeVideoSnapshotConfig(DescribeVideoSnapshotConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoSnapshotConfig", DescribeVideoSnapshotConfigResponse.class);
+    }
+
+    /**
+     *获取截图模板详情
+     * @param req DescribeVideoSnapshotTemplateRequest
+     * @return DescribeVideoSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoSnapshotTemplateResponse DescribeVideoSnapshotTemplate(DescribeVideoSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoSnapshotTemplate", DescribeVideoSnapshotTemplateResponse.class);
     }
 
     /**
@@ -736,6 +923,28 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *获取视觉理解计划列表
+     * @param req ListVLPlansRequest
+     * @return ListVLPlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVLPlansResponse ListVLPlans(ListVLPlansRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVLPlans", ListVLPlansResponse.class);
+    }
+
+    /**
+     *获取视觉理解模板列表
+     * @param req ListVLTemplatesRequest
+     * @return ListVLTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVLTemplatesResponse ListVLTemplates(ListVLTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVLTemplates", ListVLTemplatesResponse.class);
+    }
+
+    /**
      *查询本店里录像下载任务列表
      * @param req ListVideoDownloadTaskRequest
      * @return ListVideoDownloadTaskResponse
@@ -744,6 +953,39 @@ public class IssClient extends AbstractClient{
     public ListVideoDownloadTaskResponse ListVideoDownloadTask(ListVideoDownloadTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListVideoDownloadTask", ListVideoDownloadTaskResponse.class);
+    }
+
+    /**
+     *获取截图模板详情列表
+     * @param req ListVideoSnapshotTemplateRequest
+     * @return ListVideoSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVideoSnapshotTemplateResponse ListVideoSnapshotTemplate(ListVideoSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVideoSnapshotTemplate", ListVideoSnapshotTemplateResponse.class);
+    }
+
+    /**
+     *修改视觉理解计划
+     * @param req ModifyVLPlanRequest
+     * @return ModifyVLPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVLPlanResponse ModifyVLPlan(ModifyVLPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVLPlan", ModifyVLPlanResponse.class);
+    }
+
+    /**
+     *更新截图配置
+     * @param req ModifyVideoSnapshotConfigRequest
+     * @return ModifyVideoSnapshotConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVideoSnapshotConfigResponse ModifyVideoSnapshotConfig(ModifyVideoSnapshotConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVideoSnapshotConfig", ModifyVideoSnapshotConfigResponse.class);
     }
 
     /**

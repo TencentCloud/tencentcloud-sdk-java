@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModelProperty extends AbstractModel {
 
     /**
-    * 属性名称
+    * <p>属性名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 属性值
+    * <p>属性值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 属性名称 
-     * @return Name 属性名称
+     * Get <p>属性名称</p> 
+     * @return Name <p>属性名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 属性名称
-     * @param Name 属性名称
+     * Set <p>属性名称</p>
+     * @param Name <p>属性名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 属性值 
-     * @return Value 属性值
+     * Get <p>属性值</p> 
+     * @return Value <p>属性值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 属性值
-     * @param Value 属性值
+     * Set <p>属性值</p>
+     * @param Value <p>属性值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

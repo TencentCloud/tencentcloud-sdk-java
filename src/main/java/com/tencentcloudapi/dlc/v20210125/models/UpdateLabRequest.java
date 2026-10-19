@@ -150,6 +150,13 @@ public class UpdateLabRequest extends AbstractModel {
     private String LabImagePullType;
 
     /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>数据实验室名称</p> 
      * @return Name <p>数据实验室名称</p>
      */
@@ -437,6 +444,22 @@ public class UpdateLabRequest extends AbstractModel {
         this.LabImagePullType = LabImagePullType;
     }
 
+    /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public UpdateLabRequest() {
     }
 
@@ -502,6 +525,9 @@ public class UpdateLabRequest extends AbstractModel {
         if (source.LabImagePullType != null) {
             this.LabImagePullType = new String(source.LabImagePullType);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class UpdateLabRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

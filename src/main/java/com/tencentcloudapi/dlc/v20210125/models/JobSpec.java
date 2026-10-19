@@ -290,6 +290,13 @@ public class JobSpec extends AbstractModel {
     private String ClusterName;
 
     /**
+    * <p>网络配置，JSON 字符串</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>配置ID</p> 
      * @return Id <p>配置ID</p>
      */
@@ -897,6 +904,22 @@ public class JobSpec extends AbstractModel {
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get <p>网络配置，JSON 字符串</p> 
+     * @return NetworkConfig <p>网络配置，JSON 字符串</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>网络配置，JSON 字符串</p>
+     * @param NetworkConfig <p>网络配置，JSON 字符串</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public JobSpec() {
     }
 
@@ -1022,6 +1045,9 @@ public class JobSpec extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -1067,6 +1093,7 @@ public class JobSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "SubmissionTarget", this.SubmissionTarget);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

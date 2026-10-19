@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstancesResponse extends AbstractModel {
 
     /**
-    * 返回的实例个数
+    * <p>返回的实例个数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例详细信息列表
+    * <p>实例详细信息列表</p>
     */
     @SerializedName("InstanceList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的实例个数 
-     * @return TotalCount 返回的实例个数
+     * Get <p>返回的实例个数</p> 
+     * @return TotalCount <p>返回的实例个数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 返回的实例个数
-     * @param TotalCount 返回的实例个数
+     * Set <p>返回的实例个数</p>
+     * @param TotalCount <p>返回的实例个数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例详细信息列表 
-     * @return InstanceList 实例详细信息列表
+     * Get <p>实例详细信息列表</p> 
+     * @return InstanceList <p>实例详细信息列表</p>
      */
     public InstanceInfo [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set 实例详细信息列表
-     * @param InstanceList 实例详细信息列表
+     * Set <p>实例详细信息列表</p>
+     * @param InstanceList <p>实例详细信息列表</p>
      */
     public void setInstanceList(InstanceInfo [] InstanceList) {
         this.InstanceList = InstanceList;

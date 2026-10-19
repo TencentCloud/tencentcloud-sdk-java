@@ -39,7 +39,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *添加控制台用户
+     *添加控制台用户，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req AddConsoleUsersRequest
      * @return AddConsoleUsersResponse
      * @throws TencentCloudSDKException
@@ -83,7 +83,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *创建控制台用户组
+     *创建控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req CreateConsoleGroupRequest
      * @return CreateConsoleGroupResponse
      * @throws TencentCloudSDKException
@@ -145,7 +145,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *创建工作空间
+     *创建工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
      * @throws TencentCloudSDKException
@@ -178,7 +178,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *删除控制台用户组
+     *删除控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req DeleteConsoleGroupsRequest
      * @return DeleteConsoleGroupsResponse
      * @throws TencentCloudSDKException
@@ -575,7 +575,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *查询工作空间列表
+     *查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req ListWorkspacesRequest
      * @return ListWorkspacesResponse
      * @throws TencentCloudSDKException
@@ -586,7 +586,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *<p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
+     *<p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>
      * @param req RemoveConsoleUsersRequest
      * @return RemoveConsoleUsersResponse
      * @throws TencentCloudSDKException
@@ -664,7 +664,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *修改控制台用户组
+     *修改控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req UpdateConsoleGroupRequest
      * @return UpdateConsoleGroupResponse
      * @throws TencentCloudSDKException
@@ -675,7 +675,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *修改控制台用户角色
+     *修改控制台用户角色，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req UpdateConsoleUsersRequest
      * @return UpdateConsoleUsersResponse
      * @throws TencentCloudSDKException
@@ -738,7 +738,7 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
-     *修改工作空间
+     *修改工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
      * @param req UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
      * @throws TencentCloudSDKException

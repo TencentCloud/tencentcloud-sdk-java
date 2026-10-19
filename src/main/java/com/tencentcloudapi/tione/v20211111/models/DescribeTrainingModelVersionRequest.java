@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeTrainingModelVersionRequest extends AbstractModel {
 
     /**
-    * 模型版本ID
+    * <p>模型版本ID</p>
     */
     @SerializedName("TrainingModelVersionId")
     @Expose
     private String TrainingModelVersionId;
 
     /**
-     * Get 模型版本ID 
-     * @return TrainingModelVersionId 模型版本ID
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+     * Get <p>模型版本ID</p> 
+     * @return TrainingModelVersionId <p>模型版本ID</p>
      */
     public String getTrainingModelVersionId() {
         return this.TrainingModelVersionId;
     }
 
     /**
-     * Set 模型版本ID
-     * @param TrainingModelVersionId 模型版本ID
+     * Set <p>模型版本ID</p>
+     * @param TrainingModelVersionId <p>模型版本ID</p>
      */
     public void setTrainingModelVersionId(String TrainingModelVersionId) {
         this.TrainingModelVersionId = TrainingModelVersionId;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     public DescribeTrainingModelVersionRequest() {
@@ -57,6 +80,9 @@ public class DescribeTrainingModelVersionRequest extends AbstractModel {
         if (source.TrainingModelVersionId != null) {
             this.TrainingModelVersionId = new String(source.TrainingModelVersionId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeTrainingModelVersionRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrainingModelVersionId", this.TrainingModelVersionId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

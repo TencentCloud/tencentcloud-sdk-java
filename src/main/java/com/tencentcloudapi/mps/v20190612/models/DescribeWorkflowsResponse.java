@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeWorkflowsResponse extends AbstractModel {
 
     /**
-    * 符合过滤条件的记录总数。
+    * <p>符合过滤条件的记录总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 工作流信息数组。
+    * <p>工作流信息数组。</p>
     */
     @SerializedName("WorkflowInfoSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeWorkflowsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合过滤条件的记录总数。 
-     * @return TotalCount 符合过滤条件的记录总数。
+     * Get <p>符合过滤条件的记录总数。</p> 
+     * @return TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合过滤条件的记录总数。
-     * @param TotalCount 符合过滤条件的记录总数。
+     * Set <p>符合过滤条件的记录总数。</p>
+     * @param TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 工作流信息数组。 
-     * @return WorkflowInfoSet 工作流信息数组。
+     * Get <p>工作流信息数组。</p> 
+     * @return WorkflowInfoSet <p>工作流信息数组。</p>
      */
     public WorkflowInfo [] getWorkflowInfoSet() {
         return this.WorkflowInfoSet;
     }
 
     /**
-     * Set 工作流信息数组。
-     * @param WorkflowInfoSet 工作流信息数组。
+     * Set <p>工作流信息数组。</p>
+     * @param WorkflowInfoSet <p>工作流信息数组。</p>
      */
     public void setWorkflowInfoSet(WorkflowInfo [] WorkflowInfoSet) {
         this.WorkflowInfoSet = WorkflowInfoSet;

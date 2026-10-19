@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStreamLinkEventResponse extends AbstractModel {
 
     /**
-    * 媒体传输事件的配置信息。
+    * <p>媒体传输事件的配置信息。</p>
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStreamLinkEventResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体传输事件的配置信息。 
-     * @return Info 媒体传输事件的配置信息。
+     * Get <p>媒体传输事件的配置信息。</p> 
+     * @return Info <p>媒体传输事件的配置信息。</p>
      */
     public DescribeEvent getInfo() {
         return this.Info;
     }
 
     /**
-     * Set 媒体传输事件的配置信息。
-     * @param Info 媒体传输事件的配置信息。
+     * Set <p>媒体传输事件的配置信息。</p>
+     * @param Info <p>媒体传输事件的配置信息。</p>
      */
     public void setInfo(DescribeEvent Info) {
         this.Info = Info;

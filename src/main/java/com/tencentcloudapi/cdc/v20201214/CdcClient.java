@@ -226,6 +226,17 @@ public class CdcClient extends AbstractClient{
     }
 
     /**
+     *查询专属集群宿主机上的虚机信息
+     * @param req DescribeEdgeHostVmRequest
+     * @return DescribeEdgeHostVmResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeHostVmResponse DescribeEdgeHostVm(DescribeEdgeHostVmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdgeHostVm", DescribeEdgeHostVmResponse.class);
+    }
+
+    /**
      *查询站点列表
      * @param req DescribeSitesRequest
      * @return DescribeSitesResponse

@@ -31,6 +31,13 @@ public class DeleteTrainingModelRequest extends AbstractModel {
     private String TrainingModelId;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 是否同步清理cos
     */
     @SerializedName("EnableDeleteCos")
@@ -58,6 +65,22 @@ public class DeleteTrainingModelRequest extends AbstractModel {
      */
     public void setTrainingModelId(String TrainingModelId) {
         this.TrainingModelId = TrainingModelId;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -103,6 +126,9 @@ public class DeleteTrainingModelRequest extends AbstractModel {
         if (source.TrainingModelId != null) {
             this.TrainingModelId = new String(source.TrainingModelId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.EnableDeleteCos != null) {
             this.EnableDeleteCos = new Boolean(source.EnableDeleteCos);
         }
@@ -117,6 +143,7 @@ public class DeleteTrainingModelRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrainingModelId", this.TrainingModelId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "EnableDeleteCos", this.EnableDeleteCos);
         this.setParamSimple(map, prefix + "ModelVersionType", this.ModelVersionType);
 

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeModelAccelerateTaskResponse extends AbstractModel {
 
     /**
-    * 模型加速任务详情
+    * <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelAccelerateTask")
@@ -32,7 +32,7 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     private ModelAccelerateTask ModelAccelerateTask;
 
     /**
-    * 模型加速时长，单位s
+    * <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelAccRuntimeInSecond")
@@ -40,7 +40,7 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     private Long ModelAccRuntimeInSecond;
 
     /**
-    * 模型加速任务开始时间
+    * <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelAccStartTime")
@@ -48,7 +48,7 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     private String ModelAccStartTime;
 
     /**
-    * 模型加速任务结束时间
+    * <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelAccEndTime")
@@ -63,9 +63,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模型加速任务详情
+     * Get <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelAccelerateTask 模型加速任务详情
+     * @return ModelAccelerateTask <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelAccelerateTask getModelAccelerateTask() {
@@ -73,9 +73,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 模型加速任务详情
+     * Set <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelAccelerateTask 模型加速任务详情
+     * @param ModelAccelerateTask <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelAccelerateTask(ModelAccelerateTask ModelAccelerateTask) {
@@ -83,9 +83,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 模型加速时长，单位s
+     * Get <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelAccRuntimeInSecond 模型加速时长，单位s
+     * @return ModelAccRuntimeInSecond <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getModelAccRuntimeInSecond() {
@@ -93,9 +93,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 模型加速时长，单位s
+     * Set <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelAccRuntimeInSecond 模型加速时长，单位s
+     * @param ModelAccRuntimeInSecond <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelAccRuntimeInSecond(Long ModelAccRuntimeInSecond) {
@@ -103,9 +103,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 模型加速任务开始时间
+     * Get <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelAccStartTime 模型加速任务开始时间
+     * @return ModelAccStartTime <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelAccStartTime() {
@@ -113,9 +113,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 模型加速任务开始时间
+     * Set <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelAccStartTime 模型加速任务开始时间
+     * @param ModelAccStartTime <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelAccStartTime(String ModelAccStartTime) {
@@ -123,9 +123,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 模型加速任务结束时间
+     * Get <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelAccEndTime 模型加速任务结束时间
+     * @return ModelAccEndTime <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelAccEndTime() {
@@ -133,9 +133,9 @@ public class DescribeModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 模型加速任务结束时间
+     * Set <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelAccEndTime 模型加速任务结束时间
+     * @param ModelAccEndTime <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelAccEndTime(String ModelAccEndTime) {

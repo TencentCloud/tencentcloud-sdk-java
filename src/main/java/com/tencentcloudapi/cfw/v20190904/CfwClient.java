@@ -1064,6 +1064,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询云防火墙概览页资源与配额详情信息，返回带宽配额、实例与规则配额、日志存储信息及相关能力标识。
+     * @param req DescribeOverviewResourceQuotaRequest
+     * @return DescribeOverviewResourceQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewResourceQuotaResponse DescribeOverviewResourceQuota(DescribeOverviewResourceQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOverviewResourceQuota", DescribeOverviewResourceQuotaResponse.class);
+    }
+
+    /**
      *DescribeResourceGroup资产中心资产树信息
      * @param req DescribeResourceGroupRequest
      * @return DescribeResourceGroupResponse
@@ -1248,6 +1259,17 @@ public class CfwClient extends AbstractClient{
     public DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitch(DescribeVpcFwGroupSwitchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcFwGroupSwitch", DescribeVpcFwGroupSwitchResponse.class);
+    }
+
+    /**
+     *查询VPC防火墙下，单IP粒度的流量统计
+     * @param req DescribeVpcFwIpStatRequest
+     * @return DescribeVpcFwIpStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcFwIpStatResponse DescribeVpcFwIpStat(DescribeVpcFwIpStatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVpcFwIpStat", DescribeVpcFwIpStatResponse.class);
     }
 
     /**

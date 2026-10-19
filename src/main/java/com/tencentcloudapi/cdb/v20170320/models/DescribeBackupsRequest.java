@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class DescribeBackupsRequest extends AbstractModel {
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 偏移量，最小值为0。
+    * <p>偏移量，最小值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页大小，默认值为20，最小值为1，最大值为1000。
+    * <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+    */
+    @SerializedName("MinStartTime")
+    @Expose
+    private String MinStartTime;
+
+    /**
+    * <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+    */
+    @SerializedName("MaxStartTime")
+    @Expose
+    private String MaxStartTime;
+
+    /**
+     * Get <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p> 
+     * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 偏移量，最小值为0。 
-     * @return Offset 偏移量，最小值为0。
+     * Get <p>偏移量，最小值为0。</p> 
+     * @return Offset <p>偏移量，最小值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，最小值为0。
-     * @param Offset 偏移量，最小值为0。
+     * Set <p>偏移量，最小值为0。</p>
+     * @param Offset <p>偏移量，最小值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页大小，默认值为20，最小值为1，最大值为1000。 
-     * @return Limit 分页大小，默认值为20，最小值为1，最大值为1000。
+     * Get <p>分页大小，默认值为20，最小值为1，最大值为1000。</p> 
+     * @return Limit <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认值为20，最小值为1，最大值为1000。
-     * @param Limit 分页大小，默认值为20，最小值为1，最大值为1000。
+     * Set <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
+     * @param Limit <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p> 
+     * @return MinStartTime <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+     */
+    public String getMinStartTime() {
+        return this.MinStartTime;
+    }
+
+    /**
+     * Set <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+     * @param MinStartTime <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+     */
+    public void setMinStartTime(String MinStartTime) {
+        this.MinStartTime = MinStartTime;
+    }
+
+    /**
+     * Get <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p> 
+     * @return MaxStartTime <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+     */
+    public String getMaxStartTime() {
+        return this.MaxStartTime;
+    }
+
+    /**
+     * Set <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+     * @param MaxStartTime <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+     */
+    public void setMaxStartTime(String MaxStartTime) {
+        this.MaxStartTime = MaxStartTime;
     }
 
     public DescribeBackupsRequest() {
@@ -109,6 +155,12 @@ public class DescribeBackupsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.MinStartTime != null) {
+            this.MinStartTime = new String(source.MinStartTime);
+        }
+        if (source.MaxStartTime != null) {
+            this.MaxStartTime = new String(source.MaxStartTime);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class DescribeBackupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
+        this.setParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
 
     }
 }

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModelBasic extends AbstractModel {
 
     /**
-    * 模型描述
+    * <p>模型描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 模型图标地址
+    * <p>模型图标地址</p>
     */
     @SerializedName("IconUrl")
     @Expose
     private String IconUrl;
 
     /**
-    * 模型ID
+    * <p>模型ID</p>
     */
     @SerializedName("ModelId")
     @Expose
     private String ModelId;
 
     /**
-    * 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
+    * <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
     */
     @SerializedName("ModelType")
     @Expose
     private Long ModelType;
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 模型描述 
-     * @return Description 模型描述
+     * Get <p>模型描述</p> 
+     * @return Description <p>模型描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模型描述
-     * @param Description 模型描述
+     * Set <p>模型描述</p>
+     * @param Description <p>模型描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 模型图标地址 
-     * @return IconUrl 模型图标地址
+     * Get <p>模型图标地址</p> 
+     * @return IconUrl <p>模型图标地址</p>
      */
     public String getIconUrl() {
         return this.IconUrl;
     }
 
     /**
-     * Set 模型图标地址
-     * @param IconUrl 模型图标地址
+     * Set <p>模型图标地址</p>
+     * @param IconUrl <p>模型图标地址</p>
      */
     public void setIconUrl(String IconUrl) {
         this.IconUrl = IconUrl;
     }
 
     /**
-     * Get 模型ID 
-     * @return ModelId 模型ID
+     * Get <p>模型ID</p> 
+     * @return ModelId <p>模型ID</p>
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 模型ID
-     * @param ModelId 模型ID
+     * Set <p>模型ID</p>
+     * @param ModelId <p>模型ID</p>
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }
 
     /**
-     * Get 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型 
-     * @return ModelType 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
+     * Get <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table> 
+     * @return ModelType <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
      */
     public Long getModelType() {
         return this.ModelType;
     }
 
     /**
-     * Set 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
-     * @param ModelType 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
+     * Set <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
+     * @param ModelType <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
      */
     public void setModelType(Long ModelType) {
         this.ModelType = ModelType;
     }
 
     /**
-     * Get 模型名称 
-     * @return Name 模型名称
+     * Get <p>模型名称</p> 
+     * @return Name <p>模型名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模型名称
-     * @param Name 模型名称
+     * Set <p>模型名称</p>
+     * @param Name <p>模型名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;

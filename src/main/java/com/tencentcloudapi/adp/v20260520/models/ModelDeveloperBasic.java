@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ModelDeveloperBasic extends AbstractModel {
 
     /**
+    * <p>作者别名</p>
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
     * <p>作者标识</p>
     */
     @SerializedName("Name")
@@ -31,11 +38,20 @@ public class ModelDeveloperBasic extends AbstractModel {
     private String Name;
 
     /**
-    * <p>作者显示名称</p>
-    */
-    @SerializedName("Alias")
-    @Expose
-    private String Alias;
+     * Get <p>作者别名</p> 
+     * @return Alias <p>作者别名</p>
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set <p>作者别名</p>
+     * @param Alias <p>作者别名</p>
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
 
     /**
      * Get <p>作者标识</p> 
@@ -53,22 +69,6 @@ public class ModelDeveloperBasic extends AbstractModel {
         this.Name = Name;
     }
 
-    /**
-     * Get <p>作者显示名称</p> 
-     * @return Alias <p>作者显示名称</p>
-     */
-    public String getAlias() {
-        return this.Alias;
-    }
-
-    /**
-     * Set <p>作者显示名称</p>
-     * @param Alias <p>作者显示名称</p>
-     */
-    public void setAlias(String Alias) {
-        this.Alias = Alias;
-    }
-
     public ModelDeveloperBasic() {
     }
 
@@ -77,11 +77,11 @@ public class ModelDeveloperBasic extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModelDeveloperBasic(ModelDeveloperBasic source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
     }
 
@@ -90,8 +90,8 @@ public class ModelDeveloperBasic extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

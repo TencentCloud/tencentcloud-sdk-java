@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddWorkspaceGroupsResponse extends AbstractModel {
 
     /**
-    * 添加结果
+    * <p>添加结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class AddWorkspaceGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 添加结果 
-     * @return Data 添加结果
+     * Get <p>添加结果</p> 
+     * @return Data <p>添加结果</p>
      */
     public PlatformStatusRsp getData() {
         return this.Data;
     }
 
     /**
-     * Set 添加结果
-     * @param Data 添加结果
+     * Set <p>添加结果</p>
+     * @param Data <p>添加结果</p>
      */
     public void setData(PlatformStatusRsp Data) {
         this.Data = Data;

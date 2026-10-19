@@ -24,396 +24,391 @@ import java.util.HashMap;
 public class VideoDownloadTask extends AbstractModel {
 
     /**
-    * 下载任务 ID
+    * <p>下载任务 ID</p>
     */
     @SerializedName("DownloadTaskId")
     @Expose
     private String DownloadTaskId;
 
     /**
-    * 通道 ID
+    * <p>通道 ID</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * 通道名称
+    * <p>通道名称</p>
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * 通道编码
+    * <p>通道编码</p>
     */
     @SerializedName("ChannelCode")
     @Expose
     private String ChannelCode;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 设备编码
+    * <p>设备编码</p>
     */
     @SerializedName("DeviceCode")
     @Expose
     private String DeviceCode;
 
     /**
-    * 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
+    * <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 下载录像时间段
+    * <p>下载录像时间段</p>
     */
     @SerializedName("VideoTimeSection")
     @Expose
     private String VideoTimeSection;
 
     /**
-    * 倍速
+    * <p>倍速</p>
     */
     @SerializedName("Scale")
     @Expose
     private Long Scale;
 
     /**
-    * 下载时长
+    * <p>下载时长</p><p>单位：秒</p>
     */
     @SerializedName("DownloadTime")
     @Expose
     private Long DownloadTime;
 
     /**
-    * 录像大小
+    * <p>录像大小</p><p>单位：字节（Byte）</p>
     */
     @SerializedName("VideoSize")
     @Expose
     private Long VideoSize;
 
     /**
-    * 任务开始时间
+    * <p>任务开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务结束时间
+    * <p>任务结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 文件下载地址
+    * <p>文件下载地址</p>
     */
     @SerializedName("FileDownloadUrl")
     @Expose
     private String FileDownloadUrl;
 
     /**
-    * 失败原因
+    * <p>失败原因</p>
     */
     @SerializedName("FailedReason")
     @Expose
     private String FailedReason;
 
     /**
-    * 生命周期规则，热存天数
+    * <p>生命周期规则，热存天数</p>
     */
     @SerializedName("Expire")
     @Expose
     private Long Expire;
 
     /**
-    * mp4预览地址
+    * <p>mp4预览地址</p>
     */
     @SerializedName("PreviewUrl")
     @Expose
     private String PreviewUrl;
 
     /**
-     * Get 下载任务 ID 
-     * @return DownloadTaskId 下载任务 ID
+     * Get <p>下载任务 ID</p> 
+     * @return DownloadTaskId <p>下载任务 ID</p>
      */
     public String getDownloadTaskId() {
         return this.DownloadTaskId;
     }
 
     /**
-     * Set 下载任务 ID
-     * @param DownloadTaskId 下载任务 ID
+     * Set <p>下载任务 ID</p>
+     * @param DownloadTaskId <p>下载任务 ID</p>
      */
     public void setDownloadTaskId(String DownloadTaskId) {
         this.DownloadTaskId = DownloadTaskId;
     }
 
     /**
-     * Get 通道 ID 
-     * @return ChannelId 通道 ID
+     * Get <p>通道 ID</p> 
+     * @return ChannelId <p>通道 ID</p>
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道 ID
-     * @param ChannelId 通道 ID
+     * Set <p>通道 ID</p>
+     * @param ChannelId <p>通道 ID</p>
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 通道名称 
-     * @return ChannelName 通道名称
+     * Get <p>通道名称</p> 
+     * @return ChannelName <p>通道名称</p>
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set 通道名称
-     * @param ChannelName 通道名称
+     * Set <p>通道名称</p>
+     * @param ChannelName <p>通道名称</p>
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get 通道编码 
-     * @return ChannelCode 通道编码
+     * Get <p>通道编码</p> 
+     * @return ChannelCode <p>通道编码</p>
      */
     public String getChannelCode() {
         return this.ChannelCode;
     }
 
     /**
-     * Set 通道编码
-     * @param ChannelCode 通道编码
+     * Set <p>通道编码</p>
+     * @param ChannelCode <p>通道编码</p>
      */
     public void setChannelCode(String ChannelCode) {
         this.ChannelCode = ChannelCode;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 设备编码 
-     * @return DeviceCode 设备编码
+     * Get <p>设备编码</p> 
+     * @return DeviceCode <p>设备编码</p>
      */
     public String getDeviceCode() {
         return this.DeviceCode;
     }
 
     /**
-     * Set 设备编码
-     * @param DeviceCode 设备编码
+     * Set <p>设备编码</p>
+     * @param DeviceCode <p>设备编码</p>
      */
     public void setDeviceCode(String DeviceCode) {
         this.DeviceCode = DeviceCode;
     }
 
     /**
-     * Get 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败） 
-     * @return Status 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
+     * Get <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p> 
+     * @return Status <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
-     * @param Status 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
+     * Set <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
+     * @param Status <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 下载录像时间段 
-     * @return VideoTimeSection 下载录像时间段
+     * Get <p>下载录像时间段</p> 
+     * @return VideoTimeSection <p>下载录像时间段</p>
      */
     public String getVideoTimeSection() {
         return this.VideoTimeSection;
     }
 
     /**
-     * Set 下载录像时间段
-     * @param VideoTimeSection 下载录像时间段
+     * Set <p>下载录像时间段</p>
+     * @param VideoTimeSection <p>下载录像时间段</p>
      */
     public void setVideoTimeSection(String VideoTimeSection) {
         this.VideoTimeSection = VideoTimeSection;
     }
 
     /**
-     * Get 倍速 
-     * @return Scale 倍速
+     * Get <p>倍速</p> 
+     * @return Scale <p>倍速</p>
      */
     public Long getScale() {
         return this.Scale;
     }
 
     /**
-     * Set 倍速
-     * @param Scale 倍速
+     * Set <p>倍速</p>
+     * @param Scale <p>倍速</p>
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 下载时长 
-     * @return DownloadTime 下载时长
+     * Get <p>下载时长</p><p>单位：秒</p> 
+     * @return DownloadTime <p>下载时长</p><p>单位：秒</p>
      */
     public Long getDownloadTime() {
         return this.DownloadTime;
     }
 
     /**
-     * Set 下载时长
-     * @param DownloadTime 下载时长
+     * Set <p>下载时长</p><p>单位：秒</p>
+     * @param DownloadTime <p>下载时长</p><p>单位：秒</p>
      */
     public void setDownloadTime(Long DownloadTime) {
         this.DownloadTime = DownloadTime;
     }
 
     /**
-     * Get 录像大小 
-     * @return VideoSize 录像大小
+     * Get <p>录像大小</p><p>单位：字节（Byte）</p> 
+     * @return VideoSize <p>录像大小</p><p>单位：字节（Byte）</p>
      */
     public Long getVideoSize() {
         return this.VideoSize;
     }
 
     /**
-     * Set 录像大小
-     * @param VideoSize 录像大小
+     * Set <p>录像大小</p><p>单位：字节（Byte）</p>
+     * @param VideoSize <p>录像大小</p><p>单位：字节（Byte）</p>
      */
     public void setVideoSize(Long VideoSize) {
         this.VideoSize = VideoSize;
     }
 
     /**
-     * Get 任务开始时间 
-     * @return StartTime 任务开始时间
+     * Get <p>任务开始时间</p> 
+     * @return StartTime <p>任务开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始时间
-     * @param StartTime 任务开始时间
+     * Set <p>任务开始时间</p>
+     * @param StartTime <p>任务开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务结束时间 
-     * @return EndTime 任务结束时间
+     * Get <p>任务结束时间</p> 
+     * @return EndTime <p>任务结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务结束时间
-     * @param EndTime 任务结束时间
+     * Set <p>任务结束时间</p>
+     * @param EndTime <p>任务结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 文件下载地址 
-     * @return FileDownloadUrl 文件下载地址
+     * Get <p>文件下载地址</p> 
+     * @return FileDownloadUrl <p>文件下载地址</p>
      */
     public String getFileDownloadUrl() {
         return this.FileDownloadUrl;
     }
 
     /**
-     * Set 文件下载地址
-     * @param FileDownloadUrl 文件下载地址
+     * Set <p>文件下载地址</p>
+     * @param FileDownloadUrl <p>文件下载地址</p>
      */
     public void setFileDownloadUrl(String FileDownloadUrl) {
         this.FileDownloadUrl = FileDownloadUrl;
     }
 
     /**
-     * Get 失败原因 
-     * @return FailedReason 失败原因
+     * Get <p>失败原因</p> 
+     * @return FailedReason <p>失败原因</p>
      */
     public String getFailedReason() {
         return this.FailedReason;
     }
 
     /**
-     * Set 失败原因
-     * @param FailedReason 失败原因
+     * Set <p>失败原因</p>
+     * @param FailedReason <p>失败原因</p>
      */
     public void setFailedReason(String FailedReason) {
         this.FailedReason = FailedReason;
     }
 
     /**
-     * Get 生命周期规则，热存天数 
-     * @return Expire 生命周期规则，热存天数
+     * Get <p>生命周期规则，热存天数</p> 
+     * @return Expire <p>生命周期规则，热存天数</p>
      */
     public Long getExpire() {
         return this.Expire;
     }
 
     /**
-     * Set 生命周期规则，热存天数
-     * @param Expire 生命周期规则，热存天数
+     * Set <p>生命周期规则，热存天数</p>
+     * @param Expire <p>生命周期规则，热存天数</p>
      */
     public void setExpire(Long Expire) {
         this.Expire = Expire;
     }
 
     /**
-     * Get mp4预览地址 
-     * @return PreviewUrl mp4预览地址
+     * Get <p>mp4预览地址</p> 
+     * @return PreviewUrl <p>mp4预览地址</p>
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
     }
 
     /**
-     * Set mp4预览地址
-     * @param PreviewUrl mp4预览地址
+     * Set <p>mp4预览地址</p>
+     * @param PreviewUrl <p>mp4预览地址</p>
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;

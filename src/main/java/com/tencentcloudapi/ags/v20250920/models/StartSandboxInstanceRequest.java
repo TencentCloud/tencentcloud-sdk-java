@@ -45,6 +45,13 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     private String SourceInstanceId;
 
     /**
+    * <p>待启动的沙箱快照 ID</p>
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
     * <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
     */
     @SerializedName("Timeout")
@@ -132,6 +139,22 @@ public class StartSandboxInstanceRequest extends AbstractModel {
      */
     public void setSourceInstanceId(String SourceInstanceId) {
         this.SourceInstanceId = SourceInstanceId;
+    }
+
+    /**
+     * Get <p>待启动的沙箱快照 ID</p> 
+     * @return SnapshotId <p>待启动的沙箱快照 ID</p>
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set <p>待启动的沙箱快照 ID</p>
+     * @param SnapshotId <p>待启动的沙箱快照 ID</p>
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
     }
 
     /**
@@ -247,6 +270,9 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         if (source.SourceInstanceId != null) {
             this.SourceInstanceId = new String(source.SourceInstanceId);
         }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
         if (source.Timeout != null) {
             this.Timeout = new String(source.Timeout);
         }
@@ -281,6 +307,7 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolId", this.ToolId);
         this.setParamSimple(map, prefix + "ToolName", this.ToolName);
         this.setParamSimple(map, prefix + "SourceInstanceId", this.SourceInstanceId);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);

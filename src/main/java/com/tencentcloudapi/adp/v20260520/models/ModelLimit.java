@@ -24,69 +24,115 @@ import java.util.HashMap;
 public class ModelLimit extends AbstractModel {
 
     /**
-    * 模型上下文长度展示文案（如 "128K"、"1000K"）
+    * <p>模型上下文长度展示文案（如 128K、1000K）</p>
     */
     @SerializedName("ContextLengthDescription")
     @Expose
     private String ContextLengthDescription;
 
     /**
-    * 模型对话框输入长度字符数限制
+    * <p>模型对话框输入长度字符数限制</p>
     */
     @SerializedName("InputLengthLimit")
     @Expose
     private Long InputLengthLimit;
 
     /**
-    * 模型提示词长度字符数限制
+    * <p>最大输入 Tokens 展示文案（如 960k，服务端格式化，未配置为空串）</p>
+    */
+    @SerializedName("MaxInputTokensDescription")
+    @Expose
+    private String MaxInputTokensDescription;
+
+    /**
+    * <p>最大输出 Tokens 展示文案（如 64k，服务端格式化，未配置为空串）</p>
+    */
+    @SerializedName("MaxOutputTokensDescription")
+    @Expose
+    private String MaxOutputTokensDescription;
+
+    /**
+    * <p>模型提示词长度字符数限制</p>
     */
     @SerializedName("PromptLengthLimit")
     @Expose
     private Long PromptLengthLimit;
 
     /**
-     * Get 模型上下文长度展示文案（如 "128K"、"1000K"） 
-     * @return ContextLengthDescription 模型上下文长度展示文案（如 "128K"、"1000K"）
+     * Get <p>模型上下文长度展示文案（如 128K、1000K）</p> 
+     * @return ContextLengthDescription <p>模型上下文长度展示文案（如 128K、1000K）</p>
      */
     public String getContextLengthDescription() {
         return this.ContextLengthDescription;
     }
 
     /**
-     * Set 模型上下文长度展示文案（如 "128K"、"1000K"）
-     * @param ContextLengthDescription 模型上下文长度展示文案（如 "128K"、"1000K"）
+     * Set <p>模型上下文长度展示文案（如 128K、1000K）</p>
+     * @param ContextLengthDescription <p>模型上下文长度展示文案（如 128K、1000K）</p>
      */
     public void setContextLengthDescription(String ContextLengthDescription) {
         this.ContextLengthDescription = ContextLengthDescription;
     }
 
     /**
-     * Get 模型对话框输入长度字符数限制 
-     * @return InputLengthLimit 模型对话框输入长度字符数限制
+     * Get <p>模型对话框输入长度字符数限制</p> 
+     * @return InputLengthLimit <p>模型对话框输入长度字符数限制</p>
      */
     public Long getInputLengthLimit() {
         return this.InputLengthLimit;
     }
 
     /**
-     * Set 模型对话框输入长度字符数限制
-     * @param InputLengthLimit 模型对话框输入长度字符数限制
+     * Set <p>模型对话框输入长度字符数限制</p>
+     * @param InputLengthLimit <p>模型对话框输入长度字符数限制</p>
      */
     public void setInputLengthLimit(Long InputLengthLimit) {
         this.InputLengthLimit = InputLengthLimit;
     }
 
     /**
-     * Get 模型提示词长度字符数限制 
-     * @return PromptLengthLimit 模型提示词长度字符数限制
+     * Get <p>最大输入 Tokens 展示文案（如 960k，服务端格式化，未配置为空串）</p> 
+     * @return MaxInputTokensDescription <p>最大输入 Tokens 展示文案（如 960k，服务端格式化，未配置为空串）</p>
+     */
+    public String getMaxInputTokensDescription() {
+        return this.MaxInputTokensDescription;
+    }
+
+    /**
+     * Set <p>最大输入 Tokens 展示文案（如 960k，服务端格式化，未配置为空串）</p>
+     * @param MaxInputTokensDescription <p>最大输入 Tokens 展示文案（如 960k，服务端格式化，未配置为空串）</p>
+     */
+    public void setMaxInputTokensDescription(String MaxInputTokensDescription) {
+        this.MaxInputTokensDescription = MaxInputTokensDescription;
+    }
+
+    /**
+     * Get <p>最大输出 Tokens 展示文案（如 64k，服务端格式化，未配置为空串）</p> 
+     * @return MaxOutputTokensDescription <p>最大输出 Tokens 展示文案（如 64k，服务端格式化，未配置为空串）</p>
+     */
+    public String getMaxOutputTokensDescription() {
+        return this.MaxOutputTokensDescription;
+    }
+
+    /**
+     * Set <p>最大输出 Tokens 展示文案（如 64k，服务端格式化，未配置为空串）</p>
+     * @param MaxOutputTokensDescription <p>最大输出 Tokens 展示文案（如 64k，服务端格式化，未配置为空串）</p>
+     */
+    public void setMaxOutputTokensDescription(String MaxOutputTokensDescription) {
+        this.MaxOutputTokensDescription = MaxOutputTokensDescription;
+    }
+
+    /**
+     * Get <p>模型提示词长度字符数限制</p> 
+     * @return PromptLengthLimit <p>模型提示词长度字符数限制</p>
      */
     public Long getPromptLengthLimit() {
         return this.PromptLengthLimit;
     }
 
     /**
-     * Set 模型提示词长度字符数限制
-     * @param PromptLengthLimit 模型提示词长度字符数限制
+     * Set <p>模型提示词长度字符数限制</p>
+     * @param PromptLengthLimit <p>模型提示词长度字符数限制</p>
      */
     public void setPromptLengthLimit(Long PromptLengthLimit) {
         this.PromptLengthLimit = PromptLengthLimit;
@@ -106,6 +152,12 @@ public class ModelLimit extends AbstractModel {
         if (source.InputLengthLimit != null) {
             this.InputLengthLimit = new Long(source.InputLengthLimit);
         }
+        if (source.MaxInputTokensDescription != null) {
+            this.MaxInputTokensDescription = new String(source.MaxInputTokensDescription);
+        }
+        if (source.MaxOutputTokensDescription != null) {
+            this.MaxOutputTokensDescription = new String(source.MaxOutputTokensDescription);
+        }
         if (source.PromptLengthLimit != null) {
             this.PromptLengthLimit = new Long(source.PromptLengthLimit);
         }
@@ -118,6 +170,8 @@ public class ModelLimit extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ContextLengthDescription", this.ContextLengthDescription);
         this.setParamSimple(map, prefix + "InputLengthLimit", this.InputLengthLimit);
+        this.setParamSimple(map, prefix + "MaxInputTokensDescription", this.MaxInputTokensDescription);
+        this.setParamSimple(map, prefix + "MaxOutputTokensDescription", this.MaxOutputTokensDescription);
         this.setParamSimple(map, prefix + "PromptLengthLimit", this.PromptLengthLimit);
 
     }

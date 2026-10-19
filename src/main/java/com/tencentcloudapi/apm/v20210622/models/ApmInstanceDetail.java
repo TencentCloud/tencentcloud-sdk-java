@@ -451,6 +451,13 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long TokenDisplayProtection;
 
     /**
+    * <p>自定义 Span 状态配置</p>
+    */
+    @SerializedName("SpanStatusConfig")
+    @Expose
+    private SpanStatusConfig SpanStatusConfig;
+
+    /**
      * Get <p>业务系统 ID</p> 
      * @return InstanceId <p>业务系统 ID</p>
      */
@@ -1426,6 +1433,22 @@ public class ApmInstanceDetail extends AbstractModel {
         this.TokenDisplayProtection = TokenDisplayProtection;
     }
 
+    /**
+     * Get <p>自定义 Span 状态配置</p> 
+     * @return SpanStatusConfig <p>自定义 Span 状态配置</p>
+     */
+    public SpanStatusConfig getSpanStatusConfig() {
+        return this.SpanStatusConfig;
+    }
+
+    /**
+     * Set <p>自定义 Span 状态配置</p>
+     * @param SpanStatusConfig <p>自定义 Span 状态配置</p>
+     */
+    public void setSpanStatusConfig(SpanStatusConfig SpanStatusConfig) {
+        this.SpanStatusConfig = SpanStatusConfig;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1623,6 +1646,9 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.TokenDisplayProtection != null) {
             this.TokenDisplayProtection = new Long(source.TokenDisplayProtection);
         }
+        if (source.SpanStatusConfig != null) {
+            this.SpanStatusConfig = new SpanStatusConfig(source.SpanStatusConfig);
+        }
     }
 
 
@@ -1691,6 +1717,7 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
         this.setParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
         this.setParamSimple(map, prefix + "TokenDisplayProtection", this.TokenDisplayProtection);
+        this.setParamObj(map, prefix + "SpanStatusConfig.", this.SpanStatusConfig);
 
     }
 }

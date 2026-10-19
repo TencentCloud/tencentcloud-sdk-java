@@ -77,7 +77,9 @@ public class AgentAppServiceDTO extends AbstractModel {
     /**
      * Get <p>是否限流</p> 
      * @return InvokeLimitConfigStatus <p>是否限流</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -85,7 +87,9 @@ public class AgentAppServiceDTO extends AbstractModel {
     /**
      * Set <p>是否限流</p>
      * @param InvokeLimitConfigStatus <p>是否限流</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -93,7 +97,9 @@ public class AgentAppServiceDTO extends AbstractModel {
     /**
      * Get <p>限流配置</p> 
      * @return InvokeLimitConfig <p>限流配置</p>
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -101,7 +107,9 @@ public class AgentAppServiceDTO extends AbstractModel {
     /**
      * Set <p>限流配置</p>
      * @param InvokeLimitConfig <p>限流配置</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }

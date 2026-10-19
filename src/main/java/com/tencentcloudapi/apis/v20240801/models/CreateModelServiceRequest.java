@@ -353,7 +353,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Get <p>是否开启限流</p> 
      * @return InvokeLimitConfigStatus <p>是否开启限流</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -361,7 +363,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Set <p>是否开启限流</p>
      * @param InvokeLimitConfigStatus <p>是否开启限流</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -369,7 +373,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Get <p>限流配置</p> 
      * @return InvokeLimitConfig <p>限流配置</p>
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -377,7 +383,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Set <p>限流配置</p>
      * @param InvokeLimitConfig <p>限流配置</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }
@@ -385,7 +393,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Get <p>是否开启token控制</p> 
      * @return TokenLimitStatus <p>是否开启token控制</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getTokenLimitStatus() {
         return this.TokenLimitStatus;
     }
@@ -393,7 +403,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Set <p>是否开启token控制</p>
      * @param TokenLimitStatus <p>是否开启token控制</p>
+     * @deprecated
      */
+    @Deprecated
     public void setTokenLimitStatus(Boolean TokenLimitStatus) {
         this.TokenLimitStatus = TokenLimitStatus;
     }
@@ -401,7 +413,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Get <p>token控制</p> 
      * @return TokenLimitConfig <p>token控制</p>
+     * @deprecated
      */
+    @Deprecated
     public TokenLimitConfigDTO getTokenLimitConfig() {
         return this.TokenLimitConfig;
     }
@@ -409,7 +423,9 @@ public class CreateModelServiceRequest extends AbstractModel {
     /**
      * Set <p>token控制</p>
      * @param TokenLimitConfig <p>token控制</p>
+     * @deprecated
      */
+    @Deprecated
     public void setTokenLimitConfig(TokenLimitConfigDTO TokenLimitConfig) {
         this.TokenLimitConfig = TokenLimitConfig;
     }

@@ -45,7 +45,7 @@ public class DescribeEndpointGroupsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+    * <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeEndpointGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p> 
-     * @return Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+     * Get <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p> 
+     * @return Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
-     * @param Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+     * Set <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
+     * @param Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

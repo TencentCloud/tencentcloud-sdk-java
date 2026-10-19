@@ -192,6 +192,14 @@ public class Setats extends AbstractModel {
     private CCN [] CCNs;
 
     /**
+    * <p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterGroupSerialId")
+    @Expose
+    private String ClusterGroupSerialId;
+
+    /**
      * Get <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetatsSerialId <p>setats serialId</p>
@@ -599,6 +607,26 @@ public class Setats extends AbstractModel {
         this.CCNs = CCNs;
     }
 
+    /**
+     * Get <p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterGroupSerialId <p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterGroupSerialId() {
+        return this.ClusterGroupSerialId;
+    }
+
+    /**
+     * Set <p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterGroupSerialId <p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterGroupSerialId(String ClusterGroupSerialId) {
+        this.ClusterGroupSerialId = ClusterGroupSerialId;
+    }
+
     public Setats() {
     }
 
@@ -682,6 +710,9 @@ public class Setats extends AbstractModel {
                 this.CCNs[i] = new CCN(source.CCNs[i]);
             }
         }
+        if (source.ClusterGroupSerialId != null) {
+            this.ClusterGroupSerialId = new String(source.ClusterGroupSerialId);
+        }
     }
 
 
@@ -711,6 +742,7 @@ public class Setats extends AbstractModel {
         this.setParamSimple(map, prefix + "IsolationPolicyVersion", this.IsolationPolicyVersion);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "CCNs.", this.CCNs);
+        this.setParamSimple(map, prefix + "ClusterGroupSerialId", this.ClusterGroupSerialId);
 
     }
 }

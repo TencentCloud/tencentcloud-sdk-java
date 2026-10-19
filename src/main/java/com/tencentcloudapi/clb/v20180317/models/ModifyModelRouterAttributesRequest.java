@@ -101,6 +101,13 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
     private DecisionsConfig DecisionsConfig;
 
     /**
+    * <p>Images 生图配置</p>
+    */
+    @SerializedName("ImageConfig")
+    @Expose
+    private ImageConfig ImageConfig;
+
+    /**
      * Get <p>模型路由ID</p> 
      * @return ModelRouterId <p>模型路由ID</p>
      */
@@ -276,6 +283,22 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.DecisionsConfig = DecisionsConfig;
     }
 
+    /**
+     * Get <p>Images 生图配置</p> 
+     * @return ImageConfig <p>Images 生图配置</p>
+     */
+    public ImageConfig getImageConfig() {
+        return this.ImageConfig;
+    }
+
+    /**
+     * Set <p>Images 生图配置</p>
+     * @param ImageConfig <p>Images 生图配置</p>
+     */
+    public void setImageConfig(ImageConfig ImageConfig) {
+        this.ImageConfig = ImageConfig;
+    }
+
     public ModifyModelRouterAttributesRequest() {
     }
 
@@ -317,6 +340,9 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         if (source.DecisionsConfig != null) {
             this.DecisionsConfig = new DecisionsConfig(source.DecisionsConfig);
         }
+        if (source.ImageConfig != null) {
+            this.ImageConfig = new ImageConfig(source.ImageConfig);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "VideoConfig.", this.VideoConfig);
         this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
         this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
+        this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
 
     }
 }

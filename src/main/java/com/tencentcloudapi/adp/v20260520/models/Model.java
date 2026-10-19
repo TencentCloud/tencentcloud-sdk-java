@@ -25,10 +25,19 @@ public class Model extends AbstractModel {
 
     /**
     * <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BadgeList")
     @Expose
     private ModelBadge [] BadgeList;
+
+    /**
+    * <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeveloperInfo")
+    @Expose
+    private ModelDeveloperBasic DeveloperInfo;
 
     /**
     * <p>模型限制信息</p>
@@ -48,6 +57,7 @@ public class Model extends AbstractModel {
 
     /**
     * <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterList")
     @Expose
@@ -55,6 +65,7 @@ public class Model extends AbstractModel {
 
     /**
     * <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PropertyList")
     @Expose
@@ -84,15 +95,10 @@ public class Model extends AbstractModel {
     private String [] TagList;
 
     /**
-    * <p>模型作者信息</p>
-    */
-    @SerializedName("DeveloperInfo")
-    @Expose
-    private ModelDeveloperBasic DeveloperInfo;
-
-    /**
-     * Get <p>模型徽章列表</p> 
+     * Get <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BadgeList <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelBadge [] getBadgeList() {
         return this.BadgeList;
@@ -100,10 +106,32 @@ public class Model extends AbstractModel {
 
     /**
      * Set <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BadgeList <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBadgeList(ModelBadge [] BadgeList) {
         this.BadgeList = BadgeList;
+    }
+
+    /**
+     * Get <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeveloperInfo <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModelDeveloperBasic getDeveloperInfo() {
+        return this.DeveloperInfo;
+    }
+
+    /**
+     * Set <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeveloperInfo <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeveloperInfo(ModelDeveloperBasic DeveloperInfo) {
+        this.DeveloperInfo = DeveloperInfo;
     }
 
     /**
@@ -147,8 +175,10 @@ public class Model extends AbstractModel {
     }
 
     /**
-     * Get <p>模型超参配置</p> 
+     * Get <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParameterList <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelParameter [] getParameterList() {
         return this.ParameterList;
@@ -156,15 +186,19 @@ public class Model extends AbstractModel {
 
     /**
      * Set <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterList <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterList(ModelParameter [] ParameterList) {
         this.ParameterList = ParameterList;
     }
 
     /**
-     * Get <p>模型属性配置</p> 
+     * Get <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PropertyList <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelProperty [] getPropertyList() {
         return this.PropertyList;
@@ -172,7 +206,9 @@ public class Model extends AbstractModel {
 
     /**
      * Set <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PropertyList <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPropertyList(ModelProperty [] PropertyList) {
         this.PropertyList = PropertyList;
@@ -234,22 +270,6 @@ public class Model extends AbstractModel {
         this.TagList = TagList;
     }
 
-    /**
-     * Get <p>模型作者信息</p> 
-     * @return DeveloperInfo <p>模型作者信息</p>
-     */
-    public ModelDeveloperBasic getDeveloperInfo() {
-        return this.DeveloperInfo;
-    }
-
-    /**
-     * Set <p>模型作者信息</p>
-     * @param DeveloperInfo <p>模型作者信息</p>
-     */
-    public void setDeveloperInfo(ModelDeveloperBasic DeveloperInfo) {
-        this.DeveloperInfo = DeveloperInfo;
-    }
-
     public Model() {
     }
 
@@ -263,6 +283,9 @@ public class Model extends AbstractModel {
             for (int i = 0; i < source.BadgeList.length; i++) {
                 this.BadgeList[i] = new ModelBadge(source.BadgeList[i]);
             }
+        }
+        if (source.DeveloperInfo != null) {
+            this.DeveloperInfo = new ModelDeveloperBasic(source.DeveloperInfo);
         }
         if (source.LimitInfo != null) {
             this.LimitInfo = new ModelLimit(source.LimitInfo);
@@ -294,9 +317,6 @@ public class Model extends AbstractModel {
                 this.TagList[i] = new String(source.TagList[i]);
             }
         }
-        if (source.DeveloperInfo != null) {
-            this.DeveloperInfo = new ModelDeveloperBasic(source.DeveloperInfo);
-        }
     }
 
 
@@ -305,6 +325,7 @@ public class Model extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "BadgeList.", this.BadgeList);
+        this.setParamObj(map, prefix + "DeveloperInfo.", this.DeveloperInfo);
         this.setParamObj(map, prefix + "LimitInfo.", this.LimitInfo);
         this.setParamObj(map, prefix + "ModelBasic.", this.ModelBasic);
         this.setParamArrayObj(map, prefix + "ParameterList.", this.ParameterList);
@@ -312,7 +333,6 @@ public class Model extends AbstractModel {
         this.setParamObj(map, prefix + "ProviderInfo.", this.ProviderInfo);
         this.setParamObj(map, prefix + "StatusInfo.", this.StatusInfo);
         this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
-        this.setParamObj(map, prefix + "DeveloperInfo.", this.DeveloperInfo);
 
     }
 }

@@ -31,7 +31,7 @@ public class ModelUsageDetail extends AbstractModel {
     private String CallType;
 
     /**
-    * <p>是否默认知识库</p>
+    * <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
     */
     @SerializedName("IsDefaultKB")
     @Expose
@@ -75,16 +75,16 @@ public class ModelUsageDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>是否默认知识库</p> 
-     * @return IsDefaultKB <p>是否默认知识库</p>
+     * Get <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p> 
+     * @return IsDefaultKB <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
      */
     public Boolean getIsDefaultKB() {
         return this.IsDefaultKB;
     }
 
     /**
-     * Set <p>是否默认知识库</p>
-     * @param IsDefaultKB <p>是否默认知识库</p>
+     * Set <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
+     * @param IsDefaultKB <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
      */
     public void setIsDefaultKB(Boolean IsDefaultKB) {
         this.IsDefaultKB = IsDefaultKB;

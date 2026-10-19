@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SupportedFileType extends AbstractModel {
 
     /**
-    * 文件类型描述(如"文本文档")
+    * <p>描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 文件类型(如 txt、pdf、jpg, 建议用扩展名)
+    * <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
     */
     @SerializedName("FileExt")
     @Expose
     private String FileExt;
 
     /**
-    * 文件大小限制(单位: 字节)
+    * <p>文件大小限制（单位：字节）</p>
     */
     @SerializedName("MaxSizeBytes")
     @Expose
     private String MaxSizeBytes;
 
     /**
-     * Get 文件类型描述(如"文本文档") 
-     * @return Description 文件类型描述(如"文本文档")
+     * Get <p>描述信息</p> 
+     * @return Description <p>描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 文件类型描述(如"文本文档")
-     * @param Description 文件类型描述(如"文本文档")
+     * Set <p>描述信息</p>
+     * @param Description <p>描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 文件类型(如 txt、pdf、jpg, 建议用扩展名) 
-     * @return FileExt 文件类型(如 txt、pdf、jpg, 建议用扩展名)
+     * Get <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p> 
+     * @return FileExt <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
      */
     public String getFileExt() {
         return this.FileExt;
     }
 
     /**
-     * Set 文件类型(如 txt、pdf、jpg, 建议用扩展名)
-     * @param FileExt 文件类型(如 txt、pdf、jpg, 建议用扩展名)
+     * Set <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
+     * @param FileExt <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
      */
     public void setFileExt(String FileExt) {
         this.FileExt = FileExt;
     }
 
     /**
-     * Get 文件大小限制(单位: 字节) 
-     * @return MaxSizeBytes 文件大小限制(单位: 字节)
+     * Get <p>文件大小限制（单位：字节）</p> 
+     * @return MaxSizeBytes <p>文件大小限制（单位：字节）</p>
      */
     public String getMaxSizeBytes() {
         return this.MaxSizeBytes;
     }
 
     /**
-     * Set 文件大小限制(单位: 字节)
-     * @param MaxSizeBytes 文件大小限制(单位: 字节)
+     * Set <p>文件大小限制（单位：字节）</p>
+     * @param MaxSizeBytes <p>文件大小限制（单位：字节）</p>
      */
     public void setMaxSizeBytes(String MaxSizeBytes) {
         this.MaxSizeBytes = MaxSizeBytes;

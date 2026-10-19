@@ -129,6 +129,13 @@ public class UpdateRayClusterRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>集群ID</p> 
      * @return Id <p>集群ID</p>
      */
@@ -368,6 +375,22 @@ public class UpdateRayClusterRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public UpdateRayClusterRequest() {
     }
 
@@ -424,6 +447,9 @@ public class UpdateRayClusterRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class UpdateRayClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

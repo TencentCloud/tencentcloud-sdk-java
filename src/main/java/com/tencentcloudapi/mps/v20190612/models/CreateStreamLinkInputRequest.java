@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateStreamLinkInputRequest extends AbstractModel {
 
     /**
-    * 媒体传输流ID。
+    * <p>媒体传输流ID。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 流的输入组。
+    * <p>流的输入组。</p>
     */
     @SerializedName("InputGroup")
     @Expose
     private CreateInput [] InputGroup;
 
     /**
-     * Get 媒体传输流ID。 
-     * @return FlowId 媒体传输流ID。
+     * Get <p>媒体传输流ID。</p> 
+     * @return FlowId <p>媒体传输流ID。</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 媒体传输流ID。
-     * @param FlowId 媒体传输流ID。
+     * Set <p>媒体传输流ID。</p>
+     * @param FlowId <p>媒体传输流ID。</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 流的输入组。 
-     * @return InputGroup 流的输入组。
+     * Get <p>流的输入组。</p> 
+     * @return InputGroup <p>流的输入组。</p>
      */
     public CreateInput [] getInputGroup() {
         return this.InputGroup;
     }
 
     /**
-     * Set 流的输入组。
-     * @param InputGroup 流的输入组。
+     * Set <p>流的输入组。</p>
+     * @param InputGroup <p>流的输入组。</p>
      */
     public void setInputGroup(CreateInput [] InputGroup) {
         this.InputGroup = InputGroup;

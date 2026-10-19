@@ -171,17 +171,6 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *用于绑定一个产品和智能体。
-     * @param req BindTWeTalkAIBotRequest
-     * @return BindTWeTalkAIBotResponse
-     * @throws TencentCloudSDKException
-     */
-    public BindTWeTalkAIBotResponse BindTWeTalkAIBot(BindTWeTalkAIBotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BindTWeTalkAIBot", BindTWeTalkAIBotResponse.class);
-    }
-
-    /**
      *绑定智能体到产品或设备
 - `BindingScope=product` 时，`DeviceName` 必须为空。
 - `BindingScope=device` 时，`DeviceName` 必填。
@@ -616,17 +605,6 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *用于新增TWeTalk智能体。
-     * @param req CreateTWeTalkAIBotRequest
-     * @return CreateTWeTalkAIBotResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTWeTalkAIBotResponse CreateTWeTalkAIBot(CreateTWeTalkAIBotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTWeTalkAIBot", CreateTWeTalkAIBotResponse.class);
-    }
-
-    /**
      *新增TWeTalk智能体。
      * @param req CreateTWeTalkAgentRequest
      * @return CreateTWeTalkAgentResponse
@@ -855,17 +833,6 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByCondition(DeleteTWeSeeTasksByConditionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTWeSeeTasksByCondition", DeleteTWeSeeTasksByConditionResponse.class);
-    }
-
-    /**
-     *用于删除TWeTalk智能体。
-     * @param req DeleteTWeTalkAIBotRequest
-     * @return DeleteTWeTalkAIBotResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBot(DeleteTWeTalkAIBotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTWeTalkAIBot", DeleteTWeTalkAIBotResponse.class);
     }
 
     /**
@@ -1650,17 +1617,6 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *用于查询TWeTalk智能体详情。
-     * @param req DescribeTWeTalkAIBotRequest
-     * @return DescribeTWeTalkAIBotResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTWeTalkAIBotResponse DescribeTWeTalkAIBot(DescribeTWeTalkAIBotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTWeTalkAIBot", DescribeTWeTalkAIBotResponse.class);
-    }
-
-    /**
      *用户查询TWeTalk智能体详情
      * @param req DescribeTWeTalkAgentRequest
      * @return DescribeTWeTalkAgentResponse
@@ -2001,17 +1957,6 @@ public class IotexplorerClient extends AbstractClient{
     public GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(GetTWeCallActiveStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTWeCallActiveStatus", GetTWeCallActiveStatusResponse.class);
-    }
-
-    /**
-     *用于查询TWeTalk智能体列表。
-     * @param req GetTWeTalkAIBotListRequest
-     * @return GetTWeTalkAIBotListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetTWeTalkAIBotListResponse GetTWeTalkAIBotList(GetTWeTalkAIBotListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetTWeTalkAIBotList", GetTWeTalkAIBotListResponse.class);
     }
 
     /**
@@ -2532,17 +2477,6 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *用于修改TWeTalk智能体。
-     * @param req ModifyTWeTalkAIBotRequest
-     * @return ModifyTWeTalkAIBotResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTWeTalkAIBotResponse ModifyTWeTalkAIBot(ModifyTWeTalkAIBotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTWeTalkAIBot", ModifyTWeTalkAIBotResponse.class);
-    }
-
-    /**
      *修改TWeTalk智能体
      * @param req ModifyTWeTalkAgentRequest
      * @return ModifyTWeTalkAgentResponse
@@ -2884,17 +2818,6 @@ public class IotexplorerClient extends AbstractClient{
     public UnbindProductsResponse UnbindProducts(UnbindProductsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindProducts", UnbindProductsResponse.class);
-    }
-
-    /**
-     *用于解除一个产品和智能体的绑定。
-     * @param req UnbindTWeTalkAIBotRequest
-     * @return UnbindTWeTalkAIBotResponse
-     * @throws TencentCloudSDKException
-     */
-    public UnbindTWeTalkAIBotResponse UnbindTWeTalkAIBot(UnbindTWeTalkAIBotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UnbindTWeTalkAIBot", UnbindTWeTalkAIBotResponse.class);
     }
 
     /**

@@ -59,7 +59,7 @@ public class DataTransformResouceInfo extends AbstractModel {
     private String ExternalId;
 
     /**
-    * <p>topic名称</p>
+    * <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
     */
     @SerializedName("TopicName")
     @Expose
@@ -153,16 +153,16 @@ public class DataTransformResouceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>topic名称</p> 
-     * @return TopicName <p>topic名称</p>
+     * Get <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p> 
+     * @return TopicName <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set <p>topic名称</p>
-     * @param TopicName <p>topic名称</p>
+     * Set <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
+     * @param TopicName <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

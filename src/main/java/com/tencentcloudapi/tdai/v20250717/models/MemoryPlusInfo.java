@@ -87,6 +87,13 @@ public class MemoryPlusInfo extends AbstractModel {
     private Float CreditUsage;
 
     /**
+    * <p>是否开启压缩</p>
+    */
+    @SerializedName("Compressed")
+    @Expose
+    private Boolean Compressed;
+
+    /**
     * <p>资源标签</p>
     */
     @SerializedName("ResourceTags")
@@ -273,6 +280,22 @@ public class MemoryPlusInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>是否开启压缩</p> 
+     * @return Compressed <p>是否开启压缩</p>
+     */
+    public Boolean getCompressed() {
+        return this.Compressed;
+    }
+
+    /**
+     * Set <p>是否开启压缩</p>
+     * @param Compressed <p>是否开启压缩</p>
+     */
+    public void setCompressed(Boolean Compressed) {
+        this.Compressed = Compressed;
+    }
+
+    /**
      * Get <p>资源标签</p> 
      * @return ResourceTags <p>资源标签</p>
      */
@@ -403,6 +426,9 @@ public class MemoryPlusInfo extends AbstractModel {
         if (source.CreditUsage != null) {
             this.CreditUsage = new Float(source.CreditUsage);
         }
+        if (source.Compressed != null) {
+            this.Compressed = new Boolean(source.Compressed);
+        }
         if (source.ResourceTags != null) {
             this.ResourceTags = new ResourceTag[source.ResourceTags.length];
             for (int i = 0; i < source.ResourceTags.length; i++) {
@@ -440,6 +466,7 @@ public class MemoryPlusInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         this.setParamSimple(map, prefix + "CreditUsage", this.CreditUsage);
+        this.setParamSimple(map, prefix + "Compressed", this.Compressed);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);

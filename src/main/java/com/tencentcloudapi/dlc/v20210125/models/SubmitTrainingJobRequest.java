@@ -199,6 +199,13 @@ public class SubmitTrainingJobRequest extends AbstractModel {
     private String OutputModelName;
 
     /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>训练作业配置名称（≤255 字符）</p> 
      * @return SpecName <p>训练作业配置名称（≤255 字符）</p>
      */
@@ -598,6 +605,22 @@ public class SubmitTrainingJobRequest extends AbstractModel {
         this.OutputModelName = OutputModelName;
     }
 
+    /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public SubmitTrainingJobRequest() {
     }
 
@@ -687,6 +710,9 @@ public class SubmitTrainingJobRequest extends AbstractModel {
         if (source.OutputModelName != null) {
             this.OutputModelName = new String(source.OutputModelName);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -719,6 +745,7 @@ public class SubmitTrainingJobRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MlFlowConfig.", this.MlFlowConfig);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "OutputModelName", this.OutputModelName);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

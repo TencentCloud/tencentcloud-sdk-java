@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ServiceGovernanceConfig extends AbstractModel {
 
     /**
-    * 是否开启服务注册治理
+    * <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
     */
     @SerializedName("EnableGovernance")
     @Expose
     private Boolean EnableGovernance;
 
     /**
-    * 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
+    * <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
     */
     @SerializedName("GovernanceType")
     @Expose
     private String GovernanceType;
 
     /**
-    * 独享实例列表
+    * <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusiveInstances")
@@ -46,41 +46,41 @@ public class ServiceGovernanceConfig extends AbstractModel {
     private ExclusiveInstance [] ExclusiveInstances;
 
     /**
-     * Get 是否开启服务注册治理 
-     * @return EnableGovernance 是否开启服务注册治理
+     * Get <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul> 
+     * @return EnableGovernance <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
      */
     public Boolean getEnableGovernance() {
         return this.EnableGovernance;
     }
 
     /**
-     * Set 是否开启服务注册治理
-     * @param EnableGovernance 是否开启服务注册治理
+     * Set <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
+     * @param EnableGovernance <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
      */
     public void setEnableGovernance(Boolean EnableGovernance) {
         this.EnableGovernance = EnableGovernance;
     }
 
     /**
-     * Get 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型） 
-     * @return GovernanceType 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
+     * Get <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul> 
+     * @return GovernanceType <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
      */
     public String getGovernanceType() {
         return this.GovernanceType;
     }
 
     /**
-     * Set 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
-     * @param GovernanceType 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
+     * Set <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
+     * @param GovernanceType <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
      */
     public void setGovernanceType(String GovernanceType) {
         this.GovernanceType = GovernanceType;
     }
 
     /**
-     * Get 独享实例列表
+     * Get <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExclusiveInstances 独享实例列表
+     * @return ExclusiveInstances <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExclusiveInstance [] getExclusiveInstances() {
@@ -88,9 +88,9 @@ public class ServiceGovernanceConfig extends AbstractModel {
     }
 
     /**
-     * Set 独享实例列表
+     * Set <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExclusiveInstances 独享实例列表
+     * @param ExclusiveInstances <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusiveInstances(ExclusiveInstance [] ExclusiveInstances) {

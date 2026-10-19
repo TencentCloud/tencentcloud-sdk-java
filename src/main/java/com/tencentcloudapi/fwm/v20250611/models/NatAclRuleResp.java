@@ -269,6 +269,20 @@ public class NatAclRuleResp extends AbstractModel {
     private Long DnsParseCnt;
 
     /**
+    * 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+    */
+    @SerializedName("HitCount")
+    @Expose
+    private Long HitCount;
+
+    /**
+    * 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+    */
+    @SerializedName("LastHitTime")
+    @Expose
+    private String LastHitTime;
+
+    /**
      * Get 规则ID 
      * @return RuleId 规则ID
      */
@@ -864,6 +878,38 @@ public class NatAclRuleResp extends AbstractModel {
         this.DnsParseCnt = DnsParseCnt;
     }
 
+    /**
+     * Get 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0 
+     * @return HitCount 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+     */
+    public Long getHitCount() {
+        return this.HitCount;
+    }
+
+    /**
+     * Set 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+     * @param HitCount 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+     */
+    public void setHitCount(Long HitCount) {
+        this.HitCount = HitCount;
+    }
+
+    /**
+     * Get 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-" 
+     * @return LastHitTime 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+     */
+    public String getLastHitTime() {
+        return this.LastHitTime;
+    }
+
+    /**
+     * Set 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+     * @param LastHitTime 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+     */
+    public void setLastHitTime(String LastHitTime) {
+        this.LastHitTime = LastHitTime;
+    }
+
     public NatAclRuleResp() {
     }
 
@@ -968,6 +1014,12 @@ public class NatAclRuleResp extends AbstractModel {
         if (source.DnsParseCnt != null) {
             this.DnsParseCnt = new Long(source.DnsParseCnt);
         }
+        if (source.HitCount != null) {
+            this.HitCount = new Long(source.HitCount);
+        }
+        if (source.LastHitTime != null) {
+            this.LastHitTime = new String(source.LastHitTime);
+        }
     }
 
 
@@ -1007,6 +1059,8 @@ public class NatAclRuleResp extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "DnsParseCnt", this.DnsParseCnt);
+        this.setParamSimple(map, prefix + "HitCount", this.HitCount);
+        this.setParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
 
     }
 }

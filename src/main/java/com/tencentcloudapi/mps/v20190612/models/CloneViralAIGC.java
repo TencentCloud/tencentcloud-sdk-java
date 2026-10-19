@@ -45,7 +45,7 @@ public class CloneViralAIGC extends AbstractModel {
     private String Resolution;
 
     /**
-    * <p>模型等级。flagship（默认）、standard</p>
+    * <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
     */
     @SerializedName("ModelTier")
     @Expose
@@ -100,16 +100,16 @@ public class CloneViralAIGC extends AbstractModel {
     }
 
     /**
-     * Get <p>模型等级。flagship（默认）、standard</p> 
-     * @return ModelTier <p>模型等级。flagship（默认）、standard</p>
+     * Get <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p> 
+     * @return ModelTier <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
      */
     public String getModelTier() {
         return this.ModelTier;
     }
 
     /**
-     * Set <p>模型等级。flagship（默认）、standard</p>
-     * @param ModelTier <p>模型等级。flagship（默认）、standard</p>
+     * Set <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+     * @param ModelTier <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
      */
     public void setModelTier(String ModelTier) {
         this.ModelTier = ModelTier;

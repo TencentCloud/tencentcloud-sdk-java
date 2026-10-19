@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class OrganSummary extends AbstractModel {
 
     /**
-    * 集团名称
+    * <p>集团名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 管理员账号信息
+    * <p>管理员账号信息</p>
     */
     @SerializedName("AdminInfo")
     @Expose
     private MemberInfo AdminInfo;
 
     /**
-    * 管理员/委派管理员数量
+    * <p>管理员/委派管理员数量</p>
     */
     @SerializedName("AdminCount")
     @Expose
     private Long AdminCount;
 
     /**
-    * 已接入成员数
+    * <p>已接入成员数</p>
     */
     @SerializedName("JoinedMemberCount")
     @Expose
     private Long JoinedMemberCount;
 
     /**
-    * 接入成员上限（-1表示无上限）
+    * <p>接入成员上限（-1表示无上限）</p>
     */
     @SerializedName("MemberLimit")
     @Expose
     private Long MemberLimit;
 
     /**
-    * 接入成员上限显示
+    * <p>接入成员上限显示</p>
     */
     @SerializedName("MemberLimitDisplay")
     @Expose
     private String MemberLimitDisplay;
 
     /**
-    * 规格共享者数量
+    * <p>规格共享者数量</p>
     */
     @SerializedName("CfwSharerCount")
     @Expose
     private Long CfwSharerCount;
 
     /**
-    * 规格使用者数量
+    * <p>规格使用者数量</p>
     */
     @SerializedName("CfwUserCount")
     @Expose
     private Long CfwUserCount;
 
     /**
-    * 部门名称列表
+    * <p>部门名称列表</p>
     */
     @SerializedName("Departments")
     @Expose
     private String [] Departments;
 
     /**
-    * 纳管账号数
+    * <p>纳管账号数</p>
     */
     @SerializedName("ManagedMemberCount")
     @Expose
     private Long ManagedMemberCount;
 
     /**
-    * 纳管产品数
+    * <p>纳管产品数</p>
     */
     @SerializedName("ManagedProductCount")
     @Expose
     private Long ManagedProductCount;
 
     /**
-    * 纳管账号数
+    * <p>纳管账号数</p>
     */
     @SerializedName("CfwManageCount")
     @Expose
     private Long CfwManageCount;
 
     /**
-     * Get 集团名称 
-     * @return GroupName 集团名称
+    * <p>规格共享总配额</p>
+    */
+    @SerializedName("FwmShareUserQuota")
+    @Expose
+    private Long FwmShareUserQuota;
+
+    /**
+     * Get <p>集团名称</p> 
+     * @return GroupName <p>集团名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 集团名称
-     * @param GroupName 集团名称
+     * Set <p>集团名称</p>
+     * @param GroupName <p>集团名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 管理员账号信息 
-     * @return AdminInfo 管理员账号信息
+     * Get <p>管理员账号信息</p> 
+     * @return AdminInfo <p>管理员账号信息</p>
      */
     public MemberInfo getAdminInfo() {
         return this.AdminInfo;
     }
 
     /**
-     * Set 管理员账号信息
-     * @param AdminInfo 管理员账号信息
+     * Set <p>管理员账号信息</p>
+     * @param AdminInfo <p>管理员账号信息</p>
      */
     public void setAdminInfo(MemberInfo AdminInfo) {
         this.AdminInfo = AdminInfo;
     }
 
     /**
-     * Get 管理员/委派管理员数量 
-     * @return AdminCount 管理员/委派管理员数量
+     * Get <p>管理员/委派管理员数量</p> 
+     * @return AdminCount <p>管理员/委派管理员数量</p>
      */
     public Long getAdminCount() {
         return this.AdminCount;
     }
 
     /**
-     * Set 管理员/委派管理员数量
-     * @param AdminCount 管理员/委派管理员数量
+     * Set <p>管理员/委派管理员数量</p>
+     * @param AdminCount <p>管理员/委派管理员数量</p>
      */
     public void setAdminCount(Long AdminCount) {
         this.AdminCount = AdminCount;
     }
 
     /**
-     * Get 已接入成员数 
-     * @return JoinedMemberCount 已接入成员数
+     * Get <p>已接入成员数</p> 
+     * @return JoinedMemberCount <p>已接入成员数</p>
      */
     public Long getJoinedMemberCount() {
         return this.JoinedMemberCount;
     }
 
     /**
-     * Set 已接入成员数
-     * @param JoinedMemberCount 已接入成员数
+     * Set <p>已接入成员数</p>
+     * @param JoinedMemberCount <p>已接入成员数</p>
      */
     public void setJoinedMemberCount(Long JoinedMemberCount) {
         this.JoinedMemberCount = JoinedMemberCount;
     }
 
     /**
-     * Get 接入成员上限（-1表示无上限） 
-     * @return MemberLimit 接入成员上限（-1表示无上限）
+     * Get <p>接入成员上限（-1表示无上限）</p> 
+     * @return MemberLimit <p>接入成员上限（-1表示无上限）</p>
      */
     public Long getMemberLimit() {
         return this.MemberLimit;
     }
 
     /**
-     * Set 接入成员上限（-1表示无上限）
-     * @param MemberLimit 接入成员上限（-1表示无上限）
+     * Set <p>接入成员上限（-1表示无上限）</p>
+     * @param MemberLimit <p>接入成员上限（-1表示无上限）</p>
      */
     public void setMemberLimit(Long MemberLimit) {
         this.MemberLimit = MemberLimit;
     }
 
     /**
-     * Get 接入成员上限显示 
-     * @return MemberLimitDisplay 接入成员上限显示
+     * Get <p>接入成员上限显示</p> 
+     * @return MemberLimitDisplay <p>接入成员上限显示</p>
      */
     public String getMemberLimitDisplay() {
         return this.MemberLimitDisplay;
     }
 
     /**
-     * Set 接入成员上限显示
-     * @param MemberLimitDisplay 接入成员上限显示
+     * Set <p>接入成员上限显示</p>
+     * @param MemberLimitDisplay <p>接入成员上限显示</p>
      */
     public void setMemberLimitDisplay(String MemberLimitDisplay) {
         this.MemberLimitDisplay = MemberLimitDisplay;
     }
 
     /**
-     * Get 规格共享者数量 
-     * @return CfwSharerCount 规格共享者数量
+     * Get <p>规格共享者数量</p> 
+     * @return CfwSharerCount <p>规格共享者数量</p>
      */
     public Long getCfwSharerCount() {
         return this.CfwSharerCount;
     }
 
     /**
-     * Set 规格共享者数量
-     * @param CfwSharerCount 规格共享者数量
+     * Set <p>规格共享者数量</p>
+     * @param CfwSharerCount <p>规格共享者数量</p>
      */
     public void setCfwSharerCount(Long CfwSharerCount) {
         this.CfwSharerCount = CfwSharerCount;
     }
 
     /**
-     * Get 规格使用者数量 
-     * @return CfwUserCount 规格使用者数量
+     * Get <p>规格使用者数量</p> 
+     * @return CfwUserCount <p>规格使用者数量</p>
      */
     public Long getCfwUserCount() {
         return this.CfwUserCount;
     }
 
     /**
-     * Set 规格使用者数量
-     * @param CfwUserCount 规格使用者数量
+     * Set <p>规格使用者数量</p>
+     * @param CfwUserCount <p>规格使用者数量</p>
      */
     public void setCfwUserCount(Long CfwUserCount) {
         this.CfwUserCount = CfwUserCount;
     }
 
     /**
-     * Get 部门名称列表 
-     * @return Departments 部门名称列表
+     * Get <p>部门名称列表</p> 
+     * @return Departments <p>部门名称列表</p>
      */
     public String [] getDepartments() {
         return this.Departments;
     }
 
     /**
-     * Set 部门名称列表
-     * @param Departments 部门名称列表
+     * Set <p>部门名称列表</p>
+     * @param Departments <p>部门名称列表</p>
      */
     public void setDepartments(String [] Departments) {
         this.Departments = Departments;
     }
 
     /**
-     * Get 纳管账号数 
-     * @return ManagedMemberCount 纳管账号数
+     * Get <p>纳管账号数</p> 
+     * @return ManagedMemberCount <p>纳管账号数</p>
      */
     public Long getManagedMemberCount() {
         return this.ManagedMemberCount;
     }
 
     /**
-     * Set 纳管账号数
-     * @param ManagedMemberCount 纳管账号数
+     * Set <p>纳管账号数</p>
+     * @param ManagedMemberCount <p>纳管账号数</p>
      */
     public void setManagedMemberCount(Long ManagedMemberCount) {
         this.ManagedMemberCount = ManagedMemberCount;
     }
 
     /**
-     * Get 纳管产品数 
-     * @return ManagedProductCount 纳管产品数
+     * Get <p>纳管产品数</p> 
+     * @return ManagedProductCount <p>纳管产品数</p>
      */
     public Long getManagedProductCount() {
         return this.ManagedProductCount;
     }
 
     /**
-     * Set 纳管产品数
-     * @param ManagedProductCount 纳管产品数
+     * Set <p>纳管产品数</p>
+     * @param ManagedProductCount <p>纳管产品数</p>
      */
     public void setManagedProductCount(Long ManagedProductCount) {
         this.ManagedProductCount = ManagedProductCount;
     }
 
     /**
-     * Get 纳管账号数 
-     * @return CfwManageCount 纳管账号数
+     * Get <p>纳管账号数</p> 
+     * @return CfwManageCount <p>纳管账号数</p>
      */
     public Long getCfwManageCount() {
         return this.CfwManageCount;
     }
 
     /**
-     * Set 纳管账号数
-     * @param CfwManageCount 纳管账号数
+     * Set <p>纳管账号数</p>
+     * @param CfwManageCount <p>纳管账号数</p>
      */
     public void setCfwManageCount(Long CfwManageCount) {
         this.CfwManageCount = CfwManageCount;
+    }
+
+    /**
+     * Get <p>规格共享总配额</p> 
+     * @return FwmShareUserQuota <p>规格共享总配额</p>
+     */
+    public Long getFwmShareUserQuota() {
+        return this.FwmShareUserQuota;
+    }
+
+    /**
+     * Set <p>规格共享总配额</p>
+     * @param FwmShareUserQuota <p>规格共享总配额</p>
+     */
+    public void setFwmShareUserQuota(Long FwmShareUserQuota) {
+        this.FwmShareUserQuota = FwmShareUserQuota;
     }
 
     public OrganSummary() {
@@ -346,6 +369,9 @@ public class OrganSummary extends AbstractModel {
         if (source.CfwManageCount != null) {
             this.CfwManageCount = new Long(source.CfwManageCount);
         }
+        if (source.FwmShareUserQuota != null) {
+            this.FwmShareUserQuota = new Long(source.FwmShareUserQuota);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class OrganSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "ManagedMemberCount", this.ManagedMemberCount);
         this.setParamSimple(map, prefix + "ManagedProductCount", this.ManagedProductCount);
         this.setParamSimple(map, prefix + "CfwManageCount", this.CfwManageCount);
+        this.setParamSimple(map, prefix + "FwmShareUserQuota", this.FwmShareUserQuota);
 
     }
 }

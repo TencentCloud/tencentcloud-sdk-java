@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAppResponse extends AbstractModel {
 
     /**
-    * app_id
+    * <p>app_id</p>
     */
     @SerializedName("AppId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAppResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get app_id 
-     * @return AppId app_id
+     * Get <p>app_id</p> 
+     * @return AppId <p>app_id</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set app_id
-     * @param AppId app_id
+     * Set <p>app_id</p>
+     * @param AppId <p>app_id</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

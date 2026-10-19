@@ -31,7 +31,7 @@ public class AudioEnhanceEditConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
+    * <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
     */
     @SerializedName("Type")
     @Expose
@@ -54,16 +54,16 @@ public class AudioEnhanceEditConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p> 
-     * @return Type <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
+     * Get <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p> 
+     * @return Type <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
-     * @param Type <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
+     * Set <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
+     * @param Type <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
      */
     public void setType(String Type) {
         this.Type = Type;

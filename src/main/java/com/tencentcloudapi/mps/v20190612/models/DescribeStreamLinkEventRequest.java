@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeStreamLinkEventRequest extends AbstractModel {
 
     /**
-    * 媒体传输事件ID。
+    * <p>媒体传输事件ID。</p>
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-     * Get 媒体传输事件ID。 
-     * @return EventId 媒体传输事件ID。
+     * Get <p>媒体传输事件ID。</p> 
+     * @return EventId <p>媒体传输事件ID。</p>
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 媒体传输事件ID。
-     * @param EventId 媒体传输事件ID。
+     * Set <p>媒体传输事件ID。</p>
+     * @param EventId <p>媒体传输事件ID。</p>
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;

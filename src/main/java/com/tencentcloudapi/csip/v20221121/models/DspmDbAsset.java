@@ -220,6 +220,13 @@ public class DspmDbAsset extends AbstractModel {
     private String LogDeliveryDisableReason;
 
     /**
+    * <p>日志审计禁止开通时的详细说明</p>
+    */
+    @SerializedName("LogDeliveryDisableMessage")
+    @Expose
+    private String LogDeliveryDisableMessage;
+
+    /**
     * <p>在线日志的起始时间戳，精确到秒</p>
     */
     @SerializedName("OldestOnlineLogTimestamp")
@@ -283,6 +290,13 @@ public class DspmDbAsset extends AbstractModel {
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
+
+    /**
+    * <p>数据库版本</p>
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
 
     /**
      * Get <p>资产实例Id</p> 
@@ -733,6 +747,22 @@ public class DspmDbAsset extends AbstractModel {
     }
 
     /**
+     * Get <p>日志审计禁止开通时的详细说明</p> 
+     * @return LogDeliveryDisableMessage <p>日志审计禁止开通时的详细说明</p>
+     */
+    public String getLogDeliveryDisableMessage() {
+        return this.LogDeliveryDisableMessage;
+    }
+
+    /**
+     * Set <p>日志审计禁止开通时的详细说明</p>
+     * @param LogDeliveryDisableMessage <p>日志审计禁止开通时的详细说明</p>
+     */
+    public void setLogDeliveryDisableMessage(String LogDeliveryDisableMessage) {
+        this.LogDeliveryDisableMessage = LogDeliveryDisableMessage;
+    }
+
+    /**
      * Get <p>在线日志的起始时间戳，精确到秒</p> 
      * @return OldestOnlineLogTimestamp <p>在线日志的起始时间戳，精确到秒</p>
      */
@@ -884,6 +914,22 @@ public class DspmDbAsset extends AbstractModel {
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public DspmDbAsset() {
     }
 
@@ -979,6 +1025,9 @@ public class DspmDbAsset extends AbstractModel {
         if (source.LogDeliveryDisableReason != null) {
             this.LogDeliveryDisableReason = new String(source.LogDeliveryDisableReason);
         }
+        if (source.LogDeliveryDisableMessage != null) {
+            this.LogDeliveryDisableMessage = new String(source.LogDeliveryDisableMessage);
+        }
         if (source.OldestOnlineLogTimestamp != null) {
             this.OldestOnlineLogTimestamp = new Long(source.OldestOnlineLogTimestamp);
         }
@@ -1005,6 +1054,9 @@ public class DspmDbAsset extends AbstractModel {
         }
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
         }
     }
 
@@ -1041,6 +1093,7 @@ public class DspmDbAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "SecurityAnalyseStatus", this.SecurityAnalyseStatus);
         this.setParamSimple(map, prefix + "TotalAuditLogs", this.TotalAuditLogs);
         this.setParamSimple(map, prefix + "LogDeliveryDisableReason", this.LogDeliveryDisableReason);
+        this.setParamSimple(map, prefix + "LogDeliveryDisableMessage", this.LogDeliveryDisableMessage);
         this.setParamSimple(map, prefix + "OldestOnlineLogTimestamp", this.OldestOnlineLogTimestamp);
         this.setParamSimple(map, prefix + "NewestOnlineLogTimestamp", this.NewestOnlineLogTimestamp);
         this.setParamSimple(map, prefix + "OperationErrorMsg", this.OperationErrorMsg);
@@ -1050,6 +1103,7 @@ public class DspmDbAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "IdentifyScanSupported", this.IdentifyScanSupported);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

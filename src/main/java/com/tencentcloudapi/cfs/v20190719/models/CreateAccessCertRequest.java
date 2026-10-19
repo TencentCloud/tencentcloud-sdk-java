@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class CreateAccessCertRequest extends AbstractModel {
 
     /**
-    * 证书描述，不超过64字符
+    * <p>证书描述，不超过64字符</p>
     */
     @SerializedName("CertDesc")
     @Expose
     private String CertDesc;
 
     /**
-     * Get 证书描述，不超过64字符 
-     * @return CertDesc 证书描述，不超过64字符
+    * <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+     * Get <p>证书描述，不超过64字符</p> 
+     * @return CertDesc <p>证书描述，不超过64字符</p>
      */
     public String getCertDesc() {
         return this.CertDesc;
     }
 
     /**
-     * Set 证书描述，不超过64字符
-     * @param CertDesc 证书描述，不超过64字符
+     * Set <p>证书描述，不超过64字符</p>
+     * @param CertDesc <p>证书描述，不超过64字符</p>
      */
     public void setCertDesc(String CertDesc) {
         this.CertDesc = CertDesc;
+    }
+
+    /**
+     * Get <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p> 
+     * @return Type <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+     * @param Type <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public CreateAccessCertRequest() {
@@ -57,6 +80,9 @@ public class CreateAccessCertRequest extends AbstractModel {
         if (source.CertDesc != null) {
             this.CertDesc = new String(source.CertDesc);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CreateAccessCertRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertDesc", this.CertDesc);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -199,6 +199,13 @@ public class ModifyTrainingJobSpecRequest extends AbstractModel {
     private TrainingTuningParams TuningParams;
 
     /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>配置 ID</p> 
      * @return SpecId <p>配置 ID</p>
      */
@@ -598,6 +605,22 @@ public class ModifyTrainingJobSpecRequest extends AbstractModel {
         this.TuningParams = TuningParams;
     }
 
+    /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public ModifyTrainingJobSpecRequest() {
     }
 
@@ -687,6 +710,9 @@ public class ModifyTrainingJobSpecRequest extends AbstractModel {
         if (source.TuningParams != null) {
             this.TuningParams = new TrainingTuningParams(source.TuningParams);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -719,6 +745,7 @@ public class ModifyTrainingJobSpecRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Checkpoint.", this.Checkpoint);
         this.setParamSimple(map, prefix + "ResumeTraining", this.ResumeTraining);
         this.setParamObj(map, prefix + "TuningParams.", this.TuningParams);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

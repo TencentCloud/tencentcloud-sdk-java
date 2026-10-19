@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowSchedulerConfiguration extends AbstractModel {
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -32,15 +32,7 @@ public class WorkflowSchedulerConfiguration extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
-    * 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+    * <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -48,7 +40,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CycleType;
 
     /**
-    * 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+    * <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfDepend")
@@ -56,7 +48,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String SelfDepend;
 
     /**
-    * 生效开始时间
+    * <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -64,7 +56,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String StartTime;
 
     /**
-    * 生效结束时间
+    * <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -72,7 +64,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String EndTime;
 
     /**
-    * 工作流依赖，yes or no
+    * <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyWorkflow")
@@ -80,7 +72,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String DependencyWorkflow;
 
     /**
-    * 执行时间左闭区间，示例：00:00
+    * <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -88,7 +80,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间，示例：23:59
+    * <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEndTime")
@@ -96,7 +88,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String ExecutionEndTime;
 
     /**
-    * cron表达式
+    * <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -104,7 +96,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CrontabExpression;
 
     /**
-    * 是否开启日历调度 1 开启 0关闭
+    * <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarOpen")
@@ -112,7 +104,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CalendarOpen;
 
     /**
-    * 日历名称
+    * <p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarName")
@@ -120,7 +112,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CalendarName;
 
     /**
-    * 日历id
+    * <p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarId")
@@ -128,9 +120,17 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CalendarId;
 
     /**
-     * Get 时区
+    * <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinuteOffset")
+    @Expose
+    private Long MinuteOffset;
+
+    /**
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 时区
+     * @return ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -138,9 +138,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 时区
+     * @param ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -148,25 +148,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Get <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @return CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -174,25 +158,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Set <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @param CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -200,9 +168,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Get <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * @return SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfDepend() {
@@ -210,9 +178,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Set <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * @param SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfDepend(String SelfDepend) {
@@ -220,9 +188,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 生效开始时间
+     * Get <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 生效开始时间
+     * @return StartTime <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -230,9 +198,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 生效开始时间
+     * Set <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 生效开始时间
+     * @param StartTime <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -240,9 +208,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 生效结束时间
+     * Get <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 生效结束时间
+     * @return EndTime <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -250,9 +218,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 生效结束时间
+     * Set <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 生效结束时间
+     * @param EndTime <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -260,9 +228,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 工作流依赖，yes or no
+     * Get <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyWorkflow 工作流依赖，yes or no
+     * @return DependencyWorkflow <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyWorkflow() {
@@ -270,9 +238,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 工作流依赖，yes or no
+     * Set <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyWorkflow 工作流依赖，yes or no
+     * @param DependencyWorkflow <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
@@ -280,9 +248,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 执行时间左闭区间，示例：00:00
+     * Get <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 执行时间左闭区间，示例：00:00
+     * @return ExecutionStartTime <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -290,9 +258,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 执行时间左闭区间，示例：00:00
+     * Set <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 执行时间左闭区间，示例：00:00
+     * @param ExecutionStartTime <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -300,9 +268,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 执行时间右闭区间，示例：23:59
+     * Get <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionEndTime 执行时间右闭区间，示例：23:59
+     * @return ExecutionEndTime <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEndTime() {
@@ -310,9 +278,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 执行时间右闭区间，示例：23:59
+     * Set <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionEndTime 执行时间右闭区间，示例：23:59
+     * @param ExecutionEndTime <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
@@ -320,9 +288,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get cron表达式
+     * Get <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression cron表达式
+     * @return CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -330,9 +298,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set cron表达式
+     * Set <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression cron表达式
+     * @param CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -340,9 +308,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 是否开启日历调度 1 开启 0关闭
+     * Get <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * @return CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarOpen() {
@@ -350,9 +318,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 是否开启日历调度 1 开启 0关闭
+     * Set <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * @param CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarOpen(String CalendarOpen) {
@@ -360,9 +328,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 日历名称
+     * Get <p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarName 日历名称
+     * @return CalendarName <p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarName() {
@@ -370,9 +338,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 日历名称
+     * Set <p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarName 日历名称
+     * @param CalendarName <p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarName(String CalendarName) {
@@ -380,9 +348,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 日历id
+     * Get <p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarId 日历id
+     * @return CalendarId <p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarId() {
@@ -390,13 +358,33 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 日历id
+     * Set <p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarId 日历id
+     * @param CalendarId <p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarId(String CalendarId) {
         this.CalendarId = CalendarId;
+    }
+
+    /**
+     * Get <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinuteOffset <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinuteOffset() {
+        return this.MinuteOffset;
+    }
+
+    /**
+     * Set <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinuteOffset <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinuteOffset(Long MinuteOffset) {
+        this.MinuteOffset = MinuteOffset;
     }
 
     public WorkflowSchedulerConfiguration() {
@@ -443,6 +431,9 @@ CRONTAB_CYCLE: crontab表达式类型
         if (source.CalendarId != null) {
             this.CalendarId = new String(source.CalendarId);
         }
+        if (source.MinuteOffset != null) {
+            this.MinuteOffset = new Long(source.MinuteOffset);
+        }
     }
 
 
@@ -462,6 +453,7 @@ CRONTAB_CYCLE: crontab表达式类型
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
+        this.setParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
 
     }
 }

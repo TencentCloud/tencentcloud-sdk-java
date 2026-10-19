@@ -305,6 +305,13 @@ public class LabResponse extends AbstractModel {
     private String Token;
 
     /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>案例模板ID（startMode=EXAMPLE 时使用）</p> 
      * @return ExampleId <p>案例模板ID（startMode=EXAMPLE 时使用）</p>
      */
@@ -948,6 +955,22 @@ public class LabResponse extends AbstractModel {
         this.Token = Token;
     }
 
+    /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public LabResponse() {
     }
 
@@ -1082,6 +1105,9 @@ public class LabResponse extends AbstractModel {
         if (source.Token != null) {
             this.Token = new String(source.Token);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -1129,6 +1155,7 @@ public class LabResponse extends AbstractModel {
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
         this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

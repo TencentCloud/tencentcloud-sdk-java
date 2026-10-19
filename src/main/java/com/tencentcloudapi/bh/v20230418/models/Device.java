@@ -255,6 +255,27 @@ public class Device extends AbstractModel {
     private Long SyncCloudDeviceStatus;
 
     /**
+    * <p>所属账号 AppId</p>
+    */
+    @SerializedName("OwnerAppId")
+    @Expose
+    private Long OwnerAppId;
+
+    /**
+    * <p>所属账号 UIN</p>
+    */
+    @SerializedName("OwnerAccountUin")
+    @Expose
+    private String OwnerAccountUin;
+
+    /**
+    * <p>所属账号展示名</p>
+    */
+    @SerializedName("OwnerAccountName")
+    @Expose
+    private String OwnerAccountName;
+
+    /**
      * Get <p>资产ID</p> 
      * @return Id <p>资产ID</p>
      */
@@ -782,6 +803,54 @@ public class Device extends AbstractModel {
         this.SyncCloudDeviceStatus = SyncCloudDeviceStatus;
     }
 
+    /**
+     * Get <p>所属账号 AppId</p> 
+     * @return OwnerAppId <p>所属账号 AppId</p>
+     */
+    public Long getOwnerAppId() {
+        return this.OwnerAppId;
+    }
+
+    /**
+     * Set <p>所属账号 AppId</p>
+     * @param OwnerAppId <p>所属账号 AppId</p>
+     */
+    public void setOwnerAppId(Long OwnerAppId) {
+        this.OwnerAppId = OwnerAppId;
+    }
+
+    /**
+     * Get <p>所属账号 UIN</p> 
+     * @return OwnerAccountUin <p>所属账号 UIN</p>
+     */
+    public String getOwnerAccountUin() {
+        return this.OwnerAccountUin;
+    }
+
+    /**
+     * Set <p>所属账号 UIN</p>
+     * @param OwnerAccountUin <p>所属账号 UIN</p>
+     */
+    public void setOwnerAccountUin(String OwnerAccountUin) {
+        this.OwnerAccountUin = OwnerAccountUin;
+    }
+
+    /**
+     * Get <p>所属账号展示名</p> 
+     * @return OwnerAccountName <p>所属账号展示名</p>
+     */
+    public String getOwnerAccountName() {
+        return this.OwnerAccountName;
+    }
+
+    /**
+     * Set <p>所属账号展示名</p>
+     * @param OwnerAccountName <p>所属账号展示名</p>
+     */
+    public void setOwnerAccountName(String OwnerAccountName) {
+        this.OwnerAccountName = OwnerAccountName;
+    }
+
     public Device() {
     }
 
@@ -895,6 +964,15 @@ public class Device extends AbstractModel {
         if (source.SyncCloudDeviceStatus != null) {
             this.SyncCloudDeviceStatus = new Long(source.SyncCloudDeviceStatus);
         }
+        if (source.OwnerAppId != null) {
+            this.OwnerAppId = new Long(source.OwnerAppId);
+        }
+        if (source.OwnerAccountUin != null) {
+            this.OwnerAccountUin = new String(source.OwnerAccountUin);
+        }
+        if (source.OwnerAccountName != null) {
+            this.OwnerAccountName = new String(source.OwnerAccountName);
+        }
     }
 
 
@@ -935,6 +1013,9 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
         this.setParamSimple(map, prefix + "ProviderName", this.ProviderName);
         this.setParamSimple(map, prefix + "SyncCloudDeviceStatus", this.SyncCloudDeviceStatus);
+        this.setParamSimple(map, prefix + "OwnerAppId", this.OwnerAppId);
+        this.setParamSimple(map, prefix + "OwnerAccountUin", this.OwnerAccountUin);
+        this.setParamSimple(map, prefix + "OwnerAccountName", this.OwnerAccountName);
 
     }
 }

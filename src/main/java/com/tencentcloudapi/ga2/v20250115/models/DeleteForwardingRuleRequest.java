@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DeleteForwardingRuleRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 监听器ID。
+    * <p>监听器ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 策略ID。
+    * <p>七层转发策略ID。</p>
     */
     @SerializedName("ForwardingPolicyId")
     @Expose
     private String ForwardingPolicyId;
 
     /**
-    * 七层转发规则ID。
+    * <p>七层转发规则ID。</p>
     */
     @SerializedName("ForwardingRuleId")
     @Expose
     private String ForwardingRuleId;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 监听器ID。 
-     * @return ListenerId 监听器ID。
+     * Get <p>监听器ID。</p> 
+     * @return ListenerId <p>监听器ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID。
-     * @param ListenerId 监听器ID。
+     * Set <p>监听器ID。</p>
+     * @param ListenerId <p>监听器ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 策略ID。 
-     * @return ForwardingPolicyId 策略ID。
+     * Get <p>七层转发策略ID。</p> 
+     * @return ForwardingPolicyId <p>七层转发策略ID。</p>
      */
     public String getForwardingPolicyId() {
         return this.ForwardingPolicyId;
     }
 
     /**
-     * Set 策略ID。
-     * @param ForwardingPolicyId 策略ID。
+     * Set <p>七层转发策略ID。</p>
+     * @param ForwardingPolicyId <p>七层转发策略ID。</p>
      */
     public void setForwardingPolicyId(String ForwardingPolicyId) {
         this.ForwardingPolicyId = ForwardingPolicyId;
     }
 
     /**
-     * Get 七层转发规则ID。 
-     * @return ForwardingRuleId 七层转发规则ID。
+     * Get <p>七层转发规则ID。</p> 
+     * @return ForwardingRuleId <p>七层转发规则ID。</p>
      */
     public String getForwardingRuleId() {
         return this.ForwardingRuleId;
     }
 
     /**
-     * Set 七层转发规则ID。
-     * @param ForwardingRuleId 七层转发规则ID。
+     * Set <p>七层转发规则ID。</p>
+     * @param ForwardingRuleId <p>七层转发规则ID。</p>
      */
     public void setForwardingRuleId(String ForwardingRuleId) {
         this.ForwardingRuleId = ForwardingRuleId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateSecurityGroupRuleRequest extends AbstractModel {
 
     /**
-    * 规则组Id
+    * <p>规则组Id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 规则列表
+    * <p>规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
     private SecurityGroupRule [] Rules;
 
     /**
-     * Get 规则组Id 
-     * @return GroupId 规则组Id
+     * Get <p>规则组Id</p> 
+     * @return GroupId <p>规则组Id</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 规则组Id
-     * @param GroupId 规则组Id
+     * Set <p>规则组Id</p>
+     * @param GroupId <p>规则组Id</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 规则列表 
-     * @return Rules 规则列表
+     * Get <p>规则列表</p> 
+     * @return Rules <p>规则列表</p>
      */
     public SecurityGroupRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 规则列表
-     * @param Rules 规则列表
+     * Set <p>规则列表</p>
+     * @param Rules <p>规则列表</p>
      */
     public void setRules(SecurityGroupRule [] Rules) {
         this.Rules = Rules;

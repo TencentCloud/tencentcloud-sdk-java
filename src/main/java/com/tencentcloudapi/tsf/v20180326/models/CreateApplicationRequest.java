@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateApplicationRequest extends AbstractModel {
 
     /**
-    * 应用名称，最长60字符
+    * <p>应用名称，最长60字符</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+    * <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
     */
     @SerializedName("ApplicationType")
     @Expose
     private String ApplicationType;
 
     /**
-    * 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+    * <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
     */
     @SerializedName("MicroserviceType")
     @Expose
     private String MicroserviceType;
 
     /**
-    * 应用描述
+    * <p>应用描述</p>
     */
     @SerializedName("ApplicationDesc")
     @Expose
     private String ApplicationDesc;
 
     /**
-    * 应用日志配置项，废弃参数
+    * <p>应用日志配置项，废弃参数</p>
     */
     @SerializedName("ApplicationLogConfig")
     @Expose
     private String ApplicationLogConfig;
 
     /**
-    * 应用资源类型，废弃参数
+    * <p>应用资源类型，废弃参数</p>
     */
     @SerializedName("ApplicationResourceType")
     @Expose
     private String ApplicationResourceType;
 
     /**
-    * 应用runtime类型
+    * <p>应用runtime类型</p>
     */
     @SerializedName("ApplicationRuntimeType")
     @Expose
     private String ApplicationRuntimeType;
 
     /**
-    * 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+    * <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
     */
     @SerializedName("ProgramId")
     @Expose
     private String ProgramId;
 
     /**
-    * 服务配置信息列表
+    * <p>服务配置信息列表</p>
     */
     @SerializedName("ServiceConfigList")
     @Expose
     private ServiceConfig [] ServiceConfigList;
 
     /**
-    * 忽略创建镜像仓库
+    * <p>忽略创建镜像仓库</p>
     */
     @SerializedName("IgnoreCreateImageRepository")
     @Expose
     private Boolean IgnoreCreateImageRepository;
 
     /**
-    * 数据集id列表
+    * <p>数据集id列表</p>
     */
     @SerializedName("ProgramIdList")
     @Expose
     private String [] ProgramIdList;
 
     /**
-    * apm业务系统id
+    * <p>apm业务系统id</p>
     */
     @SerializedName("ApmInstanceId")
     @Expose
     private String ApmInstanceId;
 
     /**
-    * 编程语言:  Java；C/C++；Python；Go；Other
+    * <p>编程语言:  Java；C/C++；Python；Go；Other</p>
     */
     @SerializedName("ProgramLanguage")
     @Expose
     private String ProgramLanguage;
 
     /**
-    * 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+    * <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
     */
     @SerializedName("FrameworkType")
     @Expose
     private String FrameworkType;
 
     /**
-    * 注册配置治理
+    * <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
     */
     @SerializedName("ServiceGovernanceConfig")
     @Expose
     private ServiceGovernanceConfig ServiceGovernanceConfig;
 
     /**
-    * 是否创建并关联同名镜像仓库
+    * <p>是否创建并关联同名镜像仓库</p>
     */
     @SerializedName("CreateSameNameImageRepository")
     @Expose
     private Boolean CreateSameNameImageRepository;
 
     /**
-     * Get 应用名称，最长60字符 
-     * @return ApplicationName 应用名称，最长60字符
+     * Get <p>应用名称，最长60字符</p> 
+     * @return ApplicationName <p>应用名称，最长60字符</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set 应用名称，最长60字符
-     * @param ApplicationName 应用名称，最长60字符
+     * Set <p>应用名称，最长60字符</p>
+     * @param ApplicationName <p>应用名称，最长60字符</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用 
-     * @return ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+     * Get <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p> 
+     * @return ApplicationType <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
-     * @param ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+     * Set <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
+     * @param ApplicationType <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用 
-     * @return MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     * Get <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p> 
+     * @return MicroserviceType <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
     }
 
     /**
-     * Set 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
-     * @param MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     * Set <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
+     * @param MicroserviceType <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
     }
 
     /**
-     * Get 应用描述 
-     * @return ApplicationDesc 应用描述
+     * Get <p>应用描述</p> 
+     * @return ApplicationDesc <p>应用描述</p>
      */
     public String getApplicationDesc() {
         return this.ApplicationDesc;
     }
 
     /**
-     * Set 应用描述
-     * @param ApplicationDesc 应用描述
+     * Set <p>应用描述</p>
+     * @param ApplicationDesc <p>应用描述</p>
      */
     public void setApplicationDesc(String ApplicationDesc) {
         this.ApplicationDesc = ApplicationDesc;
     }
 
     /**
-     * Get 应用日志配置项，废弃参数 
-     * @return ApplicationLogConfig 应用日志配置项，废弃参数
+     * Get <p>应用日志配置项，废弃参数</p> 
+     * @return ApplicationLogConfig <p>应用日志配置项，废弃参数</p>
      * @deprecated
      */
     @Deprecated
@@ -210,8 +210,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set 应用日志配置项，废弃参数
-     * @param ApplicationLogConfig 应用日志配置项，废弃参数
+     * Set <p>应用日志配置项，废弃参数</p>
+     * @param ApplicationLogConfig <p>应用日志配置项，废弃参数</p>
      * @deprecated
      */
     @Deprecated
@@ -220,8 +220,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用资源类型，废弃参数 
-     * @return ApplicationResourceType 应用资源类型，废弃参数
+     * Get <p>应用资源类型，废弃参数</p> 
+     * @return ApplicationResourceType <p>应用资源类型，废弃参数</p>
      * @deprecated
      */
     @Deprecated
@@ -230,8 +230,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set 应用资源类型，废弃参数
-     * @param ApplicationResourceType 应用资源类型，废弃参数
+     * Set <p>应用资源类型，废弃参数</p>
+     * @param ApplicationResourceType <p>应用资源类型，废弃参数</p>
      * @deprecated
      */
     @Deprecated
@@ -240,160 +240,160 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用runtime类型 
-     * @return ApplicationRuntimeType 应用runtime类型
+     * Get <p>应用runtime类型</p> 
+     * @return ApplicationRuntimeType <p>应用runtime类型</p>
      */
     public String getApplicationRuntimeType() {
         return this.ApplicationRuntimeType;
     }
 
     /**
-     * Set 应用runtime类型
-     * @param ApplicationRuntimeType 应用runtime类型
+     * Set <p>应用runtime类型</p>
+     * @param ApplicationRuntimeType <p>应用runtime类型</p>
      */
     public void setApplicationRuntimeType(String ApplicationRuntimeType) {
         this.ApplicationRuntimeType = ApplicationRuntimeType;
     }
 
     /**
-     * Get 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。 
-     * @return ProgramId 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+     * Get <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p> 
+     * @return ProgramId <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
      */
     public String getProgramId() {
         return this.ProgramId;
     }
 
     /**
-     * Set 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
-     * @param ProgramId 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+     * Set <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
+     * @param ProgramId <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;
     }
 
     /**
-     * Get 服务配置信息列表 
-     * @return ServiceConfigList 服务配置信息列表
+     * Get <p>服务配置信息列表</p> 
+     * @return ServiceConfigList <p>服务配置信息列表</p>
      */
     public ServiceConfig [] getServiceConfigList() {
         return this.ServiceConfigList;
     }
 
     /**
-     * Set 服务配置信息列表
-     * @param ServiceConfigList 服务配置信息列表
+     * Set <p>服务配置信息列表</p>
+     * @param ServiceConfigList <p>服务配置信息列表</p>
      */
     public void setServiceConfigList(ServiceConfig [] ServiceConfigList) {
         this.ServiceConfigList = ServiceConfigList;
     }
 
     /**
-     * Get 忽略创建镜像仓库 
-     * @return IgnoreCreateImageRepository 忽略创建镜像仓库
+     * Get <p>忽略创建镜像仓库</p> 
+     * @return IgnoreCreateImageRepository <p>忽略创建镜像仓库</p>
      */
     public Boolean getIgnoreCreateImageRepository() {
         return this.IgnoreCreateImageRepository;
     }
 
     /**
-     * Set 忽略创建镜像仓库
-     * @param IgnoreCreateImageRepository 忽略创建镜像仓库
+     * Set <p>忽略创建镜像仓库</p>
+     * @param IgnoreCreateImageRepository <p>忽略创建镜像仓库</p>
      */
     public void setIgnoreCreateImageRepository(Boolean IgnoreCreateImageRepository) {
         this.IgnoreCreateImageRepository = IgnoreCreateImageRepository;
     }
 
     /**
-     * Get 数据集id列表 
-     * @return ProgramIdList 数据集id列表
+     * Get <p>数据集id列表</p> 
+     * @return ProgramIdList <p>数据集id列表</p>
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 数据集id列表
-     * @param ProgramIdList 数据集id列表
+     * Set <p>数据集id列表</p>
+     * @param ProgramIdList <p>数据集id列表</p>
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;
     }
 
     /**
-     * Get apm业务系统id 
-     * @return ApmInstanceId apm业务系统id
+     * Get <p>apm业务系统id</p> 
+     * @return ApmInstanceId <p>apm业务系统id</p>
      */
     public String getApmInstanceId() {
         return this.ApmInstanceId;
     }
 
     /**
-     * Set apm业务系统id
-     * @param ApmInstanceId apm业务系统id
+     * Set <p>apm业务系统id</p>
+     * @param ApmInstanceId <p>apm业务系统id</p>
      */
     public void setApmInstanceId(String ApmInstanceId) {
         this.ApmInstanceId = ApmInstanceId;
     }
 
     /**
-     * Get 编程语言:  Java；C/C++；Python；Go；Other 
-     * @return ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
+     * Get <p>编程语言:  Java；C/C++；Python；Go；Other</p> 
+     * @return ProgramLanguage <p>编程语言:  Java；C/C++；Python；Go；Other</p>
      */
     public String getProgramLanguage() {
         return this.ProgramLanguage;
     }
 
     /**
-     * Set 编程语言:  Java；C/C++；Python；Go；Other
-     * @param ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
+     * Set <p>编程语言:  Java；C/C++；Python；Go；Other</p>
+     * @param ProgramLanguage <p>编程语言:  Java；C/C++；Python；Go；Other</p>
      */
     public void setProgramLanguage(String ProgramLanguage) {
         this.ProgramLanguage = ProgramLanguage;
     }
 
     /**
-     * Get 开发框架-SpringCloud/Dubbo/Go-GRPC/Other 
-     * @return FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+     * Get <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p> 
+     * @return FrameworkType <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
      */
     public String getFrameworkType() {
         return this.FrameworkType;
     }
 
     /**
-     * Set 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
-     * @param FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+     * Set <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
+     * @param FrameworkType <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
      */
     public void setFrameworkType(String FrameworkType) {
         this.FrameworkType = FrameworkType;
     }
 
     /**
-     * Get 注册配置治理 
-     * @return ServiceGovernanceConfig 注册配置治理
+     * Get <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p> 
+     * @return ServiceGovernanceConfig <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
      */
     public ServiceGovernanceConfig getServiceGovernanceConfig() {
         return this.ServiceGovernanceConfig;
     }
 
     /**
-     * Set 注册配置治理
-     * @param ServiceGovernanceConfig 注册配置治理
+     * Set <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
+     * @param ServiceGovernanceConfig <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
      */
     public void setServiceGovernanceConfig(ServiceGovernanceConfig ServiceGovernanceConfig) {
         this.ServiceGovernanceConfig = ServiceGovernanceConfig;
     }
 
     /**
-     * Get 是否创建并关联同名镜像仓库 
-     * @return CreateSameNameImageRepository 是否创建并关联同名镜像仓库
+     * Get <p>是否创建并关联同名镜像仓库</p> 
+     * @return CreateSameNameImageRepository <p>是否创建并关联同名镜像仓库</p>
      */
     public Boolean getCreateSameNameImageRepository() {
         return this.CreateSameNameImageRepository;
     }
 
     /**
-     * Set 是否创建并关联同名镜像仓库
-     * @param CreateSameNameImageRepository 是否创建并关联同名镜像仓库
+     * Set <p>是否创建并关联同名镜像仓库</p>
+     * @param CreateSameNameImageRepository <p>是否创建并关联同名镜像仓库</p>
      */
     public void setCreateSameNameImageRepository(Boolean CreateSameNameImageRepository) {
         this.CreateSameNameImageRepository = CreateSameNameImageRepository;

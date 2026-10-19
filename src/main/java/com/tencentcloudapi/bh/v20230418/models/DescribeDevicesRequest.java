@@ -24,399 +24,417 @@ import java.util.HashMap;
 public class DescribeDevicesRequest extends AbstractModel {
 
     /**
-    * 资产ID集合
+    * <p>资产ID集合</p>
     */
     @SerializedName("IdSet")
     @Expose
     private Long [] IdSet;
 
     /**
-    * 资产名或资产IP，模糊查询
+    * <p>资产名或资产IP，模糊查询</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 暂未使用
+    * <p>暂未使用</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 地域码集合
+    * <p>地域码集合</p>
     */
     @SerializedName("ApCodeSet")
     @Expose
     private String [] ApCodeSet;
 
     /**
-    * 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+    * <p>操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
     */
     @SerializedName("Kind")
     @Expose
     private Long Kind;
 
     /**
-    * 分页偏移位置，默认值为0
+    * <p>分页偏移位置，默认值为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条目数量，默认20
+    * <p>每页条目数量</p><p>取值范围：[0, 500]</p><p>默认值：20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 有该资产访问权限的用户ID集合
+    * <p>有该资产访问权限的用户ID集合</p>
     */
     @SerializedName("AuthorizedUserIdSet")
     @Expose
     private Long [] AuthorizedUserIdSet;
 
     /**
-    * 过滤条件，资产绑定的堡垒机服务ID集合
+    * <p>过滤条件，资产绑定的堡垒机服务ID集合</p>
     */
     @SerializedName("ResourceIdSet")
     @Expose
     private String [] ResourceIdSet;
 
     /**
-    * 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+    * <p>可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
     */
     @SerializedName("KindSet")
     @Expose
     private Long [] KindSet;
 
     /**
-    * 资产是否包含托管账号。1，包含；0，不包含
+    * <p>资产是否包含托管账号。1，包含；0，不包含</p>
     */
     @SerializedName("ManagedAccount")
     @Expose
     private String ManagedAccount;
 
     /**
-    * 过滤条件，可按照部门ID进行过滤
+    * <p>过滤条件，可按照部门ID进行过滤</p>
     */
     @SerializedName("DepartmentId")
     @Expose
     private String DepartmentId;
 
     /**
-    * 资产所属云账号id
+    * <p>资产所属云账号id</p>
     */
     @SerializedName("AccountIdSet")
     @Expose
     private Long [] AccountIdSet;
 
     /**
-    * 云厂商类型，1-腾讯云，2-阿里云
+    * <p>云厂商类型，1-腾讯云，2-阿里云</p>
     */
     @SerializedName("ProviderTypeSet")
     @Expose
     private Long [] ProviderTypeSet;
 
     /**
-    * 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+    * <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
     */
     @SerializedName("CloudDeviceStatusSet")
     @Expose
     private Long [] CloudDeviceStatusSet;
 
     /**
-    * 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+    * <p>过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * 过滤数组。支持的Name：
-BindingStatus 绑定状态
+    * <p>过滤数组。支持的Name：<br>BindingStatus 绑定状态</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 资产ID集合 
-     * @return IdSet 资产ID集合
+    * <p>所属成员 AppId</p>
+    */
+    @SerializedName("OwnerAppIds")
+    @Expose
+    private Long [] OwnerAppIds;
+
+    /**
+     * Get <p>资产ID集合</p> 
+     * @return IdSet <p>资产ID集合</p>
      */
     public Long [] getIdSet() {
         return this.IdSet;
     }
 
     /**
-     * Set 资产ID集合
-     * @param IdSet 资产ID集合
+     * Set <p>资产ID集合</p>
+     * @param IdSet <p>资产ID集合</p>
      */
     public void setIdSet(Long [] IdSet) {
         this.IdSet = IdSet;
     }
 
     /**
-     * Get 资产名或资产IP，模糊查询 
-     * @return Name 资产名或资产IP，模糊查询
+     * Get <p>资产名或资产IP，模糊查询</p> 
+     * @return Name <p>资产名或资产IP，模糊查询</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 资产名或资产IP，模糊查询
-     * @param Name 资产名或资产IP，模糊查询
+     * Set <p>资产名或资产IP，模糊查询</p>
+     * @param Name <p>资产名或资产IP，模糊查询</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 暂未使用 
-     * @return Ip 暂未使用
+     * Get <p>暂未使用</p> 
+     * @return Ip <p>暂未使用</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 暂未使用
-     * @param Ip 暂未使用
+     * Set <p>暂未使用</p>
+     * @param Ip <p>暂未使用</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 地域码集合 
-     * @return ApCodeSet 地域码集合
+     * Get <p>地域码集合</p> 
+     * @return ApCodeSet <p>地域码集合</p>
      */
     public String [] getApCodeSet() {
         return this.ApCodeSet;
     }
 
     /**
-     * Set 地域码集合
-     * @param ApCodeSet 地域码集合
+     * Set <p>地域码集合</p>
+     * @param ApCodeSet <p>地域码集合</p>
      */
     public void setApCodeSet(String [] ApCodeSet) {
         this.ApCodeSet = ApCodeSet;
     }
 
     /**
-     * Get 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
-     * @return Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Get <p>操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p> 
+     * @return Kind <p>操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public Long getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Set <p>操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
+     * @param Kind <p>操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public void setKind(Long Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 分页偏移位置，默认值为0 
-     * @return Offset 分页偏移位置，默认值为0
+     * Get <p>分页偏移位置，默认值为0</p> 
+     * @return Offset <p>分页偏移位置，默认值为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移位置，默认值为0
-     * @param Offset 分页偏移位置，默认值为0
+     * Set <p>分页偏移位置，默认值为0</p>
+     * @param Offset <p>分页偏移位置，默认值为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条目数量，默认20 
-     * @return Limit 每页条目数量，默认20
+     * Get <p>每页条目数量</p><p>取值范围：[0, 500]</p><p>默认值：20</p> 
+     * @return Limit <p>每页条目数量</p><p>取值范围：[0, 500]</p><p>默认值：20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条目数量，默认20
-     * @param Limit 每页条目数量，默认20
+     * Set <p>每页条目数量</p><p>取值范围：[0, 500]</p><p>默认值：20</p>
+     * @param Limit <p>每页条目数量</p><p>取值范围：[0, 500]</p><p>默认值：20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 有该资产访问权限的用户ID集合 
-     * @return AuthorizedUserIdSet 有该资产访问权限的用户ID集合
+     * Get <p>有该资产访问权限的用户ID集合</p> 
+     * @return AuthorizedUserIdSet <p>有该资产访问权限的用户ID集合</p>
      */
     public Long [] getAuthorizedUserIdSet() {
         return this.AuthorizedUserIdSet;
     }
 
     /**
-     * Set 有该资产访问权限的用户ID集合
-     * @param AuthorizedUserIdSet 有该资产访问权限的用户ID集合
+     * Set <p>有该资产访问权限的用户ID集合</p>
+     * @param AuthorizedUserIdSet <p>有该资产访问权限的用户ID集合</p>
      */
     public void setAuthorizedUserIdSet(Long [] AuthorizedUserIdSet) {
         this.AuthorizedUserIdSet = AuthorizedUserIdSet;
     }
 
     /**
-     * Get 过滤条件，资产绑定的堡垒机服务ID集合 
-     * @return ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
+     * Get <p>过滤条件，资产绑定的堡垒机服务ID集合</p> 
+     * @return ResourceIdSet <p>过滤条件，资产绑定的堡垒机服务ID集合</p>
      */
     public String [] getResourceIdSet() {
         return this.ResourceIdSet;
     }
 
     /**
-     * Set 过滤条件，资产绑定的堡垒机服务ID集合
-     * @param ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
+     * Set <p>过滤条件，资产绑定的堡垒机服务ID集合</p>
+     * @param ResourceIdSet <p>过滤条件，资产绑定的堡垒机服务ID集合</p>
      */
     public void setResourceIdSet(String [] ResourceIdSet) {
         this.ResourceIdSet = ResourceIdSet;
     }
 
     /**
-     * Get 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
-     * @return KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Get <p>可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p> 
+     * @return KindSet <p>可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public Long [] getKindSet() {
         return this.KindSet;
     }
 
     /**
-     * Set 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Set <p>可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
+     * @param KindSet <p>可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public void setKindSet(Long [] KindSet) {
         this.KindSet = KindSet;
     }
 
     /**
-     * Get 资产是否包含托管账号。1，包含；0，不包含 
-     * @return ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
+     * Get <p>资产是否包含托管账号。1，包含；0，不包含</p> 
+     * @return ManagedAccount <p>资产是否包含托管账号。1，包含；0，不包含</p>
      */
     public String getManagedAccount() {
         return this.ManagedAccount;
     }
 
     /**
-     * Set 资产是否包含托管账号。1，包含；0，不包含
-     * @param ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
+     * Set <p>资产是否包含托管账号。1，包含；0，不包含</p>
+     * @param ManagedAccount <p>资产是否包含托管账号。1，包含；0，不包含</p>
      */
     public void setManagedAccount(String ManagedAccount) {
         this.ManagedAccount = ManagedAccount;
     }
 
     /**
-     * Get 过滤条件，可按照部门ID进行过滤 
-     * @return DepartmentId 过滤条件，可按照部门ID进行过滤
+     * Get <p>过滤条件，可按照部门ID进行过滤</p> 
+     * @return DepartmentId <p>过滤条件，可按照部门ID进行过滤</p>
      */
     public String getDepartmentId() {
         return this.DepartmentId;
     }
 
     /**
-     * Set 过滤条件，可按照部门ID进行过滤
-     * @param DepartmentId 过滤条件，可按照部门ID进行过滤
+     * Set <p>过滤条件，可按照部门ID进行过滤</p>
+     * @param DepartmentId <p>过滤条件，可按照部门ID进行过滤</p>
      */
     public void setDepartmentId(String DepartmentId) {
         this.DepartmentId = DepartmentId;
     }
 
     /**
-     * Get 资产所属云账号id 
-     * @return AccountIdSet 资产所属云账号id
+     * Get <p>资产所属云账号id</p> 
+     * @return AccountIdSet <p>资产所属云账号id</p>
      */
     public Long [] getAccountIdSet() {
         return this.AccountIdSet;
     }
 
     /**
-     * Set 资产所属云账号id
-     * @param AccountIdSet 资产所属云账号id
+     * Set <p>资产所属云账号id</p>
+     * @param AccountIdSet <p>资产所属云账号id</p>
      */
     public void setAccountIdSet(Long [] AccountIdSet) {
         this.AccountIdSet = AccountIdSet;
     }
 
     /**
-     * Get 云厂商类型，1-腾讯云，2-阿里云 
-     * @return ProviderTypeSet 云厂商类型，1-腾讯云，2-阿里云
+     * Get <p>云厂商类型，1-腾讯云，2-阿里云</p> 
+     * @return ProviderTypeSet <p>云厂商类型，1-腾讯云，2-阿里云</p>
      */
     public Long [] getProviderTypeSet() {
         return this.ProviderTypeSet;
     }
 
     /**
-     * Set 云厂商类型，1-腾讯云，2-阿里云
-     * @param ProviderTypeSet 云厂商类型，1-腾讯云，2-阿里云
+     * Set <p>云厂商类型，1-腾讯云，2-阿里云</p>
+     * @param ProviderTypeSet <p>云厂商类型，1-腾讯云，2-阿里云</p>
      */
     public void setProviderTypeSet(Long [] ProviderTypeSet) {
         this.ProviderTypeSet = ProviderTypeSet;
     }
 
     /**
-     * Get 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期 
-     * @return CloudDeviceStatusSet 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * Get <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p> 
+     * @return CloudDeviceStatusSet <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
      */
     public Long [] getCloudDeviceStatusSet() {
         return this.CloudDeviceStatusSet;
     }
 
     /**
-     * Set 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
-     * @param CloudDeviceStatusSet 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * Set <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
+     * @param CloudDeviceStatusSet <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
      */
     public void setCloudDeviceStatusSet(Long [] CloudDeviceStatusSet) {
         this.CloudDeviceStatusSet = CloudDeviceStatusSet;
     }
 
     /**
-     * Get 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系 
-     * @return TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+     * Get <p>过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系</p> 
+     * @return TagFilters <p>过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
-     * @param TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+     * Set <p>过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系</p>
+     * @param TagFilters <p>过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get 过滤数组。支持的Name：
-BindingStatus 绑定状态 
-     * @return Filters 过滤数组。支持的Name：
-BindingStatus 绑定状态
+     * Get <p>过滤数组。支持的Name：<br>BindingStatus 绑定状态</p> 
+     * @return Filters <p>过滤数组。支持的Name：<br>BindingStatus 绑定状态</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤数组。支持的Name：
-BindingStatus 绑定状态
-     * @param Filters 过滤数组。支持的Name：
-BindingStatus 绑定状态
+     * Set <p>过滤数组。支持的Name：<br>BindingStatus 绑定状态</p>
+     * @param Filters <p>过滤数组。支持的Name：<br>BindingStatus 绑定状态</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>所属成员 AppId</p> 
+     * @return OwnerAppIds <p>所属成员 AppId</p>
+     */
+    public Long [] getOwnerAppIds() {
+        return this.OwnerAppIds;
+    }
+
+    /**
+     * Set <p>所属成员 AppId</p>
+     * @param OwnerAppIds <p>所属成员 AppId</p>
+     */
+    public void setOwnerAppIds(Long [] OwnerAppIds) {
+        this.OwnerAppIds = OwnerAppIds;
     }
 
     public DescribeDevicesRequest() {
@@ -508,6 +526,12 @@ BindingStatus 绑定状态
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.OwnerAppIds != null) {
+            this.OwnerAppIds = new Long[source.OwnerAppIds.length];
+            for (int i = 0; i < source.OwnerAppIds.length; i++) {
+                this.OwnerAppIds[i] = new Long(source.OwnerAppIds[i]);
+            }
+        }
     }
 
 
@@ -532,6 +556,7 @@ BindingStatus 绑定状态
         this.setParamArraySimple(map, prefix + "CloudDeviceStatusSet.", this.CloudDeviceStatusSet);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "OwnerAppIds.", this.OwnerAppIds);
 
     }
 }

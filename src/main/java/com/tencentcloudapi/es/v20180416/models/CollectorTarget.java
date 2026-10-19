@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CollectorTarget extends AbstractModel {
 
     /**
-    * 采集配置名称
+    * <p>采集配置名称</p>
     */
     @SerializedName("TargetName")
     @Expose
     private String TargetName;
 
     /**
-    * 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+    * <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespaces")
@@ -39,7 +39,7 @@ public class CollectorTarget extends AbstractModel {
     private Namespaces Namespaces;
 
     /**
-    * Pod标签列表
+    * <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodLabels")
@@ -47,7 +47,7 @@ public class CollectorTarget extends AbstractModel {
     private PodLabel [] PodLabels;
 
     /**
-    * 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+    * <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerName")
@@ -55,7 +55,7 @@ public class CollectorTarget extends AbstractModel {
     private String ContainerName;
 
     /**
-    * ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+    * <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexPrefix")
@@ -63,7 +63,7 @@ public class CollectorTarget extends AbstractModel {
     private String IndexPrefix;
 
     /**
-    * 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+    * <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogFilters")
@@ -71,7 +71,7 @@ public class CollectorTarget extends AbstractModel {
     private String LogFilters;
 
     /**
-    * 高级配置，可自定义采集规则，最多支持2048个字符
+    * <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigContent")
@@ -79,7 +79,7 @@ public class CollectorTarget extends AbstractModel {
     private String ConfigContent;
 
     /**
-    * Ckafka实例的Topic
+    * <p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaTopic")
@@ -87,7 +87,7 @@ public class CollectorTarget extends AbstractModel {
     private String KafkaTopic;
 
     /**
-    * ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+    * <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexAlias")
@@ -95,7 +95,7 @@ public class CollectorTarget extends AbstractModel {
     private String IndexAlias;
 
     /**
-    * /
+    * <p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputType")
@@ -103,7 +103,7 @@ public class CollectorTarget extends AbstractModel {
     private String InputType;
 
     /**
-    * 日志采集host路径
+    * <p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputPath")
@@ -111,7 +111,7 @@ public class CollectorTarget extends AbstractModel {
     private String InputPath;
 
     /**
-    * inputs.tail_files
+    * <p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputsTailFiles")
@@ -119,25 +119,72 @@ public class CollectorTarget extends AbstractModel {
     private Boolean InputsTailFiles;
 
     /**
-     * Get 采集配置名称 
-     * @return TargetName 采集配置名称
+    * <p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputsMultiLineEnabled")
+    @Expose
+    private Boolean InputsMultiLineEnabled;
+
+    /**
+    * <p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputsMultiLineType")
+    @Expose
+    private String InputsMultiLineType;
+
+    /**
+    * <p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputsMultiLinePattern")
+    @Expose
+    private String InputsMultiLinePattern;
+
+    /**
+    * <p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputsMultiLineNegate")
+    @Expose
+    private Boolean InputsMultiLineNegate;
+
+    /**
+    * <p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputsMultiLineMatch")
+    @Expose
+    private String InputsMultiLineMatch;
+
+    /**
+    * <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+    */
+    @SerializedName("TkeCollectType")
+    @Expose
+    private String TkeCollectType;
+
+    /**
+     * Get <p>采集配置名称</p> 
+     * @return TargetName <p>采集配置名称</p>
      */
     public String getTargetName() {
         return this.TargetName;
     }
 
     /**
-     * Set 采集配置名称
-     * @param TargetName 采集配置名称
+     * Set <p>采集配置名称</p>
+     * @param TargetName <p>采集配置名称</p>
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+     * Get <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Namespaces 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+     * @return Namespaces <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Namespaces getNamespaces() {
@@ -145,9 +192,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+     * Set <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Namespaces 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+     * @param Namespaces <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaces(Namespaces Namespaces) {
@@ -155,9 +202,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get Pod标签列表
+     * Get <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodLabels Pod标签列表
+     * @return PodLabels <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PodLabel [] getPodLabels() {
@@ -165,9 +212,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set Pod标签列表
+     * Set <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodLabels Pod标签列表
+     * @param PodLabels <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodLabels(PodLabel [] PodLabels) {
@@ -175,9 +222,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+     * Get <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContainerName 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+     * @return ContainerName <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerName() {
@@ -185,9 +232,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+     * Set <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContainerName 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+     * @param ContainerName <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerName(String ContainerName) {
@@ -195,9 +242,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * Get <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexPrefix ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @return IndexPrefix <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexPrefix() {
@@ -205,9 +252,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * Set <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexPrefix ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @param IndexPrefix <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexPrefix(String IndexPrefix) {
@@ -215,9 +262,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+     * Get <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogFilters 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+     * @return LogFilters <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogFilters() {
@@ -225,9 +272,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+     * Set <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogFilters 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+     * @param LogFilters <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogFilters(String LogFilters) {
@@ -235,9 +282,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get 高级配置，可自定义采集规则，最多支持2048个字符
+     * Get <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigContent 高级配置，可自定义采集规则，最多支持2048个字符
+     * @return ConfigContent <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigContent() {
@@ -245,9 +292,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set 高级配置，可自定义采集规则，最多支持2048个字符
+     * Set <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigContent 高级配置，可自定义采集规则，最多支持2048个字符
+     * @param ConfigContent <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigContent(String ConfigContent) {
@@ -255,9 +302,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get Ckafka实例的Topic
+     * Get <p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KafkaTopic Ckafka实例的Topic
+     * @return KafkaTopic <p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaTopic() {
@@ -265,9 +312,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set Ckafka实例的Topic
+     * Set <p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaTopic Ckafka实例的Topic
+     * @param KafkaTopic <p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaTopic(String KafkaTopic) {
@@ -275,9 +322,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * Get <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexAlias ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @return IndexAlias <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexAlias() {
@@ -285,9 +332,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * Set <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexAlias ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @param IndexAlias <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexAlias(String IndexAlias) {
@@ -295,9 +342,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get /
+     * Get <p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputType /
+     * @return InputType <p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputType() {
@@ -305,9 +352,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set /
+     * Set <p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputType /
+     * @param InputType <p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputType(String InputType) {
@@ -315,9 +362,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get 日志采集host路径
+     * Get <p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputPath 日志采集host路径
+     * @return InputPath <p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputPath() {
@@ -325,9 +372,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set 日志采集host路径
+     * Set <p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputPath 日志采集host路径
+     * @param InputPath <p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputPath(String InputPath) {
@@ -335,9 +382,9 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Get inputs.tail_files
+     * Get <p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputsTailFiles inputs.tail_files
+     * @return InputsTailFiles <p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getInputsTailFiles() {
@@ -345,13 +392,129 @@ public class CollectorTarget extends AbstractModel {
     }
 
     /**
-     * Set inputs.tail_files
+     * Set <p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputsTailFiles inputs.tail_files
+     * @param InputsTailFiles <p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputsTailFiles(Boolean InputsTailFiles) {
         this.InputsTailFiles = InputsTailFiles;
+    }
+
+    /**
+     * Get <p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputsMultiLineEnabled <p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getInputsMultiLineEnabled() {
+        return this.InputsMultiLineEnabled;
+    }
+
+    /**
+     * Set <p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputsMultiLineEnabled <p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputsMultiLineEnabled(Boolean InputsMultiLineEnabled) {
+        this.InputsMultiLineEnabled = InputsMultiLineEnabled;
+    }
+
+    /**
+     * Get <p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputsMultiLineType <p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputsMultiLineType() {
+        return this.InputsMultiLineType;
+    }
+
+    /**
+     * Set <p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputsMultiLineType <p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputsMultiLineType(String InputsMultiLineType) {
+        this.InputsMultiLineType = InputsMultiLineType;
+    }
+
+    /**
+     * Get <p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputsMultiLinePattern <p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputsMultiLinePattern() {
+        return this.InputsMultiLinePattern;
+    }
+
+    /**
+     * Set <p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputsMultiLinePattern <p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputsMultiLinePattern(String InputsMultiLinePattern) {
+        this.InputsMultiLinePattern = InputsMultiLinePattern;
+    }
+
+    /**
+     * Get <p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputsMultiLineNegate <p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getInputsMultiLineNegate() {
+        return this.InputsMultiLineNegate;
+    }
+
+    /**
+     * Set <p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputsMultiLineNegate <p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputsMultiLineNegate(Boolean InputsMultiLineNegate) {
+        this.InputsMultiLineNegate = InputsMultiLineNegate;
+    }
+
+    /**
+     * Get <p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputsMultiLineMatch <p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputsMultiLineMatch() {
+        return this.InputsMultiLineMatch;
+    }
+
+    /**
+     * Set <p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputsMultiLineMatch <p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputsMultiLineMatch(String InputsMultiLineMatch) {
+        this.InputsMultiLineMatch = InputsMultiLineMatch;
+    }
+
+    /**
+     * Get <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p> 
+     * @return TkeCollectType <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+     */
+    public String getTkeCollectType() {
+        return this.TkeCollectType;
+    }
+
+    /**
+     * Set <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+     * @param TkeCollectType <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+     */
+    public void setTkeCollectType(String TkeCollectType) {
+        this.TkeCollectType = TkeCollectType;
     }
 
     public CollectorTarget() {
@@ -401,6 +564,24 @@ public class CollectorTarget extends AbstractModel {
         if (source.InputsTailFiles != null) {
             this.InputsTailFiles = new Boolean(source.InputsTailFiles);
         }
+        if (source.InputsMultiLineEnabled != null) {
+            this.InputsMultiLineEnabled = new Boolean(source.InputsMultiLineEnabled);
+        }
+        if (source.InputsMultiLineType != null) {
+            this.InputsMultiLineType = new String(source.InputsMultiLineType);
+        }
+        if (source.InputsMultiLinePattern != null) {
+            this.InputsMultiLinePattern = new String(source.InputsMultiLinePattern);
+        }
+        if (source.InputsMultiLineNegate != null) {
+            this.InputsMultiLineNegate = new Boolean(source.InputsMultiLineNegate);
+        }
+        if (source.InputsMultiLineMatch != null) {
+            this.InputsMultiLineMatch = new String(source.InputsMultiLineMatch);
+        }
+        if (source.TkeCollectType != null) {
+            this.TkeCollectType = new String(source.TkeCollectType);
+        }
     }
 
 
@@ -420,6 +601,12 @@ public class CollectorTarget extends AbstractModel {
         this.setParamSimple(map, prefix + "InputType", this.InputType);
         this.setParamSimple(map, prefix + "InputPath", this.InputPath);
         this.setParamSimple(map, prefix + "InputsTailFiles", this.InputsTailFiles);
+        this.setParamSimple(map, prefix + "InputsMultiLineEnabled", this.InputsMultiLineEnabled);
+        this.setParamSimple(map, prefix + "InputsMultiLineType", this.InputsMultiLineType);
+        this.setParamSimple(map, prefix + "InputsMultiLinePattern", this.InputsMultiLinePattern);
+        this.setParamSimple(map, prefix + "InputsMultiLineNegate", this.InputsMultiLineNegate);
+        this.setParamSimple(map, prefix + "InputsMultiLineMatch", this.InputsMultiLineMatch);
+        this.setParamSimple(map, prefix + "TkeCollectType", this.TkeCollectType);
 
     }
 }

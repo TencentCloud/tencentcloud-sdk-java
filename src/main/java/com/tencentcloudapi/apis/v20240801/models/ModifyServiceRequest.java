@@ -609,7 +609,9 @@ public class ModifyServiceRequest extends AbstractModel {
     /**
      * Get <p>流量控制</p> 
      * @return InvokeLimitConfigStatus <p>流量控制</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -617,7 +619,9 @@ public class ModifyServiceRequest extends AbstractModel {
     /**
      * Set <p>流量控制</p>
      * @param InvokeLimitConfigStatus <p>流量控制</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -625,7 +629,9 @@ public class ModifyServiceRequest extends AbstractModel {
     /**
      * Get <p>流量控制</p> 
      * @return InvokeLimitConfig <p>流量控制</p>
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -633,7 +639,9 @@ public class ModifyServiceRequest extends AbstractModel {
     /**
      * Set <p>流量控制</p>
      * @param InvokeLimitConfig <p>流量控制</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }

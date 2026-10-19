@@ -24,216 +24,161 @@ import java.util.HashMap;
 public class SecurityAction extends AbstractModel {
 
     /**
-    * 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
+    * <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 当 Name 为 Deny 时的附加参数。
+    * <p>当 Name 为 Deny 时的附加参数。</p>
     */
     @SerializedName("DenyActionParameters")
     @Expose
     private DenyActionParameters DenyActionParameters;
 
     /**
-    * 当 Name 为 Redirect 时的附加参数。
+    * <p>当 Name 为 Redirect 时的附加参数。</p>
     */
     @SerializedName("RedirectActionParameters")
     @Expose
     private RedirectActionParameters RedirectActionParameters;
 
     /**
-    * 当 Name 为 Allow 时的附加参数。
+    * <p>当 Name 为 Allow 时的附加参数。</p>
     */
     @SerializedName("AllowActionParameters")
     @Expose
     private AllowActionParameters AllowActionParameters;
 
     /**
-    * 当 Name 为 Challenge 时的附加参数。
+    * <p>当 Name 为 Challenge 时的附加参数。</p>
     */
     @SerializedName("ChallengeActionParameters")
     @Expose
     private ChallengeActionParameters ChallengeActionParameters;
 
     /**
-    * 待废弃，当 Name 为 BlockIP 时的附加参数。
+    * <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
     */
     @SerializedName("BlockIPActionParameters")
     @Expose
     private BlockIPActionParameters BlockIPActionParameters;
 
     /**
-    * 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
+    * <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
     */
     @SerializedName("ReturnCustomPageActionParameters")
     @Expose
     private ReturnCustomPageActionParameters ReturnCustomPageActionParameters;
 
     /**
-     * Get 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li> 
-     * @return Name 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
+     * Get <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul> 
+     * @return Name <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
-     * @param Name 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
+     * Set <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
+     * @param Name <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 当 Name 为 Deny 时的附加参数。 
-     * @return DenyActionParameters 当 Name 为 Deny 时的附加参数。
+     * Get <p>当 Name 为 Deny 时的附加参数。</p> 
+     * @return DenyActionParameters <p>当 Name 为 Deny 时的附加参数。</p>
      */
     public DenyActionParameters getDenyActionParameters() {
         return this.DenyActionParameters;
     }
 
     /**
-     * Set 当 Name 为 Deny 时的附加参数。
-     * @param DenyActionParameters 当 Name 为 Deny 时的附加参数。
+     * Set <p>当 Name 为 Deny 时的附加参数。</p>
+     * @param DenyActionParameters <p>当 Name 为 Deny 时的附加参数。</p>
      */
     public void setDenyActionParameters(DenyActionParameters DenyActionParameters) {
         this.DenyActionParameters = DenyActionParameters;
     }
 
     /**
-     * Get 当 Name 为 Redirect 时的附加参数。 
-     * @return RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
+     * Get <p>当 Name 为 Redirect 时的附加参数。</p> 
+     * @return RedirectActionParameters <p>当 Name 为 Redirect 时的附加参数。</p>
      */
     public RedirectActionParameters getRedirectActionParameters() {
         return this.RedirectActionParameters;
     }
 
     /**
-     * Set 当 Name 为 Redirect 时的附加参数。
-     * @param RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
+     * Set <p>当 Name 为 Redirect 时的附加参数。</p>
+     * @param RedirectActionParameters <p>当 Name 为 Redirect 时的附加参数。</p>
      */
     public void setRedirectActionParameters(RedirectActionParameters RedirectActionParameters) {
         this.RedirectActionParameters = RedirectActionParameters;
     }
 
     /**
-     * Get 当 Name 为 Allow 时的附加参数。 
-     * @return AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     * Get <p>当 Name 为 Allow 时的附加参数。</p> 
+     * @return AllowActionParameters <p>当 Name 为 Allow 时的附加参数。</p>
      */
     public AllowActionParameters getAllowActionParameters() {
         return this.AllowActionParameters;
     }
 
     /**
-     * Set 当 Name 为 Allow 时的附加参数。
-     * @param AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     * Set <p>当 Name 为 Allow 时的附加参数。</p>
+     * @param AllowActionParameters <p>当 Name 为 Allow 时的附加参数。</p>
      */
     public void setAllowActionParameters(AllowActionParameters AllowActionParameters) {
         this.AllowActionParameters = AllowActionParameters;
     }
 
     /**
-     * Get 当 Name 为 Challenge 时的附加参数。 
-     * @return ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
+     * Get <p>当 Name 为 Challenge 时的附加参数。</p> 
+     * @return ChallengeActionParameters <p>当 Name 为 Challenge 时的附加参数。</p>
      */
     public ChallengeActionParameters getChallengeActionParameters() {
         return this.ChallengeActionParameters;
     }
 
     /**
-     * Set 当 Name 为 Challenge 时的附加参数。
-     * @param ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
+     * Set <p>当 Name 为 Challenge 时的附加参数。</p>
+     * @param ChallengeActionParameters <p>当 Name 为 Challenge 时的附加参数。</p>
      */
     public void setChallengeActionParameters(ChallengeActionParameters ChallengeActionParameters) {
         this.ChallengeActionParameters = ChallengeActionParameters;
     }
 
     /**
-     * Get 待废弃，当 Name 为 BlockIP 时的附加参数。 
-     * @return BlockIPActionParameters 待废弃，当 Name 为 BlockIP 时的附加参数。
+     * Get <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p> 
+     * @return BlockIPActionParameters <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
      */
     public BlockIPActionParameters getBlockIPActionParameters() {
         return this.BlockIPActionParameters;
     }
 
     /**
-     * Set 待废弃，当 Name 为 BlockIP 时的附加参数。
-     * @param BlockIPActionParameters 待废弃，当 Name 为 BlockIP 时的附加参数。
+     * Set <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
+     * @param BlockIPActionParameters <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
      */
     public void setBlockIPActionParameters(BlockIPActionParameters BlockIPActionParameters) {
         this.BlockIPActionParameters = BlockIPActionParameters;
     }
 
     /**
-     * Get 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。 
-     * @return ReturnCustomPageActionParameters 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
+     * Get <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p> 
+     * @return ReturnCustomPageActionParameters <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
      */
     public ReturnCustomPageActionParameters getReturnCustomPageActionParameters() {
         return this.ReturnCustomPageActionParameters;
     }
 
     /**
-     * Set 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
-     * @param ReturnCustomPageActionParameters 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
+     * Set <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
+     * @param ReturnCustomPageActionParameters <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
      */
     public void setReturnCustomPageActionParameters(ReturnCustomPageActionParameters ReturnCustomPageActionParameters) {
         this.ReturnCustomPageActionParameters = ReturnCustomPageActionParameters;

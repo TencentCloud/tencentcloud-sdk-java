@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class TransferCloudStorageRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 已开通云存的设备名称
+    * <p>已开通云存的设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 未开通云存的设备名称
+    * <p>未开通云存的设备名称</p>
     */
     @SerializedName("ToDeviceName")
     @Expose
     private String ToDeviceName;
 
     /**
-    * 未开通云存的设备产品ID
+    * <p>未开通云存的设备产品ID</p>
     */
     @SerializedName("ToProductId")
     @Expose
     private String ToProductId;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+    * <p>已开通云存的通道id</p>
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
+    * <p>未开通云存的通道id</p>
+    */
+    @SerializedName("ToChannelId")
+    @Expose
+    private Long ToChannelId;
+
+    /**
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 已开通云存的设备名称 
-     * @return DeviceName 已开通云存的设备名称
+     * Get <p>已开通云存的设备名称</p> 
+     * @return DeviceName <p>已开通云存的设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 已开通云存的设备名称
-     * @param DeviceName 已开通云存的设备名称
+     * Set <p>已开通云存的设备名称</p>
+     * @param DeviceName <p>已开通云存的设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 未开通云存的设备名称 
-     * @return ToDeviceName 未开通云存的设备名称
+     * Get <p>未开通云存的设备名称</p> 
+     * @return ToDeviceName <p>未开通云存的设备名称</p>
      */
     public String getToDeviceName() {
         return this.ToDeviceName;
     }
 
     /**
-     * Set 未开通云存的设备名称
-     * @param ToDeviceName 未开通云存的设备名称
+     * Set <p>未开通云存的设备名称</p>
+     * @param ToDeviceName <p>未开通云存的设备名称</p>
      */
     public void setToDeviceName(String ToDeviceName) {
         this.ToDeviceName = ToDeviceName;
     }
 
     /**
-     * Get 未开通云存的设备产品ID 
-     * @return ToProductId 未开通云存的设备产品ID
+     * Get <p>未开通云存的设备产品ID</p> 
+     * @return ToProductId <p>未开通云存的设备产品ID</p>
      */
     public String getToProductId() {
         return this.ToProductId;
     }
 
     /**
-     * Set 未开通云存的设备产品ID
-     * @param ToProductId 未开通云存的设备产品ID
+     * Set <p>未开通云存的设备产品ID</p>
+     * @param ToProductId <p>未开通云存的设备产品ID</p>
      */
     public void setToProductId(String ToProductId) {
         this.ToProductId = ToProductId;
+    }
+
+    /**
+     * Get <p>已开通云存的通道id</p> 
+     * @return ChannelId <p>已开通云存的通道id</p>
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set <p>已开通云存的通道id</p>
+     * @param ChannelId <p>已开通云存的通道id</p>
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get <p>未开通云存的通道id</p> 
+     * @return ToChannelId <p>未开通云存的通道id</p>
+     */
+    public Long getToChannelId() {
+        return this.ToChannelId;
+    }
+
+    /**
+     * Set <p>未开通云存的通道id</p>
+     * @param ToChannelId <p>未开通云存的通道id</p>
+     */
+    public void setToChannelId(Long ToChannelId) {
+        this.ToChannelId = ToChannelId;
     }
 
     public TransferCloudStorageRequest() {
@@ -135,6 +181,12 @@ public class TransferCloudStorageRequest extends AbstractModel {
         if (source.ToProductId != null) {
             this.ToProductId = new String(source.ToProductId);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
+        if (source.ToChannelId != null) {
+            this.ToChannelId = new Long(source.ToChannelId);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class TransferCloudStorageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ToDeviceName", this.ToDeviceName);
         this.setParamSimple(map, prefix + "ToProductId", this.ToProductId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "ToChannelId", this.ToChannelId);
 
     }
 }

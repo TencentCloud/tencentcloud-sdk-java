@@ -624,6 +624,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取COS存储的临时密钥，具体到ProjectId
+     * @param req DescribeFileCertificateRequest
+     * @return DescribeFileCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileCertificateResponse DescribeFileCertificate(DescribeFileCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFileCertificate", DescribeFileCertificateResponse.class);
+    }
+
+    /**
      *获取问题分布数据
      * @param req DescribeIssuesDistributionRequest
      * @return DescribeIssuesDistributionResponse

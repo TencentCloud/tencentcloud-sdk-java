@@ -232,6 +232,14 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String Privilege;
 
     /**
+    * <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinuteOffset")
+    @Expose
+    private Long MinuteOffset;
+
+    /**
      * Get <p>项目ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId <p>项目ID</p>
@@ -751,6 +759,26 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.Privilege = Privilege;
     }
 
+    /**
+     * Get <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinuteOffset <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinuteOffset() {
+        return this.MinuteOffset;
+    }
+
+    /**
+     * Set <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinuteOffset <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinuteOffset(Long MinuteOffset) {
+        this.MinuteOffset = MinuteOffset;
+    }
+
     public WorkflowScheduleDtoDs() {
     }
 
@@ -837,6 +865,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.MinuteOffset != null) {
+            this.MinuteOffset = new Long(source.MinuteOffset);
+        }
     }
 
 
@@ -870,6 +901,7 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
 
     }
 }

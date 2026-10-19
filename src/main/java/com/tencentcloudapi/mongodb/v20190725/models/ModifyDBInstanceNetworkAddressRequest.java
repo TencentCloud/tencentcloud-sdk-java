@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
 
     /**
-    * 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+    * <p>指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 原 IP 地址保留时长。
-- 单位为分钟，0表示立即回收原 IP 地址。
-- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
-
+    * <p>原 IP 地址保留时长。</p><ul><li>单位为分钟，0表示立即回收原 IP 地址。</li><li>原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。</li></ul>
     */
     @SerializedName("OldIpExpiredTime")
     @Expose
     private Long OldIpExpiredTime;
 
     /**
-    * 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+    * <p>切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络 ID。</p>
     */
     @SerializedName("NewUniqVpcId")
     @Expose
     private String NewUniqVpcId;
 
     /**
-    * 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
+    * <p>切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络的子网 ID。</p>
     */
     @SerializedName("NewUniqSubnetId")
     @Expose
     private String NewUniqSubnetId;
 
     /**
-    * IP 地址信息，包含新 IP 地址与 原 IP 地址。
+    * <p>IP 地址信息，包含新 IP 地址与 原 IP 地址。</p>
     */
     @SerializedName("NetworkAddresses")
     @Expose
     private ModifyNetworkAddress [] NetworkAddresses;
 
     /**
-     * Get 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
- 
-     * @return InstanceId 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+     * Get <p>指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
-     * @param InstanceId 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-
+     * Set <p>指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 <a href="https://console.cloud.tencent.com/mongodb">MongoDB 控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 原 IP 地址保留时长。
-- 单位为分钟，0表示立即回收原 IP 地址。
-- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
- 
-     * @return OldIpExpiredTime 原 IP 地址保留时长。
-- 单位为分钟，0表示立即回收原 IP 地址。
-- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
-
+     * Get <p>原 IP 地址保留时长。</p><ul><li>单位为分钟，0表示立即回收原 IP 地址。</li><li>原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。</li></ul> 
+     * @return OldIpExpiredTime <p>原 IP 地址保留时长。</p><ul><li>单位为分钟，0表示立即回收原 IP 地址。</li><li>原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。</li></ul>
      */
     public Long getOldIpExpiredTime() {
         return this.OldIpExpiredTime;
     }
 
     /**
-     * Set 原 IP 地址保留时长。
-- 单位为分钟，0表示立即回收原 IP 地址。
-- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
-
-     * @param OldIpExpiredTime 原 IP 地址保留时长。
-- 单位为分钟，0表示立即回收原 IP 地址。
-- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
-
+     * Set <p>原 IP 地址保留时长。</p><ul><li>单位为分钟，0表示立即回收原 IP 地址。</li><li>原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。</li></ul>
+     * @param OldIpExpiredTime <p>原 IP 地址保留时长。</p><ul><li>单位为分钟，0表示立即回收原 IP 地址。</li><li>原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。</li></ul>
      */
     public void setOldIpExpiredTime(Long OldIpExpiredTime) {
         this.OldIpExpiredTime = OldIpExpiredTime;
     }
 
     /**
-     * Get 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。 
-     * @return NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+     * Get <p>切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络 ID。</p> 
+     * @return NewUniqVpcId <p>切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络 ID。</p>
      */
     public String getNewUniqVpcId() {
         return this.NewUniqVpcId;
     }
 
     /**
-     * Set 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
-     * @param NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+     * Set <p>切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络 ID。</p>
+     * @param NewUniqVpcId <p>切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络 ID。</p>
      */
     public void setNewUniqVpcId(String NewUniqVpcId) {
         this.NewUniqVpcId = NewUniqVpcId;
     }
 
     /**
-     * Get 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。 
-     * @return NewUniqSubnetId 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
+     * Get <p>切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络的子网 ID。</p> 
+     * @return NewUniqSubnetId <p>切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络的子网 ID。</p>
      */
     public String getNewUniqSubnetId() {
         return this.NewUniqSubnetId;
     }
 
     /**
-     * Set 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
-     * @param NewUniqSubnetId 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
+     * Set <p>切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络的子网 ID。</p>
+     * @param NewUniqSubnetId <p>切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 <a href="https://cloud.tencent.com/document/product/240/38568">DescribeDBInstances</a> 获取私有网络的子网 ID。</p>
      */
     public void setNewUniqSubnetId(String NewUniqSubnetId) {
         this.NewUniqSubnetId = NewUniqSubnetId;
     }
 
     /**
-     * Get IP 地址信息，包含新 IP 地址与 原 IP 地址。 
-     * @return NetworkAddresses IP 地址信息，包含新 IP 地址与 原 IP 地址。
+     * Get <p>IP 地址信息，包含新 IP 地址与 原 IP 地址。</p> 
+     * @return NetworkAddresses <p>IP 地址信息，包含新 IP 地址与 原 IP 地址。</p>
      */
     public ModifyNetworkAddress [] getNetworkAddresses() {
         return this.NetworkAddresses;
     }
 
     /**
-     * Set IP 地址信息，包含新 IP 地址与 原 IP 地址。
-     * @param NetworkAddresses IP 地址信息，包含新 IP 地址与 原 IP 地址。
+     * Set <p>IP 地址信息，包含新 IP 地址与 原 IP 地址。</p>
+     * @param NetworkAddresses <p>IP 地址信息，包含新 IP 地址与 原 IP 地址。</p>
      */
     public void setNetworkAddresses(ModifyNetworkAddress [] NetworkAddresses) {
         this.NetworkAddresses = NetworkAddresses;

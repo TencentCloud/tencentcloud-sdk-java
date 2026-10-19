@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTrainingModelVersionsResponse extends AbstractModel {
 
     /**
-    * 模型版本列表
+    * <p>模型版本列表</p>
     */
     @SerializedName("TrainingModelVersions")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTrainingModelVersionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模型版本列表 
-     * @return TrainingModelVersions 模型版本列表
+     * Get <p>模型版本列表</p> 
+     * @return TrainingModelVersions <p>模型版本列表</p>
      */
     public TrainingModelVersionDTO [] getTrainingModelVersions() {
         return this.TrainingModelVersions;
     }
 
     /**
-     * Set 模型版本列表
-     * @param TrainingModelVersions 模型版本列表
+     * Set <p>模型版本列表</p>
+     * @param TrainingModelVersions <p>模型版本列表</p>
      */
     public void setTrainingModelVersions(TrainingModelVersionDTO [] TrainingModelVersions) {
         this.TrainingModelVersions = TrainingModelVersions;

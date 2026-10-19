@@ -31,6 +31,13 @@ public class ListSchemasRequest extends AbstractModel {
     private String CatalogName;
 
     /**
+    * <p>调用时所在workspace唯一id</p>
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private String WorkspaceId;
+
+    /**
     * <p>最大结果条数</p>
     */
     @SerializedName("MaxResults")
@@ -43,13 +50,6 @@ public class ListSchemasRequest extends AbstractModel {
     @SerializedName("PageToken")
     @Expose
     private String PageToken;
-
-    /**
-    * <p>调用时所在workspace唯一id</p>
-    */
-    @SerializedName("WorkspaceId")
-    @Expose
-    private String WorkspaceId;
 
     /**
     * <p>数据获取选项，可选，控制是否返回权限信息及按权限过滤</p>
@@ -89,6 +89,22 @@ public class ListSchemasRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>调用时所在workspace唯一id</p> 
+     * @return WorkspaceId <p>调用时所在workspace唯一id</p>
+     */
+    public String getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set <p>调用时所在workspace唯一id</p>
+     * @param WorkspaceId <p>调用时所在workspace唯一id</p>
+     */
+    public void setWorkspaceId(String WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
      * Get <p>最大结果条数</p> 
      * @return MaxResults <p>最大结果条数</p>
      */
@@ -118,22 +134,6 @@ public class ListSchemasRequest extends AbstractModel {
      */
     public void setPageToken(String PageToken) {
         this.PageToken = PageToken;
-    }
-
-    /**
-     * Get <p>调用时所在workspace唯一id</p> 
-     * @return WorkspaceId <p>调用时所在workspace唯一id</p>
-     */
-    public String getWorkspaceId() {
-        return this.WorkspaceId;
-    }
-
-    /**
-     * Set <p>调用时所在workspace唯一id</p>
-     * @param WorkspaceId <p>调用时所在workspace唯一id</p>
-     */
-    public void setWorkspaceId(String WorkspaceId) {
-        this.WorkspaceId = WorkspaceId;
     }
 
     /**
@@ -195,14 +195,14 @@ public class ListSchemasRequest extends AbstractModel {
         if (source.CatalogName != null) {
             this.CatalogName = new String(source.CatalogName);
         }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new String(source.WorkspaceId);
+        }
         if (source.MaxResults != null) {
             this.MaxResults = new Long(source.MaxResults);
         }
         if (source.PageToken != null) {
             this.PageToken = new String(source.PageToken);
-        }
-        if (source.WorkspaceId != null) {
-            this.WorkspaceId = new String(source.WorkspaceId);
         }
         if (source.FetchOption != null) {
             this.FetchOption = new FetchOption(source.FetchOption);
@@ -221,9 +221,9 @@ public class ListSchemasRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamSimple(map, prefix + "PageToken", this.PageToken);
-        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
         this.setParamObj(map, prefix + "FetchOption.", this.FetchOption);
         this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
         this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);

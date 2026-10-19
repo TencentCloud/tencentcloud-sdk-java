@@ -24,593 +24,371 @@ import java.util.HashMap;
 public class WorkflowSchedulerConfigurationInfo extends AbstractModel {
 
     /**
-    * 时区
+    * <p>时区</p>
     */
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
 
     /**
-    * 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+    * <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
     */
     @SerializedName("CycleType")
     @Expose
     private String CycleType;
 
     /**
-    * 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+    * <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
     */
     @SerializedName("SelfDepend")
     @Expose
     private String SelfDepend;
 
     /**
-    * 生效开始时间
+    * <p>生效开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 生效结束时间
+    * <p>生效结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * cron表达式
+    * <p>cron表达式</p>
     */
     @SerializedName("CrontabExpression")
     @Expose
     private String CrontabExpression;
 
     /**
-    * 工作流依赖，yes or no
+    * <p>工作流依赖，yes or no</p>
     */
     @SerializedName("DependencyWorkflow")
     @Expose
     private String DependencyWorkflow;
 
     /**
-    * 0：不修改 1：将任务的上游依赖配置改为默认值
+    * <p>0：不修改 1：将任务的上游依赖配置改为默认值</p>
     */
     @SerializedName("ModifyCycleValue")
     @Expose
     private String ModifyCycleValue;
 
     /**
-    * 工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系
+    * <p>工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系</p>
     */
     @SerializedName("ClearLink")
     @Expose
     private Boolean ClearLink;
 
     /**
-    * ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：
-* CRONTAB
-* DAY
-* HOUR
-* LIST_DAY
-* LIST_HOUR
-* LIST_MINUTE
-* MINUTE
-* MONTH
-* RANGE_DAY
-* RANGE_HOUR
-* RANGE_MINUTE
-* WEEK
-* YEAR
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+    * <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：</p><ul><li>CRONTAB</li><li>DAY</li><li>HOUR</li><li>LIST_DAY</li><li>LIST_HOUR</li><li>LIST_MINUTE</li><li>MINUTE</li><li>MONTH</li><li>RANGE_DAY</li><li>RANGE_HOUR</li><li>RANGE_MINUTE</li><li>WEEK</li><li>YEAR</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
     */
     @SerializedName("MainCyclicConfig")
     @Expose
     private String MainCyclicConfig;
 
     /**
-    * ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-取值为：
-* ALL_DAY_OF_YEAR
-* ALL_MONTH_OF_YEAR
-* CURRENT
-* CURRENT_DAY
-* CURRENT_HOUR
-* CURRENT_MINUTE
-* CURRENT_MONTH
-* CURRENT_WEEK
-* CURRENT_YEAR
-* PREVIOUS_BEGIN_OF_MONTH
-* PREVIOUS_DAY
-* PREVIOUS_DAY_LATER_OFFSET_HOUR
-* PREVIOUS_DAY_LATER_OFFSET_MINUTE
-* PREVIOUS_END_OF_MONTH
-* PREVIOUS_FRIDAY
-* PREVIOUS_HOUR
-* PREVIOUS_HOUR_CYCLE
-* PREVIOUS_HOUR_LATER_OFFSET_MINUTE
-* PREVIOUS_MINUTE_CYCLE
-* PREVIOUS_MONTH
-* PREVIOUS_WEEK
-* PREVIOUS_WEEKEND
-* RECENT_DATE
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+    * <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围<br>取值为：</p><ul><li>ALL_DAY_OF_YEAR</li><li>ALL_MONTH_OF_YEAR</li><li>CURRENT</li><li>CURRENT_DAY</li><li>CURRENT_HOUR</li><li>CURRENT_MINUTE</li><li>CURRENT_MONTH</li><li>CURRENT_WEEK</li><li>CURRENT_YEAR</li><li>PREVIOUS_BEGIN_OF_MONTH</li><li>PREVIOUS_DAY</li><li>PREVIOUS_DAY_LATER_OFFSET_HOUR</li><li>PREVIOUS_DAY_LATER_OFFSET_MINUTE</li><li>PREVIOUS_END_OF_MONTH</li><li>PREVIOUS_FRIDAY</li><li>PREVIOUS_HOUR</li><li>PREVIOUS_HOUR_CYCLE</li><li>PREVIOUS_HOUR_LATER_OFFSET_MINUTE</li><li>PREVIOUS_MINUTE_CYCLE</li><li>PREVIOUS_MONTH</li><li>PREVIOUS_WEEK</li><li>PREVIOUS_WEEKEND</li><li>RECENT_DATE</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
     */
     @SerializedName("SubordinateCyclicConfig")
     @Expose
     private String SubordinateCyclicConfig;
 
     /**
-    * 执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入
+    * <p>执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入</p>
     */
     @SerializedName("ExecutionStartTime")
     @Expose
     private String ExecutionStartTime;
 
     /**
-    * 执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入
+    * <p>执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入</p>
     */
     @SerializedName("ExecutionEndTime")
     @Expose
     private String ExecutionEndTime;
 
     /**
-    * 是否开启日历调度 1 开启 0关闭
+    * <p>是否开启日历调度 1 开启 0关闭</p>
     */
     @SerializedName("CalendarOpen")
     @Expose
     private String CalendarOpen;
 
     /**
-    * 日历id
+    * <p>日历id</p>
     */
     @SerializedName("CalendarId")
     @Expose
     private String CalendarId;
 
     /**
-     * Get 时区 
-     * @return ScheduleTimeZone 时区
+    * <p>分钟任务相位偏移</p>
+    */
+    @SerializedName("MinuteOffset")
+    @Expose
+    private Long MinuteOffset;
+
+    /**
+     * Get <p>时区</p> 
+     * @return ScheduleTimeZone <p>时区</p>
      */
     public String getScheduleTimeZone() {
         return this.ScheduleTimeZone;
     }
 
     /**
-     * Set 时区
-     * @param ScheduleTimeZone 时区
+     * Set <p>时区</p>
+     * @param ScheduleTimeZone <p>时区</p>
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     /**
-     * Get 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型 
-     * @return CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Get <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p> 
+     * @return CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
      */
     public String getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
-     * @param CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Set <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
+     * @param CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序) 
-     * @return SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Get <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p> 
+     * @return SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
      */
     public String getSelfDepend() {
         return this.SelfDepend;
     }
 
     /**
-     * Set 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
-     * @param SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Set <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
+     * @param SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
      */
     public void setSelfDepend(String SelfDepend) {
         this.SelfDepend = SelfDepend;
     }
 
     /**
-     * Get 生效开始时间 
-     * @return StartTime 生效开始时间
+     * Get <p>生效开始时间</p> 
+     * @return StartTime <p>生效开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 生效开始时间
-     * @param StartTime 生效开始时间
+     * Set <p>生效开始时间</p>
+     * @param StartTime <p>生效开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 生效结束时间 
-     * @return EndTime 生效结束时间
+     * Get <p>生效结束时间</p> 
+     * @return EndTime <p>生效结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 生效结束时间
-     * @param EndTime 生效结束时间
+     * Set <p>生效结束时间</p>
+     * @param EndTime <p>生效结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get cron表达式 
-     * @return CrontabExpression cron表达式
+     * Get <p>cron表达式</p> 
+     * @return CrontabExpression <p>cron表达式</p>
      */
     public String getCrontabExpression() {
         return this.CrontabExpression;
     }
 
     /**
-     * Set cron表达式
-     * @param CrontabExpression cron表达式
+     * Set <p>cron表达式</p>
+     * @param CrontabExpression <p>cron表达式</p>
      */
     public void setCrontabExpression(String CrontabExpression) {
         this.CrontabExpression = CrontabExpression;
     }
 
     /**
-     * Get 工作流依赖，yes or no 
-     * @return DependencyWorkflow 工作流依赖，yes or no
+     * Get <p>工作流依赖，yes or no</p> 
+     * @return DependencyWorkflow <p>工作流依赖，yes or no</p>
      */
     public String getDependencyWorkflow() {
         return this.DependencyWorkflow;
     }
 
     /**
-     * Set 工作流依赖，yes or no
-     * @param DependencyWorkflow 工作流依赖，yes or no
+     * Set <p>工作流依赖，yes or no</p>
+     * @param DependencyWorkflow <p>工作流依赖，yes or no</p>
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
         this.DependencyWorkflow = DependencyWorkflow;
     }
 
     /**
-     * Get 0：不修改 1：将任务的上游依赖配置改为默认值 
-     * @return ModifyCycleValue 0：不修改 1：将任务的上游依赖配置改为默认值
+     * Get <p>0：不修改 1：将任务的上游依赖配置改为默认值</p> 
+     * @return ModifyCycleValue <p>0：不修改 1：将任务的上游依赖配置改为默认值</p>
      */
     public String getModifyCycleValue() {
         return this.ModifyCycleValue;
     }
 
     /**
-     * Set 0：不修改 1：将任务的上游依赖配置改为默认值
-     * @param ModifyCycleValue 0：不修改 1：将任务的上游依赖配置改为默认值
+     * Set <p>0：不修改 1：将任务的上游依赖配置改为默认值</p>
+     * @param ModifyCycleValue <p>0：不修改 1：将任务的上游依赖配置改为默认值</p>
      */
     public void setModifyCycleValue(String ModifyCycleValue) {
         this.ModifyCycleValue = ModifyCycleValue;
     }
 
     /**
-     * Get 工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系 
-     * @return ClearLink 工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系
+     * Get <p>工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系</p> 
+     * @return ClearLink <p>工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系</p>
      */
     public Boolean getClearLink() {
         return this.ClearLink;
     }
 
     /**
-     * Set 工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系
-     * @param ClearLink 工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系
+     * Set <p>工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系</p>
+     * @param ClearLink <p>工作流存在跨工作流依赖且使用cron表达式调度。如果保存统一调度，会断开不支持的依赖关系</p>
      */
     public void setClearLink(Boolean ClearLink) {
         this.ClearLink = ClearLink;
     }
 
     /**
-     * Get ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：
-* CRONTAB
-* DAY
-* HOUR
-* LIST_DAY
-* LIST_HOUR
-* LIST_MINUTE
-* MINUTE
-* MONTH
-* RANGE_DAY
-* RANGE_HOUR
-* RANGE_MINUTE
-* WEEK
-* YEAR
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo 
-     * @return MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：
-* CRONTAB
-* DAY
-* HOUR
-* LIST_DAY
-* LIST_HOUR
-* LIST_MINUTE
-* MINUTE
-* MONTH
-* RANGE_DAY
-* RANGE_HOUR
-* RANGE_MINUTE
-* WEEK
-* YEAR
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+     * Get <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：</p><ul><li>CRONTAB</li><li>DAY</li><li>HOUR</li><li>LIST_DAY</li><li>LIST_HOUR</li><li>LIST_MINUTE</li><li>MINUTE</li><li>MONTH</li><li>RANGE_DAY</li><li>RANGE_HOUR</li><li>RANGE_MINUTE</li><li>WEEK</li><li>YEAR</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p> 
+     * @return MainCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：</p><ul><li>CRONTAB</li><li>DAY</li><li>HOUR</li><li>LIST_DAY</li><li>LIST_HOUR</li><li>LIST_MINUTE</li><li>MINUTE</li><li>MONTH</li><li>RANGE_DAY</li><li>RANGE_HOUR</li><li>RANGE_MINUTE</li><li>WEEK</li><li>YEAR</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
      */
     public String getMainCyclicConfig() {
         return this.MainCyclicConfig;
     }
 
     /**
-     * Set ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：
-* CRONTAB
-* DAY
-* HOUR
-* LIST_DAY
-* LIST_HOUR
-* LIST_MINUTE
-* MINUTE
-* MONTH
-* RANGE_DAY
-* RANGE_HOUR
-* RANGE_MINUTE
-* WEEK
-* YEAR
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
-     * @param MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：
-* CRONTAB
-* DAY
-* HOUR
-* LIST_DAY
-* LIST_HOUR
-* LIST_MINUTE
-* MINUTE
-* MONTH
-* RANGE_DAY
-* RANGE_HOUR
-* RANGE_MINUTE
-* WEEK
-* YEAR
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+     * Set <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：</p><ul><li>CRONTAB</li><li>DAY</li><li>HOUR</li><li>LIST_DAY</li><li>LIST_HOUR</li><li>LIST_MINUTE</li><li>MINUTE</li><li>MONTH</li><li>RANGE_DAY</li><li>RANGE_HOUR</li><li>RANGE_MINUTE</li><li>WEEK</li><li>YEAR</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
+     * @param MainCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度，取值为：</p><ul><li>CRONTAB</li><li>DAY</li><li>HOUR</li><li>LIST_DAY</li><li>LIST_HOUR</li><li>LIST_MINUTE</li><li>MINUTE</li><li>MONTH</li><li>RANGE_DAY</li><li>RANGE_HOUR</li><li>RANGE_MINUTE</li><li>WEEK</li><li>YEAR</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
      */
     public void setMainCyclicConfig(String MainCyclicConfig) {
         this.MainCyclicConfig = MainCyclicConfig;
     }
 
     /**
-     * Get ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-取值为：
-* ALL_DAY_OF_YEAR
-* ALL_MONTH_OF_YEAR
-* CURRENT
-* CURRENT_DAY
-* CURRENT_HOUR
-* CURRENT_MINUTE
-* CURRENT_MONTH
-* CURRENT_WEEK
-* CURRENT_YEAR
-* PREVIOUS_BEGIN_OF_MONTH
-* PREVIOUS_DAY
-* PREVIOUS_DAY_LATER_OFFSET_HOUR
-* PREVIOUS_DAY_LATER_OFFSET_MINUTE
-* PREVIOUS_END_OF_MONTH
-* PREVIOUS_FRIDAY
-* PREVIOUS_HOUR
-* PREVIOUS_HOUR_CYCLE
-* PREVIOUS_HOUR_LATER_OFFSET_MINUTE
-* PREVIOUS_MINUTE_CYCLE
-* PREVIOUS_MONTH
-* PREVIOUS_WEEK
-* PREVIOUS_WEEKEND
-* RECENT_DATE
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo 
-     * @return SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-取值为：
-* ALL_DAY_OF_YEAR
-* ALL_MONTH_OF_YEAR
-* CURRENT
-* CURRENT_DAY
-* CURRENT_HOUR
-* CURRENT_MINUTE
-* CURRENT_MONTH
-* CURRENT_WEEK
-* CURRENT_YEAR
-* PREVIOUS_BEGIN_OF_MONTH
-* PREVIOUS_DAY
-* PREVIOUS_DAY_LATER_OFFSET_HOUR
-* PREVIOUS_DAY_LATER_OFFSET_MINUTE
-* PREVIOUS_END_OF_MONTH
-* PREVIOUS_FRIDAY
-* PREVIOUS_HOUR
-* PREVIOUS_HOUR_CYCLE
-* PREVIOUS_HOUR_LATER_OFFSET_MINUTE
-* PREVIOUS_MINUTE_CYCLE
-* PREVIOUS_MONTH
-* PREVIOUS_WEEK
-* PREVIOUS_WEEKEND
-* RECENT_DATE
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+     * Get <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围<br>取值为：</p><ul><li>ALL_DAY_OF_YEAR</li><li>ALL_MONTH_OF_YEAR</li><li>CURRENT</li><li>CURRENT_DAY</li><li>CURRENT_HOUR</li><li>CURRENT_MINUTE</li><li>CURRENT_MONTH</li><li>CURRENT_WEEK</li><li>CURRENT_YEAR</li><li>PREVIOUS_BEGIN_OF_MONTH</li><li>PREVIOUS_DAY</li><li>PREVIOUS_DAY_LATER_OFFSET_HOUR</li><li>PREVIOUS_DAY_LATER_OFFSET_MINUTE</li><li>PREVIOUS_END_OF_MONTH</li><li>PREVIOUS_FRIDAY</li><li>PREVIOUS_HOUR</li><li>PREVIOUS_HOUR_CYCLE</li><li>PREVIOUS_HOUR_LATER_OFFSET_MINUTE</li><li>PREVIOUS_MINUTE_CYCLE</li><li>PREVIOUS_MONTH</li><li>PREVIOUS_WEEK</li><li>PREVIOUS_WEEKEND</li><li>RECENT_DATE</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p> 
+     * @return SubordinateCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围<br>取值为：</p><ul><li>ALL_DAY_OF_YEAR</li><li>ALL_MONTH_OF_YEAR</li><li>CURRENT</li><li>CURRENT_DAY</li><li>CURRENT_HOUR</li><li>CURRENT_MINUTE</li><li>CURRENT_MONTH</li><li>CURRENT_WEEK</li><li>CURRENT_YEAR</li><li>PREVIOUS_BEGIN_OF_MONTH</li><li>PREVIOUS_DAY</li><li>PREVIOUS_DAY_LATER_OFFSET_HOUR</li><li>PREVIOUS_DAY_LATER_OFFSET_MINUTE</li><li>PREVIOUS_END_OF_MONTH</li><li>PREVIOUS_FRIDAY</li><li>PREVIOUS_HOUR</li><li>PREVIOUS_HOUR_CYCLE</li><li>PREVIOUS_HOUR_LATER_OFFSET_MINUTE</li><li>PREVIOUS_MINUTE_CYCLE</li><li>PREVIOUS_MONTH</li><li>PREVIOUS_WEEK</li><li>PREVIOUS_WEEKEND</li><li>RECENT_DATE</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
      */
     public String getSubordinateCyclicConfig() {
         return this.SubordinateCyclicConfig;
     }
 
     /**
-     * Set ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-取值为：
-* ALL_DAY_OF_YEAR
-* ALL_MONTH_OF_YEAR
-* CURRENT
-* CURRENT_DAY
-* CURRENT_HOUR
-* CURRENT_MINUTE
-* CURRENT_MONTH
-* CURRENT_WEEK
-* CURRENT_YEAR
-* PREVIOUS_BEGIN_OF_MONTH
-* PREVIOUS_DAY
-* PREVIOUS_DAY_LATER_OFFSET_HOUR
-* PREVIOUS_DAY_LATER_OFFSET_MINUTE
-* PREVIOUS_END_OF_MONTH
-* PREVIOUS_FRIDAY
-* PREVIOUS_HOUR
-* PREVIOUS_HOUR_CYCLE
-* PREVIOUS_HOUR_LATER_OFFSET_MINUTE
-* PREVIOUS_MINUTE_CYCLE
-* PREVIOUS_MONTH
-* PREVIOUS_WEEK
-* PREVIOUS_WEEKEND
-* RECENT_DATE
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
-     * @param SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
-取值为：
-* ALL_DAY_OF_YEAR
-* ALL_MONTH_OF_YEAR
-* CURRENT
-* CURRENT_DAY
-* CURRENT_HOUR
-* CURRENT_MINUTE
-* CURRENT_MONTH
-* CURRENT_WEEK
-* CURRENT_YEAR
-* PREVIOUS_BEGIN_OF_MONTH
-* PREVIOUS_DAY
-* PREVIOUS_DAY_LATER_OFFSET_HOUR
-* PREVIOUS_DAY_LATER_OFFSET_MINUTE
-* PREVIOUS_END_OF_MONTH
-* PREVIOUS_FRIDAY
-* PREVIOUS_HOUR
-* PREVIOUS_HOUR_CYCLE
-* PREVIOUS_HOUR_LATER_OFFSET_MINUTE
-* PREVIOUS_MINUTE_CYCLE
-* PREVIOUS_MONTH
-* PREVIOUS_WEEK
-* PREVIOUS_WEEKEND
-* RECENT_DATE
-
-https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06&name=WorkflowSchedulerConfigurationInfo
+     * Set <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围<br>取值为：</p><ul><li>ALL_DAY_OF_YEAR</li><li>ALL_MONTH_OF_YEAR</li><li>CURRENT</li><li>CURRENT_DAY</li><li>CURRENT_HOUR</li><li>CURRENT_MINUTE</li><li>CURRENT_MONTH</li><li>CURRENT_WEEK</li><li>CURRENT_YEAR</li><li>PREVIOUS_BEGIN_OF_MONTH</li><li>PREVIOUS_DAY</li><li>PREVIOUS_DAY_LATER_OFFSET_HOUR</li><li>PREVIOUS_DAY_LATER_OFFSET_MINUTE</li><li>PREVIOUS_END_OF_MONTH</li><li>PREVIOUS_FRIDAY</li><li>PREVIOUS_HOUR</li><li>PREVIOUS_HOUR_CYCLE</li><li>PREVIOUS_HOUR_LATER_OFFSET_MINUTE</li><li>PREVIOUS_MINUTE_CYCLE</li><li>PREVIOUS_MONTH</li><li>PREVIOUS_WEEK</li><li>PREVIOUS_WEEKEND</li><li>RECENT_DATE</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
+     * @param SubordinateCyclicConfig <p>ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围<br>取值为：</p><ul><li>ALL_DAY_OF_YEAR</li><li>ALL_MONTH_OF_YEAR</li><li>CURRENT</li><li>CURRENT_DAY</li><li>CURRENT_HOUR</li><li>CURRENT_MINUTE</li><li>CURRENT_MONTH</li><li>CURRENT_WEEK</li><li>CURRENT_YEAR</li><li>PREVIOUS_BEGIN_OF_MONTH</li><li>PREVIOUS_DAY</li><li>PREVIOUS_DAY_LATER_OFFSET_HOUR</li><li>PREVIOUS_DAY_LATER_OFFSET_MINUTE</li><li>PREVIOUS_END_OF_MONTH</li><li>PREVIOUS_FRIDAY</li><li>PREVIOUS_HOUR</li><li>PREVIOUS_HOUR_CYCLE</li><li>PREVIOUS_HOUR_LATER_OFFSET_MINUTE</li><li>PREVIOUS_MINUTE_CYCLE</li><li>PREVIOUS_MONTH</li><li>PREVIOUS_WEEK</li><li>PREVIOUS_WEEKEND</li><li>RECENT_DATE</li></ul><p>https://capi.woa.com/object/detail?product=wedata&amp;env=api_dev&amp;version=2025-08-06&amp;name=WorkflowSchedulerConfigurationInfo</p>
      */
     public void setSubordinateCyclicConfig(String SubordinateCyclicConfig) {
         this.SubordinateCyclicConfig = SubordinateCyclicConfig;
     }
 
     /**
-     * Get 执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入 
-     * @return ExecutionStartTime 执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入
+     * Get <p>执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入</p> 
+     * @return ExecutionStartTime <p>执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入</p>
      */
     public String getExecutionStartTime() {
         return this.ExecutionStartTime;
     }
 
     /**
-     * Set 执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入
-     * @param ExecutionStartTime 执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入
+     * Set <p>执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入</p>
+     * @param ExecutionStartTime <p>执行时间左闭区间，示例：00:00，只有周期类型为MINUTE_CYCLE才需要填入</p>
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
     /**
-     * Get 执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入 
-     * @return ExecutionEndTime 执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入
+     * Get <p>执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入</p> 
+     * @return ExecutionEndTime <p>执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入</p>
      */
     public String getExecutionEndTime() {
         return this.ExecutionEndTime;
     }
 
     /**
-     * Set 执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入
-     * @param ExecutionEndTime 执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入
+     * Set <p>执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入</p>
+     * @param ExecutionEndTime <p>执行时间右闭区间，示例：23:59，只有周期类型为MINUTE_CYCLE才需要填入</p>
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
         this.ExecutionEndTime = ExecutionEndTime;
     }
 
     /**
-     * Get 是否开启日历调度 1 开启 0关闭 
-     * @return CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * Get <p>是否开启日历调度 1 开启 0关闭</p> 
+     * @return CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
      */
     public String getCalendarOpen() {
         return this.CalendarOpen;
     }
 
     /**
-     * Set 是否开启日历调度 1 开启 0关闭
-     * @param CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * Set <p>是否开启日历调度 1 开启 0关闭</p>
+     * @param CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
      */
     public void setCalendarOpen(String CalendarOpen) {
         this.CalendarOpen = CalendarOpen;
     }
 
     /**
-     * Get 日历id 
-     * @return CalendarId 日历id
+     * Get <p>日历id</p> 
+     * @return CalendarId <p>日历id</p>
      */
     public String getCalendarId() {
         return this.CalendarId;
     }
 
     /**
-     * Set 日历id
-     * @param CalendarId 日历id
+     * Set <p>日历id</p>
+     * @param CalendarId <p>日历id</p>
      */
     public void setCalendarId(String CalendarId) {
         this.CalendarId = CalendarId;
+    }
+
+    /**
+     * Get <p>分钟任务相位偏移</p> 
+     * @return MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public Long getMinuteOffset() {
+        return this.MinuteOffset;
+    }
+
+    /**
+     * Set <p>分钟任务相位偏移</p>
+     * @param MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public void setMinuteOffset(Long MinuteOffset) {
+        this.MinuteOffset = MinuteOffset;
     }
 
     public WorkflowSchedulerConfigurationInfo() {
@@ -666,6 +444,9 @@ https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06
         if (source.CalendarId != null) {
             this.CalendarId = new String(source.CalendarId);
         }
+        if (source.MinuteOffset != null) {
+            this.MinuteOffset = new Long(source.MinuteOffset);
+        }
     }
 
 
@@ -688,6 +469,7 @@ https://capi.woa.com/object/detail?product=wedata&env=api_dev&version=2025-08-06
         this.setParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
+        this.setParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
 
     }
 }

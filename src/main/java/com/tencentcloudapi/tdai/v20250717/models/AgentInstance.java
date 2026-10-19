@@ -206,6 +206,13 @@ public class AgentInstance extends AbstractModel {
     private AgentMemInfo AgentMem;
 
     /**
+    * <p>关联的 memory（AGM）实例ID（仅免部署实例有值）</p>
+    */
+    @SerializedName("MemInstanceId")
+    @Expose
+    private String MemInstanceId;
+
+    /**
      * Get <p>智能体实例ID</p> 
      * @return InstanceId <p>智能体实例ID</p>
      */
@@ -621,6 +628,22 @@ public class AgentInstance extends AbstractModel {
         this.AgentMem = AgentMem;
     }
 
+    /**
+     * Get <p>关联的 memory（AGM）实例ID（仅免部署实例有值）</p> 
+     * @return MemInstanceId <p>关联的 memory（AGM）实例ID（仅免部署实例有值）</p>
+     */
+    public String getMemInstanceId() {
+        return this.MemInstanceId;
+    }
+
+    /**
+     * Set <p>关联的 memory（AGM）实例ID（仅免部署实例有值）</p>
+     * @param MemInstanceId <p>关联的 memory（AGM）实例ID（仅免部署实例有值）</p>
+     */
+    public void setMemInstanceId(String MemInstanceId) {
+        this.MemInstanceId = MemInstanceId;
+    }
+
     public AgentInstance() {
     }
 
@@ -722,6 +745,9 @@ public class AgentInstance extends AbstractModel {
         if (source.AgentMem != null) {
             this.AgentMem = new AgentMemInfo(source.AgentMem);
         }
+        if (source.MemInstanceId != null) {
+            this.MemInstanceId = new String(source.MemInstanceId);
+        }
     }
 
 
@@ -755,6 +781,7 @@ public class AgentInstance extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Capabilities.", this.Capabilities);
         this.setParamSimple(map, prefix + "DeploymentFree", this.DeploymentFree);
         this.setParamObj(map, prefix + "AgentMem.", this.AgentMem);
+        this.setParamSimple(map, prefix + "MemInstanceId", this.MemInstanceId);
 
     }
 }

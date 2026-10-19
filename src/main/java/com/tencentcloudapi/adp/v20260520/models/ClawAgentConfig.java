@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ClawAgentConfig extends AbstractModel {
 
     /**
-    * Agent团队协作配置
+    * <p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentTeamConfig")
@@ -32,7 +32,7 @@ public class ClawAgentConfig extends AbstractModel {
     private ClawAgentAgentTeamConfig AgentTeamConfig;
 
     /**
-    * 长期记忆配置
+    * <p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LongMemoryConfig")
@@ -40,9 +40,17 @@ public class ClawAgentConfig extends AbstractModel {
     private ClawAgentLongMemoryConfig LongMemoryConfig;
 
     /**
-     * Get Agent团队协作配置
+    * <p>渠道上下文超时清空配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelContextTimeoutConfig")
+    @Expose
+    private ClawAgentChannelContextTimeoutConfig ChannelContextTimeoutConfig;
+
+    /**
+     * Get <p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentTeamConfig Agent团队协作配置
+     * @return AgentTeamConfig <p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClawAgentAgentTeamConfig getAgentTeamConfig() {
@@ -50,9 +58,9 @@ public class ClawAgentConfig extends AbstractModel {
     }
 
     /**
-     * Set Agent团队协作配置
+     * Set <p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentTeamConfig Agent团队协作配置
+     * @param AgentTeamConfig <p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentTeamConfig(ClawAgentAgentTeamConfig AgentTeamConfig) {
@@ -60,9 +68,9 @@ public class ClawAgentConfig extends AbstractModel {
     }
 
     /**
-     * Get 长期记忆配置
+     * Get <p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LongMemoryConfig 长期记忆配置
+     * @return LongMemoryConfig <p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClawAgentLongMemoryConfig getLongMemoryConfig() {
@@ -70,13 +78,33 @@ public class ClawAgentConfig extends AbstractModel {
     }
 
     /**
-     * Set 长期记忆配置
+     * Set <p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LongMemoryConfig 长期记忆配置
+     * @param LongMemoryConfig <p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongMemoryConfig(ClawAgentLongMemoryConfig LongMemoryConfig) {
         this.LongMemoryConfig = LongMemoryConfig;
+    }
+
+    /**
+     * Get <p>渠道上下文超时清空配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelContextTimeoutConfig <p>渠道上下文超时清空配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClawAgentChannelContextTimeoutConfig getChannelContextTimeoutConfig() {
+        return this.ChannelContextTimeoutConfig;
+    }
+
+    /**
+     * Set <p>渠道上下文超时清空配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelContextTimeoutConfig <p>渠道上下文超时清空配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelContextTimeoutConfig(ClawAgentChannelContextTimeoutConfig ChannelContextTimeoutConfig) {
+        this.ChannelContextTimeoutConfig = ChannelContextTimeoutConfig;
     }
 
     public ClawAgentConfig() {
@@ -93,6 +121,9 @@ public class ClawAgentConfig extends AbstractModel {
         if (source.LongMemoryConfig != null) {
             this.LongMemoryConfig = new ClawAgentLongMemoryConfig(source.LongMemoryConfig);
         }
+        if (source.ChannelContextTimeoutConfig != null) {
+            this.ChannelContextTimeoutConfig = new ClawAgentChannelContextTimeoutConfig(source.ChannelContextTimeoutConfig);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class ClawAgentConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AgentTeamConfig.", this.AgentTeamConfig);
         this.setParamObj(map, prefix + "LongMemoryConfig.", this.LongMemoryConfig);
+        this.setParamObj(map, prefix + "ChannelContextTimeoutConfig.", this.ChannelContextTimeoutConfig);
 
     }
 }

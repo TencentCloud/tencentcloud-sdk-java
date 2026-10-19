@@ -286,6 +286,13 @@ public class CreateJobSpecResponse extends AbstractModel {
     private String ClusterName;
 
     /**
+    * <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -897,6 +904,22 @@ public class CreateJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p> 
+     * @return NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     * @param NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1034,6 +1057,9 @@ public class CreateJobSpecResponse extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1081,6 +1107,7 @@ public class CreateJobSpecResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubmissionTarget", this.SubmissionTarget);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

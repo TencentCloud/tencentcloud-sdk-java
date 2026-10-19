@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeStreamLinkEventsRequest extends AbstractModel {
 
     /**
-    * 当前页数，默认1。
+    * <p>当前页数，默认1。</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 每页大小，默认10。
+    * <p>每页大小，默认10。</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 当前页数，默认1。 
-     * @return PageNum 当前页数，默认1。
+     * Get <p>当前页数，默认1。</p> 
+     * @return PageNum <p>当前页数，默认1。</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 当前页数，默认1。
-     * @param PageNum 当前页数，默认1。
+     * Set <p>当前页数，默认1。</p>
+     * @param PageNum <p>当前页数，默认1。</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 每页大小，默认10。 
-     * @return PageSize 每页大小，默认10。
+     * Get <p>每页大小，默认10。</p> 
+     * @return PageSize <p>每页大小，默认10。</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页大小，默认10。
-     * @param PageSize 每页大小，默认10。
+     * Set <p>每页大小，默认10。</p>
+     * @param PageSize <p>每页大小，默认10。</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

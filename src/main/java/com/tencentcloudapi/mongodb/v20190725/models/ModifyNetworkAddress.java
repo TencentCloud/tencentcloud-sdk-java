@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyNetworkAddress extends AbstractModel {
 
     /**
-    * 新IP地址。
+    * <p>新IP地址。</p>
     */
     @SerializedName("NewIPAddress")
     @Expose
     private String NewIPAddress;
 
     /**
-    * 原IP地址。
+    * <p>原IP地址。</p>
     */
     @SerializedName("OldIpAddress")
     @Expose
     private String OldIpAddress;
 
     /**
-     * Get 新IP地址。 
-     * @return NewIPAddress 新IP地址。
+    * <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+     * Get <p>新IP地址。</p> 
+     * @return NewIPAddress <p>新IP地址。</p>
      */
     public String getNewIPAddress() {
         return this.NewIPAddress;
     }
 
     /**
-     * Set 新IP地址。
-     * @param NewIPAddress 新IP地址。
+     * Set <p>新IP地址。</p>
+     * @param NewIPAddress <p>新IP地址。</p>
      */
     public void setNewIPAddress(String NewIPAddress) {
         this.NewIPAddress = NewIPAddress;
     }
 
     /**
-     * Get 原IP地址。 
-     * @return OldIpAddress 原IP地址。
+     * Get <p>原IP地址。</p> 
+     * @return OldIpAddress <p>原IP地址。</p>
      */
     public String getOldIpAddress() {
         return this.OldIpAddress;
     }
 
     /**
-     * Set 原IP地址。
-     * @param OldIpAddress 原IP地址。
+     * Set <p>原IP地址。</p>
+     * @param OldIpAddress <p>原IP地址。</p>
      */
     public void setOldIpAddress(String OldIpAddress) {
         this.OldIpAddress = OldIpAddress;
+    }
+
+    /**
+     * Get <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul> 
+     * @return NodeType <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+     * @param NodeType <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
     }
 
     public ModifyNetworkAddress() {
@@ -83,6 +106,9 @@ public class ModifyNetworkAddress extends AbstractModel {
         if (source.OldIpAddress != null) {
             this.OldIpAddress = new String(source.OldIpAddress);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyNetworkAddress extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NewIPAddress", this.NewIPAddress);
         this.setParamSimple(map, prefix + "OldIpAddress", this.OldIpAddress);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
 
     }
 }

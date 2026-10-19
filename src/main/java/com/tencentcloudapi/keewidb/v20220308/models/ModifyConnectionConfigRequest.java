@@ -68,7 +68,9 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
 <ul><li>开启副本只读时，实例总带宽  = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul> 
      * @return Bandwidth 单分片附加带宽，取值范围[0,512]，单位：MB。
 <ul><li>开启副本只读时，实例总带宽  = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+     * @deprecated
      */
+    @Deprecated
     public Long getBandwidth() {
         return this.Bandwidth;
     }
@@ -78,7 +80,9 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
 <ul><li>开启副本只读时，实例总带宽  = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
      * @param Bandwidth 单分片附加带宽，取值范围[0,512]，单位：MB。
 <ul><li>开启副本只读时，实例总带宽  = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 单分片附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+     * @deprecated
      */
+    @Deprecated
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }

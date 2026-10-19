@@ -132,6 +132,22 @@ public class ChannelSpec extends AbstractModel {
     private WecomRobotChannelConfig WecomRobot;
 
     /**
+    * <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShareGroupConversation")
+    @Expose
+    private Boolean ShareGroupConversation;
+
+    /**
+    * <p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDebug")
+    @Expose
+    private Boolean IsDebug;
+
+    /**
      * Get <p>渠道名称</p> 
      * @return ChannelName <p>渠道名称</p>
      */
@@ -395,6 +411,46 @@ public class ChannelSpec extends AbstractModel {
         this.WecomRobot = WecomRobot;
     }
 
+    /**
+     * Get <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShareGroupConversation <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getShareGroupConversation() {
+        return this.ShareGroupConversation;
+    }
+
+    /**
+     * Set <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShareGroupConversation <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShareGroupConversation(Boolean ShareGroupConversation) {
+        this.ShareGroupConversation = ShareGroupConversation;
+    }
+
+    /**
+     * Get <p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDebug <p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDebug() {
+        return this.IsDebug;
+    }
+
+    /**
+     * Set <p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDebug <p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDebug(Boolean IsDebug) {
+        this.IsDebug = IsDebug;
+    }
+
     public ChannelSpec() {
     }
 
@@ -445,6 +501,12 @@ public class ChannelSpec extends AbstractModel {
         if (source.WecomRobot != null) {
             this.WecomRobot = new WecomRobotChannelConfig(source.WecomRobot);
         }
+        if (source.ShareGroupConversation != null) {
+            this.ShareGroupConversation = new Boolean(source.ShareGroupConversation);
+        }
+        if (source.IsDebug != null) {
+            this.IsDebug = new Boolean(source.IsDebug);
+        }
     }
 
 
@@ -466,6 +528,8 @@ public class ChannelSpec extends AbstractModel {
         this.setParamObj(map, prefix + "WechatCustomerService.", this.WechatCustomerService);
         this.setParamObj(map, prefix + "WecomApp.", this.WecomApp);
         this.setParamObj(map, prefix + "WecomRobot.", this.WecomRobot);
+        this.setParamSimple(map, prefix + "ShareGroupConversation", this.ShareGroupConversation);
+        this.setParamSimple(map, prefix + "IsDebug", this.IsDebug);
 
     }
 }

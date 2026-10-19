@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class RestartInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+    * <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-    * 重启模式：0 滚动重启； 1 全量重启
+    * <p>重启模式：0 滚动重启； 1 全量重启</p>
     */
     @SerializedName("RestartMode")
     @Expose
     private Long RestartMode;
 
     /**
-    * 重启时选择是否升级内核patch版本
+    * <p>重启时选择是否升级内核patch版本</p>
     */
     @SerializedName("UpgradeKernel")
     @Expose
     private Boolean UpgradeKernel;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false 
-     * @return ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * Get <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p> 
+     * @return ForceRestart <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
-     * @param ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * Set <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
+     * @param ForceRestart <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;
     }
 
     /**
-     * Get 重启模式：0 滚动重启； 1 全量重启 
-     * @return RestartMode 重启模式：0 滚动重启； 1 全量重启
+     * Get <p>重启模式：0 滚动重启； 1 全量重启</p> 
+     * @return RestartMode <p>重启模式：0 滚动重启； 1 全量重启</p>
      */
     public Long getRestartMode() {
         return this.RestartMode;
     }
 
     /**
-     * Set 重启模式：0 滚动重启； 1 全量重启
-     * @param RestartMode 重启模式：0 滚动重启； 1 全量重启
+     * Set <p>重启模式：0 滚动重启； 1 全量重启</p>
+     * @param RestartMode <p>重启模式：0 滚动重启； 1 全量重启</p>
      */
     public void setRestartMode(Long RestartMode) {
         this.RestartMode = RestartMode;
     }
 
     /**
-     * Get 重启时选择是否升级内核patch版本 
-     * @return UpgradeKernel 重启时选择是否升级内核patch版本
+     * Get <p>重启时选择是否升级内核patch版本</p> 
+     * @return UpgradeKernel <p>重启时选择是否升级内核patch版本</p>
      */
     public Boolean getUpgradeKernel() {
         return this.UpgradeKernel;
     }
 
     /**
-     * Set 重启时选择是否升级内核patch版本
-     * @param UpgradeKernel 重启时选择是否升级内核patch版本
+     * Set <p>重启时选择是否升级内核patch版本</p>
+     * @param UpgradeKernel <p>重启时选择是否升级内核patch版本</p>
      */
     public void setUpgradeKernel(Boolean UpgradeKernel) {
         this.UpgradeKernel = UpgradeKernel;

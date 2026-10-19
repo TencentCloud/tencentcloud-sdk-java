@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStreamLinkInputResponse extends AbstractModel {
 
     /**
-    * 创建的Flow信息。
+    * <p>创建的Flow信息。</p>
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class CreateStreamLinkInputResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的Flow信息。 
-     * @return Info 创建的Flow信息。
+     * Get <p>创建的Flow信息。</p> 
+     * @return Info <p>创建的Flow信息。</p>
      */
     public DescribeFlow getInfo() {
         return this.Info;
     }
 
     /**
-     * Set 创建的Flow信息。
-     * @param Info 创建的Flow信息。
+     * Set <p>创建的Flow信息。</p>
+     * @param Info <p>创建的Flow信息。</p>
      */
     public void setInfo(DescribeFlow Info) {
         this.Info = Info;

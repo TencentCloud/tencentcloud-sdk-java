@@ -88,6 +88,22 @@ public class WebhookTrigger extends AbstractModel {
     private String NamespaceName;
 
     /**
+    * <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+    * <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreheatRegion")
+    @Expose
+    private String PreheatRegion;
+
+    /**
      * Get <p>触发器名称</p> 
      * @return Name <p>触发器名称</p>
      */
@@ -235,6 +251,46 @@ public class WebhookTrigger extends AbstractModel {
         this.NamespaceName = NamespaceName;
     }
 
+    /**
+     * Get <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Product <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Product <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Get <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreheatRegion() {
+        return this.PreheatRegion;
+    }
+
+    /**
+     * Set <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreheatRegion(String PreheatRegion) {
+        this.PreheatRegion = PreheatRegion;
+    }
+
     public WebhookTrigger() {
     }
 
@@ -276,6 +332,12 @@ public class WebhookTrigger extends AbstractModel {
         if (source.NamespaceName != null) {
             this.NamespaceName = new String(source.NamespaceName);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.PreheatRegion != null) {
+            this.PreheatRegion = new String(source.PreheatRegion);
+        }
     }
 
 
@@ -292,6 +354,8 @@ public class WebhookTrigger extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "PreheatRegion", this.PreheatRegion);
 
     }
 }

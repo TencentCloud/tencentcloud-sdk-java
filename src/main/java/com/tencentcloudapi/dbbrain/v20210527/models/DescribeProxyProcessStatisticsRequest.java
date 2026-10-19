@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -60,6 +60,11 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
 
     /**
     * 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
     */
     @SerializedName("SortBy")
     @Expose
@@ -67,22 +72,26 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
 
     /**
     * 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -153,8 +162,18 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。 
+     * Get 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址 
      * @return SortBy 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
      */
     public String getSortBy() {
         return this.SortBy;
@@ -162,15 +181,33 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
 
     /**
      * Set 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
      * @param SortBy 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get 排序方向。支持值包括："DESC"，"ASC"。 
+     * Get 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序 
      * @return OrderDirection 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
      */
     public String getOrderDirection() {
         return this.OrderDirection;
@@ -178,7 +215,15 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
 
     /**
      * Set 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
      * @param OrderDirection 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

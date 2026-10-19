@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeModelAccelerateTaskRequest extends AbstractModel {
 
     /**
-    * 模型加速任务ID
+    * <p>模型加速任务ID</p>
     */
     @SerializedName("ModelAccTaskId")
     @Expose
     private String ModelAccTaskId;
 
     /**
-     * Get 模型加速任务ID 
-     * @return ModelAccTaskId 模型加速任务ID
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
+     * Get <p>模型加速任务ID</p> 
+     * @return ModelAccTaskId <p>模型加速任务ID</p>
      */
     public String getModelAccTaskId() {
         return this.ModelAccTaskId;
     }
 
     /**
-     * Set 模型加速任务ID
-     * @param ModelAccTaskId 模型加速任务ID
+     * Set <p>模型加速任务ID</p>
+     * @param ModelAccTaskId <p>模型加速任务ID</p>
      */
     public void setModelAccTaskId(String ModelAccTaskId) {
         this.ModelAccTaskId = ModelAccTaskId;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     public DescribeModelAccelerateTaskRequest() {
@@ -57,6 +80,9 @@ public class DescribeModelAccelerateTaskRequest extends AbstractModel {
         if (source.ModelAccTaskId != null) {
             this.ModelAccTaskId = new String(source.ModelAccTaskId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeModelAccelerateTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelAccTaskId", this.ModelAccTaskId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
 
     }
 }

@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class ResetCloudStorageRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+    * <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
     */
     @SerializedName("ChannelId")
     @Expose
     private Long ChannelId;
 
     /**
-    * 云存用户Id，为空则为默认云存空间。
+    * <p>云存用户Id，为空则为默认云存空间。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+    * <p>订单id</p>
+    */
+    @SerializedName("OrderId")
+    @Expose
+    private String OrderId;
+
+    /**
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
+     * Get <p>设备名称</p> 
+     * @return DeviceName <p>设备名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
+     * Set <p>设备名称</p>
+     * @param DeviceName <p>设备名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 通道ID 非NVR设备则不填 NVR设备则必填 默认为无 
-     * @return ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * Get <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p> 
+     * @return ChannelId <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
-     * @param ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * Set <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
+     * @param ChannelId <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 云存用户Id，为空则为默认云存空间。 
-     * @return UserId 云存用户Id，为空则为默认云存空间。
+     * Get <p>云存用户Id，为空则为默认云存空间。</p> 
+     * @return UserId <p>云存用户Id，为空则为默认云存空间。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 云存用户Id，为空则为默认云存空间。
-     * @param UserId 云存用户Id，为空则为默认云存空间。
+     * Set <p>云存用户Id，为空则为默认云存空间。</p>
+     * @param UserId <p>云存用户Id，为空则为默认云存空间。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
+    }
+
+    /**
+     * Get <p>订单id</p> 
+     * @return OrderId <p>订单id</p>
+     */
+    public String getOrderId() {
+        return this.OrderId;
+    }
+
+    /**
+     * Set <p>订单id</p>
+     * @param OrderId <p>订单id</p>
+     */
+    public void setOrderId(String OrderId) {
+        this.OrderId = OrderId;
     }
 
     public ResetCloudStorageRequest() {
@@ -135,6 +158,9 @@ public class ResetCloudStorageRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ResetCloudStorageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "OrderId", this.OrderId);
 
     }
 }

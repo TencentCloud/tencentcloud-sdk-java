@@ -45,6 +45,13 @@ public class ModifyMemoryPlusSpaceRequest extends AbstractModel {
     private String Description;
 
     /**
+    * <p>是否开启压缩</p>
+    */
+    @SerializedName("Compressed")
+    @Expose
+    private Boolean Compressed;
+
+    /**
      * Get <p>指定需要修改的 Memory 实例 ID。</p> 
      * @return SpaceId <p>指定需要修改的 Memory 实例 ID。</p>
      */
@@ -92,6 +99,22 @@ public class ModifyMemoryPlusSpaceRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>是否开启压缩</p> 
+     * @return Compressed <p>是否开启压缩</p>
+     */
+    public Boolean getCompressed() {
+        return this.Compressed;
+    }
+
+    /**
+     * Set <p>是否开启压缩</p>
+     * @param Compressed <p>是否开启压缩</p>
+     */
+    public void setCompressed(Boolean Compressed) {
+        this.Compressed = Compressed;
+    }
+
     public ModifyMemoryPlusSpaceRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ModifyMemoryPlusSpaceRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Compressed != null) {
+            this.Compressed = new Boolean(source.Compressed);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyMemoryPlusSpaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Compressed", this.Compressed);
 
     }
 }

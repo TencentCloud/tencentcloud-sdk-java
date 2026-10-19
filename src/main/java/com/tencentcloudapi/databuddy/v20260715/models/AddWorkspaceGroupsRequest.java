@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AddWorkspaceGroupsRequest extends AbstractModel {
 
     /**
-    * 用户组ID，可通过 ListWorkspaceGroups 接口获取
+    * <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 工作空间ID
+    * <p>工作空间ID</p>
     */
     @SerializedName("WorkspaceId")
     @Expose
     private String WorkspaceId;
 
     /**
-    * 角色ID，可通过 ListWorkspaceRoles 接口获取
+    * <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
     */
     @SerializedName("RoleIds")
     @Expose
     private String [] RoleIds;
 
     /**
-     * Get 用户组ID，可通过 ListWorkspaceGroups 接口获取 
-     * @return GroupIds 用户组ID，可通过 ListWorkspaceGroups 接口获取
+     * Get <p>用户组ID，可通过 ListConsoleGroups 接口获取</p> 
+     * @return GroupIds <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 用户组ID，可通过 ListWorkspaceGroups 接口获取
-     * @param GroupIds 用户组ID，可通过 ListWorkspaceGroups 接口获取
+     * Set <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
+     * @param GroupIds <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 工作空间ID 
-     * @return WorkspaceId 工作空间ID
+     * Get <p>工作空间ID</p> 
+     * @return WorkspaceId <p>工作空间ID</p>
      */
     public String getWorkspaceId() {
         return this.WorkspaceId;
     }
 
     /**
-     * Set 工作空间ID
-     * @param WorkspaceId 工作空间ID
+     * Set <p>工作空间ID</p>
+     * @param WorkspaceId <p>工作空间ID</p>
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 角色ID，可通过 ListWorkspaceRoles 接口获取 
-     * @return RoleIds 角色ID，可通过 ListWorkspaceRoles 接口获取
+     * Get <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p> 
+     * @return RoleIds <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
      */
     public String [] getRoleIds() {
         return this.RoleIds;
     }
 
     /**
-     * Set 角色ID，可通过 ListWorkspaceRoles 接口获取
-     * @param RoleIds 角色ID，可通过 ListWorkspaceRoles 接口获取
+     * Set <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
+     * @param RoleIds <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
      */
     public void setRoleIds(String [] RoleIds) {
         this.RoleIds = RoleIds;

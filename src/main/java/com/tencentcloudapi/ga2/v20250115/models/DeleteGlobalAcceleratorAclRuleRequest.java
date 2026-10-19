@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteGlobalAcceleratorAclRuleRequest extends AbstractModel {
 
     /**
-    * 全球加速实例ID。
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
     private String GlobalAcceleratorId;
 
     /**
-    * 安全策略ID
+    * <p>访问控制策略ID</p>
     */
     @SerializedName("GlobalAcceleratorAclPolicyId")
     @Expose
     private String GlobalAcceleratorAclPolicyId;
 
     /**
-    * Acl规则ID。
+    * <p>访问规则ID</p>
     */
     @SerializedName("GlobalAcceleratorAclRuleIds")
     @Expose
     private String [] GlobalAcceleratorAclRuleIds;
 
     /**
-     * Get 全球加速实例ID。 
-     * @return GlobalAcceleratorId 全球加速实例ID。
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set 全球加速实例ID。
-     * @param GlobalAcceleratorId 全球加速实例ID。
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;
     }
 
     /**
-     * Get 安全策略ID 
-     * @return GlobalAcceleratorAclPolicyId 安全策略ID
+     * Get <p>访问控制策略ID</p> 
+     * @return GlobalAcceleratorAclPolicyId <p>访问控制策略ID</p>
      */
     public String getGlobalAcceleratorAclPolicyId() {
         return this.GlobalAcceleratorAclPolicyId;
     }
 
     /**
-     * Set 安全策略ID
-     * @param GlobalAcceleratorAclPolicyId 安全策略ID
+     * Set <p>访问控制策略ID</p>
+     * @param GlobalAcceleratorAclPolicyId <p>访问控制策略ID</p>
      */
     public void setGlobalAcceleratorAclPolicyId(String GlobalAcceleratorAclPolicyId) {
         this.GlobalAcceleratorAclPolicyId = GlobalAcceleratorAclPolicyId;
     }
 
     /**
-     * Get Acl规则ID。 
-     * @return GlobalAcceleratorAclRuleIds Acl规则ID。
+     * Get <p>访问规则ID</p> 
+     * @return GlobalAcceleratorAclRuleIds <p>访问规则ID</p>
      */
     public String [] getGlobalAcceleratorAclRuleIds() {
         return this.GlobalAcceleratorAclRuleIds;
     }
 
     /**
-     * Set Acl规则ID。
-     * @param GlobalAcceleratorAclRuleIds Acl规则ID。
+     * Set <p>访问规则ID</p>
+     * @param GlobalAcceleratorAclRuleIds <p>访问规则ID</p>
      */
     public void setGlobalAcceleratorAclRuleIds(String [] GlobalAcceleratorAclRuleIds) {
         this.GlobalAcceleratorAclRuleIds = GlobalAcceleratorAclRuleIds;

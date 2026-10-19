@@ -40,7 +40,7 @@ public class FunctionEnvironmentVariable extends AbstractModel {
     /**
     * 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
     */
     @SerializedName("Type")
     @Expose
@@ -81,10 +81,10 @@ public class FunctionEnvironmentVariable extends AbstractModel {
     /**
      * Get 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。 
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。 
      * @return Type 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
      */
     public String getType() {
         return this.Type;
@@ -93,10 +93,10 @@ public class FunctionEnvironmentVariable extends AbstractModel {
     /**
      * Set 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
      * @param Type 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
      */
     public void setType(String Type) {
         this.Type = Type;

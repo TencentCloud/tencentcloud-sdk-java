@@ -31,7 +31,7 @@ public class CloneViralRequest extends AbstractModel {
     private String VideoUrl;
 
     /**
-    * <p>产品信息</p>
+    * <p>产品信息。除深度提取外，其他模式必填</p>
     */
     @SerializedName("Product")
     @Expose
@@ -82,16 +82,16 @@ public class CloneViralRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>产品信息</p> 
-     * @return Product <p>产品信息</p>
+     * Get <p>产品信息。除深度提取外，其他模式必填</p> 
+     * @return Product <p>产品信息。除深度提取外，其他模式必填</p>
      */
     public CloneViralProduct getProduct() {
         return this.Product;
     }
 
     /**
-     * Set <p>产品信息</p>
-     * @param Product <p>产品信息</p>
+     * Set <p>产品信息。除深度提取外，其他模式必填</p>
+     * @param Product <p>产品信息。除深度提取外，其他模式必填</p>
      */
     public void setProduct(CloneViralProduct Product) {
         this.Product = Product;

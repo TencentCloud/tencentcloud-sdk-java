@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class BotManagementCustomRule extends AbstractModel {
 
     /**
-    * Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
+    * <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Bot 自定义规则的名称。
+    * <p>Bot 自定义规则的名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+    * <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
+    * <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+    * <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
+    * <p>按权重分配的安全执行动作列表。</p>
     */
     @SerializedName("Action")
     @Expose
     private SecurityWeightedAction [] Action;
 
     /**
-     * Get Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li> 
-     * @return Id Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
+     * Get <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p> 
+     * @return Id <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
-     * @param Id Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
+     * Set <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
+     * @param Id <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Bot 自定义规则的名称。 
-     * @return Name Bot 自定义规则的名称。
+     * Get <p>Bot 自定义规则的名称。</p> 
+     * @return Name <p>Bot 自定义规则的名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Bot 自定义规则的名称。
-     * @param Name Bot 自定义规则的名称。
+     * Set <p>Bot 自定义规则的名称。</p>
+     * @param Name <p>Bot 自定义规则的名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li> 
-     * @return Enabled Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * Get <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p> 
+     * @return Enabled <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
-     * @param Enabled Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * Set <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+     * @param Enabled <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。 
-     * @return Priority Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
+     * Get <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p> 
+     * @return Priority <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
-     * @param Priority Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
+     * Set <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
+     * @param Priority <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。 
-     * @return Condition Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * Get <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p> 
+     * @return Condition <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
-     * @param Condition Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * Set <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+     * @param Condition <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li> 
-     * @return Action Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
+     * Get <p>按权重分配的安全执行动作列表。</p> 
+     * @return Action <p>按权重分配的安全执行动作列表。</p>
      */
     public SecurityWeightedAction [] getAction() {
         return this.Action;
     }
 
     /**
-     * Set Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
-     * @param Action Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
+     * Set <p>按权重分配的安全执行动作列表。</p>
+     * @param Action <p>按权重分配的安全执行动作列表。</p>
      */
     public void setAction(SecurityWeightedAction [] Action) {
         this.Action = Action;

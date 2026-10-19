@@ -281,6 +281,18 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
+     * @param req CreateWorkflowRunRequest
+     * @return CreateWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkflowRunResponse CreateWorkflowRun(CreateWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkflowRun", CreateWorkflowRunResponse.class);
+    }
+
+    /**
      *创建工作空间凭证
      * @param req CreateWorkspaceCredentialRequest
      * @return CreateWorkspaceCredentialResponse
@@ -842,6 +854,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *DescribeNodeBatchRun
+     * @param req DescribeNodeBatchRunRequest
+     * @return DescribeNodeBatchRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeBatchRunResponse DescribeNodeBatchRun(DescribeNodeBatchRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeBatchRun", DescribeNodeBatchRunResponse.class);
+    }
+
+    /**
+     *查看工作流节点运行详情
+     * @param req DescribeNodeRunDetailRequest
+     * @return DescribeNodeRunDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeRunDetailResponse DescribeNodeRunDetail(DescribeNodeRunDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeRunDetail", DescribeNodeRunDetailResponse.class);
+    }
+
+    /**
      *获取插件详情
      * @param req DescribePluginRequest
      * @return DescribePluginResponse
@@ -1026,6 +1060,28 @@ public class AdpClient extends AbstractClient{
     public DescribeVariableListResponse DescribeVariableList(DescribeVariableListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVariableList", DescribeVariableListResponse.class);
+    }
+
+    /**
+     *查询工作流运行详情
+     * @param req DescribeWorkflowRunRequest
+     * @return DescribeWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowRunResponse DescribeWorkflowRun(DescribeWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkflowRun", DescribeWorkflowRunResponse.class);
+    }
+
+    /**
+     *查询工作流运行实例列表
+     * @param req DescribeWorkflowRunSummaryListRequest
+     * @return DescribeWorkflowRunSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowRunSummaryListResponse DescribeWorkflowRunSummaryList(DescribeWorkflowRunSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkflowRunSummaryList", DescribeWorkflowRunSummaryListResponse.class);
     }
 
     /**
@@ -1316,6 +1372,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *继续运行等待输入的工作流异步运行实例
+     * @param req ResumeWorkflowRunRequest
+     * @return ResumeWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeWorkflowRunResponse ResumeWorkflowRun(ResumeWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeWorkflowRun", ResumeWorkflowRunResponse.class);
+    }
+
+    /**
      *重试发布(发布暂停之后再次重新发布)
      * @param req RetryReleaseRequest
      * @return RetryReleaseResponse
@@ -1349,6 +1416,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *SaveWorkflowDebugContext
+     * @param req SaveWorkflowDebugContextRequest
+     * @return SaveWorkflowDebugContextResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaveWorkflowDebugContextResponse SaveWorkflowDebugContext(SaveWorkflowDebugContextRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SaveWorkflowDebugContext", SaveWorkflowDebugContextResponse.class);
+    }
+
+    /**
+     *SaveWorkflowToolNodeOutput
+     * @param req SaveWorkflowToolNodeOutputRequest
+     * @return SaveWorkflowToolNodeOutputResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaveWorkflowToolNodeOutputResponse SaveWorkflowToolNodeOutput(SaveWorkflowToolNodeOutputRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SaveWorkflowToolNodeOutput", SaveWorkflowToolNodeOutputResponse.class);
+    }
+
+    /**
      *知识检索
      * @param req SearchKnowledgeRequest
      * @return SearchKnowledgeResponse
@@ -1357,6 +1446,17 @@ public class AdpClient extends AbstractClient{
     public SearchKnowledgeResponse SearchKnowledge(SearchKnowledgeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchKnowledge", SearchKnowledgeResponse.class);
+    }
+
+    /**
+     *批量停止正在进行的工作流运行实例。
+     * @param req StopWorkflowRunListRequest
+     * @return StopWorkflowRunListResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopWorkflowRunListResponse StopWorkflowRunList(StopWorkflowRunListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopWorkflowRunList", StopWorkflowRunListResponse.class);
     }
 
     /**

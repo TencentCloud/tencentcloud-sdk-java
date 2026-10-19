@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeModelAccelerateVersionsRequest extends AbstractModel {
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 过滤条件
     Filter.Name: 枚举值: ModelJobName (任务名称)|TrainingModelVersionId (模型版本id)
     Filter.Values: 当长度为1时，支持模糊查询; 不为1时，精确查询
@@ -67,6 +74,22 @@ public class DescribeModelAccelerateVersionsRequest extends AbstractModel {
     @SerializedName("TrainingModelId")
     @Expose
     private String TrainingModelId;
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
+    }
 
     /**
      * Get 过滤条件
@@ -184,6 +207,9 @@ public class DescribeModelAccelerateVersionsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeModelAccelerateVersionsRequest(DescribeModelAccelerateVersionsRequest source) {
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -212,6 +238,7 @@ public class DescribeModelAccelerateVersionsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Order", this.Order);

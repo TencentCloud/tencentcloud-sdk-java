@@ -73,6 +73,13 @@ public class Coefficient extends AbstractModel {
     private Float OutputVideoSecondCoefficient;
 
     /**
+    * <p>输出图片系数</p>
+    */
+    @SerializedName("OutputImageCoefficient")
+    @Expose
+    private Float OutputImageCoefficient;
+
+    /**
      * Get <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p> 
      * @return InputCachedCoefficient <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
      */
@@ -184,6 +191,22 @@ public class Coefficient extends AbstractModel {
         this.OutputVideoSecondCoefficient = OutputVideoSecondCoefficient;
     }
 
+    /**
+     * Get <p>输出图片系数</p> 
+     * @return OutputImageCoefficient <p>输出图片系数</p>
+     */
+    public Float getOutputImageCoefficient() {
+        return this.OutputImageCoefficient;
+    }
+
+    /**
+     * Set <p>输出图片系数</p>
+     * @param OutputImageCoefficient <p>输出图片系数</p>
+     */
+    public void setOutputImageCoefficient(Float OutputImageCoefficient) {
+        this.OutputImageCoefficient = OutputImageCoefficient;
+    }
+
     public Coefficient() {
     }
 
@@ -213,6 +236,9 @@ public class Coefficient extends AbstractModel {
         if (source.OutputVideoSecondCoefficient != null) {
             this.OutputVideoSecondCoefficient = new Float(source.OutputVideoSecondCoefficient);
         }
+        if (source.OutputImageCoefficient != null) {
+            this.OutputImageCoefficient = new Float(source.OutputImageCoefficient);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class Coefficient extends AbstractModel {
         this.setParamSimple(map, prefix + "InputImageCoefficient", this.InputImageCoefficient);
         this.setParamSimple(map, prefix + "InputVideoSecondCoefficient", this.InputVideoSecondCoefficient);
         this.setParamSimple(map, prefix + "OutputVideoSecondCoefficient", this.OutputVideoSecondCoefficient);
+        this.setParamSimple(map, prefix + "OutputImageCoefficient", this.OutputImageCoefficient);
 
     }
 }

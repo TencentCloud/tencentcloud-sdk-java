@@ -122,6 +122,13 @@ public class EventDataInfoOverview extends AbstractModel {
     private String SubEventName;
 
     /**
+    * <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+    */
+    @SerializedName("EventScope")
+    @Expose
+    private Long EventScope;
+
+    /**
      * Get <p>1：硬件异常；2：用户变更；3：智能运维</p> 
      * @return EventType <p>1：硬件异常；2：用户变更；3：智能运维</p>
      */
@@ -345,6 +352,22 @@ public class EventDataInfoOverview extends AbstractModel {
         this.SubEventName = SubEventName;
     }
 
+    /**
+     * Get <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul> 
+     * @return EventScope <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+     */
+    public Long getEventScope() {
+        return this.EventScope;
+    }
+
+    /**
+     * Set <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+     * @param EventScope <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+     */
+    public void setEventScope(Long EventScope) {
+        this.EventScope = EventScope;
+    }
+
     public EventDataInfoOverview() {
     }
 
@@ -395,6 +418,9 @@ public class EventDataInfoOverview extends AbstractModel {
         if (source.SubEventName != null) {
             this.SubEventName = new String(source.SubEventName);
         }
+        if (source.EventScope != null) {
+            this.EventScope = new Long(source.EventScope);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class EventDataInfoOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SubEventType", this.SubEventType);
         this.setParamSimple(map, prefix + "SubEventName", this.SubEventName);
+        this.setParamSimple(map, prefix + "EventScope", this.EventScope);
 
     }
 }

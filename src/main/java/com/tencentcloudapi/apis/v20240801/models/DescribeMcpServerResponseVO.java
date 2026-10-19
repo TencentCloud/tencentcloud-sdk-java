@@ -584,7 +584,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InvokeLimitConfigStatus <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -594,7 +596,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeLimitConfigStatus <p>流量控制状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -604,7 +608,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InvokeLimitConfig <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -614,7 +620,9 @@ public class DescribeMcpServerResponseVO extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InvokeLimitConfig <p>流量控制配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }

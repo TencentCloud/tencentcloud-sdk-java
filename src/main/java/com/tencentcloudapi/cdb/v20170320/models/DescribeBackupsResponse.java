@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBackupsResponse extends AbstractModel {
 
     /**
-    * 符合查询条件的实例总数。
+    * <p>符合查询条件的实例总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 符合查询条件的备份信息详情。
+    * <p>符合查询条件的备份信息详情。</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBackupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合查询条件的实例总数。 
-     * @return TotalCount 符合查询条件的实例总数。
+     * Get <p>符合查询条件的实例总数。</p> 
+     * @return TotalCount <p>符合查询条件的实例总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的实例总数。
-     * @param TotalCount 符合查询条件的实例总数。
+     * Set <p>符合查询条件的实例总数。</p>
+     * @param TotalCount <p>符合查询条件的实例总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合查询条件的备份信息详情。 
-     * @return Items 符合查询条件的备份信息详情。
+     * Get <p>符合查询条件的备份信息详情。</p> 
+     * @return Items <p>符合查询条件的备份信息详情。</p>
      */
     public BackupInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 符合查询条件的备份信息详情。
-     * @param Items 符合查询条件的备份信息详情。
+     * Set <p>符合查询条件的备份信息详情。</p>
+     * @param Items <p>符合查询条件的备份信息详情。</p>
      */
     public void setItems(BackupInfo [] Items) {
         this.Items = Items;

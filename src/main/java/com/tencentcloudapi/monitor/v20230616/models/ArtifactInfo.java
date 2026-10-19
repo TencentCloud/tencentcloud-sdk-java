@@ -104,6 +104,30 @@ public class ArtifactInfo extends AbstractModel {
     private String StoragePath;
 
     /**
+    * <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceName")
+    @Expose
+    private String SourceName;
+
+    /**
+    * <p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionSummary")
+    @Expose
+    private String ExecutionSummary;
+
+    /**
      * Get <p>产物 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ArtifactId <p>产物 ID</p>
@@ -303,6 +327,66 @@ public class ArtifactInfo extends AbstractModel {
         this.StoragePath = StoragePath;
     }
 
+    /**
+     * Get <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceType <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceType <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceName <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceName() {
+        return this.SourceName;
+    }
+
+    /**
+     * Set <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceName <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceName(String SourceName) {
+        this.SourceName = SourceName;
+    }
+
+    /**
+     * Get <p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionSummary <p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutionSummary() {
+        return this.ExecutionSummary;
+    }
+
+    /**
+     * Set <p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionSummary <p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutionSummary(String ExecutionSummary) {
+        this.ExecutionSummary = ExecutionSummary;
+    }
+
     public ArtifactInfo() {
     }
 
@@ -341,6 +425,15 @@ public class ArtifactInfo extends AbstractModel {
         if (source.StoragePath != null) {
             this.StoragePath = new String(source.StoragePath);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.SourceName != null) {
+            this.SourceName = new String(source.SourceName);
+        }
+        if (source.ExecutionSummary != null) {
+            this.ExecutionSummary = new String(source.ExecutionSummary);
+        }
     }
 
 
@@ -358,6 +451,9 @@ public class ArtifactInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "SkillId", this.SkillId);
         this.setParamSimple(map, prefix + "StoragePath", this.StoragePath);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SourceName", this.SourceName);
+        this.setParamSimple(map, prefix + "ExecutionSummary", this.ExecutionSummary);
 
     }
 }

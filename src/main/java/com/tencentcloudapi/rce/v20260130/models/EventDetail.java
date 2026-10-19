@@ -192,6 +192,27 @@ public class EventDetail extends AbstractModel {
     private ModifyGuildEvent ModifyGuild;
 
     /**
+    * <p>搜索</p>
+    */
+    @SerializedName("Search")
+    @Expose
+    private SearchEvent Search;
+
+    /**
+    * <p>预约</p>
+    */
+    @SerializedName("Booking")
+    @Expose
+    private BookingEvent Booking;
+
+    /**
+    * <p>账号安全</p>
+    */
+    @SerializedName("AccountSecurity")
+    @Expose
+    private AccountSecurityEvent AccountSecurity;
+
+    /**
      * Get <p>登录</p> 
      * @return Login <p>登录</p>
      */
@@ -575,6 +596,54 @@ public class EventDetail extends AbstractModel {
         this.ModifyGuild = ModifyGuild;
     }
 
+    /**
+     * Get <p>搜索</p> 
+     * @return Search <p>搜索</p>
+     */
+    public SearchEvent getSearch() {
+        return this.Search;
+    }
+
+    /**
+     * Set <p>搜索</p>
+     * @param Search <p>搜索</p>
+     */
+    public void setSearch(SearchEvent Search) {
+        this.Search = Search;
+    }
+
+    /**
+     * Get <p>预约</p> 
+     * @return Booking <p>预约</p>
+     */
+    public BookingEvent getBooking() {
+        return this.Booking;
+    }
+
+    /**
+     * Set <p>预约</p>
+     * @param Booking <p>预约</p>
+     */
+    public void setBooking(BookingEvent Booking) {
+        this.Booking = Booking;
+    }
+
+    /**
+     * Get <p>账号安全</p> 
+     * @return AccountSecurity <p>账号安全</p>
+     */
+    public AccountSecurityEvent getAccountSecurity() {
+        return this.AccountSecurity;
+    }
+
+    /**
+     * Set <p>账号安全</p>
+     * @param AccountSecurity <p>账号安全</p>
+     */
+    public void setAccountSecurity(AccountSecurityEvent AccountSecurity) {
+        this.AccountSecurity = AccountSecurity;
+    }
+
     public EventDetail() {
     }
 
@@ -655,6 +724,15 @@ public class EventDetail extends AbstractModel {
         if (source.ModifyGuild != null) {
             this.ModifyGuild = new ModifyGuildEvent(source.ModifyGuild);
         }
+        if (source.Search != null) {
+            this.Search = new SearchEvent(source.Search);
+        }
+        if (source.Booking != null) {
+            this.Booking = new BookingEvent(source.Booking);
+        }
+        if (source.AccountSecurity != null) {
+            this.AccountSecurity = new AccountSecurityEvent(source.AccountSecurity);
+        }
     }
 
 
@@ -686,6 +764,9 @@ public class EventDetail extends AbstractModel {
         this.setParamObj(map, prefix + "ModifyRole.", this.ModifyRole);
         this.setParamObj(map, prefix + "AddFriend.", this.AddFriend);
         this.setParamObj(map, prefix + "ModifyGuild.", this.ModifyGuild);
+        this.setParamObj(map, prefix + "Search.", this.Search);
+        this.setParamObj(map, prefix + "Booking.", this.Booking);
+        this.setParamObj(map, prefix + "AccountSecurity.", this.AccountSecurity);
 
     }
 }

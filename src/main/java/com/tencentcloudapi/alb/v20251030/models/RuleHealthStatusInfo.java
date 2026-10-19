@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class RuleHealthStatusInfo extends AbstractModel {
 
     /**
-    * 是否为默认转发规则。
+    * <p>是否为默认转发规则。</p>
     */
     @SerializedName("IsDefaultRule")
     @Expose
     private String IsDefaultRule;
 
     /**
-    * 转发规则 ID，格式为 rule- 后接 8 位字母数字。
+    * <p>转发规则 ID，格式为 rule- 后接 8 位字母数字。</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 目标组健康状态。
+    * <p>目标组健康状态。</p>
     */
     @SerializedName("TargetGroupHealthInfos")
     @Expose
     private TargetGroupHealthInfo [] TargetGroupHealthInfos;
 
     /**
-     * Get 是否为默认转发规则。 
-     * @return IsDefaultRule 是否为默认转发规则。
+    * <p>优先级，值越小优先级越高，取值范围：1~10000。</p>
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
+     * Get <p>是否为默认转发规则。</p> 
+     * @return IsDefaultRule <p>是否为默认转发规则。</p>
      */
     public String getIsDefaultRule() {
         return this.IsDefaultRule;
     }
 
     /**
-     * Set 是否为默认转发规则。
-     * @param IsDefaultRule 是否为默认转发规则。
+     * Set <p>是否为默认转发规则。</p>
+     * @param IsDefaultRule <p>是否为默认转发规则。</p>
      */
     public void setIsDefaultRule(String IsDefaultRule) {
         this.IsDefaultRule = IsDefaultRule;
     }
 
     /**
-     * Get 转发规则 ID，格式为 rule- 后接 8 位字母数字。 
-     * @return RuleId 转发规则 ID，格式为 rule- 后接 8 位字母数字。
+     * Get <p>转发规则 ID，格式为 rule- 后接 8 位字母数字。</p> 
+     * @return RuleId <p>转发规则 ID，格式为 rule- 后接 8 位字母数字。</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 转发规则 ID，格式为 rule- 后接 8 位字母数字。
-     * @param RuleId 转发规则 ID，格式为 rule- 后接 8 位字母数字。
+     * Set <p>转发规则 ID，格式为 rule- 后接 8 位字母数字。</p>
+     * @param RuleId <p>转发规则 ID，格式为 rule- 后接 8 位字母数字。</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 目标组健康状态。 
-     * @return TargetGroupHealthInfos 目标组健康状态。
+     * Get <p>目标组健康状态。</p> 
+     * @return TargetGroupHealthInfos <p>目标组健康状态。</p>
      */
     public TargetGroupHealthInfo [] getTargetGroupHealthInfos() {
         return this.TargetGroupHealthInfos;
     }
 
     /**
-     * Set 目标组健康状态。
-     * @param TargetGroupHealthInfos 目标组健康状态。
+     * Set <p>目标组健康状态。</p>
+     * @param TargetGroupHealthInfos <p>目标组健康状态。</p>
      */
     public void setTargetGroupHealthInfos(TargetGroupHealthInfo [] TargetGroupHealthInfos) {
         this.TargetGroupHealthInfos = TargetGroupHealthInfos;
+    }
+
+    /**
+     * Get <p>优先级，值越小优先级越高，取值范围：1~10000。</p> 
+     * @return Priority <p>优先级，值越小优先级越高，取值范围：1~10000。</p>
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set <p>优先级，值越小优先级越高，取值范围：1~10000。</p>
+     * @param Priority <p>优先级，值越小优先级越高，取值范围：1~10000。</p>
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
     }
 
     public RuleHealthStatusInfo() {
@@ -112,6 +135,9 @@ public class RuleHealthStatusInfo extends AbstractModel {
                 this.TargetGroupHealthInfos[i] = new TargetGroupHealthInfo(source.TargetGroupHealthInfos[i]);
             }
         }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class RuleHealthStatusInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDefaultRule", this.IsDefaultRule);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "TargetGroupHealthInfos.", this.TargetGroupHealthInfos);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }

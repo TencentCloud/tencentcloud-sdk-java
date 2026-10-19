@@ -66,6 +66,13 @@ public class VoicePrintEnrollRequest extends AbstractModel {
     private String AudioUrl;
 
     /**
+    * <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+    */
+    @SerializedName("QualityCheck")
+    @Expose
+    private Boolean QualityCheck;
+
+    /**
      * Get <p>音频格式 0: pcm, 1: wav</p> 
      * @return VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
      */
@@ -161,6 +168,22 @@ public class VoicePrintEnrollRequest extends AbstractModel {
         this.AudioUrl = AudioUrl;
     }
 
+    /**
+     * Get <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p> 
+     * @return QualityCheck <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+     */
+    public Boolean getQualityCheck() {
+        return this.QualityCheck;
+    }
+
+    /**
+     * Set <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+     * @param QualityCheck <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+     */
+    public void setQualityCheck(Boolean QualityCheck) {
+        this.QualityCheck = QualityCheck;
+    }
+
     public VoicePrintEnrollRequest() {
     }
 
@@ -187,6 +210,9 @@ public class VoicePrintEnrollRequest extends AbstractModel {
         if (source.AudioUrl != null) {
             this.AudioUrl = new String(source.AudioUrl);
         }
+        if (source.QualityCheck != null) {
+            this.QualityCheck = new Boolean(source.QualityCheck);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class VoicePrintEnrollRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SpeakerNick", this.SpeakerNick);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+        this.setParamSimple(map, prefix + "QualityCheck", this.QualityCheck);
 
     }
 }

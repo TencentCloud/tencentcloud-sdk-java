@@ -38,6 +38,13 @@ public class KBPermission extends AbstractModel {
     private Boolean CanEdit;
 
     /**
+    * <p>能否被共享</p>
+    */
+    @SerializedName("CanShare")
+    @Expose
+    private Boolean CanShare;
+
+    /**
     * <p>是否可查看</p>
     */
     @SerializedName("CanView")
@@ -77,6 +84,22 @@ public class KBPermission extends AbstractModel {
     }
 
     /**
+     * Get <p>能否被共享</p> 
+     * @return CanShare <p>能否被共享</p>
+     */
+    public Boolean getCanShare() {
+        return this.CanShare;
+    }
+
+    /**
+     * Set <p>能否被共享</p>
+     * @param CanShare <p>能否被共享</p>
+     */
+    public void setCanShare(Boolean CanShare) {
+        this.CanShare = CanShare;
+    }
+
+    /**
      * Get <p>是否可查看</p> 
      * @return CanView <p>是否可查看</p>
      */
@@ -106,6 +129,9 @@ public class KBPermission extends AbstractModel {
         if (source.CanEdit != null) {
             this.CanEdit = new Boolean(source.CanEdit);
         }
+        if (source.CanShare != null) {
+            this.CanShare = new Boolean(source.CanShare);
+        }
         if (source.CanView != null) {
             this.CanView = new Boolean(source.CanView);
         }
@@ -118,6 +144,7 @@ public class KBPermission extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CanDelete", this.CanDelete);
         this.setParamSimple(map, prefix + "CanEdit", this.CanEdit);
+        this.setParamSimple(map, prefix + "CanShare", this.CanShare);
         this.setParamSimple(map, prefix + "CanView", this.CanView);
 
     }

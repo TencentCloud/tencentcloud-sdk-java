@@ -59,6 +59,20 @@ public class ListAIWorkbenchArtifactsRequest extends AbstractModel {
     private String OrderDirection;
 
     /**
+    * <p>数字分身ID</p>
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
+
+    /**
+    * <p>模糊搜索制品信息</p>
+    */
+    @SerializedName("NameKeyword")
+    @Expose
+    private String NameKeyword;
+
+    /**
      * Get <p>每页数量</p> 
      * @return PerPage <p>每页数量</p>
      */
@@ -138,6 +152,38 @@ public class ListAIWorkbenchArtifactsRequest extends AbstractModel {
         this.OrderDirection = OrderDirection;
     }
 
+    /**
+     * Get <p>数字分身ID</p> 
+     * @return AgentId <p>数字分身ID</p>
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set <p>数字分身ID</p>
+     * @param AgentId <p>数字分身ID</p>
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
+    }
+
+    /**
+     * Get <p>模糊搜索制品信息</p> 
+     * @return NameKeyword <p>模糊搜索制品信息</p>
+     */
+    public String getNameKeyword() {
+        return this.NameKeyword;
+    }
+
+    /**
+     * Set <p>模糊搜索制品信息</p>
+     * @param NameKeyword <p>模糊搜索制品信息</p>
+     */
+    public void setNameKeyword(String NameKeyword) {
+        this.NameKeyword = NameKeyword;
+    }
+
     public ListAIWorkbenchArtifactsRequest() {
     }
 
@@ -167,6 +213,12 @@ public class ListAIWorkbenchArtifactsRequest extends AbstractModel {
         if (source.OrderDirection != null) {
             this.OrderDirection = new String(source.OrderDirection);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
+        if (source.NameKeyword != null) {
+            this.NameKeyword = new String(source.NameKeyword);
+        }
     }
 
 
@@ -179,6 +231,8 @@ public class ListAIWorkbenchArtifactsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
         this.setParamArraySimple(map, prefix + "MimeTypes.", this.MimeTypes);
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
+        this.setParamSimple(map, prefix + "NameKeyword", this.NameKeyword);
 
     }
 }

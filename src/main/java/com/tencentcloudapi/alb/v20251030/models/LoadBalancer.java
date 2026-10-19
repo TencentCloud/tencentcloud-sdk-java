@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class LoadBalancer extends AbstractModel {
 
     /**
-    * 访问日志配置结构。
-    */
-    @SerializedName("AccessLogConfig")
-    @Expose
-    private AccessLogConfig AccessLogConfig;
-
-    /**
     * IP 地址版本，取值 IPv4 或 IPv6。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -143,22 +136,6 @@ public class LoadBalancer extends AbstractModel {
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
-
-    /**
-     * Get 访问日志配置结构。 
-     * @return AccessLogConfig 访问日志配置结构。
-     */
-    public AccessLogConfig getAccessLogConfig() {
-        return this.AccessLogConfig;
-    }
-
-    /**
-     * Set 访问日志配置结构。
-     * @param AccessLogConfig 访问日志配置结构。
-     */
-    public void setAccessLogConfig(AccessLogConfig AccessLogConfig) {
-        this.AccessLogConfig = AccessLogConfig;
-    }
 
     /**
      * Get IP 地址版本，取值 IPv4 或 IPv6。
@@ -468,9 +445,6 @@ public class LoadBalancer extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LoadBalancer(LoadBalancer source) {
-        if (source.AccessLogConfig != null) {
-            this.AccessLogConfig = new AccessLogConfig(source.AccessLogConfig);
-        }
         if (source.AddressIpVersion != null) {
             this.AddressIpVersion = new String(source.AddressIpVersion);
         }
@@ -523,7 +497,6 @@ public class LoadBalancer extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "AccessLogConfig.", this.AccessLogConfig);
         this.setParamSimple(map, prefix + "AddressIpVersion", this.AddressIpVersion);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

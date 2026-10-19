@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class DescribeAgentAppServicesRequest extends AbstractModel {
 
     /**
-    * <p>实例ID</p>
-    */
-    @SerializedName("InstanceID")
-    @Expose
-    private String InstanceID;
-
-    /**
     * <p>数据量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
 
     /**
     * <p>IDs</p>
@@ -87,22 +87,6 @@ public class DescribeAgentAppServicesRequest extends AbstractModel {
     private String [] AgentCredentialIDs;
 
     /**
-     * Get <p>实例ID</p> 
-     * @return InstanceID <p>实例ID</p>
-     */
-    public String getInstanceID() {
-        return this.InstanceID;
-    }
-
-    /**
-     * Set <p>实例ID</p>
-     * @param InstanceID <p>实例ID</p>
-     */
-    public void setInstanceID(String InstanceID) {
-        this.InstanceID = InstanceID;
-    }
-
-    /**
      * Get <p>数据量</p> 
      * @return Limit <p>数据量</p>
      */
@@ -116,6 +100,22 @@ public class DescribeAgentAppServicesRequest extends AbstractModel {
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
     }
 
     /**
@@ -238,11 +238,11 @@ public class DescribeAgentAppServicesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAgentAppServicesRequest(DescribeAgentAppServicesRequest source) {
-        if (source.InstanceID != null) {
-            this.InstanceID = new String(source.InstanceID);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
         }
         if (source.IDs != null) {
             this.IDs = new String[source.IDs.length];
@@ -284,8 +284,8 @@ public class DescribeAgentAppServicesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamArraySimple(map, prefix + "IDs.", this.IDs);
         this.setParamArraySimple(map, prefix + "AgentAppIDs.", this.AgentAppIDs);
         this.setParamArraySimple(map, prefix + "ServiceIDs.", this.ServiceIDs);

@@ -53,6 +53,22 @@ public class StorageMount extends AbstractModel {
     private Boolean ReadOnly;
 
     /**
+    * <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Volume")
+    @Expose
+    private VolumeRef Volume;
+
+    /**
+    * <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeTemplate")
+    @Expose
+    private VolumeTemplateRef VolumeTemplate;
+
+    /**
      * Get <p>存储挂载配置名称</p> 
      * @return Name <p>存储挂载配置名称</p>
      */
@@ -120,6 +136,46 @@ public class StorageMount extends AbstractModel {
         this.ReadOnly = ReadOnly;
     }
 
+    /**
+     * Get <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Volume <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeRef getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Volume <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolume(VolumeRef Volume) {
+        this.Volume = Volume;
+    }
+
+    /**
+     * Get <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeTemplate <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeTemplateRef getVolumeTemplate() {
+        return this.VolumeTemplate;
+    }
+
+    /**
+     * Set <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeTemplate <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeTemplate(VolumeTemplateRef VolumeTemplate) {
+        this.VolumeTemplate = VolumeTemplate;
+    }
+
     public StorageMount() {
     }
 
@@ -140,6 +196,12 @@ public class StorageMount extends AbstractModel {
         if (source.ReadOnly != null) {
             this.ReadOnly = new Boolean(source.ReadOnly);
         }
+        if (source.Volume != null) {
+            this.Volume = new VolumeRef(source.Volume);
+        }
+        if (source.VolumeTemplate != null) {
+            this.VolumeTemplate = new VolumeTemplateRef(source.VolumeTemplate);
+        }
     }
 
 
@@ -151,6 +213,8 @@ public class StorageMount extends AbstractModel {
         this.setParamObj(map, prefix + "StorageSource.", this.StorageSource);
         this.setParamSimple(map, prefix + "MountPath", this.MountPath);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamObj(map, prefix + "Volume.", this.Volume);
+        this.setParamObj(map, prefix + "VolumeTemplate.", this.VolumeTemplate);
 
     }
 }

@@ -149,6 +149,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *llmwaf-sdk新增接入配置接口
+     * @param req AddLLMSdkAccessRequest
+     * @return AddLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLLMSdkAccessResponse AddLLMSdkAccess(AddLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddLLMSdkAccess", AddLLMSdkAccessResponse.class);
+    }
+
+    /**
      *添加SaaS型WAF防护域名
      * @param req AddSpartaProtectionRequest
      * @return AddSpartaProtectionResponse
@@ -501,6 +512,28 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *删除大模型内容防护规则
+     * @param req DeleteLLMContentRuleRequest
+     * @return DeleteLLMContentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMContentRuleResponse DeleteLLMContentRule(DeleteLLMContentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMContentRule", DeleteLLMContentRuleResponse.class);
+    }
+
+    /**
+     *删除词库列表
+     * @param req DeleteLLMKeywordLibraryRequest
+     * @return DeleteLLMKeywordLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrary(DeleteLLMKeywordLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMKeywordLibrary", DeleteLLMKeywordLibraryResponse.class);
+    }
+
+    /**
      *解除门神规则的状态锁
      * @param req DeleteOwaspRuleStatusRequest
      * @return DeleteOwaspRuleStatusResponse
@@ -619,6 +652,17 @@ public class WafClient extends AbstractClient{
     public DescribeAccessIndexResponse DescribeAccessIndex(DescribeAccessIndexRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccessIndex", DescribeAccessIndexResponse.class);
+    }
+
+    /**
+     *查询后付费实例列表（仅 Edition=llm-sdk-waf）。请求参数与 DescribeInstances 一致；仅返回 tb_instance_conf 基础数据，不含套餐/标签等扩展信息。
+     * @param req DescribeAfterPayInstancesRequest
+     * @return DescribeAfterPayInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAfterPayInstancesResponse DescribeAfterPayInstances(DescribeAfterPayInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAfterPayInstances", DescribeAfterPayInstancesResponse.class);
     }
 
     /**
@@ -1128,6 +1172,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取LLM大模型内容防护规则
+     * @param req DescribeLLMContentRuleListRequest
+     * @return DescribeLLMContentRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMContentRuleListResponse DescribeLLMContentRuleList(DescribeLLMContentRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMContentRuleList", DescribeLLMContentRuleListResponse.class);
+    }
+
+    /**
      *大模型请求内容和响应内容审核接口
      * @param req DescribeLLMContentSecCheckRequest
      * @return DescribeLLMContentSecCheckResponse
@@ -1136,6 +1191,50 @@ public class WafClient extends AbstractClient{
     public DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(DescribeLLMContentSecCheckRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLLMContentSecCheck", DescribeLLMContentSecCheckResponse.class);
+    }
+
+    /**
+     *查询关键词列表
+     * @param req DescribeLLMKeywordLibraryRequest
+     * @return DescribeLLMKeywordLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrary(DescribeLLMKeywordLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMKeywordLibrary", DescribeLLMKeywordLibraryResponse.class);
+    }
+
+    /**
+     *查询sdk接入配置
+     * @param req DescribeLLMSdkAccessRequest
+     * @return DescribeLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMSdkAccessResponse DescribeLLMSdkAccess(DescribeLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMSdkAccess", DescribeLLMSdkAccessResponse.class);
+    }
+
+    /**
+     *查询 DLP 规则
+     * @param req DescribeLLMWafDLPRulesRequest
+     * @return DescribeLLMWafDLPRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRules(DescribeLLMWafDLPRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMWafDLPRules", DescribeLLMWafDLPRulesResponse.class);
+    }
+
+    /**
+     *查询 LLM 规则请求
+     * @param req DescribeLLMWafProtectRulesRequest
+     * @return DescribeLLMWafProtectRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRules(DescribeLLMWafProtectRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMWafProtectRules", DescribeLLMWafProtectRulesResponse.class);
     }
 
     /**
@@ -1578,6 +1677,17 @@ public class WafClient extends AbstractClient{
     public EnableRateLimitsV2Response EnableRateLimitsV2(EnableRateLimitsV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableRateLimitsV2", EnableRateLimitsV2Response.class);
+    }
+
+    /**
+     *导出词库文件
+     * @param req ExportLLMKeywordLibRequest
+     * @return ExportLLMKeywordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportLLMKeywordLibResponse ExportLLMKeywordLib(ExportLLMKeywordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportLLMKeywordLib", ExportLLMKeywordLibResponse.class);
     }
 
     /**
@@ -2109,6 +2219,72 @@ public class WafClient extends AbstractClient{
     public ModifyIpAccessControlResponse ModifyIpAccessControl(ModifyIpAccessControlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyIpAccessControl", ModifyIpAccessControlResponse.class);
+    }
+
+    /**
+     *更新大模型内容安全规则
+     * @param req ModifyLLMContentRuleRequest
+     * @return ModifyLLMContentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMContentRuleResponse ModifyLLMContentRule(ModifyLLMContentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMContentRule", ModifyLLMContentRuleResponse.class);
+    }
+
+    /**
+     *切换大模型内容防护规则开关
+     * @param req ModifyLLMContentRuleStatusRequest
+     * @return ModifyLLMContentRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatus(ModifyLLMContentRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMContentRuleStatus", ModifyLLMContentRuleStatusResponse.class);
+    }
+
+    /**
+     *用户修改自定义词库
+     * @param req ModifyLLMKeywordLibraryRequest
+     * @return ModifyLLMKeywordLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrary(ModifyLLMKeywordLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMKeywordLibrary", ModifyLLMKeywordLibraryResponse.class);
+    }
+
+    /**
+     *修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
+     * @param req ModifyLLMStatusRequest
+     * @return ModifyLLMStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMStatusResponse ModifyLLMStatus(ModifyLLMStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMStatus", ModifyLLMStatusResponse.class);
+    }
+
+    /**
+     *修改llmwaf DLP 规则
+     * @param req ModifyLLMWafDLPRuleRequest
+     * @return ModifyLLMWafDLPRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRule(ModifyLLMWafDLPRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMWafDLPRule", ModifyLLMWafDLPRuleResponse.class);
+    }
+
+    /**
+     *修改 LLM 规则
+     * @param req ModifyLLMWafProtectRuleRequest
+     * @return ModifyLLMWafProtectRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRule(ModifyLLMWafProtectRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMWafProtectRule", ModifyLLMWafProtectRuleResponse.class);
     }
 
     /**

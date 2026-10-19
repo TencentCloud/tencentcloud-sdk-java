@@ -73,6 +73,13 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
     private String HealthCheckMethod;
 
     /**
+    * <p>健康检查超时时间</p><p>取值范围：[1, 60]</p><p>单位：秒</p>
+    */
+    @SerializedName("HealthCheckTimeout")
+    @Expose
+    private Long HealthCheckTimeout;
+
+    /**
      * Get <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
      * @return HealthCheckEnabled <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
@@ -184,6 +191,22 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
         this.HealthCheckMethod = HealthCheckMethod;
     }
 
+    /**
+     * Get <p>健康检查超时时间</p><p>取值范围：[1, 60]</p><p>单位：秒</p> 
+     * @return HealthCheckTimeout <p>健康检查超时时间</p><p>取值范围：[1, 60]</p><p>单位：秒</p>
+     */
+    public Long getHealthCheckTimeout() {
+        return this.HealthCheckTimeout;
+    }
+
+    /**
+     * Set <p>健康检查超时时间</p><p>取值范围：[1, 60]</p><p>单位：秒</p>
+     * @param HealthCheckTimeout <p>健康检查超时时间</p><p>取值范围：[1, 60]</p><p>单位：秒</p>
+     */
+    public void setHealthCheckTimeout(Long HealthCheckTimeout) {
+        this.HealthCheckTimeout = HealthCheckTimeout;
+    }
+
     public ServiceProviderHealthCheckConfigItemInput() {
     }
 
@@ -213,6 +236,9 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
         if (source.HealthCheckMethod != null) {
             this.HealthCheckMethod = new String(source.HealthCheckMethod);
         }
+        if (source.HealthCheckTimeout != null) {
+            this.HealthCheckTimeout = new Long(source.HealthCheckTimeout);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ServiceProviderHealthCheckConfigItemInput extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
         this.setParamSimple(map, prefix + "HealthCheckPath", this.HealthCheckPath);
         this.setParamSimple(map, prefix + "HealthCheckMethod", this.HealthCheckMethod);
+        this.setParamSimple(map, prefix + "HealthCheckTimeout", this.HealthCheckTimeout);
 
     }
 }

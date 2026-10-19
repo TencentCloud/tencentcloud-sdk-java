@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAccessCertResponse extends AbstractModel {
 
     /**
-    * 凭证唯一标识
+    * <p>凭证唯一标识</p>
     */
     @SerializedName("CertId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAccessCertResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 凭证唯一标识 
-     * @return CertId 凭证唯一标识
+     * Get <p>凭证唯一标识</p> 
+     * @return CertId <p>凭证唯一标识</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 凭证唯一标识
-     * @param CertId 凭证唯一标识
+     * Set <p>凭证唯一标识</p>
+     * @param CertId <p>凭证唯一标识</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

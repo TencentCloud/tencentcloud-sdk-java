@@ -178,6 +178,13 @@ public class CreateJobSpecRequest extends AbstractModel {
     private String DispatchStrategy;
 
     /**
+    * <p>用户自定义网络配置JSON</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>入口命令不能为空</p> 
      * @return Entrypoint <p>入口命令不能为空</p>
      */
@@ -529,6 +536,22 @@ public class CreateJobSpecRequest extends AbstractModel {
         this.DispatchStrategy = DispatchStrategy;
     }
 
+    /**
+     * Get <p>用户自定义网络配置JSON</p> 
+     * @return NetworkConfig <p>用户自定义网络配置JSON</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户自定义网络配置JSON</p>
+     * @param NetworkConfig <p>用户自定义网络配置JSON</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public CreateJobSpecRequest() {
     }
 
@@ -606,6 +629,9 @@ public class CreateJobSpecRequest extends AbstractModel {
         if (source.DispatchStrategy != null) {
             this.DispatchStrategy = new String(source.DispatchStrategy);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class CreateJobSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DispatchStrategy", this.DispatchStrategy);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

@@ -24,174 +24,168 @@ import java.util.HashMap;
 public class BizLicenseOCRResponse extends AbstractModel {
 
     /**
-    * 统一社会信用代码（三合一之前为注册号）
+    * <p>统一社会信用代码（三合一之前为注册号）</p>
     */
     @SerializedName("RegNum")
     @Expose
     private String RegNum;
 
     /**
-    * 公司名称
+    * <p>公司名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 注册资本
+    * <p>注册资本</p>
     */
     @SerializedName("Capital")
     @Expose
     private String Capital;
 
     /**
-    * 法定代表人
+    * <p>法定代表人</p>
     */
     @SerializedName("Person")
     @Expose
     private String Person;
 
     /**
-    * 地址
+    * <p>地址</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 经营范围
+    * <p>经营范围</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * 主体类型
+    * <p>主体类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 营业期限
+    * <p>营业期限</p>
     */
     @SerializedName("Period")
     @Expose
     private String Period;
 
     /**
-    * 组成形式
+    * <p>组成形式</p>
     */
     @SerializedName("ComposingForm")
     @Expose
     private String ComposingForm;
 
     /**
-    * 成立日期
+    * <p>成立日期</p>
     */
     @SerializedName("SetDate")
     @Expose
     private String SetDate;
 
     /**
-    * Code 告警码列表和释义：
--9102 黑白复印件告警
--9104 翻拍件告警
+    * <p>Code 告警码列表和释义：<br>-9102 黑白复印件告警<br>-9104 翻拍件告警<br>-9108 经营范围识别异常告警（由于文字过小、模糊、反光、遮挡或明显倾斜等情况导致未能正常识别）</p>
     */
     @SerializedName("RecognizeWarnCode")
     @Expose
     private Long [] RecognizeWarnCode;
 
     /**
-    * 告警码说明：
-WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_CARD翻拍件告警
+    * <p>告警码说明：<br>WARN_COPY_CARD 黑白复印件告警<br>WARN_RESHOOT_CARD翻拍件告警<br>WARN_EARLY_STOP 经营范围识别异常告警</p>
     */
     @SerializedName("RecognizeWarnMsg")
     @Expose
     private String [] RecognizeWarnMsg;
 
     /**
-    * 是否为副本。1为是，-1为不是。
+    * <p>是否为副本。1为是，-1为不是。</p>
     */
     @SerializedName("IsDuplication")
     @Expose
     private Long IsDuplication;
 
     /**
-    * 登记日期
+    * <p>登记日期</p>
     */
     @SerializedName("RegistrationDate")
     @Expose
     private String RegistrationDate;
 
     /**
-    *  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
-
-
+    * <p>图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 是否有国徽。false为没有，true为有。
+    * <p>是否有国徽。false为没有，true为有。</p>
     */
     @SerializedName("NationalEmblem")
     @Expose
     private Boolean NationalEmblem;
 
     /**
-    * 是否有二维码。false为没有，true为有。
+    * <p>是否有二维码。false为没有，true为有。</p>
     */
     @SerializedName("QRCode")
     @Expose
     private Boolean QRCode;
 
     /**
-    * 是否有印章。false为没有，true为有。
+    * <p>是否有印章。false为没有，true为有。</p>
     */
     @SerializedName("Seal")
     @Expose
     private Boolean Seal;
 
     /**
-    * 标题
+    * <p>标题</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 编号
+    * <p>编号</p>
     */
     @SerializedName("SerialNumber")
     @Expose
     private String SerialNumber;
 
     /**
-    * 登记机关
+    * <p>登记机关</p>
     */
     @SerializedName("RegistrationAuthority")
     @Expose
     private String RegistrationAuthority;
 
     /**
-    * 是否是电子营业执照。false为没有，true为有。
+    * <p>是否是电子营业执照。false为没有，true为有。</p>
     */
     @SerializedName("Electronic")
     @Expose
     private Boolean Electronic;
 
     /**
-    * 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+    * <p>非营业执照的营业类证件识别结果，将以结构化形式呈现。</p>
     */
     @SerializedName("BusinessCertificate")
     @Expose
     private BusinessCertificateInfo [] BusinessCertificate;
 
     /**
-    * 重要提示字段
+    * <p>重要提示字段</p>
     */
     @SerializedName("Important")
     @Expose
@@ -205,408 +199,384 @@ WARN_RESHOOT_CARD翻拍件告警
     private String RequestId;
 
     /**
-     * Get 统一社会信用代码（三合一之前为注册号） 
-     * @return RegNum 统一社会信用代码（三合一之前为注册号）
+     * Get <p>统一社会信用代码（三合一之前为注册号）</p> 
+     * @return RegNum <p>统一社会信用代码（三合一之前为注册号）</p>
      */
     public String getRegNum() {
         return this.RegNum;
     }
 
     /**
-     * Set 统一社会信用代码（三合一之前为注册号）
-     * @param RegNum 统一社会信用代码（三合一之前为注册号）
+     * Set <p>统一社会信用代码（三合一之前为注册号）</p>
+     * @param RegNum <p>统一社会信用代码（三合一之前为注册号）</p>
      */
     public void setRegNum(String RegNum) {
         this.RegNum = RegNum;
     }
 
     /**
-     * Get 公司名称 
-     * @return Name 公司名称
+     * Get <p>公司名称</p> 
+     * @return Name <p>公司名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 公司名称
-     * @param Name 公司名称
+     * Set <p>公司名称</p>
+     * @param Name <p>公司名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 注册资本 
-     * @return Capital 注册资本
+     * Get <p>注册资本</p> 
+     * @return Capital <p>注册资本</p>
      */
     public String getCapital() {
         return this.Capital;
     }
 
     /**
-     * Set 注册资本
-     * @param Capital 注册资本
+     * Set <p>注册资本</p>
+     * @param Capital <p>注册资本</p>
      */
     public void setCapital(String Capital) {
         this.Capital = Capital;
     }
 
     /**
-     * Get 法定代表人 
-     * @return Person 法定代表人
+     * Get <p>法定代表人</p> 
+     * @return Person <p>法定代表人</p>
      */
     public String getPerson() {
         return this.Person;
     }
 
     /**
-     * Set 法定代表人
-     * @param Person 法定代表人
+     * Set <p>法定代表人</p>
+     * @param Person <p>法定代表人</p>
      */
     public void setPerson(String Person) {
         this.Person = Person;
     }
 
     /**
-     * Get 地址 
-     * @return Address 地址
+     * Get <p>地址</p> 
+     * @return Address <p>地址</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 地址
-     * @param Address 地址
+     * Set <p>地址</p>
+     * @param Address <p>地址</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 经营范围 
-     * @return Business 经营范围
+     * Get <p>经营范围</p> 
+     * @return Business <p>经营范围</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 经营范围
-     * @param Business 经营范围
+     * Set <p>经营范围</p>
+     * @param Business <p>经营范围</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 主体类型 
-     * @return Type 主体类型
+     * Get <p>主体类型</p> 
+     * @return Type <p>主体类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 主体类型
-     * @param Type 主体类型
+     * Set <p>主体类型</p>
+     * @param Type <p>主体类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 营业期限 
-     * @return Period 营业期限
+     * Get <p>营业期限</p> 
+     * @return Period <p>营业期限</p>
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 营业期限
-     * @param Period 营业期限
+     * Set <p>营业期限</p>
+     * @param Period <p>营业期限</p>
      */
     public void setPeriod(String Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 组成形式 
-     * @return ComposingForm 组成形式
+     * Get <p>组成形式</p> 
+     * @return ComposingForm <p>组成形式</p>
      */
     public String getComposingForm() {
         return this.ComposingForm;
     }
 
     /**
-     * Set 组成形式
-     * @param ComposingForm 组成形式
+     * Set <p>组成形式</p>
+     * @param ComposingForm <p>组成形式</p>
      */
     public void setComposingForm(String ComposingForm) {
         this.ComposingForm = ComposingForm;
     }
 
     /**
-     * Get 成立日期 
-     * @return SetDate 成立日期
+     * Get <p>成立日期</p> 
+     * @return SetDate <p>成立日期</p>
      */
     public String getSetDate() {
         return this.SetDate;
     }
 
     /**
-     * Set 成立日期
-     * @param SetDate 成立日期
+     * Set <p>成立日期</p>
+     * @param SetDate <p>成立日期</p>
      */
     public void setSetDate(String SetDate) {
         this.SetDate = SetDate;
     }
 
     /**
-     * Get Code 告警码列表和释义：
--9102 黑白复印件告警
--9104 翻拍件告警 
-     * @return RecognizeWarnCode Code 告警码列表和释义：
--9102 黑白复印件告警
--9104 翻拍件告警
+     * Get <p>Code 告警码列表和释义：<br>-9102 黑白复印件告警<br>-9104 翻拍件告警<br>-9108 经营范围识别异常告警（由于文字过小、模糊、反光、遮挡或明显倾斜等情况导致未能正常识别）</p> 
+     * @return RecognizeWarnCode <p>Code 告警码列表和释义：<br>-9102 黑白复印件告警<br>-9104 翻拍件告警<br>-9108 经营范围识别异常告警（由于文字过小、模糊、反光、遮挡或明显倾斜等情况导致未能正常识别）</p>
      */
     public Long [] getRecognizeWarnCode() {
         return this.RecognizeWarnCode;
     }
 
     /**
-     * Set Code 告警码列表和释义：
--9102 黑白复印件告警
--9104 翻拍件告警
-     * @param RecognizeWarnCode Code 告警码列表和释义：
--9102 黑白复印件告警
--9104 翻拍件告警
+     * Set <p>Code 告警码列表和释义：<br>-9102 黑白复印件告警<br>-9104 翻拍件告警<br>-9108 经营范围识别异常告警（由于文字过小、模糊、反光、遮挡或明显倾斜等情况导致未能正常识别）</p>
+     * @param RecognizeWarnCode <p>Code 告警码列表和释义：<br>-9102 黑白复印件告警<br>-9104 翻拍件告警<br>-9108 经营范围识别异常告警（由于文字过小、模糊、反光、遮挡或明显倾斜等情况导致未能正常识别）</p>
      */
     public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
         this.RecognizeWarnCode = RecognizeWarnCode;
     }
 
     /**
-     * Get 告警码说明：
-WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_CARD翻拍件告警 
-     * @return RecognizeWarnMsg 告警码说明：
-WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_CARD翻拍件告警
+     * Get <p>告警码说明：<br>WARN_COPY_CARD 黑白复印件告警<br>WARN_RESHOOT_CARD翻拍件告警<br>WARN_EARLY_STOP 经营范围识别异常告警</p> 
+     * @return RecognizeWarnMsg <p>告警码说明：<br>WARN_COPY_CARD 黑白复印件告警<br>WARN_RESHOOT_CARD翻拍件告警<br>WARN_EARLY_STOP 经营范围识别异常告警</p>
      */
     public String [] getRecognizeWarnMsg() {
         return this.RecognizeWarnMsg;
     }
 
     /**
-     * Set 告警码说明：
-WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_CARD翻拍件告警
-     * @param RecognizeWarnMsg 告警码说明：
-WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_CARD翻拍件告警
+     * Set <p>告警码说明：<br>WARN_COPY_CARD 黑白复印件告警<br>WARN_RESHOOT_CARD翻拍件告警<br>WARN_EARLY_STOP 经营范围识别异常告警</p>
+     * @param RecognizeWarnMsg <p>告警码说明：<br>WARN_COPY_CARD 黑白复印件告警<br>WARN_RESHOOT_CARD翻拍件告警<br>WARN_EARLY_STOP 经营范围识别异常告警</p>
      */
     public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
         this.RecognizeWarnMsg = RecognizeWarnMsg;
     }
 
     /**
-     * Get 是否为副本。1为是，-1为不是。 
-     * @return IsDuplication 是否为副本。1为是，-1为不是。
+     * Get <p>是否为副本。1为是，-1为不是。</p> 
+     * @return IsDuplication <p>是否为副本。1为是，-1为不是。</p>
      */
     public Long getIsDuplication() {
         return this.IsDuplication;
     }
 
     /**
-     * Set 是否为副本。1为是，-1为不是。
-     * @param IsDuplication 是否为副本。1为是，-1为不是。
+     * Set <p>是否为副本。1为是，-1为不是。</p>
+     * @param IsDuplication <p>是否为副本。1为是，-1为不是。</p>
      */
     public void setIsDuplication(Long IsDuplication) {
         this.IsDuplication = IsDuplication;
     }
 
     /**
-     * Get 登记日期 
-     * @return RegistrationDate 登记日期
+     * Get <p>登记日期</p> 
+     * @return RegistrationDate <p>登记日期</p>
      */
     public String getRegistrationDate() {
         return this.RegistrationDate;
     }
 
     /**
-     * Set 登记日期
-     * @param RegistrationDate 登记日期
+     * Set <p>登记日期</p>
+     * @param RegistrationDate <p>登记日期</p>
      */
     public void setRegistrationDate(String RegistrationDate) {
         this.RegistrationDate = RegistrationDate;
     }
 
     /**
-     * Get  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
-
- 
-     * @return Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
-
-
+     * Get <p>图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度</p> 
+     * @return Angle <p>图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
-
-
-     * @param Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
-
-
+     * Set <p>图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度</p>
+     * @param Angle <p>图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 是否有国徽。false为没有，true为有。 
-     * @return NationalEmblem 是否有国徽。false为没有，true为有。
+     * Get <p>是否有国徽。false为没有，true为有。</p> 
+     * @return NationalEmblem <p>是否有国徽。false为没有，true为有。</p>
      */
     public Boolean getNationalEmblem() {
         return this.NationalEmblem;
     }
 
     /**
-     * Set 是否有国徽。false为没有，true为有。
-     * @param NationalEmblem 是否有国徽。false为没有，true为有。
+     * Set <p>是否有国徽。false为没有，true为有。</p>
+     * @param NationalEmblem <p>是否有国徽。false为没有，true为有。</p>
      */
     public void setNationalEmblem(Boolean NationalEmblem) {
         this.NationalEmblem = NationalEmblem;
     }
 
     /**
-     * Get 是否有二维码。false为没有，true为有。 
-     * @return QRCode 是否有二维码。false为没有，true为有。
+     * Get <p>是否有二维码。false为没有，true为有。</p> 
+     * @return QRCode <p>是否有二维码。false为没有，true为有。</p>
      */
     public Boolean getQRCode() {
         return this.QRCode;
     }
 
     /**
-     * Set 是否有二维码。false为没有，true为有。
-     * @param QRCode 是否有二维码。false为没有，true为有。
+     * Set <p>是否有二维码。false为没有，true为有。</p>
+     * @param QRCode <p>是否有二维码。false为没有，true为有。</p>
      */
     public void setQRCode(Boolean QRCode) {
         this.QRCode = QRCode;
     }
 
     /**
-     * Get 是否有印章。false为没有，true为有。 
-     * @return Seal 是否有印章。false为没有，true为有。
+     * Get <p>是否有印章。false为没有，true为有。</p> 
+     * @return Seal <p>是否有印章。false为没有，true为有。</p>
      */
     public Boolean getSeal() {
         return this.Seal;
     }
 
     /**
-     * Set 是否有印章。false为没有，true为有。
-     * @param Seal 是否有印章。false为没有，true为有。
+     * Set <p>是否有印章。false为没有，true为有。</p>
+     * @param Seal <p>是否有印章。false为没有，true为有。</p>
      */
     public void setSeal(Boolean Seal) {
         this.Seal = Seal;
     }
 
     /**
-     * Get 标题 
-     * @return Title 标题
+     * Get <p>标题</p> 
+     * @return Title <p>标题</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 标题
-     * @param Title 标题
+     * Set <p>标题</p>
+     * @param Title <p>标题</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 编号 
-     * @return SerialNumber 编号
+     * Get <p>编号</p> 
+     * @return SerialNumber <p>编号</p>
      */
     public String getSerialNumber() {
         return this.SerialNumber;
     }
 
     /**
-     * Set 编号
-     * @param SerialNumber 编号
+     * Set <p>编号</p>
+     * @param SerialNumber <p>编号</p>
      */
     public void setSerialNumber(String SerialNumber) {
         this.SerialNumber = SerialNumber;
     }
 
     /**
-     * Get 登记机关 
-     * @return RegistrationAuthority 登记机关
+     * Get <p>登记机关</p> 
+     * @return RegistrationAuthority <p>登记机关</p>
      */
     public String getRegistrationAuthority() {
         return this.RegistrationAuthority;
     }
 
     /**
-     * Set 登记机关
-     * @param RegistrationAuthority 登记机关
+     * Set <p>登记机关</p>
+     * @param RegistrationAuthority <p>登记机关</p>
      */
     public void setRegistrationAuthority(String RegistrationAuthority) {
         this.RegistrationAuthority = RegistrationAuthority;
     }
 
     /**
-     * Get 是否是电子营业执照。false为没有，true为有。 
-     * @return Electronic 是否是电子营业执照。false为没有，true为有。
+     * Get <p>是否是电子营业执照。false为没有，true为有。</p> 
+     * @return Electronic <p>是否是电子营业执照。false为没有，true为有。</p>
      */
     public Boolean getElectronic() {
         return this.Electronic;
     }
 
     /**
-     * Set 是否是电子营业执照。false为没有，true为有。
-     * @param Electronic 是否是电子营业执照。false为没有，true为有。
+     * Set <p>是否是电子营业执照。false为没有，true为有。</p>
+     * @param Electronic <p>是否是电子营业执照。false为没有，true为有。</p>
      */
     public void setElectronic(Boolean Electronic) {
         this.Electronic = Electronic;
     }
 
     /**
-     * Get 非营业执照的营业类证件识别结果，将以结构化形式呈现。 
-     * @return BusinessCertificate 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+     * Get <p>非营业执照的营业类证件识别结果，将以结构化形式呈现。</p> 
+     * @return BusinessCertificate <p>非营业执照的营业类证件识别结果，将以结构化形式呈现。</p>
      */
     public BusinessCertificateInfo [] getBusinessCertificate() {
         return this.BusinessCertificate;
     }
 
     /**
-     * Set 非营业执照的营业类证件识别结果，将以结构化形式呈现。
-     * @param BusinessCertificate 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+     * Set <p>非营业执照的营业类证件识别结果，将以结构化形式呈现。</p>
+     * @param BusinessCertificate <p>非营业执照的营业类证件识别结果，将以结构化形式呈现。</p>
      */
     public void setBusinessCertificate(BusinessCertificateInfo [] BusinessCertificate) {
         this.BusinessCertificate = BusinessCertificate;
     }
 
     /**
-     * Get 重要提示字段 
-     * @return Important 重要提示字段
+     * Get <p>重要提示字段</p> 
+     * @return Important <p>重要提示字段</p>
      */
     public String getImportant() {
         return this.Important;
     }
 
     /**
-     * Set 重要提示字段
-     * @param Important 重要提示字段
+     * Set <p>重要提示字段</p>
+     * @param Important <p>重要提示字段</p>
      */
     public void setImportant(String Important) {
         this.Important = Important;

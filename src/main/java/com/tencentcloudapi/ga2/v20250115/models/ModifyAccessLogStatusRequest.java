@@ -38,7 +38,7 @@ public class ModifyAccessLogStatusRequest extends AbstractModel {
     private String Status;
 
     /**
-    * <p>GA实例唯一Id</p>
+    * <p>全球加速实例ID。</p>
     */
     @SerializedName("GlobalAcceleratorId")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyAccessLogStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>GA实例唯一Id</p> 
-     * @return GlobalAcceleratorId <p>GA实例唯一Id</p>
+     * Get <p>全球加速实例ID。</p> 
+     * @return GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public String getGlobalAcceleratorId() {
         return this.GlobalAcceleratorId;
     }
 
     /**
-     * Set <p>GA实例唯一Id</p>
-     * @param GlobalAcceleratorId <p>GA实例唯一Id</p>
+     * Set <p>全球加速实例ID。</p>
+     * @param GlobalAcceleratorId <p>全球加速实例ID。</p>
      */
     public void setGlobalAcceleratorId(String GlobalAcceleratorId) {
         this.GlobalAcceleratorId = GlobalAcceleratorId;

@@ -41,6 +41,13 @@ EXIST：导入现有版本
     private String ReasoningEnvironmentSource;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
     */
     @SerializedName("TrainingModelName")
@@ -252,6 +259,22 @@ EXIST：导入现有版本
      */
     public void setReasoningEnvironmentSource(String ReasoningEnvironmentSource) {
         this.ReasoningEnvironmentSource = ReasoningEnvironmentSource;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -660,6 +683,9 @@ EXIST：导入现有版本
         if (source.ReasoningEnvironmentSource != null) {
             this.ReasoningEnvironmentSource = new String(source.ReasoningEnvironmentSource);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.TrainingModelName != null) {
             this.TrainingModelName = new String(source.TrainingModelName);
         }
@@ -744,6 +770,7 @@ EXIST：导入现有版本
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImportMethod", this.ImportMethod);
         this.setParamSimple(map, prefix + "ReasoningEnvironmentSource", this.ReasoningEnvironmentSource);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "TrainingModelName", this.TrainingModelName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);

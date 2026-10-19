@@ -108,6 +108,13 @@ public class AddDeploymentRequest extends AbstractModel {
     private String AdvancedOptions;
 
     /**
+    * <p>NetworkConfig</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>ServiceId</p> 
      * @return ServiceId <p>ServiceId</p>
      */
@@ -299,6 +306,22 @@ public class AddDeploymentRequest extends AbstractModel {
         this.AdvancedOptions = AdvancedOptions;
     }
 
+    /**
+     * Get <p>NetworkConfig</p> 
+     * @return NetworkConfig <p>NetworkConfig</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>NetworkConfig</p>
+     * @param NetworkConfig <p>NetworkConfig</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public AddDeploymentRequest() {
     }
 
@@ -343,6 +366,9 @@ public class AddDeploymentRequest extends AbstractModel {
         if (source.AdvancedOptions != null) {
             this.AdvancedOptions = new String(source.AdvancedOptions);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class AddDeploymentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoscalingEnabled", this.AutoscalingEnabled);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

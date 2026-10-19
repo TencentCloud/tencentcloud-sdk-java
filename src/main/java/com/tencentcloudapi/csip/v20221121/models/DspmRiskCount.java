@@ -24,108 +24,122 @@ import java.util.HashMap;
 public class DspmRiskCount extends AbstractModel {
 
     /**
-    * 待处理风险个数
+    * <p>待处理风险个数</p>
     */
     @SerializedName("UnprocessedRisk")
     @Expose
     private Long UnprocessedRisk;
 
     /**
-    * 配置风险个数
+    * <p>配置风险个数</p>
     */
     @SerializedName("ConfigurationRisk")
     @Expose
     private Long ConfigurationRisk;
 
     /**
-    * 基线风险个数
+    * <p>基线风险个数</p>
     */
     @SerializedName("BaselineDeviation")
     @Expose
     private Long BaselineDeviation;
 
     /**
-    * 泄露风险个数
+    * <p>泄露风险个数</p>
     */
     @SerializedName("LeakDetection")
     @Expose
     private Long LeakDetection;
 
     /**
-    * SQL行为异常风险个数
+    * <p>SQL行为异常风险个数</p>
     */
     @SerializedName("SQLBehaviorAnomaly")
     @Expose
     private Long SQLBehaviorAnomaly;
 
     /**
-    * 权限异常风险个数
+    * <p>权限异常风险个数</p>
     */
     @SerializedName("PermissionAnomaly")
     @Expose
     private Long PermissionAnomaly;
 
     /**
-    * 登录行为异常风险个数
+    * <p>登录行为异常风险个数</p>
     */
     @SerializedName("LoginBehaviorAnomaly")
     @Expose
     private Long LoginBehaviorAnomaly;
 
     /**
-    * 攻击面风险个数
+    * <p>攻击面风险个数</p>
     */
     @SerializedName("AttackSurfaceRisk")
     @Expose
     private Long AttackSurfaceRisk;
 
     /**
-    * 账号敏感操作个数
+    * <p>账号敏感操作个数</p>
     */
     @SerializedName("AccountSensitiveOperation")
     @Expose
     private Long AccountSensitiveOperation;
 
     /**
-    * 待处理告警个数
+    * <p>待处理告警个数</p>
     */
     @SerializedName("UnprocessedAlarm")
     @Expose
     private Long UnprocessedAlarm;
 
     /**
-    * 新增事件告警
+    * <p>新增事件告警</p>
     */
     @SerializedName("NumOfNewAlarmEvent")
     @Expose
     private Long NumOfNewAlarmEvent;
 
     /**
-    * 新增配置风险
+    * <p>新增配置风险</p>
     */
     @SerializedName("NumOfNewConfigRisk")
     @Expose
     private Long NumOfNewConfigRisk;
 
     /**
-     * Get 待处理风险个数 
-     * @return UnprocessedRisk 待处理风险个数
+    * <p>账号风险条数</p>
+    */
+    @SerializedName("AccountRisk")
+    @Expose
+    private Long AccountRisk;
+
+    /**
+    * <p>配置风险条数</p>
+    */
+    @SerializedName("ConfigRisk")
+    @Expose
+    private Long ConfigRisk;
+
+    /**
+     * Get <p>待处理风险个数</p> 
+     * @return UnprocessedRisk <p>待处理风险个数</p>
      */
     public Long getUnprocessedRisk() {
         return this.UnprocessedRisk;
     }
 
     /**
-     * Set 待处理风险个数
-     * @param UnprocessedRisk 待处理风险个数
+     * Set <p>待处理风险个数</p>
+     * @param UnprocessedRisk <p>待处理风险个数</p>
      */
     public void setUnprocessedRisk(Long UnprocessedRisk) {
         this.UnprocessedRisk = UnprocessedRisk;
     }
 
     /**
-     * Get 配置风险个数 
-     * @return ConfigurationRisk 配置风险个数
+     * Get <p>配置风险个数</p> 
+     * @return ConfigurationRisk <p>配置风险个数</p>
      * @deprecated
      */
     @Deprecated
@@ -134,8 +148,8 @@ public class DspmRiskCount extends AbstractModel {
     }
 
     /**
-     * Set 配置风险个数
-     * @param ConfigurationRisk 配置风险个数
+     * Set <p>配置风险个数</p>
+     * @param ConfigurationRisk <p>配置风险个数</p>
      * @deprecated
      */
     @Deprecated
@@ -144,8 +158,8 @@ public class DspmRiskCount extends AbstractModel {
     }
 
     /**
-     * Get 基线风险个数 
-     * @return BaselineDeviation 基线风险个数
+     * Get <p>基线风险个数</p> 
+     * @return BaselineDeviation <p>基线风险个数</p>
      * @deprecated
      */
     @Deprecated
@@ -154,8 +168,8 @@ public class DspmRiskCount extends AbstractModel {
     }
 
     /**
-     * Set 基线风险个数
-     * @param BaselineDeviation 基线风险个数
+     * Set <p>基线风险个数</p>
+     * @param BaselineDeviation <p>基线风险个数</p>
      * @deprecated
      */
     @Deprecated
@@ -164,8 +178,8 @@ public class DspmRiskCount extends AbstractModel {
     }
 
     /**
-     * Get 泄露风险个数 
-     * @return LeakDetection 泄露风险个数
+     * Get <p>泄露风险个数</p> 
+     * @return LeakDetection <p>泄露风险个数</p>
      * @deprecated
      */
     @Deprecated
@@ -174,8 +188,8 @@ public class DspmRiskCount extends AbstractModel {
     }
 
     /**
-     * Set 泄露风险个数
-     * @param LeakDetection 泄露风险个数
+     * Set <p>泄露风险个数</p>
+     * @param LeakDetection <p>泄露风险个数</p>
      * @deprecated
      */
     @Deprecated
@@ -184,131 +198,163 @@ public class DspmRiskCount extends AbstractModel {
     }
 
     /**
-     * Get SQL行为异常风险个数 
-     * @return SQLBehaviorAnomaly SQL行为异常风险个数
+     * Get <p>SQL行为异常风险个数</p> 
+     * @return SQLBehaviorAnomaly <p>SQL行为异常风险个数</p>
      */
     public Long getSQLBehaviorAnomaly() {
         return this.SQLBehaviorAnomaly;
     }
 
     /**
-     * Set SQL行为异常风险个数
-     * @param SQLBehaviorAnomaly SQL行为异常风险个数
+     * Set <p>SQL行为异常风险个数</p>
+     * @param SQLBehaviorAnomaly <p>SQL行为异常风险个数</p>
      */
     public void setSQLBehaviorAnomaly(Long SQLBehaviorAnomaly) {
         this.SQLBehaviorAnomaly = SQLBehaviorAnomaly;
     }
 
     /**
-     * Get 权限异常风险个数 
-     * @return PermissionAnomaly 权限异常风险个数
+     * Get <p>权限异常风险个数</p> 
+     * @return PermissionAnomaly <p>权限异常风险个数</p>
      */
     public Long getPermissionAnomaly() {
         return this.PermissionAnomaly;
     }
 
     /**
-     * Set 权限异常风险个数
-     * @param PermissionAnomaly 权限异常风险个数
+     * Set <p>权限异常风险个数</p>
+     * @param PermissionAnomaly <p>权限异常风险个数</p>
      */
     public void setPermissionAnomaly(Long PermissionAnomaly) {
         this.PermissionAnomaly = PermissionAnomaly;
     }
 
     /**
-     * Get 登录行为异常风险个数 
-     * @return LoginBehaviorAnomaly 登录行为异常风险个数
+     * Get <p>登录行为异常风险个数</p> 
+     * @return LoginBehaviorAnomaly <p>登录行为异常风险个数</p>
      */
     public Long getLoginBehaviorAnomaly() {
         return this.LoginBehaviorAnomaly;
     }
 
     /**
-     * Set 登录行为异常风险个数
-     * @param LoginBehaviorAnomaly 登录行为异常风险个数
+     * Set <p>登录行为异常风险个数</p>
+     * @param LoginBehaviorAnomaly <p>登录行为异常风险个数</p>
      */
     public void setLoginBehaviorAnomaly(Long LoginBehaviorAnomaly) {
         this.LoginBehaviorAnomaly = LoginBehaviorAnomaly;
     }
 
     /**
-     * Get 攻击面风险个数 
-     * @return AttackSurfaceRisk 攻击面风险个数
+     * Get <p>攻击面风险个数</p> 
+     * @return AttackSurfaceRisk <p>攻击面风险个数</p>
      */
     public Long getAttackSurfaceRisk() {
         return this.AttackSurfaceRisk;
     }
 
     /**
-     * Set 攻击面风险个数
-     * @param AttackSurfaceRisk 攻击面风险个数
+     * Set <p>攻击面风险个数</p>
+     * @param AttackSurfaceRisk <p>攻击面风险个数</p>
      */
     public void setAttackSurfaceRisk(Long AttackSurfaceRisk) {
         this.AttackSurfaceRisk = AttackSurfaceRisk;
     }
 
     /**
-     * Get 账号敏感操作个数 
-     * @return AccountSensitiveOperation 账号敏感操作个数
+     * Get <p>账号敏感操作个数</p> 
+     * @return AccountSensitiveOperation <p>账号敏感操作个数</p>
      */
     public Long getAccountSensitiveOperation() {
         return this.AccountSensitiveOperation;
     }
 
     /**
-     * Set 账号敏感操作个数
-     * @param AccountSensitiveOperation 账号敏感操作个数
+     * Set <p>账号敏感操作个数</p>
+     * @param AccountSensitiveOperation <p>账号敏感操作个数</p>
      */
     public void setAccountSensitiveOperation(Long AccountSensitiveOperation) {
         this.AccountSensitiveOperation = AccountSensitiveOperation;
     }
 
     /**
-     * Get 待处理告警个数 
-     * @return UnprocessedAlarm 待处理告警个数
+     * Get <p>待处理告警个数</p> 
+     * @return UnprocessedAlarm <p>待处理告警个数</p>
      */
     public Long getUnprocessedAlarm() {
         return this.UnprocessedAlarm;
     }
 
     /**
-     * Set 待处理告警个数
-     * @param UnprocessedAlarm 待处理告警个数
+     * Set <p>待处理告警个数</p>
+     * @param UnprocessedAlarm <p>待处理告警个数</p>
      */
     public void setUnprocessedAlarm(Long UnprocessedAlarm) {
         this.UnprocessedAlarm = UnprocessedAlarm;
     }
 
     /**
-     * Get 新增事件告警 
-     * @return NumOfNewAlarmEvent 新增事件告警
+     * Get <p>新增事件告警</p> 
+     * @return NumOfNewAlarmEvent <p>新增事件告警</p>
      */
     public Long getNumOfNewAlarmEvent() {
         return this.NumOfNewAlarmEvent;
     }
 
     /**
-     * Set 新增事件告警
-     * @param NumOfNewAlarmEvent 新增事件告警
+     * Set <p>新增事件告警</p>
+     * @param NumOfNewAlarmEvent <p>新增事件告警</p>
      */
     public void setNumOfNewAlarmEvent(Long NumOfNewAlarmEvent) {
         this.NumOfNewAlarmEvent = NumOfNewAlarmEvent;
     }
 
     /**
-     * Get 新增配置风险 
-     * @return NumOfNewConfigRisk 新增配置风险
+     * Get <p>新增配置风险</p> 
+     * @return NumOfNewConfigRisk <p>新增配置风险</p>
      */
     public Long getNumOfNewConfigRisk() {
         return this.NumOfNewConfigRisk;
     }
 
     /**
-     * Set 新增配置风险
-     * @param NumOfNewConfigRisk 新增配置风险
+     * Set <p>新增配置风险</p>
+     * @param NumOfNewConfigRisk <p>新增配置风险</p>
      */
     public void setNumOfNewConfigRisk(Long NumOfNewConfigRisk) {
         this.NumOfNewConfigRisk = NumOfNewConfigRisk;
+    }
+
+    /**
+     * Get <p>账号风险条数</p> 
+     * @return AccountRisk <p>账号风险条数</p>
+     */
+    public Long getAccountRisk() {
+        return this.AccountRisk;
+    }
+
+    /**
+     * Set <p>账号风险条数</p>
+     * @param AccountRisk <p>账号风险条数</p>
+     */
+    public void setAccountRisk(Long AccountRisk) {
+        this.AccountRisk = AccountRisk;
+    }
+
+    /**
+     * Get <p>配置风险条数</p> 
+     * @return ConfigRisk <p>配置风险条数</p>
+     */
+    public Long getConfigRisk() {
+        return this.ConfigRisk;
+    }
+
+    /**
+     * Set <p>配置风险条数</p>
+     * @param ConfigRisk <p>配置风险条数</p>
+     */
+    public void setConfigRisk(Long ConfigRisk) {
+        this.ConfigRisk = ConfigRisk;
     }
 
     public DspmRiskCount() {
@@ -355,6 +401,12 @@ public class DspmRiskCount extends AbstractModel {
         if (source.NumOfNewConfigRisk != null) {
             this.NumOfNewConfigRisk = new Long(source.NumOfNewConfigRisk);
         }
+        if (source.AccountRisk != null) {
+            this.AccountRisk = new Long(source.AccountRisk);
+        }
+        if (source.ConfigRisk != null) {
+            this.ConfigRisk = new Long(source.ConfigRisk);
+        }
     }
 
 
@@ -374,6 +426,8 @@ public class DspmRiskCount extends AbstractModel {
         this.setParamSimple(map, prefix + "UnprocessedAlarm", this.UnprocessedAlarm);
         this.setParamSimple(map, prefix + "NumOfNewAlarmEvent", this.NumOfNewAlarmEvent);
         this.setParamSimple(map, prefix + "NumOfNewConfigRisk", this.NumOfNewConfigRisk);
+        this.setParamSimple(map, prefix + "AccountRisk", this.AccountRisk);
+        this.setParamSimple(map, prefix + "ConfigRisk", this.ConfigRisk);
 
     }
 }

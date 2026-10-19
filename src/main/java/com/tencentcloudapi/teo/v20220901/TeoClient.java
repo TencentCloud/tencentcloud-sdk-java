@@ -696,7 +696,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+     *删除边缘函数，删除后函数无法恢复，关联的触发规则，环境变量和副本会一并删除。
      * @param req DeleteFunctionRequest
      * @return DeleteFunctionResponse
      * @throws TencentCloudSDKException
@@ -2053,7 +2053,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 
     /**
      *操作边缘函数运行环境，支持环境变量的相关设置。
-设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+设置环境变量后，可在函数代码和函数副本代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
      * @param req HandleFunctionRuntimeEnvironmentRequest
      * @return HandleFunctionRuntimeEnvironmentResponse
      * @throws TencentCloudSDKException

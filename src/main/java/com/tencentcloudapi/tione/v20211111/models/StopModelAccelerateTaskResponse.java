@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopModelAccelerateTaskResponse extends AbstractModel {
 
     /**
-    * 模型加速任务ID
+    * <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelAccTaskId")
@@ -32,7 +32,7 @@ public class StopModelAccelerateTaskResponse extends AbstractModel {
     private String ModelAccTaskId;
 
     /**
-    * 异步任务ID
+    * <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncTaskId")
@@ -47,9 +47,9 @@ public class StopModelAccelerateTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模型加速任务ID
+     * Get <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelAccTaskId 模型加速任务ID
+     * @return ModelAccTaskId <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelAccTaskId() {
@@ -57,9 +57,9 @@ public class StopModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 模型加速任务ID
+     * Set <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelAccTaskId 模型加速任务ID
+     * @param ModelAccTaskId <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelAccTaskId(String ModelAccTaskId) {
@@ -67,9 +67,9 @@ public class StopModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步任务ID
+     * Get <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncTaskId 异步任务ID
+     * @return AsyncTaskId <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncTaskId() {
@@ -77,9 +77,9 @@ public class StopModelAccelerateTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 异步任务ID
+     * Set <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncTaskId 异步任务ID
+     * @param AsyncTaskId <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncTaskId(String AsyncTaskId) {

@@ -125,6 +125,14 @@ public class KBSummary extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpaceShare")
+    @Expose
+    private KBSpaceShare SpaceShare;
+
+    /**
      * Get <p>关联的应用列表，仅共享知识库返回</p> 
      * @return AppList <p>关联的应用列表，仅共享知识库返回</p>
      */
@@ -360,6 +368,26 @@ public class KBSummary extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpaceShare <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KBSpaceShare getSpaceShare() {
+        return this.SpaceShare;
+    }
+
+    /**
+     * Set <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpaceShare <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpaceShare(KBSpaceShare SpaceShare) {
+        this.SpaceShare = SpaceShare;
+    }
+
     public KBSummary() {
     }
 
@@ -416,6 +444,9 @@ public class KBSummary extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SpaceShare != null) {
+            this.SpaceShare = new KBSpaceShare(source.SpaceShare);
+        }
     }
 
 
@@ -437,6 +468,7 @@ public class KBSummary extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProcessingFlagList.", this.ProcessingFlagList);
         this.setParamSimple(map, prefix + "SharedSubType", this.SharedSubType);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamObj(map, prefix + "SpaceShare.", this.SpaceShare);
 
     }
 }

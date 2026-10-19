@@ -428,7 +428,9 @@ public class ModifyMcpServerRequest extends AbstractModel {
     /**
      * Get <p>流量控制开启状态</p> 
      * @return InvokeLimitConfigStatus <p>流量控制开启状态</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -436,7 +438,9 @@ public class ModifyMcpServerRequest extends AbstractModel {
     /**
      * Set <p>流量控制开启状态</p>
      * @param InvokeLimitConfigStatus <p>流量控制开启状态</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -444,7 +448,9 @@ public class ModifyMcpServerRequest extends AbstractModel {
     /**
      * Get <p>流量控制配置</p> 
      * @return InvokeLimitConfig <p>流量控制配置</p>
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -452,7 +458,9 @@ public class ModifyMcpServerRequest extends AbstractModel {
     /**
      * Set <p>流量控制配置</p>
      * @param InvokeLimitConfig <p>流量控制配置</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }

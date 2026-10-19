@@ -130,6 +130,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *保存镜像
+     * @param req CreateNotebookImageRequest
+     * @return CreateNotebookImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotebookImageResponse CreateNotebookImage(CreateNotebookImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNotebookImage", CreateNotebookImageResponse.class);
+    }
+
+    /**
      *生成Notebook访问链接
      * @param req CreatePresignedNotebookUrlRequest
      * @return CreatePresignedNotebookUrlResponse

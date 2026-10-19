@@ -122,6 +122,13 @@ public class CreateRayClusterRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>集群名称（可选，不填写则默认使用集群ID）</p> 
      * @return Name <p>集群名称（可选，不填写则默认使用集群ID）</p>
      */
@@ -345,6 +352,22 @@ public class CreateRayClusterRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p> 
+     * @return NetworkConfig <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
+     * @param NetworkConfig <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public CreateRayClusterRequest() {
     }
 
@@ -398,6 +421,9 @@ public class CreateRayClusterRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -419,6 +445,7 @@ public class CreateRayClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

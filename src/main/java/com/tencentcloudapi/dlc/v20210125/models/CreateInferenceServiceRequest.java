@@ -178,6 +178,13 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     private String RuntimeEnv;
 
     /**
+    * <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>推理服务名称</p> 
      * @return Name <p>推理服务名称</p>
      */
@@ -529,6 +536,22 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.RuntimeEnv = RuntimeEnv;
     }
 
+    /**
+     * Get <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p> 
+     * @return NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     * @param NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public CreateInferenceServiceRequest() {
     }
 
@@ -609,6 +632,9 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         if (source.RuntimeEnv != null) {
             this.RuntimeEnv = new String(source.RuntimeEnv);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -638,6 +664,7 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "IsCustom", this.IsCustom);
         this.setParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

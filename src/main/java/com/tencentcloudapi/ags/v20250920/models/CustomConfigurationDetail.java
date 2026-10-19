@@ -94,6 +94,13 @@ public class CustomConfigurationDetail extends AbstractModel {
     private DNSConfig DNSConfig;
 
     /**
+    * <p>沙箱安全上下文</p>
+    */
+    @SerializedName("SecurityContext")
+    @Expose
+    private SecurityContext SecurityContext;
+
+    /**
      * Get <p>镜像地址</p> 
      * @return Image <p>镜像地址</p>
      */
@@ -253,6 +260,22 @@ public class CustomConfigurationDetail extends AbstractModel {
         this.DNSConfig = DNSConfig;
     }
 
+    /**
+     * Get <p>沙箱安全上下文</p> 
+     * @return SecurityContext <p>沙箱安全上下文</p>
+     */
+    public SecurityContext getSecurityContext() {
+        return this.SecurityContext;
+    }
+
+    /**
+     * Set <p>沙箱安全上下文</p>
+     * @param SecurityContext <p>沙箱安全上下文</p>
+     */
+    public void setSecurityContext(SecurityContext SecurityContext) {
+        this.SecurityContext = SecurityContext;
+    }
+
     public CustomConfigurationDetail() {
     }
 
@@ -303,6 +326,9 @@ public class CustomConfigurationDetail extends AbstractModel {
         if (source.DNSConfig != null) {
             this.DNSConfig = new DNSConfig(source.DNSConfig);
         }
+        if (source.SecurityContext != null) {
+            this.SecurityContext = new SecurityContext(source.SecurityContext);
+        }
     }
 
 
@@ -320,6 +346,7 @@ public class CustomConfigurationDetail extends AbstractModel {
         this.setParamObj(map, prefix + "Resources.", this.Resources);
         this.setParamObj(map, prefix + "Probe.", this.Probe);
         this.setParamObj(map, prefix + "DNSConfig.", this.DNSConfig);
+        this.setParamObj(map, prefix + "SecurityContext.", this.SecurityContext);
 
     }
 }

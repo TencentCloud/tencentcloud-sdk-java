@@ -75,7 +75,9 @@ public class ToolConfigDTO extends AbstractModel {
     /**
      * Get 是否开启限流配置 
      * @return InvokeLimitConfigStatus 是否开启限流配置
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -83,7 +85,9 @@ public class ToolConfigDTO extends AbstractModel {
     /**
      * Set 是否开启限流配置
      * @param InvokeLimitConfigStatus 是否开启限流配置
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -91,7 +95,9 @@ public class ToolConfigDTO extends AbstractModel {
     /**
      * Get 限流配置 
      * @return InvokeLimitConfig 限流配置
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -99,7 +105,9 @@ public class ToolConfigDTO extends AbstractModel {
     /**
      * Set 限流配置
      * @param InvokeLimitConfig 限流配置
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }

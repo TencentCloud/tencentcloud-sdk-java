@@ -24,7 +24,7 @@ public enum KeewidbErrorCode {
      /* 内部系统错误，和业务无关。 */
      FAILEDOPERATION_SYSTEMERROR("FailedOperation.SystemError"),
      
-     /* 实例不支持该接口。 */
+     /* 实例/备份不支持该接口。 */
      FAILEDOPERATION_UNSUPPORTERROR("FailedOperation.UnSupportError"),
      
      /* 未知类型操作错误。 */

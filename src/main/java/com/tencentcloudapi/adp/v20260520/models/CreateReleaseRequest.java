@@ -73,6 +73,13 @@ public class CreateReleaseRequest extends AbstractModel {
     private Boolean IsPublishAsTemplate;
 
     /**
+    * <p>portal配置</p>
+    */
+    @SerializedName("PortalShareConfig")
+    @Expose
+    private PortalShareConfig PortalShareConfig;
+
+    /**
      * Get <p>应用ID</p> 
      * @return AppId <p>应用ID</p>
      */
@@ -184,6 +191,22 @@ public class CreateReleaseRequest extends AbstractModel {
         this.IsPublishAsTemplate = IsPublishAsTemplate;
     }
 
+    /**
+     * Get <p>portal配置</p> 
+     * @return PortalShareConfig <p>portal配置</p>
+     */
+    public PortalShareConfig getPortalShareConfig() {
+        return this.PortalShareConfig;
+    }
+
+    /**
+     * Set <p>portal配置</p>
+     * @param PortalShareConfig <p>portal配置</p>
+     */
+    public void setPortalShareConfig(PortalShareConfig PortalShareConfig) {
+        this.PortalShareConfig = PortalShareConfig;
+    }
+
     public CreateReleaseRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateReleaseRequest extends AbstractModel {
         if (source.IsPublishAsTemplate != null) {
             this.IsPublishAsTemplate = new Boolean(source.IsPublishAsTemplate);
         }
+        if (source.PortalShareConfig != null) {
+            this.PortalShareConfig = new PortalShareConfig(source.PortalShareConfig);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateReleaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsDevToRelease", this.IsDevToRelease);
         this.setParamSimple(map, prefix + "IsPublishAsTemplate", this.IsPublishAsTemplate);
+        this.setParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
 
     }
 }

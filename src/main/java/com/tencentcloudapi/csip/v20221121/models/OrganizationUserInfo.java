@@ -24,565 +24,601 @@ import java.util.HashMap;
 public class OrganizationUserInfo extends AbstractModel {
 
     /**
-    * 成员账号Uin
+    * <p>成员账号Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 成员账号名称
+    * <p>成员账号名称</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 部门节点名称，账号所属部门
+    * <p>部门节点名称，账号所属部门</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 资产数量
+    * <p>资产数量</p>
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * 风险数量
+    * <p>风险数量</p>
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * 攻击数量
+    * <p>攻击数量</p>
     */
     @SerializedName("AttackCount")
     @Expose
     private Long AttackCount;
 
     /**
-    * Member/Admin/;成员或者管理员
+    * <p>Member/Admin/;成员或者管理员</p>
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * 成员账号id
+    * <p>成员账号id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * 成员账号Appid
+    * <p>成员账号Appid</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 账号加入方式,create/invite
+    * <p>账号加入方式,create/invite</p>
     */
     @SerializedName("JoinType")
     @Expose
     private String JoinType;
 
     /**
-    * 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+    * <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
     */
     @SerializedName("CFWProtect")
     @Expose
     private String CFWProtect;
 
     /**
-    * 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+    * <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
     */
     @SerializedName("WAFProtect")
     @Expose
     private String WAFProtect;
 
     /**
-    * 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+    * <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
     */
     @SerializedName("CWPProtect")
     @Expose
     private String CWPProtect;
 
     /**
-    * 1启用，0未启用
+    * <p>1启用，0未启用</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
+    * <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
     */
     @SerializedName("CSIPProtect")
     @Expose
     private String CSIPProtect;
 
     /**
-    * 1为配额消耗者
+    * <p>1为配额消耗者</p>
     */
     @SerializedName("QuotaConsumer")
     @Expose
     private Long QuotaConsumer;
 
     /**
-    * 账户类型，0为腾讯云账户，1为AWS账户
+    * <p>账户类型，0为腾讯云账户，1为AWS账户</p>
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * 0为缺省值，1为10分钟，2为1小时，3为24小时
+    * <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
     */
     @SerializedName("SyncFrequency")
     @Expose
     private Long SyncFrequency;
 
     /**
-    * 多云账户是否过期
+    * <p>多云账户是否过期</p>
     */
     @SerializedName("IsExpired")
     @Expose
     private Boolean IsExpired;
 
     /**
-    * 多云账户 权限列表
+    * <p>多云账户 权限列表</p>
     */
     @SerializedName("PermissionList")
     @Expose
     private String [] PermissionList;
 
     /**
-    * 1
+    * <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
     */
     @SerializedName("AuthType")
     @Expose
     private Long AuthType;
 
     /**
-    * 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
+    * <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
     */
     @SerializedName("TcMemberType")
     @Expose
     private Long TcMemberType;
 
     /**
-    * 子账号数量
+    * <p>子账号数量</p>
     */
     @SerializedName("SubUserCount")
     @Expose
     private Long SubUserCount;
 
     /**
-    * 加入方式详细信息
+    * <p>加入方式详细信息</p>
     */
     @SerializedName("JoinTypeInfo")
     @Expose
     private String JoinTypeInfo;
 
     /**
-     * Get 成员账号Uin 
-     * @return Uin 成员账号Uin
+    * <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+    */
+    @SerializedName("SharedModules")
+    @Expose
+    private String [] SharedModules;
+
+    /**
+    * <p>安全分</p>
+    */
+    @SerializedName("SecurityScore")
+    @Expose
+    private Long SecurityScore;
+
+    /**
+     * Get <p>成员账号Uin</p> 
+     * @return Uin <p>成员账号Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 成员账号Uin
-     * @param Uin 成员账号Uin
+     * Set <p>成员账号Uin</p>
+     * @param Uin <p>成员账号Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 成员账号名称 
-     * @return NickName 成员账号名称
+     * Get <p>成员账号名称</p> 
+     * @return NickName <p>成员账号名称</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 成员账号名称
-     * @param NickName 成员账号名称
+     * Set <p>成员账号名称</p>
+     * @param NickName <p>成员账号名称</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 部门节点名称，账号所属部门 
-     * @return NodeName 部门节点名称，账号所属部门
+     * Get <p>部门节点名称，账号所属部门</p> 
+     * @return NodeName <p>部门节点名称，账号所属部门</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 部门节点名称，账号所属部门
-     * @param NodeName 部门节点名称，账号所属部门
+     * Set <p>部门节点名称，账号所属部门</p>
+     * @param NodeName <p>部门节点名称，账号所属部门</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 资产数量 
-     * @return AssetCount 资产数量
+     * Get <p>资产数量</p> 
+     * @return AssetCount <p>资产数量</p>
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set 资产数量
-     * @param AssetCount 资产数量
+     * Set <p>资产数量</p>
+     * @param AssetCount <p>资产数量</p>
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get 风险数量 
-     * @return RiskCount 风险数量
+     * Get <p>风险数量</p> 
+     * @return RiskCount <p>风险数量</p>
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set 风险数量
-     * @param RiskCount 风险数量
+     * Set <p>风险数量</p>
+     * @param RiskCount <p>风险数量</p>
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 攻击数量 
-     * @return AttackCount 攻击数量
+     * Get <p>攻击数量</p> 
+     * @return AttackCount <p>攻击数量</p>
      */
     public Long getAttackCount() {
         return this.AttackCount;
     }
 
     /**
-     * Set 攻击数量
-     * @param AttackCount 攻击数量
+     * Set <p>攻击数量</p>
+     * @param AttackCount <p>攻击数量</p>
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get Member/Admin/;成员或者管理员 
-     * @return Role Member/Admin/;成员或者管理员
+     * Get <p>Member/Admin/;成员或者管理员</p> 
+     * @return Role <p>Member/Admin/;成员或者管理员</p>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Member/Admin/;成员或者管理员
-     * @param Role Member/Admin/;成员或者管理员
+     * Set <p>Member/Admin/;成员或者管理员</p>
+     * @param Role <p>Member/Admin/;成员或者管理员</p>
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 成员账号id 
-     * @return MemberId 成员账号id
+     * Get <p>成员账号id</p> 
+     * @return MemberId <p>成员账号id</p>
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 成员账号id
-     * @param MemberId 成员账号id
+     * Set <p>成员账号id</p>
+     * @param MemberId <p>成员账号id</p>
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 成员账号Appid 
-     * @return AppId 成员账号Appid
+     * Get <p>成员账号Appid</p> 
+     * @return AppId <p>成员账号Appid</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 成员账号Appid
-     * @param AppId 成员账号Appid
+     * Set <p>成员账号Appid</p>
+     * @param AppId <p>成员账号Appid</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号加入方式,create/invite 
-     * @return JoinType 账号加入方式,create/invite
+     * Get <p>账号加入方式,create/invite</p> 
+     * @return JoinType <p>账号加入方式,create/invite</p>
      */
     public String getJoinType() {
         return this.JoinType;
     }
 
     /**
-     * Set 账号加入方式,create/invite
-     * @param JoinType 账号加入方式,create/invite
+     * Set <p>账号加入方式,create/invite</p>
+     * @param JoinType <p>账号加入方式,create/invite</p>
      */
     public void setJoinType(String JoinType) {
         this.JoinType = JoinType;
     }
 
     /**
-     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本 
-     * @return CFWProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * Get <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p> 
+     * @return CFWProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public String getCFWProtect() {
         return this.CFWProtect;
     }
 
     /**
-     * Set 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-     * @param CFWProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * Set <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+     * @param CFWProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public void setCFWProtect(String CFWProtect) {
         this.CFWProtect = CFWProtect;
     }
 
     /**
-     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本 
-     * @return WAFProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * Get <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p> 
+     * @return WAFProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public String getWAFProtect() {
         return this.WAFProtect;
     }
 
     /**
-     * Set 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-     * @param WAFProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * Set <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+     * @param WAFProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public void setWAFProtect(String WAFProtect) {
         this.WAFProtect = WAFProtect;
     }
 
     /**
-     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本 
-     * @return CWPProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * Get <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p> 
+     * @return CWPProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public String getCWPProtect() {
         return this.CWPProtect;
     }
 
     /**
-     * Set 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-     * @param CWPProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * Set <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+     * @param CWPProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public void setCWPProtect(String CWPProtect) {
         this.CWPProtect = CWPProtect;
     }
 
     /**
-     * Get 1启用，0未启用 
-     * @return Enable 1启用，0未启用
+     * Get <p>1启用，0未启用</p> 
+     * @return Enable <p>1启用，0未启用</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 1启用，0未启用
-     * @param Enable 1启用，0未启用
+     * Set <p>1启用，0未启用</p>
+     * @param Enable <p>1启用，0未启用</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版 
-     * @return CSIPProtect "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
+     * Get <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p> 
+     * @return CSIPProtect <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
      */
     public String getCSIPProtect() {
         return this.CSIPProtect;
     }
 
     /**
-     * Set "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-     * @param CSIPProtect "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
+     * Set <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
+     * @param CSIPProtect <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
      */
     public void setCSIPProtect(String CSIPProtect) {
         this.CSIPProtect = CSIPProtect;
     }
 
     /**
-     * Get 1为配额消耗者 
-     * @return QuotaConsumer 1为配额消耗者
+     * Get <p>1为配额消耗者</p> 
+     * @return QuotaConsumer <p>1为配额消耗者</p>
      */
     public Long getQuotaConsumer() {
         return this.QuotaConsumer;
     }
 
     /**
-     * Set 1为配额消耗者
-     * @param QuotaConsumer 1为配额消耗者
+     * Set <p>1为配额消耗者</p>
+     * @param QuotaConsumer <p>1为配额消耗者</p>
      */
     public void setQuotaConsumer(Long QuotaConsumer) {
         this.QuotaConsumer = QuotaConsumer;
     }
 
     /**
-     * Get 账户类型，0为腾讯云账户，1为AWS账户 
-     * @return CloudType 账户类型，0为腾讯云账户，1为AWS账户
+     * Get <p>账户类型，0为腾讯云账户，1为AWS账户</p> 
+     * @return CloudType <p>账户类型，0为腾讯云账户，1为AWS账户</p>
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 账户类型，0为腾讯云账户，1为AWS账户
-     * @param CloudType 账户类型，0为腾讯云账户，1为AWS账户
+     * Set <p>账户类型，0为腾讯云账户，1为AWS账户</p>
+     * @param CloudType <p>账户类型，0为腾讯云账户，1为AWS账户</p>
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 0为缺省值，1为10分钟，2为1小时，3为24小时 
-     * @return SyncFrequency 0为缺省值，1为10分钟，2为1小时，3为24小时
+     * Get <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p> 
+     * @return SyncFrequency <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
      */
     public Long getSyncFrequency() {
         return this.SyncFrequency;
     }
 
     /**
-     * Set 0为缺省值，1为10分钟，2为1小时，3为24小时
-     * @param SyncFrequency 0为缺省值，1为10分钟，2为1小时，3为24小时
+     * Set <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
+     * @param SyncFrequency <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
      */
     public void setSyncFrequency(Long SyncFrequency) {
         this.SyncFrequency = SyncFrequency;
     }
 
     /**
-     * Get 多云账户是否过期 
-     * @return IsExpired 多云账户是否过期
+     * Get <p>多云账户是否过期</p> 
+     * @return IsExpired <p>多云账户是否过期</p>
      */
     public Boolean getIsExpired() {
         return this.IsExpired;
     }
 
     /**
-     * Set 多云账户是否过期
-     * @param IsExpired 多云账户是否过期
+     * Set <p>多云账户是否过期</p>
+     * @param IsExpired <p>多云账户是否过期</p>
      */
     public void setIsExpired(Boolean IsExpired) {
         this.IsExpired = IsExpired;
     }
 
     /**
-     * Get 多云账户 权限列表 
-     * @return PermissionList 多云账户 权限列表
+     * Get <p>多云账户 权限列表</p> 
+     * @return PermissionList <p>多云账户 权限列表</p>
      */
     public String [] getPermissionList() {
         return this.PermissionList;
     }
 
     /**
-     * Set 多云账户 权限列表
-     * @param PermissionList 多云账户 权限列表
+     * Set <p>多云账户 权限列表</p>
+     * @param PermissionList <p>多云账户 权限列表</p>
      */
     public void setPermissionList(String [] PermissionList) {
         this.PermissionList = PermissionList;
     }
 
     /**
-     * Get 1 
-     * @return AuthType 1
+     * Get <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul> 
+     * @return AuthType <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
      */
     public Long getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set 1
-     * @param AuthType 1
+     * Set <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
+     * @param AuthType <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云 
-     * @return TcMemberType 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
+     * Get <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p> 
+     * @return TcMemberType <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
      */
     public Long getTcMemberType() {
         return this.TcMemberType;
     }
 
     /**
-     * Set 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
-     * @param TcMemberType 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
+     * Set <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
+     * @param TcMemberType <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
      */
     public void setTcMemberType(Long TcMemberType) {
         this.TcMemberType = TcMemberType;
     }
 
     /**
-     * Get 子账号数量 
-     * @return SubUserCount 子账号数量
+     * Get <p>子账号数量</p> 
+     * @return SubUserCount <p>子账号数量</p>
      */
     public Long getSubUserCount() {
         return this.SubUserCount;
     }
 
     /**
-     * Set 子账号数量
-     * @param SubUserCount 子账号数量
+     * Set <p>子账号数量</p>
+     * @param SubUserCount <p>子账号数量</p>
      */
     public void setSubUserCount(Long SubUserCount) {
         this.SubUserCount = SubUserCount;
     }
 
     /**
-     * Get 加入方式详细信息 
-     * @return JoinTypeInfo 加入方式详细信息
+     * Get <p>加入方式详细信息</p> 
+     * @return JoinTypeInfo <p>加入方式详细信息</p>
      */
     public String getJoinTypeInfo() {
         return this.JoinTypeInfo;
     }
 
     /**
-     * Set 加入方式详细信息
-     * @param JoinTypeInfo 加入方式详细信息
+     * Set <p>加入方式详细信息</p>
+     * @param JoinTypeInfo <p>加入方式详细信息</p>
      */
     public void setJoinTypeInfo(String JoinTypeInfo) {
         this.JoinTypeInfo = JoinTypeInfo;
+    }
+
+    /**
+     * Get <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p> 
+     * @return SharedModules <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+     */
+    public String [] getSharedModules() {
+        return this.SharedModules;
+    }
+
+    /**
+     * Set <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+     * @param SharedModules <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+     */
+    public void setSharedModules(String [] SharedModules) {
+        this.SharedModules = SharedModules;
+    }
+
+    /**
+     * Get <p>安全分</p> 
+     * @return SecurityScore <p>安全分</p>
+     */
+    public Long getSecurityScore() {
+        return this.SecurityScore;
+    }
+
+    /**
+     * Set <p>安全分</p>
+     * @param SecurityScore <p>安全分</p>
+     */
+    public void setSecurityScore(Long SecurityScore) {
+        this.SecurityScore = SecurityScore;
     }
 
     public OrganizationUserInfo() {
@@ -668,6 +704,15 @@ public class OrganizationUserInfo extends AbstractModel {
         if (source.JoinTypeInfo != null) {
             this.JoinTypeInfo = new String(source.JoinTypeInfo);
         }
+        if (source.SharedModules != null) {
+            this.SharedModules = new String[source.SharedModules.length];
+            for (int i = 0; i < source.SharedModules.length; i++) {
+                this.SharedModules[i] = new String(source.SharedModules[i]);
+            }
+        }
+        if (source.SecurityScore != null) {
+            this.SecurityScore = new Long(source.SecurityScore);
+        }
     }
 
 
@@ -699,6 +744,8 @@ public class OrganizationUserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TcMemberType", this.TcMemberType);
         this.setParamSimple(map, prefix + "SubUserCount", this.SubUserCount);
         this.setParamSimple(map, prefix + "JoinTypeInfo", this.JoinTypeInfo);
+        this.setParamArraySimple(map, prefix + "SharedModules.", this.SharedModules);
+        this.setParamSimple(map, prefix + "SecurityScore", this.SecurityScore);
 
     }
 }

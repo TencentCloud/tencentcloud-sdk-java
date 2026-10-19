@@ -241,6 +241,13 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     private Long AllowDownstreamDependency;
 
     /**
+    * <p>分钟任务相位偏移</p>
+    */
+    @SerializedName("MinuteOffset")
+    @Expose
+    private Long MinuteOffset;
+
+    /**
      * Get <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul> 
      * @return CycleType <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul>
      */
@@ -764,6 +771,22 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         this.AllowDownstreamDependency = AllowDownstreamDependency;
     }
 
+    /**
+     * Get <p>分钟任务相位偏移</p> 
+     * @return MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public Long getMinuteOffset() {
+        return this.MinuteOffset;
+    }
+
+    /**
+     * Set <p>分钟任务相位偏移</p>
+     * @param MinuteOffset <p>分钟任务相位偏移</p>
+     */
+    public void setMinuteOffset(Long MinuteOffset) {
+        this.MinuteOffset = MinuteOffset;
+    }
+
     public CreateTaskSchedulerConfiguration() {
     }
 
@@ -880,6 +903,9 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         if (source.AllowDownstreamDependency != null) {
             this.AllowDownstreamDependency = new Long(source.AllowDownstreamDependency);
         }
+        if (source.MinuteOffset != null) {
+            this.MinuteOffset = new Long(source.MinuteOffset);
+        }
     }
 
 
@@ -918,6 +944,7 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
+        this.setParamSimple(map, prefix + "MinuteOffset", this.MinuteOffset);
 
     }
 }

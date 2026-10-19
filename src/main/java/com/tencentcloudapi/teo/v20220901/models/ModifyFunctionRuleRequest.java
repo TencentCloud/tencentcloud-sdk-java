@@ -24,204 +24,184 @@ import java.util.HashMap;
 public class ModifyFunctionRuleRequest extends AbstractModel {
 
     /**
-    * 站点 ID。
+    * <p>站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
+    * <p>规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。
+    * <p>规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。</p>
     */
     @SerializedName("FunctionRuleConditions")
     @Expose
     private FunctionRuleCondition [] FunctionRuleConditions;
 
     /**
-    * 函数选择配置类型：
-<li> direct：直接指定执行函数；</li>
-<li> weight：基于权重比选择函数；</li>
-<li> region：基于客户端 IP 的国家/地区选择函数。</li>
-不填时默认为 direct 。
+    * <p>函数选择配置类型：</p><li> direct：直接指定执行函数；</li><li> weight：基于权重比选择函数；</li><li> region：基于客户端 IP 的国家/地区选择函数。</li>不填时默认为 direct 。
     */
     @SerializedName("TriggerType")
     @Expose
     private String TriggerType;
 
     /**
-    * 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
+    * <p>指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。</p>
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
 
     /**
-    * 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+    * <p>基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中必须包含一项 Regions 为 Default 的配置，同时还需至少配置一项其他具体的 Region。</p>
     */
     @SerializedName("RegionMappingSelections")
     @Expose
     private FunctionRegionSelection [] RegionMappingSelections;
 
     /**
-    * 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+    * <p>基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。</p>
     */
     @SerializedName("WeightedSelections")
     @Expose
     private FunctionWeightedSelection [] WeightedSelections;
 
     /**
-    * 规则描述，最大支持 60 个字符，不填写保持原有配置。
+    * <p>规则描述，最大支持 60 个字符，不填写保持原有配置。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get <p>站点 ID。</p> 
+     * @return ZoneId <p>站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set <p>站点 ID。</p>
+     * @param ZoneId <p>站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。 
-     * @return RuleId 规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
+     * Get <p>规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。</p> 
+     * @return RuleId <p>规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
-     * @param RuleId 规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。
+     * Set <p>规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。</p>
+     * @param RuleId <p>规则 ID。您可以先通过 DescribeFunctionRules 接口来获取需要修改的规则的 RuleId，然后传入修改后的规则内容，原规则内容会被覆盖式更新。</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。 
-     * @return FunctionRuleConditions 规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。
+     * Get <p>规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。</p> 
+     * @return FunctionRuleConditions <p>规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。</p>
      */
     public FunctionRuleCondition [] getFunctionRuleConditions() {
         return this.FunctionRuleConditions;
     }
 
     /**
-     * Set 规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。
-     * @param FunctionRuleConditions 规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。
+     * Set <p>规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。</p>
+     * @param FunctionRuleConditions <p>规则条件列表，相同触发规则的不同条件匹配项之间为或关系，不填写保持原有配置。</p>
      */
     public void setFunctionRuleConditions(FunctionRuleCondition [] FunctionRuleConditions) {
         this.FunctionRuleConditions = FunctionRuleConditions;
     }
 
     /**
-     * Get 函数选择配置类型：
-<li> direct：直接指定执行函数；</li>
-<li> weight：基于权重比选择函数；</li>
-<li> region：基于客户端 IP 的国家/地区选择函数。</li>
-不填时默认为 direct 。 
-     * @return TriggerType 函数选择配置类型：
-<li> direct：直接指定执行函数；</li>
-<li> weight：基于权重比选择函数；</li>
-<li> region：基于客户端 IP 的国家/地区选择函数。</li>
-不填时默认为 direct 。
+     * Get <p>函数选择配置类型：</p><li> direct：直接指定执行函数；</li><li> weight：基于权重比选择函数；</li><li> region：基于客户端 IP 的国家/地区选择函数。</li>不填时默认为 direct 。 
+     * @return TriggerType <p>函数选择配置类型：</p><li> direct：直接指定执行函数；</li><li> weight：基于权重比选择函数；</li><li> region：基于客户端 IP 的国家/地区选择函数。</li>不填时默认为 direct 。
      */
     public String getTriggerType() {
         return this.TriggerType;
     }
 
     /**
-     * Set 函数选择配置类型：
-<li> direct：直接指定执行函数；</li>
-<li> weight：基于权重比选择函数；</li>
-<li> region：基于客户端 IP 的国家/地区选择函数。</li>
-不填时默认为 direct 。
-     * @param TriggerType 函数选择配置类型：
-<li> direct：直接指定执行函数；</li>
-<li> weight：基于权重比选择函数；</li>
-<li> region：基于客户端 IP 的国家/地区选择函数。</li>
-不填时默认为 direct 。
+     * Set <p>函数选择配置类型：</p><li> direct：直接指定执行函数；</li><li> weight：基于权重比选择函数；</li><li> region：基于客户端 IP 的国家/地区选择函数。</li>不填时默认为 direct 。
+     * @param TriggerType <p>函数选择配置类型：</p><li> direct：直接指定执行函数；</li><li> weight：基于权重比选择函数；</li><li> region：基于客户端 IP 的国家/地区选择函数。</li>不填时默认为 direct 。
      */
     public void setTriggerType(String TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。 
-     * @return FunctionId 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
+     * Get <p>指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。</p> 
+     * @return FunctionId <p>指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。</p>
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
-     * @param FunctionId 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
+     * Set <p>指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。</p>
+     * @param FunctionId <p>指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。</p>
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
     }
 
     /**
-     * Get 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。 
-     * @return RegionMappingSelections 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+     * Get <p>基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中必须包含一项 Regions 为 Default 的配置，同时还需至少配置一项其他具体的 Region。</p> 
+     * @return RegionMappingSelections <p>基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中必须包含一项 Regions 为 Default 的配置，同时还需至少配置一项其他具体的 Region。</p>
      */
     public FunctionRegionSelection [] getRegionMappingSelections() {
         return this.RegionMappingSelections;
     }
 
     /**
-     * Set 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
-     * @param RegionMappingSelections 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+     * Set <p>基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中必须包含一项 Regions 为 Default 的配置，同时还需至少配置一项其他具体的 Region。</p>
+     * @param RegionMappingSelections <p>基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中必须包含一项 Regions 为 Default 的配置，同时还需至少配置一项其他具体的 Region。</p>
      */
     public void setRegionMappingSelections(FunctionRegionSelection [] RegionMappingSelections) {
         this.RegionMappingSelections = RegionMappingSelections;
     }
 
     /**
-     * Get 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。 
-     * @return WeightedSelections 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+     * Get <p>基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。</p> 
+     * @return WeightedSelections <p>基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。</p>
      */
     public FunctionWeightedSelection [] getWeightedSelections() {
         return this.WeightedSelections;
     }
 
     /**
-     * Set 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
-     * @param WeightedSelections 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+     * Set <p>基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。</p>
+     * @param WeightedSelections <p>基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。</p>
      */
     public void setWeightedSelections(FunctionWeightedSelection [] WeightedSelections) {
         this.WeightedSelections = WeightedSelections;
     }
 
     /**
-     * Get 规则描述，最大支持 60 个字符，不填写保持原有配置。 
-     * @return Remark 规则描述，最大支持 60 个字符，不填写保持原有配置。
+     * Get <p>规则描述，最大支持 60 个字符，不填写保持原有配置。</p> 
+     * @return Remark <p>规则描述，最大支持 60 个字符，不填写保持原有配置。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 规则描述，最大支持 60 个字符，不填写保持原有配置。
-     * @param Remark 规则描述，最大支持 60 个字符，不填写保持原有配置。
+     * Set <p>规则描述，最大支持 60 个字符，不填写保持原有配置。</p>
+     * @param Remark <p>规则描述，最大支持 60 个字符，不填写保持原有配置。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

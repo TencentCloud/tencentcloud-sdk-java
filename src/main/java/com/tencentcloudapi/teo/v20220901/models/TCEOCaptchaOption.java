@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class TCEOCaptchaOption extends AbstractModel {
 
     /**
-    * EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+    * <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
     */
     @SerializedName("CaptchaMode")
     @Expose
     private String CaptchaMode;
 
     /**
-     * Get EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li> 
-     * @return CaptchaMode EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+    * <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+    */
+    @SerializedName("MobileCaptchaMode")
+    @Expose
+    private String MobileCaptchaMode;
+
+    /**
+     * Get <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p> 
+     * @return CaptchaMode <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
      */
     public String getCaptchaMode() {
         return this.CaptchaMode;
     }
 
     /**
-     * Set EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
-     * @param CaptchaMode EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+     * Set <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
+     * @param CaptchaMode <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
      */
     public void setCaptchaMode(String CaptchaMode) {
         this.CaptchaMode = CaptchaMode;
+    }
+
+    /**
+     * Get <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p> 
+     * @return MobileCaptchaMode <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+     */
+    public String getMobileCaptchaMode() {
+        return this.MobileCaptchaMode;
+    }
+
+    /**
+     * Set <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+     * @param MobileCaptchaMode <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+     */
+    public void setMobileCaptchaMode(String MobileCaptchaMode) {
+        this.MobileCaptchaMode = MobileCaptchaMode;
     }
 
     public TCEOCaptchaOption() {
@@ -57,6 +80,9 @@ public class TCEOCaptchaOption extends AbstractModel {
         if (source.CaptchaMode != null) {
             this.CaptchaMode = new String(source.CaptchaMode);
         }
+        if (source.MobileCaptchaMode != null) {
+            this.MobileCaptchaMode = new String(source.MobileCaptchaMode);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class TCEOCaptchaOption extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CaptchaMode", this.CaptchaMode);
+        this.setParamSimple(map, prefix + "MobileCaptchaMode", this.MobileCaptchaMode);
 
     }
 }

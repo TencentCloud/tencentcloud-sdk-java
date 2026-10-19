@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModelProviderBasic extends AbstractModel {
 
     /**
-    * 模型提供商别名
+    * <p>模型提供商别名</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 模型提供商名称
+    * <p>模型提供商名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
+    * <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
     */
     @SerializedName("ProviderType")
     @Expose
     private Long ProviderType;
 
     /**
-     * Get 模型提供商别名 
-     * @return Alias 模型提供商别名
+     * Get <p>模型提供商别名</p> 
+     * @return Alias <p>模型提供商别名</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 模型提供商别名
-     * @param Alias 模型提供商别名
+     * Set <p>模型提供商别名</p>
+     * @param Alias <p>模型提供商别名</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 模型提供商名称 
-     * @return Name 模型提供商名称
+     * Get <p>模型提供商名称</p> 
+     * @return Name <p>模型提供商名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模型提供商名称
-     * @param Name 模型提供商名称
+     * Set <p>模型提供商名称</p>
+     * @param Name <p>模型提供商名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商 
-     * @return ProviderType 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
+     * Get <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table> 
+     * @return ProviderType <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
      */
     public Long getProviderType() {
         return this.ProviderType;
     }
 
     /**
-     * Set 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
-     * @param ProviderType 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
+     * Set <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
+     * @param ProviderType <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
      */
     public void setProviderType(Long ProviderType) {
         this.ProviderType = ProviderType;

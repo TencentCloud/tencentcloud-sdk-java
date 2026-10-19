@@ -2298,6 +2298,39 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *DescribeStreamPackageIngestStatistics
+     * @param req DescribeStreamPackageIngestStatisticsRequest
+     * @return DescribeStreamPackageIngestStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageIngestStatisticsResponse DescribeStreamPackageIngestStatistics(DescribeStreamPackageIngestStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageIngestStatistics", DescribeStreamPackageIngestStatisticsResponse.class);
+    }
+
+    /**
+     *查询媒体包装输出用量信息
+     * @param req DescribeStreamPackageOutputStatisticsRequest
+     * @return DescribeStreamPackageOutputStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageOutputStatisticsResponse DescribeStreamPackageOutputStatistics(DescribeStreamPackageOutputStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageOutputStatistics", DescribeStreamPackageOutputStatisticsResponse.class);
+    }
+
+    /**
+     *DescribeStreamPackageRemuxStatistics
+     * @param req DescribeStreamPackageRemuxStatisticsRequest
+     * @return DescribeStreamPackageRemuxStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageRemuxStatisticsResponse DescribeStreamPackageRemuxStatistics(DescribeStreamPackageRemuxStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageRemuxStatistics", DescribeStreamPackageRemuxStatisticsResponse.class);
+    }
+
+    /**
      *该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据，数据延迟4分钟左右。
      * @param req DescribeStreamPlayInfoListRequest

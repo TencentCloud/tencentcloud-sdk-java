@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class CreateWebhookTriggerRequest extends AbstractModel {
 
     /**
-    * 实例 Id
+    * <p>实例 Id</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 触发器参数
+    * <p>触发器参数</p>
     */
     @SerializedName("Trigger")
     @Expose
     private WebhookTrigger Trigger;
 
     /**
-    * 命名空间
+    * <p>命名空间</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get 实例 Id 
-     * @return RegistryId 实例 Id
+    * <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+    * <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+    */
+    @SerializedName("PreheatRegion")
+    @Expose
+    private String PreheatRegion;
+
+    /**
+     * Get <p>实例 Id</p> 
+     * @return RegistryId <p>实例 Id</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 实例 Id
-     * @param RegistryId 实例 Id
+     * Set <p>实例 Id</p>
+     * @param RegistryId <p>实例 Id</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 触发器参数 
-     * @return Trigger 触发器参数
+     * Get <p>触发器参数</p> 
+     * @return Trigger <p>触发器参数</p>
      */
     public WebhookTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set 触发器参数
-     * @param Trigger 触发器参数
+     * Set <p>触发器参数</p>
+     * @param Trigger <p>触发器参数</p>
      */
     public void setTrigger(WebhookTrigger Trigger) {
         this.Trigger = Trigger;
     }
 
     /**
-     * Get 命名空间 
-     * @return Namespace 命名空间
+     * Get <p>命名空间</p> 
+     * @return Namespace <p>命名空间</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间
-     * @param Namespace 命名空间
+     * Set <p>命名空间</p>
+     * @param Namespace <p>命名空间</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
+    }
+
+    /**
+     * Get <p>产品名称，非空时创建的 webhook 将被隐藏</p> 
+     * @return Product <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     * @param Product <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Get <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p> 
+     * @return PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     */
+    public String getPreheatRegion() {
+        return this.PreheatRegion;
+    }
+
+    /**
+     * Set <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     * @param PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     */
+    public void setPreheatRegion(String PreheatRegion) {
+        this.PreheatRegion = PreheatRegion;
     }
 
     public CreateWebhookTriggerRequest() {
@@ -109,6 +155,12 @@ public class CreateWebhookTriggerRequest extends AbstractModel {
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.PreheatRegion != null) {
+            this.PreheatRegion = new String(source.PreheatRegion);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class CreateWebhookTriggerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "PreheatRegion", this.PreheatRegion);
 
     }
 }

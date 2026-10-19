@@ -80,6 +80,14 @@ public class WarehouseInfo extends AbstractModel {
     private String QueueName;
 
     /**
+    * <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProfileDetail")
+    @Expose
+    private WarehouseProfileBriefInfo ProfileDetail;
+
+    /**
     * <p>创建时间（毫秒时间戳）。</p>
     */
     @SerializedName("CreateTime")
@@ -282,6 +290,26 @@ public class WarehouseInfo extends AbstractModel {
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
+    }
+
+    /**
+     * Get <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProfileDetail <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WarehouseProfileBriefInfo getProfileDetail() {
+        return this.ProfileDetail;
+    }
+
+    /**
+     * Set <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProfileDetail <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProfileDetail(WarehouseProfileBriefInfo ProfileDetail) {
+        this.ProfileDetail = ProfileDetail;
     }
 
     /**
@@ -492,6 +520,9 @@ public class WarehouseInfo extends AbstractModel {
         if (source.QueueName != null) {
             this.QueueName = new String(source.QueueName);
         }
+        if (source.ProfileDetail != null) {
+            this.ProfileDetail = new WarehouseProfileBriefInfo(source.ProfileDetail);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
@@ -543,6 +574,7 @@ public class WarehouseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PartitionCode", this.PartitionCode);
         this.setParamSimple(map, prefix + "PartitionName", this.PartitionName);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamObj(map, prefix + "ProfileDetail.", this.ProfileDetail);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ActiveClusters", this.ActiveClusters);

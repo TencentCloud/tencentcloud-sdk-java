@@ -45,6 +45,20 @@ public class ModifyWebhookTriggerRequest extends AbstractModel {
     private String Namespace;
 
     /**
+    * <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+    * <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+    */
+    @SerializedName("PreheatRegion")
+    @Expose
+    private String PreheatRegion;
+
+    /**
      * Get <p>实例Id</p> 
      * @return RegistryId <p>实例Id</p>
      */
@@ -92,6 +106,38 @@ public class ModifyWebhookTriggerRequest extends AbstractModel {
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get <p>产品名称，非空时创建的 webhook 将被隐藏</p> 
+     * @return Product <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     * @param Product <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Get <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p> 
+     * @return PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     */
+    public String getPreheatRegion() {
+        return this.PreheatRegion;
+    }
+
+    /**
+     * Set <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     * @param PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     */
+    public void setPreheatRegion(String PreheatRegion) {
+        this.PreheatRegion = PreheatRegion;
+    }
+
     public ModifyWebhookTriggerRequest() {
     }
 
@@ -109,6 +155,12 @@ public class ModifyWebhookTriggerRequest extends AbstractModel {
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
+        if (source.PreheatRegion != null) {
+            this.PreheatRegion = new String(source.PreheatRegion);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyWebhookTriggerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "PreheatRegion", this.PreheatRegion);
 
     }
 }

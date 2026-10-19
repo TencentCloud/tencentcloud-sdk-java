@@ -200,6 +200,7 @@ public class SecGroupRuleResp extends AbstractModel {
 
     /**
     * <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DnsParseCount")
     @Expose
@@ -628,8 +629,10 @@ public class SecGroupRuleResp extends AbstractModel {
     }
 
     /**
-     * Get <p>域名解析的IP统计</p> 
+     * Get <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DnsParseCount <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SgDnsParseCount getDnsParseCount() {
         return this.DnsParseCount;
@@ -637,7 +640,9 @@ public class SecGroupRuleResp extends AbstractModel {
 
     /**
      * Set <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DnsParseCount <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDnsParseCount(SgDnsParseCount DnsParseCount) {
         this.DnsParseCount = DnsParseCount;

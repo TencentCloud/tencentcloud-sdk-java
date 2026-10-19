@@ -150,6 +150,13 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String LoadBalanceMode;
 
     /**
+    * <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+    */
+    @SerializedName("TransAllSplit")
+    @Expose
+    private Boolean TransAllSplit;
+
+    /**
      * Get <p>集群ID，例如cynosdbmysql-asd123</p> 
      * @return ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
      */
@@ -437,6 +444,22 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         this.LoadBalanceMode = LoadBalanceMode;
     }
 
+    /**
+     * Get <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p> 
+     * @return TransAllSplit <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+     */
+    public Boolean getTransAllSplit() {
+        return this.TransAllSplit;
+    }
+
+    /**
+     * Set <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+     * @param TransAllSplit <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+     */
+    public void setTransAllSplit(Boolean TransAllSplit) {
+        this.TransAllSplit = TransAllSplit;
+    }
+
     public ModifyProxyRwSplitRequest() {
     }
 
@@ -502,6 +525,9 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         if (source.LoadBalanceMode != null) {
             this.LoadBalanceMode = new String(source.LoadBalanceMode);
         }
+        if (source.TransAllSplit != null) {
+            this.TransAllSplit = new Boolean(source.TransAllSplit);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
         this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
+        this.setParamSimple(map, prefix + "TransAllSplit", this.TransAllSplit);
 
     }
 }

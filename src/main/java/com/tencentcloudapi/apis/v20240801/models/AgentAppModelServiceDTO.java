@@ -77,7 +77,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Get 是否开启流量控制 
      * @return InvokeLimitConfigStatus 是否开启流量控制
+     * @deprecated
      */
+    @Deprecated
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
@@ -85,7 +87,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Set 是否开启流量控制
      * @param InvokeLimitConfigStatus 是否开启流量控制
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
@@ -93,7 +97,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Get 流量控制 
      * @return InvokeLimitConfig 流量控制
+     * @deprecated
      */
+    @Deprecated
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
@@ -101,7 +107,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Set 流量控制
      * @param InvokeLimitConfig 流量控制
+     * @deprecated
      */
+    @Deprecated
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }
@@ -109,7 +117,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Get 是否开启token控制 
      * @return TokenLimitStatus 是否开启token控制
+     * @deprecated
      */
+    @Deprecated
     public Boolean getTokenLimitStatus() {
         return this.TokenLimitStatus;
     }
@@ -117,7 +127,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Set 是否开启token控制
      * @param TokenLimitStatus 是否开启token控制
+     * @deprecated
      */
+    @Deprecated
     public void setTokenLimitStatus(Boolean TokenLimitStatus) {
         this.TokenLimitStatus = TokenLimitStatus;
     }
@@ -125,7 +137,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Get token控制 
      * @return TokenLimitConfig token控制
+     * @deprecated
      */
+    @Deprecated
     public TokenLimitConfigDTO getTokenLimitConfig() {
         return this.TokenLimitConfig;
     }
@@ -133,7 +147,9 @@ public class AgentAppModelServiceDTO extends AbstractModel {
     /**
      * Set token控制
      * @param TokenLimitConfig token控制
+     * @deprecated
      */
+    @Deprecated
     public void setTokenLimitConfig(TokenLimitConfigDTO TokenLimitConfig) {
         this.TokenLimitConfig = TokenLimitConfig;
     }

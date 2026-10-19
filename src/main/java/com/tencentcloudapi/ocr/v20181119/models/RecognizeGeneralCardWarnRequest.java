@@ -24,170 +24,115 @@ import java.util.HashMap;
 public class RecognizeGeneralCardWarnRequest extends AbstractModel {
 
     /**
-    * 图片链接
+    * <p>图片链接</p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 图片base64
+    * <p>图片base64</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 卡证类型参数，包含以下范围：  
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+    * <p>卡证类型参数，选填，不填则默认为General，枚举值：<br>（如输入图片的卡证类型明确，建议填入，可降低请求耗时）</p><p>General：系统自动分类/其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
     */
     @SerializedName("CardType")
     @Expose
     private String CardType;
 
     /**
-    * 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+    * <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
     */
     @SerializedName("IsPdf")
     @Expose
     private Boolean IsPdf;
 
     /**
-    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+    * <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
     */
     @SerializedName("PdfPageNumber")
     @Expose
     private Long PdfPageNumber;
 
     /**
-     * Get 图片链接 
-     * @return ImageUrl 图片链接
+     * Get <p>图片链接</p> 
+     * @return ImageUrl <p>图片链接</p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 图片链接
-     * @param ImageUrl 图片链接
+     * Set <p>图片链接</p>
+     * @param ImageUrl <p>图片链接</p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 图片base64 
-     * @return ImageBase64 图片base64
+     * Get <p>图片base64</p> 
+     * @return ImageBase64 <p>图片base64</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片base64
-     * @param ImageBase64 图片base64
+     * Set <p>图片base64</p>
+     * @param ImageBase64 <p>图片base64</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 卡证类型参数，包含以下范围：  
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡 
-     * @return CardType 卡证类型参数，包含以下范围：  
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+     * Get <p>卡证类型参数，选填，不填则默认为General，枚举值：<br>（如输入图片的卡证类型明确，建议填入，可降低请求耗时）</p><p>General：系统自动分类/其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p> 
+     * @return CardType <p>卡证类型参数，选填，不填则默认为General，枚举值：<br>（如输入图片的卡证类型明确，建议填入，可降低请求耗时）</p><p>General：系统自动分类/其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
      */
     public String getCardType() {
         return this.CardType;
     }
 
     /**
-     * Set 卡证类型参数，包含以下范围：  
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
-     * @param CardType 卡证类型参数，包含以下范围：  
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+     * Set <p>卡证类型参数，选填，不填则默认为General，枚举值：<br>（如输入图片的卡证类型明确，建议填入，可降低请求耗时）</p><p>General：系统自动分类/其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
+     * @param CardType <p>卡证类型参数，选填，不填则默认为General，枚举值：<br>（如输入图片的卡证类型明确，建议填入，可降低请求耗时）</p><p>General：系统自动分类/其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
      */
     public void setCardType(String CardType) {
         this.CardType = CardType;
     }
 
     /**
-     * Get 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。 
-     * @return IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+     * Get <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p> 
+     * @return IsPdf <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
      */
     public Boolean getIsPdf() {
         return this.IsPdf;
     }
 
     /**
-     * Set 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
-     * @param IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+     * Set <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
+     * @param IsPdf <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
      */
     public void setIsPdf(Boolean IsPdf) {
         this.IsPdf = IsPdf;
     }
 
     /**
-     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。 
-     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * Get <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p> 
+     * @return PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
      */
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
 
     /**
-     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
-     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * Set <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
+     * @param PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
      */
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;

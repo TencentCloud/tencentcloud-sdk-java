@@ -24,582 +24,552 @@ import java.util.HashMap;
 public class DataTransformTaskInfo extends AbstractModel {
 
     /**
-    * 数据加工任务名称
+    * <p>数据加工任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数据加工任务id
+    * <p>数据加工任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务启用状态，默认为1，正常开启,  2关闭
+    * <p>任务启用状态，默认为1，正常开启,  2关闭</p>
     */
     @SerializedName("EnableFlag")
     @Expose
     private Long EnableFlag;
 
     /**
-    * 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
+    * <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 源日志主题
+    * <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-    * 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
+    * <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+    * <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
+    * <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
+    * <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("LastEnableTime")
     @Expose
     private String LastEnableTime;
 
     /**
-    * 日志主题名称
+    * <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
     */
     @SerializedName("SrcTopicName")
     @Expose
     private String SrcTopicName;
 
     /**
-    * 日志集id
+    * <p>日志集id</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 加工任务目的topic_id以及别名
+    * <p>加工任务目的topic_id以及别名</p>
     */
     @SerializedName("DstResources")
     @Expose
     private DataTransformResouceInfo [] DstResources;
 
     /**
-    * 加工逻辑函数。
+    * <p>加工逻辑函数。</p>
     */
     @SerializedName("EtlContent")
     @Expose
     private String EtlContent;
 
     /**
-    * 兜底topic_id
+    * <p>兜底topic_id</p>
     */
     @SerializedName("BackupTopicID")
     @Expose
     private String BackupTopicID;
 
     /**
-    * 超限之后是否丢弃日志数据
+    * <p>超限之后是否丢弃日志数据</p>
     */
     @SerializedName("BackupGiveUpData")
     @Expose
     private Boolean BackupGiveUpData;
 
     /**
-    * 是否开启投递服务日志。 1关闭,2开启
+    * <p>是否开启投递服务日志。 1关闭,2开启</p>
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
 
     /**
-    * 任务目标日志主题数量
+    * <p>任务目标日志主题数量</p>
     */
     @SerializedName("TaskDstCount")
     @Expose
     private Long TaskDstCount;
 
     /**
-    * 数据加工类型。0：标准加工任务；1：前置加工任务。
+    * <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
     */
     @SerializedName("DataTransformType")
     @Expose
     private Long DataTransformType;
 
     /**
-    * 保留失败日志状态。 1:不保留，2:保留
+    * <p>保留失败日志状态。 1:不保留，2:保留</p>
     */
     @SerializedName("KeepFailureLog")
     @Expose
     private Long KeepFailureLog;
 
     /**
-    * 失败日志的字段名称
+    * <p>失败日志的字段名称</p>
     */
     @SerializedName("FailureLogKey")
     @Expose
     private String FailureLogKey;
 
     /**
-    * 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+    * <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
     */
     @SerializedName("ProcessFromTimestamp")
     @Expose
     private Long ProcessFromTimestamp;
 
     /**
-    * 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
+    * <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
     */
     @SerializedName("ProcessToTimestamp")
     @Expose
     private Long ProcessToTimestamp;
 
     /**
-    * sql数据源信息
+    * <p>sql数据源信息</p>
     */
     @SerializedName("DataTransformSqlDataSources")
     @Expose
     private DataTransformSqlDataSource [] DataTransformSqlDataSources;
 
     /**
-    * 环境变量
+    * <p>环境变量</p>
     */
     @SerializedName("EnvInfos")
     @Expose
     private EnvInfo [] EnvInfos;
 
     /**
-     * Get 数据加工任务名称 
-     * @return Name 数据加工任务名称
+     * Get <p>数据加工任务名称</p> 
+     * @return Name <p>数据加工任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数据加工任务名称
-     * @param Name 数据加工任务名称
+     * Set <p>数据加工任务名称</p>
+     * @param Name <p>数据加工任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数据加工任务id 
-     * @return TaskId 数据加工任务id
+     * Get <p>数据加工任务id</p> 
+     * @return TaskId <p>数据加工任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 数据加工任务id
-     * @param TaskId 数据加工任务id
+     * Set <p>数据加工任务id</p>
+     * @param TaskId <p>数据加工任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务启用状态，默认为1，正常开启,  2关闭 
-     * @return EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
+     * Get <p>任务启用状态，默认为1，正常开启,  2关闭</p> 
+     * @return EnableFlag <p>任务启用状态，默认为1，正常开启,  2关闭</p>
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set 任务启用状态，默认为1，正常开启,  2关闭
-     * @param EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
+     * Set <p>任务启用状态，默认为1，正常开启,  2关闭</p>
+     * @param EnableFlag <p>任务启用状态，默认为1，正常开启,  2关闭</p>
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
     }
 
     /**
-     * Get 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务) 
-     * @return Type 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
+     * Get <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p> 
+     * @return Type <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
-     * @param Type 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
+     * Set <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
+     * @param Type <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 源日志主题 
-     * @return SrcTopicId 源日志主题
+     * Get <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p> 
+     * @return SrcTopicId <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set 源日志主题
-     * @param SrcTopicId 源日志主题
+     * Set <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
+     * @param SrcTopicId <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get 当前加工任务状态（1准备中/2运行中/3停止中/4已停止） 
-     * @return Status 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
+     * Get <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p> 
+     * @return Status <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
-     * @param Status 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
+     * Set <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
+     * @param Status <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return CreateTime 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Get <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param CreateTime 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Set <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return UpdateTime 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Get <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p> 
+     * @return UpdateTime <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param UpdateTime 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Set <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param UpdateTime <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Get <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p> 
+     * @return LastEnableTime <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public String getLastEnableTime() {
         return this.LastEnableTime;
     }
 
     /**
-     * Set 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Set <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param LastEnableTime <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public void setLastEnableTime(String LastEnableTime) {
         this.LastEnableTime = LastEnableTime;
     }
 
     /**
-     * Get 日志主题名称 
-     * @return SrcTopicName 日志主题名称
+     * Get <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p> 
+     * @return SrcTopicName <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
      */
     public String getSrcTopicName() {
         return this.SrcTopicName;
     }
 
     /**
-     * Set 日志主题名称
-     * @param SrcTopicName 日志主题名称
+     * Set <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
+     * @param SrcTopicName <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
      */
     public void setSrcTopicName(String SrcTopicName) {
         this.SrcTopicName = SrcTopicName;
     }
 
     /**
-     * Get 日志集id 
-     * @return LogsetId 日志集id
+     * Get <p>日志集id</p> 
+     * @return LogsetId <p>日志集id</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集id
-     * @param LogsetId 日志集id
+     * Set <p>日志集id</p>
+     * @param LogsetId <p>日志集id</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 加工任务目的topic_id以及别名 
-     * @return DstResources 加工任务目的topic_id以及别名
+     * Get <p>加工任务目的topic_id以及别名</p> 
+     * @return DstResources <p>加工任务目的topic_id以及别名</p>
      */
     public DataTransformResouceInfo [] getDstResources() {
         return this.DstResources;
     }
 
     /**
-     * Set 加工任务目的topic_id以及别名
-     * @param DstResources 加工任务目的topic_id以及别名
+     * Set <p>加工任务目的topic_id以及别名</p>
+     * @param DstResources <p>加工任务目的topic_id以及别名</p>
      */
     public void setDstResources(DataTransformResouceInfo [] DstResources) {
         this.DstResources = DstResources;
     }
 
     /**
-     * Get 加工逻辑函数。 
-     * @return EtlContent 加工逻辑函数。
+     * Get <p>加工逻辑函数。</p> 
+     * @return EtlContent <p>加工逻辑函数。</p>
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set 加工逻辑函数。
-     * @param EtlContent 加工逻辑函数。
+     * Set <p>加工逻辑函数。</p>
+     * @param EtlContent <p>加工逻辑函数。</p>
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;
     }
 
     /**
-     * Get 兜底topic_id 
-     * @return BackupTopicID 兜底topic_id
+     * Get <p>兜底topic_id</p> 
+     * @return BackupTopicID <p>兜底topic_id</p>
      */
     public String getBackupTopicID() {
         return this.BackupTopicID;
     }
 
     /**
-     * Set 兜底topic_id
-     * @param BackupTopicID 兜底topic_id
+     * Set <p>兜底topic_id</p>
+     * @param BackupTopicID <p>兜底topic_id</p>
      */
     public void setBackupTopicID(String BackupTopicID) {
         this.BackupTopicID = BackupTopicID;
     }
 
     /**
-     * Get 超限之后是否丢弃日志数据 
-     * @return BackupGiveUpData 超限之后是否丢弃日志数据
+     * Get <p>超限之后是否丢弃日志数据</p> 
+     * @return BackupGiveUpData <p>超限之后是否丢弃日志数据</p>
      */
     public Boolean getBackupGiveUpData() {
         return this.BackupGiveUpData;
     }
 
     /**
-     * Set 超限之后是否丢弃日志数据
-     * @param BackupGiveUpData 超限之后是否丢弃日志数据
+     * Set <p>超限之后是否丢弃日志数据</p>
+     * @param BackupGiveUpData <p>超限之后是否丢弃日志数据</p>
      */
     public void setBackupGiveUpData(Boolean BackupGiveUpData) {
         this.BackupGiveUpData = BackupGiveUpData;
     }
 
     /**
-     * Get 是否开启投递服务日志。 1关闭,2开启 
-     * @return HasServicesLog 是否开启投递服务日志。 1关闭,2开启
+     * Get <p>是否开启投递服务日志。 1关闭,2开启</p> 
+     * @return HasServicesLog <p>是否开启投递服务日志。 1关闭,2开启</p>
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
     }
 
     /**
-     * Set 是否开启投递服务日志。 1关闭,2开启
-     * @param HasServicesLog 是否开启投递服务日志。 1关闭,2开启
+     * Set <p>是否开启投递服务日志。 1关闭,2开启</p>
+     * @param HasServicesLog <p>是否开启投递服务日志。 1关闭,2开启</p>
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
     }
 
     /**
-     * Get 任务目标日志主题数量 
-     * @return TaskDstCount 任务目标日志主题数量
+     * Get <p>任务目标日志主题数量</p> 
+     * @return TaskDstCount <p>任务目标日志主题数量</p>
      */
     public Long getTaskDstCount() {
         return this.TaskDstCount;
     }
 
     /**
-     * Set 任务目标日志主题数量
-     * @param TaskDstCount 任务目标日志主题数量
+     * Set <p>任务目标日志主题数量</p>
+     * @param TaskDstCount <p>任务目标日志主题数量</p>
      */
     public void setTaskDstCount(Long TaskDstCount) {
         this.TaskDstCount = TaskDstCount;
     }
 
     /**
-     * Get 数据加工类型。0：标准加工任务；1：前置加工任务。 
-     * @return DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+     * Get <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul> 
+     * @return DataTransformType <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
      */
     public Long getDataTransformType() {
         return this.DataTransformType;
     }
 
     /**
-     * Set 数据加工类型。0：标准加工任务；1：前置加工任务。
-     * @param DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+     * Set <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
+     * @param DataTransformType <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
      */
     public void setDataTransformType(Long DataTransformType) {
         this.DataTransformType = DataTransformType;
     }
 
     /**
-     * Get 保留失败日志状态。 1:不保留，2:保留 
-     * @return KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+     * Get <p>保留失败日志状态。 1:不保留，2:保留</p> 
+     * @return KeepFailureLog <p>保留失败日志状态。 1:不保留，2:保留</p>
      */
     public Long getKeepFailureLog() {
         return this.KeepFailureLog;
     }
 
     /**
-     * Set 保留失败日志状态。 1:不保留，2:保留
-     * @param KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+     * Set <p>保留失败日志状态。 1:不保留，2:保留</p>
+     * @param KeepFailureLog <p>保留失败日志状态。 1:不保留，2:保留</p>
      */
     public void setKeepFailureLog(Long KeepFailureLog) {
         this.KeepFailureLog = KeepFailureLog;
     }
 
     /**
-     * Get 失败日志的字段名称 
-     * @return FailureLogKey 失败日志的字段名称
+     * Get <p>失败日志的字段名称</p> 
+     * @return FailureLogKey <p>失败日志的字段名称</p>
      */
     public String getFailureLogKey() {
         return this.FailureLogKey;
     }
 
     /**
-     * Set 失败日志的字段名称
-     * @param FailureLogKey 失败日志的字段名称
+     * Set <p>失败日志的字段名称</p>
+     * @param FailureLogKey <p>失败日志的字段名称</p>
      */
     public void setFailureLogKey(String FailureLogKey) {
         this.FailureLogKey = FailureLogKey;
     }
 
     /**
-     * Get 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。 
-     * @return ProcessFromTimestamp 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     * Get <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul> 
+     * @return ProcessFromTimestamp <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
      */
     public Long getProcessFromTimestamp() {
         return this.ProcessFromTimestamp;
     }
 
     /**
-     * Set 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
-     * @param ProcessFromTimestamp 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     * Set <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
+     * @param ProcessFromTimestamp <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
      */
     public void setProcessFromTimestamp(Long ProcessFromTimestamp) {
         this.ProcessFromTimestamp = ProcessFromTimestamp;
     }
 
     /**
-     * Get 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行 
-     * @return ProcessToTimestamp 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
+     * Get <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol> 
+     * @return ProcessToTimestamp <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
      */
     public Long getProcessToTimestamp() {
         return this.ProcessToTimestamp;
     }
 
     /**
-     * Set 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
-     * @param ProcessToTimestamp 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
+     * Set <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
+     * @param ProcessToTimestamp <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
      */
     public void setProcessToTimestamp(Long ProcessToTimestamp) {
         this.ProcessToTimestamp = ProcessToTimestamp;
     }
 
     /**
-     * Get sql数据源信息 
-     * @return DataTransformSqlDataSources sql数据源信息
+     * Get <p>sql数据源信息</p> 
+     * @return DataTransformSqlDataSources <p>sql数据源信息</p>
      */
     public DataTransformSqlDataSource [] getDataTransformSqlDataSources() {
         return this.DataTransformSqlDataSources;
     }
 
     /**
-     * Set sql数据源信息
-     * @param DataTransformSqlDataSources sql数据源信息
+     * Set <p>sql数据源信息</p>
+     * @param DataTransformSqlDataSources <p>sql数据源信息</p>
      */
     public void setDataTransformSqlDataSources(DataTransformSqlDataSource [] DataTransformSqlDataSources) {
         this.DataTransformSqlDataSources = DataTransformSqlDataSources;
     }
 
     /**
-     * Get 环境变量 
-     * @return EnvInfos 环境变量
+     * Get <p>环境变量</p> 
+     * @return EnvInfos <p>环境变量</p>
      */
     public EnvInfo [] getEnvInfos() {
         return this.EnvInfos;
     }
 
     /**
-     * Set 环境变量
-     * @param EnvInfos 环境变量
+     * Set <p>环境变量</p>
+     * @param EnvInfos <p>环境变量</p>
      */
     public void setEnvInfos(EnvInfo [] EnvInfos) {
         this.EnvInfos = EnvInfos;

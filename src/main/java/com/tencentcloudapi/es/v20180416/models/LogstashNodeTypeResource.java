@@ -24,70 +24,86 @@ import java.util.HashMap;
 public class LogstashNodeTypeResource extends AbstractModel {
 
     /**
-    * 规格名称
+    * <p>规格名称</p>
     */
     @SerializedName("NodeTypeName")
     @Expose
     private String NodeTypeName;
 
     /**
-    * 是否可售
+    * <p>是否可售</p>
     */
     @SerializedName("Available")
     @Expose
     private Boolean Available;
 
     /**
-    * 规格信息
+    * <p>规格信息</p>
     */
     @SerializedName("NodeTypeInfo")
     @Expose
     private NodeTypeInfo NodeTypeInfo;
 
     /**
-    * SSD盘是否可售
+    * <p>SSD盘是否可售</p>
     */
     @SerializedName("SsdAvailable")
     @Expose
     private Boolean SsdAvailable;
 
     /**
-    * SSD磁盘取值范围
+    * <p>SSD磁盘取值范围</p>
     */
     @SerializedName("SsdDiskSizeRange")
     @Expose
     private DiskSizeRange SsdDiskSizeRange;
 
     /**
-    * SATA盘是否可售
+    * <p>SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SsdSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] SsdSoldOutDetail;
+
+    /**
+    * <p>SATA盘是否可售</p>
     */
     @SerializedName("SataAvailable")
     @Expose
     private Boolean SataAvailable;
 
     /**
-    * SATA磁盘取值范围
+    * <p>SATA磁盘取值范围</p>
     */
     @SerializedName("SataDiskSizeRange")
     @Expose
     private DiskSizeRange SataDiskSizeRange;
 
     /**
-    * SSD机型售罄原因
+    * <p>SSD机型售罄原因</p>
     */
     @SerializedName("SsdSoldOutReason")
     @Expose
     private String SsdSoldOutReason;
 
     /**
-    * SATA机型售罄原因
+    * <p>SATA机型售罄原因</p>
     */
     @SerializedName("SataSoldOutReason")
     @Expose
     private String SataSoldOutReason;
 
     /**
-    * 本地盘信息
+    * <p>高性能云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SataSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] SataSoldOutDetail;
+
+    /**
+    * <p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDiskInfo")
@@ -95,7 +111,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private LocalDiskInfo LocalDiskInfo;
 
     /**
-    * 云盘块数取值范围
+    * <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskCountRange")
@@ -103,7 +119,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private DiskCountRange DiskCountRange;
 
     /**
-    * 增强型SSD是否可用
+    * <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HSsdAvailable")
@@ -111,7 +127,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private Boolean HSsdAvailable;
 
     /**
-    * 增强型SSD机型售罄原因
+    * <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HSsdSoldOutReason")
@@ -119,7 +135,15 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private String HSsdSoldOutReason;
 
     /**
-    * 增强型SSD磁盘取值范围
+    * <p>增强型SSD售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HSsdSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] HSsdSoldOutDetail;
+
+    /**
+    * <p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HSsdDiskSizeRange")
@@ -127,7 +151,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private DiskSizeRange HSsdDiskSizeRange;
 
     /**
-    * 吞吐型云盘是否可用
+    * <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThroughputAvailable")
@@ -135,7 +159,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private Boolean ThroughputAvailable;
 
     /**
-    * 吞吐型云盘售罄原因
+    * <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThroughputSoldOutReason")
@@ -143,7 +167,15 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private String ThroughputSoldOutReason;
 
     /**
-    * 吞吐型云盘取值范围
+    * <p>吞吐型云硬盘售罄</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThroughputSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] ThroughputSoldOutDetail;
+
+    /**
+    * <p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThroughputDiskSizeRange")
@@ -151,7 +183,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private DiskSizeRange ThroughputDiskSizeRange;
 
     /**
-    * BigData盘是否可售
+    * <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDataAvailable")
@@ -159,7 +191,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private Boolean BigDataAvailable;
 
     /**
-    * BigData盘售罄原因
+    * <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDataSoldOutReason")
@@ -167,7 +199,15 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private String BigDataSoldOutReason;
 
     /**
-    * BigData磁盘取值范围
+    * <p>大数据型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BigDataSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] BigDataSoldOutDetail;
+
+    /**
+    * <p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDataDiskSizeRange")
@@ -175,7 +215,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private DiskSizeRange BigDataDiskSizeRange;
 
     /**
-    * HighIO盘是否可售
+    * <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighIOAvailable")
@@ -183,7 +223,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private Boolean HighIOAvailable;
 
     /**
-    * HighIO盘售罄原因
+    * <p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighIOSoldOutReason")
@@ -191,7 +231,15 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private String HighIOSoldOutReason;
 
     /**
-    * HighIO磁盘取值范围
+    * <p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighIOSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] HighIOSoldOutDetail;
+
+    /**
+    * <p>HighIO磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighIODiskSizeRange")
@@ -199,7 +247,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private DiskSizeRange HighIODiskSizeRange;
 
     /**
-    * Bssd盘是否可售
+    * <p>Bssd盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BssdAvailable")
@@ -207,7 +255,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private Boolean BssdAvailable;
 
     /**
-    * Bssd盘售罄原因
+    * <p>Bssd盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BssdSoldOutReason")
@@ -215,7 +263,7 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private String BssdSoldOutReason;
 
     /**
-    * Bssd盘取值范围
+    * <p>Bssd盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BssdDiskSizeRange")
@@ -223,7 +271,15 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private DiskSizeRange BssdDiskSizeRange;
 
     /**
-    * GpuInfo
+    * <p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BssdSoldOutDetail")
+    @Expose
+    private FamilyResourceStat [] BssdSoldOutDetail;
+
+    /**
+    * <p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuInfo")
@@ -231,153 +287,193 @@ public class LogstashNodeTypeResource extends AbstractModel {
     private GpuInfo GpuInfo;
 
     /**
-     * Get 规格名称 
-     * @return NodeTypeName 规格名称
+     * Get <p>规格名称</p> 
+     * @return NodeTypeName <p>规格名称</p>
      */
     public String getNodeTypeName() {
         return this.NodeTypeName;
     }
 
     /**
-     * Set 规格名称
-     * @param NodeTypeName 规格名称
+     * Set <p>规格名称</p>
+     * @param NodeTypeName <p>规格名称</p>
      */
     public void setNodeTypeName(String NodeTypeName) {
         this.NodeTypeName = NodeTypeName;
     }
 
     /**
-     * Get 是否可售 
-     * @return Available 是否可售
+     * Get <p>是否可售</p> 
+     * @return Available <p>是否可售</p>
      */
     public Boolean getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 是否可售
-     * @param Available 是否可售
+     * Set <p>是否可售</p>
+     * @param Available <p>是否可售</p>
      */
     public void setAvailable(Boolean Available) {
         this.Available = Available;
     }
 
     /**
-     * Get 规格信息 
-     * @return NodeTypeInfo 规格信息
+     * Get <p>规格信息</p> 
+     * @return NodeTypeInfo <p>规格信息</p>
      */
     public NodeTypeInfo getNodeTypeInfo() {
         return this.NodeTypeInfo;
     }
 
     /**
-     * Set 规格信息
-     * @param NodeTypeInfo 规格信息
+     * Set <p>规格信息</p>
+     * @param NodeTypeInfo <p>规格信息</p>
      */
     public void setNodeTypeInfo(NodeTypeInfo NodeTypeInfo) {
         this.NodeTypeInfo = NodeTypeInfo;
     }
 
     /**
-     * Get SSD盘是否可售 
-     * @return SsdAvailable SSD盘是否可售
+     * Get <p>SSD盘是否可售</p> 
+     * @return SsdAvailable <p>SSD盘是否可售</p>
      */
     public Boolean getSsdAvailable() {
         return this.SsdAvailable;
     }
 
     /**
-     * Set SSD盘是否可售
-     * @param SsdAvailable SSD盘是否可售
+     * Set <p>SSD盘是否可售</p>
+     * @param SsdAvailable <p>SSD盘是否可售</p>
      */
     public void setSsdAvailable(Boolean SsdAvailable) {
         this.SsdAvailable = SsdAvailable;
     }
 
     /**
-     * Get SSD磁盘取值范围 
-     * @return SsdDiskSizeRange SSD磁盘取值范围
+     * Get <p>SSD磁盘取值范围</p> 
+     * @return SsdDiskSizeRange <p>SSD磁盘取值范围</p>
      */
     public DiskSizeRange getSsdDiskSizeRange() {
         return this.SsdDiskSizeRange;
     }
 
     /**
-     * Set SSD磁盘取值范围
-     * @param SsdDiskSizeRange SSD磁盘取值范围
+     * Set <p>SSD磁盘取值范围</p>
+     * @param SsdDiskSizeRange <p>SSD磁盘取值范围</p>
      */
     public void setSsdDiskSizeRange(DiskSizeRange SsdDiskSizeRange) {
         this.SsdDiskSizeRange = SsdDiskSizeRange;
     }
 
     /**
-     * Get SATA盘是否可售 
-     * @return SataAvailable SATA盘是否可售
+     * Get <p>SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SsdSoldOutDetail <p>SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getSsdSoldOutDetail() {
+        return this.SsdSoldOutDetail;
+    }
+
+    /**
+     * Set <p>SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SsdSoldOutDetail <p>SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSsdSoldOutDetail(FamilyResourceStat [] SsdSoldOutDetail) {
+        this.SsdSoldOutDetail = SsdSoldOutDetail;
+    }
+
+    /**
+     * Get <p>SATA盘是否可售</p> 
+     * @return SataAvailable <p>SATA盘是否可售</p>
      */
     public Boolean getSataAvailable() {
         return this.SataAvailable;
     }
 
     /**
-     * Set SATA盘是否可售
-     * @param SataAvailable SATA盘是否可售
+     * Set <p>SATA盘是否可售</p>
+     * @param SataAvailable <p>SATA盘是否可售</p>
      */
     public void setSataAvailable(Boolean SataAvailable) {
         this.SataAvailable = SataAvailable;
     }
 
     /**
-     * Get SATA磁盘取值范围 
-     * @return SataDiskSizeRange SATA磁盘取值范围
+     * Get <p>SATA磁盘取值范围</p> 
+     * @return SataDiskSizeRange <p>SATA磁盘取值范围</p>
      */
     public DiskSizeRange getSataDiskSizeRange() {
         return this.SataDiskSizeRange;
     }
 
     /**
-     * Set SATA磁盘取值范围
-     * @param SataDiskSizeRange SATA磁盘取值范围
+     * Set <p>SATA磁盘取值范围</p>
+     * @param SataDiskSizeRange <p>SATA磁盘取值范围</p>
      */
     public void setSataDiskSizeRange(DiskSizeRange SataDiskSizeRange) {
         this.SataDiskSizeRange = SataDiskSizeRange;
     }
 
     /**
-     * Get SSD机型售罄原因 
-     * @return SsdSoldOutReason SSD机型售罄原因
+     * Get <p>SSD机型售罄原因</p> 
+     * @return SsdSoldOutReason <p>SSD机型售罄原因</p>
      */
     public String getSsdSoldOutReason() {
         return this.SsdSoldOutReason;
     }
 
     /**
-     * Set SSD机型售罄原因
-     * @param SsdSoldOutReason SSD机型售罄原因
+     * Set <p>SSD机型售罄原因</p>
+     * @param SsdSoldOutReason <p>SSD机型售罄原因</p>
      */
     public void setSsdSoldOutReason(String SsdSoldOutReason) {
         this.SsdSoldOutReason = SsdSoldOutReason;
     }
 
     /**
-     * Get SATA机型售罄原因 
-     * @return SataSoldOutReason SATA机型售罄原因
+     * Get <p>SATA机型售罄原因</p> 
+     * @return SataSoldOutReason <p>SATA机型售罄原因</p>
      */
     public String getSataSoldOutReason() {
         return this.SataSoldOutReason;
     }
 
     /**
-     * Set SATA机型售罄原因
-     * @param SataSoldOutReason SATA机型售罄原因
+     * Set <p>SATA机型售罄原因</p>
+     * @param SataSoldOutReason <p>SATA机型售罄原因</p>
      */
     public void setSataSoldOutReason(String SataSoldOutReason) {
         this.SataSoldOutReason = SataSoldOutReason;
     }
 
     /**
-     * Get 本地盘信息
+     * Get <p>高性能云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LocalDiskInfo 本地盘信息
+     * @return SataSoldOutDetail <p>高性能云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getSataSoldOutDetail() {
+        return this.SataSoldOutDetail;
+    }
+
+    /**
+     * Set <p>高性能云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SataSoldOutDetail <p>高性能云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSataSoldOutDetail(FamilyResourceStat [] SataSoldOutDetail) {
+        this.SataSoldOutDetail = SataSoldOutDetail;
+    }
+
+    /**
+     * Get <p>本地盘信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalDiskInfo <p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LocalDiskInfo getLocalDiskInfo() {
@@ -385,9 +481,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 本地盘信息
+     * Set <p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalDiskInfo 本地盘信息
+     * @param LocalDiskInfo <p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDiskInfo(LocalDiskInfo LocalDiskInfo) {
@@ -395,9 +491,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 云盘块数取值范围
+     * Get <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskCountRange 云盘块数取值范围
+     * @return DiskCountRange <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskCountRange getDiskCountRange() {
@@ -405,9 +501,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 云盘块数取值范围
+     * Set <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskCountRange 云盘块数取值范围
+     * @param DiskCountRange <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskCountRange(DiskCountRange DiskCountRange) {
@@ -415,9 +511,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 增强型SSD是否可用
+     * Get <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HSsdAvailable 增强型SSD是否可用
+     * @return HSsdAvailable <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHSsdAvailable() {
@@ -425,9 +521,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 增强型SSD是否可用
+     * Set <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HSsdAvailable 增强型SSD是否可用
+     * @param HSsdAvailable <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHSsdAvailable(Boolean HSsdAvailable) {
@@ -435,9 +531,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 增强型SSD机型售罄原因
+     * Get <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HSsdSoldOutReason 增强型SSD机型售罄原因
+     * @return HSsdSoldOutReason <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHSsdSoldOutReason() {
@@ -445,9 +541,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 增强型SSD机型售罄原因
+     * Set <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HSsdSoldOutReason 增强型SSD机型售罄原因
+     * @param HSsdSoldOutReason <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHSsdSoldOutReason(String HSsdSoldOutReason) {
@@ -455,9 +551,29 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 增强型SSD磁盘取值范围
+     * Get <p>增强型SSD售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HSsdDiskSizeRange 增强型SSD磁盘取值范围
+     * @return HSsdSoldOutDetail <p>增强型SSD售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getHSsdSoldOutDetail() {
+        return this.HSsdSoldOutDetail;
+    }
+
+    /**
+     * Set <p>增强型SSD售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HSsdSoldOutDetail <p>增强型SSD售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHSsdSoldOutDetail(FamilyResourceStat [] HSsdSoldOutDetail) {
+        this.HSsdSoldOutDetail = HSsdSoldOutDetail;
+    }
+
+    /**
+     * Get <p>增强型SSD磁盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HSsdDiskSizeRange <p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSizeRange getHSsdDiskSizeRange() {
@@ -465,9 +581,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 增强型SSD磁盘取值范围
+     * Set <p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HSsdDiskSizeRange 增强型SSD磁盘取值范围
+     * @param HSsdDiskSizeRange <p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHSsdDiskSizeRange(DiskSizeRange HSsdDiskSizeRange) {
@@ -475,9 +591,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 吞吐型云盘是否可用
+     * Get <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThroughputAvailable 吞吐型云盘是否可用
+     * @return ThroughputAvailable <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getThroughputAvailable() {
@@ -485,9 +601,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 吞吐型云盘是否可用
+     * Set <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThroughputAvailable 吞吐型云盘是否可用
+     * @param ThroughputAvailable <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThroughputAvailable(Boolean ThroughputAvailable) {
@@ -495,9 +611,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 吞吐型云盘售罄原因
+     * Get <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThroughputSoldOutReason 吞吐型云盘售罄原因
+     * @return ThroughputSoldOutReason <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getThroughputSoldOutReason() {
@@ -505,9 +621,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 吞吐型云盘售罄原因
+     * Set <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThroughputSoldOutReason 吞吐型云盘售罄原因
+     * @param ThroughputSoldOutReason <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThroughputSoldOutReason(String ThroughputSoldOutReason) {
@@ -515,9 +631,29 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get 吞吐型云盘取值范围
+     * Get <p>吞吐型云硬盘售罄</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThroughputDiskSizeRange 吞吐型云盘取值范围
+     * @return ThroughputSoldOutDetail <p>吞吐型云硬盘售罄</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getThroughputSoldOutDetail() {
+        return this.ThroughputSoldOutDetail;
+    }
+
+    /**
+     * Set <p>吞吐型云硬盘售罄</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThroughputSoldOutDetail <p>吞吐型云硬盘售罄</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThroughputSoldOutDetail(FamilyResourceStat [] ThroughputSoldOutDetail) {
+        this.ThroughputSoldOutDetail = ThroughputSoldOutDetail;
+    }
+
+    /**
+     * Get <p>吞吐型云盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThroughputDiskSizeRange <p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSizeRange getThroughputDiskSizeRange() {
@@ -525,9 +661,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set 吞吐型云盘取值范围
+     * Set <p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThroughputDiskSizeRange 吞吐型云盘取值范围
+     * @param ThroughputDiskSizeRange <p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThroughputDiskSizeRange(DiskSizeRange ThroughputDiskSizeRange) {
@@ -535,9 +671,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get BigData盘是否可售
+     * Get <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BigDataAvailable BigData盘是否可售
+     * @return BigDataAvailable <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getBigDataAvailable() {
@@ -545,9 +681,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set BigData盘是否可售
+     * Set <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BigDataAvailable BigData盘是否可售
+     * @param BigDataAvailable <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDataAvailable(Boolean BigDataAvailable) {
@@ -555,9 +691,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get BigData盘售罄原因
+     * Get <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BigDataSoldOutReason BigData盘售罄原因
+     * @return BigDataSoldOutReason <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBigDataSoldOutReason() {
@@ -565,9 +701,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set BigData盘售罄原因
+     * Set <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BigDataSoldOutReason BigData盘售罄原因
+     * @param BigDataSoldOutReason <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDataSoldOutReason(String BigDataSoldOutReason) {
@@ -575,9 +711,29 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get BigData磁盘取值范围
+     * Get <p>大数据型云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BigDataDiskSizeRange BigData磁盘取值范围
+     * @return BigDataSoldOutDetail <p>大数据型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getBigDataSoldOutDetail() {
+        return this.BigDataSoldOutDetail;
+    }
+
+    /**
+     * Set <p>大数据型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BigDataSoldOutDetail <p>大数据型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBigDataSoldOutDetail(FamilyResourceStat [] BigDataSoldOutDetail) {
+        this.BigDataSoldOutDetail = BigDataSoldOutDetail;
+    }
+
+    /**
+     * Get <p>BigData磁盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BigDataDiskSizeRange <p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSizeRange getBigDataDiskSizeRange() {
@@ -585,9 +741,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set BigData磁盘取值范围
+     * Set <p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BigDataDiskSizeRange BigData磁盘取值范围
+     * @param BigDataDiskSizeRange <p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDataDiskSizeRange(DiskSizeRange BigDataDiskSizeRange) {
@@ -595,9 +751,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get HighIO盘是否可售
+     * Get <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HighIOAvailable HighIO盘是否可售
+     * @return HighIOAvailable <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHighIOAvailable() {
@@ -605,9 +761,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set HighIO盘是否可售
+     * Set <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HighIOAvailable HighIO盘是否可售
+     * @param HighIOAvailable <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighIOAvailable(Boolean HighIOAvailable) {
@@ -615,9 +771,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get HighIO盘售罄原因
+     * Get <p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HighIOSoldOutReason HighIO盘售罄原因
+     * @return HighIOSoldOutReason <p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHighIOSoldOutReason() {
@@ -625,9 +781,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set HighIO盘售罄原因
+     * Set <p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HighIOSoldOutReason HighIO盘售罄原因
+     * @param HighIOSoldOutReason <p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighIOSoldOutReason(String HighIOSoldOutReason) {
@@ -635,9 +791,29 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get HighIO磁盘取值范围
+     * Get <p>高IO型云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HighIODiskSizeRange HighIO磁盘取值范围
+     * @return HighIOSoldOutDetail <p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getHighIOSoldOutDetail() {
+        return this.HighIOSoldOutDetail;
+    }
+
+    /**
+     * Set <p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighIOSoldOutDetail <p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighIOSoldOutDetail(FamilyResourceStat [] HighIOSoldOutDetail) {
+        this.HighIOSoldOutDetail = HighIOSoldOutDetail;
+    }
+
+    /**
+     * Get <p>HighIO磁盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HighIODiskSizeRange <p>HighIO磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSizeRange getHighIODiskSizeRange() {
@@ -645,9 +821,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set HighIO磁盘取值范围
+     * Set <p>HighIO磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HighIODiskSizeRange HighIO磁盘取值范围
+     * @param HighIODiskSizeRange <p>HighIO磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighIODiskSizeRange(DiskSizeRange HighIODiskSizeRange) {
@@ -655,9 +831,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get Bssd盘是否可售
+     * Get <p>Bssd盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BssdAvailable Bssd盘是否可售
+     * @return BssdAvailable <p>Bssd盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getBssdAvailable() {
@@ -665,9 +841,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set Bssd盘是否可售
+     * Set <p>Bssd盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BssdAvailable Bssd盘是否可售
+     * @param BssdAvailable <p>Bssd盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBssdAvailable(Boolean BssdAvailable) {
@@ -675,9 +851,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get Bssd盘售罄原因
+     * Get <p>Bssd盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BssdSoldOutReason Bssd盘售罄原因
+     * @return BssdSoldOutReason <p>Bssd盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBssdSoldOutReason() {
@@ -685,9 +861,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set Bssd盘售罄原因
+     * Set <p>Bssd盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BssdSoldOutReason Bssd盘售罄原因
+     * @param BssdSoldOutReason <p>Bssd盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBssdSoldOutReason(String BssdSoldOutReason) {
@@ -695,9 +871,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get Bssd盘取值范围
+     * Get <p>Bssd盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BssdDiskSizeRange Bssd盘取值范围
+     * @return BssdDiskSizeRange <p>Bssd盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSizeRange getBssdDiskSizeRange() {
@@ -705,9 +881,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set Bssd盘取值范围
+     * Set <p>Bssd盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BssdDiskSizeRange Bssd盘取值范围
+     * @param BssdDiskSizeRange <p>Bssd盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBssdDiskSizeRange(DiskSizeRange BssdDiskSizeRange) {
@@ -715,9 +891,29 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Get GpuInfo
+     * Get <p>通用型SSD云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GpuInfo GpuInfo
+     * @return BssdSoldOutDetail <p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FamilyResourceStat [] getBssdSoldOutDetail() {
+        return this.BssdSoldOutDetail;
+    }
+
+    /**
+     * Set <p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BssdSoldOutDetail <p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBssdSoldOutDetail(FamilyResourceStat [] BssdSoldOutDetail) {
+        this.BssdSoldOutDetail = BssdSoldOutDetail;
+    }
+
+    /**
+     * Get <p>GpuInfo</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GpuInfo <p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GpuInfo getGpuInfo() {
@@ -725,9 +921,9 @@ public class LogstashNodeTypeResource extends AbstractModel {
     }
 
     /**
-     * Set GpuInfo
+     * Set <p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GpuInfo GpuInfo
+     * @param GpuInfo <p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuInfo(GpuInfo GpuInfo) {
@@ -757,6 +953,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         if (source.SsdDiskSizeRange != null) {
             this.SsdDiskSizeRange = new DiskSizeRange(source.SsdDiskSizeRange);
         }
+        if (source.SsdSoldOutDetail != null) {
+            this.SsdSoldOutDetail = new FamilyResourceStat[source.SsdSoldOutDetail.length];
+            for (int i = 0; i < source.SsdSoldOutDetail.length; i++) {
+                this.SsdSoldOutDetail[i] = new FamilyResourceStat(source.SsdSoldOutDetail[i]);
+            }
+        }
         if (source.SataAvailable != null) {
             this.SataAvailable = new Boolean(source.SataAvailable);
         }
@@ -768,6 +970,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         }
         if (source.SataSoldOutReason != null) {
             this.SataSoldOutReason = new String(source.SataSoldOutReason);
+        }
+        if (source.SataSoldOutDetail != null) {
+            this.SataSoldOutDetail = new FamilyResourceStat[source.SataSoldOutDetail.length];
+            for (int i = 0; i < source.SataSoldOutDetail.length; i++) {
+                this.SataSoldOutDetail[i] = new FamilyResourceStat(source.SataSoldOutDetail[i]);
+            }
         }
         if (source.LocalDiskInfo != null) {
             this.LocalDiskInfo = new LocalDiskInfo(source.LocalDiskInfo);
@@ -781,6 +989,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         if (source.HSsdSoldOutReason != null) {
             this.HSsdSoldOutReason = new String(source.HSsdSoldOutReason);
         }
+        if (source.HSsdSoldOutDetail != null) {
+            this.HSsdSoldOutDetail = new FamilyResourceStat[source.HSsdSoldOutDetail.length];
+            for (int i = 0; i < source.HSsdSoldOutDetail.length; i++) {
+                this.HSsdSoldOutDetail[i] = new FamilyResourceStat(source.HSsdSoldOutDetail[i]);
+            }
+        }
         if (source.HSsdDiskSizeRange != null) {
             this.HSsdDiskSizeRange = new DiskSizeRange(source.HSsdDiskSizeRange);
         }
@@ -789,6 +1003,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         }
         if (source.ThroughputSoldOutReason != null) {
             this.ThroughputSoldOutReason = new String(source.ThroughputSoldOutReason);
+        }
+        if (source.ThroughputSoldOutDetail != null) {
+            this.ThroughputSoldOutDetail = new FamilyResourceStat[source.ThroughputSoldOutDetail.length];
+            for (int i = 0; i < source.ThroughputSoldOutDetail.length; i++) {
+                this.ThroughputSoldOutDetail[i] = new FamilyResourceStat(source.ThroughputSoldOutDetail[i]);
+            }
         }
         if (source.ThroughputDiskSizeRange != null) {
             this.ThroughputDiskSizeRange = new DiskSizeRange(source.ThroughputDiskSizeRange);
@@ -799,6 +1019,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         if (source.BigDataSoldOutReason != null) {
             this.BigDataSoldOutReason = new String(source.BigDataSoldOutReason);
         }
+        if (source.BigDataSoldOutDetail != null) {
+            this.BigDataSoldOutDetail = new FamilyResourceStat[source.BigDataSoldOutDetail.length];
+            for (int i = 0; i < source.BigDataSoldOutDetail.length; i++) {
+                this.BigDataSoldOutDetail[i] = new FamilyResourceStat(source.BigDataSoldOutDetail[i]);
+            }
+        }
         if (source.BigDataDiskSizeRange != null) {
             this.BigDataDiskSizeRange = new DiskSizeRange(source.BigDataDiskSizeRange);
         }
@@ -807,6 +1033,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         }
         if (source.HighIOSoldOutReason != null) {
             this.HighIOSoldOutReason = new String(source.HighIOSoldOutReason);
+        }
+        if (source.HighIOSoldOutDetail != null) {
+            this.HighIOSoldOutDetail = new FamilyResourceStat[source.HighIOSoldOutDetail.length];
+            for (int i = 0; i < source.HighIOSoldOutDetail.length; i++) {
+                this.HighIOSoldOutDetail[i] = new FamilyResourceStat(source.HighIOSoldOutDetail[i]);
+            }
         }
         if (source.HighIODiskSizeRange != null) {
             this.HighIODiskSizeRange = new DiskSizeRange(source.HighIODiskSizeRange);
@@ -819,6 +1051,12 @@ public class LogstashNodeTypeResource extends AbstractModel {
         }
         if (source.BssdDiskSizeRange != null) {
             this.BssdDiskSizeRange = new DiskSizeRange(source.BssdDiskSizeRange);
+        }
+        if (source.BssdSoldOutDetail != null) {
+            this.BssdSoldOutDetail = new FamilyResourceStat[source.BssdSoldOutDetail.length];
+            for (int i = 0; i < source.BssdSoldOutDetail.length; i++) {
+                this.BssdSoldOutDetail[i] = new FamilyResourceStat(source.BssdSoldOutDetail[i]);
+            }
         }
         if (source.GpuInfo != null) {
             this.GpuInfo = new GpuInfo(source.GpuInfo);
@@ -835,27 +1073,34 @@ public class LogstashNodeTypeResource extends AbstractModel {
         this.setParamObj(map, prefix + "NodeTypeInfo.", this.NodeTypeInfo);
         this.setParamSimple(map, prefix + "SsdAvailable", this.SsdAvailable);
         this.setParamObj(map, prefix + "SsdDiskSizeRange.", this.SsdDiskSizeRange);
+        this.setParamArrayObj(map, prefix + "SsdSoldOutDetail.", this.SsdSoldOutDetail);
         this.setParamSimple(map, prefix + "SataAvailable", this.SataAvailable);
         this.setParamObj(map, prefix + "SataDiskSizeRange.", this.SataDiskSizeRange);
         this.setParamSimple(map, prefix + "SsdSoldOutReason", this.SsdSoldOutReason);
         this.setParamSimple(map, prefix + "SataSoldOutReason", this.SataSoldOutReason);
+        this.setParamArrayObj(map, prefix + "SataSoldOutDetail.", this.SataSoldOutDetail);
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
         this.setParamObj(map, prefix + "DiskCountRange.", this.DiskCountRange);
         this.setParamSimple(map, prefix + "HSsdAvailable", this.HSsdAvailable);
         this.setParamSimple(map, prefix + "HSsdSoldOutReason", this.HSsdSoldOutReason);
+        this.setParamArrayObj(map, prefix + "HSsdSoldOutDetail.", this.HSsdSoldOutDetail);
         this.setParamObj(map, prefix + "HSsdDiskSizeRange.", this.HSsdDiskSizeRange);
         this.setParamSimple(map, prefix + "ThroughputAvailable", this.ThroughputAvailable);
         this.setParamSimple(map, prefix + "ThroughputSoldOutReason", this.ThroughputSoldOutReason);
+        this.setParamArrayObj(map, prefix + "ThroughputSoldOutDetail.", this.ThroughputSoldOutDetail);
         this.setParamObj(map, prefix + "ThroughputDiskSizeRange.", this.ThroughputDiskSizeRange);
         this.setParamSimple(map, prefix + "BigDataAvailable", this.BigDataAvailable);
         this.setParamSimple(map, prefix + "BigDataSoldOutReason", this.BigDataSoldOutReason);
+        this.setParamArrayObj(map, prefix + "BigDataSoldOutDetail.", this.BigDataSoldOutDetail);
         this.setParamObj(map, prefix + "BigDataDiskSizeRange.", this.BigDataDiskSizeRange);
         this.setParamSimple(map, prefix + "HighIOAvailable", this.HighIOAvailable);
         this.setParamSimple(map, prefix + "HighIOSoldOutReason", this.HighIOSoldOutReason);
+        this.setParamArrayObj(map, prefix + "HighIOSoldOutDetail.", this.HighIOSoldOutDetail);
         this.setParamObj(map, prefix + "HighIODiskSizeRange.", this.HighIODiskSizeRange);
         this.setParamSimple(map, prefix + "BssdAvailable", this.BssdAvailable);
         this.setParamSimple(map, prefix + "BssdSoldOutReason", this.BssdSoldOutReason);
         this.setParamObj(map, prefix + "BssdDiskSizeRange.", this.BssdDiskSizeRange);
+        this.setParamArrayObj(map, prefix + "BssdSoldOutDetail.", this.BssdSoldOutDetail);
         this.setParamObj(map, prefix + "GpuInfo.", this.GpuInfo);
 
     }

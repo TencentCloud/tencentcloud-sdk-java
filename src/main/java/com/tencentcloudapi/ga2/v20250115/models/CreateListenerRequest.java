@@ -73,7 +73,7 @@ public class CreateListenerRequest extends AbstractModel {
     private Long IdleTimeout;
 
     /**
-    * <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+    * <p>四层获取源IP方式。</p><p>枚举值：</p><ul><li>TOA： TOA</li><li>ProxyProtocol： ProxyProtocol</li><li>ProxyProtocolV2： ProxyProtocolV2</li></ul><p>需要开启四层获取源IP方式，才填写此参数。</p>
     */
     @SerializedName("GetRealIpType")
     @Expose
@@ -248,16 +248,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p> 
-     * @return GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+     * Get <p>四层获取源IP方式。</p><p>枚举值：</p><ul><li>TOA： TOA</li><li>ProxyProtocol： ProxyProtocol</li><li>ProxyProtocolV2： ProxyProtocolV2</li></ul><p>需要开启四层获取源IP方式，才填写此参数。</p> 
+     * @return GetRealIpType <p>四层获取源IP方式。</p><p>枚举值：</p><ul><li>TOA： TOA</li><li>ProxyProtocol： ProxyProtocol</li><li>ProxyProtocolV2： ProxyProtocolV2</li></ul><p>需要开启四层获取源IP方式，才填写此参数。</p>
      */
     public String getGetRealIpType() {
         return this.GetRealIpType;
     }
 
     /**
-     * Set <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
-     * @param GetRealIpType <p>四层获取源IP方式，支持&#39;TOA&#39;, &#39;ProxyProtocol&#39;, &#39;ProxyProtocolV2&#39;。</p><p>需要开启四层获取源IP方式，才填写此参数。</p>
+     * Set <p>四层获取源IP方式。</p><p>枚举值：</p><ul><li>TOA： TOA</li><li>ProxyProtocol： ProxyProtocol</li><li>ProxyProtocolV2： ProxyProtocolV2</li></ul><p>需要开启四层获取源IP方式，才填写此参数。</p>
+     * @param GetRealIpType <p>四层获取源IP方式。</p><p>枚举值：</p><ul><li>TOA： TOA</li><li>ProxyProtocol： ProxyProtocol</li><li>ProxyProtocolV2： ProxyProtocolV2</li></ul><p>需要开启四层获取源IP方式，才填写此参数。</p>
      */
     public void setGetRealIpType(String GetRealIpType) {
         this.GetRealIpType = GetRealIpType;

@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class ModificationProtectionInfo extends AbstractModel {
 
     /**
-    * 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
+    * <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
     */
     @SerializedName("ModificationProtectionEnabled")
     @Expose
     private Boolean ModificationProtectionEnabled;
 
     /**
-    * 1238716123
+    * <p>1238716123</p>
     */
     @SerializedName("OperatorUin")
     @Expose
     private String OperatorUin;
 
     /**
-    * 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+    * <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护 
-     * @return ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
+     * Get <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul> 
+     * @return ModificationProtectionEnabled <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
      */
     public Boolean getModificationProtectionEnabled() {
         return this.ModificationProtectionEnabled;
     }
 
     /**
-     * Set 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
-     * @param ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
+     * Set <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
+     * @param ModificationProtectionEnabled <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
      */
     public void setModificationProtectionEnabled(Boolean ModificationProtectionEnabled) {
         this.ModificationProtectionEnabled = ModificationProtectionEnabled;
     }
 
     /**
-     * Get 1238716123 
-     * @return OperatorUin 1238716123
+     * Get <p>1238716123</p> 
+     * @return OperatorUin <p>1238716123</p>
      */
     public String getOperatorUin() {
         return this.OperatorUin;
     }
 
     /**
-     * Set 1238716123
-     * @param OperatorUin 1238716123
+     * Set <p>1238716123</p>
+     * @param OperatorUin <p>1238716123</p>
      */
     public void setOperatorUin(String OperatorUin) {
         this.OperatorUin = OperatorUin;
     }
 
     /**
-     * Get 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。 
-     * @return Reason 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * Get <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p> 
+     * @return Reason <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
-     * @param Reason 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * Set <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
+     * @param Reason <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

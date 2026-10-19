@@ -72,19 +72,36 @@ public class App extends AbstractModel {
     private AppStatusInfo Status;
 
     /**
-    * <p>应用引用的共享知识库列表</p>
-    */
-    @SerializedName("SharedKbList")
-    @Expose
-    private AppSharedKbInfo [] SharedKbList;
-
-    /**
     * <p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorpShareConfig")
     @Expose
     private CorpShareConfig CorpShareConfig;
+
+    /**
+    * <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SharedKbList")
+    @Expose
+    private AppSharedKbInfo [] SharedKbList;
+
+    /**
+    * <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PortalShareConfig")
+    @Expose
+    private PortalShareConfig PortalShareConfig;
+
+    /**
+    * <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileVolumeMountList")
+    @Expose
+    private FileVolumeMount [] FileVolumeMountList;
 
     /**
      * Get <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
@@ -207,22 +224,6 @@ public class App extends AbstractModel {
     }
 
     /**
-     * Get <p>应用引用的共享知识库列表</p> 
-     * @return SharedKbList <p>应用引用的共享知识库列表</p>
-     */
-    public AppSharedKbInfo [] getSharedKbList() {
-        return this.SharedKbList;
-    }
-
-    /**
-     * Set <p>应用引用的共享知识库列表</p>
-     * @param SharedKbList <p>应用引用的共享知识库列表</p>
-     */
-    public void setSharedKbList(AppSharedKbInfo [] SharedKbList) {
-        this.SharedKbList = SharedKbList;
-    }
-
-    /**
      * Get <p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CorpShareConfig <p>企业共享配置</p>
@@ -240,6 +241,66 @@ public class App extends AbstractModel {
      */
     public void setCorpShareConfig(CorpShareConfig CorpShareConfig) {
         this.CorpShareConfig = CorpShareConfig;
+    }
+
+    /**
+     * Get <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SharedKbList <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AppSharedKbInfo [] getSharedKbList() {
+        return this.SharedKbList;
+    }
+
+    /**
+     * Set <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SharedKbList <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSharedKbList(AppSharedKbInfo [] SharedKbList) {
+        this.SharedKbList = SharedKbList;
+    }
+
+    /**
+     * Get <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PortalShareConfig <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PortalShareConfig getPortalShareConfig() {
+        return this.PortalShareConfig;
+    }
+
+    /**
+     * Set <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PortalShareConfig <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPortalShareConfig(PortalShareConfig PortalShareConfig) {
+        this.PortalShareConfig = PortalShareConfig;
+    }
+
+    /**
+     * Get <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileVolumeMountList <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileVolumeMount [] getFileVolumeMountList() {
+        return this.FileVolumeMountList;
+    }
+
+    /**
+     * Set <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileVolumeMountList <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileVolumeMountList(FileVolumeMount [] FileVolumeMountList) {
+        this.FileVolumeMountList = FileVolumeMountList;
     }
 
     public App() {
@@ -268,14 +329,23 @@ public class App extends AbstractModel {
         if (source.Status != null) {
             this.Status = new AppStatusInfo(source.Status);
         }
+        if (source.CorpShareConfig != null) {
+            this.CorpShareConfig = new CorpShareConfig(source.CorpShareConfig);
+        }
         if (source.SharedKbList != null) {
             this.SharedKbList = new AppSharedKbInfo[source.SharedKbList.length];
             for (int i = 0; i < source.SharedKbList.length; i++) {
                 this.SharedKbList[i] = new AppSharedKbInfo(source.SharedKbList[i]);
             }
         }
-        if (source.CorpShareConfig != null) {
-            this.CorpShareConfig = new CorpShareConfig(source.CorpShareConfig);
+        if (source.PortalShareConfig != null) {
+            this.PortalShareConfig = new PortalShareConfig(source.PortalShareConfig);
+        }
+        if (source.FileVolumeMountList != null) {
+            this.FileVolumeMountList = new FileVolumeMount[source.FileVolumeMountList.length];
+            for (int i = 0; i < source.FileVolumeMountList.length; i++) {
+                this.FileVolumeMountList[i] = new FileVolumeMount(source.FileVolumeMountList[i]);
+            }
         }
     }
 
@@ -290,8 +360,10 @@ public class App extends AbstractModel {
         this.setParamObj(map, prefix + "SecretInfo.", this.SecretInfo);
         this.setParamObj(map, prefix + "ShareUrlInfo.", this.ShareUrlInfo);
         this.setParamObj(map, prefix + "Status.", this.Status);
-        this.setParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
         this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
+        this.setParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
+        this.setParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
+        this.setParamArrayObj(map, prefix + "FileVolumeMountList.", this.FileVolumeMountList);
 
     }
 }

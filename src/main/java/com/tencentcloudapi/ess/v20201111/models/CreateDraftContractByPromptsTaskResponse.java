@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDraftContractByPromptsTaskResponse extends AbstractModel {
 
     /**
-    * 起草任务id
+    * <p>起草任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -39,9 +39,9 @@ public class CreateDraftContractByPromptsTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 起草任务id
+     * Get <p>起草任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 起草任务id
+     * @return TaskId <p>起草任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -49,9 +49,9 @@ public class CreateDraftContractByPromptsTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 起草任务id
+     * Set <p>起草任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 起草任务id
+     * @param TaskId <p>起草任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {

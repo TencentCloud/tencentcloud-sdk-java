@@ -303,6 +303,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBackupEncryptConfig）用于查询实例 备份加密相关信息，包括开启状态、加密密钥等。
+     * @param req DescribeBackupEncryptConfigRequest
+     * @return DescribeBackupEncryptConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupEncryptConfigResponse DescribeBackupEncryptConfig(DescribeBackupEncryptConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupEncryptConfig", DescribeBackupEncryptConfigResponse.class);
+    }
+
+    /**
      *本接口（DescribeBackupUrl）用于查询备份 Rdb 文件的下载地址。
      * @param req DescribeBackupUrlRequest
      * @return DescribeBackupUrlResponse
@@ -984,6 +995,17 @@ public class RedisClient extends AbstractClient{
     public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBackupDownloadRestriction", ModifyBackupDownloadRestrictionResponse.class);
+    }
+
+    /**
+     *本接口（ModifyBackupEncrypt）用于开启 /关闭备份加密，修改备份密钥功能。
+     * @param req ModifyBackupEncryptRequest
+     * @return ModifyBackupEncryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupEncryptResponse ModifyBackupEncrypt(ModifyBackupEncryptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupEncrypt", ModifyBackupEncryptResponse.class);
     }
 
     /**

@@ -523,6 +523,20 @@ public class ApmAppConfig extends AbstractModel {
     private String CrossAccountPeerId;
 
     /**
+    * <p>自定义 Span 状态配置</p>
+    */
+    @SerializedName("SpanStatusConfig")
+    @Expose
+    private SpanStatusConfig SpanStatusConfig;
+
+    /**
+    * <p>应用级自定义 Span 状态开关</p>
+    */
+    @SerializedName("EnableSpanStatusConfig")
+    @Expose
+    private Boolean EnableSpanStatusConfig;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceKey <p>实例ID</p>
      */
@@ -1702,6 +1716,38 @@ public class ApmAppConfig extends AbstractModel {
         this.CrossAccountPeerId = CrossAccountPeerId;
     }
 
+    /**
+     * Get <p>自定义 Span 状态配置</p> 
+     * @return SpanStatusConfig <p>自定义 Span 状态配置</p>
+     */
+    public SpanStatusConfig getSpanStatusConfig() {
+        return this.SpanStatusConfig;
+    }
+
+    /**
+     * Set <p>自定义 Span 状态配置</p>
+     * @param SpanStatusConfig <p>自定义 Span 状态配置</p>
+     */
+    public void setSpanStatusConfig(SpanStatusConfig SpanStatusConfig) {
+        this.SpanStatusConfig = SpanStatusConfig;
+    }
+
+    /**
+     * Get <p>应用级自定义 Span 状态开关</p> 
+     * @return EnableSpanStatusConfig <p>应用级自定义 Span 状态开关</p>
+     */
+    public Boolean getEnableSpanStatusConfig() {
+        return this.EnableSpanStatusConfig;
+    }
+
+    /**
+     * Set <p>应用级自定义 Span 状态开关</p>
+     * @param EnableSpanStatusConfig <p>应用级自定义 Span 状态开关</p>
+     */
+    public void setEnableSpanStatusConfig(Boolean EnableSpanStatusConfig) {
+        this.EnableSpanStatusConfig = EnableSpanStatusConfig;
+    }
+
     public ApmAppConfig() {
     }
 
@@ -1920,6 +1966,12 @@ public class ApmAppConfig extends AbstractModel {
         if (source.CrossAccountPeerId != null) {
             this.CrossAccountPeerId = new String(source.CrossAccountPeerId);
         }
+        if (source.SpanStatusConfig != null) {
+            this.SpanStatusConfig = new SpanStatusConfig(source.SpanStatusConfig);
+        }
+        if (source.EnableSpanStatusConfig != null) {
+            this.EnableSpanStatusConfig = new Boolean(source.EnableSpanStatusConfig);
+        }
     }
 
 
@@ -1995,6 +2047,8 @@ public class ApmAppConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "HeadSamplerArg", this.HeadSamplerArg);
         this.setParamSimple(map, prefix + "CrossAccountStatus", this.CrossAccountStatus);
         this.setParamSimple(map, prefix + "CrossAccountPeerId", this.CrossAccountPeerId);
+        this.setParamObj(map, prefix + "SpanStatusConfig.", this.SpanStatusConfig);
+        this.setParamSimple(map, prefix + "EnableSpanStatusConfig", this.EnableSpanStatusConfig);
 
     }
 }

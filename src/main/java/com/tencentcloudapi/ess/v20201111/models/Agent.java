@@ -54,9 +54,7 @@ public class Agent extends AbstractModel {
     /**
      * Get <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p> 
      * @return AppId <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
-     * @deprecated
      */
-    @Deprecated
     public String getAppId() {
         return this.AppId;
     }
@@ -64,9 +62,7 @@ public class Agent extends AbstractModel {
     /**
      * Set <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
      * @param AppId <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
-     * @deprecated
      */
-    @Deprecated
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }

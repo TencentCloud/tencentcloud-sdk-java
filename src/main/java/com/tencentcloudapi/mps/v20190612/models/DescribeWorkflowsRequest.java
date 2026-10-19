@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class DescribeWorkflowsRequest extends AbstractModel {
 
     /**
-    * 工作流 ID 过滤条件，数组长度限制：100。
+    * <p>工作流 ID 过滤条件，数组长度限制：100。</p>
     */
     @SerializedName("WorkflowIds")
     @Expose
     private Long [] WorkflowIds;
 
     /**
-    * 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+    * <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 分页偏移量，默认值：0。
+    * <p>分页偏移量，默认值：0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10，最大值：100。
+    * <p>返回记录条数，默认值：10，最大值：100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 工作流 ID 过滤条件，数组长度限制：100。 
-     * @return WorkflowIds 工作流 ID 过滤条件，数组长度限制：100。
+     * Get <p>工作流 ID 过滤条件，数组长度限制：100。</p> 
+     * @return WorkflowIds <p>工作流 ID 过滤条件，数组长度限制：100。</p>
      */
     public Long [] getWorkflowIds() {
         return this.WorkflowIds;
     }
 
     /**
-     * Set 工作流 ID 过滤条件，数组长度限制：100。
-     * @param WorkflowIds 工作流 ID 过滤条件，数组长度限制：100。
+     * Set <p>工作流 ID 过滤条件，数组长度限制：100。</p>
+     * @param WorkflowIds <p>工作流 ID 过滤条件，数组长度限制：100。</p>
      */
     public void setWorkflowIds(Long [] WorkflowIds) {
         this.WorkflowIds = WorkflowIds;
     }
 
     /**
-     * Get 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。 
-     * @return Status 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+     * Get <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。 
+     * @return Status <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
-     * @param Status 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+     * Set <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
+     * @param Status <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 分页偏移量，默认值：0。 
-     * @return Offset 分页偏移量，默认值：0。
+     * Get <p>分页偏移量，默认值：0。</p> 
+     * @return Offset <p>分页偏移量，默认值：0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认值：0。
-     * @param Offset 分页偏移量，默认值：0。
+     * Set <p>分页偏移量，默认值：0。</p>
+     * @param Offset <p>分页偏移量，默认值：0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回记录条数，默认值：10，最大值：100。 
-     * @return Limit 返回记录条数，默认值：10，最大值：100。
+     * Get <p>返回记录条数，默认值：10，最大值：100。</p> 
+     * @return Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，默认值：10，最大值：100。
-     * @param Limit 返回记录条数，默认值：10，最大值：100。
+     * Set <p>返回记录条数，默认值：10，最大值：100。</p>
+     * @param Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

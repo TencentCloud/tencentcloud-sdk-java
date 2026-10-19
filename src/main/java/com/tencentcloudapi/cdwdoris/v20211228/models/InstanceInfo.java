@@ -24,267 +24,259 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 集群实例ID, "cdwdoris-xxxx" 字符串类型
+    * <p>集群实例ID, &quot;cdwdoris-xxxx&quot; 字符串类型</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集群实例名称
+    * <p>集群实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 状态,
-Init  创建中
-Serving   运行中
-Isolated   已隔离
-Changing  变更中
+    * <p>状态,<br>Init  创建中<br>Serving   运行中<br>Isolated   已隔离<br>Changing  变更中</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 版本
+    * <p>版本</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 地域, ap-guangzhou
+    * <p>地域, ap-guangzhou</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区， ap-guangzhou-3
+    * <p>可用区， ap-guangzhou-3</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 私有网络名称
+    * <p>私有网络名称</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 付费类型，"hour", "prepay"
+    * <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 数据节点描述信息
+    * <p>数据节点描述信息</p>
     */
     @SerializedName("MasterSummary")
     @Expose
     private NodesSummary MasterSummary;
 
     /**
-    * zookeeper节点描述信息
+    * <p>zookeeper节点描述信息</p>
     */
     @SerializedName("CoreSummary")
     @Expose
     private NodesSummary CoreSummary;
 
     /**
-    * 高可用，"true" "false"
+    * <p>高可用，&quot;true&quot; &quot;false&quot;</p>
     */
     @SerializedName("HA")
     @Expose
     private String HA;
 
     /**
-    * 高可用类型：
-0：非高可用
-1：读高可用
-2：读写高可用。
+    * <p>高可用类型：<br>0：非高可用<br>1：读高可用<br>2：读写高可用。</p>
     */
     @SerializedName("HaType")
     @Expose
     private Long HaType;
 
     /**
-    * 访问地址，例如 "10.0.0.1:9000"
+    * <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
     */
     @SerializedName("AccessInfo")
     @Expose
     private String AccessInfo;
 
     /**
-    * 记录ID，数值型
+    * <p>记录ID，数值型</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * regionId, 表示地域
+    * <p>regionId, 表示地域</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 可用区说明，例如 "广州三区"
+    * <p>可用区说明，例如 &quot;广州三区&quot;</p>
     */
     @SerializedName("ZoneDesc")
     @Expose
     private String ZoneDesc;
 
     /**
-    * 错误流程说明信息
+    * <p>错误流程说明信息</p>
     */
     @SerializedName("FlowMsg")
     @Expose
     private String FlowMsg;
 
     /**
-    * 状态描述，例如“运行中”等
+    * <p>状态描述，例如“运行中”等</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 自动续费标记
+    * <p>自动续费标记</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Boolean RenewFlag;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 监控信息
+    * <p>监控信息</p>
     */
     @SerializedName("Monitor")
     @Expose
     private String Monitor;
 
     /**
-    * 是否开通日志
+    * <p>是否开通日志</p>
     */
     @SerializedName("HasClsTopic")
     @Expose
     private Boolean HasClsTopic;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("ClsLogSetId")
     @Expose
     private String ClsLogSetId;
 
     /**
-    * 是否支持xml配置管理
+    * <p>是否支持xml配置管理</p>
     */
     @SerializedName("EnableXMLConfig")
     @Expose
     private Long EnableXMLConfig;
 
     /**
-    * 区域
+    * <p>区域</p>
     */
     @SerializedName("RegionDesc")
     @Expose
     private String RegionDesc;
 
     /**
-    * 弹性网卡地址
+    * <p>弹性网卡地址</p>
     */
     @SerializedName("Eip")
     @Expose
     private String Eip;
 
     /**
-    * 冷热分层系数
+    * <p>冷热分层系数</p>
     */
     @SerializedName("CosMoveFactor")
     @Expose
     private Long CosMoveFactor;
 
     /**
-    * external/local/yunti
+    * <p>external/local/yunti</p>
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * cos桶
+    * <p>cos桶</p>
     */
     @SerializedName("CosBucketName")
     @Expose
     private String CosBucketName;
 
     /**
-    * cbs
+    * <p>cbs</p>
     */
     @SerializedName("CanAttachCbs")
     @Expose
     private Boolean CanAttachCbs;
 
     /**
-    * 小版本
+    * <p>小版本</p>
     */
     @SerializedName("BuildVersion")
     @Expose
     private String BuildVersion;
 
     /**
-    * 组件信息
-注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
+    * <p>组件信息<br>注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。</p>
     */
     @SerializedName("Components")
     @Expose
     private String Components;
 
     /**
-    * 判断审计日志表是否有catalog字段
+    * <p>判断审计日志表是否有catalog字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IfExistCatalog")
@@ -292,799 +284,774 @@ Changing  变更中
     private Long IfExistCatalog;
 
     /**
-    * 页面特性，用于前端屏蔽一些页面入口
+    * <p>页面特性，用于前端屏蔽一些页面入口</p>
     */
     @SerializedName("Characteristic")
     @Expose
     private String [] Characteristic;
 
     /**
-    * 超时时间 单位s
+    * <p>超时时间 单位s</p>
     */
     @SerializedName("RestartTimeout")
     @Expose
     private String RestartTimeout;
 
     /**
-    * 内核优雅重启超时时间，如果为-1说明未设置
+    * <p>内核优雅重启超时时间，如果为-1说明未设置</p>
     */
     @SerializedName("GraceShutdownWaitSeconds")
     @Expose
     private String GraceShutdownWaitSeconds;
 
     /**
-    * 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+    * <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
     */
     @SerializedName("CaseSensitive")
     @Expose
     private Long CaseSensitive;
 
     /**
-    * 用户是否可以绑定安全组
+    * <p>用户是否可以绑定安全组</p>
     */
     @SerializedName("IsWhiteSGs")
     @Expose
     private Boolean IsWhiteSGs;
 
     /**
-    * 已绑定的安全组信息
+    * <p>已绑定的安全组信息</p>
     */
     @SerializedName("BindSGs")
     @Expose
     private String [] BindSGs;
 
     /**
-    * 是否为多可用区
+    * <p>是否为多可用区</p>
     */
     @SerializedName("EnableMultiZones")
     @Expose
     private Boolean EnableMultiZones;
 
     /**
-    * 用户可用区和子网信息
+    * <p>用户可用区和子网信息</p>
     */
     @SerializedName("UserNetworkInfos")
     @Expose
     private String UserNetworkInfos;
 
     /**
-    * 是否启用冷热分层。0：未开启 1：已开启
+    * <p>是否启用冷热分层。0：未开启 1：已开启</p>
     */
     @SerializedName("EnableCoolDown")
     @Expose
     private Long EnableCoolDown;
 
     /**
-    * 冷热分层使用COS桶
+    * <p>冷热分层使用COS桶</p>
     */
     @SerializedName("CoolDownBucket")
     @Expose
     private String CoolDownBucket;
 
     /**
-    * 实例扩展信息
+    * <p>实例扩展信息</p>
     */
     @SerializedName("Details")
     @Expose
     private InstanceDetail Details;
 
     /**
-    * 是否启用DLC 0:关闭 1:开启
+    * <p>是否启用DLC 0:关闭 1:开启</p>
     */
     @SerializedName("EnableDlc")
     @Expose
     private Long EnableDlc;
 
     /**
-    * 账户类型 0:普通用户 1:CAM用户
+    * <p>账户类型 0:普通用户 1:CAM用户</p>
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * 监控模式 0: 老监控 1：新监控
+    * <p>监控模式 0: 老监控 1：新监控</p>
     */
     @SerializedName("MonitorMode")
     @Expose
     private Long MonitorMode;
 
     /**
-    * cn节点信息
+    * <p>cn节点信息</p>
     */
     @SerializedName("CNSummary")
     @Expose
     private NodesSummary CNSummary;
 
     /**
-    * 计算组个数
+    * <p>计算组个数</p>
     */
     @SerializedName("ComputeGroupCount")
     @Expose
     private Long ComputeGroupCount;
 
     /**
-    * 存算分离cos存储数据
+    * <p>存算分离cos存储数据</p>
     */
     @SerializedName("CosStorageSize")
     @Expose
     private Float CosStorageSize;
 
     /**
-    * 存算分离的指标 当是true 不支持新建计算组
+    * <p>存算分离的指标 当是true 不支持新建计算组</p>
     */
     @SerializedName("IsMasterNonVM")
     @Expose
     private Boolean IsMasterNonVM;
 
     /**
-    * Cos容量包大小
+    * <p>Cos容量包大小</p>
     */
     @SerializedName("CosPkgCapacity")
     @Expose
     private Long CosPkgCapacity;
 
     /**
-    * 集群是否使用托管桶
+    * <p>集群是否使用托管桶</p>
     */
     @SerializedName("UseManagedBucket")
     @Expose
     private Boolean UseManagedBucket;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 对应主集群
+    * <p>对应主集群</p>
     */
     @SerializedName("MasterInstance")
     @Expose
     private String MasterInstance;
 
     /**
-    * 对应备集群
+    * <p>对应备集群</p>
     */
     @SerializedName("SlaveInstances")
     @Expose
     private String [] SlaveInstances;
 
     /**
-    * ccr服务部署节点ip
+    * <p>ccr服务部署节点ip</p>
     */
     @SerializedName("SyncerIp")
     @Expose
     private String SyncerIp;
 
     /**
-    * 是否支持sql convertor
+    * <p>是否支持sql convertor</p>
     */
     @SerializedName("EnableSqlConv")
     @Expose
     private Long EnableSqlConv;
 
     /**
-    * 集群时区，默认+08:00
+    * <p>集群时区，默认+08:00</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-     * Get 集群实例ID, "cdwdoris-xxxx" 字符串类型 
-     * @return InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
+    * <p>缓存盘介质：任一计算组为单副本SSD即ELASTIC_REMOTE_SSD（不支持变配多可用区部署等），否则为默认计算组介质；非存算分离为空</p>
+    */
+    @SerializedName("CacheDiskType")
+    @Expose
+    private String CacheDiskType;
+
+    /**
+     * Get <p>集群实例ID, &quot;cdwdoris-xxxx&quot; 字符串类型</p> 
+     * @return InstanceId <p>集群实例ID, &quot;cdwdoris-xxxx&quot; 字符串类型</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID, "cdwdoris-xxxx" 字符串类型
-     * @param InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
+     * Set <p>集群实例ID, &quot;cdwdoris-xxxx&quot; 字符串类型</p>
+     * @param InstanceId <p>集群实例ID, &quot;cdwdoris-xxxx&quot; 字符串类型</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群实例名称 
-     * @return InstanceName 集群实例名称
+     * Get <p>集群实例名称</p> 
+     * @return InstanceName <p>集群实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 集群实例名称
-     * @param InstanceName 集群实例名称
+     * Set <p>集群实例名称</p>
+     * @param InstanceName <p>集群实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 状态,
-Init  创建中
-Serving   运行中
-Isolated   已隔离
-Changing  变更中 
-     * @return Status 状态,
-Init  创建中
-Serving   运行中
-Isolated   已隔离
-Changing  变更中
+     * Get <p>状态,<br>Init  创建中<br>Serving   运行中<br>Isolated   已隔离<br>Changing  变更中</p> 
+     * @return Status <p>状态,<br>Init  创建中<br>Serving   运行中<br>Isolated   已隔离<br>Changing  变更中</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态,
-Init  创建中
-Serving   运行中
-Isolated   已隔离
-Changing  变更中
-     * @param Status 状态,
-Init  创建中
-Serving   运行中
-Isolated   已隔离
-Changing  变更中
+     * Set <p>状态,<br>Init  创建中<br>Serving   运行中<br>Isolated   已隔离<br>Changing  变更中</p>
+     * @param Status <p>状态,<br>Init  创建中<br>Serving   运行中<br>Isolated   已隔离<br>Changing  变更中</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 版本 
-     * @return Version 版本
+     * Get <p>版本</p> 
+     * @return Version <p>版本</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 版本
-     * @param Version 版本
+     * Set <p>版本</p>
+     * @param Version <p>版本</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 地域, ap-guangzhou 
-     * @return Region 地域, ap-guangzhou
+     * Get <p>地域, ap-guangzhou</p> 
+     * @return Region <p>地域, ap-guangzhou</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域, ap-guangzhou
-     * @param Region 地域, ap-guangzhou
+     * Set <p>地域, ap-guangzhou</p>
+     * @param Region <p>地域, ap-guangzhou</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区， ap-guangzhou-3 
-     * @return Zone 可用区， ap-guangzhou-3
+     * Get <p>可用区， ap-guangzhou-3</p> 
+     * @return Zone <p>可用区， ap-guangzhou-3</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区， ap-guangzhou-3
-     * @param Zone 可用区， ap-guangzhou-3
+     * Set <p>可用区， ap-guangzhou-3</p>
+     * @param Zone <p>可用区， ap-guangzhou-3</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 私有网络名称 
-     * @return VpcId 私有网络名称
+     * Get <p>私有网络名称</p> 
+     * @return VpcId <p>私有网络名称</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络名称
-     * @param VpcId 私有网络名称
+     * Set <p>私有网络名称</p>
+     * @param VpcId <p>私有网络名称</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubnetId 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubnetId <p>子网名称</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网名称
-     * @param SubnetId 子网名称
+     * Set <p>子网名称</p>
+     * @param SubnetId <p>子网名称</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 付费类型，"hour", "prepay" 
-     * @return PayMode 付费类型，"hour", "prepay"
+     * Get <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p> 
+     * @return PayMode <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费类型，"hour", "prepay"
-     * @param PayMode 付费类型，"hour", "prepay"
+     * Set <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
+     * @param PayMode <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 数据节点描述信息 
-     * @return MasterSummary 数据节点描述信息
+     * Get <p>数据节点描述信息</p> 
+     * @return MasterSummary <p>数据节点描述信息</p>
      */
     public NodesSummary getMasterSummary() {
         return this.MasterSummary;
     }
 
     /**
-     * Set 数据节点描述信息
-     * @param MasterSummary 数据节点描述信息
+     * Set <p>数据节点描述信息</p>
+     * @param MasterSummary <p>数据节点描述信息</p>
      */
     public void setMasterSummary(NodesSummary MasterSummary) {
         this.MasterSummary = MasterSummary;
     }
 
     /**
-     * Get zookeeper节点描述信息 
-     * @return CoreSummary zookeeper节点描述信息
+     * Get <p>zookeeper节点描述信息</p> 
+     * @return CoreSummary <p>zookeeper节点描述信息</p>
      */
     public NodesSummary getCoreSummary() {
         return this.CoreSummary;
     }
 
     /**
-     * Set zookeeper节点描述信息
-     * @param CoreSummary zookeeper节点描述信息
+     * Set <p>zookeeper节点描述信息</p>
+     * @param CoreSummary <p>zookeeper节点描述信息</p>
      */
     public void setCoreSummary(NodesSummary CoreSummary) {
         this.CoreSummary = CoreSummary;
     }
 
     /**
-     * Get 高可用，"true" "false" 
-     * @return HA 高可用，"true" "false"
+     * Get <p>高可用，&quot;true&quot; &quot;false&quot;</p> 
+     * @return HA <p>高可用，&quot;true&quot; &quot;false&quot;</p>
      */
     public String getHA() {
         return this.HA;
     }
 
     /**
-     * Set 高可用，"true" "false"
-     * @param HA 高可用，"true" "false"
+     * Set <p>高可用，&quot;true&quot; &quot;false&quot;</p>
+     * @param HA <p>高可用，&quot;true&quot; &quot;false&quot;</p>
      */
     public void setHA(String HA) {
         this.HA = HA;
     }
 
     /**
-     * Get 高可用类型：
-0：非高可用
-1：读高可用
-2：读写高可用。 
-     * @return HaType 高可用类型：
-0：非高可用
-1：读高可用
-2：读写高可用。
+     * Get <p>高可用类型：<br>0：非高可用<br>1：读高可用<br>2：读写高可用。</p> 
+     * @return HaType <p>高可用类型：<br>0：非高可用<br>1：读高可用<br>2：读写高可用。</p>
      */
     public Long getHaType() {
         return this.HaType;
     }
 
     /**
-     * Set 高可用类型：
-0：非高可用
-1：读高可用
-2：读写高可用。
-     * @param HaType 高可用类型：
-0：非高可用
-1：读高可用
-2：读写高可用。
+     * Set <p>高可用类型：<br>0：非高可用<br>1：读高可用<br>2：读写高可用。</p>
+     * @param HaType <p>高可用类型：<br>0：非高可用<br>1：读高可用<br>2：读写高可用。</p>
      */
     public void setHaType(Long HaType) {
         this.HaType = HaType;
     }
 
     /**
-     * Get 访问地址，例如 "10.0.0.1:9000" 
-     * @return AccessInfo 访问地址，例如 "10.0.0.1:9000"
+     * Get <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p> 
+     * @return AccessInfo <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
      */
     public String getAccessInfo() {
         return this.AccessInfo;
     }
 
     /**
-     * Set 访问地址，例如 "10.0.0.1:9000"
-     * @param AccessInfo 访问地址，例如 "10.0.0.1:9000"
+     * Set <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
+     * @param AccessInfo <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
      */
     public void setAccessInfo(String AccessInfo) {
         this.AccessInfo = AccessInfo;
     }
 
     /**
-     * Get 记录ID，数值型 
-     * @return Id 记录ID，数值型
+     * Get <p>记录ID，数值型</p> 
+     * @return Id <p>记录ID，数值型</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 记录ID，数值型
-     * @param Id 记录ID，数值型
+     * Set <p>记录ID，数值型</p>
+     * @param Id <p>记录ID，数值型</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get regionId, 表示地域 
-     * @return RegionId regionId, 表示地域
+     * Get <p>regionId, 表示地域</p> 
+     * @return RegionId <p>regionId, 表示地域</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set regionId, 表示地域
-     * @param RegionId regionId, 表示地域
+     * Set <p>regionId, 表示地域</p>
+     * @param RegionId <p>regionId, 表示地域</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 可用区说明，例如 "广州三区" 
-     * @return ZoneDesc 可用区说明，例如 "广州三区"
+     * Get <p>可用区说明，例如 &quot;广州三区&quot;</p> 
+     * @return ZoneDesc <p>可用区说明，例如 &quot;广州三区&quot;</p>
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
     }
 
     /**
-     * Set 可用区说明，例如 "广州三区"
-     * @param ZoneDesc 可用区说明，例如 "广州三区"
+     * Set <p>可用区说明，例如 &quot;广州三区&quot;</p>
+     * @param ZoneDesc <p>可用区说明，例如 &quot;广州三区&quot;</p>
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
     }
 
     /**
-     * Get 错误流程说明信息 
-     * @return FlowMsg 错误流程说明信息
+     * Get <p>错误流程说明信息</p> 
+     * @return FlowMsg <p>错误流程说明信息</p>
      */
     public String getFlowMsg() {
         return this.FlowMsg;
     }
 
     /**
-     * Set 错误流程说明信息
-     * @param FlowMsg 错误流程说明信息
+     * Set <p>错误流程说明信息</p>
+     * @param FlowMsg <p>错误流程说明信息</p>
      */
     public void setFlowMsg(String FlowMsg) {
         this.FlowMsg = FlowMsg;
     }
 
     /**
-     * Get 状态描述，例如“运行中”等 
-     * @return StatusDesc 状态描述，例如“运行中”等
+     * Get <p>状态描述，例如“运行中”等</p> 
+     * @return StatusDesc <p>状态描述，例如“运行中”等</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 状态描述，例如“运行中”等
-     * @param StatusDesc 状态描述，例如“运行中”等
+     * Set <p>状态描述，例如“运行中”等</p>
+     * @param StatusDesc <p>状态描述，例如“运行中”等</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 自动续费标记 
-     * @return RenewFlag 自动续费标记
+     * Get <p>自动续费标记</p> 
+     * @return RenewFlag <p>自动续费标记</p>
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标记
-     * @param RenewFlag 自动续费标记
+     * Set <p>自动续费标记</p>
+     * @param RenewFlag <p>自动续费标记</p>
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 监控信息 
-     * @return Monitor 监控信息
+     * Get <p>监控信息</p> 
+     * @return Monitor <p>监控信息</p>
      */
     public String getMonitor() {
         return this.Monitor;
     }
 
     /**
-     * Set 监控信息
-     * @param Monitor 监控信息
+     * Set <p>监控信息</p>
+     * @param Monitor <p>监控信息</p>
      */
     public void setMonitor(String Monitor) {
         this.Monitor = Monitor;
     }
 
     /**
-     * Get 是否开通日志 
-     * @return HasClsTopic 是否开通日志
+     * Get <p>是否开通日志</p> 
+     * @return HasClsTopic <p>是否开通日志</p>
      */
     public Boolean getHasClsTopic() {
         return this.HasClsTopic;
     }
 
     /**
-     * Set 是否开通日志
-     * @param HasClsTopic 是否开通日志
+     * Set <p>是否开通日志</p>
+     * @param HasClsTopic <p>是否开通日志</p>
      */
     public void setHasClsTopic(Boolean HasClsTopic) {
         this.HasClsTopic = HasClsTopic;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return ClsTopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return ClsTopicId <p>日志主题ID</p>
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param ClsTopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param ClsTopicId <p>日志主题ID</p>
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get 日志集ID 
-     * @return ClsLogSetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return ClsLogSetId <p>日志集ID</p>
      */
     public String getClsLogSetId() {
         return this.ClsLogSetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param ClsLogSetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param ClsLogSetId <p>日志集ID</p>
      */
     public void setClsLogSetId(String ClsLogSetId) {
         this.ClsLogSetId = ClsLogSetId;
     }
 
     /**
-     * Get 是否支持xml配置管理 
-     * @return EnableXMLConfig 是否支持xml配置管理
+     * Get <p>是否支持xml配置管理</p> 
+     * @return EnableXMLConfig <p>是否支持xml配置管理</p>
      */
     public Long getEnableXMLConfig() {
         return this.EnableXMLConfig;
     }
 
     /**
-     * Set 是否支持xml配置管理
-     * @param EnableXMLConfig 是否支持xml配置管理
+     * Set <p>是否支持xml配置管理</p>
+     * @param EnableXMLConfig <p>是否支持xml配置管理</p>
      */
     public void setEnableXMLConfig(Long EnableXMLConfig) {
         this.EnableXMLConfig = EnableXMLConfig;
     }
 
     /**
-     * Get 区域 
-     * @return RegionDesc 区域
+     * Get <p>区域</p> 
+     * @return RegionDesc <p>区域</p>
      */
     public String getRegionDesc() {
         return this.RegionDesc;
     }
 
     /**
-     * Set 区域
-     * @param RegionDesc 区域
+     * Set <p>区域</p>
+     * @param RegionDesc <p>区域</p>
      */
     public void setRegionDesc(String RegionDesc) {
         this.RegionDesc = RegionDesc;
     }
 
     /**
-     * Get 弹性网卡地址 
-     * @return Eip 弹性网卡地址
+     * Get <p>弹性网卡地址</p> 
+     * @return Eip <p>弹性网卡地址</p>
      */
     public String getEip() {
         return this.Eip;
     }
 
     /**
-     * Set 弹性网卡地址
-     * @param Eip 弹性网卡地址
+     * Set <p>弹性网卡地址</p>
+     * @param Eip <p>弹性网卡地址</p>
      */
     public void setEip(String Eip) {
         this.Eip = Eip;
     }
 
     /**
-     * Get 冷热分层系数 
-     * @return CosMoveFactor 冷热分层系数
+     * Get <p>冷热分层系数</p> 
+     * @return CosMoveFactor <p>冷热分层系数</p>
      */
     public Long getCosMoveFactor() {
         return this.CosMoveFactor;
     }
 
     /**
-     * Set 冷热分层系数
-     * @param CosMoveFactor 冷热分层系数
+     * Set <p>冷热分层系数</p>
+     * @param CosMoveFactor <p>冷热分层系数</p>
      */
     public void setCosMoveFactor(Long CosMoveFactor) {
         this.CosMoveFactor = CosMoveFactor;
     }
 
     /**
-     * Get external/local/yunti 
-     * @return Kind external/local/yunti
+     * Get <p>external/local/yunti</p> 
+     * @return Kind <p>external/local/yunti</p>
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set external/local/yunti
-     * @param Kind external/local/yunti
+     * Set <p>external/local/yunti</p>
+     * @param Kind <p>external/local/yunti</p>
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get cos桶 
-     * @return CosBucketName cos桶
+     * Get <p>cos桶</p> 
+     * @return CosBucketName <p>cos桶</p>
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set cos桶
-     * @param CosBucketName cos桶
+     * Set <p>cos桶</p>
+     * @param CosBucketName <p>cos桶</p>
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get cbs 
-     * @return CanAttachCbs cbs
+     * Get <p>cbs</p> 
+     * @return CanAttachCbs <p>cbs</p>
      */
     public Boolean getCanAttachCbs() {
         return this.CanAttachCbs;
     }
 
     /**
-     * Set cbs
-     * @param CanAttachCbs cbs
+     * Set <p>cbs</p>
+     * @param CanAttachCbs <p>cbs</p>
      */
     public void setCanAttachCbs(Boolean CanAttachCbs) {
         this.CanAttachCbs = CanAttachCbs;
     }
 
     /**
-     * Get 小版本 
-     * @return BuildVersion 小版本
+     * Get <p>小版本</p> 
+     * @return BuildVersion <p>小版本</p>
      */
     public String getBuildVersion() {
         return this.BuildVersion;
     }
 
     /**
-     * Set 小版本
-     * @param BuildVersion 小版本
+     * Set <p>小版本</p>
+     * @param BuildVersion <p>小版本</p>
      */
     public void setBuildVersion(String BuildVersion) {
         this.BuildVersion = BuildVersion;
     }
 
     /**
-     * Get 组件信息
-注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。 
-     * @return Components 组件信息
-注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
+     * Get <p>组件信息<br>注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。</p> 
+     * @return Components <p>组件信息<br>注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。</p>
      */
     public String getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 组件信息
-注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-     * @param Components 组件信息
-注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
+     * Set <p>组件信息<br>注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。</p>
+     * @param Components <p>组件信息<br>注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。</p>
      */
     public void setComponents(String Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 判断审计日志表是否有catalog字段
+     * Get <p>判断审计日志表是否有catalog字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IfExistCatalog 判断审计日志表是否有catalog字段
+     * @return IfExistCatalog <p>判断审计日志表是否有catalog字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -1094,9 +1061,9 @@ Changing  变更中
     }
 
     /**
-     * Set 判断审计日志表是否有catalog字段
+     * Set <p>判断审计日志表是否有catalog字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IfExistCatalog 判断审计日志表是否有catalog字段
+     * @param IfExistCatalog <p>判断审计日志表是否有catalog字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -1106,419 +1073,435 @@ Changing  变更中
     }
 
     /**
-     * Get 页面特性，用于前端屏蔽一些页面入口 
-     * @return Characteristic 页面特性，用于前端屏蔽一些页面入口
+     * Get <p>页面特性，用于前端屏蔽一些页面入口</p> 
+     * @return Characteristic <p>页面特性，用于前端屏蔽一些页面入口</p>
      */
     public String [] getCharacteristic() {
         return this.Characteristic;
     }
 
     /**
-     * Set 页面特性，用于前端屏蔽一些页面入口
-     * @param Characteristic 页面特性，用于前端屏蔽一些页面入口
+     * Set <p>页面特性，用于前端屏蔽一些页面入口</p>
+     * @param Characteristic <p>页面特性，用于前端屏蔽一些页面入口</p>
      */
     public void setCharacteristic(String [] Characteristic) {
         this.Characteristic = Characteristic;
     }
 
     /**
-     * Get 超时时间 单位s 
-     * @return RestartTimeout 超时时间 单位s
+     * Get <p>超时时间 单位s</p> 
+     * @return RestartTimeout <p>超时时间 单位s</p>
      */
     public String getRestartTimeout() {
         return this.RestartTimeout;
     }
 
     /**
-     * Set 超时时间 单位s
-     * @param RestartTimeout 超时时间 单位s
+     * Set <p>超时时间 单位s</p>
+     * @param RestartTimeout <p>超时时间 单位s</p>
      */
     public void setRestartTimeout(String RestartTimeout) {
         this.RestartTimeout = RestartTimeout;
     }
 
     /**
-     * Get 内核优雅重启超时时间，如果为-1说明未设置 
-     * @return GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
+     * Get <p>内核优雅重启超时时间，如果为-1说明未设置</p> 
+     * @return GraceShutdownWaitSeconds <p>内核优雅重启超时时间，如果为-1说明未设置</p>
      */
     public String getGraceShutdownWaitSeconds() {
         return this.GraceShutdownWaitSeconds;
     }
 
     /**
-     * Set 内核优雅重启超时时间，如果为-1说明未设置
-     * @param GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
+     * Set <p>内核优雅重启超时时间，如果为-1说明未设置</p>
+     * @param GraceShutdownWaitSeconds <p>内核优雅重启超时时间，如果为-1说明未设置</p>
      */
     public void setGraceShutdownWaitSeconds(String GraceShutdownWaitSeconds) {
         this.GraceShutdownWaitSeconds = GraceShutdownWaitSeconds;
     }
 
     /**
-     * Get 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储 
-     * @return CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+     * Get <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p> 
+     * @return CaseSensitive <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
      */
     public Long getCaseSensitive() {
         return this.CaseSensitive;
     }
 
     /**
-     * Set 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-     * @param CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+     * Set <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
+     * @param CaseSensitive <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
      */
     public void setCaseSensitive(Long CaseSensitive) {
         this.CaseSensitive = CaseSensitive;
     }
 
     /**
-     * Get 用户是否可以绑定安全组 
-     * @return IsWhiteSGs 用户是否可以绑定安全组
+     * Get <p>用户是否可以绑定安全组</p> 
+     * @return IsWhiteSGs <p>用户是否可以绑定安全组</p>
      */
     public Boolean getIsWhiteSGs() {
         return this.IsWhiteSGs;
     }
 
     /**
-     * Set 用户是否可以绑定安全组
-     * @param IsWhiteSGs 用户是否可以绑定安全组
+     * Set <p>用户是否可以绑定安全组</p>
+     * @param IsWhiteSGs <p>用户是否可以绑定安全组</p>
      */
     public void setIsWhiteSGs(Boolean IsWhiteSGs) {
         this.IsWhiteSGs = IsWhiteSGs;
     }
 
     /**
-     * Get 已绑定的安全组信息 
-     * @return BindSGs 已绑定的安全组信息
+     * Get <p>已绑定的安全组信息</p> 
+     * @return BindSGs <p>已绑定的安全组信息</p>
      */
     public String [] getBindSGs() {
         return this.BindSGs;
     }
 
     /**
-     * Set 已绑定的安全组信息
-     * @param BindSGs 已绑定的安全组信息
+     * Set <p>已绑定的安全组信息</p>
+     * @param BindSGs <p>已绑定的安全组信息</p>
      */
     public void setBindSGs(String [] BindSGs) {
         this.BindSGs = BindSGs;
     }
 
     /**
-     * Get 是否为多可用区 
-     * @return EnableMultiZones 是否为多可用区
+     * Get <p>是否为多可用区</p> 
+     * @return EnableMultiZones <p>是否为多可用区</p>
      */
     public Boolean getEnableMultiZones() {
         return this.EnableMultiZones;
     }
 
     /**
-     * Set 是否为多可用区
-     * @param EnableMultiZones 是否为多可用区
+     * Set <p>是否为多可用区</p>
+     * @param EnableMultiZones <p>是否为多可用区</p>
      */
     public void setEnableMultiZones(Boolean EnableMultiZones) {
         this.EnableMultiZones = EnableMultiZones;
     }
 
     /**
-     * Get 用户可用区和子网信息 
-     * @return UserNetworkInfos 用户可用区和子网信息
+     * Get <p>用户可用区和子网信息</p> 
+     * @return UserNetworkInfos <p>用户可用区和子网信息</p>
      */
     public String getUserNetworkInfos() {
         return this.UserNetworkInfos;
     }
 
     /**
-     * Set 用户可用区和子网信息
-     * @param UserNetworkInfos 用户可用区和子网信息
+     * Set <p>用户可用区和子网信息</p>
+     * @param UserNetworkInfos <p>用户可用区和子网信息</p>
      */
     public void setUserNetworkInfos(String UserNetworkInfos) {
         this.UserNetworkInfos = UserNetworkInfos;
     }
 
     /**
-     * Get 是否启用冷热分层。0：未开启 1：已开启 
-     * @return EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
+     * Get <p>是否启用冷热分层。0：未开启 1：已开启</p> 
+     * @return EnableCoolDown <p>是否启用冷热分层。0：未开启 1：已开启</p>
      */
     public Long getEnableCoolDown() {
         return this.EnableCoolDown;
     }
 
     /**
-     * Set 是否启用冷热分层。0：未开启 1：已开启
-     * @param EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
+     * Set <p>是否启用冷热分层。0：未开启 1：已开启</p>
+     * @param EnableCoolDown <p>是否启用冷热分层。0：未开启 1：已开启</p>
      */
     public void setEnableCoolDown(Long EnableCoolDown) {
         this.EnableCoolDown = EnableCoolDown;
     }
 
     /**
-     * Get 冷热分层使用COS桶 
-     * @return CoolDownBucket 冷热分层使用COS桶
+     * Get <p>冷热分层使用COS桶</p> 
+     * @return CoolDownBucket <p>冷热分层使用COS桶</p>
      */
     public String getCoolDownBucket() {
         return this.CoolDownBucket;
     }
 
     /**
-     * Set 冷热分层使用COS桶
-     * @param CoolDownBucket 冷热分层使用COS桶
+     * Set <p>冷热分层使用COS桶</p>
+     * @param CoolDownBucket <p>冷热分层使用COS桶</p>
      */
     public void setCoolDownBucket(String CoolDownBucket) {
         this.CoolDownBucket = CoolDownBucket;
     }
 
     /**
-     * Get 实例扩展信息 
-     * @return Details 实例扩展信息
+     * Get <p>实例扩展信息</p> 
+     * @return Details <p>实例扩展信息</p>
      */
     public InstanceDetail getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 实例扩展信息
-     * @param Details 实例扩展信息
+     * Set <p>实例扩展信息</p>
+     * @param Details <p>实例扩展信息</p>
      */
     public void setDetails(InstanceDetail Details) {
         this.Details = Details;
     }
 
     /**
-     * Get 是否启用DLC 0:关闭 1:开启 
-     * @return EnableDlc 是否启用DLC 0:关闭 1:开启
+     * Get <p>是否启用DLC 0:关闭 1:开启</p> 
+     * @return EnableDlc <p>是否启用DLC 0:关闭 1:开启</p>
      */
     public Long getEnableDlc() {
         return this.EnableDlc;
     }
 
     /**
-     * Set 是否启用DLC 0:关闭 1:开启
-     * @param EnableDlc 是否启用DLC 0:关闭 1:开启
+     * Set <p>是否启用DLC 0:关闭 1:开启</p>
+     * @param EnableDlc <p>是否启用DLC 0:关闭 1:开启</p>
      */
     public void setEnableDlc(Long EnableDlc) {
         this.EnableDlc = EnableDlc;
     }
 
     /**
-     * Get 账户类型 0:普通用户 1:CAM用户 
-     * @return AccountType 账户类型 0:普通用户 1:CAM用户
+     * Get <p>账户类型 0:普通用户 1:CAM用户</p> 
+     * @return AccountType <p>账户类型 0:普通用户 1:CAM用户</p>
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 账户类型 0:普通用户 1:CAM用户
-     * @param AccountType 账户类型 0:普通用户 1:CAM用户
+     * Set <p>账户类型 0:普通用户 1:CAM用户</p>
+     * @param AccountType <p>账户类型 0:普通用户 1:CAM用户</p>
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get 监控模式 0: 老监控 1：新监控 
-     * @return MonitorMode 监控模式 0: 老监控 1：新监控
+     * Get <p>监控模式 0: 老监控 1：新监控</p> 
+     * @return MonitorMode <p>监控模式 0: 老监控 1：新监控</p>
      */
     public Long getMonitorMode() {
         return this.MonitorMode;
     }
 
     /**
-     * Set 监控模式 0: 老监控 1：新监控
-     * @param MonitorMode 监控模式 0: 老监控 1：新监控
+     * Set <p>监控模式 0: 老监控 1：新监控</p>
+     * @param MonitorMode <p>监控模式 0: 老监控 1：新监控</p>
      */
     public void setMonitorMode(Long MonitorMode) {
         this.MonitorMode = MonitorMode;
     }
 
     /**
-     * Get cn节点信息 
-     * @return CNSummary cn节点信息
+     * Get <p>cn节点信息</p> 
+     * @return CNSummary <p>cn节点信息</p>
      */
     public NodesSummary getCNSummary() {
         return this.CNSummary;
     }
 
     /**
-     * Set cn节点信息
-     * @param CNSummary cn节点信息
+     * Set <p>cn节点信息</p>
+     * @param CNSummary <p>cn节点信息</p>
      */
     public void setCNSummary(NodesSummary CNSummary) {
         this.CNSummary = CNSummary;
     }
 
     /**
-     * Get 计算组个数 
-     * @return ComputeGroupCount 计算组个数
+     * Get <p>计算组个数</p> 
+     * @return ComputeGroupCount <p>计算组个数</p>
      */
     public Long getComputeGroupCount() {
         return this.ComputeGroupCount;
     }
 
     /**
-     * Set 计算组个数
-     * @param ComputeGroupCount 计算组个数
+     * Set <p>计算组个数</p>
+     * @param ComputeGroupCount <p>计算组个数</p>
      */
     public void setComputeGroupCount(Long ComputeGroupCount) {
         this.ComputeGroupCount = ComputeGroupCount;
     }
 
     /**
-     * Get 存算分离cos存储数据 
-     * @return CosStorageSize 存算分离cos存储数据
+     * Get <p>存算分离cos存储数据</p> 
+     * @return CosStorageSize <p>存算分离cos存储数据</p>
      */
     public Float getCosStorageSize() {
         return this.CosStorageSize;
     }
 
     /**
-     * Set 存算分离cos存储数据
-     * @param CosStorageSize 存算分离cos存储数据
+     * Set <p>存算分离cos存储数据</p>
+     * @param CosStorageSize <p>存算分离cos存储数据</p>
      */
     public void setCosStorageSize(Float CosStorageSize) {
         this.CosStorageSize = CosStorageSize;
     }
 
     /**
-     * Get 存算分离的指标 当是true 不支持新建计算组 
-     * @return IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
+     * Get <p>存算分离的指标 当是true 不支持新建计算组</p> 
+     * @return IsMasterNonVM <p>存算分离的指标 当是true 不支持新建计算组</p>
      */
     public Boolean getIsMasterNonVM() {
         return this.IsMasterNonVM;
     }
 
     /**
-     * Set 存算分离的指标 当是true 不支持新建计算组
-     * @param IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
+     * Set <p>存算分离的指标 当是true 不支持新建计算组</p>
+     * @param IsMasterNonVM <p>存算分离的指标 当是true 不支持新建计算组</p>
      */
     public void setIsMasterNonVM(Boolean IsMasterNonVM) {
         this.IsMasterNonVM = IsMasterNonVM;
     }
 
     /**
-     * Get Cos容量包大小 
-     * @return CosPkgCapacity Cos容量包大小
+     * Get <p>Cos容量包大小</p> 
+     * @return CosPkgCapacity <p>Cos容量包大小</p>
      */
     public Long getCosPkgCapacity() {
         return this.CosPkgCapacity;
     }
 
     /**
-     * Set Cos容量包大小
-     * @param CosPkgCapacity Cos容量包大小
+     * Set <p>Cos容量包大小</p>
+     * @param CosPkgCapacity <p>Cos容量包大小</p>
      */
     public void setCosPkgCapacity(Long CosPkgCapacity) {
         this.CosPkgCapacity = CosPkgCapacity;
     }
 
     /**
-     * Get 集群是否使用托管桶 
-     * @return UseManagedBucket 集群是否使用托管桶
+     * Get <p>集群是否使用托管桶</p> 
+     * @return UseManagedBucket <p>集群是否使用托管桶</p>
      */
     public Boolean getUseManagedBucket() {
         return this.UseManagedBucket;
     }
 
     /**
-     * Set 集群是否使用托管桶
-     * @param UseManagedBucket 集群是否使用托管桶
+     * Set <p>集群是否使用托管桶</p>
+     * @param UseManagedBucket <p>集群是否使用托管桶</p>
      */
     public void setUseManagedBucket(Boolean UseManagedBucket) {
         this.UseManagedBucket = UseManagedBucket;
     }
 
     /**
-     * Get 集群类型 
-     * @return InstanceType 集群类型
+     * Get <p>集群类型</p> 
+     * @return InstanceType <p>集群类型</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 集群类型
-     * @param InstanceType 集群类型
+     * Set <p>集群类型</p>
+     * @param InstanceType <p>集群类型</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 对应主集群 
-     * @return MasterInstance 对应主集群
+     * Get <p>对应主集群</p> 
+     * @return MasterInstance <p>对应主集群</p>
      */
     public String getMasterInstance() {
         return this.MasterInstance;
     }
 
     /**
-     * Set 对应主集群
-     * @param MasterInstance 对应主集群
+     * Set <p>对应主集群</p>
+     * @param MasterInstance <p>对应主集群</p>
      */
     public void setMasterInstance(String MasterInstance) {
         this.MasterInstance = MasterInstance;
     }
 
     /**
-     * Get 对应备集群 
-     * @return SlaveInstances 对应备集群
+     * Get <p>对应备集群</p> 
+     * @return SlaveInstances <p>对应备集群</p>
      */
     public String [] getSlaveInstances() {
         return this.SlaveInstances;
     }
 
     /**
-     * Set 对应备集群
-     * @param SlaveInstances 对应备集群
+     * Set <p>对应备集群</p>
+     * @param SlaveInstances <p>对应备集群</p>
      */
     public void setSlaveInstances(String [] SlaveInstances) {
         this.SlaveInstances = SlaveInstances;
     }
 
     /**
-     * Get ccr服务部署节点ip 
-     * @return SyncerIp ccr服务部署节点ip
+     * Get <p>ccr服务部署节点ip</p> 
+     * @return SyncerIp <p>ccr服务部署节点ip</p>
      */
     public String getSyncerIp() {
         return this.SyncerIp;
     }
 
     /**
-     * Set ccr服务部署节点ip
-     * @param SyncerIp ccr服务部署节点ip
+     * Set <p>ccr服务部署节点ip</p>
+     * @param SyncerIp <p>ccr服务部署节点ip</p>
      */
     public void setSyncerIp(String SyncerIp) {
         this.SyncerIp = SyncerIp;
     }
 
     /**
-     * Get 是否支持sql convertor 
-     * @return EnableSqlConv 是否支持sql convertor
+     * Get <p>是否支持sql convertor</p> 
+     * @return EnableSqlConv <p>是否支持sql convertor</p>
      */
     public Long getEnableSqlConv() {
         return this.EnableSqlConv;
     }
 
     /**
-     * Set 是否支持sql convertor
-     * @param EnableSqlConv 是否支持sql convertor
+     * Set <p>是否支持sql convertor</p>
+     * @param EnableSqlConv <p>是否支持sql convertor</p>
      */
     public void setEnableSqlConv(Long EnableSqlConv) {
         this.EnableSqlConv = EnableSqlConv;
     }
 
     /**
-     * Get 集群时区，默认+08:00 
-     * @return TimeZone 集群时区，默认+08:00
+     * Get <p>集群时区，默认+08:00</p> 
+     * @return TimeZone <p>集群时区，默认+08:00</p>
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 集群时区，默认+08:00
-     * @param TimeZone 集群时区，默认+08:00
+     * Set <p>集群时区，默认+08:00</p>
+     * @param TimeZone <p>集群时区，默认+08:00</p>
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get <p>缓存盘介质：任一计算组为单副本SSD即ELASTIC_REMOTE_SSD（不支持变配多可用区部署等），否则为默认计算组介质；非存算分离为空</p> 
+     * @return CacheDiskType <p>缓存盘介质：任一计算组为单副本SSD即ELASTIC_REMOTE_SSD（不支持变配多可用区部署等），否则为默认计算组介质；非存算分离为空</p>
+     */
+    public String getCacheDiskType() {
+        return this.CacheDiskType;
+    }
+
+    /**
+     * Set <p>缓存盘介质：任一计算组为单副本SSD即ELASTIC_REMOTE_SSD（不支持变配多可用区部署等），否则为默认计算组介质；非存算分离为空</p>
+     * @param CacheDiskType <p>缓存盘介质：任一计算组为单副本SSD即ELASTIC_REMOTE_SSD（不支持变配多可用区部署等），否则为默认计算组介质；非存算分离为空</p>
+     */
+    public void setCacheDiskType(String CacheDiskType) {
+        this.CacheDiskType = CacheDiskType;
     }
 
     public InstanceInfo() {
@@ -1730,6 +1713,9 @@ Changing  变更中
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.CacheDiskType != null) {
+            this.CacheDiskType = new String(source.CacheDiskType);
+        }
     }
 
 
@@ -1800,6 +1786,7 @@ Changing  变更中
         this.setParamSimple(map, prefix + "SyncerIp", this.SyncerIp);
         this.setParamSimple(map, prefix + "EnableSqlConv", this.EnableSqlConv);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "CacheDiskType", this.CacheDiskType);
 
     }
 }

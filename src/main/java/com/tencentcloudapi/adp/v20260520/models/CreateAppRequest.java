@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateAppRequest extends AbstractModel {
 
     /**
-    * 空间ID
+    * <p>空间ID</p>
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+    * <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
     */
     @SerializedName("AppMode")
     @Expose
     private Long AppMode;
 
     /**
-    * 应用头像
+    * <p>应用头像</p>
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-    * 应用描述
+    * <p>应用描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 应用名称
+    * <p>应用名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 空间ID 
-     * @return SpaceId 空间ID
+     * Get <p>空间ID</p> 
+     * @return SpaceId <p>空间ID</p>
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 空间ID
-     * @param SpaceId 空间ID
+     * Set <p>空间ID</p>
+     * @param SpaceId <p>空间ID</p>
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式 
-     * @return AppMode 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+     * Get <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p> 
+     * @return AppMode <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
      */
     public Long getAppMode() {
         return this.AppMode;
     }
 
     /**
-     * Set 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
-     * @param AppMode 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+     * Set <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+     * @param AppMode <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
      */
     public void setAppMode(Long AppMode) {
         this.AppMode = AppMode;
     }
 
     /**
-     * Get 应用头像 
-     * @return Avatar 应用头像
+     * Get <p>应用头像</p> 
+     * @return Avatar <p>应用头像</p>
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set 应用头像
-     * @param Avatar 应用头像
+     * Set <p>应用头像</p>
+     * @param Avatar <p>应用头像</p>
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;
     }
 
     /**
-     * Get 应用描述 
-     * @return Description 应用描述
+     * Get <p>应用描述</p> 
+     * @return Description <p>应用描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 应用描述
-     * @param Description 应用描述
+     * Set <p>应用描述</p>
+     * @param Description <p>应用描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 应用名称 
-     * @return Name 应用名称
+     * Get <p>应用名称</p> 
+     * @return Name <p>应用名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 应用名称
-     * @param Name 应用名称
+     * Set <p>应用名称</p>
+     * @param Name <p>应用名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;

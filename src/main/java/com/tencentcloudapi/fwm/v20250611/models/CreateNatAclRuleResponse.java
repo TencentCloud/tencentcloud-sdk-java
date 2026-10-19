@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateNatAclRuleResponse extends AbstractModel {
 
     /**
+    * <p>规则Id列表</p>
+    */
+    @SerializedName("RuleIds")
+    @Expose
+    private String [] RuleIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>规则Id列表</p> 
+     * @return RuleIds <p>规则Id列表</p>
+     */
+    public String [] getRuleIds() {
+        return this.RuleIds;
+    }
+
+    /**
+     * Set <p>规则Id列表</p>
+     * @param RuleIds <p>规则Id列表</p>
+     */
+    public void setRuleIds(String [] RuleIds) {
+        this.RuleIds = RuleIds;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class CreateNatAclRuleResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateNatAclRuleResponse(CreateNatAclRuleResponse source) {
+        if (source.RuleIds != null) {
+            this.RuleIds = new String[source.RuleIds.length];
+            for (int i = 0; i < source.RuleIds.length; i++) {
+                this.RuleIds[i] = new String(source.RuleIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class CreateNatAclRuleResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

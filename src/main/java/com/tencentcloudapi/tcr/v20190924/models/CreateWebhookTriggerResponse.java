@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateWebhookTriggerResponse extends AbstractModel {
 
     /**
-    * 新建的触发器
+    * <p>新建的触发器</p>
     */
     @SerializedName("Trigger")
     @Expose
@@ -38,16 +38,16 @@ public class CreateWebhookTriggerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新建的触发器 
-     * @return Trigger 新建的触发器
+     * Get <p>新建的触发器</p> 
+     * @return Trigger <p>新建的触发器</p>
      */
     public WebhookTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set 新建的触发器
-     * @param Trigger 新建的触发器
+     * Set <p>新建的触发器</p>
+     * @param Trigger <p>新建的触发器</p>
      */
     public void setTrigger(WebhookTrigger Trigger) {
         this.Trigger = Trigger;

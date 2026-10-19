@@ -31,20 +31,6 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
     private String PolicyBasedRoutingNextHopId;
 
     /**
-    * <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-    */
-    @SerializedName("InstanceType")
-    @Expose
-    private String InstanceType;
-
-    /**
-    * <p>实例ID</p>
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
     * <p>源地址CIDR</p>
     */
     @SerializedName("SourceCidrBlock")
@@ -64,6 +50,27 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
     @SerializedName("Priority")
     @Expose
     private Long Priority;
+
+    /**
+    * <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>实例所在地域</p>
+    */
+    @SerializedName("InstanceRegion")
+    @Expose
+    private String InstanceRegion;
 
     /**
     * <p>描述</p>
@@ -107,38 +114,6 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
      */
     public void setPolicyBasedRoutingNextHopId(String PolicyBasedRoutingNextHopId) {
         this.PolicyBasedRoutingNextHopId = PolicyBasedRoutingNextHopId;
-    }
-
-    /**
-     * Get <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p> 
-     * @return InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-     */
-    public String getInstanceType() {
-        return this.InstanceType;
-    }
-
-    /**
-     * Set <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-     * @param InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-     */
-    public void setInstanceType(String InstanceType) {
-        this.InstanceType = InstanceType;
-    }
-
-    /**
-     * Get <p>实例ID</p> 
-     * @return InstanceId <p>实例ID</p>
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set <p>实例ID</p>
-     * @param InstanceId <p>实例ID</p>
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
     }
 
     /**
@@ -187,6 +162,54 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
+    }
+
+    /**
+     * Get <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p> 
+     * @return InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     * @param InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>实例所在地域</p> 
+     * @return InstanceRegion <p>实例所在地域</p>
+     */
+    public String getInstanceRegion() {
+        return this.InstanceRegion;
+    }
+
+    /**
+     * Set <p>实例所在地域</p>
+     * @param InstanceRegion <p>实例所在地域</p>
+     */
+    public void setInstanceRegion(String InstanceRegion) {
+        this.InstanceRegion = InstanceRegion;
     }
 
     /**
@@ -264,12 +287,6 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
         if (source.PolicyBasedRoutingNextHopId != null) {
             this.PolicyBasedRoutingNextHopId = new String(source.PolicyBasedRoutingNextHopId);
         }
-        if (source.InstanceType != null) {
-            this.InstanceType = new String(source.InstanceType);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.SourceCidrBlock != null) {
             this.SourceCidrBlock = new String(source.SourceCidrBlock);
         }
@@ -278,6 +295,15 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
         }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceRegion != null) {
+            this.InstanceRegion = new String(source.InstanceRegion);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -299,11 +325,12 @@ public class CcnPolicyBasedRoutingRule extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyBasedRoutingNextHopId", this.PolicyBasedRoutingNextHopId);
-        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SourceCidrBlock", this.SourceCidrBlock);
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "PolicyBasedRoutingRuleId", this.PolicyBasedRoutingRuleId);
         this.setParamSimple(map, prefix + "DestinationInstanceType", this.DestinationInstanceType);

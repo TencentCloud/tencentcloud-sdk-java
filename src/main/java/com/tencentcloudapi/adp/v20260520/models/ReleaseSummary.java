@@ -82,6 +82,14 @@ public class ReleaseSummary extends AbstractModel {
     private CorpShareConfig CorpShareConfig;
 
     /**
+    * <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PortalShareConfig")
+    @Expose
+    private PortalShareConfig PortalShareConfig;
+
+    /**
      * Get <p>创建时间 (Unix时间戳,秒级)</p> 
      * @return CreateTime <p>创建时间 (Unix时间戳,秒级)</p>
      */
@@ -217,6 +225,26 @@ public class ReleaseSummary extends AbstractModel {
         this.CorpShareConfig = CorpShareConfig;
     }
 
+    /**
+     * Get <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PortalShareConfig <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PortalShareConfig getPortalShareConfig() {
+        return this.PortalShareConfig;
+    }
+
+    /**
+     * Set <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PortalShareConfig <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPortalShareConfig(PortalShareConfig PortalShareConfig) {
+        this.PortalShareConfig = PortalShareConfig;
+    }
+
     public ReleaseSummary() {
     }
 
@@ -252,6 +280,9 @@ public class ReleaseSummary extends AbstractModel {
         if (source.CorpShareConfig != null) {
             this.CorpShareConfig = new CorpShareConfig(source.CorpShareConfig);
         }
+        if (source.PortalShareConfig != null) {
+            this.PortalShareConfig = new PortalShareConfig(source.PortalShareConfig);
+        }
     }
 
 
@@ -267,6 +298,7 @@ public class ReleaseSummary extends AbstractModel {
         this.setParamObj(map, prefix + "AppShareAccessControl.", this.AppShareAccessControl);
         this.setParamArraySimple(map, prefix + "ChannelIdList.", this.ChannelIdList);
         this.setParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
+        this.setParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
 
     }
 }

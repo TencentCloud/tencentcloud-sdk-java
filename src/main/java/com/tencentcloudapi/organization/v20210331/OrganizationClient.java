@@ -160,6 +160,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *审批用户权限申请
+     * @param req AuditPermissionApplyOrderRequest
+     * @return AuditPermissionApplyOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuditPermissionApplyOrderResponse AuditPermissionApplyOrder(AuditPermissionApplyOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AuditPermissionApplyOrder", AuditPermissionApplyOrderResponse.class);
+    }
+
+    /**
      *绑定组织成员和组织管理员子账号的授权关系
      * @param req BindOrganizationMemberAuthAccountRequest
      * @return BindOrganizationMemberAuthAccountResponse

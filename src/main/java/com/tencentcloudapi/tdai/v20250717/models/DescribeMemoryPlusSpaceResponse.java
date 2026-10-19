@@ -122,6 +122,13 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
     private Float CreditLimit;
 
     /**
+    * <p>是否开启压缩</p>
+    */
+    @SerializedName("Compressed")
+    @Expose
+    private Boolean Compressed;
+
+    /**
     * <p>Memory 实例的内网访问地址。</p>
     */
     @SerializedName("AccessUrl")
@@ -395,6 +402,22 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>是否开启压缩</p> 
+     * @return Compressed <p>是否开启压缩</p>
+     */
+    public Boolean getCompressed() {
+        return this.Compressed;
+    }
+
+    /**
+     * Set <p>是否开启压缩</p>
+     * @param Compressed <p>是否开启压缩</p>
+     */
+    public void setCompressed(Boolean Compressed) {
+        this.Compressed = Compressed;
+    }
+
+    /**
      * Get <p>Memory 实例的内网访问地址。</p> 
      * @return AccessUrl <p>Memory 实例的内网访问地址。</p>
      */
@@ -559,6 +582,9 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
         if (source.CreditLimit != null) {
             this.CreditLimit = new Float(source.CreditLimit);
         }
+        if (source.Compressed != null) {
+            this.Compressed = new Boolean(source.Compressed);
+        }
         if (source.AccessUrl != null) {
             this.AccessUrl = new String(source.AccessUrl);
         }
@@ -601,6 +627,7 @@ public class DescribeMemoryPlusSpaceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
         this.setParamSimple(map, prefix + "CreditUsage", this.CreditUsage);
         this.setParamSimple(map, prefix + "CreditLimit", this.CreditLimit);
+        this.setParamSimple(map, prefix + "Compressed", this.Compressed);
         this.setParamSimple(map, prefix + "AccessUrl", this.AccessUrl);
         this.setParamSimple(map, prefix + "WanAccessUrl", this.WanAccessUrl);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);

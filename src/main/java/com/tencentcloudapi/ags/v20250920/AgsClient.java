@@ -222,6 +222,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *删除预热镜像
+     * @param req DeletePreCacheImageRequest
+     * @return DeletePreCacheImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePreCacheImageResponse DeletePreCacheImage(DeletePreCacheImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePreCacheImage", DeletePreCacheImageResponse.class);
+    }
+
+    /**
      *删除 Registry。
      * @param req DeleteRegistryRequest
      * @return DeleteRegistryResponse
@@ -333,6 +344,17 @@ public class AgsClient extends AbstractClient{
     public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEvents", DescribeEventsResponse.class);
+    }
+
+    /**
+     *查询镜像预热列表
+     * @param req DescribePreCacheImageListRequest
+     * @return DescribePreCacheImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePreCacheImageListResponse DescribePreCacheImageList(DescribePreCacheImageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePreCacheImageList", DescribePreCacheImageListResponse.class);
     }
 
     /**

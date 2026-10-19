@@ -38,7 +38,7 @@ public class DescribeGlobalAcceleratorsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
+    * <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li><li>global-accelerator-name - String -（过滤条件）全球加速实例名称。</li></p>
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeGlobalAcceleratorsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p> 
-     * @return Filters <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
+     * Get <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li><li>global-accelerator-name - String -（过滤条件）全球加速实例名称。</li></p> 
+     * @return Filters <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li><li>global-accelerator-name - String -（过滤条件）全球加速实例名称。</li></p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
-     * @param Filters <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li></p>
+     * Set <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li><li>global-accelerator-name - String -（过滤条件）全球加速实例名称。</li></p>
+     * @param Filters <p>过滤条件。<li>global-accelerator-id - String -（过滤条件）全球加速实例ID。</li> <li>global-accelerator-state - String -（过滤条件）全球加速实例状态。</li><li>global-accelerator-name - String -（过滤条件）全球加速实例名称。</li></p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

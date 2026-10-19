@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceNetworkAddressResponse extends AbstractModel {
 
     /**
-    * 修改网络异步流程任务ID。
+    * <p>修改网络异步流程任务ID。</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyDBInstanceNetworkAddressResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改网络异步流程任务ID。 
-     * @return FlowId 修改网络异步流程任务ID。
+     * Get <p>修改网络异步流程任务ID。</p> 
+     * @return FlowId <p>修改网络异步流程任务ID。</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 修改网络异步流程任务ID。
-     * @param FlowId 修改网络异步流程任务ID。
+     * Set <p>修改网络异步流程任务ID。</p>
+     * @param FlowId <p>修改网络异步流程任务ID。</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

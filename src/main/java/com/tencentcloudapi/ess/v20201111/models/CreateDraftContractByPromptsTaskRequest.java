@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class CreateDraftContractByPromptsTaskRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+    * <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 起草要求，范围要求 5-1000 字
+    * <p>起草要求，范围要求 5-1000 字</p>
     */
     @SerializedName("Requirement")
     @Expose
     private String Requirement;
 
     /**
-    * 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+    * <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
     */
     @SerializedName("ReferenceTemplateId")
     @Expose
     private String ReferenceTemplateId;
 
     /**
-    * 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+    * <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
     */
     @SerializedName("RequirementFileIds")
     @Expose
     private String [] RequirementFileIds;
 
     /**
-    * 起草合同的语言要求（zh，en）默认zh
+    * <p>起草合同的语言要求（zh，en）默认zh</p>
     */
     @SerializedName("ContractLanguage")
     @Expose
     private String ContractLanguage;
 
     /**
-     * Get 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
-     * @return Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+    * <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+    */
+    @SerializedName("ReviewTaskId")
+    @Expose
+    private String ReviewTaskId;
+
+    /**
+     * Get <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p> 
+     * @return Operator <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * Set <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+     * @param Operator <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 起草要求，范围要求 5-1000 字 
-     * @return Requirement 起草要求，范围要求 5-1000 字
+     * Get <p>起草要求，范围要求 5-1000 字</p> 
+     * @return Requirement <p>起草要求，范围要求 5-1000 字</p>
      */
     public String getRequirement() {
         return this.Requirement;
     }
 
     /**
-     * Set 起草要求，范围要求 5-1000 字
-     * @param Requirement 起草要求，范围要求 5-1000 字
+     * Set <p>起草要求，范围要求 5-1000 字</p>
+     * @param Requirement <p>起草要求，范围要求 5-1000 字</p>
      */
     public void setRequirement(String Requirement) {
         this.Requirement = Requirement;
     }
 
     /**
-     * Get 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。 
-     * @return ReferenceTemplateId 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * Get <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p> 
+     * @return ReferenceTemplateId <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
      */
     public String getReferenceTemplateId() {
         return this.ReferenceTemplateId;
     }
 
     /**
-     * Set 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
-     * @param ReferenceTemplateId 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * Set <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+     * @param ReferenceTemplateId <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
      */
     public void setReferenceTemplateId(String ReferenceTemplateId) {
         this.ReferenceTemplateId = ReferenceTemplateId;
     }
 
     /**
-     * Get 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。 
-     * @return RequirementFileIds 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * Get <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p> 
+     * @return RequirementFileIds <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
      */
     public String [] getRequirementFileIds() {
         return this.RequirementFileIds;
     }
 
     /**
-     * Set 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
-     * @param RequirementFileIds 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * Set <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+     * @param RequirementFileIds <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
      */
     public void setRequirementFileIds(String [] RequirementFileIds) {
         this.RequirementFileIds = RequirementFileIds;
     }
 
     /**
-     * Get 起草合同的语言要求（zh，en）默认zh 
-     * @return ContractLanguage 起草合同的语言要求（zh，en）默认zh
+     * Get <p>起草合同的语言要求（zh，en）默认zh</p> 
+     * @return ContractLanguage <p>起草合同的语言要求（zh，en）默认zh</p>
      */
     public String getContractLanguage() {
         return this.ContractLanguage;
     }
 
     /**
-     * Set 起草合同的语言要求（zh，en）默认zh
-     * @param ContractLanguage 起草合同的语言要求（zh，en）默认zh
+     * Set <p>起草合同的语言要求（zh，en）默认zh</p>
+     * @param ContractLanguage <p>起草合同的语言要求（zh，en）默认zh</p>
      */
     public void setContractLanguage(String ContractLanguage) {
         this.ContractLanguage = ContractLanguage;
+    }
+
+    /**
+     * Get <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p> 
+     * @return ReviewTaskId <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+     */
+    public String getReviewTaskId() {
+        return this.ReviewTaskId;
+    }
+
+    /**
+     * Set <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+     * @param ReviewTaskId <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+     */
+    public void setReviewTaskId(String ReviewTaskId) {
+        this.ReviewTaskId = ReviewTaskId;
     }
 
     public CreateDraftContractByPromptsTaskRequest() {
@@ -164,6 +187,9 @@ public class CreateDraftContractByPromptsTaskRequest extends AbstractModel {
         if (source.ContractLanguage != null) {
             this.ContractLanguage = new String(source.ContractLanguage);
         }
+        if (source.ReviewTaskId != null) {
+            this.ReviewTaskId = new String(source.ReviewTaskId);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateDraftContractByPromptsTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReferenceTemplateId", this.ReferenceTemplateId);
         this.setParamArraySimple(map, prefix + "RequirementFileIds.", this.RequirementFileIds);
         this.setParamSimple(map, prefix + "ContractLanguage", this.ContractLanguage);
+        this.setParamSimple(map, prefix + "ReviewTaskId", this.ReviewTaskId);
 
     }
 }

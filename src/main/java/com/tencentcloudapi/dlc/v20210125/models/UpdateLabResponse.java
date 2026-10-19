@@ -206,6 +206,13 @@ public class UpdateLabResponse extends AbstractModel {
     private String ImagePullType;
 
     /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -629,6 +636,22 @@ public class UpdateLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -733,6 +756,9 @@ public class UpdateLabResponse extends AbstractModel {
         if (source.ImagePullType != null) {
             this.ImagePullType = new String(source.ImagePullType);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -769,6 +795,7 @@ public class UpdateLabResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

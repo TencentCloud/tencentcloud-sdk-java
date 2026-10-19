@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class ResourceSpec extends AbstractModel {
 
     /**
-    * 规格名称，例如“SCH1"
+    * <p>规格名称，例如“SCH1&quot;</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * cpu核数
+    * <p>cpu核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存大小，单位G
+    * <p>内存大小，单位G</p>
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
+    * <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 系统盘描述信息
+    * <p>系统盘描述信息</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private DiskSpec SystemDisk;
 
     /**
-    * 数据盘描述信息
+    * <p>数据盘描述信息</p>
     */
     @SerializedName("DataDisk")
     @Expose
     private DiskSpec DataDisk;
 
     /**
-    * 最大节点数目限制
+    * <p>最大节点数目限制</p>
     */
     @SerializedName("MaxNodeSize")
     @Expose
     private Long MaxNodeSize;
 
     /**
-    * 是否可用，false代表售罄
+    * <p>是否可用，false代表售罄</p>
     */
     @SerializedName("Available")
     @Expose
     private Boolean Available;
 
     /**
-    * 规格描述信息
+    * <p>规格描述信息</p>
     */
     @SerializedName("ComputeSpecDesc")
     @Expose
     private String ComputeSpecDesc;
 
     /**
-    * cvm库存
+    * <p>cvm库存</p>
     */
     @SerializedName("InstanceQuota")
     @Expose
     private Long InstanceQuota;
 
     /**
-     * Get 规格名称，例如“SCH1" 
-     * @return Name 规格名称，例如“SCH1"
+    * <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+    */
+    @SerializedName("ComputeGroupSuffix")
+    @Expose
+    private String ComputeGroupSuffix;
+
+    /**
+     * Get <p>规格名称，例如“SCH1&quot;</p> 
+     * @return Name <p>规格名称，例如“SCH1&quot;</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 规格名称，例如“SCH1"
-     * @param Name 规格名称，例如“SCH1"
+     * Set <p>规格名称，例如“SCH1&quot;</p>
+     * @param Name <p>规格名称，例如“SCH1&quot;</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get cpu核数 
-     * @return Cpu cpu核数
+     * Get <p>cpu核数</p> 
+     * @return Cpu <p>cpu核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set cpu核数
-     * @param Cpu cpu核数
+     * Set <p>cpu核数</p>
+     * @param Cpu <p>cpu核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存大小，单位G 
-     * @return Mem 内存大小，单位G
+     * Get <p>内存大小，单位G</p> 
+     * @return Mem <p>内存大小，单位G</p>
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set 内存大小，单位G
-     * @param Mem 内存大小，单位G
+     * Set <p>内存大小，单位G</p>
+     * @param Mem <p>内存大小，单位G</p>
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO 
-     * @return Type 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
+     * Get <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p> 
+     * @return Type <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
-     * @param Type 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
+     * Set <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
+     * @param Type <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 系统盘描述信息 
-     * @return SystemDisk 系统盘描述信息
+     * Get <p>系统盘描述信息</p> 
+     * @return SystemDisk <p>系统盘描述信息</p>
      */
     public DiskSpec getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 系统盘描述信息
-     * @param SystemDisk 系统盘描述信息
+     * Set <p>系统盘描述信息</p>
+     * @param SystemDisk <p>系统盘描述信息</p>
      */
     public void setSystemDisk(DiskSpec SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 数据盘描述信息 
-     * @return DataDisk 数据盘描述信息
+     * Get <p>数据盘描述信息</p> 
+     * @return DataDisk <p>数据盘描述信息</p>
      */
     public DiskSpec getDataDisk() {
         return this.DataDisk;
     }
 
     /**
-     * Set 数据盘描述信息
-     * @param DataDisk 数据盘描述信息
+     * Set <p>数据盘描述信息</p>
+     * @param DataDisk <p>数据盘描述信息</p>
      */
     public void setDataDisk(DiskSpec DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get 最大节点数目限制 
-     * @return MaxNodeSize 最大节点数目限制
+     * Get <p>最大节点数目限制</p> 
+     * @return MaxNodeSize <p>最大节点数目限制</p>
      */
     public Long getMaxNodeSize() {
         return this.MaxNodeSize;
     }
 
     /**
-     * Set 最大节点数目限制
-     * @param MaxNodeSize 最大节点数目限制
+     * Set <p>最大节点数目限制</p>
+     * @param MaxNodeSize <p>最大节点数目限制</p>
      */
     public void setMaxNodeSize(Long MaxNodeSize) {
         this.MaxNodeSize = MaxNodeSize;
     }
 
     /**
-     * Get 是否可用，false代表售罄 
-     * @return Available 是否可用，false代表售罄
+     * Get <p>是否可用，false代表售罄</p> 
+     * @return Available <p>是否可用，false代表售罄</p>
      */
     public Boolean getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 是否可用，false代表售罄
-     * @param Available 是否可用，false代表售罄
+     * Set <p>是否可用，false代表售罄</p>
+     * @param Available <p>是否可用，false代表售罄</p>
      */
     public void setAvailable(Boolean Available) {
         this.Available = Available;
     }
 
     /**
-     * Get 规格描述信息 
-     * @return ComputeSpecDesc 规格描述信息
+     * Get <p>规格描述信息</p> 
+     * @return ComputeSpecDesc <p>规格描述信息</p>
      */
     public String getComputeSpecDesc() {
         return this.ComputeSpecDesc;
     }
 
     /**
-     * Set 规格描述信息
-     * @param ComputeSpecDesc 规格描述信息
+     * Set <p>规格描述信息</p>
+     * @param ComputeSpecDesc <p>规格描述信息</p>
      */
     public void setComputeSpecDesc(String ComputeSpecDesc) {
         this.ComputeSpecDesc = ComputeSpecDesc;
     }
 
     /**
-     * Get cvm库存 
-     * @return InstanceQuota cvm库存
+     * Get <p>cvm库存</p> 
+     * @return InstanceQuota <p>cvm库存</p>
      */
     public Long getInstanceQuota() {
         return this.InstanceQuota;
     }
 
     /**
-     * Set cvm库存
-     * @param InstanceQuota cvm库存
+     * Set <p>cvm库存</p>
+     * @param InstanceQuota <p>cvm库存</p>
      */
     public void setInstanceQuota(Long InstanceQuota) {
         this.InstanceQuota = InstanceQuota;
+    }
+
+    /**
+     * Get <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p> 
+     * @return ComputeGroupSuffix <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+     */
+    public String getComputeGroupSuffix() {
+        return this.ComputeGroupSuffix;
+    }
+
+    /**
+     * Set <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+     * @param ComputeGroupSuffix <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+     */
+    public void setComputeGroupSuffix(String ComputeGroupSuffix) {
+        this.ComputeGroupSuffix = ComputeGroupSuffix;
     }
 
     public ResourceSpec() {
@@ -291,6 +314,9 @@ public class ResourceSpec extends AbstractModel {
         if (source.InstanceQuota != null) {
             this.InstanceQuota = new Long(source.InstanceQuota);
         }
+        if (source.ComputeGroupSuffix != null) {
+            this.ComputeGroupSuffix = new String(source.ComputeGroupSuffix);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class ResourceSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamSimple(map, prefix + "ComputeSpecDesc", this.ComputeSpecDesc);
         this.setParamSimple(map, prefix + "InstanceQuota", this.InstanceQuota);
+        this.setParamSimple(map, prefix + "ComputeGroupSuffix", this.ComputeGroupSuffix);
 
     }
 }

@@ -295,6 +295,27 @@ public class TrainingJobSpec extends AbstractModel {
     private String AdvancedOptions;
 
     /**
+    * <p>创建人子账号 UIN（实际提交者）</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
+
+    /**
+    * <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
      * Get <p>训练作业配置 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SpecId <p>训练作业配置 ID</p>
@@ -946,6 +967,54 @@ public class TrainingJobSpec extends AbstractModel {
         this.AdvancedOptions = AdvancedOptions;
     }
 
+    /**
+     * Get <p>创建人子账号 UIN（实际提交者）</p> 
+     * @return SubAccountUin <p>创建人子账号 UIN（实际提交者）</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>创建人子账号 UIN（实际提交者）</p>
+     * @param SubAccountUin <p>创建人子账号 UIN（实际提交者）</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>创建人子账号名称（CAM 解析，解析失败为 null）</p> 
+     * @return SubAccountName <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+     * @param SubAccountName <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
+    }
+
+    /**
+     * Get <p>用户网络配置(JSON，跨租户 ENI 等)</p> 
+     * @return NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     * @param NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public TrainingJobSpec() {
     }
 
@@ -1068,6 +1137,15 @@ public class TrainingJobSpec extends AbstractModel {
         if (source.AdvancedOptions != null) {
             this.AdvancedOptions = new String(source.AdvancedOptions);
         }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
+        }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
     }
 
 
@@ -1111,6 +1189,9 @@ public class TrainingJobSpec extends AbstractModel {
         this.setParamObj(map, prefix + "TuningParams.", this.TuningParams);
         this.setParamSimple(map, prefix + "ResumeTraining", this.ResumeTraining);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
 
     }
 }

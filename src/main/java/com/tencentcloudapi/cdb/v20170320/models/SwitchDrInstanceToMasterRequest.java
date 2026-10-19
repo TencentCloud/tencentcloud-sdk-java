@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class SwitchDrInstanceToMasterRequest extends AbstractModel {
 
     /**
-    * 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>忽略同步延迟的阈值，不填默认为0表示完全等待追平</p><p>取值范围：[0, 104857600]</p><p>默认值：0</p>
+    */
+    @SerializedName("IgnoreSyncDelay")
+    @Expose
+    private Long IgnoreSyncDelay;
+
+    /**
+     * Get <p>灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p> 
+     * @return InstanceId <p>灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set <p>灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param InstanceId <p>灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>忽略同步延迟的阈值，不填默认为0表示完全等待追平</p><p>取值范围：[0, 104857600]</p><p>默认值：0</p> 
+     * @return IgnoreSyncDelay <p>忽略同步延迟的阈值，不填默认为0表示完全等待追平</p><p>取值范围：[0, 104857600]</p><p>默认值：0</p>
+     */
+    public Long getIgnoreSyncDelay() {
+        return this.IgnoreSyncDelay;
+    }
+
+    /**
+     * Set <p>忽略同步延迟的阈值，不填默认为0表示完全等待追平</p><p>取值范围：[0, 104857600]</p><p>默认值：0</p>
+     * @param IgnoreSyncDelay <p>忽略同步延迟的阈值，不填默认为0表示完全等待追平</p><p>取值范围：[0, 104857600]</p><p>默认值：0</p>
+     */
+    public void setIgnoreSyncDelay(Long IgnoreSyncDelay) {
+        this.IgnoreSyncDelay = IgnoreSyncDelay;
     }
 
     public SwitchDrInstanceToMasterRequest() {
@@ -57,6 +80,9 @@ public class SwitchDrInstanceToMasterRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.IgnoreSyncDelay != null) {
+            this.IgnoreSyncDelay = new Long(source.IgnoreSyncDelay);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class SwitchDrInstanceToMasterRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IgnoreSyncDelay", this.IgnoreSyncDelay);
 
     }
 }

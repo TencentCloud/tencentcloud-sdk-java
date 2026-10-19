@@ -31,6 +31,13 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel {
     private String TrainingModelVersionId;
 
     /**
+    * <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+    */
+    @SerializedName("TiProjectId")
+    @Expose
+    private String TiProjectId;
+
+    /**
     * 是否同步清理cos
     */
     @SerializedName("EnableDeleteCos")
@@ -51,6 +58,22 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel {
      */
     public void setTrainingModelVersionId(String TrainingModelVersionId) {
         this.TrainingModelVersionId = TrainingModelVersionId;
+    }
+
+    /**
+     * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
+     * @return TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public String getTiProjectId() {
+        return this.TiProjectId;
+    }
+
+    /**
+     * Set <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     * @param TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public void setTiProjectId(String TiProjectId) {
+        this.TiProjectId = TiProjectId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel {
         if (source.TrainingModelVersionId != null) {
             this.TrainingModelVersionId = new String(source.TrainingModelVersionId);
         }
+        if (source.TiProjectId != null) {
+            this.TiProjectId = new String(source.TiProjectId);
+        }
         if (source.EnableDeleteCos != null) {
             this.EnableDeleteCos = new Boolean(source.EnableDeleteCos);
         }
@@ -91,6 +117,7 @@ public class DeleteTrainingModelVersionRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrainingModelVersionId", this.TrainingModelVersionId);
+        this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamSimple(map, prefix + "EnableDeleteCos", this.EnableDeleteCos);
 
     }

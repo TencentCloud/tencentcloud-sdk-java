@@ -472,6 +472,13 @@ public class Resource extends AbstractModel {
     private ResourceDeployZone [] ResourceZoneSet;
 
     /**
+    * <p>多账号额度</p>
+    */
+    @SerializedName("OrgAccountQuota")
+    @Expose
+    private Long OrgAccountQuota;
+
+    /**
      * Get <p>服务实例ID，如bh-saas-s3ed4r5e</p> 
      * @return ResourceId <p>服务实例ID，如bh-saas-s3ed4r5e</p>
      */
@@ -1499,6 +1506,22 @@ public class Resource extends AbstractModel {
         this.ResourceZoneSet = ResourceZoneSet;
     }
 
+    /**
+     * Get <p>多账号额度</p> 
+     * @return OrgAccountQuota <p>多账号额度</p>
+     */
+    public Long getOrgAccountQuota() {
+        return this.OrgAccountQuota;
+    }
+
+    /**
+     * Set <p>多账号额度</p>
+     * @param OrgAccountQuota <p>多账号额度</p>
+     */
+    public void setOrgAccountQuota(Long OrgAccountQuota) {
+        this.OrgAccountQuota = OrgAccountQuota;
+    }
+
     public Resource() {
     }
 
@@ -1720,6 +1743,9 @@ public class Resource extends AbstractModel {
                 this.ResourceZoneSet[i] = new ResourceDeployZone(source.ResourceZoneSet[i]);
             }
         }
+        if (source.OrgAccountQuota != null) {
+            this.OrgAccountQuota = new Long(source.OrgAccountQuota);
+        }
     }
 
 
@@ -1791,6 +1817,7 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "BillingZone", this.BillingZone);
         this.setParamSimple(map, prefix + "DeployCvmCount", this.DeployCvmCount);
         this.setParamArrayObj(map, prefix + "ResourceZoneSet.", this.ResourceZoneSet);
+        this.setParamSimple(map, prefix + "OrgAccountQuota", this.OrgAccountQuota);
 
     }
 }

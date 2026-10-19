@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeResourcesResponse extends AbstractModel {
 
     /**
-    * 堡垒机资源列表
+    * <p>堡垒机资源列表</p>
     */
     @SerializedName("ResourceSet")
     @Expose
     private Resource [] ResourceSet;
 
     /**
-    * 堡垒机资源数量
+    * <p>堡垒机资源数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeResourcesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 堡垒机资源列表 
-     * @return ResourceSet 堡垒机资源列表
+     * Get <p>堡垒机资源列表</p> 
+     * @return ResourceSet <p>堡垒机资源列表</p>
      */
     public Resource [] getResourceSet() {
         return this.ResourceSet;
     }
 
     /**
-     * Set 堡垒机资源列表
-     * @param ResourceSet 堡垒机资源列表
+     * Set <p>堡垒机资源列表</p>
+     * @param ResourceSet <p>堡垒机资源列表</p>
      */
     public void setResourceSet(Resource [] ResourceSet) {
         this.ResourceSet = ResourceSet;
     }
 
     /**
-     * Get 堡垒机资源数量 
-     * @return TotalCount 堡垒机资源数量
+     * Get <p>堡垒机资源数量</p> 
+     * @return TotalCount <p>堡垒机资源数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 堡垒机资源数量
-     * @param TotalCount 堡垒机资源数量
+     * Set <p>堡垒机资源数量</p>
+     * @param TotalCount <p>堡垒机资源数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

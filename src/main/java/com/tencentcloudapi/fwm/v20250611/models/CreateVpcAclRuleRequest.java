@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateVpcAclRuleRequest extends AbstractModel {
 
     /**
-    * 规则组ID
+    * <p>规则组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 规则列表
+    * <p>规则列表</p>
     */
     @SerializedName("Rules")
     @Expose
     private VpcAclRule [] Rules;
 
     /**
-     * Get 规则组ID 
-     * @return GroupId 规则组ID
+     * Get <p>规则组ID</p> 
+     * @return GroupId <p>规则组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 规则组ID
-     * @param GroupId 规则组ID
+     * Set <p>规则组ID</p>
+     * @param GroupId <p>规则组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 规则列表 
-     * @return Rules 规则列表
+     * Get <p>规则列表</p> 
+     * @return Rules <p>规则列表</p>
      */
     public VpcAclRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 规则列表
-     * @param Rules 规则列表
+     * Set <p>规则列表</p>
+     * @param Rules <p>规则列表</p>
      */
     public void setRules(VpcAclRule [] Rules) {
         this.Rules = Rules;

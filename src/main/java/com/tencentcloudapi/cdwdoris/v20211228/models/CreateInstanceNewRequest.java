@@ -164,7 +164,7 @@ public class CreateInstanceNewRequest extends AbstractModel {
     private Long CacheDataDiskSize;
 
     /**
-    * <p>磁盘加密</p>
+    * <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
     */
     @SerializedName("DiskEncrypt")
     @Expose
@@ -499,16 +499,16 @@ public class CreateInstanceNewRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>磁盘加密</p> 
-     * @return DiskEncrypt <p>磁盘加密</p>
+     * Get <p>磁盘加密</p><p>默认为0不加密，1表示加密</p> 
+     * @return DiskEncrypt <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
     public Long getDiskEncrypt() {
         return this.DiskEncrypt;
     }
 
     /**
-     * Set <p>磁盘加密</p>
-     * @param DiskEncrypt <p>磁盘加密</p>
+     * Set <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
+     * @param DiskEncrypt <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
     public void setDiskEncrypt(Long DiskEncrypt) {
         this.DiskEncrypt = DiskEncrypt;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateStrategyRequest extends AbstractModel {
 
     /**
-    * 产品类型
+    * <p>产品类型</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 下发账号
+    * <p>下发账号</p>
     */
     @SerializedName("ReceiveAccount")
     @Expose
     private String [] ReceiveAccount;
 
     /**
-    * 前区规则组
+    * <p>前区规则组</p>
     */
     @SerializedName("PreStrategy")
     @Expose
     private StrategyReq [] PreStrategy;
 
     /**
-    * 后区规则组
+    * <p>后区规则组</p>
     */
     @SerializedName("PostStrategy")
     @Expose
     private StrategyReq [] PostStrategy;
 
     /**
-    * 下发账号组
+    * <p>下发账号组</p>
     */
     @SerializedName("ReceiveGroup")
     @Expose
     private String [] ReceiveGroup;
 
     /**
-     * Get 产品类型 
-     * @return Product 产品类型
+     * Get <p>产品类型</p> 
+     * @return Product <p>产品类型</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品类型
-     * @param Product 产品类型
+     * Set <p>产品类型</p>
+     * @param Product <p>产品类型</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 下发账号 
-     * @return ReceiveAccount 下发账号
+     * Get <p>下发账号</p> 
+     * @return ReceiveAccount <p>下发账号</p>
      */
     public String [] getReceiveAccount() {
         return this.ReceiveAccount;
     }
 
     /**
-     * Set 下发账号
-     * @param ReceiveAccount 下发账号
+     * Set <p>下发账号</p>
+     * @param ReceiveAccount <p>下发账号</p>
      */
     public void setReceiveAccount(String [] ReceiveAccount) {
         this.ReceiveAccount = ReceiveAccount;
     }
 
     /**
-     * Get 前区规则组 
-     * @return PreStrategy 前区规则组
+     * Get <p>前区规则组</p> 
+     * @return PreStrategy <p>前区规则组</p>
      */
     public StrategyReq [] getPreStrategy() {
         return this.PreStrategy;
     }
 
     /**
-     * Set 前区规则组
-     * @param PreStrategy 前区规则组
+     * Set <p>前区规则组</p>
+     * @param PreStrategy <p>前区规则组</p>
      */
     public void setPreStrategy(StrategyReq [] PreStrategy) {
         this.PreStrategy = PreStrategy;
     }
 
     /**
-     * Get 后区规则组 
-     * @return PostStrategy 后区规则组
+     * Get <p>后区规则组</p> 
+     * @return PostStrategy <p>后区规则组</p>
      */
     public StrategyReq [] getPostStrategy() {
         return this.PostStrategy;
     }
 
     /**
-     * Set 后区规则组
-     * @param PostStrategy 后区规则组
+     * Set <p>后区规则组</p>
+     * @param PostStrategy <p>后区规则组</p>
      */
     public void setPostStrategy(StrategyReq [] PostStrategy) {
         this.PostStrategy = PostStrategy;
     }
 
     /**
-     * Get 下发账号组 
-     * @return ReceiveGroup 下发账号组
+     * Get <p>下发账号组</p> 
+     * @return ReceiveGroup <p>下发账号组</p>
      */
     public String [] getReceiveGroup() {
         return this.ReceiveGroup;
     }
 
     /**
-     * Set 下发账号组
-     * @param ReceiveGroup 下发账号组
+     * Set <p>下发账号组</p>
+     * @param ReceiveGroup <p>下发账号组</p>
      */
     public void setReceiveGroup(String [] ReceiveGroup) {
         this.ReceiveGroup = ReceiveGroup;
