@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDomainDetailsClbResponse extends AbstractModel {
 
     /**
-    * clb域名详情
+    * <p>clb域名详情</p>
     */
     @SerializedName("DomainsClbPartInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDomainDetailsClbResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get clb域名详情 
-     * @return DomainsClbPartInfo clb域名详情
+     * Get <p>clb域名详情</p> 
+     * @return DomainsClbPartInfo <p>clb域名详情</p>
      */
     public ClbDomainsInfo getDomainsClbPartInfo() {
         return this.DomainsClbPartInfo;
     }
 
     /**
-     * Set clb域名详情
-     * @param DomainsClbPartInfo clb域名详情
+     * Set <p>clb域名详情</p>
+     * @param DomainsClbPartInfo <p>clb域名详情</p>
      */
     public void setDomainsClbPartInfo(ClbDomainsInfo DomainsClbPartInfo) {
         this.DomainsClbPartInfo = DomainsClbPartInfo;

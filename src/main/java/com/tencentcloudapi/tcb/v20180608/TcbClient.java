@@ -1182,6 +1182,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *启停AI模型，只支持内置分组 cloudbase 和 hunyuan-image
+     * @param req ModifyAIModelStatusRequest
+     * @return ModifyAIModelStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAIModelStatusResponse ModifyAIModelStatus(ModifyAIModelStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAIModelStatus", ModifyAIModelStatusResponse.class);
+    }
+
+    /**
      *修改客户端配置。采用增量更新策略，仅更新请求中传入的非空字段，未传入的字段保持原值不变。支持修改客户端基本信息（名称、图标、描述、主页地址）、安全域名、允许的 Scope 列表、Token 有效期、会话控制策略及启用状态等配置。
 Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户端 ID 等于环境 ID 且客户端尚未创建时，将自动创建默认客户端配置。
      * @param req ModifyClientRequest

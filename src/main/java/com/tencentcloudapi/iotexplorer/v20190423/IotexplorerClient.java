@@ -2602,6 +2602,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *新购图片云存资源包
+     * @param req PurchaseImagePackageRequest
+     * @return PurchaseImagePackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurchaseImagePackageResponse PurchaseImagePackage(PurchaseImagePackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PurchaseImagePackage", PurchaseImagePackageResponse.class);
+    }
+
+    /**
+     *新购视频云存资源包
+     * @param req PurchaseVideoPackageRequest
+     * @return PurchaseVideoPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurchaseVideoPackageResponse PurchaseVideoPackage(PurchaseVideoPackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PurchaseVideoPackage", PurchaseVideoPackageResponse.class);
+    }
+
+    /**
      *产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
      * @param req ReleaseStudioProductRequest
      * @return ReleaseStudioProductResponse
@@ -2763,6 +2785,28 @@ public class IotexplorerClient extends AbstractClient{
     public ShareDeviceToUserResponse ShareDeviceToUser(ShareDeviceToUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ShareDeviceToUser", ShareDeviceToUserResponse.class);
+    }
+
+    /**
+     *启用套餐用量上报
+     * @param req StartPackageUsageReportRequest
+     * @return StartPackageUsageReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPackageUsageReportResponse StartPackageUsageReport(StartPackageUsageReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartPackageUsageReport", StartPackageUsageReportResponse.class);
+    }
+
+    /**
+     *停用套餐用量上报
+     * @param req StopPackageUsageReportRequest
+     * @return StopPackageUsageReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopPackageUsageReportResponse StopPackageUsageReport(StopPackageUsageReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopPackageUsageReport", StopPackageUsageReportResponse.class);
     }
 
     /**

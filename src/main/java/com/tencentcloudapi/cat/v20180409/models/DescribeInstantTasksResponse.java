@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstantTasksResponse extends AbstractModel {
 
     /**
-    * 任务
+    * <p>任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
@@ -32,7 +32,7 @@ public class DescribeInstantTasksResponse extends AbstractModel {
     private SingleInstantTask [] Tasks;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeInstantTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务
+     * Get <p>任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tasks 任务
+     * @return Tasks <p>任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SingleInstantTask [] getTasks() {
@@ -56,9 +56,9 @@ public class DescribeInstantTasksResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务
+     * Set <p>任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tasks 任务
+     * @param Tasks <p>任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(SingleInstantTask [] Tasks) {
@@ -66,16 +66,16 @@ public class DescribeInstantTasksResponse extends AbstractModel {
     }
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

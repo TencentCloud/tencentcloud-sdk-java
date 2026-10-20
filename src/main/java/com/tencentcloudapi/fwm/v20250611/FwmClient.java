@@ -325,6 +325,17 @@ public class FwmClient extends AbstractClient{
     }
 
     /**
+     *查询规则组列表
+     * @param req DescribeRuleGroupsRequest
+     * @return DescribeRuleGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRuleGroupsResponse DescribeRuleGroups(DescribeRuleGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRuleGroups", DescribeRuleGroupsResponse.class);
+    }
+
+    /**
      *查询规则详情（规则组管理）
      * @param req DescribeSecurityGroupRuleRequest
      * @return DescribeSecurityGroupRuleResponse

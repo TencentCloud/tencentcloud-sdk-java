@@ -213,6 +213,13 @@ public class DomainsPartInfo extends AbstractModel {
     private String Cname;
 
     /**
+    * <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+    */
+    @SerializedName("DnssecCname")
+    @Expose
+    private String DnssecCname;
+
+    /**
     * <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
     */
     @SerializedName("IsKeepAlive")
@@ -887,6 +894,22 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p> 
+     * @return DnssecCname <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+     */
+    public String getDnssecCname() {
+        return this.DnssecCname;
+    }
+
+    /**
+     * Set <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+     * @param DnssecCname <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+     */
+    public void setDnssecCname(String DnssecCname) {
+        this.DnssecCname = DnssecCname;
+    }
+
+    /**
      * Get <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p> 
      * @return IsKeepAlive <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
      */
@@ -1525,6 +1548,9 @@ public class DomainsPartInfo extends AbstractModel {
         if (source.Cname != null) {
             this.Cname = new String(source.Cname);
         }
+        if (source.DnssecCname != null) {
+            this.DnssecCname = new String(source.DnssecCname);
+        }
         if (source.IsKeepAlive != null) {
             this.IsKeepAlive = new Long(source.IsKeepAlive);
         }
@@ -1679,6 +1705,7 @@ public class DomainsPartInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpstreamScheme", this.UpstreamScheme);
         this.setParamSimple(map, prefix + "Cls", this.Cls);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
+        this.setParamSimple(map, prefix + "DnssecCname", this.DnssecCname);
         this.setParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
         this.setParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
         this.setParamSimple(map, prefix + "TLSVersion", this.TLSVersion);

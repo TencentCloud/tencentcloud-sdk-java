@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProbeTask extends AbstractModel {
 
     /**
-    * 任务名
+    * <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,36 +32,28 @@ public class ProbeTask extends AbstractModel {
     private String Name;
 
     /**
-    * 任务 ID
+    * <p>任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即时拨测只支持页面浏览，网络质量，文件下载
+    * <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即时拨测只支持页面浏览，网络质量，文件下载</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 拨测节点列表
+    * <p>拨测节点列表</p>
     */
     @SerializedName("Nodes")
     @Expose
     private String [] Nodes;
 
     /**
-    * 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+    * <p>拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeIpType")
@@ -69,79 +61,63 @@ public class ProbeTask extends AbstractModel {
     private Long NodeIpType;
 
     /**
-    * 拨测间隔，单位为分钟
+    * <p>拨测间隔，单位为分钟</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 拨测参数
+    * <p>拨测参数</p>
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-    * 任务状态
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+    * <p>任务状态</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 目标地址
+    * <p>目标地址</p>
     */
     @SerializedName("TargetAddress")
     @Expose
     private String TargetAddress;
 
     /**
-    * 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+    * <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+    * <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
     */
     @SerializedName("OrderState")
     @Expose
     private Long OrderState;
 
     /**
-    * 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
+    * <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
     */
     @SerializedName("TaskCategory")
     @Expose
     private Long TaskCategory;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 定时任务cron表达式
+    * <p>定时任务cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cron")
@@ -149,9 +125,7 @@ public class ProbeTask extends AbstractModel {
     private String Cron;
 
     /**
-    * 定时任务启动状态
-<li>1 = 定时任务表达式生效</li>
-<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
+    * <p>定时任务启动状态</p><li>1 = 定时任务表达式生效</li><li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronState")
@@ -159,7 +133,7 @@ public class ProbeTask extends AbstractModel {
     private Long CronState;
 
     /**
-    * 任务当前绑定的标签
+    * <p>任务当前绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagInfoList")
@@ -167,7 +141,7 @@ public class ProbeTask extends AbstractModel {
     private KeyValuePair [] TagInfoList;
 
     /**
-    * 是否为同步账号
+    * <p>是否为同步账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubSyncFlag")
@@ -175,9 +149,9 @@ public class ProbeTask extends AbstractModel {
     private Long SubSyncFlag;
 
     /**
-     * Get 任务名
+     * Get <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 任务名
+     * @return Name <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -185,9 +159,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Set 任务名
+     * Set <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 任务名
+     * @param Name <p>任务名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -195,89 +169,57 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+     * Get <p>任务 ID</p> 
+     * @return TaskId <p>任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set <p>任务 ID</p>
+     * @param TaskId <p>任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即时拨测只支持页面浏览，网络质量，文件下载 
-     * @return TaskType 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即时拨测只支持页面浏览，网络质量，文件下载
+     * Get <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即时拨测只支持页面浏览，网络质量，文件下载</p> 
+     * @return TaskType <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即时拨测只支持页面浏览，网络质量，文件下载</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即时拨测只支持页面浏览，网络质量，文件下载
-     * @param TaskType 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即时拨测只支持页面浏览，网络质量，文件下载
+     * Set <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即时拨测只支持页面浏览，网络质量，文件下载</p>
+     * @param TaskType <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即时拨测只支持页面浏览，网络质量，文件下载</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 拨测节点列表 
-     * @return Nodes 拨测节点列表
+     * Get <p>拨测节点列表</p> 
+     * @return Nodes <p>拨测节点列表</p>
      */
     public String [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 拨测节点列表
-     * @param Nodes 拨测节点列表
+     * Set <p>拨测节点列表</p>
+     * @param Nodes <p>拨测节点列表</p>
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+     * Get <p>拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeIpType 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+     * @return NodeIpType <p>拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodeIpType() {
@@ -285,9 +227,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Set 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+     * Set <p>拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeIpType 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+     * @param NodeIpType <p>拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeIpType(Long NodeIpType) {
@@ -295,201 +237,137 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Get 拨测间隔，单位为分钟 
-     * @return Interval 拨测间隔，单位为分钟
+     * Get <p>拨测间隔，单位为分钟</p> 
+     * @return Interval <p>拨测间隔，单位为分钟</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 拨测间隔，单位为分钟
-     * @param Interval 拨测间隔，单位为分钟
+     * Set <p>拨测间隔，单位为分钟</p>
+     * @param Interval <p>拨测间隔，单位为分钟</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 拨测参数 
-     * @return Parameters 拨测参数
+     * Get <p>拨测参数</p> 
+     * @return Parameters <p>拨测参数</p>
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 拨测参数
-     * @param Parameters 拨测参数
+     * Set <p>拨测参数</p>
+     * @param Parameters <p>拨测参数</p>
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 任务状态
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li> 
-     * @return Status 任务状态
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+     * Get <p>任务状态</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li> 
+     * @return Status <p>任务状态</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
-     * @param Status 任务状态
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+     * Set <p>任务状态</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
+     * @param Status <p>任务状态</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 目标地址 
-     * @return TargetAddress 目标地址
+     * Get <p>目标地址</p> 
+     * @return TargetAddress <p>目标地址</p>
      */
     public String getTargetAddress() {
         return this.TargetAddress;
     }
 
     /**
-     * Set 目标地址
-     * @param TargetAddress 目标地址
+     * Set <p>目标地址</p>
+     * @param TargetAddress <p>目标地址</p>
      */
     public void setTargetAddress(String TargetAddress) {
         this.TargetAddress = TargetAddress;
     }
 
     /**
-     * Get 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li> 
-     * @return PayMode 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+     * Get <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li> 
+     * @return PayMode <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
-     * @param PayMode 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+     * Set <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
+     * @param PayMode <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li> 
-     * @return OrderState 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+     * Get <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li> 
+     * @return OrderState <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
      */
     public Long getOrderState() {
         return this.OrderState;
     }
 
     /**
-     * Set 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
-     * @param OrderState 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+     * Set <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
+     * @param OrderState <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
      */
     public void setOrderState(Long OrderState) {
         this.OrderState = OrderState;
     }
 
     /**
-     * Get 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li> 
-     * @return TaskCategory 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
+     * Get <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li> 
+     * @return TaskCategory <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
      */
     public Long getTaskCategory() {
         return this.TaskCategory;
     }
 
     /**
-     * Set 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
-     * @param TaskCategory 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
+     * Set <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
+     * @param TaskCategory <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
      */
     public void setTaskCategory(Long TaskCategory) {
         this.TaskCategory = TaskCategory;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedAt <p>创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedAt <p>创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 定时任务cron表达式
+     * Get <p>定时任务cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cron 定时任务cron表达式
+     * @return Cron <p>定时任务cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCron() {
@@ -497,9 +375,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Set 定时任务cron表达式
+     * Set <p>定时任务cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cron 定时任务cron表达式
+     * @param Cron <p>定时任务cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCron(String Cron) {
@@ -507,13 +385,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Get 定时任务启动状态
-<li>1 = 定时任务表达式生效</li>
-<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
+     * Get <p>定时任务启动状态</p><li>1 = 定时任务表达式生效</li><li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CronState 定时任务启动状态
-<li>1 = 定时任务表达式生效</li>
-<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
+     * @return CronState <p>定时任务启动状态</p><li>1 = 定时任务表达式生效</li><li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCronState() {
@@ -521,13 +395,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Set 定时任务启动状态
-<li>1 = 定时任务表达式生效</li>
-<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
+     * Set <p>定时任务启动状态</p><li>1 = 定时任务表达式生效</li><li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CronState 定时任务启动状态
-<li>1 = 定时任务表达式生效</li>
-<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
+     * @param CronState <p>定时任务启动状态</p><li>1 = 定时任务表达式生效</li><li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronState(Long CronState) {
@@ -535,9 +405,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Get 任务当前绑定的标签
+     * Get <p>任务当前绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagInfoList 任务当前绑定的标签
+     * @return TagInfoList <p>任务当前绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValuePair [] getTagInfoList() {
@@ -545,9 +415,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Set 任务当前绑定的标签
+     * Set <p>任务当前绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagInfoList 任务当前绑定的标签
+     * @param TagInfoList <p>任务当前绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagInfoList(KeyValuePair [] TagInfoList) {
@@ -555,9 +425,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Get 是否为同步账号
+     * Get <p>是否为同步账号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubSyncFlag 是否为同步账号
+     * @return SubSyncFlag <p>是否为同步账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubSyncFlag() {
@@ -565,9 +435,9 @@ public class ProbeTask extends AbstractModel {
     }
 
     /**
-     * Set 是否为同步账号
+     * Set <p>是否为同步账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubSyncFlag 是否为同步账号
+     * @param SubSyncFlag <p>是否为同步账号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubSyncFlag(Long SubSyncFlag) {

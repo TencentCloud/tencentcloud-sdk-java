@@ -115,6 +115,22 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
     private String ClientIP;
 
     /**
+    * 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+    */
+    @SerializedName("History")
+    @Expose
+    private String [] History;
+
+    /**
+    * 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+    */
+    @SerializedName("Urls")
+    @Expose
+    private String [] Urls;
+
+    /**
      * Get <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p> 
      * @return ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
@@ -322,6 +338,46 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.ClientIP = ClientIP;
     }
 
+    /**
+     * Get 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃 
+     * @return History 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+     */
+    public String [] getHistory() {
+        return this.History;
+    }
+
+    /**
+     * Set 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+     * @param History 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+     */
+    public void setHistory(String [] History) {
+        this.History = History;
+    }
+
+    /**
+     * Get 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断 
+     * @return Urls 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+     */
+    public String [] getUrls() {
+        return this.Urls;
+    }
+
+    /**
+     * Set 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+     * @param Urls 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+     */
+    public void setUrls(String [] Urls) {
+        this.Urls = Urls;
+    }
+
     public DescribeLLMContentSecCheckRequest() {
     }
 
@@ -369,6 +425,18 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         if (source.ClientIP != null) {
             this.ClientIP = new String(source.ClientIP);
         }
+        if (source.History != null) {
+            this.History = new String[source.History.length];
+            for (int i = 0; i < source.History.length; i++) {
+                this.History[i] = new String(source.History[i]);
+            }
+        }
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
+            }
+        }
     }
 
 
@@ -389,6 +457,8 @@ public class DescribeLLMContentSecCheckRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamObj(map, prefix + "IntentContent.", this.IntentContent);
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
+        this.setParamArraySimple(map, prefix + "History.", this.History);
+        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
 
     }
 }

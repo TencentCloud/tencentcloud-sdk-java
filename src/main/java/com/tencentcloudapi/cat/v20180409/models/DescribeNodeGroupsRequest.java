@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class DescribeNodeGroupsRequest extends AbstractModel {
 
     /**
-    * 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
+    * <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
     */
     @SerializedName("NodeType")
     @Expose
     private Long [] NodeType;
 
     /**
-    * 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
+    * <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
     */
     @SerializedName("TaskCategory")
     @Expose
     private Long TaskCategory;
 
     /**
-    * IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
+    * <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
     */
     @SerializedName("IPType")
     @Expose
     private Long IPType;
 
     /**
-    * 拨测点描述关键词。
+    * <p>拨测点描述关键词。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
+    * <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
     */
     @SerializedName("RegionID")
     @Expose
     private Long RegionID;
 
     /**
-    * 省份或国家ID。0表示全部，不填默认为0
+    * <p>省份或国家ID。0表示全部，不填默认为0</p>
     */
     @SerializedName("DistrictID")
     @Expose
     private Long DistrictID;
 
     /**
-    * 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
+    * <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
     */
     @SerializedName("NetServiceID")
     @Expose
     private Long NetServiceID;
 
     /**
-    * 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
+    * <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
     */
     @SerializedName("NodeGroupType")
     @Expose
     private Long NodeGroupType;
 
     /**
-    * 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
+    * <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+    * <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
     */
     @SerializedName("ProbeType")
     @Expose
     private Long ProbeType;
 
     /**
-     * Get 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0 
-     * @return NodeType 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
+     * Get <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p> 
+     * @return NodeType <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
      */
     public Long [] getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
-     * @param NodeType 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
+     * Set <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
+     * @param NodeType <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
      */
     public void setNodeType(Long [] NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。 
-     * @return TaskCategory 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
+     * Get <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p> 
+     * @return TaskCategory <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
      */
     public Long getTaskCategory() {
         return this.TaskCategory;
     }
 
     /**
-     * Set 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
-     * @param TaskCategory 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
+     * Set <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
+     * @param TaskCategory <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
      */
     public void setTaskCategory(Long TaskCategory) {
         this.TaskCategory = TaskCategory;
     }
 
     /**
-     * Get IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0 
-     * @return IPType IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
+     * Get <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p> 
+     * @return IPType <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
      */
     public Long getIPType() {
         return this.IPType;
     }
 
     /**
-     * Set IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
-     * @param IPType IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
+     * Set <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
+     * @param IPType <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
      */
     public void setIPType(Long IPType) {
         this.IPType = IPType;
     }
 
     /**
-     * Get 拨测点描述关键词。 
-     * @return Name 拨测点描述关键词。
+     * Get <p>拨测点描述关键词。</p> 
+     * @return Name <p>拨测点描述关键词。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 拨测点描述关键词。
-     * @param Name 拨测点描述关键词。
+     * Set <p>拨测点描述关键词。</p>
+     * @param Name <p>拨测点描述关键词。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0 
-     * @return RegionID 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
+     * Get <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p> 
+     * @return RegionID <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
      */
     public Long getRegionID() {
         return this.RegionID;
     }
 
     /**
-     * Set 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
-     * @param RegionID 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
+     * Set <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
+     * @param RegionID <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
      */
     public void setRegionID(Long RegionID) {
         this.RegionID = RegionID;
     }
 
     /**
-     * Get 省份或国家ID。0表示全部，不填默认为0 
-     * @return DistrictID 省份或国家ID。0表示全部，不填默认为0
+     * Get <p>省份或国家ID。0表示全部，不填默认为0</p> 
+     * @return DistrictID <p>省份或国家ID。0表示全部，不填默认为0</p>
      */
     public Long getDistrictID() {
         return this.DistrictID;
     }
 
     /**
-     * Set 省份或国家ID。0表示全部，不填默认为0
-     * @param DistrictID 省份或国家ID。0表示全部，不填默认为0
+     * Set <p>省份或国家ID。0表示全部，不填默认为0</p>
+     * @param DistrictID <p>省份或国家ID。0表示全部，不填默认为0</p>
      */
     public void setDistrictID(Long DistrictID) {
         this.DistrictID = DistrictID;
     }
 
     /**
-     * Get 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0 
-     * @return NetServiceID 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
+     * Get <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p> 
+     * @return NetServiceID <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
      */
     public Long getNetServiceID() {
         return this.NetServiceID;
     }
 
     /**
-     * Set 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
-     * @param NetServiceID 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
+     * Set <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
+     * @param NetServiceID <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
      */
     public void setNetServiceID(Long NetServiceID) {
         this.NetServiceID = NetServiceID;
     }
 
     /**
-     * Get 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0 
-     * @return NodeGroupType 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
+     * Get <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p> 
+     * @return NodeGroupType <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
      */
     public Long getNodeGroupType() {
         return this.NodeGroupType;
     }
 
     /**
-     * Set 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
-     * @param NodeGroupType 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
+     * Set <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
+     * @param NodeGroupType <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
      */
     public void setNodeGroupType(Long NodeGroupType) {
         this.NodeGroupType = NodeGroupType;
     }
 
     /**
-     * Get 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤 
-     * @return TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
+     * Get <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p> 
+     * @return TaskType <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
-     * @param TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
+     * Set <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
+     * @param TaskType <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。 
-     * @return ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * Get <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p> 
+     * @return ProbeType <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
      */
     public Long getProbeType() {
         return this.ProbeType;
     }
 
     /**
-     * Set 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
-     * @param ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * Set <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
+     * @param ProbeType <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
      */
     public void setProbeType(Long ProbeType) {
         this.ProbeType = ProbeType;

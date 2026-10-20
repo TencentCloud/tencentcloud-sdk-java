@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProbeTasksResponse extends AbstractModel {
 
     /**
-    * 任务列表
+    * <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskSet")
@@ -32,7 +32,7 @@ public class DescribeProbeTasksResponse extends AbstractModel {
     private ProbeTask [] TaskSet;
 
     /**
-    * 任务总数
+    * <p>任务总数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeProbeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务列表
+     * Get <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskSet 任务列表
+     * @return TaskSet <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProbeTask [] getTaskSet() {
@@ -56,9 +56,9 @@ public class DescribeProbeTasksResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务列表
+     * Set <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskSet 任务列表
+     * @param TaskSet <p>任务列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskSet(ProbeTask [] TaskSet) {
@@ -66,16 +66,16 @@ public class DescribeProbeTasksResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务总数 
-     * @return Total 任务总数
+     * Get <p>任务总数</p> 
+     * @return Total <p>任务总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 任务总数
-     * @param Total 任务总数
+     * Set <p>任务总数</p>
+     * @param Total <p>任务总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

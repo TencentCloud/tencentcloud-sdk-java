@@ -24,332 +24,322 @@ import java.util.HashMap;
 public class CreateProbeTasksRequest extends AbstractModel {
 
     /**
-    * 批量任务名-地址
+    * <p>批量任务名-地址</p>
     */
     @SerializedName("BatchTasks")
     @Expose
     private ProbeTaskBasicConfiguration [] BatchTasks;
 
     /**
-    * 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+    * <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
+    * <p>拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。</p>
     */
     @SerializedName("Nodes")
     @Expose
     private String [] Nodes;
 
     /**
-    * 拨测间隔，单位为分钟
+    * <p>拨测间隔，单位为分钟</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
+    * <p>拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。</p>
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-    * 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
+    * <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
     */
     @SerializedName("TaskCategory")
     @Expose
     private Long TaskCategory;
 
     /**
-    * 定时任务cron表达式
+    * <p>定时任务cron表达式</p>
     */
     @SerializedName("Cron")
     @Expose
     private String Cron;
 
     /**
-    * 资源标签值
+    * <p>资源标签值</p>
     */
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
 
     /**
-    * 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+    * <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
     */
     @SerializedName("ProbeType")
     @Expose
     private Long ProbeType;
 
     /**
-    * 插件类型，如CDN，详情参考云拨测官方文档。
+    * <p>插件类型，如CDN，详情参考云拨测官方文档。</p>
     */
     @SerializedName("PluginSource")
     @Expose
     private String PluginSource;
 
     /**
-    * 客户端ID
+    * <p>客户端ID</p>
     */
     @SerializedName("ClientNum")
     @Expose
     private String ClientNum;
 
     /**
-    * 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+    * <p>拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6</p>
     */
     @SerializedName("NodeIpType")
     @Expose
     private Long NodeIpType;
 
     /**
-    * 供应商子账户同步标志
+    * <p>供应商子账户同步标志</p>
     */
     @SerializedName("SubSyncFlag")
     @Expose
     private Long SubSyncFlag;
 
     /**
-    * 创建者名称
+    * <p>创建者名称</p>
     */
     @SerializedName("RtxName")
     @Expose
     private String RtxName;
 
     /**
-     * Get 批量任务名-地址 
-     * @return BatchTasks 批量任务名-地址
+     * Get <p>批量任务名-地址</p> 
+     * @return BatchTasks <p>批量任务名-地址</p>
      */
     public ProbeTaskBasicConfiguration [] getBatchTasks() {
         return this.BatchTasks;
     }
 
     /**
-     * Set 批量任务名-地址
-     * @param BatchTasks 批量任务名-地址
+     * Set <p>批量任务名-地址</p>
+     * @param BatchTasks <p>批量任务名-地址</p>
      */
     public void setBatchTasks(ProbeTaskBasicConfiguration [] BatchTasks) {
         this.BatchTasks = BatchTasks;
     }
 
     /**
-     * Get 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois 
-     * @return TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+     * Get <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois</p> 
+     * @return TaskType <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
-     * @param TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+     * Set <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois</p>
+     * @param TaskType <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。 
-     * @return Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
+     * Get <p>拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。</p> 
+     * @return Nodes <p>拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。</p>
      */
     public String [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
-     * @param Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
+     * Set <p>拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。</p>
+     * @param Nodes <p>拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。</p>
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 拨测间隔，单位为分钟 
-     * @return Interval 拨测间隔，单位为分钟
+     * Get <p>拨测间隔，单位为分钟</p> 
+     * @return Interval <p>拨测间隔，单位为分钟</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 拨测间隔，单位为分钟
-     * @param Interval 拨测间隔，单位为分钟
+     * Set <p>拨测间隔，单位为分钟</p>
+     * @param Interval <p>拨测间隔，单位为分钟</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。 
-     * @return Parameters 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
+     * Get <p>拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。</p> 
+     * @return Parameters <p>拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。</p>
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
-     * @param Parameters 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
+     * Set <p>拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。</p>
+     * @param Parameters <p>拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。</p>
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li> 
-     * @return TaskCategory 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
+     * Get <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li> 
+     * @return TaskCategory <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
      */
     public Long getTaskCategory() {
         return this.TaskCategory;
     }
 
     /**
-     * Set 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
-     * @param TaskCategory 任务分类
-<li>1 = PC</li>
-<li> 2 = Mobile </li>
+     * Set <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
+     * @param TaskCategory <p>任务分类</p><li>1 = PC</li><li> 2 = Mobile </li>
      */
     public void setTaskCategory(Long TaskCategory) {
         this.TaskCategory = TaskCategory;
     }
 
     /**
-     * Get 定时任务cron表达式 
-     * @return Cron 定时任务cron表达式
+     * Get <p>定时任务cron表达式</p> 
+     * @return Cron <p>定时任务cron表达式</p>
      */
     public String getCron() {
         return this.Cron;
     }
 
     /**
-     * Set 定时任务cron表达式
-     * @param Cron 定时任务cron表达式
+     * Set <p>定时任务cron表达式</p>
+     * @param Cron <p>定时任务cron表达式</p>
      */
     public void setCron(String Cron) {
         this.Cron = Cron;
     }
 
     /**
-     * Get 资源标签值 
-     * @return Tag 资源标签值
+     * Get <p>资源标签值</p> 
+     * @return Tag <p>资源标签值</p>
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 资源标签值
-     * @param Tag 资源标签值
+     * Set <p>资源标签值</p>
+     * @param Tag <p>资源标签值</p>
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。 
-     * @return ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * Get <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p> 
+     * @return ProbeType <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
      */
     public Long getProbeType() {
         return this.ProbeType;
     }
 
     /**
-     * Set 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
-     * @param ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * Set <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
+     * @param ProbeType <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
      */
     public void setProbeType(Long ProbeType) {
         this.ProbeType = ProbeType;
     }
 
     /**
-     * Get 插件类型，如CDN，详情参考云拨测官方文档。 
-     * @return PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
+     * Get <p>插件类型，如CDN，详情参考云拨测官方文档。</p> 
+     * @return PluginSource <p>插件类型，如CDN，详情参考云拨测官方文档。</p>
      */
     public String getPluginSource() {
         return this.PluginSource;
     }
 
     /**
-     * Set 插件类型，如CDN，详情参考云拨测官方文档。
-     * @param PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
+     * Set <p>插件类型，如CDN，详情参考云拨测官方文档。</p>
+     * @param PluginSource <p>插件类型，如CDN，详情参考云拨测官方文档。</p>
      */
     public void setPluginSource(String PluginSource) {
         this.PluginSource = PluginSource;
     }
 
     /**
-     * Get 客户端ID 
-     * @return ClientNum 客户端ID
+     * Get <p>客户端ID</p> 
+     * @return ClientNum <p>客户端ID</p>
      */
     public String getClientNum() {
         return this.ClientNum;
     }
 
     /**
-     * Set 客户端ID
-     * @param ClientNum 客户端ID
+     * Set <p>客户端ID</p>
+     * @param ClientNum <p>客户端ID</p>
      */
     public void setClientNum(String ClientNum) {
         this.ClientNum = ClientNum;
     }
 
     /**
-     * Get 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6 
-     * @return NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     * Get <p>拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6</p> 
+     * @return NodeIpType <p>拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6</p>
      */
     public Long getNodeIpType() {
         return this.NodeIpType;
     }
 
     /**
-     * Set 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
-     * @param NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     * Set <p>拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6</p>
+     * @param NodeIpType <p>拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6</p>
      */
     public void setNodeIpType(Long NodeIpType) {
         this.NodeIpType = NodeIpType;
     }
 
     /**
-     * Get 供应商子账户同步标志 
-     * @return SubSyncFlag 供应商子账户同步标志
+     * Get <p>供应商子账户同步标志</p> 
+     * @return SubSyncFlag <p>供应商子账户同步标志</p>
      */
     public Long getSubSyncFlag() {
         return this.SubSyncFlag;
     }
 
     /**
-     * Set 供应商子账户同步标志
-     * @param SubSyncFlag 供应商子账户同步标志
+     * Set <p>供应商子账户同步标志</p>
+     * @param SubSyncFlag <p>供应商子账户同步标志</p>
      */
     public void setSubSyncFlag(Long SubSyncFlag) {
         this.SubSyncFlag = SubSyncFlag;
     }
 
     /**
-     * Get 创建者名称 
-     * @return RtxName 创建者名称
+     * Get <p>创建者名称</p> 
+     * @return RtxName <p>创建者名称</p>
      */
     public String getRtxName() {
         return this.RtxName;
     }
 
     /**
-     * Set 创建者名称
-     * @param RtxName 创建者名称
+     * Set <p>创建者名称</p>
+     * @param RtxName <p>创建者名称</p>
      */
     public void setRtxName(String RtxName) {
         this.RtxName = RtxName;

@@ -31,7 +31,7 @@ public class BotPkg extends AbstractModel {
     private String ResourceIds;
 
     /**
-    * 状态
+    * 状态，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -80,7 +80,7 @@ public class BotPkg extends AbstractModel {
     private String Type;
 
     /**
-    * 续费标志	
+    * 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -124,16 +124,16 @@ public class BotPkg extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态，0表示关闭，1表示开启 
+     * @return Status 状态，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态，0表示关闭，1表示开启
+     * @param Status 状态，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -236,16 +236,16 @@ public class BotPkg extends AbstractModel {
     }
 
     /**
-     * Get 续费标志	 
-     * @return RenewFlag 续费标志	
+     * Get 续费标识，0表示手动续费，1表示自动续费，2表示到期不续 
+     * @return RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标志	
-     * @param RenewFlag 续费标志	
+     * Set 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+     * @param RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;

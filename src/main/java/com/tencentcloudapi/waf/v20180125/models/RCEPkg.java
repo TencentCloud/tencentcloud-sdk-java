@@ -31,7 +31,7 @@ public class RCEPkg extends AbstractModel {
     private String ResourceIds;
 
     /**
-    * 状态
+    * 状态，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +73,7 @@ public class RCEPkg extends AbstractModel {
     private Long UsedNum;
 
     /**
-    * 续费标志
+    * 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -85,6 +85,20 @@ public class RCEPkg extends AbstractModel {
     @SerializedName("BillingItem")
     @Expose
     private String BillingItem;
+
+    /**
+    * 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+    */
+    @SerializedName("ElasticMode")
+    @Expose
+    private Long ElasticMode;
+
+    /**
+    * 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
+    */
+    @SerializedName("ElasticBilling")
+    @Expose
+    private Long ElasticBilling;
 
     /**
      * Get 资源id 
@@ -103,16 +117,16 @@ public class RCEPkg extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态，0表示关闭，1表示开启 
+     * @return Status 状态，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态，0表示关闭，1表示开启
+     * @param Status 状态，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -199,16 +213,16 @@ public class RCEPkg extends AbstractModel {
     }
 
     /**
-     * Get 续费标志 
-     * @return RenewFlag 续费标志
+     * Get 续费标识，0表示手动续费，1表示自动续费，2表示到期不续 
+     * @return RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标志
-     * @param RenewFlag 续费标志
+     * Set 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+     * @param RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -228,6 +242,38 @@ public class RCEPkg extends AbstractModel {
      */
     public void setBillingItem(String BillingItem) {
         this.BillingItem = BillingItem;
+    }
+
+    /**
+     * Get 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0 
+     * @return ElasticMode 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+     */
+    public Long getElasticMode() {
+        return this.ElasticMode;
+    }
+
+    /**
+     * Set 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+     * @param ElasticMode 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+     */
+    public void setElasticMode(Long ElasticMode) {
+        this.ElasticMode = ElasticMode;
+    }
+
+    /**
+     * Get 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限 
+     * @return ElasticBilling 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
+     */
+    public Long getElasticBilling() {
+        return this.ElasticBilling;
+    }
+
+    /**
+     * Set 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
+     * @param ElasticBilling 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
+     */
+    public void setElasticBilling(Long ElasticBilling) {
+        this.ElasticBilling = ElasticBilling;
     }
 
     public RCEPkg() {
@@ -265,6 +311,12 @@ public class RCEPkg extends AbstractModel {
         if (source.BillingItem != null) {
             this.BillingItem = new String(source.BillingItem);
         }
+        if (source.ElasticMode != null) {
+            this.ElasticMode = new Long(source.ElasticMode);
+        }
+        if (source.ElasticBilling != null) {
+            this.ElasticBilling = new Long(source.ElasticBilling);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class RCEPkg extends AbstractModel {
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
+        this.setParamSimple(map, prefix + "ElasticMode", this.ElasticMode);
+        this.setParamSimple(map, prefix + "ElasticBilling", this.ElasticBilling);
 
     }
 }

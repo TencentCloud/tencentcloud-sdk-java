@@ -45,6 +45,13 @@ public class CreateAgentApplicationRequest extends AbstractModel {
     private String LogsetId;
 
     /**
+    * <p>标签描述列表，通过指定该参数可以同时绑定标签到应用创建的主题和日志集。</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get <p>应用名称</p><p>入参限制：</p><ul><li>不能为空字符串</li><li>不能包含字符<code>|</code></li><li>不能超过64字符</li></ul> 
      * @return ApplicationName <p>应用名称</p><p>入参限制：</p><ul><li>不能为空字符串</li><li>不能包含字符<code>|</code></li><li>不能超过64字符</li></ul>
      */
@@ -92,6 +99,22 @@ public class CreateAgentApplicationRequest extends AbstractModel {
         this.LogsetId = LogsetId;
     }
 
+    /**
+     * Get <p>标签描述列表，通过指定该参数可以同时绑定标签到应用创建的主题和日志集。</p> 
+     * @return Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到应用创建的主题和日志集。</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签描述列表，通过指定该参数可以同时绑定标签到应用创建的主题和日志集。</p>
+     * @param Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到应用创建的主题和日志集。</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateAgentApplicationRequest() {
     }
 
@@ -109,6 +132,12 @@ public class CreateAgentApplicationRequest extends AbstractModel {
         if (source.LogsetId != null) {
             this.LogsetId = new String(source.LogsetId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class CreateAgentApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

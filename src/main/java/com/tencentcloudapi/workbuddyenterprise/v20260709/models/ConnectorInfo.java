@@ -94,7 +94,7 @@ public class ConnectorInfo extends AbstractModel {
     private String ServiceUrl;
 
     /**
-    * 授权方式列表：NONE / ONEID / OAUTH2_IDP
+    * 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
     */
     @SerializedName("AuthModes")
     @Expose
@@ -134,6 +134,13 @@ public class ConnectorInfo extends AbstractModel {
     @SerializedName("ModifiedTime")
     @Expose
     private String ModifiedTime;
+
+    /**
+    * VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+    */
+    @SerializedName("VpcConfigId")
+    @Expose
+    private String VpcConfigId;
 
     /**
      * Get 连接器 ID 
@@ -296,16 +303,16 @@ public class ConnectorInfo extends AbstractModel {
     }
 
     /**
-     * Get 授权方式列表：NONE / ONEID / OAUTH2_IDP 
-     * @return AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP
+     * Get 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY 
+     * @return AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
      */
     public String [] getAuthModes() {
         return this.AuthModes;
     }
 
     /**
-     * Set 授权方式列表：NONE / ONEID / OAUTH2_IDP
-     * @param AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP
+     * Set 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
+     * @param AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
      */
     public void setAuthModes(String [] AuthModes) {
         this.AuthModes = AuthModes;
@@ -391,6 +398,22 @@ public class ConnectorInfo extends AbstractModel {
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。 
+     * @return VpcConfigId VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+     */
+    public String getVpcConfigId() {
+        return this.VpcConfigId;
+    }
+
+    /**
+     * Set VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+     * @param VpcConfigId VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+     */
+    public void setVpcConfigId(String VpcConfigId) {
+        this.VpcConfigId = VpcConfigId;
+    }
+
     public ConnectorInfo() {
     }
 
@@ -450,6 +473,9 @@ public class ConnectorInfo extends AbstractModel {
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
+        if (source.VpcConfigId != null) {
+            this.VpcConfigId = new String(source.VpcConfigId);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class ConnectorInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "VpcConfigId", this.VpcConfigId);
 
     }
 }

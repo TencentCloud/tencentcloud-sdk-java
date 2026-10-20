@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class StartComputeRequest extends AbstractModel {
 
     /**
-    * 计算资源 ID
-    */
-    @SerializedName("ResourceId")
-    @Expose
-    private String ResourceId;
-
-    /**
     * 工作空间 ID
     */
     @SerializedName("WorkspaceId")
@@ -38,20 +31,18 @@ public class StartComputeRequest extends AbstractModel {
     private String WorkspaceId;
 
     /**
-     * Get 计算资源 ID 
-     * @return ResourceId 计算资源 ID
-     */
-    public String getResourceId() {
-        return this.ResourceId;
-    }
+    * 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+    */
+    @SerializedName("ComputeResourceId")
+    @Expose
+    private String ComputeResourceId;
 
     /**
-     * Set 计算资源 ID
-     * @param ResourceId 计算资源 ID
-     */
-    public void setResourceId(String ResourceId) {
-        this.ResourceId = ResourceId;
-    }
+    * [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
 
     /**
      * Get 工作空间 ID 
@@ -69,6 +60,38 @@ public class StartComputeRequest extends AbstractModel {
         this.WorkspaceId = WorkspaceId;
     }
 
+    /**
+     * Get 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致 
+     * @return ComputeResourceId 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+     */
+    public String getComputeResourceId() {
+        return this.ComputeResourceId;
+    }
+
+    /**
+     * Set 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+     * @param ComputeResourceId 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+     */
+    public void setComputeResourceId(String ComputeResourceId) {
+        this.ComputeResourceId = ComputeResourceId;
+    }
+
+    /**
+     * Get [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId） 
+     * @return ResourceId [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+     * @param ResourceId [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public StartComputeRequest() {
     }
 
@@ -77,11 +100,14 @@ public class StartComputeRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public StartComputeRequest(StartComputeRequest source) {
-        if (source.ResourceId != null) {
-            this.ResourceId = new String(source.ResourceId);
-        }
         if (source.WorkspaceId != null) {
             this.WorkspaceId = new String(source.WorkspaceId);
+        }
+        if (source.ComputeResourceId != null) {
+            this.ComputeResourceId = new String(source.ComputeResourceId);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
         }
     }
 
@@ -90,8 +116,9 @@ public class StartComputeRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

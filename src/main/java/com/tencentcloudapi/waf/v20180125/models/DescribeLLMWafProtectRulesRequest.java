@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLLMWafProtectRulesRequest extends AbstractModel {
 
     /**
-    * <p>服务ID</p>
+    * <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
     */
     @SerializedName("ServiceId")
     @Expose
@@ -45,16 +45,23 @@ public class DescribeLLMWafProtectRulesRequest extends AbstractModel {
     private String RuleType;
 
     /**
-     * Get <p>服务ID</p> 
-     * @return ServiceId <p>服务ID</p>
+    * <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+     * Get <p>SDK 模式传 ServiceId（与 Domain 二选一）</p> 
+     * @return ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set <p>服务ID</p>
-     * @param ServiceId <p>服务ID</p>
+     * Set <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+     * @param ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -92,6 +99,22 @@ public class DescribeLLMWafProtectRulesRequest extends AbstractModel {
         this.RuleType = RuleType;
     }
 
+    /**
+     * Get <p>域名模式传 Domain（与 ServiceId 二选一）</p> 
+     * @return Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     * @param Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public DescribeLLMWafProtectRulesRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeLLMWafProtectRulesRequest extends AbstractModel {
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeLLMWafProtectRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

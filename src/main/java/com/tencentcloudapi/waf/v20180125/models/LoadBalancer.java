@@ -24,322 +24,345 @@ import java.util.HashMap;
 public class LoadBalancer extends AbstractModel {
 
     /**
-    * 负载均衡LD的ID
+    * <p>负载均衡LD的ID</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡LD的名称
+    * <p>负载均衡LD的名称</p>
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * 负载均衡监听器的ID
+    * <p>负载均衡监听器的ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 负载均衡监听器的名称
+    * <p>负载均衡监听器的名称</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 负载均衡实例的端口
+    * <p>负载均衡实例的端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 负载均衡LD的地域
+    * <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 监听器协议，http、https
+    * <p>监听器协议，http、https</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 负载均衡监听器所在的zone
+    * <p>负载均衡监听器所在的zone</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 负载均衡实例的IP。域名化CLB VIP可填空。
+    * <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+    */
+    @SerializedName("ApRegion")
+    @Expose
+    private String [] ApRegion;
+
+    /**
+    * <p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 负载均衡的VPCID，公网为-1，内网按实际填写
+    * <p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
     */
     @SerializedName("NumericalVpcId")
     @Expose
     private Long NumericalVpcId;
 
     /**
-    * 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
+    * <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
     */
     @SerializedName("LoadBalancerType")
     @Expose
     private String LoadBalancerType;
 
     /**
-    * 负载均衡的域名
+    * <p>负载均衡的域名</p>
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
     private String LoadBalancerDomain;
 
     /**
-    * 监听器所属成员id
+    * <p>监听器所属成员id</p>
     */
     @SerializedName("MemberAppId")
     @Expose
     private Long MemberAppId;
 
     /**
-    * 监听器所属成员的uin
+    * <p>监听器所属成员的uin</p>
     */
     @SerializedName("MemberUin")
     @Expose
     private String MemberUin;
 
     /**
-     * Get 负载均衡LD的ID 
-     * @return LoadBalancerId 负载均衡LD的ID
+     * Get <p>负载均衡LD的ID</p> 
+     * @return LoadBalancerId <p>负载均衡LD的ID</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡LD的ID
-     * @param LoadBalancerId 负载均衡LD的ID
+     * Set <p>负载均衡LD的ID</p>
+     * @param LoadBalancerId <p>负载均衡LD的ID</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡LD的名称 
-     * @return LoadBalancerName 负载均衡LD的名称
+     * Get <p>负载均衡LD的名称</p> 
+     * @return LoadBalancerName <p>负载均衡LD的名称</p>
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set 负载均衡LD的名称
-     * @param LoadBalancerName 负载均衡LD的名称
+     * Set <p>负载均衡LD的名称</p>
+     * @param LoadBalancerName <p>负载均衡LD的名称</p>
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get 负载均衡监听器的ID 
-     * @return ListenerId 负载均衡监听器的ID
+     * Get <p>负载均衡监听器的ID</p> 
+     * @return ListenerId <p>负载均衡监听器的ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器的ID
-     * @param ListenerId 负载均衡监听器的ID
+     * Set <p>负载均衡监听器的ID</p>
+     * @param ListenerId <p>负载均衡监听器的ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 负载均衡监听器的名称 
-     * @return ListenerName 负载均衡监听器的名称
+     * Get <p>负载均衡监听器的名称</p> 
+     * @return ListenerName <p>负载均衡监听器的名称</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 负载均衡监听器的名称
-     * @param ListenerName 负载均衡监听器的名称
+     * Set <p>负载均衡监听器的名称</p>
+     * @param ListenerName <p>负载均衡监听器的名称</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 负载均衡实例的端口 
-     * @return Vport 负载均衡实例的端口
+     * Get <p>负载均衡实例的端口</p> 
+     * @return Vport <p>负载均衡实例的端口</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 负载均衡实例的端口
-     * @param Vport 负载均衡实例的端口
+     * Set <p>负载均衡实例的端口</p>
+     * @param Vport <p>负载均衡实例的端口</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 负载均衡LD的地域 
-     * @return Region 负载均衡LD的地域
+     * Get <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p> 
+     * @return Region <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 负载均衡LD的地域
-     * @param Region 负载均衡LD的地域
+     * Set <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
+     * @param Region <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 监听器协议，http、https 
-     * @return Protocol 监听器协议，http、https
+     * Get <p>监听器协议，http、https</p> 
+     * @return Protocol <p>监听器协议，http、https</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 监听器协议，http、https
-     * @param Protocol 监听器协议，http、https
+     * Set <p>监听器协议，http、https</p>
+     * @param Protocol <p>监听器协议，http、https</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 负载均衡监听器所在的zone 
-     * @return Zone 负载均衡监听器所在的zone
+     * Get <p>负载均衡监听器所在的zone</p> 
+     * @return Zone <p>负载均衡监听器所在的zone</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 负载均衡监听器所在的zone
-     * @param Zone 负载均衡监听器所在的zone
+     * Set <p>负载均衡监听器所在的zone</p>
+     * @param Zone <p>负载均衡监听器所在的zone</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 负载均衡实例的IP。域名化CLB VIP可填空。 
-     * @return Vip 负载均衡实例的IP。域名化CLB VIP可填空。
+     * Get <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p> 
+     * @return ApRegion <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+     */
+    public String [] getApRegion() {
+        return this.ApRegion;
+    }
+
+    /**
+     * Set <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+     * @param ApRegion <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+     */
+    public void setApRegion(String [] ApRegion) {
+        this.ApRegion = ApRegion;
+    }
+
+    /**
+     * Get <p>负载均衡实例的IP。域名化CLB VIP可填空。</p> 
+     * @return Vip <p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 负载均衡实例的IP。域名化CLB VIP可填空。
-     * @param Vip 负载均衡实例的IP。域名化CLB VIP可填空。
+     * Set <p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
+     * @param Vip <p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 负载均衡的VPCID，公网为-1，内网按实际填写 
-     * @return NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
+     * Get <p>负载均衡的VPCID，公网为-1，内网按实际填写</p> 
+     * @return NumericalVpcId <p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set 负载均衡的VPCID，公网为-1，内网按实际填写
-     * @param NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
+     * Set <p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
+     * @param NumericalVpcId <p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 
     /**
-     * Get 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网 
-     * @return LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
+     * Get <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p> 
+     * @return LoadBalancerType <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
     }
 
     /**
-     * Set 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
-     * @param LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
+     * Set <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
+     * @param LoadBalancerType <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
     }
 
     /**
-     * Get 负载均衡的域名 
-     * @return LoadBalancerDomain 负载均衡的域名
+     * Get <p>负载均衡的域名</p> 
+     * @return LoadBalancerDomain <p>负载均衡的域名</p>
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
     }
 
     /**
-     * Set 负载均衡的域名
-     * @param LoadBalancerDomain 负载均衡的域名
+     * Set <p>负载均衡的域名</p>
+     * @param LoadBalancerDomain <p>负载均衡的域名</p>
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
     /**
-     * Get 监听器所属成员id 
-     * @return MemberAppId 监听器所属成员id
+     * Get <p>监听器所属成员id</p> 
+     * @return MemberAppId <p>监听器所属成员id</p>
      */
     public Long getMemberAppId() {
         return this.MemberAppId;
     }
 
     /**
-     * Set 监听器所属成员id
-     * @param MemberAppId 监听器所属成员id
+     * Set <p>监听器所属成员id</p>
+     * @param MemberAppId <p>监听器所属成员id</p>
      */
     public void setMemberAppId(Long MemberAppId) {
         this.MemberAppId = MemberAppId;
     }
 
     /**
-     * Get 监听器所属成员的uin 
-     * @return MemberUin 监听器所属成员的uin
+     * Get <p>监听器所属成员的uin</p> 
+     * @return MemberUin <p>监听器所属成员的uin</p>
      */
     public String getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 监听器所属成员的uin
-     * @param MemberUin 监听器所属成员的uin
+     * Set <p>监听器所属成员的uin</p>
+     * @param MemberUin <p>监听器所属成员的uin</p>
      */
     public void setMemberUin(String MemberUin) {
         this.MemberUin = MemberUin;
@@ -377,6 +400,12 @@ public class LoadBalancer extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.ApRegion != null) {
+            this.ApRegion = new String[source.ApRegion.length];
+            for (int i = 0; i < source.ApRegion.length; i++) {
+                this.ApRegion[i] = new String(source.ApRegion[i]);
+            }
+        }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
@@ -410,6 +439,7 @@ public class LoadBalancer extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArraySimple(map, prefix + "ApRegion.", this.ApRegion);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);

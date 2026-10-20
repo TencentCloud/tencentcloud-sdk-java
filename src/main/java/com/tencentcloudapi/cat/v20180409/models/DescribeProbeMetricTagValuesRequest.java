@@ -24,170 +24,115 @@ import java.util.HashMap;
 public class DescribeProbeMetricTagValuesRequest extends AbstractModel {
 
     /**
-    * 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
+    * <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
     */
     @SerializedName("AnalyzeTaskType")
     @Expose
     private String AnalyzeTaskType;
 
     /**
-    * 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
+    * <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
+    * <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
     */
     @SerializedName("Filter")
     @Expose
     private String Filter;
 
     /**
-    * 过滤条件数组
+    * <p>过滤条件数组</p>
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-    * 时间范围
+    * <p>时间范围</p>
     */
     @SerializedName("TimeRange")
     @Expose
     private String TimeRange;
 
     /**
-     * Get 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
- 
-     * @return AnalyzeTaskType 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
+     * Get <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p> 
+     * @return AnalyzeTaskType <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public String getAnalyzeTaskType() {
         return this.AnalyzeTaskType;
     }
 
     /**
-     * Set 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
-     * @param AnalyzeTaskType 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
+     * Set <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+     * @param AnalyzeTaskType <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public void setAnalyzeTaskType(String AnalyzeTaskType) {
         this.AnalyzeTaskType = AnalyzeTaskType;
     }
 
     /**
-     * Get 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID 
-     * @return Key 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
+     * Get <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p> 
+     * @return Key <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
-     * @param Key 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
+     * Set <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
+     * @param Key <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配 
-     * @return Filter 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
+     * Get <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p> 
+     * @return Filter <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
-     * @param Filter 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
+     * Set <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
+     * @param Filter <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 过滤条件数组 
-     * @return Filters 过滤条件数组
+     * Get <p>过滤条件数组</p> 
+     * @return Filters <p>过滤条件数组</p>
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件数组
-     * @param Filters 过滤条件数组
+     * Set <p>过滤条件数组</p>
+     * @param Filters <p>过滤条件数组</p>
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 时间范围 
-     * @return TimeRange 时间范围
+     * Get <p>时间范围</p> 
+     * @return TimeRange <p>时间范围</p>
      */
     public String getTimeRange() {
         return this.TimeRange;
     }
 
     /**
-     * Set 时间范围
-     * @param TimeRange 时间范围
+     * Set <p>时间范围</p>
+     * @param TimeRange <p>时间范围</p>
      */
     public void setTimeRange(String TimeRange) {
         this.TimeRange = TimeRange;

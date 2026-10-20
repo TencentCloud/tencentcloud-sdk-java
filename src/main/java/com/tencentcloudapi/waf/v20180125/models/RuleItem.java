@@ -53,6 +53,13 @@ public class RuleItem extends AbstractModel {
     private ValueLevel [] Levels;
 
     /**
+    * Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get  信息类型 
      * @return Key  信息类型
      */
@@ -120,6 +127,22 @@ public class RuleItem extends AbstractModel {
         this.Levels = Levels;
     }
 
+    /**
+     * Get Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用 
+     * @return Name Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+     * @param Name Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public RuleItem() {
     }
 
@@ -146,6 +169,9 @@ public class RuleItem extends AbstractModel {
                 this.Levels[i] = new ValueLevel(source.Levels[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -157,6 +183,7 @@ public class RuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Op", this.Op);
         this.setParamArraySimple(map, prefix + "Value.", this.Value);
         this.setParamArrayObj(map, prefix + "Levels.", this.Levels);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

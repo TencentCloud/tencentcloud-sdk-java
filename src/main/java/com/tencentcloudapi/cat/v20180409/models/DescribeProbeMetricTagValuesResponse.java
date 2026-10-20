@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProbeMetricTagValuesResponse extends AbstractModel {
 
     /**
-    * 标签值序列化后的字符串
+    * <p>标签值序列化后的字符串</p>
     */
     @SerializedName("TagValueSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeProbeMetricTagValuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 标签值序列化后的字符串 
-     * @return TagValueSet 标签值序列化后的字符串
+     * Get <p>标签值序列化后的字符串</p> 
+     * @return TagValueSet <p>标签值序列化后的字符串</p>
      */
     public String getTagValueSet() {
         return this.TagValueSet;
     }
 
     /**
-     * Set 标签值序列化后的字符串
-     * @param TagValueSet 标签值序列化后的字符串
+     * Set <p>标签值序列化后的字符串</p>
+     * @param TagValueSet <p>标签值序列化后的字符串</p>
      */
     public void setTagValueSet(String TagValueSet) {
         this.TagValueSet = TagValueSet;

@@ -24,189 +24,184 @@ import java.util.HashMap;
 public class UpdateProbeTaskConfigurationListRequest extends AbstractModel {
 
     /**
-    * 任务 ID，如task-n1wchki8
+    * <p>任务 ID，如task-n1wchki8</p>
     */
     @SerializedName("TaskIds")
     @Expose
     private String [] TaskIds;
 
     /**
-    * 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+    * <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
     */
     @SerializedName("Nodes")
     @Expose
     private String [] Nodes;
 
     /**
-    * 拨测间隔，如30，单位为分钟。
+    * <p>拨测间隔，如30，单位为分钟。</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 拨测参数，详细参数配置可参考云拨测官网文档。
+    * <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-    * 定时任务cron表达式
+    * <p>定时任务cron表达式</p>
     */
     @SerializedName("Cron")
     @Expose
     private String Cron;
 
     /**
-    * 预付费套餐id
-需要与taskId对应
+    * <p>预付费套餐id<br>需要与taskId对应</p>
     */
     @SerializedName("ResourceIDs")
     @Expose
     private String [] ResourceIDs;
 
     /**
-    * 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+    * <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
     */
     @SerializedName("NodeIpType")
     @Expose
     private Long NodeIpType;
 
     /**
-    * 批量任务名-地址
+    * <p>批量任务名-地址</p>
     */
     @SerializedName("BatchTasks")
     @Expose
     private ProbeTaskBasicConfiguration [] BatchTasks;
 
     /**
-     * Get 任务 ID，如task-n1wchki8 
-     * @return TaskIds 任务 ID，如task-n1wchki8
+     * Get <p>任务 ID，如task-n1wchki8</p> 
+     * @return TaskIds <p>任务 ID，如task-n1wchki8</p>
      */
     public String [] getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 任务 ID，如task-n1wchki8
-     * @param TaskIds 任务 ID，如task-n1wchki8
+     * Set <p>任务 ID，如task-n1wchki8</p>
+     * @param TaskIds <p>任务 ID，如task-n1wchki8</p>
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;
     }
 
     /**
-     * Get 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。 
-     * @return Nodes 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+     * Get <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p> 
+     * @return Nodes <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
      */
     public String [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
-     * @param Nodes 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+     * Set <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
+     * @param Nodes <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 拨测间隔，如30，单位为分钟。 
-     * @return Interval 拨测间隔，如30，单位为分钟。
+     * Get <p>拨测间隔，如30，单位为分钟。</p> 
+     * @return Interval <p>拨测间隔，如30，单位为分钟。</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 拨测间隔，如30，单位为分钟。
-     * @param Interval 拨测间隔，如30，单位为分钟。
+     * Set <p>拨测间隔，如30，单位为分钟。</p>
+     * @param Interval <p>拨测间隔，如30，单位为分钟。</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 拨测参数，详细参数配置可参考云拨测官网文档。 
-     * @return Parameters 拨测参数，详细参数配置可参考云拨测官网文档。
+     * Get <p>拨测参数，详细参数配置可参考云拨测官网文档。</p> 
+     * @return Parameters <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 拨测参数，详细参数配置可参考云拨测官网文档。
-     * @param Parameters 拨测参数，详细参数配置可参考云拨测官网文档。
+     * Set <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
+     * @param Parameters <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 定时任务cron表达式 
-     * @return Cron 定时任务cron表达式
+     * Get <p>定时任务cron表达式</p> 
+     * @return Cron <p>定时任务cron表达式</p>
      */
     public String getCron() {
         return this.Cron;
     }
 
     /**
-     * Set 定时任务cron表达式
-     * @param Cron 定时任务cron表达式
+     * Set <p>定时任务cron表达式</p>
+     * @param Cron <p>定时任务cron表达式</p>
      */
     public void setCron(String Cron) {
         this.Cron = Cron;
     }
 
     /**
-     * Get 预付费套餐id
-需要与taskId对应 
-     * @return ResourceIDs 预付费套餐id
-需要与taskId对应
+     * Get <p>预付费套餐id<br>需要与taskId对应</p> 
+     * @return ResourceIDs <p>预付费套餐id<br>需要与taskId对应</p>
      */
     public String [] getResourceIDs() {
         return this.ResourceIDs;
     }
 
     /**
-     * Set 预付费套餐id
-需要与taskId对应
-     * @param ResourceIDs 预付费套餐id
-需要与taskId对应
+     * Set <p>预付费套餐id<br>需要与taskId对应</p>
+     * @param ResourceIDs <p>预付费套餐id<br>需要与taskId对应</p>
      */
     public void setResourceIDs(String [] ResourceIDs) {
         this.ResourceIDs = ResourceIDs;
     }
 
     /**
-     * Get 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6 
-     * @return NodeIpType 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+     * Get <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p> 
+     * @return NodeIpType <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
      */
     public Long getNodeIpType() {
         return this.NodeIpType;
     }
 
     /**
-     * Set 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
-     * @param NodeIpType 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+     * Set <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
+     * @param NodeIpType <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
      */
     public void setNodeIpType(Long NodeIpType) {
         this.NodeIpType = NodeIpType;
     }
 
     /**
-     * Get 批量任务名-地址 
-     * @return BatchTasks 批量任务名-地址
+     * Get <p>批量任务名-地址</p> 
+     * @return BatchTasks <p>批量任务名-地址</p>
      */
     public ProbeTaskBasicConfiguration [] getBatchTasks() {
         return this.BatchTasks;
     }
 
     /**
-     * Set 批量任务名-地址
-     * @param BatchTasks 批量任务名-地址
+     * Set <p>批量任务名-地址</p>
+     * @param BatchTasks <p>批量任务名-地址</p>
      */
     public void setBatchTasks(ProbeTaskBasicConfiguration [] BatchTasks) {
         this.BatchTasks = BatchTasks;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNodeGroupsResponse extends AbstractModel {
 
     /**
-    * 树状节点列表，总共两级
+    * <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeList")
@@ -32,7 +32,7 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     private NodeTree [] NodeList;
 
     /**
-    * 省份或国家列表
+    * <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DistrictList")
@@ -40,7 +40,7 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     private DistinctOrNetServiceInfo [] DistrictList;
 
     /**
-    * 运营商列表
+    * <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetServiceList")
@@ -55,9 +55,9 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 树状节点列表，总共两级
+     * Get <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeList 树状节点列表，总共两级
+     * @return NodeList <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeTree [] getNodeList() {
@@ -65,9 +65,9 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 树状节点列表，总共两级
+     * Set <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeList 树状节点列表，总共两级
+     * @param NodeList <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeList(NodeTree [] NodeList) {
@@ -75,9 +75,9 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get 省份或国家列表
+     * Get <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DistrictList 省份或国家列表
+     * @return DistrictList <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DistinctOrNetServiceInfo [] getDistrictList() {
@@ -85,9 +85,9 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 省份或国家列表
+     * Set <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DistrictList 省份或国家列表
+     * @param DistrictList <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDistrictList(DistinctOrNetServiceInfo [] DistrictList) {
@@ -95,9 +95,9 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get 运营商列表
+     * Get <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetServiceList 运营商列表
+     * @return NetServiceList <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DistinctOrNetServiceInfo [] getNetServiceList() {
@@ -105,9 +105,9 @@ public class DescribeNodeGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Set 运营商列表
+     * Set <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetServiceList 运营商列表
+     * @param NetServiceList <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetServiceList(DistinctOrNetServiceInfo [] NetServiceList) {

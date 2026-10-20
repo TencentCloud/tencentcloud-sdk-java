@@ -31,7 +31,7 @@ public class LLMPkg extends AbstractModel {
     private String ResourceIds;
 
     /**
-    * <p>状态</p>
+    * 状态，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -89,16 +89,16 @@ public class LLMPkg extends AbstractModel {
     }
 
     /**
-     * Get <p>状态</p> 
-     * @return Status <p>状态</p>
+     * Get 状态，0表示关闭，1表示开启 
+     * @return Status 状态，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>状态</p>
-     * @param Status <p>状态</p>
+     * Set 状态，0表示关闭，1表示开启
+     * @param Status 状态，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;

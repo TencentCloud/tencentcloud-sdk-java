@@ -160,6 +160,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *取消等待执行的任务
+     * @param req CancelTaskRequest
+     * @return CancelTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelTask", CancelTaskResponse.class);
+    }
+
+    /**
      *本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
      * @param req CheckCreateLibraDBInstanceRequest
      * @return CheckCreateLibraDBInstanceResponse
@@ -1356,6 +1367,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeProxySpecsResponse DescribeProxySpecs(DescribeProxySpecsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProxySpecs", DescribeProxySpecsResponse.class);
+    }
+
+    /**
+     *该接口(DescribeProxyZoneStocks)查询数据库代理地域库存
+     * @param req DescribeProxyZoneStocksRequest
+     * @return DescribeProxyZoneStocksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxyZoneStocksResponse DescribeProxyZoneStocks(DescribeProxyZoneStocksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProxyZoneStocks", DescribeProxyZoneStocksResponse.class);
     }
 
     /**

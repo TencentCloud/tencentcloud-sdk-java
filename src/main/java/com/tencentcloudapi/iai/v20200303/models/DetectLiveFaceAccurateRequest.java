@@ -24,129 +24,69 @@ import java.util.HashMap;
 public class DetectLiveFaceAccurateRequest extends AbstractModel {
 
     /**
-    * 图片 base64 数据。
-- base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    * <p>图片 base64 数据。</p><ul><li>base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 图片的 Url 。
-- 对应图片 base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-- Url、Image必须提供一个，如果都提供，只使用 Url。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+    * <p>图片的 Url 。</p><ul><li>对应图片 base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。</li><li>Url、Image必须提供一个，如果都提供，只使用 Url。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
+    * <p>人脸识别服务所用的算法模型版本。目前入参支持“3.0“。</p>
     */
     @SerializedName("FaceModelVersion")
     @Expose
     private String FaceModelVersion;
 
     /**
-     * Get 图片 base64 数据。
-- base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-     * @return Image 图片 base64 数据。
-- base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Get <p>图片 base64 数据。</p><ul><li>base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul> 
+     * @return Image <p>图片 base64 数据。</p><ul><li>base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 图片 base64 数据。
-- base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Image 图片 base64 数据。
-- base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Set <p>图片 base64 数据。</p><ul><li>base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
+     * @param Image <p>图片 base64 数据。</p><ul><li>base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 图片的 Url 。
-- 对应图片 base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-- Url、Image必须提供一个，如果都提供，只使用 Url。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-     * @return Url 图片的 Url 。
-- 对应图片 base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-- Url、Image必须提供一个，如果都提供，只使用 Url。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Get <p>图片的 Url 。</p><ul><li>对应图片 base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。</li><li>Url、Image必须提供一个，如果都提供，只使用 Url。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul> 
+     * @return Url <p>图片的 Url 。</p><ul><li>对应图片 base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。</li><li>Url、Image必须提供一个，如果都提供，只使用 Url。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 图片的 Url 。
-- 对应图片 base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-- Url、Image必须提供一个，如果都提供，只使用 Url。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Url 图片的 Url 。
-- 对应图片 base64 编码后大小不可超过5M。
-- jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-- Url、Image必须提供一个，如果都提供，只使用 Url。 
-- 图片的宽高比请接近 3:4，手机拍摄比例最佳。
-- 人脸尺寸大于100X100像素。
-- 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
-- 图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Set <p>图片的 Url 。</p><ul><li>对应图片 base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。</li><li>Url、Image必须提供一个，如果都提供，只使用 Url。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
+     * @param Url <p>图片的 Url 。</p><ul><li>对应图片 base64 编码后大小不可超过5M。</li><li>jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。</li><li>Url、Image必须提供一个，如果都提供，只使用 Url。 </li><li>图片的宽高比请接近 3:4，手机拍摄比例最佳。</li><li>人脸尺寸大于100X100像素。</li><li>图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。</li><li>图片格式支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。</li></ul>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。 
-     * @return FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
+     * Get <p>人脸识别服务所用的算法模型版本。目前入参支持“3.0“。</p> 
+     * @return FaceModelVersion <p>人脸识别服务所用的算法模型版本。目前入参支持“3.0“。</p>
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
-     * @param FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持“3.0“。
+     * Set <p>人脸识别服务所用的算法模型版本。目前入参支持“3.0“。</p>
+     * @param FaceModelVersion <p>人脸识别服务所用的算法模型版本。目前入参支持“3.0“。</p>
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

@@ -31,7 +31,7 @@ public class DescribeAfterPayInstancesResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 后付费实例列表
+    * 后付费实例列表（结构与 DescribeInstances 的 InstanceInfo 一致，全量返回实例字段含各类套餐包信息，额外填充 LLMTokenUsage）
     */
     @SerializedName("Instances")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAfterPayInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 后付费实例列表 
-     * @return Instances 后付费实例列表
+     * Get 后付费实例列表（结构与 DescribeInstances 的 InstanceInfo 一致，全量返回实例字段含各类套餐包信息，额外填充 LLMTokenUsage） 
+     * @return Instances 后付费实例列表（结构与 DescribeInstances 的 InstanceInfo 一致，全量返回实例字段含各类套餐包信息，额外填充 LLMTokenUsage）
      */
     public AfterPayInstanceInfo [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 后付费实例列表
-     * @param Instances 后付费实例列表
+     * Set 后付费实例列表（结构与 DescribeInstances 的 InstanceInfo 一致，全量返回实例字段含各类套餐包信息，额外填充 LLMTokenUsage）
+     * @param Instances 后付费实例列表（结构与 DescribeInstances 的 InstanceInfo 一致，全量返回实例字段含各类套餐包信息，额外填充 LLMTokenUsage）
      */
     public void setInstances(AfterPayInstanceInfo [] Instances) {
         this.Instances = Instances;

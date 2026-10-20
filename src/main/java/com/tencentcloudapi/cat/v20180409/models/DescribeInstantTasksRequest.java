@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeInstantTasksRequest extends AbstractModel {
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 起始位置
+    * <p>起始位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 数量 
-     * @return Limit 数量
+     * Get <p>数量</p> 
+     * @return Limit <p>数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数量
-     * @param Limit 数量
+     * Set <p>数量</p>
+     * @param Limit <p>数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 起始位置 
-     * @return Offset 起始位置
+     * Get <p>起始位置</p> 
+     * @return Offset <p>起始位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始位置
-     * @param Offset 起始位置
+     * Set <p>起始位置</p>
+     * @param Offset <p>起始位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -45,7 +45,7 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     private String QuestionCount;
 
     /**
-    * <p>废弃字段</p>
+    * <p>【废弃字段】</p>
     */
     @SerializedName("OriginalImageUrl")
     @Expose
@@ -107,16 +107,16 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>废弃字段</p> 
-     * @return OriginalImageUrl <p>废弃字段</p>
+     * Get <p>【废弃字段】</p> 
+     * @return OriginalImageUrl <p>【废弃字段】</p>
      */
     public String getOriginalImageUrl() {
         return this.OriginalImageUrl;
     }
 
     /**
-     * Set <p>废弃字段</p>
-     * @param OriginalImageUrl <p>废弃字段</p>
+     * Set <p>【废弃字段】</p>
+     * @param OriginalImageUrl <p>【废弃字段】</p>
      */
     public void setOriginalImageUrl(String OriginalImageUrl) {
         this.OriginalImageUrl = OriginalImageUrl;

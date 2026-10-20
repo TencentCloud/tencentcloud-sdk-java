@@ -358,6 +358,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *创建权限申请范围，支持批量upsert
+     * @param req CreateRoleConfigurationApplyScopeRequest
+     * @return CreateRoleConfigurationApplyScopeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoleConfigurationApplyScopeResponse CreateRoleConfigurationApplyScope(CreateRoleConfigurationApplyScopeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoleConfigurationApplyScope", CreateRoleConfigurationApplyScopeResponse.class);
+    }
+
+    /**
      *创建SCIM密钥
      * @param req CreateSCIMCredentialRequest
      * @return CreateSCIMCredentialResponse
@@ -520,6 +531,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteRoleConfigurationResponse DeleteRoleConfiguration(DeleteRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRoleConfiguration", DeleteRoleConfigurationResponse.class);
+    }
+
+    /**
+     *删除权限申请范围
+     * @param req DeleteRoleConfigurationApplyScopeRequest
+     * @return DeleteRoleConfigurationApplyScopeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoleConfigurationApplyScopeResponse DeleteRoleConfigurationApplyScope(DeleteRoleConfigurationApplyScopeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoleConfigurationApplyScope", DeleteRoleConfigurationApplyScopeResponse.class);
     }
 
     /**
@@ -1106,6 +1128,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *管理员审批列表
+     * @param req ListPermissionApplyOrdersRequest
+     * @return ListPermissionApplyOrdersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPermissionApplyOrdersResponse ListPermissionApplyOrders(ListPermissionApplyOrdersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPermissionApplyOrders", ListPermissionApplyOrdersResponse.class);
+    }
+
+    /**
      *获取权限配置中的策略列表
      * @param req ListPermissionPoliciesInRoleConfigurationRequest
      * @return ListPermissionPoliciesInRoleConfigurationResponse
@@ -1147,6 +1180,17 @@ public class OrganizationClient extends AbstractClient{
     public ListRoleAssignmentsResponse ListRoleAssignments(ListRoleAssignmentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListRoleAssignments", ListRoleAssignmentsResponse.class);
+    }
+
+    /**
+     *权限申请范围列表
+     * @param req ListRoleConfigurationApplyScopesRequest
+     * @return ListRoleConfigurationApplyScopesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRoleConfigurationApplyScopesResponse ListRoleConfigurationApplyScopes(ListRoleConfigurationApplyScopesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRoleConfigurationApplyScopes", ListRoleConfigurationApplyScopesResponse.class);
     }
 
     /**

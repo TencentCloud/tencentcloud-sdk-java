@@ -45,7 +45,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private FiltersItemNew [] Filters;
 
     /**
-    * 释放延期标识
+    * 释放延期标识，0表示不延期，1表示延期释放
     */
     @SerializedName("FreeDelayFlag")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 释放延期标识 
-     * @return FreeDelayFlag 释放延期标识
+     * Get 释放延期标识，0表示不延期，1表示延期释放 
+     * @return FreeDelayFlag 释放延期标识，0表示不延期，1表示延期释放
      */
     public Long getFreeDelayFlag() {
         return this.FreeDelayFlag;
     }
 
     /**
-     * Set 释放延期标识
-     * @param FreeDelayFlag 释放延期标识
+     * Set 释放延期标识，0表示不延期，1表示延期释放
+     * @param FreeDelayFlag 释放延期标识，0表示不延期，1表示延期释放
      */
     public void setFreeDelayFlag(Long FreeDelayFlag) {
         this.FreeDelayFlag = FreeDelayFlag;

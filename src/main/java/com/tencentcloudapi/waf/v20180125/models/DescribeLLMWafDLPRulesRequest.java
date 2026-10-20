@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLLMWafDLPRulesRequest extends AbstractModel {
 
     /**
-    * <p>服务ID</p>
+    * <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
     */
     @SerializedName("ServiceId")
     @Expose
@@ -38,16 +38,37 @@ public class DescribeLLMWafDLPRulesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-     * Get <p>服务ID</p> 
-     * @return ServiceId <p>服务ID</p>
+    * <p>排序字段，当前仅支持 UpdateTime；为空则按规则默认顺序返回</p>
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+    * <p>排序方向：asc(升序)/desc(降序)，默认 desc</p>
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+     * Get <p>SDK 模式传 ServiceId（与 Domain 二选一）</p> 
+     * @return ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set <p>服务ID</p>
-     * @param ServiceId <p>服务ID</p>
+     * Set <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+     * @param ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -69,6 +90,54 @@ public class DescribeLLMWafDLPRulesRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get <p>排序字段，当前仅支持 UpdateTime；为空则按规则默认顺序返回</p> 
+     * @return By <p>排序字段，当前仅支持 UpdateTime；为空则按规则默认顺序返回</p>
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set <p>排序字段，当前仅支持 UpdateTime；为空则按规则默认顺序返回</p>
+     * @param By <p>排序字段，当前仅支持 UpdateTime；为空则按规则默认顺序返回</p>
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
+    /**
+     * Get <p>排序方向：asc(升序)/desc(降序)，默认 desc</p> 
+     * @return Order <p>排序方向：asc(升序)/desc(降序)，默认 desc</p>
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set <p>排序方向：asc(升序)/desc(降序)，默认 desc</p>
+     * @param Order <p>排序方向：asc(升序)/desc(降序)，默认 desc</p>
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get <p>域名模式传 Domain（与 ServiceId 二选一）</p> 
+     * @return Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     * @param Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public DescribeLLMWafDLPRulesRequest() {
     }
 
@@ -83,6 +152,15 @@ public class DescribeLLMWafDLPRulesRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class DescribeLLMWafDLPRulesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

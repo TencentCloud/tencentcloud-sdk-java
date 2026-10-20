@@ -59,7 +59,7 @@ public class BotQPS extends AbstractModel {
     private Long MaxBotQPS;
 
     /**
-    * 续费标志
+    * 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -146,16 +146,16 @@ public class BotQPS extends AbstractModel {
     }
 
     /**
-     * Get 续费标志 
-     * @return RenewFlag 续费标志
+     * Get 续费标识，0表示手动续费，1表示自动续费，2表示到期不续 
+     * @return RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标志
-     * @param RenewFlag 续费标志
+     * Set 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+     * @param RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;

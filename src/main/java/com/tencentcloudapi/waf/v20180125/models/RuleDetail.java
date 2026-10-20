@@ -80,6 +80,13 @@ public class RuleDetail extends AbstractModel {
     private Long Direction;
 
     /**
+    * <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
      * Get <p>规则ID</p> 
      * @return RuleId <p>规则ID</p>
      */
@@ -207,6 +214,22 @@ public class RuleDetail extends AbstractModel {
         this.Direction = Direction;
     }
 
+    /**
+     * Get <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p> 
+     * @return UpdateTime <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+     * @param UpdateTime <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public RuleDetail() {
     }
 
@@ -239,6 +262,9 @@ public class RuleDetail extends AbstractModel {
         if (source.Direction != null) {
             this.Direction = new Long(source.Direction);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class RuleDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DesensitizeSample", this.DesensitizeSample);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

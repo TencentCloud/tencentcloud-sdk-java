@@ -160,6 +160,28 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *删除转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryServer
+     * @param req DeleteDeliveryServerRequest
+     * @return DeleteDeliveryServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeliveryServerResponse DeleteDeliveryServer(DeleteDeliveryServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeliveryServer", DeleteDeliveryServerResponse.class);
+    }
+
+    /**
+     *删除转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryStrategy
+     * @param req DeleteDeliveryStrategyRequest
+     * @return DeleteDeliveryStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeliveryStrategyResponse DeleteDeliveryStrategy(DeleteDeliveryStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeliveryStrategy", DeleteDeliveryStrategyResponse.class);
+    }
+
+    /**
      *删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
      * @param req DeleteDeviceVirtualGroupRequest
      * @return DeleteDeviceVirtualGroupResponse
@@ -292,6 +314,28 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *转发服务器详情，私有化调用path为：capi/LogCenter/DescribeDeliveryServer
+     * @param req DescribeDeliveryServerRequest
+     * @return DescribeDeliveryServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliveryServerResponse DescribeDeliveryServer(DescribeDeliveryServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeliveryServer", DescribeDeliveryServerResponse.class);
+    }
+
+    /**
+     *转发策略详情，私有化调用path为：capi/LogCenter/DeliveryLog/DescribeDeliveryStrategy
+     * @param req DescribeDeliveryStrategyRequest
+     * @return DescribeDeliveryStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliveryStrategyResponse DescribeDeliveryStrategy(DescribeDeliveryStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeliveryStrategy", DescribeDeliveryStrategyResponse.class);
+    }
+
+    /**
      *查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
      * @param req DescribeDeviceChildGroupsRequest
      * @return DescribeDeviceChildGroupsResponse
@@ -401,6 +445,17 @@ public class IoaClient extends AbstractClient{
     public DescribeProfileFieldsMenuResponse DescribeProfileFieldsMenu(DescribeProfileFieldsMenuRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProfileFieldsMenu", DescribeProfileFieldsMenuResponse.class);
+    }
+
+    /**
+     *获取用于RSA加密的公钥，对敏感数据进行加密传输。
+     * @param req DescribePublicEncryptKeyRequest
+     * @return DescribePublicEncryptKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicEncryptKeyResponse DescribePublicEncryptKey(DescribePublicEncryptKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePublicEncryptKey", DescribePublicEncryptKeyResponse.class);
     }
 
     /**
@@ -566,6 +621,28 @@ public class IoaClient extends AbstractClient{
     public ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfig(ModifyCompanyDirectoryConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCompanyDirectoryConfig", ModifyCompanyDirectoryConfigResponse.class);
+    }
+
+    /**
+     *创建或编辑日志转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryServer
+     * @param req ModifyDeliveryServerRequest
+     * @return ModifyDeliveryServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeliveryServerResponse ModifyDeliveryServer(ModifyDeliveryServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeliveryServer", ModifyDeliveryServerResponse.class);
+    }
+
+    /**
+     *创建或编辑日志转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryStrategy
+     * @param req ModifyDeliveryStrategyRequest
+     * @return ModifyDeliveryStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeliveryStrategyResponse ModifyDeliveryStrategy(ModifyDeliveryStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeliveryStrategy", ModifyDeliveryStrategyResponse.class);
     }
 
     /**

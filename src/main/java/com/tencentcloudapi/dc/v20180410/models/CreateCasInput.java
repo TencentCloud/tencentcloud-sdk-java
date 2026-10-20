@@ -94,6 +94,13 @@ public class CreateCasInput extends AbstractModel {
     private String ServiceType;
 
     /**
+    * <p>接入点ID</p>
+    */
+    @SerializedName("AccessPointId")
+    @Expose
+    private String AccessPointId;
+
+    /**
      * Get <p>敏捷上云名称</p> 
      * @return Name <p>敏捷上云名称</p>
      */
@@ -253,6 +260,22 @@ public class CreateCasInput extends AbstractModel {
         this.ServiceType = ServiceType;
     }
 
+    /**
+     * Get <p>接入点ID</p> 
+     * @return AccessPointId <p>接入点ID</p>
+     */
+    public String getAccessPointId() {
+        return this.AccessPointId;
+    }
+
+    /**
+     * Set <p>接入点ID</p>
+     * @param AccessPointId <p>接入点ID</p>
+     */
+    public void setAccessPointId(String AccessPointId) {
+        this.AccessPointId = AccessPointId;
+    }
+
     public CreateCasInput() {
     }
 
@@ -291,6 +314,9 @@ public class CreateCasInput extends AbstractModel {
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.AccessPointId != null) {
+            this.AccessPointId = new String(source.AccessPointId);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class CreateCasInput extends AbstractModel {
         this.setParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
         this.setParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
 
     }
 }

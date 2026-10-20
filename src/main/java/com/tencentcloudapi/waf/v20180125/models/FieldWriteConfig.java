@@ -52,6 +52,27 @@ public class FieldWriteConfig extends AbstractModel {
     private Long EnableResponse;
 
     /**
+    * <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+    */
+    @SerializedName("EnableResponseHeaders")
+    @Expose
+    private Long EnableResponseHeaders;
+
+    /**
+    * <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+    */
+    @SerializedName("EnableResponseLength")
+    @Expose
+    private Long EnableResponseLength;
+
+    /**
+    * <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+    */
+    @SerializedName("EnableResponseStatusLine")
+    @Expose
+    private Long EnableResponseStatusLine;
+
+    /**
      * Get <p>1:开启 0:不开启</p> 
      * @return EnableHeaders <p>1:开启 0:不开启</p>
      */
@@ -115,6 +136,54 @@ public class FieldWriteConfig extends AbstractModel {
         this.EnableResponse = EnableResponse;
     }
 
+    /**
+     * Get <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p> 
+     * @return EnableResponseHeaders <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+     */
+    public Long getEnableResponseHeaders() {
+        return this.EnableResponseHeaders;
+    }
+
+    /**
+     * Set <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+     * @param EnableResponseHeaders <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+     */
+    public void setEnableResponseHeaders(Long EnableResponseHeaders) {
+        this.EnableResponseHeaders = EnableResponseHeaders;
+    }
+
+    /**
+     * Get <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p> 
+     * @return EnableResponseLength <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+     */
+    public Long getEnableResponseLength() {
+        return this.EnableResponseLength;
+    }
+
+    /**
+     * Set <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+     * @param EnableResponseLength <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+     */
+    public void setEnableResponseLength(Long EnableResponseLength) {
+        this.EnableResponseLength = EnableResponseLength;
+    }
+
+    /**
+     * Get <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p> 
+     * @return EnableResponseStatusLine <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+     */
+    public Long getEnableResponseStatusLine() {
+        return this.EnableResponseStatusLine;
+    }
+
+    /**
+     * Set <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+     * @param EnableResponseStatusLine <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+     */
+    public void setEnableResponseStatusLine(Long EnableResponseStatusLine) {
+        this.EnableResponseStatusLine = EnableResponseStatusLine;
+    }
+
     public FieldWriteConfig() {
     }
 
@@ -135,6 +204,15 @@ public class FieldWriteConfig extends AbstractModel {
         if (source.EnableResponse != null) {
             this.EnableResponse = new Long(source.EnableResponse);
         }
+        if (source.EnableResponseHeaders != null) {
+            this.EnableResponseHeaders = new Long(source.EnableResponseHeaders);
+        }
+        if (source.EnableResponseLength != null) {
+            this.EnableResponseLength = new Long(source.EnableResponseLength);
+        }
+        if (source.EnableResponseStatusLine != null) {
+            this.EnableResponseStatusLine = new Long(source.EnableResponseStatusLine);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class FieldWriteConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableBody", this.EnableBody);
         this.setParamSimple(map, prefix + "EnableBot", this.EnableBot);
         this.setParamSimple(map, prefix + "EnableResponse", this.EnableResponse);
+        this.setParamSimple(map, prefix + "EnableResponseHeaders", this.EnableResponseHeaders);
+        this.setParamSimple(map, prefix + "EnableResponseLength", this.EnableResponseLength);
+        this.setParamSimple(map, prefix + "EnableResponseStatusLine", this.EnableResponseStatusLine);
 
     }
 }

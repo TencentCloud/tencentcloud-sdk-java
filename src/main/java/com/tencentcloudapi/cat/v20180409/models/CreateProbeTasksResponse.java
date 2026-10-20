@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateProbeTasksResponse extends AbstractModel {
 
     /**
-    * 任务ID列表
+    * <p>任务ID列表</p>
     */
     @SerializedName("TaskIDs")
     @Expose
@@ -38,16 +38,16 @@ public class CreateProbeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID列表 
-     * @return TaskIDs 任务ID列表
+     * Get <p>任务ID列表</p> 
+     * @return TaskIDs <p>任务ID列表</p>
      */
     public String [] getTaskIDs() {
         return this.TaskIDs;
     }
 
     /**
-     * Set 任务ID列表
-     * @param TaskIDs 任务ID列表
+     * Set <p>任务ID列表</p>
+     * @param TaskIDs <p>任务ID列表</p>
      */
     public void setTaskIDs(String [] TaskIDs) {
         this.TaskIDs = TaskIDs;

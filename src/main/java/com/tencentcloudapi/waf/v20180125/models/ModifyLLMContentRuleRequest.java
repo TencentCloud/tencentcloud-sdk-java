@@ -122,7 +122,7 @@ public class ModifyLLMContentRuleRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+    * <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
     */
     @SerializedName("ReplyType")
     @Expose
@@ -162,6 +162,13 @@ public class ModifyLLMContentRuleRequest extends AbstractModel {
     @SerializedName("AppliedModules")
     @Expose
     private Long [] AppliedModules;
+
+    /**
+    * <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private String RiskLevel;
 
     /**
      * Get <p>名称</p> 
@@ -388,16 +395,16 @@ public class ModifyLLMContentRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul> 
-     * @return ReplyType <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+     * Get <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul> 
+     * @return ReplyType <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
      */
     public Long getReplyType() {
         return this.ReplyType;
     }
 
     /**
-     * Set <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
-     * @param ReplyType <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+     * Set <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
+     * @param ReplyType <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
      */
     public void setReplyType(Long ReplyType) {
         this.ReplyType = ReplyType;
@@ -483,6 +490,22 @@ public class ModifyLLMContentRuleRequest extends AbstractModel {
         this.AppliedModules = AppliedModules;
     }
 
+    /**
+     * Get <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul> 
+     * @return RiskLevel <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+     */
+    public String getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+     * @param RiskLevel <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+     */
+    public void setRiskLevel(String RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
     public ModifyLLMContentRuleRequest() {
     }
 
@@ -566,6 +589,9 @@ public class ModifyLLMContentRuleRequest extends AbstractModel {
                 this.AppliedModules[i] = new Long(source.AppliedModules[i]);
             }
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new String(source.RiskLevel);
+        }
     }
 
 
@@ -593,6 +619,7 @@ public class ModifyLLMContentRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArraySimple(map, prefix + "AppliedModules.", this.AppliedModules);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
 
     }
 }

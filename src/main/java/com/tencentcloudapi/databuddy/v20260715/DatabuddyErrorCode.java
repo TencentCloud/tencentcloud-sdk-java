@@ -51,8 +51,8 @@ public enum DatabuddyErrorCode {
      /* 获取工作流名称分布式锁失败 */
      FAILEDOPERATION_WORKFLOWCREATELOCKACQUIREFAILED("FailedOperation.WorkflowCreateLockAcquireFailed"),
      
-     /* 工作流运行已被删除 */
-     FAILEDOPERATION_WORKFLOWEXECUTIONHASBEDELETE("FailedOperation.WorkflowExecutionHasBeDelete"),
+     /* 工作流运行记录已被删除 */
+     FAILEDOPERATION_WORKFLOWEXECUTIONHASBEENDELETED("FailedOperation.WorkflowExecutionHasBeenDeleted"),
      
      /* 无操作权限 */
      FAILEDOPERATION_WORKFLOWNOPERMISSION("FailedOperation.WorkflowNoPermission"),
@@ -137,6 +137,9 @@ public enum DatabuddyErrorCode {
      
      /* 参数 <parameter> 不能为空。 */
      INVALIDPARAMETERVALUE_PARAMBLANKERROR("InvalidParameterValue.ParamBlankError"),
+     
+     /* 参数组内的参数均未传入 */
+     INVALIDPARAMETERVALUE_PARAMGROUPMISSINGERROR("InvalidParameterValue.ParamGroupMissingError"),
      
      /* 参数 <parameter> 不符合要求：<message> */
      INVALIDPARAMETERVALUE_PARAMILLEGALERROR("InvalidParameterValue.ParamIllegalError"),

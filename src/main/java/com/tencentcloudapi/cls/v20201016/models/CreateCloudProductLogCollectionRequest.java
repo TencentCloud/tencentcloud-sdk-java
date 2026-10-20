@@ -101,6 +101,13 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+    */
+    @SerializedName("TopicConfig")
+    @Expose
+    private CloudProductTopicConfig TopicConfig;
+
+    /**
      * Get <p>实例ID</p><ul><li>通过各个接入云产品官方文档获取</li></ul> 
      * @return InstanceId <p>实例ID</p><ul><li>通过各个接入云产品官方文档获取</li></ul>
      */
@@ -276,6 +283,22 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p> 
+     * @return TopicConfig <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+     */
+    public CloudProductTopicConfig getTopicConfig() {
+        return this.TopicConfig;
+    }
+
+    /**
+     * Set <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+     * @param TopicConfig <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+     */
+    public void setTopicConfig(CloudProductTopicConfig TopicConfig) {
+        this.TopicConfig = TopicConfig;
+    }
+
     public CreateCloudProductLogCollectionRequest() {
     }
 
@@ -320,6 +343,9 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.TopicConfig != null) {
+            this.TopicConfig = new CloudProductTopicConfig(source.TopicConfig);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "TopicConfig.", this.TopicConfig);
 
     }
 }

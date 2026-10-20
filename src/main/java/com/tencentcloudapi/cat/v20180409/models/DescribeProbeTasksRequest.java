@@ -24,409 +24,299 @@ import java.util.HashMap;
 public class DescribeProbeTasksRequest extends AbstractModel {
 
     /**
-    * 任务 ID  列表
+    * <p>任务 ID  列表</p>
     */
     @SerializedName("TaskIDs")
     @Expose
     private String [] TaskIDs;
 
     /**
-    * 任务名
+    * <p>任务名</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 拨测目标
+    * <p>拨测目标</p>
     */
     @SerializedName("TargetAddress")
     @Expose
     private String TargetAddress;
 
     /**
-    * 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+    * <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long [] TaskStatus;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * <p>返回数量，默认为20，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+    * <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+    * <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
     */
     @SerializedName("OrderState")
     @Expose
     private Long OrderState;
 
     /**
-    * 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
+    * <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long [] TaskType;
 
     /**
-    * 节点类型
+    * <p>节点类型</p>
     */
     @SerializedName("TaskCategory")
     @Expose
     private Long [] TaskCategory;
 
     /**
-    * 排序的列
+    * <p>排序的列</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 是否正序
+    * <p>是否正序</p>
     */
     @SerializedName("Ascend")
     @Expose
     private Boolean Ascend;
 
     /**
-    * 资源标签值
+    * <p>资源标签值</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private KeyValuePair [] TagFilters;
 
     /**
-     * Get 任务 ID  列表 
-     * @return TaskIDs 任务 ID  列表
+     * Get <p>任务 ID  列表</p> 
+     * @return TaskIDs <p>任务 ID  列表</p>
      */
     public String [] getTaskIDs() {
         return this.TaskIDs;
     }
 
     /**
-     * Set 任务 ID  列表
-     * @param TaskIDs 任务 ID  列表
+     * Set <p>任务 ID  列表</p>
+     * @param TaskIDs <p>任务 ID  列表</p>
      */
     public void setTaskIDs(String [] TaskIDs) {
         this.TaskIDs = TaskIDs;
     }
 
     /**
-     * Get 任务名 
-     * @return TaskName 任务名
+     * Get <p>任务名</p> 
+     * @return TaskName <p>任务名</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名
-     * @param TaskName 任务名
+     * Set <p>任务名</p>
+     * @param TaskName <p>任务名</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 拨测目标 
-     * @return TargetAddress 拨测目标
+     * Get <p>拨测目标</p> 
+     * @return TargetAddress <p>拨测目标</p>
      */
     public String getTargetAddress() {
         return this.TargetAddress;
     }
 
     /**
-     * Set 拨测目标
-     * @param TargetAddress 拨测目标
+     * Set <p>拨测目标</p>
+     * @param TargetAddress <p>拨测目标</p>
      */
     public void setTargetAddress(String TargetAddress) {
         this.TargetAddress = TargetAddress;
     }
 
     /**
-     * Get 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li> 
-     * @return TaskStatus 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+     * Get <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li> 
+     * @return TaskStatus <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
      */
     public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
-     * @param TaskStatus 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+     * Set <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
+     * @param TaskStatus <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
      */
     public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get <p>返回数量，默认为20，最大值为100</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set <p>返回数量，默认为20，最大值为100</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li> 
-     * @return PayMode 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+     * Get <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li> 
+     * @return PayMode <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
-     * @param PayMode 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+     * Set <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
+     * @param PayMode <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li> 
-     * @return OrderState 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+     * Get <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li> 
+     * @return OrderState <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
      */
     public Long getOrderState() {
         return this.OrderState;
     }
 
     /**
-     * Set 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
-     * @param OrderState 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+     * Set <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
+     * @param OrderState <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
      */
     public void setOrderState(Long OrderState) {
         this.OrderState = OrderState;
     }
 
     /**
-     * Get 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载 
-     * @return TaskType 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
+     * Get <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p> 
+     * @return TaskType <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
      */
     public Long [] getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
-     * @param TaskType 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
+     * Set <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
+     * @param TaskType <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
      */
     public void setTaskType(Long [] TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 节点类型 
-     * @return TaskCategory 节点类型
+     * Get <p>节点类型</p> 
+     * @return TaskCategory <p>节点类型</p>
      */
     public Long [] getTaskCategory() {
         return this.TaskCategory;
     }
 
     /**
-     * Set 节点类型
-     * @param TaskCategory 节点类型
+     * Set <p>节点类型</p>
+     * @param TaskCategory <p>节点类型</p>
      */
     public void setTaskCategory(Long [] TaskCategory) {
         this.TaskCategory = TaskCategory;
     }
 
     /**
-     * Get 排序的列 
-     * @return OrderBy 排序的列
+     * Get <p>排序的列</p> 
+     * @return OrderBy <p>排序的列</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序的列
-     * @param OrderBy 排序的列
+     * Set <p>排序的列</p>
+     * @param OrderBy <p>排序的列</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 是否正序 
-     * @return Ascend 是否正序
+     * Get <p>是否正序</p> 
+     * @return Ascend <p>是否正序</p>
      */
     public Boolean getAscend() {
         return this.Ascend;
     }
 
     /**
-     * Set 是否正序
-     * @param Ascend 是否正序
+     * Set <p>是否正序</p>
+     * @param Ascend <p>是否正序</p>
      */
     public void setAscend(Boolean Ascend) {
         this.Ascend = Ascend;
     }
 
     /**
-     * Get 资源标签值 
-     * @return TagFilters 资源标签值
+     * Get <p>资源标签值</p> 
+     * @return TagFilters <p>资源标签值</p>
      */
     public KeyValuePair [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 资源标签值
-     * @param TagFilters 资源标签值
+     * Set <p>资源标签值</p>
+     * @param TagFilters <p>资源标签值</p>
      */
     public void setTagFilters(KeyValuePair [] TagFilters) {
         this.TagFilters = TagFilters;

@@ -80,6 +80,13 @@ public class LLMDetectResult extends AbstractModel {
     private String Payload;
 
     /**
+    * <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+    */
+    @SerializedName("Desensitization")
+    @Expose
+    private String Desensitization;
+
+    /**
     * <p>图片检测结果</p>
     */
     @SerializedName("ImageResult")
@@ -106,6 +113,13 @@ public class LLMDetectResult extends AbstractModel {
     @SerializedName("IntentDetectResult")
     @Expose
     private IntentDetectResult IntentDetectResult;
+
+    /**
+    * <p>恶意URL检测结果</p>
+    */
+    @SerializedName("UrlDetectResult")
+    @Expose
+    private UrlDetectResult UrlDetectResult;
 
     /**
      * Get <p>仅输出侧：涉敏信息</p> 
@@ -236,6 +250,22 @@ public class LLMDetectResult extends AbstractModel {
     }
 
     /**
+     * Get <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p> 
+     * @return Desensitization <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+     */
+    public String getDesensitization() {
+        return this.Desensitization;
+    }
+
+    /**
+     * Set <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+     * @param Desensitization <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+     */
+    public void setDesensitization(String Desensitization) {
+        this.Desensitization = Desensitization;
+    }
+
+    /**
      * Get <p>图片检测结果</p> 
      * @return ImageResult <p>图片检测结果</p>
      */
@@ -299,6 +329,22 @@ public class LLMDetectResult extends AbstractModel {
         this.IntentDetectResult = IntentDetectResult;
     }
 
+    /**
+     * Get <p>恶意URL检测结果</p> 
+     * @return UrlDetectResult <p>恶意URL检测结果</p>
+     */
+    public UrlDetectResult getUrlDetectResult() {
+        return this.UrlDetectResult;
+    }
+
+    /**
+     * Set <p>恶意URL检测结果</p>
+     * @param UrlDetectResult <p>恶意URL检测结果</p>
+     */
+    public void setUrlDetectResult(UrlDetectResult UrlDetectResult) {
+        this.UrlDetectResult = UrlDetectResult;
+    }
+
     public LLMDetectResult() {
     }
 
@@ -340,6 +386,9 @@ public class LLMDetectResult extends AbstractModel {
         if (source.Payload != null) {
             this.Payload = new String(source.Payload);
         }
+        if (source.Desensitization != null) {
+            this.Desensitization = new String(source.Desensitization);
+        }
         if (source.ImageResult != null) {
             this.ImageResult = new ImageResult[source.ImageResult.length];
             for (int i = 0; i < source.ImageResult.length; i++) {
@@ -354,6 +403,9 @@ public class LLMDetectResult extends AbstractModel {
         }
         if (source.IntentDetectResult != null) {
             this.IntentDetectResult = new IntentDetectResult(source.IntentDetectResult);
+        }
+        if (source.UrlDetectResult != null) {
+            this.UrlDetectResult = new UrlDetectResult(source.UrlDetectResult);
         }
     }
 
@@ -370,10 +422,12 @@ public class LLMDetectResult extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamSimple(map, prefix + "Desensitization", this.Desensitization);
         this.setParamArrayObj(map, prefix + "ImageResult.", this.ImageResult);
         this.setParamSimple(map, prefix + "MsgID", this.MsgID);
         this.setParamObj(map, prefix + "ToolCallResult.", this.ToolCallResult);
         this.setParamObj(map, prefix + "IntentDetectResult.", this.IntentDetectResult);
+        this.setParamObj(map, prefix + "UrlDetectResult.", this.UrlDetectResult);
 
     }
 }

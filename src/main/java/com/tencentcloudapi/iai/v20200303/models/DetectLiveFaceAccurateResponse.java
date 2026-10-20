@@ -24,17 +24,14 @@ import java.util.HashMap;
 public class DetectLiveFaceAccurateResponse extends AbstractModel {
 
     /**
-    * 活体打分。
-- 取值范围 [0,100]。
-- 根据活体分数对应的阈值区间来判断是否为翻拍。
-- 目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+    * <p>活体真实度打分。</p><ul><li>取值范围 [0,100]。</li><li>根据活体分数对应的阈值区间来判断是否为翻拍。</li><li>目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。</li><li>分数值越高越接近真人，翻拍风险越低。</li></ul>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * 人脸识别所用的算法模型版本。
+    * <p>人脸识别所用的算法模型版本。</p>
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -48,44 +45,32 @@ public class DetectLiveFaceAccurateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 活体打分。
-- 取值范围 [0,100]。
-- 根据活体分数对应的阈值区间来判断是否为翻拍。
-- 目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。 
-     * @return Score 活体打分。
-- 取值范围 [0,100]。
-- 根据活体分数对应的阈值区间来判断是否为翻拍。
-- 目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+     * Get <p>活体真实度打分。</p><ul><li>取值范围 [0,100]。</li><li>根据活体分数对应的阈值区间来判断是否为翻拍。</li><li>目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。</li><li>分数值越高越接近真人，翻拍风险越低。</li></ul> 
+     * @return Score <p>活体真实度打分。</p><ul><li>取值范围 [0,100]。</li><li>根据活体分数对应的阈值区间来判断是否为翻拍。</li><li>目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。</li><li>分数值越高越接近真人，翻拍风险越低。</li></ul>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set 活体打分。
-- 取值范围 [0,100]。
-- 根据活体分数对应的阈值区间来判断是否为翻拍。
-- 目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
-     * @param Score 活体打分。
-- 取值范围 [0,100]。
-- 根据活体分数对应的阈值区间来判断是否为翻拍。
-- 目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+     * Set <p>活体真实度打分。</p><ul><li>取值范围 [0,100]。</li><li>根据活体分数对应的阈值区间来判断是否为翻拍。</li><li>目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。</li><li>分数值越高越接近真人，翻拍风险越低。</li></ul>
+     * @param Score <p>活体真实度打分。</p><ul><li>取值范围 [0,100]。</li><li>根据活体分数对应的阈值区间来判断是否为翻拍。</li><li>目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。</li><li>分数值越高越接近真人，翻拍风险越低。</li></ul>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 人脸识别所用的算法模型版本。 
-     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     * Get <p>人脸识别所用的算法模型版本。</p> 
+     * @return FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set 人脸识别所用的算法模型版本。
-     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     * Set <p>人脸识别所用的算法模型版本。</p>
+     * @param FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

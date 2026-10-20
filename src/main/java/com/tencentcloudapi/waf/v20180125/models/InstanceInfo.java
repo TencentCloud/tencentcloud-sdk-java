@@ -52,7 +52,7 @@ public class InstanceInfo extends AbstractModel {
     private String Region;
 
     /**
-    * <p>付费模式</p>
+    * 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
     */
     @SerializedName("PayMode")
     @Expose
@@ -213,14 +213,14 @@ public class InstanceInfo extends AbstractModel {
     private Long QpsStandard;
 
     /**
-    * <p>购买的带宽规格</p>
+    * 购买的带宽规格上限，单位：Mbps
     */
     @SerializedName("BandwidthStandard")
     @Expose
     private Long BandwidthStandard;
 
     /**
-    * <p>实例状态</p>
+    * 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
     */
     @SerializedName("Status")
     @Expose
@@ -262,7 +262,7 @@ public class InstanceInfo extends AbstractModel {
     private ApiPkg ApiPkg;
 
     /**
-    * <p>小程序安全加速包</p>
+    * <p>小程序安全防护包</p>
     */
     @SerializedName("MiniPkg")
     @Expose
@@ -304,7 +304,7 @@ public class InstanceInfo extends AbstractModel {
     private String BillingItem;
 
     /**
-    * <p>实例延期释放标识</p>
+    * 实例延期释放标识，0表示不延期，1表示延期释放
     */
     @SerializedName("FreeDelayFlag")
     @Expose
@@ -323,6 +323,20 @@ public class InstanceInfo extends AbstractModel {
     @SerializedName("Last3MaxBandwidth")
     @Expose
     private Long Last3MaxBandwidth;
+
+    /**
+    * <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+    */
+    @SerializedName("Last7MaxMiniBandwidth")
+    @Expose
+    private Long Last7MaxMiniBandwidth;
+
+    /**
+    * <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+    */
+    @SerializedName("MiniBandwidthStandard")
+    @Expose
+    private Long MiniBandwidthStandard;
 
     /**
     * <p>重保增强包</p>
@@ -351,6 +365,13 @@ public class InstanceInfo extends AbstractModel {
     @SerializedName("RCEPkg")
     @Expose
     private RCEPkg RCEPkg;
+
+    /**
+    * <p>RCE QPS扩展包</p>
+    */
+    @SerializedName("RCEExtendPkg")
+    @Expose
+    private RCEExtendPkg RCEExtendPkg;
 
     /**
     * <p>超量策略。0：超量沙箱<br>1：超量限流</p>
@@ -487,16 +508,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>付费模式</p> 
-     * @return PayMode <p>付费模式</p>
+     * Get 付费模式，0表示后付费（按量计费），1表示预付费（包年包月） 
+     * @return PayMode 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set <p>付费模式</p>
-     * @param PayMode <p>付费模式</p>
+     * Set 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
+     * @param PayMode 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -855,32 +876,32 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>购买的带宽规格</p> 
-     * @return BandwidthStandard <p>购买的带宽规格</p>
+     * Get 购买的带宽规格上限，单位：Mbps 
+     * @return BandwidthStandard 购买的带宽规格上限，单位：Mbps
      */
     public Long getBandwidthStandard() {
         return this.BandwidthStandard;
     }
 
     /**
-     * Set <p>购买的带宽规格</p>
-     * @param BandwidthStandard <p>购买的带宽规格</p>
+     * Set 购买的带宽规格上限，单位：Mbps
+     * @param BandwidthStandard 购买的带宽规格上限，单位：Mbps
      */
     public void setBandwidthStandard(Long BandwidthStandard) {
         this.BandwidthStandard = BandwidthStandard;
     }
 
     /**
-     * Get <p>实例状态</p> 
-     * @return Status <p>实例状态</p>
+     * Get 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁 
+     * @return Status 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>实例状态</p>
-     * @param Status <p>实例状态</p>
+     * Set 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
+     * @param Status 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -967,16 +988,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>小程序安全加速包</p> 
-     * @return MiniPkg <p>小程序安全加速包</p>
+     * Get <p>小程序安全防护包</p> 
+     * @return MiniPkg <p>小程序安全防护包</p>
      */
     public MiniPkg getMiniPkg() {
         return this.MiniPkg;
     }
 
     /**
-     * Set <p>小程序安全加速包</p>
-     * @param MiniPkg <p>小程序安全加速包</p>
+     * Set <p>小程序安全防护包</p>
+     * @param MiniPkg <p>小程序安全防护包</p>
      */
     public void setMiniPkg(MiniPkg MiniPkg) {
         this.MiniPkg = MiniPkg;
@@ -1063,16 +1084,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>实例延期释放标识</p> 
-     * @return FreeDelayFlag <p>实例延期释放标识</p>
+     * Get 实例延期释放标识，0表示不延期，1表示延期释放 
+     * @return FreeDelayFlag 实例延期释放标识，0表示不延期，1表示延期释放
      */
     public Long getFreeDelayFlag() {
         return this.FreeDelayFlag;
     }
 
     /**
-     * Set <p>实例延期释放标识</p>
-     * @param FreeDelayFlag <p>实例延期释放标识</p>
+     * Set 实例延期释放标识，0表示不延期，1表示延期释放
+     * @param FreeDelayFlag 实例延期释放标识，0表示不延期，1表示延期释放
      */
     public void setFreeDelayFlag(Long FreeDelayFlag) {
         this.FreeDelayFlag = FreeDelayFlag;
@@ -1108,6 +1129,38 @@ public class InstanceInfo extends AbstractModel {
      */
     public void setLast3MaxBandwidth(Long Last3MaxBandwidth) {
         this.Last3MaxBandwidth = Last3MaxBandwidth;
+    }
+
+    /**
+     * Get <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p> 
+     * @return Last7MaxMiniBandwidth <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     */
+    public Long getLast7MaxMiniBandwidth() {
+        return this.Last7MaxMiniBandwidth;
+    }
+
+    /**
+     * Set <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     * @param Last7MaxMiniBandwidth <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     */
+    public void setLast7MaxMiniBandwidth(Long Last7MaxMiniBandwidth) {
+        this.Last7MaxMiniBandwidth = Last7MaxMiniBandwidth;
+    }
+
+    /**
+     * Get <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p> 
+     * @return MiniBandwidthStandard <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+     */
+    public Long getMiniBandwidthStandard() {
+        return this.MiniBandwidthStandard;
+    }
+
+    /**
+     * Set <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+     * @param MiniBandwidthStandard <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+     */
+    public void setMiniBandwidthStandard(Long MiniBandwidthStandard) {
+        this.MiniBandwidthStandard = MiniBandwidthStandard;
     }
 
     /**
@@ -1172,6 +1225,22 @@ public class InstanceInfo extends AbstractModel {
      */
     public void setRCEPkg(RCEPkg RCEPkg) {
         this.RCEPkg = RCEPkg;
+    }
+
+    /**
+     * Get <p>RCE QPS扩展包</p> 
+     * @return RCEExtendPkg <p>RCE QPS扩展包</p>
+     */
+    public RCEExtendPkg getRCEExtendPkg() {
+        return this.RCEExtendPkg;
+    }
+
+    /**
+     * Set <p>RCE QPS扩展包</p>
+     * @param RCEExtendPkg <p>RCE QPS扩展包</p>
+     */
+    public void setRCEExtendPkg(RCEExtendPkg RCEExtendPkg) {
+        this.RCEExtendPkg = RCEExtendPkg;
     }
 
     /**
@@ -1471,6 +1540,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.Last3MaxBandwidth != null) {
             this.Last3MaxBandwidth = new Long(source.Last3MaxBandwidth);
         }
+        if (source.Last7MaxMiniBandwidth != null) {
+            this.Last7MaxMiniBandwidth = new Long(source.Last7MaxMiniBandwidth);
+        }
+        if (source.MiniBandwidthStandard != null) {
+            this.MiniBandwidthStandard = new Long(source.MiniBandwidthStandard);
+        }
         if (source.MajorEventsProPkg != null) {
             this.MajorEventsProPkg = new MajorEventsProPkg(source.MajorEventsProPkg);
         }
@@ -1482,6 +1557,9 @@ public class InstanceInfo extends AbstractModel {
         }
         if (source.RCEPkg != null) {
             this.RCEPkg = new RCEPkg(source.RCEPkg);
+        }
+        if (source.RCEExtendPkg != null) {
+            this.RCEExtendPkg = new RCEExtendPkg(source.RCEExtendPkg);
         }
         if (source.ExceedPolicy != null) {
             this.ExceedPolicy = new Long(source.ExceedPolicy);
@@ -1566,10 +1644,13 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
         this.setParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
         this.setParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
+        this.setParamSimple(map, prefix + "Last7MaxMiniBandwidth", this.Last7MaxMiniBandwidth);
+        this.setParamSimple(map, prefix + "MiniBandwidthStandard", this.MiniBandwidthStandard);
         this.setParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
         this.setParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
         this.setParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
         this.setParamObj(map, prefix + "RCEPkg.", this.RCEPkg);
+        this.setParamObj(map, prefix + "RCEExtendPkg.", this.RCEExtendPkg);
         this.setParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
         this.setParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
         this.setParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);

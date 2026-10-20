@@ -31,7 +31,7 @@ public class HybridPkg extends AbstractModel {
     private String ResourceIds;
 
     /**
-    * 状态
+    * 状态，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -73,11 +73,18 @@ public class HybridPkg extends AbstractModel {
     private Long UsedNum;
 
     /**
-    * 续费标志
+    * 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
+
+    /**
+    * 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+    */
+    @SerializedName("ElasticNodeNum")
+    @Expose
+    private Long ElasticNodeNum;
 
     /**
      * Get 资源id 
@@ -96,16 +103,16 @@ public class HybridPkg extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态，0表示关闭，1表示开启 
+     * @return Status 状态，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态，0表示关闭，1表示开启
+     * @param Status 状态，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -192,19 +199,35 @@ public class HybridPkg extends AbstractModel {
     }
 
     /**
-     * Get 续费标志 
-     * @return RenewFlag 续费标志
+     * Get 续费标识，0表示手动续费，1表示自动续费，2表示到期不续 
+     * @return RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标志
-     * @param RenewFlag 续费标志
+     * Set 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+     * @param RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数 
+     * @return ElasticNodeNum 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+     */
+    public Long getElasticNodeNum() {
+        return this.ElasticNodeNum;
+    }
+
+    /**
+     * Set 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+     * @param ElasticNodeNum 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+     */
+    public void setElasticNodeNum(Long ElasticNodeNum) {
+        this.ElasticNodeNum = ElasticNodeNum;
     }
 
     public HybridPkg() {
@@ -239,6 +262,9 @@ public class HybridPkg extends AbstractModel {
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.ElasticNodeNum != null) {
+            this.ElasticNodeNum = new Long(source.ElasticNodeNum);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class HybridPkg extends AbstractModel {
         this.setParamSimple(map, prefix + "InquireNum", this.InquireNum);
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "ElasticNodeNum", this.ElasticNodeNum);
 
     }
 }

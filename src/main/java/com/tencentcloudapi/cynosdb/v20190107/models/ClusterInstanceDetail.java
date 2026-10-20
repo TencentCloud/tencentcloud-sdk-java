@@ -73,11 +73,25 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String InstanceType;
 
     /**
+    * <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * <p>实例状态</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
+
+    /**
+    * <p>实例状态中文描述</p>
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
 
     /**
     * <p>实例状态描述</p>
@@ -87,18 +101,18 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String InstanceStatusDesc;
 
     /**
-    * <p>cpu核数</p>
-    */
-    @SerializedName("InstanceCpu")
-    @Expose
-    private Long InstanceCpu;
-
-    /**
     * <p>Cpu</p><p>单位：核</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
+
+    /**
+    * <p>cpu核数</p>
+    */
+    @SerializedName("InstanceCpu")
+    @Expose
+    private Long InstanceCpu;
 
     /**
     * <p>serverless实例cpu下限</p><p>单位：核</p>
@@ -171,6 +185,13 @@ public class ClusterInstanceDetail extends AbstractModel {
     private ObjectTask [] InstanceTasks;
 
     /**
+    * <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
     * <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
     */
     @SerializedName("InstanceDeviceType")
@@ -239,20 +260,6 @@ public class ClusterInstanceDetail extends AbstractModel {
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
-
-    /**
-    * <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
-
-    /**
-    * <p>实例状态中文描述</p>
-    */
-    @SerializedName("StatusDesc")
-    @Expose
-    private String StatusDesc;
 
     /**
     * <p>数据库类型</p>
@@ -452,13 +459,6 @@ public class ClusterInstanceDetail extends AbstractModel {
     private InstanceAbility InstanceAbility;
 
     /**
-    * <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
-    */
-    @SerializedName("DeviceType")
-    @Expose
-    private String DeviceType;
-
-    /**
     * <p>全球数据库唯一标识</p>
     */
     @SerializedName("GdnId")
@@ -578,9 +578,27 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul> 
+     * @return Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+     * @param Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get <p>实例状态</p> 
      * @return InstanceStatus <p>实例状态</p>
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
@@ -588,15 +606,35 @@ public class ClusterInstanceDetail extends AbstractModel {
     /**
      * Set <p>实例状态</p>
      * @param InstanceStatus <p>实例状态</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
+     * Get <p>实例状态中文描述</p> 
+     * @return StatusDesc <p>实例状态中文描述</p>
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * Set <p>实例状态中文描述</p>
+     * @param StatusDesc <p>实例状态中文描述</p>
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
+    /**
      * Get <p>实例状态描述</p> 
      * @return InstanceStatusDesc <p>实例状态描述</p>
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
@@ -604,9 +642,27 @@ public class ClusterInstanceDetail extends AbstractModel {
     /**
      * Set <p>实例状态描述</p>
      * @param InstanceStatusDesc <p>实例状态描述</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
+    }
+
+    /**
+     * Get <p>Cpu</p><p>单位：核</p> 
+     * @return Cpu <p>Cpu</p><p>单位：核</p>
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set <p>Cpu</p><p>单位：核</p>
+     * @param Cpu <p>Cpu</p><p>单位：核</p>
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
     }
 
     /**
@@ -627,22 +683,6 @@ public class ClusterInstanceDetail extends AbstractModel {
     @Deprecated
     public void setInstanceCpu(Long InstanceCpu) {
         this.InstanceCpu = InstanceCpu;
-    }
-
-    /**
-     * Get <p>Cpu</p><p>单位：核</p> 
-     * @return Cpu <p>Cpu</p><p>单位：核</p>
-     */
-    public Long getCpu() {
-        return this.Cpu;
-    }
-
-    /**
-     * Set <p>Cpu</p><p>单位：核</p>
-     * @param Cpu <p>Cpu</p><p>单位：核</p>
-     */
-    public void setCpu(Long Cpu) {
-        this.Cpu = Cpu;
     }
 
     /**
@@ -696,7 +736,9 @@ public class ClusterInstanceDetail extends AbstractModel {
     /**
      * Get <p>内存</p> 
      * @return InstanceMemory <p>内存</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getInstanceMemory() {
         return this.InstanceMemory;
     }
@@ -704,7 +746,9 @@ public class ClusterInstanceDetail extends AbstractModel {
     /**
      * Set <p>内存</p>
      * @param InstanceMemory <p>内存</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceMemory(Long InstanceMemory) {
         this.InstanceMemory = InstanceMemory;
     }
@@ -806,9 +850,27 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul> 
+     * @return DeviceType <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+     * @param DeviceType <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
      * Get <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol> 
      * @return InstanceDeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
     }
@@ -816,7 +878,9 @@ public class ClusterInstanceDetail extends AbstractModel {
     /**
      * Set <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      * @param InstanceDeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;
     }
@@ -963,38 +1027,6 @@ public class ClusterInstanceDetail extends AbstractModel {
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
-    }
-
-    /**
-     * Get <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul> 
-     * @return Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-     * @param Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get <p>实例状态中文描述</p> 
-     * @return StatusDesc <p>实例状态中文描述</p>
-     */
-    public String getStatusDesc() {
-        return this.StatusDesc;
-    }
-
-    /**
-     * Set <p>实例状态中文描述</p>
-     * @param StatusDesc <p>实例状态中文描述</p>
-     */
-    public void setStatusDesc(String StatusDesc) {
-        this.StatusDesc = StatusDesc;
     }
 
     /**
@@ -1450,22 +1482,6 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul> 
-     * @return DeviceType <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
-     */
-    public String getDeviceType() {
-        return this.DeviceType;
-    }
-
-    /**
-     * Set <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
-     * @param DeviceType <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
-     */
-    public void setDeviceType(String DeviceType) {
-        this.DeviceType = DeviceType;
-    }
-
-    /**
      * Get <p>全球数据库唯一标识</p> 
      * @return GdnId <p>全球数据库唯一标识</p>
      */
@@ -1510,17 +1526,23 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
         if (source.InstanceStatus != null) {
             this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
         }
         if (source.InstanceStatusDesc != null) {
             this.InstanceStatusDesc = new String(source.InstanceStatusDesc);
         }
-        if (source.InstanceCpu != null) {
-            this.InstanceCpu = new Long(source.InstanceCpu);
-        }
         if (source.Cpu != null) {
             this.Cpu = new Long(source.Cpu);
+        }
+        if (source.InstanceCpu != null) {
+            this.InstanceCpu = new Long(source.InstanceCpu);
         }
         if (source.MinCpu != null) {
             this.MinCpu = new Float(source.MinCpu);
@@ -1558,6 +1580,9 @@ public class ClusterInstanceDetail extends AbstractModel {
                 this.InstanceTasks[i] = new ObjectTask(source.InstanceTasks[i]);
             }
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
         if (source.InstanceDeviceType != null) {
             this.InstanceDeviceType = new String(source.InstanceDeviceType);
         }
@@ -1590,12 +1615,6 @@ public class ClusterInstanceDetail extends AbstractModel {
         }
         if (source.PhysicalZone != null) {
             this.PhysicalZone = new String(source.PhysicalZone);
-        }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
-        if (source.StatusDesc != null) {
-            this.StatusDesc = new String(source.StatusDesc);
         }
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
@@ -1690,9 +1709,6 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.InstanceAbility != null) {
             this.InstanceAbility = new InstanceAbility(source.InstanceAbility);
         }
-        if (source.DeviceType != null) {
-            this.DeviceType = new String(source.DeviceType);
-        }
         if (source.GdnId != null) {
             this.GdnId = new String(source.GdnId);
         }
@@ -1710,10 +1726,12 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
-        this.setParamSimple(map, prefix + "InstanceCpu", this.InstanceCpu);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "InstanceCpu", this.InstanceCpu);
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
@@ -1724,6 +1742,7 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
         this.setParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
         this.setParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
@@ -1734,8 +1753,6 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
@@ -1764,7 +1781,6 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
-        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
 
     }
