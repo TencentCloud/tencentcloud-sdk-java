@@ -31,7 +31,7 @@ public class HideResponseHeaders extends AbstractModel {
     private String Key;
 
     /**
-    * <p>value</p><p>当前仅支持传空字符串&quot;&quot;</p>
+    * <p>value值</p><p>枚举值：</p><ul><li>&#39;&#39;： &#39;&#39;</li></ul>
     */
     @SerializedName("Value")
     @Expose
@@ -54,16 +54,16 @@ public class HideResponseHeaders extends AbstractModel {
     }
 
     /**
-     * Get <p>value</p><p>当前仅支持传空字符串&quot;&quot;</p> 
-     * @return Value <p>value</p><p>当前仅支持传空字符串&quot;&quot;</p>
+     * Get <p>value值</p><p>枚举值：</p><ul><li>&#39;&#39;： &#39;&#39;</li></ul> 
+     * @return Value <p>value值</p><p>枚举值：</p><ul><li>&#39;&#39;： &#39;&#39;</li></ul>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set <p>value</p><p>当前仅支持传空字符串&quot;&quot;</p>
-     * @param Value <p>value</p><p>当前仅支持传空字符串&quot;&quot;</p>
+     * Set <p>value值</p><p>枚举值：</p><ul><li>&#39;&#39;： &#39;&#39;</li></ul>
+     * @param Value <p>value值</p><p>枚举值：</p><ul><li>&#39;&#39;： &#39;&#39;</li></ul>
      */
     public void setValue(String Value) {
         this.Value = Value;

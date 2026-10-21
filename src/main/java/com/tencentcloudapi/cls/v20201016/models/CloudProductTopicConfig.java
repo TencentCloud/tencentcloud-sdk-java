@@ -115,6 +115,13 @@ public class CloudProductTopicConfig extends AbstractModel {
     private String TopicId;
 
     /**
+    * <p>主题扩展信息</p>
+    */
+    @SerializedName("Extends")
+    @Expose
+    private TopicExtendInfo Extends;
+
+    /**
      * Get <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。</p><p>枚举值：</p><ul><li>0： 不加密</li><li>1： kms-cls 云产品密钥加密</li></ul><p>默认值：0</p> 
      * @return Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。</p><p>枚举值：</p><ul><li>0： 不加密</li><li>1： kms-cls 云产品密钥加密</li></ul><p>默认值：0</p>
      */
@@ -322,6 +329,22 @@ public class CloudProductTopicConfig extends AbstractModel {
         this.TopicId = TopicId;
     }
 
+    /**
+     * Get <p>主题扩展信息</p> 
+     * @return Extends <p>主题扩展信息</p>
+     */
+    public TopicExtendInfo getExtends() {
+        return this.Extends;
+    }
+
+    /**
+     * Set <p>主题扩展信息</p>
+     * @param Extends <p>主题扩展信息</p>
+     */
+    public void setExtends(TopicExtendInfo Extends) {
+        this.Extends = Extends;
+    }
+
     public CloudProductTopicConfig() {
     }
 
@@ -369,6 +392,9 @@ public class CloudProductTopicConfig extends AbstractModel {
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
+        if (source.Extends != null) {
+            this.Extends = new TopicExtendInfo(source.Extends);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class CloudProductTopicConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "CustomKmsInfo.", this.CustomKmsInfo);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamObj(map, prefix + "Extends.", this.Extends);
 
     }
 }

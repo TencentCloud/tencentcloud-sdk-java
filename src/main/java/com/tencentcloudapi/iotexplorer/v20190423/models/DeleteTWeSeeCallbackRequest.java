@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteTWeSeeCallbackRequest extends AbstractModel {
 
     /**
-    * 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+    * <p>回调目标 ID</p>
     */
     @SerializedName("CallbackId")
     @Expose
     private String CallbackId;
 
     /**
-     * Get 回调目标 ID，格式为 `callback-` + 8 位小写字母数字 
-     * @return CallbackId 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+     * Get <p>回调目标 ID</p> 
+     * @return CallbackId <p>回调目标 ID</p>
      */
     public String getCallbackId() {
         return this.CallbackId;
     }
 
     /**
-     * Set 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
-     * @param CallbackId 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+     * Set <p>回调目标 ID</p>
+     * @param CallbackId <p>回调目标 ID</p>
      */
     public void setCallbackId(String CallbackId) {
         this.CallbackId = CallbackId;

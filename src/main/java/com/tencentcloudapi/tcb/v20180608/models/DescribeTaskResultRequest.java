@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskResultRequest extends AbstractModel {
 
     /**
-    * <p>云开发环境ID</p>
+    * <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
     */
     @SerializedName("EnvId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTaskResultRequest extends AbstractModel {
     private String TaskId;
 
     /**
-     * Get <p>云开发环境ID</p> 
-     * @return EnvId <p>云开发环境ID</p>
+     * Get <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p> 
+     * @return EnvId <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set <p>云开发环境ID</p>
-     * @param EnvId <p>云开发环境ID</p>
+     * Set <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
+     * @param EnvId <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

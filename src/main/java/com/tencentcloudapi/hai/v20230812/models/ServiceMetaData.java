@@ -31,7 +31,7 @@ public class ServiceMetaData extends AbstractModel {
     private String ServiceName;
 
     /**
-    * 收费类型
+    * <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
     */
     @SerializedName("ServiceChargeType")
     @Expose
@@ -54,16 +54,16 @@ public class ServiceMetaData extends AbstractModel {
     }
 
     /**
-     * Get 收费类型 
-     * @return ServiceChargeType 收费类型
+     * Get <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p> 
+     * @return ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     public String getServiceChargeType() {
         return this.ServiceChargeType;
     }
 
     /**
-     * Set 收费类型
-     * @param ServiceChargeType 收费类型
+     * Set <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+     * @param ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     public void setServiceChargeType(String ServiceChargeType) {
         this.ServiceChargeType = ServiceChargeType;

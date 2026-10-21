@@ -66,7 +66,7 @@ public class DescribeFraudUltimateRequest extends AbstractModel {
     private String WeChatOpenId;
 
     /**
-    * <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+    * <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -190,16 +190,16 @@ public class DescribeFraudUltimateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p> 
-     * @return PhoneNumber <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+     * Get <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p> 
+     * @return PhoneNumber <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
-     * @param PhoneNumber <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+     * Set <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
+     * @param PhoneNumber <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;

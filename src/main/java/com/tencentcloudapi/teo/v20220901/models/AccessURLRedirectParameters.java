@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class AccessURLRedirectParameters extends AbstractModel {
 
     /**
-    * 状态码，取值为 301、302、303、307、308 之一。
+    * <p>状态码，取值为 301、302、303、307、308 之一。</p>
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * 目标请求协议，取值有：
-<li>http：目标请求协议 HTTP；</li>
-<li>https：目标请求协议 HTTPS；</li>
-<li>follow：跟随请求。</li>
+    * <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 目标 HostName 。
+    * <p>目标 HostName。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
@@ -49,7 +46,7 @@ public class AccessURLRedirectParameters extends AbstractModel {
     private HostName HostName;
 
     /**
-    * 目标路径。
+    * <p>目标路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URLPath")
@@ -57,7 +54,7 @@ public class AccessURLRedirectParameters extends AbstractModel {
     private URLPath URLPath;
 
     /**
-    * 携带查询参数。
+    * <p>携带查询参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryString")
@@ -65,53 +62,41 @@ public class AccessURLRedirectParameters extends AbstractModel {
     private AccessURLRedirectQueryString QueryString;
 
     /**
-     * Get 状态码，取值为 301、302、303、307、308 之一。 
-     * @return StatusCode 状态码，取值为 301、302、303、307、308 之一。
+     * Get <p>状态码，取值为 301、302、303、307、308 之一。</p> 
+     * @return StatusCode <p>状态码，取值为 301、302、303、307、308 之一。</p>
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set 状态码，取值为 301、302、303、307、308 之一。
-     * @param StatusCode 状态码，取值为 301、302、303、307、308 之一。
+     * Set <p>状态码，取值为 301、302、303、307、308 之一。</p>
+     * @param StatusCode <p>状态码，取值为 301、302、303、307、308 之一。</p>
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get 目标请求协议，取值有：
-<li>http：目标请求协议 HTTP；</li>
-<li>https：目标请求协议 HTTPS；</li>
-<li>follow：跟随请求。</li> 
-     * @return Protocol 目标请求协议，取值有：
-<li>http：目标请求协议 HTTP；</li>
-<li>https：目标请求协议 HTTPS；</li>
-<li>follow：跟随请求。</li>
+     * Get <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul> 
+     * @return Protocol <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 目标请求协议，取值有：
-<li>http：目标请求协议 HTTP；</li>
-<li>https：目标请求协议 HTTPS；</li>
-<li>follow：跟随请求。</li>
-     * @param Protocol 目标请求协议，取值有：
-<li>http：目标请求协议 HTTP；</li>
-<li>https：目标请求协议 HTTPS；</li>
-<li>follow：跟随请求。</li>
+     * Set <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul>
+     * @param Protocol <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 目标 HostName 。
+     * Get <p>目标 HostName。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostName 目标 HostName 。
+     * @return HostName <p>目标 HostName。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostName getHostName() {
@@ -119,9 +104,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
     }
 
     /**
-     * Set 目标 HostName 。
+     * Set <p>目标 HostName。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostName 目标 HostName 。
+     * @param HostName <p>目标 HostName。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(HostName HostName) {
@@ -129,9 +114,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
     }
 
     /**
-     * Get 目标路径。
+     * Get <p>目标路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return URLPath 目标路径。
+     * @return URLPath <p>目标路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public URLPath getURLPath() {
@@ -139,9 +124,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
     }
 
     /**
-     * Set 目标路径。
+     * Set <p>目标路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param URLPath 目标路径。
+     * @param URLPath <p>目标路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURLPath(URLPath URLPath) {
@@ -149,9 +134,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
     }
 
     /**
-     * Get 携带查询参数。
+     * Get <p>携带查询参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueryString 携带查询参数。
+     * @return QueryString <p>携带查询参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessURLRedirectQueryString getQueryString() {
@@ -159,9 +144,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
     }
 
     /**
-     * Set 携带查询参数。
+     * Set <p>携带查询参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryString 携带查询参数。
+     * @param QueryString <p>携带查询参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryString(AccessURLRedirectQueryString QueryString) {

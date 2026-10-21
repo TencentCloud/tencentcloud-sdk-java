@@ -45,7 +45,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String ConsistencyType;
 
     /**
-    * <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+    * <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
@@ -205,16 +205,16 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p> 
-     * @return ConsistencyTimeOut <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * Get <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p> 
+     * @return ConsistencyTimeOut <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      */
     public String getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
-     * @param ConsistencyTimeOut <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * Set <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * @param ConsistencyTimeOut <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      */
     public void setConsistencyTimeOut(String ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;

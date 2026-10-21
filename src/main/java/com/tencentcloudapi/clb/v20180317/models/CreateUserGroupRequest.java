@@ -45,6 +45,20 @@ public class CreateUserGroupRequest extends AbstractModel {
     private String BudgetId;
 
     /**
+    * <p>建组时绑定的 Prompt 资源 ID（pmt-xxx，须为该实例下已存在的 Prompt）。与 PromptVersion 必须成对传入，仅传其一将返回错误。不传表示默认不绑定 Prompt，可建组后再调用 ModifyUserGroupPrompt 绑定或更换版本。绑定后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容。</p>
+    */
+    @SerializedName("PromptId")
+    @Expose
+    private String PromptId;
+
+    /**
+    * <p>绑定的 Prompt 版本号（如 v1、v2，由 CreatePrompt / CreatePromptVersion 生成，长度不超过16个字符），与 PromptId 必须成对传入，须为该 Prompt 下已存在的版本。版本为不可变快照，Prompt 后续新增版本不会自动生效于已绑定的用户组，需显式重新绑定新版本。一个用户组同时只关联一份 Prompt 的一个版本，重复绑定即为替换。</p>
+    */
+    @SerializedName("PromptVersion")
+    @Expose
+    private String PromptVersion;
+
+    /**
     * <p>用户组意图路由白名单（ir-xxx）。每一项须为该实例已创建的意图路由名。命中意图路由名时其内部真实模型自动豁免白名单。为空表示不授权任何意图路由。</p>
     */
     @SerializedName("IntentRouters")
@@ -118,6 +132,38 @@ public class CreateUserGroupRequest extends AbstractModel {
      */
     public void setBudgetId(String BudgetId) {
         this.BudgetId = BudgetId;
+    }
+
+    /**
+     * Get <p>建组时绑定的 Prompt 资源 ID（pmt-xxx，须为该实例下已存在的 Prompt）。与 PromptVersion 必须成对传入，仅传其一将返回错误。不传表示默认不绑定 Prompt，可建组后再调用 ModifyUserGroupPrompt 绑定或更换版本。绑定后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容。</p> 
+     * @return PromptId <p>建组时绑定的 Prompt 资源 ID（pmt-xxx，须为该实例下已存在的 Prompt）。与 PromptVersion 必须成对传入，仅传其一将返回错误。不传表示默认不绑定 Prompt，可建组后再调用 ModifyUserGroupPrompt 绑定或更换版本。绑定后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容。</p>
+     */
+    public String getPromptId() {
+        return this.PromptId;
+    }
+
+    /**
+     * Set <p>建组时绑定的 Prompt 资源 ID（pmt-xxx，须为该实例下已存在的 Prompt）。与 PromptVersion 必须成对传入，仅传其一将返回错误。不传表示默认不绑定 Prompt，可建组后再调用 ModifyUserGroupPrompt 绑定或更换版本。绑定后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容。</p>
+     * @param PromptId <p>建组时绑定的 Prompt 资源 ID（pmt-xxx，须为该实例下已存在的 Prompt）。与 PromptVersion 必须成对传入，仅传其一将返回错误。不传表示默认不绑定 Prompt，可建组后再调用 ModifyUserGroupPrompt 绑定或更换版本。绑定后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容。</p>
+     */
+    public void setPromptId(String PromptId) {
+        this.PromptId = PromptId;
+    }
+
+    /**
+     * Get <p>绑定的 Prompt 版本号（如 v1、v2，由 CreatePrompt / CreatePromptVersion 生成，长度不超过16个字符），与 PromptId 必须成对传入，须为该 Prompt 下已存在的版本。版本为不可变快照，Prompt 后续新增版本不会自动生效于已绑定的用户组，需显式重新绑定新版本。一个用户组同时只关联一份 Prompt 的一个版本，重复绑定即为替换。</p> 
+     * @return PromptVersion <p>绑定的 Prompt 版本号（如 v1、v2，由 CreatePrompt / CreatePromptVersion 生成，长度不超过16个字符），与 PromptId 必须成对传入，须为该 Prompt 下已存在的版本。版本为不可变快照，Prompt 后续新增版本不会自动生效于已绑定的用户组，需显式重新绑定新版本。一个用户组同时只关联一份 Prompt 的一个版本，重复绑定即为替换。</p>
+     */
+    public String getPromptVersion() {
+        return this.PromptVersion;
+    }
+
+    /**
+     * Set <p>绑定的 Prompt 版本号（如 v1、v2，由 CreatePrompt / CreatePromptVersion 生成，长度不超过16个字符），与 PromptId 必须成对传入，须为该 Prompt 下已存在的版本。版本为不可变快照，Prompt 后续新增版本不会自动生效于已绑定的用户组，需显式重新绑定新版本。一个用户组同时只关联一份 Prompt 的一个版本，重复绑定即为替换。</p>
+     * @param PromptVersion <p>绑定的 Prompt 版本号（如 v1、v2，由 CreatePrompt / CreatePromptVersion 生成，长度不超过16个字符），与 PromptId 必须成对传入，须为该 Prompt 下已存在的版本。版本为不可变快照，Prompt 后续新增版本不会自动生效于已绑定的用户组，需显式重新绑定新版本。一个用户组同时只关联一份 Prompt 的一个版本，重复绑定即为替换。</p>
+     */
+    public void setPromptVersion(String PromptVersion) {
+        this.PromptVersion = PromptVersion;
     }
 
     /**
@@ -201,6 +247,12 @@ public class CreateUserGroupRequest extends AbstractModel {
         if (source.BudgetId != null) {
             this.BudgetId = new String(source.BudgetId);
         }
+        if (source.PromptId != null) {
+            this.PromptId = new String(source.PromptId);
+        }
+        if (source.PromptVersion != null) {
+            this.PromptVersion = new String(source.PromptVersion);
+        }
         if (source.IntentRouters != null) {
             this.IntentRouters = new String[source.IntentRouters.length];
             for (int i = 0; i < source.IntentRouters.length; i++) {
@@ -235,6 +287,8 @@ public class CreateUserGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
         this.setParamSimple(map, prefix + "UserGroupName", this.UserGroupName);
         this.setParamSimple(map, prefix + "BudgetId", this.BudgetId);
+        this.setParamSimple(map, prefix + "PromptId", this.PromptId);
+        this.setParamSimple(map, prefix + "PromptVersion", this.PromptVersion);
         this.setParamArraySimple(map, prefix + "IntentRouters.", this.IntentRouters);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamArraySimple(map, prefix + "Models.", this.Models);

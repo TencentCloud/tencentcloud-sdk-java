@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTWeSeeCallbackResponse extends AbstractModel {
 
     /**
-    * 回调目标 ID
+    * <p>回调目标 ID</p>
     */
     @SerializedName("CallbackId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTWeSeeCallbackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 回调目标 ID 
-     * @return CallbackId 回调目标 ID
+     * Get <p>回调目标 ID</p> 
+     * @return CallbackId <p>回调目标 ID</p>
      */
     public String getCallbackId() {
         return this.CallbackId;
     }
 
     /**
-     * Set 回调目标 ID
-     * @param CallbackId 回调目标 ID
+     * Set <p>回调目标 ID</p>
+     * @param CallbackId <p>回调目标 ID</p>
      */
     public void setCallbackId(String CallbackId) {
         this.CallbackId = CallbackId;

@@ -45,7 +45,7 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
     private Long Replicas;
 
     /**
-    * <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+    * <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
     */
     @SerializedName("ServiceChargeType")
     @Expose
@@ -128,16 +128,16 @@ public class CreateInferServiceByTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>付费方式，POSTPAID_BY_HOUR按量后付费</p> 
-     * @return ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+     * Get <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p> 
+     * @return ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     public String getServiceChargeType() {
         return this.ServiceChargeType;
     }
 
     /**
-     * Set <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
-     * @param ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+     * Set <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+     * @param ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     public void setServiceChargeType(String ServiceChargeType) {
         this.ServiceChargeType = ServiceChargeType;

@@ -185,6 +185,20 @@ public class GetServiceStatusResponse extends AbstractModel {
     private Long ResourceRegion;
 
     /**
+    * <p>多账号开通额度</p><p>单位：个数</p>
+    */
+    @SerializedName("MultiAccountLimit")
+    @Expose
+    private Long MultiAccountLimit;
+
+    /**
+    * <p>多账号启用个数</p><p>单位：个数</p>
+    */
+    @SerializedName("MultiAccountUsedCount")
+    @Expose
+    private Long MultiAccountUsedCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -560,6 +574,38 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>多账号开通额度</p><p>单位：个数</p> 
+     * @return MultiAccountLimit <p>多账号开通额度</p><p>单位：个数</p>
+     */
+    public Long getMultiAccountLimit() {
+        return this.MultiAccountLimit;
+    }
+
+    /**
+     * Set <p>多账号开通额度</p><p>单位：个数</p>
+     * @param MultiAccountLimit <p>多账号开通额度</p><p>单位：个数</p>
+     */
+    public void setMultiAccountLimit(Long MultiAccountLimit) {
+        this.MultiAccountLimit = MultiAccountLimit;
+    }
+
+    /**
+     * Get <p>多账号启用个数</p><p>单位：个数</p> 
+     * @return MultiAccountUsedCount <p>多账号启用个数</p><p>单位：个数</p>
+     */
+    public Long getMultiAccountUsedCount() {
+        return this.MultiAccountUsedCount;
+    }
+
+    /**
+     * Set <p>多账号启用个数</p><p>单位：个数</p>
+     * @param MultiAccountUsedCount <p>多账号启用个数</p><p>单位：个数</p>
+     */
+    public void setMultiAccountUsedCount(Long MultiAccountUsedCount) {
+        this.MultiAccountUsedCount = MultiAccountUsedCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -661,6 +707,12 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.ResourceRegion != null) {
             this.ResourceRegion = new Long(source.ResourceRegion);
         }
+        if (source.MultiAccountLimit != null) {
+            this.MultiAccountLimit = new Long(source.MultiAccountLimit);
+        }
+        if (source.MultiAccountUsedCount != null) {
+            this.MultiAccountUsedCount = new Long(source.MultiAccountUsedCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -694,6 +746,8 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RegionsQps.", this.RegionsQps);
         this.setParamSimple(map, prefix + "ResourceZone", this.ResourceZone);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
+        this.setParamSimple(map, prefix + "MultiAccountLimit", this.MultiAccountLimit);
+        this.setParamSimple(map, prefix + "MultiAccountUsedCount", this.MultiAccountUsedCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

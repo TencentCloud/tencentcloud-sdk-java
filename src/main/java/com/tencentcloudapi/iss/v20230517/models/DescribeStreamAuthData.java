@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class DescribeStreamAuthData extends AbstractModel {
 
     /**
-    * 鉴权配置ID（uuid）
+    * <p>鉴权配置ID（uuid）</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 是否开播放鉴权（1:开启,0:关闭）
+    * <p>是否开播放鉴权（1:开启,0:关闭）</p>
     */
     @SerializedName("PullState")
     @Expose
     private Long PullState;
 
     /**
-    * 播放密钥（仅支持字母数字，长度0-10位）
+    * <p>播放密钥（仅支持字母数字，长度0-10位）</p>
     */
     @SerializedName("PullSecret")
     @Expose
     private String PullSecret;
 
     /**
-    * 播放过期时间（单位：分钟）
+    * <p>播放过期时间（单位：分钟）</p>
     */
     @SerializedName("PullExpired")
     @Expose
     private Long PullExpired;
 
     /**
-    * 是否开启推流鉴权（1:开启,0:关闭）
+    * <p>是否开启推流鉴权（1:开启,0:关闭）</p>
     */
     @SerializedName("PushState")
     @Expose
     private Long PushState;
 
     /**
-    * 推流密钥（仅支持字母数字，长度0-10位）
+    * <p>推流密钥（仅支持字母数字，长度0-10位）</p>
     */
     @SerializedName("PushSecret")
     @Expose
     private String PushSecret;
 
     /**
-    * 推流过期时间（单位：分钟）
+    * <p>推流过期时间（单位：分钟）</p>
     */
     @SerializedName("PushExpired")
     @Expose
     private Long PushExpired;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-     * Get 鉴权配置ID（uuid） 
-     * @return Id 鉴权配置ID（uuid）
+    * <p>不生效推流鉴权的域名 ID 列表</p>
+    */
+    @SerializedName("ExcludePushDomainIds")
+    @Expose
+    private String [] ExcludePushDomainIds;
+
+    /**
+     * Get <p>鉴权配置ID（uuid）</p> 
+     * @return Id <p>鉴权配置ID（uuid）</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 鉴权配置ID（uuid）
-     * @param Id 鉴权配置ID（uuid）
+     * Set <p>鉴权配置ID（uuid）</p>
+     * @param Id <p>鉴权配置ID（uuid）</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否开播放鉴权（1:开启,0:关闭） 
-     * @return PullState 是否开播放鉴权（1:开启,0:关闭）
+     * Get <p>是否开播放鉴权（1:开启,0:关闭）</p> 
+     * @return PullState <p>是否开播放鉴权（1:开启,0:关闭）</p>
      */
     public Long getPullState() {
         return this.PullState;
     }
 
     /**
-     * Set 是否开播放鉴权（1:开启,0:关闭）
-     * @param PullState 是否开播放鉴权（1:开启,0:关闭）
+     * Set <p>是否开播放鉴权（1:开启,0:关闭）</p>
+     * @param PullState <p>是否开播放鉴权（1:开启,0:关闭）</p>
      */
     public void setPullState(Long PullState) {
         this.PullState = PullState;
     }
 
     /**
-     * Get 播放密钥（仅支持字母数字，长度0-10位） 
-     * @return PullSecret 播放密钥（仅支持字母数字，长度0-10位）
+     * Get <p>播放密钥（仅支持字母数字，长度0-10位）</p> 
+     * @return PullSecret <p>播放密钥（仅支持字母数字，长度0-10位）</p>
      */
     public String getPullSecret() {
         return this.PullSecret;
     }
 
     /**
-     * Set 播放密钥（仅支持字母数字，长度0-10位）
-     * @param PullSecret 播放密钥（仅支持字母数字，长度0-10位）
+     * Set <p>播放密钥（仅支持字母数字，长度0-10位）</p>
+     * @param PullSecret <p>播放密钥（仅支持字母数字，长度0-10位）</p>
      */
     public void setPullSecret(String PullSecret) {
         this.PullSecret = PullSecret;
     }
 
     /**
-     * Get 播放过期时间（单位：分钟） 
-     * @return PullExpired 播放过期时间（单位：分钟）
+     * Get <p>播放过期时间（单位：分钟）</p> 
+     * @return PullExpired <p>播放过期时间（单位：分钟）</p>
      */
     public Long getPullExpired() {
         return this.PullExpired;
     }
 
     /**
-     * Set 播放过期时间（单位：分钟）
-     * @param PullExpired 播放过期时间（单位：分钟）
+     * Set <p>播放过期时间（单位：分钟）</p>
+     * @param PullExpired <p>播放过期时间（单位：分钟）</p>
      */
     public void setPullExpired(Long PullExpired) {
         this.PullExpired = PullExpired;
     }
 
     /**
-     * Get 是否开启推流鉴权（1:开启,0:关闭） 
-     * @return PushState 是否开启推流鉴权（1:开启,0:关闭）
+     * Get <p>是否开启推流鉴权（1:开启,0:关闭）</p> 
+     * @return PushState <p>是否开启推流鉴权（1:开启,0:关闭）</p>
      */
     public Long getPushState() {
         return this.PushState;
     }
 
     /**
-     * Set 是否开启推流鉴权（1:开启,0:关闭）
-     * @param PushState 是否开启推流鉴权（1:开启,0:关闭）
+     * Set <p>是否开启推流鉴权（1:开启,0:关闭）</p>
+     * @param PushState <p>是否开启推流鉴权（1:开启,0:关闭）</p>
      */
     public void setPushState(Long PushState) {
         this.PushState = PushState;
     }
 
     /**
-     * Get 推流密钥（仅支持字母数字，长度0-10位） 
-     * @return PushSecret 推流密钥（仅支持字母数字，长度0-10位）
+     * Get <p>推流密钥（仅支持字母数字，长度0-10位）</p> 
+     * @return PushSecret <p>推流密钥（仅支持字母数字，长度0-10位）</p>
      */
     public String getPushSecret() {
         return this.PushSecret;
     }
 
     /**
-     * Set 推流密钥（仅支持字母数字，长度0-10位）
-     * @param PushSecret 推流密钥（仅支持字母数字，长度0-10位）
+     * Set <p>推流密钥（仅支持字母数字，长度0-10位）</p>
+     * @param PushSecret <p>推流密钥（仅支持字母数字，长度0-10位）</p>
      */
     public void setPushSecret(String PushSecret) {
         this.PushSecret = PushSecret;
     }
 
     /**
-     * Get 推流过期时间（单位：分钟） 
-     * @return PushExpired 推流过期时间（单位：分钟）
+     * Get <p>推流过期时间（单位：分钟）</p> 
+     * @return PushExpired <p>推流过期时间（单位：分钟）</p>
      */
     public Long getPushExpired() {
         return this.PushExpired;
     }
 
     /**
-     * Set 推流过期时间（单位：分钟）
-     * @param PushExpired 推流过期时间（单位：分钟）
+     * Set <p>推流过期时间（单位：分钟）</p>
+     * @param PushExpired <p>推流过期时间（单位：分钟）</p>
      */
     public void setPushExpired(Long PushExpired) {
         this.PushExpired = PushExpired;
     }
 
     /**
-     * Get 用户ID 
-     * @return AppId 用户ID
+     * Get <p>用户ID</p> 
+     * @return AppId <p>用户ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户ID
-     * @param AppId 用户ID
+     * Set <p>用户ID</p>
+     * @param AppId <p>用户ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>不生效推流鉴权的域名 ID 列表</p> 
+     * @return ExcludePushDomainIds <p>不生效推流鉴权的域名 ID 列表</p>
+     */
+    public String [] getExcludePushDomainIds() {
+        return this.ExcludePushDomainIds;
+    }
+
+    /**
+     * Set <p>不生效推流鉴权的域名 ID 列表</p>
+     * @param ExcludePushDomainIds <p>不生效推流鉴权的域名 ID 列表</p>
+     */
+    public void setExcludePushDomainIds(String [] ExcludePushDomainIds) {
+        this.ExcludePushDomainIds = ExcludePushDomainIds;
     }
 
     public DescribeStreamAuthData() {
@@ -239,6 +262,12 @@ public class DescribeStreamAuthData extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.ExcludePushDomainIds != null) {
+            this.ExcludePushDomainIds = new String[source.ExcludePushDomainIds.length];
+            for (int i = 0; i < source.ExcludePushDomainIds.length; i++) {
+                this.ExcludePushDomainIds[i] = new String(source.ExcludePushDomainIds[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class DescribeStreamAuthData extends AbstractModel {
         this.setParamSimple(map, prefix + "PushSecret", this.PushSecret);
         this.setParamSimple(map, prefix + "PushExpired", this.PushExpired);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamArraySimple(map, prefix + "ExcludePushDomainIds.", this.ExcludePushDomainIds);
 
     }
 }

@@ -24,75 +24,89 @@ import java.util.HashMap;
 public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+    * <p>目标从实例。可选值：&quot;first&quot; - 第一备机；&quot;second&quot; - 第二备机；&quot;third&quot; - 第三备机。默认值为 &quot;first&quot;，仅多可用区实例支持设置为 &quot;second&quot;。</p>
     */
     @SerializedName("DstSlave")
     @Expose
     private String DstSlave;
 
     /**
-    * 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
+    * <p>是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。</p>
     */
     @SerializedName("ForceSwitch")
     @Expose
     private Boolean ForceSwitch;
 
     /**
-    * 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
+    * <p>是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。</p>
     */
     @SerializedName("WaitSwitch")
     @Expose
     private Boolean WaitSwitch;
 
     /**
-    * 集群版实例指定节点 ID 发起主从切换。
+    * <p>集群版实例指定节点 ID 发起主从切换。</p>
     */
     @SerializedName("DstNodeId")
     @Expose
     private String DstNodeId;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+    * <p>等待主备位点差收敛到阈值以内的最长时间,范围：30s-3600s</p>
+    */
+    @SerializedName("SyncTimeout")
+    @Expose
+    private Long SyncTimeout;
+
+    /**
+    * <p>slave 执行位点和读到位点差值，在最长等待时间内，位点差需小于该值才启动切换</p>
+    */
+    @SerializedName("SyncDistance")
+    @Expose
+    private String SyncDistance;
+
+    /**
+     * Get <p>实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceId <p>实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。 
-     * @return DstSlave 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * Get <p>目标从实例。可选值：&quot;first&quot; - 第一备机；&quot;second&quot; - 第二备机；&quot;third&quot; - 第三备机。默认值为 &quot;first&quot;，仅多可用区实例支持设置为 &quot;second&quot;。</p> 
+     * @return DstSlave <p>目标从实例。可选值：&quot;first&quot; - 第一备机；&quot;second&quot; - 第二备机；&quot;third&quot; - 第三备机。默认值为 &quot;first&quot;，仅多可用区实例支持设置为 &quot;second&quot;。</p>
      */
     public String getDstSlave() {
         return this.DstSlave;
     }
 
     /**
-     * Set 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
-     * @param DstSlave 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * Set <p>目标从实例。可选值：&quot;first&quot; - 第一备机；&quot;second&quot; - 第二备机；&quot;third&quot; - 第三备机。默认值为 &quot;first&quot;，仅多可用区实例支持设置为 &quot;second&quot;。</p>
+     * @param DstSlave <p>目标从实例。可选值：&quot;first&quot; - 第一备机；&quot;second&quot; - 第二备机；&quot;third&quot; - 第三备机。默认值为 &quot;first&quot;，仅多可用区实例支持设置为 &quot;second&quot;。</p>
      */
     public void setDstSlave(String DstSlave) {
         this.DstSlave = DstSlave;
     }
 
     /**
-     * Get 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。 
-     * @return ForceSwitch 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
+     * Get <p>是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。</p> 
+     * @return ForceSwitch <p>是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。</p>
      * @deprecated
      */
     @Deprecated
@@ -101,8 +115,8 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     }
 
     /**
-     * Set 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
-     * @param ForceSwitch 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
+     * Set <p>是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。</p>
+     * @param ForceSwitch <p>是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。</p>
      * @deprecated
      */
     @Deprecated
@@ -111,35 +125,67 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。 
-     * @return WaitSwitch 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
+     * Get <p>是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。</p> 
+     * @return WaitSwitch <p>是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。</p>
      */
     public Boolean getWaitSwitch() {
         return this.WaitSwitch;
     }
 
     /**
-     * Set 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
-     * @param WaitSwitch 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
+     * Set <p>是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。</p>
+     * @param WaitSwitch <p>是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。</p>
      */
     public void setWaitSwitch(Boolean WaitSwitch) {
         this.WaitSwitch = WaitSwitch;
     }
 
     /**
-     * Get 集群版实例指定节点 ID 发起主从切换。 
-     * @return DstNodeId 集群版实例指定节点 ID 发起主从切换。
+     * Get <p>集群版实例指定节点 ID 发起主从切换。</p> 
+     * @return DstNodeId <p>集群版实例指定节点 ID 发起主从切换。</p>
      */
     public String getDstNodeId() {
         return this.DstNodeId;
     }
 
     /**
-     * Set 集群版实例指定节点 ID 发起主从切换。
-     * @param DstNodeId 集群版实例指定节点 ID 发起主从切换。
+     * Set <p>集群版实例指定节点 ID 发起主从切换。</p>
+     * @param DstNodeId <p>集群版实例指定节点 ID 发起主从切换。</p>
      */
     public void setDstNodeId(String DstNodeId) {
         this.DstNodeId = DstNodeId;
+    }
+
+    /**
+     * Get <p>等待主备位点差收敛到阈值以内的最长时间,范围：30s-3600s</p> 
+     * @return SyncTimeout <p>等待主备位点差收敛到阈值以内的最长时间,范围：30s-3600s</p>
+     */
+    public Long getSyncTimeout() {
+        return this.SyncTimeout;
+    }
+
+    /**
+     * Set <p>等待主备位点差收敛到阈值以内的最长时间,范围：30s-3600s</p>
+     * @param SyncTimeout <p>等待主备位点差收敛到阈值以内的最长时间,范围：30s-3600s</p>
+     */
+    public void setSyncTimeout(Long SyncTimeout) {
+        this.SyncTimeout = SyncTimeout;
+    }
+
+    /**
+     * Get <p>slave 执行位点和读到位点差值，在最长等待时间内，位点差需小于该值才启动切换</p> 
+     * @return SyncDistance <p>slave 执行位点和读到位点差值，在最长等待时间内，位点差需小于该值才启动切换</p>
+     */
+    public String getSyncDistance() {
+        return this.SyncDistance;
+    }
+
+    /**
+     * Set <p>slave 执行位点和读到位点差值，在最长等待时间内，位点差需小于该值才启动切换</p>
+     * @param SyncDistance <p>slave 执行位点和读到位点差值，在最长等待时间内，位点差需小于该值才启动切换</p>
+     */
+    public void setSyncDistance(String SyncDistance) {
+        this.SyncDistance = SyncDistance;
     }
 
     public SwitchDBInstanceMasterSlaveRequest() {
@@ -165,6 +211,12 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         if (source.DstNodeId != null) {
             this.DstNodeId = new String(source.DstNodeId);
         }
+        if (source.SyncTimeout != null) {
+            this.SyncTimeout = new Long(source.SyncTimeout);
+        }
+        if (source.SyncDistance != null) {
+            this.SyncDistance = new String(source.SyncDistance);
+        }
     }
 
 
@@ -177,6 +229,8 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForceSwitch", this.ForceSwitch);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         this.setParamSimple(map, prefix + "DstNodeId", this.DstNodeId);
+        this.setParamSimple(map, prefix + "SyncTimeout", this.SyncTimeout);
+        this.setParamSimple(map, prefix + "SyncDistance", this.SyncDistance);
 
     }
 }

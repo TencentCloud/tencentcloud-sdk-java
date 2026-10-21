@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SwitchDBInstanceMasterSlaveResponse extends AbstractModel {
 
     /**
-    * 异步任务 ID。
+    * <p>异步任务 ID。</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class SwitchDBInstanceMasterSlaveResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务 ID。 
-     * @return AsyncRequestId 异步任务 ID。
+     * Get <p>异步任务 ID。</p> 
+     * @return AsyncRequestId <p>异步任务 ID。</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务 ID。
-     * @param AsyncRequestId 异步任务 ID。
+     * Set <p>异步任务 ID。</p>
+     * @param AsyncRequestId <p>异步任务 ID。</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

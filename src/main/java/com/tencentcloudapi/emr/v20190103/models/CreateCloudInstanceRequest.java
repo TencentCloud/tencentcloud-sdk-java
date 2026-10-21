@@ -213,6 +213,13 @@ public class CreateCloudInstanceRequest extends AbstractModel {
     private AirflowGitCredentialInput AirflowGitCredential;
 
     /**
+    * <p>多安全组绑定</p>
+    */
+    @SerializedName("SgIds")
+    @Expose
+    private String [] SgIds;
+
+    /**
      * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
      * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
@@ -644,6 +651,22 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.AirflowGitCredential = AirflowGitCredential;
     }
 
+    /**
+     * Get <p>多安全组绑定</p> 
+     * @return SgIds <p>多安全组绑定</p>
+     */
+    public String [] getSgIds() {
+        return this.SgIds;
+    }
+
+    /**
+     * Set <p>多安全组绑定</p>
+     * @param SgIds <p>多安全组绑定</p>
+     */
+    public void setSgIds(String [] SgIds) {
+        this.SgIds = SgIds;
+    }
+
     public CreateCloudInstanceRequest() {
     }
 
@@ -748,6 +771,12 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         if (source.AirflowGitCredential != null) {
             this.AirflowGitCredential = new AirflowGitCredentialInput(source.AirflowGitCredential);
         }
+        if (source.SgIds != null) {
+            this.SgIds = new String[source.SgIds.length];
+            for (int i = 0; i < source.SgIds.length; i++) {
+                this.SgIds[i] = new String(source.SgIds[i]);
+            }
+        }
     }
 
 
@@ -782,6 +811,7 @@ public class CreateCloudInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogStoreID", this.LogStoreID);
         this.setParamObj(map, prefix + "AirflowDagSource.", this.AirflowDagSource);
         this.setParamObj(map, prefix + "AirflowGitCredential.", this.AirflowGitCredential);
+        this.setParamArraySimple(map, prefix + "SgIds.", this.SgIds);
 
     }
 }

@@ -87,6 +87,13 @@ public class ComputeDetail extends AbstractModel {
     private Boolean PostpaidEnable;
 
     /**
+    * <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+    */
+    @SerializedName("SupportedChargeTypes")
+    @Expose
+    private String [] SupportedChargeTypes;
+
+    /**
      * Get <p>算力套餐ID</p> 
      * @return BundleType <p>算力套餐ID</p>
      */
@@ -230,6 +237,22 @@ public class ComputeDetail extends AbstractModel {
         this.PostpaidEnable = PostpaidEnable;
     }
 
+    /**
+     * Get <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p> 
+     * @return SupportedChargeTypes <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+     */
+    public String [] getSupportedChargeTypes() {
+        return this.SupportedChargeTypes;
+    }
+
+    /**
+     * Set <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+     * @param SupportedChargeTypes <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+     */
+    public void setSupportedChargeTypes(String [] SupportedChargeTypes) {
+        this.SupportedChargeTypes = SupportedChargeTypes;
+    }
+
     public ComputeDetail() {
     }
 
@@ -265,6 +288,12 @@ public class ComputeDetail extends AbstractModel {
         if (source.PostpaidEnable != null) {
             this.PostpaidEnable = new Boolean(source.PostpaidEnable);
         }
+        if (source.SupportedChargeTypes != null) {
+            this.SupportedChargeTypes = new String[source.SupportedChargeTypes.length];
+            for (int i = 0; i < source.SupportedChargeTypes.length; i++) {
+                this.SupportedChargeTypes[i] = new String(source.SupportedChargeTypes[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class ComputeDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "PrepaidEnable", this.PrepaidEnable);
         this.setParamSimple(map, prefix + "PostpaidEnable", this.PostpaidEnable);
+        this.setParamArraySimple(map, prefix + "SupportedChargeTypes.", this.SupportedChargeTypes);
 
     }
 }

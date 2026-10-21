@@ -50,6 +50,17 @@ public class FwmClient extends AbstractClient{
     }
 
     /**
+     *创建账户组
+     * @param req CreateAccountGroupRequest
+     * @return CreateAccountGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountGroupResponse CreateAccountGroup(CreateAccountGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccountGroup", CreateAccountGroupResponse.class);
+    }
+
+    /**
      *创建策略风险分析任务
      * @param req CreateAnalyzePolicyTaskRequest
      * @return CreateAnalyzePolicyTaskResponse
@@ -171,6 +182,17 @@ public class FwmClient extends AbstractClient{
     }
 
     /**
+     *删除账户组，账户组下有成员时不可删除
+     * @param req DeleteAccountGroupRequest
+     * @return DeleteAccountGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccountGroupResponse DeleteAccountGroup(DeleteAccountGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAccountGroup", DeleteAccountGroupResponse.class);
+    }
+
+    /**
      *批量删除互联网边界ACL规则。支持一次删除多条规则。
      * @param req DeleteEdgeAclRuleRequest
      * @return DeleteEdgeAclRuleResponse
@@ -234,6 +256,17 @@ public class FwmClient extends AbstractClient{
     public DeleteVpcAclRuleResponse DeleteVpcAclRule(DeleteVpcAclRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteVpcAclRule", DeleteVpcAclRuleResponse.class);
+    }
+
+    /**
+     *获取账户组列表，支持分页和关键词搜索
+     * @param req DescribeAccountGroupsRequest
+     * @return DescribeAccountGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountGroupsResponse DescribeAccountGroups(DescribeAccountGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountGroups", DescribeAccountGroupsResponse.class);
     }
 
     /**
@@ -435,6 +468,39 @@ public class FwmClient extends AbstractClient{
     }
 
     /**
+     *修改账户组名称
+     * @param req ModifyAccountGroupRequest
+     * @return ModifyAccountGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountGroupResponse ModifyAccountGroup(ModifyAccountGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccountGroup", ModifyAccountGroupResponse.class);
+    }
+
+    /**
+     *设置成员账号的云防火墙纳管状态
+     * @param req ModifyCfwManagedRequest
+     * @return ModifyCfwManagedResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCfwManagedResponse ModifyCfwManaged(ModifyCfwManagedRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCfwManaged", ModifyCfwManagedResponse.class);
+    }
+
+    /**
+     *设置集团成员的云防火墙共享角色（sharer/user/none）。共享者全集团唯一；共享者→使用者禁止直接变更，需先将角色改为 none；设为使用者时必须指定共享者 SharerAppId。仅管理员可操作。
+     * @param req ModifyCfwShareRoleRequest
+     * @return ModifyCfwShareRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCfwShareRoleResponse ModifyCfwShareRole(ModifyCfwShareRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCfwShareRole", ModifyCfwShareRoleResponse.class);
+    }
+
+    /**
      *修改互联网边界ACL规则。Rule 参数中必须包含 RuleId 用于指定要修改的规则。
      * @param req ModifyEdgeAclRuleRequest
      * @return ModifyEdgeAclRuleResponse
@@ -454,6 +520,17 @@ public class FwmClient extends AbstractClient{
     public ModifyEdgeAclRuleSequenceResponse ModifyEdgeAclRuleSequence(ModifyEdgeAclRuleSequenceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyEdgeAclRuleSequence", ModifyEdgeAclRuleSequenceResponse.class);
+    }
+
+    /**
+     *设置成员所属账户组，GroupId为空字符串表示移出账户组
+     * @param req ModifyMemberGroupRequest
+     * @return ModifyMemberGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMemberGroupResponse ModifyMemberGroup(ModifyMemberGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMemberGroup", ModifyMemberGroupResponse.class);
     }
 
     /**

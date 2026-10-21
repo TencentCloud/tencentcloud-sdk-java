@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddStreamAuthResponse extends AbstractModel {
 
     /**
-    * 设置推拉流鉴权返回数据
+    * <p>设置推拉流鉴权返回数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class AddStreamAuthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设置推拉流鉴权返回数据 
-     * @return Data 设置推拉流鉴权返回数据
+     * Get <p>设置推拉流鉴权返回数据</p> 
+     * @return Data <p>设置推拉流鉴权返回数据</p>
      */
     public AddStreamAuthData getData() {
         return this.Data;
     }
 
     /**
-     * Set 设置推拉流鉴权返回数据
-     * @param Data 设置推拉流鉴权返回数据
+     * Set <p>设置推拉流鉴权返回数据</p>
+     * @param Data <p>设置推拉流鉴权返回数据</p>
      */
     public void setData(AddStreamAuthData Data) {
         this.Data = Data;

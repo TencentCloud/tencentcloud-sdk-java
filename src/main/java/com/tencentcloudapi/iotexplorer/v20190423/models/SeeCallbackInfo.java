@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class SeeCallbackInfo extends AbstractModel {
 
     /**
-    * 回调目标 ID
+    * <p>回调目标 ID</p>
     */
     @SerializedName("CallbackId")
     @Expose
     private String CallbackId;
 
     /**
-    * 回调签名 token
-    */
-    @SerializedName("CallbackToken")
-    @Expose
-    private String CallbackToken;
-
-    /**
-    * 回调 URL
-    */
-    @SerializedName("CallbackUrl")
-    @Expose
-    private String CallbackUrl;
-
-    /**
-    * 创建时间（秒级时间戳）
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private Long CreateTime;
-
-    /**
-    * 回调类型
+    * <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 更新时间（秒级时间戳）
+    * <p>回调 URL</p>
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
+    * <p>回调签名 token</p>
+    */
+    @SerializedName("CallbackToken")
+    @Expose
+    private String CallbackToken;
+
+    /**
+    * <p>回调 CKafka 配置</p>
+    */
+    @SerializedName("CallbackCKafka")
+    @Expose
+    private SeeCallbackCKafkaConfig CallbackCKafka;
+
+    /**
+    * <p>创建时间（秒级时间戳）</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * <p>更新时间（秒级时间戳）</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get 回调目标 ID 
-     * @return CallbackId 回调目标 ID
+     * Get <p>回调目标 ID</p> 
+     * @return CallbackId <p>回调目标 ID</p>
      */
     public String getCallbackId() {
         return this.CallbackId;
     }
 
     /**
-     * Set 回调目标 ID
-     * @param CallbackId 回调目标 ID
+     * Set <p>回调目标 ID</p>
+     * @param CallbackId <p>回调目标 ID</p>
      */
     public void setCallbackId(String CallbackId) {
         this.CallbackId = CallbackId;
     }
 
     /**
-     * Get 回调签名 token 
-     * @return CallbackToken 回调签名 token
-     */
-    public String getCallbackToken() {
-        return this.CallbackToken;
-    }
-
-    /**
-     * Set 回调签名 token
-     * @param CallbackToken 回调签名 token
-     */
-    public void setCallbackToken(String CallbackToken) {
-        this.CallbackToken = CallbackToken;
-    }
-
-    /**
-     * Get 回调 URL 
-     * @return CallbackUrl 回调 URL
-     */
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
-    }
-
-    /**
-     * Set 回调 URL
-     * @param CallbackUrl 回调 URL
-     */
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
-    }
-
-    /**
-     * Get 创建时间（秒级时间戳） 
-     * @return CreateTime 创建时间（秒级时间戳）
-     */
-    public Long getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set 创建时间（秒级时间戳）
-     * @param CreateTime 创建时间（秒级时间戳）
-     */
-    public void setCreateTime(Long CreateTime) {
-        this.CreateTime = CreateTime;
-    }
-
-    /**
-     * Get 回调类型 
-     * @return Type 回调类型
+     * Get <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul> 
+     * @return Type <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 回调类型
-     * @param Type 回调类型
+     * Set <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+     * @param Type <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 更新时间（秒级时间戳） 
-     * @return UpdateTime 更新时间（秒级时间戳）
+     * Get <p>回调 URL</p> 
+     * @return CallbackUrl <p>回调 URL</p>
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set <p>回调 URL</p>
+     * @param CallbackUrl <p>回调 URL</p>
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
+    /**
+     * Get <p>回调签名 token</p> 
+     * @return CallbackToken <p>回调签名 token</p>
+     */
+    public String getCallbackToken() {
+        return this.CallbackToken;
+    }
+
+    /**
+     * Set <p>回调签名 token</p>
+     * @param CallbackToken <p>回调签名 token</p>
+     */
+    public void setCallbackToken(String CallbackToken) {
+        this.CallbackToken = CallbackToken;
+    }
+
+    /**
+     * Get <p>回调 CKafka 配置</p> 
+     * @return CallbackCKafka <p>回调 CKafka 配置</p>
+     */
+    public SeeCallbackCKafkaConfig getCallbackCKafka() {
+        return this.CallbackCKafka;
+    }
+
+    /**
+     * Set <p>回调 CKafka 配置</p>
+     * @param CallbackCKafka <p>回调 CKafka 配置</p>
+     */
+    public void setCallbackCKafka(SeeCallbackCKafkaConfig CallbackCKafka) {
+        this.CallbackCKafka = CallbackCKafka;
+    }
+
+    /**
+     * Get <p>创建时间（秒级时间戳）</p> 
+     * @return CreateTime <p>创建时间（秒级时间戳）</p>
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间（秒级时间戳）</p>
+     * @param CreateTime <p>创建时间（秒级时间戳）</p>
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间（秒级时间戳）</p> 
+     * @return UpdateTime <p>更新时间（秒级时间戳）</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间（秒级时间戳）
-     * @param UpdateTime 更新时间（秒级时间戳）
+     * Set <p>更新时间（秒级时间戳）</p>
+     * @param UpdateTime <p>更新时间（秒级时间戳）</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -172,17 +195,20 @@ public class SeeCallbackInfo extends AbstractModel {
         if (source.CallbackId != null) {
             this.CallbackId = new String(source.CallbackId);
         }
-        if (source.CallbackToken != null) {
-            this.CallbackToken = new String(source.CallbackToken);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.CallbackToken != null) {
+            this.CallbackToken = new String(source.CallbackToken);
+        }
+        if (source.CallbackCKafka != null) {
+            this.CallbackCKafka = new SeeCallbackCKafkaConfig(source.CallbackCKafka);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
-        }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
@@ -195,10 +221,11 @@ public class SeeCallbackInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CallbackId", this.CallbackId);
-        this.setParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
+        this.setParamObj(map, prefix + "CallbackCKafka.", this.CallbackCKafka);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
