@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateRoleConfigurationResponse extends AbstractModel {
 
     /**
-    * 权限配置详情
+    * <p>权限配置详情</p>
     */
     @SerializedName("RoleConfigurationInfo")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateRoleConfigurationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 权限配置详情 
-     * @return RoleConfigurationInfo 权限配置详情
+     * Get <p>权限配置详情</p> 
+     * @return RoleConfigurationInfo <p>权限配置详情</p>
      */
     public RoleConfiguration getRoleConfigurationInfo() {
         return this.RoleConfigurationInfo;
     }
 
     /**
-     * Set 权限配置详情
-     * @param RoleConfigurationInfo 权限配置详情
+     * Set <p>权限配置详情</p>
+     * @param RoleConfigurationInfo <p>权限配置详情</p>
      */
     public void setRoleConfigurationInfo(RoleConfiguration RoleConfigurationInfo) {
         this.RoleConfigurationInfo = RoleConfigurationInfo;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyMigrateRateLimitRequest extends AbstractModel {
 
     /**
-    * 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+    * <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 迁移任务全量导出线程数、有效值为 1-16
+    * <p>迁移任务全量导出线程数、有效值为 1-16</p>
     */
     @SerializedName("DumpThread")
     @Expose
     private Long DumpThread;
 
     /**
-    * 迁移全量导出的 Rps 限制、需要大于 0
+    * <p>迁移全量导出的 Rps 限制、需要大于 0</p>
     */
     @SerializedName("DumpRps")
     @Expose
     private Long DumpRps;
 
     /**
-    * 迁移任务全量导入线程数、有效值为 1-16
+    * <p>迁移任务全量导入线程数、有效值为 1-16</p>
     */
     @SerializedName("LoadThread")
     @Expose
     private Long LoadThread;
 
     /**
-    * 迁移任务增量导入线程数、有效值为 1-128
+    * <p>迁移任务增量导入线程数、有效值为 1-128</p>
     */
     @SerializedName("SinkerThread")
     @Expose
     private Long SinkerThread;
 
     /**
-    * 全量导入Rps限制
+    * <p>全量导入Rps限制</p>
     */
     @SerializedName("LoadRps")
     @Expose
     private Long LoadRps;
 
     /**
-     * Get 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。 
-     * @return JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * Get <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p> 
+     * @return JobId <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-     * @param JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * Set <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param JobId <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 迁移任务全量导出线程数、有效值为 1-16 
-     * @return DumpThread 迁移任务全量导出线程数、有效值为 1-16
+     * Get <p>迁移任务全量导出线程数、有效值为 1-16</p> 
+     * @return DumpThread <p>迁移任务全量导出线程数、有效值为 1-16</p>
      */
     public Long getDumpThread() {
         return this.DumpThread;
     }
 
     /**
-     * Set 迁移任务全量导出线程数、有效值为 1-16
-     * @param DumpThread 迁移任务全量导出线程数、有效值为 1-16
+     * Set <p>迁移任务全量导出线程数、有效值为 1-16</p>
+     * @param DumpThread <p>迁移任务全量导出线程数、有效值为 1-16</p>
      */
     public void setDumpThread(Long DumpThread) {
         this.DumpThread = DumpThread;
     }
 
     /**
-     * Get 迁移全量导出的 Rps 限制、需要大于 0 
-     * @return DumpRps 迁移全量导出的 Rps 限制、需要大于 0
+     * Get <p>迁移全量导出的 Rps 限制、需要大于 0</p> 
+     * @return DumpRps <p>迁移全量导出的 Rps 限制、需要大于 0</p>
      */
     public Long getDumpRps() {
         return this.DumpRps;
     }
 
     /**
-     * Set 迁移全量导出的 Rps 限制、需要大于 0
-     * @param DumpRps 迁移全量导出的 Rps 限制、需要大于 0
+     * Set <p>迁移全量导出的 Rps 限制、需要大于 0</p>
+     * @param DumpRps <p>迁移全量导出的 Rps 限制、需要大于 0</p>
      */
     public void setDumpRps(Long DumpRps) {
         this.DumpRps = DumpRps;
     }
 
     /**
-     * Get 迁移任务全量导入线程数、有效值为 1-16 
-     * @return LoadThread 迁移任务全量导入线程数、有效值为 1-16
+     * Get <p>迁移任务全量导入线程数、有效值为 1-16</p> 
+     * @return LoadThread <p>迁移任务全量导入线程数、有效值为 1-16</p>
      */
     public Long getLoadThread() {
         return this.LoadThread;
     }
 
     /**
-     * Set 迁移任务全量导入线程数、有效值为 1-16
-     * @param LoadThread 迁移任务全量导入线程数、有效值为 1-16
+     * Set <p>迁移任务全量导入线程数、有效值为 1-16</p>
+     * @param LoadThread <p>迁移任务全量导入线程数、有效值为 1-16</p>
      */
     public void setLoadThread(Long LoadThread) {
         this.LoadThread = LoadThread;
     }
 
     /**
-     * Get 迁移任务增量导入线程数、有效值为 1-128 
-     * @return SinkerThread 迁移任务增量导入线程数、有效值为 1-128
+     * Get <p>迁移任务增量导入线程数、有效值为 1-128</p> 
+     * @return SinkerThread <p>迁移任务增量导入线程数、有效值为 1-128</p>
      */
     public Long getSinkerThread() {
         return this.SinkerThread;
     }
 
     /**
-     * Set 迁移任务增量导入线程数、有效值为 1-128
-     * @param SinkerThread 迁移任务增量导入线程数、有效值为 1-128
+     * Set <p>迁移任务增量导入线程数、有效值为 1-128</p>
+     * @param SinkerThread <p>迁移任务增量导入线程数、有效值为 1-128</p>
      */
     public void setSinkerThread(Long SinkerThread) {
         this.SinkerThread = SinkerThread;
     }
 
     /**
-     * Get 全量导入Rps限制 
-     * @return LoadRps 全量导入Rps限制
+     * Get <p>全量导入Rps限制</p> 
+     * @return LoadRps <p>全量导入Rps限制</p>
      */
     public Long getLoadRps() {
         return this.LoadRps;
     }
 
     /**
-     * Set 全量导入Rps限制
-     * @param LoadRps 全量导入Rps限制
+     * Set <p>全量导入Rps限制</p>
+     * @param LoadRps <p>全量导入Rps限制</p>
      */
     public void setLoadRps(Long LoadRps) {
         this.LoadRps = LoadRps;

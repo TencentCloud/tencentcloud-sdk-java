@@ -31,7 +31,7 @@ public class ReleasedApprover extends AbstractModel {
     private Long ApproverNumber;
 
     /**
-    * <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
+    * <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
     */
     @SerializedName("ApproverType")
     @Expose
@@ -115,6 +115,13 @@ public class ReleasedApprover extends AbstractModel {
     private String ApproverSignSealId;
 
     /**
+    * <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+    */
+    @SerializedName("PinCode")
+    @Expose
+    private String PinCode;
+
+    /**
      * Get <p>签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。<br>可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。</p> 
      * @return ApproverNumber <p>签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。<br>可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。</p>
      */
@@ -131,16 +138,16 @@ public class ReleasedApprover extends AbstractModel {
     }
 
     /**
-     * Get <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p> 
-     * @return ApproverType <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
+     * Get <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p> 
+     * @return ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
      */
     public String getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
-     * @param ApproverType <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
+     * Set <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
+     * @param ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
@@ -322,6 +329,22 @@ public class ReleasedApprover extends AbstractModel {
         this.ApproverSignSealId = ApproverSignSealId;
     }
 
+    /**
+     * Get <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table> 
+     * @return PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public String getPinCode() {
+        return this.PinCode;
+    }
+
+    /**
+     * Set <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     * @param PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public void setPinCode(String PinCode) {
+        this.PinCode = PinCode;
+    }
+
     public ReleasedApprover() {
     }
 
@@ -369,6 +392,9 @@ public class ReleasedApprover extends AbstractModel {
         if (source.ApproverSignSealId != null) {
             this.ApproverSignSealId = new String(source.ApproverSignSealId);
         }
+        if (source.PinCode != null) {
+            this.PinCode = new String(source.PinCode);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class ReleasedApprover extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
         this.setParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
         this.setParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
+        this.setParamSimple(map, prefix + "PinCode", this.PinCode);
 
     }
 }

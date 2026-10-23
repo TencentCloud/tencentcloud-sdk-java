@@ -45,6 +45,20 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
     private String [] InputModalities;
 
     /**
+    * <p>新的上游模型名称</p>
+    */
+    @SerializedName("NewModelName")
+    @Expose
+    private String NewModelName;
+
+    /**
+    * <p>新的对外模型名称</p>
+    */
+    @SerializedName("NewModelAlias")
+    @Expose
+    private String NewModelAlias;
+
+    /**
      * Get <p>BYOK 实例 ID</p> 
      * @return ServiceProviderId <p>BYOK 实例 ID</p>
      */
@@ -92,6 +106,38 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
         this.InputModalities = InputModalities;
     }
 
+    /**
+     * Get <p>新的上游模型名称</p> 
+     * @return NewModelName <p>新的上游模型名称</p>
+     */
+    public String getNewModelName() {
+        return this.NewModelName;
+    }
+
+    /**
+     * Set <p>新的上游模型名称</p>
+     * @param NewModelName <p>新的上游模型名称</p>
+     */
+    public void setNewModelName(String NewModelName) {
+        this.NewModelName = NewModelName;
+    }
+
+    /**
+     * Get <p>新的对外模型名称</p> 
+     * @return NewModelAlias <p>新的对外模型名称</p>
+     */
+    public String getNewModelAlias() {
+        return this.NewModelAlias;
+    }
+
+    /**
+     * Set <p>新的对外模型名称</p>
+     * @param NewModelAlias <p>新的对外模型名称</p>
+     */
+    public void setNewModelAlias(String NewModelAlias) {
+        this.NewModelAlias = NewModelAlias;
+    }
+
     public ModifyServiceProviderModelAttributesRequest() {
     }
 
@@ -112,6 +158,12 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
                 this.InputModalities[i] = new String(source.InputModalities[i]);
             }
         }
+        if (source.NewModelName != null) {
+            this.NewModelName = new String(source.NewModelName);
+        }
+        if (source.NewModelAlias != null) {
+            this.NewModelAlias = new String(source.NewModelAlias);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamArraySimple(map, prefix + "InputModalities.", this.InputModalities);
+        this.setParamSimple(map, prefix + "NewModelName", this.NewModelName);
+        this.setParamSimple(map, prefix + "NewModelAlias", this.NewModelAlias);
 
     }
 }

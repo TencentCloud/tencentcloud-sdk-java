@@ -73,7 +73,7 @@ public class AdminChangeInvitationInfo extends AbstractModel {
     private String NewAdminIdCardNumber;
 
     /**
-    * <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+    * <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
     */
     @SerializedName("AuthFiles")
     @Expose
@@ -192,16 +192,16 @@ public class AdminChangeInvitationInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p> 
-     * @return AuthFiles <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+     * Get <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p> 
+     * @return AuthFiles <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
      */
     public String [] getAuthFiles() {
         return this.AuthFiles;
     }
 
     /**
-     * Set <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
-     * @param AuthFiles <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+     * Set <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
+     * @param AuthFiles <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
      */
     public void setAuthFiles(String [] AuthFiles) {
         this.AuthFiles = AuthFiles;

@@ -122,6 +122,20 @@ public class VerifyGeneralCardWarnResponse extends AbstractModel {
     private String WatermarkContent;
 
     /**
+    * <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+    */
+    @SerializedName("ReasoningResult")
+    @Expose
+    private ReasoningResult ReasoningResult;
+
+    /**
+    * <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+    */
+    @SerializedName("IsKeyFieldTamper")
+    @Expose
+    private String IsKeyFieldTamper;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -353,6 +367,38 @@ public class VerifyGeneralCardWarnResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p> 
+     * @return ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     */
+    public ReasoningResult getReasoningResult() {
+        return this.ReasoningResult;
+    }
+
+    /**
+     * Set <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     * @param ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     */
+    public void setReasoningResult(ReasoningResult ReasoningResult) {
+        this.ReasoningResult = ReasoningResult;
+    }
+
+    /**
+     * Get <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p> 
+     * @return IsKeyFieldTamper <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+     */
+    public String getIsKeyFieldTamper() {
+        return this.IsKeyFieldTamper;
+    }
+
+    /**
+     * Set <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+     * @param IsKeyFieldTamper <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+     */
+    public void setIsKeyFieldTamper(String IsKeyFieldTamper) {
+        this.IsKeyFieldTamper = IsKeyFieldTamper;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -418,6 +464,12 @@ public class VerifyGeneralCardWarnResponse extends AbstractModel {
         if (source.WatermarkContent != null) {
             this.WatermarkContent = new String(source.WatermarkContent);
         }
+        if (source.ReasoningResult != null) {
+            this.ReasoningResult = new ReasoningResult(source.ReasoningResult);
+        }
+        if (source.IsKeyFieldTamper != null) {
+            this.IsKeyFieldTamper = new String(source.IsKeyFieldTamper);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -442,6 +494,8 @@ public class VerifyGeneralCardWarnResponse extends AbstractModel {
         this.setParamObj(map, prefix + "Electron.", this.Electron);
         this.setParamObj(map, prefix + "TextWatermark.", this.TextWatermark);
         this.setParamSimple(map, prefix + "WatermarkContent", this.WatermarkContent);
+        this.setParamObj(map, prefix + "ReasoningResult.", this.ReasoningResult);
+        this.setParamSimple(map, prefix + "IsKeyFieldTamper", this.IsKeyFieldTamper);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,6 +31,13 @@ public class StickyConfig extends AbstractModel {
     private Boolean Enabled;
 
     /**
+    * <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+    */
+    @SerializedName("TimeoutSeconds")
+    @Expose
+    private Long TimeoutSeconds;
+
+    /**
      * Get <p>是否开启粘连路由</p> 
      * @return Enabled <p>是否开启粘连路由</p>
      */
@@ -46,6 +53,22 @@ public class StickyConfig extends AbstractModel {
         this.Enabled = Enabled;
     }
 
+    /**
+     * Get <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p> 
+     * @return TimeoutSeconds <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+     */
+    public Long getTimeoutSeconds() {
+        return this.TimeoutSeconds;
+    }
+
+    /**
+     * Set <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+     * @param TimeoutSeconds <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+     */
+    public void setTimeoutSeconds(Long TimeoutSeconds) {
+        this.TimeoutSeconds = TimeoutSeconds;
+    }
+
     public StickyConfig() {
     }
 
@@ -57,6 +80,9 @@ public class StickyConfig extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
+        if (source.TimeoutSeconds != null) {
+            this.TimeoutSeconds = new Long(source.TimeoutSeconds);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class StickyConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
 
     }
 }

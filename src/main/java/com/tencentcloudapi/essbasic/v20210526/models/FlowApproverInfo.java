@@ -80,7 +80,7 @@ public class FlowApproverInfo extends AbstractModel {
     private String OrganizationOpenId;
 
     /**
-    * <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
+    * <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
     */
     @SerializedName("ApproverType")
     @Expose
@@ -227,6 +227,13 @@ public class FlowApproverInfo extends AbstractModel {
     private String ApproverEmail;
 
     /**
+    * <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+    */
+    @SerializedName("PinCode")
+    @Expose
+    private String PinCode;
+
+    /**
      * Get <p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p> 
      * @return Name <p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
      */
@@ -355,16 +362,16 @@ public class FlowApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p> 
-     * @return ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
+     * Get <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul> 
+     * @return ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
      */
     public String getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
-     * @param ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
+     * Set <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
+     * @param ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
@@ -694,6 +701,22 @@ public class FlowApproverInfo extends AbstractModel {
         this.ApproverEmail = ApproverEmail;
     }
 
+    /**
+     * Get <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table> 
+     * @return PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public String getPinCode() {
+        return this.PinCode;
+    }
+
+    /**
+     * Set <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     * @param PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public void setPinCode(String PinCode) {
+        this.PinCode = PinCode;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -810,6 +833,9 @@ public class FlowApproverInfo extends AbstractModel {
         if (source.ApproverEmail != null) {
             this.ApproverEmail = new String(source.ApproverEmail);
         }
+        if (source.PinCode != null) {
+            this.PinCode = new String(source.PinCode);
+        }
     }
 
 
@@ -846,6 +872,7 @@ public class FlowApproverInfo extends AbstractModel {
         this.setParamObj(map, prefix + "Intention.", this.Intention);
         this.setParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
         this.setParamSimple(map, prefix + "ApproverEmail", this.ApproverEmail);
+        this.setParamSimple(map, prefix + "PinCode", this.PinCode);
 
     }
 }

@@ -343,6 +343,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *用户创建集成
+     * @param req CreateUserKeyRequest
+     * @return CreateUserKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserKeyResponse CreateUserKey(CreateUserKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserKey", CreateUserKeyResponse.class);
+    }
+
+    /**
      *删除 AI 模型配置分组，支持批量删除。内置分组无法删除。分组删除后，该分组下的所有模型配置将同步移除，针对该分组模型的请求将会失败，请在删除前确认业务侧已停止对该分组的调用。
 
 注意：
@@ -464,6 +475,17 @@ public class TcbClient extends AbstractClient{
     public DeleteTableResponse DeleteTable(DeleteTableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTable", DeleteTableResponse.class);
+    }
+
+    /**
+     *用户删除集成
+     * @param req DeleteUserKeyRequest
+     * @return DeleteUserKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserKeyResponse DeleteUserKey(DeleteUserKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserKey", DeleteUserKeyResponse.class);
     }
 
     /**
@@ -1136,6 +1158,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *用户获取集成详情
+     * @param req GetOneUserKeyRequest
+     * @return GetOneUserKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOneUserKeyResponse GetOneUserKey(GetOneUserKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetOneUserKey", GetOneUserKeyResponse.class);
+    }
+
+    /**
      *查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
      * @param req GetProvidersRequest
      * @return GetProvidersResponse
@@ -1144,6 +1177,17 @@ public class TcbClient extends AbstractClient{
     public GetProvidersResponse GetProviders(GetProvidersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetProviders", GetProvidersResponse.class);
+    }
+
+    /**
+     *用户获取集成列表
+     * @param req GetUserKeyListRequest
+     * @return GetUserKeyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserKeyListResponse GetUserKeyList(GetUserKeyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetUserKeyList", GetUserKeyListResponse.class);
     }
 
     /**
@@ -1569,6 +1613,17 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
     public UpdateTableResponse UpdateTable(UpdateTableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateTable", UpdateTableResponse.class);
+    }
+
+    /**
+     *用户更新集成信息
+     * @param req UpdateUserKeyRequest
+     * @return UpdateUserKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserKeyResponse UpdateUserKey(UpdateUserKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUserKey", UpdateUserKeyResponse.class);
     }
 
     /**

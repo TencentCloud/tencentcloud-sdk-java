@@ -59,6 +59,41 @@ public class ModifyModelAttributesRequest extends AbstractModel {
     private String EndpointPath;
 
     /**
+    * <p>所属厂商</p>
+    */
+    @SerializedName("ModelProvider")
+    @Expose
+    private String ModelProvider;
+
+    /**
+    * <p>协议</p>
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * <p>所使用的CMR 私网管道 ID</p>
+    */
+    @SerializedName("CMRPrivateNetworkTunnelId")
+    @Expose
+    private String CMRPrivateNetworkTunnelId;
+
+    /**
+    * <p>携带的Host Header</p>
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
+    * <p>是否需要进行ssl校验</p>
+    */
+    @SerializedName("VerifySSL")
+    @Expose
+    private Boolean VerifySSL;
+
+    /**
      * Get <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p> 
      * @return ServiceProviderId <p>BYOK的ID</p><p>参数格式：byok-kot39u7j</p>
      */
@@ -138,6 +173,86 @@ public class ModifyModelAttributesRequest extends AbstractModel {
         this.EndpointPath = EndpointPath;
     }
 
+    /**
+     * Get <p>所属厂商</p> 
+     * @return ModelProvider <p>所属厂商</p>
+     */
+    public String getModelProvider() {
+        return this.ModelProvider;
+    }
+
+    /**
+     * Set <p>所属厂商</p>
+     * @param ModelProvider <p>所属厂商</p>
+     */
+    public void setModelProvider(String ModelProvider) {
+        this.ModelProvider = ModelProvider;
+    }
+
+    /**
+     * Get <p>协议</p> 
+     * @return Protocol <p>协议</p>
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set <p>协议</p>
+     * @param Protocol <p>协议</p>
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get <p>所使用的CMR 私网管道 ID</p> 
+     * @return CMRPrivateNetworkTunnelId <p>所使用的CMR 私网管道 ID</p>
+     */
+    public String getCMRPrivateNetworkTunnelId() {
+        return this.CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Set <p>所使用的CMR 私网管道 ID</p>
+     * @param CMRPrivateNetworkTunnelId <p>所使用的CMR 私网管道 ID</p>
+     */
+    public void setCMRPrivateNetworkTunnelId(String CMRPrivateNetworkTunnelId) {
+        this.CMRPrivateNetworkTunnelId = CMRPrivateNetworkTunnelId;
+    }
+
+    /**
+     * Get <p>携带的Host Header</p> 
+     * @return HostHeader <p>携带的Host Header</p>
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set <p>携带的Host Header</p>
+     * @param HostHeader <p>携带的Host Header</p>
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
+    /**
+     * Get <p>是否需要进行ssl校验</p> 
+     * @return VerifySSL <p>是否需要进行ssl校验</p>
+     */
+    public Boolean getVerifySSL() {
+        return this.VerifySSL;
+    }
+
+    /**
+     * Set <p>是否需要进行ssl校验</p>
+     * @param VerifySSL <p>是否需要进行ssl校验</p>
+     */
+    public void setVerifySSL(Boolean VerifySSL) {
+        this.VerifySSL = VerifySSL;
+    }
+
     public ModifyModelAttributesRequest() {
     }
 
@@ -164,6 +279,21 @@ public class ModifyModelAttributesRequest extends AbstractModel {
         if (source.EndpointPath != null) {
             this.EndpointPath = new String(source.EndpointPath);
         }
+        if (source.ModelProvider != null) {
+            this.ModelProvider = new String(source.ModelProvider);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.CMRPrivateNetworkTunnelId != null) {
+            this.CMRPrivateNetworkTunnelId = new String(source.CMRPrivateNetworkTunnelId);
+        }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
+        if (source.VerifySSL != null) {
+            this.VerifySSL = new Boolean(source.VerifySSL);
+        }
     }
 
 
@@ -176,6 +306,11 @@ public class ModifyModelAttributesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
         this.setParamSimple(map, prefix + "ApiBase", this.ApiBase);
         this.setParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
+        this.setParamSimple(map, prefix + "ModelProvider", this.ModelProvider);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
+        this.setParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDirectConnectResponse extends AbstractModel {
 
     /**
-    * 物理专线的ID。
+    * <p>物理专线的ID。</p>
     */
     @SerializedName("DirectConnectIdSet")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDirectConnectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 物理专线的ID。 
-     * @return DirectConnectIdSet 物理专线的ID。
+     * Get <p>物理专线的ID。</p> 
+     * @return DirectConnectIdSet <p>物理专线的ID。</p>
      */
     public String [] getDirectConnectIdSet() {
         return this.DirectConnectIdSet;
     }
 
     /**
-     * Set 物理专线的ID。
-     * @param DirectConnectIdSet 物理专线的ID。
+     * Set <p>物理专线的ID。</p>
+     * @param DirectConnectIdSet <p>物理专线的ID。</p>
      */
     public void setDirectConnectIdSet(String [] DirectConnectIdSet) {
         this.DirectConnectIdSet = DirectConnectIdSet;

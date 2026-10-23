@@ -1471,6 +1471,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于日志分析统计结果查询。用户在检索语句后追加 SQL 聚合语句（[检索条件] | [SQL语句]），后端执行聚合并返回列式统计结果（列定义 + 数据行）。
+     * @param req DescribeLogAnalysisStatisticsRequest
+     * @return DescribeLogAnalysisStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogAnalysisStatisticsResponse DescribeLogAnalysisStatistics(DescribeLogAnalysisStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogAnalysisStatistics", DescribeLogAnalysisStatisticsResponse.class);
+    }
+
+    /**
      *通过本接口查询多通道安全加速网关详情。如名称、网关 ID、IP、端口、类型等。
      * @param req DescribeMultiPathGatewayRequest
      * @return DescribeMultiPathGatewayResponse

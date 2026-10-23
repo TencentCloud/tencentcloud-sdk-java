@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyIPv6AddressesAttributesRequest extends AbstractModel {
 
     /**
-    * 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
+    * <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
     */
     @SerializedName("IPv6AddressIds")
     @Expose
     private String [] IPv6AddressIds;
 
     /**
-    * 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+    * <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
     */
     @SerializedName("IPv6AddressName")
     @Expose
     private String IPv6AddressName;
 
     /**
-     * Get 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。 
-     * @return IPv6AddressIds 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
+    * <p>是否开启弹性公网IPv6地址网卡可见</p>
+    */
+    @SerializedName("EipVisibleOnEni")
+    @Expose
+    private Boolean EipVisibleOnEni;
+
+    /**
+     * Get <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p> 
+     * @return IPv6AddressIds <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
      */
     public String [] getIPv6AddressIds() {
         return this.IPv6AddressIds;
     }
 
     /**
-     * Set 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
-     * @param IPv6AddressIds 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
+     * Set <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
+     * @param IPv6AddressIds <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
      */
     public void setIPv6AddressIds(String [] IPv6AddressIds) {
         this.IPv6AddressIds = IPv6AddressIds;
     }
 
     /**
-     * Get 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。 
-     * @return IPv6AddressName 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+     * Get <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p> 
+     * @return IPv6AddressName <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
      */
     public String getIPv6AddressName() {
         return this.IPv6AddressName;
     }
 
     /**
-     * Set 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
-     * @param IPv6AddressName 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+     * Set <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
+     * @param IPv6AddressName <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
      */
     public void setIPv6AddressName(String IPv6AddressName) {
         this.IPv6AddressName = IPv6AddressName;
+    }
+
+    /**
+     * Get <p>是否开启弹性公网IPv6地址网卡可见</p> 
+     * @return EipVisibleOnEni <p>是否开启弹性公网IPv6地址网卡可见</p>
+     */
+    public Boolean getEipVisibleOnEni() {
+        return this.EipVisibleOnEni;
+    }
+
+    /**
+     * Set <p>是否开启弹性公网IPv6地址网卡可见</p>
+     * @param EipVisibleOnEni <p>是否开启弹性公网IPv6地址网卡可见</p>
+     */
+    public void setEipVisibleOnEni(Boolean EipVisibleOnEni) {
+        this.EipVisibleOnEni = EipVisibleOnEni;
     }
 
     public ModifyIPv6AddressesAttributesRequest() {
@@ -86,6 +109,9 @@ public class ModifyIPv6AddressesAttributesRequest extends AbstractModel {
         if (source.IPv6AddressName != null) {
             this.IPv6AddressName = new String(source.IPv6AddressName);
         }
+        if (source.EipVisibleOnEni != null) {
+            this.EipVisibleOnEni = new Boolean(source.EipVisibleOnEni);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ModifyIPv6AddressesAttributesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IPv6AddressIds.", this.IPv6AddressIds);
         this.setParamSimple(map, prefix + "IPv6AddressName", this.IPv6AddressName);
+        this.setParamSimple(map, prefix + "EipVisibleOnEni", this.EipVisibleOnEni);
 
     }
 }

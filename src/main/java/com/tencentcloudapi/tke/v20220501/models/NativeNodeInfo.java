@@ -247,6 +247,20 @@ public class NativeNodeInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>是否是迁移的节点</p><p>默认值：false</p>
+    */
+    @SerializedName("IsMigrated")
+    @Expose
+    private Boolean IsMigrated;
+
+    /**
+    * <p>资源 ID</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get <p>节点名称</p> 
      * @return MachineName <p>节点名称</p>
      */
@@ -778,6 +792,38 @@ public class NativeNodeInfo extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>是否是迁移的节点</p><p>默认值：false</p> 
+     * @return IsMigrated <p>是否是迁移的节点</p><p>默认值：false</p>
+     */
+    public Boolean getIsMigrated() {
+        return this.IsMigrated;
+    }
+
+    /**
+     * Set <p>是否是迁移的节点</p><p>默认值：false</p>
+     * @param IsMigrated <p>是否是迁移的节点</p><p>默认值：false</p>
+     */
+    public void setIsMigrated(Boolean IsMigrated) {
+        this.IsMigrated = IsMigrated;
+    }
+
+    /**
+     * Get <p>资源 ID</p> 
+     * @return ResourceId <p>资源 ID</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源 ID</p>
+     * @param ResourceId <p>资源 ID</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public NativeNodeInfo() {
     }
 
@@ -888,6 +934,12 @@ public class NativeNodeInfo extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IsMigrated != null) {
+            this.IsMigrated = new Boolean(source.IsMigrated);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -925,6 +977,8 @@ public class NativeNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsMigrated", this.IsMigrated);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

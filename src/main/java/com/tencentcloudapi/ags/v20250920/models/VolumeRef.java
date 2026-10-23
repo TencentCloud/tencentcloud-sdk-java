@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VolumeRef extends AbstractModel {
 
     /**
-    * Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+    * <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeName")
@@ -32,7 +32,7 @@ public class VolumeRef extends AbstractModel {
     private String VolumeName;
 
     /**
-    * 稳定 Volume ID，格式 vol-xxxxxxxx
+    * <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeId")
@@ -40,9 +40,9 @@ public class VolumeRef extends AbstractModel {
     private String VolumeId;
 
     /**
-     * Get Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+     * Get <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeName Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+     * @return VolumeName <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeName() {
@@ -50,9 +50,9 @@ public class VolumeRef extends AbstractModel {
     }
 
     /**
-     * Set Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+     * Set <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeName Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+     * @param VolumeName <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeName(String VolumeName) {
@@ -60,9 +60,9 @@ public class VolumeRef extends AbstractModel {
     }
 
     /**
-     * Get 稳定 Volume ID，格式 vol-xxxxxxxx
+     * Get <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeId 稳定 Volume ID，格式 vol-xxxxxxxx
+     * @return VolumeId <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeId() {
@@ -70,9 +70,9 @@ public class VolumeRef extends AbstractModel {
     }
 
     /**
-     * Set 稳定 Volume ID，格式 vol-xxxxxxxx
+     * Set <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeId 稳定 Volume ID，格式 vol-xxxxxxxx
+     * @param VolumeId <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeId(String VolumeId) {

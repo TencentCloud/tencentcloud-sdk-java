@@ -73,6 +73,13 @@ public class CreateReleaseFlowRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * <p>合同名称</p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+    */
+    @SerializedName("FlowName")
+    @Expose
+    private String FlowName;
+
+    /**
      * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
      * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
@@ -184,6 +191,22 @@ public class CreateReleaseFlowRequest extends AbstractModel {
         this.UserData = UserData;
     }
 
+    /**
+     * Get <p>合同名称</p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p> 
+     * @return FlowName <p>合同名称</p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     */
+    public String getFlowName() {
+        return this.FlowName;
+    }
+
+    /**
+     * Set <p>合同名称</p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     * @param FlowName <p>合同名称</p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     */
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
+    }
+
     public CreateReleaseFlowRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateReleaseFlowRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateReleaseFlowRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ReleasedApprovers.", this.ReleasedApprovers);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "FlowName", this.FlowName);
 
     }
 }

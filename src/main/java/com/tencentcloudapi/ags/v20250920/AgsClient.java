@@ -457,6 +457,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *查询沙箱实例
+     * @param req DescribeSandboxInstancesRequest
+     * @return DescribeSandboxInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSandboxInstancesResponse DescribeSandboxInstances(DescribeSandboxInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSandboxInstances", DescribeSandboxInstancesResponse.class);
+    }
+
+    /**
      *查询沙箱快照
 该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。请关注后续版本及变更说明，并根据需要调整调用代码。
      * @param req DescribeSandboxSnapshotListRequest

@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class UpdateRoleConfigurationRequest extends AbstractModel {
 
     /**
-    * 空间 ID
+    * <p>空间 ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 权限配置 ID
+    * <p>权限配置 ID</p>
     */
     @SerializedName("RoleConfigurationId")
     @Expose
     private String RoleConfigurationId;
 
     /**
-    * 新的权限配置描述。  长度：最大 1024 个字符。
+    * <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
     */
     @SerializedName("NewDescription")
     @Expose
     private String NewDescription;
 
     /**
-    * 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+    * <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
     */
     @SerializedName("NewSessionDuration")
     @Expose
     private Long NewSessionDuration;
 
     /**
-    * 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+    * <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
     */
     @SerializedName("NewRelayState")
     @Expose
     private String NewRelayState;
 
     /**
-     * Get 空间 ID 
-     * @return ZoneId 空间 ID
+    * <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+    */
+    @SerializedName("IsApply")
+    @Expose
+    private Boolean IsApply;
+
+    /**
+     * Get <p>空间 ID</p> 
+     * @return ZoneId <p>空间 ID</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 空间 ID
-     * @param ZoneId 空间 ID
+     * Set <p>空间 ID</p>
+     * @param ZoneId <p>空间 ID</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 权限配置 ID 
-     * @return RoleConfigurationId 权限配置 ID
+     * Get <p>权限配置 ID</p> 
+     * @return RoleConfigurationId <p>权限配置 ID</p>
      */
     public String getRoleConfigurationId() {
         return this.RoleConfigurationId;
     }
 
     /**
-     * Set 权限配置 ID
-     * @param RoleConfigurationId 权限配置 ID
+     * Set <p>权限配置 ID</p>
+     * @param RoleConfigurationId <p>权限配置 ID</p>
      */
     public void setRoleConfigurationId(String RoleConfigurationId) {
         this.RoleConfigurationId = RoleConfigurationId;
     }
 
     /**
-     * Get 新的权限配置描述。  长度：最大 1024 个字符。 
-     * @return NewDescription 新的权限配置描述。  长度：最大 1024 个字符。
+     * Get <p>新的权限配置描述。  长度：最大 1024 个字符。</p> 
+     * @return NewDescription <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
      */
     public String getNewDescription() {
         return this.NewDescription;
     }
 
     /**
-     * Set 新的权限配置描述。  长度：最大 1024 个字符。
-     * @param NewDescription 新的权限配置描述。  长度：最大 1024 个字符。
+     * Set <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
+     * @param NewDescription <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
      */
     public void setNewDescription(String NewDescription) {
         this.NewDescription = NewDescription;
     }
 
     /**
-     * Get 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。 
-     * @return NewSessionDuration 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * Get <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p> 
+     * @return NewSessionDuration <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
      */
     public Long getNewSessionDuration() {
         return this.NewSessionDuration;
     }
 
     /**
-     * Set 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
-     * @param NewSessionDuration 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * Set <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
+     * @param NewSessionDuration <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
      */
     public void setNewSessionDuration(Long NewSessionDuration) {
         this.NewSessionDuration = NewSessionDuration;
     }
 
     /**
-     * Get 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。 
-     * @return NewRelayState 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * Get <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p> 
+     * @return NewRelayState <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
      */
     public String getNewRelayState() {
         return this.NewRelayState;
     }
 
     /**
-     * Set 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
-     * @param NewRelayState 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * Set <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
+     * @param NewRelayState <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
      */
     public void setNewRelayState(String NewRelayState) {
         this.NewRelayState = NewRelayState;
+    }
+
+    /**
+     * Get <p>true=保存并应用（立即下发）；false/缺省=仅保存</p> 
+     * @return IsApply <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+     */
+    public Boolean getIsApply() {
+        return this.IsApply;
+    }
+
+    /**
+     * Set <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+     * @param IsApply <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+     */
+    public void setIsApply(Boolean IsApply) {
+        this.IsApply = IsApply;
     }
 
     public UpdateRoleConfigurationRequest() {
@@ -161,6 +184,9 @@ public class UpdateRoleConfigurationRequest extends AbstractModel {
         if (source.NewRelayState != null) {
             this.NewRelayState = new String(source.NewRelayState);
         }
+        if (source.IsApply != null) {
+            this.IsApply = new Boolean(source.IsApply);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class UpdateRoleConfigurationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NewDescription", this.NewDescription);
         this.setParamSimple(map, prefix + "NewSessionDuration", this.NewSessionDuration);
         this.setParamSimple(map, prefix + "NewRelayState", this.NewRelayState);
+        this.setParamSimple(map, prefix + "IsApply", this.IsApply);
 
     }
 }

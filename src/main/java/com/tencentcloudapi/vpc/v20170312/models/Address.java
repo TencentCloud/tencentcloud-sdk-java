@@ -24,121 +24,119 @@ import java.util.HashMap;
 public class Address extends AbstractModel {
 
     /**
-    * `EIP`的`ID`，是`EIP`的唯一标识。
+    * <p><code>EIP</code>的<code>ID</code>，是<code>EIP</code>的唯一标识。</p>
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * `EIP`名称。
+    * <p><code>EIP</code>名称。</p>
     */
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
 
     /**
-    * `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+    * <p><code>EIP</code>状态，包含&#39;CREATING&#39;(创建中),&#39;BINDING&#39;(绑定中),&#39;BIND&#39;(已绑定),&#39;UNBINDING&#39;(解绑中),&#39;UNBIND&#39;(已解绑),&#39;OFFLINING&#39;(释放中),&#39;BIND_ENI&#39;(绑定悬空弹性网卡)</p>
     */
     @SerializedName("AddressStatus")
     @Expose
     private String AddressStatus;
 
     /**
-    * 外网IP地址
+    * <p>外网IP地址</p>
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-    * 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+    * <p>绑定的资源实例<code>ID</code>。可能是一个<code>CVM</code>，<code>NAT</code>。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+    * <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+    * <p>绑定的弹性网卡ID，null表示没有绑定弹性网卡。</p>
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 绑定的资源内网ip，null表示没有绑定资源内网ip。
+    * <p>绑定的资源内网ip，null表示没有绑定资源内网ip。</p>
     */
     @SerializedName("PrivateAddressIp")
     @Expose
     private String PrivateAddressIp;
 
     /**
-    * 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+    * <p>资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态</p>
     */
     @SerializedName("IsArrears")
     @Expose
     private Boolean IsArrears;
 
     /**
-    * 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+    * <p>资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态</p>
     */
     @SerializedName("IsBlocked")
     @Expose
     private Boolean IsBlocked;
 
     /**
-    * eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+    * <p>eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式</p>
     */
     @SerializedName("IsEipDirectConnection")
     @Expose
     private Boolean IsEipDirectConnection;
 
     /**
-    * EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。
+    * <p>EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：<code>CalcIP</code> 表示设备 IP，<code>WanIP</code> 表示普通公网 IP，<code>EIP</code> 表示弹性公网 IP，<code>AnycastEIP</code> 表示加速 EIP，<code>AntiDDoSEIP</code>表示高防EIP。</p>
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
 
     /**
-    * eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+    * <p>eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放</p>
     */
     @SerializedName("CascadeRelease")
     @Expose
     private Boolean CascadeRelease;
 
     /**
-    * EIP ALG开启的协议类型。
+    * <p>EIP ALG开启的协议类型。</p>
     */
     @SerializedName("EipAlgType")
     @Expose
     private AlgType EipAlgType;
 
     /**
-    * 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+    * <p>弹性公网IP的运营商信息，当前可能返回值包括&quot;CMCC&quot;(移动),&quot;CTCC&quot;(电信),&quot;CUCC&quot;(联通),&quot;BGP&quot;(常规BGP)。</p>
     */
     @SerializedName("InternetServiceProvider")
     @Expose
     private String InternetServiceProvider;
 
     /**
-    * 是否本地带宽EIP，可选值：
-<li>true：本地带宽EIP</li>
-<li>false：非本地带宽EIP</li>
+    * <p>是否本地带宽EIP，可选值：</p><li>true：本地带宽EIP</li><li>false：非本地带宽EIP</li>
     */
     @SerializedName("LocalBgp")
     @Expose
     private Boolean LocalBgp;
 
     /**
-    * 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
+    * <p>弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bandwidth")
@@ -146,17 +144,7 @@ public class Address extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
-注意：此字段可能返回 null，表示取不到有效值。
-包括：
-<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
-<p style="padding-left: 30px;">表示包月带宽预付费。</p>
-<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时流量后付费。</p>
-<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
-<li><strong>BANDWIDTH_PACKAGE</strong></li>
-<p style="padding-left: 30px;">表示共享带宽包。</p>
+    * <p>弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。<br>注意：此字段可能返回 null，表示取不到有效值。<br>包括：</p><li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li><p style="padding-left: 30px;">表示包月带宽预付费。</p><li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时流量后付费。</p><li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时带宽后付费。</p><li><strong>BANDWIDTH_PACKAGE</strong></li><p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetChargeType")
@@ -164,15 +152,14 @@ public class Address extends AbstractModel {
     private String InternetChargeType;
 
     /**
-    * 弹性公网IP关联的标签列表。
+    * <p>弹性公网IP关联的标签列表。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * 预付费包月带宽IP到期时间。
-时间格式：YYYY-MM-DDThh:mm:ssZ
+    * <p>预付费包月带宽IP到期时间。<br>时间格式：YYYY-MM-DDThh:mm:ssZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineDate")
@@ -180,15 +167,7 @@ public class Address extends AbstractModel {
     private String DeadlineDate;
 
     /**
-    * EIP绑定的实例类型。可选值：
-<li>CVM：云服务器</li>
-<li>NAT：NAT 网关</li>
-<li>HAVIP：高可用虚拟IP</li>
-<li>ENI：弹性网卡</li>
-<li>CLB：内网CLB</li>
-<li>DHCPIP：弹性内网IP</li>
-
-
+    * <p>EIP绑定的实例类型。可选值：</p><li>CVM：云服务器</li><li>NAT：NAT 网关</li><li>HAVIP：高可用虚拟IP</li><li>ENI：弹性网卡</li><li>CLB：内网CLB</li><li>DHCPIP：弹性内网IP</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -196,7 +175,7 @@ public class Address extends AbstractModel {
     private String InstanceType;
 
     /**
-    * 静态单线IP网络出口
+    * <p>静态单线IP网络出口</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
@@ -204,23 +183,21 @@ public class Address extends AbstractModel {
     private String Egress;
 
     /**
-    * 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+    * <p>高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.</p>
     */
     @SerializedName("AntiDDoSPackageId")
     @Expose
     private String AntiDDoSPackageId;
 
     /**
-    * 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
-<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
-
+    * <p>当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:</p><li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+    * <p>当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthPackageId")
@@ -228,287 +205,286 @@ public class Address extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * 传统弹性公网IPv6所属vpc唯一ID
+    * <p>传统弹性公网IPv6所属vpc唯一ID</p>
     */
     @SerializedName("UnVpcId")
     @Expose
     private String UnVpcId;
 
     /**
-    * CDC唯一ID
+    * <p>CDC唯一ID</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-     * Get `EIP`的`ID`，是`EIP`的唯一标识。 
-     * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
+    * <p>eip是否在网卡上可见。true表示支持，false表示不支持</p>
+    */
+    @SerializedName("EipVisibleOnEni")
+    @Expose
+    private Boolean EipVisibleOnEni;
+
+    /**
+     * Get <p><code>EIP</code>的<code>ID</code>，是<code>EIP</code>的唯一标识。</p> 
+     * @return AddressId <p><code>EIP</code>的<code>ID</code>，是<code>EIP</code>的唯一标识。</p>
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set `EIP`的`ID`，是`EIP`的唯一标识。
-     * @param AddressId `EIP`的`ID`，是`EIP`的唯一标识。
+     * Set <p><code>EIP</code>的<code>ID</code>，是<code>EIP</code>的唯一标识。</p>
+     * @param AddressId <p><code>EIP</code>的<code>ID</code>，是<code>EIP</code>的唯一标识。</p>
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get `EIP`名称。 
-     * @return AddressName `EIP`名称。
+     * Get <p><code>EIP</code>名称。</p> 
+     * @return AddressName <p><code>EIP</code>名称。</p>
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set `EIP`名称。
-     * @param AddressName `EIP`名称。
+     * Set <p><code>EIP</code>名称。</p>
+     * @param AddressName <p><code>EIP</code>名称。</p>
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
     }
 
     /**
-     * Get `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡) 
-     * @return AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+     * Get <p><code>EIP</code>状态，包含&#39;CREATING&#39;(创建中),&#39;BINDING&#39;(绑定中),&#39;BIND&#39;(已绑定),&#39;UNBINDING&#39;(解绑中),&#39;UNBIND&#39;(已解绑),&#39;OFFLINING&#39;(释放中),&#39;BIND_ENI&#39;(绑定悬空弹性网卡)</p> 
+     * @return AddressStatus <p><code>EIP</code>状态，包含&#39;CREATING&#39;(创建中),&#39;BINDING&#39;(绑定中),&#39;BIND&#39;(已绑定),&#39;UNBINDING&#39;(解绑中),&#39;UNBIND&#39;(已解绑),&#39;OFFLINING&#39;(释放中),&#39;BIND_ENI&#39;(绑定悬空弹性网卡)</p>
      */
     public String getAddressStatus() {
         return this.AddressStatus;
     }
 
     /**
-     * Set `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
-     * @param AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+     * Set <p><code>EIP</code>状态，包含&#39;CREATING&#39;(创建中),&#39;BINDING&#39;(绑定中),&#39;BIND&#39;(已绑定),&#39;UNBINDING&#39;(解绑中),&#39;UNBIND&#39;(已解绑),&#39;OFFLINING&#39;(释放中),&#39;BIND_ENI&#39;(绑定悬空弹性网卡)</p>
+     * @param AddressStatus <p><code>EIP</code>状态，包含&#39;CREATING&#39;(创建中),&#39;BINDING&#39;(绑定中),&#39;BIND&#39;(已绑定),&#39;UNBINDING&#39;(解绑中),&#39;UNBIND&#39;(已解绑),&#39;OFFLINING&#39;(释放中),&#39;BIND_ENI&#39;(绑定悬空弹性网卡)</p>
      */
     public void setAddressStatus(String AddressStatus) {
         this.AddressStatus = AddressStatus;
     }
 
     /**
-     * Get 外网IP地址 
-     * @return AddressIp 外网IP地址
+     * Get <p>外网IP地址</p> 
+     * @return AddressIp <p>外网IP地址</p>
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set 外网IP地址
-     * @param AddressIp 外网IP地址
+     * Set <p>外网IP地址</p>
+     * @param AddressIp <p>外网IP地址</p>
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;
     }
 
     /**
-     * Get 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。 
-     * @return InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * Get <p>绑定的资源实例<code>ID</code>。可能是一个<code>CVM</code>，<code>NAT</code>。</p> 
+     * @return InstanceId <p>绑定的资源实例<code>ID</code>。可能是一个<code>CVM</code>，<code>NAT</code>。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
-     * @param InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * Set <p>绑定的资源实例<code>ID</code>。可能是一个<code>CVM</code>，<code>NAT</code>。</p>
+     * @param InstanceId <p>绑定的资源实例<code>ID</code>。可能是一个<code>CVM</code>，<code>NAT</code>。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
-     * @return CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p> 
+     * @return CreatedTime <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
+     * @param CreatedTime <p>创建时间。按照<code>ISO8601</code>标准表示，并且使用<code>UTC</code>时间。格式为：<code>YYYY-MM-DDThh:mm:ssZ</code>。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 绑定的弹性网卡ID，null表示没有绑定弹性网卡。 
-     * @return NetworkInterfaceId 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+     * Get <p>绑定的弹性网卡ID，null表示没有绑定弹性网卡。</p> 
+     * @return NetworkInterfaceId <p>绑定的弹性网卡ID，null表示没有绑定弹性网卡。</p>
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
-     * @param NetworkInterfaceId 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+     * Set <p>绑定的弹性网卡ID，null表示没有绑定弹性网卡。</p>
+     * @param NetworkInterfaceId <p>绑定的弹性网卡ID，null表示没有绑定弹性网卡。</p>
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 绑定的资源内网ip，null表示没有绑定资源内网ip。 
-     * @return PrivateAddressIp 绑定的资源内网ip，null表示没有绑定资源内网ip。
+     * Get <p>绑定的资源内网ip，null表示没有绑定资源内网ip。</p> 
+     * @return PrivateAddressIp <p>绑定的资源内网ip，null表示没有绑定资源内网ip。</p>
      */
     public String getPrivateAddressIp() {
         return this.PrivateAddressIp;
     }
 
     /**
-     * Set 绑定的资源内网ip，null表示没有绑定资源内网ip。
-     * @param PrivateAddressIp 绑定的资源内网ip，null表示没有绑定资源内网ip。
+     * Set <p>绑定的资源内网ip，null表示没有绑定资源内网ip。</p>
+     * @param PrivateAddressIp <p>绑定的资源内网ip，null表示没有绑定资源内网ip。</p>
      */
     public void setPrivateAddressIp(String PrivateAddressIp) {
         this.PrivateAddressIp = PrivateAddressIp;
     }
 
     /**
-     * Get 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态 
-     * @return IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * Get <p>资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态</p> 
+     * @return IsArrears <p>资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态</p>
      */
     public Boolean getIsArrears() {
         return this.IsArrears;
     }
 
     /**
-     * Set 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
-     * @param IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * Set <p>资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态</p>
+     * @param IsArrears <p>资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态</p>
      */
     public void setIsArrears(Boolean IsArrears) {
         this.IsArrears = IsArrears;
     }
 
     /**
-     * Get 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态 
-     * @return IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * Get <p>资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态</p> 
+     * @return IsBlocked <p>资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态</p>
      */
     public Boolean getIsBlocked() {
         return this.IsBlocked;
     }
 
     /**
-     * Set 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
-     * @param IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * Set <p>资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态</p>
+     * @param IsBlocked <p>资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态</p>
      */
     public void setIsBlocked(Boolean IsBlocked) {
         this.IsBlocked = IsBlocked;
     }
 
     /**
-     * Get eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式 
-     * @return IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * Get <p>eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式</p> 
+     * @return IsEipDirectConnection <p>eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式</p>
      */
     public Boolean getIsEipDirectConnection() {
         return this.IsEipDirectConnection;
     }
 
     /**
-     * Set eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
-     * @param IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * Set <p>eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式</p>
+     * @param IsEipDirectConnection <p>eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式</p>
      */
     public void setIsEipDirectConnection(Boolean IsEipDirectConnection) {
         this.IsEipDirectConnection = IsEipDirectConnection;
     }
 
     /**
-     * Get EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。 
-     * @return AddressType EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。
+     * Get <p>EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：<code>CalcIP</code> 表示设备 IP，<code>WanIP</code> 表示普通公网 IP，<code>EIP</code> 表示弹性公网 IP，<code>AnycastEIP</code> 表示加速 EIP，<code>AntiDDoSEIP</code>表示高防EIP。</p> 
+     * @return AddressType <p>EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：<code>CalcIP</code> 表示设备 IP，<code>WanIP</code> 表示普通公网 IP，<code>EIP</code> 表示弹性公网 IP，<code>AnycastEIP</code> 表示加速 EIP，<code>AntiDDoSEIP</code>表示高防EIP。</p>
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。
-     * @param AddressType EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。
+     * Set <p>EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：<code>CalcIP</code> 表示设备 IP，<code>WanIP</code> 表示普通公网 IP，<code>EIP</code> 表示弹性公网 IP，<code>AnycastEIP</code> 表示加速 EIP，<code>AntiDDoSEIP</code>表示高防EIP。</p>
+     * @param AddressType <p>EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：<code>CalcIP</code> 表示设备 IP，<code>WanIP</code> 表示普通公网 IP，<code>EIP</code> 表示弹性公网 IP，<code>AnycastEIP</code> 表示加速 EIP，<code>AntiDDoSEIP</code>表示高防EIP。</p>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
     }
 
     /**
-     * Get eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放 
-     * @return CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * Get <p>eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放</p> 
+     * @return CascadeRelease <p>eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放</p>
      */
     public Boolean getCascadeRelease() {
         return this.CascadeRelease;
     }
 
     /**
-     * Set eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
-     * @param CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * Set <p>eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放</p>
+     * @param CascadeRelease <p>eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放</p>
      */
     public void setCascadeRelease(Boolean CascadeRelease) {
         this.CascadeRelease = CascadeRelease;
     }
 
     /**
-     * Get EIP ALG开启的协议类型。 
-     * @return EipAlgType EIP ALG开启的协议类型。
+     * Get <p>EIP ALG开启的协议类型。</p> 
+     * @return EipAlgType <p>EIP ALG开启的协议类型。</p>
      */
     public AlgType getEipAlgType() {
         return this.EipAlgType;
     }
 
     /**
-     * Set EIP ALG开启的协议类型。
-     * @param EipAlgType EIP ALG开启的协议类型。
+     * Set <p>EIP ALG开启的协议类型。</p>
+     * @param EipAlgType <p>EIP ALG开启的协议类型。</p>
      */
     public void setEipAlgType(AlgType EipAlgType) {
         this.EipAlgType = EipAlgType;
     }
 
     /**
-     * Get 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。 
-     * @return InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+     * Get <p>弹性公网IP的运营商信息，当前可能返回值包括&quot;CMCC&quot;(移动),&quot;CTCC&quot;(电信),&quot;CUCC&quot;(联通),&quot;BGP&quot;(常规BGP)。</p> 
+     * @return InternetServiceProvider <p>弹性公网IP的运营商信息，当前可能返回值包括&quot;CMCC&quot;(移动),&quot;CTCC&quot;(电信),&quot;CUCC&quot;(联通),&quot;BGP&quot;(常规BGP)。</p>
      */
     public String getInternetServiceProvider() {
         return this.InternetServiceProvider;
     }
 
     /**
-     * Set 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
-     * @param InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+     * Set <p>弹性公网IP的运营商信息，当前可能返回值包括&quot;CMCC&quot;(移动),&quot;CTCC&quot;(电信),&quot;CUCC&quot;(联通),&quot;BGP&quot;(常规BGP)。</p>
+     * @param InternetServiceProvider <p>弹性公网IP的运营商信息，当前可能返回值包括&quot;CMCC&quot;(移动),&quot;CTCC&quot;(电信),&quot;CUCC&quot;(联通),&quot;BGP&quot;(常规BGP)。</p>
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
         this.InternetServiceProvider = InternetServiceProvider;
     }
 
     /**
-     * Get 是否本地带宽EIP，可选值：
-<li>true：本地带宽EIP</li>
-<li>false：非本地带宽EIP</li> 
-     * @return LocalBgp 是否本地带宽EIP，可选值：
-<li>true：本地带宽EIP</li>
-<li>false：非本地带宽EIP</li>
+     * Get <p>是否本地带宽EIP，可选值：</p><li>true：本地带宽EIP</li><li>false：非本地带宽EIP</li> 
+     * @return LocalBgp <p>是否本地带宽EIP，可选值：</p><li>true：本地带宽EIP</li><li>false：非本地带宽EIP</li>
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
     }
 
     /**
-     * Set 是否本地带宽EIP，可选值：
-<li>true：本地带宽EIP</li>
-<li>false：非本地带宽EIP</li>
-     * @param LocalBgp 是否本地带宽EIP，可选值：
-<li>true：本地带宽EIP</li>
-<li>false：非本地带宽EIP</li>
+     * Set <p>是否本地带宽EIP，可选值：</p><li>true：本地带宽EIP</li><li>false：非本地带宽EIP</li>
+     * @param LocalBgp <p>是否本地带宽EIP，可选值：</p><li>true：本地带宽EIP</li><li>false：非本地带宽EIP</li>
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;
     }
 
     /**
-     * Get 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
+     * Get <p>弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bandwidth 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
+     * @return Bandwidth <p>弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidth() {
@@ -516,9 +492,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
+     * Set <p>弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bandwidth 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
+     * @param Bandwidth <p>弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidth(Long Bandwidth) {
@@ -526,29 +502,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
-注意：此字段可能返回 null，表示取不到有效值。
-包括：
-<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
-<p style="padding-left: 30px;">表示包月带宽预付费。</p>
-<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时流量后付费。</p>
-<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
-<li><strong>BANDWIDTH_PACKAGE</strong></li>
-<p style="padding-left: 30px;">表示共享带宽包。</p>
+     * Get <p>弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。<br>注意：此字段可能返回 null，表示取不到有效值。<br>包括：</p><li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li><p style="padding-left: 30px;">表示包月带宽预付费。</p><li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时流量后付费。</p><li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时带宽后付费。</p><li><strong>BANDWIDTH_PACKAGE</strong></li><p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InternetChargeType 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
-注意：此字段可能返回 null，表示取不到有效值。
-包括：
-<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
-<p style="padding-left: 30px;">表示包月带宽预付费。</p>
-<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时流量后付费。</p>
-<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
-<li><strong>BANDWIDTH_PACKAGE</strong></li>
-<p style="padding-left: 30px;">表示共享带宽包。</p>
+     * @return InternetChargeType <p>弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。<br>注意：此字段可能返回 null，表示取不到有效值。<br>包括：</p><li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li><p style="padding-left: 30px;">表示包月带宽预付费。</p><li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时流量后付费。</p><li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时带宽后付费。</p><li><strong>BANDWIDTH_PACKAGE</strong></li><p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternetChargeType() {
@@ -556,29 +512,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
+     * Set <p>弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。<br>注意：此字段可能返回 null，表示取不到有效值。<br>包括：</p><li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li><p style="padding-left: 30px;">表示包月带宽预付费。</p><li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时流量后付费。</p><li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时带宽后付费。</p><li><strong>BANDWIDTH_PACKAGE</strong></li><p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-包括：
-<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
-<p style="padding-left: 30px;">表示包月带宽预付费。</p>
-<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时流量后付费。</p>
-<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
-<li><strong>BANDWIDTH_PACKAGE</strong></li>
-<p style="padding-left: 30px;">表示共享带宽包。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InternetChargeType 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
-注意：此字段可能返回 null，表示取不到有效值。
-包括：
-<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
-<p style="padding-left: 30px;">表示包月带宽预付费。</p>
-<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时流量后付费。</p>
-<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
-<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
-<li><strong>BANDWIDTH_PACKAGE</strong></li>
-<p style="padding-left: 30px;">表示共享带宽包。</p>
+     * @param InternetChargeType <p>弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。<br>注意：此字段可能返回 null，表示取不到有效值。<br>包括：</p><li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li><p style="padding-left: 30px;">表示包月带宽预付费。</p><li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时流量后付费。</p><li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li><p style="padding-left: 30px;">表示按小时带宽后付费。</p><li><strong>BANDWIDTH_PACKAGE</strong></li><p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetChargeType(String InternetChargeType) {
@@ -586,27 +522,25 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 弹性公网IP关联的标签列表。 
-     * @return TagSet 弹性公网IP关联的标签列表。
+     * Get <p>弹性公网IP关联的标签列表。</p> 
+     * @return TagSet <p>弹性公网IP关联的标签列表。</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 弹性公网IP关联的标签列表。
-     * @param TagSet 弹性公网IP关联的标签列表。
+     * Set <p>弹性公网IP关联的标签列表。</p>
+     * @param TagSet <p>弹性公网IP关联的标签列表。</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 预付费包月带宽IP到期时间。
-时间格式：YYYY-MM-DDThh:mm:ssZ
+     * Get <p>预付费包月带宽IP到期时间。<br>时间格式：YYYY-MM-DDThh:mm:ssZ</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadlineDate 预付费包月带宽IP到期时间。
-时间格式：YYYY-MM-DDThh:mm:ssZ
+     * @return DeadlineDate <p>预付费包月带宽IP到期时间。<br>时间格式：YYYY-MM-DDThh:mm:ssZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadlineDate() {
@@ -614,11 +548,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set 预付费包月带宽IP到期时间。
-时间格式：YYYY-MM-DDThh:mm:ssZ
+     * Set <p>预付费包月带宽IP到期时间。<br>时间格式：YYYY-MM-DDThh:mm:ssZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadlineDate 预付费包月带宽IP到期时间。
-时间格式：YYYY-MM-DDThh:mm:ssZ
+     * @param DeadlineDate <p>预付费包月带宽IP到期时间。<br>时间格式：YYYY-MM-DDThh:mm:ssZ</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineDate(String DeadlineDate) {
@@ -626,25 +558,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get EIP绑定的实例类型。可选值：
-<li>CVM：云服务器</li>
-<li>NAT：NAT 网关</li>
-<li>HAVIP：高可用虚拟IP</li>
-<li>ENI：弹性网卡</li>
-<li>CLB：内网CLB</li>
-<li>DHCPIP：弹性内网IP</li>
-
-
+     * Get <p>EIP绑定的实例类型。可选值：</p><li>CVM：云服务器</li><li>NAT：NAT 网关</li><li>HAVIP：高可用虚拟IP</li><li>ENI：弹性网卡</li><li>CLB：内网CLB</li><li>DHCPIP：弹性内网IP</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType EIP绑定的实例类型。可选值：
-<li>CVM：云服务器</li>
-<li>NAT：NAT 网关</li>
-<li>HAVIP：高可用虚拟IP</li>
-<li>ENI：弹性网卡</li>
-<li>CLB：内网CLB</li>
-<li>DHCPIP：弹性内网IP</li>
-
-
+     * @return InstanceType <p>EIP绑定的实例类型。可选值：</p><li>CVM：云服务器</li><li>NAT：NAT 网关</li><li>HAVIP：高可用虚拟IP</li><li>ENI：弹性网卡</li><li>CLB：内网CLB</li><li>DHCPIP：弹性内网IP</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -652,25 +568,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set EIP绑定的实例类型。可选值：
-<li>CVM：云服务器</li>
-<li>NAT：NAT 网关</li>
-<li>HAVIP：高可用虚拟IP</li>
-<li>ENI：弹性网卡</li>
-<li>CLB：内网CLB</li>
-<li>DHCPIP：弹性内网IP</li>
-
-
+     * Set <p>EIP绑定的实例类型。可选值：</p><li>CVM：云服务器</li><li>NAT：NAT 网关</li><li>HAVIP：高可用虚拟IP</li><li>ENI：弹性网卡</li><li>CLB：内网CLB</li><li>DHCPIP：弹性内网IP</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType EIP绑定的实例类型。可选值：
-<li>CVM：云服务器</li>
-<li>NAT：NAT 网关</li>
-<li>HAVIP：高可用虚拟IP</li>
-<li>ENI：弹性网卡</li>
-<li>CLB：内网CLB</li>
-<li>DHCPIP：弹性内网IP</li>
-
-
+     * @param InstanceType <p>EIP绑定的实例类型。可选值：</p><li>CVM：云服务器</li><li>NAT：NAT 网关</li><li>HAVIP：高可用虚拟IP</li><li>ENI：弹性网卡</li><li>CLB：内网CLB</li><li>DHCPIP：弹性内网IP</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -678,9 +578,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 静态单线IP网络出口
+     * Get <p>静态单线IP网络出口</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Egress 静态单线IP网络出口
+     * @return Egress <p>静态单线IP网络出口</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEgress() {
@@ -688,9 +588,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set 静态单线IP网络出口
+     * Set <p>静态单线IP网络出口</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Egress 静态单线IP网络出口
+     * @param Egress <p>静态单线IP网络出口</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(String Egress) {
@@ -698,49 +598,41 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID. 
-     * @return AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+     * Get <p>高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.</p> 
+     * @return AntiDDoSPackageId <p>高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.</p>
      */
     public String getAntiDDoSPackageId() {
         return this.AntiDDoSPackageId;
     }
 
     /**
-     * Set 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
-     * @param AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+     * Set <p>高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.</p>
+     * @param AntiDDoSPackageId <p>高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.</p>
      */
     public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
         this.AntiDDoSPackageId = AntiDDoSPackageId;
     }
 
     /**
-     * Get 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
-<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
- 
-     * @return RenewFlag 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
-<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
-
+     * Get <p>当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:</p><li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li> 
+     * @return RenewFlag <p>当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:</p><li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
-<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
-
-     * @param RenewFlag 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
-<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
-
+     * Set <p>当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:</p><li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+     * @param RenewFlag <p>当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:</p><li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+     * Get <p>当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+     * @return BandwidthPackageId <p>当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBandwidthPackageId() {
@@ -748,9 +640,9 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+     * Set <p>当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+     * @param BandwidthPackageId <p>当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -758,35 +650,51 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 传统弹性公网IPv6所属vpc唯一ID 
-     * @return UnVpcId 传统弹性公网IPv6所属vpc唯一ID
+     * Get <p>传统弹性公网IPv6所属vpc唯一ID</p> 
+     * @return UnVpcId <p>传统弹性公网IPv6所属vpc唯一ID</p>
      */
     public String getUnVpcId() {
         return this.UnVpcId;
     }
 
     /**
-     * Set 传统弹性公网IPv6所属vpc唯一ID
-     * @param UnVpcId 传统弹性公网IPv6所属vpc唯一ID
+     * Set <p>传统弹性公网IPv6所属vpc唯一ID</p>
+     * @param UnVpcId <p>传统弹性公网IPv6所属vpc唯一ID</p>
      */
     public void setUnVpcId(String UnVpcId) {
         this.UnVpcId = UnVpcId;
     }
 
     /**
-     * Get CDC唯一ID 
-     * @return DedicatedClusterId CDC唯一ID
+     * Get <p>CDC唯一ID</p> 
+     * @return DedicatedClusterId <p>CDC唯一ID</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set CDC唯一ID
-     * @param DedicatedClusterId CDC唯一ID
+     * Set <p>CDC唯一ID</p>
+     * @param DedicatedClusterId <p>CDC唯一ID</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get <p>eip是否在网卡上可见。true表示支持，false表示不支持</p> 
+     * @return EipVisibleOnEni <p>eip是否在网卡上可见。true表示支持，false表示不支持</p>
+     */
+    public Boolean getEipVisibleOnEni() {
+        return this.EipVisibleOnEni;
+    }
+
+    /**
+     * Set <p>eip是否在网卡上可见。true表示支持，false表示不支持</p>
+     * @param EipVisibleOnEni <p>eip是否在网卡上可见。true表示支持，false表示不支持</p>
+     */
+    public void setEipVisibleOnEni(Boolean EipVisibleOnEni) {
+        this.EipVisibleOnEni = EipVisibleOnEni;
     }
 
     public Address() {
@@ -881,6 +789,9 @@ public class Address extends AbstractModel {
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.EipVisibleOnEni != null) {
+            this.EipVisibleOnEni = new Boolean(source.EipVisibleOnEni);
+        }
     }
 
 
@@ -915,6 +826,7 @@ public class Address extends AbstractModel {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "EipVisibleOnEni", this.EipVisibleOnEni);
 
     }
 }

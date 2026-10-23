@@ -150,7 +150,7 @@ public class ClusterListItem extends AbstractModel {
     private Long DefendCoresCount;
 
     /**
-    * <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
+    * <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
     */
     @SerializedName("AuditLogSwitchStatus")
     @Expose
@@ -295,6 +295,20 @@ public class ClusterListItem extends AbstractModel {
     @SerializedName("UnboundUltimateNodeCount")
     @Expose
     private Long UnboundUltimateNodeCount;
+
+    /**
+    * <p>资产标签列表</p>
+    */
+    @SerializedName("TagItems")
+    @Expose
+    private MiniTagItem [] TagItems;
+
+    /**
+    * <p>标签修改信息</p>
+    */
+    @SerializedName("TagModifyInfo")
+    @Expose
+    private AssetTagModifyAssetItem TagModifyInfo;
 
     /**
      * Get <p>appid</p> 
@@ -625,16 +639,16 @@ public class ClusterListItem extends AbstractModel {
     }
 
     /**
-     * Get <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p> 
-     * @return AuditLogSwitchStatus <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
+     * Get <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul> 
+     * @return AuditLogSwitchStatus <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
      */
     public Long getAuditLogSwitchStatus() {
         return this.AuditLogSwitchStatus;
     }
 
     /**
-     * Set <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
-     * @param AuditLogSwitchStatus <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
+     * Set <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
+     * @param AuditLogSwitchStatus <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
      */
     public void setAuditLogSwitchStatus(Long AuditLogSwitchStatus) {
         this.AuditLogSwitchStatus = AuditLogSwitchStatus;
@@ -968,6 +982,38 @@ public class ClusterListItem extends AbstractModel {
         this.UnboundUltimateNodeCount = UnboundUltimateNodeCount;
     }
 
+    /**
+     * Get <p>资产标签列表</p> 
+     * @return TagItems <p>资产标签列表</p>
+     */
+    public MiniTagItem [] getTagItems() {
+        return this.TagItems;
+    }
+
+    /**
+     * Set <p>资产标签列表</p>
+     * @param TagItems <p>资产标签列表</p>
+     */
+    public void setTagItems(MiniTagItem [] TagItems) {
+        this.TagItems = TagItems;
+    }
+
+    /**
+     * Get <p>标签修改信息</p> 
+     * @return TagModifyInfo <p>标签修改信息</p>
+     */
+    public AssetTagModifyAssetItem getTagModifyInfo() {
+        return this.TagModifyInfo;
+    }
+
+    /**
+     * Set <p>标签修改信息</p>
+     * @param TagModifyInfo <p>标签修改信息</p>
+     */
+    public void setTagModifyInfo(AssetTagModifyAssetItem TagModifyInfo) {
+        this.TagModifyInfo = TagModifyInfo;
+    }
+
     public ClusterListItem() {
     }
 
@@ -1096,6 +1142,15 @@ public class ClusterListItem extends AbstractModel {
         if (source.UnboundUltimateNodeCount != null) {
             this.UnboundUltimateNodeCount = new Long(source.UnboundUltimateNodeCount);
         }
+        if (source.TagItems != null) {
+            this.TagItems = new MiniTagItem[source.TagItems.length];
+            for (int i = 0; i < source.TagItems.length; i++) {
+                this.TagItems[i] = new MiniTagItem(source.TagItems[i]);
+            }
+        }
+        if (source.TagModifyInfo != null) {
+            this.TagModifyInfo = new AssetTagModifyAssetItem(source.TagModifyInfo);
+        }
     }
 
 
@@ -1142,6 +1197,8 @@ public class ClusterListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "RegionNameEn", this.RegionNameEn);
         this.setParamSimple(map, prefix + "UnboundUltimateNodeCount", this.UnboundUltimateNodeCount);
+        this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
+        this.setParamObj(map, prefix + "TagModifyInfo.", this.TagModifyInfo);
 
     }
 }

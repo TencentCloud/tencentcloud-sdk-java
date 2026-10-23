@@ -24,77 +24,95 @@ import java.util.HashMap;
 public class ModifyAddressAttributeRequest extends AbstractModel {
 
     /**
-    * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+    * <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
+    * <p>修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
     */
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
 
     /**
-    * 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
-注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
+    * <p>设定EIP是否直通，&quot;TRUE&quot;表示直通，&quot;FALSE&quot;表示非直通。<br>注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。</p>
     */
     @SerializedName("EipDirectConnection")
     @Expose
     private String EipDirectConnection;
 
     /**
-     * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。 
-     * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+    * <p>设定EIP是否在网卡可见</p>
+    */
+    @SerializedName("EipVisibleOnEni")
+    @Expose
+    private Boolean EipVisibleOnEni;
+
+    /**
+     * Get <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p> 
+     * @return AddressId <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-     * @param AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * Set <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+     * @param AddressId <p>标识 EIP 的唯一 ID。EIP 唯一 ID 形如：<code>eip-11112222</code>。可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。 
-     * @return AddressName 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
+     * Get <p>修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p> 
+     * @return AddressName <p>修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
-     * @param AddressName 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
+     * Set <p>修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
+     * @param AddressName <p>修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
     }
 
     /**
-     * Get 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
-注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。 
-     * @return EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
-注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
+     * Get <p>设定EIP是否直通，&quot;TRUE&quot;表示直通，&quot;FALSE&quot;表示非直通。<br>注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。</p> 
+     * @return EipDirectConnection <p>设定EIP是否直通，&quot;TRUE&quot;表示直通，&quot;FALSE&quot;表示非直通。<br>注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。</p>
      */
     public String getEipDirectConnection() {
         return this.EipDirectConnection;
     }
 
     /**
-     * Set 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
-注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
-     * @param EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
-注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
+     * Set <p>设定EIP是否直通，&quot;TRUE&quot;表示直通，&quot;FALSE&quot;表示非直通。<br>注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。</p>
+     * @param EipDirectConnection <p>设定EIP是否直通，&quot;TRUE&quot;表示直通，&quot;FALSE&quot;表示非直通。<br>注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。</p>
      */
     public void setEipDirectConnection(String EipDirectConnection) {
         this.EipDirectConnection = EipDirectConnection;
+    }
+
+    /**
+     * Get <p>设定EIP是否在网卡可见</p> 
+     * @return EipVisibleOnEni <p>设定EIP是否在网卡可见</p>
+     */
+    public Boolean getEipVisibleOnEni() {
+        return this.EipVisibleOnEni;
+    }
+
+    /**
+     * Set <p>设定EIP是否在网卡可见</p>
+     * @param EipVisibleOnEni <p>设定EIP是否在网卡可见</p>
+     */
+    public void setEipVisibleOnEni(Boolean EipVisibleOnEni) {
+        this.EipVisibleOnEni = EipVisibleOnEni;
     }
 
     public ModifyAddressAttributeRequest() {
@@ -114,6 +132,9 @@ public class ModifyAddressAttributeRequest extends AbstractModel {
         if (source.EipDirectConnection != null) {
             this.EipDirectConnection = new String(source.EipDirectConnection);
         }
+        if (source.EipVisibleOnEni != null) {
+            this.EipVisibleOnEni = new Boolean(source.EipVisibleOnEni);
+        }
     }
 
 
@@ -124,6 +145,7 @@ public class ModifyAddressAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
         this.setParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
+        this.setParamSimple(map, prefix + "EipVisibleOnEni", this.EipVisibleOnEni);
 
     }
 }

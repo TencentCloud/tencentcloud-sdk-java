@@ -87,6 +87,13 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+    */
+    @SerializedName("FlowName")
+    @Expose
+    private String FlowName;
+
+    /**
      * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证 
      * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
@@ -242,6 +249,22 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
         this.UserData = UserData;
     }
 
+    /**
+     * Get <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p> 
+     * @return FlowName <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     */
+    public String getFlowName() {
+        return this.FlowName;
+    }
+
+    /**
+     * Set <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     * @param FlowName <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     */
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
+    }
+
     public ChannelCreateReleaseFlowRequest() {
     }
 
@@ -280,6 +303,9 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
     }
 
 
@@ -296,6 +322,7 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "FlowName", this.FlowName);
 
     }
 }
